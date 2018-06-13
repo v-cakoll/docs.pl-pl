@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551006"
 ---
 # <a name="change-selection-in-a-richtextbox-programmatically"></a><span data-ttu-id="cf819-102">Zmień wybór RichTextBox za pomocą programowania</span><span class="sxs-lookup"><span data-stu-id="cf819-102">Change Selection in a RichTextBox Programmatically</span></span>
 <span data-ttu-id="cf819-103">W tym przykładzie pokazano, jak programowo zmienić bieżące zaznaczenie w <xref:System.Windows.Controls.RichTextBox>.</span><span class="sxs-lookup"><span data-stu-id="cf819-103">This example shows how to programmatically change the current selection in a <xref:System.Windows.Controls.RichTextBox>.</span></span> <span data-ttu-id="cf819-104">To pole wyboru jest taki sam, jakby użytkownik wybrana zawartość za pomocą interfejsu użytkownika.</span><span class="sxs-lookup"><span data-stu-id="cf819-104">This selection is the same as if the user had selected the content by using the user interface.</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397094"
 ---
 # <a name="accessing-custom-attributes"></a><span data-ttu-id="f8d4f-102">Uzyskiwanie dostępu do atrybutów niestandardowych</span><span class="sxs-lookup"><span data-stu-id="f8d4f-102">Accessing Custom Attributes</span></span>
 <span data-ttu-id="f8d4f-103">Po atrybuty zostały skojarzone z elementów programu, odbicia może służyć do badania ich istnienie i wartości.</span><span class="sxs-lookup"><span data-stu-id="f8d4f-103">After attributes have been associated with program elements, reflection can be used to query their existence and values.</span></span> <span data-ttu-id="f8d4f-104">W programie .NET Framework w wersji 1.0, 1.1 atrybuty niestandardowe są sprawdzane w kontekstu wykonywania.</span><span class="sxs-lookup"><span data-stu-id="f8d4f-104">In the .NET Framework version 1.0 and 1.1, custom attributes are examined in the execution context.</span></span> <span data-ttu-id="f8d4f-105">.NET Framework w wersji 2.0 zapewnia nowy kontekst ładowania kontekstu reflection-only, którego można użyć do sprawdzenia kod, który nie może zostać załadowany do wykonania.</span><span class="sxs-lookup"><span data-stu-id="f8d4f-105">The .NET Framework version 2.0 provides a new load context, the reflection-only context, which can be used to examine code that cannot be loaded for execution.</span></span>  

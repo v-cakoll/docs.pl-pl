@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33483835"
 ---
 # <a name="systemservicemodeltxfailedtonegotiateoletx"></a><span data-ttu-id="ebdfa-102">System.ServiceModel.TxFailedToNegotiateOleTx</span><span class="sxs-lookup"><span data-stu-id="ebdfa-102">System.ServiceModel.TxFailedToNegotiateOleTx</span></span>
 <span data-ttu-id="ebdfa-103">Nie negocjacji protokołu OleTransactions dla kontekstu koordynacji określony.</span><span class="sxs-lookup"><span data-stu-id="ebdfa-103">The OleTransactions protocol negotiation failed to complete for the specified coordination context.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442758"
 ---
 # <a name="iceegengetimaptokeniface-method"></a><span data-ttu-id="efb44-102">ICeeGen::GetIMapTokenIface — Metoda</span><span class="sxs-lookup"><span data-stu-id="efb44-102">ICeeGen::GetIMapTokenIface Method</span></span>
 <span data-ttu-id="efb44-103">Pobiera interfejs odwołuje się określony token.</span><span class="sxs-lookup"><span data-stu-id="efb44-103">Gets the interface referenced by the specified token.</span></span>  

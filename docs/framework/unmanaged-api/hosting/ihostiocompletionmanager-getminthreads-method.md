@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439094"
 ---
 # <a name="ihostiocompletionmanagergetminthreads-method"></a><span data-ttu-id="e905e-102">IHostIoCompletionManager::GetMinThreads — Metoda</span><span class="sxs-lookup"><span data-stu-id="e905e-102">IHostIoCompletionManager::GetMinThreads Method</span></span>
 <span data-ttu-id="e905e-103">Pobiera minimalną liczbę wątków, które zapewnia hosta do przetwarzania żądań We/Wy.</span><span class="sxs-lookup"><span data-stu-id="e905e-103">Gets the minimum number of threads that the host provides for processing I/O requests.</span></span>  

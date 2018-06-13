@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398238"
 ---
 # <a name="specifying-a-character-set"></a><span data-ttu-id="b069d-102">Określanie zestawu znaków</span><span class="sxs-lookup"><span data-stu-id="b069d-102">Specifying a Character Set</span></span>
 <span data-ttu-id="b069d-103"><xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> Pola określa ciąg organizowanie i określa, jak wywołanie nazwy funkcji znalezione w bibliotece DLL platformy.</span><span class="sxs-lookup"><span data-stu-id="b069d-103">The <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> field controls string marshaling and determines how platform invoke finds function names in a DLL.</span></span> <span data-ttu-id="b069d-104">W tym temacie opisano zarówno zachowania.</span><span class="sxs-lookup"><span data-stu-id="b069d-104">This topic describes both behaviors.</span></span>  

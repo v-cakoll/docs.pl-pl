@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358560"
 ---
 # <a name="ltmessagegt-of-ltnetmsmqbindinggt"></a><span data-ttu-id="4077e-102">&lt;message&gt; w &lt;netMsmqBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="4077e-102">&lt;message&gt; of &lt;netMsmqBinding&gt;</span></span>
 <span data-ttu-id="4077e-103">Definiuje ustawienia zabezpieczeń wiadomości SOAP na tym `netMsmqBinding` powiązania.</span><span class="sxs-lookup"><span data-stu-id="4077e-103">Defines the SOAP message security settings on this `netMsmqBinding` binding.</span></span>  

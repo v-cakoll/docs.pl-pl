@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563418"
 ---
 # <a name="xfactorymethod-directive"></a><span data-ttu-id="20d40-102">x:FactoryMethod — dyrektywa</span><span class="sxs-lookup"><span data-stu-id="20d40-102">x:FactoryMethod Directive</span></span>
 <span data-ttu-id="20d40-103">Określa metodę innego niż konstruktor, który procesor XAML powinna być używana do zainicjowania obiektu po rozwiązaniu jego typ zapasowy.</span><span class="sxs-lookup"><span data-stu-id="20d40-103">Specifies a method other than a constructor that a XAML processor should use to initialize an object after resolving its backing type.</span></span>  

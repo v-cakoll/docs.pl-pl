@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516945"
 ---
 # <a name="using-the-pick-activity"></a><span data-ttu-id="6f925-102">Przy użyciu działaniu wybierz</span><span class="sxs-lookup"><span data-stu-id="6f925-102">Using the Pick Activity</span></span>
 <span data-ttu-id="6f925-103">W tym przykładzie przedstawiono sposób użycia <xref:System.Activities.Statements.Pick> działania.</span><span class="sxs-lookup"><span data-stu-id="6f925-103">This sample demonstrates how to use the <xref:System.Activities.Statements.Pick> activity.</span></span>  

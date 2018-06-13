@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548371"
 ---
 # <a name="how-to-select-ink-from-a-custom-control"></a><span data-ttu-id="5bed2-102">Porady: wybrać atrament w niestandardowej kontrolce</span><span class="sxs-lookup"><span data-stu-id="5bed2-102">How to: Select Ink from a Custom Control</span></span>
 <span data-ttu-id="5bed2-103">Dodając <xref:System.Windows.Ink.IncrementalLassoHitTester> do formantu niestandardowego można włączyć formantu, dzięki czemu użytkownik może wybrać odręczne za pomocą narzędzia lasso, podobnie jak <xref:System.Windows.Controls.InkCanvas> wybiera z pewnymi lasso.</span><span class="sxs-lookup"><span data-stu-id="5bed2-103">By adding an <xref:System.Windows.Ink.IncrementalLassoHitTester> to your custom control, you can enable your control so that a user can select ink with a lasso tool, similar to the way the <xref:System.Windows.Controls.InkCanvas> selects ink with a lasso.</span></span>  

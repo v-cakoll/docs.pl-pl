@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489229"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a><span data-ttu-id="73934-102">Określanie niestandardowego algorytmu kryptograficznego</span><span class="sxs-lookup"><span data-stu-id="73934-102">Specifying a Custom Crypto Algorithm</span></span>
 <span data-ttu-id="73934-103">Usługi WCF pozwala określić niestandardowy algorytm kryptograficzny do użycia podczas szyfrowania danych lub obliczeniowych podpisów cyfrowych.</span><span class="sxs-lookup"><span data-stu-id="73934-103">WCF allows you to specify a custom crypto algorithm to use when encrypting data or computing digital signatures.</span></span> <span data-ttu-id="73934-104">Można to zrobić przez następujące kroki:</span><span class="sxs-lookup"><span data-stu-id="73934-104">This is done by the following steps:</span></span>  

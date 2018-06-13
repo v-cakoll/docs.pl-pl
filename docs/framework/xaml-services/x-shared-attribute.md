@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563800"
 ---
 # <a name="xshared-attribute"></a><span data-ttu-id="4d031-102">x:Shared — Atrybut</span><span class="sxs-lookup"><span data-stu-id="4d031-102">x:Shared Attribute</span></span>
 <span data-ttu-id="4d031-103">Jeśli wartość `false`, modyfikuje zachowanie pobieranie zasobu WPF, tak aby żądania dotyczące zasobów oparte na atrybutach Utwórz nowe wystąpienie dla każdego żądania i nie udostępniały tej samej wystąpienia dla wszystkich żądań.</span><span class="sxs-lookup"><span data-stu-id="4d031-103">When set to `false`, modifies WPF resource-retrieval behavior so that requests for the attributed resource create a new instance for each request instead of sharing the same instance for all requests.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440021"
 ---
 # <a name="ihostassemblystoreprovidemodule-method"></a><span data-ttu-id="aad93-102">IHostAssemblyStore::ProvideModule — Metoda</span><span class="sxs-lookup"><span data-stu-id="aad93-102">IHostAssemblyStore::ProvideModule Method</span></span>
 <span data-ttu-id="aad93-103">Usuwa plik zasobów modułu w ramach zestawu lub połączony (ale nie embedded).</span><span class="sxs-lookup"><span data-stu-id="aad93-103">Resolves a module within an assembly or a linked (but not an embedded) resource file.</span></span>  

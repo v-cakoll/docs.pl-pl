@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512044"
 ---
 # <a name="windows-workflow-foundation-data-model"></a><span data-ttu-id="b0d39-102">Model danych podstawy przepływu pracy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="b0d39-102">Windows Workflow Foundation Data Model</span></span>
 <span data-ttu-id="b0d39-103">Model danych programu Windows Workflow Foundation składa się z trzech pojęcia: zmiennych, argumenty i wyrażenia.</span><span class="sxs-lookup"><span data-stu-id="b0d39-103">The Windows Workflow Foundation data model is composed of three concepts: variables, arguments, and expressions.</span></span> <span data-ttu-id="b0d39-104">Zmienne reprezentują magazynu danych i argumenty reprezentują przepływ danych do i z działania.</span><span class="sxs-lookup"><span data-stu-id="b0d39-104">Variables represent the storage of data and arguments represent the flow of data into and out of an activity.</span></span> <span data-ttu-id="b0d39-105">Argumenty są powiązane (przypisana wartość) za pomocą wyrażeń, które mogą odwoływać się do zmiennych.</span><span class="sxs-lookup"><span data-stu-id="b0d39-105">Arguments are bound (assigned a value) using expressions that may reference variables.</span></span>  

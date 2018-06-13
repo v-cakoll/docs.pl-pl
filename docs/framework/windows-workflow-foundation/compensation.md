@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519941"
 ---
 # <a name="compensation"></a><span data-ttu-id="35d68-102">kompensacji</span><span class="sxs-lookup"><span data-stu-id="35d68-102">Compensation</span></span>
 <span data-ttu-id="35d68-103">W systemie Windows Workflow Foundation (WF) kompensacji jest mechanizm, za pomocą której wcześniej ukończona Praca można cofnąć lub Skompensowane (po logiki zdefiniowane przez aplikację) po wystąpieniu awarii kolejne.</span><span class="sxs-lookup"><span data-stu-id="35d68-103">Compensation in Windows Workflow Foundation (WF) is the mechanism by which previously completed work can be undone or compensated (following the logic defined by the application) when a subsequent failure occurs.</span></span> <span data-ttu-id="35d68-104">W tej sekcji opisano sposób użycia kompensacji w przepływach pracy.</span><span class="sxs-lookup"><span data-stu-id="35d68-104">This section describes how to use compensation in workflows.</span></span>  

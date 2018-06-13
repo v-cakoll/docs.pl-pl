@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742513"
 ---
 # <a name="multifile-assemblies"></a><span data-ttu-id="302ac-102">Zestawy wieloplikowe</span><span class="sxs-lookup"><span data-stu-id="302ac-102">Multifile Assemblies</span></span>
 <span data-ttu-id="302ac-103">Możesz utworzyć wiele plików zestawów przy użyciu kompilatory w wierszu polecenia lub [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] z programem Visual C++.</span><span class="sxs-lookup"><span data-stu-id="302ac-103">You can create multifile assemblies using command-line compilers or [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] with Visual C++.</span></span> <span data-ttu-id="302ac-104">Jeden plik w zestawie musi zawierać manifest zestawu.</span><span class="sxs-lookup"><span data-stu-id="302ac-104">One file in the assembly must contain the assembly manifest.</span></span> <span data-ttu-id="302ac-105">Zestaw, który uruchamia aplikację musi również zawierać punkt wejścia, takich jak metoda Main lub WinMain.</span><span class="sxs-lookup"><span data-stu-id="302ac-105">An assembly that starts an application must also contain an entry point, such as a Main or WinMain method.</span></span>  

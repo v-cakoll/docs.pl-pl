@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518955"
 ---
 # <a name="using-activity-delegates"></a><span data-ttu-id="72129-102">Używanie delegatów działania</span><span class="sxs-lookup"><span data-stu-id="72129-102">Using Activity Delegates</span></span>
 <span data-ttu-id="72129-103">Działanie delegatów Włącz autorów działania do udostępnienia wywołań zwrotnych z określonych podpisów, dla których użytkownik działania można podać oparte na działaniu programów obsługi.</span><span class="sxs-lookup"><span data-stu-id="72129-103">Activity delegates enable activity authors to expose callbacks with specific signatures, for which users of the activity can provide activity-based handlers.</span></span> <span data-ttu-id="72129-104">Dostępne są dwa typy delegatów działania: <xref:System.Activities.ActivityAction%601> służy do definiowania obiektów delegowanych działania, które nie mają zwracanych wartości, i <xref:System.Activities.ActivityFunc%601> służy do definiowania delegatów działania, które mają wartość zwracaną.</span><span class="sxs-lookup"><span data-stu-id="72129-104">Two types of activity delegates are available: <xref:System.Activities.ActivityAction%601> is used to define activity delegates that do not have a return value, and <xref:System.Activities.ActivityFunc%601> is used to define activity delegates that do have a return value.</span></span>  

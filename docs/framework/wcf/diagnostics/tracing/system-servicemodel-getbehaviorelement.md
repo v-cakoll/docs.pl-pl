@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33481322"
 ---
 # <a name="systemservicemodelgetbehaviorelement"></a><span data-ttu-id="baee4-102">System.ServiceModel.GetBehaviorElement</span><span class="sxs-lookup"><span data-stu-id="baee4-102">System.ServiceModel.GetBehaviorElement</span></span>
 <span data-ttu-id="baee4-103">System.ServiceModel.GetBehaviorElement</span><span class="sxs-lookup"><span data-stu-id="baee4-103">System.ServiceModel.GetBehaviorElement</span></span>  

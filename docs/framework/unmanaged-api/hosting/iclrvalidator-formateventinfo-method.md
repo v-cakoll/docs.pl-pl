@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437368"
 ---
 # <a name="iclrvalidatorformateventinfo-method"></a><span data-ttu-id="834a7-102">ICLRValidator::FormatEventInfo — Metoda</span><span class="sxs-lookup"><span data-stu-id="834a7-102">ICLRValidator::FormatEventInfo Method</span></span>
 <span data-ttu-id="834a7-103">Pobiera szczegółowy komunikat o błędzie sprawdzania poprawności określonego.</span><span class="sxs-lookup"><span data-stu-id="834a7-103">Gets a detailed message about the specified validation error.</span></span>  

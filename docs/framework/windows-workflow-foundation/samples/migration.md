@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513978"
 ---
 # <a name="migration"></a><span data-ttu-id="97c2c-102">Migracja</span><span class="sxs-lookup"><span data-stu-id="97c2c-102">Migration</span></span>
 <span data-ttu-id="97c2c-103">Ta sekcja zawiera przykłady, które przedstawiają sposób migrowania zawartości Windows Workflow Foundation (WF) napisane przy użyciu [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] do [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="97c2c-103">This section contains samples that demonstrate how to migrate Windows Workflow Foundation (WF) content written using [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] to [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)].</span></span>  

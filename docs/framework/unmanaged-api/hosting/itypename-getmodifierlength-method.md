@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440677"
 ---
 # <a name="itypenamegetmodifierlength-method"></a><span data-ttu-id="50280-102">ITypeName::GetModifierLength — Metoda</span><span class="sxs-lookup"><span data-stu-id="50280-102">ITypeName::GetModifierLength Method</span></span>
 <span data-ttu-id="50280-103">Ta metoda obsługuje infrastrukturę programu .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.</span><span class="sxs-lookup"><span data-stu-id="50280-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  

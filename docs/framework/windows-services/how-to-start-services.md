@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516220"
 ---
 # <a name="how-to-start-services"></a><span data-ttu-id="319f3-102">Porady: uruchamianie usług</span><span class="sxs-lookup"><span data-stu-id="319f3-102">How to: Start Services</span></span>
 <span data-ttu-id="319f3-103">Po zainstalowaniu usługi musi być uruchomiona.</span><span class="sxs-lookup"><span data-stu-id="319f3-103">After a service is installed, it must be started.</span></span> <span data-ttu-id="319f3-104">Uruchamianie wywołania <xref:System.ServiceProcess.ServiceBase.OnStart%2A> metody w klasie usługi.</span><span class="sxs-lookup"><span data-stu-id="319f3-104">Starting calls the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method on the service class.</span></span> <span data-ttu-id="319f3-105">Zazwyczaj <xref:System.ServiceProcess.ServiceBase.OnStart%2A> metoda definiuje przydatne pracę, wykona usługi.</span><span class="sxs-lookup"><span data-stu-id="319f3-105">Usually, the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method defines the useful work the service will perform.</span></span> <span data-ttu-id="319f3-106">Po uruchomieniu usługi pozostanie aktywne do czasu jest ręcznie wstrzymana lub zatrzymana.</span><span class="sxs-lookup"><span data-stu-id="319f3-106">After a service starts, it remains active until it is manually paused or stopped.</span></span>  

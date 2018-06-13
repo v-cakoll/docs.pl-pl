@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523494"
 ---
 # <a name="power-management-in-windows-forms"></a><span data-ttu-id="d8c7f-102">Zarządzanie energią w formularzach systemu Windows</span><span class="sxs-lookup"><span data-stu-id="d8c7f-102">Power Management in Windows Forms</span></span>
 <span data-ttu-id="d8c7f-103">Aplikacje Windows Forms możliwość korzystania z funkcji zarządzania energią w systemie operacyjnym Windows.</span><span class="sxs-lookup"><span data-stu-id="d8c7f-103">Your Windows Forms applications can take advantage of the power management features in the Windows operating system.</span></span> <span data-ttu-id="d8c7f-104">Aplikacje można monitorować stan zasilania komputera i podejmij akcję po zmianie stanu.</span><span class="sxs-lookup"><span data-stu-id="d8c7f-104">Your applications can monitor the power status of a computer and take action when a status change occurs.</span></span> <span data-ttu-id="d8c7f-105">Na przykład jeśli aplikacja jest uruchomiona na komputerze przenośnym, możesz wyłączyć pewnych funkcji w aplikacji, gdy poziom naładowania baterii komputera znajduje się w obszarze pewnego poziomu.</span><span class="sxs-lookup"><span data-stu-id="d8c7f-105">For example, if your application is running on a portable computer, you might want to disable certain features in your application when the computer's battery charge falls under a certain level.</span></span>  

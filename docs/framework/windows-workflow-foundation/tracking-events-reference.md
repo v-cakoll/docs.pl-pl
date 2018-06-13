@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520217"
 ---
 # <a name="tracking-events-reference"></a><span data-ttu-id="83603-102">Informacje dotyczące śledzenia zdarzeń</span><span class="sxs-lookup"><span data-stu-id="83603-102">Tracking Events Reference</span></span>
 <span data-ttu-id="83603-103">Podczas wykonywania przepływu pracy w [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] zgłasza śledzenia zdarzeń, ponieważ przechodzi przez różne etapy w okresie użytkowania.</span><span class="sxs-lookup"><span data-stu-id="83603-103">During execution a workflow in [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] raises tracking events as it moves through various stages in its lifetime.</span></span> <span data-ttu-id="83603-104">Host może subskrybować te zdarzenia i aktualizować stan postępu przepływu pracy przez jego okres istnienia.</span><span class="sxs-lookup"><span data-stu-id="83603-104">The host can subscribe to these events and keep updated on the status of the workflow’s progress during its lifetime.</span></span> <span data-ttu-id="83603-105">Zgłoszone zdarzenia śledzenia zostały omówione w tej sekcji.</span><span class="sxs-lookup"><span data-stu-id="83603-105">The tracking events raised are discussed in this section.</span></span>  

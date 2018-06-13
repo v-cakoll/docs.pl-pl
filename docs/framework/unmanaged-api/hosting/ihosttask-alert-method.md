@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442367"
 ---
 # <a name="ihosttaskalert-method"></a><span data-ttu-id="33155-102">IHostTask::Alert — Metoda</span><span class="sxs-lookup"><span data-stu-id="33155-102">IHostTask::Alert Method</span></span>
 <span data-ttu-id="33155-103">Żądania, że host wake reprezentowany przez bieżące zadanie [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) wystąpienia, zadania można zostało przerwane.</span><span class="sxs-lookup"><span data-stu-id="33155-103">Requests that the host wake the task represented by the current [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instance, so the task can be aborted.</span></span>  

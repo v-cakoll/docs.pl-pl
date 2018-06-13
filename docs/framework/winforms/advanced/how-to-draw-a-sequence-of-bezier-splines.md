@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521410"
 ---
 # <a name="how-to-draw-a-sequence-of-b233zier-splines"></a><span data-ttu-id="4548e-102">Porady: Rysowanie sekwencji B&#233;zier krzywe</span><span class="sxs-lookup"><span data-stu-id="4548e-102">How to: Draw a Sequence of B&#233;zier Splines</span></span>
 <span data-ttu-id="4548e-103">Można użyć <xref:System.Drawing.Graphics.DrawBeziers%2A> metody <xref:System.Drawing.Graphics> klasy Rysowanie sekwencji połączone krzywych Beziera.</span><span class="sxs-lookup"><span data-stu-id="4548e-103">You can use the <xref:System.Drawing.Graphics.DrawBeziers%2A> method of the <xref:System.Drawing.Graphics> class to draw a sequence of connected Bézier splines.</span></span>  

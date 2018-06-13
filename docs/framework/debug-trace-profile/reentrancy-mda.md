@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387864"
 ---
 # <a name="reentrancy-mda"></a><span data-ttu-id="eee0c-102">wielobieżność MDA</span><span class="sxs-lookup"><span data-stu-id="eee0c-102">reentrancy MDA</span></span>
 <span data-ttu-id="eee0c-103">`reentrancy` Zarządzany Asystent debugowania (MDA) jest aktywowany, gdy podejmowana jest próba przejście z kodu natywnego do zarządzanego kodu w przypadkach, gdy wcześniejsze przełącznika z kodu zarządzanego do natywnego nie została wykonana za pomocą uporządkowanego przejścia.</span><span class="sxs-lookup"><span data-stu-id="eee0c-103">The `reentrancy` managed debugging assistant (MDA) is activated when an attempt is made to transition from native to managed code in cases where a prior switch from managed to native code was not performed through an orderly transition.</span></span>  

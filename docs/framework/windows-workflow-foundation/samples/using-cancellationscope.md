@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517469"
 ---
 # <a name="using-cancellationscope"></a><span data-ttu-id="6d660-102">Przy użyciu CancellationScope</span><span class="sxs-lookup"><span data-stu-id="6d660-102">Using CancellationScope</span></span>
 <span data-ttu-id="6d660-103">W tym przykładzie przedstawiono sposób użycia <xref:System.Activities.Statements.CancellationScope> działanie, aby anulować pracy w aplikacji.</span><span class="sxs-lookup"><span data-stu-id="6d660-103">This sample demonstrates how to use the <xref:System.Activities.Statements.CancellationScope> activity to cancel work in an application.</span></span>  

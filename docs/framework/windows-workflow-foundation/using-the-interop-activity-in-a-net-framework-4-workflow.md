@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520230"
 ---
 # <a name="using-the-interop-activity-in-a-net-framework-4-workflow"></a><span data-ttu-id="77d61-102">Za pomocą działania Interop w przepływie pracy .NET Framework 4</span><span class="sxs-lookup"><span data-stu-id="77d61-102">Using the Interop Activity in a .NET Framework 4 Workflow</span></span>
 <span data-ttu-id="77d61-103">Działania utworzone przy użyciu [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] lub [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] mogą być używane w [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] przepływu pracy przy użyciu <xref:System.Activities.Statements.Interop> działania.</span><span class="sxs-lookup"><span data-stu-id="77d61-103">Activities created using [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] or [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] can be used in a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow by using the <xref:System.Activities.Statements.Interop> activity.</span></span> <span data-ttu-id="77d61-104">Ten temat zawiera omówienie sposobu użycia <xref:System.Activities.Statements.Interop> działania.</span><span class="sxs-lookup"><span data-stu-id="77d61-104">This topic provides an overview of using the <xref:System.Activities.Statements.Interop> activity.</span></span>  

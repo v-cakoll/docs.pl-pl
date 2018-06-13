@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521488"
 ---
 # <a name="how-to-create-thumbnail-images"></a><span data-ttu-id="be4a9-102">Porady: tworzenie obrazów miniatur</span><span class="sxs-lookup"><span data-stu-id="be4a9-102">How to: Create Thumbnail Images</span></span>
 <span data-ttu-id="be4a9-103">Obraz miniatury jest małą wersję obrazu.</span><span class="sxs-lookup"><span data-stu-id="be4a9-103">A thumbnail image is a small version of an image.</span></span> <span data-ttu-id="be4a9-104">Obraz miniatury można utworzyć przez wywołanie metody <xref:System.Drawing.Image.GetThumbnailImage%2A> metody <xref:System.Drawing.Image> obiektu.</span><span class="sxs-lookup"><span data-stu-id="be4a9-104">You can create a thumbnail image by calling the <xref:System.Drawing.Image.GetThumbnailImage%2A> method of an <xref:System.Drawing.Image> object.</span></span>  

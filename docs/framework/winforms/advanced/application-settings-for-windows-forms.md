@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517173"
 ---
 # <a name="application-settings-for-windows-forms"></a><span data-ttu-id="6f593-102">Ustawienia aplikacji dla formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="6f593-102">Application Settings for Windows Forms</span></span>
 <span data-ttu-id="6f593-103">Funkcja ustawień aplikacji formularzy systemu Windows można łatwo tworzyć, przechowywać i Obsługa niestandardowych aplikacji i preferencji użytkownika na komputerze klienckim.</span><span class="sxs-lookup"><span data-stu-id="6f593-103">The Applications Settings feature of Windows Forms makes it easy to create, store, and maintain custom application and user preferences on the client.</span></span> <span data-ttu-id="6f593-104">Ustawienia aplikacji można przechowywać nie tylko dane aplikacji, takie jak parametry połączenia bazy danych, ale również dane specyficzne dla użytkownika, takie jak położenie paska narzędzi i ostatnio używane listy.</span><span class="sxs-lookup"><span data-stu-id="6f593-104">With Application Settings, you can store not only application data such as database connection strings, but also user-specific data, such as toolbar positions and most-recently used lists.</span></span>  

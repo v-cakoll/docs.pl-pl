@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550140"
 ---
 # <a name="window-management-how-to-topics"></a><span data-ttu-id="6a644-102">Okno zarządzania — tematy porad</span><span class="sxs-lookup"><span data-stu-id="6a644-102">Window Management How-to Topics</span></span>
 <span data-ttu-id="6a644-103">W następujących tematach opisano sposób zarządzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] systemu windows.</span><span class="sxs-lookup"><span data-stu-id="6a644-103">The following topics show how to manage [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.</span></span>  

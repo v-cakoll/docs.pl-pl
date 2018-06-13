@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33481963"
 ---
 # <a name="systemservicemodelsecurityimportsecuritychannelbindingexit"></a><span data-ttu-id="9f031-102">System.ServiceModel.Security.ImportSecurityChannelBindingExit</span><span class="sxs-lookup"><span data-stu-id="9f031-102">System.ServiceModel.Security.ImportSecurityChannelBindingExit</span></span>
 <span data-ttu-id="9f031-103">System.ServiceModel.Security.ImportSecurityChannelBindingExit</span><span class="sxs-lookup"><span data-stu-id="9f031-103">System.ServiceModel.Security.ImportSecurityChannelBindingExit</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33476264"
 ---
 # <a name="systemservicemodelactivationserviceshutdown"></a><span data-ttu-id="41a9f-102">System.ServiceModel.Activation.ServiceShutdown</span><span class="sxs-lookup"><span data-stu-id="41a9f-102">System.ServiceModel.Activation.ServiceShutdown</span></span>
 <span data-ttu-id="41a9f-103">System.ServiceModel.Activation.ServiceShutdown</span><span class="sxs-lookup"><span data-stu-id="41a9f-103">System.ServiceModel.Activation.ServiceShutdown</span></span>  

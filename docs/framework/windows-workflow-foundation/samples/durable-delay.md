@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516025"
 ---
 # <a name="durable-delay"></a><span data-ttu-id="a8f84-102">Trwałe opóźnienia</span><span class="sxs-lookup"><span data-stu-id="a8f84-102">Durable Delay</span></span>
 <span data-ttu-id="a8f84-103">W tym przykładzie przedstawiono sposób użycia trwałe opóźnienia, czyli opóźnienie będzie się powtarzał przepływu pracy na urządzeniu trwałe podczas opóźnienie.</span><span class="sxs-lookup"><span data-stu-id="a8f84-103">This sample demonstrates how to use a durable delay, which is a delay that persists the workflow to a durable device during the delay.</span></span> <span data-ttu-id="a8f84-104">Przykładowy przepływ pracy zawiera dwa komunikaty do konsoli, oddzielonych opóźnienia.</span><span class="sxs-lookup"><span data-stu-id="a8f84-104">The sample workflow contains two messages to the console that are separated by a delay.</span></span> <span data-ttu-id="a8f84-105">Po wyzwoleniu opóźnienie przepływu pracy jest zwalniany i oczekuje na 5 sekund w magazynie wystąpień przepływu pracy przed ładowane w pamięci.</span><span class="sxs-lookup"><span data-stu-id="a8f84-105">When the delay is triggered, the workflow is unloaded and waits 5 seconds in the workflow instance store before being reloaded in memory.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33487649"
 ---
 # <a name="endpoint"></a><span data-ttu-id="6d716-102">Punkt końcowy</span><span class="sxs-lookup"><span data-stu-id="6d716-102">Endpoint</span></span>
 <span data-ttu-id="6d716-103">Punkt końcowy</span><span class="sxs-lookup"><span data-stu-id="6d716-103">Endpoint</span></span>  

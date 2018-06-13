@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488303"
 ---
 # <a name="building-a-peer-channel-application"></a><span data-ttu-id="381c8-102">Tworzenie aplikacji kanału równorzędnego</span><span class="sxs-lookup"><span data-stu-id="381c8-102">Building a Peer Channel Application</span></span>
 <span data-ttu-id="381c8-103">Poniższe sekcje zawierają wskazówki dotyczące tworzenia aplikacji kanału równorzędnego.</span><span class="sxs-lookup"><span data-stu-id="381c8-103">The following sections provide guidance on developing Peer Channel applications.</span></span>  

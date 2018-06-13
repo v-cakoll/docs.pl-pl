@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521918"
 ---
 # <a name="how-to-draw-an-outlined-shape"></a><span data-ttu-id="41025-102">Porady: rysowanie konturu kształtu</span><span class="sxs-lookup"><span data-stu-id="41025-102">How to: Draw an Outlined Shape</span></span>
 <span data-ttu-id="41025-103">W tym przykładzie rysuje obramowane elipsy i prostokąty w formularzu.</span><span class="sxs-lookup"><span data-stu-id="41025-103">This example draws outlined ellipses and rectangles on a form.</span></span>  

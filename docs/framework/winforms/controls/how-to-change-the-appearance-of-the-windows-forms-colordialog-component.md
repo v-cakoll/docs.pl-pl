@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530250"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a><span data-ttu-id="91bbe-102">Porady: zmienianie wyglądu składnika ColorDialog formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="91bbe-102">How to: Change the Appearance of the Windows Forms ColorDialog Component</span></span>
 <span data-ttu-id="91bbe-103">Możesz skonfigurować wygląd formularzy systemu Windows <xref:System.Windows.Forms.ColorDialog> składnika o liczbie jego właściwości.</span><span class="sxs-lookup"><span data-stu-id="91bbe-103">You can configure the appearance of the Windows Forms <xref:System.Windows.Forms.ColorDialog> component with a number of its properties.</span></span> <span data-ttu-id="91bbe-104">Okno dialogowe ma dwie sekcje —, który przedstawia kolorów podstawowych i taki, który umożliwia użytkownikowi zdefiniowanie kolorów niestandardowych.</span><span class="sxs-lookup"><span data-stu-id="91bbe-104">The dialog box has two sections — one that shows basic colors and one that allows the user to define custom colors.</span></span>  

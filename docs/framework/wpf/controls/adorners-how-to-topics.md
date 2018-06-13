@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550088"
 ---
 # <a name="adorners-how-to-topics"></a><span data-ttu-id="fb05d-102">Moduły definiowania układu Tematy porad</span><span class="sxs-lookup"><span data-stu-id="fb05d-102">Adorners How-to Topics</span></span>
 <span data-ttu-id="fb05d-103">Poniższe przykłady pokazują, jak wykonywać typowe zadania za pomocą [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] framework modułu definiowania układu kodu.</span><span class="sxs-lookup"><span data-stu-id="fb05d-103">The following examples demonstrate how to accomplish common tasks using the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] adorner framework.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358410"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a><span data-ttu-id="ea658-102">Własność i oddzielenie użytkowników schematu w programie SQL Server</span><span class="sxs-lookup"><span data-stu-id="ea658-102">Ownership and User-Schema Separation in SQL Server</span></span>
 <span data-ttu-id="ea658-103">Kluczową ideą zabezpieczeń programu SQL Server jest właściciele obiektów uprawnień do administrowania nimi.</span><span class="sxs-lookup"><span data-stu-id="ea658-103">A core concept of SQL Server security is that owners of objects have irrevocable permissions to administer them.</span></span> <span data-ttu-id="ea658-104">Nie można usunąć uprawnień od właściciela obiektu i nie można usunąć użytkowników z bazy danych, jeśli są właścicielami obiektów w nim.</span><span class="sxs-lookup"><span data-stu-id="ea658-104">You cannot remove privileges from an object owner, and you cannot drop users from a database if they own objects in it.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517715"
 ---
 # <a name="xaml-activation"></a><span data-ttu-id="bb9d0-102">Aktywacja XAML</span><span class="sxs-lookup"><span data-stu-id="bb9d0-102">XAML Activation</span></span>
 <span data-ttu-id="bb9d0-103">W tym przykładzie pokazano, jak udostępniać deklaracyjnego przepływu pracy w programie IIS.</span><span class="sxs-lookup"><span data-stu-id="bb9d0-103">This sample demonstrates how to host a declarative workflow in IIS.</span></span> <span data-ttu-id="bb9d0-104">Próbka jest podstawowy przepływ pracy o nazwie `EchoService` mający jednej operacji.</span><span class="sxs-lookup"><span data-stu-id="bb9d0-104">The sample is a basic workflow called `EchoService` that has one operation.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438824"
 ---
 # <a name="ihostiocompletionmanagersetmaxthreads-method"></a><span data-ttu-id="04793-102">IHostIoCompletionManager::SetMaxThreads — Metoda</span><span class="sxs-lookup"><span data-stu-id="04793-102">IHostIoCompletionManager::SetMaxThreads Method</span></span>
 <span data-ttu-id="04793-103">Ustawia maksymalną liczbę wątków, które spowoduje przyznanie hosta do obsługi żądań We/Wy.</span><span class="sxs-lookup"><span data-stu-id="04793-103">Sets the maximum number of threads that the host allots to service I/O requests.</span></span>  

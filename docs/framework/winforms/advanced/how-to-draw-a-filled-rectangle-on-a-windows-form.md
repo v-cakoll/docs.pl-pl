@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520841"
 ---
 # <a name="how-to-draw-a-filled-rectangle-on-a-windows-form"></a><span data-ttu-id="f7a73-102">Porady: rysowanie wypełnionego prostokąta w formularzu systemu Windows</span><span class="sxs-lookup"><span data-stu-id="f7a73-102">How to: Draw a Filled Rectangle on a Windows Form</span></span>
 <span data-ttu-id="f7a73-103">W tym przykładzie Rysuje wypełniony prostokąt w formularzu.</span><span class="sxs-lookup"><span data-stu-id="f7a73-103">This example draws a filled rectangle on a form.</span></span>  

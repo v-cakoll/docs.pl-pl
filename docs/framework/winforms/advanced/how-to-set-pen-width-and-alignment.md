@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522285"
 ---
 # <a name="how-to-set-pen-width-and-alignment"></a><span data-ttu-id="0b208-102">Porady: ustawianie szerokości i wyrównania pióra</span><span class="sxs-lookup"><span data-stu-id="0b208-102">How to: Set Pen Width and Alignment</span></span>
 <span data-ttu-id="0b208-103">Po utworzeniu <xref:System.Drawing.Pen>, możesz podać szerokość pióra jako jeden z argumentów konstruktora.</span><span class="sxs-lookup"><span data-stu-id="0b208-103">When you create a <xref:System.Drawing.Pen>, you can supply the pen width as one of the arguments to the constructor.</span></span> <span data-ttu-id="0b208-104">Możesz również zmienić szerokość z <xref:System.Drawing.Pen.Width%2A> właściwość <xref:System.Drawing.Pen> klasy.</span><span class="sxs-lookup"><span data-stu-id="0b208-104">You can also change the pen width with the <xref:System.Drawing.Pen.Width%2A> property of the <xref:System.Drawing.Pen> class.</span></span>  

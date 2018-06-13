@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521592"
 ---
 # <a name="how-to-complete-windows-forms-print-jobs"></a><span data-ttu-id="13b94-102">Porady: kończenie zadań drukowania formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="13b94-102">How to: Complete Windows Forms Print Jobs</span></span>
 <span data-ttu-id="13b94-103">Często edytory i inne aplikacje, które obejmują drukowanie zapewni opcję wyświetlania wiadomości do użytkowników o ukończeniu zadania drukowania.</span><span class="sxs-lookup"><span data-stu-id="13b94-103">Frequently, word processors and other applications that involve printing will provide the option to display a message to users that a print job is complete.</span></span> <span data-ttu-id="13b94-104">Możesz podać tę funkcję w formularzach systemu Windows, obsługa <xref:System.Drawing.Printing.PrintDocument.EndPrint> zdarzenie <xref:System.Drawing.Printing.PrintDocument> składnika.</span><span class="sxs-lookup"><span data-stu-id="13b94-104">You can provide this functionality in your Windows Forms by handling the <xref:System.Drawing.Printing.PrintDocument.EndPrint> event of the <xref:System.Drawing.Printing.PrintDocument> component.</span></span>  

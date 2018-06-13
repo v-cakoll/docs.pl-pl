@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525497"
 ---
 # <a name="basic-column-row-and-cell-features-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="b8594-102">Podstawowe funkcje komórek, wierszy i kolumn w formancie DataGridView formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="b8594-102">Basic Column, Row, and Cell Features in the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="b8594-103">Wiele podstawowych zachowania `DataGridView` komórek, wierszy i kolumn można zmodyfikować właściwości jednego.</span><span class="sxs-lookup"><span data-stu-id="b8594-103">Many basic behaviors of `DataGridView` cells, rows, and columns can be modified by setting single properties.</span></span> <span data-ttu-id="b8594-104">W tematach w tej sekcji opisano niektóre z najczęściej używanych z tych funkcji.</span><span class="sxs-lookup"><span data-stu-id="b8594-104">The topics in this section describe several of the most commonly used of these features.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515088"
 ---
 # <a name="determining-workflow-execution-duration-using-tracing"></a><span data-ttu-id="24204-102">Określanie czas wykonywania przepływu pracy za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="24204-102">Determining Workflow Execution Duration Using Tracing</span></span>
 <span data-ttu-id="24204-103">W tym temacie pokazano, jak określić czas potrzebny pomyślnie zakończono, hostowanie Samoobsługowe przepływu pracy można wykonać za pomocą śledzenia przepływu pracy.</span><span class="sxs-lookup"><span data-stu-id="24204-103">This topic demonstrates how to determine the time it takes for a successfully completed, self-hosted workflow to execute by using workflow tracing.</span></span>  

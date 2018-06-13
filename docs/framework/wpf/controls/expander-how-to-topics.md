@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550166"
 ---
 # <a name="expander-how-to-topics"></a><span data-ttu-id="24bc1-102">Ekspander Tematy porad</span><span class="sxs-lookup"><span data-stu-id="24bc1-102">Expander How-to Topics</span></span>
 <span data-ttu-id="24bc1-103">W tematach w tej sekcji opisano sposób użycia <xref:System.Windows.Controls.Expander> formantu.</span><span class="sxs-lookup"><span data-stu-id="24bc1-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Expander> control.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516766"
 ---
 # <a name="windows-workflow-overview"></a><span data-ttu-id="79da3-102">Omówienie przepływu pracy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="79da3-102">Windows Workflow Overview</span></span>
 <span data-ttu-id="79da3-103">Przepływ pracy to zbiór jednostek stanie wolnym wywoływana *działania* przechowywane jako model, który opisano proces rzeczywistych.</span><span class="sxs-lookup"><span data-stu-id="79da3-103">A workflow is a set of elemental units called *activities* that are stored as a model that describes a real-world process.</span></span> <span data-ttu-id="79da3-104">Przepływy pracy umożliwiają opisu kolejność wykonywania i zależności między pracy krótko - i długotrwałe.</span><span class="sxs-lookup"><span data-stu-id="79da3-104">Workflows provide a way of describing the order of execution and dependent relationships between pieces of short- or long-running work.</span></span> <span data-ttu-id="79da3-105">Tę pracę przechodzi przez model od początku do końca, a działania mogą być wykonywane przez osoby lub funkcji systemu.</span><span class="sxs-lookup"><span data-stu-id="79da3-105">This work passes through the model from start to finish, and activities might be executed by people or by system functions.</span></span>  

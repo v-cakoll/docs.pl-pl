@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561894"
 ---
 # <a name="xamlname-grammar"></a><span data-ttu-id="4c809-102">XamlName — Gramatyka</span><span class="sxs-lookup"><span data-stu-id="4c809-102">XamlName Grammar</span></span>
 <span data-ttu-id="4c809-103">Xamlname — gramatyka jest określonych gramatyki, która jest zdefiniowana w specyfikacji języka XAML [MS-XAML], który jest podany tutaj dla wygody.</span><span class="sxs-lookup"><span data-stu-id="4c809-103">XamlName Grammar is a specific grammar that is defined in the XAML language specification [MS-XAML], which is reproduced here for convenience.</span></span>  

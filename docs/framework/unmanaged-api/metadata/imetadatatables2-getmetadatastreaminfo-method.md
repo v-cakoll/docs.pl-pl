@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450040"
 ---
 # <a name="imetadatatables2getmetadatastreaminfo-method"></a><span data-ttu-id="9ffd2-102">IMetaDataTables2::GetMetaDataStreamInfo — Metoda</span><span class="sxs-lookup"><span data-stu-id="9ffd2-102">IMetaDataTables2::GetMetaDataStreamInfo Method</span></span>
 <span data-ttu-id="9ffd2-103">Pobiera nazwę, rozmiar i zawartość strumienia metadanych pod określonym indeksem.</span><span class="sxs-lookup"><span data-stu-id="9ffd2-103">Gets the name, size, and contents of the metadata stream at the specified index.</span></span>  

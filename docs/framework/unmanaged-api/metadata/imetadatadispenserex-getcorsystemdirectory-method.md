@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443433"
 ---
 # <a name="imetadatadispenserexgetcorsystemdirectory-method"></a><span data-ttu-id="c6d18-102">IMetaDataDispenserEx::GetCORSystemDirectory — Metoda</span><span class="sxs-lookup"><span data-stu-id="c6d18-102">IMetaDataDispenserEx::GetCORSystemDirectory Method</span></span>
 <span data-ttu-id="c6d18-103">Pobiera katalog, który zawiera bieżące środowisko uruchomieniowe języka wspólnego (CLR).</span><span class="sxs-lookup"><span data-stu-id="c6d18-103">Gets the directory that holds the current common language runtime (CLR).</span></span> <span data-ttu-id="c6d18-104">Ta metoda jest obsługiwana tylko przez debugery poza procesem.</span><span class="sxs-lookup"><span data-stu-id="c6d18-104">This method is supported only for use by out-of-process debuggers.</span></span> <span data-ttu-id="c6d18-105">Wywoływane z innego składnika, zwróci E_NOTIMPL.</span><span class="sxs-lookup"><span data-stu-id="c6d18-105">If called from another component, it will return E_NOTIMPL.</span></span>  

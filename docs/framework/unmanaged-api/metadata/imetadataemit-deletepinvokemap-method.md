@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445380"
 ---
 # <a name="imetadataemitdeletepinvokemap-method"></a><span data-ttu-id="14f8f-102">IMetaDataEmit::DeletePinvokeMap — Metoda</span><span class="sxs-lookup"><span data-stu-id="14f8f-102">IMetaDataEmit::DeletePinvokeMap Method</span></span>
 <span data-ttu-id="14f8f-103">Niszczy metadanych mapowania PInvoke dla obiekt odwołuje się określony token.</span><span class="sxs-lookup"><span data-stu-id="14f8f-103">Destroys the PInvoke mapping metadata for the object referenced by the specified token.</span></span>  

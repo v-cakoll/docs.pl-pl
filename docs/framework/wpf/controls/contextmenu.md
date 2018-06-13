@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550127"
 ---
 # <a name="contextmenu"></a><span data-ttu-id="4a92e-102">ContextMenu</span><span class="sxs-lookup"><span data-stu-id="4a92e-102">ContextMenu</span></span>
 <span data-ttu-id="4a92e-103"><xref:System.Windows.Controls.ContextMenu> Umożliwia kontrolki wyświetlającej <xref:System.Windows.Controls.Menu> jest specyficzna dla kontekstu kontrolki.</span><span class="sxs-lookup"><span data-stu-id="4a92e-103">The <xref:System.Windows.Controls.ContextMenu> allows a control to display a <xref:System.Windows.Controls.Menu> that is specific to the context of the control.</span></span> <span data-ttu-id="4a92e-104">Zazwyczaj <xref:System.Windows.Controls.ContextMenu> jest widoczna w [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] za pośrednictwem prawym przyciskiem myszy lub klawiatury przycisku menu.</span><span class="sxs-lookup"><span data-stu-id="4a92e-104">Typically, the <xref:System.Windows.Controls.ContextMenu> is exposed in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] through the right mouse button or through the keyboard’s menu button.</span></span>  

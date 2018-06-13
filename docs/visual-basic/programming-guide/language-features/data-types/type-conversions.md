@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647217"
 ---
 # <a name="type-conversions-in-visual-basic"></a><span data-ttu-id="6ede3-102">Konwersje plików w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6ede3-102">Type Conversions in Visual Basic</span></span>
 <span data-ttu-id="6ede3-103">Proces zmiany wartości z jednego typu danych do innego typu, jest nazywany *konwersji*.</span><span class="sxs-lookup"><span data-stu-id="6ede3-103">The process of changing a value from one data type to another type is called *conversion*.</span></span> <span data-ttu-id="6ede3-104">Konwersje są albo *rozszerzanie* lub *zawężanie*, w zależności od możliwości typy danych.</span><span class="sxs-lookup"><span data-stu-id="6ede3-104">Conversions are either *widening* or *narrowing*, depending on the data capacities of the types involved.</span></span> <span data-ttu-id="6ede3-105">Są one również *niejawne* lub *jawne*w oparciu o składni w kodzie źródłowym.</span><span class="sxs-lookup"><span data-stu-id="6ede3-105">They are also *implicit* or *explicit*, depending on the syntax in the source code.</span></span>  

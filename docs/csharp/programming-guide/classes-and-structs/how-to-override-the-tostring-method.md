@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330710"
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a><span data-ttu-id="fa795-102">Porady: przesłanianie metody ToString (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="fa795-102">How to: Override the ToString Method (C# Programming Guide)</span></span>
 <span data-ttu-id="fa795-103">Każdej klasie lub strukturze w języku C# niejawnie dziedziczy <xref:System.Object> klasy.</span><span class="sxs-lookup"><span data-stu-id="fa795-103">Every class or struct in C# implicitly inherits the <xref:System.Object> class.</span></span> <span data-ttu-id="fa795-104">W związku z tym każdy obiekt w języku C# pobiera <xref:System.Object.ToString%2A> metodę, która zwraca reprezentację ciągu tego obiektu.</span><span class="sxs-lookup"><span data-stu-id="fa795-104">Therefore, every object in C# gets the <xref:System.Object.ToString%2A> method, which returns a string representation of that object.</span></span> <span data-ttu-id="fa795-105">Na przykład wszystkie zmienne typu `int` ma `ToString` metodę, która pozwala na zwrócenie ich zawartość jako ciąg:</span><span class="sxs-lookup"><span data-stu-id="fa795-105">For example, all variables of type `int` have a `ToString` method, which enables them to return their contents as a string:</span></span>  

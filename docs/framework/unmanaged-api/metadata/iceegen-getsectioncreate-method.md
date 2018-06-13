@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443342"
 ---
 # <a name="iceegengetsectioncreate-method"></a><span data-ttu-id="ef887-102">ICeeGen::GetSectionCreate — Metoda</span><span class="sxs-lookup"><span data-stu-id="ef887-102">ICeeGen::GetSectionCreate Method</span></span>
 <span data-ttu-id="ef887-103">Generuje i pobiera sekcji kodu przy użyciu określonej nazwy i wartości flag.</span><span class="sxs-lookup"><span data-stu-id="ef887-103">Generates and gets a code section using the specified name and flag values.</span></span>  

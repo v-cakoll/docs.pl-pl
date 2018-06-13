@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454354"
 ---
 # <a name="icorprofilercallbackobjectsallocatedbyclass-method"></a><span data-ttu-id="5b2d0-102">ICorProfilerCallback::ObjectsAllocatedByClass — Metoda</span><span class="sxs-lookup"><span data-stu-id="5b2d0-102">ICorProfilerCallback::ObjectsAllocatedByClass Method</span></span>
 <span data-ttu-id="5b2d0-103">Powiadamia profilera o liczbę wystąpień każdej określonej klasy, które zostały utworzone od czasu ostatniego wyrzucanie elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="5b2d0-103">Notifies the profiler about the number of instances of each specified class that have been created since the most recent garbage collection.</span></span>  

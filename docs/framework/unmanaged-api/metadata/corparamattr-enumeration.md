@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444294"
 ---
 # <a name="corparamattr-enumeration"></a><span data-ttu-id="ab9d9-102">CorParamAttr — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="ab9d9-102">CorParamAttr Enumeration</span></span>
 <span data-ttu-id="ab9d9-103">Zawiera wartości, które opisują metadanych parametru metody.</span><span class="sxs-lookup"><span data-stu-id="ab9d9-103">Contains values that describe the metadata of a method parameter.</span></span>  

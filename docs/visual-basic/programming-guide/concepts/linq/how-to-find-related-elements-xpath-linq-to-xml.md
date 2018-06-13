@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643178"
 ---
 # <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="1c5e8-102">Porady: znajdowanie powiązanych elementów (XPath-LINQ do XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1c5e8-102">How to: Find Related Elements (XPath-LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="1c5e8-103">W tym temacie przedstawiono sposób uzyskać elementu zaznaczenie na atrybut, który jest określana przez wartość innego elementu.</span><span class="sxs-lookup"><span data-stu-id="1c5e8-103">This topic shows how to get an element selecting on an attribute that is referred to by the value of another element.</span></span>  

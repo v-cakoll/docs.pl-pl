@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215501"
 ---
 # <a name="-target-c-compiler-options"></a><span data-ttu-id="9dd64-102">-docelowego (opcje kompilatora C#)</span><span class="sxs-lookup"><span data-stu-id="9dd64-102">-target (C# Compiler Options)</span></span>
 <span data-ttu-id="9dd64-103">**-Docelowy** — opcja kompilatora można określić w jednym z czterech formularzy:</span><span class="sxs-lookup"><span data-stu-id="9dd64-103">The **-target** compiler option can be specified in one of four forms:</span></span>  

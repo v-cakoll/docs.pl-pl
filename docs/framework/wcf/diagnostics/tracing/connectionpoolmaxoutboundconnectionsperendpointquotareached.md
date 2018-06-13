@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474444"
 ---
 # <a name="systemservicemodelchannelsconnectionpoolmaxoutboundconnectionsperendpointquotareached"></a><span data-ttu-id="ce64f-102">System.ServiceModel.Channels.ConnectionPoolMaxOutboundConnectionsPerEndpointQuotaReached</span><span class="sxs-lookup"><span data-stu-id="ce64f-102">System.ServiceModel.Channels.ConnectionPoolMaxOutboundConnectionsPerEndpointQuotaReached</span></span>
 <span data-ttu-id="ce64f-103">System.ServiceModel.Channels.ConnectionPoolMaxOutboundConnectionsPerEndpointQuotaReached</span><span class="sxs-lookup"><span data-stu-id="ce64f-103">System.ServiceModel.Channels.ConnectionPoolMaxOutboundConnectionsPerEndpointQuotaReached</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448194"
 ---
 # <a name="imetadataimportfindmember-method"></a><span data-ttu-id="5e05f-102">IMetaDataImport::FindMember — Metoda</span><span class="sxs-lookup"><span data-stu-id="5e05f-102">IMetaDataImport::FindMember Method</span></span>
 <span data-ttu-id="5e05f-103">Pobiera wskaźnik do MemberDef token dla pola lub metody, która jest zawarta w określonym <xref:System.Type> z określoną sygnaturą nazwy i metadanych.</span><span class="sxs-lookup"><span data-stu-id="5e05f-103">Gets a pointer to the MemberDef token for field or method that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.</span></span>  

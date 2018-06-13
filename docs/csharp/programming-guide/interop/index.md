@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332884"
 ---
 # <a name="interoperability-c-programming-guide"></a><span data-ttu-id="01ccc-102">Współdziałanie (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="01ccc-102">Interoperability (C# Programming Guide)</span></span>
 <span data-ttu-id="01ccc-103">Współdziałanie umożliwia zachowanie i wykorzystać istniejące inwestycje w technologie kodu niezarządzanego.</span><span class="sxs-lookup"><span data-stu-id="01ccc-103">Interoperability enables you to preserve and take advantage of existing investments in unmanaged code.</span></span> <span data-ttu-id="01ccc-104">Kod uruchamiany pod kontrolą środowisko uruchomieniowe języka wspólnego (CLR) jest nazywany *kodu zarządzanego*, i jest nazywany kodu uruchamianego poza środowiskiem CLR *niezarządzany kod*.</span><span class="sxs-lookup"><span data-stu-id="01ccc-104">Code that runs under the control of the common language runtime (CLR) is called *managed code*, and code that runs outside the CLR is called *unmanaged code*.</span></span> <span data-ttu-id="01ccc-105">COM, COM +, składniki C++, składników ActiveX i interfejsu API Win32 usługi Microsoft są przykłady kodu niezarządzanego.</span><span class="sxs-lookup"><span data-stu-id="01ccc-105">COM, COM+, C++ components, ActiveX components, and Microsoft Win32 API are examples of unmanaged code.</span></span>  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457577"
 ---
 # <a name="gethashfromassemblyfilew-function"></a><span data-ttu-id="21e13-102">GetHashFromAssemblyFileW — Funkcja</span><span class="sxs-lookup"><span data-stu-id="21e13-102">GetHashFromAssemblyFileW Function</span></span>
 <span data-ttu-id="21e13-103">Pobiera skrót określonego pliku zestawu, przy użyciu określonego algorytmu skrótu.</span><span class="sxs-lookup"><span data-stu-id="21e13-103">Gets a hash of the specified assembly file, using the specified hash algorithm.</span></span> <span data-ttu-id="21e13-104">Ścieżka do pliku zestawu muszą być określone jako ciąg Unicode.</span><span class="sxs-lookup"><span data-stu-id="21e13-104">The path to the assembly file must be specified as a Unicode string.</span></span>  

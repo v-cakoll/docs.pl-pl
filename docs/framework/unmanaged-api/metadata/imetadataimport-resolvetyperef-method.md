@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449484"
 ---
 # <a name="imetadataimportresolvetyperef-method"></a><span data-ttu-id="10cb6-102">IMetaDataImport::ResolveTypeRef — Metoda</span><span class="sxs-lookup"><span data-stu-id="10cb6-102">IMetaDataImport::ResolveTypeRef Method</span></span>
 <span data-ttu-id="10cb6-103">Usuwa <xref:System.Type> odwołanie reprezentowany przez określony token TypeRef.</span><span class="sxs-lookup"><span data-stu-id="10cb6-103">Resolves a <xref:System.Type> reference represented by the specified TypeRef token.</span></span>  

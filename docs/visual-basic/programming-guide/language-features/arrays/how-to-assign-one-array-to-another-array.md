@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647933"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a><span data-ttu-id="e7087-102">Porady: przypisywanie tablicy do innej tablicy (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e7087-102">How to: Assign One Array to Another Array (Visual Basic)</span></span>
 <span data-ttu-id="e7087-103">Ponieważ tablic są obiektami, można używać ich w instrukcji przypisania, podobnie jak inne typy obiektów.</span><span class="sxs-lookup"><span data-stu-id="e7087-103">Because arrays are objects, you can use them in assignment statements like other object types.</span></span> <span data-ttu-id="e7087-104">Zmienną tablicową zawiera wskaźnik do stanowiące elementów tablicy i informacje o randze i długość danych, i przypisania kopiuje tylko ten wskaźnik.</span><span class="sxs-lookup"><span data-stu-id="e7087-104">An array variable holds a pointer to the data constituting the array elements and the rank and length information, and an assignment copies only this pointer.</span></span>  

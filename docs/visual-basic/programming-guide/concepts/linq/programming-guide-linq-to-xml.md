@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647420"
 ---
 # <a name="programming-guide-linq-to-xml-visual-basic"></a><span data-ttu-id="11f5d-102">Przewodnik programowania w języku (LINQ do XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="11f5d-102">Programming Guide (LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="11f5d-103">Ta sekcja zawiera informacje o pojęciach i porad dotyczących programowania w języku [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="11f5d-103">This section provides conceptual and how-to information about programming with [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span>  

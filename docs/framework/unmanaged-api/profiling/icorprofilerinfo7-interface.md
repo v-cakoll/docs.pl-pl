@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455409"
 ---
 # <a name="icorprofilerinfo7-interface"></a><span data-ttu-id="b0c32-102">Interfejs ICorProfilerInfo7</span><span class="sxs-lookup"><span data-stu-id="b0c32-102">ICorProfilerInfo7 Interface</span></span>
 <span data-ttu-id="b0c32-103">[Obsługiwane w [!INCLUDE[net_v461](../../../../includes/net-v461-md.md)] i nowszych wersjach]</span><span class="sxs-lookup"><span data-stu-id="b0c32-103">[Supported in the [!INCLUDE[net_v461](../../../../includes/net-v461-md.md)] and later versions]</span></span>  

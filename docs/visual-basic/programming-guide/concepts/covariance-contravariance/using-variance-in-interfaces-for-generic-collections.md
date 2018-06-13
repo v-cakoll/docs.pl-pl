@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642691"
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a><span data-ttu-id="a8bdb-102">Korzystanie z wariancji w interfejsach dla kolekcji (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a8bdb-102">Using Variance in Interfaces for Generic Collections (Visual Basic)</span></span>
 <span data-ttu-id="a8bdb-103">Interfejs kowariantnego umożliwia jego metody do zwrócenia więcej typów pochodnych niż określone w interfejsie.</span><span class="sxs-lookup"><span data-stu-id="a8bdb-103">A covariant interface allows its methods to return more derived types than those specified in the interface.</span></span> <span data-ttu-id="a8bdb-104">Interfejs kontrawariantnego umożliwia jego metody zaakceptować parametry typu mniej pochodnego niż warunki określone w interfejsie.</span><span class="sxs-lookup"><span data-stu-id="a8bdb-104">A contravariant interface allows its methods to accept parameters of less derived types than those specified in the interface.</span></span>  

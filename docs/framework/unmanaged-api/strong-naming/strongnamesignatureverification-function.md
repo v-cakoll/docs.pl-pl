@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459238"
 ---
 # <a name="strongnamesignatureverification-function"></a><span data-ttu-id="a1ed0-102">StrongNameSignatureVerification — Funkcja</span><span class="sxs-lookup"><span data-stu-id="a1ed0-102">StrongNameSignatureVerification Function</span></span>
 <span data-ttu-id="a1ed0-103">Pobiera wartość wskazującą, czy manifest zestawu w podana ścieżka zawiera podpisu silnej nazwy, która zostanie poddana weryfikacji zgodnie z określonym flagi.</span><span class="sxs-lookup"><span data-stu-id="a1ed0-103">Gets a value indicating whether the assembly manifest at the supplied path contains a strong name signature, which is verified according to the specified flags.</span></span>  

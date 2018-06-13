@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524628"
 ---
 # <a name="how-to-add-menu-items-to-a-contextmenustrip"></a><span data-ttu-id="2bc46-102">Porady: dodawanie elementów menu do paska ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="2bc46-102">How to: Add Menu Items to a ContextMenuStrip</span></span>
 <span data-ttu-id="2bc46-103">Można dodać elementu menu tylko jeden lub kilka elementów naraz <xref:System.Windows.Forms.ContextMenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="2bc46-103">You can add just one menu item or several items at a time to a <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443703"
 ---
 # <a name="assemblyrefflags-enumeration"></a><span data-ttu-id="fda65-102">AssemblyRefFlags — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="fda65-102">AssemblyRefFlags Enumeration</span></span>
 <span data-ttu-id="fda65-103">Zawiera wartości, które opisują funkcje odwołania do zestawu.</span><span class="sxs-lookup"><span data-stu-id="fda65-103">Contains values that describe features of an assembly reference.</span></span>  

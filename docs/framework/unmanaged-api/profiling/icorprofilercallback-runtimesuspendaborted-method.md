@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451909"
 ---
 # <a name="icorprofilercallbackruntimesuspendaborted-method"></a><span data-ttu-id="d91ee-102">ICorProfilerCallback::RuntimeSuspendAborted — Metoda</span><span class="sxs-lookup"><span data-stu-id="d91ee-102">ICorProfilerCallback::RuntimeSuspendAborted Method</span></span>
 <span data-ttu-id="d91ee-103">Powiadamia profilera, że środowisko wykonawcze została przerwana zawieszenia środowiska uruchomieniowego, które powtarzało się.</span><span class="sxs-lookup"><span data-stu-id="d91ee-103">Notifies the profiler that the runtime has aborted the runtime suspension that was occurring.</span></span>  

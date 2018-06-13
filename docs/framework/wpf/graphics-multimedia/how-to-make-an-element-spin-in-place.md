@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562514"
 ---
 # <a name="how-to-make-an-element-spin-in-place"></a><span data-ttu-id="cf02c-102">Jak obrócić element w miejscu</span><span class="sxs-lookup"><span data-stu-id="cf02c-102">How to: Make an Element Spin in Place</span></span>
 <span data-ttu-id="cf02c-103">W tym przykładzie pokazano, jak utworzyć element pokrętła przy użyciu <xref:System.Windows.Media.RotateTransform> i <xref:System.Windows.Media.Animation.DoubleAnimation>.</span><span class="sxs-lookup"><span data-stu-id="cf02c-103">This example shows how to make an element spin by using a <xref:System.Windows.Media.RotateTransform> and a <xref:System.Windows.Media.Animation.DoubleAnimation>.</span></span>  

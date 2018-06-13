@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655192"
 ---
 # <a name="inheritance-basics-visual-basic"></a><span data-ttu-id="67e96-102">Podstawowe informacje o dziedziczeniu (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="67e96-102">Inheritance Basics (Visual Basic)</span></span>
 <span data-ttu-id="67e96-103">`Inherits` Instrukcji służy do deklarowania nową klasę o nazwie *klasy*, oparte na istniejącej klasy, znany jako *klasa podstawowa*.</span><span class="sxs-lookup"><span data-stu-id="67e96-103">The `Inherits` statement is used to declare a new class, called a *derived class*, based on an existing class, known as a *base class*.</span></span> <span data-ttu-id="67e96-104">Klasy pochodne dziedziczą i można rozszerzyć, właściwości, metody, zdarzenia, pól i stałe zdefiniowana w klasie podstawowej.</span><span class="sxs-lookup"><span data-stu-id="67e96-104">Derived classes inherit, and can extend, the properties, methods, events, fields, and constants defined in the base class.</span></span> <span data-ttu-id="67e96-105">W poniższej sekcji opisano niektóre zasady dotyczące dziedziczenia, a modyfikatorów, których można użyć, aby zmienić sposób klasy dziedziczą lub są dziedziczone:</span><span class="sxs-lookup"><span data-stu-id="67e96-105">The following section describes some of the rules for inheritance, and the modifiers you can use to change the way classes inherit or are inherited:</span></span>  

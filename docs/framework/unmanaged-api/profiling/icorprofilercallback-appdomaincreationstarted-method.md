@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451493"
 ---
 # <a name="icorprofilercallbackappdomaincreationstarted-method"></a><span data-ttu-id="29d9a-102">ICorProfilerCallback::AppDomainCreationStarted — Metoda</span><span class="sxs-lookup"><span data-stu-id="29d9a-102">ICorProfilerCallback::AppDomainCreationStarted Method</span></span>
 <span data-ttu-id="29d9a-103">Powiadamia profiler jest tworzony domeny aplikacji.</span><span class="sxs-lookup"><span data-stu-id="29d9a-103">Notifies the profiler that an application domain is being created.</span></span>  

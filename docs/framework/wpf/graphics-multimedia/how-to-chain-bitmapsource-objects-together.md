@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558868"
 ---
 # <a name="how-to-chain-bitmapsource-objects-together"></a>Jak połączyć łańcuchowo obiekty BitmapSource
 W tym przykładzie pokazano sposób możesz zastosować różne efekty do źródłowego obrazu przez łańcucha wielu <xref:System.Windows.Media.Imaging.BitmapSource> pochodzi ze sobą obiektów.  

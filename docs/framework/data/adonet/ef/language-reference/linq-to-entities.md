@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760781"
 ---
 # <a name="linq-to-entities"></a>LINQ do Jednostek
 Składnik LINQ to Entities zapewnia obsługę język Language-Integrated zapytania (LINQ), który umożliwia deweloperom Pisanie zapytań dotyczących programu Entity Framework modelu koncepcyjnego za pomocą języka Visual Basic lub Visual C#. Zapytań dotyczących programu Entity Framework są reprezentowane przez kwerendy drzewa polecenia, których wykonanie względem kontekstu obiektów. Składnik LINQ to Entities konwertuje zapytań język Language-Integrated zapytania (LINQ) do polecenia drzewa zapytań, wykonuje zapytania względem programu Entity Framework i zwraca obiekty, które mogą być używane przez programu Entity Framework i LINQ. Poniżej przedstawiono procedurę tworzenia i wykonywania zapytania składnika LINQ to Entities:  

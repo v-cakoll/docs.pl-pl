@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556968"
 ---
 # <a name="how-to-implement-binding-validation"></a>Jak implementować powiązaną walidację
 Ten przykład przedstawia sposób użycia <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> i wyzwalacz style wizualne, aby poinformować użytkownika, gdy wprowadzono nieprawidłową wartość oparte na niestandardowej reguły walidacji.  

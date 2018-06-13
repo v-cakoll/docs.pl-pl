@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762692"
 ---
 # <a name="how-to-call-canonical-functions"></a>Porady: wywoływać funkcje kanoniczny
 <xref:System.Data.Objects.EntityFunctions> Klasa zawiera metody, które udostępniają kanonicznej funkcji do użycia w składniku LINQ do jednostek zapytań. Aby uzyskać informacje na temat funkcji kanonicznej Zobacz [kanonicznej funkcji](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  

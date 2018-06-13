@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554785"
 ---
 # <a name="how-to-get-or-set-a-dock-value"></a>Jak pobrać lub ustawić wartość dokowania
 Poniższy przykład pokazuje, jak można przypisać <xref:System.Windows.Controls.Dock> wartość dla obiekt. W przykładzie użyto <xref:System.Windows.Controls.DockPanel.GetDock%2A> i <xref:System.Windows.Controls.DockPanel.SetDock%2A> metody <xref:System.Windows.Controls.DockPanel>.  

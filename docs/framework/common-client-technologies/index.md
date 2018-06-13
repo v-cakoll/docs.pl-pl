@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753498"
 ---
 # <a name="common-client-technologies-in-the-net-framework"></a>Typowe technologie klienckie zastosowane w oprogramowaniu .NET Framework
 W tej sekcji opisano różne technologie, których można użyć w aplikacji klienta.  

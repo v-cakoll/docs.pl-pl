@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558086"
 ---
 # <a name="control-authoring-overview"></a>Przegląd Autorstwo formantów
 Możliwość rozszerzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] model kontroli, znacznie ogranicza potrzebę tworzenia nowego formantu. Jednak w niektórych przypadkach może nadal należy utworzyć niestandardowego formantu. W tym temacie opisano funkcje, co minimalizuje konieczność tworzenia kontrolki niestandardowej, a inny formant tworzenia modeli w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. W tym temacie przedstawiono również sposób tworzenia nowego formantu.  

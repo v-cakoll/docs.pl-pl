@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745490"
 ---
 # <a name="ltusesmallinternalthreadstacksgt-element"></a>&lt;Usesmallinternalthreadstacks —&gt; — Element
 Użyj żądania, że środowisko uruchomieniowe języka wspólnego (CLR) Zmniejsz pamięci, określając rozmiary jawne stosu podczas tworzenia niektórych wątków, które jest używana wewnętrznie, zamiast domyślny rozmiar stosu dla tych wątków.  

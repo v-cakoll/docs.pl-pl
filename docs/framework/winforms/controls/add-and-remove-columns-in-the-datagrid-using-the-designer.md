@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528148"
 ---
 # <a name="how-to-add-and-remove-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Porady: dodawanie i usuwanie kolumn do formantu DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant
 Formularze systemu Windows <xref:System.Windows.Forms.DataGridView> formant musi zawierać kolumny, aby wyświetlić dane. Jeśli planujesz ręczne wypełnić kontrolki, należy dodać kolumny samodzielnie. Alternatywnie można powiązać formantu ze źródłem danych, który generuje i automatycznie wypełnia kolumn. Jeśli źródło danych zawiera więcej kolumn niż mają być wyświetlane, możesz usunąć zbędne kolumny.  

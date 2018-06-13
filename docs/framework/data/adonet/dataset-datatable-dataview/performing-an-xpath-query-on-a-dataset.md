@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762413"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>Wykonywanie kwerendy XPath w zestawie danych
 Relacja między zsynchronizowany <xref:System.Data.DataSet> i <xref:System.Xml.XmlDataDocument> pozwala korzystać z XML usług, takich jak zapytania XML Path Language (XPath), które uzyskują dostęp do **dokumentu XmlDataDocument** i mogą wykonywać niektórych funkcji ułatwia niż dostęp do **DataSet** bezpośrednio. Na przykład zamiast używania **wybierz** metody <xref:System.Data.DataTable> do nawigowanie po relacjach do innych tabel w **zestawu danych**, można wykonywać kwerendę XPath na **dokumentu XmlDataDocument**  który jest synchronizowany z **DataSet**, aby uzyskać listę elementów XML w formie <xref:System.Xml.XmlNodeList>. Węzły w **XmlNodeList**, rzutowanie jako <xref:System.Xml.XmlElement> węzłów, można następnie przekazać do **GetRowFromElement** metody **dokumentu XmlDataDocument**, aby zwrócić dopasowania <xref:System.Data.DataRow> odwołania do wierszy tabeli w zsynchronizowanej **zestawu danych**.  

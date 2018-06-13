@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758311"
 ---
 # <a name="the-load-method"></a>Metoda Load
 Można użyć <xref:System.Data.DataTable.Load%2A> metodę, aby załadować <xref:System.Data.DataTable> z wierszy ze źródła danych. To jest przeciążona metoda, która w swojej najprostszej formie przyjmuje jeden parametr, **DataReader**. W tym formularzu, po prostu ładuje **DataTable** z wierszami. Opcjonalnie można określić **LoadOption** parametr, aby kontrolować sposób dodawania danych do **DataTable**.  

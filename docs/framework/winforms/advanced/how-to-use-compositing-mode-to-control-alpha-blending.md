@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527005"
 ---
 # <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>Porady: stosowanie trybu składania do sterowania przenikaniem alfa
 Może to być razy, gdy chcesz utworzyć ukrytej mapy bitowej, który ma następującą charakterystykę:  

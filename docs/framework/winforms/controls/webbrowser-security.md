@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534615"
 ---
 # <a name="webbrowser-security"></a>Zabezpieczenia WebBrowser
 <xref:System.Windows.Forms.WebBrowser> Kontroli jest przeznaczona do pracy w trybie tylko pełnego zaufania. Zawartość HTML wyświetlanych w formancie mogą pochodzić z zewnętrznych serwerów sieci Web i mogą zawierać kod niezarządzany w postaci skryptów lub formantów sieci Web. Jeśli używasz <xref:System.Windows.Forms.WebBrowser> formantu w tej sytuacji formant jest nie mniej bezpieczne niż program Internet Explorer, ale zarządzanej <xref:System.Windows.Forms.WebBrowser> formantu nie uniemożliwia takie kodu niezarządzanego uruchomiona.  

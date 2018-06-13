@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524455"
 ---
 # <a name="folderbrowserdialog-component-windows-forms"></a>FolderBrowserDialog — Składnik (Formularze systemu Windows)
 Formularze systemu Windows `FolderBrowserDialog` składnika wyświetla interfejs, z którym użytkownicy można przeglądać i wybierz folder lub Utwórz nową. Jest uzupełnienie [openfiledialog — składnik](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md) składnika, który służy do przeglądania i zaznaczania plików.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525091"
 ---
 # <a name="button-control-windows-forms"></a>Kontrolka przycisku (Formularze systemu Windows)
 Formularze systemu Windows `Button` formant umożliwia użytkownikowi kliknij go, aby wykonać akcję. `Button` Formant może wyświetlać tekst i obrazy. Po kliknięciu przycisku wygląda, jakby trwa spoczywa i wydane.  

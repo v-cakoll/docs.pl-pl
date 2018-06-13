@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531218"
 ---
 # <a name="how-to-enable-the-tab-key-to-move-out-of-a-toolstrip-control"></a>Porady: włączenie używania klawisza TAB do wychodzenia z formantu ToolStrip
 Użyj poniższej procedury, aby umożliwić użytkownikowi naciśnij klawisz TAB, aby przenieść poza <xref:System.Windows.Forms.ToolStrip> do następnego formantu w kolejności tabulacji.  

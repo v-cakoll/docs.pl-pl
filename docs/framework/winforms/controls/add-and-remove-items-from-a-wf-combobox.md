@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527190"
 ---
 # <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Porady: dodawanie i usuwanie elementów za pomocą formantu ComboBox, ListBox lub CheckedListBox formularzy systemu Windows
 Elementy mogą być dodawane do pola kombi formularzy systemu Windows, pole listy lub zaznaczone pole listy na różne sposoby, ponieważ tych kontrolek można powiązać z różnych źródeł danych. Jednak w tym temacie przedstawiono najprostszą metodą i wymaga nie powiązania danych. Elementy wyświetlane są zwykle ciągi; jednak można użyć dowolnego obiektu. Tekst, który jest wyświetlany w formancie jest wartość zwrócona przez obiekt `ToString` metody.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760092"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a>Określanie relacji między elementami z nie zagnieżdżania
 Gdy nie są zagnieżdżone elementy, nie niejawnych relacji są tworzone. Można jednak jawnie określić relacji między elementami, które nie są zagnieżdżone za pomocą **msdata:Relationship** adnotacji.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757570"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Porady: włączanie i wyłączanie automatycznego przekierowania powiązań
 Począwszy od [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], podczas kompilowania aplikacji przeznaczonych [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], przekierowania powiązań mogą być automatycznie dodawane do pliku konfiguracji aplikacji, aby zastąpić ujednolicenie zestawu. Przekierowania powiązań są dodawane, jeśli aplikacja lub jej składniki odwołują się do więcej niż jednej wersji tego samego zestawu, nawet jeśli przekierowania powiązań zostaną określone ręcznie w pliku konfiguracji aplikacji. Funkcja przekierowania powiązania automatyczne wpływa na tradycyjnych aplikacji klasycznych i aplikacji sieci web przeznaczonych [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], chociaż to zachowanie różni się nieznacznie dla aplikacji sieci web. Można włączyć automatyczne przekierowywanie połączeń, jeśli są używane aplikacje, których platformami docelowymi są poprzednie wersje programu .NET Framework, ale można też wyłączyć tę funkcję, aby używać tworzonych ręcznie przekierowań powiązań.  

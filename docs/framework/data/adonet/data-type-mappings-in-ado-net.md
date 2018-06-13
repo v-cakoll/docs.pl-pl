@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757674"
 ---
 # <a name="data-type-mappings-in-adonet"></a>Mapowanie typu danych w ADO.NET
 .NET Framework jest oparta na wspólny system typów, który definiuje sposób typy są zadeklarowany, używane i zarządzane w czasie wykonywania. Zawiera typy wartości i typy referencyjne, które wynikają z <xref:System.Object> typ podstawowy. Podczas pracy ze źródłem danych, wywnioskować typu danych od dostawcy danych, jeśli nie został jawnie określony. Na przykład <xref:System.Data.DataSet> obiektu jest niezależna od wszelkich określonego źródła danych. Dane w `DataSet` jest pobierana ze źródła danych i zmiany są zachowywane do źródła danych przy użyciu `DataAdapter`. Oznacza to, że w przypadku `DataAdapter` wypełnia <xref:System.Data.DataTable> w `DataSet` z wartości ze źródła danych, wynikowy typy danych kolumn w `DataTable` są [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typów, zamiast specyficzne dla typów [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] danych Dostawca używany do nawiązania połączenia ze źródłem danych.  

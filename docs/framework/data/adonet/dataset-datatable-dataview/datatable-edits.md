@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758623"
 ---
 # <a name="datatable-edits"></a>Zmiany elementu DataTable
 Podczas wprowadzania zmian do wartości kolumn <xref:System.Data.DataRow>, zmiany natychmiast są umieszczane w bieżącym stanie wiersza. <xref:System.Data.DataRowState> Następnie ustawiono **zmodyfikowane**, a zmiany są akceptowane lub odrzucone, za pomocą <xref:System.Data.DataRow.AcceptChanges%2A> lub <xref:System.Data.DataRow.RejectChanges%2A> metody **DataRow**. **DataRow** również udostępnia trzy metody, które umożliwia wstrzymanie stanu wiersza podczas edytowania go. Te metody są <xref:System.Data.DataRow.BeginEdit%2A>, <xref:System.Data.DataRow.EndEdit%2A>, i <xref:System.Data.DataRow.CancelEdit%2A>.  

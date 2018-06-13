@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758727"
 ---
 # <a name="oracle-ref-cursors"></a>Kursory REF Oracle
 .NET Framework Data Provider for Oracle obsługuje programu Oracle **REF CURSOR** — typ danych. Przy użyciu dostawcy danych do pracy z kursorami REF Oracle, należy rozważyć następujące zachowania.  

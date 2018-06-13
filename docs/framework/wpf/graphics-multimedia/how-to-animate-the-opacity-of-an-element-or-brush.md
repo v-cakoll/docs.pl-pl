@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559677"
 ---
 # <a name="how-to-animate-the-opacity-of-an-element-or-brush"></a>Jak animować nieprzezroczystość elementu lub pędzla
 Aby element framework zanikania i widoku, można animować jego <xref:System.Windows.UIElement.Opacity%2A> można animować właściwości lub <xref:System.Windows.Media.Brush.Opacity%2A> właściwość <xref:System.Windows.Media.Brush> (lub pędzle) używany do rysowania go. Animowanie nieprzezroczystość elementu ułatwia i jego elementów podrzędnych zanikania i widoku, ale animacji pędzel używany do rysowania elementu umożliwia bardziej selektywnie stopniowo część elementu. Można na przykład Animuj przezroczystość pędzla stosowaną tło przycisku. To spowodowałoby tło przycisku do zanikania i zmniejszanie widoku, pozostawiając całkowicie nieprzezroczyste jego tekstu.  

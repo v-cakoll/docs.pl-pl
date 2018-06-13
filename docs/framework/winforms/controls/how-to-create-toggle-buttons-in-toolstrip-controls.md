@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530384"
 ---
 # <a name="how-to-create-toggle-buttons-in-toolstrip-controls"></a>Porady: tworzenie przycisków przełączania w formantach ToolStrip
 Gdy użytkownik kliknie przycisk przełącznika, pojawi się zapadnięta i zachowuje zapadnięta wygląd, dopóki użytkownik kliknie przycisk ponownie.  

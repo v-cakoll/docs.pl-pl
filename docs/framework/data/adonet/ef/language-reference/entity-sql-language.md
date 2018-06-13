@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761041"
 ---
 # <a name="entity-sql-language"></a>Jednostki języka SQL
 Jednostka SQL jest język kwerendy niezależne od magazynu, która jest podobna do bazy danych SQL. Jednostki SQL umożliwia zapytania danych jednostki, jako obiekty lub w formie tabelarycznej. Należy rozważyć użycie SQL jednostki w następujących przypadkach:  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555678"
 ---
 # <a name="how-to-accelerate-or-decelerate-an-animation"></a>Jak przyspieszyć lub zwolnić animację
 W tym przykładzie pokazano, jak animacja przyspieszenia i zwalnia wraz z upływem czasu. W poniższym przykładzie kilka prostokąty animowanych przez animacje z różnymi <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> i <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> ustawienia.  

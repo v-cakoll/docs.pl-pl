@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560645"
 ---
 # <a name="how-to-paint-an-area-with-a-radial-gradient"></a>Jak malować obszar gradientem promieniowym
 Ten przykład przedstawia sposób użycia <xref:System.Windows.Media.RadialGradientBrush> klasy namalować obszar o gradientu promieniowego.  

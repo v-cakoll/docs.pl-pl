@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604214"
 ---
 # <a name="implements-statement"></a>Implements — Instrukcja
 Określa jeden lub więcej interfejsów lub członków interfejsu, które muszą zostać zaimplementowane w klasie lub definicji struktury, w której znajduje się.  

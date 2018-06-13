@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565062"
 ---
 # <a name="xfieldmodifier-directive"></a>x:FieldModifier — dyrektywa
 Modyfikuje zachowanie kompilacji XAML, tak aby pól dla odwołania do nazwanych obiektów są zdefiniowane z <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> dostępu zamiast <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> zachowanie domyślne.  

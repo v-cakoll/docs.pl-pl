@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527473"
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>Pióra, linie i prostokąty w GDI+
 Rysowanie linii za [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] należy utworzyć <xref:System.Drawing.Graphics> obiektu i <xref:System.Drawing.Pen> obiektu. <xref:System.Drawing.Graphics> Obiektu udostępnia metody, które faktycznie nie, i <xref:System.Drawing.Pen> obiekt przechowuje atrybuty, takie jak kolor linii, szerokość i styl.  

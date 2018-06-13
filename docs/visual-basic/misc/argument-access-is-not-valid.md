@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600536"
 ---
 # <a name="argument-39access39-is-not-valid-valid-values-for-output-mode-are-39openaccesswrite39-and-39openaccessdefault39"></a>Argument &#39;dostępu&#39; jest nieprawidłowy. Prawidłowymi wartościami dla trybu Output są &#39;OpenAcess.Write&#39; i &#39;OpenAccess.Default&#39;
 Wartość dostępu jest nieprawidłowa w trybie danych wyjściowych.  

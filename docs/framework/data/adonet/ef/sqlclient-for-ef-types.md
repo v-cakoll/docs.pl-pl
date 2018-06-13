@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766546"
 ---
 # <a name="sqlclient-for-entity-frameworktypes"></a>Klient SQL dla FrameworkTypes jednostki
 Dostawcy danych programu .NET Framework dla pliku manifestu dostawcy programu SQL Server (SqlClient) zawiera listę dostawcy typów pierwotnych aspektów dla każdego typu mapowania między koncepcyjnej i typów pierwotnych modelu magazynu, a podwyższenia poziomu i konwersji reguły między typów pierwotnych modelu koncepcyjnego i magazynu.  

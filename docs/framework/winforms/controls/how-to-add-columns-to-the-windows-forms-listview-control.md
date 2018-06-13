@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528292"
 ---
 # <a name="how-to-add-columns-to-the-windows-forms-listview-control"></a>Porady: dodawanie kolumn do formantu ListView formularzy systemu Windows
 W widoku szczegółów <xref:System.Windows.Forms.ListView> formant może wyświetlać wiele kolumn dla każdego elementu listy. Kolumny służy do wyświetlania użytkownikowi kilka typów informacji na temat każdego elementu listy. Na przykład można wyświetlić listę plików, nazwy pliku, typu pliku, rozmiar i datę ostatniej modyfikacji pliku. Aby dowiedzieć się, jak wypełnianie kolumn po ich utworzeniu, zobacz [porady: wyświetlanie podelementów w kolumnach za pomocą formantu ListView formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757440"
 ---
 # <a name="association-end"></a>punkt końcowy skojarzenia
 *Końca skojarzenia* identyfikuje [typu jednostki](../../../../docs/framework/data/adonet/entity-type.md) na jeden z końców [skojarzenia](../../../../docs/framework/data/adonet/association-type.md) i liczby jednostek wpisz wystąpień, które mogą znajdować się na tym końcu skojarzenia. Punkty końcowe skojarzenia są zdefiniowane jako część skojarzenia; Skojarzenie musi mieć dokładnie dwa punkty końcowe skojarzenia. [Właściwości nawigacji](../../../../docs/framework/data/adonet/navigation-property.md) umożliwienia nawigacji z elementu end skojarzenia jednego do drugiego.  

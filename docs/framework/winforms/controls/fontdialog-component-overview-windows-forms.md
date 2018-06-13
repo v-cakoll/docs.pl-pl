@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526881"
 ---
 # <a name="fontdialog-component-overview-windows-forms"></a>FontDialog — Informacje o składniku (Formularze systemu Windows)
 Formularze systemu Windows <xref:System.Windows.Forms.FontDialog> składnik jest wstępnie skonfigurowane okno dialogowe, które jest standard Windows **czcionki** okno dialogowe używany do udostępnienia czcionek, które są aktualnie zainstalowane w systemie. Używać go w aplikacji systemu Windows jako prostym rozwiązaniem wybór czcionki zamiast własne okno dialogowe Konfigurowanie.  

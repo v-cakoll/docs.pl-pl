@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758441"
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>Generowanie relacji zestawu danych na podstawie schematu XML (XSD)
 W <xref:System.Data.DataSet>, formularz skojarzenia między co najmniej dwie kolumny przez utworzenie relacji nadrzędny podrzędny. Istnieją trzy sposoby do reprezentowania **DataSet** relacji w ramach schematu schematu XML definition language (XSD):  

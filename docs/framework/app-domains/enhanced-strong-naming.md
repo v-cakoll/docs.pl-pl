@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746894"
 ---
 # <a name="enhanced-strong-naming"></a>Poprawa silnego nazywania
 Podpis silnej nazwy jest mechanizmem tożsamości w programie .NET Framework do identyfikowania zestawów. Jest zwykle używany do sprawdzania integralności danych są przekazywane z autora (osoby podpisującej) do adresata (weryfikatora) podpis cyfrowy klucza publicznego. Ta sygnatura jest używana jako unikatową tożsamość zestawu i zapewnia, że odwołania do zestawu nie są niejednoznaczne. Zestaw jest podpisany jako część procesu kompilacji, a następnie zweryfikować po załadowaniu go.  

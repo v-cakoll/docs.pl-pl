@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557865"
 ---
 # <a name="wpf-add-ins-overview"></a>Przegląd Dodatki WPF
 <a name="Introduction"></a> [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Zawiera dodatek modelu, który deweloperzy mogą używać do tworzenia aplikacji, które obsługują rozszerzalności w dodatku. Ten model dodatku umożliwia tworzenie dodatków, które integrują się z i rozszerzanie funkcjonalności aplikacji. W niektórych scenariuszach aplikacji również należy wyświetlić [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] są dostarczane przez dodatki. W tym temacie przedstawiono sposób [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] wspomaga [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] modelu dodatku, aby włączyć te scenariusze, architektura za nią korzyści i jego ograniczenia.  

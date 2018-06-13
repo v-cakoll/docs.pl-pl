@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567487"
 ---
 # <a name="basic-string-operations-in-net"></a>Podstawowe operacje na ciągach w .NET
 Aplikacje często odpowiadają użytkownikom tworząc wiadomości w oparciu o dane wejściowe użytkownika. Na przykład nie jest nietypowe dla witryn sieci Web odpowiadanie na nowo zalogowanego użytkownika o specjalne powitanie zawierające nazwę użytkownika. Kilka metod w <xref:System.String?displayProperty=nameWithType> i <xref:System.Text.StringBuilder?displayProperty=nameWithType> klasy umożliwiają dynamicznie utworzyć niestandardowe ciągi do wyświetlenia w interfejsie użytkownika. Te metody także pomóc wykonywać podstawowe operacje na ciągach, takich jak tworzenie nowych ciągów w tablice bajtów, porównanie wartości ciągów i modyfikowanie istniejących ciągów.  

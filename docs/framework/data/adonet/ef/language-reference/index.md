@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761925"
 ---
 # <a name="entity-sql-language-reference"></a>Dokumentacja języka Entity SQL
 Ta sekcja zawiera szczegółową dokumentację [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], [!INCLUDE[esql](../../../../../../includes/esql-md.md)]oraz modelowania i mapowanie języki używane przez [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].  

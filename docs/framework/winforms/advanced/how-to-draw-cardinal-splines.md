@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525063"
 ---
 # <a name="how-to-draw-cardinal-splines"></a>Porady: rysowanie krzywych kardynalnych
 Kardynalnej krzywej składanej jest krzywą płynnie przechodzi przez podany zestaw punktów. Do rysowania kardynalnej krzywej składanej, Utwórz <xref:System.Drawing.Graphics> obiektu i przekazać adres tablicę punkty <xref:System.Drawing.Graphics.DrawCurve%2A> metody.  

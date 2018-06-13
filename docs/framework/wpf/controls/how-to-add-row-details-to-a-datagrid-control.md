@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555954"
 ---
 # <a name="how-to-add-row-details-to-a-datagrid-control"></a>Jak dodać szczegóły wiersza do formantu DataGrid
 Korzystając z <xref:System.Windows.Controls.DataGrid> kontroli, prezentacji danych można dostosować, dodając sekcji Szczegóły wiersza. Dodawanie sekcji Szczegóły wiersza umożliwiają grupowanie niektóre dane w szablonie, który jest opcjonalnie widoczny czy zwinięty. Na przykład można dodać szczegółów wiersza do <xref:System.Windows.Controls.DataGrid> przedstawiający tylko podsumowanie danych dla każdego wiersza w <xref:System.Windows.Controls.DataGrid>, ale stanowi więcej pól danych, gdy użytkownik wybierze wiersza. Zdefiniuj szablon dla sekcji Szczegóły wiersza <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> właściwości. Na poniższej ilustracji przedstawiono przykład sekcji szczegółów wiersza.  

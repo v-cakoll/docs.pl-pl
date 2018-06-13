@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558816"
 ---
 # <a name="how-to-animate-in-a-style"></a>Jak animować w stylu
 W tym przykładzie pokazano, jak można animować właściwości w stylu. W przypadku działania animacji jest używana w stylu bezpośrednio można zastosować tylko element framework, dla którego styl jest zdefiniowany. Docelowy obiekt obiektu freezable, możesz musi "dot w dół" z właściwością styl elementu.  

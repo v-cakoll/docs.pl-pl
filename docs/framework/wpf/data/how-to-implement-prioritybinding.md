@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557761"
 ---
 # <a name="how-to-implement-prioritybinding"></a>Porady: implementowanie PriorityBinding
 <xref:System.Windows.Data.PriorityBinding> w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] działa przez określenie listy powiązań. Lista powiązań porządkowania z najwyższym priorytetem do najniższego priorytetu. Jeśli powiązanie najwyższy priorytet zwróci wartość pomyślnie podczas przetwarzania oznacza to, że nigdy nie potrzeba przetworzyć pozostałych powiązaniach na liście. Może to być to powiązanie najwyższy priorytet trwa długo ma zostać obliczone, dalej najwyższy priorytet, która zwraca wartość pomyślnie zostanie użyty, dopóki powiązanie o wyższym priorytecie zwraca wartość pomyślnie.  

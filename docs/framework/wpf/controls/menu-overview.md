@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557605"
 ---
 # <a name="menu-overview"></a>Przegląd Menu
 <xref:System.Windows.Controls.Menu> Klasa umożliwia organizowanie elementów, skojarzonego z poleceniami i obsługi zdarzeń w porządku hierarchicznym. Każdy <xref:System.Windows.Controls.Menu> element zawiera kolekcję <xref:System.Windows.Controls.MenuItem> elementów.  

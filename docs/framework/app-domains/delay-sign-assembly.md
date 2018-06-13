@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743992"
 ---
 # <a name="delay-signing-an-assembly"></a>Opóźnione podpisywanie zestawu
 Organizacja może mieć ściśle związany parę kluczy, że deweloperzy nie mają dostępu do codziennie. Klucz publiczny często są dostępne, ale dostęp do klucza prywatnego jest ograniczony do tylko kilka osób. Podczas tworzenia zestawy o silnych nazwach, każdego zestawu tego zestawu docelowego odwołania o silnych nazwach zawiera token klucza publicznego używać, aby zapewnić silnej nazwy zestawu docelowego. To wymaga klucza publicznego dostępne podczas procesu projektowania.  

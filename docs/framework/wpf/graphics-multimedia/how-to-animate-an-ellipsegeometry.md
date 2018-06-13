@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558962"
 ---
 # <a name="how-to-animate-an-ellipsegeometry"></a>Jak animować EllipseGeometry
 W tym przykładzie pokazano, jak animować <xref:System.Windows.Media.Geometry> w <xref:System.Windows.Shapes.Path> elementu. W poniższym przykładzie <xref:System.Windows.Media.Animation.PointAnimation> służy do animowania <xref:System.Windows.Media.EllipseGeometry.Center%2A> z <xref:System.Windows.Media.EllipseGeometry>.  

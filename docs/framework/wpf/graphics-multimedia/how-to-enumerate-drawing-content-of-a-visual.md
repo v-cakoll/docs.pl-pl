@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559405"
 ---
 # <a name="how-to-enumerate-drawing-content-of-a-visual"></a>Jak wykazać zawartość rysowania Visual
 <xref:System.Windows.Media.Drawing> Obiektu Podaj model obiektów dla wyliczania zawartość <xref:System.Windows.Media.Visual>.  

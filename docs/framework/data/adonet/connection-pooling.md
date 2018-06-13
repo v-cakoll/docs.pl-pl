@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755529"
 ---
 # <a name="connection-pooling"></a>Pula połączeń
 Połączenie ze źródłem danych może zająć dużo czasu. Aby zminimalizować koszty otwarcia połączeń, ADO.NET używana technika optymalizacji o nazwie *puli połączeń*, który minimalizację kosztów wielokrotne otwieranie i zamykanie połączenia. Pula połączeń przebiega inaczej dla dostawcy danych .NET Framework.  

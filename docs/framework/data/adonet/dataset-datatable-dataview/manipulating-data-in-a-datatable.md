@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757645"
 ---
 # <a name="manipulating-data-in-a-datatable"></a>Manipulowanie danymi w DataTable
 Po utworzeniu <xref:System.Data.DataTable> w <xref:System.Data.DataSet>, można wykonywać działania sam, jak przy użyciu tabelę w bazie danych. Można dodać, wyświetlać, edytować i usuwać dane w tabeli; można monitorować błędów i zdarzeń; i można wyszukiwać dane w tabeli. Podczas modyfikowania danych w **DataTable**, można też sprawdzić czy zmiany są poprawne i określ, czy do programowego zaakceptować lub odrzucić zmiany.  

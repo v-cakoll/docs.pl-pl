@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641236"
 ---
 # <a name="textfieldparser-does-not-support-comment-tokens-that-contain-whitespace"></a><span data-ttu-id="b423e-102">Parametr TextFieldParser nie obsługuje tokenów komentarzy, które zawierają odstępu</span><span class="sxs-lookup"><span data-stu-id="b423e-102">TextFieldParser does not support comment tokens that contain whitespace</span></span>
 <span data-ttu-id="b423e-103">Podano tokenu komentarz, który zawiera biały znak.</span><span class="sxs-lookup"><span data-stu-id="b423e-103">A comment token that contains white space has been supplied.</span></span> <span data-ttu-id="b423e-104">`TextFieldParser` Nie obsługuje tokenów komentarzy, które zawierają biały znak, chyba że biały znak występuje na początku tokenu.</span><span class="sxs-lookup"><span data-stu-id="b423e-104">The `TextFieldParser` does not support comment tokens that contain white space unless the white space occurs at the beginning of the token.</span></span> <span data-ttu-id="b423e-105">Biały znak występujących na początku token jest ignorowana.</span><span class="sxs-lookup"><span data-stu-id="b423e-105">White space occurring at the beginning of a token is ignored.</span></span>  

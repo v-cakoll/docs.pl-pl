@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643356"
 ---
 # <a name="how-to-filter-on-element-names-linq-to-xml-visual-basic"></a><span data-ttu-id="a24b6-102">Porady: Filtr na nazwy elementów (LINQ do XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a24b6-102">How to: Filter on Element Names (LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="a24b6-103">Jeśli wywołasz jednej z metod, które zwracają <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement>, można filtrować według nazwy elementu.</span><span class="sxs-lookup"><span data-stu-id="a24b6-103">When you call one of the methods that return <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, you can filter on the element name.</span></span>  

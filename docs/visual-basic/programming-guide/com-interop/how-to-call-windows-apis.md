@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643643"
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a><span data-ttu-id="0e332-102">Porady: wywoływanie Windows API (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0e332-102">How to: Call Windows APIs (Visual Basic)</span></span>
 <span data-ttu-id="0e332-103">W tym przykładzie definiuje i wywołuje `MessageBox` funkcji w user32.dll, a następnie przekazuje ciąg do niego.</span><span class="sxs-lookup"><span data-stu-id="0e332-103">This example defines and calls the `MessageBox` function in user32.dll and then passes a string to it.</span></span>  

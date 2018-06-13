@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640433"
 ---
 # <a name="the-value-of-ltargumentnamegt-must-be-greater-than-or-equal-to-1000"></a><span data-ttu-id="967b2-102">Wartość &lt;argumentname&gt; musi być większa lub równa 1000</span><span class="sxs-lookup"><span data-stu-id="967b2-102">The value of &lt;argumentname&gt; must be greater than or equal to 1000</span></span>
 <span data-ttu-id="967b2-103">Wartość <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> właściwość musi być większa lub równa 1000.</span><span class="sxs-lookup"><span data-stu-id="967b2-103">The value of the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> property must be greater than or equal to 1000.</span></span>  

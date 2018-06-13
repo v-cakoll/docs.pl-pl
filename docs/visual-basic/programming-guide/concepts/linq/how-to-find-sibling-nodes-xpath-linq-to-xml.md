@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642885"
 ---
 # <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="6c2f6-102">Porady: znajdowanie węzłami tego samego poziomu (XPath-LINQ do XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6c2f6-102">How to: Find Sibling Nodes (XPath-LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="6c2f6-103">Można znaleźć wszystkich elementów równorzędnych węzła, które ma określoną nazwę.</span><span class="sxs-lookup"><span data-stu-id="6c2f6-103">You might want to find all siblings of a node that have a specific name.</span></span> <span data-ttu-id="6c2f6-104">Wynikowa kolekcji może zawierać węzeł kontekstu, jeśli węzeł kontekstu ma również określonej nazwy.</span><span class="sxs-lookup"><span data-stu-id="6c2f6-104">The resulting collection might include the context node if the context node also has the specific name.</span></span>  

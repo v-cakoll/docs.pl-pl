@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644800"
 ---
 # <a name="linq-to-xml-annotations"></a><span data-ttu-id="0172e-102">LINQ do XML adnotacji</span><span class="sxs-lookup"><span data-stu-id="0172e-102">LINQ to XML Annotations</span></span>
 <span data-ttu-id="0172e-103">Adnotacje w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] można skojarzyć dowolnych obiektów dowolnego typu dowolnego z dowolnym składnikiem XML w drzewie XML.</span><span class="sxs-lookup"><span data-stu-id="0172e-103">Annotations in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] enable you to associate any arbitrary object of any arbitrary type with any XML component in an XML tree.</span></span>  

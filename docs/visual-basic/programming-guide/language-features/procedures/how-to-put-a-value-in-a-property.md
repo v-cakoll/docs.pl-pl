@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650374"
 ---
 # <a name="how-to-put-a-value-in-a-property-visual-basic"></a><span data-ttu-id="2e113-102">Porady: umieszczanie wartości we właściwości (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2e113-102">How to: Put a Value in a Property (Visual Basic)</span></span>
 <span data-ttu-id="2e113-103">Wartości są przechowywane we właściwości ustawiając właściwości nazwy po lewej stronie instrukcji przypisania.</span><span class="sxs-lookup"><span data-stu-id="2e113-103">You store a value in a property by putting the property name on the left side of an assignment statement.</span></span>  

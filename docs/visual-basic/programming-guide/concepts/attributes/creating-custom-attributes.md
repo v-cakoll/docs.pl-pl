@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642893"
 ---
 # <a name="creating-custom-attributes-visual-basic"></a><span data-ttu-id="817f6-102">Tworzenie atrybutów niestandardowych (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="817f6-102">Creating Custom Attributes (Visual Basic)</span></span>
 <span data-ttu-id="817f6-103">Można utworzyć własne niestandardowe atrybuty, definiując klasę atrybutów klasy, która jest pochodną bezpośrednio lub pośrednio <xref:System.Attribute>, która sprawia, że identyfikacji definicje atrybutów w metadanych szybkie i łatwe.</span><span class="sxs-lookup"><span data-stu-id="817f6-103">You can create your own custom attributes by defining an attribute class, a class that derives directly or indirectly from <xref:System.Attribute>, which makes identifying attribute definitions in metadata fast and easy.</span></span> <span data-ttu-id="817f6-104">Załóżmy, że chcesz typów tagu o nazwie programisty autorze typu.</span><span class="sxs-lookup"><span data-stu-id="817f6-104">Suppose you want to tag types with the name of the programmer who wrote the type.</span></span> <span data-ttu-id="817f6-105">Możesz zdefiniować niestandardowy `Author` klasy atrybutu:</span><span class="sxs-lookup"><span data-stu-id="817f6-105">You might define a custom `Author` attribute class:</span></span>  

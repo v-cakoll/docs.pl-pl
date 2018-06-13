@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649142"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a><span data-ttu-id="46211-102">Porady: ukrywanie dziedziczonej zmiennej (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="46211-102">How to: Hide an Inherited Variable (Visual Basic)</span></span>
 <span data-ttu-id="46211-103">Klasa pochodna dziedziczy wszystkie definicje klasy podstawowej.</span><span class="sxs-lookup"><span data-stu-id="46211-103">A derived class inherits all the definitions of its base class.</span></span> <span data-ttu-id="46211-104">Jeśli chcesz zdefiniować zmienną przy użyciu takiej samej nazwie jako element klasy podstawowej, można ukryć, lub *tle*, podczas definiowania do zmiennej w klasie pochodnej elementu klasy podstawowej.</span><span class="sxs-lookup"><span data-stu-id="46211-104">If you want to define a variable using the same name as an element of the base class, you can hide, or *shadow*, that base class element when you define your variable in the derived class.</span></span> <span data-ttu-id="46211-105">Jeśli to zrobisz, kod w klasie pochodnej uzyskuje dostęp do zmiennej użytkownika, chyba że jawnie pomija mechanizmu przesłaniania.</span><span class="sxs-lookup"><span data-stu-id="46211-105">If you do this, code in the derived class accesses your variable unless it explicitly bypasses the shadowing mechanism.</span></span>  

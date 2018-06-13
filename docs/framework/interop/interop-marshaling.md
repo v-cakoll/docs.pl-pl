@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395372"
 ---
 # <a name="interop-marshaling"></a><span data-ttu-id="3ba95-102">Marshaling międzyoperacyjny</span><span class="sxs-lookup"><span data-stu-id="3ba95-102">Interop Marshaling</span></span>
 <a name="top"></a> <span data-ttu-id="3ba95-103">Przekazywanie międzyoperacyjne decyduje o tym, jak dane są przekazywane w metody argumentów i zwracanych wartości między zarządzanymi i niezarządzanymi pamięci podczas wywołania.</span><span class="sxs-lookup"><span data-stu-id="3ba95-103">Interop marshaling governs how data is passed in method arguments and return values between managed and unmanaged memory during calls.</span></span> <span data-ttu-id="3ba95-104">Przekazywanie międzyoperacyjne jest wykonywane przez usługę kierowania środowisko uruchomieniowe języka wspólnego firmy działalnością czasu wykonywania.</span><span class="sxs-lookup"><span data-stu-id="3ba95-104">Interop marshaling is a run-time activity performed by the common language runtime's marshaling service.</span></span>  

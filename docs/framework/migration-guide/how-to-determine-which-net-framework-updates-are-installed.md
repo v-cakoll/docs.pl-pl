@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389603"
 ---
 # <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a><span data-ttu-id="cce7b-103">Porady: Określanie, które poprawki i aktualizacje zabezpieczeń .NET Framework są zainstalowane</span><span class="sxs-lookup"><span data-stu-id="cce7b-103">How to: Determine which .NET Framework security updates and hotfixes are installed</span></span>
 

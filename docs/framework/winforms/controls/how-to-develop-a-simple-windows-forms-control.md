@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539669"
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a><span data-ttu-id="94dd6-102">Porady: opracowywanie prostego formantu formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="94dd6-102">How to: Develop a Simple Windows Forms Control</span></span>
 <span data-ttu-id="94dd6-103">W tej sekcji przedstawiono podstawowe etapy tworzenia niestandardowego formantu formularzy systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="94dd6-103">This section walks you through the key steps for authoring a custom Windows Forms control.</span></span> <span data-ttu-id="94dd6-104">Proste kontrolki opracowane w tym przewodniku umożliwia wyrównanie jego <xref:System.Windows.Forms.Control.Text%2A> właściwość zostanie zmieniony.</span><span class="sxs-lookup"><span data-stu-id="94dd6-104">The simple control developed in this walkthrough allows the alignment of its <xref:System.Windows.Forms.Control.Text%2A> property to be changed.</span></span> <span data-ttu-id="94dd6-105">Nie podnieść lub obsługę zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="94dd6-105">It does not raise or handle events.</span></span>  

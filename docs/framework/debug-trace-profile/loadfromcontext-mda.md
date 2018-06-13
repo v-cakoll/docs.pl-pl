@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393084"
 ---
 # <a name="loadfromcontext-mda"></a><span data-ttu-id="b5c21-102">loadFromContext MDA</span><span class="sxs-lookup"><span data-stu-id="b5c21-102">loadFromContext MDA</span></span>
 <span data-ttu-id="b5c21-103">`loadFromContext` Zarządzany Asystent debugowania (MDA) jest włączone, jeśli zestaw jest ładowany do `LoadFrom` kontekstu.</span><span class="sxs-lookup"><span data-stu-id="b5c21-103">The `loadFromContext` managed debugging assistant (MDA) is activated if an assembly is loaded into the `LoadFrom` context.</span></span> <span data-ttu-id="b5c21-104">Taka sytuacja może wystąpić w wyniku wywołania <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> lub innych metod podobne.</span><span class="sxs-lookup"><span data-stu-id="b5c21-104">This situation can occur as a result of calling <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> or other similar methods.</span></span>  

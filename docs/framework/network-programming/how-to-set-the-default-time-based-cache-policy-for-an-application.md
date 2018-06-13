@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396675"
 ---
 # <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a><span data-ttu-id="21742-102">Porady: ustawienie domyślnych zasad na podstawie czasu pamięci podręcznej dla aplikacji</span><span class="sxs-lookup"><span data-stu-id="21742-102">How to: Set the Default Time-Based Cache Policy for an Application</span></span>
 <span data-ttu-id="21742-103">Domyślne zasady na podstawie czasu pamięci podręcznej umożliwia aplikacji zachowują się jego pamięci podręcznej zdefiniowany przez nagłówki wysyłane z pamięci podręcznej zasobów i zachowanie pamięci podręcznej określonych w sekcji 13 i 14 RFC 2616 dostępne pod adresem [ http://www.ietf.org ](http://www.ietf.org/). Jest to zachowanie pamięci podręcznej właściwe dla większości aplikacji.</span><span class="sxs-lookup"><span data-stu-id="21742-103">The default time-based cache policy allows an application to have its cache behavior defined by the headers sent with the cached resource and the cache behavior defined in sections 13 and 14 of RFC 2616, available at [http://www.ietf.org](http://www.ietf.org/). This is the appropriate cache behavior for most applications.</span></span>  

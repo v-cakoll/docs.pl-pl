@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394637"
 ---
 # <a name="ltapplicationgt-element-net-native"></a><span data-ttu-id="4aa89-102">Element &lt;Application&gt; (architektura .NET Native)</span><span class="sxs-lookup"><span data-stu-id="4aa89-102">&lt;Application&gt; Element (.NET Native)</span></span>
 <span data-ttu-id="4aa89-103">Służy jako kontener dla całej aplikacji typy i elementy członkowskie typu, których metadanych jest dostępny w celu odbicia w czasie wykonywania i zastosowanie zasad wykonywania odbicia do wszystkich elementów programu w aplikacji.</span><span class="sxs-lookup"><span data-stu-id="4aa89-103">Serves as a container for application-wide types and type members whose metadata is available for reflection at run time, and applies runtime reflection policy to all the program elements in an app.</span></span>  

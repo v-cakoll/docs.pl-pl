@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421895"
 ---
 # <a name="icordebugregisterset2getregistersavailable-method"></a><span data-ttu-id="733a7-102">ICorDebugRegisterSet2::GetRegistersAvailable — Metoda</span><span class="sxs-lookup"><span data-stu-id="733a7-102">ICorDebugRegisterSet2::GetRegistersAvailable Method</span></span>
 <span data-ttu-id="733a7-103">Pobiera tablicę bajtów zawiera mapę bitową rejestry dostępne.</span><span class="sxs-lookup"><span data-stu-id="733a7-103">Gets an array of bytes that provides a bitmap of the available registers.</span></span>  

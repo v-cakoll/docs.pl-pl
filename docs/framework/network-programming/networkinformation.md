@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396324"
 ---
 # <a name="networkinformation"></a><span data-ttu-id="c8776-102">NetworkInformation</span><span class="sxs-lookup"><span data-stu-id="c8776-102">NetworkInformation</span></span>
 <span data-ttu-id="c8776-103"><xref:System.Net.NetworkInformation> Przestrzeni nazw umożliwia zebranie informacji o sieci zdarzenia, zmiany statystyk i właściwości.</span><span class="sxs-lookup"><span data-stu-id="c8776-103">The <xref:System.Net.NetworkInformation> namespace enables you to gather information about network events, changes, statistics, and properties.</span></span> <span data-ttu-id="c8776-104">Można również określić, czy zdalny host jest dostępny, za pomocą <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType> klasy.</span><span class="sxs-lookup"><span data-stu-id="c8776-104">You can also determine whether a remote host is reachable by using the <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType> class.</span></span>  

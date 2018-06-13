@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422019"
 ---
 # <a name="icoreclrdebugtargetenumprocesses-method"></a><span data-ttu-id="4af42-102">ICoreClrDebugTarget::EnumProcesses — Metoda</span><span class="sxs-lookup"><span data-stu-id="4af42-102">ICoreClrDebugTarget::EnumProcesses Method</span></span>
 <span data-ttu-id="4af42-103">Wylicza procesów, które są uruchomione na komputerze zdalnym.</span><span class="sxs-lookup"><span data-stu-id="4af42-103">Enumerates the processes that are running on a remote computer.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394582"
 ---
 # <a name="how-to-list-directory-contents-with-ftp"></a><span data-ttu-id="eb55d-102">Porady: listy zawartości katalogu przy użyciu FTP</span><span class="sxs-lookup"><span data-stu-id="eb55d-102">How to: List Directory Contents with FTP</span></span>
 <span data-ttu-id="eb55d-103">Ten przykład przedstawia sposób wyświetlania zawartości katalogu serwera FTP.</span><span class="sxs-lookup"><span data-stu-id="eb55d-103">This sample shows how to list the directory contents of an FTP server.</span></span>  

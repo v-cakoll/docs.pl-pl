@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565016"
 ---
 # <a name="xarray-markup-extension"></a><span data-ttu-id="d9dbc-102">x:Array — Rozszerzenie znaczników</span><span class="sxs-lookup"><span data-stu-id="d9dbc-102">x:Array Markup Extension</span></span>
 <span data-ttu-id="d9dbc-103">Zapewnia obsługę ogólne dla tablic obiektów w języku XAML, za pomocą rozszerzenia znaczników.</span><span class="sxs-lookup"><span data-stu-id="d9dbc-103">Provides general support for arrays of objects in XAML through a markup extension.</span></span> <span data-ttu-id="d9dbc-104">Odpowiada to `x:ArrayExtension` typu XAML w [MS-XAML].</span><span class="sxs-lookup"><span data-stu-id="d9dbc-104">This corresponds to the `x:ArrayExtension` XAML type in [MS-XAML].</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363505"
 ---
 # <a name="sql-server-data-types-and-adonet"></a><span data-ttu-id="f5894-102">Danych programu SQL Server typy i ADO.NET</span><span class="sxs-lookup"><span data-stu-id="f5894-102">SQL Server Data Types and ADO.NET</span></span>
 <span data-ttu-id="f5894-103">SQL Server i programu .NET Framework są oparte na systemach innego typu, które mogą spowodować utratę danych.</span><span class="sxs-lookup"><span data-stu-id="f5894-103">SQL Server and the .NET Framework are based on different type systems, which can result in potential data loss.</span></span> <span data-ttu-id="f5894-104">Aby zachować spójność danych, .NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) udostępnia metody typizowane metody dostępu do pracy z danymi programu SQL Server.</span><span class="sxs-lookup"><span data-stu-id="f5894-104">To preserve data integrity, the .NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) provides typed accessor methods for working with SQL Server data.</span></span> <span data-ttu-id="f5894-105">Korzystając z wyliczeń w <xref:System.Data.SqlDbType> klas, aby określić <xref:System.Data.SqlClient.SqlParameter> typów danych.</span><span class="sxs-lookup"><span data-stu-id="f5894-105">You can use the enumerations in the <xref:System.Data.SqlDbType> classes to specify <xref:System.Data.SqlClient.SqlParameter> data types.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535844"
 ---
 # <a name="layout-in-windows-forms-controls"></a><span data-ttu-id="e6bfd-102">Układ w formantach formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="e6bfd-102">Layout in Windows Forms Controls</span></span>
 <span data-ttu-id="e6bfd-103">Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji.</span><span class="sxs-lookup"><span data-stu-id="e6bfd-103">Precise placement of controls on your form is a high priority for many applications.</span></span> <span data-ttu-id="e6bfd-104"><xref:System.Windows.Forms?displayProperty=nameWithType> Przestrzeni nazw udostępnia wiele narzędzi układu, w tym celu.</span><span class="sxs-lookup"><span data-stu-id="e6bfd-104">The <xref:System.Windows.Forms?displayProperty=nameWithType> namespace gives you many layout tools to accomplish this.</span></span>  

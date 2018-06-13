@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538731"
 ---
 # <a name="how-to-access-keyed-collections-in-windows-forms"></a><span data-ttu-id="52256-102">Porady: uzyskiwanie dostępu do kolekcji z kluczami w formularzach systemu Windows</span><span class="sxs-lookup"><span data-stu-id="52256-102">How to: Access Keyed Collections in Windows Forms</span></span>
 -   <span data-ttu-id="52256-103">Można uzyskać dostępu do poszczególnych kolekcji elementów według klucza.</span><span class="sxs-lookup"><span data-stu-id="52256-103">You can access individual collection items by key.</span></span> <span data-ttu-id="52256-104">Ta funkcja dodano do wielu klas kolekcji, które są zazwyczaj używane w formularzach systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="52256-104">This functionality has been added to many collection classes that are typically used by Windows Forms applications.</span></span> <span data-ttu-id="52256-105">Poniżej przedstawiono niektóre klasy kolekcji, których dostępny kolekcje zabezpieczone kluczami:</span><span class="sxs-lookup"><span data-stu-id="52256-105">The following list shows some of the collection classes that have accessible keyed collections:</span></span>  

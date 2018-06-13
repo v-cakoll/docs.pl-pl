@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393120"
 ---
 # <a name="synchronous-client-socket-example"></a><span data-ttu-id="91aab-102">Przykład gniazda synchroniczne klienta</span><span class="sxs-lookup"><span data-stu-id="91aab-102">Synchronous Client Socket Example</span></span>
 <span data-ttu-id="91aab-103">Następujący przykład program tworzy klienta, który łączy się z serwerem.</span><span class="sxs-lookup"><span data-stu-id="91aab-103">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="91aab-104">Klient jest oparty z gniazdem synchroniczne, dlatego wykonywanie aplikacji klienckiej został wstrzymany, dopóki serwer zwraca odpowiedź.</span><span class="sxs-lookup"><span data-stu-id="91aab-104">The client is built with a synchronous socket, so execution of the client application is suspended until the server returns a response.</span></span> <span data-ttu-id="91aab-105">Aplikacja wysyła ciąg do serwera, a następnie wyświetla ciąg zwrócony przez serwer w konsoli.</span><span class="sxs-lookup"><span data-stu-id="91aab-105">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  

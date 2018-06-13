@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538715"
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a><span data-ttu-id="20314-102">Porady: formanty pozycji na formularzach systemu Windows</span><span class="sxs-lookup"><span data-stu-id="20314-102">How to: Position Controls on Windows Forms</span></span>
 <span data-ttu-id="20314-103">Formanty pozycji, za pomocą projektanta formularzy systemu Windows lub określ <xref:System.Windows.Forms.Control.Location%2A> właściwości.</span><span class="sxs-lookup"><span data-stu-id="20314-103">To position controls, use the Windows Forms Designer, or specify the <xref:System.Windows.Forms.Control.Location%2A> property.</span></span>  

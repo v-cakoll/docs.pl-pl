@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408674"
 ---
 # <a name="icordebug-interface"></a><span data-ttu-id="03084-102">ICorDebug — Interfejs</span><span class="sxs-lookup"><span data-stu-id="03084-102">ICorDebug Interface</span></span>
 <span data-ttu-id="03084-103">Udostępnia metody, które umożliwiają deweloperom debugowanie aplikacji w środowisku środowiska uruchomieniowego (języka wspólnego CLR) języka wspólnego.</span><span class="sxs-lookup"><span data-stu-id="03084-103">Provides methods that allow developers to debug applications in the common language runtime (CLR) environment.</span></span>  

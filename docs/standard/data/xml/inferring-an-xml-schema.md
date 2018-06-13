@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568787"
 ---
 # <a name="inferring-an-xml-schema"></a><span data-ttu-id="0e335-102">Wnioskowanie schematu XML</span><span class="sxs-lookup"><span data-stu-id="0e335-102">Inferring an XML Schema</span></span>
 <span data-ttu-id="0e335-103">Informacje dotyczące używania modelu obiektu schematu (SOM) <xref:System.Xml.Schema.XmlSchemaInference> klasy na potrzeby wnioskowania dotyczącego schematu schematu XML definition language (XSD) ze struktury dokumentu XML.</span><span class="sxs-lookup"><span data-stu-id="0e335-103">Describes how to use the Schema Object Model (SOM) <xref:System.Xml.Schema.XmlSchemaInference> class to infer an XML Schema definition language (XSD) schema from the structure of an XML document.</span></span>  

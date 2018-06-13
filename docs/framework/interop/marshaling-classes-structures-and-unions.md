@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393396"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a><span data-ttu-id="c78cb-102">Marshaling klas, struktur i unii</span><span class="sxs-lookup"><span data-stu-id="c78cb-102">Marshaling Classes, Structures, and Unions</span></span>
 <span data-ttu-id="c78cb-103">Klasy i struktury są podobne w programie .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="c78cb-103">Classes and structures are similar in the .NET Framework.</span></span> <span data-ttu-id="c78cb-104">Obydwie pola, właściwości i zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="c78cb-104">Both can have fields, properties, and events.</span></span> <span data-ttu-id="c78cb-105">Może to być również metody statyczne i Niestatyczne.</span><span class="sxs-lookup"><span data-stu-id="c78cb-105">They can also have static and nonstatic methods.</span></span> <span data-ttu-id="c78cb-106">Jeden znacząca różnica jest struktury są typy wartości oraz klasy są typy referencyjne.</span><span class="sxs-lookup"><span data-stu-id="c78cb-106">One notable difference is that structures are value types and classes are reference types.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393935"
 ---
 # <a name="enabling-and-disabling-ipv6"></a><span data-ttu-id="b8c5e-102">Włączanie i wyłączanie IPv6</span><span class="sxs-lookup"><span data-stu-id="b8c5e-102">Enabling and Disabling IPv6</span></span>
 <span data-ttu-id="b8c5e-103">Aby korzystać z protokołu IPv6, upewnij się, że używasz wersji systemu operacyjnego, który obsługuje protokół IPv6 i upewnij się, że system operacyjny i klasy sieciowe są prawidłowo skonfigurowane.</span><span class="sxs-lookup"><span data-stu-id="b8c5e-103">To use the IPv6 protocol, ensure that you are running a version of the operating system that supports IPv6 and ensure that the operating system and the networking classes are configured properly.</span></span>  

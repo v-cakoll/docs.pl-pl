@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539692"
 ---
 # <a name="listview-control-windows-forms"></a><span data-ttu-id="0f5f6-102">ListView — Formant (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="0f5f6-102">ListView Control (Windows Forms)</span></span>
 <span data-ttu-id="0f5f6-103">Formularze systemu Windows `ListView` formantu zostanie wyświetlona lista elementy z ikonami.</span><span class="sxs-lookup"><span data-stu-id="0f5f6-103">The Windows Forms `ListView` control displays a list of items with icons.</span></span> <span data-ttu-id="0f5f6-104">Widok listy służy do tworzenia interfejsu użytkownika, takie jak okienku po prawej stronie Eksploratora Windows.</span><span class="sxs-lookup"><span data-stu-id="0f5f6-104">You can use a list view to create a user interface like the right pane of Windows Explorer.</span></span>  

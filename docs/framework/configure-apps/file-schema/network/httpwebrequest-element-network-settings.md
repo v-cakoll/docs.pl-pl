@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741971"
 ---
 # <a name="lthttpwebrequestgt-element-network-settings"></a><span data-ttu-id="bc7db-102">&lt;httpWebRequest&gt; elementu (ustawienia sieciowe)</span><span class="sxs-lookup"><span data-stu-id="bc7db-102">&lt;httpWebRequest&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="bc7db-103">Dostosowuje parametry żądania sieci Web.</span><span class="sxs-lookup"><span data-stu-id="bc7db-103">Customizes Web request parameters.</span></span>  

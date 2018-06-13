@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432628"
 ---
 # <a name="iclrstrongnamegethashfromassemblyfile-method"></a><span data-ttu-id="9364f-102">ICLRStrongName::GetHashFromAssemblyFile — Metoda</span><span class="sxs-lookup"><span data-stu-id="9364f-102">ICLRStrongName::GetHashFromAssemblyFile Method</span></span>
 <span data-ttu-id="9364f-103">Pobiera skrót określonego pliku zestawu, przy użyciu określonego algorytmu skrótu.</span><span class="sxs-lookup"><span data-stu-id="9364f-103">Gets a hash of the specified assembly file, using the specified hash algorithm.</span></span>  

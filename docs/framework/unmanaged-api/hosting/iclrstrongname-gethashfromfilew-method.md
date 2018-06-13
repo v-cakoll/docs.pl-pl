@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33433344"
 ---
 # <a name="iclrstrongnamegethashfromfilew-method"></a><span data-ttu-id="320e6-102">ICLRStrongName::GetHashFromFileW — Metoda</span><span class="sxs-lookup"><span data-stu-id="320e6-102">ICLRStrongName::GetHashFromFileW Method</span></span>
 <span data-ttu-id="320e6-103">Generuje skrót za pośrednictwem zawartość pliku określona przez ciąg Unicode.</span><span class="sxs-lookup"><span data-stu-id="320e6-103">Generates a hash over the contents of the file specified by a Unicode string.</span></span>  

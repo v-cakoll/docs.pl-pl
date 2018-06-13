@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365173"
 ---
 # <a name="data-binding"></a><span data-ttu-id="ef3cc-102">Powiązanie danych</span><span class="sxs-lookup"><span data-stu-id="ef3cc-102">Data Binding</span></span>
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="ef3cc-103"> obsługuje powiązanie z formanty standardowe, takie jak formanty siatki.</span><span class="sxs-lookup"><span data-stu-id="ef3cc-103"> supports binding to common controls, such as grid controls.</span></span> <span data-ttu-id="ef3cc-104">W szczególności [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] definiuje wzorców podstawowych dla powiązania do siatki danych i ich obsługi główny szczegółowy powiązanie, zarówno w odniesieniu do wyświetlanie i aktualizowanie.</span><span class="sxs-lookup"><span data-stu-id="ef3cc-104">Specifically, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] defines the basic patterns for binding to a data grid and handling master-detail binding, both with regard to display and updating.</span></span>  

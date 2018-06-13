@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391410"
 ---
 # <a name="deploying-the-net-framework"></a><span data-ttu-id="38361-102">Wdrażanie programu .NET Framework</span><span class="sxs-lookup"><span data-stu-id="38361-102">Deploying the .NET Framework</span></span>
 <span data-ttu-id="38361-103">Ta sekcja dokumentacji programu .NET Framework informacje dla deweloperów, którzy chcą zainstalować program .NET Framework z ich aplikacji i administratorów, którzy chcą do wdrożenia programu .NET Framework w sieci.</span><span class="sxs-lookup"><span data-stu-id="38361-103">This section of the .NET Framework documentation provides information for developers who want to install the .NET Framework with their applications, and administrators who want to deploy the .NET Framework across a network.</span></span> <span data-ttu-id="38361-104">Również w tym artykule omówiono aktywacji i uruchom ponownie problemów związanych z wdrażaniem i jak monitorować postęp instalacji programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="38361-104">It also discusses activation and restart issues associated with deployment, and how to monitor the progress of your .NET Framework installation.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542590"
 ---
 # <a name="events-wpf"></a><span data-ttu-id="ff4af-102">Zdarzenia (WPF)</span><span class="sxs-lookup"><span data-stu-id="ff4af-102">Events (WPF)</span></span>
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="ff4af-103"> wprowadza kierowane zdarzenia, które mogą być wywoływane programy obsługi, które istnieją na różnych odbiorników w drzewie elementu aplikacji.</span><span class="sxs-lookup"><span data-stu-id="ff4af-103"> introduces routed events that can invoke handlers that exist on various listeners in the element tree of an application.</span></span>  

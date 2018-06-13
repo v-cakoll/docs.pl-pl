@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420127"
 ---
 # <a name="icordebugsymbolprovidergetcoderange-method"></a><span data-ttu-id="9d5f2-102">ICorDebugSymbolProvider::GetCodeRange — metoda</span><span class="sxs-lookup"><span data-stu-id="9d5f2-102">ICorDebugSymbolProvider::GetCodeRange Method</span></span>
 <span data-ttu-id="9d5f2-103">Pobiera adres początkowy — metoda i rozmiar podany wirtualny adres względny (RVA) w metodzie.</span><span class="sxs-lookup"><span data-stu-id="9d5f2-103">Gets the method start address and size given a relative virtual address (RVA) in a method.</span></span>  

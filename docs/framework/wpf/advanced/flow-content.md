@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542340"
 ---
 # <a name="flow-content"></a><span data-ttu-id="94178-102">Zawartość przepływu</span><span class="sxs-lookup"><span data-stu-id="94178-102">Flow Content</span></span>
 <span data-ttu-id="94178-103">Elementy zawartości przepływu zawiera bloki konstrukcyjne do tworzenia zawartość śródwierszowa odpowiedni w przypadku hostowania w <xref:System.Windows.Documents.FlowDocument>.</span><span class="sxs-lookup"><span data-stu-id="94178-103">Flow content elements provide the building blocks for creating flow content suitable for hosting in a <xref:System.Windows.Documents.FlowDocument>.</span></span>  

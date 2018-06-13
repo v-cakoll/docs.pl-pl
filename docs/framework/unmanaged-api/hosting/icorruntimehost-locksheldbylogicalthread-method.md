@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436679"
 ---
 # <a name="icorruntimehostlocksheldbylogicalthread-method"></a><span data-ttu-id="91c18-102">ICorRuntimeHost::LocksHeldByLogicalThread — Metoda</span><span class="sxs-lookup"><span data-stu-id="91c18-102">ICorRuntimeHost::LocksHeldByLogicalThread Method</span></span>
 <span data-ttu-id="91c18-103">Pobiera liczbę blokad, które przechowuje bieżącego wątku.</span><span class="sxs-lookup"><span data-stu-id="91c18-103">Retrieves the number of locks that current thread holds.</span></span>  

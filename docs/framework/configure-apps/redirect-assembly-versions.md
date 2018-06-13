@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759273"
 ---
 # <a name="redirecting-assembly-versions"></a><span data-ttu-id="9ceb1-102">Przekierowywanie wersji zestawu</span><span class="sxs-lookup"><span data-stu-id="9ceb1-102">Redirecting Assembly Versions</span></span>
 <span data-ttu-id="9ceb1-103">Można przekierować powiązanie kompilacji odwołania do zestawów platformy .NET Framework, zestawy innych firm lub zestawy własnych aplikacji.</span><span class="sxs-lookup"><span data-stu-id="9ceb1-103">You can redirect compile-time binding references to .NET Framework assemblies, third-party assemblies, or your own app's assemblies.</span></span> <span data-ttu-id="9ceb1-104">Można przekierować aplikację, aby użyć innej wersji zestawu na kilka sposobów: za pomocą zasad wydawcy, za pomocą pliku konfiguracji aplikacji; lub za pomocą pliku konfiguracji komputera.</span><span class="sxs-lookup"><span data-stu-id="9ceb1-104">You can redirect your app to use a different version of an assembly in a number of ways: through publisher policy, through an app configuration file; or through the machine configuration file.</span></span> <span data-ttu-id="9ceb1-105">W tym artykule omówiono sposób działania powiązań zestawów w programie .NET Framework i jak można je skonfigurować.</span><span class="sxs-lookup"><span data-stu-id="9ceb1-105">This article discusses how assembly binding works in the .NET Framework and how it can be configured.</span></span>  

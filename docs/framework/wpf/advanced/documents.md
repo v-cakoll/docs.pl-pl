@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542967"
 ---
 # <a name="documents"></a><span data-ttu-id="c2a46-102">Dokumenty</span><span class="sxs-lookup"><span data-stu-id="c2a46-102">Documents</span></span>
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="c2a46-103"> udostępnia wszechstronny zestaw składników, które umożliwiają deweloperom tworzenie aplikacji za pomocą funkcji zaawansowanych dokumentu i ulepszone czytanie.</span><span class="sxs-lookup"><span data-stu-id="c2a46-103"> provides a versatile set of components that enable developers to build applications with advanced document features and an improved reading experience.</span></span> <span data-ttu-id="c2a46-104">Oprócz udoskonalone funkcje i jakości [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] udostępnia usługi uproszczone zarządzanie pakowania dokumentu, zabezpieczeń i magazynu.</span><span class="sxs-lookup"><span data-stu-id="c2a46-104">In addition to enhanced capabilities and quality, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] also provides simplified management services for document packaging, security, and storage.</span></span>  

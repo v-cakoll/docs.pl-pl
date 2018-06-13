@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392399"
 ---
 # <a name="packaging-an-assembly-for-com"></a><span data-ttu-id="c6df4-102">Pakowanie zestawu dla modelu COM</span><span class="sxs-lookup"><span data-stu-id="c6df4-102">Packaging an Assembly for COM</span></span>
 <span data-ttu-id="c6df4-103">COM deweloperzy mogą korzystać z następujące informacje o typach zarządzanych one ma włączenie w aplikacji:</span><span class="sxs-lookup"><span data-stu-id="c6df4-103">COM developers can benefit from the following information about the managed types they plan to incorporate in their application:</span></span>  

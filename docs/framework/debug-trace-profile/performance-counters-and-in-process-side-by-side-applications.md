@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392021"
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a><span data-ttu-id="9bdc9-102">Liczniki wydajności i wewnątrzprocesowe, równoczesne aplikacje</span><span class="sxs-lookup"><span data-stu-id="9bdc9-102">Performance Counters and In-Process Side-By-Side Applications</span></span>
 <span data-ttu-id="9bdc9-103">Korzystanie z Monitora wydajności (Perfmon.exe), jest możliwe do odróżnienia liczników wydajności na podstawie na środowiska wykonawczego.</span><span class="sxs-lookup"><span data-stu-id="9bdc9-103">Using the Performance Monitor (Perfmon.exe), it is possible to differentiate the performance counters on a per-runtime basis.</span></span> <span data-ttu-id="9bdc9-104">W tym temacie opisano zmiany rejestru wymagane do włączenia tej funkcji.</span><span class="sxs-lookup"><span data-stu-id="9bdc9-104">This topic describes the registry change needed to enable this functionality.</span></span>  

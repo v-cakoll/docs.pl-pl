@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571439"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a><span data-ttu-id="4cba8-102">Modyfikowanie węzłów, zawartość i wartości w dokumencie XML</span><span class="sxs-lookup"><span data-stu-id="4cba8-102">Modifying Nodes, Content, and Values in an XML Document</span></span>
 <span data-ttu-id="4cba8-103">Istnieje wiele sposobów, można zmodyfikować węzłów i zawartości w dokumencie.</span><span class="sxs-lookup"><span data-stu-id="4cba8-103">There are many ways you can modify the nodes and content in a document.</span></span> <span data-ttu-id="4cba8-104">Można:</span><span class="sxs-lookup"><span data-stu-id="4cba8-104">You can:</span></span>  

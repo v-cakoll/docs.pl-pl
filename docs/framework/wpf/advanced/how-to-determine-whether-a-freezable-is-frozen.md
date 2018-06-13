@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542756"
 ---
 # <a name="how-to-determine-whether-a-freezable-is-frozen"></a><span data-ttu-id="2d02d-102">Jak określić, czy Freezable jest zamrożony</span><span class="sxs-lookup"><span data-stu-id="2d02d-102">How to: Determine Whether a Freezable Is Frozen</span></span>
 <span data-ttu-id="2d02d-103">W tym przykładzie pokazano, jak ustalić, czy <xref:System.Windows.Freezable> obiektu jest zablokowany.</span><span class="sxs-lookup"><span data-stu-id="2d02d-103">This example shows how to determine whether a <xref:System.Windows.Freezable> object is frozen.</span></span> <span data-ttu-id="2d02d-104">Jeśli użytkownik próbuje zmodyfikować zablokowane <xref:System.Windows.Freezable> obiekt zgłasza <xref:System.InvalidOperationException>.</span><span class="sxs-lookup"><span data-stu-id="2d02d-104">If you try to modify a frozen <xref:System.Windows.Freezable> object, it throws an <xref:System.InvalidOperationException>.</span></span> <span data-ttu-id="2d02d-105">Aby uniknąć generowania tego wyjątku, użyj <xref:System.Windows.Freezable.IsFrozen%2A> właściwość <xref:System.Windows.Freezable> obiektem, aby określić, czy jest zablokowana.</span><span class="sxs-lookup"><span data-stu-id="2d02d-105">To avoid throwing this exception, use the <xref:System.Windows.Freezable.IsFrozen%2A> property of the <xref:System.Windows.Freezable> object to determine whether it is frozen.</span></span>  

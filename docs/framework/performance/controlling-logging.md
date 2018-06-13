@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396214"
 ---
 # <a name="controlling-net-framework-logging"></a><span data-ttu-id="940bb-102">Kontrolowanie logowania w programie .NET Framework</span><span class="sxs-lookup"><span data-stu-id="940bb-102">Controlling .NET Framework Logging</span></span>
 <span data-ttu-id="940bb-103">Śledzenia zdarzeń systemu Windows (ETW) można użyć do rejestrowania zdarzeń środowiska uruchomieniowego języka wspólnego (CLR).</span><span class="sxs-lookup"><span data-stu-id="940bb-103">You can use event tracing for Windows (ETW) to record common language runtime (CLR) events.</span></span> <span data-ttu-id="940bb-104">Można tworzyć i przeglądać ślady za pomocą następujących narzędzi:</span><span class="sxs-lookup"><span data-stu-id="940bb-104">You can create and view traces by using the following tools:</span></span>  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440960"
 ---
 # <a name="cornativelink-structure"></a><span data-ttu-id="11d07-102">COR_NATIVE_LINK — Struktura</span><span class="sxs-lookup"><span data-stu-id="11d07-102">COR_NATIVE_LINK Structure</span></span>
 <span data-ttu-id="11d07-103">Zawiera informacje, które jest używane do łączenia kodu natywnego.</span><span class="sxs-lookup"><span data-stu-id="11d07-103">Contains information that is used to link native code.</span></span>  

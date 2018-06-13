@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392034"
 ---
 # <a name="marshalcleanuperror-mda"></a><span data-ttu-id="8f0e7-102">marshalCleanupError MDA</span><span class="sxs-lookup"><span data-stu-id="8f0e7-102">marshalCleanupError MDA</span></span>
 <span data-ttu-id="8f0e7-103">`marshalCleanupError` Zarządzany Asystent debugowania (MDA) jest aktywowany, gdy środowisko uruchomieniowe języka wspólnego (CLR) napotka błąd podczas próby wyczyścić tymczasowego struktury i pamięć używana na potrzeby organizowanie typów danych między granicami kodu natywnego i zarządzanego.</span><span class="sxs-lookup"><span data-stu-id="8f0e7-103">The `marshalCleanupError` managed debugging assistant (MDA) is activated when the common language runtime (CLR) encounters an error while attempting to clean up temporary structures and memory used for marshaling data types between native and managed code boundaries.</span></span>  

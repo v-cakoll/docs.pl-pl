@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392294"
 ---
 # <a name="blittable-and-non-blittable-types"></a><span data-ttu-id="22a02-102">Typy kopiowalne i niekopiowalne</span><span class="sxs-lookup"><span data-stu-id="22a02-102">Blittable and Non-Blittable Types</span></span>
 <span data-ttu-id="22a02-103">Większość typów danych ma reprezentacji w postaci typowych w pamięci zarządzane i niezarządzane i nie wymagają specjalnej obsługi przez organizatora międzyoperacyjnego.</span><span class="sxs-lookup"><span data-stu-id="22a02-103">Most data types have a common representation in both managed and unmanaged memory and do not require special handling by the interop marshaler.</span></span> <span data-ttu-id="22a02-104">Te typy są nazywane *typy kopiowalne* ponieważ one nie wymagają konwersji, gdy są one przekazywane między zarządzanych i niezarządzanych kodu.</span><span class="sxs-lookup"><span data-stu-id="22a02-104">These types are called *blittable types* because they do not require conversion when they are passed between managed and unmanaged code.</span></span>  

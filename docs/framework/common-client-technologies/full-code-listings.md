@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742026"
 ---
 # <a name="full-code-listings"></a><span data-ttu-id="a835d-102">Listy pełnego kodu</span><span class="sxs-lookup"><span data-stu-id="a835d-102">Full Code Listings</span></span>
 <span data-ttu-id="a835d-103">Ten temat zawiera całego kodu dla aplikacji, która używa [manipulacji i bezwładności](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md) procesorów.</span><span class="sxs-lookup"><span data-stu-id="a835d-103">This topic contains the entire code listing for an application that uses [Manipulations and Inertia](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md) processors.</span></span>  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393058"
 ---
 # <a name="runtime-profiling"></a><span data-ttu-id="092d6-102">Profilowanie środowiska uruchomieniowego</span><span class="sxs-lookup"><span data-stu-id="092d6-102">Runtime Profiling</span></span>
 <span data-ttu-id="092d6-103">Profilowanie jest metoda zbierania danych wydajności w jakimkolwiek scenariuszu rozwoju lub wdrożenia.</span><span class="sxs-lookup"><span data-stu-id="092d6-103">Profiling is a method of gathering performance data in any development or deployment scenario.</span></span> <span data-ttu-id="092d6-104">Ta sekcja dotyczy deweloperów i administratorów, którzy chcą zebrać informacje dotyczące wydajności aplikacji.</span><span class="sxs-lookup"><span data-stu-id="092d6-104">This section is for developers and system administrators who want to gather information about application performance.</span></span>  

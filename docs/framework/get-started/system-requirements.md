@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395895"
 ---
 # <a name="net-framework-system-requirements"></a><span data-ttu-id="5a2b9-103">Wymagania systemowe programu .NET framework</span><span class="sxs-lookup"><span data-stu-id="5a2b9-103">.NET Framework system requirements</span></span>
 

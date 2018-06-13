@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391101"
 ---
 # <a name="net-framework-development-guide"></a><span data-ttu-id="35a3c-102">.NET Framework — podręcznik programowania</span><span class="sxs-lookup"><span data-stu-id="35a3c-102">.NET Framework Development Guide</span></span>
 <span data-ttu-id="35a3c-103">W tej sekcji opisano sposób tworzenia, konfigurowanie debugowania, zabezpieczenia i wdrażanie aplikacji .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="35a3c-103">This section explains how to create, configure, debug, secure, and deploy your .NET Framework apps.</span></span> <span data-ttu-id="35a3c-104">Sekcja ta zawiera też informacji na temat obszarów technologii, takich jak dynamiczne programowania, współdziałanie rozszerzalności, zarządzanie pamięcią i wątków.</span><span class="sxs-lookup"><span data-stu-id="35a3c-104">The section also provides information about technology areas such as dynamic programming, interoperability, extensibility, memory management, and threading.</span></span>  

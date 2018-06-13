@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535649"
 ---
 # <a name="how-to-sort-the-contents-of-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="13c35-102">Porady: sortowanie zawartości formantu ComboBox, ListBox lub CheckedListBox formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="13c35-102">How to: Sort the Contents of a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
 <span data-ttu-id="13c35-103">Formanty formularzy systemu Windows bez sortowania, jeśli są one powiązane z danymi.</span><span class="sxs-lookup"><span data-stu-id="13c35-103">Windows Forms controls do not sort when they are data-bound.</span></span> <span data-ttu-id="13c35-104">Aby wyświetlić posortowane dane, używać źródła danych, który obsługuje sortowanie, a następnie go sortowania źródła danych.</span><span class="sxs-lookup"><span data-stu-id="13c35-104">To display sorted data, use a data source that supports sorting and then have the data source sort it.</span></span> <span data-ttu-id="13c35-105">Widoki danych są źródeł danych, które obsługują sortowanie, danych Wyświetl menedżerów i sortowane tablic.</span><span class="sxs-lookup"><span data-stu-id="13c35-105">Data sources that support sorting are data views, data view managers, and sorted arrays.</span></span>  

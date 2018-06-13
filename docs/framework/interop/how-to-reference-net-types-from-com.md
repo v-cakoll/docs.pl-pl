@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391903"
 ---
 # <a name="how-to-reference-net-types-from-com"></a><span data-ttu-id="87d45-102">Porady: odwołania do typów .NET z modelu COM</span><span class="sxs-lookup"><span data-stu-id="87d45-102">How to: Reference .NET Types from COM</span></span>
 <span data-ttu-id="87d45-103">Z punktu widzenia kodu klienta i serwera różnice między COM i .NET Framework są przede wszystkim niewidoczne.</span><span class="sxs-lookup"><span data-stu-id="87d45-103">From the point of view of client and server code, the differences between COM and the .NET Framework are largely invisible.</span></span> <span data-ttu-id="87d45-104">Microsoft Visual Basic klientów można wyświetlić obiektu .NET. w przeglądarce obiektów, który udostępnia metody obiektu i składni, właściwości oraz polach dokładnie tak, jakby była innego obiektu COM.</span><span class="sxs-lookup"><span data-stu-id="87d45-104">Microsoft Visual Basic clients can view a .NET object in the object browser, which exposes the object methods and syntax, properties, and fields exactly as if it were any other COM object.</span></span>  

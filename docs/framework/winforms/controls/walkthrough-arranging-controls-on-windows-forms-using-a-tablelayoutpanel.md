@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541823"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a><span data-ttu-id="a4405-102">Wskazówki: rozmieszczanie formantów w aplikacji formularzy systemu Windows za pomocą TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="a4405-102">Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel</span></span>
 <span data-ttu-id="a4405-103">Niektóre aplikacje wymagają formularza z układem rozmieszcza się odpowiednio rozmiarów formularza lub jako zawartość zmienia rozmiar.</span><span class="sxs-lookup"><span data-stu-id="a4405-103">Some applications require a form with a layout that arranges itself appropriately as the form is resized or as the contents change in size.</span></span> <span data-ttu-id="a4405-104">Kiedy należy układ dynamiczny i nie chcesz obsługiwać <xref:System.Windows.Forms.Control.Layout> zdarzenia jawnie w kodzie, należy wziąć pod uwagę przy użyciu panelu układu.</span><span class="sxs-lookup"><span data-stu-id="a4405-104">When you need a dynamic layout and you do not want to handle <xref:System.Windows.Forms.Control.Layout> events explicitly in your code, consider using a layout panel.</span></span>  

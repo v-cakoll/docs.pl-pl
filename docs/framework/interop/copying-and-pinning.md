@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392804"
 ---
 # <a name="copying-and-pinning"></a><span data-ttu-id="9d296-102">Kopiowanie i przypinanie</span><span class="sxs-lookup"><span data-stu-id="9d296-102">Copying and Pinning</span></span>
 <span data-ttu-id="9d296-103">Podczas organizowania danych, międzyoperacyjnego organizatora można skopiować lub przypiąć dane są przekazywane.</span><span class="sxs-lookup"><span data-stu-id="9d296-103">When marshaling data, the interop marshaler can copy or pin the data being marshaled.</span></span> <span data-ttu-id="9d296-104">Kopiowanie danych umieszcza kopię danych z jednej lokalizacji pamięci w innej lokalizacji pamięci.</span><span class="sxs-lookup"><span data-stu-id="9d296-104">Copying the data places a copy of data from one memory location in another memory location.</span></span> <span data-ttu-id="9d296-105">Na poniższej ilustracji przedstawiono różnice między kopiowanie typu wartości i kopiowanie typ przekazany przez odwołanie z zarządzanych do niezarządzanych pamięci.</span><span class="sxs-lookup"><span data-stu-id="9d296-105">The following illustration shows the differences between copying a value type and copying a type passed by reference from managed to unmanaged memory.</span></span>  

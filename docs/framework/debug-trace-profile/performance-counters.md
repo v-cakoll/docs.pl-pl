@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394423"
 ---
 # <a name="performance-counters-in-the-net-framework"></a><span data-ttu-id="76156-102">Liczniki wydajności w oprogramowaniu .NET Framework</span><span class="sxs-lookup"><span data-stu-id="76156-102">Performance Counters in the .NET Framework</span></span>
 <span data-ttu-id="76156-103">Ten temat zawiera listę liczników wydajności można znaleźć w [monitora wydajności](http://technet.microsoft.com/library/cc749249.aspx).</span><span class="sxs-lookup"><span data-stu-id="76156-103">This topic provides a list of performance counters you can find in the [Performance Monitor](http://technet.microsoft.com/library/cc749249.aspx).</span></span>  

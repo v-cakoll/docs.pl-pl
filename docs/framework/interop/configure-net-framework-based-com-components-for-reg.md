@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392856"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a><span data-ttu-id="516dd-102">Poradnik: Konfigurowanie aktywacji bez rejestracji składników COM opartych na platformie .NET Framework</span><span class="sxs-lookup"><span data-stu-id="516dd-102">How to: Configure .NET Framework-Based COM Components for Registration-Free Activation</span></span>
 <span data-ttu-id="516dd-103">Aktywacja bez rejestrowania dla składników opartych na programie .NET Framework jest tylko nieco bardziej skomplikowane niż dla składników COM.</span><span class="sxs-lookup"><span data-stu-id="516dd-103">Registration-free activation for .NET Framework-based components is only slightly more complicated than it is for COM components.</span></span> <span data-ttu-id="516dd-104">Instalator wymaga dwóch manifestów:</span><span class="sxs-lookup"><span data-stu-id="516dd-104">The setup requires two manifests:</span></span>  

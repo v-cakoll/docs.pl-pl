@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539520"
 ---
 # <a name="mouse-pointers-in-windows-forms"></a><span data-ttu-id="5cf2d-102">Wskaźniki myszy w formularzach systemu Windows</span><span class="sxs-lookup"><span data-stu-id="5cf2d-102">Mouse Pointers in Windows Forms</span></span>
 <span data-ttu-id="5cf2d-103">Mysz *wskaźnika*, który jest czasami nazywany kursor jest mapą bitową, określająca fokus na ekranie dla danych wejściowych użytkownika przy użyciu myszy.</span><span class="sxs-lookup"><span data-stu-id="5cf2d-103">The mouse *pointer*, which is sometimes referred to as the cursor, is a bitmap that specifies a focus point on the screen for user input with the mouse.</span></span> <span data-ttu-id="5cf2d-104">Ten temat zawiera omówienie wskaźnik myszy w formularzach systemu Windows oraz opis niektórych sposobów, aby zmodyfikować i kontrolować wskaźnik myszy.</span><span class="sxs-lookup"><span data-stu-id="5cf2d-104">This topic provides an overview of the mouse pointer in Windows Forms and describes some of the ways to modify and control the mouse pointer.</span></span>  

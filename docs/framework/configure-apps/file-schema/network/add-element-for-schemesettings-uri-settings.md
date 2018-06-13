@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741857"
 ---
 # <a name="ltaddgt-element-for-schemesettings-uri-settings"></a><span data-ttu-id="f7635-102">&lt;Dodaj&gt; elementu schemeSettings (ustawienia identyfikatorów Uri)</span><span class="sxs-lookup"><span data-stu-id="f7635-102">&lt;add&gt; Element for schemeSettings (Uri Settings)</span></span>
 <span data-ttu-id="f7635-103">Dodaje ustawienia schematu dla nazwy schematu.</span><span class="sxs-lookup"><span data-stu-id="f7635-103">Adds a scheme setting for a scheme name.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395469"
 ---
 # <a name="getting-started-with-net-native"></a><span data-ttu-id="c0570-102">Wprowadzenie do architektury .NET Native</span><span class="sxs-lookup"><span data-stu-id="c0570-102">Getting Started with .NET Native</span></span>
 <span data-ttu-id="c0570-103">Czy pisania nową aplikację systemu Windows dla systemu Windows 10 lub w przypadku migracji z istniejącej aplikacji Sklepu Windows, możesz wykonać ten sam zestaw procedur.</span><span class="sxs-lookup"><span data-stu-id="c0570-103">Whether you are writing a new Windows app for Windows 10 or you are migrating an existing Windows Store app, you can follow the same set of procedures.</span></span> <span data-ttu-id="c0570-104">Aby utworzyć [!INCLUDE[net_native](../../../includes/net-native-md.md)] aplikacji, wykonaj następujące kroki:</span><span class="sxs-lookup"><span data-stu-id="c0570-104">To create a [!INCLUDE[net_native](../../../includes/net-native-md.md)] app, follow these steps:</span></span>  

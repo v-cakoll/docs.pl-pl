@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395515"
 ---
 # <a name="security-etw-events"></a><span data-ttu-id="92e35-102">Zabezpieczenia zdarzeń ETW</span><span class="sxs-lookup"><span data-stu-id="92e35-102">Security ETW Events</span></span>
 <a name="top"></a> <span data-ttu-id="92e35-103">Zdarzenia zabezpieczeń są wywoływane podczas weryfikacji silnej nazwy i weryfikacji Authenticode.</span><span class="sxs-lookup"><span data-stu-id="92e35-103">Security events are raised during strong name verification and Authenticode verification.</span></span>  

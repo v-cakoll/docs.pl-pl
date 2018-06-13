@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439273"
 ---
 # <a name="ihostgcmanagerthreadisblockingforsuspension-method"></a><span data-ttu-id="8b9e5-102">IHostGCManager::ThreadIsBlockingForSuspension — Metoda</span><span class="sxs-lookup"><span data-stu-id="8b9e5-102">IHostGCManager::ThreadIsBlockingForSuspension Method</span></span>
 <span data-ttu-id="8b9e5-103">Powiadamia hosta, który jest wątków, z którego wykonano wywołanie metody informacje mają być blokowane dla wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="8b9e5-103">Notifies the host that the thread from which the method call was made is about to block for a garbage collection.</span></span>  

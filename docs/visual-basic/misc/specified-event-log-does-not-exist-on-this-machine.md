@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638706"
 ---
 # <a name="specified-event-log-does-not-exist-on-this-machine"></a><span data-ttu-id="cec7b-102">Określony dziennik zdarzeń nie istnieje na tym komputerze</span><span class="sxs-lookup"><span data-stu-id="cec7b-102">Specified event log does not exist on this machine</span></span>
 <span data-ttu-id="cec7b-103">Nastąpiła próba można uzyskać dostępu do dziennika zdarzeń, który nie istnieje na tym komputerze.</span><span class="sxs-lookup"><span data-stu-id="cec7b-103">An attempt has been made to access an event log that does not exist on this machine.</span></span>  

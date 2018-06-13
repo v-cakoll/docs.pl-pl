@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391124"
 ---
 # <a name="marshaling-strings"></a><span data-ttu-id="9acac-102">Marshaling ciągów</span><span class="sxs-lookup"><span data-stu-id="9acac-102">Marshaling Strings</span></span>
 <span data-ttu-id="9acac-103">Wywołanie platformy parametrów ciągu kopie, konwersję z formatu .NET Framework (Unicode) do formatu niezarządzane (ANSI), jeśli to konieczne.</span><span class="sxs-lookup"><span data-stu-id="9acac-103">Platform invoke copies string parameters, converting them from the .NET Framework format (Unicode) to the unmanaged format (ANSI), if needed.</span></span> <span data-ttu-id="9acac-104">Ponieważ ciągi zarządzane są niezmienne, wywołanie platformy nie kopiuje je ponownie w pamięci niezarządzanej pamięci zarządzanej po powrocie z funkcji.</span><span class="sxs-lookup"><span data-stu-id="9acac-104">Because managed strings are immutable, platform invoke does not copy them back from unmanaged memory to managed memory when the function returns.</span></span>  

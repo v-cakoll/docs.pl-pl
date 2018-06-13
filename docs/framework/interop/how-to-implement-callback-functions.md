@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389278"
 ---
 # <a name="how-to-implement-callback-functions"></a><span data-ttu-id="4ac38-102">Porady: implementowanie funkcji wywołania zwrotnego</span><span class="sxs-lookup"><span data-stu-id="4ac38-102">How to: Implement Callback Functions</span></span>
 <span data-ttu-id="4ac38-103">Poniższe procedury i przykładowe pokazują, jak wywołać przy użyciu platformy aplikacji zarządzanej, drukować wartość uchwytu dla każdego okna na komputerze lokalnym.</span><span class="sxs-lookup"><span data-stu-id="4ac38-103">The following procedure and example demonstrate how a managed application, using platform invoke, can print the handle value for each window on the local computer.</span></span> <span data-ttu-id="4ac38-104">W szczególności, użyj procedury i przykładowe **EnumWindows** funkcji kroków wykaz systemu windows oraz funkcja wywołania zwrotnego w zarządzanych (nazwane wywołania zwrotnego) do drukowania wartość uchwytu okna.</span><span class="sxs-lookup"><span data-stu-id="4ac38-104">Specifically, the procedure and example use the **EnumWindows** function to step through the list of windows and a managed callback function (named CallBack) to print the value of the window handle.</span></span>  

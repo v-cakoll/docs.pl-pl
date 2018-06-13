@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391693"
 ---
 # <a name="ltnamespacegt-element-net-native"></a><span data-ttu-id="685e6-102">Element &lt;Namespace&gt; (architektura .NET Native)</span><span class="sxs-lookup"><span data-stu-id="685e6-102">&lt;Namespace&gt; Element (.NET Native)</span></span>
 <span data-ttu-id="685e6-103">Zastosowanie zasad wykonywania odbicia do wszystkich typów w określonej przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="685e6-103">Applies runtime reflection policy to all the types in a specified namespace.</span></span>  

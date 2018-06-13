@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394316"
 ---
 # <a name="missingmetadataexception-class-net-native"></a><span data-ttu-id="bb4a4-102">Klasa MissingMetadataException (architektura .NET Native)</span><span class="sxs-lookup"><span data-stu-id="bb4a4-102">MissingMetadataException Class (.NET Native)</span></span>
 <span data-ttu-id="bb4a4-103">**.NET dla aplikacji systemu Windows dla systemu Windows 10, [!INCLUDE[net_native](../../../includes/net-native-md.md)] tylko**</span><span class="sxs-lookup"><span data-stu-id="bb4a4-103">**.NET for Windows apps for Windows 10, [!INCLUDE[net_native](../../../includes/net-native-md.md)] only**</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364778"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a><span data-ttu-id="2aede-102">Typowe kroki dotyczące korzystania z LINQ do SQL</span><span class="sxs-lookup"><span data-stu-id="2aede-102">Typical Steps for Using LINQ to SQL</span></span>
 <span data-ttu-id="2aede-103">Aby zaimplementować [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplikacji, wykonaj kroki opisane w dalszej części tego tematu.</span><span class="sxs-lookup"><span data-stu-id="2aede-103">To implement a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] application, you follow the steps described later in this topic.</span></span> <span data-ttu-id="2aede-104">Należy pamiętać, że wiele czynności są opcjonalne.</span><span class="sxs-lookup"><span data-stu-id="2aede-104">Note that many steps are optional.</span></span> <span data-ttu-id="2aede-105">Jest bardzo możliwe, że można użyć modelu obiektów w stanie domyślnym.</span><span class="sxs-lookup"><span data-stu-id="2aede-105">It is very possible that you can use your object model in its default state.</span></span>  

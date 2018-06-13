@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541593"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a><span data-ttu-id="ffd01-102">Wskazówki: rozmieszczanie formantów w formularzach systemu Windows za pomocą linii przyciągania</span><span class="sxs-lookup"><span data-stu-id="ffd01-102">Walkthrough: Arranging Controls on Windows Forms Using Snaplines</span></span>
 <span data-ttu-id="ffd01-103">Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji.</span><span class="sxs-lookup"><span data-stu-id="ffd01-103">Precise placement of controls on your form is a high priority for many applications.</span></span> <span data-ttu-id="ffd01-104">Projektant formularzy systemu Windows udostępnia wiele narzędzi układu, w tym celu.</span><span class="sxs-lookup"><span data-stu-id="ffd01-104">The Windows Forms Designer gives you many layout tools to accomplish this.</span></span> <span data-ttu-id="ffd01-105">Jednym z najważniejszych jest <xref:System.Windows.Forms.Design.Behavior.SnapLine> funkcji.</span><span class="sxs-lookup"><span data-stu-id="ffd01-105">One of the most important is the <xref:System.Windows.Forms.Design.Behavior.SnapLine> feature.</span></span>  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541862"
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a><span data-ttu-id="23350-102">Porady: bezpieczne wątkowo wywołania formantów formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="23350-102">How to: Make Thread-Safe Calls to Windows Forms Controls</span></span>
 <span data-ttu-id="23350-103">Jeśli używasz wielowątkowość Aby zwiększyć wydajność aplikacji formularzy systemu Windows, należy się upewnić, wprowadź wywołania do formantów w sposób zapewniający obsługę wielowątkowości.</span><span class="sxs-lookup"><span data-stu-id="23350-103">If you use multithreading to improve the performance of your Windows Forms applications, you must make sure that you make calls to your controls in a thread-safe way.</span></span>  

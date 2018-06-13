@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753251"
 ---
 # <a name="ltremovegt-of-ltclaimtyperequirementsgt-element"></a><span data-ttu-id="e1368-102">&lt;remove&gt; w &lt;claimTypeRequirements&gt;. element</span><span class="sxs-lookup"><span data-stu-id="e1368-102">&lt;remove&gt; of &lt;claimTypeRequirements&gt; element</span></span>
 <span data-ttu-id="e1368-103">Określa typy roszczeń do usunięcia w federacyjnym poświadczeniu.</span><span class="sxs-lookup"><span data-stu-id="e1368-103">Specifies the types of claims to be removed in the federated credential.</span></span>  

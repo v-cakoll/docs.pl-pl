@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393727"
 ---
 # <a name="releasehandlefailed-mda"></a><span data-ttu-id="09a03-102">releaseHandleFailed MDA</span><span class="sxs-lookup"><span data-stu-id="09a03-102">releaseHandleFailed MDA</span></span>
 <span data-ttu-id="09a03-103">`releaseHandleFailed` Zarządzanego debugowania (MDA) Asystenta jest aktywowany jest powiadomiono deweloperzy podczas <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> metoda klasy pochodzące z <xref:System.Runtime.InteropServices.SafeHandle> lub <xref:System.Runtime.InteropServices.CriticalHandle> zwraca `false`.</span><span class="sxs-lookup"><span data-stu-id="09a03-103">The `releaseHandleFailed` managed debugging assistant (MDA) is activated is to notify developers when the <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> method of a class derived from <xref:System.Runtime.InteropServices.SafeHandle> or <xref:System.Runtime.InteropServices.CriticalHandle> returns `false`.</span></span>  

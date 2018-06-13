@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363315"
 ---
 # <a name="systemdatetimeoffset-methods"></a><span data-ttu-id="185a7-102">System.DateTimeOffset Methods</span><span class="sxs-lookup"><span data-stu-id="185a7-102">System.DateTimeOffset Methods</span></span>
 <span data-ttu-id="185a7-103">Zmapowaniu w modelu obiektu lub plik mapowania zewnętrznych LINQ do SQL pozwala wywoływać większość <xref:System.DateTimeOffset?displayProperty=nameWithType> metody, Operatorzy i właściwości z Twojej LINQ do zapytania SQL.</span><span class="sxs-lookup"><span data-stu-id="185a7-103">Once mapped in the object model or external mapping file, LINQ to SQL allows you to call most of the <xref:System.DateTimeOffset?displayProperty=nameWithType> methods, operators, and properties from within your LINQ to SQL queries.</span></span>  

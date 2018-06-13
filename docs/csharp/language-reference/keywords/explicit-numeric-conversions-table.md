@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218387"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a><span data-ttu-id="dd646-102">Tabela jawnych konwersji liczbowych (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="dd646-102">Explicit Numeric Conversions Table (C# Reference)</span></span>
 <span data-ttu-id="dd646-103">Jawna konwersja liczbowa jest używana do konwertowania dowolnego typu liczbowego żadnego innego liczbowego typu, które nie są niejawna konwersja, korzystając z wyrażeniem rzutowania.</span><span class="sxs-lookup"><span data-stu-id="dd646-103">Explicit numeric conversion is used to convert any numeric type to any other numeric type, for which there is no implicit conversion, by using a cast expression.</span></span> <span data-ttu-id="dd646-104">W poniższej tabeli przedstawiono te konwersji.</span><span class="sxs-lookup"><span data-stu-id="dd646-104">The following table shows these conversions.</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390253"
 ---
 # <a name="registration-free-com-interop"></a><span data-ttu-id="30f6a-102">Współdziałanie z modelem COM bez rejestrowania</span><span class="sxs-lookup"><span data-stu-id="30f6a-102">Registration-Free COM Interop</span></span>
 <span data-ttu-id="30f6a-103">Współdziałanie z COM bez rejestrowania aktywuje składnika bez za pomocą rejestru systemu Windows do przechowywania informacji o zestawie.</span><span class="sxs-lookup"><span data-stu-id="30f6a-103">Registration-free COM interop activates a component without using the Windows registry to store assembly information.</span></span> <span data-ttu-id="30f6a-104">Zamiast zarejestrować składników na komputerze podczas wdrażania, można tworzyć pliki manifestu Win32 stylu w czasie projektowania, zawierających informacje o powiązaniu i aktywacji.</span><span class="sxs-lookup"><span data-stu-id="30f6a-104">Instead of registering a component on a computer during deployment, you create Win32-style manifest files at design time that contain information about binding and activation.</span></span> <span data-ttu-id="30f6a-105">Te pliki manifestu, zamiast klucze rejestru, bezpośrednie aktywacji obiektu.</span><span class="sxs-lookup"><span data-stu-id="30f6a-105">These manifest files, rather than registry keys, direct the activation of an object.</span></span>  

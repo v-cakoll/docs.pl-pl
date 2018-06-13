@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386340"
 ---
 # <a name="invalidmemberdeclaration-mda"></a><span data-ttu-id="b7998-102">invalidMemberDeclaration MDA</span><span class="sxs-lookup"><span data-stu-id="b7998-102">invalidMemberDeclaration MDA</span></span>
 <span data-ttu-id="b7998-103">`invalidMemberDeclaration` Zarządzany Asystent debugowania (MDA) jest aktywowana Aby zgłosić błąd występujący podczas ustalania sposobu zorganizowania parametrów członka do wywoływania z modelu COM.</span><span class="sxs-lookup"><span data-stu-id="b7998-103">The `invalidMemberDeclaration` managed debugging assistant (MDA) is activated to report an error that occurs while determining how to marshal the parameters of a member to be called from COM.</span></span>  

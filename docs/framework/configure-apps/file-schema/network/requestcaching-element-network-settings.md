@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743436"
 ---
 # <a name="ltrequestcachinggt-element-network-settings"></a><span data-ttu-id="4523b-102">&lt;requestCaching —&gt; — Element (ustawienia sieciowe)</span><span class="sxs-lookup"><span data-stu-id="4523b-102">&lt;requestCaching&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="4523b-103">Określa mechanizm buforowania żądań sieciowych.</span><span class="sxs-lookup"><span data-stu-id="4523b-103">Controls the caching mechanism for network requests.</span></span>  

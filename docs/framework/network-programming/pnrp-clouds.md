@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393845"
 ---
 # <a name="pnrp-clouds"></a><span data-ttu-id="df666-102">Usługa PNRP chmury</span><span class="sxs-lookup"><span data-stu-id="df666-102">PNRP Clouds</span></span>
 <span data-ttu-id="df666-103">PNRP "chmura" reprezentuje zestaw węzłów, które mogą komunikować się ze sobą za pośrednictwem sieci.</span><span class="sxs-lookup"><span data-stu-id="df666-103">A PNRP "cloud" represents a set of nodes that can communicate with each other through the network.</span></span> <span data-ttu-id="df666-104">Termin "chmura" jest tożsame z "siatki równorzędnej" i "peer-to-peer wykresu".</span><span class="sxs-lookup"><span data-stu-id="df666-104">The term "cloud" is synonymous with "peer mesh" and "peer-to-peer graph".</span></span>  

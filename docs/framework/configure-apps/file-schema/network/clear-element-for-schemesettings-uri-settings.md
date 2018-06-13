@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742526"
 ---
 # <a name="ltcleargt-element-for-schemesettings-uri-settings"></a><span data-ttu-id="dd49e-102">&lt;Wyczyść&gt; elementu schemeSettings (ustawienia identyfikatorów Uri)</span><span class="sxs-lookup"><span data-stu-id="dd49e-102">&lt;clear&gt; Element for schemeSettings (Uri Settings)</span></span>
 <span data-ttu-id="dd49e-103">Usuwa wszystkie istniejące ustawienia schematu.</span><span class="sxs-lookup"><span data-stu-id="dd49e-103">Clears all existing scheme settings.</span></span>  

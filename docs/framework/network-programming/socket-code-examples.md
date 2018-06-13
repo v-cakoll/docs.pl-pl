@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395856"
 ---
 # <a name="socket-code-examples"></a><span data-ttu-id="0babe-102">Przykłady kodu gniazda</span><span class="sxs-lookup"><span data-stu-id="0babe-102">Socket Code Examples</span></span>
 <span data-ttu-id="0babe-103">W poniższych przykładach kodu pokazano sposób użycia <xref:System.Net.Sockets.Socket> klasy jako klienta na łączenie się z usługami sieci zdalnej, a serwer do nasłuchiwania połączeń z klientami zdalnymi.</span><span class="sxs-lookup"><span data-stu-id="0babe-103">The following code examples demonstrate how to use the <xref:System.Net.Sockets.Socket> class as a client to connect to remote network services and as a server to listen for connections from remote clients.</span></span>  

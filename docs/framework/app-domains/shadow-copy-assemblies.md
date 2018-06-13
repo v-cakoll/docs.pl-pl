@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743956"
 ---
 # <a name="shadow-copying-assemblies"></a><span data-ttu-id="6abd8-102">Kopiowanie zestawów w tle</span><span class="sxs-lookup"><span data-stu-id="6abd8-102">Shadow Copying Assemblies</span></span>
 <span data-ttu-id="6abd8-103">Włącza zestawy, które są używane w domenie aplikacji do zaktualizowania bez zwalniania domeny aplikacji kopiowania w tle.</span><span class="sxs-lookup"><span data-stu-id="6abd8-103">Shadow copying enables assemblies that are used in an application domain to be updated without unloading the application domain.</span></span> <span data-ttu-id="6abd8-104">Jest to szczególnie przydatne w przypadku aplikacji, które muszą być dostępne w sposób ciągły, takie jak lokacje programu ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="6abd8-104">This is particularly useful for applications that must be available continuously, such as ASP.NET sites.</span></span>  

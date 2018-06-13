@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394910"
 ---
 # <a name="default-marshaling-for-strings"></a><span data-ttu-id="bc371-102">Domyślny marshaling dla ciągów</span><span class="sxs-lookup"><span data-stu-id="bc371-102">Default Marshaling for Strings</span></span>
 <span data-ttu-id="bc371-103">Zarówno <xref:System.String?displayProperty=nameWithType> i <xref:System.Text.StringBuilder?displayProperty=nameWithType> klasy zachowują się podobnie kierowania.</span><span class="sxs-lookup"><span data-stu-id="bc371-103">Both the <xref:System.String?displayProperty=nameWithType> and <xref:System.Text.StringBuilder?displayProperty=nameWithType> classes have similar marshaling behavior.</span></span>  

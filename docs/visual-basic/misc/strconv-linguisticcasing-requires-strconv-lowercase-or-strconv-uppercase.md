@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639588"
 ---
 # <a name="39strconvlinguisticcasing39-requires-39strconvlowercase39-or-39strconvuppercase39"></a><span data-ttu-id="79e94-102">&#39;StrConv.LinguisticCasing&#39; wymaga &#39;StrConv.LowerCase&#39; lub &#39;StrConv.UpperCase&#39;</span><span class="sxs-lookup"><span data-stu-id="79e94-102">&#39;StrConv.LinguisticCasing&#39; requires &#39;StrConv.LowerCase&#39; or &#39;StrConv.UpperCase&#39;</span></span>
 <span data-ttu-id="79e94-103">Podjęto próbę użycia `StrConv.LinguisticCasing`, który jest prawidłowy tylko w połączeniu z `StrConv.LowerCase` lub `StrConv.UpperCase`.</span><span class="sxs-lookup"><span data-stu-id="79e94-103">You have attempted to use `StrConv.LinguisticCasing`, which is only valid in combination with `StrConv.LowerCase` or `StrConv.UpperCase`.</span></span>  

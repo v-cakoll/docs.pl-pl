@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390864"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a><span data-ttu-id="73596-102">Porady: rejestrowanie podstawowych zestawów międzyoperacyjnych</span><span class="sxs-lookup"><span data-stu-id="73596-102">How to: Register Primary Interop Assemblies</span></span>
 <span data-ttu-id="73596-103">Klasy mogą być organizowany tylko przy użyciu współdziałanie z COM i zawsze są przekazywane jako interfejsy.</span><span class="sxs-lookup"><span data-stu-id="73596-103">Classes can be marshaled only by COM interop and are always marshaled as interfaces.</span></span> <span data-ttu-id="73596-104">W niektórych przypadkach interfejs używany do organizowania klasy nosi nazwę interfejsu klasy.</span><span class="sxs-lookup"><span data-stu-id="73596-104">In some cases the interface used to marshal the class is known as the class interface.</span></span> <span data-ttu-id="73596-105">Aby dowiedzieć się, jak zastępowanie interfejsu klasy przy użyciu interfejsu wybranych przez użytkownika, zobacz [wywoływana otoka COM](../../../docs/framework/interop/com-callable-wrapper.md).</span><span class="sxs-lookup"><span data-stu-id="73596-105">For information about overriding the class interface with an interface of your choice, see [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md).</span></span>  

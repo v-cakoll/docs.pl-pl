@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541729"
 ---
 # <a name="windows-forms-overview"></a><span data-ttu-id="ec302-102">Formularze systemu Windows — Omówienie</span><span class="sxs-lookup"><span data-stu-id="ec302-102">Windows Forms Overview</span></span>
 <span data-ttu-id="ec302-103">Poniższy przegląd zawiera omówienie zalet inteligentnych aplikacji klienckich, główne funkcje programowania formularzy systemu Windows i jak formularze systemu Windows umożliwia inteligentne klientów, którzy wymagań przedsiębiorstwa i użytkownicy końcowi bieżącej kompilacji.</span><span class="sxs-lookup"><span data-stu-id="ec302-103">The following overview discusses the advantages of smart client applications, the main features of Windows Forms programming, and how you can use Windows Forms to build smart clients that meet the needs of today's enterprises and end users.</span></span>  

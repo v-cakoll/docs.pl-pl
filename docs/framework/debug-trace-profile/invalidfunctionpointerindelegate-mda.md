@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390877"
 ---
 # <a name="invalidfunctionpointerindelegate-mda"></a><span data-ttu-id="5e7c3-102">invalidFunctionPointerInDelegate MDA</span><span class="sxs-lookup"><span data-stu-id="5e7c3-102">invalidFunctionPointerInDelegate MDA</span></span>
 <span data-ttu-id="5e7c3-103">`invalidFunctionPointerInDelegate` Zarządzany Asystent debugowania (MDA) jest aktywowany, gdy nieprawidłowy wskaźnik funkcji jest przekazany w celu utworzenia delegata za pośrednictwem wskaźnika funkcji macierzystej.</span><span class="sxs-lookup"><span data-stu-id="5e7c3-103">The `invalidFunctionPointerInDelegate` managed debugging assistant (MDA) is activated when an invalid function pointer is passed in to construct a delegate over a native function pointer.</span></span>  

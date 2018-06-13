@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540322"
 ---
 # <a name="data-and-data-objects"></a><span data-ttu-id="3e07e-102">Dane i obiekty danych</span><span class="sxs-lookup"><span data-stu-id="3e07e-102">Data and Data Objects</span></span>
 <span data-ttu-id="3e07e-103">Dane są przesyłane w ramach operacji przeciągania i upuszczania są przechowywane w obiekcie danych.</span><span class="sxs-lookup"><span data-stu-id="3e07e-103">Data that is transferred as part of a drag-and-drop operation is stored in a data object.</span></span>  <span data-ttu-id="3e07e-104">Koncepcyjnie obiekt danych składa się z co najmniej jeden z następujących par:</span><span class="sxs-lookup"><span data-stu-id="3e07e-104">Conceptually, a data object consists of one or more of the following pairs:</span></span>  

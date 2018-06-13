@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395430"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a><span data-ttu-id="b3bfe-102">Porady: ustawienie zasad pamięci podręcznej na żądanie</span><span class="sxs-lookup"><span data-stu-id="b3bfe-102">How to: Set Cache Policy for a Request</span></span>
 <span data-ttu-id="b3bfe-103">W poniższym przykładzie pokazano, ustawienie zasady pamięci podręcznej dla żądania.</span><span class="sxs-lookup"><span data-stu-id="b3bfe-103">The following example demonstrates setting a cache policy for a request.</span></span> <span data-ttu-id="b3bfe-104">Przykład danych wejściowych jest identyfikatorem URI, takich jak http://www.contoso.com/.</span><span class="sxs-lookup"><span data-stu-id="b3bfe-104">The example input is a URI such as http://www.contoso.com/.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395414"
 ---
 # <a name="reliability"></a><span data-ttu-id="49af2-102">Niezawodność</span><span class="sxs-lookup"><span data-stu-id="49af2-102">Reliability</span></span>
 <span data-ttu-id="49af2-103">Należy pamiętać, że wykonywanie kodu w środowisku serwerów, takich jak SQL Server ochronę przed asynchroniczne wyjątki.</span><span class="sxs-lookup"><span data-stu-id="49af2-103">It is important that code executing in server environments such as SQL Server protect against asynchronous exceptions.</span></span> <span data-ttu-id="49af2-104">Niezawodność, zgodnie z opisem w tym miejscu nie jest specyficzne dla programu SQL Server, ale do pisania niezawodnej kodu dla każdego hosta w wersji programu .NET Framework 2.0 środowiska.</span><span class="sxs-lookup"><span data-stu-id="49af2-104">Reliability, as discussed here, is not specific to SQL Server but to writing reliable code for any host executing in a .NET Framework version 2.0 environment.</span></span> <span data-ttu-id="49af2-105">Program SQL Server jest jednak pierwszej usługi wprowadzania szeroką gamę korzysta z nowych funkcji niezawodność w wersji 2.0, dlatego służy jako przykład.</span><span class="sxs-lookup"><span data-stu-id="49af2-105">However, SQL Server is the first service making extensive use of the new reliability features of version 2.0, so it is used as an example.</span></span>  

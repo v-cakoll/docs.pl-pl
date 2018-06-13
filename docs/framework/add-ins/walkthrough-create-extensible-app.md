@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744827"
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a><span data-ttu-id="0b02d-102">Wskazówki: tworzenie aplikacji rozszerzalnej</span><span class="sxs-lookup"><span data-stu-id="0b02d-102">Walkthrough: Creating an Extensible Application</span></span>
 <span data-ttu-id="0b02d-103">Ten przewodnik zawiera opis sposobu tworzenia potoku dodatku pełni prosty kalkulator funkcji.</span><span class="sxs-lookup"><span data-stu-id="0b02d-103">This walkthrough describes how to create a pipeline for an add-in that performs simple calculator functions.</span></span> <span data-ttu-id="0b02d-104">Nie wykazują rzeczywistych scenariuszy; zamiast go przedstawiono podstawowe funkcje potoku i jak dodatek może zapewnić usługi hosta.</span><span class="sxs-lookup"><span data-stu-id="0b02d-104">It does not demonstrate a real-world scenario; rather, it demonstrates the basic functionality of a pipeline and how an add-in can provide services for a host.</span></span>  

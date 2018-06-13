@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391605"
 ---
 # <a name="runtime-information-etw-events"></a><span data-ttu-id="9f5d3-102">Informacje o zdarzeniach ETW środowiska uruchomieniowego</span><span class="sxs-lookup"><span data-stu-id="9f5d3-102">Runtime Information ETW Events</span></span>
 <span data-ttu-id="9f5d3-103">Te zdarzenia ETW dziennika informacji na temat środowiska uruchomieniowego, jednostka SKU, numer wersji, sposób, w którym środowiska wykonawczego został aktywowany, w tym parametry wiersza polecenia, który został uruchomiony z identyfikatorem GUID (jeśli dotyczy) oraz inne istotne informacje.</span><span class="sxs-lookup"><span data-stu-id="9f5d3-103">These ETW events log information about the runtime, including the SKU, version number, the manner in which the runtime was activated, the command-line parameters it was started with, the GUID (if applicable), and other relevant information.</span></span> <span data-ttu-id="9f5d3-104">Jeśli wiele środowisk uruchomieniowych są wykonywane w ramach procesu, informacji dostarczonych przez te zdarzenia (ClrInstanceID) pomaga odróżnić środowisk uruchomieniowych.</span><span class="sxs-lookup"><span data-stu-id="9f5d3-104">If multiple runtimes are executing within a process, the information provided by these events (the ClrInstanceID) helps disambiguate the runtimes.</span></span>  

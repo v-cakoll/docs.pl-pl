@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393513"
 ---
 # <a name="runtime-callable-wrapper"></a><span data-ttu-id="4d4e2-102">Wywoływana otoka środowiska uruchomieniowego</span><span class="sxs-lookup"><span data-stu-id="4d4e2-102">Runtime Callable Wrapper</span></span>
 <span data-ttu-id="4d4e2-103">Środowisko uruchomieniowe języka wspólnego przedstawia obiekty COM za pośrednictwem serwera proxy, nazywany wywoływana otoka środowiska uruchomieniowego (otoki RCW).</span><span class="sxs-lookup"><span data-stu-id="4d4e2-103">The common language runtime exposes COM objects through a proxy called the runtime callable wrapper (RCW).</span></span> <span data-ttu-id="4d4e2-104">Mimo że otoki RCW wydaje się być obiekt zwykłej do klientów platformy .NET, jego podstawową funkcją jest do organizowania wywołań między klientem .NET obiektu COM.</span><span class="sxs-lookup"><span data-stu-id="4d4e2-104">Although the RCW appears to be an ordinary object to .NET clients, its primary function is to marshal calls between a .NET client and a COM object.</span></span>  

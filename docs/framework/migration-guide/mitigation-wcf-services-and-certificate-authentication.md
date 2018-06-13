@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388940"
 ---
 # <a name="mitigation-wcf-services-and-certificate-authentication"></a><span data-ttu-id="f6014-102">Ograniczenie: Usługi WCF i uwierzytelnianie certyfikatu</span><span class="sxs-lookup"><span data-stu-id="f6014-102">Mitigation: WCF Services and Certificate Authentication</span></span>
 <span data-ttu-id="f6014-103">.NET Framework 4.6 dodaje protokołu TLS 1.1 i TLS 1.2, do listy domyślnych protokołu SSL usługi WCF.</span><span class="sxs-lookup"><span data-stu-id="f6014-103">The .NET Framework 4.6 adds TLS 1.1 and TLS 1.2 to the WCF SSL protocol default list.</span></span> <span data-ttu-id="f6014-104">Jeśli klienta i na serwerze zainstalować program .NET Framework 4.6 lub nowszy, protokołu TLS 1.2 jest używany dla negocjacji.</span><span class="sxs-lookup"><span data-stu-id="f6014-104">When both client and server machines have  the .NET Framework 4.6 or later installed, TLS 1.2 is used for negotiation.</span></span>  

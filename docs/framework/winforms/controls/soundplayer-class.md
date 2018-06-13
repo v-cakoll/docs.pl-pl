@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538825"
 ---
 # <a name="soundplayer-class"></a><span data-ttu-id="9128e-102">SoundPlayer — Klasa</span><span class="sxs-lookup"><span data-stu-id="9128e-102">SoundPlayer Class</span></span>
 <span data-ttu-id="9128e-103">`SoundPlayer` Klasa umożliwia łatwe dołączanie dźwięków w aplikacji.</span><span class="sxs-lookup"><span data-stu-id="9128e-103">The `SoundPlayer` class enables you to easily include sounds in your applications.</span></span>  

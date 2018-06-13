@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426227"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>ISymUnmanagedMethod::GetSourceStartEnd — Metoda
 Pobiera dokument pozycje początkowe i końcowe dla źródła tej metody. Pierwszą pozycję tablicy jest początek, a drugi tablicy znajdował się na końcu.  

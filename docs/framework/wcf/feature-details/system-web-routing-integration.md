@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498026"
 ---
 # <a name="systemwebrouting-integration"></a>Integracja elementu System.Web.Routing
 Odnośnie do hostowania usługi Windows Communication Foundation (WCF) w Internet Information Service (IIS) należy umieścić plik .svc w katalogu wirtualnym. Ten plik .svc określa fabryki hostów usług do użycia oraz klasy, który implementuje usługę. W przypadku wysyłania żądań do usługi można określić w pliku svc w identyfikatorze URI, na przykład: http://contoso.com/EmployeeServce.svc. Dla programistów pisanie usług REST ten typ identyfikatora URI nie jest optymalna. Identyfikatory URI dla usługi REST Określ określonego zasobu i zazwyczaj nie zainstalowano rozszerzeń. <xref:System.Web.Routing> Funkcji integracji umożliwia hostowanie usługi WCF REST, która odpowiada na identyfikatory URI bez rozszerzenia. Aby uzyskać więcej informacji o routingu, zobacz [routingu platformy ASP.NET](http://go.microsoft.com/fwlink/?LinkId=184660) i [AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md) próbki.  

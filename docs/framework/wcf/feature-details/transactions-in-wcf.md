@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498173"
 ---
 # <a name="transactions-in-wcf"></a>Transakcje w programie WCF
 Funkcja transakcji Windows Communication Foundation (WCF) umożliwia kilku składników jednocześnie uczestniczyć w operacji danych. Tematy w tej sekcji Sprawdź, czy funkcja szczegółowo.  

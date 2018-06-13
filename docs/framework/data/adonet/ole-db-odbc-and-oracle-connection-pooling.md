@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803127"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>Połączenia Oracle, OLE DB i ODBC buforowanie
 Tworzenie puli połączeń może znacznie zwiększyć wydajność i skalowalność aplikacji. W tej sekcji omówiono tworzenie puli połączeń dla dostawcy danych .NET Framework dla OLE DB i ODBC programu Oracle.  

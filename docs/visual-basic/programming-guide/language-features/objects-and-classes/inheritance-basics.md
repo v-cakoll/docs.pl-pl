@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655192"
 ---
 # <a name="inheritance-basics-visual-basic"></a>Podstawowe informacje o dziedziczeniu (Visual Basic)
 `Inherits` Instrukcji służy do deklarowania nową klasę o nazwie *klasy*, oparte na istniejącej klasy, znany jako *klasa podstawowa*. Klasy pochodne dziedziczą i można rozszerzyć, właściwości, metody, zdarzenia, pól i stałe zdefiniowana w klasie podstawowej. W poniższej sekcji opisano niektóre zasady dotyczące dziedziczenia, a modyfikatorów, których można użyć, aby zmienić sposób klasy dziedziczą lub są dziedziczone:  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642067"
 ---
 # <a name="the-folder-cannot-be-created-since-a-file-already-exists-with-the-same-path"></a>Nie można utworzyć folderu, ponieważ istnieje już plik o takiej samej ścieżce
 Została podjęta próba utworzenia katalogu, ale istnieje już plik o tej ścieżce. Może to być wynikiem niepoprawnie podczas analizowania ścieżki, zwłaszcza w przypadku pracy z ścieżek względnych.  

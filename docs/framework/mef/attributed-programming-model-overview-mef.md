@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392512"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Omówienie modelu programowania opartego na atrybutach (MEF)
 W Managed Extensibility Framework (MEF), *model programowania* jest określonego sposobu definiowania zestawu obiektów pojęciach, na których działa MEF. Te obiekty koncepcyjnej obejmują części, importu i eksportu. MEF używa tych obiektów, ale nie określa, jak powinny być reprezentowane. W związku z tym szerokiej gamy modele programowania są możliwe, w tym dostosowane modele programowania.  

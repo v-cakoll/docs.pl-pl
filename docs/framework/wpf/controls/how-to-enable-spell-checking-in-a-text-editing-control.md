@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550254"
 ---
 # <a name="how-to-enable-spell-checking-in-a-text-editing-control"></a>Jak włączyć sprawdzanie pisowni w formancie edycji tekstu
 Poniższy przykład przedstawia sposób włączenia sprawdzania pisowni w czasie rzeczywistym <xref:System.Windows.Controls.TextBox> za pomocą <xref:System.Windows.Controls.SpellCheck.IsEnabled%2A> właściwość <xref:System.Windows.Controls.SpellCheck> klasy.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550763"
 ---
 # <a name="checkbox"></a>CheckBox
 Można użyć <xref:System.Windows.Controls.CheckBox> w [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] aplikacji w celu reprezentowania opcje, które użytkownik można zaznaczyć lub wyczyścić. Można użyć jednego pola wyboru lub w przypadku grupowania dwóch lub więcej pól wyboru.  

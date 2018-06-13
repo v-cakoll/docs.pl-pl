@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647217"
 ---
 # <a name="type-conversions-in-visual-basic"></a>Konwersje plików w Visual Basic
 Proces zmiany wartości z jednego typu danych do innego typu, jest nazywany *konwersji*. Konwersje są albo *rozszerzanie* lub *zawężanie*, w zależności od możliwości typy danych. Są one również *niejawne* lub *jawne*w oparciu o składni w kodzie źródłowym.  

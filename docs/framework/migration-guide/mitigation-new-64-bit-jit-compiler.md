@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391943"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>Środki zaradcze: Nowy kompilator JIT 64-bitowych
 Począwszy od programu .NET Framework 4.6 środowiska uruchomieniowego zawiera nowe kompilatora JIT 64-bitowej w czasie kompilacji. Ta zmiana nie wpływa na kompilacja z kompilatorem JIT 32-bitowych.  

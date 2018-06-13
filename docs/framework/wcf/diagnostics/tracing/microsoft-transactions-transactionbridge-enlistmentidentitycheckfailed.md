@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474899"
 ---
 # <a name="microsofttransactionstransactionbridgeenlistmentidentitycheckfailed"></a><span data-ttu-id="fe710-102">Microsoft.Transactions.TransactionBridge.EnlistmentIdentityCheckFailed</span><span class="sxs-lookup"><span data-stu-id="fe710-102">Microsoft.Transactions.TransactionBridge.EnlistmentIdentityCheckFailed</span></span>
 <span data-ttu-id="fe710-103">Tożsamość nadawcy komunikatu przychodzącego nie był zgodny z tożsamością pochodzącą z odwołania do punktu końcowego rejestracji.</span><span class="sxs-lookup"><span data-stu-id="fe710-103">The identity of the incoming message sender did not match the identity derived from the enlistment's endpoint reference.</span></span>  

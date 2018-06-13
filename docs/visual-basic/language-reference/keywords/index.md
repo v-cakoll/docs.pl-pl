@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605319"
 ---
 # <a name="keywords-visual-basic"></a><span data-ttu-id="2fa1f-102">Słowa kluczowe (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2fa1f-102">Keywords (Visual Basic)</span></span>
 <span data-ttu-id="2fa1f-103">W poniższych tabelach przedstawiono wszystkie słów kluczowych języka Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="2fa1f-103">The following tables list all Visual Basic language keywords.</span></span>  

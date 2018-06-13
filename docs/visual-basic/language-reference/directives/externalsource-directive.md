@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586594"
 ---
 # <a name="externalsource-directive"></a><span data-ttu-id="79651-102">#ExternalSource — dyrektywa</span><span class="sxs-lookup"><span data-stu-id="79651-102">#ExternalSource Directive</span></span>
 <span data-ttu-id="79651-103">Wskazuje mapowanie między określonych wierszy kodu źródłowego i tekst do źródła zewnętrznego.</span><span class="sxs-lookup"><span data-stu-id="79651-103">Indicates a mapping between specific lines of source code and text external to the source.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603928"
 ---
 # <a name="argument-39per39-is-not-valid"></a><span data-ttu-id="997f1-102">Argument &#39;na&#39; jest nieprawidłowy</span><span class="sxs-lookup"><span data-stu-id="997f1-102">Argument &#39;Per&#39; is not valid</span></span>
 <span data-ttu-id="997f1-103">Argument dostarczony dla `Per`, które muszą być `Double` określający okres płatności w zakresie od 1 do `NPer`, jest nieprawidłowy.</span><span class="sxs-lookup"><span data-stu-id="997f1-103">An argument supplied for `Per`, which must be a `Double` specifying payment period in the range 1 through `NPer`, is not valid.</span></span>  

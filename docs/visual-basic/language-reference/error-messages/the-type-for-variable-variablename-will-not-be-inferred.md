@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594286"
 ---
 # <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a><span data-ttu-id="5c745-102">Typ zmiennej &#39; &lt;nazwa_zmiennej&gt; &#39; nie będzie można wywnioskować, ponieważ jest on powiązany z polem w otaczającym zakresie</span><span class="sxs-lookup"><span data-stu-id="5c745-102">The type for variable &#39;&lt;variablename&gt;&#39; will not be inferred because it is bound to a field in an enclosing scope</span></span>
 <span data-ttu-id="5c745-103">Typ zmiennej "\<nazwa_zmiennej >' nie będzie można wywnioskować, ponieważ jest on powiązany z polem w otaczającym zakresie.</span><span class="sxs-lookup"><span data-stu-id="5c745-103">The type for variable '\<variablename>' will not be inferred because it is bound to a field in an enclosing scope.</span></span> <span data-ttu-id="5c745-104">Zmień nazwę "\<nazwa_zmiennej >", lub użyj w pełni kwalifikowaną nazwę (na przykład "Me.variablename" lub "MyBase.variablename").</span><span class="sxs-lookup"><span data-stu-id="5c745-104">Either change the name of '\<variablename>', or use the fully qualified name (for example, 'Me.variablename' or 'MyBase.variablename').</span></span>  

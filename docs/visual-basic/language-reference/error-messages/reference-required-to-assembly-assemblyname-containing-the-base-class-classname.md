@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593535"
 ---
 # <a name="reference-required-to-assembly-39ltassemblynamegt39-containing-the-base-class-39ltclassnamegt39"></a><span data-ttu-id="b68d2-102">Wymagane odwołanie do zestawu &#39; &lt;assemblyname&gt; &#39; z klasą podstawową &#39; &lt;classname&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="b68d2-102">Reference required to assembly &#39;&lt;assemblyname&gt;&#39; containing the base class &#39;&lt;classname&gt;&#39;</span></span>
 <span data-ttu-id="b68d2-103">Wymagane odwołanie do zestawu "\<assemblyname >" zawierającego klasę podstawową\<classname > ".</span><span class="sxs-lookup"><span data-stu-id="b68d2-103">Reference required to assembly '\<assemblyname>' containing the base class '\<classname>'.</span></span> <span data-ttu-id="b68d2-104">Dodaj je do projektu.</span><span class="sxs-lookup"><span data-stu-id="b68d2-104">Add one to your project.</span></span>  

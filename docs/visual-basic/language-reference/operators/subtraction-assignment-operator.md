@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603876"
 ---
 # <a name="--operator-visual-basic"></a><span data-ttu-id="5a088-102">-= — Operator (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5a088-102">-= Operator (Visual Basic)</span></span>
 <span data-ttu-id="5a088-103">Odejmuje wartość wyrażenia z wartości zmiennej lub właściwości, a następnie przypisuje wynik do zmiennej lub właściwości.</span><span class="sxs-lookup"><span data-stu-id="5a088-103">Subtracts the value of an expression from the value of a variable or property and assigns the result to the variable or property.</span></span>  

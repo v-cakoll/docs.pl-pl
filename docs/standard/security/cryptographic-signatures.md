@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589808"
 ---
 # <a name="cryptographic-signatures"></a><span data-ttu-id="90ebb-102">Podpisy kryptograficzne</span><span class="sxs-lookup"><span data-stu-id="90ebb-102">Cryptographic Signatures</span></span>
 <a name="top"></a> <span data-ttu-id="90ebb-103">Kryptograficznych podpisów cyfrowych korzysta algorytmy kluczy publicznych w celu zapewnienia integralności danych.</span><span class="sxs-lookup"><span data-stu-id="90ebb-103">Cryptographic digital signatures use public key algorithms to provide data integrity.</span></span> <span data-ttu-id="90ebb-104">Podczas rejestrowania danych za pomocą podpisu cyfrowego ktoś inny może zweryfikować podpisu, a można udowodnić, że dane pochodzą od użytkownika oraz nie została zmodyfikowana po podpisaniu jej.</span><span class="sxs-lookup"><span data-stu-id="90ebb-104">When you sign data with a digital signature, someone else can verify the signature, and can prove that the data originated from you and was not altered after you signed it.</span></span> <span data-ttu-id="90ebb-105">Aby uzyskać więcej informacji na temat podpisów cyfrowych, zobacz [usługi kryptograficzne](../../../docs/standard/security/cryptographic-services.md).</span><span class="sxs-lookup"><span data-stu-id="90ebb-105">For more information about digital signatures, see [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md).</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586363"
 ---
 # <a name="39ltkeywordgt39-is-valid-only-within-an-instance-method"></a><span data-ttu-id="1d9be-102">&#39;&lt;słowo kluczowe&gt; &#39; jest prawidłowy tylko wewnątrz metody wystąpienia</span><span class="sxs-lookup"><span data-stu-id="1d9be-102">&#39;&lt;keyword&gt;&#39; is valid only within an instance method</span></span>
 <span data-ttu-id="1d9be-103">`Me`, `MyClass`, I `MyBase` słowa kluczowe odwoływać się do wystąpień określonej klasy.</span><span class="sxs-lookup"><span data-stu-id="1d9be-103">The `Me`, `MyClass`, and `MyBase` keywords refer to specific class instances.</span></span> <span data-ttu-id="1d9be-104">Nie można ich używać w udostępnionej `Function` lub `Sub` procedury.</span><span class="sxs-lookup"><span data-stu-id="1d9be-104">You cannot use them inside a shared `Function` or `Sub` procedure.</span></span>  

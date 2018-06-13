@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579083"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a><span data-ttu-id="3a28d-102">Zestaw XmlSchemaSet schematu kompilacji</span><span class="sxs-lookup"><span data-stu-id="3a28d-102">XmlSchemaSet for Schema Compilation</span></span>
 <span data-ttu-id="3a28d-103">W tym artykule opisano <xref:System.Xml.Schema.XmlSchemaSet>, gdzie schematu XML definition language (XSD) schematów mogą być przechowywane i zweryfikować pamięci podręcznej.</span><span class="sxs-lookup"><span data-stu-id="3a28d-103">Describes the <xref:System.Xml.Schema.XmlSchemaSet>, a cache where XML Schema definition language (XSD) schemas can be stored and validated.</span></span>  

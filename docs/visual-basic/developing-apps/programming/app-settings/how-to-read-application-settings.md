@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585683"
 ---
 # <a name="how-to-read-application-settings-in-visual-basic"></a><span data-ttu-id="2a067-102">Porady: odczytywanie ustawień aplikacji w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2a067-102">How to: Read Application Settings in Visual Basic</span></span>
 <span data-ttu-id="2a067-103">Ustawienia użytkownika może być odczytany przez uzyskiwanie dostępu do ustawiania właściwości na `My.Settings` obiektu.</span><span class="sxs-lookup"><span data-stu-id="2a067-103">You can read a user setting by accessing the setting's property on the `My.Settings` object.</span></span>  

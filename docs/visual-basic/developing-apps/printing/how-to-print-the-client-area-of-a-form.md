@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583994"
 ---
 # <a name="how-to-print-the-client-area-of-a-form-visual-basic"></a><span data-ttu-id="5f85f-102">Porady: drukowanie obszarów klienckich formularza (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5f85f-102">How to: Print the Client Area of a Form (Visual Basic)</span></span>
 <span data-ttu-id="5f85f-103"><xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> Składnika pozwala na szybkie wydrukowanie obrazu formularza bez użycia <xref:System.Drawing.Printing.PrintDocument> składnika.</span><span class="sxs-lookup"><span data-stu-id="5f85f-103">The <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component enables you to quickly print an image of a form without using a <xref:System.Drawing.Printing.PrintDocument> component.</span></span> <span data-ttu-id="5f85f-104">Poniższa procedura przedstawia sposób drukowanie tylko obszarów klienckich formularza, bez paska tytułu, obramowania i paski przewijania.</span><span class="sxs-lookup"><span data-stu-id="5f85f-104">The following procedure shows how to print just the client area of a form, without the title bar, borders, and scroll bars.</span></span>  

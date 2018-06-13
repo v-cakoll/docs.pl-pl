@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592161"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a><span data-ttu-id="b2229-102">Dostosowywanie, które obiekty są dostępne w My (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b2229-102">Customizing Which Objects are Available in My (Visual Basic)</span></span>
 <span data-ttu-id="b2229-103">W tym temacie opisano, jak można kontrolować, które `My` obiekty są włączane przez ustawienie projektu `_MYTYPE` stała warunkowego kompilacji.</span><span class="sxs-lookup"><span data-stu-id="b2229-103">This topic describes how you can control which `My` objects are enabled by setting your project's `_MYTYPE` conditional-compilation constant.</span></span> <span data-ttu-id="b2229-104">Visual Studio programowanie środowiska IDE (Integrated) śledzi `_MYTYPE` stała kompilacja warunkowa w projekcie zsynchronizowane z typu projektu.</span><span class="sxs-lookup"><span data-stu-id="b2229-104">The Visual Studio Integrated Development Environment (IDE) keeps the `_MYTYPE` conditional-compilation constant for a project in sync with the project's type.</span></span>  

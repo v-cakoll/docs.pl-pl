@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590653"
 ---
 # <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a><span data-ttu-id="98770-102">Porady: sprawdzanie podpisów cyfrowych w dokumentach XML</span><span class="sxs-lookup"><span data-stu-id="98770-102">How to: Verify the Digital Signatures of XML Documents</span></span>
 <span data-ttu-id="98770-103">Można użyć klasy w <xref:System.Security.Cryptography.Xml> przestrzeni nazw, aby sprawdzić, dane XML podpisane za pomocą podpisu cyfrowego.</span><span class="sxs-lookup"><span data-stu-id="98770-103">You can use the classes in the <xref:System.Security.Cryptography.Xml> namespace to verify XML data signed with a digital signature.</span></span>  <span data-ttu-id="98770-104">Podpisy cyfrowe XML (XMLDSIG) pozwalają sprawdzić, czy dane nie została zmodyfikowana po podpisaniu.</span><span class="sxs-lookup"><span data-stu-id="98770-104">XML digital signatures (XMLDSIG) allow you to verify that data was not altered after it was signed.</span></span>  <span data-ttu-id="98770-105">Aby uzyskać więcej informacji na temat standardu XMLDSIG, zobacz specyfikację sieci World Wide Web konsorcjum W3C w http://www.w3.org/TR/xmldsig-core/.</span><span class="sxs-lookup"><span data-stu-id="98770-105">For more information about the XMLDSIG standard, see the World Wide Web Consortium (W3C) specification at http://www.w3.org/TR/xmldsig-core/.</span></span>  

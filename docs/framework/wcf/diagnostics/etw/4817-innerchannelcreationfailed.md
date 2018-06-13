@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33469573"
 ---
 # <a name="4817---innerchannelcreationfailed"></a><span data-ttu-id="9c5a1-102">4817 — InnerChannelCreationFailed</span><span class="sxs-lookup"><span data-stu-id="9c5a1-102">4817 - InnerChannelCreationFailed</span></span>
 ## <a name="properties"></a><span data-ttu-id="9c5a1-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="9c5a1-103">Properties</span></span>  

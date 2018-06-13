@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593606"
 ---
 # <a name="ordinal-is-not-valid"></a><span data-ttu-id="7c6b3-102">Liczba porządkowa nie jest prawidłowa</span><span class="sxs-lookup"><span data-stu-id="7c6b3-102">Ordinal is not valid</span></span>
 <span data-ttu-id="7c6b3-103">Wskazane jest używany numer zamiast nazwę procedury wywołania do biblioteki dołączanej (dynamicznie DLL) przy użyciu `#num` składni.</span><span class="sxs-lookup"><span data-stu-id="7c6b3-103">Your call to a dynamic-link library (DLL) indicated to use a number instead of a procedure name, using the `#num` syntax.</span></span> <span data-ttu-id="7c6b3-104">Ten błąd ma następujące możliwe przyczyny:</span><span class="sxs-lookup"><span data-stu-id="7c6b3-104">This error has the following possible causes:</span></span>  

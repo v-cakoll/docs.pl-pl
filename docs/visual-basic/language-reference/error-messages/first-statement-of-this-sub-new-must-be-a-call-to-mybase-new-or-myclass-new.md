@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589463"
 ---
 # <a name="first-statement-of-this-39sub-new39-must-be-a-call-to-39mybasenew39-or-39myclassnew39-no-accessible-constructor-without-parameters"></a><span data-ttu-id="09a1b-102">Pierwsza instrukcja tego &#39;Sub New&#39; musi być wywołaniem &#39;MyBase.New&#39; lub &#39;MyClass.New&#39; (nr dostępny żaden konstruktor bez parametrów)</span><span class="sxs-lookup"><span data-stu-id="09a1b-102">First statement of this &#39;Sub New&#39; must be a call to &#39;MyBase.New&#39; or &#39;MyClass.New&#39; (No Accessible Constructor Without Parameters)</span></span>
 <span data-ttu-id="09a1b-103">Pierwsza instrukcja tego elementu "Sub New" musi być wywołanie "MyBase.New" lub "MyClass.New", ponieważ klasa podstawowa\<nazwę bazową > "z"\<derivedname > "nie ma dostępnego elementu"Sub New", który można wywołać bez argumentów.</span><span class="sxs-lookup"><span data-stu-id="09a1b-103">First statement of this 'Sub New' must be a call to 'MyBase.New' or 'MyClass.New' because base class '\<basename>' of '\<derivedname>' does not have an accessible 'Sub New' that can be called with no arguments.</span></span>  

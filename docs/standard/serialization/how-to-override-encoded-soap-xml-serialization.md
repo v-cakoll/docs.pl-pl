@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585843"
 ---
 # <a name="how-to-override-encoded-soap-xml-serialization"></a><span data-ttu-id="40213-102">Porady: Zastąp serializacji XML użyciu zakodowanego protokołu SOAP</span><span class="sxs-lookup"><span data-stu-id="40213-102">How to: Override Encoded SOAP XML Serialization</span></span>
 [<span data-ttu-id="40213-103">Przykładowy kod</span><span class="sxs-lookup"><span data-stu-id="40213-103">Code Example</span></span>](#tskhowtooverrideencodedsoapxmlserializationanchor1)  

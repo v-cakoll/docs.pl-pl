@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604552"
 ---
 # <a name="shared-visual-basic"></a><span data-ttu-id="306ef-102">Shared (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="306ef-102">Shared (Visual Basic)</span></span>
 <span data-ttu-id="306ef-103">Określa, że co najmniej jeden zadeklarowany element programistyczny skojarzonych z klasy lub struktury w dużych, a nie z konkretnym wystąpieniem klasy lub struktury.</span><span class="sxs-lookup"><span data-stu-id="306ef-103">Specifies that one or more declared programming elements are associated with a class or structure at large, and not with a specific instance of the class or structure.</span></span>  

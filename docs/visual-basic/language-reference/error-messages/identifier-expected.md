@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586133"
 ---
 # <a name="identifier-expected"></a><span data-ttu-id="ca853-102">Oczekiwano identyfikatora</span><span class="sxs-lookup"><span data-stu-id="ca853-102">Identifier expected</span></span>
 <span data-ttu-id="ca853-103">Elementu programistycznego, który nie jest nazwą rozpoznawalnych zadeklarowany element występuje, gdy kontekstu nazwę elementu.</span><span class="sxs-lookup"><span data-stu-id="ca853-103">A programming element that is not a recognizable declared element name occurs where the context requires an element name.</span></span> <span data-ttu-id="ca853-104">Jedną z możliwych przyczyn jest to, że atrybut został określony gdzieś innych niż na początku deklaracji.</span><span class="sxs-lookup"><span data-stu-id="ca853-104">One possible cause is that an attribute has been specified somewhere other than at the beginning of the statement.</span></span>  

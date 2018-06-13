@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598527"
 ---
 # <a name="return-values-for-the-cstr-function-visual-basic"></a><span data-ttu-id="b99e6-102">Zwracane wartości dla funkcji CStr (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b99e6-102">Return Values for the CStr Function (Visual Basic)</span></span>
 <span data-ttu-id="b99e6-103">W poniższej tabeli opisano wartości zwracanych przez `CStr` dla różnych typów danych z `expression`.</span><span class="sxs-lookup"><span data-stu-id="b99e6-103">The following table describes the return values for `CStr` for different data types of `expression`.</span></span>  

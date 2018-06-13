@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33473779"
 ---
 # <a name="microsofttransactionstransactionbridgepreparedmessageretry"></a><span data-ttu-id="c3b71-102">Microsoft.Transactions.TransactionBridge.PreparedMessageRetry</span><span class="sxs-lookup"><span data-stu-id="c3b71-102">Microsoft.Transactions.TransactionBridge.PreparedMessageRetry</span></span>
 <span data-ttu-id="c3b71-103">Do koordynatora, który nie odpowiada, wysłano ponowną próbę komunikatu przygotowania.</span><span class="sxs-lookup"><span data-stu-id="c3b71-103">A prepared message retry was sent to an unresponsive coordinator.</span></span>  

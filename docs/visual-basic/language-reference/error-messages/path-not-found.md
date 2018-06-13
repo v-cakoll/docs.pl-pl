@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593896"
 ---
 # <a name="path-not-found"></a><span data-ttu-id="3bc4a-102">Nie można odnaleźć ścieżki</span><span class="sxs-lookup"><span data-stu-id="3bc4a-102">Path not found</span></span>
 <span data-ttu-id="3bc4a-103">Podczas operacji dostępu do plików lub dostępu do dysku systemu operacyjnego nie może znaleźć określonej ścieżki.</span><span class="sxs-lookup"><span data-stu-id="3bc4a-103">During a file-access or disk-access operation, the operating system was unable to find the specified path.</span></span> <span data-ttu-id="3bc4a-104">Ścieżka do pliku zawiera specyfikację dysku oraz katalogów i podkatalogów, które muszą przejść, aby zlokalizować plik.</span><span class="sxs-lookup"><span data-stu-id="3bc4a-104">The path to a file includes the drive specification plus the directories and subdirectories that must be traversed to locate the file.</span></span> <span data-ttu-id="3bc4a-105">Ścieżka może być względna lub bezwzględna.</span><span class="sxs-lookup"><span data-stu-id="3bc4a-105">A path can be relative or absolute.</span></span>  

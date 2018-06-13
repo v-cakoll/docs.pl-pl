@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585960"
 ---
 # <a name="cannot-create-activex-component"></a><span data-ttu-id="595e1-102">Nie można utworzyć składnika ActiveX</span><span class="sxs-lookup"><span data-stu-id="595e1-102">Cannot create ActiveX Component</span></span>
 <span data-ttu-id="595e1-103">Próbowano umieścić formantu ActiveX na formularzu w czasie projektowania lub Dodawanie formularza do projektu z formantu ActiveX na nim, ale nie można odnaleźć skojarzone informacje w rejestrze.</span><span class="sxs-lookup"><span data-stu-id="595e1-103">You tried to place an ActiveX control on a form at design time or add a form to a project with an ActiveX control on it, but the associated information in the registry could not be found.</span></span>  

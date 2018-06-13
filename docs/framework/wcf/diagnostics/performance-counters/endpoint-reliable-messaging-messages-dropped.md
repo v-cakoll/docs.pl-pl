@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33469326"
 ---
 # <a name="endpoint-reliable-messaging-messages-dropped"></a><span data-ttu-id="4e6af-102">Punktu końcowego: Porzucone komunikaty niezawodnej obsługi komunikatów</span><span class="sxs-lookup"><span data-stu-id="4e6af-102">Endpoint: Reliable Messaging Messages Dropped</span></span>
 <span data-ttu-id="4e6af-103">Nazwa licznika: Sesji komunikacji niezawodnej porzucony.</span><span class="sxs-lookup"><span data-stu-id="4e6af-103">Counter Name: Reliable Messaging Sessions Dropped.</span></span>  

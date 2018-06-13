@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595163"
 ---
 # <a name="mycomputerclipboard-object"></a><span data-ttu-id="ad125-102">My.Computer.Clipboard — Obiekt</span><span class="sxs-lookup"><span data-stu-id="ad125-102">My.Computer.Clipboard Object</span></span>
 <span data-ttu-id="ad125-103">Udostępnia metody do manipulowania Schowka.</span><span class="sxs-lookup"><span data-stu-id="ad125-103">Provides methods for manipulating the Clipboard.</span></span>  

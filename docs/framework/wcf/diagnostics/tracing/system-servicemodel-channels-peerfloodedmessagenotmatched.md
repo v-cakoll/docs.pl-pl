@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33478745"
 ---
 # <a name="systemservicemodelchannelspeerfloodedmessagenotmatched"></a><span data-ttu-id="4213d-102">System.ServiceModel.Channels.PeerFloodedMessageNotMatched</span><span class="sxs-lookup"><span data-stu-id="4213d-102">System.ServiceModel.Channels.PeerFloodedMessageNotMatched</span></span>
 <span data-ttu-id="4213d-103">Węzeł równorzędny odebrał wiadomość, która nie pasuje do żadnego lokalnego kanału.</span><span class="sxs-lookup"><span data-stu-id="4213d-103">A PeerNode received a message that did not match any local channels.</span></span>  

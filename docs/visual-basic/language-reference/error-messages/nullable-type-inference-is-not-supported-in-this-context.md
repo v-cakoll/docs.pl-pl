@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593194"
 ---
 # <a name="nullable-type-inference-is-not-supported-in-this-context"></a><span data-ttu-id="9247e-102">Wnioskowanie typu zerowalnego nie jest obsługiwane w tym kontekście</span><span class="sxs-lookup"><span data-stu-id="9247e-102">Nullable type inference is not supported in this context</span></span>
 <span data-ttu-id="9247e-103">Typy wartości i struktury mogą być deklarowane wartości null.</span><span class="sxs-lookup"><span data-stu-id="9247e-103">Value types and structures can be declared nullable.</span></span>  

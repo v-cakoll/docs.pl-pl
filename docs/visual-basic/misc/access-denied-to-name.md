@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595790"
 ---
 # <a name="access-denied-to-39ltnamegt39"></a><span data-ttu-id="6908d-102">Odmowa dostępu do &#39; &lt;nazwy&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="6908d-102">Access denied to &#39;&lt;name&gt;&#39;</span></span>
 <span data-ttu-id="6908d-103">Urządzenia, plik lub dysk nie jest dostępny, ponieważ są niewystarczające uprawnienia zabezpieczeń tego komputera.</span><span class="sxs-lookup"><span data-stu-id="6908d-103">A device, file, or disk is not accessible because your computer's security permissions are insufficient.</span></span>  

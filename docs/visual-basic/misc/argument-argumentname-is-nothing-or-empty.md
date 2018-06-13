@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599622"
 ---
 # <a name="argument-39ltargumentnamegt39-is-nothing-or-empty"></a><span data-ttu-id="da5aa-102">Argument &#39; &lt;nazwa_argumentu&gt;&#39; zawiera element Nothing lub jest pusty</span><span class="sxs-lookup"><span data-stu-id="da5aa-102">Argument &#39;&lt;argumentname&gt;&#39; is Nothing or empty</span></span>
 <span data-ttu-id="da5aa-103">Nazwa argumentu jest nieprawidłowa, ponieważ jest on zainicjowany jako `Nothing` lub jest pusty. Argument musi mieć typ danych i prawidłową nazwę.</span><span class="sxs-lookup"><span data-stu-id="da5aa-103">An argument name is not valid because it is initialized to `Nothing` or is empty.</span></span> <span data-ttu-id="da5aa-104">Argument musi mieć typ danych i prawidłową nazwę.</span><span class="sxs-lookup"><span data-stu-id="da5aa-104">An argument must have a specific data type and a valid name.</span></span>  

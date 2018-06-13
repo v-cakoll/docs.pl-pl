@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33465682"
 ---
 # <a name="3427---websocketcloseoutputsent"></a><span data-ttu-id="63a59-102">3427 — WebSocketCloseOutputSent</span><span class="sxs-lookup"><span data-stu-id="63a59-102">3427 - WebSocketCloseOutputSent</span></span>
 ## <a name="properties"></a><span data-ttu-id="63a59-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="63a59-103">Properties</span></span>  

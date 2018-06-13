@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595930"
 ---
 # <a name="functions-visual-basic"></a><span data-ttu-id="7b889-102">Funkcje (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7b889-102">Functions (Visual Basic)</span></span>
 <span data-ttu-id="7b889-103">Tematy w tej sekcji zawierają tabele funkcji Członkowskich środowiska wykonawczego Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="7b889-103">The topics in this section contain tables of the Visual Basic run-time member functions.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415360"
 ---
 # <a name="icordebugmergedassemblyrecordgetculture-method"></a><span data-ttu-id="43ad8-102">ICorDebugMergedAssemblyRecord::GetCulture — metoda</span><span class="sxs-lookup"><span data-stu-id="43ad8-102">ICorDebugMergedAssemblyRecord::GetCulture Method</span></span>
 <span data-ttu-id="43ad8-103">Pobiera ciąg nazwy kultury zestawu.</span><span class="sxs-lookup"><span data-stu-id="43ad8-103">Gets the culture name string of the assembly.</span></span>  

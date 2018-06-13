@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587655"
 ---
 # <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a><span data-ttu-id="b4aec-102">Wystąpił nieoczekiwany błąd, ponieważ zasób systemu operacyjnego zażądany dla uruchomienia pojedynczego wystąpienia nie może zostać pobrany</span><span class="sxs-lookup"><span data-stu-id="b4aec-102">An unexpected error has occurred because an operating system resource required for single instance startup cannot be acquired</span></span>
 <span data-ttu-id="b4aec-103">Aplikacji nie można uzyskać zasobu niezbędne systemu operacyjnego.</span><span class="sxs-lookup"><span data-stu-id="b4aec-103">The application could not acquire a necessary operating system resource.</span></span> <span data-ttu-id="b4aec-104">Niektóre możliwe przyczyny tego problemu są:</span><span class="sxs-lookup"><span data-stu-id="b4aec-104">Some of the possible causes for this problem are:</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587599"
 ---
 # <a name="39isnot39-operand-of-type-39typename39-can-only-be-compared-to-39nothing39-because-39typename39-is-a-nullable-type"></a><span data-ttu-id="131f0-102">&#39;IsNot&#39; operand typu &#39;typename&#39; można porównywać tylko z &#39;nic&#39;, ponieważ &#39;typename&#39; jest typem zerowalnym</span><span class="sxs-lookup"><span data-stu-id="131f0-102">&#39;IsNot&#39; operand of type &#39;typename&#39; can only be compared to &#39;Nothing&#39;, because &#39;typename&#39; is a nullable type</span></span>
 <span data-ttu-id="131f0-103">Zmienna zadeklarowana jako wartości null ma zostały w porównaniu do wyrażenia innych niż `Nothing` przy użyciu `IsNot` operatora.</span><span class="sxs-lookup"><span data-stu-id="131f0-103">A variable declared as nullable has been compared to an expression other than `Nothing` using the `IsNot` operator.</span></span>  

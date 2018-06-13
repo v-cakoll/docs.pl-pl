@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586627"
 ---
 # <a name="default-property-39ltpropertyname1gt39-conflicts-with-default-property-39ltpropertyname2gt39-in-39ltclassnamegt39-and-so-should-be-declared-39shadows39"></a><span data-ttu-id="7148d-102">Właściwość domyślna &#39; &lt;propertyname1&gt; &#39; powoduje konflikt z właściwością domyślną &#39; &lt;NazwaWłaściwości2&gt; &#39; w &#39; &lt;classname&gt; &#39;i dlatego powinien być zadeklarowany jako &#39;cieni&#39;</span><span class="sxs-lookup"><span data-stu-id="7148d-102">Default property &#39;&lt;propertyname1&gt;&#39; conflicts with default property &#39;&lt;propertyname2&gt;&#39; in &#39;&lt;classname&gt;&#39; and so should be declared &#39;Shadows&#39;</span></span>
 <span data-ttu-id="7148d-103">Właściwość zadeklarowana z taką samą nazwę jak właściwość zdefiniowaną w klasie podstawowej.</span><span class="sxs-lookup"><span data-stu-id="7148d-103">A property is declared with the same name as a property defined in the base class.</span></span> <span data-ttu-id="7148d-104">W takiej sytuacji właściwości tej klasy należy obserwować właściwości klasy podstawowej.</span><span class="sxs-lookup"><span data-stu-id="7148d-104">In this situation, the property in this class should shadow the base class property.</span></span>  

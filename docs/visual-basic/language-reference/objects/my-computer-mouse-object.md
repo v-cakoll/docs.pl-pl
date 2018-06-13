@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593619"
 ---
 # <a name="mycomputermouse-object"></a><span data-ttu-id="408d8-102">My.Computer.Mouse — Obiekt</span><span class="sxs-lookup"><span data-stu-id="408d8-102">My.Computer.Mouse Object</span></span>
 <span data-ttu-id="408d8-103">Udostępnia właściwości do pobierania informacji o formacie i konfiguracji myszy zainstalowane na komputerze lokalnym.</span><span class="sxs-lookup"><span data-stu-id="408d8-103">Provides properties for getting information about the format and configuration of the mouse installed on the local computer.</span></span>  

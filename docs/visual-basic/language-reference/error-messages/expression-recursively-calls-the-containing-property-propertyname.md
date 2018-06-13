@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588846"
 ---
 # <a name="expression-recursively-calls-the-containing-property-39ltpropertynamegt39"></a><span data-ttu-id="d63ed-102">Wyrażenie cyklicznie wywołuje zawierającą je właściwość &#39; &lt;propertyname&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="d63ed-102">Expression recursively calls the containing property &#39;&lt;propertyname&gt;&#39;</span></span>
 <span data-ttu-id="d63ed-103">Instrukcja w `Set` procedury definicji właściwości przechowuje wartość w nazwie właściwości.</span><span class="sxs-lookup"><span data-stu-id="d63ed-103">A statement in the `Set` procedure of a property definition stores a value into the name of the property.</span></span>  

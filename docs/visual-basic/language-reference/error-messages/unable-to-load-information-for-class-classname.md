@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604175"
 ---
 # <a name="unable-to-load-information-for-class-39ltclassnamegt39"></a><span data-ttu-id="ff674-102">Nie można załadować informacji dla klasy &#39; &lt;classname&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="ff674-102">Unable to load information for class &#39;&lt;classname&gt;&#39;</span></span>
 <span data-ttu-id="ff674-103">Odwołanie zostało przesłane do klasy, która nie jest dostępna.</span><span class="sxs-lookup"><span data-stu-id="ff674-103">A reference was made to a class that is not available.</span></span>  

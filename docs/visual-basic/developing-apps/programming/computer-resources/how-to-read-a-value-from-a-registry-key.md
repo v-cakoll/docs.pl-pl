@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586480"
 ---
 # <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a><span data-ttu-id="47e95-102">Porady: odczytywanie wartości z klucza rejestru w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="47e95-102">How to: Read a Value from a Registry Key in Visual Basic</span></span>
 <span data-ttu-id="47e95-103">`GetValue` Metody `My.Computer.Registry` obiekt może służyć do odczytania wartości w rejestrze systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="47e95-103">The `GetValue` method of the `My.Computer.Registry` object can be used to read values in the Windows registry.</span></span>  

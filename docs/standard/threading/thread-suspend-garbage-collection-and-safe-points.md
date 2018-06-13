@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582164"
 ---
 # <a name="threadsuspend-garbage-collection-and-safe-points"></a><span data-ttu-id="fcc4d-102">Thread.Suspend, odzyskiwanie pamięci i punkty bezpieczeństwa</span><span class="sxs-lookup"><span data-stu-id="fcc4d-102">Thread.Suspend, Garbage Collection, and Safe Points</span></span>
 <span data-ttu-id="fcc4d-103">Podczas wywoływania <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> w wątku, system uwagi dotyczące czy zawieszenia wątku zażądano i umożliwia wątku do wykonania, dopóki osiągnie bezpiecznym faktycznie wstrzymania wątku.</span><span class="sxs-lookup"><span data-stu-id="fcc4d-103">When you call <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> on a thread, the system notes that a thread suspension has been requested and allows the thread to execute until it has reached a safe point before actually suspending the thread.</span></span> <span data-ttu-id="fcc4d-104">Bezpieczne punktu dla wątku jest punktem w pamięci, które mogą być wykonywane kolekcji podczas jej wykonywania.</span><span class="sxs-lookup"><span data-stu-id="fcc4d-104">A safe point for a thread is a point in its execution at which garbage collection can be performed.</span></span>  

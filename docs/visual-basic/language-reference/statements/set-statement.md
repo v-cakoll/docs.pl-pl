@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604838"
 ---
 # <a name="set-statement-visual-basic"></a><span data-ttu-id="2809e-102">Set — Instrukcja (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2809e-102">Set Statement (Visual Basic)</span></span>
 <span data-ttu-id="2809e-103">Deklaruje `Set` procedury właściwości używane do przypisania wartości dla właściwości.</span><span class="sxs-lookup"><span data-stu-id="2809e-103">Declares a `Set` property procedure used to assign a value to a property.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598427"
 ---
 # <a name="39lttypenamegt39-cannot-inherit-from-lttypegt-39ltbasetypenamegt39-because-it-expands-the-access-of-the-base-lttypegt-outside-the-assembly"></a><span data-ttu-id="1717b-102">&#39;&lt;Właściwość TypeName&gt; &#39; nie może dziedziczyć po &lt;typu&gt; &#39; &lt;basetypename&gt; &#39; ponieważ rozszerza on dostęp podstawowego &lt;typu&gt; poza zestaw</span><span class="sxs-lookup"><span data-stu-id="1717b-102">&#39;&lt;typename&gt;&#39; cannot inherit from &lt;type&gt; &#39;&lt;basetypename&gt;&#39; because it expands the access of the base &lt;type&gt; outside the assembly</span></span>
 <span data-ttu-id="1717b-103">Klasy lub interfejsu dziedziczy z klasy podstawowej lub interfejsu, ale ma mniej restrykcyjną poziom dostępu.</span><span class="sxs-lookup"><span data-stu-id="1717b-103">A class or interface inherits from a base class or interface but has a less restrictive access level.</span></span>  

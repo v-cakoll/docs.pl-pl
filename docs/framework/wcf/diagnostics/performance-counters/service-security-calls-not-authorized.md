@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33472208"
 ---
 # <a name="service-security-calls-not-authorized"></a><span data-ttu-id="daf7d-102">Usługa: Wywołania zabezpieczeń bez autoryzacji</span><span class="sxs-lookup"><span data-stu-id="daf7d-102">Service: Security Calls Not Authorized</span></span>
 <span data-ttu-id="daf7d-103">Nazwa licznika: Wywołania zabezpieczeń bez autoryzacji.</span><span class="sxs-lookup"><span data-stu-id="daf7d-103">Counter Name: Security Calls Not Authorized.</span></span>  

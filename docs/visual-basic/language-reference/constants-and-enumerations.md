@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591745"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a><span data-ttu-id="df267-102">Stałe i wyliczenia (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="df267-102">Constants and Enumerations (Visual Basic)</span></span>
 <span data-ttu-id="df267-103">Visual Basic dostarcza szereg wstępnie zdefiniowanych stałe i wyliczenia dla deweloperów.</span><span class="sxs-lookup"><span data-stu-id="df267-103">Visual Basic supplies a number of predefined constants and enumerations for developers.</span></span> <span data-ttu-id="df267-104">Stałe przechowywać wartości, które pozostają stałe w trakcie wykonywania aplikacji.</span><span class="sxs-lookup"><span data-stu-id="df267-104">Constants store values that remain constant throughout the execution of an application.</span></span> <span data-ttu-id="df267-105">Wyliczenia oferują wygodny do pracy z zestawów powiązanych stałych i do skojarzenia z nazwami wartości stałych.</span><span class="sxs-lookup"><span data-stu-id="df267-105">Enumerations provide a convenient way to work with sets of related constants, and to associate constant values with names.</span></span>  

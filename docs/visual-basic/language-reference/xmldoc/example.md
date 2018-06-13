@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598553"
 ---
 # <a name="ltexamplegt-visual-basic"></a><span data-ttu-id="1e9e2-102">&lt;przykład&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1e9e2-102">&lt;example&gt; (Visual Basic)</span></span>
 <span data-ttu-id="1e9e2-103">Określa przykład elementu członkowskiego.</span><span class="sxs-lookup"><span data-stu-id="1e9e2-103">Specifies an example for the member.</span></span>  

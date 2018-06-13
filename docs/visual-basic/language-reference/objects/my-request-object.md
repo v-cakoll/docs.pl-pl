@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595891"
 ---
 # <a name="myrequest-object"></a><span data-ttu-id="cbf12-102">My.Request — Obiekt</span><span class="sxs-lookup"><span data-stu-id="cbf12-102">My.Request Object</span></span>
 <span data-ttu-id="cbf12-103">Pobiera <xref:System.Web.HttpRequest> obiektu dla żądanej strony.</span><span class="sxs-lookup"><span data-stu-id="cbf12-103">Gets the <xref:System.Web.HttpRequest> object for the requested page.</span></span>  

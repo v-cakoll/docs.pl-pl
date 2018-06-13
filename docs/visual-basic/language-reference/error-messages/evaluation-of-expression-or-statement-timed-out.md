@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586428"
 ---
 # <a name="evaluation-of-expression-or-statement-timed-out"></a><span data-ttu-id="41b3e-102">Szacowanie wyrażenia lub instrukcji przekroczyło limit czasu</span><span class="sxs-lookup"><span data-stu-id="41b3e-102">Evaluation of expression or statement timed out</span></span>
 <span data-ttu-id="41b3e-103">Obliczenie wyrażenia nie została ukończona w odpowiednim czasie.</span><span class="sxs-lookup"><span data-stu-id="41b3e-103">The evaluation of an expression did not complete in a timely manner.</span></span>  

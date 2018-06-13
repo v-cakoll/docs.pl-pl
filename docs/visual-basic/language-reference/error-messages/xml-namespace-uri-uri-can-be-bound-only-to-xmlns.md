@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594191"
 ---
 # <a name="xml-namespace-uri-39httpwwww3orgxml1998namespace39-can-be-bound-only-to-39xmlns39"></a><span data-ttu-id="46f0e-102">Identyfikator URI przestrzeni nazw XML &#39; http://www.w3.org/XML/1998/namespace&#39; może być powiązana tylko z &#39;xmlns&#39;</span><span class="sxs-lookup"><span data-stu-id="46f0e-102">XML namespace URI &#39;http://www.w3.org/XML/1998/namespace&#39; can be bound only to &#39;xmlns&#39;</span></span>
 <span data-ttu-id="46f0e-103">Identyfikator URI http://www.w3.org/XML/1998/namespace jest używany w deklaracji przestrzeni nazw XML.</span><span class="sxs-lookup"><span data-stu-id="46f0e-103">The URI http://www.w3.org/XML/1998/namespace is used in an XML namespace declaration.</span></span> <span data-ttu-id="46f0e-104">Ten identyfikator URI jest to Zarezerwowana przestrzeń nazw i nie może występować w deklaracji przestrzeni nazw XML.</span><span class="sxs-lookup"><span data-stu-id="46f0e-104">This URI is a reserved namespace and cannot be included in an XML namespace declaration.</span></span>  

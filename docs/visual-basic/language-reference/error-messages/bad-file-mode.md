@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587387"
 ---
 # <a name="bad-file-mode"></a><span data-ttu-id="b1636-102">Zły tryb pliku</span><span class="sxs-lookup"><span data-stu-id="b1636-102">Bad file mode</span></span>
 <span data-ttu-id="b1636-103">Instrukcje używane w manipulowanie zawartością pliku musi być odpowiedni tryb, w którym plik został otwarty.</span><span class="sxs-lookup"><span data-stu-id="b1636-103">Statements used in manipulating file contents must be appropriate to the mode in which the file was opened.</span></span> <span data-ttu-id="b1636-104">Możliwe przyczyny:</span><span class="sxs-lookup"><span data-stu-id="b1636-104">Possible causes include:</span></span>  

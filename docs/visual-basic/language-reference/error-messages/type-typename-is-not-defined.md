@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595189"
 ---
 # <a name="type-39lttypenamegt39-is-not-defined"></a><span data-ttu-id="a70e5-102">Typ &#39; &lt;typename&gt; &#39; nie jest zdefiniowany</span><span class="sxs-lookup"><span data-stu-id="a70e5-102">Type &#39;&lt;typename&gt;&#39; is not defined</span></span>
 <span data-ttu-id="a70e5-103">Instrukcja wprowadził odwołanie do typu, który nie został zdefiniowany.</span><span class="sxs-lookup"><span data-stu-id="a70e5-103">The statement has made reference to a type that has not been defined.</span></span> <span data-ttu-id="a70e5-104">Można zdefiniować typu w instrukcji deklaracji takich jak `Enum`, `Structure`, `Class`, lub `Interface`.</span><span class="sxs-lookup"><span data-stu-id="a70e5-104">You can define a type in a declaration statement such as `Enum`, `Structure`, `Class`, or `Interface`.</span></span>  

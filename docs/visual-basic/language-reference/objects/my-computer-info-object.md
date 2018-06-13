@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594955"
 ---
 # <a name="mycomputerinfo-object"></a><span data-ttu-id="a8e37-102">My.Computer.Info — Obiekt</span><span class="sxs-lookup"><span data-stu-id="a8e37-102">My.Computer.Info Object</span></span>
 <span data-ttu-id="a8e37-103">Udostępnia właściwości do pobierania informacji o pamięci, załadowanych zestawów, nazwy i systemu operacyjnego komputera.</span><span class="sxs-lookup"><span data-stu-id="a8e37-103">Provides properties for getting information about the computer's memory, loaded assemblies, name, and operating system.</span></span>  

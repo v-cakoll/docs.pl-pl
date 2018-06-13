@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33472251"
 ---
 # <a name="calls-failed"></a><span data-ttu-id="3d999-102">Wywołania zakończone niepowodzeniem</span><span class="sxs-lookup"><span data-stu-id="3d999-102">Calls Failed</span></span>
 <span data-ttu-id="3d999-103">Nazwa licznika: Wywołania zakończone niepowodzeniem</span><span class="sxs-lookup"><span data-stu-id="3d999-103">Counter Name: Calls Failed</span></span>  

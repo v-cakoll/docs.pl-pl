@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603980"
 ---
 # <a name="distinct-clause-visual-basic"></a><span data-ttu-id="d28a2-102">Distinct — Klauzula (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d28a2-102">Distinct Clause (Visual Basic)</span></span>
 <span data-ttu-id="d28a2-103">Ogranicza wartości bieżącą zmienną zakresu w celu wyeliminowania zduplikowanych wartości w klauzulach kolejne zapytania.</span><span class="sxs-lookup"><span data-stu-id="d28a2-103">Restricts the values of the current range variable to eliminate duplicate values in subsequent query clauses.</span></span>  

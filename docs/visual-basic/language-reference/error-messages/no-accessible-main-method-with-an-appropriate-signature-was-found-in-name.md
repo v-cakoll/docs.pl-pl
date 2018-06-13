@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593223"
 ---
 # <a name="no-accessible-39main39-method-with-an-appropriate-signature-was-found-in-39ltnamegt39"></a><span data-ttu-id="9589a-102">Brak dostępnego &#39;Main&#39; metody z odpowiednim podpisem został znaleziony w &#39; &lt;nazwy&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="9589a-102">No accessible &#39;Main&#39; method with an appropriate signature was found in &#39;&lt;name&gt;&#39;</span></span>
 <span data-ttu-id="9589a-103">Aplikacje wiersza poleceń musi mieć `Sub Main` zdefiniowane.</span><span class="sxs-lookup"><span data-stu-id="9589a-103">Command-line applications must have a `Sub Main` defined.</span></span> <span data-ttu-id="9589a-104">`Main` musi być zadeklarowany jako `Public Shared` , jeśli jest on zdefiniowany w klasie lub jako `Public` Jeśli zdefiniowany w module.</span><span class="sxs-lookup"><span data-stu-id="9589a-104">`Main` must be declared as `Public Shared` if it is defined in a class, or as `Public` if defined in a module.</span></span>  

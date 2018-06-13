@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594770"
 ---
 # <a name="statement-is-not-valid-in-a-namespace"></a><span data-ttu-id="342ee-102">Instrukcja nie jest prawidłowa w przestrzeni nazw</span><span class="sxs-lookup"><span data-stu-id="342ee-102">Statement is not valid in a namespace</span></span>
 <span data-ttu-id="342ee-103">Instrukcja nie może występować na poziomie przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="342ee-103">The statement cannot appear at the level of a namespace.</span></span> <span data-ttu-id="342ee-104">Deklaracje tylko dozwolone na poziomie przestrzeni nazw są modułu, interfejsu klasy, delegat, wyliczenia i deklaracje struktur.</span><span class="sxs-lookup"><span data-stu-id="342ee-104">The only declarations allowed at namespace level are module, interface, class, delegate, enumeration, and structure declarations.</span></span>  

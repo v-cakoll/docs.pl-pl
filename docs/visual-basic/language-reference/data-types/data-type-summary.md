@@ -42,6 +42,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591797"
 ---
 # <a name="data-type-summary-visual-basic"></a><span data-ttu-id="96fc1-102">Typ danych — Podsumowanie (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="96fc1-102">Data Type Summary (Visual Basic)</span></span>
 <span data-ttu-id="96fc1-103">W poniższej tabeli przedstawiono typy danych Visual Basic, typy obsługi środowiska uruchomieniowego języka wspólnego ich Alokacja magazynu nominalnego i ich zakresów wartości.</span><span class="sxs-lookup"><span data-stu-id="96fc1-103">The following table shows the Visual Basic data types, their supporting common language runtime types, their nominal storage allocation, and their value ranges.</span></span>  

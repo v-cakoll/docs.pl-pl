@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591382"
 ---
 # <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a><span data-ttu-id="3498c-102">Zapisywanie danych i odczytywania ze Schowka (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3498c-102">Storing data to and reading from the Clipboard (Visual Basic)</span></span>
 <span data-ttu-id="3498c-103">Schowek może służyć do przechowywania danych, takich jak tekst i obrazy.</span><span class="sxs-lookup"><span data-stu-id="3498c-103">The Clipboard can be used to store data, such as text and images.</span></span> <span data-ttu-id="3498c-104">Ponieważ Schowka jest wspólna dla wszystkich aktywnych procesów, może służyć do transferu danych między nimi.</span><span class="sxs-lookup"><span data-stu-id="3498c-104">Because the Clipboard is shared by all active processes, it can be used to transfer data between them.</span></span> <span data-ttu-id="3498c-105">`My.Computer.Clipboard` Obiektu pozwala łatwo uzyskiwać dostęp do Schowka i można odczytywać i zapisywać do niego.</span><span class="sxs-lookup"><span data-stu-id="3498c-105">The `My.Computer.Clipboard` object allows you to easily access the Clipboard and to read from and write to it.</span></span>  

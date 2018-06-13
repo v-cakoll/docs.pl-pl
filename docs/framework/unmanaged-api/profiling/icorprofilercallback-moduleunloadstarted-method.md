@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452513"
 ---
 # <a name="icorprofilercallbackmoduleunloadstarted-method"></a><span data-ttu-id="76391-102">ICorProfilerCallback::ModuleUnloadStarted — Metoda</span><span class="sxs-lookup"><span data-stu-id="76391-102">ICorProfilerCallback::ModuleUnloadStarted Method</span></span>
 <span data-ttu-id="76391-103">Powiadamia profilera, że Trwa zwalnianie modułu.</span><span class="sxs-lookup"><span data-stu-id="76391-103">Notifies the profiler that a module is being unloaded.</span></span>  

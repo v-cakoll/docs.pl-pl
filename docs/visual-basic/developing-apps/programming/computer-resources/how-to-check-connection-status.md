@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582467"
 ---
 # <a name="how-to-check-connection-status-in-visual-basic"></a><span data-ttu-id="3748e-102">Porady: sprawdzanie stanu połączenia w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="3748e-102">How to: Check Connection Status in Visual Basic</span></span>
 <span data-ttu-id="3748e-103"><xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> Właściwości może służyć do określenia, czy komputer ma pracy sieć lub połączenie internetowe.</span><span class="sxs-lookup"><span data-stu-id="3748e-103">The <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> property can be used to determine whether the computer has a working network or Internet connection.</span></span>  

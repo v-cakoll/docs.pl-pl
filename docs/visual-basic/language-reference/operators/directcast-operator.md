@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604227"
 ---
 # <a name="directcast-operator-visual-basic"></a><span data-ttu-id="d3ef1-102">DirectCast — Operator (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d3ef1-102">DirectCast Operator (Visual Basic)</span></span>
 <span data-ttu-id="d3ef1-103">Wprowadza operację konwersji typu na podstawie dziedziczenia lub wdrożenia.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-103">Introduces a type conversion operation based on inheritance or implementation.</span></span>  

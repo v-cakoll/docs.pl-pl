@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595969"
 ---
 # <a name="mycomputerclock-object"></a><span data-ttu-id="701f3-102">My.Computer.Clock — Obiekt</span><span class="sxs-lookup"><span data-stu-id="701f3-102">My.Computer.Clock Object</span></span>
 <span data-ttu-id="701f3-103">Dostarcza właściwości, aby uzyskać dostęp do bieżący czas lokalny i uniwersalny czas koordynowany (odpowiednik czas uniwersalny Greenwich) z zegara systemowego.</span><span class="sxs-lookup"><span data-stu-id="701f3-103">Provides properties for accessing the current local time and Universal Coordinated Time (equivalent to Greenwich Mean Time) from the system clock.</span></span>  

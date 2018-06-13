@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593567"
 ---
 # <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a><span data-ttu-id="21878-102">Ta tablica ma ustalony rozmiar lub jest tymczasowo zablokowana (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="21878-102">This array is fixed or temporarily locked (Visual Basic)</span></span>
 <span data-ttu-id="21878-103">Ten błąd ma następujące możliwe przyczyny:</span><span class="sxs-lookup"><span data-stu-id="21878-103">This error has the following possible causes:</span></span>  

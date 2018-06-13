@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580266"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a><span data-ttu-id="5bf38-103">Architektów nowoczesnych aplikacji sieci Web platformy ASP.NET Core i Azure</span><span class="sxs-lookup"><span data-stu-id="5bf38-103">Architect Modern Web Applications with ASP.NET Core and Azure</span></span>
 

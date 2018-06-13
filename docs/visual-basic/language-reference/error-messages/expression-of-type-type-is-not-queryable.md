@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589012"
 ---
 # <a name="expression-of-type-lttypegt-is-not-queryable"></a><span data-ttu-id="9e53d-102">Wyrażenie typu &lt;typu&gt; nie jest zapytań</span><span class="sxs-lookup"><span data-stu-id="9e53d-102">Expression of type &lt;type&gt; is not queryable</span></span>
 <span data-ttu-id="9e53d-103">Wyrażenie typu \<typu > nie jest obsługą zapytań.</span><span class="sxs-lookup"><span data-stu-id="9e53d-103">Expression of type \<type> is not queryable.</span></span> <span data-ttu-id="9e53d-104">Upewnij się, że nie brakuje zestawu importu odwołania i/lub przestrzeń nazw dla dostawcy LINQ.</span><span class="sxs-lookup"><span data-stu-id="9e53d-104">Make sure you are not missing an assembly reference and/or namespace import for the LINQ provider.</span></span>  

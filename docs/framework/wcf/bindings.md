@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803598"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Powiązania WCF (Windows Communication Foundation)
 Powiązania Określ, jak punkt końcowy usługi Windows Communication Foundation (WCF) komunikuje się z innych punktów końcowych. W jego najbardziej podstawową powiązanie należy określić transportu (na przykład HTTP lub TCP) do użycia. Można również ustawić inne właściwości, takie jak zabezpieczenia i transakcji obsługuje za pośrednictwem powiązania.  

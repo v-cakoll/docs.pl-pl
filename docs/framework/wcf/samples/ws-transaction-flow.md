@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807218"
 ---
 # <a name="ws-transaction-flow"></a>Przepływ transakcji WS
 W tym przykładzie przedstawiono użycie transakcji koordynowane przez klienta i opcji na kliencie i serwerze dla transakcji przepływu przy użyciu protokołu WS-Atomic Transaction albo OleTransactions. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi Kalkulator, ale operacje są przypisane do przedstawiają sposób używania `TransactionFlowAttribute` z **właściwość TransactionFlowOption** wyliczenie, aby ustalić, jakie transakcji stopnia przepływu jest włączone. W zakresie transakcji dziennik żądanych operacji są zapisywane do bazy danych i będzie się powtarzał dopiero po ukończeniu transakcji klienta koordynowane — Jeśli transakcja klienta nie zostanie ukończone, transakcja usługi sieci Web zapewnia, że odpowiednie aktualizacje bazy danych nie są przekazywane.  

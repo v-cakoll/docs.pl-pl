@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655287"
 ---
 # <a name="extension-methods-visual-basic"></a>Metody rozszerzeń (Visual Basic)
 Metody rozszerzenia umożliwiają deweloperom dodania funkcji niestandardowych do typów danych, które zostały już zdefiniowane bez tworzenia nowego typu pochodnego. Metody rozszerzenia umożliwiają napisanie metody, która może być wywołana tak, jakby była metodą wystąpienia istniejącego typu.  

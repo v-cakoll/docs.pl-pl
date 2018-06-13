@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636555"
 ---
 # <a name="file-39ltfilenamegt39-is-write-protected"></a>Plik &#39; &lt;filename&gt; &#39; zapisu jest chroniony
 Podjęto próbę zapisu plik jest zabezpieczony przed zapisem i nie można zmienić.  

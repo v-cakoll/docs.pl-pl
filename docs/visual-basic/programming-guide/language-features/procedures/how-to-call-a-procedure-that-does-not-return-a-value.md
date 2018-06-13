@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649051"
 ---
 # <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>Porady: wywoływanie procedury, która nie zwraca wartości (Visual Basic)
 A `Sub` procedury nie zwraca wartości do wywołującego kodu. Należy wywołać ją jawnie autonomicznej instrukcją wywołującego. Nie można wywołać go, używając po prostu swojej nazwy w wyrażeniu.  

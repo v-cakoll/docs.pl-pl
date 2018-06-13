@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654820"
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>Porady: wywoływanie procedury właściwości (Visual Basic)
 Przechowywanie wartości we właściwości lub pobierania jej wartość jest wywoływanie procedury właściwości. Dostępu do właściwości taki sam sposób, dostęp do zmiennej.  

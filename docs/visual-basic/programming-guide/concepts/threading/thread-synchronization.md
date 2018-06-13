@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655094"
 ---
 # <a name="thread-synchronization-visual-basic"></a>Synchronizacja wątku (Visual Basic)
 W poniższych sekcjach opisano funkcje i klasy, które mogą służyć do synchronizowania dostęp do zasobów w aplikacjach wielowątkowych.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643403"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>Porady: obliczanie wartości kolumn w pliku tekstowym CSV (LINQ) (Visual Basic)
 Ten przykład przedstawia sposób wykonywania obliczenia agregacji, takie jak Suma, średnia, minimum i maksimum dla kolumn w pliku CSV. Zasady przykładzie, które są wyświetlane tutaj można zastosować do innych typów strukturalnych tekstu.  

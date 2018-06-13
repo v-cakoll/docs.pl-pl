@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639275"
 ---
 # <a name="property-ltpropertynamegt-cannot-be-set-to-an-empty-string-or-nothing"></a>Właściwość &lt;propertyname&gt; nie można ustawić pustego ciągu lub nic
 Właściwość wymaga wartości innej niż ciąg pusty ("") lub `Nothing`. Może to być wynikiem niepoprawnie obliczania wartości.  

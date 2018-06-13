@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635580"
 ---
 # <a name="disk-full-visual-basic"></a>Dysk jest zapełniony (Visual Basic)
 Nie ma wystarczającej ilości miejsca na dysku, aby wykonać `Print`, `Write`, lub `FileClose` operacji, lub utworzyć wymaganych plików.  

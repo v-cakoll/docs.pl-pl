@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804995"
 ---
 # <a name="data-binding-in-an-aspnet-client"></a>Powiązywanie danych w kliencie programu ASP.NET
 W tym przykładzie pokazano, jak można powiązać danych zwróconych przez typowy usługi Windows Communication Foundation (WCF) w aplikacji formularzy sieci Web.  

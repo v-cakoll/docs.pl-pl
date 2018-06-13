@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651443"
 ---
 # <a name="linq-to-xml-axes-overview-visual-basic"></a>LINQ do XML-Przegląd osie (Visual Basic)
 Po drzewo XML utworzony lub załadowany dokumentu XML na drzewo XML można wykonać zapytanie, aby znaleźć elementy i atrybuty lub pobrać wartości. Pobrać kolekcji za pomocą *metody osi*, nazywany również *osi*. Niektóre z osi są metod w <xref:System.Xml.Linq.XElement> i <xref:System.Xml.Linq.XDocument> klas, które zwraca <xref:System.Collections.Generic.IEnumerable%601> kolekcji. Niektóre z osi są metody rozszerzenia w <xref:System.Xml.Linq.Extensions> klasy. Osie, które są wdrażane jako metody rozszerzenia działać w kolekcjach, a następnie wróć kolekcji.  

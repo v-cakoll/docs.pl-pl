@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807762"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>Przykład autonomicznego kanału diagnostycznego
 Ten przykład przedstawia sposób tworzenia RSS/źródło danych Atom dla zespolonego z usługi Windows Communication Foundation (WCF). Jest podstawowe program "Hello World", który zawiera podstawowe informacje o modelu obiektów oraz sposobu konfigurowania usługi Windows Communication Foundation (WCF).  

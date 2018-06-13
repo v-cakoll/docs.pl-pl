@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639758"
 ---
 # <a name="specified-dll-function-not-found"></a>Nie odnaleziono podanej funkcji DLL
 Znaleziono biblioteki dołączanej (dynamicznie DLL) w odwołaniu biblioteki użytkownika, ale nie można odnaleźć funkcji DLL określonej w pliku DLL.  

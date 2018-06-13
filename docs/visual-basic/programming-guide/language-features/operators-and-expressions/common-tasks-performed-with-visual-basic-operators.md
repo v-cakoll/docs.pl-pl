@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654729"
 ---
 # <a name="common-tasks-performed-with-visual-basic-operators"></a>Zadanie typowe przeprowadzane przy użyciu operatorów Visual Basic
 Operatory wykonują wiele typowych zadań dotyczących co najmniej jednego wyrażenia o nazwie *operandy*.  

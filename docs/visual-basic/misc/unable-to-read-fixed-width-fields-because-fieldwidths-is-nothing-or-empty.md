@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641056"
 ---
 # <a name="unable-to-read-fixed-width-fields-because-fieldwidths-is-nothing-or-empty"></a>Nie można odczytać stałych pól szerokości, ponieważ parametr FieldWidths jest Nothing lub jest pusty
 `TextFieldParser` Nie może odczytać pola o stałej szerokości, ponieważ `FieldWidths` właściwość jest ustawiona na `Nothing` lub jest pusty.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804479"
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>Porady: tworzenie weryfikatora tożsamości niestandardowego klienta
 *Tożsamości* funkcji Windows Communication Foundation (WCF) umożliwia klientowi z góry określić oczekiwaną tożsamość usługi. Zawsze, gdy serwer uwierzytelnia do klienta, tożsamość jest sprawdzana względem Oczekiwana tożsamość. (Aby uzyskać informacje o tożsamości i jej działania, zobacz [uwierzytelnianie i tożsamość usługi](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  

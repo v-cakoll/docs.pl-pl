@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639301"
 ---
 # <a name="system-event-log-cannot-be-deleted"></a>Nie można usunąć w dzienniku zdarzeń systemowych
 Nastąpiła próba można usunąć dziennika zdarzeń systemu, której nie można usunąć. Dziennik systemu śledzi zdarzenia systemowe, takie jak awarie sprzętu i uruchomienia systemu.  

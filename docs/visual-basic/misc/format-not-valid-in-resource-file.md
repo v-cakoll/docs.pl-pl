@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636135"
 ---
 # <a name="format-not-valid-in-resource-file"></a>Format jest nieprawidłowy w pliku zasobów
 Plik zasobów w projekcie nie jest zgodna z formatem pliku zasobów systemu Windows lub występuje niezgodność między plikiem zasobów i projektu Visual Basic.  

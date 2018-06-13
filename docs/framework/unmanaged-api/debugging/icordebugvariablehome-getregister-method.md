@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420111"
 ---
 # <a name="icordebugvariablehomegetregister-method"></a><span data-ttu-id="04659-102">ICorDebugVariableHome::GetRegister — metoda</span><span class="sxs-lookup"><span data-stu-id="04659-102">ICorDebugVariableHome::GetRegister Method</span></span>
 <span data-ttu-id="04659-103">Pobiera rejestr, który zawiera zmienną z typem lokalizacji `VLT_REGISTER`oraz podstawowej rejestru dla zmiennej z typem lokalizacji `VLT_REGISTER_RELATIVE`.</span><span class="sxs-lookup"><span data-stu-id="04659-103">Gets the register that contains a variable with a location type of `VLT_REGISTER`, and the base register for a variable with a location type of `VLT_REGISTER_RELATIVE`.</span></span>  

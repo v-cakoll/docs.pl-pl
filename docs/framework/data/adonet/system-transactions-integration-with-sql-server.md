@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365751"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a><span data-ttu-id="d330c-102">System.Transactions integracji z programem SQL Server</span><span class="sxs-lookup"><span data-stu-id="d330c-102">System.Transactions Integration with SQL Server</span></span>
 <span data-ttu-id="d330c-103">[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] w wersji 2.0 wprowadzono framework transakcji, które mogą być udostępniane za pośrednictwem <xref:System.Transactions> przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="d330c-103">The [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] version 2.0 introduced a transaction framework that can be accessed through the <xref:System.Transactions> namespace.</span></span> <span data-ttu-id="d330c-104">Ta struktura przedstawia transakcji w taki sposób, który jest w pełni zintegrowana z [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], takie jak [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d330c-104">This framework exposes transactions in a way that is fully integrated in the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], including [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].</span></span>  

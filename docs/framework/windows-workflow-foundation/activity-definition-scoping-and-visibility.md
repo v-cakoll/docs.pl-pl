@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518505"
 ---
 # <a name="activity-definition-scoping-and-visibility"></a><span data-ttu-id="364b0-102">Określanie zakresu definicji działania i widoczność</span><span class="sxs-lookup"><span data-stu-id="364b0-102">Activity Definition Scoping and Visibility</span></span>
 <span data-ttu-id="364b0-103">Zakresu definicji działania i widoczność, podobnie jak zakres i widoczność obiektu, jest możliwość dostęp do elementów członkowskich działanie innych obiektów lub działania.</span><span class="sxs-lookup"><span data-stu-id="364b0-103">Activity definition scoping and visibility, just like scoping and visibility of an object, is the ability of other objects or activities to access members of the activity.</span></span> <span data-ttu-id="364b0-104">Definicja aktywności jest wykonywane przez implementacje następujące:</span><span class="sxs-lookup"><span data-stu-id="364b0-104">Activity definition is performed by the following implementations:</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436127"
 ---
 # <a name="iclrgcmanager2setgcstartuplimitsex-method"></a><span data-ttu-id="75fff-102">ICLRGCManager2::SetGCStartupLimitsEx — Metoda</span><span class="sxs-lookup"><span data-stu-id="75fff-102">ICLRGCManager2::SetGCStartupLimitsEx Method</span></span>
 <span data-ttu-id="75fff-103">Ustawia rozmiar segmentu kolekcji pamięci i maksymalny rozmiar pamięci systemu kolekcji generacji 0.</span><span class="sxs-lookup"><span data-stu-id="75fff-103">Sets the size of a garbage collection segment and the maximum size of the garbage collection system's generation 0.</span></span>  

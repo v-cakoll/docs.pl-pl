@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520045"
 ---
 # <a name="corporate-purchase-process"></a><span data-ttu-id="b729a-102">Proces zakupu firmowych</span><span class="sxs-lookup"><span data-stu-id="b729a-102">Corporate Purchase Process</span></span>
 <span data-ttu-id="b729a-103">W tym przykładzie przedstawiono sposób tworzenia żądanie bardzo proste propozycje (RFP) na podstawie procesu zakupu z automatycznego najlepszym wyborem propozycji.</span><span class="sxs-lookup"><span data-stu-id="b729a-103">This sample shows how to create a very basic Request for Proposals (RFP) based purchase process with automatic best proposal selection.</span></span> <span data-ttu-id="b729a-104">Łączy <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601>, i <xref:System.Activities.Statements.ForEach%601> i działań niestandardowych do tworzenia przepływu pracy, który reprezentuje procesu.</span><span class="sxs-lookup"><span data-stu-id="b729a-104">It combines <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601>, and <xref:System.Activities.Statements.ForEach%601> and a custom activity to create a workflow that represents the process.</span></span>  

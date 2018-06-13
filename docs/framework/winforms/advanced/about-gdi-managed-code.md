@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518816"
 ---
 # <a name="about-gdi-managed-code"></a><span data-ttu-id="199c7-102">Informacje o kodzie zarządzanym GDI+</span><span class="sxs-lookup"><span data-stu-id="199c7-102">About GDI+ Managed Code</span></span>
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="199c7-103"> jest to część systemu operacyjnego grafiki wektorowej dwuwymiarowa, przetwarzanie obrazu i typografii.</span><span class="sxs-lookup"><span data-stu-id="199c7-103"> is the portion of the Windows operating system that provides two-dimensional vector graphics, imaging, and typography.</span></span> [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="199c7-104"> zwiększa na [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (graficzny interfejs urządzenia dołączone do wcześniejszych wersji systemu Windows) przez dodawanie nowych funkcji i optymalizowanie istniejące funkcje.</span><span class="sxs-lookup"><span data-stu-id="199c7-104"> improves on [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (the Graphics Device Interface included with earlier versions of Windows) by adding new features and by optimizing existing features.</span></span>  

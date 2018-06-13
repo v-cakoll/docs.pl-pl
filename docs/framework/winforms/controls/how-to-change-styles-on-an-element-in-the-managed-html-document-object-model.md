@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531254"
 ---
 # <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a><span data-ttu-id="04e0e-102">Porady: zmienianie stylu elementu w modelu DOM (Document Object Model) zarządzanych dokumentów HTML</span><span class="sxs-lookup"><span data-stu-id="04e0e-102">How to: Change Styles on an Element in the Managed HTML Document Object Model</span></span>
 <span data-ttu-id="04e0e-103">Aby sterować wyglądem dokumentu i jego elementów, można użyć style w formacie HTML.</span><span class="sxs-lookup"><span data-stu-id="04e0e-103">You can use styles in HTML to control the appearance of a document and its elements.</span></span> <span data-ttu-id="04e0e-104"><xref:System.Windows.Forms.HtmlDocument> i <xref:System.Windows.Forms.HtmlElement> obsługuje <xref:System.Windows.Forms.HtmlElement.Style%2A> właściwości, które pobierają ciągi styl następujący format:</span><span class="sxs-lookup"><span data-stu-id="04e0e-104"><xref:System.Windows.Forms.HtmlDocument> and <xref:System.Windows.Forms.HtmlElement> support <xref:System.Windows.Forms.HtmlElement.Style%2A> properties that take style strings of the following format:</span></span>  

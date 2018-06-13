@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524010"
 ---
 # <a name="how-to-use-a-pen-to-draw-rectangles"></a><span data-ttu-id="6f52c-102">Porady: rysowanie prostokątów za pomocą pióra</span><span class="sxs-lookup"><span data-stu-id="6f52c-102">How to: Use a Pen to Draw Rectangles</span></span>
 <span data-ttu-id="6f52c-103">Rysowanie prostokątów, należy <xref:System.Drawing.Graphics> obiektu i <xref:System.Drawing.Pen> obiektu.</span><span class="sxs-lookup"><span data-stu-id="6f52c-103">To draw rectangles, you need a <xref:System.Drawing.Graphics> object and a <xref:System.Drawing.Pen> object.</span></span> <span data-ttu-id="6f52c-104"><xref:System.Drawing.Graphics> Zawiera obiekt <xref:System.Drawing.Graphics.DrawRectangle%2A> metody i <xref:System.Drawing.Pen> obiekt przechowuje funkcje wiersza, np. kolor i szerokość.</span><span class="sxs-lookup"><span data-stu-id="6f52c-104">The <xref:System.Drawing.Graphics> object provides the <xref:System.Drawing.Graphics.DrawRectangle%2A> method, and the <xref:System.Drawing.Pen> object stores features of the line, such as color and width.</span></span>  

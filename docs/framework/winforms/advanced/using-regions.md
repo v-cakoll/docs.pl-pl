@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522612"
 ---
 # <a name="using-regions"></a><span data-ttu-id="09aa5-102">Używanie regionów</span><span class="sxs-lookup"><span data-stu-id="09aa5-102">Using Regions</span></span>
 <span data-ttu-id="09aa5-103">[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Region> Klasa umożliwia zdefiniowanie niestandardowego kształtu.</span><span class="sxs-lookup"><span data-stu-id="09aa5-103">The [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Region> class allows you to define a custom shape.</span></span> <span data-ttu-id="09aa5-104">Kształt może składać się z linii, wielokątów i krzywych.</span><span class="sxs-lookup"><span data-stu-id="09aa5-104">The shape can be made up of lines, polygons, and curves.</span></span>  

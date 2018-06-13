@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429481"
 ---
 # <a name="getcachepath-function"></a><span data-ttu-id="06585-102">GetCachePath — Funkcja</span><span class="sxs-lookup"><span data-stu-id="06585-102">GetCachePath Function</span></span>
 <span data-ttu-id="06585-103">Pobiera ścieżkę do zestawu pamięci podręcznej, przy użyciu określonych flag.</span><span class="sxs-lookup"><span data-stu-id="06585-103">Gets the path to the cached assembly, using the specified flags.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518580"
 ---
 # <a name="using-a-custom-expression-editor"></a><span data-ttu-id="36641-102">Za pomocą edytora wyrażeń niestandardowych</span><span class="sxs-lookup"><span data-stu-id="36641-102">Using a Custom Expression Editor</span></span>
 <span data-ttu-id="36641-103">Edytor wyrażenia niestandardowego można zaimplementować zapewnienie wyrażenia bardziej zaawansowane funkcje lub prostsze środowisko edytowania.</span><span class="sxs-lookup"><span data-stu-id="36641-103">A custom expression editor can be implemented to provide a richer or simpler expression editing experience.</span></span> <span data-ttu-id="36641-104">Istnieje kilka scenariuszy, w których można użyć wyrażenia niestandardowego edytora:</span><span class="sxs-lookup"><span data-stu-id="36641-104">There are several scenarios in which you might want to use a custom expression editor:</span></span>  

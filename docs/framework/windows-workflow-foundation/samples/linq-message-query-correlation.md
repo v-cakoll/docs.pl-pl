@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515853"
 ---
 # <a name="linq-message-query-correlation"></a><span data-ttu-id="8da5c-102">Korelacja kwerendy komunikatów LINQ</span><span class="sxs-lookup"><span data-stu-id="8da5c-102">LINQ Message Query Correlation</span></span>
 <span data-ttu-id="8da5c-103">W tym przykładzie pokazano, jak wykonać korelacji na podstawie zawartości przy użyciu niestandardowego <xref:System.ServiceModel.Dispatcher.MessageQuery> implementacji, a nie dostarczane przez system <xref:System.ServiceModel.XPathMessageQuery>.</span><span class="sxs-lookup"><span data-stu-id="8da5c-103">This sample demonstrates how to do content-based correlation using a custom <xref:System.ServiceModel.Dispatcher.MessageQuery> implementation as opposed to the system-provided <xref:System.ServiceModel.XPathMessageQuery>.</span></span>  

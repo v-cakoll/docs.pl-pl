@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434807"
 ---
 # <a name="iclrprobingassemblyenumget-method"></a><span data-ttu-id="8d78f-102">ICLRProbingAssemblyEnum::Get — Metoda</span><span class="sxs-lookup"><span data-stu-id="8d78f-102">ICLRProbingAssemblyEnum::Get Method</span></span>
 <span data-ttu-id="8d78f-103">Pobiera tożsamość zestawu o określonym indeksie.</span><span class="sxs-lookup"><span data-stu-id="8d78f-103">Gets the assembly identity at the specified index.</span></span>  

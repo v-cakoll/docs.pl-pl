@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431181"
 ---
 # <a name="createhistoryreader-function"></a><span data-ttu-id="89230-102">CreateHistoryReader — Funkcja</span><span class="sxs-lookup"><span data-stu-id="89230-102">CreateHistoryReader Function</span></span>
 <span data-ttu-id="89230-103">Tworzy czytnik historii dla określonego pliku.</span><span class="sxs-lookup"><span data-stu-id="89230-103">Creates a history reader for the specified file.</span></span>  

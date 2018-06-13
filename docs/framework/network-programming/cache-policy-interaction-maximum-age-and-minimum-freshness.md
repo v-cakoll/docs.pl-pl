@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394169"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-minimum-freshness"></a><span data-ttu-id="529f9-102">Pamięci podręcznej zasad interakcji — maksymalny wiek i świeżości minimalna</span><span class="sxs-lookup"><span data-stu-id="529f9-102">Cache Policy Interaction—Maximum Age and Minimum Freshness</span></span>
 <span data-ttu-id="529f9-103">Aby upewnić się, że najnowsza zawartość jest zwracana do aplikacji klienckiej, interakcji klienta pamięci podręcznej zasad serwera ponownego sprawdzania poprawności wymagań i zawsze powoduje najbardziej zachowawcze zasady pamięci podręcznej.</span><span class="sxs-lookup"><span data-stu-id="529f9-103">To help ensure that the freshest content is returned to the client application, the interaction of client cache policy and server revalidation requirements always results in the most conservative cache policy.</span></span> <span data-ttu-id="529f9-104">Wszystkie przykłady w tym temacie przedstawiono zasady z zasobem, który jest buforowana w dniu 1 stycznia i wygaśnie w dniu 4 stycznia w pamięci podręcznej.</span><span class="sxs-lookup"><span data-stu-id="529f9-104">All the examples in this topic illustrate the cache policy for a resource that is cached on January 1 and expires on January 4.</span></span>  

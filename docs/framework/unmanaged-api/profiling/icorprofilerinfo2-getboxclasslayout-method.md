@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453541"
 ---
 # <a name="icorprofilerinfo2getboxclasslayout-method"></a><span data-ttu-id="81be6-102">ICorProfilerInfo2::GetBoxClassLayout — Metoda</span><span class="sxs-lookup"><span data-stu-id="81be6-102">ICorProfilerInfo2::GetBoxClassLayout Method</span></span>
 <span data-ttu-id="81be6-103">Pobiera informacje o którym typu podana wartość znajduje się po jej jest opakowany.</span><span class="sxs-lookup"><span data-stu-id="81be6-103">Gets information about where the specified value type is located when it is boxed.</span></span>  

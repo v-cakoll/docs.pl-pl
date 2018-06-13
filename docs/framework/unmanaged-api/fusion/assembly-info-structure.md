@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430573"
 ---
 # <a name="assemblyinfo-structure"></a><span data-ttu-id="9ea4a-102">ASSEMBLY_INFO — Struktura</span><span class="sxs-lookup"><span data-stu-id="9ea4a-102">ASSEMBLY_INFO Structure</span></span>
 <span data-ttu-id="9ea4a-103">Zawiera informacje dotyczące zestawu, który jest zarejestrowany w globalnej pamięci podręcznej zestawów.</span><span class="sxs-lookup"><span data-stu-id="9ea4a-103">Contains information about an assembly that is registered in the global assembly cache.</span></span>  

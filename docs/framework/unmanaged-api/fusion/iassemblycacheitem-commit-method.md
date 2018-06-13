@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429095"
 ---
 # <a name="iassemblycacheitemcommit-method"></a><span data-ttu-id="cb135-102">IAssemblyCacheItem::Commit — Metoda</span><span class="sxs-lookup"><span data-stu-id="cb135-102">IAssemblyCacheItem::Commit Method</span></span>
 <span data-ttu-id="cb135-103">Zatwierdza odwołanie do zestawu pamięci podręcznej pamięci.</span><span class="sxs-lookup"><span data-stu-id="cb135-103">Commits the cached assembly reference to memory.</span></span>  

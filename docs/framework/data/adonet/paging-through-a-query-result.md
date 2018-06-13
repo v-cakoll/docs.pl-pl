@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358971"
 ---
 # <a name="paging-through-a-query-result"></a><span data-ttu-id="79871-102">Stronicowanie za pośrednictwem wyników z kwerendy</span><span class="sxs-lookup"><span data-stu-id="79871-102">Paging Through a Query Result</span></span>
 <span data-ttu-id="79871-103">Stronicowanie za pośrednictwem wyników z kwerendy jest proces zwracania wyników zapytania w mniejszych podzbiór danych lub strony.</span><span class="sxs-lookup"><span data-stu-id="79871-103">Paging through a query result is the process of returning the results of a query in smaller subsets of data, or pages.</span></span> <span data-ttu-id="79871-104">To jest typowym rozwiązaniem do wyświetlania wyników z kontem użytkownika w małych, łatwe w zarządzaniu fragmentów.</span><span class="sxs-lookup"><span data-stu-id="79871-104">This is a common practice for displaying results to a user in small, easy-to-manage chunks.</span></span>  

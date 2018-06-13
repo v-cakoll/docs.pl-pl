@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387435"
 ---
 # <a name="exposing-net-framework-components-to-com"></a><span data-ttu-id="3affe-102">Udostępnianie składników .NET Framework modelowi COM</span><span class="sxs-lookup"><span data-stu-id="3affe-102">Exposing .NET Framework Components to COM</span></span>
 <span data-ttu-id="3affe-103">Typ architektury .NET do zapisu i korzystanie z tego typu z kodem niezarządzanym są różne działania dla deweloperów.</span><span class="sxs-lookup"><span data-stu-id="3affe-103">Writing a .NET type and consuming that type from unmanaged code are distinct activities for developers.</span></span> <span data-ttu-id="3affe-104">W tej sekcji opisano kilka porady dotyczące pisania zarządzanego kodu, który współdziała z klientami COM:</span><span class="sxs-lookup"><span data-stu-id="3affe-104">This section describes several tips for writing managed code that interoperates with COM clients:</span></span>  

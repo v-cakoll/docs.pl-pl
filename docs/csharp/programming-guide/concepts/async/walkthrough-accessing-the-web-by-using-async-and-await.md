@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338133"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a><span data-ttu-id="f26a7-102">Wskazówki: Uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)</span><span class="sxs-lookup"><span data-stu-id="f26a7-102">Walkthrough: Accessing the Web by Using async and await (C#)</span></span>
 <span data-ttu-id="f26a7-103">Asynchroniczne programy można napisać łatwiejsze i bardziej intuicyjne za pomocą funkcji asynchronicznej/await.</span><span class="sxs-lookup"><span data-stu-id="f26a7-103">You can write asynchronous programs more easily and intuitively by using async/await features.</span></span> <span data-ttu-id="f26a7-104">Możesz zapisać asynchroniczne kod, który wygląda jak synchroniczne kodu i umożliwić kompilatora obsługiwać funkcje wywołania zwrotnego trudne i kontynuacje, które kod asynchroniczny zazwyczaj pociąga za sobą.</span><span class="sxs-lookup"><span data-stu-id="f26a7-104">You can write asynchronous code that looks like synchronous code and let the compiler handle the difficult callback functions and continuations that asynchronous code usually entails.</span></span>  

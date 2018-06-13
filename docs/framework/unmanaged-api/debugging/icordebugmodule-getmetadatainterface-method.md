@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420885"
 ---
 # <a name="icordebugmodulegetmetadatainterface-method"></a><span data-ttu-id="97d94-102">ICorDebugModule::GetMetaDataInterface — Metoda</span><span class="sxs-lookup"><span data-stu-id="97d94-102">ICorDebugModule::GetMetaDataInterface Method</span></span>
 <span data-ttu-id="97d94-103">Pobiera obiekt interfejsu metadanych, który może służyć do sprawdzenia metadane dla modułu.</span><span class="sxs-lookup"><span data-stu-id="97d94-103">Gets a metadata interface object that can be used to examine the metadata for the module.</span></span>  

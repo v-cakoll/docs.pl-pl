@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517865"
 ---
 # <a name="how-to-create-windows-services"></a><span data-ttu-id="26a8b-102">Porady: tworzenie usług systemu Windows</span><span class="sxs-lookup"><span data-stu-id="26a8b-102">How to: Create Windows Services</span></span>
 <span data-ttu-id="26a8b-103">Podczas tworzenia usługi za pomocą szablonu projektu programu Visual Studio o nazwie **usługi systemu Windows**.</span><span class="sxs-lookup"><span data-stu-id="26a8b-103">When you create a service, you can use a Visual Studio project template called **Windows Service**.</span></span> <span data-ttu-id="26a8b-104">Ten szablon automatycznie nie większość zadań można za pomocą odwołań do odpowiednich klas i przestrzenie nazw, konfigurowanie dziedziczenia z klasy podstawowej dla usług, i zastępowanie kilka metod prawdopodobnie do zastąpienia.</span><span class="sxs-lookup"><span data-stu-id="26a8b-104">This template automatically does much of the work for you by referencing the appropriate classes and namespaces, setting up the inheritance from the base class for services, and overriding several of the methods you're likely to want to override.</span></span>  

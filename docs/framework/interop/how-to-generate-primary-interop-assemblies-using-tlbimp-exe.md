@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389996"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a><span data-ttu-id="95e34-102">Porady: Generowanie zestawów podstawowej obsługi międzyoperacyjnej przy użyciu programu Tlbimp.exe</span><span class="sxs-lookup"><span data-stu-id="95e34-102">How to: Generate Primary Interop Assemblies Using Tlbimp.exe</span></span>
 <span data-ttu-id="95e34-103">Istnieją dwa sposoby Generowanie podstawowego zestawu międzyoperacyjnego:</span><span class="sxs-lookup"><span data-stu-id="95e34-103">There are two ways to generate a primary interop assembly:</span></span>  

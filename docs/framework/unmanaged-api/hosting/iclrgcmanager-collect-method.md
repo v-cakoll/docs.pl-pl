@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434758"
 ---
 # <a name="iclrgcmanagercollect-method"></a><span data-ttu-id="c6e0b-102">ICLRGCManager::Collect — Metoda</span><span class="sxs-lookup"><span data-stu-id="c6e0b-102">ICLRGCManager::Collect Method</span></span>
 <span data-ttu-id="c6e0b-103">Wymusza wyrzucania elementów bezużytecznych dla określonej generacji.</span><span class="sxs-lookup"><span data-stu-id="c6e0b-103">Forces a garbage collection for the specified generation.</span></span>  

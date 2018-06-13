@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520243"
 ---
 # <a name="using-the-invokepowershell-activity"></a><span data-ttu-id="d5bcb-102">Za pomocą działania InvokePowerShell</span><span class="sxs-lookup"><span data-stu-id="d5bcb-102">Using the InvokePowerShell Activity</span></span>
 <span data-ttu-id="d5bcb-103">InvokePowerShell przykładowych pokazano, jak można wywołać za pomocą poleceń programu Windows PowerShell `InvokePowerShell` działania.</span><span class="sxs-lookup"><span data-stu-id="d5bcb-103">The InvokePowerShell sample demonstrates how to invoke Windows PowerShell commands using the `InvokePowerShell` activity.</span></span>  

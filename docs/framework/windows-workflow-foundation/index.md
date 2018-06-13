@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515065"
 ---
 # <a name="windows-workflow-foundation"></a><span data-ttu-id="50eb1-102">Windows Workflow Foundation</span><span class="sxs-lookup"><span data-stu-id="50eb1-102">Windows Workflow Foundation</span></span>
 <span data-ttu-id="50eb1-103">W tej sekcji opisano model programowania, przykłady i narzędzia programu Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="50eb1-103">This section describes the programming model, samples, and tools of the Windows Workflow Foundation (WF).</span></span>  

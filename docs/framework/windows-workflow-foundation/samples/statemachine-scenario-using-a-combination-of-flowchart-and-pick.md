@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517939"
 ---
 # <a name="statemachine-scenario-using-a-combination-of-flowchart-and-pick"></a><span data-ttu-id="fe54e-102">Obiekt StateMachine scenariusz przy użyciu kombinacji schematu blokowego i pobrania</span><span class="sxs-lookup"><span data-stu-id="fe54e-102">StateMachine Scenario Using a Combination of FlowChart and Pick</span></span>
 <span data-ttu-id="fe54e-103">W tym przykładzie pokazano, jak wdrożyć scenariusz proste stopera, przy użyciu kombinacji <xref:System.Activities.Statements.Flowchart> i <xref:System.Activities.Statements.Pick> działań.</span><span class="sxs-lookup"><span data-stu-id="fe54e-103">This sample demonstrates how to implement a simple stopwatch scenario using a combination of the <xref:System.Activities.Statements.Flowchart> and <xref:System.Activities.Statements.Pick> activities.</span></span> <span data-ttu-id="fe54e-104">Używa odbierania i wysyłania w działaniu wybierz do nasłuchiwania zdarzeń stopera.</span><span class="sxs-lookup"><span data-stu-id="fe54e-104">It uses Receive and Send within the Pick activity to listen for stopwatch events.</span></span>  

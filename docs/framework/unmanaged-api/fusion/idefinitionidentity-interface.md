@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429348"
 ---
 # <a name="idefinitionidentity-interface"></a><span data-ttu-id="afdd5-102">IDefinitionIdentity — Interfejs</span><span class="sxs-lookup"><span data-stu-id="afdd5-102">IDefinitionIdentity Interface</span></span>
 <span data-ttu-id="afdd5-103">Reprezentuje podpis unikatowy kod, który definiuje aplikacji w bieżącym zakresie.</span><span class="sxs-lookup"><span data-stu-id="afdd5-103">Represents the unique signature of the code that defines the application in the current scope.</span></span>  

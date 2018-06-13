@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516308"
 ---
 # <a name="durable-delay-in-xamlx"></a><span data-ttu-id="9c245-102">Trwałe opóźnienia w XAMLX</span><span class="sxs-lookup"><span data-stu-id="9c245-102">Durable Delay in XAMLX</span></span>
 <span data-ttu-id="9c245-103">W tym przykładzie przedstawiono sposób użycia trwałe opóźnienia, czyli opóźnienie będzie się powtarzał przepływu pracy na urządzeniu trwałe podczas opóźnienie.</span><span class="sxs-lookup"><span data-stu-id="9c245-103">This sample demonstrates how to use a durable delay, which is a delay that persists the workflow to a durable device during the delay.</span></span>  

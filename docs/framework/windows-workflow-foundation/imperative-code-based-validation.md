@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515461"
 ---
 # <a name="imperative-code-based-validation"></a><span data-ttu-id="50eec-102">Weryfikacja opartej na kodzie imperatywne</span><span class="sxs-lookup"><span data-stu-id="50eec-102">Imperative Code-Based Validation</span></span>
 <span data-ttu-id="50eec-103">Konieczne weryfikacji opartych na kodzie zapewnia prosty sposób działania w celu udostępnienia weryfikacji o sobie samym i jest dostępny dla działań, które pochodzą z <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, i <xref:System.Activities.NativeActivity>.</span><span class="sxs-lookup"><span data-stu-id="50eec-103">Imperative code-based validation provides a simple way for an activity to provide validation about itself, and is available for activities that derive from <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, and <xref:System.Activities.NativeActivity>.</span></span> <span data-ttu-id="50eec-104">Sprawdzanie poprawności kodu, który określa wszelkie błędy lub ostrzeżenia walidacji jest dodawany do działania.</span><span class="sxs-lookup"><span data-stu-id="50eec-104">Validation code that determines any validation errors or warnings is added to the activity.</span></span>  

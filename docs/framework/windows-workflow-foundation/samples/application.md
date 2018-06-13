@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513854"
 ---
 # <a name="application"></a><span data-ttu-id="0a886-102">Aplikacja</span><span class="sxs-lookup"><span data-stu-id="0a886-102">Application</span></span>
 <span data-ttu-id="0a886-103">Ta sekcja zawiera przykłady związane z aplikacjami przepływów pracy w systemie Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="0a886-103">This section contains samples related to workflow applications in Windows Workflow Foundation (WF).</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513321"
 ---
 # <a name="getting-started-writing-a-custom-activity"></a><span data-ttu-id="29ec6-102">Pobieranie rozpoczęte pisania działania niestandardowego</span><span class="sxs-lookup"><span data-stu-id="29ec6-102">Getting Started Writing a Custom Activity</span></span>
 <span data-ttu-id="29ec6-103">W przykładzie pokazano sposób definiowania proste działania niestandardowego w języku XAML.</span><span class="sxs-lookup"><span data-stu-id="29ec6-103">This sample demonstrates how to define a simple custom activity in XAML.</span></span> <span data-ttu-id="29ec6-104">Działanie podano nazwę `Rhyme`, i jego logiki jest sekwencją trzy <xref:System.Activities.Statements.WriteLine> działań.</span><span class="sxs-lookup"><span data-stu-id="29ec6-104">The activity is given the name `Rhyme`, and its logic is a sequence of three <xref:System.Activities.Statements.WriteLine> activities.</span></span>  

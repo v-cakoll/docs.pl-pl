@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536029"
 ---
 # <a name="limitations-of-the-windows-forms-timer-component39s-interval-property"></a><span data-ttu-id="e7022-102">Ograniczenia składnika Timer formularzy systemu Windows&#39;właściwości interwału s</span><span class="sxs-lookup"><span data-stu-id="e7022-102">Limitations of the Windows Forms Timer Component&#39;s Interval Property</span></span>
 <span data-ttu-id="e7022-103">Formularze systemu Windows <xref:System.Windows.Forms.Timer> składnik ma <xref:System.Windows.Forms.Timer.Interval%2A> właściwość, która określa liczbę milisekund, jaką między zdarzenie czasomierza jednego i drugiego.</span><span class="sxs-lookup"><span data-stu-id="e7022-103">The Windows Forms <xref:System.Windows.Forms.Timer> component has an <xref:System.Windows.Forms.Timer.Interval%2A> property that specifies the number of milliseconds that pass between one timer event and the next.</span></span> <span data-ttu-id="e7022-104">Jeśli składnik jest wyłączony, czasomierz będzie nadal otrzymywał <xref:System.Windows.Forms.Timer.Tick> zdarzeń w przybliżeniu równe odstępach czasu.</span><span class="sxs-lookup"><span data-stu-id="e7022-104">Unless the component is disabled, a timer continues to receive the <xref:System.Windows.Forms.Timer.Tick> event at roughly equal intervals of time.</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357316"
 ---
 # <a name="dangerousthreadingapi-mda"></a><span data-ttu-id="1c3da-102">dangerousThreadingAPI MDA</span><span class="sxs-lookup"><span data-stu-id="1c3da-102">dangerousThreadingAPI MDA</span></span>
 <span data-ttu-id="1c3da-103">`dangerousThreadingAPI` Zarządzany Asystent debugowania (MDA) została aktywowana po <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> metoda jest wywoływana w wątku innego niż bieżący wątek.</span><span class="sxs-lookup"><span data-stu-id="1c3da-103">The `dangerousThreadingAPI` managed debugging assistant (MDA) is activated when the <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> method is called on a thread other than the current thread.</span></span>  

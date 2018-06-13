@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512570"
 ---
 # <a name="how-to-display-validation-errors-in-a-rehosted-designer"></a><span data-ttu-id="9cdf0-102">Porady: wyświetlanie błędów sprawdzania poprawności w Projektancie Rehosted</span><span class="sxs-lookup"><span data-stu-id="9cdf0-102">How to: Display Validation Errors in a Rehosted Designer</span></span>
 <span data-ttu-id="9cdf0-103">W tym temacie opisano sposób pobierania i opublikuj błędy sprawdzania poprawności w rehosted [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9cdf0-103">This topic describes how to retrieve and publish validation errors in a rehosted [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].</span></span> <span data-ttu-id="9cdf0-104">To zapewnia procedury, aby upewnić się, że przepływ pracy w Projektancie rehosted jest prawidłowy.</span><span class="sxs-lookup"><span data-stu-id="9cdf0-104">This provides us with a procedure to confirm that a workflow in a rehosted designer is valid.</span></span>  

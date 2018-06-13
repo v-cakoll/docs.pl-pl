@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515401"
 ---
 # <a name="basic-usage-of-sendparameters-and-receiveparameters-activities"></a><span data-ttu-id="778a1-102">Podstawowe sposoby użycia SendParameters i ReceiveParameters działania</span><span class="sxs-lookup"><span data-stu-id="778a1-102">Basic Usage of SendParameters and ReceiveParameters Activities</span></span>
 <span data-ttu-id="778a1-103">W tym przykładzie pokazano sposób użycia <xref:System.ServiceModel.Activities.SendParametersContent> i <xref:System.ServiceModel.Activities.ReceiveParametersContent> działań.</span><span class="sxs-lookup"><span data-stu-id="778a1-103">This sample shows the use of <xref:System.ServiceModel.Activities.SendParametersContent> and <xref:System.ServiceModel.Activities.ReceiveParametersContent> activities.</span></span> <span data-ttu-id="778a1-104">Usługa przedstawia jedną operację, która przyjmuje argument będący ciągiem i zwraca dane wejściowe do klienta.</span><span class="sxs-lookup"><span data-stu-id="778a1-104">The service exposes one operation that takes a string argument and echoes the input back to the client.</span></span> <span data-ttu-id="778a1-105">Przykład pokazuje, jak do ustawiania parametrów dla tych działań komunikacji.</span><span class="sxs-lookup"><span data-stu-id="778a1-105">The sample shows how to set up the parameters for these messaging activities.</span></span>  

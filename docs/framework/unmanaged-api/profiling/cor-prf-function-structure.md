@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452065"
 ---
 # <a name="corprffunction-structure"></a><span data-ttu-id="75efa-102">COR_PRF_FUNCTION — Struktura</span><span class="sxs-lookup"><span data-stu-id="75efa-102">COR_PRF_FUNCTION Structure</span></span>
 <span data-ttu-id="75efa-103">Udostępnia reprezentację unikatowy funkcji przez połączenie jej z Identyfikatorem odpowiadającym jej wersji ponownej kompilacji.</span><span class="sxs-lookup"><span data-stu-id="75efa-103">Provides a unique representation of a function by combining its ID with the ID of its recompiled version.</span></span>  

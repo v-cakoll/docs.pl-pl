@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515571"
 ---
 # <a name="bookmarks"></a><span data-ttu-id="d8c71-102">Zakładki</span><span class="sxs-lookup"><span data-stu-id="d8c71-102">Bookmarks</span></span>
 <span data-ttu-id="d8c71-103">Zakładki są mechanizm, który umożliwia działanie pasywnie oczekiwania na dane wejściowe nieposiadających na wątku przepływu pracy.</span><span class="sxs-lookup"><span data-stu-id="d8c71-103">Bookmarks are the mechanism that enables an activity to passively wait for input without holding onto a workflow thread.</span></span> <span data-ttu-id="d8c71-104">Gdy działanie sygnalizuje, że oczekuje bodźca, może utworzyć zakładki.</span><span class="sxs-lookup"><span data-stu-id="d8c71-104">When an activity signals that it is waiting for stimulus, it can create a bookmark.</span></span> <span data-ttu-id="d8c71-105">Oznacza to środowisko uruchomieniowe czy wykonanie działania nie należy traktować jako pełną nawet wtedy, gdy aktualnie wykonywane — metoda (który utworzony <xref:System.Activities.Bookmark>) zwraca.</span><span class="sxs-lookup"><span data-stu-id="d8c71-105">This indicates to the runtime that the activity’s execution should not be considered complete even when the currently executing method (which created the <xref:System.Activities.Bookmark>) returns.</span></span>  

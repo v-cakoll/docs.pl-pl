@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513038"
 ---
 # <a name="runtime-activities-in-wf"></a><span data-ttu-id="463bf-102">Działania środowiska uruchomieniowego w WF</span><span class="sxs-lookup"><span data-stu-id="463bf-102">Runtime Activities in WF</span></span>
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]<span data-ttu-id="463bf-103"> zawiera kilka działań dostarczane przez system do uzyskiwania dostępu do funkcji środowiska uruchomieniowego przepływu pracy, takich jak trwałości i kończenie działania.</span><span class="sxs-lookup"><span data-stu-id="463bf-103"> provides several system-provided activities for accessing the features of the workflow runtime, such as persistence and termination.</span></span>  

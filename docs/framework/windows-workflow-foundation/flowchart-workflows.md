@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514527"
 ---
 # <a name="flowchart-workflows"></a><span data-ttu-id="b7950-102">Schemat blokowy przepływów pracy</span><span class="sxs-lookup"><span data-stu-id="b7950-102">Flowchart Workflows</span></span>
 <span data-ttu-id="b7950-103">Schemat blokowy jest dobrze znanego modelu projektowania programów.</span><span class="sxs-lookup"><span data-stu-id="b7950-103">A flowchart is a well-known paradigm for designing programs.</span></span> <span data-ttu-id="b7950-104">Schemat blokowy działania jest zwykle używane do implementowania niesekwencyjnych przepływy pracy, ale może służyć do sekwencyjnego przepływy pracy, jeśli nie `FlowDecision` węzły są używane.</span><span class="sxs-lookup"><span data-stu-id="b7950-104">The Flowchart activity is typically used to implement non-sequential workflows, but can be used for sequential workflows if no `FlowDecision` nodes are used.</span></span>  

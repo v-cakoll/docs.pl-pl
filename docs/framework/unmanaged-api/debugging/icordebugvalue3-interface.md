@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420672"
 ---
 # <a name="icordebugvalue3-interface"></a><span data-ttu-id="e871d-102">ICorDebugValue3 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="e871d-102">ICorDebugValue3 Interface</span></span>
 <span data-ttu-id="e871d-103">Rozszerza interfejsów "ICorDebugValue" i "ICorDebugValue2", aby zapewnić obsługę dla tablic, które są większe niż 2 GB.</span><span class="sxs-lookup"><span data-stu-id="e871d-103">Extends the "ICorDebugValue" and "ICorDebugValue2" interfaces to provide support for arrays that are larger than 2 GB.</span></span>  

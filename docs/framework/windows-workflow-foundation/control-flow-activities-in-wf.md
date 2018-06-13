@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513002"
 ---
 # <a name="control-flow-activities-in-wf"></a><span data-ttu-id="17706-102">Działania przepływu sterowania w WF</span><span class="sxs-lookup"><span data-stu-id="17706-102">Control Flow Activities in WF</span></span>
 <span data-ttu-id="17706-103">[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Zawiera kilka działań sterowanie przepływem działanie w przepływie pracy.</span><span class="sxs-lookup"><span data-stu-id="17706-103">The [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] provides several activities for controlling flow of execution within a workflow.</span></span> <span data-ttu-id="17706-104">Niektóre z tych działań (takie jak `Switch` i `If`) podobne do programowania środowiskach takie jak Visual C#, podczas gdy inne struktury sterujące przepływ wykonania (takich jak `Pick`) modelu nowe struktury programowania.</span><span class="sxs-lookup"><span data-stu-id="17706-104">Some of these activities (such as `Switch` and `If`) implement flow control structures similar to those in programming environments such as Visual C#, while others (such as `Pick`) model new programming structures.</span></span>  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416634"
 ---
 # <a name="icordebugframe-interface1"></a><span data-ttu-id="6006c-102">ICorDebugFrame Interface1</span><span class="sxs-lookup"><span data-stu-id="6006c-102">ICorDebugFrame Interface1</span></span>
 <span data-ttu-id="6006c-103">Reprezentuje ramkę na bieżącym stosie.</span><span class="sxs-lookup"><span data-stu-id="6006c-103">Represents a frame on the current stack.</span></span>  

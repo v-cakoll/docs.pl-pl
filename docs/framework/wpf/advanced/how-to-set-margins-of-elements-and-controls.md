@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543653"
 ---
 # <a name="how-to-set-margins-of-elements-and-controls"></a><span data-ttu-id="a2e91-102">Jak ustawić marginesy elementów i kontrolek</span><span class="sxs-lookup"><span data-stu-id="a2e91-102">How to: Set Margins of Elements and Controls</span></span>
 <span data-ttu-id="a2e91-103">W tym przykładzie przedstawiono sposób ustawiania <xref:System.Windows.FrameworkElement.Margin%2A> właściwości, zmieniając wszystkie istniejące wartości właściwości dla marginesu w związane z kodem.</span><span class="sxs-lookup"><span data-stu-id="a2e91-103">This example describes how to set the <xref:System.Windows.FrameworkElement.Margin%2A> property, by changing any existing property value for the margin in code-behind.</span></span> <span data-ttu-id="a2e91-104"><xref:System.Windows.FrameworkElement.Margin%2A> Właściwość jest właściwością <xref:System.Windows.FrameworkElement> podstawowy element i w związku z tym jest dziedziczona przez wiele formantów i inne elementy.</span><span class="sxs-lookup"><span data-stu-id="a2e91-104">The <xref:System.Windows.FrameworkElement.Margin%2A> property is a property of the <xref:System.Windows.FrameworkElement> base element, and is thus inherited by a variety of controls and other elements.</span></span>  

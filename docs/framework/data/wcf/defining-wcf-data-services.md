@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356630"
 ---
 # <a name="defining-wcf-data-services"></a><span data-ttu-id="1f85f-102">Definiowanie usługi danych WCF</span><span class="sxs-lookup"><span data-stu-id="1f85f-102">Defining WCF Data Services</span></span>
 <span data-ttu-id="1f85f-103">W tej sekcji opisano sposób tworzenia i konfigurowania [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] do udostępniania danych jako [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych.</span><span class="sxs-lookup"><span data-stu-id="1f85f-103">This section describes how to create and configure [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] to expose data as an [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed.</span></span> <span data-ttu-id="1f85f-104">Aby uzyskać więcej informacji na temat podstawowe kroki wymagane do utworzenia usługi danych, zobacz [udostępnianie danych jako usługa](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="1f85f-104">For more information about the basic steps required to create a data service, see [Exposing Your Data as a Service](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md).</span></span>  

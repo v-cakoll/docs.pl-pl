@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507826"
 ---
 # <a name="message-security-over-message-queuing"></a><span data-ttu-id="69069-102">Zabezpieczenia komunikatów w ramach kolejkowania komunikatów</span><span class="sxs-lookup"><span data-stu-id="69069-102">Message Security over Message Queuing</span></span>
 <span data-ttu-id="69069-103">W tym przykładzie pokazano, jak wdrożyć aplikację, która używa WS-Security przy użyciu uwierzytelniania certyfikatu X.509v3 klienta i wymaga uwierzytelniania serwera za pomocą certyfikatu X.509v3 serwera za pośrednictwem usługi MSMQ.</span><span class="sxs-lookup"><span data-stu-id="69069-103">This sample demonstrates how to implement an application that uses WS-Security with X.509v3 certificate authentication for the client and requires server authentication using the server's X.509v3 certificate over MSMQ.</span></span> <span data-ttu-id="69069-104">Komunikat zabezpieczeń jest czasami więcej pożądane, aby upewnić się, że komunikaty w magazynie usługi MSMQ pozostaną zaszyfrowane i aplikacji, można wykonać uwierzytelniania wiadomości.</span><span class="sxs-lookup"><span data-stu-id="69069-104">Message security is sometimes more desirable to ensure that the messages in the MSMQ store stay encrypted and the application can perform its own authentication of the message.</span></span>  

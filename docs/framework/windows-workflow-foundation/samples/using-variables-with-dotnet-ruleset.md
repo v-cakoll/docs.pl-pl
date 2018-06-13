@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516859"
 ---
 # <a name="using-variables-with-a-net-framework-35-ruleset"></a><span data-ttu-id="ecba4-102">Korzystając ze zmiennych z zestaw reguł .NET Framework 3.5</span><span class="sxs-lookup"><span data-stu-id="ecba4-102">Using Variables with a .NET Framework 3.5 Ruleset</span></span>
 <span data-ttu-id="ecba4-103">Ten przykład przedstawia sposób tworzenia przepływu pracy korzystającego z <xref:System.Activities.Statements.Interop> działania integracji działań niestandardowych w [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] używającej zasad i reguł.</span><span class="sxs-lookup"><span data-stu-id="ecba4-103">This sample demonstrates how to create a workflow that uses the <xref:System.Activities.Statements.Interop> activity to integrate a custom activity written in [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] that uses policy and rules.</span></span> <span data-ttu-id="ecba4-104">Przepływ pracy przekazuje dane do działania niestandardowego przez powiązanie zmiennych, właściwości zależności udostępnianych przez działania niestandardowego.</span><span class="sxs-lookup"><span data-stu-id="ecba4-104">The workflow passes data to the custom activity by binding variables to the dependency properties exposed by the custom activity.</span></span>  

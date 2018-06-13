@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517394"
 ---
 # <a name="using-editing-scope"></a><span data-ttu-id="751fb-102">Za pomocą edycji zakresu</span><span class="sxs-lookup"><span data-stu-id="751fb-102">Using Editing Scope</span></span>
 <span data-ttu-id="751fb-103">W tym przykładzie pokazano, jak partii zestaw zmian, dzięki czemu mogą zostać cofnięte w pojedynczą jednostkę atomic.</span><span class="sxs-lookup"><span data-stu-id="751fb-103">This sample demonstrates how to batch a set of changes so that they can be undone in a single atomic unit.</span></span> <span data-ttu-id="751fb-104">Domyślnie akcje wykonywane przez autora projektanta działania są automatycznie zintegrowane systemu Cofnij/Ponów.</span><span class="sxs-lookup"><span data-stu-id="751fb-104">By default, the actions taken by an activity designer author are automatically integrated into the Undo/Redo system.</span></span>  

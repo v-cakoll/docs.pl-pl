@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435709"
 ---
 # <a name="iclrtask-interface"></a><span data-ttu-id="90cff-102">ICLRTask — Interfejs</span><span class="sxs-lookup"><span data-stu-id="90cff-102">ICLRTask Interface</span></span>
 <span data-ttu-id="90cff-103">Udostępnia metody umożliwiające hosta do wysyłania żądań środowisko uruchomieniowe języka wspólnego (CLR) lub w celu udostępnienia powiadomień do środowiska CLR o skojarzonego zadania.</span><span class="sxs-lookup"><span data-stu-id="90cff-103">Provides methods that allow the host to make requests of the common language runtime (CLR), or to provide notification to the CLR about the associated task.</span></span>  

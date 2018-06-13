@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517101"
 ---
 # <a name="workflow-management-endpoint-sample"></a><span data-ttu-id="305af-102">Przepływ pracy zarządzania punktu końcowego próbki</span><span class="sxs-lookup"><span data-stu-id="305af-102">Workflow Management Endpoint Sample</span></span>
 <span data-ttu-id="305af-103">W tym przykładzie pokazano, jak punkt końcowy kontroli przepływu pracy może służyć do tworzenia i uruchamiania przepływów pracy, zarówno lokalnie, jak i zdalnie.</span><span class="sxs-lookup"><span data-stu-id="305af-103">This sample shows how a workflow control endpoint can be used to create and run workflows both locally and remotely.</span></span> <span data-ttu-id="305af-104">Przykład pokazuje, jak hosta kontrolnego punktu końcowego i zapisu klientów, które wywołują kontrolnego punktu końcowego, aby utworzyć i uruchomić wystąpienia przepływu pracy.</span><span class="sxs-lookup"><span data-stu-id="305af-104">The sample demonstrates how to host a control endpoint and write clients that call the control endpoint to create and run the instance of a workflow.</span></span> <span data-ttu-id="305af-105">Przepływ pracy nie jest usługą.</span><span class="sxs-lookup"><span data-stu-id="305af-105">The workflow is not a service.</span></span>  

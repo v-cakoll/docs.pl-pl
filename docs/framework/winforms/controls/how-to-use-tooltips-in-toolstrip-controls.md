@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534076"
 ---
 # <a name="how-to-use-tooltips-in-toolstrip-controls"></a><span data-ttu-id="d541f-102">Porady: użycie elementu ToolTips w formantach ToolStrip</span><span class="sxs-lookup"><span data-stu-id="d541f-102">How to: Use ToolTips in ToolStrip Controls</span></span>
 <span data-ttu-id="d541f-103">Można wyświetlić <xref:System.Windows.Forms.ToolTip> dla <xref:System.Windows.Forms.ToolStrip> formantu przez ustawienie formantu <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> właściwości `true`.</span><span class="sxs-lookup"><span data-stu-id="d541f-103">You can display a <xref:System.Windows.Forms.ToolTip> for the <xref:System.Windows.Forms.ToolStrip> control you want by setting the control's <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> property to `true`.</span></span>  

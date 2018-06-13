@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434955"
 ---
 # <a name="iclrruntimehostexecuteindefaultappdomain-method"></a><span data-ttu-id="9e3d1-102">ICLRRuntimeHost::ExecuteInDefaultAppDomain — Metoda</span><span class="sxs-lookup"><span data-stu-id="9e3d1-102">ICLRRuntimeHost::ExecuteInDefaultAppDomain Method</span></span>
 <span data-ttu-id="9e3d1-103">Wywołuje metodę określonej określonego typu w określonym zestawie zarządzanych.</span><span class="sxs-lookup"><span data-stu-id="9e3d1-103">Calls the specified method of the specified type in the specified managed assembly.</span></span>  

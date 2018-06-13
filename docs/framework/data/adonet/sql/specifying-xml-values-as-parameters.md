@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355301"
 ---
 # <a name="specifying-xml-values-as-parameters"></a><span data-ttu-id="2d581-102">Określanie wartości XML jako parametrów</span><span class="sxs-lookup"><span data-stu-id="2d581-102">Specifying XML Values as Parameters</span></span>
 <span data-ttu-id="2d581-103">Zapytanie wymaga parametru, którego wartość jest ciągiem XML, deweloperzy mogą podać tę wartość za pomocą wystąpienia **SqlXml** — typ danych.</span><span class="sxs-lookup"><span data-stu-id="2d581-103">If a query requires a parameter whose value is an XML string, developers can supply that value using an instance of the **SqlXml** data type.</span></span> <span data-ttu-id="2d581-104">Naprawdę nie ma żadnych lewy; Kolumn XML w programie SQL Server zaakceptować wartości parametrów, dokładnie tak samo jak inne typy danych.</span><span class="sxs-lookup"><span data-stu-id="2d581-104">There really are no tricks; XML columns in SQL Server accept parameter values in exactly the same way as other data types.</span></span>  

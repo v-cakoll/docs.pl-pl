@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514716"
 ---
 # <a name="emulating-breaking-in-a-while-activity"></a><span data-ttu-id="a5bef-102">Emulowanie fundamentalne za pewien czas działania</span><span class="sxs-lookup"><span data-stu-id="a5bef-102">Emulating breaking in a While activity</span></span>
 <span data-ttu-id="a5bef-103">W przykładzie pokazano sposób podziału pętli mechanizmu z następujących działań: <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.While>, i <xref:System.Activities.Statements.ParallelForEach%601>.</span><span class="sxs-lookup"><span data-stu-id="a5bef-103">This sample demonstrates how to break the looping mechanism of the following activities: <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.While>, and <xref:System.Activities.Statements.ParallelForEach%601>.</span></span>  

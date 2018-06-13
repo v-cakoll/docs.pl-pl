@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432563"
 ---
 # <a name="iclrruntimehoststart-method"></a><span data-ttu-id="0d020-102">ICLRRuntimeHost::Start — Metoda</span><span class="sxs-lookup"><span data-stu-id="0d020-102">ICLRRuntimeHost::Start Method</span></span>
 <span data-ttu-id="0d020-103">Inicjuje środowisko uruchomieniowe języka wspólnego (CLR) do procesu.</span><span class="sxs-lookup"><span data-stu-id="0d020-103">Initializes the common language runtime (CLR) into a process.</span></span>  

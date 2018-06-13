@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519190"
 ---
 # <a name="persisting-a-workflow-application"></a><span data-ttu-id="31e4e-102">Utrwalanie aplikacji przepływu pracy</span><span class="sxs-lookup"><span data-stu-id="31e4e-102">Persisting a Workflow Application</span></span>
 <span data-ttu-id="31e4e-103">W tym przykładzie pokazano, jak uruchomić <xref:System.Activities.WorkflowApplication>, zwolnić ją, gdy przechodzi on bezczynny, a następnie ponownie załaduj może kontynuować działania.</span><span class="sxs-lookup"><span data-stu-id="31e4e-103">This sample demonstrates how to run a <xref:System.Activities.WorkflowApplication>, unload it when it goes idle, and then reload it to continue its execution.</span></span>  

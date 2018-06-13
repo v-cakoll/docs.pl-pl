@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516165"
 ---
 # <a name="how-to-query-for-non-persisted-instances"></a><span data-ttu-id="7352c-102">Porady: zapytanie o-utrwalony wystąpień</span><span class="sxs-lookup"><span data-stu-id="7352c-102">How to: Query for Non-persisted Instances</span></span>
 <span data-ttu-id="7352c-103">Po utworzeniu nowego wystąpienia usługi, a usługa zachowanie magazynu wystąpienia przepływu pracy SQL zdefiniowane, host usługi tworzy początkowej wpis dla tego wystąpienia usługi w magazynie wystąpień.</span><span class="sxs-lookup"><span data-stu-id="7352c-103">When a new instance of a service is created and the service has the SQL Workflow Instance Store behavior defined, the service host creates a initial entry for that service instance in the instance store.</span></span> <span data-ttu-id="7352c-104">Następnie, gdy wystąpienie usługi będzie nadal występować po raz pierwszy, zachowanie magazynu wystąpienia przepływu pracy SQL przechowuje bieżący stan wystąpienia oraz dodatkowe dane, które jest wymagane dla aktywacji, odzyskiwania i kontroli.</span><span class="sxs-lookup"><span data-stu-id="7352c-104">Subsequently when the service instance persists for the first time, the SQL Workflow Instance Store behavior stores the current instance state together with additional data that is required for activation, recovery, and control.</span></span>  

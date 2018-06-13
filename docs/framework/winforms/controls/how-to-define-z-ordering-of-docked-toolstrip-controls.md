@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532112"
 ---
 # <a name="how-to-define-z-ordering-of-docked-toolstrip-controls"></a><span data-ttu-id="dae74-102">Porady: definiowanie porządku osi Z zadokowanych formantów ToolStrip</span><span class="sxs-lookup"><span data-stu-id="dae74-102">How to: Define Z-Ordering of Docked ToolStrip Controls</span></span>
 <span data-ttu-id="dae74-103">Położenie <xref:System.Windows.Forms.ToolStrip> kontroli poprawnie z dokowaniu, należy umieścić formantu poprawnie w kolejności z formularza.</span><span class="sxs-lookup"><span data-stu-id="dae74-103">To position a <xref:System.Windows.Forms.ToolStrip> control correctly with docking, you must position the control correctly in the form's z-order.</span></span>  

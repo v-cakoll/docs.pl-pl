@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431893"
 ---
 # <a name="coeeshutdowncom-function"></a><span data-ttu-id="77723-102">CoEEShutDownCOM — Funkcja</span><span class="sxs-lookup"><span data-stu-id="77723-102">CoEEShutDownCOM Function</span></span>
 <span data-ttu-id="77723-103">Wymusza środowisko uruchomieniowe języka wspólnego (CLR), aby zwolnić wszystkie wskaźniki interfejsu, którą przechowuje wewnątrz wywoływane otoki środowiska uruchomieniowego (otoki RCW).</span><span class="sxs-lookup"><span data-stu-id="77723-103">Forces the common language runtime (CLR) to release all interface pointers it holds inside runtime callable wrappers (RCW).</span></span> <span data-ttu-id="77723-104">To ustawienie zwalnia wszystkie otoki RCW pamięci podręcznych.</span><span class="sxs-lookup"><span data-stu-id="77723-104">This has the effect of releasing all RCW caches.</span></span> <span data-ttu-id="77723-105">Ta funkcja globalna jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="77723-105">This global function is deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span> <span data-ttu-id="77723-106">W zamian użyj punkt wejścia dla określonego środowiska wykonawczego.</span><span class="sxs-lookup"><span data-stu-id="77723-106">Instead, use the entry point for a specific runtime.</span></span>  

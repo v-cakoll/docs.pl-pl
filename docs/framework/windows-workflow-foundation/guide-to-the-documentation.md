@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513129"
 ---
 # <a name="guide-to-the-windows-workflow-documentation"></a><span data-ttu-id="f13b4-102">Przewodnik po dokumentacji przepływu pracy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="f13b4-102">Guide to the Windows Workflow Documentation</span></span>
 <span data-ttu-id="f13b4-103">Ten temat zawiera informacje o sposobie używania w dokumentacji systemu Windows Workflow Foundation.</span><span class="sxs-lookup"><span data-stu-id="f13b4-103">This topic contains information about how to use the Windows Workflow Foundation documentation.</span></span> <span data-ttu-id="f13b4-104">Połączone dokumenty zaleca się, że punkty początkowe pogrupowane według określonych zainteresowań i poziomy wiedzy.</span><span class="sxs-lookup"><span data-stu-id="f13b4-104">The linked documents are recommended starting points grouped according to specific interests and levels of expertise.</span></span>  

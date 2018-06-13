@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517689"
 ---
 # <a name="alpha-blending-lines-and-fills"></a><span data-ttu-id="312f8-102">Przenikanie alfa linii i wypełnień</span><span class="sxs-lookup"><span data-stu-id="312f8-102">Alpha Blending Lines and Fills</span></span>
 <span data-ttu-id="312f8-103">W [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], kolor jest 32-bitową wartość z 8 bitów dla alpha, czerwony, zielony i niebieski.</span><span class="sxs-lookup"><span data-stu-id="312f8-103">In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], a color is a 32-bit value with 8 bits each for alpha, red, green, and blue.</span></span> <span data-ttu-id="312f8-104">Wartości alfa wskazuje Przezroczystość koloru — zakresu, do którego kolor mieszania kolorem tła.</span><span class="sxs-lookup"><span data-stu-id="312f8-104">The alpha value indicates the transparency of the color — the extent to which the color is blended with the background color.</span></span> <span data-ttu-id="312f8-105">Wartości alfa należą do zakresu od 0 do 255, gdzie 0 oznacza całkowicie przezroczysty kolor, a 255 reprezentuje kolor całkowicie nieprzezroczyste.</span><span class="sxs-lookup"><span data-stu-id="312f8-105">Alpha values range from 0 through 255, where 0 represents a fully transparent color, and 255 represents a fully opaque color.</span></span>  

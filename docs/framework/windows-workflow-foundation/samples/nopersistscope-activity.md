@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516442"
 ---
 # <a name="nopersistscope-activity"></a><span data-ttu-id="8f647-102">Działanie NoPersistScope</span><span class="sxs-lookup"><span data-stu-id="8f647-102">NoPersistScope Activity</span></span>
 <span data-ttu-id="8f647-103">W tym przykładzie pokazano, jak do manipulowania nie można serializować i możliwe do rozporządzania stanu w przepływie pracy.</span><span class="sxs-lookup"><span data-stu-id="8f647-103">This sample shows how to manipulate a non-serializable and disposable state within a workflow.</span></span> <span data-ttu-id="8f647-104">Jest ważne, przepływy pracy nie należy próbować zachować nie można serializować stanu, a także jest ważna w przypadku obiekty możliwe do rozporządzania na oczyszczenie po są one używane w przepływie pracy.</span><span class="sxs-lookup"><span data-stu-id="8f647-104">It is important that workflows do not attempt to persist non-serializable state and it is also important for disposable objects to be cleaned up after they are used in workflow.</span></span>  

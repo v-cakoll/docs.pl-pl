@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517702"
 ---
 # <a name="services"></a><span data-ttu-id="93c96-102">Usługi</span><span class="sxs-lookup"><span data-stu-id="93c96-102">Services</span></span>
 <span data-ttu-id="93c96-103">Ta sekcja zawiera łącza do przykłady ilustrujące funkcjonalność usługi Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="93c96-103">This section contains links to samples that demonstrate Windows Workflow Foundation (WF) service functionality.</span></span>  

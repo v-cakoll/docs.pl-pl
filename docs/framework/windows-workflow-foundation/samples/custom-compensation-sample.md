@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514327"
 ---
 # <a name="custom-compensation-sample"></a><span data-ttu-id="8d456-102">Przykładowe kompensacji niestandardowych</span><span class="sxs-lookup"><span data-stu-id="8d456-102">Custom Compensation Sample</span></span>
 <span data-ttu-id="8d456-103">Ten przykład przedstawia sposób użycia <xref:System.Activities.Statements.CompensableActivity> i jego kompensacji, aby zdefiniować kompensacji niestandardowej logiki.</span><span class="sxs-lookup"><span data-stu-id="8d456-103">This sample shows how to use <xref:System.Activities.Statements.CompensableActivity> and its compensation handler to define custom compensation logic.</span></span> <span data-ttu-id="8d456-104">Scenariusz uformowana w tym przykładzie jest agencji wynajem ciężarówka.</span><span class="sxs-lookup"><span data-stu-id="8d456-104">The scenario modeled in this sample is a Truck Rental Agency.</span></span>  

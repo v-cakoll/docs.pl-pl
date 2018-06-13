@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430664"
 ---
 # <a name="assemblycomparisonresult-enumeration"></a><span data-ttu-id="b0a52-102">AssemblyComparisonResult — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="b0a52-102">AssemblyComparisonResult Enumeration</span></span>
 <span data-ttu-id="b0a52-103">Wskazuje równoważność tożsamości dwóch zestawów, zgodnie z ustaleniami [CompareAssemblyIdentity](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md) funkcji.</span><span class="sxs-lookup"><span data-stu-id="b0a52-103">Indicates the equivalence of two assembly identities, as determined by the [CompareAssemblyIdentity](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md) function.</span></span>  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436218"
 ---
 # <a name="corbindtoruntimehost-function"></a><span data-ttu-id="f4592-102">CorBindToRuntimeHost — Funkcja</span><span class="sxs-lookup"><span data-stu-id="f4592-102">CorBindToRuntimeHost Function</span></span>
 <span data-ttu-id="f4592-103">Umożliwia hostom do ładowania określonej wersji środowisko uruchomieniowe języka wspólnego (CLR) do procesu.</span><span class="sxs-lookup"><span data-stu-id="f4592-103">Enables hosts to load a specified version of the common language runtime (CLR) into a process.</span></span>  

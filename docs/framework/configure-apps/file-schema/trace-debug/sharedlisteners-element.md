@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745578"
 ---
 # <a name="ltsharedlistenersgt-element"></a><span data-ttu-id="14454-102">&lt;sharedListeners&gt; — Element</span><span class="sxs-lookup"><span data-stu-id="14454-102">&lt;sharedListeners&gt; Element</span></span>
 <span data-ttu-id="14454-103">Zawiera nasłuchujących może odwoływać się wszystkie źródła lub element śledzenia.</span><span class="sxs-lookup"><span data-stu-id="14454-103">Contains listeners that any source or trace element can reference.</span></span>  <span data-ttu-id="14454-104">Te odbiorniki nie otrzymują śladów domyślnie i nie jest możliwe pobrać te odbiorniki w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="14454-104">These listeners do not receive any traces by default, and it is not possible to retrieve these listeners at run time.</span></span> <span data-ttu-id="14454-105">Obiekty nasłuchujące zidentyfikowane jako udostępnione obiekty nasłuchujące można dodać do źródła lub śledzenie według nazwy.</span><span class="sxs-lookup"><span data-stu-id="14454-105">Listeners identified as shared listeners can be added to sources or traces by name.</span></span>  

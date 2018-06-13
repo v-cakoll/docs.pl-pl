@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518714"
 ---
 # <a name="buffered-receive"></a><span data-ttu-id="8701d-102">Buforowane odbierania</span><span class="sxs-lookup"><span data-stu-id="8701d-102">Buffered Receive</span></span>
 <span data-ttu-id="8701d-103">W tym przykładzie pokazano, jak instalowanie i konfigurowanie funkcji receive buforowane w systemie Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="8701d-103">This sample demonstrates how to set up and configure the buffered receive feature in Windows Workflow Foundation (WF).</span></span> <span data-ttu-id="8701d-104">Buforowane odbierania umożliwia autorowi przepływu pracy utworzyć przepływ pracy bez konieczności martwić o kolejność, w którym są odbierane wiadomości.</span><span class="sxs-lookup"><span data-stu-id="8701d-104">Buffered receive allows the workflow author to create a workflow without having to worry about the order in which messages are received.</span></span> <span data-ttu-id="8701d-105">Funkcja odbierania buforowanego buforuje wiadomości lokalnie i dostarcza je, gdy przepływ pracy jest gotowa do ich odebrania.</span><span class="sxs-lookup"><span data-stu-id="8701d-105">The buffered receive feature buffers messages locally and delivers them when the workflow is ready to receive them.</span></span>  

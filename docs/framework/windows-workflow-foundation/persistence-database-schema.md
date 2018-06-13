@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519452"
 ---
 # <a name="persistence-database-schema"></a><span data-ttu-id="30adc-102">Schemat bazy danych trwałości</span><span class="sxs-lookup"><span data-stu-id="30adc-102">Persistence Database Schema</span></span>
 <span data-ttu-id="30adc-103">W tym temacie opisano publicznie obsługiwane przez Magazyn wystąpienia przepływu pracy SQL.</span><span class="sxs-lookup"><span data-stu-id="30adc-103">This topic describes the public views supported by the SQL Workflow Instance Store.</span></span>  

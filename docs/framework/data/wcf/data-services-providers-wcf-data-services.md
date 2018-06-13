@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358882"
 ---
 # <a name="data-services-providers-wcf-data-services"></a><span data-ttu-id="70b53-102">Usługi danych dostawców (usługi danych WCF)</span><span class="sxs-lookup"><span data-stu-id="70b53-102">Data Services Providers (WCF Data Services)</span></span>
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="70b53-103"> obsługuje wiele modeli dostawcy udostępnianie danych jako [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych.</span><span class="sxs-lookup"><span data-stu-id="70b53-103"> supports multiple provider models for exposing data as an [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed.</span></span> <span data-ttu-id="70b53-104">Ten temat zawiera informacje umożliwiające wybranie najlepszych [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] dostawcy dla źródła danych.</span><span class="sxs-lookup"><span data-stu-id="70b53-104">This topic provides information to enable you to select the best [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] provider for your data source.</span></span>  

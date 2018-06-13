@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523892"
 ---
 # <a name="graphics-paths-in-gdi"></a><span data-ttu-id="a5b15-102">Ścieżki grafiki w GDI+</span><span class="sxs-lookup"><span data-stu-id="a5b15-102">Graphics Paths in GDI+</span></span>
 <span data-ttu-id="a5b15-103">Ścieżki jest tworzony przez połączenie linii, prostokątów i krzywych proste.</span><span class="sxs-lookup"><span data-stu-id="a5b15-103">Paths are formed by combining lines, rectangles, and simple curves.</span></span> <span data-ttu-id="a5b15-104">Wycofaj z [Przegląd grafiki wektorowej](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md) czy następujących podstawowych bloków konstrukcyjnych okazały się najbardziej przydatny w przypadku rysowania obrazów:</span><span class="sxs-lookup"><span data-stu-id="a5b15-104">Recall from the [Vector Graphics Overview](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md) that the following basic building blocks have proven to be the most useful for drawing pictures:</span></span>  

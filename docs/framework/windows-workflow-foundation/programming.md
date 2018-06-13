@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515691"
 ---
 # <a name="windows-workflow-foundation-programming"></a><span data-ttu-id="06d34-102">Windows Workflow Foundation programowania</span><span class="sxs-lookup"><span data-stu-id="06d34-102">Windows Workflow Foundation Programming</span></span>
 <span data-ttu-id="06d34-103">Ta sekcja zawiera zestaw tematów Elementarz, które należy zrozumieć, tworzyć profesjonalne programisty Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="06d34-103">This section contains a set of primer topics that you should understand to become a proficient Windows Workflow Foundation (WF) programmer.</span></span>  

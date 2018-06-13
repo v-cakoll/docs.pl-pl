@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386912"
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a><span data-ttu-id="e404a-103">Zainstaluj program .NET Framework w systemie Windows 8 i Windows Server 2012</span><span class="sxs-lookup"><span data-stu-id="e404a-103">Install the .NET Framework on Windows 8 and Windows Server 2012</span></span>
 

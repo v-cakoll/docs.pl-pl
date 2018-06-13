@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522385"
 ---
 # <a name="how-to-set-the-color-of-a-pen"></a><span data-ttu-id="75231-102">Porady: ustawianie koloru pióra</span><span class="sxs-lookup"><span data-stu-id="75231-102">How to: Set the Color of a Pen</span></span>
 <span data-ttu-id="75231-103">W tym przykładzie zmienia kolor istniejących wcześniej <xref:System.Drawing.Pen> obiektu</span><span class="sxs-lookup"><span data-stu-id="75231-103">This example changes the color of a pre-existing <xref:System.Drawing.Pen> object</span></span>  

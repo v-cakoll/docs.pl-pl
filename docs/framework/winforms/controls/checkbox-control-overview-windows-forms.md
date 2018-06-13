@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524147"
 ---
 # <a name="checkbox-control-overview-windows-forms"></a><span data-ttu-id="57f32-102">CheckBox — Informacje o formancie [Formularze systemu Windows]</span><span class="sxs-lookup"><span data-stu-id="57f32-102">CheckBox Control Overview (Windows Forms)</span></span>
 <span data-ttu-id="57f32-103">Formularze systemu Windows <xref:System.Windows.Forms.CheckBox> formant wskazuje, czy określony warunek jest on lub off.</span><span class="sxs-lookup"><span data-stu-id="57f32-103">The Windows Forms <xref:System.Windows.Forms.CheckBox> control indicates whether a particular condition is on or off.</span></span> <span data-ttu-id="57f32-104">Zwykle jest używana do prezentowania tak/nie lub PRAWDA/FAŁSZ wybór dla użytkownika.</span><span class="sxs-lookup"><span data-stu-id="57f32-104">It is commonly used to present a Yes/No or True/False selection to the user.</span></span> <span data-ttu-id="57f32-105">Formanty pól wyboru w grupach służy do wyświetlania wiele wyborów, z których użytkownik może wybrać co najmniej jeden.</span><span class="sxs-lookup"><span data-stu-id="57f32-105">You can use check box controls in groups to display multiple choices from which the user can select one or more.</span></span>  

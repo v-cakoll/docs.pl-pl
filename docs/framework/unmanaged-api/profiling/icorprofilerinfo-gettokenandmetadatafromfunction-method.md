@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453206"
 ---
 # <a name="icorprofilerinfogettokenandmetadatafromfunction-method"></a><span data-ttu-id="d4bde-102">ICorProfilerInfo::GetTokenAndMetadataFromFunction — Metoda</span><span class="sxs-lookup"><span data-stu-id="d4bde-102">ICorProfilerInfo::GetTokenAndMetadataFromFunction Method</span></span>
 <span data-ttu-id="d4bde-103">Pobiera token metadanych i wystąpienie interfejsu metadanych, który może służyć przed token określoną funkcję.</span><span class="sxs-lookup"><span data-stu-id="d4bde-103">Gets the metadata token and a metadata interface instance that can be used against the token for the specified function.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514042"
 ---
 # <a name="channel-caching-with-send"></a><span data-ttu-id="ecb64-102">Kanał buforowania, wysyłania</span><span class="sxs-lookup"><span data-stu-id="ecb64-102">Channel Caching with Send</span></span>
 <span data-ttu-id="ecb64-103"><xref:System.ServiceModel.Activities.SendMessageChannelCache> , Użytkownicy mogą mieć różne poziomy buforowania, kanał <xref:System.ServiceModel.Activities.Send> i <xref:System.ServiceModel.Activities.SendParametersContent> działań.</span><span class="sxs-lookup"><span data-stu-id="ecb64-103">The <xref:System.ServiceModel.Activities.SendMessageChannelCache> enables users to have different levels of channel caching with <xref:System.ServiceModel.Activities.Send> and <xref:System.ServiceModel.Activities.SendParametersContent> activities.</span></span> <span data-ttu-id="ecb64-104">Buforowanie na poziomie wystąpienia jest domyślnie włączona i w tym przykładzie przedstawiono następujące funkcje:</span><span class="sxs-lookup"><span data-stu-id="ecb64-104">Instance-level caching is enabled by default and this sample demonstrates the following features:</span></span>  

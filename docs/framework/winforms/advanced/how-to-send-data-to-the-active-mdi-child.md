@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523188"
 ---
 # <a name="how-to-send-data-to-the-active-mdi-child"></a><span data-ttu-id="d2273-102">Porady: wysyłanie danych do Active MDI Child</span><span class="sxs-lookup"><span data-stu-id="d2273-102">How to: Send Data to the Active MDI Child</span></span>
 <span data-ttu-id="d2273-103">Często w kontekście [aplikacje interfejsu wielu dokumentów (MDI)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), konieczne będzie wysyłać dane do okna podrzędnego active, np. gdy użytkownik wkleja danych ze Schowka do aplikacji MDI.</span><span class="sxs-lookup"><span data-stu-id="d2273-103">Often, within the context of [Multiple-Document Interface (MDI) Applications](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), you will need to send data to the active child window, such as when the user pastes data from the Clipboard into an MDI application.</span></span>  

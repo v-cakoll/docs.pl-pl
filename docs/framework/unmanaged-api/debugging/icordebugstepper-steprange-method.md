@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421367"
 ---
 # <a name="icordebugsteppersteprange-method"></a><span data-ttu-id="a5ba5-102">ICorDebugStepper::StepRange — Metoda</span><span class="sxs-lookup"><span data-stu-id="a5ba5-102">ICorDebugStepper::StepRange Method</span></span>
 <span data-ttu-id="a5ba5-103">Powoduje to ICorDebugStepper — aby pojedynczy krok za pomocą jego zawierającego wątku i zwracane w przypadku osiągnie kodu poza ostatniego z określonymi zakresami.</span><span class="sxs-lookup"><span data-stu-id="a5ba5-103">Causes this ICorDebugStepper to single-step through its containing thread, and to return when it reaches code beyond the last of the specified ranges.</span></span>  

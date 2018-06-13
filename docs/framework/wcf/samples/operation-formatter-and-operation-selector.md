@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808663"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>Element formatujący operacji i selektor operacji
 W przykładzie pokazano, jak punkty rozszerzeń Windows Communication Foundation (WCF) może służyć do Zezwalaj komunikat danych w innym formacie z WCF oczekuje. Domyślnie, programy formatujące WCF oczekiwać parametry metody do uwzględnienia w obszarze `soap:body` elementu. Przykład obejmuje implementowania niestandardowych operacji programu formatującego, zamiast tego analizuje dane parametru ciągu zapytania HTTP GET, który wywołuje metody przy użyciu tych danych.  

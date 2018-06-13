@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647391"
 ---
 # <a name="character-data-types-visual-basic"></a>Znaki — Typy danych (Visual Basic)
 Visual Basic zapewnia *znakowe typy danych* radzenia sobie z znaków drukowalnych i którą można wyświetlić. Gdy oba postępowania w przypadku znaków Unicode, `Char` przechowuje pojedynczym znakiem, podczas gdy `String` zawiera nieokreśloną liczbę znaków.  

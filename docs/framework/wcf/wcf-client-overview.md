@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808435"
 ---
 # <a name="wcf-client-overview"></a>Przegląd klienta programu WCF
 W tej sekcji opisano, co zrobić, aplikacje klienckie, jak skonfigurować, tworzenie i używanie klienta usługi Windows Communication Foundation (WCF) i zabezpieczania aplikacji klienckich.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643585"
 ---
 # <a name="com-interop-visual-basic"></a>COM Interop (Visual Basic)
 Składnik modelu COM. pozwala obiektu do udostępnienia jej funkcji do innych składników i umożliwia obsługę aplikacji. Większość oprogramowania współczesnych obejmuje obiekty COM. Mimo że zestawy .NET to najlepszy wybór dla nowych aplikacji, w czasie konieczne może być zastosowana obiektów COM. W tej sekcji opisano niektóre problemy związane z tworzenie i używanie obiektów COM z Visual Basic.  

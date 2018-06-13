@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805996"
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Windows podstawowych koncepcji przepływu pracy
 Programowanie przepływu pracy w [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] używa pojęcia, które mogą być nowe dla niektórych deweloperów. W tym temacie opisano niektóre z pojęć i ich implementacji.  

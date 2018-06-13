@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804628"
 ---
 # <a name="bindings-and-binding-elements"></a>Powiązania i elementy powiązań
 Powiązania są kolekcjami elementów konfiguracji specjalnych, nazywany *elementów wiązania*, które są oceniane przez środowisko wykonawcze usługi zawsze, gdy klient lub punktu końcowego usługi jest tworzona. Typ i kolejność elementów powiązania w powiązaniu Określa wybór i kolejność kanały transportu i protokół punktu końcowego kanału stosu.  

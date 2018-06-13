@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637069"
 ---
 # <a name="cannot-convert-start-value-of-type-39lttype1gt39-and-step-value-of-type-39lttype2gt39-to-a-common-type"></a>Nie można przekonwertować wartości początkowej typu &#39; &lt;type1&gt; &#39; i wartości kroku typu &#39; &lt;type2&gt; &#39; na wspólny typ
 Określony `For...Next` formantu wartości mają różne typy i w związku z tym są nieprawidłowe, ponieważ nie można przekonwertować na wspólny typ.  

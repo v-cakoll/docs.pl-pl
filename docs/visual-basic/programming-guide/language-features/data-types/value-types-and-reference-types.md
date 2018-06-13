@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651586"
 ---
 # <a name="value-types-and-reference-types"></a>Typy wartości i odwołań
 W języku Visual Basic typy danych są wdrażane na podstawie ich klasyfikacji. Typy danych Visual Basic mogą być klasyfikowane w zależności od tego, czy zmienna określonego typu przechowuje własnych danych lub wskaźnikiem do danych. Jeśli przechowuje własnych danych jest *typu wartości*; jeśli posiada wskaźnik do danych w pamięci jest *zawierają odwołania do typu*.  

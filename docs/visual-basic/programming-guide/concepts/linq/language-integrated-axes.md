@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645274"
 ---
 # <a name="language-integrated-axes-in-visual-basic-linq-to-xml"></a>Języku zintegrowanym osi w języku Visual Basic (LINQ do XML)
 W tej sekcji opisano funkcje wbudowane bezpośrednio w języka Visual Basic, aby ułatwić dostęp XML. Większość przykładów w LINQ do dokumentacji XML za pomocą tych zintegrowane osi języka Visual Basic.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805944"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Używanie Instrumentacji zarządzania Windows na potrzeby diagnostyki
 Windows Communication Foundation (WCF) udostępnia dane inspekcji usługi w czasie wykonywania za pośrednictwem dostawcy usług WCF Instrumentacji zarządzania Windows (WMI).  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649103"
 ---
 # <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>Vs liczony od zera. Dostęp na podstawie jednego ciągu w języku Visual Basic
 W tym temacie porównuje jak Visual Basic i [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] zapewniają dostęp do znaków w ciągu. [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Zawsze zapewnia liczony od zera dostęp do znaków w ciągu, Visual Basic stanowi liczony od zera i jedynki dostęp, w zależności od funkcji.  

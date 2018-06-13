@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803677"
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a>Porady: dostosowywanie powiązania dostarczane przez System
 Windows Communication Foundation (WCF) zawiera kilka powiązania dostarczane przez system, które umożliwiają konfigurowanie niektórych właściwości podstawowych elementów powiązania, ale nie wszystkie właściwości. W tym temacie przedstawiono sposób ustawiania właściwości do powiązania elementów do tworzenia niestandardowego powiązania.  

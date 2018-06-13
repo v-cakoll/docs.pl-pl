@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650621"
 ---
 # <a name="concatenation-operators-in-visual-basic"></a>Operatory łączenia w Visual Basic
 Operatory łączenia dołączenie wielu ciągów w jednym ciągu. Istnieją dwa operatory łączenia, `+` i `&`. Zarówno przeprowadzenia operacji łączenia podstawowe, jak przedstawiono na poniższym przykładzie.  

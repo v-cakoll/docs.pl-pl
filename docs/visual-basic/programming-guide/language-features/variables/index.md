@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654476"
 ---
 # <a name="variables-in-visual-basic"></a>Zmienne w Visual Basic
 Często mają do przechowywania wartości podczas wykonywania obliczeń za pomocą Visual Basic. Na przykład można obliczyć wartości kilku, porównaj je i wykonywać różne operacje, w zależności od wyniku porównania. Należy zachować wartości, jeśli chcesz porównać je.  

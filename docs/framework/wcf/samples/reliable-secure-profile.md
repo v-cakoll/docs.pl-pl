@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805749"
 ---
 # <a name="reliable-secure-profile"></a>Niezawodny bezpieczny profil
 W tym przykładzie pokazano, jak utworzyć WCF i [niezawodny bezpieczny profil](http://go.microsoft.com/fwlink/?LinkId=178140) (źródło). W tym przykładzie pokazano wykonania [Utwórz połączenie](http://go.microsoft.com/fwlink/?LinkId=178141) kanału, które mogą być składane, wraz z niezawodna obsługa komunikatów i opcjonalnie bezpiecznego kanału do tworzenia bezpiecznego niezawodna powiązania oparte na specyfikacji źródło.  

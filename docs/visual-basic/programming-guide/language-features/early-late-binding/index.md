@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647257"
 ---
 # <a name="early-and-late-binding-visual-basic"></a>Wczesne i późne powiązania (Visual Basic)
 Kompilator Visual Basic wykonuje w procesie nazywanym `binding` gdy obiekt jest przypisany do zmiennej obiektu. Obiekt *z wczesnym wiązaniem* zadeklarowany gdy jest przypisany do zmiennej typu określonego obiektu. Wczesne obiektów powiązanych Zezwalaj kompilatora można przydzielić pamięci i wykonywać inne optymalizacje przed wykonaniem aplikacji. Na przykład poniższy fragment kodu deklaruje zmienną typu <xref:System.IO.FileStream>:  

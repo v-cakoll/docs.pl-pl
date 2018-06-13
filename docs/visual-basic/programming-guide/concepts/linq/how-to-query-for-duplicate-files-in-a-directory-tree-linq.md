@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643184"
 ---
 # <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>Porady: zapytanie o zduplikowane pliki w drzewie katalogu (LINQ) (Visual Basic)
 Czasami pliki, które mają taką samą nazwę może znajdować się w więcej niż jednym folderze. Na przykład w folderze instalacyjnym programu Visual Studio kilka foldery mają pliku readme.htm. Ten przykład przedstawia sposób wysyłania kwerend do takich zduplikowane nazwy plików w folderze określonym katalogu głównym. Drugi przykład przedstawia sposób wysyłania kwerend do plików, których rozmiar i czasy tworzenia również zgodna.  

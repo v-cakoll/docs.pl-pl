@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651599"
 ---
 # <a name="partial-methods-visual-basic"></a>Metody częściowe (Visual Basic)
 Metody częściowe umożliwiają deweloperom Wstawianie niestandardowej logiki do kodu. Zazwyczaj kod jest częścią klasy wygenerowany przez projektanta. Metody częściowe są zdefiniowane w klasie częściowej utworzonego przez generator kodu, a często są one używane do o tym, że element został zmieniony. Umożliwiają one developer do określania zachowania niestandardowego w odpowiedzi na zmianę.  

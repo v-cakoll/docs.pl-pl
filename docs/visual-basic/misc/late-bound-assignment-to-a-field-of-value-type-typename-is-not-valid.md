@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637652"
 ---
 # <a name="late-bound-assignment-to-a-field-of-value-type-39lttypenamegt39-is-not-valid-when-39ltnamegt39-is-the-result-of-a-late-bound-expression"></a>Przypisanie z późnym wiązaniem do pola typu wartości &#39; &lt;typename&gt; &#39; jest nieprawidłowy gdy &#39; &lt;nazwa&gt; &#39; jest wynikiem wyrażenia z późnym wiązaniem
 Próbowano przypisanie z późnym wiązaniem, który jest nieprawidłowy.  

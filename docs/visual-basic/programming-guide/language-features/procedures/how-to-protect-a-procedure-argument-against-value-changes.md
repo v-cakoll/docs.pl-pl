@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651521"
 ---
 # <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>Porady: chronienie argumentu procedury przed zmianami wartości (Visual Basic)
 Jeśli procedura deklaruje jako parametru [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic daje kodu procedury bezpośrednie odwołanie do elementu programistycznego bazowy argumentu w wywoływanym kodzie. Pozwala to na procedurę, aby zmienić wartość bazowy argumentu w wywoływanym kodzie. W niektórych przypadkach kod wywołujący może być przydatna ochrona przed tej zmiany.  

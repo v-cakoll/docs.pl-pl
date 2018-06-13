@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638123"
 ---
 # <a name="encoding-cannot-be-set-to-nothing"></a>Kodowanie nie można ustawić na wartość Nothing
 Próba odczytu lub zapisu w pliku nie powiodło się, ponieważ parametr `encoding` została ustawiona jako `Nothing` , ale wymaga prawidłowej wartości.  

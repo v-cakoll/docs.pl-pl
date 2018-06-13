@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647582"
 ---
 # <a name="enumerations-overview-visual-basic"></a>Enumerations — Przegląd (Visual Basic)
 Wyliczenia zapewnić wygodny sposób pracy z zestawów powiązanych stałych i do skojarzenia z nazwami wartości stałych. Na przykład można zadeklarować wyliczenia dla zestawu stałe całkowite skojarzone z dni tygodnia, a następnie użyć nazwy dni, a nie ich wartości całkowite w kodzie.  

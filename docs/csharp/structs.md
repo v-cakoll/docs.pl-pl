@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349772"
 ---
 # <a name="structs"></a>Struktury
 A *struktury* jest typem wartości. Podczas tworzenia struktury zmiennej, do której przypisano struktury zawiera struktury danych rzeczywistych. Struktura jest przypisany do nowej zmiennej, są kopiowane. Nową zmienną i pierwotnej zmiennej w związku z tym zawierają dwa osobne kopie tych samych danych. Zmiany wprowadzone w jednej kopii nie wpływają na innej kopii.

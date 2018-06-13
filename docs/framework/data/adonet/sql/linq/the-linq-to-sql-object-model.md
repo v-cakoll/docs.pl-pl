@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365387"
 ---
 # <a name="the-linq-to-sql-object-model"></a>LINQ do SQL modelu obiektów
 W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], model obiektowy wyrażone w języku programowania dewelopera jest zamapowana do modelu danych relacyjnej bazy danych. Operacje na danych następnie są przeprowadzane zgodnie z modelem obiektu.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403360"
 ---
 # <a name="setassemblyfile2-method"></a>SetAssemblyFile2 — Metoda
 Ustawia opcje dla nowego zestawu i nazwa. Ta metoda zostanie wywołana podczas tworzenia modułów niepowiązanych.  

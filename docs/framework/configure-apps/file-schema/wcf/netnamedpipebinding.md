@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751831"
 ---
 # <a name="ltnetnamedpipebindinggt"></a>&lt;netNamedPipeBinding&gt;
 Definiuje powiązanie, które jest bezpieczne, niezawodne, zoptymalizowane pod kątem na komputerze komunikacji pomiędzy procesami. Domyślnie generuje środowiska uruchomieniowego stosu komunikacji z WS-ReliableMessaging niezawodności, zabezpieczeń transportu dla bezpieczeństwa transfer nazwanych potoków do dostarczanie komunikatów, a Kodowanie komunikatu binarnego.  

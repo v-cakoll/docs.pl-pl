@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515111"
 ---
 # <a name="activity-relationships-validation"></a>Sprawdzanie poprawności relacje działania
 Ten przykład zawiera trzy działań `CreateCity`, `CreateState`, i `CreateCountry`. `CreateCity` musi znajdować się wewnątrz `CreateState` działania, a `CreateState` musi znajdować się wewnątrz `CreateCountry` działania. Na potrzeby tej próbki, logikę weryfikacji jest w kodzie `CreateState` działania, a w języku XAML dla `CreateCity` działania. Zarówno ograniczeń ma takie samo zachowanie.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595842"
 ---
 # <a name="modules-visual-basic"></a>Moduły (Visual Basic)
 Visual Basic zawiera kilka modułów, które pozwalają uprościć typowe zadania w kodzie, w tym manipulowanie ciągami, wykonywania działań matematycznych, uzyskiwanie informacji o systemie, wykonywania działań plików i katalogów i tak dalej. W poniższej tabeli wymieniono modułów języka Visual Basic.  

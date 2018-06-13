@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579577"
 ---
 # <a name="globalization"></a>Globalizacja
 Globalizacja obejmuje projektowanie i tworzenie aplikacji gotowe, który obsługuje interfejsy zlokalizowanych i dane regionalne dla użytkowników w wielu kultur. Przed rozpoczęciem fazy projektowania, należy określić, które kultur aplikacji będzie obsługiwać. Mimo że aplikacja jest przeznaczony dla jednego kultury lub regionu, jako jego domyślny, można projektować i zapisać go tak, aby łatwo może zostać rozszerzony do użytkowników w innych kultur lub regionach.  

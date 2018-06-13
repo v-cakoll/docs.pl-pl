@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596687"
 ---
 # <a name="statement-cannot-end-a-block-outside-of-a-line-39if39-statement"></a>Instrukcja nie może kończyć bloku poza wiersza &#39;Jeśli&#39; — instrukcja
 Jeden wiersz `If` instrukcji zawiera wiele instrukcji oddzielone dwukropkiem (:), z których jeden jest `End` instrukcji dla bloków sterowania poza jeden wiersz `If`. Jednowierszowe `If` nie należy używać instrukcji `End If` instrukcji.  

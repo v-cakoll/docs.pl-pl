@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599902"
 ---
 # <a name="ltaddressgt-is-not-a-valid-remote-file-address"></a>&lt;adres&gt; nie jest prawidłowym adresem pliku zdalnego
 \<adres > nie jest prawidłowym adresem pliku zdalnego. Prawidłowy adres powinien zawierać protokół, ścieżkę i nazwę pliku.  

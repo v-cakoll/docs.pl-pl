@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520178"
 ---
 # <a name="invoking-activity-validation"></a>Wywoływanie sprawdzania poprawności działania
 Działanie sprawdzania poprawności udostępnia metodę do identyfikowania i raportów o błędach w konfiguracji żadnego działania przed jego wykonywania. Sprawdzanie poprawności występuje, gdy przepływ pracy zostanie zmodyfikowany w Projektancie przepływów pracy i wszelkie błędy sprawdzania poprawności zostaną wyświetlone w Projektancie przepływów pracy. Sprawdzanie poprawności występuje także w czasie wykonywania po wywołaniu przepływu pracy i, jeśli wystąpią jakieś błędy sprawdzania poprawności, <xref:System.Activities.InvalidWorkflowException> jest generowany przez logikę sprawdzania poprawności domyślnej. Windows Workflow Foundation (WF), udostępnia <xref:System.Activities.Validation.ActivityValidationServices> klasy, która umożliwia aplikacji przepływu pracy i deweloperów narzędzi jawnie sprawdzić poprawność działania. W tym temacie opisano sposób użycia <xref:System.Activities.Validation.ActivityValidationServices> do sprawdzania poprawności działania.  

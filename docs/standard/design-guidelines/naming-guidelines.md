@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572973"
 ---
 # <a name="naming-guidelines"></a>Zasady nazewnictwa
 Po konwencji nazewnictwa do tworzenia struktury spójny zestaw może być znaczący udział w ramach użyteczność. Umożliwia on framework ma być używany przez wielu deweloperów powszechnie rozdzielonych projektów. Poza spójności formularza nazwy elementów framework łatwe zrozumienie i muszą zawierać funkcję każdego elementu.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595036"
 ---
 # <a name="type-39lttypenamegt39-has-no-constructors"></a>Typ &#39; &lt;typename&gt; &#39; nie ma konstruktorów
 Typ nie obsługuje wywołania `Sub New()`. Jedną z możliwych przyczyn jest kompilatora uszkodzony lub plik binarny.  

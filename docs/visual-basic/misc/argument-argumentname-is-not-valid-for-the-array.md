@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597640"
 ---
 # <a name="argument-39ltargumentnamegt39-is-not-valid-for-the-array"></a>Argument &#39; &lt;argumentname&gt; &#39; nie jest prawidłowy dla tablicy
 Tablica zawiera argument, który jest nieprawidłowy.  

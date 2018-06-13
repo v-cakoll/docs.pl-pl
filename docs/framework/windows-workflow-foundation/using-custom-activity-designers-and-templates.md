@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518323"
 ---
 # <a name="using-custom-activity-designers-and-templates"></a>Przy użyciu projektantów działań niestandardowych i szablonów
 Ta sekcja zawiera tematy dotyczące tworzenia działań niestandardowych projektantów i Szablony działań niestandardowych.  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574611"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Konstrukcje dopasowań w wyrażeniach regularnych
 Odwołania wstecznego zapewnić wygodny sposób identyfikowania powtarzających się znaków lub podciąg ciągu. Na przykład jeśli ciąg wejściowy zawiera wiele wystąpień dowolnego podciąg, można odpowiada pierwszego wystąpienia z grupą przechwytywanie, a następnie użyć dopasuje odpowiadające kolejne wystąpienia podciąg.  

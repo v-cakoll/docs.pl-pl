@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579876"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Język wyrażeń regularnych — podręczny wykaz
 <a name="top"></a> Wyrażenie regularne jest wzorzec, który aparat wyrażeń regularnych próbuje dopasować w wejściowego tekstu. Wzorzec składa się z co najmniej jednego literału znakowego, operatora lub konstrukcji.  Aby uzyskać krótkie wprowadzenie, zobacz [wyrażeń regularnych programu .NET](../../../docs/standard/base-types/regular-expressions.md).  

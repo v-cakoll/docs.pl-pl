@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518388"
 ---
 # <a name="absolute-delay"></a>Opóźnienie bezwzględne
 Główne scenariusz dla tego przykładu jest opóźnienia do określonej <xref:System.DateTime> przy użyciu czasomierze trwałe w aplikacji przepływu pracy. To jest inny niż przy użyciu wbudowanych <xref:System.Activities.Statements.Delay> działania, jak to tylko umożliwi to opóźnienie dla danego <xref:System.TimeSpan> (lub liczba minut i sekund).  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560511"
 ---
 # <a name="how-to-hit-test-using-a-win32-host-container"></a>Jak przeprowadzić test trafień za pomocą konteneru hosta Win32
 Można utworzyć obiekty widoczne w [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] okna, podając hosta okna kontenera obiektów visual. Zapewnienie obsługi dla zawarte obiekty visual zdarzeń proces wiadomości przekazany do pętli filtru komunikatów kontenera okno hosta. Zapoznaj się [samouczek: hostingu Visual obiektów w aplikacji Win32](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md) Aby uzyskać więcej informacji na temat sposobu obsługi obiektów visual [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] okna.  

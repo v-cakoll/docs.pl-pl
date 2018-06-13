@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597878"
 ---
 # <a name="resume-without-error"></a>Wznowienie bez błędu
 A `Resume` instrukcji znajdowały się poza kodu obsługi błędu lub kod przeskoki do obsługi błędów, nawet jeśli nie było żadnych błędów.  

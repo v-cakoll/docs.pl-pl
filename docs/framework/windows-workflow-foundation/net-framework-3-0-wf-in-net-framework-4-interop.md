@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518414"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>Za pomocą działania WF programu .NET Framework 3.0 w programie .NET Framework 4 z działania Interop
 <xref:System.Activities.Statements.Interop> Działanie jest [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] działania (WF 4.5), który opakowuje [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] (WF 3.5) działania w ramach [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] przepływu pracy. Działanie WF 3 może być działanie jednego typu liść lub całe drzewo działań. Wykonanie (w tym anulowania i obsługa wyjątków) i trwałość [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] działanie występuje w kontekście [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] wystąpienia przepływu pracy, który jest wykonywany.  

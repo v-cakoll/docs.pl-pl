@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521163"
 ---
 # <a name="how-to-fill-open-figures"></a>Porady: wypełnianie otwartych figur
 Możesz wpisać ścieżkę przez przekazanie <xref:System.Drawing.Drawing2D.GraphicsPath> do obiektu <xref:System.Drawing.Graphics.FillPath%2A> metody. <xref:System.Drawing.Graphics.FillPath%2A> Metody wypełnia ścieżki zgodnie z trybu wypełnienia (alternatywnego lub zawijania) aktualnie ustawione dla ścieżki. Jeśli ścieżka zawiera wszystkie otwartych figur, ścieżka zostanie wypełniony tak, jakby te dane zostały zamknięte. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Zamyka rysunku za pomocą rysowania linii prostej od punktu końcowego do punktu początkowego.  

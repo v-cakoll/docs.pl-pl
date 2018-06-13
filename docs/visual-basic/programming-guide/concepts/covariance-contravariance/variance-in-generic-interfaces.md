@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643461"
 ---
 # <a name="variance-in-generic-interfaces-visual-basic"></a>Wariancje w interfejsach (Visual Basic)
 .NET framework 4 wprowadzono obsługę wariancji w kilku interfejsach istniejących. Obsługa wariancję umożliwia niejawna konwersja klas implementujących tych interfejsów. Następujące interfejsy są teraz wariant:  

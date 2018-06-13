@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646867"
 ---
 # <a name="sorting-data-visual-basic"></a>Sortowanie danych (Visual Basic)
 Operacja sortowania Porządkuje elementy sekwencji na podstawie jednego lub więcej atrybutów. Pierwsze kryterium sortowania sortuje podstawowe elementy. Określając drugie kryterium sortowania, można sortować elementów w każdej grupie głównej sortowania.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642119"
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>Porady: zapytanie o znaki w ciągu (LINQ) (Visual Basic)
 Ponieważ <xref:System.String> klasa implementuje ogólnego <xref:System.Collections.Generic.IEnumerable%601> interfejsu, dowolny ciąg może być badana sekwencję znaków. Jednak nie jest typowym zastosowaniem zapytań LINQ. Złożone wzorzec dopasowany operacje, można użyć <xref:System.Text.RegularExpressions.Regex> klasy.  

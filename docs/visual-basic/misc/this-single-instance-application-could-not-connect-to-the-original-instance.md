@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640257"
 ---
 # <a name="this-single-instance-application-could-not-connect-to-the-original-instance"></a>To pojedyncze wystąpienie aplikacji nie można połączyć z oryginalnego wystąpienia
 To pojedyncze wystąpienie aplikacji nie może połączyć się z wystąpieniem oryginalnym. Niektóre możliwe przyczyny tego problemu są następujące:  

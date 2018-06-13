@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648297"
 ---
 # <a name="determining-object-type-visual-basic"></a>Określanie typu obiektu (Visual Basic)
 Obiekt generyczny zmienne (czyli zmienne można zadeklarować jako `Object`) może przechowywać obiektów z dowolnej klasy. Używając zmiennych typu `Object`, należy wykonać różne operacje, oparty na klasie obiektu; na przykład niektórych obiektów może nie obsługuje określonej właściwości lub metody. Visual Basic udostępnia dwa sposoby kontrolowania, jakiego typu obiektu są przechowywane w zmiennej obiektu: `TypeName` funkcji i `TypeOf...Is` operatora.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642811"
 ---
 # <a name="how-to-create-a-list-of-items"></a>Porady: tworzenie listy elementów
 Kod w tym temacie definiuje `Student` klasy i tworzy listę wystąpień klasy. Umożliwia obsługę temat listy [wskazówki: Pisanie zapytań w języku Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md). Również może służyć do dowolnej aplikacji, która wymaga listy obiektów. Kod definiuje elementy na liście studentów przy użyciu inicjatory obiektów.  

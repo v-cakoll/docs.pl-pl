@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643494"
 ---
 # <a name="getting-started-with-linq-in-visual-basic"></a>Wprowadzenie do programu LINQ w Visual Basic
 Ta sekcja zawiera omówienie, przykłady i ogólne informacje, które mogą pomóc w zrozumieniu i użytkowaniu Visual Basic i język Language-Integrated zapytania (LINQ).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643448"
 ---
 # <a name="element-operations-visual-basic"></a>Operacje na elementach (Visual Basic)
 Operacje na elementach zwrócić element jednej, określonej sekwencji.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649636"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>Różnice pomiędzy przesłanianiem i zastępowaniem (Visual Basic)
 Po zdefiniowaniu klasy, która dziedziczy po klasie podstawowej czasami chcą ponownie zdefiniować co najmniej jeden z elementów klasy podstawowej w klasie pochodnej. Przesłanianiem i zastępowaniem są dostępne w tym celu.  

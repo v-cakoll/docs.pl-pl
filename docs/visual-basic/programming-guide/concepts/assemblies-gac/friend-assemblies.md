@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644384"
 ---
 # <a name="friend-assemblies-visual-basic"></a>Przyjazne zestawy (Visual Basic)
 A *przyjaznego zestawu* jest zestawie, do którego mogą uzyskać dostęp do innego zestawu [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) typy i składniki. Po zidentyfikowaniu zestawu jako zestawu friend, masz już Oznacz typy i składniki jako public je, aby były dostępne dla innych zestawów. Jest to szczególnie wygodne w następujących scenariuszach:  

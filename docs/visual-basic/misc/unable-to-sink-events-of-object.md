@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642798"
 ---
 # <a name="unable-to-sink-events-of-object-because-the-object-is-already-firing-events-to-the-maximum-number-of-event-receivers-it-supports"></a>Obsługuje nie można przechwytywać zdarzenia obiektu, ponieważ obiekt wysyła już zdarzenia do maksymalnej liczby odbiorcy zdarzeń
 Przekroczono maksymalną liczbę odbiorników obsługiwane przez obiekt.  

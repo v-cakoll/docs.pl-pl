@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645671"
 ---
 # <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a>Porady: pisanie LINQ do metody osi XML (Visual Basic)
 Można pisać własne osi metody do pobierania kolekcji z drzewa XML. Najlepsze sposoby, w tym celu jest napisanie metody rozszerzenia, która zwraca kolekcję elementów lub atrybutów. Można napisać metodę rozszerzenie do zwrócenia podzbiór elementów lub atrybutów, w zależności od wymagań aplikacji.  

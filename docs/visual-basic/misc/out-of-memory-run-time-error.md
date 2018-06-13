@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637481"
 ---
 # <a name="out-of-memory-visual-basic-run-time-error"></a>Za mało pamięci (błąd czasu wykonywania Visual Basic)
 Większa ilość pamięci jest wymagana, niż jest dostępne.  

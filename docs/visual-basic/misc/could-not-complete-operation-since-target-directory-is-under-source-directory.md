@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638515"
 ---
 # <a name="could-not-complete-operation-since-target-directory-is-under-source-directory"></a>Nie można ukończyć operacji, ponieważ katalog docelowy znajduje się w katalogu źródłowym
 Cykliczne operacja nie powiodła się. Operacje cykliczne cyklu i z tego powodu nie można ukończyć. Na przykład obiekt A może próbować dziedziczyć B obiektu, który z kolei dziedziczy obiektu A.  

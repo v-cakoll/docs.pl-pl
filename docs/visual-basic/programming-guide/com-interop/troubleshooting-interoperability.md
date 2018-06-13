@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643708"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Rozwiązywanie problemów związanych z współdziałaniem (Visual Basic)
 Gdy współpraca między COM i kod zarządzany [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], mogą wystąpić co najmniej jeden z następujących typowych problemów.  

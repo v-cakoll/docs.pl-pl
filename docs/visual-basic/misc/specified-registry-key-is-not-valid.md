@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639451"
 ---
 # <a name="specified-registry-key-is-not-valid-because-it-contains-two-or-more-consecutive-backslashes"></a>Określony klucz rejestru jest nieprawidłowa, ponieważ zawiera dwa lub więcej następujących po sobie kresek ułamkowych odwróconych
 Określony za pomocą ścieżki klucza rejestru zawiera dwa lub więcej następujących po sobie kresek ułamkowych odwróconych. Może to być wynik łączenie wielu ciągów w ścieżce i, w tym przypadkowo zbyt wielu kresek ułamkowych odwróconych.  

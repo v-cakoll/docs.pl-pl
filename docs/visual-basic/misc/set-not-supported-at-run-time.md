@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638346"
 ---
 # <a name="set-not-supported-at-run-time"></a>Zestaw nie jest obsługiwana w czasie wykonywania
 Próbowano ustawić lub zmienić właściwości, której wartość można ustawić tylko w czasie projektowania.  

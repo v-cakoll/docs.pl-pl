@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643903"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>Funkcje Visual Basic obsługujące LINQ
 Nazwa [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] odwołuje się do technologii w języku Visual Basic, czy składnia kwerendy obsługuje i inny język konstruuje bezpośrednio w języku. Z [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], nie masz nauczyć się nowego języka aby zapytanie dla zewnętrznego źródła danych. W języku Visual Basic można badać danych relacyjnych baz danych, Magazyny XML lub obiektów. Integracja funkcji kwerendy w języku umożliwia kompilacji sprawdzanie błędów składni i bezpieczeństwo typów. Integracja ta zapewnia również znanych większość musi wiedzieć, aby zapisać rozbudowane, zróżnicowane kwerendy w języku Visual Basic.  

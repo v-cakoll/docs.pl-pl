@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591953"
 ---
 # <a name="introduction-to-the-datarepeater-control-visual-studio"></a>Wprowadzenie do formantu DataRepeater (Visual Studio)
 Powerpack Visual Basic <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> formant jest kontenerem przewijanego do wielokrotnego formantów, które zawierają dane, na przykład wierszy w tabeli bazy danych. Może służyć jako alternatywę do <xref:System.Windows.Forms.DataGridView> kontrolować, jeśli wymagane jest większa kontrola nad układ danych. <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> "Powtarza" grupy powiązanych formantów przez utworzenie wielu wystąpień w przewijania widoku. Dzięki temu użytkownicy wyświetlić kilka rekordów jednocześnie.  

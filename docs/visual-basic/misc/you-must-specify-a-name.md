@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639666"
 ---
 # <a name="you-must-specify-a-name"></a>Należy określić nazwę
 Podczas wykonywania operacji na plikach takie jak zmiana nazwy pliku, należy określić nazwę.  

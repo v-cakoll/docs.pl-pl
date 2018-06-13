@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640230"
 ---
 # <a name="how-to-find-descendant-elements-xpath-linq-to-xml-visual-basic"></a>Porady: znajdowanie elementów podrzędnych (XPath-LINQ do XML) (Visual Basic)
 W tym temacie pokazano, jak można uzyskać elementów podrzędnych o określonej nazwie.  

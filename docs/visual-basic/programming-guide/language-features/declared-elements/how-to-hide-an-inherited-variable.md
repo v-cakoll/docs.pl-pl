@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649142"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a>Porady: ukrywanie dziedziczonej zmiennej (Visual Basic)
 Klasa pochodna dziedziczy wszystkie definicje klasy podstawowej. Jeśli chcesz zdefiniować zmienną przy użyciu takiej samej nazwie jako element klasy podstawowej, można ukryć, lub *tle*, podczas definiowania do zmiennej w klasie pochodnej elementu klasy podstawowej. Jeśli to zrobisz, kod w klasie pochodnej uzyskuje dostęp do zmiennej użytkownika, chyba że jawnie pomija mechanizmu przesłaniania.  

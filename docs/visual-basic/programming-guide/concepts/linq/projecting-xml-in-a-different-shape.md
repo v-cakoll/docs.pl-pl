@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645658"
 ---
 # <a name="projecting-xml-in-a-different-shape-visual-basic"></a>Prognozowanie XML w różnych kształtu (Visual Basic)
 W tym temacie przedstawiono przykład projekcji kod XML, który jest w kształcie innego niż źródło XML.  

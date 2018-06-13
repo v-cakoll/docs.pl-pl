@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649851"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>Stała i typy literałów (Visual Basic)
 Literał jest wartość, która jest wyrażona jako samej siebie, a nie wartość zmiennej lub wynik wyrażenia, takich jak numer 3 lub ciąg "Hello". Stała jest znaczącą nazwę, która ma miejsce literału i zachowuje tej samej wartości w programie, w przeciwieństwie do zmiennej, którego wartość może zmienić.  

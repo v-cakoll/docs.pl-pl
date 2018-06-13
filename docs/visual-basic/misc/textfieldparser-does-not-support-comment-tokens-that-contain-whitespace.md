@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641236"
 ---
 # <a name="textfieldparser-does-not-support-comment-tokens-that-contain-whitespace"></a>Parametr TextFieldParser nie obsługuje tokenów komentarzy, które zawierają odstępu
 Podano tokenu komentarz, który zawiera biały znak. `TextFieldParser` Nie obsługuje tokenów komentarzy, które zawierają biały znak, chyba że biały znak występuje na początku tokenu. Biały znak występujących na początku token jest ignorowana.  

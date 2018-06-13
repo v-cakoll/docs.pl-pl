@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649266"
 ---
 # <a name="how-to-create-a-procedure-visual-basic"></a>Porady: tworzenie procedury (Visual Basic)
 Umieść procedurę między początkową instrukcji deklaracji (`Sub` lub `Function`) i końcowej instrukcji deklaracji (`End Sub` lub `End Function`). Kod wszystkie procedury znajduje się między te instrukcje.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574842"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Kiedy należy używać kolekcji bezpiecznych wątkowo
 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] Wprowadza pięć nowych typów kolekcji specjalnie zaprojektowane do obsługi wielowątkowych dodawania i usuwania działań. Aby uzyskać bezpieczeństwo wątków, te nowe typy użyć różnych rodzajów blokowanie wydajne i mechanizmów zwolnić blokady synchronizacji. Synchronizacja narzut dodaje do operacji. Narzut zależy od rodzaju synchronizacji, który jest używany, rodzaj operacji, które są wykonywane i inne czynniki, takie jak liczba wątków, które próbujesz uzyskać jednocześnie dostęp do kolekcji.  

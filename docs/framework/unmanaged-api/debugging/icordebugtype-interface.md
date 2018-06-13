@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422874"
 ---
 # <a name="icordebugtype-interface1"></a>ICorDebugType Interface1
 Reprezentuje typ, podstawowe lub złożonych (który jest zdefiniowane przez użytkownika). Jeśli typ jest rodzajowy, `ICorDebugType` reprezentuje wystąpień typu ogólnego.  

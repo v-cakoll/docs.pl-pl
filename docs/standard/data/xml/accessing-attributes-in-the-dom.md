@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572024"
 ---
 # <a name="accessing-attributes-in-the-dom"></a>Uzyskiwanie dostępu do atrybutów w modelu DOM
 Atrybuty są właściwościami elementu nie elementów podrzędnych elementu. Ta różnica jest istotna z powodu metody używane do nawigacji element równorzędny, nadrzędny i węzły podrzędne elementu XML modelu DOM (Document Object). Na przykład **parametr PreviousSibling** i **NextSibling** metod nie są używane do nawigacji z elementu, atrybutu lub między atrybutami. Zamiast tego atrybutu jest właściwością elementu i jest własnością elementu, ma **OwnerElement** właściwości i nie **parentNode** właściwości, oraz różne metody nawigacji.  

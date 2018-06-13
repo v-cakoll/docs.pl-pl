@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334139"
 ---
 # <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Porady: wyświetlanie argumentów wiersza poleceń (Przewodnik programowania w języku C#)
 Argumenty przekazane do pliku wykonywalnego w wierszu polecenia są dostępne za pośrednictwem opcjonalny parametr do `Main`. Argumenty są udostępniane w formie tablicy ciągów. Każdy element tablicy zawiera jeden argument. Odstępu między argumentami zostaną usunięte. Rozważmy na przykład tych wywołań wiersza polecenia fikcyjne pliku wykonywalnego:  

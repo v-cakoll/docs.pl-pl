@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549581"
 ---
 # <a name="printing-overview"></a>Przegląd Drukowanie
 W przypadku programu Microsoft .NET Framework deweloperzy aplikacji przy użyciu systemu Windows Presentation Foundation (WPF) mają bogaty zestaw nowe drukowania i wydruku system zarządzania [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. Z [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], niektóre z tych ulepszeń system drukowania są również dostępne dla deweloperów, którzy tworzą [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplikacji i deweloperów przy użyciu niezarządzanych kodu. Stanowiącej podstawę tej nowej funkcji jest nowy [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] format pliku i [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ścieżki wydruku.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639191"
 ---
 # <a name="file-specified-in-filename-is-not-a-valid-xml-file"></a>Plik określony w nazwie pliku nie jest prawidłowym plikiem XML
 Nazwa pliku, który został dostarczony nie jest prawidłowym plikiem XML. Aby określić dozwolonych struktury i zawartości dokumentu XML, można użyć definicji typu dokumentu (DTD), schemat Microsoft XML-danych (XDR) lub schematu schematu XML definition language (XSD). Schematy XSD jest preferowany sposób, aby określić gramatyki XML w [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  

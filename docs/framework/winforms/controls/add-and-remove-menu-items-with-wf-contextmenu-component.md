@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524732"
 ---
 # <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>Porady: dodawanie i usuwanie elementów menu za pomocą składnika ContextMenu formularzy systemu Windows
 Wyjaśniono, jak dodawać i usuwać elementy menu skrótów w formularzach systemu Windows.  

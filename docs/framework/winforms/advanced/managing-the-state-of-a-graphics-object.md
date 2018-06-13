@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525122"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>Zarządzanie stanem obiektu graficznego
 <xref:System.Drawing.Graphics> Klasy jest istotą [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. Aby narysować niczego, należy uzyskać <xref:System.Drawing.Graphics> obiektu, ustawienia swoich właściwości i wywołanie metody <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>itp).  

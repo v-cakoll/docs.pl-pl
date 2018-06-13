@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397458"
 ---
 # <a name="in-process-side-by-side-execution"></a>Wykonywanie równoczesne i wewnątrzprocesowe
 Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], można użyć w trakcie side-by-side hosting do uruchamiania wielu wersji środowisko uruchomieniowe języka wspólnego (CLR) w ramach jednego procesu. Domyślnie zarządzane składniki COM działać z wersją .NET Framework, które ich nie zostały skompilowane, niezależnie od wersji programu .NET Framework, który jest ładowany do procesu.  

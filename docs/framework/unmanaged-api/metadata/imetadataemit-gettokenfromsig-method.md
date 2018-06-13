@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448223"
 ---
 # <a name="imetadataemitgettokenfromsig-method"></a>IMetaDataEmit::GetTokenFromSig — Metoda
 Pobiera token podpisu określonych metadanych.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557878"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>Jak implementuj walidację za pomocą formantu DataGrid
 <xref:System.Windows.Controls.DataGrid> Kontroli umożliwia przeprowadzanie weryfikacji na poziomie wiersza i komórki. Z weryfikacji na poziomie komórki zweryfikować poszczególnych właściwości obiektu powiązana z danymi, gdy użytkownik zaktualizuje wartość. Z weryfikacji na poziomie wiersza sprawdzania poprawności danych obiektów, gdy użytkownik zatwierdza zmiany na wiersz. Można również podać dostosowane wizualne błędy sprawdzania poprawności lub użyć domyślnej wizualne który <xref:System.Windows.Controls.DataGrid> zawiera kontrolki.  

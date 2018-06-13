@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398277"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Zgodność wersji w programie .NET Framework
 Zgodności z poprzednimi wersjami oznacza, że aplikacja, która została opracowana dla określonej wersji platformy będzie działać w nowszych wersjach tej platformy. Próbuje zmaksymalizować zgodności z poprzednimi wersjami programu .NET Framework: źródła kodu napisanego dla jednej wersji programu .NET Framework należy skompilować w nowszych wersjach programu .NET Framework i zachowania tak samo w przypadku plików binarnych, działających w jednej wersji programu .NET Framework nowsze wersje programu .NET Framework.  

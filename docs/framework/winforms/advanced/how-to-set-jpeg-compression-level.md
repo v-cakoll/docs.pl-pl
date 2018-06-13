@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525247"
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>Porady: ustawianie poziomu dekompresji JPEG
 Można zmodyfikować parametry obrazu przy zapisywaniu obrazu na dysku, aby zminimalizować rozmiar pliku oraz pomagają w poprawieniu jakości. Jakość obrazu JPEG można dostosować, modyfikując jego poziom kompresji. Aby określić poziom kompresji podczas zapisywania obrazu JPEG, należy utworzyć <xref:System.Drawing.Imaging.EncoderParameters> obiektu i przekaż go do <xref:System.Drawing.Image.Save%2A> metody <xref:System.Drawing.Image> klasy. Inicjowanie <xref:System.Drawing.Imaging.EncoderParameters> obiektu, którego nie ma tablicę, która zawiera jeden <xref:System.Drawing.Imaging.EncoderParameter>. Po utworzeniu <xref:System.Drawing.Imaging.EncoderParameter>, określ <xref:System.Drawing.Imaging.Encoder.Quality> koder i poziom żądaną kompresji.  

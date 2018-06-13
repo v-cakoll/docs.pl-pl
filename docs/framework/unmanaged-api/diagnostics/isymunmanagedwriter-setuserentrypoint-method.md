@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426690"
 ---
 # <a name="isymunmanagedwritersetuserentrypoint-method"></a>ISymUnmanagedWriter::SetUserEntryPoint — Metoda
 Określa metodę zdefiniowane przez użytkownika, który jest punkt wejścia dla tego modułu. Ten punkt wejścia można na przykład metoda głównego użytkownika zamiast generowane przez kompilator klas zastępczych przed funkcją main.  

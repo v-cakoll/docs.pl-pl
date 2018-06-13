@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524586"
 ---
 # <a name="regions-in-gdi"></a>Regiony w GDI+
 Region jest częścią obszaru wyświetlania urządzenia wyjściowego. Regiony może być prosty (pojedynczy prostokąt) lub złożonych (kombinacja wielokątów i krzywych zamknięte). Na poniższej ilustracji przedstawiono dwóch regionach: jeden utworzone na podstawie prostokąt i innych utworzone na podstawie ścieżki.  

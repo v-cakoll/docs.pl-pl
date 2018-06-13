@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455481"
 ---
 # <a name="icorprofilerthreadenumgetcount-method"></a>ICorProfilerThreadEnum::GetCount — Metoda
 Pobiera liczbę wątków, które są używane przez aplikację.  

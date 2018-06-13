@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525168"
 ---
 # <a name="groupbox-control-overview-windows-forms"></a>GroupBox — Informacje o formancie [Formularze systemu Windows]
 Formularze systemu Windows <xref:System.Windows.Forms.GroupBox> formantów służą do zapewniania do zidentyfikowania grupowania dla innych formantów. Zwykle Użyj pola grupy do podziału formularza przez funkcję. Na przykład może być formularzu zamówienia określający wysyłkowy opcje, takie jak które liczbę operator do użycia. Grupowanie wszystkie opcje w polu grupy daje użytkownikowi logicznej wizualnie i w czasie projektowania wszystkie formanty mogą zostać przeniesione łatwo — po przeniesieniu pojedynczą <xref:System.Windows.Forms.GroupBox> sterowania wszystkie jego formanty zawarte Przenieś zbyt.  

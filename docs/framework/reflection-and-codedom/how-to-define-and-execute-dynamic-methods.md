@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397029"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>Porady: definiowanie i wykonywanie metod dynamicznych
 Poniższe procedury pokazują, jak definiowanie i wykonywanie prosta metoda dynamiczne i dynamiczna metoda powiązany z wystąpieniem klasy. Więcej informacji na temat metod dynamicznych, zobacz <xref:System.Reflection.Emit.DynamicMethod> klasy i [emisji dynamicznego metody scenariuszami odbicia](http://msdn.microsoft.com/library/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e).  

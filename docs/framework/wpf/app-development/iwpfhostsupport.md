@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548197"
 ---
 # <a name="iwpfhostsupport"></a>IWpfHostSupport
 Aplikacje, które obsługują [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zawartości za pośrednictwem PresentationHost.exe implementuje ten interfejs zapewnia punkt integracji między hostem a PresentationHost.exe.  

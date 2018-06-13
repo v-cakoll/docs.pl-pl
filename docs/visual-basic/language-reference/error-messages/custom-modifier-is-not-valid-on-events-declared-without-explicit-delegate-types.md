@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587526"
 ---
 # <a name="39custom39-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a>&#39;Niestandardowe&#39; modyfikator jest nieprawidłowy w zdarzeniach deklarowanych bez jawnych typów delegowanych
 W przeciwieństwie do zdarzeń niestandardowych z systemem innym niż `Custom Event` deklaracja wymaga `As` klauzuli po nazwie zdarzenia, która jawnie określa typ delegata zdarzenia.  

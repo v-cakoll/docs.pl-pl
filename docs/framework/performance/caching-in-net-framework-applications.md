@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396834"
 ---
 # <a name="caching-in-net-framework-applications"></a>Buforowanie w aplikacjach .NET Framework
 Buforowanie umożliwia przechowywanie danych w pamięci, aby uzyskać szybki dostęp. Dostępie do danych ponownie, aplikacje można pobrać danych z pamięci podręcznej zamiast z oryginalnego źródła. Może to poprawić wydajność i skalowalność. Ponadto buforowanie sprawia, że nie są dostępne dane, gdy źródłem danych jest tymczasowo niedostępna.  

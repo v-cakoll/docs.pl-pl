@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397588"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>Nazwy elementów równorzędnych i identyfikatory PNRP
 Nazwa elementu równorzędnego reprezentuje punkt końcowy komunikacji, który może być komputera, użytkownika, grupy, usługi lub niczego skojarzony z węzłem równorzędnym, które zostały rozpoznane jako adres IPv6. Rozpoznawania protokołu PNRP (Peer Name) ma statystycznie unikatowa nazwa elementu równorzędnego w celu utworzenia identyfikatora PNRP, który służy do identyfikowania członków chmury.  

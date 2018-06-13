@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455575"
 ---
 # <a name="profiling-unmanaged-api-reference"></a>Profilowanie (Niezarządzany wykaz interfejsów API)
 Interfejsu API profilowania umożliwia profilera można monitorować wykonywania programu przez środowisko uruchomieniowe języka wspólnego (CLR).  

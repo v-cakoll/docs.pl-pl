@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541901"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Bezpieczniejszy dostęp do plików i danych w formularzach systemu Windows
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Używa uprawnień w celu ochrony zasobów i danych. Gdy aplikacja może odczytu lub zapisu danych zależy od uprawnienia do aplikacji. Po uruchomieniu aplikacji w środowisku częściowej relacji zaufania, może nie mieć dostępu do danych mogą też zmienić sposób dostępu do danych.  

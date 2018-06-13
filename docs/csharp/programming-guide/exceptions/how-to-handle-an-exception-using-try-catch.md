@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338074"
 ---
 # <a name="how-to-handle-an-exception-using-trycatch-c-programming-guide"></a>Porady: obsługa wyjątków za pomocą bloku try/catch (Przewodnik programowania w języku C#)
 Celem [try-catch](../../../csharp/language-reference/keywords/try-catch.md) blok jest zdołały wychwycić i obsłużyć wyjątek, generowane przez kod pracy. Niektóre wyjątki mogą być obsługiwane w `catch` blok i ten problem można rozwiązać bez wyjątek zostanie zgłoszony ponownie, jednak częściej jedyną operacją, które można wykonać upewnij się, że odpowiednie wyjątku.  

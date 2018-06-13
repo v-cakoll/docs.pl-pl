@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495554"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Instrukcje: Migrowanie usług sieci Web obsługujących technologię AJAX i opartych na platformie ASP.NET do programu WCF
 W tym temacie przedstawiono procedury migracji podstawowej usługi ASP.NET AJAX równoważne usługi z obsługą technologii AJAX Windows Communication Foundation (WCF). Widoczny jest sposób utworzyć taką samą wersję usługi ASP.NET AJAX WCF. Te dwie usługi mogą być następnie używane obok siebie lub usługi WCF może być używany do zastąpienia usługi ASP.NET AJAX.  

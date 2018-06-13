@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495161"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>Konfigurowanie obsługi protokołu WS-Atomic Transaction
 W tym temacie opisano, jak można skonfigurować obsługę protokołu WS-AtomicTransaction (WS-AT) za pomocą narzędzia konfiguracji WS-AT.  

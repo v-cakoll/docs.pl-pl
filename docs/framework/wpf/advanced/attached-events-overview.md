@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541742"
 ---
 # <a name="attached-events-overview"></a>Przegląd Załączone zdarzenia
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Definiuje składnika język i typ zdarzenia o nazwie *dołączone zdarzenie*. Pojęcie dołączone zdarzenie umożliwia dodanie obsługi dla określonego zdarzenia do dowolnego elementu, a nie do elementu, który faktycznie definiuje lub dziedziczy zdarzenia. W takim przypadku obiekt potencjalnie wywołaniem zdarzenia ani obsługi wystąpienia docelowego definiuje lub w przeciwnym razie "właścicielem" zdarzenia.  

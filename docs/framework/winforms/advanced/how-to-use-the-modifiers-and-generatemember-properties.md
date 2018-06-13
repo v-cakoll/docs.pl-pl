@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523997"
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>Porady: stosowanie modyfikatorów i właściwości „GenerateMember"
 Po umieszczeniu składnika w formularzu systemu Windows, dwie właściwości są udostępniane przez środowisko projektowania: `GenerateMember` i `Modifiers`. `GenerateMember` Właściwość określa, gdy projektant formularzy systemu Windows generuje zmienną członkowską dla składnika. `Modifiers` Właściwość jest modyfikator dostępu przypisany do tej zmiennej elementu członkowskiego. Jeśli wartość `GenerateMember` właściwość jest `false`, wartość `Modifiers` właściwość nie ma wpływu.  

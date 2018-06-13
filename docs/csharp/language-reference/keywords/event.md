@@ -14,6 +14,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33955969"
 ---
 # <a name="event-c-reference"></a>event (odwołanie w C#)
 `event` — Słowo kluczowe służy do deklarowania zdarzenia w klasie wydawcy.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517228"
 ---
 # <a name="using-activity-extensions"></a>Przy użyciu rozszerzeń działania
 Działania mogą współdziałać z rozszerzeniami aplikacji przepływu pracy zezwalających na hoście oferowanie dodatkowych funkcji, która nie jest jawnie modelowane w przepływie pracy.  W tym temacie opisano sposób tworzenia i umożliwia rozszerzenie liczbę razy, który wykonuje działania.  

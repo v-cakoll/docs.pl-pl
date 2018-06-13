@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337408"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Używanie delegatów (Przewodnik programowania w języku C#)
 A [delegować](../../../csharp/language-reference/keywords/delegate.md) jest typem, który hermetyzuje bezpieczne metody podobne do wskaźnika funkcji w C i C++. W przeciwieństwie do wskaźników funkcji C delegatów zorientowane obiektowo, wpisz bezpieczne i bezpieczne. Typ delegata jest zdefiniowany przez nazwę obiektu delegowanego. Poniższy przykład deklaruje delegata o nazwie `Del` które hermetyzują metody pobierającej [ciąg](../../../csharp/language-reference/keywords/string.md) jako argument i zwraca [void](../../../csharp/language-reference/keywords/void.md):  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547202"
 ---
 # <a name="staticresource-markup-extension"></a>StaticResource — Rozszerzenie znaczników
 Zawiera wartość dla każdego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] atrybutu właściwości wyszukując odwołanie do zasobu już zdefiniowane. Zachowanie wyszukiwania dla tego zasobu jest odpowiednikiem wyszukiwanie czas ładowania, które będzie wyglądać na zasoby, które wcześniej zostały załadowane z poziomu znacznika bieżącego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strony oraz innych źródeł aplikacji i wygeneruje tej wartości zasobu jako wartość właściwości w obiektach czasu wykonywania.  

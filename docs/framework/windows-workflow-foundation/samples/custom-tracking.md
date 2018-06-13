@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518007"
 ---
 # <a name="custom-tracking"></a>Niestandardowe śledzenia
 W tym przykładzie pokazano, jak utworzyć uczestnika niestandardowych śledzenia i zapisanie zawartości dane śledzenia do konsoli. Ponadto przykładzie pokazano, jak Emituj <xref:System.Activities.Tracking.CustomTrackingRecord> dane zdefiniowanego przez obiekty wypełnione z użytkownikiem. Filtry uczestnika opartych na konsoli śledzenia <xref:System.Activities.Tracking.TrackingRecord> obiektów emitowanych przez przepływ pracy korzystający z profilu śledzenia obiektu utworzonego w kodzie.  

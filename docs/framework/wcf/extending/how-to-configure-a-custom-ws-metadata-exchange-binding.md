@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488702"
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Instrukcje: Konfigurowanie niestandardowego powiązania WS-Metadata Exchange
 W tym temacie będzie wyjaśniają sposób konfigurowania niestandardowych WS-Metadata exchange powiązania. Windows Communication Foundation (WCF) zawiera cztery powiązania zdefiniowane przez system metadanych, ale można opublikować metadanych za pomocą żadnego powiązania, które mają. W tym temacie opisano sposób publikowania metadanych za pomocą `wsHttpBinding`. To powiązanie daje możliwość udostępnia metadane w bezpieczny sposób. Kod w tym artykule jest oparta na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md).  

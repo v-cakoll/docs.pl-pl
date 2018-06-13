@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524416"
 ---
 # <a name="windows-forms-visual-inheritance"></a>Formularze systemu Windows — dziedziczenie Visual
 Czasami może zdecydować, że projekt odwołuje się do formularza podobny do utworzonego w poprzednim projekcie. Możesz też utworzyć podstawowy formularz z ustawienia, takie jak znak wodny lub niektórych układ formantu, który zostanie następnie ponownie użyć w projekcie, a każda iteracja zawierającą zmiany w oryginalnym szablonie formularza. Dziedziczenie formularzy umożliwia tworzenie formularza podstawowego, a następnie dziedziczyć po nim i wprowadź zmiany, zachowując niezależnie od oryginalnego ustawienia potrzebne.  

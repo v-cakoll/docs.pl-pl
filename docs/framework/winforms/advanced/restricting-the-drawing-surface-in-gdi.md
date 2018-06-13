@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523926"
 ---
 # <a name="restricting-the-drawing-surface-in-gdi"></a>Ograniczenie powierzchni rysowania w GDI+
 Wycinka obejmuje ograniczenie rysunku do niektórych prostokąta lub regionu. Na poniższej ilustracji przedstawiono ciąg "Hello" przycinana w kształcie serca regionie.  

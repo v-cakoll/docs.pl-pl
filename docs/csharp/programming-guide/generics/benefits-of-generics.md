@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336833"
 ---
 # <a name="benefits-of-generics-c-programming-guide"></a>Zalety typów ogólnych (Przewodnik programowania w języku C#)
 Ogólne stanowią rozwiązanie do ograniczenia we wcześniejszych wersjach środowiska CLR i języka C# w którym generalizacji odbywa się przez rzutowanie typów do i z typem bazowym uniwersalnych <xref:System.Object>. Tworząc klasy ogólnej, można utworzyć kolekcję, która jest bezpieczne podczas kompilacji.  

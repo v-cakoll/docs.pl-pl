@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419055"
 ---
 # <a name="icordebugvaluebreakpoint-interface1"></a><span data-ttu-id="899db-102">ICorDebugValueBreakpoint Interface1</span><span class="sxs-lookup"><span data-stu-id="899db-102">ICorDebugValueBreakpoint Interface1</span></span>
 <span data-ttu-id="899db-103">Rozszerzenie interfejsu ICorDebugBreakpoint w celu zapewnienia dostępu do określonej wartości.</span><span class="sxs-lookup"><span data-stu-id="899db-103">Extends the ICorDebugBreakpoint interface to provide access to specific values.</span></span>  

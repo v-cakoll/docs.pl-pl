@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592152"
 ---
 # <a name="walkthrough-creating-a-custom-dataflow-block-type"></a><span data-ttu-id="7fcc5-102">Wskazówki: Tworzenie niestandardowego typu bloku przepływu danych</span><span class="sxs-lookup"><span data-stu-id="7fcc5-102">Walkthrough: Creating a Custom Dataflow Block Type</span></span>
 <span data-ttu-id="7fcc5-103">Biblioteka przepływu danych tpl zapewnia kilka typów bloku przepływu danych, które umożliwiają wykonywanie różnych funkcji, jednak można również utworzyć niestandardowe bloku typów.</span><span class="sxs-lookup"><span data-stu-id="7fcc5-103">Although the TPL Dataflow Library provides several dataflow block types that enable a variety of functionality, you can also create custom block types.</span></span> <span data-ttu-id="7fcc5-104">Ten dokument zawiera opis sposobu tworzenia typu bloku przepływu danych, który implementuje zachowanie niestandardowych.</span><span class="sxs-lookup"><span data-stu-id="7fcc5-104">This document describes how to create a dataflow block type that implements custom behavior.</span></span>  

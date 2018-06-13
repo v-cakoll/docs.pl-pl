@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407998"
 ---
 # <a name="implementing-the-ui-automation-toggle-control-pattern"></a><span data-ttu-id="1fb3c-102">Implementacja wzorca kontrolki przełącznika automatyzacji interfejsu użytkownika</span><span class="sxs-lookup"><span data-stu-id="1fb3c-102">Implementing the UI Automation Toggle Control Pattern</span></span>
 > [!NOTE]

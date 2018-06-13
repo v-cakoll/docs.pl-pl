@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594373"
 ---
 # <a name="mycomputerfilesystem-object"></a><span data-ttu-id="a41cc-102">My.Computer.FileSystem — Obiekt</span><span class="sxs-lookup"><span data-stu-id="a41cc-102">My.Computer.FileSystem Object</span></span>
 <span data-ttu-id="a41cc-103">Udostępnia właściwości i metody do pracy z dysków, plików i katalogów.</span><span class="sxs-lookup"><span data-stu-id="a41cc-103">Provides properties and methods for working with drives, files, and directories.</span></span>  

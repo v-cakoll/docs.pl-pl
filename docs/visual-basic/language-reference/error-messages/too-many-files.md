@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593970"
 ---
 # <a name="too-many-files"></a><span data-ttu-id="69602-102">Za dużo plików</span><span class="sxs-lookup"><span data-stu-id="69602-102">Too many files</span></span>
 <span data-ttu-id="69602-103">Utworzono większej liczby plików w katalogu głównym niż zezwala systemu operacyjnego albo otwarte pliki więcej niż liczba określona w **pliki =** ustawienia w pliku CONFIG. Plik SYS.</span><span class="sxs-lookup"><span data-stu-id="69602-103">Either more files have been created in the root directory than the operating system permits, or more files have been opened than the number specified in the **files=** setting in your CONFIG.SYS file.</span></span>  

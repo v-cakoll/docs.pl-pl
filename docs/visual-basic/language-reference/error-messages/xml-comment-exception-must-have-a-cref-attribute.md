@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597386"
 ---
 # <a name="xml-comment-exception-must-have-a-39cref39-attribute"></a><span data-ttu-id="14754-102">Wyjątek komentarza XML musi mieć &#39;cref&#39; atrybutu</span><span class="sxs-lookup"><span data-stu-id="14754-102">XML comment exception must have a &#39;cref&#39; attribute</span></span>
 <span data-ttu-id="14754-103">\<Wyjątku > tagu umożliwia dokumentu wyjątki, które może zostać zgłoszony przez metodę.</span><span class="sxs-lookup"><span data-stu-id="14754-103">The \<exception> tag provides a way to document the exceptions that may be thrown by a method.</span></span> <span data-ttu-id="14754-104">Wymagane `cref` atrybut określa nazwę elementu członkowskiego, który jest sprawdzana przez generator dokumentacji.</span><span class="sxs-lookup"><span data-stu-id="14754-104">The required `cref` attribute designates the name of a member, which is checked by the documentation generator.</span></span> <span data-ttu-id="14754-105">Jeśli istnieje element członkowski, są tłumaczone na nazwę kanoniczną elementu w pliku dokumentacji.</span><span class="sxs-lookup"><span data-stu-id="14754-105">If the member exists, it is translated to the canonical element name in the documentation file.</span></span>  

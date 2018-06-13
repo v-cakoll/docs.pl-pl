@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422779"
 ---
 # <a name="icordebugthread3-interface"></a><span data-ttu-id="b4d4b-102">ICorDebugThread3 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="b4d4b-102">ICorDebugThread3 Interface</span></span>
 <span data-ttu-id="b4d4b-103">Zapewnia punkt wejścia do [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) i odpowiednie interfejsy.</span><span class="sxs-lookup"><span data-stu-id="b4d4b-103">Provides the entry point to the [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) and corresponding interfaces.</span></span>  

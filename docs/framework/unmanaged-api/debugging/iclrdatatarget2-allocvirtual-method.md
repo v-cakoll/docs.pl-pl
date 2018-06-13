@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406347"
 ---
 # <a name="iclrdatatarget2allocvirtual-method"></a><span data-ttu-id="6803e-102">ICLRDataTarget2::AllocVirtual — Metoda</span><span class="sxs-lookup"><span data-stu-id="6803e-102">ICLRDataTarget2::AllocVirtual Method</span></span>
 <span data-ttu-id="6803e-103">Metoda wywoływana przez wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) dostępu do usługi danych można przydzielić pamięci w przestrzeni adresowej procesu docelowego.</span><span class="sxs-lookup"><span data-stu-id="6803e-103">Called by the common language runtime (CLR) data access services to allocate memory in the address space of this target process.</span></span>  

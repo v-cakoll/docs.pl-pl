@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423611"
 ---
 # <a name="icorpublishprocessgetprocessid-method"></a><span data-ttu-id="e2428-102">ICorPublishProcess::GetProcessID — Metoda</span><span class="sxs-lookup"><span data-stu-id="e2428-102">ICorPublishProcess::GetProcessID Method</span></span>
 <span data-ttu-id="e2428-103">Pobiera identyfikator systemu operacyjnego dla tego procesu.</span><span class="sxs-lookup"><span data-stu-id="e2428-103">Gets the operating system identifier for this process.</span></span>  

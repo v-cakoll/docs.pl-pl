@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595316"
 ---
 # <a name="widening-visual-basic"></a><span data-ttu-id="2d831-102">Widening (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2d831-102">Widening (Visual Basic)</span></span>
 <span data-ttu-id="2d831-103">Oznacza to, że operator konwersji (`CType`) konwertuje klasę lub strukturę do typu, który może posiadać wszystkie możliwe wartości oryginalnej klasy lub struktury.</span><span class="sxs-lookup"><span data-stu-id="2d831-103">Indicates that a conversion operator (`CType`) converts a class or structure to a type that can hold all possible values of the original class or structure.</span></span>  

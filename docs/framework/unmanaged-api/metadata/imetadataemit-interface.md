@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449147"
 ---
 # <a name="imetadataemit-interface"></a><span data-ttu-id="35307-102">IMetaDataEmit — Interfejs</span><span class="sxs-lookup"><span data-stu-id="35307-102">IMetaDataEmit Interface</span></span>
 <span data-ttu-id="35307-103">Udostępnia metody do tworzenia, modyfikacji i zapisać metadane dotyczące zestawu w aktualnie określonego zakresu.</span><span class="sxs-lookup"><span data-stu-id="35307-103">Provides methods to create, modify, and save metadata about the assembly in the currently defined scope.</span></span> <span data-ttu-id="35307-104">Metadane można przechowywane w pamięci lub zapisanej na dysku.</span><span class="sxs-lookup"><span data-stu-id="35307-104">The metadata can be stored in memory or saved to disk.</span></span>  

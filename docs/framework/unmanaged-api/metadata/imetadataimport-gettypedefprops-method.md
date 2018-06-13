@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446885"
 ---
 # <a name="imetadataimportgettypedefprops-method"></a><span data-ttu-id="6f49f-102">IMetaDataImport::GetTypeDefProps — Metoda</span><span class="sxs-lookup"><span data-stu-id="6f49f-102">IMetaDataImport::GetTypeDefProps Method</span></span>
 <span data-ttu-id="6f49f-103">Zwraca informacje o metadanych <xref:System.Type> reprezentowany przez określony token TypeDef.</span><span class="sxs-lookup"><span data-stu-id="6f49f-103">Returns metadata information for the <xref:System.Type> represented by the specified TypeDef token.</span></span>  

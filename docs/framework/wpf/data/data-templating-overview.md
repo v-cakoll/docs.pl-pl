@@ -15,6 +15,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172493"
 ---
 # <a name="data-templating-overview"></a><span data-ttu-id="a01e1-102">Przegląd Szablonowanie danych</span><span class="sxs-lookup"><span data-stu-id="a01e1-102">Data Templating Overview</span></span>
 <span data-ttu-id="a01e1-103">Model tworzenia szablonów danych WPF zapewnia dużą elastyczność w celu zdefiniowania prezentacja danych.</span><span class="sxs-lookup"><span data-stu-id="a01e1-103">The WPF data templating model provides you with great flexibility to define the presentation of your data.</span></span> <span data-ttu-id="a01e1-104">Formantów WPF ma wbudowaną funkcję obsługi dostosowywania prezentacji danych.</span><span class="sxs-lookup"><span data-stu-id="a01e1-104">WPF controls have built-in functionality to support the customization of data presentation.</span></span> <span data-ttu-id="a01e1-105">W tym temacie przedstawiono najpierw sposób definiowania <xref:System.Windows.DataTemplate> , a następnie wprowadza inne funkcje tworzenia szablonów danych, takie jak wyboru szablonów na podstawie niestandardowej logiki i obsługę wyświetlania danych hierarchicznej.</span><span class="sxs-lookup"><span data-stu-id="a01e1-105">This topic first demonstrates how to define a <xref:System.Windows.DataTemplate> and then introduces other data templating features, such as the selection of templates based on custom logic and the support for the display of hierarchical data.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448406"
 ---
 # <a name="imetadataimportgetcustomattributeprops-method"></a><span data-ttu-id="5b2e0-102">IMetaDataImport::GetCustomAttributeProps — Metoda</span><span class="sxs-lookup"><span data-stu-id="5b2e0-102">IMetaDataImport::GetCustomAttributeProps Method</span></span>
 <span data-ttu-id="5b2e0-103">Pobiera wartość atrybutu niestandardowego, podane jego token metadanych.</span><span class="sxs-lookup"><span data-stu-id="5b2e0-103">Gets the value of the custom attribute, given its metadata token.</span></span>  

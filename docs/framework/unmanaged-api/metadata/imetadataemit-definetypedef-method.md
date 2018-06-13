@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446600"
 ---
 # <a name="imetadataemitdefinetypedef-method"></a><span data-ttu-id="5bd4a-102">IMetaDataEmit::DefineTypeDef — Metoda</span><span class="sxs-lookup"><span data-stu-id="5bd4a-102">IMetaDataEmit::DefineTypeDef Method</span></span>
 <span data-ttu-id="5bd4a-103">Tworzy definicji typu dla typu środowiska uruchomieniowego języka wspólnego i pobiera token metadanych dla tej definicji typu.</span><span class="sxs-lookup"><span data-stu-id="5bd4a-103">Creates a type definition for a common language runtime type, and gets a metadata token for that type definition.</span></span>  

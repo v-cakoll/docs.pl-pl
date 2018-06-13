@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488237"
 ---
 # <a name="extending-the-channel-layer"></a><span data-ttu-id="45a0b-102">Rozszerzanie warstwy kanału</span><span class="sxs-lookup"><span data-stu-id="45a0b-102">Extending the Channel Layer</span></span>
 <span data-ttu-id="45a0b-103">Warstwie kanału jest odpowiedzialny za wymiana wiadomości między klientami i usługami.</span><span class="sxs-lookup"><span data-stu-id="45a0b-103">The channel layer is responsible for the exchange of messages between clients and services.</span></span> <span data-ttu-id="45a0b-104">Rozszerzenia kanału można zaimplementować nowych funkcji protokołu, takiego jak zabezpieczenia czy funkcje transportu, takie jak wdrażanie nowego transportu sieciowego do przenoszenia wiadomości SOAP.</span><span class="sxs-lookup"><span data-stu-id="45a0b-104">Channel extensions can implement new protocol functionality, such as security, or transport functionality, such as implementing a new network transport to carry SOAP messages.</span></span>  

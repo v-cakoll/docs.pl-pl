@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542213"
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a><span data-ttu-id="4fe5f-102">Porady: tworzenie formantu powiązanego oraz formatowanie wyświetlanych danych</span><span class="sxs-lookup"><span data-stu-id="4fe5f-102">How to: Create a Bound Control and Format the Displayed Data</span></span>
 <span data-ttu-id="4fe5f-103">Z wiązanie danych formularzy systemu Windows, można sformatować danych wyświetlanych w formancie powiązane z danymi przy użyciu **formatowanie i zaawansowane powiązanie** okno dialogowe.</span><span class="sxs-lookup"><span data-stu-id="4fe5f-103">With Windows Forms data binding, you can format the data displayed in a data-bound control by using the **Formatting and Advanced Binding** dialog box.</span></span>  

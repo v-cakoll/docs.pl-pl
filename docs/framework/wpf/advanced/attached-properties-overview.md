@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542174"
 ---
 # <a name="attached-properties-overview"></a><span data-ttu-id="6728e-102">Przegląd Właściwości dołączone</span><span class="sxs-lookup"><span data-stu-id="6728e-102">Attached Properties Overview</span></span>
 <span data-ttu-id="6728e-103">Dołączona właściwość to pojęcie, zdefiniowane przez XAML.</span><span class="sxs-lookup"><span data-stu-id="6728e-103">An attached property is a concept defined by XAML.</span></span> <span data-ttu-id="6728e-104">Dołączona właściwość jest przeznaczona do użycia jako typ właściwości globalnych można ustawić dla dowolnego obiektu.</span><span class="sxs-lookup"><span data-stu-id="6728e-104">An attached property is intended to be used as a type of global property that is settable on any object.</span></span> <span data-ttu-id="6728e-105">W [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], dołączone właściwości są zazwyczaj definiowane jako specjalna forma właściwości zależności, która nie ma właściwości konwencjonalnych "otoki".</span><span class="sxs-lookup"><span data-stu-id="6728e-105">In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], attached properties are typically defined as a specialized form of dependency property that does not have the conventional property "wrapper".</span></span>  

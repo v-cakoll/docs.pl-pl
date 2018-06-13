@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448924"
 ---
 # <a name="ivalidator-interface"></a><span data-ttu-id="13e17-102">IValidator — Interfejs</span><span class="sxs-lookup"><span data-stu-id="13e17-102">IValidator Interface</span></span>
 <span data-ttu-id="13e17-103">Udostępnia metody dla sprawdzanie poprawności przenośne obrazy wykonywalne (PE) i raportowanie błędów sprawdzania poprawności.</span><span class="sxs-lookup"><span data-stu-id="13e17-103">Provides methods for validating portable executable (PE) images and reporting validation errors.</span></span>  

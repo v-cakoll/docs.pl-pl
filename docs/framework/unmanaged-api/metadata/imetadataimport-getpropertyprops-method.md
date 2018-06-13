@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449458"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a><span data-ttu-id="0c7d2-102">IMetaDataImport::GetPropertyProps — Metoda</span><span class="sxs-lookup"><span data-stu-id="0c7d2-102">IMetaDataImport::GetPropertyProps Method</span></span>
 <span data-ttu-id="0c7d2-103">Pobiera metadane dla właściwości reprezentowanej przez określony token.</span><span class="sxs-lookup"><span data-stu-id="0c7d2-103">Gets the metadata for the property represented by the specified token.</span></span>  

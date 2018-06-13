@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447230"
 ---
 # <a name="imetadataimportgetsigfromtoken-method"></a><span data-ttu-id="6cbe8-102">IMetaDataImport::GetSigFromToken — Metoda</span><span class="sxs-lookup"><span data-stu-id="6cbe8-102">IMetaDataImport::GetSigFromToken Method</span></span>
 <span data-ttu-id="6cbe8-103">Pobiera podpisu binarne metadane skojarzone z określonym tokenem.</span><span class="sxs-lookup"><span data-stu-id="6cbe8-103">Gets the binary metadata signature associated with the specified token.</span></span>  

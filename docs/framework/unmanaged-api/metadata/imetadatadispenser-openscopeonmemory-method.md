@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448898"
 ---
 # <a name="imetadatadispenseropenscopeonmemory-method"></a><span data-ttu-id="b0f42-102">IMetaDataDispenser::OpenScopeOnMemory — Metoda</span><span class="sxs-lookup"><span data-stu-id="b0f42-102">IMetaDataDispenser::OpenScopeOnMemory Method</span></span>
 <span data-ttu-id="b0f42-103">Otwiera to obszar pamięci, która zawiera istniejące metadane.</span><span class="sxs-lookup"><span data-stu-id="b0f42-103">Opens an area of memory that contains existing metadata.</span></span> <span data-ttu-id="b0f42-104">Oznacza to ta metoda powoduje otwarcie określonego obszaru pamięci, w którym istniejących danych jest traktowany jak metadanych.</span><span class="sxs-lookup"><span data-stu-id="b0f42-104">That is, this method opens a specified area of memory in which the existing data is treated as metadata.</span></span>  

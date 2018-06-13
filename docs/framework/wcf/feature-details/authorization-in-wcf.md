@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488575"
 ---
 # <a name="authorization-in-wcf"></a><span data-ttu-id="095bd-102">Autoryzacja w programie WCF</span><span class="sxs-lookup"><span data-stu-id="095bd-102">Authorization in WCF</span></span>
 <span data-ttu-id="095bd-103">Autoryzacja jest proces kontroli dostępu i uprawnienia do zasobów, takich jak usługi lub plików.</span><span class="sxs-lookup"><span data-stu-id="095bd-103">Authorization is the process of controlling access and rights to resources, such as services or files.</span></span> <span data-ttu-id="095bd-104">Tematy w tej sekcji opisano sposób wykonania tego zadania podstawowych w systemie Windows Communication Foundation (WCF) na różne sposoby.</span><span class="sxs-lookup"><span data-stu-id="095bd-104">The topics in this section show you how to perform this basic task in Windows Communication Foundation (WCF) in a variety of ways.</span></span>  

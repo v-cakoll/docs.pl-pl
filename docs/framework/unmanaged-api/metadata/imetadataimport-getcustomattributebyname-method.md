@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449250"
 ---
 # <a name="imetadataimportgetcustomattributebyname-method"></a><span data-ttu-id="1abf9-102">IMetaDataImport::GetCustomAttributeByName — Metoda</span><span class="sxs-lookup"><span data-stu-id="1abf9-102">IMetaDataImport::GetCustomAttributeByName Method</span></span>
 <span data-ttu-id="1abf9-103">Pobiera atrybut niestandardowy podanej nazwy i właściciela.</span><span class="sxs-lookup"><span data-stu-id="1abf9-103">Gets the custom attribute, given its name and owner.</span></span>  

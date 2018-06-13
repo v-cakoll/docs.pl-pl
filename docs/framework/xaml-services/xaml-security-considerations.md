@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562365"
 ---
 # <a name="xaml-security-considerations"></a><span data-ttu-id="40725-102">Zagadnienia dotyczące zabezpieczeń XAML</span><span class="sxs-lookup"><span data-stu-id="40725-102">XAML Security Considerations</span></span>
 <span data-ttu-id="40725-103">W tym temacie opisano najlepsze rozwiązania dotyczące zabezpieczeń w aplikacji, korzystając z języka XAML i .NET Framework XAML Services API.</span><span class="sxs-lookup"><span data-stu-id="40725-103">This topic describes best practices for security in applications when you use XAML and .NET Framework XAML Services API.</span></span>  

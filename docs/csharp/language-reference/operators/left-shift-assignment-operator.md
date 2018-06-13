@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171796"
 ---
 # <a name="ltlt-operator-c-reference"></a><span data-ttu-id="3c582-102">&lt;&lt;= — Operator (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="3c582-102">&lt;&lt;= Operator (C# Reference)</span></span>
 <span data-ttu-id="3c582-103">Operator przypisania przesunięcia w lewo.</span><span class="sxs-lookup"><span data-stu-id="3c582-103">The left-shift assignment operator.</span></span>  

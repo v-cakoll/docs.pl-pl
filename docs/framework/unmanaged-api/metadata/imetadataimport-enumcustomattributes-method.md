@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448641"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a><span data-ttu-id="91389-102">IMetaDataImport::EnumCustomAttributes — Metoda</span><span class="sxs-lookup"><span data-stu-id="91389-102">IMetaDataImport::EnumCustomAttributes Method</span></span>
 <span data-ttu-id="91389-103">Wylicza tokenów niestandardowych definicja atrybutu skojarzone z określonego typu lub elementu członkowskiego.</span><span class="sxs-lookup"><span data-stu-id="91389-103">Enumerates custom attribute-definition tokens associated with the specified type or member.</span></span>  

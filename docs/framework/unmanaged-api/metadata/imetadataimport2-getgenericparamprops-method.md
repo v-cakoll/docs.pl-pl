@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448677"
 ---
 # <a name="imetadataimport2getgenericparamprops-method"></a><span data-ttu-id="099ae-102">IMetaDataImport2::GetGenericParamProps — Metoda</span><span class="sxs-lookup"><span data-stu-id="099ae-102">IMetaDataImport2::GetGenericParamProps Method</span></span>
 <span data-ttu-id="099ae-103">Pobiera metadane skojarzone z parametru ogólnego reprezentowany przez określony token.</span><span class="sxs-lookup"><span data-stu-id="099ae-103">Gets the metadata associated with the generic parameter represented by the specified token.</span></span>  

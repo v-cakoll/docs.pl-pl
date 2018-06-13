@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446833"
 ---
 # <a name="imetadataimportenumuserstrings-method"></a><span data-ttu-id="502ce-102">IMetaDataImport::EnumUserStrings — Metoda</span><span class="sxs-lookup"><span data-stu-id="502ce-102">IMetaDataImport::EnumUserStrings Method</span></span>
 <span data-ttu-id="502ce-103">Wylicza tokeny ciąg reprezentujący ustalony ciągów w bieżącym zakresie metadanych.</span><span class="sxs-lookup"><span data-stu-id="502ce-103">Enumerates String tokens representing hard-coded strings in the current metadata scope.</span></span>  

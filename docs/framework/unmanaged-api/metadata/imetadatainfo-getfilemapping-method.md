@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449432"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a><span data-ttu-id="83419-102">IMetaDataInfo::GetFileMapping — Metoda</span><span class="sxs-lookup"><span data-stu-id="83419-102">IMetaDataInfo::GetFileMapping Method</span></span>
 <span data-ttu-id="83419-103">Pobiera regionu pamięci zamapowanego pliku, a Typ mapowania.</span><span class="sxs-lookup"><span data-stu-id="83419-103">Gets the memory region of the mapped file, and the type of mapping.</span></span>  

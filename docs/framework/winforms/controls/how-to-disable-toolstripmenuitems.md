@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532031"
 ---
 # <a name="how-to-disable-toolstripmenuitems"></a><span data-ttu-id="b4d66-102">Porady: wyłączanie ToolStripMenuItems</span><span class="sxs-lookup"><span data-stu-id="b4d66-102">How to: Disable ToolStripMenuItems</span></span>
 <span data-ttu-id="b4d66-103">Można ograniczyć lub rozszerzyć poleceń, które mogą spowodować, że użytkownik, włączanie i wyłączanie elementów menu w odpowiedzi na działania użytkownika.</span><span class="sxs-lookup"><span data-stu-id="b4d66-103">You can limit or broaden the commands a user may make by enabling and disabling menu items in response to user activities.</span></span> <span data-ttu-id="b4d66-104">Elementy menu są włączone domyślnie, gdy są one tworzone, ale to można dostosować za pomocą <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> właściwości.</span><span class="sxs-lookup"><span data-stu-id="b4d66-104">Menu items are enabled by default when they are created, but this can be adjusted through the <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> property.</span></span> <span data-ttu-id="b4d66-105">Tej właściwości można manipulować w czasie projektowania w **właściwości** okna lub programowo przez ustawienie dla niego w kodzie.</span><span class="sxs-lookup"><span data-stu-id="b4d66-105">You can manipulate this property at design time in the **Properties** window or programmatically by setting it in code.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359452"
 ---
 # <a name="c-walkthroughs"></a><span data-ttu-id="7550c-102">C# — wskazówki</span><span class="sxs-lookup"><span data-stu-id="7550c-102">C# Walkthroughs</span></span>
 <span data-ttu-id="7550c-103">Wskazówki dotyczące wskazówki krok po kroku dla typowych scenariuszy, dzięki czemu ich najlepiej zacząć poznawania produktu lub obszarze określonej funkcji.</span><span class="sxs-lookup"><span data-stu-id="7550c-103">Walkthroughs give step-by-step instructions for common scenarios, which makes them a good place to start learning about the product or a particular feature area.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546364"
 ---
 # <a name="how-to-open-a-dialog-box"></a><span data-ttu-id="b7a51-102">Porady: otwarcie okna dialogowego</span><span class="sxs-lookup"><span data-stu-id="b7a51-102">How to: Open a Dialog Box</span></span>
 <span data-ttu-id="b7a51-103">Ten przykład przedstawia sposób otworzyć okno dialogowe.</span><span class="sxs-lookup"><span data-stu-id="b7a51-103">This example shows how to open a dialog box.</span></span>  

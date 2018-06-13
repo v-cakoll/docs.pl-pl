@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528606"
 ---
 # <a name="data-display-modes-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="4b876-102">Tryby wyświetlania danych w formancie DataGridView formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="4b876-102">Data Display Modes in the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="4b876-103"><xref:System.Windows.Forms.DataGridView> Formant może wyświetlać dane w trzech różnych trybach: powiązane, niezwiązanej i wirtualnych.</span><span class="sxs-lookup"><span data-stu-id="4b876-103">The <xref:System.Windows.Forms.DataGridView> control can display data in three distinct modes: bound, unbound, and virtual.</span></span> <span data-ttu-id="4b876-104">Wybierz najbardziej odpowiedniego tryb, w zależności od wymagań.</span><span class="sxs-lookup"><span data-stu-id="4b876-104">Choose the most suitable mode based on your requirements.</span></span>  

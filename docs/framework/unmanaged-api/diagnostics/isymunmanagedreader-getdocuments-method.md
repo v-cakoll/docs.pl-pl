@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424654"
 ---
 # <a name="isymunmanagedreadergetdocuments-method"></a><span data-ttu-id="ae79b-102">ISymUnmanagedReader::GetDocuments — Metoda</span><span class="sxs-lookup"><span data-stu-id="ae79b-102">ISymUnmanagedReader::GetDocuments Method</span></span>
 <span data-ttu-id="ae79b-103">Zwraca tablicę wszystkich dokumentów, które są zdefiniowane w magazynie symboli.</span><span class="sxs-lookup"><span data-stu-id="ae79b-103">Returns an array of all the documents defined in the symbol store.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335351"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-c"></a><span data-ttu-id="20f92-102">Trwa pobieranie akapitów i ich style (C#)</span><span class="sxs-lookup"><span data-stu-id="20f92-102">Retrieving the Paragraphs and Their Styles (C#)</span></span>
 <span data-ttu-id="20f92-103">W tym przykładzie mamy Napisz zapytanie, które pobiera węzły akapitu z dokumentu schemat WordprocessingML.</span><span class="sxs-lookup"><span data-stu-id="20f92-103">In this example, we write a query that retrieves the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="20f92-104">Identyfikuje styl każdego akapitu.</span><span class="sxs-lookup"><span data-stu-id="20f92-104">It also identifies the style of each paragraph.</span></span>  

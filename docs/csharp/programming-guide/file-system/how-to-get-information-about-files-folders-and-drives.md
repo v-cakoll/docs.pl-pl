@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338542"
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a><span data-ttu-id="656b2-102">Porady: pobieranie informacji o plikach, folderach i dyskach (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="656b2-102">How to: Get Information About Files, Folders, and Drives  (C# Programming Guide)</span></span>
 <span data-ttu-id="656b2-103">W programie .NET Framework aby dostęp do informacji o systemie plików przy użyciu następujących klas:</span><span class="sxs-lookup"><span data-stu-id="656b2-103">In the .NET Framework, you can access file system information by using the following classes:</span></span>  

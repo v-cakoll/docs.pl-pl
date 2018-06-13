@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426894"
 ---
 # <a name="isymunmanagedwriterclosemethod-method"></a><span data-ttu-id="7979d-102">ISymUnmanagedWriter::CloseMethod — Metoda</span><span class="sxs-lookup"><span data-stu-id="7979d-102">ISymUnmanagedWriter::CloseMethod Method</span></span>
 <span data-ttu-id="7979d-103">Zamyka bieżącej metody.</span><span class="sxs-lookup"><span data-stu-id="7979d-103">Closes the current method.</span></span> <span data-ttu-id="7979d-104">Po zamknięciu metody nie więcej symboli można zdefiniować w niej.</span><span class="sxs-lookup"><span data-stu-id="7979d-104">Once a method is closed, no more symbols can be defined within it.</span></span>  

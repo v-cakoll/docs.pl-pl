@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547592"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a><span data-ttu-id="fc969-102">Jak za pomocą programowania drukować pliki XPS</span><span class="sxs-lookup"><span data-stu-id="fc969-102">How to: Programmatically Print XPS Files</span></span>
 <span data-ttu-id="fc969-103">Można użyć jednego przeciążenia <xref:System.Printing.PrintQueue.AddJob%2A> metody do drukowania [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] pliki bez otwierania <xref:System.Windows.Controls.PrintDialog> lub zasadniczo żadnych [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] w ogóle.</span><span class="sxs-lookup"><span data-stu-id="fc969-103">You can use one overload of the <xref:System.Printing.PrintQueue.AddJob%2A> method to print [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] files without opening a <xref:System.Windows.Controls.PrintDialog> or, in principle, any [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] at all.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547410"
 ---
 # <a name="themedictionary-markup-extension"></a><span data-ttu-id="86ca2-102">ThemeDictionary — Rozszerzenie znaczników</span><span class="sxs-lookup"><span data-stu-id="86ca2-102">ThemeDictionary Markup Extension</span></span>
 <span data-ttu-id="86ca2-103">Umożliwia autorom kontrolkę niestandardową lub aplikacje, które integracji formanty innych firm do załadowania słowniki zasobów specyficznych dla motywów do użycia w stylów formantu.</span><span class="sxs-lookup"><span data-stu-id="86ca2-103">Provides a way for custom control authors or applications that integrate third-party controls to load theme-specific resource dictionaries to use in styling the control.</span></span>  

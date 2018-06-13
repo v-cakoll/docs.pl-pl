@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763043"
 ---
 # <a name="like-entity-sql"></a><span data-ttu-id="ed2ef-102">Podobnie jak (jednostka SQL)</span><span class="sxs-lookup"><span data-stu-id="ed2ef-102">LIKE (Entity SQL)</span></span>
 <span data-ttu-id="ed2ef-103">Określa, czy określony znak `String` jest zgodna z określonym wzorcem.</span><span class="sxs-lookup"><span data-stu-id="ed2ef-103">Determines whether a specific character `String` matches a specified pattern.</span></span>  

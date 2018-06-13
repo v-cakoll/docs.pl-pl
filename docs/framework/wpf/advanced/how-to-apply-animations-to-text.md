@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545441"
 ---
 # <a name="how-to-apply-animations-to-text"></a><span data-ttu-id="a249a-102">Jak zastosować animacje do tekstu</span><span class="sxs-lookup"><span data-stu-id="a249a-102">How to: Apply Animations to Text</span></span>
 <span data-ttu-id="a249a-103">Animacji można zmienić wyświetlanie i wyglądu tekstu w aplikacji.</span><span class="sxs-lookup"><span data-stu-id="a249a-103">Animations can alter the display and appearance of text in your application.</span></span> <span data-ttu-id="a249a-104">W poniższych przykładach użyto różnych typów animacji wpływ na wyświetlanie tekstu w <xref:System.Windows.Controls.TextBlock> formantu.</span><span class="sxs-lookup"><span data-stu-id="a249a-104">The following examples use different types of animations to affect the display of text in a <xref:System.Windows.Controls.TextBlock> control.</span></span>  

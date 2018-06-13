@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423361"
 ---
 # <a name="icordebugprocess6decodeevent-method"></a><span data-ttu-id="ae232-102">Metoda ICorDebugProcess6::DecodeEvent</span><span class="sxs-lookup"><span data-stu-id="ae232-102">ICorDebugProcess6::DecodeEvent Method</span></span>
 <span data-ttu-id="ae232-103">Dekoduje zdarzenia debugowania zarządzanego, które zostały hermetyzowany w ładunku zdarzenia debugowania specjalnie przygotowany natywnego wyjątków.</span><span class="sxs-lookup"><span data-stu-id="ae232-103">Decodes managed debug events that have been encapsulated in the payload of specially crafted native exception debug events.</span></span>  

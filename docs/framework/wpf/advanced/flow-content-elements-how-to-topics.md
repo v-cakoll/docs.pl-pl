@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546377"
 ---
 # <a name="flow-content-elements-how-to-topics"></a><span data-ttu-id="aad54-102">Elementy zawartości przepływu Tematy porad</span><span class="sxs-lookup"><span data-stu-id="aad54-102">Flow Content Elements How-to Topics</span></span>
 <span data-ttu-id="aad54-103">W tematach w tej sekcji opisano sposób wykonywania typowych zadań przy użyciu różnych elementów zawartości przepływu i powiązane funkcje.</span><span class="sxs-lookup"><span data-stu-id="aad54-103">The topics in this section describe how to accomplish common tasks using various flow content elements and related features.</span></span>  

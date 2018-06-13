@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359510"
 ---
 # <a name="query-expression-syntax-examples-projection--linq-to-dataset"></a><span data-ttu-id="9a2f3-102">Przykłady składni wyrażeń zapytania: Projekcji (LINQ do DataSet)</span><span class="sxs-lookup"><span data-stu-id="9a2f3-102">Query Expression Syntax Examples: Projection  (LINQ to DataSet)</span></span>
 <span data-ttu-id="9a2f3-103">Przykłady w tym temacie przedstawiają sposób użycia <xref:System.Linq.Enumerable.Select%2A> i <xref:System.Linq.Enumerable.SelectMany%2A> metod do badania <xref:System.Data.DataSet> przy użyciu składni wyrażenia zapytania.</span><span class="sxs-lookup"><span data-stu-id="9a2f3-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.Select%2A> and <xref:System.Linq.Enumerable.SelectMany%2A> methods to query a <xref:System.Data.DataSet> using the query expression syntax.</span></span>  

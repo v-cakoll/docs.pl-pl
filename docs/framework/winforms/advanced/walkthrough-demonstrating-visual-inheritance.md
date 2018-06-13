@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529704"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a><span data-ttu-id="9618e-102">Wskazówki: demonstrowanie dziedziczenia Visual</span><span class="sxs-lookup"><span data-stu-id="9618e-102">Walkthrough: Demonstrating Visual Inheritance</span></span>
 <span data-ttu-id="9618e-103">Dziedziczenie Visual umożliwia sprawdzenie kontrolek w formularzu podstawowej i dodać nowe kontrolki.</span><span class="sxs-lookup"><span data-stu-id="9618e-103">Visual inheritance enables you to see the controls on the base form and to add new controls.</span></span> <span data-ttu-id="9618e-104">W tym przewodniku utworzysz formularza podstawowego i skompiluj go do biblioteki klas.</span><span class="sxs-lookup"><span data-stu-id="9618e-104">In this walkthrough you will create a base form and compile it into a class library.</span></span> <span data-ttu-id="9618e-105">Zostanie zaimportować tę bibliotekę klas do innego projektu i Utwórz nowy formularz, który dziedziczy z formularza podstawowego.</span><span class="sxs-lookup"><span data-stu-id="9618e-105">You will import this class library into another project and create a new form that inherits from the base form.</span></span> <span data-ttu-id="9618e-106">W tym przewodniku przedstawiono sposób:</span><span class="sxs-lookup"><span data-stu-id="9618e-106">During this walkthrough, you will learn how to:</span></span>  

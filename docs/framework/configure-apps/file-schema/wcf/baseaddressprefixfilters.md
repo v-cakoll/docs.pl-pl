@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358544"
 ---
 # <a name="ltbaseaddressprefixfiltersgt"></a><span data-ttu-id="83b88-102">&lt;baseAddressPrefixFilters&gt;</span><span class="sxs-lookup"><span data-stu-id="83b88-102">&lt;baseAddressPrefixFilters&gt;</span></span>
 <span data-ttu-id="83b88-103">Reprezentuje kolekcję elementów, które określają przechodzą przez filtry, które zawierają mechanizm wyboru odpowiednich powiązań usług Internet Information Services (IIS), odnośnie do hostowania aplikacji Windows Communication Foundation (WCF) w usługach IIS konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="83b88-103">Represents a collection of configuration elements that specify pass through filters, which provide a mechanism to pick the appropriate Internet Information Services (IIS) bindings when hosting the Windows Communication Foundation (WCF) application in IIS.</span></span>  

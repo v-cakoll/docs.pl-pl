@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762874"
 ---
 # <a name="datarows-and-datarowviews"></a><span data-ttu-id="dcb10-102">Elementów DataRows i DataRowViews</span><span class="sxs-lookup"><span data-stu-id="dcb10-102">DataRows and DataRowViews</span></span>
 <span data-ttu-id="dcb10-103">A <xref:System.Data.DataView> udostępnia kolekcję wyliczalny <xref:System.Data.DataRowView> obiektów.</span><span class="sxs-lookup"><span data-stu-id="dcb10-103">A <xref:System.Data.DataView> exposes an enumerable collection of <xref:System.Data.DataRowView> objects.</span></span> <span data-ttu-id="dcb10-104">**DataRowView** obiektów uwidocznić wartości jako tablice obiektów, które są indeksowane według nazwy lub odwołania liczby porządkowej kolumny w tabeli podstawowej.</span><span class="sxs-lookup"><span data-stu-id="dcb10-104">The **DataRowView** objects expose values as object arrays that are indexed by either the name or the ordinal reference of the column in the underlying table.</span></span> <span data-ttu-id="dcb10-105">Dostęp można uzyskać <xref:System.Data.DataRow> widoczne przy **DataRowView** za pomocą <xref:System.Data.DataRowView.Row%2A> właściwość **DataRowView**.</span><span class="sxs-lookup"><span data-stu-id="dcb10-105">You can access the <xref:System.Data.DataRow> that is exposed by the **DataRowView** by using the <xref:System.Data.DataRowView.Row%2A> property of the **DataRowView**.</span></span>  

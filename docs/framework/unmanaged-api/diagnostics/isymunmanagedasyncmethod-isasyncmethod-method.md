@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424944"
 ---
 # <a name="isymunmanagedasyncmethodisasyncmethod-method"></a><span data-ttu-id="5c789-102">ISymUnmanagedAsyncMethod::IsAsyncMethod — Metoda</span><span class="sxs-lookup"><span data-stu-id="5c789-102">ISymUnmanagedAsyncMethod::IsAsyncMethod Method</span></span>
 <span data-ttu-id="5c789-103">Sprawdza, czy metoda ma informacje o asynchronicznej.</span><span class="sxs-lookup"><span data-stu-id="5c789-103">Checks if the method has async information or not.</span></span>  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423835"
 ---
 # <a name="logswitchcallreason-enumeration"></a><span data-ttu-id="a948c-102">LogSwitchCallReason — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="a948c-102">LogSwitchCallReason Enumeration</span></span>
 <span data-ttu-id="a948c-103">Wskazuje działanie zostało wykonane na przełączniku debugowania śledzenia.</span><span class="sxs-lookup"><span data-stu-id="a948c-103">Indicates the operation that was performed on a debugging/tracing switch.</span></span>  

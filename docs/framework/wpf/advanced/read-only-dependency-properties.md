@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548967"
 ---
 # <a name="read-only-dependency-properties"></a><span data-ttu-id="4d88c-102">Właściwości zależności tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="4d88c-102">Read-Only Dependency Properties</span></span>
 <span data-ttu-id="4d88c-103">W tym temacie opisano właściwości zależności tylko do odczytu, włącznie z istniejącej właściwości tylko do odczytu zależności i scenariusze i techniki tworzenia właściwości niestandardowych zależności tylko do odczytu.</span><span class="sxs-lookup"><span data-stu-id="4d88c-103">This topic describes read-only dependency properties, including existing read-only dependency properties and the scenarios and techniques for creating a custom read-only dependency property.</span></span>  

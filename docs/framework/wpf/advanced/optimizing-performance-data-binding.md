@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548782"
 ---
 # <a name="optimizing-performance-data-binding"></a><span data-ttu-id="64a81-102">Optymalizacja wydajności: powiązanie danych</span><span class="sxs-lookup"><span data-stu-id="64a81-102">Optimizing Performance: Data Binding</span></span>
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="64a81-103"> Powiązanie danych zapewnia prosty i spójny sposób dla aplikacji przedstawić i interakcji z danymi.</span><span class="sxs-lookup"><span data-stu-id="64a81-103"> data binding provides a simple and consistent way for applications to present and interact with data.</span></span> <span data-ttu-id="64a81-104">Elementy mogą być powiązane z danych z różnych źródeł danych w formie [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiektów i [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="64a81-104">Elements can be bound to data from a variety of data sources in the form of [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] objects and [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].</span></span>  

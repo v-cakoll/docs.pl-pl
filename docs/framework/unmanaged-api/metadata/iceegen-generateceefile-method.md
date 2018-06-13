@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445111"
 ---
 # <a name="iceegengenerateceefile-method"></a><span data-ttu-id="7b6cf-102">ICeeGen::GenerateCeeFile — Metoda</span><span class="sxs-lookup"><span data-stu-id="7b6cf-102">ICeeGen::GenerateCeeFile Method</span></span>
 <span data-ttu-id="7b6cf-103">Generuje plik bazowej kodu, który zawiera kod podstawowy załadowanych obecnie do tego [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interfejsu.</span><span class="sxs-lookup"><span data-stu-id="7b6cf-103">Generates a code-base file that contains the code base currently loaded into this [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546533"
 ---
 # <a name="how-to-refresh-a-page"></a><span data-ttu-id="01a9a-102">Porady: odświeżanie strony</span><span class="sxs-lookup"><span data-stu-id="01a9a-102">How to: Refresh a Page</span></span>
 <span data-ttu-id="01a9a-103">W tym przykładzie przedstawiono sposób wywoływania <xref:System.Windows.Navigation.NavigationWindow.Refresh%2A> metody w celu odświeżenia bieżącej zawartości w <xref:System.Windows.Navigation.NavigationWindow>.</span><span class="sxs-lookup"><span data-stu-id="01a9a-103">This example shows how to call the <xref:System.Windows.Navigation.NavigationWindow.Refresh%2A> method to refresh the current content in a <xref:System.Windows.Navigation.NavigationWindow>.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360716"
 ---
 # <a name="sql-server-and-adonet"></a><span data-ttu-id="33ac3-102">SQL Server i ADO.NET</span><span class="sxs-lookup"><span data-stu-id="33ac3-102">SQL Server and ADO.NET</span></span>
 <span data-ttu-id="33ac3-103">W tej sekcji opisano funkcje i zachowania, które są specyficzne dla dostawcy danych programu .NET Framework dla programu SQL Server (<xref:System.Data.SqlClient>).</span><span class="sxs-lookup"><span data-stu-id="33ac3-103">This section describes features and behaviors that are specific to the .NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>).</span></span>  

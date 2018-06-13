@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359318"
 ---
 # <a name="inserting-an-image-from-a-file"></a><span data-ttu-id="e7dcf-102">Wstawianie obrazu z pliku</span><span class="sxs-lookup"><span data-stu-id="e7dcf-102">Inserting an Image from a File</span></span>
 <span data-ttu-id="e7dcf-103">Można napisać dużego obiektu binarnego (BLOB) do bazy danych jako dane binarne lub znaków, w zależności od typu pola w źródle danych.</span><span class="sxs-lookup"><span data-stu-id="e7dcf-103">You can write a binary large object (BLOB) to a database as either binary or character data, depending on the type of field at your data source.</span></span> <span data-ttu-id="e7dcf-104">Obiekt BLOB jest ogólny termin odnoszący się do `text`, `ntext`, i `image` typy danych, które zwykle zawierają dokumenty i obrazy.</span><span class="sxs-lookup"><span data-stu-id="e7dcf-104">BLOB is a generic term that refers to the `text`, `ntext`, and `image` data types, which typically contain documents and pictures.</span></span>  

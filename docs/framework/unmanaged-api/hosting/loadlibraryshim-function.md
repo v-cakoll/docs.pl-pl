@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445315"
 ---
 # <a name="loadlibraryshim-function"></a><span data-ttu-id="499df-102">LoadLibraryShim — Funkcja</span><span class="sxs-lookup"><span data-stu-id="499df-102">LoadLibraryShim Function</span></span>
 <span data-ttu-id="499df-103">Ładuje określona wersja biblioteki DLL, która jest uwzględniona w pakiet redystrybucyjny programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="499df-103">Loads a specified version of a DLL that is included in the .NET Framework redistributable package.</span></span>  

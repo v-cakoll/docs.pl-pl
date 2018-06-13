@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33471667"
 ---
 # <a name="core-communications-internal-duplex-transport-channels"></a>Podstawowe wiadomości: Kanały transportu usługi wewnętrznej dupleks
 W tym temacie wymieniono wszystkie wyjątki generowane przez kanały transportu dupleks wewnętrzne Windows Communication Foundation (WCF).  

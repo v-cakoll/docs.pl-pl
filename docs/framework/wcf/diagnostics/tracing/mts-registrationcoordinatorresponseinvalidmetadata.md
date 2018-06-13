@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33476778"
 ---
 # <a name="microsofttransactionstransactionbridgeregistrationcoordinatorresponseinvalidmetadata"></a>Microsoft.Transactions.TransactionBridge.RegistrationCoordinatorResponseInvalidMetadata
 Usługa protokołu WS-Atomic Transaction odebrała komunikat RegisterResponse od koordynatora zawierający odwołanie do punktu końcowego z nieprawidłowe lub niezgodne metadane.  

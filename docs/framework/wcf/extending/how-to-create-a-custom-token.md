@@ -10,20 +10,21 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-ms.openlocfilehash: eb227075b1a696216e62e851aa8b10c7511ac93f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2198d5548b09ba05eeb11466a6fd2d3a1262de94
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809212"
 ---
 # <a name="how-to-create-a-custom-token"></a>Instrukcje: Tworzenie tokenu niestandardowego
 W tym temacie przedstawiono sposób tworzenia tokenu zabezpieczeń niestandardowych przy użyciu <xref:System.IdentityModel.Tokens.SecurityToken> klasy i jak zintegrować ją z dostawcy tokenów zabezpieczających niestandardowych i wystawcy uwierzytelnienia. Pełny przykład kodu dla [niestandardowy Token](../../../../docs/framework/wcf/samples/custom-token.md) próbki.  
   
- A *tokenu zabezpieczającego* jest zasadniczo element XML, który jest używany przez strukturę zabezpieczeń systemu Windows Communication Foundation (WCF) do reprezentowania oświadczenia dotyczące nadawcy wiadomości protokołu SOAP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] funkcja zabezpieczenia oferuje różne tokenów do tryby uwierzytelniania dostarczane przez system. Przykłady obejmują tokenu zabezpieczającego certyfikatu X.509 reprezentowany przez <xref:System.IdentityModel.Tokens.X509SecurityToken> klasy lub tokenu zabezpieczającego nazwy użytkownika reprezentowanego przez <xref:System.IdentityModel.Tokens.UserNameSecurityToken> klasy.  
+ A *tokenu zabezpieczającego* jest zasadniczo element XML, który jest używany przez strukturę zabezpieczeń systemu Windows Communication Foundation (WCF) do reprezentowania oświadczenia dotyczące nadawcy wiadomości protokołu SOAP. Zabezpieczenia WCF zapewnia tokeny różne tryby uwierzytelniania dostarczane przez system. Przykłady obejmują tokenu zabezpieczającego certyfikatu X.509 reprezentowany przez <xref:System.IdentityModel.Tokens.X509SecurityToken> klasy lub tokenu zabezpieczającego nazwy użytkownika reprezentowanego przez <xref:System.IdentityModel.Tokens.UserNameSecurityToken> klasy.  
   
  Czasami tryb uwierzytelniania lub poświadczenia nie jest obsługiwany przez udostępnionych typów. W takim przypadku jest niezbędne do utworzenia tokenu zabezpieczającego niestandardowych zapewnienie reprezentację XML niestandardowego poświadczenia wewnątrz komunikatu protokołu SOAP.  
   
- W poniższych procedurach przedstawiono sposób tworzenia tokenu zabezpieczającego niestandardowych oraz sposób zintegrować ją z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infrastruktury zabezpieczeń. W tym temacie tworzy token karty kredytowej, który jest używany do przekazywania informacji o karcie kredytowej klienta do serwera.  
+ W poniższych procedurach przedstawiono sposób tworzenia tokenu zabezpieczającego niestandardowych oraz sposób zintegrować ją z infrastrukturą zabezpieczeń programu WCF. W tym temacie tworzy token karty kredytowej, który jest używany do przekazywania informacji o karcie kredytowej klienta do serwera.  
   
  Aby uzyskać więcej informacji o niestandardowych poświadczeń i Menedżer tokenów zabezpieczających, zobacz [wskazówki: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
@@ -43,7 +44,7 @@ W tym temacie przedstawiono sposób tworzenia tokenu zabezpieczeń niestandardow
      [!code-csharp[c_CustomToken#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#4)]
      [!code-vb[c_CustomToken#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#4)]  
   
- Następnie należy utworzyć Klasa reprezentująca token zabezpieczający niestandardowych. Ta klasa jest używana przez token dostawcy uwierzytelniania i serializator klasy zabezpieczeń do przekazywania informacji o tokenie zabezpieczeń do i z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infrastruktury zabezpieczeń.  
+ Następnie należy utworzyć Klasa reprezentująca token zabezpieczający niestandardowych. Ta klasa jest używana przez dostawcę tokenów zabezpieczających, uwierzytelniania i klasy serializatora do przekazywania informacji na temat tokenu zabezpieczającego do i z infrastruktury zabezpieczeń WCF.  
   
 #### <a name="to-create-a-custom-security-token-class"></a>Aby utworzyć klasę tokenu zabezpieczeń niestandardowych  
   
@@ -51,14 +52,14 @@ W tym temacie przedstawiono sposób tworzenia tokenu zabezpieczeń niestandardow
   
 2.  Zastąpienie <xref:System.IdentityModel.Tokens.SecurityToken.Id%2A> właściwości. Ta właściwość jest używana, aby określić lokalny identyfikator tokenu zabezpieczeń, który służy do punktu na jej reprezentację XML tokenu zabezpieczeń z innymi elementami wewnątrz komunikatu protokołu SOAP. W tym przykładzie identyfikatora tokenu może być przekazany do niego jako parametru konstruktora lub nową losowe jest generowana za każdym razem, gdy jest tworzone wystąpienie tokenu zabezpieczeń.  
   
-3.  Implementowanie <xref:System.IdentityModel.Tokens.SecurityToken.SecurityKeys%2A> właściwości. Ta właściwość zwraca kolekcję kluczy zabezpieczeń, które reprezentuje wystąpienie tokenu zabezpieczeń. Te klucze mogą być używane przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] do podpisywania lub szyfrowania części komunikatu protokołu SOAP. W tym przykładzie tokenu zabezpieczającego karty kredytowej nie może zawierać żadnych kluczy zabezpieczeń; w związku z tym zawsze implementacja zwraca pustą kolekcję.  
+3.  Implementowanie <xref:System.IdentityModel.Tokens.SecurityToken.SecurityKeys%2A> właściwości. Ta właściwość zwraca kolekcję kluczy zabezpieczeń, które reprezentuje wystąpienie tokenu zabezpieczeń. Te klucze mogą posłużyć WCF do podpisywania lub szyfrowania części komunikatu protokołu SOAP. W tym przykładzie tokenu zabezpieczającego karty kredytowej nie może zawierać żadnych kluczy zabezpieczeń; w związku z tym zawsze implementacja zwraca pustą kolekcję.  
   
-4.  Zastąpienie <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom%2A> i <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo%2A> właściwości. Te właściwości są używane przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] do sprawdzania poprawności wystąpienia tokenu zabezpieczeń. W tym przykładzie karty kredytowej tokenu zabezpieczeń ma tylko datę wygaśnięcia, więc `ValidFrom` zwraca <xref:System.DateTime> reprezentujący datę i godzinę utworzenia wystąpienia.  
+4.  Zastąpienie <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom%2A> i <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo%2A> właściwości. Te właściwości są używane przez usługi WCF do sprawdzania poprawności wystąpienia tokenu zabezpieczeń. W tym przykładzie karty kredytowej tokenu zabezpieczeń ma tylko datę wygaśnięcia, więc `ValidFrom` zwraca <xref:System.DateTime> reprezentujący datę i godzinę utworzenia wystąpienia.  
   
      [!code-csharp[c_CustomToken#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#1)]
      [!code-vb[c_CustomToken#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#1)]  
   
- Gdy nowy zabezpieczający typ tokenu jest tworzony, wymaga wykonania <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters> klasy. Implementacja jest używana w Konfiguracja elementu powiązania zabezpieczeń do reprezentowania nowy typ tokenu. Klasa Parametry tokenu zabezpieczeń służy jako szablon, który jest używany do dopasowywania wystąpienie tokenu zabezpieczeń rzeczywiste do, gdy komunikat jest przetwarzany. Szablon zawiera dodatkowe właściwości, które aplikacji można użyć do określenia kryteriów, które tokenu zabezpieczającego muszą być zgodne do użycia lub uwierzytelniony. Poniższy przykład nie dodaje żadnych dodatkowych właściwości tylko dopasowaniu typ tokenu zabezpieczeń podczas [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infrastruktury wyszukuje wystąpienie tokenu zabezpieczeń do użycia, lub do sprawdzania poprawności.  
+ Gdy nowy zabezpieczający typ tokenu jest tworzony, wymaga wykonania <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters> klasy. Implementacja jest używana w Konfiguracja elementu powiązania zabezpieczeń do reprezentowania nowy typ tokenu. Klasa Parametry tokenu zabezpieczeń służy jako szablon, który jest używany do dopasowywania wystąpienie tokenu zabezpieczeń rzeczywiste do, gdy komunikat jest przetwarzany. Szablon zawiera dodatkowe właściwości, które aplikacji można użyć do określenia kryteriów, które tokenu zabezpieczającego muszą być zgodne do użycia lub uwierzytelniony. Poniższy przykład nie dodaje żadnych dodatkowych właściwości, dlatego tylko typ tokenu jest zgodny, gdy infrastruktura WCF wyszukuje wystąpienie tokenu zabezpieczeń do użycia, lub do sprawdzania poprawności zabezpieczeń.  
   
 #### <a name="to-create-a-custom-security-token-parameters-class"></a>Aby utworzyć klasę Parametry tokenu zabezpieczeń niestandardowych  
   
@@ -72,17 +73,17 @@ W tym temacie przedstawiono sposób tworzenia tokenu zabezpieczeń niestandardow
   
 5.  Implementowanie <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsClientWindowsIdentity%2A> właściwości tylko do odczytu. Ta właściwość zwraca `true` Jeśli reprezentowanego przez tę klasę typ tokenu zabezpieczeń mogą być mapowane na konta systemu Windows. Jeśli tak, wynik uwierzytelniania jest reprezentowana przez <xref:System.Security.Principal.WindowsIdentity> wystąpienie klasy. W tym przykładzie token nie można zamapować na konto systemu Windows.  
   
-6.  Implementowanie <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CreateKeyIdentifierClause%28System.IdentityModel.Tokens.SecurityToken%2CSystem.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle%29> metody. Ta metoda jest wywoływana przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zabezpieczeń platformę, gdy wymaga odwołania do wystąpienia tokenu zabezpieczeń reprezentowanego przez tę klasę Parametry tokenu zabezpieczeń. Zarówno rzeczywiste zabezpieczeń tokenu wystąpienie i <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle> , który określa typ odwołania, który jest wymagany są przekazywane do tej metody jako argumenty. W tym przykładzie tylko wewnętrzne odwołania są obsługiwane przez karty kredytowej tokenu zabezpieczającego. <xref:System.IdentityModel.Tokens.SecurityToken> Klasa ma funkcje do tworzenia odwołań wewnętrzny; w związku z tym implementacja nie wymaga dodatkowego kodu.  
+6.  Implementowanie <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CreateKeyIdentifierClause%28System.IdentityModel.Tokens.SecurityToken%2CSystem.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle%29> metody. Ta metoda jest wywoływana przez strukturę zabezpieczeń WCF, jeśli wymaga odwołania do wystąpienia tokenu zabezpieczeń reprezentowanego przez tę klasę Parametry tokenu zabezpieczeń. Zarówno rzeczywiste zabezpieczeń tokenu wystąpienie i <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle> , który określa typ odwołania, który jest wymagany są przekazywane do tej metody jako argumenty. W tym przykładzie tylko wewnętrzne odwołania są obsługiwane przez karty kredytowej tokenu zabezpieczającego. <xref:System.IdentityModel.Tokens.SecurityToken> Klasa ma funkcje do tworzenia odwołań wewnętrzny; w związku z tym implementacja nie wymaga dodatkowego kodu.  
   
-7.  Implementowanie <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InitializeSecurityTokenRequirement%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> metody. Ta metoda jest wywoływana przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] przekonwertować zabezpieczeń wystąpienie do wystąpienia klasy Parametry tokenu <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> klasy. Aby utworzyć wystąpienie tokenu zabezpieczeń odpowiednich przez dostawców tokenów zabezpieczeń zostanie użyty wynik.  
+7.  Implementowanie <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InitializeSecurityTokenRequirement%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> metody. Ta metoda jest wywoływana przez usługi WCF, aby przekonwertować wystąpienie klasy Parametry tokenu zabezpieczeń wystąpienia <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> klasy. Aby utworzyć wystąpienie tokenu zabezpieczeń odpowiednich przez dostawców tokenów zabezpieczeń zostanie użyty wynik.  
   
      [!code-csharp[c_CustomToken#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#2)]
      [!code-vb[c_CustomToken#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#2)]  
   
- Tokeny zabezpieczające są przesyłane w wiadomości SOAP, które wymaga mechanizm tłumaczenia między reprezentacja tokenu zabezpieczeń w pamięci i reprezentacja w locie. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] używa Serializator tokenu zabezpieczającego, aby wykonać to zadanie. Każdy token niestandardowy musi towarzyszyć Serializator tokenu zabezpieczającego niestandardowych, które mogą serializacji i deserializacji tokenu zabezpieczającego niestandardowych z komunikatu protokołu SOAP.  
+ Tokeny zabezpieczające są przesyłane w wiadomości SOAP, które wymaga mechanizm tłumaczenia między reprezentacja tokenu zabezpieczeń w pamięci i reprezentacja w locie. WCF używa Serializator tokenu zabezpieczającego, aby wykonać to zadanie. Każdy token niestandardowy musi towarzyszyć Serializator tokenu zabezpieczającego niestandardowych, które mogą serializacji i deserializacji tokenu zabezpieczającego niestandardowych z komunikatu protokołu SOAP.  
   
 > [!NOTE]
->  Pochodne klucze są domyślnie włączone. Jeśli utworzysz tokenu zabezpieczającego niestandardowych i używać go jako token podstawowy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pochodną klucza. Podczas tej czynności wywołuje niestandardowy Serializator tokenu zabezpieczającego zapisu <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause> dla tokenu zabezpieczającego niestandardowych podczas serializowania `DerivedKeyToken` można przewodowo. Na stronie odbierającej, podczas deserializacji tokenu poza umieszczonego w sieci `DerivedKeyToken` Serializator oczekuje `SecurityTokenReference` element jako element podrzędny najwyższego poziomu w samej siebie. Jeśli nie dodano Serializator tokenu zabezpieczającego niestandardowych `SecurityTokenReference` elementu podczas serializowania jego typ klauzuli, jest zgłaszany wyjątek.  
+>  Pochodne klucze są domyślnie włączone. Jeśli utworzysz tokenu zabezpieczającego niestandardowych i używać go jako token podstawowy, WCF pochodzi klucza z niego. Podczas tej czynności wywołuje niestandardowy Serializator tokenu zabezpieczającego zapisu <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause> dla tokenu zabezpieczającego niestandardowych podczas serializowania `DerivedKeyToken` można przewodowo. Na stronie odbierającej, podczas deserializacji tokenu poza umieszczonego w sieci `DerivedKeyToken` Serializator oczekuje `SecurityTokenReference` element jako element podrzędny najwyższego poziomu w samej siebie. Jeśli nie dodano Serializator tokenu zabezpieczającego niestandardowych `SecurityTokenReference` elementu podczas serializowania jego typ klauzuli, jest zgłaszany wyjątek.  
   
 #### <a name="to-create-a-custom-security-token-serializer"></a>Aby utworzyć serializatora tokenu zabezpieczeń niestandardowych  
   
@@ -138,7 +139,7 @@ W tym temacie przedstawiono sposób tworzenia tokenu zabezpieczeń niestandardow
      [!code-csharp[c_customToken#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#11)]
      [!code-vb[c_customToken#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#11)]  
   
- Klasa Parametry tokenu zabezpieczeń niestandardowe utworzone wcześniej umożliwia Poinformuj [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] framework zabezpieczeń tokenu zabezpieczającego niestandardowy musi być używany podczas komunikacji z usługą. W poniższej procedurze wyjaśniono, jak to zrobić.  
+ Klasa Parametry tokenu zabezpieczeń niestandardowych, utworzony wcześniej jest używana przez strukturę zabezpieczeń WCF stwierdzić, czy można użyć tokenu zabezpieczającego niestandardowych podczas komunikacji z usługą. W poniższej procedurze wyjaśniono, jak to zrobić.  
   
 #### <a name="to-integrate-the-custom-security-token-with-the-binding"></a>Integracja z powiązaniem tokenu zabezpieczającego niestandardowych  
   

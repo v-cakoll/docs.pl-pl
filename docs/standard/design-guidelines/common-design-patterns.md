@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570351"
 ---
 # <a name="common-design-patterns"></a>Wspólne wzorce projektowe
 Istnieje wiele książek na wzorce oprogramowania, wzorzec języków i antipatterns, które rozwiązują bardzo szeroki podmiotu wzorców. W związku z tym ten rozdział zawiera wskazówki i dyskusji związanych z bardzo ograniczony zestaw wzorców, które są często używane w projekcie interfejsów API architektury .NET Framework.  

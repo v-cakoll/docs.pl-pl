@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435867"
 ---
 # <a name="deprecated-clr-hosting-functions"></a><span data-ttu-id="1e7bb-102">Przestarzałe funkcje hostingu środowiska CLR</span><span class="sxs-lookup"><span data-stu-id="1e7bb-102">Deprecated CLR Hosting Functions</span></span>
 <span data-ttu-id="1e7bb-103">W tej sekcji opisano niezarządzane statyczne funkcje globalne, które używany w starszych wersjach programu obsługi interfejsu API.</span><span class="sxs-lookup"><span data-stu-id="1e7bb-103">This section describes the unmanaged global static functions that earlier versions of the hosting API used.</span></span>  

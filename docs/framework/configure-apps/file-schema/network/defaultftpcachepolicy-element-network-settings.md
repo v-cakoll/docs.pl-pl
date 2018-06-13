@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743150"
 ---
 # <a name="ltdefaultftpcachepolicygt-element-network-settings"></a><span data-ttu-id="5dc6a-102">&lt;defaultftpcachepolicy —&gt; — Element (ustawienia sieciowe)</span><span class="sxs-lookup"><span data-stu-id="5dc6a-102">&lt;defaultFtpCachePolicy&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="5dc6a-103">Opisuje, czy buforowanie FTP jest aktywna i opisano domyślne zasad buforowania.</span><span class="sxs-lookup"><span data-stu-id="5dc6a-103">Describes whether FTP caching is active and describes the default caching policy.</span></span>  

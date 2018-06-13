@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33433753"
 ---
 # <a name="iappidauthority-interface"></a><span data-ttu-id="e6c13-102">IAppIdAuthority — Interfejs</span><span class="sxs-lookup"><span data-stu-id="e6c13-102">IAppIdAuthority Interface</span></span>
 <span data-ttu-id="e6c13-103">Udostępnia metody, które Generowanie i klucze dla tożsamości aplikacji i odwołania do porównania.</span><span class="sxs-lookup"><span data-stu-id="e6c13-103">Provides methods that generate and compare keys for application identities and references.</span></span>  

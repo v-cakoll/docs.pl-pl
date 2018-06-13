@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591534"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Synchronizowanie danych na potrzeby wielowątkowości
 Wiele wątków może wykonywać wywołania do właściwości i metod pojedynczego obiektu, jest krytyczne zsynchronizowania wywołań. W przeciwnym razie jeden wątek może przerwać czynności inny wątek, a obiekt może pozostać w nieprawidłowym stanie. Klasa, której członkami są chronione przed przerw w zasilaniu nosi nazwę wątkowo.  

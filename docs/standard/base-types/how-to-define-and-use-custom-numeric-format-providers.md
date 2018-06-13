@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575827"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Porady: definiowanie i użycie niestandardowych dostawców formatu liczbowego
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Zapewnia szeroką gamę kontrolę nad reprezentację ciągu wartości liczbowych. Format wartości liczbowych dostosowywania obsługuje następujące funkcje:  

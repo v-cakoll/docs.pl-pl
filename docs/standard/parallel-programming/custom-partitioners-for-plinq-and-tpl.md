@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592369"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>Niestandardowe partycjonery dla PLINQ i TPL
 Do parallelize operacji na źródle danych, jest jednym z podstawowych kroków do *partycji* źródła do sekcje, które mogą być jednocześnie udostępniane przez wiele wątków. PLINQ i zadania biblioteki równoległych (TPL) zapewniają partycjonery domyślne, które działają w sposób przezroczysty podczas pisania zapytania równoległe lub <xref:System.Threading.Tasks.Parallel.ForEach%2A> pętli. Dla bardziej zaawansowanych scenariuszy można dodać własne partycjonera.  

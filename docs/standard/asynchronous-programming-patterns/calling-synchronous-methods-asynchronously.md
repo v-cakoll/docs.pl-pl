@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575498"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>Wywołanie metod synchronicznych w sposób asynchroniczny
 .NET Framework umożliwia asynchroniczne wywoływanie dowolnej metody. W tym celu należy zdefiniować delegata o tej samej sygnaturze jako metodę, która ma zostać wywołana; środowisko uruchomieniowe języka wspólnego automatycznie definiuje `BeginInvoke` i `EndInvoke` metody dla tego obiektu delegowanego z odpowiednim podpisem.  

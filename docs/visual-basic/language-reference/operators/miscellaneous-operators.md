@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598257"
 ---
 # <a name="miscellaneous-operators-visual-basic"></a>Różne operatory (Visual Basic)
 Poniżej przedstawiono różne operatory zdefiniowany w języku Visual Basic.  

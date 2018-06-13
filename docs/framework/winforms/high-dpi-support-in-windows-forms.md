@@ -14,6 +14,7 @@ ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34483544"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Wysokie DPI pomocy technicznej w formularzach systemu Windows
 

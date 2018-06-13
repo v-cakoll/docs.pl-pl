@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591862"
 ---
 # <a name="packaging-and-deploying-custom-my-extensions-visual-basic"></a>Pakowanie i wdrażanie niestandardowych rozszerzeń My (Visual Basic)
 Visual Basic umożliwia łatwe do wdrożenia niestandardowe `My` rozszerzeń nazw przy użyciu szablonów programu Visual Studio. Jeśli tworzysz szablon projektu, dla którego Twojej `My` rozszerzenia są integralną częścią nowy typ projektu, po prostu może zawierać niestandardowe `My` kod rozszerzenia w projekcie podczas eksportowania szablonu. Aby uzyskać więcej informacji na temat eksportowania szablonów projektu, zobacz [porady: Tworzenie szablonów projektów](/visualstudio/ide/how-to-create-project-templates).  

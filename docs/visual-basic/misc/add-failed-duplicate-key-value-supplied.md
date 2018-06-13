@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599778"
 ---
 # <a name="add-failed-duplicate-key-value-supplied"></a>Add nie powiodła się. Podano zduplikowaną wartość klucza
 `Add` Operacja nie powiodła się, ponieważ wartości klucza jest taka sama, jak dla innej wartości klucza. Wartości klucza muszą być unikatowe.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472753"
 ---
 # <a name="connection-string-syntax"></a>Składnia ciągu połączenia
 Każdy dostawca danych programu .NET Framework ma `Connection` obiekt dziedziczący z <xref:System.Data.Common.DbConnection> oraz specyficznych dla dostawcy <xref:System.Data.Common.DbConnection.ConnectionString%2A> właściwości. Składnia ciągu połączenia specyficzne dla każdego dostawcy jest udokumentowany w jego `ConnectionString` właściwości. W poniższej tabeli wymieniono dostawców cztery danych, które znajdują się w programie .NET Framework.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569723"
 ---
 # <a name="reading-an-xml-document-into-the-dom"></a>Odczytywanie dokumentu XML do modelu DOM
 Informacje o XML jest do odczytu do pamięci z różnych formatach. Mogą być odczytywane z ciągiem, strumienia, adres URL, czytnika tekstu lub klasy pochodzącej od <xref:System.Xml.XmlReader>.  

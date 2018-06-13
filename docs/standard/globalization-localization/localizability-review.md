@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576132"
 ---
 # <a name="localizability-review"></a>Sprawdzenie możliwości lokalizacji
 Sprawdzenie możliwości lokalizacji jest etap pośredni do tworzenia aplikacji gotowe. Sprawdzi, czy uniwersalnych aplikacji jest gotowy do lokalizacji i identyfikuje żadnego kodu lub aspekty interfejsu użytkownika, które wymagają specjalnej obsługi. Ten krok pozwala, upewnij się, że proces lokalizacji nie wprowadzi wad funkcjonalności do aplikacji. Jeśli zostały rozwiązane wszystkie problemy zgłoszone przez sprawdzenie, aplikacja jest gotowa do lokalizacji. W przypadku dokładne sprawdzenie, należy nie należy zmodyfikować każdy kod źródłowy podczas procesu lokalizacji.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572076"
 ---
 # <a name="automatic-memory-management"></a>Automatyczne zarządzanie pamięcią
 Automatyczne zarządzanie pamięcią jest jednym z usług, które udostępnia środowisko uruchomieniowe języka wspólnego [zarządzane wykonywania](../../docs/standard/managed-execution-process.md). Środowisko uruchomieniowe języka wspólnego przez moduł Garbage Collector zarządza alokacji i wersji pamięci dla aplikacji. Z perspektywy deweloperów oznacza to, że podczas tworzenia zarządzanych aplikacji nie trzeba pisać kodu wykonującego zadania zarządzania pamięcią. Funkcjonalność automatycznego zarządzania pamięcią może wyeliminować typowe problemy, takie jak zapominanie o zwalnianiu obiektów z pamięci, powodowanie przecieków pamięci czy próba uzyskania dostępu do pamięci dla obiektu, który został już zwolniony z pamięci. W tej części opisano, jak moduł odśmiecania pamięci przydziela i zwalnia pamięć.  

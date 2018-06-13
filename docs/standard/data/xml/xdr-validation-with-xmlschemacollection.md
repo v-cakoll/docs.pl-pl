@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569960"
 ---
 # <a name="xdr-validation-with-xmlschemacollection"></a>Weryfikowanie XDR przy użyciu kolekcji XmlSchemaCollection
 Jeśli jest sprawdzana poprawność względem schematu XML danych (XDR) są przechowywane w **kolekcji XmlSchemaCollection**, jest on skojarzony z przestrzenią nazw, identyfikator URI określony, jeśli schemat został dodany do kolekcji. **Elementu XmlValidatingReader** mapuje identyfikator URI przestrzeni nazw w dokumencie XML do schematu, do którego odnosi się do tego identyfikatora URI w kolekcji.  

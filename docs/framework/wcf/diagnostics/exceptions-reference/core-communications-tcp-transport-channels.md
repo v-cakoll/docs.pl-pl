@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33473110"
 ---
 # <a name="core-communications-tcp-transport-channels"></a>Komunikacja podstawowa: kanały transportu TCP
 W tym temacie wymieniono wszystkie wyjątki generowane przez kanały transportu TCP.  

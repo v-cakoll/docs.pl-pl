@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571488"
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>Kompilacja schematu kolekcji XmlSchemaCollection
 **Kolekcji XmlSchemaCollection** pamięci podręcznej lub biblioteki, gdzie schematy języka (XSD) definicji XML danych (XDR) i schemat XML może być przechowywane i sprawdzania poprawności. **Kolekcji XmlSchemaCollection** zwiększa wydajność, buforując schematów w pamięci zamiast dostępu do nich z pliku lub adres URL.  

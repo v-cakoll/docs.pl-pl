@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572063"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-arrays"></a>Wykonywanie niezależnych od kultury operacji na ciągach w tablicach
 Overloads z <xref:System.Array.Sort%2A?displayProperty=nameWithType> i <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> metody wykonanie zależne od kultury sortowania przy użyciu domyślnego <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> właściwości. Zależne od kultury wyników zwróconych w wyniku tych metod można różnią się zależnie od kultury z powodu różnic w kolejności sortowania. Aby wyeliminować zachowanie zależne od kultury, użyj jednej z przeciążenia tej metody, która akceptuje `comparer` parametru. `comparer` Określa parametr <xref:System.Collections.IComparer> wdrożenia do użycia podczas porównywania elementów w tablicy. W przypadku parametru określić klasy niestandardowej funkcji porównującej niezmienna, która używa <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Przykład klasy niestandardowej funkcji porównującej niezmiennej znajduje się w podrzędnym "Przy użyciu klasy SortedList" tematu [wykonywanie niezależnych od kultury operacje na ciągach w kolekcjach](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) tematu.  

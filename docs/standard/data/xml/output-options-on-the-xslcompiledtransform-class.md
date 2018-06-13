@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572099"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>Opcje wyjściowe klasy XslCompiledTransform
 W tym temacie opisano dostępne opcje wyjściowe XSLT. Opcje wyjściowe można określić w arkuszu stylów lub na <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metody.  

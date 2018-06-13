@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567292"
 ---
 # <a name="asynchronous-programming-using-delegates"></a>Programowanie asynchroniczne przy użyciu delegatów
 Obiekty delegowane umożliwiają wywołania metody synchroniczne w sposób asynchroniczny. Gdy delegata należy wywołać synchronicznie, `Invoke` metoda wywołuje metodę docelowego bezpośrednio w bieżącym wątku. Jeśli `BeginInvoke` metoda jest wywoływana, środowisko uruchomieniowe języka wspólnego (CLR) kolejkuje żądanie i natychmiast zwraca do obiektu wywołującego. Metoda docelowy jest wywoływana asynchronicznie w wątku z puli wątków. Oryginalnego wątku przesłane żądanie, będzie mógł kontynuować równolegle z metodą docelową. Jeśli metoda wywołania zwrotnego został określony w wywołaniu `BeginInvoke` , metody wywołania zwrotnego wywoływana jest metoda po zakończeniu metody docelowej. W przypadku metody wywołania zwrotnego `EndInvoke` metoda uzyskuje wartość zwracaną i wszelkie parametry wejścia/wyjścia lub w trybie tylko do danych wyjściowych. Jeśli zostanie określona żadna metoda wywołania zwrotnego, podczas wywoływania metody `BeginInvoke`, `EndInvoke` można wywołać z wątku, który wywołuje `BeginInvoke`.  

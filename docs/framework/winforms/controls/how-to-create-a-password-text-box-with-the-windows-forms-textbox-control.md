@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534303"
 ---
 # <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a><span data-ttu-id="c7f44-102">Porady: tworzenie pola tekstowego hasła za pomocą formantu TextBox formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="c7f44-102">How to: Create a Password Text Box with the Windows Forms TextBox Control</span></span>
 <span data-ttu-id="c7f44-103">Pole hasła jest pole tekstowe formularzy systemu Windows, które wyświetla symboli zastępczych, gdy użytkownik wpisuje ciąg znaków.</span><span class="sxs-lookup"><span data-stu-id="c7f44-103">A password box is a Windows Forms text box that displays placeholder characters while a user types a string.</span></span>  

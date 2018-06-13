@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339868"
 ---
 # <a name="quantifier-operations-c"></a><span data-ttu-id="d0179-102">Operacje kwantyfikatora (C#)</span><span class="sxs-lookup"><span data-stu-id="d0179-102">Quantifier Operations (C#)</span></span>
 <span data-ttu-id="d0179-103">Operacje kwantyfikatora zwracać <xref:System.Boolean> wartość, która wskazuje, czy niektóre lub wszystkie elementy w sekwencji spełniają warunek.</span><span class="sxs-lookup"><span data-stu-id="d0179-103">Quantifier operations return a <xref:System.Boolean> value that indicates whether some or all of the elements in a sequence satisfy a condition.</span></span>  

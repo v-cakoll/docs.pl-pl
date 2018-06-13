@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540907"
 ---
 # <a name="rendering-controls-with-visual-styles"></a><span data-ttu-id="4a861-102">Renderowanie formantów przy użyciu stylów wizualnych</span><span class="sxs-lookup"><span data-stu-id="4a861-102">Rendering Controls with Visual Styles</span></span>
 <span data-ttu-id="4a861-103">[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Zapewnia obsługę renderowania kontrolek i innych użytkowników systemu Windows elementy interfejsu użytkownika przy użyciu stylów wizualnych w systemach operacyjnych, które je obsługują.</span><span class="sxs-lookup"><span data-stu-id="4a861-103">The [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] provides support for rendering controls and other Windows user interface (UI) elements using visual styles in operating systems that support them.</span></span> <span data-ttu-id="4a861-104">W tym temacie omówiono kilka poziomów obsługi w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dla formantów renderowania i inne elementy interfejsu użytkownika z aktualnym stylu wizualnym systemu operacyjnego.</span><span class="sxs-lookup"><span data-stu-id="4a861-104">This topic discusses the several levels of support in the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] for rendering controls and other UI elements with the current visual style of the operating system.</span></span>  

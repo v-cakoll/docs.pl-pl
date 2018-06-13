@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335487"
 ---
 # <a name="refactoring-using-an-extension-method-c"></a><span data-ttu-id="27883-102">Refaktoryzacja za pomocą metody rozszerzenia (C#)</span><span class="sxs-lookup"><span data-stu-id="27883-102">Refactoring Using an Extension Method (C#)</span></span>
 <span data-ttu-id="27883-103">W tym przykładzie opiera się na poprzednim przykładzie [pobieranie tekstu akapitów (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), przez łączenie ciągów za pomocą czystej funkcji, który jest implementowany jako metodę rozszerzenie refaktoryzacji.</span><span class="sxs-lookup"><span data-stu-id="27883-103">This example builds on the previous example, [Retrieving the Text of the Paragraphs (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), by refactoring the concatenation of strings using a pure function that is implemented as an extension method.</span></span>  

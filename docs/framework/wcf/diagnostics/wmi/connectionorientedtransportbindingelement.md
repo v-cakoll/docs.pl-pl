@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33487451"
 ---
 # <a name="connectionorientedtransportbindingelement"></a><span data-ttu-id="785c7-102">ConnectionOrientedTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="785c7-102">ConnectionOrientedTransportBindingElement</span></span>
 <span data-ttu-id="785c7-103">ConnectionOrientedTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="785c7-103">ConnectionOrientedTransportBindingElement</span></span>  

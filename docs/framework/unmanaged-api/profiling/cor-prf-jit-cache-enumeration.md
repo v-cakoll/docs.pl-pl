@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450707"
 ---
 # <a name="corprfjitcache-enumeration"></a><span data-ttu-id="9182c-102">COR_PRF_JIT_CACHE — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="9182c-102">COR_PRF_JIT_CACHE Enumeration</span></span>
 <span data-ttu-id="9182c-103">Wskazuje wynik wyszukiwania funkcji pamięci podręcznej.</span><span class="sxs-lookup"><span data-stu-id="9182c-103">Indicates the result of a cached function search.</span></span>  

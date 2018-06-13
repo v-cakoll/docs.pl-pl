@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333043"
 ---
 # <a name="basic-linq-query-operations-c"></a><span data-ttu-id="402de-102">Podstawowe operacje zapytań LINQ (C#)</span><span class="sxs-lookup"><span data-stu-id="402de-102">Basic LINQ Query Operations (C#)</span></span>
 <span data-ttu-id="402de-103">Ten temat zawiera krótkie wprowadzenie do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania wyrażeń i niektóre rodzaje typowych operacji wykonywanych w zapytaniu.</span><span class="sxs-lookup"><span data-stu-id="402de-103">This topic gives a brief introduction to [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query expressions and some of the typical kinds of operations that you perform in a query.</span></span> <span data-ttu-id="402de-104">Bardziej szczegółowe informacje są w następujących tematach:</span><span class="sxs-lookup"><span data-stu-id="402de-104">More detailed information is in the following topics:</span></span>  

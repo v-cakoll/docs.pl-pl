@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493201"
 ---
 # <a name="correlation-overview"></a><span data-ttu-id="5f8fd-102">Przegląd korelacji</span><span class="sxs-lookup"><span data-stu-id="5f8fd-102">Correlation Overview</span></span>
 <span data-ttu-id="5f8fd-103">Korelacja jest mechanizm dotyczących komunikatów usługi przepływu pracy lub stan wystąpienia aplikacji, takich jak odpowiedzi na żądanie początkowej lub identyfikator określonej kolejności stanu utrwalonego kolejność przetwarzania przepływu pracy.</span><span class="sxs-lookup"><span data-stu-id="5f8fd-103">Correlation is the mechanism for relating workflow service messages to each other or to the application instance state, such as a reply to an initial request, or a particular order ID to the persisted state of an order-processing workflow.</span></span> <span data-ttu-id="5f8fd-104">Ten temat zawiera przegląd korelacji.</span><span class="sxs-lookup"><span data-stu-id="5f8fd-104">This topic provides an overview of correlation.</span></span> <span data-ttu-id="5f8fd-105">W innych tematach w tej sekcji zawierają dodatkowe informacje dla każdego typu korelacji.</span><span class="sxs-lookup"><span data-stu-id="5f8fd-105">The other topics in this section provide additional information for each type of correlation.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33486495"
 ---
 # <a name="systemservicemodelsecuritysecuritynewserversessionkeyissued"></a><span data-ttu-id="3acf6-102">System.ServiceModel.Security.SecurityNewServerSessionKeyIssued</span><span class="sxs-lookup"><span data-stu-id="3acf6-102">System.ServiceModel.Security.SecurityNewServerSessionKeyIssued</span></span>
 <span data-ttu-id="3acf6-103">System.ServiceModel.Security.SecurityNewServerSessionKeyIssued</span><span class="sxs-lookup"><span data-stu-id="3acf6-103">System.ServiceModel.Security.SecurityNewServerSessionKeyIssued</span></span>  

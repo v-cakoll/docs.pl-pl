@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333931"
 ---
 # <a name="finding-text-in-word-documents-c"></a><span data-ttu-id="9d99a-102">Wyszukiwanie tekstu w dokumentach programu Word (C#)</span><span class="sxs-lookup"><span data-stu-id="9d99a-102">Finding Text in Word Documents (C#)</span></span>
 <span data-ttu-id="9d99a-103">W tym temacie rozszerza poprzednich zapytań do zrobienia czegoś przydatne: Znajdź wszystkie wystąpienia ciągu w dokumencie.</span><span class="sxs-lookup"><span data-stu-id="9d99a-103">This topic extends the previous queries to do something useful: find all occurrences of a string in the document.</span></span>  

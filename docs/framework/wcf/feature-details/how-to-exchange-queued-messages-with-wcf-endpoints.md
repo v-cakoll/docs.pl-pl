@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494660"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a><span data-ttu-id="96aab-102">Instrukcje: Wymiana komunikatów znajdujących się w kolejce z punktami końcowymi WCF</span><span class="sxs-lookup"><span data-stu-id="96aab-102">How to: Exchange Queued Messages with WCF Endpoints</span></span>
 <span data-ttu-id="96aab-103">Kolejek upewnij się, że niezawodna obsługa komunikatów może wystąpić między klientem i usługą Windows Communication Foundation (WCF) nawet, jeśli usługa nie jest dostępna podczas komunikacji.</span><span class="sxs-lookup"><span data-stu-id="96aab-103">Queues ensure that reliable messaging can occur between a client and a Windows Communication Foundation (WCF) service, even if the service is not available at the time of communication.</span></span> <span data-ttu-id="96aab-104">Poniższe procedury przedstawiają sposób zapewnienia niezawodna komunikacja między klientem a usługą przy użyciu standardu Zakolejkowane powiązanie podczas wdrażania usługi WCF.</span><span class="sxs-lookup"><span data-stu-id="96aab-104">The following procedures show how to ensure durable communication between a client and a service by using the standard queued binding when implementing the WCF service.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536697"
 ---
 # <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a><span data-ttu-id="8667e-102">Porady: zaznaczanie tekstu w formancie TextBox formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="8667e-102">How to: Select Text in the Windows Forms TextBox Control</span></span>
 <span data-ttu-id="8667e-103">Zaznacz tekst programowo w formularzach systemu Windows <xref:System.Windows.Forms.TextBox> formantu.</span><span class="sxs-lookup"><span data-stu-id="8667e-103">You can select text programmatically in the Windows Forms <xref:System.Windows.Forms.TextBox> control.</span></span> <span data-ttu-id="8667e-104">Na przykład Utwórz funkcję, która umożliwia wyszukiwanie tekstu dla określonego ciągu, można wybrać tekst, który wizualnie alertów czytnik pozycji znaleziony ciąg.</span><span class="sxs-lookup"><span data-stu-id="8667e-104">For example, if you create a function that searches text for a particular string, you can select the text to visually alert the reader of the found string's position.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540647"
 ---
 # <a name="windows-forms-data-binding"></a><span data-ttu-id="48b91-102">Powiązywanie danych formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="48b91-102">Windows Forms Data Binding</span></span>
 <span data-ttu-id="48b91-103">Powiązanie danych w formularzach systemu Windows zapewnia sposób wyświetlania i wprowadź zmiany do informacji ze źródła danych w kontrolek w formularzu.</span><span class="sxs-lookup"><span data-stu-id="48b91-103">Data binding in Windows Forms gives you the means to display and make changes to information from a data source in controls on the form.</span></span> <span data-ttu-id="48b91-104">Można powiązać zarówno źródeł danych tradycyjnych, jak i prawie każdego struktury, która zawiera dane.</span><span class="sxs-lookup"><span data-stu-id="48b91-104">You can bind to both traditional data sources as well as almost any structure that contains data.</span></span>  

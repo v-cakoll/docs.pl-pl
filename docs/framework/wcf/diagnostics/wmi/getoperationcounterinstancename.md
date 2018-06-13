@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33486530"
 ---
 # <a name="getoperationcounterinstancename"></a><span data-ttu-id="618c2-102">GetOperationCounterInstanceName</span><span class="sxs-lookup"><span data-stu-id="618c2-102">GetOperationCounterInstanceName</span></span>
 <span data-ttu-id="618c2-103">Pobiera nazwę wystąpienia licznika wydajności operacji.</span><span class="sxs-lookup"><span data-stu-id="618c2-103">Retrieves the operation performance counter instance name.</span></span>  

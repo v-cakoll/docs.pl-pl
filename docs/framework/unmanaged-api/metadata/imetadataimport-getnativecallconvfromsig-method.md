@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447243"
 ---
 # <a name="imetadataimportgetnativecallconvfromsig-method"></a><span data-ttu-id="1f8fa-102">IMetaDataImport::GetNativeCallConvFromSig — Metoda</span><span class="sxs-lookup"><span data-stu-id="1f8fa-102">IMetaDataImport::GetNativeCallConvFromSig Method</span></span>
 <span data-ttu-id="1f8fa-103">Pobiera natywnego Konwencję wywoływania dla metody, która jest reprezentowana przez wskaźnik określoną sygnaturą.</span><span class="sxs-lookup"><span data-stu-id="1f8fa-103">Gets the native calling convention for the method that is represented by the specified signature pointer.</span></span>  

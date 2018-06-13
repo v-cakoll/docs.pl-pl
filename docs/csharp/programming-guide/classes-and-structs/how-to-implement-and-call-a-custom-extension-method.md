@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340310"
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a><span data-ttu-id="88c67-102">Porady: implementowanie i wywołanie niestandardowej metody rozszerzenia (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="88c67-102">How to: Implement and Call a Custom Extension Method (C# Programming Guide)</span></span>
 <span data-ttu-id="88c67-103">W tym temacie pokazano, jak wdrożyć własne metody rozszerzenia dla dowolnego typu .NET.</span><span class="sxs-lookup"><span data-stu-id="88c67-103">This topic shows how to implement your own extension methods for any .NET type.</span></span> <span data-ttu-id="88c67-104">Kod klienta można użyć metody rozszerzenia Dodawanie odwołania do pliku DLL zawierającego je i dodawanie [przy użyciu](../../../csharp/language-reference/keywords/using-directive.md) dyrektywy, który określa przestrzeń nazw, w którym zdefiniowano metody rozszerzenia.</span><span class="sxs-lookup"><span data-stu-id="88c67-104">Client code can use your extension methods by adding a reference to the DLL that contains them, and adding a [using](../../../csharp/language-reference/keywords/using-directive.md) directive that specifies the namespace in which the extension methods are defined.</span></span>  

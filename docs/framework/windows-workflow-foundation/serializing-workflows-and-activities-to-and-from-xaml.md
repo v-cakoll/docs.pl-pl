@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520256"
 ---
 # <a name="serializing-workflows-and-activities-to-and-from-xaml"></a><span data-ttu-id="fc008-102">Serializacja przepływów pracy i działań do i z XAML</span><span class="sxs-lookup"><span data-stu-id="fc008-102">Serializing Workflows and Activities to and from XAML</span></span>
 <span data-ttu-id="fc008-103">Oprócz kompilowany do typów, które znajdują się w zestawach definicji przepływu pracy może być Zserializowany w języku XAML.</span><span class="sxs-lookup"><span data-stu-id="fc008-103">In addition to being compiled into types that are contained in assemblies, workflow definitions can also be serialized to XAML.</span></span> <span data-ttu-id="fc008-104">Te definicje serializacji można wykorzystać do edycji lub inspekcję, przekazany do system kompilacji dla kompilacji, i załadować wywołany.</span><span class="sxs-lookup"><span data-stu-id="fc008-104">These serialized definitions can be reloaded for editing or inspection, passed to a build system for compilation, or loaded and invoked.</span></span> <span data-ttu-id="fc008-105">Ten temat zawiera omówienie serializacji definicji przepływu pracy oraz pracy z definicji przepływu pracy XAML.</span><span class="sxs-lookup"><span data-stu-id="fc008-105">This topic provides an overview of serializing workflow definitions and working with XAML workflow definitions.</span></span>  

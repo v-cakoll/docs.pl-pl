@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543422"
 ---
 # <a name="how-to-determine-if-a-data-format-is-present-in-a-data-object"></a><span data-ttu-id="dade7-102">Jak określić, czy format danych jest obecny w obiekcie danych</span><span class="sxs-lookup"><span data-stu-id="dade7-102">How to: Determine if a Data Format is Present in a Data Object</span></span>
 <span data-ttu-id="dade7-103">W poniższych przykładach pokazano, jak używać różnych <xref:System.Windows.DataObject.GetDataPresent%2A> przeciążanie metod do zapytania, czy format danych znajduje się w obiekcie danych.</span><span class="sxs-lookup"><span data-stu-id="dade7-103">The following examples show how to use the various <xref:System.Windows.DataObject.GetDataPresent%2A> method overloads to query whether a particular data format is present in a data object.</span></span>  

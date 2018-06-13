@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438421"
 ---
 # <a name="ihostmemorymanagerneedsvirtualaddressspace-method"></a><span data-ttu-id="b85d3-102">IHostMemoryManager::NeedsVirtualAddressSpace — Metoda</span><span class="sxs-lookup"><span data-stu-id="b85d3-102">IHostMemoryManager::NeedsVirtualAddressSpace Method</span></span>
 <span data-ttu-id="b85d3-103">Powiadamia hosta, że środowisko uruchomieniowe języka wspólnego (CLR) ma próbować używać pamięci określony.</span><span class="sxs-lookup"><span data-stu-id="b85d3-103">Notifies the host that the common language runtime (CLR) is going to attempt to use the specified memory.</span></span>  

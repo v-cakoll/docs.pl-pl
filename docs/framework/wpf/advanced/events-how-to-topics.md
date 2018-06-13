@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543530"
 ---
 # <a name="events-how-to-topics"></a><span data-ttu-id="49a43-102">Zdarzenia Tematy porad</span><span class="sxs-lookup"><span data-stu-id="49a43-102">Events How-to Topics</span></span>
 <span data-ttu-id="49a43-103">Tematy w tej sekcji opisano sposób korzystanie ze zdarzeń w WPF.</span><span class="sxs-lookup"><span data-stu-id="49a43-103">The topics in this section describe how to use events in WPF.</span></span>  

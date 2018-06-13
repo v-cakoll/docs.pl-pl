@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449263"
 ---
 # <a name="imetadataemit2savedeltatostream-method"></a><span data-ttu-id="d91d1-102">IMetaDataEmit2::SaveDeltaToStream — Metoda</span><span class="sxs-lookup"><span data-stu-id="d91d1-102">IMetaDataEmit2::SaveDeltaToStream Method</span></span>
 <span data-ttu-id="d91d1-103">Zapisuje zmiany z bieżącej sesji edit-and-continue określonego strumienia.</span><span class="sxs-lookup"><span data-stu-id="d91d1-103">Saves changes from the current edit-and-continue session to the specified stream.</span></span>  

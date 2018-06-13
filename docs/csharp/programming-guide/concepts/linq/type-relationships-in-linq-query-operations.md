@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339582"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a><span data-ttu-id="69f3a-102">Relacje typu w operacjach zapytań LINQ (C#)</span><span class="sxs-lookup"><span data-stu-id="69f3a-102">Type Relationships in LINQ Query Operations (C#)</span></span>
 <span data-ttu-id="69f3a-103">Skutecznie pisać zapytania, należy zrozumieć, jak typy zmiennych w operacji zapytania ukończone wszystkie powiązane ze sobą relacjami.</span><span class="sxs-lookup"><span data-stu-id="69f3a-103">To write queries effectively, you should understand how types of the variables in a complete query operation all relate to each other.</span></span> <span data-ttu-id="69f3a-104">Jeśli znasz te relacje będzie łatwo pojmować [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] przykłady i przykładów kodu w dokumentacji.</span><span class="sxs-lookup"><span data-stu-id="69f3a-104">If you understand these relationships you will more easily comprehend the [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] samples and code examples in the documentation.</span></span> <span data-ttu-id="69f3a-105">Ponadto będzie zrozumiałe, występujące w tle podczas wpisywania niejawnie za pomocą zmiennych `var`.</span><span class="sxs-lookup"><span data-stu-id="69f3a-105">Furthermore, you will understand what occurs behind the scenes when variables are implicitly typed by using `var`.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234760"
 ---
 # <a name="protected-visual-basic"></a><span data-ttu-id="abea1-102">Protected (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="abea1-102">Protected (Visual Basic)</span></span>
 <span data-ttu-id="abea1-103">Modyfikator dostępu elementu członkowskiego, który określa, że co najmniej jeden zadeklarowany element programistyczny jest dostępny tylko w obrębie swojej klasy lub z klasy pochodnej.</span><span class="sxs-lookup"><span data-stu-id="abea1-103">A member access modifier that specifies that one or more declared programming elements are accessible only from within their own class or from a derived class.</span></span>  

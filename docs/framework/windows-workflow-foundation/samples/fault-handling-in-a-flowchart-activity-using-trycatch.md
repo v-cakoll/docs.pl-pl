@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518066"
 ---
 # <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a><span data-ttu-id="4692a-102">Obsługa w działaniu Flowchart przy użyciu TryCatch błędów</span><span class="sxs-lookup"><span data-stu-id="4692a-102">Fault Handling in a Flowchart Activity Using TryCatch</span></span>
 <span data-ttu-id="4692a-103">W tym przykładzie pokazano sposób <xref:System.Activities.Statements.TryCatch> działanie może być używane w ramach działania przepływu sterowania złożonego.</span><span class="sxs-lookup"><span data-stu-id="4692a-103">This sample shows how the <xref:System.Activities.Statements.TryCatch> activity can be used within a complex control flow activity.</span></span>  

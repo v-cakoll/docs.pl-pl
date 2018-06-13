@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449787"
 ---
 # <a name="corprfcodeinfo-structure"></a><span data-ttu-id="e3e85-102">COR_PRF_CODE_INFO — Struktura</span><span class="sxs-lookup"><span data-stu-id="e3e85-102">COR_PRF_CODE_INFO Structure</span></span>
 <span data-ttu-id="e3e85-103">Reprezentuje jeden ciągły blok kodu natywnego przechowywane w pamięci.</span><span class="sxs-lookup"><span data-stu-id="e3e85-103">Represents one contiguous block of native code stored in memory.</span></span>  

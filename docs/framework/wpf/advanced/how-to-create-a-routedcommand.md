@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544116"
 ---
 # <a name="how-to-create-a-routedcommand"></a><span data-ttu-id="5ea7f-102">Porady: tworzenie RoutedCommand</span><span class="sxs-lookup"><span data-stu-id="5ea7f-102">How to: Create a RoutedCommand</span></span>
 <span data-ttu-id="5ea7f-103">W tym przykładzie przedstawiono sposób tworzenia niestandardowego <xref:System.Windows.Input.RoutedCommand> i implementowania polecenia niestandardowych tworząc <xref:System.Windows.Input.ExecutedRoutedEventHandler> i <xref:System.Windows.Input.CanExecuteRoutedEventHandler> i dołączać do <xref:System.Windows.Input.CommandBinding>.</span><span class="sxs-lookup"><span data-stu-id="5ea7f-103">This example shows how to create a custom <xref:System.Windows.Input.RoutedCommand> and how to implement the custom command by creating a <xref:System.Windows.Input.ExecutedRoutedEventHandler> and a <xref:System.Windows.Input.CanExecuteRoutedEventHandler> and attaching them to a <xref:System.Windows.Input.CommandBinding>.</span></span>  <span data-ttu-id="5ea7f-104">Aby uzyskać więcej informacji na wydawanie poleceń, zobacz [droższe omówienie](../../../../docs/framework/wpf/advanced/commanding-overview.md).</span><span class="sxs-lookup"><span data-stu-id="5ea7f-104">For more information on commanding, see the [Commanding Overview](../../../../docs/framework/wpf/advanced/commanding-overview.md).</span></span>  

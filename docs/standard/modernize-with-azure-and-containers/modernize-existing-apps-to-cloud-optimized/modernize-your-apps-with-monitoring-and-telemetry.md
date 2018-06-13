@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33958231"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a><span data-ttu-id="0b5e4-103">Modernizacji aplikacjami za pomocą monitorowania i telemetrii</span><span class="sxs-lookup"><span data-stu-id="0b5e4-103">Modernize your apps with monitoring and telemetry</span></span>
 

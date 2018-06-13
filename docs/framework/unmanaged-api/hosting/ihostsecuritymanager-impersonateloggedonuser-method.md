@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439988"
 ---
 # <a name="ihostsecuritymanagerimpersonateloggedonuser-method"></a><span data-ttu-id="f1b8e-102">IHostSecurityManager::ImpersonateLoggedOnUser — Metoda</span><span class="sxs-lookup"><span data-stu-id="f1b8e-102">IHostSecurityManager::ImpersonateLoggedOnUser Method</span></span>
 <span data-ttu-id="f1b8e-103">Żądania który kodu można wykonać przy użyciu poświadczeń Bieżąca tożsamość użytkownika.</span><span class="sxs-lookup"><span data-stu-id="f1b8e-103">Requests that code be executed using the credentials of the current user identity.</span></span>  

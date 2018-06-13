@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516526"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a><span data-ttu-id="a388e-102">Niestandardowe projektantów złożonego - Prezenterze elementy przepływu pracy</span><span class="sxs-lookup"><span data-stu-id="a388e-102">Custom Composite Designers - Workflow Items Presenter</span></span>
 <span data-ttu-id="a388e-103"><xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> Jest typem klucza w WF projektanta modelu programowania umożliwiający edytowanie kolekcję elementów zawartych w niej.</span><span class="sxs-lookup"><span data-stu-id="a388e-103">The <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> is a key type in the WF designer programming model that allows for the editing of a collection of contained elements.</span></span> <span data-ttu-id="a388e-104">W tym przykładzie pokazano, jak zbudować Projektant działań, która udostępnia można edytować kolekcji.</span><span class="sxs-lookup"><span data-stu-id="a388e-104">This sample shows how to build an activity designer that surfaces such an editable collection.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516194"
 ---
 # <a name="toolbox-service"></a><span data-ttu-id="2f7d1-102">Usługi przybornika</span><span class="sxs-lookup"><span data-stu-id="2f7d1-102">Toolbox Service</span></span>
 <span data-ttu-id="2f7d1-103">W tym przykładzie pokazano, jak zaktualizować [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] przybornika działań na podstawie kontekstu przepływu pracy.</span><span class="sxs-lookup"><span data-stu-id="2f7d1-103">This sample demonstrates how to update the [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] Toolbox activities based on the context of the workflow.</span></span> <span data-ttu-id="2f7d1-104">Próbka zawiera przepływ pracy, który zmieni zawartość przybornika według tego, czy wybrano działania niestandardowego.</span><span class="sxs-lookup"><span data-stu-id="2f7d1-104">The sample contains a workflow that changes the toolbox contents based on whether a custom activity is selected.</span></span>  

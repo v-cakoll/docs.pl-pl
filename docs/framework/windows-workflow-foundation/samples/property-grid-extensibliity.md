@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519597"
 ---
 # <a name="property-grid-extensibliity"></a><span data-ttu-id="7b382-102">Extensibliity siatki właściwości</span><span class="sxs-lookup"><span data-stu-id="7b382-102">Property Grid Extensibliity</span></span>
 <span data-ttu-id="7b382-103">Projektant można dostosować siatki właściwości wyświetlane w przypadku wybrania konkretnych działań w projektancie.</span><span class="sxs-lookup"><span data-stu-id="7b382-103">A developer can customize the property grid that is displayed when a given activity is selected within the designer.</span></span> <span data-ttu-id="7b382-104">Można to zrobić, aby utworzyć zaawansowane środowisko edycji.</span><span class="sxs-lookup"><span data-stu-id="7b382-104">This can be done to create a rich editing experience.</span></span> <span data-ttu-id="7b382-105">W tym przykładzie pokazano, jak to zrobić.</span><span class="sxs-lookup"><span data-stu-id="7b382-105">This sample shows how this can be done.</span></span>  

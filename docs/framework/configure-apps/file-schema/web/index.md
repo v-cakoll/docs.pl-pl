@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767482"
 ---
 # <a name="web-settings-schema"></a><span data-ttu-id="5d744-102">Schemat ustawień sieci Web</span><span class="sxs-lookup"><span data-stu-id="5d744-102">Web Settings Schema</span></span>
 <span data-ttu-id="5d744-103">Ustawienia sieci Web Określ procesora CPU i poziom wykonywania ustawień programu ASP.NET, które są stosowane do całego procesu zachowanie zarządzane przez program ASP.NET hosting warstwy.</span><span class="sxs-lookup"><span data-stu-id="5d744-103">Web settings specify CPU and execution-level ASP.NET settings that apply to process-wide behavior managed by the ASP.NET hosting layer.</span></span> <span data-ttu-id="5d744-104">Te ustawienia różnią się od ustawienia Typ domeny aplikacji, które są określone w pliku Web.config aplikacji ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="5d744-104">These settings differ from application domain-type settings that are specified in the Web.config file of an ASP.NET application.</span></span>  

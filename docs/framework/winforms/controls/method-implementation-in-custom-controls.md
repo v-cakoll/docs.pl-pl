@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538116"
 ---
 # <a name="method-implementation-in-custom-controls"></a><span data-ttu-id="18ee8-102">Implementacja metody w formantach niestandardowych</span><span class="sxs-lookup"><span data-stu-id="18ee8-102">Method Implementation in Custom Controls</span></span>
 <span data-ttu-id="18ee8-103">Metoda jest zaimplementowana w formancie w taki sam sposób, które metody są realizowane w innych składników.</span><span class="sxs-lookup"><span data-stu-id="18ee8-103">A method is implemented in a control in the same manner a method would be implemented in any other component.</span></span>  

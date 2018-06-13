@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396610"
 ---
 # <a name="using-an-asynchronous-server-socket"></a>Przy użyciu gniazda serwera asynchroniczne
 Gniazda asynchroniczne serwera umożliwia asynchroniczne model programowania .NET Framework przetworzyć żądania usługi sieci. <xref:System.Net.Sockets.Socket> Klasy następuje standardowego asynchroniczny wzorzec nazewnictwa .NET Framework; na przykład synchroniczne <xref:System.Net.Sockets.Socket.Accept%2A> metody odpowiada asynchroniczną <xref:System.Net.Sockets.Socket.BeginAccept%2A> i <xref:System.Net.Sockets.Socket.EndAccept%2A> metody.  

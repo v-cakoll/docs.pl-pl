@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364938"
 ---
 # <a name="how-to-generate-the-object-model-as-an-external-file"></a>Porady: Generowanie modelu obiektu jako zewnętrzny plik
 Jako alternatywę do mapowania na podstawie atrybutów można wygenerować modelu obiektu jako plik XML za pomocą narzędzia wiersza polecenia SQLMetal. Aby uzyskać więcej informacji, zobacz [SqlMetal.exe (narzędzie generowania kodu)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Za pomocą zewnętrznego pliku mapowania XML, możesz zaśmiecać w kodzie. Zachowanie można również zmienić, modyfikując plik zewnętrzny bez konieczności ponownego kompilowania plików binarnych aplikacji. Aby uzyskać więcej informacji, zobacz [zewnętrznych mapowania](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  

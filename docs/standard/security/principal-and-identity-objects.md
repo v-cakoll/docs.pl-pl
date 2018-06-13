@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590968"
 ---
 # <a name="principal-and-identity-objects"></a>Obiekty główne i obiekty tożsamości
 Zarządzany kod umożliwia odnalezienie tożsamość lub roli podmiot zabezpieczeń za pomocą <xref:System.Security.Principal.IPrincipal> obiekt, który zawiera odwołanie do <xref:System.Security.Principal.IIdentity> obiektu. Może być przydatne do porównania obiektów tożsamości i podstawowe do znanego pojęć, podobnie jak konta użytkowników i grup. W większości środowisk sieci kont użytkowników reprezentują osób lub programy, podczas gdy konta grupy reprezentują niektórych kategorii użytkowników i praw, które posiadają. Podobnie .NET Framework tożsamości reprezentować użytkowników, gdy reprezentują ról członkostwa i kontekstów zabezpieczeń. W programie .NET Framework obiekt główny hermetyzuje roli i obiektu tożsamości. Aplikacji programu .NET framework przyznać uprawnienia do podmiotu zabezpieczeń na podstawie jego tożsamość lub częściej, członkostwo w roli.  

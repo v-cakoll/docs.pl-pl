@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591888"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Wskazówki: filtrowanie danych wyjściowych My.Application.Log (Visual Basic)
 W tym przewodniku przedstawiono sposób zmiany domyślnego dziennika filtrowania `My.Application.Log` obiekt, aby kontrolować, jakie informacje są przekazywane z `Log` obiektu odbiorniki i jakie informacje są zapisywane przez odbiorniki. Zachowanie rejestrowania można zmienić nawet po tworzenia aplikacji, ponieważ informacje o konfiguracji są przechowywane w pliku konfiguracji aplikacji.  

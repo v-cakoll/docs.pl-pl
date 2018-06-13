@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365881"
 ---
 # <a name="code-contracts"></a>Kontrakty kodu
 Kontrakty kodu zapewniają możliwość określenia warunków wstępnych, postconditions i invariants obiektu w kodzie. Warunki wstępne są wymagania, które muszą zostać spełnione, wprowadzając metody lub właściwości. Postconditions opisano oczekiwań w czasie, który zamyka kodu metody lub właściwości. Obiekt invariants opisano oczekiwanym stanem dla klasy, która jest w dobrym stanie.  

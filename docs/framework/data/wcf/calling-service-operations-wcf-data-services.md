@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364859"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>Wywołania operacji usługi (usługi danych WCF)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Definiuje operacji usługi dla usługi danych. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Umożliwia zdefiniowanie takich operacji jako metody w usłudze danych. Podobnie jak inne zasoby usługi danych tych operacji usługi są adresowane za pomocą identyfikatorów URI. Operacja usługi może zwrócić kolekcji typów jednostek, wystąpień typów pojedynczej jednostki i typy pierwotne, takie jak liczba całkowita i ciąg. Operacja usługi można także wrócić `null` (`Nothing` w języku Visual Basic). [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Biblioteki klienta mogą być używane do dostępu operacji usługi, które obsługują żądania HTTP GET. Tego rodzaju operacje usług są zdefiniowane jako metody, które mają <xref:System.ServiceModel.Web.WebGetAttribute> zastosowane. Aby uzyskać więcej informacji, zobacz [operacji usługi](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  

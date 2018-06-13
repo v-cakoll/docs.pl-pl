@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387383"
 ---
 # <a name="mitigation-path-colon-checks"></a>Ograniczenie: Ścieżka dwukropek kontroli
 Począwszy od aplikacji przeznaczonych [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], liczba zmiany zostały wprowadzone obsługuje wcześniej nieobsługiwany ścieżek, (zarówno długość i format). W szczególności sprawdzanie składni separatora właściwego dysku (dwukropek) wprowadzono więcej poprawne.  

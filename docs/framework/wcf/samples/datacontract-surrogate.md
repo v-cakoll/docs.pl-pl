@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507866"
 ---
 # <a name="datacontract-surrogate"></a>DataContract — surogat
 W przykładzie pokazano, jak procesy, takie jak serializacji, deserializacji schematu eksportowania i importowania schematu można dostosować za pomocą kontraktu danych dwuskładnikowy klasy. Ten przykład przedstawia sposób użycia surogatu w przypadku scenariusza klienta i serwera, gdy dane są serializowane i przesyłane między klienta usługi Windows Communication Foundation (WCF) i usługi.  

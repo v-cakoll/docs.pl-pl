@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365660"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Aktualizowanie usługi danych (usługi danych WCF)
 Jeśli używasz [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteki klienta użycie [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych, biblioteki tłumaczy wpisy w źródle danych do wystąpienia klasy usługi danych klienta. Klasy usługi te dane są śledzone za pomocą <xref:System.Data.Services.Client.DataServiceContext> do którego <xref:System.Data.Services.Client.DataServiceQuery%601> należy. Klient śledzi zmiany do jednostki, które raportu za pomocą metod na <xref:System.Data.Services.Client.DataServiceContext>. Te metody włączyć klienta do śledzenia jednostek dodany i usunięty, a także zmiany wprowadzone do wartości właściwości lub relacje między wystąpieniami jednostki. Rejestrowane są wysyłane do usługi data jako opartego na interfejsie REST operacje podczas wywoływania <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> metody.  

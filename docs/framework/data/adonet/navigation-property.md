@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767404"
 ---
 # <a name="navigation-property"></a>Właściwość nawigacji
 A *właściwość nawigacji* jest opcjonalna właściwość na [typu jednostki](../../../../docs/framework/data/adonet/entity-type.md) umożliwiająca nawigacji z jednego [zakończenia](../../../../docs/framework/data/adonet/association-end.md) z [skojarzenia](../../../../docs/framework/data/adonet/association-type.md) do Data zakończenia. W odróżnieniu od innych [właściwości](../../../../docs/framework/data/adonet/property.md), właściwości nawigacji nie zawierają danych.  

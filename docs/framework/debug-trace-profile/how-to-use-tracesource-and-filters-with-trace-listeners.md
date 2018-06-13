@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388345"
 ---
 # <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>Porady: użycie TraceSource i filtrów z obiektami nasłuchującymi śledzenia
 Jedną z nowych funkcji w programie .NET Framework w wersji 2.0 to system rozszerzone śledzenie. Niezmieniona podstawowe lokalnych: śledzenie komunikaty są wysyłane za pośrednictwem przełączników do odbiorników, których dane raportu na średni skojarzone dane wyjściowe. Główną różnicą w wersji 2.0 jest można zainicjować za pomocą wystąpienia śladów <xref:System.Diagnostics.TraceSource> klasy. <xref:System.Diagnostics.TraceSource> jest przeznaczony do działania jako system rozszerzone śledzenie i można użyć zamiast metod statycznych starszej <xref:System.Diagnostics.Trace> i <xref:System.Diagnostics.Debug> klasy śledzenia. Znanych <xref:System.Diagnostics.Trace> i <xref:System.Diagnostics.Debug> klasy nadal istnieje, ale zalecaną praktyką jest użycie <xref:System.Diagnostics.TraceSource> klasy śledzenia.  

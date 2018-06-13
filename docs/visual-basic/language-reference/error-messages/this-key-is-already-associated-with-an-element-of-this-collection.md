@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593265"
 ---
 # <a name="this-key-is-already-associated-with-an-element-of-this-collection"></a>Ten klucz jest już skojarzony z elementem tej kolekcji
 Określony klucz dla członków kolekcji już identyfikuje innego członka kolekcji. Klucz jest określona w ciągu `Add` metodę, która unikatowo identyfikuje określonego elementu członkowskiego zbioru.  

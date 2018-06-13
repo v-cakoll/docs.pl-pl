@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592473"
 ---
 # <a name="managed-threading-best-practices"></a>Zarządzana wątkowość — najlepsze rozwiązania
 Wielowątkowość wymaga zachować ostrożność podczas programowania. W przypadku większości zadań można zmniejszyć złożoność kolejkowania wiadomości żądania do wykonania przez wątków z puli wątków. Ten temat dotyczy sytuacji trudniej, takich jak koordynowanie pracy wiele wątków, lub obsługa wątki tego bloku.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363117"
 ---
 # <a name="manipulating-data"></a>Manipulowania danymi
 Przed wprowadzeniem z wielu aktywnych zestawów wyników (MARS) deweloperzy było użycie wielu połączeń lub kursory po stronie serwera do rozwiązania niektórych scenariuszy. Gdy wiele połączeń były używane w sytuacji transakcyjnych, powiązany połączeń (z **sp_getbindtoken** i **procedury sp_bindsession**) były wymagane. W następujących scenariuszach przedstawiono sposób użycia połączenia z włączoną obsługą MARS zamiast wielu połączeń.  

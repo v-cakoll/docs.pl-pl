@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504188"
 ---
 # <a name="default-message-contract"></a>Domyślny kontrakt komunikatów
 Domyślny kontrakt komunikatów w przykładzie pokazano usługi, gdy wiadomość niestandardowe zdefiniowane przez użytkownika jest przekazywany do i z operacji usługi. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej interfejs Kalkulator jako typu usługi. Zamiast poszczególnych usług operacji dodawania, odejmowania mnożenia i dzielenia używane w [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), w tym przykładzie przekazuje niestandardowy komunikat, który zawiera argumenty operacji i operatora i zwraca wynik operacji arytmetycznych.  

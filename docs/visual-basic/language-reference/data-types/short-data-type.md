@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590715"
 ---
 # <a name="short-data-type-visual-basic"></a>Short — typ danych (Visual Basic)
 Blokad podpisany 16-bitowych liczb całkowitych (2-bajtowych) o wartości od-32 768 do 32 767.  

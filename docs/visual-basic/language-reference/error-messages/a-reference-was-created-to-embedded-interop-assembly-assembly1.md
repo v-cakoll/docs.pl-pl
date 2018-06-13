@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588135"
 ---
 # <a name="a-reference-was-created-to-embedded-interop-assembly-39ltassembly1gt39-because-of-an-indirect-reference-to-that-assembly-from-assembly-39ltassembly2gt39"></a>Utworzono odwołanie do osadzonego zestawu międzyoperacyjnego &#39; &lt;zestaw1&gt; &#39; z powodu pośredniego odwołania do tego zestawu z zestawu &#39; &lt;assembly2&gt;&#39;
 Utworzono odwołanie do osadzonego zestawu międzyoperacyjnego "\<zestaw1 >" z powodu pośredniego odwołania do tego zestawu z zestawu "\<assembly2 >". Rozważ zmianę właściwości "Osadź typy międzyoperacyjne" na jednym z zestawów.  

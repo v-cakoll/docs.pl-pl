@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508503"
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>Określanie transferu danych w kontraktach usług
 Windows Communication Foundation (WCF) mogą być uważane za infrastruktury obsługi wiadomości. Operacje usługi można odbierać wiadomości, ich przetworzyć i wysyłanie do nich wiadomości. Komunikaty są opisane przy użyciu kontrakty operacji. Na przykład należy wziąć pod uwagę następujące kontraktu.  

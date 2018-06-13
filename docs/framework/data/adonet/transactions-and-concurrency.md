@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365270"
 ---
 # <a name="transactions-and-concurrency"></a>Transakcje i współbieżność
 Transakcja składa się z jednego polecenia lub grupy poleceń, które są wykonywane w pakiecie. Transakcje pozwalają połączyć wiele operacji w pojedynczą jednostkę pracy. Jeśli wystąpi błąd w jednym punkcie w transakcji, wszystkie aktualizacje można go z powrotem obniżyć do stanu przed transakcji.  

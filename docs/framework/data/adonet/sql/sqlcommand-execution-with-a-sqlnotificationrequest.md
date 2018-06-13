@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365556"
 ---
 # <a name="sqlcommand-execution-with-a-sqlnotificationrequest"></a>Wykonywanie SqlCommand SqlNotificationRequest
 A <xref:System.Data.SqlClient.SqlCommand> można skonfigurować, aby wygenerować powiadomienie o zmianie danych po zostaną pobrane z serwera i zestawu wyników będzie inny, jeśli zostały ponownie wykonać zapytanie. Jest to przydatne w scenariuszach, w której chcesz użyć niestandardowych powiadomień kolejek na serwerze lub nie chcesz zachować obiektów na żywo.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579499"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Wykorzystywanie wzorca asynchronicznego opartego na zadaniach
 Gdy używasz opartego na zadaniach asynchronicznej wzorca (TAP) do pracy z operacji asynchronicznych służy wywołań zwrotnych do osiągnięcia oczekiwania bez blokowania.  W przypadku zadań to odbywa się za pośrednictwem metody takie jak <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. Obsługa komunikacji asynchronicznej opartych na języku ukrywa wywołania zwrotne zezwalając operacji asynchronicznych do dokumentów, w ramach przepływu sterowania normalne i kod wygenerowany przez kompilator obsługuje ten sam poziom interfejsu API.  

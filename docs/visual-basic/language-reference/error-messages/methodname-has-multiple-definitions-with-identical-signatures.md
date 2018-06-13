@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593733"
 ---
 # <a name="39ltmethodnamegt39-has-multiple-definitions-with-identical-signatures"></a>&#39;&lt;methodname&gt; &#39; ma wiele definicji o identycznych podpisach
 A `Function` lub `Sub` deklaracji procedury korzysta z listy nazwy i argument procedury identyczne jako poprzedniej deklaracji. Jedną z możliwych przyczyn jest próba przeciążenia oryginalne procedury. Przeciążone procedury musi mieć listy argumentów inny.  

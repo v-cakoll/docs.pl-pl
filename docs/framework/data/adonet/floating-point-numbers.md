@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764726"
 ---
 # <a name="floating-point-numbers"></a>Liczby zmiennoprzecinkowe
 W tym temacie opisano niektóre problemy napotykane przez programistów często podczas pracy z liczb zmiennoprzecinkowych w [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Te problemy są powodowane przez sposób przechowywania liczb zmiennoprzecinkowych komputerów i nie są specyficzne dla określonego dostawcy takich jak <xref:System.Data.SqlClient> lub <xref:System.Data.OracleClient>.  

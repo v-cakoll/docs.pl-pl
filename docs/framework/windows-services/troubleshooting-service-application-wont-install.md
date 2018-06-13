@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509663"
 ---
 # <a name="troubleshooting-service-application-won39t-install"></a>Rozwiązywanie problemów: Usługa aplikacji kupione&#39;instalacji t
 Jeśli aplikacja usługi nie zainstaluje się poprawnie, sprawdź, upewnij się, że <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> właściwość klasy usługi jest ustawiona na tę samą wartość, przedstawioną w Instalatorze dla tej usługi. Wartość musi być taka sama w obu przypadkach, aby poprawnie zainstalować usługi.  

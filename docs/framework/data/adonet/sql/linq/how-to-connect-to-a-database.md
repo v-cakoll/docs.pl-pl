@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362080"
 ---
 # <a name="how-to-connect-to-a-database"></a>Porady: połączenie z bazą danych
 <xref:System.Data.Linq.DataContext> Jest głównym połączenie za pomocą którego można nawiązać połączenia z bazą danych, pobrać obiekty i przesyłania zmian z powrotem na. Możesz użyć <xref:System.Data.Linq.DataContext> podobnie jak w przypadku [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] <xref:System.Data.SqlClient.SqlConnection>. W rzeczywistości <xref:System.Data.Linq.DataContext> jest inicjowany z połączenia lub parametry połączenia, które należy podać. Aby uzyskać więcej informacji, zobacz [metodę DataContext (Projektanta obiektów relacyjnych)](/visualstudio/data-tools/datacontext-methods-o-r-designer).  

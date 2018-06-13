@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592343"
 ---
 # <a name="version-tolerant-serialization"></a>Serializacji z tolerancją dla wersji
 W wersji 1.0, 1.1 programu .NET Framework Tworzenie typów możliwych do serializacji, które będą wielokrotnego użytku z jednej wersji aplikacji do następnego był kłopotliwy. Jeśli typ został zmodyfikowany przez dodanie pola dodatkowe, wystąpi następujących problemów:  

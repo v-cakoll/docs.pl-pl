@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588529"
 ---
 # <a name="how-to-log-exceptions-in-visual-basic"></a>Porady: wyjątki rejestru w Visual Basic
 Można użyć `My.Application.Log` i `My.Log` obiektów do rejestrowania informacji o wyjątków, które występują w aplikacji. Poniższe przykłady pokazują, jak użyć `My.Application.Log.WriteException` metody do rejestrowania wyjątków, które zostaną jawnie wychwycone i wyjątków, które są nieobsługiwane.  

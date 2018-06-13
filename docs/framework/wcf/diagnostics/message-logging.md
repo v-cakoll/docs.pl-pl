@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474035"
 ---
 # <a name="message-logging"></a>Rejestrowanie komunikatów
 Windows Communication Foundation (WCF) umożliwia rejestrowanie wiadomości przychodzących i wychodzących do użytku w trybie offline. Rejestrowanie komunikatów temu możesz zobaczyć, jakie wiadomość, a komunikat treści prawdopodobnie. Ten typ rejestrowania jest szczególnie przydatna w tym, co argumenty zostały przekazane i sposób odbierania punkt końcowy był wyświetlany argumenty wyrażonej w postaci XML. Ponadto rejestrowania komunikatu, ponieważ zostało przesłane umożliwia diagnozowanie źle sformułowane wiadomości, a także aby zobaczyć, jak odebrania wiadomości. Można również sprawdzić zabezpieczeń tokeny używane części zaszyfrowana i podpisana i części pozostanie bez zmian.  

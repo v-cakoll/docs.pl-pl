@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365582"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>Wprowadzenie do integracji środowiska CLR programu SQL Server
 Środowisko uruchomieniowe języka wspólnego (CLR) jest bardzo ważne dla programu Microsoft .NET Framework i zapewnia środowiska wykonawczego dla całego kodu .NET Framework. Kod uruchamiany w ramach środowiska CLR jest określana jako kod zarządzany. Środowisko CLR zapewnia różnych funkcji i usług wymaganych do wykonania programu, w tym just in time (JIT) kompilację, przydzielanie i zarządzanie pamięcią, wymuszanie zabezpieczeń, obsługa wyjątków wątku zarządzania i zabezpieczeń.  

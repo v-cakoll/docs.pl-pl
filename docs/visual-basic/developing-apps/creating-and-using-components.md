@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591550"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Tworzenie składników i korzystanie z nich w Visual Basic
 A *składnika* jest klasa implementująca <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> interfejsu lub który pochodzi bezpośrednio lub pośrednio z klasy, która implementuje <xref:System.ComponentModel.IComponent>. A [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] składnik jest obiekt wielokrotnego użytku, mogą prowadzić interakcję z innymi obiektami i zapewnia kontrolę nad zasobów zewnętrznych i obsługi w czasie projektowania.  

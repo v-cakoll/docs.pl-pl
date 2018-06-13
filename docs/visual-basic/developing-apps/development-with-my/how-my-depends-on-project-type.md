@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592083"
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>Jak My zależy od typu projektu (Visual Basic)
 `My` przedstawia tylko te obiekty, które są wymagane przez typu określonego projektu. Na przykład `My.Forms` obiekt jest dostępny w aplikacji formularzy systemu Windows, ale nie jest dostępna w aplikacji konsoli. W tym temacie opisano, które `My` obiekty są dostępne w różnych typach projektów.  

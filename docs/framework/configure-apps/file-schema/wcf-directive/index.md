@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386174"
 ---
 # <a name="wcf-directive-syntax"></a>Składnia dyrektyw programu WCF
 Określa ustawienia używane przez Windows Communication Foundation (WCF) dyrektywy w pliku svc przekierować kompilatory. Dyrektywy każdy może zawierać jeden lub więcej atrybutów (łączyć się z wartościami), które są specyficzne dla tej dyrektywy. Usługi WCF ma tylko [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) dyrektywy.  

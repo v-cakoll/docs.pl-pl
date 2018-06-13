@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591719"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>Potencjalne pułapki związane z PLINQ
 W wielu przypadkach PLINQ można zapewnia znaczną poprawę wydajności za pośrednictwem sekwencyjnych LINQ do obiektów zapytań. Jednak pracy parallelizing wykonywania zapytania wprowadza złożoności, który może prowadzić do problemów, które w kolejnych kodu nie są jako wspólne lub w ogóle nie wystąpi. W tym temacie wymieniono niektóre praktyki, których należy unikać podczas pisania zapytania dotyczące technologii PLINQ.  

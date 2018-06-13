@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365345"
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>Transakcja i operacje kopiowania masowego
 Jako operacje izolowanej lub w ramach wielu transakcji krok można wykonać operacji kopiowania zbiorczego. Ta opcja ostatnie umożliwia wykonać więcej niż jedną operację kopiowania zbiorczego w ramach jednej transakcji, a także wykonywać innych operacji bazy danych (na przykład wstawienia, aktualizacje i usunięcia), przy zachowaniu możliwości przekazać ani wycofać cała transakcja.  

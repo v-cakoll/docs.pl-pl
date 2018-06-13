@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362646"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>Dostosowywanie uprawnieniami personifikacja w programie SQL Server
 Wiele aplikacji korzysta procedur składowanych dostępu do danych polegania na własność łańcucha, aby ograniczyć dostęp do tabel podstawowych. Można przyznać uprawnienia EXECUTE procedur składowanych, odwoływanie lub nie zezwalających na uprawnienia do tabel podstawowych. SQL Server nie sprawdza uprawnienia obiektu wywołującego, jeśli procedura składowana i tabele mieć tego samego właściciela. Jednak łańcucha własności nie działa obiektów mieć różnych właścicieli lub w przypadku dynamicznego SQL.  

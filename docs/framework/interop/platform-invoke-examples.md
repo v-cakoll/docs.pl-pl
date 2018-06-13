@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386782"
 ---
 # <a name="platform-invoke-examples"></a>Przykłady wywołań platformy
 W poniższych przykładach pokazano sposób definiowania i wywołać **MessageBox** w User32.dll, przekazując prostego ciągu jako argumentu funkcji. W przykładach <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> pole jest ustawione na **automatycznie** aby umożliwić platformy docelowej określa szerokość znaków i ciągu przekazywanie.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588083"
 ---
 # <a name="end-of-statement-expected"></a>Oczekiwano końca instrukcji
 Wykonywanie instrukcji zostało składniowo ukończone, ale dodatkowy element programowania zgodny element kończące instrukcję. Terminator wiersza jest wymagany na końcu każdej instrukcji.

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590923"
 ---
 # <a name="key-security-concepts"></a>Główne pojęcia dotyczące zabezpieczeń
 Microsoft .NET Framework zapewnia oparte na rolach zabezpieczeń mających na celu adres problemy z zabezpieczeniami dotyczące kodu przenośnego i zapewnienie obsługi, który umożliwia ustalenie, użytkownicy są upoważnione na.  

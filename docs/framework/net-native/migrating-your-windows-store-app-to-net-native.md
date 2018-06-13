@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397783"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Migrowanie aplikacji ze Sklepu Windows do architektury .NET Native
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] zawiera statyczny kompilacji aplikacji w Sklepie Windows lub na komputerze dewelopera. Ta różni się od kompilacji dynamicznej wykonywane dla aplikacji ze Sklepu Windows za pomocą kompilatora just-in-time (JIT) lub [Generator obrazu natywnego (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) na urządzeniu. Pomimo różnic [!INCLUDE[net_native](../../../includes/net-native-md.md)] próbuje zachować zgodność z [.NET dla Sklepu Windows apps](http://msdn.microsoft.com/library/windows/apps/br230302.aspx). W większości przypadków rzeczy, które działają w aplikacjach .NET dla Sklepu Windows również współpracować z [!INCLUDE[net_native](../../../includes/net-native-md.md)].  Jednak w niektórych przypadkach może się pojawić zmiany zachowania. W tym dokumencie omówiono następujące różnice między standardowych aplikacji .NET dla Sklepu Windows i [!INCLUDE[net_native](../../../includes/net-native-md.md)] w następujących obszarach:  

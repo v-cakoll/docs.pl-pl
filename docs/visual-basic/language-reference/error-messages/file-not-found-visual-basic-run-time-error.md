@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587749"
 ---
 # <a name="file-not-found-visual-basic-run-time-error"></a>Nie odnaleziono pliku (błąd czasu wykonywania Visual Basic)
 Nie można odnaleźć pliku, gdzie określona. Błąd ma następujące możliwe przyczyny:  

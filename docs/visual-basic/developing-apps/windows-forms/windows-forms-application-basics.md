@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592382"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Podstawy dotyczące aplikacji Windows Forms (Visual Basic)
 Ważnym elementem języka Visual Basic jest możliwość tworzenia aplikacji formularzy systemu Windows, które są uruchamiane lokalnie na komputerach użytkowników. Visual Studio służy do tworzenia aplikacji i interfejs, za pomocą formularzy systemu Windows. Aplikacji formularzy systemu Windows jest oparty na klas z <xref:System.Windows.Forms> przestrzeni nazw.  

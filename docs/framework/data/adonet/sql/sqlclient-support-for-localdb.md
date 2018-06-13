@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359800"
 ---
 # <a name="sqlclient-support-for-localdb"></a>Obsługa SqlClient LocalDB
 Począwszy od programu SQL Server o nazwie kodowej Denali to Uproszczona wersja programu SQL Server o nazwie LocalDB, będą dostępne. W tym temacie omówiono sposób nawiązywania połączenia z bazą danych LocalDB.  

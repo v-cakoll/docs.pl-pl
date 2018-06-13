@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365063"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Scenariusze aplikacji (usługi danych WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obsługuje zestaw podstawowe scenariusze dla udostępnianie i wykorzystywanie danych jako [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródeł danych. W tym temacie wskazuje tematów dotyczących tych scenariuszy.  

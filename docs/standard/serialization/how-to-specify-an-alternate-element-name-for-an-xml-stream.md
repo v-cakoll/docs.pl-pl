@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587713"
 ---
 # <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Porady: Określ nazwę elementu alternatywnego strumienia XML
 [Przykładowy kod](#cpconoverridingserializationofclasseswithxmlattributeoverridesclassanchor1)  

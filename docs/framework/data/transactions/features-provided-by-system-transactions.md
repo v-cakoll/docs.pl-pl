@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365933"
 ---
 # <a name="features-provided-by-systemtransactions"></a>Funkcje oferowane przez bibliotekę System.Transactions
 W tej sekcji opisano sposób korzystania z funkcji udostępnianych przez <xref:System.Transactions> przestrzeni nazw, aby napisać własny transakcyjny Menedżer aplikacji i zasobów. W szczególności w tej sekcji opisano sposób tworzenia i uczestniczyć w transakcji (lokalnej lub rozproszone) z jednego lub wielu uczestników.  

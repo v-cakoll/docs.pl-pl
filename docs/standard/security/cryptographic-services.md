@@ -31,6 +31,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592434"
 ---
 # <a name="cryptographic-services"></a>Usługi kryptograficzne
 <a name="top"></a> Sieci publicznych, takich jak Internet nie udostępniają sposób zapewnienia bezpiecznej komunikacji między jednostkami. Komunikacja za pośrednictwem tych sieci jest podatny na odczytu lub nawet zmodyfikowane przez osoby nieupoważnione innych. Kryptografia ułatwia ochronę danych przed wyświetlaniem, udostępnia metody wykrywania, czy dane zostały zmodyfikowane, a także umożliwia bezpiecznych metod komunikacji za pośrednictwem kanałów w przeciwnym razie niezabezpieczone. Na przykład danych można być szyfrowane przy użyciu algorytmu kryptograficznego, przekazywane w stanu zaszyfrowanego i później odszyfrowywany przez stronę przeznaczone. Jeśli innych firm przechwytuje zaszyfrowane dane, będzie trudne do odszyfrowania.  

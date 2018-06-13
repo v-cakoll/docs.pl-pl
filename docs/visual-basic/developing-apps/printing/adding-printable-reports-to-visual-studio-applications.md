@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592057"
 ---
 # <a name="adding-printable-reports-to-visual-studio-applications"></a>Dodawanie drukowalnych raportów do aplikacji Visual Studio
 Program Visual Studio obsługuje różnych rozwiązań raportowych ułatwiają dodawanie sformatowanego danych raportowania do aplikacji Visual Basic. Można utworzyć i dodać raportów za pomocą kontrolki podglądu raportów, Crystal Reports lub SQL Server Reporting Services.  

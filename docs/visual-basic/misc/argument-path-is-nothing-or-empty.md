@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599483"
 ---
 # <a name="argument-39path39-is-nothing-or-empty"></a>Argument &#39;ścieżki&#39; ma wartość Nothing lub jest pusty
 Nazwa ścieżki jest nieprawidłowa, ponieważ jest on zainicjowany `Nothing` lub jest pusty. Ścieżka musi mieć typ danych i prawidłową nazwę.  

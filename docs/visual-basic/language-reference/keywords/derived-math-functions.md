@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596811"
 ---
 # <a name="derived-math-functions-visual-basic"></a>Pochodne funkcje matematyczne (Visual Basic)
 W poniższej tabeli przedstawiono funkcje matematyczne — wewnętrzne, które mogą być uzyskane z funkcji wewnętrznej matematyczne <xref:System.Math?displayProperty=nameWithType> obiektu. Funkcje matematyczne wewnętrzne są dostępne przez dodanie `Imports System.Math` do pliku lub projektu.  

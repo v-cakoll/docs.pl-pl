@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579603"
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>Sprawdzanie poprawności XmlSchemaValidator wypychania
 <xref:System.Xml.Schema.XmlSchemaValidator> Klasy udostępnia mechanizm wydajne, wysokiej wydajności, aby sprawdzić poprawność danych XML względem schematów XML w sposób wypychania. Na przykład <xref:System.Xml.Schema.XmlSchemaValidator> klasa umożliwia sprawdzenie poprawności XML typu infoset sprawdzonych w miejscu, bez konieczności serializować go jako dokument XML i ponownej analizy dokumentu za pomocą sprawdzania poprawności modułu odczytującego XML.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594449"
 ---
 # <a name="out-of-string-space-visual-basic"></a>Za mało miejsca na ciąg (Visual Basic)
 Za pomocą Visual Basic można użyć ciągów bardzo duże. Wymagania inne programy i sposób pracy z Twojej ciągi nadal może jednak spowodować tego błędu.  

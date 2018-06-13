@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583789"
 ---
 # <a name="how-to-upload-a-file-in-visual-basic"></a>Porady: ładowanie pliku w Visual Basic
 <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> Metoda może służyć do przekazania pliku i zapisz go w lokalizacji zdalnej. Jeśli `ShowUI` ustawiono parametr `True`, wyświetlane jest okno dialogowe, będzie wyświetlany postęp przekazywania, który umożliwia użytkownikom anulować operację.  

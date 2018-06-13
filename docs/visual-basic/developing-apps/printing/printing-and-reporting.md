@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582795"
 ---
 # <a name="printing-and-reporting-visual-basic"></a>Drukowanie i raportowanie (Visual Basic)
 Visual Basic oferuje kilka opcji drukowanie i raportowanie. Poniższe tematy zawierają omówienie i linki do dokumentacji związanych z drukowanie i raportowanie.  

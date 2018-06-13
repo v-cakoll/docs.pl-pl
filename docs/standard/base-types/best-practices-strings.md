@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579733"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Najlepsze rozwiązania dotyczące używania ciągów w .NET
 <a name="top"></a> Zapewnia zaawansowaną obsługę programowania zlokalizowanych i uniwersalnych aplikacji .NET i można łatwo zastosować konwencje bieżącej kultury lub określoną kulturę, podczas wykonywania typowych operacji, takich jak sortowanie i wyświetlanie ciągów. Ale sortowania i porównywania ciągów nie zawsze jest operacją zależne od kultury. Na przykład ciągów, które są używane wewnętrznie aplikacji zwykle powinny być traktowane identycznie we wszystkich języków. Kiedy kulturalnie niezależne ciągu danych, takich jak XML tagi, HTML tagi, nazwy użytkowników, ścieżki do pliku i nazwy obiektów systemowych są interpretowane, tak jakby były zależne od kultury, kod aplikacji może być może ulec subtelnych błędów, niską wydajnością, a w niektórych przypadkach problemy z zabezpieczeniami.  

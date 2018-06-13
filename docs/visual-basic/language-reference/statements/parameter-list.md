@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605059"
 ---
 # <a name="parameter-list-visual-basic"></a>Lista parametrów (Visual Basic)
 Określa parametry, które oczekuje procedury, gdy jest wywoływana. Wiele parametrów są oddzielone przecinkami. Poniżej przedstawiono składnię jeden parametr.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584301"
 ---
 # <a name="barrier-net-framework"></a>Bariera (.NET Framework)
 A *bariery* jest zdefiniowane przez użytkownika prymitywu synchronizacji, który umożliwia wiele wątków (nazywane *uczestników*) nad jednocześnie algorytm w fazach. Uczestnik wykonuje, dopóki nie osiągnie punkt bariery w kodzie. Bariera reprezentuje koniec jedną fazą pracy. Gdy uczestnika osiągnie bariery, blokuje aż do osiągnięcia wszystkich uczestników ma tego samego bariery. Po wszystkich uczestników osiągnęły bariery, opcjonalnie można wywołać akcję po fazie. Ta faza po akcja może zostać użyta do wykonania akcji przez pojedynczy wątek, podczas gdy inne wątki nadal są zablokowane. Po wykonaniu akcji, uczestników są wszystkie odblokowane.  

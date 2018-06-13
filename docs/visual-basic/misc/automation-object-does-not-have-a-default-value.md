@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599239"
 ---
 # <a name="automation-object-does-not-have-a-default-value"></a>Obiekt automatyzacji nie ma wartości domyślnej
 Visual Basic nie można określić domyślny element członkowski określony obiekt.  

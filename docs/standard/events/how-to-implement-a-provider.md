@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576350"
 ---
 # <a name="how-to-implement-a-provider"></a>Porady: implementowanie dostawcy
 Wzorzec projektowy obserwatora wymaga podziału między dostawcę, który monitoruje danych i wysyła powiadomienia, i co najmniej jeden obserwatorów, które otrzymywać powiadomienia (wywołań zwrotnych) od dostawcy. W tym temacie omówiono tworzenie dostawcy. Pokrewnego tematu [porady: Implementowanie obserwatora](../../../docs/standard/events/how-to-implement-an-observer.md), w tym artykule omówiono sposób tworzenia obserwatora.  

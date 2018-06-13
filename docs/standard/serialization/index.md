@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581319"
 ---
 # <a name="serialization-in-net"></a>Serializacja w .NET
 Serializacja jest proces konwersji stan obiektu do formularza, które mogą być utrwalone lub transportowane. Uzupełnienie serializacji jest deserializacji, które służy do obiektu strumienia. Razem te procesy umożliwiają danych można łatwo przechowywane i przekazywane.  

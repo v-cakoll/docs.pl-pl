@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582425"
 ---
 # <a name="attributes-that-control-encoded-soap-serialization"></a>Atrybuty, które sterowania serializacją użyciu zakodowanego protokołu SOAP 
 Dokument konsorcjum World Wide Web (www.w3.org) o nazwie "Simple Object Access Protocol (SOAP) 1.1" zawiera sekcja opcjonalna (sekcja 5), opisujące, jak mogą być kodowane parametry protokołu SOAP. Aby jest zgodny z sekcji 5 specyfikacji, należy użyć specjalnego zestawu atrybutów w <xref:System.Xml.Serialization> przestrzeni nazw. Zastosuj te atrybuty odpowiednio do klas i członków klas, a następnie użyj <xref:System.Xml.Serialization.XmlSerializer> do serializacji wystąpienia klasy lub klas.  

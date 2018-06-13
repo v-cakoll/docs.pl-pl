@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582535"
 ---
 # <a name="role-based-security"></a>Zabezpieczenia oparte na rolach
 Role są często używane w aplikacjach finansowych lub pracy do wymuszania zasad. Na przykład aplikacja może nałożyć limity rozmiaru transakcji przetwarzanych w zależności od tego, czy użytkownik zgłoszenia żądania jest członkiem określonej roli. Urzędników może być autoryzacji do przetwarzania transakcji, które mają mniej niż określony próg kierownicy mogą mieć wyższy limit i zastępców prezesa może być nadal wyższy limit (lub brak limitu wcale). Oparta na rolach zabezpieczeń można także jeśli aplikacja wymaga zatwierdzenia wielu ukończyć akcji. Taki przypadek może być systemu zakupów, w którym każdy pracownik może wygenerować żądania zakupu, ale tylko agent zakupów można przekształcić tego żądania w zamówienia zakupu, które mogą być wysyłane do dostawcy.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585583"
 ---
 # <a name="39is39-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-39lttypenamegt39"></a>&#39;Jest&#39; wymaga argumentów operacji, które mają typ referencyjny, ale ten argument operacji ma typ wartości &#39; &lt;typename&gt;&#39;
 `Is` Operator porównania określa, czy dwie zmienne obiektu odwoływać się do tego samego wystąpienia. To porównanie nie jest zdefiniowany dla typów wartości.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580929"
 ---
 # <a name="using-tpl-with-other-asynchronous-patterns"></a>Korzystanie z modelu TPL z innymi wzorami asynchronicznymi
 Biblioteka zadań równoległych może służyć z tradycyjnego .NET Framework programowania wzorami asynchronicznymi na różne sposoby.  

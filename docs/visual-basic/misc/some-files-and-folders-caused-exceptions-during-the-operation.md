@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638685"
 ---
 # <a name="some-files-and-folders-caused-exceptions-during-the-operation"></a>Some files and folders caused exceptions during the operation
 Pliki i foldery mogą powodować wyjątki, gdy podczas próby wykonania operacji użytkownik nie ma wystarczających uprawnień.  

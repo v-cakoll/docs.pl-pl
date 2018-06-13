@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581719"
 ---
 # <a name="how-to-access-hardware-encryption-devices"></a>Porady: dostęp do sprzętowych urządzeń szyfrujących
 Można użyć <xref:System.Security.Cryptography.CspParameters> klasę, aby dostęp do sprzętowych urządzeń szyfrujących. Na przykład można tej klasy integracji aplikacji z karty inteligentnej, sprzęt generatora liczb losowych lub implementacji sprzętu konkretnego algorytmu kryptograficznego.  

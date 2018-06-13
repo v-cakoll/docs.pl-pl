@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577619"
 ---
 # <a name="types-of-isolation"></a>Typy izolacji
 Dostęp do magazynu izolowanego zawsze jest ograniczony do użytkownika, który go utworzył. Aby wdrożyć ten typ izolacji, środowisko uruchomieniowe języka wspólnego używa tego samego pojęcia tożsamości użytkownika, która rozpoznaje systemu operacyjnego, czyli tożsamość skojarzoną z procesem, w którym wykonywany jest kod po otwarciu Sklepu. Ta tożsamość jest tożsamość uwierzytelnionego użytkownika, ale personifikacji może spowodować tożsamości bieżącego użytkownika można zmienić dynamicznie.  

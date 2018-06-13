@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598244"
 ---
 # <a name="type-arguments-could-not-be-inferred-from-the-delegate"></a>Nie można wywnioskować argumentów typu na podstawie obiektu delegowanego
 Używa instrukcji przypisania `AddressOf` można przypisać adres ogólnego procedury delegata, ale nie dostarcza żadnych argumentów typu ogólnego procedury.  

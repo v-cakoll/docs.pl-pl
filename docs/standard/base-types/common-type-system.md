@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579590"
 ---
 # <a name="common-type-system"></a>System typu wspólnego
 Wspólny system typów definiuje jak typy są zadeklarowane, używane i zarządzane przez środowisko uruchomieniowe języka wspólnego, a także jest ważnym elementem obsługi środowiska uruchomieniowego integracji między językami. Wspólny system typów wykonuje następujące funkcje:  

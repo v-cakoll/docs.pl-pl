@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582847"
 ---
 # <a name="accessing-user-data-visual-basic"></a>Uzyskiwanie dostępu do danych użytkownika (Visual Studio)
 Ta sekcja zawiera tematy dotyczące `My.User` obiektu i zadań, które można wykonać za pomocą go.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578587"
 ---
 # <a name="handling-and-raising-events"></a>Obsługa i wywoływanie zdarzeń
 Zdarzenia w programie .NET Framework są oparte na modelu obiektu delegowanego. Model obiektu delegowanego następuje wzorzec projektowy obserwatora, który umożliwia subskrybenta do rejestrowania i odbierania powiadomień od dostawcy. Nadawca zdarzeń wypycha powiadomienie, które miało miejsce zdarzenie, a odbiorca zdarzenia otrzymuje powiadomienia i definiuje odpowiedzi na to. W tym artykule opisano głównych składników modelu delegata, jak korzystanie ze zdarzeń w aplikacjach i implementowania zdarzenia w kodzie.  

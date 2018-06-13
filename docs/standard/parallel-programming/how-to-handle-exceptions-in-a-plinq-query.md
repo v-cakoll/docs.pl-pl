@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580747"
 ---
 # <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Porady: obsługa wyjątków w zapytaniu PLINQ
 Pierwszym przykładzie w tym temacie przedstawiono sposób obsługi <xref:System.AggregateException?displayProperty=nameWithType> który mógł zostać zgłoszony w zapytaniu PLINQ podczas wykonywania. Drugi przykład przedstawia sposób możliwie, do której zostanie wyjątek put bloków try-catch w obrębie obiektów delegowanych. W ten sposób można je catch natychmiast wystąpić i być może kontynuować wykonywania zapytania. Jest wywoływane, gdy wyjątki mogą bąbelkowy się wstecz do łącząca wątku, możliwe zapytania mogą nadal przetwarzania niektórych elementów po wyjątku jest.  

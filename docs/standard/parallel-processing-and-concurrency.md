@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582639"
 ---
 # <a name="parallel-processing-concurrency-and-async-programming-in-net"></a>Równoległe przetwarzanie współbieżności i programowania asynchronicznego w .NET
 .NET oferuje kilka możliwości do pisania kodu asynchroniczne aplikacji bardziej odpowiednie dla użytkownika i pisanie równoległego kodu, który używa wiele wątków wykonywania, aby zmaksymalizować wydajność komputera użytkownika.  

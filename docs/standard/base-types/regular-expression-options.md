@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579655"
 ---
 # <a name="regular-expression-options"></a>Opcje wyrażeń regularnych
 <a name="Top"></a> Domyślnie porównanie ciągu wejściowego z dowolnego literał znaków wzorzec wyrażenia regularnego jest rozróżniana wielkość liter, biały znak w wzorzec wyrażenia regularnego jest interpretowana jako literał znaków odstępu i grup przechwytywania w wyrażeniu regularnym są także niejawnie jako jawnie nazwane. Te i kilka innych aspektów domyślnego zachowania wyrażeń regularnych można zmieniać, określając opcje wyrażeń regularnych. Te opcje, które są wymienione w poniższej tabeli, może być wbudowany dołączone jako część wzorzec wyrażenia regularnego lub mogą być dostarczane do <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> konstruktora klasy lub statyczna wzorca zgodną metodę jako <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> wartości wyliczenia.  

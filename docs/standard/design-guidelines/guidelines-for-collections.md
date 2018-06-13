@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578862"
 ---
 # <a name="guidelines-for-collections"></a>Wytyczne dotyczące kolekcji
 Dowolny typ zaprojektowany specjalnie w celu manipulowania grupy obiektów o pewne cechy wspólne mogą zostać uwzględnione w kolekcji. Prawie zawsze jest ona odpowiednia dla takich typów do zaimplementowania <xref:System.Collections.IEnumerable> lub <xref:System.Collections.Generic.IEnumerable%601>, więc w tej sekcji możemy tylko należy wziąć pod uwagę typy Implementowanie jedno lub oba te interfejsy można kolekcje.  

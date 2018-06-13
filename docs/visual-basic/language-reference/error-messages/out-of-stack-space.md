@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593288"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>Za mało miejsca na stosie (Visual Basic)
 Stos jest obszar roboczy pamięci, który powiększa się i zmniejsza dynamicznie z wymaganiami wykonywania programu. Przekroczono limit.  

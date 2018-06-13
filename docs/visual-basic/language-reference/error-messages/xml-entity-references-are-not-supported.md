@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595829"
 ---
 # <a name="xml-entity-references-are-not-supported"></a>Odwołania do jednostek XML nie są obsługiwane
 Odwołania do obiektu (na przykład `©`) nie jest zdefiniowany w XML 1.0 specyfikacji jest uwzględniona jako wartość literału XML. Tylko `&`, `"`, `<`, `>`, i `'` odwołania do jednostek XML są obsługiwane w literałach XML.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580799"
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>Porady: Iteracja po katalogach plików z wykorzystaniem technologii PLINQ
 W tym przykładzie przedstawiono dwie metody proste parallelize operacje na katalogi plików. Pierwsze zapytanie używa <xref:System.IO.Directory.GetFiles%2A> metodę, aby wypełnić tablicę nazw plików w katalogu i jego podkatalogach. Ta metoda nie zwraca dopóki cała tablica jest wypełniana i w związku z tym może powodować opóźnienia na początku operacji. Jednak po zapełnieniu tablicy, PLINQ można go przetworzyć równolegle bardzo szybko.  

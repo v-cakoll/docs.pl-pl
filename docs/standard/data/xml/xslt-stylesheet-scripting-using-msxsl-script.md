@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577179"
 ---
 # <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>XSLT skryptów przy użyciu arkusza stylów &lt;msxsl:script&gt;
 <xref:System.Xml.Xsl.XslTransform> Klasa obsługuje osadzonych skryptów przy użyciu `script` elementu.  

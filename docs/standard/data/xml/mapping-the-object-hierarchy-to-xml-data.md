@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577205"
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a>Mapowanie hierarchii obiektów do danych XML
 Gdy dokument XML znajduje się w pamięci, koncepcyjnego reprezentacja jest drzewa. Programowania, musisz mieć hierarchię obiektów, uzyskać dostęp do węzłów drzewa. Poniższy przykład przedstawia sposób zawartości XML staje się węzłów.  

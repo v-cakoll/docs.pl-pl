@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585363"
 ---
 # <a name="countdownevent"></a>CountdownEvent
 <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> jest prymitywu synchronizacji, który odblokowuje wątków oczekiwania, po przeprowadzeniu sygnalizowane wiele razy. <xref:System.Threading.CountdownEvent> jest przeznaczony do scenariuszy, w których mogłyby w przeciwnym razie należy użyć <xref:System.Threading.ManualResetEvent> lub <xref:System.Threading.ManualResetEventSlim> i ręcznie dekrementacji zmiennej przed sygnalizowania zdarzenia. Na przykład w przypadku rozwidlenia/sprzężenia, po prostu utworzeniem <xref:System.Threading.CountdownEvent> mający sygnału liczbę 5, a następnie start pięć elementów roboczych w wątku puli i mieć każdego wywołania elementu roboczego <xref:System.Threading.CountdownEvent.Signal%2A> po zakończeniu wykonywania. Każde wywołanie <xref:System.Threading.CountdownEvent.Signal%2A> zmniejsza liczba sygnał o 1. W głównym wątku wywołanie <xref:System.Threading.CountdownEvent.Wait%2A> zablokuje dopóki liczba sygnałów wynosi zero.  

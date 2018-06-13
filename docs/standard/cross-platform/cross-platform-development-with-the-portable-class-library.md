@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579668"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Tworzenie aplikacji dla wielu platform przy użyciu przenośnej biblioteki klas
 Typ projektu biblioteki klas przenośnych .NET Framework w programie Visual Studio pomaga w utworzeniu wieloplatformowych aplikacji i bibliotek dla platform firmy Microsoft, szybkie i łatwe.  

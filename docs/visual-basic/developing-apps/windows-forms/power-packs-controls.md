@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584212"
 ---
 # <a name="visual-basic-power-packs-controls"></a>Formanty PowerPacks języka Visual Basic
 Formantów Powerpack Visual Basic są dodatkowe formanty formularzy systemu Windows. Nie są one uwzględnione w programie Visual Studio.  Możesz [je pobrać](http://go.microsoft.com/fwlink/?LinkId=321343), ale są one udostępniane jako — jest bez obsługi.  

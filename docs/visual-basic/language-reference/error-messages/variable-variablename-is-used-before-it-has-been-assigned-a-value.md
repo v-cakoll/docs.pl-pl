@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596922"
 ---
 # <a name="variable-39ltvariablenamegt39-is-used-before-it-has-been-assigned-a-value"></a>Zmienna &#39; &lt;nazwa_zmiennej&gt; &#39; jest używana, zanim została do niej przypisana wartość
 Zmienna "\<nazwa_zmiennej >" jest używana, zanim została do niej przypisana wartość. W czasie wykonywania może wystąpić wyjątek odwołania zerowego.  

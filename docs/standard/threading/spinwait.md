@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585414"
 ---
 # <a name="spinwait"></a>SpinWait
 <xref:System.Threading.SpinWait?displayProperty=nameWithType> jest typem synchronizacji lekkie, który można użyć w scenariuszach niskiego poziomu, aby uniknąć przełączeń kontekstu kosztowne i przejścia jądra, które są wymagane w przypadku zdarzeń jądra. Na komputerach wielordzeniowych gdy zasób nie powinno być przechowywane przez długi czas, może być bardziej wydajny oczekiwania wątku pokrętła w trybie użytkownika przez kilka dozen lub kilka cykli kilkuset, a następnie spróbuj ponownie do uzyskania dostępu do zasobu. Jeśli zasób jest dostępny po Obracająca, zostały zapisane w kilku tysięcy cykle. Jeśli zasób jest nadal niedostępna, następnie poświęcony tylko kilka cykli i nadal można wprowadzić oczekiwania na podstawie jądra. Ta kombinacja Obracająca następnie oczekiwania jest czasami nazywany *dwufazowej operacji oczekiwania*.  

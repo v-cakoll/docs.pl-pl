@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595280"
 ---
 # <a name="module-ltkeywordgt-visual-basic"></a>Moduł &lt;— słowo kluczowe&gt; (Visual Basic)
 Określa, że atrybut znajdujący się na początku pliku źródłowego dotyczy bieżącego modułu zestawu.  

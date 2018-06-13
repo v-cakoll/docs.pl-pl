@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580887"
 ---
 # <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Porady: korzystanie z parallel_invoke podczas przeprowadzania operacji równoległych
 W tym przykładzie pokazano, jak parallelize operacje przy użyciu <xref:System.Threading.Tasks.Parallel.Invoke%2A> w bibliotece równoległych zadań. Trzy operacje są wykonywane na udostępnione źródło danych. Ponieważ żadna z operacji modyfikuje źródło, mogą być wykonywane równolegle w sposób proste.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635162"
 ---
 # <a name="line-ltnumbergt-cannot-be-read-because-it-exceeds-the-maximum-line-size"></a>Wiersz &lt;numer&gt; nie można odczytać, ponieważ jego rozmiar przekracza maksymalny rozmiar wiersza.
 Nie można odczytać wiersza, ponieważ jego rozmiar przekracza maksymalny rozmiar wiersza. Zwykle oznacza to, że istnieje otwierającego znaku cudzysłowu w pliku, ale nie cudzysłowu zamykającego.  

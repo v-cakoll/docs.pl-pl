@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584582"
 ---
 # <a name="error-creating-win32-resources-lterror-messagegt"></a>Błąd podczas tworzenia zasobów Win32: &lt;komunikat o błędzie&gt;
 Kompilator Visual Basic wywołuje konsolidator zestawów (znanej także jako Alink Al.exe), można wygenerować zestawu z manifestu. Konsolidator zgłosił błąd podczas tworzenia zasobu w pamięci. Może to być problem ze środowiskiem lub komputer może brakować pamięci.  

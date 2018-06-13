@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582740"
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-thread-local-variables"></a>Porady: zapisywanie równoległej pętli ForEach ze zmiennymi lokalnymi wątku
 W poniższym przykładzie pokazano, w jaki sposób napisać metodę <xref:System.Threading.Tasks.Parallel.ForEach%2A>, która używa zmiennych lokalnych wątku. Gdy wykonywana jest pętla <xref:System.Threading.Tasks.Parallel.ForEach%2A>, kolekcja źródłowa jest dzielona na wiele partycji. Każda partycja otrzyma własną kopię zmiennej „lokalnej wątku”. (Termin „lokalna wątku” jest nieprecyzyjny, ponieważ w niektórych przypadkach dwie partycje mogą działać w tym samym wątku).  

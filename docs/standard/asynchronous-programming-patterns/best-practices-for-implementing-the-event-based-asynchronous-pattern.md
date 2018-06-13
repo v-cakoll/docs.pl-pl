@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578424"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Najlepsze rozwiązania w zakresie implementacji wzorca asynchronicznego opartego na zdarzeniach
 Asynchroniczny wzorzec oparty na zdarzeniach udostępnia efektywny sposób ujawniać asynchroniczne zachowanie w klasach ze zdarzeniem znanych i delegowanie semantyki. Do implementacji klienta wzorca asynchronicznego opartego na zdarzeniach, należy wykonać niektóre określone wymagania funkcjonalne. W poniższych sekcjach opisano wymagania i wskazówki, które należy rozważyć podczas implementowania klasę, która wykonuje asynchroniczny wzorzec oparty na zdarzeniach.  

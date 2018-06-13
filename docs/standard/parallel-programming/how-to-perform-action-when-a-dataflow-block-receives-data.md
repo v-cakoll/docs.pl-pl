@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583022"
 ---
 # <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Porady: Wykonaj operację, kiedy blok przepływu danych odbiera dane
 *Wykonanie bloku przepływu danych* typy wywołać delegata dostarczane przez użytkownika, po odebraniu danych. <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType>, I <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> klasy są typy bloku przepływu danych wykonywania. Można użyć `delegate` — słowo kluczowe (`Sub` w języku Visual Basic), <xref:System.Action%601>, <xref:System.Func%602>, lub wyrażenia lambda, podając funkcję Praca do wykonywania bloku przepływu danych. W tym dokumencie opisano sposób użycia <xref:System.Func%602> i wyrażenia lambda do wykonania akcji w blokach wykonywania.  

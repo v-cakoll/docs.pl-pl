@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592109"
 ---
 # <a name="custom-serialization"></a>Niestandardowej serializacji
 Niestandardowej serializacji to proces sterowania serializacji i deserializacji obiektu określonego typu. Kontrolowanie serializacji, jest możliwe w celu zapewnienia zgodności serializacji, który jest możliwość serializowania i deserializowania między wersjami typu bez przerywania podstawowych funkcji typu. Na przykład w pierwszej wersji typu, może istnieć tylko dwa pola. W następnej wersji typu są dodawane kilka więcej pól. Jeszcze druga wersja aplikacji musi mieć możliwość serializowania i deserializowania obu typów. W następujących sekcjach opisano kontrola serializacji.

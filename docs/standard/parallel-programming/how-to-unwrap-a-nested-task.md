@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580734"
 ---
 # <a name="how-to-unwrap-a-nested-task"></a>Porady: dekodowanie zadania zagnieżdżonego
 Można zwrócić zadania przy użyciu metody, a następnie zaczekaj na lub kontynuować z tego zadania, jak pokazano w poniższym przykładzie:  

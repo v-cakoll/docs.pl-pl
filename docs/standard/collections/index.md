@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577231"
 ---
 # <a name="collections-and-data-structures"></a>Kolekcje i struktury danych
 Podobne dane często są obsługiwane wydajniej podczas przechowywania i manipulować jako kolekcja. Można użyć <xref:System.Array?displayProperty=nameWithType> klasy lub klas w <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent>, System.Collections.Immutable przestrzeni nazw, aby dodać, usuwanie i modyfikowanie poszczególne elementy lub zakres elementów w kolekcji.  

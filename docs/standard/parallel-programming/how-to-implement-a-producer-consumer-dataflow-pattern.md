@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580900"
 ---
 # <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a>Porady: Implementowanie wzorca przepływu danych producent — konsument
 Ten dokument zawiera opis sposobu umożliwia Implementowanie wzorca producent — konsument przepływu danych tpl. W tym wzorcu *producent* wysyła komunikaty do bloku komunikatów i *konsumenta* odczytuje wiadomości z tego bloku.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579096"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>Kwantyfikatory w wyrażeniach regularnych
 Kwantyfikatory Określ liczbę wystąpień znaku, grupy lub klasy znaku musi być obecny w danych wejściowych znaleźć dopasowanie.  W poniższej tabeli wymieniono Kwantyfikatory obsługiwany przez platformę .NET.  

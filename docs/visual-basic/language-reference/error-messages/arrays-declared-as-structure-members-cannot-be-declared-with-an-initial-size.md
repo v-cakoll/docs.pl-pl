@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585856"
 ---
 # <a name="arrays-declared-as-structure-members-cannot-be-declared-with-an-initial-size"></a>Tablice deklarowane jako członkowie struktury nie mogą być deklarowane z rozmiarem początkowym
 Tablicy w strukturze jest zadeklarowana z rozmiarem początkowym. Nie można zainicjować dowolny element struktury i deklarowanie rozmiaru tablicy jest jeden formularz inicjowania.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583971"
 ---
 # <a name="security-and-on-the-fly-code-generation"></a>Zabezpieczenia i generowanie kodu na bieżąco
 Działanie niektórych bibliotek, generowanie kodu i uruchomienie jej do wykonania niektórych operacji do obiektu wywołującego. Podstawowy problem jest generowanie kodu w imieniu mniejszym zaufania kodu i uruchomić je na wyższe zaufania. Problem worsens podczas wywołującego może mieć wpływ na generowanie kodu, dlatego należy upewnić się, że generowane jest tylko kod, który należy wziąć pod uwagę bezpieczne.  

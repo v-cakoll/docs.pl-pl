@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579837"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Najlepsze praktyki dotyczące prawidłowych wyrażeń w .NET
 <a name="top"></a> Aparat wyrażeń regularnych programu .NET to narzędzie zaawansowane, oferujący wszystkie funkcje, które przetwarza tekst w dopasowaniach wzorców, a nie na dopasowanie literały tekstowe i porównywanie. W większości przypadków dopasowanie do wzorca przebiega szybko i skutecznie. Jednak w niektórych przypadkach aparat wyrażeń regularnych może okazać się bardzo wolny. W skrajnych przypadkach może nawet pozornie przestać odpowiadać, ponieważ przetwarza stosunkowo mało danych wejściowych w ciągu kilku godzin lub nawet dni.  

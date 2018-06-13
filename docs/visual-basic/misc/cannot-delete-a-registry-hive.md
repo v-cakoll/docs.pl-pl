@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635190"
 ---
 # <a name="cannot-delete-a-registry-hive"></a>Nie można usunąć gałąź rejestru
 Nastąpiła próba można usunąć gałęzi rejestru. Gałęzie są klucze rejestru najwyższego poziomu, takich jak `HKEY_CURRENT_USER` i `HKEY_LOCAL_MACHINE`i nie można go usunąć.  

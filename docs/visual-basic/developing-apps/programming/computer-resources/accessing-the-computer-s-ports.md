@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585544"
 ---
 # <a name="accessing-the-computer39s-ports-visual-basic"></a>Uzyskiwanie dostępu do komputera&#39;s portów (Visual Basic)
 `My.Computer.Ports` Obiektu udostępnia właściwości i metody do uzyskiwania dostępu do portów szeregowych komputera.  

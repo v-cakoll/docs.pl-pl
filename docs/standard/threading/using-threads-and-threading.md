@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584183"
 ---
 # <a name="using-threads-and-threading"></a>Używanie wątków i wątkowości
 Tematy w tej sekcji omówiono tworzenie i zarządzanie wątków zarządzanych, jak przekazywać dane do zarządzanych wątków i uzyskiwać wyniki z powrotem i jak zniszczyć wątków i obsługiwać <xref:System.Threading.ThreadAbortException>.  

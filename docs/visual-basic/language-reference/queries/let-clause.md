@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604474"
 ---
 # <a name="let-clause-visual-basic"></a>Let — Klauzula (Visual Basic)
 Oblicza wartość i przypisuje go do nowej zmiennej w ramach zapytania.  

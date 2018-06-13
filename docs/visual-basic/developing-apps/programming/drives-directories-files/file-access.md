@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583308"
 ---
 # <a name="file-access-with-visual-basic"></a>Dostęp do plików za pomocą Visual Basic
 `My.Computer.FileSystem` Obiektu zawiera narzędzia do pracy z plikami i folderami. Jego właściwości, metod i zdarzeń umożliwiają tworzenie, skopiować, przenieść, badanie i usuwać pliki i foldery. `My.Computer.FileSystem` zapewnia lepszą wydajność niż funkcje starszej wersji (`FileOpen`, `FileClose`, `Input`, `InputString`, `LineInput`, itd.) są dostarczane przez program Visual Basic dla zgodności z poprzednimi wersjami.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584774"
 ---
 # <a name="39ltfunctionnamegt39-is-not-declared-smart-devicevisual-basic-compiler-error"></a>&#39;&lt;FunctionName&gt; &#39; nie jest zadeklarowany jako (inteligentne urządzenia/Visual Basic błąd kompilatora)
 <`functionname`> nie został zadeklarowany. Funkcje We/Wy plików są zwykle dostępne w `Microsoft.VisualBasic` przestrzeni nazw, ale docelowa wersja programu .NET Compact Framework nie jest ona obsługiwana.  

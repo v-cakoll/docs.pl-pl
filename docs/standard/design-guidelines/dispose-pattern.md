@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578992"
 ---
 # <a name="dispose-pattern"></a>Wzorzec Dispose
 Wszystkie programy uzyskać jeden lub więcej zasobów systemowych, np. pamięci, systemu obsługuje lub połączenia z bazą danych w trakcie ich wykonanie. Deweloperzy muszą należy zachować ostrożność przy użyciu tych zasobów systemowych, ponieważ muszą zostać zwolnione po zostały zakupione i używane.  

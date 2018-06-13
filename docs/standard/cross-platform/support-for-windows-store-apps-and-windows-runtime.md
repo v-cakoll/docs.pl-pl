@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579291"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Obsługa .NET Framework dla aplikacji sklepu Windows Store i środowiska wykonawczego systemu Windows
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Jest obsługiwanych kilka scenariuszy rozwoju oprogramowania z [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Te scenariusze dzielą się na trzy kategorie:  

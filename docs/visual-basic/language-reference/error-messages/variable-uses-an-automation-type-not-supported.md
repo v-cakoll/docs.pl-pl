@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594356"
 ---
 # <a name="variable-uses-an-automation-type-not-supported-in-visual-basic"></a>Zmienna używa typu automatyzacji, który nie jest obsługiwany przez język Visual Basic
 Próbowano użyć zmiennej zdefiniowanej w biblioteki typów lub biblioteki, który ma typ danych nie jest obsługiwana przez program Visual Basic.  

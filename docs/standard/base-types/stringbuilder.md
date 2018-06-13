@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579148"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>Używanie klasy StringBuilder w .NET
 <xref:System.String> Obiektu nie można modyfikować. Zawsze używać jednej z metod w <xref:System.String?displayProperty=nameWithType> klasy, należy utworzyć nowy obiekt ciąg w pamięci, co wymaga nowej przydzielenie miejsca dla nowego obiektu. W sytuacjach, w którym należy przeprowadzić modyfikacji powtarzane na ciąg, obciążenie skojarzone z tworzeniem nowego <xref:System.String> obiekt może być kosztowne. <xref:System.Text.StringBuilder?displayProperty=nameWithType> Klasa może być używana, gdy chcesz zmodyfikować ciąg bez tworzenia nowego obiektu. Na przykład za pomocą <xref:System.Text.StringBuilder> klasy może zwiększyć wydajność, gdy łączenie wielu ciągów w pętli.  

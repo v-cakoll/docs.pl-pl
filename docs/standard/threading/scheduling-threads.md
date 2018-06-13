@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582811"
 ---
 # <a name="scheduling-threads"></a>Harmonogram wątków
 Każdy wątek ma priorytet wątku przypisane do niej. Utworzone w ramach środowisko uruchomieniowe języka wspólnego wątki są początkowo przypisana priorytet **ThreadPriority.Normal**. Wątki utworzony poza środowisko uruchomieniowe zachować priorytet, który wcześniej one umieszczone w zarządzanym środowisku. Można pobrać lub ustawić priorytet którymkolwiek wątku z **Thread.Priority** właściwości.  

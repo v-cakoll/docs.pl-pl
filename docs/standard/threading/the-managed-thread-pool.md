@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592421"
 ---
 # <a name="the-managed-thread-pool"></a>Zarządzana pula wątków
 <xref:System.Threading.ThreadPool> Klasa udostępnia aplikacji dla puli wątków roboczych, które są zarządzane przez system, umożliwiając skoncentrować się na zadania aplikacji, a nie wątku zarządzania. Jeśli masz krótkie zadania, które wymagają przetwarzania w tle zarządzana Pula wątków to prosty sposób korzystać z wielu wątków. Na przykład, począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] można utworzyć <xref:System.Threading.Tasks.Task> i <xref:System.Threading.Tasks.Task%601> obiekty, do których wykonywania zadań asynchronicznych w wątku puli wątków.  

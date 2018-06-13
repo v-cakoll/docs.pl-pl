@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583763"
 ---
 # <a name="serialization-concepts"></a>Pojęcia dotyczące serializacji
 Dlaczego czy chcesz użyć serializacji? Dwie najważniejsze przyczyny są, aby zachować stan obiektu na nośniku, dokładna kopia może zostać ponownie utworzone na późniejszym etapie, a aby wysłać obiekt przez wartość z domeny w jednej aplikacji na inny. Na przykład serializacji służy do zapisywania stanu sesji w programie ASP.NET i skopiować obiekty do Schowka w formularzach systemu Windows. On również używany łącząc do przekazywania obiektów przez wartość z domeny jedną aplikację do innego.

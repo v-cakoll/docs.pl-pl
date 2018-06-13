@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649636"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a><span data-ttu-id="31062-102">Różnice pomiędzy przesłanianiem i zastępowaniem (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="31062-102">Differences Between Shadowing and Overriding (Visual Basic)</span></span>
 <span data-ttu-id="31062-103">Po zdefiniowaniu klasy, która dziedziczy po klasie podstawowej czasami chcą ponownie zdefiniować co najmniej jeden z elementów klasy podstawowej w klasie pochodnej.</span><span class="sxs-lookup"><span data-stu-id="31062-103">When you define a class that inherits from a base class, you sometimes want to redefine one or more of the base class elements in the derived class.</span></span> <span data-ttu-id="31062-104">Przesłanianiem i zastępowaniem są dostępne w tym celu.</span><span class="sxs-lookup"><span data-stu-id="31062-104">Shadowing and overriding are both available for this purpose.</span></span>  

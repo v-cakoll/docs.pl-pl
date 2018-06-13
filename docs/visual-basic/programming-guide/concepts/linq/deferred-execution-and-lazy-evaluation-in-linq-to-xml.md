@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643127"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-visual-basic"></a><span data-ttu-id="19558-102">Wykonanie odroczone i obliczanie leniwe w składniku LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="19558-102">Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)</span></span>
 <span data-ttu-id="19558-103">Operacje zapytań i osi są często stosowane do użycia odroczonego wykonania.</span><span class="sxs-lookup"><span data-stu-id="19558-103">Query and axis operations are often implemented to use deferred execution.</span></span> <span data-ttu-id="19558-104">W tym temacie opisano wymagania i zalety wykonanie odroczone oraz pewne zagadnienia implementacji.</span><span class="sxs-lookup"><span data-stu-id="19558-104">This topic explains the requirements and advantages of deferred execution, and some implementation considerations.</span></span>  

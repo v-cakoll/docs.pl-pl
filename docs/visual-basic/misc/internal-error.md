@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638404"
 ---
 # <a name="internal-error-visual-basic"></a><span data-ttu-id="84099-102">Błąd wewnętrzny (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="84099-102">Internal error (Visual Basic)</span></span>
 <span data-ttu-id="84099-103">Usterka wewnętrzny wystąpił w języku Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="84099-103">An internal malfunction has occurred in Visual Basic.</span></span>  

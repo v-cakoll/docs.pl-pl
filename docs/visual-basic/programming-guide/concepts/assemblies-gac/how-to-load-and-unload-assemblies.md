@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640573"
 ---
 # <a name="how-to-load-and-unload-assemblies-visual-basic"></a><span data-ttu-id="e2b9c-102">Porady: ładowanie i zwalnianie zestawów (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e2b9c-102">How to: Load and Unload Assemblies (Visual Basic)</span></span>
 <span data-ttu-id="e2b9c-103">Zestawy odwołuje się program automatycznie zostaną załadowane w czasie kompilacji, ale jest również możliwe ładowanie określonych zestawów do bieżącej domeny aplikacji w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="e2b9c-103">The assemblies referenced by your program will automatically be loaded at build time, but it is also possible to load specific assemblies into the current application domain at runtime.</span></span> <span data-ttu-id="e2b9c-104">Aby uzyskać więcej informacji, zobacz [porady: Ładuj zestawy do domeny aplikacji](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md).</span><span class="sxs-lookup"><span data-stu-id="e2b9c-104">For more information, see [How to: Load Assemblies into an Application Domain](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md).</span></span>  

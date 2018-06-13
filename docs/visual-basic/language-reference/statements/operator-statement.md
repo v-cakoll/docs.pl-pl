@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605501"
 ---
 # <a name="operator-statement"></a><span data-ttu-id="70481-102">Operator — Instrukcja</span><span class="sxs-lookup"><span data-stu-id="70481-102">Operator Statement</span></span>
 <span data-ttu-id="70481-103">Deklaruje symbol operatora, argumenty operacji i kod, który definiuje procedurę operatora w klasie lub strukturze.</span><span class="sxs-lookup"><span data-stu-id="70481-103">Declares the operator symbol, operands, and code that define an operator procedure on a class or structure.</span></span>  

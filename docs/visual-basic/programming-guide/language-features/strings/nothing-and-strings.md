@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647196"
 ---
 # <a name="nothing-and-strings-in-visual-basic"></a><span data-ttu-id="71b84-102">Nothing i ciągi w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="71b84-102">Nothing and Strings in Visual Basic</span></span>
 <span data-ttu-id="71b84-103">Środowisko uruchomieniowe Visual Basic i [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] oceny `Nothing` inaczej po przejściu do ciągów.</span><span class="sxs-lookup"><span data-stu-id="71b84-103">The Visual Basic runtime and the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] evaluate `Nothing` differently when it comes to strings.</span></span>  

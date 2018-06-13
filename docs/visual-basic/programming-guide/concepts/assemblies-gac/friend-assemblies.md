@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644384"
 ---
 # <a name="friend-assemblies-visual-basic"></a><span data-ttu-id="fd219-102">Przyjazne zestawy (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fd219-102">Friend Assemblies (Visual Basic)</span></span>
 <span data-ttu-id="fd219-103">A *przyjaznego zestawu* jest zestawie, do którego mogą uzyskać dostęp do innego zestawu [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) typy i składniki.</span><span class="sxs-lookup"><span data-stu-id="fd219-103">A *friend assembly* is an assembly that can access another assembly's [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) types and members.</span></span> <span data-ttu-id="fd219-104">Po zidentyfikowaniu zestawu jako zestawu friend, masz już Oznacz typy i składniki jako public je, aby były dostępne dla innych zestawów.</span><span class="sxs-lookup"><span data-stu-id="fd219-104">If you identify an assembly as a friend assembly, you no longer have to mark types and members as public in order for them to be accessed by other assemblies.</span></span> <span data-ttu-id="fd219-105">Jest to szczególnie wygodne w następujących scenariuszach:</span><span class="sxs-lookup"><span data-stu-id="fd219-105">This is especially convenient in the following scenarios:</span></span>  

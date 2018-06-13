@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638388"
 ---
 # <a name="class-not-registered-on-local-machine"></a><span data-ttu-id="291cb-102">Klasa nie jest zarejestrowana na komputerze lokalnym</span><span class="sxs-lookup"><span data-stu-id="291cb-102">Class not registered on local machine</span></span>
 <span data-ttu-id="291cb-103">Ten błąd występuje zazwyczaj w wyniku uszkodzony plik.</span><span class="sxs-lookup"><span data-stu-id="291cb-103">This error is usually encountered as a result of a corrupted file.</span></span> <span data-ttu-id="291cb-104">Może być konieczne ponowne zainstalowanie programu Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="291cb-104">You may need to reinstall Visual Studio.</span></span>  

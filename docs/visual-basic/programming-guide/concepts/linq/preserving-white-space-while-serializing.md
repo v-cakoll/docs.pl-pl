@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644982"
 ---
 # <a name="preserving-white-space-while-serializing"></a><span data-ttu-id="f30ad-102">Zachowywanie białe miejsce podczas serializowania</span><span class="sxs-lookup"><span data-stu-id="f30ad-102">Preserving White Space While Serializing</span></span>
 <span data-ttu-id="f30ad-103">W tym temacie opisano, jak sterowania biały znak w przypadku serializacji drzewo XML.</span><span class="sxs-lookup"><span data-stu-id="f30ad-103">This topic describes how to control white space when serializing an XML tree.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646929"
 ---
 # <a name="how-to-declare-custom-events-to-avoid-blocking-visual-basic"></a><span data-ttu-id="d0b4b-102">Porady: deklarowanie zdarzeń niestandardowych w celu unikania blokowania (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d0b4b-102">How to: Declare Custom Events To Avoid Blocking (Visual Basic)</span></span>
 <span data-ttu-id="d0b4b-103">Istnieją kilka okoliczności, gdy należy pamiętać, że jedna procedura obsługi zdarzeń blokuje obsługi kolejnych zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="d0b4b-103">There are several circumstances when it is important that one event handler not block subsequent event handlers.</span></span> <span data-ttu-id="d0b4b-104">Zdarzenia niestandardowe umożliwiają zdarzenia asynchroniczne wywoływanie jej obsługi zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="d0b4b-104">Custom events allow the event to call its event handlers asynchronously.</span></span>  

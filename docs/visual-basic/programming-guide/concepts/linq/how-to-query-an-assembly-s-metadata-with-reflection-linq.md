@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643249"
 ---
 # <a name="how-to-query-an-assembly39s-metadata-with-reflection-linq-visual-basic"></a><span data-ttu-id="473ab-102">Porady: zapytanie zestawu&#39;s metadanych z odbiciem (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="473ab-102">How to: Query An Assembly&#39;s Metadata with Reflection (LINQ) (Visual Basic)</span></span>
 <span data-ttu-id="473ab-103">W poniższym przykładzie przedstawiono sposób LINQ może służyć za pomocą odbicia do pobierania metadanych określonych o metodach, spełniających określone kryteria wyszukiwania.</span><span class="sxs-lookup"><span data-stu-id="473ab-103">The following example shows how LINQ can be used with reflection to retrieve specific metadata about methods that match a specified search criterion.</span></span> <span data-ttu-id="473ab-104">W takim przypadku zapytanie znajdzie nazwy wszystkie metody w zestawie, która zwraca typów wyliczenia, takich jak tablic.</span><span class="sxs-lookup"><span data-stu-id="473ab-104">In this case, the query will find the names of all the methods in the assembly that return enumerable types such as arrays.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640488"
 ---
 # <a name="the-file-is-currently-open-for-reading"></a><span data-ttu-id="d1722-102">Plik jest aktualnie otwarty do odczytu</span><span class="sxs-lookup"><span data-stu-id="d1722-102">The file is currently open for reading</span></span>
 <span data-ttu-id="d1722-103">Nastąpiła próba uzyskania dostępu do pliku, który jest aktualnie otwarty do odczytu.</span><span class="sxs-lookup"><span data-stu-id="d1722-103">An attempt has been made to access a file that is currently open for reading.</span></span>  

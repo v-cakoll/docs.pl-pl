@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646867"
 ---
 # <a name="sorting-data-visual-basic"></a><span data-ttu-id="1df1a-102">Sortowanie danych (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1df1a-102">Sorting Data (Visual Basic)</span></span>
 <span data-ttu-id="1df1a-103">Operacja sortowania Porządkuje elementy sekwencji na podstawie jednego lub więcej atrybutów.</span><span class="sxs-lookup"><span data-stu-id="1df1a-103">A sorting operation orders the elements of a sequence based on one or more attributes.</span></span> <span data-ttu-id="1df1a-104">Pierwsze kryterium sortowania sortuje podstawowe elementy.</span><span class="sxs-lookup"><span data-stu-id="1df1a-104">The first sort criterion performs a primary sort on the elements.</span></span> <span data-ttu-id="1df1a-105">Określając drugie kryterium sortowania, można sortować elementów w każdej grupie głównej sortowania.</span><span class="sxs-lookup"><span data-stu-id="1df1a-105">By specifying a second sort criterion, you can sort the elements within each primary sort group.</span></span>  

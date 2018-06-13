@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643305"
 ---
 # <a name="how-to-chain-axis-method-calls-linq-to-xml-visual-basic"></a><span data-ttu-id="2337a-102">Porady: łańcucha wywołań metody osi (LINQ do XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2337a-102">How to: Chain Axis Method Calls (LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="2337a-103">Typowe wzorzec, który będzie używany w kodzie jest wywołanie metody osi, a następnie wywołania jednej osi — metoda rozszerzenia.</span><span class="sxs-lookup"><span data-stu-id="2337a-103">A common pattern that you will use in your code is to call an axis method, then call one of the extension method axes.</span></span>  

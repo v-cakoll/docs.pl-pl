@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644345"
 ---
 # <a name="filtering-data-visual-basic"></a><span data-ttu-id="206e3-102">Filtrowanie danych (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="206e3-102">Filtering Data (Visual Basic)</span></span>
 <span data-ttu-id="206e3-103">Filtrowanie odnosi się do operacji ograniczyć zestaw wyników do zawierać tylko elementy, które spełniają określony warunek.</span><span class="sxs-lookup"><span data-stu-id="206e3-103">Filtering refers to the operation of restricting the result set to contain only those elements that satisfy a specified condition.</span></span> <span data-ttu-id="206e3-104">Jest nazywana zaznaczenia.</span><span class="sxs-lookup"><span data-stu-id="206e3-104">It is also known as selection.</span></span>  

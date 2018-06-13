@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646900"
 ---
 # <a name="thread-timers-visual-basic"></a><span data-ttu-id="89f3b-102">Czasomierze wątków (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="89f3b-102">Thread Timers (Visual Basic)</span></span>
 <span data-ttu-id="89f3b-103"><xref:System.Threading.Timer?displayProperty=nameWithType> Klasy jest przydatne w przypadku okresowo uruchamianie zadania w oddzielnym wątku.</span><span class="sxs-lookup"><span data-stu-id="89f3b-103">The <xref:System.Threading.Timer?displayProperty=nameWithType> class is useful for periodically running a task on a separate thread.</span></span> <span data-ttu-id="89f3b-104">Można na przykład użyć czasomierza wątku, sprawdź stan i integralności bazy danych lub utworzyć kopię zapasową plików krytycznych.</span><span class="sxs-lookup"><span data-stu-id="89f3b-104">For example, you could use a thread timer to check the status and integrity of a database or to back up critical files.</span></span>  

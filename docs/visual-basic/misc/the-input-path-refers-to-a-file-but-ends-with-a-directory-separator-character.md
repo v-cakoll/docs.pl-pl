@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638786"
 ---
 # <a name="the-input-path-refers-to-a-file-but-ends-with-a-directory-separator-character"></a><span data-ttu-id="4feba-102">Ścieżka wejściowa odwołuje się do pliku, ale kończy się znakiem separatora katalogu</span><span class="sxs-lookup"><span data-stu-id="4feba-102">The input path refers to a file but ends with a directory separator character</span></span>
 <span data-ttu-id="4feba-103">Próbowano wykonać operację wymagające, aby podać nazwę pliku, ale podana nazwa kończy się znakiem separatora katalogu (`\`).</span><span class="sxs-lookup"><span data-stu-id="4feba-103">An operation was attempted requiring that a filename be supplied, but the supplied name ends with a directory separator character (`\`).</span></span> <span data-ttu-id="4feba-104">Może to być wynikiem ścieżka pliku nieprawidłowo przeanalizowane.</span><span class="sxs-lookup"><span data-stu-id="4feba-104">This may be the result of an incorrectly parsed file path.</span></span>  

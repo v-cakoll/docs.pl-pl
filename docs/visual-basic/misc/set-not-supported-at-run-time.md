@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638346"
 ---
 # <a name="set-not-supported-at-run-time"></a><span data-ttu-id="32b3a-102">Zestaw nie jest obsługiwana w czasie wykonywania</span><span class="sxs-lookup"><span data-stu-id="32b3a-102">Set not supported at run time</span></span>
 <span data-ttu-id="32b3a-103">Próbowano ustawić lub zmienić właściwości, której wartość można ustawić tylko w czasie projektowania.</span><span class="sxs-lookup"><span data-stu-id="32b3a-103">You tried to set or change a property whose value can only be set at design time.</span></span>  

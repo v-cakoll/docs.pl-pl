@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641619"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a><span data-ttu-id="ad588-102">Porady: znajdowanie wszystkich węzłów w Namespace (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ad588-102">How to: Find All Nodes in a Namespace (Visual Basic)</span></span>
 <span data-ttu-id="ad588-103">Można filtrować według nazw każdego elementu lub atrybutu, aby znaleźć wszystkie węzły w tego określonego obszaru nazw.</span><span class="sxs-lookup"><span data-stu-id="ad588-103">You can filter on the namespace of each element or attribute to find all nodes in that particular namespace.</span></span>  

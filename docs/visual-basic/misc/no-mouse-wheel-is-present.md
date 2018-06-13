@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637403"
 ---
 # <a name="no-mouse-wheel-is-present"></a><span data-ttu-id="58edd-102">Nie ma kółka myszy obecne</span><span class="sxs-lookup"><span data-stu-id="58edd-102">No mouse wheel is present</span></span>
 <span data-ttu-id="58edd-103">`My.Computer.Mouse.WheelScrollLines` Właściwość została wywołana, ale nie kółko przewijania myszy ma myszy.</span><span class="sxs-lookup"><span data-stu-id="58edd-103">The `My.Computer.Mouse.WheelScrollLines` property was called, but the mouse has no scroll wheel.</span></span>  

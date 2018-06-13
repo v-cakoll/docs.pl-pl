@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646812"
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a><span data-ttu-id="04312-102">Wprowadzenie do literałów XML w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="04312-102">Introduction to XML Literals in Visual Basic</span></span>
 <span data-ttu-id="04312-103">Ta sekcja zawiera informacje o tworzeniu drzew XML w Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="04312-103">This section provides information about creating XML trees in Visual Basic.</span></span>  

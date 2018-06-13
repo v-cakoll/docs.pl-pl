@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649789"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a><span data-ttu-id="6de94-102">Porady: obliczanie wartości liczbowych (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6de94-102">How to: Calculate Numeric Values (Visual Basic)</span></span>
 <span data-ttu-id="6de94-103">Można obliczyć wartości liczbowych za pomocą wyrażeń liczbowych.</span><span class="sxs-lookup"><span data-stu-id="6de94-103">You can calculate numeric values through the use of numeric expressions.</span></span> <span data-ttu-id="6de94-104">A *wyrażenia liczbowego* jest wyrażenie, które zawiera literały, stałe i zmienne reprezentujący wartości liczbowych i operatory, które działają na tych wartości.</span><span class="sxs-lookup"><span data-stu-id="6de94-104">A *numeric expression* is an expression that contains literals, constants, and variables representing numeric values, and operators that act on those values.</span></span>  

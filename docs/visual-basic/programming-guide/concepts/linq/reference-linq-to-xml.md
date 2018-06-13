@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644917"
 ---
 # <a name="reference-linq-to-xml"></a><span data-ttu-id="5ec1c-102">Odwołanie (LINQ do XML)</span><span class="sxs-lookup"><span data-stu-id="5ec1c-102">Reference (LINQ to XML)</span></span>
 <span data-ttu-id="5ec1c-103">Ten temat zawiera linki do składnika LINQ to tematy dokumentacji XML.</span><span class="sxs-lookup"><span data-stu-id="5ec1c-103">This topic contains links to the LINQ to XML reference topics.</span></span>  

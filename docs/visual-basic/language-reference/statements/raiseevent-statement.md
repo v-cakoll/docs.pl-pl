@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605345"
 ---
 # <a name="raiseevent-statement"></a><span data-ttu-id="7a442-102">RaiseEvent — Instrukcja</span><span class="sxs-lookup"><span data-stu-id="7a442-102">RaiseEvent Statement</span></span>
 <span data-ttu-id="7a442-103">Wyzwala zdarzenie zadeklarowane na poziomie modułu w obrębie klasy, formularza lub dokumentu.</span><span class="sxs-lookup"><span data-stu-id="7a442-103">Triggers an event declared at module level within a class, form, or document.</span></span>  

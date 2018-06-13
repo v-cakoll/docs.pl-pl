@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648544"
 ---
 # <a name="-nologo-visual-basic"></a><span data-ttu-id="50d07-102">-nologo (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50d07-102">-nologo (Visual Basic)</span></span>
 <span data-ttu-id="50d07-103">Pomija wyświetlanie banera praw autorskich i komunikaty informacyjne podczas kompilacji.</span><span class="sxs-lookup"><span data-stu-id="50d07-103">Suppresses display of the copyright banner and informational messages during compilation.</span></span>  

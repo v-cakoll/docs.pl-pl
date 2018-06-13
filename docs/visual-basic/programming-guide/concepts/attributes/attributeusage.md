@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643415"
 ---
 # <a name="attributeusage-visual-basic"></a><span data-ttu-id="536c3-102">AttributeUsage (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="536c3-102">AttributeUsage (Visual Basic)</span></span>
 <span data-ttu-id="536c3-103">Określa sposób użycia klasy atrybutu niestandardowego.</span><span class="sxs-lookup"><span data-stu-id="536c3-103">Determines how a custom attribute class can be used.</span></span> <span data-ttu-id="536c3-104">`AttributeUsage` jest atrybut, który może odnosić się do definicji atrybutu niestandardowego do kontrolowania, jak można zastosować nowego atrybutu.</span><span class="sxs-lookup"><span data-stu-id="536c3-104">`AttributeUsage` is an attribute that can be applied to custom attribute definitions to control how the new attribute can be applied.</span></span> <span data-ttu-id="536c3-105">Po zastosowaniu jawnie, domyślne ustawienia następującą postać:</span><span class="sxs-lookup"><span data-stu-id="536c3-105">The default settings look like this when applied explicitly:</span></span>  

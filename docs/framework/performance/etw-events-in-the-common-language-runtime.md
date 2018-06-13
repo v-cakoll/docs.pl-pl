@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398056"
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>Zdarzenia ETW w środowisku CLR
 Środowisko uruchomieniowe języka wspólnego (CLR) zawiera przydatne zdarzenia śledzenia dla systemu Windows (ETW) informacje diagnostyczne do szerokiej gamy debugowanie i profilowania zdarzenia. Zdarzenia CLR ETW wykorzystać systemu śledzenia ETW systemu Windows można rozszerzyć istniejące profilowania i debugowanie udostępniane przez środowisko uruchomieniowe języka wspólnego pomocy technicznej.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553371"
 ---
 # <a name="styles-and-templates"></a>— Style i szablony
 Style Windows Presentation Foundation (WPF) oraz tworzenia szablonów odnoszą się do zestawu funkcji (style, szablony, wyzwalaczy i scenorys), które umożliwiają aplikacji, dokumentu lub Projektant interfejsu użytkownika do tworzenia aplikacji wizualny oraz do Zapewnij standaryzację na konkretnego wyglądu ich produktu.  

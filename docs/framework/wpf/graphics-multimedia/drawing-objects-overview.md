@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558190"
 ---
 # <a name="drawing-objects-overview"></a>Przegląd Rysowanie obiektów
 W tym temacie przedstawiono <xref:System.Windows.Media.Drawing> obiekty i opisuje sposób umożliwia wydajne Rysowanie kształtów, mapy bitowe, tekst i nośnika. Użyj <xref:System.Windows.Media.Drawing> malować obiekty podczas tworzenia obiektów graficznych, <xref:System.Windows.Media.DrawingBrush>, lub użyj <xref:System.Windows.Media.Visual> obiektów.  

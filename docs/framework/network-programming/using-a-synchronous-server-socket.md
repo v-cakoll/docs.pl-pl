@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398147"
 ---
 # <a name="using-a-synchronous-server-socket"></a>Przy użyciu gniazda synchroniczne serwera
 Gniazda serwera synchroniczne zawiesić wykonanie aplikacji do momentu otrzymania żądania połączenia w gnieździe. Gniazda serwera synchroniczne nie są odpowiednie dla aplikacji, które są w ich operacji w znacznym stopniu wykorzystywane sieci, ale może być odpowiednie dla aplikacji sieciowych proste.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558735"
 ---
 # <a name="how-to-animate-a-property-by-using-an-animationclock"></a>Jak animować właściwość przy użyciu AnimationClock
 Ten przykład przedstawia sposób użycia <xref:System.Windows.Media.Animation.Clock> obiekty do animowania właściwości.  

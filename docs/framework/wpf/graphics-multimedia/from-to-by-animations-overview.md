@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557800"
 ---
 # <a name="fromtoby-animations-overview"></a>Przegląd Cechy animacji od/do/przez
 W tym temacie opisano sposób korzystania z lub do/przez animacje do animowania właściwości zależności. From lub do/przez animację tworzy przejścia między dwiema wartościami.  

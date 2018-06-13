@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334863"
 ---
 # <a name="file-system-and-the-registry-c-programming-guide"></a>System plików i rejestr (Przewodnik programowania w języku C#)
 W następujących tematach opisano sposób użycia języka C# i .NET Framework do wykonywania podstawowych operacji różnych plików, folderów i rejestru.  

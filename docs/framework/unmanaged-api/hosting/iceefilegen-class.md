@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436312"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen — Klasa
 Udostępnia funkcje tworzenia natywnych przenośnego (PE) pliku wykonywalnego. Interfejs będzie zwykle używane przez kompilatory Generowanie ich skompilowanych danych wyjściowych pliku wykonywalnego.  

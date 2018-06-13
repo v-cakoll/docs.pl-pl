@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335526"
 ---
 # <a name="introduction-to-linq-queries-c"></a>Wprowadzenie do kwerend LINQ (C#)
 A *zapytania* jest wyrażenie, które pobiera dane ze źródła danych. Zapytania są zwykle zapisywane w język kwerendy specjalne. Wraz z upływem czasu dla różnych typów źródeł danych, na przykład SQL relacyjnych baz danych i XQuery XML zostały opracowane w różnych językach. W związku z tym deweloperzy było nauczyć się nowy język kwerendy dla każdego typu źródła danych lub format danych, które muszą obsługiwać. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] upraszcza tej sytuacji, oferując spójny model do pracy z danymi w różnych rodzajów źródeł danych i formaty. W [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania, zawsze korzystasz z obiektów. Użyj tego samego podstawowe wzorców kodowania w celu wykonywania zapytań i przekształcania danych w dokumentach XML, baz danych, [!INCLUDE[vstecado](~/includes/vstecado-md.md)] zestawów danych, kolekcji .NET i innym formacie, dla którego [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dostawca jest niedostępny.  

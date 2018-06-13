@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397065"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>Słowa kluczowe i poziomy ETW CLR
 <a name="top"></a> Zdarzenia śledzenia dla zdarzeń systemu Windows (ETW) można filtrować według kategorii i poziomu. Zdarzenia [słowa kluczowe CLR ETW](#keywords) włączenie filtrowania zdarzeń według kategorii; są używane w kombinacji dostawców środowiska uruchomieniowego i uwalniania. [Poziomów zdarzeń](#levels) są identyfikowane za pomocą flagi.  

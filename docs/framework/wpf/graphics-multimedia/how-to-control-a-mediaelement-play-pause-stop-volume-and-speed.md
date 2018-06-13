@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561394"
 ---
 # <a name="how-to-control-a-mediaelement-play-pause-stop-volume-and-speed"></a>Jak kontrolować MediaElement (odtwórz, pauza, zatrzymaj, głośność i prędkość)
 Poniższy przykład przedstawia sposób odtwarzaniem nośnika przy użyciu <xref:System.Windows.Controls.MediaElement>. W przykładzie jest tworzony proste media player, który służy do odtwarzania, wstrzymać, zatrzymać i pominąć i z powrotem na nośniku, a także dopasować stosunek wolumin i szybkości.  

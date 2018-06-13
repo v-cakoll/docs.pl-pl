@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543709"
 ---
 # <a name="how-to-create-a-custom-routed-event"></a>Jak utworzyć niestandardowe zdarzenie trasowane
 Niestandardowe zdarzenie w celu obsługi zdarzeń routingu, należy zarejestrować <xref:System.Windows.RoutedEvent> przy użyciu <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> metody. W tym przykładzie pokazano tworzenie niestandardowych kierowanego zdarzenia.  

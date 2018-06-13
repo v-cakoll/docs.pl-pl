@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335393"
 ---
 # <a name="projection-operations-c"></a>Operacje rzutowania (C#)
 Projekcja odwołuje się do operacji przekształcania obiektu na nowy formularz, który często składa się tylko z tych właściwości, które zostaną następnie użyte. Przy użyciu projekcji, można utworzyć nowy typ, który składa się z każdego obiektu. Możesz właściwości projektu i funkcji matematycznych w nim. Można także wyświetlać oryginalny obiekt, bez jego zmiany.  

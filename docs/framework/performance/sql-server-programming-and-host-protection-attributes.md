@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397965"
 ---
 # <a name="sql-server-programming-and-host-protection-attributes"></a>Atrybuty ochrony hosta i programowanie SQL Server
 Możliwość załadowania i wykonania kodu zarządzanego na hoście programu SQL Server wymaga spełnienia wymagań hosta dla zabezpieczenia dostępu kodu i ochrony zasobów hosta.  Wymagania dotyczące zabezpieczeń dostępu kodu są określane przez jeden z trzech zestawów uprawnień programu SQL Server: bezpieczne, dostępu zewnętrznego lub NIEBEZPIECZNA. Kod wykonywania w SAFE lub zestawy uprawnień dostępu zewnętrznego należy unikać niektórych typów albo elementów członkowskich, które mają <xref:System.Security.Permissions.HostProtectionAttribute> atrybut zastosowany. <xref:System.Security.Permissions.HostProtectionAttribute> Nie jest uprawnienie zabezpieczeń jak gwarancje niezawodności w identyfikuje kod tworzy typy lub metody, czy host może uniemożliwić.  Korzystanie z <xref:System.Security.Permissions.HostProtectionAttribute> wymusza modelu programowania, który pomaga chronić stabilności hosta.  

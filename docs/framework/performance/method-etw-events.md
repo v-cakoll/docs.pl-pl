@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398108"
 ---
 # <a name="method-etw-events"></a>Zdarzenia metod ETW
 <a name="top"></a> Te zdarzenia zbierać informacje, które są specyficzne dla metody. Ładunek te zdarzenia jest wymagana do rozpoznawania symboli. Zdarzenia te zapewniają dodatkowo pomocne informacje takie jak liczba została wywołana metoda.  

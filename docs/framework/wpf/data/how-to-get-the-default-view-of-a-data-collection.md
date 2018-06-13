@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557176"
 ---
 # <a name="how-to-get-the-default-view-of-a-data-collection"></a>Jak pobrać domyślny widok kolekcji danych
 Widoki zezwolić tej samej kolekcji danych do wyświetlenia na różne sposoby, w zależności od sortowania, filtrowania lub kryteria grupowania. Każdy kolekcja zawiera jeden widok domyślny udostępnionego, który jest używany jako źródło rzeczywistego powiązania, gdy powiązanie Określa kolekcję jako źródło. W tym przykładzie przedstawiono sposób wyświetlania domyślnej kolekcji.  

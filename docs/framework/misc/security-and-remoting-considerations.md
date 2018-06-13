@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398173"
 ---
 # <a name="security-and-remoting-considerations"></a>Zagadnienia dotyczące zabezpieczeń internetowych i zdalnego dostępu
 Usługi zdalne umożliwia konfigurowanie przezroczysty wywoływania między domenami aplikacji, procesy lub komputery. Jednak przeszukiwania stosu zabezpieczeń dostępu kodu nie może przekraczać granice procesu lub maszyny (dotyczy ona między domenami aplikacji tego samego procesu).  

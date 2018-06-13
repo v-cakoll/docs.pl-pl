@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561378"
 ---
 # <a name="how-to-set-a-duration-for-an-animation"></a>Jak ustawić czas trwania dla animacji
 A <xref:System.Windows.Media.Animation.Timeline> reprezentuje segment czasu i długość danego segmentu jest określany na osi czasu <xref:System.Windows.Duration>. Gdy <xref:System.Windows.Media.Animation.Timeline> rzędach jego trwania zatrzymuje odtwarzanie. Jeśli <xref:System.Windows.Media.Animation.Timeline> ma osi podrzędnej one zatrzymać odtwarzanie również. W przypadku animacji <xref:System.Windows.Duration> Określa, jak długo animacji umożliwia przejście ze swojej wartości początkowej, do jego wartości końcowej.  

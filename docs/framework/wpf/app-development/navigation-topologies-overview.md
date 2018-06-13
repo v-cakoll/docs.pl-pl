@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557553"
 ---
 # <a name="navigation-topologies-overview"></a>Przegląd Topologia nawigacji
 <a name="introduction"></a> Ten przegląd zawiera wprowadzenie do topologii nawigacji w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Następnie omówiono trzy popularne topologie nawigacji, z próbek.  

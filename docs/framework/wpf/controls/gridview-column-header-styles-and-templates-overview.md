@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553875"
 ---
 # <a name="gridview-column-header-styles-and-templates-overview"></a>Przegląd Style nagłówka kolumn i szablonów GridView
 To omówienie omówiono kolejność pierwszeństwa dla właściwości, które służy do dostosowywania nagłówka kolumny w <xref:System.Windows.Controls.GridView> tryb widoku <xref:System.Windows.Controls.ListView> formantu.  

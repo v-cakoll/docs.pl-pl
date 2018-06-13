@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560719"
 ---
 # <a name="how-to-rotate-an-object-by-using-a-geometric-path"></a>Jak obrócić obiekt z wykorzystaniem ścieżki geometrycznej
 W tym przykładzie pokazano, jak Obróć (Tabela przestawna) obiektu wzdłuż ścieżki geometryczne, która jest definiowana za pomocą <xref:System.Windows.Media.PathGeometry> obiektu.  

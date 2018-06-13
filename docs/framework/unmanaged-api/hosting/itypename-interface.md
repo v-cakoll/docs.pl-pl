@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440661"
 ---
 # <a name="itypename-interface"></a>ITypeName — Interfejs
 Udostępnia metody uzyskiwania informacji na nazwę typu.  

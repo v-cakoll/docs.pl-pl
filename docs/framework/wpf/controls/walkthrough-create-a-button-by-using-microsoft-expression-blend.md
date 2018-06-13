@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558021"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Wskazówki: utwórz przycisk przy użyciu Microsoft Expression Blend
 Ten przewodnik zawiera kroki procesu tworzenia [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dostosowany przycisk przy użyciu Microsoft Expression Blend.  

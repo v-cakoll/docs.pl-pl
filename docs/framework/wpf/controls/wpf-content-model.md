@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558203"
 ---
 # <a name="wpf-content-model"></a>Model zawartości WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] jest to platforma prezentacji, która udostępnia wiele formantów i typów kontroli których podstawowym celem jest różnych typów zawartości. Aby ustalić, które formant do użycia lub pochodzić z kontroli, należy zrozumieć typy obiektów, które najlepiej można wyświetlić określonego formantu.  

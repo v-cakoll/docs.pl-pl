@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559859"
 ---
 # <a name="how-to-seek-a-clock-synchronously"></a>Jak wyszukać zegar synchronicznie
 Użyj <xref:System.Windows.Media.Animation.ClockController.SeekAlignedToLastTick%2A> metody można synchronicznie wyszukiwanie zegarze do określonego punktu. W poniższym przykładzie pokazano zarówno <xref:System.Windows.Media.Animation.ClockController.Seek%2A> i <xref:System.Windows.Media.Animation.ClockController.SeekAlignedToLastTick%2A> metody <xref:System.Windows.Media.Animation.ClockController>.  

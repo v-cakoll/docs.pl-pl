@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558112"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Test trafienia w warstwie Visual
 Ten temat zawiera omówienie trafień testowania funkcje udostępniane przez warstwę visual. Obsługa testowania trafień pozwala określić, czy wartość geometry, czy punkt znajduje się w renderowanej zawartości <xref:System.Windows.Media.Visual>, co umożliwia wdrożenie zachowania interfejsu użytkownika, takie jak prostokąta zaznaczenia, aby zaznaczyć wiele obiektów.  

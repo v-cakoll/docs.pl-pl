@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448058"
 ---
 # <a name="imetadataassemblyimportenummanifestresources-method"></a><span data-ttu-id="36639-102">IMetaDataAssemblyImport::EnumManifestResources — Metoda</span><span class="sxs-lookup"><span data-stu-id="36639-102">IMetaDataAssemblyImport::EnumManifestResources Method</span></span>
 <span data-ttu-id="36639-103">Pobiera wskaźnik, aby moduł wyliczający dla zasobów w bieżącym manifest zestawu.</span><span class="sxs-lookup"><span data-stu-id="36639-103">Gets a pointer to an enumerator for the resources referenced in the current assembly manifest.</span></span>  

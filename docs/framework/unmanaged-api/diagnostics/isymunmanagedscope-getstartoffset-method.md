@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425914"
 ---
 # <a name="isymunmanagedscopegetstartoffset-method"></a><span data-ttu-id="34a9b-102">ISymUnmanagedScope::GetStartOffset — Metoda</span><span class="sxs-lookup"><span data-stu-id="34a9b-102">ISymUnmanagedScope::GetStartOffset Method</span></span>
 <span data-ttu-id="34a9b-103">Pobiera Przesunięcie początkowe dla tego zakresu.</span><span class="sxs-lookup"><span data-stu-id="34a9b-103">Gets the start offset for this scope.</span></span>  

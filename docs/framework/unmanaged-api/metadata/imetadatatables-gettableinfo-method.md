@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449611"
 ---
 # <a name="imetadatatablesgettableinfo-method"></a><span data-ttu-id="45a06-102">IMetaDataTables::GetTableInfo — Metoda</span><span class="sxs-lookup"><span data-stu-id="45a06-102">IMetaDataTables::GetTableInfo Method</span></span>
 <span data-ttu-id="45a06-103">Pobiera nazwę, rozmiar wiersza, liczbę wierszy, liczby kolumn oraz kolumny klucza indeksu określonej tabeli.</span><span class="sxs-lookup"><span data-stu-id="45a06-103">Gets the name, row size, number of rows, number of columns, and key column index of the specified table.</span></span>  

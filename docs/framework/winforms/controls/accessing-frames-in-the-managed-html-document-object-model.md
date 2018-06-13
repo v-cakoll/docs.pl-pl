@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525520"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a><span data-ttu-id="47d68-102">Uzyskiwanie dostępu do ramek w modelu DOM (Document Object Model) zarządzanych dokumentów HTML</span><span class="sxs-lookup"><span data-stu-id="47d68-102">Accessing Frames in the Managed HTML Document Object Model</span></span>
 <span data-ttu-id="47d68-103">Niektóre dokumenty HTML składają się z *ramki*, lub okna, które mogą przechowywać swoich własnych różne dokumentów HTML.</span><span class="sxs-lookup"><span data-stu-id="47d68-103">Some HTML documents are composed out of *frames*, or windows that can hold their own distinct HTML documents.</span></span> <span data-ttu-id="47d68-104">Za pomocą ramek można łatwo tworzyć strony HTML, w których statycznych, takich jak pasek nawigacyjny pozostały jedną lub kilka części strony, podczas gdy inne ramki stale zmienić jego zawartość.</span><span class="sxs-lookup"><span data-stu-id="47d68-104">Using frames makes it easy to create HTML pages in which one or more pieces of the page remain static, such as a navigation bar, while other frames constantly change their content.</span></span>  

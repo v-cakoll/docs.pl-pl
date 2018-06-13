@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446166"
 ---
 # <a name="imetadataimportgetinterfaceimplprops-method"></a><span data-ttu-id="57dde-102">IMetaDataImport::GetInterfaceImplProps — Metoda</span><span class="sxs-lookup"><span data-stu-id="57dde-102">IMetaDataImport::GetInterfaceImplProps Method</span></span>
 <span data-ttu-id="57dde-103">Pobiera wskaźnik do tokenów metadanych dla <xref:System.Type> implementującej określonej metody i dla interfejsu, który deklaruje tej metody.</span><span class="sxs-lookup"><span data-stu-id="57dde-103">Gets a pointer to the metadata tokens for the <xref:System.Type> that implements the specified method, and for the interface that declares that method.</span></span>  

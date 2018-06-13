@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444854"
 ---
 # <a name="imetadataemitdeletefieldmarshal-method"></a><span data-ttu-id="6a663-102">IMetaDataEmit::DeleteFieldMarshal — Metoda</span><span class="sxs-lookup"><span data-stu-id="6a663-102">IMetaDataEmit::DeleteFieldMarshal Method</span></span>
 <span data-ttu-id="6a663-103">Niszczy PInvoke organizowanie podpisu metadanych dla obiekt odwołuje się określony token.</span><span class="sxs-lookup"><span data-stu-id="6a663-103">Destroys the PInvoke marshaling metadata signature for the object referenced by the specified token.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452907"
 ---
 # <a name="icorprofilerinfogetfunctionfromip-method"></a><span data-ttu-id="a50c6-102">ICorProfilerInfo::GetFunctionFromIP — Metoda</span><span class="sxs-lookup"><span data-stu-id="a50c6-102">ICorProfilerInfo::GetFunctionFromIP Method</span></span>
 <span data-ttu-id="a50c6-103">Mapuje wskaźnik instrukcji kodu zarządzanego do `FunctionID`.</span><span class="sxs-lookup"><span data-stu-id="a50c6-103">Maps a managed code instruction pointer to a `FunctionID`.</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644358"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a><span data-ttu-id="6e0b0-102">Wskazówki: wywoływanie Windows API (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6e0b0-102">Walkthrough: Calling Windows APIs (Visual Basic)</span></span>
 <span data-ttu-id="6e0b0-103">Interfejsy API systemu Windows są bibliotek dołączanych (dynamicznie dll), które są częścią systemu operacyjnego Windows.</span><span class="sxs-lookup"><span data-stu-id="6e0b0-103">Windows APIs are dynamic-link libraries (DLLs) that are part of the Windows operating system.</span></span> <span data-ttu-id="6e0b0-104">Użyj ich do wykonywania zadań, gdy jest trudne do zapisania równoważnych procedur własny.</span><span class="sxs-lookup"><span data-stu-id="6e0b0-104">You use them to perform tasks when it is difficult to write equivalent procedures of your own.</span></span> <span data-ttu-id="6e0b0-105">Na przykład system Windows udostępnia funkcję o nazwie `FlashWindowEx` która pozwala na pasku tytułu aplikacji alternatywny między jasnym i ciemnym.</span><span class="sxs-lookup"><span data-stu-id="6e0b0-105">For example, Windows provides a function named `FlashWindowEx` that lets you make the title bar for an application alternate between light and dark shades.</span></span>  

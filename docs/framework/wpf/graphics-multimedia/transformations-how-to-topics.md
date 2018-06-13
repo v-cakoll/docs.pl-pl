@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562378"
 ---
 # <a name="transformations-how-to-topics"></a><span data-ttu-id="30729-102">Przekształcenia Tematy porad</span><span class="sxs-lookup"><span data-stu-id="30729-102">Transformations How-to Topics</span></span>
 <span data-ttu-id="30729-103">Tematy w tej sekcji opisano sposób stosowania przekształceń różnych obiektów.</span><span class="sxs-lookup"><span data-stu-id="30729-103">The topics in this section describe how to apply different transformations to objects.</span></span>  

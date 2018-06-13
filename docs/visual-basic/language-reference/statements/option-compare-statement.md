@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605306"
 ---
 # <a name="option-compare-statement"></a><span data-ttu-id="90903-102">Option Compare — Instrukcja</span><span class="sxs-lookup"><span data-stu-id="90903-102">Option Compare Statement</span></span>
 <span data-ttu-id="90903-103">Deklaruje domyślną metodę porównywania do używania przy porównywaniu danych ciągów.</span><span class="sxs-lookup"><span data-stu-id="90903-103">Declares the default comparison method to use when comparing string data.</span></span>  

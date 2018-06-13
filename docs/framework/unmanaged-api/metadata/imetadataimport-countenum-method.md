@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445289"
 ---
 # <a name="imetadataimportcountenum-method"></a><span data-ttu-id="410c2-102">IMetaDataImport::CountEnum — Metoda</span><span class="sxs-lookup"><span data-stu-id="410c2-102">IMetaDataImport::CountEnum Method</span></span>
 <span data-ttu-id="410c2-103">Pobiera liczbę elementów w wyliczeniu została pobrana przez określony moduł wyliczający.</span><span class="sxs-lookup"><span data-stu-id="410c2-103">Gets the number of elements in the enumeration that was retrieved by the specified enumerator.</span></span>  

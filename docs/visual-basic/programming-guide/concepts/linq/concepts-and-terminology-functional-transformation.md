@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644423"
 ---
 # <a name="concepts-and-terminology-functional-transformation-visual-basic"></a><span data-ttu-id="d2338-102">Pojęcia i terminologię (funkcjonalności przekształcania) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d2338-102">Concepts and Terminology (Functional Transformation) (Visual Basic)</span></span>
 <span data-ttu-id="d2338-103">W tym temacie przedstawiono pojęcia i terminologię czysty transformacji funkcjonalności.</span><span class="sxs-lookup"><span data-stu-id="d2338-103">This topic introduces the concepts and terminology of pure functional transformations.</span></span> <span data-ttu-id="d2338-104">Metody przekształcania funkcjonalności do przekształcania danych implikuje kod, który często jest szybsze do programu, bardziej obszerne i łatwiejsze do debugowania i obsługa niż programowania bardziej tradycyjnej, konieczne.</span><span class="sxs-lookup"><span data-stu-id="d2338-104">The functional transformation approach to transforming data yields code that is often quicker to program, more expressive, and easier to debug and maintain than more traditional, imperative programming.</span></span>  

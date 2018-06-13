@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445412"
 ---
 # <a name="imetadataimportenummodulerefs-method"></a><span data-ttu-id="d27bb-102">IMetaDataImport::EnumModuleRefs — Metoda</span><span class="sxs-lookup"><span data-stu-id="d27bb-102">IMetaDataImport::EnumModuleRefs Method</span></span>
 <span data-ttu-id="d27bb-103">Wylicza tokeny element ModuleRef, które reprezentują zaimportowanych modułów.</span><span class="sxs-lookup"><span data-stu-id="d27bb-103">Enumerates ModuleRef tokens that represent imported modules.</span></span>  

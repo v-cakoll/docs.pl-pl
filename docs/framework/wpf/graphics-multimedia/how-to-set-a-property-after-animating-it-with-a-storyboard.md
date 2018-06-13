@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562270"
 ---
 # <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a><span data-ttu-id="5c710-102">Jak ustawić właściwość po zanimowaniu jej za pomocą scenorysu</span><span class="sxs-lookup"><span data-stu-id="5c710-102">How to: Set a Property After Animating It with a Storyboard</span></span>
 <span data-ttu-id="5c710-103">W niektórych przypadkach może się pojawić, nie można zmienić wartości właściwości po ma zostać animowany.</span><span class="sxs-lookup"><span data-stu-id="5c710-103">In some cases, it might appear that you can't change the value of a property after it has been animated.</span></span>  

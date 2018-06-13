@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336368"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-c"></a><span data-ttu-id="4a857-102">Wydajność kwerend łańcuchowa (LINQ do XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="4a857-102">Performance of Chained Queries (LINQ to XML) (C#)</span></span>
 <span data-ttu-id="4a857-103">Jest jedną z najważniejszych zalet LINQ (i LINQ do XML), czy łańcuchowa zapytania można wykonywać oraz pojedynczego zapytania większych i bardziej skomplikowane.</span><span class="sxs-lookup"><span data-stu-id="4a857-103">One of the most important benefits of LINQ (and LINQ to XML) is that chained queries can perform as well as a single larger, more complicated query.</span></span>  

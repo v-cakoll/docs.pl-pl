@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449234"
 ---
 # <a name="imetadataemit2-interface"></a><span data-ttu-id="0a296-102">IMetaDataEmit2 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="0a296-102">IMetaDataEmit2 Interface</span></span>
 <span data-ttu-id="0a296-103">Rozszerza [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) interfejsu głównie, aby zapewnić możliwość korzystania z typów ogólnych.</span><span class="sxs-lookup"><span data-stu-id="0a296-103">Extends the [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) interface primarily to provide the ability to work with generic types.</span></span>  

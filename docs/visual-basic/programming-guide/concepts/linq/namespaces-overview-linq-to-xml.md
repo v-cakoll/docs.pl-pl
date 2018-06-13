@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645892"
 ---
 # <a name="namespaces-overview-linq-to-xml"></a><span data-ttu-id="ae9c9-102">Omówienie przestrzenie nazw (LINQ do XML)</span><span class="sxs-lookup"><span data-stu-id="ae9c9-102">Namespaces Overview (LINQ to XML)</span></span>
 <span data-ttu-id="ae9c9-103">W tym temacie przedstawiono obszary nazw, <xref:System.Xml.Linq.XName> klasy, a <xref:System.Xml.Linq.XNamespace> klasy.</span><span class="sxs-lookup"><span data-stu-id="ae9c9-103">This topic introduces namespaces, the <xref:System.Xml.Linq.XName> class, and the <xref:System.Xml.Linq.XNamespace> class.</span></span>  

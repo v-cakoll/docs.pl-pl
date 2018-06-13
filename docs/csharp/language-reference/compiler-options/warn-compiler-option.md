@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218874"
 ---
 # <a name="-warn-c-compiler-options"></a><span data-ttu-id="a8764-102">-warn (opcje kompilatora C#)</span><span class="sxs-lookup"><span data-stu-id="a8764-102">-warn (C# Compiler Options)</span></span>
 <span data-ttu-id="a8764-103">**-Warn** opcji określa poziom ostrzeżenia kompilatora do wyświetlenia.</span><span class="sxs-lookup"><span data-stu-id="a8764-103">The **-warn** option specifies the warning level for the compiler to display.</span></span>  

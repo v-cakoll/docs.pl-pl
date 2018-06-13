@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763699"
 ---
 # <a name="-not-equal-to-entity-sql"></a><span data-ttu-id="65106-102">! = (Nie jest równa) (jednostka SQL)</span><span class="sxs-lookup"><span data-stu-id="65106-102">!= (Not Equal To) (Entity SQL)</span></span>
 <span data-ttu-id="65106-103">Porównuje dwa wyrażenia, aby określić, czy po lewej stronie wyrażenia nie jest równa prawe wyrażenie.</span><span class="sxs-lookup"><span data-stu-id="65106-103">Compares two expressions to determine whether the left expression is not equal to the right expression.</span></span> <span data-ttu-id="65106-104">! = (Nie) operator równe jest funkcjonalnym odpowiednikiem < > — operator.</span><span class="sxs-lookup"><span data-stu-id="65106-104">The != (Not Equal To) operator is functionally equivalent to the <> operator.</span></span>  

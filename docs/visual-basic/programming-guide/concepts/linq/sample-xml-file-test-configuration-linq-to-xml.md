@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644722"
 ---
 # <a name="sample-xml-file-test-configuration-linq-to-xml"></a><span data-ttu-id="2c538-102">Przykładowy plik XML: Przetestować konfigurację (LINQ do XML)</span><span class="sxs-lookup"><span data-stu-id="2c538-102">Sample XML File: Test Configuration (LINQ to XML)</span></span>
 <span data-ttu-id="2c538-103">Następujący plik XML jest używany w różnych przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji.</span><span class="sxs-lookup"><span data-stu-id="2c538-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="2c538-104">Jest to plik konfiguracji testu.</span><span class="sxs-lookup"><span data-stu-id="2c538-104">This is a test configuration file.</span></span>  

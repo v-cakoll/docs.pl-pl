@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642052"
 ---
 # <a name="finding-the-default-paragraph-style-visual-basic"></a><span data-ttu-id="e0304-102">Znajdowanie domyślny styl akapitu (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e0304-102">Finding the Default Paragraph Style (Visual Basic)</span></span>
 <span data-ttu-id="e0304-103">Pierwszym zadaniem manipulowanie dane w samouczku schemat WordprocessingML dokumentu jest można znaleźć w dokumencie domyślny styl akapitów.</span><span class="sxs-lookup"><span data-stu-id="e0304-103">The first task in the Manipulating Information in a WordprocessingML Document tutorial is to find the default style of paragraphs in the document.</span></span>  

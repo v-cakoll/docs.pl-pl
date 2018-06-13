@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533916"
 ---
 # <a name="how-to-run-an-operation-in-the-background"></a><span data-ttu-id="83fda-102">Porady: uruchamianie operacji w tle</span><span class="sxs-lookup"><span data-stu-id="83fda-102">How to: Run an Operation in the Background</span></span>
 <span data-ttu-id="83fda-103">Jeśli masz operacji potrwa długo, i nie chcesz powodować opóźnienia w interfejsie użytkownika, można użyć <xref:System.ComponentModel.BackgroundWorker> klasę, aby uruchomić operację w innym wątku.</span><span class="sxs-lookup"><span data-stu-id="83fda-103">If you have an operation that will take a long time to complete, and you do not want to cause delays in your user interface, you can use the <xref:System.ComponentModel.BackgroundWorker> class to run the operation on another thread.</span></span>  

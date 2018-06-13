@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213441"
 ---
 # <a name="by-c-reference"></a><span data-ttu-id="c913b-102">by (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="c913b-102">by (C# Reference)</span></span>
 <span data-ttu-id="c913b-103">Kontekstowe słowo kluczowe `by` jest używane w klauzuli `group` w wyrażeniu zapytania, co pozwala określić, w jaki sposób powinny zostać zgrupowane zwracane elementy.</span><span class="sxs-lookup"><span data-stu-id="c913b-103">The `by` contextual keyword is used in the `group` clause in a query expression to specify how the returned items should be grouped.</span></span> <span data-ttu-id="c913b-104">Aby uzyskać więcej informacji, zobacz artykuł [kluzula group](../../../csharp/language-reference/keywords/group-clause.md).</span><span class="sxs-lookup"><span data-stu-id="c913b-104">For more information, see [group clause](../../../csharp/language-reference/keywords/group-clause.md).</span></span>  

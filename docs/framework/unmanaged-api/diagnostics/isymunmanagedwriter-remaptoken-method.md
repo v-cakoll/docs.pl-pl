@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427837"
 ---
 # <a name="isymunmanagedwriterremaptoken-method"></a><span data-ttu-id="e3688-102">ISymUnmanagedWriter::RemapToken — Metoda</span><span class="sxs-lookup"><span data-stu-id="e3688-102">ISymUnmanagedWriter::RemapToken Method</span></span>
 <span data-ttu-id="e3688-103">Powiadamia twórcę symbolu, że token metadanych ma przeprowadzono ponowne mapowanie udziałów jak metadanych zostały wyemitowane.</span><span class="sxs-lookup"><span data-stu-id="e3688-103">Notifies the symbol writer that a metadata token has been remapped as the metadata was emitted.</span></span> <span data-ttu-id="e3688-104">Jeśli moduł zapisujący symbol przechowywanych stary token w magazynie symboli, musi albo aktualizacji przechowywanych token z nową wartością lub go zapisać mapy dla odpowiedniego czytnika symboli ponownie zamapować podczas fazy odczytu.</span><span class="sxs-lookup"><span data-stu-id="e3688-104">If the symbol writer has stored the old token within the symbol store, it must either update the stored token with the new value, or it must save the map for the corresponding symbol reader to remap during the read phase.</span></span>  

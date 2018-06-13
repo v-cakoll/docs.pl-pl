@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33211992"
 ---
 # <a name="building-a-class-library-with-c-and-net-core-in-visual-studio-2017"></a><span data-ttu-id="afc2b-103">Kompilowanie biblioteki klas C# i .NET Core w Visual Studio 2017 r.</span><span class="sxs-lookup"><span data-stu-id="afc2b-103">Building a class library with C# and .NET Core in Visual Studio 2017</span></span>
 

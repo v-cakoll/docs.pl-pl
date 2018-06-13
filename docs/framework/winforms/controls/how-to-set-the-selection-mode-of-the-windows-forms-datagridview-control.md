@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533559"
 ---
 # <a name="how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control"></a><span data-ttu-id="48580-102">Porady: ustawianie trybu zaznaczania formantu DataGridView formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="48580-102">How to: Set the Selection Mode of the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="48580-103">Poniższy przykład kodu pokazuje sposób konfigurowania <xref:System.Windows.Forms.DataGridView> formantu, aby klikanie wiersza automatycznie zaznacza cały wiersz i tak aby tylko jeden wiersz jednocześnie można wybrać.</span><span class="sxs-lookup"><span data-stu-id="48580-103">The following code example demonstrates how to configure a <xref:System.Windows.Forms.DataGridView> control so that clicking anywhere within a row automatically selects the entire row, and so that only one row at a time can be selected.</span></span>  

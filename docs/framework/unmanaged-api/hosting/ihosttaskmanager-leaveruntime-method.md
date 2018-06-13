@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444480"
 ---
 # <a name="ihosttaskmanagerleaveruntime-method"></a><span data-ttu-id="6ceb1-102">IHostTaskManager::LeaveRuntime — Metoda</span><span class="sxs-lookup"><span data-stu-id="6ceb1-102">IHostTaskManager::LeaveRuntime Method</span></span>
 <span data-ttu-id="6ceb1-103">Powiadamia hosta aktualnie wykonywanego zadania o zbliżającym się pozostaw środowisko uruchomieniowe języka wspólnego (CLR), a następnie wprowadź kod niezarządzany.</span><span class="sxs-lookup"><span data-stu-id="6ceb1-103">Notifies the host that the currently executing task is about to leave the common language runtime (CLR) and enter unmanaged code.</span></span>  

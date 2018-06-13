@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33473045"
 ---
 # <a name="instances"></a><span data-ttu-id="6380c-102">Wystąpienia</span><span class="sxs-lookup"><span data-stu-id="6380c-102">Instances</span></span>
 <span data-ttu-id="6380c-103">Nazwa licznika: wystąpień.</span><span class="sxs-lookup"><span data-stu-id="6380c-103">Counter Name: Instances.</span></span>  

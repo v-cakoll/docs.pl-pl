@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644215"
 ---
 # <a name="caller-information-visual-basic"></a><span data-ttu-id="b159a-102">Informacje o wywołującym (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b159a-102">Caller Information (Visual Basic)</span></span>
 <span data-ttu-id="b159a-103">Przy użyciu atrybutów informacji o obiekcie wywołującym można uzyskać informacje o obiekcie wywołującym metodę.</span><span class="sxs-lookup"><span data-stu-id="b159a-103">By using Caller Info attributes, you can obtain information about the caller to a method.</span></span> <span data-ttu-id="b159a-104">Można uzyskać ścieżkę pliku kodu źródłowego, numer wiersza kodu źródłowego i nazwę elementu członkowskiego obiektu wywołującego.</span><span class="sxs-lookup"><span data-stu-id="b159a-104">You can obtain file path of the source code, the line number in the source code, and the member name of the caller.</span></span> <span data-ttu-id="b159a-105">Te informacje są przydatne do śledzenia, debugowania i tworzenia narzędzi diagnostycznych.</span><span class="sxs-lookup"><span data-stu-id="b159a-105">This information is helpful for tracing, debugging, and creating diagnostic tools.</span></span>  

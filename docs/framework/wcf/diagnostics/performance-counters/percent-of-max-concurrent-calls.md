@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33471246"
 ---
 # <a name="percent-of-max-concurrent-calls"></a><span data-ttu-id="25e1b-102">Procent maksymalnej liczby współbieżnych wywołań</span><span class="sxs-lookup"><span data-stu-id="25e1b-102">Percent of Max Concurrent Calls</span></span>
 <span data-ttu-id="25e1b-103">Nazwa licznika: procent maksymalnej liczby równoczesnych wywołań</span><span class="sxs-lookup"><span data-stu-id="25e1b-103">Counter name: Percent of Max Concurrent Calls</span></span>  

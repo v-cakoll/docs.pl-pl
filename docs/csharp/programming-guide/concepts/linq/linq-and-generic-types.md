@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327740"
 ---
 # <a name="linq-and-generic-types-c"></a><span data-ttu-id="5b5e1-102">LINQ i typy ogólne (C#)</span><span class="sxs-lookup"><span data-stu-id="5b5e1-102">LINQ and Generic Types (C#)</span></span>
 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]<span data-ttu-id="5b5e1-103"> zapytania są oparte na typach ogólnych, które zostały wprowadzone w wersji 2.0 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5b5e1-103"> queries are based on generic types, which were introduced in version 2.0 of the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="5b5e1-104">Nie trzeba dogłębnej wiedzy typów ogólnych przed rozpoczęciem Pisanie zapytań.</span><span class="sxs-lookup"><span data-stu-id="5b5e1-104">You do not need an in-depth knowledge of generics before you can start writing queries.</span></span> <span data-ttu-id="5b5e1-105">Można jednak poznać dwa podstawowe pojęcia:</span><span class="sxs-lookup"><span data-stu-id="5b5e1-105">However, you may want to understand two basic concepts:</span></span>  

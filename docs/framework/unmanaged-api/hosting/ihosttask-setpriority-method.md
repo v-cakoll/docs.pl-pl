@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444081"
 ---
 # <a name="ihosttasksetpriority-method"></a><span data-ttu-id="7a5cd-102">IHostTask::SetPriority — Metoda</span><span class="sxs-lookup"><span data-stu-id="7a5cd-102">IHostTask::SetPriority Method</span></span>
 <span data-ttu-id="7a5cd-103">Żądania, że host dostosować priorytetu wątku poziomu reprezentowanego przez bieżącego zadania [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="7a5cd-103">Requests that the host adjust the thread priority level for the task represented by the current [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instance.</span></span>  

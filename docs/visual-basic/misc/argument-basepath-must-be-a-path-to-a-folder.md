@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602070"
 ---
 # <a name="argument-basepath-must-be-a-path-to-a-folder"></a><span data-ttu-id="ec825-102">Nieistniejący argument musi być ścieżką do folderu</span><span class="sxs-lookup"><span data-stu-id="ec825-102">Argument BasePath must be a path to a folder</span></span>
 <span data-ttu-id="ec825-103">Argument `BasePath` musi zawierać ścieżkę do folderu.</span><span class="sxs-lookup"><span data-stu-id="ec825-103">The argument `BasePath` must consist of a path to a folder.</span></span> <span data-ttu-id="ec825-104">Może być niepoprawnie analizowania parametrów i podanie wartości, która nie jest rozpoznawana jako prawidłowa ścieżka.</span><span class="sxs-lookup"><span data-stu-id="ec825-104">You may be parsing a string incorrectly and supplying a value that is not recognized as a valid path.</span></span>  

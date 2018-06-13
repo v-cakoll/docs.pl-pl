@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762939"
 ---
 # <a name="modeling-and-mapping"></a><span data-ttu-id="4898c-102">Mapowanie i modelowania</span><span class="sxs-lookup"><span data-stu-id="4898c-102">Modeling and Mapping</span></span>
 <span data-ttu-id="4898c-103">W [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], można zdefiniować w modelu koncepcyjnym, modelu magazynu i mapowanie między nimi w taki sposób, który najlepiej pasujące do aplikacji.</span><span class="sxs-lookup"><span data-stu-id="4898c-103">In the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], you can define the conceptual model, storage model, and the mapping between the two in the way that best suits your application.</span></span> <span data-ttu-id="4898c-104">Narzędzi modelu danych jednostki w programie Visual Studio umożliwiają tworzenie. [pliku edmx](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4) z bazy danych lub graficzny model, a następnie aktualizacji które plików podczas zmiany bazy danych lub modelu.</span><span class="sxs-lookup"><span data-stu-id="4898c-104">The Entity Data Model Tools in Visual Studio allow you to create an .[edmx file](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4) from a database or a graphical model and then update that file when either the database or model changes.</span></span>  

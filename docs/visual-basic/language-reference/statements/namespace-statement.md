@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604873"
 ---
 # <a name="namespace-statement"></a><span data-ttu-id="dc60d-102">Namespace — Instrukcja</span><span class="sxs-lookup"><span data-stu-id="dc60d-102">Namespace Statement</span></span>
 <span data-ttu-id="dc60d-103">Deklaruje nazwę przestrzeni nazw i powoduje, że kod źródłowy znajdujący się w deklaracji jest kompilowany w obrębie tej przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="dc60d-103">Declares the name of a namespace and causes the source code that follows the declaration to be compiled within that namespace.</span></span>  

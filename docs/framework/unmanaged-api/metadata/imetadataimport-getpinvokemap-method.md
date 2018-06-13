@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448351"
 ---
 # <a name="imetadataimportgetpinvokemap-method"></a><span data-ttu-id="a59ac-102">IMetaDataImport::GetPinvokeMap — Metoda</span><span class="sxs-lookup"><span data-stu-id="a59ac-102">IMetaDataImport::GetPinvokeMap Method</span></span>
 <span data-ttu-id="a59ac-103">Pobiera element ModuleRef token reprezentujący zestaw docelowy wywołania funkcji PInvoke.</span><span class="sxs-lookup"><span data-stu-id="a59ac-103">Gets a ModuleRef token to represent the target assembly of a PInvoke call.</span></span>  

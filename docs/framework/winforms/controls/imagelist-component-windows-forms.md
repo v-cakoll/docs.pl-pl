@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532941"
 ---
 # <a name="imagelist-component-windows-forms"></a><span data-ttu-id="7ec20-102">ImageList — Składnik (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="7ec20-102">ImageList Component (Windows Forms)</span></span>
 <span data-ttu-id="7ec20-103">Formularze systemu Windows `ImageList` składnik jest używany do przechowywania obrazów, które mogą być następnie wyświetlane przez formanty.</span><span class="sxs-lookup"><span data-stu-id="7ec20-103">The Windows Forms `ImageList` component is used to store images, which can then be displayed by controls.</span></span> <span data-ttu-id="7ec20-104">Listy obrazów umożliwia pisanie kodu dla wykazu powinny być zawsze obrazów.</span><span class="sxs-lookup"><span data-stu-id="7ec20-104">An image list allows you to write code for a single, consistent catalog of images.</span></span>  

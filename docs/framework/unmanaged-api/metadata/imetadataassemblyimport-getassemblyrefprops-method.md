@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445825"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a><span data-ttu-id="97c4c-102">IMetaDataAssemblyImport::GetAssemblyRefProps — Metoda</span><span class="sxs-lookup"><span data-stu-id="97c4c-102">IMetaDataAssemblyImport::GetAssemblyRefProps Method</span></span>
 <span data-ttu-id="97c4c-103">Pobiera zbiór właściwości dla odwołania do zestawu o sygnaturze określonych metadanych.</span><span class="sxs-lookup"><span data-stu-id="97c4c-103">Gets the set of properties for the assembly reference with the specified metadata signature.</span></span>  

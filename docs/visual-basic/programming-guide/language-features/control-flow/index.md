@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646555"
 ---
 # <a name="control-flow-in-visual-basic"></a><span data-ttu-id="28cb1-102">Przepływ sterowania w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="28cb1-102">Control Flow in Visual Basic</span></span>
 <span data-ttu-id="28cb1-103">Pozostało nieuregulowanej, program będzie kontynuowana za pośrednictwem jego instrukcje od początku do końca.</span><span class="sxs-lookup"><span data-stu-id="28cb1-103">Left unregulated, a program proceeds through its statements from beginning to end.</span></span> <span data-ttu-id="28cb1-104">Niektóre programy bardzo proste mogą być napisane z tylko ten przepływ jednokierunkowe.</span><span class="sxs-lookup"><span data-stu-id="28cb1-104">Some very simple programs can be written with only this unidirectional flow.</span></span> <span data-ttu-id="28cb1-105">Jednak większość zasilania i narzędzie żadnego języka programowania pochodzi z możliwości, aby zmienić kolejność wykonywania instrukcji sterowania i pętle.</span><span class="sxs-lookup"><span data-stu-id="28cb1-105">However, much of the power and utility of any programming language comes from the ability to change execution order with control statements and loops.</span></span>  

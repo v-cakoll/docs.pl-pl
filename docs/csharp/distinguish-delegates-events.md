@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219141"
 ---
 # <a name="distinguishing-delegates-and-events"></a><span data-ttu-id="7f685-103">Wyróżniającą delegaci i zdarzenia</span><span class="sxs-lookup"><span data-stu-id="7f685-103">Distinguishing Delegates and Events</span></span>
 

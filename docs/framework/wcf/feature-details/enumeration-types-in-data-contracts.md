@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494520"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Typy wyliczeniowe w kontraktach danych
 Wyliczenia mogą być wyrażone w modelu kontraktu danych. W tym temacie przedstawiono kilka przykładów objaśniające modelu programowania.  

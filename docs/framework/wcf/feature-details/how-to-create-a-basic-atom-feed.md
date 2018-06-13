@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493032"
 ---
 # <a name="how-to-create-a-basic-atom-feed"></a>Instrukcje: Tworzenie podstawowego źródła danych Atom
 Windows Communication Foundation (WCF) służy do tworzenia usługi, który ujawnia zespolonego źródła danych. W tym temacie omówiono sposób tworzenia usługi zespolonego, który ujawnia źródła zespolonego Atom.  

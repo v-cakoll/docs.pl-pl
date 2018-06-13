@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495486"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Instrukcje: Programowe dodawanie możliwości odnajdywania do usługi i klienta WCF
 W tym temacie wyjaśniono, jak utworzyć wykrywalny usługi Windows Communication Foundation (WCF). Jest on oparty na [hosta samodzielnego](http://go.microsoft.com/fwlink/?LinkId=145523) próbki.  

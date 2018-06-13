@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494130"
 ---
 # <a name="choosing-a-filter"></a>Wybieranie filtra
 Podczas konfigurowania usługi routingu, należy wybrać filtry komunikatów i skonfigurować je do pozwalają zapewnić dokładne dopasowania przed wiadomości, które otrzymujesz. Jeśli wybrane filtry są zbyt szerokie w ich odpowiedniki lub są niepoprawnie skonfigurowane, komunikaty są kierowane niepoprawnie. Jeśli filtry są zbyt restrykcyjne, nie masz żadnych prawidłowy trasy dostępne dla niektórych wiadomości.  

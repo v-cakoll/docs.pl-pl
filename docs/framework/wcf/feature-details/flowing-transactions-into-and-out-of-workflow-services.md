@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496100"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>Przepływy transakcji do i z usług przepływu pracy
 Usługi przepływu pracy i klienci mogą uczestniczyć w transakcji.  Dla operacji usługi stać się częścią transakcja otoczenia, umieść <xref:System.ServiceModel.Activities.Receive> działania w ramach <xref:System.ServiceModel.Activities.TransactedReceiveScope> działania. Wywołań przez <xref:System.ServiceModel.Activities.Send> lub <xref:System.ServiceModel.Activities.SendReply> działania w ramach <xref:System.ServiceModel.Activities.TransactedReceiveScope> również zostaną wprowadzone w ramach transakcja otoczenia. Aplikacja kliencka przepływu pracy można utworzyć transakcja otoczenia przy użyciu <xref:System.Activities.Statements.TransactionScope> działania i wywołania operacji usługi przy użyciu transakcja otoczenia. W tym temacie przedstawiono tworzenie usługi przepływu pracy i klienta przepływu pracy, który uczestniczyć w transakcji.  

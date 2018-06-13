@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494611"
 ---
 # <a name="peer-resolvers"></a>Mechanizmy rozpoznawania elementów równorzędnych
 Aby można było nawiązać siatkę, węzła równorzędnego wymaga adresów IP innych węzłów. Adresy IP są uzyskiwane poprzez bezpośredni kontakt z usługi rozpoznawania nazw, która przyjmuje identyfikator sieci i zwraca listę adresów odpowiadającego do węzłów w zarejestrowany ten identyfikator określonego siatki. Mechanizm rozpoznawania przechowuje listę zarejestrowanych adresów, które tworzy się przez każdy węzeł w siatce przeprowadzić rejestrację w usłudze.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498127"
 ---
 # <a name="transports-in-windows-communication-foundation"></a>Transporty w programie Windows Communication Foundation
 Warstwa transportu jest na najniższym poziomie stosu kanału. Transporty główne używane w systemie Windows Communication Foundation (WCF) są HTTP, HTTPS TCP i nazwane potoki. Tematy w tej sekcji omówiono w nim wybierania tych transportów Konfigurowanie transportu i ustawienie właściwości dostrajania.  

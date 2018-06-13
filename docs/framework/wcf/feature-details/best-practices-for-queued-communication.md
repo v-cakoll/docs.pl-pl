@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495586"
 ---
 # <a name="best-practices-for-queued-communication"></a>Najlepsze rozwiązania dotyczące komunikacji z obsługą kolejek
 Ten temat zawiera rozwiązania dla komunikacji z obsługą kolejek w systemie Windows Communication Foundation (WCF). W poniższych sekcjach omówiono zalecane praktyki z punktu widzenia scenariusza.  

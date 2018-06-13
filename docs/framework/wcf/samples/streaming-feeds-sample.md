@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505540"
 ---
 # <a name="streaming-feeds-sample"></a>Przykład strumieniowych kanałów informacyjnych
 W tym przykładzie pokazano, jak zarządzać zespolonego źródła danych, które zawierają dużą liczbę elementów. Na serwerze, przykładzie pokazano, jak opóźnienie tworzenia poszczególnych <xref:System.ServiceModel.Syndication.SyndicationItem> obiektów w ramach źródła danych do bezpośrednio przed elementu są zapisywane do strumienia sieci.  

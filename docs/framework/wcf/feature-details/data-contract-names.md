@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494273"
 ---
 # <a name="data-contract-names"></a>Nazwy kontraktów danych
 Czasami klientem a usługą nie mają takich samych typach. One nadal przekazują dane do siebie, tak długo, jak kontraktów danych są równoważne po obu stronach. [Równoważność kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) opiera się na kontrakt danych i nazwy elementów członkowskich danych, i w związku z tym mechanizm jest dostępne do mapowania typów i członków tych nazw. W tym temacie opisano reguły dotyczące nazw kontraktów danych, a także domyślne zachowanie infrastruktury usług Windows Communication Foundation (WCF), podczas tworzenia nazwy.  

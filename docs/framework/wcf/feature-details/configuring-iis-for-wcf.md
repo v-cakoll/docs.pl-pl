@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491719"
 ---
 # <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a>Konfigurowanie Internetowych usług informacyjnych 7.0 na potrzeby programu Windows Communication Foundation
 Internet informacji Services (IIS) 7.0 ma modularny projekt, który umożliwia selektywną instalację składników, które są wymagane. Ten projekt jest oparta na nową technologią componentization oparte na manifest w [!INCLUDE[wv](../../../../includes/wv-md.md)]. Istnieje więcej niż 40 autonomiczny składników funkcji [!INCLUDE[iisver](../../../../includes/iisver-md.md)] instalowane niezależnie. Dzięki temu specjalistów IT łatwo dostosować instalacji zgodnie z wymaganiami. W tym temacie omówiono sposób konfigurowania [!INCLUDE[iisver](../../../../includes/iisver-md.md)] dla korzystać z usługi Windows Communication Foundation (WCF) i określić, które składniki są wymagane.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493215"
 ---
 # <a name="context-exchange-protocol"></a>Protokół wymiany kontekstu
 W tej sekcji opisano protokół wymiany kontekstu wprowadzonych w wersji Windows Communication Foundation (WCF) .NET Framework w wersji 3.5. Protokół ten umożliwia kanału klienta zaakceptować kontekst dostarczonych przez usługę i zastosować je do wszystkich kolejnych żądań do tej usługi, wysyłane za pośrednictwem tego samego wystąpienia kanału klienta. Implementacja protokołu wymiany kontekstu można użyć jednej z dwóch następujących mechanizmów propagację kontekstu między serwerem a klientem: plików cookie protokołu HTTP lub nagłówka SOAP.  

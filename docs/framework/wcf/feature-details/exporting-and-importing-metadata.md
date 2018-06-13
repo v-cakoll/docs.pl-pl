@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495427"
 ---
 # <a name="exporting-and-importing-metadata"></a>Eksportowanie i importowanie metadanych
 W systemie Windows Communication Foundation (WCF), eksportowanie metadanych jest proces opisujące punktów końcowych usługi i projekcji ich reprezentację równoległe, standardowe, której klienci mogą używać, aby zrozumieć sposób korzystania z usługi. Importowanie metadanych usługi to proces generowania <xref:System.ServiceModel.Description.ServiceEndpoint> wystąpień lub części z metadanych usługi.  

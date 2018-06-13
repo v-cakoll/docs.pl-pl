@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498078"
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>Instrukcje: Określanie łańcucha certyfikatu urzędu certyfikacji służącego do weryfikowania podpisów (WCF)
 Windows Communication Foundation (WCF) odebrania wiadomości SOAP podpisany przy użyciu certyfikatu X.509, domyślnie sprawdza czy certyfikatu X.509 został wystawiony przez zaufany urząd certyfikacji. Jest to realizowane przez wyszukiwanie w magazynie certyfikatów i określenia, czy certyfikat dla tego urzędu certyfikacji został wyznaczony jako zaufany. Aby dla usługi WCF określić to łańcucha certyfikatu urzędu certyfikacji musi być zainstalowany w magazynie prawidłowego certyfikatu.  

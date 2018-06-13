@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489612"
 ---
 # <a name="configuring-timeout-values-on-a-binding"></a>Konfigurowanie wartości limitów czasu w powiązaniu
 Powiązania WCF ma dostępnych wiele ustawień limitu czasu. Ustawienie tych limitu czasu ustawienia poprawnie może zwiększyć nie tylko z usługą wydajności, ale również play rolę w zakresie użyteczności i zabezpieczeń usługi. Następujące limity czasu są dostępne na powiązań WCF:  

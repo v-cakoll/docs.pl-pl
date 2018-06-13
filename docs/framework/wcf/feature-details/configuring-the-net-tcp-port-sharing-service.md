@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489521"
 ---
 # <a name="configuring-the-nettcp-port-sharing-service"></a>Konfigurowanie usługi współużytkowania portów Net.TCP
 Hostowanie Samoobsługowe usługom transportu Net.TCP można kontrolować kilka ustawień zaawansowanych, takich jak `ListenBacklog` i `MaxPendingAccepts`, które sterują zachowaniem podstawowej gniazda TCP używany do komunikacji sieciowej. Jednak te ustawienia dla każdego gniazda mają zastosowanie tylko na poziomie powiązanie wyłączenie powiązania transportu jest udostępnianie portów, co jest domyślnie włączona.  

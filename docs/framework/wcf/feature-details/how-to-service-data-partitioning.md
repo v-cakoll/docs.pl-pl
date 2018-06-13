@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491806"
 ---
 # <a name="how-to-service-data-partitioning"></a>Instrukcje: Partycjonowanie danych usługi
 W tym temacie przedstawiono podstawowe czynności wymagane do partycji komunikaty w wielu wystąpieniach tej samej usługi docelowej. Partycjonowanie danych usługi jest zwykle używany w przypadku konieczności zmiany skali usługi w celu zapewnienia lepszej jakości usługi lub gdy potrzebne do obsługi żądań od innych klientów w określony sposób. Na przykład wiadomości z wysokiej wartości lub klientów "Złota" może być konieczne przetworzenie na wyższy priorytet niż komunikatów standardowych klienta.  

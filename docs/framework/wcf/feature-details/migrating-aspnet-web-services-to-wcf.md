@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494565"
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>Migrowanie usług sieci Web na platformie ASP.NET do programu WCF
 Program ASP.NET udostępnia biblioteki klas .NET Framework i narzędzia do tworzenia usług sieci Web, a także urządzenia do hostingu usług w ramach usługi Internet Information Services (IIS). Windows Communication Foundation (WCF) oferuje biblioteki klas .NET Framework, narzędzia i hostingu urządzenia do włączania jednostek oprogramowania do komunikowania się przy użyciu protokołów, w tym używanych przez usługi sieci Web.  Migrowanie usług sieci Web ASP.NET do programu WCF umożliwia aplikacjom korzystać z nowych funkcji i ulepszeń, które są unikatowe dla usługi WCF.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517981"
 ---
 # <a name="dynamic-arguments"></a>Argumentów dynamicznych
 W tym przykładzie pokazano, jak zaimplementować działanie, dla którego argumenty są definiowane przez konsumentów działania, a nie przez autora działania. Robi to przez zastąpienie sposób środowiska uruchomieniowego tworzy metadane działań.  

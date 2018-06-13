@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492128"
 ---
 # <a name="data-member-default-values"></a>Domyślne wartości elementów członkowskich danych
 W [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], typy korzystają z pojęcia *wartości domyślne*. Na przykład dla dowolnego typu odwołania, wartością domyślną jest `null`, i dla typu Liczba całkowita jest równa 0. Jest czasami pożądane, aby pominąć elementu członkowskiego danych z danych serializacji, gdy jest ustawiona na wartość domyślną. Ponieważ element członkowski ma wartość domyślną, wartość rzeczywista nie wymagają serializacji; to ustawienie korzyści wydajności.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489599"
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Prognozowanie wdrożeń programu Windows Communication Foundation: Ułatwianie integracji w przyszłości
 Jeśli obecnie za pomocą programu ASP.NET i przewidywać przy użyciu usługi WCF w przyszłości ten temat zawiera wskazówki, aby upewnić się, że nowych usług sieci Web ASP.NET zostanie współdziała również z aplikacji WCF.  

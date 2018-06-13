@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489745"
 ---
 # <a name="hosting-in-a-managed-application"></a>Hosting w aplikacji zarządzanej
 Usługi Windows Communication Foundation (WCF) może być hostowana w żadnym [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aplikacji. Usługi hostingowe własnym jest najbardziej elastycznego opcja hostingu, ponieważ wymaga co najmniej infrastruktury do wdrożenia. Jednak jest również opcji hostingu najmniej niezawodne, ponieważ zarządzane aplikacje nie udostępniają zaawansowane hosting i funkcji do zarządzania inne opcje hostingu w programie WCF, takie jak usługi Internet Information Services (IIS) i systemu Windows.  

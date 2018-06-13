@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271032"
 ---
 # <a name="-operator-c-reference"></a>. Operator (odwołanie w C#)
 Operator kropki (`.`) służy do uzyskiwania dostępu do elementu członkowskiego. Określa on element członkowski typu lub przestrzeni nazw. Operator kropki umożliwia na przykład dostęp do określonych metod w ramach biblioteki klas .NET Framework:  

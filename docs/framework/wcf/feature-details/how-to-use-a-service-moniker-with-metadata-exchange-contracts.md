@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491253"
 ---
 # <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>Instrukcje: Używanie krótkiej nazwy z kontraktami wymiany metadanych
 Po rozwinięciu niektóre nowe usługi WCF, mogą zdecydować, chcesz mieć możliwość wywołania tych usług z skryptu lub aplikacji Visual Basic 6.0. Jedna z metod byłoby wygenerować zestawu klienta WCF, zarejestrować zestawu w modelu COM, Instalowanie zestawu w pamięci podręcznej GAC i odwoływanie do typów COM w kodzie języka Visual Basic. Podczas dystrybucji aplikacji należy rozesłać także zestaw klienta WCF. Użytkownik będzie miał do rejestrowania zestawów klienta WCF COM i umieszczenie go w pamięci GAC. Współdziałanie z COM WCF umożliwia również wywoływać tej samej usługi bez polegania na zestawie klienta WCF. Monikera programu WCF pozwala wywoływać żadnej usługi WCF z dowolnego języka zgodny z modelu COM (Visual Basic, VBScript, Visual Basic for Applications (VBA) i tak dalej), określając punkt końcowy programu exchange (Mex) metadanych identyfikator URI, który moniker usługi używany do wyodrębniania typu informacje o usłudze. W tym temacie opisano sposób wywołania próbki pobierania programu WCF za pomocą usługi WCF krótkiej nazwy, która określa punkt końcowy Mex.  

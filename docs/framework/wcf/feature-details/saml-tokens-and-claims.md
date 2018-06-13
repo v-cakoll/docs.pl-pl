@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494735"
 ---
 # <a name="saml-tokens-and-claims"></a>Tokeny i oświadczenia języka SAML
 Zabezpieczenia potwierdzenia Markup Language (SAML) *tokenów* są oświadczenia reprezentacji XML. Domyślnie jest Windows Communication Foundation (WCF) używany w scenariuszach zabezpieczeń tokeny SAML *wystawionych tokenów*.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492671"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Instrukcje: Hostowanie usługi WCF w usłudze WAS
 W tym temacie wymieniono podstawowe kroki wymagane do utworzenia usługi aktywacji procesów systemu Windows (znanej także jako Usługa WAS) hostowanej usługi Windows Communication Foundation (WCF). ZOSTAŁO to nowa usługa aktywacji procesów, która jest generalizacji funkcji Internet Information Services (IIS), które współpracują z protokołów innych niż HTTP. Usługi WCF używa interfejsu adapter odbiornika do komunikowania się żądania aktywacji, które są otrzymywane za pośrednictwem protokołów innych niż HTTP obsługiwane przez usługi WCF, takich jak TCP i nazwane potoki i usługę kolejkowania komunikatów.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493499"
 ---
 # <a name="middle-tier-client-applications"></a>Aplikacje klienckie warstwy środkowej
 W tym temacie omówiono różne kwestie związane z aplikacje klienckie warstwy środkowej, które używają usług Windows Communication Foundation (WCF).  

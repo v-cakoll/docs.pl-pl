@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33274940"
 ---
 # <a name="gt-operator-c-reference"></a>&gt;= — Operator (odwołanie w C#)
 Wszystkie typy liczbowe oraz wyliczenie zdefiniuj "większe lub równe" operator relacyjny, `>=` zwracającą `true` Jeśli pierwszy argument operacji jest większe lub równe drugiemu, `false` inaczej.  

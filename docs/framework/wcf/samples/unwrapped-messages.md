@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504971"
 ---
 # <a name="unwrapped-messages"></a>Nieopakowane komunikaty
 W tym przykładzie przedstawiono nieopakowane komunikaty. Domyślnie treść komunikatu jest sformatowany w taki sposób, że są opakowywane parametrów do operacji usługi. Następujące przykładowe pokazuje `Add` komunikat żądania do `ICalculator` usługę w trybie opakowana.  

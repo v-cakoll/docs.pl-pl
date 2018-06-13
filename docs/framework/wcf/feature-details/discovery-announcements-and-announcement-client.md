@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490288"
 ---
 # <a name="discovery-announcements-and-announcement-client"></a>Anonse odnajdywania i klient anonsów
 Funkcja odnajdywania WCF umożliwia składniki poinformować ich dostępności. Jeśli skonfigurowana, aby to zrobić, usługa wysyła Hello i Bye anonsów. Klientów ani innych składników można nasłuchiwać takie komunikaty anonsów i działają na nich. Zapewnia to alternatywna metoda klientów pod uwagę usług. Funkcje anons ma kilka zastosowań, na przykład usługi wprowadź, pozostaw sieci często anonsów może być lepszym niż w przypadku usługi wyszukiwania. Takie podejście zmniejsza ruch w sieci i klienta można zapoznać się obecności lub wysyłki usługi jak Anonse są odbierane.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489973"
 ---
 # <a name="how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels"></a>Instrukcje: Tworzenie fabryki kanałów i używanie jej do tworzenia kanałów oraz zarządzania nimi
 <xref:System.ServiceModel.DuplexChannelFactory%601> Klasa umożliwia tworzenie i zarządzanie nimi kanałach dupleksowych różnych typów używanych przez klientów do wysyłania i odbierania wiadomości do i z punktów końcowych usługi.  

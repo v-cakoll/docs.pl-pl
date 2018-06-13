@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492014"
 ---
 # <a name="partial-trust"></a>Zaufanie częściowe
 Począwszy od [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)], częściowo zaufanych wywołań może uzyskiwać dostęp do publicznego typy i metody implementowane w <xref:System.ServiceModel>, <xref:System.Runtime.Serialization>, i <xref:System.ServiceModel.Web>. W tej sekcji opisano obsługiwane scenariusze dotyczące korzystania z usługi Windows Communication Foundation (WCF) w aplikacji częściowo zaufanej, jak i ograniczonym podzbiorem funkcji WCF dostępnych dla aplikacji działających z zabezpieczeniami dostępu zmniejszenie kodu (CAS) uprawnienia.  

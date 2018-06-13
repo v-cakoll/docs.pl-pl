@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495538"
 ---
 # <a name="choosing-a-transport"></a>Wybieranie transportu
 W tym temacie omówiono kryteriów wyboru spośród trzech transportów główne, które znajdują się w systemie Windows Communication Foundation (WCF): HTTP, TCP i nazwane potoki. Zawiera również WCF transportu MSMQ (MSMQ), ale ten dokument nie obejmuje usługi kolejkowania komunikatów.  

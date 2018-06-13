@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491491"
 ---
 # <a name="durable-duplex-correlation"></a>Niezawodna korelacja dwukierunkowa
 Niezawodna korelacja dwukierunkowa, znanej także jako wywołania zwrotnego korelacji jest przydatne, gdy usługi przepływu pracy istnieje wymaganie, aby wysłać wywołanie zwrotne do początkowego wywołującego. W odróżnieniu od dupleks WCF wywołania zwrotnego może się zdarzyć w dowolnym momencie w przyszłości i nie jest powiązany ten sam kanał lub trwania kanału. Jedynym wymaganiem jest wywołującego aktywnego punktu końcowego nasłuchiwania dla komunikatu wywołania zwrotnego. Dzięki temu dwie usługi przepływu pracy do komunikacji w konwersacji długotrwałe. Ten temat zawiera omówienie niezawodna korelacja dwukierunkowa.  

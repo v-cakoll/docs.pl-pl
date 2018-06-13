@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491286"
 ---
 # <a name="correlation"></a>Korelacja
 Aplikacje usług przepływu pracy komunikować się z innymi usługami, jest ważne, czy wiadomości między nimi są wysyłane do wystąpienia przepływu pracy odpowiednie. Korelacji udostępnia mechanizm dla tego. Tematy w tej sekcji zawierają omówienie korelacji i jak z niego korzystać w scenariuszach usługi innego przepływu pracy.  

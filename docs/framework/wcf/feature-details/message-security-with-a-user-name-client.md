@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495135"
 ---
 # <a name="message-security-with-a-user-name-client"></a>Zabezpieczenia na poziomie komunikatu z użyciem klienta nazwy użytkownika
 Na poniższej ilustracji przedstawiono usługi Windows Communication Foundation (WCF) i klientem zabezpieczone przy użyciu zabezpieczeń na poziomie wiadomości. Usługa jest uwierzytelniane za pomocą certyfikatu X.509. Klient jest uwierzytelniany przy użyciu nazwy użytkownika i hasła.  

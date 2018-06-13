@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491933"
 ---
 # <a name="how-to-create-a-duplex-contract"></a>Instrukcje: Tworzenie kontraktu dwukierunkowego
 W tym temacie przedstawiono podstawowe kroki, aby utworzyć metody, które używają kontraktu dwukierunkowego (dwukierunkowe). Kontrakt dupleksu umożliwia klienci i serwery komunikować się ze sobą niezależnie, aby albo mogą inicjować połączenia do drugiego. Kontrakt dupleksu jest jednym z trzech wzorców komunikat dostępne dla usług Windows Communication Foundation (WCF). Inne dwóch komunikatów wzorce są jednokierunkowe i żądanie odpowiedź. Kontrakt dupleksowy składa się z dwóch jednokierunkowe kontraktów między klientem a serwerem i nie wymaga, aby zostać skorelowane wywołania metody. Użyj tego rodzaju kontraktu, jeśli usługa musi zapytań klienta, aby uzyskać więcej informacji, lub jawnie wywoływanie zdarzeń na kliencie. Aby uzyskać więcej informacji na temat tworzenia aplikacji klienckiej dla kontraktu dwukierunkowego, zobacz [porady: dostęp do usług z kontraktu dwukierunkowego](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md). Dla przykładu pracy, zobacz [dupleksu](../../../../docs/framework/wcf/samples/duplex.md) próbki.  

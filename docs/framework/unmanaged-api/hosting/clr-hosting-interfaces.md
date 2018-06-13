@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435644"
 ---
 # <a name="clr-hosting-interfaces"></a>Interfejsy hostingu środowiska CLR
 W tej sekcji opisano interfejsów, które niezarządzanych hostów można użyć do integracji środowisko uruchomieniowe języka wspólnego (CLR) w swoich aplikacjach. Informacje odnoszą się do platformy .NET Framework w wersji 2.0 lub nowszy. Te interfejsy Włącz hosta do kontrolowania wielu aspektów więcej czasu wykonywania niż w wersji 1.0, 1.1 i podaj znacznie większego integrację środowiska CLR i model wykonania hosta.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489758"
 ---
 # <a name="custom-filters"></a>Filtry niestandardowe
 Filtry niestandardowe umożliwiają definiowanie pasującego logikę, która nie może być wykonywane przy użyciu filtrów dostarczane przez system komunikatu. Na przykład możesz utworzyć niestandardowy filtr, który tworzy skrót elementu określonego komunikatu, a następnie sprawdza, czy wartość, aby ustalić, czy filtr powinien zwrócić wartość true lub false.  

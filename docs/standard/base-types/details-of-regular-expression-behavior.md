@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579343"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Szczegóły zachowania dotyczącego wyrażeń regularnych
 Aparat wyrażenia regularnego programu .NET Framework jest backtracking dopasowania wyrażenia regularnego, uwzględniająca tradycyjnych aparat niedeterministyczne skończoną Automaton ds takim Perl, Python, Emacs i Tcl. To odróżnia go od szybsze, ale bardziej ograniczone, czysty wyrażenia regularnego aparaty deterministyczne Automaton ograniczone (DFA) takich jak awk, egrep lub lex. Ma to również odróżniać z znormalizowanych, ale wolniej, POSIX NFAs. Poniższej sekcji opisano trzy typy aparatów wyrażenia regularnego i objaśniono, dlaczego wyrażeń regularnych w programie .NET Framework są implementowane przy użyciu tradycyjnych aparat NFA.  

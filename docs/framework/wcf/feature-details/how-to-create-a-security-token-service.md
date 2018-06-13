@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493881"
 ---
 # <a name="how-to-create-a-security-token-service"></a>Instrukcje: Tworzenie usługi tokenów zabezpieczeń
 Usługa tokenu zabezpieczającego implementuje ten protokół zdefiniowane w specyfikacji WS-Trust. Ten protokół definiuje formaty wiadomości i wzorce wymiany wiadomości dla wystawiającego certyfikaty, odnowienie, anulowanie i sprawdzania poprawności tokenów zabezpieczających. Usługi tokenu zabezpieczeń zawiera co najmniej jednego z tych funkcji. W tym temacie wygląda najbardziej typowy scenariusz: Implementowanie wydawania tokenów.  

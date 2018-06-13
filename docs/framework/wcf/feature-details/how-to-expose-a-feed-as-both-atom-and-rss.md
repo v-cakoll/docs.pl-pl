@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493428"
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Porady: udostępnianie źródło danych jako Atom i RSS
 Windows Communication Foundation (WCF) służy do tworzenia usługi, który ujawnia zespolonego źródła danych. W tym temacie omówiono sposób tworzenia usługa syndykacji ujawniający zespolonego źródła danych przy użyciu zarówno Atom 1.0 i RSS 2.0. Ta usługa udostępnia jeden punkt końcowy, który może zwrócić albo formacie zespolonego. Dla uproszczenia usługę używaną w tym przykładzie jest samodzielnie hostowana. W środowisku produkcyjnym usługi tego typu może być hostowana w ramach usług IIS lub WAS. Aby uzyskać więcej informacji o różnych technologii WCF obsługujący opcji, zobacz [hostingu](../../../../docs/framework/wcf/feature-details/hosting.md).  

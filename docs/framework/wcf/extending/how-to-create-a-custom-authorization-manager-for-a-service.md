@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490447"
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Instrukcje: Tworzenie menedżera autoryzacji niestandardowej dla usługi
 Infrastruktura modelu tożsamości w systemie Windows Communication Foundation (WCF) obsługuje modelu extensible autoryzacji opartej na oświadczeniach. Oświadczenia są wyodrębnione z tokenów i opcjonalnie przetwarzane przy użyciu zasad autoryzacji niestandardowej, a następnie są umieszczane w <xref:System.IdentityModel.Policy.AuthorizationContext>. Menedżer autoryzacji sprawdza oświadczeń z <xref:System.IdentityModel.Policy.AuthorizationContext> podejmowanie decyzji dotyczących autoryzacji.  

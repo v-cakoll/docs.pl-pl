@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489209"
 ---
 # <a name="data-transfer-and-serialization"></a>Transfer i serializacja danych
 W systemie połączonych usług i klientów są zależne od wymiany danych, wykonywać wszystkie zadania. Jako deweloper usługi lub klienta należy również poznać, jak Windows Communication Foundation (WCF) obsługuje dane i serializacja danych w celu tworzenia aplikacji, które są wydajne i łatwe w konserwacji.  

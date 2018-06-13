@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494166"
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Porady: Tworzenie usługi czy akceptuje dowolne dane za pomocą Model programowania interfejsu REST usługi WCF
 Czasami deweloperzy musi mieć pełną kontrolę nad jak dane są zwracane z operacji usługi. Podczas operacji usługi muszą zwracać dane w formacie nieobsługiwane byWCF jest wielkość liter. W tym temacie omówiono, aby utworzyć usługę, która odbiera dowolne dane za pomocą Model programowania interfejsu REST usługi WCF.  

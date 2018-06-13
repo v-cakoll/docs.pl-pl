@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493168"
 ---
 # <a name="access-control-mechanisms"></a>Mechanizmy kontroli dostępu
 Można kontrolować dostęp w sposób kilka z usługi Windows Communication Foundation (WCF). W tym temacie pokrótce omówiono różne mechanizmy i sugestie dotyczące każdej; użycie ma ona ułatwiające wybranie poprawne mechanizm do użycia. Technologie dostępu są wymienione w kolejności złożoności. Najprostszą jest <xref:System.Security.Permissions.PrincipalPermissionAttribute>; najbardziej złożonych jest modelu tożsamości.  

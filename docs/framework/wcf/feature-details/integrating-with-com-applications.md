@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491845"
 ---
 # <a name="integrating-with-com-applications"></a>Współdziałanie z aplikacjami COM
 Usługi Windows Communication Foundation (WCF) można zintegrować bezpośrednio do istniejącego kodu za pomocą moniker usługi WCF. Krótka nazwa usługi może służyć w środowiskach programistycznych szeroki zakres modelu COM opartych, na przykład VBA pakietu Office, Visual Basic 6.0 lub Visual C++ 6.0.  

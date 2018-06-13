@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493267"
 ---
 # <a name="contracts"></a>Kontrakty
 W tej sekcji przedstawiono sposób definiowania i implementowanie kontraktów usług Windows Communication Foundation (WCF). Kontrakt usługi określa punkt końcowy komunikuje się publicznie. Na poziomie bardziej konkretną jest oświadczenie o zestaw określonych komunikatów podzielone na wzorce wymiany wiadomości podstawowe (MEPs), takich jak żądanie/odpowiedź, jednokierunkowe i dupleksowych. Jeśli kontrakt usługi to zestaw logicznie powiązanych wymiany komunikatów, operacji usługi jest exchange pojedynczym komunikacie. Na przykład `Hello` operacji oczywiście zaakceptować jeden komunikat (aby wywołujący może poinformować o powitanie) i może lub nie może zwracać komunikat (w zależności od uprzejmości operacji).  

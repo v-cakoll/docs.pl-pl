@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505904"
 ---
 # <a name="wcf-discovery-overview"></a>Omówienie odnajdywania WCF
 Interfejsy API wykrywania zapewnienia ujednoliconego modelu programowania dynamiczne publikacji i odnajdywania usług sieci Web za pomocą protokołu WS-Discovery. Te interfejsy API umożliwiają usług do publikowania się i klientom znalezienie usług opublikowanych. Gdy usługa następuje wykrywalny, usługa ma możliwość wysyłać powiadomienia, a także nasłuchiwania i odpowiadać na żądania odnajdywania. Wykrywalny usług można wysyłać wiadomości powitania ogłaszamy przybyciu w sieci i komunikaty Bye poinformować ich wyjścia z sieci. Aby znaleźć usługi, klienci wysyłają `Probe` żądania, która zawiera określone kryteria, takie jak typ kontraktu usługi, słowa kluczowe i zakresem w sieci. Odbieranie usług `Probe` żądania i ustalić, czy odpowiadają one kryteriom. Usługa zgodna, odpowiadały wysyłając `ProbeMatch` wiadomość do klienta informacje niezbędne do kontaktu z usługą. Klienci mogą również wysyłać `Resolve` żądania, dzięki czemu można znaleźć usługi, które mogą zmienić swój adres punktu końcowego. Usługi pasującego odpowiadanie na `Resolve` żądań wysyłając `ResolveMatch` wiadomość do klienta.  

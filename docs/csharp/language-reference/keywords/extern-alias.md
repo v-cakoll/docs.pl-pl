@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217392"
 ---
 # <a name="extern-alias-c-reference"></a>extern alias (odwołanie w C#)
 Może być konieczne dwie wersje zestawy takich samych nazwach w pełni kwalifikowanego typu odwołania. Może być konieczne na przykład użyć dwóch lub więcej wersji zestawu w tej samej aplikacji. Za pomocą aliasu zewnętrznego zestawu, przestrzeni nazw z każdego zestawu można ich opakować wewnątrz przestrzeni nazw poziomu głównego o nazwie aliasu, co umożliwia ich do użycia w tym samym pliku.  

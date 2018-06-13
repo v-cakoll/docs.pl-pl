@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494299"
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>Współdziałanie z usługami ASP.NET w sieci Web
 Współdziałanie między [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] usług sieci Web i usług sieci Web Windows Communication Foundation (WCF) można osiągnąć przez zapewnienie, że usługi implementowane za pomocą obu tych technologii odpowiadają WS-I Basic Profile 1.1 specyfikacji. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Usługi sieci Web umożliwiających zgodne ze standardem WS-I Basic Profile 1.1 są zgodne z klienci WCF za pomocą powiązania dostarczane przez system WCF <xref:System.ServiceModel.BasicHttpBinding>.  

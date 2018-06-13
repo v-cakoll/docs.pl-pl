@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494547"
 ---
 # <a name="exporting-schemas-from-classes"></a>Eksportowanie schematów z klas
 Aby wygenerować schematu XML definition language (XSD) schematów z klas, które są używane w modelu kontraktu danych, użyj <xref:System.Runtime.Serialization.XsdDataContractExporter> klasy. W tym temacie opisano proces tworzenia schematów.  

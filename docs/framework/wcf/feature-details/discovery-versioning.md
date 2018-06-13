@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489183"
 ---
 # <a name="discovery-versioning"></a>Przechowywanie wersji odnajdywania
 Ten temat zawiera krótki przegląd wdrożenia niektóre nowe funkcje odnajdywania. Również zawiera omówienie dotyczące wybierz wersję odnajdywania do użycia.  

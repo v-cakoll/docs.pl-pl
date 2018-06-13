@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490906"
 ---
 # <a name="common-security-scenarios"></a>Typowe scenariusze zabezpieczeń
 Tematy w tej części wykazu liczba możliwych klienta i konfiguracje zabezpieczeń usługi. Konfiguracje różny w zależności od szeregu czynników. Na przykład czy usługi lub klienta znajduje się w intranecie lub czy zabezpieczeń są dostarczane przez Windows lub transportu (na przykład HTTPS).  

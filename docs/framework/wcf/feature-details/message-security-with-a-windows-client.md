@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494784"
 ---
 # <a name="message-security-with-a-windows-client"></a>Zabezpieczanie komunikatów za pomocą klienta systemu Windows
 W tym scenariuszu pokazano klienta usługi Windows Communication Foundation (WCF) i serwera zabezpieczone przez tryb zabezpieczeń wiadomości. Klient i usługa są uwierzytelniane przy użyciu poświadczeń systemu Windows.  

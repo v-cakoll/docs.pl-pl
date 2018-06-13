@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492209"
 ---
 # <a name="forward-compatible-data-contracts"></a>Kontrakty danych zgodne z nowszymi wersjami
 Funkcja programu Windows Communication Foundation (WCF) jest system kontraktu danych który umów można rozwijać w czasie nierozdzielający sposoby. Oznacza to, że klienta przy użyciu starszej wersji kontraktu danych może komunikować się z usługą przy użyciu nowszej wersji tego samego kontraktu danych lub klienta przy użyciu nowszej wersji kontraktu danych może komunikować się ze starszą wersją tej samej kontraktu danych. Aby uzyskać więcej informacji, zobacz [najlepsze rozwiązania: przechowywanie wersji kontraktów danych](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  

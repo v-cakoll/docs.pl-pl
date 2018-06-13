@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491992"
 ---
 # <a name="how-to-set-up-a-signature-confirmation"></a>Instrukcje: Konfigurowanie potwierdzenia sygnatury
 *Potwierdzenie podpisu* jest mechanizm inicjatora komunikat upewnić się, że odebranej odpowiedzi został wygenerowany w odpowiedzi na nadawcy oryginalnej wiadomości. Potwierdzenie podpisu jest zdefiniowany w specyfikacji WS-Security 1.1. Jeśli punkt końcowy obsługuje WS-Security 1.0, nie można użyć potwierdzenia podpisu.  

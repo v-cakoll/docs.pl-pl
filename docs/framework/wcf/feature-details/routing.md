@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494945"
 ---
 # <a name="routing"></a>Routing
 Tematy w tej sekcji dotyczą usługi routingu. Usługa routingu jest ogólny można skonfigurować pośredników SOAP obsługi błędów komunikacji umożliwia skonfigurowanie na podstawie zawartości routingu, konfigurowanie protokołu mostkowanie, i dynamicznie Aktualizuj logiki routingu w czasie wykonywania.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489700"
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Instrukcje: Wdrażanie aplikacji klienta znajdującej usługę przy użyciu serwera proxy odnajdywania
 Ten temat dotyczy innych trzy tematy, który zawiera omówienie sposobu wdrażania serwera proxy odnajdywania. W poprzedniej części tematu [porady: Implementowanie wykrywalnej usługi, który rejestruje przy użyciu serwera Proxy odnajdywania](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), wdrożone usługi WCF, która rejestruje się przy użyciu serwera proxy odnajdywania. W tym temacie można utworzyć klienta WCF, która używa serwera proxy odnajdywania można znaleźć usługi WCF.  

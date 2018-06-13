@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494325"
 ---
 # <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>Instrukcje: Uzyskiwanie dostępu do usług WCF za pomocą kontraktów jednokierunkowych i kontraktów „żądanie-odpowiedź”
 W poniższych procedurach opisano, jak uzyskać dostęp do usługi Windows Communication Foundation (WCF) definiuje kontraktu jednokierunkowego i kontraktu "żądanie-odpowiedź", które nie korzystają z wzorca komunikację dupleksową.  

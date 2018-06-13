@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579629"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Niezależność od języka i elementy niezależne od języka
 .NET Framework jest niezależny od języka. Oznacza to, że deweloper, można tworzyć w jednym z wielu języków, które odnoszą się do programu .NET Framework, takich jak C#, C + +/ CLI, Eiffel F #, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL i środowiska Windows PowerShell. Dostępne typy i składniki bibliotek klas utworzonych dla programu .NET Framework, bez konieczności znajomości języka, w której zostały pierwotnie zapisany i bez konieczności postępuj zgodnie z oryginalnego języka Konwencji. Jeśli jesteś deweloperem składnika składnika jest dostępna przez dowolną aplikację .NET Framework, niezależnie od języka.  

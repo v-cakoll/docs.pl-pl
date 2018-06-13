@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496715"
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>Instrukcje: Wdrażanie serwera proxy odnajdywania
 W tym temacie opisano sposób wdrożenia serwera proxy odnajdywania. Aby uzyskać więcej informacji na temat funkcji odnajdywania w systemie Windows Communication Foundation (WCF), zobacz [omówienie odnajdywania WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Serwera proxy odnajdywania może być zaimplementowany przez klasę, która rozszerza tworzenie <xref:System.ServiceModel.Discovery.DiscoveryProxy> klasy abstrakcyjnej. Istnieje wiele innych klas pomocy technicznej zdefiniowany i używany w tym przykładzie. `OnResolveAsyncResult`, `OnFindAsyncResult`, i `AsyncResult`. Implementuje te klasy <xref:System.IAsyncResult> interfejsu. Aby uzyskać więcej informacji na temat <xref:System.IAsyncResult> zobacz [System.IAsyncResult interfejsu](xref:System.IAsyncResult).

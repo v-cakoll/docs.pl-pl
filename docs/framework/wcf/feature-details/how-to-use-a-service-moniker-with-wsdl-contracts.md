@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491046"
 ---
 # <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>Instrukcje: Używanie krótkiej nazwy z kontraktami WSDL
 Istnieją sytuacje, gdy chcesz całkowicie niezależna klient COM Interop. Usługi, którą chcesz wywołać nie może narazić punktu końcowego MEX i klienta WCF, które biblioteki DLL nie jest zarejestrowany dla modelu COM interop. W takich przypadkach możesz utworzyć plik WSDL, który zawiera opis usługi i przekaż go do krótkiej nazwy usługi WCF. W tym temacie opisano sposób wywołania próbki pobierania programu WCF za pomocą moniker WCF WSDL.  

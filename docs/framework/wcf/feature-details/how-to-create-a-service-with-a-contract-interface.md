@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489797"
 ---
 # <a name="how-to-create-a-service-with-a-contract-interface"></a>Instrukcje: Tworzenie usługi przy użyciu interfejsu kontraktu
 Jest to preferowany sposób tworzenia kontraktu usługi Windows Communication Foundation (WCF) przy użyciu interfejsu. Tego kontraktu określono, kolekcji i struktura wiadomości wymagany dostęp do oferty usługi. Ten interfejs definiuje typów wejściowych i wyjściowych przez zastosowanie <xref:System.ServiceModel.ServiceContractAttribute> klasy interfejsu i <xref:System.ServiceModel.OperationContractAttribute> klas do metody, które chcesz udostępnić.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496230"
 ---
 # <a name="routing-service"></a>Usługa routingu
 Usługa routingu jest ogólny pośrednik SOAP, który działa jako router wiadomości. Do podstawowych funkcji usługi routingu jest możliwość przesyłania wiadomości, na podstawie zawartości komunikatu, dzięki czemu wiadomości do przekazania do punktu końcowego klienta na podstawie wartości w wiadomości, w nagłówku lub w treści wiadomości.  

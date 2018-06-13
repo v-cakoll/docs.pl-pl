@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493895"
 ---
 # <a name="message-security-in-wcf"></a>Zabezpieczenia komunikatów w architekturze WCF
 Windows Communication Foundation (WCF) w dwóch trybach głównych zabezpieczeń (`Transport` i `Message`) i tryb trzeci (`TransportWithMessageCredential`) łączącą dwa. W tym temacie omówiono zabezpieczeń komunikatów i powodów z niego korzystać.  

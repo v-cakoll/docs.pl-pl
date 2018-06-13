@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495018"
 ---
 # <a name="publishing-metadata"></a>Publikowanie metadanych
 Usługi Windows Communication Foundation (WCF) publikowanie metadanych przez publikowanie punkty końcowe metadanych. Publikowanie metadanych usługi udostępnia metadane za pomocą standardowych protokołów, takich jak żądania WS-MetadataExchange (MEX) i HTTP/GET. Punkty końcowe metadanych są podobne do innych punktów końcowych usługi, mają address, binding i kontrakt i będzie możliwe ich dodanie do hosta usługi przy użyciu konfiguracji lub imperatywnych kodu.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652028"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>Struktury oraz inne elementy programowania (Visual Basic)
 Struktury można użyć w połączeniu z tablic, obiektów i procedur, a także ze sobą. Interakcje używać tej samej składni jak te elementy pojedynczo.  

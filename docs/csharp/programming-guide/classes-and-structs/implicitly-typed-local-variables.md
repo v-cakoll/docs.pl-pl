@@ -10,6 +10,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172009"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Niejawnie wpisane zmienne lokalne (Przewodnik programowania w języku C#)
 Zmienne lokalne mogą być deklarowane bez jawnego typu. `var` — Słowo kluczowe nakazuje kompilatorowi do wywnioskowania typu zmienną z wyrażenie po prawej stronie instrukcji inicjowania. Wnioskowany typ może być typem wbudowanym, typu anonimowego, typu zdefiniowanego przez użytkownika lub typ zdefiniowany w bibliotece klas programu .NET Framework. Aby uzyskać więcej informacji dotyczących sposobu inicjowania tablic o `var`, zobacz [niejawnie wpisane tablice](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).  

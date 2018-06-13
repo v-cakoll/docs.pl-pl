@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652155"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Procedura główna w Visual Basic
 Każda aplikacja Visual Basic musi zawierać wywołuje procedurę `Main`. Ta procedura służy jako początkowy punkt i ogólnej kontroli aplikacji. Wywołania .NET Framework z `Main` procedury po załadowaniu aplikacji i jest gotowy do przekazania do formantu. Jeśli tworzysz aplikacji formularzy systemu Windows, należy napisać `Main` procedury dla aplikacji działających na ich własnych.  

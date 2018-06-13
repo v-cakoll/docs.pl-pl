@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651116"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Porady: definiowanie parametru dla procedury (Visual Basic)
 A *parametru* umożliwia kod wywołujący przekazać wartości do procedury, gdy wywołuje ona. Każdy parametr dla procedury zadeklarować zadeklarować zmiennej, określając jej nazwę i typ danych tak samo. Można także określić mechanizm przekazywania i określa, czy parametr jest opcjonalny.  

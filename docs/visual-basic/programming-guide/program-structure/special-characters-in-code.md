@@ -35,6 +35,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654359"
 ---
 # <a name="special-characters-in-code-visual-basic"></a>Znaki specjalne w Code (Visual Basic)
 Czasami trzeba użyć znaków specjalnych w kodzie, oznacza to, znaki, które nie są alfabetycznej lub liczbowe. Interpunkcja i znaki specjalne w zestawie znaków języka Visual Basic mają różnych zastosowań z organizowanie tekst programu do określenia zadań, które wykonuje kompilatora lub skompilowany program. Nie należy określać operacji do wykonania.  

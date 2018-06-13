@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651080"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Porady: wymuszanie przekazywania argumentu przez wartość (Visual Basic)
 Deklaracja procedury określa mechanizm przekazywania. Jeśli parametr jest zadeklarowany jako [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic oczekuje, że odpowiedni argument jest przekazywany za pomocą odwołania. Dzięki temu procedury zmienić wartość elementu programistycznego bazowy argumentu w wywoływanym kodzie. Jeśli chcesz chronić odpowiedniego elementu na takie zmiany, można zastąpić `ByRef` mechanizm przekazywania w procedurze wywołać umieszczając Nazwa argumentu w nawiasach. Te nawiasy są oprócz nawiasów otaczającej listy argumentów w wywołaniu.  

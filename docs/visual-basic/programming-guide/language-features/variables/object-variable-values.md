@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652119"
 ---
 # <a name="object-variable-values-visual-basic"></a>Wartości zmiennej obiektu (Visual Basic)
 Zmienna [Object — typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md) mogą odwoływać się do danych dowolnego typu. Wartości są przechowywane w `Object` zmiennej jest przechowywany w innym miejscu w pamięci, gdy samej zmiennej zawiera wskaźnik do danych.  

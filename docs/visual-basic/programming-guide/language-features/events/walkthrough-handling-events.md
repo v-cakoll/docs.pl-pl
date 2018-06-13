@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655117"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Wskazówki: obsługa zdarzeń (Visual Basic)
 Jest to drugi dwa tematy, które przedstawiają sposób pracy ze zdarzeniami. Pierwszym temacie [wskazówki: deklarujący i wywoływanie zdarzeń](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), pokazuje, jak deklarowanie i wywoływanie zdarzeń. Ta sekcja używa formularza i klasy z tego przewodnika pokazanie sposobu obsługi zdarzenia, gdy ich została wykonana.  

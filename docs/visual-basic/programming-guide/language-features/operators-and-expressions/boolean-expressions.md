@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655801"
 ---
 # <a name="boolean-expressions-visual-basic"></a>Wyrażenia logiczne (Visual Basic)
 A *wyrażenie warunkowe* wyrażenie obliczane do wartości [— typ danych logicznych](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` lub `False`. `Boolean` wyrażenia może potrwać kilka formularzy. Najprostszą jest bezpośrednie porównanie wartości `Boolean` zmienną `Boolean` literal, jak pokazano w poniższym przykładzie.  

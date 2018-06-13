@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655561"
 ---
 # <a name="namespaces-in-visual-basic"></a>Przestrzenie nazw w Visual Basic
 Przestrzenie nazw organizowanie obiektów zdefiniowanych w zestawie. Zestawy może zawierać wiele obszarów nazw, który z kolei może zawierać innych przestrzeniach nazw. Przestrzenie nazw uniknąć niejednoznaczności i uprościć odwołań w przypadku przy użyciu dużych grup obiektów, takich jak biblioteki klas.  

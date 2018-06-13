@@ -3,12 +3,13 @@ title: Wymagania wstępne dotyczące platformy .NET Core w systemie Windows
 description: Dowiedz się, w zależności, należy na okien komputera do opracowywania i uruchamiania aplikacji .NET Core.
 author: JRAlexander
 ms.author: johalex
-ms.date: 05/14/2018
-ms.openlocfilehash: f27070c08755e5b650e32e01011bb7bac669c82d
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
-ms.translationtype: HT
+ms.date: 05/18/2018
+ms.openlocfilehash: 3d172c83f0a79744afbaeeff52d7fea62d9b98b6
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34311991"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Wymagania wstępne dotyczące platformy .NET Core w systemie Windows
 
@@ -30,9 +31,11 @@ Oprogramowanie .NET core jest obsługiwana w następujących wersjach:
 * Windows Server 2012 R2 (całego serwera lub Server Core)
 * Windows Server 2016 lub nowszy (całego serwera, Server Core lub Nano Server)
 
-Zobacz [.NET Core 2.x - obsługiwanych wersjach systemu operacyjnego](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md) pełną listę .NET Core 2.x obsługiwanych systemów operacyjnych.
+Następujące artykuły zawierają pełną listę .NET Core, obsługiwane systemy operacyjne dla poszczególnych wersji:
 
-Zobacz [.NET Core 1.x - obsługiwanych wersjach systemu operacyjnego](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) pełną listę .NET Core 1.x obsługiwanych systemów operacyjnych.
+* [Oprogramowanie .NET core 2.1 — obsługiwane wersje systemu operacyjnego](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)
+* [Oprogramowanie .NET core 2.0 — obsługiwane wersje systemu operacyjnego](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md)
+* [.NET core 1.x — wersje obsługiwany system operacyjny](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)
 
 ## <a name="net-core-dependencies"></a>Zależności .NET core
 

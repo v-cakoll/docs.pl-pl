@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654797"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Lambda — Wyrażenia (Visual Basic)
 A *wyrażenia lambda* jest funkcją lub podprocedury bez nazwy, który może służyć wszędzie tam, gdzie delegata jest prawidłowy. Wyrażenia lambda można używać funkcji lub procedury i może być jednym lub wielu linii. Wyrażenie lambda, można przekazać wartości z bieżącego zakresu.  

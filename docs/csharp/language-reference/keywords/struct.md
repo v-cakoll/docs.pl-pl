@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172152"
 ---
 # <a name="struct-c-reference"></a>struct (odwołanie w C#)
 A `struct` typem jest typ wartości, która jest zwykle używana w celu hermetyzacji małych grup zmienne pokrewne, takie jak współrzędne prostokąta lub właściwości elementu w magazynie. W poniższym przykładzie przedstawiono deklaracji struktury prosty:  

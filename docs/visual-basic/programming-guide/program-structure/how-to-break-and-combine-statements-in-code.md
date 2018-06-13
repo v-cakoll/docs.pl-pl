@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651021"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Porady: przerywanie i łączenie instrukcji w Code (Visual Basic)
 Podczas pisania kodu, można utworzyć w czasie długich instrukcji, które wymagają przewijanie w poziomie w edytorze kodu. Mimo że to nie wpływa na sposób działania kodu, go utrudnia nikogo odczytać kodu znajdującego się na monitora. W takim przypadku należy rozważyć dzielenie jednej instrukcji długa na kilka wierszy.  

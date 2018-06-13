@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654833"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Struktura programu Visual Basic
 Program Visual Basic jest tworzone na podstawie standardowych bloków konstrukcyjnych. A *rozwiązania* składa się z co najmniej jeden projekt. A *projektu* z kolei może zawierać jeden lub więcej zestawów. Każdy *zestawu* ma być kompilowana przy użyciu jednego lub więcej plików źródłowych. A *plik źródłowy* zawiera definicję, jak i implementację klasy, struktury, moduły i interfejsów, które ponoszą ostateczną zawierające cały kod.  

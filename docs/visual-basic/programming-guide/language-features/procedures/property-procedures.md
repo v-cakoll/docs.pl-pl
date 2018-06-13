@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656090"
 ---
 # <a name="property-procedures-visual-basic"></a>Procedury własności (Visual Basic)
 Procedury właściwości jest szereg instrukcji, które modyfikowania właściwości niestandardowych dla modułu, klasy lub struktury. Procedury własności są również znane jako *metod dostępu do właściwości*.  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654945"
 ---
 # <a name="program-structure-and-code-conventions-visual-basic"></a>Struktura programu i konwencje związane z kodami (Visual Basic)
 W tej sekcji przedstawiono typowe struktura programu Visual Basic, udostępnia prosty program Visual Basic, tekst "Hello, World" i w tym artykule omówiono kod Visual Basic — konwencje. Konwencje związane z kodami są sugestie skoncentrowane nie na logice programu, ale na jego struktura fizyczna i wyglądu. Po ich ułatwia kodu do odczytu, zrozumieć i konserwacji. Konwencje związane z kodami należą między innymi:  

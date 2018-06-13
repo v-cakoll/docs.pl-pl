@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536749"
 ---
 # <a name="how-to-apply-the-propertynamechanged-pattern"></a><span data-ttu-id="8d6b5-102">Porady: stosowanie wzorca PropertyNameChanged</span><span class="sxs-lookup"><span data-stu-id="8d6b5-102">How to: Apply the PropertyNameChanged Pattern</span></span>
 <span data-ttu-id="8d6b5-103">W poniższym przykładzie kodu pokazano sposób stosowania *PropertyName*zmienione wzorzec do kontrolki niestandardowej.</span><span class="sxs-lookup"><span data-stu-id="8d6b5-103">The following code example demonstrates how to apply the *PropertyName*Changed pattern to a custom control.</span></span> <span data-ttu-id="8d6b5-104">Podczas implementowania niestandardowych formantów, które są używane przez aparat wiązania danych formularzy systemu Windows, należy zastosować ten wzorzec.</span><span class="sxs-lookup"><span data-stu-id="8d6b5-104">Apply this pattern when you implement custom controls that are used with the Windows Forms data binding engine.</span></span>  

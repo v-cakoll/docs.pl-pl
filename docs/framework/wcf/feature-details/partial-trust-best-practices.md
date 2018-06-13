@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497272"
 ---
 # <a name="partial-trust-best-practices"></a><span data-ttu-id="a1626-102">Najlepsze rozwiązania dotyczące częściowego zaufania</span><span class="sxs-lookup"><span data-stu-id="a1626-102">Partial Trust Best Practices</span></span>
 <span data-ttu-id="a1626-103">W tym temacie opisano najważniejsze wskazówki podczas uruchamiania usługi Windows Communication Foundation (WCF) w środowisku częściowej relacji zaufania.</span><span class="sxs-lookup"><span data-stu-id="a1626-103">This topic describes best practices when running Windows Communication Foundation (WCF) in a partial trust environment.</span></span>  

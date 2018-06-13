@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509128"
 ---
 # <a name="troubleshooting-queued-messaging"></a><span data-ttu-id="cc42e-102">Rozwiązywanie problemów obsługi komunikatów kolejek</span><span class="sxs-lookup"><span data-stu-id="cc42e-102">Troubleshooting Queued Messaging</span></span>
 <span data-ttu-id="cc42e-103">Ta sekcja zawiera typowe pytania i rozwiązywanie problemów z pomocy dotyczącej korzystania z kolejek w systemie Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="cc42e-103">This section contains common questions and troubleshooting help for using queues in Windows Communication Foundation (WCF).</span></span>  

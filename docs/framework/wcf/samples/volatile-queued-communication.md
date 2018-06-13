@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508039"
 ---
 # <a name="volatile-queued-communication"></a><span data-ttu-id="e1984-102">Komunikacja za pomocą nietrwałych kolejek</span><span class="sxs-lookup"><span data-stu-id="e1984-102">Volatile Queued Communication</span></span>
 <span data-ttu-id="e1984-103">W tym przykładzie pokazano, jak wykonać volatile komunikatu w kolejce przez transportu usługi kolejkowania komunikatów (MSMQ).</span><span class="sxs-lookup"><span data-stu-id="e1984-103">This sample demonstrates how to perform volatile queued communication over the Message Queuing (MSMQ) transport.</span></span> <span data-ttu-id="e1984-104">W przykładzie użyto <xref:System.ServiceModel.NetMsmqBinding>.</span><span class="sxs-lookup"><span data-stu-id="e1984-104">This sample uses <xref:System.ServiceModel.NetMsmqBinding>.</span></span> <span data-ttu-id="e1984-105">Usługa jest w tym przypadku aplikacji konsoli siebie umożliwia obserwowanie usługi odbieranie wiadomości w kolejce.</span><span class="sxs-lookup"><span data-stu-id="e1984-105">The service in this case is a self-hosted console application to enable you to observe the service receiving queued messages.</span></span>  

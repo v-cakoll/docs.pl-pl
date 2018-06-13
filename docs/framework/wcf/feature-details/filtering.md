@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497246"
 ---
 # <a name="filtering"></a><span data-ttu-id="8246c-102">Filtrowanie</span><span class="sxs-lookup"><span data-stu-id="8246c-102">Filtering</span></span>
 <span data-ttu-id="8246c-103">Windows Communication Foundation (WCF) filtrowania systemu umożliwia deklaratywne filtry zgodne wiadomości i podejmowanie decyzji operacyjnych.</span><span class="sxs-lookup"><span data-stu-id="8246c-103">The Windows Communication Foundation (WCF) filtering system can use declarative filters to match messages and make operational decisions.</span></span> <span data-ttu-id="8246c-104">Filtry można służą do określania, co należy zrobić z następującym komunikatem, sprawdzając część komunikatu.</span><span class="sxs-lookup"><span data-stu-id="8246c-104">You can use filters to determine what to do with a message by examining part of the message.</span></span> <span data-ttu-id="8246c-105">Proces kolejkowania, na przykład można użyć zapytania XPath 1.0 do sprawdzenia elementu priority znane nagłówka do ustalenia, czy można przenieść komunikatu z przodu kolejki.</span><span class="sxs-lookup"><span data-stu-id="8246c-105">A queuing process, for example, can use an XPath 1.0 query to check the priority element of a known header to determine whether to move a message to the front of the queue.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355980"
 ---
 # <a name="how-to-represent-columns-as-allowing-null-values"></a><span data-ttu-id="daed6-102">Porady: reprezentować kolumny dopuszczającej wartości Null</span><span class="sxs-lookup"><span data-stu-id="daed6-102">How to: Represent Columns as Allowing Null Values</span></span>
 <span data-ttu-id="daed6-103">Użyj [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A> właściwość <xref:System.Data.Linq.Mapping.ColumnAttribute> atrybutu, aby określić, że kolumna skojarzonej bazy danych może zawierać wartości null.</span><span class="sxs-lookup"><span data-stu-id="daed6-103">Use the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A> property on the <xref:System.Data.Linq.Mapping.ColumnAttribute> attribute to specify that the associated database column can hold null values.</span></span>  

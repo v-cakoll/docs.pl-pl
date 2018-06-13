@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501085"
 ---
 # <a name="imperative"></a><span data-ttu-id="8e819-102">Imperatyw</span><span class="sxs-lookup"><span data-stu-id="8e819-102">Imperative</span></span>
 <span data-ttu-id="8e819-103">W tym przykładzie pokazano sposób definiowania <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> dla usługi przy użyciu kodu, zamiast definiować `wsHttpBinding` powiązania w konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="8e819-103">This sample demonstrates how to define a <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> for a service using code, instead of defining the `wsHttpBinding` binding in configuration.</span></span> <span data-ttu-id="8e819-104">Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi Kalkulator.</span><span class="sxs-lookup"><span data-stu-id="8e819-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span>  

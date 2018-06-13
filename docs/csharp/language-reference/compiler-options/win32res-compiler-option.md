@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216768"
 ---
 # <a name="-win32res-c-compiler-options"></a><span data-ttu-id="b4515-102">-win32res (opcje kompilatora C#)</span><span class="sxs-lookup"><span data-stu-id="b4515-102">-win32res (C# Compiler Options)</span></span>
 <span data-ttu-id="b4515-103">**-Win32res** Opcja wstawia zasobów Win32 w pliku wyjściowym.</span><span class="sxs-lookup"><span data-stu-id="b4515-103">The **-win32res** option inserts a Win32 resource in the output file.</span></span>  

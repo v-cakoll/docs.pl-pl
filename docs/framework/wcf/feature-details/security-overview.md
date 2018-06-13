@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505684"
 ---
 # <a name="security-overview"></a><span data-ttu-id="5a3a9-102">Przegląd zabezpieczeń</span><span class="sxs-lookup"><span data-stu-id="5a3a9-102">Security Overview</span></span>
 <span data-ttu-id="5a3a9-103">Windows Communication Foundation (WCF) jest SOAP oparta na komunikatach rozproszonej programowania platformy i zabezpieczanie komunikatów między klientami i usługami jest niezbędne do ochrony danych.</span><span class="sxs-lookup"><span data-stu-id="5a3a9-103">Windows Communication Foundation (WCF) is a SOAP message-based distributed programming platform, and securing messages between clients and services is essential to protecting data.</span></span> <span data-ttu-id="5a3a9-104">Usługi WCF zapewnia platformę elastyczne i interoperacyjne wymiany zabezpieczonych wiadomości na podstawie zarówno istniejącej infrastruktury zabezpieczeń i standardów zabezpieczeń rozpoznanym wiadomości protokołu SOAP.</span><span class="sxs-lookup"><span data-stu-id="5a3a9-104">WCF provides a versatile and interoperable platform for exchanging secure messages based upon both the existing security infrastructure and the recognized security standards for SOAP messages.</span></span>  

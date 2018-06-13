@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496197"
 ---
 # <a name="elevation-of-privilege"></a><span data-ttu-id="5994c-102">Podniesienie uprawnień</span><span class="sxs-lookup"><span data-stu-id="5994c-102">Elevation of Privilege</span></span>
 <span data-ttu-id="5994c-103">*Podniesienie uprawnień* wynikiem nadanie uprawnień poza tymi początkowo nadanego pozwolenia osoby atakującej.</span><span class="sxs-lookup"><span data-stu-id="5994c-103">*Elevation of privilege* results from giving an attacker authorization permissions beyond those initially granted.</span></span> <span data-ttu-id="5994c-104">Na przykład osoba atakująca z zestawem uprawnień uprawnienia "tylko do odczytu" jakiś sposób eksponuje zestaw "odczytu i zapisu."</span><span class="sxs-lookup"><span data-stu-id="5994c-104">For example, an attacker with a privilege set of "read only" permissions somehow elevates the set to include "read and write."</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537219"
 ---
 # <a name="overriding-the-onpaint-method"></a><span data-ttu-id="411e0-102">Zastępowanie metody OnPaint</span><span class="sxs-lookup"><span data-stu-id="411e0-102">Overriding the OnPaint Method</span></span>
 <span data-ttu-id="411e0-103">Podstawowe czynności w przypadku przesłaniania żadnych zdarzeń zdefiniowanych w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] są identyczne i przedstawiono na poniższej liście.</span><span class="sxs-lookup"><span data-stu-id="411e0-103">The basic steps for overriding any event defined in the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] are identical and are summarized in the following list.</span></span>  

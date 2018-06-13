@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500981"
 ---
 # <a name="wcf-and-net-framework-client-profile"></a><span data-ttu-id="6f730-102">WCF i .NET Framework Client Profile</span><span class="sxs-lookup"><span data-stu-id="6f730-102">WCF and .NET Framework Client Profile</span></span>
 [!INCLUDE[arrowhead](../../../includes/arrowhead-md.md)]<span data-ttu-id="6f730-103"> jest to Uproszczona wersja programu .net pełne Framework przeznaczona dla klientów, którzy nie potrzebują całego framework.</span><span class="sxs-lookup"><span data-stu-id="6f730-103"> is a lightweight version of the full .Net Framework designed for clients that don’t need the entire framework.</span></span> <span data-ttu-id="6f730-104">Nie wszystkie usługi Windows Communication Foundation jest obsługiwana przez platformę klienta.</span><span class="sxs-lookup"><span data-stu-id="6f730-104">Not all of Windows Communication Foundation is supported by the client framework.</span></span>  

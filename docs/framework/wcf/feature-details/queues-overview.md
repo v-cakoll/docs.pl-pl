@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497016"
 ---
 # <a name="queues-overview"></a><span data-ttu-id="5bc1f-102">Omówienie kolejek</span><span class="sxs-lookup"><span data-stu-id="5bc1f-102">Queues Overview</span></span>
 <span data-ttu-id="5bc1f-103">W tej sekcji przedstawiono ogólne i podstawowe pojęcia oczekujących komunikacji.</span><span class="sxs-lookup"><span data-stu-id="5bc1f-103">This section introduces the general and core concepts behind queued communication.</span></span> <span data-ttu-id="5bc1f-104">Kolejne sekcje przejdź do szczegółów dotyczących sposobu kolejkowania pojęcia opisane w tym miejscu są dyskowe widoczne w systemie Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="5bc1f-104">Subsequent sections go into details about how the queuing concepts described here are manifested in Windows Communication Foundation (WCF).</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507984"
 ---
 # <a name="dead-letter-queues"></a><span data-ttu-id="bac82-102">Kolejki utraconych komunikatów</span><span class="sxs-lookup"><span data-stu-id="bac82-102">Dead Letter Queues</span></span>
 <span data-ttu-id="bac82-103">W tym przykładzie przedstawiono sposób obsługi i przetwarzania komunikatów, które nie powiodły dostarczania.</span><span class="sxs-lookup"><span data-stu-id="bac82-103">This sample demonstrates how to handle and process messages that have failed delivery.</span></span> <span data-ttu-id="bac82-104">Jest on oparty na [nietransakcyjnego powiązanie MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) próbki.</span><span class="sxs-lookup"><span data-stu-id="bac82-104">It is based on the [Transacted MSMQ Binding](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) sample.</span></span> <span data-ttu-id="bac82-105">W przykładzie użyto `netMsmqBinding` powiązania.</span><span class="sxs-lookup"><span data-stu-id="bac82-105">This sample uses the `netMsmqBinding` binding.</span></span> <span data-ttu-id="bac82-106">Usługa jest aplikacji konsoli siebie umożliwia obserwowanie usługi odbieranie wiadomości w kolejce.</span><span class="sxs-lookup"><span data-stu-id="bac82-106">The service is a self-hosted console application to enable you to observe the service receiving queued messages.</span></span>  

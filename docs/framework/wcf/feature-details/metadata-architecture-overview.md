@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496896"
 ---
 # <a name="metadata-architecture-overview"></a><span data-ttu-id="35574-102">Przegląd architektury metadanych</span><span class="sxs-lookup"><span data-stu-id="35574-102">Metadata Architecture Overview</span></span>
 <span data-ttu-id="35574-103">Windows Communication Foundation (WCF) zapewnia infrastrukturę sformatowanego eksportowania, publikowania, pobieranie i Importowanie metadanych usługi.</span><span class="sxs-lookup"><span data-stu-id="35574-103">Windows Communication Foundation (WCF) provides a rich infrastructure for exporting, publishing, retrieving, and importing service metadata.</span></span> <span data-ttu-id="35574-104">Usługi WCF umożliwia metadane opisują sposób interakcji z punktów końcowych usługi, dzięki czemu narzędzi, takich jak Svcutil.exe, może automatycznie generować kod klienta do uzyskiwania dostępu do usługi.</span><span class="sxs-lookup"><span data-stu-id="35574-104">WCF services use metadata to describe how to interact with the service's endpoints so that tools, such as Svcutil.exe, can automatically generate client code for accessing the service.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496653"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a><span data-ttu-id="8d4c7-102">Porównywanie usług sieci Web na platformie ASP.NET z programem WCF na podstawie procesów programistycznych</span><span class="sxs-lookup"><span data-stu-id="8d4c7-102">Comparing ASP.NET Web Services to WCF Based on Development</span></span>
 <span data-ttu-id="8d4c7-103">Windows Communication Foundation (WCF) ma opcję Tryb zgodności ASP.NET umożliwiają aplikacjom WCF zaprogramowane i skonfigurowane tak jak usług sieci Web ASP.NET i naśladować ich zachowanie.</span><span class="sxs-lookup"><span data-stu-id="8d4c7-103">Windows Communication Foundation (WCF) has an ASP.NET compatibility mode option to enable WCF applications to be programmed and configured like ASP.NET Web services, and mimic their behavior.</span></span> <span data-ttu-id="8d4c7-104">Poniższe sekcje Porównanie usług sieci Web ASP.NET i WCF oparte na co jest wymagane do tworzenia aplikacji za pomocą obu tych technologii.</span><span class="sxs-lookup"><span data-stu-id="8d4c7-104">The following sections compare ASP.NET Web services and WCF based on what is required to develop applications using both technologies.</span></span>  

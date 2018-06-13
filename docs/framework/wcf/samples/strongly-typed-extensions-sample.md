@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507616"
 ---
 # <a name="strongly-typed-extensions-sample"></a><span data-ttu-id="d35aa-102">Przykład rozszerzeń z silną kontrolą typów</span><span class="sxs-lookup"><span data-stu-id="d35aa-102">Strongly-Typed Extensions Sample</span></span>
 <span data-ttu-id="d35aa-103">W przykładzie użyto <xref:System.ServiceModel.Syndication.SyndicationFeed> klasy na potrzeby przykładu.</span><span class="sxs-lookup"><span data-stu-id="d35aa-103">The sample uses the <xref:System.ServiceModel.Syndication.SyndicationFeed> class for the purposes of the example.</span></span> <span data-ttu-id="d35aa-104">Jednak można wzorce zostało to pokazane w tym przykładzie wszystkie klasy zespolonego, które obsługuje rozszerzenie danych.</span><span class="sxs-lookup"><span data-stu-id="d35aa-104">However, the patterns demonstrated in this sample can be used with all of the Syndication classes that support extension data.</span></span>  

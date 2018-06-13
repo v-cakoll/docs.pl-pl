@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497948"
 ---
 # <a name="using-metadata"></a><span data-ttu-id="63886-102">Używanie metadanych</span><span class="sxs-lookup"><span data-stu-id="63886-102">Using Metadata</span></span>
 <span data-ttu-id="63886-103">Metadane usługi zawiera czytelną opisu usługi.</span><span class="sxs-lookup"><span data-stu-id="63886-103">Service metadata contains a machine-readable description of the service.</span></span> <span data-ttu-id="63886-104">Metadane usługi opisy punktów końcowych usługi, powiązania, kontrakty, operacje i komunikaty.</span><span class="sxs-lookup"><span data-stu-id="63886-104">Service metadata includes descriptions of the service endpoints, bindings, contracts, operations, and messages.</span></span> <span data-ttu-id="63886-105">Metadane usługi służy do różnych celów, w tym automatycznego generowania klientowi korzystanie z usługi, implementacja opisu usługi i dynamiczne aktualizowanie powiązania dla klienta.</span><span class="sxs-lookup"><span data-stu-id="63886-105">You can use service metadata for a variety of purposes, including automatically generating a client for consuming the service, implementing the service description, and dynamically updating the binding for a client.</span></span>  

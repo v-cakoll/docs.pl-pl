@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355418"
 ---
 # <a name="how-to-execute-queries-in-a-batch-wcf-data-services"></a><span data-ttu-id="f0fb4-102">Porady: wykonywanie zapytań w partii (usługi danych WCF)</span><span class="sxs-lookup"><span data-stu-id="f0fb4-102">How to: Execute Queries in a Batch (WCF Data Services)</span></span>
 <span data-ttu-id="f0fb4-103">Za pomocą [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteki klienta, można wykonać zapytania więcej niż jeden z usługą danych w pojedynczej partii.</span><span class="sxs-lookup"><span data-stu-id="f0fb4-103">By using the [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] client library, you can execute more than one query against the data service in a single batch.</span></span> <span data-ttu-id="f0fb4-104">Aby uzyskać więcej informacji, zobacz [przetwarzanie wsadowe operacji](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="f0fb4-104">For more information, see [Batching Operations](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md).</span></span>  

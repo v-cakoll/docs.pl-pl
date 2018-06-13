@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506509"
 ---
 # <a name="multiple-endpoints-at-a-single-listenuri"></a><span data-ttu-id="b8400-102">Wiele punktów końcowych w pojedynczym identyfikatorze ListenUri</span><span class="sxs-lookup"><span data-stu-id="b8400-102">Multiple Endpoints at a Single ListenUri</span></span>
 <span data-ttu-id="b8400-103">W tym przykładzie pokazano, usługa, która obsługuje wiele punktów końcowych w pojedynczym `ListenUri`.</span><span class="sxs-lookup"><span data-stu-id="b8400-103">This sample demonstrates a service that hosts multiple endpoints at a single `ListenUri`.</span></span> <span data-ttu-id="b8400-104">Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi Kalkulator.</span><span class="sxs-lookup"><span data-stu-id="b8400-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span>  

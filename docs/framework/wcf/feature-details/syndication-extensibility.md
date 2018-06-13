@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498582"
 ---
 # <a name="syndication-extensibility"></a><span data-ttu-id="cdbbe-102">Rozszerzalność syndykacji</span><span class="sxs-lookup"><span data-stu-id="cdbbe-102">Syndication Extensibility</span></span>
 <span data-ttu-id="cdbbe-103">Interfejs API zespolonego umożliwia model programowania niezależny od formatu, który umożliwia zawartości zespolonej do zapisania danych przesyłanych w sieci w różnych formatach.</span><span class="sxs-lookup"><span data-stu-id="cdbbe-103">The Syndication API is designed to provide a format-neutral programming model that allows syndicated content to be written to the wire in a variety of formats.</span></span> <span data-ttu-id="cdbbe-104">Model danych abstrakcyjny składa się z następujących klas:</span><span class="sxs-lookup"><span data-stu-id="cdbbe-104">The abstract data model consists of the following classes:</span></span>  

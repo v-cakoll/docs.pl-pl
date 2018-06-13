@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502608"
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a><span data-ttu-id="d3763-102">Instrukcje instalacji certyfikatu serwera Internetowych usług informacyjnych</span><span class="sxs-lookup"><span data-stu-id="d3763-102">Internet Information Services (IIS) Server Certificate Installation Instructions</span></span>
 <span data-ttu-id="d3763-103">Aby uruchomić przykłady, które bezpiecznego komunikowania się z programu Internet Information Services (IIS), należy utworzyć i instalowania certyfikatu serwera.</span><span class="sxs-lookup"><span data-stu-id="d3763-103">To run the samples that securely communicate with Internet Information Services (IIS), you must create and install a server certificate.</span></span>  

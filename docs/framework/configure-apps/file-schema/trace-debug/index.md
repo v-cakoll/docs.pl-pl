@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745269"
 ---
 # <a name="trace-and-debug-settings-schema"></a><span data-ttu-id="efd70-102">Schemat ustawień śledzenia i debugowania</span><span class="sxs-lookup"><span data-stu-id="efd70-102">Trace and Debug Settings Schema</span></span>
 <span data-ttu-id="efd70-103">Ustawienia śledzenia i debugowania Określ obiektów nasłuchujących śledzenia zbierania, przechowywania i kierowania wiadomości i poziom, gdy jest ustawiona przełącznik śledzenia.</span><span class="sxs-lookup"><span data-stu-id="efd70-103">Trace and debug settings specify trace listeners that collect, store, and route messages, and the level where a trace switch is set.</span></span>  

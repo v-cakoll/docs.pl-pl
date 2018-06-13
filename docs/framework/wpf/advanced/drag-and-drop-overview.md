@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549467"
 ---
 # <a name="drag-and-drop-overview"></a><span data-ttu-id="f234b-102">Przegląd Przeciąganie i upuszczanie</span><span class="sxs-lookup"><span data-stu-id="f234b-102">Drag and Drop Overview</span></span>
 <span data-ttu-id="f234b-103">Ten temat zawiera omówienie Obsługa przeciągania i upuszczania w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji.</span><span class="sxs-lookup"><span data-stu-id="f234b-103">This topic provides an overview of drag-and-drop support in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span> <span data-ttu-id="f234b-104">Przeciągnij i upuść często odwołuje się do metody transferu danych, która obejmuje za pomocą myszy (lub innego urządzenia wskazującego) wybierz co najmniej jeden obiekt, przeciągając obiekty te przez niektóre odpowiednie miejsca docelowego w [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]i ich usunięcie.</span><span class="sxs-lookup"><span data-stu-id="f234b-104">Drag-and-drop commonly refers to a method of data transfer that involves using a mouse (or some other pointing device) to select one or more objects, dragging these objects over some desired drop target in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], and dropping them.</span></span>  

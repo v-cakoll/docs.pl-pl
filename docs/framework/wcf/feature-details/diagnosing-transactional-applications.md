@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497003"
 ---
 # <a name="diagnosing-transactional-applications"></a><span data-ttu-id="4c054-102">Diagnozowanie aplikacji transakcyjnych</span><span class="sxs-lookup"><span data-stu-id="4c054-102">Diagnosing Transactional Applications</span></span>
 <span data-ttu-id="4c054-103">W tym temacie opisano, jak korzystać z zarządzania usługi Windows Communication Foundation (WCF) i funkcja diagnostyki rozwiązywać transakcyjnych aplikacji.</span><span class="sxs-lookup"><span data-stu-id="4c054-103">This topic describes how to use the Windows Communication Foundation (WCF) management and diagnostics feature to troubleshoot a transactional application.</span></span>  

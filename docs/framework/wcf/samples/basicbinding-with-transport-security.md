@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502692"
 ---
 # <a name="basicbinding-with-transport-security"></a><span data-ttu-id="d02d6-102">Element BasicBinding z elementem Transport Security</span><span class="sxs-lookup"><span data-stu-id="d02d6-102">BasicBinding with Transport Security</span></span>
 <span data-ttu-id="d02d6-103">W przykładzie pokazano użycie zabezpieczenia transportowe protokołu SSL z powiązaniem podstawowe.</span><span class="sxs-lookup"><span data-stu-id="d02d6-103">This sample demonstrates the use of SSL transport security with the basic binding.</span></span> <span data-ttu-id="d02d6-104">Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi Kalkulator.</span><span class="sxs-lookup"><span data-stu-id="d02d6-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span>  

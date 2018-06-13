@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361081"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a><span data-ttu-id="060ca-102">Rejestrowanie procedur składowanych w programie SQL Server</span><span class="sxs-lookup"><span data-stu-id="060ca-102">Signing Stored Procedures in SQL Server</span></span>
  <span data-ttu-id="060ca-103">Podpis cyfrowy jest szyfrowane dane zaszyfrowane przy użyciu klucza prywatnego osoby podpisującej.</span><span class="sxs-lookup"><span data-stu-id="060ca-103">A digital signature is a data digest encrypted with the private key of the signer.</span></span> <span data-ttu-id="060ca-104">Klucza prywatnego gwarantuje, że podpis cyfrowy jest unikatowa dla jego elementów nośnych lub właściciela.</span><span class="sxs-lookup"><span data-stu-id="060ca-104">The private key ensures that the digital signature is unique to its bearer or owner.</span></span> <span data-ttu-id="060ca-105">Możesz utworzyć procedur składowanych, funkcje (z wyjątkiem funkcji śródwierszowych przechowywanymi w tabeli), wyzwalacze i zestawów.</span><span class="sxs-lookup"><span data-stu-id="060ca-105">You can sign stored procedures, functions (except for inline table-valued functions), triggers, and assemblies.</span></span>  

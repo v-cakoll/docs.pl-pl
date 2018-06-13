@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762143"
 ---
 # <a name="isof-entity-sql"></a><span data-ttu-id="c778f-102">ISOF (jednostka SQL)</span><span class="sxs-lookup"><span data-stu-id="c778f-102">ISOF (Entity SQL)</span></span>
 <span data-ttu-id="c778f-103">Określa, czy typ wyrażenia jest określonego typu lub jednego z jego podtypach.</span><span class="sxs-lookup"><span data-stu-id="c778f-103">Determines whether the type of an expression is of the specified type or one of its subtypes.</span></span>  

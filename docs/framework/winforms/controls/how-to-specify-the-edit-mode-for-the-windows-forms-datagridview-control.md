@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536276"
 ---
 # <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a><span data-ttu-id="b7fd8-102">Porady: określanie trybu edycji dla formantu DataGridView formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="b7fd8-102">How to: Specify the Edit Mode for the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="b7fd8-103">Domyślnie użytkownicy mogą edytować zawartość bieżącego <xref:System.Windows.Forms.DataGridView> komórki pola tekstowego, wpisując w nim lub naciskając klawisz F2.</span><span class="sxs-lookup"><span data-stu-id="b7fd8-103">By default, users can edit the contents of the current <xref:System.Windows.Forms.DataGridView> text box cell by typing in it or pressing F2.</span></span> <span data-ttu-id="b7fd8-104">Komórka to umieszcza w trybie edycji, jeśli są spełnione wszystkie następujące warunki:</span><span class="sxs-lookup"><span data-stu-id="b7fd8-104">This puts the cell in edit mode if all of the following conditions are met:</span></span>  

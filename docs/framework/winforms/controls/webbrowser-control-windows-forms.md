@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538596"
 ---
 # <a name="webbrowser-control-windows-forms"></a><span data-ttu-id="fe467-102">WebBrowser — Formant (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="fe467-102">WebBrowser Control (Windows Forms)</span></span>
 <span data-ttu-id="fe467-103">Formularze systemu Windows `WebBrowser` formant zawiera stron sieci Web i umożliwia przeglądanie możliwości do aplikacji sieci Web.</span><span class="sxs-lookup"><span data-stu-id="fe467-103">The Windows Forms `WebBrowser` control hosts Web pages and provides Web browsing capabilities to your application.</span></span>  

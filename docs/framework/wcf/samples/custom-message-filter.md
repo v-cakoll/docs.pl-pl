@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504149"
 ---
 # <a name="custom-message-filter"></a><span data-ttu-id="2284a-102">Niestandardowy filtr komunikatów</span><span class="sxs-lookup"><span data-stu-id="2284a-102">Custom Message Filter</span></span>
 <span data-ttu-id="2284a-103">W tym przykładzie pokazano, jak zastąpić filtry wiadomości Windows Communication Foundation (WCF) używanych do wysyłania wiadomości do punktów końcowych.</span><span class="sxs-lookup"><span data-stu-id="2284a-103">This sample demonstrates how to replace the message filters that Windows Communication Foundation (WCF) uses to dispatch messages to endpoints.</span></span>  

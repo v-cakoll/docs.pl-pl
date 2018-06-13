@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502937"
 ---
 # <a name="receivecontext-enabled-wcf-channels"></a><span data-ttu-id="d9b6f-102">Obsługą elementu ReceiveContext kanały programu WCF</span><span class="sxs-lookup"><span data-stu-id="d9b6f-102">ReceiveContext-Enabled WCF Channels</span></span>
 <span data-ttu-id="d9b6f-103">W tym przykładzie pokazano przydatność <xref:System.ServiceModel.Channels.ReceiveContext>— włączone kanały programu WCF.</span><span class="sxs-lookup"><span data-stu-id="d9b6f-103">This sample demonstrates the usefulness of <xref:System.ServiceModel.Channels.ReceiveContext>-enabled WCF channels.</span></span> <span data-ttu-id="d9b6f-104">Przykład implementuje usługi można znaleźć iloczyn dwóch liczb za pomocą kanału NetMSMQ.</span><span class="sxs-lookup"><span data-stu-id="d9b6f-104">The sample implements a service to find the product of two numbers using a NetMSMQ channel.</span></span>  

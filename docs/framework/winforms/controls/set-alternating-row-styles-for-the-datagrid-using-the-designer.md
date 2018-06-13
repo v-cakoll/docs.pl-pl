@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538518"
 ---
 # <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control-using-the-designer"></a><span data-ttu-id="35c3e-102">Porady: ustawianie przemiennych wierszy dla formantu DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant</span><span class="sxs-lookup"><span data-stu-id="35c3e-102">How to: Set Alternating Row Styles for the Windows Forms DataGridView Control Using the Designer</span></span>
 <span data-ttu-id="35c3e-103">Dane tabelaryczne często są prezentowane w księdze postaci której przemiennych wierszy mają różnych kolorów tła.</span><span class="sxs-lookup"><span data-stu-id="35c3e-103">Tabular data is often presented in a ledger-like format where alternating rows have different background colors.</span></span> <span data-ttu-id="35c3e-104">Ten format ułatwia użytkownikom Poinformuj komórek, które są w każdym wierszu, szczególnie w przypadku szerokie tabele, które mają wiele kolumn.</span><span class="sxs-lookup"><span data-stu-id="35c3e-104">This format makes it easier for users to tell which cells are in each row, especially with wide tables that have many columns.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544553"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a><span data-ttu-id="88dc2-102">Jak zarządzać przepływem elementów zawartość za pomocą właściwości bloków</span><span class="sxs-lookup"><span data-stu-id="88dc2-102">How to: Manipulate Flow Content Elements through the Blocks Property</span></span>
 <span data-ttu-id="88dc2-103">Następujące przykłady przedstawiają niektóre z najczęściej operacje wykonywane na przepływ elementów zawartości przy użyciu **bloków** właściwości.</span><span class="sxs-lookup"><span data-stu-id="88dc2-103">These examples demonstrate some of the more common operations that can be performed on flow content elements through the **Blocks** property.</span></span> <span data-ttu-id="88dc2-104">Ta właściwość jest używana do dodawania i usuwania elementów z <xref:System.Windows.Documents.BlockCollection>.</span><span class="sxs-lookup"><span data-stu-id="88dc2-104">This property is used to add and remove items from <xref:System.Windows.Documents.BlockCollection>.</span></span> <span data-ttu-id="88dc2-105">Przepływ zawartości elementy tej funkcji **bloków** właściwości obejmują:</span><span class="sxs-lookup"><span data-stu-id="88dc2-105">Flow content elements that feature a **Blocks** property include:</span></span>  

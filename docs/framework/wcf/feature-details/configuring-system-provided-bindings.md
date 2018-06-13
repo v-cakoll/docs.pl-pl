@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496841"
 ---
 # <a name="configuring-system-provided-bindings"></a><span data-ttu-id="c1712-102">Konfigurowanie powiązań dostarczanych przez system</span><span class="sxs-lookup"><span data-stu-id="c1712-102">Configuring System-Provided Bindings</span></span>
 <span data-ttu-id="c1712-103">Powiązania Określ mechanizm komunikacji po rozmowie z punktu końcowego i określić sposób nawiązywania połączenia z punktem końcowym.</span><span class="sxs-lookup"><span data-stu-id="c1712-103">Bindings specify the communication mechanism to use when talking to an endpoint and indicate how to connect to an endpoint.</span></span> <span data-ttu-id="c1712-104">Powiązania składają się z elementów, które określają sposób warstwie kanały Windows Communication Foundation (WCF) się zapewnienie funkcje wymagane komunikacji.</span><span class="sxs-lookup"><span data-stu-id="c1712-104">Bindings consist of elements that define how the Windows Communication Foundation (WCF) channels are layered up to provide the required communication features.</span></span> <span data-ttu-id="c1712-105">Powiązanie zawiera trzy rodzaje elementów:</span><span class="sxs-lookup"><span data-stu-id="c1712-105">A binding contains three types of elements:</span></span>  

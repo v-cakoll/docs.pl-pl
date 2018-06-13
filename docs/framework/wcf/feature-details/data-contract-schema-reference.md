@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496802"
 ---
 # <a name="data-contract-schema-reference"></a><span data-ttu-id="901d8-102">Odwołanie do schematu kontraktu danych</span><span class="sxs-lookup"><span data-stu-id="901d8-102">Data Contract Schema Reference</span></span>
 <span data-ttu-id="901d8-103">W tym temacie opisano podzestawu elementu schematu XML (XSD) używany przez <xref:System.Runtime.Serialization.DataContractSerializer> do opisywania wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) typy serializacji XML.</span><span class="sxs-lookup"><span data-stu-id="901d8-103">This topic describes the subset of the XML Schema (XSD) used by <xref:System.Runtime.Serialization.DataContractSerializer> to describe common language runtime (CLR) types for XML serialization.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563470"
 ---
 # <a name="xmlspace-handling-in-xaml"></a><span data-ttu-id="0d5b2-102">xml:space — Obsługa w XAML</span><span class="sxs-lookup"><span data-stu-id="0d5b2-102">xml:space Handling in XAML</span></span>
 <span data-ttu-id="0d5b2-103">`xml:space` Atrybut jest definiowany w języku XML atrybut deklarujący zachowania przetwarzania znaczącym odstępem w elemencie obiektu.</span><span class="sxs-lookup"><span data-stu-id="0d5b2-103">The `xml:space` attribute is an XML-defined attribute that declares the significant whitespace processing behavior within an object element.</span></span> <span data-ttu-id="0d5b2-104">To zachowanie jest odpowiednie dla całej zawartości (tekst wewnętrzny) zawartych w elemencie gdzie `xml:space` jest zadeklarowana, a także zakresów do elementów podrzędnych.</span><span class="sxs-lookup"><span data-stu-id="0d5b2-104">This behavior is relevant for all content (inner text) contained within the element where `xml:space` is declared, and also scopes to child elements.</span></span>  

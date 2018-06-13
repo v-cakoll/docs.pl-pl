@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496974"
 ---
 # <a name="how-to-create-a-federated-client"></a><span data-ttu-id="31f1b-102">Instrukcje: Tworzenie klienta federacyjnego</span><span class="sxs-lookup"><span data-stu-id="31f1b-102">How to: Create a Federated Client</span></span>
 <span data-ttu-id="31f1b-103">W konsoli Windows Communication Foundation (WCF) tworzy klienta dla *usługa* składa się z trzech głównych kroków:</span><span class="sxs-lookup"><span data-stu-id="31f1b-103">In Windows Communication Foundation (WCF), creating a client for a *federated service* consists of three main steps:</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746660"
 ---
 # <a name="ltpersistenceprovidergt"></a><span data-ttu-id="0abd1-102">&lt;persistenceProvider&gt;</span><span class="sxs-lookup"><span data-stu-id="0abd1-102">&lt;persistenceProvider&gt;</span></span>
 <span data-ttu-id="0abd1-103">Określa typ do użycia implementacja dostawcy trwałości, jak również limit czasu na potrzeby operacji trwałości.</span><span class="sxs-lookup"><span data-stu-id="0abd1-103">Specifies the type of the persistence provider implementation to use, as well as the time-out to use for persistence operations.</span></span>  

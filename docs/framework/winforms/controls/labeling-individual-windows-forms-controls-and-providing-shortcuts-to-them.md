@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535518"
 ---
 # <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a><span data-ttu-id="fb6af-102">Etykietowanie pojedynczych formantów formularzy systemu Windows i określanie skrótów dla nich</span><span class="sxs-lookup"><span data-stu-id="fb6af-102">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>
 <span data-ttu-id="fb6af-103">Formanty dodane do formularzy systemu Windows mają właściwości i metod, które są używane do dalszego specialize użytkownika wystąpić.</span><span class="sxs-lookup"><span data-stu-id="fb6af-103">Controls added to Windows Forms have properties and methods that are used to further specialize the user experience.</span></span> <span data-ttu-id="fb6af-104">Dostosowywanie interfejsu użytkownika do potrzeb użytkownika jest bardzo ważne dla dobrze zaprojektowanego aplikacji systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="fb6af-104">Customizing your user interface to suit the needs of the user is extremely important for well-designed Windows applications.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536221"
 ---
 # <a name="putting-controls-on-windows-forms"></a><span data-ttu-id="79757-102">Umieszczanie formantów na formularzach systemu Windows</span><span class="sxs-lookup"><span data-stu-id="79757-102">Putting Controls on Windows Forms</span></span>
 <span data-ttu-id="79757-103">Istnieje szereg kontroli, które można umieścić w formularzach systemu Windows, w zależności od potrzeb aplikacji.</span><span class="sxs-lookup"><span data-stu-id="79757-103">There are a wide variety of controls that you can put on Windows Forms, depending on the needs of your application.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507378"
 ---
 # <a name="wcf-web-http-programming-object-model"></a><span data-ttu-id="d75eb-102">Model obiektowy programowania protokołu HTTP sieci Web w programie WCF</span><span class="sxs-lookup"><span data-stu-id="d75eb-102">WCF Web HTTP Programming Object Model</span></span>
 <span data-ttu-id="d75eb-103">Modelu programowania protokołu HTTP sieci WEB WCF umożliwia deweloperom udostępnienia usług sieci Web Windows Communication Foundation (WCF) za pośrednictwem podstawowego żądania HTTP bez konieczności protokołu SOAP.</span><span class="sxs-lookup"><span data-stu-id="d75eb-103">The WCF WEB HTTP  Programming Model allows developers to expose Windows Communication Foundation (WCF) Web services through basic HTTP requests without requiring SOAP.</span></span> <span data-ttu-id="d75eb-104">Modelu programowania protokołu HTTP sieci WEB WCF jest oparty na istniejącego modelu rozszerzalności programu WCF.</span><span class="sxs-lookup"><span data-stu-id="d75eb-104">The WCF WEB HTTP  Programming Model is built on top of the existing WCF extensibility model.</span></span> <span data-ttu-id="d75eb-105">Definiuje następujące klasy:</span><span class="sxs-lookup"><span data-stu-id="d75eb-105">It defines the following classes:</span></span>  

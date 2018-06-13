@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500067"
 ---
 # <a name="web-extensibility"></a><span data-ttu-id="45edb-102">Rozszerzalność sieci Web</span><span class="sxs-lookup"><span data-stu-id="45edb-102">Web Extensibility</span></span>
 <span data-ttu-id="45edb-103">Ta sekcja zawiera przykłady ilustrujące niestandardowe funkcje sieci Web w systemie Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="45edb-103">This section contains samples that demonstrate custom Web functionality in Windows Communication Foundation (WCF).</span></span>  

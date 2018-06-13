@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496768"
 ---
 # <a name="bindings-and-security"></a><span data-ttu-id="8e85c-102">Powiązania i zabezpieczenia</span><span class="sxs-lookup"><span data-stu-id="8e85c-102">Bindings and Security</span></span>
 <span data-ttu-id="8e85c-103">Powiązania dostarczane przez system uwzględnione z usługi Windows Communication Foundation (WCF) oferują możliwość szybkiego aplikacje programu WCF.</span><span class="sxs-lookup"><span data-stu-id="8e85c-103">The system-provided bindings included with Windows Communication Foundation (WCF) offer a quick way to program WCF applications.</span></span> <span data-ttu-id="8e85c-104">Z jednym wyjątkiem wszystkie powiązania ma domyślny schemat zabezpieczeń włączone.</span><span class="sxs-lookup"><span data-stu-id="8e85c-104">With one exception, all the bindings have a default security scheme enabled.</span></span> <span data-ttu-id="8e85c-105">Ten temat ułatwia wybierz prawa powiązanie dla wymagania w zakresie zabezpieczeń.</span><span class="sxs-lookup"><span data-stu-id="8e85c-105">This topic helps you select the right binding for your security needs.</span></span>  

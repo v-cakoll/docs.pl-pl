@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505170"
 ---
 # <a name="wcf-web-http-formatting"></a><span data-ttu-id="d92db-102">Formatowanie kodu HTTP sieci Web WCF</span><span class="sxs-lookup"><span data-stu-id="d92db-102">WCF Web HTTP formatting</span></span>
 <span data-ttu-id="d92db-103">Model programowania protokołu HTTP sieci Web WCF umożliwia dynamiczne określanie format najlepszy dla operacji usługi zwrócić w odpowiedzi.</span><span class="sxs-lookup"><span data-stu-id="d92db-103">The WCF Web HTTP programming model allows you to dynamically determine the best format for a service operation to return its response in.</span></span> <span data-ttu-id="d92db-104">Obsługiwane są dwie metody, określając odpowiedni format: jawne i automatyczne.</span><span class="sxs-lookup"><span data-stu-id="d92db-104">Two methods for determining an appropriate format are supported: automatic and explicit.</span></span>  

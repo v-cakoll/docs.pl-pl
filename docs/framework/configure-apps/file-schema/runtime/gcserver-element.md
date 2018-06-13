@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745022"
 ---
 # <a name="ltgcservergt-element"></a><span data-ttu-id="b930a-102">&lt;gcserver —&gt; — Element</span><span class="sxs-lookup"><span data-stu-id="b930a-102">&lt;gcServer&gt; Element</span></span>
 <span data-ttu-id="b930a-103">Określa, czy środowisko uruchomieniowe języka wspólnego Uruchamia odzyskiwanie pamięci na serwerze.</span><span class="sxs-lookup"><span data-stu-id="b930a-103">Specifies whether the common language runtime runs server garbage collection.</span></span>  

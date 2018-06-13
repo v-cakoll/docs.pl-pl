@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497558"
 ---
 # <a name="securing-peer-channel-applications"></a><span data-ttu-id="e8e80-102">Zabezpieczanie aplikacji kanałów równorzędnych</span><span class="sxs-lookup"><span data-stu-id="e8e80-102">Securing Peer Channel Applications</span></span>
 <span data-ttu-id="e8e80-103">Inne powiązania w obszarze, takich jak [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], `NetPeerTcpBinding` zabezpieczeń włączone domyślnie i oferuje zarówno zabezpieczenia na poziomie transportu i komunikatu (lub obie).</span><span class="sxs-lookup"><span data-stu-id="e8e80-103">Like other bindings under the [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], `NetPeerTcpBinding` has security enabled by default and offers both transport- and message-based security (or both).</span></span> <span data-ttu-id="e8e80-104">W tym temacie omówiono tych dwóch typów zabezpieczeń.</span><span class="sxs-lookup"><span data-stu-id="e8e80-104">This topic discusses these two types of security.</span></span> <span data-ttu-id="e8e80-105">Typ zabezpieczeń jest określany przez tag tryb zabezpieczeń w specyfikacji powiązania (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`).</span><span class="sxs-lookup"><span data-stu-id="e8e80-105">The type of security is specified by the security mode tag in the binding specification (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`).</span></span>  

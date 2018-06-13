@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502595"
 ---
 # <a name="workflow-control-endpoint"></a><span data-ttu-id="8e39a-102">Punkt końcowy kontroli przepływu pracy</span><span class="sxs-lookup"><span data-stu-id="8e39a-102">Workflow Control Endpoint</span></span>
 <span data-ttu-id="8e39a-103">Punkt końcowy kontroli przepływu pracy umożliwia deweloperom wywołanie operacji kontroli do zdalnego sterowania hostowane przy użyciu wystąpienia przepływu pracy <xref:System.ServiceModel.Activities.WorkflowServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="8e39a-103">The workflow control endpoint allows developers to call control operations to remotely control workflow instances hosted using <xref:System.ServiceModel.Activities.WorkflowServiceHost>.</span></span> <span data-ttu-id="8e39a-104">Ta funkcja może być używana do programowo wykonywać operacji kontroli, jak wstrzymać, wznowić, a następnie Zakończ.</span><span class="sxs-lookup"><span data-stu-id="8e39a-104">This feature can be used to programmatically perform control operations like suspend, resume, and terminate.</span></span>  

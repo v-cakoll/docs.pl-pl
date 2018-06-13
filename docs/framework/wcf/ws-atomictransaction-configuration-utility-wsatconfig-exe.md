@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506270"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a><span data-ttu-id="12d5c-102">Narzędzie do konfiguracji elementu WS-AtomicTransaction (wsatConfig.exe)</span><span class="sxs-lookup"><span data-stu-id="12d5c-102">WS-AtomicTransaction Configuration Utility (wsatConfig.exe)</span></span>
 <span data-ttu-id="12d5c-103">Narzędzia konfiguracji WS-AtomicTransaction służy do konfigurowania podstawowych ustawień obsługi protokołu WS-AtomicTransaction.</span><span class="sxs-lookup"><span data-stu-id="12d5c-103">The WS-AtomicTransaction Configuration Utility is used to configure basic WS-AtomicTransaction support settings.</span></span>  

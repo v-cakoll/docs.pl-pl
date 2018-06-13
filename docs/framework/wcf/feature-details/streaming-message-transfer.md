@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499144"
 ---
 # <a name="streaming-message-transfer"></a><span data-ttu-id="55427-102">Strumieniowy transfer komunikatów</span><span class="sxs-lookup"><span data-stu-id="55427-102">Streaming Message Transfer</span></span>
 <span data-ttu-id="55427-103">Transporty Windows Communication Foundation (WCF) obsługuje dwa tryby przesyłania komunikatów:</span><span class="sxs-lookup"><span data-stu-id="55427-103">Windows Communication Foundation (WCF) transports support two modes for transferring messages:</span></span>  

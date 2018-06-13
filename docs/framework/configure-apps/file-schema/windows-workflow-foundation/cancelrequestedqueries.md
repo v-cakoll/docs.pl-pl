@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757024"
 ---
 # <a name="ltcancelrequestedqueriesgt"></a><span data-ttu-id="23481-102">&lt;cancelRequestedQueries&gt;</span><span class="sxs-lookup"><span data-stu-id="23481-102">&lt;cancelRequestedQueries&gt;</span></span>
 <span data-ttu-id="23481-103">Reprezentuje kolekcję zapytań, które są używane do śledzenia żądań, aby anulować działanie podrzędne przez działanie nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="23481-103">Represents a collection of queries that are used to track requests to cancel a child activity by the parent activity.</span></span> <span data-ttu-id="23481-104">Zapytanie jest niezbędne do uczestnika śledzenia do subskrybowania Anuluj żądanie rekordu obiektów.</span><span class="sxs-lookup"><span data-stu-id="23481-104">The query is necessary for a tracking participant to subscribe to cancel request record objects.</span></span>  

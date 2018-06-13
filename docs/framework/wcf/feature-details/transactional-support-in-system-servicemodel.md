@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497922"
 ---
 # <a name="transactional-support-in-systemservicemodel"></a><span data-ttu-id="954e0-102">Obsługa transakcyjna w elemencie System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="954e0-102">Transactional Support in System.ServiceModel</span></span>
 <span data-ttu-id="954e0-103">Tematy w tej sekcji opisano funkcje transakcyjne przez Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="954e0-103">The topics in this section describe the transactional functionalities Windows Communication Foundation (WCF) provides.</span></span>  

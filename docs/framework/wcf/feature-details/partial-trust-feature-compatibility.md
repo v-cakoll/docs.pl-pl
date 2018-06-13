@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496789"
 ---
 # <a name="partial-trust-feature-compatibility"></a><span data-ttu-id="b65a0-102">Zgodność funkcji zaufania częściowego</span><span class="sxs-lookup"><span data-stu-id="b65a0-102">Partial Trust Feature Compatibility</span></span>
 <span data-ttu-id="b65a0-103">Windows Communication Foundation (WCF) obsługuje ograniczone funkcji podczas uruchamiania w środowisku częściowo zaufany.</span><span class="sxs-lookup"><span data-stu-id="b65a0-103">Windows Communication Foundation (WCF) supports a limited subset of functionality when running in a partially-trusted environment.</span></span> <span data-ttu-id="b65a0-104">Funkcje obsługiwane w częściowej relacji zaufania są została zaprojektowana dla określonych scenariuszy zgodnie z opisem w [obsługiwane scenariusze wdrażania](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) tematu.</span><span class="sxs-lookup"><span data-stu-id="b65a0-104">The features supported in partial trust are designed around a specific set of scenarios as described in the [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) topic.</span></span>  

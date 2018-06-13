@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503727"
 ---
 # <a name="using-data-contracts"></a><span data-ttu-id="26b47-102">Używanie kontraktów danych</span><span class="sxs-lookup"><span data-stu-id="26b47-102">Using Data Contracts</span></span>
 <span data-ttu-id="26b47-103">A *kontraktu danych* jest umową posiadanie między usługą i klienta, który abstrakcyjnie opisuje dane były wymieniane.</span><span class="sxs-lookup"><span data-stu-id="26b47-103">A *data contract* is a formal agreement between a service and a client that abstractly describes the data to be exchanged.</span></span> <span data-ttu-id="26b47-104">Oznacza to, że do komunikacji, klient i usługa nie masz do udostępniania tego samego typu, tylko tej samej kontraktów danych.</span><span class="sxs-lookup"><span data-stu-id="26b47-104">That is, to communicate, the client and the service do not have to share the same types, only the same data contracts.</span></span> <span data-ttu-id="26b47-105">Mówiąc definiuje kontrakt danych, dla każdego typu parametr lub zwracane, jakie dane jest serializowany (zamieniło XML) aby wymienić.</span><span class="sxs-lookup"><span data-stu-id="26b47-105">A data contract precisely defines, for each parameter or return type, what data is serialized (turned into XML) to be exchanged.</span></span>  

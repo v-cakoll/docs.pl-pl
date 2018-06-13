@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538008"
 ---
 # <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a><span data-ttu-id="4693b-102">Porady: tworzenie programów do obsługi zdarzeń w czasie wykonywania dla formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="4693b-102">How to: Create Event Handlers at Run Time for Windows Forms</span></span>
 <span data-ttu-id="4693b-103">Oprócz tworzenia zdarzeń przy użyciu narzędzia Projektant formularzy systemu Windows, można również utworzyć program obsługi zdarzeń w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="4693b-103">In addition to creating events using the Windows Forms Designer, you can also create an event handler at run time.</span></span> <span data-ttu-id="4693b-104">Ta akcja umożliwia łączenie z na podstawie warunków w kodzie w czasie wykonywania, a nie przejdą oni połączone po początkowym uruchomieniu programu obsługi zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="4693b-104">This action allows you to connect event handlers based on conditions in code at run time as opposed to having them connected when the program initially starts.</span></span>  

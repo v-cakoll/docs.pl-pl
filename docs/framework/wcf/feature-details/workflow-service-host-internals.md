@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505508"
 ---
 # <a name="workflow-service-host-internals"></a><span data-ttu-id="7be8f-102">Elementy wewnętrzne hosta usługi przepływu pracy</span><span class="sxs-lookup"><span data-stu-id="7be8f-102">Workflow Service Host Internals</span></span>
 <span data-ttu-id="7be8f-103"><xref:System.ServiceModel.WorkflowServiceHost> zapewnia hosta usługi przepływu pracy.</span><span class="sxs-lookup"><span data-stu-id="7be8f-103"><xref:System.ServiceModel.WorkflowServiceHost> provides a host for workflow services.</span></span> <span data-ttu-id="7be8f-104">Odpowiada do nasłuchiwania dla komunikatów przychodzących i routingu je do odpowiednich przepływu pracy wystąpienie usługi, kontroluje zwalnianie i przechowywanie bezczynne przepływy pracy i więcej.</span><span class="sxs-lookup"><span data-stu-id="7be8f-104">It is responsible for listening for incoming messages and routing them to the appropriate workflow service instance, it controls unloading and persisting of idle workflows, and more.</span></span> <span data-ttu-id="7be8f-105">W tym temacie opisano, jak obiekt WorkflowServiceHost przetwarza wiadomości przychodzących.</span><span class="sxs-lookup"><span data-stu-id="7be8f-105">This topic describes how WorkflowServiceHost processes incoming messages.</span></span>  

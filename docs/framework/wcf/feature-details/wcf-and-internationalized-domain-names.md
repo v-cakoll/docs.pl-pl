@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498039"
 ---
 # <a name="wcf-and-internationalized-domain-names"></a><span data-ttu-id="44e87-102">Architektura WCF i międzynarodowe nazwy domen</span><span class="sxs-lookup"><span data-stu-id="44e87-102">WCF and Internationalized Domain Names</span></span>
 <span data-ttu-id="44e87-103">Dodano obsługę umożliwiające usługi WCF z domeny nazwy (IDN).</span><span class="sxs-lookup"><span data-stu-id="44e87-103">Support has been added to allow for WCF services with Internationalized Domain Names (IDN).</span></span> <span data-ttu-id="44e87-104">Międzynarodowych nazw domen jest nazwą domeny, który zawiera znaki spoza zestawu ASCII.</span><span class="sxs-lookup"><span data-stu-id="44e87-104">An internationalized domain name is a domain name that contains non-ASCII characters.</span></span> <span data-ttu-id="44e87-105">Ta obsługa obejmuje to możliwość hostowanie usługi WCF z nazwą IDN i klienta WCF do komunikowania się z usługą sieci web z nazwą IDN.</span><span class="sxs-lookup"><span data-stu-id="44e87-105">This support includes both the ability to host a WCF service with an IDN name and a WCF client to talk to a web service with an IDN name.</span></span>  

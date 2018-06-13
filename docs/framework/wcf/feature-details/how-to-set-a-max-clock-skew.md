@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496734"
 ---
 # <a name="how-to-set-a-max-clock-skew"></a><span data-ttu-id="3af14-102">Porady: zestaw Max niedokładność zegara</span><span class="sxs-lookup"><span data-stu-id="3af14-102">How to: Set a Max Clock Skew</span></span>
 <span data-ttu-id="3af14-103">Funkcje o krytycznym znaczeniu czasu można derailed, jeśli są różne ustawienia zegara na dwóch komputerach.</span><span class="sxs-lookup"><span data-stu-id="3af14-103">Time-critical functions can be derailed if the clock settings on two computers are different.</span></span> <span data-ttu-id="3af14-104">Aby ograniczyć to ryzyko, można ustawić `MaxClockSkew` właściwości <xref:System.TimeSpan>.</span><span class="sxs-lookup"><span data-stu-id="3af14-104">To mitigate this possibility, you can set the `MaxClockSkew` property to a <xref:System.TimeSpan>.</span></span> <span data-ttu-id="3af14-105">Ta właściwość jest dostępna na dwie klasy:</span><span class="sxs-lookup"><span data-stu-id="3af14-105">This property is available on two classes:</span></span>  

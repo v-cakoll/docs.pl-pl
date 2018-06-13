@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509082"
 ---
 # <a name="security-considerations-for-data"></a><span data-ttu-id="a0bda-102">Zagadnienia związane z zabezpieczeniami danych</span><span class="sxs-lookup"><span data-stu-id="a0bda-102">Security Considerations for Data</span></span>
 <span data-ttu-id="a0bda-103">Podczas pracy z danymi w systemie Windows Communication Foundation (WCF), należy wziąć pod uwagę liczbę kategorii zagrożeń.</span><span class="sxs-lookup"><span data-stu-id="a0bda-103">When dealing with data in Windows Communication Foundation (WCF), you must consider a number of threat categories.</span></span> <span data-ttu-id="a0bda-104">W poniższej tabeli wymieniono najważniejsze klasy zagrożenia, które odnoszą się do przetwarzania danych.</span><span class="sxs-lookup"><span data-stu-id="a0bda-104">The following table lists the most important threat classes that relate to data processing.</span></span> <span data-ttu-id="a0bda-105">Usługi WCF udostępnia narzędzia, aby ograniczyć te zagrożenia.</span><span class="sxs-lookup"><span data-stu-id="a0bda-105">WCF provides tools to mitigate these threats.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536816"
 ---
 # <a name="notifyicon-component-overview-windows-forms"></a><span data-ttu-id="62795-102">NotifyIcon — Informacje o składniku (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="62795-102">NotifyIcon Component Overview (Windows Forms)</span></span>
 <span data-ttu-id="62795-103">Formularze systemu Windows <xref:System.Windows.Forms.NotifyIcon> składnik jest zazwyczaj używany do wyświetlania ikon dla procesów, które są uruchomione w tle i nie pokazuj użytkownika interfejsu większość czasu.</span><span class="sxs-lookup"><span data-stu-id="62795-103">The Windows Forms <xref:System.Windows.Forms.NotifyIcon> component is typically used to display icons for processes that run in the background and do not show a user interface much of the time.</span></span> <span data-ttu-id="62795-104">Przykładem może być programu ochrony przed wirusami, którego mogą uzyskać dostęp, klikając ikonę w obszarze powiadomień stanu na pasku zadań.</span><span class="sxs-lookup"><span data-stu-id="62795-104">An example would be a virus protection program that can be accessed by clicking an icon in the status notification area of the taskbar.</span></span>  

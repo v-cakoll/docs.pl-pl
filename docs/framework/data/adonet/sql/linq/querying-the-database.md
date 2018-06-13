@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358667"
 ---
 # <a name="querying-the-database"></a><span data-ttu-id="eac8c-102">Zapytanie bazy danych</span><span class="sxs-lookup"><span data-stu-id="eac8c-102">Querying the Database</span></span>
 <span data-ttu-id="eac8c-103">Ta grupa tematów opisuje sposób rozwijać i wykonywanie zapytań w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projektów.</span><span class="sxs-lookup"><span data-stu-id="eac8c-103">This group of topics describes how to develop and execute queries in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projects.</span></span>  

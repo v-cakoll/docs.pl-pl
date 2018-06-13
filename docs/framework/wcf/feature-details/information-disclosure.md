@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495986"
 ---
 # <a name="information-disclosure"></a><span data-ttu-id="d8117-102">Ujawnianie informacji</span><span class="sxs-lookup"><span data-stu-id="d8117-102">Information Disclosure</span></span>
 <span data-ttu-id="d8117-103">Ujawnienie informacji umożliwia osobie atakującej uzyskanie cennych informacji na temat systemu.</span><span class="sxs-lookup"><span data-stu-id="d8117-103">Information disclosure enables an attacker to gain valuable information about a system.</span></span> <span data-ttu-id="d8117-104">W związku z tym zawsze należy wziąć pod uwagę jakie informacje są ujawniania i czy mogą być używane przez złośliwego użytkownika.</span><span class="sxs-lookup"><span data-stu-id="d8117-104">Therefore, always consider what information you are revealing and whether it can be used by a malicious user.</span></span> <span data-ttu-id="d8117-105">Poniżej przedstawiono informacje o możliwych ataków ujawnienie i zapewnia środki zaradcze dla każdego.</span><span class="sxs-lookup"><span data-stu-id="d8117-105">The following lists possible information disclosure attacks and provides mitigations for each.</span></span>  

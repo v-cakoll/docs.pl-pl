@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499683"
 ---
 # <a name="bytestream-encoder"></a><span data-ttu-id="f58e3-102">Koder elementu ByteStream</span><span class="sxs-lookup"><span data-stu-id="f58e3-102">ByteStream Encoder</span></span>
 <span data-ttu-id="f58e3-103">Ten przykład przedstawia sposób tworzenia `ByteStreamHttpBinding`, <xref:System.ServiceModel.Channels.Binding> który prezentuje działanie funkcji kodera strumienia bajtów.</span><span class="sxs-lookup"><span data-stu-id="f58e3-103">This sample demonstrates how to create a `ByteStreamHttpBinding`, a <xref:System.ServiceModel.Channels.Binding> that demonstrates the functionality of the byte stream encoder.</span></span>  

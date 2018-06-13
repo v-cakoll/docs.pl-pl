@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562873"
 ---
 # <a name="shapes-how-to-topics"></a><span data-ttu-id="d34de-102">Kształty Tematy porad</span><span class="sxs-lookup"><span data-stu-id="d34de-102">Shapes How-to Topics</span></span>
 <span data-ttu-id="d34de-103">Tematy w tej sekcji przedstawiono sposób korzystania <xref:System.Windows.Shapes.Shape> obiektów rysowanie kształtów podstawowych do ekranu.</span><span class="sxs-lookup"><span data-stu-id="d34de-103">The topics in this section demonstrate how to use <xref:System.Windows.Shapes.Shape> objects to draw basic shapes to the screen.</span></span>  

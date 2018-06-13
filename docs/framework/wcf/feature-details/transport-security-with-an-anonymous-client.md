@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499183"
 ---
 # <a name="transport-security-with-an-anonymous-client"></a><span data-ttu-id="79d5a-102">Zabezpieczanie transportu za pomocą anonimowego klienta</span><span class="sxs-lookup"><span data-stu-id="79d5a-102">Transport Security with an Anonymous Client</span></span>
 <span data-ttu-id="79d5a-103">W tym scenariuszu Windows Communication Foundation (WCF) używane zabezpieczeń transportowych (HTTPS), aby zapewnić poufności i integralności.</span><span class="sxs-lookup"><span data-stu-id="79d5a-103">This Windows Communication Foundation (WCF) scenario uses transport security (HTTPS) to ensure confidentiality and integrity.</span></span> <span data-ttu-id="79d5a-104">Serwer musi zostać uwierzytelniony przy użyciu certyfikatu protokołu Secure Sockets Layer (SSL), a klienci muszą ufać certyfikatu serwera.</span><span class="sxs-lookup"><span data-stu-id="79d5a-104">The server must be authenticated with a Secure Sockets Layer (SSL) certificate, and the clients must trust the server's certificate.</span></span> <span data-ttu-id="79d5a-105">Klient nie został uwierzytelniony przy użyciu dowolnego mechanizmu i jest anonimowy.</span><span class="sxs-lookup"><span data-stu-id="79d5a-105">The client is not authenticated by any mechanism and is, therefore, anonymous.</span></span>  

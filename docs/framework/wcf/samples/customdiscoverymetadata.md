@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501052"
 ---
 # <a name="customdiscoverymetadata"></a><span data-ttu-id="8cb3f-102">CustomDiscoveryMetadata</span><span class="sxs-lookup"><span data-stu-id="8cb3f-102">CustomDiscoveryMetadata</span></span>
 <span data-ttu-id="8cb3f-103">W tym przykładzie pokazano, jak można wstawić niestandardowych metadanych XML do odnajdowania metadanych dla punktu końcowego wykrywalny udostępnianych przez usługę.</span><span class="sxs-lookup"><span data-stu-id="8cb3f-103">This sample shows how to insert custom XML metadata into the discovery metadata for a discoverable endpoint exposed by a service.</span></span> <span data-ttu-id="8cb3f-104">Przykładowe następnie przedstawiono, jak wyszukać usługę klienta i wyodrębnić te niestandardowe dane.</span><span class="sxs-lookup"><span data-stu-id="8cb3f-104">The sample then shows how a client can search for the service and extract this custom data.</span></span> <span data-ttu-id="8cb3f-105">W tym przykładzie składa się z dwóch projektów, usług i klientów.</span><span class="sxs-lookup"><span data-stu-id="8cb3f-105">This sample consists of two projects, service and client.</span></span>  

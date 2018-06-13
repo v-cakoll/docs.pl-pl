@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544680"
 ---
 # <a name="how-to-use-systemfonts"></a><span data-ttu-id="3f8fd-102">Porady: korzystanie z SystemFonts</span><span class="sxs-lookup"><span data-stu-id="3f8fd-102">How to: Use SystemFonts</span></span>
 <span data-ttu-id="3f8fd-103">W tym przykładzie pokazano, jak korzystać z zasobów statycznej <xref:System.Windows.SystemFonts> klasy do nadawania stylu lub dostosowywanie przycisku.</span><span class="sxs-lookup"><span data-stu-id="3f8fd-103">This example shows how to use the static resources of the <xref:System.Windows.SystemFonts> class in order to style or customize a button.</span></span>  

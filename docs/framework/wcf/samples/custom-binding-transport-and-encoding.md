@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500909"
 ---
 # <a name="custom-binding-transport-and-encoding"></a><span data-ttu-id="abc10-102">Transport i kodowanie powiązań niestandardowych</span><span class="sxs-lookup"><span data-stu-id="abc10-102">Custom Binding Transport and Encoding</span></span>
 <span data-ttu-id="abc10-103">Wiązanie niestandardowe jest zdefiniowana przez uporządkowaną listę elementów wiązania odrębny.</span><span class="sxs-lookup"><span data-stu-id="abc10-103">A custom binding is defined by an ordered list of discrete binding elements.</span></span> <span data-ttu-id="abc10-104">W tym przykładzie pokazano, jak skonfigurować niestandardowego powiązania z różnymi transport i kodowanie elementów komunikatu.</span><span class="sxs-lookup"><span data-stu-id="abc10-104">This sample demonstrates how to configure a custom binding with various transport and message encoding elements.</span></span>  

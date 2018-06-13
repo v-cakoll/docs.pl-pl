@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562719"
 ---
 # <a name="how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background"></a><span data-ttu-id="48d6c-102">Jak zachować format obrazu użytego jako tło</span><span class="sxs-lookup"><span data-stu-id="48d6c-102">How to: Preserve the Aspect Ratio of an Image Used as a Background</span></span>
 <span data-ttu-id="48d6c-103">Ten przykład przedstawia sposób użycia <xref:System.Windows.Media.TileBrush.Stretch%2A> właściwość <xref:System.Windows.Media.ImageBrush> w celu zachowania proporcji obrazu.</span><span class="sxs-lookup"><span data-stu-id="48d6c-103">This example shows how to use the <xref:System.Windows.Media.TileBrush.Stretch%2A> property of an <xref:System.Windows.Media.ImageBrush> in order to preserve the aspect ratio of the image.</span></span>  

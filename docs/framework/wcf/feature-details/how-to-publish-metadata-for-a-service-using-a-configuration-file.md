@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495697"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a><span data-ttu-id="0b87b-102">Porady: Publikowanie metadanych dla usługi przy użyciu pliku konfiguracji</span><span class="sxs-lookup"><span data-stu-id="0b87b-102">How to: Publish Metadata for a Service Using a Configuration File</span></span>
 <span data-ttu-id="0b87b-103">Jest to jeden z dwóch tematy porad, które przedstawiają Publikowanie metadanych dla usługi Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="0b87b-103">This is one of two how-to topics that demonstrate publishing metadata for a Windows Communication Foundation (WCF) service.</span></span> <span data-ttu-id="0b87b-104">Istnieją dwa sposoby, aby określić, jak usługa powinna Publikowanie metadanych, przy użyciu pliku konfiguracji i kod.</span><span class="sxs-lookup"><span data-stu-id="0b87b-104">There are two ways to specify how a service should publish metadata, using a configuration file and using code.</span></span> <span data-ttu-id="0b87b-105">W tym temacie przedstawiono sposób Publikowanie metadanych dla usługi przy użyciu pliku konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="0b87b-105">This topic shows how to publish metadata for a service using a configuration file.</span></span>  

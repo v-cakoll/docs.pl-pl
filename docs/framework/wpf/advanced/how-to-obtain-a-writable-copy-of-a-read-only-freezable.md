@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543624"
 ---
 # <a name="how-to-obtain-a-writable-copy-of-a-read-only-freezable"></a><span data-ttu-id="4d080-102">Jak uzyskać zapisywalną kopię Freezable tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="4d080-102">How to: Obtain a Writable Copy of a Read-Only Freezable</span></span>
 <span data-ttu-id="4d080-103">Ten przykład przedstawia sposób użycia <xref:System.Windows.Freezable.Clone%2A> metodę, aby utworzyć kopię zapisu tylko do odczytu <xref:System.Windows.Freezable>.</span><span class="sxs-lookup"><span data-stu-id="4d080-103">This example shows how to use the <xref:System.Windows.Freezable.Clone%2A> method to create a writable copy of a read-only <xref:System.Windows.Freezable>.</span></span>  

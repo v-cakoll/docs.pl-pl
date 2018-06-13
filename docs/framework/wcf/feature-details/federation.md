@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496766"
 ---
 # <a name="federation"></a><span data-ttu-id="aa540-102">Federacja</span><span class="sxs-lookup"><span data-stu-id="aa540-102">Federation</span></span>
 <span data-ttu-id="aa540-103">Ten temat zawiera krótki przegląd koncepcji zabezpieczeń.</span><span class="sxs-lookup"><span data-stu-id="aa540-103">This topic provides a brief overview of the concept of federated security.</span></span> <span data-ttu-id="aa540-104">Omówiono także obsługa wdrażania architektury zabezpieczeń systemu Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="aa540-104">It also describes Windows Communication Foundation (WCF) support for deploying federated security architectures.</span></span> <span data-ttu-id="aa540-105">Przykładową aplikację prezentującą federacyjnego, zobacz [Federacja — przykład](../../../../docs/framework/wcf/samples/federation-sample.md).</span><span class="sxs-lookup"><span data-stu-id="aa540-105">For a sample application that demonstrates federation, see [Federation Sample](../../../../docs/framework/wcf/samples/federation-sample.md).</span></span>  

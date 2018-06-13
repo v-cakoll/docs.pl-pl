@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503684"
 ---
 # <a name="service-debug-behavior"></a><span data-ttu-id="d2046-102">Zachowanie debugowania usług</span><span class="sxs-lookup"><span data-stu-id="d2046-102">Service Debug Behavior</span></span>
 <span data-ttu-id="d2046-103">W przykładzie pokazano, jak można skonfigurować ustawienia zachowanie debugowania usług.</span><span class="sxs-lookup"><span data-stu-id="d2046-103">This sample demonstrates how service debug behavior settings can be configured.</span></span> <span data-ttu-id="d2046-104">Próbki jest oparta na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje `ICalculator` kontraktu usługi.</span><span class="sxs-lookup"><span data-stu-id="d2046-104">The sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md), which implements the `ICalculator` service contract.</span></span> <span data-ttu-id="d2046-105">W tym przykładzie jawnie definiuje zachowanie debugowania usług w pliku konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="d2046-105">This sample explicitly defines service debug behavior in the configuration file.</span></span> <span data-ttu-id="d2046-106">Mogą również to robić imperatively w kodzie.</span><span class="sxs-lookup"><span data-stu-id="d2046-106">It can also be done imperatively in code.</span></span>  

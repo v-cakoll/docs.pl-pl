@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504201"
 ---
 # <a name="uritemplate-table-sample"></a><span data-ttu-id="5c021-102">Przykład tabeli UriTemplate</span><span class="sxs-lookup"><span data-stu-id="5c021-102">UriTemplate Table Sample</span></span>
 <span data-ttu-id="5c021-103"><xref:System.UriTemplateTable> Klasa udostępnia struktury tabeli asocjacyjnej słownika podobne do pracy z zestawem `UriTemplate` wystąpień.</span><span class="sxs-lookup"><span data-stu-id="5c021-103">The <xref:System.UriTemplateTable> class provides a dictionary-like associative table structure for working with a set of `UriTemplate` instances.</span></span> <span data-ttu-id="5c021-104">Określone Uniform Resource Identifier (URI) może być dopasowana wydajnie wszystkie szablony w tabeli, a można pobrać danych skojarzone z szablonem dopasowany.</span><span class="sxs-lookup"><span data-stu-id="5c021-104">Specific Uniform Resource Identifiers (URIs) can be matched efficiently against all templates in the table, and data associated with the matched template can be retrieved.</span></span>  

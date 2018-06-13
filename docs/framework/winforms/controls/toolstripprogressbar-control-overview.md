@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537755"
 ---
 # <a name="toolstripprogressbar-control-overview"></a><span data-ttu-id="694eb-102">ToolStripProgressBar — Informacje o formancie</span><span class="sxs-lookup"><span data-stu-id="694eb-102">ToolStripProgressBar Control Overview</span></span>
 <span data-ttu-id="694eb-103"><xref:System.Windows.Forms.ToolStripProgressBar> Łączy rafting i renderowania funkcje wszystkich <xref:System.Windows.Forms.ToolStrip> formantów z jego typowe funkcje śledzenia procesu.</span><span class="sxs-lookup"><span data-stu-id="694eb-103">The <xref:System.Windows.Forms.ToolStripProgressBar> combines the rafting and rendering functionality of all <xref:System.Windows.Forms.ToolStrip> controls with its typical process-tracking functionality.</span></span> <span data-ttu-id="694eb-104">A <xref:System.Windows.Forms.ToolStripProgressBar> najbardziej zwykle jest hostowana przez <xref:System.Windows.Forms.StatusStrip>i mniej często przez <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="694eb-104">A <xref:System.Windows.Forms.ToolStripProgressBar> is most usually hosted by <xref:System.Windows.Forms.StatusStrip>, and less frequently by a <xref:System.Windows.Forms.ToolStrip>.</span></span>  

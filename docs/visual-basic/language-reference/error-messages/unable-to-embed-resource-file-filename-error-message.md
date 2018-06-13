@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596645"
 ---
 # <a name="unable-to-embed-resource-file-39ltfilenamegt39-lterror-messagegt"></a>Nie można osadzić pliku zasobów &#39; &lt;filename&gt;&#39;: &lt;komunikat o błędzie&gt;
 Kompilator Visual Basic wywołuje konsolidator zestawów (znanej także jako Alink Al.exe), można wygenerować zestawu z manifestu. Konsolidator zgłosił błąd osadzanie natywnego pliku zasobu COM + bezpośrednio w zestawie.  

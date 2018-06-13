@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637450"
 ---
 # <a name="file-specified-by-filename-does-not-use-the-encoding-specified-by-fileencoding"></a>Plik określony przez nazwę pliku nie korzysta z kodowaniem określonym przez kodowanie plików
 Została podjęta próba odczytu z pliku, ale określony kodowanie nie jest używane przez plik.  

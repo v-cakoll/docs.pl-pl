@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586773"
 ---
 # <a name="39ltelementnamegt39-is-obsolete-visual-basic-warning"></a>&#39;&lt;elementname&gt; &#39; jest przestarzałe (ostrzeżenie Visual Basic)
 Instrukcja próbuje uzyskać dostęp elementu programistycznego, które zostały oznaczone <xref:System.ObsoleteAttribute> atrybut i dyrektywy traktować go jako ostrzeżenia.  

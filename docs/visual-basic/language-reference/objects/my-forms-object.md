@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603902"
 ---
 # <a name="myforms-object"></a>My.Forms — Obiekt
 Dostarcza właściwości, aby uzyskać dostęp do wystąpienia każdego formularza systemu Windows zadeklarowana w bieżącym projekcie.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803731"
 ---
 # <a name="basic-resource-service"></a>Podstawowa usługa obsługi zasobów
 W tym przykładzie przedstawiono sposób wdrożenia oparte na protokole HTTP usługi przy użyciu modelu programowania REST Windows Communication Foundation (WCF) udostępnia kolekcję klientów obsługuje pobieranie, dodawania, usuwania i zamienianie operacji. Ten przykład zawiera składniki 2 - samodzielnie hostowana usługa HTTP usług WCF (Service.cs) i aplikacji konsoli (program.cs), która tworzy usługi i wykonywania wywołań do niego.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604721"
 ---
 # <a name="from-clause-visual-basic"></a>From — Klauzula (Visual Basic)
 Określa co najmniej jednej zmiennej zakresu i kolekcji do zapytania.  

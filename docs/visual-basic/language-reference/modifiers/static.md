@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602057"
 ---
 # <a name="static-visual-basic"></a>Static (Visual Basic)
 Określa, że co najmniej jeden zadeklarowany zmienne lokalne są nadal istnieje i zachowywać swoje ostatnie wartości po zakończeniu procedury, w którym jest zadeklarowany.  

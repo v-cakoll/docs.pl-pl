@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599193"
 ---
 # <a name="argument-value-39ltpathnamegt39-contains-characters-that-are-not-valid-in-a-path-name"></a>Wartość argumentu &#39; &lt;pathname&gt; &#39; zawiera znaki, które nie są prawidłowe w nazwie ścieżki
 Nazwa ścieżki zawiera jeden lub więcej znaków, które nie są prawidłowe.  

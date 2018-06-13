@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603434"
 ---
 # <a name="a-log-has-already-been-created-with-this-name-on-this-machine"></a>Dziennik został już utworzony o tej nazwie na tym komputerze
 Nastąpiła próba do utworzenia dziennika o nazwie, która jest już używana.  

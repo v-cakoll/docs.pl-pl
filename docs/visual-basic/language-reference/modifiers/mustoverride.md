@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599873"
 ---
 # <a name="mustoverride-visual-basic"></a>MustOverride (Visual Basic)
 Określa, że właściwość lub procedura nie jest zaimplementowana w tej klasie i musi zostać zastąpiony w klasie pochodnej, zanim będzie można go używać.  

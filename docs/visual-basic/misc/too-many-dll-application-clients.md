@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639643"
 ---
 # <a name="too-many-dll-application-clients"></a>Zbyt wielu klientów aplikacji DLL
 Biblioteki dołączanej (dynamicznie DLL) dla programu Visual Basic tylko może obsłużyć dostępu przy ograniczonej liczby aplikacji hosta. Aplikacja i inne aplikacje, które są hostami programu Visual Basic (niektóre z nich mogą być używane przez aplikację) wszystkich próbujesz uzyskać dostęp biblioteki DLL języka Visual Basic w tym samym czasie.  

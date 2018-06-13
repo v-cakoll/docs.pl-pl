@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637559"
 ---
 # <a name="cannot-determine-array-type-because-it-is-nothing"></a>Nie można określić typu tablicy, ponieważ nic nie jest
 Nie można ustalić typu tablica, ponieważ zostało ustawione na wartość `Nothing`.  

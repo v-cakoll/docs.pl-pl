@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172636"
 ---
 # <a name="readonly-c-reference"></a><span data-ttu-id="9863f-102">readonly (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="9863f-102">readonly (C# Reference)</span></span>
 <span data-ttu-id="9863f-103">`readonly` — Słowo kluczowe jest modyfikator, pomocne w polach.</span><span class="sxs-lookup"><span data-stu-id="9863f-103">The `readonly` keyword is a modifier that you can use on fields.</span></span> <span data-ttu-id="9863f-104">Jeżeli zawiera deklarację pola `readonly` , modyfikator przypisania do pól wprowadzone przez deklaracja może występować tylko w ramach deklaracji lub w Konstruktorze w tej samej klasy.</span><span class="sxs-lookup"><span data-stu-id="9863f-104">When a field declaration includes a `readonly` modifier, assignments to the fields introduced by the declaration can only occur as part of the declaration or in a constructor in the same class.</span></span>  

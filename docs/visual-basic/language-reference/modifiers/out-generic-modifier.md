@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598156"
 ---
 # <a name="out-generic-modifier-visual-basic"></a><span data-ttu-id="4a396-102">Out (modyfikator ogólny) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4a396-102">Out (Generic Modifier) (Visual Basic)</span></span>
 <span data-ttu-id="4a396-103">Parametry typu ogólnego `Out` — słowo kluczowe Określa, że typ jest kowariantny.</span><span class="sxs-lookup"><span data-stu-id="4a396-103">For generic type parameters, the `Out` keyword specifies that the type is covariant.</span></span>  

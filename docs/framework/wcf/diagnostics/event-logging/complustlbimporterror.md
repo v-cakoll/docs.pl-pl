@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33471006"
 ---
 # <a name="complustlbimporterror"></a><span data-ttu-id="ad2b0-102">ComPlusTLBImportError</span><span class="sxs-lookup"><span data-stu-id="ad2b0-102">ComPlusTLBImportError</span></span>
 <span data-ttu-id="ad2b0-103">Identyfikator: 132</span><span class="sxs-lookup"><span data-stu-id="ad2b0-103">Id: 132</span></span>  

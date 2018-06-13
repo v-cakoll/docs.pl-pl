@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453961"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a><span data-ttu-id="2ca18-102">ICorProfilerCallback::RemotingClientReceivingReply — Metoda</span><span class="sxs-lookup"><span data-stu-id="2ca18-102">ICorProfilerCallback::RemotingClientReceivingReply Method</span></span>
 <span data-ttu-id="2ca18-103">Powiadamia profiler Zakończono po stronie serwera część wywołaniem funkcji zdalnych i teraz odbiera klienta i informacje o przetwarzanie odpowiedzi.</span><span class="sxs-lookup"><span data-stu-id="2ca18-103">Notifies the profiler that the server-side portion of a remoting call has completed and the client is now receiving and about to process the reply.</span></span>  

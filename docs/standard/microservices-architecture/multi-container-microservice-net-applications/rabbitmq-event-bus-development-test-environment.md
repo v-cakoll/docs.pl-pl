@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580240"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a><span data-ttu-id="cbb95-103">Implementowanie magistrali zdarzeń z RabbitMQ dla środowisk deweloperskich lub testowania</span><span class="sxs-lookup"><span data-stu-id="cbb95-103">Implementing an event bus with RabbitMQ for the development or test environment</span></span>
 

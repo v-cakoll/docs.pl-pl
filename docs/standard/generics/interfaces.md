@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575976"
 ---
 # <a name="generic-interfaces"></a><span data-ttu-id="84d32-102">Interfejsy ogólne</span><span class="sxs-lookup"><span data-stu-id="84d32-102">Generic Interfaces</span></span>
 <span data-ttu-id="84d32-103">Ten temat zawiera omówienie interfejsach zapewniające często używane funkcje w rodzin typów ogólnych.</span><span class="sxs-lookup"><span data-stu-id="84d32-103">This topic provides an overview of generic interfaces that provide common functionality across families of generic types.</span></span>  

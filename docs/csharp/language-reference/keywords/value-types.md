@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172215"
 ---
 # <a name="value-types-c-reference"></a><span data-ttu-id="84354-102">Typy wartości (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="84354-102">Value Types (C# Reference)</span></span>
 <span data-ttu-id="84354-103">Typy wartości obejmują dwie główne kategorie:</span><span class="sxs-lookup"><span data-stu-id="84354-103">The value types consist of two main categories:</span></span>  

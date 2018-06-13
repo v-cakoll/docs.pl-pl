@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448716"
 ---
 # <a name="imetadataimportenumparams-method"></a><span data-ttu-id="8d652-102">IMetaDataImport::EnumParams — Metoda</span><span class="sxs-lookup"><span data-stu-id="8d652-102">IMetaDataImport::EnumParams Method</span></span>
 <span data-ttu-id="8d652-103">Wylicza tokenów ParamDef reprezentujący parametry metody odwołuje się określony token MethodDef.</span><span class="sxs-lookup"><span data-stu-id="8d652-103">Enumerates ParamDef tokens representing the parameters of the method referenced by the specified MethodDef token.</span></span>  

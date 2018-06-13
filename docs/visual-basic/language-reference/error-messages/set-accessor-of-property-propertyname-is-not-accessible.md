@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595855"
 ---
 # <a name="39set39-accessor-of-property-39ltpropertynamegt39-is-not-accessible"></a><span data-ttu-id="3a34a-102">&#39;Ustaw&#39; akcesor właściwości &#39; &lt;propertyname&gt; &#39; nie jest dostępny</span><span class="sxs-lookup"><span data-stu-id="3a34a-102">&#39;Set&#39; accessor of property &#39;&lt;propertyname&gt;&#39; is not accessible</span></span>
 <span data-ttu-id="3a34a-103">Instrukcja próbuje zapisać wartości właściwości, gdy nie ma dostępu do właściwości `Set` procedury.</span><span class="sxs-lookup"><span data-stu-id="3a34a-103">A statement attempts to store the value of a property when it does not have access to the property's `Set` procedure.</span></span>  

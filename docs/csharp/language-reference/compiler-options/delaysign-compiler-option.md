@@ -13,6 +13,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472649"
 ---
 # <a name="-delaysign-c-compiler-options"></a><span data-ttu-id="0c116-102">-delaysign (opcje kompilatora C#)</span><span class="sxs-lookup"><span data-stu-id="0c116-102">-delaysign (C# Compiler Options)</span></span>
 

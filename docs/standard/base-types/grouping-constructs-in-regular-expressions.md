@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579824"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a><span data-ttu-id="11a8c-102">Konstrukcje grupujące w wyrażeniach regularnych</span><span class="sxs-lookup"><span data-stu-id="11a8c-102">Grouping Constructs in Regular Expressions</span></span>
 <span data-ttu-id="11a8c-103">Konstrukcje grupujące odróżniać użyto wyrażenia regularnego i przechwytywania podciągów ciągu wejściowego.</span><span class="sxs-lookup"><span data-stu-id="11a8c-103">Grouping constructs delineate the subexpressions of a regular expression and capture the substrings of an input string.</span></span> <span data-ttu-id="11a8c-104">Można użyć konstrukcji grupowania wykonywać następujące czynności:</span><span class="sxs-lookup"><span data-stu-id="11a8c-104">You can use grouping constructs to do the following:</span></span>  

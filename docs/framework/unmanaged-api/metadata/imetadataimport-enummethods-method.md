@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449015"
 ---
 # <a name="imetadataimportenummethods-method"></a><span data-ttu-id="3f027-102">IMetaDataImport::EnumMethods — Metoda</span><span class="sxs-lookup"><span data-stu-id="3f027-102">IMetaDataImport::EnumMethods Method</span></span>
 <span data-ttu-id="3f027-103">Wylicza tokeny MethodDef reprezentujący metody określonego typu.</span><span class="sxs-lookup"><span data-stu-id="3f027-103">Enumerates MethodDef tokens representing methods of the specified type.</span></span>  

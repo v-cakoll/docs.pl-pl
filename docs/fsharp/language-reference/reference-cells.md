@@ -7,6 +7,7 @@ ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/12/2018
+ms.locfileid: "34149065"
 ---
 # <a name="reference-cells"></a><span data-ttu-id="feb6c-103">Komórki odwołań</span><span class="sxs-lookup"><span data-stu-id="feb6c-103">Reference Cells</span></span>
 

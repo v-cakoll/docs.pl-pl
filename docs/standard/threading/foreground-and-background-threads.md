@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583080"
 ---
 # <a name="foreground-and-background-threads"></a><span data-ttu-id="e75de-102">Wątki pierwszego planu i tła</span><span class="sxs-lookup"><span data-stu-id="e75de-102">Foreground and Background Threads</span></span>
 <span data-ttu-id="e75de-103">Zarządzane wątek jest wątku w tle lub wątku pierwszego planu.</span><span class="sxs-lookup"><span data-stu-id="e75de-103">A managed thread is either a background thread or a foreground thread.</span></span> <span data-ttu-id="e75de-104">Wątki w tle są takie same jak wątki pierwszoplanowe z jednym wyjątkiem: wątku w tle nie przechowuje zarządzanego środowiska wykonawczego uruchomiona.</span><span class="sxs-lookup"><span data-stu-id="e75de-104">Background threads are identical to foreground threads with one exception: a background thread does not keep the managed execution environment running.</span></span> <span data-ttu-id="e75de-105">Po w procesie zarządzanych (gdzie plik .exe jest zestaw zarządzany) zostały zatrzymane wszystkie wątki pierwszego planu, system zatrzymuje wszystkie wątki w tle i zamyka.</span><span class="sxs-lookup"><span data-stu-id="e75de-105">Once all foreground threads have been stopped in a managed process (where the .exe file is a managed assembly), the system stops all background threads and shuts down.</span></span>  

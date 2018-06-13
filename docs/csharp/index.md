@@ -13,6 +13,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472377"
 ---
 # <a name="c-guide"></a><span data-ttu-id="5e6b0-103">Przewodnik dla języka C#</span><span class="sxs-lookup"><span data-stu-id="5e6b0-103">C# Guide</span></span>
 

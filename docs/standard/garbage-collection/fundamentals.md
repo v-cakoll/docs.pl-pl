@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579538"
 ---
 # <a name="fundamentals-of-garbage-collection"></a><span data-ttu-id="4ad36-102">Podstawy dotyczące odzyskiwania pamięci</span><span class="sxs-lookup"><span data-stu-id="4ad36-102">Fundamentals of Garbage Collection</span></span>
 <a name="top"></a> <span data-ttu-id="4ad36-103">W środowisko uruchomieniowe języka wspólnego (CLR) moduł zbierający elementy bezużyteczne służy jako Menedżer pamięci automatycznego.</span><span class="sxs-lookup"><span data-stu-id="4ad36-103">In the common language runtime (CLR), the garbage collector serves as an automatic memory manager.</span></span> <span data-ttu-id="4ad36-104">Zapewnia następujące korzyści:</span><span class="sxs-lookup"><span data-stu-id="4ad36-104">It provides the following benefits:</span></span>  

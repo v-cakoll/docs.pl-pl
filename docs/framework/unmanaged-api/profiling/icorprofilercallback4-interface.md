@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455745"
 ---
 # <a name="icorprofilercallback4-interface"></a><span data-ttu-id="c760c-102">ICorProfilerCallback4 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="c760c-102">ICorProfilerCallback4 Interface</span></span>
 <span data-ttu-id="c760c-103">Udostępnia metody wywołania zwrotnego, używane przez środowisko uruchomieniowe języka wspólnego (CLR) do przekazywania informacji do profilera.</span><span class="sxs-lookup"><span data-stu-id="c760c-103">Provides callback methods that the common language runtime (CLR) uses to communicate information to the profiler.</span></span>  

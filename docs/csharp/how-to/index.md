@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34549395"
 ---
 # <a name="how-to-c"></a><span data-ttu-id="20dce-103">Jak (C#)</span><span class="sxs-lookup"><span data-stu-id="20dce-103">How to (C#)</span></span>
 

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34311978"
 ---
 # <a name="ltlibrarygt-element-net-native"></a><span data-ttu-id="2d2d4-102">Element &lt;Library&gt; (architektura .NET Native)</span><span class="sxs-lookup"><span data-stu-id="2d2d4-102">&lt;Library&gt; Element (.NET Native)</span></span>
 <span data-ttu-id="2d2d4-103">Definiuje zestaw zawierający typy i elementy członkowskie typu, w których metadane są dostępne w celu odbicia w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="2d2d4-103">Defines the assembly that contains types and type members whose metadata is available for reflection at run time.</span></span>  

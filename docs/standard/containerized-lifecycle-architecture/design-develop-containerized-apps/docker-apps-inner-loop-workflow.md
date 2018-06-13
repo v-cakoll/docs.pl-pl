@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579213"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a><span data-ttu-id="7be08-103">Przepływ pracy pętli wewnętrzny programowanie aplikacji Docker</span><span class="sxs-lookup"><span data-stu-id="7be08-103">Inner-loop development workflow for Docker apps</span></span>
 

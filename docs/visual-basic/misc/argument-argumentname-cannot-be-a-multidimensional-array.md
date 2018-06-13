@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599596"
 ---
 # <a name="argument-39ltargumentnamegt39-cannot-be-a-multidimensional-array"></a><span data-ttu-id="f6b29-102">Argument &#39; &lt;argumentname&gt; &#39; nie może być tablicy wielowymiarowej</span><span class="sxs-lookup"><span data-stu-id="f6b29-102">Argument &#39;&lt;argumentname&gt;&#39; cannot be a multidimensional array</span></span>
 <span data-ttu-id="f6b29-103">Pozycja argumentu tablicy jest większa niż 1, ale może być tylko tablicą jednowymiarową.</span><span class="sxs-lookup"><span data-stu-id="f6b29-103">The rank of an array argument is greater than 1, but it can only be a one-dimensional array.</span></span>  

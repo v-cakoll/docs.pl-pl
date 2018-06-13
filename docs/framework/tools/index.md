@@ -14,6 +14,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34312043"
 ---
 # <a name="net-framework-tools"></a><span data-ttu-id="c4c1f-102">Narzędzia programu .NET Framework</span><span class="sxs-lookup"><span data-stu-id="c4c1f-102">.NET Framework Tools</span></span>
 <span data-ttu-id="c4c1f-103">Narzędzia programu .NET Framework ułatwiają tworzenie i wdrażanie aplikacji oraz składników współpracujących z programem .NET Framework oraz zarządzanie nimi.</span><span class="sxs-lookup"><span data-stu-id="c4c1f-103">The .NET Framework tools make it easier for you to create, deploy, and manage applications and components that target the .NET Framework.</span></span>  

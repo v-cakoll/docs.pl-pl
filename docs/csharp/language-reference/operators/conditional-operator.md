@@ -14,6 +14,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457219"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="20a4c-102">?: — Operator (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="20a4c-102">?: Operator (C# Reference)</span></span>
 <span data-ttu-id="20a4c-103">Operator warunkowy (`?:`), powszechnie znane jako trójargumentowy operator warunkowy zwraca jeden z dwóch wartości w zależności od wartości wyrażenia logicznego.</span><span class="sxs-lookup"><span data-stu-id="20a4c-103">The conditional operator (`?:`), commonly known as the ternary conditional operator, returns one of two values depending on the value of a Boolean expression.</span></span> <span data-ttu-id="20a4c-104">Poniżej przedstawiono składnię operatora warunkowego.</span><span class="sxs-lookup"><span data-stu-id="20a4c-104">Following is the syntax for the conditional operator.</span></span>  

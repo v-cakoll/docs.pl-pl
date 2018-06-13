@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597412"
 ---
 # <a name="39lttypenamegt39-is-a-type-and-cannot-be-used-as-an-expression"></a><span data-ttu-id="a2f49-102">&#39;&lt;Właściwość TypeName&gt; &#39; jest typem i nie można używać jako wyrażenia</span><span class="sxs-lookup"><span data-stu-id="a2f49-102">&#39;&lt;typename&gt;&#39; is a type and cannot be used as an expression</span></span>
 <span data-ttu-id="a2f49-103">Nazwa typu, który występuje, gdy wymagane jest wyrażenie.</span><span class="sxs-lookup"><span data-stu-id="a2f49-103">A type name occurs where an expression is required.</span></span> <span data-ttu-id="a2f49-104">Wyrażenie musi składać się z kombinacji zmienne, stałe, literały, właściwości, oraz `Function` wywołań procedur.</span><span class="sxs-lookup"><span data-stu-id="a2f49-104">An expression must consist of some combination of variables, constants, literals, properties, and `Function` procedure calls.</span></span>  

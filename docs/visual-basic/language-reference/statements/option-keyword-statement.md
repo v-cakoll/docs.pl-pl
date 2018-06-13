@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598233"
 ---
 # <a name="option-ltkeywordgt-statement"></a><span data-ttu-id="53b9d-102">Option &lt;słowo kluczowe&gt; — instrukcja</span><span class="sxs-lookup"><span data-stu-id="53b9d-102">Option &lt;keyword&gt; Statement</span></span>
 <span data-ttu-id="53b9d-103">Wprowadza instrukcję określającą opcję kompilatora, która ma zastosowanie do całego pliku źródłowego.</span><span class="sxs-lookup"><span data-stu-id="53b9d-103">Introduces a statement that specifies a compiler option that applies to the entire source file.</span></span>  

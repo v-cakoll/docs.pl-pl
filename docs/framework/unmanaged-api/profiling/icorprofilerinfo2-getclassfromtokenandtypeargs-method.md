@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33456641"
 ---
 # <a name="icorprofilerinfo2getclassfromtokenandtypeargs-method"></a><span data-ttu-id="cb439-102">ICorProfilerInfo2::GetClassFromTokenAndTypeArgs — Metoda</span><span class="sxs-lookup"><span data-stu-id="cb439-102">ICorProfilerInfo2::GetClassFromTokenAndTypeArgs Method</span></span>
 <span data-ttu-id="cb439-103">Pobiera `ClassID` typu przy użyciu tokenu określonych metadanych i `ClassID` wartości dowolnego argumentów typu.</span><span class="sxs-lookup"><span data-stu-id="cb439-103">Gets the `ClassID` of a type by using the specified metadata token and the `ClassID` values of any type arguments.</span></span>  

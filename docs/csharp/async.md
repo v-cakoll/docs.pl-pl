@@ -9,6 +9,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34312069"
 ---
 # <a name="asynchronous-programming"></a><span data-ttu-id="3b8ad-103">Programowanie asynchroniczne</span><span class="sxs-lookup"><span data-stu-id="3b8ad-103">Asynchronous programming</span></span>
 

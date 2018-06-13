@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397562"
 ---
 # <a name="jit-tracing-etw-events"></a><span data-ttu-id="169aa-102">Zdarzenia ETW śledzenia JIT</span><span class="sxs-lookup"><span data-stu-id="169aa-102">JIT Tracing ETW Events</span></span>
 <a name="top"></a> <span data-ttu-id="169aa-103">Te zdarzenia zbierać informacje dotyczące powodzenia lub niepowodzenia just-in-time (JIT) ze śródwierszowaniem i wywołania tail JIT.</span><span class="sxs-lookup"><span data-stu-id="169aa-103">These events collect information relating to the success or failure of just-in-time (JIT) inlining and JIT tail calls.</span></span>  

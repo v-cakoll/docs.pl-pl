@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455305"
 ---
 # <a name="icorprofilerinfo6-interface"></a><span data-ttu-id="983f9-102">Interfejs ICorProfilerInfo6</span><span class="sxs-lookup"><span data-stu-id="983f9-102">ICorProfilerInfo6 Interface</span></span>
 <span data-ttu-id="983f9-103">[Obsługiwane w programie .NET Framework 4.6 i nowszymi wersjami]</span><span class="sxs-lookup"><span data-stu-id="983f9-103">[Supported in the .NET Framework 4.6 and later versions]</span></span>  

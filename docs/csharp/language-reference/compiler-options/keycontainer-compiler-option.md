@@ -13,6 +13,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472571"
 ---
 # <a name="-keycontainer-c-compiler-options"></a><span data-ttu-id="a4afd-102">-keycontainer (opcje kompilatora C#)</span><span class="sxs-lookup"><span data-stu-id="a4afd-102">-keycontainer (C# Compiler Options)</span></span>
 <span data-ttu-id="a4afd-103">Określa nazwę kontenera kluczy kryptograficznych.</span><span class="sxs-lookup"><span data-stu-id="a4afd-103">Specifies the name of the cryptographic key container.</span></span>  

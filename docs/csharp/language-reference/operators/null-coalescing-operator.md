@@ -13,6 +13,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458115"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="ea2fa-103">??</span><span class="sxs-lookup"><span data-stu-id="ea2fa-103">??</span></span> <span data-ttu-id="ea2fa-104">Operator (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="ea2fa-104">Operator (C# Reference)</span></span>
 <span data-ttu-id="ea2fa-105">`??` Operator jest nazywany operatora łączenia wartości null.</span><span class="sxs-lookup"><span data-stu-id="ea2fa-105">The `??` operator is called the null-coalescing operator.</span></span>  <span data-ttu-id="ea2fa-106">Zwraca argument operacji z lewej strony, jeśli ma on wartość inną niż null; w przeciwnym razie zwraca argument operacji po prawej stronie.</span><span class="sxs-lookup"><span data-stu-id="ea2fa-106">It returns the left-hand operand if the operand is not null; otherwise it returns the right hand operand.</span></span>  

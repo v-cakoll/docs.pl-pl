@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592304"
 ---
 # <a name="introduction-to-plinq"></a><span data-ttu-id="018d8-102">Wprowadzenie do PLINQ</span><span class="sxs-lookup"><span data-stu-id="018d8-102">Introduction to PLINQ</span></span>
 ## <a name="what-is-a-parallel-query"></a><span data-ttu-id="018d8-103">Co to jest równoległe zapytania?</span><span class="sxs-lookup"><span data-stu-id="018d8-103">What is a Parallel Query?</span></span>  

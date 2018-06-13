@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575190"
 ---
 # <a name="how-to-create-files-and-directories-in-isolated-storage"></a><span data-ttu-id="dd7c2-102">Porady: tworzenie plików i katalogów w izolowanym magazynie</span><span class="sxs-lookup"><span data-stu-id="dd7c2-102">How to: Create Files and Directories in Isolated Storage</span></span>
 <span data-ttu-id="dd7c2-103">Po uzyskaniu izolowanego magazynu można utworzyć katalogów i plików do przechowywania danych.</span><span class="sxs-lookup"><span data-stu-id="dd7c2-103">After you have obtained an isolated store, you can create directories and files for storing data.</span></span> <span data-ttu-id="dd7c2-104">W sklepie nazwy plików i katalogów są określane względem katalogu głównego wirtualnego systemu plików.</span><span class="sxs-lookup"><span data-stu-id="dd7c2-104">Within a store, file and directory names are specified with respect to the root of the virtual file system.</span></span>  

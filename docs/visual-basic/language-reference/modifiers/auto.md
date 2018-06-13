@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595878"
 ---
 # <a name="auto-visual-basic"></a><span data-ttu-id="b7960-102">Auto (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b7960-102">Auto (Visual Basic)</span></span>
 <span data-ttu-id="b7960-103">Określa, że Visual Basic powinien kierować ciągi zgodnie z regułami programu .NET Framework oparte na zewnętrzną nazwę procedury zewnętrznej został zadeklarowany.</span><span class="sxs-lookup"><span data-stu-id="b7960-103">Specifies that Visual Basic should marshal strings according to .NET Framework rules based on the external name of the external procedure being declared.</span></span>  

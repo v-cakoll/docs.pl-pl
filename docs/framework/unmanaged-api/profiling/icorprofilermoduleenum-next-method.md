@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33456153"
 ---
 # <a name="icorprofilermoduleenumnext-method"></a><span data-ttu-id="170b7-102">ICorProfilerModuleEnum::Next — Metoda</span><span class="sxs-lookup"><span data-stu-id="170b7-102">ICorProfilerModuleEnum::Next Method</span></span>
 <span data-ttu-id="170b7-103">Pobiera określoną liczbę modułów ciągłe z sekwencyjną kolekcją modułów, zaczynając od modułu wyliczającego bieżącej pozycji w sekwencji.</span><span class="sxs-lookup"><span data-stu-id="170b7-103">Gets the specified number of contiguous modules from a sequential collection of modules, starting at the enumerator's current position in the sequence.</span></span>  

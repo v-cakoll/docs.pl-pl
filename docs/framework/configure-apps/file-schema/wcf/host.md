@@ -7,6 +7,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34233733"
 ---
 # <a name="lthostgt"></a><span data-ttu-id="bb3c3-102">&lt;Host&gt;</span><span class="sxs-lookup"><span data-stu-id="bb3c3-102">&lt;host&gt;</span></span>
 <span data-ttu-id="bb3c3-103">Określa ustawienia dla usługi hosta.</span><span class="sxs-lookup"><span data-stu-id="bb3c3-103">Specifies settings for a service host.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33478351"
 ---
 # <a name="systemservicemodelchannelspeerneighbormanageronline"></a><span data-ttu-id="5e08f-102">System.ServiceModel.Channels.PeerNeighborManagerOnline</span><span class="sxs-lookup"><span data-stu-id="5e08f-102">System.ServiceModel.Channels.PeerNeighborManagerOnline</span></span>
 <span data-ttu-id="5e08f-103">Węzeł równorzędny jest teraz dostępny, wskazujące na obecność co najmniej jednego połączenia sąsiadów.</span><span class="sxs-lookup"><span data-stu-id="5e08f-103">The PeerNode is now online, indicating the presence of one or more connected neighbors.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234558"
 ---
 # <a name="private-visual-basic"></a><span data-ttu-id="7fa1d-102">Private (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7fa1d-102">Private (Visual Basic)</span></span>
 <span data-ttu-id="7fa1d-103">Określa, że co najmniej jeden zadeklarowany element programistyczny jest dostępny tylko w obrębie ich kontekście deklaracji, łącznie z wewnątrz żadnych typów zawartych w niej.</span><span class="sxs-lookup"><span data-stu-id="7fa1d-103">Specifies that one or more declared programming elements are accessible only from within their declaration context, including from within any contained types.</span></span>  

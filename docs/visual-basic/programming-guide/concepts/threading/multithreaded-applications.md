@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650481"
 ---
 # <a name="multithreaded-applications-visual-basic"></a><span data-ttu-id="154be-102">Aplikacje wielowątkowe (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="154be-102">Multithreaded Applications (Visual Basic)</span></span>
 <span data-ttu-id="154be-103">Za pomocą Visual Basic mogą pisać aplikacje, służących do wykonywania wielu zadań jednocześnie.</span><span class="sxs-lookup"><span data-stu-id="154be-103">With Visual Basic, you can write applications that perform multiple tasks at the same time.</span></span> <span data-ttu-id="154be-104">Zadania związane z możliwości maksymalnie innych zadań można wykonywać w oddzielnych wątkach proces znany jako *wielowątkowość* lub *wolne wątkowość*.</span><span class="sxs-lookup"><span data-stu-id="154be-104">Tasks with the potential of holding up other tasks can execute on separate threads, a process known as *multithreading* or *free threading*.</span></span>  

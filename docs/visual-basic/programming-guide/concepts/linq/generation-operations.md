@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641814"
 ---
 # <a name="generation-operations-visual-basic"></a>Operacje generowania (Visual Basic)
 Generowanie odwołuje się do tworzenia Nowa sekwencja wartości.  

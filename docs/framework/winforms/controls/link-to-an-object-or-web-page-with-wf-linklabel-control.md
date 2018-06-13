@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539636"
 ---
 # <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>Porady: łączenie z obiektem lub stroną sieci Web za pomocą formantu LinkLabel formularzy systemu Windows
 Formularze systemu Windows <xref:System.Windows.Forms.LinkLabel> formant służy do tworzenia łączy stylu sieci Web w formularzu. Po kliknięciu łącza, można zmienić jego kolor, aby wskazać, że odwiedzeniu łącza. Aby uzyskać więcej informacji na zmianę koloru, zobacz [porady: Zmienianie wyglądu formantu LinkLabel formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md).  

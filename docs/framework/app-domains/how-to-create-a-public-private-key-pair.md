@@ -22,6 +22,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741753"
 ---
 # <a name="how-to-create-a-public-private-key-pair"></a>Porady: tworzenie pary kluczy publiczno prywatnych
 Aby podpisać zestaw o silnej nazwie, musi mieć pary kluczy publiczny/prywatny. Ta publicznego i prywatnego klucza kryptograficznego jest używany podczas kompilacji można utworzyć zestawu z silną nazwą. Można utworzyć przy użyciu pary kluczy [narzędzie Strong Name (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md). Pliki par kluczy mają zwykle rozszerzenie .snk —.  

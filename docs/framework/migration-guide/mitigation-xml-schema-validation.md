@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389216"
 ---
 # <a name="mitigation-xml-schema-validation"></a>Ograniczenie: walidacja schematu XML
 W [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], Weryfikacja schematu XSD wykrywa naruszenie ograniczenia unique, jeśli jest używany klucz złożony i jeden klucz jest pusty.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362250"
 ---
 # <a name="how-to-create-a-data-service-using-a-linq-to-sql-data-source-wcf-data-services"></a>Porady: Tworzenie usługi danych za pomocą LINQ do SQL źródła danych (usługi danych WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] udostępnia dane jednostki jako usługa danych. Dostawca odbicia umożliwia zdefiniowanie modelu danych, która jest oparta na dowolnej klasy, która udostępnia elementy Członkowskie zwracające <xref:System.Linq.IQueryable%601> implementacji. Aby można było dokonać aktualizacji danych w źródle danych, również musi implementować następujące klasy <xref:System.Data.Services.IUpdatable> interfejsu. Aby uzyskać więcej informacji, zobacz [dostawców usług danych](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md). W tym temacie przedstawiono sposób tworzenia LINQ w klasach SQL, które uzyskują dostęp do przykładowej bazy danych Northwind przy użyciu dostawcy odbicia, a także sposób utworzyć usługę danych, która jest oparta na tych klas danych.  

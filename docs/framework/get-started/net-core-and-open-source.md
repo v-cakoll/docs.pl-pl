@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389255"
 ---
 # <a name="net-core-and-open-source"></a>Oprogramowanie .NET Core i Open-Source
 Ten temat zawiera krótki przegląd co .NET Core i pokazuje, jak można znaleźć więcej informacji. Aby uzyskać pełną listę tematów dla platformy .NET Core, odwiedź stronę [.NET Core przewodnik](../../core/index.md).

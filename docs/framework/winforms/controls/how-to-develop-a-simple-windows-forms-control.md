@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539669"
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>Porady: opracowywanie prostego formantu formularzy systemu Windows
 W tej sekcji przedstawiono podstawowe etapy tworzenia niestandardowego formantu formularzy systemu Windows. Proste kontrolki opracowane w tym przewodniku umożliwia wyrównanie jego <xref:System.Windows.Forms.Control.Text%2A> właściwość zostanie zmieniony. Nie podnieść lub obsługę zdarzeń.  

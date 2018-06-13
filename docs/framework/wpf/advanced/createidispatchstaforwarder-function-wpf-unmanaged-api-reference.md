@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536654"
 ---
 # <a name="createidispatchstaforwarder-function-wpf-unmanaged-api-reference"></a>Funkcja CreateIDispatchSTAForwarder (WPF niezarządzany wykaz interfejsów API)
 Ten interfejs API obsługuje infrastrukturę programu Windows Presentation Foundation (WPF) i nie jest przeznaczona do użycia bezpośrednio w kodzie.  

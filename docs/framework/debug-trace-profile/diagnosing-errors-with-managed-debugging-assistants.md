@@ -36,6 +36,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392323"
 ---
 # <a name="diagnosing-errors-with-managed-debugging-assistants"></a>Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania
 Asystenci debugowania zarządzanego (mda) debugowania pomocy, które działają w połączeniu z środowisko uruchomieniowe języka wspólnego (CLR), aby podać informacje dotyczące stanu czasu wykonywania. Asystenci Generowanie komunikaty o zdarzeniach środowiska uruchomieniowego, które w przeciwnym razie nie komunikat pułapki. Mda można użyć do izolowania usterki twarde do znalezienia aplikacji, występujących podczas przejścia między zarządzanymi i niezarządzanymi kodu. Można włączyć lub wyłączyć wszystkie mda przez dodanie klucza do rejestru systemu Windows lub przez ustawienie zmiennej środowiskowej. Można włączyć mda określone przy użyciu ustawienia konfiguracji aplikacji. Dodatkowe ustawienia konfiguracji dla niektórych poszczególnych mda można ustawić w pliku konfiguracji aplikacji. Ponieważ te pliki konfiguracji są w sytuacji, gdy załadowano środowiska uruchomieniowego, należy włączyć MDA przed uruchomieniem aplikacji zarządzanej. Nie można go włączyć dla aplikacji, które zostało już rozpoczęte.  

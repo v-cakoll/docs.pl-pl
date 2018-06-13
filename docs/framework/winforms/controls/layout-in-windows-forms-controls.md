@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535844"
 ---
 # <a name="layout-in-windows-forms-controls"></a>Układ w formantach formularzy systemu Windows
 Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji. <xref:System.Windows.Forms?displayProperty=nameWithType> Przestrzeni nazw udostępnia wiele narzędzi układu, w tym celu.  

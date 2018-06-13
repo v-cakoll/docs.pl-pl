@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391049"
 ---
 # <a name="making-an-image-easier-to-debug"></a>Ułatwianie debugowania obrazu
 Podczas kompilowania niezarządzanego kodu można za pomocą odpowiednich przełączników środowiska IDE lub opcji wiersza polecenia skonfigurować wykonywalny obraz na potrzeby debugowania. Na przykład można użyć /**Zi** opcji wiersza polecenia w programie Visual C++ można zażądać Emituj debugowania plików symboli (.pdb rozszerzenia pliku). Podobnie /**Od** opcji wiersza polecenia informuje kompilator, aby wyłączyć optymalizacji. Powstały kod działa wolniej, ale w razie potrzeby łatwiej go debugować.  

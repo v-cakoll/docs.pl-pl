@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742422"
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>Porady: wyłączanie funkcji pomijania silnej nazwy
 Począwszy od wersji programu .NET Framework 3.5 z dodatkiem Service Pack 1 (SP1), podpisów silnej nazwy nie są weryfikowane podczas zestaw jest ładowany do pełnego zaufania <xref:System.AppDomain> obiektu, takie jak domyślny <xref:System.AppDomain> dla `MyComputer` strefy. Jest to określane jako silnej nazwy pomijania funkcji. W pełni zaufanym środowisku, wymaga dla <xref:System.Security.Permissions.StrongNameIdentityPermission> zawsze powiodła się dla podpisanej zestawy pełnego zaufania, niezależnie od ich podpisu. Tylko ograniczenie jest, że zestaw muszą być całkowicie zaufane, ponieważ jej strefy jest w pełni zaufany. Silna nazwa nie jest czynnikiem decydującym w tych warunkach, nie istnieje przyczyna jej do sprawdzenia poprawności. Pomijanie sprawdzania poprawności podpisów silnej nazwy zapewnia znaczną poprawę wydajności.  

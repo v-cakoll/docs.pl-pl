@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393312"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Porady: pobieranie danych o postępie z Instalatora .NET Framework 4.5
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Jest pakiet redystrybucyjny środowiska wykonawczego. W przypadku tworzenia aplikacji dla tej wersji programu .NET Framework, można dołączyć (łańcucha) [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalator w ramach wymagań wstępnych instalacji aplikacji. Do prezentowania dostosowane lub ujednoliconego konfiguracji systemu, można uruchomić w trybie dyskretnym [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] instalacji i śledzić postęp podczas pokazywania postępu instalacji aplikacji. Aby włączyć śledzenie dyskretnej [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalatora (mogą być obserwowane) definiuje protokół za pomocą mapowanych na pamięć segment rozwiązanie we/wy (MMIO) do komunikacji z ustawień (obserwatora lub moduł łańcucha). Protokół ten definiuje sposób moduł łańcucha uzyskać informacje o postępie, uzyskiwać szczegółowe wyniki, odpowiada na komunikaty i anulować [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalatora.  

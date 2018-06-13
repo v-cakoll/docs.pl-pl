@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393513"
 ---
 # <a name="runtime-callable-wrapper"></a>Wywoływana otoka środowiska uruchomieniowego
 Środowisko uruchomieniowe języka wspólnego przedstawia obiekty COM za pośrednictwem serwera proxy, nazywany wywoływana otoka środowiska uruchomieniowego (otoki RCW). Mimo że otoki RCW wydaje się być obiekt zwykłej do klientów platformy .NET, jego podstawową funkcją jest do organizowania wywołań między klientem .NET obiektu COM.  

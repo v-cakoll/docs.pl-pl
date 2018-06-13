@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393419"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Importowanie biblioteki typów jako zestawu
 Definicje typów COM zazwyczaj znajdują się w bibliotece typów. Z kolei kompilatory zgodne ze specyfikacją CLS utworzyć metadanych typów w zestawie. Dwóch źródeł informacji o typie znacznie różnią się. W tym temacie opisano metody generowania metadanych z biblioteki typów. Wynikowy zestaw nosi nazwę zestawu międzyoperacyjnego i informacji o typie, który zawiera umożliwia używanie typów COM aplikacji .NET Framework.  

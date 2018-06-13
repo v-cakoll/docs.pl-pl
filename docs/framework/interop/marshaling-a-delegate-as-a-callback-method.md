@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389386"
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>Marshaling delegata jako metoda wywołania zwrotnego
 W tym przykładzie pokazano, jak przekazać delegatów niezarządzanych funkcji, oczekiwano wskaźników funkcji. Delegat jest klasa, która może zawierać odwołań do metody i stanowi odpowiednik wskaźnika funkcji bezpieczny lub funkcji wywołania zwrotnego.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537593"
 ---
 # <a name="mouse-input-in-a-windows-forms-application"></a>Wprowadzanie za pomocą myszy w aplikacjach Windows Forms
 Formularze systemu Windows zawiera wiele zdarzeń myszy i dodatkowe wsparcie dla niestandardowych kursorów, przechwytywanie myszy i zachowanie przeciągania i upuszczania.  

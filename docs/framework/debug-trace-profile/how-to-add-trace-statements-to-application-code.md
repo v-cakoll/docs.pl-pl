@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391371"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Porady: dodawanie instrukcji śledzenia do kodu aplikacji
 Najczęściej używane do śledzenia przedstawiono metody do zapisywania danych wyjściowych do odbiorników: **zapisu**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**, i **niepowodzenie**. Te metody można podzielić na dwie kategorie: **zapisu**, **WriteLine**, i **niepowodzenie** wszystkie Emituj danych wyjściowych bezwarunkowo, podczas gdy **WriteIf**, **WriteLineIf**, i **Assert** przetestować warunek typu Boolean i zapisu lub nie zapisuj oparte na wartości warunku. **WriteIf** i **WriteLineIf** Emituj danych wyjściowych, jeśli wynikiem warunku jest `true`, i **Assert** emituje dane wyjściowe, jeśli wynikiem warunku jest `false`.  

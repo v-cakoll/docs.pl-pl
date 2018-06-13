@@ -29,6 +29,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395063"
 ---
 # <a name="configuring-internet-applications"></a>Konfigurowanie aplikacji internetowych
 [ \<System.Net > (ustawienia sieciowe) Element](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) element konfiguracji zawiera informacje o konfiguracji sieci dla aplikacji. Przy użyciu [ \<system.Net > elementu (ustawienia sieciowe)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) elementu, można ustawić serwerów proxy, Ustaw połączenie z parametrami zarządzania i dołączenie niestandardowe moduły uwierzytelniania i żądania do aplikacji.  

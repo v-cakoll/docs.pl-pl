@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395817"
 ---
 # <a name="deriving-from-webresponse"></a>Wyprowadzanie z obiektu WebResponse
 <xref:System.Net.WebResponse> Klasa jest abstrakcyjna klasa podstawowa, która udostępnia podstawowe metody i właściwości, do tworzenia odpowiedzi specyficzne dla protokołu, który pasuje do modelu protokołu podłączanej .NET Framework. Aplikacje używające <xref:System.Net.WebRequest> klasy dane żądania z zasobów odbierania odpowiedzi w **WebResponse**. Oparte na protokole **WebResponse** elementy podrzędne muszą implementować abstrakcyjne elementy członkowskie z **WebResponse** klasy.  

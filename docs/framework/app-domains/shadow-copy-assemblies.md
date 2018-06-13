@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743956"
 ---
 # <a name="shadow-copying-assemblies"></a>Kopiowanie zestawów w tle
 Włącza zestawy, które są używane w domenie aplikacji do zaktualizowania bez zwalniania domeny aplikacji kopiowania w tle. Jest to szczególnie przydatne w przypadku aplikacji, które muszą być dostępne w sposób ciągły, takie jak lokacje programu ASP.NET.  

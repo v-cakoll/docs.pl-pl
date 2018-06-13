@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393396"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Marshaling klas, struktur i unii
 Klasy i struktury są podobne w programie .NET Framework. Obydwie pola, właściwości i zdarzeń. Może to być również metody statyczne i Niestatyczne. Jeden znacząca różnica jest struktury są typy wartości oraz klasy są typy referencyjne.  

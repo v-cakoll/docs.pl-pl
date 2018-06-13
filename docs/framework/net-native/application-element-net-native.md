@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394637"
 ---
 # <a name="ltapplicationgt-element-net-native"></a>Element &lt;Application&gt; (architektura .NET Native)
 Służy jako kontener dla całej aplikacji typy i elementy członkowskie typu, których metadanych jest dostępny w celu odbicia w czasie wykonywania i zastosowanie zasad wykonywania odbicia do wszystkich elementów programu w aplikacji.  

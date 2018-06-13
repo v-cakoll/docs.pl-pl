@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395430"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>Porady: ustawienie zasad pamięci podręcznej na żądanie
 W poniższym przykładzie pokazano, ustawienie zasady pamięci podręcznej dla żądania. Przykład danych wejściowych jest identyfikatorem URI, takich jak http://www.contoso.com/.  

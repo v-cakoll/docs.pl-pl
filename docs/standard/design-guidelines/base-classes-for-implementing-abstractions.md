@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571511"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>Klasy podstawowe stosowania obiektów abstrakcyjnych
 Mówiąc ściślej klasa staje się klasę podstawową, gdy inna klasa pochodzi od niego. Na potrzeby tej sekcji jednak klasa podstawowa jest przeznaczone głównie do zapewnienia wspólnej abstrakcji lub innych klas do ponownego użycia niektórych Domyślna implementacja jednak dziedziczenia klasy. Klasy podstawowe zwykle sit trakcie hierarchii dziedziczenia między abstrakcję elementu głównego hierarchii i kilka implementacji niestandardowych u dołu.  

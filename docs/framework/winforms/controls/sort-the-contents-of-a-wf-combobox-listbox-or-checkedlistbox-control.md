@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535649"
 ---
 # <a name="how-to-sort-the-contents-of-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Porady: sortowanie zawartości formantu ComboBox, ListBox lub CheckedListBox formularzy systemu Windows
 Formanty formularzy systemu Windows bez sortowania, jeśli są one powiązane z danymi. Aby wyświetlić posortowane dane, używać źródła danych, który obsługuje sortowanie, a następnie go sortowania źródła danych. Widoki danych są źródeł danych, które obsługują sortowanie, danych Wyświetl menedżerów i sortowane tablic.  

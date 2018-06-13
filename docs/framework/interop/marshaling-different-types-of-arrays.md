@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391459"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Organizowanie różnych typów tablic
 Tablica jest typu odwołania w kodzie zarządzanym, który zawiera co najmniej jeden element tego samego typu. Choć tablice typów referencyjnych, są one przekazywane tak jak parametry z funkcjami niezarządzanymi. To zachowanie jest niespójny z sposób tablic są przekazywane do obiektów zarządzanych, jak we/wy parametrów. Aby uzyskać więcej informacji, zobacz [kopiowanie i przypinanie](copying-and-pinning.md).  

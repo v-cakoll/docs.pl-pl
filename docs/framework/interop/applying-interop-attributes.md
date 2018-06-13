@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392567"
 ---
 # <a name="applying-interop-attributes"></a>Stosowanie atrybutów międzyoperacyjności
 <xref:System.Runtime.InteropServices> Przestrzeń nazw zawiera trzy kategorie atrybutów specyficzny dla międzyoperacyjności: stosowanych przez użytkownika w czasie projektowania, stosowane przez COM interop narzędzia i interfejsy API w procesie konwersji i stosowane przez COM interop.  

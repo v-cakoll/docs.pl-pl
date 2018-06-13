@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757128"
 ---
 # <a name="dbconnection-dbcommand-and-dbexception"></a>Obiektu DbConnection, polecenie DbCommand i dbexception —
 Po utworzeniu <xref:System.Data.Common.DbProviderFactory> i <xref:System.Data.Common.DbConnection>, następnie możesz pracować z czytniki danych i polecenia do pobierania danych ze źródła danych.  

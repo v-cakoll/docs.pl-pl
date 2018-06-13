@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396532"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Wdrażanie programu .NET Framework i aplikacji
 Ten artykuł pomoże rozpocząć wdrażanie programu .NET Framework z aplikacją. Większość informacji jest przeznaczony dla deweloperów, OEM i Administratorzy przedsiębiorstwa. Użytkownicy chcący zainstalować program .NET Framework na swoich komputerach należy przeczytać [Instalowanie programu .NET Framework](~/docs/framework/install/index.md).  

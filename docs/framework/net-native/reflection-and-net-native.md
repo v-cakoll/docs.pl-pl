@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392869"
 ---
 # <a name="reflection-and-net-native"></a>Odbicie i architektura .NET Native
 W programie .NET Framework zarządzane obsługuje programowanie metaprogramowania przez odbicie interfejsu API. Odbicie umożliwia inspekcję obiektów w aplikacji, wywoływanie metod na obiekty wykryte przez kontroli, generowanie nowych typów w czasie wykonywania i obsługuje wiele scenariuszy dynamicznej kodu. Obsługuje ona również serializacji i deserializacji, dzięki czemu wartości pól obiektu utrwalenia i później ją przywrócono. Te scenariusze wymaga kompilatora .NET Framework just in time (JIT) do generowania kodu natywnego na podstawie metadanych dostępne.  

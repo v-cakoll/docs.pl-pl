@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391410"
 ---
 # <a name="deploying-the-net-framework"></a>Wdrażanie programu .NET Framework
 Ta sekcja dokumentacji programu .NET Framework informacje dla deweloperów, którzy chcą zainstalować program .NET Framework z ich aplikacji i administratorów, którzy chcą do wdrożenia programu .NET Framework w sieci. Również w tym artykule omówiono aktywacji i uruchom ponownie problemów związanych z wdrażaniem i jak monitorować postęp instalacji programu .NET Framework.  

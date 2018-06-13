@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391319"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>Marshaling danych w wywołaniu platformy
 Aby wywoływać funkcje wyeksportowane z biblioteki niezarządzane, aplikacji programu .NET Framework wymaga prototypu funkcji w kodzie zarządzanym, który reprezentuje niezarządzanej funkcji. Aby utworzyć prototyp, który umożliwia platformie wywołania do organizowania danych prawidłowo, należy wykonać następujące czynności:  

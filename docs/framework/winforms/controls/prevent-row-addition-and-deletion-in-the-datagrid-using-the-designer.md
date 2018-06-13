@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536667"
 ---
 # <a name="how-to-prevent-row-addition-and-deletion-in-the-windows-forms-datagridview-control-using-the-designer"></a>Porady: zapobieganie dodawaniu i usuwaniu rzędów do formantu DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant
 Czasami można uniemożliwić użytkownikom wprowadzanie nowych wierszy danych lub usunięcie istniejących wierszy w Twojej <xref:System.Windows.Forms.DataGridView> formantu. Nowe wiersze są wprowadzane w wierszu specjalne dla nowych rekordów w dolnej części kontrolki. Po wyłączeniu dodawaniu wiersza dla nowych rekordów nie jest wyświetlana. Następnie można wprowadzić kontrolki całkowicie tylko do odczytu przez wyłączenie usunięcia wiersza i edycja komórki.  

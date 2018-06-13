@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565016"
 ---
 # <a name="xarray-markup-extension"></a>x:Array — Rozszerzenie znaczników
 Zapewnia obsługę ogólne dla tablic obiektów w języku XAML, za pomocą rozszerzenia znaczników. Odpowiada to `x:ArrayExtension` typu XAML w [MS-XAML].  

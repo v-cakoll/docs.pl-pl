@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742435"
 ---
 # <a name="programming-with-application-domains-and-assemblies"></a>Programowanie przy użyciu zestawów i domen aplikacji
 Hosty, takich jak Microsoft Internet Explorer, ASP.NET i obciążenia powłoki Windows środowisko uruchomieniowe języka wspólnego do procesu tworzenia [domeny aplikacji](../../../docs/framework/app-domains/application-domains.md) w tym przetwarzania i następnie załadowanie i wykonanie kodu użytkownika w tej domenie aplikacji podczas uruchamiania aplikacji .NET Framework. W większości przypadków nie trzeba martwić tworzenia domeny aplikacji i ładowanie zestawów do nich, ponieważ host czasu wykonywania wykonuje te zadania.  

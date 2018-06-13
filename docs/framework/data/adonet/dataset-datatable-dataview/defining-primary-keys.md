@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757583"
 ---
 # <a name="defining-primary-keys"></a>Definiowanie kluczy podstawowych
 Tabela bazy danych ma często kolumny lub grupy kolumn, który unikatowo identyfikuje każdego wiersza w tabeli. Identyfikowania tej kolumny lub grupy kolumn nosi nazwę klucza podstawowego.  

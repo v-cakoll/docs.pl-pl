@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393045"
 ---
 # <a name="securing-exception-handling"></a>Zabezpieczanie obsługi wyjątków
 W programie Visual C++ i Visual Basic, wyrażenie filtru dalsze górę stosu jest uruchamiany przed każdą **koniec** instrukcji. **Catch** blok skojarzonych z tym filtru jest uruchamiany po **finally** instrukcji. Aby uzyskać więcej informacji, zobacz [wyjątki Using User-Filtered](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md). W tej sekcji sprawdza, czy zabezpieczenia tego zamówienia. Należy wziąć pod uwagę w poniższym przykładzie pseudocode, która ilustruje kolejności, w których instrukcji filtrów i **koniec** instrukcje uruchamiania.  

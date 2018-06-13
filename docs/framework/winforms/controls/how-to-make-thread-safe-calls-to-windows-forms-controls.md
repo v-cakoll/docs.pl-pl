@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541862"
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Porady: bezpieczne wątkowo wywołania formantów formularzy systemu Windows
 Jeśli używasz wielowątkowość Aby zwiększyć wydajność aplikacji formularzy systemu Windows, należy się upewnić, wprowadź wywołania do formantów w sposób zapewniający obsługę wielowątkowości.  

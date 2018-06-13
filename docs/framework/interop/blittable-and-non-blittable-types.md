@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392294"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Typy kopiowalne i niekopiowalne
 Większość typów danych ma reprezentacji w postaci typowych w pamięci zarządzane i niezarządzane i nie wymagają specjalnej obsługi przez organizatora międzyoperacyjnego. Te typy są nazywane *typy kopiowalne* ponieważ one nie wymagają konwersji, gdy są one przekazywane między zarządzanych i niezarządzanych kodu.  

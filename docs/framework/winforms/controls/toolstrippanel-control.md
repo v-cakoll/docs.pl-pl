@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535431"
 ---
 # <a name="toolstrippanel-control"></a>ToolStripPanel — Formant
 `ToolStripPanel` formant umożliwia udostępnianie pozioma lub pionowa miejsca w obszarze Narzędzia, gdy jest zadokowany i rozmieszczenie <xref:System.Windows.Forms.ToolStrip> kontroluje, kiedy nie ma potrzeby cztery panele i centralny panel elementu <xref:System.Windows.Forms.ToolStripContainer>.  

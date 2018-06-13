@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395781"
 ---
 # <a name="listening-with-sockets"></a>Nasłuchiwanie z gniazda
 Gniazda odbiornika lub serwera Otwórz port w sieci, a następnie poczekaj dla klienta połączyć się z tym portem. Mimo że istnieją inne rodziny adresów sieci i protokołów, w tym przykładzie pokazano, jak można utworzyć usługi zdalnej dla sieci TCP/IP.  

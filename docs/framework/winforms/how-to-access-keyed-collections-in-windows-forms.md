@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538731"
 ---
 # <a name="how-to-access-keyed-collections-in-windows-forms"></a>Porady: uzyskiwanie dostępu do kolekcji z kluczami w formularzach systemu Windows
 -   Można uzyskać dostępu do poszczególnych kolekcji elementów według klucza. Ta funkcja dodano do wielu klas kolekcji, które są zazwyczaj używane w formularzach systemu Windows. Poniżej przedstawiono niektóre klasy kolekcji, których dostępny kolekcje zabezpieczone kluczami:  

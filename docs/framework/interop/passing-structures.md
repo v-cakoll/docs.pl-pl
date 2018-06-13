@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391511"
 ---
 # <a name="passing-structures"></a>Przekazywanie struktur
 Wiele funkcji niezarządzanej oczekiwać, że można przekazać jako parametru funkcji, członków struktur (Typy definiowane przez użytkownika w języku Visual Basic) lub klas zdefiniowanych w kodzie zarządzanym. Podczas wywołania przekazywanie struktury lub klasy do kodu niezarządzanego, przy użyciu platformy, należy podać dodatkowe informacje, aby zachować oryginalne układ i wyrównania. W tym temacie przedstawiono <xref:System.Runtime.InteropServices.StructLayoutAttribute> atrybut, który służy do definiowania typów sformatowany. Zarządzane, struktur i klas, możesz wybrać z zachowaniami przewidywalną układu dostarczanych przez **LayoutKind** wyliczenia.  

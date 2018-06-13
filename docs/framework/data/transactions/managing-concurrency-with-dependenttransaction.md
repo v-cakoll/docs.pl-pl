@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363207"
 ---
 # <a name="managing-concurrency-with-dependenttransaction"></a>Zarządzanie współbieżności z DependentTransaction
 <xref:System.Transactions.Transaction> Obiekt zostanie utworzony przy użyciu <xref:System.Transactions.Transaction.DependentClone%2A> metody. Jedynym celem jest zagwarantowanie, że transakcja nie można zatwierdzić podczas innych fragmentów kodu (na przykład wątku roboczego) nadal wykonywania pracy na transakcji. Podczas pracy w ramach transakcji sklonowany jest gotowy do zostać zatwierdzone, może powiadomić twórca przy użyciu transakcji <xref:System.Transactions.DependentTransaction.Complete%2A> metody. W związku z tym można zachować spójności i poprawności danych.  

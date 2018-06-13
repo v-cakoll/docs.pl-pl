@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392804"
 ---
 # <a name="copying-and-pinning"></a>Kopiowanie i przypinanie
 Podczas organizowania danych, międzyoperacyjnego organizatora można skopiować lub przypiąć dane są przekazywane. Kopiowanie danych umieszcza kopię danych z jednej lokalizacji pamięci w innej lokalizacji pamięci. Na poniższej ilustracji przedstawiono różnice między kopiowanie typu wartości i kopiowanie typ przekazany przez odwołanie z zarządzanych do niezarządzanych pamięci.  

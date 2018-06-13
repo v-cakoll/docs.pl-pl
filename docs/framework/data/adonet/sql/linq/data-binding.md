@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365173"
 ---
 # <a name="data-binding"></a>Powiązanie danych
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obsługuje powiązanie z formanty standardowe, takie jak formanty siatki. W szczególności [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] definiuje wzorców podstawowych dla powiązania do siatki danych i ich obsługi główny szczegółowy powiązanie, zarówno w odniesieniu do wyświetlanie i aktualizowanie.  

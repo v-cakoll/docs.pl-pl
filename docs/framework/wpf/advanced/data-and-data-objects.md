@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540322"
 ---
 # <a name="data-and-data-objects"></a>Dane i obiekty danych
 Dane są przesyłane w ramach operacji przeciągania i upuszczania są przechowywane w obiekcie danych.  Koncepcyjnie obiekt danych składa się z co najmniej jeden z następujących par:  

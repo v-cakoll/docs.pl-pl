@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395372"
 ---
 # <a name="interop-marshaling"></a>Marshaling międzyoperacyjny
 <a name="top"></a> Przekazywanie międzyoperacyjne decyduje o tym, jak dane są przekazywane w metody argumentów i zwracanych wartości między zarządzanymi i niezarządzanymi pamięci podczas wywołania. Przekazywanie międzyoperacyjne jest wykonywane przez usługę kierowania środowisko uruchomieniowe języka wspólnego firmy działalnością czasu wykonywania.  

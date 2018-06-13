@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389278"
 ---
 # <a name="how-to-implement-callback-functions"></a>Porady: implementowanie funkcji wywołania zwrotnego
 Poniższe procedury i przykładowe pokazują, jak wywołać przy użyciu platformy aplikacji zarządzanej, drukować wartość uchwytu dla każdego okna na komputerze lokalnym. W szczególności, użyj procedury i przykładowe **EnumWindows** funkcji kroków wykaz systemu windows oraz funkcja wywołania zwrotnego w zarządzanych (nazwane wywołania zwrotnego) do drukowania wartość uchwytu okna.  

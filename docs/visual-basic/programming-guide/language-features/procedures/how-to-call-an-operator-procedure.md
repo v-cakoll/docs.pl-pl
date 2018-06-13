@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649971"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a><span data-ttu-id="29893-102">Porady: wywoływanie procedury operatora (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="29893-102">How to: Call an Operator Procedure (Visual Basic)</span></span>
 <span data-ttu-id="29893-103">Za pomocą symbol operatora w wyrażeniu jest wywoływanie procedury operatora.</span><span class="sxs-lookup"><span data-stu-id="29893-103">You call an operator procedure by using the operator symbol in an expression.</span></span> <span data-ttu-id="29893-104">W przypadku operatora konwersji, należy wywołać [CType — funkcja](../../../../visual-basic/language-reference/functions/ctype-function.md) można przekonwertować wartości z jednego typu danych.</span><span class="sxs-lookup"><span data-stu-id="29893-104">In the case of a conversion operator, you call the [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) to convert a value from one data type to another.</span></span>  

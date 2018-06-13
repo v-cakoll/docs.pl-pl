@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644436"
 ---
 # <a name="functional-transformation-of-xml-visual-basic"></a><span data-ttu-id="5ecad-102">Funkcjonalności transformacji XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5ecad-102">Functional Transformation of XML (Visual Basic)</span></span>
 <span data-ttu-id="5ecad-103">W tym temacie omówiono podejście czysty przekształcania funkcjonalności do modyfikowania dokumentów XML i zachowanie różni się od jego podejście procedurach.</span><span class="sxs-lookup"><span data-stu-id="5ecad-103">This topic discusses the pure functional transformation approach to modifying XML documents, and contrasts it with a procedural approach.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803770"
 ---
 # <a name="monitoring-service-operation-failures"></a><span data-ttu-id="b17cd-102">Monitorowanie niepowodzeń operacji usługi</span><span class="sxs-lookup"><span data-stu-id="b17cd-102">Monitoring Service Operation Failures</span></span>
 <span data-ttu-id="b17cd-103">Jeśli śledzenie analityczne jest włączony dla aplikacji, błędów usługi łatwo można monitorować w Podglądzie zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="b17cd-103">If analytic tracing is enabled for an application, service failures can easily be monitored in the event viewer.</span></span>  <span data-ttu-id="b17cd-104">W tym temacie przedstawiono sposób określania, kiedy operacji usługi nie powiedzie się i sposób określenia, jakie spowodował błąd.</span><span class="sxs-lookup"><span data-stu-id="b17cd-104">This topic demonstrates how to determine when a service operation fails, and how to determine what caused the failure.</span></span>  

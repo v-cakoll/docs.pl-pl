@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644462"
 ---
 # <a name="visual-basic-run-time-messages"></a><span data-ttu-id="a6435-102">Komunikaty środowiska wykonawczego Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a6435-102">Visual Basic Run-Time Messages</span></span>
 <span data-ttu-id="a6435-103">Ta sekcja zawiera komunikaty o błędach języka Visual Basic, które występują w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="a6435-103">This section contains the Visual Basic error messages that occur at run time.</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650689"
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a><span data-ttu-id="3da96-102">Różnice pomiędzy parametrami i argumentami (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3da96-102">Differences Between Parameters and Arguments (Visual Basic)</span></span>
 <span data-ttu-id="3da96-103">W większości przypadków procedury musi mieć niektóre informacje na temat sytuacji, w których została wywołana.</span><span class="sxs-lookup"><span data-stu-id="3da96-103">In most cases, a procedure must have some information about the circumstances in which it has been called.</span></span> <span data-ttu-id="3da96-104">Procedury, która wykonuje zadania wielokrotnego lub udostępnionego używa różne informacje dla każdego wywołania.</span><span class="sxs-lookup"><span data-stu-id="3da96-104">A procedure that performs repeated or shared tasks uses different information for each call.</span></span> <span data-ttu-id="3da96-105">Te informacje składa się z zmienne, stałe i wyrażeń, które przekazujesz do procedury po jej wywołaniu.</span><span class="sxs-lookup"><span data-stu-id="3da96-105">This information consists of variables, constants, and expressions that you pass to the procedure when you call it.</span></span>  

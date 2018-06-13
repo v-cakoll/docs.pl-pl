@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656048"
 ---
 # <a name="how-to-modify-xml-literals-visual-basic"></a><span data-ttu-id="d3e6c-102">Porady: modyfikowanie literałów XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d3e6c-102">How to: Modify XML Literals (Visual Basic)</span></span>
 <span data-ttu-id="d3e6c-103">Visual Basic umożliwia wygodne sposobów modyfikowanie literałów XML.</span><span class="sxs-lookup"><span data-stu-id="d3e6c-103">Visual Basic provides convenient ways to modify XML literals.</span></span> <span data-ttu-id="d3e6c-104">Można dodawać i usuwać elementy i atrybuty, a także można zastąpić istniejącego elementu nowego elementu XML.</span><span class="sxs-lookup"><span data-stu-id="d3e6c-104">You can add or delete elements and attributes, and you can also replace an existing element with a new XML element.</span></span> <span data-ttu-id="d3e6c-105">Ten temat zawiera kilka przykładów sposobu modyfikowania istniejących literału XML.</span><span class="sxs-lookup"><span data-stu-id="d3e6c-105">This topic provides several examples of how to modify an existing XML literal.</span></span>  

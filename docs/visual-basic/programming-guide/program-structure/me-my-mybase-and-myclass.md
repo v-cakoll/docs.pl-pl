@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650530"
 ---
 # <a name="me-my-mybase-and-myclass-in-visual-basic"></a><span data-ttu-id="aeb7b-102">Me, My, MyBase, i MyClass w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="aeb7b-102">Me, My, MyBase, and MyClass in Visual Basic</span></span>
 <span data-ttu-id="aeb7b-103">`Me`, `My`, `MyBase`, i `MyClass` w języku Visual Basic mają podobne nazwy, ale różnych celów.</span><span class="sxs-lookup"><span data-stu-id="aeb7b-103">`Me`, `My`, `MyBase`, and `MyClass` in Visual Basic have similar names, but different purposes.</span></span> <span data-ttu-id="aeb7b-104">W tym temacie opisano każdy z tych obiektów, aby odróżnić je.</span><span class="sxs-lookup"><span data-stu-id="aeb7b-104">This topic describes each of these entities in order to distinguish them.</span></span>  

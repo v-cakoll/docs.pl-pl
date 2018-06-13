@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650202"
 ---
 # <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a><span data-ttu-id="c9c45-102">Porady: przyspieszanie dostępu do obiektu z długą ścieżką kwantyfikacji (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c9c45-102">How to: Speed Up Access to an Object with a Long Qualification Path (Visual Basic)</span></span>
 <span data-ttu-id="c9c45-103">Jeśli często dostępu do obiektu, który wymaga ścieżką kwantyfikacji kilka metod i właściwości można przyspieszyć kodu nie powtarzając ścieżką kwantyfikacji.</span><span class="sxs-lookup"><span data-stu-id="c9c45-103">If you frequently access an object that requires a qualification path of several methods and properties, you can speed up your code by not repeating the qualification path.</span></span>  

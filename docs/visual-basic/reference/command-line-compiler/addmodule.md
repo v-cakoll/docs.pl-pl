@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656009"
 ---
 # <a name="-addmodule"></a><span data-ttu-id="fda6e-102">-addmodule</span><span class="sxs-lookup"><span data-stu-id="fda6e-102">-addmodule</span></span>
 <span data-ttu-id="fda6e-103">Powoduje, że kompilator wszystkie wpisz informacje z określonym dostępnych plików do projektu są obecnie kompilacji.</span><span class="sxs-lookup"><span data-stu-id="fda6e-103">Causes the compiler to make all type information from the specified file(s) available to the project you are currently compiling.</span></span>  

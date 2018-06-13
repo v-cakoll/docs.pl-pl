@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654089"
 ---
 # <a name="-win32manifest-visual-basic"></a><span data-ttu-id="c3d43-102">-win32manifest (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c3d43-102">-win32manifest (Visual Basic)</span></span>
 <span data-ttu-id="c3d43-103">Identyfikuje użytkownika aplikacji plik manifestu Win32 do osadzenia pliku przenośny plik wykonywalny (PE) projektu.</span><span class="sxs-lookup"><span data-stu-id="c3d43-103">Identifies a user-defined Win32 application manifest file to be embedded into a project's portable executable (PE) file.</span></span>  

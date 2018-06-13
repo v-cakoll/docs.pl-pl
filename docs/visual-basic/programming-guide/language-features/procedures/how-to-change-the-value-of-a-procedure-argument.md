@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655840"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a><span data-ttu-id="67e30-102">Porady: zmienianie wartości argumentu procedury (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="67e30-102">How to: Change the Value of a Procedure Argument (Visual Basic)</span></span>
 <span data-ttu-id="67e30-103">Po wywołaniu procedury, każdy argument, który podasz odnosi się do jednego z parametrów zdefiniowanych w procedurze.</span><span class="sxs-lookup"><span data-stu-id="67e30-103">When you call a procedure, each argument you supply corresponds to one of the parameters defined in the procedure.</span></span> <span data-ttu-id="67e30-104">W niektórych przypadkach kodu procedury można zmienić wartości podstawowej argumentu w wywoływanym kodzie.</span><span class="sxs-lookup"><span data-stu-id="67e30-104">In some cases, the procedure code can change the value underlying an argument in the calling code.</span></span> <span data-ttu-id="67e30-105">W pozostałych przypadkach procedura można zmienić tylko w swojej lokalnej kopii argumentu.</span><span class="sxs-lookup"><span data-stu-id="67e30-105">In other cases, the procedure can change only its local copy of an argument.</span></span>  

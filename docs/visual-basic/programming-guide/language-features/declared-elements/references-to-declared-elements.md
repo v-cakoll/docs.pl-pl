@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655814"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a><span data-ttu-id="7f841-102">Odwołania do elementów zadeklarowanych (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7f841-102">References to Declared Elements (Visual Basic)</span></span>
 <span data-ttu-id="7f841-103">Gdy kod odwołuje się do elementu zadeklarowane, kompilator Visual Basic jest zgodna z nazwą w odwołania do odpowiednich deklaracja o takiej nazwie.</span><span class="sxs-lookup"><span data-stu-id="7f841-103">When your code refers to a declared element, the Visual Basic compiler matches the name in your reference to the appropriate declaration of that name.</span></span> <span data-ttu-id="7f841-104">Jeśli więcej niż jeden element jest zadeklarowany jako o takiej samej nazwie, można kontrolować, które z tych elementów jest wykorzystanie przez *kwalifikującego* jego nazwy.</span><span class="sxs-lookup"><span data-stu-id="7f841-104">If more than one element is declared with the same name, you can control which of those elements is to be referenced by *qualifying* its name.</span></span>  

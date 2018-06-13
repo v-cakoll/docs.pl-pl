@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388202"
 ---
 # <a name="loaderlock-mda"></a><span data-ttu-id="ccfbd-102">loaderLock MDA</span><span class="sxs-lookup"><span data-stu-id="ccfbd-102">loaderLock MDA</span></span>
 <span data-ttu-id="ccfbd-103">`loaderLock` Zarządzany Asystent debugowania (MDA) wykrywa próby wykonania kodu zarządzanego w wątku, który posiada blokady modułu ładującego systemu operacyjnego Microsoft Windows.</span><span class="sxs-lookup"><span data-stu-id="ccfbd-103">The `loaderLock` managed debugging assistant (MDA) detects attempts to execute managed code on a thread that holds the Microsoft Windows operating system loader lock.</span></span>  <span data-ttu-id="ccfbd-104">Takie wykonanie jest niedozwolona, ponieważ może to prowadzić do zakleszczenia i korzystanie z bibliotek DLL, zanim zostały zainicjowane przez modułu ładującego systemu operacyjnego.</span><span class="sxs-lookup"><span data-stu-id="ccfbd-104">Any such execution is illegal because it can lead to deadlocks and to use of DLLs before they have been initialized by the operating system's loader.</span></span>  

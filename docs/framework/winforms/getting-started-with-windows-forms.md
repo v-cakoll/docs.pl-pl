@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538968"
 ---
 # <a name="getting-started-with-windows-forms"></a><span data-ttu-id="a8611-102">Wprowadzenie do formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="a8611-102">Getting Started with Windows Forms</span></span>
 <span data-ttu-id="a8611-103">Formularze systemu Windows umożliwia tworzenie zaawansowanych aplikacji systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="a8611-103">With Windows Forms, you can create powerful Windows-based applications.</span></span> <span data-ttu-id="a8611-104">W następujących tematach opisano szczegółowe jak wykorzystać program Windows Forms do wyświetlania danych, Obsługa danych wejściowych użytkownika i wdrażanie aplikacji, łatwe i z rozszerzonymi funkcjami zabezpieczeń.</span><span class="sxs-lookup"><span data-stu-id="a8611-104">The following topics describe in-depth how to harness the power of Windows Forms to display data, handle user input, and deploy your applications easily and with enhanced security.</span></span>  

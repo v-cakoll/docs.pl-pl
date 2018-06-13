@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408622"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a><span data-ttu-id="f50cb-102">Porady: Tworzenie aplikacji obsługującej oświadczenia ASP.NET przy użyciu uwierzytelniania opartego na formularzach</span><span class="sxs-lookup"><span data-stu-id="f50cb-102">How To: Build Claims-Aware ASP.NET Application Using Forms-Based Authentication</span></span>
 ## <a name="applies-to"></a><span data-ttu-id="f50cb-103">Dotyczy:</span><span class="sxs-lookup"><span data-stu-id="f50cb-103">Applies To</span></span>  

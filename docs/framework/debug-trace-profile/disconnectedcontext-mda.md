@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386252"
 ---
 # <a name="disconnectedcontext-mda"></a><span data-ttu-id="188a2-102">disconnectedContext MDA</span><span class="sxs-lookup"><span data-stu-id="188a2-102">disconnectedContext MDA</span></span>
 <span data-ttu-id="188a2-103">`disconnectedContext` Zarządzany Asystent debugowania (MDA) została aktywowana, podczas próby przejścia do odłączonego apartamentu lub kontekstu podczas obsługi żądania dotyczące obiektu COM środowiska CLR.</span><span class="sxs-lookup"><span data-stu-id="188a2-103">The `disconnectedContext` managed debugging assistant (MDA) is activated when the CLR attempts to transition into a disconnected apartment or context while servicing a request concerning a COM object.</span></span>  

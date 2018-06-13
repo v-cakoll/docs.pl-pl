@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542951"
 ---
 # <a name="how-to-adjust-spacing-between-paragraphs"></a><span data-ttu-id="b95a2-102">Jak dopasować odstępy między akapitami</span><span class="sxs-lookup"><span data-stu-id="b95a2-102">How to: Adjust Spacing Between Paragraphs</span></span>
 <span data-ttu-id="b95a2-103">W tym przykładzie przedstawiono sposób dostosować lub wyeliminowanie odstępy między akapitów w dowolnej zawartości.</span><span class="sxs-lookup"><span data-stu-id="b95a2-103">This example shows how to adjust or eliminate spacing between paragraphs in flow content.</span></span>  

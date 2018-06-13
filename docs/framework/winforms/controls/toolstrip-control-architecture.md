@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542161"
 ---
 # <a name="toolstrip-control-architecture"></a><span data-ttu-id="81ae6-102">ToolStrip — Architektura formantu</span><span class="sxs-lookup"><span data-stu-id="81ae6-102">ToolStrip Control Architecture</span></span>
 <span data-ttu-id="81ae6-103"><xref:System.Windows.Forms.ToolStrip> i <xref:System.Windows.Forms.ToolStripItem> klasy zapewniają elastyczny i rozszerzalny system do wyświetlania elementów paska narzędzi, stanu i menu.</span><span class="sxs-lookup"><span data-stu-id="81ae6-103">The <xref:System.Windows.Forms.ToolStrip> and <xref:System.Windows.Forms.ToolStripItem> classes provide a flexible, extensible system for displaying toolbar, status, and menu items.</span></span> <span data-ttu-id="81ae6-104">Te klasy są zawarte w <xref:System.Windows.Forms> przestrzeni nazw, a wszystkie nazwy z prefiksem "ToolStrip" (takie jak <xref:System.Windows.Forms.ToolStripOverflow>) lub z sufiksem "Usuń" (takie jak <xref:System.Windows.Forms.MenuStrip>).</span><span class="sxs-lookup"><span data-stu-id="81ae6-104">These classes are all contained in the <xref:System.Windows.Forms> namespace and they are all typically named with the "ToolStrip" prefix (such as <xref:System.Windows.Forms.ToolStripOverflow>) or with the "Strip" suffix (such as <xref:System.Windows.Forms.MenuStrip>).</span></span>  

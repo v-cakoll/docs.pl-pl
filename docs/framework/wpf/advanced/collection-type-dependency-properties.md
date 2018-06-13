@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540358"
 ---
 # <a name="collection-type-dependency-properties"></a><span data-ttu-id="2086f-102">Właściwości zależności typu kolekcji</span><span class="sxs-lookup"><span data-stu-id="2086f-102">Collection-Type Dependency Properties</span></span>
 <span data-ttu-id="2086f-103">Ten temat zawiera wskazówki i sugerowane wzorce dla implementowania właściwości zależności, których typ właściwości jest typem kolekcji.</span><span class="sxs-lookup"><span data-stu-id="2086f-103">This topic provides guidance and suggested patterns for how to implement a dependency property where the type of the property is a collection type.</span></span>  

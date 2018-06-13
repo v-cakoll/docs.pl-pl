@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556256"
 ---
 # <a name="treeview"></a><span data-ttu-id="78d60-102">TreeView</span><span class="sxs-lookup"><span data-stu-id="78d60-102">TreeView</span></span>
 <span data-ttu-id="78d60-103"><xref:System.Windows.Controls.TreeView> Kontroli Wyświetla informacje w strukturze hierarchicznej przy użyciu zwijanej węzłów.</span><span class="sxs-lookup"><span data-stu-id="78d60-103">The <xref:System.Windows.Controls.TreeView> control displays information in a hierarchical structure by using collapsible nodes.</span></span>  

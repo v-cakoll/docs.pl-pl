@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541966"
 ---
 # <a name="custom-dependency-properties"></a><span data-ttu-id="24edd-102">Niestandardowe właściwości zależności</span><span class="sxs-lookup"><span data-stu-id="24edd-102">Custom Dependency Properties</span></span>
 <span data-ttu-id="24edd-103">W tym temacie opisano przyczyny który [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] deweloperzy aplikacji autorów składnik może być utworzenie właściwości niestandardowe zależności i opisano kroki implementacji, a także niektóre opcje wdrażania, które może poprawić wydajność, użyteczność lub wszechstronność właściwości.</span><span class="sxs-lookup"><span data-stu-id="24edd-103">This topic describes the reasons that [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application developers and component authors might want to create custom dependency property, and describes the implementation steps as well as some implementation options that can improve performance, usability, or versatility of the property.</span></span>  

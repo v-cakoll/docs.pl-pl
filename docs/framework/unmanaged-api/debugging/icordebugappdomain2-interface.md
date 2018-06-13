@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407118"
 ---
 # <a name="icordebugappdomain2-interface1"></a><span data-ttu-id="3e0b0-102">ICorDebugAppDomain2 Interface1</span><span class="sxs-lookup"><span data-stu-id="3e0b0-102">ICorDebugAppDomain2 Interface1</span></span>
 <span data-ttu-id="3e0b0-103">Udostępnia metody do pracy z tablic, wskaźników, wskaźników funkcji i typy referencyjne.</span><span class="sxs-lookup"><span data-stu-id="3e0b0-103">Provides methods to work with arrays, pointers, function pointers, and reference types.</span></span> <span data-ttu-id="3e0b0-104">Ten interfejs jest rozszerzenie interfejsu ICorDebugAppDomain.</span><span class="sxs-lookup"><span data-stu-id="3e0b0-104">This interface is an extension of the ICorDebugAppDomain interface.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545349"
 ---
 # <a name="ienumrawinputdevicclone"></a><span data-ttu-id="84fa1-102">IEnumRAWINPUTDEVIC:Clone</span><span class="sxs-lookup"><span data-stu-id="84fa1-102">IEnumRAWINPUTDEVIC:Clone</span></span>
 <span data-ttu-id="84fa1-103">Tworzy inny moduł wyliczający raw urządzenia wejściowego z takim samym stanie, aby jako bieżącego modułu wyliczającego, aby przejść przez tę samą listę.</span><span class="sxs-lookup"><span data-stu-id="84fa1-103">Creates another raw input device enumerator with the same state as the current enumerator to iterate over the same list.</span></span>  

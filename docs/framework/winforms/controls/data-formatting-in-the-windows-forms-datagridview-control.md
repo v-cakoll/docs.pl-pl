@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527777"
 ---
 # <a name="data-formatting-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="2963c-102">Formatowanie danych w formancie DataGridView formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="2963c-102">Data Formatting in the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="2963c-103"><xref:System.Windows.Forms.DataGridView> Kontrola zapewnia automatycznej konwersji między wartości komórek i typy danych, które są wyświetlane kolumny nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="2963c-103">The <xref:System.Windows.Forms.DataGridView> control provides automatic conversion between cell values and the data types that the parent columns display.</span></span> <span data-ttu-id="2963c-104">Tekst pola kolumny, na przykład wyświetlić reprezentacji ciągu daty, godziny, liczbę i wartości wyliczenia i konwertowanie wartości ciągu wprowadzonych przez użytkownika typów wymaganych przez Magazyn danych.</span><span class="sxs-lookup"><span data-stu-id="2963c-104">Text box columns, for example, display string representations of date, time, number, and enumeration values, and convert user-entered string values to the types required by the data store.</span></span>  

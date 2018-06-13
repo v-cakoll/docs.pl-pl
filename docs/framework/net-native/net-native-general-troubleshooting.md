@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396288"
 ---
 # <a name="net-native-general-troubleshooting"></a><span data-ttu-id="b16e4-102">Ogólne wskazówki dotyczące rozwiązywania problemów z architekturą .NET Native</span><span class="sxs-lookup"><span data-stu-id="b16e4-102">.NET Native General Troubleshooting</span></span>
 <span data-ttu-id="b16e4-103">W tym temacie opisano sposoby rozwiązywania potencjalnych problemów, które można napotkać podczas opracowywania aplikacji za pomocą [!INCLUDE[net_native](../../../includes/net-native-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b16e4-103">This topic describes how to troubleshoot potential issues that you might encounter when developing apps with [!INCLUDE[net_native](../../../includes/net-native-md.md)].</span></span>  

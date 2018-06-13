@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403998"
 ---
 # <a name="cordebuggctype-enumeration"></a><span data-ttu-id="ba1c3-102">CorDebugGCType — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="ba1c3-102">CorDebugGCType Enumeration</span></span>
 <span data-ttu-id="ba1c3-103">Wskazuje, czy moduł zbierający elementy bezużyteczne jest uruchomiona na serwerze lub stacji roboczej.</span><span class="sxs-lookup"><span data-stu-id="ba1c3-103">Indicates whether the garbage collector is running on a workstation or a server.</span></span>  

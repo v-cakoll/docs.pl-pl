@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386629"
 ---
 # <a name="gcunmanagedtomanaged-mda"></a><span data-ttu-id="909c5-102">gcUnmanagedToManaged MDA</span><span class="sxs-lookup"><span data-stu-id="909c5-102">gcUnmanagedToManaged MDA</span></span>
 <span data-ttu-id="909c5-103">`gcUnmanagedToManaged` Zarządzany Asystent debugowania (MDA) powoduje wyrzucania elementów bezużytecznych zawsze, gdy wątek przejścia z niezarządzanych do kodu zarządzanego.</span><span class="sxs-lookup"><span data-stu-id="909c5-103">The `gcUnmanagedToManaged` managed debugging assistant (MDA) causes a garbage collection whenever a thread transitions from unmanaged to managed code.</span></span>  

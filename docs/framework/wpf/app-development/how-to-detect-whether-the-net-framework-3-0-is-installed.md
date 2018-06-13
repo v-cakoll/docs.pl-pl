@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546494"
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a><span data-ttu-id="f32a7-102">Jak wykryć, czy wtyczka .NET Framework 3.0 jest zainstalowana</span><span class="sxs-lookup"><span data-stu-id="f32a7-102">How to: Detect Whether the .NET Framework 3.0 Is Installed</span></span>
 <span data-ttu-id="f32a7-103">Zanim administratorzy mogą wdrażać aplikacje platformy Microsoft .NET Framework w systemie, ich muszą potwierdzić występuje środowiska uruchomieniowego .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="f32a7-103">Before administrators can deploy Microsoft .NET Framework applications on a system, they must first confirm that the .NET Framework runtime is present.</span></span> <span data-ttu-id="f32a7-104">Ten temat zawiera skrypt napisany w języku HTML/JavaScript umożliwiają administratorom czy programu .NET Framework jest obecne w systemie.</span><span class="sxs-lookup"><span data-stu-id="f32a7-104">This topic provides a script written in HTML/JavaScript that administrators can use to determine whether the .NET Framework is present on a system.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389537"
 ---
 # <a name="mitigation-path-normalization"></a><span data-ttu-id="efb45-102">Ograniczenie: Ścieżka normalizacji</span><span class="sxs-lookup"><span data-stu-id="efb45-102">Mitigation: Path Normalization</span></span>
 <span data-ttu-id="efb45-103">Począwszy od aplikacji docelowej [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], zmienił ścieżkę normalizacji w programie .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="efb45-103">Starting with apps the target  the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], path normalization in the .NET Framework has changed.</span></span>  

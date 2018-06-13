@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404602"
 ---
 # <a name="icordebugappdomaingetmodulefrommetadatainterface-method"></a><span data-ttu-id="871ab-102">ICorDebugAppDomain::GetModuleFromMetaDataInterface — Metoda</span><span class="sxs-lookup"><span data-stu-id="871ab-102">ICorDebugAppDomain::GetModuleFromMetaDataInterface Method</span></span>
 <span data-ttu-id="871ab-103">Pobiera moduł, który odpowiada interfejsu określonych metadanych.</span><span class="sxs-lookup"><span data-stu-id="871ab-103">Gets the module that corresponds to the given metadata interface.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393871"
 ---
 # <a name="lttypeparametergt-element-net-native"></a><span data-ttu-id="57723-102">Element &lt;TypeParameter&gt; (architektura .NET Native)</span><span class="sxs-lookup"><span data-stu-id="57723-102">&lt;TypeParameter&gt; Element (.NET Native)</span></span>
 <span data-ttu-id="57723-103">Stosuje zasady do typu reprezentowanego przez argument typu przekazana do metody.</span><span class="sxs-lookup"><span data-stu-id="57723-103">Applies policy to the type represented by a Type argument passed to a method.</span></span>  

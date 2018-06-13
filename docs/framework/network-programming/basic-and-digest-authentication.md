@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398225"
 ---
 # <a name="basic-and-digest-authentication"></a><span data-ttu-id="84774-102">Podstawowe oraz uwierzytelnianie szyfrowane</span><span class="sxs-lookup"><span data-stu-id="84774-102">Basic and Digest Authentication</span></span>
 <span data-ttu-id="84774-103"><xref:System.Net> Implementacji basic i uwierzytelnianie szyfrowane jest zgodny z RFC2617 — uwierzytelnianie HTTP: Basic i uwierzytelniania szyfrowanego (dostępne w witrynie sieci Web konsorcjum World Wide Web pod www.w3.org).</span><span class="sxs-lookup"><span data-stu-id="84774-103">The <xref:System.Net> implementation of basic and digest authentication complies with RFC2617 – HTTP Authentication: Basic and Digest Authentication (available on the World Wide Web Consortium's Web site at www.w3.org).</span></span>  

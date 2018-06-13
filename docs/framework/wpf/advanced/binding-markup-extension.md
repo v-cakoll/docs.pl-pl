@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541888"
 ---
 # <a name="binding-markup-extension"></a><span data-ttu-id="c03bd-102">Rozszerzenie znaczników powiązania</span><span class="sxs-lookup"><span data-stu-id="c03bd-102">Binding Markup Extension</span></span>
 <span data-ttu-id="c03bd-103">Różni się wartość właściwości wartość powiązane z danymi, tworzenie obiektu będącego wyrażeniem pośrednie i interpretowanie kontekstu danych, która ma zastosowanie do elementu i jego powiązanie w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="c03bd-103">Defers a property value to be a data-bound value, creating an intermediate expression object and interpreting the data context that applies to the element and its binding at run time.</span></span>  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392934"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a><span data-ttu-id="fe13e-102">Instrukcje: tworzenie, inicjowanie i konfigurowanie przełączników śledzenia</span><span class="sxs-lookup"><span data-stu-id="fe13e-102">How to: Create, Initialize and Configure Trace Switches</span></span>
 <span data-ttu-id="fe13e-103">Przełączniki śledzenia umożliwiają włączać, wyłączać i Filtruj dane wyjściowe śledzenia.</span><span class="sxs-lookup"><span data-stu-id="fe13e-103">Trace switches enable you to enable, disable, and filter tracing output.</span></span>  

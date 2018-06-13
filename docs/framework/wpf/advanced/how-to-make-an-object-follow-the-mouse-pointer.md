@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543875"
 ---
 # <a name="how-to-make-an-object-follow-the-mouse-pointer"></a><span data-ttu-id="a470c-102">Jak sprawić, aby obiekt podążał za wskaźnikiem myszy</span><span class="sxs-lookup"><span data-stu-id="a470c-102">How to: Make an Object Follow the Mouse Pointer</span></span>
 <span data-ttu-id="a470c-103">W tym przykładzie pokazano, jak zmienić wymiary obiektu, gdy wskaźnik myszy jest przesuwany na ekranie.</span><span class="sxs-lookup"><span data-stu-id="a470c-103">This example shows how to change the dimensions of an object when the mouse pointer moves on the screen.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542626"
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a><span data-ttu-id="f1b2c-102">Jak dodać obsługę zdarzeń z użyciem kodu</span><span class="sxs-lookup"><span data-stu-id="f1b2c-102">How to: Add an Event Handler Using Code</span></span>
 <span data-ttu-id="f1b2c-103">W tym przykładzie przedstawiono sposób dodawania obsługi zdarzeń do elementu przy użyciu kodu.</span><span class="sxs-lookup"><span data-stu-id="f1b2c-103">This example shows how to add an event handler to an element by using code.</span></span>  

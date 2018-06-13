@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365725"
 ---
 # <a name="query-projections-wcf-data-services"></a><span data-ttu-id="0ef7f-102">Zapytanie projekcje (usługi danych WCF)</span><span class="sxs-lookup"><span data-stu-id="0ef7f-102">Query Projections (WCF Data Services)</span></span>
 <span data-ttu-id="0ef7f-103">Projekcja zapewnia mechanizm w [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Aby zmniejszyć ilość danych w źródle danych zwróconych przez zapytanie, określając, który niektórych właściwości jednostki są zwracane w odpowiedzi.</span><span class="sxs-lookup"><span data-stu-id="0ef7f-103">Projection provides a mechanism in the [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] to reduce the amount of data in the feed returned by a query by specifying that only certain properties of an entity are returned in the response.</span></span> <span data-ttu-id="0ef7f-104">Aby uzyskać więcej informacji, zobacz [OData: wybierz opcję zapytania systemu ($select)](http://go.microsoft.com/fwlink/?LinkId=186076).</span><span class="sxs-lookup"><span data-stu-id="0ef7f-104">For more information, see [OData: Select System Query Option ($select)](http://go.microsoft.com/fwlink/?LinkId=186076).</span></span>  

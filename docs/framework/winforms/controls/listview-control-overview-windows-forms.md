@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540676"
 ---
 # <a name="listview-control-overview-windows-forms"></a><span data-ttu-id="4f3ed-102">ListView — Informacje o formancie [Formularze systemu Windows]</span><span class="sxs-lookup"><span data-stu-id="4f3ed-102">ListView Control Overview (Windows Forms)</span></span>
 <span data-ttu-id="4f3ed-103">Formularze systemu Windows <xref:System.Windows.Forms.ListView> formantu zostanie wyświetlona lista elementy z ikonami.</span><span class="sxs-lookup"><span data-stu-id="4f3ed-103">The Windows Forms <xref:System.Windows.Forms.ListView> control displays a list of items with icons.</span></span> <span data-ttu-id="4f3ed-104">Widok listy służy do tworzenia interfejsu użytkownika, takie jak okienku po prawej stronie Eksploratora Windows.</span><span class="sxs-lookup"><span data-stu-id="4f3ed-104">You can use a list view to create a user interface like the right pane of Windows Explorer.</span></span> <span data-ttu-id="4f3ed-105">Kontrolka ma cztery trybów wyświetlania: widoku LargeIcon, SmallIcon, listy i szczegółów.</span><span class="sxs-lookup"><span data-stu-id="4f3ed-105">The control has four view modes: LargeIcon, SmallIcon, List, and Details.</span></span>  

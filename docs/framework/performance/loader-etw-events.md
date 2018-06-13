@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397432"
 ---
 # <a name="loader-etw-events"></a><span data-ttu-id="3fbce-102">Zdarzenia ETW modułu ładującego</span><span class="sxs-lookup"><span data-stu-id="3fbce-102">Loader ETW Events</span></span>
 <a name="top"></a> <span data-ttu-id="3fbce-103">Te zdarzenia zbierać informacje dotyczące ładowanie i zwalnianie domen aplikacji, zestawów i modułów.</span><span class="sxs-lookup"><span data-stu-id="3fbce-103">These events collect information relating to loading and unloading application domains, assemblies, and modules.</span></span>  

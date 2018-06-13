@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555403"
 ---
 # <a name="treeview-how-to-topics"></a><span data-ttu-id="acb28-102">TreeView — Tematy porad</span><span class="sxs-lookup"><span data-stu-id="acb28-102">TreeView How-to Topics</span></span>
 <span data-ttu-id="acb28-103">W tematach w tej sekcji opisano sposób użycia <xref:System.Windows.Controls.TreeView> formantu, aby wyświetlić informacje w strukturze hierarchicznej.</span><span class="sxs-lookup"><span data-stu-id="acb28-103">The topics in this section describe how to use the <xref:System.Windows.Controls.TreeView> control to display information in a hierarchical structure.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552555"
 ---
 # <a name="how-to-bind-an-adorner-to-an-element"></a><span data-ttu-id="93f4f-102">Jak powiązać moduł definiowania układu z elementem</span><span class="sxs-lookup"><span data-stu-id="93f4f-102">How to: Bind an Adorner to an Element</span></span>
 <span data-ttu-id="93f4f-103">W tym przykładzie pokazano, jak programowo powiązać modułu definiowania układu kodu z określonej <xref:System.Windows.UIElement>.</span><span class="sxs-lookup"><span data-stu-id="93f4f-103">This example shows how to programmatically bind an adorner to a specified <xref:System.Windows.UIElement>.</span></span>  

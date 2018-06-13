@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553809"
 ---
 # <a name="how-to-crop-an-image"></a><span data-ttu-id="cc9bb-102">Jak przyciąć obraz</span><span class="sxs-lookup"><span data-stu-id="cc9bb-102">How to: Crop an Image</span></span>
 <span data-ttu-id="cc9bb-103">W tym przykładzie pokazano, jak Przytnij obraz przy użyciu <xref:System.Windows.Media.Imaging.CroppedBitmap>.</span><span class="sxs-lookup"><span data-stu-id="cc9bb-103">This example shows how to crop an image using <xref:System.Windows.Media.Imaging.CroppedBitmap>.</span></span>  

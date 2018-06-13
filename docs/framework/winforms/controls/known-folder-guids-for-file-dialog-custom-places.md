@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541567"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a><span data-ttu-id="2587e-102">Identyfikatory GUID znanych folderów dla niestandardowych miejsc okna dialogowego plików</span><span class="sxs-lookup"><span data-stu-id="2587e-102">Known Folder GUIDs for File Dialog Custom Places</span></span>
 <span data-ttu-id="2587e-103">Możesz użyć <xref:System.Guid> do określenia [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] znany Folder, po dodaniu foldery do <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> kolekcji.</span><span class="sxs-lookup"><span data-stu-id="2587e-103">You use a <xref:System.Guid> to specify a [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] Known Folder when you add folders to a <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> collection.</span></span> <span data-ttu-id="2587e-104">Znane identyfikatory GUID Folder nie jest uwzględniana wielkość liter i są zdefiniowane w pliku KnownFolders.h w [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2587e-104">Known Folder GUIDs are not case sensitive and are defined in the KnownFolders.h file in the [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)].</span></span>  

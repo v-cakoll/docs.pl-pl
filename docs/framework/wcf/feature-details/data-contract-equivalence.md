@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492802"
 ---
 # <a name="data-contract-equivalence"></a><span data-ttu-id="a4cd0-102">Równoważność kontraktów danych</span><span class="sxs-lookup"><span data-stu-id="a4cd0-102">Data Contract Equivalence</span></span>
 <span data-ttu-id="a4cd0-103">Klient pomyślnie wysyłania danych określonego typu usługi lub usług pomyślnie wysyłać dane do klienta wysłane typu nie zawsze musi istnieje po stronie odbiorczej.</span><span class="sxs-lookup"><span data-stu-id="a4cd0-103">For a client to successfully send data of a certain type to a service, or a service to successfully send data to a client, the sent type does not necessarily have to exist on the receiving end.</span></span> <span data-ttu-id="a4cd0-104">Jedynym wymaganiem jest równoważne kontraktów danych obu typów.</span><span class="sxs-lookup"><span data-stu-id="a4cd0-104">The only requirement is that the data contracts of both types be equivalent.</span></span> <span data-ttu-id="a4cd0-105">(Czasami strict równoważność nie jest wymagana, zgodnie z opisem w [przechowywanie wersji kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)</span><span class="sxs-lookup"><span data-stu-id="a4cd0-105">(Sometimes, strict equivalence is not required, as discussed in [Data Contract Versioning](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)</span></span>  

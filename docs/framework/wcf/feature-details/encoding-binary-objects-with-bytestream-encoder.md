@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489485"
 ---
 # <a name="encoding-binary-objects-with-bytestream-encoder"></a><span data-ttu-id="18a2e-102">Kodowanie obiektów binarnych za pomocą kodera elementu ByteStream</span><span class="sxs-lookup"><span data-stu-id="18a2e-102">Encoding Binary Objects with ByteStream Encoder</span></span>
 <span data-ttu-id="18a2e-103">Wysyłanie i odbieranie nieprzetworzone dane binarne z usługi Windows Communication Foundation (WCF) jest konfigurowana przy użyciu <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>.</span><span class="sxs-lookup"><span data-stu-id="18a2e-103">Sending and receiving raw binary data with Windows Communication Foundation (WCF) is configured using <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>.</span></span>  

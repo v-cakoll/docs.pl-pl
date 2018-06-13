@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492027"
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a><span data-ttu-id="6bf20-102">Różnice w funkcjach kolejkowania w systemach Windows Vista, Windows Server 2003 i Windows XP</span><span class="sxs-lookup"><span data-stu-id="6bf20-102">Differences in Queuing Features in Windows Vista, Windows Server 2003, and Windows XP</span></span>
 <span data-ttu-id="6bf20-103">Ten temat zawiera podsumowanie różnic w funkcji kolejek usługi Windows Communication Foundation (WCF) między [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].</span><span class="sxs-lookup"><span data-stu-id="6bf20-103">This topic summarizes the differences in the Windows Communication Foundation (WCF) queues feature between [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], and [!INCLUDE[wxp](../../../../includes/wxp-md.md)].</span></span>  

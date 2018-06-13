@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495486"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a><span data-ttu-id="e7202-102">Instrukcje: Programowe dodawanie możliwości odnajdywania do usługi i klienta WCF</span><span class="sxs-lookup"><span data-stu-id="e7202-102">How to: Programmatically Add Discoverability to a WCF Service and Client</span></span>
 <span data-ttu-id="e7202-103">W tym temacie wyjaśniono, jak utworzyć wykrywalny usługi Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="e7202-103">This topic explains how to make a Windows Communication Foundation (WCF) service discoverable.</span></span> <span data-ttu-id="e7202-104">Jest on oparty na [hosta samodzielnego](http://go.microsoft.com/fwlink/?LinkId=145523) próbki.</span><span class="sxs-lookup"><span data-stu-id="e7202-104">It is based on the [Self-Host](http://go.microsoft.com/fwlink/?LinkId=145523) sample.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499466"
 ---
 # <a name="securing-messages-using-transport-security"></a><span data-ttu-id="a812a-102">Ochrona komunikatów za pomocą zabezpieczeń transportu</span><span class="sxs-lookup"><span data-stu-id="a812a-102">Securing Messages Using Transport Security</span></span>
 <span data-ttu-id="a812a-103">W tej sekcji omówiono zabezpieczenia transportu usługi kolejkowania komunikatów (MSMQ), który służy do zabezpieczania komunikatów wysłanych do kolejki.</span><span class="sxs-lookup"><span data-stu-id="a812a-103">This section discusses Message Queuing (MSMQ) transport security that you can use to secure messages sent to a queue.</span></span>  

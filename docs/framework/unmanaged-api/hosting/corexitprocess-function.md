@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429332"
 ---
 # <a name="corexitprocess-function"></a><span data-ttu-id="184e7-102">CorExitProcess — Funkcja</span><span class="sxs-lookup"><span data-stu-id="184e7-102">CorExitProcess Function</span></span>
 <span data-ttu-id="184e7-103">Zamyka bieżący proces niezarządzany.</span><span class="sxs-lookup"><span data-stu-id="184e7-103">Shuts down the current unmanaged process.</span></span>  

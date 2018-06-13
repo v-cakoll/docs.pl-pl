@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33288895"
 ---
 # <a name="switch-c-reference"></a><span data-ttu-id="873b3-102">switch (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="873b3-102">switch (C# Reference)</span></span>
 <span data-ttu-id="873b3-103">`switch` jest instrukcja wyboru, która wybiera jeden *przełącznika sekcji* do wykonania z listy kandydatów na podstawie dopasowania wzorca z *pasuje do wyrażenia*.</span><span class="sxs-lookup"><span data-stu-id="873b3-103">`switch` is a selection statement that chooses a single *switch section* to execute from a list of candidates based on a pattern match with the *match expression*.</span></span> 

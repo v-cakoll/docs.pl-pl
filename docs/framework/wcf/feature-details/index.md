@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494712"
 ---
 # <a name="wcf-feature-details"></a><span data-ttu-id="0a65f-102">Szczegóły funkcji WCF</span><span class="sxs-lookup"><span data-stu-id="0a65f-102">WCF Feature Details</span></span>
 <span data-ttu-id="0a65f-103">Windows Communication Foundation (WCF) zapewnia szeroką gamę kontrolę nad funkcji obsługi wiadomości w aplikacji.</span><span class="sxs-lookup"><span data-stu-id="0a65f-103">Windows Communication Foundation (WCF) allows extensive control over the messaging functions of an application.</span></span> <span data-ttu-id="0a65f-104">Tematy w tej sekcji, przejdź do szczegółów dotyczących dostępnych funkcji.</span><span class="sxs-lookup"><span data-stu-id="0a65f-104">The topics in this section go into detail about the available features.</span></span> <span data-ttu-id="0a65f-105">Aby uzyskać więcej informacji na temat podstawy programowania, zobacz [podstawowe programowania WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).</span><span class="sxs-lookup"><span data-stu-id="0a65f-105">For more information about basic programming, see [Basic WCF Programming](../../../../docs/framework/wcf/basic-wcf-programming.md).</span></span>  

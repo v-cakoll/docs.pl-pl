@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438236"
 ---
 # <a name="iclrtask2endpreventasyncabort-method"></a><span data-ttu-id="9ac60-102">ICLRTask2::EndPreventAsyncAbort — Metoda</span><span class="sxs-lookup"><span data-stu-id="9ac60-102">ICLRTask2::EndPreventAsyncAbort Method</span></span>
 <span data-ttu-id="9ac60-103">Zezwala na nowe lub oczekujące żądania przerwania wątku w wątku przerywa w bieżącym wątku.</span><span class="sxs-lookup"><span data-stu-id="9ac60-103">Allows new or pending thread abort requests to result in thread aborts on the current thread.</span></span>  

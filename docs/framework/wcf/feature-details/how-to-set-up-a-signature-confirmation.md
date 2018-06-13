@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491992"
 ---
 # <a name="how-to-set-up-a-signature-confirmation"></a><span data-ttu-id="83c5d-102">Instrukcje: Konfigurowanie potwierdzenia sygnatury</span><span class="sxs-lookup"><span data-stu-id="83c5d-102">How to: Set Up a Signature Confirmation</span></span>
 <span data-ttu-id="83c5d-103">*Potwierdzenie podpisu* jest mechanizm inicjatora komunikat upewnić się, że odebranej odpowiedzi został wygenerowany w odpowiedzi na nadawcy oryginalnej wiadomości.</span><span class="sxs-lookup"><span data-stu-id="83c5d-103">*Signature confirmation* is a mechanism for a message initiator to ensure that a received reply was generated in response to the sender's original message.</span></span> <span data-ttu-id="83c5d-104">Potwierdzenie podpisu jest zdefiniowany w specyfikacji WS-Security 1.1.</span><span class="sxs-lookup"><span data-stu-id="83c5d-104">Signature confirmation is defined in the WS-Security 1.1 specification.</span></span> <span data-ttu-id="83c5d-105">Jeśli punkt końcowy obsługuje WS-Security 1.0, nie można użyć potwierdzenia podpisu.</span><span class="sxs-lookup"><span data-stu-id="83c5d-105">If an endpoint supports WS-Security 1.0, you cannot use signature confirmation.</span></span>  

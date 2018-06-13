@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491858"
 ---
 # <a name="claims-and-tokens"></a><span data-ttu-id="b29ea-102">Oświadczenia i tokeny</span><span class="sxs-lookup"><span data-stu-id="b29ea-102">Claims and Tokens</span></span>
 <span data-ttu-id="b29ea-103">W tym temacie opisano różne typy oświadczeń, które tworzy Windows Communication Foundation (WCF) z tokenów domyślne, które obsługuje.</span><span class="sxs-lookup"><span data-stu-id="b29ea-103">This topic describes the various claim types that Windows Communication Foundation (WCF) creates from the default tokens that it supports.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489758"
 ---
 # <a name="custom-filters"></a><span data-ttu-id="c1753-102">Filtry niestandardowe</span><span class="sxs-lookup"><span data-stu-id="c1753-102">Custom Filters</span></span>
 <span data-ttu-id="c1753-103">Filtry niestandardowe umożliwiają definiowanie pasującego logikę, która nie może być wykonywane przy użyciu filtrów dostarczane przez system komunikatu.</span><span class="sxs-lookup"><span data-stu-id="c1753-103">Custom filters allow you to define matching logic that cannot be accomplished using the system-provided message filters.</span></span> <span data-ttu-id="c1753-104">Na przykład możesz utworzyć niestandardowy filtr, który tworzy skrót elementu określonego komunikatu, a następnie sprawdza, czy wartość, aby ustalić, czy filtr powinien zwrócić wartość true lub false.</span><span class="sxs-lookup"><span data-stu-id="c1753-104">For example, you might create a custom filter that hashes a particular message element and then examines the value to determine whether the filter should return true or false.</span></span>  

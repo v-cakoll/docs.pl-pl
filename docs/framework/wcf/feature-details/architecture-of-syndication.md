@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492822"
 ---
 # <a name="architecture-of-syndication"></a><span data-ttu-id="85e3e-102">Architektura syndykacji</span><span class="sxs-lookup"><span data-stu-id="85e3e-102">Architecture of Syndication</span></span>
 <span data-ttu-id="85e3e-103">Interfejs API zespolonego umożliwia model programowania niezależny od formatu, który umożliwia zawartości zespolonej do zapisania do przesyłania w różnych formatach.</span><span class="sxs-lookup"><span data-stu-id="85e3e-103">The Syndication API is designed to provide a format-neutral programming model that allows syndicated content to be written on to the wire in a variety of formats.</span></span> <span data-ttu-id="85e3e-104">Model danych abstrakcyjny składa się z następujących klas:</span><span class="sxs-lookup"><span data-stu-id="85e3e-104">The abstract data model consists of the following classes:</span></span>  

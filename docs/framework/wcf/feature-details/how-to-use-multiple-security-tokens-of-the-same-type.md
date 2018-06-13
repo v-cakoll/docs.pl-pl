@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490750"
 ---
 # <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a><span data-ttu-id="1da79-102">Instrukcje: Używanie wielu tokenów zabezpieczeń tego samego typu</span><span class="sxs-lookup"><span data-stu-id="1da79-102">How to: Use Multiple Security Tokens of the Same Type</span></span>
 -   <span data-ttu-id="1da79-103">W [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0, token wiadomości tylko jeden zawartych w niej klienta dla dowolnego typu.</span><span class="sxs-lookup"><span data-stu-id="1da79-103">In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0, a client message only contained one token of any given type.</span></span> <span data-ttu-id="1da79-104">Teraz wiadomości klienta może zawierać wiele tokenów typu.</span><span class="sxs-lookup"><span data-stu-id="1da79-104">Now client messages can contain multiple tokens of a type.</span></span> <span data-ttu-id="1da79-105">W tym temacie przedstawiono sposób obejmują wiele tokenów tego samego typu w komunikacie klienta.</span><span class="sxs-lookup"><span data-stu-id="1da79-105">This topic shows how to include multiple tokens of the same type in a client message.</span></span>  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429286"
 ---
 # <a name="callfunctionshim-function"></a><span data-ttu-id="4cb4c-102">CallFunctionShim — Funkcja</span><span class="sxs-lookup"><span data-stu-id="4cb4c-102">CallFunctionShim Function</span></span>
 <span data-ttu-id="4cb4c-103">Wykonuje wywołanie funkcji, które ma określoną nazwę i parametrów w określonej bibliotece.</span><span class="sxs-lookup"><span data-stu-id="4cb4c-103">Makes a call to the function that has the specified name and parameters in the specified library.</span></span>  

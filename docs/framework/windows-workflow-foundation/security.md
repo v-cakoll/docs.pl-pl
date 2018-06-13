@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518020"
 ---
 # <a name="security"></a><span data-ttu-id="b9f6d-102">Zabezpieczenia</span><span class="sxs-lookup"><span data-stu-id="b9f6d-102">Security</span></span>
 <span data-ttu-id="b9f6d-103">W magazynie wystąpień przepływu pracy SQL są używane następujące role zabezpieczeń bazy danych do bezpieczny dostęp do informacji o stanie wystąpienie w bazie danych trwałości.</span><span class="sxs-lookup"><span data-stu-id="b9f6d-103">The SQL Workflow Instance Store uses the following database security roles to secure access to instance state information in the persistence database.</span></span>  

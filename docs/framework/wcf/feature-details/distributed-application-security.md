@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496168"
 ---
 # <a name="distributed-application-security"></a><span data-ttu-id="649ef-102">Rozproszone zabezpieczenia aplikacji</span><span class="sxs-lookup"><span data-stu-id="649ef-102">Distributed Application Security</span></span>
 <span data-ttu-id="649ef-103">Zabezpieczenia systemu Windows Communication Foundation (WCF) jest podzielone na trzy główne obszary funkcjonalności: transfer zabezpieczeń, kontroli dostępu i inspekcji.</span><span class="sxs-lookup"><span data-stu-id="649ef-103">Windows Communication Foundation (WCF) security is broken into three major functional areas: transfer security, access control, and auditing.</span></span> <span data-ttu-id="649ef-104">Transfer zabezpieczeń zapewnia integralność, poufność i uwierzytelniania.</span><span class="sxs-lookup"><span data-stu-id="649ef-104">Transfer security provides integrity, confidentiality, and authentication.</span></span> <span data-ttu-id="649ef-105">Zabezpieczenia transferu za pomocą jednej z następujących czynności: transportu zabezpieczenia, zabezpieczenia wiadomości lub `TransportWithMessageCredential`.</span><span class="sxs-lookup"><span data-stu-id="649ef-105">Transfer security is provided by one of the following: transport security, message security, or `TransportWithMessageCredential`.</span></span>  

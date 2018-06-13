@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494945"
 ---
 # <a name="routing"></a><span data-ttu-id="f545f-102">Routing</span><span class="sxs-lookup"><span data-stu-id="f545f-102">Routing</span></span>
 <span data-ttu-id="f545f-103">Tematy w tej sekcji dotyczą usługi routingu.</span><span class="sxs-lookup"><span data-stu-id="f545f-103">The topics in this section cover the Routing Service.</span></span> <span data-ttu-id="f545f-104">Usługa routingu jest ogólny można skonfigurować pośredników SOAP obsługi błędów komunikacji umożliwia skonfigurowanie na podstawie zawartości routingu, konfigurowanie protokołu mostkowanie, i dynamicznie Aktualizuj logiki routingu w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="f545f-104">The Routing Service is a generic configurable SOAP intermediary that lets you configure content-based routing, set up protocol bridging, handle communication errors, and dynamically update routing logic at run time.</span></span>  

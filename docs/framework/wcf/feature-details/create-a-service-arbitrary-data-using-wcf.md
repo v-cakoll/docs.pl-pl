@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494166"
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a><span data-ttu-id="43fea-102">Porady: Tworzenie usługi czy akceptuje dowolne dane za pomocą Model programowania interfejsu REST usługi WCF</span><span class="sxs-lookup"><span data-stu-id="43fea-102">How to: Create a Service That Accepts Arbitrary Data using the WCF REST Programming Model</span></span>
 <span data-ttu-id="43fea-103">Czasami deweloperzy musi mieć pełną kontrolę nad jak dane są zwracane z operacji usługi.</span><span class="sxs-lookup"><span data-stu-id="43fea-103">Sometimes developers must have full control of how data is returned from a service operation.</span></span> <span data-ttu-id="43fea-104">Podczas operacji usługi muszą zwracać dane w formacie nieobsługiwane byWCF jest wielkość liter.</span><span class="sxs-lookup"><span data-stu-id="43fea-104">This is the case when a service operation must return data in a format not supported byWCF.</span></span> <span data-ttu-id="43fea-105">W tym temacie omówiono, aby utworzyć usługę, która odbiera dowolne dane za pomocą Model programowania interfejsu REST usługi WCF.</span><span class="sxs-lookup"><span data-stu-id="43fea-105">This topic discusses using the WCF REST Programming Model to create a service that receives arbitrary data.</span></span>  

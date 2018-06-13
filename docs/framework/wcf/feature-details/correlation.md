@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491286"
 ---
 # <a name="correlation"></a><span data-ttu-id="1518a-102">Korelacja</span><span class="sxs-lookup"><span data-stu-id="1518a-102">Correlation</span></span>
 <span data-ttu-id="1518a-103">Aplikacje usług przepływu pracy komunikować się z innymi usługami, jest ważne, czy wiadomości między nimi są wysyłane do wystąpienia przepływu pracy odpowiednie.</span><span class="sxs-lookup"><span data-stu-id="1518a-103">When workflow service applications communicate with other services, it is important that messages between them are dispatched to the appropriate workflow instance.</span></span> <span data-ttu-id="1518a-104">Korelacji udostępnia mechanizm dla tego.</span><span class="sxs-lookup"><span data-stu-id="1518a-104">Correlation provides the mechanism for this.</span></span> <span data-ttu-id="1518a-105">Tematy w tej sekcji zawierają omówienie korelacji i jak z niego korzystać w scenariuszach usługi innego przepływu pracy.</span><span class="sxs-lookup"><span data-stu-id="1518a-105">The topics in this section provide an overview of correlation and how to use it in different workflow service scenarios.</span></span>  

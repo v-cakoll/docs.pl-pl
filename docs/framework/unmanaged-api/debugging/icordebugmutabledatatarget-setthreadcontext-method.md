@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418421"
 ---
 # <a name="icordebugmutabledatatargetsetthreadcontext-method"></a><span data-ttu-id="bc0ff-102">ICorDebugMutableDataTarget::SetThreadContext — metoda</span><span class="sxs-lookup"><span data-stu-id="bc0ff-102">ICorDebugMutableDataTarget::SetThreadContext Method</span></span>
 <span data-ttu-id="bc0ff-103">Ustawia kontekst wątku (wartości rejestru).</span><span class="sxs-lookup"><span data-stu-id="bc0ff-103">Sets the context (register values) for a thread.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434216"
 ---
 # <a name="iclrruntimeinfogetdefaultstartupflags-method"></a><span data-ttu-id="9246f-102">ICLRRuntimeInfo::GetDefaultStartupFlags — Metoda</span><span class="sxs-lookup"><span data-stu-id="9246f-102">ICLRRuntimeInfo::GetDefaultStartupFlags Method</span></span>
 <span data-ttu-id="9246f-103">Pobiera flagi uruchamiania i pliku konfiguracji hosta, który będzie używany do uruchomienia środowiska uruchomieniowego.</span><span class="sxs-lookup"><span data-stu-id="9246f-103">Gets the startup flags and host configuration file that will be used to start the runtime.</span></span>  

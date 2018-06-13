@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494547"
 ---
 # <a name="exporting-schemas-from-classes"></a><span data-ttu-id="8a857-102">Eksportowanie schematów z klas</span><span class="sxs-lookup"><span data-stu-id="8a857-102">Exporting Schemas from Classes</span></span>
 <span data-ttu-id="8a857-103">Aby wygenerować schematu XML definition language (XSD) schematów z klas, które są używane w modelu kontraktu danych, użyj <xref:System.Runtime.Serialization.XsdDataContractExporter> klasy.</span><span class="sxs-lookup"><span data-stu-id="8a857-103">To generate XML Schema definition language (XSD) schemas from classes that are used in the data contract model, use the <xref:System.Runtime.Serialization.XsdDataContractExporter> class.</span></span> <span data-ttu-id="8a857-104">W tym temacie opisano proces tworzenia schematów.</span><span class="sxs-lookup"><span data-stu-id="8a857-104">This topic describes the process for creating schemas.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491510"
 ---
 # <a name="how-to-obtain-a-certificate-wcf"></a><span data-ttu-id="2fa4a-102">Instrukcje: Uzyskiwanie certyfikatu (WCF)</span><span class="sxs-lookup"><span data-stu-id="2fa4a-102">How to: Obtain a Certificate (WCF)</span></span>
 <span data-ttu-id="2fa4a-103">Pod kątem używania dowolnych Windows Communication Foundation (WCF) funkcje tego używać certyfikatów X.509, po prostu najpierw uzyskać certyfikaty.</span><span class="sxs-lookup"><span data-stu-id="2fa4a-103">To use any of the Windows Communication Foundation (WCF) features of that use X.509 certificates, you just first obtain certificates.</span></span>  

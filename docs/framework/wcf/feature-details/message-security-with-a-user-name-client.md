@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495135"
 ---
 # <a name="message-security-with-a-user-name-client"></a><span data-ttu-id="88307-102">Zabezpieczenia na poziomie komunikatu z użyciem klienta nazwy użytkownika</span><span class="sxs-lookup"><span data-stu-id="88307-102">Message Security with a User Name Client</span></span>
 <span data-ttu-id="88307-103">Na poniższej ilustracji przedstawiono usługi Windows Communication Foundation (WCF) i klientem zabezpieczone przy użyciu zabezpieczeń na poziomie wiadomości.</span><span class="sxs-lookup"><span data-stu-id="88307-103">The following illustration shows an Windows Communication Foundation (WCF) service and client secured using message-level security.</span></span> <span data-ttu-id="88307-104">Usługa jest uwierzytelniane za pomocą certyfikatu X.509.</span><span class="sxs-lookup"><span data-stu-id="88307-104">The service is authenticated with an X.509 certificate.</span></span> <span data-ttu-id="88307-105">Klient jest uwierzytelniany przy użyciu nazwy użytkownika i hasła.</span><span class="sxs-lookup"><span data-stu-id="88307-105">The client authenticates using a user name and password.</span></span>  

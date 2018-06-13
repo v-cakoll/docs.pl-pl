@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432498"
 ---
 # <a name="inotifyconnection2registernotifysource-method"></a><span data-ttu-id="2dca6-102">INotifyConnection2::RegisterNotifySource — Metoda</span><span class="sxs-lookup"><span data-stu-id="2dca6-102">INotifyConnection2::RegisterNotifySource Method</span></span>
 <span data-ttu-id="2dca6-103">Instaluje źródło określonego powiadomień.</span><span class="sxs-lookup"><span data-stu-id="2dca6-103">Installs a specified notification source.</span></span>  

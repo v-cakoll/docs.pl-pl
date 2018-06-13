@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578979"
 ---
 # <a name="managed-execution-process"></a><span data-ttu-id="98c57-102">Proces zarządzanego wykonania</span><span class="sxs-lookup"><span data-stu-id="98c57-102">Managed Execution Process</span></span>
 <a name="introduction"></a> <span data-ttu-id="98c57-103">Proces zarządzanego wykonania obejmuje następujące kroki, które opisano szczegółowo w dalszej części tego tematu:</span><span class="sxs-lookup"><span data-stu-id="98c57-103">The managed execution process includes the following steps, which are discussed in detail later in this topic:</span></span>  

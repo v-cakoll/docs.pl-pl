@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494179"
 ---
 # <a name="message-security-with-mutual-certificates"></a><span data-ttu-id="c9e4f-102">Zabezpieczenia komunikatów ze wzajemnymi certyfikatami</span><span class="sxs-lookup"><span data-stu-id="c9e4f-102">Message Security with Mutual Certificates</span></span>
 <span data-ttu-id="c9e4f-103">Poniższy scenariusz zawiera usługi Windows Communication Foundation (WCF) i klienta zabezpieczony używających trybu zabezpieczenia wiadomości.</span><span class="sxs-lookup"><span data-stu-id="c9e4f-103">The following scenario shows a Windows Communication Foundation (WCF) service and client secured using message security mode.</span></span> <span data-ttu-id="c9e4f-104">Klient i usługa są uwierzytelniane za pomocą certyfikatów.</span><span class="sxs-lookup"><span data-stu-id="c9e4f-104">The client and the service are authenticated with certificates.</span></span>  

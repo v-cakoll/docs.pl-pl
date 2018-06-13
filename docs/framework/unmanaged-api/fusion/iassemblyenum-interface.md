@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431142"
 ---
 # <a name="iassemblyenum-interface"></a><span data-ttu-id="e0d2e-102">IAssemblyEnum — Interfejs</span><span class="sxs-lookup"><span data-stu-id="e0d2e-102">IAssemblyEnum Interface</span></span>
 <span data-ttu-id="e0d2e-103">Reprezentuje moduł wyliczający dla tablicy `IAssemblyName` obiektów.</span><span class="sxs-lookup"><span data-stu-id="e0d2e-103">Represents an enumerator for an array of `IAssemblyName` objects.</span></span>  

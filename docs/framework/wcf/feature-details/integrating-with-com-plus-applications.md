@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490500"
 ---
 # <a name="integrating-with-com-applications"></a><span data-ttu-id="5366f-102">Współdziałanie z aplikacjami COM+</span><span class="sxs-lookup"><span data-stu-id="5366f-102">Integrating with COM+ Applications</span></span>
 <span data-ttu-id="5366f-103">Windows Communication Foundation (WCF) udostępnia bogate środowisko tworzenia aplikacji rozproszonych.</span><span class="sxs-lookup"><span data-stu-id="5366f-103">Windows Communication Foundation (WCF) provides a rich environment for creating distributed applications.</span></span> <span data-ttu-id="5366f-104">Jeśli masz znaczących inwestycji w logice na podstawie składnika aplikacji hostowanej w modelu COM + służy WCF do rozszerzenia istniejących logiki zamiast konieczności ponownego zapisania go.</span><span class="sxs-lookup"><span data-stu-id="5366f-104">If you have a substantial investment in component-based application logic hosted in COM+, you can use WCF to extend your existing logic rather than having to rewrite it.</span></span> <span data-ttu-id="5366f-105">Tematy w tej sekcji opisano sposób za pomocą modelu COM + WCF.</span><span class="sxs-lookup"><span data-stu-id="5366f-105">The topics within this section describe how to use COM+ with WCF.</span></span>  

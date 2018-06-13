@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416419"
 ---
 # <a name="icordebugdatatarget2getimagelocation-method"></a><span data-ttu-id="08a38-102">Metoda ICorDebugDataTarget2::GetImageLocation</span><span class="sxs-lookup"><span data-stu-id="08a38-102">ICorDebugDataTarget2::GetImageLocation Method</span></span>
 <span data-ttu-id="08a38-103">Zwraca ścieżkę modułu z adresem podstawowym modułu.</span><span class="sxs-lookup"><span data-stu-id="08a38-103">Returns the path of a module from the module's base address.</span></span>  

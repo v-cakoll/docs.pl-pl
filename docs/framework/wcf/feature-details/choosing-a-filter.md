@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494130"
 ---
 # <a name="choosing-a-filter"></a><span data-ttu-id="458a3-102">Wybieranie filtra</span><span class="sxs-lookup"><span data-stu-id="458a3-102">Choosing a Filter</span></span>
 <span data-ttu-id="458a3-103">Podczas konfigurowania usługi routingu, należy wybrać filtry komunikatów i skonfigurować je do pozwalają zapewnić dokładne dopasowania przed wiadomości, które otrzymujesz.</span><span class="sxs-lookup"><span data-stu-id="458a3-103">When configuring the Routing Service, it is important to select correct message filters and configure them to allow you to make exact matches against the messages you receive.</span></span> <span data-ttu-id="458a3-104">Jeśli wybrane filtry są zbyt szerokie w ich odpowiedniki lub są niepoprawnie skonfigurowane, komunikaty są kierowane niepoprawnie.</span><span class="sxs-lookup"><span data-stu-id="458a3-104">If the filters you select are overly broad in their matches or are incorrectly configured, messages are routed incorrectly.</span></span> <span data-ttu-id="458a3-105">Jeśli filtry są zbyt restrykcyjne, nie masz żadnych prawidłowy trasy dostępne dla niektórych wiadomości.</span><span class="sxs-lookup"><span data-stu-id="458a3-105">If the filters are too restrictive, you may not have any valid routes available for some of your messages.</span></span>  

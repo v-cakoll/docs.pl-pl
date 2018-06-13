@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494673"
 ---
 # <a name="queues-and-reliable-sessions"></a><span data-ttu-id="a3a94-102">Kolejki i sesje niezawodne</span><span class="sxs-lookup"><span data-stu-id="a3a94-102">Queues and Reliable Sessions</span></span>
 <span data-ttu-id="a3a94-103">Kolejki i sesje niezawodne są funkcji Windows Communication Foundation (WCF), które implementują niezawodna obsługa komunikatów.</span><span class="sxs-lookup"><span data-stu-id="a3a94-103">Queues and reliable sessions are the Windows Communication Foundation (WCF) features that implement reliable messaging.</span></span> <span data-ttu-id="a3a94-104">Tematy zawarte w tej sekcji omówiono w nim niezawodnej funkcji obsługi komunikatów usługi WCF.</span><span class="sxs-lookup"><span data-stu-id="a3a94-104">The topics contained in this section discuss the WCF reliable messaging features.</span></span>  

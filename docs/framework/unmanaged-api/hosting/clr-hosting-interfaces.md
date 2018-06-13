@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435644"
 ---
 # <a name="clr-hosting-interfaces"></a><span data-ttu-id="ec7d8-102">Interfejsy hostingu środowiska CLR</span><span class="sxs-lookup"><span data-stu-id="ec7d8-102">CLR Hosting Interfaces</span></span>
 <span data-ttu-id="ec7d8-103">W tej sekcji opisano interfejsów, które niezarządzanych hostów można użyć do integracji środowisko uruchomieniowe języka wspólnego (CLR) w swoich aplikacjach.</span><span class="sxs-lookup"><span data-stu-id="ec7d8-103">This section describes the interfaces that unmanaged hosts can use to integrate the common language runtime (CLR) into their applications.</span></span> <span data-ttu-id="ec7d8-104">Informacje odnoszą się do platformy .NET Framework w wersji 2.0 lub nowszy.</span><span class="sxs-lookup"><span data-stu-id="ec7d8-104">The information pertains to the .NET Framework version 2.0 and later versions.</span></span> <span data-ttu-id="ec7d8-105">Te interfejsy Włącz hosta do kontrolowania wielu aspektów więcej czasu wykonywania niż w wersji 1.0, 1.1 i podaj znacznie większego integrację środowiska CLR i model wykonania hosta.</span><span class="sxs-lookup"><span data-stu-id="ec7d8-105">These interfaces enable the host to control many more aspects of the runtime than was possible in versions 1.0 and 1.1, and provide much tighter integration between the CLR and the host's execution model.</span></span>  

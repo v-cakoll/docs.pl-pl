@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430772"
 ---
 # <a name="iassemblyenumgetnextassembly-method"></a><span data-ttu-id="44bfe-102">IAssemblyEnum::GetNextAssembly — Metoda</span><span class="sxs-lookup"><span data-stu-id="44bfe-102">IAssemblyEnum::GetNextAssembly Method</span></span>
 <span data-ttu-id="44bfe-103">Pobiera wskaźnik do następnego [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) zawarte w tym [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) obiektu.</span><span class="sxs-lookup"><span data-stu-id="44bfe-103">Gets a pointer to the next [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) contained in this [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) object.</span></span>  

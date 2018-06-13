@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33433822"
 ---
 # <a name="iclrdebugmanagersetsymbolreadingpolicy-method"></a><span data-ttu-id="b5024-102">ICLRDebugManager::SetSymbolReadingPolicy — Metoda</span><span class="sxs-lookup"><span data-stu-id="b5024-102">ICLRDebugManager::SetSymbolReadingPolicy Method</span></span>
 <span data-ttu-id="b5024-103">Ustawia zasady do odczytywania plików programu (PDB) bazy danych.</span><span class="sxs-lookup"><span data-stu-id="b5024-103">Sets the policy for reading program database (PDB) files.</span></span> <span data-ttu-id="b5024-104">Zasady określa, czy informacje dotyczące numerów wierszy i pliki są uwzględniane w stosy wywołań.</span><span class="sxs-lookup"><span data-stu-id="b5024-104">The policy determines whether information about line numbers and files is included in call stacks.</span></span>  

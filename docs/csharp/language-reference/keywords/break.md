@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215053"
 ---
 # <a name="break-c-reference"></a><span data-ttu-id="a43c6-102">break (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="a43c6-102">break (C# Reference)</span></span>
 <span data-ttu-id="a43c6-103">`break` Instrukcji kończy najbliższej otaczającej pętli lub [przełącznika](../../../csharp/language-reference/keywords/switch.md) instrukcji, w której znajduje się.</span><span class="sxs-lookup"><span data-stu-id="a43c6-103">The `break` statement terminates the closest enclosing loop or [switch](../../../csharp/language-reference/keywords/switch.md) statement in which it appears.</span></span> <span data-ttu-id="a43c6-104">Kontrola jest przekazywana do instrukcji następującej instrukcji zakończone, jeśli istnieje.</span><span class="sxs-lookup"><span data-stu-id="a43c6-104">Control is passed to the statement that follows the terminated statement, if any.</span></span>  

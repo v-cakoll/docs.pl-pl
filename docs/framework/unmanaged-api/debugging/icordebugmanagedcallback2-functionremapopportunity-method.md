@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418093"
 ---
 # <a name="icordebugmanagedcallback2functionremapopportunity-method"></a><span data-ttu-id="3649d-102">ICorDebugManagedCallback2::FunctionRemapOpportunity — Metoda</span><span class="sxs-lookup"><span data-stu-id="3649d-102">ICorDebugManagedCallback2::FunctionRemapOpportunity Method</span></span>
 <span data-ttu-id="3649d-103">Powiadamia debuger osiągnięcie w wykonanie kodu punktu sekwencji w starszej wersji funkcji edytowany.</span><span class="sxs-lookup"><span data-stu-id="3649d-103">Notifies the debugger that code execution has reached a sequence point in an older version of an edited function.</span></span>  

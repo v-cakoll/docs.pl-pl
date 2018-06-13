@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492251"
 ---
 # <a name="intranet-unsecured-client-and-service"></a><span data-ttu-id="4d5d2-102">Niezabezpieczony klient i usługa w intranecie</span><span class="sxs-lookup"><span data-stu-id="4d5d2-102">Intranet Unsecured Client and Service</span></span>
 <span data-ttu-id="4d5d2-103">Na poniższej ilustracji przedstawiono prosty opracowany, aby podać informacje w sieci prywatnej bezpieczny do aplikacji WCF usługi Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="4d5d2-103">The following illustration depicts a simple Windows Communication Foundation (WCF) service developed to provide information on a secure private network to a WCF application.</span></span> <span data-ttu-id="4d5d2-104">Zabezpieczeń nie jest wymagana, ponieważ dane są o niskiej ważności, powinien być z założenia bezpiecznej sieci lub zabezpieczeń jest zapewniana przez warstwy poniżej infrastruktura WCF.</span><span class="sxs-lookup"><span data-stu-id="4d5d2-104">Security is not required because the data is of low importance, the network is expected to be inherently secure, or security is provided by a layer below the WCF infrastructure.</span></span>  

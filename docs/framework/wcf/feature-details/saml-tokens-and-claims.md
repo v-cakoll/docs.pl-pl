@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494735"
 ---
 # <a name="saml-tokens-and-claims"></a><span data-ttu-id="49ffd-102">Tokeny i oświadczenia języka SAML</span><span class="sxs-lookup"><span data-stu-id="49ffd-102">SAML Tokens and Claims</span></span>
 <span data-ttu-id="49ffd-103">Zabezpieczenia potwierdzenia Markup Language (SAML) *tokenów* są oświadczenia reprezentacji XML.</span><span class="sxs-lookup"><span data-stu-id="49ffd-103">Security Assertions Markup Language (SAML) *tokens* are XML representations of claims.</span></span> <span data-ttu-id="49ffd-104">Domyślnie jest Windows Communication Foundation (WCF) używany w scenariuszach zabezpieczeń tokeny SAML *wystawionych tokenów*.</span><span class="sxs-lookup"><span data-stu-id="49ffd-104">By default, SAML tokens Windows Communication Foundation (WCF) uses in federated security scenarios are *issued tokens*.</span></span>  

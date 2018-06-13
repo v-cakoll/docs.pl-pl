@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491082"
 ---
 # <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a><span data-ttu-id="d69cd-102">Instrukcje: Wymiana komunikatów z punktami końcowymi programu WCF i aplikacjami do obsługi kolejek komunikatów</span><span class="sxs-lookup"><span data-stu-id="d69cd-102">How to: Exchange Messages with WCF Endpoints and Message Queuing Applications</span></span>
 <span data-ttu-id="d69cd-103">Istniejące aplikacje usługi kolejkowania komunikatów (MSMQ) można zintegrować z aplikacji Windows Communication Foundation (WCF), za pomocą powiązania integracji usługi MSMQ do przekonwertowania wiadomości usługi MSMQ do i z wiadomości WCF.</span><span class="sxs-lookup"><span data-stu-id="d69cd-103">You can integrate existing Message Queuing (MSMQ) applications with Windows Communication Foundation (WCF) applications by using the MSMQ integration binding to convert MSMQ messages to and from WCF messages.</span></span> <span data-ttu-id="d69cd-104">Dzięki temu można wywołują aplikacji odbiornika usługi MSMQ z klientów usługi WCF, a także wywołują usługi WCF z aplikacji nadawcy usługi MSMQ.</span><span class="sxs-lookup"><span data-stu-id="d69cd-104">This allows you to call into MSMQ receiver applications from WCF clients as well as call into WCF services from MSMQ sender applications.</span></span>  

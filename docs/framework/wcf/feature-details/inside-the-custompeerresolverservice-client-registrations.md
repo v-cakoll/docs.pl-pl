@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494059"
 ---
 # <a name="inside-the-custompeerresolverservice-client-registrations"></a><span data-ttu-id="066ef-102">Szczegóły usługi CustomPeerResolverService: rejestracje klienta</span><span class="sxs-lookup"><span data-stu-id="066ef-102">Inside the CustomPeerResolverService: Client Registrations</span></span>
 <span data-ttu-id="066ef-103">Każdy węzeł w siatce publikuje informacji o punkcie końcowym usługi rozpoznawania nazw za pomocą `Register` funkcji.</span><span class="sxs-lookup"><span data-stu-id="066ef-103">Each node in the mesh publishes its endpoint information to the resolver service through the `Register` function.</span></span> <span data-ttu-id="066ef-104">Usługa rozpoznawania nazw przechowuje te informacje jako rekord rejestracji.</span><span class="sxs-lookup"><span data-stu-id="066ef-104">The resolver service stores this information as a registration record.</span></span> <span data-ttu-id="066ef-105">Ten rekord zawiera unikatowy identyfikator (RegistrationID) oraz informacje o punkcie końcowym (PeerNodeAddress) dla węzła.</span><span class="sxs-lookup"><span data-stu-id="066ef-105">This record contains a unique identifier (RegistrationID) and endpoint information (PeerNodeAddress) for the node.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518567"
 ---
 # <a name="application-settings-for-custom-controls"></a><span data-ttu-id="d8024-102">Ustawienia aplikacji dotyczące kontrolek niestandardowych</span><span class="sxs-lookup"><span data-stu-id="d8024-102">Application Settings for Custom Controls</span></span>
 <span data-ttu-id="d8024-103">Należy wykonać pewne zadania, aby zapewnić możliwość utrzymania ustawienia aplikacji, jeśli formanty są hostowane w aplikacjach innych firm Kontrolki niestandardowe.</span><span class="sxs-lookup"><span data-stu-id="d8024-103">You must complete certain tasks to give your custom controls the ability to persist application settings when the controls are hosted in third-party applications.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417404"
 ---
 # <a name="icordebugstepperdeactivate-method"></a><span data-ttu-id="2c26a-102">ICorDebugStepper::Deactivate — Metoda</span><span class="sxs-lookup"><span data-stu-id="2c26a-102">ICorDebugStepper::Deactivate Method</span></span>
 <span data-ttu-id="2c26a-103">Powoduje to ICorDebugStepper — anulować ostatnie polecenie krok, który otrzymał.</span><span class="sxs-lookup"><span data-stu-id="2c26a-103">Causes this ICorDebugStepper to cancel the last step command that it received.</span></span>  

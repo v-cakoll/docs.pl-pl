@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494611"
 ---
 # <a name="peer-resolvers"></a><span data-ttu-id="d7d45-102">Mechanizmy rozpoznawania elementów równorzędnych</span><span class="sxs-lookup"><span data-stu-id="d7d45-102">Peer Resolvers</span></span>
 <span data-ttu-id="d7d45-103">Aby można było nawiązać siatkę, węzła równorzędnego wymaga adresów IP innych węzłów.</span><span class="sxs-lookup"><span data-stu-id="d7d45-103">In order to connect to a mesh, a peer node requires the IP addresses of other nodes.</span></span> <span data-ttu-id="d7d45-104">Adresy IP są uzyskiwane poprzez bezpośredni kontakt z usługi rozpoznawania nazw, która przyjmuje identyfikator sieci i zwraca listę adresów odpowiadającego do węzłów w zarejestrowany ten identyfikator określonego siatki.</span><span class="sxs-lookup"><span data-stu-id="d7d45-104">IP addresses are obtained by contacting a resolver service, which takes the mesh ID and returns a list of addresses corresponding to nodes registered with that particular mesh ID.</span></span> <span data-ttu-id="d7d45-105">Mechanizm rozpoznawania przechowuje listę zarejestrowanych adresów, które tworzy się przez każdy węzeł w siatce przeprowadzić rejestrację w usłudze.</span><span class="sxs-lookup"><span data-stu-id="d7d45-105">The resolver keeps a list of registered addresses, which it creates by having each node in the mesh register with the service.</span></span>  

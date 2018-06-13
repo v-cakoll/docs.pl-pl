@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431370"
 ---
 # <a name="isymunmanageddocumentgeturl-method"></a><span data-ttu-id="339ae-102">ISymUnmanagedDocument::GetURL — Metoda</span><span class="sxs-lookup"><span data-stu-id="339ae-102">ISymUnmanagedDocument::GetURL Method</span></span>
 <span data-ttu-id="339ae-103">Zwraca adres URL (adres URL) dla tego dokumentu.</span><span class="sxs-lookup"><span data-stu-id="339ae-103">Returns the uniform resource locator (URL) for this document.</span></span>  

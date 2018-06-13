@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496689"
 ---
 # <a name="messaging-activities"></a><span data-ttu-id="e775b-102">Działania dotyczące komunikatów</span><span class="sxs-lookup"><span data-stu-id="e775b-102">Messaging Activities</span></span>
 <span data-ttu-id="e775b-103">Zezwalaj na działania obsługi komunikatów przepływy pracy w celu wysyłania i odbierania wiadomości WCF.</span><span class="sxs-lookup"><span data-stu-id="e775b-103">Messaging activities allow workflows to send and receive WCF messages.</span></span> <span data-ttu-id="e775b-104">Przez dodanie obsługi komunikatów działań w przepływie pracy można modelu żadnych wiadomości arbitralnie złożonych wzorców programu exchange (MEP).</span><span class="sxs-lookup"><span data-stu-id="e775b-104">By adding messaging activities to a workflow you can model any arbitrarily complex message exchange patterns (MEP).</span></span>  

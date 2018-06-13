@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495083"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a><span data-ttu-id="f56eb-102">Plik ReadMe dla uwierzytelniania na potrzeby zabezpieczeń rozszerzonych — przykład</span><span class="sxs-lookup"><span data-stu-id="f56eb-102">ReadMe for Extended Protection Authentication Sample</span></span>
 <span data-ttu-id="f56eb-103">Ochrona rozszerzona jest inicjatywą zabezpieczeń do ochrony przed man-in--middle (MITM) ataków, w których osoba atakująca ("man-in--middle") przechwytuje poświadczenia klienta i używa ich do uzyskiwania dostępu bezpiecznych zasobów na serwerze danego klienta.</span><span class="sxs-lookup"><span data-stu-id="f56eb-103">Extended Protection is a security initiative to protect against man-in-the-middle (MITM) attacks, in which an attacker (the "man-in-the-middle") intercepts a client’s credentials and uses them to access secure resources on the client’s intended server.</span></span>  

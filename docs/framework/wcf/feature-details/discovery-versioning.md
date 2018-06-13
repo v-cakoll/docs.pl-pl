@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489183"
 ---
 # <a name="discovery-versioning"></a><span data-ttu-id="4f540-102">Przechowywanie wersji odnajdywania</span><span class="sxs-lookup"><span data-stu-id="4f540-102">Discovery Versioning</span></span>
 <span data-ttu-id="4f540-103">Ten temat zawiera krótki przegląd wdrożenia niektóre nowe funkcje odnajdywania.</span><span class="sxs-lookup"><span data-stu-id="4f540-103">This topic provides a brief overview of the implementation of some new discovery features.</span></span> <span data-ttu-id="4f540-104">Również zawiera omówienie dotyczące wybierz wersję odnajdywania do użycia.</span><span class="sxs-lookup"><span data-stu-id="4f540-104">It also gives an overview on how to select the discovery version to use.</span></span>  

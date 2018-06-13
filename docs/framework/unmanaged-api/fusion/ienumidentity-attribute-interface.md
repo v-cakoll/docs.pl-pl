@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431704"
 ---
 # <a name="ienumidentityattribute-interface"></a><span data-ttu-id="bb45d-102">IEnumIDENTITY_ATTRIBUTE — Interfejs</span><span class="sxs-lookup"><span data-stu-id="bb45d-102">IEnumIDENTITY_ATTRIBUTE Interface</span></span>
 <span data-ttu-id="bb45d-103">Służy jako moduł wyliczający dla atrybutów obiektu kodu w bieżącym zakresie.</span><span class="sxs-lookup"><span data-stu-id="bb45d-103">Serves as an enumerator for the attributes of the code object in the current scope.</span></span>  

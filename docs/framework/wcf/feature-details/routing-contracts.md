@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494257"
 ---
 # <a name="routing-contracts"></a><span data-ttu-id="a3a01-102">Kontrakty routingu</span><span class="sxs-lookup"><span data-stu-id="a3a01-102">Routing Contracts</span></span>
 <span data-ttu-id="a3a01-103">Kontrakty routingu zdefiniuj wzorce wiadomości, które może przetworzyć usługi routingu.</span><span class="sxs-lookup"><span data-stu-id="a3a01-103">Routing contracts define the message patterns that the Routing Service can process.</span></span>  <span data-ttu-id="a3a01-104">Każdej umowy jest bez typu i umożliwia usłudze komunikat bez wiedzy o schematu wiadomości lub akcji.</span><span class="sxs-lookup"><span data-stu-id="a3a01-104">Each contract is typeless and allows the service to receive a message without knowledge of the message schema or action.</span></span> <span data-ttu-id="a3a01-105">Dzięki temu usługa routingu objęty rozesłać komunikaty bez dodatkowej konfiguracji, aby uzyskać szczegółowe informacje na temat podstawowej wiadomości przesyłane.</span><span class="sxs-lookup"><span data-stu-id="a3a01-105">This allows the Routing Service to generically route messages without additional configuration for the specifics of the underlying messages being routed.</span></span>  

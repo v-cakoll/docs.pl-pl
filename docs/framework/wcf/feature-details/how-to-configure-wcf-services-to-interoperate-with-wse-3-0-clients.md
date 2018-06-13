@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495112"
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a><span data-ttu-id="6a4ae-102">Instrukcje: Konfigurowanie usług WCF pod kątem współdziałania z klientami programu WSE 3.0</span><span class="sxs-lookup"><span data-stu-id="6a4ae-102">How to: Configure WCF Services to Interoperate with WSE 3.0 Clients</span></span>
 <span data-ttu-id="6a4ae-103">Usługi Windows Communication Foundation (WCF) są zgodne poziom danych przesyłanych w sieci z 3.0 rozszerzenia usługi sieci Web dla klientów programu Microsoft .NET (WSE) po skonfigurowaniu usługi WCF do użycia wersja sierpnia 2004 specyfikacji WS-Addressing.</span><span class="sxs-lookup"><span data-stu-id="6a4ae-103">Windows Communication Foundation (WCF) services are wire-level compatible with Web Services Enhancements 3.0 for Microsoft .NET (WSE) clients when WCF services are configured to use the August 2004 version of the WS-Addressing specification.</span></span>  

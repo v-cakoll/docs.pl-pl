@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439651"
 ---
 # <a name="iclrtaskmanagercreatetask-method"></a><span data-ttu-id="bfb25-102">ICLRTaskManager::CreateTask — Metoda</span><span class="sxs-lookup"><span data-stu-id="bfb25-102">ICLRTaskManager::CreateTask Method</span></span>
 <span data-ttu-id="bfb25-103">Żąda jawnie, czy środowisko uruchomieniowe języka wspólnego (CLR) umożliwia utworzenie nowego zadania.</span><span class="sxs-lookup"><span data-stu-id="bfb25-103">Requests explicitly that the common language runtime (CLR) create a new task.</span></span>  

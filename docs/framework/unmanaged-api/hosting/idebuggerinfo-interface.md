@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438743"
 ---
 # <a name="idebuggerinfo-interface"></a><span data-ttu-id="4f9e8-102">IDebuggerInfo — Interfejs</span><span class="sxs-lookup"><span data-stu-id="4f9e8-102">IDebuggerInfo Interface</span></span>
 <span data-ttu-id="4f9e8-103">Udostępnia metody uzyskiwania informacji na temat stanu usług debugowania.</span><span class="sxs-lookup"><span data-stu-id="4f9e8-103">Provides methods for obtaining information about the state of the debugging services.</span></span>  

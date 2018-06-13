@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579239"
 ---
 # <a name="custom-numeric-format-strings"></a><span data-ttu-id="72cb1-102">Niestandardowe ciągi formatujące liczby</span><span class="sxs-lookup"><span data-stu-id="72cb1-102">Custom Numeric Format Strings</span></span>
 <span data-ttu-id="72cb1-103">Można utworzyć ciąg niestandardowego formatu liczb, który składa się z jednego lub większej liczby niestandardowych specyfikatorów liczbowych, aby zdefiniować sposób formatowania danych liczbowych.</span><span class="sxs-lookup"><span data-stu-id="72cb1-103">You can create a custom numeric format string, which consists of one or more custom numeric specifiers, to define how to format numeric data.</span></span> <span data-ttu-id="72cb1-104">Ciąg niestandardowego formatu liczbowego jest dowolny ciąg formatu, który nie jest [ciągu standardowego formatu liczbowego](../../../docs/standard/base-types/standard-numeric-format-strings.md).</span><span class="sxs-lookup"><span data-stu-id="72cb1-104">A custom numeric format string is any format string that is not a [standard numeric format string](../../../docs/standard/base-types/standard-numeric-format-strings.md).</span></span>  

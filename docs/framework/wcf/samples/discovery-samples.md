@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500847"
 ---
 # <a name="discovery-samples"></a><span data-ttu-id="d8648-102">Odnajdywanie (przykłady)</span><span class="sxs-lookup"><span data-stu-id="d8648-102">Discovery (Samples)</span></span>
 <span data-ttu-id="d8648-103">Ta sekcja zawiera przykłady powiązanych z tą funkcją odnajdywania.</span><span class="sxs-lookup"><span data-stu-id="d8648-103">This section contains samples related to the Discovery feature.</span></span>  

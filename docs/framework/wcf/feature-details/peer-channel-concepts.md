@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491027"
 ---
 # <a name="peer-channel-concepts"></a><span data-ttu-id="766b2-102">Pojęcia kanałów równorzędnych</span><span class="sxs-lookup"><span data-stu-id="766b2-102">Peer Channel Concepts</span></span>
 <span data-ttu-id="766b2-103">W tej sekcji krótko opisano pojęcia, które tworzą kanału równorzędnego Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="766b2-103">This section briefly explains the concepts that make up the Windows Communication Foundation (WCF) Peer Channel.</span></span>  

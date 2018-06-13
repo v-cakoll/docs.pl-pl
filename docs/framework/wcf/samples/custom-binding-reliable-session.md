@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500766"
 ---
 # <a name="custom-binding-reliable-session"></a><span data-ttu-id="8d3cd-102">Sesja niezawodna powiązania niestandardowego</span><span class="sxs-lookup"><span data-stu-id="8d3cd-102">Custom Binding Reliable Session</span></span>
 <span data-ttu-id="8d3cd-103">Wiązanie niestandardowe jest zdefiniowana przez uporządkowaną listę elementów wiązania odrębny.</span><span class="sxs-lookup"><span data-stu-id="8d3cd-103">A custom binding is defined by an ordered list of discrete binding elements.</span></span> <span data-ttu-id="8d3cd-104">W tym przykładzie pokazano, jak skonfigurować niestandardowego powiązania z różnymi transportu i komunikat kodowania elementów, szczególnie Włączanie niezawodnej sesji.</span><span class="sxs-lookup"><span data-stu-id="8d3cd-104">This sample demonstrates how to configure a custom binding with various transport and message encoding elements, especially enabling reliable sessions.</span></span>  

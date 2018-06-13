@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492401"
 ---
 # <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a><span data-ttu-id="accd8-102">Instrukcje: Używanie programu Svcutil.exe do pobierania dokumentów metadanych</span><span class="sxs-lookup"><span data-stu-id="accd8-102">How to: Use Svcutil.exe to Download Metadata Documents</span></span>
 <span data-ttu-id="accd8-103">Svcutil.exe służy do pobierania metadanych z uruchomionymi usługami i zapisać metadanych do plików lokalnych.</span><span class="sxs-lookup"><span data-stu-id="accd8-103">You can use Svcutil.exe to download metadata from running services and to save the metadata to local files.</span></span> <span data-ttu-id="accd8-104">Schematy HTTP i HTTPS URL, aby uzyskać Svcutil.exe próbuje pobrać metadanych za pomocą usługi WS-MetadataExchange i [odnajdowanie usługi XML sieci Web](http://go.microsoft.com/fwlink/?LinkId=94950).</span><span class="sxs-lookup"><span data-stu-id="accd8-104">For HTTP and HTTPS URL schemes, Svcutil.exe attempts to retrieve metadata using WS-MetadataExchange and [XML Web Service Discovery](http://go.microsoft.com/fwlink/?LinkId=94950).</span></span> <span data-ttu-id="accd8-105">W przypadku innych Schematy adresów URL Svcutil.exe używa tylko WS-MetadataExchange.</span><span class="sxs-lookup"><span data-stu-id="accd8-105">For all other URL schemes, Svcutil.exe uses only WS-MetadataExchange.</span></span>  

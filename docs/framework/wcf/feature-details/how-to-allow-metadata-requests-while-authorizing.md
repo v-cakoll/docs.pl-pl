@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489638"
 ---
 # <a name="how-to-allow-metadata-requests-while-authorizing"></a><span data-ttu-id="b7728-102">Instrukcje: Zezwalanie na żądania metadanych podczas autoryzowania</span><span class="sxs-lookup"><span data-stu-id="b7728-102">How To: Allow Metadata Requests While Authorizing</span></span>
 <span data-ttu-id="b7728-103">Podczas przeprowadzania niestandardowej autoryzacji może być konieczne Zezwalaj na żądania metadanych do przetworzenia.</span><span class="sxs-lookup"><span data-stu-id="b7728-103">During custom authorization, it may be necessary to allow a request for metadata to be processed.</span></span> <span data-ttu-id="b7728-104">Poniższy temat przeprowadzi Cię przez kroki, aby zweryfikować takie żądanie.</span><span class="sxs-lookup"><span data-stu-id="b7728-104">The following topic walks through the steps to validate such a request.</span></span>  

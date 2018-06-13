@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429830"
 ---
 # <a name="nukedownloadedcache-function"></a><span data-ttu-id="6fa33-102">NukeDownloadedCache — Funkcja</span><span class="sxs-lookup"><span data-stu-id="6fa33-102">NukeDownloadedCache Function</span></span>
 <span data-ttu-id="6fa33-103">Usuwa wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) pamięć podręczną pobierania.</span><span class="sxs-lookup"><span data-stu-id="6fa33-103">Deletes the common language runtime (CLR) download cache.</span></span>  

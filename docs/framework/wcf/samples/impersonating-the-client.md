@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505013"
 ---
 # <a name="impersonating-the-client"></a><span data-ttu-id="a78ff-102">Personifikowanie klienta</span><span class="sxs-lookup"><span data-stu-id="a78ff-102">Impersonating the Client</span></span>
 <span data-ttu-id="a78ff-103">Personifikacja — przykład pokazuje, jak dokonać personifikacji aplikacji obiektu wywołującego w usłudze, aby usługa może uzyskiwać dostęp do zasobów systemu imieniu wywołującego.</span><span class="sxs-lookup"><span data-stu-id="a78ff-103">The Impersonation sample demonstrates how to impersonate the caller application at the service so that the service can access system resources on behalf of the caller.</span></span>  

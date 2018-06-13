@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756322"
 ---
 # <a name="ltargumentgt"></a><span data-ttu-id="fd8a8-102">&lt;Argument&gt;</span><span class="sxs-lookup"><span data-stu-id="fd8a8-102">&lt;argument&gt;</span></span>
 <span data-ttu-id="fd8a8-103">Element konfiguracji, który reprezentuje argumentu skojarzonych z kwerendą stanu działania.</span><span class="sxs-lookup"><span data-stu-id="fd8a8-103">A configuration element that represents an argument associated with an activity state query.</span></span>  

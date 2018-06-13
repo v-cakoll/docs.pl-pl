@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494982"
 ---
 # <a name="how-to-create-a-transactional-service"></a><span data-ttu-id="30f8a-102">Instrukcje: Tworzenie usługi transakcyjnej</span><span class="sxs-lookup"><span data-stu-id="30f8a-102">How to: Create a Transactional Service</span></span>
 <span data-ttu-id="30f8a-103">W tym przykładzie przedstawiono różne aspekty Tworzenie usługi transakcyjnej i użycie transakcji inicjowanych przez klienta do koordynowania operacji usługi.</span><span class="sxs-lookup"><span data-stu-id="30f8a-103">This sample demonstrates various aspects of creating a transactional service and the use of a client-initiated transaction to coordinate service operations.</span></span>  

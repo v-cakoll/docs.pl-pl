@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493606"
 ---
 # <a name="how-to-error-handling"></a><span data-ttu-id="d4129-102">Porady: Obsługa błędów</span><span class="sxs-lookup"><span data-stu-id="d4129-102">How To: Error Handling</span></span>
 <span data-ttu-id="d4129-103">W tym temacie przedstawiono podstawowe czynności wymagane do utworzenia konfiguracji routingu, która używa obsługi błędów.</span><span class="sxs-lookup"><span data-stu-id="d4129-103">This topic outlines the basic steps required to create a routing configuration that uses error handling.</span></span> <span data-ttu-id="d4129-104">W tym przykładzie wiadomości są kierowane do docelowego punktu końcowego.</span><span class="sxs-lookup"><span data-stu-id="d4129-104">In this example, messages are routed to a destination endpoint.</span></span> <span data-ttu-id="d4129-105">Jeśli nie można dostarczyć komunikatu z powodu sieci lub błąd związany z łączności (<xref:System.ServiceModel.CommunicationException>), wiadomość jest ponowne wysłanie do punktu końcowego alternatywny.</span><span class="sxs-lookup"><span data-stu-id="d4129-105">If a message cannot be delivered due to a network or communications-related failure (<xref:System.ServiceModel.CommunicationException>), the message is resent to an alternate endpoint.</span></span>  

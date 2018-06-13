@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490737"
 ---
 # <a name="how-to-configure-tracking-with-workflowservicehost"></a><span data-ttu-id="8e5b2-102">Porady: Konfigurowanie śledzenia przy użyciu klasy WorkflowServiceHost</span><span class="sxs-lookup"><span data-stu-id="8e5b2-102">How to: Configure Tracking with WorkflowServiceHost</span></span>
 <span data-ttu-id="8e5b2-103">W tym temacie opisano sposób konfigurowania śledzenia dla [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] przepływu pracy hostowanych w <xref:System.ServiceModel.Activities.WorkflowServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="8e5b2-103">This topic explains how to configure tracking for a [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] workflow hosted in <xref:System.ServiceModel.Activities.WorkflowServiceHost>.</span></span> <span data-ttu-id="8e5b2-104">Jest on skonfigurowany za pomocą pliku Web.config, określając zachowanie usługi.</span><span class="sxs-lookup"><span data-stu-id="8e5b2-104">It is configured through a Web.config file by specifying a service behavior.</span></span>  

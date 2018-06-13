@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271032"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="8622b-103">.</span><span class="sxs-lookup"><span data-stu-id="8622b-103">.</span></span> <span data-ttu-id="8622b-104">Operator (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="8622b-104">Operator (C# Reference)</span></span>
 <span data-ttu-id="8622b-105">Operator kropki (`.`) służy do uzyskiwania dostępu do elementu członkowskiego.</span><span class="sxs-lookup"><span data-stu-id="8622b-105">The dot operator (`.`) is used for member access.</span></span> <span data-ttu-id="8622b-106">Określa on element członkowski typu lub przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="8622b-106">The dot operator specifies a member of a type or namespace.</span></span> <span data-ttu-id="8622b-107">Operator kropki umożliwia na przykład dostęp do określonych metod w ramach biblioteki klas .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="8622b-107">For example, the dot operator is used to access specific methods within the .NET Framework class libraries:</span></span>  

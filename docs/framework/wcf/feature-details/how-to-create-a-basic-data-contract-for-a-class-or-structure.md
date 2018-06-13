@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490071"
 ---
 # <a name="how-to-create-a-basic-data-contract-for-a-class-or-structure"></a><span data-ttu-id="5fe41-102">Instrukcje: Tworzenie podstawowego kontraktu danych dla klasy lub struktury</span><span class="sxs-lookup"><span data-stu-id="5fe41-102">How to: Create a Basic Data Contract for a Class or Structure</span></span>
 <span data-ttu-id="5fe41-103">W tym temacie przedstawiono podstawowe kroki, aby utworzyć kontrakt danych przy użyciu klasy lub struktury.</span><span class="sxs-lookup"><span data-stu-id="5fe41-103">This topic shows the basic steps to create a data contract using a class or structure.</span></span> <span data-ttu-id="5fe41-104">Aby uzyskać więcej informacji na temat kontraktów danych i sposobu ich używania, zobacz [za pomocą kontraktów danych](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).</span><span class="sxs-lookup"><span data-stu-id="5fe41-104">For more information about data contracts and how they are used, see [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).</span></span>  

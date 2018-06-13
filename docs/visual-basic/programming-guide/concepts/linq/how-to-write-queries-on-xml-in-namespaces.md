@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645567"
 ---
 # <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a><span data-ttu-id="42b45-102">Porady: Pisanie zapytań na kod XML w przestrzeni nazw (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="42b45-102">How to: Write Queries on XML in Namespaces (Visual Basic)</span></span>
 <span data-ttu-id="42b45-103">Aby napisać zapytanie na języku XML, który znajduje się w przestrzeni nazw, należy użyć <xref:System.Xml.Linq.XName> obiektów, które mają poprawną przestrzeń nazw.</span><span class="sxs-lookup"><span data-stu-id="42b45-103">To write a query on XML that is in a namespace, you must use <xref:System.Xml.Linq.XName> objects that have the correct namespace.</span></span>  

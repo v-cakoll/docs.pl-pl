@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643526"
 ---
 # <a name="how-to-catch-parsing-errors-visual-basic"></a><span data-ttu-id="e28d9-102">Porady: Catch analizowanie błędów (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e28d9-102">How to: Catch Parsing Errors (Visual Basic)</span></span>
 <span data-ttu-id="e28d9-103">W tym temacie przedstawiono sposób wykrywania źle sformułowany lub nieprawidłowy XML.</span><span class="sxs-lookup"><span data-stu-id="e28d9-103">This topic shows how to detect badly formed or invalid XML.</span></span>  

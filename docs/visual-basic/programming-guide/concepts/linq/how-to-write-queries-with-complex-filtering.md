@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645866"
 ---
 # <a name="how-to-write-queries-with-complex-filtering-visual-basic"></a><span data-ttu-id="7f0f7-102">Porady: pisać zapytania z złożone filtrowanie (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7f0f7-102">How to: Write Queries with Complex Filtering (Visual Basic)</span></span>
 <span data-ttu-id="7f0f7-103">Czasami chcesz zapisać LINQ do XML zapytania z złożonych filtrów.</span><span class="sxs-lookup"><span data-stu-id="7f0f7-103">Sometimes you want to write LINQ to XML queries with complex filters.</span></span> <span data-ttu-id="7f0f7-104">Na przykład może być konieczne Znajdź wszystkie elementy, które ma element podrzędny o określonej nazwie i wartości.</span><span class="sxs-lookup"><span data-stu-id="7f0f7-104">For example, you might have to find all elements that have a child element with a particular name and value.</span></span> <span data-ttu-id="7f0f7-105">W tym temacie przedstawiono przykładowy Pisanie zapytań za pomocą filtrowania złożonych.</span><span class="sxs-lookup"><span data-stu-id="7f0f7-105">This topic gives an example of writing a query with complex filtering.</span></span>  

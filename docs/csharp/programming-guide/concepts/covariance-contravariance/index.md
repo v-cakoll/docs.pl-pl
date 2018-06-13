@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334090"
 ---
 # <a name="covariance-and-contravariance-c"></a><span data-ttu-id="9f250-102">Kowariancja i Kontrawariancja (C#)</span><span class="sxs-lookup"><span data-stu-id="9f250-102">Covariance and Contravariance (C#)</span></span>
 <span data-ttu-id="9f250-103">Kowariancja i kontrawariancja w języku C#, Włącz niejawnej konwersji odwołania dla tablic, typów delegowanych i argumentów typu ogólnego.</span><span class="sxs-lookup"><span data-stu-id="9f250-103">In C#, covariance and contravariance enable implicit reference conversion for array types, delegate types, and generic type arguments.</span></span> <span data-ttu-id="9f250-104">Kowariancja zachowuje zgodność przypisania i kontrawariancja odwraca go.</span><span class="sxs-lookup"><span data-stu-id="9f250-104">Covariance preserves assignment compatibility and contravariance reverses it.</span></span>  

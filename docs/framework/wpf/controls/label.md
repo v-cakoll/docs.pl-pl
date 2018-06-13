@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553731"
 ---
 # <a name="label"></a><span data-ttu-id="85086-102">Etykieta</span><span class="sxs-lookup"><span data-stu-id="85086-102">Label</span></span>
 <span data-ttu-id="85086-103"><xref:System.Windows.Controls.Label> Formanty zwykle zawierają informacje w [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].</span><span class="sxs-lookup"><span data-stu-id="85086-103"><xref:System.Windows.Controls.Label> controls usually provide information in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].</span></span>  <span data-ttu-id="85086-104">W przeszłości <xref:System.Windows.Controls.Label> ma zawiera tylko tekst, ale ponieważ <xref:System.Windows.Controls.Label> który jest dostarczany z [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] jest <xref:System.Windows.Controls.ContentControl>, może zawierać text lub <xref:System.Windows.UIElement>.</span><span class="sxs-lookup"><span data-stu-id="85086-104">Historically, a <xref:System.Windows.Controls.Label> has contained only text, but because the <xref:System.Windows.Controls.Label> that ships with [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] is a <xref:System.Windows.Controls.ContentControl>, it can contain either text or a <xref:System.Windows.UIElement>.</span></span>  

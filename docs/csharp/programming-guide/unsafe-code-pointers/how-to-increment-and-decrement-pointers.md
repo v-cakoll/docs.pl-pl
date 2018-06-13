@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324288"
 ---
 # <a name="how-to-increment-and-decrement-pointers-c-programming-guide"></a><span data-ttu-id="7b79f-102">Porady: inkrementacja i dekrementacja wskaźników (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="7b79f-102">How to: Increment and Decrement Pointers (C# Programming Guide)</span></span>
 <span data-ttu-id="7b79f-103">Użyj inkrementacji i dekrementacji, `++` i `--`, aby zmienić lokalizację wskaźnika przez [sizeof](../../../csharp/language-reference/keywords/sizeof.md) (`pointer-type`) dla wskaźnika typu wskaźnika — typ \*.</span><span class="sxs-lookup"><span data-stu-id="7b79f-103">Use the increment and the decrement operators, `++` and `--`, to change the pointer location by [sizeof](../../../csharp/language-reference/keywords/sizeof.md) (`pointer-type`) for a pointer of type pointer-type\*.</span></span> <span data-ttu-id="7b79f-104">Inkrementacja i dekrementacja wyrażeń mieć następującą formę:</span><span class="sxs-lookup"><span data-stu-id="7b79f-104">The increment and decrement expressions take the following form:</span></span>  

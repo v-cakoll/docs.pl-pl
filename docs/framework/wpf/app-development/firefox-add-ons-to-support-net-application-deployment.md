@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547446"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a><span data-ttu-id="e8969-102">Dodatki Firefox wspierające wdrożenie aplikacji .NET</span><span class="sxs-lookup"><span data-stu-id="e8969-102">Firefox Add-ons to Support .NET Application Deployment</span></span>
 <span data-ttu-id="e8969-103">Włącz Windows Presentation Foundation (WPF) dodatek plug-in dla przeglądarki Firefox i .NET Framework Assistant dla przeglądarki Firefox [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)], utracić [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]i ClickOnce — aplikacje do pracy z przeglądarki Mozilla Firefox.</span><span class="sxs-lookup"><span data-stu-id="e8969-103">The Windows Presentation Foundation (WPF) plug-in for Firefox and the .NET Framework Assistant for Firefox enable [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)], loose [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], and ClickOnce applications to work with the Mozilla Firefox browser.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33314330"
 ---
 # <a name="fields-c-programming-guide"></a><span data-ttu-id="164ea-102">Pola (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="164ea-102">Fields (C# Programming Guide)</span></span>
 <span data-ttu-id="164ea-103">A *pola* jest zmienną dowolnego typu, która jest zadeklarowana jako bezpośrednio w [klasy](../../../csharp/language-reference/keywords/class.md) lub [struktury](../../../csharp/language-reference/keywords/struct.md).</span><span class="sxs-lookup"><span data-stu-id="164ea-103">A *field* is a variable of any type that is declared directly in a [class](../../../csharp/language-reference/keywords/class.md) or [struct](../../../csharp/language-reference/keywords/struct.md).</span></span> <span data-ttu-id="164ea-104">Pola są *członków* ich typu zawierającego.</span><span class="sxs-lookup"><span data-stu-id="164ea-104">Fields are *members* of their containing type.</span></span>  

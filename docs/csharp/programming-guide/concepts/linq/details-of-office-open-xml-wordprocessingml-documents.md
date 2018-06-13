@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326722"
 ---
 # <a name="details-of-office-open-xml-wordprocessingml-documents-c"></a><span data-ttu-id="4a1fd-102">Szczegóły pakietu Office otwieranie dokumentów schemat WordprocessingML XML (C#)</span><span class="sxs-lookup"><span data-stu-id="4a1fd-102">Details of Office Open XML WordprocessingML Documents (C#)</span></span>
 <span data-ttu-id="4a1fd-103">Ta sekcja zawiera informacje o szczegółach dokumenty schemat WordprocessingML Office Open XML.</span><span class="sxs-lookup"><span data-stu-id="4a1fd-103">This section provides information about the details of Office Open XML WordprocessingML documents.</span></span> <span data-ttu-id="4a1fd-104">Przedstawia on przykłady dokumentu i styl części dokumentu Open XML.</span><span class="sxs-lookup"><span data-stu-id="4a1fd-104">It shows examples of the document and style parts of an Open XML document.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333976"
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a><span data-ttu-id="afcc1-102">Porady: deklarowanie, tworzenie wystąpień i użycie delegowania (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="afcc1-102">How to: Declare, Instantiate, and Use a Delegate (C# Programming Guide)</span></span>
 <span data-ttu-id="afcc1-103">W języku C# 1.0 lub nowszego oraz delegatów mogą być deklarowane, jak pokazano w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="afcc1-103">In C# 1.0 and later, delegates can be declared as shown in the following example.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546598"
 ---
 # <a name="optimizing-performance-application-resources"></a><span data-ttu-id="fe55a-102">Optymalizacja wydajności: zasoby aplikacji</span><span class="sxs-lookup"><span data-stu-id="fe55a-102">Optimizing Performance: Application Resources</span></span>
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="fe55a-103"> pozwala na udostępnianie zasobów aplikacji tak, aby między wpisane podobne elementy można obsługiwać spójny wygląd i zachowanie.</span><span class="sxs-lookup"><span data-stu-id="fe55a-103"> allows you to share application resources so that you can support a consistent look or behavior across similar-typed elements.</span></span> <span data-ttu-id="fe55a-104">Ten temat zawiera kilka zaleceń w tym obszarze, to może pomóc zwiększyć wydajność aplikacji.</span><span class="sxs-lookup"><span data-stu-id="fe55a-104">This topic provides a few recommendations in this area that can help you improve the performance of your applications.</span></span>  

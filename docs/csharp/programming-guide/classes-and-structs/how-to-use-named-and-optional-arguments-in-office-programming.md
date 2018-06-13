@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321876"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a><span data-ttu-id="41c6a-102">Porady: użycie argumentów nazwanych i opcjonalnych w programowaniu Office (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="41c6a-102">How to: Use Named and Optional Arguments in Office Programming (C# Programming Guide)</span></span>
 <span data-ttu-id="41c6a-103">Nazwane argumenty i argumentów opcjonalnych, wprowadzone w systemie [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], zwiększenia wygody, elastyczność i możliwość odczytania w C# — programowanie.</span><span class="sxs-lookup"><span data-stu-id="41c6a-103">Named arguments and optional arguments, introduced in [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], enhance convenience, flexibility, and readability in C# programming.</span></span> <span data-ttu-id="41c6a-104">Ponadto te funkcje znacznie ułatwienia dostępu do interfejsów modelu COM, takich jak Microsoft Office automatyzacji interfejsów API.</span><span class="sxs-lookup"><span data-stu-id="41c6a-104">In addition, these features greatly facilitate access to COM interfaces such as the Microsoft Office automation APIs.</span></span>  

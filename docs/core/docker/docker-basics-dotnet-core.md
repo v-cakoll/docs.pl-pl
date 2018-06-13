@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218547"
 ---
 # <a name="learn-docker-basics-with-net-core"></a><span data-ttu-id="87708-103">Dowiedz się podstawy Docker z platformą .NET Core</span><span class="sxs-lookup"><span data-stu-id="87708-103">Learn Docker Basics with .NET Core</span></span>
 

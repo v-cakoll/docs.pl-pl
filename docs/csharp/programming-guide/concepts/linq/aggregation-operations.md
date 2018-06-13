@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319553"
 ---
 # <a name="aggregation-operations-c"></a><span data-ttu-id="57c98-102">Operacje agregacji (C#)</span><span class="sxs-lookup"><span data-stu-id="57c98-102">Aggregation Operations (C#)</span></span>
 <span data-ttu-id="57c98-103">Operacja agregacji oblicza pojedynczą wartość z kolekcji wartości.</span><span class="sxs-lookup"><span data-stu-id="57c98-103">An aggregation operation computes a single value from a collection of values.</span></span> <span data-ttu-id="57c98-104">Przykładem operacji agregacji oblicza średnią temperaturę codzienne z miesięcznej wartości dziennych temperatury.</span><span class="sxs-lookup"><span data-stu-id="57c98-104">An example of an aggregation operation is calculating the average daily temperature from a month's worth of daily temperature values.</span></span>  

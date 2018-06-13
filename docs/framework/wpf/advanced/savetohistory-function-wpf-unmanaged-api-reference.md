@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546217"
 ---
 # <a name="savetohistory-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="a3603-102">Funkcja SaveToHistory (WPF niezarządzany wykaz interfejsów API)</span><span class="sxs-lookup"><span data-stu-id="a3603-102">SaveToHistory Function (WPF Unmanaged API Reference)</span></span>
 <span data-ttu-id="a3603-103">Ten interfejs API obsługuje infrastrukturę programu Windows Presentation Foundation (WPF) i nie jest przeznaczona do użycia bezpośrednio w kodzie.</span><span class="sxs-lookup"><span data-stu-id="a3603-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  

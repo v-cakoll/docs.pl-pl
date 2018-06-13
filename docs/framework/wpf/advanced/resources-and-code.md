@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547550"
 ---
 # <a name="resources-and-code"></a><span data-ttu-id="45a35-102">Zasoby i kod</span><span class="sxs-lookup"><span data-stu-id="45a35-102">Resources and Code</span></span>
 <span data-ttu-id="45a35-103">To omówienie koncentruje się na temat [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zasobów można uzyskać dostępu do lub utworzone za pomocą kodu zamiast [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] składni.</span><span class="sxs-lookup"><span data-stu-id="45a35-103">This overview concentrates on how [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] resources can be accessed or created using  code rather than [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] syntax.</span></span> <span data-ttu-id="45a35-104">Aby uzyskać więcej informacji na temat użycia zasobów ogólne i zasoby z [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] perspektywy składni, zobacz [zasobów XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).</span><span class="sxs-lookup"><span data-stu-id="45a35-104">For more information on general resource usage and resources from a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] syntax perspective, see [XAML Resources](../../../../docs/framework/wpf/advanced/xaml-resources.md).</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546032"
 ---
 # <a name="properties-wpf"></a><span data-ttu-id="0f4ee-102">Właściwości (WPF)</span><span class="sxs-lookup"><span data-stu-id="0f4ee-102">Properties (WPF)</span></span>
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="0f4ee-103"> zapewnia to zestaw usług, których można użyć, aby rozszerzyć funkcjonalność programu [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] właściwości.</span><span class="sxs-lookup"><span data-stu-id="0f4ee-103"> provides a set of services that can be used to extend the functionality of a [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] property.</span></span> <span data-ttu-id="0f4ee-104">Zbiorczo te usługi są zwykle nazywane systemu właściwość WPF.</span><span class="sxs-lookup"><span data-stu-id="0f4ee-104">Collectively, these services are typically referred to as the WPF property system.</span></span> <span data-ttu-id="0f4ee-105">Właściwość, która nie jest obsługiwana przez [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] właściwości systemu jest znany jako właściwość zależności.</span><span class="sxs-lookup"><span data-stu-id="0f4ee-105">A property that is backed by the [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] property system is known as a dependency property.</span></span>  

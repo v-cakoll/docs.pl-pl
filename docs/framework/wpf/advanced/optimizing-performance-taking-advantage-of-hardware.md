@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547257"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a><span data-ttu-id="b04dc-102">Optymalizacja wydajności: wykorzystanie sprzętu</span><span class="sxs-lookup"><span data-stu-id="b04dc-102">Optimizing Performance: Taking Advantage of Hardware</span></span>
 <span data-ttu-id="b04dc-103">Architektura wewnętrzny [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ma dwa renderowania potoki, sprzętu i oprogramowania.</span><span class="sxs-lookup"><span data-stu-id="b04dc-103">The internal architecture of [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] has two rendering pipelines, hardware and software.</span></span> <span data-ttu-id="b04dc-104">Ten temat zawiera informacje o tych potoki renderowania podejmowanie decyzji o optymalizacji wydajności aplikacji.</span><span class="sxs-lookup"><span data-stu-id="b04dc-104">This topic provides information about these rendering pipelines to help you make decisions about performance optimizations of your applications.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325035"
 ---
 # <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a><span data-ttu-id="59f8f-102">Porady: strumienia fragmenty XML z dostępem do informacji w nagłówku (C#)</span><span class="sxs-lookup"><span data-stu-id="59f8f-102">How to: Stream XML Fragments with Access to Header Information (C#)</span></span>
 <span data-ttu-id="59f8f-103">Czasami trzeba arbitralnie duże pliki XML do odczytu i zapisu aplikacji, dzięki czemu zużycie pamięci aplikacji jest atrybutem wartości prognozowanych.</span><span class="sxs-lookup"><span data-stu-id="59f8f-103">Sometimes you have to read arbitrarily large XML files, and write your application so that the memory footprint of the application is predictable.</span></span> <span data-ttu-id="59f8f-104">Przy próbie wypełnić drzewo XML z dużego pliku XML, użycie pamięci będzie proporcjonalny do rozmiaru pliku — to znaczy nadmierne.</span><span class="sxs-lookup"><span data-stu-id="59f8f-104">If you attempt to populate an XML tree with a large XML file, your memory usage will be proportional to the size of the file—that is, excessive.</span></span> <span data-ttu-id="59f8f-105">W związku z tym należy w zamian użyj technika przesyłania strumieniowego.</span><span class="sxs-lookup"><span data-stu-id="59f8f-105">Therefore, you should use a streaming technique instead.</span></span>  

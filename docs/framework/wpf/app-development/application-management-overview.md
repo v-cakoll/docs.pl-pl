@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549714"
 ---
 # <a name="application-management-overview"></a><span data-ttu-id="67f13-102">Przegląd Zarządzanie aplikacjami</span><span class="sxs-lookup"><span data-stu-id="67f13-102">Application Management Overview</span></span>
 <span data-ttu-id="67f13-103">Wszystkie aplikacje zazwyczaj korzystają ze wspólnego zestawu funkcji, które stosuje się do zarządzania i wdrażania aplikacji.</span><span class="sxs-lookup"><span data-stu-id="67f13-103">All applications tend to share a common set of functionality that applies to application implementation and management.</span></span> <span data-ttu-id="67f13-104">Ten temat zawiera omówienie funkcji w <xref:System.Windows.Application> klasa do tworzenia aplikacji i zarządzanie nimi.</span><span class="sxs-lookup"><span data-stu-id="67f13-104">This topic provides an overview of the functionality in the <xref:System.Windows.Application> class for creating and managing applications.</span></span>  

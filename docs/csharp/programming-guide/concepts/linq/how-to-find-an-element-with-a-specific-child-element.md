@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323891"
 ---
 # <a name="how-to-find-an-element-with-a-specific-child-element-c"></a><span data-ttu-id="7e4c2-102">Porady: znajdowanie Element z elementu podrzędnego określonego (C#)</span><span class="sxs-lookup"><span data-stu-id="7e4c2-102">How to: Find an Element with a Specific Child Element (C#)</span></span>
 <span data-ttu-id="7e4c2-103">W tym temacie pokazano, jak można znaleźć określonego elementu, który ma element podrzędny o określonej wartości.</span><span class="sxs-lookup"><span data-stu-id="7e4c2-103">This topic shows how to find a particular element that has a child element with a specific value.</span></span>  

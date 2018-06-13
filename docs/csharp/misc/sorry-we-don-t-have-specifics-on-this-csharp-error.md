@@ -887,6 +887,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33314073"
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a><span data-ttu-id="bb181-102">Niestety, mamy ADAM&#39;t są dostępne szczegółowe informacje na temat tego błędu języka C#</span><span class="sxs-lookup"><span data-stu-id="bb181-102">Sorry, we don&#39;t have specifics on this C# error</span></span>
 <span data-ttu-id="bb181-103">Przepraszamy, ale nie mamy żadnych szczegółowych informacji o tym błędzie.</span><span class="sxs-lookup"><span data-stu-id="bb181-103">We’re sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="bb181-104">Możesz wyszukać numer błędu i treść komunikatu, aby znaleźć więcej informacji w sieci web.</span><span class="sxs-lookup"><span data-stu-id="bb181-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="bb181-105">Lub poproś inni deweloperzy przy użyciu jednej z tych fora:</span><span class="sxs-lookup"><span data-stu-id="bb181-105">Or you can ask other developers using one of these forums:</span></span>  

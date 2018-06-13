@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549545"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a><span data-ttu-id="f1eac-102">Mapowanie właściwości Windows Forms i WPF</span><span class="sxs-lookup"><span data-stu-id="f1eac-102">Windows Forms and WPF Property Mapping</span></span>
 <span data-ttu-id="f1eac-103">[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] technologii ma dwa modele inną właściwość.</span><span class="sxs-lookup"><span data-stu-id="f1eac-103">The [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] and [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] technologies have two similar but different property models.</span></span> <span data-ttu-id="f1eac-104">*Mapowanie właściwości* obsługuje współdziałanie między dwoma architektury i zapewnia następujące możliwości:</span><span class="sxs-lookup"><span data-stu-id="f1eac-104">*Property mapping* supports interoperation between the two architectures and provides the following capabilities:</span></span>  

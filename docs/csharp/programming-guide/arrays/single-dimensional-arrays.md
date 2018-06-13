@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313956"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a><span data-ttu-id="5a9ab-102">Tablice jednowymiarowe (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="5a9ab-102">Single-Dimensional Arrays (C# Programming Guide)</span></span>
 <span data-ttu-id="5a9ab-103">Można zadeklarować tablicy jednowymiarowej pięciu liczb całkowitych, jak pokazano w poniższym przykładzie:</span><span class="sxs-lookup"><span data-stu-id="5a9ab-103">You can declare a single-dimensional array of five integers as shown in the following example:</span></span>  

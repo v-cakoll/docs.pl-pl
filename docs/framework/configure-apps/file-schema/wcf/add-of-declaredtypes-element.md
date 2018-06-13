@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754122"
 ---
 # <a name="ltaddgt-of-ltdeclaredtypesgt-element"></a><span data-ttu-id="22d45-102">&lt;add&gt; w &lt;declaredTypes&gt;, element</span><span class="sxs-lookup"><span data-stu-id="22d45-102">&lt;add&gt; of &lt;declaredTypes&gt; Element</span></span>
 <span data-ttu-id="22d45-103">Dodaje typ używany przez <xref:System.Runtime.Serialization.DataContractSerializer> podczas deserializacji.</span><span class="sxs-lookup"><span data-stu-id="22d45-103">Adds a type used by the <xref:System.Runtime.Serialization.DataContractSerializer> during deserialization.</span></span> <span data-ttu-id="22d45-104">Każdego rodzaju zawiera znane typy, które zostaną zwrócone jako pole lub właściwość deklarowanego typu.</span><span class="sxs-lookup"><span data-stu-id="22d45-104">Each declared type includes the known types that will be returned as a field or property of the declared type.</span></span>  

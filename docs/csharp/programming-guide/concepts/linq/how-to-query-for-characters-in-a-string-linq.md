@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323082"
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-c"></a><span data-ttu-id="e8422-102">Porady: zapytanie o znaki w ciągu (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="e8422-102">How to: Query for Characters in a String (LINQ) (C#)</span></span>
 <span data-ttu-id="e8422-103">Ponieważ <xref:System.String> klasa implementuje ogólnego <xref:System.Collections.Generic.IEnumerable%601> interfejsu, dowolny ciąg może być badana sekwencję znaków.</span><span class="sxs-lookup"><span data-stu-id="e8422-103">Because the <xref:System.String> class implements the generic <xref:System.Collections.Generic.IEnumerable%601> interface, any string can be queried as a sequence of characters.</span></span> <span data-ttu-id="e8422-104">Jednak nie jest typowym zastosowaniem zapytań LINQ.</span><span class="sxs-lookup"><span data-stu-id="e8422-104">However, this is not a common use of LINQ.</span></span> <span data-ttu-id="e8422-105">Złożone wzorzec dopasowany operacje, można użyć <xref:System.Text.RegularExpressions.Regex> klasy.</span><span class="sxs-lookup"><span data-stu-id="e8422-105">For complex pattern matching operations, use the <xref:System.Text.RegularExpressions.Regex> class.</span></span>  

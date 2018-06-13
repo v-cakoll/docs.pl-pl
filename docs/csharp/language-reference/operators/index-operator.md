@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33286032"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="cd2e5-102">Operator [] (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="cd2e5-102">[] Operator (C# Reference)</span></span>
 <span data-ttu-id="cd2e5-103">Nawiasy kwadratowe (`[]`) są używane do obsługi tablic, indeksatorów i atrybutów.</span><span class="sxs-lookup"><span data-stu-id="cd2e5-103">Square brackets (`[]`) are used for arrays, indexers, and attributes.</span></span> <span data-ttu-id="cd2e5-104">Mogą być również używane ze wskaźnikami.</span><span class="sxs-lookup"><span data-stu-id="cd2e5-104">They can also be used with pointers.</span></span>  

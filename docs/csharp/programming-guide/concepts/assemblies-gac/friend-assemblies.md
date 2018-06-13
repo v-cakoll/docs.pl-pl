@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320869"
 ---
 # <a name="friend-assemblies-c"></a><span data-ttu-id="ccab5-102">Przyjazne zestawy (C#)</span><span class="sxs-lookup"><span data-stu-id="ccab5-102">Friend Assemblies (C#)</span></span>
 <span data-ttu-id="ccab5-103">A *przyjaznego zestawu* jest zestawie, do którego mogą uzyskać dostęp do innego zestawu [wewnętrzny](../../../../csharp/language-reference/keywords/internal.md) typy i składniki.</span><span class="sxs-lookup"><span data-stu-id="ccab5-103">A *friend assembly* is an assembly that can access another assembly's [internal](../../../../csharp/language-reference/keywords/internal.md) types and members.</span></span> <span data-ttu-id="ccab5-104">Po zidentyfikowaniu zestawu jako zestawu friend, masz już Oznacz typy i składniki jako public je, aby były dostępne dla innych zestawów.</span><span class="sxs-lookup"><span data-stu-id="ccab5-104">If you identify an assembly as a friend assembly, you no longer have to mark types and members as public in order for them to be accessed by other assemblies.</span></span> <span data-ttu-id="ccab5-105">Jest to szczególnie wygodne w następujących scenariuszach:</span><span class="sxs-lookup"><span data-stu-id="ccab5-105">This is especially convenient in the following scenarios:</span></span>  

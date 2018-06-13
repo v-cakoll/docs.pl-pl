@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322133"
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-c"></a><span data-ttu-id="78b5e-102">Porady: lista wszystkich węzłów w drzewie (C#)</span><span class="sxs-lookup"><span data-stu-id="78b5e-102">How to: List All Nodes in a Tree (C#)</span></span>
 <span data-ttu-id="78b5e-103">Czasami jest przydatne do tworzenia listy wszystkich węzłów w drzewie.</span><span class="sxs-lookup"><span data-stu-id="78b5e-103">Sometimes it is helpful to list all nodes in a tree.</span></span> <span data-ttu-id="78b5e-104">Może to być przydatne podczas nauki, dokładnie tak jak metoda lub właściwość ma wpływ na drzewie.</span><span class="sxs-lookup"><span data-stu-id="78b5e-104">This can be useful when learning exactly how a method or property affects the tree.</span></span> <span data-ttu-id="78b5e-105">Jeden ze sposobów wyświetlania we wszystkich węzłach w postaci tekstowej polega na generowaniu XPath Wyrażenie identyfikujące dokładnie, a w szczególności dowolnego węzła drzewa.</span><span class="sxs-lookup"><span data-stu-id="78b5e-105">One approach to listing all nodes in a textual form is to generate an XPath expression that exactly and specifically identifies any node in the tree.</span></span>  

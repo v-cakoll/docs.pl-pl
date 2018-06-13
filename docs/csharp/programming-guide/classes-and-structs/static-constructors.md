@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33315714"
 ---
 # <a name="static-constructors-c-programming-guide"></a><span data-ttu-id="50a2e-102">Konstruktory statyczne (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="50a2e-102">Static Constructors (C# Programming Guide)</span></span>
 <span data-ttu-id="50a2e-103">Statyczny Konstruktor używany do inicjowania żadnego [statycznych](../../../csharp/language-reference/keywords/static.md) danych, lub wykonania określonej akcji, która musi zostać wykonana tylko raz.</span><span class="sxs-lookup"><span data-stu-id="50a2e-103">A static constructor is used to initialize any [static](../../../csharp/language-reference/keywords/static.md) data, or to perform a particular action that needs to be performed once only.</span></span> <span data-ttu-id="50a2e-104">Jest ona wywoływana automatycznie przed utworzeniu pierwszego wystąpienia lub odwołuje się żadnych statycznych elementów członkowskich.</span><span class="sxs-lookup"><span data-stu-id="50a2e-104">It is called automatically before the first instance is created or any static members are referenced.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319647"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a><span data-ttu-id="a439b-102">Porady: tworzenie i korzystanie z zestawów przy użyciu wiersza polecenia (C#)</span><span class="sxs-lookup"><span data-stu-id="a439b-102">How to: Create and Use Assemblies Using the Command Line (C#)</span></span>
 <span data-ttu-id="a439b-103">Zestaw lub dynamicznej biblioteki połączeń (DLL), jest połączony z programu w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="a439b-103">An assembly, or a dynamic linking library (DLL), is linked to your program at run time.</span></span> <span data-ttu-id="a439b-104">Aby zademonstrować, tworzenie i używanie biblioteki DLL, rozważmy następujący scenariusz:</span><span class="sxs-lookup"><span data-stu-id="a439b-104">To demonstrate building and using a DLL, consider the following scenario:</span></span>  

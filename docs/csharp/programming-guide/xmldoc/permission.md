@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321480"
 ---
 # <a name="ltpermissiongt-c-programming-guide"></a><span data-ttu-id="afc24-102">&lt;uprawnienie&gt; (C# przewodnik programowania w języku)</span><span class="sxs-lookup"><span data-stu-id="afc24-102">&lt;permission&gt; (C# Programming Guide)</span></span>
 ## <a name="syntax"></a><span data-ttu-id="afc24-103">Składnia</span><span class="sxs-lookup"><span data-stu-id="afc24-103">Syntax</span></span>  

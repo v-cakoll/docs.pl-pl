@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322786"
 ---
 # <a name="how-to-write-a-linq-to-xml-axis-method-c"></a><span data-ttu-id="eaaa3-102">Porady: pisanie LINQ do metody osi XML (C#)</span><span class="sxs-lookup"><span data-stu-id="eaaa3-102">How to: Write a LINQ to XML Axis Method (C#)</span></span>
 <span data-ttu-id="eaaa3-103">Można pisać własne osi metody do pobierania kolekcji z drzewa XML.</span><span class="sxs-lookup"><span data-stu-id="eaaa3-103">You can write your own axis methods to retrieve collections from an XML tree.</span></span> <span data-ttu-id="eaaa3-104">Najlepsze sposoby, w tym celu jest napisanie metody rozszerzenia, która zwraca kolekcję elementów lub atrybutów.</span><span class="sxs-lookup"><span data-stu-id="eaaa3-104">One of the best ways to do this is to write an extension method that returns a collection of elements or attributes.</span></span> <span data-ttu-id="eaaa3-105">Można napisać metodę rozszerzenie do zwrócenia podzbiór elementów lub atrybutów, w zależności od wymagań aplikacji.</span><span class="sxs-lookup"><span data-stu-id="eaaa3-105">You can write your extension method to return specific subsets of elements or attributes, based on the requirements of your application.</span></span>  

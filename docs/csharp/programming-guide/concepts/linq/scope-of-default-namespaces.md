@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330099"
 ---
 # <a name="scope-of-default-namespaces-in-c"></a><span data-ttu-id="d7d1b-102">Zakres domyślne obszary nazw w języku C#</span><span class="sxs-lookup"><span data-stu-id="d7d1b-102">Scope of Default Namespaces in C#</span></span>
 <span data-ttu-id="d7d1b-103">Domyślne obszary nazw reprezentowany w drzewie XML nie są w zakresie zapytania.</span><span class="sxs-lookup"><span data-stu-id="d7d1b-103">Default namespaces as represented in the XML tree are not in scope for queries.</span></span> <span data-ttu-id="d7d1b-104">Jeśli masz kod XML, który znajduje się w domyślnej przestrzeni nazw, nadal należy zadeklarować <xref:System.Xml.Linq.XNamespace> zmienną i połączyć ją z nazwą lokalną aby kwalifikowana nazwa do użycia w zapytaniu.</span><span class="sxs-lookup"><span data-stu-id="d7d1b-104">If you have XML that is in a default namespace, you still must declare an <xref:System.Xml.Linq.XNamespace> variable, and combine it with the local name to make a qualified name to be used in the query.</span></span>  

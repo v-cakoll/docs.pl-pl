@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332757"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a><span data-ttu-id="6c961-102">Elementy członkowskie zabudowanych wyrażenia (C# Podręcznik programowania)</span><span class="sxs-lookup"><span data-stu-id="6c961-102">Expression-bodied members (C# programming guide)</span></span>
 <span data-ttu-id="6c961-103">Wyrażenie treści definicji umożliwiają implementacji członka w postaci bardzo krótkie, który może zostać odczytany.</span><span class="sxs-lookup"><span data-stu-id="6c961-103">Expression body definitions let you provide a member's implementation in a very concise, readable form.</span></span> <span data-ttu-id="6c961-104">Możesz użyć definicji treści wyrażenia zawsze, gdy logiki żadnego z obsługiwanych elementów, takich jak metody lub właściwości, składa się z jednego wyrażenia.</span><span class="sxs-lookup"><span data-stu-id="6c961-104">You can use an expression body definition whenever the logic for any supported member, such as a method or property, consists of a single expression.</span></span> <span data-ttu-id="6c961-105">Definicja treść wyrażenia ma następującą składnię ogólne:</span><span class="sxs-lookup"><span data-stu-id="6c961-105">An expression body definition has the following general syntax:</span></span>

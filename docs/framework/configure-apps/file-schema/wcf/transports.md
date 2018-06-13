@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755334"
 ---
 # <a name="transports"></a><span data-ttu-id="8de07-102">Transporty</span><span class="sxs-lookup"><span data-stu-id="8de07-102">Transports</span></span>
 <span data-ttu-id="8de07-103">Warstwa transportu jest na najniższym poziomie stosu kanału.</span><span class="sxs-lookup"><span data-stu-id="8de07-103">The transport layer is at the lowest level of the channel stack.</span></span> <span data-ttu-id="8de07-104">Transporty główne używane w systemie Windows Communication Foundation (WCF) są HTTP, HTTPS TCP i potoków nazwanych.</span><span class="sxs-lookup"><span data-stu-id="8de07-104">The main transports used in Windows Communication Foundation (WCF) are HTTP, HTTPS, TCP, and Named Pipes.</span></span> <span data-ttu-id="8de07-105">Ta sekcja zawiera listę wszystkich elementów konfiguracji, które umożliwiają skonfigurowanie różnych typów transportów.</span><span class="sxs-lookup"><span data-stu-id="8de07-105">This section lists all the configuration elements that allow you to configure different types of transports.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318091"
 ---
 # <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a><span data-ttu-id="423bf-102">Porady: znajdowanie elementów z określonym atrybutem (XPath-LINQ do XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="423bf-102">How to: Find Elements with a Specific Attribute (XPath-LINQ to XML) (C#)</span></span>
 <span data-ttu-id="423bf-103">Czasami chcesz znaleźć wszystkie elementy, które mają określony atrybut.</span><span class="sxs-lookup"><span data-stu-id="423bf-103">Sometimes you want to find all elements that have a specific attribute.</span></span> <span data-ttu-id="423bf-104">Nie masz obawy zawartości atrybutu.</span><span class="sxs-lookup"><span data-stu-id="423bf-104">You are not concerned about the contents of the attribute.</span></span> <span data-ttu-id="423bf-105">Zamiast tego chcesz wybrać na podstawie istnienia atrybutu.</span><span class="sxs-lookup"><span data-stu-id="423bf-105">Instead, you want to select based on the existence of the attribute.</span></span>  

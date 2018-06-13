@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326501"
 ---
 # <a name="expression-trees-c"></a><span data-ttu-id="3f24b-102">Drzewa wyrażeń (C#)</span><span class="sxs-lookup"><span data-stu-id="3f24b-102">Expression Trees (C#)</span></span>
 <span data-ttu-id="3f24b-103">Drzewa wyrażeń reprezentuje kod w strukturze drzewa danych każdy węzeł w przypadku wyrażenia, na przykład, wywołanie metody lub operację binarną takich jak `x < y`.</span><span class="sxs-lookup"><span data-stu-id="3f24b-103">Expression trees represent code in a tree-like data structure, where each node is an expression, for example, a method call or a binary operation such as `x < y`.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329387"
 ---
 # <a name="sample-xml-file-consolidated-purchase-orders"></a><span data-ttu-id="54cef-102">Przykładowy plik XML: Skonsolidowane zamówienia zakupu</span><span class="sxs-lookup"><span data-stu-id="54cef-102">Sample XML File: Consolidated Purchase Orders</span></span>
 <span data-ttu-id="54cef-103">Następujący plik XML jest używany w różnych przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji.</span><span class="sxs-lookup"><span data-stu-id="54cef-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="54cef-104">Ten plik jest zestawem zakupów z różnych kształtów z wielu firm.</span><span class="sxs-lookup"><span data-stu-id="54cef-104">This file is a set of purchase orders with different shapes from multiple companies.</span></span> <span data-ttu-id="54cef-105">Zakupów z każdej firmy są w oddzielnych przestrzeniach nazw.</span><span class="sxs-lookup"><span data-stu-id="54cef-105">Purchase orders from each company are in separate namespaces.</span></span>  

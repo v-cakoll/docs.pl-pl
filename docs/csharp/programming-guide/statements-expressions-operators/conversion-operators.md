@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334717"
 ---
 # <a name="conversion-operators-c-programming-guide"></a><span data-ttu-id="2c750-102">Operatory konwersji (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="2c750-102">Conversion Operators (C# Programming Guide)</span></span>
 <span data-ttu-id="2c750-103">C# umożliwia deweloperom zadeklarować konwersje klasy lub struktury, dzięki czemu mogą być konwertowane klasy lub struktury, aby lub z innych klas lub struktur lub typy podstawowe.</span><span class="sxs-lookup"><span data-stu-id="2c750-103">C# enables programmers to declare conversions on classes or structs so that classes or structs can be converted to and/or from other classes or structs, or basic types.</span></span> <span data-ttu-id="2c750-104">Konwersje zdefiniowano like — operatory o nazwie dla typu, które umożliwiają one konwertowanie.</span><span class="sxs-lookup"><span data-stu-id="2c750-104">Conversions are defined like operators and are named for the type to which they convert.</span></span> <span data-ttu-id="2c750-105">Typ argumentu, który ma zostać przekonwertowany lub typ wyniku konwersji, ale nie oba musi być typu zawierającego.</span><span class="sxs-lookup"><span data-stu-id="2c750-105">Either the type of the argument to be converted, or the type of the result of the conversion, but not both, must be the containing type.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317505"
 ---
 # <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a><span data-ttu-id="1dad8-102">Porady: znajdowanie elementów podrzędnych na podstawie pozycji (XPath-LINQ do XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="1dad8-102">How to: Find Child Elements Based on Position (XPath-LINQ to XML) (C#)</span></span>
 <span data-ttu-id="1dad8-103">Czasami chcesz znaleźć elementy na podstawie ich pozycji.</span><span class="sxs-lookup"><span data-stu-id="1dad8-103">Sometimes you want to find elements based on their position.</span></span> <span data-ttu-id="1dad8-104">Możesz chcieć znaleźć drugi element lub możesz chcieć znaleźć innych za pomocą elementu piątego.</span><span class="sxs-lookup"><span data-stu-id="1dad8-104">You might want to find the second element, or you might want to find the third through the fifth element.</span></span>  

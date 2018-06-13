@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330723"
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-c"></a><span data-ttu-id="485a8-102">Visual Studio IDE i obsługę narzędzia LINQ (C#)</span><span class="sxs-lookup"><span data-stu-id="485a8-102">Visual Studio IDE and Tools Support for LINQ (C#)</span></span>
 <span data-ttu-id="485a8-103">Visual Studio zintegrowane środowisko programistyczne (IDE) zapewnia następujące funkcje obsługujące LINQ projektowanie aplikacji:</span><span class="sxs-lookup"><span data-stu-id="485a8-103">The Visual Studio integrated development environment (IDE) provides the following features that support LINQ application development:</span></span>  

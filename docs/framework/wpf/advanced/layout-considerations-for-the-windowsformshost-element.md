@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548942"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a><span data-ttu-id="7f54f-102">Opcje układu dla elementu WindowsFormsHost</span><span class="sxs-lookup"><span data-stu-id="7f54f-102">Layout Considerations for the WindowsFormsHost Element</span></span>
 <span data-ttu-id="7f54f-103">W tym temacie opisano sposób <xref:System.Windows.Forms.Integration.WindowsFormsHost> element współdziała z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] układu systemu.</span><span class="sxs-lookup"><span data-stu-id="7f54f-103">This topic describes how the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element interacts with the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] layout system.</span></span>  

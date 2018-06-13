@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33288525"
 ---
 # <a name="perform-custom-join-operations"></a><span data-ttu-id="fd5ad-103">Wykonywanie niestandardowych operacji łączenia</span><span class="sxs-lookup"><span data-stu-id="fd5ad-103">Perform custom join operations</span></span>
 

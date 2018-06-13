@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267912"
 ---
 # <a name="integral-types-table-c-reference"></a><span data-ttu-id="3b7d9-102">Tabela typów całkowitych (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="3b7d9-102">Integral Types Table (C# Reference)</span></span>
 <span data-ttu-id="3b7d9-103">W poniższej tabeli przedstawiono rozmiary i zakresy typów całkowitych, które stanowią podzbiór typów prostych.</span><span class="sxs-lookup"><span data-stu-id="3b7d9-103">The following table shows the sizes and ranges of the integral types, which constitute a subset of simple types.</span></span>  

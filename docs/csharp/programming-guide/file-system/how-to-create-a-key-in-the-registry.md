@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331470"
 ---
 # <a name="how-to-create-a-key-in-the-registry-visual-c"></a><span data-ttu-id="c3538-102">Porady: tworzenie klucza w rejestrze (Visual C#)</span><span class="sxs-lookup"><span data-stu-id="c3538-102">How to: Create a Key In the Registry (Visual C#)</span></span>
 <span data-ttu-id="c3538-103">W tym przykładzie dodaje pary wartości, "Name" i "Isabella", do bieżącego użytkownika, kluczu rejestru "Nazwy".</span><span class="sxs-lookup"><span data-stu-id="c3538-103">This example adds the value pair, "Name" and "Isabella", to the current user's registry, under the key "Names".</span></span>  

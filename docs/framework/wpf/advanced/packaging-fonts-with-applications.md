@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548223"
 ---
 # <a name="packaging-fonts-with-applications"></a><span data-ttu-id="d8407-102">Pakowanie czcionek z aplikacjami</span><span class="sxs-lookup"><span data-stu-id="d8407-102">Packaging Fonts with Applications</span></span>
 <span data-ttu-id="d8407-103">Ten temat zawiera przegląd zagadnień związanych z czcionkami pakietu z sieci [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji.</span><span class="sxs-lookup"><span data-stu-id="d8407-103">This topic provides an overview of how to package fonts with your [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application.</span></span>  

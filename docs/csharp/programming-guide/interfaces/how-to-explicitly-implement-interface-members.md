@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332189"
 ---
 # <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a><span data-ttu-id="e2bfa-102">Porady: jawne implementowanie elementów interfejsu (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="e2bfa-102">How to: Explicitly Implement Interface Members (C# Programming Guide)</span></span>
 <span data-ttu-id="e2bfa-103">W tym przykładzie deklaruje [interfejsu](../../../csharp/language-reference/keywords/interface.md), `IDimensions`i klasę, `Box`, który implementuje jawnie elementy członkowskie interfejsu `getLength` i `getWidth`.</span><span class="sxs-lookup"><span data-stu-id="e2bfa-103">This example declares an [interface](../../../csharp/language-reference/keywords/interface.md), `IDimensions`, and a class, `Box`, which explicitly implements the interface members `getLength` and `getWidth`.</span></span> <span data-ttu-id="e2bfa-104">Elementy członkowskie są dostępne za pośrednictwem wystąpienie interfejsu `dimensions`.</span><span class="sxs-lookup"><span data-stu-id="e2bfa-104">The members are accessed through the interface instance `dimensions`.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320992"
 ---
 # <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a><span data-ttu-id="f4e57-102">Porady: znajdowanie elementów podrzędnych (XPath-LINQ do XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="f4e57-102">How to: Find Descendant Elements (XPath-LINQ to XML) (C#)</span></span>
 <span data-ttu-id="f4e57-103">W tym temacie pokazano, jak można uzyskać elementów podrzędnych o określonej nazwie.</span><span class="sxs-lookup"><span data-stu-id="f4e57-103">This topic shows how to get the descendant elements with a particular name.</span></span>  

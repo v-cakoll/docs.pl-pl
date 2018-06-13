@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547371"
 ---
 # <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a><span data-ttu-id="d660b-102">Wskazówki: Tworzenie zawartości Direct3D9 dla hostingu w WPF</span><span class="sxs-lookup"><span data-stu-id="d660b-102">Walkthrough: Creating Direct3D9 Content for Hosting in WPF</span></span>
 <span data-ttu-id="d660b-103">W tym przewodniku przedstawiono sposób tworzenia Direct3D9 zawartość, która jest odpowiednia dla hostowanie w aplikacji Windows Presentation Foundation (WPF).</span><span class="sxs-lookup"><span data-stu-id="d660b-103">This walkthrough shows how to create Direct3D9 content that is suitable for hosting in a Windows Presentation Foundation (WPF) application.</span></span> <span data-ttu-id="d660b-104">Aby uzyskać więcej informacji dotyczących obsługi Direct3D9 zawartości w aplikacjach WPF, zobacz [WPF i współdziałanie Direct3D9](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md).</span><span class="sxs-lookup"><span data-stu-id="d660b-104">For more information on hosting Direct3D9 content in WPF applications, see [WPF and Direct3D9 Interoperation](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md).</span></span>  

@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33288180"
 ---
 # <a name="perform-grouped-joins"></a><span data-ttu-id="99070-103">Wykonanie sprzężeń grupowanych</span><span class="sxs-lookup"><span data-stu-id="99070-103">Perform grouped joins</span></span>
 

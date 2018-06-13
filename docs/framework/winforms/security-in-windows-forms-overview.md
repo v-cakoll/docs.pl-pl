@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541414"
 ---
 # <a name="security-in-windows-forms-overview"></a>Przegląd zabezpieczeń w formularzach systemu Windows
 Przed wydaniem [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], całego kodu uruchomiony na koncie użytkownika na komputerze ma tego samego prawa lub uprawnienia dostępu do zasobów, których użytkownik komputera zastosowano. Na przykład jeśli użytkownik uzyskał zezwolenia na dostęp do systemu plików, kod zezwolono na dostęp do systemu plików; Jeśli użytkownik uzyskał zezwolenia na dostęp do bazy danych, kod zezwolono na dostęp do tej bazy danych. Chociaż te prawa lub uprawnienia można zaakceptować dla kodu w plikach wykonywalnych, który użytkownik jawnie zainstalowany na komputerze lokalnym, nie może być możliwa do kod potencjalnie złośliwy, przesyłanych przez Internet lub lokalny Intranet. Ten kod nie powinien być uzyskiwać dostęp do zasobów komputera użytkownika bez uprawnienia.  

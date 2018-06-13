@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365842"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>Pobieranie danych i CUD operacje w aplikacjach warstwowych (LINQ to SQL)
 Podczas obiekty obiektów, takich jak klienci lub zamówienia klienta za pośrednictwem sieci, podmioty są odłączone od ich kontekstu danych. Kontekst danych śledzi już ich zmiany i ich powiązania z innych obiektów. Nie jest to problem, tak długo, jak klienci są tylko do odczytu danych. Jest również stosunkowo proste umożliwić klientom dodawać nowe wiersze do bazy danych. Jednak jeśli aplikacja wymaga, aby klienci mogli aktualizować lub usuwać dane, następnie należy dołączyć jednostek do nowy kontekst danych przed wywołaniem <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>. Ponadto jeśli sprawdzenie optymistycznej współbieżności korzystają z oryginalnych wartości, następnie należy również sposób zapewniające bazy danych oryginalna jednostka i jednostki zmienione. `Attach` Metody są dostarczane do umożliwiają poddane jednostek nowy kontekst danych po ich odłączony.  

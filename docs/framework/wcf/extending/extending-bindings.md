@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33485812"
 ---
 # <a name="extending-bindings"></a>Rozszerzanie powiązań
 Powiązania Określ transportu, kodowanie i protokół wymagane do połączenia z punktem końcowym. Rozszerzenia powiązania i powiązania niestandardowe implementowania niestandardowych komunikacji wymagane do obsługi funkcji aplikacji.  

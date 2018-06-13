@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539468"
 ---
 # <a name="base-elements"></a>Elementy bazy
 Cztery klucza klasy —<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, i <xref:System.Windows.FrameworkContentElement>— wdrożenie znaczny odsetek typowych funkcji elementu dostępnych w programowaniu WPF. Te cztery klas są określane w tym zestawie SDK jako klasy podstawowej elementów.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536344"
 ---
 # <a name="toolstripcontainer-control-overview"></a>ToolStripContainer — Informacje o formancie
 A <xref:System.Windows.Forms.ToolStripContainer> ma panele w lewo, prawo, górnej i dolnej krawędzi pozycjonowanie i rafting <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, i <xref:System.Windows.Forms.StatusStrip> kontrolki. Wiele <xref:System.Windows.Forms.ToolStrip> formanty pionowo stosu umieszczenie w lewo lub w prawo <xref:System.Windows.Forms.ToolStripContainer>. One poziomie stosu umieszczenie w górny lub dolny <xref:System.Windows.Forms.ToolStripContainer>. Można użyć centralną <xref:System.Windows.Forms.ToolStripContentPanel> z <xref:System.Windows.Forms.ToolStripContainer> do tradycyjnych formanty pozycji na formularzu.  

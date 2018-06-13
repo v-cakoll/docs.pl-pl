@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540995"
 ---
 # <a name="webbrowser-control-overview"></a>WebBrowser — Informacje o formancie
 <xref:System.Windows.Forms.WebBrowser> Kontrola zapewnia zarządzany otok dla formantu WebBrowser ActiveX. Zarządzany otok umożliwia wyświetlanie strony sieci Web w aplikacjach formularzy systemu Windows klienta. Można użyć <xref:System.Windows.Forms.WebBrowser> formantu powielają funkcjonalność przeglądania sieci Web programu Internet Explorer w aplikacji lub można wyłączyć domyślna funkcjonalność programu Internet Explorer i używać kontrolki jako proste przeglądarki dokumentów HTML. Umożliwia także formantu dodawanie do formularza elementów interfejsu użytkownika opartego na DHTML i Ukryj fakt, że są one hostowane w <xref:System.Windows.Forms.WebBrowser> formantu. To rozwiązanie umożliwia bezproblemowe łączenie formantów formanty formularzy systemu Windows w jednej aplikacji sieci Web.  

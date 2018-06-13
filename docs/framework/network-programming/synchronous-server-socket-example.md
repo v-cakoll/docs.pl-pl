@@ -17,6 +17,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33955956"
 ---
 # <a name="synchronous-server-socket-example"></a>Przykład gniazda synchroniczne serwera
 Następujący przykład program tworzy serwera służącą do odbierania żądań połączeń od klientów. Serwer jest oparty z gniazdem synchroniczna, dlatego zawiesza wykonywanie aplikacji serwera podczas oczekiwania na połączenie z klientem. Aplikacji odbiera ciąg od klienta, wyświetla ciąg w konsoli, a następnie zwraca ciąg do klienta. Ciąg z klienta musi zawierać ciąg "\<EOF >" która sygnalizuje koniec komunikatu.  

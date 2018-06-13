@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365608"
 ---
 # <a name="enlisting-resources-as-participants-in-a-transaction"></a>Rejestrowanie zasobów jako uczestnicy transakcji
 Każdy zasób Udział w transakcji jest zarządzane przez Menedżera zasobów, których działania są koordynowany przez Menedżera transakcji. Koordynacja jest wykonywane za pośrednictwem powiadomienia do subskrybentów, którzy mają zarejestrowane w transakcji za pośrednictwem Menedżera transakcji.  

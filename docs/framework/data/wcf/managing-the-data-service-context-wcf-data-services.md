@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365231"
 ---
 # <a name="managing-the-data-service-context-wcf-data-services"></a>Zarządzanie kontekstu usługi danych (usługi danych WCF)
 <xref:System.Data.Services.Client.DataServiceContext> Klasa hermetyzuje operacje, które są obsługiwane z usługą określone dane. Mimo że [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] usługi są bezstanowych, kontekst nie jest. W związku z tym można użyć <xref:System.Data.Services.Client.DataServiceContext> klasy do zarządzania stanem na kliencie między interakcji z usługą danych, aby zapewnić obsługę funkcji, takich jak zarządzanie zmianami. Ta klasa również zarządza tożsamości i śledzi zmiany.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365119"
 ---
 # <a name="performance-counters-in-adonet"></a>Liczniki wydajności w ADO.NET
 Rozszerzona obsługa liczników wydajności, który zawiera obsługę zarówno wprowadzone ADO.NET 2.0 <xref:System.Data.SqlClient> i <xref:System.Data.OracleClient>. <xref:System.Data.SqlClient> Dostępne w poprzednich wersjach programu ADO.NET liczniki wydajności zostały przestarzałe i zastępowane nowe liczniki wydajności omówione w tym temacie. Liczniki wydajności ADO.NET służy do monitorowania stanu aplikacji i zasobów połączenia, których używa. Liczniki wydajności można monitorować za pomocą Monitora wydajności systemu Windows lub mogą uzyskiwać programowo przy użyciu <xref:System.Diagnostics.PerformanceCounter> klasy w <xref:System.Diagnostics> przestrzeni nazw.  

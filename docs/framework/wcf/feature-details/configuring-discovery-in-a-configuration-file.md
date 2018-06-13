@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492290"
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a>Konfigurowanie odnajdywania w pliku konfiguracji
 Istnieją cztery główne grupy ustawień konfiguracji używane podczas odnajdywania. W tym temacie zostaną krótko opisują każdą i przedstawiono przykłady sposobu ich konfiguracji. Po każdej sekcji będzie łącze do szczegółową dokumentację o każdym obszarze.  

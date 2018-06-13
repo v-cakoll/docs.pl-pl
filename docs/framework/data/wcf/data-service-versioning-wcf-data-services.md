@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365621"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Przechowywanie wersji usługi danych (usługi danych WCF)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Umożliwia tworzenie usług danych, dzięki czemu klienci mają dostęp do danych jako zasoby przy użyciu identyfikatorów URI, które są oparte na modelu danych. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] obsługuje również definicji operacji usługi. Po początkowym wdrożeniu i potencjalnie kilka razy w okresie ich istnienia tych usług danych może być konieczne zostanie zmieniony z różnych powodów, takich jak zmieniające się potrzeby biznesowe, wymagania dotyczące technologii informacji, lub w celu rozwiązania innych problemów. Po wprowadzeniu zmian w istniejącej usłudze danych, należy rozważyć możliwość definiowania nowej wersji danych usługi i jak najlepiej zminimalizować wpływ na istniejące aplikacje klienckie. W tym temacie znajdują się wskazówki dotyczące kiedy i jak utworzyć nową wersję usługi danych. Opisano również sposób [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obsługuje wymiany między klientami a usług danych, które obsługują różne wersje [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protokołu.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541940"
 ---
 # <a name="dependency-property-value-precedence"></a>Następstwo zależności wartości właściwości
 <a name="introduction"></a> W tym temacie opisano sposób działaniem [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] system właściwości mogą mieć wpływ na wartość właściwości zależności oraz opis pierwszeństwa, przez które aspektów właściwości systemu dotyczą wprowadzenia wartości właściwości.  

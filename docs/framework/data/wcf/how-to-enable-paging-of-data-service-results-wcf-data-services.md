@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360615"
 ---
 # <a name="how-to-enable-paging-of-data-service-results-wcf-data-services"></a>Porady: Włączanie stronicowania wyniki z danymi usługi (usługi danych WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] pozwala ograniczyć liczbę jednostek zwróconych przez kwerendę usługi danych. Limity strony są definiowane w metodę, która jest wywoływana, gdy usługa jest zainicjowana i można ustawić osobno dla każdego zestawu jednostek.  

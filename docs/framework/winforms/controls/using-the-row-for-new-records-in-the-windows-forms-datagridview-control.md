@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540663"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Używanie wiersza dla nowych rekordów w formancie DataGridView formularzy systemu Windows
 Jeśli używasz <xref:System.Windows.Forms.DataGridView> do edycji danych w aplikacji, często można zapewnić użytkownikom możliwość dodawania nowych wierszy danych w magazynie danych. <xref:System.Windows.Forms.DataGridView> Formantu obsługuje tę funkcję, zapewniając wiersz dla nowych rekordów, który jest zawsze wyświetlany jako ostatni wiersz. Jest ona oznaczona symbolem gwiazdki (*) w nagłówku wiersza. W poniższych sekcjach omówiono niektóre czynności, należy rozważyć, gdy program wiersza dla nowych rekordów jest włączona.  

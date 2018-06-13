@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541700"
 ---
 # <a name="dependency-property-metadata"></a>Metadane zależności właściwości
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Właściwości systemu obejmuje metadanych systemu, które wykraczają poza, które mogą być zgłoszony dotyczące właściwości przy użyciu odbicia lub ogólne raportowania [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] właściwości. Metadane dla właściwości zależności można również przypisać unikatowo przez klasę, która definiuje właściwości zależności, można zmienić, gdy właściwość zależności jest dodana do innej klasy i może zostać przesłonięta w szczególności wszystkie klasy pochodne, które dziedziczą Właściwości zależności od definiującego klasy podstawowej.  

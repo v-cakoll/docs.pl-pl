@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363233"
 ---
 # <a name="how-to-add-query-options-to-a-data-service-query-wcf-data-services"></a>Porady: Dodawanie opcje zapytania do zapytania usługi danych (usługi danych WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Umożliwia to zapytanie usługi danych z aplikacji klienta opartego na programie .NET Framework za pomocą klasy usługi danych wygenerowanego klienta. Najprostsza w tym celu jest utworzenie w wyrażeniu kwerendy języka zapytań zintegrowanym (LINQ) zawiera opcje żądanego zapytania. Można również wywołać szereg metod zapytań LINQ utworzenie równoważne zapytania. Ponadto można użyć <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> metody w celu dodania opcje zapytania do zapytania. W każdym z tych przypadków identyfikator URI, generowany przez klienta zawiera zestaw jednostek żądanego z opcje wybrane zapytanie zastosowane. Aby uzyskać więcej informacji, zobacz [zapytanie usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  

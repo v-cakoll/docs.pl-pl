@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365907"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>Sortowania z DataView (LINQ do DataSet)
 Sortowanie danych na podstawie określonych kryteriów, a następnie prezentować danych do klienta za pomocą formantu interfejsu użytkownika jest ważnym aspektem wiązania z danymi. <xref:System.Data.DataView> udostępnia kilka sposobów, aby posortować dane i zwracanie wszystkich wierszy danych uporządkowanych według określonych kryteriów porządkowania. Oprócz jego podstawie ciąg sortowania możliwości, <xref:System.Data.DataView> także pozwala na użycie [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] wyrażenia kryterium sortowania. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] wyrażenia umożliwia bardziej złożone i zaawansowane operacje sortowania niż sortowanie oparte na ciągach. W tym temacie opisano oba podejścia do sortowania za pomocą <xref:System.Data.DataView>.  

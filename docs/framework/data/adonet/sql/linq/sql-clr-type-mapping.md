@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365530"
 ---
 # <a name="sql-clr-type-mapping"></a>Mapowanie typu środowiska CLR SQL
 W składniku LINQ to SQL relacyjnej bazy danych w modelu danych mapuje modelu obiektów, które są jest wyrażone w języku programowania wybranych przez użytkownika. Po uruchomieniu aplikacji, LINQ do SQL tłumaczy zapytania języku zintegrowanym w modelu obiektów programu SQL i wysyła je do bazy danych do wykonania. Po powrocie z bazy danych wyników LINQ do SQL tłumaczy wyniki z powrotem do obiektów, które można pracować w języku programowania w języku użytkownika.  

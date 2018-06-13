@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360481"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>Pojedynczej tabeli zapytania (LINQ do DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] zapytania działają w źródeł danych, które implementują <xref:System.Collections.Generic.IEnumerable%601> interfejsu lub <xref:System.Linq.IQueryable%601> interfejsu. <xref:System.Data.DataTable> Klasa nie implementuje albo interfejsu, dlatego należy wywołać <xref:System.Data.DataTableExtensions.AsEnumerable%2A> metodę, jeśli chcesz użyć <xref:System.Data.DataTable> jako źródło w `From` klauzuli [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] zapytania.  

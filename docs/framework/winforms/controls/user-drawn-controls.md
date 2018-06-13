@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542200"
 ---
 # <a name="user-drawn-controls"></a>Formanty rysowane przez użytkownika
 .NET Framework umożliwia łatwy sposób tworzyć własne kontrolki. Formant użytkownika, który jest zestaw standardowych formantów powiązane przez kod, można utworzyć lub zapasową można projektować formantu od podstaw. Dziedziczenie umożliwia nawet utworzyć formant, który dziedziczy z istniejącego formantu i dodać do jego działanie związane. Niezależnie od podejście, możesz użyć programu .NET Framework udostępnia funkcje umożliwiające rysowanie niestandardowego interfejsu graficznego dla każdego formantu, którą utworzysz.  

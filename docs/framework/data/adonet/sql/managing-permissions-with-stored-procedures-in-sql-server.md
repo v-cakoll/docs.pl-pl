@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361287"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>Zarządzanie uprawnieniami w procedurach składowanych w programie SQL Server
 Jedną z metod tworzenia wielu linii obrony wokół bazy danych jest wdrożenie wszystkich dostęp do danych za pomocą procedury składowanej lub funkcji zdefiniowanej przez użytkownika. Odwoływanie lub odmówić wszystkich uprawnień do obiektów podstawowych, takich jak tabele i przyznać uprawnienia EXECUTE procedur składowanych. Spowoduje to skutecznie utworzenie obwodu zabezpieczeń wokół obiektów danych i bazy danych.  

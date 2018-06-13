@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364449"
 ---
 # <a name="wcf-data-services-resources"></a>Zasoby usługi danych WCF
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Tematy wprowadzające można znaleźć w następujących lokalizacjach. Wiele z tych tematów zawiera również linki do powiązanych tematów, które zawierają więcej szczegółowych informacji.  

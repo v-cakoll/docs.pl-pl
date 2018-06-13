@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540371"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>Porady: nawigowanie w danych w formularzach systemu Windows
 W aplikacji Windows, najłatwiejszym sposobem nawigowania rekordy w źródle danych jest powiązać <xref:System.Windows.Forms.BindingSource> składnika do źródła danych, a następnie powiązanie formantów <xref:System.Windows.Forms.BindingSource>. Można następnie użyć metody wbudowanych nawigacji na <xref:System.Windows.Forms.BindingSource> takich <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> i <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>. Za pomocą następujących metod dostosuje <xref:System.Windows.Forms.BindingSource.Position%2A> i <xref:System.Windows.Forms.BindingSource.Current%2A> właściwości <xref:System.Windows.Forms.BindingSource> odpowiednio. Możesz również znaleźć elementu i ustawić go jako bieżący element przez ustawienie <xref:System.Windows.Forms.BindingSource.Position%2A> właściwości.  

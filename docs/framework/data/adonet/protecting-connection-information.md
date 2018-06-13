@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363354"
 ---
 # <a name="protecting-connection-information"></a>Ochrona informacji o połączeniu
 Ochrona dostępu do źródła danych jest jednym z najważniejszych celów zabezpieczania aplikacji. Ciąg połączenia przedstawia potencjalne luki w zabezpieczeniach, jeśli nie jest zabezpieczony. Przechowywanie informacji o połączeniu w formacie zwykłego tekstu lub utrwalanie go w pamięci ryzyko naruszenia całego systemu. Osadzone w kodzie źródłowym parametry połączenia mogą być odczytywane przy użyciu [Ildasm.exe (dezasembler IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) Aby wyświetlić język pośredni firmy Microsoft (MSIL) w skompilowanym zestawie.  

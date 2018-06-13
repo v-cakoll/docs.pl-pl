@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364375"
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express zabezpieczeń
 Microsoft SQL Server Express Edition, (SQL Server Express) jest oparta na programie Microsoft SQL Server i obsługuje większość funkcji aparatu bazy danych. Zaprojektowano go tak, aby mniej ważne funkcje i łączność sieciową są domyślnie wyłączone. Zmniejsza to powierzchnia dostępne ataku przez złośliwego użytkownika.  

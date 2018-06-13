@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539906"
 ---
 # <a name="dialog-boxes-in-windows-forms"></a>Okna dialogowe w formularzach systemu Windows
 Okna dialogowe są używane do interakcji z użytkownikiem i pobierania informacji. Proste warunków, okno dialogowe jest formularz z jego <xref:System.Windows.Forms.FormBorderStyle> ustawioną właściwość wyliczenie `FixedDialog`. Można utworzyć własne niestandardowe okien dialogowych za pomocą projektanta formularzy systemu Windows w programie Visual Studio. Dodaj formanty, takie jak `Label`, `Textbox`, i `Button` dostosować okien dialogowych do określonych potrzeb. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Obejmuje także wstępnie zdefiniowane okien dialogowych, takich jak **Otwórz plik** i pola wiadomości, które można dostosować do własnych aplikacji. Aby uzyskać więcej informacji, zobacz [okno dialogowe formanty i składniki](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364074"
 ---
 # <a name="query-notifications-in-sql-server"></a>Powiadomienia zapytań w programie SQL Server
 Wbudowane w system infrastruktury programu Service Broker, powiadomień o zapytaniach umożliwiają aplikacjom otrzymać powiadomienie, gdy dane zostały zmienione. Ta funkcja jest szczególnie przydatne w przypadku aplikacji, które zapewniają pamięci podręcznej informacje z bazy danych, takich jak aplikacji sieci Web i musi być zgłoszone, gdy źródło danych zostanie zmieniona.  

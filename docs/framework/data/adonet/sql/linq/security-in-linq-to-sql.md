@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364398"
 ---
 # <a name="security-in-linq-to-sql"></a>Zabezpieczenia w składniku LINQ to SQL
 Zagrożenia bezpieczeństwa są zawsze wtedy, gdy połączenie z bazą danych. Chociaż LINQ do SQL może zawierać niektóre nowe sposoby pracy z danymi w programie SQL Server, nie ma żadnych dodatkowe mechanizmy zabezpieczeń.  

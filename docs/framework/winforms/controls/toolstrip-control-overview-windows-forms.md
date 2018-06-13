@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542054"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>ToolStrip — Informacje o formancie [Formularze systemu Windows]
 Formularze systemu Windows <xref:System.Windows.Forms.ToolStrip> kontroli i jego skojarzonych klas podanie łączenie elementy interfejsu użytkownika w paskach narzędzi, pasków stanu i menu wspólnej struktury. <xref:System.Windows.Forms.ToolStrip> Formanty zapewniają bogate środowisko czasu projektowania, zawierającą Aktywacja w miejscu i edytowanie niestandardowego układu i rafting, czyli paski narzędzi umożliwiają udostępnianie miejsca pozioma lub pionowa.  

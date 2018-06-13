@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541580"
 ---
 # <a name="windows-forms-controls-by-function"></a>Formanty formularzy systemu Windows według funkcji
 Formularze systemu Windows oferuje kontrolek i składników, które wykonują wiele funkcji. W poniższej tabeli wymieniono formanty formularzy systemu Windows i składniki według funkcji ogólne. Ponadto w przypadku, gdy wiele istnieją środki zapobiegawcze, które pełnią taką samą funkcję, zalecane formant znajduje się uwagi dotyczące kontroli, którą on zastąpiony. W osobnej tabeli kolejnych formantów zastąpione są wyświetlane z ich zalecane zamiany.  

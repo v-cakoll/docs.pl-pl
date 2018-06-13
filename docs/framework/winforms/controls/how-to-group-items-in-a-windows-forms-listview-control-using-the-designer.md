@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539345"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>Porady: grupowanie elementów w formancie ListView formularzy systemu Windows przy użyciu narzędzia Projektant
 Funkcji grupowania <xref:System.Windows.Forms.ListView> kontroli umożliwia wyświetlanie zestawów powiązanych elementów w grupach. Grupy te są oddzielone na ekranie nagłówki poziomy grupy, które zawierają tytuły grupy. Można użyć <xref:System.Windows.Forms.ListView> grupy, aby łatwiej nawigowanie po dużych list przez alfabetycznie, grupowanie elementów według daty lub logiczne grupowanie. Na poniższej ilustracji przedstawiono niektóre zgrupowane elementy.  

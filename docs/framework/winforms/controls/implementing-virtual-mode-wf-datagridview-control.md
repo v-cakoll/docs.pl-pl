@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539922"
 ---
 # <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a>Wskazówki: implementowanie trybu wirtualnego w formancie DataGridView formularzy systemu Windows
 Jeśli chcesz wyświetlić bardzo dużych ilości danych tabelarycznych w <xref:System.Windows.Forms.DataGridView> sterowania, można ustawić <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> właściwości `true` i jawnego zarządzania formantu interakcji z jej magazynem danych. Dzięki temu można dostrojenie wydajności formantu w tej sytuacji.  

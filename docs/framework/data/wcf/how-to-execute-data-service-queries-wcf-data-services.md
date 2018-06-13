@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363425"
 ---
 # <a name="how-to-execute-data-service-queries-wcf-data-services"></a>Porady: wykonywanie zapytań usługi danych (usługi danych WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Umożliwia to zapytanie usługi danych z aplikacji klienta opartego na programie .NET Framework za pomocą klasy usługi danych wygenerowanego klienta. Można wykonywać zapytania przy użyciu jednej z następujących metod:  

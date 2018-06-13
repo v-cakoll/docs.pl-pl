@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364755"
 ---
 # <a name="using-systemtransactions-in-aspnet"></a>Przy użyciu System.Transactions w programie ASP.NET
 W tym temacie opisano, jak pomyślnie służy <xref:System.Transactions> wewnątrz [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji.  

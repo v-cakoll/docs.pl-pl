@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541953"
 ---
 # <a name="application-startup-time"></a>Czas uruchamiania aplikacji
 Ilość czasu wymaganego do uruchomienia aplikacji WPF mogą się znacznie różnić. W tym temacie opisano różne techniki skracanie czasu uruchamiania postrzegana i rzeczywistych dla aplikacji Windows Presentation Foundation (WPF).  

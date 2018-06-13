@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364562"
 ---
 # <a name="how-to-enable-access-to-the-data-service-wcf-data-services"></a>Porady: Zapewnianie dostępu do usługi Data (usługi danych WCF)
 W [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], należy jawnie zezwolić na dostęp do zasobów, które są udostępniane przez usługi danych. Oznacza to, że po utworzeniu nowej usługi danych musi nadal jawnie Podaj, dostęp do poszczególnych zasobów jako zestawy jednostek. W tym temacie przedstawiono sposób włączania odczytu i zapisu do pięciu jednostki ustawia w usłudze danych Northwind, który jest tworzony po zakończeniu [szybkiego startu](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Ponieważ <xref:System.Data.Services.EntitySetRights> wyliczenie zdefiniowano przy użyciu <xref:System.FlagsAttribute>, można użyć logiczną lub ustaw operatora, aby określić wiele uprawnienia dla pojedynczej jednostki.  

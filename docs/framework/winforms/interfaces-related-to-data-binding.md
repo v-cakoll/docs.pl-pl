@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541849"
 ---
 # <a name="interfaces-related-to-data-binding"></a>Interfejsy dotyczące powiązania danych
 Z [!INCLUDE[vstecado](../../../includes/vstecado-md.md)], możesz utworzyć wiele struktur danych różnych potrzeb powiązanie aplikacji i danych, użytkownik pracuje z. Możesz utworzyć własne klasy, które dostarczyć lub użyć danych w formularzach systemu Windows. Te obiekty może oferować różne poziomy funkcjonalności i złożoność, z powiązania danych podstawowych zapewnienie obsługi w czasie projektowania, sprawdzanie błędów, powiadomienia o zmianie lub nawet pomocy technicznej dla strukturalnych wycofania zmian wprowadzonych w samych danych.  

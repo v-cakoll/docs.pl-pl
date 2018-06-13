@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333001"
 ---
 # <a name="projections-and-transformations-linq-to-xml-c"></a>Projekcje i przekształcenia (LINQ do XML) (C#)
 Ta sekcja zawiera przykłady [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] projekcje i przekształcenia.  

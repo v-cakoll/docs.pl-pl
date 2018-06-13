@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538382"
 ---
 # <a name="printpreviewdialog-control-windows-forms"></a>PrintPreviewDialog — Formant (Formularze systemu Windows)
 Formularze systemu Windows `PrintPreviewDialog` formant jest używany do wyświetlania, jak dokument pojawi się po wydrukowaniu okno dialogowe wstępnie skonfigurowane. Użyj go w aplikacji systemu Windows jako prostym rozwiązaniem zamiast własne okno dialogowe Konfigurowanie. Formant zawiera przyciski do drukowania, powiększyć wyświetlania jednego lub wielu stron i zamknięcie okna dialogowego.  

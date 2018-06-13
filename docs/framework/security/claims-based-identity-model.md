@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398898"
 ---
 # <a name="claims-based-identity-model"></a>Modelu tożsamości opartego na oświadczeniach
 W przypadku tworzenia aplikacji obsługujących oświadczenia tożsamość użytkownika jest reprezentowana w aplikacji jako zestaw oświadczeń. Jedno oświadczenie może być nazwa użytkownika, prawdopodobnie inny adres e-mail. Chodzi o to, że zewnętrzny system tożsamości jest skonfigurowany do podawania aplikacji wszystkiego, co musi wiedzieć o użytkowniku przy każdym wysyłanym przez niego żądaniu, a przy tym o kryptograficzne zapewnianie, że dane o tożsamości, które otrzymujesz, pochodzą z zaufanego źródła.  

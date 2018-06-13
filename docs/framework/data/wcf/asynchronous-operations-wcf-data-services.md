@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365920"
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>Operacje asynchroniczne (usługi danych WCF)
 Aplikacje sieci Web musi obsłużyć większego opóźnienia między klientem a serwerem niż aplikacje, które działają w sieciach wewnętrznych. Aby zoptymalizować wydajność i środowisko użytkownika aplikacji, firma Microsoft zaleca używanie metod asynchronicznych <xref:System.Data.Services.Client.DataServiceContext> i <xref:System.Data.Services.Client.DataServiceQuery%601> klasy podczas uzyskiwania dostępu do [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] serwerami za pośrednictwem sieci Web.  

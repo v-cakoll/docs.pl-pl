@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537645"
 ---
 # <a name="selection-and-clipboard-use-with-the-windows-forms-datagridview-control"></a>Wybór i używanie schowka za pomocą składnika DataGridView formularzy systemu Windows
 `DataGridView` Kontroli zapewnia różne opcje dotyczące konfigurowania, jak użytkownicy mogą wybrać komórek, wierszy i kolumn. Na przykład można włączyć wybór jednego lub wielu, Zaznaczanie całego wierszy lub kolumn, gdy użytkownik kliknie komórek lub Zaznaczanie całego wierszy lub kolumn tylko wtedy, gdy użytkownik kliknie ich nagłówki, co umożliwia także zaznaczenie komórki. Jeśli chcesz podać interfejsu użytkownika dla zaznaczenia, można wyłączyć zwykłej wybór i programowo obsłużyć wszystkie zaznaczenia. Ponadto można umożliwić użytkownikom kopiowania wybranych wartości do Schowka.  

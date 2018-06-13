@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363289"
 ---
 # <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>Optymalizacja za pomocą pojedynczego zatwierdzić fazy i awansowanie pojedyncze powiadomienia fazy
 W tym temacie opisano mechanizmy udostępnione przez <xref:System.Transactions> infrastruktury w celu optymalizacji wydajności.  

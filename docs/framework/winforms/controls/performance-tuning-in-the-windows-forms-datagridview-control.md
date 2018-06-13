@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536985"
 ---
 # <a name="performance-tuning-in-the-windows-forms-datagridview-control"></a>Dostrajanie wydajności w formancie DataGridView formularzy systemu Windows
 Podczas pracy z dużą ilością danych, `DataGridView` kontroli może używać dużej ilości pamięci w obciążenie, chyba że ostrożnie korzystaj. Na komputerach klienckich z ograniczoną pamięcią można uniknąć niektórych ten narzut, unikając funkcje, które mają pamięci wysokiej kosztów. Można również zarządzać niektórych lub wszystkich danych konserwacji i pobieranie zadań samodzielnie przy użyciu trybu wirtualnego w celu dostosowania użycia pamięci dla danego scenariusza.  

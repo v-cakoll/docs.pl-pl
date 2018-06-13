@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365413"
 ---
 # <a name="sql-server-express-user-instances"></a>Wystąpienia programu SQL Server Express użytkownika
 Microsoft SQL Server Express Edition, (SQL Server Express) obsługuje funkcję wystąpienia użytkownika, który jest dostępny tylko w przypadku używania dostawcy danych programu .NET Framework dla programu SQL Server (`SqlClient`). Wystąpienia użytkownika jest osobnego wystąpienia programu SQL Server Express aparat bazy danych jest generowany przez wystąpienie nadrzędne. Zezwalaj na użytkowników, którzy nie są administratorami na swoich komputerach lokalnych, aby podłączyć się do programu SQL Server Express baz danych, a wystąpienia użytkownika. Każde wystąpienie jest uruchamiany w kontekście zabezpieczeń użytkownika na podstawie jednego wystąpienia na użytkownika.  

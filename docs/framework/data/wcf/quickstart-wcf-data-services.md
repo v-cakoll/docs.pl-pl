@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365400"
 ---
 # <a name="quickstart-wcf-data-services"></a>Szybki Start (usługi danych WCF)
 Ta opcja szybkiego startu pomaga zapoznać się z [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] i [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] przez kilka zadań, które obsługują tematy [wprowadzenie](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md).  

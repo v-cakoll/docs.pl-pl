@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543069"
 ---
 # <a name="glyphs"></a>Glify
 Symbole są niskiego poziomu sceny znaku być rysowane na ekranie. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia bezpośredni dostęp do symboli dla klientów, których chcesz przechwytywać i przetrwają formatowania tekstu.  

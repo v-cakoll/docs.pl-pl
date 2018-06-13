@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538744"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>Porady: dziedziczenie z istniejących formantów formularzy systemu Windows
 Jeśli chcesz rozszerzyć funkcjonalność istniejącego formantu, można utworzyć formantu pochodzące z istniejącej kontrolce przez dziedziczenie. Podczas dziedziczenia z istniejącego formantu, dziedziczą wszystkich funkcji i właściwości tego formantu. Na przykład, jeśli zostały Tworzenie formantu odziedziczone <xref:System.Windows.Forms.Button>, będzie wyglądać nowego formantu i działanie dokładnie tak jak standard <xref:System.Windows.Forms.Button> formantu. Następnie można rozszerzyć lub modyfikowanie funkcjonalności nowego formantu za pomocą implementacji niestandardowych metod i właściwości. W niektórych formantów, można zmienić wygląd formantu dziedziczone przez zastąpienie jej <xref:System.Windows.Forms.Control.OnPaint%2A> metody.  

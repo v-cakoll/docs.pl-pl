@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538307"
 ---
 # <a name="how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost"></a>Porady: zawijanie formantu formularzy systemu Windows za pomocą elementu ToolStripControlHost
 <xref:System.Windows.Forms.ToolStripControlHost> Umożliwia obsługę dowolnego formanty formularzy systemu Windows przy użyciu <xref:System.Windows.Forms.ToolStripControlHost> konstruktora lub przez rozszerzenie <xref:System.Windows.Forms.ToolStripControlHost> samej siebie. Ułatwia zawijanie formantu rozszerzając <xref:System.Windows.Forms.ToolStripControlHost> i implementowanie właściwości i metody, które udostępniają często używane właściwości i metod formantu. Można również ujawniać zdarzenia dla formantu w <xref:System.Windows.Forms.ToolStripControlHost> poziom.  

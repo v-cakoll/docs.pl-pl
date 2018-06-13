@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365218"
 ---
 # <a name="external-mapping"></a>Mapowanie zewnętrznych
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obsługuje *zewnętrznych mapowania*, proces, za pomocą której używasz oddzielny plik XML do określenia mapowania między modelu danych, bazy danych i modelu obiektu. Korzyści wynikające z używania pliku mapowania zewnętrzne są następujące:  

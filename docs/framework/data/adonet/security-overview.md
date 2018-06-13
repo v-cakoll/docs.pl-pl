@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361942"
 ---
 # <a name="security-overview"></a>Przegląd zabezpieczeń
 Zabezpieczanie aplikacji jest ciągły proces. Nigdy nie będą punktu, w którym deweloper może zagwarantować, czy aplikacja jest bezpieczne przed atakami wszystkich, ponieważ nie jest możliwe do przewidzenia, jakie rodzaje ataków w przyszłości nowych technologii nastąpi. Z drugiej strony tak, ponieważ nikt nie ma luki w zabezpieczeniach jeszcze odnalezionych (lub opublikowany) w systemie nie oznacza brak istnieje, lub mogą istnieć. Musisz planowaniu zabezpieczeń w fazie projektowania projektu, a także zaplanować, jak zabezpieczeń będzie przechowywany w okresie istnienia aplikacji.  

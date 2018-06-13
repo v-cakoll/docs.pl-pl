@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538786"
 ---
 # <a name="tooltip-component-windows-forms"></a>ToolTip — Składnik (Formularze systemu Windows)
 Formularze systemu Windows <xref:System.Windows.Forms.ToolTip> składnika wyświetla tekst, gdy użytkownik wskazuje na formanty. Etykietka narzędzia może być skojarzony z żadnym formantem. Przykładowe zastosowanie tego formantu: Aby zaoszczędzić miejsce na formularzu, można wyświetlić na małe ikony na przycisku i używać etykietka narzędzia wyjaśnić funkcja przycisku.  

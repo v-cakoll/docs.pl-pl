@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409384"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>Omówienie modułu uwierzytelniania WSFederation
 Windows Identity Foundation (WIF) obejmuje obsługę uwierzytelniania federacyjnego w aplikacjach ASP.NET za pośrednictwem modułu uwierzytelniania WS-Federated (WS-FARMA). Ten temat pomoże Ci zrozumieć sposób federacyjnych działania uwierzytelniania i jak z niego korzystać.  

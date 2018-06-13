@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540494"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Porady: dodawanie przycisków załaduj, zapisz i anuluj do kontrolki BindingNavigator formularzy systemu Windows
 <xref:System.Windows.Forms.BindingNavigator> Formant jest specjalnych <xref:System.Windows.Forms.ToolStrip> formant, który jest przeznaczony do nawigowania i operowanie nimi formantów w formularzu, które są związane z danymi.  

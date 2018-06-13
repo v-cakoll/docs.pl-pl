@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364827"
 ---
 # <a name="troubleshooting"></a>Rozwiązywanie problemów
 Poniższe informacje ujawnia niektóre problemy, które mogą wystąpić w Twojej [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplikacji i zawiera propozycje, aby uniknąć lub w przeciwnym razie ograniczenia wpływu tych problemów.  

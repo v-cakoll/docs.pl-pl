@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388059"
 ---
 # <a name="pinvokestackimbalance-mda"></a>pInvokeStackImbalance MDA
 `pInvokeStackImbalance` Zarządzany Asystent debugowania (MDA) jest aktywowany, gdy środowisko CLR wykryje, że głębokość stosu po wywołaniu wywołanie platformy nie odpowiada Głębokość stosu oczekiwanego, podane Konwencja wywoływania określona w <xref:System.Runtime.InteropServices.DllImportAttribute> atrybutu, jak również Deklaracja parametrów w zarządzanego podpisu.  

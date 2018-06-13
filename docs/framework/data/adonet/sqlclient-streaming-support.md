@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364739"
 ---
 # <a name="sqlclient-streaming-support"></a>Obsługa przesyłania strumieniowego SqlClient
 Obsługa między programu SQL Server i aplikacją przesyłania strumieniowego (Nowość w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) obsługuje danych bez struktury przechowywanych na serwerze (pliki dokumentów, obrazy i nośnika). Bazy danych programu SQL Server może przechowywać duże obiekty binarne (BLOB), ale pobieranie obiektów blob może używać dużej ilości pamięci.  

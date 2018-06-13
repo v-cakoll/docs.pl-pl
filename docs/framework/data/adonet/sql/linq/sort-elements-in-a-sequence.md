@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361961"
 ---
 # <a name="sort-elements-in-a-sequence"></a>Sortowanie elementów w sekwencji
 Użyj <xref:System.Linq.Enumerable.OrderBy%2A> operatora, aby posortować sekwencji zgodnie z co najmniej jeden klucz.  

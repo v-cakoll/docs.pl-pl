@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365855"
 ---
 # <a name="service-operations-wcf-data-services"></a>Operacje usługi (usługi danych WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Umożliwia zdefiniowanie operacji usługi w usłudze danych, aby udostępniać metod na serwerze. Podobnie jak inne zasoby usługi danych operacji usługi są opisane przez identyfikator URI. Operacje usług umożliwiają udostępnianie logiki biznesowej w usłudze danych, takich jak wdrożyć logikę sprawdzania poprawności, zastosować opartej na rolach zabezpieczeń lub do udostępnienia specjalizowany możliwości zapytań. Operacje usług są dodawane do klasy usługi danych, która pochodzi z metody <xref:System.Data.Services.DataService%601>. Podobnie jak wszystkie inne usługi zasobów danych możesz podać parametry metody operacji usługi. Na przykład następujące operacja identyfikator URI usługi (na podstawie [szybkiego startu](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) Usługa danych) przekazuje wartość `London` do `city` parametru:  

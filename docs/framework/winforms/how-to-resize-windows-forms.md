@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540387"
 ---
 # <a name="how-to-resize-windows-forms"></a>Porady: zmienianie rozmiarów formularzy systemu Windows
 Można określić rozmiar formularza systemu Windows na kilka sposobów. Można zmienić wysokość i szerokość formularza programowo, ustawiając nową wartość dla <xref:System.Windows.Forms.Form.Size%2A> właściwości, lub Dostosuj <xref:System.Windows.Forms.Control.Height%2A> lub <xref:System.Windows.Forms.Control.Width%2A> właściwości pojedynczo. Jeśli używasz programu Visual Studio, można zmienić rozmiar przy użyciu narzędzia Projektant formularzy systemu Windows. Zobacz też [porady: Zmienianie rozmiaru Windows Forms przy użyciu narzędzia Projektant](http://msdn.microsoft.com/library/37k2zkwx\(v=vs.110\)).  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540920"
 ---
 # <a name="implementing-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a>Implementowanie trybu wirtualnego przy użyciu ładowania danych Just-In-Time w formancie DataGridView formularzy systemu Windows
 Jedną z przyczyn Implementowanie trybu wirtualnego w <xref:System.Windows.Forms.DataGridView> formant jest do pobierania danych tylko wtedy, gdy jest to potrzebne. Ta metoda jest wywoływana *ładowanie danych just in time*.  

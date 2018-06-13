@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540885"
 ---
 # <a name="richtextbox-control-windows-forms"></a>RichTextBox — Formant (Formularze systemu Windows)
 Formularze systemu Windows `RichTextBox` formant jest używany do wyświetlania, wprowadzania i manipulowanie formatowanie tekstu. `RichTextBox` Formant wykonuje wszystko <xref:System.Windows.Forms.TextBox> formant wykonuje, ale można również wyświetlić czcionek, kolorów i łączy; załadować z pliku; Cofnij i powtórz operacje; edytowania tekstu i obrazów osadzonych i Znajdź określonych znaków. `RichTextBox` Kontroli jest zwykle służą do udostępniania manipulowania tekstu i wyświetlić funkcje podobne do edytora aplikacji, takich jak Microsoft Word. Podobnie jak <xref:System.Windows.Forms.TextBox> kontroli, `RichTextBox` formant może wyświetlać paski przewijania; ale w przeciwieństwie do <xref:System.Windows.Forms.TextBox> kontroli, domyślnie wyświetla zarówno poziome i pionowe paski przewijania i ma ustawienia dodatkowe pasek przewijania.  

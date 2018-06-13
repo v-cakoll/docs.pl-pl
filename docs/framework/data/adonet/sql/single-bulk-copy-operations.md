@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365868"
 ---
 # <a name="single-bulk-copy-operations"></a>Operacje kopiowania masowego pojedynczego
 Najprostsza metoda wykonywanie operacji kopiowania zbiorczego SQL Server jest na wykonanie jednej operacji na bazie danych. Domyślnie kopiowania masowego odbywa się jako operacja izolowanego: operacja kopiowania odbywa się w sposób obsługi nietransakcyjnego z udostępnieniem jej nie możliwości tworzenia kopii.  

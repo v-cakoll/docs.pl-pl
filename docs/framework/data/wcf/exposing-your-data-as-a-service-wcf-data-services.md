@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363567"
 ---
 # <a name="exposing-your-data-as-a-service-wcf-data-services"></a>Udostępnianie danych jako usługa (usługi danych WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] integruje się z programem Visual Studio, aby możliwe było łatwiej zdefiniować usług do udostępnienia danych jako [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródeł danych. Tworzenie usługi danych, który opisuje [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych obejmuje następujące podstawowe kroki:  

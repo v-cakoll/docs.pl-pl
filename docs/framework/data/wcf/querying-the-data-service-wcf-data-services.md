@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365647"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>Zapytanie usługi danych (usługi danych WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Biblioteki klienta umożliwia wykonywanie zapytań względem usługi danych przy użyciu znanych [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] programowania wzorce, jak również za pomocą języka zapytań zintegrowanym (LINQ). Biblioteka klienta tłumaczy kwerendę, która jest zdefiniowana na kliencie jako wystąpienie <xref:System.Data.Services.Client.DataServiceQuery%601> klasy na komunikat żądania HTTP GET. Biblioteki odbiera komunikat odpowiedzi i przekształca ją w wystąpień klas usług danych klienta. Te klasy są śledzone przez <xref:System.Data.Services.Client.DataServiceContext> do którego <xref:System.Data.Services.Client.DataServiceQuery%601> należy.  

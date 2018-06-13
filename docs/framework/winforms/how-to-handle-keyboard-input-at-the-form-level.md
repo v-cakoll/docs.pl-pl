@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541099"
 ---
 # <a name="how-to-handle-keyboard-input-at-the-form-level"></a>Porady: obsługa wprowadzania z klawiatury na poziomie formularza
 Program Windows Forms zapewnia możliwość obsługi komunikatów klawiatury na poziomie formularza przed komunikaty do formantu. W tym temacie przedstawiono sposób wykonania tego zadania.  

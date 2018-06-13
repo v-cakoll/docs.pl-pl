@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360193"
 ---
 # <a name="detecting-changes-with-sqldependency"></a>Wykrywanie zmian z elementu SqlDependency
 A <xref:System.Data.SqlClient.SqlDependency> obiekt może być skojarzony z <xref:System.Data.SqlClient.SqlCommand> w celu wykrycia, gdy wyniki zapytania różnią się od pierwotnie pobrany. Można także przypisać pełnomocnika, aby `OnChange` zdarzenie, które będą uruchamiane po zmianie wyniki dla skojarzone polecenie. Musisz skojarzyć <xref:System.Data.SqlClient.SqlDependency> przy użyciu polecenia przed wykonaniem polecenia. `HasChanges` Właściwość <xref:System.Data.SqlClient.SqlDependency> można również określić, jeśli wyniki zapytania zostały zmienione od czasu najpierw pobrania danych.  

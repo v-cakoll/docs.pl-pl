@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361575"
 ---
 # <a name="boolean-data-types"></a>Typy danych logicznych
 Operatory logiczne działają zgodnie z oczekiwaniami w środowisku uruchomieniowym języka wspólnego (CLR) z tą różnicą, że zwarcie zachowanie nie jest translacja. Na przykład Visual Basic `AndAlso` operator zachowuje się jak `And` operatora. C# `&&` operator zachowuje się jak `&` operatora.  

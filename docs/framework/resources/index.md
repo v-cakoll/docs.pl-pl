@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399260"
 ---
 # <a name="resources-in-desktop-apps"></a>Zasoby w aplikacjach klasycznych
 Niemal wszystkie wysokiej jakości aplikacji ma korzystać z zasobów. Zasób jest niewykonywalne dane, które logicznie jest wdrażany z aplikacją. Zasób może być wyświetlany w aplikacji jako komunikaty o błędach lub jako część interfejsu użytkownika. Zasoby mogą zawierać dane w wielu formularzy, a także ciągów, obrazy i utrwalone obiektów. (Aby napisać utrwalonych obiektów do pliku zasobów, obiekty muszą podlegać serializacji.) Przechowywanie danych w pliku zasobów umożliwia zmianę danych bez konieczności ponownego kompilowania całej aplikacji. Także umożliwia przechowywanie danych w jednej lokalizacji i eliminuje potrzebę polegać na stałe danych przechowywanych w wielu lokalizacjach.  

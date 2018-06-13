@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362753"
 ---
 # <a name="interoperability-with-enterprise-services-and-com-transactions"></a>Współdziałanie z usługami przedsiębiorstwa i transakcje COM +
 <xref:System.Transactions> Przestrzeń nazw obsługuje współdziałanie obiektów transakcji utworzone za pomocą tej przestrzeni nazw i transakcje utworzone za pomocą modelu COM +.  

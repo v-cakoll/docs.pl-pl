@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327245"
 ---
 # <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>Porady: użycie globalnych aliasów przestrzeni nazw (Przewodnik programowania w języku C#)
 Umożliwia uzyskiwanie dostępu do członka w globalnej [przestrzeni nazw](../../../csharp/language-reference/keywords/namespace.md) jest przydatne, gdy element członkowski może być ukryty przez inną jednostkę o takiej samej nazwie.  

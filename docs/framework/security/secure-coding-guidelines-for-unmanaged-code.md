@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408154"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Wytyczne dotyczące bezpiecznego programowania dla niezarządzanego kodu
 Kod biblioteki musi wywoływać kodu niezarządzanego (na przykład kodu natywnego interfejsów API, takich jak Win32). Ponieważ oznacza to, że zewnętrzne granicznej zabezpieczeń dla zarządzanego kodu właściwym ostrożność jest wymagana. Jeśli kod jest neutralnym poziomie bezpieczeństwa, zarówno w kodzie, jak i każdy kod wywołujący go musi mieć niezarządzanych uprawnień kodu (<xref:System.Security.Permissions.SecurityPermission> z <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> określona flaga).  

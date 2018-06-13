@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402031"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Wiersz polecenia dla programu Visual Studio deweloperów
 Wiersz polecenia dla programu Visual Studio deweloperów automatycznie ustawia zmienne środowiskowe, które pozwalają łatwo za pomocą narzędzia .NET Framework. Wiersz polecenia dewelopera jest instalowany z full lub społeczności wersji programu Visual Studio. Nie jest instalowany z wersji Express programu Visual Studio.  

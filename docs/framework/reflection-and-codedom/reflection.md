@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399061"
 ---
 # <a name="reflection-in-the-net-framework"></a>Odbicie w oprogramowaniu .NET Framework
 Klasy w <xref:System.Reflection> przestrzeni nazw, wraz z <xref:System.Type?displayProperty=nameWithType>, umożliwiają uzyskanie informacji na temat załadować [zestawy](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) i typy zdefiniowane w nich, takich jak [klasy](http://msdn.microsoft.com/library/ad7d3561-271e-4546-82fc-e00b059f27a9), [interfejsów](http://msdn.microsoft.com/library/fd9d5975-5363-4bc9-b883-609f887895e5), i [typów wartości](http://msdn.microsoft.com/library/c9c567f8-8ab1-4d88-834d-00f7d92418de). Umożliwia także odbicia Tworzenie wystąpień typów w czasie wykonywania, a także wywołania i uzyskiwać do nich dostęp. Tematy dotyczące określonych aspektów odbicia, zobacz [Tematy pokrewne](#related_topics) na końcu tego przeglądu.  

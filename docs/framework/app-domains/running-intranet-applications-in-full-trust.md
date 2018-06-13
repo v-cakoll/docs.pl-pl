@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356792"
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>Uruchamianie aplikacji intranetowych w trybie pełnego zaufania
 W programie .NET Framework w wersji 3.5 Service Pack 1 (SP1), aplikacji i ich zestawy bibliotek mogą być uruchamiane jako zestawy pełnego zaufania z udziału sieciowego. <xref:System.Security.SecurityZone.MyComputer> dowód strefy jest automatycznie dodawany do zestawów, które są ładowane z udziału w sieci intranet. To świadectwo zapewnia te zestawy, takie same udzielić zestaw (co jest zazwyczaj pełnego zaufania) jako zestawy, które znajdują się na komputerze. Ta funkcja nie ma zastosowania do aplikacji ClickOnce lub aplikacje, które są zaprojektowane do uruchamiania na hoście.  

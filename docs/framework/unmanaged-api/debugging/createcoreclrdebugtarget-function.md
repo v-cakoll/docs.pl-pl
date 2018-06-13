@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402978"
 ---
 # <a name="createcoreclrdebugtarget-function"></a>CreateCoreClrDebugTarget — Funkcja
 Tworzy połączenie debugera serwer proxy, który jest uruchomiony na komputerze zdalnym i zwraca [icoreclrdebugtarget —](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) obiektu, który może służyć do badania uruchomione procesy i załadować środowisk uruchomieniowych na komputerze zdalnym.  

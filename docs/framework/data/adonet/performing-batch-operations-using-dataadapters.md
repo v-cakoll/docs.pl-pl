@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361988"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>Za pomocą obiektów DataAdapter operacji wsadowych.
 Umożliwia obsługę partii w ADO.NET <xref:System.Data.Common.DataAdapter> do grupowania operacji INSERT, UPDATE i DELETE <xref:System.Data.DataSet> lub <xref:System.Data.DataTable> na serwerze, zamiast wysyłać jedną operację naraz. Zmniejszenie liczby rund do serwera zwykle powoduje znaczący wzrost wydajności. Aktualizacje wsadowe są obsługiwane dla dostawcy danych .NET dla programu SQL Server (<xref:System.Data.SqlClient>) i Oracle (<xref:System.Data.OracleClient>).  

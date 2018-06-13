@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399273"
 ---
 # <a name="json-web-token-handler-api-reference"></a>Odwołanie API do programu obsługi tokenów sieci Web JSON
 Ta sekcja zawiera dokumentacja interfejsu API dla rozszerzenia JSON sieci Web do WIF tokenu programu obsługi.

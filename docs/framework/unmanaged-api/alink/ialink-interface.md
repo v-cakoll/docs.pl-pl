@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408596"
 ---
 # <a name="ialink-interface"></a>IALink — Interfejs
 Pomaga w tworzeniu zestawów platformy .NET Framework. Między innymi interfejs zawiera metody wspomagające zapisywania manifesty zestawów wielomodułowych, podpisywanie zestawów o silnych nazwach i tworzenie netmodules.  

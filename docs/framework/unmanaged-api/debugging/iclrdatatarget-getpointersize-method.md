@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406497"
 ---
 # <a name="iclrdatatargetgetpointersize-method"></a>ICLRDataTarget::GetPointerSize — Metoda
 Pobiera rozmiar w bajtach, który używa procesu docelowego typu wskaźnika. Ta metoda jest wywoływana przez usługi dostępu danych środowiska uruchomieniowego języka wspólnego.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406281"
 ---
 # <a name="constants-unmanaged-api-reference"></a>Stałe (Niezarządzany wykaz interfejsów API)
 W tym temacie opisano typ języka dostawcy języka i stałe typu dokumentu, które są zdefiniowane w CorSym.idl.  

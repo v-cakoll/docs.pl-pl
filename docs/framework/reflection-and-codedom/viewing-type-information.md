@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399746"
 ---
 # <a name="viewing-type-information"></a>Wyświetlanie informacji o typie
 <xref:System.Type?displayProperty=nameWithType> Klasy jest podstawą odbicia. Tworzy środowisko uruchomieniowe języka wspólnego **typu** dla typu załadowanego podczas żądania odbicia. Można użyć **typu** metod, pola, właściwości i zagnieżdżonych klas, aby dowiedzieć się wszystkiego o tego typu obiektu.  

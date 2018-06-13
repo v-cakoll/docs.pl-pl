@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340323"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>Nieprawidłowa zawartość klasy XElement i obiektów klasy XDocument
 W tym temacie opisano nieprawidłowe argumenty, które mogą zostać przekazane do konstruktorów i metod, które umożliwia dodawanie zawartości do elementów i dokumentów.  

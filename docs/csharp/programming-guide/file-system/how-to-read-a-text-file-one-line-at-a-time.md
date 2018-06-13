@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339738"
 ---
 # <a name="how-to-read-a-text-file-one-line-at-a-time-visual-c"></a>Porady: odczyt pliku tekstowego po jednym wierszu (Visual C#)
 Ten przykład odczytuje zawartość pliku tekstowego, jeden wiersz w czasie, w ciągu przy użyciu `ReadLine` metody `StreamReader` klasy. Każdy wiersz tekstu jest przechowywany w ciągu `line` i wyświetlane na ekranie.  

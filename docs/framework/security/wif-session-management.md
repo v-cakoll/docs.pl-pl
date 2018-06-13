@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399116"
 ---
 # <a name="wif-session-management"></a>Zarządzanie sesjami WIF
 Gdy pierwszy klient próbuje uzyskać dostępu do chronionego zasobu, która jest obsługiwana przez jednostkę uzależnioną, klient muszą najpierw uwierzytelnić się z usługą tokenu zabezpieczeń (STS), który jest uznawany za zaufany przez jednostkę uzależnioną. Usługa tokenu Zabezpieczającego następnie wystawia token zabezpieczający do klienta. Klient przedstawia ten token do jednostki uzależnionej, co powoduje przyznanie dostępu klientów do chronionego zasobu. Jednak nie chcesz umożliwić klientowi ponownego uwierzytelnienia do serwera STS dla każdego żądania, szczególnie, ponieważ może nie nawet być w tym samym komputerze lub w tej samej domenie co jednostki uzależnionej. Zamiast tego Windows Identity Foundation (WIF) ma klienta i ustanowienia sesji, w którym klient używa tokenu zabezpieczającego sesji do samodzielnego uwierzytelnienia do jednostki uzależnionej dla wszystkich żądań, po pierwszym żądaniu jednostki uzależnionej. Jednostki uzależnionej można użyć tego tokenu zabezpieczającego sesji, który jest przechowywany w pliku cookie, aby odtworzyć klienta <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType>.  

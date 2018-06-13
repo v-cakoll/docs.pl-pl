@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351829"
 ---
 # <a name="ltannouncementendpointgt"></a>&lt;AnnouncementEndpoint&gt;
 Ten element konfiguracji definiuje standardowy punkt końcowy ze stałym kontraktem zawiadomieniowym. Usługi można opcjonalnie ogłaszamy jego dostępność, wysyłając wiadomość online i offline powiadomienia, gdy jest otwarty lub zamknięty odpowiednio. Usługi Windows Communication Foundation (WCF) określa punktów końcowych powiadomienia w [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) element i używa AnnouncementClient przeprowadzić anonsów. Klient chcą nasłuchiwania anonsu z innej usługi rzeczywiście działa jako usługa WCF; w związku z tym należy skonfigurować punktów końcowych powiadomienia dla tego klienta w [ \<usługi >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) sekcji.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407985"
 ---
 # <a name="namespace-mapping-between-wif-35-and-wif-45"></a>Namespace mapowanie między WIF 3.5 i WIF 4.5
 Począwszy od platformy .NET 4.5, Windows Identity Foundation (WIF) zostało pełni zintegrowane programu .NET Framework. Integracja ta powstałe zmiany nazwy i niektóre konsolidacji WIF obszary nazw i powierzchni interfejsu API. Ten temat zawiera instrukcje oraz ogólne mapowania między przestrzenie nazw WIF 3.5 i przestrzenie nazw WIF 4.5. Nie ma być wyczerpujące, ale raczej Podaj ogólne informacje o tym, gdzie można znaleźć klasy WIF 3.5 znanych w wersji WIF 4.5. Aby uzyskać szczegółowe informacje o różnicach między WIF 3.5 i WIF 4.5, zobacz [What's New in Windows Identity Foundation 4.5](../../../docs/framework/security/whats-new-in-wif.md). Aby uzyskać wskazówki dotyczące migracji aplikacji utworzony za pomocą WIF 3.5 WIF 4.5, zobacz [wskazówki dotyczące migrowania aplikacji utworzony za pomocą programu WIF 3.5 WIF 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md).  

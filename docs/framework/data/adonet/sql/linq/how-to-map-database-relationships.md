@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364300"
 ---
 # <a name="how-to-map-database-relationships"></a>Porady: Mapowanie relacji w bazie danych
 Może zakodować jako właściwość odwołuje się w klasie jednostki relacji między danymi, które będą zawsze taki sam. W bazie danych Northwind na przykład, ponieważ klienci zwykle składanie zamówień, istnieje zawsze relacja modelu między klientów i zamówienia.  

@@ -33,6 +33,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399694"
 ---
 # <a name="packaging-and-deploying-resources-in-desktop-apps"></a>Opakowanie i wdrażanie zasobów w aplikacjach klasycznych
 Aplikacje polegają na .NET Framework Menedżera zasobów, reprezentowany przez <xref:System.Resources.ResourceManager> klasy można pobrać zlokalizowanych zasobów. Menedżer zasobów przyjęto, że model gwiazdy jest używany pakiet i wdrażanie zasobów. Koncentrator jest główny zestaw zawierający kod wykonywalny nonlocalizable i zasoby dla pojedynczego kultury, nazywany zero lub domyślną kulturę. Domyślną kulturę jest kultury rezerwowej dla aplikacji; jest kultura, którego zasoby są używane, jeśli nie można odnaleźć zlokalizowanych zasobów. Każdy gwiazdy łączy zestawu satelickiego, który zawiera zasoby dla kultury pojedynczego, ale nie zawiera żadnego kodu.  

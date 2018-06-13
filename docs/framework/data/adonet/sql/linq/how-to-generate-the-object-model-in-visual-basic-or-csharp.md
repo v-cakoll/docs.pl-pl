@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360396"
 ---
 # <a name="how-to-generate-the-object-model-in-visual-basic-or-c"></a>Porady: Generowanie modelu obiektów w Visual Basic lub C# #
 W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], model obiektowy w języku programowania jest mapowany na relacyjnej bazy danych. Dwa narzędzia są dostępne do automatycznego generowania modelu kodu języka Visual Basic lub C# z istniejącej bazy danych metadanych.  

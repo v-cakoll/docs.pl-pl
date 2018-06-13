@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399811"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Pobieranie zasobów w aplikacjach klasycznych
 Podczas pracy z zlokalizowanych zasobów w aplikacjach klasycznych .NET Framework, należy w idealnym przypadku pakiet zasobów dla domyślnej lub kultury neutralnej o zestawie głównym i utworzyć zestaw satelicki osobne dla każdego języka i kultury, która obsługuje aplikację. Następnie można użyć <xref:System.Resources.ResourceManager> klasy zgodnie z opisem w następnej sekcji, aby uzyskać dostęp do zasobów o nazwie. Jeśli wybierzesz nie osadzić zasobów w zestawie głównym i zestawy satelickie, można również przejść, pliki binarne .resources bezpośrednio, zgodnie z opisem w sekcji [podczas pobierania zasobów z plików .resources](#from_file) dalszej części tego artykuł.  Można pobrać zasobów w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, zobacz [tworzenie i pobieranie zasobów w aplikacjach w Sklepie Windows](http://go.microsoft.com/fwlink/p/?LinkID=241674) w Centrum deweloperów systemu Windows.  

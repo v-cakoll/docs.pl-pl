@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355763"
 ---
 # <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>Porady: Przechwytywanie danych usługi wiadomości (usługi danych WCF)
 Z [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], mogą przechwycić komunikaty żądania, aby mogli dodawać niestandardowej logiki do operacji. Do przechwycenia wiadomości, używasz metody oparte na atrybutach specjalnie w usłudze danych. Aby uzyskać więcej informacji, zobacz [Interceptory](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md).  

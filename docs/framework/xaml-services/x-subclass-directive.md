@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566421"
 ---
 # <a name="xsubclass-directive"></a>x:Subclass — dyrektywa
 Modyfikuje zachowanie kompilacji znaczników XAML podczas `x:Class` jest również udostępniany. Zamiast tworzenia częściowej klasy, która jest oparta na `x:Class`, dostarczonych `x:Class` zostanie utworzona jako klasa pośrednicząca, a następnie oczekuje na podstawie podanych klasy pochodnej `x:Class`.  

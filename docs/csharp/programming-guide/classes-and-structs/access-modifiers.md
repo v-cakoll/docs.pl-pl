@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33314112"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Modyfikatory dostępu (Przewodnik programowania w języku C#)
 Wszystkie typy i elementy członkowskie typu ma poziomu ułatwień dostępu, który kontroluje, czy może być używany z innymi kodu z zestawu lub innych zestawów. Następujących modyfikatorów dostępu służy do określenia dostępności typu lub elementu członkowskiego przy deklarowaniu go:  

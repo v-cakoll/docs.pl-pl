@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398994"
 ---
 # <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>Porady: Włączanie programu WIF dla aplikacji usługi sieci Web WCF
 ## <a name="applies-to"></a>Dotyczy:  

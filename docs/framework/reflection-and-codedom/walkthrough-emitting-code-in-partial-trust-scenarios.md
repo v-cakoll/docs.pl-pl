@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399759"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Wskazówki: emitowanie kodu w scenariuszach częściowo zaufanych
 Emisja odbicia używa tego samego interfejsu API w pełnej lub częściowej relacji zaufania, ale niektóre funkcje wymagają szczególnych uprawnień w częściowo zaufany kod. Ponadto emisja odbicia ma funkcji hostowanej anonimowo metody dynamicznej, który jest przeznaczony do użycia z częściowa relacja zaufania i zestawy przezroczystym poziomie bezpieczeństwa.  

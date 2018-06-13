@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399980"
 ---
 # <a name="custom-token-handlers"></a>Niestandardowe programy obsługi tokenu
 W tym temacie omówiono tokenu programy obsługi zdarzeń w wersji WIF i jak są one używane do przetwarzania tokenów. Temat obejmuje również problemy, co jest niezbędne do utworzenia niestandardowych tokenu obsługi typów tokenu, które nie są obsługiwane w wersji WIF domyślnie.  

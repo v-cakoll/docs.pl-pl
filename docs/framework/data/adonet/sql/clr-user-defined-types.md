@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357585"
 ---
 # <a name="clr-user-defined-types"></a>Typy danych zdefiniowane przez użytkownika CLR
 Microsoft SQL Server zapewnia obsługę zdefiniowanych przez użytkownika typów (UDTs) zaimplementowany przy użyciu programu Microsoft .NET Framework środowisko uruchomieniowe języka wspólnego (CLR). Środowisko CLR jest zintegrowany z programu SQL Server, a mechanizm ten umożliwia rozszerzanie system typu bazy danych. UDTs rozszerzalność użytkownika system typów danych programu SQL Server, a także możliwość definiowania złożonych typów strukturalnych.  

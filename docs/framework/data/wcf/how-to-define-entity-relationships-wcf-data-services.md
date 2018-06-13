@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363995"
 ---
 # <a name="how-to-define-entity-relationships-wcf-data-services"></a>Porady: Definiowanie relacji między obiektami (usługi danych WCF)
 Po dodaniu nowej jednostki w [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], wszystkie relacje między nimi i powiązanych jednostek nie są automatycznie zdefiniowane. Można utworzyć i zmienić relacje między wystąpieniami jednostki i biblioteki klienta odzwierciedlenia tych zmian w usłudze danych. Aby uzyskać więcej informacji, zobacz [aktualizacji usługi danych](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  

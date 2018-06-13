@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399152"
 ---
 # <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>Porady: Tworzenie aplikacji sieci Web obsługujący oświadczenia platformy ASP.NET MVC za pomocą WIF
 ## <a name="applies-to"></a>Dotyczy:  

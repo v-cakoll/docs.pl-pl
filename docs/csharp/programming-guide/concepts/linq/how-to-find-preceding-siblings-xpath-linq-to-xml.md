@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316884"
 ---
 # <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>Porady: znajdowanie poprzedzających elementów równorzędnych (XPath-LINQ do XML) (C#)
 W tym temacie porównuje XPath `preceding-sibling` oś [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] podrzędnych <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> osi.  

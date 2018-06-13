@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405057"
 ---
 # <a name="icordebugappdomain4-interface"></a>ICorDebugAppDomain4 — interfejs
 Logicznie rozszerza interfejs ICorDebugAppDomain można pobrać obiektu zarządzanego z wywoływana otoka COM.  

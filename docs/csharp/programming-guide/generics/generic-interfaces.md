@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323641"
 ---
 # <a name="generic-interfaces-c-programming-guide"></a>Interfejsy ogólne (Przewodnik programowania w języku C#)
 Często jest przydatne do definiowania interfejsów dla klasy rodzajowej kolekcji lub dla klasy ogólne, które reprezentują elementów w kolekcji. Preferencje dla klas ogólnych jest używać interfejsów ogólnych, takich jak <xref:System.IComparable%601> zamiast <xref:System.IComparable>, aby uniknąć konwersja boxing i rozpakowywanie operacji w typach wartości. Biblioteka klas programu .NET Framework definiuje kilku interfejsach służących do klasy kolekcji w <xref:System.Collections.Generic> przestrzeni nazw.  

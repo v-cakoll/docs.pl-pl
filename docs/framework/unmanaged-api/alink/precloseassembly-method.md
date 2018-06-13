@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400721"
 ---
 # <a name="precloseassembly-method"></a>PreCloseAssembly — Metoda
 Zamyka plik zestawu. Tę metodę można wywołać po zamknięciu wszystkich innych plików, ale przed zamknięciem pliku zestawu. Nie wywołuj tej metody dla modułów niepowiązanych.  

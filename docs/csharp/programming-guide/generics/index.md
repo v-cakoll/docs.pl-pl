@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333817"
 ---
 # <a name="generics-c-programming-guide"></a>Typy ogólne (Przewodnik programowania w języku C#)
 Typy ogólne zostały dodane do wersji 2.0 języka C# i środowisko uruchomieniowe języka wspólnego (CLR). Ogólne wprowadzenie do programu .NET Framework pojęcia parametrów typu, które umożliwiają do projektu klasy i metody, które mają być odroczone specyfikację jeden lub więcej typów, aż klasa lub metoda jest zadeklarowany i utworzone przez kod klienta. Na przykład za pomocą parametru typu ogólnego T można napisać jedną klasę, używaną przez inny kod klienta bez ponoszenia kosztów lub ryzyka środowiska uruchomieniowego rzutowania lub konwersji boxing operacji, jak pokazano poniżej:  

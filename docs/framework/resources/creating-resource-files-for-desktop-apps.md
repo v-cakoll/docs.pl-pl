@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399824"
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a>Tworzenie plików zasobów dla aplikacji klasycznych
 Zasoby, takie jak ciągi, obrazy lub obiektu danych, można uwzględnić w plikach zasobów, aby były łatwo dostępne dla aplikacji. .NET Framework zapewnia pięć sposoby tworzenia plików zasobów:  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404203"
 ---
 # <a name="coractivefunction-structure"></a>COR_ACTIVE_FUNCTION — Struktura
 Zawiera informacje na temat funkcji, które są aktualnie aktywne w ramkach wątku. Ta struktura jest używany przez [ICorDebugThread2::GetActiveFunctions](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md) metody.  

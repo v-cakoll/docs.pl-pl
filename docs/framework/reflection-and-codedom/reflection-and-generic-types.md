@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399707"
 ---
 # <a name="reflection-and-generic-types"></a>Odbicie i typy ogólne
 <a name="top"></a> Z punktu widzenia odbicia, że typu ogólnego jest skojarzony z nim zestaw parametrów typu (jeśli jest definicją typu ogólnego) jest różnica między typem ogólnym i typu zwykłego lub argumentów typu (jeśli jest skonstruowanego typu). Metoda ogólna różni się od zwykłej metody w taki sam sposób.  

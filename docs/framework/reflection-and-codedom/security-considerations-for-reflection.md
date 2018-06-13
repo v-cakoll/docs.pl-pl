@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398707"
 ---
 # <a name="security-considerations-for-reflection"></a>Zagadnienia dotyczące zabezpieczeń dla odbicia
 Odbicie pozwala, aby uzyskać informacje o typy i składniki oraz do elementów członkowskich dostępu (to znaczy do wywołania metody i konstruktory do pobierania i ustawiania właściwości wartości, dodawanie i usuwanie programów obsługi zdarzeń i tak dalej). Użyj odbicia w celu uzyskania informacji na temat typów i członków nie jest ograniczone. Cały kod służy odbicia do wykonywania następujących zadań:  

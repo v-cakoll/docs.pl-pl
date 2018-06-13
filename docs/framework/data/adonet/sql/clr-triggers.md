@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352867"
 ---
 # <a name="clr-triggers"></a>Wyzwalacze CLR
 Wyzwalacz jest specjalnym rodzajem procedury przechowywanej, która uruchamia się automatycznie po wykonuje zdarzenia języka. Dzięki integracji programu Microsoft SQL Server z .NET Framework środowisko uruchomieniowe języka wspólnego (CLR) można użyć dowolnego języka .NET Framework, można utworzyć wyzwalaczy CLR.  

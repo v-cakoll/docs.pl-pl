@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400695"
 ---
 # <a name="getting-started-with-wif"></a>Wprowadzenie do korzystania z programu WIF
 -   [Tworzenie pierwszej aplikacji internetowej ASP.NET obsługującej oświadczenia](../../../docs/framework/security/building-my-first-claims-aware-aspnet-web-app.md)  

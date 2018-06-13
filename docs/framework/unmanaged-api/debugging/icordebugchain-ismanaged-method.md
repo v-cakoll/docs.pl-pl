@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401170"
 ---
 # <a name="icordebugchainismanaged-method"></a>ICorDebugChain::IsManaged — Metoda
 Pobiera wartość wskazującą, czy ten łańcuch działa kodu zarządzanego.  

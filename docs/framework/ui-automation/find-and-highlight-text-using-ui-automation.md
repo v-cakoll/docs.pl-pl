@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401089"
 ---
 # <a name="find-and-highlight-text-using-ui-automation"></a>Znajdowanie i wyróżnianie tekstu przy użyciu automatyzacji interfejsu użytkownika
 > [!NOTE]

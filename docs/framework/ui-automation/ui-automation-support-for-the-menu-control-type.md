@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408808"
 ---
 # <a name="ui-automation-support-for-the-menu-control-type"></a><span data-ttu-id="53c54-102">Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu menu</span><span class="sxs-lookup"><span data-stu-id="53c54-102">UI Automation Support for the Menu Control Type</span></span>
 > [!NOTE]

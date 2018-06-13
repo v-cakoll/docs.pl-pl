@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266584"
 ---
 # <a name="out-c-reference"></a><span data-ttu-id="3af2e-102">out (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="3af2e-102">out (C# Reference)</span></span>
 <span data-ttu-id="3af2e-103">Można użyć `out` — słowo kluczowe w dwóch kontekstów:</span><span class="sxs-lookup"><span data-stu-id="3af2e-103">You can use the `out` keyword in two contexts:</span></span>

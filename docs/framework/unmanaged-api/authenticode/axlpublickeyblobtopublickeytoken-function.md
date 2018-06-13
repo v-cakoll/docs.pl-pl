@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401677"
 ---
 # <a name="axlpublickeyblobtopublickeytoken-function"></a><span data-ttu-id="3c35a-102">Funkcja _AxlPublicKeyBlobToPublicKeyToken</span><span class="sxs-lookup"><span data-stu-id="3c35a-102">_AxlPublicKeyBlobToPublicKeyToken Function</span></span>
 <span data-ttu-id="3c35a-103">Oblicza silnej nazwy token klucza publicznego z formatu PUBLICKEYBLOB dostawcy usług Kryptograficznych.</span><span class="sxs-lookup"><span data-stu-id="3c35a-103">Computes the strong name public key token from a CSP PUBLICKEYBLOB format.</span></span>  

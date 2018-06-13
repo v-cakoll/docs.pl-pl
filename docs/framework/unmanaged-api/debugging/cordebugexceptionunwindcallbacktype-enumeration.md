@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404121"
 ---
 # <a name="cordebugexceptionunwindcallbacktype-enumeration"></a><span data-ttu-id="c0922-102">CorDebugExceptionUnwindCallbackType — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="c0922-102">CorDebugExceptionUnwindCallbackType Enumeration</span></span>
 <span data-ttu-id="c0922-103">Wskazuje sygnalizowane trwa przez wywołanie zwrotne w fazie unwind zdarzenie.</span><span class="sxs-lookup"><span data-stu-id="c0922-103">Indicates the event that is being signaled by the callback during the unwind phase.</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407030"
 ---
 # <a name="ui-automation-text-pattern-how-to-topics"></a><span data-ttu-id="66fe9-102">Wzorce tekstu automatyzacji interfejsu użytkownika — Tematy porad</span><span class="sxs-lookup"><span data-stu-id="66fe9-102">UI Automation Text Pattern-How-to Topics</span></span>
 > [!NOTE]

@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349772"
 ---
 # <a name="structs"></a><span data-ttu-id="c5950-103">Struktury</span><span class="sxs-lookup"><span data-stu-id="c5950-103">Structs</span></span>
 <span data-ttu-id="c5950-104">A *struktury* jest typem wartości.</span><span class="sxs-lookup"><span data-stu-id="c5950-104">A *struct* is a value type.</span></span> <span data-ttu-id="c5950-105">Podczas tworzenia struktury zmiennej, do której przypisano struktury zawiera struktury danych rzeczywistych.</span><span class="sxs-lookup"><span data-stu-id="c5950-105">When a struct is created, the variable to which the struct is assigned holds the struct's actual data.</span></span> <span data-ttu-id="c5950-106">Struktura jest przypisany do nowej zmiennej, są kopiowane.</span><span class="sxs-lookup"><span data-stu-id="c5950-106">When the struct is assigned to a new variable, it is copied.</span></span> <span data-ttu-id="c5950-107">Nową zmienną i pierwotnej zmiennej w związku z tym zawierają dwa osobne kopie tych samych danych.</span><span class="sxs-lookup"><span data-stu-id="c5950-107">The new variable and the original variable therefore contain two separate copies of the same data.</span></span> <span data-ttu-id="c5950-108">Zmiany wprowadzone w jednej kopii nie wpływają na innej kopii.</span><span class="sxs-lookup"><span data-stu-id="c5950-108">Changes made to one copy do not affect the other copy.</span></span>

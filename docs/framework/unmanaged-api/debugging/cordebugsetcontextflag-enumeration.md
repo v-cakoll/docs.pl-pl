@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406978"
 ---
 # <a name="cordebugsetcontextflag-enumeration"></a><span data-ttu-id="47245-102">CorDebugSetContextFlag — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="47245-102">CorDebugSetContextFlag Enumeration</span></span>
 <span data-ttu-id="47245-103">Wskazuje, czy kontekst jest z aktywnego (lub typu liść) ramek na stosie lub został obliczony przy odwijanie od innej ramki.</span><span class="sxs-lookup"><span data-stu-id="47245-103">Indicates whether the context is from the active (or leaf) frame on the stack or has been computed by unwinding from another frame.</span></span>  

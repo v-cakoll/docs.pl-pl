@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402855"
 ---
 # <a name="cordebugrecordformat-enumeration"></a><span data-ttu-id="c7277-102">Wyliczenie CorDebugRecordFormat</span><span class="sxs-lookup"><span data-stu-id="c7277-102">CorDebugRecordFormat Enumeration</span></span>
 <span data-ttu-id="c7277-103">Opisuje format danych w tablicy bajtów, który zawiera informacje dotyczące zdarzenia debugowania natywnego wyjątek.</span><span class="sxs-lookup"><span data-stu-id="c7277-103">Describes the format of the data in a byte array that contains information about a native exception debug event.</span></span>  

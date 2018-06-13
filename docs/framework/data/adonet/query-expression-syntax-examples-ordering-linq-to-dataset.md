@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352197"
 ---
 # <a name="query-expression-syntax-examples-ordering-linq-to-dataset"></a><span data-ttu-id="28095-102">Przykłady składni wyrażeń zapytania: Porządkowanie (LINQ do DataSet)</span><span class="sxs-lookup"><span data-stu-id="28095-102">Query Expression Syntax Examples: Ordering (LINQ to DataSet)</span></span>
 <span data-ttu-id="28095-103">Przykłady w tym temacie przedstawiają sposób użycia <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.OrderByDescending%2A>, <xref:System.Linq.Enumerable.Reverse%2A>, i <xref:System.Linq.Enumerable.ThenByDescending%2A> metod do badania <xref:System.Data.DataSet> i kolejność wyniki za pomocą składni wyrażenia zapytania.</span><span class="sxs-lookup"><span data-stu-id="28095-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.OrderByDescending%2A>, <xref:System.Linq.Enumerable.Reverse%2A>, and <xref:System.Linq.Enumerable.ThenByDescending%2A> methods to query a <xref:System.Data.DataSet> and order the results using the query expression syntax.</span></span>  

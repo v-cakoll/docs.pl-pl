@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474431"
 ---
 # <a name="microsofttransactionstransactionbridgeenlisttransaction"></a><span data-ttu-id="5cd39-102">Microsoft.Transactions.TransactionBridge.EnlistTransaction</span><span class="sxs-lookup"><span data-stu-id="5cd39-102">Microsoft.Transactions.TransactionBridge.EnlistTransaction</span></span>
 <span data-ttu-id="5cd39-103">Usługa protokołu WS-AT została pomyślnie zarejestrowana w transakcji, która używa dostępnego kontekstu koordynacji.</span><span class="sxs-lookup"><span data-stu-id="5cd39-103">The WS-Atomic Transaction protocol service successfully enlisted on a transaction that uses the provided coordination context.</span></span>  

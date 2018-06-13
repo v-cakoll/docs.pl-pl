@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566863"
 ---
 # <a name="xtypearguments-directive"></a><span data-ttu-id="fa846-102">x:TypeArguments — dyrektywa</span><span class="sxs-lookup"><span data-stu-id="fa846-102">x:TypeArguments Directive</span></span>
 <span data-ttu-id="fa846-103">Przekazuje ograniczający wpisz argumenty ogólne do konstruktora typu ogólnego.</span><span class="sxs-lookup"><span data-stu-id="fa846-103">Passes constraining type arguments of a generic to the constructor of the generic type.</span></span>  

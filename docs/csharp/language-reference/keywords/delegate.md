@@ -14,6 +14,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172113"
 ---
 # <a name="delegate-c-reference"></a><span data-ttu-id="60296-102">delegate (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="60296-102">delegate (C# Reference)</span></span>
 <span data-ttu-id="60296-103">Deklaracja typu delegowanego jest podobny do sygnatury metody.</span><span class="sxs-lookup"><span data-stu-id="60296-103">The declaration of a delegate type is similar to a method signature.</span></span> <span data-ttu-id="60296-104">Ma wartość zwracaną i dowolną liczbę parametrów dowolnego typu:</span><span class="sxs-lookup"><span data-stu-id="60296-104">It has a return value and any number of parameters of any type:</span></span>  

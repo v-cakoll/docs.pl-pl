@@ -16,6 +16,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234019"
 ---
 # <a name="enum-statement-visual-basic"></a><span data-ttu-id="47eca-102">Enum — Instrukcja (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="47eca-102">Enum Statement (Visual Basic)</span></span>
 <span data-ttu-id="47eca-103">Deklaruje wyliczenie i definiuje wartości jego elementów członkowskich.</span><span class="sxs-lookup"><span data-stu-id="47eca-103">Declares an enumeration and defines the values of its members.</span></span>  

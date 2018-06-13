@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33473535"
 ---
 # <a name="microsofttransactionstransactionbridgeparticipantstatemachinefinished"></a><span data-ttu-id="3176b-102">Microsoft.Transactions.TransactionBridge.ParticipantStateMachineFinished</span><span class="sxs-lookup"><span data-stu-id="3176b-102">Microsoft.Transactions.TransactionBridge.ParticipantStateMachineFinished</span></span>
 <span data-ttu-id="3176b-103">Komputer stanu dla rejestracji uczestnika przeszedł w stan zakończenia.</span><span class="sxs-lookup"><span data-stu-id="3176b-103">The state machine for a participant enlistment entered the finished state.</span></span>  

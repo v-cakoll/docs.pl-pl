@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449393"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a><span data-ttu-id="97254-102">IMetaDataEmit::DefineImportMember — Metoda</span><span class="sxs-lookup"><span data-stu-id="97254-102">IMetaDataEmit::DefineImportMember Method</span></span>
 <span data-ttu-id="97254-103">Tworzy odwołanie do określonego elementu członkowskiego o typie lub module, który jest zdefiniowany poza bieżącym zakresem i definiuje token dla tego odwołania.</span><span class="sxs-lookup"><span data-stu-id="97254-103">Creates a reference to the specified member of a type or module that is defined outside the current scope, and defines a token for that reference.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172662"
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a><span data-ttu-id="0bc8b-102">Porady: zwracanie podzbiorów właściwości elementu w zapytaniu (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="0bc8b-102">How to: Return Subsets of Element Properties in a Query (C# Programming Guide)</span></span>
 <span data-ttu-id="0bc8b-103">Użyj typu anonimowego w wyrażeniu zapytania, gdy oba te warunki mają zastosowanie:</span><span class="sxs-lookup"><span data-stu-id="0bc8b-103">Use an anonymous type in a query expression when both of these conditions apply:</span></span>  

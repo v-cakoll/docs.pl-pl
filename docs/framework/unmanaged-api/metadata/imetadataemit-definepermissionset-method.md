@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445192"
 ---
 # <a name="imetadataemitdefinepermissionset-method"></a><span data-ttu-id="b5299-102">IMetaDataEmit::DefinePermissionSet — Metoda</span><span class="sxs-lookup"><span data-stu-id="b5299-102">IMetaDataEmit::DefinePermissionSet Method</span></span>
 <span data-ttu-id="b5299-103">Tworzy definicji zestawu uprawnień o podpisu określonych metadanych, a następnie pobiera token do tej definicji zestawu uprawnień.</span><span class="sxs-lookup"><span data-stu-id="b5299-103">Creates a definition for a permission set with the specified metadata signature, and gets a token to that permission set definition.</span></span>  

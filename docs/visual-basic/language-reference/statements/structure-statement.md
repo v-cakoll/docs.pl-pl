@@ -17,6 +17,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234468"
 ---
 # <a name="structure-statement"></a><span data-ttu-id="b382f-102">Structure — Instrukcja</span><span class="sxs-lookup"><span data-stu-id="b382f-102">Structure Statement</span></span>
 <span data-ttu-id="b382f-103">Deklaruje nazwę struktury i wprowadza definicje zmiennych, właściwości, zdarzeń i procedur, które obejmuje struktury.</span><span class="sxs-lookup"><span data-stu-id="b382f-103">Declares the name of a structure and introduces the definition of the variables, properties, events, and procedures that the structure comprises.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171983"
 ---
 # <a name="-gt-operator-c-reference"></a><span data-ttu-id="bbb79-102">-&gt; Operator (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="bbb79-102">-&gt; Operator (C# Reference)</span></span>
 <span data-ttu-id="bbb79-103">Operator `->` łączy wyłuskanie wskaźnika i dostęp do elementu członkowskiego.</span><span class="sxs-lookup"><span data-stu-id="bbb79-103">The `->` operator combines pointer dereferencing and member access.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234681"
 ---
 # <a name="delegate-statement"></a><span data-ttu-id="3dd3b-102">Delegate — Instrukcja</span><span class="sxs-lookup"><span data-stu-id="3dd3b-102">Delegate Statement</span></span>
 <span data-ttu-id="3dd3b-103">Można zadeklarować obiektu delegowanego.</span><span class="sxs-lookup"><span data-stu-id="3dd3b-103">Used to declare a delegate.</span></span> <span data-ttu-id="3dd3b-104">Delegat jest typem referencyjnym, który odwołuje się do `Shared` metody typu lub metod wystąpień obiektu.</span><span class="sxs-lookup"><span data-stu-id="3dd3b-104">A delegate is a reference type that refers to a `Shared` method of a type or to an instance method of an object.</span></span> <span data-ttu-id="3dd3b-105">Postępowanie z pasujących typów parametru i wróć może służyć do tworzenia wystąpienia tej klasy delegatu.</span><span class="sxs-lookup"><span data-stu-id="3dd3b-105">Any procedure with matching parameter and return types can be used to create an instance of this delegate class.</span></span> <span data-ttu-id="3dd3b-106">Następnie procedurę później można wywołać za pomocą wystąpienia obiektu delegowanego.</span><span class="sxs-lookup"><span data-stu-id="3dd3b-106">The procedure can then later be invoked by means of the delegate instance.</span></span>  

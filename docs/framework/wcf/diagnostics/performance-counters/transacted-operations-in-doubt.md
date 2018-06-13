@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33473798"
 ---
 # <a name="transacted-operations-in-doubt"></a><span data-ttu-id="13de2-102">Wątpliwe operacje transakcyjne</span><span class="sxs-lookup"><span data-stu-id="13de2-102">Transacted Operations In Doubt</span></span>
 <span data-ttu-id="13de2-103">Nazwa licznika: Wątpliwe Operacje transakcyjne.</span><span class="sxs-lookup"><span data-stu-id="13de2-103">Counter Name: Transacted Operations In Doubt.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474711"
 ---
 # <a name="asynchronous-scenarios-using-http-tcp-or-named-pipe"></a><span data-ttu-id="96912-102">Scenariusze asynchroniczne z zastosowaniem protokołu HTTP lub TCP albo potoku nazwanego</span><span class="sxs-lookup"><span data-stu-id="96912-102">Asynchronous Scenarios using HTTP, TCP, or Named-Pipe</span></span>
 <span data-ttu-id="96912-103">W tym temacie opisano działania i transferów w scenariuszach różnych asynchroniczne żądanie/odpowiedź z żądaniami wielowątkowe przy użyciu protokołu HTTP, TCP, lub nazwany potok.</span><span class="sxs-lookup"><span data-stu-id="96912-103">This topic describes the activities and transfers for different asynchronous request/reply scenarios, with multithreaded requests using HTTP, TCP, or named pipe.</span></span>  

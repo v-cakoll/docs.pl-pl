@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172126"
 ---
 # <a name="sealed-c-reference"></a><span data-ttu-id="f06d1-102">sealed (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="f06d1-102">sealed (C# Reference)</span></span>
 <span data-ttu-id="f06d1-103">Po zastosowaniu do klasy, `sealed` modyfikator uniemożliwia innym klasom dziedziczenie z tego.</span><span class="sxs-lookup"><span data-stu-id="f06d1-103">When applied to a class, the `sealed` modifier prevents other classes from inheriting from it.</span></span> <span data-ttu-id="f06d1-104">W poniższym przykładzie klasa `B` dziedziczy z klasy `A`, ale klasa nie może dziedziczyć po klasie `B`.</span><span class="sxs-lookup"><span data-stu-id="f06d1-104">In the following example, class `B` inherits from class `A`, but no class can inherit from class `B`.</span></span>  

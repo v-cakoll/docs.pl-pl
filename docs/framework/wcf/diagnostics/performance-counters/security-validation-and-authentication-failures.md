@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474262"
 ---
 # <a name="security-validation-and-authentication-failures"></a><span data-ttu-id="02cce-102">Błędy walidacji zabezpieczeń i uwierzytelniania</span><span class="sxs-lookup"><span data-stu-id="02cce-102">Security Validation and Authentication Failures</span></span>
 <span data-ttu-id="02cce-103">Nazwa licznika: błędy walidacji zabezpieczeń i uwierzytelniania</span><span class="sxs-lookup"><span data-stu-id="02cce-103">Counter name: Security Validation and Authentication Failures</span></span>  

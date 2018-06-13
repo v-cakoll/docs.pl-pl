@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525850"
 ---
 # <a name="polygons-in-gdi"></a><span data-ttu-id="90f8a-102">Wielokąty w GDI+</span><span class="sxs-lookup"><span data-stu-id="90f8a-102">Polygons in GDI+</span></span>
 <span data-ttu-id="90f8a-103">Wielokąt jest zamknięty kształt z co najmniej trzech stronach proste.</span><span class="sxs-lookup"><span data-stu-id="90f8a-103">A polygon is a closed shape with three or more straight sides.</span></span> <span data-ttu-id="90f8a-104">Na przykład trójkąt ma wielokąta z trzech stron, prostokąt jest wielokąta z czterech stron, a pięciobok wielokąta z pięcioma stron.</span><span class="sxs-lookup"><span data-stu-id="90f8a-104">For example, a triangle is a polygon with three sides, a rectangle is a polygon with four sides, and a pentagon is a polygon with five sides.</span></span> <span data-ttu-id="90f8a-105">Na poniższej ilustracji przedstawiono kilka wielokątów.</span><span class="sxs-lookup"><span data-stu-id="90f8a-105">The following illustration shows several polygons.</span></span>  

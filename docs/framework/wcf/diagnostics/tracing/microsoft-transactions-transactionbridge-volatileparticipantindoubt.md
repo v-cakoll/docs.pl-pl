@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33476040"
 ---
 # <a name="microsofttransactionstransactionbridgevolatileparticipantindoubt"></a><span data-ttu-id="43348-102">Microsoft.Transactions.TransactionBridge.VolatileParticipantInDoubt</span><span class="sxs-lookup"><span data-stu-id="43348-102">Microsoft.Transactions.TransactionBridge.VolatileParticipantInDoubt</span></span>
 <span data-ttu-id="43348-103">Usługa protokołu WS-AT odebrała komunikat Prepared lub Replay od nierozpoznanego uczestnika nietrwałego.</span><span class="sxs-lookup"><span data-stu-id="43348-103">The WS-AT protocol service received a Prepared or Replay message from an unrecognized volatile participant.</span></span> <span data-ttu-id="43348-104">Zwrócono błąd do uczestnika, deklaruje, że dane wyjściowe transakcji są wątpliwe.</span><span class="sxs-lookup"><span data-stu-id="43348-104">A fault was returned to the participant, declares that the transaction's outcome is in doubt.</span></span>  

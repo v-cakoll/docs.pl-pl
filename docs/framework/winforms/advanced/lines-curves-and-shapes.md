@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524706"
 ---
 # <a name="lines-curves-and-shapes"></a><span data-ttu-id="382cc-102">Linie, krzywe i kształty</span><span class="sxs-lookup"><span data-stu-id="382cc-102">Lines, Curves, and Shapes</span></span>
 <span data-ttu-id="382cc-103">Grafika wektorowa część [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] jest używany do rysowania linii, rysowanie krzywych oraz do rysowania i wypełniania kształtów.</span><span class="sxs-lookup"><span data-stu-id="382cc-103">The vector graphics portion of [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] is used to draw lines, draw curves, and to draw and fill shapes.</span></span>  

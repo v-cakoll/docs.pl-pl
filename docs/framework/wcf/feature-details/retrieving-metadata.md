@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493612"
 ---
 # <a name="retrieving-metadata"></a><span data-ttu-id="36565-102">Pobieranie metadanych</span><span class="sxs-lookup"><span data-stu-id="36565-102">Retrieving Metadata</span></span>
 <span data-ttu-id="36565-103">Pobieranie metadanych to proces żądania i pobierania metadanych z punktu końcowego metadanych, takich jak punkt końcowy metadanych WS-MetadataExchange (MEX) lub punkt końcowy metadanych HTTP/GET.</span><span class="sxs-lookup"><span data-stu-id="36565-103">Metadata retrieval is the process of requesting and retrieving metadata from a metadata endpoint, such as a WS-MetadataExchange (MEX) metadata endpoint or an HTTP/GET metadata endpoint.</span></span>  

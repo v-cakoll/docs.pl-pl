@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494218"
 ---
 # <a name="content-based-correlation"></a><span data-ttu-id="cf446-102">Korelacja na podstawie zawartości</span><span class="sxs-lookup"><span data-stu-id="cf446-102">Content Based Correlation</span></span>
 <span data-ttu-id="cf446-103">Gdy usługi przepływu pracy komunikację z klientami oraz innymi usługami, często istnieje części danych w ramach wymiany wiadomości, które jednoznacznie odnosi się komunikat do konkretnego wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="cf446-103">When workflow services communicate with clients and other services, often there is some data in the exchanged messages that uniquely relates a message to a particular instance.</span></span> <span data-ttu-id="cf446-104">Na podstawie zawartości korelacji używa tych danych w komunikacie, takich jak numer lub kolejności ID klienta do wyznaczania tras wiadomościom do wystąpienia przepływu pracy właściwe.</span><span class="sxs-lookup"><span data-stu-id="cf446-104">Content-based correlation uses this data in the message, such as a customer number or order ID, to route messages to the proper workflow instance.</span></span> <span data-ttu-id="cf446-105">W tym temacie opisano sposób korzystania na podstawie zawartości korelacji w przepływach pracy.</span><span class="sxs-lookup"><span data-stu-id="cf446-105">This topic explains how to use content-based correlation in workflows.</span></span>  

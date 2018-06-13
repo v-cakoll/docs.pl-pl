@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568774"
 ---
 # <a name="converting-net-framework-types-to-strings"></a><span data-ttu-id="70f91-102">Konwertowanie typów programu .NET Framework na ciągi</span><span class="sxs-lookup"><span data-stu-id="70f91-102">Converting .NET Framework Types to Strings</span></span>
 <span data-ttu-id="70f91-103">Aby przekonwertować na ciąg typu .NET Framework, należy użyć **ToString** metody.</span><span class="sxs-lookup"><span data-stu-id="70f91-103">If you want to convert a .NET Framework type to a string, use the **ToString** method.</span></span> <span data-ttu-id="70f91-104">**ToString** metoda zwraca reprezentację ciągu przekazany typ.</span><span class="sxs-lookup"><span data-stu-id="70f91-104">The **ToString** method returns a string representation of the type passed in.</span></span> <span data-ttu-id="70f91-105">Poniższa tabela zawiera listę typów .NET Framework, które zwracają ciąg w formacie, który jest mapowany na specyfikacje schematu XML (XSD).</span><span class="sxs-lookup"><span data-stu-id="70f91-105">The following table lists the .NET Framework types that return a string in a format that maps to the XML Schema (XSD) specifications.</span></span>  

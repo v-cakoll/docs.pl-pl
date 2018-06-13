@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462119"
 ---
 # <a name="corprfmonitor-enumeration"></a><span data-ttu-id="32de9-102">COR_PRF_MONITOR — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="32de9-102">COR_PRF_MONITOR Enumeration</span></span>
 <span data-ttu-id="32de9-103">Zawiera wartości, które są używane do określania zachowania, funkcji lub zdarzeń do których chce subskrypcji profilera.</span><span class="sxs-lookup"><span data-stu-id="32de9-103">Contains values that are used to specify behavior, capabilities, or events to which the profiler wishes to subscribe.</span></span>  

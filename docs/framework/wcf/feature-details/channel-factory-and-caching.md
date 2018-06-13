@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490994"
 ---
 # <a name="channel-factory-and-caching"></a><span data-ttu-id="86837-102">Fabryka kanałów i buforowanie</span><span class="sxs-lookup"><span data-stu-id="86837-102">Channel Factory and Caching</span></span>
 <span data-ttu-id="86837-103">Aplikacje klienta WCF <xref:System.ServiceModel.ChannelFactory%601> klasę, aby utworzyć kanał komunikacji z usługą WCF.</span><span class="sxs-lookup"><span data-stu-id="86837-103">WCF client applications use the <xref:System.ServiceModel.ChannelFactory%601> class to create a communication channel with a WCF service.</span></span>  <span data-ttu-id="86837-104">Tworzenie <xref:System.ServiceModel.ChannelFactory%601> wystąpień powoduje pewne nadmiarowe obciążenie, ponieważ obejmuje ona następujące operacje:</span><span class="sxs-lookup"><span data-stu-id="86837-104">Creating <xref:System.ServiceModel.ChannelFactory%601> instances incurs some overhead because it involves the following operations:</span></span>  

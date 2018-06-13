@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569977"
 ---
 # <a name="load-data-from-a-reader"></a><span data-ttu-id="4474f-102">Ładowanie danych z czytnika</span><span class="sxs-lookup"><span data-stu-id="4474f-102">Load Data from a Reader</span></span>
 <span data-ttu-id="4474f-103">Jeśli dokument XML został załadowany przy użyciu <xref:System.Xml.XmlDocument.Load%2A> — metoda i parametr <xref:System.Xml.XmlReader>, istnieją różnice w zachowaniu, który występuje w porównaniu do zachowania podczas ładowania danych z innych formatów.</span><span class="sxs-lookup"><span data-stu-id="4474f-103">If an XML document is loaded using the <xref:System.Xml.XmlDocument.Load%2A> method and a parameter of an <xref:System.Xml.XmlReader>, there are differences in the behavior that occurs when compared to the behavior of loading data from the other formats.</span></span> <span data-ttu-id="4474f-104">Jeśli czytnik jest w stanie początkowym <xref:System.Xml.XmlDocument.Load%2A> zużywa całą zawartość z czytnika i tworzy XML modelu DOM (Document Object) z wszystkich danych w czytniku.</span><span class="sxs-lookup"><span data-stu-id="4474f-104">If the reader is in its initial state, <xref:System.Xml.XmlDocument.Load%2A> consumes the entire contents from the reader and builds the XML Document Object Model (DOM) from all the data in the reader.</span></span>  

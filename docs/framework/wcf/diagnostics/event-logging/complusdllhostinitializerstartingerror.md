@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33473584"
 ---
 # <a name="complusdllhostinitializerstartingerror"></a><span data-ttu-id="96e7f-102">ComPlusDllHostInitializerStartingError</span><span class="sxs-lookup"><span data-stu-id="96e7f-102">ComPlusDllHostInitializerStartingError</span></span>
 <span data-ttu-id="96e7f-103">Identyfikator: 131</span><span class="sxs-lookup"><span data-stu-id="96e7f-103">Id: 131</span></span>  

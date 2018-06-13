@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448872"
 ---
 # <a name="corunmanagedcallingconvention-enumeration"></a><span data-ttu-id="5b1fe-102">CorUnmanagedCallingConvention — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="5b1fe-102">CorUnmanagedCallingConvention Enumeration</span></span>
 <span data-ttu-id="5b1fe-103">Określa konwencji wywoływania dla niezarządzanego kodu.</span><span class="sxs-lookup"><span data-stu-id="5b1fe-103">Specifies the calling conventions for unmanaged code.</span></span>  

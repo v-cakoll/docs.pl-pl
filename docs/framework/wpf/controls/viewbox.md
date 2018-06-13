@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554368"
 ---
 # <a name="viewbox"></a><span data-ttu-id="f724d-102">Okno widoku</span><span class="sxs-lookup"><span data-stu-id="f724d-102">Viewbox</span></span>
 <span data-ttu-id="f724d-103"><xref:System.Windows.Controls.Viewbox> Kontrola służy do rozciąganie lub skalowanie elementu podrzędnego.</span><span class="sxs-lookup"><span data-stu-id="f724d-103">The <xref:System.Windows.Controls.Viewbox> control is used to stretch or scale a child element.</span></span>  

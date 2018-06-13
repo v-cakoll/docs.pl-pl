@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358320"
 ---
 # <a name="systemtimespan-methods"></a><span data-ttu-id="44def-102">System.TimeSpan Methods</span><span class="sxs-lookup"><span data-stu-id="44def-102">System.TimeSpan Methods</span></span>
 <span data-ttu-id="44def-103">Obsługa elementu członkowskiego <xref:System.TimeSpan?displayProperty=nameWithType> zależy od wersji programu .NET Framework i program Microsoft SQL Server.</span><span class="sxs-lookup"><span data-stu-id="44def-103">Member support for <xref:System.TimeSpan?displayProperty=nameWithType> greatly depends on the versions of the .NET Framework and Microsoft SQL Server that you are using.</span></span>  

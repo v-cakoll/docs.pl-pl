@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359494"
 ---
 # <a name="getting-started-with-wcf-data-services"></a><span data-ttu-id="9fca2-102">Wprowadzenie do korzystania z usługi danych WCF</span><span class="sxs-lookup"><span data-stu-id="9fca2-102">Getting Started with WCF Data Services</span></span>
 <span data-ttu-id="9fca2-103">Tematy w tej sekcji pomaga w zrozumieniu szybko [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] i sposobu użycia [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ujawnia i zużywać [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła przez wyjaśniający podstawowe technologie.</span><span class="sxs-lookup"><span data-stu-id="9fca2-103">The topics in this section help you quickly understand [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] and how to use [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] to expose and consume [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds by explaining the underlying technologies.</span></span> <span data-ttu-id="9fca2-104">Ta sekcja zawiera zarówno koncepcyjnej zawartości i [szybkiego startu](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) samouczka.</span><span class="sxs-lookup"><span data-stu-id="9fca2-104">This section includes both conceptual content and a [quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) tutorial.</span></span>  

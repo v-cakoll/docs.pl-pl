@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411237"
 ---
 # <a name="icordebugcodegetversionnumber-method"></a><span data-ttu-id="e29b2-102">ICorDebugCode::GetVersionNumber — Metoda</span><span class="sxs-lookup"><span data-stu-id="e29b2-102">ICorDebugCode::GetVersionNumber Method</span></span>
 <span data-ttu-id="e29b2-103">Pobiera numer jedynki, który identyfikuje wersję kodu, który reprezentuje to "ICorDebugCode".</span><span class="sxs-lookup"><span data-stu-id="e29b2-103">Gets the one-based number that identifies the version of the code that this "ICorDebugCode" represents.</span></span>  

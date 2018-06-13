@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765584"
 ---
 # <a name="aggregate-functions-entity-sql"></a><span data-ttu-id="6723b-102">Funkcje agregujące (jednostka SQL)</span><span class="sxs-lookup"><span data-stu-id="6723b-102">Aggregate Functions (Entity SQL)</span></span>
 <span data-ttu-id="6723b-103">Wartość zagregowana jest konstrukcji języka, który pozwala zapisać kolekcji do skalarnej w ramach operacji grupy.</span><span class="sxs-lookup"><span data-stu-id="6723b-103">An aggregate is a language construct that condenses a collection into a scalar as a part of a group operation.</span></span> [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="6723b-104"> agregacje są dostępne w dwóch formach:</span><span class="sxs-lookup"><span data-stu-id="6723b-104"> aggregates come in two forms:</span></span>  

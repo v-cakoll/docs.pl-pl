@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353289"
 ---
 # <a name="programming-guide-linq-to-dataset"></a><span data-ttu-id="db6b4-102">Przewodnik programowania w języku (LINQ do DataSet)</span><span class="sxs-lookup"><span data-stu-id="db6b4-102">Programming Guide (LINQ to DataSet)</span></span>
 <span data-ttu-id="db6b4-103">Ta sekcja zawiera informacje o pojęciach i przykłady dotyczące programowania za pomocą [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span><span class="sxs-lookup"><span data-stu-id="db6b4-103">This section provides conceptual information and examples for programming with [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span></span>  

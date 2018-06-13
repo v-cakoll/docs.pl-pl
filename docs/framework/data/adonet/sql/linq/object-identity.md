@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358472"
 ---
 # <a name="object-identity"></a><span data-ttu-id="1d659-102">Tożsamość obiektu</span><span class="sxs-lookup"><span data-stu-id="1d659-102">Object Identity</span></span>
 <span data-ttu-id="1d659-103">Obiekty w środowisku uruchomieniowym mają unikatowych tożsamości.</span><span class="sxs-lookup"><span data-stu-id="1d659-103">Objects in the runtime have unique identities.</span></span> <span data-ttu-id="1d659-104">Dwie zmienne odwołujące się do tego samego obiektu faktycznie odwoływać się do tego samego wystąpienia obiektu.</span><span class="sxs-lookup"><span data-stu-id="1d659-104">Two variables that refer to the same object actually refer to the same instance of the object.</span></span> <span data-ttu-id="1d659-105">Ze względu na fakt ten zmiany wprowadzone na ścieżkę za pośrednictwem jednej zmiennej są od razu widoczne przez innych.</span><span class="sxs-lookup"><span data-stu-id="1d659-105">Because of this fact, changes that you make by way of a path through one variable are immediately visible through the other.</span></span>  

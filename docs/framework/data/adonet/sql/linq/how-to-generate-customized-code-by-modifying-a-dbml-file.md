@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354575"
 ---
 # <a name="how-to-generate-customized-code-by-modifying-a-dbml-file"></a><span data-ttu-id="4438c-102">Porady: generowanie kodu dostosowane przez zmodyfikowanie pliku DBML</span><span class="sxs-lookup"><span data-stu-id="4438c-102">How to: Generate Customized Code by Modifying a DBML File</span></span>
 <span data-ttu-id="4438c-103">Można wygenerować kodu źródłowego języka Visual Basic lub C# z pliku metadanych bazy danych markup language (.dbml).</span><span class="sxs-lookup"><span data-stu-id="4438c-103">You can generate Visual Basic or C# source code from a database markup language (.dbml) metadata file.</span></span> <span data-ttu-id="4438c-104">Takie podejście umożliwia dostosować domyślny plik .dbml, aby wygenerować kod mapowania aplikacji.</span><span class="sxs-lookup"><span data-stu-id="4438c-104">This approach provides an opportunity to customize the default .dbml file before you generate the application mapping code.</span></span> <span data-ttu-id="4438c-105">Jest to zaawansowana funkcja.</span><span class="sxs-lookup"><span data-stu-id="4438c-105">This is an advanced feature.</span></span>  

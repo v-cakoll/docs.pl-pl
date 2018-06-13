@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411161"
 ---
 # <a name="icordebugevalisactive-method"></a><span data-ttu-id="07e7b-102">ICorDebugEval::IsActive — Metoda</span><span class="sxs-lookup"><span data-stu-id="07e7b-102">ICorDebugEval::IsActive Method</span></span>
 <span data-ttu-id="07e7b-103">Pobiera wartość wskazującą, czy ten obiekt ICorDebugEval jest aktualnie wykonywany.</span><span class="sxs-lookup"><span data-stu-id="07e7b-103">Gets a value that indicates whether this ICorDebugEval object is currently executing.</span></span>  

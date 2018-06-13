@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354323"
 ---
 # <a name="ltservicehostingenvironmentgt"></a><span data-ttu-id="71012-102">&lt;serviceHostingEnvironment&gt;</span><span class="sxs-lookup"><span data-stu-id="71012-102">&lt;serviceHostingEnvironment&gt;</span></span>
 <span data-ttu-id="71012-103">Ten element definiuje typ, który usługę hostingu środowiskowego dla danego transportu.</span><span class="sxs-lookup"><span data-stu-id="71012-103">This element defines the type the service hosting environment instantiates for a particular transport.</span></span> <span data-ttu-id="71012-104">Jeśli ten element jest pusta, domyślny typ jest używany.</span><span class="sxs-lookup"><span data-stu-id="71012-104">If this element is empty, the default type is used.</span></span> <span data-ttu-id="71012-105">Ten element może być użyty tylko w aplikacji lub pliki konfiguracji na poziomie maszyny.</span><span class="sxs-lookup"><span data-stu-id="71012-105">This element can only be used at the application or machine level configuration files.</span></span>  

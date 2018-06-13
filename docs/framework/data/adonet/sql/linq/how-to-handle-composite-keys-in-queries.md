@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354242"
 ---
 # <a name="how-to-handle-composite-keys-in-queries"></a><span data-ttu-id="314ce-102">Porady: Obsługa klucze złożone w zapytaniach</span><span class="sxs-lookup"><span data-stu-id="314ce-102">How to: Handle Composite Keys in Queries</span></span>
 <span data-ttu-id="314ce-103">Operatory niektóre możliwe jest tylko jeden argument.</span><span class="sxs-lookup"><span data-stu-id="314ce-103">Some operators can take only one argument.</span></span> <span data-ttu-id="314ce-104">Argument musi zawierać więcej niż jedną kolumnę z bazy danych, należy utworzyć typu anonimowego do reprezentowania połączenie.</span><span class="sxs-lookup"><span data-stu-id="314ce-104">If your argument must include more than one column from the database, you must create an anonymous type to represent the combination.</span></span>  

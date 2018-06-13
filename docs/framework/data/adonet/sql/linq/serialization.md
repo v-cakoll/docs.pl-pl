@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356331"
 ---
 # <a name="serialization"></a><span data-ttu-id="dc1a2-102">Serializacja</span><span class="sxs-lookup"><span data-stu-id="dc1a2-102">Serialization</span></span>
 <span data-ttu-id="dc1a2-103">W tym temacie opisano [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] możliwości serializacji.</span><span class="sxs-lookup"><span data-stu-id="dc1a2-103">This topic describes [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] serialization capabilities.</span></span> <span data-ttu-id="dc1a2-104">Sekcjach poniżej zawierają informacje o sposobie dodawania serializacji podczas generowania kodu w czasie projektowania i zachowania czasu wykonywania serializacji [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] klasy.</span><span class="sxs-lookup"><span data-stu-id="dc1a2-104">The paragraphs that follow provide information about how to add serialization during code generation at design time and the run-time serialization behavior of [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] classes.</span></span>  

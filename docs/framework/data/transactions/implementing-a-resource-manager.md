@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363266"
 ---
 # <a name="implementing-a-resource-manager"></a><span data-ttu-id="b4370-102">Implementowanie Menedżera zasobów</span><span class="sxs-lookup"><span data-stu-id="b4370-102">Implementing a Resource Manager</span></span>
 <span data-ttu-id="b4370-103">Poszczególne zasoby używane w transakcji jest zarządzane przez Menedżera zasobów, których działania są koordynowany przez Menedżera transakcji.</span><span class="sxs-lookup"><span data-stu-id="b4370-103">Each resource used in a transaction is managed by a resource manager, whose actions are coordinated by a transaction manager.</span></span> <span data-ttu-id="b4370-104">Menedżer zasobów działa we współpracy z menedżerem transakcji, aby zapewnić aplikacji niepodzielność i izolacji.</span><span class="sxs-lookup"><span data-stu-id="b4370-104">Resource managers work in cooperation with the transaction manager to provide the application with a guarantee of atomicity and isolation.</span></span> <span data-ttu-id="b4370-105">Microsoft SQL Server, kolejki komunikatów trwałe, tabelami skrótów w pamięci są wszystkie przykłady menedżerowie zasobów.</span><span class="sxs-lookup"><span data-stu-id="b4370-105">Microsoft SQL Server, durable message queues, in-memory hash tables are all examples of resource managers.</span></span>  

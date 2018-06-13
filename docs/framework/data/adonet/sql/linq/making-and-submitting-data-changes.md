@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360796"
 ---
 # <a name="making-and-submitting-data-changes"></a><span data-ttu-id="9b274-102">Tworzenie i przesyłanie zmian danych</span><span class="sxs-lookup"><span data-stu-id="9b274-102">Making and Submitting Data Changes</span></span>
 <span data-ttu-id="9b274-103">Tematy w tej sekcji opisano sposób tworzenia i przesłania zmian w bazie danych i sposobu obsługi konfliktów optymistycznej współbieżności.</span><span class="sxs-lookup"><span data-stu-id="9b274-103">The topics in this section describe how to make and transmit changes to the database and how to handle optimistic concurrency conflicts.</span></span>  

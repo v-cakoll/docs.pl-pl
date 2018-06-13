@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359679"
 ---
 # <a name="downloading-sample-databases"></a><span data-ttu-id="d20d8-102">Pobieranie przykładowych baz danych</span><span class="sxs-lookup"><span data-stu-id="d20d8-102">Downloading Sample Databases</span></span>
 <span data-ttu-id="d20d8-103">Liczba wskazówki i przykłady w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dokumentacji Użyj bazy danych Northwind i SQL Server Express Edition.</span><span class="sxs-lookup"><span data-stu-id="d20d8-103">A number of samples and walkthroughs in the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation use the Northwind sample database and SQL Server Express Edition.</span></span> <span data-ttu-id="d20d8-104">Te produkty bezpłatne można pobrać z witryny pobierania firmy Microsoft.</span><span class="sxs-lookup"><span data-stu-id="d20d8-104">You can download these products free of charge from the Microsoft download site.</span></span>  

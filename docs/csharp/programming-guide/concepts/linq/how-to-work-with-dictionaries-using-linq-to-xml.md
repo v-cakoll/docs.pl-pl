@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319874"
 ---
 # <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a><span data-ttu-id="c349b-102">Porady: Praca z słowniki za pomocą LINQ do XML (C#)</span><span class="sxs-lookup"><span data-stu-id="c349b-102">How to: Work with Dictionaries Using LINQ to XML (C#)</span></span>
 <span data-ttu-id="c349b-103">Często jest to wygodny do przekonwertowania odmian struktur danych XML i XML inne struktury danych.</span><span class="sxs-lookup"><span data-stu-id="c349b-103">It is often convenient to convert varieties of data structures to XML, and XML back to other data structures.</span></span> <span data-ttu-id="c349b-104">W tym temacie przedstawiono konkretnej implementacji tego podejścia ogólne konwertując <xref:System.Collections.Generic.Dictionary%602> XML i na odwrót.</span><span class="sxs-lookup"><span data-stu-id="c349b-104">This topic shows a specific implementation of this general approach by converting a <xref:System.Collections.Generic.Dictionary%602> to XML and back.</span></span>  

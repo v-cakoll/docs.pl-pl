@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604396"
 ---
 # <a name="not-operator-visual-basic"></a><span data-ttu-id="7f26e-102">Not — Operator (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7f26e-102">Not Operator (Visual Basic)</span></span>
 <span data-ttu-id="7f26e-103">Wykonuje logiczną negację na `Boolean` wyrażenie lub bitowego zaprzeczenia wyrażenia liczbowego.</span><span class="sxs-lookup"><span data-stu-id="7f26e-103">Performs logical negation on a `Boolean` expression, or bitwise negation on a numeric expression.</span></span>  

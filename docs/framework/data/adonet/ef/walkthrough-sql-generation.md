@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766325"
 ---
 # <a name="walkthrough-sql-generation"></a><span data-ttu-id="6ccd6-102">Wskazówki: Generowanie kodu SQL</span><span class="sxs-lookup"><span data-stu-id="6ccd6-102">Walkthrough: SQL Generation</span></span>
 <span data-ttu-id="6ccd6-103">W tym temacie przedstawiono, jak generowanie kodu SQL występuje w [dostawcy próbki](http://go.microsoft.com/fwlink/?LinkId=180616).</span><span class="sxs-lookup"><span data-stu-id="6ccd6-103">This topic illustrates how SQL generation occurs in the [Sample Provider](http://go.microsoft.com/fwlink/?LinkId=180616).</span></span> <span data-ttu-id="6ccd6-104">Następujące zapytanie SQL jednostki korzysta z modelu, który jest dołączony do dostawcy próbki:</span><span class="sxs-lookup"><span data-stu-id="6ccd6-104">The following Entity SQL query uses the model that is included with the sample provider:</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339173"
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a><span data-ttu-id="aa659-102">Witaj Świecie — pierwszy program (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="aa659-102">Hello World -- Your First Program (C# Programming Guide)</span></span>
 <span data-ttu-id="aa659-103">Poniższa procedura tworzy wersję języka C# tradycyjnych "Witaj świecie!"</span><span class="sxs-lookup"><span data-stu-id="aa659-103">The following procedure creates a C# version of the traditional "Hello World!"</span></span> <span data-ttu-id="aa659-104">program.</span><span class="sxs-lookup"><span data-stu-id="aa659-104">program.</span></span> <span data-ttu-id="aa659-105">Program wyświetla ciąg `Hello World!`</span><span class="sxs-lookup"><span data-stu-id="aa659-105">The program displays the string `Hello World!`</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553290"
 ---
 # <a name="how-to-create-a-multiline-textbox-control"></a><span data-ttu-id="e5e4e-102">Jak utworzyć wieloliniowy formant TextBox</span><span class="sxs-lookup"><span data-stu-id="e5e4e-102">How to: Create a Multiline TextBox Control</span></span>
 <span data-ttu-id="e5e4e-103">Ten przykład przedstawia sposób użycia [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] do definiowania <xref:System.Windows.Controls.TextBox> formant, który automatycznie zostanie rozwinięty w celu uwzględnienia wiele wierszy tekstu.</span><span class="sxs-lookup"><span data-stu-id="e5e4e-103">This example shows how to use [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] to define a <xref:System.Windows.Controls.TextBox> control that will automatically expand to accommodate multiple lines of text.</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359390"
 ---
 # <a name="ltcryptonamemappinggt-element"></a><span data-ttu-id="d9f2f-102">&lt;cryptonamemapping —&gt; — Element</span><span class="sxs-lookup"><span data-stu-id="d9f2f-102">&lt;cryptoNameMapping&gt; Element</span></span>
 <span data-ttu-id="d9f2f-103">Zawiera mapowania klasy przyjazne nazwy.</span><span class="sxs-lookup"><span data-stu-id="d9f2f-103">Contains mappings of classes to friendly names.</span></span>  

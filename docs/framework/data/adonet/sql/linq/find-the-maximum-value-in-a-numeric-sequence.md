@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353820"
 ---
 # <a name="find-the-maximum-value-in-a-numeric-sequence"></a><span data-ttu-id="14490-102">Znajdź wartość maksymalna liczbowe sekwencji</span><span class="sxs-lookup"><span data-stu-id="14490-102">Find the Maximum Value in a Numeric Sequence</span></span>
 <span data-ttu-id="14490-103">Użyj <xref:System.Linq.Enumerable.Max%2A> operatora, aby znaleźć największą wartość w sekwencji wartości liczbowych.</span><span class="sxs-lookup"><span data-stu-id="14490-103">Use the <xref:System.Linq.Enumerable.Max%2A> operator to find the highest value in a sequence of numeric values.</span></span>  

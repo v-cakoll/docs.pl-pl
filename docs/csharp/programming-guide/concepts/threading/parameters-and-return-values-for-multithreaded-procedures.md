@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340219"
 ---
 # <a name="parameters-and-return-values-for-multithreaded-procedures-c"></a><span data-ttu-id="5657c-102">Parametry i wartości zwracane dla procedur wielowątkowości (C#)</span><span class="sxs-lookup"><span data-stu-id="5657c-102">Parameters and Return Values for Multithreaded Procedures (C#)</span></span>
 <span data-ttu-id="5657c-103">Dostarczania i wartości zwracane w aplikacji wielowątkowych jest skomplikowane, ponieważ Konstruktor w klasie wątku muszą być przekazywane odwołanie do procedury, która nie przyjmuje żadnych argumentów i nie zwraca żadnej wartości.</span><span class="sxs-lookup"><span data-stu-id="5657c-103">Supplying and returning values in a multithreaded application is complicated because the constructor for the thread class must be passed a reference to a procedure that takes no arguments and returns no value.</span></span> <span data-ttu-id="5657c-104">W poniższych sekcjach przedstawiono kilka prostych sposobów Podaj parametry i zwrócić wartości z procedury w oddzielnych wątkach.</span><span class="sxs-lookup"><span data-stu-id="5657c-104">The following sections show some simple ways to supply parameters and return values from procedures on separate threads.</span></span>  

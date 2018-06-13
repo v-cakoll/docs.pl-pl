@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353263"
 ---
 # <a name="retrieving-data-using-a-datareader"></a><span data-ttu-id="38509-102">Podczas pobierania danych przy użyciu elementu DataReader</span><span class="sxs-lookup"><span data-stu-id="38509-102">Retrieving Data Using a DataReader</span></span>
 <span data-ttu-id="38509-103">Podczas pobierania danych przy użyciu **DataReader** obejmuje utworzenie wystąpienia **polecenia** obiektu, a następnie utworzenie **DataReader** przez wywołanie metody  **Command.ExecuteReader** pobieranie wierszy ze źródła danych.</span><span class="sxs-lookup"><span data-stu-id="38509-103">Retrieving data using a **DataReader** involves creating an instance of the **Command** object and then creating a **DataReader** by calling **Command.ExecuteReader** to retrieve rows from a data source.</span></span> <span data-ttu-id="38509-104">Poniższy przykład przedstawia przy użyciu **DataReader** gdzie `reader` reprezentuje prawidłową DataReader i `command` reprezentuje prawidłowy obiekt polecenia.</span><span class="sxs-lookup"><span data-stu-id="38509-104">The following example illustrates using a **DataReader** where `reader` represents a valid DataReader and `command` represents a valid Command object.</span></span>  

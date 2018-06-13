@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340427"
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a><span data-ttu-id="5d104-102">Prognozowanie XML w różnych kształtu (C#)</span><span class="sxs-lookup"><span data-stu-id="5d104-102">Projecting XML in a Different Shape (C#)</span></span>
 <span data-ttu-id="5d104-103">W tym temacie przedstawiono przykład projekcji kod XML, który jest w kształcie innego niż źródło XML.</span><span class="sxs-lookup"><span data-stu-id="5d104-103">This topic shows an example of projecting XML that is in a different shape than the source XML.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313036"
 ---
 # <a name="how-to-create-a-new-method-for-an-enumeration-c-programming-guide"></a><span data-ttu-id="1b504-102">Porady: utworzenie nowej metody wyliczania (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="1b504-102">How to: Create a New Method for an Enumeration (C# Programming Guide)</span></span>
 <span data-ttu-id="1b504-103">Metody rozszerzenia służy do dodawania funkcji charakterystycznej do wyliczenia określonego typu.</span><span class="sxs-lookup"><span data-stu-id="1b504-103">You can use extension methods to add functionality specific to a particular enum type.</span></span>  

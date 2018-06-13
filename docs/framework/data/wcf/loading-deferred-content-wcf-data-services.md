@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365205"
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a><span data-ttu-id="f692e-102">Ładowanie odłożone zawartości (usługi danych WCF)</span><span class="sxs-lookup"><span data-stu-id="f692e-102">Loading Deferred Content (WCF Data Services)</span></span>
 <span data-ttu-id="f692e-103">Domyślnie [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ogranicza ilość danych, która zwraca zapytanie.</span><span class="sxs-lookup"><span data-stu-id="f692e-103">By default, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] limits the amount of data that a query returns.</span></span> <span data-ttu-id="f692e-104">Można jednak w sposób jawny załadować dodatkowych danych, w tym powiązanych jednostek, dane odpowiedzi stronicowana i strumieni danych binarnych, w usłudze danych, gdy potrzebny jest.</span><span class="sxs-lookup"><span data-stu-id="f692e-104">However, you can explicitly load additional data, including related entities, paged response data, and binary data streams, from the data service when it is needed.</span></span> <span data-ttu-id="f692e-105">W tym temacie opisano, jak załadować takiej odroczonego zawartości do aplikacji.</span><span class="sxs-lookup"><span data-stu-id="f692e-105">This topic describes how to load such deferred content into your application.</span></span>  

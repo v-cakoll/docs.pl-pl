@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360050"
 ---
 # <a name="remote-vs-local-execution"></a><span data-ttu-id="e06c9-102">Zdalne vs. Wykonanie lokalne</span><span class="sxs-lookup"><span data-stu-id="e06c9-102">Remote vs. Local Execution</span></span>
 <span data-ttu-id="e06c9-103">Można wykonać zapytania albo zdalnie (to znaczy aparatu bazy danych wykonuje zapytanie w bazie danych) lub lokalnie ([!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wykonuje zapytanie lokalnej pamięci podręcznej).</span><span class="sxs-lookup"><span data-stu-id="e06c9-103">You can decide to execute your queries either remotely (that is, the database engine executes the query against the database) or locally ([!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] executes the query against a local cache).</span></span>  

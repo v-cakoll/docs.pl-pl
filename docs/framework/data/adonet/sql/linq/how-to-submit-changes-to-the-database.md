@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362889"
 ---
 # <a name="how-to-submit-changes-to-the-database"></a><span data-ttu-id="6a6fc-102">Porady: przesyłanie zmian w bazie danych</span><span class="sxs-lookup"><span data-stu-id="6a6fc-102">How to: Submit Changes to the Database</span></span>
 <span data-ttu-id="6a6fc-103">Niezależnie od tego, ile zmiany wprowadzane do obiektów zmiany są wprowadzane tylko replik w pamięci.</span><span class="sxs-lookup"><span data-stu-id="6a6fc-103">Regardless of how many changes you make to your objects, changes are made only to in-memory replicas.</span></span> <span data-ttu-id="6a6fc-104">Zostały wprowadzone żadne zmiany do danych rzeczywistych w bazie danych.</span><span class="sxs-lookup"><span data-stu-id="6a6fc-104">You have made no changes to the actual data in the database.</span></span> <span data-ttu-id="6a6fc-105">Zmiany nie są przesyłane do serwera, dopóki nie zostanie jawnie wywołać <xref:System.Data.Linq.DataContext.SubmitChanges%2A> na <xref:System.Data.Linq.DataContext>.</span><span class="sxs-lookup"><span data-stu-id="6a6fc-105">Your changes are not transmitted to the server until you explicitly call <xref:System.Data.Linq.DataContext.SubmitChanges%2A> on the <xref:System.Data.Linq.DataContext>.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361530"
 ---
 # <a name="how-to-bracket-data-submissions-by-using-transactions"></a><span data-ttu-id="bf5f8-102">Porady: nawiasów przesyłania danych za pomocą transakcji</span><span class="sxs-lookup"><span data-stu-id="bf5f8-102">How to: Bracket Data Submissions by Using Transactions</span></span>
 <span data-ttu-id="bf5f8-103">Można użyć <xref:System.Transactions.TransactionScope> do nawiasów przesyłanych danych w bazie danych.</span><span class="sxs-lookup"><span data-stu-id="bf5f8-103">You can use <xref:System.Transactions.TransactionScope> to bracket your submissions to the database.</span></span> <span data-ttu-id="bf5f8-104">Aby uzyskać więcej informacji, zobacz [Obsługa transakcji](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md).</span><span class="sxs-lookup"><span data-stu-id="bf5f8-104">For more information, see [Transaction Support](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md).</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362902"
 ---
 # <a name="how-to-use-table-valued-user-defined-functions"></a><span data-ttu-id="9f622-102">Porady: Użyj przechowywanymi w tabeli funkcji zdefiniowanej przez użytkownika</span><span class="sxs-lookup"><span data-stu-id="9f622-102">How to: Use Table-Valued User-Defined Functions</span></span>
 <span data-ttu-id="9f622-103">Funkcja przechowywanymi w tabeli zwraca pojedynczy zestaw wierszy (w przeciwieństwie do procedur składowanych, które można zwrócić wielu kształtów wyników).</span><span class="sxs-lookup"><span data-stu-id="9f622-103">A table-valued function returns a single rowset (unlike stored procedures, which can return multiple result shapes).</span></span> <span data-ttu-id="9f622-104">Ponieważ typ zwracany funkcji zwracającej tabelę jest `Table`, można użyć funkcji zwracającej tabelę dowolne miejsce w języku SQL, których można używać tabeli.</span><span class="sxs-lookup"><span data-stu-id="9f622-104">Because the return type of a table-valued function is `Table`, you can use a table-valued function anywhere in SQL that you can use a table.</span></span> <span data-ttu-id="9f622-105">Można również traktować funkcji zwracającej tabelę, tak jak w tabeli.</span><span class="sxs-lookup"><span data-stu-id="9f622-105">You can also treat the table-valued function just as you would a table.</span></span>  

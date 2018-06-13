@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650925"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a><span data-ttu-id="8ef40-102">Porady: dostęp do elementów członkowskich obiektu (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8ef40-102">How to: Access Members of an Object (Visual Basic)</span></span>
 <span data-ttu-id="8ef40-103">Jeśli masz zmiennej obiektu, który odwołuje się do obiektu często chcesz pracować z elementami członkowskimi tego obiektu, takie jak metod, właściwości, pól i zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="8ef40-103">When you have an object variable that refers to an object, you often want to work with the members of that object, such as its methods, properties, fields, and events.</span></span> <span data-ttu-id="8ef40-104">Na przykład po utworzeniu nowego <xref:System.Windows.Forms.Form> obiektu, należy ustawić jej <xref:System.Windows.Forms.Control.Text%2A> właściwość lub wywołanie jego <xref:System.Windows.Forms.Control.Focus%2A> metody.</span><span class="sxs-lookup"><span data-stu-id="8ef40-104">For example, once you have created a new <xref:System.Windows.Forms.Form> object, you might want to set its <xref:System.Windows.Forms.Control.Text%2A> property or call its <xref:System.Windows.Forms.Control.Focus%2A> method.</span></span>  

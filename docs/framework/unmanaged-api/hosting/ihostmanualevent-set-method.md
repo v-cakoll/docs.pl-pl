@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440606"
 ---
 # <a name="ihostmanualeventset-method"></a><span data-ttu-id="d38a4-102">IHostManualEvent::Set — Metoda</span><span class="sxs-lookup"><span data-stu-id="d38a4-102">IHostManualEvent::Set Method</span></span>
 <span data-ttu-id="d38a4-103">Ustawia bieżący [IHostManualEvent](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md) wystąpienia sygnałowego stanu.</span><span class="sxs-lookup"><span data-stu-id="d38a4-103">Sets the current [IHostManualEvent](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md) instance to a signaled state.</span></span>  

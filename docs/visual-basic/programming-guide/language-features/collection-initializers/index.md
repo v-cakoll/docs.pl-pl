@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654219"
 ---
 # <a name="collection-initializers-visual-basic"></a><span data-ttu-id="06a7e-102">Inicjatory kolekcji (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="06a7e-102">Collection Initializers (Visual Basic)</span></span>
 <span data-ttu-id="06a7e-103">*Inicjatory kolekcji* Podaj skróconą składnię, która umożliwia tworzenie kolekcji i wypełnić ją początkowego zestawu wartości.</span><span class="sxs-lookup"><span data-stu-id="06a7e-103">*Collection initializers* provide a shortened syntax that enables you to create a collection and populate it with an initial set of values.</span></span> <span data-ttu-id="06a7e-104">Inicjatory kolekcji są przydatne podczas tworzenia kolekcji z zestawu znane wartości, na przykład listę opcji menu lub kategorii, początkowego zestawu wartości liczbowe, natomiast statyczną listę ciągów, takich jak nazwy dnia i miesiąca lub lokalizacje geograficzne, takie jak Lista stanów, który jest używany do sprawdzania poprawności.</span><span class="sxs-lookup"><span data-stu-id="06a7e-104">Collection initializers are useful when you are creating a collection from a set of known values, for example, a list of menu options or categories, an initial set of numeric values, a static list of strings such as day or month names, or geographic locations such as a list of states that is used for validation.</span></span>  

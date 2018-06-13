@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575378"
 ---
 # <a name="performing-culture-insensitive-string-operations"></a><span data-ttu-id="6155e-102">Wykonywanie niezależnych od kultury operacji na ciągach</span><span class="sxs-lookup"><span data-stu-id="6155e-102">Performing Culture-Insensitive String Operations</span></span>
 <span data-ttu-id="6155e-103">Większości metod .NET Framework, które wykonują operacje na ciągach zależne od kultury domyślnie Podaj przeciążenia metody, dzięki którym można jawnie określić kultura używana przez przekazanie <xref:System.Globalization.CultureInfo> parametru.</span><span class="sxs-lookup"><span data-stu-id="6155e-103">Most .NET Framework methods that perform culture-sensitive string operations by default provide method overloads that allow you to explicitly specify the culture to use by passing a <xref:System.Globalization.CultureInfo> parameter.</span></span> <span data-ttu-id="6155e-104">Te przeciążenia pozwala wyeliminować kultury zmian w przypadku mapowania i sortowanie zasady i gwarantuje niezależnych od kultury.</span><span class="sxs-lookup"><span data-stu-id="6155e-104">These overloads allow you to eliminate cultural variations in case mappings and sorting rules and guarantee culture-insensitive results.</span></span>  

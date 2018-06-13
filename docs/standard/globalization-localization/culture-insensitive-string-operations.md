@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574053"
 ---
 # <a name="culture-insensitive-string-operations"></a><span data-ttu-id="cb81e-102">Niezależne od kultury operacje na ciągach</span><span class="sxs-lookup"><span data-stu-id="cb81e-102">Culture-Insensitive String Operations</span></span>
 <span data-ttu-id="cb81e-103">Operacje na ciągach, w których jest uwzględniana kultura, mogą okazać się przydatne w przypadku tworzenia aplikacji, które mają wyświetlać wyniki użytkownikom na podstawie kultury.</span><span class="sxs-lookup"><span data-stu-id="cb81e-103">Culture-sensitive string operations can be an advantage if you are creating applications designed to display results to users on a per-culture basis.</span></span> <span data-ttu-id="cb81e-104">Domyślnie zależne od kultury metod uzyskania kultura używana z <xref:System.Globalization.CultureInfo.CurrentCulture%2A> właściwości bieżącego wątku.</span><span class="sxs-lookup"><span data-stu-id="cb81e-104">By default, culture-sensitive methods obtain the culture to use from the <xref:System.Globalization.CultureInfo.CurrentCulture%2A> property for the current thread.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647836"
 ---
 # <a name="thread-pooling-visual-basic"></a><span data-ttu-id="95e3c-102">Wątku puli (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="95e3c-102">Thread Pooling (Visual Basic)</span></span>
 <span data-ttu-id="95e3c-103">A *puli wątków* jest kolekcją wątków, które można wykonać kilka zadań w tle.</span><span class="sxs-lookup"><span data-stu-id="95e3c-103">A *thread pool* is a collection of threads that can be used to perform several tasks in the background.</span></span> <span data-ttu-id="95e3c-104">(Zobacz [wątki (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md) informacje uzupełniające.) Spowoduje to pozostawienie podstawowy wątek wolnego asynchronicznie wykonywanie innych zadań.</span><span class="sxs-lookup"><span data-stu-id="95e3c-104">(See [Threading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md) for background information.) This leaves the primary thread free to perform other tasks asynchronously.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521475"
 ---
 # <a name="how-to-create-vertical-text"></a><span data-ttu-id="ea42d-102">Porady: tworzenie pionowego tekstu</span><span class="sxs-lookup"><span data-stu-id="ea42d-102">How to: Create Vertical Text</span></span>
 <span data-ttu-id="ea42d-103">Można użyć <xref:System.Drawing.StringFormat> obiektu w celu określenia, czy tekst być rysowany pionowo, a nie w poziomie.</span><span class="sxs-lookup"><span data-stu-id="ea42d-103">You can use a <xref:System.Drawing.StringFormat> object to specify that text be drawn vertically rather than horizontally.</span></span>  

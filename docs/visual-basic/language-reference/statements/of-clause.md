@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603954"
 ---
 # <a name="of-clause-visual-basic"></a><span data-ttu-id="69f07-102">Of — Klauzula (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="69f07-102">Of Clause (Visual Basic)</span></span>
 <span data-ttu-id="69f07-103">Wprowadza `Of` klauzuli, która identyfikuje *parametr typu* na *ogólnego* klasy, struktury, interfejsu, delegata lub procedury.</span><span class="sxs-lookup"><span data-stu-id="69f07-103">Introduces an `Of` clause, which identifies a *type parameter* on a *generic* class, structure, interface, delegate, or procedure.</span></span> <span data-ttu-id="69f07-104">Informacje o typach ogólny, zobacz [typy ogólne w Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).</span><span class="sxs-lookup"><span data-stu-id="69f07-104">For information on generic types, see [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).</span></span>  

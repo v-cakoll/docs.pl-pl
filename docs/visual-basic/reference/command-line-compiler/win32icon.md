@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650468"
 ---
 # <a name="-win32icon"></a><span data-ttu-id="969cc-102">-win32icon</span><span class="sxs-lookup"><span data-stu-id="969cc-102">-win32icon</span></span>
 <span data-ttu-id="969cc-103">Wstawia plik .ico w pliku wyjściowym.</span><span class="sxs-lookup"><span data-stu-id="969cc-103">Inserts an .ico file in the output file.</span></span> <span data-ttu-id="969cc-104">Ten plik .ico reprezentuje plik wyjściowy w **Eksploratora plików**.</span><span class="sxs-lookup"><span data-stu-id="969cc-104">This .ico file represents the output file in **File Explorer**.</span></span>  

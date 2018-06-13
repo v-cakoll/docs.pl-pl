@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570560"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemaset"></a><span data-ttu-id="d4ff9-102">Sprawdzanie poprawności schematu (XSD) XML z XmlSchemaSet</span><span class="sxs-lookup"><span data-stu-id="d4ff9-102">XML Schema (XSD) Validation with XmlSchemaSet</span></span>
 <span data-ttu-id="d4ff9-103">Dokumenty XML może zostać zweryfikowany względem schematu XML schema definition language (XSD) w <xref:System.Xml.Schema.XmlSchemaSet>.</span><span class="sxs-lookup"><span data-stu-id="d4ff9-103">XML documents can be validated against an XML schema definition language (XSD) schema in an <xref:System.Xml.Schema.XmlSchemaSet>.</span></span>  

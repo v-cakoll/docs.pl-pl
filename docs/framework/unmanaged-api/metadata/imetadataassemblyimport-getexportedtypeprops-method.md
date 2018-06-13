@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446323"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a><span data-ttu-id="277ea-102">IMetaDataAssemblyImport::GetExportedTypeProps — Metoda</span><span class="sxs-lookup"><span data-stu-id="277ea-102">IMetaDataAssemblyImport::GetExportedTypeProps Method</span></span>
 <span data-ttu-id="277ea-103">Pobiera zestaw właściwości wyeksportowanego typu podpisem określonych metadanych.</span><span class="sxs-lookup"><span data-stu-id="277ea-103">Gets the set of properties of the exported type with the specified metadata signature.</span></span>  

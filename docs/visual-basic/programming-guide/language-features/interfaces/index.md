@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654425"
 ---
 # <a name="interfaces-visual-basic"></a><span data-ttu-id="0da00-102">Interfejsy (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="0da00-102">Interfaces (Visual Basic)</span></span>
 <span data-ttu-id="0da00-103">*Interfejsy* Definiowanie właściwości, metod i zdarzeń, które można zaimplementować klasy.</span><span class="sxs-lookup"><span data-stu-id="0da00-103">*Interfaces* define the properties, methods, and events that classes can implement.</span></span> <span data-ttu-id="0da00-104">Interfejsy umożliwiają definiowanie funkcji jako małych grup ściśle powiązane właściwości, metod i zdarzeń; Zmniejsza to problemy ze zgodnością, ponieważ możesz utworzyć rozszerzoną implementacje interfejsów sieci bez narażenia istniejącego kodu.</span><span class="sxs-lookup"><span data-stu-id="0da00-104">Interfaces allow you to define features as small groups of closely related properties, methods, and events; this reduces compatibility problems because you can develop enhanced implementations for your interfaces without jeopardizing existing code.</span></span> <span data-ttu-id="0da00-105">Możesz dodać nowe funkcje w dowolnym momencie przez tworzenie implementacji i dodatkowe interfejsy.</span><span class="sxs-lookup"><span data-stu-id="0da00-105">You can add new features at any time by developing additional interfaces and implementations.</span></span>  

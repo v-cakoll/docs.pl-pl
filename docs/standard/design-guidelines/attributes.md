@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574637"
 ---
 # <a name="attributes"></a><span data-ttu-id="04225-102">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="04225-102">Attributes</span></span>
 <span data-ttu-id="04225-103"><xref:System.Attribute?displayProperty=nameWithType> Klasa podstawowa służy do definiowania atrybutów niestandardowych.</span><span class="sxs-lookup"><span data-stu-id="04225-103"><xref:System.Attribute?displayProperty=nameWithType> is a base class used to define custom attributes.</span></span>  

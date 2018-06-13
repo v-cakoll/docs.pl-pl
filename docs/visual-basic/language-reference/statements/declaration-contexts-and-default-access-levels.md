@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605449"
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a><span data-ttu-id="2ca3b-102">Kontekst deklaracji i domyślne poziomy dostępu (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2ca3b-102">Declaration Contexts and Default Access Levels (Visual Basic)</span></span>
 <span data-ttu-id="2ca3b-103">W tym temacie opisano, które typy danych Visual Basic mogą być deklarowane w ramach których innych typów, a także jakie są ich domyślne poziomy dostępu, jeśli nie zostały określone.</span><span class="sxs-lookup"><span data-stu-id="2ca3b-103">This topic describes which Visual Basic types can be declared within which other types, and what their access levels default to if not specified.</span></span>  

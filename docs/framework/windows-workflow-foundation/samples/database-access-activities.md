@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520412"
 ---
 # <a name="database-access-activities"></a><span data-ttu-id="e037d-102">Działania dostępu do bazy danych</span><span class="sxs-lookup"><span data-stu-id="e037d-102">Database Access Activities</span></span>
 <span data-ttu-id="e037d-103">Działania dostępu do bazy danych pozwalają na dostęp do bazy danych w przepływie pracy.</span><span class="sxs-lookup"><span data-stu-id="e037d-103">Database access activities allow you to access a database within a workflow.</span></span> <span data-ttu-id="e037d-104">Te działania Zezwalaj na dostęp do bazy danych do pobierania lub modyfikowanie informacji i użycia [ADO.NET](http://go.microsoft.com/fwlink/?LinkId=166081) dostęp do bazy danych.</span><span class="sxs-lookup"><span data-stu-id="e037d-104">These activities allow accessing databases to retrieve or modify information and use [ADO.NET](http://go.microsoft.com/fwlink/?LinkId=166081) to access the database.</span></span>  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571254"
 ---
 # <a name="commonly-used-collection-types"></a><span data-ttu-id="9d269-102">Często używane typy kolekcji</span><span class="sxs-lookup"><span data-stu-id="9d269-102">Commonly Used Collection Types</span></span>
 <span data-ttu-id="9d269-103">Typy kolekcji są typowe przykłady kolekcji danych, takich jak tabele hash, kolejki, stosy, torebki, słowniki i listy.</span><span class="sxs-lookup"><span data-stu-id="9d269-103">Collection types are the common variations of data collections, such as hash tables, queues, stacks, bags, dictionaries, and lists.</span></span>  

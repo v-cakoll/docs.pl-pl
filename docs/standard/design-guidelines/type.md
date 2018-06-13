@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572892"
 ---
 # <a name="type-design-guidelines"></a><span data-ttu-id="a8399-102">Wytyczne dotyczące projektowania typu</span><span class="sxs-lookup"><span data-stu-id="a8399-102">Type Design Guidelines</span></span>
 <span data-ttu-id="a8399-103">Z punktu widzenia środowiska CLR, dostępne są tylko dwie kategorie typów — odwołanie typy i wartość — ale dyskusji dotyczących framework projektu na potrzeby możemy podział typy bardziej logiczne, grup, każda z własne zasady określonego projektu.</span><span class="sxs-lookup"><span data-stu-id="a8399-103">From the CLR perspective, there are only two categories of types—reference types and value types—but for the purpose of a discussion about framework design, we divide types into more logical groups, each with its own specific design rules.</span></span>  

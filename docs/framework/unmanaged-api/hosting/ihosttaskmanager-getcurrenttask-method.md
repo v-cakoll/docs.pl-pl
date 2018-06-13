@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442695"
 ---
 # <a name="ihosttaskmanagergetcurrenttask-method"></a><span data-ttu-id="f3976-102">IHostTaskManager::GetCurrentTask — Metoda</span><span class="sxs-lookup"><span data-stu-id="f3976-102">IHostTaskManager::GetCurrentTask Method</span></span>
 <span data-ttu-id="f3976-103">Pobiera wskaźnika interfejsu do zadania, które jest obecnie wykonywane w wątku systemu operacyjnego, z której dokonywane jest to wywołanie.</span><span class="sxs-lookup"><span data-stu-id="f3976-103">Gets an interface pointer to the task that is currently executing on the operating system thread from which this call is made.</span></span>  

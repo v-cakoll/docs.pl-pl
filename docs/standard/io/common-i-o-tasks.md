@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577658"
 ---
 # <a name="common-io-tasks"></a><span data-ttu-id="c7e00-102">Typowe zadania We/Wy</span><span class="sxs-lookup"><span data-stu-id="c7e00-102">Common I/O Tasks</span></span>
 <span data-ttu-id="c7e00-103"><xref:System.IO> Przestrzeń nazw zawiera szereg klas, które umożliwiają różne akcje, takie jak odczytywanie i zapisywanie do wykonania dla plików, katalogów i strumieni.</span><span class="sxs-lookup"><span data-stu-id="c7e00-103">The <xref:System.IO> namespace provides several classes that allow for various actions, such as reading and writing, to be performed on files, directories, and streams.</span></span> <span data-ttu-id="c7e00-104">Aby uzyskać więcej informacji, zobacz [plików i we/wy strumienia](../../../docs/standard/io/index.md).</span><span class="sxs-lookup"><span data-stu-id="c7e00-104">For more information, see [File and Stream I/O](../../../docs/standard/io/index.md).</span></span>  

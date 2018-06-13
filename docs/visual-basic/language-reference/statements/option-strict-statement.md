@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605358"
 ---
 # <a name="option-strict-statement"></a><span data-ttu-id="d0611-102">Option Strict — Instrukcja</span><span class="sxs-lookup"><span data-stu-id="d0611-102">Option Strict Statement</span></span>
 <span data-ttu-id="d0611-103">Ogranicza niejawne konwersje typów danych można tylko rozszerzanie konwersji, uniemożliwia późne wiązanie i nie zezwala na niejawne wpisanie, który daje w `Object` typu.</span><span class="sxs-lookup"><span data-stu-id="d0611-103">Restricts implicit data type conversions to only widening conversions, disallows late binding, and disallows implicit typing that results in an `Object` type.</span></span>  

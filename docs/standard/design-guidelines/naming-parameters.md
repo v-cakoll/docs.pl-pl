@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570490"
 ---
 # <a name="naming-parameters"></a><span data-ttu-id="bfd60-102">Nazwy parametrów</span><span class="sxs-lookup"><span data-stu-id="bfd60-102">Naming Parameters</span></span>
 <span data-ttu-id="bfd60-103">Poza oczywiste Przyczyna czytelności koniecznie postępuj zgodnie z wytycznymi dla nazw parametrów, ponieważ parametry są wyświetlane w dokumentacji i w projektancie, podając Intellisense i przeglądania funkcje klasy narzędzi do projektowania visual.</span><span class="sxs-lookup"><span data-stu-id="bfd60-103">Beyond the obvious reason of readability, it is important to follow the guidelines for parameter names because parameters are displayed in documentation and in the designer when visual design tools provide Intellisense and class browsing functionality.</span></span>  

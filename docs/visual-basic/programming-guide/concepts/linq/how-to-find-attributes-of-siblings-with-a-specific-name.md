@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643611"
 ---
 # <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="787d1-102">Porady: znajdowanie atrybuty elementów równorzędnych o określonej nazwie (XPath-LINQ do XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="787d1-102">How to: Find Attributes of Siblings with a Specific Name (XPath-LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="787d1-103">W tym temacie pokazano, jak znaleźć wszystkie atrybuty elementów równorzędnych węzła kontekstu.</span><span class="sxs-lookup"><span data-stu-id="787d1-103">This topic shows how to find all attributes of the siblings of the context node.</span></span> <span data-ttu-id="787d1-104">Zwracane są tylko atrybuty o określonej nazwie w kolekcji.</span><span class="sxs-lookup"><span data-stu-id="787d1-104">Only attributes with a specific name are returned in the collection.</span></span>  

@@ -44,6 +44,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577309"
 ---
 # <a name="net-class-library-overview"></a><span data-ttu-id="e9106-102">Przegląd biblioteki klas programu .NET</span><span class="sxs-lookup"><span data-stu-id="e9106-102">.NET Class Library Overview</span></span>
 <span data-ttu-id="e9106-103">Implementacje .NET zawierają klasy, interfejsy delegatów i typy wartości, które przyspieszenia i zoptymalizować proces rozwoju i zapewnienia dostępu do funkcji systemu.</span><span class="sxs-lookup"><span data-stu-id="e9106-103">.NET implementations include classes, interfaces, delegates, and value types that expedite and optimize the development process and provide access to system functionality.</span></span> <span data-ttu-id="e9106-104">W celu ułatwienia współdziałanie między językami, większość typów .NET są zgodne ze specyfikacją CLS i w związku z tym można używać z dowolnego języka programowania, w których kompilatora odpowiada specyfikacja języka wspólnego (ze specyfikacją CLS).</span><span class="sxs-lookup"><span data-stu-id="e9106-104">To facilitate interoperability between languages, most .NET types are CLS-compliant and can therefore be used from any programming language whose compiler conforms to the common language specification (CLS).</span></span>  

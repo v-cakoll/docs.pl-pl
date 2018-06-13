@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578043"
 ---
 # <a name="general-naming-conventions"></a><span data-ttu-id="07409-102">Ogólne konwencje nazewnictwa</span><span class="sxs-lookup"><span data-stu-id="07409-102">General Naming Conventions</span></span>
 <span data-ttu-id="07409-103">W tej sekcji opisano ogólne konwencji nazewnictwa odnoszą się do wyboru word wskazówki na temat używania skrótów i akronimów i zalecenia dotyczące należy unikać nazw specyficzny dla języka.</span><span class="sxs-lookup"><span data-stu-id="07409-103">This section describes general naming conventions that relate to word choice, guidelines on using abbreviations and acronyms, and recommendations on how to avoid using language-specific names.</span></span>  

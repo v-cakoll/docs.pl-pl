@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33482329"
 ---
 # <a name="systemservicemodeldiagnosticstracetruncatedquotaexceeded"></a><span data-ttu-id="e2d60-102">System.ServiceModel.Diagnostics.TraceTruncatedQuotaExceeded</span><span class="sxs-lookup"><span data-stu-id="e2d60-102">System.ServiceModel.Diagnostics.TraceTruncatedQuotaExceeded</span></span>
 <span data-ttu-id="e2d60-103">System.ServiceModel.Diagnostics.TraceTruncatedQuotaExceeded</span><span class="sxs-lookup"><span data-stu-id="e2d60-103">System.ServiceModel.Diagnostics.TraceTruncatedQuotaExceeded</span></span>  

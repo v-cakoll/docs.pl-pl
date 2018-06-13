@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457319"
 ---
 # <a name="clone-function"></a><span data-ttu-id="40ea8-103">Clone — funkcja</span><span class="sxs-lookup"><span data-stu-id="40ea8-103">Clone function</span></span>
 <span data-ttu-id="40ea8-104">Zwraca nowy obiekt, który jest pełny klonowania bieżącego obiektu.</span><span class="sxs-lookup"><span data-stu-id="40ea8-104">Returns a new object that is a complete clone of the current object.</span></span>   

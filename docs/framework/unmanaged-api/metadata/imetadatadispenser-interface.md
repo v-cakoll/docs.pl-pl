@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444873"
 ---
 # <a name="imetadatadispenser-interface"></a><span data-ttu-id="888f2-102">IMetaDataDispenser — Interfejs</span><span class="sxs-lookup"><span data-stu-id="888f2-102">IMetaDataDispenser Interface</span></span>
 <span data-ttu-id="888f2-103">Udostępnia metody, aby utworzyć nowy zakres metadanych lub Otwórz istniejący.</span><span class="sxs-lookup"><span data-stu-id="888f2-103">Provides methods to create a new metadata scope, or open an existing one.</span></span>  

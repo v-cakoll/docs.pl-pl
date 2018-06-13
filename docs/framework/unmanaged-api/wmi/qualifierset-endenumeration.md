@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460753"
 ---
 # <a name="qualifiersetendenumeration-function"></a><span data-ttu-id="994c8-103">Funkcja QualifierSet_EndEnumeration</span><span class="sxs-lookup"><span data-stu-id="994c8-103">QualifierSet_EndEnumeration function</span></span>
 <span data-ttu-id="994c8-104">Kończy wyliczenie uruchomione za pomocą wywołania [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) funkcji.</span><span class="sxs-lookup"><span data-stu-id="994c8-104">Terminates the enumeration begun with a call to the [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) function.</span></span>  

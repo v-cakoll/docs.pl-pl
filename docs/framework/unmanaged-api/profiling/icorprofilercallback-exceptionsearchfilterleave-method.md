@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451301"
 ---
 # <a name="icorprofilercallbackexceptionsearchfilterleave-method"></a><span data-ttu-id="f4ca9-102">ICorProfilerCallback::ExceptionSearchFilterLeave — Metoda</span><span class="sxs-lookup"><span data-stu-id="f4ca9-102">ICorProfilerCallback::ExceptionSearchFilterLeave Method</span></span>
 <span data-ttu-id="f4ca9-103">Powiadamia profilera, że filtr użytkownika właśnie zakończono wykonywanie.</span><span class="sxs-lookup"><span data-stu-id="f4ca9-103">Notifies the profiler that a user filter has just finished executing.</span></span>  

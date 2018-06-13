@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442169"
 ---
 # <a name="corattributetargets-enumeration"></a><span data-ttu-id="5a923-102">CorAttributeTargets — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="5a923-102">CorAttributeTargets Enumeration</span></span>
 <span data-ttu-id="5a923-103">Określa elementy aplikacji, na których jest on prawidłowy do zastosowania atrybutu.</span><span class="sxs-lookup"><span data-stu-id="5a923-103">Specifies the application elements on which it is valid to apply an attribute.</span></span>  

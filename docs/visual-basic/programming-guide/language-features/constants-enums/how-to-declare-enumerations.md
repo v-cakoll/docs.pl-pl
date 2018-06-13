@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650806"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a><span data-ttu-id="bc60c-102">Porady: deklarowanie wyliczeń (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bc60c-102">How to: Declare Enumerations (Visual Basic)</span></span>
 <span data-ttu-id="bc60c-103">Utwórz wyliczenie z `Enum` instrukcji w sekcji deklaracji klasy lub modułu.</span><span class="sxs-lookup"><span data-stu-id="bc60c-103">You create an enumeration with the `Enum` statement in the declarations section of a class or module.</span></span> <span data-ttu-id="bc60c-104">Nie można zadeklarować wyliczenia w metodzie.</span><span class="sxs-lookup"><span data-stu-id="bc60c-104">You cannot declare an enumeration within a method.</span></span> <span data-ttu-id="bc60c-105">Aby określić odpowiedni poziom dostępu, użyj `Private`, `Protected`, `Friend`, lub `Public`.</span><span class="sxs-lookup"><span data-stu-id="bc60c-105">To specify the appropriate level of access, use `Private`, `Protected`, `Friend`, or `Public`.</span></span>  

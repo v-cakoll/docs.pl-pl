@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647807"
 ---
 # <a name="how-to-validate-file-names-and-paths-in-visual-basic"></a><span data-ttu-id="987f9-102">Porady: sprawdzanie poprawności nazw plików oraz ścieżek w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="987f9-102">How to: Validate File Names and Paths in Visual Basic</span></span>
 <span data-ttu-id="987f9-103">W tym przykładzie zwraca `Boolean` wartość, która wskazuje, czy ciąg reprezentuje nazwę pliku lub ścieżkę.</span><span class="sxs-lookup"><span data-stu-id="987f9-103">This example returns a `Boolean` value that indicates whether a string represents a file name or path.</span></span> <span data-ttu-id="987f9-104">Sprawdzanie poprawności sprawdza, czy nazwa zawiera znaki, które nie są dozwolone w systemie plików.</span><span class="sxs-lookup"><span data-stu-id="987f9-104">The validation checks if the name contains characters that are not allowed by the file system.</span></span>  

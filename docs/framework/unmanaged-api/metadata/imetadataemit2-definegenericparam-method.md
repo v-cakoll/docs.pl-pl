@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446457"
 ---
 # <a name="imetadataemit2definegenericparam-method"></a><span data-ttu-id="cecf4-102">IMetaDataEmit2::DefineGenericParam — Metoda</span><span class="sxs-lookup"><span data-stu-id="cecf4-102">IMetaDataEmit2::DefineGenericParam Method</span></span>
 <span data-ttu-id="cecf4-103">Tworzy definicję dla parametru typu ogólnego i pobiera token do tego parametru typu ogólnego.</span><span class="sxs-lookup"><span data-stu-id="cecf4-103">Creates a definition for a generic type parameter, and gets a token to that generic type parameter.</span></span>  

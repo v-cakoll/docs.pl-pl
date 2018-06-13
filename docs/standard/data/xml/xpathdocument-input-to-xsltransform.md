@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569788"
 ---
 # <a name="xpathdocument-input-to-xsltransform"></a><span data-ttu-id="6af83-102">Dane wejściowe XPathDocument XslTransform</span><span class="sxs-lookup"><span data-stu-id="6af83-102">XPathDocument Input to XslTransform</span></span>
 <span data-ttu-id="6af83-103"><xref:System.Xml.XPath.XPathDocument> Jest tylko do odczytu pamięci podręcznej, przetwarzania dokumentów za pomocą <xref:System.Xml.Xsl.XslTransform>.</span><span class="sxs-lookup"><span data-stu-id="6af83-103">The <xref:System.Xml.XPath.XPathDocument> is a read-only cache, for processing documents with <xref:System.Xml.Xsl.XslTransform>.</span></span> <span data-ttu-id="6af83-104">Przypomina strukturę do XML modelu DOM (Document Object), ale wysoce jest zoptymalizowany do przetwarzania przekształceń XSLT () oraz modelu danych XML Path Language (XPath) przy użyciu funkcji optymalizacji XPath na językarozszerzonegoarkuszastylów<xref:System.Xml.XPath.XPathNavigator>.</span><span class="sxs-lookup"><span data-stu-id="6af83-104">It is structurally similar to the XML Document Object Model (DOM), but it is highly optimized for Extensible Stylesheet Language for Transformations (XSLT) processing and the XML Path Language (XPath) data model using the XPath optimization functions on the <xref:System.Xml.XPath.XPathNavigator>.</span></span>  

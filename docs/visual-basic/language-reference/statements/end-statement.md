@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604435"
 ---
 # <a name="end-statement"></a><span data-ttu-id="bc0b5-102">End — Instrukcja</span><span class="sxs-lookup"><span data-stu-id="bc0b5-102">End Statement</span></span>
 <span data-ttu-id="bc0b5-103">Kończy wykonywanie natychmiast.</span><span class="sxs-lookup"><span data-stu-id="bc0b5-103">Terminates execution immediately.</span></span>  

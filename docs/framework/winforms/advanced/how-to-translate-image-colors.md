@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522539"
 ---
 # <a name="how-to-translate-image-colors"></a><span data-ttu-id="772ad-102">Porady: przesuwanie kolorów obrazu</span><span class="sxs-lookup"><span data-stu-id="772ad-102">How to: Translate Image Colors</span></span>
 <span data-ttu-id="772ad-103">Tłumaczenie dodaje wartość do przynajmniej jednej z czterech składowych.</span><span class="sxs-lookup"><span data-stu-id="772ad-103">A translation adds a value to one or more of the four color components.</span></span> <span data-ttu-id="772ad-104">Wpisów macierzy kolorów, które reprezentują tłumaczenia są podane w poniższej tabeli.</span><span class="sxs-lookup"><span data-stu-id="772ad-104">The color matrix entries that represent translations are given in the following table.</span></span>  

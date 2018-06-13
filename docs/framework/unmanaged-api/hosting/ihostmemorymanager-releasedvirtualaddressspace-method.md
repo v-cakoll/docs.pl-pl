@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438444"
 ---
 # <a name="ihostmemorymanagerreleasedvirtualaddressspace-method"></a><span data-ttu-id="5c182-102">IHostMemoryManager::ReleasedVirtualAddressSpace — Metoda</span><span class="sxs-lookup"><span data-stu-id="5c182-102">IHostMemoryManager::ReleasedVirtualAddressSpace Method</span></span>
 <span data-ttu-id="5c182-103">Powiadamia hosta środowisko uruchomieniowe języka wspólnego (CLR) zostało zakończone, przy użyciu określonego pamięci.</span><span class="sxs-lookup"><span data-stu-id="5c182-103">Notifies the host that the common language runtime (CLR) has finished using the specified memory.</span></span>  

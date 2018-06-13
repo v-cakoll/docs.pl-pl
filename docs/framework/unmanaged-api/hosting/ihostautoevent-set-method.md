@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438630"
 ---
 # <a name="ihostautoeventset-method"></a><span data-ttu-id="e4caf-102">IHostAutoEvent::Set — Metoda</span><span class="sxs-lookup"><span data-stu-id="e4caf-102">IHostAutoEvent::Set Method</span></span>
 <span data-ttu-id="e4caf-103">Ustawia bieżący [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) wystąpienia sygnałowego stanu.</span><span class="sxs-lookup"><span data-stu-id="e4caf-103">Sets the current [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) instance to a signaled state.</span></span>  

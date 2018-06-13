@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446182"
 ---
 # <a name="imetadataemitsavetomemory-method"></a><span data-ttu-id="c859a-102">IMetaDataEmit::SaveToMemory — Metoda</span><span class="sxs-lookup"><span data-stu-id="c859a-102">IMetaDataEmit::SaveToMemory Method</span></span>
 <span data-ttu-id="c859a-103">Zapisuje wszystkie metadane w bieżącym zakresie do określonego obszaru pamięci.</span><span class="sxs-lookup"><span data-stu-id="c859a-103">Saves all metadata in the current scope to the specified area of memory.</span></span>  

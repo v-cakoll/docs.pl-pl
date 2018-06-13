@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572791"
 ---
 # <a name="xml-document-creation"></a><span data-ttu-id="809c2-102">Tworzenie dokumentu XML</span><span class="sxs-lookup"><span data-stu-id="809c2-102">XML Document Creation</span></span>
 <span data-ttu-id="809c2-103">Istnieją dwa sposoby tworzenia dokumentu XML.</span><span class="sxs-lookup"><span data-stu-id="809c2-103">There are two ways to create an XML document.</span></span> <span data-ttu-id="809c2-104">Jednym ze sposobów jest utworzenie **XmlDocument** bez parametrów.</span><span class="sxs-lookup"><span data-stu-id="809c2-104">One way is to create an **XmlDocument** with no parameters.</span></span> <span data-ttu-id="809c2-105">Innym sposobem jest utworzenie **XmlDocument** i przekaż go XmlNameTable jako parametr.</span><span class="sxs-lookup"><span data-stu-id="809c2-105">The other way is to create an **XmlDocument** and pass it an XmlNameTable as a parameter.</span></span> <span data-ttu-id="809c2-106">Poniższy przykład pokazuje, jak utworzyć nowy, pusty **XmlDocument** przy użyciu bez parametrów.</span><span class="sxs-lookup"><span data-stu-id="809c2-106">The following example shows how to create a new, empty **XmlDocument** using no parameters.</span></span>  

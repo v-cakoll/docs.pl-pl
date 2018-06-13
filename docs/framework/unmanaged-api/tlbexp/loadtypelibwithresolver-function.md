@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460278"
 ---
 # <a name="loadtypelibwithresolver-function"></a><span data-ttu-id="73c7c-102">LoadTypeLibWithResolver — Funkcja</span><span class="sxs-lookup"><span data-stu-id="73c7c-102">LoadTypeLibWithResolver Function</span></span>
 <span data-ttu-id="73c7c-103">Ładuje bibliotekę typów i używa podane [itypelibresolver — interfejs](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) rozwiązywać żadnych bibliotek typu wewnętrznie występującego w odwołaniu.</span><span class="sxs-lookup"><span data-stu-id="73c7c-103">Loads a type library and uses the supplied [ITypeLibResolver interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) to resolve any internally referenced type libraries.</span></span>  

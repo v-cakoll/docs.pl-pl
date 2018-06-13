@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570366"
 ---
 # <a name="process-xml-data-using-the-dom-model"></a><span data-ttu-id="f8abe-102">Przetwarzania danych XML przy użyciu modelu DOM</span><span class="sxs-lookup"><span data-stu-id="f8abe-102">Process XML Data Using the DOM Model</span></span>
 <span data-ttu-id="f8abe-103">XML modelu DOM (Document Object) dane XML są traktowane jako standardowy zestaw obiektów i służy do przetwarzania danych XML w pamięci.</span><span class="sxs-lookup"><span data-stu-id="f8abe-103">The XML Document Object Model (DOM) treats XML data as a standard set of objects and is used to process XML data in memory.</span></span> <span data-ttu-id="f8abe-104">`System.Xml` Przestrzeń nazw zapewnia programowy reprezentację dokumenty XML, fragmenty, węzły lub zestaw węzłów.</span><span class="sxs-lookup"><span data-stu-id="f8abe-104">The `System.Xml` namespace provides a programmatic representation of XML documents, fragments, nodes, or node-sets.</span></span> <span data-ttu-id="f8abe-105">Jest on oparty na podstawowe sieci World Wide Web konsorcjum W3C DOM poziom 1 i zalecenia DOM poziom 2 rdzeni.</span><span class="sxs-lookup"><span data-stu-id="f8abe-105">It is based on the World Wide Web Consortium (W3C) DOM Level 1 Core and the DOM Level 2 Core recommendations.</span></span>  

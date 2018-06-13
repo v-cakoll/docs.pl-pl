@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647312"
 ---
 # <a name="when-to-use-an-enumeration-visual-basic"></a><span data-ttu-id="add7e-102">Kiedy stosować wyliczanie (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="add7e-102">When to Use an Enumeration (Visual Basic)</span></span>
 <span data-ttu-id="add7e-103">Wyliczenia oferują prosty sposób pracy z zestawów powiązanych stałe.</span><span class="sxs-lookup"><span data-stu-id="add7e-103">Enumerations offer an easy way to work with sets of related constants.</span></span> <span data-ttu-id="add7e-104">Jako wyliczenia lub `Enum`, jest nazwa symboliczna dla zestawu wartości.</span><span class="sxs-lookup"><span data-stu-id="add7e-104">An enumeration, or `Enum`, is a symbolic name for a set of values.</span></span> <span data-ttu-id="add7e-105">Wyliczenia są traktowane jako typy danych i można je utworzyć zestawy stałych do użycia z zmiennych i właściwości.</span><span class="sxs-lookup"><span data-stu-id="add7e-105">Enumerations are treated as data types, and you can use them to create sets of constants for use with variables and properties.</span></span>  

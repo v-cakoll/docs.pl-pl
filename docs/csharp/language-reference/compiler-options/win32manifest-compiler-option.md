@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214961"
 ---
 # <a name="-win32manifest-c-compiler-options"></a><span data-ttu-id="1a207-102">-win32manifest (opcje kompilatora C#)</span><span class="sxs-lookup"><span data-stu-id="1a207-102">-win32manifest (C# Compiler Options)</span></span>
 <span data-ttu-id="1a207-103">Użyj **-win32manifest** opcję, aby określić użytkownika aplikacji plik manifestu Win32 do osadzenia pliku przenośny plik wykonywalny (PE) projektu.</span><span class="sxs-lookup"><span data-stu-id="1a207-103">Use the **-win32manifest** option to specify a user-defined Win32 application manifest file to be embedded into a project's portable executable (PE) file.</span></span>  

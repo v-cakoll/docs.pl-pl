@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449949"
 ---
 # <a name="corprffinalizerflags-enumeration"></a><span data-ttu-id="3e30b-102">COR_PRF_FINALIZER_FLAGS — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="3e30b-102">COR_PRF_FINALIZER_FLAGS Enumeration</span></span>
 <span data-ttu-id="3e30b-103">W tym artykule opisano finalizatora obiektu.</span><span class="sxs-lookup"><span data-stu-id="3e30b-103">Describes the finalizer for an object.</span></span>  

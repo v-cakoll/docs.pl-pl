@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604266"
 ---
 # <a name="as-clause-visual-basic"></a><span data-ttu-id="ab2a5-102">As — Klauzula (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ab2a5-102">As Clause (Visual Basic)</span></span>
 <span data-ttu-id="ab2a5-103">Wprowadza `As` klauzuli, który określa typ danych w instrukcji deklaracji lub na liście ograniczenia parametru typu ogólnego.</span><span class="sxs-lookup"><span data-stu-id="ab2a5-103">Introduces an `As` clause, which identifies a data type in a declaration statement or a constraint list on a generic type parameter.</span></span>  

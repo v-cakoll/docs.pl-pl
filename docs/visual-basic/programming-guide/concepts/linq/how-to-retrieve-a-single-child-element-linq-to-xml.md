@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643242"
 ---
 # <a name="how-to-retrieve-a-single-child-element-linq-to-xml-visual-basic"></a><span data-ttu-id="ddf3a-102">Porady: Pobieranie elementu podrzędnego pojedynczego (LINQ do XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ddf3a-102">How to: Retrieve a Single Child Element (LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="ddf3a-103">W tym temacie wyjaśniono, jak pobrać element pojedynczy element potomny, nazwę elementu podrzędnego.</span><span class="sxs-lookup"><span data-stu-id="ddf3a-103">This topic explains how to retrieve a single child element, given the name of the child element.</span></span> <span data-ttu-id="ddf3a-104">Jeśli znasz nazwę elementu podrzędnego elementu i że istnieje tylko jeden element o tej nazwie, może być wygodną można pobrać tylko jeden element, zamiast kolekcji.</span><span class="sxs-lookup"><span data-stu-id="ddf3a-104">When you know the name of the child element and that there is only one element that has this name, it can be convenient to retrieve just one element, instead of a collection.</span></span>  

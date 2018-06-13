@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512603"
 ---
 # <a name="configuring-activity-validation"></a>Konfigurowanie sprawdzania poprawności działania
 Działanie sprawdzania poprawności umożliwia autorów działania i użytkowników zidentyfikować i raportów o błędach w konfiguracji działania przed jego wykonywania. Windows Workflow Foundation (WF) zapewnia następujące trzy typy sprawdzania poprawności działania:  

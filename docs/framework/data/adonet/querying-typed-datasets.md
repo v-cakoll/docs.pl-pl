@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353488"
 ---
 # <a name="querying-typed-datasets"></a>Wykonywanie zapytania Typizowane zbiory danych
 Jeśli schemat <xref:System.Data.DataSet> jest znany w czasie projektowania aplikacji, zalecane jest użycie typu <xref:System.Data.DataSet> przy użyciu [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Typizowany <xref:System.Data.DataSet> jest klasą pochodną <xref:System.Data.DataSet>. W efekcie dziedziczy wszystkie metody, zdarzeń i właściwości <xref:System.Data.DataSet>. Ponadto maszynowy <xref:System.Data.DataSet> udostępnia silnie typizowane metody, zdarzeń i właściwości. Oznacza to, że masz dostęp tabele i kolumny według nazwy, zamiast za pomocą metody opartej na kolekcji. Dzięki temu zapytania prostszy i bardziej czytelne. Aby uzyskać więcej informacji, zobacz [wpisanych zestawów danych](../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).  

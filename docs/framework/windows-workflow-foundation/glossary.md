@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513360"
 ---
 # <a name="windows-workflow-foundation-glossary-for-net-framework-45"></a>Słownik programu Windows Workflow Foundation dla programu .NET Framework 4.5
 Poniższe terminy są używane w dokumentacji systemu Windows Workflow Foundation.  

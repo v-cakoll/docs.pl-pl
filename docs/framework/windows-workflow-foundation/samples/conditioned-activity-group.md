@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514068"
 ---
 # <a name="conditioned-activity-group"></a>Przygotowane grupy działań
 W przykładzie pokazano aplikacji rezerwacji podróży. <xref:System.Workflow.Activities.ConditionedActivityGroup> (Innego niż CAG) udostępnia dwa działania kodu: działanie Car i działania linii lotniczych. W `SimpleCAGWorkflow` konstruktora, obiektu ArrayList "travelNeedType" jest wypełniana typów rezerwacje podróży, które są wymagane. Przez dodawanie komentarza do jednej lub obu `travelNeeds.Add` instrukcje, odpowiednio zmodyfikować zachowanie innego niż CAG. Działania samochodu i linii lotniczych mają ich <xref:System.Workflow.Activities.ConditionedActivityGroup.WhenConditionProperty> warunku wypełniane przy użyciu <xref:System.Workflow.Activities.CodeCondition>. Wykonuje działanie samochodu tylko wtedy, gdy `travelNeeds` kolekcja ma `TravelNeeds.Car` wpisu i lotniczego wykonuje działanie tylko wtedy, gdy `travelNeeds` kolekcja ma `TravelNeeds.Airline` wpisu.  

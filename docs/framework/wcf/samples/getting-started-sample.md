@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505772"
 ---
 # <a name="getting-started-sample"></a>Wprowadzenie — przykład
 Uruchamianie przykładowych pokazano, jak do zaimplementowania typowych usługi i typowego klienta za pomocą usługi Windows Communication Foundation (WCF). W tym przykładzie stanowi podstawę dla wszystkich innych przykładów podstawową technologię.  

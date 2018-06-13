@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513289"
 ---
 # <a name="how-to-write-services-programmatically"></a>Porady: programowane pisanie usług
 Jeśli wybierzesz nie użyć szablonu projektu usługi systemu Windows, można napisać własny usług przez ustawienie dziedziczenia i inne elementy infrastruktury. Podczas tworzenia usługi programowo, należy wykonać kilka kroków, które szablonu może obsłużyć w inny sposób można:  

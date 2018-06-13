@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508517"
 ---
 # <a name="service-transaction-behavior"></a>Zachowanie transakcji usługi
 W przykładzie pokazano użycie transakcji koordynowane przez klienta i ustawienia atrybutu ServiceBehaviorAttribute i OperationBehaviorAttribute można kontrolować zachowanie transakcji usługi. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementuje usługi Kalkulator, ale jest rozszerzony do obsługi serwera dziennik działań wykonywanych w tabeli bazy danych i stanowego Suma operacji Kalkulator bieżąca. Utrwalonych zapisuje dane w tabeli dziennika serwera są zależne od wyniku transakcji klienta koordynowane — Jeśli transakcja klienta nie zostanie ukończone, transakcja usługi sieci Web zapewnia aktualizacji do bazy danych nie są przekazywane.  

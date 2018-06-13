@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586363"
 ---
 # <a name="39ltkeywordgt39-is-valid-only-within-an-instance-method"></a>&#39;&lt;słowo kluczowe&gt; &#39; jest prawidłowy tylko wewnątrz metody wystąpienia
 `Me`, `MyClass`, I `MyBase` słowa kluczowe odwoływać się do wystąpień określonej klasy. Nie można ich używać w udostępnionej `Function` lub `Sub` procedury.  

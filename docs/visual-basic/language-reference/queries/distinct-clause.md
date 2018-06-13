@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603980"
 ---
 # <a name="distinct-clause-visual-basic"></a>Distinct — Klauzula (Visual Basic)
 Ogranicza wartości bieżącą zmienną zakresu w celu wyeliminowania zduplikowanych wartości w klauzulach kolejne zapytania.  

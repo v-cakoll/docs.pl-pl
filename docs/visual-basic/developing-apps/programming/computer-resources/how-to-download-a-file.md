@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590734"
 ---
 # <a name="how-to-download-a-file-in-visual-basic"></a>Porady: pobieranie pliku w Visual Basic
 <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> Metody można użyć do pobrania pliku zdalnego i zapisz go w określonej lokalizacji. Jeśli `ShowUI` ustawiono parametr `True`, jest wyświetlane okno dialogowe pokazujące postęp pobierania, dzięki czemu użytkownicy anulować operację. Domyślnie nie są zastępowane istniejące pliki o tej samej nazwie; Jeśli chcesz zastąpić istniejące pliki, ustaw `overwrite` parametr `True`.  

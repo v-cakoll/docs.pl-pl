@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591745"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Stałe i wyliczenia (Visual Basic)
 Visual Basic dostarcza szereg wstępnie zdefiniowanych stałe i wyliczenia dla deweloperów. Stałe przechowywać wartości, które pozostają stałe w trakcie wykonywania aplikacji. Wyliczenia oferują wygodny do pracy z zestawów powiązanych stałych i do skojarzenia z nazwami wartości stałych.  

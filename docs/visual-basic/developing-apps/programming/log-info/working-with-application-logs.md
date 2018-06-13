@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592044"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Praca z dziennikami aplikacji w Visual Basic
 `My.Applicaton.Log` i `My.Log` obiektów ułatwiają zapisywane do dzienników rejestrowanie i informacje o śledzeniu.  

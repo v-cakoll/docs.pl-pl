@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592278"
 ---
 # <a name="how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls-visual-studio"></a>Porady: rysowanie kształtów za pomocą formantów OvalShape i RectangleShape (Visual Studio)
 Można użyć <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> formantu, aby narysować okręgi lub elipsy w formularzu lub kontenera, zarówno w czasie projektowania, jak i w czasie wykonywania. Można użyć <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> formantu do rysowania kwadratów, prostokąty lub prostokąty z zaokrąglonymi narożnikami w formularzu lub kontenera. Ten formant umożliwia również Rysowanie kształtów zarówno w czasie projektowania, jak i w czasie wykonywania.  

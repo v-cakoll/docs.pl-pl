@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600769"
 ---
 # <a name="xml-literals-visual-basic"></a>Literały XML (Visual Basic)
 Tematy w tej części dokumentu składni literałów XML w Visual Basic. Składnia literału XML można dołączyć do nich bezpośrednio w kodzie XML.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594783"
 ---
 # <a name="need-property-array-index"></a>Potrzebny indeks tablicy właściwości
 Wartość tej właściwości składa się z tablicy, a nie pojedynczą wartość. Indeks tablicy właściwości, do którego próbowano uzyskać dostęp nie została podana.  

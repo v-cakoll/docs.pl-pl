@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587322"
 ---
 # <a name="39extension39-attribute-can-be-applied-only-to-39module39-39sub39-or-39function39-declarations"></a>&#39;Rozszerzenie&#39; atrybut można stosować tylko do &#39;modułu&#39;, &#39;Sub&#39;, lub &#39;funkcja&#39; deklaracji
 Jedynym sposobem rozszerzenia typu danych w języku Visual Basic jest określenie metody rozszerzenia wewnątrz standardowy moduł. Metoda rozszerzenia może być `Sub` procedury lub `Function` procedury. Wszystkie metody rozszerzenia muszą być oznaczone atrybutem rozszerzenia, `<Extension()>`, z <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> przestrzeni nazw. Opcjonalnie moduł, który zawiera metody rozszerzenia mogą być oznaczone w taki sam sposób. Nie użycie atrybutu rozszerzenia jest prawidłowy.  

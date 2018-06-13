@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391252"
 ---
 # <a name="migration-guide-to-the-net-framework-47-46-and-45"></a>Przewodnik po migracji do programu .NET Framework 4.7, 4.6 i 4.5 
 Jeśli utworzono aplikację przy użyciu wcześniejszej wersji programu .NET Framework, zazwyczaj uaktualnieniem go do programu .NET Framework 4.5 i jego wersje punktu (4.5.1 i 4.5.2), .NET Framework 4.6 i jego wersje punktu (4.6.1 i 4.6.2), lub .NET Framework 4.7 i jego punktu zwalnia łatwo (4.7.1 i 4.7.2). Otwórz projekt w programie Visual Studio. Jeśli projekt został utworzony we wcześniejszej wersji programu Visual Studio, **zgodność projektu** automatycznie zostanie otwarte okno dialogowe. Aby uzyskać więcej informacji na temat uaktualniania projektu programu Visual Studio, zobacz [portu, migracji i uaktualniania projektów programu Visual Studio](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects) i [programu Visual Studio 2017 platformy elementów docelowych i zgodności](/visualstudio/productinfo/vs2017-compatibility-vs).  

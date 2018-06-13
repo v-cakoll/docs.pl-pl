@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585531"
 ---
 # <a name="device-io-error"></a>Błąd We/Wy urządzenia
 Gdy program korzystał z urządzeniami, takimi jak drukarka lub dysku wystąpił błąd wejściowych lub wyjściowych.  

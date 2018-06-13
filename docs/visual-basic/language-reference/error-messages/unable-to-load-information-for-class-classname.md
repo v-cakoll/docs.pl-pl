@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604175"
 ---
 # <a name="unable-to-load-information-for-class-39ltclassnamegt39"></a>Nie można załadować informacji dla klasy &#39; &lt;classname&gt;&#39;
 Odwołanie zostało przesłane do klasy, która nie jest dostępna.  

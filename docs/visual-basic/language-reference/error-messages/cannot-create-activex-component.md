@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585960"
 ---
 # <a name="cannot-create-activex-component"></a>Nie można utworzyć składnika ActiveX
 Próbowano umieścić formantu ActiveX na formularzu w czasie projektowania lub Dodawanie formularza do projektu z formantu ActiveX na nim, ale nie można odnaleźć skojarzone informacje w rejestrze.  

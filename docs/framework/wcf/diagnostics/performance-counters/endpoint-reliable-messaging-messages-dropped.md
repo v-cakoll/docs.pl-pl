@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33469326"
 ---
 # <a name="endpoint-reliable-messaging-messages-dropped"></a>Punktu końcowego: Porzucone komunikaty niezawodnej obsługi komunikatów
 Nazwa licznika: Sesji komunikacji niezawodnej porzucony.  

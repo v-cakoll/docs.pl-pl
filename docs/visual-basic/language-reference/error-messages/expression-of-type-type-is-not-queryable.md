@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589012"
 ---
 # <a name="expression-of-type-lttypegt-is-not-queryable"></a>Wyrażenie typu &lt;typu&gt; nie jest zapytań
 Wyrażenie typu \<typu > nie jest obsługą zapytań. Upewnij się, że nie brakuje zestawu importu odwołania i/lub przestrzeń nazw dla dostawcy LINQ.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587205"
 ---
 # <a name="how-to-write-to-binary-files-in-visual-basic"></a>Porady: zapis w plikach binarnych w Visual Basic
 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A> Metody zapisuje dane w pliku binarnym. Jeśli `append` parametr jest `True`, dołączy danych do pliku; w przeciwnym razie dane w pliku są zastępowane.  

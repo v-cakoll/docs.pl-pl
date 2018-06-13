@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604591"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Elementy członkowskie biblioteki wykonawczej programu Visual Basic
 `Microsoft.VisualBasic` Przestrzeń nazw zawiera klasy, modułów, stałe i wyliczenia wchodzących w skład biblioteka wykonawcza języka Visual Basic. Elementy te biblioteki zapewniają procedur, właściwości i wartości stałych używanych w kodzie. Każdy moduł i klasa reprezentuje określonej kategorii funkcji.  

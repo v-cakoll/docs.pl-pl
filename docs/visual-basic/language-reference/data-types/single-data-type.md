@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590789"
 ---
 # <a name="single-data-type-visual-basic"></a>Single — Typ danych (Visual Basic)
 Blokad podpisany IEEE 32-bitowe (4-bajtowych) pojedynczej precyzji liczb zmiennoprzecinkowych z zakresu od - 3.4028235E + 38 do - 1, 401298E-45 dla wartości ujemnych i od 1, 401298E-45 za pośrednictwem 3.4028235E + 38 dla wartości dodatnie. Liczby o pojedynczej dokładności przechowywać zbliżenia liczba rzeczywista.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590029"
 ---
 # <a name="mutexes"></a>Muteksy
 Można użyć <xref:System.Threading.Mutex> obiektu zapewnienie wyłącznego dostępu do zasobu. <xref:System.Threading.Mutex> Klasy wykorzystuje więcej zasobów systemowych niż <xref:System.Threading.Monitor> klasy, ale mogą być przekazywane między granicami domeny aplikacji, można z wielu czeka i może służyć do synchronizowania wątków w różnych procesów. Porównanie mechanizmów synchronizacji zarządzanych, zobacz [podstawowych Omówienie synchronizacji](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  

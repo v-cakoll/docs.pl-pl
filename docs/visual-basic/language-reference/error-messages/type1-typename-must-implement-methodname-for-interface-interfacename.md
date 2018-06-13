@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594386"
 ---
 # <a name="lttype1gt39lttypenamegt39-must-implement-39ltmethodnamegt39-for-interface-39ltinterfacenamegt39"></a>&lt;type1&gt;&#39;&lt;typename&gt; &#39; musi implementować &#39; &lt;methodname&gt; &#39; interfejsu &#39; &lt;interfacename&gt;&#39;
 Klasy lub struktury oświadczeń do zaimplementowania interfejsu, ale nie implementuje określonymi przez interfejs. Każdy element członkowski interfejsu musi być implementowana.  

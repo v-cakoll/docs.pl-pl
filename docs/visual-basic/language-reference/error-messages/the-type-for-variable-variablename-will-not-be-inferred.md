@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594286"
 ---
 # <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>Typ zmiennej &#39; &lt;nazwa_zmiennej&gt; &#39; nie będzie można wywnioskować, ponieważ jest on powiązany z polem w otaczającym zakresie
 Typ zmiennej "\<nazwa_zmiennej >' nie będzie można wywnioskować, ponieważ jest on powiązany z polem w otaczającym zakresie. Zmień nazwę "\<nazwa_zmiennej >", lub użyj w pełni kwalifikowaną nazwę (na przykład "Me.variablename" lub "MyBase.variablename").  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592161"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>Dostosowywanie, które obiekty są dostępne w My (Visual Basic)
 W tym temacie opisano, jak można kontrolować, które `My` obiekty są włączane przez ustawienie projektu `_MYTYPE` stała warunkowego kompilacji. Visual Studio programowanie środowiska IDE (Integrated) śledzi `_MYTYPE` stała kompilacja warunkowa w projekcie zsynchronizowane z typu projektu.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585042"
 ---
 # <a name="attributes-that-control-xml-serialization"></a>Atrybuty, które kontrolują serializacji XML
 Możesz stosowanie atrybutów w poniższej tabeli do klas i klasy elementów członkowskich do kontrolowania sposobu, w jaki <xref:System.Xml.Serialization.XmlSerializer> serializuje i deserializuje wystąpienia klasy. Aby zrozumieć, jak te atrybuty sterowania serializacją XML, zobacz [kontrolowanie atrybutów za pomocą serializacji XML](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md).  

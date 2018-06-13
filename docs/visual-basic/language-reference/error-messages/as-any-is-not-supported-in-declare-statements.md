@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588229"
 ---
 # <a name="39as-any39-is-not-supported-in-39declare39-statements"></a>&#39;Jako&#39; nie jest obsługiwany w &#39;Declare&#39; — instrukcje
 `Any` — Typ danych została użyta z `Declare` instrukcje w Visual Basic 6.0 i starszych wersji, aby zezwolić na stosowanie argumentów zawierających dane dowolnego typu. Przeładowanie, jednak obsługuje Visual Basic i tak powoduje, że `Any` przestarzałe typu danych.  

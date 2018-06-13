@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591940"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Tworzenie łańcuchów zadań przy użyciu zadań kontynuacji
 W programowanie asynchroniczne jest często stosowane w jednej operacji asynchronicznej, po zakończeniu, aby wywołać operację drugi i przekazywania danych do niej. Tradycyjnie to przeprowadzono przy użyciu metody wywołania zwrotnego. W bibliotece równoległych zadań podał funkcji *zadań kontynuacji*. Zadania kontynuacji (nazywanego także po prostu utrzymania) jest zadanie asynchroniczne, które jest wywoływane przez inne zadanie, znany jako *antecedent*, po zakończeniu antecedent.  

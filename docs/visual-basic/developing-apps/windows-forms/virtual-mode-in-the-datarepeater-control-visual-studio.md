@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592239"
 ---
 # <a name="virtual-mode-in-the-datarepeater-control-visual-studio"></a>Tryb wirtualny w formancie DataRepeater (Visual Studio)
 Jeśli chcesz wyświetlić dużych ilości danych tabelarycznych w <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> kontroli, może zwiększyć wydajność, ustawiając <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A> właściwości `True` i zarządzanie jawnie interakcji formantu ze źródłem danych. <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Kontrola zapewnia kilka zdarzeń, które może obsłużyć do interakcji z źródła danych i wyświetlić dane, zgodnie z potrzebami w czasie wykonywania.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581758"
 ---
 # <a name="security-and-user-input"></a>Zabezpieczenia i dane użytkownika
 Dane użytkownika, który jest dowolny rodzaj danych wejściowych (dane z żądania sieci Web lub adres URL, w danych wejściowych do formantów w aplikacji formularzy systemu Windows firmy Microsoft, i tak dalej), może negatywnie wpłynąć na kodu, ponieważ często używane dane bezpośrednio jako parametry, aby wywołać inny kod. Taka sytuacja jest odpowiednikiem złośliwego kodu wywoływanie kodu z parametrami dziwne, a sam ostrożności. Dane wejściowe użytkownika jest rzeczywiście trudniej upewnij bezpieczne, ponieważ nie istnieje żadne ramki stosu śledzenie obecności potencjalnie niezaufanych danych.  

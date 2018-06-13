@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591315"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semafor i klasa SemaphoreSlim
 <xref:System.Threading.Semaphore?displayProperty=nameWithType> Klasa reprezentuje nazwanych (ogólnosystemowe) lub semafora lokalnego. Jest cienką otoką wokół obiektu semafora Win32. Semaforów Win32 są liczenie semaforów, które mogą być używane do kontrolowania dostępu do puli zasobów.  

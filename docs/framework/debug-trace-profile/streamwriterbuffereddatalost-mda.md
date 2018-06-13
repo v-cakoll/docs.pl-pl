@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389944"
 ---
 # <a name="streamwriterbuffereddatalost-mda"></a>streamWriterBufferedDataLost MDA
 `streamWriterBufferedDataLost` Zarządzany Asystent debugowania (MDA) została aktywowana po <xref:System.IO.StreamWriter> są zapisywane, ale <xref:System.IO.StreamWriter.Flush%2A> lub <xref:System.IO.StreamWriter.Close%2A> metoda nie jest następnie wywoływana przed wystąpienie <xref:System.IO.StreamWriter> zostanie zniszczony. Po włączeniu to zdarzenie MDA środowiska uruchomieniowego Określa, czy wszystkie buforowane dane nadal istnieje w ramach <xref:System.IO.StreamWriter>. Jeśli istnieje buforowane dane, MDA jest aktywowane. Wywoływanie <xref:System.GC.Collect%2A> i <xref:System.GC.WaitForPendingFinalizers%2A> metod można wymusić finalizatory do uruchomienia. Finalizatory w przeciwnym razie zostanie uruchomiony w czasie pozornie dowolnego i prawdopodobnie w ogóle na zakończenie procesu. Jawnie systemie finalizatory to zdarzenie MDA włączone pomogą bardziej niezawodnie odtworzyć ten typ problemu.  

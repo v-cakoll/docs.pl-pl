@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587374"
 ---
 # <a name="friend-assembly-reference-ltreferencegt-is-invalid"></a>Odwołanie do przyjaznego zestawu &lt;odwołania&gt; jest nieprawidłowy
 Odwołanie do przyjaznego zestawu \<odwołania > jest nieprawidłowy. Zestawy podpisane silnymi nazwami muszą określać klucz publiczny w swoich deklaracjach InternalsVisibleTo.  

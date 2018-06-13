@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602778"
 ---
 # <a name="registry-summary-visual-basic"></a>Rejestr — Podsumowanie (Visual Basic)
 Słowa kluczowe języka Visual Studio i elementy członkowskie biblioteki wykonawczej są zorganizowane według celu i użycia.  

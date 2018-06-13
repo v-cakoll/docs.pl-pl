@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596840"
 ---
 # <a name="argument-39conversion39-is-not-valid"></a>Argument &#39;konwersji&#39; jest nieprawidłowy
 Wartość `VbStrConv` wyliczenie nie jest prawidłowy, prawdopodobnie ponieważ jest ona mniejsza od zera. Wartości wyliczenia musi być większa lub równa zero.  

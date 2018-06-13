@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593535"
 ---
 # <a name="reference-required-to-assembly-39ltassemblynamegt39-containing-the-base-class-39ltclassnamegt39"></a>Wymagane odwołanie do zestawu &#39; &lt;assemblyname&gt; &#39; z klasą podstawową &#39; &lt;classname&gt;&#39;
 Wymagane odwołanie do zestawu "\<assemblyname >" zawierającego klasę podstawową\<classname > ". Dodaj je do projektu.  

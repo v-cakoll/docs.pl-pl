@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415067"
 ---
 # <a name="icordebuggenericvalue-interface1"></a><span data-ttu-id="4053a-102">ICorDebugGenericValue Interface1</span><span class="sxs-lookup"><span data-stu-id="4053a-102">ICorDebugGenericValue Interface1</span></span>
 <span data-ttu-id="4053a-103">Podklasa "ICorDebugValue", która ma zastosowanie do wszystkich wartości.</span><span class="sxs-lookup"><span data-stu-id="4053a-103">A subclass of "ICorDebugValue" that applies to all values.</span></span> <span data-ttu-id="4053a-104">Ten interfejs zapewnia metody Get i Set dla wartości.</span><span class="sxs-lookup"><span data-stu-id="4053a-104">This interface provides Get and Set methods for the value.</span></span>  

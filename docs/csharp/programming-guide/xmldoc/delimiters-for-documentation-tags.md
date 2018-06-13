@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325685"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a><span data-ttu-id="49066-102">Ograniczniki tagów dokumentacji (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="49066-102">Delimiters for Documentation Tags (C# Programming Guide)</span></span>
 <span data-ttu-id="49066-103">Korzystanie z komentarze w dokumencie XML wymaga ograniczników, które wskazują w kompilatorze, gdzie komentarzy dokumentacji rozpoczęcia i zakończenia.</span><span class="sxs-lookup"><span data-stu-id="49066-103">The use of XML doc comments requires delimiters, which indicate to the compiler where a documentation comment begins and ends.</span></span> <span data-ttu-id="49066-104">Można użyć następujące rodzaje ograniczniki tagów dokumentacji XML:</span><span class="sxs-lookup"><span data-stu-id="49066-104">You can use the following kinds of delimiters with the XML documentation tags:</span></span>  

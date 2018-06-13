@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340661"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a><span data-ttu-id="2bcc5-102">Porady: tworzenie oznaczonych przyjaznych zestawów (C#)</span><span class="sxs-lookup"><span data-stu-id="2bcc5-102">How to: Create Signed Friend Assemblies (C#)</span></span>
 <span data-ttu-id="2bcc5-103">Ten przykład przedstawia sposób użycia przyjaznych zestawów z zestawów o silnych nazwach.</span><span class="sxs-lookup"><span data-stu-id="2bcc5-103">This example shows how to use friend assemblies with assemblies that have strong names.</span></span> <span data-ttu-id="2bcc5-104">Oba zestawy muszą silnej nazwy.</span><span class="sxs-lookup"><span data-stu-id="2bcc5-104">Both assemblies must be strong named.</span></span> <span data-ttu-id="2bcc5-105">Mimo że oba zestawy w tym przykładzie używają tych samych kluczy, można użyć różnych kluczy dla dwóch zestawów.</span><span class="sxs-lookup"><span data-stu-id="2bcc5-105">Although both assemblies in this example use the same keys, you could use different keys for two assemblies.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325711"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-c"></a><span data-ttu-id="428d5-102">Anulowanie zadań asynchronicznych po upływie określonego czasu (C#)</span><span class="sxs-lookup"><span data-stu-id="428d5-102">Cancel Async Tasks after a Period of Time (C#)</span></span>
 <span data-ttu-id="428d5-103">Możesz anulować operację asynchroniczną, po upływie pewnego czasu za pomocą <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> metodę, jeśli nie chcesz czekać na zakończenie operacji.</span><span class="sxs-lookup"><span data-stu-id="428d5-103">You can cancel an asynchronous operation after a period of time by using the  <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> method if you don't want to wait for the operation to finish.</span></span> <span data-ttu-id="428d5-104">Ta metoda umożliwia zaplanowanie anulowania wszelkie skojarzone zadania, które nie są kompletne w określonym przedziale czasu określony przez `CancelAfter` wyrażenia.</span><span class="sxs-lookup"><span data-stu-id="428d5-104">This method schedules the cancellation of any associated tasks that aren’t complete within the period of time that’s designated by the `CancelAfter` expression.</span></span>  

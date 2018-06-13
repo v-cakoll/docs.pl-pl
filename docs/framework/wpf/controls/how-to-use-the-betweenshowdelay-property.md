@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552717"
 ---
 # <a name="how-to-use-the-betweenshowdelay-property"></a><span data-ttu-id="dd82f-102">Jak użyć właściwości BetweenShowDelay</span><span class="sxs-lookup"><span data-stu-id="dd82f-102">How to: Use the BetweenShowDelay Property</span></span>
 <span data-ttu-id="dd82f-103">Ten przykład przedstawia sposób użycia <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> czasu właściwości elementy ToolTip będą wyświetlane szybko — z opóźnieniem niewielkiego lub żadnego — po użytkownik przesuwa wskaźnik myszy z jednego tooltip bezpośrednio do innego.</span><span class="sxs-lookup"><span data-stu-id="dd82f-103">This example shows how to use the <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> time property so that tooltips appear quickly—with little or no delay—when a user moves the mouse pointer from one tooltip directly to another.</span></span>  

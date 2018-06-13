@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552002"
 ---
 # <a name="controls-by-category"></a><span data-ttu-id="c86cf-102">Kontrolki według kategorii</span><span class="sxs-lookup"><span data-stu-id="c86cf-102">Controls by Category</span></span>
 <span data-ttu-id="c86cf-103">Formanty Windows Presentation Foundation (WPF) można grupować logicznie w różne kategorie.</span><span class="sxs-lookup"><span data-stu-id="c86cf-103">Windows Presentation Foundation (WPF) controls can be logically grouped into several categories.</span></span> <span data-ttu-id="c86cf-104">Tych kategorii można wybrać odpowiednią kontrolkę dla danego scenariusza pozwala zobaczyć, które kontrolki mają podobne wzorców użycia lub funkcji.</span><span class="sxs-lookup"><span data-stu-id="c86cf-104">These categories can be used to select the appropriate control for your scenario by helping you see which controls have similar usage patterns or functionality.</span></span>  

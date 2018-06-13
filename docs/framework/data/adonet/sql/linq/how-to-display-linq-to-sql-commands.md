@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359894"
 ---
 # <a name="how-to-display-linq-to-sql-commands"></a><span data-ttu-id="ea6a9-102">Porady: wyświetlanie LINQ do poleceń SQL</span><span class="sxs-lookup"><span data-stu-id="ea6a9-102">How to: Display LINQ to SQL Commands</span></span>
 <span data-ttu-id="ea6a9-103">Użyj <xref:System.Data.Linq.DataContext.GetCommand%2A> do wyświetlenia poleceń SQL i innych informacji.</span><span class="sxs-lookup"><span data-stu-id="ea6a9-103">Use <xref:System.Data.Linq.DataContext.GetCommand%2A> to display SQL commands and other information.</span></span>  

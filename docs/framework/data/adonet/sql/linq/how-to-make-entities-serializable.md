@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354949"
 ---
 # <a name="how-to-make-entities-serializable"></a><span data-ttu-id="beeb3-102">Porady: należy do serializacji jednostek</span><span class="sxs-lookup"><span data-stu-id="beeb3-102">How to: Make Entities Serializable</span></span>
 <span data-ttu-id="beeb3-103">Możesz wprowadzić jednostek serializacji, podczas generowania kodu.</span><span class="sxs-lookup"><span data-stu-id="beeb3-103">You can make entities serializable when you generate your code.</span></span> <span data-ttu-id="beeb3-104">Klasy jednostki są oznaczone <xref:System.Runtime.Serialization.DataContractAttribute> atrybutu i kolumny z <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutu.</span><span class="sxs-lookup"><span data-stu-id="beeb3-104">Entity classes are decorated with the <xref:System.Runtime.Serialization.DataContractAttribute> attribute, and columns with the <xref:System.Runtime.Serialization.DataMemberAttribute> attribute.</span></span>  

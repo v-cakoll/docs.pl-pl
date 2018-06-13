@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416566"
 ---
 # <a name="icordebugthread2getvolatileosthreadid-method"></a><span data-ttu-id="00c15-102">ICorDebugThread2::GetVolatileOSThreadID — Metoda</span><span class="sxs-lookup"><span data-stu-id="00c15-102">ICorDebugThread2::GetVolatileOSThreadID Method</span></span>
 <span data-ttu-id="00c15-103">Pobiera identyfikator wątku systemu operacyjnego dla tego ICorDebugThread2.</span><span class="sxs-lookup"><span data-stu-id="00c15-103">Gets the operating system thread identifier for this ICorDebugThread2.</span></span>  

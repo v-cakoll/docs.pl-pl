@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417976"
 ---
 # <a name="icordebugprocesssetthreadcontext-method"></a><span data-ttu-id="c85bf-102">ICorDebugProcess::SetThreadContext — Metoda</span><span class="sxs-lookup"><span data-stu-id="c85bf-102">ICorDebugProcess::SetThreadContext Method</span></span>
 <span data-ttu-id="c85bf-103">Ustawia kontekst dla danego wątku, w tym procesie.</span><span class="sxs-lookup"><span data-stu-id="c85bf-103">Sets the context for the given thread in this process.</span></span>  

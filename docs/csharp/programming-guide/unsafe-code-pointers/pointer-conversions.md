@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322695"
 ---
 # <a name="pointer-conversions-c-programming-guide"></a><span data-ttu-id="83d91-102">Konwersje wskaźników (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="83d91-102">Pointer Conversions (C# Programming Guide)</span></span>
 <span data-ttu-id="83d91-103">W poniższej tabeli przedstawiono wstępnie zdefiniowane wskaźnika niejawne konwersje.</span><span class="sxs-lookup"><span data-stu-id="83d91-103">The following table shows the predefined implicit pointer conversions.</span></span> <span data-ttu-id="83d91-104">Niejawne konwersje może wystąpić w wielu sytuacjach, w tym instrukcje metody wywoływania i przypisanie.</span><span class="sxs-lookup"><span data-stu-id="83d91-104">Implicit conversions might occur in many situations, including method invoking and assignment statements.</span></span>  

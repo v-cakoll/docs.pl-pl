@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416767"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a><span data-ttu-id="ede54-102">ICorDebugHeapValue3::GetThreadOwningMonitorLock — Metoda</span><span class="sxs-lookup"><span data-stu-id="ede54-102">ICorDebugHeapValue3::GetThreadOwningMonitorLock Method</span></span>
 <span data-ttu-id="ede54-103">Zwraca zarządzanego wątku, który jest właścicielem blokady monitora w tym obiekcie.</span><span class="sxs-lookup"><span data-stu-id="ede54-103">Returns the managed thread that owns the monitor lock on this object.</span></span>  

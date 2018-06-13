@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325945"
 ---
 # <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a><span data-ttu-id="94b00-102">Porady: pobieranie skrócona wartość elementu (C#)</span><span class="sxs-lookup"><span data-stu-id="94b00-102">How to: Retrieve the Shallow Value of an Element (C#)</span></span>
 <span data-ttu-id="94b00-103">W tym temacie pokazano, jak pobrać pobieżną wartości elementu.</span><span class="sxs-lookup"><span data-stu-id="94b00-103">This topic shows how to get the shallow value of an element.</span></span> <span data-ttu-id="94b00-104">Skrócona wartość jest wartością tylko określonego elementu zamiast dokładnego wartość, która zawiera wartości wszystkich elementów podrzędnych połączone w jeden ciąg.</span><span class="sxs-lookup"><span data-stu-id="94b00-104">The shallow value is the value of the specific element only, as opposed to the deep value, which includes the values of all descendent elements concatenated into a single string.</span></span>  

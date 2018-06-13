@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525970"
 ---
 # <a name="using-transformations-to-scale-colors"></a><span data-ttu-id="c3de5-102">Używanie przekształceń do skalowania kolorów</span><span class="sxs-lookup"><span data-stu-id="c3de5-102">Using Transformations to Scale Colors</span></span>
 <span data-ttu-id="c3de5-103">Transformacja skalowania mnoży przynajmniej jednej z czterech składowych liczbą.</span><span class="sxs-lookup"><span data-stu-id="c3de5-103">A scaling transformation multiplies one or more of the four color components by a number.</span></span> <span data-ttu-id="c3de5-104">Wpisów macierzy kolorów, które reprezentują skalowanie są podane w poniższej tabeli.</span><span class="sxs-lookup"><span data-stu-id="c3de5-104">The color matrix entries that represent scaling are given in the following table.</span></span>  

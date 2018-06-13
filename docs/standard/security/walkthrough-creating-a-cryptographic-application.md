@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591967"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Wskazówki: tworzenie aplikacji kryptograficznej
 W tym przewodniku pokazano, jak do szyfrowania i odszyfrowywania zawartości. Przykłady kodu są przeznaczone dla aplikacji formularzy systemu Windows. Ta aplikacja nie wykazują rzeczywistych scenariuszach, takich jak za pomocą kart inteligentnych. Zamiast tego należy go przedstawiono podstawowe informacje dotyczące szyfrowania i odszyfrowywania.  

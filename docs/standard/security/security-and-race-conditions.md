@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582138"
 ---
 # <a name="security-and-race-conditions"></a>Zabezpieczenia i sytuacja wyścigu
 Inny obszar dotyczą jest potencjalnych luk w zabezpieczeniach wykorzystana przez wyścigu. Istnieje kilka sposobów, w których taka sytuacja może wystąpić. Tematy podrzędne, które należy wykonać opisano niektóre z najważniejszych problemów, które należy unikać dewelopera.  

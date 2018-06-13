@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591299"
 ---
 # <a name="exception-handling-task-parallel-library"></a>Obsługa wyjątku (Biblioteka zadań równoległych)
 Nieobsłużonych wyjątków, które są generowane przez kod użytkownika, który działa wewnątrz zadania są propagowane do wątek wywołujący, z wyjątkiem w niektórych scenariuszach, które zostały opisane w dalszej części tego tematu. Oczekiwania były propagowane, gdy używany jest jeden statycznych lub wystąpienia <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> lub <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` metod, a ich obsługę, umieszczając wywołanie `try` / `catch` instrukcji. Jeśli zadanie ma element nadrzędny zadania podrzędne dołączone lub oczekiwania na wielu zadań, może zostać zgłoszony wiele wyjątków.  

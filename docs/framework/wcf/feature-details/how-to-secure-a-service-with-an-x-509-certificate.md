@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493045"
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Instrukcje: Zabezpieczanie usługi za pomocą certyfikatu X.509
 Zabezpieczanie usługi za pomocą certyfikatu X.509 to technika podstawowe, używanego przez większość powiązania w systemie Windows Communication Foundation (WCF). W tym temacie przedstawiono kroki konfigurowania samodzielnie hostowana usługa za pomocą certyfikatu X.509.  

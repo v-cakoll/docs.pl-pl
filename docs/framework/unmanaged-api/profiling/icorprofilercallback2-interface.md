@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461053"
 ---
 # <a name="icorprofilercallback2-interface"></a>ICorProfilerCallback2 — Interfejs
 Udostępnia metody, które są używane przez środowisko uruchomieniowe języka wspólnego (CLR) do powiadamiania profilera kodu występowania zdarzeń, do których subskrybowanych profilera. `ICorProfilerCallback2` Interfejsu jest rozszerzeniem [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) interfejsu. Oznacza to, że zapewnia nowy wywołania zwrotne wprowadzone w programie .NET Framework w wersji 2.0.  

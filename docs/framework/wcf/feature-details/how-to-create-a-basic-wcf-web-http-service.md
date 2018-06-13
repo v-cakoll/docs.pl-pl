@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493481"
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>Instrukcje: Tworzenie podstawowej, opartej na protokole HTTP usługi sieci Web programu WCF
 Windows Communication Foundation (WCF) służy do tworzenia usługi, która udostępnia punkt końcowy sieci Web. Punktów końcowych sieci Web wysyłać dane XML lub JSON, nie istnieje żadne koperty protokołu SOAP. W tym temacie przedstawiono sposób ujawniać punkt końcowy.  

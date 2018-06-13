@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493751"
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>Punkty końcowe: Adresy, powiązania i kontrakty
 Cała komunikacja z usługą Windows Communication Foundation (WCF) odbywa się przez *punkty końcowe* usługi. Punkty końcowe zapewnić klientom dostęp do funkcji oferowanych przez usługi WCF.  

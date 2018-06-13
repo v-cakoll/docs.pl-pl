@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457922"
 ---
 # <a name="blessiwbemservicesobject-function"></a>Funkcja BlessIWbemServicesObject
 Wskazuje, czy poświadczenia użytkownika zezwolenie na dostęp do określonej [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) obiektu.   

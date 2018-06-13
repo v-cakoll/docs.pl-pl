@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537524"
 ---
 # <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>Porady: dostarczanie mapy bitowej przybornika dla formantu
 Jeśli chcesz mieć specjalne ikon dla formantu są wyświetlane w **przybornika**, określonego obrazu można określić za pomocą <xref:System.Drawing.ToolboxBitmapAttribute>. Ta klasa jest *atrybutu*, specjalny rodzaj klasy można dołączyć do innych klas. Aby uzyskać więcej informacji na temat atrybutów, zobacz [NOT IN kompilacji: Omówienie atrybutów w języku Visual Basic](http://msdn.microsoft.com/library/0d0cff64-892d-4f57-83bd-bef388553d4f) w języku Visual Basic i [atrybuty](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205) Visual C#.  

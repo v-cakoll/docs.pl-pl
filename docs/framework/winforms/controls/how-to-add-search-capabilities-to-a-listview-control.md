@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528289"
 ---
 # <a name="how-to-add-search-capabilities-to-a-listview-control"></a>Porady: dodawanie funkcji wyszukiwania do formantu ListView
 Często podczas pracy z dużą listę elementów w <xref:System.Windows.Forms.ListView> kontroli, które chcesz zaoferować możliwości wyszukiwania dla użytkownika. <xref:System.Windows.Forms.ListView> Formant oferuje tę możliwość na dwa sposoby: dopasowywania tekstu i lokalizację wyszukiwania.  

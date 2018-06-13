@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536318"
 ---
 # <a name="how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control"></a>Porady: ustawianie trybów zmieniania rozmiaru formantu DataGridView formularzy systemu Windows
 W poniższych procedurach pokazano kilka typowych scenariuszy, które dostosować lub połączyć dostępne opcje ustalania rozmiaru <xref:System.Windows.Forms.DataGridView> kontroli i dla określonych kolumn w formancie.  

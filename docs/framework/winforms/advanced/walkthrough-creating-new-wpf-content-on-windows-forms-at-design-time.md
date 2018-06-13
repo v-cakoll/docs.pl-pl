@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529012"
 ---
 # <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>Wskazówki: tworzenie nowej zawartości WPF na formularzach systemu Windows w czasie projektowania
 W tym temacie przedstawiono sposób tworzenia formantu Windows Presentation Foundation (WPF) do użycia w aplikacjach opartych na formularzach systemu Windows.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537784"
 ---
 # <a name="creating-a-new-windows-form"></a>Tworzenie nowego formularza systemu Windows
 Ten temat zawiera linki do tematów opisujących sposób tworzenia pierwszej aplikacji formularzy systemu Windows. Ponadto w tematach w tej sekcji przedstawiono niektóre podstawowe słownictwa i wskazówki, które należy poznać po rozpoczęciu tworzenia aplikacji formularzy systemu Windows. Aby dowiedzieć się więcej o aplikacjach formularzy systemu Windows, kontrolek, możesz użyć w ich, zdarzeń i obsługa zdarzeń oraz sposób obsługi danych wejściowych od użytkownika, zobacz Lista powiązanych tematów.  

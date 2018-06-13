@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428651"
 ---
 # <a name="isymunmanagedwriter5openmaptokenstosourcespans-method"></a>ISymUnmanagedWriter5::OpenMapTokensToSourceSpans — Metoda
 Otwórz sekcję specjalne danych niestandardowych można wyemitować informacji mapowaniem token do źródła do. Otwieranie w tej sekcji, gdy metoda jest już otwarty lub odwrotnie, jest to błąd.  

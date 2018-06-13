@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533799"
 ---
 # <a name="how-to-use-the-spring-property-interactively-in-a-statusstrip"></a>Porady: użycie właściwości Spring interaktywnie w StatusStrip
 Można użyć <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A> ustaw dla właściwości <xref:System.Windows.Forms.ToolStripStatusLabel> kontroli w <xref:System.Windows.Forms.StatusStrip> formantu. <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A> Właściwość określa, czy <xref:System.Windows.Forms.ToolStripStatusLabel> formant automatycznie wypełnienia dostępnego miejsca na <xref:System.Windows.Forms.StatusStrip> formantu.  

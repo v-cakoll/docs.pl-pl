@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536360"
 ---
 # <a name="multithreading-in-windows-forms-controls"></a>Wielowątkowość w formantach formularzy systemu Windows
 W wielu aplikacjach możesz wprowadzić interfejsu użytkownika (UI) poprawę reakcji, wykonując czas operacji w innym wątku. Wiele narzędzi dostępnych dla wielowątkowości formantów formularzy systemu Windows, w tym <xref:System.Threading> przestrzeni nazw, <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType> metody i `BackgroundWorker` składnika.  

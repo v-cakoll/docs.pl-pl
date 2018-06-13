@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528684"
 ---
 # <a name="how-to-customize-the-appearance-of-cells-in-the-windows-forms-datagridview-control"></a>Porady: dostosowywanie wyglądu komórek w formancie DataGridView formularzy systemu Windows
 Obsługa można dostosować wygląd dowolną komórkę <xref:System.Windows.Forms.DataGridView> formantu <xref:System.Windows.Forms.DataGridView.CellPainting> zdarzeń. Można wyodrębnić <xref:System.Windows.Forms.DataGridView> formantu <xref:System.Drawing.Graphics> z <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs.Graphics%2A> właściwość <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs>. Z tym <xref:System.Drawing.Graphics>, mogą wpływać na wygląd całą <xref:System.Windows.Forms.DataGridView> sterowania, ale zazwyczaj można wpływają na wygląd komórek, który jest obecnie rysowane. <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs.ClipBounds%2A> Właściwość <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs> pozwala ograniczyć do komórek, która jest obecnie rysowane operacje rysowania.  

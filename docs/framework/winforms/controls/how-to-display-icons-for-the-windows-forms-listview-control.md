@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533607"
 ---
 # <a name="how-to-display-icons-for-the-windows-forms-listview-control"></a>Porady: wyświetlanie ikon dla formantu ListView formularzy systemu Windows
 Formularze systemu Windows <xref:System.Windows.Forms.ListView> formant może wyświetlać ikony z trzech list obrazów. Widoki List, szczegóły i SmallIcon wyświetlanie obrazów z listy obrazów, określona w <xref:System.Windows.Forms.ListView.SmallImageList%2A> właściwości. W widoku LargeIcon wyświetlane obrazów z listy obrazów, określona w <xref:System.Windows.Forms.ListView.LargeImageList%2A> właściwości. Widok listy można również wyświetlić dodatkowe zbiór ikony w <xref:System.Windows.Forms.ListView.StateImageList%2A> właściwości obok duże lub małe ikony. Aby uzyskać więcej informacji na temat list obrazów, zobacz [składnika ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) i [porady: Dodawanie lub usuwanie obrazów za pomocą składnika ImageList formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  

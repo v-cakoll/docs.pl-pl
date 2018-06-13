@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430476"
 ---
 # <a name="asmcacheflags-enumeration"></a>ASM_CACHE_FLAGS — Wyliczenie
 Wskazuje źródło zestawu, który jest reprezentowana przez [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) w globalnej pamięci podręcznej zestawów.  

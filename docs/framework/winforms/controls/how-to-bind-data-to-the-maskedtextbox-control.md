@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530923"
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Porady: powiązanie danych z formantem MaskedTextBox
 Można powiązać danych <xref:System.Windows.Forms.MaskedTextBox> sterować tak samo jak do żadnego formantu formularzy systemu Windows. Jednak jeśli format danych w bazie danych nie jest zgodny z formatu oczekiwanego przez definicję maski, należy sformatować dane. Poniższa procedura pokazuje, jak to zrobić przy użyciu <xref:System.Windows.Forms.Binding.Format> i <xref:System.Windows.Forms.Binding.Parse> zdarzenia <xref:System.Windows.Forms.Binding> klasy, aby wyświetlić numer telefonu oddzielne i telefonu rozszerzenie pola bazy danych jako pojedyncze pole można edytować.  

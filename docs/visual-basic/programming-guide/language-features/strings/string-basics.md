@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654063"
 ---
 # <a name="string-basics-in-visual-basic"></a>Podstawowe informacje o ciągach w Visual Basic
 `String` — Typ danych reprezentuje ciąg znaków (każdy reprezentuje z kolei wystąpienia `Char` typu danych). W tym temacie wprowadzono podstawowe pojęcia ciągów w Visual Basic.  

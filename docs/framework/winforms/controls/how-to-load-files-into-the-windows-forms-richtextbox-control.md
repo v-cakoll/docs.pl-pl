@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534456"
 ---
 # <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>Porady: ładowanie plików do formantu RichTextBox formularzy systemu Windows
 Formularze systemu Windows <xref:System.Windows.Forms.RichTextBox> formant może wyświetlać zwykłego tekstu, jako zwykły tekst Unicode lub plik tekst sformatowany (RTF). Aby to zrobić, należy wywołać <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> metody. Można również użyć <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> metodę, aby załadować dane ze strumienia. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.RichTextBox.LoadFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.  

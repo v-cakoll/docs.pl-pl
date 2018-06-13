@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426345"
 ---
 # <a name="isymunmanagedbinder3-interface"></a>ISymUnmanagedBinder3 — Interfejs
 Rozszerzenie interfejsu integratora symbolu. Uzyskanie przez wywołanie metody tego interfejsu `QueryInterface` na obiekt, który implementuje `ISymUnmanagedBinder` interfejsu.  

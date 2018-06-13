@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522398"
 ---
 # <a name="how-to-rotate-colors"></a>Porady: obracanie kolorów
 Obrót w miejscu color czterowymiarowego jest trudne do wizualizacji. Firma Microsoft może ułatwić do wizualizacji obrotu zgadzając się do jednego ze składników kolor stałej zachowania. Załóżmy, że firma Microsoft Zgadzam się składnika alfa ustalona na 1 (całkowicie nieprzezroczyste). Firma Microsoft następnie wizualizacji przestrzeni trójwymiarowej koloru z czerwonym, zielonemu i niebieskiemu osi, jak pokazano na poniższej ilustracji.  

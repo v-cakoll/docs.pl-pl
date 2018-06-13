@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528999"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>Porady: powiązywanie danych z formantem DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant
 Projektant umożliwia łączenie <xref:System.Windows.Forms.DataGridView> formantu źródła danych na kilka różnych odmian, w tym baz danych, obiektów biznesowych lub usług sieci Web. Po powiązaniu formantu ze źródłem danych przy użyciu narzędzia Projektant, automatycznie formantem do <xref:System.Windows.Forms.BindingSource> składników, które reprezentuje źródło danych. Ponadto kolumny są automatycznie generowane w formancie do dopasowania informacji o schemacie udostępniane przez źródło danych.  

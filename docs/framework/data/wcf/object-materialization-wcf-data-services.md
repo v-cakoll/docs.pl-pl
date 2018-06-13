@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365465"
 ---
 # <a name="object-materialization-wcf-data-services"></a>Obiekt Materialization (usługi danych WCF)
 Jeśli używasz **Dodaj odwołanie do usługi** okna dialogowego, aby korzystać z [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych w aplikacji klienta opartego na programie .NET Framework, dane równoważne klasy są generowane dla poszczególnych typów jednostek w modelu danych udostępnianych przez źródło. Aby uzyskać więcej informacji, zobacz [generowania biblioteki klienta usługi danych](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md). Jednostka danych zwracanych przez zapytanie jest zmaterializowany do wystąpienia jednego z tych klas usług danych wygenerowanego klienta. Uzyskać informacji o opcji scalania i rozpoznawania tożsamości dla śledzonych obiektów, zobacz [Zarządzanie kontekstu danych usługi](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md).  

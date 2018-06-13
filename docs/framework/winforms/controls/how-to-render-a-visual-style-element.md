@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537625"
 ---
 # <a name="how-to-render-a-visual-style-element"></a>Porady: renderowanie elementu stylu wizualnego
 <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> Przedstawia przestrzeni nazw <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> elementy (UI), obsługiwane przez style wizualne interfejsu obiektów, które reprezentują użytkownika systemu Windows. W tym temacie przedstawiono sposób użycia <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> klasy do renderowania <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> reprezentujący **Wyloguj** i **Shut Down** przycisków menu Start.  

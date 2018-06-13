@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426066"
 ---
 # <a name="isymunmanagedreadergetsymattribute-method"></a>ISymUnmanagedReader::GetSymAttribute — Metoda
 Pobiera atrybut niestandardowy ustalane na podstawie jego nazwy. W przeciwieństwie do niestandardowych atrybutów metadanych te atrybuty niestandardowe są przechowywane w magazynie symboli.  

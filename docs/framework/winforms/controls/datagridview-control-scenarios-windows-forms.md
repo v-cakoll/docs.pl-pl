@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529041"
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>Scenariusze formantu DataGridView (Formularze systemu Windows)
 Z <xref:System.Windows.Forms.DataGridView> sterowania, można wyświetlić dane tabelaryczne z różnych źródeł danych. Do prostych zastosowań, może ręcznie wypełnić <xref:System.Windows.Forms.DataGridView> i manipulowanie danymi bezpośrednio za pomocą formantu. Zazwyczaj można jednak będzie przechowywać dane w zewnętrznym źródłem danych i powiązać ją przy użyciu formantu <xref:System.Windows.Forms.BindingSource> składnika.  

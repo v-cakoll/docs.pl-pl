@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428592"
 ---
 # <a name="fusion-unmanaged-api-reference"></a>Łączenie (Niezarządzany wykaz interfejsów API)
 Interfejs API fusion umożliwia host czasu wykonywania uzyskać dostęp do właściwości zasobów aplikacji, aby zlokalizować poprawne wersje tych zasobów dla aplikacji.  

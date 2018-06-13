@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528378"
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>Porady: aranżowanie formantów z liniami przyciągania oraz siatki w formularzach systemu Windows
 Korzystanie z funkcji układu programu Visual Studio, możesz dokładnie wskazać rozmieszczenie kontrolek w formularzu. Formanty dodane do formularza lub przeniesione w formularzu zostanie automatycznie wyrównany do wierszy i kolumn siatki projektanta formularzy systemu Windows lub można wyrównywanie formantów za pomocą funkcji linie przyciągania.  

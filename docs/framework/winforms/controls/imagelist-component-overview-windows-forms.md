@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535288"
 ---
 # <a name="imagelist-component-overview-windows-forms"></a>ImageList — Informacje o składniku (Formularze systemu Windows)
 Formularze systemu Windows <xref:System.Windows.Forms.ImageList> składnik jest używany do przechowywania obrazów, które mogą być następnie wyświetlane przez formanty. Listy obrazów umożliwia pisanie kodu dla wykazu powinny być zawsze obrazów. Na przykład można obracać obrazów wyświetlanych przez <xref:System.Windows.Forms.Button> formantu, zmieniając po prostu przycisku <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> lub <xref:System.Windows.Forms.ButtonBase.ImageKey%2A> właściwości. Można również kojarzyć tej samej listy obrazów z wielu formantów. Na przykład, jeśli używasz zarówno <xref:System.Windows.Forms.ListView> kontroli i <xref:System.Windows.Forms.TreeView> formantu, aby wyświetlić tę samą listę plików, zmieniając ikonę pliku na liście obrazów spowoduje, że nowa ikona pojawią się w obu widokach.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428061"
 ---
 # <a name="isymunmanagedwriterabort-method"></a>ISymUnmanagedWriter::Abort — Metoda
 Zamyka twórcę symbolu bez zatwierdzania symbole w magazynie symboli. Po tym wywołaniu twórcę symbol staje się nieprawidłowy dla dalszego aktualizacji. Aby zatwierdzić symbole i Zamknij moduł zapisujący symbolu, użyj [ISymUnmanagedWriter::Close](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-close-method.md) metody zamiast tego.  

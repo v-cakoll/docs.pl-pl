@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534602"
 ---
 # <a name="how-to-raise-change-notifications-using-the-bindingsource-resetitem-method"></a>Porady: wywoływanie powiadomień o zmianie za pomocą metody BindingSource ResetItem
 Źródła danych do formantów nie wywołuj powiadomienia o zmianie po zmianie, dodać lub usunąć elementy. Z <xref:System.Windows.Forms.BindingSource> składnika można powiązać z tych źródeł danych i zgłosi powiadomienia o zmianach w kodzie.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532824"
 ---
 # <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a>Porady: zaznaczanie elementu w formancie ListView formularzy systemu Windows
 W tym przykładzie pokazano, jak programowo wybierz element w formularzach systemu Windows <xref:System.Windows.Forms.ListView> formantu. Programowy Wybór elementu nie zmienia się automatycznie fokusu <xref:System.Windows.Forms.ListView> formantu. Z tego powodu będzie zwykle również chcesz ustawić element zgodnie z fokusem, gdy zaznaczenie elementu.  

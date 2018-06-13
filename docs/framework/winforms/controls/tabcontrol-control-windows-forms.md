@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536764"
 ---
 # <a name="tabcontrol-control-windows-forms"></a>TabControl — Formant (Formularze systemu Windows)
 Formularze systemu Windows `TabControl` wyświetla wiele kart, takich jak separatorów w notesie lub etykiet w zestawie folderów w pliku cabinet zgłoszenia. Karty może zawierać obrazów i inne formanty. Użyj `TabControl` do utworzenia strony właściwości.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536725"
 ---
 # <a name="panel-control-windows-forms"></a>Panel — Formant (Formularze systemu Windows)
 Formularze systemu Windows `Panel` formantów służą do zapewniania do zidentyfikowania grupowania dla innych formantów. Zwykle Użyj paneli do podziału formularza przez funkcję. `Panel` Formant jest podobny do <xref:System.Windows.Forms.GroupBox> kontrolować; jednak tylko `Panel` formant może mieć paski przewijania i tylko <xref:System.Windows.Forms.GroupBox> formant zawiera nagłówek.  

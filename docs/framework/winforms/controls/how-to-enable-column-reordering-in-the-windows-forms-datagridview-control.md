@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532587"
 ---
 # <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control"></a>Porady: włączanie zmiany układu kolumn w formancie DataGridView formularzy systemu Windows
 Po włączeniu zmiany układu kolumn w <xref:System.Windows.Forms.DataGridView> kontroli, użytkownicy mogą przechodzić kolumny do nowej pozycji przez przeciągnięcie nagłówka kolumny za pomocą myszy. W <xref:System.Windows.Forms.DataGridView> kontroli, <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType> wartość właściwości określa, czy użytkownicy mogą przechodzić kolumny w inne miejsca.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529168"
 ---
 # <a name="how-to-create-a-path-gradient"></a>Porady: tworzenie gradientu ścieżki
 <xref:System.Drawing.Drawing2D.PathGradientBrush> Klasa umożliwia dostosowanie sposób wypełnienia kształtu z stopniowo zmiana kolorów. Na przykład można określić jeden kolor Centrum ścieżki i innym kolorze dla granicy ścieżki. Można również określić różne kolory dla każdego z kilku punktów wzdłuż granicy ścieżki.  

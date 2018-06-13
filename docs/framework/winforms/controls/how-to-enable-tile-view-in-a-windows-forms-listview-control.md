@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535409"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>Porady: włączanie widoku Tile w formancie ListView formularzy systemu Windows
 Korzystając z funkcji Widok kafelków <xref:System.Windows.Forms.ListView> kontroli, możesz podać visual równowagi między informacji graficznych i tekstowych. Wyświetlane dla elementu w widoku tile informacji tekstowych jest taka sama jak informacji o kolumnie zdefiniowanych w widoku szczegółów. Widoku Tile współdziała z funkcjami znak grupowania lub wstawiania w <xref:System.Windows.Forms.ListView> formantu.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535272"
 ---
 # <a name="notifyicon-component-windows-forms"></a>NotifyIcon — Składnik (Formularze systemu Windows)
 Formularze systemu Windows `NotifyIcon` składnik wyświetla ikony w obszarze powiadomień stanu na pasku zadań dla procesów, które są uruchomione w tle, a w przeciwnym razie nie będzie mieć interfejsy użytkownika. Przykładem może być programu ochrony przed wirusami, którego mogą uzyskać dostęp, klikając ikonę w obszarze powiadomień stanu na pasku zadań.  

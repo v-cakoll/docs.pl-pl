@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429889"
 ---
 # <a name="ememoryavailable-enumeration"></a>EMemoryAvailable — Wyliczenie
 Zawiera wartości, które wskazują ilość wolnej pamięci fizycznej na komputerze. Te wartości logicznie mapowania na zdarzenia dla wysoki i niski pamięci zwrócony z `CreateMemoryResourceNotification` funkcji w interfejsie API Win32.  

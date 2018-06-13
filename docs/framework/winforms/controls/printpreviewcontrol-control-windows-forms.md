@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534316"
 ---
 # <a name="printpreviewcontrol-control-windows-forms"></a>PrintPreviewControl — Formant (Formularze systemu Windows)
 Formularze systemu Windows `PrintPreviewControl` służy do wyświetlania dokumentu, jak będzie wyglądać po wydrukowaniu. Ten formant ma nie przyciski lub inne elementy interfejsu użytkownika, dlatego zazwyczaj używany `PrintPreviewControl` tylko wtedy, gdy chcesz zapisać własnego interfejsu użytkownika podglądu wydruku. Standardowy interfejs użytkownika, należy użyć <xref:System.Windows.Forms.PrintPreviewDialog> formantu.  

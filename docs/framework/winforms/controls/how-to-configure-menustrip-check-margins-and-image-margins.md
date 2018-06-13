@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530360"
 ---
 # <a name="how-to-configure-menustrip-check-margins-and-image-margins"></a>Porady: konfiguracja marginesów zaznaczania MenuStrip i marginesów obrazu
 Można dostosować <xref:System.Windows.Forms.MenuStrip> przez ustawienie <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> i <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> właściwości w różnych kombinacjach.  

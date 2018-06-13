@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364226"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>Autoryzacja i uprawnienia w programie SQL Server
 Podczas tworzenia obiektów bazy danych musi jawnie udzielić uprawnień, aby udostępnić je użytkownikom. Co zabezpieczanego obiektu ma uprawnienia, które mogą być przyznane uprawnienia instrukcje using podmiot zabezpieczeń.  

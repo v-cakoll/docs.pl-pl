@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531388"
 ---
 # <a name="how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls"></a>Porady: włączanie marginesów zaznaczania i marginesów obrazów w formantach ContextMenuStrip
 Można dostosować <xref:System.Windows.Forms.ToolStripMenuItem> obiekty w Twojej <xref:System.Windows.Forms.MenuStrip> formantu o znaczniki wyboru i niestandardowych obrazów.  

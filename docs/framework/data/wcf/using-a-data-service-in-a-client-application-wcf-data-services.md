@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365296"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Usługi danych w aplikacji klienckiej (usługi danych WCF)
 Można uzyskać dostępu to usługa, która przedstawia [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych, podając identyfikator URI do przeglądarki sieci Web. Identyfikator URI zawiera adres zasobu, a żądanie komunikaty są wysyłane do tych adresów na dostęp lub zmienić danych, który reprezentuje zasobu. W przeglądarce polecenia HTTP GET i zwraca wartość żądanego zasobu jako [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych. Aby uzyskać więcej informacji, zobacz [uzyskiwania dostępu do usługi z przeglądarką sieci Web](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  

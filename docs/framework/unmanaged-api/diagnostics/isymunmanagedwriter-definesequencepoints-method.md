@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426939"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints — Metoda
 Definiuje grupę punkty sekwencji w bieżącej metodzie. Każdego wiersza początkowego i kolumna początkowa definiują rozpoczęcia instrukcji w metodzie. Każdy zakończenia wiersza i kończąc na kolumnie zdefiniuj końca instrukcji w metodzie. Tablice mają być sortowane w rosnącej kolejności przesunięcia. Przesunięcie jest zawsze mierzona od początku metody, w bajtach.  

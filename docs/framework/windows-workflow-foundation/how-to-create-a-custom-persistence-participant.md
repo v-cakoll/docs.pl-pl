@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517244"
 ---
 # <a name="how-to-create-a-custom-persistence-participant"></a>Porady: tworzenie uczestnika trwałości niestandardowych
 Poniższa procedura zawiera kroki, aby utworzyć uczestnika trwałości. Zobacz [uczestniczących w trwałości](http://go.microsoft.com/fwlink/?LinkID=177735) próbki i [rozszerzalności magazynu](../../../docs/framework/windows-workflow-foundation/store-extensibility.md) temat implementacji próbki uczestników trwałości.  

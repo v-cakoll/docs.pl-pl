@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532464"
 ---
 # <a name="how-to-display-side-aligned-tabs-with-tabcontrol"></a>Porady: wyświetlanie wyrównanych poziomo kart przy użyciu formantu TabControl
 <xref:System.Windows.Forms.TabControl.Alignment%2A> Właściwość <xref:System.Windows.Forms.TabControl> obsługuje wyświetlanie kart pionie (wzdłuż lewej lub prawej krawędzi formantu), w przeciwieństwie do poziomo (za pośrednictwem góry lub u dołu formantu). Domyślnie ta wyświetlania pionowego powoduje niską użytkowników, ponieważ <xref:System.Windows.Forms.TabPage.Text%2A> właściwość <xref:System.Windows.Forms.TabPage> obiektu nie są wyświetlane na karcie podczas style wizualne są włączone. Istnieje również bezpośrednim sposobem kontrolować kierunek tekstu w karcie. Można użyć właściciela Rysowanie w <xref:System.Windows.Forms.TabControl> aby poprawić działanie tej funkcji.  

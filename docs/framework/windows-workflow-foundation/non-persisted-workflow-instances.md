@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516753"
 ---
 # <a name="non-persisted-workflow-instances"></a>Wystąpienia-utrwalony przepływu pracy
 Jeśli nowe wystąpienie przepływu pracy jest utworzony utrwala swój stan w <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, host usługi tworzy wpis dla tej usługi w magazynie wystąpień. Później, gdy trwała wystąpienia przepływu pracy po raz pierwszy, <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> zapisuje bieżący stan wystąpienia. Jeśli przepływ pracy jest hostowana w usłudze aktywacji procesów systemu Windows, danych wdrożenia usługi są równocześnie zapisywane w magazynie wystąpień, gdy wystąpienie jest zachowywane po raz pierwszy.  

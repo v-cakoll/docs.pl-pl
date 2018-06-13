@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527641"
 ---
 # <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>Porady: dodawanie lub usuwanie obrazów za pomocą składnika ImageList formularzy systemu Windows
 Formularze systemu Windows <xref:System.Windows.Forms.ImageList> składnika jest zazwyczaj wypełniane przy użyciu obrazów, zanim jest skojarzony z formantem. Możesz jednak dodawać i usuwać obrazy po skojarzeniu listy obrazów z formantem.  

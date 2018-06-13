@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534270"
 ---
 # <a name="how-to-disable-tab-pages"></a>Porady: wyłączanie kart
 W niektórych przypadkach można ograniczyć dostęp do danych, która jest dostępna w aplikacji formularzy systemu Windows. Przykładem mogą być, jeśli masz dane wyświetlane na kartach z formantem karty; Administratorzy mają informacje na stronie kartę, której chcesz uniemożliwić gościa lub użytkowników niższego poziomu.  

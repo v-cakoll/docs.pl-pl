@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534911"
 ---
 # <a name="how-to-move-toolstripmenuitems"></a>Porady: przenoszenie ToolStripMenuItems
 W czasie projektowania, można przenieść całej menu najwyższego poziomu i ich elementów menu w inne miejsce na <xref:System.Windows.Forms.MenuStrip>. Można również przenieść poszczególnych elementów menu między menu najwyższego poziomu lub zmienić jego położenie elementów menu w menu.  

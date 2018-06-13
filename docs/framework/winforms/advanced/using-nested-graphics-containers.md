@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529064"
 ---
 # <a name="using-nested-graphics-containers"></a>Używanie zagnieżdżonych kontenerów grafiki
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] udostępnia kontenerów, które można użyć, aby tymczasowo zastąpić lub rozszerzyć część stanu w <xref:System.Drawing.Graphics> obiektu. Kontener można utworzyć przez wywołanie metody <xref:System.Drawing.Graphics.BeginContainer%2A> metody <xref:System.Drawing.Graphics> obiektu. Możesz wywołać <xref:System.Drawing.Graphics.BeginContainer%2A> wielokrotnie w celu utworzenia zagnieżdżone kontenery. Każde wywołanie <xref:System.Drawing.Graphics.BeginContainer%2A> muszą łączyć się z wywołania <xref:System.Drawing.Graphics.EndContainer%2A>.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528378"
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a><span data-ttu-id="42e78-102">Porady: aranżowanie formantów z liniami przyciągania oraz siatki w formularzach systemu Windows</span><span class="sxs-lookup"><span data-stu-id="42e78-102">How to: Arrange Controls with Snaplines and the Grid in Windows Forms</span></span>
 <span data-ttu-id="42e78-103">Korzystanie z funkcji układu programu Visual Studio, możesz dokładnie wskazać rozmieszczenie kontrolek w formularzu.</span><span class="sxs-lookup"><span data-stu-id="42e78-103">Using the layout features of Visual Studio, you can precisely direct where controls are placed on a form.</span></span> <span data-ttu-id="42e78-104">Formanty dodane do formularza lub przeniesione w formularzu zostanie automatycznie wyrównany do wierszy i kolumn siatki projektanta formularzy systemu Windows lub można wyrównywanie formantów za pomocą funkcji linie przyciągania.</span><span class="sxs-lookup"><span data-stu-id="42e78-104">Controls added to a form or moved on a form can be automatically aligned to the rows and columns of the Windows Forms Designer's grid, or you can align controls by using the snaplines feature.</span></span>  

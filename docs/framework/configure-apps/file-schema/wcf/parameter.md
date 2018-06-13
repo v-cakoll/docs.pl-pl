@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754057"
 ---
 # <a name="ltparametergt"></a><span data-ttu-id="4e7df-102">&lt;Parametr&gt;</span><span class="sxs-lookup"><span data-stu-id="4e7df-102">&lt;parameter&gt;</span></span>
 <span data-ttu-id="4e7df-103">Określa parametr generyczny, gdy deklarowany typ jest typem ogólnym.</span><span class="sxs-lookup"><span data-stu-id="4e7df-103">Specifies the generic parameter when a declared type is a generic type.</span></span>  

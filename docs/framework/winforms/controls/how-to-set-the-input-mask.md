@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537044"
 ---
 # <a name="how-to-set-the-input-mask"></a><span data-ttu-id="2e4e9-102">Porady: ustawienie maski wprowadzania</span><span class="sxs-lookup"><span data-stu-id="2e4e9-102">How to: Set the Input Mask</span></span>
 <span data-ttu-id="2e4e9-103">Kontrolki pola tekstowego maskowanego jest rozszerzony polu tekstowym obsługująca składni deklaratywnej akceptowanie lub odrzucanie danych wejściowych użytkownika.</span><span class="sxs-lookup"><span data-stu-id="2e4e9-103">The masked text box control is an enhanced text box control that supports a declarative syntax for accepting or rejecting user input.</span></span> <span data-ttu-id="2e4e9-104">Przez ustawienie właściwości maski, można określić danych wejściowych użytkownika dopuszczalny bez pisania wszelka logika niestandardowego sprawdzania poprawności w aplikacji.</span><span class="sxs-lookup"><span data-stu-id="2e4e9-104">By setting the Mask property, you can specify the allowable user input without writing any custom validation logic in your application.</span></span> <span data-ttu-id="2e4e9-105">Aby uzyskać więcej informacji, zobacz sekcję uwag <xref:System.Windows.Forms.MaskedTextBox> klasy.</span><span class="sxs-lookup"><span data-stu-id="2e4e9-105">For more information, see the Remarks section of the <xref:System.Windows.Forms.MaskedTextBox> class.</span></span>  

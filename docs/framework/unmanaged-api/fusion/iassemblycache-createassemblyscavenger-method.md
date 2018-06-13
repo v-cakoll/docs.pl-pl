@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428484"
 ---
 # <a name="iassemblycachecreateassemblyscavenger-method"></a><span data-ttu-id="882b1-102">IAssemblyCache::CreateAssemblyScavenger — Metoda</span><span class="sxs-lookup"><span data-stu-id="882b1-102">IAssemblyCache::CreateAssemblyScavenger Method</span></span>
 <span data-ttu-id="882b1-103">Zarezerwowany do użytku wewnętrznego przez technologię fusion.</span><span class="sxs-lookup"><span data-stu-id="882b1-103">Reserved for internal use by the fusion technology.</span></span>  

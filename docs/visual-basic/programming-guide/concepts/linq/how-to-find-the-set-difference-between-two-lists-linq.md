@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641255"
 ---
 # <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a><span data-ttu-id="b6641-102">Porady: znajdowanie różnicy pomiędzy dwoma listami (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b6641-102">How to: Find the Set Difference Between Two Lists (LINQ) (Visual Basic)</span></span>
 <span data-ttu-id="b6641-103">Ten przykład przedstawia sposób użycia LINQ do porównywania dwóch list ciągów i dane wyjściowe tych wierszy, które są names1.txt, ale nie w names2.txt.</span><span class="sxs-lookup"><span data-stu-id="b6641-103">This example shows how to use LINQ to compare two lists of strings and output those lines that are in names1.txt but not in names2.txt.</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531238"
 ---
 # <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a><span data-ttu-id="42fe0-102">Porady: wybieranie folderów za pomocą składnika FolderBrowserDialog formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="42fe0-102">How to: Choose Folders with the Windows Forms FolderBrowserDialog Component</span></span>
 <span data-ttu-id="42fe0-103">Często w aplikacji systemu Windows, które możesz utworzyć, konieczne będzie monitować użytkowników, aby wybrać folder, większość często, aby zapisać zestawu plików.</span><span class="sxs-lookup"><span data-stu-id="42fe0-103">Often, within Windows applications you create, you will have to prompt users to select a folder, most frequently to save a set of files.</span></span> <span data-ttu-id="42fe0-104">Formularze systemu Windows <xref:System.Windows.Forms.FolderBrowserDialog> składnik umożliwia łatwe wykonać to zadanie.</span><span class="sxs-lookup"><span data-stu-id="42fe0-104">The Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> component allows you to easily accomplish this task.</span></span>  

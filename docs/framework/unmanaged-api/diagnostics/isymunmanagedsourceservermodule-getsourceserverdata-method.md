@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427014"
 ---
 # <a name="isymunmanagedsourceservermodulegetsourceserverdata-method"></a><span data-ttu-id="9026f-102">ISymUnmanagedSourceServerModule::GetSourceServerData — Metoda</span><span class="sxs-lookup"><span data-stu-id="9026f-102">ISymUnmanagedSourceServerModule::GetSourceServerData Method</span></span>
 <span data-ttu-id="9026f-103">Zwraca dane serwera źródłowego dla modułu.</span><span class="sxs-lookup"><span data-stu-id="9026f-103">Returns the source server data for the module.</span></span> <span data-ttu-id="9026f-104">Obiekt wywołujący musi zwolnić zasoby przy użyciu `CoTaskMemFree`.</span><span class="sxs-lookup"><span data-stu-id="9026f-104">The caller must free resources by using `CoTaskMemFree`.</span></span>  

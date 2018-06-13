@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515707"
 ---
 # <a name="basic-activity-composition"></a><span data-ttu-id="377bb-102">Podstawowe działanie kompozycji</span><span class="sxs-lookup"><span data-stu-id="377bb-102">Basic Activity Composition</span></span>
 <span data-ttu-id="377bb-103">W tym przykładzie pokazano, jak utworzyć niestandardowe działania i działania dostarczane przez system do tworzenia działań niestandardowych więcej.</span><span class="sxs-lookup"><span data-stu-id="377bb-103">This sample demonstrates how to compose custom activities and system-provided activities to build more custom activities.</span></span>  

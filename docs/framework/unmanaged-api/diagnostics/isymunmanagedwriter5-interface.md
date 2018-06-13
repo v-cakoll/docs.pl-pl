@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430560"
 ---
 # <a name="isymunmanagedwriter5-interface"></a><span data-ttu-id="d2c27-102">ISymUnmanagedWriter5 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="d2c27-102">ISymUnmanagedWriter5 Interface</span></span>
 <span data-ttu-id="d2c27-103">Isymunmanagedwriter5 — interfejs.</span><span class="sxs-lookup"><span data-stu-id="d2c27-103">ISymUnmanagedWriter5 interface.</span></span>  

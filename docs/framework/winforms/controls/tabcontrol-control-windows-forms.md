@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536764"
 ---
 # <a name="tabcontrol-control-windows-forms"></a><span data-ttu-id="b0704-102">TabControl — Formant (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="b0704-102">TabControl Control (Windows Forms)</span></span>
 <span data-ttu-id="b0704-103">Formularze systemu Windows `TabControl` wyświetla wiele kart, takich jak separatorów w notesie lub etykiet w zestawie folderów w pliku cabinet zgłoszenia.</span><span class="sxs-lookup"><span data-stu-id="b0704-103">The Windows Forms `TabControl` displays multiple tabs, like dividers in a notebook or labels in a set of folders in a filing cabinet.</span></span> <span data-ttu-id="b0704-104">Karty może zawierać obrazów i inne formanty.</span><span class="sxs-lookup"><span data-stu-id="b0704-104">The tabs can contain pictures and other controls.</span></span> <span data-ttu-id="b0704-105">Użyj `TabControl` do utworzenia strony właściwości.</span><span class="sxs-lookup"><span data-stu-id="b0704-105">Use the `TabControl` to create property pages.</span></span>  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533477"
 ---
 # <a name="how-to-set-pictures-at-run-time-windows-forms"></a><span data-ttu-id="08546-102">Porady: ustawienie obrazów w czasie wykonywania (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="08546-102">How to: Set Pictures at Run Time (Windows Forms)</span></span>
 <span data-ttu-id="08546-103">Można programowo Ustawianie obrazu wyświetlanego przez program Windows Forms <xref:System.Windows.Forms.PictureBox> formantu.</span><span class="sxs-lookup"><span data-stu-id="08546-103">You can programmatically set the image displayed by a Windows Forms <xref:System.Windows.Forms.PictureBox> control.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427089"
 ---
 # <a name="isymunmanagedvariablegetaddressfield2-method"></a><span data-ttu-id="b1016-102">ISymUnmanagedVariable::GetAddressField2 — Metoda</span><span class="sxs-lookup"><span data-stu-id="b1016-102">ISymUnmanagedVariable::GetAddressField2 Method</span></span>
 <span data-ttu-id="b1016-103">Pobiera drugie pole adresu dla tej zmiennej.</span><span class="sxs-lookup"><span data-stu-id="b1016-103">Gets the second address field for this variable.</span></span> <span data-ttu-id="b1016-104">Znaczenia zależy od rodzaju adres.</span><span class="sxs-lookup"><span data-stu-id="b1016-104">Its meaning depends on the kind of address.</span></span>  

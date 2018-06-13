@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434942"
 ---
 # <a name="iclrdebugmanager-interface"></a><span data-ttu-id="85808-102">ICLRDebugManager — Interfejs</span><span class="sxs-lookup"><span data-stu-id="85808-102">ICLRDebugManager Interface</span></span>
 <span data-ttu-id="85808-103">Udostępnia metody umożliwiające hosta do skojarzenia z identyfikatorem i przyjazną nazwę zestawu zadań.</span><span class="sxs-lookup"><span data-stu-id="85808-103">Provides methods that allow a host to associate a set of tasks with an identifier and a friendly name.</span></span>  

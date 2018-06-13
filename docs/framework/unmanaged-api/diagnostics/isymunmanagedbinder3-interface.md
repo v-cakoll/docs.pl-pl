@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426345"
 ---
 # <a name="isymunmanagedbinder3-interface"></a><span data-ttu-id="a77b1-102">ISymUnmanagedBinder3 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="a77b1-102">ISymUnmanagedBinder3 Interface</span></span>
 <span data-ttu-id="a77b1-103">Rozszerzenie interfejsu integratora symbolu.</span><span class="sxs-lookup"><span data-stu-id="a77b1-103">Extends the symbol binder interface.</span></span> <span data-ttu-id="a77b1-104">Uzyskanie przez wywołanie metody tego interfejsu `QueryInterface` na obiekt, który implementuje `ISymUnmanagedBinder` interfejsu.</span><span class="sxs-lookup"><span data-stu-id="a77b1-104">Obtain this interface by calling `QueryInterface` on an object that implements the `ISymUnmanagedBinder` interface.</span></span>  

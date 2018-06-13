@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532902"
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a><span data-ttu-id="31d87-102">Porady: określanie ikony dla przycisku ToolBar przy użyciu narzędzia Projektant</span><span class="sxs-lookup"><span data-stu-id="31d87-102">How to: Define an Icon for a ToolBar Button Using the Designer</span></span>
 > [!NOTE]

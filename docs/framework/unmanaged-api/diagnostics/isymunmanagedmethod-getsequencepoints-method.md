@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426053"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a><span data-ttu-id="d2d2b-102">ISymUnmanagedMethod::GetSequencePoints — Metoda</span><span class="sxs-lookup"><span data-stu-id="d2d2b-102">ISymUnmanagedMethod::GetSequencePoints Method</span></span>
 <span data-ttu-id="d2d2b-103">Pobiera wszystkie punkty sekwencji w ramach tej metody.</span><span class="sxs-lookup"><span data-stu-id="d2d2b-103">Gets all the sequence points within this method.</span></span>  

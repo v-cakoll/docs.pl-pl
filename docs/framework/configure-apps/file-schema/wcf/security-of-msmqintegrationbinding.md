@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750573"
 ---
 # <a name="ltsecuritygt-of-ltmsmqintegrationbindinggt"></a><span data-ttu-id="0033d-102">&lt;security&gt; w &lt;msmqIntegrationBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="0033d-102">&lt;security&gt; of &lt;msmqIntegrationBinding&gt;</span></span>
 <span data-ttu-id="0033d-103">Definiuje ustawienia zabezpieczeń transportu kanał integracji usługi kolejkowania komunikatów (MSMQ).</span><span class="sxs-lookup"><span data-stu-id="0033d-103">Defines the transport security settings for the Message Queuing (MSMQ) integration channel.</span></span>  

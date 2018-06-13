@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532788"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a><span data-ttu-id="9db30-102">Porady: ustawianie obrazu wyświetlanego przez formant formularzy systemu Windows przy użyciu narzędzia Projektant</span><span class="sxs-lookup"><span data-stu-id="9db30-102">How to: Set the Image Displayed by a Windows Forms Control Using the Designer</span></span>
 <span data-ttu-id="9db30-103">Kilka formantów formularzy systemu Windows można wyświetlić obrazy.</span><span class="sxs-lookup"><span data-stu-id="9db30-103">Several Windows Forms controls can display images.</span></span> <span data-ttu-id="9db30-104">Obraz może być ikonę, która wyjaśnia, w celu formantu, takie jak ikona dysku na przycisku określające **zapisać** polecenia.</span><span class="sxs-lookup"><span data-stu-id="9db30-104">The image can be an icon that clarifies the purpose of the control, such as a disk icon on a button denoting the **Save** command.</span></span> <span data-ttu-id="9db30-105">Ikona można alternatywnie obraz tła umożliwiają formantu wyglądu, który ma.</span><span class="sxs-lookup"><span data-stu-id="9db30-105">Alternatively, the icon can be a background image to give the control the appearance you want.</span></span>  

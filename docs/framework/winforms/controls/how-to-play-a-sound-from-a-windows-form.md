@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533523"
 ---
 # <a name="how-to-play-a-sound-from-a-windows-form"></a><span data-ttu-id="cd0d8-102">Porady: odtwarzanie dźwięku za pomocą formularza systemu Windows</span><span class="sxs-lookup"><span data-stu-id="cd0d8-102">How to: Play a Sound from a Windows Form</span></span>
 <span data-ttu-id="cd0d8-103">W tym przykładzie odtwarza dźwięk w danej ścieżce w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="cd0d8-103">This example plays a sound at a given path at run time.</span></span>  

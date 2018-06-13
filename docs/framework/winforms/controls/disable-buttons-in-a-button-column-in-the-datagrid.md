@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529902"
 ---
 # <a name="how-to-disable-buttons-in-a-button-column-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="243b7-102">Porady: wyłączanie przycisków w kolumnie przycisków w formancie DataGridView formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="243b7-102">How to: Disable Buttons in a Button Column in the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="243b7-103"><xref:System.Windows.Forms.DataGridView> Formant zawiera <xref:System.Windows.Forms.DataGridViewButtonCell> klasy do wyświetlania komórki z interfejsem użytkownika (UI), jak przycisk.</span><span class="sxs-lookup"><span data-stu-id="243b7-103">The <xref:System.Windows.Forms.DataGridView> control includes the <xref:System.Windows.Forms.DataGridViewButtonCell> class for displaying cells with a user interface (UI) like a button.</span></span> <span data-ttu-id="243b7-104">Jednak <xref:System.Windows.Forms.DataGridViewButtonCell> nie zapewnia możliwość wyłączenia wygląd przycisku wyświetlany przez komórki.</span><span class="sxs-lookup"><span data-stu-id="243b7-104">However, <xref:System.Windows.Forms.DataGridViewButtonCell> does not provide a way to disable the appearance of the button displayed by the cell.</span></span>  

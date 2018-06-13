@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434666"
 ---
 # <a name="iclrruntimeinfoisloaded-method"></a><span data-ttu-id="56ad4-102">ICLRRuntimeInfo::IsLoaded — Metoda</span><span class="sxs-lookup"><span data-stu-id="56ad4-102">ICLRRuntimeInfo::IsLoaded Method</span></span>
 <span data-ttu-id="56ad4-103">Wskazuje, czy środowisko uruchomieniowe języka wspólnego (CLR) skojarzone z [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfejsu jest załadowany do procesu.</span><span class="sxs-lookup"><span data-stu-id="56ad4-103">Indicates whether the common language runtime (CLR) associated with the [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface is loaded into a process.</span></span> <span data-ttu-id="56ad4-104">Środowisko uruchomieniowe może zostać załadowany bez również uruchomiona.</span><span class="sxs-lookup"><span data-stu-id="56ad4-104">A runtime can be loaded without also being started.</span></span>  

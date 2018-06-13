@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750482"
 ---
 # <a name="ltauthenticationgt-of-ltclientcertificategt-element"></a><span data-ttu-id="bf1c4-102">&lt;authentication&gt; w &lt;clientCertificate&gt;, element</span><span class="sxs-lookup"><span data-stu-id="bf1c4-102">&lt;authentication&gt; of &lt;clientCertificate&gt; Element</span></span>
 <span data-ttu-id="bf1c4-103">Określa zachowania uwierzytelnienia dla certyfikatów klienta używanych przez usługę.</span><span class="sxs-lookup"><span data-stu-id="bf1c4-103">Specifies authentication behaviors for client certificates used by a service.</span></span>  

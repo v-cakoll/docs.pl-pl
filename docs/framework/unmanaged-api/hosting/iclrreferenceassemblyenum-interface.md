@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33433005"
 ---
 # <a name="iclrreferenceassemblyenum-interface"></a><span data-ttu-id="999c8-102">ICLRReferenceAssemblyEnum — Interfejs</span><span class="sxs-lookup"><span data-stu-id="999c8-102">ICLRReferenceAssemblyEnum Interface</span></span>
 <span data-ttu-id="999c8-103">Udostępnia metody, które umożliwiają hosta do manipulowania zbiór zestawów odwołuje się do pliku lub strumienia za pomocą zestawu danych tożsamości, które jest wewnętrzna środowisko uruchomieniowe języka wspólnego (CLR), bez konieczności tworzenia i zrozumienie tych tożsamości.</span><span class="sxs-lookup"><span data-stu-id="999c8-103">Provides methods that allow the host to manipulate the set of assemblies referenced by a file or stream using assembly identity data that is internal to the common language runtime (CLR), without needing to create or understand those identities.</span></span>  

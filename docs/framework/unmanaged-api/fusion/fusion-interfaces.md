@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434896"
 ---
 # <a name="fusion-interfaces"></a><span data-ttu-id="b8908-102">Interfejsy łączenia</span><span class="sxs-lookup"><span data-stu-id="b8908-102">Fusion Interfaces</span></span>
 <span data-ttu-id="b8908-103">W tej sekcji opisano niezarządzane interfejsy, które fusion interfejsu API używane do dostępu do właściwości zasobów aplikacji i lokalizowania poprawne wersje tych zasobów dla aplikacji.</span><span class="sxs-lookup"><span data-stu-id="b8908-103">This section describes the unmanaged interfaces that the fusion API uses to access the properties of an application's resources and to locate the correct versions of those resources for the application.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429702"
 ---
 # <a name="iassemblynamesetproperty-method"></a><span data-ttu-id="b2b55-102">IAssemblyName::SetProperty — Metoda</span><span class="sxs-lookup"><span data-stu-id="b2b55-102">IAssemblyName::SetProperty Method</span></span>
 <span data-ttu-id="b2b55-103">Ustawia wartości właściwości odwołuje się określony identyfikator właściwości.</span><span class="sxs-lookup"><span data-stu-id="b2b55-103">Sets the value of the property referenced by the specified property identifier.</span></span>  

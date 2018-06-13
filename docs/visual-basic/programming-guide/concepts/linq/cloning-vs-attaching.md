@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640309"
 ---
 # <a name="cloning-vs-attaching-visual-basic"></a><span data-ttu-id="3e3cd-102">Vs w klonowania. Dołączenia (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3e3cd-102">Cloning vs. Attaching (Visual Basic)</span></span>
 <span data-ttu-id="3e3cd-103">Podczas dodawania <xref:System.Xml.Linq.XNode> (łącznie z <xref:System.Xml.Linq.XElement>) lub <xref:System.Xml.Linq.XAttribute> obiekty do nowego drzewa, jeśli nowa zawartość nie ma elementu nadrzędnego, obiekty są po prostu dołączyć do drzewa XML.</span><span class="sxs-lookup"><span data-stu-id="3e3cd-103">When adding <xref:System.Xml.Linq.XNode> (including <xref:System.Xml.Linq.XElement>) or <xref:System.Xml.Linq.XAttribute> objects to a new tree, if the new content has no parent, the objects are simply attached to the XML tree.</span></span> <span data-ttu-id="3e3cd-104">Jeśli już nowej zawartości jest elementem nadrzędnym i jest częścią innego drzewa XML, został sklonowany nową zawartość.</span><span class="sxs-lookup"><span data-stu-id="3e3cd-104">If the new content already is parented, and is part of another XML tree, the new content is cloned.</span></span> <span data-ttu-id="3e3cd-105">Nowo sklonowanego zawartość jest następnie dołączony do drzewa XML.</span><span class="sxs-lookup"><span data-stu-id="3e3cd-105">The newly cloned content is then attached to the XML tree.</span></span>  

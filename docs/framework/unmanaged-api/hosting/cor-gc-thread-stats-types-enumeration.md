@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428840"
 ---
 # <a name="corgcthreadstatstypes-enumeration"></a><span data-ttu-id="59e7d-102">COR_GC_THREAD_STATS_TYPES — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="59e7d-102">COR_GC_THREAD_STATS_TYPES Enumeration</span></span>
 <span data-ttu-id="59e7d-103">Wskazuje statystyki kolekcji pamięci dla wątku.</span><span class="sxs-lookup"><span data-stu-id="59e7d-103">Indicates the garbage collection statistics for a thread.</span></span>  

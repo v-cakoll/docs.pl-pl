@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534895"
 ---
 # <a name="how-to-manage-toolstrip-overflow-in-windows-forms"></a><span data-ttu-id="a47cd-102">Porady: zarządzanie przepełnieniem elementu ToolStrip w formularzach systemu Windows</span><span class="sxs-lookup"><span data-stu-id="a47cd-102">How to: Manage ToolStrip Overflow in Windows Forms</span></span>
 <span data-ttu-id="a47cd-103">Gdy wszystkie elementy na <xref:System.Windows.Forms.ToolStrip> formantu nie mieszczą się w przydzielonym miejscu, można włączyć funkcji przepełnienie na <xref:System.Windows.Forms.ToolStrip> i określają zachowanie przepełnienie określonych <xref:System.Windows.Forms.ToolStripItem>s.</span><span class="sxs-lookup"><span data-stu-id="a47cd-103">When all the items on a <xref:System.Windows.Forms.ToolStrip> control do not fit in the allotted space, you can enable overflow functionality on the <xref:System.Windows.Forms.ToolStrip> and determine the overflow behavior of specific <xref:System.Windows.Forms.ToolStripItem>s.</span></span>  

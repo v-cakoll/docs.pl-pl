@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642132"
 ---
 # <a name="deferred-execution-example-visual-basic"></a><span data-ttu-id="a0988-102">Wykonanie odroczone — przykład (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a0988-102">Deferred Execution Example (Visual Basic)</span></span>
 <span data-ttu-id="a0988-103">W tym temacie przedstawiono sposób odroczonego wykonania i obliczanie leniwe wpływa na wykonanie programu LINQ do XML zapytania.</span><span class="sxs-lookup"><span data-stu-id="a0988-103">This topic shows how deferred execution and lazy evaluation affect the execution of your LINQ to XML queries.</span></span>  

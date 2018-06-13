@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431844"
 ---
 # <a name="iassemblynameisequal-method"></a><span data-ttu-id="f6c8d-102">IAssemblyName::IsEqual — Metoda</span><span class="sxs-lookup"><span data-stu-id="f6c8d-102">IAssemblyName::IsEqual Method</span></span>
 <span data-ttu-id="f6c8d-103">Określa, czy określonej [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) obiekt jest taki sam `IAssemblyName`zgodnie flagi porównania określony.</span><span class="sxs-lookup"><span data-stu-id="f6c8d-103">Determines whether a specified [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object is equal to this `IAssemblyName`, based on the specified comparison flags.</span></span>  

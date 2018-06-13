@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529263"
 ---
 # <a name="bindingsource-component-architecture"></a><span data-ttu-id="327c0-102">Architektura składnika BindingSource</span><span class="sxs-lookup"><span data-stu-id="327c0-102">BindingSource Component Architecture</span></span>
 <span data-ttu-id="327c0-103">Z <xref:System.Windows.Forms.BindingSource> składnika, wszystkie formanty formularzy systemu Windows można powiązać powszechnie dla źródeł danych.</span><span class="sxs-lookup"><span data-stu-id="327c0-103">With the <xref:System.Windows.Forms.BindingSource> component, you can universally bind  all Windows Forms controls to data sources.</span></span>  

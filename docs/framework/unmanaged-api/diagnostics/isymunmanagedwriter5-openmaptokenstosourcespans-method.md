@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428651"
 ---
 # <a name="isymunmanagedwriter5openmaptokenstosourcespans-method"></a><span data-ttu-id="2c488-102">ISymUnmanagedWriter5::OpenMapTokensToSourceSpans — Metoda</span><span class="sxs-lookup"><span data-stu-id="2c488-102">ISymUnmanagedWriter5::OpenMapTokensToSourceSpans Method</span></span>
 <span data-ttu-id="2c488-103">Otwórz sekcję specjalne danych niestandardowych można wyemitować informacji mapowaniem token do źródła do.</span><span class="sxs-lookup"><span data-stu-id="2c488-103">Open a special custom data section to emit token-to-source span mapping information into.</span></span> <span data-ttu-id="2c488-104">Otwieranie w tej sekcji, gdy metoda jest już otwarty lub odwrotnie, jest to błąd.</span><span class="sxs-lookup"><span data-stu-id="2c488-104">Opening this section when a method is already open, or vice versa, is an error.</span></span>  

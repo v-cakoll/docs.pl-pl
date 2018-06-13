@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431303"
 ---
 # <a name="fexecuteinappdomaincallback-function-pointer"></a><span data-ttu-id="d558c-102">FExecuteInAppDomainCallback — Wskaźnik funkcji</span><span class="sxs-lookup"><span data-stu-id="d558c-102">FExecuteInAppDomainCallback Function Pointer</span></span>
 <span data-ttu-id="d558c-103">Wskazuje funkcję, która jest wywoływana przez środowisko uruchomieniowe języka wspólnego (CLR) do wykonywania kodu zarządzanego.</span><span class="sxs-lookup"><span data-stu-id="d558c-103">Points to a function that is called by the common language runtime (CLR) to execute managed code.</span></span>  

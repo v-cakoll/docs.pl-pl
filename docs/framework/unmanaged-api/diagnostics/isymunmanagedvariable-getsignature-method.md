@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427746"
 ---
 # <a name="isymunmanagedvariablegetsignature-method"></a><span data-ttu-id="7c6c3-102">ISymUnmanagedVariable::GetSignature — Metoda</span><span class="sxs-lookup"><span data-stu-id="7c6c3-102">ISymUnmanagedVariable::GetSignature Method</span></span>
 <span data-ttu-id="7c6c3-103">Pobiera podpis tej zmiennej.</span><span class="sxs-lookup"><span data-stu-id="7c6c3-103">Gets the signature of this variable.</span></span>  

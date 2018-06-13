@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534316"
 ---
 # <a name="printpreviewcontrol-control-windows-forms"></a><span data-ttu-id="c7839-102">PrintPreviewControl — Formant (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="c7839-102">PrintPreviewControl Control (Windows Forms)</span></span>
 <span data-ttu-id="c7839-103">Formularze systemu Windows `PrintPreviewControl` służy do wyświetlania dokumentu, jak będzie wyglądać po wydrukowaniu.</span><span class="sxs-lookup"><span data-stu-id="c7839-103">The Windows Forms `PrintPreviewControl` is used to display a document as it will appear when printed.</span></span> <span data-ttu-id="c7839-104">Ten formant ma nie przyciski lub inne elementy interfejsu użytkownika, dlatego zazwyczaj używany `PrintPreviewControl` tylko wtedy, gdy chcesz zapisać własnego interfejsu użytkownika podglądu wydruku.</span><span class="sxs-lookup"><span data-stu-id="c7839-104">This control has no buttons or other user interface elements, so typically you use the `PrintPreviewControl` only if you wish to write your own print-preview user interface.</span></span> <span data-ttu-id="c7839-105">Standardowy interfejs użytkownika, należy użyć <xref:System.Windows.Forms.PrintPreviewDialog> formantu.</span><span class="sxs-lookup"><span data-stu-id="c7839-105">If you want the standard user interface, use a <xref:System.Windows.Forms.PrintPreviewDialog> control.</span></span>  

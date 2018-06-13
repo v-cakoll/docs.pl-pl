@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535454"
 ---
 # <a name="linklabel-control-windows-forms"></a><span data-ttu-id="afd4b-102">LinkLabel — Formant (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="afd4b-102">LinkLabel Control (Windows Forms)</span></span>
 <span data-ttu-id="afd4b-103">Formularze systemu Windows `LinkLabel` formant umożliwia dodawanie łączy stylu sieci Web do aplikacji formularzy systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="afd4b-103">The Windows Forms `LinkLabel` control enables you to add Web-style links to Windows Forms applications.</span></span> <span data-ttu-id="afd4b-104">Można użyć `LinkLabel` kontroli dla wszystko, co umożliwia <xref:System.Windows.Forms.Label> sterować dla; można też określić część tekstu jako łącze do obiektu lub strony sieci Web.</span><span class="sxs-lookup"><span data-stu-id="afd4b-104">You can use the `LinkLabel` control for everything that you can use the <xref:System.Windows.Forms.Label> control for; you also can set part of the text as a link to an object or Web page.</span></span>  

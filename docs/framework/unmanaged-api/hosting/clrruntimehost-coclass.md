@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430746"
 ---
 # <a name="clrruntimehost-coclass"></a><span data-ttu-id="37401-102">CLRRuntimeHost — Klasa coclass</span><span class="sxs-lookup"><span data-stu-id="37401-102">CLRRuntimeHost Coclass</span></span>
 <span data-ttu-id="37401-103">Zawiera interfejsy zarządzania wykonywanie kodu w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="37401-103">Provides interfaces for managing code execution by the runtime.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531833"
 ---
 # <a name="how-to-display-time-with-the-datetimepicker-control"></a><span data-ttu-id="05293-102">Porady: wyświetlanie godziny za pomocą formantu DateTimePicker</span><span class="sxs-lookup"><span data-stu-id="05293-102">How to: Display Time with the DateTimePicker Control</span></span>
 <span data-ttu-id="05293-103">Jeśli mają aplikację, aby umożliwić użytkownikom wybierz datę i godzinę, a do wyświetlenia daty i godziny w określonym formacie, użyj <xref:System.Windows.Forms.DateTimePicker> formantu.</span><span class="sxs-lookup"><span data-stu-id="05293-103">If you want your application to enable users to select a date and time, and to display that date and time in the specified format, use the <xref:System.Windows.Forms.DateTimePicker> control.</span></span> <span data-ttu-id="05293-104">Poniższa procedura przedstawia sposób użycia <xref:System.Windows.Forms.DateTimePicker> sterowania, aby wyświetlić godzinę.</span><span class="sxs-lookup"><span data-stu-id="05293-104">The following procedure shows how to use the <xref:System.Windows.Forms.DateTimePicker> control to display the time.</span></span>  

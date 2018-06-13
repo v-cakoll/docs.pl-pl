@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436114"
 ---
 # <a name="iclrstrongname-interface"></a><span data-ttu-id="01440-102">ICLRStrongName — Interfejs</span><span class="sxs-lookup"><span data-stu-id="01440-102">ICLRStrongName Interface</span></span>
 <span data-ttu-id="01440-103">Podpisywanie zestawów o silnych nazwach zapewnia podstawowe statyczne funkcje globalne.</span><span class="sxs-lookup"><span data-stu-id="01440-103">Provides basic global static functions for signing assemblies with strong names.</span></span> <span data-ttu-id="01440-104">Wszystkie `ICLRStrongName` metody zwracają standardowe COM wyników HRESULT.</span><span class="sxs-lookup"><span data-stu-id="01440-104">All `ICLRStrongName` methods return standard COM HRESULTs.</span></span>  

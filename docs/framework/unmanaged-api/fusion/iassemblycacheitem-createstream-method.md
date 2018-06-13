@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429504"
 ---
 # <a name="iassemblycacheitemcreatestream-method"></a><span data-ttu-id="bf2d4-102">IAssemblyCacheItem::CreateStream — Metoda</span><span class="sxs-lookup"><span data-stu-id="bf2d4-102">IAssemblyCacheItem::CreateStream Method</span></span>
 <span data-ttu-id="bf2d4-103">Tworzy strumień o określonej nazwie i format.</span><span class="sxs-lookup"><span data-stu-id="bf2d4-103">Creates a stream with the specified name and format.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536081"
 ---
 # <a name="openfiledialog-component-overview-windows-forms"></a><span data-ttu-id="b057a-102">OpenFileDialog — Informacje o składniku (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="b057a-102">OpenFileDialog Component Overview (Windows Forms)</span></span>
 <span data-ttu-id="b057a-103">Formularze systemu Windows <xref:System.Windows.Forms.OpenFileDialog> składnik jest okno dialogowe wstępnie skonfigurowane.</span><span class="sxs-lookup"><span data-stu-id="b057a-103">The Windows Forms <xref:System.Windows.Forms.OpenFileDialog> component is a pre-configured dialog box.</span></span> <span data-ttu-id="b057a-104">Jest to ten sam **Otwórz plik** okno dialogowe udostępnianych przez system operacyjny Windows.</span><span class="sxs-lookup"><span data-stu-id="b057a-104">It is the same **Open File** dialog box exposed by the Windows operating system.</span></span> <span data-ttu-id="b057a-105">Dziedziczy on z <xref:System.Windows.Forms.CommonDialog> klasy.</span><span class="sxs-lookup"><span data-stu-id="b057a-105">It inherits from the <xref:System.Windows.Forms.CommonDialog> class.</span></span>  

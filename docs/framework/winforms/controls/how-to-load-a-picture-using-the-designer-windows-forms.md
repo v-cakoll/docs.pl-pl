@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533546"
 ---
 # <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a><span data-ttu-id="fb1b3-102">Porady: dodawanie zdjęcia przy użyciu narzędzia Projektant (formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="fb1b3-102">How to: Load a Picture Using the Designer (Windows Forms)</span></span>
 <span data-ttu-id="fb1b3-103">Windows Forms <xref:System.Windows.Forms.PictureBox> sterowania, można załadować i wyświetlić obraz w formularzu w czasie projektowania, ustawiając <xref:System.Windows.Forms.PictureBox.Image%2A> właściwości nieprawidłowy obraz.</span><span class="sxs-lookup"><span data-stu-id="fb1b3-103">With the Windows Forms <xref:System.Windows.Forms.PictureBox> control, you can load and display a picture on a form at design time by setting the <xref:System.Windows.Forms.PictureBox.Image%2A> property to a valid picture.</span></span> <span data-ttu-id="fb1b3-104">W poniższej tabeli przedstawiono typy plików akceptowane.</span><span class="sxs-lookup"><span data-stu-id="fb1b3-104">The following table shows the acceptable file types.</span></span>  

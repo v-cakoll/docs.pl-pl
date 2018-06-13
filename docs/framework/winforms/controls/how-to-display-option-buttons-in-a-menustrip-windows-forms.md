@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538032"
 ---
 # <a name="how-to-display-option-buttons-in-a-menustrip-windows-forms"></a><span data-ttu-id="38a9a-102">Porady: wyświetlanie przycisków opcji w formancie MenuStrip (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="38a9a-102">How to: Display Option Buttons in a MenuStrip (Windows Forms)</span></span>
 <span data-ttu-id="38a9a-103">Przyciski opcji, znanej także jako przyciski radiowe, są podobne do pola wyboru z wyjątkiem tego, czy użytkownicy mogą wybrać tylko jeden z nich.</span><span class="sxs-lookup"><span data-stu-id="38a9a-103">Option buttons, also known as radio buttons, are similar to check boxes except that users can select only one at a time.</span></span> <span data-ttu-id="38a9a-104">Mimo że domyślnie <xref:System.Windows.Forms.ToolStripMenuItem> klasa nie zapewnia zachowanie przycisk opcji, klasa zapewnia zachowanie pola wyboru, które można dostosować, aby zaimplementować zachowanie przycisk opcji dla elementów menu w <xref:System.Windows.Forms.MenuStrip> formantu.</span><span class="sxs-lookup"><span data-stu-id="38a9a-104">Although by default the <xref:System.Windows.Forms.ToolStripMenuItem> class does not provide option-button behavior, the class does provide check-box behavior that you can customize to implement option-button behavior for menu items in a <xref:System.Windows.Forms.MenuStrip> control.</span></span>  

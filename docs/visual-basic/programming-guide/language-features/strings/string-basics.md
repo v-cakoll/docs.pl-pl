@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654063"
 ---
 # <a name="string-basics-in-visual-basic"></a><span data-ttu-id="78a29-102">Podstawowe informacje o ciągach w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="78a29-102">String Basics in Visual Basic</span></span>
 <span data-ttu-id="78a29-103">`String` — Typ danych reprezentuje ciąg znaków (każdy reprezentuje z kolei wystąpienia `Char` typu danych).</span><span class="sxs-lookup"><span data-stu-id="78a29-103">The `String` data type represents a series of characters (each representing in turn an instance of the `Char` data type).</span></span> <span data-ttu-id="78a29-104">W tym temacie wprowadzono podstawowe pojęcia ciągów w Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="78a29-104">This topic introduces the basic concepts of strings in Visual Basic.</span></span>  

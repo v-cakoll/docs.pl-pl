@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536725"
 ---
 # <a name="panel-control-windows-forms"></a><span data-ttu-id="21c25-102">Panel — Formant (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="21c25-102">Panel Control (Windows Forms)</span></span>
 <span data-ttu-id="21c25-103">Formularze systemu Windows `Panel` formantów służą do zapewniania do zidentyfikowania grupowania dla innych formantów.</span><span class="sxs-lookup"><span data-stu-id="21c25-103">Windows Forms `Panel` controls are used to provide an identifiable grouping for other controls.</span></span> <span data-ttu-id="21c25-104">Zwykle Użyj paneli do podziału formularza przez funkcję.</span><span class="sxs-lookup"><span data-stu-id="21c25-104">Typically, you use panels to subdivide a form by function.</span></span> <span data-ttu-id="21c25-105">`Panel` Formant jest podobny do <xref:System.Windows.Forms.GroupBox> kontrolować; jednak tylko `Panel` formant może mieć paski przewijania i tylko <xref:System.Windows.Forms.GroupBox> formant zawiera nagłówek.</span><span class="sxs-lookup"><span data-stu-id="21c25-105">The `Panel` control is similar to the <xref:System.Windows.Forms.GroupBox> control; however, only the `Panel` control can have scroll bars, and only the <xref:System.Windows.Forms.GroupBox> control displays a caption.</span></span>  

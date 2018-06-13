@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432533"
 ---
 # <a name="ememorycriticallevel-enumeration"></a><span data-ttu-id="4afe2-102">EMemoryCriticalLevel — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="4afe2-102">EMemoryCriticalLevel Enumeration</span></span>
 <span data-ttu-id="4afe2-103">Zawiera wartości, które wskazują wpływ awarii podczas alokacji pamięci wysłano żądanie, ale nie mogą zostać spełnione.</span><span class="sxs-lookup"><span data-stu-id="4afe2-103">Contains values that indicate the impact of a failure when a specific memory allocation has been requested but cannot be satisfied.</span></span>  

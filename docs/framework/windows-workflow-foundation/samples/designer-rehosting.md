@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516152"
 ---
 # <a name="designer-rehosting"></a><span data-ttu-id="1375e-102">Projektant ReHosting</span><span class="sxs-lookup"><span data-stu-id="1375e-102">Designer ReHosting</span></span>
 <span data-ttu-id="1375e-103">Rehosting projektanta jest typowym scenariuszem odnoszący się do hostingu obszaru projektu przepływu pracy wewnątrz aplikacji niestandardowej.</span><span class="sxs-lookup"><span data-stu-id="1375e-103">Designer rehosting is a common scenario that refers to hosting the workflow design canvas inside of a custom application.</span></span> <span data-ttu-id="1375e-104">Hostingu aplikacji, którą osoby większość zapoznali się z jest Visual Studio, jednak istnieje wiele scenariuszy, w którym przedstawiający projektanta przepływów pracy w aplikacji może być przydatna:</span><span class="sxs-lookup"><span data-stu-id="1375e-104">The hosting application most people are familiar with is Visual Studio, however there are a number of scenarios where showing the workflow designer in an application may be useful:</span></span>  

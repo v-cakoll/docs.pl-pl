@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33315519"
 ---
 # <a name="passing-arrays-as-arguments-c-programming-guide"></a><span data-ttu-id="cedd6-102">Przekazywanie tablic jako argumenty (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="cedd6-102">Passing Arrays as Arguments (C# Programming Guide)</span></span>
 <span data-ttu-id="cedd6-103">Tablice mogą być przekazywane jako argumenty do parametrów metody.</span><span class="sxs-lookup"><span data-stu-id="cedd6-103">Arrays can be passed as arguments to method parameters.</span></span> <span data-ttu-id="cedd6-104">Ponieważ tablice typów referencyjnych, metoda można zmienić wartości elementów.</span><span class="sxs-lookup"><span data-stu-id="cedd6-104">Because arrays are reference types, the method can change the value of the elements.</span></span>  

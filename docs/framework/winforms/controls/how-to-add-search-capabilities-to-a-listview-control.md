@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528289"
 ---
 # <a name="how-to-add-search-capabilities-to-a-listview-control"></a><span data-ttu-id="551e2-102">Porady: dodawanie funkcji wyszukiwania do formantu ListView</span><span class="sxs-lookup"><span data-stu-id="551e2-102">How to: Add Search Capabilities to a ListView Control</span></span>
 <span data-ttu-id="551e2-103">Często podczas pracy z dużą listę elementów w <xref:System.Windows.Forms.ListView> kontroli, które chcesz zaoferować możliwości wyszukiwania dla użytkownika.</span><span class="sxs-lookup"><span data-stu-id="551e2-103">Oftentimes when working with a large list of items in a <xref:System.Windows.Forms.ListView> control, you want to offer search capabilities to the user.</span></span> <span data-ttu-id="551e2-104"><xref:System.Windows.Forms.ListView> Formant oferuje tę możliwość na dwa sposoby: dopasowywania tekstu i lokalizację wyszukiwania.</span><span class="sxs-lookup"><span data-stu-id="551e2-104">The <xref:System.Windows.Forms.ListView> control offers this capability in two different ways: text matching and location searching.</span></span>  

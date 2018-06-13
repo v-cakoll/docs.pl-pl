@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536331"
 ---
 # <a name="ways-to-select-a-windows-forms-button-control"></a><span data-ttu-id="5fec0-102">Sposoby wyboru kontrolki przycisku formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="5fec0-102">Ways to Select a Windows Forms Button Control</span></span>
 <span data-ttu-id="5fec0-103">Przycisku formularzy systemu Windows można wybrać w następujący sposób:</span><span class="sxs-lookup"><span data-stu-id="5fec0-103">A Windows Forms button can be selected in the following ways:</span></span>  

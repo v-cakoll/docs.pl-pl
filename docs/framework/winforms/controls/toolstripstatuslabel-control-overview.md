@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534544"
 ---
 # <a name="toolstripstatuslabel-control-overview"></a><span data-ttu-id="1f698-102">ToolStripStatusLabel — Informacje o formancie</span><span class="sxs-lookup"><span data-stu-id="1f698-102">ToolStripStatusLabel Control Overview</span></span>
 <span data-ttu-id="1f698-103"><xref:System.Windows.Forms.ToolStripStatusLabel> Jest etykietę <xref:System.Windows.Forms.StatusStrip>.</span><span class="sxs-lookup"><span data-stu-id="1f698-103">The <xref:System.Windows.Forms.ToolStripStatusLabel> is a label for a <xref:System.Windows.Forms.StatusStrip>.</span></span> <span data-ttu-id="1f698-104">Podobnie jak <xref:System.Windows.Forms.Label> lub <xref:System.Windows.Forms.ToolStripLabel>, <xref:System.Windows.Forms.ToolStripStatusLabel> przewiduje obszar wyświetlania nieaktywne tekst i obrazy.</span><span class="sxs-lookup"><span data-stu-id="1f698-104">Like the <xref:System.Windows.Forms.Label> or <xref:System.Windows.Forms.ToolStripLabel>, the <xref:System.Windows.Forms.ToolStripStatusLabel> provides a non-clickable display area for text, images, or both.</span></span> <span data-ttu-id="1f698-105"><xref:System.Windows.Forms.ToolStripStatusLabel> Jest hostowana przez <xref:System.Windows.Forms.StatusStrip>.</span><span class="sxs-lookup"><span data-stu-id="1f698-105">The <xref:System.Windows.Forms.ToolStripStatusLabel> is hosted by a <xref:System.Windows.Forms.StatusStrip>.</span></span>  

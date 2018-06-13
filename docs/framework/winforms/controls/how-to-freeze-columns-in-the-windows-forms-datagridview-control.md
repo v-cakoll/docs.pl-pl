@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532672"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="24fe7-102">Porady: blokowanie kolumn w formancie DataGridView formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="24fe7-102">How to: Freeze Columns in the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="24fe7-103">Gdy użytkownicy wyświetlać dane wyświetlane w formularzach systemu Windows <xref:System.Windows.Forms.DataGridView> kontroli, czasami muszą odwoływać się do jednej kolumny lub zestaw kolumn często.</span><span class="sxs-lookup"><span data-stu-id="24fe7-103">When users view data displayed in a Windows Forms <xref:System.Windows.Forms.DataGridView> control, they sometimes need to refer to a single column or set of columns frequently.</span></span> <span data-ttu-id="24fe7-104">Na przykład podczas wyświetlania informacji klienta, który zawiera wiele kolumn tabeli, jest przydatne do wyświetlenia nazwy klienta przez cały czas podczas włączania obsługi innych kolumn przewinięcia poza region widoczny.</span><span class="sxs-lookup"><span data-stu-id="24fe7-104">For example, when displaying a table of customer information that contains many columns, it is useful to display the customer name at all times while enabling other columns to scroll outside the visible region.</span></span>  

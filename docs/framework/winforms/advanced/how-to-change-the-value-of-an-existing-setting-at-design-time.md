@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521459"
 ---
 # <a name="how-to-change-the-value-of-an-existing-setting-at-design-time"></a><span data-ttu-id="c21f3-102">Porady: zmiana wartości istniejącego ustawienia w czasie projektowania</span><span class="sxs-lookup"><span data-stu-id="c21f3-102">How To: Change the Value of an Existing Setting at Design Time</span></span>
 <span data-ttu-id="c21f3-103">Visual Studio umożliwia edytowanie wartości istniejącego ustawienia w projekcie.</span><span class="sxs-lookup"><span data-stu-id="c21f3-103">You can use Visual Studio to edit the values of existing settings in your project.</span></span>  

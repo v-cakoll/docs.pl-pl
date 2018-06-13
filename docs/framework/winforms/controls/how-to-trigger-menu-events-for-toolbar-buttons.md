@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535200"
 ---
 # <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a><span data-ttu-id="1e033-102">Porady: zdarzenia wyzwalaczy menu dla przycisków paska narzędzi</span><span class="sxs-lookup"><span data-stu-id="1e033-102">How to: Trigger Menu Events for Toolbar Buttons</span></span>
 > [!NOTE]

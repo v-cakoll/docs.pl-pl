@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428061"
 ---
 # <a name="isymunmanagedwriterabort-method"></a><span data-ttu-id="da15c-102">ISymUnmanagedWriter::Abort — Metoda</span><span class="sxs-lookup"><span data-stu-id="da15c-102">ISymUnmanagedWriter::Abort Method</span></span>
 <span data-ttu-id="da15c-103">Zamyka twórcę symbolu bez zatwierdzania symbole w magazynie symboli.</span><span class="sxs-lookup"><span data-stu-id="da15c-103">Closes the symbol writer without committing the symbols to the symbol store.</span></span> <span data-ttu-id="da15c-104">Po tym wywołaniu twórcę symbol staje się nieprawidłowy dla dalszego aktualizacji.</span><span class="sxs-lookup"><span data-stu-id="da15c-104">After this call, the symbol writer becomes invalid for further updates.</span></span> <span data-ttu-id="da15c-105">Aby zatwierdzić symbole i Zamknij moduł zapisujący symbolu, użyj [ISymUnmanagedWriter::Close](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-close-method.md) metody zamiast tego.</span><span class="sxs-lookup"><span data-stu-id="da15c-105">To commit the symbols and close the symbol writer, use the [ISymUnmanagedWriter::Close](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-close-method.md) method instead.</span></span>  

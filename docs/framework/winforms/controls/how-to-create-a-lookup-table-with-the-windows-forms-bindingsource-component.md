@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535587"
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a><span data-ttu-id="8e25f-102">Porady: tworzenie tabeli wyszukiwania za pomocą składnika BindingSource formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="8e25f-102">How to: Create a Lookup Table with the Windows Forms BindingSource Component</span></span>
 <span data-ttu-id="8e25f-103">Tabela odnośników jest tabelą danych, która zawiera kolumnę wyświetlającą z rekordów w powiązanej tabeli.</span><span class="sxs-lookup"><span data-stu-id="8e25f-103">A lookup table is a table of data that has a column that displays data from records in a related table.</span></span> <span data-ttu-id="8e25f-104">W poniższych procedurach <xref:System.Windows.Forms.ComboBox> formantu służy do wyświetlania pola z relacji klucza obcego z elementu nadrzędnego z tabelą podrzędną.</span><span class="sxs-lookup"><span data-stu-id="8e25f-104">In the following procedures, a <xref:System.Windows.Forms.ComboBox> control is used to display the field with the foreign-key relationship from the parent to the child table.</span></span>  

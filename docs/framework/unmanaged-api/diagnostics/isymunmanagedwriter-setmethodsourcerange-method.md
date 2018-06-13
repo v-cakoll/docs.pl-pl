@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429005"
 ---
 # <a name="isymunmanagedwritersetmethodsourcerange-method"></a><span data-ttu-id="7d583-102">ISymUnmanagedWriter::SetMethodSourceRange — Metoda</span><span class="sxs-lookup"><span data-stu-id="7d583-102">ISymUnmanagedWriter::SetMethodSourceRange Method</span></span>
 <span data-ttu-id="7d583-103">Określa wartość true, początek i koniec metody w pliku źródłowym.</span><span class="sxs-lookup"><span data-stu-id="7d583-103">Specifies the true start and end of a method within a source file.</span></span> <span data-ttu-id="7d583-104">Użyj tej metody, aby określić zakres metody, niezależnie od punkty sekwencji, które istnieją w metodzie.</span><span class="sxs-lookup"><span data-stu-id="7d583-104">Use this method to specify the extent of a method independently of the sequence points that exist within the method.</span></span>  

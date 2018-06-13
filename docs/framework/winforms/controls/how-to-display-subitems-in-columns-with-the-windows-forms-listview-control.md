@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532510"
 ---
 # <a name="how-to-display-subitems-in-columns-with-the-windows-forms-listview-control"></a><span data-ttu-id="f0af9-102">Porady: wyświetlanie podelementów w kolumnach za pomocą formantu ListView formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="f0af9-102">How to: Display Subitems in Columns with the Windows Forms ListView Control</span></span>
 <span data-ttu-id="f0af9-103">Formularze systemu Windows <xref:System.Windows.Forms.ListView> formant może wyświetlać dodatkowy tekst lub podrzędnych, dla każdego elementu w widoku Details.</span><span class="sxs-lookup"><span data-stu-id="f0af9-103">The Windows Forms <xref:System.Windows.Forms.ListView> control can display additional text, or subitems, for each item in the Details view.</span></span> <span data-ttu-id="f0af9-104">Pierwsza kolumna Wyświetla tekst elementu, na przykład numer pracownika.</span><span class="sxs-lookup"><span data-stu-id="f0af9-104">The first column displays the item text, for example an employee number.</span></span> <span data-ttu-id="f0af9-105">Druga Strona, kolumny trzeci i kolejne zawierają pierwszy, drugi i kolejne skojarzone elementy podrzędne.</span><span class="sxs-lookup"><span data-stu-id="f0af9-105">The second, third, and subsequent columns display the first, second, and subsequent associated subitems.</span></span>  

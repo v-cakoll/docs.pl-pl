@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640537"
 ---
 # <a name="how-to-work-with-activex-controls-visual-basic"></a><span data-ttu-id="478b2-102">Porady: praca z kontrolkami ActiveX (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="478b2-102">How to: Work with ActiveX Controls (Visual Basic)</span></span>
 <span data-ttu-id="478b2-103">Formanty ActiveX są składniki modelu COM lub obiekty, które można wstawić do strony sieci Web lub innych aplikacji do ponownego użycia spakowanych funkcji ktoś inny ma zaprogramowane w taki sposób.</span><span class="sxs-lookup"><span data-stu-id="478b2-103">ActiveX controls are COM components or objects you can insert into a Web page or other application to reuse packaged functionality someone else has programmed.</span></span> <span data-ttu-id="478b2-104">Kontrolki ActiveX utworzonych dla programu Visual Basic 6.0 i starszych wersji służy do dodawania funkcji do **przybornika** programu Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="478b2-104">You can use ActiveX controls developed for Visual Basic 6.0 and earlier versions to add features to the **Toolbox** of Visual Studio.</span></span>  

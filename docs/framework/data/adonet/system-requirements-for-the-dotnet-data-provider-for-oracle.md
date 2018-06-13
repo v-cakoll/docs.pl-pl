@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363521"
 ---
 # <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a><span data-ttu-id="ff4ce-102">Wymagania systemowe programu .NET Framework Data Provider for Oracle</span><span class="sxs-lookup"><span data-stu-id="ff4ce-102">System Requirements for the .NET Framework Data Provider for Oracle</span></span>
 <span data-ttu-id="ff4ce-103">.NET Framework Data Provider for Oracle wymaga programu Microsoft Data Access Components (MDAC) w wersji version 2.6 lub nowszej.</span><span class="sxs-lookup"><span data-stu-id="ff4ce-103">The .NET Framework Data Provider for Oracle requires Microsoft Data Access Components (MDAC) version 2.6 or later.</span></span> <span data-ttu-id="ff4ce-104">Zaleca się MDAC 2.8 z dodatkiem SP1.</span><span class="sxs-lookup"><span data-stu-id="ff4ce-104">MDAC 2.8 SP1 is recommended.</span></span>  

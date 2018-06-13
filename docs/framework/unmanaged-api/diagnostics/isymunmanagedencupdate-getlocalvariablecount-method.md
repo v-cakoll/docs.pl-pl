@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436062"
 ---
 # <a name="isymunmanagedencupdategetlocalvariablecount-method"></a><span data-ttu-id="d035c-102">ISymUnmanagedENCUpdate::GetLocalVariableCount — Metoda</span><span class="sxs-lookup"><span data-stu-id="d035c-102">ISymUnmanagedENCUpdate::GetLocalVariableCount Method</span></span>
 <span data-ttu-id="d035c-103">Pobiera liczbę zmiennych lokalnych.</span><span class="sxs-lookup"><span data-stu-id="d035c-103">Gets the number of local variables.</span></span>  

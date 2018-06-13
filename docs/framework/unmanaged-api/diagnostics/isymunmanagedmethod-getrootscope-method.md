@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430531"
 ---
 # <a name="isymunmanagedmethodgetrootscope-method"></a><span data-ttu-id="19250-102">ISymUnmanagedMethod::GetRootScope — Metoda</span><span class="sxs-lookup"><span data-stu-id="19250-102">ISymUnmanagedMethod::GetRootScope Method</span></span>
 <span data-ttu-id="19250-103">Pobiera zakres leksykalne głównego w ramach tej metody.</span><span class="sxs-lookup"><span data-stu-id="19250-103">Gets the root lexical scope within this method.</span></span> <span data-ttu-id="19250-104">Ten zakres obejmuje całą metody.</span><span class="sxs-lookup"><span data-stu-id="19250-104">This scope encloses the entire method.</span></span>  

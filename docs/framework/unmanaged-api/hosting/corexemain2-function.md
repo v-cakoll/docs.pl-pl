@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430182"
 ---
 # <a name="corexemain2-function"></a><span data-ttu-id="17292-102">_CorExeMain2 — Funkcja</span><span class="sxs-lookup"><span data-stu-id="17292-102">_CorExeMain2 Function</span></span>
 <span data-ttu-id="17292-103">Wykonuje punkt wejścia określony kod mapowanych na pamięć.</span><span class="sxs-lookup"><span data-stu-id="17292-103">Executes the entry point in the specified memory-mapped code.</span></span> <span data-ttu-id="17292-104">Ta funkcja jest wywoływana przez moduł ładujący systemu operacyjnego.</span><span class="sxs-lookup"><span data-stu-id="17292-104">This function is called by the operating system loader.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532824"
 ---
 # <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a><span data-ttu-id="b6668-102">Porady: zaznaczanie elementu w formancie ListView formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="b6668-102">How to: Select an Item in the Windows Forms ListView Control</span></span>
 <span data-ttu-id="b6668-103">W tym przykładzie pokazano, jak programowo wybierz element w formularzach systemu Windows <xref:System.Windows.Forms.ListView> formantu.</span><span class="sxs-lookup"><span data-stu-id="b6668-103">This example demonstrates how to programmatically select an item in a Windows Forms <xref:System.Windows.Forms.ListView> control.</span></span> <span data-ttu-id="b6668-104">Programowy Wybór elementu nie zmienia się automatycznie fokusu <xref:System.Windows.Forms.ListView> formantu.</span><span class="sxs-lookup"><span data-stu-id="b6668-104">Selecting an item programmatically does not automatically change the focus to the <xref:System.Windows.Forms.ListView> control.</span></span> <span data-ttu-id="b6668-105">Z tego powodu będzie zwykle również chcesz ustawić element zgodnie z fokusem, gdy zaznaczenie elementu.</span><span class="sxs-lookup"><span data-stu-id="b6668-105">For this reason, you will typically also want to set the item as focused when selecting an item.</span></span>  

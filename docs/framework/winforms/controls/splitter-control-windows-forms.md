@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534641"
 ---
 # <a name="splitter-control-windows-forms"></a><span data-ttu-id="4dcc0-102">Splitter — Formant (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="4dcc0-102">Splitter Control (Windows Forms)</span></span>
 <span data-ttu-id="4dcc0-103">Formularze systemu Windows `Splitter` formantów służą do zmiany rozmiaru formantów dokowanych w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="4dcc0-103">Windows Forms `Splitter` controls are used to resize docked controls at run time.</span></span> <span data-ttu-id="4dcc0-104">`Splitter` Kontroli jest często używane w formularzach z formantami, które mają różne długości danych do prezentowania, takich jak Eksplorator Windows, w których okienka dane zawierają informacje o różnej szerokości w różnym czasie.</span><span class="sxs-lookup"><span data-stu-id="4dcc0-104">The `Splitter` control is often used on forms with controls that have varying lengths of data to present, like Windows Explorer, whose data panes contain information of varying widths at different times.</span></span>  

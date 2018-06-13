@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426024"
 ---
 # <a name="isymunmanagedmethodgetranges-method"></a><span data-ttu-id="b76e9-102">ISymUnmanagedMethod::GetRanges — Metoda</span><span class="sxs-lookup"><span data-stu-id="b76e9-102">ISymUnmanagedMethod::GetRanges Method</span></span>
 <span data-ttu-id="b76e9-103">Podanej pozycji w dokumencie zwraca tablicę początkową i końcową pary przesunięcia, które odpowiadają zakresom język pośredni firmy Microsoft (MSIL), który obejmuje pozycję w ramach tej metody.</span><span class="sxs-lookup"><span data-stu-id="b76e9-103">Given a position in a document, returns an array of start and end offset pairs that correspond to the ranges of Microsoft intermediate language (MSIL) that the position covers within this method.</span></span> <span data-ttu-id="b76e9-104">Tablica jest tablicą liczb całkowitych i ma format [rozpoczęcia, zakończenia, start, zakończenie].</span><span class="sxs-lookup"><span data-stu-id="b76e9-104">The array is an array of integers and has the format [start, end, start, end].</span></span> <span data-ttu-id="b76e9-105">Określona liczba par zakres jest długość tablicy podzielona przez 2.</span><span class="sxs-lookup"><span data-stu-id="b76e9-105">The number of range pairs is the length of the array divided by 2.</span></span>  

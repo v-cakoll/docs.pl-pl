@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362630"
 ---
 # <a name="query-examples"></a><span data-ttu-id="088f0-102">Przykłady zapytań</span><span class="sxs-lookup"><span data-stu-id="088f0-102">Query Examples</span></span>
 <span data-ttu-id="088f0-103">Ta sekcja zawiera Visual Basic i C# przykłady typowych [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zapytania.</span><span class="sxs-lookup"><span data-stu-id="088f0-103">This section provides Visual Basic and C# examples of typical [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] queries.</span></span> <span data-ttu-id="088f0-104">Deweloperzy przy użyciu programu Visual Studio można znaleźć wiele więcej przykładów w przykładowe rozwiązanie dostępne w sekcji przykładów.</span><span class="sxs-lookup"><span data-stu-id="088f0-104">Developers using Visual Studio can find many more examples in a sample solution available in the Samples section.</span></span> <span data-ttu-id="088f0-105">Aby uzyskać więcej informacji, zobacz [przykłady](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).</span><span class="sxs-lookup"><span data-stu-id="088f0-105">For more information, see [Samples](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).</span></span>  

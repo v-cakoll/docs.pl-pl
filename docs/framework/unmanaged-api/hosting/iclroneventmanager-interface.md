@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434106"
 ---
 # <a name="iclroneventmanager-interface"></a><span data-ttu-id="df484-102">ICLROnEventManager — Interfejs</span><span class="sxs-lookup"><span data-stu-id="df484-102">ICLROnEventManager Interface</span></span>
 <span data-ttu-id="df484-103">Udostępnia metody umożliwiające hosta do rejestrowania i wyrejestrowania wywołań zwrotnych dla zdarzenia środowiska uruchomieniowego (języka wspólnego CLR) języka wspólnego.</span><span class="sxs-lookup"><span data-stu-id="df484-103">Provides methods that allow the host to register and unregister callbacks for common language runtime (CLR) events.</span></span>  

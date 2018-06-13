@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428592"
 ---
 # <a name="fusion-unmanaged-api-reference"></a><span data-ttu-id="9b4bb-102">Łączenie (Niezarządzany wykaz interfejsów API)</span><span class="sxs-lookup"><span data-stu-id="9b4bb-102">Fusion (Unmanaged API Reference)</span></span>
 <span data-ttu-id="9b4bb-103">Interfejs API fusion umożliwia host czasu wykonywania uzyskać dostęp do właściwości zasobów aplikacji, aby zlokalizować poprawne wersje tych zasobów dla aplikacji.</span><span class="sxs-lookup"><span data-stu-id="9b4bb-103">The fusion API enables a runtime host to access the properties of an application's resources in order to locate the correct versions of those resources for the application.</span></span>  

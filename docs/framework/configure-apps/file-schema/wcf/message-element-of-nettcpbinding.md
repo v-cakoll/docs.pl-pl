@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364129"
 ---
 # <a name="ltmessagegt-element-of-ltnettcpbindinggt"></a><span data-ttu-id="4e7b0-102">&lt;message&gt; w &lt;netTcpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="4e7b0-102">&lt;message&gt; element of &lt;netTcpBinding&gt;</span></span>
 <span data-ttu-id="4e7b0-103">Określa typ zabezpieczenia na poziomie komunikatu wymagania dotyczące punkt końcowy skonfigurowany [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="4e7b0-103">Defines the type of message-level security requirements for an endpoint configured with the [\<netTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).</span></span>  

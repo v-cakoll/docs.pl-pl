@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498247"
 ---
 # <a name="wcf-syndication-overview"></a>Omówienie syndykacji WCF
 Windows Communication Foundation (WCF) zapewnia obsługę udostępnianie zespolonego źródła usługi WCF. Syndykacja jest mechanizm integracji aplikacji, w którym serwer przedstawia niektóre dane aplikacji w formacie interoperacyjne znany jako źródło danych. Źródło danych to kolekcja danych aplikacji, która składa się z niektórych metadanych źródła danych na poziomie (tytuł, autora, adres URL i innych metadanych) i szereg elementów strumieniowego źródła danych. W źródle danych elementów strumieniowego źródła danych są zwykle czas uporządkowanych w odwrotnej kolejności. Element źródła składa się ze standardowego zestawu metadanych poziomie elementu (tytuł, adres URL, Data utworzenia, kategorii i innych metadanych elementu poziom) oraz dowolnej liczby dane specyficzne dla aplikacji. Dwa najczęściej używane typy zespolonego źródła danych są naprawdę proste Syndication (RSS) 2.0 i Atom 1.0, które są obsługiwane przez usługę WCF.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759897"
 ---
 # <a name="entity-framework-overview"></a>Omówienie struktury jednostek
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] To zestaw technologii w ADO.NET, która obsługuje programowanie zorientowane na dane aplikacji. Dla architektów i deweloperów aplikacje zorientowane na dane zmagały z koniecznością osiągnięcia dwóch celów bardzo różnią się. Muszą one modelu jednostki, relacje i logiki problemy biznesowe, które są one rozwiązywania i muszą one również współpracować z aparaty danych używany do przechowywania i pobierania danych. Dane mogą obejmować wiele systemów magazynowania, każdy z protokołami; nawet aplikacji, które działają w systemie pojedynczy magazyn musi równoważenie wymagania systemu magazynu względem wymagań pisania kodu wydajne i łatwy w obsłudze aplikacji.  

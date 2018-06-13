@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499196"
 ---
 # <a name="workflow-services"></a>Usługi przepływu pracy
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Umożliwia pełne opisanie usługi przepływu pracy na podstawie deklaratywnego w języku XAML. Można zdefiniować przepływu pracy, który implementuje usługi i opisz punkty końcowe udostępnia usługi, wszystkie wyłącznie w języku XAML. Tematy w tej sekcji opisano szczegółowo, model programowania, który obsługuje usługi zapisu deklaratywnie.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498488"
 ---
 # <a name="wcf-web-http-error-handling"></a>Obsługa błędów protokołu HTTP sieci Web w programie WCF
 Obsługa błędów protokołu HTTP sieci Web Windows Communication Foundation (WCF) umożliwia zwracanie błędów z usług WCF Web HTTP, które określają kod stanu HTTP i zwracać szczegóły błędu przy użyciu tego samego formatu co operacji (na przykład, XML lub JSON).  

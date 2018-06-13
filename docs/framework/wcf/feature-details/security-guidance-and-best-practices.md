@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497506"
 ---
 # <a name="security-guidance-and-best-practices"></a>Wytyczne dotyczące zabezpieczeń i najlepsze rozwiązania
 Tematy w tej sekcji przedstawia wskazówki dotyczące oraz elementów do uwzględnienia podczas tworzenia bezpiecznych aplikacji Windows Communication Foundation (WCF). Aby uzyskać więcej informacji o systemie Windows Server AppFabric i zabezpieczeniach, zobacz [zabezpieczeń modelu dla systemu Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  

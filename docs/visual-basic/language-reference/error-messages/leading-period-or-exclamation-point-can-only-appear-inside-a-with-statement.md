@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589450"
 ---
 # <a name="leading-3939-or-3939-can-only-appear-inside-a-39with39-statement"></a>Początkowe &#39;. &#39; lub &#39;! &#39; może wystąpić tylko wewnątrz &#39;z&#39; — instrukcja
 Kropki (.) lub wykrzyknika (!) nie jest który wewnątrz `With` bloku odbywa się bez wyrażenie po lewej stronie. Dostęp do elementu członkowskiego (`.`) i dostęp do elementu członkowskiego słownika (`!`) wymagają wyrażenie określające element, który zawiera element członkowski. Musi występować od razu po lewej stronie metody dostępu lub jako element docelowy `With` blok zawierający dostęp do elementu członkowskiego.  

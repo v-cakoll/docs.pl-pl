@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575866"
 ---
 # <a name="induced-collections"></a>Wywołane kolekcje
 W większości przypadków moduł garbage collector można określić najlepszy moment na wykonać kolekcji, a należy udostępnić go uruchomić niezależnie. Istnieje rzadkich sytuacji po wymuszonym kolekcji może zwiększyć wydajność aplikacji. Wyrzucanie elementów bezużytecznych w tych przypadkach może wywołać przy użyciu <xref:System.GC.Collect%2A?displayProperty=nameWithType> metodę wymuszania wyrzucania elementów bezużytecznych.  

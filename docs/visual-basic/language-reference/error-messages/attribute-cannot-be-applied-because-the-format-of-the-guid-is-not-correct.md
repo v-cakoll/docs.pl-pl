@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587563"
 ---
 # <a name="39ltattributegt39-cannot-be-applied-because-the-format-of-the-guid-39ltnumbergt39-is-not-correct"></a>&#39;&lt;atrybut&gt; &#39; nie można zastosować, ponieważ format identyfikatora GUID &#39; &lt;numer&gt; &#39; jest nieprawidłowy
 A `COMClassAttribute` bloku attribute określa globalnie unikatowy identyfikator (GUID), który jest niezgodny ze odpowiedni format identyfikatora GUID. `COMClassAttribute` używa identyfikatorów GUID do unikatowego identyfikowania klasy, interfejsu i tworzenia zdarzeń.  

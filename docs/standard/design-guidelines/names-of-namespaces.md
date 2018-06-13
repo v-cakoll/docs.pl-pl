@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576435"
 ---
 # <a name="names-of-namespaces"></a>Nazwy przestrzeni nazw
 Jako z innych nazw wytycznymi celem w nazwach obszarów nazw jest tworzenie wystarczająco jasno dla programisty od razu wiedzieć, co zawartość obszaru nazw jest prawdopodobnie za pomocą środowiska. Następujący szablon określa zasady nazewnictwa przestrzeni nazw:  

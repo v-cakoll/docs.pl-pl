@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502393"
 ---
 # <a name="iis-hosting-using-inline-code"></a>Hostowanie usług IIS przy użyciu kodu wbudowanego
 W tym przykładzie pokazano, jak implementację usługi hostowanej przez Internetowe usługi informacyjne (IIS), gdzie znajduje się kod usługi wiersz w pliku svc i ma być kompilowana na żądanie. Kod usługi również może być wdrożonych bezpośrednio w plików kodu źródłowego znajduje się w katalogu \App_Code aplikacji lub skompilowany w zestawie wdrożone w \bin. W tym przykładzie nie wykazują tych metod.  

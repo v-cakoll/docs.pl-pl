@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766312"
 ---
 # <a name="conceptual-model-canonical-to-sql-server-functions-mapping"></a>Model koncepcyjny Canonical do mapowania funkcji serwera SQL
 W tym temacie opisano sposób koncepcyjny modelu funkcji kanonicznej mapę, aby odpowiednie funkcje programu SQL Server.  

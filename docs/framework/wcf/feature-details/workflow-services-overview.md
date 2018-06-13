@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502731"
 ---
 # <a name="workflow-services-overview"></a>Przegląd usług przepływu pracy
 Usługi przepływu pracy są usług WCF, które są implementowane przy użyciu przepływów pracy. Usługi przepływu pracy są przepływy pracy używające działania obsługi wiadomości do wysyłania i odbierania wiadomości Windows Communication Foundation (WCF). .NET framework 4.5 wprowadzono wiele działań obsługi komunikatów, które umożliwia wysyłanie i odbieranie wiadomości z poziomu przepływu pracy. Aby uzyskać więcej informacji dotyczących działań i jak one używane do implementowania wzorce exchange inny komunikat do obsługi komunikatów, zobacz [wiadomości działania](../../../../docs/framework/wcf/feature-details/messaging-activities.md).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502377"
 ---
 # <a name="uritemplate-sample"></a>Przykład elementu UriTemplate
 <xref:System.UriTemplate> Klasa dostarcza metody do pracy z zestawami identyfikatory URI, które mają wspólną strukturę. W tym przykładzie przedstawiono następujące podstawowe pojęcia dotyczące `UriTemplate`:  

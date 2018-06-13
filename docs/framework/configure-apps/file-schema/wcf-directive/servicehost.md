@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352547"
 ---
 # <a name="servicehost"></a>@ServiceHost
 Kojarzy fabryka użyta do wyprodukowania hosta usługi z usługą ma być obsługiwana i inne aspekty programowania wymagane do uzyskania dostępu lub skompilować hostingu kod zawarty w pliku svc.  

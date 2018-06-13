@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525970"
 ---
 # <a name="using-transformations-to-scale-colors"></a>Używanie przekształceń do skalowania kolorów
 Transformacja skalowania mnoży przynajmniej jednej z czterech składowych liczbą. Wpisów macierzy kolorów, które reprezentują skalowanie są podane w poniższej tabeli.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325945"
 ---
 # <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a>Porady: pobieranie skrócona wartość elementu (C#)
 W tym temacie pokazano, jak pobrać pobieżną wartości elementu. Skrócona wartość jest wartością tylko określonego elementu zamiast dokładnego wartość, która zawiera wartości wszystkich elementów podrzędnych połączone w jeden ciąg.  

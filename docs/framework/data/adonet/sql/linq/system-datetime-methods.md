@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360764"
 ---
 # <a name="systemdatetime-methods"></a>System.DateTime Methods
 Następujące LINQ do operatorów, właściwości i metod obsługiwanych przez program SQL są dostępne do użycia w składniku LINQ do SQL zapytań. Gdy metoda, operator lub właściwość nie jest obsługiwany, LINQ do SQL nie może dokonywać translacji elementu członkowskiego do wykonania na serwerze SQL. Możesz użyć tych elementów członkowskich w kodzie, jednak ich musi przyjąć przed zapytania jest translacja języka Transact-SQL lub po wyniki zostały pobrane z bazy danych.  

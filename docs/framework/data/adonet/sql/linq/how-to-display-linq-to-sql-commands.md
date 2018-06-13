@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359894"
 ---
 # <a name="how-to-display-linq-to-sql-commands"></a>Porady: wyświetlanie LINQ do poleceń SQL
 Użyj <xref:System.Data.Linq.DataContext.GetCommand%2A> do wyświetlenia poleceń SQL i innych informacji.  

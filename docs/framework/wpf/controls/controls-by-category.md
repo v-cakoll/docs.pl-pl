@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552002"
 ---
 # <a name="controls-by-category"></a>Kontrolki według kategorii
 Formanty Windows Presentation Foundation (WPF) można grupować logicznie w różne kategorie. Tych kategorii można wybrać odpowiednią kontrolkę dla danego scenariusza pozwala zobaczyć, które kontrolki mają podobne wzorców użycia lub funkcji.  

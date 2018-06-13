@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639263"
 ---
 # <a name="the-remote-server-machine-does-not-exist-or-is-unavailable-visual-basic"></a>Serwer zdalny nie istnieje lub jest niedostępny (Visual Basic)
 Próbujesz się połączyć z serwerem zdalnym, który jest niedostępny lub nie istnieje. Ten błąd może być spowodowane przez utratę połączenia sieciowego.  

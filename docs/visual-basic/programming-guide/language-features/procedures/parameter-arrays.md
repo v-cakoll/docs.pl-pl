@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652380"
 ---
 # <a name="parameter-arrays-visual-basic"></a>Parameter — Tablice (Visual Basic)
 Zazwyczaj nie można wywołać procedury z więcej argumentów niż określa deklaracji procedury. Jeśli potrzebujesz nieokreśloną liczbę argumentów można zadeklarować *tablicy parametrów*, dzięki czemu procedury zaakceptować tablicy wartości parametru. Nie trzeba znać liczba elementów w tablicy parametrów podczas definiowania procedury. Rozmiar tablicy jest ustalana indywidualnie przy każdym wywołaniu procedury.  

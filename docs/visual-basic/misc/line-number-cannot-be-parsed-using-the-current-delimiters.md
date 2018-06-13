@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639139"
 ---
 # <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-delimiters"></a>Wiersz &lt;numer&gt; nie można analizować przy użyciu bieżącego parametru Delimiters.
 Nie można analizować określonego wiersza, ponieważ używa ograniczniki innych niż określone.  

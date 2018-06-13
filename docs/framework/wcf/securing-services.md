@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808842"
 ---
 # <a name="securing-services"></a>Zabezpieczanie usług
 Obejmuje dwa podstawowe wymagania zabezpieczeń usługi Windows Communication Foundation (WCF): transfer zabezpieczeń i autoryzacji. (Trzeci wymaganie, przeprowadzanie inspekcji zdarzeń zabezpieczeń jest opisany w [inspekcji](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) Krótko mówiąc transfer zabezpieczeń obejmuje uwierzytelniania (weryfikacji tożsamości klienta i usługi), poufność (szyfrowanie wiadomości) i integralności (cyfrowego podpisywania przed naruszeniem). Autoryzacja jest kontrola dostępu do zasobów, na przykład, dzięki czemu tylko użytkownicy o odpowiednich uprawnieniach do odczytu pliku. Przy użyciu funkcji usługi WCF, dwa podstawowe wymagania są łatwo zaimplementować.  

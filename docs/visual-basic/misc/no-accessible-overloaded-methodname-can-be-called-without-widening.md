@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636812"
 ---
 # <a name="no-accessible-overloaded-39ltmethodnamegt39-can-be-called-with-these-arguments-without-a-widening-conversion-ltlistgt"></a>Żaden dostępny przeciążony &#39; &lt;methodname&gt; &#39; może być wywołany z tymi argumentami bez użycia konwersji rozszerzającej: &lt;listy&gt;
 Przeciążona metoda została wywołana, ale brak metody mogłyby zostać dopasowane do podanych argumentów bez użycia konwersji rozszerzającej z listy.  

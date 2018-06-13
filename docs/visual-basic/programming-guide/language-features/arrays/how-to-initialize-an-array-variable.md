@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651573"
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>Porady: inicjowanie zmiennej tablicy w języku Visual Basic
 Inicjowanie zmiennej tablicy przy tym literał w tablicy `New` klauzuli i określając wartość początkową tablicy. Można określić typ lub zezwolić na można wywnioskować na podstawie wartości w tablicy literału. Aby uzyskać więcej informacji o sposobie wywnioskować typu, zobacz "Podczas wypełniania tablicy o początkowej wartości" w [tablice](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  

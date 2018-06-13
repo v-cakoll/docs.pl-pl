@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638359"
 ---
 # <a name="string-length-exceeds-maximum-length-of-32767-characters-for-39filesystem39-apis"></a>Długość ciągu przekracza maksymalną długość równą 32767 znaków dozwoloną dla &#39;FileSystem&#39; interfejsów API
 Długość ciągu przekracza maksymalną długość równą 32767 znaków.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423276"
 ---
 # <a name="icordebugthreadenum-interface1"></a><span data-ttu-id="a33b3-102">ICorDebugThreadEnum Interface1</span><span class="sxs-lookup"><span data-stu-id="a33b3-102">ICorDebugThreadEnum Interface1</span></span>
 <span data-ttu-id="a33b3-103">Implementuje metody ICorDebugEnum i wylicza ICorDebugThread tablic.</span><span class="sxs-lookup"><span data-stu-id="a33b3-103">Implements ICorDebugEnum methods and enumerates ICorDebugThread arrays.</span></span>  

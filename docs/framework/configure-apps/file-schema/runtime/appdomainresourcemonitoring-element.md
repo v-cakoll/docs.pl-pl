@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743579"
 ---
 # <a name="ltappdomainresourcemonitoringgt-element"></a><span data-ttu-id="4a706-102">&lt;appdomainresourcemonitoring —&gt; — Element</span><span class="sxs-lookup"><span data-stu-id="4a706-102">&lt;appDomainResourceMonitoring&gt; Element</span></span>
 <span data-ttu-id="4a706-103">Powoduje, że środowiska uruchomieniowego w celu zbierania statystyk we wszystkich domenach aplikacji w trakcie cyklu życia procesu.</span><span class="sxs-lookup"><span data-stu-id="4a706-103">Instructs the runtime to collect statistics on all application domains in the process for the life of the process.</span></span>  

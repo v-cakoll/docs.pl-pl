@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422360"
 ---
 # <a name="icordebugvariablesymbolsetvalue-method"></a><span data-ttu-id="51b54-102">ICorDebugVariableSymbol::SetValue — metoda</span><span class="sxs-lookup"><span data-stu-id="51b54-102">ICorDebugVariableSymbol::SetValue Method</span></span>
 <span data-ttu-id="51b54-103">Przypisuje wartość tablica bajtów do zmiennej.</span><span class="sxs-lookup"><span data-stu-id="51b54-103">Assigns the value of a byte array to a variable.</span></span>  

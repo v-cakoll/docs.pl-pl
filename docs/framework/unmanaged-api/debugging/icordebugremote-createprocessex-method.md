@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423322"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a><span data-ttu-id="4bb5f-102">ICorDebugRemote::CreateProcessEx — Metoda</span><span class="sxs-lookup"><span data-stu-id="4bb5f-102">ICorDebugRemote::CreateProcessEx Method</span></span>
 <span data-ttu-id="4bb5f-103">Uruchamia proces na komputerze zdalnym w debugerze.</span><span class="sxs-lookup"><span data-stu-id="4bb5f-103">Launches a process on a remote machine under the debugger.</span></span>  

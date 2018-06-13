@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424394"
 ---
 # <a name="isymunmanagedmethodgetoffset-method"></a><span data-ttu-id="a0361-102">ISymUnmanagedMethod::GetOffset — Metoda</span><span class="sxs-lookup"><span data-stu-id="a0361-102">ISymUnmanagedMethod::GetOffset Method</span></span>
 <span data-ttu-id="a0361-103">Zwraca przesunięcie w ramach tej metody, która odpowiada na określonej pozycji w dokumencie.</span><span class="sxs-lookup"><span data-stu-id="a0361-103">Returns the offset within this method that corresponds to a given position within a document.</span></span>  

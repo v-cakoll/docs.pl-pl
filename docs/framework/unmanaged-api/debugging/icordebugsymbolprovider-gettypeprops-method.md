@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421603"
 ---
 # <a name="icordebugsymbolprovidergettypeprops-method"></a><span data-ttu-id="6e462-102">ICorDebugSymbolProvider::GetTypeProps — metoda</span><span class="sxs-lookup"><span data-stu-id="6e462-102">ICorDebugSymbolProvider::GetTypeProps Method</span></span>
 <span data-ttu-id="6e462-103">Zwraca informacje dotyczące typu właściwości, takie jak liczba podpisu jego parametry ogólne, podany wirtualny adres względny (RVA) w vtable.</span><span class="sxs-lookup"><span data-stu-id="6e462-103">Returns information about a type's properties, such as the number of signature of its generic parameters, given a relative virtual address (RVA) in a vtable.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423250"
 ---
 # <a name="icordebugprocess5gettypelayout-method"></a><span data-ttu-id="6a886-102">ICorDebugProcess5::GetTypeLayout — Metoda</span><span class="sxs-lookup"><span data-stu-id="6a886-102">ICorDebugProcess5::GetTypeLayout Method</span></span>
 <span data-ttu-id="6a886-103">Pobiera informacje o układzie obiektu w pamięci na podstawie jego identyfikatora typu.</span><span class="sxs-lookup"><span data-stu-id="6a886-103">Gets information about the layout of an object in memory based on its type identifier.</span></span>  

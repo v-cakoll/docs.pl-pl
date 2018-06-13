@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427434"
 ---
 # <a name="isymunmanagedmethod-interface"></a><span data-ttu-id="5758a-102">ISymUnmanagedMethod — Interfejs</span><span class="sxs-lookup"><span data-stu-id="5758a-102">ISymUnmanagedMethod Interface</span></span>
 <span data-ttu-id="5758a-103">Reprezentuje metodę w magazynie symboli.</span><span class="sxs-lookup"><span data-stu-id="5758a-103">Represents a method within the symbol store.</span></span> <span data-ttu-id="5758a-104">Ten interfejs umożliwia dostęp do tylko powiązane symbol atrybuty metody, zamiast atrybutów związanych z typu.</span><span class="sxs-lookup"><span data-stu-id="5758a-104">This interface provides access to only the symbol-related attributes of a method, instead of the type-related attributes.</span></span>  

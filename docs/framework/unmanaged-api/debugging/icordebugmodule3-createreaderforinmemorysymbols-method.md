@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421519"
 ---
 # <a name="icordebugmodule3createreaderforinmemorysymbols-method"></a><span data-ttu-id="e1325-102">ICorDebugModule3::CreateReaderForInMemorySymbols — Metoda</span><span class="sxs-lookup"><span data-stu-id="e1325-102">ICorDebugModule3::CreateReaderForInMemorySymbols Method</span></span>
 <span data-ttu-id="e1325-103">Tworzy czytnika symboli debugowania dla modułu dynamicznego.</span><span class="sxs-lookup"><span data-stu-id="e1325-103">Creates a debug symbol reader for a dynamic module.</span></span>  

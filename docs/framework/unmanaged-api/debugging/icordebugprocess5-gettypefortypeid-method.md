@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423419"
 ---
 # <a name="icordebugprocess5gettypefortypeid-method"></a><span data-ttu-id="af441-102">ICorDebugProcess5::GetTypeForTypeID — Metoda</span><span class="sxs-lookup"><span data-stu-id="af441-102">ICorDebugProcess5::GetTypeForTypeID Method</span></span>
 <span data-ttu-id="af441-103">Konwertuje wartość ICorDebugType identyfikator typu.</span><span class="sxs-lookup"><span data-stu-id="af441-103">Converts a type identifier to an ICorDebugType value.</span></span>  

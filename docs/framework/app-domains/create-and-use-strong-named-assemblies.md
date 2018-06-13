@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744645"
 ---
 # <a name="creating-and-using-strong-named-assemblies"></a><span data-ttu-id="85350-102">Tworzenie i używanie zestawów o silnej nazwie</span><span class="sxs-lookup"><span data-stu-id="85350-102">Creating and Using Strong-Named Assemblies</span></span>
 <a name="top"></a> <span data-ttu-id="85350-103">Silnej nazwy składa się z tożsamości zestawu — zwykły tekst nazwa, numer wersji i informacje o ustawieniach kulturowych (jeśli jest dostępny) — oraz klucz publiczny i podpis cyfrowy.</span><span class="sxs-lookup"><span data-stu-id="85350-103">A strong name consists of the assembly's identity—its simple text name, version number, and culture information (if provided)—plus a public key and a digital signature.</span></span> <span data-ttu-id="85350-104">Jest generowany na podstawie pliku zestawu przy użyciu odpowiedniego klucza prywatnego.</span><span class="sxs-lookup"><span data-stu-id="85350-104">It is generated from an assembly file using the corresponding private key.</span></span> <span data-ttu-id="85350-105">(Plik zestawu zawiera manifest zestawu, który zawiera nazwy i wartości skrótu wszystkie pliki wchodzące w skład zestawu).</span><span class="sxs-lookup"><span data-stu-id="85350-105">(The assembly file contains the assembly manifest, which contains the names and hashes of all the files that make up the assembly.)</span></span>  

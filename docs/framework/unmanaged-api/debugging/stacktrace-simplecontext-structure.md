@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424056"
 ---
 # <a name="stacktracesimplecontext-structure"></a><span data-ttu-id="98861-102">StackTrace_SimpleContext — Struktura</span><span class="sxs-lookup"><span data-stu-id="98861-102">StackTrace_SimpleContext Structure</span></span>
 <span data-ttu-id="98861-103">Udostępnia prosty kontekstu, którego można użyć zamiast pełnej `CONTEXT` struktury.</span><span class="sxs-lookup"><span data-stu-id="98861-103">Provides a simple context that can be used in place of a full `CONTEXT` structure.</span></span>  

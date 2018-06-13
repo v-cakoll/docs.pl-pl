@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358833"
 ---
 # <a name="find-the-minimum-value-in-a-numeric-sequence"></a><span data-ttu-id="3b412-102">Znajdź wartość minimalną sekwencją liczb</span><span class="sxs-lookup"><span data-stu-id="3b412-102">Find the Minimum Value in a Numeric Sequence</span></span>
 <span data-ttu-id="3b412-103">Użyj <xref:System.Linq.Enumerable.Min%2A> operatora, aby zwrócić wartość minimalna z sekwencję wartości liczbowych.</span><span class="sxs-lookup"><span data-stu-id="3b412-103">Use the <xref:System.Linq.Enumerable.Min%2A> operator to return the minimum value from a sequence of numeric values.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356799"
 ---
 # <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a><span data-ttu-id="1eda1-102">Porady: Użyj procedur składowanych mapowane do wielu kształtów wyników</span><span class="sxs-lookup"><span data-stu-id="1eda1-102">How to: Use Stored Procedures Mapped for Multiple Result Shapes</span></span>
 <span data-ttu-id="1eda1-103">Gdy procedura składowana może zwracać wiele kształtów wynik, zwracany typ nie silnie typizowaną do projekcji pojedynczego kształtu.</span><span class="sxs-lookup"><span data-stu-id="1eda1-103">When a stored procedure can return multiple result shapes, the return type cannot be strongly typed to a single projection shape.</span></span> <span data-ttu-id="1eda1-104">Mimo że [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] można wygenerować wszystkich typów możliwych projekcji, nie może znać kolejności, w której będą zwracane.</span><span class="sxs-lookup"><span data-stu-id="1eda1-104">Although [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] can generate all possible projection types, it cannot know the order in which they will be returned.</span></span>  

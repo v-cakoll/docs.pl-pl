@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744580"
 ---
 # <a name="pipeline-development"></a><span data-ttu-id="67ea3-102">Opracowywanie potoku</span><span class="sxs-lookup"><span data-stu-id="67ea3-102">Pipeline Development</span></span>
 <span data-ttu-id="67ea3-103">Potok dodatku jest ścieżką segmentów potoku, w których aplikacja hosta i jego dodatku musi komunikować się ze sobą.</span><span class="sxs-lookup"><span data-stu-id="67ea3-103">The add-in pipeline is the path of pipeline segments that the host application and its add-in must use to communicate with each other.</span></span>  

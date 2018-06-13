@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425542"
 ---
 # <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a><span data-ttu-id="5cd45-102">ISymENCUnmanagedMethod::GetSourceExtentInDocument — Metoda</span><span class="sxs-lookup"><span data-stu-id="5cd45-102">ISymENCUnmanagedMethod::GetSourceExtentInDocument Method</span></span>
 <span data-ttu-id="5cd45-103">Pobiera najmniejszą liczbę wierszy i uruchomić największy wiersz end dla metody w określonego dokumentu.</span><span class="sxs-lookup"><span data-stu-id="5cd45-103">Gets the smallest start line and largest end line for the method in a specific document.</span></span>  

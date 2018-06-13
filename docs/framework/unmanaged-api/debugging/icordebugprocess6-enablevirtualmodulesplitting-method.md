@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423479"
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a><span data-ttu-id="f58bc-102">Metoda ICorDebugProcess6::EnableVirtualModuleSplitting</span><span class="sxs-lookup"><span data-stu-id="f58bc-102">ICorDebugProcess6::EnableVirtualModuleSplitting Method</span></span>
 <span data-ttu-id="f58bc-103">Włącza lub wyłącza wirtualnego modułu dzielenia.</span><span class="sxs-lookup"><span data-stu-id="f58bc-103">Enables or disables virtual module splitting.</span></span>  

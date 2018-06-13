@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427040"
 ---
 # <a name="isymunmanagedreader2getsymattributepreremap-method"></a><span data-ttu-id="a111f-102">ISymUnmanagedReader2::GetSymAttributePreRemap — Metoda</span><span class="sxs-lookup"><span data-stu-id="a111f-102">ISymUnmanagedReader2::GetSymAttributePreRemap Method</span></span>
 <span data-ttu-id="a111f-103">Pobiera atrybut niestandardowy ustalane na podstawie jego nazwy.</span><span class="sxs-lookup"><span data-stu-id="a111f-103">Gets a custom attribute based upon its name.</span></span> <span data-ttu-id="a111f-104">W przeciwieństwie do niestandardowych atrybutów metadanych te atrybuty są przechowywane w magazynie symboli.</span><span class="sxs-lookup"><span data-stu-id="a111f-104">Unlike metadata custom attributes, these attributes are held in the symbol store.</span></span>  

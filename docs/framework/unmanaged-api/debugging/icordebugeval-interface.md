@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423039"
 ---
 # <a name="icordebugeval-interface1"></a><span data-ttu-id="611f0-102">ICorDebugEval Interface1</span><span class="sxs-lookup"><span data-stu-id="611f0-102">ICorDebugEval Interface1</span></span>
 <span data-ttu-id="611f0-103">Dostarcza metody umożliwiające debugerowi wykonywanie kodu w kontekście debugowanego kodu.</span><span class="sxs-lookup"><span data-stu-id="611f0-103">Provides methods to enable the debugger to execute code within the context of the code being debugged.</span></span>  

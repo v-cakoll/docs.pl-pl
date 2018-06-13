@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421921"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a><span data-ttu-id="fb93d-102">ICorDebugMetaDataLocator::GetMetaData — Metoda</span><span class="sxs-lookup"><span data-stu-id="fb93d-102">ICorDebugMetaDataLocator::GetMetaData Method</span></span>
 <span data-ttu-id="fb93d-103">Pyta debugera do zwrócenia pełną ścieżkę do modułu, którego metadanych wymaganego do ukończenia operacji żądanej przez debuger.</span><span class="sxs-lookup"><span data-stu-id="fb93d-103">Asks the debugger to return the full path to a module whose metadata is needed to complete an operation the debugger requested.</span></span>  

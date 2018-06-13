@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393432"
 ---
 # <a name="ipv6-auto-configuration"></a>Automatyczna konfiguracja IPv6
 Co ważne celu dla protokołu IPv6 jest obsługuje węzła typu Plug and Play. Oznacza to, że powinno być możliwe Podłącz węzła do sieci IPv6 i została ona skonfigurowana automatycznie bez interwencji człowieka.  

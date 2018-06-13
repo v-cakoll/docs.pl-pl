@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265275"
 ---
 # <a name="value-c-reference"></a>value (odwołanie w C#)
 Kontekstowe słowo kluczowe `value` jest używany w metodzie dostępu set w deklaracjach zwykłej właściwości. Jest on podobny do parametru wejściowego dla metody. Wyraz `value` odwołuje się do wartości, który próbuje kod klienta można przypisać do właściwości. W poniższym przykładzie `MyDerivedClass` ma właściwość o nazwie `Name` używającą `value` parametr, aby przypisać nowe parametry do pola zapasowy `name`. Z punktu widzenia kodu klienta operacji są zapisywane jako przypisanie proste.  

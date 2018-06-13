@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603967"
 ---
 # <a name="if-operator-visual-basic"></a>If — Operator (Visual Basic)
 Używa zwarcia oceny warunkowo zwracać jedną z dwóch wartości. `If` Operator może zostać wywołany z trzech argumentów lub dwóch argumentów.  

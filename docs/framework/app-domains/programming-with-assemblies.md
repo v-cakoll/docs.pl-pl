@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751873"
 ---
 # <a name="programming-with-assemblies"></a>Programowanie za pomocą zestawów
 Zestawy są blokami konstrukcyjnymi programu .NET Framework; stanowią podstawową jednostkę wdrożenia, kontroli wersji, ponownemu, zakresu aktywacji i uprawnienia zabezpieczeń. Zestaw zawiera środowisko uruchomieniowe języka wspólnego o informacje, które należy znać typ implementacji. Jest kolekcją typów i zasobów, które są przeznaczone do współpracują ze sobą i utworzenia jednostki logicznej funkcji. Do środowiska wykonawczego typ nie istnieje poza kontekstem zestawu.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758032"
 ---
 # <a name="generating-strongly-typed-datasets"></a>Generowanie silnie Typizowane zbiory danych
 Podany schemat XML, który jest zgodny ze schematu XML definicji języka (XSD) standard, można wygenerować silnie typizowaną <xref:System.Data.DataSet> przy użyciu dostarczonego z narzędzia XSD.exe [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)].  

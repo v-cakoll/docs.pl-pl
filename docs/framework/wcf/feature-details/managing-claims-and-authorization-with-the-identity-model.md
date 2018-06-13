@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497029"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości
 Autoryzacja jest proces określania, które mają uprawnienia do zmiany, Wyświetl lub dostęp do zasobu komputera, w przeciwnym razie. Na przykład w firmie, tylko menedżerowie mogą dozwolony dostęp do plików pracownikom. Windows Communication Foundation (WCF) obsługuje dwa mechanizmy do wykonywania przetwarzania autoryzacji. Pierwszy mechanizm umożliwia sterowanie autoryzacji przy użyciu istniejących typowych konstrukcji języka wspólnego (CLR). Drugim jest znany jako modelu opartego na oświadczeniach *modelu tożsamości*. Usługi WCF używa modelu tożsamości można utworzyć oświadczenia na podstawie wiadomości przychodzących. Obsługuje nowe typy oświadczeń autoryzacji niestandardowej schematów można rozszerzyć klasy modelu tożsamości. Ten temat zawiera omówienie główne pojęcia dotyczące programowania funkcji modelu tożsamości, a także listę najważniejszych klas, które korzysta z funkcji.  

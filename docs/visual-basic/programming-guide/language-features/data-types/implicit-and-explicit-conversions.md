@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656168"
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>Konwersje jawne i niejawne (Visual Basic)
 *Niejawna konwersja* nie wymaga żadnych specjalnych składni w kodzie źródłowym. W poniższym przykładzie, Visual Basic niejawnie konwertuje wartość `k` do wartości zmiennoprzecinkowych pojedynczej precyzji przed przypisaniem go do `q`.  

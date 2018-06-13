@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33279987"
 ---
 # <a name="select-clause-c-reference"></a>select — Klauzula (odwołanie w C#)
 W wyrażeniu zapytania `select` klauzuli Określa typ wartości, które będą tworzone podczas wykonywania zapytania. Wynik jest oparta na obliczanie poprzedniego klauzule i wszystkie wyrażenia w `select` klauzuli samej siebie. Wyrażenia zapytania musi kończyć się albo `select` klauzuli lub [grupy](../../../csharp/language-reference/keywords/group-clause.md) klauzuli.  

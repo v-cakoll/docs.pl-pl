@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398186"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>Zdarzenia ETW monitorowania zasobów domen aplikacji (ARM)
 <a name="top"></a> Zdarzenia te zawierają szczegółowe informacje diagnostyczne o stanie domeny aplikacji. Można użyć tych zdarzeń lub użyć zasobów domen aplikacji (ARM) funkcji monitorowania w celu uzyskania tych samych informacji.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529626"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Wskazówki: tworzenie dostępnej aplikacji bazującej na systemie Windows
 Tworzenie aplikacji dostępny implikacje ważnymi. Wiele rządy ma przepisy dotyczące ułatwień dostępu dla zakupów oprogramowania. Logo Certified for Windows zawiera wymagania dotyczące ułatwień dostępu. Szacowany mieszkańców 30 milionów intruzowi US, ile z nich potencjalnych klientów, mają wpływu na dostępność oprogramowania.  

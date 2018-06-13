@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500672"
 ---
 # <a name="custom-binding-imperative"></a>Powiązanie niestandardowe imperatywne
 Przykładzie pokazano, jak napisać kod imperatywnych do definiowania i użyj niestandardowego powiązania bez użycia pliku konfiguracji lub kliencie generowany Windows Communication Foundation (WCF). W tym przykładzie łączy funkcje oferowane przez HTTP transport i kanał niezawodnej sesji, można utworzyć niezawodnej powiązanie oparte na protokole HTTP. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi Kalkulator.  

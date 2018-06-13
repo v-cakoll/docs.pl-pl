@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656022"
 ---
 # <a name="nullable-value-types-visual-basic"></a>Typy o wartości zerowalnej (Visual Basic)
 Czasami użytkownik pracuje z typem wartości, która nie ma zdefiniowanej wartości w pewnych okolicznościach. Na przykład pola w bazie danych może być konieczne rozróżnienia o przypisane wartości, który jest łatwy do rozpoznania i nie ma przypisanej wartości. Typy wartości można rozszerzyć ich normalne wartości lub wartość null. Przedłużenie jest nazywany *typ dopuszczający wartość null*.  

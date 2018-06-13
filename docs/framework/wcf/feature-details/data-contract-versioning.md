@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496289"
 ---
 # <a name="data-contract-versioning"></a>Przechowywanie wersji kontraktów danych
 Jak aplikacje rozwijać, może również trzeba zmienić użycia usług kontraktów danych. W tym temacie opisano sposób wersji kontraktów danych. W tym temacie opisano mechanizmy kontroli wersji kontraktu danych. Pełny przegląd i wskazówki przetestowanego przechowywania wersji, zobacz [najlepsze rozwiązania: przechowywanie wersji kontraktów danych](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  

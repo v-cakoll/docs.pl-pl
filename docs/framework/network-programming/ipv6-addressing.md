@@ -34,6 +34,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394839"
 ---
 # <a name="ipv6-addressing"></a>Adresowanie IPv6
 W Internet Protocol w wersji 6 (IPv6) adresy to 128 bitów. Jedną z przyczyn miejsca długich adresów jest dalszy dostępnych adresów do hierarchii domen routingu, które odzwierciedlać topologii sieci Internet. Kolejny powód jest mapowania adresów karty sieciowe (lub interfejsy) łączące urządzeń w sieci. IPv6 funkcjami związanego z używaniem możliwość rozpoznawania adresów na najniższym poziomie, który znajduje się na poziomie interfejsu sieciowego i zapewnia również funkcję automatycznej konfiguracji.  

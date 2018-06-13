@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757882"
 ---
 # <a name="ltsqlworkflowinstancestoregt"></a>&lt;Obiekt sqlWorkflowInstanceStore&gt;
 Zachowanie usługi, która pozwala na skonfigurowanie <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> funkcji, która obsługuje trwałych informacji o stanie dla wystąpienia usługi przepływu pracy w bazie danych programu SQL Server 2005 lub SQL Server 2008. Aby uzyskać więcej informacji na temat tej funkcji, zobacz [magazyn wystąpienia przepływu pracy SQL](../../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).  

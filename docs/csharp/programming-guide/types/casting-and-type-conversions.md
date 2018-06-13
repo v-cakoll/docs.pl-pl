@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336560"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Rzutowanie i konwersje typów (Przewodnik programowania w języku C#)
 C# jest wpisany statycznie w czasie kompilacji, po zadeklarowaniu zmiennej, nie można ponownie zadeklarować lub używany do przechowywania wartości innego typu, o ile nie jest możliwe do przekonwertowania na typ zmiennej typu. Na przykład nie jest konwersja z typu integer do dowolnego ciągu dowolnych. W związku z tym po deklaracji `i` jako liczba całkowita, nie można przypisać ciąg "Hello", jak to pokazano w poniższym kodzie.  

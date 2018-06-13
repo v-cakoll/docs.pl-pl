@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497155"
 ---
 # <a name="nettcp-port-sharing"></a>Współużytkowanie portów w składniku Net.TCP
 Windows Communication Foundation (WCF) zapewnia nowy protokół sieciach opartych na protokole TCP (net.tcp://) do komunikacji wysokiej wydajności. Usługi WCF wprowadza również nowy składnik systemu usługi udostępniania portów Net.TCP, który umożliwia porty net.tcp, które mają być udostępniane wielu procesom użytkownika.  

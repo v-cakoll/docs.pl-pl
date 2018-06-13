@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393987"
 ---
 # <a name="cache-policy"></a>Zasady pamięci podręcznej
 Zasady pamięci podręcznej definiuje reguły, które są używane do ustalenia, czy można spełnić żądania przy użyciu pamięci podręcznej kopię żądanego zasobu. Określ aplikacje, wymagania dotyczące pamięci podręcznej klienta dla świeżości, ale zasady skuteczne pamięci podręcznej jest określany przez wymagania dotyczące pamięci podręcznej klienta, wygaśnięcia zawartości serwera oraz wymagania dotyczące ponownego sprawdzania poprawności serwera. Interakcja wymagania zasad i serwera pamięci podręcznej klienta zawsze powoduje najbardziej zachowawcze zasady pamięci podręcznej, aby zapewnić, że najnowsza zawartość jest zwracana do aplikacji klienckiej.  

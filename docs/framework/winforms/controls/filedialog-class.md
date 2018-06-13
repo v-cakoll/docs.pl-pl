@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526940"
 ---
 # <a name="filedialog-class"></a>FileDialog — Klasa
 Formularze systemu Windows <xref:System.Windows.Forms.FileDialog> klasy jest wspólna klasa podstawowa dla <xref:System.Windows.Forms.OpenFileDialog> i <xref:System.Windows.Forms.SaveFileDialog> składników. Można wprowadzać zmiany do <xref:System.Windows.Forms.FileDialog> klasy, które mają wpływ na wygląd i zachowanie tych okien dialogowych, w zależności od wersji systemu Windows, aplikacja jest uruchomiona na.  

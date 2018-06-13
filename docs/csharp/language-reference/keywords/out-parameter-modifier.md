@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33288622"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>out — Modyfikator parametrów (odwołanie w C#)
 `out` — Słowo kluczowe powoduje, że argumenty przekazywane przez odwołanie. Przypomina to [ref](ref.md) — słowo kluczowe, z wyjątkiem `ref` wymaga zainicjowanej zmiennej przed przekazaniem. Istnieje również tak samo, jak [w](in-parameter-modifier.md) — słowo kluczowe, z wyjątkiem `in` wywołaną metodę zmodyfikować wartość argumentu nie jest możliwe. Aby użyć `out` jawnie należy użyć parametru definicję metody i wywołanie metody `out` — słowo kluczowe. Na przykład:  

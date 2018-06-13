@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393153"
 ---
 # <a name="default-marshaling-for-arrays"></a>Domyślny marshaling dla tablic
 W aplikacji, składające się wyłącznie z kodu zarządzanego środowisko uruchomieniowe języka wspólnego przekazuje typy tablic jako we/wy parametrów. Z kolei międzyoperacyjnego organizatora przekazuje tablicy, tak jak parametry domyślnie.  

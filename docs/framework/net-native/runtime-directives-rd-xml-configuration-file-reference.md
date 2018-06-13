@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397276"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)
 Dyrektyw środowiska uruchomieniowego (. rd.xml) pliku jest plik konfiguracyjny XML, który określa, czy program wyznaczonych elementy są dostępne w celu odbicia. Oto przykład pliku dyrektyw środowiska uruchomieniowego:  

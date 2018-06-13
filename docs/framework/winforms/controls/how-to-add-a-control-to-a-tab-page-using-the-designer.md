@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529594"
 ---
 # <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a>Porady: dodawanie formantu do strony karty przy użyciu narzędzia Projektant
 Korzystanie z interfejsu Windows Forms <xref:System.Windows.Forms.TabControl> jest, aby wyświetlić inne formanty w sposób zorganizowany. Te instrukcje służy do wyświetlania obrazu w głównej części strony karty. Aby uzyskać informacji o dodawaniu ikony do etykiety część strony karty, zobacz [porady: Zmienianie wyglądu składnika TabControl formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).  

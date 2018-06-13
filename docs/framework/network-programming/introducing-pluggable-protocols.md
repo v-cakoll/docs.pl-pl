@@ -30,6 +30,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396393"
 ---
 # <a name="introducing-pluggable-protocols"></a>Wprowadzenie podłączany protokołów
 Microsoft .NET Framework udostępnia implementację warstwowych, rozszerzalne i zarządzanych usług internetowych, które można zintegrować szybko i łatwo aplikacji. Dostęp do Internetu klas w <xref:System.Net> i <xref:System.Net.Sockets> przestrzeni nazw może służyć do wdrożenia aplikacji opartych na sieci Web, a internetowy.  

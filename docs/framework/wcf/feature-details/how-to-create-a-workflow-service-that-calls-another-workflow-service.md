@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497194"
 ---
 # <a name="how-to-create-a-workflow-service-that-calls-another-workflow-service"></a>Instrukcje: Tworzenie usługi przepływu pracy wywołującej inną usługę przepływu pracy
 Czasami jest niezbędne dla usługi przepływu pracy można uzyskać informacji z innej usługi przepływu pracy.  W tym temacie przedstawiono sposób wywoływania jednej usługi przepływu pracy z innej. W tym temacie utworzymy dwie usługi przepływu pracy; jeden, który ma metodę, która odwraca ciągu wejściowego, a druga konwertujący ciągu wejściowego na wielkie litery, po wycofaniu ciąg, który używa pierwszej usługi.  

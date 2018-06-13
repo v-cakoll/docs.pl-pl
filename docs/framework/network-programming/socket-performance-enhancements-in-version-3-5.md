@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395882"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>Ulepszenia wydajności gniazda w wersji 3.5
 <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> Klasa została rozszerzona w wersji 3.5 do użycia przez aplikacje używające sieci asynchroniczne We/Wy, aby osiągnąć najwyższą wydajność. Dodano szereg nowych klas jako część zestawu rozszerzeń <xref:System.Net.Sockets.Socket> klasy, która zapewnić alternatywne wzorca asynchronicznego, które mogą być używane przez aplikacje specjalistyczne gniazda wysokiej wydajności. Te ulepszenia zostały zaprojektowane specjalnie dla aplikacji serwera sieci, które wymagają wysokiej wydajności. Aplikację można używać wyłącznie rozszerzone wzorca asynchronicznego lub tylko w docelowe gorących obszary aplikacji (w przypadku odbierania dużej ilości danych, na przykład).  

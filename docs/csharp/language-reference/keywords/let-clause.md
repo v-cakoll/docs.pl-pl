@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269643"
 ---
 # <a name="let-clause-c-reference"></a>Klauzula Let (odwołanie w C#)
 W wyrażeniu zapytania czasami jest przydatne do przechowywania wynik wyrażenia podrzędnego, aby można było go używać w klauzulach kolejne. Można to zrobić z `let` — słowo kluczowe, która tworzy nową zmienną zakresu i inicjowania wynik wyrażenia, należy podać. Po zainicjowany z wartością, zmienna zakresu nie może służyć do przechowywania innej wartości. Jednak jeśli posiada kolejność typu zmienną zakresu może być badana.  

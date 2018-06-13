@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496328"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Przegląd integrowania z aplikacjami COM+
 Windows Communication Foundation (WCF) udostępnia bogate środowisko tworzenia aplikacji rozproszonych. Jeśli korzystasz już z logiki na podstawie składnika aplikacji hostowanej w modelu COM +, służy WCF do rozszerzenia istniejących logiki zamiast konieczności ponownego zapisania go. Typowy scenariusz obejmuje, gdy chcesz udostępnić istniejącego modelu COM + lub usług dla przedsiębiorstw logiki biznesowej za pośrednictwem usług sieci Web.  

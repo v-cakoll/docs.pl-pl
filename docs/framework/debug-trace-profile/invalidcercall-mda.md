@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393620"
 ---
 # <a name="invalidcercall-mda"></a>invalidCERCall MDA
 `invalidCERCall` Zarządzany Asystent debugowania (MDA) została aktywowana po wywołaniu wykresu (CER) region ograniczonego wykonania metody, która ma nie kontraktu niezawodności lub zbyt słabe kontraktu. Kontrakt słabe jest kontraktu, który deklaruje, że najgorszy uszkodzenie wielkość stanu jest zakresu większy niż wystąpienie przekazany do wywołania, oznacza to, <xref:System.AppDomain> lub stan procesu może ulec uszkodzeniu lub jego wynik nie jest zawsze sposób niejednoznaczny Obliczanie gdy jest wywoływany w CER.  

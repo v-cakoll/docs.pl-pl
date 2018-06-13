@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527735"
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Powiadomienie o zmianie w powiązaniu danych w formularzach systemu Windows
 Jednym z najważniejszych pojęć wiązanie danych formularzy systemu Windows jest *powiadomienie o zmianie*. Aby upewnić się, że źródło danych i formanty powiązane zawsze mieć najnowsze dane, należy dodać powiadomienia o zmianie dla powiązania danych. Aby upewnij się, że formanty powiązane są powiadamiani o zmiany wprowadzone do swojego źródła danych i źródła danych jest powiadamiany o zmiany dokonane w powiązanej właściwości formantu.  

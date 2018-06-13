@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756514"
 ---
 # <a name="association-type"></a>Typ powiązania
 *Typ skojarzenia* (nazywanych również skojarzenie) jest podstawowym blokiem opisu relacje w modelu danych jednostki (EDM). W modelu koncepcyjnym, skojarzenie reprezentuje relację między dwiema [typów jednostek](../../../../docs/framework/data/adonet/entity-type.md) (takich jak `Customer` i `Order`). W aplikacji, wystąpienie skojarzenia reprezentuje określone skojarzenia (takie jak skojarzenie między wystąpieniem `Customer` i wystąpienie `Order`). Skojarzenie wystąpienia są logicznie pogrupowane w [zestawu skojarzeń](../../../../docs/framework/data/adonet/association-set.md).  

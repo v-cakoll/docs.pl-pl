@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539419"
 ---
 # <a name="how-to-implement-the-ilistsource-interface"></a>Porady: implementowanie interfejsu IListSource
 Implementowanie <xref:System.ComponentModel.IListSource> interfejs do utworzenia możliwej do wiązania klasy, który nie implementuje <xref:System.Collections.IList> , ale zamiast tego zawiera listę z innej lokalizacji.  

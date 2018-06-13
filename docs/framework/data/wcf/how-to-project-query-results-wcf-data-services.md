@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353895"
 ---
 # <a name="how-to-project-query-results-wcf-data-services"></a>Porady: projekt wyników kwerendy (usługi danych WCF)
 Projekcja udostępnia mechanizm zmniejszyć ilość danych zwróconych przez zapytanie, określając, że niektóre właściwości jednostki są zwracane w odpowiedzi. Można wykonać rzutowania z wyników [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] zapytania przy użyciu `$select` opcji zapytania lub za pomocą [wybierz](~/docs/csharp/language-reference/keywords/select-clause.md) klauzuli ([wybierz](~/docs/visual-basic/language-reference/queries/select-clause.md) w języku Visual Basic) w zapytaniu składnika LINQ. Aby uzyskać więcej informacji, zobacz [zapytanie usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  

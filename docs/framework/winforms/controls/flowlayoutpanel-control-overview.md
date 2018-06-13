@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526728"
 ---
 # <a name="flowlayoutpanel-control-overview"></a>FlowLayoutPanel — Informacje o formancie
 <xref:System.Windows.Forms.FlowLayoutPanel> Kontroli rozmieszcza jego zawartość w kierunku przepływu pozioma lub pionowa. Można zawijać zawartość formantu z jednego wiersza do następnego lub jedną kolumnę do następnego. Alternatywnie można przyciąć zamiast zawijania jego zawartość.  

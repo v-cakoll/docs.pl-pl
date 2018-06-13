@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339608"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Porady: definiowanie równości wartości dla typu (Przewodnik programowania w języku C#)
 Podczas definiowania klasy lub struktury, możesz zdecydować, czy dobrym rozwiązaniem jest utworzenie niestandardowej definicji równości wartości (lub odpowiednik) dla typu. Zazwyczaj równości wartości zaimplementować w sytuacji, gdy oczekiwano obiektów tego typu do dodania do kolekcji jakieś lub ich podstawowym celem jest przechowywanie zestaw pól lub właściwości. Definicja równości wartości można utworzyć na porównania pól i właściwości w typie lub można utworzyć definicji w podzestawie. Jednak w obu przypadkach, w obu klas i struktur, implementacji należy wykonać pięć gwarancje korelacji:  

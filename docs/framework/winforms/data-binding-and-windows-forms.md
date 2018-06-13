@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541664"
 ---
 # <a name="data-binding-and-windows-forms"></a>Powiązanie danych i formularze systemu Windows
 W formularzach systemu Windows można powiązać źródła danych nie tylko tradycyjnych, ale także do niemal wszystkich struktury, która zawiera dane. Można powiązać tablicy wartości, które obliczenia w czasie wykonywania, Odczyt z pliku lub pochodzić od wartości innych kontrolek.  

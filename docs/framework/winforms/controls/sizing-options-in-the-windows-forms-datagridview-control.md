@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541757"
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Opcje ustalania rozmiaru w formancie DataGridView formularzy systemu Windows
 <xref:System.Windows.Forms.DataGridView> wiersze, kolumny i nagłówki, można zmienić rozmiar wiele różnych wystąpień. W poniższej tabeli przedstawiono te wystąpienia.  

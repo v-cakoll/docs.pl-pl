@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533130"
 ---
 # <a name="how-to-split-a-window-horizontally"></a>Porady: dzielenie okna w poziomie
 Poniższy przykład kodu sprawia, że podziału, która dzieli <xref:System.Windows.Forms.SplitContainer> poziome formantu.  

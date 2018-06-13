@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269703"
 ---
 # <a name="order-the-results-of-a-join-clause"></a>Kolejność wyników klauzuli join
 Ten przykład przedstawia sposób sortowania wyników operacji tworzenia sprzężenia. Należy pamiętać, że kolejność jest wykonywane po sprzężenia. Chociaż można używać `orderby` klauzuli z co najmniej jednym źródle sekwencji przed sprzężenia, zazwyczaj nie zaleca się jej. Niektórzy dostawcy LINQ nie może zachować kolejność po sprzężenia.  

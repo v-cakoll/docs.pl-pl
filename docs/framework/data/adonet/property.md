@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353370"
 ---
 # <a name="property"></a>property
 *Właściwości* są podstawowymi blokami konstrukcyjnymi elementu [typów jednostek](../../../../docs/framework/data/adonet/entity-type.md) i [typów złożonych](../../../../docs/framework/data/adonet/complex-type.md). Właściwości definiują kształt i właściwości danych, który będzie zawierać wystąpienia typu jednostki lub typu złożonego. Właściwości w modelu koncepcyjnym są analogiczne do właściwości zdefiniowane w klasie. W ten sam sposób, że właściwości dla klasy, zdefiniuj kształtu klasy i zawiera informacje o obiektach właściwości w modelu koncepcyjnym zdefiniuj kształtu typu jednostki i zawiera informacje na temat wystąpień typu jednostki.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526643"
 ---
 # <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>Porady: tworzenie podstawowych formularzy systemu Windows ToolStrip z elementami standardowymi przy użyciu narzędzia Projektant
 Poniższa procedura przedstawia sposób tworzenia <xref:System.Windows.Forms.ToolStrip> i Dodaj siedem <xref:System.Windows.Forms.ToolStripButton> formantów, które reprezentują typowych zadań.  

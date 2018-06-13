@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528622"
 ---
 # <a name="helpprovider-component-overview-windows-forms"></a>HelpProvider — Informacje o składniku (Formularze systemu Windows)
 Formularze systemu Windows [helpprovider —](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md) składnik jest używany do skojarzenia z aplikacją Windows pomocy HTML 1.x pliku pomocy (plik .chm produkowanych Workshop pomocy HTML, lub plik htm). Zapewniają pomoc na wiele sposobów:  

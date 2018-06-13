@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530276"
 ---
 # <a name="how-to-copy-controls-between-windows-forms"></a>Porady: kopiowanie formantów pomiędzy formularzami systemu Windows
 Formant może skopiować na tym samym formularzu, na innej formy w projekcie lub do Schowka w innych rozwiązań do użytku.  

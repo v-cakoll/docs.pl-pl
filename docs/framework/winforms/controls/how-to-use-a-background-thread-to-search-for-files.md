@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540306"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>Porady: użycie wątku w tle do wyszukiwania plików
 <xref:System.ComponentModel.BackgroundWorker> Składnika zastępuje i dodaje funkcje do <xref:System.Threading> przestrzeni nazw, jednak <xref:System.Threading> przestrzeni nazw są przechowywane dla zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli zostanie wybrana. Aby uzyskać więcej informacji, zobacz [BackgroundWorker — informacje o składniku](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md).  

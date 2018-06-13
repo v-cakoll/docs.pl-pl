@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759026"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>Element DataAdapter DataTable i mapowania elementu DataColumn
 A **element DataAdapter** zawiera kolekcję zero lub więcej <xref:System.Data.Common.DataTableMapping> obiekty w jego **TableMappings** właściwości. A **DataTableMapping** zapewnia wzorca mapowania między dane zwrócone w wyniku zapytania względem źródła danych, a <xref:System.Data.DataTable>. **DataTableMapping** nazwy mogą być przekazywane zamiast **DataTable** nazwie do **wypełnienia** metody **element DataAdapter**. Poniższy przykład tworzy **DataTableMapping** o nazwie **AuthorsMapping** dla **autorów** tabeli.  

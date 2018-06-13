@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758360"
 ---
 # <a name="adding-existing-constraints-to-a-dataset"></a>Dodawanie istniejących ograniczeń do zestawu danych
 **Wypełnienia** metody **element DataAdapter** wypełnia <xref:System.Data.DataSet> tylko z tabeli kolumn i wierszy ze źródła danych; jednak ograniczenia są często ustawione przez źródło danych **wypełnienia** — metoda nie dodaje te informacje schematu **DataSet** domyślnie. Aby wypełnić **zestawu danych** z istniejących informacji ograniczenia klucza podstawowego źródła danych, możesz albo wywołanie **FillSchema** metody **element DataAdapter**, lub ustaw **MissingSchemaAction** właściwość **element DataAdapter** do **AddWithKey** przed wywołaniem **wypełnienia**. Daje to pewność, że klucz podstawowy ograniczeń **DataSet** odzwierciedlają w źródle danych. Ograniczenie klucza obcego informacji nie jest dołączana i muszą być tworzone jawne, jak pokazano w [ograniczenia DataTable](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751781"
 ---
 # <a name="how-to-create-an-application-domain"></a>Porady: tworzenie domeny aplikacji
 Typowe host czasu wykonywania języka automatycznie tworzy domeny aplikacji, gdy są potrzebne. Można jednak tworzenie domeny aplikacji i załadować do nich te zestawy, które mają być zarządzane osobiście. Można też utworzyć, z których wykonanie kodu domeny aplikacji.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746738"
 ---
 # <a name="ltdnsgt"></a>&lt;DNS&gt;
 Określa oczekiwaną tożsamość serwera. Ta tożsamość jest nieprawidłowa dla X509 tryb uwierzytelniania certyfikatu, jeśli certyfikat serwera zawiera DNS o tej samej wartości. Ma również zastosowanie do trybu uwierzytelniania systemu Windows, jeśli nazwa SPN ma taką samą wartość.  

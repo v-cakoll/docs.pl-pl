@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760989"
 ---
 # <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a>Ograniczenia (XSD) schematu XML mapowania do ograniczenia zestawu danych
 Język definicji schematu XML (XSD) umożliwia ograniczenia określonych elementów i atrybutów, który definiuje. Podczas mapowania schematu XML na schemat relacyjny w <xref:System.Data.DataSet>, ograniczenia schematu XML są mapowane na odpowiednich ograniczeń relacyjnych tabel i kolumn w **zestawu danych**.  

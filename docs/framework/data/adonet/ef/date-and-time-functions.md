@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761119"
 ---
 # <a name="date-and-time-functions"></a>Funkcje daty i godziny
 .NET Framework Data Provider for SQL Server (SqlClient) zapewnia funkcje daty i godziny, które wykonują operacje na `System.DateTime` wartość wejściowa i zwracać `string`, numeryczną, lub `System.DateTime` wartość wyniku. Te funkcje są w obszarze nazw SqlServer, która jest dostępna, gdy używasz SqlClient. Właściwości przestrzeni nazw dostawcy umożliwia programu Entity Framework dowiedzieć się, które prefiks jest używany przez tego dostawcę dla określonych elementów składowych, takich jak typy i funkcje. W poniższej tabeli przedstawiono funkcje daty i godziny SqlClient.  

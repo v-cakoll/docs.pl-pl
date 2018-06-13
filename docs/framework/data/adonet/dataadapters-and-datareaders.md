@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758103"
 ---
 # <a name="dataadapters-and-datareaders"></a>Obiektów DataAdapter i DataReaders
 Można użyć ADO.NET **DataReader** do pobrania z bazy danych tylko do odczytu, tylko do przodu strumienia danych. Wyniki są zwracane jako zapytanie wykonuje i są przechowywane w buforze sieci na komputerze klienckim, dopóki ich zażądać przy użyciu **odczytu** metody **DataReader**. Przy użyciu **DataReader** może zwiększyć wydajność aplikacji, zarówno przez pobranie danych, jak jest dostępny i (domyślnie) przechowywania tylko jeden wiersz jednocześnie w pamięci, zmniejszając narzut systemu.  

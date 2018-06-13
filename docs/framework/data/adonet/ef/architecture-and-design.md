@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766871"
 ---
 # <a name="architecture-and-design"></a>Architektury i projektu
 W module generowania SQL w [dostawcy próbki](http://go.microsoft.com/fwlink/?LinkId=180616) jest zaimplementowany jako obiekt odwiedzający na drzewo wyrażenia, który reprezentuje drzewo poleceń. Generowanie odbywa się w jednym przebiegu za pośrednictwem drzewa wyrażenia.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747128"
 ---
 # <a name="ltcleargt-of-ltclaimtyperequirementsgt-element"></a>&lt;clear&gt; w &lt;claimTypeRequirements&gt;. element,
 Określa, że wszystkie typy roszczeń do usunięcia w federacyjnym poświadczeniu. Dzięki temu, że kolekcji zaczyna się pusta.  

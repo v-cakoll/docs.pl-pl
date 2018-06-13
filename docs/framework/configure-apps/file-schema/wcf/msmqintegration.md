@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751717"
 ---
 # <a name="ltmsmqintegrationgt"></a>&lt;msmqIntegration&gt;
 Określa usługę transportu MSMQ dla niestandardowego powiązania.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758220"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>Opcje technologii ADO.NET i wskazówki
 Platforma danych ADO.NET to strategii wielu wersji, aby zmniejszyć ilość kodowania i konserwacji wymagane dla deweloperów, należy włączyć je do programowania dla modeli danych jednostki koncepcyjnego. Ta platforma obejmuje ADO.NET Entity Framework i technologii pokrewnych.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758844"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>Korzystanie z zestawu danych z usługi sieci Web XML
 <xref:System.Data.DataSet> Została zaprojektowana z projektem bez połączenia, w części w celu ułatwienia wygodny transportu danych za pośrednictwem Internetu. **DataSet** jest "serializacji" można określić jako dane wejściowe lub dane wyjściowe z usług XML sieci Web bez dodatkowy kod wymagany do strumienia zawartości **DataSet** z usługi XML sieci Web do klienta i z powrotem. **DataSet** jest niejawnie przekonwertować na strumień XML przy użyciu formatu elementu DiffGram wysyłane za pośrednictwem sieci i następnie odtworzyć strumienia XML jako **DataSet** po stronie odbiorczej. Zapewnia to bardzo prosty i elastyczny — metoda przekazywania i zwracający dane relacyjne przy użyciu usług XML sieci Web. Aby uzyskać więcej informacji na temat formatu elementu DiffGram, zobacz [DataSets](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  

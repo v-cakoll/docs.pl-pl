@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758831"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>Tworzenie DataTable w wyniku zapytania (LINQ do DataSet)
 Powiązanie danych jest typowym zastosowaniem <xref:System.Data.DataTable> obiektu. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Metoda pobiera wyników zapytania i kopiuje dane na <xref:System.Data.DataTable>, której następnie można użyć dla powiązania danych. Po wykonaniu operacji danych, nowa <xref:System.Data.DataTable> jest scalone źródło <xref:System.Data.DataTable>.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758129"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Porady: tworzenie zasad wydawcy
 Dostawców zestawy mogą stanu aplikacje powinny używać nowszej wersji zestawu przez dołączenie pliku zasad wydawcy w zestawie uaktualniony. Plik zasad wydawcy określa przekierowanie zestawów i kod podstawowych ustawień i używa tego samego formatu co plik konfiguracji aplikacji. Plik zasad wydawcy są kompilowane do zestawu i umieszczane w pamięci podręcznej GAC.  

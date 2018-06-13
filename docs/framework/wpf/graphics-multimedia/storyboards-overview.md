@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566902"
 ---
 # <a name="storyboards-overview"></a>Przegląd Scenorysy
 W tym temacie przedstawiono sposób użycia <xref:System.Windows.Media.Animation.Storyboard> obiekty do organizowania i zastosowania animacji. Opis interaktywnie manipulowania <xref:System.Windows.Media.Animation.Storyboard> obiektów oraz opis właściwości pośrednie przeznaczonych dla składni.  

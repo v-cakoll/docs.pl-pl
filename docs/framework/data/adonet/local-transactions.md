@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758896"
 ---
 # <a name="local-transactions"></a>Lokalne transakcje
 Transakcje w [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] są używane, kiedy chcesz powiązać wielu zadań jednocześnie, dzięki czemu są one wykonywane jako pojedynczą jednostkę pracy. Na przykład załóżmy, że aplikacja wykonuje dwa zadania. Najpierw aktualizuje tabelę z informacjami o kolejności. Po drugie aktualizuje tabeli, która zawiera informacje o spisie, obciążenie elementy uporządkowane. Zadanie nie powiedzie się, zarówno aktualizacje są przywracane.  

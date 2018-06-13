@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758506"
 ---
 # <a name="data-tracing-in-adonet"></a>Dane śledzenia w ADO.NET
 ADO.NET funkcje wbudowane danych śledzenia funkcje, które jest obsługiwana przez dostawców danych .NET dla programu SQL Server, Oracle, OLE DB i ODBC, a także ADO.NET <xref:System.Data.DataSet>i protokoły sieciowe SQL Server.  

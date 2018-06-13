@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394884"
 ---
 # <a name="automatic-proxy-detection"></a>Wykrywanie serwera Proxy
 Wykrywanie serwera proxy jest procesem, za pomocą którego serwer proxy sieci Web jest identyfikowane przez system i używane do wysyłania żądania w imieniu klienta. Ta funkcja jest nazywana autowykrywania serwera Proxy sieci Web (WPAD). Gdy wykrywanie serwera proxy jest włączone, system próbuje zlokalizować skrypt konfiguracji serwera proxy, który jest odpowiedzialny za zwrócenie zestaw serwerów proxy, które mogą być używane dla żądania. Jeśli skrypt konfiguracji serwera proxy zostanie znaleziony, skrypt pobrany, skompilowany i uruchom na komputerze lokalnym, jeśli informacje o serwerze proxy, strumień żądań lub odpowiedzi jest uzyskiwany dla żądania, która używa <xref:System.Net.WebProxy> wystąpienia.  

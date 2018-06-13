@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545366"
 ---
 # <a name="how-to-add-class-handling-for-a-routed-event"></a><span data-ttu-id="8a223-102">Jak dodać obsługę klasy dla zdarzenia trasowanego</span><span class="sxs-lookup"><span data-stu-id="8a223-102">How to: Add Class Handling for a Routed Event</span></span>
 <span data-ttu-id="8a223-103">Kierowane zdarzenia mogą być obsługiwane przez programy obsługi klasy lub wystąpienia obsługi na dowolny węzeł w trasie.</span><span class="sxs-lookup"><span data-stu-id="8a223-103">Routed events can be handled either by class handlers or instance handlers on any given node in the route.</span></span> <span data-ttu-id="8a223-104">Klasy obsługi są wywoływane najpierw i implementacji klasy można pominąć zdarzenia z obsługi wystąpienia lub wprowadzenie innych zachowań określonych zdarzeń na zdarzenia, które należą do klasy podstawowej.</span><span class="sxs-lookup"><span data-stu-id="8a223-104">Class handlers are invoked first, and can be used by class implementations to suppress events from instance handling or introduce other event specific behaviors on events that are owned by base classes.</span></span> <span data-ttu-id="8a223-105">W tym przykładzie przedstawiono dwie metody ściśle związanych wykonawczych obsługę klas.</span><span class="sxs-lookup"><span data-stu-id="8a223-105">This example illustrates two closely related techniques for implementing class handlers.</span></span>  

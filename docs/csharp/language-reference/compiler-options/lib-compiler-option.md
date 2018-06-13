@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216859"
 ---
 # <a name="-lib-c-compiler-options"></a><span data-ttu-id="986fa-102">-lib (opcje kompilatora C#)</span><span class="sxs-lookup"><span data-stu-id="986fa-102">-lib (C# Compiler Options)</span></span>
 <span data-ttu-id="986fa-103">**-Lib** opcji określa lokalizację zestawy, do których odwołuje się za pomocą klasy [— odwołanie (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) opcji.</span><span class="sxs-lookup"><span data-stu-id="986fa-103">The **-lib** option specifies the location of assemblies referenced by means of the [-reference (C# Compiler Options)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) option.</span></span>  

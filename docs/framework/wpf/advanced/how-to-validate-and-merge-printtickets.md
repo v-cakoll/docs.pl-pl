@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548496"
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a><span data-ttu-id="a39db-102">Jak walidować i scalać PrintTickets</span><span class="sxs-lookup"><span data-stu-id="a39db-102">How to: Validate and Merge PrintTickets</span></span>
 <span data-ttu-id="a39db-103">[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [Schematu drukowania](http://go.microsoft.com/fwlink/?LinkId=186397) obejmuje elastyczny i rozszerzalny <xref:System.Printing.PrintCapabilities> i <xref:System.Printing.PrintTicket> elementy.</span><span class="sxs-lookup"><span data-stu-id="a39db-103">The [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [Print Schema](http://go.microsoft.com/fwlink/?LinkId=186397) includes the flexible and extensible <xref:System.Printing.PrintCapabilities> and <xref:System.Printing.PrintTicket> elements.</span></span> <span data-ttu-id="a39db-104">Pierwsza itemizes możliwości drukarki, a drugie Określa, jak urządzenia należy używać tych funkcji w odniesieniu do określonej sekwencji dokumentów, pojedynczy dokument lub pojedynczej strony.</span><span class="sxs-lookup"><span data-stu-id="a39db-104">The former itemizes the capabilities of a print device and the latter specifies how the device should use those capabilities with respect to a particular sequence of documents, individual document, or individual page.</span></span>  

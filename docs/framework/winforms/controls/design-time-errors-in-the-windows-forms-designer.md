@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527790"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a><span data-ttu-id="76772-102">Błędy czasu projektowania w narzędziu Projektant dla formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="76772-102">Design-Time Errors in the Windows Forms Designer</span></span>
 <span data-ttu-id="76772-103">W tym temacie opisano, co oznacza i użyj listy błędów czasu projektowania, który jest wyświetlany w programie Microsoft Visual Studio, gdy projektant formularzy systemu Windows nie udało się załadować.</span><span class="sxs-lookup"><span data-stu-id="76772-103">This topic explains the meaning and use of the design-time error list that appears in Microsoft Visual Studio when the Windows Forms Designer fails to load.</span></span> <span data-ttu-id="76772-104">Jeśli zostanie wyświetlona lista ten błąd, użytkownik powinien nie go zinterpretować jako błąd w projektancie, ale jako pomoc do poprawiania błędów w kodzie.</span><span class="sxs-lookup"><span data-stu-id="76772-104">If this error list appears, you should not interpret it as a bug in the designer, but as an aid to correcting errors in your code.</span></span>  

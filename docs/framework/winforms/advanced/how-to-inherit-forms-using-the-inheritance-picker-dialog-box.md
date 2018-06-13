@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527764"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a><span data-ttu-id="63e7b-102">Porady: dziedziczenie formularzy korzystających z okna dialogowego selektora dziedziczenia</span><span class="sxs-lookup"><span data-stu-id="63e7b-102">How to: Inherit Forms Using the Inheritance Picker Dialog Box</span></span>
 <span data-ttu-id="63e7b-103">Najprostszym sposobem dziedziczą formularza lub innego obiektu jest użycie **selektora dziedziczenia** okno dialogowe.</span><span class="sxs-lookup"><span data-stu-id="63e7b-103">The easiest way to inherit a form or other object is to use the **Inheritance Picker** dialog box.</span></span> <span data-ttu-id="63e7b-104">Dzięki temu można korzystać z interfejsów kodu lub użytkownika (UI), zostały już utworzone w innych rozwiązań.</span><span class="sxs-lookup"><span data-stu-id="63e7b-104">With it, you can take advantage of code or user interfaces (UI) you have already created in other solutions.</span></span>  

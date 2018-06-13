@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272574"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="dc5df-102">/ — Operator (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="dc5df-102">/ Operator (C# Reference)</span></span>
 <span data-ttu-id="dc5df-103">Operator dzielenia (`/`) dzieli jego pierwszym argumentem przez jego drugi argument operacji.</span><span class="sxs-lookup"><span data-stu-id="dc5df-103">The division operator (`/`) divides its first operand by its second operand.</span></span> <span data-ttu-id="dc5df-104">Wszystkie typy liczbowe ma wstępnie zdefiniowane operatory dzielenia.</span><span class="sxs-lookup"><span data-stu-id="dc5df-104">All numeric types have predefined division operators.</span></span>

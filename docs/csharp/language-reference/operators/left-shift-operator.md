@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33286178"
 ---
 # <a name="ltlt-operator-c-reference"></a><span data-ttu-id="26f29-102">&lt;&lt; Operator (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="26f29-102">&lt;&lt; Operator (C# Reference)</span></span>
 <span data-ttu-id="26f29-103">Operator przesunięcia w lewo (`<<`) zmiany jego pierwszym argumentem pozostawionego przez liczbę bitów określony przez jego drugi argument operacji.</span><span class="sxs-lookup"><span data-stu-id="26f29-103">The left-shift operator (`<<`) shifts its first operand left by the number of bits specified by its second operand.</span></span> <span data-ttu-id="26f29-104">Typ drugiego argumentu operacji musi być [int](../../../csharp/language-reference/keywords/int.md) lub typu, który ma wstępnie zdefiniowanych niejawna konwersja liczbowa na `int`.</span><span class="sxs-lookup"><span data-stu-id="26f29-104">The type of the second operand must be an [int](../../../csharp/language-reference/keywords/int.md) or a type that has a predefined implicit numeric conversion to `int`.</span></span>  

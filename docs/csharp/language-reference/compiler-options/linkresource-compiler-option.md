@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219183"
 ---
 # <a name="-linkresource-c-compiler-options"></a><span data-ttu-id="464c4-102">-linkresource (opcje kompilatora C#)</span><span class="sxs-lookup"><span data-stu-id="464c4-102">-linkresource (C# Compiler Options)</span></span>
 <span data-ttu-id="464c4-103">Tworzy łącze do zasobu .NET Framework w pliku wyjściowym.</span><span class="sxs-lookup"><span data-stu-id="464c4-103">Creates a link to a .NET Framework resource in the output file.</span></span> <span data-ttu-id="464c4-104">Plik zasobu nie została dodana do pliku wyjściowego.</span><span class="sxs-lookup"><span data-stu-id="464c4-104">The resource file is not added to the output file.</span></span> <span data-ttu-id="464c4-105">To różni się od [-zasobów](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) opcję, która osadzić pliku zasobów w pliku wyjściowym.</span><span class="sxs-lookup"><span data-stu-id="464c4-105">This differs from the [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) option which does embed a resource file in the output file.</span></span>  

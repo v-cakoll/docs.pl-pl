@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528785"
 ---
 # <a name="bindingnavigator-control-overview-windows-forms"></a><span data-ttu-id="a3373-102">BindingNavigator — Informacje o formancie [Formularze systemu Windows]</span><span class="sxs-lookup"><span data-stu-id="a3373-102">BindingNavigator Control Overview (Windows Forms)</span></span>
 <span data-ttu-id="a3373-103">Można użyć <xref:System.Windows.Forms.BindingNavigator> formantu, aby utworzyć standardowych środków użytkownikom wyszukiwanie i zmienić danych na formularzu systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="a3373-103">You can use the <xref:System.Windows.Forms.BindingNavigator> control to create a standardized means for users to search and change data on a Windows Form.</span></span> <span data-ttu-id="a3373-104">Często używane <xref:System.Windows.Forms.BindingNavigator> z <xref:System.Windows.Forms.BindingSource> składnik, aby umożliwić użytkownikom przechodzenie między rekordów danych w formularzu i interakcję z rekordów.</span><span class="sxs-lookup"><span data-stu-id="a3373-104">You frequently use <xref:System.Windows.Forms.BindingNavigator> with the <xref:System.Windows.Forms.BindingSource> component to enable users to move through data records on a form and interact with the records.</span></span>  

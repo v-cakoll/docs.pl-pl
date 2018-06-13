@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530149"
 ---
 # <a name="how-to-create-a-read-only-text-box-windows-forms"></a><span data-ttu-id="53610-102">Porady: tworzenie pola tekstowego tylko do odczytu (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="53610-102">How to: Create a Read-Only Text Box (Windows Forms)</span></span>
 <span data-ttu-id="53610-103">Można edytować pole tekstowe formularzy systemu Windows można przekształcać w formancie tylko do odczytu.</span><span class="sxs-lookup"><span data-stu-id="53610-103">You can transform an editable Windows Forms text box into a read-only control.</span></span> <span data-ttu-id="53610-104">Na przykład mogą być wyświetlane pole tekstowe wartość, która zwykle jest edytowane, ale nie może być aktualnie, ze względu na stan aplikacji.</span><span class="sxs-lookup"><span data-stu-id="53610-104">For example, the text box may display a value that is usually edited but may not be currently, due to the state of the application.</span></span>  

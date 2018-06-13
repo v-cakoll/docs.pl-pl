@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529206"
 ---
 # <a name="walkthrough-styling-wpf-content"></a><span data-ttu-id="fee7a-102">Wskazówki: nadawanie stylu zawartości WPF</span><span class="sxs-lookup"><span data-stu-id="fee7a-102">Walkthrough: Styling WPF Content</span></span>
 <span data-ttu-id="fee7a-103">W tym przewodniku opisano sposób stosowanie stylów do formantu Windows Presentation Foundation (WPF) obsługiwanych na formularzu systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="fee7a-103">This walkthrough show you how to apply styling to a Windows Presentation Foundation (WPF) control hosted on a Windows Form.</span></span>  

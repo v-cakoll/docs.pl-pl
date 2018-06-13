@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529541"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a><span data-ttu-id="8d806-102">Wdrożenie ClickOnce w przypadku formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="8d806-102">ClickOnce Deployment for Windows Forms</span></span>
 <span data-ttu-id="8d806-103">W poniższych tematach opisano [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], to technologia łatwe wdrażanie aplikacji formularzy systemu Windows na komputerach klienckich.</span><span class="sxs-lookup"><span data-stu-id="8d806-103">The following topics describe [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], a technology used for easily deploying Windows Forms applications to client computers.</span></span>  

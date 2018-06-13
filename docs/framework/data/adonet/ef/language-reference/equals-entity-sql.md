@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761402"
 ---
 # <a name="-equals-entity-sql"></a><span data-ttu-id="cfd1e-102">= (Równa) (jednostka SQL)</span><span class="sxs-lookup"><span data-stu-id="cfd1e-102">= (Equals) (Entity SQL)</span></span>
 <span data-ttu-id="cfd1e-103">Porównuje równość dwóch wyrażeń.</span><span class="sxs-lookup"><span data-stu-id="cfd1e-103">Compares the equality of two expressions.</span></span>  

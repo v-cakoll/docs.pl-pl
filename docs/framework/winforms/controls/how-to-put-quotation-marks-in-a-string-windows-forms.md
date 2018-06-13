@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534836"
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a><span data-ttu-id="c85a2-102">Porady: umieszczanie cudzysłowu w ciągu (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="c85a2-102">How to: Put Quotation Marks in a String (Windows Forms)</span></span>
 <span data-ttu-id="c85a2-103">Czasami może chcesz umieścić znaki cudzysłowu ("") w ciągu tekstowego.</span><span class="sxs-lookup"><span data-stu-id="c85a2-103">Sometimes you might want to place quotation marks (" ") in a string of text.</span></span> <span data-ttu-id="c85a2-104">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="c85a2-104">For example:</span></span>  

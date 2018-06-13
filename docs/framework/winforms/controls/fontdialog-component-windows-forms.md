@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526370"
 ---
 # <a name="fontdialog-component-windows-forms"></a><span data-ttu-id="fb74c-102">FontDialog — Składnik (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="fb74c-102">FontDialog Component (Windows Forms)</span></span>
 <span data-ttu-id="fb74c-103">Formularze systemu Windows <xref:System.Windows.Forms.FontDialog> składnik jest okno dialogowe wstępnie skonfigurowane.</span><span class="sxs-lookup"><span data-stu-id="fb74c-103">The Windows Forms <xref:System.Windows.Forms.FontDialog> component is a pre-configured dialog box.</span></span> <span data-ttu-id="fb74c-104">Jest to ten sam **czcionki** okno dialogowe udostępnianych przez system operacyjny Windows.</span><span class="sxs-lookup"><span data-stu-id="fb74c-104">It is the same **Font** dialog box exposed by the Windows operating system.</span></span> <span data-ttu-id="fb74c-105">Składnik dziedziczy <xref:System.Windows.Forms.CommonDialog> klasy.</span><span class="sxs-lookup"><span data-stu-id="fb74c-105">The component inherits from the <xref:System.Windows.Forms.CommonDialog> class.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548408"
 ---
 # <a name="filterinputmessage"></a><span data-ttu-id="85fb3-102">FilterInputMessage</span><span class="sxs-lookup"><span data-stu-id="85fb3-102">FilterInputMessage</span></span>
 <span data-ttu-id="85fb3-103">Metoda wywoływana przez PresentationHost.exe zawsze, gdy wiadomość zostanie odebrana, chyba że E_NOTIMPL jest zwracany.</span><span class="sxs-lookup"><span data-stu-id="85fb3-103">Called by PresentationHost.exe whenever a message is received unless E_NOTIMPL is returned.</span></span>  

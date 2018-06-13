@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529928"
 ---
 # <a name="datagridview-control-windows-forms"></a><span data-ttu-id="3913b-102">DataGridView — Formant (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="3913b-102">DataGridView Control (Windows Forms)</span></span>
 <span data-ttu-id="3913b-103">`DataGridView` Kontrola zapewnia wydajny i elastyczny sposób wyświetlania danych w formacie tabelarycznym.</span><span class="sxs-lookup"><span data-stu-id="3913b-103">The `DataGridView` control provides a powerful and flexible way to display data in a tabular format.</span></span> <span data-ttu-id="3913b-104">Można użyć `DataGridView` sterowania do wyświetlenia w widokach tylko do odczytu małe ilości danych lub można skalować, aby pokazać widokach edytowalnych bardzo dużych zestawów danych.</span><span class="sxs-lookup"><span data-stu-id="3913b-104">You can use the `DataGridView` control to show read-only views of a small amount of data, or you can scale it to show editable views of very large sets of data.</span></span>  

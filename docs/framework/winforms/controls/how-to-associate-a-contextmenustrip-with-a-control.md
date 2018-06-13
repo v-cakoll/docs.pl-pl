@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526413"
 ---
 # <a name="how-to-associate-a-contextmenustrip-with-a-control"></a><span data-ttu-id="f1562-102">Porady: skojarzenie właściwości ContextMenuStrip z formantem</span><span class="sxs-lookup"><span data-stu-id="f1562-102">How to: Associate a ContextMenuStrip with a Control</span></span>
 <span data-ttu-id="f1562-103">Po utworzeniu sieci formantów i menu skrótów, umożliwia wyświetlenie menu skrótów danego po kliknięciu formantu poniższych procedur.</span><span class="sxs-lookup"><span data-stu-id="f1562-103">After creating your controls and shortcut menus, use the following procedures to display a given shortcut menu when the user right-clicks the control.</span></span> <span data-ttu-id="f1562-104">Te procedury skojarzyć <xref:System.Windows.Forms.ContextMenuStrip> z formularza systemu Windows i <xref:System.Windows.Forms.ToolStrip> formantu.</span><span class="sxs-lookup"><span data-stu-id="f1562-104">These procedures associate a <xref:System.Windows.Forms.ContextMenuStrip> with a Windows Form and with a <xref:System.Windows.Forms.ToolStrip> control.</span></span>  

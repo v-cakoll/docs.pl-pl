@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271776"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="54766-102">Operator :: (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="54766-102">:: Operator (C# Reference)</span></span>
 <span data-ttu-id="54766-103">Kwalifikator aliasu przestrzeni nazw (`::`) jest używany do wyszukiwania identyfikatorów.</span><span class="sxs-lookup"><span data-stu-id="54766-103">The namespace alias qualifier (`::`) is used to look up identifiers.</span></span> <span data-ttu-id="54766-104">Zawsze znajduje się między dwoma identyfikatorami — jak w przykładzie poniżej:</span><span class="sxs-lookup"><span data-stu-id="54766-104">It is always positioned between two identifiers, as in this example:</span></span>  

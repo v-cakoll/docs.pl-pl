@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529431"
 ---
 # <a name="displaying-data-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="f2d6e-102">Wyświetlanie danych w formancie DataGridView formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="f2d6e-102">Displaying Data in the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="f2d6e-103">`DataGridView` Kontroli jest używana do wyświetlania danych z różnych źródeł danych zewnętrznych.</span><span class="sxs-lookup"><span data-stu-id="f2d6e-103">The `DataGridView` control is used to display data from a variety of external data sources.</span></span> <span data-ttu-id="f2d6e-104">Alternatywnie możesz Dodawanie wierszy i kolumn do formantu i ręcznie umieścić w nim danych.</span><span class="sxs-lookup"><span data-stu-id="f2d6e-104">Alternatively, you can add rows and columns to the control and manually populate it with data.</span></span>  

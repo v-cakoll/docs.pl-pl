@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529461"
 ---
 # <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a><span data-ttu-id="32cde-102">Wskazówki: wykonywanie operacji przeciągania i upuszczania w formularzach systemu Windows</span><span class="sxs-lookup"><span data-stu-id="32cde-102">Walkthrough: Performing a Drag-and-Drop Operation in Windows Forms</span></span>
 <span data-ttu-id="32cde-103">Wykonywanie operacji przeciągania i upuszczania w aplikacjach opartych na systemie Windows musi obsługiwać szereg zdarzeń, głównie <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, i <xref:System.Windows.Forms.Control.DragDrop> zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="32cde-103">To perform drag-and-drop operations within Windows-based applications you must handle a series of events, most notably the <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, and <xref:System.Windows.Forms.Control.DragDrop> events.</span></span> <span data-ttu-id="32cde-104">Praca z informacji dostępnych w przypadku argumentów te zdarzenia, można łatwo ułatwienia operacji przeciągania i upuszczania.</span><span class="sxs-lookup"><span data-stu-id="32cde-104">By working with the information available in the event arguments of these events, you can easily facilitate drag-and-drop operations.</span></span>  

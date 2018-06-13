@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533156"
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-windows-forms"></a><span data-ttu-id="21414-102">HScrollBar i VScrollBar — Formanty (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="21414-102">HScrollBar and VScrollBar Controls (Windows Forms)</span></span>
 <span data-ttu-id="21414-103">Formanty paska przewijania formularzy systemu Windows są używane do zapewnienia nawigację za pośrednictwem długą listę elementów lub duża ilość informacji albo przewijanie w poziomie lub pionie w aplikacji lub kontroli.</span><span class="sxs-lookup"><span data-stu-id="21414-103">Windows Forms scroll bar controls are used to provide easy navigation through a long list of items or a large amount of information by scrolling either horizontally or vertically within an application or control.</span></span> <span data-ttu-id="21414-104">Paski przewijania są wspólnego elementu interfejsu systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="21414-104">Scroll bars are a common element of the Windows interface.</span></span>  

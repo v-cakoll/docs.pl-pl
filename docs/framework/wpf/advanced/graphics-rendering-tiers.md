@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547898"
 ---
 # <a name="graphics-rendering-tiers"></a><span data-ttu-id="ccb00-102">Poziomy zmiany grafiki</span><span class="sxs-lookup"><span data-stu-id="ccb00-102">Graphics Rendering Tiers</span></span>
 <span data-ttu-id="ccb00-103">Warstwa renderowania określa poziom możliwości sprzętowe grafiki i wydajności dla urządzenia z systemem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.</span><span class="sxs-lookup"><span data-stu-id="ccb00-103">A rendering tier defines a level of graphics hardware capability and performance for a device that runs a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application.</span></span>  

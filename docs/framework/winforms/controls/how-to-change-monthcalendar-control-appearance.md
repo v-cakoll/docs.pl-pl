@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531329"
 ---
 # <a name="how-to-change-the-windows-forms-monthcalendar-control39s-appearance"></a><span data-ttu-id="2f03c-102">Porady: Zmienianie formantu MonthCalendar formularzy systemu Windows&#39;wygląd s</span><span class="sxs-lookup"><span data-stu-id="2f03c-102">How to: Change the Windows Forms MonthCalendar Control&#39;s Appearance</span></span>
 <span data-ttu-id="2f03c-103">Formularze systemu Windows <xref:System.Windows.Forms.MonthCalendar> formant umożliwia dostosowanie wyglądu kalendarza na wiele sposobów.</span><span class="sxs-lookup"><span data-stu-id="2f03c-103">The Windows Forms <xref:System.Windows.Forms.MonthCalendar> control allows you to customize the calendar's appearance in many ways.</span></span> <span data-ttu-id="2f03c-104">Na przykład można ustawić schemat kolorów i wybierz wyświetlić lub ukryć numery tygodni i bieżącą datę.</span><span class="sxs-lookup"><span data-stu-id="2f03c-104">For example, you can set the color scheme and choose to display or hide week numbers and the current date.</span></span>  

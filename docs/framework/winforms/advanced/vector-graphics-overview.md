@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528351"
 ---
 # <a name="vector-graphics-overview"></a><span data-ttu-id="a5a0f-102">Przegląd grafiki wektorowej</span><span class="sxs-lookup"><span data-stu-id="a5a0f-102">Vector Graphics Overview</span></span>
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="a5a0f-103"> Rysuje linii, prostokątów i innych kształtów w układzie współrzędnych.</span><span class="sxs-lookup"><span data-stu-id="a5a0f-103"> draws lines, rectangles, and other shapes on a coordinate system.</span></span> <span data-ttu-id="a5a0f-104">Można wybrać spośród różnych systemów współrzędnych, ale domyślny układ współrzędnych ma źródła w lewym górnym rogu z wskazanie osi y skierowany w dół i prawej osi x.</span><span class="sxs-lookup"><span data-stu-id="a5a0f-104">You can choose from a variety of coordinate systems, but the default coordinate system has the origin in the upper-left corner with the x-axis pointing to the right and the y-axis pointing down.</span></span> <span data-ttu-id="a5a0f-105">Jednostka miary w układzie współrzędnych domyślny jest piksela.</span><span class="sxs-lookup"><span data-stu-id="a5a0f-105">The unit of measure in the default coordinate system is the pixel.</span></span>  

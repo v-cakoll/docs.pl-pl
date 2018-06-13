@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529639"
 ---
 # <a name="how-to-apply-attributes-in-windows-forms-controls"></a><span data-ttu-id="3858d-102">Porady: stosowanie atrybutów w formantach formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="3858d-102">How to: Apply Attributes in Windows Forms Controls</span></span>
 <span data-ttu-id="3858d-103">Aby opracować składników i formantów, które nawiązują prawidłową interakcję z środowiska projektowania i poprawnego wykonania w czasie wykonywania, należy poprawnie zastosować atrybutów do klas i członków.</span><span class="sxs-lookup"><span data-stu-id="3858d-103">To develop components and controls that interact correctly with the design environment and execute correctly at run time, you need to apply attributes correctly to classes and members.</span></span>  

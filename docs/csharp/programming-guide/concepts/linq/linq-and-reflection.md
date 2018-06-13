@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317297"
 ---
 # <a name="linq-and-reflection-c"></a><span data-ttu-id="0f50c-102">LINQ i odbicie (C#)</span><span class="sxs-lookup"><span data-stu-id="0f50c-102">LINQ and Reflection (C#)</span></span>
 <span data-ttu-id="0f50c-103">Odbicie biblioteki klas .NET Framework interfejsów API może służyć do badania metadanych w ramach zestawu .NET i utworzyć kolekcje typów, elementy członkowskie typu, parametry i tak dalej, które znajdują się w tym zestawie.</span><span class="sxs-lookup"><span data-stu-id="0f50c-103">The .NET Framework class library reflection APIs can be used to examine the metadata in a .NET assembly and create collections of types, type members, parameters, and so on that are in that assembly.</span></span> <span data-ttu-id="0f50c-104">Ponieważ te kolekcje, obsługuje ogólnego `IEnumerable` interfejsu, może być badana za pomocą LINQ.</span><span class="sxs-lookup"><span data-stu-id="0f50c-104">Because these collections support the generic `IEnumerable` interface, they can be queried by using LINQ.</span></span>  

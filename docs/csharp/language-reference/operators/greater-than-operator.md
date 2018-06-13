@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273501"
 ---
 # <a name="gt-operator-c-reference"></a><span data-ttu-id="c688d-102">&gt; Operator (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="c688d-102">&gt; Operator (C# Reference)</span></span>
 <span data-ttu-id="c688d-103">Wszystkie typy liczbowe oraz wyliczenie zdefiniować operator relacyjny "większe niż" (`>`), która zwracałaby `true` Jeśli pierwszy argument operacji jest większa od drugiej, `false` inaczej.</span><span class="sxs-lookup"><span data-stu-id="c688d-103">All numeric and enumeration types define a "greater than" relational operator (`>`) that returns `true` if the first operand is greater than the second, `false` otherwise.</span></span>  

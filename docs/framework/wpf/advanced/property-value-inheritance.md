@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547397"
 ---
 # <a name="property-value-inheritance"></a>Przejęcie wartości właściwości
 Dziedziczenie wartość właściwości jest funkcją [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] właściwości systemu. Dziedziczenie wartości właściwości umożliwia elementy podrzędne w drzewie elementów, aby uzyskać wartość określonej właściwości z nadrzędnego elementom dziedziczenie tej wartości, ponieważ został ustawiony dowolne miejsce w najbliższym elemencie nadrzędnym. Element nadrzędny może również uzyskać wartość poprzez dziedziczenie wartości właściwości, więc system potencjalnie recurses aż do strony głównej. Dziedziczenie wartość właściwości nie jest domyślne zachowanie systemu właściwość; Właściwość należy ustanowić przy użyciu ustawienia określonego metadanych aby spowodować tej właściwości do zainicjowania dziedziczenie wartości właściwości w elementach podrzędnych.  

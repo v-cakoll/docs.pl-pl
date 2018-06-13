@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551703"
 ---
 # <a name="button"></a>Przycisk
 A <xref:System.Windows.Controls.Button> kontroli reaguje na dane wejściowe użytkownika z myszy, klawiatury, Pióro, lub inne urządzenie wejściowe i zgłasza <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń. A <xref:System.Windows.Controls.Button> jest podstawowy [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] składnik, który może zawierać prostej zawartości, takich jak tekst i może również zawierać złożonych zawartości, takich jak obrazy i <xref:System.Windows.Controls.Panel> kontrolki.  

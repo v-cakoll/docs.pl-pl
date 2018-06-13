@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546744"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>Jak zdiagnozować problematyczne zadanie drukowania
 Administratorzy sieci często pola utrudnień od użytkowników o zadań drukowania, które nie wydruku lub wydrukować powoli. Bogaty zestaw właściwości zadania drukowania w [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] programu Microsoft .NET Framework stanowić sposób przeprowadzania szybkiej diagnostyki zdalnego zadań drukowania.  

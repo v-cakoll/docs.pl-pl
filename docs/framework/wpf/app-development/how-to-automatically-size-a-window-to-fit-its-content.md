@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544874"
 ---
 # <a name="how-to-automatically-size-a-window-to-fit-its-content"></a>Porady: automatycznie rozmiar okna dopasowana do jego zawartości.
 W tym przykładzie przedstawiono sposób ustawiania <xref:System.Windows.Window.SizeToContent%2A> właściwości w celu określenia, jak zmienia rozmiar okna dopasowana do jego zawartości.  

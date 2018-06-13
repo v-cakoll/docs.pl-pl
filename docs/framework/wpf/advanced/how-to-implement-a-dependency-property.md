@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544651"
 ---
 # <a name="how-to-implement-a-dependency-property"></a>Jak implementować właściwość zależności
 W tym przykładzie pokazano, jak utworzyć kopię [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] właściwości o <xref:System.Windows.DependencyProperty> pola, w związku z tym Definiowanie właściwości zależności. Podczas definiowania własnych właściwości i chcesz, aby obsługiwać wiele aspektów [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] funkcje, w tym style, powiązanie danych dziedziczenia, animacji i wartości domyślne, należy je zaimplementować jako właściwość zależności.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548038"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Jak wykryć czy zadanie drukowania może zostać zrealizowane o tej porze dnia
 Kolejki wydruku nie zawsze są dostępne przez 24 godziny na dobę. Mają one właściwości czasu rozpoczęcia i zakończenia, które można ustawić, aby były niedostępne w pewnych porach dnia. Ta funkcja może być używana na przykład zarezerwować drukarek do wyłącznego użytku niektórych działu po 17: 00. Działu musi innej kolejki drukarki niż aplikacje innych działów obsługi użycia. Czy można ustawić kolejki dla innych działów będzie dostępny od 17: 00, gdy kolejka działu favored można ustawić jako dostępne przez cały czas.  

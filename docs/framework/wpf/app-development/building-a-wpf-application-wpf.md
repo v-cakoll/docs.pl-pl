@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549386"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Kompilowanie aplikacji WPF (WPF)
 Aplikacje systemu Windows Presentation Foundation (WPF) może być utworzone jako [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pliki wykonywalne (.exe), bibliotekach (dll) lub kombinację obu typów zestawów. W tym temacie przedstawiono sposób tworzenia [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji i opisano kluczowe kroki procesu kompilacji.  

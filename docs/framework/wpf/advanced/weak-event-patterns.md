@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549350"
 ---
 # <a name="weak-event-patterns"></a>Słabe wzorce zdarzeń
 W aplikacjach istnieje możliwość, że programy obsługi, które są dołączone do źródła zdarzeń nie zostaną usunięte w połączeniu z obiektu odbiornika, który dołączyć program obsługi do źródła. Taka sytuacja może prowadzić do przecieki pamięci. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] wprowadza wzorzec projektowania, który może służyć do rozwiązania tego problemu, zapewniając klasy Menedżera dedykowane dla konkretnego zdarzenia i implementowanie interfejsu na odbiorników dla tego zdarzenia. Ten wzorzec projektowy nosi nazwę *wzorzec słabe zdarzeń*.  

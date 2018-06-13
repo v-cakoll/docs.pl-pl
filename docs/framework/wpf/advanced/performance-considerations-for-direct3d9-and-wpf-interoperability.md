@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549207"
 ---
 # <a name="performance-considerations-for-direct3d9-and-wpf-interoperability"></a>Zagadnienia dotyczące współdziałania Direct3D9 i WPF
 Zawartość Direct3D9 można obsługiwać przy użyciu <xref:System.Windows.Interop.D3DImage> klasy. Hostowanie zawartości Direct3D9 mogą wpływać na wydajność aplikacji. W tym temacie opisano najlepsze rozwiązania w celu optymalizacji wydajności, odnośnie do hostowania zawartości Direct3D9 w aplikacji Windows Presentation Foundation (WPF). Sposób użycia obejmują następujące najlepsze rozwiązania <xref:System.Windows.Interop.D3DImage> i najlepsze rozwiązania w przypadku, gdy używasz systemu Windows Vista, Windows XP i wielu monitor wyświetla.  

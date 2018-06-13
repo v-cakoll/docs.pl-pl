@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544514"
 ---
 # <a name="how-to-add-custom-data-to-ink-data"></a>Jak dodać niestandardowe dane do danych atramentu
 Niestandardowe dane można dodać do pismo odręczne, które zostaną zapisane podczas pismo odręczne jest zapisywany w formacie serializowany odręczne (ISF).  Można zapisać danych niestandardowych do <xref:System.Windows.Ink.DrawingAttributes>, <xref:System.Windows.Ink.StrokeCollection>, lub <xref:System.Windows.Ink.Stroke>.  Możliwość zapisania danych niestandardowych na trzy obiekty daje możliwość zdecydować, najlepszym miejscem, aby zapisać dane.  Wszystkie trzy klasy użyj metody podobne do przechowywania i udostępniania danych niestandardowych.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750833"
 ---
 # <a name="lttrackingprofilegt-of-wcf"></a>&lt;trackingProfile&gt; w WCF
 Reprezentuje sekcję konfiguracji do tworzenia subskrypcji do śledzenia rekordów w uczestnika śledzenia przepływu pracy. Profil śledzenia zawiera śledzenia zapytań, pozwalające uczestnikiem śledzenia do subskrybowania zdarzenia przepływu pracy, które są emitowane po zmianie stanu wystąpienia przepływu pracy w czasie wykonywania. Kwerendy zdefiniowane w profilu śledzenia sekcji zdefiniować rodzaje zdarzenia, które są zwracane w subskrypcji.  

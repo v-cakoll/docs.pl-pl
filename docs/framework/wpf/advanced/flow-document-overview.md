@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549740"
 ---
 # <a name="flow-document-overview"></a>Przegląd Dokument przepływu
 Przepływ dokumenty są przeznaczone do optymalizacji wyświetlania i czytelności. Zamiast ustawiany jeden układ wstępnie zdefiniowane, dokumenty przepływu dynamicznie dostosować i ułożenia ich zawartość na podstawie czasu wykonywania zmiennych, takich jak rozmiar okna, rozdzielczość urządzenia i preferencje użytkownika opcjonalne. Ponadto przepływ dokumentów oferuje dokumentu zaawansowane funkcje, takie jak podział na strony i kolumn. Ten temat zawiera omówienie przepływu dokumentów i sposób ich tworzenia.  

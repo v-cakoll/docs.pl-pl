@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551194"
 ---
 # <a name="combobox"></a>ComboBox
 <xref:System.Windows.Controls.ComboBox> Kontroli zapewnia użytkownikom listę opcji. Lista jest wyświetlany i ukryta kontrolka rozwija i zwija. W stanie domyślnym jest zwinięty listy, wyświetlania tylko jednego wyboru. Użytkownik kliknie przycisk, aby wyświetlić pełną listę opcji.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545301"
 ---
 # <a name="how-to-manipulate-a-table39s-columns-through-the-columns-property"></a>Porady: manipulowanie tabeli&#39;s kolumn za pomocą właściwości kolumn
 W tym przykładzie przedstawiono niektóre z najczęściej operacje wykonywane na kolumnach tabeli do <xref:System.Windows.Documents.Table.Columns%2A> właściwości.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544235"
 ---
 # <a name="input-wpf"></a>Dane wejściowe (WPF)
 Windows Presentation Foundation (WPF) obsługuje kilka typów danych wejściowych. Tych danych wejściowych łącznie z tekstem, touch, mysz, polecenia, fokus, touch, przeciągnij i upuść i elektroniczne pismo odręczne. W tej sekcji opisano tematów związanych z danych wejściowych na platformie WPF.  

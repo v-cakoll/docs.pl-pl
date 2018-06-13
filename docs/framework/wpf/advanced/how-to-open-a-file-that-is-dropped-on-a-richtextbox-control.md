@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547765"
 ---
 # <a name="how-to-open-a-file-that-is-dropped-on-a-richtextbox-control"></a>Jak otworzyć plik, który został upuszczony na formant RichTextBox
 W [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.RichTextBox>, i <xref:System.Windows.Documents.FlowDocument> wszystkie formanty ma wbudowaną funkcję przeciągania i upuszczania. Wbudowanej funkcji umożliwia przeciągania i upuszczania tekstu w ramach i między formantami. Jednak nie umożliwia otwarcie pliku przez usunięcie pliku w formancie. Formanty również oznaczanie przeciągania i upuszczania, jako obsługi. W związku z tym domyślnie nie można dodać własne programy obsługi zdarzeń umożliwiają korzystanie z funkcji można otworzyć porzucone pliki.  

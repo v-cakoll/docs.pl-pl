@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547826"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Obsługa zdarzeń Visual Basic oraz WPF
 W przypadku języka Microsoft Visual Basic .NET w szczególności można użyć określonego języka `Handles` — słowo kluczowe do skojarzenia z wystąpieniami, zamiast programów obsługi zdarzeń z atrybuty dołączanie lub przy użyciu programów obsługi zdarzeń <xref:System.Windows.UIElement.AddHandler%2A> metody. Jednak `Handles` technika dołączenie obsługi do wystąpienia mają pewne ograniczenia, ponieważ `Handles` składni nie obsługuje niektórych funkcji określonych kierowanego zdarzenia [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zdarzeń systemu.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544206"
 ---
 # <a name="how-to-clone-a-printer"></a>Jak sklonować drukarkę
 Większość firm będzie w pewnym momencie zakupu wiele drukarek tego samego modelu. Zazwyczaj te są wszystkie zainstalowane przy użyciu ustawień konfiguracyjnych niemal identyczne. Instalowanie poszczególnych drukarek może być czasochłonne i podatne na błąd. <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> Przestrzeni nazw i <xref:System.Printing.PrintServer.InstallPrintQueue%2A> klasy, które są dostępne z programu Microsoft .NET Framework umożliwia teraz instalować dowolną liczbę kolejek wydruku dodatkowe, które są klonowane z istniejącej kolejki wydruku.  

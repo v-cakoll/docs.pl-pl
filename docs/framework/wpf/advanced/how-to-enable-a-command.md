@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545285"
 ---
 # <a name="how-to-enable-a-command"></a>Jak włączyć polecenie
 W poniższym przykładzie pokazano sposób użycia droższe w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  W przykładzie przedstawiono sposób skojarzyć <xref:System.Windows.Input.RoutedCommand> do <xref:System.Windows.Controls.Button>, Utwórz <xref:System.Windows.Input.CommandBinding>i tworzenie obsługi zdarzeń, które implementują <xref:System.Windows.Input.RoutedCommand>.  Aby uzyskać więcej informacji na wydawanie poleceń, zobacz [droższe omówienie](../../../../docs/framework/wpf/advanced/commanding-overview.md).  

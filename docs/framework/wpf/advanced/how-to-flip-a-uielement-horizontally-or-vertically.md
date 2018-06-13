@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544398"
 ---
 # <a name="how-to-flip-a-uielement-horizontally-or-vertically"></a>Jak przerzucić element interfejsu użytkownika w poziomie lub w pionie
 Ten przykład przedstawia sposób użycia <xref:System.Windows.Media.ScaleTransform> do przerzucenia <xref:System.Windows.UIElement> poziomo czy pionowo. W tym przykładzie <xref:System.Windows.Controls.Button> formantu (typu <xref:System.Windows.UIElement>) jest odwrócony, stosując <xref:System.Windows.Media.ScaleTransform> do jego <xref:System.Windows.UIElement.RenderTransform%2A> właściwości.  

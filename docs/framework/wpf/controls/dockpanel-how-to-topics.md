@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550657"
 ---
 # <a name="dockpanel-how-to-topics"></a>DockPanel — Tematy porad
 W tematach w tej sekcji opisano sposób użycia <xref:System.Windows.Controls.DockPanel> element położenie elementów podrzędnych wzdłuż krawędzi kontener układu.  

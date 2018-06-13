@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549594"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Jak utworzyć dodatek, który jest interfejsem użytkownika
 W tym przykładzie przedstawiono sposób tworzenia dodatku, który jest Windows Presentation Foundation (WPF), która jest hostowana przez [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacja autonomiczna.  

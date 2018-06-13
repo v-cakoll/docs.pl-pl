@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545974"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>Jak zdalnie przeglądać status drukarek
 W danym momencie w średnich i dużych firmach może być wiele drukarek, które nie są pracy z powodu papier lub jest poza papier lub inne problemy sytuacji. Bogaty zestaw właściwości drukarki w [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] programu Microsoft .NET Framework stanowić sposób wykonywania szybką ankietę stanów drukarek.  

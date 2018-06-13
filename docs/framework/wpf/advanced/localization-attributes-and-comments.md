@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547270"
 ---
 # <a name="localization-attributes-and-comments"></a>Lokalizacja atrybutów i komentarzy
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Lokalizacja komentarze są właściwościami, wewnątrz [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] kod źródłowy, dostarczone przez deweloperów do zapewnienia lokalizacji zasad i wskazówek dotyczących serwerów. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Lokalizacja komentarze zawierają dwa zestawy informacji: atrybuty możliwości zlokalizowania i lokalizacja dowolne komentarze. Możliwość lokalizacji atrybuty są używane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] lokalizacja interfejsu API, aby wskazać, zasobów, do których mają być lokalizowany. Dowolne komentarze są wszystkie informacje, które chce dołączyć Autor aplikacji.  

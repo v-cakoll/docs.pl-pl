@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548113"
 ---
 # <a name="focus-overview"></a>Przegląd Fokus
 W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] istnieją dwa główne pojęcia, które odnoszą się do fokus: Klawiatura fokus i logiczny fokus.  Fokus klawiatury odwołuje się do elementu, który odbiera klawiatury i logiczny fokus odwołuje się do elementu w zakresie fokus, który ma fokus.  Pojęcia te omówiono szczegółowo w tym omówieniu.  Opis różnicy w tych pojęć jest ważne w przypadku tworzenia złożonych aplikacji z wielu regionach, gdzie można uzyskać fokusu.  

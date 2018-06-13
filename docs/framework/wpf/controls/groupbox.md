@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550842"
 ---
 # <a name="groupbox"></a>GroupBox
 <xref:System.Windows.Controls.GroupBox> Formant jest <xref:System.Windows.Controls.HeaderedContentControl> udostępniająca kontener zatytułowana [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] zawartości.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545535"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>Inicjalizacja elementów obiektu poza drzewem obiektu
 Niektóre aspekty [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] inicjowania są odroczone do procesów, które są zwykle oparte na elementu podłączonych do drzewa logicznego lub wizualnego drzewa. W tym temacie opisano kroki, które mogą być konieczne w celu zainicjowania elementu, który nie jest podłączony do obu drzewa.  

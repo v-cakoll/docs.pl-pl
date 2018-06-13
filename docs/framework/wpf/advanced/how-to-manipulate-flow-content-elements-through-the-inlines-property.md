@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545574"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-inlines-property"></a>Jak zarządzać przepływem elementów zawartości za pomocą właściwości Inlines
 Następujące przykłady przedstawiają niektóre z najczęściej operacje, które można wykonać w przypadku elementów zawartości śródwierszowych przepływu (i kontenery takich elementów, takich jak <xref:System.Windows.Controls.TextBlock>) za pośrednictwem **Inlines** właściwości. Ta właściwość jest używana do dodawania i usuwania elementów z <xref:System.Windows.Documents.InlineCollection>. Przepływ zawartości elementy tej funkcji **Inlines** właściwości obejmują:  

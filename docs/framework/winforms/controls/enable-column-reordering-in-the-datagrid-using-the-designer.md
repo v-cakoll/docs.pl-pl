@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525578"
 ---
 # <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control-using-the-designer"></a>Porady: włączanie zmiany układu kolumn w formancie DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant
 Podczas przeglądania danych wyświetlanych w formularzach systemu Windows <xref:System.Windows.Forms.DataGridView> kontroli, użytkownicy czasami chcesz porównać wartości w określonych kolumnach. Może to być niewygodne, jeśli powszechnie rozdzielono kolumn w formancie, szczególnie jeśli użytkownicy musieli przewijać i z powrotem w poziomie aby zobaczyć wszystkie kolumny, które są zainteresowani. Możesz wprowadzić zadanie porównanie wartości kolumny jest łatwiejsze, umożliwiając użytkownikom zmienianie kolejności kolumn. Po włączeniu zmiany kolejności kolumn, użytkownicy mogą przechodzić do nowej pozycji kolumny przez przeciągnięcie nagłówka kolumny za pomocą myszy.  

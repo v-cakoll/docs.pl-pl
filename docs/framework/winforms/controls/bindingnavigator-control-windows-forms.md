@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526067"
 ---
 # <a name="bindingnavigator-control-windows-forms"></a><span data-ttu-id="8fd8f-102">BindingNavigator — Kontrolka (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="8fd8f-102">BindingNavigator Control (Windows Forms)</span></span>
 <span data-ttu-id="8fd8f-103">`BindingNavigator` Formant jest nawigacji i manipulacji interfejsu użytkownika (UI) dla formantów, które są związane z danymi.</span><span class="sxs-lookup"><span data-stu-id="8fd8f-103">The `BindingNavigator` control is the navigation and manipulation user interface (UI) for controls that are bound to data.</span></span> <span data-ttu-id="8fd8f-104">`BindingNavigator` Formant umożliwia nawigowanie i manipulowanie danymi na formularzu systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="8fd8f-104">The `BindingNavigator` control enables users to navigate through and manipulate data on a Windows Form.</span></span>  

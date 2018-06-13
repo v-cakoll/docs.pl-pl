@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218400"
 ---
 # <a name="from-clause-c-reference"></a><span data-ttu-id="157e3-102">Klauzula From (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="157e3-102">from clause (C# Reference)</span></span>
 <span data-ttu-id="157e3-103">Wyrażenia zapytania musi rozpoczynać się od `from` klauzuli.</span><span class="sxs-lookup"><span data-stu-id="157e3-103">A query expression must begin with a `from` clause.</span></span> <span data-ttu-id="157e3-104">Ponadto wyrażeniu zapytania może zawierać podzapytaniach, które również rozpoczynać `from` klauzuli.</span><span class="sxs-lookup"><span data-stu-id="157e3-104">Additionally, a query expression can contain sub-queries, which also begin with a `from` clause.</span></span> <span data-ttu-id="157e3-105">`from` Klauzuli określa następujące elementy:</span><span class="sxs-lookup"><span data-stu-id="157e3-105">The `from` clause specifies the following:</span></span>  

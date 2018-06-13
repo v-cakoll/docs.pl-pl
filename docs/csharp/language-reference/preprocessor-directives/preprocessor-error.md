@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269402"
 ---
 # <a name="error-c-reference"></a><span data-ttu-id="57ed3-102">#error (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="57ed3-102">#error (C# Reference)</span></span>
 <span data-ttu-id="57ed3-103">`#error` Umożliwia generowanie błędu z określonej lokalizacji w kodzie.</span><span class="sxs-lookup"><span data-stu-id="57ed3-103">`#error` lets you generate an error from a specific location in your code.</span></span> <span data-ttu-id="57ed3-104">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="57ed3-104">For example:</span></span>  

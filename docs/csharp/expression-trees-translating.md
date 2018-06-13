@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217119"
 ---
 # <a name="translating-expression-trees"></a><span data-ttu-id="215b8-103">Tłumaczenie drzew wyrażeń</span><span class="sxs-lookup"><span data-stu-id="215b8-103">Translating Expression Trees</span></span>
 

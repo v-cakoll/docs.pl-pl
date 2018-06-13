@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272442"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="48511-102">!= — Operator (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="48511-102">!= Operator (C# Reference)</span></span>
 <span data-ttu-id="48511-103">Operator nierówności (`!=`) zwraca wartość false, jeśli swoich argumentów, są takie same, wartości true w przeciwnym razie wartość.</span><span class="sxs-lookup"><span data-stu-id="48511-103">The inequality operator (`!=`) returns false if its operands are equal, true otherwise.</span></span> <span data-ttu-id="48511-104">Operatory nierówności są wstępnie zdefiniowane dla wszystkich typów, w tym ciągu lub obiektu.</span><span class="sxs-lookup"><span data-stu-id="48511-104">Inequality operators are predefined for all types, including string and object.</span></span> <span data-ttu-id="48511-105">Typy definiowane przez użytkownika można przeciążać `!=` operatora.</span><span class="sxs-lookup"><span data-stu-id="48511-105">User-defined types can overload the `!=` operator.</span></span>  

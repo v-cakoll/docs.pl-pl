@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266158"
 ---
 # <a name="namespace-keywords-c-reference"></a><span data-ttu-id="831c2-102">Słowa kluczowe przestrzeni nazw (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="831c2-102">Namespace Keywords (C# Reference)</span></span>
 <span data-ttu-id="831c2-103">W tej sekcji opisano słów kluczowych i operatory, które są skojarzone z za pomocą przestrzeni nazw:</span><span class="sxs-lookup"><span data-stu-id="831c2-103">This section describes the keywords and operators that are associated with using namespaces:</span></span>  

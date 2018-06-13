@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219170"
 ---
 # <a name="introduction-to-net-and-docker"></a><span data-ttu-id="ab91b-103">Wprowadzenie do usług .NET i Docker</span><span class="sxs-lookup"><span data-stu-id="ab91b-103">Introduction to .NET and Docker</span></span>
 

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218661"
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a><span data-ttu-id="89bf9-102">-docelowych: winmdobj (opcje kompilatora C#)</span><span class="sxs-lookup"><span data-stu-id="89bf9-102">-target:winmdobj (C# Compiler Options)</span></span>
 <span data-ttu-id="89bf9-103">Jeśli używasz **-docelowych: winmdobj** — opcja kompilatora, kompilator tworzy plik pośredni .winmdobj, który można przekonwertować na plik binarny (.winmd) środowiska wykonawczego systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="89bf9-103">If you use the **-target:winmdobj** compiler option, the compiler creates an intermediate .winmdobj file that you can convert to a Windows Runtime binary (.winmd) file.</span></span> <span data-ttu-id="89bf9-104">Plik winmd, następnie mogą być używane przez programy JavaScript i C++, oprócz programów zarządzanych języka.</span><span class="sxs-lookup"><span data-stu-id="89bf9-104">The .winmd file can then be consumed by JavaScript and C++ programs, in addition to managed language programs.</span></span>  

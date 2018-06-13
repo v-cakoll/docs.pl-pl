@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265765"
 ---
 # <a name="literal-keywords-c-reference"></a><span data-ttu-id="893f7-102">Słowa kluczowe literału (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="893f7-102">Literal Keywords (C# Reference)</span></span>
 <span data-ttu-id="893f7-103">C# ma następujące słowa kluczowe literału:</span><span class="sxs-lookup"><span data-stu-id="893f7-103">C# has the following literal keywords:</span></span>  

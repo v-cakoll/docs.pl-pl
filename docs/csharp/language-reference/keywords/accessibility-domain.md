@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217964"
 ---
 # <a name="accessibility-domain-c-reference"></a><span data-ttu-id="9b956-102">Domena dostępności (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="9b956-102">Accessibility Domain (C# Reference)</span></span>
 <span data-ttu-id="9b956-103">Domena dostępności elementu członkowskiego Określa, w sekcjach program, który może być przywoływany element członkowski.</span><span class="sxs-lookup"><span data-stu-id="9b956-103">The accessibility domain of a member specifies in which program sections a member can be referenced.</span></span> <span data-ttu-id="9b956-104">Jeśli element członkowski jest zagnieżdżony w ramach innego rodzaju, jej domena dostępności jest określany przez zarówno [poziom dostępności](../../../csharp/language-reference/keywords/accessibility-levels.md) członka i domena dostępności typu zawierającego natychmiast.</span><span class="sxs-lookup"><span data-stu-id="9b956-104">If the member is nested within another type, its accessibility domain is determined by both the [accessibility level](../../../csharp/language-reference/keywords/accessibility-levels.md) of the member and the accessibility domain of the immediately containing type.</span></span>  

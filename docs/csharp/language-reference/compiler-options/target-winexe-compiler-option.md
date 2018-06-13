@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216626"
 ---
 # <a name="-targetwinexe-c-compiler-options"></a><span data-ttu-id="89019-102">-docelowych: winexe (opcje kompilatora C#)</span><span class="sxs-lookup"><span data-stu-id="89019-102">-target:winexe (C# Compiler Options)</span></span>
 <span data-ttu-id="89019-103">**-Docelowych: winexe** opcji powoduje, że kompilator do utworzenia pliku wykonywalnego (EXE), program systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="89019-103">The **-target:winexe** option causes the compiler to create an executable (EXE), Windows program.</span></span>  

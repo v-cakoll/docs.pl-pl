@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334837"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Porady: utworzenie pliku lub folderu (Przewodnik programowania w języku C#)
 Można programowo Utwórz folder na komputerze, utwórz podfolder, Utwórz plik w podfolderze i zapisywania danych do pliku.  

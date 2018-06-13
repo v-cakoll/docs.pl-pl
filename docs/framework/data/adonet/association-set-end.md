@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756205"
 ---
 # <a name="association-set-end"></a>Konfigurowanie skojarzenia
 *Konfigurowanie skojarzenia* identyfikuje [typu jednostki](../../../../docs/framework/data/adonet/entity-type.md) i [zestaw jednostek](../../../../docs/framework/data/adonet/entity-set.md) na końcu [zestawu skojarzeń](../../../../docs/framework/data/adonet/association-set.md). Punkty końcowe skojarzenia zestawu są definiowane jako część zestawu skojarzeń; zestaw skojarzenia musi mieć dokładnie dwa skojarzenie zestawu.  

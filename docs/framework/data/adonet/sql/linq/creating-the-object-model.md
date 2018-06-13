@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359936"
 ---
 # <a name="creating-the-object-model"></a>Tworzenie modelu obiektów
 Można utworzyć modelu obiektów z istniejącej bazy danych i używać modelu w stanie domyślnym. Można również dostosować wiele aspektów modelu i jego zachowanie.  

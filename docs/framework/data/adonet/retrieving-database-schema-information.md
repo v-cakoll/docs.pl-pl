@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359692"
 ---
 # <a name="retrieving-database-schema-information"></a>Pobieranie informacji o schemacie bazy danych
 Uzyskiwanie informacji o schemacie z bazy danych odbywa się z procesem odnajdywania schematu. Odnajdywanie schematu umożliwia aplikacjom żądanie czy zarządzanego dostawcy znaleźć i zwraca informacje dotyczące schematu bazy danych, nazywane również *metadanych*, danego bazy danych. Elementów schematu innej bazy danych, takich jak tabele, kolumny i procedury składowane są udostępniane za pomocą kolekcji schematu. Każdej kolekcji schematu zawiera szereg informacji o schemacie specyficzne dla używanego dostawcy.  

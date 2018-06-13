@@ -22,6 +22,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743228"
 ---
 # <a name="client-application-services"></a>Usługi aplikacji klienta
 Usługi aplikacji klienta ułatwiają tworzenie aplikacji systemu Windows, które używają [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] logowania, ról i usług aplikacji profil w ramach rozszerzenia AJAX Microsoft ASP.NET 2.0. Te usługi umożliwiają wielu sieci Web i aplikacji do udostępniania informacji o użytkowniku i funkcje z zakresu zarządzania użytkownika z jednego serwera systemu Windows. Można na przykład korzystania z tych usług do wykonywania następujących zadań:  

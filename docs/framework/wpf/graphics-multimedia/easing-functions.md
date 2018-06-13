@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557566"
 ---
 # <a name="easing-functions"></a>Zwalnianie funkcji
 Funkcji sterowania tempem zmian umożliwiają stosowanie niestandardowych matematycznymi do animacji. Na przykład możesz obiektu realistycznie Odbijanie lub zachowują się tak, jakby była na źródła. Można użyć do przybliżonego określenia tych skutków ramki klucza lub nawet z lub do/przez animacje, ale zajmuje dużo pracy, a następnie animacji będzie dokładności mniejszej niż przy użyciu formuły matematycznych.  

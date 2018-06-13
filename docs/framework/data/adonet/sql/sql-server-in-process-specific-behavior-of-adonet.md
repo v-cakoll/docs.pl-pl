@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356606"
 ---
 # <a name="sql-server-in-process-specific-behavior-of-adonet"></a>Zachowanie w procesie specyficzne dla serwera SQL ADO.NET
 Istnieją cztery główne rozszerzeń funkcjonalności ADO.NET w <xref:Microsoft.SqlServer.Server> przestrzeni nazw, które są przeznaczone dla w trakcie: <xref:Microsoft.SqlServer.Server.SqlContext>, <xref:Microsoft.SqlServer.Server.SqlPipe>, <xref:Microsoft.SqlServer.Server.SqlTriggerContext>, i <xref:Microsoft.SqlServer.Server.SqlDataRecord>.  

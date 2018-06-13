@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417615"
 ---
 # <a name="icordebugthreadgetprocess-method"></a>ICorDebugThread::GetProcess — Metoda
 Pobiera wskaźnika interfejsu, do której część stanowi ICorDebugThread tego procesu.  

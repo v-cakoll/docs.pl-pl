@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553718"
 ---
 # <a name="popup-how-to-topics"></a>Okno podręczne Tematy porad
 W tematach w tej sekcji opisano sposób użycia <xref:System.Windows.Controls.Primitives.Popup> formantu, aby wyświetlić zawartość w osobnym oknie, który jest wyświetlany nad bieżące okno aplikacji.  

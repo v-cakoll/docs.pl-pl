@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554771"
 ---
 # <a name="printdialog"></a>PrintDialog
 <xref:System.Windows.Controls.PrintDialog> Kontroli jest używany do utworzenia wystąpienia standardowe okno dialogowe, które automatycznie konfiguruje <xref:System.Printing.PrintTicket> i <xref:System.Printing.PrintQueue> zgodnie z danych wejściowych użytkownika.  

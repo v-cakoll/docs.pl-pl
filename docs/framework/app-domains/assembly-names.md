@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744138"
 ---
 # <a name="assembly-names"></a>Nazwy zestawów
 Nazwa zestawu jest przechowywany w metadanych i ma znaczny wpływ na zakres zestawu i używany przez aplikację. Zestawu z silną nazwą ma nazwę FQDN, która zawiera nazwę zestawu, kultury, klucz publiczny i numer wersji. Jest to często określane jako wyświetlana nazwa i dla zestawów załadowanych można uzyskać za pomocą <xref:System.Reflection.Assembly.FullName%2A> właściwości.  

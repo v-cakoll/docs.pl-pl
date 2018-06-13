@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759767"
 ---
 # <a name="loading-a-dataset-from-xml"></a>Podczas ładowania zestawu danych z pliku XML
 Zawartość ADO.NET <xref:System.Data.DataSet> mogą być tworzone z strumień XML lub dokument. Ponadto w środowisku .NET Framework masz dużą elastyczność w informacjach są ładowane z pliku XML i w jaki sposób schematu lub relacyjne struktury <xref:System.Data.DataSet> jest tworzony.  

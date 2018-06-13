@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442874"
 ---
 # <a name="ceesectionreloctype-enumeration"></a>CeeSectionRelocType — Wyliczenie
 Udostępnia wartości w celu wywierania wpływu typ `reloc` instrukcji wysyłanego w wywołaniu [ICeeGen::AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355103"
 ---
 # <a name="linq-to-sql-queries"></a>LINQ do SQL zapytań
 Należy zdefiniować [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zapytania przy użyciu takiej samej składni jak [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]. Jedyna różnica polega na tym, że obiekty odwołuje się do zapytania są mapowane do elementów w bazie danych. Aby uzyskać więcej informacji, zobacz [wprowadzenie do kwerend LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  

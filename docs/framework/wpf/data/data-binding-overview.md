@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558177"
 ---
 # <a name="data-binding-overview"></a>Przegląd Wiązanie danych
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Powiązanie danych zapewnia prosty i spójny sposób dla aplikacji przedstawić i interakcji z danymi. Elementy mogą być powiązane z danych z różnych źródeł danych w formie [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] obiektów i [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>s, takich jak <xref:System.Windows.Controls.Button> i <xref:System.Windows.Controls.ItemsControl>s, takich jak <xref:System.Windows.Controls.ListBox> i <xref:System.Windows.Controls.ListView> ma wbudowanej funkcji, aby umożliwić elastyczne style elementów danych jednego lub kolekcje elementów danych. Sortowanie, filtrów i widoki grup można wygenerować na podstawie danych.  

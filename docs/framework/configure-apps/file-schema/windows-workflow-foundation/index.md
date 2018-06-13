@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352492"
 ---
 # <a name="windows-workflow-foundation-configuration-schema"></a>Schemat konfiguracji programu Windows Workflow Foundation
 Elementy konfiguracji systemu Windows Workflow Foundation (WF) umożliwiają skonfigurowanie aplikacji przepływu pracy. W przypadku aplikacji przepływu pracy można skonfigurować między innymi, śledzenia i śledzenia. Aby uzyskać więcej informacji na temat śledzenia i śledzenie, zobacz [śledzenia przepływu pracy i śledzenie](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md). W przypadku usług przepływu pracy umożliwia także elementy konfiguracji systemu Windows Communication Foundation (WCF). Aby uzyskać więcej informacji na temat usługi WCF, zobacz [schemat konfiguracji programu WCF](../../../../../docs/framework/configure-apps/file-schema/wcf/index.md).  

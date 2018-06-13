@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755997"
 ---
 # <a name="ltaudienceurisgt"></a>&lt;audienceUris&gt;
 Określa zestaw identyfikatorów URI, które są dopuszczalne identyfikatory uzależnionej (RP). Tokeny nie będą akceptowane, chyba że ograniczone do jednej z dozwolonych odbiorców identyfikatorów URI.  

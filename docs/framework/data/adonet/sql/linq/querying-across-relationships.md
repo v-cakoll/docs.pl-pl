@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360468"
 ---
 # <a name="querying-across-relationships"></a>Wykonywanie zapytań w relacjach
 Odwołania do innych obiektów lub kolekcje innych obiektów w definicji klasy bezpośrednio odpowiadają relacje klucza obcego w bazie danych. Te relacje można użyć w przypadku zapytania według używając zapisu kropkowego dostępu do właściwości relacji i przejść z jednego obiektu do innego. Wykonuje te operacje związane z dostępem do bardziej złożonych sprzężeń ani podzapytań skorelowane równoważne SQL.  

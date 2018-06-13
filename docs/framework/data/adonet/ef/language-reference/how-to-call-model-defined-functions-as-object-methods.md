@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763374"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Porady: Wywołaj funkcje zdefiniowane przez Model, jako metody obiektów
 W tym temacie opisano, jak może wywołać funkcję zdefiniowaną w modelu jako metody <xref:System.Data.Objects.ObjectContext> obiektu lub jako metoda statyczna na klasę niestandardową. A *funkcja zdefiniowana przez model* jest funkcją, która jest zdefiniowana w modelu koncepcyjnym. Procedury przedstawione w tym temacie opisano sposób wywoływać te funkcje, zamiast bezpośredniego wywoływania je z poziomu składnika LINQ do jednostek zapytań. Aby dowiedzieć się, jak wywoływanie funkcji zdefiniowanej w modelu w składniku LINQ do jednostek zapytań, zobacz [porady: funkcje Call Model-Defined w zapytaniach](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  

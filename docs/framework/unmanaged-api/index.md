@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442920"
 ---
 # <a name="unmanaged-api-reference"></a>Niezarządzany wykaz interfejsów API
 Ta sekcja zawiera informacje o niezarządzane interfejsy API, które mogą być używane przez zarządzanego kodu — związanych z aplikacji, takich jak hosty w czasie wykonywania, kompilatory, deasemblerów pakietów, obfuscators, debugery i profilowania.  

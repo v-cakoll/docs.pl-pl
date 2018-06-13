@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756478"
 ---
 # <a name="getting-started-entity-framework"></a>Wprowadzenie (Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Obsługuje skoncentrowane na dane aplikacji i usług oraz udostępnia platformę programowania dla danych, który wywołuje poziom abstrakcji z poziomu relacyjne logicznych do poziomu koncepcyjnego. Umożliwia deweloperom do pracy z danymi na wyższym poziomie abstrakcji, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] obsługuje kodu, która jest niezależna od wszelkich aparatu magazynu danych lub schemat relacyjny. Aby uzyskać więcej informacji, zobacz [Omówienie struktury jednostek](../../../../../docs/framework/data/adonet/ef/overview.md).  

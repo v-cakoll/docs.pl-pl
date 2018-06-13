@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265690"
 ---
 # <a name="-operator-c-reference"></a>| — Operator (odwołanie w C#)
 Binarny `|` operatory są wstępnie zdefiniowane dla typów całkowitych i `bool`. W przypadku typów całkowitych `|` oblicza wartości bitowe lub argumentów. Dla `bool` argumentów operacji, `|` logiczne lub z argumentów; oblicza wynik jest `false` tylko wtedy, gdy są obie argumentów `false`.  

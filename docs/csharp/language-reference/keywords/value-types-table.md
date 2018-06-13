@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33280897"
 ---
 # <a name="value-types-table-c-reference"></a>Tabela typów wartości (odwołanie w C#)
 W poniższej tabeli wymieniono typy wartości języka C# według kategorii.  

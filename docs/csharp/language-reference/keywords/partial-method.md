@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269044"
 ---
 # <a name="partial-method-c-reference"></a>partial — Metoda (odwołanie w C#)
 Metoda częściowa ma podpis zdefiniowane w jednej części typu częściowego, a jej implementacja zdefiniowany w innej części typu. Metody częściowe umożliwia projektantom klasy Podaj punkty zaczepienia metody, podobny do programów obsługi zdarzeń, które deweloperzy mogą zdecydować się na implementacji lub nie. Jeśli projektanta nie dostarcza implementację, kompilator usuwa podpisu w czasie kompilacji. Do metody częściowe mają zastosowanie następujące warunki:  

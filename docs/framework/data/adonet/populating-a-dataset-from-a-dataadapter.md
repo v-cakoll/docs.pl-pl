@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356943"
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>Wypełnianie zestawu danych z element DataAdapter
 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.DataSet> Jest rezydentny reprezentację danych, który zapewnia spójne relacyjne programowania modelu niezależnie od źródła danych. `DataSet` Reprezentuje pełny zestaw danych, który zawiera tabele, ograniczenia i relacje między tabelami. Ponieważ `DataSet` jest niezależna od źródła danych, `DataSet` mogą obejmować dane lokalne aplikacji i danych z wielu źródeł danych. Interakcja z istniejących źródeł danych są kontrolowane poprzez `DataAdapter`.  

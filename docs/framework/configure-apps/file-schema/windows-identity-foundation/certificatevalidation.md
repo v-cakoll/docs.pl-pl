@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756062"
 ---
 # <a name="ltcertificatevalidationgt"></a>&lt;certificateValidation&gt;
 Określa ustawienia, które programy obsługi token służący do weryfikowania certyfikatów. Te ustawienia zostały zastąpione, jeśli określony program obsługi jest skonfigurowany z własnego modułu sprawdzania poprawności.  

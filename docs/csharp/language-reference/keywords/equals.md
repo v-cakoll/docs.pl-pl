@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216179"
 ---
 # <a name="equals-c-reference"></a>equals (odwołanie w C#)
 `equals` Kontekstowe słowo kluczowe jest używane w `join` klauzuli w wyrażeniu zapytania do porównania elementy dwóch sekwencji. Aby uzyskać więcej informacji, zobacz [klauzuli join](../../../csharp/language-reference/keywords/join-clause.md).  

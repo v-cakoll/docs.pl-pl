@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436231"
 ---
 # <a name="iclrmetahost-interface"></a>ICLRMetaHost — Interfejs
 Udostępnia metody, które zwraca określoną wersję środowisko uruchomieniowe języka wspólnego (CLR) na podstawie jego numeru wersji, wyświetlić listę wszystkich zainstalowanych CLRs, listy wszystkich środowisk uruchomieniowych, które są ładowane w określonym procesie, wersji środowiska CLR, używanej do kompilacji zestawu, Zakończ proces odnajdywania Zamknięcie czyste środowiska uruchomieniowego i powiązań dla zapytań starszej wersji interfejsu API.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574663"
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>Wykonywanie niezależnych od kultury zmian wielkości liter
 <xref:System.String.ToUpper%2A?displayProperty=nameWithType>, <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>, I <xref:System.Char.ToLower%2A?displayProperty=nameWithType> metody udostępniają przeciążeń, które nie akceptują parametrów. Domyślnie te przeciążenia bez parametrów wykonują zmiany wielkości liter na podstawie wartości z <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>. Daje to wyniki z uwzględnieniem wielkości liter, które zależą od kultury. Aby umożliwić Wyczyść, czy wielkość zmiany, które mają być zależne od kultury lub niezależnych od kultury, należy używać przeciążeń tych metod, które wymagają jawnie określić `culture` parametru. Zależne od kultury zmian wielkości liter, można określić `CultureInfo.CurrentCulture` dla `culture` parametru. Niezależne od kultury zmian wielkości liter, można określić `CultureInfo.InvariantCulture` dla `culture` parametru.  

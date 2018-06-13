@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574520"
 ---
 # <a name="extension-methods"></a>Metody rozszerzeń
 Metody rozszerzenia są funkcją języka, która umożliwia metody statyczne do jej wywołać przy użyciu składni wywołanie metody wystąpienia. Te metody należy wykonać co najmniej jeden parametr, który reprezentuje wystąpienie, którego metoda ma działać na.  

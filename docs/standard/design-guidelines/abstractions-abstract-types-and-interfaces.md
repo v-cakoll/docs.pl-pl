@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573029"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>Obiekty abstrakcyjne (typy abstrakcyjne i interfejsy)
 Abstrakcja jest typem, który opisuje kontrakt, ale nie zapewnia pełnej implementacji kontraktu. Obiekty abstrakcyjne są zazwyczaj zaimplementowane jako interfejsów lub klas abstrakcyjnych i pochodzą z dobrze zdefiniowany zestaw dokumentacji opisujące wymagany semantyka typów Implementowanie kontraktu. Poniżej wymieniono niektóre z najważniejszych abstrakcje w programie .NET Framework <xref:System.IO.Stream>, <xref:System.Collections.Generic.IEnumerable%601>, i <xref:System.Object>.  

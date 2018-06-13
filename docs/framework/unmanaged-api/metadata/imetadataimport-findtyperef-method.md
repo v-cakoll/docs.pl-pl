@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444445"
 ---
 # <a name="imetadataimportfindtyperef-method"></a>IMetaDataImport::FindTypeRef — Metoda
 Pobiera wskaźnik do elementu TypeRef token dla <xref:System.Type> odwołania, który znajduje się w określonym zakresie i który ma określoną nazwę.  

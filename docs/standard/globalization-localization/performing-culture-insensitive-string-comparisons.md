@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573610"
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>Wykonywanie niezależnych od kultury porównań ciągów
 Domyślnie <xref:System.String.Compare%2A?displayProperty=nameWithType> — metoda wykonuje porównania z uwzględnieniem kultury i z uwzględnieniem wielkości liter. Ta metoda obejmuje również kilka przeciążeń udostępniających `culture` parametr, który umożliwia określenie kultury do użycia, a `comparisonType` parametr, który umożliwia określenie reguł porównania. Wywoływanie tych metod zamiast przeciążenia domyślnego usuwa wszelkie niejednoznaczności dotyczące reguł używanych w wywołaniu określonej metody i jednoznacznie wskazuje, czy w danym porównaniu jest uwzględniana kultura, czy nie.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216515"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (opcje kompilatora C#)
 Określa, która wersja z środowiska uruchomieniowego języka wspólnego (CLR) można uruchomić zestawu.  

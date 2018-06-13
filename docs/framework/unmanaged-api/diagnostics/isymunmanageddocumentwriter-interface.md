@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424459"
 ---
 # <a name="isymunmanageddocumentwriter-interface"></a><span data-ttu-id="06794-102">ISymUnmanagedDocumentWriter — Interfejs</span><span class="sxs-lookup"><span data-stu-id="06794-102">ISymUnmanagedDocumentWriter Interface</span></span>
 <span data-ttu-id="06794-103">Udostępnia metody do zapisywania dokumentu odwołuje się magazynu symboli.</span><span class="sxs-lookup"><span data-stu-id="06794-103">Provides methods for writing to a document referenced by a symbol store.</span></span>  

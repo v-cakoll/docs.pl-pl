@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422536"
 ---
 # <a name="icordebugvariablehome-interface"></a><span data-ttu-id="adfef-102">Interfejs ICorDebugVariableHome</span><span class="sxs-lookup"><span data-stu-id="adfef-102">ICorDebugVariableHome Interface</span></span>
 <span data-ttu-id="adfef-103">Reprezentuje lokalnej zmiennej lub argumentu funkcji.</span><span class="sxs-lookup"><span data-stu-id="adfef-103">Represents a local variable or argument of a function.</span></span>  

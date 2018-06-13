@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551126"
 ---
 # <a name="control-customization"></a><span data-ttu-id="4d062-102">Niestandardowe dostosowywanie formantu</span><span class="sxs-lookup"><span data-stu-id="4d062-102">Control Customization</span></span>
 <span data-ttu-id="4d062-103">Ta kategoria obejmuje różnych klas podstawowych, interfejsów i inne elementy i pojęć tworzenia w pełni funkcjonalne [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] formantu.</span><span class="sxs-lookup"><span data-stu-id="4d062-103">This category covers the various base classes, interfaces and other elements and concepts used in creating a fully functional [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] control.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421353"
 ---
 # <a name="icordebugregistersetgetregisters-method"></a><span data-ttu-id="e18dd-102">ICorDebugRegisterSet::GetRegisters — Metoda</span><span class="sxs-lookup"><span data-stu-id="e18dd-102">ICorDebugRegisterSet::GetRegisters Method</span></span>
 <span data-ttu-id="e18dd-103">Pobiera wartość każdego rejestru (na komputerze, który jest aktualnie wykonywany kodu) określonym przez maska bitowa.</span><span class="sxs-lookup"><span data-stu-id="e18dd-103">Gets the value of each register (on the computer that is currently executing code) that is specified by the bit mask.</span></span>  

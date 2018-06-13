@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423482"
 ---
 # <a name="icordebuginstancefieldsymbolgetname-method"></a><span data-ttu-id="995f6-102">ICorDebugInstanceFieldSymbol::GetName — metoda</span><span class="sxs-lookup"><span data-stu-id="995f6-102">ICorDebugInstanceFieldSymbol::GetName Method</span></span>
 <span data-ttu-id="995f6-103">Pobiera nazwę pola wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="995f6-103">Gets the name of the instance field.</span></span>  

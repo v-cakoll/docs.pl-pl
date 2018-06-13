@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550881"
 ---
 # <a name="how-to-customize-the-ticks-on-a-slider"></a><span data-ttu-id="1ca2e-102">Jak dostosować znaczniki na suwaku</span><span class="sxs-lookup"><span data-stu-id="1ca2e-102">How to: Customize the Ticks on a Slider</span></span>
 <span data-ttu-id="1ca2e-103">W tym przykładzie przedstawiono sposób tworzenia <xref:System.Windows.Controls.Slider> formantu, który ma znaczniki osi.</span><span class="sxs-lookup"><span data-stu-id="1ca2e-103">This example shows how to create a <xref:System.Windows.Controls.Slider> control that has tick marks.</span></span>  

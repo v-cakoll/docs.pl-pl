@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553792"
 ---
 # <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a><span data-ttu-id="b4092-102">Jak utworzyć formant z kluczem dostępu i zwijaniem tekstu</span><span class="sxs-lookup"><span data-stu-id="b4092-102">How to: Create a Control That Has an Access Key and Text Wrapping</span></span>
 <span data-ttu-id="b4092-103">W tym przykładzie przedstawiono sposób tworzenia formant, który ma klucz dostępu i obsługuje zawijania tekstu.</span><span class="sxs-lookup"><span data-stu-id="b4092-103">This example shows how to create a control that has an access key and supports text wrapping.</span></span> <span data-ttu-id="b4092-104">W przykładzie użyto <xref:System.Windows.Controls.Label> kontroli w celu zilustrowania koncepcji te.</span><span class="sxs-lookup"><span data-stu-id="b4092-104">The example uses a <xref:System.Windows.Controls.Label> control to illustrate these concepts.</span></span>  

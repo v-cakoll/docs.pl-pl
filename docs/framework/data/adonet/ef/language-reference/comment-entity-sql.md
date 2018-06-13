@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764167"
 ---
 # <a name="---comment-entity-sql"></a><span data-ttu-id="b8790-102">--(Komentarz) (jednostka SQL)</span><span class="sxs-lookup"><span data-stu-id="b8790-102">-- (Comment) (Entity SQL)</span></span>
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="b8790-103"> zapytania mogą zawierać komentarzy.</span><span class="sxs-lookup"><span data-stu-id="b8790-103"> queries can contain comments.</span></span> <span data-ttu-id="b8790-104">Dwa łączniki (`--`) uruchom wiersz komentarza.</span><span class="sxs-lookup"><span data-stu-id="b8790-104">Two dashes (`--`) start a comment line.</span></span>  

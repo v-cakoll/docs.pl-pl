@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526517"
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms"></a><span data-ttu-id="479ed-102">Porady: wyrównywanie formantu z krawędziami formularzy</span><span class="sxs-lookup"><span data-stu-id="479ed-102">How to: Align a Control to the Edges of Forms</span></span>
 <span data-ttu-id="479ed-103">Umożliwia wyrównanie z krawędzią formularzy przez ustawienie formantu <xref:System.Windows.Forms.Control.Dock%2A> właściwości.</span><span class="sxs-lookup"><span data-stu-id="479ed-103">You can make your control align to the edge of your forms by setting the <xref:System.Windows.Forms.Control.Dock%2A> property.</span></span> <span data-ttu-id="479ed-104">Ta właściwość określa, gdzie formantu znajduje się w formularzu.</span><span class="sxs-lookup"><span data-stu-id="479ed-104">This property designates where your control resides in the form.</span></span> <span data-ttu-id="479ed-105"><xref:System.Windows.Forms.Control.Dock%2A> Właściwość można ustawić następujące wartości:</span><span class="sxs-lookup"><span data-stu-id="479ed-105">The <xref:System.Windows.Forms.Control.Dock%2A> property can be set to the following values:</span></span>  

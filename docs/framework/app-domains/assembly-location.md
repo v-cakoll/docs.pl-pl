@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743917"
 ---
 # <a name="assembly-location"></a><span data-ttu-id="737d4-102">Lokalizacja zestawu</span><span class="sxs-lookup"><span data-stu-id="737d4-102">Assembly Location</span></span>
 <span data-ttu-id="737d4-103">Lokalizacji zestawu Określa, czy można zlokalizować gdy odwołuje się do środowisko uruchomieniowe języka wspólnego i można również określić, czy zestaw może być współużytkowana z innych zestawów.</span><span class="sxs-lookup"><span data-stu-id="737d4-103">An assembly's location determines whether the common language runtime can locate it when referenced, and can also determine whether the assembly can be shared with other assemblies.</span></span> <span data-ttu-id="737d4-104">Można wdrożyć zestawu w następujących lokalizacjach:</span><span class="sxs-lookup"><span data-stu-id="737d4-104">You can deploy an assembly in the following locations:</span></span>  

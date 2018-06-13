@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558962"
 ---
 # <a name="how-to-animate-an-ellipsegeometry"></a><span data-ttu-id="fa366-102">Jak animować EllipseGeometry</span><span class="sxs-lookup"><span data-stu-id="fa366-102">How to: Animate an EllipseGeometry</span></span>
 <span data-ttu-id="fa366-103">W tym przykładzie pokazano, jak animować <xref:System.Windows.Media.Geometry> w <xref:System.Windows.Shapes.Path> elementu.</span><span class="sxs-lookup"><span data-stu-id="fa366-103">This example shows how to animate a <xref:System.Windows.Media.Geometry> within a <xref:System.Windows.Shapes.Path> element.</span></span> <span data-ttu-id="fa366-104">W poniższym przykładzie <xref:System.Windows.Media.Animation.PointAnimation> służy do animowania <xref:System.Windows.Media.EllipseGeometry.Center%2A> z <xref:System.Windows.Media.EllipseGeometry>.</span><span class="sxs-lookup"><span data-stu-id="fa366-104">In the following example, a <xref:System.Windows.Media.Animation.PointAnimation> is used to animate the <xref:System.Windows.Media.EllipseGeometry.Center%2A> of an <xref:System.Windows.Media.EllipseGeometry>.</span></span>  

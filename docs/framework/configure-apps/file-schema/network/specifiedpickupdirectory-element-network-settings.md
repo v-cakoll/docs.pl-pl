@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743979"
 ---
 # <a name="ltspecifiedpickupdirectorygt-element-network-settings"></a><span data-ttu-id="7f810-102">&lt;specifiedpickupdirectory —&gt; — Element (ustawienia sieciowe)</span><span class="sxs-lookup"><span data-stu-id="7f810-102">&lt;specifiedPickupDirectory&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="7f810-103">Konfiguruje katalogu lokalnego dla serwera transportu protokołu SMTP (Simple Mail).</span><span class="sxs-lookup"><span data-stu-id="7f810-103">Configures the local directory for a Simple Mail Transport Protocol (SMTP) server.</span></span>  

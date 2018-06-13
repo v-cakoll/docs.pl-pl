@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567305"
 ---
 # <a name="multithreaded-programming-with-the-event-based-asynchronous-pattern"></a><span data-ttu-id="4cfbe-102">Programowanie wielowątkowości za pomocą wzorca asynchronicznego opartego na zdarzeniach</span><span class="sxs-lookup"><span data-stu-id="4cfbe-102">Multithreaded Programming with the Event-based Asynchronous Pattern</span></span>
 <span data-ttu-id="4cfbe-103">Istnieje wiele sposobów, aby udostępnić funkcje asynchroniczne do kodu klienta.</span><span class="sxs-lookup"><span data-stu-id="4cfbe-103">There are a number of ways to expose asynchronous features to client code.</span></span> <span data-ttu-id="4cfbe-104">Asynchroniczny wzorzec oparty na zdarzeniach określa zalecany sposób klasy do prezentowania zachowanie asynchronicznego.</span><span class="sxs-lookup"><span data-stu-id="4cfbe-104">The Event-based Asynchronous Pattern prescribes the recommended way for classes to present asynchronous behavior.</span></span>  

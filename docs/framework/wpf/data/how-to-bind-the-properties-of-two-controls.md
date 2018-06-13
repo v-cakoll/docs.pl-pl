@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555584"
 ---
 # <a name="how-to-bind-the-properties-of-two-controls"></a><span data-ttu-id="8f931-102">Jak powiązać właściwości dwóch formantów</span><span class="sxs-lookup"><span data-stu-id="8f931-102">How to: Bind the Properties of Two Controls</span></span>
 <span data-ttu-id="8f931-103">W tym przykładzie pokazano, jak można powiązać z właściwością jeden formant skonkretyzowanym niż przy użyciu innego <xref:System.Windows.Data.Binding.ElementName%2A> właściwości.</span><span class="sxs-lookup"><span data-stu-id="8f931-103">This example shows how to bind the property of one instantiated control to that of another using the <xref:System.Windows.Data.Binding.ElementName%2A> property.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760232"
 ---
 # <a name="handling-datatable-events"></a><span data-ttu-id="68a02-102">Obsługa zdarzeń DataTable</span><span class="sxs-lookup"><span data-stu-id="68a02-102">Handling DataTable Events</span></span>
 <span data-ttu-id="68a02-103"><xref:System.Data.DataTable> Obiekt zapewnia szereg zdarzeń, które mogą być przetwarzane przez aplikację.</span><span class="sxs-lookup"><span data-stu-id="68a02-103">The <xref:System.Data.DataTable> object provides a series of events that can be processed by an application.</span></span> <span data-ttu-id="68a02-104">W poniższej tabeli opisano `DataTable` zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="68a02-104">The following table describes `DataTable` events.</span></span>  

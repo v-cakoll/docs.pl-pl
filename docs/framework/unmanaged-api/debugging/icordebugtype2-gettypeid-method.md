@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422074"
 ---
 # <a name="icordebugtype2gettypeid-method"></a><span data-ttu-id="322d8-102">ICorDebugType2::GetTypeID — metoda</span><span class="sxs-lookup"><span data-stu-id="322d8-102">ICorDebugType2::GetTypeID Method</span></span>
 <span data-ttu-id="322d8-103">Pobiera [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) dla tego typu.</span><span class="sxs-lookup"><span data-stu-id="322d8-103">Gets a [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) for this type.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759491"
 ---
 # <a name="datasets-datatables-and-dataviews"></a><span data-ttu-id="18750-102">Elementy DataSet, DataTable i DataView</span><span class="sxs-lookup"><span data-stu-id="18750-102">DataSets, DataTables, and DataViews</span></span>
 <span data-ttu-id="18750-103">ADO.NET <xref:System.Data.DataSet> jest rezydentny reprezentację danych, która zapewnia spójny model programowania relacyjne niezależnie od tego źródła danych zawiera.</span><span class="sxs-lookup"><span data-stu-id="18750-103">The ADO.NET <xref:System.Data.DataSet> is a memory-resident representation of data that provides a consistent relational programming model regardless of the source of the data it contains.</span></span> <span data-ttu-id="18750-104">A <xref:System.Data.DataSet> reprezentuje kompletny zestaw danych w tym tabel, które zawierają, kolejność i Zachowaj dane, jak również relacje między tabelami.</span><span class="sxs-lookup"><span data-stu-id="18750-104">A <xref:System.Data.DataSet> represents a complete set of data including the tables that contain, order, and constrain the data, as well as the relationships between the tables.</span></span>  

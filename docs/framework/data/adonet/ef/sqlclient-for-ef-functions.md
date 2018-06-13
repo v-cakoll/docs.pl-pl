@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764674"
 ---
 # <a name="sqlclient-for-entity-framework-functions"></a><span data-ttu-id="907eb-102">Klient SQL dla funkcji, Entity Framework</span><span class="sxs-lookup"><span data-stu-id="907eb-102">SqlClient for Entity Framework Functions</span></span>
 <span data-ttu-id="907eb-103">Dostawcy danych programu .NET Framework dla programu SQL Server (SqlClient) dla programu Entity Framework oferuje zestaw funkcji do wykonania matematycznych i obliczeń agregacji, a także funkcje do wykonania `System.DateTime` i `string` operacji.</span><span class="sxs-lookup"><span data-stu-id="907eb-103">The .NET Framework Data Provider for SQL Server (SqlClient) for the Entity Framework provides a set of functions to perform mathematical and aggregation calculations, as well as functions to perform `System.DateTime` and `string` operations.</span></span> <span data-ttu-id="907eb-104">Te funkcje są w `SQLServer` przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="907eb-104">These functions are in the `SQLServer` namespace.</span></span>  

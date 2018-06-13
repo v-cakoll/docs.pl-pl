@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760573"
 ---
 # <a name="flatten-entity-sql"></a><span data-ttu-id="c0e8d-102">SPŁASZCZANIE (jednostka SQL)</span><span class="sxs-lookup"><span data-stu-id="c0e8d-102">FLATTEN (Entity SQL)</span></span>
 <span data-ttu-id="c0e8d-103">Konwertuje kolekcję spłaszczonych kolekcją kolekcji.</span><span class="sxs-lookup"><span data-stu-id="c0e8d-103">Converts a collection of collections into a flattened collection.</span></span> <span data-ttu-id="c0e8d-104">Nowa kolekcja te same zawiera elementy, co stary kolekcji, ale bez struktury zagnieżdżone.</span><span class="sxs-lookup"><span data-stu-id="c0e8d-104">The new collection contains all the same elements as the old collection, but without a nested structure.</span></span>  

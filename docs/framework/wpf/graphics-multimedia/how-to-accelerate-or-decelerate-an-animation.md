@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555678"
 ---
 # <a name="how-to-accelerate-or-decelerate-an-animation"></a><span data-ttu-id="aca6a-102">Jak przyspieszyć lub zwolnić animację</span><span class="sxs-lookup"><span data-stu-id="aca6a-102">How to: Accelerate or Decelerate an Animation</span></span>
 <span data-ttu-id="aca6a-103">W tym przykładzie pokazano, jak animacja przyspieszenia i zwalnia wraz z upływem czasu.</span><span class="sxs-lookup"><span data-stu-id="aca6a-103">This example demonstrates how to make an animation accelerate and decelerate over time.</span></span> <span data-ttu-id="aca6a-104">W poniższym przykładzie kilka prostokąty animowanych przez animacje z różnymi <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> i <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> ustawienia.</span><span class="sxs-lookup"><span data-stu-id="aca6a-104">In the following example, several rectangles are animated by animations with different <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> and <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> settings.</span></span>  

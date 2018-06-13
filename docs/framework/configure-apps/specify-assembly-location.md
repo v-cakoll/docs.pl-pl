@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758272"
 ---
 # <a name="specifying-an-assembly39s-location"></a><span data-ttu-id="6cf2a-102">Określenie zestawu&#39;lokalizacji s</span><span class="sxs-lookup"><span data-stu-id="6cf2a-102">Specifying an Assembly&#39;s Location</span></span>
 <span data-ttu-id="6cf2a-103">Istnieją dwa sposoby, aby określić lokalizację zestawu:</span><span class="sxs-lookup"><span data-stu-id="6cf2a-103">There are two ways to specify an assembly's location:</span></span>  

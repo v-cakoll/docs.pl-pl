@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604695"
 ---
 # <a name="mywebservices-object"></a><span data-ttu-id="38b59-102">My.WebServices — Obiekt</span><span class="sxs-lookup"><span data-stu-id="38b59-102">My.WebServices Object</span></span>
 <span data-ttu-id="38b59-103">Udostępnia właściwości umożliwiające tworzenie i uzyskiwanie dostępu do jednego wystąpienia każdej usługi XML sieci Web odwołuje się do bieżącego projektu.</span><span class="sxs-lookup"><span data-stu-id="38b59-103">Provides properties for creating and accessing a single instance of each XML Web service referenced by the current project.</span></span>  

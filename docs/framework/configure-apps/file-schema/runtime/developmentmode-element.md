@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745503"
 ---
 # <a name="ltdevelopmentmodegt-element"></a><span data-ttu-id="d4b99-102">&lt;developmentmode —&gt; — Element</span><span class="sxs-lookup"><span data-stu-id="d4b99-102">&lt;developmentMode&gt; Element</span></span>
 <span data-ttu-id="d4b99-103">Określa, czy środowisko uruchomieniowe wyszukiwania zestawów w katalogach określonej przez zmienną środowiskową DEVPATH.</span><span class="sxs-lookup"><span data-stu-id="d4b99-103">Specifies whether the runtime searches for assemblies in directories specified by the DEVPATH environment variable.</span></span>  

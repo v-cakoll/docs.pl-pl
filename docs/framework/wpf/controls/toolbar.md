@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555432"
 ---
 # <a name="toolbar"></a><span data-ttu-id="16a51-102">ToolBar</span><span class="sxs-lookup"><span data-stu-id="16a51-102">ToolBar</span></span>
 <span data-ttu-id="16a51-103"><xref:System.Windows.Controls.ToolBar> Formant jest kontenerem dla grupy poleceń lub kontrolek, które zwykle są związane z ich funkcji.</span><span class="sxs-lookup"><span data-stu-id="16a51-103">The <xref:System.Windows.Controls.ToolBar> control is a container for a group of commands or controls that are typically related in their function.</span></span>  

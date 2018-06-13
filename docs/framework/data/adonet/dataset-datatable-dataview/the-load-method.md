@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758311"
 ---
 # <a name="the-load-method"></a><span data-ttu-id="5c82f-102">Metoda Load</span><span class="sxs-lookup"><span data-stu-id="5c82f-102">The Load Method</span></span>
 <span data-ttu-id="5c82f-103">Można użyć <xref:System.Data.DataTable.Load%2A> metodę, aby załadować <xref:System.Data.DataTable> z wierszy ze źródła danych.</span><span class="sxs-lookup"><span data-stu-id="5c82f-103">You can use the <xref:System.Data.DataTable.Load%2A> method to load a <xref:System.Data.DataTable> with rows from a data source.</span></span> <span data-ttu-id="5c82f-104">To jest przeciążona metoda, która w swojej najprostszej formie przyjmuje jeden parametr, **DataReader**.</span><span class="sxs-lookup"><span data-stu-id="5c82f-104">This is an overloaded method which, in its simplest form, accepts a single parameter, a **DataReader**.</span></span> <span data-ttu-id="5c82f-105">W tym formularzu, po prostu ładuje **DataTable** z wierszami.</span><span class="sxs-lookup"><span data-stu-id="5c82f-105">In this form, it simply loads the **DataTable** with rows.</span></span> <span data-ttu-id="5c82f-106">Opcjonalnie można określić **LoadOption** parametr, aby kontrolować sposób dodawania danych do **DataTable**.</span><span class="sxs-lookup"><span data-stu-id="5c82f-106">Optionally, you can specify the **LoadOption** parameter to control how data is added to the **DataTable**.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561433"
 ---
 # <a name="how-to-animate-a-rectangle"></a><span data-ttu-id="14efa-102">Jak animować prostokąt</span><span class="sxs-lookup"><span data-stu-id="14efa-102">How to: Animate a Rectangle</span></span>
 <span data-ttu-id="14efa-103">W tym przykładzie przedstawiono sposób animowanie zmian rozmiar i pozycja prostokąta.</span><span class="sxs-lookup"><span data-stu-id="14efa-103">This example shows how to animate changes to the size and position of a rectangle.</span></span>  

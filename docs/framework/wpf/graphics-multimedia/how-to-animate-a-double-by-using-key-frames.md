@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557436"
 ---
 # <a name="how-to-animate-a-double-by-using-key-frames"></a><span data-ttu-id="23252-102">Jak animować double z wykorzystaniem klatek kluczowych</span><span class="sxs-lookup"><span data-stu-id="23252-102">How to: Animate a Double by Using Key Frames</span></span>
 <span data-ttu-id="23252-103">W tym przykładzie pokazano, jak można animować właściwości, która przyjmuje wartość <xref:System.Double> przy użyciu klucza ramki.</span><span class="sxs-lookup"><span data-stu-id="23252-103">This example shows how to animate the value of a property that takes a <xref:System.Double> by using key frames.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749569"
 ---
 # <a name="ltcallbacktimeoutsgt"></a><span data-ttu-id="61ed3-102">&lt;callbackTimeouts&gt;</span><span class="sxs-lookup"><span data-stu-id="61ed3-102">&lt;callbackTimeouts&gt;</span></span>
 <span data-ttu-id="61ed3-103">Określa wartość limitu czasu podczas przepływu transakcji z serwera do klienta.w scenariuszu kontraktu dwustronnego wywołania zwrotnego.</span><span class="sxs-lookup"><span data-stu-id="61ed3-103">Specifies the timeout value when flowing transactions from server to client.in a duplex callback contract scenario.</span></span>  

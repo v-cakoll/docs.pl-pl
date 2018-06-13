@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525063"
 ---
 # <a name="how-to-draw-cardinal-splines"></a><span data-ttu-id="00e66-102">Porady: rysowanie krzywych kardynalnych</span><span class="sxs-lookup"><span data-stu-id="00e66-102">How to: Draw Cardinal Splines</span></span>
 <span data-ttu-id="00e66-103">Kardynalnej krzywej składanej jest krzywą płynnie przechodzi przez podany zestaw punktów.</span><span class="sxs-lookup"><span data-stu-id="00e66-103">A cardinal spline is a curve that passes smoothly through a given set of points.</span></span> <span data-ttu-id="00e66-104">Do rysowania kardynalnej krzywej składanej, Utwórz <xref:System.Drawing.Graphics> obiektu i przekazać adres tablicę punkty <xref:System.Drawing.Graphics.DrawCurve%2A> metody.</span><span class="sxs-lookup"><span data-stu-id="00e66-104">To draw a cardinal spline, create a <xref:System.Drawing.Graphics> object and pass the address of an array of points to the <xref:System.Drawing.Graphics.DrawCurve%2A> method.</span></span>  

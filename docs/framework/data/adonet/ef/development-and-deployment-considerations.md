@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760349"
 ---
 # <a name="development-and-deployment-considerations"></a><span data-ttu-id="50d0c-102">Projektowanie i zagadnienia dotyczące wdrażania</span><span class="sxs-lookup"><span data-stu-id="50d0c-102">Development and Deployment Considerations</span></span>
 <span data-ttu-id="50d0c-103">Tematy w tej sekcji rozwiązywania problemów można wziąć pod uwagę podczas tworzenia lub wdrażania aplikacji, która jest oparta na platformie ADO.NET Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="50d0c-103">Topics in this section address issues to consider when developing or deploying an application that is based on the ADO.NET Entity Framework.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530384"
 ---
 # <a name="how-to-create-toggle-buttons-in-toolstrip-controls"></a><span data-ttu-id="10922-102">Porady: tworzenie przycisków przełączania w formantach ToolStrip</span><span class="sxs-lookup"><span data-stu-id="10922-102">How to: Create Toggle Buttons in ToolStrip Controls</span></span>
 <span data-ttu-id="10922-103">Gdy użytkownik kliknie przycisk przełącznika, pojawi się zapadnięta i zachowuje zapadnięta wygląd, dopóki użytkownik kliknie przycisk ponownie.</span><span class="sxs-lookup"><span data-stu-id="10922-103">When a user clicks a toggle button, it appears sunken and retains the sunken appearance until the user clicks the button again.</span></span>  

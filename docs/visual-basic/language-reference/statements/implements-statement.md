@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604214"
 ---
 # <a name="implements-statement"></a><span data-ttu-id="e707b-102">Implements — Instrukcja</span><span class="sxs-lookup"><span data-stu-id="e707b-102">Implements Statement</span></span>
 <span data-ttu-id="e707b-103">Określa jeden lub więcej interfejsów lub członków interfejsu, które muszą zostać zaimplementowane w klasie lub definicji struktury, w której znajduje się.</span><span class="sxs-lookup"><span data-stu-id="e707b-103">Specifies one or more interfaces, or interface members, that must be implemented in the class or structure definition in which it appears.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755126"
 ---
 # <a name="lttokenreplaycachegt"></a><span data-ttu-id="ab47f-102">&lt;tokenReplayCache&gt;</span><span class="sxs-lookup"><span data-stu-id="ab47f-102">&lt;tokenReplayCache&gt;</span></span>
 <span data-ttu-id="ab47f-103">Rejestruje pamięci podręcznej powtórzeń tokenów z usługi lub kolekcji programu obsługi tokenów zabezpieczeń.</span><span class="sxs-lookup"><span data-stu-id="ab47f-103">Registers a token replay cache with a service or a security token handler collection.</span></span>  

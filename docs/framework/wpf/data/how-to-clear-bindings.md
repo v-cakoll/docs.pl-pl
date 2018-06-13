@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555860"
 ---
 # <a name="how-to-clear-bindings"></a><span data-ttu-id="0d343-102">Jak wyczyścić powiązania</span><span class="sxs-lookup"><span data-stu-id="0d343-102">How to: Clear Bindings</span></span>
 <span data-ttu-id="0d343-103">W tym przykładzie pokazano, jak można wyczyścić powiązania z obiektu.</span><span class="sxs-lookup"><span data-stu-id="0d343-103">This example shows how to clear bindings from an object.</span></span>  

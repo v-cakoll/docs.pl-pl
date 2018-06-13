@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524455"
 ---
 # <a name="folderbrowserdialog-component-windows-forms"></a><span data-ttu-id="a2311-102">FolderBrowserDialog — Składnik (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="a2311-102">FolderBrowserDialog Component (Windows Forms)</span></span>
 <span data-ttu-id="a2311-103">Formularze systemu Windows `FolderBrowserDialog` składnika wyświetla interfejs, z którym użytkownicy można przeglądać i wybierz folder lub Utwórz nową.</span><span class="sxs-lookup"><span data-stu-id="a2311-103">The Windows Forms `FolderBrowserDialog` component displays an interface with which users can browse and select a folder or create a new one.</span></span> <span data-ttu-id="a2311-104">Jest uzupełnienie [openfiledialog — składnik](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md) składnika, który służy do przeglądania i zaznaczania plików.</span><span class="sxs-lookup"><span data-stu-id="a2311-104">It is a complement to the [OpenFileDialog Component](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md) component, which is used for browsing and selecting files.</span></span>  

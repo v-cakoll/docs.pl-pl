@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555067"
 ---
 # <a name="how-to-resize-a-canvas-by-using-a-thumb"></a><span data-ttu-id="a3013-102">Jak zmienić rozmiar kanwy przy użyciu kciuka</span><span class="sxs-lookup"><span data-stu-id="a3013-102">How to: Resize a Canvas by Using a Thumb</span></span>
 <span data-ttu-id="a3013-103">Ten przykład przedstawia sposób użycia <xref:System.Windows.Controls.Primitives.Thumb> sterowania, aby zmienić rozmiar <xref:System.Windows.Controls.Canvas> formantu.</span><span class="sxs-lookup"><span data-stu-id="a3013-103">This example shows how to use a <xref:System.Windows.Controls.Primitives.Thumb> control to resize a <xref:System.Windows.Controls.Canvas> control.</span></span>  

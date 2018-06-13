@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524537"
 ---
 # <a name="combobox-control-windows-forms"></a><span data-ttu-id="38357-102">ComboBox — Formant (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="38357-102">ComboBox Control (Windows Forms)</span></span>
 <span data-ttu-id="38357-103">Formularze systemu Windows `ComboBox` formant jest używana do wyświetlania danych w polu kombi listy rozwijanej.</span><span class="sxs-lookup"><span data-stu-id="38357-103">The Windows Forms `ComboBox` control is used to display data in a drop-down combo box.</span></span> <span data-ttu-id="38357-104">Domyślnie `ComboBox` formant jest widoczny w dwóch częściach: górnej części jest polem tekstowym, który zezwala użytkownikowi na typ elementu listy.</span><span class="sxs-lookup"><span data-stu-id="38357-104">By default, the `ComboBox` control appears in two parts: the top part is a text box that allows the user to type a list item.</span></span> <span data-ttu-id="38357-105">Druga część to pole listy, które wyświetla listę elementów, z których użytkownik może wybrać jeden.</span><span class="sxs-lookup"><span data-stu-id="38357-105">The second part is a list box that displays a list of items from which the user can select one.</span></span>  

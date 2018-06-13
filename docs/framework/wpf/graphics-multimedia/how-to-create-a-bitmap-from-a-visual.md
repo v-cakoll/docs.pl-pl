@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559769"
 ---
 # <a name="how-to-create-a-bitmap-from-a-visual"></a><span data-ttu-id="d1ad5-102">Jak utworzyć mapę bitową z Visual</span><span class="sxs-lookup"><span data-stu-id="d1ad5-102">How to: Create a Bitmap from a Visual</span></span>
 <span data-ttu-id="d1ad5-103">W tym przykładzie pokazano, jak utworzyć mapę bitową z <xref:System.Windows.Media.Visual>.</span><span class="sxs-lookup"><span data-stu-id="d1ad5-103">This example shows how you can create a bitmap from a <xref:System.Windows.Media.Visual>.</span></span> <span data-ttu-id="d1ad5-104">A <xref:System.Windows.Media.DrawingVisual> jest odwzorowywany z <xref:System.Windows.Media.FormattedText>.</span><span class="sxs-lookup"><span data-stu-id="d1ad5-104">A <xref:System.Windows.Media.DrawingVisual> is rendered with <xref:System.Windows.Media.FormattedText>.</span></span> <span data-ttu-id="d1ad5-105"><xref:System.Windows.Media.Visual> Następnie jest renderowany do <xref:System.Windows.Media.Imaging.RenderTargetBitmap> tworzenia mapy bitowej danego tekstu.</span><span class="sxs-lookup"><span data-stu-id="d1ad5-105">The <xref:System.Windows.Media.Visual> is then rendered to the <xref:System.Windows.Media.Imaging.RenderTargetBitmap> creating a bitmap of the given text.</span></span>  

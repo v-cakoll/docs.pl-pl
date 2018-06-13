@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748971"
 ---
 # <a name="ltserviceauthenticationmanagergt"></a><span data-ttu-id="5a8e6-102">&lt;serviceAuthenticationManager&gt;</span><span class="sxs-lookup"><span data-stu-id="5a8e6-102">&lt;serviceAuthenticationManager&gt;</span></span>
 <span data-ttu-id="5a8e6-103">Udostępnia element konfiguracji przepływu pracy, który ustanawia na poziomie usługi prawidłowości transmisji, wiadomości lub nadawca...</span><span class="sxs-lookup"><span data-stu-id="5a8e6-103">Provides a workflow configuration element that establishes at the service level the validity of a transmission, message, or originator..</span></span>  

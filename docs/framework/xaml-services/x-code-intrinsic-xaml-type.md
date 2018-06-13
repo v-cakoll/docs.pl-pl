@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564316"
 ---
 # <a name="xcode-intrinsic-xaml-type"></a><span data-ttu-id="b4faf-102">x:Code — Typ funkcji XAML</span><span class="sxs-lookup"><span data-stu-id="b4faf-102">x:Code Intrinsic XAML Type</span></span>
 <span data-ttu-id="b4faf-103">Umożliwia umieszczanie kod w produkcji XAML.</span><span class="sxs-lookup"><span data-stu-id="b4faf-103">Allows placement of code within a XAML production.</span></span> <span data-ttu-id="b4faf-104">Taki kod albo mogą być kompilowane przez kompilowany XAML, lub do lewej w środowisku produkcyjnym XAML dla nowszej zastosowań, takich jak interpretacji przez środowisko uruchomieniowe implementacji procesora XAML.</span><span class="sxs-lookup"><span data-stu-id="b4faf-104">Such code can either be compiled by any XAML processor implementation that compiles XAML, or left in the XAML production for later uses such as interpretation by a runtime.</span></span>  

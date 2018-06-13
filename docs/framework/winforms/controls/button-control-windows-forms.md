@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525091"
 ---
 # <a name="button-control-windows-forms"></a><span data-ttu-id="2f0d1-102">Kontrolka przycisku (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="2f0d1-102">Button Control (Windows Forms)</span></span>
 <span data-ttu-id="2f0d1-103">Formularze systemu Windows `Button` formant umożliwia użytkownikowi kliknij go, aby wykonać akcję.</span><span class="sxs-lookup"><span data-stu-id="2f0d1-103">The Windows Forms `Button` control allows the user to click it to perform an action.</span></span> <span data-ttu-id="2f0d1-104">`Button` Formant może wyświetlać tekst i obrazy.</span><span class="sxs-lookup"><span data-stu-id="2f0d1-104">The `Button` control can display both text and images.</span></span> <span data-ttu-id="2f0d1-105">Po kliknięciu przycisku wygląda, jakby trwa spoczywa i wydane.</span><span class="sxs-lookup"><span data-stu-id="2f0d1-105">When the button is clicked, it looks as if it is being pushed in and released.</span></span>  

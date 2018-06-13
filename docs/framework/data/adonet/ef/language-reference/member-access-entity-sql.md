@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764635"
 ---
 # <a name="-member-access-entity-sql"></a><span data-ttu-id="b0247-103">.</span><span class="sxs-lookup"><span data-stu-id="b0247-103">.</span></span> <span data-ttu-id="b0247-104">(Dostęp do elementu członkowskiego) (Jednostka SQL)</span><span class="sxs-lookup"><span data-stu-id="b0247-104">(Member Access) (Entity SQL)</span></span>
 <span data-ttu-id="b0247-105">Operator kropki (.) jest [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operatora dostępu do elementu członkowskiego.</span><span class="sxs-lookup"><span data-stu-id="b0247-105">The dot operator (.) is the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] member access operator.</span></span> <span data-ttu-id="b0247-106">Operator dostępu do elementu członkowskiego umożliwia uzyskanie wartość właściwości lub pola wystąpienia typu strukturalnego modelu koncepcyjnego.</span><span class="sxs-lookup"><span data-stu-id="b0247-106">You use the member access operator to yield the value of a property or field of an instance of structural conceptual model type.</span></span>  

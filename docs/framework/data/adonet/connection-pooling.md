@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755529"
 ---
 # <a name="connection-pooling"></a><span data-ttu-id="811c0-102">Pula połączeń</span><span class="sxs-lookup"><span data-stu-id="811c0-102">Connection Pooling</span></span>
 <span data-ttu-id="811c0-103">Połączenie ze źródłem danych może zająć dużo czasu.</span><span class="sxs-lookup"><span data-stu-id="811c0-103">Connecting to a data source can be time consuming.</span></span> <span data-ttu-id="811c0-104">Aby zminimalizować koszty otwarcia połączeń, ADO.NET używana technika optymalizacji o nazwie *puli połączeń*, który minimalizację kosztów wielokrotne otwieranie i zamykanie połączenia.</span><span class="sxs-lookup"><span data-stu-id="811c0-104">To minimize the cost of opening connections, ADO.NET uses an optimization technique called *connection pooling*, which minimizes the cost of repeatedly opening and closing connections.</span></span> <span data-ttu-id="811c0-105">Pula połączeń przebiega inaczej dla dostawcy danych .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="811c0-105">Connection pooling is handled differently for the .NET Framework data providers.</span></span>  

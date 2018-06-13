@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761652"
 ---
 # <a name="how-to-call-model-defined-functions-in-queries"></a><span data-ttu-id="6d933-102">Porady: Wywołaj funkcje zdefiniowane przez Model w zapytaniach</span><span class="sxs-lookup"><span data-stu-id="6d933-102">How to: Call Model-Defined Functions in Queries</span></span>
 <span data-ttu-id="6d933-103">W tym temacie opisano sposób wywołania funkcji, które są zdefiniowane w modelu koncepcyjnym z poziomu [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania.</span><span class="sxs-lookup"><span data-stu-id="6d933-103">This topic describes how to call functions that are defined in the conceptual model from within [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] queries.</span></span>  

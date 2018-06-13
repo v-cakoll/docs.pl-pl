@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762861"
 ---
 # <a name="function-overload-resolution-entity-sql"></a><span data-ttu-id="5bda8-102">Rozpoznanie przeciążenia funkcji (jednostka SQL)</span><span class="sxs-lookup"><span data-stu-id="5bda8-102">Function Overload Resolution (Entity SQL)</span></span>
 <span data-ttu-id="5bda8-103">W tym temacie opisano sposób [!INCLUDE[esql](../../../../../../includes/esql-md.md)] funkcje zostaną rozwiązane.</span><span class="sxs-lookup"><span data-stu-id="5bda8-103">This topic describes how [!INCLUDE[esql](../../../../../../includes/esql-md.md)] functions are resolved.</span></span>  

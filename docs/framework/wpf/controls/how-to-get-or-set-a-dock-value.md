@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554785"
 ---
 # <a name="how-to-get-or-set-a-dock-value"></a><span data-ttu-id="36c27-102">Jak pobrać lub ustawić wartość dokowania</span><span class="sxs-lookup"><span data-stu-id="36c27-102">How to: Get or Set a Dock Value</span></span>
 <span data-ttu-id="36c27-103">Poniższy przykład pokazuje, jak można przypisać <xref:System.Windows.Controls.Dock> wartość dla obiekt.</span><span class="sxs-lookup"><span data-stu-id="36c27-103">The following example shows how to assign a <xref:System.Windows.Controls.Dock> value for an object.</span></span> <span data-ttu-id="36c27-104">W przykładzie użyto <xref:System.Windows.Controls.DockPanel.GetDock%2A> i <xref:System.Windows.Controls.DockPanel.SetDock%2A> metody <xref:System.Windows.Controls.DockPanel>.</span><span class="sxs-lookup"><span data-stu-id="36c27-104">The example uses the <xref:System.Windows.Controls.DockPanel.GetDock%2A> and <xref:System.Windows.Controls.DockPanel.SetDock%2A> methods of <xref:System.Windows.Controls.DockPanel>.</span></span>  

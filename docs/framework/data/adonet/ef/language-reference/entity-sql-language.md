@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761041"
 ---
 # <a name="entity-sql-language"></a><span data-ttu-id="b46b3-102">Jednostki języka SQL</span><span class="sxs-lookup"><span data-stu-id="b46b3-102">Entity SQL Language</span></span>
 <span data-ttu-id="b46b3-103">Jednostka SQL jest język kwerendy niezależne od magazynu, która jest podobna do bazy danych SQL.</span><span class="sxs-lookup"><span data-stu-id="b46b3-103">Entity SQL is a storage-independent query language that is similar to SQL.</span></span> <span data-ttu-id="b46b3-104">Jednostki SQL umożliwia zapytania danych jednostki, jako obiekty lub w formie tabelarycznej.</span><span class="sxs-lookup"><span data-stu-id="b46b3-104">Entity SQL allows you to query entity data, either as objects or in a tabular form.</span></span> <span data-ttu-id="b46b3-105">Należy rozważyć użycie SQL jednostki w następujących przypadkach:</span><span class="sxs-lookup"><span data-stu-id="b46b3-105">You should consider using Entity SQL in the following cases:</span></span>  

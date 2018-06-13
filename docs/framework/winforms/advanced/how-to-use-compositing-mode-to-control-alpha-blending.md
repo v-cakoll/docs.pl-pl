@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527005"
 ---
 # <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a><span data-ttu-id="20758-102">Porady: stosowanie trybu składania do sterowania przenikaniem alfa</span><span class="sxs-lookup"><span data-stu-id="20758-102">How to: Use Compositing Mode to Control Alpha Blending</span></span>
 <span data-ttu-id="20758-103">Może to być razy, gdy chcesz utworzyć ukrytej mapy bitowej, który ma następującą charakterystykę:</span><span class="sxs-lookup"><span data-stu-id="20758-103">There may be times when you want to create an off-screen bitmap that has the following characteristics:</span></span>  

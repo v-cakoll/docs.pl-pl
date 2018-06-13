@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748097"
 ---
 # <a name="ltmexnamedpipebindinggt"></a><span data-ttu-id="7e0f0-102">&lt;mexNamedPipeBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="7e0f0-102">&lt;mexNamedPipeBinding&gt;</span></span>
 <span data-ttu-id="7e0f0-103">Określa ustawienia dla powiązania używanego w wymianie wiadomości WS-MetadataExchange (WS-MEX) za pośrednictwem nazwanych potoków.</span><span class="sxs-lookup"><span data-stu-id="7e0f0-103">Specifies the settings for a binding used for the WS-MetadataExchange (WS-MEX) message exchange over named pipe.</span></span>  

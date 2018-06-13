@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749585"
 ---
 # <a name="ltbehaviorextensionsgt"></a><span data-ttu-id="8f1d8-102">&lt;behaviorExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="8f1d8-102">&lt;behaviorExtensions&gt;</span></span>
 <span data-ttu-id="8f1d8-103">Dzięki rozszerzeniom zachowania użytkownika do tworzenia elementów zachowanie zdefiniowane przez użytkownika.</span><span class="sxs-lookup"><span data-stu-id="8f1d8-103">Behavior extensions enable the user to create user-defined behavior elements.</span></span> <span data-ttu-id="8f1d8-104">Te elementy można używać razem standardowe elementy zachowanie Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="8f1d8-104">These elements can be used alongside the standard Windows Communication Foundation (WCF) behavior elements.</span></span> <span data-ttu-id="8f1d8-105">`behaviorExtensions` Sekcja definiuje element w taki sposób, że mogą być używane w konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="8f1d8-105">The `behaviorExtensions` section defines the element such that it can be used in configuration.</span></span> <span data-ttu-id="8f1d8-106">Oto przykład rozszerzenia typowe zachowanie.</span><span class="sxs-lookup"><span data-stu-id="8f1d8-106">Here is an example of a typical behavior extension.</span></span>  

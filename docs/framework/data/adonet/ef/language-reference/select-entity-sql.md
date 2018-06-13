@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765987"
 ---
 # <a name="select-entity-sql"></a><span data-ttu-id="64038-102">Wybierz (jednostka SQL)</span><span class="sxs-lookup"><span data-stu-id="64038-102">SELECT (Entity SQL)</span></span>
 <span data-ttu-id="64038-103">Określa elementów zwróconych przez kwerendę.</span><span class="sxs-lookup"><span data-stu-id="64038-103">Specifies the elements returned by a query.</span></span>  

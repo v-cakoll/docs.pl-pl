@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761444"
 ---
 # <a name="cast-entity-sql"></a><span data-ttu-id="50548-102">RZUTOWANIE (jednostka SQL)</span><span class="sxs-lookup"><span data-stu-id="50548-102">CAST (Entity SQL)</span></span>
 <span data-ttu-id="50548-103">Konwertuje wyrażenie jednego typu danych na inny.</span><span class="sxs-lookup"><span data-stu-id="50548-103">Converts an expression of one data type to another.</span></span>  

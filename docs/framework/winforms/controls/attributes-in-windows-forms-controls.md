@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525781"
 ---
 # <a name="attributes-in-windows-forms-controls"></a><span data-ttu-id="bee50-102">Atrybuty w formantach formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="bee50-102">Attributes in Windows Forms Controls</span></span>
 <span data-ttu-id="bee50-103">.NET Framework jest dostępnych wiele atrybutów, które można zastosować do elementów członkowskich niestandardowe formanty i składniki.</span><span class="sxs-lookup"><span data-stu-id="bee50-103">The .NET Framework provides a variety of attributes you can apply to the members of your custom controls and components.</span></span> <span data-ttu-id="bee50-104">Niektóre z tych atrybutów wpływają na zachowanie środowiska wykonawczego klasy, a inne mają wpływ na zachowanie czasu projektowania.</span><span class="sxs-lookup"><span data-stu-id="bee50-104">Some of these attributes affect the run-time behavior of a class, and others affect the design-time behavior.</span></span>  

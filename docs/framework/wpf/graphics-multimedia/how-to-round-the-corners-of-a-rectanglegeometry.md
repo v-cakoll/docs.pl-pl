@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561644"
 ---
 # <a name="how-to-round-the-corners-of-a-rectanglegeometry"></a><span data-ttu-id="3aacc-102">Jak zaokrąglić rogi RectangleGeometry</span><span class="sxs-lookup"><span data-stu-id="3aacc-102">How to: Round the Corners of a RectangleGeometry</span></span>
 <span data-ttu-id="3aacc-103">Do zaokrąglania narożników <xref:System.Windows.Media.RectangleGeometry>, ustaw jej <xref:System.Windows.Media.RectangleGeometry.RadiusX%2A> i <xref:System.Windows.Media.RectangleGeometry.RadiusY%2A> właściwości na wartość większą niż zero.</span><span class="sxs-lookup"><span data-stu-id="3aacc-103">To round the corners of a <xref:System.Windows.Media.RectangleGeometry>, set its <xref:System.Windows.Media.RectangleGeometry.RadiusX%2A> and <xref:System.Windows.Media.RectangleGeometry.RadiusY%2A> properties to a value greater than zero.</span></span> <span data-ttu-id="3aacc-104">Im większa wartości, bardziej okrągłe prostokąta.</span><span class="sxs-lookup"><span data-stu-id="3aacc-104">The larger the values, the rounder the rectangle's corners.</span></span>  

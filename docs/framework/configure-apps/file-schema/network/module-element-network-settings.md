@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753771"
 ---
 # <a name="ltmodulegt-element-network-settings"></a><span data-ttu-id="b4a46-102">&lt;Moduł&gt; elementu (ustawienia sieciowe)</span><span class="sxs-lookup"><span data-stu-id="b4a46-102">&lt;module&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="b4a46-103">Dodaje nowy moduł serwera proxy aplikacji.</span><span class="sxs-lookup"><span data-stu-id="b4a46-103">Adds a new proxy module to the application.</span></span>  

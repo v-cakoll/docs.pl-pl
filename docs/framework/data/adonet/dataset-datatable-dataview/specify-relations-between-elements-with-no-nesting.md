@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760092"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a><span data-ttu-id="3f592-102">Określanie relacji między elementami z nie zagnieżdżania</span><span class="sxs-lookup"><span data-stu-id="3f592-102">Specify Relations Between Elements with No Nesting</span></span>
 <span data-ttu-id="3f592-103">Gdy nie są zagnieżdżone elementy, nie niejawnych relacji są tworzone.</span><span class="sxs-lookup"><span data-stu-id="3f592-103">When elements are not nested, no implicit relations are created.</span></span> <span data-ttu-id="3f592-104">Można jednak jawnie określić relacji między elementami, które nie są zagnieżdżone za pomocą **msdata:Relationship** adnotacji.</span><span class="sxs-lookup"><span data-stu-id="3f592-104">You can, however, explicitly specify relations between elements that are not nested by using the **msdata:Relationship** annotation.</span></span>  

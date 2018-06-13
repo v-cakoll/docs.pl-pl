@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557605"
 ---
 # <a name="menu-overview"></a><span data-ttu-id="9f540-102">Przegląd Menu</span><span class="sxs-lookup"><span data-stu-id="9f540-102">Menu Overview</span></span>
 <span data-ttu-id="9f540-103"><xref:System.Windows.Controls.Menu> Klasa umożliwia organizowanie elementów, skojarzonego z poleceniami i obsługi zdarzeń w porządku hierarchicznym.</span><span class="sxs-lookup"><span data-stu-id="9f540-103">The <xref:System.Windows.Controls.Menu> class enables you to organize elements associated with commands and event handlers in a hierarchical order.</span></span> <span data-ttu-id="9f540-104">Każdy <xref:System.Windows.Controls.Menu> element zawiera kolekcję <xref:System.Windows.Controls.MenuItem> elementów.</span><span class="sxs-lookup"><span data-stu-id="9f540-104">Each <xref:System.Windows.Controls.Menu> element contains a collection of <xref:System.Windows.Controls.MenuItem> elements.</span></span>  

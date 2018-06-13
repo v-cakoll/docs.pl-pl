@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765204"
 ---
 # <a name="oracle-distributed-transactions"></a><span data-ttu-id="2593f-102">Transakcje rozproszone Oracle</span><span class="sxs-lookup"><span data-stu-id="2593f-102">Oracle Distributed Transactions</span></span>
 <span data-ttu-id="2593f-103"><xref:System.Data.OracleClient.OracleConnection> Obiektu automatycznie rejestruje w istniejącej transakcji rozproszonej, gdy ustali, że transakcja jest aktywna.</span><span class="sxs-lookup"><span data-stu-id="2593f-103">The <xref:System.Data.OracleClient.OracleConnection> object automatically enlists in an existing distributed transaction if it determines that a transaction is active.</span></span> <span data-ttu-id="2593f-104">Automatyczne transakcji rejestracji występuje, gdy połączenie jest otwarte lub pobrać z puli połączeń.</span><span class="sxs-lookup"><span data-stu-id="2593f-104">Automatic transaction enlistment occurs when the connection is opened or retrieved from the connection pool.</span></span> <span data-ttu-id="2593f-105">Auto rejestracji w istniejącej transakcji można wyłączyć, określając</span><span class="sxs-lookup"><span data-stu-id="2593f-105">You can disable auto-enlistment in existing transactions by specifying</span></span>  

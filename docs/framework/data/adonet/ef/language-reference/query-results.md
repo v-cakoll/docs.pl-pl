@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762325"
 ---
 # <a name="query-results"></a><span data-ttu-id="bc1e2-102">Wyniki zapytania</span><span class="sxs-lookup"><span data-stu-id="bc1e2-102">Query Results</span></span>
 <span data-ttu-id="bc1e2-103">Po [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania jest konwertować na drzewa polecenia i wykonywane, wyniki zapytania są zazwyczaj zwracane jako jedną z następujących:</span><span class="sxs-lookup"><span data-stu-id="bc1e2-103">After a [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] query is converted to command trees and executed, the query results are usually returned as one of the following:</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528847"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="66b10-102">Tryb wypełniania kolumn w formancie DataGridView formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="66b10-102">Column Fill Mode in the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="66b10-103">W tryb wypełniania kolumny <xref:System.Windows.Forms.DataGridView> kontroli zmienia rozmiar kolumn automatycznie, tak aby zajmowały szerokości obszaru wyświetlania dostępne.</span><span class="sxs-lookup"><span data-stu-id="66b10-103">In column fill mode, the <xref:System.Windows.Forms.DataGridView> control resizes its columns automatically so that they fill the width of the available display area.</span></span> <span data-ttu-id="66b10-104">Formant nie są wyświetlane na pasku przewijania w poziomie, z wyjątkiem przypadków, gdy jest muszą być szerokość każdej kolumny jest równa lub większa niż jego <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> wartości właściwości.</span><span class="sxs-lookup"><span data-stu-id="66b10-104">The control does not display the horizontal scroll bar except when it is necessary to keep the width of every column equal to or greater than its <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> property value.</span></span>  

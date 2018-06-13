@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754109"
 ---
 # <a name="ltsupportportabilitygt-element"></a><span data-ttu-id="50467-102">&lt;supportPortability&gt; — Element</span><span class="sxs-lookup"><span data-stu-id="50467-102">&lt;supportPortability&gt; Element</span></span>
 <span data-ttu-id="50467-103">Określa, aplikacja może odwoływać tego samego zestawu w dwóch różnych implementacji programu .NET Framework, wyłączając domyślne zachowanie, która traktuje zestawy jako równoważne do celów przenośność aplikacji.</span><span class="sxs-lookup"><span data-stu-id="50467-103">Specifies that an application can reference the same assembly in two different implementations of the .NET Framework, by disabling the default behavior that treats the assemblies as equivalent for application portability purposes.</span></span>  

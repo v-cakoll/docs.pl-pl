@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758165"
 ---
 # <a name="modifying-data-with-stored-procedures"></a><span data-ttu-id="f8207-102">Modyfikowanie danych w procedurach składowanych</span><span class="sxs-lookup"><span data-stu-id="f8207-102">Modifying Data with Stored Procedures</span></span>
 <span data-ttu-id="f8207-103">Procedury składowane można akceptować dane jako parametry wejściowe i mogą zwracać dane jako parametry wyjściowe, zestawów wyników lub wartości zwracanych.</span><span class="sxs-lookup"><span data-stu-id="f8207-103">Stored procedures can accept data as input parameters and can return data as output parameters, result sets, or return values.</span></span> <span data-ttu-id="f8207-104">Poniższy przykład przedstawia sposób ADO.NET wysyła i odbiera dane wejściowe parametrów wyjściowych parametrów i wartości zwracane.</span><span class="sxs-lookup"><span data-stu-id="f8207-104">The sample below illustrates how ADO.NET sends and receives input parameters, output parameters, and return values.</span></span> <span data-ttu-id="f8207-105">Przykład wstawia nowego rekordu do tabeli, w których kolumna klucza podstawowego jest kolumną tożsamości w bazie danych programu SQL Server.</span><span class="sxs-lookup"><span data-stu-id="f8207-105">The example inserts a new record into a table where the primary key column is an identity column in a SQL Server database.</span></span>  

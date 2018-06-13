@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532915"
 ---
 # <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a><span data-ttu-id="c506f-102">Porady: wyświetlanie znacznika wstawiania w formancie ListView formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="c506f-102">How to: Display an Insertion Mark in a Windows Forms ListView Control</span></span>
 <span data-ttu-id="c506f-103">Znacznika wstawiania w <xref:System.Windows.Forms.ListView> kontroli wyświetlani użytkownicy punktu, w którym zostanie wstawiony przeciąganego elementów.</span><span class="sxs-lookup"><span data-stu-id="c506f-103">The insertion mark in the <xref:System.Windows.Forms.ListView> control shows users the point where dragged items will be inserted.</span></span> <span data-ttu-id="c506f-104">Gdy użytkownik przeciągnie element do punktu między dwoma innymi elementami, znacznika wstawiania zawiera oczekiwanej lokalizacji nowego elementu.</span><span class="sxs-lookup"><span data-stu-id="c506f-104">When a user drags an item to a point between two other items, the insertion mark shows the item's expected new location.</span></span>  

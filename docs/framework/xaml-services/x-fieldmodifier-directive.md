@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565062"
 ---
 # <a name="xfieldmodifier-directive"></a><span data-ttu-id="fbd5d-102">x:FieldModifier — dyrektywa</span><span class="sxs-lookup"><span data-stu-id="fbd5d-102">x:FieldModifier Directive</span></span>
 <span data-ttu-id="fbd5d-103">Modyfikuje zachowanie kompilacji XAML, tak aby pól dla odwołania do nazwanych obiektów są zdefiniowane z <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> dostępu zamiast <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> zachowanie domyślne.</span><span class="sxs-lookup"><span data-stu-id="fbd5d-103">Modifies XAML compilation behavior so that fields for named object references are defined with <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> access instead of the <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> default behavior.</span></span>  

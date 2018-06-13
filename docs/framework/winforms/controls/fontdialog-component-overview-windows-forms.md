@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526881"
 ---
 # <a name="fontdialog-component-overview-windows-forms"></a><span data-ttu-id="b3618-102">FontDialog — Informacje o składniku (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="b3618-102">FontDialog Component Overview (Windows Forms)</span></span>
 <span data-ttu-id="b3618-103">Formularze systemu Windows <xref:System.Windows.Forms.FontDialog> składnik jest wstępnie skonfigurowane okno dialogowe, które jest standard Windows **czcionki** okno dialogowe używany do udostępnienia czcionek, które są aktualnie zainstalowane w systemie.</span><span class="sxs-lookup"><span data-stu-id="b3618-103">The Windows Forms <xref:System.Windows.Forms.FontDialog> component is a pre-configured dialog box, which is the standard Windows **Font** dialog box used to expose the fonts that are currently installed on the system.</span></span> <span data-ttu-id="b3618-104">Używać go w aplikacji systemu Windows jako prostym rozwiązaniem wybór czcionki zamiast własne okno dialogowe Konfigurowanie.</span><span class="sxs-lookup"><span data-stu-id="b3618-104">Use it within your Windows-based application as a simple solution for font selection in lieu of configuring your own dialog box.</span></span>  

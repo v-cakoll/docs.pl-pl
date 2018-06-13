@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563123"
 ---
 # <a name="xtype-markup-extension"></a><span data-ttu-id="1b491-102">x:Type — Rozszerzenie znaczników</span><span class="sxs-lookup"><span data-stu-id="1b491-102">x:Type Markup Extension</span></span>
 <span data-ttu-id="1b491-103">Dostarcza CLR <xref:System.Type> obiekt, który jest typem podstawowym dla określonego typu XAML.</span><span class="sxs-lookup"><span data-stu-id="1b491-103">Supplies the CLR <xref:System.Type> object that is the underlying type for a specified XAML type.</span></span>  

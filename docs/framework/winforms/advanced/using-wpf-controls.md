@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526607"
 ---
 # <a name="using-wpf-controls"></a><span data-ttu-id="67b71-102">Korzystanie z formantów WPF</span><span class="sxs-lookup"><span data-stu-id="67b71-102">Using WPF Controls</span></span>
 <span data-ttu-id="67b71-103">Formanty Windows Presentation Foundation (WPF) służy w aplikacjach opartych na formularzach systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="67b71-103">You can use Windows Presentation Foundation (WPF) controls in your Windows Forms-based applications.</span></span> <span data-ttu-id="67b71-104">Chociaż te dwie technologie inny widok, ich współdziałać sprawnie.</span><span class="sxs-lookup"><span data-stu-id="67b71-104">Although these are two different view technologies, they interoperate smoothly.</span></span>  

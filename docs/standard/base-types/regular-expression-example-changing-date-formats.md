@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568072"
 ---
 # <a name="regular-expression-example-changing-date-formats"></a><span data-ttu-id="162fa-102">Przykładowe wyrażenie regularne: zmienianie formatów daty</span><span class="sxs-lookup"><span data-stu-id="162fa-102">Regular Expression Example: Changing Date Formats</span></span>
 <span data-ttu-id="162fa-103">Poniższy przykład kodu wykorzystuje <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> metodę, aby zastąpić daty, które mają następującą postać *mm*/*dd*/*rr* z daty mieć postać *dd*-*mm*-*rr*.</span><span class="sxs-lookup"><span data-stu-id="162fa-103">The following code example uses the <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> method to replace dates that have the form *mm*/*dd*/*yy* with dates that have the form *dd*-*mm*-*yy*.</span></span>  

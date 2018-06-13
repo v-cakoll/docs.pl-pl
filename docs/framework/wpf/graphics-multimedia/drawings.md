@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556042"
 ---
 # <a name="drawings"></a><span data-ttu-id="541ae-102">Rysunki</span><span class="sxs-lookup"><span data-stu-id="541ae-102">Drawings</span></span>
 <span data-ttu-id="541ae-103"><xref:System.Windows.Media.Drawing> obiekty służą do wydajnie Rysowanie kształtów, obrazy i tekst.</span><span class="sxs-lookup"><span data-stu-id="541ae-103"><xref:System.Windows.Media.Drawing> objects are used to efficiently draw shapes, images, or text.</span></span> <span data-ttu-id="541ae-104">Rysunki są używane podczas malowania <xref:System.Windows.Media.DrawingBrush> lub programowania z <xref:System.Windows.Media.Visual> obiektów.</span><span class="sxs-lookup"><span data-stu-id="541ae-104">Drawings are used when painting with a <xref:System.Windows.Media.DrawingBrush> or programming with <xref:System.Windows.Media.Visual> objects.</span></span>  

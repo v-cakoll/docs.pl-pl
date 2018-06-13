@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554095"
 ---
 # <a name="richtextbox"></a><span data-ttu-id="76eeb-102">RichTextBox</span><span class="sxs-lookup"><span data-stu-id="76eeb-102">RichTextBox</span></span>
 <span data-ttu-id="76eeb-103"><xref:System.Windows.Controls.RichTextBox> Element definiuje kontrolkę edycji dzięki wbudowanej obsłudze funkcje takie jak wycinanie i wklejanie, prezentacji sformatowanego dokumentu i zawartości.</span><span class="sxs-lookup"><span data-stu-id="76eeb-103">The <xref:System.Windows.Controls.RichTextBox> element defines an editing control with built-in support for features such as cut and paste, rich document presentation, and content selection.</span></span>  

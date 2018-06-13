@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755607"
 ---
 # <a name="ltcustomcookiehandlergt"></a><span data-ttu-id="06bd5-102">&lt;customCookieHandler&gt;</span><span class="sxs-lookup"><span data-stu-id="06bd5-102">&lt;customCookieHandler&gt;</span></span>
 <span data-ttu-id="06bd5-103">Ustawia typ obsługi niestandardowego pliku cookie.</span><span class="sxs-lookup"><span data-stu-id="06bd5-103">Sets the custom cookie handler type.</span></span> <span data-ttu-id="06bd5-104">Ten element tylko mogą występować Jeśli `mode` atrybutu `<cookieHandler>` element jest "Custom".</span><span class="sxs-lookup"><span data-stu-id="06bd5-104">This element may only be present if the `mode` attribute of the `<cookieHandler>` element is "Custom".</span></span> <span data-ttu-id="06bd5-105">Niestandardowy typ musi pochodzić z <xref:System.IdentityModel.Services.CookieHandler> klasy.</span><span class="sxs-lookup"><span data-stu-id="06bd5-105">The custom type must be derived from the <xref:System.IdentityModel.Services.CookieHandler> class.</span></span>  

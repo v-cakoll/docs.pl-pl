@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761467"
 ---
 # <a name="case-entity-sql"></a><span data-ttu-id="cc8e1-102">W przypadku (jednostka SQL)</span><span class="sxs-lookup"><span data-stu-id="cc8e1-102">CASE (Entity SQL)</span></span>
 <span data-ttu-id="cc8e1-103">Ocenia zestaw `Boolean` wyrażeń w celu ustalenia wyniku.</span><span class="sxs-lookup"><span data-stu-id="cc8e1-103">Evaluates a set of `Boolean` expressions to determine the result.</span></span>  

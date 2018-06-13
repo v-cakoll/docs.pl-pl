@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526741"
 ---
 # <a name="contextmenustrip-control-overview"></a><span data-ttu-id="fd2fc-102">ContextMenuStrip — Informacje o formancie</span><span class="sxs-lookup"><span data-stu-id="fd2fc-102">ContextMenuStrip Control Overview</span></span>
 > [!NOTE]

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557098"
 ---
 # <a name="how-to-bind-to-a-method"></a><span data-ttu-id="9329b-102">Jak powiązać z metodą</span><span class="sxs-lookup"><span data-stu-id="9329b-102">How to: Bind to a Method</span></span>
 <span data-ttu-id="9329b-103">Poniższy przykład pokazuje, jak można powiązać je przy użyciu metody <xref:System.Windows.Data.ObjectDataProvider>.</span><span class="sxs-lookup"><span data-stu-id="9329b-103">The following example shows how to bind to a method using <xref:System.Windows.Data.ObjectDataProvider>.</span></span>  

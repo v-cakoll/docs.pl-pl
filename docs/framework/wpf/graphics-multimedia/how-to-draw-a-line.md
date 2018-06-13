@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560628"
 ---
 # <a name="how-to-draw-a-line"></a><span data-ttu-id="632e2-102">Jak narysować linię</span><span class="sxs-lookup"><span data-stu-id="632e2-102">How to: Draw a Line</span></span>
 <span data-ttu-id="632e2-103">W tym przykładzie przedstawiono sposób Rysowanie linii za pomocą <xref:System.Windows.Shapes.Line> elementu.</span><span class="sxs-lookup"><span data-stu-id="632e2-103">This example shows you how to draw lines by using the <xref:System.Windows.Shapes.Line> element.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556981"
 ---
 # <a name="tooltip"></a><span data-ttu-id="7d327-102">ToolTip</span><span class="sxs-lookup"><span data-stu-id="7d327-102">ToolTip</span></span>
 <span data-ttu-id="7d327-103">Etykietka narzędzia jest mała okno podręczne pojawia się po zatrzymaniu wskaźnika myszy nad elementem, takie jak ponad <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="7d327-103">A tooltip is a small pop-up window that appears when a user pauses the mouse pointer over an element, such as over a <xref:System.Windows.Controls.Button>.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757856"
 ---
 # <a name="ltaddgt"></a><span data-ttu-id="24542-102">&lt;add&gt;</span><span class="sxs-lookup"><span data-stu-id="24542-102">&lt;add&gt;</span></span>
 <span data-ttu-id="24542-103">Dodaje określony zabezpieczenia programu obsługi tokenów do kolekcji programu obsługi tokenów.</span><span class="sxs-lookup"><span data-stu-id="24542-103">Adds the specified security token handler to the token handler collection.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529662"
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="73dc2-102">Style komórki w formancie DataGridView formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="73dc2-102">Cell Styles in the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="73dc2-103">Każda komórka w <xref:System.Windows.Forms.DataGridView> formant może mieć własną styl, na przykład format tekstu, kolor tła kolor pierwszego planu i czcionki.</span><span class="sxs-lookup"><span data-stu-id="73dc2-103">Each cell within the <xref:System.Windows.Forms.DataGridView> control can have its own style, such as text format, background color, foreground color, and font.</span></span> <span data-ttu-id="73dc2-104">Zwykle jednak wiele komórek udostępni właściwości danego stylu.</span><span class="sxs-lookup"><span data-stu-id="73dc2-104">Typically, however, multiple cells will share particular style characteristics.</span></span>  

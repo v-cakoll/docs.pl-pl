@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602268"
 ---
 # <a name="mid-statement"></a><span data-ttu-id="4f613-102">Mid — Instrukcja</span><span class="sxs-lookup"><span data-stu-id="4f613-102">Mid Statement</span></span>
 <span data-ttu-id="4f613-103">Zamienia określoną liczbę znaków w `String` zmiennej znakami z innego ciągu.</span><span class="sxs-lookup"><span data-stu-id="4f613-103">Replaces a specified number of characters in a `String` variable with characters from another string.</span></span>  

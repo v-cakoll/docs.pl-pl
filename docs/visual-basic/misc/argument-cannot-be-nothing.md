@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600072"
 ---
 # <a name="argument-cannot-be-nothing"></a><span data-ttu-id="17ecc-102">Argument nie może być nic</span><span class="sxs-lookup"><span data-stu-id="17ecc-102">Argument cannot be Nothing</span></span>
 <span data-ttu-id="17ecc-103">Argumentu musi mieć wartość zostały podane wartości null.</span><span class="sxs-lookup"><span data-stu-id="17ecc-103">A null value has been supplied for an argument that must have a value.</span></span>  

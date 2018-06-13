@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524429"
 ---
 # <a name="how-to-add-a-control-to-a-toolstripcontentpanel"></a><span data-ttu-id="a7013-102">Porady: dodawanie formantu do elementu ToolStripContentPanel</span><span class="sxs-lookup"><span data-stu-id="a7013-102">How to: Add a Control to a ToolStripContentPanel</span></span>
 <span data-ttu-id="a7013-103">Programowo można dodać jeden lub kilka formantów do <xref:System.Windows.Forms.ToolStripContentPanel>.</span><span class="sxs-lookup"><span data-stu-id="a7013-103">You can programmatically add one or more controls to a <xref:System.Windows.Forms.ToolStripContentPanel>.</span></span>  

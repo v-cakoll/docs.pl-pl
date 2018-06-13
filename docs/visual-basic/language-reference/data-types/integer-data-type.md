@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591732"
 ---
 # <a name="integer-data-type-visual-basic"></a><span data-ttu-id="06a14-102">Integer — typ danych (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="06a14-102">Integer data type (Visual Basic)</span></span>
 <span data-ttu-id="06a14-103">Przechowuje 32-bitowe (4-bajtowe) liczby całkowite ze znakiem z zakresu wartości od -2 147 483,648 do 2 147 483 647.</span><span class="sxs-lookup"><span data-stu-id="06a14-103">Holds signed 32-bit (4-byte) integers that range in value from -2,147,483,648 through 2,147,483,647.</span></span>  

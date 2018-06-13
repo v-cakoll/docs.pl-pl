@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595023"
 ---
 # <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not-ltlt-gtgt"></a><span data-ttu-id="a6f7d-102">Deklaracja operatora musi mieć jeden z: +,-, \*,\,/, ^, &amp;, Like, Mod i, Or, Xor, nie &lt; &lt;, &gt; &gt;...</span><span class="sxs-lookup"><span data-stu-id="a6f7d-102">Operator declaration must be one of:  +,-,\*,\,/,^, &amp;, Like, Mod, And, Or, Xor, Not, &lt;&lt;, &gt;&gt;...</span></span>
 <span data-ttu-id="a6f7d-103">Można zadeklarować tylko operatora, który jest uprawniona do przeciążenia.</span><span class="sxs-lookup"><span data-stu-id="a6f7d-103">You can declare only an operator that is eligible for overloading.</span></span> <span data-ttu-id="a6f7d-104">W poniższej tabeli wymieniono operatory, których można zadeklarować.</span><span class="sxs-lookup"><span data-stu-id="a6f7d-104">The following table lists the operators you can declare.</span></span>  

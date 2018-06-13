@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587472"
 ---
 # <a name="anonymous-type-member-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a><span data-ttu-id="8f4c9-102">Nazwę członka typu anonimowego można wywnioskować tylko na podstawie prostej lub kwalifikowanej nazwy bez argumentów</span><span class="sxs-lookup"><span data-stu-id="8f4c9-102">Anonymous type member name can be inferred only from a simple or qualified name with no arguments</span></span>
 <span data-ttu-id="8f4c9-103">Nie można wywnioskować nazwy członka typu anonimowego z wyrażenie złożone.</span><span class="sxs-lookup"><span data-stu-id="8f4c9-103">You cannot infer an anonymous type member name from a complex expression.</span></span>  

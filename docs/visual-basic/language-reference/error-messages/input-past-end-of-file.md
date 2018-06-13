@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586744"
 ---
 # <a name="input-past-end-of-file"></a><span data-ttu-id="406bf-102">Próba zapisu poza końcem pliku</span><span class="sxs-lookup"><span data-stu-id="406bf-102">Input past end of file</span></span>
 <span data-ttu-id="406bf-103">Albo `Input` instrukcji jest odczytu z pliku, który jest pusty lub jeden w którym wszystkie dane są używane, lub użyto `EOF` funkcji przy użyciu pliku otwarte dostęp do danych binarnych.</span><span class="sxs-lookup"><span data-stu-id="406bf-103">Either an `Input` statement is reading from a file that is empty or one in which all the data is used, or you used the `EOF` function with a file opened for binary access.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594217"
 ---
 # <a name="property-39ltpropertynamegt39-doesn39t-return-a-value-on-all-code-paths"></a><span data-ttu-id="1287e-102">Właściwość &#39; &lt;propertyname&gt; &#39; &#39;t zwraca wartości we wszystkich ścieżkach kodu</span><span class="sxs-lookup"><span data-stu-id="1287e-102">Property &#39;&lt;propertyname&gt;&#39; doesn&#39;t return a value on all code paths</span></span>
 <span data-ttu-id="1287e-103">Właściwość "\<propertyname >' nie zwraca wartości we wszystkich ścieżkach kodu.</span><span class="sxs-lookup"><span data-stu-id="1287e-103">Property '\<propertyname>' doesn't return a value on all code paths.</span></span> <span data-ttu-id="1287e-104">W czasie wykonywania, gdy zostanie użyty wynik może wystąpić wyjątek odwołania zerowego.</span><span class="sxs-lookup"><span data-stu-id="1287e-104">A null reference exception could occur at run time when the result is used.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593944"
 ---
 # <a name="unable-to-write-output-to-memory"></a><span data-ttu-id="b6b32-102">Nie można zapisać danych wyjściowych w pamięci</span><span class="sxs-lookup"><span data-stu-id="b6b32-102">Unable to write output to memory</span></span>
 <span data-ttu-id="b6b32-103">Wystąpił problem podczas zapisywania danych wyjściowych w pamięci.</span><span class="sxs-lookup"><span data-stu-id="b6b32-103">There was a problem writing output to memory.</span></span>  

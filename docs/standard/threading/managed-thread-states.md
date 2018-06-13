@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587726"
 ---
 # <a name="managed-thread-states"></a><span data-ttu-id="8d24e-102">Zarządzane stany wątków</span><span class="sxs-lookup"><span data-stu-id="8d24e-102">Managed Thread States</span></span>
 <span data-ttu-id="8d24e-103">Właściwość <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> zapewnia maska bitowa, która wskazuje bieżący stan wątku.</span><span class="sxs-lookup"><span data-stu-id="8d24e-103">The property <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> provides a bit mask that indicates the thread's current state.</span></span> <span data-ttu-id="8d24e-104">Wątek jest zawsze w co najmniej jedną z możliwych stanów w <xref:System.Threading.ThreadState> wyliczenia i może mieć różne stany w tym samym czasie.</span><span class="sxs-lookup"><span data-stu-id="8d24e-104">A thread is always in at least one of the possible states in the <xref:System.Threading.ThreadState> enumeration, and can be in multiple states at the same time.</span></span>  

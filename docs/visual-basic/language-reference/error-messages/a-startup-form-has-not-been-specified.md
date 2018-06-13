@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586789"
 ---
 # <a name="a-startup-form-has-not-been-specified"></a><span data-ttu-id="c91f9-102">Formularz początkowy nie został określony</span><span class="sxs-lookup"><span data-stu-id="c91f9-102">A startup form has not been specified</span></span>
 <span data-ttu-id="c91f9-103">Aplikacja używa <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> klasy, ale nie określa formularz startowy.</span><span class="sxs-lookup"><span data-stu-id="c91f9-103">The application uses the <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> class but does not specify the startup form.</span></span>  

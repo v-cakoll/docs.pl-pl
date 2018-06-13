@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587534"
 ---
 # <a name="troubleshooting-reading-from-and-writing-to-text-files-visual-basic"></a><span data-ttu-id="7347b-102">Rozwiązywanie problemów: odczytywanie z oraz zapisywanie w plikach tekstowych (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7347b-102">Troubleshooting: reading from and writing to text files (Visual Basic)</span></span>
 <span data-ttu-id="7347b-103">W tym temacie omówiono typowe problemy występujące podczas pracy z tekstem pliki, a także sugeruje podejście do każdego.</span><span class="sxs-lookup"><span data-stu-id="7347b-103">This topic discusses common problems encountered when working with text files and suggests an approach to each.</span></span>  

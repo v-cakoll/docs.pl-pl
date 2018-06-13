@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588461"
 ---
 # <a name="playing-sounds-visual-basic"></a><span data-ttu-id="9a632-102">Odtwarzanie dźwięków (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9a632-102">Playing Sounds (Visual Basic)</span></span>
 <span data-ttu-id="9a632-103">`My.Computer.Audio` Obiektu zapewnia metody odtwarzanie dźwięków.</span><span class="sxs-lookup"><span data-stu-id="9a632-103">The `My.Computer.Audio` object provides methods for playing sounds.</span></span>  

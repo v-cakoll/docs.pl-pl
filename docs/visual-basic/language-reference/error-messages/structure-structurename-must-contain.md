@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594503"
 ---
 # <a name="structure-39ltstructurenamegt39-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-39custom39"></a><span data-ttu-id="6d687-102">Struktura &#39; &lt;structurename&gt; &#39; musi zawierać co najmniej jedno wystąpienie zmiennej członkowskiej lub co najmniej jedno wystąpienie deklaracja zdarzenia nie jest oznaczony &#39;niestandardowe&#39;</span><span class="sxs-lookup"><span data-stu-id="6d687-102">Structure &#39;&lt;structurename&gt;&#39; must contain at least one instance member variable or at least one instance event declaration not marked &#39;Custom&#39;</span></span>
 <span data-ttu-id="6d687-103">Definicji struktury nie zawiera żadnych zmiennych udostępniana lub udostępniana standardowych zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="6d687-103">A structure definition does not include any nonshared variables or nonshared noncustom events.</span></span>  

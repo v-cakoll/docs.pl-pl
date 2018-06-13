@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588986"
 ---
 # <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a><span data-ttu-id="437b2-102">Dostęp członka udostępnionego, przez wystąpienie; wyrażenie kwalifikujące nie zostanie oszacowane</span><span class="sxs-lookup"><span data-stu-id="437b2-102">Access of shared member through an instance; qualifying expression will not be evaluated</span></span>
 <span data-ttu-id="437b2-103">Zmienna wystąpienia klasy lub struktury jest używana do dostępu `Shared` zmienną, właściwością, procedura lub zdarzeń zdefiniowanych w tej klasy lub struktury.</span><span class="sxs-lookup"><span data-stu-id="437b2-103">An instance variable of a class or structure is used to access a `Shared` variable, property, procedure, or event defined in that class or structure.</span></span> <span data-ttu-id="437b2-104">To ostrzeżenie może również wystąpić, jeśli zmienna wystąpienia są używane do uzyskania dostępu niejawnie udostępnionego elementu członkowskiego klasy lub struktury, takich jak stałą lub wyliczenia, lub zagnieżdżone klasy lub struktury.</span><span class="sxs-lookup"><span data-stu-id="437b2-104">This warning can also occur if an instance variable is used to access an implicitly shared member of a class or structure, such as a constant or enumeration, or a nested class or structure.</span></span>  

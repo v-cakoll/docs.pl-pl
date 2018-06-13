@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588973"
 ---
 # <a name="39ltinterfacenamegtltmembernamegt39-is-already-implemented-by-the-base-class-39ltbaseclassnamegt39-re-implementation-of-lttypegt-assumed"></a><span data-ttu-id="2faf6-103">&#39;&lt;InterfaceName&gt;.&lt; membername&gt; &#39; został już zaimplementowany przez klasę podstawową &#39; &lt;baseclassname&gt;&#39;.</span><span class="sxs-lookup"><span data-stu-id="2faf6-103">&#39;&lt;interfacename&gt;.&lt;membername&gt;&#39; is already implemented by the base class &#39;&lt;baseclassname&gt;&#39;.</span></span> <span data-ttu-id="2faf6-104">Ponowną implementację elementu &lt;typu&gt; założono, że</span><span class="sxs-lookup"><span data-stu-id="2faf6-104">Re-implementation of &lt;type&gt; assumed</span></span>
 <span data-ttu-id="2faf6-105">Właściwość, procedura lub zdarzenia w klasie pochodnej używa `Implements` klauzuli Określanie elementu członkowskiego interfejsu, który jest już zaimplementowana w klasie podstawowej.</span><span class="sxs-lookup"><span data-stu-id="2faf6-105">A property, procedure, or event in a derived class uses an `Implements` clause specifying an interface member that is already implemented in the base class.</span></span>  

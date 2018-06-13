@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592096"
 ---
 # <a name="serialization-guidelines"></a><span data-ttu-id="e6423-102">Wytyczne serializacji</span><span class="sxs-lookup"><span data-stu-id="e6423-102">Serialization guidelines</span></span>
 <span data-ttu-id="e6423-103">Ten dokument zawiera listę wskazówek, które należy wziąć pod uwagę podczas projektowania interfejs API serializacji.</span><span class="sxs-lookup"><span data-stu-id="e6423-103">This document lists the guidelines to consider when designing an API to be serialized.</span></span>  

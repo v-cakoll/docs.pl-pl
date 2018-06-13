@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589870"
 ---
 # <a name="how-to-display-bound-data-in-a-datarepeater-control-visual-studio"></a><span data-ttu-id="2d730-102">Porady: wyświetlanie powiązanych danych w formancie DataRepeater (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="2d730-102">How to: Display Bound Data in a DataRepeater Control (Visual Studio)</span></span>
 <span data-ttu-id="2d730-103">Najczęściej używane <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> sterowania są wyświetlane powiązane dane z bazy danych lub inne źródła danych.</span><span class="sxs-lookup"><span data-stu-id="2d730-103">The most common use of the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control is to display bound data from a database or other data source.</span></span>  

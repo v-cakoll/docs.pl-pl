@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588031"
 ---
 # <a name="how-to-read-from-binary-files-in-visual-basic"></a><span data-ttu-id="33d50-102">Porady: odczyt z plików binarnych w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="33d50-102">How to: Read From Binary Files in Visual Basic</span></span>
 <span data-ttu-id="33d50-103">`My.Computer.FileSystem` Zawiera obiekt `ReadAllBytes` metodę odczyt z plików binarnych.</span><span class="sxs-lookup"><span data-stu-id="33d50-103">The `My.Computer.FileSystem` object provides the `ReadAllBytes` method for reading from binary files.</span></span>  

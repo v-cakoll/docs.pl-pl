@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586493"
 ---
 # <a name="class-39ltclassnamegt39-cannot-be-found"></a><span data-ttu-id="064be-102">Klasa &#39; &lt;classname&gt; &#39; nie można odnaleźć</span><span class="sxs-lookup"><span data-stu-id="064be-102">Class &#39;&lt;classname&gt;&#39; cannot be found</span></span>
 <span data-ttu-id="064be-103">Klasy\<classname >' nie można odnaleźć.</span><span class="sxs-lookup"><span data-stu-id="064be-103">Class '\<classname>' cannot be found.</span></span> <span data-ttu-id="064be-104">Ta sytuacja jest zazwyczaj wynikiem niedopasowania biblioteki "Microsoft.VisualBasic.dll".</span><span class="sxs-lookup"><span data-stu-id="064be-104">This condition is usually the result of a mismatched 'Microsoft.VisualBasic.dll'.</span></span>  

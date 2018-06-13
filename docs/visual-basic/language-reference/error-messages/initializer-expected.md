@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586389"
 ---
 # <a name="initializer-expected"></a><span data-ttu-id="cc30c-102">Oczekiwano inicjatora</span><span class="sxs-lookup"><span data-stu-id="cc30c-102">Initializer expected</span></span>
 <span data-ttu-id="cc30c-103">Nastąpiła próba Zadeklaruj wystąpienie klasy za pomocą inicjatora obiektów, w którym listy inicjowania jest pusta, jak pokazano w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="cc30c-103">You have tried to declare an instance of a class by using an object initializer in which the initialization list is empty, as shown in the following example.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594165"
 ---
 # <a name="using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results"></a><span data-ttu-id="d0c01-102">Użycie zmiennej iteracyjnej w wyrażeniu lambda może spowodować nieoczekiwane wyniki</span><span class="sxs-lookup"><span data-stu-id="d0c01-102">Using the iteration variable in a lambda expression may have unexpected results</span></span>
 <span data-ttu-id="d0c01-103">Użycie zmiennej iteracyjnej w wyrażeniu lambda może spowodować nieoczekiwane wyniki.</span><span class="sxs-lookup"><span data-stu-id="d0c01-103">Using the iteration variable in a lambda expression may have unexpected results.</span></span> <span data-ttu-id="d0c01-104">Zamiast tego Utwórz zmienną lokalną w pętli i przypisz jej wartość zmiennej iteracyjnej.</span><span class="sxs-lookup"><span data-stu-id="d0c01-104">Instead, create a local variable within the loop and assign it the value of the iteration variable.</span></span>  

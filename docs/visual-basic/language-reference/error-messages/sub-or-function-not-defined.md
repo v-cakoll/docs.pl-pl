@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593704"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a><span data-ttu-id="465e6-102">Procedura lub funkcja nie jest zdefiniowana</span><span class="sxs-lookup"><span data-stu-id="465e6-102">Sub or Function not defined (Visual Basic)</span></span>
 <span data-ttu-id="465e6-103">A `Sub` lub `Function` musi być zdefiniowana, aby można było można wywołać.</span><span class="sxs-lookup"><span data-stu-id="465e6-103">A `Sub` or `Function` must be defined in order to be called.</span></span> <span data-ttu-id="465e6-104">Możliwe przyczyny tego błędu:</span><span class="sxs-lookup"><span data-stu-id="465e6-104">Possible causes of this error include:</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589550"
 ---
 # <a name="how-to-enable-tabbing-between-shapes-visual-studio"></a><span data-ttu-id="399eb-102">Porady: włączanie przełączania między kształtami (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="399eb-102">How to: Enable Tabbing Between Shapes (Visual Studio)</span></span>
 <span data-ttu-id="399eb-103">Formanty linii i kształtu nie mają `TabStop` lub `TabIndex` właściwości, ale można nadal Włączanie przełączania między nimi.</span><span class="sxs-lookup"><span data-stu-id="399eb-103">Line and shape controls do not have `TabStop` or `TabIndex` properties, but you can still enable tabbing among them.</span></span> <span data-ttu-id="399eb-104">W poniższym przykładzie naciskając jednocześnie klawisze CTRL i kartę będzie karcie między kształtami; Naciśnięcie klawisza TAB będzie karcie między przyciskami.</span><span class="sxs-lookup"><span data-stu-id="399eb-104">In the following example, pressing both the CTRL and the TAB keys will tab between shapes; pressing only the TAB key will tab between the buttons.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594611"
 ---
 # <a name="type-lttypenamegt-is-not-cls-compliant"></a><span data-ttu-id="e008f-102">Typ &lt;typename&gt; nie jest zgodne ze specyfikacją CLS</span><span class="sxs-lookup"><span data-stu-id="e008f-102">Type &lt;typename&gt; is not CLS-compliant</span></span>
 <span data-ttu-id="e008f-103">Zmienną, właściwością lub funkcji, zwracany jest zadeklarowana z typem danych, który nie jest zgodne ze specyfikacją CLS.</span><span class="sxs-lookup"><span data-stu-id="e008f-103">A variable, property, or function return is declared with a data type that is not CLS-compliant.</span></span>  

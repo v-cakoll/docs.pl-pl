@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593439"
 ---
 # <a name="number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array"></a><span data-ttu-id="d5947-102">Liczba indeksów przekracza liczbę wymiarów tablicy indeksowanej</span><span class="sxs-lookup"><span data-stu-id="d5947-102">Number of indices exceeds the number of dimensions of the indexed array</span></span>
 <span data-ttu-id="d5947-103">Liczba indeksów, które umożliwiają dostęp do elementu tablicy muszą być dokładnie takie same rangą tablicy, czyli liczby wymiarów zadeklarowany dla niego.</span><span class="sxs-lookup"><span data-stu-id="d5947-103">The number of indices used to access an array element must be exactly the same as the rank of the array, that is, the number of dimensions declared for it.</span></span>  

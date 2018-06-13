@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588700"
 ---
 # <a name="numerics-in-the-net-framework"></a><span data-ttu-id="167ac-102">Wartości numeryczne w programie .NET Framework</span><span class="sxs-lookup"><span data-stu-id="167ac-102">Numerics in the .NET Framework</span></span>
 <span data-ttu-id="167ac-103">.NET Framework obsługuje standardowe liczbowych podstawowych całkowitych i zmiennoprzecinkowych oraz <xref:System.Numerics.BigInteger>, typem całkowitym bez teoretycznej górnej i dolnej granicy <xref:System.Numerics.Complex>, typ, który reprezentuje liczby złożone oraz zestaw włączone SIMD typy wektorów <xref:System.Numerics> przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="167ac-103">The .NET Framework supports the standard numeric integral and floating-point primitives, as well as <xref:System.Numerics.BigInteger>, an integral type with no theoretical upper or lower bound, <xref:System.Numerics.Complex>, a type that represents complex numbers, and a set of SIMD-enabled vector types in the <xref:System.Numerics> namespace.</span></span>  

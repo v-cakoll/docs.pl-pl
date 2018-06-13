@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751704"
 ---
 # <a name="ltbasichttpbindinggt"></a>&lt;BasicHttpBinding&gt;
 Reprezentuje powiązanie, którego usługi Windows Communication Foundation (WCF) można użyć do konfiguracji i ekspozycji punktów końcowych, które są w stanie komunikować się z usługami sieciowymi bazującymi na ASMX i klientami i innych usług, które odpowiadają WS-I Basic Profile 1.1.  

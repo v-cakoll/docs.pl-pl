@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545217"
 ---
 # <a name="how-to-use-automatic-layout-to-create-a-button"></a>Jak użyć automatycznego układu to utworzenia przycisku
 W tym przykładzie przedstawiono sposób użyć metody automatycznego układu, aby utworzyć element button w aplikacji lokalizowalny.  

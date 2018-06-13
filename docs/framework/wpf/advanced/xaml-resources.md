@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549568"
 ---
 # <a name="xaml-resources"></a>Zasoby XAML
 Zasób jest obiekt, który mogą być ponownie używane w różnych miejscach w aplikacji. Przykładami zasobów pędzle i style. Ten przegląd zawiera opis sposobu korzystania z zasobów w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Można również tworzyć i uzyskiwać dostęp do zasobów przy użyciu kodu lub zamiennie między kodu i [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Aby uzyskać więcej informacji, zobacz [zasobów i kod](../../../../docs/framework/wpf/advanced/resources-and-code.md).  

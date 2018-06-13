@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762039"
 ---
 # <a name="query-plan-caching-entity-sql"></a>Plan zapytania buforowania (jednostka SQL)
 Zawsze, gdy podejmowana jest próba mógł wykonać zapytania, potoku zapytanie wyszukuje pamięci podręcznej planu zapytania Czy dokładne kwerendy jest już skompilowane i dostępne. Jeśli tak, używany jest buforowany plan zamiast tworzenia nowej. Jeśli dopasowanie nie zostanie znaleziony w pamięci podręcznej planu zapytania, zapytanie jest skompilowany i pamięci podręcznej. Zapytanie jest identyfikowany przez jego [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tekstu i parametru kolekcji (nazwy i typy). Wszystkie porównywania tekstu jest rozróżniana wielkość liter.  

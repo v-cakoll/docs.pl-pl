@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415165"
 ---
 # <a name="icordebuginternalframe2-interface"></a>ICorDebugInternalFrame2 — Interfejs
 Zawiera informacje dotyczące wewnętrznego ramki, w tym adresu stosu i pozycji w odniesieniu do obiektów ICorDebugFrame.  

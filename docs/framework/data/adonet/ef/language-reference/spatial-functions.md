@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763933"
 ---
 # <a name="spatial-functions"></a>Funkcje przestrzenne
 Brak ma literału formatu dla typów przestrzennych. Można jednak użyć kanonicznej funkcji programu Entity Framework wywołać przy użyciu ciągów w formacie Well-Known Text. Na przykład następujące wywołanie funkcji tworzy punkt geometrii:  

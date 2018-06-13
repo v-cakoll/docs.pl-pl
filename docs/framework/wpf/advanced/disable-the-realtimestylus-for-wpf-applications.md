@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545665"
 ---
 # <a name="disable-the-realtimestylus-for-wpf-applications"></a>Wyłącz RealTimeStylus dla aplikacji WPF
 Windows Presentation Foundation (WPF) zawiera wbudowaną obsługą przetwarzania wprowadzania dotykowego systemu Windows 7. Obsługę jest dostarczany za pośrednictwem wprowadzania danych w czasie rzeczywistym piórem platformy tablet jako <xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusUp%2A>, i <xref:System.Windows.UIElement.OnStylusMove%2A> zdarzenia. Windows 7 także wielodotyku danych wejściowych jako komunikaty okna Win32 WM_TOUCH. Te dwa interfejsy API wzajemnie się wykluczają na tym samym HWND. Wprowadzania dotykowego włączenie za pośrednictwem platformy tablet (wartość domyślna dla aplikacji WPF) wyłącza WM_TOUCH wiadomości. W związku z tym na potrzeby odbierania komunikatów touch z okna WPF WM_TOUCH, należy wyłączyć obsługę wbudowanych Pióro na platformie WPF. Ma to zastosowanie w przypadku takich jak obsługującym składnik, który używa WM_TOUCH okna WPF.  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541073"
 ---
 # <a name="collecting-ink"></a>Zbieranie atramentu
 [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md) platformy zbiera elektroniczne pismo odręczne jako podstawowy element jej funkcji. W tym temacie omówiono metody dla kolekcji odręczne w systemie Windows Presentation Foundation (WPF).  

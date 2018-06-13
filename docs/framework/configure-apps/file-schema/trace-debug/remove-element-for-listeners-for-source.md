@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754278"
 ---
 # <a name="ltremovegt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;Usuń&gt; elementu &lt;odbiorników&gt; dla &lt;źródła&gt;
 Usuwa odbiornik z `Listeners` kolekcji źródła śledzenia.  

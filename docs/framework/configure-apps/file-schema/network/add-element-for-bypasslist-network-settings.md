@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754522"
 ---
 # <a name="ltaddgt-element-for-bypasslist-network-settings"></a>&lt;Dodaj&gt; elementu bypasslist — (ustawienia sieciowe)
 Dodaje adres IP lub nazwa DNS do Lista obejść serwerów proxy.  

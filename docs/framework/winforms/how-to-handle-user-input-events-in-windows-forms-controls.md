@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538773"
 ---
 # <a name="how-to-handle-user-input-events-in-windows-forms-controls"></a>Porady: obsługa zdarzeń związanych z danymi użytkownika w kontrolkach formularzy systemu Windows
 W tym przykładzie pokazano, jak obsługiwać większość klawiatura, mysz, fokus i zdarzenia walidacji, które mogą wystąpić w formancie formularzy systemu Windows. Pole tekstowe o nazwie `TextBoxInput` odbiera zdarzenia, gdy fokus, a informacje o każdym zdarzeniu są zapisywane w polu tekstowym o nazwie `TextBoxOutput` w kolejności, w której zostaną podniesione zdarzenia. Aplikacja zawiera także zestaw pól wyboru, które mogą służyć do filtrowania zdarzeń do raportu.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414493"
 ---
 # <a name="icordebugilframesetip-method"></a>ICorDebugILFrame::SetIP — Metoda
 Ustawia wskaźnik instrukcji do określonej lokalizacji przesunięcia w kodzie języka pośredniego (MSIL) firmy Microsoft.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313225"
 ---
 # <a name="how-to-define-constants-in-c"></a>Porady: definiowanie stałych w C#
 Stałe są pól, których wartości są ustawione na czas kompilacji i nie można go zmienić. Stałe umożliwia uzyskanie łatwy do rozpoznania nazwy zamiast literałach numerycznych ("numery magic") dla specjalnych wartości.  

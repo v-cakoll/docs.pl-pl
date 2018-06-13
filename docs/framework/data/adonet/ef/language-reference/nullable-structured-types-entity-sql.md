@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762390"
 ---
 # <a name="nullable-structured-types-entity-sql"></a>Typy dopuszczające wartości zerowe strukturalne (jednostki SQL)
 A `null` wystąpienia typu strukturalnego to wystąpienie nie istnieje. To różni się od istniejącego wystąpienia, w którym ma wszystkie właściwości `null` wartości.  

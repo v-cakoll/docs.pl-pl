@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411921"
 ---
 # <a name="icordebugframegetcode-method"></a>ICorDebugFrame::GetCode — Metoda
 Pobiera wskaźnik do kodu skojarzonego z tą ramką stosu.  

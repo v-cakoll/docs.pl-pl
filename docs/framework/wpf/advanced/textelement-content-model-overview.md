@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548860"
 ---
 # <a name="textelement-content-model-overview"></a>Przegląd Model zawartości TextElement
 To omówienie modelu zawartości w tym artykule opisano obsługiwane zawartość <xref:System.Windows.Documents.TextElement>. <xref:System.Windows.Documents.Paragraph> Klasa jest elementem typu <xref:System.Windows.Documents.TextElement>. Model zawartości opisano, jakie obiekty/elementy mogą być zawarte w innym. W tym omówieniu przedstawiono modelu zawartości używana dla obiektów pochodzących od <xref:System.Windows.Documents.TextElement>. Aby uzyskać więcej informacji, zobacz [przepływ dokumentami — omówienie](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546139"
 ---
 # <a name="preview-events"></a>Podgląd zdarzeń
 Podgląd zdarzeń, znany również jako tunelowania zdarzenia, są kierowane zdarzenia, gdy kierunek trasy przechodzi od katalogu głównego aplikacji na element, który wywołał zdarzenie i został zgłoszony jako źródło danych zdarzenia. Nie wszystkie scenariusze zdarzeń obsługuje ani nie wymaga podglądu zdarzeń. w tym temacie opisano sytuacje, gdy Podgląd zdarzeń istnieje, jak aplikacje i składniki powinna obsługiwać je, a przypadkach, gdy tworzenie podglądu zdarzeń w składnikach niestandardowych lub klasy jest odpowiedni.  

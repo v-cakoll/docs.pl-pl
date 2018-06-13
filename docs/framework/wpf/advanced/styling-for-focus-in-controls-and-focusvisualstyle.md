@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549519"
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>Style dla Fokusu w formantach i FocusVisualStyle
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] udostępnia dwa mechanizmy równoległych zmiany wygląd formantu, gdy odbierze fokus klawiatury. Pierwszy mechanizm jest używać metody ustawiające właściwości dla właściwości, takich jak <xref:System.Windows.UIElement.IsKeyboardFocused%2A> w stylu lub szablonie, która jest stosowana do formantu. Drugi mechanizmu jest zapewnienie oddzielne styl jako wartość <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> właściwości; "skoncentrowane stylu wizualnego" tworzy oddzielne drzewa wizualnego dla modułu definiowania układu kodu, który rysuje na górze kontrolki, zamiast zmieniać wizualnym drzewie kontrolki lub innych interfejsu użytkownika Element poprzez zastąpienie jej. W tym temacie opisano scenariusze, w których każdy z tych mechanizmów jest właściwe.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547465"
 ---
 # <a name="framework-property-metadata"></a>Metadane właściwości szablonu
 Opcje metadanych właściwości Framework są zgłaszane dla właściwości elementów obiektu uważane za w ramach WPF w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] architektury. Generalnie oznaczenie poziomie struktury WPF pociąga za sobą tej funkcji, takich jak renderowania danych powiązania, a właściwość uściślenia systemu są obsługiwane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prezentacji [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] i plików wykonywalnych. Metadane właściwości Framework otrzymuje tych systemów, aby określić właściwości właściwych dla funkcji właściwości określonego elementu.  

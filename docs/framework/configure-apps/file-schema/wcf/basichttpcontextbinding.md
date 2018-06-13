@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753095"
 ---
 # <a name="ltbasichttpcontextbindinggt"></a>&lt;basicHttpContextBinding&gt;
 Określanie powiązania, które dostarcza kontekst dla <xref:System.ServiceModel.BasicHttpBinding> Aby wymienić przez włączenie plików cookie protokołu HTTP jako mechanizm wymiany.  

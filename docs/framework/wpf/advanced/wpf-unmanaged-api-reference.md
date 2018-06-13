@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546660"
 ---
 # <a name="wpf-unmanaged-api-reference"></a>WPF niezarządzany wykaz interfejsów API
 Biblioteki systemu Windows Presentation Foundation (WPF) ujawnia szereg niezarządzanych funkcji, które są przeznaczone wyłącznie do użytku wewnętrznego. Ich nie należy wywoływać z kodu użytkownika.  

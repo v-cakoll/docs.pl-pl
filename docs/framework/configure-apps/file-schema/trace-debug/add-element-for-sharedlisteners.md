@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752614"
 ---
 # <a name="ltaddgt-element-for-ltsharedlistenersgt"></a>&lt;Dodaj&gt; elementu &lt;sharedListeners&gt;
 Dodaje odbiornika do `sharedListeners` kolekcji. `sharedListeners` Aby każda to kolekcja obiektów nasłuchujących [ \<źródło >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) lub [ \<śledzenia >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md) może się odwoływać.  Domyślnie odbiorników w `sharedListeners` kolekcji nie są umieszczane w `Listeners` kolekcji. Muszą zostać dodane przez nazwę [ \<źródło >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) lub [ \<śledzenia >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md). Nie jest możliwe uzyskanie odbiorniki `sharedListeners` zbierania kodu w czasie wykonywania.  

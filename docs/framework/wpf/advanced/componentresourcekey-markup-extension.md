@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540413"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey — Rozszerzenie znaczników
 Definiuje i odwołuje się do kluczy dla zasobów, które są ładowane z zewnętrznych zestawów. Dzięki temu wyszukiwania zasobów określić typ docelowy w zestawie, a nie słownika jawne zasobów w zestawie lub klasy.  

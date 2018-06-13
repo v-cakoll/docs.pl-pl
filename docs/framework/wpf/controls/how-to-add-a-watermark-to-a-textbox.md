@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550069"
 ---
 # <a name="how-to-add-a-watermark-to-a-textbox"></a>Jak dodać znak wodny do TextBox
 Poniższy przykład przedstawia sposób pomocy użyteczność <xref:System.Windows.Controls.TextBox> wyświetlając wyjaśniające obraz tła wewnątrz <xref:System.Windows.Controls.TextBox> dopóki tekst danych wejściowych użytkownika, w którym obraz jest usuwany. Ponadto obraz tła jest przywracany ponownie, jeśli użytkownik usunie swoje dane wejściowe. Zobacz na poniższej ilustracji.  

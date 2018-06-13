@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415600"
 ---
 # <a name="icordebugilframe3-interface"></a>ICorDebugILFrame3 — Interfejs
 Dostarcza metodę, która hermetyzuje wartość zwracaną przez funkcję. `ICorDebugILFrame3` to rozszerzenie logicznej interfejsów ICorDebugILFrame i ICorDebugILFrame2.  

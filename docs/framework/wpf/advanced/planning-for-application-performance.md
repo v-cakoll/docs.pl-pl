@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546955"
 ---
 # <a name="planning-for-application-performance"></a>Planowanie wydajności aplikacji
 Powodzenie osiągnięcia cele wydajności zależy od tego, jak również opracowanie strategii wydajności. Planowanie to pierwszy etap w tworzeniu każdego produktu. W tym temacie opisano kilka bardzo proste zasady opracowanie strategii dobrą wydajność.  

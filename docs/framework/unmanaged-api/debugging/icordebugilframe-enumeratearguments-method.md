@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415025"
 ---
 # <a name="icordebugilframeenumeratearguments-method"></a>ICorDebugILFrame::EnumerateArguments — Metoda
 Pobiera moduł wyliczający dla argumentów do tej ramki.  

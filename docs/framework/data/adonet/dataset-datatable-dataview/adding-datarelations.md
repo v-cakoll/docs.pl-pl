@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756946"
 ---
 # <a name="adding-datarelations"></a>Dodawanie DataRelations
 W <xref:System.Data.DataSet> w wielu <xref:System.Data.DataTable> obiekty, można użyć <xref:System.Data.DataRelation> obiektów do powiązania z jednej tabeli do innego, przejdź do tabel i zwracanie wszystkich wierszy podrzędnej lub nadrzędnej z powiązanej tabeli.  

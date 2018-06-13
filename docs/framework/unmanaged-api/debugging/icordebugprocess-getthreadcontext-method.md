@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416543"
 ---
 # <a name="icordebugprocessgetthreadcontext-method"></a><span data-ttu-id="85e28-102">ICorDebugProcess::GetThreadContext — Metoda</span><span class="sxs-lookup"><span data-stu-id="85e28-102">ICorDebugProcess::GetThreadContext Method</span></span>
 <span data-ttu-id="85e28-103">Pobiera kontekst dla danego wątku, w tym procesie.</span><span class="sxs-lookup"><span data-stu-id="85e28-103">Gets the context for the given thread in this process.</span></span>  

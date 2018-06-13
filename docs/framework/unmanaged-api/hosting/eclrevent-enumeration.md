@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430710"
 ---
 # <a name="eclrevent-enumeration"></a><span data-ttu-id="9a06c-102">EClrEvent — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="9a06c-102">EClrEvent Enumeration</span></span>
 <span data-ttu-id="9a06c-103">W tym artykule opisano typowe zdarzenia środowiska uruchomieniowego (języka wspólnego CLR) języka, dla których hosta można zarejestrować wywołań zwrotnych.</span><span class="sxs-lookup"><span data-stu-id="9a06c-103">Describes the common language runtime (CLR) events for which the host can register callbacks.</span></span>  

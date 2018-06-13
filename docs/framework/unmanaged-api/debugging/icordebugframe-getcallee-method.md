@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413375"
 ---
 # <a name="icordebugframegetcallee-method"></a><span data-ttu-id="bf732-102">ICorDebugFrame::GetCallee — Metoda</span><span class="sxs-lookup"><span data-stu-id="bf732-102">ICorDebugFrame::GetCallee Method</span></span>
 <span data-ttu-id="bf732-103">Pobiera wskaźnik do obiektu ICorDebugFrame w łańcuchu bieżącego, która wywołuje tej ramki.</span><span class="sxs-lookup"><span data-stu-id="bf732-103">Gets a pointer to the ICorDebugFrame object in the current chain that this frame called.</span></span>  

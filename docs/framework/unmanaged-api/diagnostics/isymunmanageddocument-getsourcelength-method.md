@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424121"
 ---
 # <a name="isymunmanageddocumentgetsourcelength-method"></a><span data-ttu-id="9991b-102">ISymUnmanagedDocument::GetSourceLength — Metoda</span><span class="sxs-lookup"><span data-stu-id="9991b-102">ISymUnmanagedDocument::GetSourceLength Method</span></span>
 <span data-ttu-id="9991b-103">Pobiera długość w bajtach osadzonego źródła.</span><span class="sxs-lookup"><span data-stu-id="9991b-103">Gets the length, in bytes, of the embedded source.</span></span>  

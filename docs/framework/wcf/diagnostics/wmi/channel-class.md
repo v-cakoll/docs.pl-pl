@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33485819"
 ---
 # <a name="channel-class"></a><span data-ttu-id="cf150-102">Klasa kanału</span><span class="sxs-lookup"><span data-stu-id="cf150-102">Channel class</span></span>
 <span data-ttu-id="cf150-103">Kanał</span><span class="sxs-lookup"><span data-stu-id="cf150-103">Channel</span></span>  

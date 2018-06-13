@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432613"
 ---
 # <a name="iclrstrongnamestrongnamegetblobfromimage-method"></a><span data-ttu-id="ceb75-102">ICLRStrongName::StrongNameGetBlobFromImage — Metoda</span><span class="sxs-lookup"><span data-stu-id="ceb75-102">ICLRStrongName::StrongNameGetBlobFromImage Method</span></span>
 <span data-ttu-id="ceb75-103">Pobiera zestawu obraz to binarna reprezentacja pod adresem określonym pamięci.</span><span class="sxs-lookup"><span data-stu-id="ceb75-103">Gets a binary representation of the assembly image at the specified memory address.</span></span>  

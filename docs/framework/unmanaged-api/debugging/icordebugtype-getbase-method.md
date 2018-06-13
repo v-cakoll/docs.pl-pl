@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418888"
 ---
 # <a name="icordebugtypegetbase-method"></a><span data-ttu-id="ecd90-102">ICorDebugType::GetBase — Metoda</span><span class="sxs-lookup"><span data-stu-id="ecd90-102">ICorDebugType::GetBase Method</span></span>
 <span data-ttu-id="ecd90-103">Pobiera wskaźnika interfejsu do ICorDebugType, który reprezentuje typ podstawowy, jeśli istnieje, typu reprezentowanego przez ten `ICorDebugType`.</span><span class="sxs-lookup"><span data-stu-id="ecd90-103">Gets an interface pointer to an ICorDebugType that represents the base type, if one exists, of the type represented by this `ICorDebugType`.</span></span>  

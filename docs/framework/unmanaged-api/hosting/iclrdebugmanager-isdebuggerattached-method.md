@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432911"
 ---
 # <a name="iclrdebugmanagerisdebuggerattached-method"></a><span data-ttu-id="d4125-102">ICLRDebugManager::IsDebuggerAttached — Metoda</span><span class="sxs-lookup"><span data-stu-id="d4125-102">ICLRDebugManager::IsDebuggerAttached Method</span></span>
 <span data-ttu-id="d4125-103">Pobiera wartość wskazującą, czy debuger jest dołączony do procesu.</span><span class="sxs-lookup"><span data-stu-id="d4125-103">Gets a value that indicates whether a debugger is attached to the process.</span></span>  

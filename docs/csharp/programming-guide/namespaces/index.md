@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334353"
 ---
 # <a name="namespaces-c-programming-guide"></a><span data-ttu-id="c0a43-102">Przestrzenie nazw (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="c0a43-102">Namespaces (C# Programming Guide)</span></span>
 <span data-ttu-id="c0a43-103">Przestrzenie nazw silnie są używane w na dwa sposoby programowania w języku C#.</span><span class="sxs-lookup"><span data-stu-id="c0a43-103">Namespaces are heavily used in C# programming in two ways.</span></span> <span data-ttu-id="c0a43-104">Najpierw .NET Framework używa przestrzeni nazw do organizowania jego wiele klas w następujący sposób:</span><span class="sxs-lookup"><span data-stu-id="c0a43-104">First, the .NET Framework uses namespaces to organize its many classes, as follows:</span></span>  

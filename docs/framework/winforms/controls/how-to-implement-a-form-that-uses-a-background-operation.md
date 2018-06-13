@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533299"
 ---
 # <a name="how-to-implement-a-form-that-uses-a-background-operation"></a><span data-ttu-id="726f9-102">Porady: implementowanie formularza korzystającego z operacji w tle</span><span class="sxs-lookup"><span data-stu-id="726f9-102">How to: Implement a Form That Uses a Background Operation</span></span>
 <span data-ttu-id="726f9-103">Następujący przykład program tworzy formularz, który oblicza Fibonacci cyfry.</span><span class="sxs-lookup"><span data-stu-id="726f9-103">The following example program creates a form that calculates Fibonacci numbers.</span></span> <span data-ttu-id="726f9-104">Obliczenie jest uruchamiane w wątku, który jest oddzielony od wątku interfejsu użytkownika, więc interfejsu użytkownika w dalszym ciągu działać bez opóźnień w trakcie wykonywania obliczeń.</span><span class="sxs-lookup"><span data-stu-id="726f9-104">The calculation runs on a thread that is separate from the user interface thread, so the user interface continues to run without delays as the calculation proceeds.</span></span>  

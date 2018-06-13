@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432862"
 ---
 # <a name="getrequestedruntimeversionforclsid-function"></a><span data-ttu-id="2ed17-102">GetRequestedRuntimeVersionForCLSID — Funkcja</span><span class="sxs-lookup"><span data-stu-id="2ed17-102">GetRequestedRuntimeVersionForCLSID Function</span></span>
 <span data-ttu-id="2ed17-103">Pobiera odpowiednie wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) informacje o wersji dla klasy z określonym `CLSID`.</span><span class="sxs-lookup"><span data-stu-id="2ed17-103">Gets the appropriate common language runtime (CLR) version information for the class with the specified `CLSID`.</span></span>  

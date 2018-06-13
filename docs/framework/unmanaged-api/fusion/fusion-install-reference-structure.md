@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33433233"
 ---
 # <a name="fusioninstallreference-structure"></a><span data-ttu-id="2a45a-102">FUSION_INSTALL_REFERENCE — Struktura</span><span class="sxs-lookup"><span data-stu-id="2a45a-102">FUSION_INSTALL_REFERENCE Structure</span></span>
 <span data-ttu-id="2a45a-103">Reprezentuje odwołanie, które umożliwia aplikacji z zestawem aplikacji został zainstalowany w globalnej pamięci podręcznej zestawów.</span><span class="sxs-lookup"><span data-stu-id="2a45a-103">Represents a reference that an application makes to an assembly that the application has installed in the global assembly cache.</span></span>  

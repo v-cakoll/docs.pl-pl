@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425987"
 ---
 # <a name="isymunmanagedreadergetdocumentversion-method"></a><span data-ttu-id="80475-102">ISymUnmanagedReader::GetDocumentVersion — Metoda</span><span class="sxs-lookup"><span data-stu-id="80475-102">ISymUnmanagedReader::GetDocumentVersion Method</span></span>
 <span data-ttu-id="80475-103">Pobiera określoną wersję określonego dokumentu.</span><span class="sxs-lookup"><span data-stu-id="80475-103">Gets the specified version of the specified document.</span></span> <span data-ttu-id="80475-104">Wersja dokumentu rozpoczyna się od 1 i jest zwiększany po każdej dokumentu jest aktualizowany przy użyciu [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="80475-104">The document version starts at 1 and is incremented each time the document is updated using the [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) method.</span></span> <span data-ttu-id="80475-105">Jeśli `pbCurrent` parametr jest `true`, jest to najnowsza wersja dokumentu.</span><span class="sxs-lookup"><span data-stu-id="80475-105">If the `pbCurrent` parameter is `true`, this is the latest version of the document.</span></span>  

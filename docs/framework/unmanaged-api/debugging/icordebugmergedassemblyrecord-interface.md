@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419679"
 ---
 # <a name="icordebugmergedassemblyrecord-interface"></a><span data-ttu-id="03fa4-102">Interfejs ICorDebugMergedAssemblyRecord</span><span class="sxs-lookup"><span data-stu-id="03fa4-102">ICorDebugMergedAssemblyRecord Interface</span></span>
 <span data-ttu-id="03fa4-103">Zawiera informacje o zestawie scalone.</span><span class="sxs-lookup"><span data-stu-id="03fa4-103">Provides information about a merged assembly.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422461"
 ---
 # <a name="icordebugstaticfieldsymbol-interface"></a><span data-ttu-id="97124-102">Interfejs ICorDebugStaticFieldSymbol</span><span class="sxs-lookup"><span data-stu-id="97124-102">ICorDebugStaticFieldSymbol Interface</span></span>
 <span data-ttu-id="97124-103">Reprezentuje informacje symbolu debugowania dla pola statycznego.</span><span class="sxs-lookup"><span data-stu-id="97124-103">Represents the debug symbol information for a static field.</span></span>  

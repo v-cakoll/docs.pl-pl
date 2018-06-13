@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416835"
 ---
 # <a name="icordebugheapvalue3-interface"></a><span data-ttu-id="bd89d-102">ICorDebugHeapValue3 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="bd89d-102">ICorDebugHeapValue3 Interface</span></span>
 <span data-ttu-id="bd89d-103">Udostępnia właściwości blokady monitora obiektów.</span><span class="sxs-lookup"><span data-stu-id="bd89d-103">Exposes the monitor lock properties of objects.</span></span> <span data-ttu-id="bd89d-104">Ten interfejs stanowi rozszerzenie ICorDebugHeapValue i ICorDebugHeapValue2 interfejsów.</span><span class="sxs-lookup"><span data-stu-id="bd89d-104">This interface extends the ICorDebugHeapValue and ICorDebugHeapValue2 interfaces.</span></span>  

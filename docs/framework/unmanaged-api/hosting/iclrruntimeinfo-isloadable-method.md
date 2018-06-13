@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432963"
 ---
 # <a name="iclrruntimeinfoisloadable-method"></a><span data-ttu-id="a9019-102">ICLRRuntimeInfo::IsLoadable — Metoda</span><span class="sxs-lookup"><span data-stu-id="a9019-102">ICLRRuntimeInfo::IsLoadable Method</span></span>
 <span data-ttu-id="a9019-103">Wskazuje, czy środowisko uruchomieniowe skojarzone z tym interfejsem, mogą zostać załadowane do bieżącego procesu, biorąc pod uwagę innych środowisk uruchomieniowych, który może być już załadowany do procesu.</span><span class="sxs-lookup"><span data-stu-id="a9019-103">Indicates whether the runtime associated with this interface can be loaded into the current process, taking into account other runtimes that might already be loaded into the process.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416683"
 ---
 # <a name="icordebugnativeframegetlocalregistermemoryvalue-method"></a><span data-ttu-id="0a3ea-102">ICorDebugNativeFrame::GetLocalRegisterMemoryValue — Metoda</span><span class="sxs-lookup"><span data-stu-id="0a3ea-102">ICorDebugNativeFrame::GetLocalRegisterMemoryValue Method</span></span>
 <span data-ttu-id="0a3ea-103">Pobiera wartość argumentu lub zmiennej lokalnej, z których word niski i wysoki word są przechowywane w lokalizacji pamięci i określić rejestru, odpowiednio dla tego natywną.</span><span class="sxs-lookup"><span data-stu-id="0a3ea-103">Gets the value of an argument or local variable, of which the low word and high word are stored in the memory location and specified register, respectively, for this native frame.</span></span>  

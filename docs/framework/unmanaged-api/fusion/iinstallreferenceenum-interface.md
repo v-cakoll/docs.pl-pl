@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429663"
 ---
 # <a name="iinstallreferenceenum-interface"></a><span data-ttu-id="5adef-102">IInstallReferenceEnum — Interfejs</span><span class="sxs-lookup"><span data-stu-id="5adef-102">IInstallReferenceEnum Interface</span></span>
 <span data-ttu-id="5adef-103">Reprezentuje moduł wyliczający dla zestawów występujących w odwołaniach zainstalowany w globalnej pamięci podręcznej zestawów.</span><span class="sxs-lookup"><span data-stu-id="5adef-103">Represents an enumerator for the referenced assemblies installed in the global assembly cache.</span></span>  

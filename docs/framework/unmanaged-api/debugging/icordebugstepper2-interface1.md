@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418692"
 ---
 # <a name="icordebugstepper2-interface1"></a><span data-ttu-id="bfe81-102">ICorDebugStepper2 Interface1</span><span class="sxs-lookup"><span data-stu-id="bfe81-102">ICorDebugStepper2 Interface1</span></span>
 <span data-ttu-id="bfe81-103">Zapewnia obsługę tylko mój kod (JMC) debugowania.</span><span class="sxs-lookup"><span data-stu-id="bfe81-103">Provides support for just my code (JMC) debugging.</span></span>  

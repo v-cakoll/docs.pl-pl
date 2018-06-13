@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427385"
 ---
 # <a name="isymunmanagedreaderupdatesymbolstore-method"></a><span data-ttu-id="c1eab-102">ISymUnmanagedReader::UpdateSymbolStore — Metoda</span><span class="sxs-lookup"><span data-stu-id="c1eab-102">ISymUnmanagedReader::UpdateSymbolStore Method</span></span>
 <span data-ttu-id="c1eab-103">Aktualizuje istniejący magazyn symbol magazynu symboli delta.</span><span class="sxs-lookup"><span data-stu-id="c1eab-103">Updates the existing symbol store with a delta symbol store.</span></span> <span data-ttu-id="c1eab-104">Ta metoda jest używana w scenariuszach edit-and-continue można zaktualizować magazynu symboli do dopasowania delty do oryginalnego przenośnego (PE) pliku wykonywalnego.</span><span class="sxs-lookup"><span data-stu-id="c1eab-104">This method is used in edit-and-continue scenarios to update the symbol store to match deltas to the original portable executable (PE) file.</span></span>  

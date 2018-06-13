@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432403"
 ---
 # <a name="iassemblyname-interface"></a><span data-ttu-id="fcf4e-102">IAssemblyName — Interfejs</span><span class="sxs-lookup"><span data-stu-id="fcf4e-102">IAssemblyName Interface</span></span>
 <span data-ttu-id="fcf4e-103">Udostępnia metody opisujące i pracy z unikatowych tożsamości zestawu.</span><span class="sxs-lookup"><span data-stu-id="fcf4e-103">Provides methods for describing and working with an assembly's unique identity.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419071"
 ---
 # <a name="icordebugprocessgethelperthreadid-method"></a><span data-ttu-id="9b344-102">ICorDebugProcess::GetHelperThreadID — Metoda</span><span class="sxs-lookup"><span data-stu-id="9b344-102">ICorDebugProcess::GetHelperThreadID Method</span></span>
 <span data-ttu-id="9b344-103">Pobiera identyfikator wątku systemu operacyjnego (OS) debugera wewnętrzny wątek pomocniczy.</span><span class="sxs-lookup"><span data-stu-id="9b344-103">Gets the operating system (OS) thread ID of the debugger's internal helper thread.</span></span>  

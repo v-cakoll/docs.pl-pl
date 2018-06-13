@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422126"
 ---
 # <a name="icordebugvalue-interface1"></a><span data-ttu-id="31ae4-102">ICorDebugValue Interface1</span><span class="sxs-lookup"><span data-stu-id="31ae4-102">ICorDebugValue Interface1</span></span>
 <span data-ttu-id="31ae4-103">Reprezentuje wartość w debugowanym procesie.</span><span class="sxs-lookup"><span data-stu-id="31ae4-103">Represents a value in the process being debugged.</span></span> <span data-ttu-id="31ae4-104">Wartość może być wartość zapisu lub odczytu.</span><span class="sxs-lookup"><span data-stu-id="31ae4-104">The value can be a read or a write value.</span></span>  

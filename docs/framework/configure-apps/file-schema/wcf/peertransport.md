@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748623"
 ---
 # <a name="ltpeertransportgt"></a><span data-ttu-id="4fa74-102">&lt;peerTransport&gt;</span><span class="sxs-lookup"><span data-stu-id="4fa74-102">&lt;peerTransport&gt;</span></span>
 <span data-ttu-id="4fa74-103">Definiuje transport elementu równorzędnego dla niestandardowego powiązania.</span><span class="sxs-lookup"><span data-stu-id="4fa74-103">Defines a peer transport for a custom binding.</span></span>  

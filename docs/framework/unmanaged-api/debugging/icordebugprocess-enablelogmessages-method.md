@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419887"
 ---
 # <a name="icordebugprocessenablelogmessages-method"></a><span data-ttu-id="c5e3a-102">ICorDebugProcess::EnableLogMessages — Metoda</span><span class="sxs-lookup"><span data-stu-id="c5e3a-102">ICorDebugProcess::EnableLogMessages Method</span></span>
 <span data-ttu-id="c5e3a-103">Włącza i wyłącza transmisję wiadomości dziennika do debugera.</span><span class="sxs-lookup"><span data-stu-id="c5e3a-103">Enables and disables the transmission of log messages to the debugger.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430641"
 ---
 # <a name="isymunmanagedreadergetmethod-method"></a><span data-ttu-id="8bf1f-102">ISymUnmanagedReader::GetMethod — Metoda</span><span class="sxs-lookup"><span data-stu-id="8bf1f-102">ISymUnmanagedReader::GetMethod Method</span></span>
 <span data-ttu-id="8bf1f-103">Pobiera metodę czytnika symboli podany token metody.</span><span class="sxs-lookup"><span data-stu-id="8bf1f-103">Gets a symbol reader method, given a method token.</span></span>  

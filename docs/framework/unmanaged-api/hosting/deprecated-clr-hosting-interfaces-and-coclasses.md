@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429227"
 ---
 # <a name="deprecated-clr-hosting-interfaces-and-coclasses"></a><span data-ttu-id="2e082-102">Przestarzałe klasy coclass i interfejsy hostingu środowiska CLR</span><span class="sxs-lookup"><span data-stu-id="2e082-102">Deprecated CLR Hosting Interfaces and Coclasses</span></span>
 <span data-ttu-id="2e082-103">W tej sekcji opisano interfejsów, które niezarządzanych hostów można użyć do integracji środowisko uruchomieniowe języka wspólnego (CLR) w wersji systemu .NET Framework 1.0 i 1.1 w swoich aplikacjach.</span><span class="sxs-lookup"><span data-stu-id="2e082-103">This section describes the interfaces that unmanaged hosts can use to integrate the common language runtime (CLR) in the .NET Framework versions 1.0 and 1.1 into their applications.</span></span> <span data-ttu-id="2e082-104">Te interfejsy podania metod dla hosta, skonfigurować i załadować środowiska uruchomieniowego do procesu.</span><span class="sxs-lookup"><span data-stu-id="2e082-104">These interfaces provide methods for a host to configure and load the runtime into a process.</span></span>  

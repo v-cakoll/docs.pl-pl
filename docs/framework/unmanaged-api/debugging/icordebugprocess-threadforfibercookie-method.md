@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416982"
 ---
 # <a name="icordebugprocessthreadforfibercookie-method"></a><span data-ttu-id="1fb0e-102">ICorDebugProcess::ThreadForFiberCookie — Metoda</span><span class="sxs-lookup"><span data-stu-id="1fb0e-102">ICorDebugProcess::ThreadForFiberCookie Method</span></span>
 <span data-ttu-id="1fb0e-103">Ta metoda nie jest zaimplementowana.</span><span class="sxs-lookup"><span data-stu-id="1fb0e-103">This method is not implemented.</span></span>  

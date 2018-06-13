@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427205"
 ---
 # <a name="isymunmanageddocument-interface"></a><span data-ttu-id="2a7f4-102">ISymUnmanagedDocument — Interfejs</span><span class="sxs-lookup"><span data-stu-id="2a7f4-102">ISymUnmanagedDocument Interface</span></span>
 <span data-ttu-id="2a7f4-103">Reprezentuje dokument odwołuje się magazynu symboli.</span><span class="sxs-lookup"><span data-stu-id="2a7f4-103">Represents a document referenced by a symbol store.</span></span> <span data-ttu-id="2a7f4-104">Dokument jest zdefiniowany przez adres URL (adres URL) i identyfikator GUID typu dokumentu.</span><span class="sxs-lookup"><span data-stu-id="2a7f4-104">A document is defined by a uniform resource locator (URL) and a document type GUID.</span></span> <span data-ttu-id="2a7f4-105">Można zlokalizować dokument, niezależnie od tego, jak są przechowywane przy użyciu adresu URL i identyfikator GUID typu dokumentu.</span><span class="sxs-lookup"><span data-stu-id="2a7f4-105">You can locate the document regardless of how it is stored by using the URL and document type GUID.</span></span> <span data-ttu-id="2a7f4-106">Można przechowywać źródło dokumentu w magazynie symboli i pobrać go za pośrednictwem tego interfejsu.</span><span class="sxs-lookup"><span data-stu-id="2a7f4-106">You can store the document source in the symbol store and retrieve it through this interface.</span></span>  

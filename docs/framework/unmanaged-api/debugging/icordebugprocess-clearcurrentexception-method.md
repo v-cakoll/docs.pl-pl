@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419019"
 ---
 # <a name="icordebugprocessclearcurrentexception-method"></a><span data-ttu-id="bba3f-102">ICorDebugProcess::ClearCurrentException — Metoda</span><span class="sxs-lookup"><span data-stu-id="bba3f-102">ICorDebugProcess::ClearCurrentException Method</span></span>
 <span data-ttu-id="bba3f-103">Czyści niezarządzane bieżącego wyjątku dla danego wątku.</span><span class="sxs-lookup"><span data-stu-id="bba3f-103">Clears the current unmanaged exception on the given thread.</span></span>  

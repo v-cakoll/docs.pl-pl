@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417719"
 ---
 # <a name="icordebuginstancefieldsymbol-interface"></a><span data-ttu-id="48317-102">Interfejs ICorDebugInstanceFieldSymbol</span><span class="sxs-lookup"><span data-stu-id="48317-102">ICorDebugInstanceFieldSymbol Interface</span></span>
 <span data-ttu-id="48317-103">Reprezentuje informacje symbolu debugowania dla pola wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="48317-103">Represents the debug symbol information for an instance field.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413553"
 ---
 # <a name="icordebugeval2newstringwithlength-method"></a><span data-ttu-id="0c29c-102">ICorDebugEval2::NewStringWithLength — Metoda</span><span class="sxs-lookup"><span data-stu-id="0c29c-102">ICorDebugEval2::NewStringWithLength Method</span></span>
 <span data-ttu-id="0c29c-103">Tworzy ciąg o określonej długości, przy użyciu określonej zawartości.</span><span class="sxs-lookup"><span data-stu-id="0c29c-103">Creates a string of the specified length, with the specified contents.</span></span>  

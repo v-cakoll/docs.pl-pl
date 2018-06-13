@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420140"
 ---
 # <a name="icordebugmanagedcallbackdebuggererror-method"></a><span data-ttu-id="d3db4-102">ICorDebugManagedCallback::DebuggerError — Metoda</span><span class="sxs-lookup"><span data-stu-id="d3db4-102">ICorDebugManagedCallback::DebuggerError Method</span></span>
 <span data-ttu-id="d3db4-103">Powiadamia debugera wystąpił błąd podczas próby Obsługa zdarzenia z środowisko uruchomieniowe języka wspólnego (CLR).</span><span class="sxs-lookup"><span data-stu-id="d3db4-103">Notifies the debugger that an error has occurred while attempting to handle an event from the common language runtime (CLR).</span></span>  

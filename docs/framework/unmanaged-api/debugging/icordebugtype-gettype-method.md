@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418721"
 ---
 # <a name="icordebugtypegettype-method"></a><span data-ttu-id="4dea6-102">ICorDebugType::GetType — Metoda</span><span class="sxs-lookup"><span data-stu-id="4dea6-102">ICorDebugType::GetType Method</span></span>
 <span data-ttu-id="4dea6-103">Pobiera wartość CorElementType, która opisuje typ macierzysty środowisko uruchomieniowe języka wspólnego (CLR) <xref:System.Type> reprezentowany przez ten ICorDebugType.</span><span class="sxs-lookup"><span data-stu-id="4dea6-103">Gets a CorElementType value that describes the native type of the common language runtime (CLR) <xref:System.Type> represented by this ICorDebugType.</span></span>  

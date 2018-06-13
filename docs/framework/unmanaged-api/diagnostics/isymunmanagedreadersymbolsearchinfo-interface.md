@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427661"
 ---
 # <a name="isymunmanagedreadersymbolsearchinfo-interface"></a><span data-ttu-id="9d1a2-102">ISymUnmanagedReaderSymbolSearchInfo — Interfejs</span><span class="sxs-lookup"><span data-stu-id="9d1a2-102">ISymUnmanagedReaderSymbolSearchInfo Interface</span></span>
 <span data-ttu-id="9d1a2-103">Udostępnia metody, które zawierają informacje o wyszukiwaniu symboli.</span><span class="sxs-lookup"><span data-stu-id="9d1a2-103">Provides methods that get symbol search information.</span></span> <span data-ttu-id="9d1a2-104">Uzyskanie przez wywołanie metody tego interfejsu `QueryInterface` na obiekt, który implementuje [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interfejsu.</span><span class="sxs-lookup"><span data-stu-id="9d1a2-104">Obtain this interface by calling `QueryInterface` on an object that implements the [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.</span></span>  

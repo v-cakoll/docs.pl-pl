@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431831"
 ---
 # <a name="corgcthreadstats-structure"></a><span data-ttu-id="7cedf-102">COR_GC_THREAD_STATS — Struktura</span><span class="sxs-lookup"><span data-stu-id="7cedf-102">COR_GC_THREAD_STATS Structure</span></span>
 <span data-ttu-id="7cedf-103">Zawiera dla każdego wątku statystyki dotyczące wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="7cedf-103">Contains per-thread statistics pertaining to garbage collection.</span></span>  

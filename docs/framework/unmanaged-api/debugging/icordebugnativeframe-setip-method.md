@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420228"
 ---
 # <a name="icordebugnativeframesetip-method"></a><span data-ttu-id="8fae3-102">ICorDebugNativeFrame::SetIP — Metoda</span><span class="sxs-lookup"><span data-stu-id="8fae3-102">ICorDebugNativeFrame::SetIP Method</span></span>
 <span data-ttu-id="8fae3-103">Ustawia wskaźnik instrukcji w określonej lokalizacji przesunięcia w kodzie natywnym.</span><span class="sxs-lookup"><span data-stu-id="8fae3-103">Sets the instruction pointer to the specified offset location in native code.</span></span>  

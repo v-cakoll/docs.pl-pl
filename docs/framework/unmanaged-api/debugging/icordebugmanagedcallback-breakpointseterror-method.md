@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418382"
 ---
 # <a name="icordebugmanagedcallbackbreakpointseterror-method"></a><span data-ttu-id="f1cb4-102">ICorDebugManagedCallback::BreakpointSetError — Metoda</span><span class="sxs-lookup"><span data-stu-id="f1cb4-102">ICorDebugManagedCallback::BreakpointSetError Method</span></span>
 <span data-ttu-id="f1cb4-103">Powiadamia debugera, że środowisko uruchomieniowe języka wspólnego nie może powiązać dokładnie punkt przerwania ustawiony przed funkcją just-in-time (JIT) skompilowany.</span><span class="sxs-lookup"><span data-stu-id="f1cb4-103">Notifies the debugger that the common language runtime was unable to accurately bind a breakpoint that was set before a function was just-in-time (JIT) compiled.</span></span>  

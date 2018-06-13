@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418850"
 ---
 # <a name="icordebugprocess3-interface"></a><span data-ttu-id="4d2f9-102">ICorDebugProcess3 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="4d2f9-102">ICorDebugProcess3 Interface</span></span>
 <span data-ttu-id="4d2f9-103">Steruje niestandardowymi powiadomieniami debugera.</span><span class="sxs-lookup"><span data-stu-id="4d2f9-103">Controls custom debugger notifications.</span></span>  

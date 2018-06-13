@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414908"
 ---
 # <a name="icordebugdebugeventgetthread-method"></a><span data-ttu-id="7a462-102">Metoda ICorDebugDebugEvent::GetThread</span><span class="sxs-lookup"><span data-stu-id="7a462-102">ICorDebugDebugEvent::GetThread Method</span></span>
 <span data-ttu-id="7a462-103">Pobiera wątku, w którym wystąpiło zdarzenie.</span><span class="sxs-lookup"><span data-stu-id="7a462-103">Gets the thread on which the event occurred.</span></span>  

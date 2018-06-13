@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538493"
 ---
 # <a name="toolstrippanel-control-overview"></a><span data-ttu-id="2b190-102">ToolStripPanel — Informacje o formancie</span><span class="sxs-lookup"><span data-stu-id="2b190-102">ToolStripPanel Control Overview</span></span>
 <span data-ttu-id="2b190-103">A <xref:System.Windows.Forms.ToolStripPanel> zapewnia jednego obszaru rozmieszczania i rafting <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, i <xref:System.Windows.Forms.StatusStrip> kontrolki.</span><span class="sxs-lookup"><span data-stu-id="2b190-103">A <xref:System.Windows.Forms.ToolStripPanel> provides a single area for positioning and rafting <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, and <xref:System.Windows.Forms.StatusStrip> controls.</span></span> <span data-ttu-id="2b190-104">Wiele <xref:System.Windows.Forms.ToolStrip> formanty stosu poziomie czy w pionie, w zależności od <xref:System.Windows.Forms.ToolStripPanelRow.Orientation%2A> z <xref:System.Windows.Forms.ToolStripPanel>.</span><span class="sxs-lookup"><span data-stu-id="2b190-104">Multiple <xref:System.Windows.Forms.ToolStrip> controls stack vertically or horizontally depending on the <xref:System.Windows.Forms.ToolStripPanelRow.Orientation%2A> of the <xref:System.Windows.Forms.ToolStripPanel>.</span></span>  

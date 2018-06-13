@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417657"
 ---
 # <a name="icordebugtypegetrank-method"></a><span data-ttu-id="e42cf-102">ICorDebugType::GetRank — Metoda</span><span class="sxs-lookup"><span data-stu-id="e42cf-102">ICorDebugType::GetRank Method</span></span>
 <span data-ttu-id="e42cf-103">Pobiera liczbę wymiarów w typie tablicy.</span><span class="sxs-lookup"><span data-stu-id="e42cf-103">Gets the number of dimensions in an array type.</span></span>  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413777"
 ---
 # <a name="icordebugexceptionobjectvalue-interface"></a><span data-ttu-id="360b2-102">ICorDebugExceptionObjectValue — Interfejs</span><span class="sxs-lookup"><span data-stu-id="360b2-102">ICorDebugExceptionObjectValue Interface</span></span>
 <span data-ttu-id="360b2-103">Rozszerzenie interfejsu "ICorDebugObjectValue", aby podać informacje śledzenia stosu z obiektem zarządzanym wyjątku.</span><span class="sxs-lookup"><span data-stu-id="360b2-103">Extends the "ICorDebugObjectValue" interface to provide stack trace information from a managed exception object.</span></span>  

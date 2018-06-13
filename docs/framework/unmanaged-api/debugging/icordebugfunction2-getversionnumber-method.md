@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420056"
 ---
 # <a name="icordebugfunction2getversionnumber-method"></a><span data-ttu-id="d39d1-102">ICorDebugFunction2::GetVersionNumber — Metoda</span><span class="sxs-lookup"><span data-stu-id="d39d1-102">ICorDebugFunction2::GetVersionNumber Method</span></span>
 <span data-ttu-id="d39d1-103">Pobiera wersję tej funkcji Edytuj i Kontynuuj.</span><span class="sxs-lookup"><span data-stu-id="d39d1-103">Gets the Edit and Continue version of this function.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421151"
 ---
 # <a name="icordebuginternalframe2getframeaddress-method"></a><span data-ttu-id="f9fbf-102">ICorDebugInternalFrame2::GetFrameAddress — Metoda</span><span class="sxs-lookup"><span data-stu-id="f9fbf-102">ICorDebugInternalFrame2::GetFrameAddress Method</span></span>
 <span data-ttu-id="f9fbf-103">Zwraca adres stosu wewnętrznego ramki.</span><span class="sxs-lookup"><span data-stu-id="f9fbf-103">Returns the stack address of the internal frame.</span></span>  

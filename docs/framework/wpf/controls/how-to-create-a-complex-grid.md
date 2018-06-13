@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553598"
 ---
 # <a name="how-to-create-a-complex-grid"></a><span data-ttu-id="d1814-102">Jak utworzyć siatkę złożoną</span><span class="sxs-lookup"><span data-stu-id="d1814-102">How to: Create a Complex Grid</span></span>
 <span data-ttu-id="d1814-103">Ten przykład przedstawia sposób użycia <xref:System.Windows.Controls.Grid> do tworzenia układu, która wygląda jak kalendarza miesięcznego.</span><span class="sxs-lookup"><span data-stu-id="d1814-103">This example shows how to use a <xref:System.Windows.Controls.Grid> to create layout that looks like a monthly calendar.</span></span>  

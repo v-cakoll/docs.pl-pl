@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549506"
 ---
 # <a name="threading-model"></a><span data-ttu-id="c2b67-102">Model wątkowości</span><span class="sxs-lookup"><span data-stu-id="c2b67-102">Threading Model</span></span>
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="c2b67-103"> Służy do zapisywania deweloperzy trudności z wątków.</span><span class="sxs-lookup"><span data-stu-id="c2b67-103"> is designed to save developers from the difficulties of threading.</span></span> <span data-ttu-id="c2b67-104">W rezultacie, większość [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] programiści nie muszą zapisu interfejs, który korzysta z więcej niż jeden wątek.</span><span class="sxs-lookup"><span data-stu-id="c2b67-104">As a result, the majority of [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] developers won't have to write an interface that uses more than one thread.</span></span> <span data-ttu-id="c2b67-105">Ponieważ programy wielowątkowe są złożone i trudne do debugowania, ich należy unikać gdy istnieją jednowątkowe rozwiązania.</span><span class="sxs-lookup"><span data-stu-id="c2b67-105">Because multithreaded programs are complex and difficult to debug, they should be avoided when single-threaded solutions exist.</span></span>  

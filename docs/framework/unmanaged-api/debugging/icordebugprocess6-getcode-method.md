@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420166"
 ---
 # <a name="icordebugprocess6getcode-method"></a><span data-ttu-id="7bfda-102">Metoda ICorDebugProcess6::GetCode</span><span class="sxs-lookup"><span data-stu-id="7bfda-102">ICorDebugProcess6::GetCode Method</span></span>
 <span data-ttu-id="7bfda-103">Pobiera informacje o zarządzanego kodu pod adresem określonym kodem.</span><span class="sxs-lookup"><span data-stu-id="7bfda-103">Gets information about the managed code at a particular code address.</span></span>  

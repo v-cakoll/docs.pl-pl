@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423289"
 ---
 # <a name="icordebugstepper-interface1"></a><span data-ttu-id="9845c-102">ICorDebugStepper — Interface1</span><span class="sxs-lookup"><span data-stu-id="9845c-102">ICorDebugStepper Interface1</span></span>
 <span data-ttu-id="9845c-103">Reprezentuje krok wykonaniu kodu, który jest realizowany przez debuger; służy jako identyfikator między wydaniem i zakończeniem polecenia i zapewnia sposób anulowania kroku.</span><span class="sxs-lookup"><span data-stu-id="9845c-103">Represents a step in code execution that is performed by a debugger, serves as an identifier between the issuance and completion of a command, and provides a way to cancel a step.</span></span>  

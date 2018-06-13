@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747349"
 ---
 # <a name="ltaddgt-element-for-ltlistenersgt-for-lttracegt"></a><span data-ttu-id="ab29e-102">&lt;Dodaj&gt; elementu &lt;odbiorników&gt; dla &lt;śledzenia&gt;</span><span class="sxs-lookup"><span data-stu-id="ab29e-102">&lt;add&gt; Element for &lt;listeners&gt; for &lt;trace&gt;</span></span>
 <span data-ttu-id="ab29e-103">Dodaje odbiornika do **odbiorników** kolekcji.</span><span class="sxs-lookup"><span data-stu-id="ab29e-103">Adds a listener to the **Listeners** collection.</span></span>  

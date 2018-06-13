@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33485609"
 ---
 # <a name="wsattraceevent"></a><span data-ttu-id="128b7-102">WSAT_TraceEvent</span><span class="sxs-lookup"><span data-stu-id="128b7-102">WSAT_TraceEvent</span></span>
 <span data-ttu-id="128b7-103">WSAT_TraceEvent</span><span class="sxs-lookup"><span data-stu-id="128b7-103">WSAT_TraceEvent</span></span>  

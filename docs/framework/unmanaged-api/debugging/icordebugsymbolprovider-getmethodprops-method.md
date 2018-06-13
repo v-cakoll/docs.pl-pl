@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422194"
 ---
 # <a name="icordebugsymbolprovidergetmethodprops-method"></a><span data-ttu-id="8038d-102">ICorDebugSymbolProvider::GetMethodProps — metoda</span><span class="sxs-lookup"><span data-stu-id="8038d-102">ICorDebugSymbolProvider::GetMethodProps Method</span></span>
 <span data-ttu-id="8038d-103">Zwraca informacje o właściwości metody, takie jak token metadanych oraz informacje o jego parametrów ogólnych — metoda podany wirtualny adres względny (RVA) w tej metody.</span><span class="sxs-lookup"><span data-stu-id="8038d-103">Returns information about method properties, such as the method's metadata token and information about its generic parameters, given a relative virtual address (RVA) in that method.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489114"
 ---
 # <a name="authentication-in-wcf"></a><span data-ttu-id="a376f-102">Uwierzytelnianie w programie WCF</span><span class="sxs-lookup"><span data-stu-id="a376f-102">Authentication in WCF</span></span>
 <span data-ttu-id="a376f-103">W następujących tematach opisano szereg różnych mechanizmów w Windows Communication Foundation (WCF), który zapewnia uwierzytelnianie, na przykład, uwierzytelnianie systemu Windows, certyfikaty X.509 i nazwy użytkownika i hasła.</span><span class="sxs-lookup"><span data-stu-id="a376f-103">The following topics show a number of different mechanisms in Windows Communication Foundation (WCF) that provide authentication, for example, Windows authentication, X.509 certificates, and user name and passwords.</span></span>  

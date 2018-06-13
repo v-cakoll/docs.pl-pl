@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420017"
 ---
 # <a name="icordebugsymbolprovidergetmethodlocalsymbols-method"></a><span data-ttu-id="b35d3-102">ICorDebugSymbolProvider::GetMethodLocalSymbols — metoda</span><span class="sxs-lookup"><span data-stu-id="b35d3-102">ICorDebugSymbolProvider::GetMethodLocalSymbols Method</span></span>
 <span data-ttu-id="b35d3-103">Pobiera symbole lokalne metody podany wirtualny adres względny (RVA) tej metody.</span><span class="sxs-lookup"><span data-stu-id="b35d3-103">Gets a method's local symbols given the relative virtual address (RVA) of that method.</span></span>  

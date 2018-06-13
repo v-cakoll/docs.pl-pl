@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422662"
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a><span data-ttu-id="6e77c-102">ICorDebugProcess5::EnumerateHandles — Metoda</span><span class="sxs-lookup"><span data-stu-id="6e77c-102">ICorDebugProcess5::EnumerateHandles Method</span></span>
 <span data-ttu-id="6e77c-103">Pobiera moduł wyliczający dla obiekt dojść w procesie.</span><span class="sxs-lookup"><span data-stu-id="6e77c-103">Gets an enumerator for object handles in a process.</span></span>  

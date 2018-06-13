@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418303"
 ---
 # <a name="icordebugmoduleisdynamic-method"></a><span data-ttu-id="932d3-102">ICorDebugModule::IsDynamic — Metoda</span><span class="sxs-lookup"><span data-stu-id="932d3-102">ICorDebugModule::IsDynamic Method</span></span>
 <span data-ttu-id="932d3-103">Pobiera wartość wskazującą, czy ten moduł jest dynamiczny.</span><span class="sxs-lookup"><span data-stu-id="932d3-103">Gets a value that indicates whether this module is dynamic.</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416582"
 ---
 # <a name="icordebugilframe4-interface"></a><span data-ttu-id="7d230-102">Interfejs ICorDebugILFrame4</span><span class="sxs-lookup"><span data-stu-id="7d230-102">ICorDebugILFrame4 Interface</span></span>
 <span data-ttu-id="7d230-103">[Obsługiwane w programie .NET Framework 4.5.2 i nowszych wersjach]</span><span class="sxs-lookup"><span data-stu-id="7d230-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  

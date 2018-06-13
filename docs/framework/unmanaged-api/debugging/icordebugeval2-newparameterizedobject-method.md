@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412808"
 ---
 # <a name="icordebugeval2newparameterizedobject-method"></a><span data-ttu-id="43d13-102">ICorDebugEval2::NewParameterizedObject — Metoda</span><span class="sxs-lookup"><span data-stu-id="43d13-102">ICorDebugEval2::NewParameterizedObject Method</span></span>
 <span data-ttu-id="43d13-103">Tworzy nowy obiekt sparametryzowany typ i wywołuje metodę konstruktora obiektu.</span><span class="sxs-lookup"><span data-stu-id="43d13-103">Instantiates a new parameterized type object and calls the object's constructor method.</span></span>  

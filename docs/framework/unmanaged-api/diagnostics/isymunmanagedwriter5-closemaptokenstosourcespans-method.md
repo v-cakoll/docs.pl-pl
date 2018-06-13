@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428615"
 ---
 # <a name="isymunmanagedwriter5closemaptokenstosourcespans-method"></a><span data-ttu-id="8cb2b-102">ISymUnmanagedWriter5::CloseMapTokensToSourceSpans — Metoda</span><span class="sxs-lookup"><span data-stu-id="8cb2b-102">ISymUnmanagedWriter5::CloseMapTokensToSourceSpans Method</span></span>
 <span data-ttu-id="8cb2b-103">Zamknij sekcji specjalne dane niestandardowe dla tokenu do źródła obejmuje informacje dotyczące mapowania.</span><span class="sxs-lookup"><span data-stu-id="8cb2b-103">Close the special custom data section for token-to-source span mapping information.</span></span> <span data-ttu-id="8cb2b-104">Po zamknięciu, można dodać nie więcej informacji o mapowaniu.</span><span class="sxs-lookup"><span data-stu-id="8cb2b-104">After it is closed, no more mapping information can be added.</span></span>  

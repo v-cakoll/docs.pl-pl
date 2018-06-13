@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422717"
 ---
 # <a name="icordebugthread2getconnectionid-method"></a><span data-ttu-id="2bf07-102">ICorDebugThread2::GetConnectionID — Metoda</span><span class="sxs-lookup"><span data-stu-id="2bf07-102">ICorDebugThread2::GetConnectionID Method</span></span>
 <span data-ttu-id="2bf07-103">Pobiera identyfikator połączenia dla tego obiektu ICorDebugThread2.</span><span class="sxs-lookup"><span data-stu-id="2bf07-103">Gets the connection identifier for this ICorDebugThread2 object.</span></span>  

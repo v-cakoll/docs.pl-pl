@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415558"
 ---
 # <a name="icordebugexceptiondebugeventgetstackpointer-method"></a><span data-ttu-id="4d973-102">ICorDebugExceptionDebugEvent::GetStackPointer — metoda</span><span class="sxs-lookup"><span data-stu-id="4d973-102">ICorDebugExceptionDebugEvent::GetStackPointer Method</span></span>
 <span data-ttu-id="4d973-103">Pobiera wskaźnik stosu dla tego zdarzenia debugowania wyjątku.</span><span class="sxs-lookup"><span data-stu-id="4d973-103">Gets the stack pointer for this exception debug event.</span></span>  

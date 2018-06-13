@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548847"
 ---
 # <a name="technology-regions-overview"></a><span data-ttu-id="b86ed-102">Przegląd Regiony technologiczne</span><span class="sxs-lookup"><span data-stu-id="b86ed-102">Technology Regions Overview</span></span>
 <span data-ttu-id="b86ed-103">Wiele technologii prezentacji są używane w aplikacji, takich jak WPF, Win32 lub DirectX, należy udostępnić obszarów renderowania w ramach wspólnego okna najwyższego poziomu.</span><span class="sxs-lookup"><span data-stu-id="b86ed-103">If multiple presentation technologies are used in an application, such as WPF, Win32, or DirectX, they must share the rendering areas within a common top-level window.</span></span> <span data-ttu-id="b86ed-104">W tym temacie opisano problemy, które mogą mieć wpływ na prezentacji i dane wejściowe współdziałanie aplikacji WPF.</span><span class="sxs-lookup"><span data-stu-id="b86ed-104">This topic describes issues that might influence the presentation and input for your WPF interoperation application.</span></span>  

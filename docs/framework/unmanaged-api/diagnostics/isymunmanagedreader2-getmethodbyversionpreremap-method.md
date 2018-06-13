@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428579"
 ---
 # <a name="isymunmanagedreader2getmethodbyversionpreremap-method"></a><span data-ttu-id="c45b3-102">ISymUnmanagedReader2::GetMethodByVersionPreRemap — Metoda</span><span class="sxs-lookup"><span data-stu-id="c45b3-102">ISymUnmanagedReader2::GetMethodByVersionPreRemap Method</span></span>
 <span data-ttu-id="c45b3-103">Pobiera metodę czytnika symboli podany token metody i numer wersji edit-and-continue.</span><span class="sxs-lookup"><span data-stu-id="c45b3-103">Gets a symbol reader method, given a method token and an edit-and-continue version number.</span></span> <span data-ttu-id="c45b3-104">Numery wersji są liczone od 1 i są zwiększany po każdej zmianie metody wyniku operacji edit-and-continue.</span><span class="sxs-lookup"><span data-stu-id="c45b3-104">Version numbers start at 1 and are incremented each time the method is changed as a result of an edit-and-continue operation.</span></span>  

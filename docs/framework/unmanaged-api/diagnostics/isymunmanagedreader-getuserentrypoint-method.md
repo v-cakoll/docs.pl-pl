@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425324"
 ---
 # <a name="isymunmanagedreadergetuserentrypoint-method"></a><span data-ttu-id="4667c-102">ISymUnmanagedReader::GetUserEntryPoint — Metoda</span><span class="sxs-lookup"><span data-stu-id="4667c-102">ISymUnmanagedReader::GetUserEntryPoint Method</span></span>
 <span data-ttu-id="4667c-103">Zwraca metodę, która została określona jako punktu wejścia użytkownika dla modułu, jeśli istnieje.</span><span class="sxs-lookup"><span data-stu-id="4667c-103">Returns the method that was specified as the user entry point for the module, if any.</span></span> <span data-ttu-id="4667c-104">Tej metody można na przykład metoda główna użytkownika, a nie generowane przez kompilator klas zastępczych przed wywołaniem metody głównej.</span><span class="sxs-lookup"><span data-stu-id="4667c-104">For example, this method could be the user's main method rather than compiler-generated stubs before the main method.</span></span>  

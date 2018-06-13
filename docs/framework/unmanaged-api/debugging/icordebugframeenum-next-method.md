@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415486"
 ---
 # <a name="icordebugframeenumnext-method"></a><span data-ttu-id="47963-102">ICorDebugFrameEnum::Next — Metoda</span><span class="sxs-lookup"><span data-stu-id="47963-102">ICorDebugFrameEnum::Next Method</span></span>
 <span data-ttu-id="47963-103">Pobiera określoną liczbę wystąpień ICorDebugFrame, zaczynając od bieżącego położenia.</span><span class="sxs-lookup"><span data-stu-id="47963-103">Gets the specified number of ICorDebugFrame instances, starting at the current position.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419975"
 ---
 # <a name="icordebugsymbolprovidergetmethodparametersymbols-method"></a><span data-ttu-id="787d4-102">ICorDebugSymbolProvider::GetMethodParameterSymbols — metoda</span><span class="sxs-lookup"><span data-stu-id="787d4-102">ICorDebugSymbolProvider::GetMethodParameterSymbols Method</span></span>
 <span data-ttu-id="787d4-103">Pobiera symbole parametru metody podany wirtualny adres względny (RVA) tej metody.</span><span class="sxs-lookup"><span data-stu-id="787d4-103">Gets a method's parameter symbols given the relative virtual address (RVA) of that method.</span></span>  

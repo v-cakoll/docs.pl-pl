@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416361"
 ---
 # <a name="icordebugmanagedcallback2createconnection-method"></a><span data-ttu-id="7d0ed-102">ICorDebugManagedCallback2::CreateConnection — Metoda</span><span class="sxs-lookup"><span data-stu-id="7d0ed-102">ICorDebugManagedCallback2::CreateConnection Method</span></span>
 <span data-ttu-id="7d0ed-103">Powiadamia debugera, że utworzono nowe połączenie.</span><span class="sxs-lookup"><span data-stu-id="7d0ed-103">Notifies the debugger that a new connection has been created.</span></span>  

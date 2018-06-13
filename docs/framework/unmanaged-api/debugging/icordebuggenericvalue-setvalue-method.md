@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413211"
 ---
 # <a name="icordebuggenericvaluesetvalue-method"></a><span data-ttu-id="4f560-102">ICorDebugGenericValue::SetValue — Metoda</span><span class="sxs-lookup"><span data-stu-id="4f560-102">ICorDebugGenericValue::SetValue Method</span></span>
 <span data-ttu-id="4f560-103">Kopiuje nową wartość z określonego bufora.</span><span class="sxs-lookup"><span data-stu-id="4f560-103">Copies a new value from the specified buffer.</span></span>  

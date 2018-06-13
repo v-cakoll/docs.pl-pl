@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415012"
 ---
 # <a name="icordebugmanagedcallbacknamechange-method"></a><span data-ttu-id="58403-102">ICorDebugManagedCallback::NameChange — Metoda</span><span class="sxs-lookup"><span data-stu-id="58403-102">ICorDebugManagedCallback::NameChange Method</span></span>
 <span data-ttu-id="58403-103">Powiadamia debugera, że nazwa domeny aplikacji lub wątek został zmieniony.</span><span class="sxs-lookup"><span data-stu-id="58403-103">Notifies the debugger that the name of either an application domain or a thread has changed.</span></span>  

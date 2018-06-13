@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550910"
 ---
 # <a name="documentviewer"></a><span data-ttu-id="e6267-102">DocumentViewer</span><span class="sxs-lookup"><span data-stu-id="e6267-102">DocumentViewer</span></span>
 <span data-ttu-id="e6267-103"><xref:System.Windows.Controls.DocumentViewer> Formantu służy do wyświetlania <xref:System.Windows.Documents.FixedDocument> zawartości (takie jak [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] dokumenty) w formacie podzielonym na strony.</span><span class="sxs-lookup"><span data-stu-id="e6267-103">The <xref:System.Windows.Controls.DocumentViewer> control is used to view <xref:System.Windows.Documents.FixedDocument> content (such as [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] documents) in a paginated format.</span></span>  

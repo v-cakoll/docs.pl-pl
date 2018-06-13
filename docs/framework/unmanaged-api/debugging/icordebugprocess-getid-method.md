@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416670"
 ---
 # <a name="icordebugprocessgetid-method"></a><span data-ttu-id="afda2-102">ICorDebugProcess::GetID — Metoda</span><span class="sxs-lookup"><span data-stu-id="afda2-102">ICorDebugProcess::GetID Method</span></span>
 <span data-ttu-id="afda2-103">Pobiera identyfikator systemu operacyjnego (OS) procesu.</span><span class="sxs-lookup"><span data-stu-id="afda2-103">Gets the operating system (OS) ID of the process.</span></span>  

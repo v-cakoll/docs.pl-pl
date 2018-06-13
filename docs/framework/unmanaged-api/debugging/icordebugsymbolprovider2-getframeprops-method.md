@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419084"
 ---
 # <a name="icordebugsymbolprovider2getframeprops-method"></a><span data-ttu-id="0b183-102">ICorDebugSymbolProvider2::GetFrameProps — metoda</span><span class="sxs-lookup"><span data-stu-id="0b183-102">ICorDebugSymbolProvider2::GetFrameProps Method</span></span>
 <span data-ttu-id="0b183-103">Zwraca metodę uruchamiania wirtualny adres względny metody i ramka nadrzędny podany wirtualny adres względny kodu.</span><span class="sxs-lookup"><span data-stu-id="0b183-103">Returns the method starting relative virtual address of a method and the parent frame given a code relative virtual address.</span></span>  

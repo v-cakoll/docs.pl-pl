@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403419"
 ---
 # <a name="icordebugarrayvaluegetelementatposition-method"></a><span data-ttu-id="ab237-102">ICorDebugArrayValue::GetElementAtPosition — Metoda</span><span class="sxs-lookup"><span data-stu-id="ab237-102">ICorDebugArrayValue::GetElementAtPosition Method</span></span>
 <span data-ttu-id="ab237-103">Pobiera element na pozycji, traktując jako tablica liczony od zera, jednowymiarowej tablicy.</span><span class="sxs-lookup"><span data-stu-id="ab237-103">Gets the element at the given position, treating the array as a zero-based, single-dimensional array.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403861"
 ---
 # <a name="iclrmetadatalocatorgetmetadata-method"></a><span data-ttu-id="61f81-102">ICLRMetadataLocator::GetMetadata — Metoda</span><span class="sxs-lookup"><span data-stu-id="61f81-102">ICLRMetadataLocator::GetMetadata Method</span></span>
 <span data-ttu-id="61f81-103">Metoda wywoływana przez wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) dostępu do usług danych do pobierania metadanych obrazu.</span><span class="sxs-lookup"><span data-stu-id="61f81-103">Called by the common language runtime (CLR) data access services to retrieve the metadata of an image.</span></span>  

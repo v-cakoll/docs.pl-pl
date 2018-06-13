@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399798"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a><span data-ttu-id="d99ad-102">Porady: Tworzenie aplikacji ASP.NET obsługujący oświadczenia za pomocą uwierzytelniania systemu Windows</span><span class="sxs-lookup"><span data-stu-id="d99ad-102">How To: Build Claims-Aware ASP.NET Application Using Windows Authentication</span></span>
 ## <a name="applies-to"></a><span data-ttu-id="d99ad-103">Dotyczy:</span><span class="sxs-lookup"><span data-stu-id="d99ad-103">Applies To</span></span>  

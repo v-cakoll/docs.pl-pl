@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402385"
 ---
 # <a name="icordebugassemblyenumeratemodules-method"></a><span data-ttu-id="2aca9-102">ICorDebugAssembly::EnumerateModules — Metoda</span><span class="sxs-lookup"><span data-stu-id="2aca9-102">ICorDebugAssembly::EnumerateModules Method</span></span>
 <span data-ttu-id="2aca9-103">Pobiera moduł wyliczający dla modułów zawartych w `ICorDebugAssembly`.</span><span class="sxs-lookup"><span data-stu-id="2aca9-103">Gets an enumerator for the modules contained in the `ICorDebugAssembly`.</span></span>  

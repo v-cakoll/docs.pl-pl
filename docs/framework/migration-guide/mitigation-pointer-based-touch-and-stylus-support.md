@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387783"
 ---
 # <a name="mitigation-pointer-based-touch-and-stylus-support"></a><span data-ttu-id="4de32-102">Środki zaradcze: Na podstawie wskaźnika Touch i pomocy technicznej pióro</span><span class="sxs-lookup"><span data-stu-id="4de32-102">Mitigation: Pointer-based Touch and Stylus Support</span></span>
 

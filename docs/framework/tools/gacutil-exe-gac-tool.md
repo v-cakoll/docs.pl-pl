@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399597"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a><span data-ttu-id="b71f2-102">Gacutil.exe (Narzędzie Global Assembly Cache)</span><span class="sxs-lookup"><span data-stu-id="b71f2-102">Gacutil.exe (Global Assembly Cache Tool)</span></span>
 <span data-ttu-id="b71f2-103">Narzędzie globalnej pamięci podręcznej zestawów umożliwia wyświetlenie zawartości globalnej pamięci podręcznej zestawów i wykonywanie na niej operacji oraz pobieranie pamięci podręcznej.</span><span class="sxs-lookup"><span data-stu-id="b71f2-103">The Global Assembly Cache tool allows you to view and manipulate the contents of the global assembly cache and download cache.</span></span>  

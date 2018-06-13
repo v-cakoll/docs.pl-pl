@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390968"
 ---
 # <a name="how-to-customize-a-time-based-cache-policy"></a><span data-ttu-id="356d6-102">Porady: Dostosowywanie zasad na podstawie czasu pamięci podręcznej</span><span class="sxs-lookup"><span data-stu-id="356d6-102">How to: Customize a Time-Based Cache Policy</span></span>
 <span data-ttu-id="356d6-103">Podczas tworzenia zasady na podstawie czasu pamięci podręcznej, można dostosować zachowanie buforowania, określając wartości maksymalny wiek, minimalna świeżości, maksymalna nieaktualności lub Data synchronizacji pamięci podręcznej.</span><span class="sxs-lookup"><span data-stu-id="356d6-103">When creating a time-based cache policy, you can customize caching behavior by specifying values for maximum age, minimum freshness, maximum staleness, or cache synchronization date.</span></span> <span data-ttu-id="356d6-104"><xref:System.Net.Cache.HttpRequestCachePolicy> Obiektu zawiera kilka konstruktorów, które pozwalają określić prawidłową kombinację tych wartości.</span><span class="sxs-lookup"><span data-stu-id="356d6-104">The <xref:System.Net.Cache.HttpRequestCachePolicy> object provides several constructors that allow you to specify valid combinations of these values.</span></span>  

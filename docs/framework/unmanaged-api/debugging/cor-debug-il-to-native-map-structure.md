@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404742"
 ---
 # <a name="cordebugiltonativemap-structure"></a><span data-ttu-id="4893e-102">COR_DEBUG_IL_TO_NATIVE_MAP — Struktura</span><span class="sxs-lookup"><span data-stu-id="4893e-102">COR_DEBUG_IL_TO_NATIVE_MAP Structure</span></span>
 <span data-ttu-id="4893e-103">Zawiera przesunięcia, które są używane do mapowania kodu natywnego kodu języka pośredniego (MSIL) firmy Microsoft.</span><span class="sxs-lookup"><span data-stu-id="4893e-103">Contains the offsets that are used to map Microsoft intermediate language (MSIL) code to native code.</span></span>  

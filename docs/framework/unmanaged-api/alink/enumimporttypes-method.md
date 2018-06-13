@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401651"
 ---
 # <a name="enumimporttypes-method"></a><span data-ttu-id="23e2e-102">EnumImportTypes — Metoda</span><span class="sxs-lookup"><span data-stu-id="23e2e-102">EnumImportTypes Method</span></span>
 <span data-ttu-id="23e2e-103">Wylicza każdego typu w każdym zakresem.</span><span class="sxs-lookup"><span data-stu-id="23e2e-103">Enumerates each type in each scope.</span></span>  

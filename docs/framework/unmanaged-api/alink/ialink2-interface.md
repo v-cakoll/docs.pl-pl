@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408464"
 ---
 # <a name="ialink2-interface"></a><span data-ttu-id="a8e65-102">IALink2 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="a8e65-102">IALink2 Interface</span></span>
 <span data-ttu-id="a8e65-103">Uzupełnienie [ialink — interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) przez zadeklarowanie metody, które pracują na nowsze interfejsy metadanych, takich jak [IMetaDataEmit2 — interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md).</span><span class="sxs-lookup"><span data-stu-id="a8e65-103">Complements the [IALink Interface](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) by declaring methods that operate on newer metadata interfaces such as [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md).</span></span> <span data-ttu-id="a8e65-104">Ponadto ialink2 — deklaruje metody, które zapewniają elastyczność dodatkowe użycie w oryginalnym interfejsach ialink —.</span><span class="sxs-lookup"><span data-stu-id="a8e65-104">Additionally, IALink2 declares methods that provide additional usage flexibility over the original IALink interfaces.</span></span>  

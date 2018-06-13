@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405230"
 ---
 # <a name="iclrdatatargetgetcurrentthreadid-method"></a><span data-ttu-id="f13c4-102">ICLRDataTarget::GetCurrentThreadID — Metoda</span><span class="sxs-lookup"><span data-stu-id="f13c4-102">ICLRDataTarget::GetCurrentThreadID Method</span></span>
 <span data-ttu-id="f13c4-103">Pobiera identyfikator systemu operacyjnego dla bieżącego wątku.</span><span class="sxs-lookup"><span data-stu-id="f13c4-103">Gets the operating system identifier for the current thread.</span></span>  

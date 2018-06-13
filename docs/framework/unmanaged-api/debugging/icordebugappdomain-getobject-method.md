@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406523"
 ---
 # <a name="icordebugappdomaingetobject-method"></a><span data-ttu-id="9ddfa-102">ICorDebugAppDomain::GetObject — Metoda</span><span class="sxs-lookup"><span data-stu-id="9ddfa-102">ICorDebugAppDomain::GetObject Method</span></span>
 <span data-ttu-id="9ddfa-103">Pobiera wskaźnika interfejsu do typowych domeny aplikacji języka wspólnego (CLR).</span><span class="sxs-lookup"><span data-stu-id="9ddfa-103">Gets an interface pointer to the common language runtime (CLR) application domain.</span></span>  

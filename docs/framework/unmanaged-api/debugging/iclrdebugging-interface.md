@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405996"
 ---
 # <a name="iclrdebugging-interface"></a><span data-ttu-id="89903-102">ICLRDebugging — Interfejs</span><span class="sxs-lookup"><span data-stu-id="89903-102">ICLRDebugging Interface</span></span>
 <span data-ttu-id="89903-103">Zapewnia metody obsługujące ładowanie i wyładowanie modułów do debugowania.</span><span class="sxs-lookup"><span data-stu-id="89903-103">Provides methods that handle loading and unloading modules for debugging.</span></span>  

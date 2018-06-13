@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527316"
 ---
 # <a name="arranging-controls-on-windows-forms"></a><span data-ttu-id="33090-102">Rozmieszczanie formantów na formularzach systemu Windows</span><span class="sxs-lookup"><span data-stu-id="33090-102">Arranging Controls on Windows Forms</span></span>
 <span data-ttu-id="33090-103">Umieszczenie i manipulowanie formantów na formularzach na różne sposoby, można utworzyć interfejsu użytkownika, które są intuicyjne i funkcjonalności dla użytkowników.</span><span class="sxs-lookup"><span data-stu-id="33090-103">By placing and manipulating controls on forms in different ways, you can create user interfaces that are both intuitive and functional for users.</span></span>  

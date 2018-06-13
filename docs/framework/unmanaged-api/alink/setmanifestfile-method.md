@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403572"
 ---
 # <a name="setmanifestfile-method"></a><span data-ttu-id="314cc-102">SetManifestFile — Metoda</span><span class="sxs-lookup"><span data-stu-id="314cc-102">SetManifestFile Method</span></span>
 <span data-ttu-id="314cc-103">Pozwala określić lub zresetować plik manifestu podczas tworzenia zestawu używa konsolidator.</span><span class="sxs-lookup"><span data-stu-id="314cc-103">Enables you to specify or reset the manifest file that the linker uses when it creates the assembly.</span></span>  

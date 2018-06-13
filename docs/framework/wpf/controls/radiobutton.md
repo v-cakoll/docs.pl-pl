@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553926"
 ---
 # <a name="radiobutton"></a><span data-ttu-id="997a9-102">RadioButton</span><span class="sxs-lookup"><span data-stu-id="997a9-102">RadioButton</span></span>
 <span data-ttu-id="997a9-103"><xref:System.Windows.Controls.RadioButton> Formanty zwykle są zgrupowane umożliwiającą użytkownikom pojedynczego wyboru między kilka opcji; można wybrać tylko jeden przycisk naraz.</span><span class="sxs-lookup"><span data-stu-id="997a9-103"><xref:System.Windows.Controls.RadioButton> controls are usually grouped together to offer users a single choice among several options; only one button at a time can be selected.</span></span>  

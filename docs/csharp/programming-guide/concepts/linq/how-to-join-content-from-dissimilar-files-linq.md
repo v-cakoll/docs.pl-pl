@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319172"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Porady: łączenie zawartości niepodobnych plików (LINQ) (C#)
 W tym przykładzie pokazano, jak sprzęgać dane z dwóch plików rozdzielanych przecinkami, które mają wspólną wartość, które jest używane jako dopasowany klucz. Ta metoda może być przydatna, jeśli masz połączyć dane z dwóch arkuszy kalkulacyjnych lub z arkusza kalkulacyjnego i z pliku innego formatu, który ma do nowego pliku. Można zmodyfikować przykładu do pracy z dowolnego rodzaju strukturalnych tekstu.  

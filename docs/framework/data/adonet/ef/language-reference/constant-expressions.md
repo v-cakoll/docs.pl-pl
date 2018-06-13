@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762520"
 ---
 # <a name="constant-expressions"></a>Wyrażenia stałe
 Wyrażenie stałe składa się z wartością stałą. Wartości stałe bezpośrednio są konwertowane na wyrażenia drzewa polecenia stałe, bez tłumaczenia na kliencie. W tym wyrażeń, które powodują powstanie wartość stałą. W związku z tym zachowanie źródła danych można się spodziewać dla wszystkich wyrażeń zawierających stałe. Może to spowodować zachowanie różni się od zachowania CLR.  

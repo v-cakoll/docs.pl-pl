@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761600"
 ---
 # <a name="compiled-queries--linq-to-entities"></a>Skompilowane zapytania (LINQ to Entities)
 Jeśli masz aplikację, która wykonuje zapytania strukturę podobną wielokrotnie w ramach jednostki często może zwiększyć wydajność kompilacji zapytania jeden raz i jej wykonanie kilka razy z innymi parametrami. Na przykład aplikacje mogą mieć można pobrać wszystkich klientów określonego miasta; miasta określono w czasie wykonywania przez użytkownika w postaci. Składnik LINQ to Entities obsługuje przy użyciu skompilowane zapytania w tym celu.  

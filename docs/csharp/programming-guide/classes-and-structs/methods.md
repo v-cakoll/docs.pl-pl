@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336401"
 ---
 # <a name="methods-c-programming-guide"></a>Metody (Przewodnik programowania w języku C#)
 Metoda jest blok kodu, który zawiera serię instrukcji. Program powoduje, że instrukcje, które ma być wykonane przez wywołanie metody i określanie żadnych argumentów wymaganej metody. W języku C# co wykonanie instrukcji jest wykonywane w kontekście metody. Metoda Main jest punkt wejścia dla każdej aplikacji C# i jest wywoływane przez środowisko uruchomieniowe języka wspólnego (CLR), gdy program jest uruchomiony.  

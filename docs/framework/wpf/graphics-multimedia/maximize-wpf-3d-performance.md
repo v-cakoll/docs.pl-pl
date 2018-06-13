@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565441"
 ---
 # <a name="maximize-wpf-3d-performance"></a>Maksymalizuj wydajność 3D WPF
 W trakcie używania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] do tworzenia kontrolek 3W i obejmują sceny 3W w aplikacjach, ważne jest, aby wziąć pod uwagę optymalizacji wydajności. Ten temat zawiera listę 3D klas i właściwości, które mają wpływ na wydajność aplikacji, wraz z zaleceniami dotyczącymi optymalizacji wydajności, gdy ich użyć.  

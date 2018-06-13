@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767170"
 ---
 # <a name="creating-a-datatable"></a>Tworzenie DataTable
 A <xref:System.Data.DataTable>, który reprezentuje jednej tabeli w pamięci relacyjnej bazie danych, może być tworzone i używane są niezależnie lub może być używany przez inne obiekty .NET Framework najczęściej jako element członkowski <xref:System.Data.DataSet>.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759686"
 ---
 # <a name="inferring-dataset-relational-structure-from-xml"></a>Wnioskowanie struktury zestawu danych relacyjnych z pliku XML
 Relacyjne struktury lub schematu z <xref:System.Data.DataSet> składa się z tabel, kolumn, ograniczenia i relacji. Podczas ładowania <xref:System.Data.DataSet> z pliku XML, można wstępnie schematu lub można go utworzyć, jawnie lub za pośrednictwem wnioskowania o typach z pliku XML, ładowany. Aby uzyskać więcej informacji na temat ładowania schematu i zawartość <xref:System.Data.DataSet> z pliku XML, zobacz [podczas ładowania zestawu danych z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) i [podczas ładowania informacji schematu zestawu danych z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md).  

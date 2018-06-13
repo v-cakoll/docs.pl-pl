@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336355"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>Składnia zapytania i metody w technologii LINQ (C#)
 Większość zapytań w zapytaniu zintegrowane wprowadzające języka ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) dokumentacji zostały napisane przy użyciu składni deklaratywne zapytania LINQ. Jednak składnia zapytania musi można przetłumaczyć jej na wywołania metody dla platformy .NET środowisko uruchomieniowe języka wspólnego (CLR) podczas kompilowania kodu. Standardowe operatory zapytań, które mają nazwy, takie jak wywołania tych wywołań metody `Where`, `Select`, `GroupBy`, `Join`, `Max`, i `Average`. Możesz je wywołać bezpośrednio, używając składni metody zamiast składni zapytań.  

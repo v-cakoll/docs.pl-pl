@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760037"
 ---
 # <a name="diffgrams"></a>DataSets
 Elementu DiffGram jest w formacie XML, który identyfikuje bieżące i oryginalne wersje elementów danych. <xref:System.Data.DataSet> Używa formatu elementu DiffGram do ładowania i utrwalić jego zawartość, a do serializacji jego zawartość dla transportu przez połączenie sieciowe. Gdy <xref:System.Data.DataSet> są zapisywane jako elementu DiffGram wypełnia elementu DiffGram niezbędne informacje, aby dokładnie odtworzyć zawartość, jednak nie schematu z <xref:System.Data.DataSet>, łącznie z obu wartości w kolumnie **oryginalne** i **bieżącego** wersje wiersza, informacje o błędzie wiersza i kolejności wierszy.  

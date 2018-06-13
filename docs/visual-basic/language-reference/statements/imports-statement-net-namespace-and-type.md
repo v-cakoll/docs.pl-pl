@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604487"
 ---
 # <a name="imports-statement-net-namespace-and-type"></a>Imports — Instrukcja (.NET Namespace i Type)
 Umożliwia wpisz nazwy przywoływanie bez kwalifikacji przestrzeni nazw.  

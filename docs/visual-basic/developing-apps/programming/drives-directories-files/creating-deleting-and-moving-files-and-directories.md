@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590950"
 ---
 # <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a>Tworzenie, usuwanie i przenoszenie plików i katalogów w Visual Basic
 Ta sekcja zawiera listę zadań skojarzonych z tworzenie, usuwanie, przenoszenie i zmiana nazw plików i katalogów w Visual Basic.  

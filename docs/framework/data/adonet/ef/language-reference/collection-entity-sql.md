@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761636"
 ---
 # <a name="collection-entity-sql"></a>KOLEKCJA (jednostka SQL)
 KOLEKCJA — słowo kluczowe jest używana tylko w definicji wbudowanej funkcji. Funkcje kolekcji są funkcje, które działają na kolekcję wartości i wygenerować skalarne dane wyjściowe.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395976"
 ---
 # <a name="serialization-and-metadata"></a>Serializacja i metadane
 Jeśli aplikacja serializuje i deserializuje obiektów, może być konieczne dodanie wpisów do Twojej dyrektyw środowiska uruchomieniowego (. rd.xml) pliku, aby upewnić się, że metadane potrzebne jest obecny w czasie wykonywania. Istnieją dwie kategorie serializatorów i każdy z nich wymaga innej obsługi w pliku dyrektyw środowiska uruchomieniowego:  

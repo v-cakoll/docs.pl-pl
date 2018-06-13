@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761275"
 ---
 # <a name="null-comparisons"></a>Porównania wartości null
 A `null` wartość w źródle danych wskazuje, że wartość jest nieznany. W [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] kwerendy, można sprawdzić, tak aby niektóre obliczenia wartości null lub porównania są realizowane wyłącznie na wiersze, które mają prawidłowy lub inną niż null, danych. Semantyka null CLR, jednak mogą się różnić od null semantykę źródła danych. Większość baz danych używa wersji przechowywanymi w trzech logiki do obsługi porównania wartości null. Oznacza to, że porównanie z wartością null nie zostało oszacowane jako `true` lub `false`, daje w wyniku `unknown`. Często jest to implementacja ANSI wartości null, ale nie zawsze jest wielkość liter.  

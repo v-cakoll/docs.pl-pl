@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396357"
 ---
 # <a name="stack-etw-event"></a>Zdarzenie ETW stosu
 Zdarzenie stosu stosuje się w połączeniu z innymi zdarzeniami, można wygenerować śladów stosu po wywołaniu zdarzenia. Jest on rejestrowane, gdy dostawca środowiska uruchomieniowego jest włączony. Jest to zdarzenie bardzo wysokiej częstotliwości, ponieważ jest wywoływane, gdy innego środowiska uruchomieniowego zdarzenia. Z tego powodu zaleca się, użyj tego zdarzenia z rozwagą.  

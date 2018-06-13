@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762926"
 ---
 # <a name="multiset-entity-sql"></a>Zestaw WIELOKROTNY (jednostka SQL)
 Tworzy wystąpienie zestaw wielokrotny na podstawie listy wartości. Wszystkie wartości w Konstruktorze multiset — muszą być zgodne z typem `T`. Pusty konstruktorów zestawów wielokrotnych są niedozwolone.  

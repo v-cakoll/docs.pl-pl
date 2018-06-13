@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766858"
 ---
 # <a name="oracle-schema-collections"></a>Kolekcje schematów Oracle
 Dostawcy danych programu Microsoft .NET Framework dla programu Oracle obsługuje następujące kolekcje określonego schematu, oprócz typowych kolekcje schematów:  

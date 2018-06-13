@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331688"
 ---
 # <a name="differences-between-c-templates-and-c-generics-c-programming-guide"></a>Różnice między szablonami C++ i typami ogólnymi C# (Przewodnik programowania w języku C#)
 Szablony typami ogólnymi C# i C++ są obie funkcje języka, które obsługują typy z parametrami. Istnieje jednak wiele różnice między nimi. Na poziomie składni typami ogólnymi C# są prostsze typom sparametryzowane bez złożoności szablonów języka C++. Ponadto C# nie podejmowana próba udostępnienia wszystkie funkcje, które zapewniają szablonów języka C++. Na poziomie implementacji podstawowa różnica polega na podstawienia typu ogólnego C# są wykonywane w czasie wykonywania, a informacje o typie ogólnym co są zachowywane dla wystąpień obiektów. Aby uzyskać więcej informacji, zobacz [typy ogólne w czasie wykonywania](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  

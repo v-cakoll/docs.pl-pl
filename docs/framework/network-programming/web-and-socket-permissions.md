@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394936"
 ---
 # <a name="web-and-socket-permissions"></a>Sieć Web i uprawnienia gniazda
 Zabezpieczenia internetowe dla aplikacji za pomocą <xref:System.Net> przestrzeni nazw jest zapewniana przez <xref:System.Net.WebPermission> i <xref:System.Net.SocketPermission> klasy. **WebPermission** klasa steruje aplikacji prawo do dane żądania z identyfikatora URI lub do obsługi identyfikatora URI z Internetem. **SocketPermission** klasy formantów aplikacji przez prawo, aby użyć <xref:System.Net.Sockets.Socket> akceptować dane na port lokalny lub skontaktuj się z urządzeń zdalnych przy użyciu protokołu transportu na inny adres, oparta na hoście, a numer portu i protokół Transport gniazda.  

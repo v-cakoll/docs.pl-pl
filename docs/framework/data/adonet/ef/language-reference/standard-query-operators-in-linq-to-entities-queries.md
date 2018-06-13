@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766403"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>Standardowe operatory zapytań w składniku LINQ to Entities zapytań
 W zapytaniu możesz określić informacje, które mają zostać pobrane ze źródła danych. Zapytania można również określić, jak te informacje sortowania, grupowane i w kształcie przed zwróceniem jest. LINQ udostępnia zestaw metod standardowych zapytania, które można użyć w zapytaniu. Większość tych metod działać na sekwencji; w tym kontekście sekwencji jest obiektem, którego typ implementuje <xref:System.Collections.Generic.IEnumerable%601> interfejsu lub <xref:System.Linq.IQueryable%601> interfejsu. Funkcja zapytania operatorów standardowej kwerendy obejmuje filtrowania, projekcji agregacji, sortowanie, grupowanie, stronicowania i więcej. Standardowe operatory są wyposażone w dedykowane składni słowa kluczowego, dzięki czemu można wywołać przy użyciu składni wyrażeń zapytania zapytań niektórych często używane. Wyrażenia zapytania jest inny, bardziej czytelny sposobem express zapytania niż równoważne oparte na metodzie. Klauzule wyrażenia zapytania są przekształcane na wywołania metody zapytań w czasie kompilacji. Listę standardowych operatorów zapytań zawierających klauzule wyrażenia zapytania równoważne zawiera [standardowe operatory zapytań — omówienie](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  

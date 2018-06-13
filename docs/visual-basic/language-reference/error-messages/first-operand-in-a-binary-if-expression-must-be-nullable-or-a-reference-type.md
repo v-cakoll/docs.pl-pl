@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590832"
 ---
 # <a name="first-operand-in-a-binary-39if39-expression-must-be-nullable-or-a-reference-type"></a>Typem pierwszego operandu w binarnym &#39;Jeśli&#39; wyrażenie musi być typ zerowalny lub typ odwołania
 `If` Wyrażenie może zająć dwie lub trzy argumenty. Po wysłaniu tylko dwa argumenty pierwszy argument musi być parametrem typu odwołanie lub typ dopuszczający wartość null. Jeśli pierwszy argument daje w wyniku cokolwiek innego niż `Nothing`, zwracana jest jego wartość. Jeśli pierwszy argument ma wartość `Nothing`, drugi argument jest obliczany i zwracany.  

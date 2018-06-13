@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592122"
 ---
 # <a name="string-data-type-visual-basic"></a>String — Typ danych (Visual Basic)
 Przechowuje sekwencji punktów niepodpisanego kodu (2-bajtowych) 16-bitowych tego zakresu, w wartość z zakresu od 0 do 65535. Każdy *punktem kodu*, lub kod znaku reprezentuje pojedynczy znak Unicode. Ciąg może zawierać od 0 do około miliarda dwóch (2 ^ 31) znaków Unicode.  

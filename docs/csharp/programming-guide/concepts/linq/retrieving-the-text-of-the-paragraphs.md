@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327161"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a>Pobieranie tekstu akapitów (C#)
 W tym przykładzie opiera się na poprzednim przykładzie [pobierania akapitów i ich style (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md). W tym przykładzie nowe pobiera tekst każdego akapitu jako ciąg.  

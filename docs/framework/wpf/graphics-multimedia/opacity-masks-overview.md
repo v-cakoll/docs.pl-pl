@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566236"
 ---
 # <a name="opacity-masks-overview"></a>Przegląd Masek krycia
 Nieprzezroczystość maski umożliwiają upewnij części elementu lub visual przezroczystego lub częściowo przezroczysty. Aby utworzyć maskę przezroczystości, należy zastosować <xref:System.Windows.Media.Brush> do <xref:System.Windows.UIElement.OpacityMask%2A> właściwości elementu lub <xref:System.Windows.Media.Visual>.  Pędzel jest mapowana do elementu lub visual, a wartość nieprzezroczystości każdego piksela pędzla służy do określania wynikowy nieprzezroczystość każdego piksela odpowiedniego elementu lub visual.  

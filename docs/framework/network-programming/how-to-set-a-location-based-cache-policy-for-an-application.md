@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395235"
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>Porady: Ustawianie zasad na podstawie lokalizacji pamięci podręcznej dla aplikacji
 Zasady oparte na lokalizacji pamięci podręcznej zezwolić aplikacji na jawnie zdefiniuj zachowanie buforowania w oparciu o lokalizację żądanego zasobu. W tym temacie przedstawiono programowo ustawienie zasady pamięci podręcznej. Aby uzyskać informacje na temat ustawiania zasad dla aplikacji za pomocą plików konfiguracji, zobacz [ \<requestCaching — > elementu (ustawienia sieciowe)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  

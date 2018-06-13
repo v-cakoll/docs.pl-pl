@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758164"
 ---
 # <a name="connection-events"></a>Zdarzenia połączeń
 Wszystkich dostawców danych .NET Framework jest **połączenia** obiekty o dwa zdarzenia, których można pobrać komunikaty informacyjne ze źródła danych lub można określić, czy stan **połączenia** ma zmienić. W poniższej tabeli opisano zdarzenia **połączenia** obiektu.  

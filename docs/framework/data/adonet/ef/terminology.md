@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766530"
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework terminologia
 W tym temacie opisano często określany w warunkach [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dokumentacji. Zostały podane linki do powiązanych tematów, w którym dostępne są dodatkowe informacje.  

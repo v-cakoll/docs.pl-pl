@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329225"
 ---
 # <a name="performance-linq-to-xml-c"></a>Wydajność (LINQ do XML) (C#)
 Ta sekcja zawiera informacje o wydajności w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], w szczególności wydajności konstrukcji funkcjonalności i zapytań.  

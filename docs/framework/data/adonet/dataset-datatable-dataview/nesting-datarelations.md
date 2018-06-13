@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761899"
 ---
 # <a name="nesting-datarelations"></a>DataRelations zagnieżdżenia
 Poszczególnych tabel relacyjnych reprezentację danych, zawierać wierszy, które są powiązane ze sobą przy użyciu kolumny lub zestaw kolumn. W ADO.NET <xref:System.Data.DataSet>, relacji między tabelami jest implementowane za pomocą <xref:System.Data.DataRelation>. Po utworzeniu **DataRelation**, relacje nadrzędny podrzędny kolumn są zarządzane za pośrednictwem tylko relacja. Tabele i kolumny są osobne jednostki. W hierarchiczną reprezentację danych XML zawiera relacje nadrzędny podrzędny są reprezentowane przez elementy nadrzędne, zawierające elementy zagnieżdżonych elementów podrzędnych.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763673"
 ---
 # <a name="merging-dataset-contents"></a>Scalanie zawartości zestawu danych
 Można użyć <xref:System.Data.DataSet.Merge%2A> sposób scalania zawartość <xref:System.Data.DataSet>, <xref:System.Data.DataTable>, lub <xref:System.Data.DataRow> tablicy do istniejącej `DataSet`. Kilka czynników, jak i opcje mają wpływ na sposób nowe dane są scalane istniejące `DataSet`.  

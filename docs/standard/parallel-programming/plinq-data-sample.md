@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590897"
 ---
 # <a name="plinq-data-sample"></a>Próbka danych PLINQ
 Ten przykład zawiera przykładowe dane w formacie CSV, wraz z metod, które przekształcenia go w kolekcji w pamięci klientów, produktów, zleceń i szczegółów zamówienia. Do dalszych eksperymentów z PLINQ, przykłady kodu z niektórych innych tematów należy wkleić kod w tym temacie i wywołać go z `Main` metody. Umożliwia także te dane z zapytania PLINQ.  

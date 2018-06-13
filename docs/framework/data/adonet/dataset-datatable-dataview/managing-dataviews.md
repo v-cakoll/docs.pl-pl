@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757908"
 ---
 # <a name="managing-dataviews"></a>Zarządzanie DataViews
 Można użyć <xref:System.Data.DataViewManager> umożliwia zarządzanie ustawieniami widoku wszystkie tabele w <xref:System.Data.DataView>. Jeśli masz formant, który chcesz powiązać z wieloma tabelami, takie jak siatka która nawiguje relacje, **DataViewManager** jest idealnym rozwiązaniem.  

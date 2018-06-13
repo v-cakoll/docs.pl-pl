@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761509"
 ---
 # <a name="comparison-expressions"></a>Porównywanie wyrażeń
 Wyrażenie porównania sprawdza, czy stałej wartości, wartość właściwości lub metody powodują takie same, nie jest taki sam, większy niż lub mniejsza niż wartość inna. Jeśli konkretnej porównania jest nieprawidłowa dla [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], zostanie wygenerowany wyjątek. Wszystkie porównań, zarówno niejawnych i jawnych, wymagają, czy wszystkie składniki są porównywalne w źródle danych. Porównanie wyrażenia są często używane w `Where` klauzule ograniczające wyniki zapytania.  

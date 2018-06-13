@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396821"
 ---
 # <a name="deriving-from-webrequest"></a>Wyprowadzanie z WebRequest
 <xref:System.Net.WebRequest> Klasa jest abstrakcyjna klasa podstawowa, która udostępnia podstawowe metody i właściwości dla tworzenia protokołem żądania obsługi, który pasuje do modelu protokołu podłączanej .NET Framework. Aplikacje używające **WebRequest** klasy można zażądać danych, aby określić protokół używany przy użyciu obsługiwanych protokołów bez konieczności.  

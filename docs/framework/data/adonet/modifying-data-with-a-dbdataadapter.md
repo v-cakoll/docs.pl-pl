@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765844"
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>Modyfikowanie danych za pomocą obiekt DbDataAdapter
 <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> Metody <xref:System.Data.Common.DbProviderFactory> obiektu umożliwia <xref:System.Data.Common.DbDataAdapter> obiekt, który jest silnie typizowaną do podstawowego dostawcy danych określony w momencie utworzyć fabryki. Następnie można użyć <xref:System.Data.Common.DbCommandBuilder> do tworzenia poleceń do wstawiania, aktualizowania i usuwania danych z <xref:System.Data.DataSet> ze źródłem danych.  

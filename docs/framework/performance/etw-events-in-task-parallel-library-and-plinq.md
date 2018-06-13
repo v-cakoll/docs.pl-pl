@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397692"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>Zdarzenia ETW w bibliotece równoległych zadań i PLINQ
 Zarówno bibliotece równoległych zadań i PLINQ generowanie zdarzeń śledzenia zdarzeń systemu Windows (ETW) zdarzenia, które służy do profilu i rozwiązywania problemów z aplikacjami za pomocą narzędzi, takich jak Analizator wydajności systemu Windows. Jednak w większości przypadków najlepszym sposobem na kod aplikacji równoległych profilem jest użycie [Concurrency Visualizer](/visualstudio/profiling/concurrency-visualizer) w [!INCLUDE[vsUltShort](../../../includes/vsultshort-md.md)].  

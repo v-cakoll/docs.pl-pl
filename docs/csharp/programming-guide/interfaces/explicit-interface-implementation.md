@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331594"
 ---
 # <a name="explicit-interface-implementation-c-programming-guide"></a>Implementacja interfejsu jawnego (Przewodnik programowania w języku C#)
 Jeśli [klasy](../../../csharp/language-reference/keywords/class.md) implementuje dwa interfejsy zawierające element członkowski o tej samej sygnaturze, a następnie wykonania ten element członkowski klasy spowoduje, że oba interfejsy do użycia tego elementu członkowskiego jako ich wdrażania. W poniższym przykładzie wszystkie wywołania do `Paint` wywołanie tej samej metody.  

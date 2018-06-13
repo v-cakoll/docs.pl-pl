@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761912"
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>Zapisywanie zawartości zestawu danych jako dane XML
 W ADO.NET można zapisywać reprezentację XML <xref:System.Data.DataSet>, z lub bez jego schematu. Informacje o schemacie są uwzględniane wbudowany z pliku XML, jest ona zapisywana, przy użyciu języka definicji schematu XML (XSD). Schemat zawiera definicje tabel <xref:System.Data.DataSet> oraz definicje relacja i ograniczenie.  

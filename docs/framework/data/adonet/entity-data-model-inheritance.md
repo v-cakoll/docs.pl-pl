@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765272"
 ---
 # <a name="entity-data-model-inheritance"></a>Modelu danych jednostki: dziedziczenie
 Modelu danych jednostki (EDM) obsługuje dziedziczenia dla [typów jednostek](../../../../docs/framework/data/adonet/entity-type.md). Dziedziczenie w modelu EDM jest podobny do dziedziczenia klas w zorientowane obiektowo języków programowania. Tak jak w przypadku klas w językach zorientowane obiektowo w modelu koncepcyjnym można zdefiniować typu jednostki ( *typu pochodnego*) dziedziczący z innego typu jednostki ( *typ podstawowy*). Jednak w przeciwieństwie do klas w programowanie zorientowane obiektowo, w modelu koncepcyjnym Typ pochodny zawsze dziedziczy wszystkie [właściwości](../../../../docs/framework/data/adonet/property.md) i [właściwości nawigacji](../../../../docs/framework/data/adonet/navigation-property.md) typu podstawowego. Nie można przesłonić dziedziczonego właściwości w typie pochodnym.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748896"
 ---
 # <a name="lthttpdigestgt-element"></a>&lt;httpDigest&gt;, element
 Określa szyfrowany typ poświadczenia używany podczas uwierzytelniania klienta do usługi.  

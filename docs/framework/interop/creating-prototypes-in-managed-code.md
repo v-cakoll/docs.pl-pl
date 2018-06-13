@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398212"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Tworzenie prototypów w kodzie zarządzanym
 Ten temat zawiera opis sposobu dostępu z funkcjami niezarządzanymi i wprowadzono kilka pól atrybutów, które adnotacji definicji metody w kodzie zarządzanym. Aby uzyskać przykłady pokazujące, które pokazują, jak utworzyć. Deklaracje opartych na potrzeby używania z platformy invoke, zobacz [organizowanie danych za pomocą wywołania platformy](marshaling-data-with-platform-invoke.md).  

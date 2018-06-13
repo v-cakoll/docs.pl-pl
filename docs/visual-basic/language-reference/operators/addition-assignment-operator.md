@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604019"
 ---
 # <a name="-operator-visual-basic"></a>+= — Operator (Visual Basic)
 Dodaje wartość wyrażenia liczbowego wartość liczbowa zmiennej lub właściwości i przypisuje wynik do zmiennej lub właściwości. Może również służyć do łączenia `String` wyrażenie `String` zmienna lub właściwość i przypisz wynik do zmiennej lub właściwości.  

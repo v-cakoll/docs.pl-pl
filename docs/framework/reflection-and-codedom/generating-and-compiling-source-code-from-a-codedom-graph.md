@@ -33,6 +33,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397016"
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>Generowanie i kompilowanie kodu źródłowego z wykresu CodeDOM
 <xref:System.CodeDom.Compiler> Przestrzeń nazw zawiera interfejsy do generowania kodu źródłowego z wykresów CodeDOM obiektu i zarządzania kompilacji z kompilatorów obsługiwane. Dostawca kodu może wygenerować kodu źródłowego w określonym języku programowania zgodnie z wykresu CodeDOM. Klasa, która pochodzi z <xref:System.CodeDom.Compiler.CodeDomProvider> zwykle zapewnia metody dla Generowanie i kompilowanie kodu dla języka dostawca obsługuje.  

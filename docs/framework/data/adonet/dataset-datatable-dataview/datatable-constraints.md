@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759741"
 ---
 # <a name="datatable-constraints"></a>Ograniczenia elementu DataTable
 Ograniczenia umożliwiają wymuszenie zastosowania ograniczenia dotyczące danych w <xref:System.Data.DataTable>, aby zapewnić integralność danych. Ograniczenie jest automatyczne reguły, kolumny lub powiązane kolumny określa sposób postępowania przypadku jakiś sposób zmiany wartości wiersza. Wymuszone są ograniczenia podczas `System.Data.DataSet.EnforceConstraints` właściwość <xref:System.Data.DataSet> jest **true**. Na przykład kodu, który pokazuje, jak ustawić `EnforceConstraints` właściwości, zobacz <xref:System.Data.DataSet.EnforceConstraints%2A> temat referencyjny.  

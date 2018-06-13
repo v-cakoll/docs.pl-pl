@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324164"
 ---
 # <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Porady: znajdowanie węzłami tego samego poziomu (XPath-LINQ do XML) (C#)
 Można znaleźć wszystkich elementów równorzędnych węzła, które ma określoną nazwę. Wynikowa kolekcji może zawierać węzeł kontekstu, jeśli węzeł kontekstu ma również określonej nazwy.  

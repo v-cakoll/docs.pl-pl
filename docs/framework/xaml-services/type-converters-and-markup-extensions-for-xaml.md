@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565866"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>Typy konwerterów i rozszerzenia znaczników dla XAML
 Typy konwerterów i rozszerzeń znaczników są dwie metody, które systemów typu XAML i zapisywania XAML służy do generowania elementów wykresu obiektu. Mimo że mają pewne cechy typy konwerterów i rozszerzeń znaczników znajdują się inaczej w strumień węzłów XAML. W tej dokumentacji zestawu, konwertery typu rozszerzenia znaczników i podobne konstrukcje są czasami zbiorczo nazywane konwertery wartości.  

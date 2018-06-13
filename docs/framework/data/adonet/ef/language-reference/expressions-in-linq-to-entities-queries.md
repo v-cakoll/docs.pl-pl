@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760768"
 ---
 # <a name="expressions-in-linq-to-entities-queries"></a>Wyrażenia w składniku LINQ to Entities zapytań
 Wyrażenie jest fragment kodu, które może przyjąć pojedynczą wartość, obiekt, metodę lub przestrzeń nazw. Wyrażenia może zawierać wartość literału, wywołanie metody, operator i argumentów lub prostą nazwą. Proste nazwy mogą być nazwę zmiennej, członka typu, parametru metody, przestrzeni nazw lub typu. Wyrażenia można używać operatorów, które z kolei inne wyrażenia używane jako parametry lub wywołania metody, której parametry są z kolei inne wywołania metody. W związku z tym wyrażenia mogą należeć do zakresu od prostego do bardzo złożonych.  

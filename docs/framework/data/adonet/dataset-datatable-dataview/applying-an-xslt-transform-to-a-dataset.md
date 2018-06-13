@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756556"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>Stosowanie przekształcenia XSLT do zestawu danych
 **WriteXml** metody <xref:System.Data.DataSet> umożliwia zapisanie zawartości **zestawu danych** danych XML. Typowe zadania jest Przekształć tego XML do innego formatu używanie transformacji XSL (XSLT). Jednak synchronizacja **DataSet** z <xref:System.Xml.XmlDataDocument> umożliwia zastosowanie arkusz stylów XSLT do zawartości **zestawu danych** bez konieczności najpierw zapisać zawartość  **Zestaw danych** jako danych XML przy użyciu **WriteXml**.  

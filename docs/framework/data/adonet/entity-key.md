@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764999"
 ---
 # <a name="entity-key"></a>klucz jednostki
 *Klucz jednostki* jest [właściwości](../../../../docs/framework/data/adonet/property.md) lub zbiór właściwości [typu jednostki](../../../../docs/framework/data/adonet/entity-type.md) które są używane do określania tożsamości. Właściwości, które tworzą klucz jednostki są wybierane w czasie projektowania. Wartości właściwości klucza obiektu musi jednoznacznie identyfikować wystąpienia typu jednostki, w ramach [zestaw jednostek](../../../../docs/framework/data/adonet/entity-set.md) w czasie wykonywania. Właściwości, które tworzą klucz jednostki powinna być wybrana w celu zagwarantowania unikatowości wystąpień w zestawie jednostek.  

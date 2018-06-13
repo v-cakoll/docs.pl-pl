@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437446"
 ---
 # <a name="icorthreadpool-interface"></a><span data-ttu-id="c668d-102">ICorThreadpool — Interfejs</span><span class="sxs-lookup"><span data-stu-id="c668d-102">ICorThreadpool Interface</span></span>
 <span data-ttu-id="c668d-103">Udostępnia metody, aby uzyskać dostęp do puli wątków.</span><span class="sxs-lookup"><span data-stu-id="c668d-103">Provides methods for accessing the thread pool.</span></span>  

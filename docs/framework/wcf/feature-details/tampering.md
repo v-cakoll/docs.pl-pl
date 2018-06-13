@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498634"
 ---
 # <a name="tampering"></a><span data-ttu-id="dbd95-102">Manipulowanie</span><span class="sxs-lookup"><span data-stu-id="dbd95-102">Tampering</span></span>
 <span data-ttu-id="dbd95-103">*Manipulowanie* jest czynnością, zmienianie lub dostarczenia komunikatów wiadomości i za pomocą zmieniony komunikatu do celów innych niż to, co zostało przeznaczone.</span><span class="sxs-lookup"><span data-stu-id="dbd95-103">*Tampering* is the act of altering a message, or the delivery of a message, and using the altered message for a purpose other than what it was intended for.</span></span>  

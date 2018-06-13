@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395164"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a><span data-ttu-id="47c82-102">Wykonywanie równoczesne w programie .NET Framework</span><span class="sxs-lookup"><span data-stu-id="47c82-102">Side-by-Side Execution in the .NET Framework</span></span>
 <span data-ttu-id="47c82-103">Wykonywanie równoczesne stwarza możliwość uruchamiania wielu wersji aplikacji lub składnika na jednym komputerze.</span><span class="sxs-lookup"><span data-stu-id="47c82-103">Side-by-side execution is the ability to run multiple versions of an application or component on the same computer.</span></span> <span data-ttu-id="47c82-104">Można mieć wiele wersji środowiska uruchomieniowego języka wspólnego i wiele wersji aplikacji oraz składników, które używają wersji środowiska uruchomieniowego na jednym komputerze w tym samym czasie.</span><span class="sxs-lookup"><span data-stu-id="47c82-104">You can have multiple versions of the common language runtime, and multiple versions of applications and components that use a version of the runtime, on the same computer at the same time.</span></span>  

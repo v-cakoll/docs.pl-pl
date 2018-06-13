@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336589"
 ---
 # <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a><span data-ttu-id="570fe-102">Porady: określanie, czy ciąg reprezentuje wartość numeryczną (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="570fe-102">How to: Determine Whether a String Represents a Numeric Value (C# Programming Guide)</span></span>
 <span data-ttu-id="570fe-103">Aby określić, czy ciąg jest prawidłowy reprezentację określonego typu liczbowego, użyj statycznych `TryParse` metodę, która jest zaimplementowana przez wszystkie pierwotne typy liczbowe, a także typy takich jak <xref:System.DateTime> i <xref:System.Net.IPAddress>.</span><span class="sxs-lookup"><span data-stu-id="570fe-103">To determine whether a string is a valid representation of a specified numeric type, use the static `TryParse` method that is implemented by all primitive numeric types and also by types such as <xref:System.DateTime> and <xref:System.Net.IPAddress>.</span></span> <span data-ttu-id="570fe-104">Poniższy przykład przedstawia sposób określania, czy jest prawidłową "108" warunki [int](../../../csharp/language-reference/keywords/int.md).</span><span class="sxs-lookup"><span data-stu-id="570fe-104">The following example shows how to determine whether "108" is a valid [int](../../../csharp/language-reference/keywords/int.md).</span></span>  

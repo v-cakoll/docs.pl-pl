@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265223"
 ---
 # <a name="jump-statements-c-reference"></a><span data-ttu-id="333cb-102">Instrukcje skoku (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="333cb-102">Jump Statements (C# Reference)</span></span>
 <span data-ttu-id="333cb-103">Rozgałęzianie odbywa się przy użyciu instrukcje skoku, które powodują natychmiastowego przekazanie sterowania programu.</span><span class="sxs-lookup"><span data-stu-id="333cb-103">Branching is performed using jump statements, which cause an immediate transfer of the program control.</span></span> <span data-ttu-id="333cb-104">Poniższe słowa kluczowe są używane w instrukcjach przeskoku:</span><span class="sxs-lookup"><span data-stu-id="333cb-104">The following keywords are used in jump statements:</span></span>  

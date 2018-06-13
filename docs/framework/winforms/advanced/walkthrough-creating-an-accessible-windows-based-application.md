@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529626"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a><span data-ttu-id="057b5-102">Wskazówki: tworzenie dostępnej aplikacji bazującej na systemie Windows</span><span class="sxs-lookup"><span data-stu-id="057b5-102">Walkthrough: Creating an Accessible Windows-based Application</span></span>
 <span data-ttu-id="057b5-103">Tworzenie aplikacji dostępny implikacje ważnymi.</span><span class="sxs-lookup"><span data-stu-id="057b5-103">Creating an accessible application has important business implications.</span></span> <span data-ttu-id="057b5-104">Wiele rządy ma przepisy dotyczące ułatwień dostępu dla zakupów oprogramowania.</span><span class="sxs-lookup"><span data-stu-id="057b5-104">Many governments have accessibility regulations for software purchase.</span></span> <span data-ttu-id="057b5-105">Logo Certified for Windows zawiera wymagania dotyczące ułatwień dostępu.</span><span class="sxs-lookup"><span data-stu-id="057b5-105">The Certified for Windows logo includes accessibility requirements.</span></span> <span data-ttu-id="057b5-106">Szacowany mieszkańców 30 milionów intruzowi US, ile z nich potencjalnych klientów, mają wpływu na dostępność oprogramowania.</span><span class="sxs-lookup"><span data-stu-id="057b5-106">An estimated 30 million residents of the U.S. alone, many of them potential customers, are affected by the accessibility of software.</span></span>  

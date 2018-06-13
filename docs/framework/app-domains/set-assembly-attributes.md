@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752204"
 ---
 # <a name="setting-assembly-attributes"></a><span data-ttu-id="1e7b3-102">Ustawienie atrybutów zestawu</span><span class="sxs-lookup"><span data-stu-id="1e7b3-102">Setting Assembly Attributes</span></span>
 <span data-ttu-id="1e7b3-103">Atrybuty zestawu wartości, które zawierają informacje o zestawie.</span><span class="sxs-lookup"><span data-stu-id="1e7b3-103">Assembly attributes are values that provide information about an assembly.</span></span> <span data-ttu-id="1e7b3-104">Atrybuty są podzielone na następujące zestawy informacji:</span><span class="sxs-lookup"><span data-stu-id="1e7b3-104">The attributes are divided into the following sets of information:</span></span>  

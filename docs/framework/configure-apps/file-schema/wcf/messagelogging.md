@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750690"
 ---
 # <a name="ltmessagelogginggt"></a><span data-ttu-id="76be8-102">&lt;messageLogging&gt;</span><span class="sxs-lookup"><span data-stu-id="76be8-102">&lt;messageLogging&gt;</span></span>
 <span data-ttu-id="76be8-103">Ten element definiuje ustawienia dla możliwości rejestrowania komunikatów Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="76be8-103">This element defines the settings for the message-logging capabilities of Windows Communication Foundation (WCF).</span></span>  

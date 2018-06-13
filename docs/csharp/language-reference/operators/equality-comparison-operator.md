@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273390"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="cf02f-102">Operator == (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="cf02f-102">== Operator (C# Reference)</span></span>
 <span data-ttu-id="cf02f-103">Dla wstępnie zdefiniowanych typów wartości, operator równości (`==`) zwraca wartość true, jeśli wartości argumentów są takie same, `false` inaczej.</span><span class="sxs-lookup"><span data-stu-id="cf02f-103">For predefined value types, the equality operator (`==`) returns true if the values of its operands are equal, `false` otherwise.</span></span> <span data-ttu-id="cf02f-104">Dla odwołania do typów innych niż [ciąg](../../../csharp/language-reference/keywords/string.md), `==` zwraca `true` Jeśli swoich argumentów, dwóch odwołują się do tego samego obiektu.</span><span class="sxs-lookup"><span data-stu-id="cf02f-104">For reference types other than [string](../../../csharp/language-reference/keywords/string.md), `==` returns `true` if its two operands refer to the same object.</span></span> <span data-ttu-id="cf02f-105">Aby uzyskać `string` typu `==` porównuje wartości ciągów.</span><span class="sxs-lookup"><span data-stu-id="cf02f-105">For the `string` type, `==` compares the values of the strings.</span></span>  

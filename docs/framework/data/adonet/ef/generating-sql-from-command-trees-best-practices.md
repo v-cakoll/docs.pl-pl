@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760196"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a><span data-ttu-id="7a076-102">Generowanie SQL na podstawie drzew poleceń — najlepsze praktyki</span><span class="sxs-lookup"><span data-stu-id="7a076-102">Generating SQL from Command Trees - Best Practices</span></span>
 <span data-ttu-id="7a076-103">Drzew poleceń w danych wyjściowych zapytania modelu ściśle zapytania można wyrazić w języku SQL.</span><span class="sxs-lookup"><span data-stu-id="7a076-103">Output query command trees closely model queries expressible in SQL.</span></span> <span data-ttu-id="7a076-104">Istnieją pewne wyzwania autorzy dostawcy podczas generowania SQL z poziomu drzewa poleceń danych wyjściowych.</span><span class="sxs-lookup"><span data-stu-id="7a076-104">However, there are certain common challenges for provider writers when generating SQL from an output command tree.</span></span> <span data-ttu-id="7a076-105">W tym temacie omówiono te problemy.</span><span class="sxs-lookup"><span data-stu-id="7a076-105">This topic discusses these challenges.</span></span> <span data-ttu-id="7a076-106">W następnym temacie dostawcy przykładowych pokazano, jak rozwiązać te problemy.</span><span class="sxs-lookup"><span data-stu-id="7a076-106">In the next topic, the sample provider shows how to address these challenges.</span></span>  

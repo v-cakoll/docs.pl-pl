@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438483"
 ---
 # <a name="ihostassemblymanager-interface"></a><span data-ttu-id="7514e-102">IHostAssemblyManager — Interfejs</span><span class="sxs-lookup"><span data-stu-id="7514e-102">IHostAssemblyManager Interface</span></span>
 <span data-ttu-id="7514e-103">Udostępnia metody, które umożliwiają hosta określić zestawy zestawy, które powinny być załadowane przez środowisko uruchomieniowe języka wspólnego (CLR) lub przez hosta.</span><span class="sxs-lookup"><span data-stu-id="7514e-103">Provides methods that allow a host to specify sets of assemblies that should be loaded by the common language runtime (CLR) or by the host.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496328"
 ---
 # <a name="integrating-with-com-applications-overview"></a><span data-ttu-id="45a23-102">Przegląd integrowania z aplikacjami COM+</span><span class="sxs-lookup"><span data-stu-id="45a23-102">Integrating with COM+ Applications Overview</span></span>
 <span data-ttu-id="45a23-103">Windows Communication Foundation (WCF) udostępnia bogate środowisko tworzenia aplikacji rozproszonych.</span><span class="sxs-lookup"><span data-stu-id="45a23-103">Windows Communication Foundation (WCF) provides a rich environment for creating distributed applications.</span></span> <span data-ttu-id="45a23-104">Jeśli korzystasz już z logiki na podstawie składnika aplikacji hostowanej w modelu COM +, służy WCF do rozszerzenia istniejących logiki zamiast konieczności ponownego zapisania go.</span><span class="sxs-lookup"><span data-stu-id="45a23-104">If you are already using component-based application logic hosted in COM+, you can use WCF to extend your existing logic rather than having to rewrite it.</span></span> <span data-ttu-id="45a23-105">Typowy scenariusz obejmuje, gdy chcesz udostępnić istniejącego modelu COM + lub usług dla przedsiębiorstw logiki biznesowej za pośrednictwem usług sieci Web.</span><span class="sxs-lookup"><span data-stu-id="45a23-105">A common scenario is when you want to expose existing COM+ or Enterprise Services business logic through Web Services.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527664"
 ---
 # <a name="how-to-access-the-managed-html-document-object-model"></a><span data-ttu-id="bbeee-102">Porady: uzyskiwanie dostępu do modelu DOM (Document Object Model) zarządzanych dokumentów HTML</span><span class="sxs-lookup"><span data-stu-id="bbeee-102">How to: Access the Managed HTML Document Object Model</span></span>
 <span data-ttu-id="bbeee-103">Zarządzany HTML modelu DOM (Document Object) mogą korzystać z dwóch typów aplikacji:</span><span class="sxs-lookup"><span data-stu-id="bbeee-103">You can access the managed HTML Document Object Model (DOM) from two types of applications:</span></span>  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604279"
 ---
 # <a name="rem-statement-visual-basic"></a><span data-ttu-id="2c4ac-102">REM — Instrukcja (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2c4ac-102">REM Statement (Visual Basic)</span></span>
 <span data-ttu-id="2c4ac-103">Używana do włączenia uwagi wyjaśniające w kodzie źródłowym programu.</span><span class="sxs-lookup"><span data-stu-id="2c4ac-103">Used to include explanatory remarks in the source code of a program.</span></span>  

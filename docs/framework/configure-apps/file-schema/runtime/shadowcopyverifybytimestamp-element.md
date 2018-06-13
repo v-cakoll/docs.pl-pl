@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749728"
 ---
 # <a name="ltshadowcopyverifybytimestampgt-element"></a><span data-ttu-id="cf7b5-102">&lt;shadowCopyVerifyByTimestamp&gt; — Element</span><span class="sxs-lookup"><span data-stu-id="cf7b5-102">&lt;shadowCopyVerifyByTimestamp&gt; Element</span></span>
 <span data-ttu-id="cf7b5-103">Określa, czy kopiowanie w tle używa domyślne zachowanie uruchamiania wprowadzone w systemie [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], lub wraca do zachowania uruchamiania wcześniejszych wersji programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="cf7b5-103">Specifies whether shadow copying uses the default startup behavior introduced in the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], or reverts to the startup behavior of earlier versions of the .NET Framework.</span></span>  

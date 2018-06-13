@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655866"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a><span data-ttu-id="0b889-102">Obiekty i klasy w języku Visual Basic</span><span class="sxs-lookup"><span data-stu-id="0b889-102">Objects and classes in Visual Basic</span></span>
 <span data-ttu-id="0b889-103">*Obiektu* jest kombinacją kod i dane, które mogą być traktowane jako jednostka.</span><span class="sxs-lookup"><span data-stu-id="0b889-103">An *object* is a combination of code and data that can be treated as a unit.</span></span> <span data-ttu-id="0b889-104">Obiekt może być częścią aplikacji, takich jak formularz lub formant.</span><span class="sxs-lookup"><span data-stu-id="0b889-104">An object can be a piece of an application, like a control or a form.</span></span> <span data-ttu-id="0b889-105">Można także obiekt całej aplikacji.</span><span class="sxs-lookup"><span data-stu-id="0b889-105">An entire application can also be an object.</span></span>

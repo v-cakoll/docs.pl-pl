@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438922"
 ---
 # <a name="ihostcrst-interface"></a><span data-ttu-id="bb640-102">IHostCrst — Interfejs</span><span class="sxs-lookup"><span data-stu-id="bb640-102">IHostCrst Interface</span></span>
 <span data-ttu-id="bb640-103">Służy jako hosta reprezentację sekcja krytyczna dla wątków.</span><span class="sxs-lookup"><span data-stu-id="bb640-103">Serves as the host's representation of a critical section for threading.</span></span>  

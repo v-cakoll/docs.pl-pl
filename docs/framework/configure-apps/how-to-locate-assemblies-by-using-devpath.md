@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755464"
 ---
 # <a name="how-to-locate-assemblies-by-using-devpath"></a><span data-ttu-id="e172d-102">Porady: lokalizowanie zestawów za pomocą DEVPATH</span><span class="sxs-lookup"><span data-stu-id="e172d-102">How to: Locate Assemblies by Using DEVPATH</span></span>
 <span data-ttu-id="e172d-103">Deweloperzy mogą chcieć upewnij się, że współużytkowanego zespołu, które są one tworzenie działa poprawnie z wieloma aplikacjami.</span><span class="sxs-lookup"><span data-stu-id="e172d-103">Developers might want to make sure that a shared assembly they are building works correctly with multiple applications.</span></span> <span data-ttu-id="e172d-104">Zamiast stale umieszczanie zestawu w pamięci podręcznej GAC podczas cyklu programowania, deweloper może utworzyć zmienną środowiskową DEVPATH wskazujące budowy katalogu wyjściowego dla zestawu.</span><span class="sxs-lookup"><span data-stu-id="e172d-104">Instead of continually putting the assembly in the global assembly cache during the development cycle, the developer can create a DEVPATH environment variable that points to the build output directory for the assembly.</span></span>  

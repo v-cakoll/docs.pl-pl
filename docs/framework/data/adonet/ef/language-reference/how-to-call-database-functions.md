@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760651"
 ---
 # <a name="how-to-call-database-functions"></a><span data-ttu-id="a3c81-102">Porady: Wywołaj funkcje bazy danych</span><span class="sxs-lookup"><span data-stu-id="a3c81-102">How to: Call Database Functions</span></span>
 <span data-ttu-id="a3c81-103"><xref:System.Data.Objects.SqlClient.SqlFunctions> Klasa zawiera metody, które udostępniają funkcje programu SQL Server do użycia w składniku LINQ do jednostek zapytań.</span><span class="sxs-lookup"><span data-stu-id="a3c81-103">The <xref:System.Data.Objects.SqlClient.SqlFunctions> class contains methods that expose SQL Server functions to use in LINQ to Entities queries.</span></span> <span data-ttu-id="a3c81-104">Jeśli używasz <xref:System.Data.Objects.SqlClient.SqlFunctions> metody w technologii LINQ do jednostek zapytań, odpowiednie funkcje bazy danych są wykonywane w bazie danych.</span><span class="sxs-lookup"><span data-stu-id="a3c81-104">When you use <xref:System.Data.Objects.SqlClient.SqlFunctions> methods in LINQ to Entities queries, the corresponding database functions are executed in the database.</span></span>  

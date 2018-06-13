@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435741"
 ---
 # <a name="iclrtaskneedspriorityscheduling-method"></a><span data-ttu-id="585d0-102">ICLRTask::NeedsPriorityScheduling — Metoda</span><span class="sxs-lookup"><span data-stu-id="585d0-102">ICLRTask::NeedsPriorityScheduling Method</span></span>
 <span data-ttu-id="585d0-103">Pobiera wartość wskazującą, czy bieżące zadanie, które jest przełączany wychodzących, musi być oznaczony jako o wysokim priorytecie przed ponownym planowaniem.</span><span class="sxs-lookup"><span data-stu-id="585d0-103">Gets a value that indicates whether the current task, which is being switched out, needs to be marked as a high priority for rescheduling.</span></span>  

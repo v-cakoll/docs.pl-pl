@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758779"
 ---
 # <a name="oracle-lobs"></a><span data-ttu-id="fdc54-102">Oracle obiektów LOB</span><span class="sxs-lookup"><span data-stu-id="fdc54-102">Oracle LOBs</span></span>
 <span data-ttu-id="fdc54-103">.NET Framework Data Provider for Oracle obejmuje <xref:System.Data.OracleClient.OracleLob> klasy, która jest używana do pracy z bazą danych Oracle **LOB** typów danych.</span><span class="sxs-lookup"><span data-stu-id="fdc54-103">The .NET Framework Data Provider for Oracle includes the <xref:System.Data.OracleClient.OracleLob> class, which is used to work with Oracle **LOB** data types.</span></span>  

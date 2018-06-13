@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33289428"
 ---
 # <a name="yield-c-reference"></a><span data-ttu-id="f8be5-102">yield (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="f8be5-102">yield (C# Reference)</span></span>
 <span data-ttu-id="f8be5-103">Jeśli używasz `yield` — słowo kluczowe w instrukcji, możesz wskazują, że metoda, operator lub `get` dostępu, w których występuje jest iteratora.</span><span class="sxs-lookup"><span data-stu-id="f8be5-103">When you use the `yield` keyword in a statement, you indicate that the method, operator, or `get` accessor in which it appears is an iterator.</span></span> <span data-ttu-id="f8be5-104">Przy użyciu `yield` do definiowania iteratora eliminuje to potrzebę jawnego dodatkowe klasy (klasy, która przechowuje stan wyliczania, zobacz <xref:System.Collections.Generic.IEnumerator%601> przykład) podczas implementacji <xref:System.Collections.IEnumerable> i <xref:System.Collections.IEnumerator> wzorzec do kolekcji niestandardowej Typ.</span><span class="sxs-lookup"><span data-stu-id="f8be5-104">Using `yield` to define an iterator removes the need for an explicit extra class (the class that holds the state for an enumeration, see <xref:System.Collections.Generic.IEnumerator%601> for an example) when you implement the <xref:System.Collections.IEnumerable> and <xref:System.Collections.IEnumerator> pattern for a custom collection type.</span></span>  

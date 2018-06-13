@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435288"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentsurvived-method"></a><span data-ttu-id="2bd70-102">ICLRAppDomainResourceMonitor::GetCurrentSurvived — Metoda</span><span class="sxs-lookup"><span data-stu-id="2bd70-102">ICLRAppDomainResourceMonitor::GetCurrentSurvived Method</span></span>
 <span data-ttu-id="2bd70-103">Pobiera liczbę bajtów, który udało się przetrwać ostatniego pełnego, blokowanie odzyskiwania pamięci i który odwołuje się bieżącej domeny aplikacji.</span><span class="sxs-lookup"><span data-stu-id="2bd70-103">Gets the number of bytes that survived the last full, blocking garbage collection and that are referenced by the current application domain.</span></span>  

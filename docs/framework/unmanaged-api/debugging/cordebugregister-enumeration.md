@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409220"
 ---
 # <a name="cordebugregister-enumeration"></a><span data-ttu-id="7f092-102">CorDebugRegister — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="7f092-102">CorDebugRegister Enumeration</span></span>
 <span data-ttu-id="7f092-103">Określa, rejestruje skojarzony z danym procesor.</span><span class="sxs-lookup"><span data-stu-id="7f092-103">Specifies the registers associated with a given processor architecture.</span></span>  

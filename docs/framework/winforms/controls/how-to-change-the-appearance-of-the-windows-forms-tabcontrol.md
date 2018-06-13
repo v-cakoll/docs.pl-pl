@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531043"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a><span data-ttu-id="df528-102">Porady: zmienianie wyglądu składnika TabControl formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="df528-102">How to: Change the Appearance of the Windows Forms TabControl</span></span>
 <span data-ttu-id="df528-103">Można zmienić wygląd kart w formularzach systemu Windows za pomocą właściwości <xref:System.Windows.Forms.TabControl> i <xref:System.Windows.Forms.TabPage> obiektów, które składają się na poszczególnych kartach w formancie.</span><span class="sxs-lookup"><span data-stu-id="df528-103">You can change the appearance of tabs in Windows Forms by using properties of the <xref:System.Windows.Forms.TabControl> and the <xref:System.Windows.Forms.TabPage> objects that make up the individual tabs on the control.</span></span> <span data-ttu-id="df528-104">Przez ustawienie tych właściwości, można wyświetlanie obrazów na kartach, wyświetlić karty w pionie zamiast w poziomie, wyświetlane wiele wierszy kart i włączyć lub wyłączyć karty programowo.</span><span class="sxs-lookup"><span data-stu-id="df528-104">By setting these properties, you can display images on tabs, display tabs vertically instead of horizontally, display multiple rows of tabs, and enable or disable tabs programmatically.</span></span>  

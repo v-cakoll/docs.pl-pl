@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530484"
 ---
 # <a name="how-to-copy-toolstripmenuitems"></a><span data-ttu-id="8b50e-102">Porady: kopiowanie ToolStripMenuItems</span><span class="sxs-lookup"><span data-stu-id="8b50e-102">How to: Copy ToolStripMenuItems</span></span>
 <span data-ttu-id="8b50e-103">W czasie projektowania, możesz skopiować cały menu najwyższego poziomu i ich elementy podmenu w inne miejsce na <xref:System.Windows.Forms.MenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="8b50e-103">At design time, you can copy entire top-level menus and their submenu items to a different place on the <xref:System.Windows.Forms.MenuStrip>.</span></span> <span data-ttu-id="8b50e-104">Można również skopiować poszczególnych elementów menu między menu najwyższego poziomu lub zmienić jego położenie elementów menu w menu.</span><span class="sxs-lookup"><span data-stu-id="8b50e-104">You can also copy individual menu items between top-level menus or change the position of menu items within a menu.</span></span>  

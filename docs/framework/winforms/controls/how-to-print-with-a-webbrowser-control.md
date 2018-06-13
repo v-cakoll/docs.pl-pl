@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532853"
 ---
 # <a name="how-to-print-with-a-webbrowser-control"></a><span data-ttu-id="c1ea9-102">Porady: drukowanie za pomocą formantu WebBrowser</span><span class="sxs-lookup"><span data-stu-id="c1ea9-102">How to: Print with a WebBrowser Control</span></span>
 <span data-ttu-id="c1ea9-103">Poniższy przykład kodu pokazuje sposób użycia <xref:System.Windows.Forms.WebBrowser> formantu, aby wydrukować stronę sieci Web bez ich wyświetlania.</span><span class="sxs-lookup"><span data-stu-id="c1ea9-103">The following code example demonstrates how use the <xref:System.Windows.Forms.WebBrowser> control to print a Web page without displaying it.</span></span>  

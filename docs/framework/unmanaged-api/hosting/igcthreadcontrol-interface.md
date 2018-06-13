@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438031"
 ---
 # <a name="igcthreadcontrol-interface"></a><span data-ttu-id="2cd21-102">IGCThreadControl — Interfejs</span><span class="sxs-lookup"><span data-stu-id="2cd21-102">IGCThreadControl Interface</span></span>
 <span data-ttu-id="2cd21-103">Udostępnia metody do uczestnictwa w planowaniu wątków, które można zablokować dla wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="2cd21-103">Provides methods for participating in the scheduling of threads that would otherwise be blocked for a garbage collection.</span></span>  

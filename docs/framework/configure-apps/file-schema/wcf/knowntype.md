@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753329"
 ---
 # <a name="ltknowntypegt"></a><span data-ttu-id="baa80-102">&lt;Typ knownType&gt;</span><span class="sxs-lookup"><span data-stu-id="baa80-102">&lt;knownType&gt;</span></span>
 <span data-ttu-id="baa80-103">Określa typ, który będzie używany przez <xref:System.Runtime.Serialization.DataContractSerializer> podczas deserializacji.</span><span class="sxs-lookup"><span data-stu-id="baa80-103">Specifies a type to be used by <xref:System.Runtime.Serialization.DataContractSerializer> during deserialization.</span></span> <span data-ttu-id="baa80-104">Element "znanego typu" Określa, który jest zwracany przez pole lub właściwość "zadeklarowanym typem".</span><span class="sxs-lookup"><span data-stu-id="baa80-104">The element specifies a "known type" that is returned by a field or property of a "declared type."</span></span> <span data-ttu-id="baa80-105">Aby uzyskać więcej informacji, zobacz [znane typy kontraktu danych](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).</span><span class="sxs-lookup"><span data-stu-id="baa80-105">For more information, see [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).</span></span>  

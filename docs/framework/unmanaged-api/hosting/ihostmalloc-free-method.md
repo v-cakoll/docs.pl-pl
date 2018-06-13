@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439000"
 ---
 # <a name="ihostmallocfree-method"></a><span data-ttu-id="2dd8f-102">IHostMAlloc::Free — Metoda</span><span class="sxs-lookup"><span data-stu-id="2dd8f-102">IHostMAlloc::Free Method</span></span>
 <span data-ttu-id="2dd8f-103">Zwalnia pamięć, która została przydzielona przy użyciu [alokacji](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-alloc-method.md) funkcji.</span><span class="sxs-lookup"><span data-stu-id="2dd8f-103">Frees memory that was allocated by using the [Alloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-alloc-method.md) function.</span></span>  

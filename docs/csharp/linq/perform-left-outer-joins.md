@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33284280"
 ---
 # <a name="perform-left-outer-joins"></a><span data-ttu-id="9121d-103">Wykonanie lewych sprzężeń zewnętrznych</span><span class="sxs-lookup"><span data-stu-id="9121d-103">Perform left outer joins</span></span>
 <span data-ttu-id="9121d-104">Lewe sprzężenie zewnętrzne jest sprzężenia, w której każdy element pierwsza kolekcja jest zwracany, niezależnie od tego, czy ma żadnych elementów skorelowane w druga kolekcja.</span><span class="sxs-lookup"><span data-stu-id="9121d-104">A left outer join is a join in which each element of the first collection is returned, regardless of whether it has any correlated elements in the second collection.</span></span> <span data-ttu-id="9121d-105">LINQ umożliwia wykonywanie lewe sprzężenie zewnętrzne, wywołując <xref:System.Linq.Enumerable.DefaultIfEmpty%2A> metody w wynikach sprzężenia grupy.</span><span class="sxs-lookup"><span data-stu-id="9121d-105">You can use LINQ to perform a left outer join by calling the <xref:System.Linq.Enumerable.DefaultIfEmpty%2A> method on the results of a group join.</span></span>  

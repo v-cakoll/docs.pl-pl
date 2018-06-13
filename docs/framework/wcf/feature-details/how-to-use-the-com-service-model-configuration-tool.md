@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496243"
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a><span data-ttu-id="784d1-102">Instrukcje: Używanie narzędzia konfiguracji modelu usług COM+</span><span class="sxs-lookup"><span data-stu-id="784d1-102">How to: Use the COM+ Service Model Configuration Tool</span></span>
 <span data-ttu-id="784d1-103">Po wybraniu odpowiednich trybu hostingu umożliwia skonfigurowanie interfejsów aplikacji, które mają być widoczne jako usługi sieci Web narzędzie wiersza polecenia konfiguracji modelu usług COM + (ComSvcConfig.exe).</span><span class="sxs-lookup"><span data-stu-id="784d1-103">Once you have selected an appropriate hosting mode, use the COM+ Service Model Configuration command-line tool (ComSvcConfig.exe) to configure the application interfaces that will be exposed as Web services.</span></span>  

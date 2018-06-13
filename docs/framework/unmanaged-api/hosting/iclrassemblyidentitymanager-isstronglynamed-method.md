@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434470"
 ---
 # <a name="iclrassemblyidentitymanagerisstronglynamed-method"></a><span data-ttu-id="757a1-102">ICLRAssemblyIdentityManager::IsStronglyNamed — Metoda</span><span class="sxs-lookup"><span data-stu-id="757a1-102">ICLRAssemblyIdentityManager::IsStronglyNamed Method</span></span>
 <span data-ttu-id="757a1-103">Pobiera wartość wskazującą, czy określony zestaw ma silnej nazwy.</span><span class="sxs-lookup"><span data-stu-id="757a1-103">Gets a value that indicates whether the specified assembly is strongly named.</span></span>  

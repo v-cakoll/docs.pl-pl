@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397276"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a><span data-ttu-id="26d31-102">Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)</span><span class="sxs-lookup"><span data-stu-id="26d31-102">Runtime Directives (rd.xml) Configuration File Reference</span></span>
 <span data-ttu-id="26d31-103">Dyrektyw środowiska uruchomieniowego (. rd.xml) pliku jest plik konfiguracyjny XML, który określa, czy program wyznaczonych elementy są dostępne w celu odbicia.</span><span class="sxs-lookup"><span data-stu-id="26d31-103">A runtime directives (.rd.xml) file is an XML configuration file that specifies whether designated program elements are available for reflection.</span></span> <span data-ttu-id="26d31-104">Oto przykład pliku dyrektyw środowiska uruchomieniowego:</span><span class="sxs-lookup"><span data-stu-id="26d31-104">Here’s an example of a runtime directives file:</span></span>  

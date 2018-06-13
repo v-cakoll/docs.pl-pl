@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362902"
 ---
 # <a name="how-to-use-table-valued-user-defined-functions"></a>Porady: Użyj przechowywanymi w tabeli funkcji zdefiniowanej przez użytkownika
 Funkcja przechowywanymi w tabeli zwraca pojedynczy zestaw wierszy (w przeciwieństwie do procedur składowanych, które można zwrócić wielu kształtów wyników). Ponieważ typ zwracany funkcji zwracającej tabelę jest `Table`, można użyć funkcji zwracającej tabelę dowolne miejsce w języku SQL, których można używać tabeli. Można również traktować funkcji zwracającej tabelę, tak jak w tabeli.  

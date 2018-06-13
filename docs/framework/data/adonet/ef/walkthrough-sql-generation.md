@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766325"
 ---
 # <a name="walkthrough-sql-generation"></a>Wskazówki: Generowanie kodu SQL
 W tym temacie przedstawiono, jak generowanie kodu SQL występuje w [dostawcy próbki](http://go.microsoft.com/fwlink/?LinkId=180616). Następujące zapytanie SQL jednostki korzysta z modelu, który jest dołączony do dostawcy próbki:  

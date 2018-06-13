@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339173"
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Witaj Świecie — pierwszy program (Przewodnik programowania w języku C#)
 Poniższa procedura tworzy wersję języka C# tradycyjnych "Witaj świecie!" program. Program wyświetla ciąg `Hello World!`  

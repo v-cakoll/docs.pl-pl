@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766273"
 ---
 # <a name="edm-generator-edmgenexe"></a>Generator EDM (EdmGen.exe)
 EdmGen.exe to narzędzie wiersza polecenia służące do pracy z [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] modelu i mapowania plików. Narzędzie EdmGen.exe wykonaj następujące czynności:  

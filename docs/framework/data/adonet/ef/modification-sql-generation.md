@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766663"
 ---
 # <a name="modification-sql-generation"></a>Generowanie kodu SQL modyfikacji
 W tej sekcji omówiono sposób rozwijać modyfikacji modułu generowania SQL dla użytkownika (SQL:1999-danych zgodnej ze standardem) dostawcy. Ten moduł jest odpowiedzialny za tłumaczenia poziomu drzewa poleceń modyfikacji w odpowiedniej instrukcji SQL INSERT, UPDATE lub DELETE.  

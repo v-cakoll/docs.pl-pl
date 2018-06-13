@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313036"
 ---
 # <a name="how-to-create-a-new-method-for-an-enumeration-c-programming-guide"></a>Porady: utworzenie nowej metody wyliczania (Przewodnik programowania w języku C#)
 Metody rozszerzenia służy do dodawania funkcji charakterystycznej do wyliczenia określonego typu.  

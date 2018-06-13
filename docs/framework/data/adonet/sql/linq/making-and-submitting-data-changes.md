@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360796"
 ---
 # <a name="making-and-submitting-data-changes"></a>Tworzenie i przesyłanie zmian danych
 Tematy w tej sekcji opisano sposób tworzenia i przesłania zmian w bazie danych i sposobu obsługi konfliktów optymistycznej współbieżności.  

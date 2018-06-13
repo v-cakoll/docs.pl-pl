@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360141"
 ---
 # <a name="how-to-store-and-reuse-queries"></a>Porady: przechowywanie i ponowne użycie zapytań
 Jeśli masz aplikację, która wykonuje zapytania strukturę podobną tyle razy, często może zwiększyć wydajność kompilacji zapytania jeden raz i jej wykonanie kilka razy z innymi parametrami. Na przykład aplikacja może mieć można pobrać wszystkich klientów, którzy są określonego miasta, w którym miasta jest określone w czasie wykonywania przez użytkownika w postaci. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obsługuje korzystanie z *skompilowane zapytania* w tym celu.  

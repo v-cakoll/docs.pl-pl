@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554380"
 ---
 # <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a>Jak powiązać TreeView z danymi, które mają nieokreśloną głębokość
 Może to być razy, jeśli chcesz powiązać <xref:System.Windows.Controls.TreeView> ze źródłem danych, której głębokość nie jest znany.  Taka sytuacja może wystąpić, jeśli dane są cykliczne charakter, takich jak system plików, których foldery mogą zawierać folderów, lub struktura organizacyjna firmy, gdzie pracownicy mają inni jako bezpośrednich podwładnych.  

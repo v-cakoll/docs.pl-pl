@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365452"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>Wykonanie Side-by-Side w ADO.NET
 Wykonanie Side-by-side w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] jest możliwość uruchamiania aplikacji na komputerze, który ma wiele wersji [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] zainstalować wyłącznie przy użyciu wersji, dla którego został skompilowany aplikacji. Aby uzyskać szczegółowe informacje o konfigurowaniu wykonywania side-by-side, zobacz [wykonywania Side-by-Side](../../../../docs/framework/deployment/side-by-side-execution.md).  

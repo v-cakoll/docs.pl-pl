@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339530"
 ---
 # <a name="statements-c-programming-guide"></a>Instrukcje (Przewodnik programowania w języku C#)
 Akcje, które przyjmuje programu są wyrażane w instrukcjach. Typowe akcje obejmują deklarowania zmiennych, przypisywanie wartości, wywołanie metody zapętlenie przez kolekcje i rozgałęziania do jednej lub drugiej bloku kodu, w zależności od dany warunek. Kolejność wykonywania instrukcji w programie nosi nazwę przepływu sterowania lub przepływ wykonania. Przepływ sterowania mogą różnić się zawsze uruchamiany program, w zależności od tego, jak program reaguje na dane wejściowe odbiór w czasie wykonywania.  

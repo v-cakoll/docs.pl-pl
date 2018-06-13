@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764856"
 ---
 # <a name="linq-to-dataset"></a>LINQ do DataSet
 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] umożliwia łatwiejsze i szybsze zapytania za pośrednictwem danych w pamięci podręcznej <xref:System.Data.DataSet> obiektu. W szczególności [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] upraszcza zapytań umożliwia deweloperom pisać zapytania od języka programowania, a nie przy użyciu języka osobne zapytania. Jest to szczególnie przydatne dla deweloperów programu Visual Studio, którzy mogą teraz wykorzystać sprawdzanie składni kompilacji, wpisując statycznego i dostarczane przez program Visual Studio w zapytaniach ich obsługę funkcji IntelliSense.  

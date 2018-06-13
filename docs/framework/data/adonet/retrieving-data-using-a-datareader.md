@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353263"
 ---
 # <a name="retrieving-data-using-a-datareader"></a>Podczas pobierania danych przy użyciu elementu DataReader
 Podczas pobierania danych przy użyciu **DataReader** obejmuje utworzenie wystąpienia **polecenia** obiektu, a następnie utworzenie **DataReader** przez wywołanie metody  **Command.ExecuteReader** pobieranie wierszy ze źródła danych. Poniższy przykład przedstawia przy użyciu **DataReader** gdzie `reader` reprezentuje prawidłową DataReader i `command` reprezentuje prawidłowy obiekt polecenia.  

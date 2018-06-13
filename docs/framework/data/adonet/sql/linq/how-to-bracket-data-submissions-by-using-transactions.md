@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361530"
 ---
 # <a name="how-to-bracket-data-submissions-by-using-transactions"></a>Porady: nawiasów przesyłania danych za pomocą transakcji
 Można użyć <xref:System.Transactions.TransactionScope> do nawiasów przesyłanych danych w bazie danych. Aby uzyskać więcej informacji, zobacz [Obsługa transakcji](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md).  

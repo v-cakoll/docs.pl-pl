@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365205"
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>Ładowanie odłożone zawartości (usługi danych WCF)
 Domyślnie [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ogranicza ilość danych, która zwraca zapytanie. Można jednak w sposób jawny załadować dodatkowych danych, w tym powiązanych jednostek, dane odpowiedzi stronicowana i strumieni danych binarnych, w usłudze danych, gdy potrzebny jest. W tym temacie opisano, jak załadować takiej odroczonego zawartości do aplikacji.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765698"
 ---
 # <a name="working-with-data-providers"></a>Praca z dostawców danych
 W tematach w tej sekcji opisano, usług i dostawców, które przetwarzają zapytań dotyczących modelu koncepcyjnego do natywnego zapytania względem źródła danych, która jest obsługiwana przez program Entity Framework.  

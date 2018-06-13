@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340024"
 ---
 # <a name="how-to-catch-a-non-cls-exception"></a>Porady: przechwytywanie wyjątku typu non-CLS
 Niektóre języków .NET, w tym C + +/ CLI, pozwalają na zgłaszają wyjątki, które nie pochodzą z obiektów <xref:System.Exception>. Takie wyjątki są nazywane *wyjątki niezgodny ze specyfikacją CLS* lub *niebędące wyjątkami*. W środowisku Visual C# możesz nie można zgłosić wyjątki niezgodny ze specyfikacją CLS, ale można je catch na dwa sposoby:  

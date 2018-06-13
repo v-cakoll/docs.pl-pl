@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766439"
 ---
 # <a name="migration-considerations-entity-framework"></a>Zagadnienia dotyczące migracji (Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework zapewnia kilka korzyści z istniejącą aplikacją. Jednym z najbardziej ważne z tych zalet jest możliwość używania modelu koncepcyjnego do oddzielania struktur danych używany przez aplikację ze schematu źródła danych. Dzięki temu można łatwo utworzyć przyszłe zmiany w modelu magazynu lub do źródła danych bez wprowadzania zmian kompensacyjnych do aplikacji. Aby uzyskać więcej informacji o zaletach korzystania [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], zobacz [Omówienie struktury jednostek](../../../../../docs/framework/data/adonet/ef/overview.md) i [modelu Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md).  

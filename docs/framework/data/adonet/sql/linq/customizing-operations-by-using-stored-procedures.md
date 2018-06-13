@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360212"
 ---
 # <a name="customizing-operations-by-using-stored-procedures"></a>Dostosowywanie operacje przy użyciu procedur składowanych
 Procedury składowane reprezentują wspólnego podejścia do Zastępowanie domyślnego zachowania. Przykłady w tym temacie przedstawiono sposób korzystania wygenerować otoki metody dla procedury składowane i jak można wywoływać procedur składowanych bezpośrednio.  

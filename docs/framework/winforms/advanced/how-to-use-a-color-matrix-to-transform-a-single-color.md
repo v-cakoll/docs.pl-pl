@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527407"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Porady: stosowanie macierzy kolorów do przekształcenia pojedynczego koloru
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] udostępnia <xref:System.Drawing.Image> i <xref:System.Drawing.Bitmap> klasy do przechowywania i manipulowanie obrazów. <xref:System.Drawing.Image> i <xref:System.Drawing.Bitmap> obiektów przechowywania koloru każdego piksela jako 32-bitową liczbą: 8, usługa bits dla czerwony, zielony, niebieski i alfa. Każdy z czterech składników jest liczba z przedziału od 0 do 255, gdzie 0 reprezentujący natężenie i 255 reprezentujący intensywność pełna. Określa przezroczystość koloru, składnika alfa: 0 jest w pełni przezroczyste, i jest całkowicie nieprzezroczyste 255.  

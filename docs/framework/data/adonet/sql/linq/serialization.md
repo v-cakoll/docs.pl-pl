@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356331"
 ---
 # <a name="serialization"></a>Serializacja
 W tym temacie opisano [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] możliwości serializacji. Sekcjach poniżej zawierają informacje o sposobie dodawania serializacji podczas generowania kodu w czasie projektowania i zachowania czasu wykonywania serializacji [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] klasy.  

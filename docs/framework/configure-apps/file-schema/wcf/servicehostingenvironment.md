@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354323"
 ---
 # <a name="ltservicehostingenvironmentgt"></a>&lt;serviceHostingEnvironment&gt;
 Ten element definiuje typ, który usługę hostingu środowiskowego dla danego transportu. Jeśli ten element jest pusta, domyślny typ jest używany. Ten element może być użyty tylko w aplikacji lub pliki konfiguracji na poziomie maszyny.  

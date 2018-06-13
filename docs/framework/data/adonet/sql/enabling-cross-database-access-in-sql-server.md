@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353465"
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>Włączanie dostępu między bazami danych w programie SQL Server
 Łańcucha między bazami danych własność występuje, gdy procedura w jednej bazie danych jest zależna od obiektów w innej bazie danych. Łańcuch własności między bazami danych działa w taki sam sposób jak własność łańcucha w ramach pojedynczej bazy danych, z tą różnicą, że łańcucha własności nieprzerwany wymaga, aby wszystkich właścicieli obiektów są mapowane do tego samego konta logowania. Jeśli obiekt źródłowy w źródłowej bazy danych i obiektów docelowych w z docelowymi bazami danych są własnością tego samego konta logowania, programu SQL Server nie sprawdza uprawnienia do obiektów docelowych.  

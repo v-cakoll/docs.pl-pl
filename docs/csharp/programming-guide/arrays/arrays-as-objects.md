@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33312611"
 ---
 # <a name="arrays-as-objects-c-programming-guide"></a>Tablice jako obiekty (Przewodnik programowania w języku C#)
 W języku C# tablic są faktycznie obiektów, a nie tylko adresowanego regiony pamięci ciągłej jak C i C++. <xref:System.Array> jest podstawowy typ abstrakcyjny typów tablicowych. Można użyć właściwości oraz o innych elementach członkowskich klasy, która <xref:System.Array> ma. Przykładem takiego jak przy użyciu <xref:System.Array.Length%2A> właściwość, aby pobrać długości tablicy. Poniższy kod przypisuje długość `numbers` tablicy, która jest `5`, do zmiennej o nazwie `lengthOfNumbers`:  

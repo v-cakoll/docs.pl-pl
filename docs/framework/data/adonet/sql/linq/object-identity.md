@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358472"
 ---
 # <a name="object-identity"></a>Tożsamość obiektu
 Obiekty w środowisku uruchomieniowym mają unikatowych tożsamości. Dwie zmienne odwołujące się do tego samego obiektu faktycznie odwoływać się do tego samego wystąpienia obiektu. Ze względu na fakt ten zmiany wprowadzone na ścieżkę za pośrednictwem jednej zmiennej są od razu widoczne przez innych.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526436"
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>Uzyskiwanie dostępu do nieujawnionych elementów w modelu DOM (Document Object Model) zarządzanych dokumentów HTML
 Zarządzany HTML modelu DOM (Document Object) zawiera klasy o nazwie <xref:System.Windows.Forms.HtmlElement> która udostępnia właściwości, metod i zdarzeń, mających wspólne wszystkich elementów HTML. Czasami jednak konieczne będzie dostęp do elementów członkowskich, które zarządzanego interfejsu bezpośrednio nie ujawnia. W tym temacie sprawdza, czy dwa sposoby do uzyskiwania dostępu do nieujawnionych elementów członkowskich, w tym [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] i funkcji VBScript, zdefiniowane wewnątrz strony sieci Web.  

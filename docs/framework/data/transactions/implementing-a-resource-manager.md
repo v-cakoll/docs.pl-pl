@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363266"
 ---
 # <a name="implementing-a-resource-manager"></a>Implementowanie Menedżera zasobów
 Poszczególne zasoby używane w transakcji jest zarządzane przez Menedżera zasobów, których działania są koordynowany przez Menedżera transakcji. Menedżer zasobów działa we współpracy z menedżerem transakcji, aby zapewnić aplikacji niepodzielność i izolacji. Microsoft SQL Server, kolejki komunikatów trwałe, tabelami skrótów w pamięci są wszystkie przykłady menedżerowie zasobów.  

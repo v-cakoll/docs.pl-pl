@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527677"
 ---
 # <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a>Porady: dodawanie lub usuwanie obrazów ImageList przy użyciu narzędzia Projektant
 Można dodać obrazy <xref:System.Windows.Forms.ImageList> składnika kilka różnych sposobów. Można dodać obrazy bardzo szybko przy użyciu tagów inteligentnych skojarzone z <xref:System.Windows.Forms.ImageList>, lub jeśli kilka innych właściwości są ustawiane na <xref:System.Windows.Forms.ImageList>, może być wygodniejsze dodać obrazy z okna właściwości. Obrazy można także dodać przy użyciu kodu. Aby uzyskać więcej informacji o dodawaniu obrazów z kodem, zobacz [porady: Dodawanie lub usuwanie obrazów za pomocą składnika ImageList formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md). Zwykle wypełnić <xref:System.Windows.Forms.ImageList> składnika z obrazami przed jest skojarzony z formantem, ale nie jest to wymagane.  

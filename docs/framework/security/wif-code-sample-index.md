@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405606"
 ---
 # <a name="wif-code-sample-index"></a>Indeks przykładów kodu WIF
 Poniżej przedstawiono przykłady kodu dla systemu Windows Identity Foundation 4.5:  

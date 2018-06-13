@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395307"
 ---
 # <a name="etw-events-in-the-net-framework"></a>Zdarzenia ETW w programie .NET Framework
 Śledzenie zdarzeń systemu Windows (ETW) to system wysokiej wydajności, narzut na małej, skalowalna śledzenia podany przez systemy operacyjne Windows. Uzupełnia profilowania i debugowania wsparcie w programie .NET Framework, a może służyć do rozwiązywania z szerokiej gamy scenariuszy.  

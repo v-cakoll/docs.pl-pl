@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410101"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Narzędzie zasad zabezpieczeń dostępu kodu)
 Narzędzie (Caspol.exe) sprawdzania zabezpieczeń dostępu kodu (CAS) pozwala użytkownikom i administratorom na modyfikowanie zasad bezpieczeństwa na poziomie zasad komputera, na poziomie zasad użytkownika i na poziomie zasad przedsiębiorstwa.  
@@ -102,7 +103,7 @@ caspol [options]
 |**-name "** *nazwa* **"**|Jeśli jest używana z **— addgroup** opcji, określa nazwę skryptu dla grupy kod dodać. Jeśli jest używana z **- chggroup** opcji, określa nazwę skryptu dla grupy kod edytować. *Nazwa* argument musi być ujęta w cudzysłów. *Nazwa* argument nie może rozpoczynać się cyfrą i może zawierać tylko A-Z, 0-9 i znaków podkreślenia. Grupy kodów mogą być przywoływane przez to *nazwa* zamiast przez ich etykiet liczbowych. *Nazwa* jest również bardzo przydatne w przypadku skryptów.|  
   
 ## <a name="remarks"></a>Uwagi  
- Zasady zabezpieczeń są wyrażone za pomocą trzech poziomów zasad: zasady komputera, zasady użytkownika i zasady przedsiębiorstwa. Zestaw uprawnień otrzymanych przez zestaw jest określony przez przecięcie zestawów uprawnień dopuszczonych przez trzy poziomy zasad. Każdy poziom zasad jest reprezentowany przez hierarchiczną strukturę grup kodu. Każda grupa kodu posiada warunek członkostwa, który określa, jaki kod jest członkiem tej grupy. Nazwany zestaw uprawnień jest również skojarzony z każdą grupą kodu. Ten zestaw uprawnień określa uprawnienia, które spełniają warunek członkostwa, jakie środowisko uruchomieniowe przydziela kodowi. Hierarchia grup kodu ze skojarzonymi nazwanymi zestawami uprawnień definiuje i utrzymuje każdy poziom zasad zabezpieczeń. Można użyć**— użytkownik**, **- customuser**, **— maszyny** i **-enterprise** opcje można ustawić poziomu zasad zabezpieczeń.  
+ Zasady zabezpieczeń są wyrażone za pomocą trzech poziomów zasad: zasady komputera, zasady użytkownika i zasady przedsiębiorstwa. Zestaw uprawnień otrzymanych przez zestaw jest określony przez przecięcie zestawów uprawnień dopuszczonych przez trzy poziomy zasad. Każdy poziom zasad jest reprezentowany przez hierarchiczną strukturę grup kodu. Każda grupa kodu posiada warunek członkostwa, który określa, jaki kod jest członkiem tej grupy. Nazwany zestaw uprawnień jest również skojarzony z każdą grupą kodu. Ten zestaw uprawnień określa uprawnienia, które spełniają warunek członkostwa, jakie środowisko uruchomieniowe przydziela kodowi. Hierarchia grup kodu ze skojarzonymi nazwanymi zestawami uprawnień definiuje i utrzymuje każdy poziom zasad zabezpieczeń. Można użyć **— użytkownik**, **- customuser**, **— maszyny** i **-enterprise** opcje można ustawić poziomu zasad zabezpieczeń.  
   
  Aby uzyskać więcej informacji na temat zasad zabezpieczeń i jak środowisko uruchomieniowe określa uprawnienia, których chcesz udzielić kod, zobacz [Zarządzanie zasadami dotyczącymi zabezpieczeń](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
   

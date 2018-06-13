@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394517"
 ---
 # <a name="location-based-cache-policies"></a>Zasady oparte na lokalizacji pamięci podręcznej
 Zasady oparte na lokalizacji pamięci podręcznej definiuje świeżości prawidłowych wpisów pamięci podręcznej podstawę, z którego można pobrać żądanego zasobu. Zasób pamięci podręcznej jest nieprawidłowy w przypadku korzystania z niego nie narusza wymagania określony serwer ponownego sprawdzania poprawności. Zasady oparte na lokalizacji pamięci podręcznej jest tworzona programowo przy użyciu <xref:System.Net.Cache.RequestCachePolicy> lub <xref:System.Net.Cache.HttpRequestCachePolicy> konstruktora klasy. Typ zasad na podstawie lokalizacji jest przekazywany do konstruktora przy użyciu <xref:System.Net.Cache.RequestCacheLevel> lub <xref:System.Net.Cache.HttpRequestCacheLevel> wartości wyliczenia. Przykłady kodu, które utworzyć zasady oparte na lokalizacji pamięci podręcznej można znaleźć [porady: ustawienia zasad oparte na lokalizacji pamięci podręcznej aplikacji](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md). W poniższych sekcjach opisano każdego typu zasad na podstawie lokalizacji pamięci podręcznej dla zasobów Hypertext Transfer Protocol (protokół http i https).  

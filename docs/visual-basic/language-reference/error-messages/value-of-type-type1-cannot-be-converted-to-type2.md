@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602765"
 ---
 # <a name="value-of-type-39type139-cannot-be-converted-to-39type239"></a>Wartości typu &#39;type1&#39; nie można przekonwertować na &#39;type2&#39;
 Nie można przekonwertować wartości typu "type1" na "type2". Można użyć właściwości 'Value' można uzyskać wartość ciągu pierwszego elementu obiektu "\<parentElement >".  

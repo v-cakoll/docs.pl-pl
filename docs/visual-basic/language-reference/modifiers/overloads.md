@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601917"
 ---
 # <a name="overloads-visual-basic"></a>Overloads (Visual Basic)
 Określa, że właściwość lub procedura programistyczny ponownie deklaruje co najmniej jednej właściwości istniejących lub procedury o takiej samej nazwie.  

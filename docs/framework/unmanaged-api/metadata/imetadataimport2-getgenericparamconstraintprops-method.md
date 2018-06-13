@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446820"
 ---
 # <a name="imetadataimport2getgenericparamconstraintprops-method"></a><span data-ttu-id="c44e8-102">IMetaDataImport2::GetGenericParamConstraintProps — Metoda</span><span class="sxs-lookup"><span data-stu-id="c44e8-102">IMetaDataImport2::GetGenericParamConstraintProps Method</span></span>
 <span data-ttu-id="c44e8-103">Pobiera metadane skojarzone z ograniczenia parametru ogólnego reprezentowany przez ograniczenie określony token.</span><span class="sxs-lookup"><span data-stu-id="c44e8-103">Gets the metadata associated with the generic parameter constraint represented by the specified constraint token.</span></span>  

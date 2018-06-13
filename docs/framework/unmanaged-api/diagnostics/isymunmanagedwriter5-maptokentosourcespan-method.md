@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427946"
 ---
 # <a name="isymunmanagedwriter5maptokentosourcespan-method"></a><span data-ttu-id="4c17f-102">ISymUnmanagedWriter5::MapTokenToSourceSpan — Metoda</span><span class="sxs-lookup"><span data-stu-id="4c17f-102">ISymUnmanagedWriter5::MapTokenToSourceSpan Method</span></span>
 <span data-ttu-id="4c17f-103">Map zakres token metadanych do wiersza danego źródłowego określony plik źródłowy.</span><span class="sxs-lookup"><span data-stu-id="4c17f-103">Maps the given metadata token to the given source line span in the specified source file.</span></span>  

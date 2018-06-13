@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514585"
 ---
 # <a name="persistence"></a><span data-ttu-id="42c49-102">Trwałość</span><span class="sxs-lookup"><span data-stu-id="42c49-102">Persistence</span></span>
 <span data-ttu-id="42c49-103">Ta sekcja zawiera przykłady ilustrujące utrwalanie przepływy pracy w celu trwałego nośnika w systemie Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="42c49-103">This section contains samples that demonstrate persisting workflows to a durable medium in Windows Workflow Foundation (WF).</span></span>  

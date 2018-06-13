@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424667"
 ---
 # <a name="isymunmanagedreadergetmethodversion-method"></a><span data-ttu-id="9d718-102">ISymUnmanagedReader::GetMethodVersion — Metoda</span><span class="sxs-lookup"><span data-stu-id="9d718-102">ISymUnmanagedReader::GetMethodVersion Method</span></span>
 <span data-ttu-id="9d718-103">Pobiera wersję metody.</span><span class="sxs-lookup"><span data-stu-id="9d718-103">Gets the method version.</span></span> <span data-ttu-id="9d718-104">Wersja metody rozpoczyna się od 1 i jest zwiększany zawsze, gdy metoda jest ponownie kompilowana.</span><span class="sxs-lookup"><span data-stu-id="9d718-104">The method version starts at 1 and is incremented each time the method is recompiled.</span></span> <span data-ttu-id="9d718-105">Ponowna kompilacja może się zdarzyć bez wprowadzania zmian do metody.</span><span class="sxs-lookup"><span data-stu-id="9d718-105">Recompilation can happen without changes to the method.</span></span>  

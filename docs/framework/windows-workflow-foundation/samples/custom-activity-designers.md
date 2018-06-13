@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514291"
 ---
 # <a name="custom-activity-designers"></a><span data-ttu-id="f67cf-102">Projektanci działań niestandardowych</span><span class="sxs-lookup"><span data-stu-id="f67cf-102">Custom Activity Designers</span></span>
 <span data-ttu-id="f67cf-103">Ta sekcja zawiera przykłady działania, które Użyj niestandardowych projektantów do wyświetlenia w Projektancie przepływów pracy.</span><span class="sxs-lookup"><span data-stu-id="f67cf-103">This section contains activity samples that use custom designers for display in the workflow designer.</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655326"
 ---
 # <a name="local-type-inference-visual-basic"></a>Wnioskowanie o typie lokalnym (Visual Basic)
 Kompilator Visual Basic używa *wnioskowanie* do określania typów danych zmienna lokalna zadeklarowana bez `As` klauzuli. Kompilator wnioskuje typ zmiennej typu wyrażenia inicjowania. Dzięki temu można zadeklarować zmienne bez jawne określenie typu, jak pokazano w poniższym przykładzie. W wyniku deklaracjami zarówno `num1` i `num2` są silnie typizowane liczbami całkowitymi.  

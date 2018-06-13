@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809852"
 ---
 # <a name="custom-token"></a>Token niestandardowy
 Ten przykład przedstawia sposób dodawania niestandardowych implementacji token do aplikacji Windows Communication Foundation (WCF). W przykładzie użyto `CreditCardToken` do bezpieczne przekazywanie informacji o kartach kredytowych klienta do usługi. Token jest przekazywany w nagłówku wiadomości WS-Security jest podpisany i szyfrowana przy użyciu elementu powiązania zabezpieczeń symetrycznego wraz z treści wiadomości i innych nagłówków komunikatów. Jest to przydatne w sytuacjach, gdy wbudowanych tokenów nie są wystarczające. W tym przykładzie pokazano, jak zapewnić tokenu zabezpieczeń niestandardowej z usługą zamiast przy użyciu jednej z wbudowanych tokenów. Usługa implementuje kontrakt definiuje wzorzec komunikacji żądanie odpowiedź.  

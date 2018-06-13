@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652171"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>Porady: kontrolowanie dostępności zmiennej (Visual Basic)
 Kontrolowanie dostępności zmiennej, określając jego *poziom dostępu*. Poziom dostępu określa, jaki kod ma uprawnienie do odczytu lub zapisu do zmiennej.  

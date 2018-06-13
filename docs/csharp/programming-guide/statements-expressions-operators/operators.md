@@ -11,6 +11,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457933"
 ---
 # <a name="operators-c-programming-guide"></a>Operatory (Przewodnik programowania w języku C#)
 W języku C# *operator* jest element program, który jest stosowany do co najmniej jeden *operandy* w wyrażenia lub instrukcji. Operatory, które mają jeden operand, takich jak operator inkrementacji (`++`) lub `new`, są określane jako *jednoargumentowy* operatorów. Operatory, które przyjmują dwóch argumentów operacji, takich jak operatory arytmetyczne (`+`,`-`,`*`,`/`), są określane jako *binarne* operatorów. Jeden operator, operator warunkowy (`?:`), ma trzy operandy i jest jedyny operator trójargumentowy w języku C#.  

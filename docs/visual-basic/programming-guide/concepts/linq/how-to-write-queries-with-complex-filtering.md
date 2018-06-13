@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645866"
 ---
 # <a name="how-to-write-queries-with-complex-filtering-visual-basic"></a>Porady: pisać zapytania z złożone filtrowanie (Visual Basic)
 Czasami chcesz zapisać LINQ do XML zapytania z złożonych filtrów. Na przykład może być konieczne Znajdź wszystkie elementy, które ma element podrzędny o określonej nazwie i wartości. W tym temacie przedstawiono przykładowy Pisanie zapytań za pomocą filtrowania złożonych.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809823"
 ---
 # <a name="pooling"></a>Buforowanie
 W tym przykładzie pokazano, jak rozszerzyć Windows Communication Foundation (WCF) do obsługi buforowanie obiektów. Przykład przedstawia sposób tworzenia atrybutu składnię i semantycznie podobny do `ObjectPoolingAttribute` atrybutu funkcji usług dla przedsiębiorstw. Buforowanie obiektu może zapewnić znaczne zwiększenie wydajności na wydajność aplikacji. Jednak jeśli nie jest prawidłowo używana może mieć odwrotny efekt. Buforowanie obiektu pomaga zmniejszyć koszty odtworzenie często używanych obiektów, które wymagają szeroką gamę inicjowania. Jednak jeśli wywołanie do metody w obiekcie puli przyjmuje znaczną ilość czasu, buforowanie obiektów kolejek dodatkowych żądań zaraz po osiągnięciu maksymalny rozmiar puli. W związku z tym może nie obsługiwać niektórych obiektów żądania tworzenia przez zgłaszanie wyjątków przekroczenia limitu czasu.  

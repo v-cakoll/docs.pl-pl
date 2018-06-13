@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352642"
 ---
 # <a name="referential-integrity-constraint"></a>ograniczenie integralności referencyjnej
 A *ograniczenia integralności referencyjnej* w modelu danych jednostki (EDM) jest podobny do ograniczenia integralności referencyjnej w relacyjnej bazie danych. W ten sam sposób, że kolumna (lub kolumny) z tabeli bazy danych może odwoływać się klucz podstawowy innej tabeli [właściwości](../../../../docs/framework/data/adonet/property.md) (lub właściwości) z [typu jednostki](../../../../docs/framework/data/adonet/entity-type.md) może odwoływać się [klucz jednostki ](../../../../docs/framework/data/adonet/entity-key.md) innego typu jednostki. Typ jednostki, do którego odwołuje się jest wywoływana *główny koniec* ograniczenia. Typów jednostek, które odwołuje się do zakończenia podmiotu zabezpieczeń jest nazywany *zależnego końca* ograniczenia.  

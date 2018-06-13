@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567370"
 ---
 # <a name="applying-attributes"></a>Stosowanie atrybutów
 W celu zastosowania atrybutu do elementu kodu należy wykonać procedurę opisaną poniżej.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534506"
 ---
 # <a name="statusstrip-control"></a>StatusStrip — Formant
 Formularze systemu Windows `StatusStrip` formant jest używany w formularzach jako obszaru, zwykle wyświetlane w dolnej części okna, w którym aplikacja może wyświetlać różne rodzaje informacji o stanie. `StatusStrip` Formanty zwykle mają `ToolStripStatusLabel` formantów na nich zawierające tekst lub ikony do wskazywania stanu, lub <xref:System.Windows.Forms.ToolStripProgressBar> który graficznie Wyświetla stan ukończenia procesu.  

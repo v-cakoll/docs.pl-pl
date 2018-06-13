@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339842"
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-c"></a>Składnia wyrażeń dla standardowych operatorów zapytań (C#)
 Niektóre z często używanych standardowych operatorów zapytań są wyposażone w dedykowane C# — słowo kluczowe składni języka umożliwiający ich można wywołać w ramach *zapytania wyrażenia*. Wyrażenia zapytania jest inny, bardziej czytelny formularz wyrażenia zapytania niż jego *oparte na metodzie* równoważne. Klauzule wyrażenia zapytania są przekształcane na wywołania metody zapytań w czasie kompilacji.  

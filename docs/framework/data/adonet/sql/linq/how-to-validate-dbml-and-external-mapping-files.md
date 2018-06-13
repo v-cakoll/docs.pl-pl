@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362165"
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>Porady: Sprawdzanie poprawności DBML i plikami zewnętrznych mapowania
 Mapowanie zewnętrzne pliki i pliki .dbml zmodyfikowaniu musi zostać zweryfikowany względem ich definicje odpowiednich schematu. Ten temat zawiera użytkowników programu Visual Studio czynności do wykonania procesu weryfikacji.  

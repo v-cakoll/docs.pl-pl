@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554810"
 ---
 # <a name="clocks-how-to-topics"></a>Zegary Tematy porad
 W poniższych tematach opisano sposób użycia <xref:System.Windows.Media.Animation.Clock> obiekt, aby zachować informacje o stanie chronometrażu <xref:System.Windows.Media.Animation.Timeline>.  

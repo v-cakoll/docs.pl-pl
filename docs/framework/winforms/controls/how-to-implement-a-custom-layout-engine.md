@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531300"
 ---
 # <a name="how-to-implement-a-custom-layout-engine"></a>Porady: implementowanie aparatu niestandardowego układu
 Poniższy przykładowy kod przedstawia sposób tworzenia aparatu niestandardowego układu, który wykonuje układ prosty przepływu. Implementuje kontrolki panelu o nazwie `DemoFlowPanel`, co zastępuje <xref:System.Windows.Forms.Control.LayoutEngine%2A> właściwość, aby zapewnić wystąpienie `DemoFlowLayout` klasy.  

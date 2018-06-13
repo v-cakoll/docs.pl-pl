@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361643"
 ---
 # <a name="customizing-insert-update-and-delete-operations"></a>Dostosowywanie wstawiania, aktualizowania i usuwania operacji
 Domyślnie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] generuje dynamiczne SQL do wdrożenia insert, odczytu, aktualizacji i usuwania operacji. W praktyce jednak zwykle dostosować aplikację, w zależności od potrzeb biznesowych.  

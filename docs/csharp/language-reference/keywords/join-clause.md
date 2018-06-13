@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33289402"
 ---
 # <a name="join-clause-c-reference"></a>Klauzula join (odwołanie w C#)
 `join` Klauzuli przydaje się do kojarzenia elementów z sekwencje innego źródła, które nie mają bezpośredniego relacji w modelu obiektów. Jedynym wymaganiem jest to, że elementy w każdym źródle udostępniać niektóre wartości, które można porównywać pod względem równości. Na przykład dystrybutora żywności może mieć listy dostawców określonego produktu oraz listę kupujący. A `join` klauzuli można na przykład, aby utworzyć listę dostawców i kupujący tego produktu, którzy są w taki sam określić region.  

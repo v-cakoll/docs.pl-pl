@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525957"
 ---
 # <a name="recoloring-images"></a>Ponowne kolorowanie obrazów
 Ponowne kolorowanie to proces dostosowywanie kolorów obrazu. Ponowne kolorowanie przykłady są zmiana koloru jednego innego, dostosowywania intensywność koloru względem innym kolorze dostosowywania jasności lub kontrastu wszystkie kolory i konwersji kolorów do odcieni szarości.  

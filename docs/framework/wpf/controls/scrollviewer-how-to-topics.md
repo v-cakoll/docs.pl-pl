@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555351"
 ---
 # <a name="scrollviewer-how-to-topics"></a>ScrollViewer — Tematy porad
 Tematy w tej sekcji przedstawiono sposób korzystania <xref:System.Windows.Controls.ScrollViewer> elementu, aby utworzyć przewijanego regiony w aplikacji.  

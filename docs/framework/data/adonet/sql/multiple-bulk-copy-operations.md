@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358146"
 ---
 # <a name="multiple-bulk-copy-operations"></a>Wiele operacji kopiowania zbiorczego
 Można wykonywać wiele operacji kopiowania zbiorczego, za pomocą jednego wystąpienia <xref:System.Data.SqlClient.SqlBulkCopy> klasy. Jeśli parametry operacji zmiany między kopiami (na przykład nazwa tabeli docelowej), należy zaktualizować je przed kolejnych wywołań dowolnej z **WriteToServer** metod, jak pokazano w poniższym przykładzie. Chyba że jawnie zmieniona wszystkich wartości właściwości pozostają takie same, jakie były na poprzedniej operacji kopiowania zbiorczego dla danego wystąpienia.  

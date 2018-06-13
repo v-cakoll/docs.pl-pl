@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362714"
 ---
 # <a name="secure-data-access"></a>Bezpieczny dostęp do danych
 Aby napisać bezpiecznego kodu ADO.NET, należy zapoznać mechanizmy zabezpieczeń dostępne w odpowiedni magazyn danych lub bazy danych. Należy również wziąć pod uwagę ryzyko związane z innych funkcji lub składniki, które mogą zawierać aplikacji.  

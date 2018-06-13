@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356104"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>LINQ do SQL N-warstwowa z usługami sieci Web
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] jest przeznaczonym zwłaszcza do użycia w warstwie środkowej warstwy dostępu luźno połączonych danych (DAL) na przykład usługi sieci Web. Jeśli Warstwa prezentacji prowadzi do strony sieci Web ASP.NET, a następnie używasz <xref:System.Web.UI.WebControls.LinqDataSource> formant serwera do zarządzania przesyłaniem danych między interfejs użytkownika sieci Web i [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] na warstwy środkowej. Jeśli Warstwa prezentacji nie jest strony platformy ASP.NET, następnie zarówno warstwy środkowej i warstwy prezentacji wykonaj wykonania dodatkowych czynności, aby zarządzać serializacji i deserializacji obiektu danych.  

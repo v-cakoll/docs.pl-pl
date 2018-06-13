@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339660"
 ---
 # <a name="expressions-c-programming-guide"></a>Wyrażenia (Przewodnik programowania w języku C#)
 *Wyrażenie* Sekwencja zero lub więcej operatorów, które może przyjąć pojedynczą wartość, obiekt, metodę lub przestrzeń nazw i jeden lub więcej argumentów operacji. Wartość literału, wywołania metody, operator i argumentów, może zawierać wyrażenia lub *prosta nazwa*. Proste nazwy mogą być nazwę zmiennej, członka typu, parametru metody, przestrzeni nazw lub typu.  

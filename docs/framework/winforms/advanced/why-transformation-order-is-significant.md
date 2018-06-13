@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526080"
 ---
 # <a name="why-transformation-order-is-significant"></a>Dlaczego kolejność przekształcania jest ważna
 Pojedynczy <xref:System.Drawing.Drawing2D.Matrix> obiektu można przechowywać pojedyncze przekształcenie lub sekwencję transformacji. Drugie jest nazywany złożone przekształcenia. Macierzy transformacji złożonego mnożąc macierzy transformacji indywidualnych.  

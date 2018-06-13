@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357864"
 ---
 # <a name="batching-operations-wcf-data-services"></a>Przetwarzanie wsadowe operacji (usługi danych WCF)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Obsługuje przetwarzanie żądania wsadowe [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]— na podstawie usługi. Aby uzyskać więcej informacji, zobacz [OData: przetwarzanie wsadowe](http://go.microsoft.com/fwlink/?LinkId=186075). W [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], każdej operacji, która używa <xref:System.Data.Services.Client.DataServiceContext>, takiej jak wykonywanie zapytania lub zapisywania zmian, wyniki w oddzielnych żądania wysyłane do usługi danych. Aby zachować logicznej zakresu dla zestawów działań, można jawnie definiować partie operacyjnej. Dzięki temu wszystkie operacje w partii są wysyłane do usługi data pojedyncze żądanie HTTP, umożliwia serwerowi przetwarzania operacji automatycznie czy zmniejsza liczbę rund do usługi danych.  

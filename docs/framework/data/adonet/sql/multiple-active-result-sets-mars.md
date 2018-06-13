@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358432"
 ---
 # <a name="multiple-active-result-sets-mars"></a>Wielu aktywnych zestawów wyników (MARS)
 Wiele aktywnych zestawów wyników (MARS) to funkcja umożliwiająca wykonywanie wielu instancji na jedno połączenie. W poprzednich wersjach tylko jedno zadanie wsadowe może zostać wykonany w czasie przed jednego połączenia. Wykonywanie wielu instancji z MARS nie oznacza jednoczesne wykonywanie operacji.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526839"
 ---
 # <a name="working-with-images-bitmaps-icons-and-metafiles"></a>Praca z obrazami, mapami bitowymi, ikonami i metaplikami
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] udostępnia `Bitmap` klasy do pracy z obrazów rastrowych i `Metafile` klasy do pracy z obrazami wektora. `Bitmap` i `Metafile` klasy zarówno dziedziczą `Image` klasy.  

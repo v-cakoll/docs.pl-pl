@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362224"
 ---
 # <a name="learning-by-walkthroughs"></a>Learning przez — wskazówki
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Dokumentacja zawiera wskazówki dotyczące kilku. W tym temacie rozwiązuje problemy ogólne wskazówki (w tym Rozwiązywanie problemów) oraz linki do kilku klasy podstawowej wskazówki szkoleniowe dotyczące [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  

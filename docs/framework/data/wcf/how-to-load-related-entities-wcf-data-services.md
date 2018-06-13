@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358166"
 ---
 # <a name="how-to-load-related-entities-wcf-data-services"></a>Porady: ładowanie powiązanych jednostek (usługi danych WCF)
 Aby załadować skojarzonych elementów w [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], można użyć <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> metoda <xref:System.Data.Services.Client.DataServiceContext> klasy. Można również użyć <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> metoda <xref:System.Data.Services.Client.DataServiceQuery%601> wymaganie, że powiązanych jednostek dzielenia na załadowane w tej samej odpowiedzi na kwerendę.  

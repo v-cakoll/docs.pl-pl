@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565692"
 ---
 # <a name="path-animations-overview"></a>Przegląd Animacja ścieżki
 <a name="introduction"></a> W tym temacie przedstawiono animacje ścieżki, które umożliwiają korzystanie geometrycznych ścieżki do generowania wartości danych wyjściowych. Ścieżka animacje są przydatne w przypadku przenoszenia i obracanie obiektów wzdłuż ścieżki złożone.  

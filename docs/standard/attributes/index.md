@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567500"
 ---
 # <a name="extending-metadata-using-attributes"></a>Rozszerzanie metadanych za pomocą atrybutów
 Środowisko uruchomieniowe języka wspólnego pozwala dodać deklaracje opisowe typu słowo kluczowe, nazywany atrybuty dla adnotacji programowania elementów, takich jak typy, pola, metody i właściwości. Podczas kompilowania kodu środowiska uruchomieniowego jest konwertowane na język pośredni firmy Microsoft (MSIL) i umieszczony wewnątrz pliku wykonywalnego (PE) pliku przenośnego wraz z metadanych generowanych przez kompilator. Atrybuty pozwala na umieszczenie bardzo opisowe informacje do metadanych, który można wyodrębnić przy użyciu usługi czasu wykonywania odbicia. Kompilator tworzy atrybuty przy deklarowaniu wystąpienia klas specjalne, które pochodzą z <xref:System.Attribute?displayProperty=nameWithType>.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352982"
 ---
 # <a name="asynchronous-operations"></a>Operacje asynchroniczne
 Niektóre operacje bazy danych, takich jak wykonania polecenia może być czasochłonne znaczące. W takim przypadku aplikacji jednowątkowych należy blokować innych operacji i poczekaj na zakończenie przed kontynuowaniem ich własnych operacji polecenia. Z kolei możliwość przypisania długotrwałej operacji do wątku w tle pozwala na pozostają aktywne w trakcie operacji wątku pierwszego planu. W aplikacji Windows na przykład delegowanie długotrwałej operacji do wątku w tle umożliwia wątku interfejsu użytkownika będzie odpowiadać podczas wykonywania operacji.  

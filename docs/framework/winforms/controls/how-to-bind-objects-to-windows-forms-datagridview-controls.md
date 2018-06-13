@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530110"
 ---
 # <a name="how-to-bind-objects-to-windows-forms-datagridview-controls"></a>Porady: powiązanie obiektów z formantami DataGridView formularzy systemu Windows
 Poniższy przykład kodu pokazuje, jak można powiązać kolekcji obiektów do <xref:System.Windows.Forms.DataGridView> taki sposób, aby każdy obiekt będzie wyświetlany jako oddzielnym wierszu. W tym przykładzie przedstawiono również sposób wyświetlania właściwości dla typu wyliczenia w <xref:System.Windows.Forms.DataGridViewComboBoxColumn> tak, aby listy rozwijanej pola kombi zawiera wartości wyliczenia.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362031"
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Porady: wiązanie danych przy użyciu źródła danych projektu (usługi danych WCF)
 Można utworzyć źródła danych, które są oparte na obiekty danych wygenerowanych w [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] aplikacji klienckiej. Podczas dodawania odwołania do usług danych przy użyciu **Dodaj odwołanie do usługi** okna dialogowego, wraz z klas danych wygenerowanego klienta utworzeniu źródła danych projektu. Jedno źródło danych jest tworzony dla każdego zestawu jednostek, usługa ujawnia danych. Możesz utworzyć formularze, które są wyświetlane dane z usługi przez przeciągnięcie tych elementów źródła danych z **źródeł danych** okna do projektanta. Te elementy stają się formanty, które są powiązane ze źródłem danych. Podczas wykonywania tego źródła danych jest powiązany z wystąpieniem <xref:System.Data.Services.Client.DataServiceCollection%601> klasy, która jest wypełniony obiektów, które są zwracane przez zapytanie do usługi danych. Aby uzyskać więcej informacji, zobacz [wiązanie danych do kontrolek](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).  

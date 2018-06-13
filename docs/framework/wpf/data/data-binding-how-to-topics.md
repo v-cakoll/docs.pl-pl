@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557696"
 ---
 # <a name="data-binding-how-to-topics"></a>Powiązanie danych Tematy porad
 Tematy w tej sekcji opisano sposób korzystania z wiązania danych do powiązania elementów do danych z różnych źródeł danych w formie wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) obiektów i XML.  

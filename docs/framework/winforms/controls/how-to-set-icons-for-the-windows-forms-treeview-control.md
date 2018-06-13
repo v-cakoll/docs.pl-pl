@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536488"
 ---
 # <a name="how-to-set-icons-for-the-windows-forms-treeview-control"></a>Porady: ustawienie ikon dla kontrolki TreeView formularzy systemu Windows
 Formularze systemu Windows <xref:System.Windows.Forms.TreeView> formant może wyświetlać ikony obok każdego węzła. Ikony są pozycjonowane do natychmiastowego po lewej stronie tekstu węzła. Aby wyświetlić te ikony, należy skojarzyć z widoku drzewa <xref:System.Windows.Forms.ImageList> formantu. Aby uzyskać więcej informacji na temat list obrazów, zobacz [składnika ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) i [porady: Dodawanie lub usuwanie obrazów za pomocą składnika ImageList formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  

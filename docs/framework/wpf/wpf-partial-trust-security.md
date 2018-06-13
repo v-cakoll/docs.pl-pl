@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566473"
 ---
 # <a name="wpf-partial-trust-security"></a>Zabezpieczenie częściowej relacji zaufania WPF
 <a name="introduction"></a> Ogólnie rzecz biorąc można ograniczyć aplikacji internetowych, z mające bezpośredni dostęp do zasobów systemowych krytyczne, aby zapobiec uszkodzeniu złośliwe. Domyślnie [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] i języki skryptów po stronie klienta nie będą mogli uzyskiwać dostęp do zasobów systemu. Ponieważ aplikacje obsługiwane w przeglądarce Windows Presentation Foundation (WPF) można uruchomić w przeglądarce, powinna być zgodna z zestawem podobne ograniczenia. Aby wymusić ograniczenia te [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] opiera się na obu [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] i [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (zobacz [strategii zabezpieczeń WPF - zabezpieczeń platformy](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). Domyślnie aplikacje obsługiwane w przeglądarce żądań strefy internetowej [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] zestaw uprawnień, niezależnie od tego, czy są one uruchamiane z Internetu, lokalnego intranetu lub komputera lokalnego. Aplikacje uruchamiane przy użyciu innych mniej niż pełny zestaw uprawnień są określane jako działać z częściowa relacja zaufania.  

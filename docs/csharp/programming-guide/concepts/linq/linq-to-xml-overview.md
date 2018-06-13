@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339384"
 ---
 # <a name="linq-to-xml-overview-c"></a>LINQ do XML-Przegląd (C#)
 Powszechnie przyjęto XML jako sposób do formatowania danych w wielu sytuacjach. Na przykład XML można znaleźć w sieci Web, w plikach konfiguracji, pliki programu Microsoft Office Word i baz danych.  

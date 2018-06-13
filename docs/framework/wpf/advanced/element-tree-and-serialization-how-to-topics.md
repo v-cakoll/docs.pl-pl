@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543377"
 ---
 # <a name="element-tree-and-serialization-how-to-topics"></a>Drzewo elementów i serializacja Tematy pomocy
 Tematy w tej sekcji opisano sposób korzystania z drzewa element WPF.  

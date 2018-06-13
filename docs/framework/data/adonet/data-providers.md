@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767157"
 ---
 # <a name="net-framework-data-providers"></a>Dostawcy danych .NET framework
 A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawca danych służy do nawiązywania połączenia z bazą danych, wykonywania poleceń i pobierania wyników. Wyniki są albo przetwarzane bezpośrednio, umieszczone w <xref:System.Data.DataSet> aby widoczne dla użytkownika, zgodnie z potrzebami, połączony z danymi z wielu źródeł lub węzłach między warstwami. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawcy danych to lekkie, tworzenie minimalnego warstwy między źródłem danych i kod, zwiększenie wydajności bez ograniczania funkcjonalności.  

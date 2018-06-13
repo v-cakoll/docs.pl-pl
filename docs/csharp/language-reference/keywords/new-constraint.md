@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268999"
 ---
 # <a name="new-constraint-c-reference"></a>new — Ograniczenie (odwołanie w C#)
 `new` Ograniczenia Określa, że wszystkich argumentów typu w deklaracji klasy ogólnej musi mieć publicznego konstruktora bez parametrów. Aby użyć nowego ograniczenia, typu nie mogą być abstrakcyjne.  

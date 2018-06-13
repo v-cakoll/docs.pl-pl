@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269122"
 ---
 # <a name="remove-c-reference"></a>remove (odwołanie w C#)
 `remove` Kontekstowe słowo kluczowe jest używane do definiowania akcesor zdarzenie niestandardowe, które jest wywoływane, gdy kod klienta cofnięć subskrypcji z Twojej [zdarzeń](../../../csharp/language-reference/keywords/event.md). Jeśli podasz niestandardowego `remove` dostępu, należy również podać [dodać](../../../csharp/language-reference/keywords/add.md) metody dostępu.  

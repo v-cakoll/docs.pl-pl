@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363803"
 ---
 # <a name="interceptors-wcf-data-services"></a>Interceptory (usługi danych WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] umożliwia aplikacji przechwycić komunikaty żądania, aby mogli dodawać niestandardowej logiki do operacji. Można użyć tej niestandardowej logiki do sprawdzania poprawności danych w komunikatach przychodzących. Można również użyć bardziej ograniczyć zakres żądania zapytania, takie jak, aby wstawić niestandardowych zasad autoryzacji na podstawie danego żądania.  

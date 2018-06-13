@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603525"
 ---
 # <a name="return-statement-visual-basic"></a><span data-ttu-id="8ce81-102">Return — Instrukcja (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8ce81-102">Return Statement (Visual Basic)</span></span>
 <span data-ttu-id="8ce81-103">Zwraca sterowania do kodu, który wywołał `Function`, `Sub`, `Get`, `Set`, lub `Operator` procedury.</span><span class="sxs-lookup"><span data-stu-id="8ce81-103">Returns control to the code that called a `Function`, `Sub`, `Get`, `Set`, or `Operator` procedure.</span></span>  

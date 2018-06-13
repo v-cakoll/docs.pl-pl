@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600808"
 ---
 # <a name="bad-record-number"></a><span data-ttu-id="a5acc-102">Nieprawidłowy numer rekordu</span><span class="sxs-lookup"><span data-stu-id="a5acc-102">Bad record number</span></span>
 <span data-ttu-id="a5acc-103">Liczba rekordów w `a FileGet`, `FilePut`, `FileGetObject`, lub `FilePutObject` instrukcja jest mniejsza niż lub równa zero.</span><span class="sxs-lookup"><span data-stu-id="a5acc-103">The record number in `a FileGet`, `FilePut`, `FileGetObject`, or `FilePutObject` statement is less than or equal to zero.</span></span>  

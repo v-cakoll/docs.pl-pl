@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408180"
 ---
 # <a name="icordebugarrayvalue-interface1"></a><span data-ttu-id="a4c11-102">ICorDebugArrayValue Interface1</span><span class="sxs-lookup"><span data-stu-id="a4c11-102">ICorDebugArrayValue Interface1</span></span>
 <span data-ttu-id="a4c11-103">Podklasa ICorDebugHeapValue reprezentujący tablicy jednowymiarowej lub wielowymiarowych.</span><span class="sxs-lookup"><span data-stu-id="a4c11-103">A subclass of ICorDebugHeapValue that represents a single-dimensional or multi-dimensional array.</span></span>  

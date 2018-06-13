@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405606"
 ---
 # <a name="wif-code-sample-index"></a><span data-ttu-id="a66a9-102">Indeks przykładów kodu WIF</span><span class="sxs-lookup"><span data-stu-id="a66a9-102">WIF Code Sample Index</span></span>
 <span data-ttu-id="a66a9-103">Poniżej przedstawiono przykłady kodu dla systemu Windows Identity Foundation 4.5:</span><span class="sxs-lookup"><span data-stu-id="a66a9-103">The following are code samples for Windows Identity Foundation 4.5:</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408580"
 ---
 # <a name="icordebugcreateprocess-method"></a><span data-ttu-id="4b7c6-102">ICorDebug::CreateProcess — Metoda</span><span class="sxs-lookup"><span data-stu-id="4b7c6-102">ICorDebug::CreateProcess Method</span></span>
 <span data-ttu-id="4b7c6-103">Uruchamia proces i jego podstawowym wątku pod kontrolą debugera.</span><span class="sxs-lookup"><span data-stu-id="4b7c6-103">Launches a process and its primary thread under the control of the debugger.</span></span>  

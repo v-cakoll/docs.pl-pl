@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604110"
 ---
 # <a name="gtgt-operator-visual-basic"></a><span data-ttu-id="1c67c-102">&gt;&gt;= — Operator (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1c67c-102">&gt;&gt;= Operator (Visual Basic)</span></span>
 <span data-ttu-id="1c67c-103">Wykonuje arytmetyczne przesunięcie w prawo na wartość zmiennej lub właściwości i przypisuje wynik do zmiennej lub właściwości.</span><span class="sxs-lookup"><span data-stu-id="1c67c-103">Performs an arithmetic right shift on the value of a variable or property and assigns the result back to the variable or property.</span></span>  

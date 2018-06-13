@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605020"
 ---
 # <a name="module-statement"></a><span data-ttu-id="b876d-102">Module — Instrukcja</span><span class="sxs-lookup"><span data-stu-id="b876d-102">Module Statement</span></span>
 <span data-ttu-id="b876d-103">Deklaruje nazwę modułu i wprowadza definicje zmiennych, właściwości, zdarzeń i procedur, z których składa się moduł.</span><span class="sxs-lookup"><span data-stu-id="b876d-103">Declares the name of a module and introduces the definition of the variables, properties, events, and procedures that the module comprises.</span></span>  

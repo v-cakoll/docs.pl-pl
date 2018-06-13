@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410458"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a><span data-ttu-id="30abb-102">Obiekt WSTrustChannelFactory i WSTrustChannel</span><span class="sxs-lookup"><span data-stu-id="30abb-102">WSTrustChannelFactory and WSTrustChannel</span></span>
 <span data-ttu-id="30abb-103">Jeśli znasz już z programu Windows Communication Foundation (WCF), wiesz klienta WCF jest już pamiętać federacyjnego.</span><span class="sxs-lookup"><span data-stu-id="30abb-103">If you are already familiar with Windows Communication Foundation (WCF), you know that a WCF client is already federation aware.</span></span> <span data-ttu-id="30abb-104">Konfigurując klienta WCF z <xref:System.ServiceModel.WSFederationHttpBinding> lub podobne niestandardowe powiązanie, można włączyć uwierzytelnianie Sfederowane z usługą.</span><span class="sxs-lookup"><span data-stu-id="30abb-104">By configuring a WCF client with a <xref:System.ServiceModel.WSFederationHttpBinding> or similar custom binding, you can enable federated authentication to a service.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601156"
 ---
 # <a name="ltexceptiongt-visual-basic"></a><span data-ttu-id="2fde9-102">&lt;wyjątek&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2fde9-102">&lt;exception&gt; (Visual Basic)</span></span>
 <span data-ttu-id="2fde9-103">Określa, które wyjątki może zostać wygenerowany.</span><span class="sxs-lookup"><span data-stu-id="2fde9-103">Specifies which exceptions can be thrown.</span></span>  

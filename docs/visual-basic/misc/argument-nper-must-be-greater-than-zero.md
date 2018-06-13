@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601195"
 ---
 # <a name="argument-39nper39-must-be-greater-than-zero"></a><span data-ttu-id="6936b-102">Argument &#39;NPer&#39; musi być większa od zera.</span><span class="sxs-lookup"><span data-stu-id="6936b-102">Argument &#39;NPer&#39; must be greater than zero</span></span>
 <span data-ttu-id="6936b-103">`NPer` Funkcji, która zwraca `Double` określającą liczbę okresów renty wieczystej w oparciu o okresowe płatności w stałej kwocie i przy stałej stopie procentowej wymaga argumentu jest większa niż zero.</span><span class="sxs-lookup"><span data-stu-id="6936b-103">The `NPer` function, which returns a `Double` specifying the number of periods for an annuity based on periodic fixed payments and a fixed interest rate, requires an argument greater than zero.</span></span>  

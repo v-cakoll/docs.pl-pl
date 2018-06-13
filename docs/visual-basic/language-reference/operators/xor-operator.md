@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604799"
 ---
 # <a name="xor-operator-visual-basic"></a><span data-ttu-id="10a80-102">Xor — Operator (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="10a80-102">Xor Operator (Visual Basic)</span></span>
 <span data-ttu-id="10a80-103">Wykonuje logiczne wykluczenie na dwóch `Boolean` wyrażeń lub bitowego wykluczenia dwóch wyrażeń liczbowych.</span><span class="sxs-lookup"><span data-stu-id="10a80-103">Performs a logical exclusion on two `Boolean` expressions, or a bitwise exclusion on two numeric expressions.</span></span>  

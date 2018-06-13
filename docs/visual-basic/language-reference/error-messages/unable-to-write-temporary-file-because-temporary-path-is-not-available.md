@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604006"
 ---
 # <a name="unable-to-write-temporary-file-because-temporary-path-is-not-available"></a><span data-ttu-id="b6145-102">Nie można zapisać pliku tymczasowego, ponieważ ścieżka tymczasowa nie jest dostępna</span><span class="sxs-lookup"><span data-stu-id="b6145-102">Unable to write temporary file because temporary path is not available</span></span>
 <span data-ttu-id="b6145-103">Visual Basic nie można określić ścieżkę przechowywania plików tymczasowych.</span><span class="sxs-lookup"><span data-stu-id="b6145-103">Visual Basic could not determine the path where temporary files are stored.</span></span>  

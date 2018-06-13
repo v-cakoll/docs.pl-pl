@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652119"
 ---
 # <a name="object-variable-values-visual-basic"></a><span data-ttu-id="e924a-102">Wartości zmiennej obiektu (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e924a-102">Object Variable Values (Visual Basic)</span></span>
 <span data-ttu-id="e924a-103">Zmienna [Object — typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md) mogą odwoływać się do danych dowolnego typu.</span><span class="sxs-lookup"><span data-stu-id="e924a-103">A variable of the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) can refer to data of any type.</span></span> <span data-ttu-id="e924a-104">Wartości są przechowywane w `Object` zmiennej jest przechowywany w innym miejscu w pamięci, gdy samej zmiennej zawiera wskaźnik do danych.</span><span class="sxs-lookup"><span data-stu-id="e924a-104">The value you store in an `Object` variable is kept elsewhere in memory, while the variable itself holds a pointer to the data.</span></span>  

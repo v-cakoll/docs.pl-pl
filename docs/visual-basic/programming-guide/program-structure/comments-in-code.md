@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650972"
 ---
 # <a name="comments-in-code-visual-basic"></a><span data-ttu-id="928fb-102">Komentarze w kodzie (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="928fb-102">Comments in Code (Visual Basic)</span></span>
 <span data-ttu-id="928fb-103">Przykłady kodu podczas czytania, często występują symbol komentarza (`'`).</span><span class="sxs-lookup"><span data-stu-id="928fb-103">As you read the code examples, you often encounter the comment symbol (`'`).</span></span> <span data-ttu-id="928fb-104">Ten symbol informuje kompilator Visual Basic, aby zignorować tekst, lub *komentarz*.</span><span class="sxs-lookup"><span data-stu-id="928fb-104">This symbol tells the Visual Basic compiler to ignore the text following it, or the *comment*.</span></span> <span data-ttu-id="928fb-105">Komentarze to krótkie notatki wyjaśniające, dodane do kodu, aby ułatwić życie innym osobom, które go czytają.</span><span class="sxs-lookup"><span data-stu-id="928fb-105">Comments are brief explanatory notes added to code for the benefit of those reading it.</span></span>  

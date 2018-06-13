@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654138"
 ---
 # <a name="building-from-the-command-line-visual-basic"></a><span data-ttu-id="394b5-102">Tworzenie z wiersza polecenia (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="394b5-102">Building from the Command Line (Visual Basic)</span></span>
 <span data-ttu-id="394b5-103">Projekt Visual Basic składa się z jednego lub więcej plików oddzielne źródło.</span><span class="sxs-lookup"><span data-stu-id="394b5-103">A Visual Basic project is made up of one or more separate source files.</span></span> <span data-ttu-id="394b5-104">W trakcie znany jako kompilacji te pliki zostaną połączone razem w jednym pakiecie — pojedynczy plik wykonywalny, który może działać jako aplikacja.</span><span class="sxs-lookup"><span data-stu-id="394b5-104">During the process known as compilation, these files are brought together into one package—a single executable file that can be run as an application.</span></span>  

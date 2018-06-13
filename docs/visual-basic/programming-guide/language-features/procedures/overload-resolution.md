@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653432"
 ---
 # <a name="overload-resolution-visual-basic"></a><span data-ttu-id="01151-102">Rozpoznanie przeciążenia (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="01151-102">Overload Resolution (Visual Basic)</span></span>
 <span data-ttu-id="01151-103">Gdy kompilator Visual Basic napotka wywołaniu procedury, która jest zdefiniowana w kilku wersji przeciążona, kompilator należy zdecydować, które przeciążeń do wywołania.</span><span class="sxs-lookup"><span data-stu-id="01151-103">When the Visual Basic compiler encounters a call to a procedure that is defined in several overloaded versions, the compiler must decide which of the overloads to call.</span></span> <span data-ttu-id="01151-104">Dzieje się tak, wykonując następujące czynności:</span><span class="sxs-lookup"><span data-stu-id="01151-104">It does this by performing the following steps:</span></span>  

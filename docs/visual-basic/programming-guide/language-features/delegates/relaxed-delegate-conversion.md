@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650832"
 ---
 # <a name="relaxed-delegate-conversion-visual-basic"></a><span data-ttu-id="f83ae-102">Swobodna konwersja delegatów (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f83ae-102">Relaxed Delegate Conversion (Visual Basic)</span></span>
 <span data-ttu-id="f83ae-103">Swobodna konwersja delegatów umożliwia przypisanie subskrypcji i funkcji do delegatów lub obsługi, nawet wtedy, gdy ich podpisów nie są identyczne.</span><span class="sxs-lookup"><span data-stu-id="f83ae-103">Relaxed delegate conversion enables you to assign subs and functions to delegates or handlers even when their signatures are not identical.</span></span> <span data-ttu-id="f83ae-104">W związku z tym powiązanie do obiektów delegowanych staje się spójne z powiązaniem już dozwolone dla wywołań metod.</span><span class="sxs-lookup"><span data-stu-id="f83ae-104">Therefore, binding to delegates becomes consistent with the binding already allowed for method invocations.</span></span>  

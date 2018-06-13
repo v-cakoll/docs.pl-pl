@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650455"
 ---
 # <a name="data-types-in-visual-basic"></a><span data-ttu-id="32701-102">Typy danych w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="32701-102">Data Types in Visual Basic</span></span>
 <span data-ttu-id="32701-103">*— Typ danych* elementu programowania odwołuje się do jakiego rodzaju dane można przechowywać i jak są przechowywane dane.</span><span class="sxs-lookup"><span data-stu-id="32701-103">The *data type* of a programming element refers to what kind of data it can hold and how it stores that data.</span></span> <span data-ttu-id="32701-104">Typy danych są stosowane do wszystkich wartości, które mogą być przechowywane w pamięci komputera lub udziału podczas obliczania wyrażenia.</span><span class="sxs-lookup"><span data-stu-id="32701-104">Data types apply to all values that can be stored in computer memory or participate in the evaluation of an expression.</span></span> <span data-ttu-id="32701-105">Każdej zmiennej, literał, stała, wyliczenie, właściwości, parametru procedury, argumentu procedury oraz procedury zwracanej wartości musi typu danych.</span><span class="sxs-lookup"><span data-stu-id="32701-105">Every variable, literal, constant, enumeration, property, procedure parameter, procedure argument, and procedure return value has a data type.</span></span>  

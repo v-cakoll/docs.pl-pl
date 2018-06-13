@@ -25,6 +25,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172344"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a><span data-ttu-id="721fd-102">Porady: sprawdzanie, czy format poczty e-mail ciągów jest prawidłowy</span><span class="sxs-lookup"><span data-stu-id="721fd-102">How to: Verify that Strings Are in Valid Email Format</span></span>
 <span data-ttu-id="721fd-103">W poniższym przykładzie użyto wyrażenia regularnego, aby sprawdzić, czy ciąg w formacie prawidłowy adres e-mail.</span><span class="sxs-lookup"><span data-stu-id="721fd-103">The following example uses a regular expression to verify that a string is in valid email format.</span></span>  

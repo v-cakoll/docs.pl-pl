@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655561"
 ---
 # <a name="namespaces-in-visual-basic"></a><span data-ttu-id="aefed-102">Przestrzenie nazw w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="aefed-102">Namespaces in Visual Basic</span></span>
 <span data-ttu-id="aefed-103">Przestrzenie nazw organizowanie obiektów zdefiniowanych w zestawie.</span><span class="sxs-lookup"><span data-stu-id="aefed-103">Namespaces organize the objects defined in an assembly.</span></span> <span data-ttu-id="aefed-104">Zestawy może zawierać wiele obszarów nazw, który z kolei może zawierać innych przestrzeniach nazw.</span><span class="sxs-lookup"><span data-stu-id="aefed-104">Assemblies can contain multiple namespaces, which can in turn contain other namespaces.</span></span> <span data-ttu-id="aefed-105">Przestrzenie nazw uniknąć niejednoznaczności i uprościć odwołań w przypadku przy użyciu dużych grup obiektów, takich jak biblioteki klas.</span><span class="sxs-lookup"><span data-stu-id="aefed-105">Namespaces prevent ambiguity and simplify references when using large groups of objects such as class libraries.</span></span>  

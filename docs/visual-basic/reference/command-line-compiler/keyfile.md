@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653484"
 ---
 # <a name="-keyfile"></a><span data-ttu-id="d0c8a-102">-keyfile</span><span class="sxs-lookup"><span data-stu-id="d0c8a-102">-keyfile</span></span>
 <span data-ttu-id="d0c8a-103">Określa plik zawierający klucz lub parę kluczy, aby zapewnić silnej nazwy zestawu.</span><span class="sxs-lookup"><span data-stu-id="d0c8a-103">Specifies a file containing a key or key pair to give an assembly a strong name.</span></span>  

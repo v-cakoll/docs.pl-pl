@@ -11,6 +11,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172376"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="0f24d-102">Operator ^= (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="0f24d-102">^= Operator (C# Reference)</span></span>
 <span data-ttu-id="0f24d-103">Operator przypisania OR wyłączne.</span><span class="sxs-lookup"><span data-stu-id="0f24d-103">The exclusive-OR assignment operator.</span></span>  

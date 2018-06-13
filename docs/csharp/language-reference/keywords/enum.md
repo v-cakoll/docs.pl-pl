@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172231"
 ---
 # <a name="enum-c-reference"></a><span data-ttu-id="77d2b-102">enum (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="77d2b-102">enum (C# Reference)</span></span>
 <span data-ttu-id="77d2b-103">`enum` — Słowo kluczowe służy do deklarowania wyliczenie różne typu, który zawiera zestaw stałe nazwane o nazwie listy modułu wyliczającego.</span><span class="sxs-lookup"><span data-stu-id="77d2b-103">The `enum` keyword is used to declare an enumeration, a distinct type that consists of a set of named constants called the enumerator list.</span></span>  

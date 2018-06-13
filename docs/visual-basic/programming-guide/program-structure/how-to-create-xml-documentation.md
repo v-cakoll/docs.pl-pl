@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650884"
 ---
 # <a name="how-to-create-xml-documentation-in-visual-basic"></a><span data-ttu-id="c0bee-102">Porady: tworzenie dokumentacji XML w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c0bee-102">How to: Create XML Documentation in Visual Basic</span></span>
 <span data-ttu-id="c0bee-103">W tym przykładzie przedstawiono sposób dodawania komentarzy dokumentacji XML w kodzie.</span><span class="sxs-lookup"><span data-stu-id="c0bee-103">This example shows how to add XML documentation comments to your code.</span></span>  

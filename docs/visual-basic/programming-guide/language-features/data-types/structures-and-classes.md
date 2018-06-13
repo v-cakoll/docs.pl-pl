@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654125"
 ---
 # <a name="structures-and-classes-visual-basic"></a><span data-ttu-id="97f9d-102">Struktury i klasy (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="97f9d-102">Structures and Classes (Visual Basic)</span></span>
 <span data-ttu-id="97f9d-103">Visual Basic łączy składnia struktury i klasy, z wynikami, że obie te jednostki obsługuje większość tej samej funkcji.</span><span class="sxs-lookup"><span data-stu-id="97f9d-103">Visual Basic unifies the syntax for structures and classes, with the result that both entities support most of the same features.</span></span> <span data-ttu-id="97f9d-104">Istnieją również istotne różnice między struktury i klasy.</span><span class="sxs-lookup"><span data-stu-id="97f9d-104">However, there are also important differences between structures and classes.</span></span>  

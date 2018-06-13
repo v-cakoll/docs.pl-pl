@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655117"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a><span data-ttu-id="06bd0-102">Wskazówki: obsługa zdarzeń (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="06bd0-102">Walkthrough: Handling Events (Visual Basic)</span></span>
 <span data-ttu-id="06bd0-103">Jest to drugi dwa tematy, które przedstawiają sposób pracy ze zdarzeniami.</span><span class="sxs-lookup"><span data-stu-id="06bd0-103">This is the second of two topics that demonstrate how to work with events.</span></span> <span data-ttu-id="06bd0-104">Pierwszym temacie [wskazówki: deklarujący i wywoływanie zdarzeń](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), pokazuje, jak deklarowanie i wywoływanie zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="06bd0-104">The first topic, [Walkthrough: Declaring and Raising Events](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), shows how to declare and raise events.</span></span> <span data-ttu-id="06bd0-105">Ta sekcja używa formularza i klasy z tego przewodnika pokazanie sposobu obsługi zdarzenia, gdy ich została wykonana.</span><span class="sxs-lookup"><span data-stu-id="06bd0-105">This section uses the form and class from that walkthrough to show how to handle events when they take place.</span></span>  

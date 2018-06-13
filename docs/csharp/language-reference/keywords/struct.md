@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172152"
 ---
 # <a name="struct-c-reference"></a><span data-ttu-id="5101e-102">struct (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="5101e-102">struct (C# Reference)</span></span>
 <span data-ttu-id="5101e-103">A `struct` typem jest typ wartości, która jest zwykle używana w celu hermetyzacji małych grup zmienne pokrewne, takie jak współrzędne prostokąta lub właściwości elementu w magazynie.</span><span class="sxs-lookup"><span data-stu-id="5101e-103">A `struct` type is a value type that is typically used to encapsulate small groups of related variables, such as the coordinates of a rectangle or the characteristics of an item in an inventory.</span></span> <span data-ttu-id="5101e-104">W poniższym przykładzie przedstawiono deklaracji struktury prosty:</span><span class="sxs-lookup"><span data-stu-id="5101e-104">The following example shows a simple struct declaration:</span></span>  

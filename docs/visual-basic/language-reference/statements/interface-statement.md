@@ -12,6 +12,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34233915"
 ---
 # <a name="interface-statement-visual-basic"></a><span data-ttu-id="c2f09-102">Interface — Instrukcja (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c2f09-102">Interface Statement (Visual Basic)</span></span>
 <span data-ttu-id="c2f09-103">Deklaruje nazwę interfejsu i wprowadza definicje elementów członkowskich, które obejmuje interfejsu.</span><span class="sxs-lookup"><span data-stu-id="c2f09-103">Declares the name of an interface and introduces the definitions of the members that the interface comprises.</span></span>  

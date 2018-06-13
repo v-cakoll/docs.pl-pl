@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33472960"
 ---
 # <a name="57397---unhandledexception"></a><span data-ttu-id="0aca6-102">57397 — UnhandledException</span><span class="sxs-lookup"><span data-stu-id="0aca6-102">57397 - UnhandledException</span></span>
 ## <a name="properties"></a><span data-ttu-id="0aca6-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="0aca6-103">Properties</span></span>  

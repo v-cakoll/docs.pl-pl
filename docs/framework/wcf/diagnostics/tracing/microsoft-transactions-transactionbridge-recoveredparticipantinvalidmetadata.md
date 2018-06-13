@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33475273"
 ---
 # <a name="microsofttransactionstransactionbridgerecoveredparticipantinvalidmetadata"></a><span data-ttu-id="58880-102">Microsoft.Transactions.TransactionBridge.RecoveredParticipantInvalidMetadata</span><span class="sxs-lookup"><span data-stu-id="58880-102">Microsoft.Transactions.TransactionBridge.RecoveredParticipantInvalidMetadata</span></span>
 <span data-ttu-id="58880-103">Odwołanie do punktu końcowego znalezione w pozycji dziennika odzyskiwania uczestnika zawiera nieprawidłowe lub niezgodne metadane.</span><span class="sxs-lookup"><span data-stu-id="58880-103">The endpoint reference found in a participant recovery log entry contained invalid or incompatible metadata.</span></span>  

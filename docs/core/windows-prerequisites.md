@@ -9,6 +9,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34311991"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a><span data-ttu-id="8ae68-103">Wymagania wstępne dotyczące platformy .NET Core w systemie Windows</span><span class="sxs-lookup"><span data-stu-id="8ae68-103">Prerequisites for .NET Core on Windows</span></span>
 

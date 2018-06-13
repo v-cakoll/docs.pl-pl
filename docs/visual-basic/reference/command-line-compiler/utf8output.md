@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653588"
 ---
 # <a name="-utf8output-visual-basic"></a><span data-ttu-id="db6b3-102">-utf8output (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="db6b3-102">-utf8output (Visual Basic)</span></span>
 <span data-ttu-id="db6b3-103">Wyświetla kompilatora, dane wyjściowe przy użyciu kodowania UTF-8.</span><span class="sxs-lookup"><span data-stu-id="db6b3-103">Displays compiler output using UTF-8 encoding.</span></span>  

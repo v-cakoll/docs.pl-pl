@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655801"
 ---
 # <a name="boolean-expressions-visual-basic"></a><span data-ttu-id="58a3c-102">Wyrażenia logiczne (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="58a3c-102">Boolean Expressions (Visual Basic)</span></span>
 <span data-ttu-id="58a3c-103">A *wyrażenie warunkowe* wyrażenie obliczane do wartości [— typ danych logicznych](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` lub `False`.</span><span class="sxs-lookup"><span data-stu-id="58a3c-103">A *Boolean expression* is an expression that evaluates to a value of the [Boolean Data Type](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` or `False`.</span></span> <span data-ttu-id="58a3c-104">`Boolean` wyrażenia może potrwać kilka formularzy.</span><span class="sxs-lookup"><span data-stu-id="58a3c-104">`Boolean` expressions can take several forms.</span></span> <span data-ttu-id="58a3c-105">Najprostszą jest bezpośrednie porównanie wartości `Boolean` zmienną `Boolean` literal, jak pokazano w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="58a3c-105">The simplest is the direct comparison of the value of a `Boolean` variable to a `Boolean` literal, as shown in the following example.</span></span>  

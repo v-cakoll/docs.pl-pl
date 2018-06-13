@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171944"
 ---
 # <a name="typeof-c-reference"></a><span data-ttu-id="2bac6-102">typeof (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="2bac6-102">typeof (C# Reference)</span></span>
 <span data-ttu-id="2bac6-103">Uzywany do uzyskania obiektu `System.Type` dla typu.</span><span class="sxs-lookup"><span data-stu-id="2bac6-103">Used to obtain the `System.Type` object for a type.</span></span> <span data-ttu-id="2bac6-104">Wyrazenie `typeof` ma nastepujaca postac:</span><span class="sxs-lookup"><span data-stu-id="2bac6-104">A `typeof` expression takes the following form:</span></span>  

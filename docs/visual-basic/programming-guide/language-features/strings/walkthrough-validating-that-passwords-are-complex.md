@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650286"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a><span data-ttu-id="77602-102">Wskazówki: sprawdzanie poprawności złożoności haseł (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="77602-102">Walkthrough: Validating That Passwords Are Complex (Visual Basic)</span></span>
 <span data-ttu-id="77602-103">Ta metoda sprawdza, czy niektóre cechy silnego hasła i aktualizuje informacje o tym, które sprawdza hasła nie powiedzie się. parametr typu string.</span><span class="sxs-lookup"><span data-stu-id="77602-103">This method checks for some strong-password characteristics and updates a string parameter with information about which checks the password fails.</span></span>  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656090"
 ---
 # <a name="property-procedures-visual-basic"></a><span data-ttu-id="b2240-102">Procedury własności (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b2240-102">Property Procedures (Visual Basic)</span></span>
 <span data-ttu-id="b2240-103">Procedury właściwości jest szereg instrukcji, które modyfikowania właściwości niestandardowych dla modułu, klasy lub struktury.</span><span class="sxs-lookup"><span data-stu-id="b2240-103">A property procedure is a series of Visual Basic statements that manipulate a custom property on a module, class, or structure.</span></span> <span data-ttu-id="b2240-104">Procedury własności są również znane jako *metod dostępu do właściwości*.</span><span class="sxs-lookup"><span data-stu-id="b2240-104">Property procedures are also known as *property accessors*.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654112"
 ---
 # <a name="other-control-structures-visual-basic"></a><span data-ttu-id="922fa-102">Inne struktury sterujące (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="922fa-102">Other Control Structures (Visual Basic)</span></span>
 <span data-ttu-id="922fa-103">Visual Basic zapewnia struktury sterujące, które ułatwiają Usuwanie zasobu lub Zmniejsz liczbę razy, należy powtórzyć odwołanie do obiektu.</span><span class="sxs-lookup"><span data-stu-id="922fa-103">Visual Basic provides control structures that help you dispose of a resource or reduce the number of times you have to repeat an object reference.</span></span>  

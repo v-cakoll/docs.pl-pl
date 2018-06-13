@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171882"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="b78f5-102">+= — Operator (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="b78f5-102">+= Operator (C# Reference)</span></span>
 <span data-ttu-id="b78f5-103">Operator przypisania dodawania.</span><span class="sxs-lookup"><span data-stu-id="b78f5-103">The addition assignment operator.</span></span>  

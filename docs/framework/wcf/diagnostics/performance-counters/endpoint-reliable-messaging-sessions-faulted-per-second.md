@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33472774"
 ---
 # <a name="endpoint-reliable-messaging-sessions-faulted-per-second"></a><span data-ttu-id="1dd57-102">Punkt końcowy: Błędne sesje komunikacji niezawodnej na sekundę</span><span class="sxs-lookup"><span data-stu-id="1dd57-102">Endpoint: Reliable Messaging Sessions Faulted Per Second</span></span>
 <span data-ttu-id="1dd57-103">Nazwa licznika: Błędne sesje komunikacji niezawodnej na sekundę.</span><span class="sxs-lookup"><span data-stu-id="1dd57-103">Counter Name: Reliable Messaging Sessions Faulted Per Second.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33473275"
 ---
 # <a name="57396---throwingexception"></a><span data-ttu-id="bc8aa-102">57396 — ThrowingException</span><span class="sxs-lookup"><span data-stu-id="bc8aa-102">57396 - ThrowingException</span></span>
 ## <a name="properties"></a><span data-ttu-id="bc8aa-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="bc8aa-103">Properties</span></span>  

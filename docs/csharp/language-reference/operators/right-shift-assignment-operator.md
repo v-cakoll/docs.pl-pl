@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171421"
 ---
 # <a name="gtgt-operator-c-reference"></a><span data-ttu-id="903a0-102">&gt;&gt;= — Operator (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="903a0-102">&gt;&gt;= Operator (C# Reference)</span></span>
 <span data-ttu-id="903a0-103">Operator przypisania przesunięcia w prawo.</span><span class="sxs-lookup"><span data-stu-id="903a0-103">The right-shift assignment operator.</span></span>  

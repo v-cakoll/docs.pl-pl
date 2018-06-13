@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651021"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a><span data-ttu-id="86838-102">Porady: przerywanie i łączenie instrukcji w Code (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="86838-102">How to: Break and Combine Statements in Code (Visual Basic)</span></span>
 <span data-ttu-id="86838-103">Podczas pisania kodu, można utworzyć w czasie długich instrukcji, które wymagają przewijanie w poziomie w edytorze kodu.</span><span class="sxs-lookup"><span data-stu-id="86838-103">When writing your code, you might at times create lengthy statements that necessitate horizontal scrolling in the Code Editor.</span></span> <span data-ttu-id="86838-104">Mimo że to nie wpływa na sposób działania kodu, go utrudnia nikogo odczytać kodu znajdującego się na monitora.</span><span class="sxs-lookup"><span data-stu-id="86838-104">Although this doesn't affect the way your code runs, it makes it difficult for you or anyone else to read the code as it appears on the monitor.</span></span> <span data-ttu-id="86838-105">W takim przypadku należy rozważyć dzielenie jednej instrukcji długa na kilka wierszy.</span><span class="sxs-lookup"><span data-stu-id="86838-105">In such cases, you should consider breaking the single long statement into several lines.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33471586"
 ---
 # <a name="4807---discoverymessagewithinvalidreplyto"></a><span data-ttu-id="3f807-102">4807 — DiscoveryMessageWithInvalidReplyTo</span><span class="sxs-lookup"><span data-stu-id="3f807-102">4807 - DiscoveryMessageWithInvalidReplyTo</span></span>
 ## <a name="properties"></a><span data-ttu-id="3f807-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="3f807-103">Properties</span></span>  

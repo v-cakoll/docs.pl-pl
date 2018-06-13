@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650572"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a><span data-ttu-id="d96cb-102">Konwertowanie pomiędzy ciągami a innymi typami danych (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d96cb-102">Conversions Between Strings and Other Types (Visual Basic)</span></span>
 <span data-ttu-id="d96cb-103">Możesz przekształcić liczbową, `Boolean`, lub wartości daty/godziny `String`.</span><span class="sxs-lookup"><span data-stu-id="d96cb-103">You can convert a numeric, `Boolean`, or date/time value to a `String`.</span></span> <span data-ttu-id="d96cb-104">Można również przeprowadzić konwersję w kierunku odwrotnym — z wartości ciągu na liczbowe, `Boolean`, lub `Date` — pod warunkiem zawartość ciąg może zostać zinterpretowany jako prawidłowa wartość docelowego typu danych.</span><span class="sxs-lookup"><span data-stu-id="d96cb-104">You can also convert in the reverse direction — from a string value to numeric, `Boolean`, or `Date` — provided the contents of the string can be interpreted as a valid value of the destination data type.</span></span> <span data-ttu-id="d96cb-105">Jeśli nie, występuje błąd w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="d96cb-105">If they cannot, a run-time error occurs.</span></span>  

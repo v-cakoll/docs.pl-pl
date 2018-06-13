@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656142"
 ---
 # <a name="variable-declaration-in-visual-basic"></a><span data-ttu-id="6099d-102">Deklaracja zmiennej w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6099d-102">Variable Declaration in Visual Basic</span></span>
 <span data-ttu-id="6099d-103">Można zadeklarować zmiennej do określenia nazwy i właściwości.</span><span class="sxs-lookup"><span data-stu-id="6099d-103">You declare a variable to specify its name and characteristics.</span></span> <span data-ttu-id="6099d-104">Instrukcja deklaracji zmiennych jest [instrukcji Dim](../../../../visual-basic/language-reference/statements/dim-statement.md).</span><span class="sxs-lookup"><span data-stu-id="6099d-104">The declaration statement for variables is the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md).</span></span> <span data-ttu-id="6099d-105">Jej lokalizacja i zawartość należy określić charakterystyki zmiennej.</span><span class="sxs-lookup"><span data-stu-id="6099d-105">Its location and contents determine the variable's characteristics.</span></span>  

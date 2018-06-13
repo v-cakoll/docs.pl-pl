@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650218"
 ---
 # <a name="recursive-procedures-visual-basic"></a><span data-ttu-id="825ec-102">Procedury rekurencyjne (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="825ec-102">Recursive Procedures (Visual Basic)</span></span>
 <span data-ttu-id="825ec-103">A *cykliczne* procedura jest taki, który wywołuje sam siebie.</span><span class="sxs-lookup"><span data-stu-id="825ec-103">A *recursive* procedure is one that calls itself.</span></span> <span data-ttu-id="825ec-104">Ogólnie rzecz biorąc to nie jest najbardziej efektywny sposób pisania kodu języka Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="825ec-104">In general, this is not the most effective way to write Visual Basic code.</span></span>  

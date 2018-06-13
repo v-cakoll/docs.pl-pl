@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474236"
 ---
 # <a name="messageauthenticationsuccess"></a><span data-ttu-id="982bb-102">MessageAuthenticationSuccess</span><span class="sxs-lookup"><span data-stu-id="982bb-102">MessageAuthenticationSuccess</span></span>
 <span data-ttu-id="982bb-103">Identyfikator: 169</span><span class="sxs-lookup"><span data-stu-id="982bb-103">Id: 169</span></span>  

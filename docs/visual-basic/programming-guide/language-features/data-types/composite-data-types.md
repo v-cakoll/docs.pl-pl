@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650442"
 ---
 # <a name="composite-data-types-visual-basic"></a><span data-ttu-id="825fa-102">Złożone typy danych (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="825fa-102">Composite Data Types (Visual Basic)</span></span>
 <span data-ttu-id="825fa-103">Oprócz dostaw Visual Basic typy podstawowe dane, można złożyć elementów różnego typu, aby utworzyć *złożone typy danych* takich jak klasy, tablic i struktury.</span><span class="sxs-lookup"><span data-stu-id="825fa-103">In addition to the elementary data types Visual Basic supplies, you can also assemble items of different types to create *composite data types* such as structures, arrays, and classes.</span></span> <span data-ttu-id="825fa-104">Złożone typy danych można tworzyć z typów podstawowych i innych typów złożonych.</span><span class="sxs-lookup"><span data-stu-id="825fa-104">You can build composite data types from elementary types and from other composite types.</span></span> <span data-ttu-id="825fa-105">Na przykład można zdefiniować tablicę elementów struktury lub struktura z tablicy elementów członkowskich.</span><span class="sxs-lookup"><span data-stu-id="825fa-105">For example, you can define an array of structure elements, or a structure with array members.</span></span>  

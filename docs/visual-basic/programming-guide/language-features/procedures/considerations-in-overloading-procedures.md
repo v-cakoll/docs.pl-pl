@@ -30,6 +30,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654333"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a><span data-ttu-id="d8a27-102">Zagadnienia dotyczące przeciążania procedur (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d8a27-102">Considerations in Overloading Procedures (Visual Basic)</span></span>
 <span data-ttu-id="d8a27-103">Przeciążanie procedury, należy używać innej *podpisu* dla każdej wersji przeciążona.</span><span class="sxs-lookup"><span data-stu-id="d8a27-103">When you overload a procedure, you must use a different *signature* for each overloaded version.</span></span> <span data-ttu-id="d8a27-104">Zwykle oznacza to, że każda wersja należy określić inną listą parametrów.</span><span class="sxs-lookup"><span data-stu-id="d8a27-104">This usually means each version must specify a different parameter list.</span></span> <span data-ttu-id="d8a27-105">Aby uzyskać więcej informacji, zobacz "Inny podpis" w [przeciążanie procedury](./procedure-overloading.md).</span><span class="sxs-lookup"><span data-stu-id="d8a27-105">For more information, see "Different Signature" in [Procedure Overloading](./procedure-overloading.md).</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/18/2018
+ms.locfileid: "34306530"
 ---
 # <a name="for-c-reference"></a><span data-ttu-id="b4f50-102">Aby uzyskać (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="b4f50-102">for (C# reference)</span></span>
 

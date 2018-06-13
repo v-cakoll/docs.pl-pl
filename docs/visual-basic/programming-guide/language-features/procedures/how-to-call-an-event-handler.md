@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652685"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a><span data-ttu-id="87415-102">Porady: wywoływanie programu do obsługi zdarzeń w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="87415-102">How to: Call an Event Handler in Visual Basic</span></span>
 <span data-ttu-id="87415-103">*Zdarzeń* jest akcji lub wystąpienie — takie jak myszy przekroczony kliknij lub limit kredytu — który jest rozpoznawany przez inny składnik programu i dla którego można napisać kod do odpowiedzi.</span><span class="sxs-lookup"><span data-stu-id="87415-103">An *event* is an action or occurrence — such as a mouse click or a credit limit exceeded — that is recognized by some program component, and for which you can write code to respond.</span></span> <span data-ttu-id="87415-104">*Obsługi zdarzeń* jest zapisywany kod, aby odpowiadać na zdarzenie.</span><span class="sxs-lookup"><span data-stu-id="87415-104">An *event handler* is the code you write to respond to an event.</span></span>  

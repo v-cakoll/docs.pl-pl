@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446745"
 ---
 # <a name="ihostfilter-interface"></a><span data-ttu-id="955fb-102">IHostFilter — Interfejs</span><span class="sxs-lookup"><span data-stu-id="955fb-102">IHostFilter Interface</span></span>
 <span data-ttu-id="955fb-103">Udostępnia metodę, aby wskazać, że określony token będą przetwarzane.</span><span class="sxs-lookup"><span data-stu-id="955fb-103">Provides a method to indicate that a specified token will be processed.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448976"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a><span data-ttu-id="72fdc-102">IMetaDataImport::GetFieldProps — Metoda</span><span class="sxs-lookup"><span data-stu-id="72fdc-102">IMetaDataImport::GetFieldProps Method</span></span>
 <span data-ttu-id="72fdc-103">Pobiera metadane skojarzone z polem odwołuje się określony FieldDef token.</span><span class="sxs-lookup"><span data-stu-id="72fdc-103">Gets metadata associated with the field referenced by the specified FieldDef token.</span></span>  

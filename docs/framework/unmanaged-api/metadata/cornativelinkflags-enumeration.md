@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442572"
 ---
 # <a name="cornativelinkflags-enumeration"></a><span data-ttu-id="d6b09-102">CorNativeLinkFlags — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="d6b09-102">CorNativeLinkFlags Enumeration</span></span>
 <span data-ttu-id="d6b09-103">Udostępnia wartości flag używane przez konsolidator podczas łączenia kodu natywnego.</span><span class="sxs-lookup"><span data-stu-id="d6b09-103">Provides flag values used by the linker when linking native code.</span></span>  

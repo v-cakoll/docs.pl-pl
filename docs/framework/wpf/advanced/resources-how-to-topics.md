@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546167"
 ---
 # <a name="resources-how-to-topics"></a><span data-ttu-id="176ac-102">Zasoby Tematy porad</span><span class="sxs-lookup"><span data-stu-id="176ac-102">Resources How-to Topics</span></span>
 <span data-ttu-id="176ac-103">Tematy w tej sekcji opisano, jak korzystać z zasobów systemu Windows Presentation Foundation (WPF).</span><span class="sxs-lookup"><span data-stu-id="176ac-103">The topics in this section describe how to use Windows Presentation Foundation (WPF) resources.</span></span>  

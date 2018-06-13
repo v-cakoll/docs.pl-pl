@@ -14,6 +14,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33955969"
 ---
 # <a name="event-c-reference"></a><span data-ttu-id="6a45a-102">event (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="6a45a-102">event (C# Reference)</span></span>
 <span data-ttu-id="6a45a-103">`event` — Słowo kluczowe służy do deklarowania zdarzenia w klasie wydawcy.</span><span class="sxs-lookup"><span data-stu-id="6a45a-103">The `event` keyword is used to declare an event in a publisher class.</span></span>  

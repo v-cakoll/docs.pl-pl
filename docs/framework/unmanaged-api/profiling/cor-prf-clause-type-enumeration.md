@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449936"
 ---
 # <a name="corprfclausetype-enumeration"></a><span data-ttu-id="116a2-102">COR_PRF_CLAUSE_TYPE — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="116a2-102">COR_PRF_CLAUSE_TYPE Enumeration</span></span>
 <span data-ttu-id="116a2-103">Wskazuje typ klauzuli wyjątek, który właśnie wprowadzony kod lub w lewo.</span><span class="sxs-lookup"><span data-stu-id="116a2-103">Indicates the type of exception clause that the code has just entered or left.</span></span>  

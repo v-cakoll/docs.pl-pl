@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452614"
 ---
 # <a name="icorprofilerinfoendinprocdebugging-method"></a><span data-ttu-id="f687f-102">ICorProfilerInfo::EndInprocDebugging — Metoda</span><span class="sxs-lookup"><span data-stu-id="f687f-102">ICorProfilerInfo::EndInprocDebugging Method</span></span>
 <span data-ttu-id="f687f-103">Zamyka w trakcie sesji debugowania.</span><span class="sxs-lookup"><span data-stu-id="f687f-103">Shuts down an in-process debugging session.</span></span> <span data-ttu-id="f687f-104">Ta metoda jest przestarzała w programie .NET Framework w wersji 2.0.</span><span class="sxs-lookup"><span data-stu-id="f687f-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  

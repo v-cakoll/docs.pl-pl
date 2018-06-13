@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446147"
 ---
 # <a name="ihostsyncmanagercreatesemaphore-method"></a><span data-ttu-id="65af0-102">IHostSyncManager::CreateSemaphore — Metoda</span><span class="sxs-lookup"><span data-stu-id="65af0-102">IHostSyncManager::CreateSemaphore Method</span></span>
 <span data-ttu-id="65af0-103">Tworzy [IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md) obiektu dla środowisko uruchomieniowe języka wspólnego (CLR) ma być używana jako semafor Czekaj zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="65af0-103">Creates an [IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md) object for the common language runtime (CLR) to use as a semaphore for wait events.</span></span>  

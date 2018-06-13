@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33486740"
 ---
 # <a name="recommended-settings-for-tracing-and-message-logging"></a><span data-ttu-id="66c7c-102">Zalecane ustawienia śledzenia i rejestrowania komunikatów</span><span class="sxs-lookup"><span data-stu-id="66c7c-102">Recommended Settings for Tracing and Message Logging</span></span>
 <span data-ttu-id="66c7c-103">W tym temacie opisano ustawienia rejestrowania komunikatów dla różnych środowisk operacyjnych i śledzenie zalecane.</span><span class="sxs-lookup"><span data-stu-id="66c7c-103">This topic describes recommended tracing and message logging settings for different operating environments.</span></span>  

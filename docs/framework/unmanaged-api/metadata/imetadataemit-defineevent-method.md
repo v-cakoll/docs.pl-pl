@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448207"
 ---
 # <a name="imetadataemitdefineevent-method"></a><span data-ttu-id="f1406-102">IMetaDataEmit::DefineEvent — Metoda</span><span class="sxs-lookup"><span data-stu-id="f1406-102">IMetaDataEmit::DefineEvent Method</span></span>
 <span data-ttu-id="f1406-103">Tworzy definicję zdarzenie o sygnaturze określonych metadanych, a następnie pobiera token do tej definicji zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="f1406-103">Creates a definition for an event with the specified metadata signature, and gets a token to that event definition.</span></span>  

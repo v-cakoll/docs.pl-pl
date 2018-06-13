@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474457"
 ---
 # <a name="calls-failed-per-second"></a><span data-ttu-id="98061-102">Wywołania zakończone niepowodzeniami na sekundę</span><span class="sxs-lookup"><span data-stu-id="98061-102">Calls Failed Per Second</span></span>
 <span data-ttu-id="98061-103">Nazwa licznika: Wywołania zakończone niepowodzeniami na sekundę</span><span class="sxs-lookup"><span data-stu-id="98061-103">Counter Name: Calls Failed Per Second</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450014"
 ---
 # <a name="metadata-global-static-functions"></a><span data-ttu-id="5f2f9-102">Statyczne funkcje globalne metadanych</span><span class="sxs-lookup"><span data-stu-id="5f2f9-102">Metadata Global Static Functions</span></span>
 <span data-ttu-id="5f2f9-103">Począwszy od [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)], w dokumentacji `_Cor*`, `CoInitialize*`, `CoUninitialize*`, i `CoEEShutDownCOM` funkcji, które odnoszą się do hostingu, znajduje się w [przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md).</span><span class="sxs-lookup"><span data-stu-id="5f2f9-103">Beginning with the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)], the documentation for the `_Cor*`, `CoInitialize*`, `CoUninitialize*`, and `CoEEShutDownCOM` functions, which pertain to hosting, is located in [Deprecated CLR Hosting Functions](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md).</span></span> <span data-ttu-id="5f2f9-104">Nie ma żadnych statyczne funkcje globalne, które odnoszą się do metadanych.</span><span class="sxs-lookup"><span data-stu-id="5f2f9-104">There are no global static functions that pertain to metadata.</span></span>  

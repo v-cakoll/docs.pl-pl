@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33958222"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a><span data-ttu-id="0b4d6-103">Technologii firmy Microsoft w chmurze są zoptymalizowane pod kątem aplikacji</span><span class="sxs-lookup"><span data-stu-id="0b4d6-103">Microsoft technologies in cloud-optimized applications</span></span>
 

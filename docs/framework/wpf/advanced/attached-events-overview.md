@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541742"
 ---
 # <a name="attached-events-overview"></a><span data-ttu-id="4e1f5-102">Przegląd Załączone zdarzenia</span><span class="sxs-lookup"><span data-stu-id="4e1f5-102">Attached Events Overview</span></span>
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]<span data-ttu-id="4e1f5-103"> Definiuje składnika język i typ zdarzenia o nazwie *dołączone zdarzenie*.</span><span class="sxs-lookup"><span data-stu-id="4e1f5-103"> defines a language component and type of event called an *attached event*.</span></span> <span data-ttu-id="4e1f5-104">Pojęcie dołączone zdarzenie umożliwia dodanie obsługi dla określonego zdarzenia do dowolnego elementu, a nie do elementu, który faktycznie definiuje lub dziedziczy zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="4e1f5-104">The concept of an attached event enables you to add a handler for a particular event to an arbitrary element rather than to an element that actually defines or inherits the event.</span></span> <span data-ttu-id="4e1f5-105">W takim przypadku obiekt potencjalnie wywołaniem zdarzenia ani obsługi wystąpienia docelowego definiuje lub w przeciwnym razie "właścicielem" zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="4e1f5-105">In this case, neither the object potentially raising the event nor the destination handling instance defines or otherwise "owns" the event.</span></span>  

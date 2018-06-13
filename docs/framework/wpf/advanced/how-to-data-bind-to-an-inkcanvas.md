@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543173"
 ---
 # <a name="how-to-data-bind-to-an-inkcanvas"></a><span data-ttu-id="11681-102">Jak powiązać dane z InkCanvas</span><span class="sxs-lookup"><span data-stu-id="11681-102">How to: Data Bind to an InkCanvas</span></span>
 ## <a name="example"></a><span data-ttu-id="11681-103">Przykład</span><span class="sxs-lookup"><span data-stu-id="11681-103">Example</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524212"
 ---
 # <a name="how-to-obtain-font-metrics"></a><span data-ttu-id="35323-102">Porady: uzyskiwanie miar czcionek</span><span class="sxs-lookup"><span data-stu-id="35323-102">How to: Obtain Font Metrics</span></span>
 <span data-ttu-id="35323-103"><xref:System.Drawing.FontFamily> Klasa udostępnia następujące metody pobierające różnych metryk dla określonej rodziny i stylu kombinacji:</span><span class="sxs-lookup"><span data-stu-id="35323-103">The <xref:System.Drawing.FontFamily> class provides the following methods that retrieve various metrics for a particular family/style combination:</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33956198"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a><span data-ttu-id="c7661-103">Modelu rozszerzalności narzędzi interfejsu wiersza polecenia platformy .NET core</span><span class="sxs-lookup"><span data-stu-id="c7661-103">.NET Core CLI tools extensibility model</span></span>
 

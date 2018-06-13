@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336059"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a><span data-ttu-id="09ad5-102">Tworzenie i zgłaszanie wyjątków (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="09ad5-102">Creating and Throwing Exceptions (C# Programming Guide)</span></span>
 <span data-ttu-id="09ad5-103">Wyjątki są używane do wskazywania, wystąpił błąd podczas uruchamiania programu.</span><span class="sxs-lookup"><span data-stu-id="09ad5-103">Exceptions are used to indicate that an error has occurred while running the program.</span></span> <span data-ttu-id="09ad5-104">Obiekty wyjątków, które opisują wystąpił błąd, są tworzone i następnie *zgłoszony* z [throw](../../../csharp/language-reference/keywords/throw.md) — słowo kluczowe.</span><span class="sxs-lookup"><span data-stu-id="09ad5-104">Exception objects that describe an error are created and then *thrown* with the [throw](../../../csharp/language-reference/keywords/throw.md) keyword.</span></span> <span data-ttu-id="09ad5-105">Środowisko uruchomieniowe wyszukuje najbardziej zgodne obsługi wyjątków.</span><span class="sxs-lookup"><span data-stu-id="09ad5-105">The runtime then searches for the most compatible exception handler.</span></span>  

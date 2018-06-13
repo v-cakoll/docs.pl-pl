@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442249"
 ---
 # <a name="corlocalrefpreservation-enumeration"></a><span data-ttu-id="14b48-102">CorLocalRefPreservation — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="14b48-102">CorLocalRefPreservation Enumeration</span></span>
 <span data-ttu-id="14b48-103">Zawiera wartości flagi dla przetwarzania lokalnego odwołania.</span><span class="sxs-lookup"><span data-stu-id="14b48-103">Contains flag values for the treatment of local references.</span></span>  

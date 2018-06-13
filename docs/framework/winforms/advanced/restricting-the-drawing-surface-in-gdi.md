@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523926"
 ---
 # <a name="restricting-the-drawing-surface-in-gdi"></a><span data-ttu-id="d86fb-102">Ograniczenie powierzchni rysowania w GDI+</span><span class="sxs-lookup"><span data-stu-id="d86fb-102">Restricting the Drawing Surface in GDI+</span></span>
 <span data-ttu-id="d86fb-103">Wycinka obejmuje ograniczenie rysunku do niektórych prostokąta lub regionu.</span><span class="sxs-lookup"><span data-stu-id="d86fb-103">Clipping involves restricting drawing to a certain rectangle or region.</span></span> <span data-ttu-id="d86fb-104">Na poniższej ilustracji przedstawiono ciąg "Hello" przycinana w kształcie serca regionie.</span><span class="sxs-lookup"><span data-stu-id="d86fb-104">The following illustration shows the string "Hello" clipped to a heart-shaped region.</span></span>  

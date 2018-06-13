@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171996"
 ---
 # <a name="public-c-reference"></a><span data-ttu-id="36e63-102">public (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="36e63-102">public (C# Reference)</span></span>
 <span data-ttu-id="36e63-103">`public` — Słowo kluczowe jest modyfikator dostępu dla typów i członków typu.</span><span class="sxs-lookup"><span data-stu-id="36e63-103">The `public` keyword is an access modifier for types and type members.</span></span> <span data-ttu-id="36e63-104">Dostęp publiczny jest najbardziej ograniczająca poziom dostępu.</span><span class="sxs-lookup"><span data-stu-id="36e63-104">Public access is the most permissive access level.</span></span> <span data-ttu-id="36e63-105">Nie ma żadnych ograniczeń na dostęp do publicznych członków, jak w poniższym przykładzie:</span><span class="sxs-lookup"><span data-stu-id="36e63-105">There are no restrictions on accessing public members, as in this example:</span></span>  

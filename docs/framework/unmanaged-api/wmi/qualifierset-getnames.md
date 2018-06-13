@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461181"
 ---
 # <a name="qualifiersetgetnames-function"></a><span data-ttu-id="c4955-103">Funkcja QualifierSet_GetNames</span><span class="sxs-lookup"><span data-stu-id="c4955-103">QualifierSet_GetNames function</span></span>
 <span data-ttu-id="c4955-104">Pobiera nazwy wszystkich kwalifikatorów lub niektórych kwalifikatorów, które są dostępne z bieżącego obiektu lub właściwości.</span><span class="sxs-lookup"><span data-stu-id="c4955-104">Retrieves the names of all the qualifiers or of certain qualifiers that are available from the current object or property.</span></span> 

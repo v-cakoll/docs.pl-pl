@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588999"
 ---
 # <a name="constructor-39ltnamegt39-cannot-call-itself"></a><span data-ttu-id="253d3-102">Konstruktor &#39; &lt;nazwa&gt; &#39; nie może wywołać się</span><span class="sxs-lookup"><span data-stu-id="253d3-102">Constructor &#39;&lt;name&gt;&#39; cannot call itself</span></span>
 <span data-ttu-id="253d3-103">A `Sub New` procedury w klasie lub strukturze wywołuje sam siebie.</span><span class="sxs-lookup"><span data-stu-id="253d3-103">A `Sub New` procedure in a class or structure calls itself.</span></span>  

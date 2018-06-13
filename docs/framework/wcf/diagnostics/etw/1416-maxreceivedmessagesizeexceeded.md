@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33456940"
 ---
 # <a name="1416---maxreceivedmessagesizeexceeded"></a><span data-ttu-id="358a9-102">1416 — MaxReceivedMessageSizeExceeded</span><span class="sxs-lookup"><span data-stu-id="358a9-102">1416 - MaxReceivedMessageSizeExceeded</span></span>
 ## <a name="properties"></a><span data-ttu-id="358a9-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="358a9-103">Properties</span></span>  

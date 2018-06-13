@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172675"
 ---
 # <a name="internal-c-reference"></a><span data-ttu-id="323a4-102">internal (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="323a4-102">internal (C# Reference)</span></span>
 <span data-ttu-id="323a4-103">`internal` — Słowo kluczowe jest [modyfikator dostępu](../../../csharp/language-reference/keywords/access-modifiers.md) typy i elementy członkowskie typu.</span><span class="sxs-lookup"><span data-stu-id="323a4-103">The `internal` keyword is an [access modifier](../../../csharp/language-reference/keywords/access-modifiers.md) for types and type members.</span></span> 

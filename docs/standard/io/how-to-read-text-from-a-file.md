@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574533"
 ---
 # <a name="how-to-read-text-from-a-file"></a><span data-ttu-id="b02d9-102">Porady: odczyt tekstu z pliku</span><span class="sxs-lookup"><span data-stu-id="b02d9-102">How to: Read Text from a File</span></span>
 <span data-ttu-id="b02d9-103">W poniższych przykładach pokazano, jak odczytać tekst synchronicznie i asynchronicznie z pliku tekstowego przy użyciu platformy .NET dla aplikacji komputerowych.</span><span class="sxs-lookup"><span data-stu-id="b02d9-103">The following examples show how to read text synchronously and asynchronously from a text file using .NET for desktop apps.</span></span> <span data-ttu-id="b02d9-104">W obu przykładach, podczas tworzenia wystąpienia <xref:System.IO.StreamReader> klasy, podaj względna lub bezwzględna ścieżka do pliku.</span><span class="sxs-lookup"><span data-stu-id="b02d9-104">In both examples, when you create the instance of the <xref:System.IO.StreamReader> class, you provide the relative or absolute path to the file.</span></span> <span data-ttu-id="b02d9-105">W poniższych przykładach założono, że plik o nazwie TestFile.txt znajduje się w folderze aplikacji.</span><span class="sxs-lookup"><span data-stu-id="b02d9-105">The following examples assume that the file named TestFile.txt is in the same folder as the application.</span></span>  

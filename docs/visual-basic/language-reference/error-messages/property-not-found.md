@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593746"
 ---
 # <a name="property-not-found"></a><span data-ttu-id="c67d2-102">Nie odnaleziono właściwości</span><span class="sxs-lookup"><span data-stu-id="c67d2-102">Property not found</span></span>
 <span data-ttu-id="c67d2-103">Ten obiekt nie obsługuje określonej właściwości.</span><span class="sxs-lookup"><span data-stu-id="c67d2-103">This object does not support the specified property.</span></span>  

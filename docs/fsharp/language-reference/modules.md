@@ -7,6 +7,7 @@ ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34483525"
 ---
 # <a name="modules"></a><span data-ttu-id="bb8ce-103">Moduły</span><span class="sxs-lookup"><span data-stu-id="bb8ce-103">Modules</span></span>
 

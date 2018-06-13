@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172038"
 ---
 # <a name="this-c-reference"></a><span data-ttu-id="a9e18-103">this (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="a9e18-103">this (C# Reference)</span></span>
 <span data-ttu-id="a9e18-104">`this` — Słowo kluczowe odwołuje się do bieżącego wystąpienia klasy, a także jest używane jako modyfikator pierwszy parametr metody rozszerzenia.</span><span class="sxs-lookup"><span data-stu-id="a9e18-104">The `this` keyword refers to the current instance of the class and is also used as a modifier of the first parameter of an extension method.</span></span>  

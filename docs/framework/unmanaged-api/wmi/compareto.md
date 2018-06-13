@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460411"
 ---
 # <a name="compareto-function"></a><span data-ttu-id="0b2d1-103">CompareTo — funkcja</span><span class="sxs-lookup"><span data-stu-id="0b2d1-103">CompareTo function</span></span>
 <span data-ttu-id="0b2d1-104">Porównuje obiekt do innego obiektu zarządzania systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="0b2d1-104">Compares an object to another Windows management object.</span></span>  

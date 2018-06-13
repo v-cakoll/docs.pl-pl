@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598143"
 ---
 # <a name="conversion-functions-visual-basic"></a><span data-ttu-id="84429-102">Funkcje konwersji (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="84429-102">Conversion functions (Visual Basic)</span></span>
 

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597689"
 ---
 # <a name="else-statement-visual-basic"></a><span data-ttu-id="62cbc-102">Else — Instrukcja (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="62cbc-102">Else Statement (Visual Basic)</span></span>
 <span data-ttu-id="62cbc-103">Wprowadza grupę instrukcji do uruchomienia lub kompilowana, jeśli nie warunkowego grupę instrukcji został Uruchom lub skompilowany.</span><span class="sxs-lookup"><span data-stu-id="62cbc-103">Introduces a group of statements to be run or compiled if no other conditional group of statements has been run or compiled.</span></span>  

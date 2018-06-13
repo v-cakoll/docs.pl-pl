@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600717"
 ---
 # <a name="assignment-operators-visual-basic"></a><span data-ttu-id="e10c3-102">Operatory przypisania (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e10c3-102">Assignment Operators (Visual Basic)</span></span>
 <span data-ttu-id="e10c3-103">Poniżej przedstawiono operatory przypisania zdefiniowany w języku Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="e10c3-103">The following are the assignment operators defined in Visual Basic.</span></span>  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573182"
 ---
 # <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a><span data-ttu-id="272cf-102">Porady: stosowanie anonimowych potoków do lokalnej komunikacji międzyprocesowej</span><span class="sxs-lookup"><span data-stu-id="272cf-102">How to: Use Anonymous Pipes for Local Interprocess Communication</span></span>
 <span data-ttu-id="272cf-103">Potoki anonimowe zapewnienia komunikacji międzyprocesowej na komputerze lokalnym.</span><span class="sxs-lookup"><span data-stu-id="272cf-103">Anonymous pipes provide interprocess communication on a local computer.</span></span> <span data-ttu-id="272cf-104">One oferują mniej funkcji niż nazwane potoki, ale również wymagać mniejsze koszty.</span><span class="sxs-lookup"><span data-stu-id="272cf-104">They offer less functionality than named pipes, but also require less overhead.</span></span> <span data-ttu-id="272cf-105">Potoki anonimowe umożliwia łatwiejsze komunikacji międzyprocesowej na komputerze lokalnym.</span><span class="sxs-lookup"><span data-stu-id="272cf-105">You can use anonymous pipes to make interprocess communication on a local computer easier.</span></span> <span data-ttu-id="272cf-106">Potoki anonimowe nie można używać do komunikacji za pośrednictwem sieci.</span><span class="sxs-lookup"><span data-stu-id="272cf-106">You cannot use anonymous pipes for communication over a network.</span></span>  

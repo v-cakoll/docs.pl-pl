@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594110"
 ---
 # <a name="mycomputerkeyboard-object"></a><span data-ttu-id="ef4de-102">My.Computer.Keyboard — Obiekt</span><span class="sxs-lookup"><span data-stu-id="ef4de-102">My.Computer.Keyboard Object</span></span>
 <span data-ttu-id="ef4de-103">Dostarcza właściwości, aby uzyskać dostęp do bieżącego stanu klawiatury, takie jak co klucze są obecnie naciśnięty i udostępnia metodę Wyślij naciśnięcia klawiszy do aktywnego okna.</span><span class="sxs-lookup"><span data-stu-id="ef4de-103">Provides properties for accessing the current state of the keyboard, such as what keys are currently pressed, and provides a method to send keystrokes to the active window.</span></span>  

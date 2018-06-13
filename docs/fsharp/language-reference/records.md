@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34549610"
 ---
 # <a name="records"></a><span data-ttu-id="0d08e-103">Rekordy</span><span class="sxs-lookup"><span data-stu-id="0d08e-103">Records</span></span>
 

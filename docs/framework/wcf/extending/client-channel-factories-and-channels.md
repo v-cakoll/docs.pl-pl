@@ -7,6 +7,7 @@ ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34483557"
 ---
 # <a name="client-channel-factories-and-channels"></a><span data-ttu-id="cc13b-102">Klienta: Fabryk kanałów i kanały</span><span class="sxs-lookup"><span data-stu-id="cc13b-102">Client: Channel Factories and Channels</span></span>
 <span data-ttu-id="cc13b-103">W tym temacie omówiono tworzenie fabryki kanałów i kanały.</span><span class="sxs-lookup"><span data-stu-id="cc13b-103">This topic discusses the creation of channel factories and channels.</span></span>  

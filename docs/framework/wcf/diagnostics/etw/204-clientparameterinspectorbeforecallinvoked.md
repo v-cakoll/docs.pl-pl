@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458588"
 ---
 # <a name="204---clientparameterinspectorbeforecallinvoked"></a><span data-ttu-id="be1ad-102">204 — ClientParameterInspectorBeforeCallInvoked</span><span class="sxs-lookup"><span data-stu-id="be1ad-102">204 - ClientParameterInspectorBeforeCallInvoked</span></span>
 ## <a name="properties"></a><span data-ttu-id="be1ad-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="be1ad-103">Properties</span></span>  

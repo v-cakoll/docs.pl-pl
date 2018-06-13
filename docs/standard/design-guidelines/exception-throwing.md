@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573724"
 ---
 # <a name="exception-throwing"></a><span data-ttu-id="73f44-102">Wyrzucanie wyjątków</span><span class="sxs-lookup"><span data-stu-id="73f44-102">Exception Throwing</span></span>
 <span data-ttu-id="73f44-103">Wytyczne zgłaszanie wyjątków opisanych w tej sekcji wymaga dobrej definicji znaczenie błąd wykonania.</span><span class="sxs-lookup"><span data-stu-id="73f44-103">Exception-throwing guidelines described in this section require a good definition of the meaning of execution failure.</span></span> <span data-ttu-id="73f44-104">Niepowodzenie wykonania występuje zawsze, gdy element członkowski nie może wykonać, co zostało zaprojektowane w celu (co nazwa elementu członkowskiego oznacza).</span><span class="sxs-lookup"><span data-stu-id="73f44-104">Execution failure occurs whenever a member cannot do what it was designed to do (what the member name implies).</span></span> <span data-ttu-id="73f44-105">Na przykład jeśli `OpenFile` nie może zwracać dojście otwartego pliku do obiektu wywołującego, jego mogą być uważane za błąd wykonania.</span><span class="sxs-lookup"><span data-stu-id="73f44-105">For example, if the `OpenFile` method cannot return an opened file handle to the caller, it would be considered an execution failure.</span></span>  

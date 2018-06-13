@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353757"
 ---
 # <a name="analyzing-linq-to-sql-source-code"></a><span data-ttu-id="e0b2b-102">Analizowanie danych LINQ do SQL kodu źródłowego</span><span class="sxs-lookup"><span data-stu-id="e0b2b-102">Analyzing LINQ to SQL Source Code</span></span>
 <span data-ttu-id="e0b2b-103">Za pomocą poniższych kroków, można utworzyć [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] źródła kodu z przykładowej bazy danych Northwind.</span><span class="sxs-lookup"><span data-stu-id="e0b2b-103">By using the following steps, you can produce [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] source code from the Northwind sample database.</span></span> <span data-ttu-id="e0b2b-104">Możesz porównać elementy modelu obiektów z elementami bazy danych, aby lepiej widoczne jak różne elementy są zamapowane.</span><span class="sxs-lookup"><span data-stu-id="e0b2b-104">You can compare elements of the object model with elements of the database to better see how different items are mapped.</span></span>  

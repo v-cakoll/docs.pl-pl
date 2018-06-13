@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437040"
 ---
 # <a name="igcthreadcontrolthreadisblockingforsuspension-method"></a><span data-ttu-id="4fdd8-102">IGCThreadControl::ThreadIsBlockingForSuspension — Metoda</span><span class="sxs-lookup"><span data-stu-id="4fdd8-102">IGCThreadControl::ThreadIsBlockingForSuspension Method</span></span>
 <span data-ttu-id="4fdd8-103">Powiadamia hosta w wątku, który jest wywołania o zbliżającym się zablokować, być może do wyrzucania elementów bezużytecznych lub innych zawieszenia.</span><span class="sxs-lookup"><span data-stu-id="4fdd8-103">Notifies the host that the thread that is making the call is about to block, perhaps for a garbage collection or other suspension.</span></span>  

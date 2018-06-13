@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332858"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a><span data-ttu-id="67b82-102">Porady: konwertowanie ciągu na liczbę (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="67b82-102">How to: Convert a String to a Number (C# Programming Guide)</span></span>
 <span data-ttu-id="67b82-103">Możesz przekonwertować [ciąg](../../../csharp/language-reference/keywords/string.md) na liczbę za pomocą metod w <xref:System.Convert> klasy lub przy użyciu `TryParse` znaleziono metody na różne typy liczbowe (int, long, float, itp.).</span><span class="sxs-lookup"><span data-stu-id="67b82-103">You can convert a [string](../../../csharp/language-reference/keywords/string.md) to a number by using methods in the <xref:System.Convert> class or by using the `TryParse` method found on the various numeric types (int, long, float, etc.).</span></span>  

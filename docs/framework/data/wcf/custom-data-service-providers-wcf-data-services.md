@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354962"
 ---
 # <a name="custom-data-service-providers-wcf-data-services"></a><span data-ttu-id="4a710-102">Niestandardowych dostawców usług danych (usługi danych WCF)</span><span class="sxs-lookup"><span data-stu-id="4a710-102">Custom Data Service Providers (WCF Data Services)</span></span>
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="4a710-103"> obejmuje zestaw dostawców, który umożliwia zdefiniowanie na podstawie typów danych z późnym wiązaniem modelu danych.</span><span class="sxs-lookup"><span data-stu-id="4a710-103"> includes a set of providers that enables you to define a data model based on late-bound data types.</span></span>  

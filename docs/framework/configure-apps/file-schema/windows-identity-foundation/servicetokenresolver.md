@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755763"
 ---
 # <a name="ltservicetokenresolvergt"></a><span data-ttu-id="fbab0-102">&lt;serviceTokenResolver&gt;</span><span class="sxs-lookup"><span data-stu-id="fbab0-102">&lt;serviceTokenResolver&gt;</span></span>
 <span data-ttu-id="fbab0-103">Rejestruje mechanizm rozpoznawania tokenu usługi, używany przez programy obsługi zdarzeń w kolekcji programu obsługi tokenów.</span><span class="sxs-lookup"><span data-stu-id="fbab0-103">Registers the service token resolver that is used by handlers in the token handler collection.</span></span> <span data-ttu-id="fbab0-104">Program rozpoznawania nazw tokenów usługi jest używany do rozpoznawania tokenu szyfrowania na przychodzące tokeny i komunikatów.</span><span class="sxs-lookup"><span data-stu-id="fbab0-104">The service token resolver is used to resolve the encryption token on incoming tokens and messages.</span></span>  

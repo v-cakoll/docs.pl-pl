@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538851"
 ---
 # <a name="toolstripcontainer-control"></a><span data-ttu-id="82921-102">ToolStripContainer — Formant</span><span class="sxs-lookup"><span data-stu-id="82921-102">ToolStripContainer Control</span></span>
 <span data-ttu-id="82921-103"><xref:System.Windows.Forms.ToolStrip> Formanty funkcji rafting wbudowany (udostępnianie poziomą lub pionową miejsca w obszarze Narzędzia, gdy jest zadokowany) przy użyciu <xref:System.Windows.Forms.ToolStripContainer>.</span><span class="sxs-lookup"><span data-stu-id="82921-103"><xref:System.Windows.Forms.ToolStrip> controls feature built-in rafting (sharing of horizontal or vertical space within the tool area when docked) by using the <xref:System.Windows.Forms.ToolStripContainer>.</span></span>  

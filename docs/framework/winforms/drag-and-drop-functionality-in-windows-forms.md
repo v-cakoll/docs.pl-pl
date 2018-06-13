@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539403"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a><span data-ttu-id="b8fb0-102">Funkcjonalność przeciągania i upuszczania w formularzach systemu Windows</span><span class="sxs-lookup"><span data-stu-id="b8fb0-102">Drag-and-Drop Functionality in Windows Forms</span></span>
 <span data-ttu-id="b8fb0-103">Formularze systemu Windows zawiera zestaw metod, zdarzeń i klasy, które implementują zachowanie przeciągania i upuszczania.</span><span class="sxs-lookup"><span data-stu-id="b8fb0-103">Windows Forms includes a set of methods, events, and classes that implement drag-and-drop behavior.</span></span> <span data-ttu-id="b8fb0-104">Ten temat zawiera omówienie obsługi przeciągania i upuszczania w formularzach systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="b8fb0-104">This topic provides an overview of the drag-and-drop support in Windows Forms.</span></span>  <span data-ttu-id="b8fb0-105">Zobacz też [operacji przeciągania i upuszczania oraz Obsługa schowka](http://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="b8fb0-105">Also see [Drag-and-Drop Operations and Clipboard Support](http://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).</span></span>  

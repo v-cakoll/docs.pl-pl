@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436088"
 ---
 # <a name="isymunmanagedmethodgetscopefromoffset-method"></a><span data-ttu-id="3cf2b-102">ISymUnmanagedMethod::GetScopeFromOffset — Metoda</span><span class="sxs-lookup"><span data-stu-id="3cf2b-102">ISymUnmanagedMethod::GetScopeFromOffset Method</span></span>
 <span data-ttu-id="3cf2b-103">Pobiera najbardziej otaczającym zakresie leksykalne w ramach tej metody, które umieszcza danego przesunięcia.</span><span class="sxs-lookup"><span data-stu-id="3cf2b-103">Gets the most enclosing lexical scope within this method that encloses the given offset.</span></span> <span data-ttu-id="3cf2b-104">Może być używany w celu rozpoczęcia wyszukiwania zmiennej lokalnej.</span><span class="sxs-lookup"><span data-stu-id="3cf2b-104">This can be used to start local variable searches.</span></span>  

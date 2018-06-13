@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764661"
 ---
 # <a name="top-entity-sql"></a><span data-ttu-id="bfaa0-102">TOP (jednostka SQL)</span><span class="sxs-lookup"><span data-stu-id="bfaa0-102">TOP (Entity SQL)</span></span>
 <span data-ttu-id="bfaa0-103">Klauzula SELECT może mieć opcjonalne TOP Podklauzula następujące opcjonalne modyfikator ALL/DISTINCT.</span><span class="sxs-lookup"><span data-stu-id="bfaa0-103">The SELECT clause can have an optional TOP sub-clause following the optional ALL/DISTINCT modifier.</span></span> <span data-ttu-id="bfaa0-104">Klauzul podrzędnych TOP Określa, że tylko pierwszy zestaw wierszy zostaną zwrócone w wyniku zapytania.</span><span class="sxs-lookup"><span data-stu-id="bfaa0-104">The TOP sub-clause specifies that only the first set of rows will be returned from the query result.</span></span>  

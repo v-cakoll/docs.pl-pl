@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767092"
 ---
 # <a name="ltwebhttpendpointgt"></a><span data-ttu-id="04a8b-102">&lt;webHttpEndpoint&gt;</span><span class="sxs-lookup"><span data-stu-id="04a8b-102">&lt;webHttpEndpoint&gt;</span></span>
 <span data-ttu-id="04a8b-103">Ten element konfiguracji definiuje standardowy punkt końcowy ze stałym [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) powiązania, które automatycznie dodaje [ \<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) zachowanie.</span><span class="sxs-lookup"><span data-stu-id="04a8b-103">This configuration element defines a standard endpoint with a fixed [\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) binding that automatically adds the [\<webHttp>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) behavior.</span></span> <span data-ttu-id="04a8b-104">Podczas zapisywania usługi REST, należy używać tego punktu końcowego.</span><span class="sxs-lookup"><span data-stu-id="04a8b-104">Use this endpoint when writing a REST service.</span></span>  

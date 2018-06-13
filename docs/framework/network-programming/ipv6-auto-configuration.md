@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393432"
 ---
 # <a name="ipv6-auto-configuration"></a><span data-ttu-id="783c1-102">Automatyczna konfiguracja IPv6</span><span class="sxs-lookup"><span data-stu-id="783c1-102">IPv6 Auto-Configuration</span></span>
 <span data-ttu-id="783c1-103">Co ważne celu dla protokołu IPv6 jest obsługuje węzła typu Plug and Play.</span><span class="sxs-lookup"><span data-stu-id="783c1-103">One important goal for IPv6 is to support node Plug and Play.</span></span> <span data-ttu-id="783c1-104">Oznacza to, że powinno być możliwe Podłącz węzła do sieci IPv6 i została ona skonfigurowana automatycznie bez interwencji człowieka.</span><span class="sxs-lookup"><span data-stu-id="783c1-104">That is, it should be possible to plug a node into an IPv6 network and have it automatically configured without any human intervention.</span></span>  

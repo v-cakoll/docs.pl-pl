@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422285"
 ---
 # <a name="icoreclrdebugtarget-interface"></a><span data-ttu-id="26072-102">ICoreClrDebugTarget — Interfejs</span><span class="sxs-lookup"><span data-stu-id="26072-102">ICoreClrDebugTarget Interface</span></span>
 <span data-ttu-id="26072-103">Udostępnia metody, które sterować liczby odwołań, wyliczenie procesów i zwolnić pamięć, skojarzone z debugera, który jest dołączony do docelowego elementu zdalnego Macintosh Silverlight.</span><span class="sxs-lookup"><span data-stu-id="26072-103">Provides methods that control reference counts, enumerate processes, and free the memory associated with a debugger that is attached to a remote Macintosh Silverlight target.</span></span>  

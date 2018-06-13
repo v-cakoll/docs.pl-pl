@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439364"
 ---
 # <a name="ihostautoeventwait-method"></a><span data-ttu-id="a75cc-102">IHostAutoEvent::Wait — Metoda</span><span class="sxs-lookup"><span data-stu-id="a75cc-102">IHostAutoEvent::Wait Method</span></span>
 <span data-ttu-id="a75cc-103">Powoduje, że bieżący [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) wystąpienia poczekać, aż należy on do lub z określoną ilością pamięci upłynie czas.</span><span class="sxs-lookup"><span data-stu-id="a75cc-103">Causes the current [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) instance to wait until it is owned or a specified amount of time elapses.</span></span>  

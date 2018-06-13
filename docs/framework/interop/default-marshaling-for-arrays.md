@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393153"
 ---
 # <a name="default-marshaling-for-arrays"></a><span data-ttu-id="12160-102">Domyślny marshaling dla tablic</span><span class="sxs-lookup"><span data-stu-id="12160-102">Default Marshaling for Arrays</span></span>
 <span data-ttu-id="12160-103">W aplikacji, składające się wyłącznie z kodu zarządzanego środowisko uruchomieniowe języka wspólnego przekazuje typy tablic jako we/wy parametrów.</span><span class="sxs-lookup"><span data-stu-id="12160-103">In an application consisting entirely of managed code, the common language runtime passes array types as In/Out parameters.</span></span> <span data-ttu-id="12160-104">Z kolei międzyoperacyjnego organizatora przekazuje tablicy, tak jak parametry domyślnie.</span><span class="sxs-lookup"><span data-stu-id="12160-104">In contrast, the interop marshaler passes an array as In parameters by default.</span></span>  

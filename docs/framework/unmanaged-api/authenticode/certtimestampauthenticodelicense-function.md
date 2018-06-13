@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406211"
 ---
 # <a name="certtimestampauthenticodelicense-function"></a><span data-ttu-id="b16ab-102">Funkcja CertTimestampAuthenticodeLicense</span><span class="sxs-lookup"><span data-stu-id="b16ab-102">CertTimestampAuthenticodeLicense Function</span></span>
 <span data-ttu-id="b16ab-103">Sygnatury czasowe jako Authenticode XrML licencji.</span><span class="sxs-lookup"><span data-stu-id="b16ab-103">Time-stamps an Authenticode XrML license.</span></span>  

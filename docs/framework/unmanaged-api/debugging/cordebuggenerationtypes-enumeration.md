@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402434"
 ---
 # <a name="cordebuggenerationtypes-enumeration"></a><span data-ttu-id="7167b-102">CorDebugGenerationTypes — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="7167b-102">CorDebugGenerationTypes Enumeration</span></span>
 <span data-ttu-id="7167b-103">Określa Generowanie obszaru pamięci na stercie zarządzanej.</span><span class="sxs-lookup"><span data-stu-id="7167b-103">Specifies the generation of a region of memory on the managed heap.</span></span>  

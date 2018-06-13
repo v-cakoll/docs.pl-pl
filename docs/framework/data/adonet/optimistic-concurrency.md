@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766231"
 ---
 # <a name="optimistic-concurrency"></a><span data-ttu-id="4f8f0-102">Optymistycznej współbieżności</span><span class="sxs-lookup"><span data-stu-id="4f8f0-102">Optimistic Concurrency</span></span>
 <span data-ttu-id="4f8f0-103">W środowisku wielodostępnym są dwa modele aktualizacji danych w bazie danych: optymistycznej współbieżności i pesymistyczne współbieżności.</span><span class="sxs-lookup"><span data-stu-id="4f8f0-103">In a multiuser environment, there are two models for updating data in a database: optimistic concurrency and pessimistic concurrency.</span></span> <span data-ttu-id="4f8f0-104"><xref:System.Data.DataSet> Obiektu zaprojektowano w celu wspierać stosowanie optymistycznej współbieżności długotrwałe działań, np. danych zdalnych i interakcji z danymi.</span><span class="sxs-lookup"><span data-stu-id="4f8f0-104">The <xref:System.Data.DataSet> object is designed to encourage the use of optimistic concurrency for long-running activities, such as remoting data and interacting with data.</span></span>  

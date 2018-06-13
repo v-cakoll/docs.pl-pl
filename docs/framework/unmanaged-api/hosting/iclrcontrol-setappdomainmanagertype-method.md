@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33433737"
 ---
 # <a name="iclrcontrolsetappdomainmanagertype-method"></a><span data-ttu-id="06c68-102">ICLRControl::SetAppDomainManagerType — Metoda</span><span class="sxs-lookup"><span data-stu-id="06c68-102">ICLRControl::SetAppDomainManagerType Method</span></span>
 <span data-ttu-id="06c68-103">Ustawia typ pochodny typu <xref:System.AppDomainManager> jako typ menedżerom domeny aplikacji.</span><span class="sxs-lookup"><span data-stu-id="06c68-103">Sets a type derived from <xref:System.AppDomainManager> as the type for application domain managers.</span></span>  

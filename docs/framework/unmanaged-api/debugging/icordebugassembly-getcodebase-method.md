@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401719"
 ---
 # <a name="icordebugassemblygetcodebase-method"></a><span data-ttu-id="fae68-102">ICorDebugAssembly::GetCodeBase — Metoda</span><span class="sxs-lookup"><span data-stu-id="fae68-102">ICorDebugAssembly::GetCodeBase Method</span></span>
 <span data-ttu-id="fae68-103">Ta metoda nie jest zaimplementowana w bieżącej wersji programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="fae68-103">This method is not implemented in the current version of the .NET Framework.</span></span>  

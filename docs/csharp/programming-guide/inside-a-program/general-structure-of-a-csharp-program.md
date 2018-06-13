@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331217"
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a><span data-ttu-id="792fc-102">Ogólna struktura programu w języku C# (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="792fc-102">General Structure of a C# Program (C# Programming Guide)</span></span>
 <span data-ttu-id="792fc-103">C# programów może składać się z co najmniej jeden plik.</span><span class="sxs-lookup"><span data-stu-id="792fc-103">C# programs can consist of one or more files.</span></span> <span data-ttu-id="792fc-104">Każdy plik może zawierać zero lub więcej przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="792fc-104">Each file can contain zero or more namespaces.</span></span> <span data-ttu-id="792fc-105">Przestrzeń nazw może zawierać typy, takich jak klasy, struktury, interfejsy, wyliczenia i delegatów, oprócz innych przestrzeniach nazw.</span><span class="sxs-lookup"><span data-stu-id="792fc-105">A namespace can contain types such as classes, structs, interfaces, enumerations, and delegates, in addition to other namespaces.</span></span> <span data-ttu-id="792fc-106">Poniżej znajduje się szkielet program C#, który zawiera wszystkie te elementy.</span><span class="sxs-lookup"><span data-stu-id="792fc-106">The following is the skeleton of a C# program that contains all of these elements.</span></span>  

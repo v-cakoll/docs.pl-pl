@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754918"
 ---
 # <a name="ltcleargt"></a><span data-ttu-id="2e80d-102">&lt;Wyczyść&gt;</span><span class="sxs-lookup"><span data-stu-id="2e80d-102">&lt;clear&gt;</span></span>
 <span data-ttu-id="2e80d-103">Czyści wszystkie obsługi token zabezpieczeń z bieżącej kolekcji programu obsługi tokenów.</span><span class="sxs-lookup"><span data-stu-id="2e80d-103">Clears all security token handlers from the current token handler collection.</span></span>  

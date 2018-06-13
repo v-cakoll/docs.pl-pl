@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444395"
 ---
 # <a name="imaptoken-interface"></a><span data-ttu-id="812c6-102">IMapToken — Interfejs</span><span class="sxs-lookup"><span data-stu-id="812c6-102">IMapToken Interface</span></span>
 <span data-ttu-id="812c6-103">Zapewnia możliwości mapowania między zestawami.</span><span class="sxs-lookup"><span data-stu-id="812c6-103">Provides mapping capabilities between assemblies.</span></span>  

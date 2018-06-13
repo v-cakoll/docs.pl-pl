@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439610"
 ---
 # <a name="ihostmemorymanagerregistermemorynotificationcallback-method"></a><span data-ttu-id="fd899-102">IHostMemoryManager::RegisterMemoryNotificationCallback — Metoda</span><span class="sxs-lookup"><span data-stu-id="fd899-102">IHostMemoryManager::RegisterMemoryNotificationCallback Method</span></span>
 <span data-ttu-id="fd899-103">Rejestruje wskaźnika do funkcji wywołania zwrotnego, która wywołuje hosta powiadomiono środowisko uruchomieniowe języka wspólnego (CLR) z bieżącego obciążenia pamięci na komputerze.</span><span class="sxs-lookup"><span data-stu-id="fd899-103">Registers a pointer to a callback function that the host invokes to notify the common language runtime (CLR) of the current memory load on the computer.</span></span>  

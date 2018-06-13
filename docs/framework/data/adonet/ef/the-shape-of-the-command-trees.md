@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766039"
 ---
 # <a name="the-shape-of-the-command-trees"></a><span data-ttu-id="8e143-102">Kształt drzew poleceń</span><span class="sxs-lookup"><span data-stu-id="8e143-102">The Shape of the Command Trees</span></span>
 <span data-ttu-id="8e143-103">Moduł generowania SQL jest odpowiedzialny za wygenerowanie wewnętrznej bazy danych określonej kwerendy SQL na podstawie wyrażenia drzewa zapytanie wejściowe danego polecenia.</span><span class="sxs-lookup"><span data-stu-id="8e143-103">The SQL generation module is responsible for generating a backend specific SQL query based on a given input query command tree expression.</span></span> <span data-ttu-id="8e143-104">W tej sekcji omówiono charakterystyki, właściwości i struktura drzewa polecenia zapytania.</span><span class="sxs-lookup"><span data-stu-id="8e143-104">This section discusses the characteristics, properties, and structure of the query command trees.</span></span>  

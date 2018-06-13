@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404157"
 ---
 # <a name="efngetmanagedexcepstack-function"></a><span data-ttu-id="e6a59-102">_EFN_GetManagedExcepStack — Funkcja</span><span class="sxs-lookup"><span data-stu-id="e6a59-102">_EFN_GetManagedExcepStack Function</span></span>
 <span data-ttu-id="e6a59-103">Podany adres obiektu zarządzanym wyjątku zwraca ciąg wersji śladu stosu znajdująca się wewnątrz.</span><span class="sxs-lookup"><span data-stu-id="e6a59-103">Given a managed exception object address, returns a string version of the stack trace contained inside.</span></span>  

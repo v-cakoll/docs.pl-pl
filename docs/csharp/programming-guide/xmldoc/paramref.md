@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325136"
 ---
 # <a name="ltparamrefgt-c-programming-guide"></a><span data-ttu-id="33744-102">&lt;paramref&gt; (C# przewodnik programowania w języku)</span><span class="sxs-lookup"><span data-stu-id="33744-102">&lt;paramref&gt; (C# Programming Guide)</span></span>
 ## <a name="syntax"></a><span data-ttu-id="33744-103">Składnia</span><span class="sxs-lookup"><span data-stu-id="33744-103">Syntax</span></span>  

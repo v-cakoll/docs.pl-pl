@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752432"
 ---
 # <a name="additional-class-libraries-and-apis"></a><span data-ttu-id="563d7-102">Biblioteki dodatkowe klasy i interfejsy API</span><span class="sxs-lookup"><span data-stu-id="563d7-102">Additional class libraries and APIs</span></span>
 

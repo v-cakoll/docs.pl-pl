@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366037"
 ---
 # <a name="what39s-new-in-adonet"></a><span data-ttu-id="d6944-102">Co&#39;s Nowość w ADO.NET</span><span class="sxs-lookup"><span data-stu-id="d6944-102">What&#39;s New in ADO.NET</span></span>
 <span data-ttu-id="d6944-103">Następujące funkcje są nowością w programie [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d6944-103">The following features are new in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] in the [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>  

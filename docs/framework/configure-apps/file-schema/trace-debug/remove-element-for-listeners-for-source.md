@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754278"
 ---
 # <a name="ltremovegt-element-for-ltlistenersgt-for-ltsourcegt"></a><span data-ttu-id="0e89c-102">&lt;Usuń&gt; elementu &lt;odbiorników&gt; dla &lt;źródła&gt;</span><span class="sxs-lookup"><span data-stu-id="0e89c-102">&lt;remove&gt; Element for &lt;listeners&gt; for &lt;source&gt;</span></span>
 <span data-ttu-id="0e89c-103">Usuwa odbiornik z `Listeners` kolekcji źródła śledzenia.</span><span class="sxs-lookup"><span data-stu-id="0e89c-103">Removes a listener from the `Listeners` collection for a trace source.</span></span>  

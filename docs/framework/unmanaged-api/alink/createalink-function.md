@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400669"
 ---
 # <a name="createalink-function"></a><span data-ttu-id="6e2b3-102">CreateALink — Funkcja</span><span class="sxs-lookup"><span data-stu-id="6e2b3-102">CreateALink Function</span></span>
 <span data-ttu-id="6e2b3-103">Tworzy wystąpienie Assembly Linker i ustawia wskaźnik do określonego interfejsu.</span><span class="sxs-lookup"><span data-stu-id="6e2b3-103">Creates an instance of the Assembly Linker and sets a pointer to the specified interface.</span></span>  

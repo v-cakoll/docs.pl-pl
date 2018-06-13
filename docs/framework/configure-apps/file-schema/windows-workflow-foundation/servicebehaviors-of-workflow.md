@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766910"
 ---
 # <a name="ltservicebehaviorsgt-of-workflow"></a><span data-ttu-id="89f52-102">&lt;serviceBehaviors&gt; przepływu pracy</span><span class="sxs-lookup"><span data-stu-id="89f52-102">&lt;serviceBehaviors&gt; of workflow</span></span>
 <span data-ttu-id="89f52-103">Ta sekcja konfiguracji reprezentuje wszystkie zachowania zdefiniowanego dla określonej usługi.</span><span class="sxs-lookup"><span data-stu-id="89f52-103">This configuration section represents all the behaviors defined for a specific service.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329871"
 ---
 # <a name="generic-methods-c-programming-guide"></a><span data-ttu-id="64daf-102">Metody ogólne (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="64daf-102">Generic Methods (C# Programming Guide)</span></span>
 <span data-ttu-id="64daf-103">Metoda rodzajowa jest to metoda, która jest zadeklarowana z parametrami typu, w następujący sposób:</span><span class="sxs-lookup"><span data-stu-id="64daf-103">A generic method is a method that is declared with type parameters, as follows:</span></span>  

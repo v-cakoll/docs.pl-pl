@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386408"
 ---
 # <a name="overlappedfreeerror-mda"></a><span data-ttu-id="d8b40-102">overlappedFreeError MDA</span><span class="sxs-lookup"><span data-stu-id="d8b40-102">overlappedFreeError MDA</span></span>
 <span data-ttu-id="d8b40-103">`overlappedFreeError` Zarządzany Asystent debugowania (MDA) została aktywowana po <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=nameWithType> metoda jest wywoływana przed nakładających się operacja została ukończona.</span><span class="sxs-lookup"><span data-stu-id="d8b40-103">The `overlappedFreeError` managed debugging assistant (MDA) is activated when the <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=nameWithType> method is called before the overlapped operation has completed.</span></span>  

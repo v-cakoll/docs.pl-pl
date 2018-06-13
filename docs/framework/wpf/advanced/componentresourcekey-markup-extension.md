@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540413"
 ---
 # <a name="componentresourcekey-markup-extension"></a><span data-ttu-id="d1a68-102">ComponentResourceKey — Rozszerzenie znaczników</span><span class="sxs-lookup"><span data-stu-id="d1a68-102">ComponentResourceKey Markup Extension</span></span>
 <span data-ttu-id="d1a68-103">Definiuje i odwołuje się do kluczy dla zasobów, które są ładowane z zewnętrznych zestawów.</span><span class="sxs-lookup"><span data-stu-id="d1a68-103">Defines and references keys for resources that are loaded from external assemblies.</span></span> <span data-ttu-id="d1a68-104">Dzięki temu wyszukiwania zasobów określić typ docelowy w zestawie, a nie słownika jawne zasobów w zestawie lub klasy.</span><span class="sxs-lookup"><span data-stu-id="d1a68-104">This enables a resource lookup to specify a target type in an assembly, rather than an explicit resource dictionary in an assembly or on a class.</span></span>  

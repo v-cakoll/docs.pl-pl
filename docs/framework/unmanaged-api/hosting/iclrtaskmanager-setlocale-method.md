@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437329"
 ---
 # <a name="iclrtaskmanagersetlocale-method"></a><span data-ttu-id="6cab9-102">ICLRTaskManager::SetLocale — Metoda</span><span class="sxs-lookup"><span data-stu-id="6cab9-102">ICLRTaskManager::SetLocale Method</span></span>
 <span data-ttu-id="6cab9-103">Powiadamia środowisko uruchomieniowe języka wspólnego (CLR), czy host został zmodyfikowany wartość identyfikatora ustawień regionalnych (który mapuje, kultury geograficzne i języka) aktualnie wykonywanego zadania.</span><span class="sxs-lookup"><span data-stu-id="6cab9-103">Notifies the common language runtime (CLR) that the host has modified the value of the locale identifier (which maps to the geographical culture and language) on the currently executing task.</span></span>  

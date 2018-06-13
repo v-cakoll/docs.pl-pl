@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755113"
 ---
 # <a name="ltwindowsstreamsecuritygt"></a><span data-ttu-id="b4dcb-102">&lt;Obiekt windowsStreamSecurity&gt;</span><span class="sxs-lookup"><span data-stu-id="b4dcb-102">&lt;windowsStreamSecurity&gt;</span></span>
 <span data-ttu-id="b4dcb-103">Określ ustawienia zabezpieczenia strumienia systemu Windows niestandardowego powiązania.</span><span class="sxs-lookup"><span data-stu-id="b4dcb-103">Specify Windows stream security settings of the custom binding.</span></span>  

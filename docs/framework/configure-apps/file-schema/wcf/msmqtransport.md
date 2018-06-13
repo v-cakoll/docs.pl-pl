@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751353"
 ---
 # <a name="ltmsmqtransportgt"></a><span data-ttu-id="a0a76-102">&lt;msmqTransport&gt;</span><span class="sxs-lookup"><span data-stu-id="a0a76-102">&lt;msmqTransport&gt;</span></span>
 <span data-ttu-id="a0a76-103">Powoduje, że kanał przenosi wiadomości w usłudze transportowej MSMQ gdy jest włączony do niestandardowego powiązania.</span><span class="sxs-lookup"><span data-stu-id="a0a76-103">Causes a channel to transfers messages on the MSMQ transport when it is included in a custom binding.</span></span>  

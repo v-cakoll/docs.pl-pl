@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756426"
 ---
 # <a name="lttransportgt-of-ltpeertransportgt"></a><span data-ttu-id="f6a20-102">&lt;transport&gt; w &lt;peerTransport&gt;</span><span class="sxs-lookup"><span data-stu-id="f6a20-102">&lt;transport&gt; of &lt;peerTransport&gt;</span></span>
 <span data-ttu-id="f6a20-103">Określa typ transportu zabezpieczonych wiadomości wysyłanych przez elementy równorzędne skonfigurowane dla tego wiązania.</span><span class="sxs-lookup"><span data-stu-id="f6a20-103">Specifies the transport type for secured messages sent by peers configured with this binding.</span></span>  

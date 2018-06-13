@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403796"
 ---
 # <a name="icordebugappdomain2getfunctionpointertype-method"></a><span data-ttu-id="470cd-102">ICorDebugAppDomain2::GetFunctionPointerType — Metoda</span><span class="sxs-lookup"><span data-stu-id="470cd-102">ICorDebugAppDomain2::GetFunctionPointerType Method</span></span>
 <span data-ttu-id="470cd-103">Pobiera wskaźnik do funkcji, która ma danym podpisem.</span><span class="sxs-lookup"><span data-stu-id="470cd-103">Gets a pointer to a function that has a given signature.</span></span>  

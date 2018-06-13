@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340596"
 ---
 # <a name="object-oriented-programming-c"></a><span data-ttu-id="a9d8b-102">Programowanie zorientowane obiektowo (C#)</span><span class="sxs-lookup"><span data-stu-id="a9d8b-102">Object-Oriented Programming (C#)</span></span>
 <span data-ttu-id="a9d8b-103">C# zapewnia pełną obsługę programowanie zorientowane obiektowo, łącznie z hermetyzacji, dziedziczenia i polimorfizm.</span><span class="sxs-lookup"><span data-stu-id="a9d8b-103">C# provides full support for object-oriented programming including encapsulation, inheritance, and polymorphism.</span></span>  

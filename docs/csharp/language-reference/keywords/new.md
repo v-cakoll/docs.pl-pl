@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266074"
 ---
 # <a name="new-c-reference"></a><span data-ttu-id="d906d-102">new (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="d906d-102">new (C# Reference)</span></span>
 <span data-ttu-id="d906d-103">W języku C# `new` — słowo kluczowe może służyć jako operatora, modyfikujący lub ograniczenie.</span><span class="sxs-lookup"><span data-stu-id="d906d-103">In C#, the `new` keyword can be used as an operator, a modifier, or a constraint.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349694"
 ---
 # <a name="ltaddgt-of-ltallowaccountsgt"></a><span data-ttu-id="0f174-102">&lt;add&gt; w &lt;allowAccounts&gt;</span><span class="sxs-lookup"><span data-stu-id="0f174-102">&lt;add&gt; of &lt;allowAccounts&gt;</span></span>
 <span data-ttu-id="0f174-103">Określa konto użytkownika dla procesów, które host usługi WCF i przyznano im dostęp do połączenia z usługą udostępniania.</span><span class="sxs-lookup"><span data-stu-id="0f174-103">Specifies a user account for processes that host WCF services, and are granted connection access to the sharing service.</span></span>  

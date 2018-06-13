@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436296"
 ---
 # <a name="iclrgcmanager2-interface"></a><span data-ttu-id="7a014-102">ICLRGCManager2 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="7a014-102">ICLRGCManager2 Interface</span></span>
 <span data-ttu-id="7a014-103">Udostępnia metody umożliwiające hosta do interakcji z systemem zbierania odzyskiwanie środowisko uruchomieniowe języka wspólnego firmy.</span><span class="sxs-lookup"><span data-stu-id="7a014-103">Provides methods that allow a host to interact with the common language runtime's garbage collection system.</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350225"
 ---
 # <a name="ltoidmapgt-element"></a><span data-ttu-id="e850c-102">&lt;oidmap —&gt; — Element</span><span class="sxs-lookup"><span data-stu-id="e850c-102">&lt;oidMap&gt; Element</span></span>
 <span data-ttu-id="e850c-103">Zawiera ASN.1 obiektu (OID), identyfikator mapowania do klasy.</span><span class="sxs-lookup"><span data-stu-id="e850c-103">Contains ASN.1 object identifier (OID) mappings to classes.</span></span>  

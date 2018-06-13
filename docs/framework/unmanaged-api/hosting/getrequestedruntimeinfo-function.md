@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434984"
 ---
 # <a name="getrequestedruntimeinfo-function"></a><span data-ttu-id="ff70a-102">GetRequestedRuntimeInfo — Funkcja</span><span class="sxs-lookup"><span data-stu-id="ff70a-102">GetRequestedRuntimeInfo Function</span></span>
 <span data-ttu-id="ff70a-103">Pobiera informacje o wersji i katalogu o środowisko uruchomieniowe języka wspólnego (CLR) wymagane przez aplikację.</span><span class="sxs-lookup"><span data-stu-id="ff70a-103">Gets version and directory information about the common language runtime (CLR) requested by an application.</span></span>  

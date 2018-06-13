@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440781"
 ---
 # <a name="coinitiee-enumeration"></a><span data-ttu-id="495a0-102">COINITIEE — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="495a0-102">COINITIEE Enumeration</span></span>
 <span data-ttu-id="495a0-103">Określa stałe używane przez [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) podczas inicjowania środowiska CLR.</span><span class="sxs-lookup"><span data-stu-id="495a0-103">Specifies constants used by [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) when initializing the common language runtime.</span></span>  

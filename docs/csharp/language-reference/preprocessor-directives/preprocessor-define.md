@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33286737"
 ---
 # <a name="define-c-reference"></a><span data-ttu-id="fe5e1-102">#define (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="fe5e1-102">#define (C# Reference)</span></span>
 <span data-ttu-id="fe5e1-103">Dyrektywa `#define` umożliwia zdefiniowanie symbolu.</span><span class="sxs-lookup"><span data-stu-id="fe5e1-103">You use `#define` to define a symbol.</span></span> <span data-ttu-id="fe5e1-104">Jeżeli używasz symbolu jako wyrażenia, które jest przekazywane do dyrektywy [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md), wyrażenie zostanie oszacowane jako `true`, jak pokazano na poniższym przykładzie:</span><span class="sxs-lookup"><span data-stu-id="fe5e1-104">When you use the symbol as the expression that's passed to the [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) directive, the expression will evaluate to `true`, as the following example shows:</span></span>  

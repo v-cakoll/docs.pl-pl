@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395248"
 ---
 # <a name="ltparametergt-element-net-native"></a><span data-ttu-id="51634-102">Element &lt;Parameter&gt; (architektura .NET Native)</span><span class="sxs-lookup"><span data-stu-id="51634-102">&lt;Parameter&gt; Element (.NET Native)</span></span>
 <span data-ttu-id="51634-103">Stosuje odbicia zasady do typu argumentu przekazanego do metody.</span><span class="sxs-lookup"><span data-stu-id="51634-103">Applies reflection policy to the type of the argument passed to a method.</span></span>  

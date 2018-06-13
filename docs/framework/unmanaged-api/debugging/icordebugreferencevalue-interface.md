@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422334"
 ---
 # <a name="icordebugreferencevalue-interface1"></a><span data-ttu-id="85c62-102">ICorDebugReferenceValue Interface1</span><span class="sxs-lookup"><span data-stu-id="85c62-102">ICorDebugReferenceValue Interface1</span></span>
 <span data-ttu-id="85c62-103">Udostępnia metody zarządzające wartość, która jest odwołaniem do obiektu.</span><span class="sxs-lookup"><span data-stu-id="85c62-103">Provides methods that manage a value that is a reference to an object.</span></span> <span data-ttu-id="85c62-104">(To znaczy, że ten interfejs udostępnia metody zarządzające wskaźnik). Ten interfejs implementuje "ICorDebugValue".</span><span class="sxs-lookup"><span data-stu-id="85c62-104">(That is, this interface provides methods that manage a pointer.) This interface implements "ICorDebugValue".</span></span>  

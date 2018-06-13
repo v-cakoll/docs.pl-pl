@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441500"
 ---
 # <a name="ihosttaskstart-method"></a><span data-ttu-id="78fcc-102">IHostTask::Start — Metoda</span><span class="sxs-lookup"><span data-stu-id="78fcc-102">IHostTask::Start Method</span></span>
 <span data-ttu-id="78fcc-103">Żądania, że host move — zadanie reprezentowany przez bieżący [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) wystąpienie z wstrzymane do aktywnego stanu, w którym można wykonywać kodu.</span><span class="sxs-lookup"><span data-stu-id="78fcc-103">Requests that the host move the task represented by the current [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instance from a suspended to a live state, in which code can be executed.</span></span>  

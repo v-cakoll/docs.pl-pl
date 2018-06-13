@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397575"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a><span data-ttu-id="6bc8a-102">Porady: zbadanie i tworzenie wystąpień typów ogólnych za pomocą odbicia</span><span class="sxs-lookup"><span data-stu-id="6bc8a-102">How to: Examine and Instantiate Generic Types with Reflection</span></span>
 <span data-ttu-id="6bc8a-103">Informacje o typach ogólnych są uzyskiwane w taki sam sposób jak informacje o innych typów:, sprawdzając <xref:System.Type> obiekt, który reprezentuje typ ogólny.</span><span class="sxs-lookup"><span data-stu-id="6bc8a-103">Information about generic types is obtained in the same way as information about other types: by examining a <xref:System.Type> object that represents the generic type.</span></span> <span data-ttu-id="6bc8a-104">Różnica zasady jest typem ogólnym listę <xref:System.Type> obiekty reprezentujące jego parametrów typu ogólnego.</span><span class="sxs-lookup"><span data-stu-id="6bc8a-104">The principle difference is that a generic type has a list of <xref:System.Type> objects representing its generic type parameters.</span></span> <span data-ttu-id="6bc8a-105">Pierwsza procedura w tej sekcji sprawdza typów ogólnych.</span><span class="sxs-lookup"><span data-stu-id="6bc8a-105">The first procedure in this section examines generic types.</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397156"
 ---
 # <a name="how-to-create-an-xml-documentation-file-using-codedom"></a><span data-ttu-id="e2abd-102">Poradnik: Tworzenie pliku dokumentacji XML przy użyciu modelu CodeDOM</span><span class="sxs-lookup"><span data-stu-id="e2abd-102">How to: Create an XML Documentation File Using CodeDOM</span></span>
 <span data-ttu-id="e2abd-103">CodeDOM może służyć do tworzenia kodu, który generuje plik dokumentacji XML.</span><span class="sxs-lookup"><span data-stu-id="e2abd-103">CodeDOM can be used to create code that generates XML documentation.</span></span> <span data-ttu-id="e2abd-104">Proces obejmuje tworzenie wykresu CodeDOM, który zawiera komentarze dokumentacji XML: generowanie kodu i kompilowania wygenerowanego kodu z opcją kompilatora, która tworzy dane wyjściowe dokumentacji XML.</span><span class="sxs-lookup"><span data-stu-id="e2abd-104">The process involves creating the CodeDOM graph that contains the XML documentation comments, generating the code, and compiling the generated code with the compiler option that creates the XML documentation output.</span></span>  

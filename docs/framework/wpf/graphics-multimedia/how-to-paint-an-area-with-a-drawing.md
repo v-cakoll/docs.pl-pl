@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560906"
 ---
 # <a name="how-to-paint-an-area-with-a-drawing"></a><span data-ttu-id="bbe9c-102">Jak malować obszar za pomocą rysowania</span><span class="sxs-lookup"><span data-stu-id="bbe9c-102">How to: Paint an Area with a Drawing</span></span>
 <span data-ttu-id="bbe9c-103">W tym przykładzie pokazano, jak namalować obszar z rysunku.</span><span class="sxs-lookup"><span data-stu-id="bbe9c-103">This example shows how to paint an area with a drawing.</span></span> <span data-ttu-id="bbe9c-104">Malowanie obszaru z rysunkiem, należy użyć <xref:System.Windows.Media.DrawingBrush> i co najmniej jeden <xref:System.Windows.Media.Drawing> obiektów.</span><span class="sxs-lookup"><span data-stu-id="bbe9c-104">To paint an area with a drawing, you use a <xref:System.Windows.Media.DrawingBrush> and one or more <xref:System.Windows.Media.Drawing> objects.</span></span>   <span data-ttu-id="bbe9c-105">W poniższym przykładzie użyto <xref:System.Windows.Media.DrawingBrush> obiektu z rysunkiem dwie elipsy.</span><span class="sxs-lookup"><span data-stu-id="bbe9c-105">The following example uses a <xref:System.Windows.Media.DrawingBrush> to paint an object with a drawing of two ellipses.</span></span>  

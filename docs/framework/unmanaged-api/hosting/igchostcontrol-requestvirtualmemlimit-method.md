@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437160"
 ---
 # <a name="igchostcontrolrequestvirtualmemlimit-method"></a><span data-ttu-id="bcb25-102">IGCHostControl::RequestVirtualMemLimit — Metoda</span><span class="sxs-lookup"><span data-stu-id="bcb25-102">IGCHostControl::RequestVirtualMemLimit Method</span></span>
 <span data-ttu-id="bcb25-103">Żąda hosta, aby zmienić limit pamięci wirtualnej.</span><span class="sxs-lookup"><span data-stu-id="bcb25-103">Requests the host to change the limits of virtual memory.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396110"
 ---
 # <a name="thread-pool-etw-events"></a><span data-ttu-id="f746a-102">Zdarzenia ETW puli wątków</span><span class="sxs-lookup"><span data-stu-id="f746a-102">Thread Pool ETW Events</span></span>
 <a name="top"></a> <span data-ttu-id="f746a-103">Te zdarzenia zbierać informacje o wątków We/Wy i proces roboczy.</span><span class="sxs-lookup"><span data-stu-id="f746a-103">These events collect information about worker and I/O threads.</span></span>  

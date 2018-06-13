@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440859"
 ---
 # <a name="hosting-unmanaged-api-reference"></a><span data-ttu-id="fcf2c-102">Hosting (Niezarządzany wykaz interfejsów API)</span><span class="sxs-lookup"><span data-stu-id="fcf2c-102">Hosting (Unmanaged API Reference)</span></span>
 <span data-ttu-id="fcf2c-103">Hostingu API umożliwia hostom niezarządzanych do integracji środowisko uruchomieniowe języka wspólnego (CLR) w swoich aplikacjach.</span><span class="sxs-lookup"><span data-stu-id="fcf2c-103">The hosting API enables unmanaged hosts to integrate the common language runtime (CLR) into their applications.</span></span>  

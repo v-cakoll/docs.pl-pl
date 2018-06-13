@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397003"
 ---
 # <a name="peer-name-resolution-protocol"></a><span data-ttu-id="d17dd-102">Protokół PNRP</span><span class="sxs-lookup"><span data-stu-id="d17dd-102">Peer Name Resolution Protocol</span></span>
 <span data-ttu-id="d17dd-103">W środowiskach peer-to-peer elementów równorzędnych użyć systemy rozpoznawania nazw określonych w ustalaniu każdej lokalizacji sieciowych (adresów, protokołów i portów) na podstawie nazw lub identyfikatorów innego typu.</span><span class="sxs-lookup"><span data-stu-id="d17dd-103">In peer-to-peer environments, peers use specific name resolution systems to resolve each other's network locations (addresses, protocols, and ports) from names or other types of identifiers.</span></span> <span data-ttu-id="d17dd-104">W przeszłości rozpoznawania nazw równorzędnych o zostały skomplikowanym łączności z założenia przejściowy, a także innych braków w ramach systemu nazw domen (DNS).</span><span class="sxs-lookup"><span data-stu-id="d17dd-104">In the past, peer name resolution has been complicated by the inherently transient connectivity as well as other shortcomings within the Domain Name System (DNS).</span></span>  

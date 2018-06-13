@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397172"
 ---
 # <a name="using-tcp-services"></a><span data-ttu-id="e59cb-102">Za pomocą usług TCP</span><span class="sxs-lookup"><span data-stu-id="e59cb-102">Using TCP Services</span></span>
 <span data-ttu-id="e59cb-103"><xref:System.Net.Sockets.TcpClient> Klasy żąda danych od zasobu internetowego za pomocą protokołu TCP.</span><span class="sxs-lookup"><span data-stu-id="e59cb-103">The <xref:System.Net.Sockets.TcpClient> class requests data from an Internet resource using TCP.</span></span> <span data-ttu-id="e59cb-104">Metody i właściwości **TcpClient** abstrakcyjnej szczegółowe informacje dotyczące tworzenia <xref:System.Net.Sockets.Socket> żądania i odbierania danych za pomocą protokołu TCP.</span><span class="sxs-lookup"><span data-stu-id="e59cb-104">The methods and properties of **TcpClient** abstract the details for creating a <xref:System.Net.Sockets.Socket> for requesting and receiving data using TCP.</span></span> <span data-ttu-id="e59cb-105">Ponieważ połączenie z urządzeniem zdalnym jest reprezentowana jako strumienia, dane można Odczyt i zapis techniki obsługi strumienia .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="e59cb-105">Because the connection to the remote device is represented as a stream, data can be read and written with .NET Framework stream-handling techniques.</span></span>  

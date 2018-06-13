@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440620"
 ---
 # <a name="ivalidatorvalidate-method"></a><span data-ttu-id="55ddc-102">IValidator::Validate — Metoda</span><span class="sxs-lookup"><span data-stu-id="55ddc-102">IValidator::Validate Method</span></span>
 <span data-ttu-id="55ddc-103">Weryfikuje określony przenośny plik wykonywalny (PE) lub plik języka pośredniego (MSIL) firmy Microsoft.</span><span class="sxs-lookup"><span data-stu-id="55ddc-103">Validates the specified portable executable (PE) or Microsoft intermediate language (MSIL) file.</span></span>  

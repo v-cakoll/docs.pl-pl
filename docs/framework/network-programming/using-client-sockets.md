@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395950"
 ---
 # <a name="using-client-sockets"></a><span data-ttu-id="15af2-102">Używanie klienta gniazd</span><span class="sxs-lookup"><span data-stu-id="15af2-102">Using Client Sockets</span></span>
 <span data-ttu-id="15af2-103">Przed rozpoczęciem konwersacji za pośrednictwem <xref:System.Net.Sockets.Socket>, należy utworzyć potok danych pomiędzy aplikacją i urządzenia zdalnego.</span><span class="sxs-lookup"><span data-stu-id="15af2-103">Before you can initiate a conversation through a <xref:System.Net.Sockets.Socket>, you must create a data pipe between your application and the remote device.</span></span> <span data-ttu-id="15af2-104">Mimo że istnieją inne rodziny adresów sieci i protokołów, w tym przykładzie pokazano, jak można utworzyć połączenia TCP/IP do zdalnej usługi.</span><span class="sxs-lookup"><span data-stu-id="15af2-104">Although other network address families and protocols exist, this example shows how to create a TCP/IP connection to a remote service.</span></span>  

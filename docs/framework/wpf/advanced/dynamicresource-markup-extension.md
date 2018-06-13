@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545327"
 ---
 # <a name="dynamicresource-markup-extension"></a><span data-ttu-id="d059e-102">DynamicResource — Rozszerzenie znaczników</span><span class="sxs-lookup"><span data-stu-id="d059e-102">DynamicResource Markup Extension</span></span>
 <span data-ttu-id="d059e-103">Zawiera wartość dla każdego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] atrybutu właściwości przez odkładanie tej wartości jako odwołanie do określonych zasobów.</span><span class="sxs-lookup"><span data-stu-id="d059e-103">Provides a value for any [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] property attribute by deferring that value to be a reference to a defined resource.</span></span> <span data-ttu-id="d059e-104">Zachowanie wyszukiwania dla tego zasobu jest odpowiednikiem odnośników czasu wykonywania.</span><span class="sxs-lookup"><span data-stu-id="d059e-104">Lookup behavior for that resource is analogous to run-time lookup.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33485970"
 ---
 # <a name="systemservicemodeltxsourcetxscoperequirediscreatenewtransaction"></a><span data-ttu-id="2211d-102">System.ServiceModel.TxSourceTxScopeRequiredIsCreateNewTransaction</span><span class="sxs-lookup"><span data-stu-id="2211d-102">System.ServiceModel.TxSourceTxScopeRequiredIsCreateNewTransaction</span></span>
 <span data-ttu-id="2211d-103">Transakcja określona dla określonej operacji była nowo utworzona.</span><span class="sxs-lookup"><span data-stu-id="2211d-103">The specified transaction for the specified operation was newly created.</span></span>  

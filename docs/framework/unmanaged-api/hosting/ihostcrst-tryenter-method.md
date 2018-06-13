@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438987"
 ---
 # <a name="ihostcrsttryenter-method"></a><span data-ttu-id="ced8e-102">IHostCrst::TryEnter — Metoda</span><span class="sxs-lookup"><span data-stu-id="ced8e-102">IHostCrst::TryEnter Method</span></span>
 <span data-ttu-id="ced8e-103">Próbuje wprowadź sekcja krytyczna reprezentowany przez bieżący [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="ced8e-103">Attempts to enter the critical section represented by the current [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) instance.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398030"
 ---
 # <a name="lazy-initialization"></a><span data-ttu-id="f66b9-102">Inicjalizacja z opóźnieniem</span><span class="sxs-lookup"><span data-stu-id="f66b9-102">Lazy Initialization</span></span>
 <span data-ttu-id="f66b9-103">*Inicjalizacja z opóźnieniem* obiektu oznacza, że jej tworzenia została odroczona aż najpierw jest używany.</span><span class="sxs-lookup"><span data-stu-id="f66b9-103">*Lazy initialization* of an object means that its creation is deferred until it is first used.</span></span> <span data-ttu-id="f66b9-104">(W tym temacie warunki *incjalizacji* i *opóźnieniem wystąpienia* to samo.) Inicjalizacja z opóźnieniem służy głównie w celu zwiększenia wydajności, uniknąć niepotrzebne obliczeń i zmniejszyć wymagania dotyczące pamięci programu.</span><span class="sxs-lookup"><span data-stu-id="f66b9-104">(For this topic, the terms *lazy initialization* and *lazy instantiation* are synonymous.) Lazy initialization is primarily used to improve performance, avoid wasteful computation, and reduce program memory requirements.</span></span> <span data-ttu-id="f66b9-105">Są to najbardziej typowych scenariuszy:</span><span class="sxs-lookup"><span data-stu-id="f66b9-105">These are the most common scenarios:</span></span>  

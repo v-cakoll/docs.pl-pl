@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443316"
 ---
 # <a name="correftodefcheck-enumeration"></a><span data-ttu-id="6a64d-102">CorRefToDefCheck — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="6a64d-102">CorRefToDefCheck Enumeration</span></span>
 <span data-ttu-id="6a64d-103">Określa flagi kontrolujące elementy do którego istnieje odwołanie, które są konwertowane na ich definicje w celu optymalizacji kodu.</span><span class="sxs-lookup"><span data-stu-id="6a64d-103">Specifies flags to control which referenced items are converted to their definitions in order to optimize the code.</span></span>  

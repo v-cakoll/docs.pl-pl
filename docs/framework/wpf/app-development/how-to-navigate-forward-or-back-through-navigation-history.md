@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546269"
 ---
 # <a name="how-to-navigate-forward-or-back-through-navigation-history"></a><span data-ttu-id="9e543-102">Jak poruszać się w przód i wstecz w historii nawigacji</span><span class="sxs-lookup"><span data-stu-id="9e543-102">How to: Navigate Forward or Back Through Navigation History</span></span>
 <span data-ttu-id="9e543-103">W tym przykładzie przedstawiono sposób przejdź do wpisów w historii przeglądania do przodu i do tyłu.</span><span class="sxs-lookup"><span data-stu-id="9e543-103">This example illustrates how to navigate forward or back to entries in navigation history.</span></span>  

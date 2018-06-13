@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397887"
 ---
 # <a name="securing-method-access"></a><span data-ttu-id="2f90f-102">Zabezpieczanie dostępu metody</span><span class="sxs-lookup"><span data-stu-id="2f90f-102">Securing Method Access</span></span>
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393858"
 ---
 # <a name="exception-thrownv1-etw-event"></a><span data-ttu-id="05802-102">Zdarzenia wyjątku ETW Thrown_V1</span><span class="sxs-lookup"><span data-stu-id="05802-102">Exception Thrown_V1 ETW Event</span></span>
 <span data-ttu-id="05802-103">To zdarzenie znajdują się informacje dotyczące wyjątków, które są zgłaszane.</span><span class="sxs-lookup"><span data-stu-id="05802-103">This event captures information about the exceptions that are thrown.</span></span>  

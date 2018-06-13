@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554901"
 ---
 # <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a><span data-ttu-id="d1f09-102">Jak sortować kolumnę GridView po kliknięciu na nagłówek</span><span class="sxs-lookup"><span data-stu-id="d1f09-102">How to: Sort a GridView Column When a Header Is Clicked</span></span>
 <span data-ttu-id="d1f09-103">W tym przykładzie przedstawiono sposób tworzenia <xref:System.Windows.Controls.ListView> formant, który implementuje <xref:System.Windows.Controls.GridView> wyświetlić trybu i sortowanie danych zawartości, gdy użytkownik kliknie nagłówek kolumny.</span><span class="sxs-lookup"><span data-stu-id="d1f09-103">This example shows how to create a <xref:System.Windows.Controls.ListView> control that implements a <xref:System.Windows.Controls.GridView> view mode and sorts the data content when a user clicks a column header.</span></span>  

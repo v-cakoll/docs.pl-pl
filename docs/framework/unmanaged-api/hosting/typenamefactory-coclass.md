@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440885"
 ---
 # <a name="typenamefactory-coclass"></a><span data-ttu-id="42cba-102">TypeNameFactory — Klasa coclass</span><span class="sxs-lookup"><span data-stu-id="42cba-102">TypeNameFactory Coclass</span></span>
 <span data-ttu-id="42cba-103">Interfejs zarządzania deconstruction nazwy typu.</span><span class="sxs-lookup"><span data-stu-id="42cba-103">Provides an interface for managing the deconstruction of a type name.</span></span>  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441351"
 ---
 # <a name="ihostmalloc-interface"></a><span data-ttu-id="213f9-102">IHostMalloc — Interfejs</span><span class="sxs-lookup"><span data-stu-id="213f9-102">IHostMalloc Interface</span></span>
 <span data-ttu-id="213f9-103">Udostępnia metody, które umożliwiają środowisko uruchomieniowe języka wspólnego (CLR), aby zażądać szczegółowych alokacji sterty za pośrednictwem hosta.</span><span class="sxs-lookup"><span data-stu-id="213f9-103">Provides methods that allow the common language runtime (CLR) to request fine-grained allocations from the heap through the host.</span></span>  

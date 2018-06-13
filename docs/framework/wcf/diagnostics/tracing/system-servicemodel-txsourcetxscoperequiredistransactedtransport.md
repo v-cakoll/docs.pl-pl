@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33482488"
 ---
 # <a name="systemservicemodeltxsourcetxscoperequiredistransactedtransport"></a><span data-ttu-id="14e34-102">System.ServiceModel.TxSourceTxScopeRequiredIsTransactedTransport</span><span class="sxs-lookup"><span data-stu-id="14e34-102">System.ServiceModel.TxSourceTxScopeRequiredIsTransactedTransport</span></span>
 <span data-ttu-id="14e34-103">Transakcja określona Odebrano dla określonej operacji usługi transportu objętego transakcją, takiej jak usługa MSMQ.</span><span class="sxs-lookup"><span data-stu-id="14e34-103">The specified transaction was received for the specified operation from a transacted transport, such as MSMQ.</span></span>  

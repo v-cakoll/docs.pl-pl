@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759546"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a><span data-ttu-id="a74e0-102">Konfigurowanie parametrów i typów danych parametrów</span><span class="sxs-lookup"><span data-stu-id="a74e0-102">Configuring Parameters and Parameter Data Types</span></span>
 <span data-ttu-id="a74e0-103">Polecenie obiektów parametry do przekazania wartości do instrukcji SQL lub procedur składowanych, zapewniając Sprawdzanie typu i weryfikacji.</span><span class="sxs-lookup"><span data-stu-id="a74e0-103">Command objects use parameters to pass values to SQL statements or stored procedures, providing type checking and validation.</span></span> <span data-ttu-id="a74e0-104">W odróżnieniu od tekst polecenia parametr wejściowy jest traktowany jako wartość literału nie jako kod wykonywalny.</span><span class="sxs-lookup"><span data-stu-id="a74e0-104">Unlike command text, parameter input is treated as a literal value, not as executable code.</span></span> <span data-ttu-id="a74e0-105">Dzięki temu zabezpieczenia przed atakami "Iniekcja kodu SQL", w których osoba atakująca Wstawia polecenie Zabezpieczenia dokonywania na serwerze do instrukcji SQL.</span><span class="sxs-lookup"><span data-stu-id="a74e0-105">This helps guard against "SQL injection" attacks, in which an attacker inserts a command that compromises security on the server into an SQL statement.</span></span>  

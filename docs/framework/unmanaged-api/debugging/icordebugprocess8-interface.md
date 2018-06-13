@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422262"
 ---
 # <a name="icordebugprocess8-interface"></a><span data-ttu-id="05905-102">ICorDebugProcess8 — interfejs</span><span class="sxs-lookup"><span data-stu-id="05905-102">ICorDebugProcess8 Interface</span></span>
 <span data-ttu-id="05905-103">[Obsługiwane w [!INCLUDE[net_v46](../../../../includes/net-v46-md.md)] i nowszych wersjach]</span><span class="sxs-lookup"><span data-stu-id="05905-103">[Supported in the [!INCLUDE[net_v46](../../../../includes/net-v46-md.md)] and later versions]</span></span>  

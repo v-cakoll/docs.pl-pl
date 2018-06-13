@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33487860"
 ---
 # <a name="custom-authorization"></a><span data-ttu-id="74f53-102">Autoryzacja niestandardowa</span><span class="sxs-lookup"><span data-stu-id="74f53-102">Custom Authorization</span></span>
 <span data-ttu-id="74f53-103">Autoryzacja polega na kontrolowanie dostępu do zasobów i zadań.</span><span class="sxs-lookup"><span data-stu-id="74f53-103">Authorization is the process of controlling access to resources and tasks.</span></span> <span data-ttu-id="74f53-104">Tematy w tej sekcji umożliwiają tworzenie do realizacji różnych oświadczenia lub zasad.</span><span class="sxs-lookup"><span data-stu-id="74f53-104">The topics in this section enable you to create to implement different claim types, or policies.</span></span>  

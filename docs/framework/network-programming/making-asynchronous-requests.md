@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395911"
 ---
 # <a name="making-asynchronous-requests"></a><span data-ttu-id="5f0f8-102">Tworzenie żądania asynchroniczne</span><span class="sxs-lookup"><span data-stu-id="5f0f8-102">Making Asynchronous Requests</span></span>
 <span data-ttu-id="5f0f8-103"><xref:System.Net> Klasy na użytek programu .NET Framework standardowy model programowania asynchronicznego asynchronicznego dostępu do zasobów Internetu.</span><span class="sxs-lookup"><span data-stu-id="5f0f8-103">The <xref:System.Net> classes use the .NET Framework's standard asynchronous programming model for asynchronous access to Internet resources.</span></span> <span data-ttu-id="5f0f8-104"><xref:System.Net.WebRequest.BeginGetResponse%2A> i <xref:System.Net.WebRequest.EndGetResponse%2A> metody <xref:System.Net.WebRequest> klasy start i ukończone żądania asynchroniczne zasobu internetowego.</span><span class="sxs-lookup"><span data-stu-id="5f0f8-104">The <xref:System.Net.WebRequest.BeginGetResponse%2A> and <xref:System.Net.WebRequest.EndGetResponse%2A> methods of the <xref:System.Net.WebRequest> class start and complete asynchronous requests for an Internet resource.</span></span>  

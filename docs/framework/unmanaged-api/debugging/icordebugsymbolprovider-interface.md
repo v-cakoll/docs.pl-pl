@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423211"
 ---
 # <a name="icordebugsymbolprovider-interface"></a><span data-ttu-id="5cf1d-102">Interfejs ICorDebugSymbolProvider</span><span class="sxs-lookup"><span data-stu-id="5cf1d-102">ICorDebugSymbolProvider Interface</span></span>
 <span data-ttu-id="5cf1d-103">Udostępnia metody, które mogą służyć do pobierania informacji o symbolach debugowania.</span><span class="sxs-lookup"><span data-stu-id="5cf1d-103">Provides methods that can be used to retrieve debug symbol information.</span></span>  

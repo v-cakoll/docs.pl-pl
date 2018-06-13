@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439755"
 ---
 # <a name="igchostcontrol-interface"></a><span data-ttu-id="1a1c4-102">IGCHostControl — Interfejs</span><span class="sxs-lookup"><span data-stu-id="1a1c4-102">IGCHostControl Interface</span></span>
 <span data-ttu-id="1a1c4-103">Udostępnia metody, która umożliwia modułu zbierającego elementy bezużyteczne na żądanie hosta, aby zmienić limit pamięci wirtualnej.</span><span class="sxs-lookup"><span data-stu-id="1a1c4-103">Provides a method that allows the garbage collector to request the host to change the limits of virtual memory.</span></span>  

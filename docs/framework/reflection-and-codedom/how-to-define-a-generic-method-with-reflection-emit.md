@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396808"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a><span data-ttu-id="1d149-102">Porady: definiowanie metody ogólnej przy użyciu emisji odbicia</span><span class="sxs-lookup"><span data-stu-id="1d149-102">How to: Define a Generic Method with Reflection Emit</span></span>
 <span data-ttu-id="1d149-103">Pierwsza procedura pokazuje, jak utworzyć prostą metodę ogólnego z dwoma parametrami typu i sposób stosowania ograniczenia klasy, interfejsu, ograniczenia i ograniczeń specjalnych parametrów typu.</span><span class="sxs-lookup"><span data-stu-id="1d149-103">The first procedure shows how to create a simple generic method with two type parameters, and how to apply class constraints, interface constraints, and special constraints to the type parameters.</span></span>  

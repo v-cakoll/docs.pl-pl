@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488985"
 ---
 # <a name="data-contract-serializer"></a><span data-ttu-id="5c622-102">Serializator kontraktów danych</span><span class="sxs-lookup"><span data-stu-id="5c622-102">Data Contract Serializer</span></span>
 <span data-ttu-id="5c622-103">Infrastruktura usług Windows Communication Foundation (WCF) używa <xref:System.Runtime.Serialization.DataContractSerializer> klasę jako domyślnego elementu serializującego.</span><span class="sxs-lookup"><span data-stu-id="5c622-103">The Windows Communication Foundation (WCF) infrastructure uses the <xref:System.Runtime.Serialization.DataContractSerializer> class as the default serializer.</span></span> <span data-ttu-id="5c622-104">Tematy w tej sekcji zawierają więcej szczegółów dotyczących korzystania z niego jako autonomiczny serializatora.</span><span class="sxs-lookup"><span data-stu-id="5c622-104">The topics in this section provide more details for using it as a stand-alone serializer.</span></span>  

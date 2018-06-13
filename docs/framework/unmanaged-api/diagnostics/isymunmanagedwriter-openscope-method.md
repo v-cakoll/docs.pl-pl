@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428163"
 ---
 # <a name="isymunmanagedwriteropenscope-method"></a><span data-ttu-id="ead33-102">ISymUnmanagedWriter::OpenScope — Metoda</span><span class="sxs-lookup"><span data-stu-id="ead33-102">ISymUnmanagedWriter::OpenScope Method</span></span>
 <span data-ttu-id="ead33-103">Zostanie otwarty nowy zakres leksykalne w bieżącej metodzie.</span><span class="sxs-lookup"><span data-stu-id="ead33-103">Opens a new lexical scope in the current method.</span></span> <span data-ttu-id="ead33-104">Zakres staje się nowego zakresu i spoczywa na stosie zakresów.</span><span class="sxs-lookup"><span data-stu-id="ead33-104">The scope becomes the new current scope and is pushed onto a stack of scopes.</span></span> <span data-ttu-id="ead33-105">Zakresy muszą tworzyć hierarchię.</span><span class="sxs-lookup"><span data-stu-id="ead33-105">Scopes must form a hierarchy.</span></span> <span data-ttu-id="ead33-106">Elementy równorzędne nie może nakładać się.</span><span class="sxs-lookup"><span data-stu-id="ead33-106">Siblings are not allowed to overlap.</span></span>  

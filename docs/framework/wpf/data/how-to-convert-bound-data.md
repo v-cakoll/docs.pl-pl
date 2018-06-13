@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556643"
 ---
 # <a name="how-to-convert-bound-data"></a><span data-ttu-id="d280b-102">Jak konwertować powiązane dane</span><span class="sxs-lookup"><span data-stu-id="d280b-102">How to: Convert Bound Data</span></span>
 <span data-ttu-id="d280b-103">Ten przykład przedstawia sposób stosowania konwersji danych, który jest używany w powiązaniach.</span><span class="sxs-lookup"><span data-stu-id="d280b-103">This example shows how to apply conversion to data that is used in bindings.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461945"
 ---
 # <a name="icorprofilerinfogetfunctionfromtoken-method"></a><span data-ttu-id="6835d-102">ICorProfilerInfo::GetFunctionFromToken — Metoda</span><span class="sxs-lookup"><span data-stu-id="6835d-102">ICorProfilerInfo::GetFunctionFromToken Method</span></span>
 <span data-ttu-id="6835d-103">Pobiera identyfikator funkcji.</span><span class="sxs-lookup"><span data-stu-id="6835d-103">Gets the ID of a function.</span></span> <span data-ttu-id="6835d-104">Ta metoda jest przestarzała w programie .NET Framework w wersji 2.0.</span><span class="sxs-lookup"><span data-stu-id="6835d-104">This method is obsolete in the .NET Framework version 2.0.</span></span> <span data-ttu-id="6835d-105">Użyj [ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md) metody zamiast tego.</span><span class="sxs-lookup"><span data-stu-id="6835d-105">Use the [ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md) method instead.</span></span>  

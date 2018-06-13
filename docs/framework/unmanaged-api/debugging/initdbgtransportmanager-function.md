@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423666"
 ---
 # <a name="initdbgtransportmanager-function"></a><span data-ttu-id="df3c3-102">InitDbgTransportManager — Funkcja</span><span class="sxs-lookup"><span data-stu-id="df3c3-102">InitDbgTransportManager Function</span></span>
 <span data-ttu-id="df3c3-103">Inicjuje menedżera transportu do nawiązania połączenia zdalnego celu wyliczenie procesu i środowiska uruchomieniowego.</span><span class="sxs-lookup"><span data-stu-id="df3c3-103">Initializes the transport manager to connect to a remote target for process and runtime enumeration.</span></span>  

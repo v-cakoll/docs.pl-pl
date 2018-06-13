@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461519"
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a><span data-ttu-id="19d24-102">ICorProfilerInfo3::RequestProfilerDetach — Metoda</span><span class="sxs-lookup"><span data-stu-id="19d24-102">ICorProfilerInfo3::RequestProfilerDetach Method</span></span>
 <span data-ttu-id="19d24-103">Powoduje, że środowisko uruchomieniowe można odłączyć profilera.</span><span class="sxs-lookup"><span data-stu-id="19d24-103">Instructs the runtime to detach the profiler.</span></span>  

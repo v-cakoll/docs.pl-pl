@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554411"
 ---
 # <a name="slider"></a><span data-ttu-id="99c47-102">Suwak</span><span class="sxs-lookup"><span data-stu-id="99c47-102">Slider</span></span>
 <span data-ttu-id="99c47-103"><xref:System.Windows.Controls.Slider> Umożliwia, należy wybrać wartość z zakresu wartości przez przeniesienie <xref:System.Windows.Controls.Primitives.Thumb> wzdłuż <xref:System.Windows.Controls.Primitives.Track>.</span><span class="sxs-lookup"><span data-stu-id="99c47-103">The <xref:System.Windows.Controls.Slider> allows you select from a range of values by moving a <xref:System.Windows.Controls.Primitives.Thumb> along a <xref:System.Windows.Controls.Primitives.Track>.</span></span>  

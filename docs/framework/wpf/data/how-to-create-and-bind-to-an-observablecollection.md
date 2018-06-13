@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556721"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a><span data-ttu-id="b4187-102">Jak utworzyć i powiązać z ObservableCollection</span><span class="sxs-lookup"><span data-stu-id="b4187-102">How to: Create and Bind to an ObservableCollection</span></span>
 <span data-ttu-id="b4187-103">W tym przykładzie pokazano, jak utworzyć i powiązania z kolekcją, która jest pochodną <xref:System.Collections.ObjectModel.ObservableCollection%601> klasy, która jest klasę kolekcji, która zawiera powiadomienia elementów uzyskać dodania lub usunięcia.</span><span class="sxs-lookup"><span data-stu-id="b4187-103">This example shows how to create and bind to a collection that derives from the <xref:System.Collections.ObjectModel.ObservableCollection%601> class, which is a collection class that provides notifications when items get added or removed.</span></span>  

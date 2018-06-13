@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33211341"
 ---
 # <a name="how-to-manage-package-dependency-versions-for-net-core-10"></a><span data-ttu-id="372d8-103">Jak zarządzać wersji zależności pakietu dla platformy .NET Core 1.0</span><span class="sxs-lookup"><span data-stu-id="372d8-103">How to Manage Package Dependency Versions for .NET Core 1.0</span></span>
 

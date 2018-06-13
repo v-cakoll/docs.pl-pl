@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33465627"
 ---
 # <a name="3393---streamedmessagereadbyencoder"></a><span data-ttu-id="b3494-102">3393 — StreamedMessageReadByEncoder</span><span class="sxs-lookup"><span data-stu-id="b3494-102">3393 - StreamedMessageReadByEncoder</span></span>
 ## <a name="properties"></a><span data-ttu-id="b3494-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="b3494-103">Properties</span></span>  

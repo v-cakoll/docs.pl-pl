@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563978"
 ---
 # <a name="wpf-samples"></a><span data-ttu-id="46187-102">Przykłady interfejsów WPF</span><span class="sxs-lookup"><span data-stu-id="46187-102">WPF Samples</span></span>
 <span data-ttu-id="46187-103">Aby uzyskać listę przykłady ilustrujące [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], zobacz [przykłady dokumentacji WPF](http://go.microsoft.com/fwlink/?LinkID=159044) w galerii kodu MSDN.</span><span class="sxs-lookup"><span data-stu-id="46187-103">For a list of samples that demonstrate [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], see [WPF Documentation Samples](http://go.microsoft.com/fwlink/?LinkID=159044) on MSDN Code Gallery.</span></span>

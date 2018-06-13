@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457564"
 ---
 # <a name="strongnamecompareassemblies-function"></a><span data-ttu-id="e0a2a-102">StrongNameCompareAssemblies — Funkcja</span><span class="sxs-lookup"><span data-stu-id="e0a2a-102">StrongNameCompareAssemblies Function</span></span>
 <span data-ttu-id="e0a2a-103">Określa, czy dwa zestawy różnią się tylko ich podpisów silnej nazwy.</span><span class="sxs-lookup"><span data-stu-id="e0a2a-103">Determines whether two assemblies differ only by their strong name signatures.</span></span>  

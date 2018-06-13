@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746400"
 ---
 # <a name="ltprovideroptiongt-element"></a><span data-ttu-id="ff1c9-102">&lt;provideroption —&gt; — Element</span><span class="sxs-lookup"><span data-stu-id="ff1c9-102">&lt;providerOption&gt; Element</span></span>
 <span data-ttu-id="ff1c9-103">Określa atrybuty wersji kompilatora dla dostawcy języka.</span><span class="sxs-lookup"><span data-stu-id="ff1c9-103">Specifies the compiler version attributes for a language provider.</span></span>  

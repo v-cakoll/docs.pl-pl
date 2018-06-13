@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428497"
 ---
 # <a name="ehostapplicationpolicy-enumeration"></a><span data-ttu-id="e582f-102">EHostApplicationPolicy — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="e582f-102">EHostApplicationPolicy Enumeration</span></span>
 <span data-ttu-id="e582f-103">Wskazuje sposób modyfikowania [IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md) obiektu interfejsu.</span><span class="sxs-lookup"><span data-stu-id="e582f-103">Indicates how to modify an [IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md) interface object.</span></span> <span data-ttu-id="e582f-104">To wyliczenie jest przestarzała.</span><span class="sxs-lookup"><span data-stu-id="e582f-104">This enumeration has been deprecated.</span></span>  

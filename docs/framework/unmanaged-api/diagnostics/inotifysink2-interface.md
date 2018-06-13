@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426039"
 ---
 # <a name="inotifysink2-interface"></a><span data-ttu-id="3193b-102">INotifySink2 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="3193b-102">INotifySink2 Interface</span></span>
 <span data-ttu-id="3193b-103">Deklaruje metody do odbioru powiadomienia.</span><span class="sxs-lookup"><span data-stu-id="3193b-103">Declares methods for sink notification.</span></span>  

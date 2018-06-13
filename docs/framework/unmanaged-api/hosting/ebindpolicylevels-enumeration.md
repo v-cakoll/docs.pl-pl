@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431126"
 ---
 # <a name="ebindpolicylevels-enumeration"></a><span data-ttu-id="54a1a-102">EBindPolicyLevels — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="54a1a-102">EBindPolicyLevels Enumeration</span></span>
 <span data-ttu-id="54a1a-103">Zawiera flagi, aby określić poziom, na których chcesz zastosować lub zmodyfikować zasady zestawu.</span><span class="sxs-lookup"><span data-stu-id="54a1a-103">Provides flags to specify the level at which to apply or modify assembly policy.</span></span>  

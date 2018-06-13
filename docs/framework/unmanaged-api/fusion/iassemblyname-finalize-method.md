@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428179"
 ---
 # <a name="iassemblynamefinalize-method"></a><span data-ttu-id="ef2fe-102">IAssemblyName::Finalize — Metoda</span><span class="sxs-lookup"><span data-stu-id="ef2fe-102">IAssemblyName::Finalize Method</span></span>
 <span data-ttu-id="ef2fe-103">Umożliwia to [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) obiekt, aby zwolnić zasoby i wykonywać inne zadania oczyszczania, przed jego destruktor jest wywoływany.</span><span class="sxs-lookup"><span data-stu-id="ef2fe-103">Allows this [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object to release resources and perform other cleanup operations before its destructor is called.</span></span>  

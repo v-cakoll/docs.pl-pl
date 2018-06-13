@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427493"
 ---
 # <a name="isymunmanagedvariablegetaddressfield1-method"></a><span data-ttu-id="d4af6-102">ISymUnmanagedVariable::GetAddressField1 — Metoda</span><span class="sxs-lookup"><span data-stu-id="d4af6-102">ISymUnmanagedVariable::GetAddressField1 Method</span></span>
 <span data-ttu-id="d4af6-103">Pobiera pierwsze pole adresu dla tej zmiennej.</span><span class="sxs-lookup"><span data-stu-id="d4af6-103">Gets the first address field for this variable.</span></span> <span data-ttu-id="d4af6-104">Znaczenia zależy od rodzaju adres.</span><span class="sxs-lookup"><span data-stu-id="d4af6-104">Its meaning depends on the kind of address.</span></span>  

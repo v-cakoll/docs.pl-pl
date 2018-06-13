@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554054"
 ---
 # <a name="how-to-display-listview-contents-by-using-a-gridview"></a><span data-ttu-id="8d977-102">Jak wyświetlić zawartość ListView przy użyciu GridView</span><span class="sxs-lookup"><span data-stu-id="8d977-102">How to: Display ListView Contents by Using a GridView</span></span>
 <span data-ttu-id="8d977-103">W tym przykładzie pokazano sposób definiowania <xref:System.Windows.Controls.GridView> tryb widoku <xref:System.Windows.Controls.ListView> formantu.</span><span class="sxs-lookup"><span data-stu-id="8d977-103">This example shows how to define a <xref:System.Windows.Controls.GridView> view mode for a <xref:System.Windows.Controls.ListView> control.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426978"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a><span data-ttu-id="7ad4a-102">ISymUnmanagedWriter::DefineParameter — Metoda</span><span class="sxs-lookup"><span data-stu-id="7ad4a-102">ISymUnmanagedWriter::DefineParameter Method</span></span>
 <span data-ttu-id="7ad4a-103">Określa pojedynczy parametr w bieżącej metodzie.</span><span class="sxs-lookup"><span data-stu-id="7ad4a-103">Defines a single parameter in the current method.</span></span> <span data-ttu-id="7ad4a-104">Typ parametru jest pobierana z parametru pozycji (sekwencji) w podpisie metody.</span><span class="sxs-lookup"><span data-stu-id="7ad4a-104">The parameter type is taken from the parameter's position (sequence) within the method's signature.</span></span>  

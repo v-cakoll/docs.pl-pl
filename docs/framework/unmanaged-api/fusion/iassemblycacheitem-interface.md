@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429598"
 ---
 # <a name="iassemblycacheitem-interface"></a><span data-ttu-id="1384a-102">IAssemblyCacheItem — Interfejs</span><span class="sxs-lookup"><span data-stu-id="1384a-102">IAssemblyCacheItem Interface</span></span>
 <span data-ttu-id="1384a-103">Reprezentuje pojedynczy zestawu w globalnej pamięci podręcznej zestawów.</span><span class="sxs-lookup"><span data-stu-id="1384a-103">Represents a single assembly in the global assembly cache.</span></span>  

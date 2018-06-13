@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501098"
 ---
 # <a name="wsdl-and-policy"></a><span data-ttu-id="e584a-102">WSDL i zasady</span><span class="sxs-lookup"><span data-stu-id="e584a-102">WSDL and Policy</span></span>
 <span data-ttu-id="e584a-103">W tym temacie omówiono usługi Windows Communication Foundation (WCF), WSDL 1.1, szczegóły implementacji protokołu WS-Policy i WS-PolicyAttachment, a także dodatkowe potwierdzenia WS-Policy i rozszerzenia WSDL 1.1 wprowadzone przez WCF.</span><span class="sxs-lookup"><span data-stu-id="e584a-103">This topic covers Windows Communication Foundation (WCF) WSDL 1.1, WS-Policy and WS-PolicyAttachment implementation details, as well as additional WS-Policy assertions and WSDL 1.1 extensions introduced by WCF.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499027"
 ---
 # <a name="transaction-models"></a><span data-ttu-id="99250-102">Modele transakcji</span><span class="sxs-lookup"><span data-stu-id="99250-102">Transaction Models</span></span>
 <span data-ttu-id="99250-103">W tym temacie opisuje relację między modele programowania transakcji i składników infrastruktury udostępniane przez firmę Microsoft.</span><span class="sxs-lookup"><span data-stu-id="99250-103">This topic describes the relationship between the transaction programming models and the infrastructure components Microsoft provides.</span></span>  

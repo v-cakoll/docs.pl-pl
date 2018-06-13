@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746842"
 ---
 # <a name="ltlistenersgt-element-for-ltsourcegt"></a><span data-ttu-id="eb9c3-102">&lt;obiekty nasłuchujące&gt; elementu &lt;źródła&gt;</span><span class="sxs-lookup"><span data-stu-id="eb9c3-102">&lt;listeners&gt; Element for &lt;source&gt;</span></span>
 <span data-ttu-id="eb9c3-103">Dodaje lub usuwa odbiorników w <xref:System.Diagnostics.TraceSource.Listeners%2A> kolekcji <xref:System.Diagnostics.TraceSource>.</span><span class="sxs-lookup"><span data-stu-id="eb9c3-103">Adds or removes listeners in the <xref:System.Diagnostics.TraceSource.Listeners%2A> collection for a <xref:System.Diagnostics.TraceSource>.</span></span> <span data-ttu-id="eb9c3-104">Odbiornik kieruje dane wyjściowe śledzenia do odpowiedniego obiektu docelowego, takich jak dziennika, okna lub plik tekstowy.</span><span class="sxs-lookup"><span data-stu-id="eb9c3-104">A listener directs the tracing output to an appropriate target, such as a log, window, or text file.</span></span>  

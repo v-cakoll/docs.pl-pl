@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363591"
 ---
 # <a name="contextswitchdeadlock-mda"></a><span data-ttu-id="2f495-102">contextSwitchDeadlock MDA</span><span class="sxs-lookup"><span data-stu-id="2f495-102">contextSwitchDeadlock MDA</span></span>
 <span data-ttu-id="2f495-103">`contextSwitchDeadlock` Zarządzany Asystent debugowania (MDA) została aktywowana po wykryciu zakleszczenie podczas próby przejścia kontekstu COM.</span><span class="sxs-lookup"><span data-stu-id="2f495-103">The `contextSwitchDeadlock` managed debugging assistant (MDA) is activated when a deadlock is detected during an attempted COM context transition.</span></span>  

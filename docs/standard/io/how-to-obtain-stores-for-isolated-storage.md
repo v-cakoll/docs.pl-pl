@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576685"
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a><span data-ttu-id="03449-102">Porady: uzyskiwanie magazynów dla izolowanego magazynu</span><span class="sxs-lookup"><span data-stu-id="03449-102">How to: Obtain Stores for Isolated Storage</span></span>
 <span data-ttu-id="03449-103">Izolowane store ujawnia wirtualnym systemie plików w ramach przedziału danych.</span><span class="sxs-lookup"><span data-stu-id="03449-103">An isolated store exposes a virtual file system within a data compartment.</span></span> <span data-ttu-id="03449-104"><xref:System.IO.IsolatedStorage.IsolatedStorageFile> Klasa zapewnia kilka metod do interakcji z magazynu izolowanego.</span><span class="sxs-lookup"><span data-stu-id="03449-104">The <xref:System.IO.IsolatedStorage.IsolatedStorageFile> class supplies a number of methods for interacting with an isolated store.</span></span> <span data-ttu-id="03449-105">Aby utworzyć i pobrać magazynów, <xref:System.IO.IsolatedStorage.IsolatedStorageFile> oferuje trzy metody statycznej:</span><span class="sxs-lookup"><span data-stu-id="03449-105">To create and retrieve stores, <xref:System.IO.IsolatedStorage.IsolatedStorageFile> provides three static methods:</span></span>  

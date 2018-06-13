@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430027"
 ---
 # <a name="iassemblycacheinstallassembly-method"></a><span data-ttu-id="b0962-102">IAssemblyCache::InstallAssembly — Metoda</span><span class="sxs-lookup"><span data-stu-id="b0962-102">IAssemblyCache::InstallAssembly Method</span></span>
 <span data-ttu-id="b0962-103">Instaluje określonego zestawu w globalnej pamięci podręcznej zestawów.</span><span class="sxs-lookup"><span data-stu-id="b0962-103">Installs the specified assembly in the global assembly cache.</span></span>  

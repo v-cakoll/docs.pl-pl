@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426201"
 ---
 # <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a><span data-ttu-id="86ea2-102">ISymUnmanagedReader::GetMethodsFromDocumentPosition — Metoda</span><span class="sxs-lookup"><span data-stu-id="86ea2-102">ISymUnmanagedReader::GetMethodsFromDocumentPosition Method</span></span>
 <span data-ttu-id="86ea2-103">Zwraca tablicę z metod, z których każdy zawiera punkt przerwania w danej pozycji w dokumencie.</span><span class="sxs-lookup"><span data-stu-id="86ea2-103">Returns an array of methods, each of which contains the breakpoint at the given position in a document.</span></span>  

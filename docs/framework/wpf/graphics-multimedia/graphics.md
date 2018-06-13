@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556851"
 ---
 # <a name="graphics"></a><span data-ttu-id="91f6f-102">Grafika</span><span class="sxs-lookup"><span data-stu-id="91f6f-102">Graphics</span></span>
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="91f6f-103"> oferuje zintegrowane obsługę multimediów, grafiki wektorowej, animacji i zawartości kompozycji, dzięki czemu deweloperzy mogą tworzyć interesujące interfejsów użytkownika i zawartości.</span><span class="sxs-lookup"><span data-stu-id="91f6f-103"> offers integrated support for multimedia, vector graphics, animation, and content composition, making it easy for developers to build interesting user interfaces and content.</span></span>  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431717"
 ---
 # <a name="ehostbindingpolicymodifyflags-enumeration"></a><span data-ttu-id="ad4c9-102">EHostBindingPolicyModifyFlags — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="ad4c9-102">EHostBindingPolicyModifyFlags Enumeration</span></span>
 <span data-ttu-id="ad4c9-103">Umożliwia hosta określić typ przekierowania, który środowisko uruchomieniowe języka wspólnego (CLR) należy wykonać podczas stosowania zmian zasad z zestawu źródła w zestawie docelowym.</span><span class="sxs-lookup"><span data-stu-id="ad4c9-103">Allows the host to specify the type of redirection the common language runtime (CLR) should perform when applying policy modifications from a source assembly to a target assembly.</span></span>  

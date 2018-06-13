@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336713"
 ---
 # <a name="pure-functional-transformations-of-xml-c"></a><span data-ttu-id="9cd91-102">Czysty funkcjonalności transformacji XML (C#)</span><span class="sxs-lookup"><span data-stu-id="9cd91-102">Pure Functional Transformations of XML (C#)</span></span>
 <span data-ttu-id="9cd91-103">Ta sekcja zawiera samouczek funkcjonalności transformacji XML.</span><span class="sxs-lookup"><span data-stu-id="9cd91-103">This section provides a functional transformation tutorial for XML.</span></span> <span data-ttu-id="9cd91-104">Dotyczy to również wyjaśnienia o pojęciach i konstrukcji językowych, że rozumiesz musi używać funkcjonalności przekształcenia i przykłady użycia funkcjonalności przekształceń do manipulowania dokumentu XML.</span><span class="sxs-lookup"><span data-stu-id="9cd91-104">This includes explanations of the main concepts and language constructs that you must understand to use functional transformations, and examples of using functional transformations to manipulate an XML document.</span></span> <span data-ttu-id="9cd91-105">W tym samouczku zapewnia LINQ do XML przykłady kodu, jednak wszystkie podstawowe pojęcia mają zastosowanie również do innych technologii LINQ.</span><span class="sxs-lookup"><span data-stu-id="9cd91-105">Although this tutorial provides LINQ to XML code examples, all of the underlying concepts also apply to other LINQ technologies.</span></span>  

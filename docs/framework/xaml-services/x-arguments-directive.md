@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564881"
 ---
 # <a name="xarguments-directive"></a><span data-ttu-id="beaf1-102">x:Arguments — dyrektywa</span><span class="sxs-lookup"><span data-stu-id="beaf1-102">x:Arguments Directive</span></span>
 <span data-ttu-id="beaf1-103">Argumenty konstrukcji pakietów z systemem innym niż domyślny konstruktor obiektu deklaracji elementu w języku XAML, lub fabryki metody obiektu.</span><span class="sxs-lookup"><span data-stu-id="beaf1-103">Packages construction arguments for a non-default constructor object element declaration in XAML, or for a factory method object declaration.</span></span>  

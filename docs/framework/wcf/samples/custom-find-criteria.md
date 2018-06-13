@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503213"
 ---
 # <a name="custom-find-criteria"></a><span data-ttu-id="04c80-102">Niestandardowe kryteria znajdowania</span><span class="sxs-lookup"><span data-stu-id="04c80-102">Custom Find Criteria</span></span>
 <span data-ttu-id="04c80-103">Przykładzie pokazano, jak utworzyć niestandardowy zakres dopasowania przy użyciu logiki i sposobu implementacji usługi odnajdywania niestandardowych.</span><span class="sxs-lookup"><span data-stu-id="04c80-103">This sample demonstrates how to create a custom scope match using logic and how to implement a custom discovery service.</span></span> <span data-ttu-id="04c80-104">Klienci używają niestandardowy zakres funkcji dopasowywania uściślić i dalsze bazując funkcje Znajdź dostarczane przez system odnajdywania WCF.</span><span class="sxs-lookup"><span data-stu-id="04c80-104">Clients use custom scope matching functionality to refine and further build on top of the system-provided find functionality of WCF Discovery.</span></span> <span data-ttu-id="04c80-105">Scenariusz, które obejmuje ten przykład jest następujący:</span><span class="sxs-lookup"><span data-stu-id="04c80-105">The scenario this sample covers is as follows:</span></span>  

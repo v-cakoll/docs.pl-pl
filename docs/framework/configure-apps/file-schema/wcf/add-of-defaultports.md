@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748753"
 ---
 # <a name="ltaddgt-of-ltdefaultportsgt"></a><span data-ttu-id="18fe0-102">&lt;add&gt; w &lt;defaultPorts&gt;</span><span class="sxs-lookup"><span data-stu-id="18fe0-102">&lt;add&gt; of &lt;defaultPorts&gt;</span></span>
 <span data-ttu-id="18fe0-103">Domyślny punkt końcowy komunikacji, który aplikacja kliencka nasłuchuje.</span><span class="sxs-lookup"><span data-stu-id="18fe0-103">A default communications endpoint that the client application listens to.</span></span>  

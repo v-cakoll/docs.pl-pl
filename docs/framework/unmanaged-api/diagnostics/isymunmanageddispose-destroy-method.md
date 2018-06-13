@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424485"
 ---
 # <a name="isymunmanageddisposedestroy-method"></a><span data-ttu-id="ff107-102">ISymUnmanagedDispose::Destroy — Metoda</span><span class="sxs-lookup"><span data-stu-id="ff107-102">ISymUnmanagedDispose::Destroy Method</span></span>
 <span data-ttu-id="ff107-103">Powoduje, że obiekt zwolnić wszystkie odwołania wewnętrzne i zwraca błąd na wszystkie wywołania metody kolejne.</span><span class="sxs-lookup"><span data-stu-id="ff107-103">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>  

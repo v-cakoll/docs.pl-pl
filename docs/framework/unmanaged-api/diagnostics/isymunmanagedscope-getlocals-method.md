@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426802"
 ---
 # <a name="isymunmanagedscopegetlocals-method"></a><span data-ttu-id="73225-102">ISymUnmanagedScope::GetLocals — Metoda</span><span class="sxs-lookup"><span data-stu-id="73225-102">ISymUnmanagedScope::GetLocals Method</span></span>
 <span data-ttu-id="73225-103">Pobiera zmienne lokalne, zdefiniowanego w tym zakresie.</span><span class="sxs-lookup"><span data-stu-id="73225-103">Gets the local variables defined within this scope.</span></span>  

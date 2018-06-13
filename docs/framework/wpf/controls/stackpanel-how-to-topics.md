@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555123"
 ---
 # <a name="stackpanel-how-to-topics"></a><span data-ttu-id="803f5-102">StackPanel — Tematy porad</span><span class="sxs-lookup"><span data-stu-id="803f5-102">StackPanel How-to Topics</span></span>
 <span data-ttu-id="803f5-103">W tematach w tej sekcji opisano sposób użycia <xref:System.Windows.Controls.StackPanel> element na stosie zawartości poziomo czy pionowo.</span><span class="sxs-lookup"><span data-stu-id="803f5-103">The topics in this section describe how to use the <xref:System.Windows.Controls.StackPanel> element to stack content horizontally or vertically.</span></span>  

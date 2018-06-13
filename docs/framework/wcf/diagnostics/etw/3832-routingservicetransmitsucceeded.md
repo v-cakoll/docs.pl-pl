@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33466430"
 ---
 # <a name="3832---routingservicetransmitsucceeded"></a><span data-ttu-id="7538c-102">3832 — RoutingServiceTransmitSucceeded</span><span class="sxs-lookup"><span data-stu-id="7538c-102">3832 - RoutingServiceTransmitSucceeded</span></span>
 ## <a name="properties"></a><span data-ttu-id="7538c-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="7538c-103">Properties</span></span>  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430103"
 ---
 # <a name="createapplicationcontext-function"></a><span data-ttu-id="cb278-102">CreateApplicationContext — Funkcja</span><span class="sxs-lookup"><span data-stu-id="cb278-102">CreateApplicationContext Function</span></span>
 <span data-ttu-id="cb278-103">Ta funkcja obsługuje infrastrukturę programu .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.</span><span class="sxs-lookup"><span data-stu-id="cb278-103">This function supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  

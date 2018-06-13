@@ -1,42 +1,29 @@
 ---
-title: "Jak przesunąć element"
-ms.custom: 
+title: Jak przesunąć element
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - graphics [WPF], translations
 ms.assetid: 461c8273-15df-42f6-8672-89ba22887cc0
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2f9b8363f0c3b9e0a9653dfc9864727c9460f695
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0089f294c54662d1ea4929ec25c08464072cbdde
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561946"
 ---
-# <a name="how-to-translate-an-element"></a><span data-ttu-id="bd002-102">Jak przesunąć element</span><span class="sxs-lookup"><span data-stu-id="bd002-102">How to: Translate an Element</span></span>
-<span data-ttu-id="bd002-103">W tym przykładzie pokazano, jak tłumaczenia (przenoszenia) elementu przy użyciu <xref:System.Windows.Media.TranslateTransform>.</span><span class="sxs-lookup"><span data-stu-id="bd002-103">This example shows how to translate (move) an element by using a <xref:System.Windows.Media.TranslateTransform>.</span></span>  
+# <a name="how-to-translate-an-element"></a><span data-ttu-id="23995-102">Jak przesunąć element</span><span class="sxs-lookup"><span data-stu-id="23995-102">How to: Translate an Element</span></span>
+<span data-ttu-id="23995-103">W tym przykładzie pokazano, jak tłumaczenia (przenoszenia) elementu przy użyciu <xref:System.Windows.Media.TranslateTransform>.</span><span class="sxs-lookup"><span data-stu-id="23995-103">This example shows how to translate (move) an element by using a <xref:System.Windows.Media.TranslateTransform>.</span></span>  
   
- <span data-ttu-id="bd002-104"><xref:System.Windows.Media.TranslateTransform> Klasa jest szczególnie przydatna do przenoszenia elementów wewnątrz panele, które nie obsługują bezwzględny.</span><span class="sxs-lookup"><span data-stu-id="bd002-104">The <xref:System.Windows.Media.TranslateTransform> class is especially useful for moving elements inside panels that do not support absolute positioning.</span></span> <span data-ttu-id="bd002-105">Na przykład stosując <xref:System.Windows.Media.TranslateTransform> do <xref:System.Windows.UIElement.RenderTransform%2A> właściwości elementu, można przenieść elementu w obrębie <xref:System.Windows.Controls.StackPanel> lub <xref:System.Windows.Controls.DockPanel>.</span><span class="sxs-lookup"><span data-stu-id="bd002-105">For example, by applying a <xref:System.Windows.Media.TranslateTransform> to the <xref:System.Windows.UIElement.RenderTransform%2A> property of an element, you can move an element within a <xref:System.Windows.Controls.StackPanel> or <xref:System.Windows.Controls.DockPanel>.</span></span>  
+ <span data-ttu-id="23995-104"><xref:System.Windows.Media.TranslateTransform> Klasa jest szczególnie przydatna do przenoszenia elementów wewnątrz panele, które nie obsługują bezwzględny.</span><span class="sxs-lookup"><span data-stu-id="23995-104">The <xref:System.Windows.Media.TranslateTransform> class is especially useful for moving elements inside panels that do not support absolute positioning.</span></span> <span data-ttu-id="23995-105">Na przykład stosując <xref:System.Windows.Media.TranslateTransform> do <xref:System.Windows.UIElement.RenderTransform%2A> właściwości elementu, można przenieść elementu w obrębie <xref:System.Windows.Controls.StackPanel> lub <xref:System.Windows.Controls.DockPanel>.</span><span class="sxs-lookup"><span data-stu-id="23995-105">For example, by applying a <xref:System.Windows.Media.TranslateTransform> to the <xref:System.Windows.UIElement.RenderTransform%2A> property of an element, you can move an element within a <xref:System.Windows.Controls.StackPanel> or <xref:System.Windows.Controls.DockPanel>.</span></span>  
   
- <span data-ttu-id="bd002-106">Użyj <xref:System.Windows.Media.TranslateTransform.X%2A> właściwości <xref:System.Windows.Media.TranslateTransform> do określenia ilości, w pikselach, można przenieść elementu na osi x.</span><span class="sxs-lookup"><span data-stu-id="bd002-106">Use the <xref:System.Windows.Media.TranslateTransform.X%2A> property of the <xref:System.Windows.Media.TranslateTransform> to specify the amount, in pixels, to move the element along the x-axis.</span></span> <span data-ttu-id="bd002-107">Użyj <xref:System.Windows.Media.TranslateTransform.Y%2A> właściwości w celu określenia ilości, w pikselach, aby przenieść element wzdłuż osi y.</span><span class="sxs-lookup"><span data-stu-id="bd002-107">Use the <xref:System.Windows.Media.TranslateTransform.Y%2A> property to specify the amount, in pixels, to move the element along the y-axis.</span></span> <span data-ttu-id="bd002-108">Na koniec zastosować <xref:System.Windows.Media.TranslateTransform> do <xref:System.Windows.UIElement.RenderTransform%2A> właściwości elementu.</span><span class="sxs-lookup"><span data-stu-id="bd002-108">Finally, apply the <xref:System.Windows.Media.TranslateTransform> to the <xref:System.Windows.UIElement.RenderTransform%2A> property of the element.</span></span>  
+ <span data-ttu-id="23995-106">Użyj <xref:System.Windows.Media.TranslateTransform.X%2A> właściwości <xref:System.Windows.Media.TranslateTransform> do określenia ilości, w pikselach, można przenieść elementu na osi x.</span><span class="sxs-lookup"><span data-stu-id="23995-106">Use the <xref:System.Windows.Media.TranslateTransform.X%2A> property of the <xref:System.Windows.Media.TranslateTransform> to specify the amount, in pixels, to move the element along the x-axis.</span></span> <span data-ttu-id="23995-107">Użyj <xref:System.Windows.Media.TranslateTransform.Y%2A> właściwości w celu określenia ilości, w pikselach, aby przenieść element wzdłuż osi y.</span><span class="sxs-lookup"><span data-stu-id="23995-107">Use the <xref:System.Windows.Media.TranslateTransform.Y%2A> property to specify the amount, in pixels, to move the element along the y-axis.</span></span> <span data-ttu-id="23995-108">Na koniec zastosować <xref:System.Windows.Media.TranslateTransform> do <xref:System.Windows.UIElement.RenderTransform%2A> właściwości elementu.</span><span class="sxs-lookup"><span data-stu-id="23995-108">Finally, apply the <xref:System.Windows.Media.TranslateTransform> to the <xref:System.Windows.UIElement.RenderTransform%2A> property of the element.</span></span>  
   
- <span data-ttu-id="bd002-109">W poniższym przykładzie użyto <xref:System.Windows.Media.TranslateTransform> można przenieść elementu 50 pikseli na prawo i 50 pikseli w dół.</span><span class="sxs-lookup"><span data-stu-id="bd002-109">The following example uses a <xref:System.Windows.Media.TranslateTransform> to move an element 50 pixels to the right and 50 pixels down.</span></span>  
+ <span data-ttu-id="23995-109">W poniższym przykładzie użyto <xref:System.Windows.Media.TranslateTransform> można przenieść elementu 50 pikseli na prawo i 50 pikseli w dół.</span><span class="sxs-lookup"><span data-stu-id="23995-109">The following example uses a <xref:System.Windows.Media.TranslateTransform> to move an element 50 pixels to the right and 50 pixels down.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bd002-110">Przykład</span><span class="sxs-lookup"><span data-stu-id="bd002-110">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="23995-110">Przykład</span><span class="sxs-lookup"><span data-stu-id="23995-110">Example</span></span>  
  [!code-xaml[transformsSample#53](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/TranslateTransformExample.xaml#53)]  
   
- <span data-ttu-id="bd002-111">Pełny przykład, zobacz [2-D transformacje próbki](http://go.microsoft.com/fwlink/?LinkID=158252).</span><span class="sxs-lookup"><span data-stu-id="bd002-111">For the complete sample, see [2-D Transforms Sample](http://go.microsoft.com/fwlink/?LinkID=158252).</span></span>  
+ <span data-ttu-id="23995-111">Pełny przykład, zobacz [2-D transformacje próbki](http://go.microsoft.com/fwlink/?LinkID=158252).</span><span class="sxs-lookup"><span data-stu-id="23995-111">For the complete sample, see [2-D Transforms Sample](http://go.microsoft.com/fwlink/?LinkID=158252).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bd002-112">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="bd002-112">See Also</span></span>  
- [<span data-ttu-id="bd002-113">Przekształcenia — przegląd</span><span class="sxs-lookup"><span data-stu-id="bd002-113">Transforms Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+## <a name="see-also"></a><span data-ttu-id="23995-112">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="23995-112">See Also</span></span>  
+ [<span data-ttu-id="23995-113">Przekształcenia — przegląd</span><span class="sxs-lookup"><span data-stu-id="23995-113">Transforms Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)

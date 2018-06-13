@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556153"
 ---
 # <a name="how-to-resize-columns-with-a-gridsplitter"></a><span data-ttu-id="54e37-102">Jak zmienić rozmiar kolumn przy użyciu GridSplitter</span><span class="sxs-lookup"><span data-stu-id="54e37-102">How to: Resize Columns with a GridSplitter</span></span>
 <span data-ttu-id="54e37-103">W tym przykładzie przedstawiono sposób tworzenia pionowym <xref:System.Windows.Controls.GridSplitter> Aby ponownie rozesłać odstęp między kolumnami w <xref:System.Windows.Controls.Grid> bez zmieniania wymiary <xref:System.Windows.Controls.Grid>.</span><span class="sxs-lookup"><span data-stu-id="54e37-103">This example shows how to create a vertical <xref:System.Windows.Controls.GridSplitter> in order to redistribute the space between two columns in a <xref:System.Windows.Controls.Grid> without changing the dimensions of the <xref:System.Windows.Controls.Grid>.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427962"
 ---
 # <a name="isymunmanagedscopegetparent-method"></a><span data-ttu-id="626b5-102">ISymUnmanagedScope::GetParent — Metoda</span><span class="sxs-lookup"><span data-stu-id="626b5-102">ISymUnmanagedScope::GetParent Method</span></span>
 <span data-ttu-id="626b5-103">Pobiera zakres nadrzędny tego zakresu.</span><span class="sxs-lookup"><span data-stu-id="626b5-103">Gets the parent scope of this scope.</span></span>  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423172"
 ---
 # <a name="icordebugprocess-interface1"></a><span data-ttu-id="9cceb-102">ICorDebugProcess Interface1</span><span class="sxs-lookup"><span data-stu-id="9cceb-102">ICorDebugProcess Interface1</span></span>
 <span data-ttu-id="9cceb-103">Reprezentuje proces, który wykonuje kod zarządzany.</span><span class="sxs-lookup"><span data-stu-id="9cceb-103">Represents a process that is executing managed code.</span></span> <span data-ttu-id="9cceb-104">Ten interfejs jest podklasą klasy ICorDebugController.</span><span class="sxs-lookup"><span data-stu-id="9cceb-104">This interface is a subclass of ICorDebugController.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500373"
 ---
 # <a name="trusted-subsystem"></a><span data-ttu-id="759b1-102">Zaufany podsystem</span><span class="sxs-lookup"><span data-stu-id="759b1-102">Trusted Subsystem</span></span>
 <span data-ttu-id="759b1-103">Klient uzyskuje dostęp do usług sieci Web, które są rozproszone w sieci.</span><span class="sxs-lookup"><span data-stu-id="759b1-103">A client accesses one or more Web services that are distributed across a network.</span></span> <span data-ttu-id="759b1-104">Usługi sieci Web są zaprojektowane, że dostęp do dodatkowych zasobów (np. baz danych lub innych usług sieci Web) jest hermetyzowany logiki biznesowej usługi sieci Web.</span><span class="sxs-lookup"><span data-stu-id="759b1-104">The Web services are designed so that access to additional resources (such as databases or other Web services) is encapsulated in the business logic of the Web service.</span></span> <span data-ttu-id="759b1-105">Te zasoby muszą być chronione przed nieautoryzowanym dostępem.</span><span class="sxs-lookup"><span data-stu-id="759b1-105">These resources must be protected against unauthorized access.</span></span> <span data-ttu-id="759b1-106">Poniższa ilustracja przedstawia proces zaufany podsystem.</span><span class="sxs-lookup"><span data-stu-id="759b1-106">The following illustration depicts a trusted subsystem process.</span></span>  

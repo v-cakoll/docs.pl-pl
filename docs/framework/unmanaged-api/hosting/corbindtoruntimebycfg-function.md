@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431867"
 ---
 # <a name="corbindtoruntimebycfg-function"></a><span data-ttu-id="e82b5-102">CorBindToRuntimeByCfg — Funkcja</span><span class="sxs-lookup"><span data-stu-id="e82b5-102">CorBindToRuntimeByCfg Function</span></span>
 <span data-ttu-id="e82b5-103">Ładuje środowisko uruchomieniowe języka wspólnego (CLR) do procesu za pomocą informacji o wersji, która jest do odczytu z pliku XML.</span><span class="sxs-lookup"><span data-stu-id="e82b5-103">Loads the common language runtime (CLR) into a process by using version information that is read from an XML file.</span></span>  

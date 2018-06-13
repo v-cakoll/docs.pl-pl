@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431021"
 ---
 # <a name="notifyfilter-enumeration"></a><span data-ttu-id="d6f7c-102">NOTIFY_FILTER — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="d6f7c-102">NOTIFY_FILTER Enumeration</span></span>
 <span data-ttu-id="d6f7c-103">Identyfikuje wywołań zwrotnych dla funkcji debugera.</span><span class="sxs-lookup"><span data-stu-id="d6f7c-103">Identifies callbacks for debugger functions.</span></span> <span data-ttu-id="d6f7c-104">Aby uzyskać więcej informacji, zobacz [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="d6f7c-104">For more information, see the [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) method.</span></span>  

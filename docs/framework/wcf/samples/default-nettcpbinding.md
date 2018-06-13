@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502280"
 ---
 # <a name="default-nettcpbinding"></a><span data-ttu-id="ef98a-102">Domyślny element NetTcpBinding</span><span class="sxs-lookup"><span data-stu-id="ef98a-102">Default NetTcpBinding</span></span>
 <span data-ttu-id="ef98a-103">W tym przykładzie przedstawiono użycie <xref:System.ServiceModel.NetTcpBinding> powiązania.</span><span class="sxs-lookup"><span data-stu-id="ef98a-103">This sample demonstrates the use of the <xref:System.ServiceModel.NetTcpBinding> binding.</span></span> <span data-ttu-id="ef98a-104">Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi Kalkulator.</span><span class="sxs-lookup"><span data-stu-id="ef98a-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span> <span data-ttu-id="ef98a-105">W tym przykładzie usługa jest samodzielnie hostowana.</span><span class="sxs-lookup"><span data-stu-id="ef98a-105">In this sample, the service is self-hosted.</span></span> <span data-ttu-id="ef98a-106">Klient i usługa są aplikacji konsoli.</span><span class="sxs-lookup"><span data-stu-id="ef98a-106">Both the client and service are console applications.</span></span>  

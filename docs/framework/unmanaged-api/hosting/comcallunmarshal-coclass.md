@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427645"
 ---
 # <a name="comcallunmarshal-coclass"></a><span data-ttu-id="80756-102">ComCallUnmarshal — Klasa coclass</span><span class="sxs-lookup"><span data-stu-id="80756-102">ComCallUnmarshal Coclass</span></span>
 <span data-ttu-id="80756-103">Zawiera interfejsy zarządzania organizowanie wskaźniki interfejsu.</span><span class="sxs-lookup"><span data-stu-id="80756-103">Provides interfaces for managing the marshaling of interface pointers.</span></span>  

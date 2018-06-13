@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430518"
 ---
 # <a name="hosting-coclasses"></a><span data-ttu-id="55b73-102">Klasy coclass hostingu</span><span class="sxs-lookup"><span data-stu-id="55b73-102">Hosting Coclasses</span></span>
 <span data-ttu-id="55b73-103">W tej sekcji opisano niezarządzane klasy coclass interfejsu API, używanych do obsługi interfejsu API.</span><span class="sxs-lookup"><span data-stu-id="55b73-103">This section describes the unmanaged API coclasses that the hosting API uses.</span></span>  

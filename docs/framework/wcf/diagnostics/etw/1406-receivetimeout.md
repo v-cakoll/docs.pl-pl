@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457163"
 ---
 # <a name="1406---receivetimeout"></a><span data-ttu-id="f30b4-102">1406 — ReceiveTimeout</span><span class="sxs-lookup"><span data-stu-id="f30b4-102">1406 - ReceiveTimeout</span></span>
 ## <a name="properties"></a><span data-ttu-id="f30b4-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="f30b4-103">Properties</span></span>  

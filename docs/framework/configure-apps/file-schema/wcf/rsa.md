@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749933"
 ---
 # <a name="ltrsagt"></a><span data-ttu-id="dd788-102">&lt;RSA&gt;</span><span class="sxs-lookup"><span data-stu-id="dd788-102">&lt;rsa&gt;</span></span>
 <span data-ttu-id="dd788-103">Bezpieczny klient WCF łączący punkt końcowy o tej tożsamości weryfikuje czy wnioski przedstawione przez serwer zawierają roszczenia, zawierający klucza publicznego RSA użyty do skonstruowania tej tożsamości.</span><span class="sxs-lookup"><span data-stu-id="dd788-103">A secure WCF client that connects to an endpoint with this identity verifies that the claims presented by the server contain a claim that contains the RSA public key used to construct this identity.</span></span>  

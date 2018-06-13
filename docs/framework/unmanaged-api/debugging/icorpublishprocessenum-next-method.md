@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423874"
 ---
 # <a name="icorpublishprocessenumnext-method"></a><span data-ttu-id="1458e-102">ICorPublishProcessEnum::Next — Metoda</span><span class="sxs-lookup"><span data-stu-id="1458e-102">ICorPublishProcessEnum::Next Method</span></span>
 <span data-ttu-id="1458e-103">Pobiera określoną liczbę procesów z kolekcji, począwszy od bieżącej pozycji kursora.</span><span class="sxs-lookup"><span data-stu-id="1458e-103">Gets the specified number of processes from the collection, starting at the current cursor position.</span></span>  

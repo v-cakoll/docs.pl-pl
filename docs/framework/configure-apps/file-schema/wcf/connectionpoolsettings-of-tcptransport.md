@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753082"
 ---
 # <a name="ltconnectionpoolsettingsgt-of-lttcptransportgt"></a><span data-ttu-id="303e2-102">&lt;connectionPoolSettings&gt; w &lt;tcpTransport&gt;</span><span class="sxs-lookup"><span data-stu-id="303e2-102">&lt;connectionPoolSettings&gt; of &lt;tcpTransport&gt;</span></span>
 <span data-ttu-id="303e2-103">Określa ustawienia puli dodatkowego połączenia dla transportu TCP.</span><span class="sxs-lookup"><span data-stu-id="303e2-103">Specifies additional connection pool settings for a TCP transport.</span></span>  

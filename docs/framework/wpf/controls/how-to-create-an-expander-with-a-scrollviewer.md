@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553065"
 ---
 # <a name="how-to-create-an-expander-with-a-scrollviewer"></a><span data-ttu-id="34438-102">Jak utworzyć ekspander za pomocą ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="34438-102">How to: Create an Expander with a ScrollViewer</span></span>
 <span data-ttu-id="34438-103">W tym przykładzie przedstawiono sposób tworzenia <xref:System.Windows.Controls.Expander> formant, który zawiera złożone zawartości, takich jak obraz i tekst.</span><span class="sxs-lookup"><span data-stu-id="34438-103">This example shows how to create an <xref:System.Windows.Controls.Expander> control that contains complex content, such as an image and text.</span></span> <span data-ttu-id="34438-104">Przykład obejmuje również zawartość <xref:System.Windows.Controls.Expander> w <xref:System.Windows.Controls.ScrollViewer> formantu.</span><span class="sxs-lookup"><span data-stu-id="34438-104">The example also encloses the content of the <xref:System.Windows.Controls.Expander> in a <xref:System.Windows.Controls.ScrollViewer> control.</span></span>  

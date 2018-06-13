@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561852"
 ---
 # <a name="how-to-get-the-offset-of-a-visual"></a><span data-ttu-id="ed772-102">Jak pobrać przesunięcie Visual</span><span class="sxs-lookup"><span data-stu-id="ed772-102">How to: Get the Offset of a Visual</span></span>
 <span data-ttu-id="ed772-103">Poniższe przykłady pokazują, jak można pobrać wartości przesunięcia względem jego elementu nadrzędnego lub żadnych nadrzędnym lub podrzędnym obiektu visual.</span><span class="sxs-lookup"><span data-stu-id="ed772-103">These examples show how to retrieve the offset value of a visual object that is relative to its parent, or any ancestor or descendant.</span></span>  

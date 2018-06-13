@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427132"
 ---
 # <a name="isymunmanagedwriterinitialize2-method"></a><span data-ttu-id="6ebed-102">ISymUnmanagedWriter::Initialize2 — Metoda</span><span class="sxs-lookup"><span data-stu-id="6ebed-102">ISymUnmanagedWriter::Initialize2 Method</span></span>
 <span data-ttu-id="6ebed-103">Ustawienie interfejsu nadajnika metadanych, z którą ten moduł zapisujący zostanie skojarzony, a nazwa pliku wyjściowego, na którym zostanie zapisany symbole debugowania.</span><span class="sxs-lookup"><span data-stu-id="6ebed-103">Sets the metadata emitter interface with which this writer will be associated, and sets the output file name to which the debugging symbols will be written.</span></span> <span data-ttu-id="6ebed-104">Ta metoda umożliwia również ustawić ostatecznej lokalizacji pliku programu (PDB) bazy danych.</span><span class="sxs-lookup"><span data-stu-id="6ebed-104">This method also lets you set the final location of the program database (PDB) file.</span></span>  

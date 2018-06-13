@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431906"
 ---
 # <a name="isymunmanagedreader-interface"></a><span data-ttu-id="97d16-102">ISymUnmanagedReader — Interfejs</span><span class="sxs-lookup"><span data-stu-id="97d16-102">ISymUnmanagedReader Interface</span></span>
 <span data-ttu-id="97d16-103">Reprezentuje czytnika symboli, która zapewnia dostęp do dokumentów, metod i zmiennych w magazynie symboli.</span><span class="sxs-lookup"><span data-stu-id="97d16-103">Represents a symbol reader that provides access to documents, methods, and variables within a symbol store.</span></span>  

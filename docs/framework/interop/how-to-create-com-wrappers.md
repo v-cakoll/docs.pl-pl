@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391228"
 ---
 # <a name="how-to-create-com-wrappers"></a><span data-ttu-id="6f40c-102">Porady: tworzenie otok COM</span><span class="sxs-lookup"><span data-stu-id="6f40c-102">How to: Create COM Wrappers</span></span>
 <span data-ttu-id="6f40c-103">Otoki składnika modelu COM (Object) można tworzyć przy użyciu [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] funkcji lub .NET Framework Tlbimp.exe i Regasm.exe narzędzi.</span><span class="sxs-lookup"><span data-stu-id="6f40c-103">You can create Component Object Model (COM) wrappers by using [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] features or the .NET Framework tools Tlbimp.exe and Regasm.exe.</span></span> <span data-ttu-id="6f40c-104">Obie metody generowania otoki COM dwa typy:</span><span class="sxs-lookup"><span data-stu-id="6f40c-104">Both methods generate two types of COM wrappers:</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508106"
 ---
 # <a name="working-with-nats-and-firewalls"></a><span data-ttu-id="4af4f-102">Praca z translatorami adresów sieciowych i zaporami</span><span class="sxs-lookup"><span data-stu-id="4af4f-102">Working with NATs and Firewalls</span></span>
 <span data-ttu-id="4af4f-103">Klient i serwer połączenia sieciowego często nie mają bezpośredniego i ścieżki do komunikacji.</span><span class="sxs-lookup"><span data-stu-id="4af4f-103">The client and server of a network connection frequently do not have a direct and open path for communication.</span></span> <span data-ttu-id="4af4f-104">Pakiety są filtrowane, kierowane przeanalizowane i przekształcony zarówno na komputerach punktu końcowego i pośredniego komputerów w sieci.</span><span class="sxs-lookup"><span data-stu-id="4af4f-104">Packets are filtered, routed, analyzed, and transformed both on the endpoint machines and by intermediate machines on the network.</span></span> <span data-ttu-id="4af4f-105">Translacji adresów sieciowych (NAT) i zapory są typowe przykłady pośrednich aplikacji, które mogą uczestniczyć w komunikacji sieciowej.</span><span class="sxs-lookup"><span data-stu-id="4af4f-105">Network address translations (NATs) and firewalls are common examples of intermediate applications that can participate in network communication.</span></span>  

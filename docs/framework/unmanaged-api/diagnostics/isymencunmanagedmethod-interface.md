@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425506"
 ---
 # <a name="isymencunmanagedmethod-interface"></a><span data-ttu-id="5a6aa-102">ISymENCUnmanagedMethod — Interfejs</span><span class="sxs-lookup"><span data-stu-id="5a6aa-102">ISymENCUnmanagedMethod Interface</span></span>
 <span data-ttu-id="5a6aa-103">Informacje dotyczące funkcji Edytuj i Kontynuuj.</span><span class="sxs-lookup"><span data-stu-id="5a6aa-103">Provides information for the Edit and Continue feature.</span></span>  

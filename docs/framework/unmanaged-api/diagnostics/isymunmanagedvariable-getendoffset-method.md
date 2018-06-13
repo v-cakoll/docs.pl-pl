@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427860"
 ---
 # <a name="isymunmanagedvariablegetendoffset-method"></a><span data-ttu-id="5dd03-102">ISymUnmanagedVariable::GetEndOffset — Metoda</span><span class="sxs-lookup"><span data-stu-id="5dd03-102">ISymUnmanagedVariable::GetEndOffset Method</span></span>
 <span data-ttu-id="5dd03-103">Pobiera przesunięcia końcowego tej zmiennej w ramach jego elementu nadrzędnego.</span><span class="sxs-lookup"><span data-stu-id="5dd03-103">Gets the end offset of this variable within its parent.</span></span> <span data-ttu-id="5dd03-104">Jeśli to jest zmienną lokalną w zakresie, przesunięcie zakończenia będzie mieścić się w przesunięcia zdefiniowane dla zakresu.</span><span class="sxs-lookup"><span data-stu-id="5dd03-104">If this is a local variable within a scope, the end offset will fall within the offsets defined for the scope.</span></span>  

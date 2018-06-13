@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502835"
 ---
 # <a name="http-acknowledgement-channel"></a><span data-ttu-id="784fe-102">Kanał potwierdzania HTTP</span><span class="sxs-lookup"><span data-stu-id="784fe-102">HTTP Acknowledgement Channel</span></span>
 <span data-ttu-id="784fe-103">Kanał potwierdzania HTTP jest przykładem warstwowego kanału, który zmienia jednokierunkowe wzorzec przesyłania komunikatów, co umożliwia usłudze potwierdzić lub odmówić wiadomości przychodzących, a nie automatycznie wysyła po otrzymaniu potwierdzenia.</span><span class="sxs-lookup"><span data-stu-id="784fe-103">The HTTP Acknowledgement Channel is an example of a layered channel that changes the one-way messaging pattern, allowing a service to acknowledge or refuse incoming messages rather than automatically sending an acknowledgement on receipt.</span></span> <span data-ttu-id="784fe-104">Kanał potwierdzania HTTP umożliwia również usługą Opóźnienie potwierdzenia do momentu go gwarancji biznesowej, otrzymasz wiadomość.</span><span class="sxs-lookup"><span data-stu-id="784fe-104">The HTTP Acknowledgement Channel also allows the service to delay acknowledgement until it can make a business-level guarantee that the message will be processed.</span></span>  

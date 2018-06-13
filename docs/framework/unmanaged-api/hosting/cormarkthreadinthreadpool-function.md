@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431236"
 ---
 # <a name="cormarkthreadinthreadpool-function"></a><span data-ttu-id="98a0c-102">CorMarkThreadInThreadPool — Funkcja</span><span class="sxs-lookup"><span data-stu-id="98a0c-102">CorMarkThreadInThreadPool Function</span></span>
 <span data-ttu-id="98a0c-103">Oznacza aktualnie wykonywane wątku puli wątków dla wykonania kodu zarządzanego.</span><span class="sxs-lookup"><span data-stu-id="98a0c-103">Marks the currently executing thread-pool thread for the execution of managed code.</span></span> <span data-ttu-id="98a0c-104">W programie .NET Framework w wersji 2.0, ta funkcja nie ma znaczenia.</span><span class="sxs-lookup"><span data-stu-id="98a0c-104">Starting with the .NET Framework version 2.0, this function has no effect.</span></span> <span data-ttu-id="98a0c-105">Nie jest wymagane, a można ją usunąć z kodu. Ta funkcja jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="98a0c-105">It is not required, and can be removed from your code.This function is deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  

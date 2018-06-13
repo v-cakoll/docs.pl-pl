@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427297"
 ---
 # <a name="diagnostics-symbol-store-enumerations"></a><span data-ttu-id="406d1-102">Wyliczenia magazynu symboli diagnostycznych</span><span class="sxs-lookup"><span data-stu-id="406d1-102">Diagnostics Symbol Store Enumerations</span></span>
 <span data-ttu-id="406d1-103">W tym temacie opisano niezarządzane wyliczenia, które używa magazynu symboli diagnostycznych interfejsu API.</span><span class="sxs-lookup"><span data-stu-id="406d1-103">This topic describes the unmanaged enumerations that the diagnostics symbol store API uses.</span></span>  

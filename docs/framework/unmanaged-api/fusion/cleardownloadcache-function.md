@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428020"
 ---
 # <a name="cleardownloadcache-function"></a><span data-ttu-id="aa980-102">ClearDownloadCache — Funkcja</span><span class="sxs-lookup"><span data-stu-id="aa980-102">ClearDownloadCache Function</span></span>
 <span data-ttu-id="aa980-103">Powoduje wyczyszczenie pamięci podręcznej GAC pobrany zestawów.</span><span class="sxs-lookup"><span data-stu-id="aa980-103">Clears the global assembly cache of downloaded assemblies.</span></span>  

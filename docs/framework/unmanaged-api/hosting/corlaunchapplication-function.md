@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428765"
 ---
 # <a name="corlaunchapplication-function"></a><span data-ttu-id="a3d2d-102">CorLaunchApplication — Funkcja</span><span class="sxs-lookup"><span data-stu-id="a3d2d-102">CorLaunchApplication Function</span></span>
 <span data-ttu-id="a3d2d-103">Uruchamia aplikację w ścieżce określonej sieci przy użyciu określonego manifestów i innych danych aplikacji.</span><span class="sxs-lookup"><span data-stu-id="a3d2d-103">Starts the application at the specified network path, using the specified manifests and other application data.</span></span>  

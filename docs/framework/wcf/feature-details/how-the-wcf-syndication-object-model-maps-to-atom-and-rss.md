@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496051"
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a><span data-ttu-id="73503-102">Sposób mapowania modelu obiektu syndykacji programu WCF na kanały informacyjne Atom i RSS</span><span class="sxs-lookup"><span data-stu-id="73503-102">How the WCF Syndication Object Model Maps to Atom and RSS</span></span>
 <span data-ttu-id="73503-103">Podczas tworzenia usługi zespolonego Windows Communication Foundation (WCF), można utworzyć źródła danych i elementy przy użyciu następujących klas:</span><span class="sxs-lookup"><span data-stu-id="73503-103">When developing a Windows Communication Foundation (WCF) syndication service, you create feeds and items using the following classes:</span></span>  

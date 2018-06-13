@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558008"
 ---
 # <a name="bitmap-effects-overview"></a><span data-ttu-id="fce01-102">Przegląd Efekty mapy bitowej</span><span class="sxs-lookup"><span data-stu-id="fce01-102">Bitmap Effects Overview</span></span>
 <span data-ttu-id="fce01-103">Efekty mapy bitowej umożliwia projektantom i deweloperom stosowanie efektów wizualnych do renderowania zawartości Windows Presentation Foundation (WPF).</span><span class="sxs-lookup"><span data-stu-id="fce01-103">Bitmap effects enable designers and developers to apply visual effects to rendered Windows Presentation Foundation (WPF) content.</span></span> <span data-ttu-id="fce01-104">Na przykład efekty mapy bitowej pozwalają łatwo zastosować <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> efekt lub efekt rozmycia obrazu lub przycisku.</span><span class="sxs-lookup"><span data-stu-id="fce01-104">For example, bitmap effects allow you to easily apply a <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> effect or a blur effect to an image or a button.</span></span>  

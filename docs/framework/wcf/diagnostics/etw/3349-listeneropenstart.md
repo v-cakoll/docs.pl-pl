@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33464457"
 ---
 # <a name="3349---listeneropenstart"></a><span data-ttu-id="9e9c1-102">3349 — ListenerOpenStart</span><span class="sxs-lookup"><span data-stu-id="9e9c1-102">3349 - ListenerOpenStart</span></span>
 ## <a name="properties"></a><span data-ttu-id="9e9c1-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="9e9c1-103">Properties</span></span>  

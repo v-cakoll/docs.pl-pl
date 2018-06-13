@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501740"
 ---
 # <a name="multiple-contracts"></a><span data-ttu-id="7c53c-102">Wiele kontraktów</span><span class="sxs-lookup"><span data-stu-id="7c53c-102">Multiple Contracts</span></span>
 <span data-ttu-id="7c53c-103">Przykład wielu umów przedstawiono sposoby zaimplementować więcej niż jeden kontrakt na usługę oraz sposobu konfigurowania punktów końcowych do komunikowania się z każdym zaimplementowanych kontraktów.</span><span class="sxs-lookup"><span data-stu-id="7c53c-103">The Multiple Contracts sample demonstrates how to implement more than one contract on a service and how to configure endpoints for communicating with each of the implemented contracts.</span></span> <span data-ttu-id="7c53c-104">Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="7c53c-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span> <span data-ttu-id="7c53c-105">Usługa została zmodyfikowana, aby zdefiniować dwa kontrakty `ICalculator` kontraktu i `ICalculatorSession` kontraktu.</span><span class="sxs-lookup"><span data-stu-id="7c53c-105">The service has been modified to define two contracts, the `ICalculator` contract and the `ICalculatorSession` contract.</span></span>  

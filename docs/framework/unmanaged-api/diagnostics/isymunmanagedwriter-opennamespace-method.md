@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426965"
 ---
 # <a name="isymunmanagedwriteropennamespace-method"></a><span data-ttu-id="bdd3b-102">ISymUnmanagedWriter::OpenNamespace — Metoda</span><span class="sxs-lookup"><span data-stu-id="bdd3b-102">ISymUnmanagedWriter::OpenNamespace Method</span></span>
 <span data-ttu-id="bdd3b-103">Zostanie otwarty nowy obszar nazw.</span><span class="sxs-lookup"><span data-stu-id="bdd3b-103">Opens a new namespace.</span></span> <span data-ttu-id="bdd3b-104">Tę metodę należy wywołać przed zdefiniowaniem metod lub zmienne, które zajmują przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="bdd3b-104">Call this method before defining methods or variables that occupy a namespace.</span></span> <span data-ttu-id="bdd3b-105">Przestrzenie nazw mogą być zagnieżdżone.</span><span class="sxs-lookup"><span data-stu-id="bdd3b-105">Namespaces can be nested.</span></span>  

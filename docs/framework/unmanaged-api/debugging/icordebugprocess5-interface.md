@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423374"
 ---
 # <a name="icordebugprocess5-interface"></a><span data-ttu-id="fdd12-102">ICorDebugProcess5 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="fdd12-102">ICorDebugProcess5 Interface</span></span>
 <span data-ttu-id="fdd12-103">Umożliwia rozbudowywanie interfejsu ICorDebugProcess do obsługi dostępu do sterty zarządzanej, aby podać informacje o pamięci obiektów zarządzanych, oraz do ustalenia, czy debuger ładuje obrazów z pamięci podręcznej obrazów natywnych lokalnej aplikacji.</span><span class="sxs-lookup"><span data-stu-id="fdd12-103">Extends the ICorDebugProcess interface to support access to the managed heap, to provide information about garbage collection of managed objects, and to determine whether a debugger loads images from the application local native image cache.</span></span>  

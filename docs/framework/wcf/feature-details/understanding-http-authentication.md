@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500145"
 ---
 # <a name="understanding-http-authentication"></a><span data-ttu-id="6a66c-102">Opis uwierzytelniania HTTP</span><span class="sxs-lookup"><span data-stu-id="6a66c-102">Understanding HTTP Authentication</span></span>
 <span data-ttu-id="6a66c-103">Uwierzytelnianie to proces identyfikowania, czy klient jest uprawniona do dostępu do zasobu.</span><span class="sxs-lookup"><span data-stu-id="6a66c-103">Authentication is the process of identifying whether a client is eligible to access a resource.</span></span> <span data-ttu-id="6a66c-104">Protokół HTTP obsługuje uwierzytelnianie jako negocjowania dostępu do zasobów bezpieczny sposób.</span><span class="sxs-lookup"><span data-stu-id="6a66c-104">The HTTP protocol supports authentication as a means of negotiating access to a secure resource.</span></span>  

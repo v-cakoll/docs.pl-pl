@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431220"
 ---
 # <a name="asmname-enumeration"></a><span data-ttu-id="5c153-102">ASM_NAME — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="5c153-102">ASM_NAME Enumeration</span></span>
 <span data-ttu-id="5c153-103">Wskazuje wersję, kompilacji, kultury, sygnatury i tak dalej, zestawu, którego właściwości zostanie pobrać lub ustawić [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) metody.</span><span class="sxs-lookup"><span data-stu-id="5c153-103">Indicates the version, build, culture, signature, and so on, of the assembly whose properties will be retrieved or set by [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) methods.</span></span>  

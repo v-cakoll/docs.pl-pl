@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745555"
 ---
 # <a name="ltaddgt-of-ltbackuplistgt"></a><span data-ttu-id="d7b28-102">&lt;add&gt; w &lt;backupList&gt;</span><span class="sxs-lookup"><span data-stu-id="d7b28-102">&lt;add&gt; of &lt;backupList&gt;</span></span>
 <span data-ttu-id="d7b28-103">Reprezentuje element konfiguracji, który definiuje element zapasowego punktu końcowego.</span><span class="sxs-lookup"><span data-stu-id="d7b28-103">Represents a configuration element that defines a backup endpoint element.</span></span>  

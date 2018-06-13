@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425955"
 ---
 # <a name="inotifysink2onsynccallenter-method"></a><span data-ttu-id="aa7d0-102">INotifySink2::OnSyncCallEnter — Metoda</span><span class="sxs-lookup"><span data-stu-id="aa7d0-102">INotifySink2::OnSyncCallEnter Method</span></span>
 <span data-ttu-id="aa7d0-103">Pobiera wywoływane podczas wchodzenia wywołanie.</span><span class="sxs-lookup"><span data-stu-id="aa7d0-103">Gets invoked when entering a call.</span></span>  

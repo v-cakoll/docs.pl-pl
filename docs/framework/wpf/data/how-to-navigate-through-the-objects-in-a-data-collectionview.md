@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557007"
 ---
 # <a name="how-to-navigate-through-the-objects-in-a-data-collectionview"></a><span data-ttu-id="43d0b-102">Jak przejść do obiektów w danych CollectionView</span><span class="sxs-lookup"><span data-stu-id="43d0b-102">How to: Navigate Through the Objects in a Data CollectionView</span></span>
 <span data-ttu-id="43d0b-103">Widoki zezwolić tej samej kolekcji danych do wyświetlenia na różne sposoby, w zależności od sortowania, filtrowania lub grupowania.</span><span class="sxs-lookup"><span data-stu-id="43d0b-103">Views allow the same data collection to be viewed in different ways, depending on sorting, filtering, or grouping.</span></span> <span data-ttu-id="43d0b-104">Widoki również podać pojęcie bieżącego rekordu wskaźnik i włączyć, przesuń wskaźnik.</span><span class="sxs-lookup"><span data-stu-id="43d0b-104">Views also provide a current record pointer concept and enable moving the pointer.</span></span> <span data-ttu-id="43d0b-105">W tym przykładzie pokazano, jak pobrać bieżący obiekt, a także przejdź do obiektów w kolekcji danych, korzystając z funkcji dostępnych w <xref:System.Windows.Data.CollectionView> klasy.</span><span class="sxs-lookup"><span data-stu-id="43d0b-105">This example shows how to get the current object as well as navigate through the objects in a data collection using the functionality provided in the <xref:System.Windows.Data.CollectionView> class.</span></span>  

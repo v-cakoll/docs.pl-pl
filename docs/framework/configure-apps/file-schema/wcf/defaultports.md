@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747177"
 ---
 # <a name="ltdefaultportsgt"></a><span data-ttu-id="e701f-102">&lt;defaultPorts&gt;</span><span class="sxs-lookup"><span data-stu-id="e701f-102">&lt;defaultPorts&gt;</span></span>
 <span data-ttu-id="e701f-103">Kolekcja portów domyślnych Wyświetla domyślne punktów końcowe komunikacji, które nasłuchuje aplikacja kliencka.</span><span class="sxs-lookup"><span data-stu-id="e701f-103">A collection of default ports listing the default communications endpoints that the client application listens to.</span></span>  

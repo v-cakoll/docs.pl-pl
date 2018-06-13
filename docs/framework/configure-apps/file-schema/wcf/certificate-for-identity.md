@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749286"
 ---
 # <a name="ltcertificategt-for-ltidentitygt"></a><span data-ttu-id="2b0ae-102">&lt;certificate&gt; w &lt;identity&gt;</span><span class="sxs-lookup"><span data-stu-id="2b0ae-102">&lt;certificate&gt; for &lt;identity&gt;</span></span>
 <span data-ttu-id="2b0ae-103">Określa certyfikat X.509 używany do sprawdzania poprawności serwera do klienta.</span><span class="sxs-lookup"><span data-stu-id="2b0ae-103">Specifies an X.509 certificate used to validate a server to a client.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432482"
 ---
 # <a name="inotifysink2onsynccallexit-method"></a><span data-ttu-id="e8f78-102">INotifySink2::OnSyncCallExit — Metoda</span><span class="sxs-lookup"><span data-stu-id="e8f78-102">INotifySink2::OnSyncCallExit Method</span></span>
 <span data-ttu-id="e8f78-103">Pobiera wywoływane podczas zamykania wywołania.</span><span class="sxs-lookup"><span data-stu-id="e8f78-103">Gets invoked when exiting a call.</span></span>  

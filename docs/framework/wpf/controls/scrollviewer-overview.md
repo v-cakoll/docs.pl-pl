@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557930"
 ---
 # <a name="scrollviewer-overview"></a><span data-ttu-id="bd1c9-102">ScrollViewer — Przegląd</span><span class="sxs-lookup"><span data-stu-id="bd1c9-102">ScrollViewer Overview</span></span>
 <span data-ttu-id="bd1c9-103">Zawartość w interfejsie użytkownika często jest większy niż obszar wyświetlania ekranu komputera.</span><span class="sxs-lookup"><span data-stu-id="bd1c9-103">Content within a user interface is often larger than a computer screen's display area.</span></span> <span data-ttu-id="bd1c9-104"><xref:System.Windows.Controls.ScrollViewer> Kontrola zapewnia wygodny sposób, aby włączyć przewijanie zawartości w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji.</span><span class="sxs-lookup"><span data-stu-id="bd1c9-104">The <xref:System.Windows.Controls.ScrollViewer> control provides a convenient way to enable scrolling of content in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span> <span data-ttu-id="bd1c9-105">W tym temacie przedstawiono <xref:System.Windows.Controls.ScrollViewer> element i zawiera kilka przykładów użycia.</span><span class="sxs-lookup"><span data-stu-id="bd1c9-105">This topic introduces the <xref:System.Windows.Controls.ScrollViewer> element and provides several usage examples.</span></span>  

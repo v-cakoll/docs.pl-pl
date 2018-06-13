@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560922"
 ---
 # <a name="how-to-hit-test-geometry-in-a-visual"></a><span data-ttu-id="a8a48-102">Jak przeprowadzić test trafienia geometrii w Visual</span><span class="sxs-lookup"><span data-stu-id="a8a48-102">How to: Hit Test Geometry in a Visual</span></span>
 <span data-ttu-id="a8a48-103">W tym przykładzie przedstawiono sposób wykonywania testu trafienia na obiekt wizualny, który składa się z co najmniej jeden <xref:System.Windows.Media.Geometry> obiektów.</span><span class="sxs-lookup"><span data-stu-id="a8a48-103">This example shows how to perform a hit test on a visual object that is composed of one or more <xref:System.Windows.Media.Geometry> objects.</span></span>  

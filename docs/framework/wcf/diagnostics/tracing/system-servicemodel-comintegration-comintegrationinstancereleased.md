@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33479196"
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationinstancereleased"></a><span data-ttu-id="fccc9-102">System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased</span><span class="sxs-lookup"><span data-stu-id="fccc9-102">System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased</span></span>
 <span data-ttu-id="fccc9-103">System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased</span><span class="sxs-lookup"><span data-stu-id="fccc9-103">System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased</span></span>  

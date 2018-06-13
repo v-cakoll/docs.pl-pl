@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565902"
 ---
 # <a name="xkey-directive"></a><span data-ttu-id="bb702-102">x:Key — dyrektywa</span><span class="sxs-lookup"><span data-stu-id="bb702-102">x:Key Directive</span></span>
 <span data-ttu-id="bb702-103">Identyfikuje elementy, które są tworzone i przywoływany w słowniku zdefiniowany w języku XAML.</span><span class="sxs-lookup"><span data-stu-id="bb702-103">Uniquely identifies elements that are created and referenced in a XAML-defined dictionary.</span></span> <span data-ttu-id="bb702-104">Dodawanie `x:Key` wartość do elementu obiektu XAML jest najczęściej do identyfikacji zasobu w słowniku zasobów, na przykład na platformie WPF <xref:System.Windows.ResourceDictionary>.</span><span class="sxs-lookup"><span data-stu-id="bb702-104">Adding an `x:Key` value to a XAML object element is the most common way to identify a resource in a resource dictionary, for example in a WPF <xref:System.Windows.ResourceDictionary>.</span></span>  

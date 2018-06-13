@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450118"
 ---
 # <a name="corprfexclauseinfo-structure"></a><span data-ttu-id="a04d6-102">COR_PRF_EX_CLAUSE_INFO — Struktura</span><span class="sxs-lookup"><span data-stu-id="a04d6-102">COR_PRF_EX_CLAUSE_INFO Structure</span></span>
 <span data-ttu-id="a04d6-103">Przechowuje informacje dotyczące wystąpienia klauzuli określonego wyjątku i jego skojarzony ramki.</span><span class="sxs-lookup"><span data-stu-id="a04d6-103">Stores information about a specific exception clause instance and its associated frame.</span></span>  

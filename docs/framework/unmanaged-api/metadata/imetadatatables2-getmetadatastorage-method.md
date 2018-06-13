@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452322"
 ---
 # <a name="imetadatatables2getmetadatastorage-method"></a><span data-ttu-id="1afea-102">IMetaDataTables2::GetMetaDataStorage — Metoda</span><span class="sxs-lookup"><span data-stu-id="1afea-102">IMetaDataTables2::GetMetaDataStorage Method</span></span>
 <span data-ttu-id="1afea-103">Pobiera rozmiar i zawartość z określonej sekcji metadanych.</span><span class="sxs-lookup"><span data-stu-id="1afea-103">Gets the size and contents of the metadata stored in the specified section.</span></span>  

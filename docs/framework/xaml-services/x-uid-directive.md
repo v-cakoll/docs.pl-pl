@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561839"
 ---
 # <a name="xuid-directive"></a><span data-ttu-id="97670-102">x:Uid — dyrektywa</span><span class="sxs-lookup"><span data-stu-id="97670-102">x:Uid Directive</span></span>
 <span data-ttu-id="97670-103">Zawiera unikatowy identyfikator dla elementów kodu znaczników.</span><span class="sxs-lookup"><span data-stu-id="97670-103">Provides a unique identifier for markup elements.</span></span> <span data-ttu-id="97670-104">W wielu scenariuszach ten unikatowy identyfikator jest używany przez XAML lokalizacja procesów i narzędzi.</span><span class="sxs-lookup"><span data-stu-id="97670-104">In many scenarios, this unique identifier is used by XAML localization processes and tools.</span></span>  

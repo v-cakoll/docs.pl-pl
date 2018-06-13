@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578206"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a><span data-ttu-id="86071-102">Najlepsze praktyki dotyczące tworzenia aplikacji gotowych do wydania</span><span class="sxs-lookup"><span data-stu-id="86071-102">Best Practices for Developing World-Ready Applications</span></span>
 <span data-ttu-id="86071-103">W tej sekcji opisano najlepszych rozwiązań, które należy wykonać podczas tworzenia aplikacji gotowych.</span><span class="sxs-lookup"><span data-stu-id="86071-103">This section describes the best practices to follow when developing world-ready applications.</span></span>  

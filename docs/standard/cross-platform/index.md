@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573711"
 ---
 # <a name="developing-for-multiple-platforms-with-the-net-framework"></a><span data-ttu-id="ca876-102">Tworzenie aplikacji dla wielu platform przy użyciu programu .NET Framework</span><span class="sxs-lookup"><span data-stu-id="ca876-102">Developing for Multiple Platforms with the .NET Framework</span></span>
 <span data-ttu-id="ca876-103">Można tworzyć aplikacje firmy Microsoft i platform firmy Microsoft przy użyciu programu .NET Framework i Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="ca876-103">You can develop apps for both Microsoft and non-Microsoft platforms by using the .NET Framework and Visual Studio.</span></span>  

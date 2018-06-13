@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570175"
 ---
 # <a name="xml-document-object-model-dom-hierarchy"></a><span data-ttu-id="fa2ec-102">Hierarchia modelu (DOM) obiektu dokumentu XML</span><span class="sxs-lookup"><span data-stu-id="fa2ec-102">XML Document Object Model (DOM) Hierarchy</span></span>
 <span data-ttu-id="fa2ec-103">Na poniższej ilustracji przedstawiono hierarchii klas dla XML modelu DOM (Document Object), z sieci World Wide Web konsorcjum W3C nazwę w nawiasy okrągłe oraz nazwę klasy, gdzie jest to potrzebne.</span><span class="sxs-lookup"><span data-stu-id="fa2ec-103">The following illustration shows the class hierarchy for the XML Document Object Model (DOM), with the World Wide Web Consortium (W3C) name in parenthesis along with the class name where it is relevant.</span></span>  

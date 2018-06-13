@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569369"
 ---
 # <a name="conversion-of-xml-data-types"></a><span data-ttu-id="da358-102">Konwersja typów danych XML</span><span class="sxs-lookup"><span data-stu-id="da358-102">Conversion of XML Data Types</span></span>
 <span data-ttu-id="da358-103">Znaleziono większości metod w **obiekt XmlConvert** klasy służą do konwertowania danych pomiędzy ciągami a jednoznacznie formatów.</span><span class="sxs-lookup"><span data-stu-id="da358-103">The majority of the methods found in an **XmlConvert** class are used to convert data between strings and strongly-typed formats.</span></span> <span data-ttu-id="da358-104">Metody są niezależnie od ustawień regionalnych.</span><span class="sxs-lookup"><span data-stu-id="da358-104">Methods are locale independent.</span></span> <span data-ttu-id="da358-105">Oznacza to, że nie uwzględniają wszystkie ustawienia regionalne podczas konwersji.</span><span class="sxs-lookup"><span data-stu-id="da358-105">This means that they do not take into account any locale settings when doing conversion.</span></span>  

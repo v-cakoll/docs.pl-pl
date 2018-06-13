@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573123"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a><span data-ttu-id="a7e4c-102">Porównywanie i sortowanie w kolekcjach</span><span class="sxs-lookup"><span data-stu-id="a7e4c-102">Comparisons and Sorts Within Collections</span></span>
 <span data-ttu-id="a7e4c-103"><xref:System.Collections> Klasy wykonywać porównania w niemal wszystkich procesów Zarządzanie kolekcjami, czy wyszukiwanie elementu do usunięcia lub zwrócenie wartości parę klucza i wartości.</span><span class="sxs-lookup"><span data-stu-id="a7e4c-103">The <xref:System.Collections> classes perform comparisons in almost all the processes involved in managing collections, whether searching for the element to remove or returning the value of a key-and-value pair.</span></span>  

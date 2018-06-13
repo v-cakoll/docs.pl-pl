@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460518"
 ---
 # <a name="219---serviceexception"></a><span data-ttu-id="c3090-102">219 — ServiceException</span><span class="sxs-lookup"><span data-stu-id="c3090-102">219 - ServiceException</span></span>
 ## <a name="properties"></a><span data-ttu-id="c3090-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="c3090-103">Properties</span></span>  

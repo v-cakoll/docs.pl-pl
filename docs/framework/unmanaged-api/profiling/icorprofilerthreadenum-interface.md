@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457198"
 ---
 # <a name="icorprofilerthreadenum-interface"></a><span data-ttu-id="3d9c6-102">ICorProfilerThreadEnum — Interfejs</span><span class="sxs-lookup"><span data-stu-id="3d9c6-102">ICorProfilerThreadEnum Interface</span></span>
 <span data-ttu-id="3d9c6-103">Udostępnia metody sekwencyjnie iterowania po kolekcji wątki środowiska CLR.</span><span class="sxs-lookup"><span data-stu-id="3d9c6-103">Provides methods to sequentially iterate through a collection of threads in the common language runtime.</span></span>  

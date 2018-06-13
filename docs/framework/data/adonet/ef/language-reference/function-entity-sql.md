@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760677"
 ---
 # <a name="function-entity-sql"></a><span data-ttu-id="abcf6-102">Funkcja (jednostka SQL)</span><span class="sxs-lookup"><span data-stu-id="abcf6-102">FUNCTION (Entity SQL)</span></span>
 <span data-ttu-id="abcf6-103">Definiuje funkcję w zakresie polecenia zapytania SQL jednostki.</span><span class="sxs-lookup"><span data-stu-id="abcf6-103">Defines a function in the scope of an Entity SQL query command.</span></span>  

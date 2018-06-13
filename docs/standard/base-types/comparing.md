@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577820"
 ---
 # <a name="comparing-strings-in-net"></a><span data-ttu-id="c32c2-102">Porównywanie ciągów w .NET</span><span class="sxs-lookup"><span data-stu-id="c32c2-102">Comparing Strings in .NET</span></span>
 <span data-ttu-id="c32c2-103">.NET zapewnia kilka metod do porównania wartości ciągów.</span><span class="sxs-lookup"><span data-stu-id="c32c2-103">.NET provides several methods to compare the values of strings.</span></span> <span data-ttu-id="c32c2-104">W poniższej tabeli wymieniono i opisano metody porównania wartości.</span><span class="sxs-lookup"><span data-stu-id="c32c2-104">The following table lists and describes the value-comparison methods.</span></span>  

@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576158"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a><span data-ttu-id="a8bb2-103">Rozpoczynanie pracy z magazynem obiektów Blob platformy Azure przy użyciu języka F #</span><span class="sxs-lookup"><span data-stu-id="a8bb2-103">Get started with Azure Blob storage using F#</span></span> #
 

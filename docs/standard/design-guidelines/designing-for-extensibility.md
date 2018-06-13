@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571387"
 ---
 # <a name="designing-for-extensibility"></a><span data-ttu-id="676a8-102">Projektowanie pod kątem rozszerzalności</span><span class="sxs-lookup"><span data-stu-id="676a8-102">Designing for Extensibility</span></span>
 <span data-ttu-id="676a8-103">Ważnym aspektem Projektowanie struktury jest sprawdzanie, czy starannie przemyślane extensibility Framework.</span><span class="sxs-lookup"><span data-stu-id="676a8-103">One important aspect of designing a framework is making sure the extensibility of the framework has been carefully considered.</span></span> <span data-ttu-id="676a8-104">Wymaga to, że rozumiesz kosztów i korzyści związanych z różne mechanizmy rozszerzania.</span><span class="sxs-lookup"><span data-stu-id="676a8-104">This requires that you understand the costs and benefits associated with various extensibility mechanisms.</span></span> <span data-ttu-id="676a8-105">Ten rozdział pomaga w podjęciu decyzji, które mechanizmy rozszerzania — podklasy, zdarzenia wirtualne elementy członkowskie, wywołania zwrotne i tak dalej — mogą najlepiej spełnić wymagania Twojej platformy.</span><span class="sxs-lookup"><span data-stu-id="676a8-105">This chapter helps you decide which of the extensibility mechanisms—subclassing, events, virtual members, callbacks, and so on—can best meet the requirements of your framework.</span></span>  

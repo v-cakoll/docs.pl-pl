@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572255"
 ---
 # <a name="extending-the-dom"></a><span data-ttu-id="96b52-102">Rozszerzanie modelu DOM</span><span class="sxs-lookup"><span data-stu-id="96b52-102">Extending the DOM</span></span>
 <span data-ttu-id="96b52-103">Microsoft .NET Framework zawiera podstawowy zestaw klas, który zawiera implementację elementu XML modelu DOM (Document Object).</span><span class="sxs-lookup"><span data-stu-id="96b52-103">The Microsoft .NET Framework includes a base set of classes that provides an implementation of the XML Document Object Model (DOM).</span></span> <span data-ttu-id="96b52-104"><xref:System.Xml.XmlNode>i ich pochodne klasy, udostępnia metody i właściwości, które umożliwiają nawigowanie, zapytania i modyfikować zawartości i struktury dokumentu XML.</span><span class="sxs-lookup"><span data-stu-id="96b52-104">The <xref:System.Xml.XmlNode>, and its derived classes, provides methods and properties that allow you to navigate, query, and modify the content and structure of an XML document.</span></span>  

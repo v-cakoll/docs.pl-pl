@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450157"
 ---
 # <a name="corprfgcgeneration-enumeration"></a><span data-ttu-id="ca1c9-102">COR_PRF_GC_GENERATION — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="ca1c9-102">COR_PRF_GC_GENERATION Enumeration</span></span>
 <span data-ttu-id="ca1c9-103">Określa Generowanie wyrzucanie elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="ca1c9-103">Identifies a garbage-collection generation.</span></span>  

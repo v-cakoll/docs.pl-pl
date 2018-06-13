@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575404"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a><span data-ttu-id="b24c0-103">Rozpoczynanie pracy z magazynem tabel Azure i rozwiązania Cosmos DB tabeli interfejsu API Azure przy użyciu języka F #</span><span class="sxs-lookup"><span data-stu-id="b24c0-103">Get started with Azure Table storage and the Azure Cosmos DB Table API using F#</span></span> # 
 

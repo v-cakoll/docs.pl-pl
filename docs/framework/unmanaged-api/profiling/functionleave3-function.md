@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453927"
 ---
 # <a name="functionleave3-function"></a><span data-ttu-id="5db20-102">FunctionLeave3 — Funkcja</span><span class="sxs-lookup"><span data-stu-id="5db20-102">FunctionLeave3 Function</span></span>
 <span data-ttu-id="5db20-103">Powiadamia profilera, że formant zostały zwrócone z funkcji.</span><span class="sxs-lookup"><span data-stu-id="5db20-103">Notifies the profiler that control is being returned from a function.</span></span>  

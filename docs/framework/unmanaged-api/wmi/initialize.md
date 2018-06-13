@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455758"
 ---
 # <a name="initialize-function"></a><span data-ttu-id="8bc58-103">Initialize — funkcja</span><span class="sxs-lookup"><span data-stu-id="8bc58-103">Initialize function</span></span>
 <span data-ttu-id="8bc58-104">Wykonuje inicjowania usługi WMI.</span><span class="sxs-lookup"><span data-stu-id="8bc58-104">Performs WMI initialization.</span></span>  

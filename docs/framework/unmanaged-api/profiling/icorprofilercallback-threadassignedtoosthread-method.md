@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451837"
 ---
 # <a name="icorprofilercallbackthreadassignedtoosthread-method"></a><span data-ttu-id="b2c47-102">ICorProfilerCallback::ThreadAssignedToOSThread — Metoda</span><span class="sxs-lookup"><span data-stu-id="b2c47-102">ICorProfilerCallback::ThreadAssignedToOSThread Method</span></span>
 <span data-ttu-id="b2c47-103">Powiadamia profilera, że zarządzanego wątku jest implementowana przy użyciu wątku określonym systemie operacyjnym.</span><span class="sxs-lookup"><span data-stu-id="b2c47-103">Notifies the profiler that a managed thread is being implemented using a particular operating system thread.</span></span>  

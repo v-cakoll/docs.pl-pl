@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33456238"
 ---
 # <a name="icorprofilerinfo2getcontextstaticaddress-method"></a><span data-ttu-id="a1e61-102">ICorProfilerInfo2::GetContextStaticAddress — Metoda</span><span class="sxs-lookup"><span data-stu-id="a1e61-102">ICorProfilerInfo2::GetContextStaticAddress Method</span></span>
 <span data-ttu-id="a1e61-103">Pobiera adres dla określonego pola statycznej kontekstu, który znajduje się w zakresie określonego kontekstu.</span><span class="sxs-lookup"><span data-stu-id="a1e61-103">Gets the address for the specified context-static field that is in the scope of the specified context.</span></span>  

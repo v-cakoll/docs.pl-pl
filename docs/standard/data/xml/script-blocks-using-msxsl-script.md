@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577166"
 ---
 # <a name="script-blocks-using-msxslscript"></a><span data-ttu-id="3881c-102">Msxsl:script bloki za pomocą skryptu</span><span class="sxs-lookup"><span data-stu-id="3881c-102">Script Blocks Using msxsl:script</span></span>
 <span data-ttu-id="3881c-103"><xref:System.Xml.Xsl.XslCompiledTransform> Klasa obsługuje osadzonych skryptów przy użyciu `msxsl:script` elementu.</span><span class="sxs-lookup"><span data-stu-id="3881c-103">The <xref:System.Xml.Xsl.XslCompiledTransform> class supports embedded scripts using the `msxsl:script` element.</span></span> <span data-ttu-id="3881c-104">Po załadowaniu arkusza stylów żadnych określonych funkcji są kompilowane na język pośredni firmy Microsoft (MSIL) przez kod Document Object Model (CodeDOM) i są wykonywane w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="3881c-104">When the style sheet is loaded, any defined functions are compiled to Microsoft intermediate language (MSIL) by the Code Document Object Model (CodeDOM) and are executed during run time.</span></span> <span data-ttu-id="3881c-105">Zestaw wygenerowane z bloku osadzony skrypt jest oddzielony niż zestaw wygenerowany dla arkusza stylów.</span><span class="sxs-lookup"><span data-stu-id="3881c-105">The assembly generated from the embedded script block is separate than the assembly generated for the style sheet.</span></span>  

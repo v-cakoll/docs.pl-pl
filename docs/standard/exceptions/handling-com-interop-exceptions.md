@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571267"
 ---
 # <a name="handling-com-interop-exceptions"></a><span data-ttu-id="050e1-102">Obsługa wyjątków międzyoperacyjności COM</span><span class="sxs-lookup"><span data-stu-id="050e1-102">Handling COM Interop Exceptions</span></span>
 <span data-ttu-id="050e1-103">Zarządzanego i kodu niezarządzanego mogą współdziałać ze sobą do obsługi wyjątków.</span><span class="sxs-lookup"><span data-stu-id="050e1-103">Managed and unmanaged code can work together to handle exceptions.</span></span> <span data-ttu-id="050e1-104">Jeśli metoda zgłosi wyjątek w kodzie zarządzanym, środowisko uruchomieniowe języka wspólnego można przekazać HRESULT do obiektów COM.</span><span class="sxs-lookup"><span data-stu-id="050e1-104">If a method throws an exception in managed code, the common language runtime can pass an HRESULT to a COM object.</span></span> <span data-ttu-id="050e1-105">W przypadku niepowodzenia metody za pomocą kodu niezarządzanego zwracając błąd HRESULT środowiska uruchomieniowego zgłasza wyjątek, który może być przechwycony przez kod zarządzany.</span><span class="sxs-lookup"><span data-stu-id="050e1-105">If a method fails in unmanaged code by returning a failure HRESULT, the runtime throws an exception that can be caught by managed code.</span></span>  

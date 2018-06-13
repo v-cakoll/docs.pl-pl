@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454681"
 ---
 # <a name="icorprofilermoduleenumreset-method"></a><span data-ttu-id="0f34e-102">ICorProfilerModuleEnum::Reset — Metoda</span><span class="sxs-lookup"><span data-stu-id="0f34e-102">ICorProfilerModuleEnum::Reset Method</span></span>
 <span data-ttu-id="0f34e-103">Przesuwa kursor ten moduł wyliczający pozycji początkowej sekwencji.</span><span class="sxs-lookup"><span data-stu-id="0f34e-103">Moves this enumerator's cursor to the starting position of the sequence.</span></span>  

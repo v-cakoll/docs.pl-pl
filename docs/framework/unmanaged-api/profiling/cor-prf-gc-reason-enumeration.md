@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450102"
 ---
 # <a name="corprfgcreason-enumeration"></a><span data-ttu-id="b99d6-102">COR_PRF_GC_REASON — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="b99d6-102">COR_PRF_GC_REASON Enumeration</span></span>
 <span data-ttu-id="b99d6-103">Wskazuje Przyczyna występuje wyrzucanie elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="b99d6-103">Indicates the reason that garbage collection is occurring.</span></span>  

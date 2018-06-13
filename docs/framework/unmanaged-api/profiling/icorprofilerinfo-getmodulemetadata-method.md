@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455549"
 ---
 # <a name="icorprofilerinfogetmodulemetadata-method"></a><span data-ttu-id="2547a-102">ICorProfilerInfo::GetModuleMetaData — Metoda</span><span class="sxs-lookup"><span data-stu-id="2547a-102">ICorProfilerInfo::GetModuleMetaData Method</span></span>
 <span data-ttu-id="2547a-103">Pobiera wystąpienie interfejsu metadanych, który jest mapowany na określony moduł.</span><span class="sxs-lookup"><span data-stu-id="2547a-103">Gets a metadata interface instance that maps to the specified module.</span></span>  

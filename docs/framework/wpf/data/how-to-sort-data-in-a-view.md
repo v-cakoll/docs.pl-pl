@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556760"
 ---
 # <a name="how-to-sort-data-in-a-view"></a><span data-ttu-id="61eb5-102">Jak sortować dane w widoku</span><span class="sxs-lookup"><span data-stu-id="61eb5-102">How to: Sort Data in a View</span></span>
 <span data-ttu-id="61eb5-103">W tym przykładzie przedstawiono sposób sortowania danych w widoku.</span><span class="sxs-lookup"><span data-stu-id="61eb5-103">This example describes how to sort data in a view.</span></span>  

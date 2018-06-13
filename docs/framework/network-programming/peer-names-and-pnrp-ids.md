@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397588"
 ---
 # <a name="peer-names-and-pnrp-ids"></a><span data-ttu-id="670c4-102">Nazwy elementów równorzędnych i identyfikatory PNRP</span><span class="sxs-lookup"><span data-stu-id="670c4-102">Peer Names and PNRP IDs</span></span>
 <span data-ttu-id="670c4-103">Nazwa elementu równorzędnego reprezentuje punkt końcowy komunikacji, który może być komputera, użytkownika, grupy, usługi lub niczego skojarzony z węzłem równorzędnym, które zostały rozpoznane jako adres IPv6.</span><span class="sxs-lookup"><span data-stu-id="670c4-103">A Peer Name represents an endpoint for communication, which can be a computer, a user, a group, a service, or anything associated with a Peer that can be resolved to an IPv6 address.</span></span> <span data-ttu-id="670c4-104">Rozpoznawania protokołu PNRP (Peer Name) ma statystycznie unikatowa nazwa elementu równorzędnego w celu utworzenia identyfikatora PNRP, który służy do identyfikowania członków chmury.</span><span class="sxs-lookup"><span data-stu-id="670c4-104">The Peer Name Resolution Protocol (PNRP) takes the statistically unique Peer Name for the creation of a PNRP ID, which is used to identify cloud members.</span></span>  

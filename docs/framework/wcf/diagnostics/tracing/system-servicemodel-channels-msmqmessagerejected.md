@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33478949"
 ---
 # <a name="systemservicemodelchannelsmsmqmessagerejected"></a><span data-ttu-id="6e317-102">System.ServiceModel.Channels.MsmqMessageRejected</span><span class="sxs-lookup"><span data-stu-id="6e317-102">System.ServiceModel.Channels.MsmqMessageRejected</span></span>
 <span data-ttu-id="6e317-103">Usługa MSMQ odrzucone wiadomości.</span><span class="sxs-lookup"><span data-stu-id="6e317-103">MSMQ rejected the message.</span></span>  

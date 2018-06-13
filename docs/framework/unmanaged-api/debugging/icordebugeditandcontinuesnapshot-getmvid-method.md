@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411843"
 ---
 # <a name="icordebugeditandcontinuesnapshotgetmvid-method"></a><span data-ttu-id="0123b-102">ICorDebugEditAndContinueSnapshot::GetMvid — Metoda</span><span class="sxs-lookup"><span data-stu-id="0123b-102">ICorDebugEditAndContinueSnapshot::GetMvid Method</span></span>
 <span data-ttu-id="0123b-103">`GetMvid` jest przestarzała.</span><span class="sxs-lookup"><span data-stu-id="0123b-103">`GetMvid` is obsolete.</span></span> <span data-ttu-id="0123b-104">Nie wywołuj tej metody.</span><span class="sxs-lookup"><span data-stu-id="0123b-104">Do not call this method.</span></span>  

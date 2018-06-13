@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572778"
 ---
 # <a name="how-to-read-characters-from-a-string"></a><span data-ttu-id="1f286-102">Porady: odczytywanie znaków z ciągów</span><span class="sxs-lookup"><span data-stu-id="1f286-102">How to: Read Characters from a String</span></span>
 <span data-ttu-id="1f286-103">W poniższych przykładach kodu przedstawiają sposób synchronicznego i asynchronicznego odczytywanie znaków z ciągu.</span><span class="sxs-lookup"><span data-stu-id="1f286-103">The following code examples show how to read characters synchronously and asynchronously from a string.</span></span>  

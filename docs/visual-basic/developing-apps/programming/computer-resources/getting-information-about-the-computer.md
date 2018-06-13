@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582203"
 ---
 # <a name="getting-information-about-the-computer-visual-basic"></a><span data-ttu-id="e9a87-102">Pobieranie informacji na temat komputera (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e9a87-102">Getting Information about the Computer (Visual Basic)</span></span>
 <span data-ttu-id="e9a87-103">`My.Computer.Info` Obiektu udostępnia właściwości do pobierania informacji o pamięci, załadowanych zestawów, nazwy i systemu operacyjnego komputera.</span><span class="sxs-lookup"><span data-stu-id="e9a87-103">The `My.Computer.Info` object provides properties for getting information about the computer's memory, loaded assemblies, name, and operating system.</span></span>  

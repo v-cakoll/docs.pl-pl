@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410257"
 ---
 # <a name="ui-automation-support-for-the-datagrid-control-type"></a><span data-ttu-id="02284-102">Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu DataGrid</span><span class="sxs-lookup"><span data-stu-id="02284-102">UI Automation Support for the DataGrid Control Type</span></span>
 > [!NOTE]

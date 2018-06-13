@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450365"
 ---
 # <a name="imetadatatablesgettableindex-method"></a><span data-ttu-id="05dfb-102">IMetaDataTables::GetTableIndex — Metoda</span><span class="sxs-lookup"><span data-stu-id="05dfb-102">IMetaDataTables::GetTableIndex Method</span></span>
 <span data-ttu-id="05dfb-103">Pobiera indeks tabeli odwołuje się określony token.</span><span class="sxs-lookup"><span data-stu-id="05dfb-103">Gets the index for the table referenced by the specified token.</span></span>  

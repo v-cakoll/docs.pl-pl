@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450505"
 ---
 # <a name="metadata-unmanaged-api-reference"></a><span data-ttu-id="05f99-102">Metadane (niezarządzany wykaz interfejsów API)</span><span class="sxs-lookup"><span data-stu-id="05f99-102">Metadata (Unmanaged API Reference)</span></span>
 <span data-ttu-id="05f99-103">Metadanych interfejsu API umożliwia klienta, takich jak kompilatora, generowanie ani uzyskiwać dostępu do metadanych składnika bez typów ładowany przez środowisko uruchomieniowe języka wspólnego (CLR).</span><span class="sxs-lookup"><span data-stu-id="05f99-103">The metadata API enables a client, such as a compiler, to generate or access a component's metadata without the types being loaded by the common language runtime (CLR).</span></span>  

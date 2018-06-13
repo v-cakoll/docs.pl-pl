@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453112"
 ---
 # <a name="icorprofilerfunctionenumskip-method"></a><span data-ttu-id="8c694-102">ICorProfilerFunctionEnum::Skip — Metoda</span><span class="sxs-lookup"><span data-stu-id="8c694-102">ICorProfilerFunctionEnum::Skip Method</span></span>
 <span data-ttu-id="8c694-103">Przesuwa kursor modułu wyliczającego z jego bieżącym położeniu tak, aby określoną liczbę elementów są pomijane.</span><span class="sxs-lookup"><span data-stu-id="8c694-103">Advances the enumerator's cursor from its current position so that the specified number of elements are skipped.</span></span>  

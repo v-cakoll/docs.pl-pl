@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566564"
 ---
 # <a name="key-frame-animations-overview"></a><span data-ttu-id="5e44b-102">Przegląd Animacja kluczowych klatek</span><span class="sxs-lookup"><span data-stu-id="5e44b-102">Key-Frame Animations Overview</span></span>
 <span data-ttu-id="5e44b-103">W tym temacie przedstawiono klucza ramki animacji.</span><span class="sxs-lookup"><span data-stu-id="5e44b-103">This topic introduces you to key-frame animations.</span></span> <span data-ttu-id="5e44b-104">Klucz poklatkowych umożliwiają animować przy użyciu więcej niż dwóch wartości docelowych i kontrolować metodę interpolacji animacji.</span><span class="sxs-lookup"><span data-stu-id="5e44b-104">Key-frame animations enable you to animate using more than two target values, and control an animation's interpolation method.</span></span>  

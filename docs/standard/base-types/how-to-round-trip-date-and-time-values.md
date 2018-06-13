@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573189"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a><span data-ttu-id="5e7c6-102">Porady: obustronna konwersja wartości daty i godziny</span><span class="sxs-lookup"><span data-stu-id="5e7c6-102">How to: Round-trip Date and Time Values</span></span>
 <span data-ttu-id="5e7c6-103">W wielu aplikacjach wartość daty i godziny ma na celu jego jednoznacznej identyfikacji pojedynczy punkt w czasie.</span><span class="sxs-lookup"><span data-stu-id="5e7c6-103">In many applications, a date and time value is intended to unambiguously identify a single point in time.</span></span> <span data-ttu-id="5e7c6-104">W tym temacie pokazano, jak zapisywanie i przywracanie <xref:System.DateTime> wartość <xref:System.DateTimeOffset> wartość i wartość daty i godziny z czasem strefy informacje, aby wartość przywróconej identyfikuje jednocześnie jako zapisana wartość.</span><span class="sxs-lookup"><span data-stu-id="5e7c6-104">This topic shows how to save and restore a <xref:System.DateTime> value, a <xref:System.DateTimeOffset> value, and a date and time value with time zone information so that the restored value identifies the same time as the saved value.</span></span>  

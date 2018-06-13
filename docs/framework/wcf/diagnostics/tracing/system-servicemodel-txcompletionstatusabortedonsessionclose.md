@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33484217"
 ---
 # <a name="systemservicemodeltxcompletionstatusabortedonsessionclose"></a><span data-ttu-id="e2ecc-102">System.ServiceModel.TxCompletionStatusAbortedOnSessionClose</span><span class="sxs-lookup"><span data-stu-id="e2ecc-102">System.ServiceModel.TxCompletionStatusAbortedOnSessionClose</span></span>
 <span data-ttu-id="e2ecc-103">Określona transakcja została przerwana, ponieważ była niezakończona podczas zamykania sesji i TransactionAutoCompleteOnSessionClose OperationBehaviorAttribute została ustawiona na false.</span><span class="sxs-lookup"><span data-stu-id="e2ecc-103">The specified transaction was aborted because it was uncompleted when the session was closed and the TransactionAutoCompleteOnSessionClose OperationBehaviorAttribute was set to false.</span></span>  

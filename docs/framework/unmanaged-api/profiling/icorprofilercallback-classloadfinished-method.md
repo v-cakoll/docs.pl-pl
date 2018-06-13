@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451272"
 ---
 # <a name="icorprofilercallbackclassloadfinished-method"></a><span data-ttu-id="58248-102">ICorProfilerCallback::ClassLoadFinished — Metoda</span><span class="sxs-lookup"><span data-stu-id="58248-102">ICorProfilerCallback::ClassLoadFinished Method</span></span>
 <span data-ttu-id="58248-103">Powiadamia profilera, czy klasa została załadowana.</span><span class="sxs-lookup"><span data-stu-id="58248-103">Notifies the profiler that a class has finished loading.</span></span>  

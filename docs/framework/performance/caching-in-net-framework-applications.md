@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396834"
 ---
 # <a name="caching-in-net-framework-applications"></a><span data-ttu-id="cc792-102">Buforowanie w aplikacjach .NET Framework</span><span class="sxs-lookup"><span data-stu-id="cc792-102">Caching in .NET Framework Applications</span></span>
 <span data-ttu-id="cc792-103">Buforowanie umożliwia przechowywanie danych w pamięci, aby uzyskać szybki dostęp.</span><span class="sxs-lookup"><span data-stu-id="cc792-103">Caching enables you to store data in memory for rapid access.</span></span> <span data-ttu-id="cc792-104">Dostępie do danych ponownie, aplikacje można pobrać danych z pamięci podręcznej zamiast z oryginalnego źródła.</span><span class="sxs-lookup"><span data-stu-id="cc792-104">When the data is accessed again, applications can get the data from the cache instead of retrieving it from the original source.</span></span> <span data-ttu-id="cc792-105">Może to poprawić wydajność i skalowalność.</span><span class="sxs-lookup"><span data-stu-id="cc792-105">This can improve performance and scalability.</span></span> <span data-ttu-id="cc792-106">Ponadto buforowanie sprawia, że nie są dostępne dane, gdy źródłem danych jest tymczasowo niedostępna.</span><span class="sxs-lookup"><span data-stu-id="cc792-106">In addition, caching makes data available when the data source is temporarily unavailable.</span></span>  

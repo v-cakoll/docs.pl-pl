@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451922"
 ---
 # <a name="metadata-unions"></a><span data-ttu-id="4d1a1-102">Unie metadanych</span><span class="sxs-lookup"><span data-stu-id="4d1a1-102">Metadata Unions</span></span>
 <span data-ttu-id="4d1a1-103">W tej sekcji opisano niezarządzane unie, które korzysta z metadanych interfejsu API.</span><span class="sxs-lookup"><span data-stu-id="4d1a1-103">This section describes the unmanaged unions that the metadata API uses.</span></span>  

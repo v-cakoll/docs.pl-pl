@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33456016"
 ---
 # <a name="icorprofilerinfogetfunctioninfo-method"></a><span data-ttu-id="8b7ae-102">ICorProfilerInfo::GetFunctionInfo — Metoda</span><span class="sxs-lookup"><span data-stu-id="8b7ae-102">ICorProfilerInfo::GetFunctionInfo Method</span></span>
 <span data-ttu-id="8b7ae-103">Pobiera klasy nadrzędnej i metadanych token dla określonej funkcji.</span><span class="sxs-lookup"><span data-stu-id="8b7ae-103">Gets the parent class and metadata token for the specified function.</span></span>  

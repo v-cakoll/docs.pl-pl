@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451769"
 ---
 # <a name="icorprofilercallbackexceptionoshandlerenter-method"></a><span data-ttu-id="4dd15-102">ICorProfilerCallback::ExceptionOSHandlerEnter — Metoda</span><span class="sxs-lookup"><span data-stu-id="4dd15-102">ICorProfilerCallback::ExceptionOSHandlerEnter Method</span></span>
 <span data-ttu-id="4dd15-103">Nie jest zaimplementowana.</span><span class="sxs-lookup"><span data-stu-id="4dd15-103">Not implemented.</span></span> <span data-ttu-id="4dd15-104">Profiler wymagające niezarządzany wyjątek informacji należy uzyskać te informacje w inny sposób.</span><span class="sxs-lookup"><span data-stu-id="4dd15-104">A profiler that needs unmanaged exception information must obtain this information through other means.</span></span>  

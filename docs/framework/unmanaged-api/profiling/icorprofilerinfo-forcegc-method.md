@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454476"
 ---
 # <a name="icorprofilerinfoforcegc-method"></a><span data-ttu-id="78786-102">ICorProfilerInfo::ForceGC — Metoda</span><span class="sxs-lookup"><span data-stu-id="78786-102">ICorProfilerInfo::ForceGC Method</span></span>
 <span data-ttu-id="78786-103">Wyrzucanie elementów bezużytecznych wymusza zostać przeprowadzone w ciągu środowisko uruchomieniowe języka wspólnego (CLR).</span><span class="sxs-lookup"><span data-stu-id="78786-103">Forces garbage collection to occur within the common language runtime (CLR).</span></span>  

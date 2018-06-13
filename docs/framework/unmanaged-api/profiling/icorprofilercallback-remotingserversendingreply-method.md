@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453779"
 ---
 # <a name="icorprofilercallbackremotingserversendingreply-method"></a><span data-ttu-id="c6add-102">ICorProfilerCallback::RemotingServerSendingReply — Metoda</span><span class="sxs-lookup"><span data-stu-id="c6add-102">ICorProfilerCallback::RemotingServerSendingReply Method</span></span>
 <span data-ttu-id="c6add-103">Powiadamia profilera, że proces zakończył przetwarzanie żądania wywołania metody zdalnego i ma przesyłać odpowiedzi za pośrednictwem kanału.</span><span class="sxs-lookup"><span data-stu-id="c6add-103">Notifies the profiler that the process has finished processing a remote method invocation request and is about to transmit the reply through a channel.</span></span>  

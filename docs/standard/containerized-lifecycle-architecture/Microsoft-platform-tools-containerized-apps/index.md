@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576246"
 ---
 # <a name="introduction-to-the-microsoft-platform-and-tools-for-containerized-apps"></a><span data-ttu-id="c8d09-103">Wprowadzenie do platformy firmy Microsoft i narzędzia dla aplikacji konteneryzowanych</span><span class="sxs-lookup"><span data-stu-id="c8d09-103">Introduction to the Microsoft platform and tools for containerized apps</span></span>
 

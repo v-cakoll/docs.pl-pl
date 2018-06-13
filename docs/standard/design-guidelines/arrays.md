@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570407"
 ---
 # <a name="arrays"></a><span data-ttu-id="b5ed0-102">Tablice</span><span class="sxs-lookup"><span data-stu-id="b5ed0-102">Arrays</span></span>
 <span data-ttu-id="b5ed0-103">**CZY ✓** preferowane przy użyciu kolekcji za pośrednictwem tablic w publicznych interfejsach API.</span><span class="sxs-lookup"><span data-stu-id="b5ed0-103">**✓ DO** prefer using collections over arrays in public APIs.</span></span> <span data-ttu-id="b5ed0-104">[Kolekcje](../../../docs/standard/design-guidelines/guidelines-for-collections.md) sekcja zawiera szczegółowe informacje o tym, jak wybranie kolekcji i tablic.</span><span class="sxs-lookup"><span data-stu-id="b5ed0-104">The [Collections](../../../docs/standard/design-guidelines/guidelines-for-collections.md) section provides details about how to choose between collections and arrays.</span></span>  

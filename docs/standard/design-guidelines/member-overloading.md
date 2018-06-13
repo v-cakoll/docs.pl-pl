@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573558"
 ---
 # <a name="member-overloading"></a><span data-ttu-id="cb715-102">Przeciążenie elementu członkowskiego</span><span class="sxs-lookup"><span data-stu-id="cb715-102">Member Overloading</span></span>
 <span data-ttu-id="cb715-103">Przeciążenie elementu członkowskiego oznacza, że utworzenie dwóch lub więcej elementów członkowskich do tego samego typu, które różnią się jedynie liczby lub typów parametrów, ale mają taką samą nazwę.</span><span class="sxs-lookup"><span data-stu-id="cb715-103">Member overloading means creating two or more members on the same type that differ only in the number or type of parameters but have the same name.</span></span> <span data-ttu-id="cb715-104">Na przykład w poniższych `WriteLine` metody jest przeciążona:</span><span class="sxs-lookup"><span data-stu-id="cb715-104">For example, in the following, the `WriteLine` method is overloaded:</span></span>  

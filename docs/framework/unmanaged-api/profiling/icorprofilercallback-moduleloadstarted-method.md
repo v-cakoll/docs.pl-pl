@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451733"
 ---
 # <a name="icorprofilercallbackmoduleloadstarted-method"></a><span data-ttu-id="78fe4-102">ICorProfilerCallback::ModuleLoadStarted — Metoda</span><span class="sxs-lookup"><span data-stu-id="78fe4-102">ICorProfilerCallback::ModuleLoadStarted Method</span></span>
 <span data-ttu-id="78fe4-103">Powiadamia profilera, czy moduł jest ładowany.</span><span class="sxs-lookup"><span data-stu-id="78fe4-103">Notifies the profiler that a module is being loaded.</span></span>  

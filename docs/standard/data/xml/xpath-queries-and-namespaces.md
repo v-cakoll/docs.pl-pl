@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571465"
 ---
 # <a name="xpath-queries-and-namespaces"></a><span data-ttu-id="df892-102">Kwerendy XPath i przestrzenie nazw</span><span class="sxs-lookup"><span data-stu-id="df892-102">XPath Queries and Namespaces</span></span>
 <span data-ttu-id="df892-103">Kwerendy XPath wiedzą z przestrzeni nazw w dokumencie XML i mogą być uprawnione nazw elementów i atrybutów prefiksy przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="df892-103">XPath queries are aware of namespaces in an XML document and can use namespace prefixes to qualify element and attribute names.</span></span> <span data-ttu-id="df892-104">Kwalifikowanie nazw elementów i atrybutów z prefiksu przestrzeni nazw ogranicza węzłów zwróconych przez zapytanie XPath tylko węzły, które należą do określonych przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="df892-104">Qualifying element and attribute names with a namespace prefix limits the nodes returned by an XPath query to only those nodes that belong to a specific namespace.</span></span>  

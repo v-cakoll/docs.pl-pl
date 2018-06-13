@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33480629"
 ---
 # <a name="systemservicemodelcommunicationobjectcreated"></a><span data-ttu-id="bcd16-102">System.ServiceModel.CommunicationObjectCreated</span><span class="sxs-lookup"><span data-stu-id="bcd16-102">System.ServiceModel.CommunicationObjectCreated</span></span>
 <span data-ttu-id="bcd16-103">System.ServiceModel.CommunicationObjectCreated</span><span class="sxs-lookup"><span data-stu-id="bcd16-103">System.ServiceModel.CommunicationObjectCreated</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578238"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a><span data-ttu-id="2ff51-102">Zasady wnioskowanie schematu węzła typy i struktury</span><span class="sxs-lookup"><span data-stu-id="2ff51-102">Rules for Inferring Schema Node Types and Structure</span></span>
 <span data-ttu-id="2ff51-103">W tym temacie opisano, jak proces wnioskowania schematu tłumaczy typy węzłów w dokumencie XML do struktury języka (XSD) definicja schematu XML.</span><span class="sxs-lookup"><span data-stu-id="2ff51-103">This topic describes how the schema inference process translates the node types in an XML document to an XML Schema definition language (XSD) structure.</span></span>  

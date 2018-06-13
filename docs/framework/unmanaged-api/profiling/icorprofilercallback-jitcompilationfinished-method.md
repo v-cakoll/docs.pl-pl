@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453554"
 ---
 # <a name="icorprofilercallbackjitcompilationfinished-method"></a><span data-ttu-id="f76a8-102">ICorProfilerCallback::JITCompilationFinished — Metoda</span><span class="sxs-lookup"><span data-stu-id="f76a8-102">ICorProfilerCallback::JITCompilationFinished Method</span></span>
 <span data-ttu-id="f76a8-103">Powiadamia profilera przy użyciu kompilatora just in time (JIT) zostało zakończone, kompilowanie funkcji.</span><span class="sxs-lookup"><span data-stu-id="f76a8-103">Notifies the profiler that the just-in-time (JIT) compiler has finished compiling a function.</span></span>  

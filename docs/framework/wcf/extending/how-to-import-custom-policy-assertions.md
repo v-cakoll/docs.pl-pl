@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491156"
 ---
 # <a name="how-to-import-custom-policy-assertions"></a><span data-ttu-id="1fb11-102">Instrukcje: Importowanie niestandardowych asercji zasad</span><span class="sxs-lookup"><span data-stu-id="1fb11-102">How to: Import Custom Policy Assertions</span></span>
 <span data-ttu-id="1fb11-103">Potwierdzenia zasad opisano wymagania punktu końcowego usługi.</span><span class="sxs-lookup"><span data-stu-id="1fb11-103">Policy assertions describe the capabilities and requirements of a service endpoint.</span></span>  <span data-ttu-id="1fb11-104">Aplikacje klienckie można użyć potwierdzeń zasad w metadanych usługi, aby skonfigurować klienta powiązanie lub dostosować kontraktu usługi dla punktu końcowego usługi.</span><span class="sxs-lookup"><span data-stu-id="1fb11-104">Client applications can use policy assertions in service metadata to configure the client binding or to customize the service contract for a service endpoint.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571894"
 ---
 # <a name="using-user-filtered-exception-handlers"></a><span data-ttu-id="01c99-102">Używanie obsługi wyjątków filtrowanych przez użytkownika</span><span class="sxs-lookup"><span data-stu-id="01c99-102">Using User-Filtered Exception Handlers</span></span>
 <span data-ttu-id="01c99-103">Visual Basic obsługuje obecnie wyjątki filtrowane przez użytkownika.</span><span class="sxs-lookup"><span data-stu-id="01c99-103">Currently, Visual Basic supports user-filtered exceptions.</span></span> <span data-ttu-id="01c99-104">Programy obsługi wyjątków filtrowanych przez użytkownika wychwycić i obsłużyć wyjątków na podstawie wymagań zdefiniowanych dla wyjątku.</span><span class="sxs-lookup"><span data-stu-id="01c99-104">User-filtered exception handlers catch and handle exceptions based on requirements you define for the exception.</span></span> <span data-ttu-id="01c99-105">Użyj tych programów obsługi **Catch** instrukcji z **podczas** — słowo kluczowe.</span><span class="sxs-lookup"><span data-stu-id="01c99-105">These handlers use the **Catch** statement with the **When** keyword.</span></span>  

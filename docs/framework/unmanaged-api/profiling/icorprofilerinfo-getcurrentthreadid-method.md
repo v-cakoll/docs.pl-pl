@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453860"
 ---
 # <a name="icorprofilerinfogetcurrentthreadid-method"></a><span data-ttu-id="fd9ae-102">ICorProfilerInfo::GetCurrentThreadID — Metoda</span><span class="sxs-lookup"><span data-stu-id="fd9ae-102">ICorProfilerInfo::GetCurrentThreadID Method</span></span>
 <span data-ttu-id="fd9ae-103">Pobiera identyfikator bieżącego wątku, jeśli jest zarządzanego wątku.</span><span class="sxs-lookup"><span data-stu-id="fd9ae-103">Gets the ID of the current thread, if it is a managed thread.</span></span>  

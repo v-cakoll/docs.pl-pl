@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559477"
 ---
 # <a name="how-to-create-a-new-bitmapsource"></a><span data-ttu-id="560e6-102">Jak utworzyć nowe BitmapSource</span><span class="sxs-lookup"><span data-stu-id="560e6-102">How to: Create a new BitmapSource</span></span>
 <span data-ttu-id="560e6-103">W tym przykładzie przedstawiono sposób użycia <xref:System.Windows.Media.Imaging.BitmapSource.Create%2A> metody <xref:System.Windows.Media.Imaging.BitmapSource> do tworzenia nowego <xref:System.Windows.Media.Imaging.BitmapSource> obiektu.</span><span class="sxs-lookup"><span data-stu-id="560e6-103">This example demonstrates how to use the <xref:System.Windows.Media.Imaging.BitmapSource.Create%2A> method of <xref:System.Windows.Media.Imaging.BitmapSource> to create a new <xref:System.Windows.Media.Imaging.BitmapSource> object.</span></span>  

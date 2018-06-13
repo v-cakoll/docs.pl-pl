@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453912"
 ---
 # <a name="icorprofilerinfogetobjectsize-method"></a><span data-ttu-id="775d8-102">ICorProfilerInfo::GetObjectSize — Metoda</span><span class="sxs-lookup"><span data-stu-id="775d8-102">ICorProfilerInfo::GetObjectSize Method</span></span>
 <span data-ttu-id="775d8-103">Pobiera rozmiar określonego obiektu.</span><span class="sxs-lookup"><span data-stu-id="775d8-103">Gets the size of a specified object.</span></span>  

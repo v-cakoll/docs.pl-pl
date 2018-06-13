@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33479372"
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationmexchannelbuilderloaded"></a><span data-ttu-id="6a622-102">System.ServiceModel.ComIntegration.ComIntegrationMexChannelBuilderLoaded</span><span class="sxs-lookup"><span data-stu-id="6a622-102">System.ServiceModel.ComIntegration.ComIntegrationMexChannelBuilderLoaded</span></span>
 <span data-ttu-id="6a622-103">System.ServiceModel.ComIntegration.ComIntegrationMexChannelBuilderLoaded</span><span class="sxs-lookup"><span data-stu-id="6a622-103">System.ServiceModel.ComIntegration.ComIntegrationMexChannelBuilderLoaded</span></span>  

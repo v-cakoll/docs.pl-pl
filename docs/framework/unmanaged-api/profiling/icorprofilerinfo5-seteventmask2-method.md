@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33456000"
 ---
 # <a name="icorprofilerinfo5seteventmask2-method"></a><span data-ttu-id="2a4f0-102">Metoda ICorProfilerInfo5::SetEventMask2</span><span class="sxs-lookup"><span data-stu-id="2a4f0-102">ICorProfilerInfo5::SetEventMask2 Method</span></span>
 <span data-ttu-id="2a4f0-103">[Obsługiwane w programie .NET Framework 4.5.2 i nowszych wersjach]</span><span class="sxs-lookup"><span data-stu-id="2a4f0-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  

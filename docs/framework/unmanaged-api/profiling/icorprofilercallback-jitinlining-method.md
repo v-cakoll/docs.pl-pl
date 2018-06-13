@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453147"
 ---
 # <a name="icorprofilercallbackjitinlining-method"></a><span data-ttu-id="de4c8-102">ICorProfilerCallback::JITInlining — Metoda</span><span class="sxs-lookup"><span data-stu-id="de4c8-102">ICorProfilerCallback::JITInlining Method</span></span>
 <span data-ttu-id="de4c8-103">Powiadamia profilera kompilatora just-in-time (JIT) o zbliżającym się Wstawianie funkcji z inną funkcję.</span><span class="sxs-lookup"><span data-stu-id="de4c8-103">Notifies the profiler that the just-in-time (JIT) compiler is about to insert a function in line with another function.</span></span>  

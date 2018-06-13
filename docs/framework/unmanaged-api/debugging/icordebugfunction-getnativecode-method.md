@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414574"
 ---
 # <a name="icordebugfunctiongetnativecode-method"></a><span data-ttu-id="42226-102">ICorDebugFunction::GetNativeCode — Metoda</span><span class="sxs-lookup"><span data-stu-id="42226-102">ICorDebugFunction::GetNativeCode Method</span></span>
 <span data-ttu-id="42226-103">Pobiera kodu natywnego dla funkcji, która jest reprezentowana przez to wystąpienie ICorDebugFunction.</span><span class="sxs-lookup"><span data-stu-id="42226-103">Gets the native code for the function that is represented by this ICorDebugFunction instance.</span></span>  

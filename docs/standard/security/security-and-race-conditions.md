@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582138"
 ---
 # <a name="security-and-race-conditions"></a><span data-ttu-id="09219-102">Zabezpieczenia i sytuacja wyścigu</span><span class="sxs-lookup"><span data-stu-id="09219-102">Security and Race Conditions</span></span>
 <span data-ttu-id="09219-103">Inny obszar dotyczą jest potencjalnych luk w zabezpieczeniach wykorzystana przez wyścigu.</span><span class="sxs-lookup"><span data-stu-id="09219-103">Another area of concern is the potential for security holes exploited by race conditions.</span></span> <span data-ttu-id="09219-104">Istnieje kilka sposobów, w których taka sytuacja może wystąpić.</span><span class="sxs-lookup"><span data-stu-id="09219-104">There are several ways in which this might happen.</span></span> <span data-ttu-id="09219-105">Tematy podrzędne, które należy wykonać opisano niektóre z najważniejszych problemów, które należy unikać dewelopera.</span><span class="sxs-lookup"><span data-stu-id="09219-105">The subtopics that follow outline some of the major pitfalls that the developer must avoid.</span></span>  

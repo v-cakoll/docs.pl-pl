@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577106"
 ---
 # <a name="property-design"></a><span data-ttu-id="6a9b0-102">Właściwości projektu</span><span class="sxs-lookup"><span data-stu-id="6a9b0-102">Property Design</span></span>
 <span data-ttu-id="6a9b0-103">Właściwości są technicznie bardzo podobna do metody, są one zupełnie różne pod względem ich scenariusze użycia.</span><span class="sxs-lookup"><span data-stu-id="6a9b0-103">Although properties are technically very similar to methods, they are quite different in terms of their usage scenarios.</span></span> <span data-ttu-id="6a9b0-104">Powinny one widoczne jako inteligentny pola.</span><span class="sxs-lookup"><span data-stu-id="6a9b0-104">They should be seen as smart fields.</span></span> <span data-ttu-id="6a9b0-105">Mają one składnia wywoływania pól i elastyczności metody.</span><span class="sxs-lookup"><span data-stu-id="6a9b0-105">They have the calling syntax of fields, and the flexibility of methods.</span></span>  

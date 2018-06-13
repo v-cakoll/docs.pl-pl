@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33479780"
 ---
 # <a name="systemservicemodelchannelspeernodeaddresschanged"></a><span data-ttu-id="69621-102">System.ServiceModel.Channels.PeerNodeAddressChanged</span><span class="sxs-lookup"><span data-stu-id="69621-102">System.ServiceModel.Channels.PeerNodeAddressChanged</span></span>
 <span data-ttu-id="69621-103">Co najmniej jeden adres węzeł równorzędny został zmieniony.</span><span class="sxs-lookup"><span data-stu-id="69621-103">One or more of the PeerNode's addresses has changed.</span></span>  

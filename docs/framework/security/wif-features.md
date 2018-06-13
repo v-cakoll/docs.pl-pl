@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398524"
 ---
 # <a name="wif-features"></a><span data-ttu-id="ae47f-102">Funkcje wersji WIF</span><span class="sxs-lookup"><span data-stu-id="ae47f-102">WIF Features</span></span>
 -   [<span data-ttu-id="ae47f-103">Narzędzie tożsamości i dostępu dla programu Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="ae47f-103">Identity and Access Tool for Visual Studio 2012</span></span>](../../../docs/framework/security/identity-and-access-tool-for-vs.md)  

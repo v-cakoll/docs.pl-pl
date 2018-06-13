@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572648"
 ---
 # <a name="when-to-use-generic-collections"></a><span data-ttu-id="ec001-102">Kiedy należy używać kolekcji ogólnych</span><span class="sxs-lookup"><span data-stu-id="ec001-102">When to Use Generic Collections</span></span>
 <span data-ttu-id="ec001-103">Kolekcje ogólne ogólnie zaleca się użycie, ponieważ uzyskanie natychmiastowe korzyści wynikające z zabezpieczeń bez konieczności pochodzić od typu podstawowego kolekcji i implementować członków określonego typu.</span><span class="sxs-lookup"><span data-stu-id="ec001-103">Using generic collections is generally recommended, because you gain the immediate benefit of type safety without having to derive from a base collection type and implement type-specific members.</span></span> <span data-ttu-id="ec001-104">Typy kolekcji ogólnych ogólnie lepiej niż odpowiednie typy kolekcji nierodzajowe (i lepszą wydajność niż typy który pochodne typy nierodzajowe kolekcji podstawowej) gdy elementy kolekcji są typy wartości, ponieważ z ogólnymi nie trzeba elementy w polu.</span><span class="sxs-lookup"><span data-stu-id="ec001-104">Generic collection types also generally perform better than the corresponding nongeneric collection types (and better than types that are derived from nongeneric base collection types) when the collection elements are value types, because with generics there is no need to box the elements.</span></span>  

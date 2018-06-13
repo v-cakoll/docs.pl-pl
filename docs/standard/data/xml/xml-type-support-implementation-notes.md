@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571413"
 ---
 # <a name="xml-type-support-implementation-notes"></a><span data-ttu-id="8164a-102">XML uwagi dotyczące implementacji pomocy technicznej dla typu</span><span class="sxs-lookup"><span data-stu-id="8164a-102">XML Type Support Implementation Notes</span></span>
 <span data-ttu-id="8164a-103">W tym temacie opisano niektóre szczegóły implementacji, które mają być znane.</span><span class="sxs-lookup"><span data-stu-id="8164a-103">This topic describes some implementation details that you want to be aware of.</span></span>  

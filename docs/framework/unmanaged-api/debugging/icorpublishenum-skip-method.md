@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424261"
 ---
 # <a name="icorpublishenumskip-method"></a><span data-ttu-id="a532a-102">ICorPublishEnum::Skip — Metoda</span><span class="sxs-lookup"><span data-stu-id="a532a-102">ICorPublishEnum::Skip Method</span></span>
 <span data-ttu-id="a532a-103">Przesuwa kursor do przodu w wyliczeniu określoną liczbę elementów.</span><span class="sxs-lookup"><span data-stu-id="a532a-103">Moves the cursor forward in the enumeration by the specified number of items.</span></span>  

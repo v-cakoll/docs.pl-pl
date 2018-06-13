@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458441"
 ---
 # <a name="icorprofilerinfo2getgenerationbounds-method"></a><span data-ttu-id="1b1ff-102">ICorProfilerInfo2::GetGenerationBounds — Metoda</span><span class="sxs-lookup"><span data-stu-id="1b1ff-102">ICorProfilerInfo2::GetGenerationBounds Method</span></span>
 <span data-ttu-id="1b1ff-103">Pobiera regiony pamięci, które są segmentów sterty, wchodzące w skład różnych generacji wyrzucania elementów w kolekcji.</span><span class="sxs-lookup"><span data-stu-id="1b1ff-103">Gets the memory regions, which are segments of the heap, that make up the various garbage collection generations.</span></span>  

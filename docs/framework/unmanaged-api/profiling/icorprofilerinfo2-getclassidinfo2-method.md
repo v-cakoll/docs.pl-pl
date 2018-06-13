@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458526"
 ---
 # <a name="icorprofilerinfo2getclassidinfo2-method"></a><span data-ttu-id="6d931-102">ICorProfilerInfo2::GetClassIDInfo2 — Metoda</span><span class="sxs-lookup"><span data-stu-id="6d931-102">ICorProfilerInfo2::GetClassIDInfo2 Method</span></span>
 <span data-ttu-id="6d931-103">Pobiera moduł nadrzędny i metadanych token dla Otwórz ogólną definicję określonej klasy `ClassID` jego klasy nadrzędnej i `ClassID` dla każdego typu argumentu, jeśli jest obecny, klasy.</span><span class="sxs-lookup"><span data-stu-id="6d931-103">Gets the parent module and metadata token for the open generic definition of the specified class, the `ClassID` of its parent class, and the `ClassID` for each type argument, if present, of the class.</span></span>  

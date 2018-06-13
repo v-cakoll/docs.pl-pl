@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerInfo3::GetModuleInfo2 — Metoda"
-ms.custom: 
+title: ICorProfilerInfo3::GetModuleInfo2 — Metoda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo3.GetModuleInfo2
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: f1f6b8f3-dcfc-49e8-be76-ea50ea90d5a7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 325db939c692a5dc7740e6cf813644ebffe9fc12
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d461f5dc85c7107e36fc1492ac88f37d42ba9f24
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459469"
 ---
-# <a name="icorprofilerinfo3getmoduleinfo2-method"></a><span data-ttu-id="c2edb-102">ICorProfilerInfo3::GetModuleInfo2 — Metoda</span><span class="sxs-lookup"><span data-stu-id="c2edb-102">ICorProfilerInfo3::GetModuleInfo2 Method</span></span>
-<span data-ttu-id="c2edb-103">Podany identyfikator modułu zwraca nazwę modułu, identyfikator elementu nadrzędnego modułu zestawu i maski, który opisuje właściwości modułu.</span><span class="sxs-lookup"><span data-stu-id="c2edb-103">Given a module ID, returns the file name of the module, the ID of the module's parent assembly, and a bitmask that describes the properties of the module.</span></span>  
+# <a name="icorprofilerinfo3getmoduleinfo2-method"></a><span data-ttu-id="700f6-102">ICorProfilerInfo3::GetModuleInfo2 — Metoda</span><span class="sxs-lookup"><span data-stu-id="700f6-102">ICorProfilerInfo3::GetModuleInfo2 Method</span></span>
+<span data-ttu-id="700f6-103">Podany identyfikator modułu zwraca nazwę modułu, identyfikator elementu nadrzędnego modułu zestawu i maski, który opisuje właściwości modułu.</span><span class="sxs-lookup"><span data-stu-id="700f6-103">Given a module ID, returns the file name of the module, the ID of the module's parent assembly, and a bitmask that describes the properties of the module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c2edb-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="c2edb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="700f6-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="700f6-104">Syntax</span></span>  
   
 ```  
 HRESULT GetModuleInfo2(  
@@ -52,47 +41,47 @@ HRESULT GetModuleInfo2(
     [out] DWORD                 *pdwModuleFlags);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c2edb-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="c2edb-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="700f6-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="700f6-105">Parameters</span></span>  
  `moduleId`  
- <span data-ttu-id="c2edb-106">[in] Identyfikator modułu, dla których zostaną pobrane informacje.</span><span class="sxs-lookup"><span data-stu-id="c2edb-106">[in] The ID of the module for which information will be retrieved.</span></span>  
+ <span data-ttu-id="700f6-106">[in] Identyfikator modułu, dla których zostaną pobrane informacje.</span><span class="sxs-lookup"><span data-stu-id="700f6-106">[in] The ID of the module for which information will be retrieved.</span></span>  
   
  `ppBaseLoadAddress`  
- <span data-ttu-id="c2edb-107">[out] Adres podstawowy, w którym ładowany jest moduł.</span><span class="sxs-lookup"><span data-stu-id="c2edb-107">[out] The base address at which the module is loaded.</span></span>  
+ <span data-ttu-id="700f6-107">[out] Adres podstawowy, w którym ładowany jest moduł.</span><span class="sxs-lookup"><span data-stu-id="700f6-107">[out] The base address at which the module is loaded.</span></span>  
   
  `cchName`  
- <span data-ttu-id="c2edb-108">[in] Długość w znakach, z `szName` buforze.</span><span class="sxs-lookup"><span data-stu-id="c2edb-108">[in] The length, in characters, of the `szName` return buffer.</span></span>  
+ <span data-ttu-id="700f6-108">[in] Długość w znakach, z `szName` buforze.</span><span class="sxs-lookup"><span data-stu-id="700f6-108">[in] The length, in characters, of the `szName` return buffer.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="c2edb-109">[out] Wskaźnik do całkowita liczba znaków nazwy pliku modułu, która jest zwracana.</span><span class="sxs-lookup"><span data-stu-id="c2edb-109">[out] A pointer to the total character length of the module's file name that is returned.</span></span>  
+ <span data-ttu-id="700f6-109">[out] Wskaźnik do całkowita liczba znaków nazwy pliku modułu, która jest zwracana.</span><span class="sxs-lookup"><span data-stu-id="700f6-109">[out] A pointer to the total character length of the module's file name that is returned.</span></span>  
   
  `szName`  
- <span data-ttu-id="c2edb-110">[out] Bufor dostarczane przez obiekt wywołujący znaków dwubajtowych.</span><span class="sxs-lookup"><span data-stu-id="c2edb-110">[out] A caller-provided wide character buffer.</span></span> <span data-ttu-id="c2edb-111">Gdy metoda zwróci wartość, ten bufor zawiera nazwę pliku modułu.</span><span class="sxs-lookup"><span data-stu-id="c2edb-111">When the method returns, this buffer contains the file name of the module.</span></span>  
+ <span data-ttu-id="700f6-110">[out] Bufor dostarczane przez obiekt wywołujący znaków dwubajtowych.</span><span class="sxs-lookup"><span data-stu-id="700f6-110">[out] A caller-provided wide character buffer.</span></span> <span data-ttu-id="700f6-111">Gdy metoda zwróci wartość, ten bufor zawiera nazwę pliku modułu.</span><span class="sxs-lookup"><span data-stu-id="700f6-111">When the method returns, this buffer contains the file name of the module.</span></span>  
   
  `pAssemblyId`  
- <span data-ttu-id="c2edb-112">[out] Wskaźnik do Identyfikatora zestawu nadrzędnego modułu.</span><span class="sxs-lookup"><span data-stu-id="c2edb-112">[out] A pointer to the ID of the module's parent assembly.</span></span>  
+ <span data-ttu-id="700f6-112">[out] Wskaźnik do Identyfikatora zestawu nadrzędnego modułu.</span><span class="sxs-lookup"><span data-stu-id="700f6-112">[out] A pointer to the ID of the module's parent assembly.</span></span>  
   
  `pdwModuleFlags`  
- <span data-ttu-id="c2edb-113">[out] Maska bitowa wartości z [cor_prf_module_flags —](../../../../docs/framework/unmanaged-api/profiling/cor-prf-module-flags-enumeration.md) wyliczenia, która określa właściwości modułu.</span><span class="sxs-lookup"><span data-stu-id="c2edb-113">[out] A bitmask of values from the [COR_PRF_MODULE_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-module-flags-enumeration.md) enumeration that specify the properties of the module.</span></span>  
+ <span data-ttu-id="700f6-113">[out] Maska bitowa wartości z [cor_prf_module_flags —](../../../../docs/framework/unmanaged-api/profiling/cor-prf-module-flags-enumeration.md) wyliczenia, która określa właściwości modułu.</span><span class="sxs-lookup"><span data-stu-id="700f6-113">[out] A bitmask of values from the [COR_PRF_MODULE_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-module-flags-enumeration.md) enumeration that specify the properties of the module.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c2edb-114">Uwagi</span><span class="sxs-lookup"><span data-stu-id="c2edb-114">Remarks</span></span>  
- <span data-ttu-id="c2edb-115">Dynamiczne modułów `szName` parametru jest nazwa metadanych modułu, a adres podstawowy jest 0 (zero).</span><span class="sxs-lookup"><span data-stu-id="c2edb-115">For dynamic modules, the `szName` parameter is the metadata name of the module, and the base address is 0 (zero).</span></span> <span data-ttu-id="c2edb-116">Nazwa metadanych jest wartość kolumny z nazwami z tabeli modułu w metadanych.</span><span class="sxs-lookup"><span data-stu-id="c2edb-116">The metadata name is the value in the Name column from the Module table inside metadata.</span></span> <span data-ttu-id="c2edb-117">To jest również udostępniany jako <xref:System.Reflection.Module.ScopeName%2A?displayProperty=nameWithType> właściwości do kodu zarządzanego i jako `szName` parametr [IMetaDataImport::GetScopeProps](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getscopeprops-method.md) metodę metadanych niezarządzanego kodu klienta.</span><span class="sxs-lookup"><span data-stu-id="c2edb-117">This is also exposed as the <xref:System.Reflection.Module.ScopeName%2A?displayProperty=nameWithType> property to managed code, and as the `szName` parameter of the [IMetaDataImport::GetScopeProps](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getscopeprops-method.md) method to unmanaged metadata client code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="700f6-114">Uwagi</span><span class="sxs-lookup"><span data-stu-id="700f6-114">Remarks</span></span>  
+ <span data-ttu-id="700f6-115">Dynamiczne modułów `szName` parametru jest nazwa metadanych modułu, a adres podstawowy jest 0 (zero).</span><span class="sxs-lookup"><span data-stu-id="700f6-115">For dynamic modules, the `szName` parameter is the metadata name of the module, and the base address is 0 (zero).</span></span> <span data-ttu-id="700f6-116">Nazwa metadanych jest wartość kolumny z nazwami z tabeli modułu w metadanych.</span><span class="sxs-lookup"><span data-stu-id="700f6-116">The metadata name is the value in the Name column from the Module table inside metadata.</span></span> <span data-ttu-id="700f6-117">To jest również udostępniany jako <xref:System.Reflection.Module.ScopeName%2A?displayProperty=nameWithType> właściwości do kodu zarządzanego i jako `szName` parametr [IMetaDataImport::GetScopeProps](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getscopeprops-method.md) metodę metadanych niezarządzanego kodu klienta.</span><span class="sxs-lookup"><span data-stu-id="700f6-117">This is also exposed as the <xref:System.Reflection.Module.ScopeName%2A?displayProperty=nameWithType> property to managed code, and as the `szName` parameter of the [IMetaDataImport::GetScopeProps](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getscopeprops-method.md) method to unmanaged metadata client code.</span></span>  
   
- <span data-ttu-id="c2edb-118">Mimo że `GetModuleInfo2` może zostać wywołana metoda, jak modułu o identyfikatorze istnieje, identyfikator zestawu nadrzędnego nie będą dostępne do momentu otrzymania przez profiler [ICorProfilerCallback::ModuleAttachedToAssembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) wywołania zwrotnego.</span><span class="sxs-lookup"><span data-stu-id="c2edb-118">Although the `GetModuleInfo2` method may be called as soon as the module's ID exists, the ID of the parent assembly will not be available until the profiler receives the [ICorProfilerCallback::ModuleAttachedToAssembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) callback.</span></span>  
+ <span data-ttu-id="700f6-118">Mimo że `GetModuleInfo2` może zostać wywołana metoda, jak modułu o identyfikatorze istnieje, identyfikator zestawu nadrzędnego nie będą dostępne do momentu otrzymania przez profiler [ICorProfilerCallback::ModuleAttachedToAssembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) wywołania zwrotnego.</span><span class="sxs-lookup"><span data-stu-id="700f6-118">Although the `GetModuleInfo2` method may be called as soon as the module's ID exists, the ID of the parent assembly will not be available until the profiler receives the [ICorProfilerCallback::ModuleAttachedToAssembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) callback.</span></span>  
   
- <span data-ttu-id="c2edb-119">Gdy `GetModuleInfo2` zwróci wartość, należy sprawdzić, czy `szName` bufor był wystarczająco duży, aby zawierała Pełna nazwa pliku modułu.</span><span class="sxs-lookup"><span data-stu-id="c2edb-119">When `GetModuleInfo2` returns, you must verify that the `szName` buffer was large enough to contain the full file name of the module.</span></span> <span data-ttu-id="c2edb-120">W tym celu należy porównać wartości który `pcchName` wskazuje wartość `cchName` parametru.</span><span class="sxs-lookup"><span data-stu-id="c2edb-120">To do this, compare the value that `pcchName` points to with the value of the `cchName` parameter.</span></span> <span data-ttu-id="c2edb-121">Jeśli `pcchName` wskazuje wartość, która jest większa niż `cchName`, Przydziel większy `szName` buforu, zaktualizuj `cchName` z nowej, większy rozmiar i wywołanie `GetModuleInfo2` ponownie.</span><span class="sxs-lookup"><span data-stu-id="c2edb-121">If `pcchName` points to a value that is larger than `cchName`, allocate a larger `szName` buffer, update `cchName` with the new, larger size, and call `GetModuleInfo2` again.</span></span>  
+ <span data-ttu-id="700f6-119">Gdy `GetModuleInfo2` zwróci wartość, należy sprawdzić, czy `szName` bufor był wystarczająco duży, aby zawierała Pełna nazwa pliku modułu.</span><span class="sxs-lookup"><span data-stu-id="700f6-119">When `GetModuleInfo2` returns, you must verify that the `szName` buffer was large enough to contain the full file name of the module.</span></span> <span data-ttu-id="700f6-120">W tym celu należy porównać wartości który `pcchName` wskazuje wartość `cchName` parametru.</span><span class="sxs-lookup"><span data-stu-id="700f6-120">To do this, compare the value that `pcchName` points to with the value of the `cchName` parameter.</span></span> <span data-ttu-id="700f6-121">Jeśli `pcchName` wskazuje wartość, która jest większa niż `cchName`, Przydziel większy `szName` buforu, zaktualizuj `cchName` z nowej, większy rozmiar i wywołanie `GetModuleInfo2` ponownie.</span><span class="sxs-lookup"><span data-stu-id="700f6-121">If `pcchName` points to a value that is larger than `cchName`, allocate a larger `szName` buffer, update `cchName` with the new, larger size, and call `GetModuleInfo2` again.</span></span>  
   
- <span data-ttu-id="c2edb-122">Alternatywnie można wywołać `GetModuleInfo2` o zerowej długości `szName` buforu w celu uzyskania rozmiar buforu poprawne.</span><span class="sxs-lookup"><span data-stu-id="c2edb-122">Alternatively, you can first call `GetModuleInfo2` with a zero-length `szName` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="c2edb-123">Rozmiar buforu można następnie ustawić wartość zwracana w `pcchName` i Wywołaj `GetModuleInfo2` ponownie.</span><span class="sxs-lookup"><span data-stu-id="c2edb-123">You can then set the buffer size to the value returned in `pcchName` and call `GetModuleInfo2` again.</span></span>  
+ <span data-ttu-id="700f6-122">Alternatywnie można wywołać `GetModuleInfo2` o zerowej długości `szName` buforu w celu uzyskania rozmiar buforu poprawne.</span><span class="sxs-lookup"><span data-stu-id="700f6-122">Alternatively, you can first call `GetModuleInfo2` with a zero-length `szName` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="700f6-123">Rozmiar buforu można następnie ustawić wartość zwracana w `pcchName` i Wywołaj `GetModuleInfo2` ponownie.</span><span class="sxs-lookup"><span data-stu-id="700f6-123">You can then set the buffer size to the value returned in `pcchName` and call `GetModuleInfo2` again.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c2edb-124">Wymagania</span><span class="sxs-lookup"><span data-stu-id="c2edb-124">Requirements</span></span>  
- <span data-ttu-id="c2edb-125">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c2edb-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="700f6-124">Wymagania</span><span class="sxs-lookup"><span data-stu-id="700f6-124">Requirements</span></span>  
+ <span data-ttu-id="700f6-125">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="700f6-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c2edb-126">**Nagłówek:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="c2edb-126">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="700f6-126">**Nagłówek:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="700f6-126">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="c2edb-127">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c2edb-127">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="700f6-127">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="700f6-127">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c2edb-128">**Wersje programu .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c2edb-128">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="700f6-128">**Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="700f6-128">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c2edb-129">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="c2edb-129">See Also</span></span>  
- [<span data-ttu-id="c2edb-130">ICorProfilerInfo, interfejs</span><span class="sxs-lookup"><span data-stu-id="c2edb-130">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [<span data-ttu-id="c2edb-131">Interfejsy profilowania</span><span class="sxs-lookup"><span data-stu-id="c2edb-131">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [<span data-ttu-id="c2edb-132">Profilowanie</span><span class="sxs-lookup"><span data-stu-id="c2edb-132">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a><span data-ttu-id="700f6-129">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="700f6-129">See Also</span></span>  
+ [<span data-ttu-id="700f6-130">ICorProfilerInfo, interfejs</span><span class="sxs-lookup"><span data-stu-id="700f6-130">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
+ [<span data-ttu-id="700f6-131">Interfejsy profilowania</span><span class="sxs-lookup"><span data-stu-id="700f6-131">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
+ [<span data-ttu-id="700f6-132">Profilowanie</span><span class="sxs-lookup"><span data-stu-id="700f6-132">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

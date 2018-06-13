@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454596"
 ---
 # <a name="icorprofilerinfo2getappdomainstaticaddress-method"></a><span data-ttu-id="a3fec-102">ICorProfilerInfo2::GetAppDomainStaticAddress — Metoda</span><span class="sxs-lookup"><span data-stu-id="a3fec-102">ICorProfilerInfo2::GetAppDomainStaticAddress Method</span></span>
 <span data-ttu-id="a3fec-103">Pobiera adres pola statyczne domeny określonej aplikacji, która znajduje się w zakresie domeny określonej aplikacji.</span><span class="sxs-lookup"><span data-stu-id="a3fec-103">Gets the address of the specified application domain-static field that is in the scope of the specified application domain.</span></span>  

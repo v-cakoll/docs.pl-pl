@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458493"
 ---
 # <a name="endmethodenumeration-function"></a><span data-ttu-id="6022e-103">Funkcja EndMethodEnumeration</span><span class="sxs-lookup"><span data-stu-id="6022e-103">EndMethodEnumeration function</span></span>
 <span data-ttu-id="6022e-104">Kończy sekwencji wyliczenie wprowadzenie wywołanie [funkcja BeginMethodEnumeration](beginmethodenumeration.md).</span><span class="sxs-lookup"><span data-stu-id="6022e-104">Terminates an enumeration sequence started with a call to the [BeginMethodEnumeration function](beginmethodenumeration.md).</span></span>  

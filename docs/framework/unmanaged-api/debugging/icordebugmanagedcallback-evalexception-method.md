@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415519"
 ---
 # <a name="icordebugmanagedcallbackevalexception-method"></a><span data-ttu-id="cbd45-102">ICorDebugManagedCallback::EvalException — Metoda</span><span class="sxs-lookup"><span data-stu-id="cbd45-102">ICorDebugManagedCallback::EvalException Method</span></span>
 <span data-ttu-id="cbd45-103">Powiadamia debugera, że ocenę został zakończony z powodu nieobsługiwanego wyjątku.</span><span class="sxs-lookup"><span data-stu-id="cbd45-103">Notifies the debugger that an evaluation has terminated with an unhandled exception.</span></span>  

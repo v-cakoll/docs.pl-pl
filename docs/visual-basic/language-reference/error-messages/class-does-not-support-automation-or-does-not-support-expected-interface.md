@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585678"
 ---
 # <a name="class-does-not-support-automation-or-does-not-support-expected-interface"></a>Klasa nie obsługuje automatyzacji lub oczekiwanego interfejsu
 Klasa określona w `GetObject` lub `CreateObject` wywołanie funkcji nie jest uwidaczniana interfejs programowania lub zmienić projekt z dll do .exe, albo na odwrót.  

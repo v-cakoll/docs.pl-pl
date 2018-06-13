@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587882"
 ---
 # <a name="39line39-statements-are-no-longer-supported-visual-basic-compiler-error"></a>&#39;Wiersz&#39; instrukcji nie są już obsługiwane (błąd kompilatora Visual Basic)
 Instrukcje wiersza nie są już obsługiwane. Funkcje We/Wy plików są dostępne jako `Microsoft.VisualBasic.FileSystem.LineInput` i funkcje graficzne są dostępne jako `System.Drawing.Graphics.DrawLine`.  

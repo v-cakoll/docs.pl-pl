@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586757"
 ---
 # <a name="processing-drives-directories-and-files-visual-basic"></a>Przetwarzanie dysków, katalogów i plików (Visual Basic)
 Visual Basic umożliwia przetwarzanie dysków, folderów i plików z `My.Computer.FileSystem` obiektu, który zapewnia lepszą wydajność i łatwiej używać od metod tradycyjnych, takich jak `FileOpen` i `Write` funkcje (chociaż są one nadal dostępna). W poniższych sekcjach omówiono te metody szczegółowo.  

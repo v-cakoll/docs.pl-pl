@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593252"
 ---
 # <a name="method-does-not-have-a-signature-compatible-with-the-delegate"></a>Metoda nie ma podpisu zgodnego z obiektem delegowanym
 Brak występuje niezgodność między sygnatury metody i delegata, którego chcesz użyć. `Delegate` Instrukcji definiuje typy parametrów i zwracanych typów klasa delegata. Procedura, którego pasujące zgodne typy parametrów i zwraca typów może zostać użyty do utworzenia wystąpienia tego typu obiektu delegowanego.  

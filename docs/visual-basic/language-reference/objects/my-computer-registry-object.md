@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596073"
 ---
 # <a name="mycomputerregistry-object"></a>My.Computer.Registry — Obiekt
 Udostępnia właściwości i metody w rejestrze.  

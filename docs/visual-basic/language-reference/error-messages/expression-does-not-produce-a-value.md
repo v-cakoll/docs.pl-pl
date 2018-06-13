@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586660"
 ---
 # <a name="expression-does-not-produce-a-value"></a>Wyrażenie nie zwraca wartości
 Próbowano użyć wyrażenia, którego nie tworzy wartości w kontekście zwracające wartość, takie jak wywołania `Sub` w kontekście, w którym `Function` oczekuje.  

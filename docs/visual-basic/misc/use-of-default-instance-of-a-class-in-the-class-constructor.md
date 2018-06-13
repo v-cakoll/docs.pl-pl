@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638381"
 ---
 # <a name="use-of-default-instance-of-a-class-in-the-class-constructor-could-lead-to-infinite-recursive-call"></a>Użyj domyślnej wystąpienia klasy w konstruktorze klasy może spowodować nieskończoną rekursję.
 Domyślne wystąpienie klasy został użyty w konstruktorze klasy. Może to spowodować nieskończoną rekursję, znanej także jako nieskończoną pętlę.  

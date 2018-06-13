@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586454"
 ---
 # <a name="identifier-is-too-long"></a>Identyfikator jest za długi
 Nazwa lub identyfikator każdego elementu programistycznego jest ograniczona do 1023 znaków. Ponadto w pełni kwalifikowana nazwa nie może przekraczać 1023 znaków. Oznacza to, że cały identyfikator ciągu (`<namespace>.<...>.<namespace>.<class>.<element>`) nie może być dłuższa niż 1023 znaków, włączając operatora dostępu do elementu członkowskiego (`.`) znaków.  

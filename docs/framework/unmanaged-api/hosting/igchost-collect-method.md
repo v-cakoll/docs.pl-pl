@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436910"
 ---
 # <a name="igchostcollect-method"></a><span data-ttu-id="4be34-102">IGCHost::Collect — Metoda</span><span class="sxs-lookup"><span data-stu-id="4be34-102">IGCHost::Collect Method</span></span>
 <span data-ttu-id="4be34-103">Wymusza kolekcji wystąpi dla danego generacji, bez względu na stan bieżący wyrzucanie elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="4be34-103">Forces a collection to occur for the given generation, regardless of the state of the current garbage collection.</span></span>  

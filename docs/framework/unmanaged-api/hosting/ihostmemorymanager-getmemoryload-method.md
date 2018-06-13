@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440151"
 ---
 # <a name="ihostmemorymanagergetmemoryload-method"></a><span data-ttu-id="426a1-102">IHostMemoryManager::GetMemoryLoad — Metoda</span><span class="sxs-lookup"><span data-stu-id="426a1-102">IHostMemoryManager::GetMemoryLoad Method</span></span>
 <span data-ttu-id="426a1-103">Pobiera ilość pamięci fizycznej, która jest obecnie w użyciu i w związku z tym niedostępny jako zgłoszonego przez hosta.</span><span class="sxs-lookup"><span data-stu-id="426a1-103">Gets the amount of physical memory that is currently in use, and therefore unavailable, as reported by the host.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562170"
 ---
 # <a name="how-to-scale-an-element"></a><span data-ttu-id="a8edb-102">Jak skalować element</span><span class="sxs-lookup"><span data-stu-id="a8edb-102">How to: Scale an Element</span></span>
 <span data-ttu-id="a8edb-103">Ten przykład przedstawia sposób użycia <xref:System.Windows.Media.ScaleTransform> skalowania elementu.</span><span class="sxs-lookup"><span data-stu-id="a8edb-103">This example shows how to use a <xref:System.Windows.Media.ScaleTransform> to scale an element.</span></span>  

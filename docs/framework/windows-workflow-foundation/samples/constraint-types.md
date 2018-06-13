@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517511"
 ---
 # <a name="constraint-types"></a><span data-ttu-id="6fb8b-102">Ograniczenia typów</span><span class="sxs-lookup"><span data-stu-id="6fb8b-102">Constraint Types</span></span>
 <span data-ttu-id="6fb8b-103">W tym przykładzie pokazano dwa różne sposoby, aby zastosować ograniczenia do przepływu pracy, jest jednym z wewnątrz działania (Kompilacja) i jeden jest z poza (zasady).</span><span class="sxs-lookup"><span data-stu-id="6fb8b-103">This sample shows two different ways to apply constraints to a workflow, one is from inside the activity (build) and one is from outside of it (policy).</span></span> <span data-ttu-id="6fb8b-104">W tym scenariuszu działania (firmy 3rth firm) chce, aby sprawdzić poprawność relacji między dwa argumenty.</span><span class="sxs-lookup"><span data-stu-id="6fb8b-104">In this scenario, an activity author (from a 3rth-party software company) wants to validate the relationship between two arguments.</span></span> <span data-ttu-id="6fb8b-105">W takim przypadku koszt powinna być mniejsza niż lub równa cenie.</span><span class="sxs-lookup"><span data-stu-id="6fb8b-105">In this case, the cost should be smaller than or equal to the price.</span></span> <span data-ttu-id="6fb8b-106">Jest to ograniczenie ogólne weryfikacji kompilacji.</span><span class="sxs-lookup"><span data-stu-id="6fb8b-106">This is a general validation build constraint.</span></span>  

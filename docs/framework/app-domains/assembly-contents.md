@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741831"
 ---
 # <a name="assembly-contents"></a><span data-ttu-id="1d1fc-102">Zawartość zestawu</span><span class="sxs-lookup"><span data-stu-id="1d1fc-102">Assembly Contents</span></span>
 <span data-ttu-id="1d1fc-103">Ogólnie rzecz biorąc statyczny zestaw może składać się z czterech elementów:</span><span class="sxs-lookup"><span data-stu-id="1d1fc-103">In general, a static assembly can consist of four elements:</span></span>  

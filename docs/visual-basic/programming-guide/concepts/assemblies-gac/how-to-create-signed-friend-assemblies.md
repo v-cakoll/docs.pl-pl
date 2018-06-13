@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643669"
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a><span data-ttu-id="3bd92-102">Porady: tworzenie oznaczonych przyjaznych zestawów (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3bd92-102">How to: Create Signed Friend Assemblies (Visual Basic)</span></span>
 <span data-ttu-id="3bd92-103">Ten przykład przedstawia sposób użycia przyjaznych zestawów z zestawów o silnych nazwach.</span><span class="sxs-lookup"><span data-stu-id="3bd92-103">This example shows how to use friend assemblies with assemblies that have strong names.</span></span> <span data-ttu-id="3bd92-104">Oba zestawy muszą silnej nazwy.</span><span class="sxs-lookup"><span data-stu-id="3bd92-104">Both assemblies must be strong named.</span></span> <span data-ttu-id="3bd92-105">Mimo że oba zestawy w tym przykładzie używają tych samych kluczy, można użyć różnych kluczy dla dwóch zestawów.</span><span class="sxs-lookup"><span data-stu-id="3bd92-105">Although both assemblies in this example use the same keys, you could use different keys for two assemblies.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435378"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegeneration-method"></a><span data-ttu-id="4ae89-102">ICLRStrongName::StrongNameSignatureGeneration — Metoda</span><span class="sxs-lookup"><span data-stu-id="4ae89-102">ICLRStrongName::StrongNameSignatureGeneration Method</span></span>
 <span data-ttu-id="4ae89-103">Generuje podpisu silnej nazwy dla określonego zestawu.</span><span class="sxs-lookup"><span data-stu-id="4ae89-103">Generates a strong name signature for the specified assembly.</span></span>  

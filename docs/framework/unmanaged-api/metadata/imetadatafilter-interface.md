@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444984"
 ---
 # <a name="imetadatafilter-interface"></a><span data-ttu-id="7bc91-102">IMetaDataFilter — Interfejs</span><span class="sxs-lookup"><span data-stu-id="7bc91-102">IMetaDataFilter Interface</span></span>
 <span data-ttu-id="7bc91-103">Udostępnia metody dla oznaczenie i Filtrowanie tokenów metadanych, aby uniknąć powtarzania działania, które zostały już wykonane.</span><span class="sxs-lookup"><span data-stu-id="7bc91-103">Provides methods for marking and filtering metadata tokens to avoid repeating actions that have already been taken.</span></span>  

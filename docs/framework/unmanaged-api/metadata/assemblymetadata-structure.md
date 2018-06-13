@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443329"
 ---
 # <a name="assemblymetadata-structure"></a><span data-ttu-id="2251d-102">ASSEMBLYMETADATA — Struktura</span><span class="sxs-lookup"><span data-stu-id="2251d-102">ASSEMBLYMETADATA Structure</span></span>
 <span data-ttu-id="2251d-103">Zawiera informacje o przywoływanego zestawu, w tym jego wersja i poziomu wsparcia dla ustawień regionalnych, procesory i systemy operacyjne.</span><span class="sxs-lookup"><span data-stu-id="2251d-103">Contains information about the referenced assembly, including its version and its level of support for locales, processors, and operating systems.</span></span>  

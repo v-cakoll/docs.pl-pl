@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519753"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a><span data-ttu-id="d1aaa-102">Zadanie 3: Tworzenie przybornika i PropertyGrid okienka</span><span class="sxs-lookup"><span data-stu-id="d1aaa-102">Task 3: Create the Toolbox and PropertyGrid Panes</span></span>
 <span data-ttu-id="d1aaa-103">W ramach tego zadania spowoduje utworzenie **przybornika** i **PropertyGrid** okienka i dodaj je do rehosted [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d1aaa-103">In this task, you will create the **Toolbox** and **PropertyGrid** panes and add them to the rehosted [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519987"
 ---
 # <a name="tracking-profiles"></a><span data-ttu-id="d2e5b-102">Profile śledzenia</span><span class="sxs-lookup"><span data-stu-id="d2e5b-102">Tracking Profiles</span></span>
 <span data-ttu-id="d2e5b-103">Śledzenie profile zawierają zapytania dotyczące śledzenia, które umożliwiają śledzenie uczestnika do subskrybowanie zdarzeń przepływu pracy, które są emitowane po zmianie stanu wystąpienia przepływu pracy w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="d2e5b-103">Tracking profiles contain tracking queries that permit a tracking participant to subscribe to workflow events that are emitted when the state of a workflow instance changes at runtime.</span></span>  

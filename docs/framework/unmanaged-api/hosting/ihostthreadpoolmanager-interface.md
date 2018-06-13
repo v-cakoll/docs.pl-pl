@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441141"
 ---
 # <a name="ihostthreadpoolmanager-interface"></a><span data-ttu-id="64295-102">IHostThreadPoolManager — Interfejs</span><span class="sxs-lookup"><span data-stu-id="64295-102">IHostThreadPoolManager Interface</span></span>
 <span data-ttu-id="64295-103">Udostępnia metody, które umożliwiają środowisko uruchomieniowe języka wspólnego (CLR) w celu skonfigurowania puli wątków i kolejki elementów roboczych w puli wątków.</span><span class="sxs-lookup"><span data-stu-id="64295-103">Provides methods that enable the common language runtime (CLR) to configure the thread pool and to queue work items to the thread pool.</span></span>  

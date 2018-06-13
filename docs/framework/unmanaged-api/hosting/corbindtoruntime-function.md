@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435754"
 ---
 # <a name="corbindtoruntime-function"></a><span data-ttu-id="7e69b-102">CorBindToRuntime — Funkcja</span><span class="sxs-lookup"><span data-stu-id="7e69b-102">CorBindToRuntime Function</span></span>
 <span data-ttu-id="7e69b-103">Umożliwia niezarządzane hosty załadować środowisko uruchomieniowe języka wspólnego (CLR) do procesu.</span><span class="sxs-lookup"><span data-stu-id="7e69b-103">Enables unmanaged hosts to load the common language runtime (CLR) into a process.</span></span>  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441335"
 ---
 # <a name="ihostmemorymanager-interface"></a><span data-ttu-id="4e85d-102">IHostMemoryManager — Interfejs</span><span class="sxs-lookup"><span data-stu-id="4e85d-102">IHostMemoryManager Interface</span></span>
 <span data-ttu-id="4e85d-103">Udostępnia metody, które umożliwia środowisko uruchomieniowe języka wspólnego (CLR) do żądania pamięci wirtualnej za pośrednictwem hosta, zamiast używać standardowych funkcji Win32 w pamięci wirtualnej.</span><span class="sxs-lookup"><span data-stu-id="4e85d-103">Provides methods that allow the common language runtime (CLR) to make virtual memory requests through the host, instead of using the standard Win32 virtual memory functions.</span></span>  

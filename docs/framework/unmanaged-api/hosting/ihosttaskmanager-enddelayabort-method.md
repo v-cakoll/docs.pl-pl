@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444382"
 ---
 # <a name="ihosttaskmanagerenddelayabort-method"></a><span data-ttu-id="87091-102">IHostTaskManager::EndDelayAbort — Metoda</span><span class="sxs-lookup"><span data-stu-id="87091-102">IHostTaskManager::EndDelayAbort Method</span></span>
 <span data-ttu-id="87091-103">Powiadamia hosta, którego kod zarządzany jest zamykanie okres, w którym nie można przerwać bieżące zadanie, po wcześniejszej wywołanie [IHostTaskManager::BeginDelayAbort](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-begindelayabort-method.md).</span><span class="sxs-lookup"><span data-stu-id="87091-103">Notifies the host that managed code is exiting the period in which the current task must not be aborted, following an earlier call to [IHostTaskManager::BeginDelayAbort](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-begindelayabort-method.md).</span></span>  

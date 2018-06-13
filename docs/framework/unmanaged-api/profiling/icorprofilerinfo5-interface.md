@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455331"
 ---
 # <a name="icorprofilerinfo5-interface"></a><span data-ttu-id="3f564-102">Interfejs ICorProfilerInfo5</span><span class="sxs-lookup"><span data-stu-id="3f564-102">ICorProfilerInfo5 Interface</span></span>
 <span data-ttu-id="3f564-103">[Obsługiwane w programie .NET Framework 4.5.2 i nowszych wersjach]</span><span class="sxs-lookup"><span data-stu-id="3f564-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  

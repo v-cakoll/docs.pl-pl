@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455961"
 ---
 # <a name="geterrorinfo-function"></a><span data-ttu-id="193ea-103">GetErrorInfo — funkcja</span><span class="sxs-lookup"><span data-stu-id="193ea-103">GetErrorInfo function</span></span>
 <span data-ttu-id="193ea-104">Pobiera informacje o błędzie z poprzedniego wywołania funkcji.</span><span class="sxs-lookup"><span data-stu-id="193ea-104">Retrieves error information from the previous function call.</span></span>  

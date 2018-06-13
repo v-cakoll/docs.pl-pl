@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516581"
 ---
 # <a name="rangeenumeration-activity"></a><span data-ttu-id="63894-102">Działanie RangeEnumeration</span><span class="sxs-lookup"><span data-stu-id="63894-102">RangeEnumeration Activity</span></span>
 <span data-ttu-id="63894-103">Ten przykład przedstawia sposób tworzenia działań niestandardowych, który przechodzi przez kolekcję liczb. W poniższej tabeli przedstawiono główne pliki uwzględnione w próbce.</span><span class="sxs-lookup"><span data-stu-id="63894-103">This sample demonstrates how to create a custom activity that iterates over a collection of numbers.The following table details the main files included in the sample.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576812"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a><span data-ttu-id="ac1d2-102">XsltArgumentList parametry arkusza stylów i rozszerzenia obiektów</span><span class="sxs-lookup"><span data-stu-id="ac1d2-102">XsltArgumentList for Style Sheet Parameters and Extension Objects</span></span>
 <span data-ttu-id="ac1d2-103"><xref:System.Xml.Xsl.XsltArgumentList> Klasa zawiera Extensible Stylesheet Language parametrów przekształcenia XSLT (), a obiekty rozszerzenia XSLT.</span><span class="sxs-lookup"><span data-stu-id="ac1d2-103">The <xref:System.Xml.Xsl.XsltArgumentList> class contains Extensible Stylesheet Language for Transformations (XSLT) parameters and XSLT extension objects.</span></span> <span data-ttu-id="ac1d2-104">Gdy dane są przekazywane do <xref:System.Xml.Xsl.XslTransform.Transform%2A> metody te parametry i rozszerzenia obiekty mogą być wywoływane z arkuszy stylów.</span><span class="sxs-lookup"><span data-stu-id="ac1d2-104">When passed into the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method, these parameters and extension objects can be invoked from style sheets.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643756"
 ---
 # <a name="converting-data-types-visual-basic"></a><span data-ttu-id="15a72-102">Konwertowanie typów danych (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="15a72-102">Converting Data Types (Visual Basic)</span></span>
 <span data-ttu-id="15a72-103">Metody konwersji Zmień typ wejściowy obiektów.</span><span class="sxs-lookup"><span data-stu-id="15a72-103">Conversion methods change the type of input objects.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443303"
 ---
 # <a name="imetadataassemblyemitsetmanifestresourceprops-method"></a><span data-ttu-id="b3295-102">IMetaDataAssemblyEmit::SetManifestResourceProps — Metoda</span><span class="sxs-lookup"><span data-stu-id="b3295-102">IMetaDataAssemblyEmit::SetManifestResourceProps Method</span></span>
 <span data-ttu-id="b3295-103">Modyfikuje określony `ManifestResource` struktura metadanych.</span><span class="sxs-lookup"><span data-stu-id="b3295-103">Modifies the specified `ManifestResource` metadata structure.</span></span>  

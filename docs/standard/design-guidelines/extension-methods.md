@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574520"
 ---
 # <a name="extension-methods"></a><span data-ttu-id="f4883-102">Metody rozszerzeń</span><span class="sxs-lookup"><span data-stu-id="f4883-102">Extension Methods</span></span>
 <span data-ttu-id="f4883-103">Metody rozszerzenia są funkcją języka, która umożliwia metody statyczne do jej wywołać przy użyciu składni wywołanie metody wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="f4883-103">Extension methods are a language feature that allows static methods to be called using instance method call syntax.</span></span> <span data-ttu-id="f4883-104">Te metody należy wykonać co najmniej jeden parametr, który reprezentuje wystąpienie, którego metoda ma działać na.</span><span class="sxs-lookup"><span data-stu-id="f4883-104">These methods must take at least one parameter, which represents the instance the method is to operate on.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644163"
 ---
 # <a name="common-attributes-visual-basic"></a><span data-ttu-id="0299d-102">Atrybuty wspólne (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0299d-102">Common Attributes (Visual Basic)</span></span>
 <span data-ttu-id="0299d-103">W tym temacie opisano atrybuty, które są najczęściej używane w programach Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="0299d-103">This topic describes the attributes that are most commonly used in Visual Basic programs.</span></span>  

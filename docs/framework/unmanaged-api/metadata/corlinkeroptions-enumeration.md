@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441058"
 ---
 # <a name="corlinkeroptions-enumeration"></a><span data-ttu-id="9fbae-102">CorLinkerOptions — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="9fbae-102">CorLinkerOptions Enumeration</span></span>
 <span data-ttu-id="9fbae-103">Określa flagi, aby wybrać opcje do konsolidatora metadanych.</span><span class="sxs-lookup"><span data-stu-id="9fbae-103">Specifies flags to select options for the metadata linker.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436403"
 ---
 # <a name="iclrgcmanagergetstats-method"></a><span data-ttu-id="3beb3-102">ICLRGCManager::GetStats — Metoda</span><span class="sxs-lookup"><span data-stu-id="3beb3-102">ICLRGCManager::GetStats Method</span></span>
 <span data-ttu-id="3beb3-103">Pobiera zestaw bieżącego Statystyka system czyszczenia pamięci środowisko uruchomieniowe języka wspólnego firmy.</span><span class="sxs-lookup"><span data-stu-id="3beb3-103">Gets a set of current statistics about the common language runtime's garbage collection system.</span></span>  

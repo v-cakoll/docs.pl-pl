@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444494"
 ---
 # <a name="imetadataemitdefinepinvokemap-method"></a><span data-ttu-id="eab67-102">IMetaDataEmit::DefinePinvokeMap — Metoda</span><span class="sxs-lookup"><span data-stu-id="eab67-102">IMetaDataEmit::DefinePinvokeMap Method</span></span>
 <span data-ttu-id="eab67-103">Ustawia funkcje metody odwołuje się określony token podpisu funkcji PInvoke.</span><span class="sxs-lookup"><span data-stu-id="eab67-103">Sets features of the PInvoke signature of the method referenced by the specified token.</span></span>  

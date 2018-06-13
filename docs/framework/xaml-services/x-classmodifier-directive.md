@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564381"
 ---
 # <a name="xclassmodifier-directive"></a><span data-ttu-id="3bf68-102">x:ClassModifier — dyrektywa</span><span class="sxs-lookup"><span data-stu-id="3bf68-102">x:ClassModifier Directive</span></span>
 <span data-ttu-id="3bf68-103">Modyfikuje zachowanie kompilacji XAML podczas `x:Class` jest również udostępniany.</span><span class="sxs-lookup"><span data-stu-id="3bf68-103">Modifies XAML compilation behavior when `x:Class` is also provided.</span></span> <span data-ttu-id="3bf68-104">W szczególności, zamiast tworzyć częściowym `class` mający `Public` (ustawienie domyślne), poziom dostępu dostarczonego `x:Class` jest tworzony z `NotPublic` poziom dostępu.</span><span class="sxs-lookup"><span data-stu-id="3bf68-104">Specifically, instead of creating a partial `class` that has a `Public` access level (the default), the provided `x:Class` is created with a `NotPublic` access level.</span></span> <span data-ttu-id="3bf68-105">Dotyczy to poziom dostępu dla tej klasy w wygenerowanych zestawów.</span><span class="sxs-lookup"><span data-stu-id="3bf68-105">This behavior affects the access level for the class in the generated assemblies.</span></span>  

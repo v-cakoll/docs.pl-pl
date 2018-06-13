@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571985"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a><span data-ttu-id="39ac5-102">Inne konstrukcje w wyrażeniach regularnych</span><span class="sxs-lookup"><span data-stu-id="39ac5-102">Miscellaneous Constructs in Regular Expressions</span></span>
 <span data-ttu-id="39ac5-103">Wyrażeń regularnych programu .NET obejmują trzy różne języka konstrukcje.</span><span class="sxs-lookup"><span data-stu-id="39ac5-103">Regular expressions in .NET include three miscellaneous language constructs.</span></span> <span data-ttu-id="39ac5-104">Co pozwala włączyć lub wyłączyć opcjami pasującego środku wzorzec wyrażenia regularnego.</span><span class="sxs-lookup"><span data-stu-id="39ac5-104">One lets you enable or disable particular matching options in the middle of a regular expression pattern.</span></span> <span data-ttu-id="39ac5-105">Dwóch pozostałych pozwala na uwzględnianie komentarzy w wyrażeniu regularnym.</span><span class="sxs-lookup"><span data-stu-id="39ac5-105">The remaining two let you include comments in a regular expression.</span></span>  

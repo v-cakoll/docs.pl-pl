@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643929"
 ---
 # <a name="iterators-visual-basic"></a><span data-ttu-id="4791a-102">Iteratory (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4791a-102">Iterators (Visual Basic)</span></span>
 <span data-ttu-id="4791a-103">*Iterator* może służyć do kroków opisanych w kolekcji, takie jak listy i stałych.</span><span class="sxs-lookup"><span data-stu-id="4791a-103">An *iterator* can be used to step through collections such as lists and arrays.</span></span>  

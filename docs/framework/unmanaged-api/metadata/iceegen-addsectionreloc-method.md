@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444346"
 ---
 # <a name="iceegenaddsectionreloc-method"></a><span data-ttu-id="03baa-102">ICeeGen::AddSectionReloc — Metoda</span><span class="sxs-lookup"><span data-stu-id="03baa-102">ICeeGen::AddSectionReloc Method</span></span>
 <span data-ttu-id="03baa-103">Dodaje instrukcję .reloc do ścieżki bazowej kodu.</span><span class="sxs-lookup"><span data-stu-id="03baa-103">Adds a .reloc instruction to the code base.</span></span>  

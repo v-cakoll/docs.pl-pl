@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549036"
 ---
 # <a name="troubleshooting-hybrid-applications"></a><span data-ttu-id="057ab-102">Rozwiązywanie problemów aplikacji hybrydowych</span><span class="sxs-lookup"><span data-stu-id="057ab-102">Troubleshooting Hybrid Applications</span></span>
 <a name="introduction"></a> <span data-ttu-id="057ab-103">W tym temacie wymieniono niektóre typowe problemy, które mogą wystąpić, gdy tworzenie hybrydowych aplikacji korzystających z obu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] technologii.</span><span class="sxs-lookup"><span data-stu-id="057ab-103">This topic lists some common problems that can occur when authoring hybrid applications, which use both [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] and [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] technologies.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33433991"
 ---
 # <a name="iclrstrongnamestrongnametokenfromassembly-method"></a><span data-ttu-id="93731-102">ICLRStrongName::StrongNameTokenFromAssembly — Metoda</span><span class="sxs-lookup"><span data-stu-id="93731-102">ICLRStrongName::StrongNameTokenFromAssembly Method</span></span>
 <span data-ttu-id="93731-103">Tworzy token silnej nazwy z określonego pliku zestawu.</span><span class="sxs-lookup"><span data-stu-id="93731-103">Creates a strong name token from the specified assembly file.</span></span>  

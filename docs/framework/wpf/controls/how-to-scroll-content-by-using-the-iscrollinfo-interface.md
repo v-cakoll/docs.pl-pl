@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552886"
 ---
 # <a name="how-to-scroll-content-by-using-the-iscrollinfo-interface"></a><span data-ttu-id="c94c6-102">Jak przewijać zawartość przy użyciu interfejsu IScrollInfo</span><span class="sxs-lookup"><span data-stu-id="c94c6-102">How to: Scroll Content by Using the IScrollInfo Interface</span></span>
 <span data-ttu-id="c94c6-103">W tym przykładzie pokazano, jak przewijanie zawartości przy użyciu <xref:System.Windows.Controls.Primitives.IScrollInfo> interfejsu.</span><span class="sxs-lookup"><span data-stu-id="c94c6-103">This example shows how to scroll content by using the <xref:System.Windows.Controls.Primitives.IScrollInfo> interface.</span></span>  

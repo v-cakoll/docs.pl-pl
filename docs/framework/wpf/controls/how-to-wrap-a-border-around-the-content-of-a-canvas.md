@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551794"
 ---
 # <a name="how-to-wrap-a-border-around-the-content-of-a-canvas"></a><span data-ttu-id="038bb-102">Jak zawinąć obramowanie wokół zawartości kanwy</span><span class="sxs-lookup"><span data-stu-id="038bb-102">How to: Wrap a Border Around the Content of a Canvas</span></span>
 <span data-ttu-id="038bb-103">W tym przykładzie przedstawiono sposób zawijania <xref:System.Windows.Controls.Canvas> element z <xref:System.Windows.Controls.Border>.</span><span class="sxs-lookup"><span data-stu-id="038bb-103">This example shows how to wrap a <xref:System.Windows.Controls.Canvas> element with a <xref:System.Windows.Controls.Border>.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547839"
 ---
 # <a name="optimizing-performance-layout-and-design"></a><span data-ttu-id="10d32-102">Optymalizacja wydajności: układ i projekt</span><span class="sxs-lookup"><span data-stu-id="10d32-102">Optimizing Performance: Layout and Design</span></span>
 <span data-ttu-id="10d32-103">Projekt sieci [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji może wpłynąć na jego wydajność, tworząc niepotrzebnego obciążenia obliczania układ i sprawdzanie poprawności odwołania do obiektów.</span><span class="sxs-lookup"><span data-stu-id="10d32-103">The design of your [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application can impact its performance by creating unnecessary overhead in calculating layout and validating object references.</span></span> <span data-ttu-id="10d32-104">Konstrukcja obiektów, szczególnie w czasie wykonywania mogą wpłynąć na charakterystykę wydajności aplikacji.</span><span class="sxs-lookup"><span data-stu-id="10d32-104">The construction of objects, particularly at run time, can affect the performance characteristics of your application.</span></span>  

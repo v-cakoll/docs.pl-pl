@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550816"
 ---
 # <a name="dockpanel"></a><span data-ttu-id="2eb61-102">DockPanel</span><span class="sxs-lookup"><span data-stu-id="2eb61-102">DockPanel</span></span>
 <span data-ttu-id="2eb61-103"><xref:System.Windows.Controls.DockPanel> Element jest używana do pozycjonowania zawartość elementu podrzędnego wzdłuż krawędzi kontener układu.</span><span class="sxs-lookup"><span data-stu-id="2eb61-103">The <xref:System.Windows.Controls.DockPanel> element is used to position child content along the edge of a layout container.</span></span>  

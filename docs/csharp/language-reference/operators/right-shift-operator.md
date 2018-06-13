@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33285892"
 ---
 # <a name="gtgt-operator-c-reference"></a><span data-ttu-id="998d9-102">&gt;&gt; Operator (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="998d9-102">&gt;&gt; Operator (C# Reference)</span></span>
 <span data-ttu-id="998d9-103">Operator przesunięcia w prawo (`>>`) przesuwa jego pierwszy argument operacji po prawej przez liczbę bitów określony przez jego drugi argument operacji.</span><span class="sxs-lookup"><span data-stu-id="998d9-103">The right-shift operator (`>>`) shifts its first operand right by the number of bits specified by its second operand.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552860"
 ---
 # <a name="tooltip-how-to-topics"></a><span data-ttu-id="d5874-102">ToolTip — Tematy porad</span><span class="sxs-lookup"><span data-stu-id="d5874-102">ToolTip How-to Topics</span></span>
 ## <a name="in-this-section"></a><span data-ttu-id="d5874-103">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="d5874-103">In This Section</span></span>  

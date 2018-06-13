@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547788"
 ---
 # <a name="ienumrawinputdevice"></a><span data-ttu-id="2cabd-102">IEnumRAWINPUTDEVICE</span><span class="sxs-lookup"><span data-stu-id="2cabd-102">IEnumRAWINPUTDEVICE</span></span>
 <span data-ttu-id="2cabd-103">Ten interfejs wylicza raw urządzenia wejściowe i jest używana tylko przez PresentationHost.exe.</span><span class="sxs-lookup"><span data-stu-id="2cabd-103">This interface enumerates the raw input devices, and is only used by PresentationHost.exe.</span></span>  

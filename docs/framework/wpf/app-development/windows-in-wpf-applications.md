@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550780"
 ---
 # <a name="windows-in-wpf-applications"></a><span data-ttu-id="08b33-102">Okna w aplikacjach WPF</span><span class="sxs-lookup"><span data-stu-id="08b33-102">Windows in WPF Applications</span></span>
 <span data-ttu-id="08b33-103">Użytkownicy korzystają z aplikacji za pośrednictwem systemu windows.</span><span class="sxs-lookup"><span data-stu-id="08b33-103">Users interact with applications through windows.</span></span> <span data-ttu-id="08b33-104">Podstawowe celem okna jest hosta i wyświetlenie zawartości.</span><span class="sxs-lookup"><span data-stu-id="08b33-104">The fundamental purpose of a window is to host and display content.</span></span> <span data-ttu-id="08b33-105">Typ zawartości, że hosty okna zależy od typu danych, czy aplikacja działa przez, który może obejmować nośnika, Extensible Application Markup Language (XAML) strony, strony sieci Web, dokumentów, tabele bazy danych i rekordów i informacje o systemie.</span><span class="sxs-lookup"><span data-stu-id="08b33-105">The type of content that a window hosts depends on the type of data that an application operates over, which can include media, Extensible Application Markup Language (XAML) pages, Web pages, documents, database tables and records, and system information.</span></span>  

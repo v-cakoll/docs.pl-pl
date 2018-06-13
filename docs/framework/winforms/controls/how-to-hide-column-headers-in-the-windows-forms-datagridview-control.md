@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532278"
 ---
 # <a name="how-to-hide-column-headers-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="3a3c1-102">Porady: ukrywanie nagłówków kolumn w formancie DataGridView formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="3a3c1-102">How to: Hide Column Headers in the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="3a3c1-103">Czasami można wyświetlić <xref:System.Windows.Forms.DataGridView> bez nagłówków kolumn.</span><span class="sxs-lookup"><span data-stu-id="3a3c1-103">Sometimes you will want to display a <xref:System.Windows.Forms.DataGridView> without column headers.</span></span> <span data-ttu-id="3a3c1-104">W <xref:System.Windows.Forms.DataGridView> kontroli, <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A> wartość właściwości określa, czy nagłówki kolumn są wyświetlane.</span><span class="sxs-lookup"><span data-stu-id="3a3c1-104">In the <xref:System.Windows.Forms.DataGridView> control, the <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A> property value determines whether the column headers are displayed.</span></span>  

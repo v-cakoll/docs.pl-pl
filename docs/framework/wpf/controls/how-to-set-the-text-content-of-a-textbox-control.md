@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551729"
 ---
 # <a name="how-to-set-the-text-content-of-a-textbox-control"></a><span data-ttu-id="7d53c-102">Jak ustawić zawartość tekstu dla formantu TextBox</span><span class="sxs-lookup"><span data-stu-id="7d53c-102">How to: Set the Text Content of a TextBox Control</span></span>
 <span data-ttu-id="7d53c-103">Ten przykład przedstawia sposób użycia <xref:System.Windows.Controls.TextBox.Text%2A> właściwości można ustawić zawartość tekstową początkowej <xref:System.Windows.Controls.TextBox> formantu.</span><span class="sxs-lookup"><span data-stu-id="7d53c-103">This example shows how to use the <xref:System.Windows.Controls.TextBox.Text%2A> property to set the initial text contents of a <xref:System.Windows.Controls.TextBox> control.</span></span>  

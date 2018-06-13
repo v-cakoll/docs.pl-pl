@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524403"
 ---
 # <a name="flowlayoutpanel-control-windows-forms"></a><span data-ttu-id="38250-102">FlowLayoutPanel — Formant (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="38250-102">FlowLayoutPanel Control (Windows Forms)</span></span>
 <span data-ttu-id="38250-103">`FlowLayoutPanel` Kontroli rozmieszcza jego zawartość w kierunku przepływu pozioma lub pionowa.</span><span class="sxs-lookup"><span data-stu-id="38250-103">The `FlowLayoutPanel` control arranges its contents in a horizontal or vertical flow direction.</span></span> <span data-ttu-id="38250-104">Jego zawartość można ich opakować z jednego wiersza do następnego lub jedną kolumnę do następnego.</span><span class="sxs-lookup"><span data-stu-id="38250-104">Its contents can be wrapped from one row to the next, or from one column to the next.</span></span> <span data-ttu-id="38250-105">Alternatywnie jego zawartość może zostać obcięty zamiast opakowana.</span><span class="sxs-lookup"><span data-stu-id="38250-105">Alternately, its contents can be clipped instead of wrapped.</span></span>  

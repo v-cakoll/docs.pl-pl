@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33284306"
 ---
 # <a name="where-clause-c-reference"></a><span data-ttu-id="ab3a4-102">Klauzula where (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="ab3a4-102">where clause (C# Reference)</span></span>
 <span data-ttu-id="ab3a4-103">`where` Klauzuli jest używany w wyrażeniu zapytania, aby określić, które elementy ze źródła danych zostaną zwrócone w wyrażeniu zapytania.</span><span class="sxs-lookup"><span data-stu-id="ab3a4-103">The `where` clause is used in a query expression to specify which elements from the data source will be returned in the query expression.</span></span> <span data-ttu-id="ab3a4-104">Ma to zastosowanie warunek typu Boolean (*predykatu*) do każdego elementu źródłowego (odwołuje się zmienna zakresu) i zwraca te, dla których określony warunek jest spełniony.</span><span class="sxs-lookup"><span data-stu-id="ab3a4-104">It applies a Boolean condition (*predicate*) to each source element (referenced by the range variable) and returns those for which the specified condition is true.</span></span> <span data-ttu-id="ab3a4-105">Wyrażenie pojedynczego zapytania mogą zawierać wiele `where` klauzule i jedną klauzulę może zawierać wiele zakresie predykatu.</span><span class="sxs-lookup"><span data-stu-id="ab3a4-105">A single query expression may contain multiple `where` clauses and a single clause may contain multiple predicate subexpressions.</span></span>  

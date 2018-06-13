@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549493"
 ---
 # <a name="layout"></a><span data-ttu-id="25b6d-102">Układ</span><span class="sxs-lookup"><span data-stu-id="25b6d-102">Layout</span></span>
 <span data-ttu-id="25b6d-103">W tym temacie opisano [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] układu systemu.</span><span class="sxs-lookup"><span data-stu-id="25b6d-103">This topic describes the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] layout system.</span></span> <span data-ttu-id="25b6d-104">Zrozumienie, jak i kiedy układu obliczenia są wykonywane jest niezbędne do tworzenia interfejsów użytkownika w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="25b6d-104">Understanding how and when layout calculations occur is essential for creating user interfaces in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span>  

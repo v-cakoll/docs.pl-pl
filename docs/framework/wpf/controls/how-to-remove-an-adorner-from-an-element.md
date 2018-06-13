@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551846"
 ---
 # <a name="how-to-remove-an-adorner-from-an-element"></a><span data-ttu-id="99651-102">Jak usunąć moduł definiowania układów z elementu</span><span class="sxs-lookup"><span data-stu-id="99651-102">How to: Remove an Adorner from an Element</span></span>
 <span data-ttu-id="99651-103">W tym przykładzie pokazano, jak programowane usuwanie określonego modułu definiowania układu kodu z określonej <xref:System.Windows.UIElement>.</span><span class="sxs-lookup"><span data-stu-id="99651-103">This example shows how to programmatically remove a specific adorner from a specified <xref:System.Windows.UIElement>.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535028"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a><span data-ttu-id="2a964-102">Porady: ustawianie opcji siatki dla wszystkich formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="2a964-102">How to: Set Grid Options for All Windows Forms</span></span>
 <span data-ttu-id="2a964-103">Stają się używane do pracy w środowisku programowania Visual Studio, można ustawić preferencje dotyczące wszystkich formularzy i projektów, którymi współpracujesz w narzędziu Projektant dla formularzy systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="2a964-103">As you become used to working in the Visual Studio development environment, you can set preferences for all the forms and projects you work with in the Windows Forms Designer.</span></span>  

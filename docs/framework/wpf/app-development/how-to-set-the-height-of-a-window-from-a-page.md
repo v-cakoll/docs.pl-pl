@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546058"
 ---
 # <a name="how-to-set-the-height-of-a-window-from-a-page"></a><span data-ttu-id="2a4d0-102">Porady: Ustawianie wysokość okna ze strony</span><span class="sxs-lookup"><span data-stu-id="2a4d0-102">How to: Set the Height of a Window from a Page</span></span>
 <span data-ttu-id="2a4d0-103">W tym przykładzie przedstawiono sposób ustawiania wysokość okna z <xref:System.Windows.Controls.Page>.</span><span class="sxs-lookup"><span data-stu-id="2a4d0-103">This example illustrates how to set the height of the window from a <xref:System.Windows.Controls.Page>.</span></span>  

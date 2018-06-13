@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530741"
 ---
 # <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a><span data-ttu-id="24a51-102">Porady: kontrolowanie punktu wstawiania w formancie TextBox formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="24a51-102">How to: Control the Insertion Point in a Windows Forms TextBox Control</span></span>
 <span data-ttu-id="24a51-103">Gdy program Windows Forms <xref:System.Windows.Forms.TextBox> formant najpierw uzyskuje fokus, wstawiania domyślną w polu tekstowym znajduje się na lewo od istniejącego tekstu.</span><span class="sxs-lookup"><span data-stu-id="24a51-103">When a Windows Forms <xref:System.Windows.Forms.TextBox> control first receives the focus, the default insertion within the text box is to the left of any existing text.</span></span> <span data-ttu-id="24a51-104">Użytkownik może przenieść punkt wstawiania z klawiatury lub myszy.</span><span class="sxs-lookup"><span data-stu-id="24a51-104">The user can move the insertion point with the keyboard or the mouse.</span></span> <span data-ttu-id="24a51-105">Jeśli pole tekstowe utraci i ponownie otrzymuje fokus, punkt wstawiania będzie wszędzie tam, gdzie użytkownika ostatniego umieszczenia go.</span><span class="sxs-lookup"><span data-stu-id="24a51-105">If the text box loses and then regains the focus, the insertion point will be wherever the user last placed it.</span></span>  

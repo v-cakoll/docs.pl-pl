@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549159"
 ---
 # <a name="dialog-boxes-overview"></a><span data-ttu-id="14d0d-102">Przegląd okien dialogowych</span><span class="sxs-lookup"><span data-stu-id="14d0d-102">Dialog Boxes Overview</span></span>
 <span data-ttu-id="14d0d-103">Aplikacje autonomiczne zwykle mają okno główne zarówno powoduje wyświetlenie głównego danych za pośrednictwem której aplikacja działa i udostępnia funkcje do przetwarzania danych za pośrednictwem [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mechanizmów, takich jak paski menu, pasków narzędzi i paski stanu.</span><span class="sxs-lookup"><span data-stu-id="14d0d-103">Standalone applications typically have a main window that both displays the main data over which the application operates and exposes the functionality to process that data through [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mechanisms like menu bars, tool bars, and status bars.</span></span> <span data-ttu-id="14d0d-104">— Prosta aplikacja może również wyświetlić dodatkowe okna, aby wykonać następujące czynności:</span><span class="sxs-lookup"><span data-stu-id="14d0d-104">A non-trivial application may also display additional windows to do the following:</span></span>  

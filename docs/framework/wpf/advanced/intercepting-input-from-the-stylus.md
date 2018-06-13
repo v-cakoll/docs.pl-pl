@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547619"
 ---
 # <a name="intercepting-input-from-the-stylus"></a><span data-ttu-id="7c254-102">Przechwycenie danych z pisaka</span><span class="sxs-lookup"><span data-stu-id="7c254-102">Intercepting Input from the Stylus</span></span>
 <span data-ttu-id="7c254-103"><xref:System.Windows.Input.StylusPlugIns> Architektura udostępnia mechanizm dla implementacji kontrolę niskiego poziomu nad <xref:System.Windows.Input.Stylus> dane wejściowe i tworzenia elektroniczne pismo odręczne <xref:System.Windows.Ink.Stroke> obiektów.</span><span class="sxs-lookup"><span data-stu-id="7c254-103">The <xref:System.Windows.Input.StylusPlugIns> architecture provides a mechanism for implementing low-level control over <xref:System.Windows.Input.Stylus> input and the creation of digital ink <xref:System.Windows.Ink.Stroke> objects.</span></span> <span data-ttu-id="7c254-104"><xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Klasa udostępnia mechanizm do implementowania niestandardowych zachowania i zastosować je w strumieniu danych przesyłanych przez pióro urządzenie pod kątem uzyskania optymalnej wydajności.</span><span class="sxs-lookup"><span data-stu-id="7c254-104">The <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> class provides a mechanism for you to implement custom behavior and apply it to the stream of data coming from the stylus device for the optimal performance.</span></span>  

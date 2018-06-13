@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550101"
 ---
 # <a name="how-to-persist-and-restore-application-scope-properties-across-application-sessions"></a><span data-ttu-id="24f22-102">Jak utrwalać i przywracać właściwości zakresu aplikacji między aplikacjami</span><span class="sxs-lookup"><span data-stu-id="24f22-102">How to: Persist and Restore Application-Scope Properties Across Application Sessions</span></span>
 <span data-ttu-id="24f22-103">W tym przykładzie pokazano, jak można utrwalić właściwości zakresu aplikacji podczas zamykania aplikacji i jak przywrócić właściwości zakresu aplikacji, gdy aplikacja jest następnego uruchomienia.</span><span class="sxs-lookup"><span data-stu-id="24f22-103">This example shows how to persist application-scope properties when an application shuts down, and how to restore application-scope properties when an application is next launch.</span></span>  

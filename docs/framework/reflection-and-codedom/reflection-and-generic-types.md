@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399707"
 ---
 # <a name="reflection-and-generic-types"></a><span data-ttu-id="3c683-102">Odbicie i typy ogólne</span><span class="sxs-lookup"><span data-stu-id="3c683-102">Reflection and Generic Types</span></span>
 <a name="top"></a> <span data-ttu-id="3c683-103">Z punktu widzenia odbicia, że typu ogólnego jest skojarzony z nim zestaw parametrów typu (jeśli jest definicją typu ogólnego) jest różnica między typem ogólnym i typu zwykłego lub argumentów typu (jeśli jest skonstruowanego typu).</span><span class="sxs-lookup"><span data-stu-id="3c683-103">From the point of view of reflection, the difference between a generic type and an ordinary type is that a generic type has associated with it a set of type parameters (if it is a generic type definition) or type arguments (if it is a constructed type).</span></span> <span data-ttu-id="3c683-104">Metoda ogólna różni się od zwykłej metody w taki sam sposób.</span><span class="sxs-lookup"><span data-stu-id="3c683-104">A generic method differs from an ordinary method in the same way.</span></span>  

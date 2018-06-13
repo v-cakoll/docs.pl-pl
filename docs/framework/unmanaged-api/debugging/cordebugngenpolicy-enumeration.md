@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404027"
 ---
 # <a name="cordebugngenpolicy-enumeration"></a><span data-ttu-id="26e54-102">CorDebugNGenPolicy — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="26e54-102">CorDebugNGenPolicy Enumeration</span></span>
 <span data-ttu-id="26e54-103">Zawiera wartość, która określa, czy debuger ładuje obrazów natywnych (NGen) z pamięci podręcznej obrazów natywnych.</span><span class="sxs-lookup"><span data-stu-id="26e54-103">Provides a value that determines whether a debugger loads native (NGen) images from the native image cache.</span></span>  

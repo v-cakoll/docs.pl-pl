@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330476"
 ---
 # <a name="working-with-xml-namespaces-c"></a><span data-ttu-id="f4028-102">Praca z przestrzeni nazw XML (C#)</span><span class="sxs-lookup"><span data-stu-id="f4028-102">Working with XML Namespaces (C#)</span></span>
 <span data-ttu-id="f4028-103">W tematach w tej sekcji opisano sposób [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] obsługuje przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="f4028-103">The topics in this section describe how [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] supports namespaces.</span></span>  

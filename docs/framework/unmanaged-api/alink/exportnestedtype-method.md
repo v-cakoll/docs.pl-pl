@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407572"
 ---
 # <a name="exportnestedtype-method"></a><span data-ttu-id="10b57-102">ExportNestedType — Metoda</span><span class="sxs-lookup"><span data-stu-id="10b57-102">ExportNestedType Method</span></span>
 <span data-ttu-id="10b57-103">Określa typy zagnieżdżone jako eksportowalny.</span><span class="sxs-lookup"><span data-stu-id="10b57-103">Specifies nested types as exportable.</span></span> <span data-ttu-id="10b57-104">[ExportType — metoda](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md) może również typy zagnieżdżone eksportu, ale ta metoda jest szybsza.</span><span class="sxs-lookup"><span data-stu-id="10b57-104">The [ExportType Method](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md) can also export nested types, but this method is faster.</span></span>  

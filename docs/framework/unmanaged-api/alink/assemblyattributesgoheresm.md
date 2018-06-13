@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405217"
 ---
 # <a name="assemblyattributesgoheresm"></a><span data-ttu-id="251eb-102">AssemblyAttributesGoHereSM</span><span class="sxs-lookup"><span data-stu-id="251eb-102">AssemblyAttributesGoHereSM</span></span>
 <span data-ttu-id="251eb-103">Używane przez ALink jako symbol zastępczy do przechowywania informacji na temat atrybutów niestandardowych.</span><span class="sxs-lookup"><span data-stu-id="251eb-103">Used by ALink as a placeholder to store information about custom attributes.</span></span>  

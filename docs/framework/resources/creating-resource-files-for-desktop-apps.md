@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399824"
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a><span data-ttu-id="b64ef-102">Tworzenie plików zasobów dla aplikacji klasycznych</span><span class="sxs-lookup"><span data-stu-id="b64ef-102">Creating Resource Files for Desktop Apps</span></span>
 <span data-ttu-id="b64ef-103">Zasoby, takie jak ciągi, obrazy lub obiektu danych, można uwzględnić w plikach zasobów, aby były łatwo dostępne dla aplikacji.</span><span class="sxs-lookup"><span data-stu-id="b64ef-103">You can include resources, such as strings, images, or object data, in resources files to make them easily available to your application.</span></span> <span data-ttu-id="b64ef-104">.NET Framework zapewnia pięć sposoby tworzenia plików zasobów:</span><span class="sxs-lookup"><span data-stu-id="b64ef-104">The .NET Framework offers five ways to create resources files:</span></span>  

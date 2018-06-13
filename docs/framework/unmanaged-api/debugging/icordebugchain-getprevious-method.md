@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402256"
 ---
 # <a name="icordebugchaingetprevious-method"></a><span data-ttu-id="8dacd-102">ICorDebugChain::GetPrevious — Metoda</span><span class="sxs-lookup"><span data-stu-id="8dacd-102">ICorDebugChain::GetPrevious Method</span></span>
 <span data-ttu-id="8dacd-103">Pobiera łańcuch poprzedniej ramki dla wątku.</span><span class="sxs-lookup"><span data-stu-id="8dacd-103">Gets the previous chain of frames for the thread.</span></span>  

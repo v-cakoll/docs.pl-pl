@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406308"
 ---
 # <a name="exporttypeforwarder-method"></a><span data-ttu-id="06cd7-102">ExportTypeForwarder — Metoda</span><span class="sxs-lookup"><span data-stu-id="06cd7-102">ExportTypeForwarder Method</span></span>
 <span data-ttu-id="06cd7-103">Dodaje usługę przesyłania dalej dla typu tabeli typu danego zestawu.</span><span class="sxs-lookup"><span data-stu-id="06cd7-103">Adds a type forwarder to the type table of the given assembly.</span></span>  

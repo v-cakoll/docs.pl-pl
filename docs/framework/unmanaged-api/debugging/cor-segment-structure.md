@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406510"
 ---
 # <a name="corsegment-structure"></a><span data-ttu-id="2ac16-102">COR_SEGMENT — Struktura</span><span class="sxs-lookup"><span data-stu-id="2ac16-102">COR_SEGMENT Structure</span></span>
 <span data-ttu-id="2ac16-103">Zawiera informacje na temat obszar pamięci sterty zarządzanej.</span><span class="sxs-lookup"><span data-stu-id="2ac16-103">Contains information about a region of memory in the managed heap.</span></span>  

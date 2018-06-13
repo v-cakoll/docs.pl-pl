@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407240"
 ---
 # <a name="cordebugsteprange-structure"></a><span data-ttu-id="75448-102">COR_DEBUG_STEP_RANGE — Struktura</span><span class="sxs-lookup"><span data-stu-id="75448-102">COR_DEBUG_STEP_RANGE Structure</span></span>
 <span data-ttu-id="75448-103">Zawiera informacje przesunięcia zakresu kodu.</span><span class="sxs-lookup"><span data-stu-id="75448-103">Contains the offset information for a range of code.</span></span>  

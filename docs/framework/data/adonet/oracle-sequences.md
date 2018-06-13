@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358615"
 ---
 # <a name="oracle-sequences"></a><span data-ttu-id="b6ae6-102">Sekwencje Oracle</span><span class="sxs-lookup"><span data-stu-id="b6ae6-102">Oracle Sequences</span></span>
 <span data-ttu-id="b6ae6-103">.NET Framework Data Provider for Oracle umożliwia pobieranie wartości generowanych przez serwer kluczy sekwencji Oracle po wykonaniu operacji wstawiania przy użyciu <xref:System.Data.OracleClient.OracleDataAdapter>.</span><span class="sxs-lookup"><span data-stu-id="b6ae6-103">The .NET Framework Data Provider for Oracle provides support for retrieving the server-generated key Oracle Sequence values after performing inserts by using the <xref:System.Data.OracleClient.OracleDataAdapter>.</span></span>  

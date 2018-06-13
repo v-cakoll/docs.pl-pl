@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408970"
 ---
 # <a name="wif-claims-programming-model"></a><span data-ttu-id="d86a7-102">Model programowania oświadczeń WIF</span><span class="sxs-lookup"><span data-stu-id="d86a7-102">WIF Claims Programming Model</span></span>
 <span data-ttu-id="d86a7-103">ASP.NET i Windows Communication Foundation (WCF) deweloperzy zazwyczaj używać interfejsów tożsamości i IPrincipal do pracy z informacji o tożsamości użytkownika.</span><span class="sxs-lookup"><span data-stu-id="d86a7-103">ASP.NET and Windows Communication Foundation (WCF) developers ordinarily use the IIdentity and IPrincipal interfaces to work with the user’s identity information.</span></span> <span data-ttu-id="d86a7-104">W programie .NET 4.5 Windows Identity Foundation (WIF) jest zintegrowana w taki sposób, że istnieją oświadczenia teraz zawsze dla dowolnego podmiotu, jak pokazano na poniższym diagramie:</span><span class="sxs-lookup"><span data-stu-id="d86a7-104">In .NET 4.5, Windows Identity Foundation (WIF) has been integrated such that claims are now always present for any principal as illustrated in the following diagram:</span></span>  

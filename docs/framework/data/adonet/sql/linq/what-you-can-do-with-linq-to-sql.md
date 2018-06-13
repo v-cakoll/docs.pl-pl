@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356421"
 ---
 # <a name="what-you-can-do-with-linq-to-sql"></a><span data-ttu-id="10422-102">Co można zrobić za pomocą LINQ do SQL</span><span class="sxs-lookup"><span data-stu-id="10422-102">What You Can Do With LINQ to SQL</span></span>
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="10422-103"> obsługuje wszystkie funkcje klucza, który można oczekiwać Deweloper SQL.</span><span class="sxs-lookup"><span data-stu-id="10422-103"> supports all the key capabilities you would expect as a SQL developer.</span></span> <span data-ttu-id="10422-104">Można wyszukiwać informacje i wstawiania, aktualizacji i usuwania informacji z tabel.</span><span class="sxs-lookup"><span data-stu-id="10422-104">You can query for information, and insert, update, and delete information from tables.</span></span>  

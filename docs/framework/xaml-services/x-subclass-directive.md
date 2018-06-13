@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566421"
 ---
 # <a name="xsubclass-directive"></a><span data-ttu-id="1bcf6-102">x:Subclass — dyrektywa</span><span class="sxs-lookup"><span data-stu-id="1bcf6-102">x:Subclass Directive</span></span>
 <span data-ttu-id="1bcf6-103">Modyfikuje zachowanie kompilacji znaczników XAML podczas `x:Class` jest również udostępniany.</span><span class="sxs-lookup"><span data-stu-id="1bcf6-103">Modifies XAML markup compile behavior when `x:Class` is also provided.</span></span> <span data-ttu-id="1bcf6-104">Zamiast tworzenia częściowej klasy, która jest oparta na `x:Class`, dostarczonych `x:Class` zostanie utworzona jako klasa pośrednicząca, a następnie oczekuje na podstawie podanych klasy pochodnej `x:Class`.</span><span class="sxs-lookup"><span data-stu-id="1bcf6-104">Instead of creating a partial class that is based on `x:Class`, the provided `x:Class` is created as an intermediate class, and then your provided derived class is expected to be based on `x:Class`.</span></span>  

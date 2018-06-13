@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406867"
 ---
 # <a name="iclrdatatarget3-interface"></a><span data-ttu-id="f5c2d-102">ICLRDataTarget3 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="f5c2d-102">ICLRDataTarget3 Interface</span></span>
 <span data-ttu-id="f5c2d-103">Podklasa [ICLRDataTarget2](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md) , który zapewnia dostęp do informacji o wyjątku.</span><span class="sxs-lookup"><span data-stu-id="f5c2d-103">A subclass of [ICLRDataTarget2](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md) that provides access to exception information.</span></span>  

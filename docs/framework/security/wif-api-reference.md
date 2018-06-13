@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401690"
 ---
 # <a name="wif-api-reference"></a><span data-ttu-id="d2a44-102">Dokumentacja interfejsu API WIF</span><span class="sxs-lookup"><span data-stu-id="d2a44-102">WIF API Reference</span></span>
 <span data-ttu-id="d2a44-103">Klasy Windows Identity Foundation (WIF) są podzielone między następujące zestawy: `mscorlib` (mscorlib.dll) `System.IdentityModel` (System.IdentityModel.dll), `System.IdentityModel.Services` (System.IdentityModel.Services.dll) i `System.ServiceModel` () System.ServiceModel.dll).</span><span class="sxs-lookup"><span data-stu-id="d2a44-103">Windows Identity Foundation (WIF) classes are split across the following assemblies: `mscorlib` (mscorlib.dll), `System.IdentityModel` (System.IdentityModel.dll), `System.IdentityModel.Services` (System.IdentityModel.Services.dll), and `System.ServiceModel` (System.ServiceModel.dll).</span></span> <span data-ttu-id="d2a44-104">Ten temat zawiera linki do WIF obszary nazw i klasy, które każda przestrzeń nazw zawiera krótkie objaśnienia.</span><span class="sxs-lookup"><span data-stu-id="d2a44-104">This topic provides links to the WIF namespaces and brief explanations of the classes that each namespace contains.</span></span>  

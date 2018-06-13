@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406497"
 ---
 # <a name="iclrdatatargetgetpointersize-method"></a><span data-ttu-id="05604-102">ICLRDataTarget::GetPointerSize — Metoda</span><span class="sxs-lookup"><span data-stu-id="05604-102">ICLRDataTarget::GetPointerSize Method</span></span>
 <span data-ttu-id="05604-103">Pobiera rozmiar w bajtach, który używa procesu docelowego typu wskaźnika.</span><span class="sxs-lookup"><span data-stu-id="05604-103">Gets the size, in bytes, of the pointer type that the target process uses.</span></span> <span data-ttu-id="05604-104">Ta metoda jest wywoływana przez usługi dostępu danych środowiska uruchomieniowego języka wspólnego.</span><span class="sxs-lookup"><span data-stu-id="05604-104">This method is called by the common language runtime data access services.</span></span>  

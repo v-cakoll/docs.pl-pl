@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402031"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a><span data-ttu-id="664f9-102">Wiersz polecenia dla programu Visual Studio deweloperów</span><span class="sxs-lookup"><span data-stu-id="664f9-102">Developer Command Prompt for Visual Studio</span></span>
 <span data-ttu-id="664f9-103">Wiersz polecenia dla programu Visual Studio deweloperów automatycznie ustawia zmienne środowiskowe, które pozwalają łatwo za pomocą narzędzia .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="664f9-103">The Developer Command Prompt for Visual Studio automatically sets the environment variables that enable you to easily use .NET Framework tools.</span></span> <span data-ttu-id="664f9-104">Wiersz polecenia dewelopera jest instalowany z full lub społeczności wersji programu Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="664f9-104">The Developer Command Prompt is installed with full or community editions of Visual Studio.</span></span> <span data-ttu-id="664f9-105">Nie jest instalowany z wersji Express programu Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="664f9-105">It is not installed with the Express versions of Visual Studio.</span></span>  

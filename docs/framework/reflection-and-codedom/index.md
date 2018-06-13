@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398823"
 ---
 # <a name="dynamic-programming-in-the-net-framework"></a><span data-ttu-id="c3ded-102">Programowanie dynamiczne w .NET Framework</span><span class="sxs-lookup"><span data-stu-id="c3ded-102">Dynamic Programming in the .NET Framework</span></span>
 <span data-ttu-id="c3ded-103">Ta sekcja dokumentacji zawiera informacje o programowanie dynamiczne w .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="c3ded-103">This section of the documentation provides information about dynamic programming in the .NET Framework.</span></span>  

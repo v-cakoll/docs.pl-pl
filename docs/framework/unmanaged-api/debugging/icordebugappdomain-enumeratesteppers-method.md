@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401294"
 ---
 # <a name="icordebugappdomainenumeratesteppers-method"></a><span data-ttu-id="85dcc-102">ICorDebugAppDomain::EnumerateSteppers — Metoda</span><span class="sxs-lookup"><span data-stu-id="85dcc-102">ICorDebugAppDomain::EnumerateSteppers Method</span></span>
 <span data-ttu-id="85dcc-103">Pobiera moduł wyliczający dla wszystkich aktywnych steppery w domenie aplikacji.</span><span class="sxs-lookup"><span data-stu-id="85dcc-103">Gets an enumerator for all active steppers in the application domain.</span></span>  

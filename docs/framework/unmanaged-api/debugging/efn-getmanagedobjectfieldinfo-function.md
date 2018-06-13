@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405249"
 ---
 # <a name="efngetmanagedobjectfieldinfo-function"></a><span data-ttu-id="eb563-102">_EFN_GetManagedObjectFieldInfo — Funkcja</span><span class="sxs-lookup"><span data-stu-id="eb563-102">_EFN_GetManagedObjectFieldInfo Function</span></span>
 <span data-ttu-id="eb563-103">Pobiera przesunięcie od początku obiektu, do pola i wartość do pola, używając udostępnionego obiektu wskaźnik i nazwy pola.</span><span class="sxs-lookup"><span data-stu-id="eb563-103">Gets the offset from the start of an object to a field and the field's value, using the provided object pointer and field name.</span></span>  

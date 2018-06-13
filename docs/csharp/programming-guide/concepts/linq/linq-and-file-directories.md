@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325022"
 ---
 # <a name="linq-and-file-directories-c"></a><span data-ttu-id="2e75f-102">LINQ i katalogi plików (C#)</span><span class="sxs-lookup"><span data-stu-id="2e75f-102">LINQ and File Directories (C#)</span></span>
 <span data-ttu-id="2e75f-103">Wiele operacji systemu plików są zasadniczo zapytań i w związku z tym dobrze nadaje się do metody LINQ.</span><span class="sxs-lookup"><span data-stu-id="2e75f-103">Many file system operations are essentially queries and are therefore well-suited to the LINQ approach.</span></span>  

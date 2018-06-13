@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404747"
 ---
 # <a name="iclrmetadatalocator-interface"></a><span data-ttu-id="f653c-102">ICLRMetadataLocator — Interfejs</span><span class="sxs-lookup"><span data-stu-id="f653c-102">ICLRMetadataLocator Interface</span></span>
 <span data-ttu-id="f653c-103">Używane przez warstwę usługi dostępu do danych do lokalizowania metadanych zestawów w procesie docelowym.</span><span class="sxs-lookup"><span data-stu-id="f653c-103">Used by the data access services layer to locate metadata of assemblies in a target process.</span></span>  

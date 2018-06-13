@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401943"
 ---
 # <a name="icordebugcodegetfunction-method"></a><span data-ttu-id="3d4f9-102">ICorDebugCode::GetFunction — Metoda</span><span class="sxs-lookup"><span data-stu-id="3d4f9-102">ICorDebugCode::GetFunction Method</span></span>
 <span data-ttu-id="3d4f9-103">Pobiera skojarzone z tym "ICorDebugCode" "ICorDebugFunction".</span><span class="sxs-lookup"><span data-stu-id="3d4f9-103">Gets the "ICorDebugFunction" associated with this "ICorDebugCode".</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361588"
 ---
 # <a name="how-to-specify-database-names"></a><span data-ttu-id="6b082-102">Porady: Określanie nazwy bazy danych</span><span class="sxs-lookup"><span data-stu-id="6b082-102">How to: Specify Database Names</span></span>
 <span data-ttu-id="6b082-103">Użyj <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> właściwość <xref:System.Data.Linq.Mapping.DatabaseAttribute> atrybutu, aby określić nazwę bazy danych, kiedy nie podano nazwy dla tego połączenia.</span><span class="sxs-lookup"><span data-stu-id="6b082-103">Use the <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> property on a <xref:System.Data.Linq.Mapping.DatabaseAttribute> attribute to specify the name of a database when a name is not supplied by the connection.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402220"
 ---
 # <a name="getalinkmessagedll-function"></a><span data-ttu-id="e4a22-102">GetALinkMessageDll — Funkcja</span><span class="sxs-lookup"><span data-stu-id="e4a22-102">GetALinkMessageDll Function</span></span>
 <span data-ttu-id="e4a22-103">Wyszukuje i ładuje Biblioteka DLL komunikatów.</span><span class="sxs-lookup"><span data-stu-id="e4a22-103">Finds and loads the message DLL.</span></span> <span data-ttu-id="e4a22-104">Zwraca wartość 0, jeśli nie można znajduje się lub załadowana biblioteka DLL komunikatów.</span><span class="sxs-lookup"><span data-stu-id="e4a22-104">Returns 0 if the message DLL could not be located or loaded.</span></span> <span data-ttu-id="e4a22-105">Biblioteka DLL komunikatów, należy w podkatalogu, którego nazwa jest identyfikator języka lub w bieżącym katalogu.</span><span class="sxs-lookup"><span data-stu-id="e4a22-105">The message DLL should be either in a subdirectory whose name is a language ID, or in the current directory.</span></span>  

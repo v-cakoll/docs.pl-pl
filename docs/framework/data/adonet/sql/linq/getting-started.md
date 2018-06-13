@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360034"
 ---
 # <a name="getting-started"></a><span data-ttu-id="c6c99-102">Wprowadzenie</span><span class="sxs-lookup"><span data-stu-id="c6c99-102">Getting Started</span></span>
 <span data-ttu-id="c6c99-103">Za pomocą [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], można użyć [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] technologii SQL dostępu do bazy danych, tak jak będzie można uzyskać dostępu do kolekcji w pamięci.</span><span class="sxs-lookup"><span data-stu-id="c6c99-103">By using [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], you can use the [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] technology to access SQL databases just as you would access an in-memory collection.</span></span>  

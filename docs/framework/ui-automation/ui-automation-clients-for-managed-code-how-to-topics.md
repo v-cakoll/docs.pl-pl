@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400435"
 ---
 # <a name="ui-automation-clients-for-managed-code-how-to-topics"></a><span data-ttu-id="4999f-102">Klienci automatyzacji interfejsu użytkownika do kodu zarządzanego — Tematy porad</span><span class="sxs-lookup"><span data-stu-id="4999f-102">UI Automation Clients for Managed Code How-to Topics</span></span>
 > [!NOTE]

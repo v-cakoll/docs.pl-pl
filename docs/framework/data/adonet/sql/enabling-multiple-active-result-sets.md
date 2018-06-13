@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364882"
 ---
 # <a name="enabling-multiple-active-result-sets"></a><span data-ttu-id="c9fb7-102">Włączanie wielu aktywnych zestawów wyników</span><span class="sxs-lookup"><span data-stu-id="c9fb7-102">Enabling Multiple Active Result Sets</span></span>
 <span data-ttu-id="c9fb7-103">Wiele aktywnych zestawów wyników (MARS) to funkcja, która współdziała z programem SQL Server, aby umożliwić wykonywanie wielu instancji na jedno połączenie.</span><span class="sxs-lookup"><span data-stu-id="c9fb7-103">Multiple Active Result Sets (MARS) is a feature that works with SQL Server to allow the execution of multiple batches on a single connection.</span></span> <span data-ttu-id="c9fb7-104">Po włączeniu MARS do użytku z programem SQL Server każdego obiektu polecenia używane dodaje sesji połączenia.</span><span class="sxs-lookup"><span data-stu-id="c9fb7-104">When MARS is enabled for use with SQL Server, each command object used adds a session to the connection.</span></span>  

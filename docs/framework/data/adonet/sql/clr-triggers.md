@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352867"
 ---
 # <a name="clr-triggers"></a><span data-ttu-id="914ed-102">Wyzwalacze CLR</span><span class="sxs-lookup"><span data-stu-id="914ed-102">CLR Triggers</span></span>
 <span data-ttu-id="914ed-103">Wyzwalacz jest specjalnym rodzajem procedury przechowywanej, która uruchamia się automatycznie po wykonuje zdarzenia języka.</span><span class="sxs-lookup"><span data-stu-id="914ed-103">A trigger is a special type of stored procedure that automatically runs when a language event executes.</span></span> <span data-ttu-id="914ed-104">Dzięki integracji programu Microsoft SQL Server z .NET Framework środowisko uruchomieniowe języka wspólnego (CLR) można użyć dowolnego języka .NET Framework, można utworzyć wyzwalaczy CLR.</span><span class="sxs-lookup"><span data-stu-id="914ed-104">Because of the Microsoft SQL Server integration with the .NET Framework common language runtime (CLR), you can use any .NET Framework language to create CLR triggers.</span></span>  

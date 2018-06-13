@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406281"
 ---
 # <a name="constants-unmanaged-api-reference"></a><span data-ttu-id="c64e2-102">Stałe (Niezarządzany wykaz interfejsów API)</span><span class="sxs-lookup"><span data-stu-id="c64e2-102">Constants (Unmanaged API Reference)</span></span>
 <span data-ttu-id="c64e2-103">W tym temacie opisano typ języka dostawcy języka i stałe typu dokumentu, które są zdefiniowane w CorSym.idl.</span><span class="sxs-lookup"><span data-stu-id="c64e2-103">This topic describes the language type, language vendor, and document type constants that are defined in CorSym.idl.</span></span>  

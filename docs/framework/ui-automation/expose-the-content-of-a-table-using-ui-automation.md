@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407186"
 ---
 # <a name="expose-the-content-of-a-table-using-ui-automation"></a><span data-ttu-id="3060d-102">Udostępnianie zawartości tabel za pomocą automatyzacji interfejsu użytkownika</span><span class="sxs-lookup"><span data-stu-id="3060d-102">Expose the Content of a Table Using UI Automation</span></span>
 > [!NOTE]

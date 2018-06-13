@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401664"
 ---
 # <a name="icordebugbreakpointisactive-method"></a><span data-ttu-id="84171-102">ICorDebugBreakpoint::IsActive — Metoda</span><span class="sxs-lookup"><span data-stu-id="84171-102">ICorDebugBreakpoint::IsActive Method</span></span>
 <span data-ttu-id="84171-103">Pobiera wartość wskazującą, czy to `ICorDebugBreakpoint` jest aktywny.</span><span class="sxs-lookup"><span data-stu-id="84171-103">Gets a value that indicates whether this `ICorDebugBreakpoint` is active.</span></span>  

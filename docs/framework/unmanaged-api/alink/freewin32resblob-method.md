@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400747"
 ---
 # <a name="freewin32resblob-method"></a><span data-ttu-id="e9558-102">FreeWin32ResBlob — Metoda</span><span class="sxs-lookup"><span data-stu-id="e9558-102">FreeWin32ResBlob Method</span></span>
 <span data-ttu-id="e9558-103">Zwalnia blob zasobów Win32 i skojarzonych zasobów.</span><span class="sxs-lookup"><span data-stu-id="e9558-103">Releases the Win32 resource blob and associated resources.</span></span>  

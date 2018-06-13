@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403923"
 ---
 # <a name="addfile-method1"></a><span data-ttu-id="b7595-102">AddFile metoda1</span><span class="sxs-lookup"><span data-stu-id="b7595-102">AddFile Method1</span></span>
 <span data-ttu-id="b7595-103">Dodaje pliki do zestawu.</span><span class="sxs-lookup"><span data-stu-id="b7595-103">Adds files to the assembly.</span></span> <span data-ttu-id="b7595-104">Można również utworzyć niezwiązanego moduły.</span><span class="sxs-lookup"><span data-stu-id="b7595-104">Can also be used to create unbound modules.</span></span>  

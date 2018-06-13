@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404134"
 ---
 # <a name="cordebugjitcompilerflagsdeprecated-enumeration"></a><span data-ttu-id="ac9bf-102">CorDebugJITCompilerFlagsDeprecated — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="ac9bf-102">CorDebugJITCompilerFlagsDeprecated Enumeration</span></span>
 <span data-ttu-id="ac9bf-103">To wyliczenie jest nieaktualne.</span><span class="sxs-lookup"><span data-stu-id="ac9bf-103">This enumeration is obsolete.</span></span> <span data-ttu-id="ac9bf-104">Użyj `CORDEBUG_JIT_DEFAULT` członkiem [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) wyliczenie zamiast tego.</span><span class="sxs-lookup"><span data-stu-id="ac9bf-104">Use the `CORDEBUG_JIT_DEFAULT` member of the [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) enumeration instead.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402692"
 ---
 # <a name="icordebugcodegetcode-method"></a><span data-ttu-id="62d4a-102">ICorDebugCode::GetCode — Metoda</span><span class="sxs-lookup"><span data-stu-id="62d4a-102">ICorDebugCode::GetCode Method</span></span>
 <span data-ttu-id="62d4a-103">Pobiera cały kod dla określonej funkcji, sformatowany dezasemblacji.</span><span class="sxs-lookup"><span data-stu-id="62d4a-103">Gets all the code for the specified function, formatted for disassembly.</span></span> <span data-ttu-id="62d4a-104">Ta metoda jest przestarzała w programie .NET Framework w wersji 2.0.</span><span class="sxs-lookup"><span data-stu-id="62d4a-104">This method has been deprecated in the .NET Framework version 2.0.</span></span> <span data-ttu-id="62d4a-105">Użyj [ICorDebugCode2::GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) zamiast tego.</span><span class="sxs-lookup"><span data-stu-id="62d4a-105">Use [ICorDebugCode2::GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) instead.</span></span>  

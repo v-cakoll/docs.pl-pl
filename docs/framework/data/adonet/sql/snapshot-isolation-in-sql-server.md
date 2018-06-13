@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365018"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a><span data-ttu-id="bc18d-102">Izolacja migawki w programie SQL Server</span><span class="sxs-lookup"><span data-stu-id="bc18d-102">Snapshot Isolation in SQL Server</span></span>
 <span data-ttu-id="bc18d-103">Izolacja migawki zwiększa współbieżności dla aplikacji OLTP.</span><span class="sxs-lookup"><span data-stu-id="bc18d-103">Snapshot isolation enhances concurrency for OLTP applications.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402802"
 ---
 # <a name="icordebugchaingetactiveframe-method"></a><span data-ttu-id="0f752-102">ICorDebugChain::GetActiveFrame — Metoda</span><span class="sxs-lookup"><span data-stu-id="0f752-102">ICorDebugChain::GetActiveFrame Method</span></span>
 <span data-ttu-id="0f752-103">Pobiera aktywny (to znaczy najnowszych) ramki w łańcuchu.</span><span class="sxs-lookup"><span data-stu-id="0f752-103">Gets the active (that is, most recent) frame on the chain.</span></span>  

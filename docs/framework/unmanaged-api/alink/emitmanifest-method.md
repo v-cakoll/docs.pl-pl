@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401212"
 ---
 # <a name="emitmanifest-method"></a><span data-ttu-id="c57b4-102">EmitManifest — Metoda</span><span class="sxs-lookup"><span data-stu-id="c57b4-102">EmitManifest Method</span></span>
 <span data-ttu-id="c57b4-103">Emituje końcowego manifestu.</span><span class="sxs-lookup"><span data-stu-id="c57b4-103">Emits the final manifest.</span></span> <span data-ttu-id="c57b4-104">Tę metodę można wywołać po zaimportowaniu wszystkie inne pliki i ustawieniu wszystkich opcji.</span><span class="sxs-lookup"><span data-stu-id="c57b4-104">Call this method after importing all other files and setting all options.</span></span> <span data-ttu-id="c57b4-105">Nie wywołuj tej metody dla modułów niepowiązanych.</span><span class="sxs-lookup"><span data-stu-id="c57b4-105">Do not call this method for unbound modules.</span></span>  

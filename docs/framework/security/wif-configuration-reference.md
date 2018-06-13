@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399249"
 ---
 # <a name="wif-configuration-reference"></a><span data-ttu-id="e8d1d-102">Odwołanie do konfiguracji WIF</span><span class="sxs-lookup"><span data-stu-id="e8d1d-102">WIF Configuration Reference</span></span>
 <span data-ttu-id="e8d1d-103">Windows Identity Foundation (WIF) w aplikacji można skonfigurować przez dodanie elementów do pliku konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="e8d1d-103">You can configure Windows Identity Foundation (WIF) in your applications by adding elements to a configuration file.</span></span> <span data-ttu-id="e8d1d-104">Ten temat zawiera linki do tematów odwołania do elementów konfiguracji programu WIF.</span><span class="sxs-lookup"><span data-stu-id="e8d1d-104">This topic contains links to reference topics for the WIF configuration elements.</span></span>  

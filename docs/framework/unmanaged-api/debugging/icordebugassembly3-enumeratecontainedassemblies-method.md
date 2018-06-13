@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404846"
 ---
 # <a name="icordebugassembly3enumeratecontainedassemblies-method"></a><span data-ttu-id="4467c-102">Metoda ICorDebugAssembly3::EnumerateContainedAssemblies</span><span class="sxs-lookup"><span data-stu-id="4467c-102">ICorDebugAssembly3::EnumerateContainedAssemblies Method</span></span>
 <span data-ttu-id="4467c-103">Pobiera moduł wyliczający dla zestawów zawartych w tym zestawie.</span><span class="sxs-lookup"><span data-stu-id="4467c-103">Gets an enumerator for the assemblies contained in this assembly.</span></span>  

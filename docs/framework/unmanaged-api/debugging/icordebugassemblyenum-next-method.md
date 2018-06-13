@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405291"
 ---
 # <a name="icordebugassemblyenumnext-method"></a><span data-ttu-id="1717c-102">ICorDebugAssemblyEnum::Next — Metoda</span><span class="sxs-lookup"><span data-stu-id="1717c-102">ICorDebugAssemblyEnum::Next Method</span></span>
 <span data-ttu-id="1717c-103">Pobiera określoną liczbę zestawów z kolekcji, począwszy od bieżącej pozycji kursora.</span><span class="sxs-lookup"><span data-stu-id="1717c-103">Gets the specified number of assemblies from the collection, starting at the current cursor position.</span></span>  

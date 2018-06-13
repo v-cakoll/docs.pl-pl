@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404651"
 ---
 # <a name="iclrdatatarget2freevirtual-method"></a><span data-ttu-id="58273-102">ICLRDataTarget2::FreeVirtual — Metoda</span><span class="sxs-lookup"><span data-stu-id="58273-102">ICLRDataTarget2::FreeVirtual Method</span></span>
 <span data-ttu-id="58273-103">Metoda wywoływana przez wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) dostęp do usług danych do wolnej pamięci, która była przydzielona wcześniej do przestrzeni adresowej procesu docelowego.</span><span class="sxs-lookup"><span data-stu-id="58273-103">Called by the common language runtime (CLR) data access services to free memory that was previously allocated in the address space of the target process.</span></span>  

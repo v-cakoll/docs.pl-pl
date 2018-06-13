@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403295"
 ---
 # <a name="getwin32resblob-method"></a><span data-ttu-id="5411e-102">GetWin32ResBlob — Metoda</span><span class="sxs-lookup"><span data-stu-id="5411e-102">GetWin32ResBlob Method</span></span>
 <span data-ttu-id="5411e-103">Pobiera obiekt blob zasobów Win32.</span><span class="sxs-lookup"><span data-stu-id="5411e-103">Retrieves Win32 resource blob.</span></span> <span data-ttu-id="5411e-104">Tę metodę można wywołać po ustawieniu opcji zestawu.</span><span class="sxs-lookup"><span data-stu-id="5411e-104">Call this method after setting assembly options.</span></span>  

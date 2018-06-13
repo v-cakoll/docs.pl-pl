@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399655"
 ---
 # <a name="wif-guidelines"></a><span data-ttu-id="7ea2a-102">Wytyczne WIF</span><span class="sxs-lookup"><span data-stu-id="7ea2a-102">WIF Guidelines</span></span>
 -   [<span data-ttu-id="7ea2a-103">Wskazówki dotyczące migrowania aplikacji utworzonych za pomocą programu WIF 3.5 do wersji WIF 4.5</span><span class="sxs-lookup"><span data-stu-id="7ea2a-103">Guidelines for Migrating an Application Built Using WIF 3.5 to WIF 4.5</span></span>](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403269"
 ---
 # <a name="icordebugchainenumerateframes-method"></a><span data-ttu-id="51382-102">ICorDebugChain::EnumerateFrames — Metoda</span><span class="sxs-lookup"><span data-stu-id="51382-102">ICorDebugChain::EnumerateFrames Method</span></span>
 <span data-ttu-id="51382-103">Pobiera moduł wyliczający, który zawiera wszystkie ramki stosu zarządzanych w łańcuchu, zaczynając od ostatniego ramki.</span><span class="sxs-lookup"><span data-stu-id="51382-103">Gets an enumerator that contains all the managed stack frames in the chain, starting with the most recent frame.</span></span>  

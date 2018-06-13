@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400721"
 ---
 # <a name="precloseassembly-method"></a><span data-ttu-id="c6a8e-102">PreCloseAssembly — Metoda</span><span class="sxs-lookup"><span data-stu-id="c6a8e-102">PreCloseAssembly Method</span></span>
 <span data-ttu-id="c6a8e-103">Zamyka plik zestawu.</span><span class="sxs-lookup"><span data-stu-id="c6a8e-103">Closes the assembly file.</span></span> <span data-ttu-id="c6a8e-104">Tę metodę można wywołać po zamknięciu wszystkich innych plików, ale przed zamknięciem pliku zestawu.</span><span class="sxs-lookup"><span data-stu-id="c6a8e-104">Call this method after closing all other files, but before closing the assembly file.</span></span> <span data-ttu-id="c6a8e-105">Nie wywołuj tej metody dla modułów niepowiązanych.</span><span class="sxs-lookup"><span data-stu-id="c6a8e-105">Do not call this method for unbound modules.</span></span>  

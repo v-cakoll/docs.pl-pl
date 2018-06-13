@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407962"
 ---
 # <a name="cordebugmappingresult-enumeration"></a><span data-ttu-id="43864-102">CorDebugMappingResult — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="43864-102">CorDebugMappingResult Enumeration</span></span>
 <span data-ttu-id="43864-103">Zawiera szczegółowe informacje o sposobie uzyskano wartość wskaźnika instrukcji (IP).</span><span class="sxs-lookup"><span data-stu-id="43864-103">Provides the details of how the value of the instruction pointer (IP) was obtained.</span></span>  

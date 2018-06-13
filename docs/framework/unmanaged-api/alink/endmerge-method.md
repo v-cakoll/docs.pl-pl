@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402577"
 ---
 # <a name="endmerge-method"></a><span data-ttu-id="71b47-102">EndMerge — Metoda</span><span class="sxs-lookup"><span data-stu-id="71b47-102">EndMerge Method</span></span>
 <span data-ttu-id="71b47-103">Wskazuje, że wszystkie atrybuty niestandardowe zostały scalone w zakresie emitowanie.</span><span class="sxs-lookup"><span data-stu-id="71b47-103">Indicates that all custom attributes have been merged into the emit scope.</span></span>  

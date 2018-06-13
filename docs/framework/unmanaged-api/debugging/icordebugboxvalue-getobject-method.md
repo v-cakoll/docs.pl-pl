@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401748"
 ---
 # <a name="icordebugboxvaluegetobject-method"></a><span data-ttu-id="7945e-102">ICorDebugBoxValue::GetObject — Metoda</span><span class="sxs-lookup"><span data-stu-id="7945e-102">ICorDebugBoxValue::GetObject Method</span></span>
 <span data-ttu-id="7945e-103">Pobiera wartość ramce.</span><span class="sxs-lookup"><span data-stu-id="7945e-103">Gets the boxed value.</span></span>  

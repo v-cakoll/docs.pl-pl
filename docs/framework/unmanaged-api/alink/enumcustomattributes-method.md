@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403217"
 ---
 # <a name="enumcustomattributes-method"></a><span data-ttu-id="1a450-102">EnumCustomAttributes — Metoda</span><span class="sxs-lookup"><span data-stu-id="1a450-102">EnumCustomAttributes Method</span></span>
 <span data-ttu-id="1a450-103">Pobiera atrybuty niestandardowe na poziomie zestawu.</span><span class="sxs-lookup"><span data-stu-id="1a450-103">Retrieves assembly-level custom attributes.</span></span>  

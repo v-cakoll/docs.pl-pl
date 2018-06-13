@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33314112"
 ---
 # <a name="access-modifiers-c-programming-guide"></a><span data-ttu-id="110bd-102">Modyfikatory dostępu (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="110bd-102">Access Modifiers (C# Programming Guide)</span></span>
 <span data-ttu-id="110bd-103">Wszystkie typy i elementy członkowskie typu ma poziomu ułatwień dostępu, który kontroluje, czy może być używany z innymi kodu z zestawu lub innych zestawów.</span><span class="sxs-lookup"><span data-stu-id="110bd-103">All types and type members have an accessibility level, which controls whether they can be used from other code in your assembly or other assemblies.</span></span> <span data-ttu-id="110bd-104">Następujących modyfikatorów dostępu służy do określenia dostępności typu lub elementu członkowskiego przy deklarowaniu go:</span><span class="sxs-lookup"><span data-stu-id="110bd-104">You can use the following access modifiers to specify the accessibility of a type or member when you declare it:</span></span>  

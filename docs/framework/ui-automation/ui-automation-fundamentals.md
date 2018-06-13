@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400775"
 ---
 # <a name="ui-automation-fundamentals"></a><span data-ttu-id="b3f89-102">Podstawowe założenia automatyzacji interfejsu użytkownika</span><span class="sxs-lookup"><span data-stu-id="b3f89-102">UI Automation Fundamentals</span></span>
 > [!NOTE]

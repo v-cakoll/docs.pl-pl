@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407352"
 ---
 # <a name="corheapobject-structure"></a><span data-ttu-id="a4a6b-102">COR_HEAPOBJECT — Struktura</span><span class="sxs-lookup"><span data-stu-id="a4a6b-102">COR_HEAPOBJECT Structure</span></span>
 <span data-ttu-id="a4a6b-103">Zawiera informacje dotyczące obiektów na stercie zarządzanej.</span><span class="sxs-lookup"><span data-stu-id="a4a6b-103">Provides information about an object on the managed heap.</span></span>  

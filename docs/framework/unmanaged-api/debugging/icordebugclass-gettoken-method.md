@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401066"
 ---
 # <a name="icordebugclassgettoken-method"></a><span data-ttu-id="a3b63-102">ICorDebugClass::GetToken — Metoda</span><span class="sxs-lookup"><span data-stu-id="a3b63-102">ICorDebugClass::GetToken Method</span></span>
 <span data-ttu-id="a3b63-103">Pobiera `TypeDef` token metadanych, który odwołuje się do definicji tej klasy.</span><span class="sxs-lookup"><span data-stu-id="a3b63-103">Gets the `TypeDef` metadata token that references the definition of this class.</span></span>  

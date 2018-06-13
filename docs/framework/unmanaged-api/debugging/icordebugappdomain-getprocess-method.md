@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403117"
 ---
 # <a name="icordebugappdomaingetprocess-method"></a><span data-ttu-id="be6bf-102">ICorDebugAppDomain::GetProcess — Metoda</span><span class="sxs-lookup"><span data-stu-id="be6bf-102">ICorDebugAppDomain::GetProcess Method</span></span>
 <span data-ttu-id="be6bf-103">Pobiera proces zawierający domeny aplikacji.</span><span class="sxs-lookup"><span data-stu-id="be6bf-103">Gets the process containing the application domain.</span></span>  

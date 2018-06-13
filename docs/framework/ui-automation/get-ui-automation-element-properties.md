@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405580"
 ---
 # <a name="get-ui-automation-element-properties"></a><span data-ttu-id="bd79d-102">Pobierz właściwości elementu automatyzacji interfejsu użytkownika</span><span class="sxs-lookup"><span data-stu-id="bd79d-102">Get UI Automation Element Properties</span></span>
 > [!NOTE]

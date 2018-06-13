@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405772"
 ---
 # <a name="icordebugappdomaingetname-method"></a><span data-ttu-id="0b277-102">ICorDebugAppDomain::GetName — Metoda</span><span class="sxs-lookup"><span data-stu-id="0b277-102">ICorDebugAppDomain::GetName Method</span></span>
 <span data-ttu-id="0b277-103">Pobiera nazwę domeny aplikacji.</span><span class="sxs-lookup"><span data-stu-id="0b277-103">Gets the name of the application domain.</span></span>  

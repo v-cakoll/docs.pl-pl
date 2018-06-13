@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401043"
 ---
 # <a name="use-the-automationid-property"></a><span data-ttu-id="51202-102">Użyj właściwości AutomationID</span><span class="sxs-lookup"><span data-stu-id="51202-102">Use the AutomationID Property</span></span>
 > [!NOTE]

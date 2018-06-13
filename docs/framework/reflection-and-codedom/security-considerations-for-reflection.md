@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398707"
 ---
 # <a name="security-considerations-for-reflection"></a><span data-ttu-id="1a0e3-102">Zagadnienia dotyczące zabezpieczeń dla odbicia</span><span class="sxs-lookup"><span data-stu-id="1a0e3-102">Security Considerations for Reflection</span></span>
 <span data-ttu-id="1a0e3-103">Odbicie pozwala, aby uzyskać informacje o typy i składniki oraz do elementów członkowskich dostępu (to znaczy do wywołania metody i konstruktory do pobierania i ustawiania właściwości wartości, dodawanie i usuwanie programów obsługi zdarzeń i tak dalej).</span><span class="sxs-lookup"><span data-stu-id="1a0e3-103">Reflection provides the ability to obtain information about types and members, and to access members (that is, to call methods and constructors, to get and set property values, to add and remove event handlers, and so on).</span></span> <span data-ttu-id="1a0e3-104">Użyj odbicia w celu uzyskania informacji na temat typów i członków nie jest ograniczone.</span><span class="sxs-lookup"><span data-stu-id="1a0e3-104">The use of reflection to obtain information about types and members is not restricted.</span></span> <span data-ttu-id="1a0e3-105">Cały kod służy odbicia do wykonywania następujących zadań:</span><span class="sxs-lookup"><span data-stu-id="1a0e3-105">All code can use reflection to perform the following tasks:</span></span>  

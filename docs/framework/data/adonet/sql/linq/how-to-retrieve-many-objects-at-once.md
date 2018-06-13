@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359907"
 ---
 # <a name="how-to-retrieve-many-objects-at-once"></a><span data-ttu-id="04492-102">Porady: pobieranie jednocześnie wiele obiektów</span><span class="sxs-lookup"><span data-stu-id="04492-102">How to: Retrieve Many Objects At Once</span></span>
 <span data-ttu-id="04492-103">Wiele obiektów w jednym zapytaniu można pobrać za pomocą <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>.</span><span class="sxs-lookup"><span data-stu-id="04492-103">You can retrieve many objects in one query by using <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>.</span></span>  

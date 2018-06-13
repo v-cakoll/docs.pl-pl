@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402473"
 ---
 # <a name="icordebugchaingetstackrange-method"></a><span data-ttu-id="8212e-102">ICorDebugChain::GetStackRange — Metoda</span><span class="sxs-lookup"><span data-stu-id="8212e-102">ICorDebugChain::GetStackRange Method</span></span>
 <span data-ttu-id="8212e-103">Pobiera zakres adresów segmentu stosu dla tego łańcucha.</span><span class="sxs-lookup"><span data-stu-id="8212e-103">Gets the address range of the stack segment for this chain.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360396"
 ---
 # <a name="how-to-generate-the-object-model-in-visual-basic-or-c"></a><span data-ttu-id="592af-102">Porady: Generowanie modelu obiektów w Visual Basic lub C#</span><span class="sxs-lookup"><span data-stu-id="592af-102">How to: Generate the Object Model in Visual Basic or C#</span></span> #
 <span data-ttu-id="592af-103">W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], model obiektowy w języku programowania jest mapowany na relacyjnej bazy danych.</span><span class="sxs-lookup"><span data-stu-id="592af-103">In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], an object model in your own programming language is mapped to a relational database.</span></span> <span data-ttu-id="592af-104">Dwa narzędzia są dostępne do automatycznego generowania modelu kodu języka Visual Basic lub C# z istniejącej bazy danych metadanych.</span><span class="sxs-lookup"><span data-stu-id="592af-104">Two tools are available for automatically generating a Visual Basic or C# model from the metadata of an existing database.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400045"
 ---
 # <a name="obtain-mixed-text-attribute-details-using-ui-automation"></a><span data-ttu-id="5e5c3-102">Uzyskiwanie szczegółów atrybutów tekstu mieszanego przy użyciu automatyzacji interfejsu użytkownika</span><span class="sxs-lookup"><span data-stu-id="5e5c3-102">Obtain Mixed Text Attribute Details Using UI Automation</span></span>
 > [!NOTE]

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401245"
 ---
 # <a name="importfile2-method"></a><span data-ttu-id="9fc5f-102">ImportFile2 — Metoda</span><span class="sxs-lookup"><span data-stu-id="9fc5f-102">ImportFile2 Method</span></span>
 <span data-ttu-id="9fc5f-103">Importuje zestawów i modułów niepowiązanych.</span><span class="sxs-lookup"><span data-stu-id="9fc5f-103">Imports assemblies and unbound modules.</span></span> <span data-ttu-id="9fc5f-104">Ta metoda jest podobna [ImportFile — metoda](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), ale działa, nawet jeśli importowany plik nie istnieje na dysku.</span><span class="sxs-lookup"><span data-stu-id="9fc5f-104">This method is like [ImportFile Method](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), but works even if the file being imported does not exist on disk.</span></span>  

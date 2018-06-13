@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405489"
 ---
 # <a name="cordebugdecodeeventflagswindows-enumeration"></a><span data-ttu-id="8e550-102">Wyliczenie CorDebugDecodeEventFlagsWindows</span><span class="sxs-lookup"><span data-stu-id="8e550-102">CorDebugDecodeEventFlagsWindows Enumeration</span></span>
 <span data-ttu-id="8e550-103">Zawiera dodatkowe informacje o zdarzeniach debugowania na platformie systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="8e550-103">Provides additional information about debug events on the Windows platform.</span></span>  

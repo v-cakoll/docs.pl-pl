@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407246"
 ---
 # <a name="iclrdatatargetgetimagebase-method"></a><span data-ttu-id="d4e1b-102">ICLRDataTarget::GetImageBase — Metoda</span><span class="sxs-lookup"><span data-stu-id="d4e1b-102">ICLRDataTarget::GetImageBase Method</span></span>
 <span data-ttu-id="d4e1b-103">Pobiera adres podstawowy pamięci określonego obrazu.</span><span class="sxs-lookup"><span data-stu-id="d4e1b-103">Gets the base memory address of the specified image.</span></span>  

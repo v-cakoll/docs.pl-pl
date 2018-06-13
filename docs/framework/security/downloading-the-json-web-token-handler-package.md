@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404680"
 ---
 # <a name="downloading-the-json-web-token-handler-package"></a><span data-ttu-id="a4e00-102">Pobieranie pakietu programu obsługi tokenów sieci Web JSON</span><span class="sxs-lookup"><span data-stu-id="a4e00-102">Downloading the JSON Web Token Handler Package</span></span>
 <span data-ttu-id="a4e00-103">W tym temacie omówiono sposób pobierania i używania programu obsługi tokenów sieci Web JSON w projekcie.</span><span class="sxs-lookup"><span data-stu-id="a4e00-103">This topic discusses how to download and use the JSON Web Token Handler in your project.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402884"
 ---
 # <a name="iclrdatatargetgetmachinetype-method"></a><span data-ttu-id="5f13b-102">ICLRDataTarget::GetMachineType — Metoda</span><span class="sxs-lookup"><span data-stu-id="5f13b-102">ICLRDataTarget::GetMachineType Method</span></span>
 <span data-ttu-id="5f13b-103">Pobiera identyfikator dla rodzaju zestaw instrukcji, który używa procesu docelowego.</span><span class="sxs-lookup"><span data-stu-id="5f13b-103">Gets the identifier for the kind of instruction set that the target process is using.</span></span>  

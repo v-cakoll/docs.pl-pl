@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400760"
 ---
 # <a name="find-a-ui-automation-element-based-on-a-property-condition"></a><span data-ttu-id="96917-102">Znajdź element automatyzacji interfejsu użytkownika na podstawie warunku właściwości</span><span class="sxs-lookup"><span data-stu-id="96917-102">Find a UI Automation Element Based on a Property Condition</span></span>
 > [!NOTE]

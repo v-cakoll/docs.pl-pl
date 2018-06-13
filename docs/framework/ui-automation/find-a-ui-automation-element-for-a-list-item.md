@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399993"
 ---
 # <a name="find-a-ui-automation-element-for-a-list-item"></a><span data-ttu-id="3de09-102">Odnalezienie elementu automatyzacji interfejsu użytkownika dla elementu listy</span><span class="sxs-lookup"><span data-stu-id="3de09-102">Find a UI Automation Element for a List Item</span></span>
 > [!NOTE]

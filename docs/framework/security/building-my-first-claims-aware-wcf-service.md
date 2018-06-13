@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399616"
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a><span data-ttu-id="ccfcb-102">Tworzenie Moje pierwszej usługi WCF obsługujący oświadczenia</span><span class="sxs-lookup"><span data-stu-id="ccfcb-102">Building My First Claims-Aware WCF Service</span></span>
 ## <a name="applies-to"></a><span data-ttu-id="ccfcb-103">Dotyczy:</span><span class="sxs-lookup"><span data-stu-id="ccfcb-103">Applies To</span></span>  

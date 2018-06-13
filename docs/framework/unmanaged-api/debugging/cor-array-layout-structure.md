@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406399"
 ---
 # <a name="corarraylayout-structure"></a><span data-ttu-id="5acae-102">COR_ARRAY_LAYOUT — Struktury</span><span class="sxs-lookup"><span data-stu-id="5acae-102">COR_ARRAY_LAYOUT Structure</span></span>
 <span data-ttu-id="5acae-103">Zawiera informacje o układzie tablicy obiektów w pamięci.</span><span class="sxs-lookup"><span data-stu-id="5acae-103">Provides information about the layout of an array object in memory.</span></span>  

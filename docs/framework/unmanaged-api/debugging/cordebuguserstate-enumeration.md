@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407797"
 ---
 # <a name="cordebuguserstate-enumeration"></a><span data-ttu-id="b0eb3-102">CorDebugUserState — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="b0eb3-102">CorDebugUserState Enumeration</span></span>
 <span data-ttu-id="b0eb3-103">Wskazuje stan użytkownika wątku.</span><span class="sxs-lookup"><span data-stu-id="b0eb3-103">Indicates the user state of a thread.</span></span>  

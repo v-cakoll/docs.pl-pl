@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399980"
 ---
 # <a name="custom-token-handlers"></a><span data-ttu-id="2473d-102">Niestandardowe programy obsługi tokenu</span><span class="sxs-lookup"><span data-stu-id="2473d-102">Custom Token Handlers</span></span>
 <span data-ttu-id="2473d-103">W tym temacie omówiono tokenu programy obsługi zdarzeń w wersji WIF i jak są one używane do przetwarzania tokenów.</span><span class="sxs-lookup"><span data-stu-id="2473d-103">This topic discusses token handlers in WIF and how they are used to process tokens.</span></span> <span data-ttu-id="2473d-104">Temat obejmuje również problemy, co jest niezbędne do utworzenia niestandardowych tokenu obsługi typów tokenu, które nie są obsługiwane w wersji WIF domyślnie.</span><span class="sxs-lookup"><span data-stu-id="2473d-104">The topic also covers what is necessary to create custom token handlers for token types that are not supported by default in WIF.</span></span>  

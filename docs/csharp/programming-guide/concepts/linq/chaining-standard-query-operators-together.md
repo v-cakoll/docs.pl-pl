@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326153"
 ---
 # <a name="chaining-standard-query-operators-together-c"></a><span data-ttu-id="fe80b-102">CBC standardowych operatorów zapytań razem (C#)</span><span class="sxs-lookup"><span data-stu-id="fe80b-102">Chaining Standard Query Operators Together (C#)</span></span>
 <span data-ttu-id="fe80b-103">Jest ostatnim tematu w [samouczek: tworzenie łańcuchów zapytań razem (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md) samouczka.</span><span class="sxs-lookup"><span data-stu-id="fe80b-103">This is the final topic in the [Tutorial: Chaining Queries Together (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md) tutorial.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358371"
 ---
 # <a name="data-encryption-in-sql-server"></a>Szyfrowanie danych w programie SQL Server
 SQL Server udostępnia funkcje do szyfrowania i odszyfrowywania danych przy użyciu certyfikatu, klucza asymetrycznego lub klucza symetrycznego. Zarządza wszystkich tych w magazynie certyfikatu wewnętrznego. Magazyn używa szyfrowania hierarchii, która zabezpiecza certyfikatów i kluczy na jednym poziomie z warstwą wyżej w hierarchii. Ten obszar funkcji programu SQL Server jest nazywany magazynu klucz tajny.  

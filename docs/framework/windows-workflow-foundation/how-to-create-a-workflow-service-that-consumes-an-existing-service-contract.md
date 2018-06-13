@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515308"
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>Porady: Tworzenie usługi przepływu pracy, który wykorzystuje istniejący kontrakt usługi
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Funkcje lepszą integrację usług sieci web i przepływów pracy w formularzu tworzenia pierwszej kontraktu przepływu pracy. Narzędzie do projektowania przepływu pracy pierwszy kontraktu pozwala na projektowanie najpierw kontraktu w kodzie. Narzędzie następnie automatycznie generuje szablon czynności w przyborniku operacji w umowie.  

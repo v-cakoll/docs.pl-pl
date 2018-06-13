@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514453"
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>Co&#39;s przestarzałe w bibliotece klas programu .NET Framework
 .NET Framework zmienia się wraz z upływem czasu. Każda nowa wersja dodaje nowe typy i elementy członkowskie typu, które zapewniają nowe funkcje. Istniejących typów i ich elementy członkowskie także ulec zmianie. Na przykład niektóre typy stają się mniej ważne technologii, które obsługują zastępuje to nowa technologia, a niektóre metody są zastępowane przez nowszą metod, które są bardziej wygodne lub zaawansowanych funkcji.  

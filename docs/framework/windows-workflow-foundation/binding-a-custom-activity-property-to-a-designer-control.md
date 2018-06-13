@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513552"
 ---
 # <a name="binding-a-custom-activity-property-to-a-designer-control"></a>Powiązanie właściwości działań niestandardowych do projektanta formantu
 Powiązanie formantu projektanta pola tekstowego z argumentem działanie jest bardzo prosta; Wiązanie złożonych projektanta formantu (np. pola kombi) argument działania mogą jednak stanowi wyzwanie. W tym temacie omówiono sposób powiązać argumentu działania kontrolki pola kombi na Projektant działań niestandardowych.  

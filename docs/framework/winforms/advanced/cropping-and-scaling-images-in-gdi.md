@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521557"
 ---
 # <a name="cropping-and-scaling-images-in-gdi"></a>Przycinanie i skalowanie obrazów w GDI+
 Można użyć <xref:System.Drawing.Graphics.DrawImage%2A> metody <xref:System.Drawing.Graphics> klasy do rysowania i umieść wektor obrazów i obrazów rastrowych. <xref:System.Drawing.Graphics.DrawImage%2A> jest przeciążona metoda, więc może dostarczyć argumenty na kilka sposobów.  

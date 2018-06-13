@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517939"
 ---
 # <a name="statemachine-scenario-using-a-combination-of-flowchart-and-pick"></a>Obiekt StateMachine scenariusz przy użyciu kombinacji schematu blokowego i pobrania
 W tym przykładzie pokazano, jak wdrożyć scenariusz proste stopera, przy użyciu kombinacji <xref:System.Activities.Statements.Flowchart> i <xref:System.Activities.Statements.Pick> działań. Używa odbierania i wysyłania w działaniu wybierz do nasłuchiwania zdarzeń stopera.  

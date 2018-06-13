@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533744"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>Porady: ustawianie obrazu wyświetlanego przez formant formularzy systemu Windows
 Kilka formantów formularzy systemu Windows można wyświetlić obrazy. Obrazy te można ikony, które Objaśnienie przeznaczenia formantu, takie jak ikoną dyskietki na przycisku określające **zapisać** polecenia. Alternatywnie ikony może być obrazy tła, aby mieć kontrolę wygląd i zachowanie, które mają.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757063"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>Tworzenie DataTable w elemencie DataView
 Po pobierane są dane ze źródła danych i wypełnione <xref:System.Data.DataTable> z danymi, można sortować, filtrowania lub ograniczenia w inny sposób zwrócone dane bez pobierania go ponownie. <xref:System.Data.DataView> Klasy sprawia, że jest to możliwe. Ponadto, jeśli musisz utworzyć nowy <xref:System.Data.DataTable> z <xref:System.Data.DataView>, można użyć <xref:System.Data.DataView.ToTable%2A> metodę, aby skopiować wszystkie wiersze i kolumny lub podzbiór danych do nowego <xref:System.Data.DataTable>. <xref:System.Data.DataView.ToTable%2A> Metoda zapewnia przeciążenia do:  

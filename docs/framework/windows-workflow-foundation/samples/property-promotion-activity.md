@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519928"
 ---
 # <a name="property-promotion-activity"></a>Właściwości działania podwyższania poziomu
 W tym przykładzie przedstawiono rozwiązanie end-to-end, która integruje się <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> funkcja podwyższania poziomu bezpośrednio do tworzenia przepływu pracy. Podano w kolekcji elementów konfiguracji, działań przepływu pracy i rozszerzeń przepływu pracy, które ułatwiają korzystanie z funkcji podwyższania poziomu. Ponadto próbka zawiera proste przepływu pracy, który pokazuje, jak użyć tej kolekcji.  

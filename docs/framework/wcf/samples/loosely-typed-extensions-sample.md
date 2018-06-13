@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504440"
 ---
 # <a name="loosely-typed-extensions-sample"></a>Przykład rozszerzeń z typowaniem luźnym
 W modelu obiektu syndykacji zapewnia sformatowanego obsługuje do pracy z danymi rozszerzenia — informacje, które znajduje się w zespolonego źródła danych jego reprezentacja w formacie XML, ale nie są jawnie udostępnianych przez klas takich jak <xref:System.ServiceModel.Syndication.SyndicationFeed> i <xref:System.ServiceModel.Syndication.SyndicationItem>. W tym przykładzie przedstawiono podstawowe techniki do pracy z danymi rozszerzenia.  

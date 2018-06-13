@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516165"
 ---
 # <a name="how-to-query-for-non-persisted-instances"></a>Porady: zapytanie o-utrwalony wystąpień
 Po utworzeniu nowego wystąpienia usługi, a usługa zachowanie magazynu wystąpienia przepływu pracy SQL zdefiniowane, host usługi tworzy początkowej wpis dla tego wystąpienia usługi w magazynie wystąpień. Następnie, gdy wystąpienie usługi będzie nadal występować po raz pierwszy, zachowanie magazynu wystąpienia przepływu pracy SQL przechowuje bieżący stan wystąpienia oraz dodatkowe dane, które jest wymagane dla aktywacji, odzyskiwania i kontroli.  

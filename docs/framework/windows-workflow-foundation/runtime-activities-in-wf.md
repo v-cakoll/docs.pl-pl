@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513038"
 ---
 # <a name="runtime-activities-in-wf"></a>Działania środowiska uruchomieniowego w WF
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] zawiera kilka działań dostarczane przez system do uzyskiwania dostępu do funkcji środowiska uruchomieniowego przepływu pracy, takich jak trwałości i kończenie działania.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431893"
 ---
 # <a name="coeeshutdowncom-function"></a>CoEEShutDownCOM — Funkcja
 Wymusza środowisko uruchomieniowe języka wspólnego (CLR), aby zwolnić wszystkie wskaźniki interfejsu, którą przechowuje wewnątrz wywoływane otoki środowiska uruchomieniowego (otoki RCW). To ustawienie zwalnia wszystkie otoki RCW pamięci podręcznych. Ta funkcja globalna jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. W zamian użyj punkt wejścia dla określonego środowiska wykonawczego.  

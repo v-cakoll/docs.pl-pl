@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365751"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>System.Transactions integracji z programem SQL Server
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] w wersji 2.0 wprowadzono framework transakcji, które mogą być udostępniane za pośrednictwem <xref:System.Transactions> przestrzeni nazw. Ta struktura przedstawia transakcji w taki sposób, który jest w pełni zintegrowana z [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], takie jak [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  

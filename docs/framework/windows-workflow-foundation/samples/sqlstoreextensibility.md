@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518489"
 ---
 # <a name="sqlstoreextensibility"></a>SQLStoreExtensibility
 W przykładzie pokazano, używanie i konfigurację awansowanej właściwości w magazynie wystąpień przepływu pracy SQL. W magazynie wystąpień przepływu pracy SQL jest implementacją SQL na podstawie wystąpienia magazynu. Umożliwia on wystąpienie do zapisywania stanu i ładowania stanu do i z bazy danych programu SQL Server lub SQL Server Express. Funkcja rozszerzalność magazyn zezwala użytkownikowi na definiowanie właściwości, które są przechowywane w magazynie wystąpień. Te właściwości są wyświetlane w widoku awansowanej właściwości, które umożliwia użytkownikowi zapytania dla nich.  

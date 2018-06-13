@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517394"
 ---
 # <a name="using-editing-scope"></a>Za pomocą edycji zakresu
 W tym przykładzie pokazano, jak partii zestaw zmian, dzięki czemu mogą zostać cofnięte w pojedynczą jednostkę atomic. Domyślnie akcje wykonywane przez autora projektanta działania są automatycznie zintegrowane systemu Cofnij/Ponów.  

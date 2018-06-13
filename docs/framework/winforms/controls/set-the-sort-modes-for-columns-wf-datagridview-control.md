@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535734"
 ---
 # <a name="how-to-set-the-sort-modes-for-columns-in-the-windows-forms-datagridview-control"></a>Porady: ustawianie trybów sortowania kolumn w formancie DataGridView formularzy systemu Windows
 W <xref:System.Windows.Forms.DataGridView> kolumny pole tekstowe kontroli, użyj automatyczne sortowanie domyślne, podczas gdy inne typy kolumn nie są automatycznie sortowane. Czasami można przesłonić te ustawienia domyślne. Na przykład można wyświetlić obrazy zamiast tekstu, liczby lub wartości wyliczenia komórki. Gdy nie można sortować obrazy, wartości podstawowych, które reprezentują można sortować.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390464"
 ---
 # <a name="enabling-network-tracing"></a>Włączanie śledzenia sieci
 Śledzenie sieci zapewnia dostęp do informacji na temat wywołań metod i ruch sieciowy generowany przez zarządzanej aplikacji. Należy wykonać następujące zadania, aby włączyć śledzenie sieci w aplikacji:  

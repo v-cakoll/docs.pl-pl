@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519863"
 ---
 # <a name="how-to-create-a-custom-instance-store"></a>Porady: Tworzenie magazynu wystąpienia niestandardowego
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] zawiera <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, magazynie wystąpień, który używa programu SQL Server do utrwalenia danych przepływu pracy. Jeśli aplikacja jest wymagany do utrwalenia danych przepływu pracy na inny nośnik, na przykład innej bazy danych lub systemu plików, można zaimplementować magazynu niestandardowego wystąpienia. Magazynu niestandardowego wystąpienia jest tworzony przez rozszerzenie klasy abstrakcyjnej <xref:System.Runtime.DurableInstancing.InstanceStore> klasy i implementacja metody, które są wymagane do wykonania. Do zakończenia wdrożenia magazynu niestandardowego wystąpienia, zobacz [firmowej procesu zakupu](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) próbki.  

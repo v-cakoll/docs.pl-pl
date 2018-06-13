@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397822"
 ---
 # <a name="peer-to-peer-collaboration"></a>Współpraca peer-to-Peer
 Sieci peer-to-peer jest użycie stosunkowo zaawansowanych komputerów (komputery osobiste), znajdujące się na krawędzi Internetu dla więcej niż tylko opartą na kliencie zadań. Nowoczesne komputer (komputer) ma bardzo szybko procesora, pamięci przeważająca i dużych dysków twardych, które są jest w pełni wykorzystywane podczas wykonywania typowych zadań przetwarzania danych, takie jak wiadomości e-mail i przeglądania sieci Web. Nowoczesne PC łatwo może działać jako klienta i serwera (element równorzędny) dla różnych typów aplikacji.  

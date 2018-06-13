@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516880"
 ---
 # <a name="workflow-activity-authoring-using-the-codeactivity-class"></a>Za pomocą klasy z typu CodeActivity tworzenia działania przepływu pracy
 Działania utworzone przez dziedziczenie z <xref:System.Activities.CodeActivity> można zaimplementować podstawowe zachowanie ważnych przez zastąpienie <xref:System.Activities.CodeActivity.Execute%2A> metody.  

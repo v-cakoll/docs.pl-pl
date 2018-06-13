@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520620"
 ---
 # <a name="constructing-and-drawing-curves"></a>Konstruowanie i rysowanie krzywych
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] obsługuje kilka typów krzywych: wielokropek, łuki kardynalne i krzywych Beziera. Elipsy jest definiowana za pomocą prostokątem; Łuk jest częścią elipsy zdefiniowany przez kąt początkowy i kąta odchylenia. Kardynalnej krzywej składanej jest definiowana za pomocą tablicy punktów i parametr naprężenia — krzywej sprawnie przechodzi przez każdego punktu w macierzy, a parametr naprężenia wpływa na sposób załamania krzywej. Krzywej Beziera jest zdefiniowany przez dwa punkty końcowe i dwa punkty kontrolne, które krzywej nie przechodzi przez punkty kontrolne, ale punktów kontrolnych wpływ kierunek i zakrzywia, ponieważ krzywej przechodzi od jeden punkt końcowy do drugiego.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755100"
 ---
 # <a name="ltnameclaimtypegt"></a>&lt;nameClaimType&gt;
 Ustawia typ oświadczenia, która określa <xref:System.Security.Principal.IIdentity.Name%2A> właściwości. Typ oświadczenia jest używana do wyszukania <xref:System.Security.Claims.Claim> w kolekcji <xref:System.Security.Claims.ClaimsIdentity> obiekty zwrócone przez <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> metoda tego programu obsługi tokenów. Następnie ustawionej wartości zgodne oświadczenie jako nazwa <xref:System.Security.Principal.IIdentity> generowane na podstawie tego programu obsługi tokenów.  

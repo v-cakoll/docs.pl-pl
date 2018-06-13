@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516442"
 ---
 # <a name="nopersistscope-activity"></a>Działanie NoPersistScope
 W tym przykładzie pokazano, jak do manipulowania nie można serializować i możliwe do rozporządzania stanu w przepływie pracy. Jest ważne, przepływy pracy nie należy próbować zachować nie można serializować stanu, a także jest ważna w przypadku obiekty możliwe do rozporządzania na oczyszczenie po są one używane w przepływie pracy.  

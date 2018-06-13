@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514363"
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>Porady: dodawanie instalatorów od aplikacji usług
 Program Visual Studio jest dostarczany instalacji składników, które można zainstalować zasoby skojarzone z usługi aplikacji. Instalacja składników zarejestrować poszczególnych usług w systemie, do której jest instalowany i umożliwić Menedżera sterowania usługami wiedzieć, czy Usługa istnieje. Podczas pracy z aplikacją usługi, możesz wybrać link w oknie właściwości można automatycznie dodać odpowiednie pliki instalacyjne do projektu.  

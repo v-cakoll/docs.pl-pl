@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398253"
 ---
 # <a name="international-resource-identifier-support-in-systemuri"></a>Obsługa identyfikatora zasobu międzynarodowe w System.Uri
 <xref:System.Uri?displayProperty=nameWithType> Klasy został rozszerzony międzynarodowej identyfikator zasobów (IRI) i obsługa międzynarodowych nazw domen (IDN). Rozszerzenia te są dostępne w .NET Framework 3.5, 3.0 z dodatkiem SP1, 2.0 z dodatkiem SP1.  

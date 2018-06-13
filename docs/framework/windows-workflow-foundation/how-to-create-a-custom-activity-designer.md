@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520347"
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>Porady: tworzenie Projektant działań niestandardowych
 Projektantów działań niestandardowych są zwykle implementowany ich działania skojarzone są zezwala na składanie z innymi działaniami projektantów, których można było porzucić na powierzchnię projektu z nimi. Ta funkcja wymaga, Projektant działań niestandardowych podania "strefy docelowej" rozmieszczenia dowolne działanie, a także sposób zarządzania wynikowy zbiór elementów na powierzchnię projektu. W tym temacie opisano, jak utworzyć projektanta działań niestandardowych, który zawiera strefy docelowej i jak utworzyć designer działania niestandardowego, który zapewnia, że funkcji edytowania potrzebne do zarządzania kolekcję elementów projektanta.  

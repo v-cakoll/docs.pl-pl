@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365504"
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>Aktualizowanie źródła danych za pomocą obiektów DataAdapter
 `Update` Metody <xref:System.Data.Common.DataAdapter> jest wywoływana, aby rozwiązać zmian z <xref:System.Data.DataSet> do źródła danych. `Update` Metody, takiej jak `Fill` metoda, przyjmuje jako argumenty wystąpienia `DataSet`i opcjonalny <xref:System.Data.DataTable> obiektu lub `DataTable` nazwy. `DataSet` Wystąpienie jest `DataSet` zawiera zmiany, które zostały wprowadzone, i `DataTable` identyfikuje tabeli, z której można pobrać zmiany. Jeśli nie `DataTable` jest określony, pierwszy `DataTable` w `DataSet` jest używany.  

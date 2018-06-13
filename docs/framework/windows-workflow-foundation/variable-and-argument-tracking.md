@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516987"
 ---
 # <a name="variable-and-argument-tracking"></a>Zmienna i śledzenia argumentu
 Podczas śledzenia wykonywanie przepływu pracy, często jest przydatne w celu wyodrębnienia danych. Zapewnia dodatkowy kontekst podczas uzyskiwania dostępu do wykonywania post rekordu śledzenia. W [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], można wyodrębnić wszelkie widoczne zmiennej lub argumentu w zakresie wszystkie działania w przepływie pracy za pomocą śledzenia. Śledzenie profile ułatwiają wyodrębnić dane.  

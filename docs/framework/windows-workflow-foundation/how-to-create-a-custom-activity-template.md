@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517852"
 ---
 # <a name="how-to-create-a-custom-activity-template"></a>Porady: Tworzenie szablonu niestandardowego działania
 Szablony niestandardowe działania są używane do dostosowywania konfiguracji działania, w tym niestandardowych działań złożonych, dzięki czemu użytkownicy nie mają utworzyć każde działanie oddzielnie i skonfigurować ich właściwości i inne ustawienia ręcznie. Te szablony niestandardowe mogą być udostępniane w **przybornika** na [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] lub przy użyciu projektanta rehosted, z którego użytkownicy mogą przeciągnij je na powierzchnię projektu wstępnie skonfigurowane. [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] jest dostarczany z dobrym przykładem takich szablonów: [SendAndReceiveReply Template Designer](/visualstudio/workflow-designer/sendandreceivereply-template-designer) i [ReceiveAndSendReply Template Designer](/visualstudio/workflow-designer/receiveandsendreply-template-designer) w [wiadomości projektantów działań](/visualstudio/workflow-designer/messaging-activity-designers) kategorii.  

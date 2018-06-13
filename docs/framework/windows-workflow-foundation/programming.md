@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515691"
 ---
 # <a name="windows-workflow-foundation-programming"></a>Windows Workflow Foundation programowania
 Ta sekcja zawiera zestaw tematów Elementarz, które należy zrozumieć, tworzyć profesjonalne programisty Windows Workflow Foundation (WF).  

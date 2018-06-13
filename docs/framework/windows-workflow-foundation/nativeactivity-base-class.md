@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517270"
 ---
 # <a name="nativeactivity-base-class"></a>Klasa podstawowa działania NativeActivity
 <xref:System.Activities.NativeActivity> jest klasą abstrakcyjną, przy użyciu konstruktora chronionych. Podobnie jak <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> służy do zapisywania konieczne zachowanie zaimplementowanie <xref:System.Activities.NativeActivity.Execute%2A> metody. W odróżnieniu od <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> ma dostęp do wszystkich funkcji dostępnego środowiska uruchomieniowego przepływu pracy za pośrednictwem <xref:System.Activities.NativeActivityContext> obiekt przekazywany do <xref:System.Activities.NativeActivity.Execute%2A> metody.  

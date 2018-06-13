@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516249"
 ---
 # <a name="rules-samples"></a>Przykłady reguł
 Ta sekcja zawiera przykłady ilustrujące przy użyciu reguł aparatu przepływu pracy z [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)].  

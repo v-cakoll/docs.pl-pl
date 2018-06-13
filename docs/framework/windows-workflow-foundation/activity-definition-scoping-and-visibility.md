@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518505"
 ---
 # <a name="activity-definition-scoping-and-visibility"></a>Określanie zakresu definicji działania i widoczność
 Zakresu definicji działania i widoczność, podobnie jak zakres i widoczność obiektu, jest możliwość dostęp do elementów członkowskich działanie innych obiektów lub działania. Definicja aktywności jest wykonywane przez implementacje następujące:  

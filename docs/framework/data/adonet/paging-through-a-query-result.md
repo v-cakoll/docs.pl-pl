@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358971"
 ---
 # <a name="paging-through-a-query-result"></a>Stronicowanie za pośrednictwem wyników z kwerendy
 Stronicowanie za pośrednictwem wyników z kwerendy jest proces zwracania wyników zapytania w mniejszych podzbiór danych lub strony. To jest typowym rozwiązaniem do wyświetlania wyników z kontem użytkownika w małych, łatwe w zarządzaniu fragmentów.  

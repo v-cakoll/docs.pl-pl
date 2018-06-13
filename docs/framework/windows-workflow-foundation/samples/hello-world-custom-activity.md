@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515846"
 ---
 # <a name="hello-world-custom-activity"></a>Witaj świecie niestandardowego działania
 W przykładzie pokazano kilka najważniejsze funkcje programu Windows Workflow Foundation (WF), łącznie ze sposobem tworzenia prostych działań niestandardowych. Niektóre funkcje zostało to pokazane w tym przykładzie tworzenia działań niestandardowych w języku C# i za pomocą `in` i `out` argumentów (<xref:System.Activities.InArgument> i <xref:System.Activities.OutArgument>).  

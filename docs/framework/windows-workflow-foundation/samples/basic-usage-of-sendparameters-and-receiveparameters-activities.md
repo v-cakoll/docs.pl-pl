@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515401"
 ---
 # <a name="basic-usage-of-sendparameters-and-receiveparameters-activities"></a>Podstawowe sposoby użycia SendParameters i ReceiveParameters działania
 W tym przykładzie pokazano sposób użycia <xref:System.ServiceModel.Activities.SendParametersContent> i <xref:System.ServiceModel.Activities.ReceiveParametersContent> działań. Usługa przedstawia jedną operację, która przyjmuje argument będący ciągiem i zwraca dane wejściowe do klienta. Przykład pokazuje, jak do ustawiania parametrów dla tych działań komunikacji.  

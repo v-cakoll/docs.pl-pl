@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517923"
 ---
 # <a name="store-extensibility"></a>Rozszerzalność magazynu
 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> Umożliwia użytkownikom wspierania właściwości niestandardowych, specyficzne dla aplikacji, które mogą być używane w zapytaniu dla wystąpień w bazie danych trwałości. Fakt podwyższania właściwości powoduje, że wartości mają być dostępne w widoku specjalne w bazie danych. Te awansowanej właściwości (właściwości, które mogą być używane w zapytaniach użytkownika) mogą być typy proste, takie jak Int64, identyfikator Guid, typ String i DateTime lub serializacji typu binarnego (byte[]).  

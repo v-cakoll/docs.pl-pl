@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505973"
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>Atrybuty modelu ServiceModel i odwołanie modelu ServiceDescription
 *Drzewa opis* jest hierarchia typów (począwszy od <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> klasy) ze sobą opisują każdego aspektu działania usługi. Windows Communication Foundation (WCF) używa drzewa opis do środowiska wykonawczego prawidłową usługę, do publikowania w sieci Web Services Description Language (WSDL), języka definicji schematu XML (XSD) i potwierdzeń zasad (metadanymi) o usługę, której klienci mogą używać do tworzenia Nawiązywanie połączenia i korzystania z usługi i generowania różne reprezentacje kodem i konfiguracją pliku wartości drzewa opis.  

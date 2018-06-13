@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523892"
 ---
 # <a name="graphics-paths-in-gdi"></a>Ścieżki grafiki w GDI+
 Ścieżki jest tworzony przez połączenie linii, prostokątów i krzywych proste. Wycofaj z [Przegląd grafiki wektorowej](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md) czy następujących podstawowych bloków konstrukcyjnych okazały się najbardziej przydatny w przypadku rysowania obrazów:  

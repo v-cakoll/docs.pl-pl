@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523877"
 ---
 # <a name="how-to-display-pop-up-help"></a>Porady: wyświetlanie pomocy podręcznej
 Jednym ze sposobów Wyświetla Pomoc w formularzach systemu Windows odbywa się za pośrednictwem **pomocy** przycisk znajdujący się po prawej stronie paska tytułu dostępny za pośrednictwem <xref:System.Windows.Forms.Form.HelpButton%2A> właściwości. Ten typ wyświetlania Pomocy jest dobrze nadaje się do użytku z okien dialogowych. Okna dialogowe wyświetlane w trybie modalnym (z <xref:System.Windows.Forms.Form.ShowDialog%2A> — metoda) ma problem otworzeniem zewnętrzna Pomoc systemów, ponieważ muszą być zamknięte przed fokus można przejść do innego okna modalne okna dialogowe. Ponadto przy użyciu **pomocy** przycisk wymóg nie **Minimalizuj** przycisk lub **Maksymalizuj** przycisku znajdującego się na pasku tytułu. Jest to standardowe okno dialogowe Konwencja, formularze zazwyczaj mają **Minimalizuj** i **Maksymalizuj** przycisków.  

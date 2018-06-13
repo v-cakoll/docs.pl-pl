@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516568"
 ---
 # <a name="transaction-convoy-scope"></a>Zakres który transakcji
 Ten przykład przedstawia sposób tworzenia równoległych który wiadomości wzorzec działania w połączeniu z <xref:System.ServiceModel.Activities.TransactedReceiveScope> do modelowania protokołu, na której liczba operacji może się zdarzyć w dowolnej kolejności, wszystkie w tej samej transakcji. W tym przykładzie również pokazano, jak <xref:System.ServiceModel.Activities.TransactedReceiveScope> automatycznie tworzy nową transakcję, gdy jeden jest nie umieszczane na serwerze, więc klienta nie powoduje użycie wszystkich transakcji.  

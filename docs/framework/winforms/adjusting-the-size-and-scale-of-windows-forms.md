@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516416"
 ---
 # <a name="adjusting-the-size-and-scale-of-windows-forms"></a>Dostosowywanie rozmiaru i skali formularzy systemu Windows
 Ten temat zawiera linki do informacji na temat zmieniania rozmiaru formularzy systemu Windows.  

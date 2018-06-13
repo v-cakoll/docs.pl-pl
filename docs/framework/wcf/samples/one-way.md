@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505710"
 ---
 # <a name="one-way"></a>Komunikacja jednokierunkowa
 W przykładzie pokazano kontaktu usługi z usługi jednokierunkowej operacji. Klient czeka na zakończenie jak w przypadku operacji usługi dwukierunkowe operacji usługi. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) i używa `wsHttpBinding` powiązania. Usługa w tym przykładzie jest aplikacji konsoli siebie umożliwia obserwowanie usługa, która odbiera i przetwarza żądania. Klient jest również aplikacji konsoli.  

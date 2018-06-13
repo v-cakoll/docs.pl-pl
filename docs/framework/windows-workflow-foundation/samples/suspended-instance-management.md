@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519226"
 ---
 # <a name="suspended-instance-management"></a>Zarządzanie wystąpieniami wstrzymane
 W tym przykładzie pokazano, jak zarządzać wystąpienia przepływu pracy, które zostało zawieszone.  Domyślnym działaniem <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> jest `AbandonAndSuspend`. Oznacza to, że domyślnie nieobsługiwane wyjątki rzucane z wystąpieniem przepływu pracy hostowanych w <xref:System.ServiceModel.WorkflowServiceHost> spowoduje wystąpienie można usunąć z pamięci (porzucone) i wersji niezawodny/utrwalony wystąpienia może być oznaczony jako zawieszone. Nie będzie można uruchamiać, dopóki zostanie Anulowano wystąpienie Wstrzymany przepływ pracy.  

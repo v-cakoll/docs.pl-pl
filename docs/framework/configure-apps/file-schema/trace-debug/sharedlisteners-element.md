@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745578"
 ---
 # <a name="ltsharedlistenersgt-element"></a>&lt;sharedListeners&gt; — Element
 Zawiera nasłuchujących może odwoływać się wszystkie źródła lub element śledzenia.  Te odbiorniki nie otrzymują śladów domyślnie i nie jest możliwe pobrać te odbiorniki w czasie wykonywania. Obiekty nasłuchujące zidentyfikowane jako udostępnione obiekty nasłuchujące można dodać do źródła lub śledzenie według nazwy.  

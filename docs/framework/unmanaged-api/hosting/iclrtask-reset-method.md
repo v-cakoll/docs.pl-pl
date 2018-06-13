@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435945"
 ---
 # <a name="iclrtaskreset-method"></a>ICLRTask::Reset — Metoda
 Informuje o środowisko uruchomieniowe języka wspólnego (CLR) została ukończona zadania hosta i umożliwia CLR do ponownego użycia bieżącego [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) wystąpienie do reprezentowania inne zadanie.  

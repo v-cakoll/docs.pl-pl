@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518272"
 ---
 # <a name="nesting-of-transactionscope-within-a-service"></a>Element TransactionScope można zagnieżdżać w ramach usługi
 W tym przykładzie składa się z dwóch scenariuszy uruchomienia przedstawiający sposób obsługi <xref:System.Activities.Statements.TransactionScope> wystąpienia działania w ramach usługi. Najpierw transakcja jest inicjowana przy użyciu <xref:System.Activities.Statements.TransactionScope> działanie, aby utworzyć nową transakcję na kliencie i <xref:System.ServiceModel.Activities.TransactedReceiveScope> otrzymywanie i zakres okres istnienia transakcji na serwerze. Pierwszego scenariusza, w ramach usługi uruchamia dodatkowej <xref:System.Activities.Statements.TransactionScope> działania, aby zademonstrować zagnieżdżanie <xref:System.Activities.Statements.TransactionScope> działań w ramach usługi. Drugi scenariusz pokazuje, jak są przestrzegane limitów czasu w zagnieżdżonych <xref:System.Activities.Statements.TransactionScope> działań.  

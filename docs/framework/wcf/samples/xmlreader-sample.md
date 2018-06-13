@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506891"
 ---
 # <a name="xmlreader-sample"></a>Przykład klasy XmlReader
 Przetwarzanie treści wiadomości przy użyciu przedstawia przykład klasy XmlReader <xref:System.Xml.XmlReader>. Próbki jest oparta na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje usługi Kalkulator. Operacja dodatkowe usługi, `Sum`, dodano, która akceptuje wiadomość, która zawiera tablicę wartości, aby dodać jednocześnie. Usługa odczytuje komunikat przy użyciu <xref:System.Xml.XmlReader>.  

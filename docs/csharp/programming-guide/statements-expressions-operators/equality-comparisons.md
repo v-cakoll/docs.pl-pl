@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335251"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Porównywanie równości (Przewodnik programowania w języku C#)
 Czasami jest niezbędne do porównywania dwóch wartości pod kątem równości. W niektórych przypadkach testowych dla *wartość równości*, znanej także jako *ekwiwalencji*, co oznacza, że wartości, które znajdują się w dwóch zmiennych są takie same. W innych przypadkach należy ustalić, czy dwie zmienne odwoływać się do tego samego obiektu źródłowego w pamięci. Równości tego typu jest nazywana *odwołania równości*, lub *tożsamości*. W tym temacie opisano te dwa rodzaje równości oraz zawiera łącza do innych tematów, aby uzyskać więcej informacji.  

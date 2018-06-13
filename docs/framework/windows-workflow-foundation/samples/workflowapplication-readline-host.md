@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518541"
 ---
 # <a name="workflowapplication-readline-host"></a>Działanie obiektu WorkflowApplication ReadLine hosta
 Ten przykład jest hostem ReadLine ogólnego. Można załadować i uruchomić każdy przepływ pracy, przy użyciu dołączonej `ReadLine` działania (lub innych działań podoba Ci się pobierające dane z zakładek przywrócone ciągi). Dane wyjściowe z `WriteLine` działania lub jakikolwiek zapisywania <xref:System.Activities.Statements.WriteLine.TextWriter%2A> rozszerzenia jest kierowany do okna hosta. Gdy wystąpienie jest w stanie bezczynności, dostępne zakładki dla danego wystąpienia są wyświetlane w polu kombi. Zakładki, wybierając wprowadzanie za tekstem i naciskając przycisk zakładki Wznów kontynuować wykonywanie przepływu pracy. Można również anulować, przerwania lub przerywania wybrany przepływ pracy. Trwałości jest domyślnie — można zamknąć hosta i przywrócić go, a lista wystąpień jest wypełniana wystąpień w bazie danych. Jest używane śledzenie danych wyjściowych <xref:System.Activities.WorkflowApplication>— poziom zdarzenia do hosta z opcją, aby dodać szczegółowe śledzenie na poziomie działania.  

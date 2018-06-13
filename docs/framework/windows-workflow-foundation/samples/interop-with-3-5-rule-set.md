@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517910"
 ---
 # <a name="interop-with-35-rule-set"></a>Współdziałanie z zestawu reguł w wersji 3.5
 W tym przykładzie przedstawiono użycie <xref:System.Activities.Statements.Interop> działania integracji z działań niestandardowych w [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] przy użyciu <!--zz <xref:System.Workflow.Activities.Policy> --> `System.Workflow.Activities.Policy` i zasady. Przekazuje dane do działania niestandardowego przez powiązanie [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] zmienne do właściwości zależności udostępnianych przez działania niestandardowego.  

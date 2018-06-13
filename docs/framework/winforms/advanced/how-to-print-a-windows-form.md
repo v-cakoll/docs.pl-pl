@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522272"
 ---
 # <a name="how-to-print-a-windows-form"></a>Porady: drukowanie formularza systemu Windows
 W ramach procesu tworzenia zwykle można wydrukować kopię formularza systemu Windows. Poniższy przykładowy kod przedstawia sposób wydrukować kopię bieżącego formularza za pomocą <xref:System.Drawing.Graphics.CopyFromScreen%2A> metody.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508202"
 ---
 # <a name="service-identity-and-authentication"></a>Uwierzytelnianie i tożsamość usług
 Usługa *tożsamość punktu końcowego*jest wartość wygenerowaną przez usługę sieci Web Services Description Language (WSDL). Ta wartość propagowane do dowolnego klienta jest używany do uwierzytelniania usługi. Po inicjowania przez klienta komunikatu do punktu końcowego i usługa samodzielnie przeprowadza uwierzytelnianie klienta, klient porównuje wartości tożsamości punktu końcowego z wartością rzeczywistą zwrócił procesu uwierzytelniania punktu końcowego. Jeśli są zgodne, klient jest pewność, że ma nawiązać kontaktu z punktem końcowym usługi oczekiwanego. Funkcja ta działa jako ochrony przed *phishing* zapobiegając nastąpi przekierowanie do punktu końcowego hostowanej przez usługę złośliwego klienta.  

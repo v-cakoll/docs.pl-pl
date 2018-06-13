@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636718"
 ---
 # <a name="one-or-more-folders-in-the-target-path-do-not-exist"></a>Co najmniej jeden folder w ścieżce docelowej nie istnieje.
 Co najmniej jedna z katalogów dostarczone w ścieżce docelowej nie istnieje. Może to być wynik ścieżką nieprawidłowo przeanalizowane, zwłaszcza w wypadku podając ścieżkę względną.  

@@ -8,6 +8,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457336"
 ---
 # <a name="introduction-to-classes"></a>Wprowadzenie do klas
 

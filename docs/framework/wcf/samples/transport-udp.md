@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808419"
 ---
 # <a name="transport-udp"></a>Transport: UDP
 Przykładowe transportu UDP pokazuje, jak wdrażanie UDP emisji pojedynczej i multiemisji jako niestandardowego transportu Windows Communication Foundation (WCF). Przykład opisuje zalecaną procedurą tworzenia niestandardowych transportu w programie WCF, za pomocą struktura kanału i następujące najlepsze rozwiązania w zakresie usługi WCF. Kroki, aby utworzyć niestandardowe transportu są następujące:  

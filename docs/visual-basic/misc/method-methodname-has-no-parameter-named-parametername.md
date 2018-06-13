@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638320"
 ---
 # <a name="method-39ltmethodnamegt39-has-no-parameter-named-39ltparameternamegt39"></a>Metoda &#39; &lt;methodname&gt; &#39; nie ma parametru o nazwie &#39; &lt;parametername&gt;&#39;
 Podany nazwany argument nie pasuje do żadnego z argumentów metody docelowej.  

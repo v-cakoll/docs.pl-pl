@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636656"
 ---
 # <a name="file-already-exists"></a>Plik już istnieje.
 Ten błąd występuje w wyniku nazewnictwa nowy plik o nazwie istniejącego pliku albo przy użyciu **Zapisz jako** polecenie, aby zapisać aktualnie załadowanego projektu o nazwie, która już istnieje.  

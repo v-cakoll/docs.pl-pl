@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635909"
 ---
 # <a name="file39s-open-mode-wasn39t-set-to-a-valid-value"></a>Plik&#39;s Otwórz tryb był&#39;t, ustaw wartość na prawidłową
 Wartość podana dla trybu otwartego pliku jest nieprawidłowa. W poniższej tabeli przedstawiono prawidłowe wartości <xref:Microsoft.VisualBasic.OpenMode> wyliczenia.  

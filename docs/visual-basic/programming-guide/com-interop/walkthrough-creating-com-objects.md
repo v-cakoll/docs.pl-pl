@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643864"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>Wskazówki: tworzenie obiektów COM z Visual Basic
 Podczas tworzenia nowej aplikacji i składników, najlepiej utworzyć zestawy .NET Framework. Jednak Visual Basic również ułatwia udostępnianie składników .NET Framework modelowi COM. Umożliwia podanie nowych składników starszych pakietów aplikacji wymagających składników COM. W tym przewodniku przedstawiono sposób użycia języka Visual Basic do udostępnienia [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] obiekty jako obiekty COM, zarówno z i bez szablonu klasy COM.  

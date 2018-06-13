@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603538"
 ---
 # <a name="sub-expression-visual-basic"></a>Sub — Wyrażenie (Visual Basic)
 Deklaruje parametry i kod, który definiuje procedurę wyrażenia lambda.  

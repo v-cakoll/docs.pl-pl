@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636568"
 ---
 # <a name="get-not-supported-at-run-time"></a>Get nie jest możliwa w czasie wykonywania
 Próbowano odczytać właściwości w czasie wykonywania, który jest dostępny tylko w czasie projektowania.  

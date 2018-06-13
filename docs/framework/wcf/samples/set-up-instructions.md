@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809108"
 ---
 # <a name="set-up-instructions"></a>Instrukcje dotyczące konfiguracji
 Ten zbiór tematów zawiera opis sposobu konfigurowania usług, które są wymagane do uruchamiania usługi Windows Communication Foundation (WCF).  

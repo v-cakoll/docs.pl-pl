@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809306"
 ---
 # <a name="custom-lifetime"></a>Niestandardowy okres istnienia
 W tym przykładzie pokazano, jak napisać rozszerzenia programu Windows Communication Foundation (WCF) do świadczenia usług Niestandardowy okres istnienia dla udostępnionego wystąpienia usługi WCF.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809020"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)
 Narzędzia podglądu śledzenia usługi Windows Communication Foundation (WCF) pomaga analizować dane śledzenia diagnostycznego, które są generowane przez usługę WCF. Przeglądarki danych śledzenia usługi umożliwia łatwe scalania, widoków i filtrować komunikaty śledzenia w dzienniku, tak aby zdiagnozować, naprawy i sprawdź problemów dotyczących usługi WCF.  

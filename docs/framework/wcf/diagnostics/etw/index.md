@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809267"
 ---
 # <a name="analytic-tracing-with-etw"></a>Śledzenie analityczne za pomocą funkcji ETW
 Śledzenie analityczne Windows Communication Foundation (WCF) daje możliwość przechwytywania informacji diagnostycznych podczas wykonywania usługi WCF. Zdarzenia śledzenia analitycznego WCF są emitowane po klucz wskazuje na stosie WCF umożliwia rozwiązywanie problemów z usług WCF w środowisku produkcyjnym. Śledzenie analityczne dla usług WCF ma minimalny wpływ na wydajność serwera produktu obsługującego [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] usług WCF, jak te zdarzenia są bardzo wydajnie wysyłanego do sesji zdarzeń śledzenia zdarzeń systemu Windows (ETW).  

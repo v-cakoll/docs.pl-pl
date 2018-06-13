@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537606"
 ---
 # <a name="windows-forms-controls"></a>Formanty formularzy systemu Windows
 Podczas projektowania i zmodyfikować interfejsu użytkownika w aplikacji formularzy systemu Windows, należy dodać, wyrównywanie i umieść formanty. Formanty są obiekty, które są zawarte w postaci obiektów. Każdy typ formantu ma swój własny zestaw właściwości, metod i zdarzeń, które była odpowiednia dla określonego celu. Można manipulować formantów w Projektancie i napisać kod do dodawania formantów dynamicznie w czasie wykonywania.  

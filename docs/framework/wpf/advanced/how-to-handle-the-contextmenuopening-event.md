@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547488"
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>Porady: obsługa zdarzenia ContextMenuOpening
 <xref:System.Windows.FrameworkElement.ContextMenuOpening> Zdarzeń mogą być obsługiwane w aplikacji albo dostosować istniejący przed menu kontekstu do wyświetlania lub pominąć menu, które w przeciwnym razie będzie wyświetlana przez ustawienie <xref:System.Windows.RoutedEventArgs.Handled%2A> właściwości `true` w danych zdarzenia. Typowe przyczyny ustawienie <xref:System.Windows.RoutedEventArgs.Handled%2A> do `true` zdarzeń danych ma zastąpić menu całkowicie nową <xref:System.Windows.Controls.ContextMenu> obiektów, co wymaga czasami anulowanie operacji i uruchomienie nowej Otwórz. Podczas pisania obsług dla <xref:System.Windows.FrameworkElement.ContextMenuOpening> zdarzenia, należy zwrócić uwagę problemy dotyczące synchronizacji między <xref:System.Windows.Controls.ContextMenu> kontroli i usługi, która jest odpowiedzialna za otwierania i ogólnie pozycjonowanie menu kontekstowe dla formantów. W tym temacie przedstawiono niektóre techniki kodu dla różnych menu kontekstowe otwierania scenariuszy i przedstawiono w przypadku, gdy problem chronometrażu wejścia play.  

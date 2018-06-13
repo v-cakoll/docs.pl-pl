@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420924"
 ---
 # <a name="icordebugobjectvalue2-interface1"></a>ICorDebugObjectValue2 Interface1
 Umożliwia rozbudowywanie interfejsu "ICorDebugObjectValue" do obsługi dziedziczenia i zastępuje.  

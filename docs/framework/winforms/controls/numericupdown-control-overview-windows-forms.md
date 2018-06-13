@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537164"
 ---
 # <a name="numericupdown-control-overview-windows-forms"></a>NumericUpDown — Informacje o formancie [Formularze systemu Windows]
 <xref:System.Windows.Forms.NumericUpDown> Kontroli wygląda kombinację pole tekstowe i parę strzałki, które użytkownik może kliknąć, aby dostosować wartość. Kontrolka Wyświetla i ustawia pojedyncza wartość liczbowa z listy stałym opcji wartością numeryczną. Użytkownik może zwiększyć i zmniejszyć liczbę, klikając pozycję w górę i w dół strzałki, naciskając klawisze strzałek w górę i w dół lub wpisując liczbę w polu tekstowym formantu. Klikając przycisk strzałki w górę przenosi liczbę kierunku maksymalną; klikając przycisk Strzałka w dół przenosi liczbę kierunku minimum.  

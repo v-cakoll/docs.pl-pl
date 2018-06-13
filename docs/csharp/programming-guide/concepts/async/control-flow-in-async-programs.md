@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336626"
 ---
 # <a name="control-flow-in-async-programs-c"></a>Przepływ sterowania w aplikacjach asynchronicznych (C#)
 Możesz wpisać i obsługa asynchroniczne programy łatwiej przy użyciu `async` i `await` słów kluczowych. Jednak wyniki, może Cię zaskoczył Jeśli nie znasz sposób działania programu. Ślady tego tematu, które przepływu sterowania za pośrednictwem programu async proste do wyświetlenia, gdy formant są przenoszone z jednej metody do innej i jakie informacje są przesyłane za każdym razem.  

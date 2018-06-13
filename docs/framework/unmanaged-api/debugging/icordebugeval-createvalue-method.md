@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417115"
 ---
 # <a name="icordebugevalcreatevalue-method"></a>ICorDebugEval::CreateValue — Metoda
 Tworzy wartość określonego typu o wartości początkowej zero lub wartość null.  

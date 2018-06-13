@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427911"
 ---
 # <a name="isymunmanagedwriteropenmethod-method"></a>ISymUnmanagedWriter::OpenMethod — Metoda
 Zostanie otwarty w którym symbol informacje są emitowane metody. Podanej metody staje się bieżącej metody dla wywołania do definiowania punkty sekwencji, parametrów i leksykalne zakresów. Istnieje niejawna zakres leksykalne wokół całej metody. Otworzyć ponownie metodę, która została wcześniej zamknięta usuwa żadnych wcześniej zdefiniowanych symboli dla tej metody. Jednocześnie może istnieć tylko jedna metoda open.  

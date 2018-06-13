@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533234"
 ---
 # <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>Porady: tworzenie tekstu o zmiennym rozmiarze w formancie ComboBox
 W tym przykładzie przedstawiono rysowanie niestandardowego tekstu w <xref:System.Windows.Forms.ComboBox> formantu. Jeśli element spełnia określone kryteria, jest rysowana w większej czcionki i włączone czerwony.  

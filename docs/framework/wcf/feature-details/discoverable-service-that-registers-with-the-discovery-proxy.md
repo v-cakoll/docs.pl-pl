@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490600"
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Porady: Implementowanie wykrywalnej usługi, który rejestruje przy użyciu serwera Proxy odnajdywania
 Ten temat jest drugi cztery tematach omówiono sposób wdrożenia serwera proxy odnajdywania. W poprzednim temacie [porady: Implementowanie serwera Proxy odnajdywania](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), zaimplementowana serwera proxy odnajdywania. W tym temacie Tworzenie usługi WCF, która wysyła komunikaty anonsów (`Hello` i `Bye`) do odnajdowania serwera proxy, co powoduje rejestrowanie i wyrejestrowywanie się przy użyciu serwera proxy odnajdywania.  

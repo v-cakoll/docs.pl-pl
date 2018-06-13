@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549766"
 ---
 # <a name="routed-events-overview"></a>Przegląd Zdarzenia trasowane
 W tym temacie opisano pojęcia kierowane zdarzenia w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Temat definiuje terminologii kierowane zdarzenia, w tym artykule opisano sposób kierowane zdarzenia są wysyłane za pośrednictwem drzewa elementów, zawiera podsumowanie sposobu obsługi kierowane zdarzenia oraz przedstawiono sposób tworzenia własnego niestandardowego kierowane zdarzenia.

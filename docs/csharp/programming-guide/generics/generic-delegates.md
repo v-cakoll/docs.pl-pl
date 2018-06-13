@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332910"
 ---
 # <a name="generic-delegates-c-programming-guide"></a>Delegaty ogólne (Przewodnik programowania w języku C#)
 A [delegować](../../../csharp/language-reference/keywords/delegate.md) można zdefiniować własny parametrów typu. Kod, że odwołania Delegat ogólny można określić argumentu typu można utworzyć typu skonstruowane zamknięte, podobnie jak w przypadku tworzenia wystąpienia klasy ogólnej lub wywołanie metody ogólnej, jak pokazano w poniższym przykładzie:  

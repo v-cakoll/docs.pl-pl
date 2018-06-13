@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755334"
 ---
 # <a name="transports"></a>Transporty
 Warstwa transportu jest na najniższym poziomie stosu kanału. Transporty główne używane w systemie Windows Communication Foundation (WCF) są HTTP, HTTPS TCP i potoków nazwanych. Ta sekcja zawiera listę wszystkich elementów konfiguracji, które umożliwiają skonfigurowanie różnych typów transportów.  

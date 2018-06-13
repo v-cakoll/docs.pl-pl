@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547654"
 ---
 # <a name="property-change-events"></a>Zdarzenia zmiany właściwości
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] definiuje kilka zdarzeń, które zostały zgłoszone w odpowiedzi na zmianę wartości właściwości. Właściwość jest często właściwości zależności. Samym zdarzeniu jest czasami kierowanego zdarzenia i czasami jest standardem [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] zdarzeń. Definicji zdarzenia może być różna w zależności od scenariusza, ponieważ niektóre zmiany właściwości odpowiedniej są wysyłane za pośrednictwem drzewo elementu inne zmiany właściwości są zwykle tylko dotyczących obiektów, których zmianie właściwości.  

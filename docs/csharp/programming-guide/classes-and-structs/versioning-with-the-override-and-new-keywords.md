@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327554"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Przechowywanie wersji przesłonięć i nowych słów kluczowych (Przewodnik programowania w języku C#)
 Zaprojektowano w języku C#, aby versioning między [podstawowej](../../../csharp/language-reference/keywords/base.md) i klas pochodnych w różne biblioteki można rozwijać i zachować zgodność z poprzednimi wersjami. Oznacza to, na przykład, że wprowadzenie nowego elementu członkowskiego w podstawowym [klasy](../../../csharp/language-reference/keywords/class.md) z taką samą nazwę jak element członkowski w klasie pochodnej jest całkowicie obsługiwana w języku C# i nie prowadzić do nieoczekiwanego zachowania. Oznacza to również, że klasa musi jawnie określać, czy metoda jest przeznaczona do przesłonięcia dziedziczonej metody, lub czy metoda jest nowa metoda, która ukrywa o podobnej nazwie dziedziczone — metoda.  

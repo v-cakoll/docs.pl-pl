@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322344"
 ---
 # <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a>Porady: testowanie równości odwołań (tożsamości) (Przewodnik programowania w języku C#)
 Nie masz wdrożenia dowolnej niestandardowej logiki do obsługi odwołania porównywanie równości w typach sieci. Ta funkcja jest udostępniane na potrzeby wszystkich typów statycznych <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> metody.  

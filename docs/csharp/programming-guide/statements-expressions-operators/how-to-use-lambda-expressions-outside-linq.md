@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328958"
 ---
 # <a name="how-to-use-lambda-expressions-outside-linq-c-programming-guide"></a>Porady: użycie wyrażeń lambda poza LINQ (Przewodnik programowania w języku C#)
 Wyrażenia lambda nie są ograniczone do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania. Można je tam, gdzie wartość delegata oczekuje, oznacza to, wszędzie tam, gdzie można metody anonimowej. Poniższy przykład przedstawia użycie wyrażenia lambda w obsłudze zdarzeń formularzy systemu Windows. Zwróć uwagę, że typy danych wejściowych (<xref:System.Object> i <xref:System.Windows.Forms.MouseEventArgs>) są wykryta przez kompilator i nie muszą być określone jawnie w parametrach wejściowych lambda.  

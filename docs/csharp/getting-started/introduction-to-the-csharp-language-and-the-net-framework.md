@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217288"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Wprowadzenie do języka C# i systemu .NET Framework
 C# jest elegancki i bezpieczne zorientowany obiektowo język, który umożliwia deweloperom tworzenie szerokiej gamy bezpieczeństwa i niezawodności aplikacji uruchamianych na [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Służy C# do tworzenia klienta systemu Windows aplikacji, usług XML sieci Web, rozproszonej składniki, klient serwer aplikacji, aplikacje baz danych i znacznie, znacznie więcej. Visual C# zawiera edytora kodu zaawansowane, projektantów interfejsu użytkownika wygodny zintegrowane debugera i inne narzędzia ułatwiające tworzenie aplikacji na podstawie języka C# i [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  

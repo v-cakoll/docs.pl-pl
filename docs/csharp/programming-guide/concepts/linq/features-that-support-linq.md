@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325211"
 ---
 # <a name="c-features-that-support-linq"></a>Funkcje C# obsługujące LINQ
 Poniższa sekcja wprowadza nowe konstrukcje języka wprowadzono w języku C# 3.0. Chociaż te nowe funkcje są używane w stopniu z [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytań, nie są one ograniczone do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] i mogą być używane w dowolnym kontekście gdzie użyteczna je.  

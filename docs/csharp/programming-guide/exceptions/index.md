@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335268"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Wyjątki i obsługa wyjątków (Przewodnik programowania w języku C#)
 Obsługa funkcji pomocy wyjątków języka C# uwzględniać nieoczekiwany lub wyjątkowych sytuacji, które wystąpić, gdy program jest uruchomiony. Obsługa używa wyjątków `try`, `catch`, i `finally` słów kluczowych, aby spróbować akcje, które może się nie powieść, do obsługi błędów w przypadku podjęcia decyzji, czy jest uzasadnione, aby to zrobić, a także aby wyczyścić zasoby później. Wyjątki mogą być generowane przez środowisko uruchomieniowe języka wspólnego (CLR) programu .NET Framework lub żadnych bibliotek innej firmy lub przez kod aplikacji. Wyjątki są tworzone za pomocą `throw` — słowo kluczowe.  

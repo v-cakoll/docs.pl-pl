@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553731"
 ---
 # <a name="label"></a>Etykieta
 <xref:System.Windows.Controls.Label> Formanty zwykle zawierają informacje w [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  W przeszłości <xref:System.Windows.Controls.Label> ma zawiera tylko tekst, ale ponieważ <xref:System.Windows.Controls.Label> który jest dostarczany z [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] jest <xref:System.Windows.Controls.ContentControl>, może zawierać text lub <xref:System.Windows.UIElement>.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334759"
 ---
 # <a name="boxing-nullable-types-c-programming-guide"></a>Konwersja boxing typów dopuszczających wartości zerowe (Przewodnik programowania w języku C#)
 Obiekty na podstawie typów wartości null są opakowany tylko, jeśli obiekt jest inne niż null. Jeśli <xref:System.Nullable%601.HasValue%2A> jest `false`, odwołanie do obiektu jest przypisany do `null` zamiast boxing. Na przykład:  

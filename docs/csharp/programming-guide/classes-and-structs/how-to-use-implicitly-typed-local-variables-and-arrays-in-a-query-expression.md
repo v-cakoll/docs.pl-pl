@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319328"
 ---
 # <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a>Porady: użycie niejawnie wpisanych zmiennych lokalnych i tablic w wyrażeniu zapytania (Przewodnik programowania w języku C#)
 Niejawnie wpisane zmienne lokalne służy zawsze, gdy kompilator można określić typu zmienną lokalną. Niejawnie wpisane zmienne lokalne musi używać do przechowywania typy anonimowe, które są często używane w wyrażeniach zapytań. Poniższe przykłady przedstawiają zarówno opcjonalne i wymagane zastosowań niejawnie wpisane zmienne lokalne w zapytaniach.  

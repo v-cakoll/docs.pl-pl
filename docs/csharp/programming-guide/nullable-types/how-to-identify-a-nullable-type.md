@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333186"
 ---
 # <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>Porady: identyfikowanie typu dopuszczającego wartość zerową (Przewodnik programowania w języku C#)
 Można użyć języka C# [typeof](../../../csharp/language-reference/keywords/typeof.md) operatora do utworzenia <xref:System.Type> obiekt, który reprezentuje typ dopuszczający wartość null:  

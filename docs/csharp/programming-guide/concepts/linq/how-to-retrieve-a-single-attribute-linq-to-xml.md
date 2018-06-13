@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321291"
 ---
 # <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>Porady: pobieranie jeden atrybut (LINQ do XML) (C#)
 W tym temacie wyjaśniono, jak pobrać jeden atrybut elementu jest podana nazwa atrybutu. Jest to przydatne dla wyrażeń zapytania, które chcesz znaleźć element, który ma określonego atrybutu.  

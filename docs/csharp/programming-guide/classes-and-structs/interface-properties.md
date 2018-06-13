@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325412"
 ---
 # <a name="interface-properties-c-programming-guide"></a>Właściwości interfejsu (Przewodnik programowania w języku C#)
 Właściwości mogą być deklarowane w [interfejsu](../../../csharp/language-reference/keywords/interface.md). Poniżej przedstawiono przykład metody dostępu interfejsu indeksatora:  

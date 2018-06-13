@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317027"
 ---
 # <a name="passing-value-type-parameters-c-programming-guide"></a>Przekazywanie parametrów typu wartość (Przewodnik programowania w języku C#)
 A [typ wartości](../../../csharp/language-reference/keywords/value-types.md) zmienna zawiera dane bezpośrednio w przeciwieństwie do [Typ referencyjny](../../../csharp/language-reference/keywords/reference-types.md) zmiennej, która zawiera odwołanie do danych. Przekazywanie zmiennej typu wartość do metody przez wartość oznacza, że przekazywanie kopię zmienną do metody. Wszelkie zmiany do parametru, które odbywają się wewnątrz metody ma nie będzie miała wpływu na oryginalne dane przechowywane w zmiennej argumentu. Jeśli chcesz wywołaną metodę, aby zmienić wartości parametru, trzeba przekazać go przez odwołanie, za pomocą [ref](../../../csharp/language-reference/keywords/ref.md) lub [się](../../../csharp/language-reference/keywords/out-parameter-modifier.md) — słowo kluczowe. Można także użyć [w](../../../csharp/language-reference/keywords/out-parameter-modifier.md) — słowo kluczowe do przekazania parametrów wartość przez odwołanie, aby uniknąć kopii przy jednoczesnym zagwarantowaniu, że wartość nie zostanie zmieniona. Dla uproszczenia przedstawiono przykłady użycia `ref`.  

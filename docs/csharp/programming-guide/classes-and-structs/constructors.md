@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33314037"
 ---
 # <a name="constructors-c-programming-guide"></a>Konstruktorzy (Przewodnik programowania w języku C#)
 Zawsze, gdy [klasy](../../../csharp/language-reference/keywords/class.md) lub [struktury](../../../csharp/language-reference/keywords/struct.md) jest utworzona, jest nazywany jego konstruktora. Klasy lub struktury może mieć wiele konstruktorów przyjmujących różnych argumentów. Konstruktory Włącz programisty ustawić wartości domyślne, ograniczyć wystąpienia i pisania kodu, który jest elastyczny i łatwy do odczytania. Aby uzyskać dodatkowe informacje i przykłady, zobacz [za pomocą konstruktorów](../../../csharp/programming-guide/classes-and-structs/using-constructors.md) i [konstruktorów wystąpienia](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  

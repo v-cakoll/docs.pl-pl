@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332313"
 ---
 # <a name="using-conversion-operators-c-programming-guide"></a>Używanie operatorów konwersji (Przewodnik programowania w języku C#)
 Można użyć `implicit` operatory konwersji, które są łatwiejsze do użycia, lub `explicit` operatory konwersji, wskazujące wyraźnie innym osobom odczytywanie kod czy podczas konwertowania typu. W tym temacie przedstawiono oba rodzaje operatora konwersji.  

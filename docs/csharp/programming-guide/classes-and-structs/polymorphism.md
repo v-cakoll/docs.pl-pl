@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328448"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polimorfizm (Przewodnik programowania w języku C#)
 Polimorfizm jest często określany jako trzeci słupka o programowanie zorientowane obiektowo, po hermetyzacji i dziedziczenia. Polimorfizm jest słowem grecki, która oznacza "wiele kształcie" i ma dwa różne aspekty:  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320667"
 ---
 # <a name="generics-and-arrays-c-programming-guide"></a>Typy ogólne i tablice (Przewodnik programowania w języku C#)
 W języku C# 2.0 i nowszych tablice jednowymiarowe, które mają automatycznie dolna granica zero zaimplementować <xref:System.Collections.Generic.IList%601>. Dzięki temu można utworzyć metody ogólne, których można użyć tego samego kodu do iteracji i inne typy kolekcji tablic. Ta technika jest szczególnie przydatna do odczytywania danych w kolekcjach. <xref:System.Collections.Generic.IList%601> Interfejsu nie może służyć do dodawania lub usuwania elementów z tablicy. Zostanie wygenerowany wyjątek przy próbie wywołania <xref:System.Collections.Generic.IList%601> metody, takie jak <xref:System.Collections.Generic.IList%601.RemoveAt%2A> na tablicy w tym kontekście.  

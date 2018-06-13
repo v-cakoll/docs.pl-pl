@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549373"
 ---
 # <a name="table-overview"></a>Przegląd Tabela
 <xref:System.Windows.Documents.Table> jest elementem poziomu bloku, który obsługuje oparte na siatce prezentacji zawartości dokumentu przepływu. Elastyczność tego elementu ułatwia bardzo przydatne, ale również umożliwia bardziej skomplikowane zrozumieniu i użytkowaniu poprawnie.  

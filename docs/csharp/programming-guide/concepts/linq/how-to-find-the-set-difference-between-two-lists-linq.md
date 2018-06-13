@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322942"
 ---
 # <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>Porady: znajdowanie różnicy pomiędzy dwoma listami (LINQ) (C#)
 Ten przykład przedstawia sposób użycia LINQ do porównywania dwóch list ciągów i dane wyjściowe tych wierszy, które są names1.txt, ale nie w names2.txt.  

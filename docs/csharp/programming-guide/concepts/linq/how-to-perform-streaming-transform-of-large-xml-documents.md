@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325607"
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a>Porady: wykonaj przesyłania strumieniowego transformacji dokumentów XML duże (C#)
 Czasami trzeba transformacji dużych plików XML i zapisać aplikacji, dzięki czemu zużycie pamięci aplikacji jest atrybutem wartości prognozowanych. Jeśli spróbujesz wypełnić drzewo XML z bardzo dużych plików XML, użycie pamięci będzie proporcjonalny do rozmiaru pliku (to znaczy nadmiernego). W związku z tym należy w zamian użyj technika przesyłania strumieniowego.  

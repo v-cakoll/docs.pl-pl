@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324827"
 ---
 # <a name="how-to-join-two-collections-linq-to-xml-c"></a>Porady: Dołącz dwie kolekcje (LINQ do XML) (C#)
 Element lub atrybut w dokumencie XML czasami mogą odwoływać się do innego elementu lub atrybutu. Na przykład [przykładowego pliku XML: Klienci i zamówienia (LINQ do XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md) dokument XML zawiera listę klientów i listę zleceń. Każdy `Customer` zawiera element `CustomerID` atrybutu. Każdy `Order` zawiera element `CustomerID` elementu. `CustomerID` Elementu w każdej kolejności odwołuje się do `CustomerID` atrybutu w klienta.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334538"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>Typy ogólne w czasie wykonywania (Przewodnik programowania w języku C#)
 Gdy ogólnym typie lub metoda jest kompilowany na język pośredni firmy Microsoft (MSIL), zawiera metadanych, który identyfikuje ją jako mający parametrów typu. Jak MSIL dla typu ogólnego jest używany różni się zależnie od Określa, czy parametr dostarczony typ ma wartość lub typ odwołania.  

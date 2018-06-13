@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326901"
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-c"></a>Porady: dodawanie metod niestandardowych do kwerend LINQ (C#)
 Można rozszerzyć zestaw metod, których można używać do kwerend LINQ przez dodanie metody rozszerzenia umożliwiające <xref:System.Collections.Generic.IEnumerable%601> interfejsu. Na przykład oprócz standardowych średniej lub maksymalna operacji, można tworzyć niestandardowe metody agregacji do obliczenia wartości jednego z sekwencji wartości. Można również utworzyć metodę, która działa jako filtr niestandardowy lub przekształcania określonych danych sekwencji wartości i zwraca nową sekwencję. Przykłady takich metod <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A>, i <xref:System.Linq.Enumerable.Reverse%2A>.  

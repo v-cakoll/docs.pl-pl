@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589100"
 ---
 # <a name="decrypting-data"></a>Odszyfrowywanie danych
 Odszyfrowywanie jest odwrotnej operacji szyfrowania. Do szyfrowania klucza tajnego musisz znać klucz i IV, które były używane do szyfrowania danych. Do szyfrowania klucza publicznego musisz znać klucza publicznego (jeśli zostały zaszyfrowane przy użyciu klucza prywatnego) lub klucza prywatnego (jeśli zostały zaszyfrowane za pomocą klucza publicznego).  

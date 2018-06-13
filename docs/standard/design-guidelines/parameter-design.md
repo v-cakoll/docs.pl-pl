@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578277"
 ---
 # <a name="parameter-design"></a>Parametr projektu
 Ta sekcja zawiera ogólnych wytycznych w projekcie parametru, w tym sekcje z wytycznymi dotyczącymi sprawdzanie argumentów. Ponadto należy zapoznać się z wytycznymi opisanego w [nazw parametrów](../../../docs/standard/design-guidelines/naming-parameters.md).  

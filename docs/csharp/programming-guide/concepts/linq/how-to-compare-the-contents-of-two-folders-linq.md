@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330443"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>Porady: porównywanie zawartości dwóch folderów (LINQ) (C#)
 W tym przykładzie przedstawiono porównanie dwóch listach plików na trzy sposoby:  

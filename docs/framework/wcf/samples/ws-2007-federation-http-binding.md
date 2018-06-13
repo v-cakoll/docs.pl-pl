@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507084"
 ---
 # <a name="ws-2007-federation-http-binding"></a>Powiązanie HTTP w standardzie WS 2007 Federation
 W tym przykładzie przedstawiono użycie <xref:System.ServiceModel.WS2007FederationHttpBinding>, standard, powiązanie, której można utworzyć scenariuszach obejmujących Federację wersji 1.3 Specyfikacja WS-Trust tej pomocy technicznej.  

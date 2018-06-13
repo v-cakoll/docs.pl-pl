@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502835"
 ---
 # <a name="http-acknowledgement-channel"></a>Kanał potwierdzania HTTP
 Kanał potwierdzania HTTP jest przykładem warstwowego kanału, który zmienia jednokierunkowe wzorzec przesyłania komunikatów, co umożliwia usłudze potwierdzić lub odmówić wiadomości przychodzących, a nie automatycznie wysyła po otrzymaniu potwierdzenia. Kanał potwierdzania HTTP umożliwia również usługą Opóźnienie potwierdzenia do momentu go gwarancji biznesowej, otrzymasz wiadomość.  

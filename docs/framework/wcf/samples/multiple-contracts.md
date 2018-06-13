@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501740"
 ---
 # <a name="multiple-contracts"></a>Wiele kontraktów
 Przykład wielu umów przedstawiono sposoby zaimplementować więcej niż jeden kontrakt na usługę oraz sposobu konfigurowania punktów końcowych do komunikowania się z każdym zaimplementowanych kontraktów. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). Usługa została zmodyfikowana, aby zdefiniować dwa kontrakty `ICalculator` kontraktu i `ICalculatorSession` kontraktu.  

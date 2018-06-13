@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387107"
 ---
 # <a name="com-interop-sample-net-client-and-com-server"></a>Przykład międzyoperacyjnego modelu COM: klient modelu COM i serwer COM
 W przykładzie pokazano, jak [klienta .NET](#cpconcominteropsamplenetclientcomserveranchor1), wbudowanego dostępu [serwer COM](#cpconcominteropsamplenetclientcomserveranchor2), tworzy wystąpienie klasy coclass COM i wywołuje elementów członkowskich klasy do obliczeń hipotecznych.  

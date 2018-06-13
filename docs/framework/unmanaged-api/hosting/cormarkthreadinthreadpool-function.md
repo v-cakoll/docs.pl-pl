@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431236"
 ---
 # <a name="cormarkthreadinthreadpool-function"></a>CorMarkThreadInThreadPool — Funkcja
 Oznacza aktualnie wykonywane wątku puli wątków dla wykonania kodu zarządzanego. W programie .NET Framework w wersji 2.0, ta funkcja nie ma znaczenia. Nie jest wymagane, a można ją usunąć z kodu. Ta funkcja jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590845"
 ---
 # <a name="how-to-change-the-layout-of-a-datarepeater-control-visual-studio"></a>Porady: zmienianie układu formantu DataRepeater (Visual Studio)
 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Kontroli mogą być wyświetlane w pionie (przewijania elementów w pionie) lub pozioma (elementy przewijania w poziomie) orientacji. Orientacja w czasie projektowania lub w czasie wykonywania można zmienić, zmieniając <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> właściwości. Jeśli zmienisz <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> właściwości w czasie wykonywania, może również chcesz zmienić <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> i położenia formantów podrzędnych.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752068"
 ---
 # <a name="creating-assemblies"></a>Tworzenie zestawów
 Możesz utworzyć zestawy jednoplikowe lub wiele plików przy użyciu IDE, takich jak [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)], lub kompilatory i narzędzi dostarczonych przez [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]. Najprostsza zestaw jest pojedynczy plik ma prostą nazwą, który jest ładowany do domeny pojedynczej aplikacji. Ten zestaw nie może odwoływać się do innych zestawów znajdujących się poza katalogiem aplikacji i nie podlegają kontroli wersji. Aby odinstalować aplikację, składa się z zestawu, po prostu Usuń katalog, w którym znajduje się. W przypadku wielu deweloperów zestawu z tych funkcji jest wszystkie, który jest wymagany do wdrażania aplikacji.  

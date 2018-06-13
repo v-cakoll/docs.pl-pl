@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365803"
 ---
 # <a name="wcf-data-services-overview"></a>Omówienie usług danych WCF
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Umożliwia tworzenie i korzystania z usług danych sieci Web lub w sieci intranet przy użyciu [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Umożliwia udostępnianie danych jako zasoby, które są adresowane przez identyfikator URI. Dzięki temu można uzyskać dostęp i zmian danych przy użyciu semantyki representational stanu transfer (REST), w szczególności standardowe polecenia HTTP z GET PUT, POST i usuwania. Ten temat zawiera omówienie wzorców i rozwiązań zdefiniowane przez [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] i również urządzenia, które są udostępniane przez [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] przeprowadzać [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] w aplikacjach opartych na programie .NET Framework.  

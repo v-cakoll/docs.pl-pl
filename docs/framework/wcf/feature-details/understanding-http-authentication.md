@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500145"
 ---
 # <a name="understanding-http-authentication"></a>Opis uwierzytelniania HTTP
 Uwierzytelnianie to proces identyfikowania, czy klient jest uprawniona do dostępu do zasobu. Protokół HTTP obsługuje uwierzytelnianie jako negocjowania dostępu do zasobów bezpieczny sposób.  

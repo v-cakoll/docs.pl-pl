@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504214"
 ---
 # <a name="service-description"></a>Opis usługi
 Przykład opisu usługi pokazano, jak usługa można pobrać jego informacje o opisie usługi w czasie wykonywania. Próbki jest oparta na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), za pomocą operacji usługi dodatkowe zdefiniowane zwraca informacje opisowe dotyczące usługi. Zwracane informacje wymieniono adres podstawowy i punkty końcowe dla usługi. Udostępnia te informacje przy użyciu <xref:System.ServiceModel.OperationContext>, <xref:System.ServiceModel.ServiceHost>, i <xref:System.ServiceModel.Description.ServiceDescription> klasy.  

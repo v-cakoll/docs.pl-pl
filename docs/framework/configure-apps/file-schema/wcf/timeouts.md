@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753004"
 ---
 # <a name="lttimeoutsgt"></a>&lt;limity czasu&gt;
 Reprezentuje element konfiguracji, który określa przedział czasu dozwolony na otwarcie lub zamknięcie usługi hosta.  

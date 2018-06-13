@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359265"
 ---
 # <a name="securing-wcf-data-services"></a>Zabezpieczanie usługi danych WCF
 W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficzne dla tworzenie, wdrażanie i uruchamianie [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] i aplikacje, które uzyskują dostęp do usług, które obsługują [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Należy również stosować zaleceń dotyczących tworzenia bezpiecznego [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aplikacji.  

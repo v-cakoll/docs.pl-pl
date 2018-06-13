@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495729"
 ---
 # <a name="how-to-create-a-duplex-federated-binding"></a>Instrukcje: Tworzenie dwukierunkowego powiązania federacyjnego
 <xref:System.ServiceModel.WSFederationHttpBinding> obsługuje tylko kontraktami wymiany wiadomość datagramu i żądanie/odpowiedź. Aby użyć kontraktu dwustronnego wiadomości programu exchange, należy utworzyć niestandardowego powiązania. Poniższe procedury pokazują, jak to zrobić w konfiguracji przy użyciu wiadomości tryb zabezpieczeń dla transportu HTTP i TCP i zabezpieczeń w trybie mieszanym dla transportu TCP. Przykładowy kod, przedstawiający wszystkie powiązania 3 znajduje się na końcu tego tematu.  

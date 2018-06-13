@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502203"
 ---
 # <a name="discovery-with-scopes-sample"></a>Przykład odnajdywania z zakresami
 Ten przykład przedstawia sposób użycia zakresów kategoryzację wykrywalny punktów końcowych, jak również sposób użycia <xref:System.ServiceModel.Discovery.DiscoveryClient> do wykonywania asynchronicznych wyszukiwania dla punktów końcowych. W usłudze w tym przykładzie pokazano, jak dostosować odnajdywania dla każdego punktu końcowego przez dodanie zachowanie odnajdowania punktu końcowego i użytkowania go, aby dodać zakres do punktu końcowego, a także kontrolowanie możliwość odnajdowania punktu końcowego. Na komputerze klienckim próbki przechodzi w jaki sposób klienci mogą tworzyć <xref:System.ServiceModel.Discovery.DiscoveryClient> i dostosowywanie wyszukiwania parametrów do dołączania zakresów przez dodawanie zakresów do <xref:System.ServiceModel.Discovery.FindCriteria>. Również w tym przykładzie pokazano, jak klienci mogą ograniczać odpowiedzi od dodania kryterium zakończenia.  

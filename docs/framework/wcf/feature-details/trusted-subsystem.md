@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500373"
 ---
 # <a name="trusted-subsystem"></a>Zaufany podsystem
 Klient uzyskuje dostęp do usług sieci Web, które są rozproszone w sieci. Usługi sieci Web są zaprojektowane, że dostęp do dodatkowych zasobów (np. baz danych lub innych usług sieci Web) jest hermetyzowany logiki biznesowej usługi sieci Web. Te zasoby muszą być chronione przed nieautoryzowanym dostępem. Poniższa ilustracja przedstawia proces zaufany podsystem.  

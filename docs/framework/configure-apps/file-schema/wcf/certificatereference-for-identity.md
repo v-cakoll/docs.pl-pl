@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747645"
 ---
 # <a name="ltcertificatereferencegt-for-ltidentitygt"></a>&lt;certificateReference&gt; w &lt;identity&gt;
 Określa ustawienia dla walidacji certyfikatu X.509. Bezpieczne klienta Windows Communication Foundation (WCF), który łączy punkt końcowy o tej tożsamości weryfikuje czy wnioski przedstawione przez serwer zawierają oświadczeń tożsamości użyta do skonstruowania tej tożsamości.  

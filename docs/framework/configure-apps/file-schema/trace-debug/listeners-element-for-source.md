@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746842"
 ---
 # <a name="ltlistenersgt-element-for-ltsourcegt"></a>&lt;obiekty nasłuchujące&gt; elementu &lt;źródła&gt;
 Dodaje lub usuwa odbiorników w <xref:System.Diagnostics.TraceSource.Listeners%2A> kolekcji <xref:System.Diagnostics.TraceSource>. Odbiornik kieruje dane wyjściowe śledzenia do odpowiedniego obiektu docelowego, takich jak dziennika, okna lub plik tekstowy.  

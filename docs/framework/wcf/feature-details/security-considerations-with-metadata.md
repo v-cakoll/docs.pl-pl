@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498546"
 ---
 # <a name="security-considerations-with-metadata"></a>Zagadnienia dotyczące zabezpieczeń obejmujące metadane
 Podczas używania funkcji metadanych w systemie Windows Communication Foundation (WCF), należy wziąć pod uwagę ryzyko związane z publikowania, pobieranie i przy użyciu metadanych usługi.  

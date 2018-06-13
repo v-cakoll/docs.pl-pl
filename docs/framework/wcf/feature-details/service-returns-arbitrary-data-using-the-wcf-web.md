@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498111"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Instrukcje: Tworzenie usługi zwracającej dowolne dane za pomocą modelu programowania protokołu HTTP sieci Web w programie WCF
 Czasami deweloperzy musi mieć pełną kontrolę nad jak dane są zwracane z operacji usługi. Jest to sytuacji, gdy operacji usługi musi zwrócić dane w formacie nie jest obsługiwany przez usługi WCF. W tym temacie omówiono za pomocą modelu programowania protokołu HTTP sieci WEB WCF do tworzenia takiej usługi. Ta usługa ma jedną operację, która zwraca strumienia.  

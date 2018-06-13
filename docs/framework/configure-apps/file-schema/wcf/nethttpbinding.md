@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751925"
 ---
 # <a name="ltnethttpbindinggt"></a>&lt;netHttpBinding&gt;
 Reprezentuje powiązanie, które usługi Windows Communication Foundation (WCF) można użyć do konfiguracji i ekspozycji punktów końcowych, które mogą się komunikować za pośrednictwem protokołu HTTP. W przypadku użycia z kontrakt dupleksowy, gniazda sieci Web, który będzie używany, w przeciwnym razie HTTP będą używane.  

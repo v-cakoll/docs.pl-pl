@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555792"
 ---
 # <a name="menu"></a>Menu
 A <xref:System.Windows.Controls.Menu> jest formant, który umożliwia hierarchiczna organizacja elementy skojarzone z poleceń lub procedury obsługi zdarzeń. Każdy <xref:System.Windows.Controls.Menu> może zawierać wiele <xref:System.Windows.Controls.MenuItem> kontrolki. Każdy <xref:System.Windows.Controls.MenuItem> można wywołać polecenia lub wywołanie `Click` obsługi zdarzeń. A <xref:System.Windows.Controls.MenuItem> może istnieć wiele <xref:System.Windows.Controls.MenuItem> elementy jako elementy podrzędne, tworzenie podmenu.  

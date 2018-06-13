@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336924"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Używanie typów dopuszczających wartości zerowe (Przewodnik programowania w języku C#)
 Typy dopuszczające wartości zerowe może reprezentować wszystkich wartości typu podstawowego i dodatkowego [null](../../../csharp/language-reference/keywords/null.md) wartość. Typy dopuszczające wartości null są zadeklarowane w jeden z dwóch sposobów:  

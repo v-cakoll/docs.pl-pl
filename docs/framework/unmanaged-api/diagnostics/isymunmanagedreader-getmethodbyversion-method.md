@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425180"
 ---
 # <a name="isymunmanagedreadergetmethodbyversion-method"></a>ISymUnmanagedReader::GetMethodByVersion — Metoda
 Pobiera metodę czytnika symboli podany token metody i numer wersji edycji i kopii. Numery wersji są liczone od 1 i są zwiększany po każdej zmianie metody wyniku operacji Edytuj i kopii.  

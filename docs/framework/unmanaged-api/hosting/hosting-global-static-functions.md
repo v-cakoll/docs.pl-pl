@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430428"
 ---
 # <a name="hosting-global-static-functions"></a>Statyczne funkcje globalne hostingu
 W tej sekcji opisano funkcje hostingu niezarządzane, używany przez program .NET Framework hostingu interfejsów API.  

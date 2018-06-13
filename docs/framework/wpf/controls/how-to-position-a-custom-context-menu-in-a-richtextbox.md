@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553861"
 ---
 # <a name="how-to-position-a-custom-context-menu-in-a-richtextbox"></a>Jak ustawić położenie menu kontekstowego w RichTextBox
 W tym przykładzie pokazano, jak pozycja menu kontekstowego niestandardowych dla <xref:System.Windows.Controls.RichTextBox>.  

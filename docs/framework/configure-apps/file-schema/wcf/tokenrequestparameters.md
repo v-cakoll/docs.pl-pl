@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749546"
 ---
 # <a name="lttokenrequestparametersgt"></a>&lt;tokenRequestParameters&gt;
 Ten element konfiguracji zawiera elementy podrzędne, które mogą służyć do określenia dodatkowych elementów XML do wysłania w treści wiadomości do usługi tokenu zabezpieczającego podczas żądania tokenu.  

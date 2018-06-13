@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499170"
 ---
 # <a name="wcf-syndication"></a>Syndykacja programu WCF
 Windows Communication Foundation (WCF) zapewnia obsługę łatwo pracować ze źródła zespolonego Atom, RSS lub innych niestandardowych formatów, dzięki czemu można odczytać i utwórz je, a także ujawniać je na punkt końcowy usługi. W tematach w tej sekcji opisano ten model programowania do zespolonego szczegółowo.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557007"
 ---
 # <a name="how-to-navigate-through-the-objects-in-a-data-collectionview"></a>Jak przejść do obiektów w danych CollectionView
 Widoki zezwolić tej samej kolekcji danych do wyświetlenia na różne sposoby, w zależności od sortowania, filtrowania lub grupowania. Widoki również podać pojęcie bieżącego rekordu wskaźnik i włączyć, przesuń wskaźnik. W tym przykładzie pokazano, jak pobrać bieżący obiekt, a także przejdź do obiektów w kolekcji danych, korzystając z funkcji dostępnych w <xref:System.Windows.Data.CollectionView> klasy.  

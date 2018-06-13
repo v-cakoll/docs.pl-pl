@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747154"
 ---
 # <a name="ltheadersgt"></a>&lt;Nagłówki&gt;
 Punkt końcowy może zostać zlikwidowane przez co najmniej jeden nagłówek SOAP oprócz jego podstawowego identyfikatora URI. Jeden zestaw scenariuszy, w których jest to przydatne to zestaw SOAP scenariuszy pośredniczącego w przypadku gdy punkt końcowy wymaga klientom tego punktu końcowego obejmują celem pośredników nagłówki SOAP. Ten element konfiguracji może służyć do definiowania takie nagłówki niestandardowy adres. Wpisy w kolekcji nagłówka punktu końcowego są zdefiniowane przez użytkownika elementy XML. Każdy element ma być poprawnie sformułowanym XML.  

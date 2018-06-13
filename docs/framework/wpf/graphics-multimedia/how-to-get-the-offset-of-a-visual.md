@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561852"
 ---
 # <a name="how-to-get-the-offset-of-a-visual"></a>Jak pobrać przesunięcie Visual
 Poniższe przykłady pokazują, jak można pobrać wartości przesunięcia względem jego elementu nadrzędnego lub żadnych nadrzędnym lub podrzędnym obiektu visual.  

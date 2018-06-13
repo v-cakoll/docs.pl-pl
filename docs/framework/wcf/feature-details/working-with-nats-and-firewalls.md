@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508106"
 ---
 # <a name="working-with-nats-and-firewalls"></a>Praca z translatorami adresów sieciowych i zaporami
 Klient i serwer połączenia sieciowego często nie mają bezpośredniego i ścieżki do komunikacji. Pakiety są filtrowane, kierowane przeanalizowane i przekształcony zarówno na komputerach punktu końcowego i pośredniego komputerów w sieci. Translacji adresów sieciowych (NAT) i zapory są typowe przykłady pośrednich aplikacji, które mogą uczestniczyć w komunikacji sieciowej.  

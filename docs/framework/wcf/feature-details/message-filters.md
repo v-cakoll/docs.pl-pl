@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496938"
 ---
 # <a name="message-filters"></a>Filtry komunikatów
 Do wdrożenia na podstawie zawartości routingu, usługa routingu używa <xref:System.ServiceModel.Dispatcher.MessageFilter> implementacje sprawdzić określonych sekcji wiadomości, takie jak adres, nazwa punktu końcowego lub określonych instrukcji XPath. Jeśli żaden komunikat filtrów nie podany z [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] spełnia Twoich potrzeb, można utworzyć niestandardowy filtr przez utworzenie nowego wdrożenia podstawy <xref:System.ServiceModel.Dispatcher.MessageFilter> klasy.  

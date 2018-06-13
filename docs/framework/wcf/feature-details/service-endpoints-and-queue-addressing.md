@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504945"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Punkty końcowe usługi i adresowanie kolejki
 W tym temacie omówiono sposób klienci adresu usługi, które zapoznały się z kolejek oraz sposobu mapowania punktów końcowych usługi kolejki. Na poniższej ilustracji przedstawiono przypomnieniem, klasycznego się, że wdrożenie aplikacji w kolejce Windows Communication Foundation (WCF).  

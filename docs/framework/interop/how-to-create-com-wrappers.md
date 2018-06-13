@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391228"
 ---
 # <a name="how-to-create-com-wrappers"></a>Porady: tworzenie otok COM
 Otoki składnika modelu COM (Object) można tworzyć przy użyciu [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] funkcji lub .NET Framework Tlbimp.exe i Regasm.exe narzędzi. Obie metody generowania otoki COM dwa typy:  

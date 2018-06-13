@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503265"
 ---
 # <a name="session"></a>Sesja
 Przykładowe sesji demonstracja Implementowanie kontraktu wymagającego sesji. Sesję udostępnia kontekst do wykonywania wielu operacji. Umożliwia usłudze skojarzenie stanu z danej sesji, w taki sposób, że kolejnych operacji można użyć stanu poprzedniej operacji. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje usługi Kalkulator. `ICalculator` Kontraktu został zmodyfikowany umożliwia zestaw operacji arytmetycznych wykonywanych przy zachowaniu uruchomionych wynik. Ta funkcja jest definiowana za pomocą `ICalculatorSession` kontraktu. Jak wiele operacji usługi są wywoływane w celu wykonywania obliczeń usługi przechowuje informacje o stanie dla klienta. Klient może pobrać bieżący wynik przez wywołanie metody `Result()` i wyczyść wynik, który ma wartość zero, wywołując `Clear()`.  

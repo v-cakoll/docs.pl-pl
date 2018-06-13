@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744759"
 ---
 # <a name="how-to-configure-client-application-services"></a>Porady: konfigurowanie usług aplikacji klienta
 W tym temacie opisano, jak używać programu Visual Studio **projektanta projektu** Włączanie i konfigurowanie usługi aplikacji klienta. Usługi aplikacji klienta można użyć do weryfikowania użytkowników i pobierania ról użytkownika i ustawienia z istniejącego [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] usługi aplikacji. Po przeprowadzeniu konfiguracji, są dostępne włączone usługi w kodzie aplikacji zgodnie z opisem w [przegląd usług aplikacji klienta](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Aby uzyskać więcej informacji na temat [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] usług aplikacji, zobacz [przegląd usług aplikacji ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  

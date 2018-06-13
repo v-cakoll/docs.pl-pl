@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576685"
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a>Porady: uzyskiwanie magazynów dla izolowanego magazynu
 Izolowane store ujawnia wirtualnym systemie plików w ramach przedziału danych. <xref:System.IO.IsolatedStorage.IsolatedStorageFile> Klasa zapewnia kilka metod do interakcji z magazynu izolowanego. Aby utworzyć i pobrać magazynów, <xref:System.IO.IsolatedStorage.IsolatedStorageFile> oferuje trzy metody statycznej:  

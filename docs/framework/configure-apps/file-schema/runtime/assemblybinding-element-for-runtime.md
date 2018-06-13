@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746179"
 ---
 # <a name="ltassemblybindinggt-element-for-ltruntimegt"></a><span data-ttu-id="4dbcd-102">&lt;assemblybinding —&gt; elementu &lt;środowiska wykonawczego&gt;</span><span class="sxs-lookup"><span data-stu-id="4dbcd-102">&lt;assemblyBinding&gt; Element for &lt;runtime&gt;</span></span>
 <span data-ttu-id="4dbcd-103">Zawiera informacje o przekierowaniu wersji zestawu i lokalizacji zestawów.</span><span class="sxs-lookup"><span data-stu-id="4dbcd-103">Contains information about assembly version redirection and the locations of assemblies.</span></span>  

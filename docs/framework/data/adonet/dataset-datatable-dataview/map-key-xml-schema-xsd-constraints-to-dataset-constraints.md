@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757869"
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a><span data-ttu-id="74a51-102">Mapowanie klucz ograniczenia schematu XML (XSD) do ograniczenia zestawu danych</span><span class="sxs-lookup"><span data-stu-id="74a51-102">Map key XML Schema (XSD) Constraints to DataSet Constraints</span></span>
 <span data-ttu-id="74a51-103">W schemacie, można określić ograniczenie klucza dla elementu lub atrybutu przy użyciu **klucza** elementu.</span><span class="sxs-lookup"><span data-stu-id="74a51-103">In a schema, you can specify a key constraint on an element or attribute using the **key** element.</span></span> <span data-ttu-id="74a51-104">Element lub atrybut, w którym określono ograniczenie klucza muszą mieć unikatowe wartości w żadnym wystąpieniu schematu, a nie może mieć wartości null.</span><span class="sxs-lookup"><span data-stu-id="74a51-104">The element or attribute on which a key constraint is specified must have unique values in any schema instance, and cannot have null values.</span></span>  

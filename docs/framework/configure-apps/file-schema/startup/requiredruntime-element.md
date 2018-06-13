@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749985"
 ---
 # <a name="ltrequiredruntimegt-element"></a><span data-ttu-id="a2686-102">&lt;requiredRuntime&gt; — Element</span><span class="sxs-lookup"><span data-stu-id="a2686-102">&lt;requiredRuntime&gt; Element</span></span>
 <span data-ttu-id="a2686-103">Określa, czy aplikacja obsługuje tylko wersję 1.0 środowisko uruchomieniowe języka wspólnego.</span><span class="sxs-lookup"><span data-stu-id="a2686-103">Specifies that the application supports only version 1.0 of the common language runtime.</span></span> <span data-ttu-id="a2686-104">Ten element jest przestarzały i nie będzie można użyć.</span><span class="sxs-lookup"><span data-stu-id="a2686-104">This element is deprecated and should no longer be used.</span></span> <span data-ttu-id="a2686-105">[ `supportedRuntime` ](supportedruntime-element.md) Elementu należy użyć.</span><span class="sxs-lookup"><span data-stu-id="a2686-105">The [`supportedRuntime`](supportedruntime-element.md) element should be used instead.</span></span>

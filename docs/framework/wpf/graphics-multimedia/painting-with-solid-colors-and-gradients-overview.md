@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566785"
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a><span data-ttu-id="76385-102">Przegląd Malowanie jednolitymi kolorami i gradientami</span><span class="sxs-lookup"><span data-stu-id="76385-102">Painting with Solid Colors and Gradients Overview</span></span>
 <span data-ttu-id="76385-103">W tym temacie opisano sposób użycia <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush>, i <xref:System.Windows.Media.RadialGradientBrush> obiektów namalować z kolorami, gradienty liniowe i gradientu promieniowego.</span><span class="sxs-lookup"><span data-stu-id="76385-103">This topic describes how to use <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush>, and <xref:System.Windows.Media.RadialGradientBrush> objects to paint with solid colors, linear gradients, and radial gradients.</span></span>  

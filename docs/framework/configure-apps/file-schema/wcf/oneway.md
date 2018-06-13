@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746725"
 ---
 # <a name="ltonewaygt"></a><span data-ttu-id="23d92-102">&lt;oneWay&gt;</span><span class="sxs-lookup"><span data-stu-id="23d92-102">&lt;oneWay&gt;</span></span>
 <span data-ttu-id="23d92-103">Włącza pakiet rutingu i metod jednokierunkowych dla niestandardowego powiązania.</span><span class="sxs-lookup"><span data-stu-id="23d92-103">Enables packet routing and the use of one-way methods for a custom binding.</span></span>  

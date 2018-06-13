@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752497"
 ---
 # <a name="message-encoding"></a><span data-ttu-id="75786-102">Kodowanie komunikatu</span><span class="sxs-lookup"><span data-stu-id="75786-102">Message Encoding</span></span>
 <span data-ttu-id="75786-103">Kodowanie jest procesem przekształcania zestawu znaków Unicode do sekwencji bajtów.</span><span class="sxs-lookup"><span data-stu-id="75786-103">Encoding is the process of transforming a set of Unicode characters into a sequence of bytes.</span></span> <span data-ttu-id="75786-104">Dekodowanie jest procesu.</span><span class="sxs-lookup"><span data-stu-id="75786-104">Decoding is the reverse process.</span></span> <span data-ttu-id="75786-105">Windows Communication Foundation (WCF) obejmuje trzy rodzaje kodowania protokołu SOAP wiadomości: tekst, dane binarne i mechanizmu optymalizacji transmisji wiadomości (MTOM).</span><span class="sxs-lookup"><span data-stu-id="75786-105">Windows Communication Foundation (WCF) includes three types of encoding for SOAP messages: Text, Binary and Message Transmission Optimization Mechanism (MTOM).</span></span>  

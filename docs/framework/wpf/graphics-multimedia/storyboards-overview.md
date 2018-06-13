@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566902"
 ---
 # <a name="storyboards-overview"></a><span data-ttu-id="00238-102">Przegląd Scenorysy</span><span class="sxs-lookup"><span data-stu-id="00238-102">Storyboards Overview</span></span>
 <span data-ttu-id="00238-103">W tym temacie przedstawiono sposób użycia <xref:System.Windows.Media.Animation.Storyboard> obiekty do organizowania i zastosowania animacji.</span><span class="sxs-lookup"><span data-stu-id="00238-103">This topic shows how to use <xref:System.Windows.Media.Animation.Storyboard> objects to organize and apply animations.</span></span> <span data-ttu-id="00238-104">Opis interaktywnie manipulowania <xref:System.Windows.Media.Animation.Storyboard> obiektów oraz opis właściwości pośrednie przeznaczonych dla składni.</span><span class="sxs-lookup"><span data-stu-id="00238-104">It describes how to interactively manipulate <xref:System.Windows.Media.Animation.Storyboard> objects and describes indirect property targeting syntax.</span></span>  

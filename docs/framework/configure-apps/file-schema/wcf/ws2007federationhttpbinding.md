@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758636"
 ---
 # <a name="ltws2007federationhttpbindinggt"></a><span data-ttu-id="f89b5-102">&lt;ws2007FederationHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="f89b5-102">&lt;ws2007FederationHttpBinding&gt;</span></span>
 <span data-ttu-id="f89b5-103">Bezpieczne i interoperacyjne powiązanie, która jest pochodną [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) i obsługuje zabezpieczeń.</span><span class="sxs-lookup"><span data-stu-id="f89b5-103">A secure and interoperable binding that derives from [\<wsFederationHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) and supports federated security.</span></span>  

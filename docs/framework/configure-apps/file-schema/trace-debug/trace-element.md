@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746062"
 ---
 # <a name="lttracegt-element"></a><span data-ttu-id="efe25-102">&lt;śledzenia&gt; — Element</span><span class="sxs-lookup"><span data-stu-id="efe25-102">&lt;trace&gt; Element</span></span>
 <span data-ttu-id="efe25-103">Zawiera nasłuchujących zbierania, przechowywania i trasy śledzenia wiadomości.</span><span class="sxs-lookup"><span data-stu-id="efe25-103">Contains listeners that collect, store, and route tracing messages.</span></span>  

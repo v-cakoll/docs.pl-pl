@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568124"
 ---
 # <a name="common-container-design-principles"></a><span data-ttu-id="3e32b-103">Wspólne zasady projektowania kontenera</span><span class="sxs-lookup"><span data-stu-id="3e32b-103">Common container design principles</span></span>
 

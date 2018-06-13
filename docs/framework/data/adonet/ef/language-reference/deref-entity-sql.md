@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761483"
 ---
 # <a name="deref-entity-sql"></a><span data-ttu-id="94e74-102">DEREF (jednostka SQL)</span><span class="sxs-lookup"><span data-stu-id="94e74-102">DEREF (Entity SQL)</span></span>
 <span data-ttu-id="94e74-103">Wyłuskań wartość odniesienia i daje w wyniku tego usunąć odwołania do.</span><span class="sxs-lookup"><span data-stu-id="94e74-103">Dereferences a reference value and produces the result of that dereference.</span></span>  

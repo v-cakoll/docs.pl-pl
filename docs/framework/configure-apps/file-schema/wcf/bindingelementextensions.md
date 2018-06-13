@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747752"
 ---
 # <a name="ltbindingelementextensionsgt"></a><span data-ttu-id="14793-102">&lt;bindingElementExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="14793-102">&lt;bindingElementExtensions&gt;</span></span>
 <span data-ttu-id="14793-103">Ta sekcja umożliwia zastosowanie elementu niestandardowego powiązania z maszyny lub pliku konfiguracji aplikacji.</span><span class="sxs-lookup"><span data-stu-id="14793-103">This section enables the use of a custom binding element from a machine or application configuration file.</span></span> <span data-ttu-id="14793-104">Można dodać element niestandardowego powiązania do tej kolekcji przy użyciu `add` — słowo kluczowe i ustawienie `type` atrybut element, aby element rozszerzenia powiązania, jak również `name` atrybutu element niestandardowego powiązania.</span><span class="sxs-lookup"><span data-stu-id="14793-104">You can add a custom binding element to this collection by using the `add` keyword, and setting the `type` attribute of the element to a binding element extension, as well as the `name` attribute to the custom binding element.</span></span>  

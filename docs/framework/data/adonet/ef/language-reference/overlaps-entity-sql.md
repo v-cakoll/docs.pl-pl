@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762679"
 ---
 # <a name="overlaps-entity-sql"></a><span data-ttu-id="59393-102">Nakładania się (jednostka SQL)</span><span class="sxs-lookup"><span data-stu-id="59393-102">OVERLAPS (Entity SQL)</span></span>
 <span data-ttu-id="59393-103">Określa, czy dwie kolekcje mają wspólne elementy.</span><span class="sxs-lookup"><span data-stu-id="59393-103">Determines whether two collections have common elements.</span></span>  

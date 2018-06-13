@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566976"
 ---
 # <a name="targeting-older-versions-of-net"></a><span data-ttu-id="633c5-103">Przeznaczony dla starszej wersji programu .NET</span><span class="sxs-lookup"><span data-stu-id="633c5-103">Targeting Older Versions of .NET</span></span>
 

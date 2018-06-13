@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758831"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a><span data-ttu-id="ef3fe-102">Tworzenie DataTable w wyniku zapytania (LINQ do DataSet)</span><span class="sxs-lookup"><span data-stu-id="ef3fe-102">Creating a DataTable From a Query (LINQ to DataSet)</span></span>
 <span data-ttu-id="ef3fe-103">Powiązanie danych jest typowym zastosowaniem <xref:System.Data.DataTable> obiektu.</span><span class="sxs-lookup"><span data-stu-id="ef3fe-103">Data binding is a common use of <xref:System.Data.DataTable> object.</span></span> <span data-ttu-id="ef3fe-104"><xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Metoda pobiera wyników zapytania i kopiuje dane na <xref:System.Data.DataTable>, której następnie można użyć dla powiązania danych.</span><span class="sxs-lookup"><span data-stu-id="ef3fe-104">The <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method takes the results of a query and copies the data into a <xref:System.Data.DataTable>, which can then be used for data binding.</span></span> <span data-ttu-id="ef3fe-105">Po wykonaniu operacji danych, nowa <xref:System.Data.DataTable> jest scalone źródło <xref:System.Data.DataTable>.</span><span class="sxs-lookup"><span data-stu-id="ef3fe-105">When the data operations have been performed, the new <xref:System.Data.DataTable> is merged back into the source <xref:System.Data.DataTable>.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566746"
 ---
 # <a name="property-animation-techniques-overview"></a><span data-ttu-id="56f0c-102">Przegląd Techniki animacji właściwości</span><span class="sxs-lookup"><span data-stu-id="56f0c-102">Property Animation Techniques Overview</span></span>
 <span data-ttu-id="56f0c-103">W tym temacie opisano różne podejścia do animowania właściwości: scenorys, lokalne animacje zegary i na ramki animacji.</span><span class="sxs-lookup"><span data-stu-id="56f0c-103">This topic describes the different approaches for animating properties: storyboards, local animations, clocks, and per-frame animations.</span></span>  

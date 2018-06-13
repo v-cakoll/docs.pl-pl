@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753628"
 ---
 # <a name="httpwebrequestautoredirects-field"></a><span data-ttu-id="eab87-102">HttpWebRequest. \_AutoRedirects pola</span><span class="sxs-lookup"><span data-stu-id="eab87-102">HttpWebRequest.\_AutoRedirects Field</span></span>
 

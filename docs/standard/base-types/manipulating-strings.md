@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567591"
 ---
 # <a name="manipulating-strings-in-net"></a><span data-ttu-id="4670a-102">Manipulowanie ciągami w .NET</span><span class="sxs-lookup"><span data-stu-id="4670a-102">Manipulating Strings in .NET</span></span>
 <span data-ttu-id="4670a-103">.NET udostępnia wiele procedur, które umożliwiają wydajne tworzenia, porównania i modyfikowania ciągów, jak również szybko analizy dużych ilości danych do wyszukania, usuwania i Zastąp wzorce tekstu i tekst.</span><span class="sxs-lookup"><span data-stu-id="4670a-103">.NET provides an extensive set of routines that enable you to efficiently create, compare, and modify strings as well as rapidly parse large amounts of text and data to search for, remove, and replace text patterns.</span></span>  

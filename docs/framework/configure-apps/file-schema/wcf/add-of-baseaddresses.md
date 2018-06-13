@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754148"
 ---
 # <a name="ltaddgt-of-ltbaseaddressesgt"></a><span data-ttu-id="dfc13-102">&lt;add&gt; w &lt;baseAddresses&gt;</span><span class="sxs-lookup"><span data-stu-id="dfc13-102">&lt;add&gt; of &lt;baseAddresses&gt;</span></span>
 <span data-ttu-id="dfc13-103">Reprezentuje element konfiguracji określający adres podstawowy używany przez hosta usługi.</span><span class="sxs-lookup"><span data-stu-id="dfc13-103">Represents a configuration element that specifies the base addresses used by the service host.</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750339"
 ---
 # <a name="ltsystemdiagnosticsgt-element"></a><span data-ttu-id="34c62-102">&lt;System.Diagnostics&gt; — Element</span><span class="sxs-lookup"><span data-stu-id="34c62-102">&lt;system.diagnostics&gt; Element</span></span>
 <span data-ttu-id="34c62-103">Określa obiektów nasłuchujących śledzenia zbierania, przechowywania i kierowania wiadomości i poziom, gdy jest ustawiona przełącznik śledzenia.</span><span class="sxs-lookup"><span data-stu-id="34c62-103">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753277"
 ---
 # <a name="ltbytestreammessageencodinggt"></a><span data-ttu-id="7ab6a-102">&lt;byteStreamMessageEncoding&gt;</span><span class="sxs-lookup"><span data-stu-id="7ab6a-102">&lt;byteStreamMessageEncoding&gt;</span></span>
 <span data-ttu-id="7ab6a-103">Określa kodowanie komunikatu jako strumień bajtów z opcją określenia kodowania znaków.</span><span class="sxs-lookup"><span data-stu-id="7ab6a-103">Specifies the message encoding as a stream of bytes, with the option to specify the character encoding.</span></span>  

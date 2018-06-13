@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321525"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a><span data-ttu-id="b8d60-102">Porady: implementowanie klasy lekkiej przy użyciu automatycznie implementowanych właściwości (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="b8d60-102">How to: Implement a Lightweight Class with Auto-Implemented Properties (C# Programming Guide)</span></span>
 <span data-ttu-id="b8d60-103">W tym przykładzie przedstawiono sposób tworzenia niezmienne klasy lightweight, obejmującej tylko w celu hermetyzacji zbiór właściwości zaimplementowane automatycznie.</span><span class="sxs-lookup"><span data-stu-id="b8d60-103">This example shows how to create an immutable lightweight class that serves only to encapsulate a set of auto-implemented properties.</span></span> <span data-ttu-id="b8d60-104">Zamiast tego rodzaju konstrukcja struktury podczas należy użyć semantykę typu odwołania.</span><span class="sxs-lookup"><span data-stu-id="b8d60-104">Use this kind of construct instead of a struct when you must use reference type semantics.</span></span>  

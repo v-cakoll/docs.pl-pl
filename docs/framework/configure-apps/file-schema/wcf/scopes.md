@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749624"
 ---
 # <a name="ltscopesgt"></a><span data-ttu-id="732f3-102">&lt;Zakresy&gt;</span><span class="sxs-lookup"><span data-stu-id="732f3-102">&lt;scopes&gt;</span></span>
 <span data-ttu-id="732f3-103">Zawiera kolekcję elementów konfiguracji określającą niestandardowy zakres identyfikatorów URI, który może służyć do filtrowania punktów końcowych usługi podczas zapytania.</span><span class="sxs-lookup"><span data-stu-id="732f3-103">Contains a collection of configuration elements that specify custom scope Uris that can be used to filter service endpoints during query.</span></span>  

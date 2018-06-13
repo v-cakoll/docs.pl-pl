@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758506"
 ---
 # <a name="data-tracing-in-adonet"></a><span data-ttu-id="9a077-102">Dane śledzenia w ADO.NET</span><span class="sxs-lookup"><span data-stu-id="9a077-102">Data Tracing in ADO.NET</span></span>
 <span data-ttu-id="9a077-103">ADO.NET funkcje wbudowane danych śledzenia funkcje, które jest obsługiwana przez dostawców danych .NET dla programu SQL Server, Oracle, OLE DB i ODBC, a także ADO.NET <xref:System.Data.DataSet>i protokoły sieciowe SQL Server.</span><span class="sxs-lookup"><span data-stu-id="9a077-103">ADO.NET features built-in data tracing functionality that is supported by the .NET data providers for SQL Server, Oracle, OLE DB and ODBC, as well as the ADO.NET <xref:System.Data.DataSet>, and the SQL Server network protocols.</span></span>  

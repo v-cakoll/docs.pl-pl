@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749819"
 ---
 # <a name="ltpeerauthenticationgt-element"></a><span data-ttu-id="69139-102">&lt;peerAuthentication&gt;, element</span><span class="sxs-lookup"><span data-stu-id="69139-102">&lt;peerAuthentication&gt; Element</span></span>
 <span data-ttu-id="69139-103">Określa opcje uwierzytelniania dla klientów peer-to-peer.</span><span class="sxs-lookup"><span data-stu-id="69139-103">Specifies authentication options for peer-to-peer clients.</span></span>  

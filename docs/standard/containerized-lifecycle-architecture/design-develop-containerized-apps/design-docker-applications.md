@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567734"
 ---
 # <a name="design-docker-applications"></a><span data-ttu-id="3a141-103">Projektowanie aplikacji Docker</span><span class="sxs-lookup"><span data-stu-id="3a141-103">Design Docker applications</span></span>
 

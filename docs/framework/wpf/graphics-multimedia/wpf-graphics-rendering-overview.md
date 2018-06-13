@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566733"
 ---
 # <a name="wpf-graphics-rendering-overview"></a><span data-ttu-id="ad777-102">Przegląd Renderowanie grafiki WPF</span><span class="sxs-lookup"><span data-stu-id="ad777-102">WPF Graphics Rendering Overview</span></span>
 <span data-ttu-id="ad777-103">Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] visual warstwy.</span><span class="sxs-lookup"><span data-stu-id="ad777-103">This topic provides an overview of the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] visual layer.</span></span> <span data-ttu-id="ad777-104">Dotyczy on rolę <xref:System.Windows.Media.Visual> klasy renderowania pomocy technicznej w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modelu.</span><span class="sxs-lookup"><span data-stu-id="ad777-104">It focuses on the role of the <xref:System.Windows.Media.Visual> class for rendering support in the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] model.</span></span>  

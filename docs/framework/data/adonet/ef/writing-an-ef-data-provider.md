@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762637"
 ---
 # <a name="writing-an-entity-framework-data-provider"></a><span data-ttu-id="4d7f2-102">Pisanie dostawca danych programu Entity Framework</span><span class="sxs-lookup"><span data-stu-id="4d7f2-102">Writing an Entity Framework Data Provider</span></span>
 <span data-ttu-id="4d7f2-103">W tej sekcji omówiono sposób zapisania [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dostawcy do obsługi źródła danych inne niż SQL Server.</span><span class="sxs-lookup"><span data-stu-id="4d7f2-103">This section discusses how to write an [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] provider to support a data source other than SQL Server.</span></span> <span data-ttu-id="4d7f2-104">[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Obejmuje dostawcę, który obsługuje program SQL Server.</span><span class="sxs-lookup"><span data-stu-id="4d7f2-104">The [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] includes a provider that supports SQL Server.</span></span>  

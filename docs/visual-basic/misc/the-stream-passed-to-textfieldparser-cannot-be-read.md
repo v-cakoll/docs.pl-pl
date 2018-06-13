@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639479"
 ---
 # <a name="the-stream-passed-to-textfieldparser-cannot-be-read"></a>Nie można odczytać strumienia przekazanego do parametru TextFieldParser
 [Obiektu TextFieldParser](../../visual-basic/language-reference/objects/textfieldparser-object.md) nie można odczytać strumienia, który został przekazany do niego. Może to być wynikiem próby odczytu pliku, który nie jest plikiem tekstowym.  

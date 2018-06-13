@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520812"
 ---
 # <a name="how-to-add-multiple-sets-of-settings-to-your-application-in-c"></a>Porady: dodawanie wielu zestawów ustawień do aplikacji w C# #
 W niektórych przypadkach można mieć wielu zestawów ustawień w aplikacji. Na przykład jeśli tworzysz aplikację, których można oczekiwać określonej grupy ustawień można zmienić często, można ją rozsądnego je rozdzielić wszystko w jednym pliku, dzięki czemu plik można zastąpić hurtowym, pozostawiając inne ustawienia nie mają wpływu. Program Visual Studio umożliwia dodawanie wielu zestawów ustawień do projektu. Ustawia dodatkowe ustawienia są dostępne za pośrednictwem obiektu Properties.Settings.  

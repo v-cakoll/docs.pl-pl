@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640546"
 ---
 # <a name="the-connectiontimeout-must-be-greater-than-0"></a>Wartość parametru ConnectionTimeout musi być większa niż 0
 Podczas przekazywania i pobierania plików z [My.Computer.Network —](xref:Microsoft.VisualBasic.Devices.Network), należy określić `connectionTimeout` większa niż `0`.  

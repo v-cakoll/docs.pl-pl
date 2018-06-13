@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516730"
 ---
 # <a name="collection-activities-in-wf"></a>Kolekcja działań w WF
 Kolekcja są używane do pracy z obiektami kolekcji w przepływie pracy. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] ma dostarczane przez system działania Dodawanie i usuwanie elementów z kolekcji, testowanie pod kątem istnienia elementu w kolekcji i wyczyszczenie kolekcji. `ExistsInCollection` i `RemoveFromCollection` ma <xref:System.Activities.OutArgument%601> typu <xref:System.Boolean>, która wskazuje wynik.  

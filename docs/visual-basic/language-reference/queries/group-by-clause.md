@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605033"
 ---
 # <a name="group-by-clause-visual-basic"></a>Group By — Klauzula (Visual Basic)
 Grupuje elementy w wyniku zapytania. Można również zastosować funkcje agregujące do każdej grupy. Operacja grupowania jest oparta na co najmniej jeden klucz.  

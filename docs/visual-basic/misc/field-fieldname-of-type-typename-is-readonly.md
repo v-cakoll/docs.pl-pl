@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638570"
 ---
 # <a name="field-39ltfieldnamegt39-of-type-39lttypenamegt39-is-39readonly39"></a>Pole &#39; &lt;fieldname&gt; &#39; typu &#39; &lt;typename&gt; &#39; jest &#39;tylko do odczytu&#39;
 Próba zapisu do pola, która jest zadeklarowana jako `ReadOnly`.  

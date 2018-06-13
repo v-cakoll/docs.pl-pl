@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601861"
 ---
 # <a name="argument-39ltargumentnamegt39-must-be-within-the-range-1-to-255"></a>Argument &#39; &lt;argumentname&gt; &#39; musi być liczbą z zakresu od 1 do 255
 Argument jest nieprawidłowy, ponieważ znajduje się poza zakresem od 0 do 255.  

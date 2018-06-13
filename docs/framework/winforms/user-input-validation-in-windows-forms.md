@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541810"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Walidacja danych użytkownika w formularzach systemu Windows
 Podczas wprowadzania danych do aplikacji, można sprawdzić poprawność danych przed aplikacja używa go. Może wymagać pewnych pól tekstowych konieczności o zerowej długości, że pole można sformatować jako numer telefonu lub inny typ danych poprawnie sformułowany lub że ciąg nie zawiera znaków niebezpieczne, które mogą służyć do naruszenia zabezpieczeń bazy danych. Formularze systemu Windows udostępnia kilka metod można sprawdzić poprawności danych wejściowych w aplikacji.  

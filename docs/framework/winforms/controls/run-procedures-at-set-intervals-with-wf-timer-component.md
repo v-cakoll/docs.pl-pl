@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542187"
 ---
 # <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>Porady: uruchamianie procedur w ustalonych odstępach czasu za pomocą składnika Timer formularzy systemu Windows
 Czasami można utworzyć procedury, która działa w określonych odstępach czasu, aż do pętli zostało zakończone lub uruchamiany po upłynięciu interwału czasu zestawu. <xref:System.Windows.Forms.Timer> Składnika umożliwia takiej procedury.  

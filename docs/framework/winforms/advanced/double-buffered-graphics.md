@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524069"
 ---
 # <a name="double-buffered-graphics"></a>Podwójnie buforowana grafika
 Migotania jest to powszechny problem programowania grafiki. Operacje graficzne, wymagające wielu operacji malowania złożonego może spowodować renderowanych wyświetlania migotać ani w przeciwnym razie można zaakceptować wygląd obrazów. Aby rozwiązać te problemy, .NET Framework zapewnia dostęp do podwójnego buforowania.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646395"
 ---
 # <a name="constants-and-enumerations-in-visual-basic"></a>Stałe i wyliczenia w Visual Basic
 Stałe są sposobem użycia łatwy do rozpoznania nazwy zamiast wartości, który nie ulega zmianie. Stałe przechowywać wartości, które, jak nazwa wskazuje, pozostają stałe w trakcie wykonywania aplikacji. Stałe służy do nadania łatwy do rozpoznania nazwy, zamiast numery wprowadzania czytelność kodu.  

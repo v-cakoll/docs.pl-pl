@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603915"
 ---
 # <a name="join-clause-visual-basic"></a>Join — Klauzula (Visual Basic)
 Łączy dwie kolekcje do jednej kolekcji. Operacja łączenia jest oparta na zgodności kluczy i używa `Equals` operatora.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586402"
 ---
 # <a name="derived-classes-cannot-raise-base-class-events"></a>Klasy pochodne nie mogą wywoływać zdarzeń klasy bazowej
 Zdarzenie można wywoływane tylko z miejsca deklaracji, w którym jest zadeklarowany. W związku z tym klasy nie mogą wywoływać zdarzeń z żadną inną klasę, nawet jedną, z którego pochodzi.  

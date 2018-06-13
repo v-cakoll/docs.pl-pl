@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588700"
 ---
 # <a name="numerics-in-the-net-framework"></a>Wartości numeryczne w programie .NET Framework
 .NET Framework obsługuje standardowe liczbowych podstawowych całkowitych i zmiennoprzecinkowych oraz <xref:System.Numerics.BigInteger>, typem całkowitym bez teoretycznej górnej i dolnej granicy <xref:System.Numerics.Complex>, typ, który reprezentuje liczby złożone oraz zestaw włączone SIMD typy wektorów <xref:System.Numerics> przestrzeni nazw.  

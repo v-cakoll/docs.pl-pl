@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585772"
 ---
 # <a name="constant-expression-not-representable-in-type-39lttypenamegt39"></a>Nie można przedstawić w typie wyrażenie stałe &#39; &lt;typename&gt;&#39;
 Chcesz ocenić stałą, której nie zmieści się na typ docelowy zwykle, ponieważ jest przepełnienia zakresu.  

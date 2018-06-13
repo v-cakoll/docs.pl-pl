@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587309"
 ---
 # <a name="parsing-text-files-with-the-textfieldparser-object-visual-basic"></a>Analizowanie plików tekstowych za pomocą obiektu TextFieldParser (Visual Basic)
 `TextFieldParser` Obiektu umożliwia przeanalizować i przetworzyć pliku bardzo dużych mają strukturę jako rozdzielany szerokość kolumny tekstu, takich jak pliki dziennika lub starszej wersji bazy danych. Podczas analizowania pliku tekstowego z `TextFieldParser` jest podobny do Iterowanie po pliku tekstowego, gdy metody parse do wyodrębniania pól tekstu jest podobny do metod manipulowania ciągami używany do tokenizacji ciągów rozdzielone.  

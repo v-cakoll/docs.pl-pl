@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592174"
 ---
 # <a name="cancellation-in-managed-threads"></a>Anulowanie w zarządzanych wątkach
 Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .NET Framework używa ujednoliconego modelu wspólnych anulowania asynchroniczne lub długotrwałej operacji synchronicznych. Ten model jest oparty na obiekt lekkie o nazwie token anulowania. Obiekt, który wywołuje jeden lub więcej operacji można anulować, na przykład, tworząc nowe wątki i zadań, przekazuje token do każdej operacji. Poszczególnych działań z kolei może przekazać kopie tokenu do innych operacji. W późniejszym czasie obiekt, który utworzył token służy do żądania, że operacje zatrzymana, co robią. Tylko obiektu żądającego mogą wystawiać żądanie anulowania, a każdy odbiornik jest odpowiedzialny za żądanie po raz pierwszy, a odpowiadającym odpowiednią i odpowiednim w sposób.  

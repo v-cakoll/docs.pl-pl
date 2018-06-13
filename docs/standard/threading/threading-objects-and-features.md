@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591330"
 ---
 # <a name="threading-objects-and-features"></a>Wątkowość obiektów i funkcji
 .NET Framework udostępnia wiele obiektów, które ułatwiają tworzenie i zarządzanie nimi w aplikacjach wielowątkowych. Zarządzane wątki są reprezentowane przez <xref:System.Threading.Thread> klasy. <xref:System.Threading.ThreadPool> Klasa umożliwia łatwe tworzenie i zarządzanie zadaniami w tle wielowątkowych. <xref:System.ComponentModel.BackgroundWorker> Klasy jest taka sama dla zadania, które współdziałają z interfejsu użytkownika. <xref:System.Threading.Timer> Klasa wykonuje zadania w tle w określonych interwałach.  

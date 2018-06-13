@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591632"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Decimal — Typ danych (Visual Basic)
 Blokad podpisany 128-bitowego (16-bajtową) wartości reprezentujących skalowania zmiennej siły 10 numerów 96-bitową liczbę całkowitą (12-bajtowych). Czynnik skalowania określa liczbę cyfr z prawej strony punktu dziesiętnego; zakresy go z zakresu od 0 do 28. O skali 0 (bez miejsc dziesiętnych), największa możliwa wartość to +/-79,228,162,514,264,337,593,543,950,335 (+/-7 .9228162514264337593543950335E + 28). 28 miejsc dziesiętnych największą wartość jest +/-7.9228162514264337593543950335 i najmniejszą wartość niezerową jest +/-0,0000000000000000000000000001 (+/-1E-28).  

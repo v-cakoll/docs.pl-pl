@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588057"
 ---
 # <a name="how-to-search-data-in-a-datarepeater-control-visual-studio"></a>Porady: wyszukiwanie danych w formancie DataRepeater (Visual Studio)
 W przypadku używania <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> kontrolkę, która zawiera dużą liczbę rekordów, może zajść potrzeba Pozwalanie użytkownikom wyszukiwanie określonego rekordu. Zamiast wyszukiwanie danych w formancie, można zaimplementować wyszukiwania, badając odpowiadającego <xref:System.Windows.Forms.BindingSource>. Jeśli element zostanie znaleziony, można użyć <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.CurrentItemIndex%2A> właściwości zaznacz element i przewiń go do widoku.  

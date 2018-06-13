@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594845"
 ---
 # <a name="xml-literals-and-xml-properties-are-not-supported-in-embedded-code-within-aspnet"></a>Literały XML i właściwości XML nie są obsługiwane w kodzie osadzonym w programie ASP.NET.
 Literały XML i właściwości XML nie są obsługiwane w kodzie osadzonym w programie ASP.NET. Aby używać funkcji XML, Przenieś kod do związane z kodem.  

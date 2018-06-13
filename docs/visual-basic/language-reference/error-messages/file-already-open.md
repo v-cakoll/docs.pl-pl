@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586673"
 ---
 # <a name="file-already-open"></a>Plik jest już otwarty
 Czasami pliku muszą zostać zamknięte przed inne `FileOpen` lub można wykonać innych operacji. Wśród możliwych przyczyn tego błędu są:  

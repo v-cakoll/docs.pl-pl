@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589883"
 ---
 # <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>Ustalanie przeciążenia późnego nie można zastosować do &#39; &lt;nazwaprocedury&gt; &#39; , ponieważ wystąpienie uzyskujące dostęp jest typem interfejsu
 Kompilator próbuje rozpoznać odwołania do przeciążonej właściwość lub procedura, ale odwołanie nie powiedzie się, ponieważ argument jest typu `Object` i odwołuje się do innych obiektów o typie danych interfejsu. `Object` Argument wymusza na rozpoznania odwołania jako późnym wiązaniem.  

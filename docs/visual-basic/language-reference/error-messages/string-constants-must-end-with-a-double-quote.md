@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594809"
 ---
 # <a name="string-constants-must-end-with-a-double-quote"></a>Stałe typu string muszą być zakończone znakiem podwójnego cudzysłowu
 Stałe typu String muszą rozpoczynać i kończyć znaki cudzysłowu.  

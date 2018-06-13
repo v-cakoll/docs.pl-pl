@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579161"
 ---
 # <a name="garbage-collection-notifications"></a>Powiadomienia dotyczące odzyskiwania pamięci
 Istnieją sytuacje, w których pełnego wyrzucania elementów bezużytecznych (czyli kolekcji generacji 2) przez środowisko uruchomieniowe języka wspólnego może niekorzystnie wpłynąć na wydajność. Może to być problem szczególnie z serwerów, które przetwarzają dużą liczbę żądań; w takim przypadku długich wyrzucania elementów bezużytecznych może spowodować limit czasu żądania. Aby zapobiec pełną kolekcję wystąpienia krytyczny okres, użytkownik może zostać powiadomiony czy pełnego wyrzucania elementów bezużytecznych zbliża się do, a następnie podjęcia działania, aby przekierować obciążenia do innego wystąpienia serwera. Użytkownik może także wywołać kolekcji samodzielnie, pod warunkiem, że bieżące wystąpienie serwera nie jest konieczne przetwarzanie żądań.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495370"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Instrukcje: Tworzenie certyfikatów tymczasowych do używania w trakcie opracowywania
 Podczas tworzenia bezpiecznego usługi lub klienta przy użyciu usługi Windows Communication Foundation (WCF), często należy podać certyfikat X.509 mają być używane jako poświadczenie. Certyfikat jest zwykle częścią łańcucha certyfikatów przy użyciu głównego urzędu został znaleziony w magazynie zaufanych głównych urzędów certyfikacji komputera. Posiadanie łańcuch certyfikatów umożliwia określania zakresu zestawu certyfikatów, w których zwykle głównego urzędu certyfikacji jest od swojej organizacji lub jednostki biznesowej. Aby emulować to w czasie tworzenia, możesz utworzyć dwa certyfikaty by spełnić ich wymagań zabezpieczeń. Pierwsza to certyfikatu z podpisem własnym, który jest umieszczony w magazynie zaufanych głównych urzędów certyfikacji i drugiego certyfikatu jest tworzona na podstawie pierwszego i znajduje się w magazynie osobistym lokalizacji komputera lokalnego lub w magazynie osobistym Bieżąca lokalizacja użytkownika. W tym temacie przedstawiono kroki, aby utworzyć tych dwóch certyfikatów przy użyciu [narzędzie tworzenia certyfikatów (MakeCert.exe)](http://go.microsoft.com/fwlink/?LinkId=248185), które są dostarczane przez [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] zestawu SDK.  

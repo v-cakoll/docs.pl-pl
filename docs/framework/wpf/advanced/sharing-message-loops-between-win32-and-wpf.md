@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548818"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Udostępnianie pętli komunikatów pomiędzy Win32 i WPF
 W tym temacie opisano implementowania na współdziałanie z pętli komunikatów [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], przy użyciu istniejących komunikatów narażenia pętli w <xref:System.Windows.Threading.Dispatcher> lub przez tworzenie pętli osobnej wiadomości na [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] obok siebie współdziałanie kodu.  

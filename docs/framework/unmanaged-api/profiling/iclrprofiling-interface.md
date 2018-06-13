@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450476"
 ---
 # <a name="iclrprofiling-interface"></a>ICLRProfiling — Interfejs
 Udostępnia [ICLRProfiling::AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) metodę, która pozwala na dołączenie do uruchomionego procesu profilera.  

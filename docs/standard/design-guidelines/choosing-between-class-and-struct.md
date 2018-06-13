@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573584"
 ---
 # <a name="choosing-between-class-and-struct"></a>Wybór między klasy i struktury
 Jednym z podstawowych decyzji projektowych który skierowany framework designer na co jest czy zaprojektować typu jako klasy (Typ referencyjny) lub struct (typ wartości). Dobrą znajomością różnice w zachowaniu typy wartości i typy referencyjne odgrywa kluczową rolę w podejmowaniu ten wybór.  

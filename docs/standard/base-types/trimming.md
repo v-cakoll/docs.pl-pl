@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569892"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a>Przycinanie i usuwanie znaków z ciągów w .NET
 Jeśli analizy zdanie w poszczególnych wyrazów może być na końcu wyrazy, które mają puste miejsca (nazywane również spacji) na dowolnym jej końcu słowo. W takiej sytuacji można użyć jednej z metod przycinania w **System.String** klasę, aby usunąć dowolną liczbę spacji ani innych znaków od określonej pozycji w ciągu. W poniższej tabeli opisano dostępne metody przycinania.  

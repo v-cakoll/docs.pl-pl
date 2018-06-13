@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520058"
 ---
 # <a name="c-expressions"></a>Wyrażenia języka C#
 Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], C# wyrażenia są obsługiwane w systemie Windows Workflow Foundation (WF). Nowych projektów C# przepływu pracy utworzone w [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] kierowanych [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Użyj C# wyrażeń i projekty Visual Basic przepływu pracy, użyj wyrażenia języka Visual Basic. Istniejące [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] projektów przepływu pracy, które używają wyrażeń języka Visual Basic można poddać migracji do [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] niezależnie od tego projektu języka i są obsługiwane. Ten temat zawiera omówienie wyrażeń C# w [!INCLUDE[wf1](../../../includes/wf1-md.md)].  

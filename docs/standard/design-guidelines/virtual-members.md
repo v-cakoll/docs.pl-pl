@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573094"
 ---
 # <a name="virtual-members"></a>Wirtualne elementy członkowskie
 Wirtualne elementy Członkowskie mogą zostać zastąpione, w związku z tym zmiany zachowania podklasy. Są bardzo podobne do wywołania zwrotne pod względem rozszerzania, które zapewniają, ale są one lepsze pod względem wydajności wykonywania i zmniejszenie zużycia pamięci. Ponadto wirtualne elementy członkowskie możesz bardziej naturalne w scenariuszach wymagających tworzenie specjalny rodzaj istniejącego typu (Specjalizacja).  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420420"
 ---
 # <a name="icordebugprocess2-interface1"></a>ICorDebugProcess2 Interface1
 Logiczne rozszerzenie ICorDebugProcess — interfejs, który reprezentuje proces uruchamiania kodu zarządzanego.  

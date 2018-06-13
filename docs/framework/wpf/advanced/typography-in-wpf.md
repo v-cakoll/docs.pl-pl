@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549130"
 ---
 # <a name="typography-in-wpf"></a>Typografia w WPF
 W tym temacie przedstawiono główne funkcje związane z typografią [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Te funkcje obejmują lepszą jakość i wydajność renderowanie tekstu [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] typografii pomocy technicznej, rozszerzone tekstu międzynarodowe, rozszerzona obsługa czcionek i interfejsy programowania aplikacji w usłudze nowy tekst (API).  

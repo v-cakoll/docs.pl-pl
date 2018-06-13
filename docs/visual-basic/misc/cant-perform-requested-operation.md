@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636851"
 ---
 # <a name="can39t-perform-requested-operation-visual-basic"></a>Można&#39;t wykonać żądanej operacji (Visual Basic)
 Operacja nie może być przeprowadzone, ponieważ spowoduje unieważnienie bieżący stan projektu. Na przykład może próbowano programowo zmodyfikować kod, który jest uruchomiony.  

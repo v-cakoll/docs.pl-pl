@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461620"
 ---
 # <a name="icorprofilercallback-interface"></a>ICorProfilerCallback — Interfejs
 Udostępnia metody, które są używane przez środowisko uruchomieniowe języka wspólnego (CLR) do powiadamiania profilera kodu występowania zdarzeń, do których subskrybowanych profilera.  

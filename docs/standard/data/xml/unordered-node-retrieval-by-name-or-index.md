@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572944"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>Pobieranie węzła nieuporządkowaną przez nazwę lub indeks
 **XmlNamedNodeMap** jest opisany w sieci World Wide Web konsorcjum W3C specyfikacji jako NamedNodeMap i jest wymagany do obsługi nieuporządkowaną zestaw określonych węzłów z możliwością węzłów odwołanie przez ich nazwę lub indeks. Jedynym sposobem, musisz mieć dostęp do **XmlNamedNodeMap** jest, gdy **XmlNamedNodeMap** jest zwracany za pomocą metody lub właściwości. Istnieją trzy metody lub właściwości, które zwracają **XmlNamedNodeMap**:  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585928"
 ---
 # <a name="file-is-too-large-to-read-into-a-byte-array"></a>Plik jest za duży, aby odczytać z tablicy bajtów
 Rozmiar pliku, który próbujesz odczytu tablicy bajtów przekracza 4 GB. `My.Computer.FileSystem.ReadAllBytes` — Metoda nie może odczytać pliku, który przekracza rozmiar.  

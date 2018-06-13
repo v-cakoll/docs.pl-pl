@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572843"
 ---
 # <a name="inputs-to-the-xslcompiledtransform-class"></a>Dane wejściowe do klasy XslCompiledTransform
 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> Metoda przyjmuje trzech typów dla dokumentu źródłowego wejściowych: obiekt, który implementuje <xref:System.Xml.XPath.IXPathNavigable> interfejsu <xref:System.Xml.XmlReader> obiekt, który odczytuje dokument źródłowy lub ciąg identyfikatora URI.  

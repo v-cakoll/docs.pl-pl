@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493340"
 ---
 # <a name="peer-meshes"></a>Siatki elementów równorzędnych
 A *siatki* jest w nazwanej kolekcji (wykres połączonych) węzły równorzędne, który może komunikować się między sobą i które są identyfikowane przez identyfikator unikatowy siatki. Każdy węzeł jest podłączony do wielu innych węzłów. W dobrze połączonych sieci jest ścieżką żadnych dwóch węzłów z małej liczbie przeskoków między węzłami w ostatniej krawędzi siatkę, i siatkę pozostanie połączonych, nawet jeśli niektóre węzły lub połączeń porzucić. Aktywnych węzłów w siatce publikowanie informacji o ich punktu końcowego z odpowiedni identyfikator sieci, dzięki czemu można je znaleźć innych elementów równorzędnych.  

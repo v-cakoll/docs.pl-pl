@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573929"
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>Kopiowanie istniejących węzłów z jednego dokumentu do innego
 **ImportNode** metody to mechanizm, za pomocą którego węzeł lub całego węzła poddrzewo zostaną skopiowane z jednego **XmlDocument** na inny. Węzeł zwracana z wywołania jest kopią węzła w dokumencie źródłowym, w tym wartości atrybutów, nazwa węzła typu węzła i wszystkie atrybuty związane z przestrzeni nazw, takie jak prefiks, nazwę lokalną i przestrzeń nazw identyfikatora URI (Uniform Resource). Dokument źródłowy nie zostanie zmieniona. Po zaimportowaniu tego węzła, musisz dodać je do drzewa przy użyciu jednej z metod służy do wstawiania węzłów.  

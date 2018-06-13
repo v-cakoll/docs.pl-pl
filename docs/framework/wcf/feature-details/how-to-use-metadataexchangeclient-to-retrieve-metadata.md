@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494231"
 ---
 # <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>Instrukcje: Używanie elementu MetadataExchangeClient do pobierania metadanych
 Użyj <xref:System.ServiceModel.Description.MetadataExchangeClient> klasy do pobierania metadanych za pomocą protokołu WS-MetadataExchange (MEX). Pliki pobierane metadane są zwracane jako <xref:System.ServiceModel.Description.MetadataSet> obiektu. Zwrócona <xref:System.ServiceModel.Description.MetadataSet> obiektu zawiera kolekcję <xref:System.ServiceModel.Description.MetadataSection> obiektów, z których każdy zawiera dialekt określonych metadanych i identyfikator. Metadane zwrócony może zapisywać do plików lub, jeśli metadane zwrócony zawiera dokumenty Web Services Description Language (WSDL), można importować przy użyciu metadanych <xref:System.ServiceModel.Description.WsdlImporter>.  

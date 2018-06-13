@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517576"
 ---
 # <a name="b233zier-splines-in-gdi"></a>B&#233;zier krzywe w GDI +
 Krzywej Beziera jest określony przez cztery punkty krzywej: dwa punkty końcowe (p1 i p2) i punkty kontrolne dwóch (c1 i c2). Krzywej zaczyna się od p1 i kończy się na p2. Krzywej nie przechodzi przez punkty kontrolne, ale punktów kontrolnych pełnienie pól, ściąganie krzywej w niektórych kierunkach i mające wpływ na sposób załamania krzywej. Na poniższej ilustracji przedstawiono krzywej Beziera, wraz z jego punktów końcowych i punkty kontrolne.  

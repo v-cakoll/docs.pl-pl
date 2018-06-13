@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567822"
 ---
 # <a name="creating-new-strings-in-net"></a>Tworzenie nowych ciągów w .NET
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Umożliwia ciągów, które ma zostać utworzony przy użyciu przypisanie proste, a także overloads konstruktora klasy do obsługi tworzenia ciągu przy użyciu wielu różnych parametrów. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Udostępnia kilka metod w <xref:System.String?displayProperty=nameWithType> klasy, która utworzyć nowe parametry obiektów przez łączenie wielu ciągów, tablic ciągów, ani obiektów.  

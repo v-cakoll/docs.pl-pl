@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571664"
 ---
 # <a name="unsealed-classes"></a>Niezapieczętowanych klas
 Zapieczętowane klasy nie może być dziedziczona z i uniemożliwić ich rozszerzeń. Z kolei klasy, które mogą być dziedziczone z są nazywane niezapieczętowanych klas.  

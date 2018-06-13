@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548473"
 ---
 # <a name="freezable-objects-overview"></a>Przegląd Obiekty Freezable
 W tym temacie opisano, jak skutecznie używać i utworzyć <xref:System.Windows.Freezable> obiektów, które dostarczają specjalnych funkcji, które może zwiększyć wydajność aplikacji. Przykładami obiektu freezable obiektów pędzle, pióra przekształcenia, mają geometrię i animacji.  

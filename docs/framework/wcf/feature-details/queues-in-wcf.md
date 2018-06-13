@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496591"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Kolejki programu Windows Communication Foundation
 Tematy w tej sekcji omówiono w nim obsługę Windows Communication Foundation (WCF) kolejki. Usługi WCF zapewnia obsługę dla usługi kolejkowania wiadomości przez korzystanie z usług firmy Microsoft usługi kolejkowania komunikatów (wcześniej znane jako MSMQ) jako transportu i umożliwia realizację następujących scenariuszy:  

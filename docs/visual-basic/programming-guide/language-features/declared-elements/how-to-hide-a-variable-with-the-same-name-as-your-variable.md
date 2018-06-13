@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653121"
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>Porady: ukrywanie zmiennej o tej samej nazwie jako zmiennej użytkownika (Visual Basic)
 Można ukryć zmiennej przez *przesłanianie* go, czyli przy ponownym zdefiniowaniem go za pomocą zmiennych o takiej samej nazwie. Można obserwować zmiennej, którą chcesz ukryć na dwa sposoby:  

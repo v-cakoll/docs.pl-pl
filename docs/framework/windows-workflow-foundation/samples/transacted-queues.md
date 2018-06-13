@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519684"
 ---
 # <a name="transacted-queues"></a>Transakcyjne kolejki.
 W tym przykładzie pokazano, jak zintegrować kolejek oraz transakcje w systemie Windows Workflow Foundation (WF) do tworzenia niezawodnych i skalowalnych usług. A <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` jest używany w przepływie pracy klienta do wysyłania wiadomości do kolejki w transakcji za pomocą <xref:System.ServiceModel.NetMsmqBinding>. A <xref:System.ServiceModel.Activities.TransactedReceiveScope> jest używany na serwerze do odbierania wiadomości z kolejki i zaktualizowanie stanu przepływu pracy w tej samej transakcji.  

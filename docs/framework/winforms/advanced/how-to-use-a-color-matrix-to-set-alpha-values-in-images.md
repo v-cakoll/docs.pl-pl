@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522349"
 ---
 # <a name="how-to-use-a-color-matrix-to-set-alpha-values-in-images"></a>Porady: stosowanie macierzy kolorów ustawiania wartości alfa na obrazach
 <xref:System.Drawing.Bitmap> Klasy (który dziedziczy z <xref:System.Drawing.Image> klasy) oraz <xref:System.Drawing.Imaging.ImageAttributes> klasy zapewniają funkcje służące do pobierania i ustawiania wartości pikseli. Można użyć <xref:System.Drawing.Imaging.ImageAttributes> klasę, aby zmodyfikować alfa wartości dla całego obrazu lub można wywołać <xref:System.Drawing.Bitmap.SetPixel%2A> metody <xref:System.Drawing.Bitmap> klasy, aby zmodyfikować wartości poszczególnych pikseli.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519152"
 ---
 # <a name="using-the-modelitem-editing-context"></a>Przy użyciu ModelItem edycji kontekstu
 <xref:System.Activities.Presentation.Model.ModelItem> Edycji kontekstu jest obiekt, który aplikacja hosta używa do komunikacji przy użyciu projektanta. <xref:System.Activities.Presentation.EditingContext> udostępnia dwie metody <xref:System.Activities.Presentation.EditingContext.Items%2A> i <xref:System.Activities.Presentation.EditingContext.Services%2A>, której można użyć  

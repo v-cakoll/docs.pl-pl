@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523162"
 ---
 # <a name="global-and-local-transformations"></a>Globalne i lokalne przekształcenia
 Globalne przekształcenie jest transformację, która ma zastosowanie do każdego elementu narysowanymi przez dany <xref:System.Drawing.Graphics> obiektu. Z kolei transformację lokalnego jest transformację, która ma zastosowanie do określonego elementu do narysowania.  

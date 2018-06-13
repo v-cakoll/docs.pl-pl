@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523089"
 ---
 # <a name="how-to-create-a-private-font-collection"></a>Porady: tworzenie prywatnej kolekcji czcionek
 <xref:System.Drawing.Text.PrivateFontCollection> Klasa dziedziczy <xref:System.Drawing.Text.FontCollection> abstrakcyjnej klasy podstawowej. Można użyć <xref:System.Drawing.Text.PrivateFontCollection> obiektu przechowywać zestawu czcionek specjalnie dla aplikacji. Kolekcja prywatnej czcionki mogą obejmować czcionek zainstalowanego systemu, a także czcionek, które nie zostały zainstalowane na komputerze. Aby dodać plik czcionki do kolekcji czcionki prywatnych, należy wywołać <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> metody <xref:System.Drawing.Text.PrivateFontCollection> obiektu.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524199"
 ---
 # <a name="how-to-manually-render-buffered-graphics"></a>Porady: ręczne renderowanie buforowanej grafiki
 Jeśli zarządzasz buforowanej grafiki, należy mieć możliwość tworzenia i renderowania grafiki buforów. Można utworzyć wystąpienia <xref:System.Drawing.BufferedGraphics> klasy, która jest skojarzona z rysunku powierzchni na ekranie, wywołując <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A> metody. Ta metoda tworzy <xref:System.Drawing.BufferedGraphics> wystąpienia, który jest skojarzony z powierzchnią określonego renderowania, takich jak formularz lub formant. Po utworzeniu <xref:System.Drawing.BufferedGraphics> wystąpienia, można narysować grafiki w buforze reprezentuje za pośrednictwem <xref:System.Drawing.BufferedGraphics.Graphics%2A> właściwości. Po wykonaniu wszystkich operacji graficznych, wywołując można skopiować zawartość buforu ekranu <xref:System.Drawing.BufferedGraphics.Render%2A> metody.  

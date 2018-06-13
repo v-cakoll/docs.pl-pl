@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521982"
 ---
 # <a name="how-to-determine-the-parameters-supported-by-an-encoder"></a>Porady: określanie parametrów obsługiwanych przez koder
 Można dostosować parametry obrazu, takie jak poziomu jakości i ich kompresji, ale musi wiedzieć, które parametry są obsługiwane przez koder danego obrazu. <xref:System.Drawing.Image> Klasa udostępnia <xref:System.Drawing.Image.GetEncoderParameterList%2A> metody, dzięki czemu można określić, które parametry obrazu są obsługiwane dla konkretnego kodera. Koder można określić za pomocą identyfikatora GUID. <xref:System.Drawing.Image.GetEncoderParameterList%2A> Metoda zwraca tablicę <xref:System.Drawing.Imaging.EncoderParameter> obiektów.  

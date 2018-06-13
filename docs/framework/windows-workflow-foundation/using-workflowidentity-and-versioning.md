@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520126"
 ---
 # <a name="using-workflowidentity-and-versioning"></a>Za pomocą właściwości WorkflowIdentity i kontroli wersji
 <xref:System.Activities.WorkflowIdentity> zapewnia sposób przepływu pracy z deweloperami aplikacji, aby skojarzyć nazwę i <xref:System.Version> z definicją przepływu pracy, a te informacje mają być skojarzone z wystąpieniem przepływu pracy utrwalonych. Informacje o tożsamości mogą posłużyć deweloperzy aplikacji przepływu pracy na potrzeby scenariuszy, takich jak side-by-side wykonywanie wielu wersji definicji przepływu pracy i udostępnia inne funkcje, takie jak aktualizacja dynamiczna podstawy. W tym temacie przedstawiono jako omówienie używania <xref:System.Activities.WorkflowIdentity> z <xref:System.Activities.WorkflowApplication> hosting. Aby uzyskać informacje na wykonanie side-by-side definicji przepływu pracy w usłudze przepływu pracy, zobacz [równoległe przechowywanie wersji w klasie WorkflowServiceHost](../../../docs/framework/wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md). Uzyskać informacji dotyczących aktualizacji dynamicznej, zobacz [aktualizacji dynamicznej](../../../docs/framework/windows-workflow-foundation/dynamic-update.md).  

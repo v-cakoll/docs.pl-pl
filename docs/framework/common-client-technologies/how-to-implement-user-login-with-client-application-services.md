@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743813"
 ---
 # <a name="how-to-implement-user-login-with-client-application-services"></a>Porady: implementowanie logowania użytkownika przy użyciu usług aplikacji klienta
 Usługi aplikacji klienta można użyć do weryfikowania użytkowników za pomocą istniejącej [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] profilu usługi. Aby uzyskać informacje dotyczące sposobu konfigurowania [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] profilu usługi, zobacz [przy użyciu uwierzytelniania formularzy z Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e).  

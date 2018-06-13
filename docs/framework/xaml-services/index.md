@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566837"
 ---
 # <a name="xaml-services"></a>Usługi XAML
 W tym temacie opisano funkcje zestawu technologii, znany jako .NET Framework XAML usług. Większość usług i interfejsów API opisanego znajdują się w zestawie System.Xaml, która jest zestawem wprowadzone w systemie [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] zbiór zestawów platformy .NET core. Usługi obejmują fabryki czytelników i moduły zapisujące klasy schematu i obsługi schematu, przypisywanie klas, wewnętrzne obsługę języka XAML i inne funkcje języka XAML.  

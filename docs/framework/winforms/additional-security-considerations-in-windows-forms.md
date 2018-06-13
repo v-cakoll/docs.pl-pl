@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519915"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Dodatkowe zagadnienia dotyczące zabezpieczeń dotyczące formularzy systemu Windows
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ustawienia zabezpieczeń może spowodować aplikację do uruchamiania inaczej w środowisku częściowej relacji zaufania niż na komputerze lokalnym. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Ogranicza dostęp do takich krytyczne zasoby lokalne jako system plików, sieci i niezarządzane interfejsy API, między innymi. Ustawienia zabezpieczeń wpływają na możliwość wywołania interfejsu API Win32 firmy Microsoft lub innych interfejsów API, którego nie można zweryfikować przez system zabezpieczeń. Zabezpieczeń dotyczy również inne aspekty aplikacji, łącznie z dostępem do plików i danych i drukowania. Aby uzyskać więcej informacji na temat dostępu do plików i danych w środowisku częściowej relacji zaufania, zobacz [więcej Zabezpieczanie plików i dostępu do danych w formularzach systemu Windows](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md). Aby uzyskać więcej informacji na temat drukowania w środowisku częściowej relacji zaufania, zobacz [więcej Secure drukowania w formularzach systemu Windows](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md).  

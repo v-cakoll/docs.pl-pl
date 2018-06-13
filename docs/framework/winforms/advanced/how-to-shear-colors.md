@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522450"
 ---
 # <a name="how-to-shear-colors"></a>Porady: zmienianie kolorów
 Pochylanie zwiększa lub zmniejsza składnika kolor przez kwotę proporcjonalny do innego składnika kolorów. Rozważmy na przykład przekształcania, gdzie składnika czerwony zwiększa się o połowę wartość składnika niebieski. W takiej transformacji kolorów (0,2, 0,5, 1) może stać się (0,7, 0,5, 1). Nowy składnik red jest wymagane 0,2 + (1/2)(1) = 0,7.  

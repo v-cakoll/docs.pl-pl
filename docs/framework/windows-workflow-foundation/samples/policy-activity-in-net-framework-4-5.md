@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518903"
 ---
 # <a name="policy-activity-in-net-framework-45"></a>Zasady działania w programie .NET Framework 4.5
 Działanie Policy4 umożliwia Windows Workflow Foundation w [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> obiektów do użycia w programie Windows Workflow Foundation w [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) bezpośrednio za pomocą aparatu reguł, który jest dostarczany w wersji 3.5 WF. Za pomocą tego działania, można tworzyć i wykonywać WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>. Aby uzyskać więcej informacji na temat aparatu reguł 3.5 WF dołączone jako część programu Windows Workflow Foundation przeczytaj wprowadzenie do aparatu reguł systemu Windows Workflow Foundation. Aby uzyskać więcej informacji na temat migracji reguł WF w [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], przeczytaj [wskazówki dotyczące migracji](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  

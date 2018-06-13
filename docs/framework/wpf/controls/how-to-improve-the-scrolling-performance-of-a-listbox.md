@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552795"
 ---
 # <a name="how-to-improve-the-scrolling-performance-of-a-listbox"></a>Jak poprawić wydajność przesuwania ListBox
 Jeśli <xref:System.Windows.Controls.ListBox> zawiera wiele pozycji, mogą być powolne odpowiedzi interfejsu użytkownika, gdy użytkownik przewinie <xref:System.Windows.Controls.ListBox> za pomocą kółka myszy lub przeciąganie przycisku paska przewijania. Można zwiększyć wydajność <xref:System.Windows.Controls.ListBox> gdy użytkownik przewija widok przez ustawienie `VirtualizingStackPanel.VirtualizationMode` dołączona właściwość do <xref:System.Windows.Controls.VirtualizationMode.Recycling?displayProperty=nameWithType>.  

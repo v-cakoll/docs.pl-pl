@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523770"
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>Porady: tworzenie nowego ustawienia w czasie projektowania
 Przy użyciu narzędzia Projektant ustawienia, można utworzyć nowe ustawienie w czasie projektowania. Projektant ustawienia jest interfejsem styl siatki, który pozwala utworzyć nowe ustawienia, a także określać właściwości dla tych ustawień. Należy określić nazwę, wartość, typ i zakres dla nowych ustawień. Po utworzeniu ustawienie jest dostępne w kodzie.  

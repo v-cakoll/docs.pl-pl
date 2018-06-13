@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489086"
 ---
 # <a name="how-to-compare-claims"></a>Porady: Porównywanie oświadczeń
 Infrastruktura modelu tożsamości w systemie Windows Communication Foundation (WCF) służy do sprawdzania autoryzacji. W efekcie typowych zadań jest porównywanie oświadczeń w kontekście autoryzacji oświadczeń wymagane do wykonania żądanej akcji lub dostęp do żądanego zasobu. W tym temacie opisano sposób porównywania roszczenia, w tym typy oświadczeń wbudowanych i niestandardowych. Aby uzyskać więcej informacji na temat infrastruktury modelu tożsamości, zobacz [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  

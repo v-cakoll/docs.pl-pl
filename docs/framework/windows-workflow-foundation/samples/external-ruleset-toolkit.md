@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520399"
 ---
 # <a name="external-ruleset-toolkit"></a>Zewnętrzne Toolkit zestaw reguł
 Zwykle podczas stosowania reguł aplikacji przepływu pracy, reguły są częścią zestawu. W niektórych scenariuszach można zachować zestawów reguł, niezależnie od zestawu, dzięki czemu mogą być aktualizowane bez ponowne tworzenie i wdrażanie zestawu przepływu pracy. W tym przykładzie pozwala na zarządzanie i edytować zestawów reguł w bazie danych oraz uzyskać dostęp do tych zestawów reguł z przepływu pracy w czasie wykonywania. Dzięki temu uruchomionych wystąpień przepływu pracy automatycznie zastosować zmian zestaw reguł.  

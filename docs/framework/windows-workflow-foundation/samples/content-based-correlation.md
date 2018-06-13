@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518835"
 ---
 # <a name="content-based-correlation"></a>Korelacja na podstawie zawartości
 W tym przykładzie przedstawiono sposób działania dotyczące komunikatów (<xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>, i <xref:System.ServiceModel.Activities.ReceiveReply>) mogą być używane z wielu correlations.and na podstawie zawartości na podstawie zawartości korelacji. W tym scenariuszu korelacji jest najpierw zainicjować na podstawie Identyfikatora zamówienia zakupu, a następnie innego korelacji jest tworzone, później oparte na identyfikator klienta. Oznacza to, jak <xref:System.ServiceModel.Activities.Receive> działania można wykonaj istniejących korelacji i inicjować korelację nowe na podstawie tego samego komunikatu przychodzącego.  

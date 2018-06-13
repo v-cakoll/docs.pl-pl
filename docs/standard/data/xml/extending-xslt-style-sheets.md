@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568826"
 ---
 # <a name="extending-xslt-style-sheets"></a>Rozszerzanie arkuszy stylów XSLT
 W tej sekcji opisano różne metody rozszerzania funkcji XSLT. Możesz dodać rozszerzenie obiektów lub parametry, używając <xref:System.Xml.Xsl.XsltArgumentList> klasy. Następnie można wywołać rozszerzenie obiektów lub parametrów z arkusza stylów. Ponadto można również osadzać blokach skryptu do arkusza stylów przy użyciu `msxsl:script` elementu.  

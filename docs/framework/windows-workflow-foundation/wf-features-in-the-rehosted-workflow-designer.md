@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520149"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Obsługa nowej funkcji Foundation 4.5 przepływu pracy w Projektancie Rehosted przepływów pracy
 Windows Workflow Foundation (WF) w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] wprowadzono wiele nowych funkcji, w tym kilka ulepszeń obsługi projektanta przepływów pracy. W tym temacie szczegółowe informacje, które te funkcje są obsługiwane w Projektancie rehosted i te, które nie są obecnie obsługiwane.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521326"
 ---
 # <a name="how-to-fill-a-shape-with-a-solid-color"></a>Porady: wypełnianie kształtów jednolitym kolorem
 Wypełnianie kształtów jednolitym kolorem, należy utworzyć <xref:System.Drawing.SolidBrush> obiekt, a następnie przekazać który <xref:System.Drawing.SolidBrush> obiektu jako argument metody fill <xref:System.Drawing.Graphics> klasy. Poniższy przykład pokazuje, jak do wypełnienia elipsy kolorem czerwonym.  

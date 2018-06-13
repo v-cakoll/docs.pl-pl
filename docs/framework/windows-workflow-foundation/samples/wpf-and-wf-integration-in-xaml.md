@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518193"
 ---
 # <a name="wpf-and-wf-integration-in-xaml"></a>Integracja programu WF w języku XAML i WPF
 Ten przykład przedstawia sposób tworzenia aplikacji, która używa funkcji systemu Windows Presentation Foundation (WPF) i Windows Workflow Foundation (WF) w jednym dokumencie XAML. W tym celu próbki korzysta z rozszerzeń systemu Windows Workflow Foundation (WF) i języka XAML.  

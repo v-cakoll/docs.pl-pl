@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519496"
 ---
 # <a name="contract-first-workflow-service-development"></a>Kontrakt pierwszy programowanie usługi przepływu pracy
 Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], funkcji Windows Workflow Foundation (WF) lepszą integrację usług sieci web i przepływów pracy w formularzu tworzenia pierwszej kontraktu przepływu pracy. Narzędzie do projektowania przepływu pracy pierwszy kontraktu pozwala na projektowanie najpierw kontraktu w kodzie. Narzędzie następnie automatycznie generuje szablon czynności w przyborniku operacji w umowie. Ten temat zawiera omówienie sposobu działania i właściwości w usłudze przepływu pracy mapowania atrybuty kontraktu usługi. Na przykład krok po kroku, tworzenie usługi przepływu pracy pierwszy kontraktu, zobacz [porady: Tworzenie usługi przepływu pracy, który wykorzystuje istniejący kontrakt usługi](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  

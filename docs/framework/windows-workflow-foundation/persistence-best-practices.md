@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520191"
 ---
 # <a name="persistence-best-practices"></a>Najlepsze rozwiązania w zakresie trwałości
 W tym dokumencie opisano najważniejsze wskazówki dotyczące projektowania przepływu pracy i konfiguracji związane z trwałości przepływu pracy.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522918"
 ---
 # <a name="how-to-draw-text-with-gdi"></a>Porady: rysowanie tekstu za pomocą GDI
 Z <xref:System.Windows.Forms.TextRenderer.DrawText%2A> metody w <xref:System.Windows.Forms.TextRenderer> klasy, można uzyskać dostęp [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] funkcji Rysowanie tekstu na formularz lub formant. [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] Renderowanie tekstu zwykle zapewnia lepszą wydajność i dokładniejsze tekst pomiaru niż [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  

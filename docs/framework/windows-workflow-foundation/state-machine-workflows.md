@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519642"
 ---
 # <a name="state-machine-workflows"></a>Przepływy pracy automatu stanów
 Komputer stanu jest dobrze znanego modelu programowania programy. <xref:System.Activities.Statements.StateMachine> Działania, wraz z <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition>, i innych działań może służyć do tworzenia programów przepływu pracy komputera stanu. Ten temat zawiera omówienie tworzenia przepływów pracy komputera stanu.  

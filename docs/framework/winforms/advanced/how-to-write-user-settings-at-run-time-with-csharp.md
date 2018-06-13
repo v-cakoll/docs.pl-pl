@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522298"
 ---
 # <a name="how-to-write-user-settings-at-run-time-with-c"></a>Porady: pisanie ustawień użytkownika w czasie wykonywania w języku C# #
 Ustawienia, które są zakresu aplikacji są tylko do odczytu, a można zmienić tylko w czasie projektowania lub przez zmodyfikowanie pliku .config między sesjami aplikacji. Ustawienia, które są zakresu użytkownika, jednak mogą być zapisywane w czasie wykonywania tak samo, jak można zmienić wartości właściwości. Nowa wartość będzie się powtarzać, w czasie trwania sesji aplikacji. Można ją utrwalić ustawienia między sesjami aplikacji przez wywołanie metody Zapisz zmiany.  

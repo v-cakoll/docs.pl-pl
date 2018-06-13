@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523413"
 ---
 # <a name="how-to-change-the-value-of-a-setting-between-application-sessions"></a>Porady: zmiana wartości ustawienia między sesjami aplikacji
 W czasie można zmienić wartości ustawienia między sesjami aplikacji po aplikacji została skompilowana i wdrożona. Na przykład można zmienić parametry połączenia, aby wskazać lokalizację poprawną bazą danych. Od czasu projektowania narzędzi nie są dostępne po aplikacji została skompilowana i wdrożona, należy zmienić wartość ustawienia ręcznie w pliku.  

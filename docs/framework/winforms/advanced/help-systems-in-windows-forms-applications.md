@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520724"
 ---
 # <a name="help-systems-in-windows-forms-applications"></a>Systemy Pomocy w aplikacjach Windows Forms
 Jednym z najważniejszych courtesies, jako Deweloper aplikacji, można dostarczyć użytkownikom jest właściwy system pomocy. Jest to, gdzie spowoduje wyłączenie, gdy stają się pomylić lub disoriented. Zapewnianie system pomocy w aplikacji opartych na systemie Windows łatwo odbywa się przy użyciu [helpprovider — składnik](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md).  

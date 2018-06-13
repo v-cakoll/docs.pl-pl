@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522204"
 ---
 # <a name="images-bitmaps-and-metafiles"></a>Obrazy, mapy bitowe i metapliki
 `Image` Klasa jest abstrakcyjna klasa podstawowa, który udostępnia metody do pracy z obrazów rastrowych (map bitowych) i wektor obrazy (metapliki). `Bitmap` Klasy i <xref:System.Drawing.Imaging.Metafile> zarówno dziedziczy z klasy `Image` klasy. `Bitmap` Klasa rozszerza się na funkcjach `Image` klasy, zapewniając dodatkowe metody ładowania, zapisywania i modyfikowania obrazów rastrowych. <xref:System.Drawing.Imaging.Metafile> Klasa rozszerza się na funkcjach `Image` klasy, zapewniając dodatkowe metody rejestrowania i badanie wektor obrazów.  

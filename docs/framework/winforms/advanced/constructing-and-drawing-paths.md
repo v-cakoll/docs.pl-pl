@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520659"
 ---
 # <a name="constructing-and-drawing-paths"></a>Konstruowanie i rysowanie ścieżek
 Ścieżka jest sekwencję elementów podstawowych grafiki (wiersze, prostokąty krzywych, tekst i podobnych), które można wykonywać na nich operacji i rysowane jako pojedyncza jednostka. Ścieżkę można podzielić na *rysunki* otwarty lub zamknięty. Ilustracja może zawierać kilka elementów podstawowych.  

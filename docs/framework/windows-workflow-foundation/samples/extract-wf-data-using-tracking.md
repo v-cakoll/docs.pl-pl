@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519876"
 ---
 # <a name="extract-wf-data-using-tracking"></a>Wyodrębnianie danych WF przy użyciu śledzenia
 W tym przykładzie przedstawiono sposób użycia śledzenia można wyodrębnić zmienne przepływu pracy i argumenty z działań przepływu pracy. Przedstawia on także dodawanie adnotacji do śledzenia rekordów i wyodrębniania danych ładunku w rekordach śledzenia niestandardowych. W przykładzie użyto uczestnika śledzenia zdarzeń śledzenia dla systemu Windows (ETW) do wyodrębniania danych z przepływu pracy.  

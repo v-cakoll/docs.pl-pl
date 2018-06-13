@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522828"
 ---
 # <a name="getting-started-with-graphics-programming"></a>Wprowadzenie do programowania grafiki
 W tej sekcji pokazano, jak rozpocząć korzystanie z [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] w aplikacji formularzy systemu Windows. W następujących tematach opisano sposób wykonania kilku [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] zadań, takich jak rysowania i wypełnianie kształty i tekst.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519522"
 ---
 # <a name="how-to-run-a-workflow"></a>Porady: uruchamianie przepływu pracy
 W tym temacie jest to kontynuacja Samouczek Windows Workflow Foundation wprowadzenie oraz opisano, jak utworzyć hosta przepływów pracy i Uruchom przepływ pracy określone w poprzedniej [porady: tworzenie przepływów pracy](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) tematu.  

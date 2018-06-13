@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522070"
 ---
 # <a name="how-to-add-data-to-the-clipboard"></a>Porady: dodawanie danych do schowka
 <xref:System.Windows.Forms.Clipboard> Klasa dostarcza metody, które służy do interakcji z funkcją Schowka systemu operacyjnego Windows. Wiele aplikacji korzysta Schowka jako tymczasowy repozytorium dla danych. Na przykład edytory użyć Schowka podczas operacji kopiowania i wklejania. Schowek jest również przydatne w przypadku transferu danych między aplikacjami na inny.  

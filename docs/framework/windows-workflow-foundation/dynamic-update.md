@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520360"
 ---
 # <a name="dynamic-update"></a>Aktualizacja dynamiczna
 Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperami aplikacji, aby zaktualizować wystąpienia przepływu pracy utrwalonych definicji przepływu pracy. Może to być do zaimplementowania poprawkę, nowe wymagania, lub aby pomieścić nieoczekiwane zmiany. Ten temat zawiera omówienie funkcji aktualizacji dynamicznej wprowadzona w systemie [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  

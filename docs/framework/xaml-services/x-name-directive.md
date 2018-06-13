@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565853"
 ---
 # <a name="xname-directive"></a>x:Name — dyrektywa
 Identyfikuje elementy zdefiniowane XAML XAML namescope. XAML namescopes i ich modeli unikatowości mogą być stosowane do wystąpień obiektów, gdy platform zapewniają interfejsów API, lub zaimplementuj zachowania, które uzyskują dostęp do wykres obiektu utworzone XAML w czasie wykonywania.  

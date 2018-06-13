@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516403"
 ---
 # <a name="activity-authoring-options-in-wf"></a>Opcje tworzenia działania WF
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] zapewnia kilka opcji tworzenia działań niestandardowych. Poprawną metodę do użycia na potrzeby tworzenia dane działanie zależy od tego, jakie funkcje środowiska wykonawczego są wymagane.  

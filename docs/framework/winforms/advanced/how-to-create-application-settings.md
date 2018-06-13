@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524173"
 ---
 # <a name="how-to-create-application-settings"></a>Porady: tworzenie ustawień aplikacji
 Za pomocą kodu zarządzanego, można tworzyć nowe ustawienia aplikacji i powiązać je z właściwości formularza lub kontrolki formularza, aby te ustawienia są ładowane i automatycznie zapisywane w czasie wykonywania.  

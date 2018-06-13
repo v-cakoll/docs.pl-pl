@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516831"
 ---
 # <a name="instance-activation"></a>Wystąpienie aktywacji
 W magazynie wystąpień przepływu pracy SQL uruchamia zadanie wewnętrznego, które okresowo budzi i wykrywa wystąpienia przepływu pracy do uruchomienia lub aktywowalnej w bazie danych trwałości. W przypadku odnalezienia wystąpienia przepływu pracy do uruchomienia, powiadamia hosta przepływu pracy, który jest w stanie aktywacji wystąpienie. Jeśli w magazynie wystąpień znajdzie wystąpienia przepływu pracy aktywowalnej, powiadamia ogólnego hosta, który uaktywnia hosta przepływu pracy, który z kolei uruchamia wystąpienie przepływu pracy. W poniższych sekcjach, w tym temacie opisano proces aktywacji wystąpienia.  

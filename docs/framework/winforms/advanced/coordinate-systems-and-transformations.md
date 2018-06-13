@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521781"
 ---
 # <a name="coordinate-systems-and-transformations"></a>Systemy i przekształcenia współrzędnych
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] zapewnia transformacja świata i transformacja strony, dzięki czemu można przekształcać (Obróć, skalowania, tłumaczenia i tak dalej) elementów rysowania. Dwa przekształcenia pozwalają również działać w różnych systemów współrzędnych.  

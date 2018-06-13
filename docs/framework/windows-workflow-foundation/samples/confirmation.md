@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518850"
 ---
 # <a name="confirmation"></a>Potwierdzenie
 W tym przykładzie przedstawiono cztery typowe scenariusze otaczającego stosowania <xref:System.Activities.Statements.CompensableActivity> i potwierdzenia. Przykład uruchamia cztery przepływy pracy do wyświetlenia potwierdzenia. Ten przykład jest dostępny w wersjach deklaratywne i bezwzględne.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519535"
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>Porady: Tworzenie niestandardowych śledzenia uczestnika
 Śledzenia przepływu pracy zapewnia wgląd w stan wykonywania przepływu pracy. Środowiska uruchomieniowego przepływu pracy emituje rekordy śledzenia, które opisują zdarzenia cyklu życia przepływu pracy, zdarzenia cyklu życia działania zakładki wznawianiu i błędów. Te rekordy śledzenia są używane przez uczestników śledzenia. Windows Workflow Foundation (WF) obejmuje uczestnika standardowe śledzenia, który zapisuje rekordy śledzenia jako zdarzenia funkcji Śledzenie zdarzeń systemu Windows (). Które nie spełnia wymagań, można także napisać uczestnikiem niestandardowe śledzenia. Ten samouczek krok opisuje sposób tworzenia niestandardowych śledzenia uczestnika i profilu śledzenia, który przechwytywania danych wyjściowych `WriteLine` działań, dzięki czemu mogą być wyświetlane dla użytkownika.  

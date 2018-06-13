@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556877"
 ---
 # <a name="how-to-specify-the-binding-source"></a>Jak określić źródło wiążące
 W powiązaniu danych powiązania obiektu źródłowego odwołuje się do obiektu, do którego można uzyskać danych. W tym temacie opisano różne sposoby określania źródła powiązania.  

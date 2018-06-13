@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517663"
 ---
 # <a name="declarative-constraints"></a>Ograniczenia deklaratywne
 Deklaratywne ograniczenia udostępnia zaawansowane metody sprawdzania poprawności działania i ich relacji z innymi działaniami. Ograniczenia są skonfigurowane dla działania podczas procesu tworzenia, ale można również określić dodatkowe ograniczenia przez hosta przepływu pracy. Ten temat zawiera omówienie sposobu użycia deklaratywne ograniczenia do udostępnienia weryfikacji działania.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361140"
 ---
 # <a name="how-to-return-rowsets"></a><span data-ttu-id="7adcd-102">Porady: zwracać zestawy wierszy</span><span class="sxs-lookup"><span data-stu-id="7adcd-102">How to: Return Rowsets</span></span>
 <span data-ttu-id="7adcd-103">W tym przykładzie zwraca zestawu wierszy z bazy danych i zawiera parametru wejściowego przefiltrować wynik.</span><span class="sxs-lookup"><span data-stu-id="7adcd-103">This example returns a rowset from the database, and includes an input parameter to filter the result.</span></span>  

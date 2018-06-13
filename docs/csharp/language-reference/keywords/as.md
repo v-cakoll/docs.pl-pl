@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172022"
 ---
 # <a name="as-c-reference"></a><span data-ttu-id="6ea00-102">as (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="6ea00-102">as (C# Reference)</span></span>
 <span data-ttu-id="6ea00-103">Można użyć `as` operator do wykonania niektórych typów konwersji między typami zgodne odwołanie lub [typy dopuszczające wartości zerowe](../../../csharp/programming-guide/nullable-types/index.md).</span><span class="sxs-lookup"><span data-stu-id="6ea00-103">You can use the `as` operator to perform certain types of conversions between compatible reference types or [nullable types](../../../csharp/programming-guide/nullable-types/index.md).</span></span> <span data-ttu-id="6ea00-104">Poniższy kod przedstawia przykład.</span><span class="sxs-lookup"><span data-stu-id="6ea00-104">The following code shows an example.</span></span>  

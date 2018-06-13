@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409560"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypesforiids-method"></a><span data-ttu-id="cf01e-102">ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs — Metoda</span><span class="sxs-lookup"><span data-stu-id="cf01e-102">ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs Method</span></span>
 <span data-ttu-id="cf01e-103">Pobiera moduł wyliczający dla pamięci podręcznej [!INCLUDE[wrt](../../../../includes/wrt-md.md)] typów w domenie aplikacji w oparciu o ich identyfikatorów interfejsu.</span><span class="sxs-lookup"><span data-stu-id="cf01e-103">Gets an enumerator for cached [!INCLUDE[wrt](../../../../includes/wrt-md.md)] types in an application domain based on their interface identifiers.</span></span>  

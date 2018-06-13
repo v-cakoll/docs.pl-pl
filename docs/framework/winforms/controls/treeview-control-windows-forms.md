@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538239"
 ---
 # <a name="treeview-control-windows-forms"></a><span data-ttu-id="eb809-102">TreeView — Kontrolka (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="eb809-102">TreeView Control (Windows Forms)</span></span>
 <span data-ttu-id="eb809-103">Formularze systemu Windows `TreeView` kontrolka Wyświetla hierarchię węzłów, tak jak w sposób pliki i foldery są wyświetlane w okienku po lewej stronie Eksploratora Windows funkcji w systemach operacyjnych Windows.</span><span class="sxs-lookup"><span data-stu-id="eb809-103">The Windows Forms `TreeView` control displays a hierarchy of nodes, like the way files and folders are displayed in the left pane of the Windows Explorer feature in Windows operating systems.</span></span>  

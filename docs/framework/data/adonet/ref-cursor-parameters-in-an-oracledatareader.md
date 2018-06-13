@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359196"
 ---
 # <a name="ref-cursor-parameters-in-an-oracledatareader"></a><span data-ttu-id="7dce7-102">Parametry REF CURSOR w OracleDataReader</span><span class="sxs-lookup"><span data-stu-id="7dce7-102">REF CURSOR Parameters in an OracleDataReader</span></span>
 <span data-ttu-id="7dce7-103">W tym przykładzie Microsoft Visual Basic wykonuje procedury składowane PL/SQL, która zwraca parametr REF CURSOR i odczytuje wartość jako <xref:System.Data.OracleClient.OracleDataReader>.</span><span class="sxs-lookup"><span data-stu-id="7dce7-103">This Microsoft Visual Basic example executes a PL/SQL stored procedure that returns a REF CURSOR parameter, and reads the value as an <xref:System.Data.OracleClient.OracleDataReader>.</span></span>  

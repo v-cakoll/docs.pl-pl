@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363454"
 ---
 # <a name="sql-server-data-operations-in-adonet"></a><span data-ttu-id="61172-102">Operacje danych serwera SQL w ADO.NET</span><span class="sxs-lookup"><span data-stu-id="61172-102">SQL Server Data Operations in ADO.NET</span></span>
 <span data-ttu-id="61172-103">W tej sekcji opisano funkcje programu SQL Server i funkcje, które są specyficzne dla dostawcy danych programu .NET Framework dla programu SQL Server (<xref:System.Data.SqlClient>).</span><span class="sxs-lookup"><span data-stu-id="61172-103">This section describes SQL Server features and functionality that are specific to the .NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>).</span></span>  

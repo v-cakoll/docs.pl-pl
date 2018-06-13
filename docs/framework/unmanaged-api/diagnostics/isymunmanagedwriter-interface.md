@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435475"
 ---
 # <a name="isymunmanagedwriter-interface"></a><span data-ttu-id="797e8-102">ISymUnmanagedWriter — Interfejs</span><span class="sxs-lookup"><span data-stu-id="797e8-102">ISymUnmanagedWriter Interface</span></span>
 <span data-ttu-id="797e8-103">Reprezentuje edytor symboli i udostępnia metody, aby zdefiniować dokumenty, punkty sekwencji leksykalne zakresy i zmienne.</span><span class="sxs-lookup"><span data-stu-id="797e8-103">Represents a symbol writer, and provides methods to define documents, sequence points, lexical scopes, and variables.</span></span>  

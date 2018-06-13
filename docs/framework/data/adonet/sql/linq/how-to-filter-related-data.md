@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360838"
 ---
 # <a name="how-to-filter-related-data"></a><span data-ttu-id="92299-102">Porady: filtrowanie danych powiązanych</span><span class="sxs-lookup"><span data-stu-id="92299-102">How to: Filter Related Data</span></span>
 <span data-ttu-id="92299-103">Użyj <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> metodę, aby określić podzapytaniach, aby ograniczyć ilość pobrać danych.</span><span class="sxs-lookup"><span data-stu-id="92299-103">Use the <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> method to specify sub-queries to limit the amount of retrieved data.</span></span>  

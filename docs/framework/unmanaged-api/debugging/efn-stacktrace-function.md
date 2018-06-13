@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408089"
 ---
 # <a name="efnstacktrace-function"></a><span data-ttu-id="36175-102">_EFN_StackTrace — Funkcja</span><span class="sxs-lookup"><span data-stu-id="36175-102">_EFN_StackTrace Function</span></span>
 <span data-ttu-id="36175-103">Udostępnia reprezentację tekst ślad stosu zarządzanych i tablicę `CONTEXT` rejestruje, jeden dla każdego przejścia między niezarządzanych i kod zarządzany.</span><span class="sxs-lookup"><span data-stu-id="36175-103">Provides a text representation of a managed stack trace and an array of `CONTEXT` records, one for each transition between unmanaged and managed code.</span></span>  

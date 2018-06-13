@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443118"
 ---
 # <a name="corpekind-enumeration"></a><span data-ttu-id="f7add-102">CorPEKind — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="f7add-102">CorPEKind Enumeration</span></span>
 <span data-ttu-id="f7add-103">Zawiera wartości, które opisują pliku przenośny plik wykonywalny (PE), ponieważ zwracany po wywołaniu [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).</span><span class="sxs-lookup"><span data-stu-id="f7add-103">Contains values that describe a portable executable (PE) file, as returned from a call to [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).</span></span>  

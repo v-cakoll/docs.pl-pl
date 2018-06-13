@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361656"
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a><span data-ttu-id="b2a41-102">Wskazówki: Manipulowanie danych (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b2a41-102">Walkthrough: Manipulating Data (Visual Basic)</span></span>
 <span data-ttu-id="b2a41-103">Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenariusza Dodawanie, modyfikowanie i usuwanie danych z bazy danych.</span><span class="sxs-lookup"><span data-stu-id="b2a41-103">This walkthrough provides a fundamental end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenario for adding, modifying, and deleting data in a database.</span></span> <span data-ttu-id="b2a41-104">Aby dodać klienta, Zmień nazwę klienta i usunąć zamówienie będzie używał kopii przykładowej bazy danych Northwind.</span><span class="sxs-lookup"><span data-stu-id="b2a41-104">You will use a copy of the sample Northwind database to add a customer, change the name of a customer, and delete an order.</span></span>  

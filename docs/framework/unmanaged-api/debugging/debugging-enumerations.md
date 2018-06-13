@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410471"
 ---
 # <a name="debugging-enumerations"></a><span data-ttu-id="4861b-102">Debugowanie — wyliczenia</span><span class="sxs-lookup"><span data-stu-id="4861b-102">Debugging Enumerations</span></span>
 <span data-ttu-id="4861b-103">W tej sekcji opisano niezarządzane wyliczenia, które używa interfejsu API debugowania.</span><span class="sxs-lookup"><span data-stu-id="4861b-103">This section describes the unmanaged enumerations that the debugging API uses.</span></span>  

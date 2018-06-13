@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541180"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a><span data-ttu-id="cf818-102">Źródła danych obsługiwane przez formularze systemu Windows</span><span class="sxs-lookup"><span data-stu-id="cf818-102">Data Sources Supported by Windows Forms</span></span>
 <span data-ttu-id="cf818-103">Tradycyjnie wiązania danych został użyty w aplikacjach mógł korzystać z danych przechowywanych w bazach danych.</span><span class="sxs-lookup"><span data-stu-id="cf818-103">Traditionally, data binding has been used within applications to take advantage of data stored in databases.</span></span> <span data-ttu-id="cf818-104">Wiązanie danych formularzy systemu Windows, umożliwia dostęp do danych z baz danych, a także dane w inne struktury, takich jak kolekcje i tablic tak długo, jak zostały spełnione pewne wymagania minimalne.</span><span class="sxs-lookup"><span data-stu-id="cf818-104">With Windows Forms data binding, you can access data from databases as well as data in other structures, such as arrays and collections, so long as certain minimum requirements have been met.</span></span>  

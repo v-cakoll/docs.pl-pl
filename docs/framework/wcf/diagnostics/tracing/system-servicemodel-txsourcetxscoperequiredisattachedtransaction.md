@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33482941"
 ---
 # <a name="systemservicemodeltxsourcetxscoperequiredisattachedtransaction"></a><span data-ttu-id="bdf1c-102">System.ServiceModel.TxSourceTxScopeRequiredIsAttachedTransaction</span><span class="sxs-lookup"><span data-stu-id="bdf1c-102">System.ServiceModel.TxSourceTxScopeRequiredIsAttachedTransaction</span></span>
 <span data-ttu-id="bdf1c-103">Transakcja określona otrzymano dla określonej operacji w transakcji InstanceContext.</span><span class="sxs-lookup"><span data-stu-id="bdf1c-103">The specified transaction was received for the specified operation from an InstanceContext transaction.</span></span>  

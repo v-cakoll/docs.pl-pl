@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360177"
 ---
 # <a name="samples"></a><span data-ttu-id="b28a1-102">Przykłady</span><span class="sxs-lookup"><span data-stu-id="b28a1-102">Samples</span></span>
 <span data-ttu-id="b28a1-103">Ten temat zawiera łącza do rozwiązań Visual Basic i C#, które zawierają [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] przykładowy kod.</span><span class="sxs-lookup"><span data-stu-id="b28a1-103">This topic provides links to the Visual Basic and C# solutions that contain [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sample code.</span></span>  

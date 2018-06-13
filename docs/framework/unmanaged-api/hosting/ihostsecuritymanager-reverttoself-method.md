@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440583"
 ---
 # <a name="ihostsecuritymanagerreverttoself-method"></a><span data-ttu-id="a839b-102">IHostSecurityManager::RevertToSelf — Metoda</span><span class="sxs-lookup"><span data-stu-id="a839b-102">IHostSecurityManager::RevertToSelf Method</span></span>
 <span data-ttu-id="a839b-103">Przerywa personifikacji bieżącej tożsamości użytkownika i zwraca oryginalnego tokenu wątku.</span><span class="sxs-lookup"><span data-stu-id="a839b-103">Terminates impersonation of the current user identity and returns the original thread token.</span></span>  

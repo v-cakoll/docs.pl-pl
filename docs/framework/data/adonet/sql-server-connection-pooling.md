@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364480"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a><span data-ttu-id="dfa33-102">Połączenie z serwerem SQL buforowanie (ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="dfa33-102">SQL Server Connection Pooling (ADO.NET)</span></span>
 <span data-ttu-id="dfa33-103">Łączenie z serwerem bazy danych zazwyczaj składa się z kilku kroków czasochłonna.</span><span class="sxs-lookup"><span data-stu-id="dfa33-103">Connecting to a database server typically consists of several time-consuming steps.</span></span> <span data-ttu-id="dfa33-104">Kanału fizycznego, takie jak gniazda lub nazwanego potoku należy ustalić, musi nastąpić początkowego uzgadniania z serwerem, musi zostać przeanalizowany informacje o parametrach połączenia, połączenie musi zostać uwierzytelniony przez serwer, kontroli musi zostać uruchomione dla rejestrowanie w Bieżąca transakcja i tak dalej.</span><span class="sxs-lookup"><span data-stu-id="dfa33-104">A physical channel such as a socket or a named pipe must be established, the initial handshake with the server must occur, the connection string information must be parsed, the connection must be authenticated by the server, checks must be run for enlisting in the current transaction, and so on.</span></span>  

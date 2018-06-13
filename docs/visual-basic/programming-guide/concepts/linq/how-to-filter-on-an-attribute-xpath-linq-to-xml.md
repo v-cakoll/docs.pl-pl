@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641091"
 ---
 # <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="bf6ba-102">Porady: filtrowanie atrybutów (XPath-LINQ do XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bf6ba-102">How to: Filter on an Attribute (XPath-LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="bf6ba-103">W tym temacie pokazano, jak można uzyskać elementów podrzędnych o określonej nazwie i z atrybutem o określonej wartości.</span><span class="sxs-lookup"><span data-stu-id="bf6ba-103">This topic shows how to get the descendant elements with a specified name, and with an attribute with a specified value.</span></span>  

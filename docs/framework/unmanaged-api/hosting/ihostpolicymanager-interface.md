@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440768"
 ---
 # <a name="ihostpolicymanager-interface"></a><span data-ttu-id="e5019-102">IHostPolicyManager — Interfejs</span><span class="sxs-lookup"><span data-stu-id="e5019-102">IHostPolicyManager Interface</span></span>
 <span data-ttu-id="e5019-103">Udostępnia metody, które powiadamiają o hoście akcje, które wykonuje środowisko uruchomieniowe języka wspólnego (CLR) w przypadku liczby przerywa przekroczenia limitu czasu lub błędów.</span><span class="sxs-lookup"><span data-stu-id="e5019-103">Provides methods that notify the host of the actions the common language runtime (CLR) performs in case of aborts, timeouts, or failures.</span></span>  

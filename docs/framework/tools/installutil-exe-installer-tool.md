@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410150"
 ---
 # <a name="installutilexe-installer-tool"></a><span data-ttu-id="74913-102">Installutil.exe (Narzędzie instalatora)</span><span class="sxs-lookup"><span data-stu-id="74913-102">Installutil.exe (Installer Tool)</span></span>
 <span data-ttu-id="74913-103">Narzędzie Instalator to narzędzie wiersza polecenia umożliwiające instalowanie i odinstalowywanie zasobów serwera przez wykonywanie składników instalatora w określonych zestawach.</span><span class="sxs-lookup"><span data-stu-id="74913-103">The Installer tool is a command-line utility that allows you to install and uninstall server resources by executing the installer components in specified assemblies.</span></span> <span data-ttu-id="74913-104">To narzędzie działa w połączeniu z klasami <xref:System.Configuration.Install> przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="74913-104">This tool works in conjunction with classes in the <xref:System.Configuration.Install> namespace.</span></span>  

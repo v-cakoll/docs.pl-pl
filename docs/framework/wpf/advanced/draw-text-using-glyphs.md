@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542529"
 ---
 # <a name="draw-text-using-glyphs"></a><span data-ttu-id="3be25-102">Rysuj tekst z użyciem glifów</span><span class="sxs-lookup"><span data-stu-id="3be25-102">Draw Text Using Glyphs</span></span>
 <span data-ttu-id="3be25-103">W tym temacie opisano sposób korzystania z niskiego poziomu <xref:System.Windows.Documents.Glyphs> obiektu do wyświetlania tekstu w [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3be25-103">This topic explains how to use the low-level <xref:System.Windows.Documents.Glyphs> object to display text in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span>  

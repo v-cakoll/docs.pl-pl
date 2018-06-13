@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365426"
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a><span data-ttu-id="a7298-102">Wskazówki: Tylko przy użyciu przechowywanych procedur (C#)</span><span class="sxs-lookup"><span data-stu-id="a7298-102">Walkthrough: Using Only Stored Procedures (C#)</span></span>
 <span data-ttu-id="a7298-103">Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tylko procedury składowane scenariusz do uzyskiwania dostępu do danych, wykonując.</span><span class="sxs-lookup"><span data-stu-id="a7298-103">This walkthrough provides a basic end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenario for accessing data by executing stored procedures only.</span></span> <span data-ttu-id="a7298-104">Ta metoda jest często używane przez administratorów bazy danych do ograniczenia, jak jest uzyskiwany dostęp do magazynu danych.</span><span class="sxs-lookup"><span data-stu-id="a7298-104">This approach is often used by database administrators to limit how the datastore is accessed.</span></span>  

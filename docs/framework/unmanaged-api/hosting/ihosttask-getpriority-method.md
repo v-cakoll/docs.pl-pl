@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442192"
 ---
 # <a name="ihosttaskgetpriority-method"></a><span data-ttu-id="512f8-102">IHostTask::GetPriority — Metoda</span><span class="sxs-lookup"><span data-stu-id="512f8-102">IHostTask::GetPriority Method</span></span>
 <span data-ttu-id="512f8-103">Pobiera poziom priorytetu wątku zadania reprezentowany przez bieżący [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="512f8-103">Gets the thread priority level of the task represented by the current [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instance.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33485812"
 ---
 # <a name="extending-bindings"></a><span data-ttu-id="64d10-102">Rozszerzanie powiązań</span><span class="sxs-lookup"><span data-stu-id="64d10-102">Extending Bindings</span></span>
 <span data-ttu-id="64d10-103">Powiązania Określ transportu, kodowanie i protokół wymagane do połączenia z punktem końcowym.</span><span class="sxs-lookup"><span data-stu-id="64d10-103">Bindings specify the transport, encoding, and protocol required to connect to an endpoint.</span></span> <span data-ttu-id="64d10-104">Rozszerzenia powiązania i powiązania niestandardowe implementowania niestandardowych komunikacji wymagane do obsługi funkcji aplikacji.</span><span class="sxs-lookup"><span data-stu-id="64d10-104">Binding extensions and custom bindings implement custom communication functionality required to support application features.</span></span>  

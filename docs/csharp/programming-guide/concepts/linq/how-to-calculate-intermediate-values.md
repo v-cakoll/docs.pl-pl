@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317001"
 ---
 # <a name="how-to-calculate-intermediate-values-c"></a><span data-ttu-id="6c043-102">Porady: obliczanie wartości pośredniego (C#)</span><span class="sxs-lookup"><span data-stu-id="6c043-102">How to: Calculate Intermediate Values (C#)</span></span>
 <span data-ttu-id="6c043-103">Ten przykład przedstawia sposób obliczania wartości pośrednich, które mogą być używane w sortowanie, filtrowanie i wybierając.</span><span class="sxs-lookup"><span data-stu-id="6c043-103">This example shows how to calculate intermediate values that can be used in sorting, filtering, and selecting.</span></span>  

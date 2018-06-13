@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542379"
 ---
 # <a name="handwriting-recognition"></a><span data-ttu-id="3e598-102">Rozpoznawanie pisma</span><span class="sxs-lookup"><span data-stu-id="3e598-102">Handwriting Recognition</span></span>
 <span data-ttu-id="3e598-103">W tej sekcji omówiono podstawowe informacje na temat rozpoznawania w odniesieniu do cyfrowego pismo odręczne na platformie WPF.</span><span class="sxs-lookup"><span data-stu-id="3e598-103">This section discusses the fundamentals of recognition as it pertains to digital ink in the WPF platform.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444259"
 ---
 # <a name="imetadataemitapplyeditandcontinue-method"></a><span data-ttu-id="cc878-102">IMetaDataEmit::ApplyEditAndContinue — Metoda</span><span class="sxs-lookup"><span data-stu-id="cc878-102">IMetaDataEmit::ApplyEditAndContinue Method</span></span>
 <span data-ttu-id="cc878-103">Aktualizuje bieżącego zakresu zestawu zmian w określonych metadanych.</span><span class="sxs-lookup"><span data-stu-id="cc878-103">Updates the current assembly scope with the changes made in the specified metadata.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538786"
 ---
 # <a name="tooltip-component-windows-forms"></a><span data-ttu-id="00494-102">ToolTip — Składnik (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="00494-102">ToolTip Component (Windows Forms)</span></span>
 <span data-ttu-id="00494-103">Formularze systemu Windows <xref:System.Windows.Forms.ToolTip> składnika wyświetla tekst, gdy użytkownik wskazuje na formanty.</span><span class="sxs-lookup"><span data-stu-id="00494-103">The Windows Forms <xref:System.Windows.Forms.ToolTip> component displays text when the user points at controls.</span></span> <span data-ttu-id="00494-104">Etykietka narzędzia może być skojarzony z żadnym formantem.</span><span class="sxs-lookup"><span data-stu-id="00494-104">A ToolTip can be associated with any control.</span></span> <span data-ttu-id="00494-105">Przykładowe zastosowanie tego formantu: Aby zaoszczędzić miejsce na formularzu, można wyświetlić na małe ikony na przycisku i używać etykietka narzędzia wyjaśnić funkcja przycisku.</span><span class="sxs-lookup"><span data-stu-id="00494-105">An example use of this control: In order to save space on a form, you can display a small icon on a button and use a ToolTip to explain the button's function.</span></span>  

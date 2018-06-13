@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535954"
 ---
 # <a name="using-the-managed-html-document-object-model"></a><span data-ttu-id="57013-102">Używanie modelu DOM (Document Object Model) zarządzanych dokumentów HTML</span><span class="sxs-lookup"><span data-stu-id="57013-102">Using the Managed HTML Document Object Model</span></span>
 <span data-ttu-id="57013-103">Zarządzane modelu obiektu dokumentu HTML (DOM) udostępnia otokę na podstawie [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dla klas HTML udostępnianych przez program Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="57013-103">The managed HTML document object model (DOM) provides a wrapper based on the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] for the HTML classes exposed by Internet Explorer.</span></span> <span data-ttu-id="57013-104">Korzystając z tych klas do manipulowania stron HTML znajdujących się w <xref:System.Windows.Forms.WebBrowser> kontroli, lub do tworzenia nowych stron od początku.</span><span class="sxs-lookup"><span data-stu-id="57013-104">Use these classes to manipulate HTML pages hosted in the <xref:System.Windows.Forms.WebBrowser> control, or to build new pages from the beginning.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443902"
 ---
 # <a name="iceegenemitstring-method"></a><span data-ttu-id="d8093-102">ICeeGen::EmitString — Metoda</span><span class="sxs-lookup"><span data-stu-id="d8093-102">ICeeGen::EmitString Method</span></span>
 <span data-ttu-id="d8093-103">Emituje określonego ciągu w bazie kodu.</span><span class="sxs-lookup"><span data-stu-id="d8093-103">Emits the specified string into the code base.</span></span>  

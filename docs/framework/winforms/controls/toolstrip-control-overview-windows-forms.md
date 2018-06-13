@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542054"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a><span data-ttu-id="1ca92-102">ToolStrip — Informacje o formancie [Formularze systemu Windows]</span><span class="sxs-lookup"><span data-stu-id="1ca92-102">ToolStrip Control Overview (Windows Forms)</span></span>
 <span data-ttu-id="1ca92-103">Formularze systemu Windows <xref:System.Windows.Forms.ToolStrip> kontroli i jego skojarzonych klas podanie łączenie elementy interfejsu użytkownika w paskach narzędzi, pasków stanu i menu wspólnej struktury.</span><span class="sxs-lookup"><span data-stu-id="1ca92-103">The Windows Forms <xref:System.Windows.Forms.ToolStrip> control and its associated classes provide a common framework for combining user interface elements into toolbars, status bars, and menus.</span></span> <span data-ttu-id="1ca92-104"><xref:System.Windows.Forms.ToolStrip> Formanty zapewniają bogate środowisko czasu projektowania, zawierającą Aktywacja w miejscu i edytowanie niestandardowego układu i rafting, czyli paski narzędzi umożliwiają udostępnianie miejsca pozioma lub pionowa.</span><span class="sxs-lookup"><span data-stu-id="1ca92-104"><xref:System.Windows.Forms.ToolStrip> controls offer a rich design-time experience that includes in-place activation and editing, custom layout, and rafting, which is the ability of toolbars to share horizontal or vertical space.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543013"
 ---
 # <a name="how-to-create-a-rollover-effect-using-events"></a><span data-ttu-id="7d46c-102">Jak utworzyć efekt najazdu przy użyciu zdarzenia</span><span class="sxs-lookup"><span data-stu-id="7d46c-102">How to: Create a Rollover Effect Using Events</span></span>
 <span data-ttu-id="7d46c-103">W tym przykładzie pokazano, jak zmiana koloru elementu jako wskaźnik myszy uzyskuje i opuszcza obszar zajęty przez element.</span><span class="sxs-lookup"><span data-stu-id="7d46c-103">This example shows how to change the color of an element as the mouse pointer enters and leaves the area occupied by the element.</span></span>  

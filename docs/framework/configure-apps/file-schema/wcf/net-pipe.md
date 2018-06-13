@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359367"
 ---
 # <a name="ltnetpipegt"></a><span data-ttu-id="31a70-102">&lt;usługi NET.pipe&gt;</span><span class="sxs-lookup"><span data-stu-id="31a70-102">&lt;net.pipe&gt;</span></span>
 <span data-ttu-id="31a70-103">Określa ustawienia konfiguracji dla nazwanych potoków aktywacji usługi, która zarządza czasem istnienia połączenia nazwanego potoku i obsługuje żądania aktywacyjne przychodzące za pośrednictwem nazwanych potoków.</span><span class="sxs-lookup"><span data-stu-id="31a70-103">Specifies configuration settings for the Named Pipe Activation Service, which manages the lifetime of the named pipe connection, and handles activation requests that arrive over named pipes.</span></span>  

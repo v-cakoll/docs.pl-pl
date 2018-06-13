@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364739"
 ---
 # <a name="sqlclient-streaming-support"></a><span data-ttu-id="08c8e-102">Obsługa przesyłania strumieniowego SqlClient</span><span class="sxs-lookup"><span data-stu-id="08c8e-102">SqlClient Streaming Support</span></span>
 <span data-ttu-id="08c8e-103">Obsługa między programu SQL Server i aplikacją przesyłania strumieniowego (Nowość w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) obsługuje danych bez struktury przechowywanych na serwerze (pliki dokumentów, obrazy i nośnika).</span><span class="sxs-lookup"><span data-stu-id="08c8e-103">Streaming support between SQL Server and an application (new in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) supports unstructured data on the server (documents, images, and media files).</span></span> <span data-ttu-id="08c8e-104">Bazy danych programu SQL Server może przechowywać duże obiekty binarne (BLOB), ale pobieranie obiektów blob może używać dużej ilości pamięci.</span><span class="sxs-lookup"><span data-stu-id="08c8e-104">A SQL Server database can store binary large objects (BLOBs), but retrieving BLOBS can use a lot of memory.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360615"
 ---
 # <a name="how-to-enable-paging-of-data-service-results-wcf-data-services"></a><span data-ttu-id="2b539-102">Porady: Włączanie stronicowania wyniki z danymi usługi (usługi danych WCF)</span><span class="sxs-lookup"><span data-stu-id="2b539-102">How to: Enable Paging of Data Service Results (WCF Data Services)</span></span>
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="2b539-103"> pozwala ograniczyć liczbę jednostek zwróconych przez kwerendę usługi danych.</span><span class="sxs-lookup"><span data-stu-id="2b539-103"> enables you to limit the number of entities returned by a data service query.</span></span> <span data-ttu-id="2b539-104">Limity strony są definiowane w metodę, która jest wywoływana, gdy usługa jest zainicjowana i można ustawić osobno dla każdego zestawu jednostek.</span><span class="sxs-lookup"><span data-stu-id="2b539-104">Page limits are defined in the method that is called when the service is initialized and can be set separately for each entity set.</span></span>  

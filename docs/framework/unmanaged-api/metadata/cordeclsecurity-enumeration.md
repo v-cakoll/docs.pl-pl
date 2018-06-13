@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443027"
 ---
 # <a name="cordeclsecurity-enumeration"></a><span data-ttu-id="6c4b7-102">CorDeclSecurity — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="6c4b7-102">CorDeclSecurity Enumeration</span></span>
 <span data-ttu-id="6c4b7-103">Określa akcje zabezpieczeń, które mogą być wykonywane przy użyciu zabezpieczeń deklaratywnych.</span><span class="sxs-lookup"><span data-stu-id="6c4b7-103">Specifies the security actions that can be performed using declarative security.</span></span>  

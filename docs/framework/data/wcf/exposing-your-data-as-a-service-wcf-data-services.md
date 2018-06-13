@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363567"
 ---
 # <a name="exposing-your-data-as-a-service-wcf-data-services"></a><span data-ttu-id="0dd81-102">Udostępnianie danych jako usługa (usługi danych WCF)</span><span class="sxs-lookup"><span data-stu-id="0dd81-102">Exposing Your Data as a Service (WCF Data Services)</span></span>
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="0dd81-103"> integruje się z programem Visual Studio, aby możliwe było łatwiej zdefiniować usług do udostępnienia danych jako [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródeł danych.</span><span class="sxs-lookup"><span data-stu-id="0dd81-103"> integrates with Visual Studio to enable you to more easily define services to expose your data as [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feeds.</span></span> <span data-ttu-id="0dd81-104">Tworzenie usługi danych, który opisuje [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych obejmuje następujące podstawowe kroki:</span><span class="sxs-lookup"><span data-stu-id="0dd81-104">Creating a data service that exposes an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed involves the following basic steps:</span></span>  

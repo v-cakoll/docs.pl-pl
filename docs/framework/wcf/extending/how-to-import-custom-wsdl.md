@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488273"
 ---
 # <a name="how-to-import-custom-wsdl"></a><span data-ttu-id="a22dc-102">Porady: importowanie niestandardowych WSDL</span><span class="sxs-lookup"><span data-stu-id="a22dc-102">How to: Import Custom WSDL</span></span>
 <span data-ttu-id="a22dc-103">W tym temacie opisano sposób importu WSDL niestandardowych.</span><span class="sxs-lookup"><span data-stu-id="a22dc-103">This topic describes how to import custom WSDL.</span></span> <span data-ttu-id="a22dc-104">Aby obsługiwać niestandardowe WSDL, musisz zaimplementować <xref:System.ServiceModel.Description.IWsdlImportExtension> interfejsu.</span><span class="sxs-lookup"><span data-stu-id="a22dc-104">To handle the custom WSDL, you must implement the <xref:System.ServiceModel.Description.IWsdlImportExtension> interface.</span></span>  

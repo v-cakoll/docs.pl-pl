@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440304"
 ---
 # <a name="ceesectionrelocextra-union"></a><span data-ttu-id="3f1fc-102">CeeSectionRelocExtra — Unia</span><span class="sxs-lookup"><span data-stu-id="3f1fc-102">CeeSectionRelocExtra Union</span></span>
 <span data-ttu-id="3f1fc-103">Reprezentuje adres używany przez przesunięcie [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interfejs może przenosić sekcji.</span><span class="sxs-lookup"><span data-stu-id="3f1fc-103">Represents an address offset that is used by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface to relocate a section.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361287"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a><span data-ttu-id="c70bb-102">Zarządzanie uprawnieniami w procedurach składowanych w programie SQL Server</span><span class="sxs-lookup"><span data-stu-id="c70bb-102">Managing Permissions with Stored Procedures in SQL Server</span></span>
 <span data-ttu-id="c70bb-103">Jedną z metod tworzenia wielu linii obrony wokół bazy danych jest wdrożenie wszystkich dostęp do danych za pomocą procedury składowanej lub funkcji zdefiniowanej przez użytkownika.</span><span class="sxs-lookup"><span data-stu-id="c70bb-103">One method of creating multiple lines of defense around your database is to implement all data access using stored procedures or user-defined functions.</span></span> <span data-ttu-id="c70bb-104">Odwoływanie lub odmówić wszystkich uprawnień do obiektów podstawowych, takich jak tabele i przyznać uprawnienia EXECUTE procedur składowanych.</span><span class="sxs-lookup"><span data-stu-id="c70bb-104">You revoke or deny all permissions to underlying objects, such as tables, and grant EXECUTE permissions on stored procedures.</span></span> <span data-ttu-id="c70bb-105">Spowoduje to skutecznie utworzenie obwodu zabezpieczeń wokół obiektów danych i bazy danych.</span><span class="sxs-lookup"><span data-stu-id="c70bb-105">This effectively creates a security perimeter around your data and database objects.</span></span>  

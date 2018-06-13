@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641186"
 ---
 # <a name="39redim39-can-only-change-the-right-most-dimension"></a><span data-ttu-id="f40b2-102">&#39;ReDim&#39; można zmienić tylko wymiar z prawej</span><span class="sxs-lookup"><span data-stu-id="f40b2-102">&#39;ReDim&#39; can only change the right-most dimension</span></span>
 <span data-ttu-id="f40b2-103">A `ReDim` instrukcji podjęto próbę użycia `Preserve` — słowo kluczowe, aby zmienić wymiaru tablicy, która nie jest ostatni wymiar.</span><span class="sxs-lookup"><span data-stu-id="f40b2-103">A `ReDim` statement attempted to use the `Preserve` keyword to change a dimension of an array that is not the last dimension.</span></span> <span data-ttu-id="f40b2-104">Korzystając z `Preserve`, zmianie rozmiaru tylko ostatniego wymiaru tablicy.</span><span class="sxs-lookup"><span data-stu-id="f40b2-104">When using `Preserve`, you can resize only the last dimension of an array.</span></span> <span data-ttu-id="f40b2-105">Dla wszystkich innych wymiarów należy określić ten sam rozmiar jak w przypadku istniejącej tablicy.</span><span class="sxs-lookup"><span data-stu-id="f40b2-105">For all other dimensions, you must specify the same size as for the existing array.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364493"
 ---
 # <a name="unsupported-functionality"></a><span data-ttu-id="d19e2-102">Nieobsługiwanych funkcji</span><span class="sxs-lookup"><span data-stu-id="d19e2-102">Unsupported Functionality</span></span>
 <span data-ttu-id="d19e2-103">W składniku LINQ to SQL nie są dostępne następujące funkcje SQL tłumaczenia istniejące środowisko uruchomieniowe języka wspólnego (CLR) i tworzy .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="d19e2-103">In LINQ to SQL, the following SQL functionality cannot be exposed through translation of existing common language runtime (CLR) and .NET Framework constructs:</span></span>  

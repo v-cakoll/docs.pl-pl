@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364951"
 ---
 # <a name="formulate-projections"></a><span data-ttu-id="a1817-102">Sformułować projekcje</span><span class="sxs-lookup"><span data-stu-id="a1817-102">Formulate Projections</span></span>
 <span data-ttu-id="a1817-103">W poniższych przykładach pokazano sposób `select` instrukcji w języku C# i `Select` instrukcji w języku Visual Basic można łączyć z innymi funkcjami do formularza projekcje zapytania.</span><span class="sxs-lookup"><span data-stu-id="a1817-103">The following examples show how the `select` statement in C# and `Select` statement in Visual Basic can be combined with other features to form query projections.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33485007"
 ---
 # <a name="usemanagedpresentationbindingelement"></a><span data-ttu-id="c0bc0-102">UseManagedPresentationBindingElement</span><span class="sxs-lookup"><span data-stu-id="c0bc0-102">UseManagedPresentationBindingElement</span></span>
 <span data-ttu-id="c0bc0-103">UseManagedPresentationBindingElement</span><span class="sxs-lookup"><span data-stu-id="c0bc0-103">UseManagedPresentationBindingElement</span></span>  

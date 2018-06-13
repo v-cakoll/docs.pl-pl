@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386681"
 ---
 # <a name="marshaling-mda"></a><span data-ttu-id="594b9-102">MDA marshalingu</span><span class="sxs-lookup"><span data-stu-id="594b9-102">marshaling MDA</span></span>
 <span data-ttu-id="594b9-103">`marshaling` Zarządzany Asystent debugowania (MDA) została aktywowana po skonfigurowaniu informacje dla parametru metody lub pola struktury organizacyjne środowiska CLR.</span><span class="sxs-lookup"><span data-stu-id="594b9-103">The `marshaling` managed debugging assistant (MDA) is activated when the CLR sets up marshaling information for a method parameter or a field of a structure.</span></span> <span data-ttu-id="594b9-104">To zdarzenie MDA nie działa w przypadku zestawów kompilacji JIT.</span><span class="sxs-lookup"><span data-stu-id="594b9-104">This MDA does not work for JIT-compiled assemblies.</span></span>  

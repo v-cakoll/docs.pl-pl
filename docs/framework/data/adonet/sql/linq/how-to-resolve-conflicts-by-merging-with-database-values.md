@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360992"
 ---
 # <a name="how-to-resolve-conflicts-by-merging-with-database-values"></a><span data-ttu-id="1d006-102">Porady: Rozwiązywanie konfliktów przez scalanie z wartościami bazy danych</span><span class="sxs-lookup"><span data-stu-id="1d006-102">How to: Resolve Conflicts by Merging with Database Values</span></span>
 <span data-ttu-id="1d006-103">Uzgadnianie różnic pomiędzy wartościami oczekiwanymi i rzeczywistymi bazy danych, aby spróbować ponownie przesłać zmiany, umożliwia <xref:System.Data.Linq.RefreshMode.KeepChanges> do scalenia wartościami bazy danych z bieżącej wartości elementu członkowskiego klienta.</span><span class="sxs-lookup"><span data-stu-id="1d006-103">To reconcile differences between expected and actual database values before you try to resubmit your changes, you can use <xref:System.Data.Linq.RefreshMode.KeepChanges> to merge database values with the current client member values.</span></span> <span data-ttu-id="1d006-104">Aby uzyskać więcej informacji, zobacz [optymistycznej współbieżności: omówienie](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).</span><span class="sxs-lookup"><span data-stu-id="1d006-104">For more information, see [Optimistic Concurrency: Overview](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543289"
 ---
 # <a name="how-to-insert-an-element-into-text-programmatically"></a><span data-ttu-id="7d7bc-102">Jak wstawić element do tekstu za pomocą programowania</span><span class="sxs-lookup"><span data-stu-id="7d7bc-102">How to: Insert an Element Into Text Programmatically</span></span>
 <span data-ttu-id="7d7bc-103">Poniższy przykład przedstawia użycie dwóch <xref:System.Windows.Documents.TextPointer> obiektów, aby określić zakres tekstu do zastosowania <xref:System.Windows.Documents.Span> elementu.</span><span class="sxs-lookup"><span data-stu-id="7d7bc-103">The following example shows how to use two <xref:System.Windows.Documents.TextPointer> objects to specify a range within text to apply a <xref:System.Windows.Documents.Span> element to.</span></span>  

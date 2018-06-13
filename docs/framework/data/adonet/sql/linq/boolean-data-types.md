@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361575"
 ---
 # <a name="boolean-data-types"></a><span data-ttu-id="79203-102">Typy danych logicznych</span><span class="sxs-lookup"><span data-stu-id="79203-102">Boolean Data Types</span></span>
 <span data-ttu-id="79203-103">Operatory logiczne działają zgodnie z oczekiwaniami w środowisku uruchomieniowym języka wspólnego (CLR) z tą różnicą, że zwarcie zachowanie nie jest translacja.</span><span class="sxs-lookup"><span data-stu-id="79203-103">Boolean operators work as expected in the common language runtime (CLR), except that short-circuiting behavior is not translated.</span></span> <span data-ttu-id="79203-104">Na przykład Visual Basic `AndAlso` operator zachowuje się jak `And` operatora.</span><span class="sxs-lookup"><span data-stu-id="79203-104">For example, the Visual Basic `AndAlso` operator behaves like the `And` operator.</span></span> <span data-ttu-id="79203-105">C# `&&` operator zachowuje się jak `&` operatora.</span><span class="sxs-lookup"><span data-stu-id="79203-105">The C# `&&` operator behaves like the `&` operator.</span></span>  

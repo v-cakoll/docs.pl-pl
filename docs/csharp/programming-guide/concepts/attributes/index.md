@@ -6,6 +6,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33956075"
 ---
 # <a name="attributes-c"></a><span data-ttu-id="1b371-102">Atrybuty (C#)</span><span class="sxs-lookup"><span data-stu-id="1b371-102">Attributes (C#)</span></span>
 

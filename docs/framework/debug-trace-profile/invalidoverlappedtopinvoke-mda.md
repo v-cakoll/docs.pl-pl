@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386860"
 ---
 # <a name="invalidoverlappedtopinvoke-mda"></a><span data-ttu-id="cad80-102">invalidOverlappedToPinvoke MDA</span><span class="sxs-lookup"><span data-stu-id="cad80-102">invalidOverlappedToPinvoke MDA</span></span>
 <span data-ttu-id="cad80-103">`invalidOverlappedToPinvoke` Zarządzany Asystent debugowania (MDA) jest aktywowany, gdy nachodzący wskaźnik, który nie został utworzony na stercie kolekcji pamięci jest przekazywany do określonych funkcji Win32.</span><span class="sxs-lookup"><span data-stu-id="cad80-103">The `invalidOverlappedToPinvoke` managed debugging assistant (MDA) is activated when an overlapped pointer that was not created on the garbage collection heap is passed to specific Win32 functions.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437755"
 ---
 # <a name="igcthreadcontrolsuspensionending-method"></a><span data-ttu-id="be294-102">IGCThreadControl::SuspensionEnding — Metoda</span><span class="sxs-lookup"><span data-stu-id="be294-102">IGCThreadControl::SuspensionEnding Method</span></span>
 <span data-ttu-id="be294-103">Powiadamia host środowiska uruchomieniowego Trwa wznawianie wątków po wyrzucania elementów bezużytecznych lub innych zawieszenia.</span><span class="sxs-lookup"><span data-stu-id="be294-103">Notifies the host that the runtime is resuming threads after a garbage collection or other suspension.</span></span>  

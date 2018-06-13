@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364182"
 ---
 # <a name="asynchronousthreadabort-mda"></a><span data-ttu-id="cbdfd-102">asynchronousThreadAbort MDA</span><span class="sxs-lookup"><span data-stu-id="cbdfd-102">asynchronousThreadAbort MDA</span></span>
 <span data-ttu-id="cbdfd-103">`asynchronousThreadAbort` Zarządzany Asystent debugowania (MDA) jest aktywowany, gdy wątek podejmuje próbę wprowadzenia asynchronicznego przerwania do innego wątku.</span><span class="sxs-lookup"><span data-stu-id="cbdfd-103">The `asynchronousThreadAbort` managed debugging assistant (MDA) is activated when a thread attempts to introduce an asynchronous abort into another thread.</span></span> <span data-ttu-id="cbdfd-104">Przerywa synchroniczne wątek nie zostanie aktywowany `asynchronousThreadAbort` MDA.</span><span class="sxs-lookup"><span data-stu-id="cbdfd-104">Synchronous thread aborts do not activate the `asynchronousThreadAbort` MDA.</span></span>

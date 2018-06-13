@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365868"
 ---
 # <a name="single-bulk-copy-operations"></a><span data-ttu-id="c2f38-102">Operacje kopiowania masowego pojedynczego</span><span class="sxs-lookup"><span data-stu-id="c2f38-102">Single Bulk Copy Operations</span></span>
 <span data-ttu-id="c2f38-103">Najprostsza metoda wykonywanie operacji kopiowania zbiorczego SQL Server jest na wykonanie jednej operacji na bazie danych.</span><span class="sxs-lookup"><span data-stu-id="c2f38-103">The simplest approach to performing a SQL Server bulk copy operation is to perform a single operation against a database.</span></span> <span data-ttu-id="c2f38-104">Domyślnie kopiowania masowego odbywa się jako operacja izolowanego: operacja kopiowania odbywa się w sposób obsługi nietransakcyjnego z udostępnieniem jej nie możliwości tworzenia kopii.</span><span class="sxs-lookup"><span data-stu-id="c2f38-104">By default, a bulk copy operation is performed as an isolated operation: the copy operation occurs in a non-transacted way, with no opportunity for rolling it back.</span></span>  

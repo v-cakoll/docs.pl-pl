@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363425"
 ---
 # <a name="how-to-execute-data-service-queries-wcf-data-services"></a><span data-ttu-id="9f3b8-102">Porady: wykonywanie zapytań usługi danych (usługi danych WCF)</span><span class="sxs-lookup"><span data-stu-id="9f3b8-102">How to: Execute Data Service Queries (WCF Data Services)</span></span>
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="9f3b8-103"> Umożliwia to zapytanie usługi danych z aplikacji klienta opartego na programie .NET Framework za pomocą klasy usługi danych wygenerowanego klienta.</span><span class="sxs-lookup"><span data-stu-id="9f3b8-103"> enables you to query a data service from a .NET Framework-based client application by using the generated client data service classes.</span></span> <span data-ttu-id="9f3b8-104">Można wykonywać zapytania przy użyciu jednej z następujących metod:</span><span class="sxs-lookup"><span data-stu-id="9f3b8-104">You can execute queries by using one of these methods:</span></span>  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444142"
 ---
 # <a name="corvalidatormoduletype-enumeration"></a><span data-ttu-id="adbff-102">CorValidatorModuleType — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="adbff-102">CorValidatorModuleType Enumeration</span></span>
 <span data-ttu-id="adbff-103">Określa typ modułu.</span><span class="sxs-lookup"><span data-stu-id="adbff-103">Specifies the type of a module.</span></span>  

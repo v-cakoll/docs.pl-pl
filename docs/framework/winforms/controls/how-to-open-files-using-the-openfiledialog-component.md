@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542278"
 ---
 # <a name="how-to-open-files-using-the-openfiledialog-component"></a><span data-ttu-id="90285-102">Porady: otwieranie plików za pomocą składnika OpenFileDialog</span><span class="sxs-lookup"><span data-stu-id="90285-102">How to: Open Files Using the OpenFileDialog Component</span></span>
 <span data-ttu-id="90285-103"><xref:System.Windows.Forms.OpenFileDialog> Składnika pozwala użytkownikom na przeglądanie folderów do komputera lub dowolnego komputera w sieci i wybierz jeden lub więcej plików, aby otworzyć.</span><span class="sxs-lookup"><span data-stu-id="90285-103">The <xref:System.Windows.Forms.OpenFileDialog> component allows users to browse the folders of their computer or any computer on the network and select one or more files to open.</span></span> <span data-ttu-id="90285-104">Okno dialogowe zwraca ścieżkę i nazwę pliku wybrany w oknie dialogowym przez użytkownika.</span><span class="sxs-lookup"><span data-stu-id="90285-104">The dialog box returns the path and name of the file the user selected in the dialog box.</span></span>  

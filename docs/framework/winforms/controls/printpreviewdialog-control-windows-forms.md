@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538382"
 ---
 # <a name="printpreviewdialog-control-windows-forms"></a><span data-ttu-id="3d6ba-102">PrintPreviewDialog — Formant (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="3d6ba-102">PrintPreviewDialog Control (Windows Forms)</span></span>
 <span data-ttu-id="3d6ba-103">Formularze systemu Windows `PrintPreviewDialog` formant jest używany do wyświetlania, jak dokument pojawi się po wydrukowaniu okno dialogowe wstępnie skonfigurowane.</span><span class="sxs-lookup"><span data-stu-id="3d6ba-103">The Windows Forms `PrintPreviewDialog` control is a pre-configured dialog box used to display how a document will appear when printed.</span></span> <span data-ttu-id="3d6ba-104">Użyj go w aplikacji systemu Windows jako prostym rozwiązaniem zamiast własne okno dialogowe Konfigurowanie.</span><span class="sxs-lookup"><span data-stu-id="3d6ba-104">Use it within your Windows-based application as a simple solution in lieu of configuring your own dialog box.</span></span> <span data-ttu-id="3d6ba-105">Formant zawiera przyciski do drukowania, powiększyć wyświetlania jednego lub wielu stron i zamknięcie okna dialogowego.</span><span class="sxs-lookup"><span data-stu-id="3d6ba-105">The control contains buttons for printing, zooming in, displaying one or multiple pages, and closing the dialog box.</span></span>  

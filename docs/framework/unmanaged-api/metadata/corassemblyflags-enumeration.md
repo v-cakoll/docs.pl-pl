@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442842"
 ---
 # <a name="corassemblyflags-enumeration"></a><span data-ttu-id="e0112-102">CorAssemblyFlags — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="e0112-102">CorAssemblyFlags Enumeration</span></span>
 <span data-ttu-id="e0112-103">Zawiera wartości, które opisują metadanych stosowane do kompilacji zestawu.</span><span class="sxs-lookup"><span data-stu-id="e0112-103">Contains values that describe the metadata applied to an assembly compilation.</span></span>  

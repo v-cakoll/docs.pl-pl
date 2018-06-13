@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539841"
 ---
 # <a name="maskedtextbox-control-windows-forms"></a><span data-ttu-id="47a12-102">MaskedTextBox — Formant (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="47a12-102">MaskedTextBox Control (Windows Forms)</span></span>
 <span data-ttu-id="47a12-103">Ten temat zawiera łącza do innych użytkowników o `MaskedTextBox` formantu.</span><span class="sxs-lookup"><span data-stu-id="47a12-103">This topic links to others about the `MaskedTextBox` control.</span></span>  

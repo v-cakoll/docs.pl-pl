@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542083"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a><span data-ttu-id="7ee12-102">Wskazówki: wdrażanie formularza korzystającego z operacji w tle</span><span class="sxs-lookup"><span data-stu-id="7ee12-102">Walkthrough: Implementing a Form That Uses a Background Operation</span></span>
 <span data-ttu-id="7ee12-103">Jeśli masz operacji potrwa długo, i nie ma interfejsu użytkownika (UI) przestanie odpowiadać lub "zawiesza się," można użyć <xref:System.ComponentModel.BackgroundWorker> klasy, aby wykonać tę operację w innym wątku.</span><span class="sxs-lookup"><span data-stu-id="7ee12-103">If you have an operation that will take a long time to complete, and you do not want your user interface (UI) to stop responding or "hang," you can use the <xref:System.ComponentModel.BackgroundWorker> class to execute the operation on another thread.</span></span>  

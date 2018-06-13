@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543117"
 ---
 # <a name="how-to-change-the-color-of-an-element-using-focus-events"></a><span data-ttu-id="34fd5-102">Jak zmienić kolor elementu przy użyciu elementów Fokus</span><span class="sxs-lookup"><span data-stu-id="34fd5-102">How to: Change the Color of an Element Using Focus Events</span></span>
 <span data-ttu-id="34fd5-103">W tym przykładzie pokazano, jak zmienić kolor elementu uzyska i traci fokus przy użyciu <xref:System.Windows.UIElement.GotFocus> i <xref:System.Windows.UIElement.LostFocus> zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="34fd5-103">This example shows how to change the color of an element when it gains and loses focus by using the <xref:System.Windows.UIElement.GotFocus> and <xref:System.Windows.UIElement.LostFocus> events.</span></span>  

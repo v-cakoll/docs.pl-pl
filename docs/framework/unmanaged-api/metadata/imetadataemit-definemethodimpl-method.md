@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443992"
 ---
 # <a name="imetadataemitdefinemethodimpl-method"></a><span data-ttu-id="a9158-102">IMetaDataEmit::DefineMethodImpl — Metoda</span><span class="sxs-lookup"><span data-stu-id="a9158-102">IMetaDataEmit::DefineMethodImpl Method</span></span>
 <span data-ttu-id="a9158-103">Tworzy definicję dla implementacji metody dziedziczone z interfejsem i zwraca token do tej definicji implementacji metody.</span><span class="sxs-lookup"><span data-stu-id="a9158-103">Creates a definition for implementation of a method inherited from an interface, and returns a token to that method-implementation definition.</span></span>  

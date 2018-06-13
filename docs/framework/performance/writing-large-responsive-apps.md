@@ -9,6 +9,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457571"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Pisanie dużych i sprawnie działających aplikacji platformy .NET Framework
 Ten artykuł zawiera wskazówki dotyczące poprawy wydajności dużych aplikacji .NET Framework lub aplikacje, które przetwarzają dużą ilość danych, takich jak pliki lub bazy danych. Te wskazówki pochodzi z ponowne zapisywanie C# i Visual Basic kompilatory w kodzie zarządzanym i ten artykuł zawiera kilka przykładów rzeczywistych kompilatora C#.  

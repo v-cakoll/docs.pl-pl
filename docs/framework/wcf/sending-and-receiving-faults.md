@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807710"
 ---
 # <a name="sending-and-receiving-faults"></a>Wysyłanie i odbieranie błędów
 Błędach SOAP przedstawienia warunku informacje o błędzie z usługi do klienta, a w przypadku dupleksu od klienta do usługi w sposób interoperacyjne. Zazwyczaj usługa definiuje zawartość błędów niestandardowych i określa, jakie operacje może zwracać je. (Aby uzyskać więcej informacji, zobacz [definiowanie i określanie usterek](../../../docs/framework/wcf/defining-and-specifying-faults.md).) W tym temacie omówiono sposób usługi lub dupleks klienta może wysyłać te błędy wystąpił odpowiedniego warunku błędu sposób i klienta lub usługę aplikacji obsługi tych błędów. Omówienie obsługi błędów w aplikacji Windows Communication Foundation (WCF), zobacz [określanie i obsługa błędów w kontraktach i usługach](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  

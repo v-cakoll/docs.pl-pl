@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171866"
 ---
 # <a name="private-c-reference"></a>private (odwołanie w C#)
 `private` — Słowo kluczowe jest modyfikator dostępu elementu członkowskiego. 

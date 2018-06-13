@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577564"
 ---
 # <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>Porady: konwersja strumieni platformy .NET Framework i strumieni środowiska wykonawczego systemu Windows
 Program .NET Framework dla aplikacji do Sklepu Windows to podzestaw funkcji pełnego programu .NET Framework. Ze względu na zabezpieczenia i inne wymagania aplikacji do Sklepu Windows nie można używać pełnego zestawu interfejsów API programu .NET Framework w celu otwierania i odczytywania plików. Aby uzyskać więcej informacji, zobacz [Omówienie aplikacji .NET dla Sklepu Windows](http://msdn.microsoft.com/library/windows/apps/br230302.aspx). Jednak może być wymagane użycie interfejsów API programu .NET Framework w celu wykonywania innych operacji na strumieniach. Do manipulowania tych strumieni, może być konieczne konwersji między typem strumienia .NET Framework takie jak <xref:System.IO.MemoryStream> lub <xref:System.IO.FileStream>, a strumień środowiska wykonawczego systemu Windows, takich jak [IInputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.iinputstream.aspx), [IOutputStream ](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ioutputstream.aspx), lub [IRandomAccessStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.irandomaccessstream.aspx).  

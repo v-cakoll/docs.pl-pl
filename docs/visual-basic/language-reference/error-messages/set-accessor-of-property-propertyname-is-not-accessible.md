@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595855"
 ---
 # <a name="39set39-accessor-of-property-39ltpropertynamegt39-is-not-accessible"></a>&#39;Ustaw&#39; akcesor właściwości &#39; &lt;propertyname&gt; &#39; nie jest dostępny
 Instrukcja próbuje zapisać wartości właściwości, gdy nie ma dostępu do właściwości `Set` procedury.  

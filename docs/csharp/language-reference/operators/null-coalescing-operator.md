@@ -13,6 +13,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458115"
 ---
 # <a name="-operator-c-reference"></a>?? Operator (odwołanie w C#)
 `??` Operator jest nazywany operatora łączenia wartości null.  Zwraca argument operacji z lewej strony, jeśli ma on wartość inną niż null; w przeciwnym razie zwraca argument operacji po prawej stronie.  

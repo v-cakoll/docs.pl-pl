@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579538"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Podstawy dotyczące odzyskiwania pamięci
 <a name="top"></a> W środowisko uruchomieniowe języka wspólnego (CLR) moduł zbierający elementy bezużyteczne służy jako Menedżer pamięci automatycznego. Zapewnia następujące korzyści:  

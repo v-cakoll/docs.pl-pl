@@ -10,6 +10,7 @@ ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34549594"
 ---
 # <a name="iteration-statements-c-reference"></a>Instrukcje iteracji (odwołanie w C#)
 

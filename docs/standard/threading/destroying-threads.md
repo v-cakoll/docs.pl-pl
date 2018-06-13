@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582942"
 ---
 # <a name="destroying-threads"></a>Niszczenie wątków
 <xref:System.Threading.Thread.Abort%2A> Metoda jest używana do zatrzymania wątku zarządzanego trwale. Podczas wywoływania <xref:System.Threading.Thread.Abort%2A>, zgłasza środowisko uruchomieniowe języka wspólnego <xref:System.Threading.ThreadAbortException> w wątek docelowy wątek docelowy może catch. Aby uzyskać więcej informacji, zobacz <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579824"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Konstrukcje grupujące w wyrażeniach regularnych
 Konstrukcje grupujące odróżniać użyto wyrażenia regularnego i przechwytywania podciągów ciągu wejściowego. Można użyć konstrukcji grupowania wykonywać następujące czynności:  

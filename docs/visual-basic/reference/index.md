@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652847"
 ---
 # <a name="reference-visual-basic"></a>Odwołanie (Visual Basic)
 Ta sekcja zawiera linki do informacji o różnych aspektach programowania w języku Visual Basic.  

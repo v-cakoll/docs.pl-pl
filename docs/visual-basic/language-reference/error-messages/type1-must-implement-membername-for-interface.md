@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596749"
 ---
 # <a name="lttype1gt39lttypenamegt39-must-implement-39ltmembernamegt39-for-interface-39ltinterfacenamegt39"></a>&lt;type1&gt;&#39;&lt;typename&gt; &#39; musi implementować &#39; &lt;membername&gt; &#39; interfejsu &#39; &lt;interfacename&gt;&#39;
 "\<typename >' musi implementować"\<membername > "dla interfejsu"\<interfacename > ". Właściwość implementowania musi mieć pasujące "ReadOnly" / specyfikatory "WriteOnly".  

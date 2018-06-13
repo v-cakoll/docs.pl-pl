@@ -14,6 +14,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457219"
 ---
 # <a name="-operator-c-reference"></a>?: — Operator (odwołanie w C#)
 Operator warunkowy (`?:`), powszechnie znane jako trójargumentowy operator warunkowy zwraca jeden z dwóch wartości w zależności od wartości wyrażenia logicznego. Poniżej przedstawiono składnię operatora warunkowego.  

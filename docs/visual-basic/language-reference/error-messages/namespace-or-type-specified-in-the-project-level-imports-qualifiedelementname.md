@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595816"
 ---
 # <a name="namespace-or-type-specified-in-the-project-level-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Namespace lub typ określony w elemencie Imports poziom projektu &#39; &lt;qualifiedelementname&gt; &#39; &#39;t zawierają żadnego członka publicznego lub nie można odnaleźć
 Namespace lub typ określony w elemencie Imports poziom projektu\<qualifiedelementname >' nie zawierają żadnego członka publicznego lub nie można odnaleźć. Upewnij się, że przestrzeń nazw lub typ są zdefiniowane i zawierają co najmniej jednego członka publicznego. Upewnij się, że nazwa aliasu nie zawiera innych aliasów.  

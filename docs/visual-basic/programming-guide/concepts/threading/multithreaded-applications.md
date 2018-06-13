@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650481"
 ---
 # <a name="multithreaded-applications-visual-basic"></a>Aplikacje wielowątkowe (Visual Basic)
 Za pomocą Visual Basic mogą pisać aplikacje, służących do wykonywania wielu zadań jednocześnie. Zadania związane z możliwości maksymalnie innych zadań można wykonywać w oddzielnych wątkach proces znany jako *wielowątkowość* lub *wolne wątkowość*.  

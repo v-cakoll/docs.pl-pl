@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595878"
 ---
 # <a name="auto-visual-basic"></a>Auto (Visual Basic)
 Określa, że Visual Basic powinien kierować ciągi zgodnie z regułami programu .NET Framework oparte na zewnętrzną nazwę procedury zewnętrznej został zadeklarowany.  

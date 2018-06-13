@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172331"
 ---
 # <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Porady: deklarowanie i użycie właściwości do odczytu i zapisu (C# przewodnik programowania w języku)
 Właściwości wygodniejszego publiczne elementy członkowskie danych bez zagrożenie niechronione, niekontrolowanego i niezweryfikowane dostęp do danych obiektu. Jest to realizowane przez *akcesorów*: specjalne metody przypisać i pobrać wartości z podstawowego elementu członkowskiego danych. [Ustawić](../../../csharp/language-reference/keywords/set.md) dostępu umożliwia członkom danych można przypisać i [uzyskać](../../../csharp/language-reference/keywords/get.md) akcesor pobiera wartości elementów członkowskich danych.  

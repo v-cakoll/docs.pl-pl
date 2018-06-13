@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590741"
 ---
 # <a name="introduction-to-the-line-and-shape-controls-visual-studio"></a>Linie i kształty — Wprowadzenie do formantów (Visual Studio)
 Formanty Visual Basic Powerpack linii i kształtu są zestawem trzy graficznego formantów, które pozwalają na rysowanie linii i kształtów w formularzach i kontenerów. <xref:Microsoft.VisualBasic.PowerPacks.LineShape> Formant jest używany do rysowania linii poziomych, pionowych i ukośnych. <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> Formant jest używany do rysowania okręgi i elipsy i <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> formant jest używany do rysowania prostokątów i kwadratów.  

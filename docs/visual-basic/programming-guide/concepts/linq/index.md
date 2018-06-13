@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645971"
 ---
 # <a name="language-integrated-query-linq-visual-basic"></a>Zapytanie o języku zintegrowanym (LINQ) (Visual Basic)
 LINQ to zestaw funkcji, która rozszerza możliwości zaawansowanych zapytań na składni języka Visual Basic. LINQ zawiera standardowe, łatwo rozpoznawane wzorce wykonywania kwerend i aktualizowanie danych oraz technologii można rozszerzyć w celu obsługi potencjalnie dowolnego rodzaju magazynu danych.  .NET Framework obejmuje zestawy dostawcy LINQ, które umożliwiają użycie LINQ z kolekcji .NET Framework, baz danych serwera SQL, danych ADO.NET i dokumentów XML.  

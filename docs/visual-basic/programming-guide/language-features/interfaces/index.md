@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654425"
 ---
 # <a name="interfaces-visual-basic"></a>Interfejsy (Visual Studio)
 *Interfejsy* Definiowanie właściwości, metod i zdarzeń, które można zaimplementować klasy. Interfejsy umożliwiają definiowanie funkcji jako małych grup ściśle powiązane właściwości, metod i zdarzeń; Zmniejsza to problemy ze zgodnością, ponieważ możesz utworzyć rozszerzoną implementacje interfejsów sieci bez narażenia istniejącego kodu. Możesz dodać nowe funkcje w dowolnym momencie przez tworzenie implementacji i dodatkowe interfejsy.  

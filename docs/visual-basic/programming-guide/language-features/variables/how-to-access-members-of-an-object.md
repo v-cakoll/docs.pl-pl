@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650925"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>Porady: dostęp do elementów członkowskich obiektu (Visual Basic)
 Jeśli masz zmiennej obiektu, który odwołuje się do obiektu często chcesz pracować z elementami członkowskimi tego obiektu, takie jak metod, właściwości, pól i zdarzeń. Na przykład po utworzeniu nowego <xref:System.Windows.Forms.Form> obiektu, należy ustawić jej <xref:System.Windows.Forms.Control.Text%2A> właściwość lub wywołanie jego <xref:System.Windows.Forms.Control.Focus%2A> metody.  

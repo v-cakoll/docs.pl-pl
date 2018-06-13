@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649623"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>Definicja typu anonimowego (Visual Basic)
 W odpowiedzi na deklaracji wystąpienia typu anonimowego kompilator tworzy nową definicję klasy zawierający właściwości określonego typu.  

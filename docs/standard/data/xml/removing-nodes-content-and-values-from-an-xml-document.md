@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568940"
 ---
 # <a name="removing-nodes-content-and-values-from-an-xml-document"></a>Usuwanie węzłów, zawartość i wartości z dokumentu XML
 Po XML modelu DOM (Document Object) znajduje się w pamięci, usuń węzły z drzewa, lub usuń zawartość i wartości z niektórych typów węzłów. Aby uzyskać informacje, jak usunąć węzeł liścia lub poddrzewo węzła całego dokumentu, zobacz [usuwania węzłów z modelu DOM](../../../../docs/standard/data/xml/removing-nodes-from-the-dom.md). Aby uzyskać informacje dotyczące sposobu usuwania atrybuty w elemencie, zobacz [usuwanie atrybutów z węzłem elementu w modelu DOM](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md). Uzyskać informacji o usunięcie zawartości węzła, ale pozostawienie węzła drzewa, zobacz [usuwanie zawartości węzła w modelu DOM](../../../../docs/standard/data/xml/removing-node-content-in-the-dom.md).  

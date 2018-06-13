@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577658"
 ---
 # <a name="common-io-tasks"></a>Typowe zadania We/Wy
 <xref:System.IO> Przestrzeń nazw zawiera szereg klas, które umożliwiają różne akcje, takie jak odczytywanie i zapisywanie do wykonania dla plików, katalogów i strumieni. Aby uzyskać więcej informacji, zobacz [plików i we/wy strumienia](../../../docs/standard/io/index.md).  

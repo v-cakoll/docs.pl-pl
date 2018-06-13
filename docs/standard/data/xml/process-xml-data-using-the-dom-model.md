@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570366"
 ---
 # <a name="process-xml-data-using-the-dom-model"></a>Przetwarzania danych XML przy użyciu modelu DOM
 XML modelu DOM (Document Object) dane XML są traktowane jako standardowy zestaw obiektów i służy do przetwarzania danych XML w pamięci. `System.Xml` Przestrzeń nazw zapewnia programowy reprezentację dokumenty XML, fragmenty, węzły lub zestaw węzłów. Jest on oparty na podstawowe sieci World Wide Web konsorcjum W3C DOM poziom 1 i zalecenia DOM poziom 2 rdzeni.  

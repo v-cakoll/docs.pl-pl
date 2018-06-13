@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569788"
 ---
 # <a name="xpathdocument-input-to-xsltransform"></a>Dane wejściowe XPathDocument XslTransform
 <xref:System.Xml.XPath.XPathDocument> Jest tylko do odczytu pamięci podręcznej, przetwarzania dokumentów za pomocą <xref:System.Xml.Xsl.XslTransform>. Przypomina strukturę do XML modelu DOM (Document Object), ale wysoce jest zoptymalizowany do przetwarzania przekształceń XSLT () oraz modelu danych XML Path Language (XPath) przy użyciu funkcji optymalizacji XPath na językarozszerzonegoarkuszastylów<xref:System.Xml.XPath.XPathNavigator>.  

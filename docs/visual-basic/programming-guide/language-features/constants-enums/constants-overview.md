@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648388"
 ---
 # <a name="constants-overview-visual-basic"></a>Stałe — Przegląd (Visual Basic)
 Stała jest znaczącą nazwę, która ma miejsce, liczby lub ciąg, który nie ulega zmianie. Stałe przechowywać wartości, które jak wskazuje nazwę, pozostają takie same w całej wykonywania aplikacji. Można znacznie poprawić czytelność kodu i ułatwić Obsługa za pomocą stałych. Korzystanie z nich kod, który zawiera wartości, które się ponownie lub to zależy od niektórych liczb, które są trudne do zapamiętania lub mieć znaczenia oczywiste.  

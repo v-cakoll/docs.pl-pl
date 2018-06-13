@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569918"
 ---
 # <a name="memory-management-and-garbage-collection-in-net"></a>Zarządzanie pamięcią i wyrzucanie elementów bezużytecznych w .NET
 Ta sekcja dokumentacji zawiera informacje o zarządzaniu pamięci platformy .NET.  

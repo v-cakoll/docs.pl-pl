@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574053"
 ---
 # <a name="culture-insensitive-string-operations"></a>Niezależne od kultury operacje na ciągach
 Operacje na ciągach, w których jest uwzględniana kultura, mogą okazać się przydatne w przypadku tworzenia aplikacji, które mają wyświetlać wyniki użytkownikom na podstawie kultury. Domyślnie zależne od kultury metod uzyskania kultura używana z <xref:System.Globalization.CultureInfo.CurrentCulture%2A> właściwości bieżącego wątku.  

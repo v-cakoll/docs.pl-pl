@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521745"
 ---
 # <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a>Porady: wypełnianie kształtów wzorem kreskowanym
 Wzorzec kreskowania staje się z dwóch kolorów: jeden dla tła i jeden dla wierszy, które tworzą wzorca w tle. Aby wypełnić zamkniętego kształtów wzorem kreskowanym, użyj <xref:System.Drawing.Drawing2D.HatchBrush> obiektu. W poniższym przykładzie pokazano sposób wypełniania elipsy wzorem kreskowanym:  

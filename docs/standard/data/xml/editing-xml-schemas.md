@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577218"
 ---
 # <a name="editing-xml-schemas"></a>Edytowanie schematy XML
 Edytowanie schematu XML jest jednym z najważniejszych elementów z modelu obiektu schematu (SOM). Wszystkie właściwości wstępnie przygotowany schema kompilacji SOM można zmienić istniejące wartości w schemacie XML. Schemat XML można następnie ponownie skompilowana, aby odzwierciedlić zmiany.  

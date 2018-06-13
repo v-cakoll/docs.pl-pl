@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644046"
 ---
 # <a name="covariance-and-contravariance-visual-basic"></a>Kowariancja i Kontrawariancja (Visual Basic)
 Kowariancja i kontrawariancja w języku Visual Basic, Włącz niejawnej konwersji odwołania dla tablic, typów delegowanych i argumentów typu ogólnego. Kowariancja zachowuje zgodność przypisania i kontrawariancja odwraca go.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576210"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Asynchroniczny wzorzec oparty na zdarzeniach — przegląd
 Aplikacje, których wykonywanie wielu zadań jednocześnie, ale nadal odbierać interakcji z użytkownikiem, często wymagają projekt, który używa wielu wątków. <xref:System.Threading> Przestrzeń nazw zawiera wszystkie narzędzia niezbędne do utworzenia aplikacji wielowątkowych wysokiej wydajności, ale efektywne używanie tych narzędzi wymaga znaczących środowisko z wielowątkowe engineering oprogramowania. Dla aplikacji wielowątkowych stosunkowo proste <xref:System.ComponentModel.BackgroundWorker> składnika rozwiązaniem jest proste. Dla bardziej zaawansowanych aplikacji asynchronicznego rozważ zaimplementowanie zgodnego ze wzorca asynchronicznego opartego na zdarzeniach klasy.  

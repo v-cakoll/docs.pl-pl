@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578333"
 ---
 # <a name="application-domain-resource-monitoring"></a>Monitorowanie zasobów domen aplikacji
 Zasobów domen aplikacji monitorowania (ARM) umożliwia hostom monitorowanie użycia procesora CPU i pamięci według domeny aplikacji. Jest to przydatne dla hostów, takich jak ASP.NET, korzystających z wielu domen aplikacji w procesie długotrwałe. Hosta można wyładować domeny aplikacji, aplikacji, która jest negatywnego wpływu na wydajność całego procesu, ale tylko wtedy, jeśli można zidentyfikować problematyczne aplikacji. ARM zawiera informacje, które mogą służyć do celów podczas podejmowania decyzji.  

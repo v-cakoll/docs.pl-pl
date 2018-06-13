@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577105"
 ---
 # <a name="resolving-external-resources"></a>Rozpoznawanie zewnętrznych zasobów
 **Element XmlResolver** właściwość **XmlDocument** jest używany przez **XmlDocument** klasy lokalizowanie zasobów, które nie są wbudowane w danych XML, takie jak typ dokumentu zewnętrznego definicje (elementów DTD), jednostki i schematów. Te elementy mogą znajdować się w sieci lub na lokalnym dysku i zidentyfikować przez zasób identyfikator URI (Uniform). Dzięki temu **XmlDocument** rozwiązywać **EntityReference** węzłów, które znajdują się w dokumencie i walidacji dokumentu zgodnie z zewnętrzna definicja DTD lub schemat.  

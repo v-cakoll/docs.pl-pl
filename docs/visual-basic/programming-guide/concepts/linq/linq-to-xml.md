@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645080"
 ---
 # <a name="linq-to-xml-visual-basic"></a>LINQ do XML (Visual Basic)
 LINQ do XML udostępnia interfejs programowania XML w pamięci, który wykorzystuje Framework .NET Language-Integrated zapytania (LINQ). LINQ do XML korzysta z najnowszych funkcji języka .NET Framework i jest porównywalna zaktualizowane, zmienioną XML modelu DOM (Document Object) interfejs programowania.  

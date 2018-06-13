@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522669"
 ---
 # <a name="how-to-extract-the-icon-associated-with-a-file-in-windows-forms"></a>Porady: wyodrębnianie ikon skojarzonych z plikiem w formularzach systemu Windows
 Wiele plików zostały osadzone ikony, które pozwalają wizualną reprezentację skojarzonego typu pliku. Na przykład Microsoft Word dokumenty zawierają ikonę, która identyfikuje je jako dokumenty programu Word. Wyświetlanie plików w formancie listy lub formancie tabeli, możesz wyświetlić ikonę reprezentujący typ pliku obok nazwy każdego pliku. Łatwo to zrobić, za pomocą <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A> metody.  

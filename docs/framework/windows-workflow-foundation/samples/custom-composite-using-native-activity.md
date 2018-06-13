@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519213"
 ---
 # <a name="custom-composite-using-native-activity"></a>Złożone niestandardowych za pomocą działania natywnego
 W tym przykładzie pokazano, jak napisać <xref:System.Activities.NativeActivity> która planuje innych <xref:System.Activities.Activity> obiekty do sterowania przepływem wykonywania przepływu pracy. W przykładzie użyto dwóch typowych przepływami sterowania sekwencji i While, aby zademonstrować, jak to zrobić.  

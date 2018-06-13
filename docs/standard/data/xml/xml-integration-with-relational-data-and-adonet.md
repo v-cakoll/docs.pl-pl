@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575704"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>Integracja XML z danych relacyjnych i ADO.NET
 **Dokumentu XmlDataDocument** klasy jest klasy pochodnej z **XmlDocument**i zawiera dane XML. Zaletą **dokumentu XmlDataDocument** jest mostka między danych relacyjnych i hierarchicznych. Jest **XmlDocument** może być powiązana z **DataSet** i obie klasy można synchronizować zmiany wprowadzone w danych znajdujących się w dwóch klas. **XmlDocument** który jest powiązany **DataSet** umożliwia XML do integracji z danych relacyjnych i nie trzeba mieć dane reprezentowane jako albo XML lub w formacie relacyjnym. Możesz wykonać obie czynności i nie można ograniczyć do pojedynczego reprezentację danych.  

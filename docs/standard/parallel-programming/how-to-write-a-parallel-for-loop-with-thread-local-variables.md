@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584673"
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Porady: zapisywanie równoległej pętli For ze zmiennymi lokalnymi wątku
 W tym przykładzie przedstawiono użycie zmiennych thread-local do przechowywania i pobierania stanu w każdej oddzielne zadanie, które jest tworzony przez <xref:System.Threading.Tasks.Parallel.For%2A> pętli. Przy użyciu danych lokalnych wątku, można uniknąć obciążenie synchronizowania dużej liczby operacji uzyskania dostępu do stanu udostępnionego. Zamiast zapisywania do udostępnionego zasobu w każdej iteracji, obliczania i przechowywania wartości do momentu zakończenia wszystkich iteracji dla zadania. Można następnie jednokrotnego zapisu wynik końcowy udostępnianego zasobu lub przekaż go do innej metody.  

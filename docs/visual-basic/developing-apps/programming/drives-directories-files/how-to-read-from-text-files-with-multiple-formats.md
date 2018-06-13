@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584875"
 ---
 # <a name="how-to-read-from-text-files-with-multiple-formats-in-visual-basic"></a>Porady: odczyt z plików tekstowych w wielu formatach w Visual Basic
 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> Obiektu pozwala łatwo i efektywnie przeanalizować strukturyzowanych plików tekstowych, takich jak dzienniki. Plik o wiele formatów można przetwarzać przy użyciu `PeekChars` metodę, aby określić format każdego wiersza, jak przeanalizować za pośrednictwem pliku.  

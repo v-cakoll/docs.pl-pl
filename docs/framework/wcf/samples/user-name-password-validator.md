@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508322"
 ---
 # <a name="user-name-password-validator"></a>Moduł weryfikacji nazwy użytkownika i hasła
 W tym przykładzie pokazano, jak do zaimplementowania niestandardowego modułu weryfikacji UserNamePassword. Jest to przydatne w sytuacjach, gdy żaden z wbudowanych tryby UserNamePassword sprawdzania poprawności nie jest odpowiednią do wymagań aplikacji; na przykład gdy pary nazwa użytkownika i hasło są przechowywane w magazynie zewnętrznym, takie jak bazy danych. W tym przykładzie pokazano usługi, która ma niestandardowego modułu weryfikacji, który sprawdza, czy dwie pary określonej nazwy użytkownika i hasła. Klient używa parę nazwy użytkownika i hasła do uwierzytelnienia w usłudze.  

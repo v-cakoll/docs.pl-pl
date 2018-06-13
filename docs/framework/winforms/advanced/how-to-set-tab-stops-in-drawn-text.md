@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523640"
 ---
 # <a name="how-to-set-tab-stops-in-drawn-text"></a>Porady: ustawienie pozycji tabulatorów w rysowanym tekście
 Można ustawić tabulatorów tekstu przez wywołanie metody <xref:System.Drawing.StringFormat.SetTabStops%2A> metody <xref:System.Drawing.StringFormat> obiektu, a następnie przekazywanie, który <xref:System.Drawing.StringFormat> do obiektu <xref:System.Drawing.Graphics.DrawString%2A> metody <xref:System.Drawing.Graphics> klasy.  

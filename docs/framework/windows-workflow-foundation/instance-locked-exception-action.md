@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517286"
 ---
 # <a name="instance-locked-exception-action"></a>Wystąpienie zablokowane wyjątku
 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.InstanceLockedExceptionAction%2A> Właściwość w magazynie wystąpień przepływu pracy SQL pozwala określić akcję dostawca trwałości SQL powinien wykonać, gdy odbierze <xref:System.Runtime.DurableInstancing.InstanceLockedException>. Dostawca trwałości odbiera ten wyjątek podczas próby blokady wystąpienia usługi przepływu pracy, który jest zablokowany przez innego hosta usługi. Wartości dla tej właściwości to <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.NoRetry>, <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.BasicRetry>, i <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.AggressiveRetry>. Wartość domyślna to <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.NoRetry>. Na poniższej liście opisano trzy opcje:  

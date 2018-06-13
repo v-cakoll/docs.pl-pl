@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508348"
 ---
 # <a name="two-way-communication"></a>Komunikacja dwukierunkowa
 W tym przykładzie pokazano, jak wykonać transakcyjne dwukierunkowej komunikacji w kolejce przez usługę MSMQ. W przykładzie użyto `netMsmqBinding` powiązania. W takim przypadku usługa jest aplikacji konsoli siebie umożliwiający obserwowanie usługi odbieranie wiadomości w kolejce.  

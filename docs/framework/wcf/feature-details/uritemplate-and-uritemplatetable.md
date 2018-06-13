@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508830"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>Klasy UriTemplate i UriTemplateTable
 Deweloperzy sieci Web wymagają możliwości opis kształtu i układu identyfikatory URI, które odpowiadają swoich usług. Windows Communication Foundation (WCF) dodano dwa nowe klasy umożliwiają deweloperom kontrolę nad ich identyfikatorów URI. <xref:System.UriTemplate> i <xref:System.UriTemplateTable> stanowią podstawę aparatu wysyłki na podstawie identyfikatora URI w programie WCF. Te klasy można także na ich własnych, co pozwala deweloperom korzystać z szablonów i identyfikator URI mapowania mechanizmu bez stosowania usługi WCF.  

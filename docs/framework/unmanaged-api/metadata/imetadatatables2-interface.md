@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450079"
 ---
 # <a name="imetadatatables2-interface"></a><span data-ttu-id="086b9-102">IMetaDataTables2 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="086b9-102">IMetaDataTables2 Interface</span></span>
 <span data-ttu-id="086b9-103">Rozszerza [IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md) uwzględnienie metody pracy ze strumieni metadanych.</span><span class="sxs-lookup"><span data-stu-id="086b9-103">Extends [IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md) to include methods for working with metadata streams.</span></span>  

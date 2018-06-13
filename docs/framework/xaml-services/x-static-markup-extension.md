@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565582"
 ---
 # <a name="xstatic-markup-extension"></a><span data-ttu-id="fbf98-102">x:Static — Rozszerzenie znaczników</span><span class="sxs-lookup"><span data-stu-id="fbf98-102">x:Static Markup Extension</span></span>
 <span data-ttu-id="fbf98-103">Odwołuje się do dowolnej jednostki kodu przez wartość statyczną, która jest zdefiniowana w [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]— sposób zgodne.</span><span class="sxs-lookup"><span data-stu-id="fbf98-103">References any static by-value code entity that is defined in a [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]–compliant way.</span></span> <span data-ttu-id="fbf98-104">Właściwość statyczna, do którego odwołuje się może służyć do zapewnienia wartości właściwości w języku XAML.</span><span class="sxs-lookup"><span data-stu-id="fbf98-104">The static property that is referenced can be used to provide the value of a property in XAML.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576171"
 ---
 # <a name="xslt-transformations-with-the-xsltransform-class"></a><span data-ttu-id="c800b-102">Przekształcenia XSLT przy użyciu klasy XslTransform</span><span class="sxs-lookup"><span data-stu-id="c800b-102">XSLT Transformations with the XslTransform Class</span></span>
 > [!NOTE]

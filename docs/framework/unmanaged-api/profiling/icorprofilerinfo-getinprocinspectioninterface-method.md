@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453160"
 ---
 # <a name="icorprofilerinfogetinprocinspectioninterface-method"></a><span data-ttu-id="878f4-102">ICorProfilerInfo::GetInprocInspectionInterface — Metoda</span><span class="sxs-lookup"><span data-stu-id="878f4-102">ICorProfilerInfo::GetInprocInspectionInterface Method</span></span>
 <span data-ttu-id="878f4-103">Pobiera obiekt, który można wykonać zapytania dla interfejsu "ICorDebugProcess".</span><span class="sxs-lookup"><span data-stu-id="878f4-103">Gets an object that can be queried for an "ICorDebugProcess" interface.</span></span> <span data-ttu-id="878f4-104">Ta metoda jest przestarzała w programie .NET Framework w wersji 2.0.</span><span class="sxs-lookup"><span data-stu-id="878f4-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  

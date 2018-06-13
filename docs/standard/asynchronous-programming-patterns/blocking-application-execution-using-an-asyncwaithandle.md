@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567328"
 ---
 # <a name="blocking-application-execution-using-an-asyncwaithandle"></a><span data-ttu-id="462c4-102">Blokowanie wykonania aplikacji za pomocą właściwości AsyncWaitHandle</span><span class="sxs-lookup"><span data-stu-id="462c4-102">Blocking Application Execution Using an AsyncWaitHandle</span></span>
 <span data-ttu-id="462c4-103">Aplikacje, których nie można nadal wykonywać inne zadania podczas oczekiwania na wyniki operacji asynchronicznej zablokować przed zakończeniem operacji.</span><span class="sxs-lookup"><span data-stu-id="462c4-103">Applications that cannot continue to do other work while waiting for the results of an asynchronous operation must block until the operation completes.</span></span> <span data-ttu-id="462c4-104">Mają być blokowane podczas oczekiwania na zakończenie operacji asynchronicznych wątku głównego aplikacji, użyj jednej z następujących opcji:</span><span class="sxs-lookup"><span data-stu-id="462c4-104">Use one of the following options to block your application's main thread while waiting for an asynchronous operation to complete:</span></span>  

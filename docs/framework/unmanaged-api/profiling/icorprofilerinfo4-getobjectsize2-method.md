@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454106"
 ---
 # <a name="icorprofilerinfo4getobjectsize2-method"></a><span data-ttu-id="87112-102">ICorProfilerInfo4::GetObjectSize2 — Metoda</span><span class="sxs-lookup"><span data-stu-id="87112-102">ICorProfilerInfo4::GetObjectSize2 Method</span></span>
 <span data-ttu-id="87112-103">Zwraca rozmiar określonego obiektu.</span><span class="sxs-lookup"><span data-stu-id="87112-103">Returns the size of a specified object.</span></span> <span data-ttu-id="87112-104">Zastępuje [ICorProfilerInfo::GetObjectSize](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getobjectsize-method.md) metody raportowanie rozmiary obiektów, które są większe niż to, co może być wyrażona w `ULONG`.</span><span class="sxs-lookup"><span data-stu-id="87112-104">Replaces the [ICorProfilerInfo::GetObjectSize](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getobjectsize-method.md) method by reporting sizes of objects that are larger than what can be expressed in a `ULONG`.</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387006"
 ---
 # <a name="pinvokelog-mda"></a><span data-ttu-id="2f6da-102">pInvokeLog MDA</span><span class="sxs-lookup"><span data-stu-id="2f6da-102">pInvokeLog MDA</span></span>
 <span data-ttu-id="2f6da-103">`pInvokeLog` Zarządzany Asystent debugowania (MDA) została aktywowana dla każdej platformy unikatowy wywołania podpisu używane podczas wykonywania.</span><span class="sxs-lookup"><span data-stu-id="2f6da-103">The `pInvokeLog` managed debugging assistant (MDA) is activated for each unique platform invoke signature used during execution.</span></span>  

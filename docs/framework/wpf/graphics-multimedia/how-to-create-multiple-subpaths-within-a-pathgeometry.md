@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559334"
 ---
 # <a name="how-to-create-multiple-subpaths-within-a-pathgeometry"></a><span data-ttu-id="00af8-102">Jak utworzyć wiele podścieżek w obrębie PathGeometry</span><span class="sxs-lookup"><span data-stu-id="00af8-102">How to: Create Multiple Subpaths Within a PathGeometry</span></span>
 <span data-ttu-id="00af8-103">W tym przykładzie przedstawiono sposób tworzenia wielu podrzędne w <xref:System.Windows.Media.PathGeometry>.</span><span class="sxs-lookup"><span data-stu-id="00af8-103">This example shows how to create multiple subpaths in a <xref:System.Windows.Media.PathGeometry>.</span></span> <span data-ttu-id="00af8-104">Aby utworzyć wiele ścieżek podrzędnych, należy utworzyć <xref:System.Windows.Media.PathFigure> dla podrzędnej.</span><span class="sxs-lookup"><span data-stu-id="00af8-104">To create multiple subpaths, you create a <xref:System.Windows.Media.PathFigure> for each subpath.</span></span>  

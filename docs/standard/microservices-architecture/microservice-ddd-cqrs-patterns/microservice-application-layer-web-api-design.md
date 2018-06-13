@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577437"
 ---
 # <a name="designing-the-microservice-application-layer-and-web-api"></a><span data-ttu-id="894c0-103">Projektowanie mikrousługi warstwy aplikacji i interfejsu API sieci Web</span><span class="sxs-lookup"><span data-stu-id="894c0-103">Designing the microservice application layer and Web API</span></span>
 

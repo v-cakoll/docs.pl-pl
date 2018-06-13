@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450324"
 ---
 # <a name="corprfgcgenerationrange-structure"></a><span data-ttu-id="a8f82-102">COR_PRF_GC_GENERATION_RANGE — Struktura</span><span class="sxs-lookup"><span data-stu-id="a8f82-102">COR_PRF_GC_GENERATION_RANGE Structure</span></span>
 <span data-ttu-id="a8f82-103">Opisuje zakres pamięci, która jest poddawana wyrzucanie elementów bezużytecznych (to znaczy bloku).</span><span class="sxs-lookup"><span data-stu-id="a8f82-103">Describes a range (that is, block) of memory that is undergoing garbage collection.</span></span>  

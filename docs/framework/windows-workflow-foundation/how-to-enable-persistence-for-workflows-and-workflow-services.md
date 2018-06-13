@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514421"
 ---
 # <a name="how-to-enable-persistence-for-workflows-and-workflow-services"></a><span data-ttu-id="288a8-102">Porady: Włącz trwałość dla przepływów pracy i usług przepływu pracy</span><span class="sxs-lookup"><span data-stu-id="288a8-102">How to: Enable Persistence for Workflows and Workflow Services</span></span>
 <span data-ttu-id="288a8-103">W tym temacie opisano, jak do włączenia trwałości dla przepływów pracy i usług przepływu pracy.</span><span class="sxs-lookup"><span data-stu-id="288a8-103">This topic describes how to enable persistence for workflows and workflow services.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566889"
 ---
 # <a name="type-extensions"></a><span data-ttu-id="bfba0-103">Rozszerzenia typu</span><span class="sxs-lookup"><span data-stu-id="bfba0-103">Type Extensions</span></span>
 

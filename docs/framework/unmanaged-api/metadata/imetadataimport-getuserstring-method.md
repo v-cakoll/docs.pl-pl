@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447752"
 ---
 # <a name="imetadataimportgetuserstring-method"></a><span data-ttu-id="c476a-102">IMetaDataImport::GetUserString — Metoda</span><span class="sxs-lookup"><span data-stu-id="c476a-102">IMetaDataImport::GetUserString Method</span></span>
 <span data-ttu-id="c476a-103">Pobiera ciąg literału reprezentowany przez token określonych metadanych.</span><span class="sxs-lookup"><span data-stu-id="c476a-103">Gets the literal string represented by the specified metadata token.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559895"
 ---
 # <a name="how-to-animate-size-changes-by-using-key-frames"></a><span data-ttu-id="d5f3e-102">Jak animować zmiany rozmiaru z wykorzystaniem klatek kluczowych</span><span class="sxs-lookup"><span data-stu-id="d5f3e-102">How to: Animate Size Changes by Using Key Frames</span></span>
 <span data-ttu-id="d5f3e-103">W tym przykładzie przedstawiono sposób animowanie zmian rozmiaru przy użyciu klucza ramki.</span><span class="sxs-lookup"><span data-stu-id="d5f3e-103">This example shows how to animate size changes by using key frames.</span></span>  

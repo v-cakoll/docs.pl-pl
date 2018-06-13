@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556825"
 ---
 # <a name="how-to-specify-the-direction-of-the-binding"></a><span data-ttu-id="5d8f2-102">Jak określić kierunek łączenia</span><span class="sxs-lookup"><span data-stu-id="5d8f2-102">How to: Specify the Direction of the Binding</span></span>
 <span data-ttu-id="5d8f2-103">Ten przykład przedstawia sposób określić, czy powiązanie aktualizować tylko właściwość target (docelowy) powiązania powiązania właściwości source (źródło), lub zarówno właściwość target właściwości oraz źródła.</span><span class="sxs-lookup"><span data-stu-id="5d8f2-103">This example shows how to specify whether the binding updates only the binding target (target) property, the binding source (source) property, or both the target property and the source property.</span></span>  

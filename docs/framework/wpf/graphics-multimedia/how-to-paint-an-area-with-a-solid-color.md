@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561335"
 ---
 # <a name="how-to-paint-an-area-with-a-solid-color"></a><span data-ttu-id="63c53-102">Jak malować obszar jednolitym kolorem</span><span class="sxs-lookup"><span data-stu-id="63c53-102">How to: Paint an Area with a Solid Color</span></span>
 <span data-ttu-id="63c53-103">Namalować obszar jednolitym kolorem służy pędzel wstępnie zdefiniowanych systemu, takich jak <xref:System.Windows.Media.Brushes.Red%2A> lub <xref:System.Windows.Media.Brushes.Blue%2A>, lub można utworzyć nowy <xref:System.Windows.Media.SolidColorBrush> i opisz jego <xref:System.Windows.Media.SolidColorBrush.Color%2A> przy użyciu wartości alfa, czerwony, zielony i niebieski.</span><span class="sxs-lookup"><span data-stu-id="63c53-103">To paint an area with a solid color, you can use a predefined system brush, such as <xref:System.Windows.Media.Brushes.Red%2A> or <xref:System.Windows.Media.Brushes.Blue%2A>, or you can create a new <xref:System.Windows.Media.SolidColorBrush> and describe its <xref:System.Windows.Media.SolidColorBrush.Color%2A> using alpha, red, green, and blue values.</span></span> <span data-ttu-id="63c53-104">W języku XAML może również malowanie obszar jednolitym kolorem przy użyciu notacji szesnastkową.</span><span class="sxs-lookup"><span data-stu-id="63c53-104">In XAML, you may also paint an area with a solid color by using hexidecimal notation.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515004"
 ---
 # <a name="cancellation-handler-on-compensable-activity"></a><span data-ttu-id="fca64-102">Obsługa anulowania w działaniu Compensable</span><span class="sxs-lookup"><span data-stu-id="fca64-102">Cancellation Handler on Compensable Activity</span></span>
 <span data-ttu-id="fca64-103">W tym przykładzie przedstawiono użycie obsługi anulowania z <xref:System.Activities.Statements.CompensableActivity>.</span><span class="sxs-lookup"><span data-stu-id="fca64-103">This sample demonstrates the use of a cancellation handler on a <xref:System.Activities.Statements.CompensableActivity>.</span></span>  

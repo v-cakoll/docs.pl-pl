@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362931"
 ---
 # <a name="optimistic-concurrency-overview"></a><span data-ttu-id="af7f8-102">Optymistycznej współbieżności: omówienie</span><span class="sxs-lookup"><span data-stu-id="af7f8-102">Optimistic Concurrency: Overview</span></span>
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="af7f8-103"> obsługuje optymistyczne sterowanie współbieżnością.</span><span class="sxs-lookup"><span data-stu-id="af7f8-103"> supports optimistic concurrency control.</span></span> <span data-ttu-id="af7f8-104">W poniższej tabeli opisano terminy, które dotyczą optymistycznej współbieżności w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dokumentacji:</span><span class="sxs-lookup"><span data-stu-id="af7f8-104">The following table describes terms that apply to optimistic concurrency in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation:</span></span>  

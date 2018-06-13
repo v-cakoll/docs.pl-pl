@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557579"
 ---
 # <a name="popup-overview"></a><span data-ttu-id="f0347-102">Przegląd Okna podręczne</span><span class="sxs-lookup"><span data-stu-id="f0347-102">Popup Overview</span></span>
 <span data-ttu-id="f0347-103"><xref:System.Windows.Controls.Primitives.Popup> Kontroli umożliwia wyświetlanie zawartości w oddzielnym oknie, który jest wyświetlany nad bieżące okno aplikacji względem wyznaczonych współrzędnych elementu lub ekranu.</span><span class="sxs-lookup"><span data-stu-id="f0347-103">The <xref:System.Windows.Controls.Primitives.Popup> control provides a way to display content in a separate window that floats over the current application window relative to a designated element or screen coordinate.</span></span> <span data-ttu-id="f0347-104">W tym temacie przedstawiono <xref:System.Windows.Controls.Primitives.Popup> kontroli i udostępnia informacje na temat jego używania.</span><span class="sxs-lookup"><span data-stu-id="f0347-104">This topic introduces the <xref:System.Windows.Controls.Primitives.Popup> control and provides information about its use.</span></span>  

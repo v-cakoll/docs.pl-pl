@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364801"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a><span data-ttu-id="36ad8-102">Serwer i ról bazy danych w programie SQL Server</span><span class="sxs-lookup"><span data-stu-id="36ad8-102">Server and Database Roles in SQL Server</span></span>
 <span data-ttu-id="36ad8-103">Wszystkie wersje programu SQL Server, użyj opartej na rolach zabezpieczeń, dzięki czemu można przypisać uprawnienia do roli lub grupy użytkowników, a nie dla poszczególnych użytkowników.</span><span class="sxs-lookup"><span data-stu-id="36ad8-103">All versions of SQL Server use role-based security, which allows you to assign permissions to a role, or group of users, instead of to individual users.</span></span> <span data-ttu-id="36ad8-104">Stały server i bazy danych mają ustalony zbiór przypisane im uprawnienia.</span><span class="sxs-lookup"><span data-stu-id="36ad8-104">Fixed server and fixed database roles have a fixed set of permissions assigned to them.</span></span>  

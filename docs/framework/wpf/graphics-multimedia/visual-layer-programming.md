@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561738"
 ---
 # <a name="visual-layer-programming"></a><span data-ttu-id="bfda2-102">Programowanie warstwy Visual</span><span class="sxs-lookup"><span data-stu-id="bfda2-102">Visual Layer Programming</span></span>
 <span data-ttu-id="bfda2-103"><xref:System.Windows.Media.Visual> Obiekt jest podstawowa [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obiektu, którego podstawową rolą jest zapewnia obsługę renderowania.</span><span class="sxs-lookup"><span data-stu-id="bfda2-103">The <xref:System.Windows.Media.Visual> object is a core [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] object, whose primary role is to provide rendering support.</span></span> <span data-ttu-id="bfda2-104">Formanty interfejsu użytkownika, takich jak <xref:System.Windows.Controls.Button> i <xref:System.Windows.Controls.TextBox>, pochodzi z <xref:System.Windows.Media.Visual> klasy, a następnie użyć jej do przechowywanie ich renderowania danych.</span><span class="sxs-lookup"><span data-stu-id="bfda2-104">User interface controls, such as <xref:System.Windows.Controls.Button> and <xref:System.Windows.Controls.TextBox>, derive from the <xref:System.Windows.Media.Visual> class, and use it for persisting their rendering data.</span></span>  

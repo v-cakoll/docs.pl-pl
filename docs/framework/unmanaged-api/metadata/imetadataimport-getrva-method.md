@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447214"
 ---
 # <a name="imetadataimportgetrva-method"></a><span data-ttu-id="38d0b-102">IMetaDataImport::GetRVA — Metoda</span><span class="sxs-lookup"><span data-stu-id="38d0b-102">IMetaDataImport::GetRVA Method</span></span>
 <span data-ttu-id="38d0b-103">Pobiera adres względny wirtualnych (RVA) i flagi implementacji metody lub pola reprezentowany przez określony token.</span><span class="sxs-lookup"><span data-stu-id="38d0b-103">Gets the relative virtual address (RVA) and the implementation flags of the method or field represented by the specified token.</span></span>  

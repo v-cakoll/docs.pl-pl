@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556838"
 ---
 # <a name="how-to-produce-a-value-based-on-a-list-of-bound-items"></a><span data-ttu-id="73d65-102">Jak uzyskać wartość w oparciu o listę powiązanych elementów</span><span class="sxs-lookup"><span data-stu-id="73d65-102">How to: Produce a Value Based on a List of Bound Items</span></span>
 <span data-ttu-id="73d65-103"><xref:System.Windows.Data.MultiBinding> Umożliwia powiązać właściwość target powiązanie listę właściwości źródła, a następnie zastosować logiki w celu utworzenia wartości o dane wejściowe.</span><span class="sxs-lookup"><span data-stu-id="73d65-103"><xref:System.Windows.Data.MultiBinding> allows you to bind a binding target property to a list of source properties and then apply logic to produce a value with the given inputs.</span></span> <span data-ttu-id="73d65-104">W tym przykładzie przedstawiono sposób użycia <xref:System.Windows.Data.MultiBinding>.</span><span class="sxs-lookup"><span data-stu-id="73d65-104">This example demonstrates how to use <xref:System.Windows.Data.MultiBinding>.</span></span>  

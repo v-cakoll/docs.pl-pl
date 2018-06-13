@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559426"
 ---
 # <a name="how-to-write-metadata-to-a-bitmap"></a><span data-ttu-id="ddf61-102">Jak wpisać metadane do mapy bitowej</span><span class="sxs-lookup"><span data-stu-id="ddf61-102">How to: Write Metadata to a Bitmap</span></span>
 <span data-ttu-id="ddf61-103">W tym przykładzie pokazano, jak można zapisać metadanych mapy bitowej przy użyciu języka zapytania metadanych.</span><span class="sxs-lookup"><span data-stu-id="ddf61-103">This example shows how to write metadata to a bitmap using the metadata query language.</span></span>  

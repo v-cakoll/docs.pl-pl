@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515448"
 ---
 # <a name="for-activity"></a><span data-ttu-id="fd45a-102">Dla działania</span><span class="sxs-lookup"><span data-stu-id="fd45a-102">For Activity</span></span>
 <span data-ttu-id="fd45a-103">Przykładowe For demonstruje sposób tworzenia działań niestandardowych, która dziedziczy <xref:System.Activities.NativeActivity>i używać go w przepływie pracy można wykonać przykład rzeczywistych.</span><span class="sxs-lookup"><span data-stu-id="fd45a-103">The For sample demonstrates how to build a custom activity that inherits from <xref:System.Activities.NativeActivity>, and use it in a workflow to execute a real world example.</span></span> <span data-ttu-id="fd45a-104">Niestandardowe działania zawarte w tej funkcji próbki, takich jak C# `for` instrukcji.</span><span class="sxs-lookup"><span data-stu-id="fd45a-104">The custom activity included in this sample functions like the C# `for` statement.</span></span> <span data-ttu-id="fd45a-105">T</span><span class="sxs-lookup"><span data-stu-id="fd45a-105">T</span></span>  

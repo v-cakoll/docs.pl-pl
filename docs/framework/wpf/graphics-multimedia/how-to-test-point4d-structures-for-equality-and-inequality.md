@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559817"
 ---
 # <a name="how-to-test-point4d-structures-for-equality-and-inequality"></a><span data-ttu-id="c49a3-102">Jak testować struktury Point4D dla równości i nierówności</span><span class="sxs-lookup"><span data-stu-id="c49a3-102">How to: Test Point4D structures for equality and inequality</span></span>
 <span data-ttu-id="c49a3-103">W tym przykładzie pokazano, jak przetestować <xref:System.Windows.Media.Media3D.Point4D> struktur równości i nierówności.</span><span class="sxs-lookup"><span data-stu-id="c49a3-103">This example shows how to test <xref:System.Windows.Media.Media3D.Point4D> structures for equality and inequality.</span></span>  

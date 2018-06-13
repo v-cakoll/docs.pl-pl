@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561609"
 ---
 # <a name="how-to-transform-a-brush"></a><span data-ttu-id="e9a29-102">Jak przekształcić pędzel</span><span class="sxs-lookup"><span data-stu-id="e9a29-102">How to: Transform a Brush</span></span>
 <span data-ttu-id="e9a29-103">W tym przykładzie przedstawiono sposób przekształcania <xref:System.Windows.Media.Brush> obiektów przy użyciu ich właściwości dwóch przekształcenia: <xref:System.Windows.Media.Brush.RelativeTransform%2A> i <xref:System.Windows.Media.Brush.Transform%2A>.</span><span class="sxs-lookup"><span data-stu-id="e9a29-103">This example shows how to transform <xref:System.Windows.Media.Brush> objects by using their two transformation properties: <xref:System.Windows.Media.Brush.RelativeTransform%2A> and <xref:System.Windows.Media.Brush.Transform%2A>.</span></span>  

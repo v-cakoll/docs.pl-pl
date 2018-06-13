@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363409"
 ---
 # <a name="sql-server-binary-and-large-value-data"></a><span data-ttu-id="4f1aa-102">Dane binarne i duża wartość serwera SQL</span><span class="sxs-lookup"><span data-stu-id="4f1aa-102">SQL Server Binary and Large-Value Data</span></span>
 <span data-ttu-id="4f1aa-103">Program SQL Server stanowi `max` specyfikator, który zwiększa pojemność `varchar`, `nvarchar`, i `varbinary` typy danych.</span><span class="sxs-lookup"><span data-stu-id="4f1aa-103">SQL Server provides the `max` specifier, which expands the storage capacity of the `varchar`, `nvarchar`, and `varbinary` data types.</span></span> <span data-ttu-id="4f1aa-104">`varchar(max)`, `nvarchar(max)`, i `varbinary(max)` są nazywane *typów danych dużych wartości*.</span><span class="sxs-lookup"><span data-stu-id="4f1aa-104">`varchar(max)`, `nvarchar(max)`, and `varbinary(max)` are collectively called *large-value data types*.</span></span> <span data-ttu-id="4f1aa-105">Typy danych dużej wartości umożliwiają przechowywanie maksymalnie 2 ^ 31-1 bajtów danych.</span><span class="sxs-lookup"><span data-stu-id="4f1aa-105">You can use the large-value data types to store up to 2^31-1 bytes of data.</span></span>  

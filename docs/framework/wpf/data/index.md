@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557137"
 ---
 # <a name="data"></a><span data-ttu-id="b2987-102">Dane</span><span class="sxs-lookup"><span data-stu-id="b2987-102">Data</span></span>
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="b2987-103"> Powiązanie danych zapewnia prosty i spójny sposób dla aplikacji przedstawić i interakcji z danymi.</span><span class="sxs-lookup"><span data-stu-id="b2987-103"> data binding provides a simple and consistent way for applications to present and interact with data.</span></span> <span data-ttu-id="b2987-104">Elementy mogą być powiązane z danych z różnych źródeł danych w formie [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] obiektów i XML.</span><span class="sxs-lookup"><span data-stu-id="b2987-104">Elements can be bound to data from a variety of data sources in the form of [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] objects and XML.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="b2987-105"> udostępnia mechanizm transferu danych za pośrednictwem operacji przeciągania i upuszczania.</span><span class="sxs-lookup"><span data-stu-id="b2987-105"> also provides a mechanism for the transfer of data through drag-and-drop operations.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365738"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a><span data-ttu-id="5901b-102">Wskazówki: Prosty Model obiektów i zapytanie (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5901b-102">Walkthrough: Simple Object Model and Query (Visual Basic)</span></span>
 <span data-ttu-id="5901b-103">Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenariusza z minimalnym złożoności.</span><span class="sxs-lookup"><span data-stu-id="5901b-103">This walkthrough provides a fundamental end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenario with minimal complexities.</span></span> <span data-ttu-id="5901b-104">Utworzy klasę jednostki, która modele tabeli klientów Northwind przykładowej bazy danych.</span><span class="sxs-lookup"><span data-stu-id="5901b-104">You will create an entity class that models the Customers table in the sample Northwind database.</span></span> <span data-ttu-id="5901b-105">Spowoduje to utworzenie prostego zapytania do listy klientów, którzy znajdują się w Londynie.</span><span class="sxs-lookup"><span data-stu-id="5901b-105">You will then create a simple query to list customers who are located in London.</span></span>  

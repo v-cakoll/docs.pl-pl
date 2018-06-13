@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363757"
 ---
 # <a name="how-to-update-rows-in-the-database"></a><span data-ttu-id="fcfd8-102">Porady: aktualizowanie wierszy w bazie danych</span><span class="sxs-lookup"><span data-stu-id="fcfd8-102">How to: Update Rows in the Database</span></span>
 <span data-ttu-id="fcfd8-103">Można zaktualizować wierszy w bazie danych przez zmodyfikowanie wartości elementu członkowskiego obiektów skojarzonych z [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601> kolekcji, a następnie przesyłanie zmian w bazie danych.</span><span class="sxs-lookup"><span data-stu-id="fcfd8-103">You can update rows in a database by modifying member values of the objects associated with the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601> collection and then submitting the changes to the database.</span></span> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="fcfd8-104"> tłumaczy zmiany odpowiednie SQL `UPDATE` poleceń.</span><span class="sxs-lookup"><span data-stu-id="fcfd8-104"> translates your changes into the appropriate SQL `UPDATE` commands.</span></span>  

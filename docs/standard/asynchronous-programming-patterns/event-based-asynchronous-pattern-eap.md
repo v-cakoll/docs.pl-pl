@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567809"
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a><span data-ttu-id="ff7c4-102">Asynchroniczny wzorzec oparty na zdarzeniach (EAP)</span><span class="sxs-lookup"><span data-stu-id="ff7c4-102">Event-based Asynchronous Pattern (EAP)</span></span>
 <span data-ttu-id="ff7c4-103">Istnieje wiele sposobów, aby udostępnić funkcje asynchroniczne do kodu klienta.</span><span class="sxs-lookup"><span data-stu-id="ff7c4-103">There are a number of ways to expose asynchronous features to client code.</span></span> <span data-ttu-id="ff7c4-104">Asynchroniczny wzorzec oparty na zdarzeniach Określa jedną z metod dla klas do prezentowania zachowanie asynchronicznego.</span><span class="sxs-lookup"><span data-stu-id="ff7c4-104">The Event-based Asynchronous Pattern prescribes one way for classes to present asynchronous behavior.</span></span>  

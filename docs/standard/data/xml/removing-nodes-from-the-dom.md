@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568462"
 ---
 # <a name="removing-nodes-from-the-dom"></a><span data-ttu-id="eee10-102">Usuwanie węzłów z modelu DOM</span><span class="sxs-lookup"><span data-stu-id="eee10-102">Removing Nodes from the DOM</span></span>
 <span data-ttu-id="eee10-103">Aby usunąć węzeł z XML modelu DOM (Document Object), należy użyć <xref:System.Xml.XmlNode.RemoveChild%2A> sposób usunięcia określonego węzła.</span><span class="sxs-lookup"><span data-stu-id="eee10-103">To remove a node from the XML Document Object Model (DOM), use the <xref:System.Xml.XmlNode.RemoveChild%2A> method to remove a specific node.</span></span> <span data-ttu-id="eee10-104">Po usunięciu węzła metoda usuwa poddrzewo należących do tego węzła zostaną usunięte; oznacza to jeśli nie jest węzłem liścia.</span><span class="sxs-lookup"><span data-stu-id="eee10-104">When you remove a node, the method removes the subtree belonging to the node being removed; that is, if it is not a leaf node.</span></span>  

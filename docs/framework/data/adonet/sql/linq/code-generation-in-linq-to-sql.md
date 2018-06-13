@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363383"
 ---
 # <a name="code-generation-in-linq-to-sql"></a><span data-ttu-id="d47ea-102">Generowanie kodu w składniku LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="d47ea-102">Code Generation in LINQ to SQL</span></span>
 <span data-ttu-id="d47ea-103">Istnieje możliwość wygenerowania kodu do reprezentowania bazy danych przy użyciu [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] lub narzędzie wiersza polecenia SQLMetal.</span><span class="sxs-lookup"><span data-stu-id="d47ea-103">You can generate code to represent a database by using either the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] or the SQLMetal command-line tool.</span></span> <span data-ttu-id="d47ea-104">W obu przypadkach generowanie kodu na trasie występuje w trzech etapach:</span><span class="sxs-lookup"><span data-stu-id="d47ea-104">In either case, end-to-end code generation occurs in three stages:</span></span>  

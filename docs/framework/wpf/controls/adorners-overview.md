@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557124"
 ---
 # <a name="adorners-overview"></a><span data-ttu-id="1a648-102">Przegląd Moduły indeksowania układu</span><span class="sxs-lookup"><span data-stu-id="1a648-102">Adorners Overview</span></span>
 <span data-ttu-id="1a648-103">Modułu definiowania układu kodu jest specjalnym rodzajem <xref:System.Windows.FrameworkElement>używane do zapewnienia wizualnych do użytkownika.</span><span class="sxs-lookup"><span data-stu-id="1a648-103">Adorners are a special type of <xref:System.Windows.FrameworkElement>, used to provide visual cues to a user.</span></span> <span data-ttu-id="1a648-104">Oprócz innych zastosowań modułu definiowania układu kodu może służyć do dodawania funkcjonalności dojść do elementów lub podaj informacje o formancie.</span><span class="sxs-lookup"><span data-stu-id="1a648-104">Among other uses, Adorners can be used to add functional handles to elements or provide state information about a control.</span></span>  

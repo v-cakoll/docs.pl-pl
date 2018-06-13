@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562196"
 ---
 # <a name="shapes"></a><span data-ttu-id="f6dd6-102">Kształty</span><span class="sxs-lookup"><span data-stu-id="f6dd6-102">Shapes</span></span>
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="f6dd6-103"> zapewnia obsługę Rysowanie kształtów podstawowych przy użyciu <xref:System.Windows.Shapes.Shape> klasy.</span><span class="sxs-lookup"><span data-stu-id="f6dd6-103"> provides support for drawing basic shapes using the <xref:System.Windows.Shapes.Shape> class.</span></span> <span data-ttu-id="f6dd6-104">Obiekty kształtu pochodzi od <xref:System.Windows.FrameworkElement> , uczestniczyć w systemie układ i mogą być wystawiane tylko przy użyciu [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f6dd6-104">Shape objects derive from <xref:System.Windows.FrameworkElement> and as such, participate in the layout system and can be drawn simply using [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span>  

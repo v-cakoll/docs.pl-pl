@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564524"
 ---
 # <a name="-escape-sequence--markup-extension"></a><span data-ttu-id="a64a1-102">{} Sekwencja unikowa / rozszerzenie znaczników</span><span class="sxs-lookup"><span data-stu-id="a64a1-102">{} Escape Sequence / Markup Extension</span></span>
 <span data-ttu-id="a64a1-103">Udostępnia sekwencji unikowej XAML dla wartości atrybutu.</span><span class="sxs-lookup"><span data-stu-id="a64a1-103">Provides the XAML escape sequence for attribute values.</span></span> <span data-ttu-id="a64a1-104">Sekwencja specjalna umożliwia kolejnych wartości w atrybucie interpretowane jako literału.</span><span class="sxs-lookup"><span data-stu-id="a64a1-104">The escape sequence allows the subsequent values in the attribute to be interpreted as a literal.</span></span>  

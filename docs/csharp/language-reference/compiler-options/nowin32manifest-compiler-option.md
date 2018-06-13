@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214935"
 ---
 # <a name="-nowin32manifest-c-compiler-options"></a><span data-ttu-id="28e36-102">-nowin32manifest (opcje kompilatora C#)</span><span class="sxs-lookup"><span data-stu-id="28e36-102">-nowin32manifest (C# Compiler Options)</span></span>
 <span data-ttu-id="28e36-103">Użyj **-nowin32manifest** opcję, aby poinstruować kompilatora nie do osadzania manifestu żadnych aplikacji w pliku wykonywalnego.</span><span class="sxs-lookup"><span data-stu-id="28e36-103">Use the **-nowin32manifest** option to instruct the compiler not to embed any application manifest into the executable file.</span></span>  

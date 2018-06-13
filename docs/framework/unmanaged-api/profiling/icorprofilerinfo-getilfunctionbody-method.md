@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452810"
 ---
 # <a name="icorprofilerinfogetilfunctionbody-method"></a><span data-ttu-id="2a696-102">ICorProfilerInfo::GetILFunctionBody — Metoda</span><span class="sxs-lookup"><span data-stu-id="2a696-102">ICorProfilerInfo::GetILFunctionBody Method</span></span>
 <span data-ttu-id="2a696-103">Pobiera wskaźnik do treści metody w kodzie języka pośredniego (MSIL) firmy Microsoft, zaczynając od jej nagłówek.</span><span class="sxs-lookup"><span data-stu-id="2a696-103">Gets a pointer to the body of a method in Microsoft intermediate language (MSIL) code, starting at its header.</span></span>  

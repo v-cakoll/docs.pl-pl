@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515772"
 ---
 # <a name="state-machine-activities-in-wf"></a><span data-ttu-id="cbb3e-102">Działania automatu stanów w WF</span><span class="sxs-lookup"><span data-stu-id="cbb3e-102">State Machine Activities in WF</span></span>
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<span data-ttu-id="cbb3e-103"> zawiera kilka działań dostarczane przez system i projektantów działań do tworzenia przepływów pracy komputera stanu.</span><span class="sxs-lookup"><span data-stu-id="cbb3e-103"> provides several system-provided activities and activity designers for creating state machine workflows.</span></span>  

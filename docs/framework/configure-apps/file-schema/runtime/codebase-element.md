@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745997"
 ---
 # <a name="ltcodebasegt-element"></a><span data-ttu-id="df304-102">&lt;codeBase&gt; — Element</span><span class="sxs-lookup"><span data-stu-id="df304-102">&lt;codeBase&gt; Element</span></span>
 <span data-ttu-id="df304-103">Określa, gdzie znaleźć środowisko uruchomieniowe języka wspólnego zestawu.</span><span class="sxs-lookup"><span data-stu-id="df304-103">Specifies where the common language runtime can find an assembly.</span></span>  

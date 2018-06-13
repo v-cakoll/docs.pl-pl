@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570606"
 ---
 # <a name="design-guidelines-for-exceptions"></a><span data-ttu-id="6088c-102">Wskazówek dotyczących wyjątków</span><span class="sxs-lookup"><span data-stu-id="6088c-102">Design Guidelines for Exceptions</span></span>
 <span data-ttu-id="6088c-103">Obsługa wyjątków ma wiele zalet w porównaniu z raportowania błędów na podstawie wartości zwracane.</span><span class="sxs-lookup"><span data-stu-id="6088c-103">Exception handling has many advantages over return-value-based error reporting.</span></span> <span data-ttu-id="6088c-104">Projektowanie dobrej framework pomaga Deweloper aplikacji wykorzystać zalety wyjątków.</span><span class="sxs-lookup"><span data-stu-id="6088c-104">Good framework design helps the application developer realize the benefits of exceptions.</span></span> <span data-ttu-id="6088c-105">W tej sekcji omówiono wyjątków zalet i przedstawia wskazówki dotyczące używania ich skutecznie.</span><span class="sxs-lookup"><span data-stu-id="6088c-105">This section discusses the benefits of exceptions and presents guidelines for using them effectively.</span></span>  

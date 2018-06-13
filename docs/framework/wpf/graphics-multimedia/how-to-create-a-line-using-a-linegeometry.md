@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560472"
 ---
 # <a name="how-to-create-a-line-using-a-linegeometry"></a><span data-ttu-id="5cbae-102">Jak utworzyć linię używając LineGeometry</span><span class="sxs-lookup"><span data-stu-id="5cbae-102">How to: Create a Line Using a LineGeometry</span></span>
 <span data-ttu-id="5cbae-103">Ten przykład przedstawia sposób użycia <xref:System.Windows.Media.LineGeometry> klasy do opisywania wiersza.</span><span class="sxs-lookup"><span data-stu-id="5cbae-103">This example shows how to use the <xref:System.Windows.Media.LineGeometry> class to describe a line.</span></span> <span data-ttu-id="5cbae-104">A <xref:System.Windows.Media.LineGeometry> jest definiowana za pomocą jego początkowego i końcowego.</span><span class="sxs-lookup"><span data-stu-id="5cbae-104">A <xref:System.Windows.Media.LineGeometry> is defined by its start and end points.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556929"
 ---
 # <a name="how-to-animate-a-boolean-by-using-key-frames"></a><span data-ttu-id="3b29d-102">Jak animować boolean z wykorzystaniem klatek kluczowych</span><span class="sxs-lookup"><span data-stu-id="3b29d-102">How to: Animate a Boolean by Using Key Frames</span></span>
 <span data-ttu-id="3b29d-103">W tym przykładzie pokazano, jak do animowania właściwości typu Boolean wartość <xref:System.Windows.Controls.Button> formantu przy użyciu klucza ramki.</span><span class="sxs-lookup"><span data-stu-id="3b29d-103">This example shows how to animate the Boolean property value of a <xref:System.Windows.Controls.Button> control by using key frames.</span></span>  

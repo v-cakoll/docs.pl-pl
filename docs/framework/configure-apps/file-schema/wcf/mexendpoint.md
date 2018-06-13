@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747788"
 ---
 # <a name="ltmexendpointgt"></a><span data-ttu-id="82a57-102">&lt;mexEndpoint&gt;</span><span class="sxs-lookup"><span data-stu-id="82a57-102">&lt;mexEndpoint&gt;</span></span>
 <span data-ttu-id="82a57-103">Ten element konfiguracji definiuje standardowy punkt końcowy ze stałym kontraktem IMetadataExchange.</span><span class="sxs-lookup"><span data-stu-id="82a57-103">This configuration element defines a standard endpoint with a fixed IMetadataExchange contract.</span></span> <span data-ttu-id="82a57-104">Ponieważ wszystkie punkty końcowe wymiany metadanych określić IMetadataExchange jako umowy, może użyć tego standardowego punktu, zamiast definiować jeden dla siebie.</span><span class="sxs-lookup"><span data-stu-id="82a57-104">Since all metadata exchange endpoints specify IMetadataExchange as their contract, you can use this standard point instead of defining one for yourself.</span></span>  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452546"
 ---
 # <a name="functionenter3withinfo-function"></a><span data-ttu-id="c3967-102">FunctionEnter3WithInfo — Funkcja</span><span class="sxs-lookup"><span data-stu-id="c3967-102">FunctionEnter3WithInfo Function</span></span>
 <span data-ttu-id="c3967-103">Powiadamia profilera, czy formant jest przekazywany do funkcji, a także uchwytu, które mogą zostać przekazane do [ICorProfilerInfo3::GetFunctionEnter3Info — metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) można pobrać argumenty ramki i funkcja stosu.</span><span class="sxs-lookup"><span data-stu-id="c3967-103">Notifies the profiler that control is being passed to a function, and provides a handle that can be passed to the [ICorProfilerInfo3::GetFunctionEnter3Info method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) to retrieve the stack frame and function arguments.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569632"
 ---
 # <a name="post-schema-compilation-infoset"></a><span data-ttu-id="553df-102">Obiekt typu Infoset schematu po kompilacji</span><span class="sxs-lookup"><span data-stu-id="553df-102">Post-Schema Compilation Infoset</span></span>
 <span data-ttu-id="553df-103">[Zalecenie schematu XML w sieci World Wide Web konsorcjum W3C](https://www.w3.org/XML/Schema) omówiono zestaw informacji (obiekt typu infoset) muszą być widoczne dla sprawdzanie poprawności schematu przed i po schematu kompilacji.</span><span class="sxs-lookup"><span data-stu-id="553df-103">The [World Wide Web Consortium (W3C) XML Schema Recommendation](https://www.w3.org/XML/Schema) discusses the information set (infoset) that must be exposed for pre-schema validation and post-schema compilation.</span></span> <span data-ttu-id="553df-104">Model obiektu schematu XML (SOM) widoków tego narażenia przed i po <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> metoda <xref:System.Xml.Schema.XmlSchemaSet> jest wywoływana.</span><span class="sxs-lookup"><span data-stu-id="553df-104">The XML Schema Object Model (SOM) views this exposure before and after the <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> method of the <xref:System.Xml.Schema.XmlSchemaSet> is called.</span></span>  

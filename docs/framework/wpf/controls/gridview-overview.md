@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557685"
 ---
 # <a name="gridview-overview"></a><span data-ttu-id="ca460-102">GridView — Przegląd</span><span class="sxs-lookup"><span data-stu-id="ca460-102">GridView Overview</span></span>
 <span data-ttu-id="ca460-103"><xref:System.Windows.Controls.GridView> tryb wyświetlania jest jeden z trybów wyświetlania dla <xref:System.Windows.Controls.ListView> formantu.</span><span class="sxs-lookup"><span data-stu-id="ca460-103"><xref:System.Windows.Controls.GridView> view mode is one of the view modes for a <xref:System.Windows.Controls.ListView> control.</span></span> <span data-ttu-id="ca460-104"><xref:System.Windows.Controls.GridView> Klasy i jej klas pomocniczych umożliwiają i użytkowników do wyświetlania elementu kolekcji w tabeli, która zwykle używa przycisków jako nagłówków kolumn interaktywnego.</span><span class="sxs-lookup"><span data-stu-id="ca460-104">The <xref:System.Windows.Controls.GridView> class and its supporting classes enable you and your users to view item collections in a table that typically uses buttons as interactive column headers.</span></span> <span data-ttu-id="ca460-105">W tym temacie przedstawiono <xref:System.Windows.Controls.GridView> klasy i omówiono jej użycia.</span><span class="sxs-lookup"><span data-stu-id="ca460-105">This topic introduces the <xref:System.Windows.Controls.GridView> class and outlines its use.</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743332"
 ---
 # <a name="ltauthenticationmodulesgt-element-network-settings"></a><span data-ttu-id="87539-102">&lt;authenticationModules —&gt; — Element (ustawienia sieciowe)</span><span class="sxs-lookup"><span data-stu-id="87539-102">&lt;authenticationModules&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="87539-103">Określa moduły używane do uwierzytelniania żądań sieci.</span><span class="sxs-lookup"><span data-stu-id="87539-103">Specifies modules used to authenticate network requests.</span></span>  

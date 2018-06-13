@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745100"
 ---
 # <a name="startup-settings-schema"></a><span data-ttu-id="d17f7-102">Schemat ustawień uruchamiania</span><span class="sxs-lookup"><span data-stu-id="d17f7-102">Startup Settings Schema</span></span>
 <span data-ttu-id="d17f7-103">Ustawienia uruchamiania Określ wersję środowiska CLR, które należy uruchomić aplikację.</span><span class="sxs-lookup"><span data-stu-id="d17f7-103">Startup settings specify the version of the common language runtime that should run the application.</span></span>  

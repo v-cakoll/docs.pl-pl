@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554888"
 ---
 # <a name="how-to-resize-rows-with-a-gridsplitter"></a><span data-ttu-id="05234-102">Jak zmienić rozmiar wierszy przy użyciu GridSplitter</span><span class="sxs-lookup"><span data-stu-id="05234-102">How to: Resize Rows with a GridSplitter</span></span>
 <span data-ttu-id="05234-103">Ten przykład przedstawia sposób użycia poziomym <xref:System.Windows.Controls.GridSplitter> ponowne przydzielenie miejsca między wierszami w <xref:System.Windows.Controls.Grid> bez zmieniania wymiary <xref:System.Windows.Controls.Grid>.</span><span class="sxs-lookup"><span data-stu-id="05234-103">This example shows how to use a horizontal <xref:System.Windows.Controls.GridSplitter> to redistribute the space between two rows in a <xref:System.Windows.Controls.Grid> without changing the dimensions of the <xref:System.Windows.Controls.Grid>.</span></span>  

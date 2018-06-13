@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555022"
 ---
 # <a name="how-to-create-a-simple-binding"></a><span data-ttu-id="0ef05-102">Jak utworzyć proste powiązanie</span><span class="sxs-lookup"><span data-stu-id="0ef05-102">How to: Create a Simple Binding</span></span>
 <span data-ttu-id="0ef05-103">W tym przykładzie przedstawiono sposób tworzenia prostej <xref:System.Windows.Data.Binding>.</span><span class="sxs-lookup"><span data-stu-id="0ef05-103">This example shows you how to create a simple <xref:System.Windows.Data.Binding>.</span></span>  

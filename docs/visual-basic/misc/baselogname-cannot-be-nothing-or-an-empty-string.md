@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601049"
 ---
 # <a name="baselogname-cannot-be-nothing-or-an-empty-string"></a><span data-ttu-id="f659f-102">BaseLogName nie może mieć wartości Nothing ani ciągiem pustym</span><span class="sxs-lookup"><span data-stu-id="f659f-102">BaseLogName cannot be Nothing or an empty String</span></span>
 <span data-ttu-id="f659f-103">Wartość <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.BaseFileName%2A> właściwość nie może być `Nothing` lub ciąg pusty.</span><span class="sxs-lookup"><span data-stu-id="f659f-103">The value of the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.BaseFileName%2A> property cannot be `Nothing` or an empty string.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564139"
 ---
 # <a name="xmembers-directive"></a><span data-ttu-id="40444-102">x:Members — dyrektywa</span><span class="sxs-lookup"><span data-stu-id="40444-102">x:Members Directive</span></span>
 <span data-ttu-id="40444-103">Zawiera zestaw elementów członkowskich, które są zdefiniowane w znaczniku, które dotyczą x: Class elementu nadrzędnego.</span><span class="sxs-lookup"><span data-stu-id="40444-103">Holds a set of members that are defined in markup, which apply to the x:Class of the parent element.</span></span>  

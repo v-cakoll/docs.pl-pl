@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386369"
 ---
 # <a name="reportavoncomrelease-mda"></a><span data-ttu-id="3db78-102">reportAvOnComRelease MDA</span><span class="sxs-lookup"><span data-stu-id="3db78-102">reportAvOnComRelease MDA</span></span>
 <span data-ttu-id="3db78-103">`reportAvOnComRelease` Zarządzany Asystent debugowania (MDA) jest aktywowany, gdy istnieją wyjątki zgłaszane z powodu użytkownika zliczanie błędów podczas wykonywania COM interop i użycie <xref:System.Runtime.InteropServices.Marshal.Release%2A> lub <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> metody połączone z pierwotnych wywołania COM.</span><span class="sxs-lookup"><span data-stu-id="3db78-103">The `reportAvOnComRelease` managed debugging assistant (MDA) is activated when exceptions are thrown due to user reference counting errors while performing COM interop and using the <xref:System.Runtime.InteropServices.Marshal.Release%2A> or <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> method combined with raw COM calls.</span></span>  

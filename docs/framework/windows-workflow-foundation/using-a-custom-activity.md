@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515513"
 ---
 # <a name="using-a-custom-activity"></a><span data-ttu-id="1faa1-102">Przy użyciu działań niestandardowych</span><span class="sxs-lookup"><span data-stu-id="1faa1-102">Using a custom activity</span></span>
 <span data-ttu-id="1faa1-103">Działania, które pochodzą z <xref:System.Activities.Activity> ani jej podklasy mogą być składane do większych przepływy pracy lub tworzone bezpośrednio w kodzie.</span><span class="sxs-lookup"><span data-stu-id="1faa1-103">Activities that derive from <xref:System.Activities.Activity> or its subclasses can be composed into larger workflows, or created directly in code.</span></span> <span data-ttu-id="1faa1-104">W tym temacie opisano sposób używania działań niestandardowych w przepływach pracy utworzone w kodzie lub w projektancie.</span><span class="sxs-lookup"><span data-stu-id="1faa1-104">This topic describes how to use custom activities in workflows created either in code or in the designer.</span></span>  

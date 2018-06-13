@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746826"
 ---
 # <a name="ltmtommessageencodinggt"></a><span data-ttu-id="defe4-102">&lt;mtomMessageEncoding&gt;</span><span class="sxs-lookup"><span data-stu-id="defe4-102">&lt;mtomMessageEncoding&gt;</span></span>
 <span data-ttu-id="defe4-103">Określa kodowanie i wersjonowanie wiadomości używanych dla wiadomości protokołu SOAP wiadomości transmisji optymalizacji mechanizmu (MTOM) na podstawie.</span><span class="sxs-lookup"><span data-stu-id="defe4-103">Specifies the encoding and message versioning used for SOAP Message Transmission Optimization Mechanism (MTOM) based messages.</span></span>  

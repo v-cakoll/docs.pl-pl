@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558160"
 ---
 # <a name="pack-uris-in-wpf"></a><span data-ttu-id="c8b4f-102">Pakuj URI w WPF</span><span class="sxs-lookup"><span data-stu-id="c8b4f-102">Pack URIs in WPF</span></span>
 <span data-ttu-id="c8b4f-103">W konsoli Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] są używane do identyfikowania i ładować pliki na wiele sposobów, w tym następujące:</span><span class="sxs-lookup"><span data-stu-id="c8b4f-103">In Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] are used to identify and load files in many ways, including the following:</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520516"
 ---
 # <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a><span data-ttu-id="8c0f5-102">Wskazówki: tworzenie aplikacji usługowej systemu Windows w Projektancie składników</span><span class="sxs-lookup"><span data-stu-id="8c0f5-102">Walkthrough: Creating a Windows Service Application in the Component Designer</span></span>
 <span data-ttu-id="8c0f5-103">W tym artykule pokazano, jak utworzyć prostą aplikację usługi systemu Windows w programie Visual Studio, który zapisuje komunikaty do dziennika zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="8c0f5-103">This article demonstrates how to create a simple Windows Service application in Visual Studio that writes messages to an event log.</span></span> <span data-ttu-id="8c0f5-104">Poniżej przedstawiono podstawowe kroki, które należy wykonać w celu tworzenia i używania usługi:</span><span class="sxs-lookup"><span data-stu-id="8c0f5-104">Here are the basic steps that you perform to create and use your service:</span></span>  

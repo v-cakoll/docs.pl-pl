@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563587"
 ---
 # <a name="generics-in-xaml"></a><span data-ttu-id="0b255-102">Typy ogólne w XAML</span><span class="sxs-lookup"><span data-stu-id="0b255-102">Generics in XAML</span></span>
 <span data-ttu-id="0b255-103">.NET Framework XAML usług zgodnie z implementacją w System.Xaml zapewnia obsługę przy użyciu ogólnych typów CLR.</span><span class="sxs-lookup"><span data-stu-id="0b255-103">The .NET Framework XAML Services as implemented in System.Xaml provides support for using generic CLR types.</span></span> <span data-ttu-id="0b255-104">Ta obsługa obejmuje określenie ograniczenia ogólne jako argumentu typu i wymuszanie ograniczenia wywołując odpowiednie `Add` metody w przypadku kolekcji ogólnej.</span><span class="sxs-lookup"><span data-stu-id="0b255-104">This support includes specifying the constraints of generics as a type argument and enforcing the constraint by calling the appropriate `Add` method for generic collection cases.</span></span> <span data-ttu-id="0b255-105">W tym temacie opisano aspekty przy użyciu i odwołuje się do typów ogólnych w języku XAML.</span><span class="sxs-lookup"><span data-stu-id="0b255-105">This topic describes aspects of using and referencing generic types in XAML.</span></span>  

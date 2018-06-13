@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450986"
 ---
 # <a name="icorprofilercallbackexceptionsearchfilterenter-method"></a><span data-ttu-id="ec120-102">ICorProfilerCallback::ExceptionSearchFilterEnter — Metoda</span><span class="sxs-lookup"><span data-stu-id="ec120-102">ICorProfilerCallback::ExceptionSearchFilterEnter Method</span></span>
 <span data-ttu-id="ec120-103">Powiadamia profilera fazy wyszukiwania obsługi wyjątków zostało uruchomione, wykonywanie filtru wyjątków zdefiniowanych przez użytkownika.</span><span class="sxs-lookup"><span data-stu-id="ec120-103">Notifies the profiler that the search phase of exception handling has begun executing a user-defined exception filter.</span></span>  

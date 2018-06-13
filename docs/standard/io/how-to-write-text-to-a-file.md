@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577128"
 ---
 # <a name="how-to-write-text-to-a-file"></a><span data-ttu-id="14533-102">Porady: wpisywanie tekstu do pliku</span><span class="sxs-lookup"><span data-stu-id="14533-102">How to: Write Text to a File</span></span>
 <span data-ttu-id="14533-103">Ten temat przedstawia różne sposoby tekst może zapisywać do pliku dla aplikacji .NET Framework lub [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji.</span><span class="sxs-lookup"><span data-stu-id="14533-103">This topic shows different ways you can write text to a file for .NET Framework applications or [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] apps.</span></span> <span data-ttu-id="14533-104">Następujące klasy i metody są zwykle używane do zapisywanie tekstu do pliku:</span><span class="sxs-lookup"><span data-stu-id="14533-104">The following classes and methods are typically used to write text to a file:</span></span>  

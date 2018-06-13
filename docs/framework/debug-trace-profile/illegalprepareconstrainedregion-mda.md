@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386356"
 ---
 # <a name="illegalprepareconstrainedregion-mda"></a><span data-ttu-id="75c8e-102">illegalPrepareConstrainedRegion MDA</span><span class="sxs-lookup"><span data-stu-id="75c8e-102">illegalPrepareConstrainedRegion MDA</span></span>
 <span data-ttu-id="75c8e-103">`illegalPrepareConstrainedRegion` Zarządzany Asystent debugowania (MDA) została aktywowana po <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> wywołanie metody nie bezpośrednio poprzedza `try` instrukcji obsługi wyjątków.</span><span class="sxs-lookup"><span data-stu-id="75c8e-103">The `illegalPrepareConstrainedRegion` managed debugging assistant (MDA) is activated when a <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> method call does not immediately precede the `try` statement of the exception handler.</span></span> <span data-ttu-id="75c8e-104">To ograniczenie jest na MSIL poziomu, więc jest dozwolone ma generowanie kodu źródłowego między wywołania i `try`, takich jak komentarze.</span><span class="sxs-lookup"><span data-stu-id="75c8e-104">This restriction is at the MSIL level, so it is permissible to have non-code-generating source between the call and the `try`, such as comments.</span></span>  

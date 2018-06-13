@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568033"
 ---
 # <a name="parsing-other-strings-in-net"></a><span data-ttu-id="37a05-102">Analizowanie innych ciągów w .NET</span><span class="sxs-lookup"><span data-stu-id="37a05-102">Parsing Other Strings in .NET</span></span>
 <span data-ttu-id="37a05-103">Oprócz numeryczne i <xref:System.DateTime> ciągi, możesz również przeanalizować ciągów, które reprezentują typy <xref:System.Char>, <xref:System.Boolean>, i <xref:System.Enum> do typów danych.</span><span class="sxs-lookup"><span data-stu-id="37a05-103">In addition to numeric and <xref:System.DateTime> strings, you can also parse strings that represent the types <xref:System.Char>, <xref:System.Boolean>, and <xref:System.Enum> into data types.</span></span>  

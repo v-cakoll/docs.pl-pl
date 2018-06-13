@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748575"
 ---
 # <a name="ltissuergt-of-ltissuedtokenparametersgt"></a><span data-ttu-id="c3595-102">&lt;issuer&gt; w &lt;issuedTokenParameters&gt;</span><span class="sxs-lookup"><span data-stu-id="c3595-102">&lt;issuer&gt; of &lt;issuedTokenParameters&gt;</span></span>
 <span data-ttu-id="c3595-103">Określa zabezpieczeń tokenu usługi (STS), która wystawia tokeny zabezpieczające.</span><span class="sxs-lookup"><span data-stu-id="c3595-103">Specifies the Security Token Service (STS) that issues security tokens.</span></span>  

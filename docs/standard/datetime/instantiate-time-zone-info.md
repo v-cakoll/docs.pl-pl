@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572050"
 ---
 # <a name="how-to-instantiate-a-timezoneinfo-object"></a><span data-ttu-id="c90b4-102">Porady: Tworzenie wystąpień obiektów TimeZoneInfo</span><span class="sxs-lookup"><span data-stu-id="c90b4-102">How to: Instantiate a TimeZoneInfo object</span></span>
 

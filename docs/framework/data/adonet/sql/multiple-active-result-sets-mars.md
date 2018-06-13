@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358432"
 ---
 # <a name="multiple-active-result-sets-mars"></a><span data-ttu-id="ee4ed-102">Wielu aktywnych zestawów wyników (MARS)</span><span class="sxs-lookup"><span data-stu-id="ee4ed-102">Multiple Active Result Sets (MARS)</span></span>
 <span data-ttu-id="ee4ed-103">Wiele aktywnych zestawów wyników (MARS) to funkcja umożliwiająca wykonywanie wielu instancji na jedno połączenie.</span><span class="sxs-lookup"><span data-stu-id="ee4ed-103">Multiple Active Result Sets (MARS) is a feature that allows the execution of multiple batches on a single connection.</span></span> <span data-ttu-id="ee4ed-104">W poprzednich wersjach tylko jedno zadanie wsadowe może zostać wykonany w czasie przed jednego połączenia.</span><span class="sxs-lookup"><span data-stu-id="ee4ed-104">In previous versions, only one batch could be executed at a time against a single connection.</span></span> <span data-ttu-id="ee4ed-105">Wykonywanie wielu instancji z MARS nie oznacza jednoczesne wykonywanie operacji.</span><span class="sxs-lookup"><span data-stu-id="ee4ed-105">Executing multiple batches with MARS does not imply simultaneous execution of operations.</span></span>  

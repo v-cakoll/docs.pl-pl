@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269283"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="1e79f-102">= — Operator (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="1e79f-102">= Operator (C# Reference)</span></span>
 <span data-ttu-id="1e79f-103">Operator przypisania (`=`) przechowuje wartość swojego prawostronnego argumentu operacji w lokalizacji przechowywania, właściwości lub indeksatorze wskazywanym przez jego lewostronny argument, a następnie zwraca wartość jako wynik.</span><span class="sxs-lookup"><span data-stu-id="1e79f-103">The assignment operator (`=`) stores the value of its right-hand operand in the storage location, property, or indexer denoted by its left-hand operand and returns the value as its result.</span></span> <span data-ttu-id="1e79f-104">Argumenty operacji muszą być tego samego typu (lub prawostronny argument operacji musi umożliwiać konwersję na typ argumentu lewostronnego).</span><span class="sxs-lookup"><span data-stu-id="1e79f-104">The operands must be of the same type (or the right-hand operand must be implicitly convertible to the type of the left-hand operand).</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533760"
 ---
 # <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a><span data-ttu-id="08063-102">Porady: odtwarzanie dźwięku w pętli w formularzu systemu Windows</span><span class="sxs-lookup"><span data-stu-id="08063-102">How to: Loop a Sound Playing on a Windows Form</span></span>
 <span data-ttu-id="08063-103">Poniższy przykład kodu odtwarza dźwięk wielokrotnie.</span><span class="sxs-lookup"><span data-stu-id="08063-103">The following code example plays a sound repeatedly.</span></span> <span data-ttu-id="08063-104">Gdy kod w `stopPlayingButton_Click` uruchamia program obsługi zdarzeń, wszystkie obecnie odtwarzanie zatrzymuje dźwięku.</span><span class="sxs-lookup"><span data-stu-id="08063-104">When the code in the `stopPlayingButton_Click` event handler runs, any sound currently playing stops.</span></span> <span data-ttu-id="08063-105">Jeśli żaden dźwięk jest odtwarzany, nic się nie dzieje.</span><span class="sxs-lookup"><span data-stu-id="08063-105">If no sound is playing, nothing happens.</span></span>  

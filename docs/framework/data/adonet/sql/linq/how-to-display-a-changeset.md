@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359988"
 ---
 # <a name="how-to-display-a-changeset"></a><span data-ttu-id="678fc-102">Porady: wyświetlanie grupy zmian</span><span class="sxs-lookup"><span data-stu-id="678fc-102">How to: Display a ChangeSet</span></span>
 <span data-ttu-id="678fc-103">Zmiany śledzone przez można wyświetlić <xref:System.Data.Linq.DataContext> przy użyciu <xref:System.Data.Linq.DataContext.GetChangeSet%2A>.</span><span class="sxs-lookup"><span data-stu-id="678fc-103">You can view changes tracked by a <xref:System.Data.Linq.DataContext> by using <xref:System.Data.Linq.DataContext.GetChangeSet%2A>.</span></span>  

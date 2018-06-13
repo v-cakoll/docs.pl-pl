@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529847"
 ---
 # <a name="customizing-the-windows-forms-datagridview-control"></a><span data-ttu-id="2a51d-102">Dostosowywanie formantu DataGridView formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="2a51d-102">Customizing the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="2a51d-103">`DataGridView` Kontrola zapewnia kilka właściwości, które można dostosować wygląd i zachowanie podstawowe (wyglądu i działania), jego komórek, wierszy i kolumn.</span><span class="sxs-lookup"><span data-stu-id="2a51d-103">The `DataGridView` control provides several properties that you can use to adjust the appearance and basic behavior (look and feel) of its cells, rows, and columns.</span></span> <span data-ttu-id="2a51d-104">Jeśli masz specjalnymi potrzebami, które wykraczają poza możliwości <xref:System.Windows.Forms.DataGridViewCellStyle> klasy, jednak można zaimplementować rysowanie formantu przez właściciela lub rozszerzyć jej możliwości, tworząc niestandardowe komórek, kolumn i wierszy.</span><span class="sxs-lookup"><span data-stu-id="2a51d-104">If you have special needs that go beyond the capabilities of the <xref:System.Windows.Forms.DataGridViewCellStyle> class, however, you can also implement owner drawing for the control or extend its capabilities by creating custom cells, columns, and rows.</span></span>  

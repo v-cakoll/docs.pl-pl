@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354384"
 ---
 # <a name="how-to-retrieve-member-conflict-information"></a><span data-ttu-id="2a0af-102">Porady: pobieranie informacji konflikt elementu członkowskiego</span><span class="sxs-lookup"><span data-stu-id="2a0af-102">How to: Retrieve Member Conflict Information</span></span>
 <span data-ttu-id="2a0af-103">Można użyć <xref:System.Data.Linq.MemberChangeConflict> klasy można pobrać informacji o poszczególnych elementów w konflikt.</span><span class="sxs-lookup"><span data-stu-id="2a0af-103">You can use the <xref:System.Data.Linq.MemberChangeConflict> class to retrieve information about individual members in conflict.</span></span> <span data-ttu-id="2a0af-104">W tym samym kontekście można zapewnić niestandardową obsługę konfliktu dla dowolnego elementu członkowskiego.</span><span class="sxs-lookup"><span data-stu-id="2a0af-104">In this same context you can provide for custom handling of the conflict for any member.</span></span> <span data-ttu-id="2a0af-105">Aby uzyskać więcej informacji, zobacz [optymistycznej współbieżności: omówienie](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).</span><span class="sxs-lookup"><span data-stu-id="2a0af-105">For more information, see [Optimistic Concurrency: Overview](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).</span></span>  

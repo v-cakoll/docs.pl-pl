@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357260"
 ---
 # <a name="schema-restrictions"></a><span data-ttu-id="9ca10-102">Ograniczenia schematu</span><span class="sxs-lookup"><span data-stu-id="9ca10-102">Schema Restrictions</span></span>
 <span data-ttu-id="9ca10-103">Drugi parametr opcjonalny **GetSchema** metoda jest zwracane ograniczenia, które są używane w celu ograniczenia ilości informacji o schemacie, a jest przekazywana do **GetSchema** metodę jako tablica ciągów .</span><span class="sxs-lookup"><span data-stu-id="9ca10-103">The second optional parameter of the **GetSchema** method is the restrictions that are used to limit the amount of schema information returned, and it is passed to the **GetSchema** method as an array of strings.</span></span> <span data-ttu-id="9ca10-104">Pozycja w tablicy określa wartości, które mogą upłynąć, a jest to równoważne numer ograniczeń.</span><span class="sxs-lookup"><span data-stu-id="9ca10-104">The position in the array determines the values that you can pass, and this is equivalent to the restriction number.</span></span>  

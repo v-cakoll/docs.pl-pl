@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565561"
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a><span data-ttu-id="2d965-103">Rozpoczynanie pracy z F # w programie Visual Studio dla komputerów Mac</span><span class="sxs-lookup"><span data-stu-id="2d965-103">Get started with F# in Visual Studio for Mac</span></span>
 

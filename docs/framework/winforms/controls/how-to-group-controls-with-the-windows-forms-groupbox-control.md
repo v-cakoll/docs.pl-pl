@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531927"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a><span data-ttu-id="8c708-102">Porady: grupowanie formantów za pomocą formantu GroupBox formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="8c708-102">How to: Group Controls with the Windows Forms GroupBox Control</span></span>
 <span data-ttu-id="8c708-103">Formularze systemu Windows <xref:System.Windows.Forms.GroupBox> formanty są używane do grupowania inne formanty.</span><span class="sxs-lookup"><span data-stu-id="8c708-103">Windows Forms <xref:System.Windows.Forms.GroupBox> controls are used to group other controls.</span></span> <span data-ttu-id="8c708-104">Istnieją trzy powodów Grupowanie formantów:</span><span class="sxs-lookup"><span data-stu-id="8c708-104">There are three reasons to group controls:</span></span>  

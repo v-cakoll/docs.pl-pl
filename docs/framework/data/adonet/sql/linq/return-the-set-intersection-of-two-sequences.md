@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358787"
 ---
 # <a name="return-the-set-intersection-of-two-sequences"></a><span data-ttu-id="79bdc-102">Zwraca część wspólną dwóch sekwencji zestawu</span><span class="sxs-lookup"><span data-stu-id="79bdc-102">Return the Set Intersection of Two Sequences</span></span>
 <span data-ttu-id="79bdc-103">Użyj <xref:System.Linq.Queryable.Intersect%2A> operatora, aby zwrócić zestaw część wspólną dwóch sekwencji.</span><span class="sxs-lookup"><span data-stu-id="79bdc-103">Use the <xref:System.Linq.Queryable.Intersect%2A> operator to return the set intersection of two sequences.</span></span>  

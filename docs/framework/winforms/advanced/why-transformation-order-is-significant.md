@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526080"
 ---
 # <a name="why-transformation-order-is-significant"></a><span data-ttu-id="a3f12-102">Dlaczego kolejność przekształcania jest ważna</span><span class="sxs-lookup"><span data-stu-id="a3f12-102">Why Transformation Order Is Significant</span></span>
 <span data-ttu-id="a3f12-103">Pojedynczy <xref:System.Drawing.Drawing2D.Matrix> obiektu można przechowywać pojedyncze przekształcenie lub sekwencję transformacji.</span><span class="sxs-lookup"><span data-stu-id="a3f12-103">A single <xref:System.Drawing.Drawing2D.Matrix> object can store a single transformation or a sequence of transformations.</span></span> <span data-ttu-id="a3f12-104">Drugie jest nazywany złożone przekształcenia.</span><span class="sxs-lookup"><span data-stu-id="a3f12-104">The latter is called a composite transformation.</span></span> <span data-ttu-id="a3f12-105">Macierzy transformacji złożonego mnożąc macierzy transformacji indywidualnych.</span><span class="sxs-lookup"><span data-stu-id="a3f12-105">The matrix of a composite transformation is obtained by multiplying the matrices of individual transformations.</span></span>  

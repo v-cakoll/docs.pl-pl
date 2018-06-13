@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340115"
 ---
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-c"></a><span data-ttu-id="81c89-102">Samouczek: Manipulowanie zawartości w dokumencie schemat WordprocessingML (C#)</span><span class="sxs-lookup"><span data-stu-id="81c89-102">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>
 <span data-ttu-id="81c89-103">Ten samouczek pokazuje, jak zastosować podejście transformational funkcjonalności i LINQ do XML do manipulowania dokumentów XML.</span><span class="sxs-lookup"><span data-stu-id="81c89-103">This tutorial shows how to apply the functional transformational approach and LINQ to XML to manipulate XML documents.</span></span> <span data-ttu-id="81c89-104">Przykłady C# zapytania i modyfikowania informacji w dokumentach schemat WordprocessingML Office Open XML, które są zapisane w programie Microsoft Word.</span><span class="sxs-lookup"><span data-stu-id="81c89-104">The C# examples query and manipulate information in Office Open XML WordprocessingML documents that are saved by Microsoft Word.</span></span>  

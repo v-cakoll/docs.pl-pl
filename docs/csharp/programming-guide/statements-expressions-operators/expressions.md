@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339660"
 ---
 # <a name="expressions-c-programming-guide"></a><span data-ttu-id="516f1-102">Wyrażenia (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="516f1-102">Expressions (C# Programming Guide)</span></span>
 <span data-ttu-id="516f1-103">*Wyrażenie* Sekwencja zero lub więcej operatorów, które może przyjąć pojedynczą wartość, obiekt, metodę lub przestrzeń nazw i jeden lub więcej argumentów operacji.</span><span class="sxs-lookup"><span data-stu-id="516f1-103">An *expression* is a sequence of one or more operands and zero or more operators that can be evaluated to a single value, object, method, or namespace.</span></span> <span data-ttu-id="516f1-104">Wartość literału, wywołania metody, operator i argumentów, może zawierać wyrażenia lub *prosta nazwa*.</span><span class="sxs-lookup"><span data-stu-id="516f1-104">Expressions can consist of a literal value, a method invocation, an operator and its operands, or a *simple name*.</span></span> <span data-ttu-id="516f1-105">Proste nazwy mogą być nazwę zmiennej, członka typu, parametru metody, przestrzeni nazw lub typu.</span><span class="sxs-lookup"><span data-stu-id="516f1-105">Simple names can be the name of a variable, type member, method parameter, namespace or type.</span></span>  

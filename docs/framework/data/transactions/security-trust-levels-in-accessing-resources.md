@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357598"
 ---
 # <a name="security-trust-levels-in-accessing-resources"></a><span data-ttu-id="1da90-102">Poziomy zaufania zabezpieczeń podczas uzyskiwania dostępu do zasobów</span><span class="sxs-lookup"><span data-stu-id="1da90-102">Security Trust Levels in Accessing Resources</span></span>
 <span data-ttu-id="1da90-103">W tym temacie opisano, jak dostęp jest ograniczony do typów zasobów, które <xref:System.Transactions> przedstawia.</span><span class="sxs-lookup"><span data-stu-id="1da90-103">This topic discusses how access is restricted on the types of resources that <xref:System.Transactions> exposes.</span></span>  

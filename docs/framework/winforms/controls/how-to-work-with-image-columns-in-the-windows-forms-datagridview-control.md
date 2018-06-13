@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532775"
 ---
 # <a name="how-to-work-with-image-columns-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="5d7f3-102">Porady: praca z kolumnami obrazów w formancie DataGridView formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="5d7f3-102">How to: Work with Image Columns in the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="5d7f3-103">Poniższy przykładowy kod przedstawia sposób użycia <xref:System.Windows.Forms.DataGridView> obrazu kolumn w interaktywnego interfejsu użytkownika (UI).</span><span class="sxs-lookup"><span data-stu-id="5d7f3-103">The following code example shows how to use the <xref:System.Windows.Forms.DataGridView> image columns in an interactive user interface (UI).</span></span> <span data-ttu-id="5d7f3-104">W przykładzie pokazano również możliwości zmiany rozmiaru i Układ obrazu z <xref:System.Windows.Forms.DataGridViewImageColumn>.</span><span class="sxs-lookup"><span data-stu-id="5d7f3-104">The example also demonstrates image sizing and layout possibilities with the <xref:System.Windows.Forms.DataGridViewImageColumn>.</span></span>  

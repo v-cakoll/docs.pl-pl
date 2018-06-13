@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359666"
 ---
 # <a name="sql-clr-custom-type-mappings"></a><span data-ttu-id="6c954-102">Mapowanie niestandardowego typu SQL CLR</span><span class="sxs-lookup"><span data-stu-id="6c954-102">SQL-CLR Custom Type Mappings</span></span>
 <span data-ttu-id="6c954-103">Automatycznie określono typ mapowania między serwerem SQL i środowisko uruchomieniowe języka wspólnego (CLR), korzystając z narzędzia wiersza polecenia SQLMetal Projektant obiektów relacyjnych (Projektanta obiektów relacyjnych).</span><span class="sxs-lookup"><span data-stu-id="6c954-103">Type mapping between SQL Server and the common language runtime (CLR) is automatically specified when you use the SQLMetal command-line tool, Object Relational Designer (O/R Designer).</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358628"
 ---
 # <a name="query-expression-syntax-examples-partitioning-linq-to-dataset"></a><span data-ttu-id="b5a0e-102">Przykłady składni wyrażeń zapytania: Partycjonowanie (LINQ do DataSet)</span><span class="sxs-lookup"><span data-stu-id="b5a0e-102">Query Expression Syntax Examples: Partitioning (LINQ to DataSet)</span></span>
 <span data-ttu-id="b5a0e-103">Przykłady w tym temacie przedstawiają sposób użycia <xref:System.Linq.Enumerable.Skip%2A> i <xref:System.Linq.Enumerable.Take%2A> metod do badania <xref:System.Data.DataSet> przy użyciu składni wyrażenia zapytania.</span><span class="sxs-lookup"><span data-stu-id="b5a0e-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.Skip%2A> and <xref:System.Linq.Enumerable.Take%2A> methods to query a <xref:System.Data.DataSet> using the query expression syntax.</span></span>  

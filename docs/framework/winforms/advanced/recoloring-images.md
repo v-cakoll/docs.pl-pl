@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525957"
 ---
 # <a name="recoloring-images"></a><span data-ttu-id="85d29-102">Ponowne kolorowanie obrazów</span><span class="sxs-lookup"><span data-stu-id="85d29-102">Recoloring Images</span></span>
 <span data-ttu-id="85d29-103">Ponowne kolorowanie to proces dostosowywanie kolorów obrazu.</span><span class="sxs-lookup"><span data-stu-id="85d29-103">Recoloring is the process of adjusting image colors.</span></span> <span data-ttu-id="85d29-104">Ponowne kolorowanie przykłady są zmiana koloru jednego innego, dostosowywania intensywność koloru względem innym kolorze dostosowywania jasności lub kontrastu wszystkie kolory i konwersji kolorów do odcieni szarości.</span><span class="sxs-lookup"><span data-stu-id="85d29-104">Some examples of recoloring are changing one color to another, adjusting a color's intensity relative to another color, adjusting the brightness or contrast of all colors, and converting colors to shades of gray.</span></span>  

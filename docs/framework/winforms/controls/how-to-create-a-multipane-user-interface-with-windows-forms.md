@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532086"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a><span data-ttu-id="2ac6f-102">Porady: tworzenie złożonego interfejsu użytkownika z formularzami Windows</span><span class="sxs-lookup"><span data-stu-id="2ac6f-102">How to: Create a Multipane User Interface with Windows Forms</span></span>
 <span data-ttu-id="2ac6f-103">W poniższej procedurze utworzysz złożonego interfejsu użytkownika podobny do tego używanego w programie Microsoft Outlook z **folderu** listy **wiadomości** okienku i **wwersjizapoznawczej** okienka.</span><span class="sxs-lookup"><span data-stu-id="2ac6f-103">In the following procedure, you will create a multipane user interface that is similar to the one used in Microsoft Outlook, with a **Folder** list, a **Messages** pane, and a **Preview** pane.</span></span> <span data-ttu-id="2ac6f-104">To rozmieszczenie odbywa się głównie za pośrednictwem dokowanie formantów w formularzu.</span><span class="sxs-lookup"><span data-stu-id="2ac6f-104">This arrangement is achieved chiefly through docking controls with the form.</span></span>  

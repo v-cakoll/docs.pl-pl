@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442036"
 ---
 # <a name="ihostthreadpoolmanagersetmaxthreads-method"></a><span data-ttu-id="41f88-102">IHostThreadPoolManager::SetMaxThreads — Metoda</span><span class="sxs-lookup"><span data-stu-id="41f88-102">IHostThreadPoolManager::SetMaxThreads Method</span></span>
 <span data-ttu-id="41f88-103">Ustawia maksymalną liczbę wątków, które host może przechowywać w puli wątków.</span><span class="sxs-lookup"><span data-stu-id="41f88-103">Sets the maximum number of threads that the host can maintain in the thread pool.</span></span>  

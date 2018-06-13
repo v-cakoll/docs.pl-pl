@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531300"
 ---
 # <a name="how-to-implement-a-custom-layout-engine"></a><span data-ttu-id="3f6b5-102">Porady: implementowanie aparatu niestandardowego układu</span><span class="sxs-lookup"><span data-stu-id="3f6b5-102">How to: Implement a Custom Layout Engine</span></span>
 <span data-ttu-id="3f6b5-103">Poniższy przykładowy kod przedstawia sposób tworzenia aparatu niestandardowego układu, który wykonuje układ prosty przepływu.</span><span class="sxs-lookup"><span data-stu-id="3f6b5-103">The following code example demonstrates how to create a custom layout engine that performs a simple flow layout.</span></span> <span data-ttu-id="3f6b5-104">Implementuje kontrolki panelu o nazwie `DemoFlowPanel`, co zastępuje <xref:System.Windows.Forms.Control.LayoutEngine%2A> właściwość, aby zapewnić wystąpienie `DemoFlowLayout` klasy.</span><span class="sxs-lookup"><span data-stu-id="3f6b5-104">It implements a panel control named `DemoFlowPanel`, which overrides the <xref:System.Windows.Forms.Control.LayoutEngine%2A> property to provide an instance of the `DemoFlowLayout` class.</span></span>  

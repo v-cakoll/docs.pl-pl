@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565692"
 ---
 # <a name="path-animations-overview"></a><span data-ttu-id="aa32c-102">Przegląd Animacja ścieżki</span><span class="sxs-lookup"><span data-stu-id="aa32c-102">Path Animations Overview</span></span>
 <a name="introduction"></a> <span data-ttu-id="aa32c-103">W tym temacie przedstawiono animacje ścieżki, które umożliwiają korzystanie geometrycznych ścieżki do generowania wartości danych wyjściowych.</span><span class="sxs-lookup"><span data-stu-id="aa32c-103">This topic introduces path animations, which enable you to use a geometric path to generate output values.</span></span> <span data-ttu-id="aa32c-104">Ścieżka animacje są przydatne w przypadku przenoszenia i obracanie obiektów wzdłuż ścieżki złożone.</span><span class="sxs-lookup"><span data-stu-id="aa32c-104">Path animations are useful for moving and rotating objects along complex paths.</span></span>  

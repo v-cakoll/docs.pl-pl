@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362224"
 ---
 # <a name="learning-by-walkthroughs"></a><span data-ttu-id="ecf51-102">Learning przez — wskazówki</span><span class="sxs-lookup"><span data-stu-id="ecf51-102">Learning by Walkthroughs</span></span>
 <span data-ttu-id="ecf51-103">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Dokumentacja zawiera wskazówki dotyczące kilku.</span><span class="sxs-lookup"><span data-stu-id="ecf51-103">The [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation provides several walkthroughs.</span></span> <span data-ttu-id="ecf51-104">W tym temacie rozwiązuje problemy ogólne wskazówki (w tym Rozwiązywanie problemów) oraz linki do kilku klasy podstawowej wskazówki szkoleniowe dotyczące [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ecf51-104">This topic addresses some general walkthrough issues (including troubleshooting), and provides links to several entry-level walkthroughs for learning about [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>  

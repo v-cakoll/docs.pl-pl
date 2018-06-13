@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360455"
 ---
 # <a name="how-to-delete-rows-from-the-database"></a><span data-ttu-id="1eeb8-102">Porady: usuwanie wierszy z bazy danych</span><span class="sxs-lookup"><span data-stu-id="1eeb8-102">How to: Delete Rows From the Database</span></span>
 <span data-ttu-id="1eeb8-103">Można usunąć wierszy w bazie danych przez usunięcie odpowiadającego [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obiektów z kolekcji ich związanych z tabeli.</span><span class="sxs-lookup"><span data-stu-id="1eeb8-103">You can delete rows in a database by removing the corresponding [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] objects from their table-related collection.</span></span> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="1eeb8-104"> tłumaczy zmiany, aby odpowiednie SQL `DELETE` poleceń.</span><span class="sxs-lookup"><span data-stu-id="1eeb8-104"> translates your changes to the appropriate SQL `DELETE` commands.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363803"
 ---
 # <a name="interceptors-wcf-data-services"></a><span data-ttu-id="71b84-102">Interceptory (usługi danych WCF)</span><span class="sxs-lookup"><span data-stu-id="71b84-102">Interceptors (WCF Data Services)</span></span>
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="71b84-103"> umożliwia aplikacji przechwycić komunikaty żądania, aby mogli dodawać niestandardowej logiki do operacji.</span><span class="sxs-lookup"><span data-stu-id="71b84-103"> enables an application to intercept request messages so that you can add custom logic to an operation.</span></span> <span data-ttu-id="71b84-104">Można użyć tej niestandardowej logiki do sprawdzania poprawności danych w komunikatach przychodzących.</span><span class="sxs-lookup"><span data-stu-id="71b84-104">You can use this custom logic to validate data in incoming messages.</span></span> <span data-ttu-id="71b84-105">Można również użyć bardziej ograniczyć zakres żądania zapytania, takie jak, aby wstawić niestandardowych zasad autoryzacji na podstawie danego żądania.</span><span class="sxs-lookup"><span data-stu-id="71b84-105">You can also use it to further restrict the scope of a query request, such as to insert a custom authorization policy on a per request basis.</span></span>  

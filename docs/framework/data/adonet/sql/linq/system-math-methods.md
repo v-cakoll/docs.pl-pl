@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357119"
 ---
 # <a name="systemmath-methods"></a><span data-ttu-id="5d3ff-102">Metody System.Math</span><span class="sxs-lookup"><span data-stu-id="5d3ff-102">System.Math Methods</span></span>
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="5d3ff-103"> nie obsługuje następujących <xref:System.Math> metody.</span><span class="sxs-lookup"><span data-stu-id="5d3ff-103"> does not support the following <xref:System.Math> methods.</span></span>  

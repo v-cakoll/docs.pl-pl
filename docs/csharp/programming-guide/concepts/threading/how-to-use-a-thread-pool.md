@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340479"
 ---
 # <a name="how-to-use-a-thread-pool-c"></a><span data-ttu-id="4e944-102">Porady: Korzystanie z puli wątków (C#)</span><span class="sxs-lookup"><span data-stu-id="4e944-102">How to: Use a Thread Pool (C#)</span></span>
 <span data-ttu-id="4e944-103">*Pula wątków* jest formą wielowątkowości w zadania, które są dodawane do kolejki i uruchamiane automatycznie podczas tworzenia wątków.</span><span class="sxs-lookup"><span data-stu-id="4e944-103">*Thread pooling* is a form of multithreading in which tasks are added to a queue and automatically started when threads are created.</span></span> <span data-ttu-id="4e944-104">Aby uzyskać więcej informacji, zobacz [puli wątków (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md).</span><span class="sxs-lookup"><span data-stu-id="4e944-104">For more information, see [Thread Pooling (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md).</span></span>  

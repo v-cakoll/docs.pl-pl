@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275704"
 ---
 # <a name="query-keywords-c-reference"></a><span data-ttu-id="6849c-102">Słowa kluczowe zapytania (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="6849c-102">Query Keywords (C# Reference)</span></span>
 <span data-ttu-id="6849c-103">Ta sekcja zawiera kontekstowe słowa kluczowe, używać w wyrażeniach zapytań.</span><span class="sxs-lookup"><span data-stu-id="6849c-103">This section contains the contextual keywords used in query expressions.</span></span>  

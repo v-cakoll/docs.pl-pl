@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436640"
 ---
 # <a name="icorruntimehoststop-method"></a><span data-ttu-id="43053-102">ICorRuntimeHost::Stop — Metoda</span><span class="sxs-lookup"><span data-stu-id="43053-102">ICorRuntimeHost::Stop Method</span></span>
 <span data-ttu-id="43053-103">Zatrzymuje wykonywanie kodu w czasie wykonywania dla bieżącego procesu.</span><span class="sxs-lookup"><span data-stu-id="43053-103">Stops the execution of code in the runtime for the current process.</span></span>  

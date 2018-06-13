@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536198"
 ---
 # <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a><span data-ttu-id="b0dee-102">Porady: zapisywanie plików za pomocą formantu RichTextBox formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="b0dee-102">How to: Save Files with the Windows Forms RichTextBox Control</span></span>
 <span data-ttu-id="b0dee-103">Formularze systemu Windows <xref:System.Windows.Forms.RichTextBox> formant może zapisać informacji wyświetlanych w jednym z kilku formatów:</span><span class="sxs-lookup"><span data-stu-id="b0dee-103">The Windows Forms <xref:System.Windows.Forms.RichTextBox> control can write the information it displays in one of several formats:</span></span>  

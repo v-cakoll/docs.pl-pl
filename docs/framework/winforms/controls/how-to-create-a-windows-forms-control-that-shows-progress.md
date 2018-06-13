@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531433"
 ---
 # <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a><span data-ttu-id="5b765-102">Porady: tworzenie formantu formularzy systemu Windows pokazującego postęp</span><span class="sxs-lookup"><span data-stu-id="5b765-102">How to: Create a Windows Forms Control That Shows Progress</span></span>
 <span data-ttu-id="5b765-103">Poniższy przykład kodu pokazuje formant niestandardowy o nazwie `FlashTrackBar` można wyświetlane użytkownikowi, poziomu lub postęp aplikacji.</span><span class="sxs-lookup"><span data-stu-id="5b765-103">The following code example shows a custom control called `FlashTrackBar` that can be used to show the user the level or the progress of an application.</span></span> <span data-ttu-id="5b765-104">Gradient używa do wizualnego reprezentowania postępu.</span><span class="sxs-lookup"><span data-stu-id="5b765-104">It uses a gradient to visually represent progress.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527151"
 ---
 # <a name="open-and-closed-curves-in-gdi"></a><span data-ttu-id="f262a-102">Krzywe otwarte i zamknięte w GDI+</span><span class="sxs-lookup"><span data-stu-id="f262a-102">Open and Closed Curves in GDI+</span></span>
 <span data-ttu-id="f262a-103">Na poniższej ilustracji przedstawiono dwie krzywe: otwarty i jedną zamknięte.</span><span class="sxs-lookup"><span data-stu-id="f262a-103">The following illustration shows two curves: one open and one closed.</span></span>  

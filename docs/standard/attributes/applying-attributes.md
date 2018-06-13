@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567370"
 ---
 # <a name="applying-attributes"></a><span data-ttu-id="e825a-102">Stosowanie atrybutów</span><span class="sxs-lookup"><span data-stu-id="e825a-102">Applying Attributes</span></span>
 <span data-ttu-id="e825a-103">W celu zastosowania atrybutu do elementu kodu należy wykonać procedurę opisaną poniżej.</span><span class="sxs-lookup"><span data-stu-id="e825a-103">Use the following process to apply an attribute to an element of your code.</span></span>  

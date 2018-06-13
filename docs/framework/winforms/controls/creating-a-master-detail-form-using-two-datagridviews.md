@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529444"
 ---
 # <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a><span data-ttu-id="4f8b5-102">Wskazówki: tworzenie formularza wzorzec/szczegół za pomocą dwóch formantów DataGridView formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="4f8b5-102">Walkthrough: Creating a Master/Detail Form Using Two Windows Forms DataGridView Controls</span></span>
 <span data-ttu-id="4f8b5-103">Jedną z najbardziej typowych scenariuszy stosowania <xref:System.Windows.Forms.DataGridView> formant jest *wzorzec/szczegół* formularza, w którym jest wyświetlany relacji nadrzędny/podrzędny między dwiema tabelami bazy danych.</span><span class="sxs-lookup"><span data-stu-id="4f8b5-103">One of the most common scenarios for using the <xref:System.Windows.Forms.DataGridView> control is the *master/detail* form, in which a parent/child relationship between two database tables is displayed.</span></span> <span data-ttu-id="4f8b5-104">Wybierania wierszy w tabeli głównej powoduje, że tabela szczegółów aktualizowania przy użyciu odpowiednich danych podrzędnych.</span><span class="sxs-lookup"><span data-stu-id="4f8b5-104">Selecting rows in the master table causes the detail table to update with the corresponding child data.</span></span>  

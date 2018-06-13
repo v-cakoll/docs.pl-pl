@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352249"
 ---
 # <a name="ltservicedebuggt"></a><span data-ttu-id="c572e-102">&lt;serviceDebug&gt;</span><span class="sxs-lookup"><span data-stu-id="c572e-102">&lt;serviceDebug&gt;</span></span>
 <span data-ttu-id="c572e-103">Określa funkcje informacji pomocy i debugowania dla usługi Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="c572e-103">Specifies debugging and help information features for a Windows Communication Foundation (WCF) service.</span></span>  

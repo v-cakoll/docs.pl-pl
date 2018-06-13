@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357663"
 ---
 # <a name="walkthrough-manipulating-data-c"></a><span data-ttu-id="952b2-102">Wskazówki: Manipulowanie danych (C#)</span><span class="sxs-lookup"><span data-stu-id="952b2-102">Walkthrough: Manipulating Data (C#)</span></span>
 <span data-ttu-id="952b2-103">Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenariusza Dodawanie, modyfikowanie i usuwanie danych z bazy danych.</span><span class="sxs-lookup"><span data-stu-id="952b2-103">This walkthrough provides a fundamental end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenario for adding, modifying, and deleting data in a database.</span></span> <span data-ttu-id="952b2-104">Aby dodać klienta, Zmień nazwę klienta i usunąć zamówienie będzie używał kopii przykładowej bazy danych Northwind.</span><span class="sxs-lookup"><span data-stu-id="952b2-104">You will use a copy of the sample Northwind database to add a customer, change the name of a customer, and delete an order.</span></span>  

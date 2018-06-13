@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338747"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a><span data-ttu-id="eece3-102">Porady: uzyskiwanie dostępu do obiektów międzyoperacyjności pakietu Office za pomocą funkcji Visual C# (Przewodnik po programowaniu w języku C#)</span><span class="sxs-lookup"><span data-stu-id="eece3-102">How to: Access Office Interop Objects by Using Visual C# Features (C# Programming Guide)</span></span>
 <span data-ttu-id="eece3-103">Visual C# ma funkcje, które ułatwiają dostęp do interfejsu API usługi Office obiektów.</span><span class="sxs-lookup"><span data-stu-id="eece3-103">Visual C# has features that simplify access to Office API objects.</span></span> <span data-ttu-id="eece3-104">Nowe funkcje obejmują argumenty nazwane i opcjonalne, nowy typ o nazwie `dynamic`i umożliwia przekazywanie argumentów do parametrów odwołania w metodach COM, tak jakby były wartości parametrów.</span><span class="sxs-lookup"><span data-stu-id="eece3-104">The new features include named and optional arguments, a new type called `dynamic`, and the ability to pass arguments to reference parameters in COM methods as if they were value parameters.</span></span>  

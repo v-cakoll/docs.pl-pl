@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531638"
 ---
 # <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a><span data-ttu-id="3e28a-102">Porady: definiowanie zachowania dotyczącego zmieniania rozmiaru i pozycjonowania w podzielonym oknie</span><span class="sxs-lookup"><span data-stu-id="3e28a-102">How to: Define Resize and Positioning Behavior in a Split Window</span></span>
 <span data-ttu-id="3e28a-103">Panele <xref:System.Windows.Forms.SplitContainer> kontroli redagowanie również są zmiany rozmiaru i manipulowanie przez użytkowników.</span><span class="sxs-lookup"><span data-stu-id="3e28a-103">The panels of the <xref:System.Windows.Forms.SplitContainer> control lend themselves well to being resized and manipulated by users.</span></span> <span data-ttu-id="3e28a-104">Jednak zostanie wystąpić sytuacje, kiedy można programowo zarządzać rozdzielacza, gdzie jest umieszczony i w jakim stopniu można go przenieść.</span><span class="sxs-lookup"><span data-stu-id="3e28a-104">However, there will be times when you will want to programmatically control the splitter—where it is positioned and to what degree it can be moved.</span></span>  

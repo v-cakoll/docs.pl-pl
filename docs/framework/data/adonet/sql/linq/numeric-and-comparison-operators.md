@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352184"
 ---
 # <a name="numeric-and-comparison-operators"></a><span data-ttu-id="8f758-102">Numeryczne i operatory porównania</span><span class="sxs-lookup"><span data-stu-id="8f758-102">Numeric and Comparison Operators</span></span>
 <span data-ttu-id="8f758-103">Operatory arytmetyczne i porównanie działać zgodnie z oczekiwaniami w środowisko uruchomieniowe języka wspólnego (CLR) z wyjątkiem w następujący sposób:</span><span class="sxs-lookup"><span data-stu-id="8f758-103">Arithmetic and comparison operators work as expected in the common language runtime (CLR) except as follows:</span></span>  

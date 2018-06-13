@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361601"
 ---
 # <a name="how-to-specify-private-storage-fields"></a><span data-ttu-id="56bed-102">Porady: Określ pola magazynu prywatnych</span><span class="sxs-lookup"><span data-stu-id="56bed-102">How to: Specify Private Storage Fields</span></span>
 <span data-ttu-id="56bed-103">Użyj [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> właściwość <xref:System.Data.Linq.Mapping.DataAttribute> atrybutu wyznaczyć nazwę pola podstawowego magazynu.</span><span class="sxs-lookup"><span data-stu-id="56bed-103">Use the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> property on the <xref:System.Data.Linq.Mapping.DataAttribute> attribute to designate the name of an underlying storage field.</span></span>  

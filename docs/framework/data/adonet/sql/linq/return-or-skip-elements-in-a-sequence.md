@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359881"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a><span data-ttu-id="be5be-102">Zwracanym lub Pomiń elementy w sekwencji</span><span class="sxs-lookup"><span data-stu-id="be5be-102">Return Or Skip Elements in a Sequence</span></span>
 <span data-ttu-id="be5be-103">Użyj <xref:System.Linq.Queryable.Take%2A> operatora w celu uzyskania danej liczby elementów w sekwencji, a następnie pominąć resztę.</span><span class="sxs-lookup"><span data-stu-id="be5be-103">Use the <xref:System.Linq.Queryable.Take%2A> operator to return a given number of elements in a sequence and then skip over the remainder.</span></span>  

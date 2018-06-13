@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397978"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Dynamiczne ładowanie i używanie typów
 Odbicie oferuje infrastrukturę, takie jak używany przez Kompilatory języka [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] i JScript do zaimplementowania ukryte późne powiązania. Powiązanie to proces lokalizowania deklaracji (wykonanie), która odpowiada jednoznacznie określonego typu. Ten proces odbywa się w czasie wykonywania, a nie w czasie kompilacji, jest nazywany późnego wiązania. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] Umożliwia użycie ukryte późne wiązania w kodzie; Kompilator Visual Basic wywołuje metodę pomocnika, która używa odbicia w celu uzyskania typu obiektu. Argumenty przekazane do metody pomocnika spowodować odpowiedniej metody do wywołania w czasie wykonywania. Te argumenty są wystąpienia (obiekt) do wywołania metody, nazwę wywoływanej metody (ciąg) i argumenty przekazane do wywołana metoda (Tablica obiektów).  

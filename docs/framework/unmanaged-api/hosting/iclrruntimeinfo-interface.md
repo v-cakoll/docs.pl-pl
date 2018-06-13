@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436471"
 ---
 # <a name="iclrruntimeinfo-interface"></a>ICLRRuntimeInfo — Interfejs
 Udostępnia metody, które zwracają informacje o określonych środowisko uruchomieniowe języka wspólnego (CLR), w tym wersja, katalogu i stanie obciążenia. Ten interfejs udostępnia funkcje środowiska uruchomieniowego bez podczas inicjowania środowiska uruchomieniowego. Obejmuje ona względna środowiska uruchomieniowego [LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) metoda, środowiska wykonawczego specyficzne dla modułu [GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) — metoda i wprowadzone do środowiska wykonawczego interfejsy za pośrednictwem [GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md)metody.  

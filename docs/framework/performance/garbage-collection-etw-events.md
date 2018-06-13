@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396938"
 ---
 # <a name="garbage-collection-etw-events"></a>Zdarzenia ETW odzyskiwania pamięci
 <a name="top"></a> Te zdarzenia zbierać informacje dotyczące wyrzucania elementów bezużytecznych. Pomagają w diagnostyce i debugowanie, określając, ile razy wyrzucanie elementów bezużytecznych została wykonana, ile pamięci został zwolniony podczas wyrzucanie elementów bezużytecznych i tak dalej.  

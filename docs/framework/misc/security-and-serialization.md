@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394251"
 ---
 # <a name="security-and-serialization"></a>Zabezpieczenia i serializacja
 Ponieważ serializacji można zezwolić na inny kod, aby wyświetlić lub zmodyfikować danych wystąpienia obiektów, które w przeciwnym razie będą niedostępne, specjalnych uprawnień jest wymagane kodu wykonywania serializacji: <xref:System.Security.Permissions.SecurityPermission> z <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> określona flaga. W obszarze domyślne zasady to uprawnienie nie zostanie podany, do pobieranych przez Internet lub z intranetu kod; to uprawnienie udziela się tylko kod na komputerze lokalnym.  

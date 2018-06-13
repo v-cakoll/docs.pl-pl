@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395937"
 ---
 # <a name="dynamic-source-code-generation-and-compilation"></a>Dynamiczne generowanie i kompilacja kodu źródłowego
 Mechanizm wywołuje kod Document Object Model (CodeDOM), który umożliwia deweloperom programów, które Emituj kod źródłowy do generowania kodu źródłowego w wielu języków programowania, w czasie wykonywania, oparte na jednym modelu, który reprezentuje kod zawiera programu .NET Framework do renderowania.  

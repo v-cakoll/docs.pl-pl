@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392580"
 ---
 # <a name="composition-analysis-tool-mefx"></a>Narzędzie do analizy kompozycji (Mefx)
 Narzędzie do analizy kompozycji (Mefx) jest aplikacją wiersza polecenia, która analizuje biblioteki (.dll) i pliki aplikacji (.exe) zawierający części Managed Extensibility Framework (MEF). Głównym celem Mefx ma umożliwiają deweloperom diagnozowanie błędów kompozycji w swoich aplikacjach MEF bez konieczności Dodaj kod śledzenia skomplikowane do samej aplikacji. Może być również przydatne do zrozumienia składniki Report Part z biblioteki udostępnione przez innych firm. W tym temacie opisano sposób użycia Mefx i znajdują się informacje na jego składni.  

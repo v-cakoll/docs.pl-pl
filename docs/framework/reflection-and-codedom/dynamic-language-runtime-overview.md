@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397289"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Przegląd środowiska uruchomieniowego języka dynamicznego
 *Środowisko uruchomieniowe języka dynamicznego* (DLR) jest środowisko uruchomieniowe, który dodaje zestaw usług dla języków dynamicznych do środowisko uruchomieniowe języka wspólnego (CLR). DLR ułatwia tworzenie dynamicznych języki do uruchomienia w programie .NET Framework oraz dodawać funkcje dynamicznego do statycznie językach.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441471"
 ---
 # <a name="net-framework-4-hosting-global-static-functions"></a>.NET Framework 4 — statyczne funkcje globalne hostingu
 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] Wprowadza nowe jedną metodę wyeksportowanego w biblioteki MSCorEE.dll: [CLRCreateIntstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md).  

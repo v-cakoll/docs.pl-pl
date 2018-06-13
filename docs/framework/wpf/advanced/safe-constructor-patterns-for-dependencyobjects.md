@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547345"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>Bezpieczne wzorce konstruktora DependencyObjects
 Ogólnie rzecz biorąc konstruktorów klasy nie powinny wywoływać wywołań zwrotnych, takich jak metody wirtualne lub delegatów, ponieważ konstruktorów można wywołać jako podstawowy inicjowania konstruktorów dla klasy pochodnej. Wprowadzanie wirtualnej może odbywać się w stanie inicjowania niekompletne dowolnego danego obiektu. Jednak sam system właściwości wywołuje i ujawnia wywołania zwrotne wewnętrznie, jako część systemu właściwości zależności. Prosta operacja jako ustawienie wartości właściwości zależności z <xref:System.Windows.DependencyObject.SetValue%2A> wywołanie potencjalnie zawiera wywołanie zwrotne gdzieś w ustalaniu. Z tego powodu należy zachować ostrożność podczas ustawiania wartości właściwości w treści konstruktora, który może stać się problemem, jeśli z danym typem jest używany jako klasa podstawowa zależności. Brak określonego wzorca wykonywania <xref:System.Windows.DependencyObject> konstruktorów, które pozwala uniknąć określonych problemów z stanów właściwości zależności i związanego z używaniem wywołania zwrotne, które opisano w tym miejscu.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488221"
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>Instrukcje: Eksportowanie niestandardowych asercji zasad
 Potwierdzenia zasad opisano wymagania punktu końcowego usługi. Aplikacje usługi mogą używać niestandardowych asercji zasad w metadanych usługi do komunikowania się punkt końcowy, powiązanie lub kontrakt informacje o dostosowaniu do aplikacji klienckiej. Windows Communication Foundation (WCF) służy do potwierdzenia w wyrażeniach zasad dołączona w powiązania WSDL na punkt końcowy, operacji lub komunikat tematów, w zależności od możliwości lub wymagania, które komunikują się wyeksportować.  

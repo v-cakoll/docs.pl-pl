@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759546"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Konfigurowanie parametrów i typów danych parametrów
 Polecenie obiektów parametry do przekazania wartości do instrukcji SQL lub procedur składowanych, zapewniając Sprawdzanie typu i weryfikacji. W odróżnieniu od tekst polecenia parametr wejściowy jest traktowany jako wartość literału nie jako kod wykonywalny. Dzięki temu zabezpieczenia przed atakami "Iniekcja kodu SQL", w których osoba atakująca Wstawia polecenie Zabezpieczenia dokonywania na serwerze do instrukcji SQL.  

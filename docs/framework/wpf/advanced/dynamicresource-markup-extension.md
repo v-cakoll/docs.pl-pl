@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545327"
 ---
 # <a name="dynamicresource-markup-extension"></a>DynamicResource — Rozszerzenie znaczników
 Zawiera wartość dla każdego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] atrybutu właściwości przez odkładanie tej wartości jako odwołanie do określonych zasobów. Zachowanie wyszukiwania dla tego zasobu jest odpowiednikiem odnośników czasu wykonywania.  

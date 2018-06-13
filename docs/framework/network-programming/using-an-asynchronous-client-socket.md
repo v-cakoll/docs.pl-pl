@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393686"
 ---
 # <a name="using-an-asynchronous-client-socket"></a>Przy użyciu gniazda asynchroniczne klienta
 Gniazdo klienta asynchronicznego nie wstrzymuje aplikacji podczas oczekiwania na zakończenie operacji sieciowych. Zamiast tego używa standardowych model programowania asynchronicznego .NET Framework do przetwarzania połączenia sieciowego w jednym wątku, gdy aplikacja nadal działa w oryginalnym wątku. Gniazda asynchroniczne są odpowiednie dla aplikacji, która w znacznym stopniu wykorzystywane w sieci lub który nie może czekać na zakończenie przed kontynuowaniem operacji sieciowych.  

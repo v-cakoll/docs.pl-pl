@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560906"
 ---
 # <a name="how-to-paint-an-area-with-a-drawing"></a>Jak malować obszar za pomocą rysowania
 W tym przykładzie pokazano, jak namalować obszar z rysunku. Malowanie obszaru z rysunkiem, należy użyć <xref:System.Windows.Media.DrawingBrush> i co najmniej jeden <xref:System.Windows.Media.Drawing> obiektów.   W poniższym przykładzie użyto <xref:System.Windows.Media.DrawingBrush> obiektu z rysunkiem dwie elipsy.  

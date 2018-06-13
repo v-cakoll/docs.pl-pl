@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392151"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>Błędy inicjowania programu .NET Framework: zarządzanie wrażeniami użytkownika
 Wspólny system aktywacji języka wspólnego (CLR) określa wersję środowiska CLR, która będzie służyć do uruchamiania kodu aplikacji zarządzanych. W niektórych przypadkach system aktywacji nie można znaleźć wersji środowiska CLR do załadowania. Ta sytuacja zwykle występuje, gdy aplikacja wymaga wersji środowiska CLR, która jest nieprawidłowa lub nie została zainstalowana na danym komputerze. Jeśli nie odnaleziono żądanej wersji, system aktywacji CLR zwraca kod błędu HRESULT z funkcji lub interfejs, który został wywołany i może być wyświetlany komunikat o błędzie do użytkownika, który jest uruchomiona aplikacja. Ten artykuł zawiera listę kodów HRESULT i objaśniono, w jaki sposób można zapobiec komunikat o błędzie wyświetlany.  

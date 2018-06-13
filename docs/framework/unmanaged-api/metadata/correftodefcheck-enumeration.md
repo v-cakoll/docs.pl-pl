@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443316"
 ---
 # <a name="correftodefcheck-enumeration"></a>CorRefToDefCheck — Wyliczenie
 Określa flagi kontrolujące elementy do którego istnieje odwołanie, które są konwertowane na ich definicje w celu optymalizacji kodu.  

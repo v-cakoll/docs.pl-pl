@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422334"
 ---
 # <a name="icordebugreferencevalue-interface1"></a>ICorDebugReferenceValue Interface1
 Udostępnia metody zarządzające wartość, która jest odwołaniem do obiektu. (To znaczy, że ten interfejs udostępnia metody zarządzające wskaźnik). Ten interfejs implementuje "ICorDebugValue".  

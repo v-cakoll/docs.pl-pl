@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392180"
 ---
 # <a name="noncomvisiblebaseclass-mda"></a>nonComVisibleBaseClass MDA
 `nonComVisibleBaseClass` Zarządzany Asystent debugowania (MDA) została aktywowana po `QueryInterface` kod natywny lub niezarządzane w wywoływana otoka COM (CCW) wywołanie, widoczny dla modelu COM zarządzane klasy, która pochodzi z klasy podstawowej, która nie jest widoczne dla modelu COM.  `QueryInterface` MDA aktywować tylko w przypadkach, gdy wywołanie zażąda klasy interfejsu lub domyślnej powoduje, że wywołanie `IDispatch` widoczny dla modelu COM klasy zarządzane.  MDA nie jest aktywowany, gdy `QueryInterface` dotyczy jawnego interfejsu, który ma <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> atrybut stosowane i jest jawnie implementowana przez widoczny dla modelu COM klasy.  

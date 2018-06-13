@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547729"
 ---
 # <a name="xaml-loading-and-dependency-properties"></a>Właściwości zależności i ładowania XAML
 Bieżący [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wykonania jego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesora jest z założenia pamiętać właściwości zależności. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Procesor używa metody system właściwości dla właściwości zależności podczas ładowania pliku binarnego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i przetwarzania atrybutów, które są właściwości zależności. Pomija to skutecznie otoki właściwości. Po zaimplementowaniu właściwości niestandardowe zależności musi konta tego zachowania, a unikać umieszczania innego kodu w Twojej otoki właściwości innych niż metody systemu właściwości <xref:System.Windows.DependencyObject.GetValue%2A> i <xref:System.Windows.DependencyObject.SetValue%2A>.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398030"
 ---
 # <a name="lazy-initialization"></a>Inicjalizacja z opóźnieniem
 *Inicjalizacja z opóźnieniem* obiektu oznacza, że jej tworzenia została odroczona aż najpierw jest używany. (W tym temacie warunki *incjalizacji* i *opóźnieniem wystąpienia* to samo.) Inicjalizacja z opóźnieniem służy głównie w celu zwiększenia wydajności, uniknąć niepotrzebne obliczeń i zmniejszyć wymagania dotyczące pamięci programu. Są to najbardziej typowych scenariuszy:  

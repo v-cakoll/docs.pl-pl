@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397575"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Porady: zbadanie i tworzenie wystąpień typów ogólnych za pomocą odbicia
 Informacje o typach ogólnych są uzyskiwane w taki sam sposób jak informacje o innych typów:, sprawdzając <xref:System.Type> obiekt, który reprezentuje typ ogólny. Różnica zasady jest typem ogólnym listę <xref:System.Type> obiekty reprezentujące jego parametrów typu ogólnego. Pierwsza procedura w tej sekcji sprawdza typów ogólnych.  

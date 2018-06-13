@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395911"
 ---
 # <a name="making-asynchronous-requests"></a>Tworzenie żądania asynchroniczne
 <xref:System.Net> Klasy na użytek programu .NET Framework standardowy model programowania asynchronicznego asynchronicznego dostępu do zasobów Internetu. <xref:System.Net.WebRequest.BeginGetResponse%2A> i <xref:System.Net.WebRequest.EndGetResponse%2A> metody <xref:System.Net.WebRequest> klasy start i ukończone żądania asynchroniczne zasobu internetowego.  

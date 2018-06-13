@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394982"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>Dostęp do Internetu za pośrednictwem serwera Proxy
 Jeśli Twoja witryna wymaga serwera proxy w celu zapewnienia dostępu do Internetu, należy skonfigurować wystąpienie serwera proxy, aby umożliwić aplikacji do komunikowania się z serwerem proxy sieci Web.  

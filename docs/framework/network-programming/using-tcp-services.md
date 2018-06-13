@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397172"
 ---
 # <a name="using-tcp-services"></a>Za pomocą usług TCP
 <xref:System.Net.Sockets.TcpClient> Klasy żąda danych od zasobu internetowego za pomocą protokołu TCP. Metody i właściwości **TcpClient** abstrakcyjnej szczegółowe informacje dotyczące tworzenia <xref:System.Net.Sockets.Socket> żądania i odbierania danych za pomocą protokołu TCP. Ponieważ połączenie z urządzeniem zdalnym jest reprezentowana jako strumienia, dane można Odczyt i zapis techniki obsługi strumienia .NET Framework.  

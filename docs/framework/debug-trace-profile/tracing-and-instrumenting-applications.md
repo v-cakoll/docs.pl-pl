@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392960"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Śledzenie i instrumentacja aplikacji
 Śledzenie jest sposobem monitorowania wykonanie aplikacji jest uruchomiona. Możesz dodać Instrumentacji śledzenia i debugowania aplikacji .NET Framework podczas jej opracowywania i zarówno podczas tworzenia aplikacji, jak i po jej wdrożeniu, można użyć tego instrumentacji. Można użyć <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType>, i <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> klasy do rejestrowania informacji o błędach i wykonanie aplikacji w dzienniki, pliki tekstowe lub innych urządzeń w celu późniejszej analizy.  

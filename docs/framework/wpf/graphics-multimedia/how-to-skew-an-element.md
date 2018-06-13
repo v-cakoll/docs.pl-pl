@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561566"
 ---
 # <a name="how-to-skew-an-element"></a>Jak pochylić element
 Ten przykład przedstawia sposób użycia <xref:System.Windows.Media.SkewTransform> fałszować elementu. Zegara, który jest również nazywany Ścinanie, jest transformację w sposób niejednolitego rozciąga się przestrzeni współrzędnych. Jeden typowy sposób użycia protokołu <xref:System.Windows.Media.SkewTransform> jest symulowanie [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] głębokość [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] obiektów.  

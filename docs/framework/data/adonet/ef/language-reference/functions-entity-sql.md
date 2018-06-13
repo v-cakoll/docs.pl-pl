@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760300"
 ---
 # <a name="functions-entity-sql"></a>Funkcje (jednostka SQL)
 Jednostki SQL obsługuje funkcje zdefiniowane przez użytkownika, kanonicznej funkcji i funkcji specyficznych dla dostawcy. Funkcje zdefiniowane przez użytkownika są określone w modelu koncepcyjnym lub wbudowany w zapytaniu. Aby uzyskać więcej informacji, zobacz [funkcje zdefiniowane przez użytkownika](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md).  

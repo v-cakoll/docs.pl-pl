@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393922"
 ---
 # <a name="clr-etw-events"></a>Zdarzenia ETW CLR
 W tematach w tej sekcji opisano zdarzenia śledzenia dla zdarzeń systemu Windows (ETW). Każde zdarzenie ma skojarzone — słowo kluczowe i poziomu, które są opisane w [słowa kluczowe CLR ETW i poziomy](../../../docs/framework/performance/clr-etw-keywords-and-levels.md) tematu. Środowisko CLR ma dwóch dostawców na potrzeby zdarzenia:  

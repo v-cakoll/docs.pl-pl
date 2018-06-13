@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539419"
 ---
 # <a name="how-to-implement-the-ilistsource-interface"></a><span data-ttu-id="76c7a-102">Porady: implementowanie interfejsu IListSource</span><span class="sxs-lookup"><span data-stu-id="76c7a-102">How to: Implement the IListSource Interface</span></span>
 <span data-ttu-id="76c7a-103">Implementowanie <xref:System.ComponentModel.IListSource> interfejs do utworzenia możliwej do wiązania klasy, który nie implementuje <xref:System.Collections.IList> , ale zamiast tego zawiera listę z innej lokalizacji.</span><span class="sxs-lookup"><span data-stu-id="76c7a-103">Implement the <xref:System.ComponentModel.IListSource> interface to create a bindable class that does not implement <xref:System.Collections.IList> but instead provides a list from another location.</span></span>  

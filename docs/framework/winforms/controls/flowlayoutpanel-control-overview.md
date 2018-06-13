@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526728"
 ---
 # <a name="flowlayoutpanel-control-overview"></a><span data-ttu-id="affab-102">FlowLayoutPanel — Informacje o formancie</span><span class="sxs-lookup"><span data-stu-id="affab-102">FlowLayoutPanel Control Overview</span></span>
 <span data-ttu-id="affab-103"><xref:System.Windows.Forms.FlowLayoutPanel> Kontroli rozmieszcza jego zawartość w kierunku przepływu pozioma lub pionowa.</span><span class="sxs-lookup"><span data-stu-id="affab-103">The <xref:System.Windows.Forms.FlowLayoutPanel> control arranges its contents in a horizontal or vertical flow direction.</span></span> <span data-ttu-id="affab-104">Można zawijać zawartość formantu z jednego wiersza do następnego lub jedną kolumnę do następnego.</span><span class="sxs-lookup"><span data-stu-id="affab-104">You can wrap the control's contents from one row to the next, or from one column to the next.</span></span> <span data-ttu-id="affab-105">Alternatywnie można przyciąć zamiast zawijania jego zawartość.</span><span class="sxs-lookup"><span data-stu-id="affab-105">Alternately, you can clip instead of wrap its contents.</span></span>  

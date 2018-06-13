@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526240"
 ---
 # <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a><span data-ttu-id="60610-102">Uwagi odnośnie do hostowania kontrolki ActiveX na formularzu systemu Windows</span><span class="sxs-lookup"><span data-stu-id="60610-102">Considerations When Hosting an ActiveX Control on a Windows Form</span></span>
 <span data-ttu-id="60610-103">Mimo że program Windows Forms zostały zoptymalizowane do hosta formanty formularzy systemu Windows, można nadal używać formantów ActiveX.</span><span class="sxs-lookup"><span data-stu-id="60610-103">Although Windows Forms have been optimized to host Windows Forms controls, you can still use ActiveX controls.</span></span> <span data-ttu-id="60610-104">Podczas planowania aplikacji korzystającej z kontrolki ActiveX, należy pamiętać o następujących kwestiach:</span><span class="sxs-lookup"><span data-stu-id="60610-104">Keep the following considerations in mind when planning an application that uses ActiveX controls:</span></span>  

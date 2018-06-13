@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533783"
 ---
 # <a name="how-to-set-the-size-of-status-bar-panels"></a><span data-ttu-id="c221a-102">Porady: ustawianie rozmiaru paneli paska stanu</span><span class="sxs-lookup"><span data-stu-id="c221a-102">How to: Set the Size of Status-Bar Panels</span></span>
 > [!NOTE]

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530826"
 ---
 # <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a><span data-ttu-id="759aa-102">Porady: tworzenie list okien MDI za pomocą elementu MenuStrip (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="759aa-102">How to: Create an MDI Window List with MenuStrip (Windows Forms)</span></span>
 <span data-ttu-id="759aa-103">Interfejs dokumentu wielokrotnego (MDI) umożliwia tworzenie aplikacji, które można otworzyć kilka dokumentów, w tym samym czasie i kopiowania i wklejania zawartości z jednego dokumentu do drugiego.</span><span class="sxs-lookup"><span data-stu-id="759aa-103">Use the multiple-document interface (MDI) to create applications that can open several documents at the same time and copy and paste content from one document to the other.</span></span>  

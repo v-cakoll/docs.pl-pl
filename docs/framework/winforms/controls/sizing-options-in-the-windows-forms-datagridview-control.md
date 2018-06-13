@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541757"
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="202b9-102">Opcje ustalania rozmiaru w formancie DataGridView formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="202b9-102">Sizing Options in the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="202b9-103"><xref:System.Windows.Forms.DataGridView> wiersze, kolumny i nagłówki, można zmienić rozmiar wiele różnych wystąpień.</span><span class="sxs-lookup"><span data-stu-id="202b9-103"><xref:System.Windows.Forms.DataGridView> rows, columns, and headers can change size as a result of many different occurrences.</span></span> <span data-ttu-id="202b9-104">W poniższej tabeli przedstawiono te wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="202b9-104">The following table shows these occurrences.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528419"
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a><span data-ttu-id="fb30e-102">Porady: dodawanie tabel i kolumn do formantu DataGrid formularzy systemu Windows przy użyciu narzędzia Projektant</span><span class="sxs-lookup"><span data-stu-id="fb30e-102">How to: Add Tables and Columns to the Windows Forms DataGrid Control Using the Designer</span></span>
 > [!NOTE]

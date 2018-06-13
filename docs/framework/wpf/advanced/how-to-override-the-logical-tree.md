@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542893"
 ---
 # <a name="how-to-override-the-logical-tree"></a><span data-ttu-id="06cf8-102">Jak zastąpić drzewo logiczne</span><span class="sxs-lookup"><span data-stu-id="06cf8-102">How to: Override the Logical Tree</span></span>
 <span data-ttu-id="06cf8-103">Chociaż nie jest konieczne w większości przypadków, autorzy formantu zaawansowanego istnieje możliwość zastąpienia drzewa logicznego.</span><span class="sxs-lookup"><span data-stu-id="06cf8-103">Although it is not necessary in most cases, advanced control authors have the option to override the logical tree.</span></span>  

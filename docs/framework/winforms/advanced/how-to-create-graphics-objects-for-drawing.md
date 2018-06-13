@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526491"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a><span data-ttu-id="97402-102">Porady: tworzenie obiektów graficznych do rysowania</span><span class="sxs-lookup"><span data-stu-id="97402-102">How to: Create Graphics Objects for Drawing</span></span>
 <span data-ttu-id="97402-103">Przed może wykonywać Rysowanie linii i kształtów, renderowania tekstu, lub wyświetlania i modyfikowania obrazów za pomocą [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], należy utworzyć <xref:System.Drawing.Graphics> obiektu.</span><span class="sxs-lookup"><span data-stu-id="97402-103">Before you can draw lines and shapes, render text, or display and manipulate images with [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], you need to create a <xref:System.Drawing.Graphics> object.</span></span> <span data-ttu-id="97402-104"><xref:System.Drawing.Graphics> Obiekt reprezentuje [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] powierzchni rysowania i jest obiekt, który służy do tworzenia obrazów graficznego.</span><span class="sxs-lookup"><span data-stu-id="97402-104">The <xref:System.Drawing.Graphics> object represents a [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] drawing surface, and is the object that is used to create graphical images.</span></span>  

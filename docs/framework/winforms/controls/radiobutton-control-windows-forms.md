@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534970"
 ---
 # <a name="radiobutton-control-windows-forms"></a><span data-ttu-id="76a3d-102">RadioButton — Formant (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="76a3d-102">RadioButton Control (Windows Forms)</span></span>
 <span data-ttu-id="76a3d-103">Formularze systemu Windows `RadioButton` formanty wyświetlania zestawu co najmniej dwa wzajemnie wykluczających się opcji do użytkownika.</span><span class="sxs-lookup"><span data-stu-id="76a3d-103">Windows Forms `RadioButton` controls present a set of two or more mutually exclusive choices to the user.</span></span> <span data-ttu-id="76a3d-104">Podczas gdy przycisków radiowych i pól wyboru mogą pojawiać się działają podobnie, jest istotną różnicą:, gdy użytkownik wybierze przycisk radiowy, innych przycisków radiowych w tej samej grupy nie można również wybrać.</span><span class="sxs-lookup"><span data-stu-id="76a3d-104">While radio buttons and check boxes may appear to function similarly, there is an important difference: when a user selects a radio button, the other radio buttons in the same group cannot be selected as well.</span></span>  

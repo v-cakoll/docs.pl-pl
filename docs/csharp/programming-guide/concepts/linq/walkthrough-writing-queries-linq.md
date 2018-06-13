@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340414"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a><span data-ttu-id="aabd8-102">Wskazówki: pisanie zapytań w C# (LINQ)</span><span class="sxs-lookup"><span data-stu-id="aabd8-102">Walkthrough: Writing Queries in C# (LINQ)</span></span>
 <span data-ttu-id="aabd8-103">W tym przewodniku przedstawiono funkcji języka C#, które są używane do zapisu wyrażenia zapytań LINQ.</span><span class="sxs-lookup"><span data-stu-id="aabd8-103">This walkthrough demonstrates the C# language features that are used to write LINQ query expressions.</span></span>  

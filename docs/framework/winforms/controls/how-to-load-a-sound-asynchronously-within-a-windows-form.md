@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533572"
 ---
 # <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a><span data-ttu-id="f6634-102">Porady: ładowanie dźwięku asynchronicznie w formularzu systemu Windows</span><span class="sxs-lookup"><span data-stu-id="f6634-102">How to: Load a Sound Asynchronously within a Windows Form</span></span>
 <span data-ttu-id="f6634-103">Poniższy przykład kodu asynchronicznie ładuje dźwięk z adresu URL i jest odtwarzany na nowego wątku.</span><span class="sxs-lookup"><span data-stu-id="f6634-103">The following code example asynchronously loads a sound from an URL and then plays it on a new thread.</span></span>  

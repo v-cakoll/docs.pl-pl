@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534417"
 ---
 # <a name="margin-and-padding-in-windows-forms-controls"></a><span data-ttu-id="01746-102">Margines i wypełnienie w formantach formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="01746-102">Margin and Padding in Windows Forms Controls</span></span>
 <span data-ttu-id="01746-103">Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji.</span><span class="sxs-lookup"><span data-stu-id="01746-103">Precise placement of controls on your form is a high priority for many applications.</span></span> <span data-ttu-id="01746-104"><xref:System.Windows.Forms?displayProperty=nameWithType> Przestrzeń nazw zapewnia wiele funkcji układu, w tym celu.</span><span class="sxs-lookup"><span data-stu-id="01746-104">The <xref:System.Windows.Forms?displayProperty=nameWithType> namespace gives you many layout features to accomplish this.</span></span> <span data-ttu-id="01746-105">Dwie najważniejsze to <xref:System.Windows.Forms.Control.Margin%2A> i <xref:System.Windows.Forms.Control.Padding%2A> właściwości.</span><span class="sxs-lookup"><span data-stu-id="01746-105">Two of the most important are the <xref:System.Windows.Forms.Control.Margin%2A> and <xref:System.Windows.Forms.Control.Padding%2A> properties.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339764"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a><span data-ttu-id="3762a-102">Obsługa ponownego rozpoczęcia w aplikacjach asynchronicznych (C#)</span><span class="sxs-lookup"><span data-stu-id="3762a-102">Handling Reentrancy in Async Apps (C#)</span></span>
 <span data-ttu-id="3762a-103">Po dołączeniu kodu asynchroniczne w aplikacji należy wziąć pod uwagę i prawdopodobnie zapobiec ponowne wejście, który odwołuje się do ponownego wprowadzania operację asynchroniczną, zanim została ukończona.</span><span class="sxs-lookup"><span data-stu-id="3762a-103">When you include asynchronous code in your app, you should consider and possibly prevent reentrancy, which refers to reentering an asynchronous operation before it has completed.</span></span> <span data-ttu-id="3762a-104">Jeśli nie identyfikowania i obsługi możliwości ponownego rozpoczęcia, może spowodować nieoczekiwane wyniki.</span><span class="sxs-lookup"><span data-stu-id="3762a-104">If you don't identify and handle possibilities for reentrancy, it can cause unexpected results.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639603"
 ---
 # <a name="specified-registry-key-does-not-exist"></a><span data-ttu-id="afcff-102">Określony klucz rejestru nie istnieje.</span><span class="sxs-lookup"><span data-stu-id="afcff-102">Specified registry key does not exist</span></span>
 <span data-ttu-id="afcff-103">Klucz rejestru, który został określony nie istnieje.</span><span class="sxs-lookup"><span data-stu-id="afcff-103">The registry key that has been specified does not exist.</span></span>  

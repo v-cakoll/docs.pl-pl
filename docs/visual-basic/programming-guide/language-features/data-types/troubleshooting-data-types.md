@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655788"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a><span data-ttu-id="a49ad-102">Rozwiązywanie problemów związanych z typami danych (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a49ad-102">Troubleshooting Data Types (Visual Basic)</span></span>
 <span data-ttu-id="a49ad-103">Ta strona zawiera listę typowych problemów, które mogą wystąpić podczas wykonywania operacji na typy danych wewnętrznych.</span><span class="sxs-lookup"><span data-stu-id="a49ad-103">This page lists some common problems that can occur when you perform operations on intrinsic data types.</span></span>  

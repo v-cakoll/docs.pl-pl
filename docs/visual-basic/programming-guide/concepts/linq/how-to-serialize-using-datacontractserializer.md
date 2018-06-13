@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639353"
 ---
 # <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a><span data-ttu-id="55d36-102">Porady: serializacji przy użyciu elementu DataContractSerializer (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="55d36-102">How to: Serialize Using DataContractSerializer (Visual Basic)</span></span>
 <span data-ttu-id="55d36-103">W tym temacie przedstawiono przykładową, który serializuje i deserializuje przy użyciu <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="55d36-103">This topic shows an example that serializes and deserializes using <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  

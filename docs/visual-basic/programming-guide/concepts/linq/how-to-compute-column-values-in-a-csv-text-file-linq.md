@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643403"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a><span data-ttu-id="f9612-102">Porady: obliczanie wartości kolumn w pliku tekstowym CSV (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f9612-102">How to: Compute Column Values in a CSV Text File (LINQ) (Visual Basic)</span></span>
 <span data-ttu-id="f9612-103">Ten przykład przedstawia sposób wykonywania obliczenia agregacji, takie jak Suma, średnia, minimum i maksimum dla kolumn w pliku CSV.</span><span class="sxs-lookup"><span data-stu-id="f9612-103">This example shows how to perform aggregate computations such as Sum, Average, Min, and Max on the columns of a .csv file.</span></span> <span data-ttu-id="f9612-104">Zasady przykładzie, które są wyświetlane tutaj można zastosować do innych typów strukturalnych tekstu.</span><span class="sxs-lookup"><span data-stu-id="f9612-104">The example principles that are shown here can be applied to other types of structured text.</span></span>  

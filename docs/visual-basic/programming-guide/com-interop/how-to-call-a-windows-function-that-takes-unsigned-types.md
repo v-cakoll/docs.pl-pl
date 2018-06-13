@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643029"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a><span data-ttu-id="beb50-102">Porady: wywoływanie funkcji Windows wykorzystującej typy bez znaku (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="beb50-102">How to: Call a Windows Function that Takes Unsigned Types (Visual Basic)</span></span>
 <span data-ttu-id="beb50-103">Zużywają klasy, modułu lub struktury, która ma elementów członkowskich typu Liczba całkowita bez znaku, można uzyskać dostępu do tych elementów członkowskich za pomocą Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="beb50-103">If you are consuming a class, module, or structure that has members of unsigned integer types, you can access these members with Visual Basic.</span></span>  

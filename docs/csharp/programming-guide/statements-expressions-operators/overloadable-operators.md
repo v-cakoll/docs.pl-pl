@@ -10,6 +10,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457660"
 ---
 # <a name="overloadable-operators-c-programming-guide"></a><span data-ttu-id="4c7af-102">Operatory z możliwością przeciążenia (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="4c7af-102">Overloadable Operators (C# Programming Guide)</span></span>
 

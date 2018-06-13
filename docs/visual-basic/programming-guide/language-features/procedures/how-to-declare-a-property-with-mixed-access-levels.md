@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651414"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a><span data-ttu-id="d4eb4-102">Porady: deklarowanie właściwości z mieszanymi poziomami dostępu (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d4eb4-102">How to: Declare a Property with Mixed Access Levels (Visual Basic)</span></span>
 <span data-ttu-id="d4eb4-103">Jeśli chcesz `Get` i `Set` procedur we właściwości w celu mają różne poziomy dostępu, można użyć poziomu mniej ograniczająca w `Property` instrukcji i bardziej restrykcyjne poziomu w jednym `Get` lub `Set` instrukcji.</span><span class="sxs-lookup"><span data-stu-id="d4eb4-103">If you want the `Get` and `Set` procedures on a property to have different access levels, you can use the more permissive level in the `Property` statement and the more restrictive level in either the `Get` or `Set` statement.</span></span> <span data-ttu-id="d4eb4-104">Mieszanymi poziomami dostępu można używać we właściwości, gdy chce niektórych części kodu, aby można było pobrać wartości właściwości i części kodu, aby można było zmienić wartość.</span><span class="sxs-lookup"><span data-stu-id="d4eb4-104">You use mixed access levels on a property when you want certain parts of the code to be able to get the property's value, and certain other parts of the code to be able to change the value.</span></span>  

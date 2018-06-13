@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653917"
 ---
 # <a name="procedure-overloading-visual-basic"></a><span data-ttu-id="758a1-102">Przeciążanie procedury (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="758a1-102">Procedure Overloading (Visual Basic)</span></span>
 <span data-ttu-id="758a1-103">*Przeciążanie* procedury oznacza Definiowanie wielu wersji przy użyciu tej samej nazwie, ale listy różnych parametrów.</span><span class="sxs-lookup"><span data-stu-id="758a1-103">*Overloading* a procedure means defining it in multiple versions, using the same name but different parameter lists.</span></span> <span data-ttu-id="758a1-104">Przeciążanie służy do definiowania kilka wersji blisko związane procedury bez konieczności odróżnić je według nazwy.</span><span class="sxs-lookup"><span data-stu-id="758a1-104">The purpose of overloading is to define several closely related versions of a procedure without having to differentiate them by name.</span></span> <span data-ttu-id="758a1-105">W tym celu zróżnicowanie listy parametrów.</span><span class="sxs-lookup"><span data-stu-id="758a1-105">You do this by varying the parameter list.</span></span>  

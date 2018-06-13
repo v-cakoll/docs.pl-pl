@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653549"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a><span data-ttu-id="e81d5-102">Porady: tworzenie wyrażenia lambda (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e81d5-102">How to: Create a Lambda Expression (Visual Basic)</span></span>
 <span data-ttu-id="e81d5-103">A *wyrażenia lambda* funkcji lub procedury, która nie ma nazwy.</span><span class="sxs-lookup"><span data-stu-id="e81d5-103">A *lambda expression* is a function or subroutine that does not have a name.</span></span> <span data-ttu-id="e81d5-104">Wyrażenia lambda można tam, gdzie typ delegata jest prawidłowy.</span><span class="sxs-lookup"><span data-stu-id="e81d5-104">A lambda expression can be used wherever a delegate type is valid.</span></span>  

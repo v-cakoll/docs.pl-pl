@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638426"
 ---
 # <a name="registry-key-39ltkeynamegt39-could-not-be-created"></a><span data-ttu-id="1761a-102">Klucz rejestru &#39; &lt;keyname&gt; &#39; nie można utworzyć</span><span class="sxs-lookup"><span data-stu-id="1761a-102">Registry key &#39;&lt;keyname&gt;&#39; could not be created</span></span>
 <span data-ttu-id="1761a-103">Określony klucz rejestru nie można utworzyć, prawdopodobnie z powodu niewystarczającymi uprawnieniami.</span><span class="sxs-lookup"><span data-stu-id="1761a-103">The specified registry key could not be created, possibly because of insufficient security permissions.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636516"
 ---
 # <a name="division-by-zero-visual-basic-run-time-error"></a><span data-ttu-id="e94f3-102">Dzielenie przez zero (Visual Basic środowiska wykonawczego)</span><span class="sxs-lookup"><span data-stu-id="e94f3-102">Division by zero (Visual Basic Run-Time Error)</span></span>
 <span data-ttu-id="e94f3-103">Wyrażenie używane jako dzielnik ma wartość zero.</span><span class="sxs-lookup"><span data-stu-id="e94f3-103">An expression being used as a divisor has a value of zero.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647686"
 ---
 # <a name="how-to-search-within-a-string-visual-basic"></a><span data-ttu-id="806d5-102">Porady: wyszukiwanie wewnątrz ciągu (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="806d5-102">How to: Search Within a String (Visual Basic)</span></span>
 <span data-ttu-id="806d5-103">W tym przykładzie wywołuje <xref:System.String.IndexOf%2A> metoda <xref:System.String> obiektu do zgłaszania indeks pierwszego wystąpienia podciągu.</span><span class="sxs-lookup"><span data-stu-id="806d5-103">This example calls the <xref:System.String.IndexOf%2A> method on a <xref:System.String> object to report the index of the first occurrence of a substring.</span></span>  

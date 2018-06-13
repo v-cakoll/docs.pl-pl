@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653315"
 ---
 # <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a><span data-ttu-id="5809f-102">Porady: wnioskowanie nazw właściwości i typów w deklaracjach typu anonimowego (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5809f-102">How to: Infer Property Names and Types in Anonymous Type Declarations (Visual Basic)</span></span>
 <span data-ttu-id="5809f-103">Typy anonimowe nie zawierają mechanizmu bezpośrednio określająca typy danych właściwości.</span><span class="sxs-lookup"><span data-stu-id="5809f-103">Anonymous types provide no mechanism for directly specifying the data types of properties.</span></span> <span data-ttu-id="5809f-104">Typy wszystkich właściwości są wywnioskować.</span><span class="sxs-lookup"><span data-stu-id="5809f-104">Types of all properties are inferred.</span></span> <span data-ttu-id="5809f-105">W poniższym przykładzie typy `Name` i `Price` są wywnioskować bezpośrednio z wartości, które są używane do ich inicjowania.</span><span class="sxs-lookup"><span data-stu-id="5809f-105">In the following example, the types of `Name` and `Price` are inferred directly from the values that are used to initialize them.</span></span>  

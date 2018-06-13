@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809995"
 ---
 # <a name="routing-services"></a><span data-ttu-id="585fe-102">Usługi routingu</span><span class="sxs-lookup"><span data-stu-id="585fe-102">Routing Services</span></span>
 <span data-ttu-id="585fe-103">Ta sekcja zawiera przykłady, które prezentują sposób użycia Router Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="585fe-103">This section includes samples that demonstrate how to use the Windows Communication Foundation (WCF) Router.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642853"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a><span data-ttu-id="8c6ef-102">Porady: zapytanie w ArrayList za pomocą LINQ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8c6ef-102">How to: Query an ArrayList with LINQ (Visual Basic)</span></span>
 <span data-ttu-id="8c6ef-103">W przypadku używania LINQ do zapytania nieogólnego <xref:System.Collections.IEnumerable> kolekcji, takie jak <xref:System.Collections.ArrayList>, musisz jawnie zadeklarować typu zmienną zakresu w celu odzwierciedlenia określonego typu obiektu w kolekcji.</span><span class="sxs-lookup"><span data-stu-id="8c6ef-103">When using LINQ to query non-generic <xref:System.Collections.IEnumerable> collections such as <xref:System.Collections.ArrayList>, you must explicitly declare the type of the range variable to reflect the specific type of the objects in the collection.</span></span> <span data-ttu-id="8c6ef-104">Na przykład, jeśli masz <xref:System.Collections.ArrayList> z `Student` obiektów, z [klauzuli From](../../../../visual-basic/language-reference/queries/from-clause.md) powinna wyglądać następująco:</span><span class="sxs-lookup"><span data-stu-id="8c6ef-104">For example, if you have an <xref:System.Collections.ArrayList> of `Student` objects, your [From Clause](../../../../visual-basic/language-reference/queries/from-clause.md) should look like this:</span></span>  

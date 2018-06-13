@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649815"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a><span data-ttu-id="60543-102">Porady: definiowanie wielu wersji procedury (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="60543-102">How to: Define Multiple Versions of a Procedure (Visual Basic)</span></span>
 <span data-ttu-id="60543-103">Procedurę można zdefiniować w różnych wersjach przez *przeładowanie* go przy użyciu takiej samej nazwie, ale inną listą parametrów dla każdej wersji.</span><span class="sxs-lookup"><span data-stu-id="60543-103">You can define a procedure in multiple versions by *overloading* it, using the same name but a different parameter list for each version.</span></span> <span data-ttu-id="60543-104">Przeciążanie służy do definiowania kilka wersji blisko związane procedury bez konieczności odróżnić je według nazwy.</span><span class="sxs-lookup"><span data-stu-id="60543-104">The purpose of overloading is to define several closely related versions of a procedure without having to differentiate them by name.</span></span>  

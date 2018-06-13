@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644319"
 ---
 # <a name="collections-visual-basic"></a><span data-ttu-id="20161-102">Kolekcje (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="20161-102">Collections (Visual Basic)</span></span>
 <span data-ttu-id="20161-103">Dla wielu aplikacji, dla których chcesz Utwórz i Zarządzaj grupami powiązanych obiektów.</span><span class="sxs-lookup"><span data-stu-id="20161-103">For many applications, you want to create and manage groups of related objects.</span></span> <span data-ttu-id="20161-104">Istnieją dwa sposoby do obiektów grup: tworzenie tablic obiektów oraz tworzenie kolekcji obiektów.</span><span class="sxs-lookup"><span data-stu-id="20161-104">There are two ways to group objects: by creating arrays of objects, and by creating collections of objects.</span></span>  

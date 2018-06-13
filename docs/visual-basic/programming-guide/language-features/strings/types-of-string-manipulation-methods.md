@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648697"
 ---
 # <a name="types-of-string-manipulation-methods-in-visual-basic"></a><span data-ttu-id="32fef-102">Typy metod manipulowania ciągami w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="32fef-102">Types of String Manipulation Methods in Visual Basic</span></span>
 <span data-ttu-id="32fef-103">Istnieje kilka różnych sposobów do analizowania i manipulowania z ciągów.</span><span class="sxs-lookup"><span data-stu-id="32fef-103">There are several different ways to analyze and manipulate your strings.</span></span> <span data-ttu-id="32fef-104">Niektóre metody są częścią języka Visual Basic, a inne są związane z `String` klasy.</span><span class="sxs-lookup"><span data-stu-id="32fef-104">Some of the methods are a part of the Visual Basic language, and others are inherent in the `String` class.</span></span>  

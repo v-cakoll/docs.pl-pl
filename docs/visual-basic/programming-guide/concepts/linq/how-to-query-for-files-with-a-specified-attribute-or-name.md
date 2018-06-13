@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642914"
 ---
 # <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a><span data-ttu-id="6570f-102">Porady: zapytanie o pliki o określonym atrybucie lub nazwie (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6570f-102">How to: Query for Files with a Specified Attribute or Name (Visual Basic)</span></span>
 <span data-ttu-id="6570f-103">W tym przykładzie pokazano, jak można odnaleźć wszystkich plików mających rozszerzenie nazwy pliku (na przykład "txt") w drzewie określonego katalogu.</span><span class="sxs-lookup"><span data-stu-id="6570f-103">This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree.</span></span> <span data-ttu-id="6570f-104">Ponadto sposób zwracania albo pliku najnowsze lub najstarsze w drzewie na podstawie czasu tworzenia.</span><span class="sxs-lookup"><span data-stu-id="6570f-104">It also shows how to return either the newest or oldest file in the tree based on the creation time.</span></span>  

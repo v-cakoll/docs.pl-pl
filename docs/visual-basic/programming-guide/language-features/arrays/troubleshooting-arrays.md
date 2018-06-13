@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654271"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a><span data-ttu-id="f7c8e-102">Rozwiązywanie problemów związanych z tablicami (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f7c8e-102">Troubleshooting Arrays (Visual Basic)</span></span>
 <span data-ttu-id="f7c8e-103">Ta strona zawiera listę typowych problemów, które mogą wystąpić podczas pracy z tablicami.</span><span class="sxs-lookup"><span data-stu-id="f7c8e-103">This page lists some common problems that can occur when working with arrays.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642643"
 ---
 # <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="1b956-102">Porady: znajdowanie złożenie dwóch ścieżek lokalizacji (XPath-LINQ do XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1b956-102">How to: Find a Union of Two Location Paths (XPath-LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="1b956-103">Wyrażenie XPath umożliwia znaleźć złożenie wyników dwie ścieżki do lokalizacji XPath.</span><span class="sxs-lookup"><span data-stu-id="1b956-103">XPath allows you to find the union of the results of two XPath location paths.</span></span>  

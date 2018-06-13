@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809891"
 ---
 # <a name="controlling-auto-launching-of-wcf-service-host"></a><span data-ttu-id="bfb4e-102">Kontrolowanie automatycznego uruchamiania hosta programu WCF</span><span class="sxs-lookup"><span data-stu-id="bfb4e-102">Controlling Auto-launching of WCF Service Host</span></span>
 <span data-ttu-id="bfb4e-103">Podczas debugowania innego projektu w tym samym rozwiązaniu Visual Studio zawierający wiele projektów, można kontrolować możliwość automatycznego uruchamiania hosta usługi Windows Communication Foundation (WCF) (WcfSvcHost.exe) dla projektu biblioteki usługi WCF.</span><span class="sxs-lookup"><span data-stu-id="bfb4e-103">You can control the auto-launching capability of Windows Communication Foundation (WCF) Service Host (WcfSvcHost.exe) for a WCF Service Library project, when you debug another project in the same Visual Studio solution containing multiple projects.</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457508"
 ---
 # <a name="throw-c-reference"></a><span data-ttu-id="8de31-102">throw (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="8de31-102">throw (C# Reference)</span></span>
 <span data-ttu-id="8de31-103">Sygnalizuje wystąpienie Wystąpił wyjątek podczas wykonywania programu.</span><span class="sxs-lookup"><span data-stu-id="8de31-103">Signals the occurrence of an exception during program execution.</span></span>  

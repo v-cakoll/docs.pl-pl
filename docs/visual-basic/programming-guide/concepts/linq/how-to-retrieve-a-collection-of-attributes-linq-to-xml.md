@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641170"
 ---
 # <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-visual-basic"></a><span data-ttu-id="342c8-102">Porady: pobierania kolekcję atrybutów (LINQ do XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="342c8-102">How to: Retrieve a Collection of Attributes (LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="342c8-103">W tym temacie przedstawiono <xref:System.Xml.Linq.XElement.Attributes%2A> metody.</span><span class="sxs-lookup"><span data-stu-id="342c8-103">This topic introduces the <xref:System.Xml.Linq.XElement.Attributes%2A> method.</span></span> <span data-ttu-id="342c8-104">Ta metoda pobiera atrybuty elementu.</span><span class="sxs-lookup"><span data-stu-id="342c8-104">This method retrieves the attributes of an element.</span></span>  

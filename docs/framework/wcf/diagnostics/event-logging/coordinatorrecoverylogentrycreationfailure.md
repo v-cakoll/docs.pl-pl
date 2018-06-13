@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33469177"
 ---
 # <a name="coordinatorrecoverylogentrycreationfailure"></a><span data-ttu-id="2344c-102">CoordinatorRecoveryLogEntryCreationFailure</span><span class="sxs-lookup"><span data-stu-id="2344c-102">CoordinatorRecoveryLogEntryCreationFailure</span></span>
 <span data-ttu-id="2344c-103">Identyfikator: 140</span><span class="sxs-lookup"><span data-stu-id="2344c-103">Id: 140</span></span>  

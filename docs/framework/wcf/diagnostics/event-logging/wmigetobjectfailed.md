@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33469794"
 ---
 # <a name="wmigetobjectfailed"></a><span data-ttu-id="cd80c-102">WmiGetObjectFailed</span><span class="sxs-lookup"><span data-stu-id="cd80c-102">WmiGetObjectFailed</span></span>
 <span data-ttu-id="cd80c-103">Identyfikator: 120</span><span class="sxs-lookup"><span data-stu-id="cd80c-103">Id: 120</span></span>  

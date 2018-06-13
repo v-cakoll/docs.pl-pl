@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33469453"
 ---
 # <a name="57395---shipassertexceptionmessage"></a><span data-ttu-id="431c3-102">57395 — ShipAssertExceptionMessage</span><span class="sxs-lookup"><span data-stu-id="431c3-102">57395 - ShipAssertExceptionMessage</span></span>
 ## <a name="properties"></a><span data-ttu-id="431c3-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="431c3-103">Properties</span></span>  

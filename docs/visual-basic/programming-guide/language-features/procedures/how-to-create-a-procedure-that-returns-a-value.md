@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648440"
 ---
 # <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a><span data-ttu-id="8f392-102">Porady: tworzenie procedury, która zwraca wartość (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8f392-102">How to: Create a Procedure that Returns a Value (Visual Basic)</span></span>
 <span data-ttu-id="8f392-103">Możesz użyć `Function` procedury, aby zwrócić wartość do wywołującego kodu.</span><span class="sxs-lookup"><span data-stu-id="8f392-103">You use a `Function` procedure to return a value to the calling code.</span></span>  

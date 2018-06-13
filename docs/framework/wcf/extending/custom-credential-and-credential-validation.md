@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803456"
 ---
 # <a name="custom-credential-and-credential-validation"></a><span data-ttu-id="a3543-102">Niestandardowe poświadczenia i walidacja poświadczeń</span><span class="sxs-lookup"><span data-stu-id="a3543-102">Custom Credential and Credential Validation</span></span>
 <span data-ttu-id="a3543-103">Zabezpieczenia w systemie Windows Communication Foundation (WCF) są oparte na wymiany poświadczeń między usług i klientów.</span><span class="sxs-lookup"><span data-stu-id="a3543-103">Security in Windows Communication Foundation (WCF) is based on the exchange of credentials between services and clients.</span></span> <span data-ttu-id="a3543-104">Większość scenariuszy zabezpieczeń można spełnić przy użyciu popularnych typów poświadczeń, takie jak Windows (Kerberos), nazwę użytkownika i hasła i certyfikatów.</span><span class="sxs-lookup"><span data-stu-id="a3543-104">Most security scenarios can be satisfied using common credential types, such as Windows (Kerberos), username and passwords, and certificates.</span></span> <span data-ttu-id="a3543-105">Jednak jeśli nowy typ poświadczeń jest wymagane, tematy w tej sekcji opisano sposób obsługi i weryfikowanie nowych typów.</span><span class="sxs-lookup"><span data-stu-id="a3543-105">However, if a new type of credential is required, the topics in this section explain how to handle and validate new types.</span></span>  

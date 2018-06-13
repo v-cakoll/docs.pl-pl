@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808611"
 ---
 # <a name="durable-instance-context"></a><span data-ttu-id="a7e55-102">Kontekst niezawodnej instancji</span><span class="sxs-lookup"><span data-stu-id="a7e55-102">Durable Instance Context</span></span>
 <span data-ttu-id="a7e55-103">W tym przykładzie pokazano, jak dostosować włączyć kontekst niezawodnej instancji środowiska uruchomieniowego systemu Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="a7e55-103">This sample demonstrates how to customize the Windows Communication Foundation (WCF) runtime to enable durable instance contexts.</span></span> <span data-ttu-id="a7e55-104">SQL Server 2005 używa jako magazynu zapasowego, jego (SQL Server 2005 Express w tym przypadku).</span><span class="sxs-lookup"><span data-stu-id="a7e55-104">It uses SQL Server 2005 as its backing store (SQL Server 2005 Express in this case).</span></span> <span data-ttu-id="a7e55-105">Jednak umożliwia także sposób uzyskać dostępu do magazynu niestandardowych mechanizmów.</span><span class="sxs-lookup"><span data-stu-id="a7e55-105">However, it also provides a way to access custom storage mechanisms.</span></span>  

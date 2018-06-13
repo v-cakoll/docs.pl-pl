@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649386"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a><span data-ttu-id="b4cde-102">Nieprawidłowa zawartość klasy XElement i obiektów klasy XDocument</span><span class="sxs-lookup"><span data-stu-id="b4cde-102">Valid Content of XElement and XDocument Objects</span></span>
 <span data-ttu-id="b4cde-103">W tym temacie opisano nieprawidłowe argumenty, które mogą zostać przekazane do konstruktorów i metod, które umożliwia dodawanie zawartości do elementów i dokumentów.</span><span class="sxs-lookup"><span data-stu-id="b4cde-103">This topic describes the valid arguments that can be passed to constructors and methods that you use to add content to elements and documents.</span></span>  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655215"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a><span data-ttu-id="2a09e-102">Porady: dopasowywanie ciągu do wzorca (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2a09e-102">How to: Match a String against a Pattern (Visual Basic)</span></span>
 <span data-ttu-id="2a09e-103">Aby sprawdzić, czy wyrażenie [String — typ danych](../../../../visual-basic/language-reference/data-types/string-data-type.md) spełnia wzorzec, a następnie można użyć [operatora Like](../../../../visual-basic/language-reference/operators/like-operator.md).</span><span class="sxs-lookup"><span data-stu-id="2a09e-103">If you want to find out if an expression of the [String Data Type](../../../../visual-basic/language-reference/data-types/string-data-type.md) satisfies a pattern, then you can use the [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md).</span></span>  

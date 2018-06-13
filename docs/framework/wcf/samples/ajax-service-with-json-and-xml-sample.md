@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807348"
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a><span data-ttu-id="1e555-102">Usługa AJAX z formatami JSON i XML — przykład</span><span class="sxs-lookup"><span data-stu-id="1e555-102">AJAX Service with JSON and XML Sample</span></span>
 <span data-ttu-id="1e555-103">W tym przykładzie pokazano, jak używać usługi Windows Communication Foundation (WCF) do tworzenia usługi asynchronicznego JavaScript i XML (AJAX), która zwraca dane JavaScript Object Notation (JSON) lub XML.</span><span class="sxs-lookup"><span data-stu-id="1e555-103">This sample demonstrates how to use Windows Communication Foundation (WCF) to create an Asynchronous JavaScript and XML (AJAX) service that returns either JavaScript Object Notation (JSON) or XML data.</span></span> <span data-ttu-id="1e555-104">Usługa AJAX mogą korzystać za pomocą kodu JavaScript w kliencie przeglądarki sieci Web.</span><span class="sxs-lookup"><span data-stu-id="1e555-104">You can access an AJAX service by using JavaScript code from a Web browser client.</span></span> <span data-ttu-id="1e555-105">Ten przykład jest oparty na [podstawowa usługa AJAX](../../../../docs/framework/wcf/samples/basic-ajax-service.md) próbki.</span><span class="sxs-lookup"><span data-stu-id="1e555-105">This sample builds on the [Basic AJAX Service](../../../../docs/framework/wcf/samples/basic-ajax-service.md) sample.</span></span>  

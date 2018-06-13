@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651482"
 ---
 # <a name="declared-element-names-visual-basic"></a><span data-ttu-id="6f7df-102">Zadeklarowane nazwy elementów (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6f7df-102">Declared Element Names (Visual Basic)</span></span>
 <span data-ttu-id="6f7df-103">Każdy element zadeklarowane ma nazwę, nazywany również *identyfikator*, czyli w kodzie użyto odwoływanie się do niego.</span><span class="sxs-lookup"><span data-stu-id="6f7df-103">Every declared element has a name, also called an *identifier*, which is what the code uses to refer to it.</span></span>  

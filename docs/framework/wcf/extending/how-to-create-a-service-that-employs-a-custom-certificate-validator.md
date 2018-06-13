@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808146"
 ---
 # <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a><span data-ttu-id="f1cf6-102">Instrukcje: Tworzenie usługi korzystającej z niestandardowego modułu weryfikacji certyfikatów</span><span class="sxs-lookup"><span data-stu-id="f1cf6-102">How to: Create a Service that Employs a Custom Certificate Validator</span></span>
 <span data-ttu-id="f1cf6-103">W tym temacie przedstawiono sposób implementacji niestandardowego modułu weryfikacji certyfikatów i sposobie konfigurowania poświadczeń klienta lub usługę, należy zastąpić domyślną logikę sprawdzania poprawności certyfikatu niestandardowego modułu weryfikacji certyfikatów.</span><span class="sxs-lookup"><span data-stu-id="f1cf6-103">This topic shows how to implement a custom certificate validator and how to configure client or service credentials to replace the default certificate validation logic with the custom certificate validator.</span></span>  

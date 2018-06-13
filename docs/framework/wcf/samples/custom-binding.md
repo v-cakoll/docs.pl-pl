@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803384"
 ---
 # <a name="custom-binding"></a><span data-ttu-id="e3c96-102">Powiązanie niestandardowe</span><span class="sxs-lookup"><span data-stu-id="e3c96-102">Custom Binding</span></span>
 <span data-ttu-id="e3c96-103">Ta sekcja zawiera przykłady ilustrujące przy użyciu atrybutu niestandardowego powiązania elementu punktu końcowego.</span><span class="sxs-lookup"><span data-stu-id="e3c96-103">This section contains samples that demonstrate using a custom binding attribute of an endpoint element.</span></span>  

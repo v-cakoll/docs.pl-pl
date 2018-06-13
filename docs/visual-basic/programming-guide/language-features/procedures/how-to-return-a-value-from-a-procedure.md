@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651837"
 ---
 # <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a><span data-ttu-id="706d8-102">Porady: zwracanie wartości z procedury (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="706d8-102">How to: Return a Value from a Procedure (Visual Basic)</span></span>
 <span data-ttu-id="706d8-103">A `Function` procedury zwraca wartość do wywołującego kodu albo wykonując `Return` instrukcji lub napotkania `Exit Function` lub `End Function` instrukcji.</span><span class="sxs-lookup"><span data-stu-id="706d8-103">A `Function` procedure returns a value to the calling code either by executing a `Return` statement or by encountering an `Exit Function` or `End Function` statement.</span></span>  

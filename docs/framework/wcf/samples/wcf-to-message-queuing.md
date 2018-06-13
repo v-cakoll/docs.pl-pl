@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806373"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a><span data-ttu-id="1ca87-102">Wysyłanie komunikatów z usługi WCF do usługi kolejkowania komunikatów</span><span class="sxs-lookup"><span data-stu-id="1ca87-102">Windows Communication Foundation to Message Queuing</span></span>
 <span data-ttu-id="1ca87-103">W przykładzie pokazano, jak aplikacji Windows Communication Foundation (WCF) można wysłać wiadomości do aplikacji usługi kolejkowania komunikatów (MSMQ).</span><span class="sxs-lookup"><span data-stu-id="1ca87-103">This sample demonstrates how a Windows Communication Foundation (WCF) application can send a message to a Message Queuing (MSMQ) application.</span></span> <span data-ttu-id="1ca87-104">Usługa jest aplikacji konsoli siebie umożliwia obserwowanie usługi odbieranie wiadomości w kolejce.</span><span class="sxs-lookup"><span data-stu-id="1ca87-104">The service is a self-hosted console application to enable you to observe the service receiving queued messages.</span></span> <span data-ttu-id="1ca87-105">Usługa i klient ma być uruchomiona w tym samym czasie.</span><span class="sxs-lookup"><span data-stu-id="1ca87-105">The service and client do not have to be running at the same time.</span></span>  

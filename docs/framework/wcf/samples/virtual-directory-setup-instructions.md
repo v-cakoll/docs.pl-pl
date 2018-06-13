@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806916"
 ---
 # <a name="virtual-directory-setup-instructions"></a><span data-ttu-id="aeeeb-102">Instrukcje dotyczące konfigurowania katalogów wirtualnych</span><span class="sxs-lookup"><span data-stu-id="aeeeb-102">Virtual Directory Setup Instructions</span></span>
 <span data-ttu-id="aeeeb-103">Przykłady Windows Communication Foundation (WCF) będą udostępniać wspólnej katalog wirtualny o nazwie servicemodelsamples, który jest zamapowany na %SystemDrive%\inetpub\wwwroot\servicemodelsamples folder.</span><span class="sxs-lookup"><span data-stu-id="aeeeb-103">The Windows Communication Foundation (WCF) samples are intended to share a common virtual directory named servicemodelsamples that is mapped to the %SystemDrive%\inetpub\wwwroot\servicemodelsamples folder.</span></span>  

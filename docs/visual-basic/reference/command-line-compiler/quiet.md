@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652399"
 ---
 # <a name="-quiet"></a><span data-ttu-id="1529e-102">-quiet</span><span class="sxs-lookup"><span data-stu-id="1529e-102">-quiet</span></span>
 <span data-ttu-id="1529e-103">Uniemożliwia wyświetlanie kodu dotyczące składni błędów i ostrzeżeń kompilatora.</span><span class="sxs-lookup"><span data-stu-id="1529e-103">Prevents the compiler from displaying code for syntax-related errors and warnings.</span></span>  

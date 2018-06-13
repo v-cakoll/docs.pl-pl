@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809748"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a><span data-ttu-id="22a82-102">Testowy klient WCF (WcfTestClient.exe)</span><span class="sxs-lookup"><span data-stu-id="22a82-102">WCF Test Client (WcfTestClient.exe)</span></span>
 <span data-ttu-id="22a82-103">Windows Communication Foundation (WCF) testowanie klienta (WcfTestClient.exe) jest narzędzie graficznego interfejsu użytkownika, które użytkownicy mogą wprowadzić parametry testu, że dane wejściowe do usługi przesyłania i wyświetlić usługi odsyła odpowiedź.</span><span class="sxs-lookup"><span data-stu-id="22a82-103">Windows Communication Foundation (WCF) Test Client (WcfTestClient.exe) is a GUI tool that enables users to input test parameters, submit that input to the service, and view the response that the service sends back.</span></span> <span data-ttu-id="22a82-104">Zapewnia bezproblemowe usługi testowania czynności w połączeniu z hosta usługi WCF.</span><span class="sxs-lookup"><span data-stu-id="22a82-104">It provides a seamless service testing experience when combined with WCF Service Host.</span></span>  

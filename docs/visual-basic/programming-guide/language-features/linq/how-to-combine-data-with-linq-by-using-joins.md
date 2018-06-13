@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653458"
 ---
 # <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a><span data-ttu-id="29ab5-102">Porady: łączenie danych w LINQ za pomocą sprzężeń (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="29ab5-102">How to: Combine Data with LINQ by Using Joins (Visual Basic)</span></span>
 <span data-ttu-id="29ab5-103">Visual Basic zapewnia `Join` i `Group Join` zapytania klauzule umożliwiają łączenie zawartości wielu kolekcji na podstawie wartości typowych między kolekcjami.</span><span class="sxs-lookup"><span data-stu-id="29ab5-103">Visual Basic provides the `Join` and `Group Join` query clauses to enable you to combine the contents of multiple collections based on common values between the collections.</span></span> <span data-ttu-id="29ab5-104">Te wartości są określane jako *klucza* wartości.</span><span class="sxs-lookup"><span data-stu-id="29ab5-104">These values are known as *key* values.</span></span> <span data-ttu-id="29ab5-105">Rozpozna znasz koncepcji relacyjnej bazy danych dla deweloperów `Join` klauzuli jako INNER JOIN i `Group Join` klauzuli jako efektywnie LEFT OUTER JOIN.</span><span class="sxs-lookup"><span data-stu-id="29ab5-105">Developers familiar with relational database concepts will recognize the `Join` clause as an INNER JOIN and the `Group Join` clause as, effectively, a LEFT OUTER JOIN.</span></span>  

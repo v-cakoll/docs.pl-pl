@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655724"
 ---
 # <a name="statements-in-visual-basic"></a><span data-ttu-id="5c24b-102">Instrukcje w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="5c24b-102">Statements in Visual Basic</span></span>
 <span data-ttu-id="5c24b-103">Instrukcji w języku Visual Basic jest pełną instrukcję.</span><span class="sxs-lookup"><span data-stu-id="5c24b-103">A statement in Visual Basic is a complete instruction.</span></span> <span data-ttu-id="5c24b-104">Może zawierać słów kluczowych, operatory, zmienne, stałe i wyrażenia.</span><span class="sxs-lookup"><span data-stu-id="5c24b-104">It can contain keywords, operators, variables, constants, and expressions.</span></span> <span data-ttu-id="5c24b-105">Każda instrukcja należy do jednej z następujących kategorii:</span><span class="sxs-lookup"><span data-stu-id="5c24b-105">Each statement belongs to one of the following categories:</span></span>  

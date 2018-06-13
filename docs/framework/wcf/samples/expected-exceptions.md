@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805827"
 ---
 # <a name="expected-exceptions"></a><span data-ttu-id="d826b-102">Oczekiwane wyjątki</span><span class="sxs-lookup"><span data-stu-id="d826b-102">Expected Exceptions</span></span>
 <span data-ttu-id="d826b-103">W tym przykładzie pokazano, jak catch oczekiwane wyjątki, używając typu klienta.</span><span class="sxs-lookup"><span data-stu-id="d826b-103">This sample demonstrates how to catch expected exceptions when using a typed client.</span></span> <span data-ttu-id="d826b-104">Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi Kalkulator.</span><span class="sxs-lookup"><span data-stu-id="d826b-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span> <span data-ttu-id="d826b-105">W tym przykładzie klient jest aplikacji konsoli (.exe), a usługa jest obsługiwana przez Internet Information Services (IIS).</span><span class="sxs-lookup"><span data-stu-id="d826b-105">In this sample, the client is a console application (.exe) and the service is hosted by Internet Information Services (IIS).</span></span>  

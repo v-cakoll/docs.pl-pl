@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807322"
 ---
 # <a name="using-performance-counters"></a><span data-ttu-id="ffab0-102">Używanie liczników wydajności</span><span class="sxs-lookup"><span data-stu-id="ffab0-102">Using Performance Counters</span></span>
 <span data-ttu-id="ffab0-103">W tym przykładzie przedstawiono sposób dostępu do liczników wydajności systemu Windows Communication Foundation (WCF) oraz sposobu tworzenia liczników wydajności zdefiniowanych przez użytkownika.</span><span class="sxs-lookup"><span data-stu-id="ffab0-103">This sample demonstrates how to access Windows Communication Foundation (WCF) performance counters and how to create user-defined performance counters.</span></span> <span data-ttu-id="ffab0-104">Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="ffab0-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803430"
 ---
 # <a name="ajax"></a><span data-ttu-id="4a10e-102">AJAX</span><span class="sxs-lookup"><span data-stu-id="4a10e-102">AJAX</span></span>
 <span data-ttu-id="4a10e-103">Ta sekcja zawiera przykłady ilustrujące funkcji asynchronicznych języka JavaScript i XML.</span><span class="sxs-lookup"><span data-stu-id="4a10e-103">This section includes samples that demonstrate Asynchronous JavaScript and XML functionality.</span></span>  

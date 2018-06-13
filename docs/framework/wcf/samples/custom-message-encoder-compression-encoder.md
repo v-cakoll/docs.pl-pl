@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808744"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a><span data-ttu-id="0d442-102">Niestandardowy koder komunikatów: Koder kompresji</span><span class="sxs-lookup"><span data-stu-id="0d442-102">Custom Message Encoder: Compression Encoder</span></span>
 <span data-ttu-id="0d442-103">W tym przykładzie pokazano, jak wdrożyć niestandardowego kodera przy użyciu platformy Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="0d442-103">This sample demonstrates how to implement a custom encoder using the Windows Communication Foundation (WCF) platform.</span></span>  

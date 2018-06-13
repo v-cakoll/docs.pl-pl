@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33802980"
 ---
 # <a name="viewing-message-logs"></a><span data-ttu-id="ad8b5-102">Wyświetlanie dzienników komunikatów</span><span class="sxs-lookup"><span data-stu-id="ad8b5-102">Viewing Message Logs</span></span>
 <span data-ttu-id="ad8b5-103">W tym temacie opisano sposób wyświetlania dzienników komunikatów.</span><span class="sxs-lookup"><span data-stu-id="ad8b5-103">This topic describes how you can view message logs.</span></span>  

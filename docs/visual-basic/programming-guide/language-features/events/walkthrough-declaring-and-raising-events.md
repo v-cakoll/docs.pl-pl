@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652812"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a><span data-ttu-id="77a72-102">Wskazówki: deklarowanie i wywoływanie zdarzeń (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="77a72-102">Walkthrough: Declaring and Raising Events (Visual Basic)</span></span>
 <span data-ttu-id="77a72-103">W tym przewodniku pokazano, jak deklarowanie i wywoływanie zdarzeń klasy o nazwie `Widget`.</span><span class="sxs-lookup"><span data-stu-id="77a72-103">This walkthrough demonstrates how to declare and raise events for a class named `Widget`.</span></span> <span data-ttu-id="77a72-104">Po wykonaniu kroków warto przeczytać temat Pomocnika [wskazówki: Obsługa zdarzeń](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), który wskazuje, jak używać zdarzeń z `Widget` obiektów, aby podać informacje o stanie w aplikacji.</span><span class="sxs-lookup"><span data-stu-id="77a72-104">After you complete the steps, you might want to read the companion topic, [Walkthrough: Handling Events](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), which shows how to use events from `Widget` objects to provide status information in an application.</span></span>  

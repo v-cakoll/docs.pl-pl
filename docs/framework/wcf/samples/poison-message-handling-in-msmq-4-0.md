@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809508"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a><span data-ttu-id="795a0-102">Obsługa zanieczyszczonych komunikatów w usłudze MSMQ 4.0</span><span class="sxs-lookup"><span data-stu-id="795a0-102">Poison Message Handling in MSMQ 4.0</span></span>
 <span data-ttu-id="795a0-103">W tym przykładzie pokazano, jak wykonać Trująca wiadomość została obsługa w usłudze.</span><span class="sxs-lookup"><span data-stu-id="795a0-103">This sample demonstrates how to perform poison message handling in a service.</span></span> <span data-ttu-id="795a0-104">Ten przykład jest oparty na [nietransakcyjnego powiązanie MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) próbki.</span><span class="sxs-lookup"><span data-stu-id="795a0-104">This sample is based on the [Transacted MSMQ Binding](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) sample.</span></span> <span data-ttu-id="795a0-105">W przykładzie użyto `netMsmqBinding`.</span><span class="sxs-lookup"><span data-stu-id="795a0-105">This sample uses the `netMsmqBinding`.</span></span> <span data-ttu-id="795a0-106">Usługa jest aplikacji konsoli siebie umożliwia obserwowanie usługi odbieranie wiadomości w kolejce.</span><span class="sxs-lookup"><span data-stu-id="795a0-106">The service is a self-hosted console application to enable you to observe the service receiving queued messages.</span></span>  

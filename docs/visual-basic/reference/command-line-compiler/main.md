@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652925"
 ---
 # <a name="-main"></a><span data-ttu-id="ae6fb-102">-main</span><span class="sxs-lookup"><span data-stu-id="ae6fb-102">-main</span></span>
 <span data-ttu-id="ae6fb-103">Określa klasę lub moduł, który zawiera `Sub Main` procedury.</span><span class="sxs-lookup"><span data-stu-id="ae6fb-103">Specifies the class or module that contains the `Sub Main` procedure.</span></span>  

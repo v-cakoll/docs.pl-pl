@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806581"
 ---
 # <a name="configuration-channel-factory"></a><span data-ttu-id="1cd89-102">Fabryka kanałów konfiguracji</span><span class="sxs-lookup"><span data-stu-id="1cd89-102">Configuration Channel Factory</span></span>
 <span data-ttu-id="1cd89-103">W tym przykładzie przedstawiono użycie <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>.</span><span class="sxs-lookup"><span data-stu-id="1cd89-103">This sample covers the usage of the <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>.</span></span> <span data-ttu-id="1cd89-104"><xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> Umożliwia centralne zarządzanie konfiguracją klienta WCF.</span><span class="sxs-lookup"><span data-stu-id="1cd89-104">The <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> allows central management of WCF client configuration.</span></span> <span data-ttu-id="1cd89-105">Może to być również przydatne w scenariuszach, w których konfiguracja jest wybrane lub zmienić po czas ładowania domeny aplikacji.</span><span class="sxs-lookup"><span data-stu-id="1cd89-105">This can also be useful in scenarios in which configuration is selected or changed after the application domain load time.</span></span>  

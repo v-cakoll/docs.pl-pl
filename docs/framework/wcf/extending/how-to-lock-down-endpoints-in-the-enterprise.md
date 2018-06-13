@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806542"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a><span data-ttu-id="756a0-102">Porady: blokowanie punktów końcowych w przedsiębiorstwie</span><span class="sxs-lookup"><span data-stu-id="756a0-102">How to: Lock Down Endpoints in the Enterprise</span></span>
 <span data-ttu-id="756a0-103">Duże przedsiębiorstwa często wymagają, że aplikacje są tworzone zgodnie z zasadami zabezpieczeń organizacji.</span><span class="sxs-lookup"><span data-stu-id="756a0-103">Large enterprises often require that applications are developed in compliance with enterprise security policies.</span></span> <span data-ttu-id="756a0-104">Poniższy temat omówiono sposób rozwijać i zainstalować moduł weryfikacji punktu końcowego klienta używany do sprawdzania poprawności wszystkich aplikacji klienckich Windows Communication Foundation (WCF) zainstalowane na komputerach.</span><span class="sxs-lookup"><span data-stu-id="756a0-104">The following topic discusses how to develop and install a client endpoint validator that can be used to validate all Windows Communication Foundation (WCF) client applications installed on computers.</span></span>  

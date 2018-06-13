@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803793"
 ---
 # <a name="address-headers"></a><span data-ttu-id="68343-102">Nagłówki adresów</span><span class="sxs-lookup"><span data-stu-id="68343-102">Address Headers</span></span>
 <span data-ttu-id="68343-103">Przykładowy adres nagłówki pokazano, jak klientów można przekazywać parametrów odwołania do usługi przy użyciu usługi Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="68343-103">The Address Headers sample demonstrates how clients can pass reference parameters to a service using Windows Communication Foundation (WCF).</span></span>  

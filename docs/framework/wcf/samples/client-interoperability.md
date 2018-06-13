@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803443"
 ---
 # <a name="client-interoperability"></a><span data-ttu-id="719dc-102">Współdziałanie klienta</span><span class="sxs-lookup"><span data-stu-id="719dc-102">Client Interoperability</span></span>
 <span data-ttu-id="719dc-103">Ta sekcja zawiera przykłady ilustrujące współdziałanie usług Windows Communication Foundation (WCF) i innymi technologiami.</span><span class="sxs-lookup"><span data-stu-id="719dc-103">This section contains samples that demonstrate interoperability between Windows Communication Foundation (WCF) and other technologies.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808965"
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a><span data-ttu-id="0fc1a-102">Jak: utworzyć dostawcę tokenu zabezpieczającego niestandardowych</span><span class="sxs-lookup"><span data-stu-id="0fc1a-102">How to: Create a Custom Security Token Provider</span></span>
 <span data-ttu-id="0fc1a-103">W tym temacie przedstawiono sposób tworzenia nowych typów tokenu z dostawcę tokenu zabezpieczającego niestandardowych i sposobu integracji dostawcy z Menedżer tokenów zabezpieczających niestandardowych.</span><span class="sxs-lookup"><span data-stu-id="0fc1a-103">This topic shows how to create new token types with a custom security token provider and how to integrate the provider with a custom security token manager.</span></span>  

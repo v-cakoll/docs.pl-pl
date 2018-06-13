@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808487"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a><span data-ttu-id="d5524-102">Wskazówki: Tworzenie niestandardowego klienta i poświadczeń usługi</span><span class="sxs-lookup"><span data-stu-id="d5524-102">Walkthrough: Creating Custom Client and Service Credentials</span></span>
 <span data-ttu-id="d5524-103">W tym temacie pokazano sposób użycia niestandardowych poświadczeń z kodu aplikacji oraz sposobu wdrażania niestandardowego klienta i poświadczeń usługi.</span><span class="sxs-lookup"><span data-stu-id="d5524-103">This topic shows how to implement custom client and service credentials and how to use custom credentials from application code.</span></span>  

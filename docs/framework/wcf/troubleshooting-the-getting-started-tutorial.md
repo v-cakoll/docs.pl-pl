@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807791"
 ---
 # <a name="troubleshooting-the-getting-started-tutorial"></a><span data-ttu-id="51d86-102">Rozwiązywanie problemów z samouczkiem dotyczącym wprowadzenia</span><span class="sxs-lookup"><span data-stu-id="51d86-102">Troubleshooting the Getting Started Tutorial</span></span>
 <span data-ttu-id="51d86-103">W tym temacie wymieniono najczęściej występujących problemów podczas pracy za pośrednictwem Samouczek wprowadzający i sposobu ich rozwiązania.</span><span class="sxs-lookup"><span data-stu-id="51d86-103">This topic lists the most common problems encountered when working through the Getting Started Tutorial and how to resolve them.</span></span>  

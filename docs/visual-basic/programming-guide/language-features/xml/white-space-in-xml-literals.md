@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649753"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a><span data-ttu-id="df500-102">Odstęp w literałach XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="df500-102">White Space in XML Literals (Visual Basic)</span></span>
 <span data-ttu-id="df500-103">Kompilator Visual Basic zawiera znaki znaczące białe literał XML podczas tworzenia [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] obiektu.</span><span class="sxs-lookup"><span data-stu-id="df500-103">The Visual Basic compiler incorporates only the significant white space characters from an XML literal when it creates a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object.</span></span> <span data-ttu-id="df500-104">Nie są włączane znaków nieznaczne biały znak.</span><span class="sxs-lookup"><span data-stu-id="df500-104">The insignificant white space characters are not incorporated.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806263"
 ---
 # <a name="contract-first-tool"></a><span data-ttu-id="54d72-102">Narzędzie Contract-First</span><span class="sxs-lookup"><span data-stu-id="54d72-102">Contract-First Tool</span></span>
 <span data-ttu-id="54d72-103">Kontrakty usług często muszą być utworzone na podstawie istniejących usług.</span><span class="sxs-lookup"><span data-stu-id="54d72-103">Service contracts often need to be created from existing services.</span></span> <span data-ttu-id="54d72-104">W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], klasy kontraktu danych mogą być tworzone automatycznie z istniejącymi usługami za pomocą narzędzie contract-first.</span><span class="sxs-lookup"><span data-stu-id="54d72-104">In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], data contract classes can be created automatically from existing services using the contract-first tool.</span></span> <span data-ttu-id="54d72-105">Aby użyć narzędzie contract-first, plik definicji schematu XML (XSD), należy pobrać lokalnie; Narzędzie nie może zaimportować kontraktów danych zdalnych za pośrednictwem protokołu HTTP.</span><span class="sxs-lookup"><span data-stu-id="54d72-105">To use the contract-first tool, the XML schema definition file (XSD) must be downloaded locally; the tool cannot import remote data contracts via HTTP.</span></span>  

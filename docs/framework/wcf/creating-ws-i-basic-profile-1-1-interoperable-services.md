@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804953"
 ---
 # <a name="creating-ws-i-basic-profile-11-interoperable-services"></a><span data-ttu-id="0a4b7-102">Tworzenie usług międzyoperacyjnych 1.1 profilu podstawowego WS-I</span><span class="sxs-lookup"><span data-stu-id="0a4b7-102">Creating WS-I Basic Profile 1.1 Interoperable Services</span></span>
 <span data-ttu-id="0a4b7-103">Aby skonfigurować punkt końcowy usługi WCF do współdziałać z [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] obsługi klientów w sieci Web:</span><span class="sxs-lookup"><span data-stu-id="0a4b7-103">To configure a WCF service endpoint to be interoperable with [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web service clients:</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805892"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a><span data-ttu-id="86abb-102">Wybieranie platformy wymiany komunikatów</span><span class="sxs-lookup"><span data-stu-id="86abb-102">Choosing a Message Exchange Pattern</span></span>
 <span data-ttu-id="86abb-103">Pierwszą czynnością przy tworzeniu niestandardowych transportu jest podjęcie decyzji, które *komunikatu wzorce exchange* (lub MEPs) są wymagane dla kanału tworzysz.</span><span class="sxs-lookup"><span data-stu-id="86abb-103">The first step in writing a custom transport is to decide which *message exchange patterns* (or MEPs) are required for the channel you are developing.</span></span> <span data-ttu-id="86abb-104">W tym temacie opisano dostępne opcje oraz omówiono różne wymagania.</span><span class="sxs-lookup"><span data-stu-id="86abb-104">This topic describes the options available and discusses the various requirements.</span></span> <span data-ttu-id="86abb-105">Jest to pierwsze zadanie na liście zadań rozwoju kanału opisane w [kanały rozwijających się](../../../../docs/framework/wcf/extending/developing-channels.md).</span><span class="sxs-lookup"><span data-stu-id="86abb-105">This is the first task in the channel development task list described in [Developing Channels](../../../../docs/framework/wcf/extending/developing-channels.md).</span></span>  

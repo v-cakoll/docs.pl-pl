@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805450"
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a><span data-ttu-id="9f325-102">Tworzenie i wdrażanie usług danych WCF</span><span class="sxs-lookup"><span data-stu-id="9f325-102">Developing and Deploying WCF Data Services</span></span>
 <span data-ttu-id="9f325-103">Ten temat zawiera informacje o tworzeniu i wdrażaniu [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9f325-103">This topic provides information about developing and deploying [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].</span></span> <span data-ttu-id="9f325-104">Aby uzyskać więcej ogólnych informacji o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], zobacz [wprowadzenie](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md) i [omówienie](../../../../docs/framework/data/wcf/wcf-data-services-overview.md).</span><span class="sxs-lookup"><span data-stu-id="9f325-104">For more basic information about [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], see [Getting Started](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md) and [Overview](../../../../docs/framework/data/wcf/wcf-data-services-overview.md).</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650030"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a><span data-ttu-id="c07f1-102">Porady: deklarowanie struktury (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c07f1-102">How to: Declare a Structure (Visual Basic)</span></span>
 <span data-ttu-id="c07f1-103">Rozpocznij deklaracji struktury z [Structure — instrukcja](../../../../visual-basic/language-reference/statements/structure-statement.md), i zakończyć je z `End` `Structure` instrukcji.</span><span class="sxs-lookup"><span data-stu-id="c07f1-103">You begin a structure declaration with the [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md), and you end it with the `End` `Structure` statement.</span></span> <span data-ttu-id="c07f1-104">Między te dwie instrukcje muszą deklarować co najmniej jeden *elementu*.</span><span class="sxs-lookup"><span data-stu-id="c07f1-104">Between these two statements you must declare at least one *element*.</span></span> <span data-ttu-id="c07f1-105">Elementy mogą być dowolnego typu danych, ale co najmniej jeden musi być udostępniana zmiennej lub zdarzeń udostępniana, standardowych.</span><span class="sxs-lookup"><span data-stu-id="c07f1-105">The elements can be of any data type, but at least one must be either a nonshared variable or a nonshared, noncustom event.</span></span>  

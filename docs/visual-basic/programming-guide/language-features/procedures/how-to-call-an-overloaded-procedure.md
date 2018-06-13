@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649129"
 ---
 # <a name="how-to-call-an-overloaded-procedure-visual-basic"></a><span data-ttu-id="5b6d6-102">Porady: wywoływanie procedury przeciążenia (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5b6d6-102">How to: Call an Overloaded Procedure (Visual Basic)</span></span>
 <span data-ttu-id="5b6d6-103">Zaletą przeciążanie procedury jest elastyczność wywołania.</span><span class="sxs-lookup"><span data-stu-id="5b6d6-103">The advantage of overloading a procedure is in the flexibility of the call.</span></span> <span data-ttu-id="5b6d6-104">Kod wywołujący można uzyskać informacje potrzebne do przekazania do procedury, a następnie wywołać nazwa jednej procedury, niezależnie od tego, jakie argumentów jest przekazanie go.</span><span class="sxs-lookup"><span data-stu-id="5b6d6-104">The calling code can obtain the information it needs to pass to the procedure and then call a single procedure name, no matter what arguments it is passing.</span></span>  

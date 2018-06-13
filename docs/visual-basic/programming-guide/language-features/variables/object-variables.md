@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649116"
 ---
 # <a name="object-variables-in-visual-basic"></a><span data-ttu-id="414d3-102">Zmienne obiektów w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="414d3-102">Object Variables in Visual Basic</span></span>
 <span data-ttu-id="414d3-103">Oprócz wartości są przechowywane bezpośrednio, zmienna może odwoływać się do obiektu.</span><span class="sxs-lookup"><span data-stu-id="414d3-103">In addition to storing values directly, a variable can refer to an object.</span></span> <span data-ttu-id="414d3-104">Obiekt można przypisać do zmiennej przyczyn przypisać wartości do zmiennej:</span><span class="sxs-lookup"><span data-stu-id="414d3-104">You assign an object to a variable for the same reasons you assign any value to a variable:</span></span>  

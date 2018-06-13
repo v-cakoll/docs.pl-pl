@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809095"
 ---
 # <a name="client"></a><span data-ttu-id="110f0-102">Klient</span><span class="sxs-lookup"><span data-stu-id="110f0-102">Client</span></span>
 <span data-ttu-id="110f0-103">Ta sekcja zawiera przykłady ilustrujące aplikacje klienckie usługi Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="110f0-103">This section contains samples that demonstrate Windows Communication Foundation (WCF) client applications.</span></span>  

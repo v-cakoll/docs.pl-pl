@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809761"
 ---
 # <a name="activity-list"></a><span data-ttu-id="c956a-102">Lista działań</span><span class="sxs-lookup"><span data-stu-id="c956a-102">Activity List</span></span>
 <span data-ttu-id="c956a-103">Ten temat zawiera listę wszystkich działań, które są zdefiniowane przez Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="c956a-103">This topic lists all the activities defined by Windows Communication Foundation (WCF).</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805411"
 ---
 # <a name="aspnet-caching-integration"></a><span data-ttu-id="2b7ac-102">Integracja buforowania platformy ASP.NET</span><span class="sxs-lookup"><span data-stu-id="2b7ac-102">ASP.NET Caching Integration</span></span>
 <span data-ttu-id="2b7ac-103">W tym przykładzie pokazano, jak korzystać z pamięci podręcznej danych wyjściowych programu ASP.NET z modelem programowania protokołu HTTP sieci WEB WCF.</span><span class="sxs-lookup"><span data-stu-id="2b7ac-103">This sample demonstrates how to utilize the ASP.NET output cache with the WCF WEB HTTP programming model.</span></span> <span data-ttu-id="2b7ac-104">Zobacz [podstawowej usługi zasobów](../../../../docs/framework/wcf/samples/basic-resource-service.md) próbkowania dla siebie wersji tego scenariusza, który opisano szczegółowo implementacji usługi.</span><span class="sxs-lookup"><span data-stu-id="2b7ac-104">Please see the [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) sample for a self-hosted version of this scenario that discusses the service implementation in depth.</span></span> <span data-ttu-id="2b7ac-105">Ten temat koncentruje się na funkcji Integracja z pamięci podręcznej danych wyjściowych programu ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="2b7ac-105">This topic focuses on the ASP.NET output cache integration feature.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809797"
 ---
 # <a name="message-flow-overview"></a><span data-ttu-id="3403b-102">Przegląd przepływu komunikatu</span><span class="sxs-lookup"><span data-stu-id="3403b-102">Message Flow Overview</span></span>
 <span data-ttu-id="3403b-103">W systemie rozproszonej zawierający połączonych usług jest niezbędne do określenia przyczynowy relacje między usługami.</span><span class="sxs-lookup"><span data-stu-id="3403b-103">In a distributed system containing interconnected services, it is necessary to determine causal relationships between the services.</span></span> <span data-ttu-id="3403b-104">Ważne jest, aby poznać różne składniki, które były częścią przepływu żądania do obsługi krytycznych scenariuszy, takich jak kondycja monitorowanie, rozwiązywanie problemów i głównego przyczynę problemu.</span><span class="sxs-lookup"><span data-stu-id="3403b-104">It is important to understand the various components that were part of a request flow to support critical scenarios such as health monitoring, troubleshooting, and root cause analysis.</span></span> <span data-ttu-id="3403b-105">Aby włączyć korelacja śladów różnych usług w .NET Framework 4 dodano obsługę następujących funkcji:</span><span class="sxs-lookup"><span data-stu-id="3403b-105">To enable the correlation of traces between various services, in the .NET Framework 4 we added support through the following features:</span></span>  

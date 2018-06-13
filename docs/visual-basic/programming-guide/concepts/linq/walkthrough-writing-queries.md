@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655879"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a><span data-ttu-id="48f3e-102">Wskazówki: Pisanie zapytań w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="48f3e-102">Walkthrough: Writing Queries in Visual Basic</span></span>
 <span data-ttu-id="48f3e-103">W tym przewodniku przedstawiono sposób użycia funkcje języka Visual Basic można zapisać [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] wyrażenia zapytań.</span><span class="sxs-lookup"><span data-stu-id="48f3e-103">This walkthrough demonstrates how you can use Visual Basic language features to write [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] query expressions.</span></span> <span data-ttu-id="48f3e-104">Instruktaż pokazuje, jak tworzyć zapytania na liście obiektów dla użytkowników domowych, jak uruchamiać zapytania i sposobu ich modyfikacji.</span><span class="sxs-lookup"><span data-stu-id="48f3e-104">The walkthrough demonstrates how to create queries on a list of Student objects, how to run the queries, and how to modify them.</span></span> <span data-ttu-id="48f3e-105">Zapytania zastosować kilka funkcji w tym inicjatory obiektów, wnioskowanie o typie lokalnym i typy anonimowe.</span><span class="sxs-lookup"><span data-stu-id="48f3e-105">The queries incorporate several features including object initializers, local type inference, and anonymous types.</span></span>  

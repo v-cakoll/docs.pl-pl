@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808335"
 ---
 # <a name="token-authenticator"></a><span data-ttu-id="2fc46-102">Wystawca uwierzytelnienia tokenów</span><span class="sxs-lookup"><span data-stu-id="2fc46-102">Token Authenticator</span></span>
 <span data-ttu-id="2fc46-103">W tym przykładzie pokazano, jak do zaimplementowania niestandardowego wystawcy uwierzytelnienia tokenu.</span><span class="sxs-lookup"><span data-stu-id="2fc46-103">This sample demonstrates how to implement a custom token authenticator.</span></span> <span data-ttu-id="2fc46-104">Token uwierzytelniania w systemie Windows Communication Foundation (WCF) służy do sprawdzania poprawności tokenu używane z komunikatu, sprawdzania jest spójny, czy uwierzytelnianie tożsamość skojarzona z tokenem.</span><span class="sxs-lookup"><span data-stu-id="2fc46-104">A token authenticator in Windows Communication Foundation (WCF) is used for validating the token used with the message, verifying that it is self-consistent, and authenticating the identity associated with the token.</span></span>  

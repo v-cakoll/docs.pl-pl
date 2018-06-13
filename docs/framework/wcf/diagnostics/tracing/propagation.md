@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803240"
 ---
 # <a name="propagation"></a><span data-ttu-id="b3629-102">Propagacja</span><span class="sxs-lookup"><span data-stu-id="b3629-102">Propagation</span></span>
 <span data-ttu-id="b3629-103">W tym temacie opisano propagowania działań w modelu śledzenia usług Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="b3629-103">This topic describes activity propagation in the Windows Communication Foundation (WCF) tracing model.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655827"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a><span data-ttu-id="f95d8-102">Opcje kompilatora Visual Basic według kategorii</span><span class="sxs-lookup"><span data-stu-id="f95d8-102">Visual Basic compiler options listed by category</span></span>
 <span data-ttu-id="f95d8-103">Kompilator wiersza polecenia programu Visual Basic podano zamiast kompilowanie programów w programie Visual Studio zintegrowane środowisko programistyczne (IDE).</span><span class="sxs-lookup"><span data-stu-id="f95d8-103">The Visual Basic command-line compiler is provided as an alternative to compiling programs from within the Visual Studio integrated development environment (IDE).</span></span> <span data-ttu-id="f95d8-104">Poniżej znajduje się lista opcje wiersza polecenia kompilatora Visual Basic, posortowane według kategorii funkcjonalności.</span><span class="sxs-lookup"><span data-stu-id="f95d8-104">The following is a list of the Visual Basic command-line compiler options sorted by functional category.</span></span>  

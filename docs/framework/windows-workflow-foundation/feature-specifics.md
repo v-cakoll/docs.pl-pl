@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809865"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a><span data-ttu-id="f3033-102">Windows Workflow Foundation funkcji charakterystykę</span><span class="sxs-lookup"><span data-stu-id="f3033-102">Windows Workflow Foundation Feature Specifics</span></span>
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]<span data-ttu-id="f3033-103"> Dodaje liczbę funkcji do systemu Windows Workflow Foundation.</span><span class="sxs-lookup"><span data-stu-id="f3033-103"> adds a number of features to Windows Workflow Foundation.</span></span> <span data-ttu-id="f3033-104">Ten dokument opisano kilka nowych funkcji i zwraca szczegółowe informacje o scenariuszach, w których mogą być przydatne.</span><span class="sxs-lookup"><span data-stu-id="f3033-104">This document describes a number of the new features, and gives details about scenarios in which they may be useful.</span></span>  

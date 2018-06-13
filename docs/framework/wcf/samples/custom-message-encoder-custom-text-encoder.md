@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808068"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a><span data-ttu-id="07b9e-102">Niestandardowy koder komunikatów: Niestandardowy koder tekstu</span><span class="sxs-lookup"><span data-stu-id="07b9e-102">Custom Message Encoder: Custom Text Encoder</span></span>
 <span data-ttu-id="07b9e-103">W tym przykładzie pokazano, jak wdrożyć tekst niestandardowy koder komunikatów, za pomocą usługi Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="07b9e-103">This sample demonstrates how to implement a custom text message encoder using Windows Communication Foundation (WCF).</span></span>  

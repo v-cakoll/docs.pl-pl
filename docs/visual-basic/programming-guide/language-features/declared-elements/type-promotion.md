@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649428"
 ---
 # <a name="type-promotion-visual-basic"></a><span data-ttu-id="b8440-102">Promocja typu (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b8440-102">Type Promotion (Visual Basic)</span></span>
 <span data-ttu-id="b8440-103">Deklaracja elementu programistycznego w module języka Visual Basic zamienia jego zakresu przestrzeni nazw zawierającej modułu.</span><span class="sxs-lookup"><span data-stu-id="b8440-103">When you declare a programming element in a module, Visual Basic promotes its scope to the namespace containing the module.</span></span> <span data-ttu-id="b8440-104">Jest to nazywane *wpisz podwyższania poziomu*.</span><span class="sxs-lookup"><span data-stu-id="b8440-104">This is known as *type promotion*.</span></span>  

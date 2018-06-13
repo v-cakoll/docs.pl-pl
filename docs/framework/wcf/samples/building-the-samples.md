@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806958"
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a><span data-ttu-id="6703e-102">Kompilowanie przykładów programu Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="6703e-102">Building the Windows Communication Foundation Samples</span></span>
 <span data-ttu-id="6703e-103">Przykłady Windows Communication Foundation (WCF) mogą być tworzone przy użyciu programu Visual Studio 2010 lub **msbuild** polecenie w wierszu polecenia.</span><span class="sxs-lookup"><span data-stu-id="6703e-103">The Windows Communication Foundation (WCF) samples can be built using Visual Studio 2010 or using the **msbuild** command from the command line.</span></span> <span data-ttu-id="6703e-104">Zarówno procedury opisane w tym temacie.</span><span class="sxs-lookup"><span data-stu-id="6703e-104">Both procedures are described in this topic.</span></span>  

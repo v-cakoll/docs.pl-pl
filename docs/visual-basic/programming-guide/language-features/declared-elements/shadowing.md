@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656074"
 ---
 # <a name="shadowing-in-visual-basic"></a><span data-ttu-id="81c27-102">Przesłanianie w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="81c27-102">Shadowing in Visual Basic</span></span>
 <span data-ttu-id="81c27-103">Gdy dwa elementy programowania o tej samej nazwie, jeden z nich można ukryć, lub *tle*, jeden z nich.</span><span class="sxs-lookup"><span data-stu-id="81c27-103">When two programming elements share the same name, one of them can hide, or *shadow*, the other one.</span></span> <span data-ttu-id="81c27-104">W takiej sytuacji zasłonięty element nie jest dostępna dla odwołania; Zamiast tego po kodzie używa nazwy elementu, kompilator Visual Basic rozpoznaje ją do przesłaniania elementu.</span><span class="sxs-lookup"><span data-stu-id="81c27-104">In such a situation, the shadowed element is not available for reference; instead, when your code uses the element name, the Visual Basic compiler resolves it to the shadowing element.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807528"
 ---
 # <a name="load-balancing"></a><span data-ttu-id="7f93f-102">Równoważenie obciążenia</span><span class="sxs-lookup"><span data-stu-id="7f93f-102">Load Balancing</span></span>
 <span data-ttu-id="7f93f-103">Jest jednym ze sposobów zwiększyć pojemność aplikacji Windows Communication Foundation (WCF) można skalować je przez wdrożenie ich do farmy serwerów z równoważeniem obciążenia.</span><span class="sxs-lookup"><span data-stu-id="7f93f-103">One way to increase the capacity of Windows Communication Foundation (WCF) applications is to scale them out by deploying them into a load-balanced server farm.</span></span> <span data-ttu-id="7f93f-104">Usługi WCF aplikacje mogą być równoważone za pomocą standardowego obciążenia równoważenia technik, w tym usługi równoważenia obciążenia oprogramowania, takie jak Windows Równoważenie obciążenia sieciowego, a także równoważenie urządzenia obciążenia oparte na sprzęcie.</span><span class="sxs-lookup"><span data-stu-id="7f93f-104">WCF applications can be load balanced using standard load balancing techniques, including software load balancers such as Windows Network Load Balancing as well as hardware-based load balancing appliances.</span></span>  

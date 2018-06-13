@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457749"
 ---
 # <a name="icorprofilercallback4rejitcompilationstarted-method"></a><span data-ttu-id="49058-102">ICorProfilerCallback4::ReJITCompilationStarted — Metoda</span><span class="sxs-lookup"><span data-stu-id="49058-102">ICorProfilerCallback4::ReJITCompilationStarted Method</span></span>
 <span data-ttu-id="49058-103">Powiadamia profilera, czy można ponownie skompilować funkcję została uruchomiona przy użyciu kompilatora just in time (JIT).</span><span class="sxs-lookup"><span data-stu-id="49058-103">Notifies the profiler that the just-in-time (JIT) compiler has started to recompile a function.</span></span>  

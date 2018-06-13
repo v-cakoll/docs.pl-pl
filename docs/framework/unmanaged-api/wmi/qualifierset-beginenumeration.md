@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460118"
 ---
 # <a name="qualifiersetbeginenumeration-function"></a><span data-ttu-id="618df-103">Funkcja QualifierSet_BeginEnumeration</span><span class="sxs-lookup"><span data-stu-id="618df-103">QualifierSet_BeginEnumeration function</span></span>
 <span data-ttu-id="618df-104">Resetuje moduł wyliczający kwalifikatory obiekt na początek wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="618df-104">Resets an enumerator of the qualifiers of an object to the beginning of the enumeration.</span></span>  

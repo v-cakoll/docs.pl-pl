@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458153"
 ---
 # <a name="getmethodorigin-function"></a><span data-ttu-id="cedd1-103">Funkcja GetMethodOrigin</span><span class="sxs-lookup"><span data-stu-id="cedd1-103">GetMethodOrigin function</span></span>
 <span data-ttu-id="cedd1-104">Określa klasę, w którym zadeklarowany jest metoda.</span><span class="sxs-lookup"><span data-stu-id="cedd1-104">Determines the class in which a method is declared.</span></span>

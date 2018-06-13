@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457503"
 ---
 # <a name="icorprofilerinfo2getcodeinfo2-method"></a><span data-ttu-id="fe424-102">ICorProfilerInfo2::GetCodeInfo2 — Metoda</span><span class="sxs-lookup"><span data-stu-id="fe424-102">ICorProfilerInfo2::GetCodeInfo2 Method</span></span>
 <span data-ttu-id="fe424-103">Pobiera zakres kodu natywnego skojarzonego z określonym `FunctionID`.</span><span class="sxs-lookup"><span data-stu-id="fe424-103">Gets the extents of native code associated with the specified `FunctionID`.</span></span>  

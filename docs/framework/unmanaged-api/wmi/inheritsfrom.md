@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461418"
 ---
 # <a name="inheritsfrom-function"></a><span data-ttu-id="d6a6a-103">Funkcja InheritsFrom</span><span class="sxs-lookup"><span data-stu-id="d6a6a-103">InheritsFrom function</span></span>
 <span data-ttu-id="d6a6a-104">Określa, czy bieżącej klasy lub wystąpienia jest pochodną klasy określonego elementu nadrzędnego.</span><span class="sxs-lookup"><span data-stu-id="d6a6a-104">Determines whether the current class or instance derives from a specified parent class.</span></span>

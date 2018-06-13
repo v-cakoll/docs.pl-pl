@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589857"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a><span data-ttu-id="f4db3-102">Pamięć lokalna wątku: powiązane z wątkiem pola statyczne i gniazda danych</span><span class="sxs-lookup"><span data-stu-id="f4db3-102">Thread Local Storage: Thread-Relative Static Fields and Data Slots</span></span>
 <span data-ttu-id="f4db3-103">Można użyć zarządzanej lokalny magazyn wątków (TLS) do przechowywania danych, która jest unikatowa w domenie wątku i aplikacji.</span><span class="sxs-lookup"><span data-stu-id="f4db3-103">You can use managed thread local storage (TLS) to store data that is unique to a thread and application domain.</span></span> <span data-ttu-id="f4db3-104">.NET Framework udostępnia dwa sposoby używania zarządzanych TLS: statyczne miejsc pola i dane powiązane z wątkiem.</span><span class="sxs-lookup"><span data-stu-id="f4db3-104">The .NET Framework provides two ways to use managed TLS: thread-relative static fields and data slots.</span></span>  

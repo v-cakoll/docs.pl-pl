@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569723"
 ---
 # <a name="reading-an-xml-document-into-the-dom"></a><span data-ttu-id="af4a1-102">Odczytywanie dokumentu XML do modelu DOM</span><span class="sxs-lookup"><span data-stu-id="af4a1-102">Reading an XML Document into the DOM</span></span>
 <span data-ttu-id="af4a1-103">Informacje o XML jest do odczytu do pamięci z różnych formatach.</span><span class="sxs-lookup"><span data-stu-id="af4a1-103">XML information is read into memory from different formats.</span></span> <span data-ttu-id="af4a1-104">Mogą być odczytywane z ciągiem, strumienia, adres URL, czytnika tekstu lub klasy pochodzącej od <xref:System.Xml.XmlReader>.</span><span class="sxs-lookup"><span data-stu-id="af4a1-104">It can be read from a string, stream, URL, text reader, or a class derived from the <xref:System.Xml.XmlReader>.</span></span>  

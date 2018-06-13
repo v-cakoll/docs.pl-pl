@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569333"
 ---
 # <a name="style-sheet-directives-embedded-in-a-document"></a><span data-ttu-id="3d590-102">Osadzony w dokumencie dyrektywy arkusza stylów</span><span class="sxs-lookup"><span data-stu-id="3d590-102">Style Sheet Directives Embedded in a Document</span></span>
 <span data-ttu-id="3d590-103">Czasami istniejący kod XML zawiera dyrektywy arkusz stylów z `<?xml:stylesheet?>`.</span><span class="sxs-lookup"><span data-stu-id="3d590-103">Occasionally, existing XML contains the style sheet directive of `<?xml:stylesheet?>`.</span></span> <span data-ttu-id="3d590-104">Program Microsoft Internet Explorer akceptuje, to zamiast `<?xml-stylesheet?>` składni.</span><span class="sxs-lookup"><span data-stu-id="3d590-104">Microsoft Internet Explorer accepts this as an alternative to the `<?xml-stylesheet?>` syntax.</span></span> <span data-ttu-id="3d590-105">Jeśli dane XML zawiera `<?xml:stylesheet?>` dyrektywy, jak przedstawiono w następujących danych próby załadowania tych danych do XML modelu DOM (Document Object) zgłasza wyjątek.</span><span class="sxs-lookup"><span data-stu-id="3d590-105">When the XML data contains an `<?xml:stylesheet?>` directive, as shown in the following data, attempting to load this data into the XML Document Object Model (DOM) throws an exception.</span></span>  

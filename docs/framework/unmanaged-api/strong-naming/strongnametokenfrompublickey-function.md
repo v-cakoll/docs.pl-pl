@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460291"
 ---
 # <a name="strongnametokenfrompublickey-function"></a><span data-ttu-id="9c09f-102">StrongNameTokenFromPublicKey — Funkcja</span><span class="sxs-lookup"><span data-stu-id="9c09f-102">StrongNameTokenFromPublicKey Function</span></span>
 <span data-ttu-id="9c09f-103">Pobiera token reprezentujący klucza publicznego.</span><span class="sxs-lookup"><span data-stu-id="9c09f-103">Gets a token representing a public key.</span></span> <span data-ttu-id="9c09f-104">Token silnej nazwy jest skrócona forma klucza publicznego.</span><span class="sxs-lookup"><span data-stu-id="9c09f-104">A strong name token is the shortened form of a public key.</span></span>  

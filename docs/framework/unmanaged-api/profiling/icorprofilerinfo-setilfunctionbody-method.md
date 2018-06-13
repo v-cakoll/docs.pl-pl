@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461659"
 ---
 # <a name="icorprofilerinfosetilfunctionbody-method"></a><span data-ttu-id="d53cd-102">ICorProfilerInfo::SetILFunctionBody — Metoda</span><span class="sxs-lookup"><span data-stu-id="d53cd-102">ICorProfilerInfo::SetILFunctionBody Method</span></span>
 <span data-ttu-id="d53cd-103">Zastępuje treści określonej funkcji w określonym module.</span><span class="sxs-lookup"><span data-stu-id="d53cd-103">Replaces the body of the specified function in the specified module.</span></span>  

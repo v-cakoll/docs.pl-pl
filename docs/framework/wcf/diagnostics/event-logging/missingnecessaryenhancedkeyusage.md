@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33469391"
 ---
 # <a name="missingnecessaryenhancedkeyusage"></a><span data-ttu-id="b6282-102">MissingNecessaryEnhancedKeyUsage</span><span class="sxs-lookup"><span data-stu-id="b6282-102">MissingNecessaryEnhancedKeyUsage</span></span>
 <span data-ttu-id="b6282-103">Identyfikator: 157</span><span class="sxs-lookup"><span data-stu-id="b6282-103">Id: 157</span></span>  

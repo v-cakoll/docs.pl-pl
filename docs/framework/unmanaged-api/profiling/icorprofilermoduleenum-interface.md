@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458071"
 ---
 # <a name="icorprofilermoduleenum-interface"></a><span data-ttu-id="ee33d-102">ICorProfilerModuleEnum — Interfejs</span><span class="sxs-lookup"><span data-stu-id="ee33d-102">ICorProfilerModuleEnum Interface</span></span>
 <span data-ttu-id="ee33d-103">Udostępnia metody sekwencyjnie iterowania po kolekcji moduły załadowane przez profiler lub aplikacji.</span><span class="sxs-lookup"><span data-stu-id="ee33d-103">Provides methods to sequentially iterate through a collection of modules loaded by the application or the profiler.</span></span>  

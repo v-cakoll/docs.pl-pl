@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571036"
 ---
 # <a name="usage-guidelines"></a><span data-ttu-id="8b87c-102">Wskazówki dotyczące użycia</span><span class="sxs-lookup"><span data-stu-id="8b87c-102">Usage Guidelines</span></span>
 <span data-ttu-id="8b87c-103">Ta sekcja zawiera wskazówki dotyczące używania popularne typy w publicznie interfejsów API.</span><span class="sxs-lookup"><span data-stu-id="8b87c-103">This section contains guidelines for using common types in publicly accessible APIs.</span></span> <span data-ttu-id="8b87c-104">Dotyczy on bezpośredniego użycia wbudowanych typów Framework (np. serializacji atrybutów) i przeładowanie operatorów wspólnej.</span><span class="sxs-lookup"><span data-stu-id="8b87c-104">It deals with direct usage of built-in Framework types (e.g., serialization attributes) and overloading common operators.</span></span>  

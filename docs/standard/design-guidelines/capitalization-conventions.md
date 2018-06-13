@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575287"
 ---
 # <a name="capitalization-conventions"></a><span data-ttu-id="4fc8f-102">Konwencje wielkość liter</span><span class="sxs-lookup"><span data-stu-id="4fc8f-102">Capitalization Conventions</span></span>
 <span data-ttu-id="4fc8f-103">Wskazówki zawarte w ten rozdział układ prostą metodę przy użyciu przypadek, który po zastosowaniu spójnie upewnij identyfikatory typów, członków i parametry łatwy do odczytania.</span><span class="sxs-lookup"><span data-stu-id="4fc8f-103">The guidelines in this chapter lay out a simple method for using case that, when applied consistently, make identifiers for types, members, and parameters easy to read.</span></span>  

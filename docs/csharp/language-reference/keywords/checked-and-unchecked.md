@@ -14,6 +14,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234376"
 ---
 # <a name="checked-and-unchecked-c-reference"></a><span data-ttu-id="f4f32-102">checked i unchecked (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="f4f32-102">Checked and Unchecked (C# Reference)</span></span>
 <span data-ttu-id="f4f32-103">C# instrukcje mogą wykonywać w kontekście zaznaczać lub usuwać zaznaczenia.</span><span class="sxs-lookup"><span data-stu-id="f4f32-103">C# statements can execute in either checked or unchecked context.</span></span> <span data-ttu-id="f4f32-104">W kontekście zaznaczone przepełnienia arytmetycznego zgłasza wyjątek.</span><span class="sxs-lookup"><span data-stu-id="f4f32-104">In a checked context, arithmetic overflow raises an exception.</span></span> <span data-ttu-id="f4f32-105">W kontekście niezaznaczone przepełnienia arytmetycznego jest ignorowana, a wynik został obcięty odrzucając wszystkie najbardziej znaczących bitów, które nie mieszczą się w typie docelowym.</span><span class="sxs-lookup"><span data-stu-id="f4f32-105">In an unchecked context, arithmetic overflow is ignored and the result is truncated by discarding any high-order bits that don't fit in the destination type.</span></span>  

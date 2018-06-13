@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461100"
 ---
 # <a name="getpropertyorigin-function"></a><span data-ttu-id="50774-103">Funkcja GetPropertyOrigin</span><span class="sxs-lookup"><span data-stu-id="50774-103">GetPropertyOrigin function</span></span>
 <span data-ttu-id="50774-104">Określa klasę, w którym zadeklarowany jest właściwością.</span><span class="sxs-lookup"><span data-stu-id="50774-104">Determines the class in which a property is declared.</span></span>

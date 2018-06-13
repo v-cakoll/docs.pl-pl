@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568020"
 ---
 # <a name="copying-document-fragments"></a><span data-ttu-id="5ae8b-102">Kopiowanie fragmenty dokumentu</span><span class="sxs-lookup"><span data-stu-id="5ae8b-102">Copying Document Fragments</span></span>
 <span data-ttu-id="5ae8b-103">Można utworzyć **XmlDocumentFragment** węzeł, a następnie dodać węzłów w ramach.</span><span class="sxs-lookup"><span data-stu-id="5ae8b-103">You can create an **XmlDocumentFragment** node and then add nodes under it.</span></span> <span data-ttu-id="5ae8b-104">Gdy **XmlDocumentFragment** dodaje się z **InsertNode** metody **XmlDocumentFragment** węzeł nie jest kopiowana, ale węzły podrzędne są wstawiane w pliku XML Document Object Model (DOM).</span><span class="sxs-lookup"><span data-stu-id="5ae8b-104">When the **XmlDocumentFragment** is inserted with the **InsertNode** method, the **XmlDocumentFragment** node is not copied, but its child nodes are inserted in the XML Document Object Model (DOM).</span></span>  

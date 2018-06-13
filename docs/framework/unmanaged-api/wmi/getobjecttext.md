@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459642"
 ---
 # <a name="getobjecttext-function"></a><span data-ttu-id="8a91d-103">Funkcja GetObjectText</span><span class="sxs-lookup"><span data-stu-id="8a91d-103">GetObjectText function</span></span>
 <span data-ttu-id="8a91d-104">Zwraca tekstową renderowanie obiektu w składni Managed Object Format (MOF).</span><span class="sxs-lookup"><span data-stu-id="8a91d-104">Returns a textual rendering of the object in the Managed Object Format (MOF) syntax.</span></span>

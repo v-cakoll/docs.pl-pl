@@ -7,6 +7,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472753"
 ---
 # <a name="connection-string-syntax"></a><span data-ttu-id="31b69-102">Składnia ciągu połączenia</span><span class="sxs-lookup"><span data-stu-id="31b69-102">Connection String Syntax</span></span>
 <span data-ttu-id="31b69-103">Każdy dostawca danych programu .NET Framework ma `Connection` obiekt dziedziczący z <xref:System.Data.Common.DbConnection> oraz specyficznych dla dostawcy <xref:System.Data.Common.DbConnection.ConnectionString%2A> właściwości.</span><span class="sxs-lookup"><span data-stu-id="31b69-103">Each .NET Framework data provider has a `Connection` object that inherits from <xref:System.Data.Common.DbConnection> as well as a provider-specific <xref:System.Data.Common.DbConnection.ConnectionString%2A> property.</span></span> <span data-ttu-id="31b69-104">Składnia ciągu połączenia specyficzne dla każdego dostawcy jest udokumentowany w jego `ConnectionString` właściwości.</span><span class="sxs-lookup"><span data-stu-id="31b69-104">The specific connection string syntax for each provider is documented in its `ConnectionString` property.</span></span> <span data-ttu-id="31b69-105">W poniższej tabeli wymieniono dostawców cztery danych, które znajdują się w programie .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="31b69-105">The following table lists the four data providers that are included in the .NET Framework.</span></span>  

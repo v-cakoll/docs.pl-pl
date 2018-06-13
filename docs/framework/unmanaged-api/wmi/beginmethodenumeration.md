@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459879"
 ---
 # <a name="beginenumeration-function"></a><span data-ttu-id="559ef-103">Funkcja Beingenumeration</span><span class="sxs-lookup"><span data-stu-id="559ef-103">BeginEnumeration function</span></span>
 <span data-ttu-id="559ef-104">Rozpoczyna się wyliczenia metod dla obiekt.</span><span class="sxs-lookup"><span data-stu-id="559ef-104">Begins an enumeration of the methods available for the object.</span></span>  

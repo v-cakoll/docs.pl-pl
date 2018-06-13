@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474886"
 ---
 # <a name="security-exceptions"></a><span data-ttu-id="74c4c-102">Wyjątki zabezpieczeń</span><span class="sxs-lookup"><span data-stu-id="74c4c-102">Security Exceptions</span></span>
 <span data-ttu-id="74c4c-103">W tym temacie wymieniono wszystkie wyjątki zabezpieczeń.</span><span class="sxs-lookup"><span data-stu-id="74c4c-103">This topic lists all security exceptions.</span></span>  

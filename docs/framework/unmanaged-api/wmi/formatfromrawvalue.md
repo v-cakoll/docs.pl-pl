@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460424"
 ---
 # <a name="formatfromrawvalue-function"></a><span data-ttu-id="30f1c-103">Funkcja FormatFromRawValue</span><span class="sxs-lookup"><span data-stu-id="30f1c-103">FormatFromRawValue function</span></span>
 <span data-ttu-id="30f1c-104">Konwertuje jedną wartość danych pierwotnych wydajności w określonym formacie lub dwóch wartości danych wydajność pierwotna, jeśli Konwersja formatu jest oparte na czasie.</span><span class="sxs-lookup"><span data-stu-id="30f1c-104">Converts one raw performance data value to the specified format, or two raw performance data values if the format conversion is time-based.</span></span>   

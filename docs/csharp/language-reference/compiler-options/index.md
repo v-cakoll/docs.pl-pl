@@ -15,6 +15,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472519"
 ---
 # <a name="c-compiler-options"></a><span data-ttu-id="4caf3-102">Opcje kompilatora C#</span><span class="sxs-lookup"><span data-stu-id="4caf3-102">C# Compiler Options</span></span>
 <span data-ttu-id="4caf3-103">Kompilator generuje pliki wykonywalne (.exe), bibliotek dołączanych dynamicznie (dll) lub moduły kodu (modułu .netmodule).</span><span class="sxs-lookup"><span data-stu-id="4caf3-103">The compiler produces executable (.exe) files, dynamic-link libraries (.dll), or code modules (.netmodule).</span></span>  

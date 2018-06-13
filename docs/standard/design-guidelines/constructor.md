@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575560"
 ---
 # <a name="constructor-design"></a><span data-ttu-id="764f6-102">Projekt — Konstruktor</span><span class="sxs-lookup"><span data-stu-id="764f6-102">Constructor Design</span></span>
 <span data-ttu-id="764f6-103">Istnieją dwa rodzaje konstruktory: wpisz konstruktorów i konstruktorów wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="764f6-103">There are two kinds of constructors: type constructors and instance constructors.</span></span>  

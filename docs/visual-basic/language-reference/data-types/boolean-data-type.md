@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590280"
 ---
 # <a name="boolean-data-type-visual-basic"></a><span data-ttu-id="b8989-102">Boolean Data Type (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b8989-102">Boolean Data Type (Visual Basic)</span></span>
 <span data-ttu-id="b8989-103">Wartości blokad, które mogą być tylko `True` lub `False`.</span><span class="sxs-lookup"><span data-stu-id="b8989-103">Holds values that can be only `True` or `False`.</span></span> <span data-ttu-id="b8989-104">Słowa kluczowe `True` i `False` odpowiadają dwa stany `Boolean` zmiennych.</span><span class="sxs-lookup"><span data-stu-id="b8989-104">The keywords `True` and `False` correspond to the two states of `Boolean` variables.</span></span>  

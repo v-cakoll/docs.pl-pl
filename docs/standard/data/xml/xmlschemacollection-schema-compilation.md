@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571488"
 ---
 # <a name="xmlschemacollection-schema-compilation"></a><span data-ttu-id="1d4f9-102">Kompilacja schematu kolekcji XmlSchemaCollection</span><span class="sxs-lookup"><span data-stu-id="1d4f9-102">XmlSchemaCollection Schema Compilation</span></span>
 <span data-ttu-id="1d4f9-103">**Kolekcji XmlSchemaCollection** pamięci podręcznej lub biblioteki, gdzie schematy języka (XSD) definicji XML danych (XDR) i schemat XML może być przechowywane i sprawdzania poprawności.</span><span class="sxs-lookup"><span data-stu-id="1d4f9-103">The **XmlSchemaCollection** is a cache or library where XML-Data Reduced (XDR) and XML Schema definition language (XSD) schemas can be stored and validated.</span></span> <span data-ttu-id="1d4f9-104">**Kolekcji XmlSchemaCollection** zwiększa wydajność, buforując schematów w pamięci zamiast dostępu do nich z pliku lub adres URL.</span><span class="sxs-lookup"><span data-stu-id="1d4f9-104">**XmlSchemaCollection** improves performance by caching schemas in memory instead of accessing them from a file or URL.</span></span>  

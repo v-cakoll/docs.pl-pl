@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576223"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a><span data-ttu-id="d7e86-103">Kontenery jako podstawa współpracy opracowywania oprogramowania</span><span class="sxs-lookup"><span data-stu-id="d7e86-103">Containers as the foundation for DevOps collaboration</span></span>
 

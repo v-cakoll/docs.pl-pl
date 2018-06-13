@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576119"
 ---
 # <a name="dependency-properties"></a><span data-ttu-id="e95ca-102">Właściwości zależności</span><span class="sxs-lookup"><span data-stu-id="e95ca-102">Dependency Properties</span></span>
 <span data-ttu-id="e95ca-103">Właściwości zależności (DP) jest regularne właściwość, która przechowuje wartość w magazynie właściwości zamiast magazynować je w zmiennej typu (pola), na przykład.</span><span class="sxs-lookup"><span data-stu-id="e95ca-103">A dependency property (DP) is a regular property that stores its value in a property store instead of storing it in a type variable (field), for example.</span></span>  

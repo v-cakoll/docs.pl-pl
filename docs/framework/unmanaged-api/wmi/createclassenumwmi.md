@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461457"
 ---
 # <a name="createclassenumwmi-function"></a><span data-ttu-id="c45e0-103">Funkcja CreateClassEnumWmi</span><span class="sxs-lookup"><span data-stu-id="c45e0-103">CreateClassEnumWmi function</span></span>
 <span data-ttu-id="c45e0-104">Zwraca moduł wyliczający dla wszystkich klas, które spełniają kryteria określonego zaznaczenia.</span><span class="sxs-lookup"><span data-stu-id="c45e0-104">Returns an enumerator for all classes that satisfy the specified selection criteria.</span></span>  

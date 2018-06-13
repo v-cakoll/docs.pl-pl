@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574369"
 ---
 # <a name="pipe-operations-in-the-net-framework"></a><span data-ttu-id="9c36d-102">Operacje potokowe w oprogramowaniu .NET Framework</span><span class="sxs-lookup"><span data-stu-id="9c36d-102">Pipe Operations in the .NET Framework</span></span>
 <span data-ttu-id="9c36d-103">Potoki umożliwiają do komunikacji międzyprocesowej.</span><span class="sxs-lookup"><span data-stu-id="9c36d-103">Pipes provide a means for interprocess communication.</span></span> <span data-ttu-id="9c36d-104">Istnieją dwa typy potoków:</span><span class="sxs-lookup"><span data-stu-id="9c36d-104">There are two types of pipes:</span></span>  

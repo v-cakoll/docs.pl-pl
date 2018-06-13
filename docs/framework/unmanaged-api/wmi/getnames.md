@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461984"
 ---
 # <a name="getnames-function"></a><span data-ttu-id="99ea6-103">GetNames — funkcja</span><span class="sxs-lookup"><span data-stu-id="99ea6-103">GetNames function</span></span>
 <span data-ttu-id="99ea6-104">Pobiera podzbiór lub wszystkie nazwy właściwości obiektu.</span><span class="sxs-lookup"><span data-stu-id="99ea6-104">Retrieves either a subset or all of the names of the properties of an object.</span></span> 

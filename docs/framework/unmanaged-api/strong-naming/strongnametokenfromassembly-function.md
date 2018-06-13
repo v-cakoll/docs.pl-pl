@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457704"
 ---
 # <a name="strongnametokenfromassembly-function"></a><span data-ttu-id="19996-102">StrongNameTokenFromAssembly — Funkcja</span><span class="sxs-lookup"><span data-stu-id="19996-102">StrongNameTokenFromAssembly Function</span></span>
 <span data-ttu-id="19996-103">Tworzy token silnej nazwy z określonego pliku zestawu.</span><span class="sxs-lookup"><span data-stu-id="19996-103">Creates a strong name token from the specified assembly file.</span></span>  

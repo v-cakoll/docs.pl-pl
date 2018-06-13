@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461402"
 ---
 # <a name="icorprofilerinfo2-interface"></a><span data-ttu-id="788b1-102">ICorProfilerInfo2 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="788b1-102">ICorProfilerInfo2 Interface</span></span>
 <span data-ttu-id="788b1-103">Udostępnia metody, które używają profilery kodu do komunikacji z środowisko uruchomieniowe języka wspólnego (CLR) w celu kontrolowania, monitorowanie zdarzeń i informacje o żądaniu.</span><span class="sxs-lookup"><span data-stu-id="788b1-103">Provides methods that code profilers use to communicate with the common language runtime (CLR) to control event monitoring and request information.</span></span> <span data-ttu-id="788b1-104">`ICorProfilerInfo2` Interfejsu jest rozszerzeniem [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) interfejsu.</span><span class="sxs-lookup"><span data-stu-id="788b1-104">The `ICorProfilerInfo2` interface is an extension of the [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) interface.</span></span> <span data-ttu-id="788b1-105">Oznacza to, że zapewnia nowych metod obsługiwanych w programie .NET Framework w wersji 2.0 i nowszych wersjach.</span><span class="sxs-lookup"><span data-stu-id="788b1-105">That is, it provides new methods supported in the .NET Framework version 2.0 and later versions.</span></span>  

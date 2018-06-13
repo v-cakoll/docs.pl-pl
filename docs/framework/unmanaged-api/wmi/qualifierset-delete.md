@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460048"
 ---
 # <a name="qualifiersetdelete-function"></a><span data-ttu-id="05f56-103">Funkcja QualifierSet_Delete</span><span class="sxs-lookup"><span data-stu-id="05f56-103">QualifierSet_Delete function</span></span>
 <span data-ttu-id="05f56-104">Usuwa określony kwalifikatora według nazwy.</span><span class="sxs-lookup"><span data-stu-id="05f56-104">Deletes a specified qualifier by name.</span></span>  

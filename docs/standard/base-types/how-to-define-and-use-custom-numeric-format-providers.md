@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575827"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a><span data-ttu-id="aaa3f-102">Porady: definiowanie i użycie niestandardowych dostawców formatu liczbowego</span><span class="sxs-lookup"><span data-stu-id="aaa3f-102">How to: Define and Use Custom Numeric Format Providers</span></span>
 <span data-ttu-id="aaa3f-103">[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Zapewnia szeroką gamę kontrolę nad reprezentację ciągu wartości liczbowych.</span><span class="sxs-lookup"><span data-stu-id="aaa3f-103">The [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] gives you extensive control over the string representation of numeric values.</span></span> <span data-ttu-id="aaa3f-104">Format wartości liczbowych dostosowywania obsługuje następujące funkcje:</span><span class="sxs-lookup"><span data-stu-id="aaa3f-104">It supports the following features for customizing the format of numeric values:</span></span>  

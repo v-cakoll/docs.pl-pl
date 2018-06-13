@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458165"
 ---
 # <a name="blessiwbemservices-function"></a><span data-ttu-id="e8eb9-103">Funkcja BlessIWbemServices</span><span class="sxs-lookup"><span data-stu-id="e8eb9-103">BlessIWbemServices function</span></span>
 <span data-ttu-id="e8eb9-104">Wskazuje, czy poświadczenia użytkownika zezwolenie na dostęp do określonego [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) klasy.</span><span class="sxs-lookup"><span data-stu-id="e8eb9-104">Indicates whether the user credentials permit access to the specified [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) class.</span></span>   

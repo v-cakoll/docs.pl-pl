@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574598"
 ---
 # <a name="using-standard-exception-types"></a><span data-ttu-id="9e608-102">Używanie typów wyjątków standardowe</span><span class="sxs-lookup"><span data-stu-id="9e608-102">Using Standard Exception Types</span></span>
 <span data-ttu-id="9e608-103">W tej sekcji opisano wyjątki standardowe dostarczane przez platformę i szczegóły ich użycia.</span><span class="sxs-lookup"><span data-stu-id="9e608-103">This section describes the standard exceptions provided by the Framework and the details of their usage.</span></span> <span data-ttu-id="9e608-104">Lista w żadnym wypadku nie jest kompletną.</span><span class="sxs-lookup"><span data-stu-id="9e608-104">The list is by no means exhaustive.</span></span> <span data-ttu-id="9e608-105">Skontaktuj się z dokumentacją odwołanie .NET Framework użycia innych typów wyjątków Framework.</span><span class="sxs-lookup"><span data-stu-id="9e608-105">Please refer to the .NET Framework reference documentation for usage of other Framework exception types.</span></span>  

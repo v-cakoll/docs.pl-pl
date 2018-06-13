@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594916"
 ---
 # <a name="overflow-visual-basic-error"></a><span data-ttu-id="43fe6-102">Przepełnienie (Błąd w Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="43fe6-102">Overflow (Visual Basic Error)</span></span>
 <span data-ttu-id="43fe6-103">Literał reprezentuje wartość poza granicami typu danych, do której jest ona obecnie przypisywana.</span><span class="sxs-lookup"><span data-stu-id="43fe6-103">A literal represents a value outside the limits of the data type to which it is being assigned.</span></span>  

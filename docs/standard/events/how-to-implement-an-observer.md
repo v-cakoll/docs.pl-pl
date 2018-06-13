@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574858"
 ---
 # <a name="how-to-implement-an-observer"></a><span data-ttu-id="201a3-102">Porady: implementowanie obserwatora</span><span class="sxs-lookup"><span data-stu-id="201a3-102">How to: Implement an Observer</span></span>
 <span data-ttu-id="201a3-103">Wzorzec projektowy obserwatora wymaga podziału między obserwatora, który służy do rejestrowania dla powiadomień, a dostawcę, który monitoruje danych i wysyła powiadomienia do co najmniej jeden obserwatorów.</span><span class="sxs-lookup"><span data-stu-id="201a3-103">The observer design pattern requires a division between an observer, which registers for notifications, and a provider, which monitors data and sends notifications to one or more observers.</span></span> <span data-ttu-id="201a3-104">W tym temacie omówiono sposób tworzenia obserwatora.</span><span class="sxs-lookup"><span data-stu-id="201a3-104">This topic discusses how to create an observer.</span></span> <span data-ttu-id="201a3-105">Pokrewnego tematu, [porady: implementowania dostawcy](../../../docs/standard/events/how-to-implement-a-provider.md), w tym artykule omówiono sposób tworzenia dostawcy.</span><span class="sxs-lookup"><span data-stu-id="201a3-105">A related topic, [How to: Implement a Provider](../../../docs/standard/events/how-to-implement-a-provider.md), discusses how to create an provider.</span></span>  

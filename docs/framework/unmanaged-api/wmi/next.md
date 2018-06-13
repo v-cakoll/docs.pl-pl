@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461431"
 ---
 # <a name="next-function"></a><span data-ttu-id="8758c-103">Funkcja Next</span><span class="sxs-lookup"><span data-stu-id="8758c-103">Next function</span></span>
 <span data-ttu-id="8758c-104">Pobiera dalej właściwości w wyliczeniu zaczyna się od wywołania [Beingenumeration](beginenumeration.md).</span><span class="sxs-lookup"><span data-stu-id="8758c-104">Retrieves the next property in an enumeration that begins with a call to [BeginEnumeration](beginenumeration.md).</span></span>  

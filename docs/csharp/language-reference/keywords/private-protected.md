@@ -7,6 +7,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457254"
 ---
 # <a name="private-protected-c-reference"></a><span data-ttu-id="c1a90-102">prywatne chronione (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="c1a90-102">private protected (C# Reference)</span></span>
 <span data-ttu-id="c1a90-103">`private protected` Kombinacja słów kluczowych jest modyfikator dostępu elementu członkowskiego.</span><span class="sxs-lookup"><span data-stu-id="c1a90-103">The `private protected` keyword combination is a member access modifier.</span></span> <span data-ttu-id="c1a90-104">Prywatny chroniony element członkowski jest dostępny przez typy pochodzące z zawierający klasy, ale tylko w obrębie zawierający go zestaw.</span><span class="sxs-lookup"><span data-stu-id="c1a90-104">A private protected member is accessible by types derived from the containing class, but only within its containing assembly.</span></span> <span data-ttu-id="c1a90-105">Porównanie `private protected` z innych modyfikatorów dostępu, zobacz [poziomów ułatwień dostępu](../../../csharp/language-reference/keywords/accessibility-levels.md).</span><span class="sxs-lookup"><span data-stu-id="c1a90-105">For a comparison of `private protected` with the other access modifiers, see [Accessibility Levels](../../../csharp/language-reference/keywords/accessibility-levels.md).</span></span> 

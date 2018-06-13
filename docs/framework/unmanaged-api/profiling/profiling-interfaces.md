@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462055"
 ---
 # <a name="profiling-interfaces"></a><span data-ttu-id="55855-102">Interfejsy profilowania</span><span class="sxs-lookup"><span data-stu-id="55855-102">Profiling Interfaces</span></span>
 <span data-ttu-id="55855-103">W tej sekcji opisano niezarządzane interfejsy, które umożliwiają profilu program, który jest wykonywany przez środowisko uruchomieniowe języka wspólnego (CLR).</span><span class="sxs-lookup"><span data-stu-id="55855-103">This section describes the unmanaged interfaces that enable you to profile a program that is being executed by the common language runtime (CLR).</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33470253"
 ---
 # <a name="5604---sessioncookiereadingstarted"></a><span data-ttu-id="96a52-102">5604 — SessionCookieReadingStarted</span><span class="sxs-lookup"><span data-stu-id="96a52-102">5604 - SessionCookieReadingStarted</span></span>
 ## <a name="properties"></a><span data-ttu-id="96a52-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="96a52-103">Properties</span></span>  

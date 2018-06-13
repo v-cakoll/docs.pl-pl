@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572099"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a><span data-ttu-id="fe913-102">Opcje wyjściowe klasy XslCompiledTransform</span><span class="sxs-lookup"><span data-stu-id="fe913-102">Output Options on the XslCompiledTransform Class</span></span>
 <span data-ttu-id="fe913-103">W tym temacie opisano dostępne opcje wyjściowe XSLT.</span><span class="sxs-lookup"><span data-stu-id="fe913-103">This topic discusses the available XSLT output options.</span></span> <span data-ttu-id="fe913-104">Opcje wyjściowe można określić w arkuszu stylów lub na <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metody.</span><span class="sxs-lookup"><span data-stu-id="fe913-104">You can specify output options in the style sheet, or on the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method.</span></span>  

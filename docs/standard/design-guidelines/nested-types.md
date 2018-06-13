@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573662"
 ---
 # <a name="nested-types"></a><span data-ttu-id="8c4bf-102">Zagnieżdżone typy</span><span class="sxs-lookup"><span data-stu-id="8c4bf-102">Nested Types</span></span>
 <span data-ttu-id="8c4bf-103">Zagnieżdżony typ jest typ zdefiniowany w zakresie innego typu, która jest wywoływana typu otaczającego.</span><span class="sxs-lookup"><span data-stu-id="8c4bf-103">A nested type is a type defined within the scope of another type, which is called the enclosing type.</span></span> <span data-ttu-id="8c4bf-104">Zagnieżdżony typ ma dostęp do wszystkich elementów członkowskich jego typ otaczający.</span><span class="sxs-lookup"><span data-stu-id="8c4bf-104">A nested type has access to all members of its enclosing type.</span></span> <span data-ttu-id="8c4bf-105">Na przykład ma dostęp do prywatnego pól zdefiniowane w typie otaczającym i chronione pola zdefiniowane w wszystkich nadrzędnych typu otaczającego.</span><span class="sxs-lookup"><span data-stu-id="8c4bf-105">For example, it has access to private fields defined in the enclosing type and to protected fields defined in all ascendants of the enclosing type.</span></span>  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460586"
 ---
 # <a name="getpropertyhandle-function"></a><span data-ttu-id="e1408-103">Funkcja GetPropertyHandle</span><span class="sxs-lookup"><span data-stu-id="e1408-103">GetPropertyHandle function</span></span>
 <span data-ttu-id="e1408-104">Zwraca unikatowy dojścia identyfikujący właściwości.</span><span class="sxs-lookup"><span data-stu-id="e1408-104">Returns a unique handle that identifies a property.</span></span>

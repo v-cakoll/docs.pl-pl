@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576145"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a><span data-ttu-id="af8ab-102">Nazwy klasy, struktury i interfejsy</span><span class="sxs-lookup"><span data-stu-id="af8ab-102">Names of Classes, Structs, and Interfaces</span></span>
 <span data-ttu-id="af8ab-103">Nazewnictwa wskazówki, które należy wykonać dotyczą nazw typu ogólnego.</span><span class="sxs-lookup"><span data-stu-id="af8ab-103">The naming guidelines that follow apply to general type naming.</span></span>  

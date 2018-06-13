@@ -15,6 +15,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457310"
 ---
 # <a name="compiling-apps-with-net-native"></a><span data-ttu-id="4a8ad-102">Kompilowanie aplikacji z architekturą .NET Native</span><span class="sxs-lookup"><span data-stu-id="4a8ad-102">Compiling Apps with .NET Native</span></span>
 [!INCLUDE[net_native](../../../includes/net-native-md.md)]<span data-ttu-id="4a8ad-103"> jest to technologia wstępnej kompilacji umożliwiające tworzenie i wdrażanie aplikacji systemu Windows, która jest dołączana do programu Visual Studio 2015 i nowszych wersjach.</span><span class="sxs-lookup"><span data-stu-id="4a8ad-103"> is a precompilation technology for building and deploying Windows apps that is included with Visual Studio 2015 and later versions.</span></span> <span data-ttu-id="4a8ad-104">Kompiluje automatycznie wersji aplikacji, które są zapisywane w kodu zarządzanego (C# lub Visual Basic), że docelowej platformy .NET Framework i Windows 10 do kodu natywnego.</span><span class="sxs-lookup"><span data-stu-id="4a8ad-104">It automatically compiles the release version of apps that are written in managed code (C# or Visual Basic) and that target the .NET Framework and Windows 10 to native code.</span></span>  

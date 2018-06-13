@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588911"
 ---
 # <a name="how-to-dial-modems-attached-to-serial-ports-in-visual-basic"></a><span data-ttu-id="43ec8-102">Porady: modemy dostępowe powiązane z portami seryjnymi w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="43ec8-102">How to: Dial Modems Attached to Serial Ports in Visual Basic</span></span>
 <span data-ttu-id="43ec8-103">W tym temacie opisano sposób użycia `My.Computer.Ports` do nawiązywania połączenia z modemem w języku Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="43ec8-103">This topic describes how to use `My.Computer.Ports` to dial a modem in Visual Basic.</span></span>  

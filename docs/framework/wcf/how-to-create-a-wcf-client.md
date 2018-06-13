@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806276"
 ---
 # <a name="how-to-create-a-windows-communication-foundation-client"></a><span data-ttu-id="f2bbc-102">Instrukcje: Tworzenie klienta WCF (Windows Communication Foundation)</span><span class="sxs-lookup"><span data-stu-id="f2bbc-102">How to: Create a Windows Communication Foundation Client</span></span>
 <span data-ttu-id="f2bbc-103">Jest to czwarty sześciu zadania wymagane do utworzenia aplikacji Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="f2bbc-103">This is the fourth of six tasks required to create a Windows Communication Foundation (WCF) application.</span></span> <span data-ttu-id="f2bbc-104">Omówienie sześciu wszystkich zadań, zobacz [Wprowadzenie — samouczek](../../../docs/framework/wcf/getting-started-tutorial.md) tematu.</span><span class="sxs-lookup"><span data-stu-id="f2bbc-104">For an overview of all six of the tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>  

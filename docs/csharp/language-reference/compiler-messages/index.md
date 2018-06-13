@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213213"
 ---
 # <a name="c-compiler-errors"></a>Błędy kompilatora C#
 Błędy kompilatora C# ma odpowiednich tematów, dlatego zostanie wygenerowany błąd, i, w niektórych przypadkach sposób naprawić błąd. Użyj jednej z poniższych czynności, aby sprawdzić, czy pomoc jest dostępna dla danego komunikatu o błędzie.  

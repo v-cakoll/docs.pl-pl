@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327740"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ i typy ogólne (C#)
 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania są oparte na typach ogólnych, które zostały wprowadzone w wersji 2.0 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Nie trzeba dogłębnej wiedzy typów ogólnych przed rozpoczęciem Pisanie zapytań. Można jednak poznać dwa podstawowe pojęcia:  

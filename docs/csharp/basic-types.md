@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218887"
 ---
 # <a name="types-variables-and-values"></a>Typy, zmiennych i wartości  
 C# to silnie typizowane język. Każdy zmiennej i stałej ma typ, tak jak w przypadku każdego wyrażenie obliczane do wartości. Każdy podpis metody Określa typ każdego parametru wejściowego i dla wartości zwracanej. Biblioteka klas programu .NET Framework definiuje zestaw wbudowane typy liczbowe, a także bardziej złożone typy, które reprezentują szerokiej gamy konstrukcje logicznych, takich jak system plików, połączeń sieciowych, kolekcji i tablic obiektów i daty. Typowy C# program korzysta z typów z biblioteki klas, a także typy zdefiniowane przez użytkownika, które modelu pojęcia, które są specyficzne dla domeny problemu programu.  

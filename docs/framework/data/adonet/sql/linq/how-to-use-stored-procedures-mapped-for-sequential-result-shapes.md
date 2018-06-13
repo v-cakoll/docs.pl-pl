@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351943"
 ---
 # <a name="how-to-use-stored-procedures-mapped-for-sequential-result-shapes"></a>Porady: Użyj procedur składowanych mapowane do wyniku sekwencyjnych kształtów
 Ten rodzaj procedury składowanej można wygenerować więcej niż jeden kształt wyniku, ale wiesz, w jakiej kolejności są zwracane. Natomiast ten scenariusz ze scenariuszem, jeżeli nie znasz sekwencji danych. Aby uzyskać więcej informacji, zobacz [porady: użycie przechowywanych procedur mapowane do wielu kształtów wynik](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-multiple-result-shapes.md).  

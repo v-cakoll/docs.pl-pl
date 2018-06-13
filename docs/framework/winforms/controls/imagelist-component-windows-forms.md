@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532941"
 ---
 # <a name="imagelist-component-windows-forms"></a>ImageList — Składnik (Formularze systemu Windows)
 Formularze systemu Windows `ImageList` składnik jest używany do przechowywania obrazów, które mogą być następnie wyświetlane przez formanty. Listy obrazów umożliwia pisanie kodu dla wykazu powinny być zawsze obrazów.  

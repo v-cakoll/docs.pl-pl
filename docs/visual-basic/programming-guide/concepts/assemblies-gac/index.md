@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644254"
 ---
 # <a name="assemblies-and-the-global-assembly-cache-visual-basic"></a>Zestawy i Globalna pamięć podręczna zestawów (Visual Basic)
 Zestawy stanowią podstawową jednostkę wdrożenia, kontroli wersji, ponownemu, zakresu aktywacji i uprawnień zabezpieczeń dla. Aplikacja Asp.net. Zestawy formę plik wykonywalny (.exe) lub dołączana dynamicznie biblioteka (dll) pliku i są blokami konstrukcyjnymi programu .NET Framework. Zawierają środowisko uruchomieniowe języka wspólnego o informacje, które należy znać typ implementacji. Można potraktować zestawu jako kolekcję typów i zasobów, które tworzą jednostkę logiczną funkcjonalności i są tworzone współdziałają ze sobą.  

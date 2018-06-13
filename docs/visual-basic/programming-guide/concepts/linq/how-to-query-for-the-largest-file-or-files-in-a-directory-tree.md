@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643416"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>Porady: zapytanie o największy plik lub pliki w drzewie katalogu (LINQ) (Visual Basic)
 Ten przykład przedstawia pięć zapytań dotyczących rozmiaru pliku w bajtach:  

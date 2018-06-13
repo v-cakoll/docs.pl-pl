@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213262"
 ---
 # <a name="-utf8output-c-compiler-options"></a>-utf8output (opcje kompilatora C#)
 **-Utf8output** opcja powoduje wyświetlenie kompilatora, dane wyjściowe przy użyciu kodowania UTF-8.  

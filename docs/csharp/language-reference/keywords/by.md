@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213441"
 ---
 # <a name="by-c-reference"></a>by (odwołanie w C#)
 Kontekstowe słowo kluczowe `by` jest używane w klauzuli `group` w wyrażeniu zapytania, co pozwala określić, w jaki sposób powinny zostać zgrupowane zwracane elementy. Aby uzyskać więcej informacji, zobacz artykuł [kluzula group](../../../csharp/language-reference/keywords/group-clause.md).  

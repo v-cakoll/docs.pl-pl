@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766816"
 ---
 # <a name="performance-considerations-entity-framework"></a>Zagadnienia dotyczące wydajności (Entity Framework)
 W tym temacie opisano charakterystyki wydajności programu ADO.NET Entity Framework oraz przedstawiono pewne kwestie dotyczące pomagają zwiększyć wydajność aplikacji programu Entity Framework.  

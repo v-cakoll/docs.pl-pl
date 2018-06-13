@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766975"
 ---
 # <a name="mathematical-functions"></a>Funkcje matematyczne
 .NET Framework Data Provider for SQL Server (SqlClient) oferuje funkcje matematyczne, których wykonywanie obliczeń na wartości wejściowych, które są przekazywane jako argumenty i zwracać wynik będący wartością wartość liczbową. Te funkcje są w obszarze nazw SqlServer, która jest dostępna, gdy używasz SqlClient. Właściwości przestrzeni nazw dostawcy umożliwia programu Entity Framework dowiedzieć się, które prefiks jest używany przez tego dostawcę dla określonych elementów składowych, takich jak typy i funkcje. W poniższej tabeli opisano funkcje matematyczne SqlClient.  

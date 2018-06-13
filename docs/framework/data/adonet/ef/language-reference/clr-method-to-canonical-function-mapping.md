@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766598"
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>Metody mapowania kanonicznej funkcji CLR
 Entity Framework zawiera zestaw kanonicznej funkcji, które implementuje funkcje, które są wspólne w wielu systemach bazy danych, takich jak funkcje matematyczne i manipulowanie ciągami. Pozwala to deweloperom target szeroką gamę systemów bazy danych. Przy wywołaniach z podczas badania technologii, takich jak LINQ to Entities, te kanonicznej funkcji są tłumaczone na poprawną odpowiedniego magazynu dla używany dostawca. Dzięki temu wywołania funkcji wyrażane w formie wspólnej między źródłami danych, zapewniając środowisko spójne zapytania między źródłami danych. Bitowe AND, OR, NOT i XOR operatory są również mapowany na funkcje canonical, gdy argument jest typu liczbowego. Dla logiczna operandy bitowe AND, OR, NOT, a nie obliczeniowe XOR operatorów logicznych AND, OR i ich operandami XOR operacji. Aby uzyskać więcej informacji, zobacz [kanonicznej funkcji](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  

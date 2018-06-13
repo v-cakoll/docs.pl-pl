@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644423"
 ---
 # <a name="concepts-and-terminology-functional-transformation-visual-basic"></a>Pojęcia i terminologię (funkcjonalności przekształcania) (Visual Basic)
 W tym temacie przedstawiono pojęcia i terminologię czysty transformacji funkcjonalności. Metody przekształcania funkcjonalności do przekształcania danych implikuje kod, który często jest szybsze do programu, bardziej obszerne i łatwiejsze do debugowania i obsługa niż programowania bardziej tradycyjnej, konieczne.  

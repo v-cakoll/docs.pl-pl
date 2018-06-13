@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644358"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>Wskazówki: wywoływanie Windows API (Visual Basic)
 Interfejsy API systemu Windows są bibliotek dołączanych (dynamicznie dll), które są częścią systemu operacyjnego Windows. Użyj ich do wykonywania zadań, gdy jest trudne do zapisania równoważnych procedur własny. Na przykład system Windows udostępnia funkcję o nazwie `FlashWindowEx` która pozwala na pasku tytułu aplikacji alternatywny między jasnym i ciemnym.  

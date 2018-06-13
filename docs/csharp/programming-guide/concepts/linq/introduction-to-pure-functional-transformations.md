@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329104"
 ---
 # <a name="introduction-to-pure-functional-transformations-c"></a>Wprowadzenie do przekształcenia funkcjonalności Pure (C#)
 W tej sekcji przedstawiono funkcjonalności przekształceń podstawowe pojęcia i tworzy obsługi language. Różni się znacząco podejścia przekształcania zorientowane obiektowo i funkcjonalności do programowania, w tym porady na temat przechodzenia do niego. Mimo że przekształcenia funkcjonalności mogą być używane w wielu scenariuszach programowania, transformacji XML jest używany jako konkretny przykład.  

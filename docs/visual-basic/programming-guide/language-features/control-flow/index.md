@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646555"
 ---
 # <a name="control-flow-in-visual-basic"></a>Przepływ sterowania w Visual Basic
 Pozostało nieuregulowanej, program będzie kontynuowana za pośrednictwem jego instrukcje od początku do końca. Niektóre programy bardzo proste mogą być napisane z tylko ten przepływ jednokierunkowe. Jednak większość zasilania i narzędzie żadnego języka programowania pochodzi z możliwości, aby zmienić kolejność wykonywania instrukcji sterowania i pętle.  

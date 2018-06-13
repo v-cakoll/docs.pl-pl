@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647268"
 ---
 # <a name="structures-visual-basic"></a>Struktury (Visual Basic)
 A *struktury* jest generalizacji typu zdefiniowane przez użytkownika (UDT) obsługiwany przez poprzednie wersje programu Visual Basic. Oprócz pól struktury mogą uwidaczniać właściwości, metod i zdarzeń. Struktura można zaimplementować jeden lub więcej interfejsów i mogą zadeklarować poziomy poszczególnych dostępu dla każdego pola.  

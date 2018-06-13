@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332471"
 ---
 # <a name="generic-type-parameters-c-programming-guide"></a>Parametry typu ogólnego (Przewodnik programowania w języku C#)
 W ogólnym typie lub metoda definicji parametry typu jest symbolem zastępczym dla klienta określa, po ich wystąpienia zmiennej typu ogólnego określonego typu. Klasy ogólnego, takich jak `GenericList<T>` na liście [wprowadzenie do typów ogólnych](../../../csharp/programming-guide/generics/introduction-to-generics.md), nie można użyć jako — ponieważ nie jest naprawdę typu, lecz więcej podobny do planu dla typu. Aby użyć `GenericList<T>`, kod klienta należy zadeklarować i tworzenia wystąpienia typu utworzone przez określenie argumentu typu w nawiasach ostrych. Typ argumentu dla tej konkretnej klasy mogą być dowolnego typu, rozpoznany przez kompilator. Dowolną liczbę wystąpień skonstruowanego typu mogą być tworzone, każda z nich przy użyciu argumentu innego typu, w następujący sposób:  

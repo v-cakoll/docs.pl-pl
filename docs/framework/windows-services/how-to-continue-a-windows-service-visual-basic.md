@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512102"
 ---
 # <a name="how-to-continue-a-windows-service-visual-basic"></a>Porady: kontynuowanie usług systemu Windows (Visual Basic)
 W tym przykładzie użyto <xref:System.ServiceProcess.ServiceController> składnik, aby kontynuować korzystanie z usługi administratora usług IIS na komputerze lokalnym.  

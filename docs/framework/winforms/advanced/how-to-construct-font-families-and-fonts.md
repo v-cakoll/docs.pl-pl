@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520893"
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>Porady: tworzenie rodzin czcionek i czcionek
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] grupuje czcionek z tej samej krój, ale różnych stylów do rodziny czcionek. Na przykład rodziny czcionek Arial zawiera następujące czcionki:  

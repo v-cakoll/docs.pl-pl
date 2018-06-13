@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563800"
 ---
 # <a name="xshared-attribute"></a>x:Shared — Atrybut
 Jeśli wartość `false`, modyfikuje zachowanie pobieranie zasobu WPF, tak aby żądania dotyczące zasobów oparte na atrybutach Utwórz nowe wystąpienie dla każdego żądania i nie udostępniały tej samej wystąpienia dla wszystkich żądań.  

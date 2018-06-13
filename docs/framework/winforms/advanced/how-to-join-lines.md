@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522018"
 ---
 # <a name="how-to-join-lines"></a>Porady: łączenie linii
 Połączenie linii jest typowe obszar, który jest tworzony przez dwa wiersze, w których zakończenia spełnia lub nakładają się. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] udostępnia trzy style sprzężenia linii: ostre, faza i zaokrąglona. Styl łączenia linii jest właściwością <xref:System.Drawing.Pen> klasy. Po określeniu styl łączenia linii dla <xref:System.Drawing.Pen> obiektu, czy styl łączenia zostaną zastosowane do wszystkich połączonych wierszy w żadnym <xref:System.Drawing.Drawing2D.GraphicsPath> rysowane przy użyciu pióra tego obiektu.  

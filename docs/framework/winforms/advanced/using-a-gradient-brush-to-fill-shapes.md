@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525037"
 ---
 # <a name="using-a-gradient-brush-to-fill-shapes"></a>Używanie pędzla gradientów do wypełniania kształtów
 Pędzla gradientów służy do wypełnienia kształtu zmieniających się stopniowo kolorem. Na przykład umożliwia poziome gradientu wypełnienia kształtu kolorem, który zmienia stopniowo podczas przenoszenia od lewej krawędzi kształtu do prawej krawędzi. Wyobraź sobie prostokąt z lewej krawędzi, czarne (reprezentowane przez składniki czerwony, zielonemu i niebieskiemu, 0, 0, 0) i prawej krawędzi czyli czerwony (reprezentowane przez 255, 0, 0). Jeśli prostokąt 256 pikseli szerokości, składnika czerwony danego piksela będzie dłuższą o jeden niż składnika czerwony piksela po lewej stronie. Po lewej stronie piksel w wierszu zawiera składniki kolorów (0, 0, 0), drugi pikseli ma (1, 0, 0), trzeci pikseli ma (2, 0, 0) i tak dalej, aż do piksela po prawej stronie zawiera składniki kolorów (255, 0, 0). Te wartości kolorów interpolowane tworzą kolor gradientu.  

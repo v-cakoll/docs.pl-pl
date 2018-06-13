@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515124"
 ---
 # <a name="ifelse-with-rules"></a>Jeślilub przy użyciu reguł
 W tym przykładzie pokazano sposób użycia warunek reguły z <xref:System.Workflow.Activities.IfElseActivity> działania.  

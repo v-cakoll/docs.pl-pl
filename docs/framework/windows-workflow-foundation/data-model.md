@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512044"
 ---
 # <a name="windows-workflow-foundation-data-model"></a>Model danych podstawy przepływu pracy systemu Windows
 Model danych programu Windows Workflow Foundation składa się z trzech pojęcia: zmiennych, argumenty i wyrażenia. Zmienne reprezentują magazynu danych i argumenty reprezentują przepływ danych do i z działania. Argumenty są powiązane (przypisana wartość) za pomocą wyrażeń, które mogą odwoływać się do zmiennych.  

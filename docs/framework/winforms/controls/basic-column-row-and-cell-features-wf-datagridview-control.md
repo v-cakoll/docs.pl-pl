@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525497"
 ---
 # <a name="basic-column-row-and-cell-features-in-the-windows-forms-datagridview-control"></a>Podstawowe funkcje komórek, wierszy i kolumn w formancie DataGridView formularzy systemu Windows
 Wiele podstawowych zachowania `DataGridView` komórek, wierszy i kolumn można zmodyfikować właściwości jednego. W tematach w tej sekcji opisano niektóre z najczęściej używanych z tych funkcji.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516220"
 ---
 # <a name="how-to-start-services"></a>Porady: uruchamianie usług
 Po zainstalowaniu usługi musi być uruchomiona. Uruchamianie wywołania <xref:System.ServiceProcess.ServiceBase.OnStart%2A> metody w klasie usługi. Zazwyczaj <xref:System.ServiceProcess.ServiceBase.OnStart%2A> metoda definiuje przydatne pracę, wykona usługi. Po uruchomieniu usługi pozostanie aktywne do czasu jest ręcznie wstrzymana lub zatrzymana.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398238"
 ---
 # <a name="specifying-a-character-set"></a>Określanie zestawu znaków
 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> Pola określa ciąg organizowanie i określa, jak wywołanie nazwy funkcji znalezione w bibliotece DLL platformy. W tym temacie opisano zarówno zachowania.  

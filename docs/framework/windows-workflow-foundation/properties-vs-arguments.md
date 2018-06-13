@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514771"
 ---
 # <a name="properties-vs-arguments"></a>Właściwości programu vs. Argumenty
 Brak dostępnych kilka opcji przekazywania danych do działania. Oprócz używania <xref:System.Activities.InArgument>, działania mogą również być opracowane odbierające dane przy użyciu standardowych CLR właściwości lub publicznego <xref:System.Activities.ActivityAction> właściwości. W tym temacie omówiono sposób wybierania typu odpowiedniej metody.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358183"
 ---
 # <a name="attribute-based-mapping"></a>Mapowanie opartych na atrybutach
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapuje bazy danych programu SQL Server do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modelu obiektu albo stosowanie atrybutów lub przy użyciu pliku mapowania zewnętrznych. W tym temacie przedstawiono podejście opartych na atrybutach.  

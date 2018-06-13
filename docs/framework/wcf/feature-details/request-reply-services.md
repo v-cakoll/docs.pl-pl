@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490948"
 ---
 # <a name="request-reply-services"></a>Usługi „żądanie-odpowiedź”
 Usługi "żądanie-odpowiedź" są domyślny typ kontrakt operacji w systemie Windows Communication Foundation (WCF). Klienci wykonywania wywołań do operacji usługi i oczekiwania na odpowiedź z usługi. Można wykonywać wywołania operacji usługi albo synchronicznie, w przypadku, gdy klient blokuje aż do jej odbiera odpowiedź z usługi lub razy wywołania lub asynchronicznie, gdy klient wysyła wywołania operacji usługi kontynuuje współpracę i odbiera odpowiedź z usługi w innym wątku.  

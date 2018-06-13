@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552048"
 ---
 # <a name="frame"></a>Klatka
 <xref:System.Windows.Controls.Frame> Sterowanie obsługuje nawigację po zawartości w zawartości. <xref:System.Windows.Controls.Frame> może być obsługiwany przez element główny, takich jak <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, lub jako wyspę w obrębie drzewa zawartości, który należy do elementu głównego.  

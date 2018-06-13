@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516766"
 ---
 # <a name="windows-workflow-overview"></a>Omówienie przepływu pracy systemu Windows
 Przepływ pracy to zbiór jednostek stanie wolnym wywoływana *działania* przechowywane jako model, który opisano proces rzeczywistych. Przepływy pracy umożliwiają opisu kolejność wykonywania i zależności między pracy krótko - i długotrwałe. Tę pracę przechodzi przez model od początku do końca, a działania mogą być wykonywane przez osoby lub funkcji systemu.  

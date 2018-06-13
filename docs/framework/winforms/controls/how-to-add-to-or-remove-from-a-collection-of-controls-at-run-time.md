@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525999"
 ---
 # <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>Porady: dodawanie do lub usuwanie z kolekcji kontrolek w czasie wykonywania
 Typowe zadania w projektowanie aplikacji są dodawanie formantów do oraz usuwanie kontrolek z dowolnego formantu kontenera na formularzach (takich jak <xref:System.Windows.Forms.Panel> lub <xref:System.Windows.Forms.GroupBox> formant lub nawet formularza). W czasie projektowania formantów może być przeciągnięte bezpośrednio na panelu lub grupy. W czasie wykonywania, obsługa tych kontrolek `Controls` kolekcji, która przechowuje informacje o kontrolki są umieszczane na nich.  

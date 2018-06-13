@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529869"
 ---
 # <a name="developing-windows-forms-controls-at-design-time"></a>Opracowywanie formantów formularzy systemu Windows w czasie projektowania
 Dla autorów kontroli programu .NET Framework zapewnia szereg kontroli tworzenia technologii. Autorzy nie są ograniczone do projektowania formanty złożone, które działają jako kolekcja istniejących formantów. Poprzez dziedziczenie możesz utworzyć własne kontrolki z istniejących formantów złożonych lub istniejących formantów formularzy systemu Windows. Można również projektować własne formantach, które implementują niestandardowe malowania. Te opcje umożliwiają dużą elastyczność w projekcie i funkcjonalności interfejsu visual. Aby móc korzystać z tych funkcji, należy zapoznać się z opartej na obiektach pojęcia dotyczące programowania.  

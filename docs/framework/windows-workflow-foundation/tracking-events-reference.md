@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520217"
 ---
 # <a name="tracking-events-reference"></a>Informacje dotyczące śledzenia zdarzeń
 Podczas wykonywania przepływu pracy w [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] zgłasza śledzenia zdarzeń, ponieważ przechodzi przez różne etapy w okresie użytkowania. Host może subskrybować te zdarzenia i aktualizować stan postępu przepływu pracy przez jego okres istnienia. Zgłoszone zdarzenia śledzenia zostały omówione w tej sekcji.  

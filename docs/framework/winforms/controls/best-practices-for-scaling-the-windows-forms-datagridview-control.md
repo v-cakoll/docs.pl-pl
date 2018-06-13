@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529811"
 ---
 # <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>Najlepsze praktyki dotyczące skalowania formantu DataGridView formularzy systemu Windows
 <xref:System.Windows.Forms.DataGridView> Formantu ma na celu zapewnienie maksymalnej skalowalności. Jeśli konieczne jest wyświetlenie dużych ilości danych, powinny postępuj zgodnie z wytycznymi, opisane w tym temacie, aby uniknąć zużywa duże ilości pamięci lub pogorszenia jakości związku czasu odpowiedzi interfejsu użytkownika (UI). W tym temacie omówiono następujące zagadnienia:  

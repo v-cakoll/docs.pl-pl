@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549233"
 ---
 # <a name="wpf-and-windows-forms-interoperation"></a>Współdziałanie WPF i Windows Forms
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] przedstawia dwie różne architektury do tworzenia interfejsów aplikacji. <xref:System.Windows.Forms.Integration?displayProperty=nameWithType> Przestrzeń nazw zawiera klasy, które umożliwiają typowych scenariuszy współdziałanie. Są dwa klucza klasy, które implementują współdziałanie możliwości <xref:System.Windows.Forms.Integration.WindowsFormsHost> i <xref:System.Windows.Forms.Integration.ElementHost>. W tym temacie opisano, jakie współdziałanie scenariusze są obsługiwane i jakie scenariusze nie są obsługiwane.  

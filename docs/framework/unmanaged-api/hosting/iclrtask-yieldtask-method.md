@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437706"
 ---
 # <a name="iclrtaskyieldtask-method"></a>ICLRTask::YieldTask — Metoda
 Żądania, że środowisko uruchomieniowe języka wspólnego (CLR) odłożone zadania który bieżącego [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) reprezentuje wystąpienie i być dostępne dla innych zadań czasu procesora.  

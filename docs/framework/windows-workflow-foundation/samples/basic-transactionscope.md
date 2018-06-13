@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516805"
 ---
 # <a name="basic-transactionscope"></a>Podstawowy element TransactionScope
 W tym przykładzie składa się z czterech scenariuszy uruchomienia przedstawiająca sposób zagnieździć <xref:System.Activities.Statements.TransactionScope> wystąpień. Pierwszy scenariusz przedstawia zagnieżdżania 3 działania firm, które autor nie zna konstrukcji. Scenariusze drugiego i trzeciego pokazują, jak są przestrzegane limity czasu i końcowe scenariuszu pokazano <xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure%2A> ustawienie.  

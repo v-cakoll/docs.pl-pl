@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513886"
 ---
 # <a name="net-framework-45-built-in-activity-library"></a>Biblioteka działań wbudowanych programu .NET framework 4.5
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] zawiera nową bibliotekę działania z rozszerzona funkcjonalność. Następujące typy działań:  

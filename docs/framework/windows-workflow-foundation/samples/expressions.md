@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515971"
 ---
 # <a name="expressions"></a>Wyrażenia
 W tym przykładzie pokazano, jak używać wyrażeń podstawowe w przepływie pracy. Składa się z przepływu pracy, który oblicza wynagrodzenie podstawowe statystyki dla dwóch pracowników fikcyjnej firmy. Dwie klasy `Employee` i `SalaryStats`, są zdefiniowane w Employee.cs i SalaryStats.cs. Te klasy są używane w przepływie pracy, który pokazuje, jak wykonywać proste operacje arytmetyczne i ciąg właściwości zmiennych typów złożonych.  

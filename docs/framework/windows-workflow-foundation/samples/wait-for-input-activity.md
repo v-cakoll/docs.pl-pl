@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519001"
 ---
 # <a name="wait-for-input-activity"></a>Poczekaj, aż działania wejściowego
 Ten przykład przedstawia sposób tworzenia zakładek o nazwie w przepływie pracy. Windows Workflow Foundation (WF) nie zawiera działania dla tworzenia deklaratywne zakładki. W związku z tym jeśli chcesz utworzyć zakładkę w przepływie pracy, należy napisać działania niestandardowego, który go utworzył. `WaitForInput` Działanie zdefiniowane w tym przykładzie zapewnia tę funkcję, dzięki czemu użytkownicy mogą tworzyć zakładki deklaratywnie w przepływie pracy.  

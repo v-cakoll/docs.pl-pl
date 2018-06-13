@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526282"
 ---
 # <a name="how-to-customize-the-appearance-of-rows-in-the-windows-forms-datagridview-control"></a>Porady: dostosowywanie wyglądu wierszy w formancie DataGridView formularzy systemu Windows
 Można sterować wyglądem <xref:System.Windows.Forms.DataGridView> wierszy dzięki obsłudze jedno lub oba <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType> i <xref:System.Windows.Forms.DataGridView.RowPostPaint?displayProperty=nameWithType> zdarzenia. Te zdarzenia są zaprojektowane tak, aby tylko co chcesz połączenie, dzięki czemu można malować <xref:System.Windows.Forms.DataGridView> pozostałe malowanie formantu. Na przykład, jeśli chcesz malować niestandardowe tło może obsłużyć <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType> zdarzeń i umożliwiają pojedynczych komórek malowanie własnych zawartości pierwszego planu. Alternatywnie możesz pozwolić, aby komórek rysowania się i dodać niestandardowe pierwszego planu zawartości programu obsługi dla <xref:System.Windows.Forms.DataGridView.RowPostPaint?displayProperty=nameWithType> zdarzeń. Można również wyłączyć komórki rysowania i malowanie wszystko samodzielnie w <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType> obsługi zdarzeń.  

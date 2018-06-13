@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512213"
 ---
 # <a name="exceptions-transactions-and-compensation"></a>Wyjątki, transakcje i kompensacji
 [!INCLUDE[wf1](../../../includes/wf1-md.md)] udostępnia kilka różnych mechanizmów obsługi błędów czasu wykonywania w przepływach pracy. Przepływy pracy można użyć kombinacji programów obsługi wyjątków, transakcje, anulowanie i kompensacji obsługi i powrócić do poprawnego działania z błędów.  

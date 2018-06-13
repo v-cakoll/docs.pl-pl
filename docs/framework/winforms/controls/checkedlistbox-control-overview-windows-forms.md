@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524310"
 ---
 # <a name="checkedlistbox-control-overview-windows-forms"></a>CheckedListBox — Informacje o formancie [Formularze systemu Windows]
 Formularze systemu Windows <xref:System.Windows.Forms.CheckedListBox> rozszerza kontroli <xref:System.Windows.Forms.ListBox> formantu. Robi prawie wszystkie czy pole listy, a także można wyświetlić znacznik wyboru obok elementów na liście. Inne różnice między formantami dwóch są, że zaznaczone, obsługiwana jest tylko pola listy <xref:System.Windows.Forms.DrawMode.Normal?displayProperty=nameWithType>; oraz że zaznaczone pola listy może mieć tylko jeden element ani nie wybrano none. Należy pamiętać, że wybrany element pojawi się zaznaczony w formularzu i nie jest taka sama jak zaznaczony element.  

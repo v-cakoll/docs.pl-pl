@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517715"
 ---
 # <a name="xaml-activation"></a>Aktywacja XAML
 W tym przykładzie pokazano, jak udostępniać deklaracyjnego przepływu pracy w programie IIS. Próbka jest podstawowy przepływ pracy o nazwie `EchoService` mający jednej operacji.  

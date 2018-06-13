@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526568"
 ---
 # <a name="how-to-enable-users-to-copy-multiple-cells-to-the-clipboard-from-the-windows-forms-datagridview-control"></a>Porady: umożliwianie użytkownikom kopiowania wielu komórek do schowka z formantu DataGridView formularzy systemu Windows
 Po włączeniu kopiowanie komórki wprowadzeniu danych w sieci <xref:System.Windows.Forms.DataGridView> łatwo dostępne dla innych aplikacji za pomocą formantu <xref:System.Windows.Forms.Clipboard>. Wartości zaznaczonych komórek są konwertowane na ciągi i dodane do Schowka jako wartości tekstowe tabulacji wklejania w aplikacjach, takich jak Notatnik, a program Excel, a w formacie HTML tabeli wklejania w aplikacjach, takich jak Word.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523555"
 ---
 # <a name="changing-the-appearance-of-windows-forms"></a>Zmienianie wyglądu formularzy systemu Windows
 Można dostosować wygląd aplikacji formularzy systemu Windows na wiele sposobów, np. Zmiana obramowania, nieprzezroczystość kształtu, style, lub ustawienie obraz tła dla aplikacji Windows Forms.  

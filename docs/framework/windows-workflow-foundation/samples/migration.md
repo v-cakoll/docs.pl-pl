@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513978"
 ---
 # <a name="migration"></a>Migracja
 Ta sekcja zawiera przykłady, które przedstawiają sposób migrowania zawartości Windows Workflow Foundation (WF) napisane przy użyciu [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] do [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)].  

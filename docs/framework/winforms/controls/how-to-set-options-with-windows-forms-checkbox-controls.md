@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534089"
 ---
 # <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>Porady: ustawianie opcji za pomocą formantów CheckBox formularzy systemu Windows
 Formularze systemu Windows <xref:System.Windows.Forms.CheckBox> formantu służy do zapewniają użytkownikom True/False lub opcje tak/nie. Gdy jest wybrana kontrolka ma wyświetlać znacznik wyboru.  

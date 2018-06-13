@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396964"
 ---
 # <a name="interpreting-network-tracing"></a>Interpretowanie Śledzenie sieci
 Gdy włączone jest śledzenie sieci, umożliwia śledzenie przechwytywania wywołania aplikacji sprawia, że do różnych <xref:System.Net> klasy elementów członkowskich. Dane wyjściowe z tych wywołań może być podobne do poniższych przykładach.  

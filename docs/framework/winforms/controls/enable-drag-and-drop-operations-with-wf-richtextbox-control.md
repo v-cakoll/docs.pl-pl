@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529769"
 ---
 # <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>Porady: włączenie operacji przeciągania i upuszczania za pomocą kontrolki RichTextBox formularzy systemu Windows
 Operacje przeciągania i upuszczania w formularzach systemu Windows <xref:System.Windows.Forms.RichTextBox> formantu są realizowane przez Obsługa <xref:System.Windows.Forms.RichTextBox.DragEnter> i <xref:System.Windows.Forms.RichTextBox.DragDrop> zdarzenia. W związku z tym są bardzo proste operacje przeciągania i upuszczania <xref:System.Windows.Forms.RichTextBox> formantu.  

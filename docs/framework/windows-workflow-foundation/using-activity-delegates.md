@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518955"
 ---
 # <a name="using-activity-delegates"></a>Używanie delegatów działania
 Działanie delegatów Włącz autorów działania do udostępnienia wywołań zwrotnych z określonych podpisów, dla których użytkownik działania można podać oparte na działaniu programów obsługi. Dostępne są dwa typy delegatów działania: <xref:System.Activities.ActivityAction%601> służy do definiowania obiektów delegowanych działania, które nie mają zwracanych wartości, i <xref:System.Activities.ActivityFunc%601> służy do definiowania delegatów działania, które mają wartość zwracaną.  

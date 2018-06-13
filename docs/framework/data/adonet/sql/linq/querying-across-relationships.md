@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360468"
 ---
 # <a name="querying-across-relationships"></a><span data-ttu-id="6ba74-102">Wykonywanie zapytań w relacjach</span><span class="sxs-lookup"><span data-stu-id="6ba74-102">Querying Across Relationships</span></span>
 <span data-ttu-id="6ba74-103">Odwołania do innych obiektów lub kolekcje innych obiektów w definicji klasy bezpośrednio odpowiadają relacje klucza obcego w bazie danych.</span><span class="sxs-lookup"><span data-stu-id="6ba74-103">References to other objects or collections of other objects in your class definitions directly correspond to foreign-key relationships in the database.</span></span> <span data-ttu-id="6ba74-104">Te relacje można użyć w przypadku zapytania według używając zapisu kropkowego dostępu do właściwości relacji i przejść z jednego obiektu do innego.</span><span class="sxs-lookup"><span data-stu-id="6ba74-104">You can use these relationships when you query by using dot notation to access the relationship properties and navigate from one object to another.</span></span> <span data-ttu-id="6ba74-105">Wykonuje te operacje związane z dostępem do bardziej złożonych sprzężeń ani podzapytań skorelowane równoważne SQL.</span><span class="sxs-lookup"><span data-stu-id="6ba74-105">These access operations translate to more complex joins or correlated subqueries in the equivalent SQL.</span></span>  

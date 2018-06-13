@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273926"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="03f11-103">!</span><span class="sxs-lookup"><span data-stu-id="03f11-103">!</span></span> <span data-ttu-id="03f11-104">Operator (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="03f11-104">Operator (C# Reference)</span></span>
 <span data-ttu-id="03f11-105">Operator logiczny negacji (`!`) jest operatorem jednoargumentowym, który neguje swój argument operacji.</span><span class="sxs-lookup"><span data-stu-id="03f11-105">The logical negation operator (`!`) is a unary operator that negates its operand.</span></span> <span data-ttu-id="03f11-106">Jest zdefiniowany dla typu `bool` i zwraca wartość `true` tylko wtedy, gdy argument operacji jest `false`.</span><span class="sxs-lookup"><span data-stu-id="03f11-106">It is defined for `bool` and returns `true` if and only if its operand is `false`.</span></span>  

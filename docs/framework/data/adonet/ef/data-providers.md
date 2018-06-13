@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760391"
 ---
 # <a name="entity-framework-data-providers"></a><span data-ttu-id="80de2-102">Dostawcy danych programu Entity Framework</span><span class="sxs-lookup"><span data-stu-id="80de2-102">Entity Framework Data Providers</span></span>
 <span data-ttu-id="80de2-103">Ta sekcja zawiera informacje dotyczące dostawcy danych, które obsługują [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span><span class="sxs-lookup"><span data-stu-id="80de2-103">This section provides information on data providers that support the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span></span>  

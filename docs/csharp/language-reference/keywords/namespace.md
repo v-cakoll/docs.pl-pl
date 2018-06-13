@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33276022"
 ---
 # <a name="namespace-c-reference"></a><span data-ttu-id="80977-102">namespace (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="80977-102">namespace (C# Reference)</span></span>
 <span data-ttu-id="80977-103">`namespace` — Słowo kluczowe służy do deklarowania zakresu, który zawiera zestaw obiektów pokrewnych.</span><span class="sxs-lookup"><span data-stu-id="80977-103">The `namespace` keyword is used to declare a scope that contains a set of related objects.</span></span> <span data-ttu-id="80977-104">Przestrzeń nazw można użyć do organizowania elementów kodu i tworzenia unikatowych typów.</span><span class="sxs-lookup"><span data-stu-id="80977-104">You can use a namespace to organize code elements and to create globally unique types.</span></span>  

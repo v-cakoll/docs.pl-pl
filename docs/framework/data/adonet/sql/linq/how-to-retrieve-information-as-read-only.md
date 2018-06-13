@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360703"
 ---
 # <a name="how-to-retrieve-information-as-read-only"></a><span data-ttu-id="d42a1-102">Porady: pobieranie informacji jako tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="d42a1-102">How to: Retrieve Information As Read-Only</span></span>
 <span data-ttu-id="d42a1-103">Jeśli nie chcesz zmienić dane, można zwiększyć wydajność kwerend przez wyszukiwanie wyniki tylko do odczytu.</span><span class="sxs-lookup"><span data-stu-id="d42a1-103">When you do not intend to change the data, you can increase the performance of queries by seeking read-only results.</span></span>  

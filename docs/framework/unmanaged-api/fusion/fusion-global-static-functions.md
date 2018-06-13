@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435908"
 ---
 # <a name="fusion-global-static-functions"></a><span data-ttu-id="dd5c9-102">Łączenie statycznych funkcji globalnych</span><span class="sxs-lookup"><span data-stu-id="dd5c9-102">Fusion Global Static Functions</span></span>
 <span data-ttu-id="dd5c9-103">W tej sekcji opisano niezarządzane statyczne funkcje globalne, używane fusion interfejsu API.</span><span class="sxs-lookup"><span data-stu-id="dd5c9-103">This section describes the unmanaged global static functions that the fusion API uses.</span></span>  

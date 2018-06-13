@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439325"
 ---
 # <a name="ihostcontrolgethostmanager-method"></a><span data-ttu-id="efe6e-102">IHostControl::GetHostManager — Metoda</span><span class="sxs-lookup"><span data-stu-id="efe6e-102">IHostControl::GetHostManager Method</span></span>
 <span data-ttu-id="efe6e-103">Pobiera wskaźnika interfejsu hosta implementacji interfejsu z określonym `IID`.</span><span class="sxs-lookup"><span data-stu-id="efe6e-103">Gets an interface pointer to the host's implementation of the interface with the specified `IID`.</span></span>  

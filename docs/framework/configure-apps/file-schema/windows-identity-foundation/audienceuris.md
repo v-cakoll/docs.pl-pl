@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755997"
 ---
 # <a name="ltaudienceurisgt"></a><span data-ttu-id="61de0-102">&lt;audienceUris&gt;</span><span class="sxs-lookup"><span data-stu-id="61de0-102">&lt;audienceUris&gt;</span></span>
 <span data-ttu-id="61de0-103">Określa zestaw identyfikatorów URI, które są dopuszczalne identyfikatory uzależnionej (RP).</span><span class="sxs-lookup"><span data-stu-id="61de0-103">Specifies the set of URIs that are acceptable identifiers of the relying party (RP).</span></span> <span data-ttu-id="61de0-104">Tokeny nie będą akceptowane, chyba że ograniczone do jednej z dozwolonych odbiorców identyfikatorów URI.</span><span class="sxs-lookup"><span data-stu-id="61de0-104">Tokens will not be accepted unless they are scoped for one of the allowed audience URIs.</span></span>  

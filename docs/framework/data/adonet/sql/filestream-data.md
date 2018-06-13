@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357782"
 ---
 # <a name="filestream-data"></a><span data-ttu-id="a5100-102">Danych FILESTREAM</span><span class="sxs-lookup"><span data-stu-id="a5100-102">FILESTREAM Data</span></span>
 <span data-ttu-id="a5100-103">Atrybutu magazynowania FILESTREAM jest dla danych binarnych (BLOB) przechowywanych w kolumnie varbinary(max).</span><span class="sxs-lookup"><span data-stu-id="a5100-103">The FILESTREAM storage attribute is for binary (BLOB) data stored in a varbinary(max) column.</span></span> <span data-ttu-id="a5100-104">Przed FILESTREAM przechowywanie danych binarnych wymaga specjalnej obsługi.</span><span class="sxs-lookup"><span data-stu-id="a5100-104">Before FILESTREAM, storing binary data required special handling.</span></span> <span data-ttu-id="a5100-105">Dane niemające struktury, takich jak dokumenty tekst, obrazy i wideo, jest często przechowywane poza bazą danych, co utrudnia zarządzanie.</span><span class="sxs-lookup"><span data-stu-id="a5100-105">Unstructured data, such as text documents, images and video, is often stored outside of the database, making it difficult to manage.</span></span>  

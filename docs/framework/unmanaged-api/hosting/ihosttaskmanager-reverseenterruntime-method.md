@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442023"
 ---
 # <a name="ihosttaskmanagerreverseenterruntime-method"></a><span data-ttu-id="91c98-102">IHostTaskManager::ReverseEnterRuntime — Metoda</span><span class="sxs-lookup"><span data-stu-id="91c98-102">IHostTaskManager::ReverseEnterRuntime Method</span></span>
 <span data-ttu-id="91c98-103">Powiadamia hosta, że wywołanie odbywa się na środowisko uruchomieniowe języka wspólnego (CLR) z kodem niezarządzanym.</span><span class="sxs-lookup"><span data-stu-id="91c98-103">Notifies the host that a call is being made into the common language runtime (CLR) from unmanaged code.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761158"
 ---
 # <a name="type-definitions-entity-sql"></a><span data-ttu-id="514ea-102">Definicje typów (jednostka SQL)</span><span class="sxs-lookup"><span data-stu-id="514ea-102">Type Definitions (Entity SQL)</span></span>
 <span data-ttu-id="514ea-103">Definicja typu jest używana w instrukcji deklaracji [!INCLUDE[esql](../../../../../../includes/esql-md.md)] wbudowanej funkcji.</span><span class="sxs-lookup"><span data-stu-id="514ea-103">A type definition is used in the declaration statement of an [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Inline function.</span></span>  

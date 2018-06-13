@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747457"
 ---
 # <a name="ltaddgt-element-for-ltswitchesgt"></a><span data-ttu-id="4021e-102">&lt;Dodaj&gt; elementu &lt;przełączników&gt;</span><span class="sxs-lookup"><span data-stu-id="4021e-102">&lt;add&gt; Element for &lt;switches&gt;</span></span>
 <span data-ttu-id="4021e-103">Określa poziom, gdy jest ustawiona przełącznik śledzenia.</span><span class="sxs-lookup"><span data-stu-id="4021e-103">Specifies the level where a trace switch is set.</span></span>  

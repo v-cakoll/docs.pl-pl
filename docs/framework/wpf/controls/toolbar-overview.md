@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557397"
 ---
 # <a name="toolbar-overview"></a><span data-ttu-id="b81fa-102">ToolBar — Przegląd</span><span class="sxs-lookup"><span data-stu-id="b81fa-102">ToolBar Overview</span></span>
 <span data-ttu-id="b81fa-103"><xref:System.Windows.Controls.ToolBar> Formanty są kontenerami dla grupy poleceń lub kontrolek, które zwykle są związane z ich funkcji.</span><span class="sxs-lookup"><span data-stu-id="b81fa-103"><xref:System.Windows.Controls.ToolBar> controls are containers for a group of commands or controls which are typically related in their function.</span></span> <span data-ttu-id="b81fa-104">A <xref:System.Windows.Controls.ToolBar> zwykle zawiera przyciski, które wywołują polecenia.</span><span class="sxs-lookup"><span data-stu-id="b81fa-104">A <xref:System.Windows.Controls.ToolBar> usually contains buttons which invoke commands.</span></span>  

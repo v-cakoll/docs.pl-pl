@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441182"
 ---
 # <a name="lpthreadstartroutine-function-pointer"></a><span data-ttu-id="11fa7-102">LPTHREAD_START_ROUTINE — Wskaźnik funkcji</span><span class="sxs-lookup"><span data-stu-id="11fa7-102">LPTHREAD_START_ROUTINE Function Pointer</span></span>
 <span data-ttu-id="11fa7-103">Punkty funkcji, które powiadamia hosta, który wątek został uruchomiony w trybie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="11fa7-103">Points to a function that notifies the host that a thread has started to execute.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265690"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="008ec-102">| — Operator (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="008ec-102">| Operator (C# Reference)</span></span>
 <span data-ttu-id="008ec-103">Binarny `|` operatory są wstępnie zdefiniowane dla typów całkowitych i `bool`.</span><span class="sxs-lookup"><span data-stu-id="008ec-103">Binary `|` operators are predefined for the integral types and `bool`.</span></span> <span data-ttu-id="008ec-104">W przypadku typów całkowitych `|` oblicza wartości bitowe lub argumentów.</span><span class="sxs-lookup"><span data-stu-id="008ec-104">For integral types, `|` computes the bitwise OR of its operands.</span></span> <span data-ttu-id="008ec-105">Dla `bool` argumentów operacji, `|` logiczne lub z argumentów; oblicza wynik jest `false` tylko wtedy, gdy są obie argumentów `false`.</span><span class="sxs-lookup"><span data-stu-id="008ec-105">For `bool` operands, `|` computes the logical OR of its operands; that is, the result is `false` if and only if both its operands are `false`.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743098"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a><span data-ttu-id="51f7a-102">Porady dotyczące zestawów i domen aplikacji</span><span class="sxs-lookup"><span data-stu-id="51f7a-102">Application Domains and Assemblies How-to Topics</span></span>
 <span data-ttu-id="51f7a-103">Poniższe sekcje zawierają łącza do wszystkich — tematy porad znajdującego się w dokumentacji koncepcyjnego do programowania za pomocą zestawów i domen aplikacji.</span><span class="sxs-lookup"><span data-stu-id="51f7a-103">The following sections contain links to all How-to topics found in the conceptual documentation for programming with application domains and assemblies.</span></span>  

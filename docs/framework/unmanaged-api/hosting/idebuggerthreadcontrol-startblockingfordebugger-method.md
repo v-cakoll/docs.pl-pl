@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437937"
 ---
 # <a name="idebuggerthreadcontrolstartblockingfordebugger-method"></a><span data-ttu-id="304e2-102">IDebuggerThreadControl::StartBlockingForDebugger — Metoda</span><span class="sxs-lookup"><span data-stu-id="304e2-102">IDebuggerThreadControl::StartBlockingForDebugger Method</span></span>
 <span data-ttu-id="304e2-103">Powiadamia host czy usług debugowania rozpoczęcia blokuje wszystkie wątki.</span><span class="sxs-lookup"><span data-stu-id="304e2-103">Notifies the host that the debugging services are about to start blocking all threads.</span></span>  

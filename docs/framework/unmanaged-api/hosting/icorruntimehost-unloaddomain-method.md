@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438119"
 ---
 # <a name="icorruntimehostunloaddomain-method"></a><span data-ttu-id="df18b-102">ICorRuntimeHost::UnloadDomain — Metoda</span><span class="sxs-lookup"><span data-stu-id="df18b-102">ICorRuntimeHost::UnloadDomain Method</span></span>
 <span data-ttu-id="df18b-103">Zwalnia domeny określonej aplikacji w bieżącym procesie.</span><span class="sxs-lookup"><span data-stu-id="df18b-103">Unloads the specified application domain from the current process.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755968"
 ---
 # <a name="creating-a-dataset"></a><span data-ttu-id="0a08a-102">Tworzenie zestawu danych</span><span class="sxs-lookup"><span data-stu-id="0a08a-102">Creating a DataSet</span></span>
 <span data-ttu-id="0a08a-103">Utwórz wystąpienie <xref:System.Data.DataSet> przez wywołanie metody <xref:System.Data.DataSet> konstruktora.</span><span class="sxs-lookup"><span data-stu-id="0a08a-103">You create an instance of a <xref:System.Data.DataSet> by calling the <xref:System.Data.DataSet> constructor.</span></span> <span data-ttu-id="0a08a-104">Opcjonalnie można określić argument nazwy.</span><span class="sxs-lookup"><span data-stu-id="0a08a-104">Optionally specify a name argument.</span></span> <span data-ttu-id="0a08a-105">Jeśli nie określisz nazwy <xref:System.Data.DataSet>, nazwa jest równa "NewDataSet".</span><span class="sxs-lookup"><span data-stu-id="0a08a-105">If you do not specify a name for the <xref:System.Data.DataSet>, the name is set to "NewDataSet".</span></span>  

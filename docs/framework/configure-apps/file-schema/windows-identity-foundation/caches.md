@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755217"
 ---
 # <a name="ltcachesgt"></a><span data-ttu-id="94abc-102">&lt;Pamięci podręczne&gt;</span><span class="sxs-lookup"><span data-stu-id="94abc-102">&lt;caches&gt;</span></span>
 <span data-ttu-id="94abc-103">Rejestruje pamięci podręczne tokeny sesji i wykrywania powtórzeń tokenów.</span><span class="sxs-lookup"><span data-stu-id="94abc-103">Registers the caches used for session tokens and token replay detection.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442920"
 ---
 # <a name="unmanaged-api-reference"></a><span data-ttu-id="7583e-102">Niezarządzany wykaz interfejsów API</span><span class="sxs-lookup"><span data-stu-id="7583e-102">Unmanaged API Reference</span></span>
 <span data-ttu-id="7583e-103">Ta sekcja zawiera informacje o niezarządzane interfejsy API, które mogą być używane przez zarządzanego kodu — związanych z aplikacji, takich jak hosty w czasie wykonywania, kompilatory, deasemblerów pakietów, obfuscators, debugery i profilowania.</span><span class="sxs-lookup"><span data-stu-id="7583e-103">This section includes information on unmanaged APIs that can be used by managed-code-related applications, such as runtime hosts, compilers, disassemblers, obfuscators, debuggers, and profilers.</span></span>  

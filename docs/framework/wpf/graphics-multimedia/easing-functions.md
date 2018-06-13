@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557566"
 ---
 # <a name="easing-functions"></a><span data-ttu-id="16331-102">Zwalnianie funkcji</span><span class="sxs-lookup"><span data-stu-id="16331-102">Easing Functions</span></span>
 <span data-ttu-id="16331-103">Funkcji sterowania tempem zmian umożliwiają stosowanie niestandardowych matematycznymi do animacji.</span><span class="sxs-lookup"><span data-stu-id="16331-103">Easing functions allow you to apply custom mathematical formulas to your animations.</span></span> <span data-ttu-id="16331-104">Na przykład możesz obiektu realistycznie Odbijanie lub zachowują się tak, jakby była na źródła.</span><span class="sxs-lookup"><span data-stu-id="16331-104">For example, you may want an object to realistically bounce or behave as though it were on a spring.</span></span> <span data-ttu-id="16331-105">Można użyć do przybliżonego określenia tych skutków ramki klucza lub nawet z lub do/przez animacje, ale zajmuje dużo pracy, a następnie animacji będzie dokładności mniejszej niż przy użyciu formuły matematycznych.</span><span class="sxs-lookup"><span data-stu-id="16331-105">You could use Key-Frame or even From/To/By animations to approximate these effects but it would take a significant amount of work and the animation would be less accurate than using a mathematical formula.</span></span>  

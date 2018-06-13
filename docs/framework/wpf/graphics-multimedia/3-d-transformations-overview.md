@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557982"
 ---
 # <a name="3-d-transformations-overview"></a><span data-ttu-id="13531-102">Przegląd Przekształcenia 3-D</span><span class="sxs-lookup"><span data-stu-id="13531-102">3-D Transformations Overview</span></span>
 <span data-ttu-id="13531-103">W tym temacie opisano sposób stosowania przekształcenia do modeli 3-w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] systemu grafiki.</span><span class="sxs-lookup"><span data-stu-id="13531-103">This topic describes how to apply transformations to 3-D models in the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] graphics system.</span></span> <span data-ttu-id="13531-104">Przekształcenia umożliwiają deweloperom położenia, zmienianie rozmiaru i zmienić orientację modeli bez zmiany podstawowego wartości, które je zdefiniować.</span><span class="sxs-lookup"><span data-stu-id="13531-104">Transformations allow the developer to reposition, resize, and reorient models without changing the base values that define them.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434070"
 ---
 # <a name="iclrsyncmanagerdeleterwlockowneriterator-method"></a><span data-ttu-id="b6bc9-102">ICLRSyncManager::DeleteRWLockOwnerIterator — Metoda</span><span class="sxs-lookup"><span data-stu-id="b6bc9-102">ICLRSyncManager::DeleteRWLockOwnerIterator Method</span></span>
 <span data-ttu-id="b6bc9-103">Żąda, że środowisko uruchomieniowe języka wspólnego (CLR) zniszczyć iterację, która została utworzona przez wywołanie do [ICLRSyncManager::CreateRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-createrwlockowneriterator-method.md).</span><span class="sxs-lookup"><span data-stu-id="b6bc9-103">Requests that the common language runtime (CLR) destroy an iterator that was created by a call to [ICLRSyncManager::CreateRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-createrwlockowneriterator-method.md).</span></span>  

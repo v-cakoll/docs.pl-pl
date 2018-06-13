@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442380"
 ---
 # <a name="ihostcrstenter-method"></a><span data-ttu-id="24275-102">IHostCrst::Enter — Metoda</span><span class="sxs-lookup"><span data-stu-id="24275-102">IHostCrst::Enter Method</span></span>
 <span data-ttu-id="24275-103">Wprowadza sekcja krytyczna, reprezentowanego przez bieżący [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="24275-103">Enters the critical section that is represented by the current [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) instance.</span></span>  

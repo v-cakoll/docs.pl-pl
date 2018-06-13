@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444155"
 ---
 # <a name="imetadatafiltermarktoken-method"></a><span data-ttu-id="6e08b-102">IMetaDataFilter::MarkToken — Metoda</span><span class="sxs-lookup"><span data-stu-id="6e08b-102">IMetaDataFilter::MarkToken Method</span></span>
 <span data-ttu-id="6e08b-103">Ustawia wartość wskazującą przetworzeniu token określonych metadanych.</span><span class="sxs-lookup"><span data-stu-id="6e08b-103">Sets a value indicating that the specified metadata token has been processed.</span></span>  

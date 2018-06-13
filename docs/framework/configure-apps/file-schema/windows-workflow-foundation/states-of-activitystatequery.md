@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756777"
 ---
 # <a name="ltstatesgt-of-ltactivitystatequerygt"></a><span data-ttu-id="8fd6f-102">&lt;Stany&gt; z &lt;activityStateQuery&gt;</span><span class="sxs-lookup"><span data-stu-id="8fd6f-102">&lt;states&gt; of &lt;activityStateQuery&gt;</span></span>
 <span data-ttu-id="8fd6f-103">Kolekcja elementów konfiguracji, które zawierają stany subskrybowanego działania, dla którego należy obliczanie rekord śledzenia.</span><span class="sxs-lookup"><span data-stu-id="8fd6f-103">A collection of configuration elements that contain the states of the subscribed activity for which a tracking record should be emitted.</span></span>  

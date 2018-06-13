@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754866"
 ---
 # <a name="ltusernameauthenticationgt"></a><span data-ttu-id="28b91-102">&lt;UserNameAuthentication&gt;</span><span class="sxs-lookup"><span data-stu-id="28b91-102">&lt;userNameAuthentication&gt;</span></span>
 <span data-ttu-id="28b91-103">Określa poświadczenia usługi na podstawie nazwy użytkownika i hasła.</span><span class="sxs-lookup"><span data-stu-id="28b91-103">Specifies a service's credentials based on user name and password.</span></span>  

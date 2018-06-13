@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439302"
 ---
 # <a name="ihostsecuritycontext-interface"></a><span data-ttu-id="872e1-102">IHostSecurityContext — Interfejs</span><span class="sxs-lookup"><span data-stu-id="872e1-102">IHostSecurityContext Interface</span></span>
 <span data-ttu-id="872e1-103">Umożliwia środowisko uruchomieniowe języka wspólnego (CLR), aby zachować informacje kontekstu zabezpieczeń zaimplementowana przez hosta.</span><span class="sxs-lookup"><span data-stu-id="872e1-103">Allows the common language runtime (CLR) to maintain security context information implemented by the host.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437768"
 ---
 # <a name="igchostgetstats-method"></a><span data-ttu-id="57c25-102">IGCHost::GetStats — Metoda</span><span class="sxs-lookup"><span data-stu-id="57c25-102">IGCHost::GetStats Method</span></span>
 <span data-ttu-id="57c25-103">Pobiera statystyki dla bieżącego stanu systemu czyszczenia pamięci.</span><span class="sxs-lookup"><span data-stu-id="57c25-103">Gets the statistics for the current state of the garbage collection system.</span></span>  

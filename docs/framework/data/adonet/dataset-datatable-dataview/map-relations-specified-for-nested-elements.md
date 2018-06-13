@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756699"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a><span data-ttu-id="0e54d-102">Mapowanie relacji określonych dla elementów zagnieżdżonych</span><span class="sxs-lookup"><span data-stu-id="0e54d-102">Map Relations Specified for Nested Elements</span></span>
 <span data-ttu-id="0e54d-103">Schemat mogą obejmować **msdata:Relationship** adnotacji, aby jawnie określić mapowanie między wszelkie dwa elementy w schemacie.</span><span class="sxs-lookup"><span data-stu-id="0e54d-103">A schema can include an **msdata:Relationship** annotation to explicitly specify the mapping between any two elements in the schema.</span></span> <span data-ttu-id="0e54d-104">Dwa elementy określone **msdata:Relationship** mogą być zagnieżdżane w schemacie, ale nie trzeba być.</span><span class="sxs-lookup"><span data-stu-id="0e54d-104">The two elements specified in **msdata:Relationship** can be nested in the schema, but do not have to be.</span></span> <span data-ttu-id="0e54d-105">Proces mapowania **msdata:Relationship** w schemacie wygenerować podstawowy klucz/relacji klucza obcego między dwiema kolumnami.</span><span class="sxs-lookup"><span data-stu-id="0e54d-105">The mapping process uses **msdata:Relationship** in the schema to generate the primary key/foreign key relationship between the two columns.</span></span>  

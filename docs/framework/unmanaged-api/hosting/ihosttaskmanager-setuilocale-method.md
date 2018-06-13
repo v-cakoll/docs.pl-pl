@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442753"
 ---
 # <a name="ihosttaskmanagersetuilocale-method"></a><span data-ttu-id="90dd8-102">IHostTaskManager::SetUILocale — Metoda</span><span class="sxs-lookup"><span data-stu-id="90dd8-102">IHostTaskManager::SetUILocale Method</span></span>
 <span data-ttu-id="90dd8-103">Powiadamia hosta, że środowisko uruchomieniowe języka wspólnego (CLR) została zmieniona, ustawienia regionalne interfejsu użytkownika lub kultury na aktualnie wykonywanego zadania.</span><span class="sxs-lookup"><span data-stu-id="90dd8-103">Notifies the host that the common language runtime (CLR) has changed the user interface (UI) locale, or culture, on the currently executing task.</span></span>  

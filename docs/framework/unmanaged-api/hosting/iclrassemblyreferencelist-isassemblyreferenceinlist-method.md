@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33433870"
 ---
 # <a name="iclrassemblyreferencelistisassemblyreferenceinlist-method"></a><span data-ttu-id="596db-102">ICLRAssemblyReferenceList::IsAssemblyReferenceInList — Metoda</span><span class="sxs-lookup"><span data-stu-id="596db-102">ICLRAssemblyReferenceList::IsAssemblyReferenceInList Method</span></span>
 <span data-ttu-id="596db-103">Pobiera wartość wskazującą, czy podany wskaźnik odwołuje się do zestawu na liście.</span><span class="sxs-lookup"><span data-stu-id="596db-103">Gets a value that indicates whether the supplied pointer refers to an assembly in the list.</span></span>  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437667"
 ---
 # <a name="igchost-interface"></a><span data-ttu-id="25b9a-102">IGCHost — Interfejs</span><span class="sxs-lookup"><span data-stu-id="25b9a-102">IGCHost Interface</span></span>
 <span data-ttu-id="25b9a-103">Udostępnia metody uzyskiwania informacji na temat systemu czyszczenia pamięci oraz kontrolowanie niektórych aspektów wyrzucanie elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="25b9a-103">Provides methods for obtaining information about the garbage collection system and for controlling some aspects of garbage collection.</span></span>  

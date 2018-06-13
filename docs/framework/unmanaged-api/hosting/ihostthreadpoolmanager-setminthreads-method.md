@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443683"
 ---
 # <a name="ihostthreadpoolmanagersetminthreads-method"></a><span data-ttu-id="43ef7-102">IHostThreadPoolManager::SetMinThreads — Metoda</span><span class="sxs-lookup"><span data-stu-id="43ef7-102">IHostThreadPoolManager::SetMinThreads Method</span></span>
 <span data-ttu-id="43ef7-103">Ustawia minimalną liczbę bezczynności wątków, które muszą zachować hosta w oczekiwaniu żądania.</span><span class="sxs-lookup"><span data-stu-id="43ef7-103">Sets the minimum number of idle threads that the host must maintain in anticipation of requests.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417365"
 ---
 # <a name="icordebugmodule2setjitcompilerflags-method"></a><span data-ttu-id="d82a4-102">ICorDebugModule2::SetJITCompilerFlags — Metoda</span><span class="sxs-lookup"><span data-stu-id="d82a4-102">ICorDebugModule2::SetJITCompilerFlags Method</span></span>
 <span data-ttu-id="d82a4-103">Ustawia flagi sterujące kompilacji to ICorDebugModule2 just-in-time (JIT).</span><span class="sxs-lookup"><span data-stu-id="d82a4-103">Sets the flags that control the just-in-time (JIT) compilation of this ICorDebugModule2.</span></span>  

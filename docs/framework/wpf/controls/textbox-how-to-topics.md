@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555766"
 ---
 # <a name="textbox-how-to-topics"></a><span data-ttu-id="bd00d-102">TextBox — Tematy porad</span><span class="sxs-lookup"><span data-stu-id="bd00d-102">TextBox How-to Topics</span></span>
 <span data-ttu-id="bd00d-103">Ta sekcja zawiera przykłady, które pokazują, jak wykonywać typowe zadania za pomocą <xref:System.Windows.Controls.TextBox> formantu.</span><span class="sxs-lookup"><span data-stu-id="bd00d-103">This section provides examples that demonstrate how to accomplish common tasks using the <xref:System.Windows.Controls.TextBox> control.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436809"
 ---
 # <a name="icorconfigurationsetdebuggerthreadcontrol-method"></a><span data-ttu-id="2a27d-102">ICorConfiguration::SetDebuggerThreadControl — Metoda</span><span class="sxs-lookup"><span data-stu-id="2a27d-102">ICorConfiguration::SetDebuggerThreadControl Method</span></span>
 <span data-ttu-id="2a27d-103">Ustawia interfejs wywołania zwrotnego, że usług debugowania wywoła jako środowisko uruchomieniowe języka wspólnego (CLR) wątków są zablokowane i odblokowany do debugowania.</span><span class="sxs-lookup"><span data-stu-id="2a27d-103">Sets the callback interface that the debugging services will call as common language runtime (CLR) threads are blocked and unblocked for debugging.</span></span>  

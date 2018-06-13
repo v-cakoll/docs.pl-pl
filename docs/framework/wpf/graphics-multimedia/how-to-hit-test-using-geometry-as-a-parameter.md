@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561258"
 ---
 # <a name="how-to-hit-test-using-geometry-as-a-parameter"></a><span data-ttu-id="c9c60-102">Jak przeprowadzać test trafienia przy użyciu geometrii jako parametru</span><span class="sxs-lookup"><span data-stu-id="c9c60-102">How to: Hit Test Using Geometry as a Parameter</span></span>
 <span data-ttu-id="c9c60-103">W tym przykładzie przedstawiono sposób wykonywania testu trafienia na obiekt wizualny przy użyciu <xref:System.Windows.Media.Geometry> jako trafienie testowania parametru.</span><span class="sxs-lookup"><span data-stu-id="c9c60-103">This example shows how to perform a hit test on a visual object using a <xref:System.Windows.Media.Geometry> as a hit test parameter.</span></span>  

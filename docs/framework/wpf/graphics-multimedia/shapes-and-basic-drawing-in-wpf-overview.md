@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566314"
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a><span data-ttu-id="cf234-102">Przegląd Kształty i podstawowe rysowanie w WPF</span><span class="sxs-lookup"><span data-stu-id="cf234-102">Shapes and Basic Drawing in WPF Overview</span></span>
 <span data-ttu-id="cf234-103">Ten temat zawiera omówienie sposobu Rysowanie za pomocą <xref:System.Windows.Shapes.Shape> obiektów.</span><span class="sxs-lookup"><span data-stu-id="cf234-103">This topic gives an overview of how to draw with <xref:System.Windows.Shapes.Shape> objects.</span></span> <span data-ttu-id="cf234-104">A <xref:System.Windows.Shapes.Shape> jest typem <xref:System.Windows.UIElement> umożliwiająca narysować kształt do ekranu.</span><span class="sxs-lookup"><span data-stu-id="cf234-104">A <xref:System.Windows.Shapes.Shape> is a type of <xref:System.Windows.UIElement> that enables you to draw a shape to the screen.</span></span> <span data-ttu-id="cf234-105">Ponieważ są one elementy interfejsu użytkownika <xref:System.Windows.Shapes.Shape> obiekty mogą być używane wewnątrz <xref:System.Windows.Controls.Panel> elementów i większość formantów.</span><span class="sxs-lookup"><span data-stu-id="cf234-105">Because they are UI elements, <xref:System.Windows.Shapes.Shape> objects can be used inside <xref:System.Windows.Controls.Panel> elements and most controls.</span></span>  

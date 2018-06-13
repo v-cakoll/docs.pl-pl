@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744138"
 ---
 # <a name="assembly-names"></a><span data-ttu-id="0256c-102">Nazwy zestawów</span><span class="sxs-lookup"><span data-stu-id="0256c-102">Assembly Names</span></span>
 <span data-ttu-id="0256c-103">Nazwa zestawu jest przechowywany w metadanych i ma znaczny wpływ na zakres zestawu i używany przez aplikację.</span><span class="sxs-lookup"><span data-stu-id="0256c-103">An assembly's name is stored in metadata and has a significant impact on the assembly's scope and use by an application.</span></span> <span data-ttu-id="0256c-104">Zestawu z silną nazwą ma nazwę FQDN, która zawiera nazwę zestawu, kultury, klucz publiczny i numer wersji.</span><span class="sxs-lookup"><span data-stu-id="0256c-104">A strong-named assembly has a fully qualified name that includes the assembly's name, culture, public key, and version number.</span></span> <span data-ttu-id="0256c-105">Jest to często określane jako wyświetlana nazwa i dla zestawów załadowanych można uzyskać za pomocą <xref:System.Reflection.Assembly.FullName%2A> właściwości.</span><span class="sxs-lookup"><span data-stu-id="0256c-105">This is frequently referred to as the display name, and for loaded assemblies can be obtained by using the <xref:System.Reflection.Assembly.FullName%2A> property.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557462"
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a><span data-ttu-id="04dad-102">Wskazówki: Wyświetlanie danych z serwera bazy danych SQL w formancie DataGrid</span><span class="sxs-lookup"><span data-stu-id="04dad-102">Walkthrough: Display Data from a SQL Server Database in a DataGrid Control</span></span>
 <span data-ttu-id="04dad-103">W tym przewodniku, pobieranie danych z bazy danych programu SQL Server i wyświetlić dane w <xref:System.Windows.Controls.DataGrid> formantu.</span><span class="sxs-lookup"><span data-stu-id="04dad-103">In this walkthrough, you retrieve data from a SQL Server database and display that data in a <xref:System.Windows.Controls.DataGrid> control.</span></span> <span data-ttu-id="04dad-104">ADO.NET Entity Framework umożliwia tworzenie klasy jednostki, które reprezentują dane i użyć LINQ, aby zapisać kwerendę, która pobiera określone dane z klasy jednostka.</span><span class="sxs-lookup"><span data-stu-id="04dad-104">You use the ADO.NET Entity Framework to create the entity classes that represent the data, and use LINQ to write a query that retrieves the specified data from an entity class.</span></span>  

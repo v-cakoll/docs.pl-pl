@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764388"
 ---
 # <a name="having-entity-sql"></a><span data-ttu-id="1ce88-102">O (jednostka SQL)</span><span class="sxs-lookup"><span data-stu-id="1ce88-102">HAVING (Entity SQL)</span></span>
 <span data-ttu-id="1ce88-103">Określa warunek wyszukiwania dla grupy lub agregacja.</span><span class="sxs-lookup"><span data-stu-id="1ce88-103">Specifies a search condition for a group or an aggregate.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358859"
 ---
 # <a name="return-the-average-value-from-a-numeric-sequence"></a><span data-ttu-id="d4c35-102">Zwraca średnią wartość z sekwencją liczb</span><span class="sxs-lookup"><span data-stu-id="d4c35-102">Return the Average Value From a Numeric Sequence</span></span>
 <span data-ttu-id="d4c35-103"><xref:System.Linq.Enumerable.Average%2A> Operator oblicza średnią sekwencję wartości liczbowych.</span><span class="sxs-lookup"><span data-stu-id="d4c35-103">The <xref:System.Linq.Enumerable.Average%2A> operator computes the average of a sequence of numeric values.</span></span>  

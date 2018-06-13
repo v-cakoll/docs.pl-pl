@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437885"
 ---
 # <a name="icorruntimehostgetdefaultdomain-method"></a><span data-ttu-id="1748d-102">ICorRuntimeHost::GetDefaultDomain — Metoda</span><span class="sxs-lookup"><span data-stu-id="1748d-102">ICorRuntimeHost::GetDefaultDomain Method</span></span>
 <span data-ttu-id="1748d-103">Pobiera wskaźnika interfejsu typu <xref:System._AppDomain?displayProperty=nameWithType> reprezentujący domenę domyślną dla bieżącego procesu.</span><span class="sxs-lookup"><span data-stu-id="1748d-103">Gets an interface pointer of type <xref:System._AppDomain?displayProperty=nameWithType> that represents the default domain for the current process.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561966"
 ---
 # <a name="key-frame-animation-how-to-topics"></a><span data-ttu-id="c4902-102">Animacja kluczowych klatek Tematy Pomocy</span><span class="sxs-lookup"><span data-stu-id="c4902-102">Key-Frame Animation How-to Topics</span></span>
 <span data-ttu-id="c4902-103">Tematy w tej sekcji przedstawiają sposób umożliwia animować więcej niż dwóch wartości właściwości i kontroli interpolacji klatek kluczowych animacji.</span><span class="sxs-lookup"><span data-stu-id="c4902-103">The topics in this section demonstrate how to use key frame animations to animate more than two property values and control interpolation.</span></span>  

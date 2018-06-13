@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558710"
 ---
 # <a name="how-to-encode-and-decode-a-gif-image"></a><span data-ttu-id="6f3ca-102">Jak kodować i dekodować obraz GIF</span><span class="sxs-lookup"><span data-stu-id="6f3ca-102">How to: Encode and Decode a GIF Image</span></span>
 <span data-ttu-id="6f3ca-103">Poniższe przykłady przedstawiają sposób dekodowania i kodowanie [!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)] obrazu przy użyciu konkretnych <xref:System.Windows.Media.Imaging.GifBitmapDecoder> i <xref:System.Windows.Media.Imaging.GifBitmapEncoder> obiektów.</span><span class="sxs-lookup"><span data-stu-id="6f3ca-103">The following examples show how to decode and encode a [!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)] image using the specific <xref:System.Windows.Media.Imaging.GifBitmapDecoder> and <xref:System.Windows.Media.Imaging.GifBitmapEncoder> objects.</span></span>  

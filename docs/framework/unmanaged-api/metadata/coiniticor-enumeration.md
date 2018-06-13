@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441429"
 ---
 # <a name="coiniticor-enumeration"></a><span data-ttu-id="a1160-102">COINITICOR — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="a1160-102">COINITICOR Enumeration</span></span>
 <span data-ttu-id="a1160-103">Określa stałe używane przez [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) po jego inicjuje środowisko uruchomieniowe języka wspólnego.</span><span class="sxs-lookup"><span data-stu-id="a1160-103">Specifies constants used by [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) when it initializes the common language runtime.</span></span>  

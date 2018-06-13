@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553718"
 ---
 # <a name="popup-how-to-topics"></a><span data-ttu-id="49933-102">Okno podręczne Tematy porad</span><span class="sxs-lookup"><span data-stu-id="49933-102">Popup How-to Topics</span></span>
 <span data-ttu-id="49933-103">W tematach w tej sekcji opisano sposób użycia <xref:System.Windows.Controls.Primitives.Popup> formantu, aby wyświetlić zawartość w osobnym oknie, który jest wyświetlany nad bieżące okno aplikacji.</span><span class="sxs-lookup"><span data-stu-id="49933-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Primitives.Popup> control to display content in a separate window that floats over the current application window.</span></span>  

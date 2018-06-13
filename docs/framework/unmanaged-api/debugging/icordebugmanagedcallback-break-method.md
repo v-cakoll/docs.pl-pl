@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414941"
 ---
 # <a name="icordebugmanagedcallbackbreak-method"></a><span data-ttu-id="177c7-102">ICorDebugManagedCallback::Break — Metoda</span><span class="sxs-lookup"><span data-stu-id="177c7-102">ICorDebugManagedCallback::Break Method</span></span>
 <span data-ttu-id="177c7-103">Powiadamia debuger podczas <xref:System.Reflection.Emit.OpCodes.Break> wykonaniem instrukcji w strumieniu kodu.</span><span class="sxs-lookup"><span data-stu-id="177c7-103">Notifies the debugger when a <xref:System.Reflection.Emit.OpCodes.Break> instruction in the code stream is executed.</span></span>  

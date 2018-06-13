@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757050"
 ---
 # <a name="ltsystemidentitymodelservicesgt"></a><span data-ttu-id="1b013-102">&lt;system.identityModel.services&gt;</span><span class="sxs-lookup"><span data-stu-id="1b013-102">&lt;system.identityModel.services&gt;</span></span>
 <span data-ttu-id="1b013-103">Sekcja konfiguracyjna do uwierzytelniania przy użyciu protokołu WS-Federation.</span><span class="sxs-lookup"><span data-stu-id="1b013-103">Configuration section for authentication using the WS-Federation protocol.</span></span>  

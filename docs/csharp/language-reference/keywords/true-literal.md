@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268986"
 ---
 # <a name="true-literal-c-reference"></a><span data-ttu-id="d081e-102">true — Literał (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="d081e-102">true Literal (C# Reference)</span></span>
 <span data-ttu-id="d081e-103">Reprezentuje wartość logiczną PRAWDA.</span><span class="sxs-lookup"><span data-stu-id="d081e-103">Represents the boolean value true.</span></span>  

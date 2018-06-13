@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563702"
 ---
 # <a name="xproperty-directive"></a><span data-ttu-id="9b41b-102">x:Property — dyrektywa</span><span class="sxs-lookup"><span data-stu-id="9b41b-102">x:Property Directive</span></span>
 <span data-ttu-id="9b41b-103">Deklaruje właściwością XAML w znaczniku.</span><span class="sxs-lookup"><span data-stu-id="9b41b-103">Declares a XAML property in markup.</span></span>  

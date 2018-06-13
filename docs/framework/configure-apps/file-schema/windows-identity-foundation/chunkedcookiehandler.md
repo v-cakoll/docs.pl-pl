@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758376"
 ---
 # <a name="ltchunkedcookiehandlergt"></a><span data-ttu-id="bac2f-102">&lt;chunkedCookieHandler&gt;</span><span class="sxs-lookup"><span data-stu-id="bac2f-102">&lt;chunkedCookieHandler&gt;</span></span>
 <span data-ttu-id="bac2f-103">Konfiguruje <xref:System.IdentityModel.Services.ChunkedCookieHandler>.</span><span class="sxs-lookup"><span data-stu-id="bac2f-103">Configures the <xref:System.IdentityModel.Services.ChunkedCookieHandler>.</span></span> <span data-ttu-id="bac2f-104">Ten element może być tylko obecny Jeśli `mode` atrybutu `<cookieHandler>` jest element "Default" lub "Fragmentaryczne".</span><span class="sxs-lookup"><span data-stu-id="bac2f-104">This element may only be present if the `mode` attribute of the `<cookieHandler>` element is "Default" or "Chunked".</span></span>  

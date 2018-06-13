@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744164"
 ---
 # <a name="ltremovegt-element-for-schemesettings-uri-settings"></a><span data-ttu-id="82bde-102">&lt;Usuń&gt; elementu schemeSettings (ustawienia identyfikatorów Uri)</span><span class="sxs-lookup"><span data-stu-id="82bde-102">&lt;remove&gt; Element for schemeSettings (Uri Settings)</span></span>
 <span data-ttu-id="82bde-103">Usuwa ustawienie schematu dla nazwy schematu.</span><span class="sxs-lookup"><span data-stu-id="82bde-103">Removes a scheme setting for a scheme name.</span></span>  

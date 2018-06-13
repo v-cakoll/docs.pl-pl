@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513204"
 ---
 # <a name="instance-completion-action"></a><span data-ttu-id="2bfab-102">Wystąpienie zakończenia działania</span><span class="sxs-lookup"><span data-stu-id="2bfab-102">Instance Completion Action</span></span>
 <span data-ttu-id="2bfab-103">**Wystąpienia ukończenia akcji** właściwość w magazynie wystąpień przepływu pracy SQL umożliwia określenie, czy dane i metadane wystąpienia przepływu pracy są usuwane z bazy danych trwałości po ukończeniu wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="2bfab-103">The **Instance Completion Action** property of the SQL Workflow Instance Store lets you specify whether the data and metadata of workflow instances is deleted from the persistence database after the instances are completed.</span></span> <span data-ttu-id="2bfab-104">Dozwolone wartości dla tej właściwości **DeleteAll** i **DeleteNothing**.</span><span class="sxs-lookup"><span data-stu-id="2bfab-104">The allowed values for this property are **DeleteAll** and **DeleteNothing**.</span></span> <span data-ttu-id="2bfab-105">Poniższa lista zawiera opis tych opcji:</span><span class="sxs-lookup"><span data-stu-id="2bfab-105">The following list describes these options:</span></span>  

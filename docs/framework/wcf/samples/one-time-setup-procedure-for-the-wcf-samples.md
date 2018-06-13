@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506904"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a><span data-ttu-id="a7862-102">Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="a7862-102">One-Time Setup Procedure for the Windows Communication Foundation Samples</span></span>
 <span data-ttu-id="a7862-103">Większość przykładów Windows Communication Foundation (WCF) są obsługiwane w Internet Information Services (IIS), a następnie uruchom ze wspólnego katalogu wirtualnego.</span><span class="sxs-lookup"><span data-stu-id="a7862-103">Most of the Windows Communication Foundation (WCF) samples are hosted in Internet Information Services (IIS) and run from a common virtual directory.</span></span> <span data-ttu-id="a7862-104">Ta procedura konfiguracji jednorazowej tworzy folder z dysku. Dodano również katalog wirtualny usług IIS o nazwie **ServiceModelSamples**.</span><span class="sxs-lookup"><span data-stu-id="a7862-104">This one-time setup procedure creates a folder on the disk; it also adds a virtual directory to IIS named **ServiceModelSamples**.</span></span>  

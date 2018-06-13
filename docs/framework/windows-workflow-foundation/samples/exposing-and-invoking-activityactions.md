@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513155"
 ---
 # <a name="exposing-and-invoking-activityactions"></a><span data-ttu-id="080cd-102">Udostępnianie i wywoływanie ActivityActions</span><span class="sxs-lookup"><span data-stu-id="080cd-102">Exposing and Invoking ActivityActions</span></span>
 <span data-ttu-id="080cd-103">W tym przykładzie pokazano, jak tworzenie działań niestandardowych, które ma <xref:System.Activities.ActivityAction>.</span><span class="sxs-lookup"><span data-stu-id="080cd-103">This sample demonstrates how to develop a custom activity that has an <xref:System.Activities.ActivityAction>.</span></span> <span data-ttu-id="080cd-104">Również przedstawia sposób użycia tego działania, dostarczając implementację <xref:System.Activities.ActivityAction>.</span><span class="sxs-lookup"><span data-stu-id="080cd-104">It also demonstrates how to use this activity by providing an implementation of the <xref:System.Activities.ActivityAction>.</span></span>  

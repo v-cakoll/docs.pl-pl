@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356015"
 ---
 # <a name="enabling-query-notifications"></a><span data-ttu-id="8e1f0-102">Włączanie powiadomień o zapytaniach</span><span class="sxs-lookup"><span data-stu-id="8e1f0-102">Enabling Query Notifications</span></span>
 <span data-ttu-id="8e1f0-103">Aplikacje używające powiadomień o zapytaniach mają wspólny zbiór wymagań.</span><span class="sxs-lookup"><span data-stu-id="8e1f0-103">Applications that consume query notifications have a common set of requirements.</span></span> <span data-ttu-id="8e1f0-104">Źródło danych musi być poprawnie skonfigurowany do obsługi powiadomień kwerendy SQL, a użytkownik musi mieć odpowiednie uprawnienia po stronie klienta i po stronie serwera.</span><span class="sxs-lookup"><span data-stu-id="8e1f0-104">Your data source must be correctly configured to support SQL query notifications, and the user must have the correct client-side and server-side permissions.</span></span>  

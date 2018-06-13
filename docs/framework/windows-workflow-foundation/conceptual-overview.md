@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511852"
 ---
 # <a name="windows-workflow-conceptual-overview"></a><span data-ttu-id="9edfb-102">Omówienie przepływu pracy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="9edfb-102">Windows Workflow Conceptual Overview</span></span>
 <span data-ttu-id="9edfb-103">Ta sekcja zawiera zestaw tematów dyskutować większych pojęcia za Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="9edfb-103">This section contains a set of topics discussing the larger concepts behind Windows Workflow Foundation (WF).</span></span>  

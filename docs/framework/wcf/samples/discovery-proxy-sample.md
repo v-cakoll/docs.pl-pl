@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503187"
 ---
 # <a name="discovery-proxy-sample"></a><span data-ttu-id="6dd1c-102">Przykład serwera proxy odnajdywania</span><span class="sxs-lookup"><span data-stu-id="6dd1c-102">Discovery Proxy Sample</span></span>
 <span data-ttu-id="6dd1c-103">W tym przykładzie pokazano, jak utworzyć wdrożenia serwera proxy odnajdywania do przechowywania informacji o istniejących usług i jak klienci mogą wykonywać kwerendę czy serwera proxy, aby uzyskać informacje.</span><span class="sxs-lookup"><span data-stu-id="6dd1c-103">This sample shows how to create an implementation of a Discovery proxy to store information about existing services and how clients can query that proxy for information.</span></span> <span data-ttu-id="6dd1c-104">Ten przykład zawiera trzy projekty:</span><span class="sxs-lookup"><span data-stu-id="6dd1c-104">This sample consists of three projects:</span></span>  

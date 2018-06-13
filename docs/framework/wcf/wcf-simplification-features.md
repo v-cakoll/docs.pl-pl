@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508713"
 ---
 # <a name="wcf-simplification-features"></a><span data-ttu-id="d288d-102">Funkcje upraszczania programu WCF</span><span class="sxs-lookup"><span data-stu-id="d288d-102">WCF Simplification Features</span></span>
 <span data-ttu-id="d288d-103">W tym temacie opisano nowe funkcje, które zapisywania WCF aplikacji prostsze.</span><span class="sxs-lookup"><span data-stu-id="d288d-103">This topic discusses new features that make writing WCF applications simpler.</span></span>  

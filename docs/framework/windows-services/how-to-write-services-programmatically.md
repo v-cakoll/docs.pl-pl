@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513289"
 ---
 # <a name="how-to-write-services-programmatically"></a><span data-ttu-id="ba9d1-102">Porady: programowane pisanie usług</span><span class="sxs-lookup"><span data-stu-id="ba9d1-102">How to: Write Services Programmatically</span></span>
 <span data-ttu-id="ba9d1-103">Jeśli wybierzesz nie użyć szablonu projektu usługi systemu Windows, można napisać własny usług przez ustawienie dziedziczenia i inne elementy infrastruktury.</span><span class="sxs-lookup"><span data-stu-id="ba9d1-103">If you choose not to use the Windows Service project template, you can write your own services by setting up the inheritance and other infrastructure elements yourself.</span></span> <span data-ttu-id="ba9d1-104">Podczas tworzenia usługi programowo, należy wykonać kilka kroków, które szablonu może obsłużyć w inny sposób można:</span><span class="sxs-lookup"><span data-stu-id="ba9d1-104">When you create a service programmatically, you must perform several steps that the template would otherwise handle for you:</span></span>  

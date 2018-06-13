@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506577"
 ---
 # <a name="sessions-instancing-and-concurrency"></a><span data-ttu-id="ca561-102">Sesje, tworzenie wystąpień i współbieżność</span><span class="sxs-lookup"><span data-stu-id="ca561-102">Sessions, Instancing, and Concurrency</span></span>
 <span data-ttu-id="ca561-103">A *sesji* jest korelacji wszystkich wiadomości wysłanych między dwoma punktami końcowymi.</span><span class="sxs-lookup"><span data-stu-id="ca561-103">A *session* is a correlation of all messages sent between two endpoints.</span></span> <span data-ttu-id="ca561-104">*Tworzenie wystąpienia* odwołuje się do kontrolowania okres istnienia obiektów zdefiniowanych przez użytkownika usług i ich powiązane <xref:System.ServiceModel.InstanceContext> obiektów.</span><span class="sxs-lookup"><span data-stu-id="ca561-104">*Instancing* refers to controlling the lifetime of user-defined service objects and their related <xref:System.ServiceModel.InstanceContext> objects.</span></span> <span data-ttu-id="ca561-105">*Współbieżność* jest terminu podanego do formantu liczbę wątków działających w <xref:System.ServiceModel.InstanceContext> w tym samym czasie.</span><span class="sxs-lookup"><span data-stu-id="ca561-105">*Concurrency* is the term given to the control of the number of threads executing in an <xref:System.ServiceModel.InstanceContext> at the same time.</span></span>  

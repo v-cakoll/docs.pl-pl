@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506153"
 ---
 # <a name="configuration-sample"></a><span data-ttu-id="03336-102">Konfiguracja — przykład</span><span class="sxs-lookup"><span data-stu-id="03336-102">Configuration Sample</span></span>
 <span data-ttu-id="03336-103">W tym przykładzie przedstawiono korzystanie z pliku konfiguracji, aby stał się wykrywalny usługi.</span><span class="sxs-lookup"><span data-stu-id="03336-103">This sample demonstrates the use of a configuration file to make a service discoverable.</span></span>  

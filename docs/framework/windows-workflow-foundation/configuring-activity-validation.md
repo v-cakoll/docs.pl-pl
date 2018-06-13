@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512603"
 ---
 # <a name="configuring-activity-validation"></a><span data-ttu-id="b09f4-102">Konfigurowanie sprawdzania poprawności działania</span><span class="sxs-lookup"><span data-stu-id="b09f4-102">Configuring Activity Validation</span></span>
 <span data-ttu-id="b09f4-103">Działanie sprawdzania poprawności umożliwia autorów działania i użytkowników zidentyfikować i raportów o błędach w konfiguracji działania przed jego wykonywania.</span><span class="sxs-lookup"><span data-stu-id="b09f4-103">Activity validation enables activity authors and users to identify and report errors in an activity’s configuration prior to its execution.</span></span> <span data-ttu-id="b09f4-104">Windows Workflow Foundation (WF) zapewnia następujące trzy typy sprawdzania poprawności działania:</span><span class="sxs-lookup"><span data-stu-id="b09f4-104">Windows Workflow Foundation (WF) provides the following three types of activity validation:</span></span>  

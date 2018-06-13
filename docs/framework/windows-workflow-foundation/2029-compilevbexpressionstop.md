@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33510338"
 ---
 # <a name="2029---compilevbexpressionstop"></a><span data-ttu-id="e6798-102">2029 - CompileVbExpressionStop</span><span class="sxs-lookup"><span data-stu-id="e6798-102">2029 - CompileVbExpressionStop</span></span>
 ## <a name="properties"></a><span data-ttu-id="e6798-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="e6798-103">Properties</span></span>  

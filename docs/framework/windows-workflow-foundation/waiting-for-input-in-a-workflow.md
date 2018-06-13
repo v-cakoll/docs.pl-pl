@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513669"
 ---
 # <a name="waiting-for-input-in-a-workflow"></a><span data-ttu-id="8c64f-102">Trwa oczekiwanie na dane wejściowe w przepływie pracy</span><span class="sxs-lookup"><span data-stu-id="8c64f-102">Waiting for Input in a Workflow</span></span>
 <span data-ttu-id="8c64f-103">Tematy w tej sekcji omówiono sposób użycia zakładek i działania obsługi wiadomości.</span><span class="sxs-lookup"><span data-stu-id="8c64f-103">The topics in this section discuss how to use bookmarks and messaging activities.</span></span>  

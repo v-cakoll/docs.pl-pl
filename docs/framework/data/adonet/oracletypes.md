@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356741"
 ---
 # <a name="oracletypes"></a><span data-ttu-id="851f8-102">OracleTypes</span><span class="sxs-lookup"><span data-stu-id="851f8-102">OracleTypes</span></span>
 <span data-ttu-id="851f8-103">.NET Framework Data Provider for Oracle obejmuje kilka struktur, które umożliwiają pracę z typami danych Oracle.</span><span class="sxs-lookup"><span data-stu-id="851f8-103">The .NET Framework Data Provider for Oracle includes several structures you can use to work with Oracle data types.</span></span> <span data-ttu-id="851f8-104">Obejmują one <xref:System.Data.OracleClient.OracleNumber> i <xref:System.Data.OracleClient.OracleString>.</span><span class="sxs-lookup"><span data-stu-id="851f8-104">These include <xref:System.Data.OracleClient.OracleNumber> and <xref:System.Data.OracleClient.OracleString>.</span></span>  

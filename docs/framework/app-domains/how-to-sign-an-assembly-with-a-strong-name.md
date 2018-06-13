@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744632"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a><span data-ttu-id="a78db-102">Porady: podpisywanie zestawu silną nazwą</span><span class="sxs-lookup"><span data-stu-id="a78db-102">How to: Sign an Assembly with a Strong Name</span></span>
 <span data-ttu-id="a78db-103">Istnieje kilka metod podpisywania zestawu za pomocą silnej nazwy:</span><span class="sxs-lookup"><span data-stu-id="a78db-103">There are a number of ways to sign an assembly with a strong name:</span></span>  

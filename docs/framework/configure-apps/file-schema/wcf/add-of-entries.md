@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744983"
 ---
 # <a name="ltaddgt-of-ltentriesgt"></a><span data-ttu-id="53739-102">&lt;add&gt; w &lt;entries&gt;</span><span class="sxs-lookup"><span data-stu-id="53739-102">&lt;add&gt; of &lt;entries&gt;</span></span>
 <span data-ttu-id="53739-103">Reprezentuje pozycji routingu mapowanego klienta punktu końcowego, który został uprzednio zdefiniowany filtr.</span><span class="sxs-lookup"><span data-stu-id="53739-103">Represents a routing entry that maps a filter to a client endpoint that was previously defined.</span></span> <span data-ttu-id="53739-104">Komunikatów spełniające warunki tego filtru będą wysyłane do tego miejsca docelowego.</span><span class="sxs-lookup"><span data-stu-id="53739-104">Messages matching this filter will be sent to this destination.</span></span>  

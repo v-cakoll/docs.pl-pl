@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513378"
 ---
 # <a name="primitives-activities-in-wf"></a><span data-ttu-id="1df29-102">Elementy podstawowe działania w WF</span><span class="sxs-lookup"><span data-stu-id="1df29-102">Primitives Activities in WF</span></span>
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]<span data-ttu-id="1df29-103"> udostępnia kilka dostarczane przez system działań, które zapewniają wygodną mechanizm wykonywania typowych zadań.</span><span class="sxs-lookup"><span data-stu-id="1df29-103"> provides several system-provided activities that provide a convenient mechanism for performing common tasks.</span></span>  

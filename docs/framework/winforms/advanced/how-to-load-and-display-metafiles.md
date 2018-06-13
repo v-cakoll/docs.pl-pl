@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522773"
 ---
 # <a name="how-to-load-and-display-metafiles"></a><span data-ttu-id="7db6b-102">Porady: ładowanie i wyświetlanie metaplików</span><span class="sxs-lookup"><span data-stu-id="7db6b-102">How to: Load and Display Metafiles</span></span>
 <span data-ttu-id="7db6b-103"><xref:System.Drawing.Imaging.Metafile> Klasy, która dziedziczy <xref:System.Drawing.Image> klasy, metody do rejestrowania, wyświetlanie i badanie wektor obrazów.</span><span class="sxs-lookup"><span data-stu-id="7db6b-103">The <xref:System.Drawing.Imaging.Metafile> class, which inherits from the <xref:System.Drawing.Image> class, provides methods for recording, displaying, and examining vector images.</span></span>  

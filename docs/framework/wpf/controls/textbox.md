@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555185"
 ---
 # <a name="textbox"></a><span data-ttu-id="764a8-102">TextBox</span><span class="sxs-lookup"><span data-stu-id="764a8-102">TextBox</span></span>
 <span data-ttu-id="764a8-103"><xref:System.Windows.Controls.TextBox> Kontroli umożliwia wprowadzanie tekstu podstawowego w aplikacji WPF.</span><span class="sxs-lookup"><span data-stu-id="764a8-103">The <xref:System.Windows.Controls.TextBox> control provides support for basic text input in WPF applications.</span></span>  

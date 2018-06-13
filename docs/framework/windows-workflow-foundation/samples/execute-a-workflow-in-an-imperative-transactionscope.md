@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516962"
 ---
 # <a name="execute-a-workflow-in-an-imperative-transactionscope"></a><span data-ttu-id="8f05c-102">Wykonania przepływu pracy w TransactionScope Imperatywne</span><span class="sxs-lookup"><span data-stu-id="8f05c-102">Execute a Workflow in an Imperative TransactionScope</span></span>
 <span data-ttu-id="8f05c-103">W tym przykładzie pokazano, jak wykonywanie przepływu pracy za pomocą <xref:System.Activities.WorkflowInvoker> w obszarze <xref:System.Transactions.Transaction> z natury kodu C#.</span><span class="sxs-lookup"><span data-stu-id="8f05c-103">This sample shows how to execute a workflow using <xref:System.Activities.WorkflowInvoker> under a <xref:System.Transactions.Transaction> from imperative C# code.</span></span>  

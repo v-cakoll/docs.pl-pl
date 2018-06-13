@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523006"
 ---
 # <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a><span data-ttu-id="37e52-102">Porady: wyświetlanie podglądu wydruku w aplikacjach formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="37e52-102">How to: Print a Multi-Page Text File in Windows Forms</span></span>
 <span data-ttu-id="37e52-103">Jest bardzo często dla aplikacji systemu Windows wydrukować tekst.</span><span class="sxs-lookup"><span data-stu-id="37e52-103">It is very common for Windows-based applications to print text.</span></span> <span data-ttu-id="37e52-104"><xref:System.Drawing.Graphics> Klasa zawiera metody służące do rysowania obiektów (grafiki lub tekst) na urządzeniu, na przykład ekranu lub drukarki.</span><span class="sxs-lookup"><span data-stu-id="37e52-104">The <xref:System.Drawing.Graphics> class provides methods for drawing objects (graphics or text) to a device, such as a screen or printer.</span></span>  

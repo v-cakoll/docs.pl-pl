@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551970"
 ---
 # <a name="expander"></a><span data-ttu-id="17e47-102">Ekspander</span><span class="sxs-lookup"><span data-stu-id="17e47-102">Expander</span></span>
 <span data-ttu-id="17e47-103"><xref:System.Windows.Controls.Expander> Umożliwia użytkownikowi wyświetlanie nagłówka i rozwiń węzeł tego nagłówka, aby zobaczyć więcej szczegółów lub zwinąć sekcji do nagłówka.</span><span class="sxs-lookup"><span data-stu-id="17e47-103">An <xref:System.Windows.Controls.Expander> allows a user to view a header and expand that header to see further details, or to collapse a section up to a header.</span></span>  

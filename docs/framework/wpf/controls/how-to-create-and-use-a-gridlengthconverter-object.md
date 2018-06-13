@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551859"
 ---
 # <a name="how-to-create-and-use-a-gridlengthconverter-object"></a><span data-ttu-id="cb18c-102">Jak utworzyć i używać obiekt GridLengthConverter</span><span class="sxs-lookup"><span data-stu-id="cb18c-102">How to: Create and Use a GridLengthConverter Object</span></span>
 ## <a name="example"></a><span data-ttu-id="cb18c-103">Przykład</span><span class="sxs-lookup"><span data-stu-id="cb18c-103">Example</span></span>  

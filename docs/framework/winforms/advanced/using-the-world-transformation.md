@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523686"
 ---
 # <a name="using-the-world-transformation"></a><span data-ttu-id="03ace-102">Używanie transformacji świata</span><span class="sxs-lookup"><span data-stu-id="03ace-102">Using the World Transformation</span></span>
 <span data-ttu-id="03ace-103">Transformacja świata jest właściwością <xref:System.Drawing.Graphics> klasy.</span><span class="sxs-lookup"><span data-stu-id="03ace-103">The world transformation is a property of the <xref:System.Drawing.Graphics> class.</span></span> <span data-ttu-id="03ace-104">Numery, które określają transformacji świata są przechowywane w <xref:System.Drawing.Drawing2D.Matrix> obiekt, który reprezentuje macierzy 3 x 3.</span><span class="sxs-lookup"><span data-stu-id="03ace-104">The numbers that specify the world transformation are stored in a <xref:System.Drawing.Drawing2D.Matrix> object, which represents a 3×3 matrix.</span></span> <span data-ttu-id="03ace-105"><xref:System.Drawing.Drawing2D.Matrix> i <xref:System.Drawing.Graphics> klasy mają kilka metod do ustawiania liczb w macierzy transformacji świata.</span><span class="sxs-lookup"><span data-stu-id="03ace-105">The <xref:System.Drawing.Drawing2D.Matrix> and <xref:System.Drawing.Graphics> classes have several methods for setting the numbers in the world transformation matrix.</span></span>  

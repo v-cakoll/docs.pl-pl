@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556877"
 ---
 # <a name="how-to-specify-the-binding-source"></a><span data-ttu-id="0084c-102">Jak określić źródło wiążące</span><span class="sxs-lookup"><span data-stu-id="0084c-102">How to: Specify the Binding Source</span></span>
 <span data-ttu-id="0084c-103">W powiązaniu danych powiązania obiektu źródłowego odwołuje się do obiektu, do którego można uzyskać danych.</span><span class="sxs-lookup"><span data-stu-id="0084c-103">In data binding, the binding source object refers to the object you obtain your data from.</span></span> <span data-ttu-id="0084c-104">W tym temacie opisano różne sposoby określania źródła powiązania.</span><span class="sxs-lookup"><span data-stu-id="0084c-104">This topic describes the different ways of specifying the binding source.</span></span>  

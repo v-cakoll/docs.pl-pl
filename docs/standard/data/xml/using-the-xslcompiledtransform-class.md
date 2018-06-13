@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571049"
 ---
 # <a name="using-the-xslcompiledtransform-class"></a><span data-ttu-id="0bd09-102">Za pomocą klasy XslCompiledTransform</span><span class="sxs-lookup"><span data-stu-id="0bd09-102">Using the XslCompiledTransform Class</span></span>
 <span data-ttu-id="0bd09-103"><xref:System.Xml.Xsl.XslCompiledTransform> Klasa jest procesora XSLT programu Microsoft .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="0bd09-103">The <xref:System.Xml.Xsl.XslCompiledTransform> class is the Microsoft .NET Framework XSLT processor.</span></span> <span data-ttu-id="0bd09-104">Ta klasa jest używana do kompilowania arkusze stylów i wykonania przekształcenia XSLT.</span><span class="sxs-lookup"><span data-stu-id="0bd09-104">This class is used to compile style sheets and execute XSLT transformations.</span></span>  

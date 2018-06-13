@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520084"
 ---
 # <a name="workflow-persistence"></a><span data-ttu-id="c062c-102">Trwałość przepływu pracy</span><span class="sxs-lookup"><span data-stu-id="c062c-102">Workflow Persistence</span></span>
 <span data-ttu-id="c062c-103">Trwałość przepływu pracy jest trwałe przechwytywania stanu wystąpienia przepływu pracy, niezależnie od informacji procesu lub komputera.</span><span class="sxs-lookup"><span data-stu-id="c062c-103">Workflow persistence is the durable capture of a workflow instance's state, independent of process or computer information.</span></span> <span data-ttu-id="c062c-104">Jest to zrobić, aby przekazać dobrze znanego punktu odzyskiwania dla wystąpienia przepływu pracy w przypadku awarii systemu lub zachować pamięci przez zwalnianie wystąpienia przepływu pracy, które są aktywnie niewykonania pracy lub przenoszenie stanu wystąpienia przepływu pracy z jednego węzła do innego węzeł w farmie serwerów.</span><span class="sxs-lookup"><span data-stu-id="c062c-104">This is done to provide a well-known point of recovery for the workflow instance in the event of system failure, or to preserve memory by unloading workflow instances that are not actively doing work, or to move the state of the workflow instance from one node to another node in a server farm.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743423"
 ---
 # <a name="assembly-security-considerations"></a><span data-ttu-id="df591-102">Zagadnienia dotyczące zabezpieczeń zestawów</span><span class="sxs-lookup"><span data-stu-id="df591-102">Assembly Security Considerations</span></span>
 <a name="top"></a> <span data-ttu-id="df591-103">Podczas kompilowania zestawu można określić zestaw uprawnień wymaganych do uruchomienia zestawu.</span><span class="sxs-lookup"><span data-stu-id="df591-103">When you build an assembly, you can specify a set of permissions that the assembly requires to run.</span></span> <span data-ttu-id="df591-104">To, czy określone uprawnienia są przyznane do zestawu, czy nie, zależy od dowodów.</span><span class="sxs-lookup"><span data-stu-id="df591-104">Whether certain permissions are granted or not granted to an assembly is based on evidence.</span></span>  

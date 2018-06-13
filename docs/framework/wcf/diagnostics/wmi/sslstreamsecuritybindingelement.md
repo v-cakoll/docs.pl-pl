@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33486463"
 ---
 # <a name="sslstreamsecuritybindingelement"></a><span data-ttu-id="363e1-102">SslStreamSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="363e1-102">SslStreamSecurityBindingElement</span></span>
 <span data-ttu-id="363e1-103">SslStreamSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="363e1-103">SslStreamSecurityBindingElement</span></span>  

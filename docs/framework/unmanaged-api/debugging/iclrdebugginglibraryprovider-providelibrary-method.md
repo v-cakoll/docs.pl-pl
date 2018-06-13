@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407247"
 ---
 # <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a><span data-ttu-id="efd9a-102">ICLRDebuggingLibraryProvider::ProvideLibrary — Metoda</span><span class="sxs-lookup"><span data-stu-id="efd9a-102">ICLRDebuggingLibraryProvider::ProvideLibrary Method</span></span>
 <span data-ttu-id="efd9a-103">Pobiera dostawcę biblioteki interfejsu wywołania zwrotnego, który umożliwia wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) określonej wersji biblioteki debugowania należy odnaleźć i załadować na żądanie.</span><span class="sxs-lookup"><span data-stu-id="efd9a-103">Gets a library provider callback interface that allows common language runtime (CLR) version-specific debugging libraries to be located and loaded on demand.</span></span>  

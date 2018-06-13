@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520386"
 ---
 # <a name="antialiasing-with-lines-and-curves"></a><span data-ttu-id="2c8fa-102">Stosowanie antyaliasingu do linii i krzywych</span><span class="sxs-lookup"><span data-stu-id="2c8fa-102">Antialiasing with Lines and Curves</span></span>
 <span data-ttu-id="2c8fa-103">Jeśli używasz [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] do rysowania linii, podaj punkt początkowy i końcowy punkt wiersza, ale nie musisz podać wszystkie informacje o poszczególnych pikseli w wierszu.</span><span class="sxs-lookup"><span data-stu-id="2c8fa-103">When you use [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] to draw a line, you provide the starting point and ending point of the line, but you do not have to provide any information about the individual pixels on the line.</span></span> [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="2c8fa-104"> działa w połączeniu z oprogramowaniem sterownik ekranu do określenia, które piksele zostanie włączona do wyświetlenia na urządzeniu określonego wiersza.</span><span class="sxs-lookup"><span data-stu-id="2c8fa-104"> works in conjunction with the display driver software to determine which pixels will be turned on to show the line on a particular display device.</span></span>  

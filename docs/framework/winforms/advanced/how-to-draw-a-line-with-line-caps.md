@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523224"
 ---
 # <a name="how-to-draw-a-line-with-line-caps"></a><span data-ttu-id="1610a-102">Porady: rysowanie linii z zakończeniem linii</span><span class="sxs-lookup"><span data-stu-id="1610a-102">How to: Draw a Line with Line Caps</span></span>
 <span data-ttu-id="1610a-103">Może wykonywać Rysowanie początek lub koniec wiersza w jednym z kilku kształtów o nazwie wielkości graniczne linii.</span><span class="sxs-lookup"><span data-stu-id="1610a-103">You can draw the start or end of a line in one of several shapes called line caps.</span></span> [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="1610a-104"> obsługuje kilka wielkości graniczne linii, takich jak round, kwadratowe romb i strzałki.</span><span class="sxs-lookup"><span data-stu-id="1610a-104"> supports several line caps, such as round, square, diamond, and arrowhead.</span></span>  

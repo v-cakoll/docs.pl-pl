@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519850"
 ---
 # <a name="using-and-creating-activities"></a><span data-ttu-id="ebde7-102">Używanie i tworzenie działania</span><span class="sxs-lookup"><span data-stu-id="ebde7-102">Using and Creating Activities</span></span>
 <span data-ttu-id="ebde7-103">W tematach w tej sekcji opisano działania dostarczane przez system, które muszą być dostępne w systemie Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="ebde7-103">The topics in this section describe the system-provided activities available in Windows Workflow Foundation (WF).</span></span>  

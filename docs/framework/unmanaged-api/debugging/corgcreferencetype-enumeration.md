@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408609"
 ---
 # <a name="corgcreferencetype-enumeration"></a><span data-ttu-id="ab1ce-102">CorGCReferenceType — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="ab1ce-102">CorGCReferenceType Enumeration</span></span>
 <span data-ttu-id="ab1ce-103">Określa źródło obiektu być zbierane z pamięci.</span><span class="sxs-lookup"><span data-stu-id="ab1ce-103">Identifies the source of an object to be garbage-collected.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519509"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a><span data-ttu-id="ea462-102">Śledzenie zdarzeń do zdarzenia śledzenia w systemie Windows</span><span class="sxs-lookup"><span data-stu-id="ea462-102">Tracking Events into Event Tracing in Windows</span></span>
 <span data-ttu-id="ea462-103">W tym przykładzie pokazano, jak włączyć śledzenie usługi przepływu pracy Windows Workflow Foundation (WF), a emisją zdarzeń śledzenia w funkcji Śledzenie zdarzeń systemu Windows ().</span><span class="sxs-lookup"><span data-stu-id="ea462-103">This sample demonstrates how to enable Windows Workflow Foundation (WF) tracking on a workflow service and emit the tracking events in Event Tracing for Windows (ETW).</span></span> <span data-ttu-id="ea462-104">Aby emitować śledzenia rekordów do ETW przepływu pracy, próbki używa uczestnika śledzenia zdarzeń systemu Windows (<xref:System.Activities.Tracking.EtwTrackingParticipant>).</span><span class="sxs-lookup"><span data-stu-id="ea462-104">To emit workflow tracking records into ETW, the sample uses the ETW tracking participant (<xref:System.Activities.Tracking.EtwTrackingParticipant>).</span></span>  

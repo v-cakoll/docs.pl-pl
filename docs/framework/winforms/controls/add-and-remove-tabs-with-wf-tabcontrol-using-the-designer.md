@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525271"
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a><span data-ttu-id="22988-102">Porady: dodawanie i usuwanie kart za pomocą formularzy systemu Windows TabControl przy użyciu narzędzia Projektant</span><span class="sxs-lookup"><span data-stu-id="22988-102">How to: Add and Remove Tabs with the Windows Forms TabControl Using the Designer</span></span>
 <span data-ttu-id="22988-103">Po umieszczeniu <xref:System.Windows.Forms.TabControl> formantu w formularzu, zawiera dwie karty domyślnie.</span><span class="sxs-lookup"><span data-stu-id="22988-103">When you place a <xref:System.Windows.Forms.TabControl> control on your form, it contains two tabs by default.</span></span> <span data-ttu-id="22988-104">Można dodawać i usuwać kart przy użyciu narzędzia Projektant.</span><span class="sxs-lookup"><span data-stu-id="22988-104">You can add or remove tabs using the designer.</span></span>  

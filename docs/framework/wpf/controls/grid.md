@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551031"
 ---
 # <a name="grid"></a><span data-ttu-id="02034-102">Siatka</span><span class="sxs-lookup"><span data-stu-id="02034-102">Grid</span></span>
 <span data-ttu-id="02034-103"><xref:System.Windows.Controls.Grid> Element jest używany w celu precyzyjnego rozmieszczenia zawartości wierszy i kolumn.</span><span class="sxs-lookup"><span data-stu-id="02034-103">The <xref:System.Windows.Controls.Grid> element is used to precisely position content in rows and columns.</span></span>  

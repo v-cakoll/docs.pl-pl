@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742091"
 ---
 # <a name="how-to-unload-an-application-domain"></a><span data-ttu-id="2d25c-102">Porady: zwolnienie domeny aplikacji</span><span class="sxs-lookup"><span data-stu-id="2d25c-102">How to: Unload an Application Domain</span></span>
 <span data-ttu-id="2d25c-103">Po zakończeniu przy użyciu domeny aplikacji zwolnić ją przy użyciu <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> metody.</span><span class="sxs-lookup"><span data-stu-id="2d25c-103">When you have finished using an application domain, unload it using the <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="2d25c-104">**Zwolnienie** — metoda zamyka bezpieczne domeny określonej aplikacji.</span><span class="sxs-lookup"><span data-stu-id="2d25c-104">The **Unload** method gracefully shuts down the specified application domain.</span></span> <span data-ttu-id="2d25c-105">Podczas zwalniania nie ma nowych wątków mogą uzyskiwać dostęp do domeny aplikacji i są zwalniane wszystkie struktury dane specyficzne dla domeny aplikacji.</span><span class="sxs-lookup"><span data-stu-id="2d25c-105">During the unloading process, no new threads can access the application domain, and all application domain–specific data structures are freed.</span></span>  

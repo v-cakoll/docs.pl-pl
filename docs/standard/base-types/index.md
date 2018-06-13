@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567643"
 ---
 # <a name="working-with-base-types-in-net"></a><span data-ttu-id="3d543-102">Praca z typami podstawowymi na platformie .NET</span><span class="sxs-lookup"><span data-stu-id="3d543-102">Working with Base Types in .NET</span></span>
 <span data-ttu-id="3d543-103">W tej sekcji opisano operacje typu podstawowego .NET, w tym formatowania, konwersja i typowych operacji.</span><span class="sxs-lookup"><span data-stu-id="3d543-103">This section describes .NET base type operations, including formatting, conversion, and common operations.</span></span>  

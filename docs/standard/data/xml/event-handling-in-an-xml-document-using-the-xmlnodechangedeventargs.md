@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569736"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a><span data-ttu-id="e8dc0-102">Obsługa zdarzeń w dokumencie XML przy użyciu XmlNodeChangedEventArgs</span><span class="sxs-lookup"><span data-stu-id="e8dc0-102">Event Handling in an XML Document Using the XmlNodeChangedEventArgs</span></span>
 <span data-ttu-id="e8dc0-103">**XmlNodeChangedEventArgs** hermetyzuje Argumenty przekazane do obsługi zdarzeń zarejestrowane na **XmlDocument** obiektu na potrzeby obsługi zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="e8dc0-103">The **XmlNodeChangedEventArgs** encapsulates the arguments passed to the event handlers registered on the **XmlDocument** object for handling events.</span></span> <span data-ttu-id="e8dc0-104">Zdarzenia oraz gdy są one uruchamiane opis znajduje się w poniższej tabeli.</span><span class="sxs-lookup"><span data-stu-id="e8dc0-104">The events and a description of when they are fired is given in the following table.</span></span>  

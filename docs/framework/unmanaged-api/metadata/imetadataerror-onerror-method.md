@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446261"
 ---
 # <a name="imetadataerroronerror-method"></a><span data-ttu-id="1b27f-102">IMetaDataError::OnError — Metoda</span><span class="sxs-lookup"><span data-stu-id="1b27f-102">IMetaDataError::OnError Method</span></span>
 <span data-ttu-id="1b27f-103">Zapewnia powiadomienie błędów występujących podczas scalania metadanych.</span><span class="sxs-lookup"><span data-stu-id="1b27f-103">Provides notification of errors that occur during the metadata merge.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521339"
 ---
 # <a name="how-to-draw-a-single-b233zier-spline"></a><span data-ttu-id="b6114-102">Porady: Rysowanie pojedynczego B&#233;zier krzywymi składanymi</span><span class="sxs-lookup"><span data-stu-id="b6114-102">How to: Draw a Single B&#233;zier Spline</span></span>
 <span data-ttu-id="b6114-103">Krzywej Beziera jest definiowana za pomocą czterech punktów: punkt początkowy, punkty kontrolne dwóch i punkt końcowy.</span><span class="sxs-lookup"><span data-stu-id="b6114-103">A Bézier spline is defined by four points: a start point, two control points, and an endpoint.</span></span>  

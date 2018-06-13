@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519876"
 ---
 # <a name="extract-wf-data-using-tracking"></a><span data-ttu-id="9d726-102">Wyodrębnianie danych WF przy użyciu śledzenia</span><span class="sxs-lookup"><span data-stu-id="9d726-102">Extract WF Data using Tracking</span></span>
 <span data-ttu-id="9d726-103">W tym przykładzie przedstawiono sposób użycia śledzenia można wyodrębnić zmienne przepływu pracy i argumenty z działań przepływu pracy.</span><span class="sxs-lookup"><span data-stu-id="9d726-103">This sample demonstrates how to use workflow tracking to extract workflow variables and arguments from activities.</span></span> <span data-ttu-id="9d726-104">Przedstawia on także dodawanie adnotacji do śledzenia rekordów i wyodrębniania danych ładunku w rekordach śledzenia niestandardowych.</span><span class="sxs-lookup"><span data-stu-id="9d726-104">It also shows the addition of annotations to tracking records and the extraction of data payload within custom tracking records.</span></span> <span data-ttu-id="9d726-105">W przykładzie użyto uczestnika śledzenia zdarzeń śledzenia dla systemu Windows (ETW) do wyodrębniania danych z przepływu pracy.</span><span class="sxs-lookup"><span data-stu-id="9d726-105">The sample uses the Event Tracing for Windows (ETW) tracking participant to extract data from the workflow.</span></span>  

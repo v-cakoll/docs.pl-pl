@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412194"
 ---
 # <a name="icordebugdatatargetreadvirtual-method"></a><span data-ttu-id="86fc9-102">ICorDebugDataTarget::ReadVirtual — Metoda</span><span class="sxs-lookup"><span data-stu-id="86fc9-102">ICorDebugDataTarget::ReadVirtual Method</span></span>
 <span data-ttu-id="86fc9-103">Pobiera blok pamięci ciągłej, zaczynając od określonego adresu i zwraca go do dostarczonego buforu.</span><span class="sxs-lookup"><span data-stu-id="86fc9-103">Gets a block of contiguous memory starting at the specified address, and returns it in the supplied buffer.</span></span>  

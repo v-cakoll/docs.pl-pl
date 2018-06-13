@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520737"
 ---
 # <a name="how-to-apply-gamma-correction-to-a-gradient"></a><span data-ttu-id="a93d3-102">Porady: stosowanie korekcji gamma do gradientu</span><span class="sxs-lookup"><span data-stu-id="a93d3-102">How to: Apply Gamma Correction to a Gradient</span></span>
 <span data-ttu-id="a93d3-103">Można włączyć korekcji gamma pędzla gradientu liniowego, ustawiając pędzla <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> właściwości `true`.</span><span class="sxs-lookup"><span data-stu-id="a93d3-103">You can enable gamma correction for a linear gradient brush by setting the brush's <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> property to `true`.</span></span> <span data-ttu-id="a93d3-104">Korekcja gamma można wyłączyć, ustawiając <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> właściwości `false`.</span><span class="sxs-lookup"><span data-stu-id="a93d3-104">You can disable gamma correction by setting the <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> property to `false`.</span></span> <span data-ttu-id="a93d3-105">Korekcja gamma jest domyślnie wyłączona.</span><span class="sxs-lookup"><span data-stu-id="a93d3-105">Gamma correction is disabled by default.</span></span>  

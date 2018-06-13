@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744021"
 ---
 # <a name="ltgccpugroupgt-element"></a><span data-ttu-id="b364c-102">&lt;Gccpugroup —&gt; — Element</span><span class="sxs-lookup"><span data-stu-id="b364c-102">&lt;GCCpuGroup&gt; Element</span></span>
 <span data-ttu-id="b364c-103">Określa, czy wyrzucanie elementów bezużytecznych obsługuje wiele grup procesora CPU.</span><span class="sxs-lookup"><span data-stu-id="b364c-103">Specifies whether garbage collection supports multiple CPU groups.</span></span>  

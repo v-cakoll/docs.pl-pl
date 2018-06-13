@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742903"
 ---
 # <a name="ltaddgt-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="c8cca-102">&lt;Dodaj&gt; elementu authenticationModules — (ustawienia sieciowe)</span><span class="sxs-lookup"><span data-stu-id="c8cca-102">&lt;add&gt; Element for authenticationModules (Network Settings)</span></span>
 <span data-ttu-id="c8cca-103">Dodaje moduł uwierzytelniania do aplikacji.</span><span class="sxs-lookup"><span data-stu-id="c8cca-103">Adds an authentication module to the application.</span></span>  

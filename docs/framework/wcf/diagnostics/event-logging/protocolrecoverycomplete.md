@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33472395"
 ---
 # <a name="protocolrecoverycomplete"></a><span data-ttu-id="ec3ed-102">ProtocolRecoveryComplete</span><span class="sxs-lookup"><span data-stu-id="ec3ed-102">ProtocolRecoveryComplete</span></span>
 <span data-ttu-id="ec3ed-103">Identyfikator: 150</span><span class="sxs-lookup"><span data-stu-id="ec3ed-103">Id: 150</span></span>  

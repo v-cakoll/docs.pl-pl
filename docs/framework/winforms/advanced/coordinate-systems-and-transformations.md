@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521781"
 ---
 # <a name="coordinate-systems-and-transformations"></a><span data-ttu-id="3434f-102">Systemy i przekształcenia współrzędnych</span><span class="sxs-lookup"><span data-stu-id="3434f-102">Coordinate Systems and Transformations</span></span>
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="3434f-103"> zapewnia transformacja świata i transformacja strony, dzięki czemu można przekształcać (Obróć, skalowania, tłumaczenia i tak dalej) elementów rysowania.</span><span class="sxs-lookup"><span data-stu-id="3434f-103"> provides a world transformation and a page transformation so that you can transform (rotate, scale, translate, and so on) the items you draw.</span></span> <span data-ttu-id="3434f-104">Dwa przekształcenia pozwalają również działać w różnych systemów współrzędnych.</span><span class="sxs-lookup"><span data-stu-id="3434f-104">The two transformations also allow you to work in a variety of coordinate systems.</span></span>  

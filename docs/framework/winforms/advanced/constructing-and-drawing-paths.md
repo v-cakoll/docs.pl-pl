@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520659"
 ---
 # <a name="constructing-and-drawing-paths"></a><span data-ttu-id="abbc3-102">Konstruowanie i rysowanie ścieżek</span><span class="sxs-lookup"><span data-stu-id="abbc3-102">Constructing and Drawing Paths</span></span>
 <span data-ttu-id="abbc3-103">Ścieżka jest sekwencję elementów podstawowych grafiki (wiersze, prostokąty krzywych, tekst i podobnych), które można wykonywać na nich operacji i rysowane jako pojedyncza jednostka.</span><span class="sxs-lookup"><span data-stu-id="abbc3-103">A path is a sequence of graphics primitives (lines, rectangles, curves, text, and the like) that can be manipulated and drawn as a single unit.</span></span> <span data-ttu-id="abbc3-104">Ścieżkę można podzielić na *rysunki* otwarty lub zamknięty.</span><span class="sxs-lookup"><span data-stu-id="abbc3-104">A path can be divided into *figures* that are either open or closed.</span></span> <span data-ttu-id="abbc3-105">Ilustracja może zawierać kilka elementów podstawowych.</span><span class="sxs-lookup"><span data-stu-id="abbc3-105">A figure can contain several primitives.</span></span>  

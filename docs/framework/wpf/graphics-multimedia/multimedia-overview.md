@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566434"
 ---
 # <a name="multimedia-overview"></a><span data-ttu-id="5dfe1-102">Przegląd Multimedia</span><span class="sxs-lookup"><span data-stu-id="5dfe1-102">Multimedia Overview</span></span>
 <span data-ttu-id="5dfe1-103">Funkcje multimediów w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] umożliwiają integrowanie aplikacji ulepszanie środowiska użytkownika audio i wideo.</span><span class="sxs-lookup"><span data-stu-id="5dfe1-103">The multimedia features in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] enable you to integrate audio and video into your applications to enhance the user experience.</span></span> <span data-ttu-id="5dfe1-104">W tym temacie przedstawiono funkcje multimediów [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5dfe1-104">This topic introduces the multimedia features of [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span>  

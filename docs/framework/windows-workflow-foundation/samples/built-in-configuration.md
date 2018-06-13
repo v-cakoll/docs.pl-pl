@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518623"
 ---
 # <a name="built-in-configuration"></a><span data-ttu-id="38ea2-102">Wbudowane konfiguracji</span><span class="sxs-lookup"><span data-stu-id="38ea2-102">Built-in Configuration</span></span>
 <span data-ttu-id="38ea2-103">W przykładzie pokazano, używania i konfiguracji w magazynie wystąpień przepływu pracy SQL.</span><span class="sxs-lookup"><span data-stu-id="38ea2-103">This sample demonstrates the use and configuration of the SQL workflow instance store.</span></span> <span data-ttu-id="38ea2-104">W magazynie wystąpień przepływu pracy SQL jest implementacją SQL na podstawie wystąpienia magazynu.</span><span class="sxs-lookup"><span data-stu-id="38ea2-104">The SQL workflow instance store is a SQL-based implementation of an instance store.</span></span> <span data-ttu-id="38ea2-105">Umożliwia on do zapisywania i ładowania stanu z bazy danych programu SQL Server lub SQL Server Express i wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="38ea2-105">It allows an instance to save and load its state to and from a SQL Server or SQL Server Express database.</span></span>  

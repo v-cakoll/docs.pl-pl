@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521544"
 ---
 # <a name="how-to-draw-vertical-text-on-a-windows-form"></a><span data-ttu-id="20dae-102">Porady: rysowanie pionowego tekstu w formularzu systemu Windows</span><span class="sxs-lookup"><span data-stu-id="20dae-102">How to: Draw Vertical Text on a Windows Form</span></span>
 <span data-ttu-id="20dae-103">Poniższy przykładowy kod przedstawia sposób Rysowanie pionowego tekstu w formularzu za pomocą <xref:System.Drawing.Graphics.DrawString%2A> metody <xref:System.Drawing.Graphics>.</span><span class="sxs-lookup"><span data-stu-id="20dae-103">The following code example shows how to draw vertical text on a form by using the <xref:System.Drawing.Graphics.DrawString%2A> method of <xref:System.Drawing.Graphics>.</span></span>  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405388"
 ---
 # <a name="icordebugclass2-interface1"></a><span data-ttu-id="4d077-102">ICorDebugClass2 Interface1</span><span class="sxs-lookup"><span data-stu-id="4d077-102">ICorDebugClass2 Interface1</span></span>
 <span data-ttu-id="4d077-103">Reprezentuje klasy ogólnej lub klasie z parametrem metody typu <xref:System.Type>.</span><span class="sxs-lookup"><span data-stu-id="4d077-103">Represents a generic class or a class with a method parameter of type <xref:System.Type>.</span></span> <span data-ttu-id="4d077-104">Ten interfejs stanowi rozszerzenie [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md).</span><span class="sxs-lookup"><span data-stu-id="4d077-104">This interface extends [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md).</span></span>  

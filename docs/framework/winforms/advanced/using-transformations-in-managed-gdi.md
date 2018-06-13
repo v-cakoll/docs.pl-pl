@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523799"
 ---
 # <a name="using-transformations-in-managed-gdi"></a><span data-ttu-id="f5d43-102">Używanie przekształceń w zarządzanym GDI+</span><span class="sxs-lookup"><span data-stu-id="f5d43-102">Using Transformations in Managed GDI+</span></span>
 <span data-ttu-id="f5d43-103">Affine — przekształcenia obejmują obracanie, skalowanie w czasie wykonywania odbicia, pochylanie i tłumaczenia.</span><span class="sxs-lookup"><span data-stu-id="f5d43-103">Affine transformations include rotating, scaling, reflecting, shearing, and translating.</span></span> <span data-ttu-id="f5d43-104">W [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], <xref:System.Drawing.Drawing2D.Matrix> klasa stanowi podstawę wykonywanie affine — przekształcenia na rysunkach wektora, obrazy i tekst.</span><span class="sxs-lookup"><span data-stu-id="f5d43-104">In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], the <xref:System.Drawing.Drawing2D.Matrix> class provides the foundation for performing affine transformations on vector drawings, images, and text.</span></span>  

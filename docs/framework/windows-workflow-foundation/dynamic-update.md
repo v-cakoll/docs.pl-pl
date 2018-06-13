@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520360"
 ---
 # <a name="dynamic-update"></a><span data-ttu-id="5f885-102">Aktualizacja dynamiczna</span><span class="sxs-lookup"><span data-stu-id="5f885-102">Dynamic Update</span></span>
 <span data-ttu-id="5f885-103">Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperami aplikacji, aby zaktualizować wystąpienia przepływu pracy utrwalonych definicji przepływu pracy.</span><span class="sxs-lookup"><span data-stu-id="5f885-103">Dynamic update provides a mechanism for workflow application developers to update the workflow definition of a persisted workflow instance.</span></span> <span data-ttu-id="5f885-104">Może to być do zaimplementowania poprawkę, nowe wymagania, lub aby pomieścić nieoczekiwane zmiany.</span><span class="sxs-lookup"><span data-stu-id="5f885-104">This can be to implement a bug fix, new requirements, or to accommodate unexpected changes.</span></span> <span data-ttu-id="5f885-105">Ten temat zawiera omówienie funkcji aktualizacji dynamicznej wprowadzona w systemie [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5f885-105">This topic provides an overview of the dynamic update functionality introduced in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span></span>  

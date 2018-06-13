@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568550"
 ---
 # <a name="mapping-xml-data-types-to-clr-types"></a><span data-ttu-id="8e8fb-102">Mapowanie typu danych XML na typy CLR</span><span class="sxs-lookup"><span data-stu-id="8e8fb-102">Mapping XML Data Types to CLR Types</span></span>
 <span data-ttu-id="8e8fb-103">W poniższej tabeli opisano domyślne mapowanie między typami danych XML i języka typowych środowiska uruchomieniowego (języka wspólnego CLR).</span><span class="sxs-lookup"><span data-stu-id="8e8fb-103">The following table describes the default mapping between the XML data types and the common language runtime (CLR) types.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551911"
 ---
 # <a name="how-to-group-items-in-a-listview-that-implements-a-gridview"></a><span data-ttu-id="ecbaf-102">Jak grupować elementy w ListView, który implementuje GridView</span><span class="sxs-lookup"><span data-stu-id="ecbaf-102">How to: Group Items in a ListView That Implements a GridView</span></span>
 <span data-ttu-id="ecbaf-103">W tym przykładzie przedstawiono sposób wyświetlania grup elementów w <xref:System.Windows.Controls.GridView> tryb widoku <xref:System.Windows.Controls.ListView> formantu.</span><span class="sxs-lookup"><span data-stu-id="ecbaf-103">This example shows how to display groups of items in the <xref:System.Windows.Controls.GridView> view mode of a <xref:System.Windows.Controls.ListView> control.</span></span>  

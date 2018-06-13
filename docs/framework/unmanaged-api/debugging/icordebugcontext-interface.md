@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411944"
 ---
 # <a name="icordebugcontext-interface1"></a><span data-ttu-id="dd9ac-102">ICorDebugContext Interface1</span><span class="sxs-lookup"><span data-stu-id="dd9ac-102">ICorDebugContext Interface1</span></span>
 <span data-ttu-id="dd9ac-103">Reprezentuje obiekt kontekstu.</span><span class="sxs-lookup"><span data-stu-id="dd9ac-103">Represents a context object.</span></span> <span data-ttu-id="dd9ac-104">Ten Interfejs nie został jeszcze implementowany.</span><span class="sxs-lookup"><span data-stu-id="dd9ac-104">This interface has not been implemented yet.</span></span>  

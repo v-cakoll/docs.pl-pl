@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568111"
 ---
 # <a name="enumeration-format-strings"></a><span data-ttu-id="a2335-102">Wyliczanie ciągów formatujących</span><span class="sxs-lookup"><span data-stu-id="a2335-102">Enumeration Format Strings</span></span>
 <span data-ttu-id="a2335-103">Można użyć <xref:System.Enum.ToString%2A?displayProperty=nameWithType> metodę, aby utworzyć nowy obiekt ciągu reprezentujący liczbowe, szesnastkowo lub wartość ciągu dla elementu członkowskiego wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="a2335-103">You can use the <xref:System.Enum.ToString%2A?displayProperty=nameWithType> method to create a new string object that represents the numeric, hexadecimal, or string value of an enumeration member.</span></span> <span data-ttu-id="a2335-104">Ta metoda przyjmuje jeden wyliczenie formatowania ciągi, aby określić wartości, które mają być zwracane.</span><span class="sxs-lookup"><span data-stu-id="a2335-104">This method takes one of the enumeration formatting strings to specify the value that you want returned.</span></span>  

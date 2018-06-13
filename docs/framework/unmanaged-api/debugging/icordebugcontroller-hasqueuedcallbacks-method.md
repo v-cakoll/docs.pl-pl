@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411613"
 ---
 # <a name="icordebugcontrollerhasqueuedcallbacks-method"></a><span data-ttu-id="82db3-102">ICorDebugController::HasQueuedCallbacks — Metoda</span><span class="sxs-lookup"><span data-stu-id="82db3-102">ICorDebugController::HasQueuedCallbacks Method</span></span>
 <span data-ttu-id="82db3-103">Pobiera wartość wskazującą, czy wszystkie zarządzane wywołania zwrotne aktualnie czekają w kolejce dla określonego wątku.</span><span class="sxs-lookup"><span data-stu-id="82db3-103">Gets a value that indicates whether any managed callbacks are currently queued for the specified thread.</span></span>  

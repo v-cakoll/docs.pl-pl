@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520006"
 ---
 # <a name="application-settings-architecture"></a><span data-ttu-id="4ee27-102">Architektura ustawień aplikacji</span><span class="sxs-lookup"><span data-stu-id="4ee27-102">Application Settings Architecture</span></span>
 <span data-ttu-id="4ee27-103">W tym temacie opisano, jak działa Architektura ustawień aplikacji i Eksploruje zaawansowanych funkcji architektury, takie jak ustawienia grupowanych i ustawienia kluczy.</span><span class="sxs-lookup"><span data-stu-id="4ee27-103">This topic describes how the Application Settings architecture works, and explores advanced features of the architecture, such as grouped settings and settings keys.</span></span>  

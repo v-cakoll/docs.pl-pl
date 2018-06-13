@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444786"
 ---
 # <a name="imetadataemitdeleteclasslayout-method"></a><span data-ttu-id="ac196-102">IMetaDataEmit::DeleteClassLayout — Metoda</span><span class="sxs-lookup"><span data-stu-id="ac196-102">IMetaDataEmit::DeleteClassLayout Method</span></span>
 <span data-ttu-id="ac196-103">Niszczy podpisu metadanych układ klasy dla typu reprezentowanego przez określony token.</span><span class="sxs-lookup"><span data-stu-id="ac196-103">Destroys the class layout metadata signature for the type represented by the specified token.</span></span>  

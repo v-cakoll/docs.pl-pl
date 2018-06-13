@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518463"
 ---
 # <a name="suppress-transaction-scope"></a><span data-ttu-id="ae4bd-102">Pomiń zakresu transakcji</span><span class="sxs-lookup"><span data-stu-id="ae4bd-102">Suppress Transaction Scope</span></span>
 <span data-ttu-id="ae4bd-103">Przykład pokazuje, jak utworzyć niestandardowy `SuppressTransactionScope` działanie, aby pominąć transakcja otoczenia czasu wykonywania, jeśli jest obecny.</span><span class="sxs-lookup"><span data-stu-id="ae4bd-103">The sample demonstrates how to author a custom `SuppressTransactionScope` activity to suppress the ambient run-time transaction, if present.</span></span>  

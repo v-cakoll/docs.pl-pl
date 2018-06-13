@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451314"
 ---
 # <a name="icorprofilercallbackcomclassicvtablecreated-method"></a><span data-ttu-id="1b9c0-102">ICorProfilerCallback::COMClassicVTableCreated — Metoda</span><span class="sxs-lookup"><span data-stu-id="1b9c0-102">ICorProfilerCallback::COMClassicVTableCreated Method</span></span>
 <span data-ttu-id="1b9c0-103">Powiadamia profilera utworzono vtable międzyoperacyjnego modelu COM, dla określonego identyfikatora IID i klasy.</span><span class="sxs-lookup"><span data-stu-id="1b9c0-103">Notifies the profiler that a COM interop vtable for the specified IID and class has been created.</span></span>  

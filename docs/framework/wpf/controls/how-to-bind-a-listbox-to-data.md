@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552834"
 ---
 # <a name="how-to-bind-a-listbox-to-data"></a><span data-ttu-id="67c65-102">Jak powiązać ListBox z danymi</span><span class="sxs-lookup"><span data-stu-id="67c65-102">How to: Bind a ListBox to Data</span></span>
 <span data-ttu-id="67c65-103">Deweloper aplikacji można utworzyć <xref:System.Windows.Controls.ListBox> formantów bez określania zawartości każdego <xref:System.Windows.Controls.ListBoxItem> oddzielnie.</span><span class="sxs-lookup"><span data-stu-id="67c65-103">An application developer can create <xref:System.Windows.Controls.ListBox> controls without specifying the contents of each <xref:System.Windows.Controls.ListBoxItem> separately.</span></span> <span data-ttu-id="67c65-104">Powiązanie danych służy do powiązania danych do poszczególnych elementów.</span><span class="sxs-lookup"><span data-stu-id="67c65-104">You can use data binding to bind data to the individual items.</span></span>  

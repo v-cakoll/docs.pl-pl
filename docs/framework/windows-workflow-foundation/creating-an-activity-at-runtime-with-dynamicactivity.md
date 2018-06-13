@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515177"
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a><span data-ttu-id="e2ff7-102">Tworzenie w czasie wykonywania z DynamicActivity działania</span><span class="sxs-lookup"><span data-stu-id="e2ff7-102">Creating an Activity at Runtime with DynamicActivity</span></span>
 <span data-ttu-id="e2ff7-103"><xref:System.Activities.DynamicActivity> jest klasą konkretną, sealed z publicznym konstruktorem.</span><span class="sxs-lookup"><span data-stu-id="e2ff7-103"><xref:System.Activities.DynamicActivity> is a concrete, sealed class with a public constructor.</span></span> <span data-ttu-id="e2ff7-104"><xref:System.Activities.DynamicActivity> można użyć do włączenia funkcji działania w czasie wykonywania za pomocą działania modelu DOM.</span><span class="sxs-lookup"><span data-stu-id="e2ff7-104"><xref:System.Activities.DynamicActivity> can be used to assemble activity functionality at runtime using an activity DOM.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563376"
 ---
 # <a name="imaging-how-to-topics"></a><span data-ttu-id="00b31-102">Obrazowanie Tematy porad</span><span class="sxs-lookup"><span data-stu-id="00b31-102">Imaging How-to Topics</span></span>
 <span data-ttu-id="00b31-103">Tematy w tej sekcji przedstawiono sposób korzystania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] w celu wyświetlania lub modyfikowania bitmapy.</span><span class="sxs-lookup"><span data-stu-id="00b31-103">The topics in this section demonstrate how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] in order to display or alter bitmap images.</span></span>  

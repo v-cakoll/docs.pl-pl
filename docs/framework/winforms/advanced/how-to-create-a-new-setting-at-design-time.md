@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523770"
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a><span data-ttu-id="c5a1d-102">Porady: tworzenie nowego ustawienia w czasie projektowania</span><span class="sxs-lookup"><span data-stu-id="c5a1d-102">How To: Create a New Setting at Design Time</span></span>
 <span data-ttu-id="c5a1d-103">Przy użyciu narzędzia Projektant ustawienia, można utworzyć nowe ustawienie w czasie projektowania.</span><span class="sxs-lookup"><span data-stu-id="c5a1d-103">You can create a new setting at design time by using the Settings designer.</span></span> <span data-ttu-id="c5a1d-104">Projektant ustawienia jest interfejsem styl siatki, który pozwala utworzyć nowe ustawienia, a także określać właściwości dla tych ustawień.</span><span class="sxs-lookup"><span data-stu-id="c5a1d-104">The Settings designer is a grid-style interface that allows you to create new settings and specify properties for those settings.</span></span> <span data-ttu-id="c5a1d-105">Należy określić nazwę, wartość, typ i zakres dla nowych ustawień.</span><span class="sxs-lookup"><span data-stu-id="c5a1d-105">You must specify Name, Value, Type and Scope for your new settings.</span></span> <span data-ttu-id="c5a1d-106">Po utworzeniu ustawienie jest dostępne w kodzie.</span><span class="sxs-lookup"><span data-stu-id="c5a1d-106">Once a setting is created, it is accessible in code.</span></span>  

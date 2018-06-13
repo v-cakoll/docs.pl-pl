@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411450"
 ---
 # <a name="icordebugdatatarget2enumeratethreadids-method"></a><span data-ttu-id="3b081-102">Metoda ICorDebugDataTarget2::EnumerateThreadIDs</span><span class="sxs-lookup"><span data-stu-id="3b081-102">ICorDebugDataTarget2::EnumerateThreadIDs Method</span></span>
 <span data-ttu-id="3b081-103">Zwraca listę aktywnych wątku identyfikatorów.</span><span class="sxs-lookup"><span data-stu-id="3b081-103">Returns a list of active thread IDs.</span></span>  

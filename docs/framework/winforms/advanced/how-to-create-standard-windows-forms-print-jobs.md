@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522336"
 ---
 # <a name="how-to-create-standard-windows-forms-print-jobs"></a><span data-ttu-id="a5a93-102">Porady: tworzenie standardowych zadań drukowania formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="a5a93-102">How to: Create Standard Windows Forms Print Jobs</span></span>
 <span data-ttu-id="a5a93-103">Podstawę drukowanie w formularzach systemu Windows jest <xref:System.Drawing.Printing.PrintDocument> składnik — w szczególności <xref:System.Drawing.Printing.PrintDocument.PrintPage> zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="a5a93-103">The foundation of printing in Windows Forms is the <xref:System.Drawing.Printing.PrintDocument> component—more specifically, the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event.</span></span> <span data-ttu-id="a5a93-104">Pisanie kodu do obsługi <xref:System.Drawing.Printing.PrintDocument.PrintPage> zdarzeń, można określić wydruku i jak go wydrukować.</span><span class="sxs-lookup"><span data-stu-id="a5a93-104">By writing code to handle the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event, you can specify what to print and how to print it.</span></span>  

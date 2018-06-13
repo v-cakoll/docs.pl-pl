@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741909"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a><span data-ttu-id="e188a-102">Porady: ładowanie zestawów do domeny aplikacji</span><span class="sxs-lookup"><span data-stu-id="e188a-102">How to: Load Assemblies into an Application Domain</span></span>
 <span data-ttu-id="e188a-103">Istnieje kilka sposobów, aby załadować zestawu do domeny aplikacji.</span><span class="sxs-lookup"><span data-stu-id="e188a-103">There are several ways to load an assembly into an application domain.</span></span> <span data-ttu-id="e188a-104">Zalecaną metodą jest użycie `static` (`Shared` w języku Visual Basic) <xref:System.Reflection.Assembly.Load%2A> metody <xref:System.Reflection.Assembly?displayProperty=nameWithType> klasy.</span><span class="sxs-lookup"><span data-stu-id="e188a-104">The recommended way is to use the `static` (`Shared` in Visual Basic) <xref:System.Reflection.Assembly.Load%2A> method of the <xref:System.Reflection.Assembly?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="e188a-105">Inne metody, które zestawy można załadować to:</span><span class="sxs-lookup"><span data-stu-id="e188a-105">Other ways assemblies can be loaded include:</span></span>  

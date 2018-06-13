@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522450"
 ---
 # <a name="how-to-shear-colors"></a><span data-ttu-id="6cbfe-102">Porady: zmienianie kolorów</span><span class="sxs-lookup"><span data-stu-id="6cbfe-102">How to: Shear Colors</span></span>
 <span data-ttu-id="6cbfe-103">Pochylanie zwiększa lub zmniejsza składnika kolor przez kwotę proporcjonalny do innego składnika kolorów.</span><span class="sxs-lookup"><span data-stu-id="6cbfe-103">Shearing increases or decreases a color component by an amount proportional to another color component.</span></span> <span data-ttu-id="6cbfe-104">Rozważmy na przykład przekształcania, gdzie składnika czerwony zwiększa się o połowę wartość składnika niebieski.</span><span class="sxs-lookup"><span data-stu-id="6cbfe-104">For example, consider the transformation where the red component is increased by one half the value of the blue component.</span></span> <span data-ttu-id="6cbfe-105">W takiej transformacji kolorów (0,2, 0,5, 1) może stać się (0,7, 0,5, 1).</span><span class="sxs-lookup"><span data-stu-id="6cbfe-105">Under such a transformation, the color (0.2, 0.5, 1) would become (0.7, 0.5, 1).</span></span> <span data-ttu-id="6cbfe-106">Nowy składnik red jest wymagane 0,2 + (1/2)(1) = 0,7.</span><span class="sxs-lookup"><span data-stu-id="6cbfe-106">The new red component is 0.2 + (1/2)(1) = 0.7.</span></span>  

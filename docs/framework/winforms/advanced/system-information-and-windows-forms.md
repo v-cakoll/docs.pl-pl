@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524118"
 ---
 # <a name="system-information-and-windows-forms"></a><span data-ttu-id="0049c-102">Informacje o systemie i formularze systemu Windows</span><span class="sxs-lookup"><span data-stu-id="0049c-102">System Information and Windows Forms</span></span>
 <span data-ttu-id="0049c-103">Czasami jest to konieczne zebrać informacje dotyczące komputera, na którym aplikacja jest uruchomiona na celu podejmowanie decyzji w kodzie.</span><span class="sxs-lookup"><span data-stu-id="0049c-103">Sometimes it is necessary to gather information about the computer that your application is running on in order to make decisions in your code.</span></span> <span data-ttu-id="0049c-104">Na przykład może być funkcję, która dotyczy tylko po podłączeniu do określonej domeny; w takim przypadku należy określić domeny i wyłączenie tej funkcji, jeśli domena nie jest obecny.</span><span class="sxs-lookup"><span data-stu-id="0049c-104">For example, you might have a function that is only applicable when connected to a particular network domain; in this case you would need a way to determine the domain and disable the function if the domain is not present.</span></span>  

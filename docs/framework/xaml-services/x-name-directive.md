@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565853"
 ---
 # <a name="xname-directive"></a><span data-ttu-id="9cd5a-102">x:Name — dyrektywa</span><span class="sxs-lookup"><span data-stu-id="9cd5a-102">x:Name Directive</span></span>
 <span data-ttu-id="9cd5a-103">Identyfikuje elementy zdefiniowane XAML XAML namescope.</span><span class="sxs-lookup"><span data-stu-id="9cd5a-103">Uniquely identifies XAML-defined elements in a XAML namescope.</span></span> <span data-ttu-id="9cd5a-104">XAML namescopes i ich modeli unikatowości mogą być stosowane do wystąpień obiektów, gdy platform zapewniają interfejsów API, lub zaimplementuj zachowania, które uzyskują dostęp do wykres obiektu utworzone XAML w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="9cd5a-104">XAML namescopes and their uniqueness models can be applied to the instantiated objects, when frameworks provide APIs or implement behaviors that access the XAML-created object graph at run time.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451191"
 ---
 # <a name="icorprofilercallbackfunctionunloadstarted-method"></a><span data-ttu-id="457c0-102">ICorProfilerCallback::FunctionUnloadStarted — Metoda</span><span class="sxs-lookup"><span data-stu-id="457c0-102">ICorProfilerCallback::FunctionUnloadStarted Method</span></span>
 <span data-ttu-id="457c0-103">Powiadamia profilera, czy można zwolnić funkcja została uruchomiona środowiska uruchomieniowego.</span><span class="sxs-lookup"><span data-stu-id="457c0-103">Notifies the profiler that the runtime has started to unload a function.</span></span>  

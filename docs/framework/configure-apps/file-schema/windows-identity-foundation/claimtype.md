@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767430"
 ---
 # <a name="ltclaimtypegt"></a><span data-ttu-id="93f3a-102">&lt;Typ oświadczenia&gt;</span><span class="sxs-lookup"><span data-stu-id="93f3a-102">&lt;claimType&gt;</span></span>
 <span data-ttu-id="93f3a-103">Określa pojedynczy opcjonalne lub wymagane oświadczenia przychodzące tokeny zabezpieczające.</span><span class="sxs-lookup"><span data-stu-id="93f3a-103">Specifies a single optional or required claim for incoming security tokens.</span></span>  

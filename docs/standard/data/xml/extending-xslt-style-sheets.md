@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568826"
 ---
 # <a name="extending-xslt-style-sheets"></a><span data-ttu-id="a92c3-102">Rozszerzanie arkuszy stylów XSLT</span><span class="sxs-lookup"><span data-stu-id="a92c3-102">Extending XSLT Style Sheets</span></span>
 <span data-ttu-id="a92c3-103">W tej sekcji opisano różne metody rozszerzania funkcji XSLT.</span><span class="sxs-lookup"><span data-stu-id="a92c3-103">This section describes the different methods of extending the XSLT functionality.</span></span> <span data-ttu-id="a92c3-104">Możesz dodać rozszerzenie obiektów lub parametry, używając <xref:System.Xml.Xsl.XsltArgumentList> klasy.</span><span class="sxs-lookup"><span data-stu-id="a92c3-104">You can add extension objects or parameters using the <xref:System.Xml.Xsl.XsltArgumentList> class.</span></span> <span data-ttu-id="a92c3-105">Następnie można wywołać rozszerzenie obiektów lub parametrów z arkusza stylów.</span><span class="sxs-lookup"><span data-stu-id="a92c3-105">The extension objects or parameters can then be called from the style sheet.</span></span> <span data-ttu-id="a92c3-106">Ponadto można również osadzać blokach skryptu do arkusza stylów przy użyciu `msxsl:script` elementu.</span><span class="sxs-lookup"><span data-stu-id="a92c3-106">In addition, you can also embed script blocks into the style sheet by using the `msxsl:script` element.</span></span>  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447288"
 ---
 # <a name="metahostpolicyflags-enumeration"></a><span data-ttu-id="01327-102">METAHOST_POLICY_FLAGS — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="01327-102">METAHOST_POLICY_FLAGS Enumeration</span></span>
 <span data-ttu-id="01327-103">Udostępnia zasady powiązania, które są wspólne dla większości hosty w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="01327-103">Provides binding policies that are common to most runtime hosts.</span></span> <span data-ttu-id="01327-104">To wyliczenie jest używany przez [ICLRMetaHostPolicy::GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="01327-104">This enumeration is used by the [ICLRMetaHostPolicy::GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) method.</span></span>  

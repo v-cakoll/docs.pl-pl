@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522828"
 ---
 # <a name="getting-started-with-graphics-programming"></a><span data-ttu-id="4e6de-102">Wprowadzenie do programowania grafiki</span><span class="sxs-lookup"><span data-stu-id="4e6de-102">Getting Started with Graphics Programming</span></span>
 <span data-ttu-id="4e6de-103">W tej sekcji pokazano, jak rozpocząć korzystanie z [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] w aplikacji formularzy systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="4e6de-103">This section shows how to get started using [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] in a Windows Forms application.</span></span> <span data-ttu-id="4e6de-104">W następujących tematach opisano sposób wykonania kilku [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] zadań, takich jak rysowania i wypełnianie kształty i tekst.</span><span class="sxs-lookup"><span data-stu-id="4e6de-104">The following topics show how to complete several [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] tasks such as drawing and filling shapes and text.</span></span>  

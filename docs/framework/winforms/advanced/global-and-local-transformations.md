@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523162"
 ---
 # <a name="global-and-local-transformations"></a><span data-ttu-id="2a21b-102">Globalne i lokalne przekształcenia</span><span class="sxs-lookup"><span data-stu-id="2a21b-102">Global and Local Transformations</span></span>
 <span data-ttu-id="2a21b-103">Globalne przekształcenie jest transformację, która ma zastosowanie do każdego elementu narysowanymi przez dany <xref:System.Drawing.Graphics> obiektu.</span><span class="sxs-lookup"><span data-stu-id="2a21b-103">A global transformation is a transformation that applies to every item drawn by a given <xref:System.Drawing.Graphics> object.</span></span> <span data-ttu-id="2a21b-104">Z kolei transformację lokalnego jest transformację, która ma zastosowanie do określonego elementu do narysowania.</span><span class="sxs-lookup"><span data-stu-id="2a21b-104">In contrast, a local transformation is a transformation that applies to a specific item to be drawn.</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571189"
 ---
 # <a name="naming-resources"></a><span data-ttu-id="653e1-102">Nadawanie nazw zasobów</span><span class="sxs-lookup"><span data-stu-id="653e1-102">Naming Resources</span></span>
 <span data-ttu-id="653e1-103">Ponieważ zlokalizowania zasobów można odwoływać się za pośrednictwem niektórych obiektów tak jakby były to właściwości, nazewnictwa wytyczne dotyczące zasobów są podobne do właściwości wytyczne.</span><span class="sxs-lookup"><span data-stu-id="653e1-103">Because localizable resources can be referenced via certain objects as if they were properties, the naming guidelines for resources are similar to property guidelines.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742247"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a><span data-ttu-id="14083-102">Przekazywanie dalej typu w środowisku uruchomieniowym języka wspólnego</span><span class="sxs-lookup"><span data-stu-id="14083-102">Type Forwarding in the Common Language Runtime</span></span>
 <span data-ttu-id="14083-103">Przekazywanie dalej typu umożliwia przeniesienie typu do innego zestawu bez konieczności ponownego kompilowania aplikacji, które używają oryginalnego zestawu.</span><span class="sxs-lookup"><span data-stu-id="14083-103">Type forwarding allows you to move a type to another assembly without having to recompile applications that use the original assembly.</span></span>  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406769"
 ---
 # <a name="iclrdatatarget3getexceptionthreadid-method"></a><span data-ttu-id="e5770-102">Metoda ICLRDataTarget3::GetExceptionThreadID</span><span class="sxs-lookup"><span data-stu-id="e5770-102">ICLRDataTarget3::GetExceptionThreadID Method</span></span>
 <span data-ttu-id="e5770-103">Metoda wywoływana przez wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) dostępu do usługi danych można uzyskać Identyfikatora wątku, który zgłosił wyjątek.</span><span class="sxs-lookup"><span data-stu-id="e5770-103">Called by the common language runtime (CLR) data access services to get the ID of the thread that threw the exception.</span></span>  

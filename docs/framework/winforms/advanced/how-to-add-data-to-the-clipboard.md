@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522070"
 ---
 # <a name="how-to-add-data-to-the-clipboard"></a><span data-ttu-id="a913b-102">Porady: dodawanie danych do schowka</span><span class="sxs-lookup"><span data-stu-id="a913b-102">How to: Add Data to the Clipboard</span></span>
 <span data-ttu-id="a913b-103"><xref:System.Windows.Forms.Clipboard> Klasa dostarcza metody, które służy do interakcji z funkcją Schowka systemu operacyjnego Windows.</span><span class="sxs-lookup"><span data-stu-id="a913b-103">The <xref:System.Windows.Forms.Clipboard> class provides methods that you can use to interact with the Windows operating system Clipboard feature.</span></span> <span data-ttu-id="a913b-104">Wiele aplikacji korzysta Schowka jako tymczasowy repozytorium dla danych.</span><span class="sxs-lookup"><span data-stu-id="a913b-104">Many applications use the Clipboard as a temporary repository for data.</span></span> <span data-ttu-id="a913b-105">Na przykład edytory użyć Schowka podczas operacji kopiowania i wklejania.</span><span class="sxs-lookup"><span data-stu-id="a913b-105">For example, word processors use the Clipboard during cut-and-paste operations.</span></span> <span data-ttu-id="a913b-106">Schowek jest również przydatne w przypadku transferu danych między aplikacjami na inny.</span><span class="sxs-lookup"><span data-stu-id="a913b-106">The Clipboard is also useful for transferring data from one application to another.</span></span>  

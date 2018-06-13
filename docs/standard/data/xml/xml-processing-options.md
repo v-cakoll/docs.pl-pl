@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572226"
 ---
 # <a name="xml-processing-options"></a><span data-ttu-id="27b51-102">Opcje przetwarzania XML</span><span class="sxs-lookup"><span data-stu-id="27b51-102">XML Processing Options</span></span>
 <span data-ttu-id="27b51-103">Zobacz Następująca tabela zawiera listę technologii firmy Microsoft, używanych do przetwarzania danych XML.</span><span class="sxs-lookup"><span data-stu-id="27b51-103">See the following tables for a list of Microsoft technologies you can use to process XML data.</span></span>  

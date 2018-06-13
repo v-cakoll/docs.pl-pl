@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34027392"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a><span data-ttu-id="f9db3-103">Wskazówki i technical uzyskać uruchomiono — omówienie</span><span class="sxs-lookup"><span data-stu-id="f9db3-103">Walkthroughs and technical get started overview</span></span>
 

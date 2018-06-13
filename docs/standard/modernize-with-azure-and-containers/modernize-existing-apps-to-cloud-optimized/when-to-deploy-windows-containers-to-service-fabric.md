@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33958213"
 ---
 # <a name="when-to-deploy-windows-containers-to-service-fabric"></a><span data-ttu-id="ed235-103">Podczas wdrażania systemu Windows kontenery sieci szkieletowej usług</span><span class="sxs-lookup"><span data-stu-id="ed235-103">When to deploy Windows Containers to Service Fabric</span></span>
 

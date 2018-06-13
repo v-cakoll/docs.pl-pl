@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598066"
 ---
 # <a name="an-invalid-name-was-specified-for-the-event-log"></a><span data-ttu-id="369c6-102">Określono nieprawidłową nazwę dziennika zdarzeń</span><span class="sxs-lookup"><span data-stu-id="369c6-102">An invalid name was specified for the event log</span></span>
 <span data-ttu-id="369c6-103">Określono nieprawidłową nazwę dziennika zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="369c6-103">An invalid name was specified for the event log.</span></span> <span data-ttu-id="369c6-104">Zazwyczaj jest to wynik nieprawidłowych znaków w nazwa, Nazwa pustego pliku lub nazwę pliku, który jest zbyt długi.</span><span class="sxs-lookup"><span data-stu-id="369c6-104">Usually this is a result of invalid characters in the name, a blank file name, or a file name that is too long.</span></span>  

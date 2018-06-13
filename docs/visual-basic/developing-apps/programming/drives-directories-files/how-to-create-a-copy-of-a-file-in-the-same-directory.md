@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588937"
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-the-same-directory-in-visual-basic"></a><span data-ttu-id="ed4da-102">Porady: tworzenie kopii pliku w tym samym katalogu w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="ed4da-102">How to: Create a Copy of a File in the Same Directory in Visual Basic</span></span>
 <span data-ttu-id="ed4da-103">Użyj `My.Computer.FileSystem.CopyFile` metoda kopiowania plików.</span><span class="sxs-lookup"><span data-stu-id="ed4da-103">Use the `My.Computer.FileSystem.CopyFile` method to copy files.</span></span> <span data-ttu-id="ed4da-104">Parametry pozwalają na zastąpienie istniejących plików, Zmień nazwę pliku, Pokaż postęp operacji i Zezwalaj użytkownikowi na anulowanie operacji.</span><span class="sxs-lookup"><span data-stu-id="ed4da-104">The parameters allow you to overwrite existing files, rename the file, show the progress of the operation, and allow the user to cancel the operation.</span></span>  

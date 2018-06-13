@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597461"
 ---
 # <a name="narrowing-visual-basic"></a><span data-ttu-id="609b1-102">Narrowing (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="609b1-102">Narrowing (Visual Basic)</span></span>
 <span data-ttu-id="609b1-103">Oznacza to, że operator konwersji (`CType`) konwertuje klasę lub strukturę do typu, który może nie posiadać pewnych możliwych wartości oryginalnej klasy lub struktury.</span><span class="sxs-lookup"><span data-stu-id="609b1-103">Indicates that a conversion operator (`CType`) converts a class or structure to a type that might not be able to hold some of the possible values of the original class or structure.</span></span>  

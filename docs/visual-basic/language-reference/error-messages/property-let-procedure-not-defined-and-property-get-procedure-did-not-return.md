@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596609"
 ---
 # <a name="property-let-procedure-not-defined-and-property-get-procedure-did-not-return-an-object"></a><span data-ttu-id="468ef-102">Procedura Let właściwości nie została zdefiniowana, a procedura Get właściwości nie zwraca obiektu</span><span class="sxs-lookup"><span data-stu-id="468ef-102">Property let procedure not defined and property get procedure did not return an object</span></span>
 <span data-ttu-id="468ef-103">Niektóre właściwości, metody i operacje można stosować tylko do `Collection` obiektów.</span><span class="sxs-lookup"><span data-stu-id="468ef-103">Certain properties, methods, and operations can only apply to `Collection` objects.</span></span> <span data-ttu-id="468ef-104">Określona operacja lub właściwość, która jest na wyłączność dla kolekcji, ale obiekt nie jest kolekcją.</span><span class="sxs-lookup"><span data-stu-id="468ef-104">You specified an operation or property that is exclusive to collections, but the object is not a collection.</span></span>  

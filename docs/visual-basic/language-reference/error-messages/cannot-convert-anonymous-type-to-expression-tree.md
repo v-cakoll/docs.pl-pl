@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585479"
 ---
 # <a name="cannot-convert-anonymous-type-to-expression-tree-because-it-contains-a-field-that-is-used-in-the-initialization-of-another-field"></a><span data-ttu-id="7f1fd-102">Nie można przekonwertować typu anonimowego na drzewo wyrażenia, ponieważ zawiera on pole wykorzystywane w inicjowaniu innego pola</span><span class="sxs-lookup"><span data-stu-id="7f1fd-102">Cannot convert anonymous type to expression tree because it contains a field that is used in the initialization of another field</span></span>
 <span data-ttu-id="7f1fd-103">Kompilator nie akceptuje konwersja anonimowego na drzewo wyrażenia, po jednej właściwości typu anonimowego jest używane do inicjowania innej właściwości typu anonimowego.</span><span class="sxs-lookup"><span data-stu-id="7f1fd-103">The compiler does not accept conversion of an anonymous to an expression tree when one property of the anonymous type is used to initialize another property of the anonymous type.</span></span> <span data-ttu-id="7f1fd-104">Na przykład w poniższym kodzie `Prop1` jest zadeklarowany w liście inicjowania i następnie używany jako początkowa wartość `Prop2`.</span><span class="sxs-lookup"><span data-stu-id="7f1fd-104">For example, in the following code, `Prop1` is declared in the initialization list and then used as the initial value for `Prop2`.</span></span>  

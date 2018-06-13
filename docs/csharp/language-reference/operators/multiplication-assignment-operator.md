@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171553"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="79d20-102">Operator \*= (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="79d20-102">\*= Operator (C# Reference)</span></span>
 <span data-ttu-id="79d20-103">Operator przypisania mnożenia danych binarnych.</span><span class="sxs-lookup"><span data-stu-id="79d20-103">The binary multiplication assignment operator.</span></span>  

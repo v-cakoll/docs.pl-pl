@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598443"
 ---
 # <a name="all-field-widths-except-the-last-element-must-be-greater-than-zero"></a><span data-ttu-id="25500-102">Wszystkie szerokości pól z wyjątkiem ostatniego elementu musi być większa od zera.</span><span class="sxs-lookup"><span data-stu-id="25500-102">All field widths, except the last element, must be greater than zero</span></span>
 <span data-ttu-id="25500-103">Wszystkie szerokości pól z wyjątkiem ostatniego elementu musi być większa niż zero.</span><span class="sxs-lookup"><span data-stu-id="25500-103">All field widths, except the last element, must be greater than zero.</span></span> <span data-ttu-id="25500-104">Szerokość pola mniejsza lub równa zero w ostatnim elemencie wskazuje, że jest ostatnie pole zmiennej długości.</span><span class="sxs-lookup"><span data-stu-id="25500-104">A field width less than or equal to zero in the last element indicates the last field is of variable length.</span></span>  

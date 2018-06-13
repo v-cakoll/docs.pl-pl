@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585090"
 ---
 # <a name="data-structures-for-parallel-programming"></a><span data-ttu-id="5c9eb-102">Struktury danych dla Programowania równoległego</span><span class="sxs-lookup"><span data-stu-id="5c9eb-102">Data Structures for Parallel Programming</span></span>
 <span data-ttu-id="5c9eb-103">.NET Framework w wersji 4 wprowadzono kilka nowych typów, które są przydatne w Programowanie równoległe, w tym zestaw kolekcji współbieżnych klas, elementy podstawowe synchronizacji lekkie i typy dla inicjowania z opóźnieniem.</span><span class="sxs-lookup"><span data-stu-id="5c9eb-103">The .NET Framework version 4 introduces several new types that are useful in parallel programming, including a set of concurrent collection classes, lightweight synchronization primitives, and types for lazy initialization.</span></span> <span data-ttu-id="5c9eb-104">Z kodem aplikacji wielowątkowych, włączając w bibliotece równoległych zadań i PLINQ można używać tych typów.</span><span class="sxs-lookup"><span data-stu-id="5c9eb-104">You can use these types with any multithreaded application code, including the Task Parallel Library and PLINQ.</span></span>  

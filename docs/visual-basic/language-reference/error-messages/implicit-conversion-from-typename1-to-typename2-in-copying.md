@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590003"
 ---
 # <a name="implicit-conversion-from-39lttypename1gt39-to-39lttypename2gt39-in-copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument"></a><span data-ttu-id="c100f-102">Niejawna konwersja z &#39; &lt;typename1&gt; &#39; do &#39; &lt;typename2&gt; &#39; podczas kopiowania wartości &#39;ByRef&#39; parametru &#39; &lt; Nazwa parametru&gt; &#39; powrotem do pasującego argumentu.</span><span class="sxs-lookup"><span data-stu-id="c100f-102">Implicit conversion from &#39;&lt;typename1&gt;&#39; to &#39;&lt;typename2&gt;&#39; in copying the value of &#39;ByRef&#39; parameter &#39;&lt;parametername&gt;&#39; back to the matching argument.</span></span>
 <span data-ttu-id="c100f-103">Procedura jest wywoływana z [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) argumentu typu innego niż jego odpowiadającego mu parametru.</span><span class="sxs-lookup"><span data-stu-id="c100f-103">A procedure is called with a [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) argument of a different type than that of its corresponding parameter.</span></span>  

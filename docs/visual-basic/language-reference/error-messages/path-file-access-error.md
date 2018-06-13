@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598586"
 ---
 # <a name="pathfile-access-error"></a><span data-ttu-id="f8563-102">Błąd dostępu do ścieżki/pliku</span><span class="sxs-lookup"><span data-stu-id="f8563-102">Path/File access error</span></span>
 <span data-ttu-id="f8563-103">Podczas operacji dostępu do plików lub dostępu do dysku systemu operacyjnego nie można ustanowić połączenia między ścieżkę i nazwę pliku.</span><span class="sxs-lookup"><span data-stu-id="f8563-103">During a file-access or disk-access operation, the operating system could not make a connection between the path and the file name.</span></span>  

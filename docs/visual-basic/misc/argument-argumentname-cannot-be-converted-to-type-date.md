@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600678"
 ---
 # <a name="argument-39ltargumentnamegt39-cannot-be-converted-to-type-39date39"></a><span data-ttu-id="f962b-102">Argument &#39; &lt;argumentname&gt; &#39; nie można przekonwertować na typ &#39;daty&#39;</span><span class="sxs-lookup"><span data-stu-id="f962b-102">Argument &#39;&lt;argumentname&gt;&#39; cannot be converted to type &#39;Date&#39;</span></span>
 <span data-ttu-id="f962b-103">Próbowano zmienić zmienną do typu konwersji `Date`, ale wartości nie został rozpoznany jako prawidłowa data.</span><span class="sxs-lookup"><span data-stu-id="f962b-103">A conversion attempted to change a variable to type `Date`, but the value is not recognized as a valid date.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584660"
 ---
 # <a name="data-parallelism-task-parallel-library"></a><span data-ttu-id="8d227-102">Równoległość danych (Biblioteka zadań równoległych)</span><span class="sxs-lookup"><span data-stu-id="8d227-102">Data Parallelism (Task Parallel Library)</span></span>
 <span data-ttu-id="8d227-103">*Równoległość danych* odwołuje się do scenariuszy, w których tej samej operacji jest wykonywane jednocześnie (równolegle w) w przypadku elementów w źródłowej kolekcji lub tablicy.</span><span class="sxs-lookup"><span data-stu-id="8d227-103">*Data parallelism* refers to scenarios in which the same operation is performed concurrently (that is, in parallel) on elements in a source collection or array.</span></span> <span data-ttu-id="8d227-104">W operacji równoległych danych kolekcji źródłowej jest partycjonowany, dzięki czemu wiele wątków może działać jednocześnie w różnych segmentach.</span><span class="sxs-lookup"><span data-stu-id="8d227-104">In data parallel operations, the source collection is partitioned so that multiple threads can operate on different segments concurrently.</span></span>  

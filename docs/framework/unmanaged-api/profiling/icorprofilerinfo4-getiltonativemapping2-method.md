@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461714"
 ---
 # <a name="icorprofilerinfo4getiltonativemapping2-method"></a><span data-ttu-id="b2c58-102">ICorProfilerInfo4::GetILToNativeMapping2 — Metoda</span><span class="sxs-lookup"><span data-stu-id="b2c58-102">ICorProfilerInfo4::GetILToNativeMapping2 Method</span></span>
 <span data-ttu-id="b2c58-103">Pobiera mapy firmy Microsoft do natywnej przesunięć kod źródłowy znajdujący się w wersji ponownie kompilowana JIT określona funkcja powoduje przesunięcie język pośredni (MSIL).</span><span class="sxs-lookup"><span data-stu-id="b2c58-103">Gets a map from Microsoft intermediate language (MSIL) offsets to native offsets for the code contained in the JIT-recompiled version of the specified function.</span></span>  

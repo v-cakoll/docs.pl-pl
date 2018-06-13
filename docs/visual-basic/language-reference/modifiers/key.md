@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599847"
 ---
 # <a name="key-visual-basic"></a><span data-ttu-id="cbed3-102">Key (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cbed3-102">Key (Visual Basic)</span></span>
 <span data-ttu-id="cbed3-103">`Key` — Słowo kluczowe można określić zachowanie dla właściwości typu anonimowego.</span><span class="sxs-lookup"><span data-stu-id="cbed3-103">The `Key` keyword enables you to specify behavior for properties of anonymous types.</span></span> <span data-ttu-id="cbed3-104">Tylko właściwości wyznaczone jako właściwości klucza brać udziału w testach równość wystąpień typu anonimowego lub obliczenia wartości skrótu kodu.</span><span class="sxs-lookup"><span data-stu-id="cbed3-104">Only properties you designate as key properties participate in tests of equality between anonymous type instances, or calculation of hash code values.</span></span> <span data-ttu-id="cbed3-105">Nie można zmienić wartości właściwości klucza.</span><span class="sxs-lookup"><span data-stu-id="cbed3-105">The values of key properties cannot be changed.</span></span>  

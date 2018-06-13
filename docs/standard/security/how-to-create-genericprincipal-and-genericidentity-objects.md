@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581781"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a><span data-ttu-id="6c2c9-102">Porady: tworzenie obiektów GenericPrincipal i GenericIdentity</span><span class="sxs-lookup"><span data-stu-id="6c2c9-102">How to: Create GenericPrincipal and GenericIdentity Objects</span></span>
 <span data-ttu-id="6c2c9-103">Można użyć <xref:System.Security.Principal.GenericIdentity> klasy w połączeniu z <xref:System.Security.Principal.GenericPrincipal> klasę, aby utworzyć schemat autoryzacji, czy istnieje niezależnie od domeny systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="6c2c9-103">You can use the <xref:System.Security.Principal.GenericIdentity> class in conjunction with the <xref:System.Security.Principal.GenericPrincipal> class to create an authorization scheme that exists independent of a Windows domain.</span></span>  

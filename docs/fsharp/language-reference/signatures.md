@@ -7,6 +7,7 @@ ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/12/2018
+ms.locfileid: "34149026"
 ---
 # <a name="signatures"></a><span data-ttu-id="6fe09-103">Podpisy</span><span class="sxs-lookup"><span data-stu-id="6fe09-103">Signatures</span></span>
 

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172441"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a><span data-ttu-id="49cde-102">Klasy częściowe i metody (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="49cde-102">Partial Classes and Methods (C# Programming Guide)</span></span>
 <span data-ttu-id="49cde-103">Umożliwia dzielenie definicji [klasy](../../../csharp/language-reference/keywords/class.md) lub [struktury](../../../csharp/language-reference/keywords/struct.md), [interfejsu](../../../csharp/language-reference/keywords/interface.md) lub metody za pośrednictwem dwóch lub więcej plików źródłowych.</span><span class="sxs-lookup"><span data-stu-id="49cde-103">It is possible to split the definition of a [class](../../../csharp/language-reference/keywords/class.md) or a [struct](../../../csharp/language-reference/keywords/struct.md), an [interface](../../../csharp/language-reference/keywords/interface.md) or a method over two or more source files.</span></span> <span data-ttu-id="49cde-104">Każdy plik źródłowy zawiera sekcja definicji typu lub metody, a wszystkie elementy są łączone podczas kompilowania aplikacji.</span><span class="sxs-lookup"><span data-stu-id="49cde-104">Each source file contains a section of the type or method definition, and all parts are combined when the application is compiled.</span></span>  

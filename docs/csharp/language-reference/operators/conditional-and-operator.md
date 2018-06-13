@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171918"
 ---
 # <a name="ampamp-operator-c-reference"></a><span data-ttu-id="4346b-102">&amp;&amp; Operator (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="4346b-102">&amp;&amp; Operator (C# Reference)</span></span>
 <span data-ttu-id="4346b-103">Operator warunkowy i - AND, (`&&`) wykonuje koniunkcję jego argumentów typu `bool`. W razie potrzeby ocenia wartośc tylko drugiego z argumentów.</span><span class="sxs-lookup"><span data-stu-id="4346b-103">The conditional-AND operator (`&&`) performs a logical-AND of its `bool` operands, but only evaluates its second operand if necessary.</span></span>  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462192"
 ---
 # <a name="qualifiersetput-function"></a><span data-ttu-id="cac08-103">Funkcja QualifierSet_Put</span><span class="sxs-lookup"><span data-stu-id="cac08-103">QualifierSet_Put function</span></span>
 <span data-ttu-id="cac08-104">Zapisuje kwalifikator o nazwie i wartości.</span><span class="sxs-lookup"><span data-stu-id="cac08-104">Writes the named qualifier and value.</span></span> <span data-ttu-id="cac08-105">Nowy kwalifikator spowoduje zastąpienie poprzedniej wartości o takiej samej nazwie.</span><span class="sxs-lookup"><span data-stu-id="cac08-105">The new qualifier overwrites the previous value of the same name.</span></span> <span data-ttu-id="cac08-106">Jeśli kwalifikator nie istnieje, jest tworzony.</span><span class="sxs-lookup"><span data-stu-id="cac08-106">If the qualifier does not exist, it is created.</span></span> 

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805892"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Wybieranie platformy wymiany komunikatów
 Pierwszą czynnością przy tworzeniu niestandardowych transportu jest podjęcie decyzji, które *komunikatu wzorce exchange* (lub MEPs) są wymagane dla kanału tworzysz. W tym temacie opisano dostępne opcje oraz omówiono różne wymagania. Jest to pierwsze zadanie na liście zadań rozwoju kanału opisane w [kanały rozwijających się](../../../../docs/framework/wcf/extending/developing-channels.md).  

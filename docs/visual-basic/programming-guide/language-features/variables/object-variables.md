@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649116"
 ---
 # <a name="object-variables-in-visual-basic"></a>Zmienne obiektów w Visual Basic
 Oprócz wartości są przechowywane bezpośrednio, zmienna może odwoływać się do obiektu. Obiekt można przypisać do zmiennej przyczyn przypisać wartości do zmiennej:  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653458"
 ---
 # <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>Porady: łączenie danych w LINQ za pomocą sprzężeń (Visual Basic)
 Visual Basic zapewnia `Join` i `Group Join` zapytania klauzule umożliwiają łączenie zawartości wielu kolekcji na podstawie wartości typowych między kolekcjami. Te wartości są określane jako *klucza* wartości. Rozpozna znasz koncepcji relacyjnej bazy danych dla deweloperów `Join` klauzuli jako INNER JOIN i `Group Join` klauzuli jako efektywnie LEFT OUTER JOIN.  

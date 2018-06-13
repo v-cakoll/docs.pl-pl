@@ -14,6 +14,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809391"
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>Instrukcje: Tworzenie niestandardowego wystawcy uwierzytelniania tokenu zabezpieczeń
 W tym temacie pokazano, jak utworzyć wystawcy uwierzytelnienia tokenu zabezpieczeń niestandardowych oraz jak zintegrować ją z Menedżer tokenów zabezpieczających niestandardowych. Wystawcę uwierzytelnienia tokenów zabezpieczających sprawdza poprawność zawartości tokenu zabezpieczającego dostarczane z komunikatu przychodzącego. Jeśli weryfikacja zakończy się powodzeniem, serwer uwierzytelniający zwraca kolekcję <xref:System.IdentityModel.Policy.IAuthorizationPolicy> obiektów, po obliczeniu zwraca zestaw oświadczeń.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808611"
 ---
 # <a name="durable-instance-context"></a>Kontekst niezawodnej instancji
 W tym przykładzie pokazano, jak dostosować włączyć kontekst niezawodnej instancji środowiska uruchomieniowego systemu Windows Communication Foundation (WCF). SQL Server 2005 używa jako magazynu zapasowego, jego (SQL Server 2005 Express w tym przypadku). Jednak umożliwia także sposób uzyskać dostępu do magazynu niestandardowych mechanizmów.  

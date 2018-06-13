@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809865"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation funkcji charakterystykę
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] Dodaje liczbę funkcji do systemu Windows Workflow Foundation. Ten dokument opisano kilka nowych funkcji i zwraca szczegółowe informacje o scenariuszach, w których mogą być przydatne.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649610"
 ---
 # <a name="value-comparisons-visual-basic"></a>Porównania wartości (Visual Basic)
 Operatory porównania może służyć do konstruowania wyrażeń, które porównanie wartości numerycznych zmiennych. Zwraca tych wyrażeń `Boolean` wartość oparta na czy wynik porównania ma wartość PRAWDA lub FAŁSZ. Przykłady takich wyrażeń.  

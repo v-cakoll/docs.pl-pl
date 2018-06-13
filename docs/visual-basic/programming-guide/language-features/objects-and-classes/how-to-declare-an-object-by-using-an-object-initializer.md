@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649168"
 ---
 # <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>Porady: deklarowanie obiektu za pomocą inicjatora obiektów (Visual Basic)
 Inicjatory obiektów umożliwiają deklarowanie i tworzy wystąpienie klasy w jednej instrukcji. Ponadto można zainicjować jednego lub więcej elementów członkowskich wystąpienia w tym samym czasie, bez wywoływania sparametryzowanym konstruktorze.  

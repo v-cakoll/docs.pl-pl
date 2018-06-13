@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807664"
 ---
 # <a name="trusted-facade-service"></a>Zaufana usługa fasady
 W tym przykładzie scenariuszu pokazano, jak przepływ informacji o tożsamości obiektu wywołującego z jedną usługę do drugiego za pomocą usługi Windows Communication Foundation (WCF) infrastruktura zabezpieczeń.  

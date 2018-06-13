@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803874"
 ---
 # <a name="security-in-wcf"></a>Zabezpieczenia w programie WCF
 Ta sekcja zawiera przykłady dotyczące zabezpieczeń systemu Windows Communication Foundation (WCF).  

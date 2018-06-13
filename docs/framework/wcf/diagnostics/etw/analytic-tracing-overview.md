@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803349"
 ---
 # <a name="analytic-tracing-overview"></a>Omówienie śledzenia analitycznego
 Śledzenie analityczne w [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] jest wysoka wydajność i niski poziom szczegółowości śledzenia skonfigurowaną na górze zdarzenia śledzenia dla systemu Windows (ETW). ETW. działa na poziomie jądra można znacznie zmniejszyć koszty operacji śledzenia. Go efektywnego buforuje zdarzenia trybu jądra i użytkownika i umożliwia dynamiczne Włączanie rejestrowania bez konieczności ponownego uruchomienia usługi. Dane śledzenia są dostępne w dziennikach zdarzeń po nim ma zostały wyemitowane i odebranych.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807528"
 ---
 # <a name="load-balancing"></a>Równoważenie obciążenia
 Jest jednym ze sposobów zwiększyć pojemność aplikacji Windows Communication Foundation (WCF) można skalować je przez wdrożenie ich do farmy serwerów z równoważeniem obciążenia. Usługi WCF aplikacje mogą być równoważone za pomocą standardowego obciążenia równoważenia technik, w tym usługi równoważenia obciążenia oprogramowania, takie jak Windows Równoważenie obciążenia sieciowego, a także równoważenie urządzenia obciążenia oparte na sprzęcie.  

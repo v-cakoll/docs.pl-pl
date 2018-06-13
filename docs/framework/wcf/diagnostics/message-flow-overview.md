@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809797"
 ---
 # <a name="message-flow-overview"></a>Przegląd przepływu komunikatu
 W systemie rozproszonej zawierający połączonych usług jest niezbędne do określenia przyczynowy relacje między usługami. Ważne jest, aby poznać różne składniki, które były częścią przepływu żądania do obsługi krytycznych scenariuszy, takich jak kondycja monitorowanie, rozwiązywanie problemów i głównego przyczynę problemu. Aby włączyć korelacja śladów różnych usług w .NET Framework 4 dodano obsługę następujących funkcji:  

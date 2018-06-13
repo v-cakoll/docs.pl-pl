@@ -2,11 +2,12 @@
 title: Obsługa wyjątków i błędów
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: a7fb7b5dd5755b9d534d9a96af3db598a44b42b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 494a0665f5bad2c7da3998cf77ced79314ca2f36
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809563"
 ---
 # <a name="handling-exceptions-and-faults"></a>Obsługa wyjątków i błędów
 Wyjątki są używane do komunikacji błędy lokalnie w obrębie implementacji klienta lub usługi. Błędy, z drugiej strony, są używane do komunikacji błędy w granicach usługi, takie jak z serwera do klienta lub na odwrót. Oprócz błędów kanały transportu często używają mechanizmów specyficznych dla transportu do komunikowania się błędy na poziomie transportu. Na przykład transportu HTTP używa kodów stanu, takie jak 404 do komunikowania się nieistniejącego punktu końcowego adresu URL (Brak żaden punkt końcowy do odesłania błędów). Ten dokument zawiera trzy sekcje, które zawierają wskazówki autorom niestandardowym kanale. Pierwsza sekcja zawiera wskazówki dotyczące czasu i sposób definiowania i zgłaszanie wyjątków. Druga sekcja zawiera wskazówki dotyczące generowania i korzystanie z błędów. Trzeci sekcji opisano sposób Podaj informacje o śledzeniu, aby ułatwić rozwiązywanie problemów uruchamianie aplikacji użytkownika niestandardowego kanału.  
@@ -15,7 +16,7 @@ Wyjątki są używane do komunikacji błędy lokalnie w obrębie implementacji k
  Istnieją dwie czynności należy wziąć pod uwagę podczas generowania wyjątku: najpierw musi być typu, który pozwala użytkownikom na zapis prawidłowego kodu, który można reagować odpowiednio wyjątek. Po drugie musi on zawierać informacje wystarczające do użytkownika, aby zrozumieć, co poszło źle, wpływ awarii i jak to naprawić. W poniższych sekcjach znajdują się wskazówki dotyczące typów wyjątków i wiadomości dla kanałów Windows Communication Foundation (WCF). Istnieje również ogólne wskazówki dotyczące wyjątków w .NET w wytycznych projektowych wyjątki dokumentu.  
   
 ### <a name="exception-types"></a>Typy wyjątków  
- Wszystkie wyjątki zgłaszane przez kanały musi być równa albo <xref:System.TimeoutException?displayProperty=nameWithType>, <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>, lub typ pochodzący od <xref:System.ServiceModel.CommunicationException>. (Wyjątki, takie jak <xref:System.ObjectDisposedException> może również zostać wygenerowany, ale tylko do wskazują, że kod wywołujący ma niewłaściwego użycia kanału. Jeśli kanał jest prawidłowo używana, jego musi tylko zgłosić danego wyjątki.) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zapewnia siedmiu typów wyjątków, które pochodzą z <xref:System.ServiceModel.CommunicationException> i mają być używane przez kanały. Istnieją inne <xref:System.ServiceModel.CommunicationException>-pochodnych wyjątki, które są przeznaczone do użytku przez inne części systemu. Te typy wyjątek to:  
+ Wszystkie wyjątki zgłaszane przez kanały musi być równa albo <xref:System.TimeoutException?displayProperty=nameWithType>, <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>, lub typ pochodzący od <xref:System.ServiceModel.CommunicationException>. (Wyjątki, takie jak <xref:System.ObjectDisposedException> może również zostać wygenerowany, ale tylko do wskazują, że kod wywołujący ma niewłaściwego użycia kanału. Jeśli kanał jest prawidłowo używana, jego musi tylko zgłosić danego wyjątki.) Usługi WCF zawiera siedem typów wyjątków, które pochodzą z <xref:System.ServiceModel.CommunicationException> i mają być używane przez kanały. Istnieją inne <xref:System.ServiceModel.CommunicationException>-pochodnych wyjątki, które są przeznaczone do użytku przez inne części systemu. Te typy wyjątek to:  
   
 |Typ wyjątku|Znaczenie|Wyjątek wewnętrzny zawartości|Strategia odzyskiwania|  
 |--------------------|-------------|-----------------------------|-----------------------|  
@@ -131,7 +132,7 @@ public class FaultConverter
 }  
 ```  
   
- Każdy kanału, który generuje błędy niestandardowe musi implementować `FaultConverter` i zwracać ją w wywołaniu `GetProperty<FaultConverter>`. Niestandardowa `OnTryCreateFaultMessage` implementacji musi przekonwertuj wyjątek błąd lub delegowania w wewnętrznym kanale `FaultConverter`. Jeśli kanał jest transport musi przekonwertować wyjątek lub przekazać do kodera `FaultConverter` lub wartość domyślną `FaultConverter` w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] . Wartość domyślna `FaultConverter` konwertuje błędy komunikatów "fault" określony przez WS-Addressing i protokołu SOAP. Oto przykład `OnTryCreateFaultMessage` implementacji.  
+ Każdy kanału, który generuje błędy niestandardowe musi implementować `FaultConverter` i zwracać ją w wywołaniu `GetProperty<FaultConverter>`. Niestandardowa `OnTryCreateFaultMessage` implementacji musi przekonwertuj wyjątek błąd lub delegowania w wewnętrznym kanale `FaultConverter`. Jeśli kanał jest transport musi przekonwertować wyjątek lub przekazać do kodera `FaultConverter` lub wartość domyślną `FaultConverter` podany w programie WCF. Wartość domyślna `FaultConverter` konwertuje błędy komunikatów "fault" określony przez WS-Addressing i protokołu SOAP. Oto przykład `OnTryCreateFaultMessage` implementacji.  
   
 ```  
 public override bool OnTryCreateFaultMessage(Exception exception,   
@@ -186,7 +187,7 @@ public override bool OnTryCreateFaultMessage(Exception exception,
   
 3.  Błędy, które są kierowane na warstwę stosu, na przykład błędów, takich jak błędy numer sekwencji WS-RM.  
   
- Kategoria 1. Błędy są zwykle WS-Addressing i błędach SOAP. Podstawowym `FaultConverter` klasy przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] błędy konwertuje komunikatów "fault" określony przez WS-Addressing i SOAP dzięki czemu nie trzeba obsłużyć konwersji tych wyjątków samodzielnie.  
+ Kategoria 1. Błędy są zwykle WS-Addressing i błędach SOAP. Podstawowym `FaultConverter` klasy dostarczane przez usługę WCF błędy konwertuje komunikatów "fault" określony przez WS-Addressing i SOAP dzięki czemu nie trzeba obsłużyć konwersji tych wyjątków samodzielnie.  
   
  Kategoria 2. Błędów wtedy, gdy warstwy dodaje właściwość do komunikat, który nie zużywa całkowicie komunikat informacji dotyczących tej warstwy. Błędy mogą być wykrywane później, gdy właściwość wiadomości przetworzyć komunikatu dalszych informacji o prosi o wyższej warstwie. Takie kanałów powinien implementować `GetProperty` określony wcześniej, aby włączyć wyższej warstwie do odesłania poprawne błędów. Na przykład jest TransactionMessageProperty. Ta właściwość jest dodany komunikat bez pełni sprawdzanie poprawności wszystkich danych w nagłówku (zrobić, może obejmować kontaktowania się z koordynatorem transakcji rozproszonych (DTC).  
   
@@ -285,7 +286,7 @@ public override bool OnTryCreateException(
  Warunki określonych błędów, które mają scenariuszy odzyskiwania distinct, rozważ zdefiniowanie klasy pochodnej z `ProtocolException`.  
   
 ### <a name="mustunderstand-processing"></a>Atrybut MustUnderstand przetwarzania  
- SOAP definiuje ogólne usterki do sygnalizacji wymagany nagłówek nie został zrozumiany przez odbiorcę. Ten błąd jest nazywany `mustUnderstand` błędów. W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], nigdy nie Generuj kanałów niestandardowych `mustUnderstand` błędów. Zamiast tego [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Dyspozytorze, który znajduje się w górnej części [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] stosu komunikacji, sprawdza, czy wszystkie nagłówki, które zostały oznaczone jako MustUndestand = true zostały zrozumiane przez stos podstawowej. Jeśli dowolne są niezrozumiałe, `mustUnderstand` błąd jest zgłaszany w tym momencie. (Użytkownik może wyłączyć to `mustUnderstand` przetwarzania i mają otrzymywać wszystkie nagłówki komunikatów aplikacji. In that Case aplikacji jest odpowiedzialny za wykonywanie `mustUnderstand` przetwarzania.) Wygenerowany błąd zawiera nagłówek NotUnderstood, zawierającą nazwy wszystkich nagłówków z MustUnderstand = true, które są niezrozumiałe.  
+ SOAP definiuje ogólne usterki do sygnalizacji wymagany nagłówek nie został zrozumiany przez odbiorcę. Ten błąd jest nazywany `mustUnderstand` błędów. W programie WCF, nigdy nie Generuj kanałów niestandardowych `mustUnderstand` błędów. Zamiast tego dyspozytora WCF, który znajduje się w górnej części stosu komunikacji usługi WCF, sprawdza, czy wszystkie nagłówki, które zostały oznaczone jako MustUndestand = true zostały zrozumiane przez stos podstawowej. Jeśli dowolne są niezrozumiałe, `mustUnderstand` błąd jest zgłaszany w tym momencie. (Użytkownik może wyłączyć to `mustUnderstand` przetwarzania i mają otrzymywać wszystkie nagłówki komunikatów aplikacji. In that Case aplikacji jest odpowiedzialny za wykonywanie `mustUnderstand` przetwarzania.) Wygenerowany błąd zawiera nagłówek NotUnderstood, zawierającą nazwy wszystkich nagłówków z MustUnderstand = true, które są niezrozumiałe.  
   
  Jeśli kanał protokołu wysyła niestandardowy nagłówek o MustUnderstand = true i odbiera `mustUnderstand` usterka, go musi ustalić czy jest nagłówka ona wysłana z powodu tego błędu. Istnieją dwa elementy członkowskie na `MessageFault` klasy, które są przydatne w przypadku to:  
   
@@ -310,14 +311,14 @@ public class MessageFault
   
 -   <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>, który jest źródłem informacji śledzenia do zapisania, <xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>, która jest abstrakcyjna klasa podstawowa dla konkretnych obiektów nasłuchujących odbierać informacje, które mają być śledzone z <xref:System.Diagnostics.TraceSource> i wyjścia go do lokalizacji docelowej, specyficzne dla odbiornika. Na przykład <xref:System.Diagnostics.XmlWriterTraceListener> dane wyjściowe śledzenia informacji do pliku XML. Na koniec <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>, który umożliwia użytkownikowi aplikacji kontrolować poziom szczegółowości śledzenia i zwykle jest określona w konfiguracji.  
   
--   Oprócz podstawowych składników, możesz użyć [narzędzia podglądu śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) umożliwiają wyświetlenie i wyszukiwania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] śladów. Zaprojektowany specjalnie z myślą pliki śledzenia wygenerowany przez narzędzie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] i zapisany przy użyciu <xref:System.Diagnostics.XmlWriterTraceListener>. Na poniższej ilustracji przedstawiono różne składniki zaangażowane w śledzenia.  
+-   Oprócz podstawowych składników, możesz użyć [narzędzia podglądu śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) wyszukiwania WCF i wyświetlić śladów. Zaprojektowany specjalnie z myślą plików śledzenia, generowane przez usługę WCF i zapisany przy użyciu narzędzia <xref:System.Diagnostics.XmlWriterTraceListener>. Na poniższej ilustracji przedstawiono różne składniki zaangażowane w śledzenia.  
   
  ![Obsługa wyjątków i błędów](../../../../docs/framework/wcf/extending/media/wcfc-tracinginchannelsc.gif "wcfc_TracingInChannelsc")  
   
 ### <a name="tracing-from-a-custom-channel"></a>Śledzenie za pomocą kanału niestandardowe  
  Wiadomości śledzenia ułatwiających diagnozowanie problemów, gdy nie jest możliwe dołączanie debugera do uruchomionej aplikacji należy zapisać jego kanałów niestandardowych. Ten proces obejmuje dwa zadania wysokiego poziomu: Tworzenie wystąpień <xref:System.Diagnostics.TraceSource> i wywołanie jego metody można zapisywać dane śledzenia.  
   
- Podczas tworzenia wystąpienia <xref:System.Diagnostics.TraceSource>, należy określić ciąg staje się nazwa tego źródła. Ta nazwa jest używana do konfigurowania (set Włącz/Wyłącz śledzenie poziom) źródła śledzenia. Jest także wyświetlany w wyniku sam śledzenia. Kanałów niestandardowych należy używać unikatową nazwę w celu czytników zrozumieć, z której pochodzi informacji o śledzeniu danych wyjściowych śledzenia. Standardową praktyką jest użycie nazwy zestawu, który zapisuje informacje jak nazwa źródła śledzenia. Na przykład [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] używa System.ServiceModel jako źródła śledzenia informacji z zestawu System.ServiceModel.  
+ Podczas tworzenia wystąpienia <xref:System.Diagnostics.TraceSource>, należy określić ciąg staje się nazwa tego źródła. Ta nazwa jest używana do konfigurowania (set Włącz/Wyłącz śledzenie poziom) źródła śledzenia. Jest także wyświetlany w wyniku sam śledzenia. Kanałów niestandardowych należy używać unikatową nazwę w celu czytników zrozumieć, z której pochodzi informacji o śledzeniu danych wyjściowych śledzenia. Standardową praktyką jest użycie nazwy zestawu, który zapisuje informacje jak nazwa źródła śledzenia. Na przykład WCF używa System.ServiceModel jako źródła śledzenia informacji z zestawu System.ServiceModel.  
   
  Po utworzeniu źródła śledzenia, należy wywołać jej <xref:System.Diagnostics.TraceSource.TraceData%2A>, <xref:System.Diagnostics.TraceSource.TraceEvent%2A>, lub <xref:System.Diagnostics.TraceSource.TraceInformation%2A> metod na zapisywanie wpisów śledzenia do obiektów nasłuchujących śledzenia. Dla każdego wpisu śledzenia pisania należy sklasyfikować typ zdarzenia jako jeden z typów zdarzeń zdefiniowanych w <xref:System.Diagnostics.TraceEventType>. Ta klasyfikacja i ustawienie poziomu śledzenia w konfiguracji należy ustalić, czy wpis śledzenia jest dane wyjściowe do odbiornika. Na przykład ustawienie poziomu śledzenia w konfiguracji, aby `Warning` umożliwia `Warning`, `Error` i `Critical` śledzenia wpisy są zapisywane, ale bloki wpisy informacji i pełne. Poniżej przedstawiono przykład tworzenia wystąpienia źródła śledzenia i zapisywania wpisu na poziomie informacji:  
   
@@ -402,4 +403,4 @@ udpsource.TraceInformation("UdpInputChannel received a message");
 </E2ETraceEvent>  
 ```  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Podglądu śledzenia rozumie schemat `TraceRecord` element przedstawione wcześniej i wyodrębnia dane z jego elementów podrzędnych i wyświetla go w formacie tabelarycznym. Kanał należy używać tego schematu podczas śledzenia danych strukturalnych aplikacji aby ułatwić użytkownikom Svctraceviewer.exe odczytać danych.
+ Przeglądarka śledzenia WCF rozumie schemat `TraceRecord` element przedstawione wcześniej i wyodrębnia dane z jego elementów podrzędnych i wyświetla go w formacie tabelarycznym. Kanał należy używać tego schematu podczas śledzenia danych strukturalnych aplikacji aby ułatwić użytkownikom Svctraceviewer.exe odczytać danych.

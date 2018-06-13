@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655879"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Wskazówki: Pisanie zapytań w Visual Basic
 W tym przewodniku przedstawiono sposób użycia funkcje języka Visual Basic można zapisać [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] wyrażenia zapytań. Instruktaż pokazuje, jak tworzyć zapytania na liście obiektów dla użytkowników domowych, jak uruchamiać zapytania i sposobu ich modyfikacji. Zapytania zastosować kilka funkcji w tym inicjatory obiektów, wnioskowanie o typie lokalnym i typy anonimowe.  

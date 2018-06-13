@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806211"
 ---
 # <a name="extending-hosting-using-servicehostfactory"></a>Rozszerzanie hostingu za pomocą elementu ServiceHostFactory
 Standardowe <xref:System.ServiceModel.ServiceHost> interfejsu API do obsługi usług w systemie Windows Communication Foundation (WCF) jest punktem rozszerzalność architektury WCF. Użytkownicy mogą pochodzić własnych klas hosta z <xref:System.ServiceModel.ServiceHost>, zazwyczaj w celu zastąpienia <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening> do używania <xref:System.ServiceModel.Description.ServiceDescription> do dodawania domyślnych punktów końcowych imperatively lub modyfikowania zachowania, przed otwarciem usługi.  

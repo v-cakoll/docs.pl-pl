@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655639"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Inicjatory obiektów: typy nazwane i anonimowe (Visual Basic)
 Inicjatory obiektów umożliwiają określenie właściwości dla obiekt złożony przy użyciu jedno wyrażenie. Mogą one służyć do tworzenia wystąpień typów o nazwie i typy anonimowe.  

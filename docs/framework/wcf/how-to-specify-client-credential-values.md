@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806652"
 ---
 # <a name="how-to-specify-client-credential-values"></a>Instrukcje: Określanie wartości poświadczeń klienta
 Za pomocą usługi Windows Communication Foundation (WCF), usługa może określić, jak klient jest uwierzytelniony do usługi. Na przykład usługi można określić uwierzytelnienia klienta przy użyciu certyfikatu.  

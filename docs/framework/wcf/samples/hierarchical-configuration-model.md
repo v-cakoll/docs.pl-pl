@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806633"
 ---
 # <a name="hierarchical-configuration-model"></a>Hierarchiczny model konfiguracji
 W tym przykładzie pokazano, jak wdrożyć hierarchia pliki konfiguracji dla usług. Pokazuje też, jak powiązania zachowania usługi i zachowania punktu końcowego są dziedziczone z wyższego poziomu w hierarchii.  

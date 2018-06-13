@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655587"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Operatory arytmetyczne w Visual Basic
 Operatory arytmetyczne służą do wykonywania wielu znanych operacje arytmetyczne, obejmujących obliczanie wartości liczbowych reprezentowany przez literały, zmienne, inne wyrażenia, funkcji i wywołaniach właściwości i stałe. Również są sklasyfikowane z operatorów arytmetycznych są operatory przesunięcia bitowego, które działają na poziomie poszczególnych bitów operandy i przesunięcia ich wzorców bit do lewej lub prawej.  

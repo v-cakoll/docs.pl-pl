@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808861"
 ---
 # <a name="basic-http-service"></a>Podstawowa usługa HTTP
 W tym przykładzie pokazano, jak implementacji usługi oparte na protokole HTTP, opartego na protokole RPC - popularly określonych jako usługa "POX" (zwykły starego XML) — za pomocą modelu programowania REST Windows Communication Foundation (WCF). Ten przykład zawiera dwa składniki: samodzielnie hostowana usługa HTTP usług WCF (Service.cs) i aplikacji konsoli (Program.cs), która tworzy usługi i wykonywania wywołań do niego.  

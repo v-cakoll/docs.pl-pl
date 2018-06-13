@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806061"
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Konfigurowanie powiązań dla usług WCF (Windows Communication Foundation)
 Podczas tworzenia aplikacji, ma często mają być odroczone decyzje administratora po wdrożeniu aplikacji. Na przykład często istnieje żaden sposób uzyskać z wyprzedzeniem, co adres usługi lub identyfikator URI (Uniform Resource), będzie. Zamiast kodować adres, zaleca się pozwalają administratorowi zrobić po utworzeniu usługi. Tego rodzaju elastyczności odbywa się za pośrednictwem konfiguracji.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809319"
 ---
 # <a name="tracing"></a>Śledzenie
 Windows Communication Foundation (WCF) zapewnia instrumentacji aplikacji i danych diagnostycznych błędów monitorowania i analizy. Śledzenie można użyć zamiast debugera zrozumienie zachowania aplikacji lub przyczynę błędów. Między składnikami, aby zapewnić środowisko end-to-end można również dostosować błędów i przetwarzania.  

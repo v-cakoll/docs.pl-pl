@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809654"
 ---
 # <a name="service-channel-listeners-and-channels"></a>Usługa: Odbiorniki kanałów i kanały
 Istnieją trzy kategorie obiektów kanału: kanały, odbiorniki kanałów i fabryk kanałów. Kanały to interfejs pomiędzy aplikacją i stosu kanału. Odbiorniki kanałów są zobowiązani do tworzenia kanałów po stronie odbioru (lub nasłuchiwania), zwykle w odpowiedzi na połączenie lub nowy komunikat przychodzący. Fabryk kanałów, które są odpowiedzialne za tworzenie kanałów po stronie wysyłającej można zainicjować komunikacji z punktem końcowym.  

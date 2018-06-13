@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804518"
 ---
 # <a name="syndication"></a>Syndykacja
 Ta sekcja zawiera przykłady ilustrujące zespolonego Windows Communication Foundation (WCF).  

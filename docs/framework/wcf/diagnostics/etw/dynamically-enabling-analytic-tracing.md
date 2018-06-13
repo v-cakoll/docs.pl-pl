@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803492"
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>Dynamiczne włączanie śledzenia danych analitycznych
 Za pomocą narzędzi, które są dostarczane z systemem operacyjnym Windows, można włączyć lub wyłączyć śledzenie dynamicznie za pomocą zdarzenia śledzenia dla systemu Windows (ETW). Dla wszystkich [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] usług Windows Communication Foundation (WCF), może być śledzenie analityczne, włączonych i wyłączonych dynamicznie bez modyfikowania pliku Web.config aplikacji i ponowne uruchomienie usługi. Dzięki temu aplikacja, która emituje zdarzeń śledzenia, które chcesz zachować nienaruszonej.  

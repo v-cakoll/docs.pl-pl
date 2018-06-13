@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806786"
 ---
 # <a name="using-the-wcf-development-tools"></a>Używanie narzędzi deweloperskich programu WCF
 W tej sekcji opisano narzędzia programistyczne programu Visual Studio, które mogą pomóc w tworzeniu WCFservice Twojego.  

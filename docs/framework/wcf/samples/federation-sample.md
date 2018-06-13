@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806851"
 ---
 # <a name="federation-sample"></a>Federacja — przykład
 W tym przykładzie przedstawiono zabezpieczeń.  

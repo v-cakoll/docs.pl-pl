@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656298"
 ---
 # <a name="scope-in-visual-basic"></a>Zakres w Visual Basic
 *Zakres* elementu zadeklarowane to zbiór wszystkich kod, który może odwoływać się do niego bez kwalifikujących się jego nazwę lub udostępnianie przy [Importy — instrukcja (.NET Namespace i Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Element może mieć zakresu w jednej z następujących poziomach:  

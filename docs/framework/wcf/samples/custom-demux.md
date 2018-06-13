@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805567"
 ---
 # <a name="custom-demux"></a>Niestandardowe demultipleksowanie
 W tym przykładzie pokazano, jak nagłówki wiadomości usługi MSMQ mogą być mapowane na operacje innej usługi, aby używające usług Windows Communication Foundation (WCF) <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> nie są ograniczone do przy użyciu jednej operacji usługi, jak pokazano w [ Komunikatów usługi kolejkowania wiadomości do systemu Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) i [Windows Communication Foundation, do usługi kolejkowania komunikatów](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) próbek.  

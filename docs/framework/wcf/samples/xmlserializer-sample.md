@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805021"
 ---
 # <a name="xmlserializer-sample"></a>Klasa XMLSerializer — przykład
 W tym przykładzie pokazano, jak serializacji i deserializacji typy, które są zgodne z <xref:System.Xml.Serialization.XmlSerializer>. Domyślny element formatujący Windows Communication Foundation (WCF) jest <xref:System.Runtime.Serialization.DataContractSerializer> klasy. <xref:System.Xml.Serialization.XmlSerializer> Klasa może być używana w celu serializacji i deserializacji typy kiedy <xref:System.Runtime.Serialization.DataContractSerializer> klasa nie może być używana. To sytuacja często ścisła kontrola nad XML jest wymagany — na przykład, jeśli element danych musi być atrybut XML i nie jest elementem XML. Ponadto <xref:System.Xml.Serialization.XmlSerializer> często automatycznie pobiera wybierany w przypadku tworzenia klientów dla usług WCF nie.  

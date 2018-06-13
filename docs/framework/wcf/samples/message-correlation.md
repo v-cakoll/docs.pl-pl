@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806594"
 ---
 # <a name="message-correlation"></a>Korelacja komunikatów
 W przykładzie pokazano, jak aplikacja usługi kolejkowania komunikatów (MSMQ) może wysłać wiadomości MSMQ do usługi Windows Communication Foundation (WCF) oraz jak komunikaty może zostać skorelowane między nadawcą i odbiorcą aplikacji w przypadku żądań i odpowiedzi. W przykładzie użyto powiązania msmqIntegrationBinding. Usługa jest w tym przypadku aplikacji konsoli siebie pozwala sprawdzić, czy usługa, która odbiera wiadomości w kolejce. K  

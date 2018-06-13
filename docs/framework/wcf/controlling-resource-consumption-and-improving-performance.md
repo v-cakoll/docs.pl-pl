@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805528"
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Kontrolowanie zużycia zasobów i zwiększanie wydajności
 W tym temacie opisano różne właściwości w różnych obszarach o architekturze Windows Communication Foundation (WCF), które współpracują w celu sterowania zużycia zasobów i wpływają na metryki wydajności.  

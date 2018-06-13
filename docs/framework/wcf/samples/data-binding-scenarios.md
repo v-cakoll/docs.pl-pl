@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803838"
 ---
 # <a name="data-binding-scenarios"></a>Scenariusze powiązania danych
 Ta sekcja zawiera przykłady ilustrujące scenariusze wiązania danych systemu Windows Communication Foundation (WCF).  

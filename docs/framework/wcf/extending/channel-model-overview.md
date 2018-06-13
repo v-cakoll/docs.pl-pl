@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804641"
 ---
 # <a name="channel-model-overview"></a>Przegląd modelu kanału
 Stos kanał Windows Communication Foundation (WCF) jest stos warstwy komunikacji z jednego lub więcej kanałów, które przetwarzania komunikatów. W dolnej części stosu jest kanał transportu, który jest odpowiedzialny za dostosowania stosu kanału do transportu źródłowego (na przykład TCP, HTTP, SMTP i inne rodzaje transportu). Kanały zapewniają niskiego poziomu model programowania do wysyłania i odbierania wiadomości. Ten model programowania opiera się na kilka interfejsów i innych typów nazywanych zbiorczo model kanału WCF. W tym temacie omówiono kształtów kanału, konstrukcji odbiornika kanałów podstawowa (w usłudze) i fabryki kanałów (na kliencie).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804966"
 ---
 # <a name="determining-service-operation-duration"></a>Określanie czasu trwania operacji usługi
 Śledzenie analityczne włączenie w aplikacji Windows Communication Foundation (WCF) czas realizacji dla operacji usługi można łatwo ustalić, sprawdzając dziennik zdarzeń.  W tym temacie przedstawiono sposób określania ilości czas do ukończenia operacji usługi.  

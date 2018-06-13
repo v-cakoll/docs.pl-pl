@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804823"
 ---
 # <a name="query-execution"></a>Wykonywanie zapytania
 Po utworzeniu zapytania LINQ przez użytkownika, zostanie przekonwertowane na drzewo poleceń. Drzewo poleceń jest reprezentację kwerendę, która jest zgodna z programu Entity Framework. Drzewo poleceń jest następnie wykonywane względem źródła danych. Podczas wykonywania zapytania wszystkie wyrażenia zapytania (to znaczy, że wszystkie składniki zapytania) są oceniane pod tym tych wyrażeń, które są używane w wyniku materialization.  

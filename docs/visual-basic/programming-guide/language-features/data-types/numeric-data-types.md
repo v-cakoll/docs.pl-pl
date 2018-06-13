@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654206"
 ---
 # <a name="numeric-data-types-visual-basic"></a>Numeric — Typ danych (Visual Basic)
 Visual Basic dostarcza kilku *numeryczne typy danych* do obsługi liczby w różnych reprezentacji. *Całkowite* typy reprezentują tylko liczby całkowite (dodatnie, ujemne i zero), a *nonintegral* typy reprezentujące liczby z liczbą całkowitą i ułamkowych części.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655724"
 ---
 # <a name="statements-in-visual-basic"></a>Instrukcje w Visual Basic
 Instrukcji w języku Visual Basic jest pełną instrukcję. Może zawierać słów kluczowych, operatory, zmienne, stałe i wyrażenia. Każda instrukcja należy do jednej z następujących kategorii:  

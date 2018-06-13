@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807856"
 ---
 # <a name="hosting-services"></a>Usługi hostingowe
 Staje się aktywny, usługa musi być hostowany w środowisku czasu wykonywania, która tworzy go i kontroluje jego kontekstu i okresem istnienia. Usługi Windows Communication Foundation (WCF) zostały zaprojektowane do uruchamiania w dowolnym procesie systemu Windows obsługuje kodu zarządzanego.  

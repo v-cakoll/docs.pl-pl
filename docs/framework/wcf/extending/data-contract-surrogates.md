@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809472"
 ---
 # <a name="data-contract-surrogates"></a>Surogaty kontraktu danych
 Kontrakt danych *Surogat* jest funkcją zaawansowaną oparty na modelu kontraktu danych. Ta funkcja służy do zastosowania w przypadku dostosowania typu i podstawienia w sytuacjach, w którym użytkownicy chcesz zmienić, jak serializacji typu zdeserializowany lub planowane w metadanych. Sytuacje, w którym mogą być używane surogatu jest gdy kontrakt danych nie został określony dla typów, pól i właściwości nie są oznaczone ikoną z <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutu lub użytkownicy mają być dynamicznie utworzyć zmian schematu.  

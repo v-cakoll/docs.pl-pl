@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804047"
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>Eksportowanie niestandardowych metadanych na potrzeby rozszerzenia programu WCF
 W konsoli Windows Communication Foundation (WCF) eksportowania metadanych jest proces opisujące punktów końcowych usługi i projekcji ich reprezentację równoległe, standardowe, której klienci mogą używać, aby zrozumieć sposób korzystania z usługi. Niestandardowych metadanych składa się z elementów XML nie można wyeksportować eksportera metadanych dostarczane przez system. Zazwyczaj zawiera elementy WSDL niestandardowe zachowania użytkownika i elementy powiązania i potwierdzeń zasad o możliwości i wymagania dotyczące powiązania i kontrakty.  

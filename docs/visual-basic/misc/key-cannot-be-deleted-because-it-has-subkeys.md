@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638903"
 ---
 # <a name="key-cannot-be-deleted-because-it-has-subkeys"></a><span data-ttu-id="9fc27-102">Nie można usunąć klucza, ponieważ ma ona podkluczy</span><span class="sxs-lookup"><span data-stu-id="9fc27-102">Key cannot be deleted because it has subkeys</span></span>
 <span data-ttu-id="9fc27-103">Nie można usunąć klucza, ponieważ ma ona podkluczy.</span><span class="sxs-lookup"><span data-stu-id="9fc27-103">The key cannot be deleted because it has subkeys.</span></span>  

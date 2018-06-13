@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636656"
 ---
 # <a name="file-already-exists"></a><span data-ttu-id="a119b-102">Plik już istnieje.</span><span class="sxs-lookup"><span data-stu-id="a119b-102">File already exists</span></span>
 <span data-ttu-id="a119b-103">Ten błąd występuje w wyniku nazewnictwa nowy plik o nazwie istniejącego pliku albo przy użyciu **Zapisz jako** polecenie, aby zapisać aktualnie załadowanego projektu o nazwie, która już istnieje.</span><span class="sxs-lookup"><span data-stu-id="a119b-103">This error occurs as a result of either naming a new file with the name of an existing file or using the **Save As** command to save a currently loaded project with a name that already exists.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809306"
 ---
 # <a name="custom-lifetime"></a><span data-ttu-id="edb6c-102">Niestandardowy okres istnienia</span><span class="sxs-lookup"><span data-stu-id="edb6c-102">Custom Lifetime</span></span>
 <span data-ttu-id="edb6c-103">W tym przykładzie pokazano, jak napisać rozszerzenia programu Windows Communication Foundation (WCF) do świadczenia usług Niestandardowy okres istnienia dla udostępnionego wystąpienia usługi WCF.</span><span class="sxs-lookup"><span data-stu-id="edb6c-103">This sample demonstrates how to write a Windows Communication Foundation (WCF) extension to provide custom lifetime services for shared WCF service instances.</span></span>  

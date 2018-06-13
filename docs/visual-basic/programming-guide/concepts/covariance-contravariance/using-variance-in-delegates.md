@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644137"
 ---
 # <a name="using-variance-in-delegates-visual-basic"></a><span data-ttu-id="131a0-102">Korzystanie z wariancji w Delegatach (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="131a0-102">Using Variance in Delegates (Visual Basic)</span></span>
 <span data-ttu-id="131a0-103">Po przypisaniu metodę z delegatem, *Kowariancja* i *kontrawariancja* zapewniają elastyczność dopasowanie typem obiektu delegowanego przy użyciu podpisu metody.</span><span class="sxs-lookup"><span data-stu-id="131a0-103">When you assign a method to a delegate, *covariance* and *contravariance* provide flexibility for matching a delegate type with a method signature.</span></span> <span data-ttu-id="131a0-104">Kowariancja pozwala metoda ma typ zwracany jest bardziej pochodny niż zdefiniowana w elemencie delegowanym.</span><span class="sxs-lookup"><span data-stu-id="131a0-104">Covariance permits a method to have return type that is more derived than that defined in the delegate.</span></span> <span data-ttu-id="131a0-105">Kontrawariancja zezwala na metodę, która zawiera typy parametrów, które są mniej pochodnego od tych w typie delegata.</span><span class="sxs-lookup"><span data-stu-id="131a0-105">Contravariance permits a method that has parameter types that are less derived than those in the delegate type.</span></span>  

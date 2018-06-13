@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643505"
 ---
 # <a name="finding-text-in-word-documents-visual-basic"></a><span data-ttu-id="74266-102">Wyszukiwanie tekstu w dokumentach programu Word (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="74266-102">Finding Text in Word Documents (Visual Basic)</span></span>
 <span data-ttu-id="74266-103">W tym temacie rozszerza poprzednich zapytań do zrobienia czegoś przydatne: Znajdź wszystkie wystąpienia ciągu w dokumencie.</span><span class="sxs-lookup"><span data-stu-id="74266-103">This topic extends the previous queries to do something useful: find all occurrences of a string in the document.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808419"
 ---
 # <a name="transport-udp"></a><span data-ttu-id="7004d-102">Transport: UDP</span><span class="sxs-lookup"><span data-stu-id="7004d-102">Transport: UDP</span></span>
 <span data-ttu-id="7004d-103">Przykładowe transportu UDP pokazuje, jak wdrażanie UDP emisji pojedynczej i multiemisji jako niestandardowego transportu Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="7004d-103">The UDP Transport sample demonstrates how to implement UDP unicast and multicast as a custom Windows Communication Foundation (WCF) transport.</span></span> <span data-ttu-id="7004d-104">Przykład opisuje zalecaną procedurą tworzenia niestandardowych transportu w programie WCF, za pomocą struktura kanału i następujące najlepsze rozwiązania w zakresie usługi WCF.</span><span class="sxs-lookup"><span data-stu-id="7004d-104">The sample describes the recommended procedure for creating a custom transport in WCF, by using the channel framework and following WCF best practices.</span></span> <span data-ttu-id="7004d-105">Kroki, aby utworzyć niestandardowe transportu są następujące:</span><span class="sxs-lookup"><span data-stu-id="7004d-105">The steps to create a custom transport are as follows:</span></span>  

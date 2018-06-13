@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647907"
 ---
 # <a name="refactoring-using-an-extension-method-visual-basic"></a><span data-ttu-id="72df5-102">Refaktoryzacja za pomocą metody rozszerzenia (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="72df5-102">Refactoring Using an Extension Method (Visual Basic)</span></span>
 <span data-ttu-id="72df5-103">W tym przykładzie opiera się na poprzednim przykładzie [pobieranie tekstu akapitów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), przez łączenie ciągów za pomocą czystej funkcji, który jest implementowany jako metodę rozszerzenie refaktoryzacji.</span><span class="sxs-lookup"><span data-stu-id="72df5-103">This example builds on the previous example, [Retrieving the Text of the Paragraphs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), by refactoring the concatenation of strings using a pure function that is implemented as an extension method.</span></span>  

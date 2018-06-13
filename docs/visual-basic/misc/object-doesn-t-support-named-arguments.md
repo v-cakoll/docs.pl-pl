@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636744"
 ---
 # <a name="object-doesn39t-support-named-arguments"></a><span data-ttu-id="84d1f-102">Obiekt&#39;t obsługę argumenty nazwane</span><span class="sxs-lookup"><span data-stu-id="84d1f-102">Object doesn&#39;t support named arguments</span></span>
 <span data-ttu-id="84d1f-103">Próbowano uzyskać dostęp do metody, których nie obsługuje obiektu argumentami nazwanymi.</span><span class="sxs-lookup"><span data-stu-id="84d1f-103">You tried to access an object whose methods don't support named arguments.</span></span>  

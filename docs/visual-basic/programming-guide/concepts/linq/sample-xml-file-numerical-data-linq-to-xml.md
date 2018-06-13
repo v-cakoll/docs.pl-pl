@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644683"
 ---
 # <a name="sample-xml-file-numerical-data-linq-to-xml"></a><span data-ttu-id="c75a6-102">Przykładowy plik XML: Dane liczbowe (LINQ do XML)</span><span class="sxs-lookup"><span data-stu-id="c75a6-102">Sample XML File: Numerical Data (LINQ to XML)</span></span>
 <span data-ttu-id="c75a6-103">Następujący plik XML jest używany w różnych przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji.</span><span class="sxs-lookup"><span data-stu-id="c75a6-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="c75a6-104">Ten plik zawiera dane liczbowe, sumowanie, uśrednianie i grupowania.</span><span class="sxs-lookup"><span data-stu-id="c75a6-104">This file contains numerical data for summing, averaging, and grouping.</span></span>  

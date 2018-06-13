@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649766"
 ---
 # <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a><span data-ttu-id="b115f-102">Różnice pomiędzy argumentami modyfikowalnymi i niemodyfikowalnymi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b115f-102">Differences Between Modifiable and Nonmodifiable Arguments (Visual Basic)</span></span>
 <span data-ttu-id="b115f-103">Po wywołaniu procedury, zwykle przekazywania jednego lub więcej argumentów do niej.</span><span class="sxs-lookup"><span data-stu-id="b115f-103">When you call a procedure, you typically pass one or more arguments to it.</span></span> <span data-ttu-id="b115f-104">Każdy argument odnosi się do odpowiedniego elementu programowania.</span><span class="sxs-lookup"><span data-stu-id="b115f-104">Each argument corresponds to an underlying programming element.</span></span> <span data-ttu-id="b115f-105">Zarówno elementy źródłowe, jak i argumentów, same może być modyfikowalnymi i niemodyfikowalnymi.</span><span class="sxs-lookup"><span data-stu-id="b115f-105">Both the underlying elements and the arguments themselves can be either modifiable or nonmodifiable.</span></span>  

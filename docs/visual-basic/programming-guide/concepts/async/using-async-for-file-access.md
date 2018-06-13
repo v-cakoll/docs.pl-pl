@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644228"
 ---
 # <a name="using-async-for-file-access-visual-basic"></a><span data-ttu-id="e515b-102">Użycie Async do uzyskiwania dostępu do plików (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e515b-102">Using Async for File Access (Visual Basic)</span></span>
 <span data-ttu-id="e515b-103">Funkcja Async dostęp do plików.</span><span class="sxs-lookup"><span data-stu-id="e515b-103">You can use the Async feature to access files.</span></span> <span data-ttu-id="e515b-104">Korzystając z funkcji asynchronicznych, należy wywołać do metod asynchronicznych bez przy użyciu wywołania zwrotne i dzielenia kodu wielu metod lub wyrażenia lambda.</span><span class="sxs-lookup"><span data-stu-id="e515b-104">By using the Async feature, you can call into asynchronous methods without using callbacks or splitting your code across multiple methods or lambda expressions.</span></span> <span data-ttu-id="e515b-105">Aby wprowadzić kod synchroniczne asynchroniczne, możesz tylko wywołania metody asynchronicznej zamiast metoda synchroniczna i dodać kilka słów kluczowych w kodzie.</span><span class="sxs-lookup"><span data-stu-id="e515b-105">To make synchronous code asynchronous, you just call an asynchronous method instead of a synchronous method and add a few keywords to the code.</span></span>  

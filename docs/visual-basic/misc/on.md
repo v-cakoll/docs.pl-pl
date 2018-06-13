@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640596"
 ---
 # <a name="on-visual-basic"></a><span data-ttu-id="89e4a-102">On (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="89e4a-102">On (Visual Basic)</span></span>
 <span data-ttu-id="89e4a-103">Wprowadza odpowiedzi na błąd w czasie wykonywania, lub włącza opcję kompilatora.</span><span class="sxs-lookup"><span data-stu-id="89e4a-103">Introduces a response to a run-time error or turns a compiler option on.</span></span>  

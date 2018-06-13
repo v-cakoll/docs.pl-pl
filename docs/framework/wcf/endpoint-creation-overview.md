@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809173"
 ---
 # <a name="endpoint-creation-overview"></a><span data-ttu-id="80bfa-102">Przegląd tworzenia punktów końcowych</span><span class="sxs-lookup"><span data-stu-id="80bfa-102">Endpoint Creation Overview</span></span>
 <span data-ttu-id="80bfa-103">Cała komunikacja z usługą Windows Communication Foundation (WCF) odbywa się przez *punkty końcowe* usługi.</span><span class="sxs-lookup"><span data-stu-id="80bfa-103">All communication with a Windows Communication Foundation (WCF) service occurs through the *endpoints* of the service.</span></span> <span data-ttu-id="80bfa-104">Punkty końcowe zapewnić klientom dostęp do usługi WCF oferuje funkcje.</span><span class="sxs-lookup"><span data-stu-id="80bfa-104">Endpoints provide the clients access to the functionality that a WCF service offers.</span></span> <span data-ttu-id="80bfa-105">W tej sekcji opisano strukturę punktu końcowego i opisano sposób definiowania punkt końcowy w konfiguracji i w kodzie.</span><span class="sxs-lookup"><span data-stu-id="80bfa-105">This section describes the structure of an endpoint and outlines how to define an endpoint in configuration and in code.</span></span>  

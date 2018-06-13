@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636718"
 ---
 # <a name="one-or-more-folders-in-the-target-path-do-not-exist"></a><span data-ttu-id="c74ef-102">Co najmniej jeden folder w ścieżce docelowej nie istnieje.</span><span class="sxs-lookup"><span data-stu-id="c74ef-102">One or more folders in the target path do not exist</span></span>
 <span data-ttu-id="c74ef-103">Co najmniej jedna z katalogów dostarczone w ścieżce docelowej nie istnieje.</span><span class="sxs-lookup"><span data-stu-id="c74ef-103">One or more of the directories supplied in the target path do not exist.</span></span> <span data-ttu-id="c74ef-104">Może to być wynik ścieżką nieprawidłowo przeanalizowane, zwłaszcza w wypadku podając ścieżkę względną.</span><span class="sxs-lookup"><span data-stu-id="c74ef-104">This may be a result of an incorrectly parsed path, particularly if supplying a relative path.</span></span>  

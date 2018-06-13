@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638320"
 ---
 # <a name="method-39ltmethodnamegt39-has-no-parameter-named-39ltparameternamegt39"></a><span data-ttu-id="77891-102">Metoda &#39; &lt;methodname&gt; &#39; nie ma parametru o nazwie &#39; &lt;parametername&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="77891-102">Method &#39;&lt;methodname&gt;&#39; has no parameter named &#39;&lt;parametername&gt;&#39;</span></span>
 <span data-ttu-id="77891-103">Podany nazwany argument nie pasuje do żadnego z argumentów metody docelowej.</span><span class="sxs-lookup"><span data-stu-id="77891-103">A supplied named argument does not match any of the arguments of the target method.</span></span>  

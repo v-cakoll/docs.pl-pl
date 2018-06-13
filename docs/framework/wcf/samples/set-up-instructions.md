@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809108"
 ---
 # <a name="set-up-instructions"></a><span data-ttu-id="e2547-102">Instrukcje dotyczące konfiguracji</span><span class="sxs-lookup"><span data-stu-id="e2547-102">Set-Up Instructions</span></span>
 <span data-ttu-id="e2547-103">Ten zbiór tematów zawiera opis sposobu konfigurowania usług, które są wymagane do uruchamiania usługi Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="e2547-103">This set of topics describes how to set up services that are required to run a Windows Communication Foundation (WCF) service.</span></span>  

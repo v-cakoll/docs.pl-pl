@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638333"
 ---
 # <a name="the-path-has-not-been-set"></a><span data-ttu-id="38a40-102">Ścieżka nie została ustawiona.</span><span class="sxs-lookup"><span data-stu-id="38a40-102">The path has not been set</span></span>
 <span data-ttu-id="38a40-103">Podjęto próbę operacji na pliku, np. przenoszenie lub kopiowanie pliku, bez podawania niezbędne ścieżki.</span><span class="sxs-lookup"><span data-stu-id="38a40-103">A file operation, such as moving or copying a file, has been attempted without supplying the necessary path.</span></span> <span data-ttu-id="38a40-104">Może to wynikać z niepoprawnie analizowaniu ścieżki.</span><span class="sxs-lookup"><span data-stu-id="38a40-104">This may result from incorrectly parsing the path.</span></span>  

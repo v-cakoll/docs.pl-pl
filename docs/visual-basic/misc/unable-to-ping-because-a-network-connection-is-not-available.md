@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640409"
 ---
 # <a name="unable-to-ping-because-a-network-connection-is-not-available"></a><span data-ttu-id="4f00c-102">Nie można wykonać polecenie ping, ponieważ połączenie sieciowe jest niedostępne</span><span class="sxs-lookup"><span data-stu-id="4f00c-102">Unable to ping because a network connection is not available</span></span>
 <span data-ttu-id="4f00c-103">Nie można wykonać operacji, ponieważ nie ma połączenia sieciowego jest dostępny.</span><span class="sxs-lookup"><span data-stu-id="4f00c-103">The operation cannot be performed because no network connection is available.</span></span>  

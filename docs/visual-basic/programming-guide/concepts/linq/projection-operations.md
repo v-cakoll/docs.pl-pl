@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647647"
 ---
 # <a name="projection-operations-visual-basic"></a><span data-ttu-id="0f91e-102">Operacje rzutowania (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0f91e-102">Projection Operations (Visual Basic)</span></span>
 <span data-ttu-id="0f91e-103">Projekcja odwołuje się do operacji przekształcania obiektu na nowy formularz, który często składa się tylko z tych właściwości, które zostaną następnie użyte.</span><span class="sxs-lookup"><span data-stu-id="0f91e-103">Projection refers to the operation of transforming an object into a new form that often consists only of those properties that will be subsequently used.</span></span> <span data-ttu-id="0f91e-104">Przy użyciu projekcji, można utworzyć nowy typ, który składa się z każdego obiektu.</span><span class="sxs-lookup"><span data-stu-id="0f91e-104">By using projection, you can construct a new type that is built from each object.</span></span> <span data-ttu-id="0f91e-105">Możesz właściwości projektu i funkcji matematycznych w nim.</span><span class="sxs-lookup"><span data-stu-id="0f91e-105">You can project a property and perform a mathematical function on it.</span></span> <span data-ttu-id="0f91e-106">Można także wyświetlać oryginalny obiekt, bez jego zmiany.</span><span class="sxs-lookup"><span data-stu-id="0f91e-106">You can also project the original object without changing it.</span></span>  

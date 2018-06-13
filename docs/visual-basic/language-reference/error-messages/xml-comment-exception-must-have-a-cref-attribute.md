@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597386"
 ---
 # <a name="xml-comment-exception-must-have-a-39cref39-attribute"></a>Wyjątek komentarza XML musi mieć &#39;cref&#39; atrybutu
 \<Wyjątku > tagu umożliwia dokumentu wyjątki, które może zostać zgłoszony przez metodę. Wymagane `cref` atrybut określa nazwę elementu członkowskiego, który jest sprawdzana przez generator dokumentacji. Jeśli istnieje element członkowski, są tłumaczone na nazwę kanoniczną elementu w pliku dokumentacji.  

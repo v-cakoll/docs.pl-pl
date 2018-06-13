@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593580"
 ---
 # <a name="39sub-main39-was-not-found-in-39ltnamegt39"></a>&#39;Element Sub Main&#39; nie został znaleziony w &#39; &lt;nazwy&gt;&#39;
 `Sub Main` jest brak lub nieprawidłową lokalizację określono dla niego.  

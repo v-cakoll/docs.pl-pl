@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330768"
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>Obiekty delegowane z nazwanego vs. Metody anonimowe (Przewodnik programowania w języku C#)
 A [delegować](../../../csharp/language-reference/keywords/delegate.md) może być skojarzony z metodę o nazwie. Gdy przy użyciu nazwanego metody tworzenia wystąpienia delegata, metody jest przekazywany jako parametru, na przykład:  

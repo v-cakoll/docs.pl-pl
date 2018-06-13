@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408167"
 ---
 # <a name="iclrdatatarget3getexceptioncontextrecord-method"></a>Metoda ICLRDataTarget3::GetExceptionContextRecord
 Metoda wywoływana przez wspólne języka wspólnego (CLR) danych dostęp do usługi można pobrać rekordu kontekstu skojarzonych z procesem docelowym. Na przykład dla elementu docelowego zrzutu to równoważne rekordu kontekstu przekazano za pośrednictwem `ExceptionParam` argument [MiniDumpWriteDump](http://msdn.microsoft.com/library/windows/desktop/ms680360\(v=vs.85\).aspx) funkcji w bibliotece systemu Windows debugowania pomocy (DbgHelp).  

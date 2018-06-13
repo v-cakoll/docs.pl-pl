@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595316"
 ---
 # <a name="widening-visual-basic"></a>Widening (Visual Basic)
 Oznacza to, że operator konwersji (`CType`) konwertuje klasę lub strukturę do typu, który może posiadać wszystkie możliwe wartości oryginalnej klasy lub struktury.  

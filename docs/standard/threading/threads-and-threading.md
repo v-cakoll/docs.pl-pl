@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592187"
 ---
 # <a name="threads-and-threading"></a>Wątki i wątkowość
 Systemy operacyjne umożliwia rozdzielenie różnych aplikacji, które działają procesów. Wątki są jednostkę podstawową, system operacyjny przydziela czas procesora i więcej niż jeden wątek może wykonywania kodu wewnątrz tego procesu. Każdy wątek obsługuje programy obsługi wyjątków, priorytet i zestaw struktur, które system używa zapisać kontekstu wątku, dopóki nie zostanie określony. Kontekst wątku zawiera wszystkie informacje wymagane przez wątek do bezbłędnie wznowić wykonywanie wątku zestaw rejestrów Procesora i stosu, w tym do przestrzeni adresowej procesu hosta wątku.  

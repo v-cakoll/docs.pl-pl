@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593593"
 ---
 # <a name="39ltnamegt39-is-ambiguous-in-the-namespace-39ltnamespacenamegt39"></a>&#39;&lt;Nazwa&gt; &#39; jest niejednoznaczny w przestrzeni nazw &#39; &lt;nazwa przestrzeni nazw&gt;&#39;
 Podana nazwa jest niejednoznaczny i dlatego powoduje konflikt z inną nazwą. Kompilator Visual Basic nie ma żadnych reguł rozwiązywania konfliktów; odróżniania nazw musi samodzielnie.  

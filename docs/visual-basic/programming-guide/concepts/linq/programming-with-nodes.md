@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648349"
 ---
 # <a name="programming-with-nodes-visual-basic"></a><span data-ttu-id="9e90f-102">Programowanie z węzłami (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9e90f-102">Programming with Nodes (Visual Basic)</span></span>
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="9e90f-103"> Deweloperzy, którzy musisz zapisywać programów, takich jak edytor XML, system transformacji lub zapisywania raportu często konieczne pisania programów, które działają na poziomie szczegółowości większą niż elementów i atrybutów.</span><span class="sxs-lookup"><span data-stu-id="9e90f-103"> developers who need to write programs such as an XML editor, a transform system, or a report writer often need to write programs that work at a finer level of granularity than elements and attributes.</span></span> <span data-ttu-id="9e90f-104">Często muszą pracować na poziomie węzła manipulowanie węzły tekstowe, przetwarzanie instrukcji i komentarze.</span><span class="sxs-lookup"><span data-stu-id="9e90f-104">They often need to work at the node level, manipulating text nodes, processing instructions, and comments.</span></span> <span data-ttu-id="9e90f-105">Ten temat zawiera niektóre szczegóły na temat programowania na poziomie węzła.</span><span class="sxs-lookup"><span data-stu-id="9e90f-105">This topic provides some details about programming at the node level.</span></span>  

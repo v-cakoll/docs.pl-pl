@@ -14,6 +14,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457593"
 ---
 # <a name="datagrid-styles-and-templates"></a><span data-ttu-id="3cd2c-102">DataGrid — Style i szablony</span><span class="sxs-lookup"><span data-stu-id="3cd2c-102">DataGrid Styles and Templates</span></span>
 <span data-ttu-id="3cd2c-103">W tym temacie opisano, style i szablonów dla <xref:System.Windows.Controls.DataGrid> formantu.</span><span class="sxs-lookup"><span data-stu-id="3cd2c-103">This topic describes the styles and templates for the <xref:System.Windows.Controls.DataGrid> control.</span></span> <span data-ttu-id="3cd2c-104">Można zmodyfikować domyślne <xref:System.Windows.Controls.ControlTemplate> umożliwiają unikatowego wyglądu formantu.</span><span class="sxs-lookup"><span data-stu-id="3cd2c-104">You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance.</span></span> <span data-ttu-id="3cd2c-105">Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu formant tworząc ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span><span class="sxs-lookup"><span data-stu-id="3cd2c-105">For more information, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span></span>  

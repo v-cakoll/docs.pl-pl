@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655538"
 ---
 # <a name="function-procedures-visual-basic"></a><span data-ttu-id="e6b50-102">Procedury funkcji (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e6b50-102">Function Procedures (Visual Basic)</span></span>
 <span data-ttu-id="e6b50-103">A `Function` procedura jest serię instrukcji języka Visual Basic otoczony `Function` i `End Function` instrukcje.</span><span class="sxs-lookup"><span data-stu-id="e6b50-103">A `Function` procedure is a series of Visual Basic statements enclosed by the `Function` and `End Function` statements.</span></span> <span data-ttu-id="e6b50-104">`Function` Procedury wykonuje zadanie, a następnie zwraca sterowania do wywołującego kodu.</span><span class="sxs-lookup"><span data-stu-id="e6b50-104">The `Function` procedure performs a task and then returns control to the calling code.</span></span> <span data-ttu-id="e6b50-105">Zwraca kontroli, również zwraca wartość do wywołującego kodu.</span><span class="sxs-lookup"><span data-stu-id="e6b50-105">When it returns control, it also returns a value to the calling code.</span></span>  

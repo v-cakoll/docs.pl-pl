@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653049"
 ---
 # <a name="-refonly-visual-basic"></a><span data-ttu-id="98eb8-102">-refonly (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="98eb8-102">-refonly (Visual Basic)</span></span>
 

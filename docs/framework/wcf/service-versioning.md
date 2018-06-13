@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809693"
 ---
 # <a name="service-versioning"></a><span data-ttu-id="7b3a1-102">Przechowywanie wersji usługi</span><span class="sxs-lookup"><span data-stu-id="7b3a1-102">Service Versioning</span></span>
 <span data-ttu-id="7b3a1-103">Po początkowym wdrożeniu i potencjalnie kilka razy w okresie ich istnienia usług (i punktów końcowych, które udostępniają) może być konieczne zostanie zmieniony z różnych powodów, takich jak zmieniające się potrzeby biznesowe, wymagania dotyczące technologii informacji, lub do innych adresów problemy.</span><span class="sxs-lookup"><span data-stu-id="7b3a1-103">After initial deployment, and potentially several times during their lifetime, services (and the endpoints they expose) may need to be changed for a variety of reasons, such as changing business needs, information technology requirements, or to address other issues.</span></span> <span data-ttu-id="7b3a1-104">Każda zmiana wprowadziła nową wersję usługi.</span><span class="sxs-lookup"><span data-stu-id="7b3a1-104">Each change introduces a new version of the service.</span></span> <span data-ttu-id="7b3a1-105">W tym temacie wyjaśniono, jak należy wziąć pod uwagę przechowywanie wersji w systemie Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="7b3a1-105">This topic explains how to consider versioning in Windows Communication Foundation (WCF).</span></span>  

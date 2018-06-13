@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652529"
 ---
 # <a name="set-operations-visual-basic"></a><span data-ttu-id="bdcba-102">Operacje na zestawie (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bdcba-102">Set Operations (Visual Basic)</span></span>
 <span data-ttu-id="bdcba-103">Operacje na zestawie w składniku LINQ odwoływać się do operacji zapytania, które wywołują zestaw wyników, który jest oparty na obecności lub braku równoważne elementów w obrębie tego samego lub oddzielne kolekcje (lub zestawy).</span><span class="sxs-lookup"><span data-stu-id="bdcba-103">Set operations in LINQ refer to query operations that produce a result set that is based on the presence or absence of equivalent elements within the same or separate collections (or sets).</span></span>  

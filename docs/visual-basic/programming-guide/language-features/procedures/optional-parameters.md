@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651612"
 ---
 # <a name="optional-parameters-visual-basic"></a><span data-ttu-id="f47ed-102">Parametry opcjonalne (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f47ed-102">Optional Parameters (Visual Basic)</span></span>
 <span data-ttu-id="f47ed-103">Możesz określić, że parametr procedury jest opcjonalny i nie trzeba do niego przekazywać żadnego argumentu w momencie wywołania procedury.</span><span class="sxs-lookup"><span data-stu-id="f47ed-103">You can specify that a procedure parameter is optional and no argument has to be supplied for it when the procedure is called.</span></span> <span data-ttu-id="f47ed-104">*Parametry opcjonalne* są wskazywane przez `Optional` — słowo kluczowe w definicji procedury.</span><span class="sxs-lookup"><span data-stu-id="f47ed-104">*Optional parameters* are indicated by the `Optional` keyword in the procedure definition.</span></span> <span data-ttu-id="f47ed-105">Mają zastosowanie następujące zasady:</span><span class="sxs-lookup"><span data-stu-id="f47ed-105">The following rules apply:</span></span>  

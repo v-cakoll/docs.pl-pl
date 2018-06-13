@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537476"
 ---
 # <a name="digital-ink"></a><span data-ttu-id="1c534-102">Cyfrowy atrament</span><span class="sxs-lookup"><span data-stu-id="1c534-102">Digital Ink</span></span>
 <span data-ttu-id="1c534-103">W tej sekcji omówiono używanie elektroniczne pismo odręczne w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="1c534-103">This section discusses the use of digital ink in the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="1c534-104">Tradycyjnie znalezione tylko w zestawie SDK komputerze typu Tablet, elektroniczne pismo odręczne jest teraz dostępna w podstawowej Windows Presentation Foundation.</span><span class="sxs-lookup"><span data-stu-id="1c534-104">Traditionally found only in the Tablet PC SDK, digital ink is now available in the core Windows Presentation Foundation.</span></span> <span data-ttu-id="1c534-105">Oznacza to, że pełni funkcjonalnymi aplikacje komputerów typu Tablet można teraz tworzyć przy użyciu możliwości Windows Presentation Foundation.</span><span class="sxs-lookup"><span data-stu-id="1c534-105">This means you can now develop full-fledged Tablet PC applications by using the power of Windows Presentation Foundation.</span></span>  

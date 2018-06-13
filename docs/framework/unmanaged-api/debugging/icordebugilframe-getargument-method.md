@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414056"
 ---
 # <a name="icordebugilframegetargument-method"></a><span data-ttu-id="b50fe-102">ICorDebugILFrame::GetArgument — Metoda</span><span class="sxs-lookup"><span data-stu-id="b50fe-102">ICorDebugILFrame::GetArgument Method</span></span>
 <span data-ttu-id="b50fe-103">Pobiera wartość określonego argumentu w tej ramce stosu język pośredni (MSIL) firmy Microsoft.</span><span class="sxs-lookup"><span data-stu-id="b50fe-103">Gets the value of the specified argument in this Microsoft intermediate language (MSIL) stack frame.</span></span>  

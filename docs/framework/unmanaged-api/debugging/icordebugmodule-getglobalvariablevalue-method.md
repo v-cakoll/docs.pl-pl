@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413036"
 ---
 # <a name="icordebugmodulegetglobalvariablevalue-method"></a><span data-ttu-id="aefc1-102">ICorDebugModule::GetGlobalVariableValue — Metoda</span><span class="sxs-lookup"><span data-stu-id="aefc1-102">ICorDebugModule::GetGlobalVariableValue Method</span></span>
 <span data-ttu-id="aefc1-103">Pobiera wartość określonej zmiennej globalnej.</span><span class="sxs-lookup"><span data-stu-id="aefc1-103">Gets the value of the specified global variable.</span></span>  

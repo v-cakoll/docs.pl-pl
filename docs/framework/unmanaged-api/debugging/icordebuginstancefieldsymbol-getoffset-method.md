@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413566"
 ---
 # <a name="icordebuginstancefieldsymbolgetoffset-method"></a><span data-ttu-id="fa181-102">ICorDebugInstanceFieldSymbol::GetOffset — metoda</span><span class="sxs-lookup"><span data-stu-id="fa181-102">ICorDebugInstanceFieldSymbol::GetOffset Method</span></span>
 <span data-ttu-id="fa181-103">Pobiera przesunięcie w bajtach tego pola wystąpienia w swojej klasie nadrzędnej.</span><span class="sxs-lookup"><span data-stu-id="fa181-103">Gets the offset in bytes of this instance field in its parent class.</span></span>  

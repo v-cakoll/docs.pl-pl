@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546087"
 ---
 # <a name="performance"></a><span data-ttu-id="85e67-102">Wydajność</span><span class="sxs-lookup"><span data-stu-id="85e67-102">Performance</span></span>
 <span data-ttu-id="85e67-103">Osiągnięcie optymalną wydajnością wymaga przewidywania projekt aplikacji i zrozumienia najlepsze rozwiązania dotyczące [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] projektowanie aplikacji.</span><span class="sxs-lookup"><span data-stu-id="85e67-103">Achieving optimal application performance requires forethought in application design and an understanding of best practices for [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application development.</span></span> <span data-ttu-id="85e67-104">Tematy w tej sekcji zawierają dodatkowe informacje o wysokiej wydajności tworzenia [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.</span><span class="sxs-lookup"><span data-stu-id="85e67-104">The topics in this section provide additional information on building high performance [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications.</span></span>  

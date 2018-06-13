@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411719"
 ---
 # <a name="icordebugframegetcaller-method"></a><span data-ttu-id="87461-102">ICorDebugFrame::GetCaller — Metoda</span><span class="sxs-lookup"><span data-stu-id="87461-102">ICorDebugFrame::GetCaller Method</span></span>
 <span data-ttu-id="87461-103">Pobiera wskaźnik do obiektu ICorDebugFrame w łańcuchu bieżącego, która wywołuje tej ramki.</span><span class="sxs-lookup"><span data-stu-id="87461-103">Gets a pointer to the ICorDebugFrame object in the current chain that called this frame.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411768"
 ---
 # <a name="icordebugeditandcontinuesnapshotgetrodatarva-method"></a><span data-ttu-id="741c4-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA — Metoda</span><span class="sxs-lookup"><span data-stu-id="741c4-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA Method</span></span>
 <span data-ttu-id="741c4-103">`GetRoDataRVA` jest przestarzała.</span><span class="sxs-lookup"><span data-stu-id="741c4-103">`GetRoDataRVA` is obsolete.</span></span> <span data-ttu-id="741c4-104">Nie wywołuj tej metody.</span><span class="sxs-lookup"><span data-stu-id="741c4-104">Do not call this method.</span></span>  

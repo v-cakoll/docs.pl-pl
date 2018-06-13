@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415883"
 ---
 # <a name="icordebugmanagedcallbackupdatemodulesymbols-method"></a><span data-ttu-id="8124c-102">ICorDebugManagedCallback::UpdateModuleSymbols — Metoda</span><span class="sxs-lookup"><span data-stu-id="8124c-102">ICorDebugManagedCallback::UpdateModuleSymbols Method</span></span>
 <span data-ttu-id="8124c-103">Powiadamia debuger zmieniono symboli dla modułu środowiska uruchomieniowego języka wspólnego.</span><span class="sxs-lookup"><span data-stu-id="8124c-103">Notifies the debugger that the symbols for a common language runtime module have changed.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413793"
 ---
 # <a name="icordebuginstancefieldsymbolgetsize-method"></a><span data-ttu-id="57759-102">ICorDebugInstanceFieldSymbol::GetSize — metoda</span><span class="sxs-lookup"><span data-stu-id="57759-102">ICorDebugInstanceFieldSymbol::GetSize Method</span></span>
 <span data-ttu-id="57759-103">Pobiera rozmiar w bajtach pole wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="57759-103">Gets the size in bytes of the instance field.</span></span>  

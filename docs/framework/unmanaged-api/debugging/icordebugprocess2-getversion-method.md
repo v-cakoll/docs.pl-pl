@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416383"
 ---
 # <a name="icordebugprocess2getversion-method"></a><span data-ttu-id="363a1-102">ICorDebugProcess2::GetVersion — Metoda</span><span class="sxs-lookup"><span data-stu-id="363a1-102">ICorDebugProcess2::GetVersion Method</span></span>
 <span data-ttu-id="363a1-103">Pobiera numer wersji środowisko uruchomieniowe języka wspólnego (CLR) działającej w tym procesie.</span><span class="sxs-lookup"><span data-stu-id="363a1-103">Gets the version number of the common language runtime (CLR) that is running in this process.</span></span>  

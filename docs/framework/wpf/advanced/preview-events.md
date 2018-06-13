@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546139"
 ---
 # <a name="preview-events"></a><span data-ttu-id="b72ba-102">Podgląd zdarzeń</span><span class="sxs-lookup"><span data-stu-id="b72ba-102">Preview Events</span></span>
 <span data-ttu-id="b72ba-103">Podgląd zdarzeń, znany również jako tunelowania zdarzenia, są kierowane zdarzenia, gdy kierunek trasy przechodzi od katalogu głównego aplikacji na element, który wywołał zdarzenie i został zgłoszony jako źródło danych zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="b72ba-103">Preview events, also known as tunneling events, are routed events where the direction of the route travels from the application root towards the element that raised the event and is reported as the source in event data.</span></span> <span data-ttu-id="b72ba-104">Nie wszystkie scenariusze zdarzeń obsługuje ani nie wymaga podglądu zdarzeń. w tym temacie opisano sytuacje, gdy Podgląd zdarzeń istnieje, jak aplikacje i składniki powinna obsługiwać je, a przypadkach, gdy tworzenie podglądu zdarzeń w składnikach niestandardowych lub klasy jest odpowiedni.</span><span class="sxs-lookup"><span data-stu-id="b72ba-104">Not all event scenarios support or require preview events; this topic describes the situations where preview events exist, how applications or components should handle them, and cases where creating preview events in custom components or classes might be appropriate.</span></span>  

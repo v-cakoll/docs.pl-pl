@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541336"
 ---
 # <a name="dependency-property-callbacks-and-validation"></a><span data-ttu-id="5fbe7-102">Zależność wartości wywołania zwrotnego i walidacji</span><span class="sxs-lookup"><span data-stu-id="5fbe7-102">Dependency Property Callbacks and Validation</span></span>
 <span data-ttu-id="5fbe7-103">W tym temacie opisano sposób tworzenia właściwości zależności przy użyciu alternatywnych implementacji niestandardowych dla powiązanych właściwości funkcje, takie jak oznaczania sprawdzania poprawności, wywołania zwrotne wywoływane po każdej zmianie właściwości wartość efektywna i zastępowanie możliwe poza wpływ na określenie wartości.</span><span class="sxs-lookup"><span data-stu-id="5fbe7-103">This topic describes how to create dependency properties using alternative custom implementations for property-related features such as validation determination, callbacks that are invoked whenever the property's effective value is changed, and overriding possible outside influences on value determination.</span></span> <span data-ttu-id="5fbe7-104">W tym temacie omówiono również zastosowaniach rozszerzając domyślne właściwości systemu zachowania przy użyciu tych metod odpowiednie.</span><span class="sxs-lookup"><span data-stu-id="5fbe7-104">This topic also discusses scenarios where expanding on the default property system behaviors by using these techniques is appropriate.</span></span>  

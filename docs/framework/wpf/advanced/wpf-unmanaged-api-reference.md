@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546660"
 ---
 # <a name="wpf-unmanaged-api-reference"></a><span data-ttu-id="05ab3-102">WPF niezarządzany wykaz interfejsów API</span><span class="sxs-lookup"><span data-stu-id="05ab3-102">WPF Unmanaged API Reference</span></span>
 <span data-ttu-id="05ab3-103">Biblioteki systemu Windows Presentation Foundation (WPF) ujawnia szereg niezarządzanych funkcji, które są przeznaczone wyłącznie do użytku wewnętrznego.</span><span class="sxs-lookup"><span data-stu-id="05ab3-103">Windows Presentation Foundation (WPF) libraries expose a number of unmanaged functions that are intended for internal use only.</span></span> <span data-ttu-id="05ab3-104">Ich nie należy wywoływać z kodu użytkownika.</span><span class="sxs-lookup"><span data-stu-id="05ab3-104">They should not be called from user code.</span></span>  

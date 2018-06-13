@@ -29,6 +29,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549532"
 ---
 # <a name="input-overview"></a><span data-ttu-id="1a884-102">Przegląd Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="1a884-102">Input Overview</span></span>
 <a name="introduction"></a> <span data-ttu-id="1a884-103">[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Podsystemu udostępnia zaawansowane [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] uzyskiwania danych wejściowych z różnych urządzeń, w tym myszy, klawiatury, touch i pióra.</span><span class="sxs-lookup"><span data-stu-id="1a884-103">The[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] subsystem provides a powerful [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] for obtaining input from a variety of devices, including the mouse, keyboard, touch, and stylus.</span></span> <span data-ttu-id="1a884-104">W tym temacie opisano usług świadczonych przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i opisano architekturę wejściowych systemów.</span><span class="sxs-lookup"><span data-stu-id="1a884-104">This topic describes the services provided by [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] and explains the architecture of the input systems.</span></span>  

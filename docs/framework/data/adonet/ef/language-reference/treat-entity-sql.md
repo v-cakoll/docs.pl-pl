@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763979"
 ---
 # <a name="treat-entity-sql"></a><span data-ttu-id="77f18-102">TRAKTUJ (jednostka SQL)</span><span class="sxs-lookup"><span data-stu-id="77f18-102">TREAT (Entity SQL)</span></span>
 <span data-ttu-id="77f18-103">Traktuje obiektu określonego typu podstawowego jako obiekt określonego typu pochodnego.</span><span class="sxs-lookup"><span data-stu-id="77f18-103">Treats an object of a particular base type as an object of the specified derived type.</span></span>  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411073"
 ---
 # <a name="icordebugerrorinfoenum-interface1"></a><span data-ttu-id="dad3c-102">ICorDebugErrorInfoEnum Interface1</span><span class="sxs-lookup"><span data-stu-id="dad3c-102">ICorDebugErrorInfoEnum Interface1</span></span>
 <span data-ttu-id="dad3c-103">`ICorDebugErrorInfoEnum` jest przestarzała.</span><span class="sxs-lookup"><span data-stu-id="dad3c-103">`ICorDebugErrorInfoEnum` is obsolete.</span></span> <span data-ttu-id="dad3c-104">Nie używaj tego interfejsu.</span><span class="sxs-lookup"><span data-stu-id="dad3c-104">Do not use this interface.</span></span>  

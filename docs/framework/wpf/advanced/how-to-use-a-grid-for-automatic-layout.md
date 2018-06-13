@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544625"
 ---
 # <a name="how-to-use-a-grid-for-automatic-layout"></a><span data-ttu-id="9b6f3-102">Jak użyć siatki do automatycznego układu</span><span class="sxs-lookup"><span data-stu-id="9b6f3-102">How to: Use a Grid for Automatic Layout</span></span>
 <span data-ttu-id="9b6f3-103">W tym przykładzie przedstawiono sposób użycia siatki w ujęciu automatyczny układ do tworzenia aplikacji lokalizowalny.</span><span class="sxs-lookup"><span data-stu-id="9b6f3-103">This example describes how to use a grid in the automatic layout approach to creating a localizable application.</span></span>  

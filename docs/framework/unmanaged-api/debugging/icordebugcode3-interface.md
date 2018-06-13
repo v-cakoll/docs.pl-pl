@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411328"
 ---
 # <a name="icordebugcode3-interface"></a><span data-ttu-id="d1a77-102">ICorDebugCode3 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="d1a77-102">ICorDebugCode3 Interface</span></span>
 <span data-ttu-id="d1a77-103">Udostępnia metody, która rozszerza "ICorDebugCode" i "ICorDebugCode2", aby podać informacje o zarządzanych wartości zwracanej.</span><span class="sxs-lookup"><span data-stu-id="d1a77-103">Provides a method that extends "ICorDebugCode" and "ICorDebugCode2" to provide information about a managed return value.</span></span>  

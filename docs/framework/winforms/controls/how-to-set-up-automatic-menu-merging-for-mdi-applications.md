@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533464"
 ---
 # <a name="how-to-set-up-automatic-menu-merging-for-mdi-applications"></a><span data-ttu-id="1f95a-102">Porady: konfigurowanie automatycznego scalania menu dla aplikacji MDI</span><span class="sxs-lookup"><span data-stu-id="1f95a-102">How to: Set Up Automatic Menu Merging for MDI Applications</span></span>
 <span data-ttu-id="1f95a-103">Poniższa procedura zawiera podstawowe kroki konfigurowania automatycznego scalania w aplikacji interfejsu wielu dokumentów (MDI) z <xref:System.Windows.Forms.MenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="1f95a-103">The following procedure gives the basic steps for setting up automatic merging in a multiple-document interface (MDI) application with <xref:System.Windows.Forms.MenuStrip>.</span></span>  

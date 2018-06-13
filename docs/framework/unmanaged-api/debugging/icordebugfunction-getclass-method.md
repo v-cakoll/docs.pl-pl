@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411706"
 ---
 # <a name="icordebugfunctiongetclass-method"></a><span data-ttu-id="f7d79-102">ICorDebugFunction::GetClass — Metoda</span><span class="sxs-lookup"><span data-stu-id="f7d79-102">ICorDebugFunction::GetClass Method</span></span>
 <span data-ttu-id="f7d79-103">Pobiera obiekt ICorDebugClass, który reprezentuje klasę, którą ta funkcja jest elementem członkowskim.</span><span class="sxs-lookup"><span data-stu-id="f7d79-103">Gets an ICorDebugClass object that represents the class this function is a member of.</span></span>  

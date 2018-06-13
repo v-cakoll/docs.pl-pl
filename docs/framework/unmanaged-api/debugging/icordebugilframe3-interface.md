@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415600"
 ---
 # <a name="icordebugilframe3-interface"></a><span data-ttu-id="9ee5b-102">ICorDebugILFrame3 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="9ee5b-102">ICorDebugILFrame3 Interface</span></span>
 <span data-ttu-id="9ee5b-103">Dostarcza metodę, która hermetyzuje wartość zwracaną przez funkcję.</span><span class="sxs-lookup"><span data-stu-id="9ee5b-103">Provides a method that encapsulates the return value of a function.</span></span> <span data-ttu-id="9ee5b-104">`ICorDebugILFrame3` to rozszerzenie logicznej interfejsów ICorDebugILFrame i ICorDebugILFrame2.</span><span class="sxs-lookup"><span data-stu-id="9ee5b-104">`ICorDebugILFrame3` is a logical extension of the ICorDebugILFrame and ICorDebugILFrame2 interfaces.</span></span>  

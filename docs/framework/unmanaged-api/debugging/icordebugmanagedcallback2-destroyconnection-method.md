@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415405"
 ---
 # <a name="icordebugmanagedcallback2destroyconnection-method"></a><span data-ttu-id="90a63-102">ICorDebugManagedCallback2::DestroyConnection — Metoda</span><span class="sxs-lookup"><span data-stu-id="90a63-102">ICorDebugManagedCallback2::DestroyConnection Method</span></span>
 <span data-ttu-id="90a63-103">Powiadamia debuger określone połączenie zostało przerwane.</span><span class="sxs-lookup"><span data-stu-id="90a63-103">Notifies the debugger that the specified connection has been terminated.</span></span>  

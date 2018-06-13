@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415925"
 ---
 # <a name="icordebugmanagedcallbacklogswitch-method"></a><span data-ttu-id="65f5a-102">ICorDebugManagedCallback::LogSwitch — Metoda</span><span class="sxs-lookup"><span data-stu-id="65f5a-102">ICorDebugManagedCallback::LogSwitch Method</span></span>
 <span data-ttu-id="65f5a-103">Powiadamia debuger wspólnego języka wątku zarządzanego środowiska uruchomieniowego (języka wspólnego CLR) została wywołana metoda <xref:System.Diagnostics.Switch> klasę, aby utworzyć, zmodyfikować lub usunąć przełącznika debugowania śledzenia.</span><span class="sxs-lookup"><span data-stu-id="65f5a-103">Notifies the debugger that a common language runtime (CLR) managed thread has called a method in the <xref:System.Diagnostics.Switch> class to create, modify, or delete a debugging/tracing switch.</span></span>  

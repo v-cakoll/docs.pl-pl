@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414680"
 ---
 # <a name="icordebugmanagedcallbackcreateprocess-method"></a><span data-ttu-id="8ab30-102">ICorDebugManagedCallback::CreateProcess — Metoda</span><span class="sxs-lookup"><span data-stu-id="8ab30-102">ICorDebugManagedCallback::CreateProcess Method</span></span>
 <span data-ttu-id="8ab30-103">Powiadamia debuger został dołączony proces lub uruchomiony po raz pierwszy.</span><span class="sxs-lookup"><span data-stu-id="8ab30-103">Notifies the debugger when a process has been attached or started for the first time.</span></span>  

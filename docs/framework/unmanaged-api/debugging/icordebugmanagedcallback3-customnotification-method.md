@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416488"
 ---
 # <a name="icordebugmanagedcallback3customnotification-method"></a><span data-ttu-id="0782d-102">ICorDebugManagedCallback3::CustomNotification — Metoda</span><span class="sxs-lookup"><span data-stu-id="0782d-102">ICorDebugManagedCallback3::CustomNotification Method</span></span>
 <span data-ttu-id="0782d-103">Wskazuje powiadomienie niestandardowych debuger został zgłoszony.</span><span class="sxs-lookup"><span data-stu-id="0782d-103">Indicates that a custom debugger notification has been raised.</span></span>  

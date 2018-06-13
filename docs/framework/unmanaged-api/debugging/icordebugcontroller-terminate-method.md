@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412474"
 ---
 # <a name="icordebugcontrollerterminate-method"></a><span data-ttu-id="a0ce6-102">ICorDebugController::Terminate — Metoda</span><span class="sxs-lookup"><span data-stu-id="a0ce6-102">ICorDebugController::Terminate Method</span></span>
 <span data-ttu-id="a0ce6-103">Kończy proces o określony kod zakończenia.</span><span class="sxs-lookup"><span data-stu-id="a0ce6-103">Terminates the process with the specified exit code.</span></span>  

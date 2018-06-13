@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412581"
 ---
 # <a name="icordebugeval2rudeabort-method"></a><span data-ttu-id="af8d8-102">ICorDebugEval2::RudeAbort — Metoda</span><span class="sxs-lookup"><span data-stu-id="af8d8-102">ICorDebugEval2::RudeAbort Method</span></span>
 <span data-ttu-id="af8d8-103">Przerywa obliczenia tego `ICorDebugEval2` wykonuje obecnie.</span><span class="sxs-lookup"><span data-stu-id="af8d8-103">Aborts the computation that this `ICorDebugEval2` is currently performing.</span></span>  

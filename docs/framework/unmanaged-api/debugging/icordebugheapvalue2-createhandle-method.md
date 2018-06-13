@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413582"
 ---
 # <a name="icordebugheapvalue2createhandle-method"></a><span data-ttu-id="7c06a-102">ICorDebugHeapValue2::CreateHandle — Metoda</span><span class="sxs-lookup"><span data-stu-id="7c06a-102">ICorDebugHeapValue2::CreateHandle Method</span></span>
 <span data-ttu-id="7c06a-103">Tworzy dojście o określonym typie dla wartości sterty reprezentowany przez ten obiekt ICorDebugHeapValue2.</span><span class="sxs-lookup"><span data-stu-id="7c06a-103">Creates a handle of the specified type for the heap value represented by this ICorDebugHeapValue2 object.</span></span>  

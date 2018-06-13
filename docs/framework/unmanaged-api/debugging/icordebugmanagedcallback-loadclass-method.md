@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416208"
 ---
 # <a name="icordebugmanagedcallbackloadclass-method"></a><span data-ttu-id="feaae-102">ICorDebugManagedCallback::LoadClass — Metoda</span><span class="sxs-lookup"><span data-stu-id="feaae-102">ICorDebugManagedCallback::LoadClass Method</span></span>
 <span data-ttu-id="feaae-103">Powiadamia debuger załadowaniu klasy.</span><span class="sxs-lookup"><span data-stu-id="feaae-103">Notifies the debugger that a class has been loaded.</span></span>  

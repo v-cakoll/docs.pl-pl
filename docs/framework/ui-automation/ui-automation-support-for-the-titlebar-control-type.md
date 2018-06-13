@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410432"
 ---
 # <a name="ui-automation-support-for-the-titlebar-control-type"></a><span data-ttu-id="d6c1b-102">Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu TitleBar</span><span class="sxs-lookup"><span data-stu-id="d6c1b-102">UI Automation Support for the TitleBar Control Type</span></span>
 > [!NOTE]

@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756465"
 ---
 # <a name="ltfactorysettingsgt"></a><span data-ttu-id="fe183-102">&lt;factorySettings&gt;</span><span class="sxs-lookup"><span data-stu-id="fe183-102">&lt;factorySettings&gt;</span></span>
 <span data-ttu-id="fe183-103">Określa ustawienia pamięci podręcznej fabryki kanału.</span><span class="sxs-lookup"><span data-stu-id="fe183-103">Specifies the settings of the channel factory cache.</span></span>  

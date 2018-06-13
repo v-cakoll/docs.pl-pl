@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751938"
 ---
 # <a name="ltcryptographysettingsgt-element"></a><span data-ttu-id="eaca4-102">&lt;cryptographysettings —&gt; — Element</span><span class="sxs-lookup"><span data-stu-id="eaca4-102">&lt;cryptographySettings&gt; Element</span></span>
 <span data-ttu-id="eaca4-103">Zawiera ustawienia szyfrowania.</span><span class="sxs-lookup"><span data-stu-id="eaca4-103">Contains cryptography settings.</span></span>  

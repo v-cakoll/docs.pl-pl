@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546955"
 ---
 # <a name="planning-for-application-performance"></a><span data-ttu-id="d3f80-102">Planowanie wydajności aplikacji</span><span class="sxs-lookup"><span data-stu-id="d3f80-102">Planning for Application Performance</span></span>
 <span data-ttu-id="d3f80-103">Powodzenie osiągnięcia cele wydajności zależy od tego, jak również opracowanie strategii wydajności.</span><span class="sxs-lookup"><span data-stu-id="d3f80-103">The success of achieving your performance goals depends on how well you develop your performance strategy.</span></span> <span data-ttu-id="d3f80-104">Planowanie to pierwszy etap w tworzeniu każdego produktu.</span><span class="sxs-lookup"><span data-stu-id="d3f80-104">Planning is the first stage in developing any product.</span></span> <span data-ttu-id="d3f80-105">W tym temacie opisano kilka bardzo proste zasady opracowanie strategii dobrą wydajność.</span><span class="sxs-lookup"><span data-stu-id="d3f80-105">This topic describes a few very simple rules for developing a good performance strategy.</span></span>  

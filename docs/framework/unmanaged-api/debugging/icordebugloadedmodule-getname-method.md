@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415044"
 ---
 # <a name="icordebugloadedmodulegetname-method"></a><span data-ttu-id="ec8a4-102">ICorDebugLoadedModule::GetName — metoda</span><span class="sxs-lookup"><span data-stu-id="ec8a4-102">ICorDebugLoadedModule::GetName Method</span></span>
 <span data-ttu-id="ec8a4-103">Pobiera nazwę załadować modułu.</span><span class="sxs-lookup"><span data-stu-id="ec8a4-103">Gets the name of the loaded module.</span></span>  

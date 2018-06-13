@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412136"
 ---
 # <a name="icordebugdatatarget2-interface"></a><span data-ttu-id="dd2f1-102">Interfejs ICorDebugDataTarget2</span><span class="sxs-lookup"><span data-stu-id="dd2f1-102">ICorDebugDataTarget2 Interface</span></span>
 <span data-ttu-id="dd2f1-103">Rozszerza logicznie [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)interfejsu.</span><span class="sxs-lookup"><span data-stu-id="dd2f1-103">Logically extends the [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)interface.</span></span>  

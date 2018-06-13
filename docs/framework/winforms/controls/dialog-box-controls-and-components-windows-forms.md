@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527213"
 ---
 # <a name="dialog-box-controls-and-components-windows-forms"></a><span data-ttu-id="ae095-102">Formanty i składniki okien dialogowych (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="ae095-102">Dialog-Box Controls and Components (Windows Forms)</span></span>
 <span data-ttu-id="ae095-103">Następujące składniki i formanty formularzy systemu Windows stanowi standardowych oknach dialogowych.</span><span class="sxs-lookup"><span data-stu-id="ae095-103">The following Windows Forms controls and components present standard dialog boxes.</span></span> <span data-ttu-id="ae095-104">Skorzystaj z linków, aby uzyskać więcej informacji na temat funkcji dostępnych w każdym polu okna dialogowego.</span><span class="sxs-lookup"><span data-stu-id="ae095-104">Follow the links for more information about the functions available in each dialog box.</span></span>  

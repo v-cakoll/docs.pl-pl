@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419315"
 ---
 # <a name="icordebugdebugevent-interface"></a><span data-ttu-id="0e8a7-102">Interfejs ICorDebugDebugEvent</span><span class="sxs-lookup"><span data-stu-id="0e8a7-102">ICorDebugDebugEvent Interface</span></span>
 <span data-ttu-id="0e8a7-103">Definiuje interfejs podstawowy, z którym wszystkie `ICorDebug` pochodzi zdarzeń debugowania.</span><span class="sxs-lookup"><span data-stu-id="0e8a7-103">Defines the base interface from which all `ICorDebug` debug events derive.</span></span>  

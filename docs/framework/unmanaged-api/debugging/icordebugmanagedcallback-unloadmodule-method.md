@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413358"
 ---
 # <a name="icordebugmanagedcallbackunloadmodule-method"></a><span data-ttu-id="90a96-102">ICorDebugManagedCallback::UnloadModule — Metoda</span><span class="sxs-lookup"><span data-stu-id="90a96-102">ICorDebugManagedCallback::UnloadModule Method</span></span>
 <span data-ttu-id="90a96-103">Powiadamia debuger wspólnej moduł środowiska wykonawczego języka (dynamicznie DLL) został usunięty z pamięci.</span><span class="sxs-lookup"><span data-stu-id="90a96-103">Notifies the debugger that a common language runtime module (DLL) has been unloaded.</span></span>  

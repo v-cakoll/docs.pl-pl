@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529292"
 ---
 # <a name="how-to-print-in-windows-forms-using-print-preview"></a><span data-ttu-id="81a93-102">Porady: drukowanie w formularzach systemu Windows przy użyciu podglądu wydruku</span><span class="sxs-lookup"><span data-stu-id="81a93-102">How to: Print in Windows Forms Using Print Preview</span></span>
 <span data-ttu-id="81a93-103">Jest bardzo często programowania oferowanie podglądu wydruku, oprócz usługi drukowania formularzy systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="81a93-103">It is very common in Windows Forms programming to offer print preview in addition to printing services.</span></span> <span data-ttu-id="81a93-104">Prosty sposób dodawania usługi podglądu wydruku do aplikacji jest użycie <xref:System.Windows.Forms.PrintPreviewDialog> kontroli w połączeniu z <xref:System.Drawing.Printing.PrintDocument.PrintPage> logiki obsługi zdarzeń do drukowania pliku.</span><span class="sxs-lookup"><span data-stu-id="81a93-104">An easy way to add print preview services to your application is to use a <xref:System.Windows.Forms.PrintPreviewDialog> control in combination with the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event-handling logic for printing a file.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545515"
 ---
 # <a name="how-to-return-from-a-page-function"></a><span data-ttu-id="3ba97-102">Jak wrócić z funkcji strony</span><span class="sxs-lookup"><span data-stu-id="3ba97-102">How to: Return from a Page Function</span></span>
 <span data-ttu-id="3ba97-103">Ten przykład przedstawia sposób zwrócenia wyniku z funkcji strony.</span><span class="sxs-lookup"><span data-stu-id="3ba97-103">This example shows how to return a result from a page function.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413234"
 ---
 # <a name="icordebugloadedmodulegetsize-method"></a><span data-ttu-id="01fe1-102">ICorDebugLoadedModule::GetSize — metoda</span><span class="sxs-lookup"><span data-stu-id="01fe1-102">ICorDebugLoadedModule::GetSize Method</span></span>
 <span data-ttu-id="01fe1-103">Pobiera rozmiar w bajtach załadowanego modułu.</span><span class="sxs-lookup"><span data-stu-id="01fe1-103">Gets the size in bytes of the loaded module.</span></span>  

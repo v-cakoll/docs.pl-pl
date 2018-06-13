@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410835"
 ---
 # <a name="icordebugenumclone-method"></a><span data-ttu-id="d4d8b-102">ICorDebugEnum::Clone — Metoda</span><span class="sxs-lookup"><span data-stu-id="d4d8b-102">ICorDebugEnum::Clone Method</span></span>
 <span data-ttu-id="d4d8b-103">Tworzy kopię tego obiektu ICorDebugEnum.</span><span class="sxs-lookup"><span data-stu-id="d4d8b-103">Creates a copy of this ICorDebugEnum object.</span></span>  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417128"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacetypes-method"></a><span data-ttu-id="8b35a-102">ICorDebugComObjectValue::GetCachedInterfaceTypes — Metoda</span><span class="sxs-lookup"><span data-stu-id="8b35a-102">ICorDebugComObjectValue::GetCachedInterfaceTypes Method</span></span>
 <span data-ttu-id="8b35a-103">Udostępnia moduł wyliczający dla typów interfejsu, czy bieżący obiekt został rzutować lub używane jako.</span><span class="sxs-lookup"><span data-stu-id="8b35a-103">Provides an enumerator for the interface types that the current object has been cast to or used as.</span></span>  

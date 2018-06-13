@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414986"
 ---
 # <a name="icordebugilframe2remapfunction-method"></a><span data-ttu-id="00626-102">ICorDebugILFrame2::RemapFunction — Metoda</span><span class="sxs-lookup"><span data-stu-id="00626-102">ICorDebugILFrame2::RemapFunction Method</span></span>
 <span data-ttu-id="00626-103">Ponownie mapuje funkcję edytowany przez określenie nowego przesunięcie język pośredni (MSIL) firmy Microsoft</span><span class="sxs-lookup"><span data-stu-id="00626-103">Remaps an edited function by specifying the new Microsoft intermediate language (MSIL) offset</span></span>  

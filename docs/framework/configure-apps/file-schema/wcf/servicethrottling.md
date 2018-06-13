@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750170"
 ---
 # <a name="ltservicethrottlinggt"></a><span data-ttu-id="408cc-102">&lt;serviceThrottling&gt;</span><span class="sxs-lookup"><span data-stu-id="408cc-102">&lt;serviceThrottling&gt;</span></span>
 <span data-ttu-id="408cc-103">Określa mechanizm ograniczania przepustowości usługi Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="408cc-103">Specifies the throttling mechanism of a Windows Communication Foundation (WCF) service.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573724"
 ---
 # <a name="exception-throwing"></a>Wyrzucanie wyjątków
 Wytyczne zgłaszanie wyjątków opisanych w tej sekcji wymaga dobrej definicji znaczenie błąd wykonania. Niepowodzenie wykonania występuje zawsze, gdy element członkowski nie może wykonać, co zostało zaprojektowane w celu (co nazwa elementu członkowskiego oznacza). Na przykład jeśli `OpenFile` nie może zwracać dojście otwartego pliku do obiektu wywołującego, jego mogą być uważane za błąd wykonania.  

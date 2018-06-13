@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807970"
 ---
 # <a name="windows-service-host"></a>Host usług systemu Windows
 W tym przykładzie przedstawiono usługi Windows Communication Foundation (WCF), hostowana w usłudze zarządzanej systemu Windows. Usługi systemu Windows są kontrolowane za pomocą apletu usługi w **Panelu sterowania** i można je skonfigurować, aby uruchamiała się automatycznie po ponownym uruchomieniu systemu. Próbka składa się z programu klienckiego i program usługi systemu Windows. Usługa jest zaimplementowany jako program .exe i zawiera własną hostingu kod. W innych środowiskach hostingu, takich jak usługi aktywacji procesów systemu Windows (WAS) lub Internet Information Services (IIS), nie jest konieczne do pisania kodu hosting.  

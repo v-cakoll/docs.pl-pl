@@ -16,6 +16,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457408"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Sterty dużego obiektu w systemie Windows
 

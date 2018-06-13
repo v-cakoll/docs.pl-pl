@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594110"
 ---
 # <a name="mycomputerkeyboard-object"></a>My.Computer.Keyboard — Obiekt
 Dostarcza właściwości, aby uzyskać dostęp do bieżącego stanu klawiatury, takie jak co klucze są obecnie naciśnięty i udostępnia metodę Wyślij naciśnięcia klawiszy do aktywnego okna.  

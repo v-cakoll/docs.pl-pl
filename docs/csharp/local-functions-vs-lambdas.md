@@ -8,6 +8,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472610"
 ---
 # <a name="local-functions-compared-to-lambda-expressions"></a>Funkcje lokalne w porównaniu do wyrażenia lambda
 

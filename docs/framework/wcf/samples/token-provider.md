@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807817"
 ---
 # <a name="token-provider"></a>Dostawca tokenów
 W tym przykładzie pokazano, jak do zaimplementowania niestandardowego dostawcy tokenu. Dostawca tokenu w systemie Windows Communication Foundation (WCF) służy do podawania poświadczeń w celu zabezpieczenia infrastruktury. Dostawca tokenu ogólnie sprawdza obiektu docelowego i problemów odpowiednie poświadczenia, aby infrastruktura zabezpieczeń można zabezpieczyć komunikatu. Usługi WCF jest dostarczany z domyślnego dostawcy tokenu Menedżera poświadczeń. Usługi WCF jest także dostarczany z [!INCLUDE[infocard](../../../../includes/infocard-md.md)] dostawcy tokenu. Tokenów niestandardowi są przydatne w następujących przypadkach:  

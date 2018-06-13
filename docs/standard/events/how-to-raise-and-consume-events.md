@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572726"
 ---
 # <a name="how-to-raise-and-consume-events"></a>Porady: wywoływanie zdarzeń i korzystanie z nich
 Przykłady w tym temacie przedstawiają sposób pracy ze zdarzeniami. Obejmują one przykłady <xref:System.EventHandler> delegować, <xref:System.EventHandler%601> delegata i niestandardowych delegata, aby zilustrować zdarzenia z włączonymi i wyłączonymi danych.  

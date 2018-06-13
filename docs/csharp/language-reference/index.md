@@ -13,6 +13,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472506"
 ---
 # <a name="c-reference"></a>Odwołanie w C#
 Ta sekcja zawiera materiały informacyjne o C# słów kluczowych, operatory, znaki specjalne, dyrektywy preprocesora, opcje kompilatora i kompilatora błędy i ostrzeżenia.  

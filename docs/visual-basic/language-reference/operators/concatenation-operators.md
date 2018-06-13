@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597056"
 ---
 # <a name="concatenation-operators-visual-basic"></a>Concatenation — Operatory (Visual Basic)
 Poniżej przedstawiono operatory łączenia zdefiniowany w języku Visual Basic.  

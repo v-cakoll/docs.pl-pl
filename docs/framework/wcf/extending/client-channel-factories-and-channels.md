@@ -7,6 +7,7 @@ ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34483557"
 ---
 # <a name="client-channel-factories-and-channels"></a>Klienta: Fabryk kanałów i kanały
 W tym temacie omówiono tworzenie fabryki kanałów i kanały.  

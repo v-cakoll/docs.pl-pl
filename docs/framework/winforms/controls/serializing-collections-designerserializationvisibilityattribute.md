@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541301"
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>Porady: serializowanie kolekcji standardowych typów za pomocą DesignerSerializationVisibilityAttribute
 Kontrolki niestandardowe czasami powoduje to udostępnienie kolekcji jako właściwość. W tym przewodniku przedstawiono sposób użycia <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> klasę, aby kontrolować sposób kolekcji jest serializowany w czasie projektowania. Stosowanie <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> zapewnia wartość właściwości z kolekcji zostaną Zserializowane właściwości.  

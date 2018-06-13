@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266867"
 ---
 # <a name="into-c-reference"></a>into (odwołanie w C#)
 `into` Kontekstowe słowo kluczowe może służyć do tworzenia tymczasowego identyfikatora do przechowywania wyników [grupy](../../../csharp/language-reference/keywords/group-clause.md), [sprzężenia](../../../csharp/language-reference/keywords/join-clause.md) lub [wybierz](../../../csharp/language-reference/keywords/select-clause.md) klauzuli do nowego identyfikatora. Sam ten identyfikator może być generator zapytań dodatkowych poleceń. W przypadku używania w `group` lub `select` klauzuli, użyj nowego identyfikatora czasami nazywa się *kontynuacji*.  

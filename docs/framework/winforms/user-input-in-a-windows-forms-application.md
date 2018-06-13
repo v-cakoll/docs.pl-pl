@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538366"
 ---
 # <a name="user-input-in-a-windows-forms-application"></a>Wprowadzanie przez użytkownika w aplikacjach Windows Forms
 W formularzach systemu Windows dane wejściowe użytkownika są wysyłane do aplikacji w formie komunikatów systemu Windows. Szereg metod, które można przetworzyć tych wiadomości w aplikacji, formularz i sterować poziomem. Podczas tych metod odbieranie komunikatów myszy i klawiatury, zgłoś one zdarzenia, które są obsługiwane w celu uzyskania informacji na temat myszy lub klawiatury danych wejściowych. W wielu przypadkach aplikacji formularzy systemu Windows będzie można przetwarzać wszystkie dane wejściowe użytkownika za pomocą obsługi tych zdarzeń. W pozostałych przypadkach aplikacji może być konieczne zastąpienie jednej z metod, które przetwarzają wiadomości, aby przechwycić danego komunikatu, zanim aplikacja, formularz lub formant otrzymuje.  

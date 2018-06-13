@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539032"
 ---
 # <a name="advanced-ink-handling"></a>Zaawansowana obsługa atramentu
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Jest dostarczany z <xref:System.Windows.Controls.InkCanvas>, i jest elementem można umieścić w aplikacji, aby natychmiast uruchomić gromadzenie i wyświetlanie odręczne. Jednak jeśli <xref:System.Windows.Controls.InkCanvas> formant nie ma dostatecznie małe i poziom kontroli, można zachować kontrolę na wyższym poziomie, dostosowując własnych kolekcji odręczne i klasy renderowania odręczne przy użyciu <xref:System.Windows.Input.StylusPlugIns>.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539854"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>Porady: ustawianie kolejności tabulacji na formularzach systemu Windows
 Kolejność tabulacji to kolejność, w którym użytkownik przenosi fokus z jednego formantu do innego, naciskając klawisz TAB. Każdy formularz ma własną kolejności tabulacji. Domyślnie kolejność tabulacji jest taka sama jak kolejność, w której utworzono kontrolki. Kolejność tabulacji numerowanie rozpoczyna się od zera.  

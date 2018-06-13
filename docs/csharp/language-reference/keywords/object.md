@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267925"
 ---
 # <a name="object-c-reference"></a>object (odwołanie w C#)
 `object` Typu jest aliasem <xref:System.Object> w programie .NET Framework. W systemie typów ujednoliconego C#, wszystkie typy, typy referencyjne wstępnie zdefiniowanych i zdefiniowanych przez użytkownika i typów wartości, dziedziczy pośrednio ani bezpośrednio po <xref:System.Object>. Można przypisać wartości dowolnego typu do zmiennych typu `object`. Gdy zmienna typu wartości jest konwertowana na obiekt, jest określany jako *opakowany*. Gdy zmienna typu obiektu jest konwertowany na typ wartości, jest określany jako *rozpakowany*. Aby uzyskać więcej informacji, zobacz [opakowywanie i rozpakowywanie](../../../csharp/programming-guide/types/boxing-and-unboxing.md).  

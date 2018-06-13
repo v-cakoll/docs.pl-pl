@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527287"
 ---
 # <a name="matrix-representation-of-transformations"></a>Macierzowe przedstawienie przekształcenia
 M x n macierzy jest zbioru liczb ułożone w mln wierszy i kolumn n. Na poniższej ilustracji przedstawiono kilka macierzy.  

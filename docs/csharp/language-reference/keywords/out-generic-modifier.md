@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269617"
 ---
 # <a name="out-generic-modifier-c-reference"></a>out — Modyfikator ogólny (odwołanie w C#)
 Parametry typu ogólnego `out` — słowo kluczowe Określa, że parametr typu jest kowariantny. Można użyć `out` — słowo kluczowe w interfejsach i delegatów.  

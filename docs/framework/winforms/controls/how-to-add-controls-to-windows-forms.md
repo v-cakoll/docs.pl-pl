@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528480"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Porady: dodawanie formantów do formularzy systemu Windows
 Większość formularzy przez dodawanie formantów do powierzchni formularza do definiowania interfejsu użytkownika (UI). A *kontroli* jest składnikiem w formularzu używane do wyświetlania informacji i akceptowanie danych wejściowych użytkownika. Aby uzyskać więcej informacji na temat formantów, zobacz [formantów formularzy systemu Windows](../../../../docs/framework/winforms/controls/index.md).  

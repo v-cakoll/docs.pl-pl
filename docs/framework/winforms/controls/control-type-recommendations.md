@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528947"
 ---
 # <a name="control-type-recommendations"></a>Zalecenia dotyczące typu formantu
 .NET Framework zapewnia zasilania opracowanie i wdrożenie nowych formantów. Oprócz kontroli znanych użytkowników można będzie teraz okazać, że możliwość zapisywania Kontrolki niestandardowe własnych narysowania, a nawet mogą rozszerzyć funkcjonalność dysponujące przez dziedziczenie. Przy wyborze typu formantu, aby utworzyć może być mylące. W tej sekcji przedstawiono różnice między różnymi rodzajami formantów, z którego może dziedziczyć i zapewnia uwagi dotyczące typu do wyboru dla projektu.  

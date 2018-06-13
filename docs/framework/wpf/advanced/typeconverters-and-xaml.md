@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549685"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters i XAML
 W tym temacie przedstawiono celem konwersji typu z ciągu jako ogólne funkcji języka XAML. W programie .NET Framework <xref:System.ComponentModel.TypeConverter> klasy służy określonego celu jako część wdrożenia dla zarządzanej klasy niestandardowych, które mogą być używane jako wartości właściwości w języku XAML, użycie atrybutu. Jeśli zapisu niestandardowej klasy, a ma wystąpień klasy może być używany jako wartości można ustawić atrybutów pliku XAML, może być konieczne zastosowanie <xref:System.ComponentModel.TypeConverterAttribute> do własnej klasy zapisu niestandardowego <xref:System.ComponentModel.TypeConverter> lub klasę.  

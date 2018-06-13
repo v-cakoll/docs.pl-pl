@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532759"
 ---
 # <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Porady: iterowanie wszystkich węzłów kontrolki TreeView formularzy systemu Windows
 Czasami jest przydatne do sprawdzenia każdego węzła w formularzach systemu Windows <xref:System.Windows.Forms.TreeView> kontroli w celu wykonywania pewnych obliczeń na wartości węzła. Można wykonać tej operacji przy użyciu procedury cykliczne (metoda rekursywna w języku C# i C++), który iteruje po każdym węźle w każdej kolekcji drzewa.  

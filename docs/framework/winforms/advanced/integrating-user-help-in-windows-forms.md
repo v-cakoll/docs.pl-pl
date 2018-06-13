@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527226"
 ---
 # <a name="integrating-user-help-in-windows-forms"></a>Integrowanie pomocy użytkownika z formularzami systemu Windows
 Aspekt istotnych, ale często ich tworzenia aplikacji systemu Windows jest system pomocy, jak jest to, gdzie użytkownicy Włącz Pomoc w razy pomyłek. Formularze systemu Windows obsługuje dwa rodzaje pomocy, każda z podanych przez [helpprovider — składnik](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md). Pierwszy obejmuje wskazanie użytkownika do pliku Pomocy HTML lub 1 pomocy HTML. *x* lub większą. Drugi można wyświetlić krótki "Co to jest"-wpisz pomocy na pojedynczych formantów; jest to szczególnie przydatne w oknach dialogowych. Na tym samym formularzu można używać obu typów pomocy.  

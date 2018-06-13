@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551983"
 ---
 # <a name="how-to-get-or-set-canvas-positioning-properties"></a>Jak pobrać lub ustawić właściwości ustawienia kanwy
 Ten przykład przedstawia sposób użycia metody pozycjonowania <xref:System.Windows.Controls.Canvas> element, aby umieścić zawartość elementu podrzędnego. W tym przykładzie użyto zawartość <xref:System.Windows.Controls.ListBoxItem> do reprezentowania pozycjonowanie wartości i konwertuje wartości do wystąpienia <xref:System.Double>, który jest wymagany argument dla rozmieszczania. Wartości są następnie konwertowana do ciągów i wyświetlana jako tekst w <xref:System.Windows.Controls.TextBlock> elementu przy użyciu <xref:System.Windows.Controls.Canvas.GetLeft%2A> metody.  

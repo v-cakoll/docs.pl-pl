@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549412"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Oznaczanie zdarzenia trasowanego jako obsłużonego oraz obsługa klasy
 Programy obsługi dla kierowanego zdarzenia można oznaczyć zdarzeń przetwarzanych w ramach danych zdarzenia. Obsługa zdarzenia skutecznie skrócić trasy. Obsługa klasy to pojęcie programowania, który jest obsługiwany przez kierowane zdarzenia. Klasy obsługi ma możliwość obsługi określonego kierowanego zdarzenia na poziomie klasy z programem obsługi, które jest wywoływane przed wszystkie wystąpienia obsługi na dowolne wystąpienie klasy.  

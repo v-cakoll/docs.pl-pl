@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547839"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>Optymalizacja wydajności: układ i projekt
 Projekt sieci [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji może wpłynąć na jego wydajność, tworząc niepotrzebnego obciążenia obliczania układ i sprawdzanie poprawności odwołania do obiektów. Konstrukcja obiektów, szczególnie w czasie wykonywania mogą wpłynąć na charakterystykę wydajności aplikacji.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550780"
 ---
 # <a name="windows-in-wpf-applications"></a>Okna w aplikacjach WPF
 Użytkownicy korzystają z aplikacji za pośrednictwem systemu windows. Podstawowe celem okna jest hosta i wyświetlenie zawartości. Typ zawartości, że hosty okna zależy od typu danych, czy aplikacja działa przez, który może obejmować nośnika, Extensible Application Markup Language (XAML) strony, strony sieci Web, dokumentów, tabele bazy danych i rekordów i informacje o systemie.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552678"
 ---
 # <a name="how-to-create-listviewitems-with-a-checkbox"></a>Jak utworzyć ListViewItems za pomocą CheckBox
 W tym przykładzie przedstawiono sposób wyświetlania kolumny <xref:System.Windows.Controls.CheckBox> formantów w <xref:System.Windows.Controls.ListView> formant, który używa <xref:System.Windows.Controls.GridView>.  

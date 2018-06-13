@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549159"
 ---
 # <a name="dialog-boxes-overview"></a>Przegląd okien dialogowych
 Aplikacje autonomiczne zwykle mają okno główne zarówno powoduje wyświetlenie głównego danych za pośrednictwem której aplikacja działa i udostępnia funkcje do przetwarzania danych za pośrednictwem [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mechanizmów, takich jak paski menu, pasków narzędzi i paski stanu. — Prosta aplikacja może również wyświetlić dodatkowe okna, aby wykonać następujące czynności:  

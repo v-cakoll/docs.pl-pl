@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33287270"
 ---
 # <a name="static-c-reference"></a>static (odwołanie w C#)
 Użyj `static` modyfikator Aby zadeklarować statyczny element członkowski, który należy do samego typu, a nie z określonym obiektem. `static` Modyfikatora można używać z klasami, pola, metody, właściwości, operatory, zdarzeń i konstruktorów, ale nie można użyć z indeksatorów, finalizatory lub typu innego niż klasy. Aby uzyskać więcej informacji, zobacz [klasy statyczne i statycznych elementów członkowskich klasy](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  

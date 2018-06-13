@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530630"
 ---
 # <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a><span data-ttu-id="8f1ce-102">Porady: określanie, który węzeł TreeView został kliknięty (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="8f1ce-102">How to: Determine Which TreeView Node Was Clicked (Windows Forms)</span></span>
 <span data-ttu-id="8f1ce-103">Podczas pracy z formularzami Windows <xref:System.Windows.Forms.TreeView> typowych zadań jest sterowanie ustalenie, który węzeł został kliknięty i reagowania.</span><span class="sxs-lookup"><span data-stu-id="8f1ce-103">When working with the Windows Forms <xref:System.Windows.Forms.TreeView> control, a common task is to determine which node was clicked, and respond appropriately.</span></span>  

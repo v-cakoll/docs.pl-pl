@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538411"
 ---
 # <a name="mouse-capture-in-windows-forms"></a><span data-ttu-id="cb733-102">Przechwytywanie myszy w formularzach systemu Windows</span><span class="sxs-lookup"><span data-stu-id="cb733-102">Mouse Capture in Windows Forms</span></span>
 <span data-ttu-id="cb733-103">*Przechwytywanie myszy* odwołuje się do formantu wprowadzającymi polecenia myszy wszystkich danych wejściowych.</span><span class="sxs-lookup"><span data-stu-id="cb733-103">*Mouse capture* refers to when a control takes command of all mouse input.</span></span> <span data-ttu-id="cb733-104">Po przechwyceniu myszy formantu odbiera myszą czy kursor znajduje się w jej granicach.</span><span class="sxs-lookup"><span data-stu-id="cb733-104">When a control has captured the mouse, it receives mouse input whether or not the pointer is within its borders.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541551"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a><span data-ttu-id="5ad46-102">Związane z kodem i XAML w WPF</span><span class="sxs-lookup"><span data-stu-id="5ad46-102">Code-Behind and XAML in WPF</span></span>
 <a name="introduction"></a> <span data-ttu-id="5ad46-103">CodeBehind to termin używany do opisania kod, który jest połączony z obiektów zdefiniowanych przez kod znaczników, gdy [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strona jest skompilowana znaczników.</span><span class="sxs-lookup"><span data-stu-id="5ad46-103">Code-behind is a term used to describe the code that is joined with markup-defined objects, when a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] page is markup-compiled.</span></span> <span data-ttu-id="5ad46-104">W tym temacie opisano wymagania związane z kodem, a także mechanizm alternatywnych wbudowanego kodu dla kodu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5ad46-104">This topic describes requirements for code-behind as well as an alternative inline code mechanism for code in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526324"
 ---
 # <a name="how-to-add-toolstrip-items-dynamically"></a><span data-ttu-id="78b3b-102">Porady: dynamiczne dodawanie elementów ToolStrip</span><span class="sxs-lookup"><span data-stu-id="78b3b-102">How to: Add ToolStrip Items Dynamically</span></span>
 <span data-ttu-id="78b3b-103">Dynamiczne można wypełnić kolekcji elementów menu z <xref:System.Windows.Forms.ToolStrip> kontroli, gdy zostanie otwarte menu.</span><span class="sxs-lookup"><span data-stu-id="78b3b-103">You can dynamically populate the menu item collection of a <xref:System.Windows.Forms.ToolStrip> control when the menu opens.</span></span>  

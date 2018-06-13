@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538531"
 ---
 # <a name="tablelayoutpanel-control-windows-forms"></a><span data-ttu-id="fc37c-102">TableLayoutPanel — Formant (Formularze systemu Windows)</span><span class="sxs-lookup"><span data-stu-id="fc37c-102">TableLayoutPanel Control (Windows Forms)</span></span>
 <span data-ttu-id="fc37c-103"><xref:System.Windows.Forms.TableLayoutPanel> Kontroli rozmieszcza jego zawartość w siatce.</span><span class="sxs-lookup"><span data-stu-id="fc37c-103">The <xref:System.Windows.Forms.TableLayoutPanel> control arranges its contents in a grid.</span></span> <span data-ttu-id="fc37c-104">Ponieważ układ jest wykonywane zarówno w czasie projektowania i czas wykonywania, może zmieniać dynamicznie jako zmian środowiska aplikacji.</span><span class="sxs-lookup"><span data-stu-id="fc37c-104">Because the layout is performed both at design time and run time, it can change dynamically as the application environment changes.</span></span> <span data-ttu-id="fc37c-105">To umożliwia formantów w panelu proporcjonalnie zmiany rozmiaru, dlatego może odpowiadać na zmiany, takie jak zmiana rozmiaru kontrolki nadrzędnej lub tekst długość zmianę z powodu lokalizacji.</span><span class="sxs-lookup"><span data-stu-id="fc37c-105">This gives the controls in the panel the ability to proportionally resize, so it can respond to changes such as the parent control resizing or text length changing due to localization.</span></span>  

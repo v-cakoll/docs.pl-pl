@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527803"
 ---
 # <a name="handling-user-input"></a><span data-ttu-id="b3e85-102">Obsługa danych wejściowych użytkownika</span><span class="sxs-lookup"><span data-stu-id="b3e85-102">Handling User Input</span></span>
 <span data-ttu-id="b3e85-103">W tym temacie opisano głównego zdarzenia klawiatury i myszy pochodzącymi <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b3e85-103">This topic describes the main keyboard and mouse events provided by <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.</span></span> <span data-ttu-id="b3e85-104">Podczas obsługi zdarzenia, autorzy kontroli powinny zastępować chronionej `On` *EventName* zamiast dołączanie delegata zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="b3e85-104">When handling an event, control authors should override the protected `On`*EventName* method rather than attaching a delegate to the event.</span></span> <span data-ttu-id="b3e85-105">Przegląd zdarzeń, zobacz [wywoływanie zdarzeń od składnika](http://msdn.microsoft.com/library/9aebf605-a87d-470b-b7c8-f9abfc8360a0).</span><span class="sxs-lookup"><span data-stu-id="b3e85-105">For a review of events, see [Raising Events from a Component](http://msdn.microsoft.com/library/9aebf605-a87d-470b-b7c8-f9abfc8360a0).</span></span>  

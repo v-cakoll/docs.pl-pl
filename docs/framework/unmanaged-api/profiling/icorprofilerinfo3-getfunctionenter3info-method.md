@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459059"
 ---
 # <a name="icorprofilerinfo3getfunctionenter3info-method"></a><span data-ttu-id="16861-102">ICorProfilerInfo3::GetFunctionEnter3Info — Metoda</span><span class="sxs-lookup"><span data-stu-id="16861-102">ICorProfilerInfo3::GetFunctionEnter3Info Method</span></span>
 <span data-ttu-id="16861-103">Zawiera informacje ramki i argument stosu funkcji, która jest raportowany przez profiler [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md) funkcji.</span><span class="sxs-lookup"><span data-stu-id="16861-103">Provides the stack frame and argument information of the function that is being reported to the profiler by the [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md) function.</span></span> <span data-ttu-id="16861-104">Tę metodę można wywołać tylko podczas `FunctionEnter3WithInfo` wywołania zwrotnego.</span><span class="sxs-lookup"><span data-stu-id="16861-104">This method can be called only during the `FunctionEnter3WithInfo` callback.</span></span>  

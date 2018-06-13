@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446094"
 ---
 # <a name="lockclrversion-function"></a><span data-ttu-id="28855-102">LockClrVersion — Funkcja</span><span class="sxs-lookup"><span data-stu-id="28855-102">LockClrVersion Function</span></span>
 <span data-ttu-id="28855-103">Umożliwia hosta określić, która wersja środowisko uruchomieniowe języka wspólnego (CLR) będzie używany w ramach procesu przed jawnie inicjowania CLR.</span><span class="sxs-lookup"><span data-stu-id="28855-103">Allows the host to determine which version of the common language runtime (CLR) will be used within the process before explicitly initializing the CLR.</span></span>  

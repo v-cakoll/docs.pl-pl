@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447677"
 ---
 # <a name="imetadatadispenserexgetoption-method"></a><span data-ttu-id="15a14-102">IMetaDataDispenserEx::GetOption — Metoda</span><span class="sxs-lookup"><span data-stu-id="15a14-102">IMetaDataDispenserEx::GetOption Method</span></span>
 <span data-ttu-id="15a14-103">Pobiera wartość określonej opcji dla bieżącego zakresu metadanych.</span><span class="sxs-lookup"><span data-stu-id="15a14-103">Gets the value of the specified option for the current metadata scope.</span></span> <span data-ttu-id="15a14-104">Opcję określa sposób obsługi wywołania do bieżącego zakresu metadanych.</span><span class="sxs-lookup"><span data-stu-id="15a14-104">The option controls how calls to the current metadata scope are handled.</span></span>  

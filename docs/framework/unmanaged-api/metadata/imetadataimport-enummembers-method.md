@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447636"
 ---
 # <a name="imetadataimportenummembers-method"></a><span data-ttu-id="6e498-102">IMetaDataImport::EnumMembers — Metoda</span><span class="sxs-lookup"><span data-stu-id="6e498-102">IMetaDataImport::EnumMembers Method</span></span>
 <span data-ttu-id="6e498-103">Wylicza tokenów MemberDef reprezentujący elementy członkowskie określonego typu.</span><span class="sxs-lookup"><span data-stu-id="6e498-103">Enumerates MemberDef tokens representing members of the specified type.</span></span>  

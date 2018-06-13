@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450859"
 ---
 # <a name="icorprofilercallbackexceptioncatcherleave-method"></a><span data-ttu-id="23201-102">ICorProfilerCallback::ExceptionCatcherLeave — Metoda</span><span class="sxs-lookup"><span data-stu-id="23201-102">ICorProfilerCallback::ExceptionCatcherLeave Method</span></span>
 <span data-ttu-id="23201-103">Powiadamia profilera, że formant jest przekazywany z odpowiednią `catch` bloku.</span><span class="sxs-lookup"><span data-stu-id="23201-103">Notifies the profiler that control is being passed out of the appropriate `catch` block.</span></span>  

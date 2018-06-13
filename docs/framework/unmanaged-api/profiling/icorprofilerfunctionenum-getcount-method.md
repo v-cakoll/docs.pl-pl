@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453299"
 ---
 # <a name="icorprofilerfunctionenumgetcount-method"></a><span data-ttu-id="6e4f9-102">ICorProfilerFunctionEnum::GetCount — Metoda</span><span class="sxs-lookup"><span data-stu-id="6e4f9-102">ICorProfilerFunctionEnum::GetCount Method</span></span>
 <span data-ttu-id="6e4f9-103">Pobiera liczbę funkcji, które zostały załadowane do aplikacji lub Wymuś załadowanych przez profiler.</span><span class="sxs-lookup"><span data-stu-id="6e4f9-103">Gets the number of functions that were loaded by the application or forcibly loaded by the profiler.</span></span>  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443459"
 ---
 # <a name="modulebindinfo-structure"></a><span data-ttu-id="5749a-102">ModuleBindInfo — Struktura</span><span class="sxs-lookup"><span data-stu-id="5749a-102">ModuleBindInfo Structure</span></span>
 <span data-ttu-id="5749a-103">Zawiera szczegółowe informacje o module przywoływany i zestawu, który go zawiera.</span><span class="sxs-lookup"><span data-stu-id="5749a-103">Provides detailed information about the referenced module and the assembly that contains it.</span></span>  

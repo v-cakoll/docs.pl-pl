@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548269"
 ---
 # <a name="relativesource-markupextension"></a><span data-ttu-id="5d5c5-102">RelativeSource MarkupExtension</span><span class="sxs-lookup"><span data-stu-id="5d5c5-102">RelativeSource MarkupExtension</span></span>
 <span data-ttu-id="5d5c5-103">Określa właściwości <xref:System.Windows.Data.RelativeSource> źródle powiązania do użycia w [powiązania — rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/binding-markup-extension.md), lub gdy ustawienie <xref:System.Windows.Data.Binding.RelativeSource%2A> właściwość <xref:System.Windows.Data.Binding> elementu w języku XAML.</span><span class="sxs-lookup"><span data-stu-id="5d5c5-103">Specifies properties of a <xref:System.Windows.Data.RelativeSource> binding source, to be used within a [Binding Markup Extension](../../../../docs/framework/wpf/advanced/binding-markup-extension.md), or when setting the <xref:System.Windows.Data.Binding.RelativeSource%2A> property of a <xref:System.Windows.Data.Binding> element established in XAML.</span></span>  

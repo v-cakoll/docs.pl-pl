@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448223"
 ---
 # <a name="imetadataemitgettokenfromsig-method"></a><span data-ttu-id="42118-102">IMetaDataEmit::GetTokenFromSig — Metoda</span><span class="sxs-lookup"><span data-stu-id="42118-102">IMetaDataEmit::GetTokenFromSig Method</span></span>
 <span data-ttu-id="42118-103">Pobiera token podpisu określonych metadanych.</span><span class="sxs-lookup"><span data-stu-id="42118-103">Gets a token for the specified metadata signature.</span></span>  

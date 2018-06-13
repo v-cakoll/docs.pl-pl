@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454435"
 ---
 # <a name="icorprofilerinfo2getstaticfieldinfo-method"></a><span data-ttu-id="d2692-102">ICorProfilerInfo2::GetStaticFieldInfo — Metoda</span><span class="sxs-lookup"><span data-stu-id="d2692-102">ICorProfilerInfo2::GetStaticFieldInfo Method</span></span>
 <span data-ttu-id="d2692-103">Pobiera wartość wskazującą, rodzaj statyczną, która ma zastosowanie do określonego pola.</span><span class="sxs-lookup"><span data-stu-id="d2692-103">Gets a value that indicates the kind of static that applies to the specified field.</span></span>  

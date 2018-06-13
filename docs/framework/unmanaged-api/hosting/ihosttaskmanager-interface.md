@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449067"
 ---
 # <a name="ihosttaskmanager-interface"></a><span data-ttu-id="3a911-102">IHostTaskManager — Interfejs</span><span class="sxs-lookup"><span data-stu-id="3a911-102">IHostTaskManager Interface</span></span>
 <span data-ttu-id="3a911-103">Udostępnia metody umożliwiające środowisko uruchomieniowe języka wspólnego (CLR) do pracy z zadaniami za pośrednictwem hosta zamiast przy użyciu funkcji wątki lub włókna standardowy system operacyjny.</span><span class="sxs-lookup"><span data-stu-id="3a911-103">Provides methods that allow the common language runtime (CLR) to work with tasks through the host instead of using the standard operating system threading or fiber functions.</span></span>  

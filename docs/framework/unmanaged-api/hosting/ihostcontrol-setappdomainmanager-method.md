@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441877"
 ---
 # <a name="ihostcontrolsetappdomainmanager-method"></a><span data-ttu-id="bd021-102">IHostControl::SetAppDomainManager — Metoda</span><span class="sxs-lookup"><span data-stu-id="bd021-102">IHostControl::SetAppDomainManager Method</span></span>
 <span data-ttu-id="bd021-103">Powiadamia hosta utworzono domeny aplikacji.</span><span class="sxs-lookup"><span data-stu-id="bd021-103">Notifies the host that an application domain has been created.</span></span>  

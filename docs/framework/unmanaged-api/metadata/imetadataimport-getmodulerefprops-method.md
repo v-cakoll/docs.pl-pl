@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447048"
 ---
 # <a name="imetadataimportgetmodulerefprops-method"></a><span data-ttu-id="c09c7-102">IMetaDataImport::GetModuleRefProps — Metoda</span><span class="sxs-lookup"><span data-stu-id="c09c7-102">IMetaDataImport::GetModuleRefProps Method</span></span>
 <span data-ttu-id="c09c7-103">Pobiera nazwę modułu odwołuje się token określonych metadanych.</span><span class="sxs-lookup"><span data-stu-id="c09c7-103">Gets the name of the module referenced by the specified metadata token.</span></span>  

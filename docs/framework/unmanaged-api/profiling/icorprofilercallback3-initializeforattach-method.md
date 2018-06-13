@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455804"
 ---
 # <a name="icorprofilercallback3initializeforattach-method"></a><span data-ttu-id="e7dd5-102">ICorProfilerCallback3::InitializeForAttach — Metoda</span><span class="sxs-lookup"><span data-stu-id="e7dd5-102">ICorProfilerCallback3::InitializeForAttach Method</span></span>
 <span data-ttu-id="e7dd5-103">Wywoływane przez środowisko uruchomieniowe języka wspólnego (CLR), aby zapewnić możliwość zainicjować stanu po operacji dołączania profilera.</span><span class="sxs-lookup"><span data-stu-id="e7dd5-103">Called by the common language runtime (CLR) to give the profiler an opportunity to initialize its state after an attach operation.</span></span>  

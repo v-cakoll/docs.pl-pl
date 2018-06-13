@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449289"
 ---
 # <a name="imetadataassemblyimportfindassembliesbyname-method"></a><span data-ttu-id="d08a7-102">IMetaDataAssemblyImport::FindAssembliesByName — Metoda</span><span class="sxs-lookup"><span data-stu-id="d08a7-102">IMetaDataAssemblyImport::FindAssembliesByName Method</span></span>
 <span data-ttu-id="d08a7-103">Pobiera tablicę zestawy z określonym `szAssemblyName` parametr, przy użyciu standardowych zasad stosowanych przez środowisko uruchomieniowe języka wspólnego (CLR) do rozpoznawania odwołań.</span><span class="sxs-lookup"><span data-stu-id="d08a7-103">Gets an array of assemblies with the specified `szAssemblyName` parameter, using the standard rules employed by the common language runtime (CLR) for resolving references.</span></span>  

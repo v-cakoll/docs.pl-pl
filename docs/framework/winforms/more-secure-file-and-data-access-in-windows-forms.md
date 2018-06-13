@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541901"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a><span data-ttu-id="3ad88-102">Bezpieczniejszy dostęp do plików i danych w formularzach systemu Windows</span><span class="sxs-lookup"><span data-stu-id="3ad88-102">More Secure File and Data Access in Windows Forms</span></span>
 <span data-ttu-id="3ad88-103">[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Używa uprawnień w celu ochrony zasobów i danych.</span><span class="sxs-lookup"><span data-stu-id="3ad88-103">The [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] uses permissions to help protect resources and data.</span></span> <span data-ttu-id="3ad88-104">Gdy aplikacja może odczytu lub zapisu danych zależy od uprawnienia do aplikacji.</span><span class="sxs-lookup"><span data-stu-id="3ad88-104">Where your application can read or write data depends on the permissions granted to the application.</span></span> <span data-ttu-id="3ad88-105">Po uruchomieniu aplikacji w środowisku częściowej relacji zaufania, może nie mieć dostępu do danych mogą też zmienić sposób dostępu do danych.</span><span class="sxs-lookup"><span data-stu-id="3ad88-105">When your application runs in a partial trust environment, you might not have access to your data or you might have to change the way you access the data.</span></span>  

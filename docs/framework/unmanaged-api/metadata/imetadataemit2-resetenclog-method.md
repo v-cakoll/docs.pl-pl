@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449419"
 ---
 # <a name="imetadataemit2resetenclog-method"></a><span data-ttu-id="a4c04-102">IMetaDataEmit2::ResetENCLog — Metoda</span><span class="sxs-lookup"><span data-stu-id="a4c04-102">IMetaDataEmit2::ResetENCLog Method</span></span>
 <span data-ttu-id="a4c04-103">Resetuje dziennika edit-and-continue i rozpoczęcie nowej sesji.</span><span class="sxs-lookup"><span data-stu-id="a4c04-103">Resets the edit-and-continue log and starts a new session.</span></span>  

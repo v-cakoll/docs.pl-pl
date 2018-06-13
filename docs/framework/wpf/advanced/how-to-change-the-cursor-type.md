@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543396"
 ---
 # <a name="how-to-change-the-cursor-type"></a><span data-ttu-id="8ecfa-102">Jak zmienić typ kursora</span><span class="sxs-lookup"><span data-stu-id="8ecfa-102">How to: Change the Cursor Type</span></span>
 <span data-ttu-id="8ecfa-103">W tym przykładzie pokazano, jak zmienić <xref:System.Windows.Input.Cursor> wskaźnika myszy dla określonego elementu i aplikacji.</span><span class="sxs-lookup"><span data-stu-id="8ecfa-103">This example shows how to change the <xref:System.Windows.Input.Cursor> of the mouse pointer for a specific element and for the application.</span></span>  

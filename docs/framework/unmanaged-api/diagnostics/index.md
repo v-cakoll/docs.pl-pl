@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425005"
 ---
 # <a name="diagnostics-symbol-store-unmanaged-api-reference"></a><span data-ttu-id="d9ec6-102">Magazyn symboli diagnostycznych (Niezarządzany wykaz interfejsów API)</span><span class="sxs-lookup"><span data-stu-id="d9ec6-102">Diagnostics Symbol Store (Unmanaged API Reference)</span></span>
 <span data-ttu-id="d9ec6-103">API magazynu symboli diagnostycznych umożliwia kompilatorowi generowanie informacji o symbolach do użycia przez debuger.</span><span class="sxs-lookup"><span data-stu-id="d9ec6-103">The diagnostics symbol store API enables a compiler to generate symbol information for use by a debugger.</span></span>  

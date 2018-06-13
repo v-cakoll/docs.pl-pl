@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451145"
 ---
 # <a name="icorprofilercallbackexceptionclrcatcherexecute-method"></a><span data-ttu-id="0a024-102">ICorProfilerCallback::ExceptionCLRCatcherExecute — Metoda</span><span class="sxs-lookup"><span data-stu-id="0a024-102">ICorProfilerCallback::ExceptionCLRCatcherExecute Method</span></span>
 <span data-ttu-id="0a024-103">Wywoływane, gdy `catch` zablokować dla wyjątku jest wykonywana wewnątrz środowisko uruchomieniowe języka wspólnego (CLR) samej siebie.</span><span class="sxs-lookup"><span data-stu-id="0a024-103">Called when a `catch` block for an exception is executed inside the common language runtime (CLR) itself.</span></span> <span data-ttu-id="0a024-104">Ta metoda jest przestarzała w programie .NET Framework w wersji 2.0.</span><span class="sxs-lookup"><span data-stu-id="0a024-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  

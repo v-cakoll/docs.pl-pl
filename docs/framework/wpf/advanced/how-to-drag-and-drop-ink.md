@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543205"
 ---
 # <a name="how-to-drag-and-drop-ink"></a><span data-ttu-id="29540-102">Jak przeciągnąć i opuścić atrament</span><span class="sxs-lookup"><span data-stu-id="29540-102">How to: Drag and Drop Ink</span></span>
 ## <a name="example"></a><span data-ttu-id="29540-103">Przykład</span><span class="sxs-lookup"><span data-stu-id="29540-103">Example</span></span>  

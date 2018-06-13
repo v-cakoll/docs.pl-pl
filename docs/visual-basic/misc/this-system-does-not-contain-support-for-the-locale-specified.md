@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639776"
 ---
 # <a name="this-system-does-not-contain-support-for-the-locale-specified"></a><span data-ttu-id="79727-102">Ten system nie obsługuje podanych ustawień regionalnych</span><span class="sxs-lookup"><span data-stu-id="79727-102">This system does not contain support for the Locale specified</span></span>
 <span data-ttu-id="79727-103">Próbujesz użyć `VbStrConv` wyliczenia, ale system nie obsługuje określonych ustawień regionalnych.</span><span class="sxs-lookup"><span data-stu-id="79727-103">You are attempting to use the `VbStrConv` enumeration, but your system does not support the specified locale.</span></span>  

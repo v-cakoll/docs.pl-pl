@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524586"
 ---
 # <a name="regions-in-gdi"></a><span data-ttu-id="9f737-102">Regiony w GDI+</span><span class="sxs-lookup"><span data-stu-id="9f737-102">Regions in GDI+</span></span>
 <span data-ttu-id="9f737-103">Region jest częścią obszaru wyświetlania urządzenia wyjściowego.</span><span class="sxs-lookup"><span data-stu-id="9f737-103">A region is a portion of the display area of an output device.</span></span> <span data-ttu-id="9f737-104">Regiony może być prosty (pojedynczy prostokąt) lub złożonych (kombinacja wielokątów i krzywych zamknięte).</span><span class="sxs-lookup"><span data-stu-id="9f737-104">Regions can be simple (a single rectangle) or complex (a combination of polygons and closed curves).</span></span> <span data-ttu-id="9f737-105">Na poniższej ilustracji przedstawiono dwóch regionach: jeden utworzone na podstawie prostokąt i innych utworzone na podstawie ścieżki.</span><span class="sxs-lookup"><span data-stu-id="9f737-105">The following illustration shows two regions: one constructed from a rectangle, and the other constructed from a path.</span></span>  

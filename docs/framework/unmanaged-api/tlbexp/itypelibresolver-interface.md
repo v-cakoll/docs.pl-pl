@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454850"
 ---
 # <a name="itypelibresolver-interface"></a><span data-ttu-id="ce5b7-102">ITypeLibResolver — Interfejs</span><span class="sxs-lookup"><span data-stu-id="ce5b7-102">ITypeLibResolver Interface</span></span>
 <span data-ttu-id="ce5b7-103">Udostępnia [ResolveTypeLib — metoda](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md), który jest rozpoznawany jako ścieżkę pliku biblioteki typów.</span><span class="sxs-lookup"><span data-stu-id="ce5b7-103">Provides the [ResolveTypeLib method](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md), which resolves the file path of a type library.</span></span>  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449028"
 ---
 # <a name="imetadatainfo-interface"></a><span data-ttu-id="8a9eb-102">IMetaDataInfo — Interfejs</span><span class="sxs-lookup"><span data-stu-id="8a9eb-102">IMetaDataInfo Interface</span></span>
 <span data-ttu-id="8a9eb-103">Udostępnia metody, która pobiera informacje o mapowaniu metadanych z pliku na dysku do pamięci.</span><span class="sxs-lookup"><span data-stu-id="8a9eb-103">Provides a method that gets information about the mapping of metadata from an on-disk file into memory.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445494"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a><span data-ttu-id="83ad5-102">IMetaDataEmit::DefineTypeRefByName — Metoda</span><span class="sxs-lookup"><span data-stu-id="83ad5-102">IMetaDataEmit::DefineTypeRefByName Method</span></span>
 <span data-ttu-id="83ad5-103">Pobiera token metadanych dla typu, który jest zdefiniowany w określonym zakresie znajduje się poza bieżącym zakresem.</span><span class="sxs-lookup"><span data-stu-id="83ad5-103">Gets a metadata token for a type that is defined in the specified scope, which is outside the current scope.</span></span>  

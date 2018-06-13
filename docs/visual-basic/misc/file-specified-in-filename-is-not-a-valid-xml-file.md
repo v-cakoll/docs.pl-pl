@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639191"
 ---
 # <a name="file-specified-in-filename-is-not-a-valid-xml-file"></a><span data-ttu-id="3d247-102">Plik określony w nazwie pliku nie jest prawidłowym plikiem XML</span><span class="sxs-lookup"><span data-stu-id="3d247-102">File specified in FileName is not a valid XML file</span></span>
 <span data-ttu-id="3d247-103">Nazwa pliku, który został dostarczony nie jest prawidłowym plikiem XML.</span><span class="sxs-lookup"><span data-stu-id="3d247-103">The file name that you supplied is not a valid XML file.</span></span> <span data-ttu-id="3d247-104">Aby określić dozwolonych struktury i zawartości dokumentu XML, można użyć definicji typu dokumentu (DTD), schemat Microsoft XML-danych (XDR) lub schematu schematu XML definition language (XSD).</span><span class="sxs-lookup"><span data-stu-id="3d247-104">To specify the allowed structure and content of an XML document, you can use a Document Type Definition (DTD), a Microsoft XML-Data Reduced (XDR) schema, or an XML Schema definition language (XSD) schema.</span></span> <span data-ttu-id="3d247-105">Schematy XSD jest preferowany sposób, aby określić gramatyki XML w [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3d247-105">XSD schemas are the preferred way to specify XML grammars in the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span></span>  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459342"
 ---
 # <a name="publickeyblob-structure"></a><span data-ttu-id="00af8-102">PublicKeyBlob — Struktura</span><span class="sxs-lookup"><span data-stu-id="00af8-102">PublicKeyBlob Structure</span></span>
 <span data-ttu-id="00af8-103">Reprezentuje w formacie binarnym, klucz publiczny pary kluczy publiczny/prywatny.</span><span class="sxs-lookup"><span data-stu-id="00af8-103">Represents, in binary format, the public key of a public/private key pair.</span></span>  

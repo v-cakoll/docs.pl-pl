@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446771"
 ---
 # <a name="ihostsyncmanagercreatecrstwithspincount-method"></a><span data-ttu-id="ea54a-102">IHostSyncManager::CreateCrstWithSpinCount — Metoda</span><span class="sxs-lookup"><span data-stu-id="ea54a-102">IHostSyncManager::CreateCrstWithSpinCount Method</span></span>
 <span data-ttu-id="ea54a-103">Tworzy obiekt sekcja krytyczna z licznikiem pokrętła do synchronizacji.</span><span class="sxs-lookup"><span data-stu-id="ea54a-103">Creates a critical section object with spin count for synchronization.</span></span>  

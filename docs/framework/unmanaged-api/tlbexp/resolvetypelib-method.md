@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460844"
 ---
 # <a name="resolvetypelib-method"></a><span data-ttu-id="86504-102">ResolveTypeLib — Metoda</span><span class="sxs-lookup"><span data-stu-id="86504-102">ResolveTypeLib Method</span></span>
 <span data-ttu-id="86504-103">Rozpoznaje prostą nazwę biblioteki typów, przywracając jego w pełni kwalifikowaną ścieżkę.</span><span class="sxs-lookup"><span data-stu-id="86504-103">Resolves the simple name of a type library by returning its fully qualified path.</span></span>  

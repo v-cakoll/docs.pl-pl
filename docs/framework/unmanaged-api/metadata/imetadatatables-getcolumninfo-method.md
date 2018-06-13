@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448084"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a><span data-ttu-id="720d7-102">IMetaDataTables::GetColumnInfo — Metoda</span><span class="sxs-lookup"><span data-stu-id="720d7-102">IMetaDataTables::GetColumnInfo Method</span></span>
 <span data-ttu-id="720d7-103">Pobiera dane o określonej kolumny w określonej tabeli.</span><span class="sxs-lookup"><span data-stu-id="720d7-103">Gets data about the specified column in the specified table.</span></span>  

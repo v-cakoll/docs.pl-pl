@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447610"
 ---
 # <a name="corsavesize-enumeration"></a><span data-ttu-id="8d276-102">CorSaveSize — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="8d276-102">CorSaveSize Enumeration</span></span>
 <span data-ttu-id="8d276-103">Zawiera wartość wskazującą poziom dokładności wymagane podczas wykonywania zapytania dotyczącego rozmiar zapisywania operacji.</span><span class="sxs-lookup"><span data-stu-id="8d276-103">Contains values indicating the level of precision required when querying for the size of a save operation.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536962"
 ---
 # <a name="resizing-columns-and-rows-in-the-windows-forms-datagridview-control"></a>Zmiana rozmiaru wierszy i kolumn w formancie DataGridView formularzy systemu Windows
 `DataGridView` Kontroli udostępnia wiele opcji dostosowywania zachowanie ustalania rozmiaru kolumn i wierszy. Zazwyczaj `DataGridView` rozmiary komórki nie są zmieniane na podstawie ich zawartości. Zamiast tego należy ich Przytnij żadnych wartości wyświetlania, która jest większa niż komórki. Jeśli zawartość może być wyświetlana jako ciąg, komórki wyświetla go w etykietce narzędzia.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760482"
 ---
 # <a name="adonet-entity-framework"></a>Program Entity Framework na platformie ADO.NET
 [Msdn.com/data/ef](http://msdn.microsoft.com/data/ef) lokacja działa teraz głównej lokalizacji zawartości programu Entity Framework.  

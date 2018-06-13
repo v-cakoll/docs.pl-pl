@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506496"
 ---
 # <a name="usage-of-standard-endpoints"></a>Użycie standardowych punktów końcowych
 W tym przykładzie przedstawiono sposób użycia standardowych punktów końcowych w plikach konfiguracji usługi. Standardowy punkt końcowy umożliwia użytkownikowi uprościć definicje punktu końcowego za pomocą jednej właściwości do opisywania address, binding i contract kombinacji z dodatkowe właściwości skojarzone z nim. W tym przykładzie przedstawiono sposób definiowania i implementować niestandardowe standardowy punkt końcowy oraz do definiowania właściwości specyficzne dla punktu końcowego.  

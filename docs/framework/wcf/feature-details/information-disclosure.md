@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495986"
 ---
 # <a name="information-disclosure"></a>Ujawnianie informacji
 Ujawnienie informacji umożliwia osobie atakującej uzyskanie cennych informacji na temat systemu. W związku z tym zawsze należy wziąć pod uwagę jakie informacje są ujawniania i czy mogą być używane przez złośliwego użytkownika. Poniżej przedstawiono informacje o możliwych ataków ujawnienie i zapewnia środki zaradcze dla każdego.  

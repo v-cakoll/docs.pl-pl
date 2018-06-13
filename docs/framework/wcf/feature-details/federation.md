@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496766"
 ---
 # <a name="federation"></a>Federacja
 Ten temat zawiera krótki przegląd koncepcji zabezpieczeń. Omówiono także obsługa wdrażania architektury zabezpieczeń systemu Windows Communication Foundation (WCF). Przykładową aplikację prezentującą federacyjnego, zobacz [Federacja — przykład](../../../../docs/framework/wcf/samples/federation-sample.md).  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538474"
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a>HScrollBar i VScrollBar — Informacje o formantach (Formularze systemu Windows)
 Formularze systemu Windows <xref:System.Windows.Forms.ScrollBar> formantów służą do zapewniania nawigację za pośrednictwem długą listę elementów lub duża ilość informacji, albo przewijanie w poziomie lub pionie w aplikacji lub kontrolki. Paski przewijania są wspólnego elementu interfejsu systemu Windows, więc <xref:System.Windows.Forms.ScrollBar> kontroli jest często używana z formantami, które nie pochodzą z <xref:System.Windows.Forms.ScrollableControl> klasy. Podobnie wielu deweloperów wybierz uwzględnienie <xref:System.Windows.Forms.ScrollBar> sterowania w przypadku tworzenia własne kontrolki użytkownika.  

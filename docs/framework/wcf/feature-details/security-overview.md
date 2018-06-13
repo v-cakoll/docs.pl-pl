@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505684"
 ---
 # <a name="security-overview"></a>Przegląd zabezpieczeń
 Windows Communication Foundation (WCF) jest SOAP oparta na komunikatach rozproszonej programowania platformy i zabezpieczanie komunikatów między klientami i usługami jest niezbędne do ochrony danych. Usługi WCF zapewnia platformę elastyczne i interoperacyjne wymiany zabezpieczonych wiadomości na podstawie zarówno istniejącej infrastruktury zabezpieczeń i standardów zabezpieczeń rozpoznanym wiadomości protokołu SOAP.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496922"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delegowanie i personifikacja za pomocą programu WCF
 *Personifikacja* to technika wspólnego, która usługi umożliwia ograniczenie dostępu klienta do domeny usługi zasobów. Zasoby domeny usługi może być maszyny zasoby, takie jak pliki lokalne (Personifikacja) lub zasobów na innym komputerze, na przykład do udziału plików (delegowanie uprawnień). Przykładową aplikację, zobacz [Personifikowanie klienta](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Na przykład sposobu użycia personifikacji zobacz [porady: personifikowania klienta w usłudze](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537723"
 ---
 # <a name="how-to-stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-windows-forms"></a>Porady: rozciąganie ToolStripTextBox w celu uzupełnienia szerokości ToolStrip (Formularze systemu Windows)
 Podczas ustawiania <xref:System.Windows.Forms.ToolStrip.Stretch%2A> właściwość <xref:System.Windows.Forms.ToolStrip> formant `true`, formantu wypełnia jego kontenera od końca do końca i zmienia rozmiar w przypadku jego kontenera zmienia rozmiar. Ta konfiguracja może być przydatne do rozciągania elementu w formancie, takich jak <xref:System.Windows.Forms.ToolStripTextBox>, w celu wypełnienia dostępnego miejsca, jak i rozmiaru, gdy zmienia rozmiar formantu. Rozciąganie ten jest przydatne, na przykład, jeśli chcesz osiągnąć wygląd i zachowanie jest podobne do paska adresu w programie Microsoft® Internet Explorer.  

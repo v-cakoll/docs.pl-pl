@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501697"
 ---
 # <a name="using-impersonation-with-transport-security"></a>Korzystanie z personifikacji z zabezpieczeniami transportu
 *Personifikacja* to funkcja aplikacji serwera do podjęcia tożsamości klienta. Jest typowe dla usługi, aby podczas sprawdzania dostępu do zasobów należy używać personifikacji. Aplikacja zostanie uruchomiona przy użyciu konta usługi, ale gdy serwer akceptuje połączenia klienta, personifikuje klienta, dzięki czemu kontroli dostępu są wykonywane przy użyciu poświadczeń klienta. Zabezpieczenia transportu jest to mechanizm przekazywania poświadczeń i zabezpieczania komunikacji przy użyciu tych poświadczeń. W tym temacie opisano, za pomocą zabezpieczeń transportu w systemie Windows Communication Foundation (WCF) z funkcją personifikacji. Aby uzyskać więcej informacji o personifikacji korzystanie z zabezpieczeń komunikatów, zobacz [delegowanie i personifikacja](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  

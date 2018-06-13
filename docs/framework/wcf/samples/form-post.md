@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503766"
 ---
 # <a name="form-post"></a>Przesłanie formularza
 W tym przykładzie pokazano, jak rozszerzyć WCF modelu programowania INTERFEJSU REST do obsługi nowych formatów żądania przychodzące. Przykład obejmuje również implementacja element formatujący może zdeserializować żądania post formularza HTML do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typu. Ponadto próbki używa szablonu T4, aby powrócić do strony HTML, który zapewnia formularza HTML, który użytkownicy mogą post do usługi WCF REST.  

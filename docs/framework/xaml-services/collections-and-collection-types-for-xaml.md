@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562979"
 ---
 # <a name="collections-and-collection-types-for-xaml"></a>Kolekcje i typy kolekcji dla XAML
 W tym temacie opisano sposób definiowania właściwości typów, które są przeznaczone do obsługi kolekcji, a także do obsługi składni języka XAML dla wystąpienia elementy kolekcji jako elementy podrzędne elementu nadrzędnego obiektu lub właściwości elementu.  

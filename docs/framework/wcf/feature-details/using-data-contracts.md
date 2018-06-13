@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503727"
 ---
 # <a name="using-data-contracts"></a>Używanie kontraktów danych
 A *kontraktu danych* jest umową posiadanie między usługą i klienta, który abstrakcyjnie opisuje dane były wymieniane. Oznacza to, że do komunikacji, klient i usługa nie masz do udostępniania tego samego typu, tylko tej samej kontraktów danych. Mówiąc definiuje kontrakt danych, dla każdego typu parametr lub zwracane, jakie dane jest serializowany (zamieniło XML) aby wymienić.  

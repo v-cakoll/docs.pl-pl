@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507116"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Omówienie modelu programowania usług HTTP w sieci Web przy użyciu programu WCF
 Model programowania protokołu HTTP sieci WEB Windows Communication Foundation (WCF) zapewnia podstawowe elementy wymagane do tworzenia usług HTTP w sieci WEB za pomocą usługi WCF. Usługi WCF WEB HTTP można uzyskać dostęp przez szeroki zakres możliwości klientów, w tym przeglądarki sieci Web i mają następujące wymagania:  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504201"
 ---
 # <a name="uritemplate-table-sample"></a>Przykład tabeli UriTemplate
 <xref:System.UriTemplateTable> Klasa udostępnia struktury tabeli asocjacyjnej słownika podobne do pracy z zestawem `UriTemplate` wystąpień. Określone Uniform Resource Identifier (URI) może być dopasowana wydajnie wszystkie szablony w tabeli, a można pobrać danych skojarzone z szablonem dopasowany.  

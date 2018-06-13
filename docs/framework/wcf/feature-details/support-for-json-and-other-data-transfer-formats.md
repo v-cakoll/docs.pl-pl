@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497519"
 ---
 # <a name="support-for-json-and-other-data-transfer-formats"></a>Obsługa formatu JSON i innych formatów transferowania danych
 JSON (JavaScript Object Notation) jest format kodowania danych wydajne umożliwiający szybkie wymianę niewielkich ilości danych między przeglądarki klienta i AJAX (asynchronicznego JavaScript i XML)-włączone usługi sieci Web.  

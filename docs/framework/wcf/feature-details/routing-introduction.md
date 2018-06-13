@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496867"
 ---
 # <a name="routing-introduction"></a>Wprowadzenie do routingu
 Usługa routingu zawiera ogólne podłączany SOAP pośredniczące umożliwiającej przesyłania wiadomości, na podstawie zawartości wiadomości. Usługa routingu umożliwia tworzenie złożonej logiki routingu, która umożliwia Implementowanie scenariuszy, takich jak usługi agregacji, przechowywanie wersji usługi routingu priorytet i routing multiemisji. Usługa routingu znajdują się również błąd obsługi, który pozwala zdefiniować listę kopii zapasowych punktów końcowych, do której komunikaty są wysyłane, jeśli wystąpi błąd podczas wysyłania do głównej docelowego punktu końcowego.  

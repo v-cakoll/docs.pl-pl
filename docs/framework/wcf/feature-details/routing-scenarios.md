@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496155"
 ---
 # <a name="routing-scenarios"></a>Scenariusze routingu
 Usługa routingu jest w dużym stopniu dostosowywane, może być trudne do projektowania wydajne logiki routingu, podczas tworzenia nowej konfiguracji od początku.  Istnieje jednak kilka typowych scenariuszy, które należy wykonać w większości konfiguracji usługa routingu. Gdy te scenariusze mogą jednak nie dotyczyć bezpośrednio do określonej konfiguracji, zrozumienie, jak można skonfigurować usługi routingu w celu obsługi tych scenariuszy będzie pomocy można w opis usługi routingu.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498306"
 ---
 # <a name="using-contracts-in-workflow"></a>Używanie kontraktów w przepływie pracy
 Podczas wdrażania usługi, należy określić numer kontraktów opisujących usługę i wysyła i odbiera dane. Dane są reprezentowane jako kontraktów danych i kontrakty komunikatu; usługi WCF, zarówno i przepływu pracy Użyj definicje kontraktu danych kontraktu i wiadomości jako części opisy usług. Sama usługa przedstawia metadanych (w formie WSDL) w celu opisania działania usługi. W programie WCF kontraktów usług i kontrakty operacji definiują usługi i operacje, które obsługuje. Jednak w usłudze przepływu pracy, umowy te są częścią procesu biznesowego. są one widoczne w metadanych przez proces, nazywany wnioskowania kontraktu.  

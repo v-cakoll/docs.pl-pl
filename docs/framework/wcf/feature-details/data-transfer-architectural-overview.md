@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497068"
 ---
 # <a name="data-transfer-architectural-overview"></a>Omówienie architektury transferu danych
 Windows Communication Foundation (WCF) mogą być uważane za infrastruktury obsługi wiadomości. Można odbierać komunikaty, ich przetwarzania i wysyłania ich do kodu użytkownika dla dalszego działania lub można utworzyć wiadomości z danych przez kod użytkownika i dostarczania ich do miejsca docelowego. W tym temacie, który jest przeznaczony dla zaawansowanych programistów, w tym artykule opisano architekturę obsługi wiadomości i danych zawartych w niej. Dla widoku prostszy, zorientowane na zadania sposobu wysyłania i odbierania danych, zobacz [Określanie transferu danych w kontraktach usług](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  

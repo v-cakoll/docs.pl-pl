@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503353"
 ---
 # <a name="object-references"></a>Odwołania do obiektów
 W tym przykładzie pokazano, jak obiekty jest przekazywany za pomocą odwołania między serwerem a klientem. Używa próbki symulowane *sieci społecznościowych*. Sieci społecznościowych składa się z `Person` klasę, która zawiera listę znajomych, w których każdy friend jest wystąpieniem `Person` klasy, z listy znajomych. Spowoduje to utworzenie wykresu obiektów. Usługa udostępnia operacje w tych sieciach społecznościowych.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537076"
 ---
 # <a name="keyboard-input-in-a-windows-forms-application"></a>Wprowadzanie z klawiatury w aplikacjach Windows Forms
 Formularze systemu Windows zawiera zdarzenia klawiatury standardowej, które pozwalają odpowiedzieć na określonych naciśnięć klawiszy i udostępnia również sposoby przechwycenia, zmodyfikować i zużywać naciśnięć klawiszy w aplikacji, formularz oraz kontrolowanie poziomu.  

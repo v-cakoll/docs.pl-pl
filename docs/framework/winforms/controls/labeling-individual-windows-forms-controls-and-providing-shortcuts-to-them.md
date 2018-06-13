@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535518"
 ---
 # <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a>Etykietowanie pojedynczych formantów formularzy systemu Windows i określanie skrótów dla nich
 Formanty dodane do formularzy systemu Windows mają właściwości i metod, które są używane do dalszego specialize użytkownika wystąpić. Dostosowywanie interfejsu użytkownika do potrzeb użytkownika jest bardzo ważne dla dobrze zaprojektowanego aplikacji systemu Windows.  

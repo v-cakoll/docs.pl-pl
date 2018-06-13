@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498559"
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a>Omówienie transakcji WCF (Windows Communication Foundation)
 Transakcje umożliwiają do grupowania zestawu działań lub operacji w pojedynczą jednostkę niepodzielnych wykonywania. Transakcja jest to kolekcja operacji z następującymi właściwościami:  

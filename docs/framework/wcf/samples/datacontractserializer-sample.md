@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501497"
 ---
 # <a name="datacontractserializer-sample"></a>Przykład elementu DataContractSerializer
 Przedstawiono przykład elementu DataContractSerializer <xref:System.Runtime.Serialization.DataContractSerializer>, który wykonuje ogólne serializacji i deserializacji usług danych klasy kontraktu. Tworzy próbki `Record` obiektu, serializuje go do strumienia pamięci i deserializuje strumienia pamięci do innego `Record` obiektu przedstawiają sposób używania <xref:System.Runtime.Serialization.DataContractSerializer>. Następnie wykonuje serializację próbki `Record` aby zademonstrować wpływ twórcę serializacji przy użyciu binarne składnika zapisywania.  

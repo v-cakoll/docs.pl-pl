@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497246"
 ---
 # <a name="filtering"></a>Filtrowanie
 Windows Communication Foundation (WCF) filtrowania systemu umożliwia deklaratywne filtry zgodne wiadomości i podejmowanie decyzji operacyjnych. Filtry można służą do określania, co należy zrobić z następującym komunikatem, sprawdzając część komunikatu. Proces kolejkowania, na przykład można użyć zapytania XPath 1.0 do sprawdzenia elementu priority znane nagłówka do ustalenia, czy można przenieść komunikatu z przodu kolejki.  

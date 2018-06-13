@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549620"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Przegląd Lokalizacja i globalizacja WPF
 Dostępność na produkt tylko do jednego języka, możesz ograniczenie potencjalnych klienta podstawowej ułamek naszych world MLD 6.5 populacji. Jeśli chcesz, aby aplikacje do globalnej grupy odbiorców, ekonomiczne lokalizacja produktu jest jednym z najlepszym i najbardziej ekonomiczny sposób nawiązać więcej klientów.  

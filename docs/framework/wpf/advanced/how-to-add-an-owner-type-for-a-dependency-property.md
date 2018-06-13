@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542779"
 ---
 # <a name="how-to-add-an-owner-type-for-a-dependency-property"></a>Jak dodać typ właściciela dla właściwości zależności
 W tym przykładzie przedstawiono sposób dodawania klasy jako właściciela właściwości zależności zarejestrowany dla innego typu. Dzięki temu, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] czytnika właściwości systemu są i rozpoznawany jako właściciela dodatkowe właściwości klasy. Dodawanie jako właściciela opcjonalnie umożliwia dodawanie klasy do udostępnienia metadanych określonego typu.  

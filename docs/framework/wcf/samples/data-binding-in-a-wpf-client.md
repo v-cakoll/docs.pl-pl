@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502549"
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Powiązywanie danych w kliencie WPF (Windows Presentation Foundation)
 W tym przykładzie przedstawiono używanie powiązania danych w kliencie systemu Windows Presentation Foundation (WPF). W przykładzie użyto losowo generuje tablicę albumów do zwrócenia do klienta usługi Windows Communication Foundation (WCF). Każdego albumu ma nazwę, ceny i listy ścieżek albumu. Śledzi albumu ma nazwę i czas trwania. Informacje, które są zwracane przez usługę automatycznie jest powiązana z dostarczonym przez klienta Windows Presentation Foundation (WPF) interfejsu użytkownika (UI).  

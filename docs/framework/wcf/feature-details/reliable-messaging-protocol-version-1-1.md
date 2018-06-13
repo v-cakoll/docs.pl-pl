@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496961"
 ---
 # <a name="reliable-messaging-protocol-version-11"></a>Reliable Messaging Protocol w wersji 1,1
 W tym temacie omówiono szczegóły implementacji usługi Windows Communication Foundation (WCF) dla protokołu WS-ReliableMessaging protokołu lutego 2007 (w wersji 1.1) niezbędne do współpracy przy użyciu protokołu HTTP. Usługi WCF zgodna ze specyfikacją WS-ReliableMessaging, ograniczenia i wyjaśnienia opisanego w tym temacie. Należy pamiętać, że protokołu WS-ReliableMessaging w wersji 1.1 jest wykonywane, począwszy od [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)].  

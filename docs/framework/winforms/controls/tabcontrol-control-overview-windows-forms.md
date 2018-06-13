@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536683"
 ---
 # <a name="tabcontrol-control-overview-windows-forms"></a>TabControl — Informacje o formancie [Formularze systemu Windows]
 Formularze systemu Windows <xref:System.Windows.Forms.TabControl> wyświetla wiele kart, takich jak separatorów w notesie lub etykiet w zestawie folderów w pliku cabinet zgłoszenia. Karty może zawierać obrazów i inne formanty. Formant karty do produkcji rodzaj okno dialogowe wielu stron, który pojawia się w wielu miejscach w systemie operacyjnym Windows, takie jak właściwości wyświetlania Panelu sterowania. Ponadto <xref:System.Windows.Forms.TabControl> może służyć do tworzenia strony właściwości, które służą do konfigurowania grupy powiązane właściwości.  

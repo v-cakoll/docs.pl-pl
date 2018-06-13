@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507761"
 ---
 # <a name="transport-quotas"></a>Przydziały dla transportu
 Przydziały dla transportu są mechanizm zasad dotyczących decydowania, kiedy korzysta z połączenia nadmiernego zasobów. Limit przydziału jest stały limit, który uniemożliwia użycie dodatkowych zasobów, po przekroczeniu przydziału wartości. Przydziały dla transportu zapobiec złośliwe lub przypadkowe "odmowa usługi".  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508039"
 ---
 # <a name="volatile-queued-communication"></a>Komunikacja za pomocą nietrwałych kolejek
 W tym przykładzie pokazano, jak wykonać volatile komunikatu w kolejce przez transportu usługi kolejkowania komunikatów (MSMQ). W przykładzie użyto <xref:System.ServiceModel.NetMsmqBinding>. Usługa jest w tym przypadku aplikacji konsoli siebie umożliwia obserwowanie usługi odbieranie wiadomości w kolejce.  

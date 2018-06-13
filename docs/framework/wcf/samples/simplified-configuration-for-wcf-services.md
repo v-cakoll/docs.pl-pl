@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502267"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>Uproszczona konfiguracja usług WCF
 W tym przykładzie pokazano, jak wdrożyć i skonfigurować typowe usługi i klienta przy użyciu usługi Windows Communication Foundation (WCF). W tym przykładzie stanowi podstawę dla wszystkich innych przykładów podstawową technologię.  

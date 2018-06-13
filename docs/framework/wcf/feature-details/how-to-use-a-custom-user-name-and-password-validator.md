@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496815"
 ---
 # <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Instrukcje: Używanie niestandardowej nazwy użytkownika i modułu weryfikacji hasła
 Domyślnie gdy nazwa użytkownika i hasło jest używane do uwierzytelniania, Windows Communication Foundation (WCF) używa do weryfikowania nazwy użytkownika i hasła systemu Windows. Jednak WCF umożliwia użytkownika niestandardowego nazwy i hasła schematy uwierzytelniania, nazywane również *modułów sprawdzania poprawności*. Dołączanie moduł weryfikacji nazwy i hasła użytkownika niestandardowego, Utwórz klasę pochodzącą z <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> , a następnie skonfigurować go.  

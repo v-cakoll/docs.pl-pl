@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563470"
 ---
 # <a name="xmlspace-handling-in-xaml"></a>xml:space — Obsługa w XAML
 `xml:space` Atrybut jest definiowany w języku XML atrybut deklarujący zachowania przetwarzania znaczącym odstępem w elemencie obiektu. To zachowanie jest odpowiednie dla całej zawartości (tekst wewnętrzny) zawartych w elemencie gdzie `xml:space` jest zadeklarowana, a także zakresów do elementów podrzędnych.  

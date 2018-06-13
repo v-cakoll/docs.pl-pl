@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508387"
 ---
 # <a name="troubleshooting-correlation"></a>Korelacja rozwiązywania problemów
 Korelacji jest używany do tworzenia powiązań komunikatów usługi przepływu pracy i wystąpienia przepływu pracy poprawny, ale jeśli nie jest prawidłowo skonfigurowany, nie będzie można odbierać wiadomości i aplikacje nie będą działać poprawnie. W tym temacie omówiono kilka metod do rozwiązywania problemów korelacji, a także przedstawiono kilka typowych problemów, które mogą wystąpić, gdy używasz korelacji.  

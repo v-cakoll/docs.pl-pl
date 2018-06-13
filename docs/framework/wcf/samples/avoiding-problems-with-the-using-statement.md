@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503901"
 ---
 # <a name="avoiding-problems-with-the-using-statement"></a>Unikanie problemów z instrukcją Using
 W przykładzie pokazano, jak nie należy używać "using" — instrukcja automatycznie wyczyścić zasobów, korzystając z klienta typu C#. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi Kalkulator. W tym przykładzie klient jest aplikacji konsoli (.exe), a usługa jest obsługiwana przez Internet Information Services (IIS).  

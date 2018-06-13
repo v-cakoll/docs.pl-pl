@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505280"
 ---
 # <a name="ws-reliable-session"></a>Sesja niezawodna WS
 W przykładzie pokazano użycie niezawodnej sesji. Niezawodne sesje zapewniają obsługę niezawodna obsługa komunikatów i sesje. Niezawodna obsługa komunikatów ponowi próbę komunikacji w przypadku niepowodzenia i umożliwia gwarancje dostarczenia, należy określić, takich jak otrzymanie wiadomości w kolejności. Sesje przechowywania stanu dla klientów między wywołaniami. Próbka implementuje sesji do przechowywania stanu klienta i określa gwarancje dostarczenia w kolejności.  

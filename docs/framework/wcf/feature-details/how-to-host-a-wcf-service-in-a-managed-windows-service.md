@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497220"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Instrukcje: Hostowanie usługi WCF w usłudze zarządzanej systemu Windows
 W tym temacie przedstawiono podstawowe czynności wymagane do tworzenia usług Windows Communication Foundation (WCF), obsługiwanej przez usługę systemu Windows. Scenariusz jest włączone przez usługę systemu Windows zarządzany hosting opcję długotrwałe usługi WCF hostowanej poza Internet Information Services (IIS) w bezpiecznym środowisku, który nie jest aktywowany wiadomości. Okres istnienia usługi steruje zamiast tego systemu operacyjnego. Ta opcja obsługi jest dostępna we wszystkich wersjach systemu Windows.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496841"
 ---
 # <a name="configuring-system-provided-bindings"></a>Konfigurowanie powiązań dostarczanych przez system
 Powiązania Określ mechanizm komunikacji po rozmowie z punktu końcowego i określić sposób nawiązywania połączenia z punktem końcowym. Powiązania składają się z elementów, które określają sposób warstwie kanały Windows Communication Foundation (WCF) się zapewnienie funkcje wymagane komunikacji. Powiązanie zawiera trzy rodzaje elementów:  

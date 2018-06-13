@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542252"
 ---
 # <a name="windows-forms"></a>Windows Forms
 Ponieważ formularze są podstawowa jednostka aplikacji, ważne jest zapewniają rozwagą do ich funkcji i projektowania. Formularz jest ostatecznie bazie pustego czy, deweloperzy zwiększenia z służy do tworzenia interfejsu użytkownika i kodu w celu obsługi danych. W tym celu programu Visual Studio zapewnia zintegrowane środowisko programistyczne (IDE) ułatwiających pisania kodu, a także sformatowanego formantu ustaw napisane z [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Przez uzupełnienie funkcji tych kontrolek w kodzie, można łatwo i szybkie opracowywanie rozwiązań, które są potrzebne.  

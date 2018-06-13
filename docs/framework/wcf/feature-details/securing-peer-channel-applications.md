@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497558"
 ---
 # <a name="securing-peer-channel-applications"></a>Zabezpieczanie aplikacji kanałów równorzędnych
 Inne powiązania w obszarze, takich jak [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], `NetPeerTcpBinding` zabezpieczeń włączone domyślnie i oferuje zarówno zabezpieczenia na poziomie transportu i komunikatu (lub obie). W tym temacie omówiono tych dwóch typów zabezpieczeń. Typ zabezpieczeń jest określany przez tag tryb zabezpieczeń w specyfikacji powiązania (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`).  

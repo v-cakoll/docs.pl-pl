@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361081"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Rejestrowanie procedur składowanych w programie SQL Server
  Podpis cyfrowy jest szyfrowane dane zaszyfrowane przy użyciu klucza prywatnego osoby podpisującej. Klucza prywatnego gwarantuje, że podpis cyfrowy jest unikatowa dla jego elementów nośnych lub właściciela. Możesz utworzyć procedur składowanych, funkcje (z wyjątkiem funkcji śródwierszowych przechowywanymi w tabeli), wyzwalacze i zestawów.  

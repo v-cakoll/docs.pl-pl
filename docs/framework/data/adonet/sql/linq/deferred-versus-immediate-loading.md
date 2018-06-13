@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360353"
 ---
 # <a name="deferred-versus-immediate-loading"></a>Odroczone i ładowania bezpośredniego
 Określona w zapytaniu dla obiekt faktycznie pobrać tylko żądanego obiektu. *Powiązane* obiekty nie są automatycznie dołączone w tym samym czasie. (Aby uzyskać więcej informacji, zobacz [zapytań w relacji](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md).) Nie widać fakt, że powiązane obiekty nie są już załadowana, ponieważ próba dostępu do nich tworzy żądanie, które pobierają je.  

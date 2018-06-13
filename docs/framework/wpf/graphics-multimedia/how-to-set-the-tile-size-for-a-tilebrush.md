@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561751"
 ---
 # <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>Jak ustawić rozmiar sąsiadujących kafelków dla TileBrush
 W tym przykładzie pokazano, jak ustawić rozmiar kafelka <xref:System.Windows.Media.TileBrush>. Domyślnie <xref:System.Windows.Media.TileBrush> tworzy pojedynczy fragment, który całkowicie wypełnienia malowanego obszaru. To zachowanie można przesłonić, ustawiając <xref:System.Windows.Media.TileBrush.Viewport%2A> i <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> właściwości.  

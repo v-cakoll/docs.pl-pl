@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503822"
 ---
 # <a name="known-types"></a>Znane typy
 W tym przykładzie pokazano, jak określić informacje o typach pochodnych w kontraktu danych. Kontrakty danych umożliwiają przekazywania strukturalnych danych do i z usług. W programowanie zorientowane obiektowo typu, który dziedziczy z typu można użyć zamiast oryginalnego typu. W programowaniu zorientowane na usługę, zamiast typów schematów są przekazywane i w związku z tym relacji między typami nie są zachowywane. <xref:System.Runtime.Serialization.KnownTypeAttribute> Atrybutu umożliwia informacji na temat typów pochodnych, które mają zostać uwzględnione w umowie dotyczącej danych. Jeśli ten mechanizm nie jest używany, typu pochodnego nie wysłania lub odebrania gdzie oczekiwany jest typ podstawowy.  

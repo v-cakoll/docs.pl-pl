@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498052"
 ---
 # <a name="using-servicethrottlingbehavior-to-control-wcf-service-performance"></a>Używanie elementu ServiceThrottlingBehavior do kontrolowania wydajności programu WCF
 <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> Klasa udostępnia właściwości, które można użyć, aby ograniczyć liczbę wystąpień lub sesji są tworzone na poziomie aplikacji. To zachowanie można dostosować wydajność aplikacji Windows Communication Foundation (WCF).  

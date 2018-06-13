@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497961"
 ---
 # <a name="wcf-discovery"></a>Odnajdywanie w programie WCF
 Windows Communication Foundation (WCF) obsługuje Włączanie usług będzie wykrywalny w czasie wykonywania w sposób interoperacyjne za pomocą protokołu WS-Discovery. Usługi WCF można poinformować o ich dostępności sieci za pomocą komunikatu multiemisji lub serwera proxy odnajdywania. Aplikacje klienckie można znaleźć sieci lub serwera proxy odnajdywania można znaleźć usługi, które spełniają określone kryteria. Tematy w tej sekcji omówiono i modelu programowania dla tej funkcji, które szczegółowo opisano.  

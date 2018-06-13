@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505508"
 ---
 # <a name="workflow-service-host-internals"></a>Elementy wewnętrzne hosta usługi przepływu pracy
 <xref:System.ServiceModel.WorkflowServiceHost> zapewnia hosta usługi przepływu pracy. Odpowiada do nasłuchiwania dla komunikatów przychodzących i routingu je do odpowiednich przepływu pracy wystąpienie usługi, kontroluje zwalnianie i przechowywanie bezczynne przepływy pracy i więcej. W tym temacie opisano, jak obiekt WorkflowServiceHost przetwarza wiadomości przychodzących.  

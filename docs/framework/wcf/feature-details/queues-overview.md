@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497016"
 ---
 # <a name="queues-overview"></a>Omówienie kolejek
 W tej sekcji przedstawiono ogólne i podstawowe pojęcia oczekujących komunikacji. Kolejne sekcje przejdź do szczegółów dotyczących sposobu kolejkowania pojęcia opisane w tym miejscu są dyskowe widoczne w systemie Windows Communication Foundation (WCF).  

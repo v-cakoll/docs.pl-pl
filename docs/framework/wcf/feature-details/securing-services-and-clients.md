@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497415"
 ---
 # <a name="securing-services-and-clients"></a>Zabezpieczanie usług i klientów
 Informacje przedstawione w tej sekcji koncentruje się na programowania zabezpieczeń w systemie Windows Communication Foundation (WCF). Ogólnie rzecz biorąc w tym wybranie odpowiedniego powiązania dostarczane przez system, ustawianie właściwości elementu zabezpieczeń, a następnie ustawić właściwości zachowania usługi, które decydują, jak poświadczenia są pobierane do użytku przez usługi lub klienta. Te techniki obejmować wymagania dotyczące zabezpieczeń większości użytkowników w przypadku większości scenariuszy, jak pokazano w [typowe scenariusze zabezpieczeń](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Jeśli dany scenariusz wymaga więcej funkcji, należy najpierw sprawdzić [możliwości zabezpieczeń powiązań niestandardowych](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); Jeśli rozwiązanie nie jest widoczna, zobacz [rozszerzanie zabezpieczeń](../../../../docs/framework/wcf/extending/extending-security.md). Jeśli tworzysz (lub współpracy z) system używający sformatowanego oświadczeń, zobacz Tematy w [autoryzacji](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  

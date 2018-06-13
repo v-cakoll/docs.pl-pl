@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505847"
 ---
 # <a name="discovery-security-sample"></a>Zabezpieczenia odnajdywania — przykład
 Specyfikacja odnajdywania nie wymaga czy punkty końcowe, które uczestniczą w procesie odnajdywania należy zabezpieczyć. Udoskonalanie komunikaty odnajdywania z zabezpieczeniami zmniejsza różnych rodzajów ataków (komunikatu zmiany, odmowę usługi, powtarzania, fałszowania). W tym przykładzie implementuje kanałów niestandardowych, które obliczeniowe i weryfikowania podpisów wiadomości w formacie kompaktowym podpisu (opisanej w sekcji 8.2 specyfikacji WS-Discovery). Przykład obsługuje zarówno [specyfikacji odnajdywania 2005](http://go.microsoft.com/fwlink/?LinkId=177912) i [wersji 1.1](http://go.microsoft.com/fwlink/?LinkId=179677).  

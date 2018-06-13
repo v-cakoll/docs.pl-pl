@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539455"
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Porady: reagowanie na zmiany schematu czcionek w aplikacji Windows Forms
 W systemach operacyjnych Windows użytkownik może zmienić ustawienia czcionki systemowe, aby upewnić domyślnej czcionki są wyświetlane, większy lub mniejszy. Zmiana tych ustawień czcionki jest kluczowa dla użytkowników, którzy są niedowidzących i wymagają większej typu tekstu na ekranie. Można dostosować aplikacji Windows Forms reagowanie na te zmiany, zwiększ lub Zmniejsz rozmiar formularza i wszystkich zawartych w niej tekstu przy każdej zmianie schematu czcionek. Jeśli chcesz, aby formularz, aby uwzględnić zmiany w rozmiarze czcionki dynamicznie, można dodać kod do formularza.  

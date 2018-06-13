@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509082"
 ---
 # <a name="security-considerations-for-data"></a>Zagadnienia związane z zabezpieczeniami danych
 Podczas pracy z danymi w systemie Windows Communication Foundation (WCF), należy wziąć pod uwagę liczbę kategorii zagrożeń. W poniższej tabeli wymieniono najważniejsze klasy zagrożenia, które odnoszą się do przetwarzania danych. Usługi WCF udostępnia narzędzia, aby ograniczyć te zagrożenia.  

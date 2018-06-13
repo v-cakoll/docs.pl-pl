@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547882"
 ---
 # <a name="the-ink-threading-model"></a>Model wątkowości typu atrament
 Jedną z zalet pismo odręczne na komputerze typu Tablet jest, że go wydaje się znacznie zapisu przy użyciu pióra regularnych i papieru.  W tym celu pióra zbiera dane wejściowe szybkością znacznie wyższa niż myszy i renderuje pismo odręczne jako zapisy użytkownika.  Wątek interfejsu użytkownika aplikacji nie jest wystarczające do zbierania danych pióra i odręcznego renderowania, ponieważ mogą zostać zablokowane.  Aby rozwiązać, to [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacja używa dwóch dodatkowych wątków, gdy użytkownik zapisuje odręczne.  

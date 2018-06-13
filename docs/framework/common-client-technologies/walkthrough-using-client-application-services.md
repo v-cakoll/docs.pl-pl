@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745373"
 ---
 # <a name="walkthrough-using-client-application-services"></a>Wskazówki: używanie usług aplikacji klienta
 W tym temacie opisano sposób tworzenia aplikacji systemu Windows, który korzysta z usługi aplikacji klienta do uwierzytelniania użytkowników i ról użytkownika i ustawienia.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500600"
 ---
 # <a name="standard-endpoints"></a>Standardowe punkty końcowe
 Punkty końcowe są definiowane przez określenie adresu, powiązania i kontrakt. Inne parametry, które mogą zostać ustawione dla punktu końcowego obejmują konfigurację zachowania, nagłówki oraz identyfikatorów URI nasłuchiwania.  Dla niektórych typów punktów końcowych, które nie należy zmieniać tych wartości. Na przykład zawsze używać punktów końcowych wymiany metadanych <xref:System.ServiceModel.Description.IMetadataExchange> kontraktu. Inne punkty końcowe, takich jak <xref:System.ServiceModel.Description.WebHttpEndpoint> zawsze wymagane jest zachowanie określonego punktu końcowego. Konfigurując punkty końcowe z wartościami domyślnymi dla często używanych punktu końcowego właściwości można zwiększyć użyteczność punktu końcowego. Standardowe punkty końcowe umożliwiają deweloperowi zdefiniuj punktu końcowego, który zawiera wartości domyślne lub gdy nie zmienia właściwości co najmniej jednego punktu końcowego.  Te punkty końcowe umożliwiają używanie punktu końcowego bez konieczności określania informacji o charakterze statycznych. Standardowe punkty końcowe może służyć do punktów końcowych infrastruktury i aplikacji.  

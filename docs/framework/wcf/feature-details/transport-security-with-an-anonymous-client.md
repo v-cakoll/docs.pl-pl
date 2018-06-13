@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499183"
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>Zabezpieczanie transportu za pomocą anonimowego klienta
 W tym scenariuszu Windows Communication Foundation (WCF) używane zabezpieczeń transportowych (HTTPS), aby zapewnić poufności i integralności. Serwer musi zostać uwierzytelniony przy użyciu certyfikatu protokołu Secure Sockets Layer (SSL), a klienci muszą ufać certyfikatu serwera. Klient nie został uwierzytelniony przy użyciu dowolnego mechanizmu i jest anonimowy.  

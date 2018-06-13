@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497285"
 ---
 # <a name="schema-import-and-export"></a>Importowanie i eksportowanie schematu
 Windows Communication Foundation (WCF) obejmuje nowy aparat serializacji <xref:System.Runtime.Serialization.DataContractSerializer>. `DataContractSerializer` Tłumaczy [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] obiektów i XML (w obu kierunkach). Oprócz samego elementu serializującego WCF zawiera importu skojarzony schemat i mechanizmów eksportowania schematu. *Schemat* jest posiadanie, dokładne i czytelną opis kształtu XML tworzącego serializator lub które mogą uzyskiwać dostęp do deserializacji. Usługi WCF używa języka definicji sieci World Wide Web konsorcjum W3C schematu XML (XSD) jako jego reprezentacja schemat, który jest powszechnie współdziała z wielu platform innych firm.  

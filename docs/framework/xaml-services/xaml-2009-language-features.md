@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563561"
 ---
 # <a name="xaml-2009-language-features"></a>XAML 2009— Funkcje językowe
 XAML 2009 jest skrócona termin nowe funkcje języka XAML, które rozszerzyć istniejącą specyfikacja języka XAML. XAML 2009 wprowadzono kilka nowych dyrektywy oraz elementów składowych. Obejmują one[x: Arguments — dyrektywa](../../../docs/framework/xaml-services/x-arguments-directive.md); [x: factorymethod — dyrektywa](../../../docs/framework/xaml-services/x-factorymethod-directive.md); [x: Reference — rozszerzenie znaczników](../../../docs/framework/xaml-services/x-reference-markup-extension.md); [x: typearguments — dyrektywa ](../../../docs/framework/xaml-services/x-typearguments-directive.md); i typy wbudowane dla wspólnych elementów podstawowych języka (na przykład `x:Char`).  

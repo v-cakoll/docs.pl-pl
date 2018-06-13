@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502595"
 ---
 # <a name="workflow-control-endpoint"></a>Punkt końcowy kontroli przepływu pracy
 Punkt końcowy kontroli przepływu pracy umożliwia deweloperom wywołanie operacji kontroli do zdalnego sterowania hostowane przy użyciu wystąpienia przepływu pracy <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Ta funkcja może być używana do programowo wykonywać operacji kontroli, jak wstrzymać, wznowić, a następnie Zakończ.  

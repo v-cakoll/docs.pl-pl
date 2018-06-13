@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538008"
 ---
 # <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>Porady: tworzenie programów do obsługi zdarzeń w czasie wykonywania dla formularzy systemu Windows
 Oprócz tworzenia zdarzeń przy użyciu narzędzia Projektant formularzy systemu Windows, można również utworzyć program obsługi zdarzeń w czasie wykonywania. Ta akcja umożliwia łączenie z na podstawie warunków w kodzie w czasie wykonywania, a nie przejdą oni połączone po początkowym uruchomieniu programu obsługi zdarzeń.  

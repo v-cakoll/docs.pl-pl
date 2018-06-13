@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268123"
 ---
 # <a name="null-c-reference"></a>null (C# Reference)
 `null` — Słowo kluczowe jest literałem, który reprezentuje odwołanie o wartości null, który odwołuje się do dowolnego obiektu. `null` jest to wartość domyślna typu odwołania zmiennych. Typy wartości zwykłej nie może mieć wartości null. Jednak C# 2.0 wprowadzono typów wartości null. Zobacz [typy dopuszczające wartości zerowe](../../../csharp/programming-guide/nullable-types/index.md).  

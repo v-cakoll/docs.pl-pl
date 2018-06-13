@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496768"
 ---
 # <a name="bindings-and-security"></a>Powiązania i zabezpieczenia
 Powiązania dostarczane przez system uwzględnione z usługi Windows Communication Foundation (WCF) oferują możliwość szybkiego aplikacje programu WCF. Z jednym wyjątkiem wszystkie powiązania ma domyślny schemat zabezpieczeń włączone. Ten temat ułatwia wybierz prawa powiązanie dla wymagania w zakresie zabezpieczeń.  

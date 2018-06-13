@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562873"
 ---
 # <a name="shapes-how-to-topics"></a>Kształty Tematy porad
 Tematy w tej sekcji przedstawiono sposób korzystania <xref:System.Windows.Shapes.Shape> obiektów rysowanie kształtów podstawowych do ekranu.  

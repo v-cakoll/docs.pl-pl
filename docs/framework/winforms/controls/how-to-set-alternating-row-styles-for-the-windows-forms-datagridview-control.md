@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539711"
 ---
 # <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control"></a>Porady: ustawianie alternatywnych stylów wierszy dla formantu DataGridView formularzy systemu Windows
 Dane tabelaryczne często jest przesyłany do użytkowników w postaci księgi, której przemiennych wierszy mają różnych kolorów tła. Ten format ułatwia użytkownikom Poinformuj komórek, które są w każdym wierszu, szczególnie w przypadku szerokie tabele, które mają wiele kolumn.  

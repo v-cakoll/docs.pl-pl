@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497545"
 ---
 # <a name="secure-sessions"></a>Bezpieczne sesje
 Funkcja Windows Communication Foundation (WCF) jest niezawodnej sesji, które gwarantuje, że komunikaty są odbierane w kolejności, które zostały wysłane. Tematy w tej sekcji omówiono wpływ zabezpieczenia wziąć pod uwagę podczas tworzenia niezawodnej sesji. Aby uzyskać więcej informacji na temat niezawodnej sesji, zobacz [sesji przy użyciu](../../../../docs/framework/wcf/using-sessions.md).  

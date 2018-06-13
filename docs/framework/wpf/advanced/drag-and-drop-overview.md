@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549467"
 ---
 # <a name="drag-and-drop-overview"></a>Przegląd Przeciąganie i upuszczanie
 Ten temat zawiera omówienie Obsługa przeciągania i upuszczania w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji. Przeciągnij i upuść często odwołuje się do metody transferu danych, która obejmuje za pomocą myszy (lub innego urządzenia wskazującego) wybierz co najmniej jeden obiekt, przeciągając obiekty te przez niektóre odpowiednie miejsca docelowego w [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]i ich usunięcie.  

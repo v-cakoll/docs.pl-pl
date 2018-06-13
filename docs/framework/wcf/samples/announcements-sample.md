@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500041"
 ---
 # <a name="announcements-sample"></a>Anonse — przykład
 Ten przykład przedstawia sposób użycia anonsu działanie funkcji odnajdywania. Anonse Zezwalaj usługom do wysłania wiadomości anonsów, zawierające metadane dotyczące usługi. Domyślnie powiadomienia hello są wysyłane podczas uruchamiania usługi i anonsu bye są wysyłane podczas zamykania usługi. Anonse te mogą być multiemisji lub mogą być wysyłane point-to-point. W tym przykładzie obejmuje dwa projekty usługi i klienta.  

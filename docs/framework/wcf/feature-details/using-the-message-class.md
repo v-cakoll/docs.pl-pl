@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508985"
 ---
 # <a name="using-the-message-class"></a>Używanie klasy Message
 <xref:System.ServiceModel.Channels.Message> Klasy jest podstawą do usługi Windows Communication Foundation (WCF). Cała komunikacja między klientami i usługami powoduje w rezultacie <xref:System.ServiceModel.Channels.Message> wysyłanych i odbieranych wystąpień.  

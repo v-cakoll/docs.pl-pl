@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538824"
 ---
 # <a name="how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control"></a>Porady: ustawianie stylów czcionek i koloru w formancie DataGridView formularzy systemu Windows
 Można określić wygląd komórek wewnątrz <xref:System.Windows.Forms.DataGridView> kontroli przez ustawienie właściwości <xref:System.Windows.Forms.DataGridViewCellStyle> klasy. Wystąpienia tej klasy można pobrać różne właściwości <xref:System.Windows.Forms.DataGridView> klasy i jej klas pomocnika lub można utworzyć wystąpienia <xref:System.Windows.Forms.DataGridViewCellStyle> obiekty do przypisania do tych właściwości.  

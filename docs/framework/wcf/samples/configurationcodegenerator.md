@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500860"
 ---
 # <a name="configurationcodegenerator"></a>ConfigurationCodeGenerator
 ConfigurationCodeGenerator to narzędzie, które można użyć do udostępnienia implementacjach użytkownika niestandardowego kanału do konfiguracji systemu. Pozwala to użytkownikom niestandardowego kanału skonfigurować kanał przy użyciu pliku .config, zgodnie z ich skonfigurowania, dostarczane przez system powiązanie takich jak `NetTcpBinding` lub niestandardowego powiązania za pomocą `TcpTransportBindingElement`.  

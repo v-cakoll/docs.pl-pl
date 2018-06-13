@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744580"
 ---
 # <a name="pipeline-development"></a>Opracowywanie potoku
 Potok dodatku jest ścieżką segmentów potoku, w których aplikacja hosta i jego dodatku musi komunikować się ze sobą.  

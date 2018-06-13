@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744915"
 ---
 # <a name="ltdependentassemblygt-element"></a>&lt;dependentAssembly&gt; — Element
 Hermetyzuje zasady powiązań oraz lokalizację zestawu dla każdego zestawu. Użyj jednej `dependentAssembly` elementu dla każdego zestawu.  

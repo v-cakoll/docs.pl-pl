@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744879"
 ---
 # <a name="lthttplistenergt-element-network-settings"></a>&lt;httpListener&gt; elementu (ustawienia sieciowe)
 Dostosowuje parametry używane przez <xref:System.Net.HttpListener> klasy.  

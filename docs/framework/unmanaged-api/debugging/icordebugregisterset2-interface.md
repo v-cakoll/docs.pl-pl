@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422798"
 ---
 # <a name="icordebugregisterset2-interface"></a>ICorDebugRegisterSet2 — Interfejs
 Rozszerza możliwości [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) interfejs dla platform sprzętowych, które mają ponad 64 rejestrów.  

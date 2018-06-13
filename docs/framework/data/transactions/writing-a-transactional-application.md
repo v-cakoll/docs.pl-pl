@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357201"
 ---
 # <a name="writing-a-transactional-application"></a>Pisanie aplikacji transakcyjnych
 Dla programisty transakcyjnych aplikacji, możesz korzystać udostępniane przez modele programowania <xref:System.Transactions> przestrzeni nazw, aby utworzyć transakcji. Może korzystać z jawnym modelu programowania przy użyciu <xref:System.Transactions.Transaction> klasy lub niejawne modelu programowania, w którym transakcje są automatycznie zarządzane przez infrastrukturę, za pomocą <xref:System.Transactions.TransactionScope> klasy. Zalecane jest użycie transakcji niejawnej modelu do tworzenia aplikacji. Można znaleźć więcej informacji na temat sposobu użycia w zakresie transakcji [wykonania transakcji niejawnej przy użyciu zakresu transakcji](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md) tematu.  

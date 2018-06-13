@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744645"
 ---
 # <a name="creating-and-using-strong-named-assemblies"></a>Tworzenie i używanie zestawów o silnej nazwie
 <a name="top"></a> Silnej nazwy składa się z tożsamości zestawu — zwykły tekst nazwa, numer wersji i informacje o ustawieniach kulturowych (jeśli jest dostępny) — oraz klucz publiczny i podpis cyfrowy. Jest generowany na podstawie pliku zestawu przy użyciu odpowiedniego klucza prywatnego. (Plik zestawu zawiera manifest zestawu, który zawiera nazwy i wartości skrótu wszystkie pliki wchodzące w skład zestawu).  

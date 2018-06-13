@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357796"
 ---
 # <a name="updating-data-in-a-data-source"></a>Aktualizowanie danych w źródle danych
 Instrukcje SQL, które modyfikują dane (takie jak INSERT, UPDATE lub DELETE) zwraca wiersze. Podobnie wiele procedur składowanych wykonywania akcji, ale nie zwraca wiersze. Do wykonania polecenia, które niezwracanie wierszy, Utwórz **polecenia** obiektu za pomocą odpowiedniego polecenia SQL i **połączenia**, wraz ze wszystkimi wymagane **parametry**. Wykonaj polecenie z **ExecuteNonQuery** metody **polecenia** obiektu.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744333"
 ---
 # <a name="assemblies-in-the-common-language-runtime"></a>Zestawy w środowisku uruchomieniowym języka wspólnego
 Zestawy są blokami konstrukcyjnymi aplikacji .NET Framework; stanowią podstawową jednostkę wdrożenia, kontroli wersji, ponownemu, zakresu aktywacji i uprawnienia zabezpieczeń. Zestaw jest kolekcją typów i zasobów, które są przeznaczone do współpracują ze sobą i utworzenia jednostki logicznej funkcji. Zestaw zawiera środowisko uruchomieniowe języka wspólnego o informacje, które należy znać typ implementacji. Do środowiska wykonawczego typ nie istnieje poza kontekstem zestawu.  

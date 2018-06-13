@@ -24,6 +24,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744086"
 ---
 # <a name="how-to-build-a-multifile-assembly"></a>Porady: kompilacja zestawów wieloplikowych
 W tym artykule opisano sposób tworzenia zestawów wieloplikowych i zawiera kod, który przedstawia każdego kroku w procedurze.  

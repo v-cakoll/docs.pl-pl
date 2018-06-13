@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404226"
 ---
 # <a name="iclrdatatargetreadvirtual-method"></a>ICLRDataTarget::ReadVirtual — Metoda
 Odczytuje dane z adresów pamięci wirtualnej określony w buforze określona.  

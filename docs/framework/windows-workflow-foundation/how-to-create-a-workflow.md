@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513266"
 ---
 # <a name="how-to-create-a-workflow"></a>Porady: tworzenie przepływów pracy
 Przepływy pracy można skonstruować z działań wbudowanych oraz z działań niestandardowych. Ten tematy w tym kroku sekcji przez proces tworzenia przepływu pracy, który używa zarówno wbudowane działania, takie jak <xref:System.Activities.Statements.Flowchart> działania i działań niestandardowych z poprzedniej [porady: tworzenie działania](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) tematu. Przepływ pracy modele numer guessing gier. Tylko jeden tematy w tej sekcji jest wymagany do ukończenia samouczka; należy wybierz odpowiedni styl interesującego i wykonać ten krok. Jednak użytkownik może zakończyć się we wszystkich tematach w razie potrzeby.  

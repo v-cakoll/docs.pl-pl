@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331607"
 ---
 # <a name="unsafe-code-and-pointers-c-programming-guide"></a>Niebezpieczny kod i wskaźniki (Przewodnik programowania w języku C#)
 Aby zachować bezpieczeństwo typów i zabezpieczeń, C# nie obsługuje arytmetyki wskaźnika domyślnie. Jednak przy użyciu [niebezpieczne](../../../csharp/language-reference/keywords/unsafe.md) — słowo kluczowe, można zdefiniować niebezpiecznym kontekście, w którym można wskaźników. Aby uzyskać więcej informacji na temat wskaźników, zobacz temat [typów wskaźnikowych](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md).  

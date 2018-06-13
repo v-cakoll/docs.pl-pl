@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338799"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>Instrukcje, wyrażenia i operatory (Przewodnik programowania w języku C#)
 Kod C#, który składa się z aplikacji składa się z instrukcji składają się z słów kluczowych, wyrażenia i operatory. Ta sekcja zawiera informacje dotyczące tych podstawowych elementów programu w języku C#.  

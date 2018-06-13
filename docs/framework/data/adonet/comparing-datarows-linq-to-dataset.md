@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756283"
 ---
 # <a name="comparing-datarows-linq-to-dataset"></a>Porównanie wierszy danych (LINQ do DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] definiuje różne operatory zestawów do porównania elementy źródłowe, aby zobaczyć, czy są równe. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] udostępnia następujące operatory zestawów:  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500239"
 ---
 # <a name="how-to-declare-faults-in-service-contracts"></a>Porady: deklarowanie błędów w kontraktach usług
 W kodzie zarządzanym wyjątki są zgłaszane w przypadku wystąpienia błędów. W aplikacji Windows Communication Foundation (WCF) jednak kontraktów usług określić informacje o błędach, jakie są zwracane do klientów przez zadeklarowanie błędach SOAP w kontrakcie usługi. Omówienie relacji między wyjątków i błędów, zobacz [określanie i obsługa błędów w kontraktach i usługach](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504084"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Używanie utraconych kolejek na potrzeby obsługi transferów komunikatów zakończonych niepowodzeniem
 Wiadomości w kolejce może zakończyć się niepowodzeniem dostarczania. Te komunikaty nie powiodło się są rejestrowane w kolejce wiadomości utraconych. Nie powiodło się dostarczania może być spowodowane powodów, takich jak awarie sieci, usunięto kolejki, pełną kolejkę, niepowodzenie uwierzytelniania lub niepowodzenie dostarczyć na czas.  

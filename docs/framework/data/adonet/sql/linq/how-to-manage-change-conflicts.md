@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361669"
 ---
 # <a name="how-to-manage-change-conflicts"></a>Porady: Zarządzanie konfliktów zmian
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zawiera kolekcję interfejsów API, aby ułatwić odnajdywanie, oceny i rozwiązywanie konfliktów współbieżności.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406880"
 ---
 # <a name="icordebugappdomain-interface1"></a>ICorDebugAppDomain Interface1
 Dostarcza metody do debugowania domen aplikacji. Ten interfejs jest podklasą klasy ICorDebugController.  

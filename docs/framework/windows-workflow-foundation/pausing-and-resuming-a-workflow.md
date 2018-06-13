@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513487"
 ---
 # <a name="pausing-and-resuming-a-workflow"></a>Wstrzymywanie i wznawianie przepływu pracy
 Przepływy pracy będzie wstrzymywanie i wznawianie w odpowiedzi na zakładek i działania blokujące, takich jak <xref:System.Activities.Statements.Delay>, ale przepływu pracy można również można jawnie wstrzymana, zwolnione i został wznowiony przy użyciu trwałości.  

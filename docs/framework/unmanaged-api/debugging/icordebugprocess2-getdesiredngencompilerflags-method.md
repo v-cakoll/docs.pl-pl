@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416114"
 ---
 # <a name="icordebugprocess2getdesiredngencompilerflags-method"></a>ICorDebugProcess2::GetDesiredNGENCompilerFlags — Metoda
 Pobiera kompilatora bieżącego ustawienia flagi, które używa środowisko uruchomieniowe języka wspólnego (CLR), aby wybrać poprawny wstępnie skompilowana (oznacza to, że natywnego) obraz ma być załadowane do tego procesu.  

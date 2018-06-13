@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513002"
 ---
 # <a name="control-flow-activities-in-wf"></a>Działania przepływu sterowania w WF
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Zawiera kilka działań sterowanie przepływem działanie w przepływie pracy. Niektóre z tych działań (takie jak `Switch` i `If`) podobne do programowania środowiskach takie jak Visual C#, podczas gdy inne struktury sterujące przepływ wykonania (takich jak `Pick`) modelu nowe struktury programowania.  

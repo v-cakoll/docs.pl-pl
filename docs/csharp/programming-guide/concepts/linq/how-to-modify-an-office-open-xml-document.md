@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321655"
 ---
 # <a name="how-to-modify-an-office-open-xml-document-c"></a>Porady: modyfikowanie dokumentu pakietu Office Open XML (C#)
 W tym temacie przedstawiono przykład otwiera dokumentu pakietu Office Open XML, modyfikuje go i zapisuje go.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359923"
 ---
 # <a name="linq-to-sql-with-tightly-coupled-client-server-applications"></a>LINQ do SQL z aplikacjami ściśle powiązane klient serwer
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] można na warstwy środkowej klientom ściśle powiązane inteligentne w warstwie prezentacji. W scenariuszach, które wymagają dostępu do danych tylko do odczytu, nie sprawdzenie optymistycznej współbieżności lub optymistycznej współbieżności z sygnaturami czasowymi nie ma złożoność większą niż-remote scenariuszy. Kiedy bazy danych wymaga jednak optymistycznej współbieżności sprawdza z oryginalnych wartości [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie ma poziomu wsparcia dla dwustronną komunikację danych, który można znaleźć w zestawach danych. Jednak [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] warstwy środkowej można wymieniać dane z klientów na dowolnej platformie.  

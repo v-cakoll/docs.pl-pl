@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407691"
 ---
 # <a name="iclrdatatargetgetthreadcontext-method"></a>ICLRDataTarget::GetThreadContext — Metoda
 Pobiera bieżącego kontekstu wykonywania dla danego wątku w procesie docelowym. Ta metoda jest wywoływana przez usługi dostępu danych środowiska uruchomieniowego języka wspólnego.  

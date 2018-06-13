@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334902"
 ---
 # <a name="functional-programming-vs-imperative-programming-c"></a>Funkcjonalności vs programowania. Konieczne programowania w języku (C#)
 W tym temacie porównuje i różni się znacząco programowanie funkcjonalne bardziej tradycyjnej imperatywnych programowania (procedurach).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325763"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET (Portal Page)
 [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] Umożliwia zapytanie dotyczące dowolny obiekt wyliczalny w [!INCLUDE[vstecado](~/includes/vstecado-md.md)] przy użyciu [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] model programowania.  

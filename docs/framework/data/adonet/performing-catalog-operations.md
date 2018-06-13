@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362067"
 ---
 # <a name="performing-catalog-operations"></a>Wykonywanie operacji katalogu
 Do wykonania polecenia, aby zmodyfikować bazy danych lub katalogu, takie jak wykonywanie instrukcji CREATE TABLE lub CREATE PROCEDURE utworzyć **polecenia** przy użyciu odpowiedniej instrukcji SQL i **połączenia** obiektu. Wykonaj polecenie z **ExecuteNonQuery** metody **polecenia** obiektu.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512479"
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a>Porady: określanie kontekstu zabezpieczeń dla usług
 Domyślnie usługi uruchamiane w kontekście zabezpieczeń inną niż zalogowanego użytkownika. Usługi uruchamiane w kontekście domyślnego konta systemu o nazwie `LocalSystem`, która umożliwi im różne przywileje dostępu do zasobów systemowych od użytkownika. Można zmienić to zachowanie, aby określić inne konto użytkownika usługi powinny uruchamiania.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748282"
 ---
 # <a name="ltheadersgt-element"></a>&lt;headers&gt;, element
 Zawiera kolekcję nagłówków adresowych, które są wymagane do prawidłowego adresowania wystawcy lokalnego. Można użyć `add` — słowo kluczowe, aby dodać nagłówek do tej kolekcji.  

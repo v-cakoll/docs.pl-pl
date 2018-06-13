@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362727"
 ---
 # <a name="large-udts"></a>Duże typów
 Typy danych zdefiniowane przez użytkownika (UDTs) umożliwiają deweloperom rozszerzyć system skalarną typu serwera, przechowując wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) obiektów w bazie danych programu SQL Server. UDTs może zawierać wielu elementów i może zawierać zachowania, w przeciwieństwie do tradycyjnych alias typów danych, składające się z jednego typu danych systemu programu SQL Server.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512388"
 ---
 # <a name="error-handling-activities-in-wf"></a>Obsługa błędów działań w WF
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Implementowanie obsługi błędów i odzyskiwania zawiera kilka działań dostarczane przez system. Aby uzyskać więcej informacji, zobacz [wyjątki](../../../docs/framework/windows-workflow-foundation/exceptions.md).  

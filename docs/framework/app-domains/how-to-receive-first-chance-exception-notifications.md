@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744372"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>Porady: odbieranie powiadomień o wyjątkach pierwszej szansy
 <xref:System.AppDomain.FirstChanceException> Zdarzenie <xref:System.AppDomain> klasa pozwala na powiadomienie wyjątek, przed wspólnego języka środowiska uruchomieniowego zostało uruchomione, wyszukiwanie programy obsługi wyjątków.  

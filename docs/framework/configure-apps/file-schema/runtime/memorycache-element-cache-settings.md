@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748402"
 ---
 # <a name="ltmemorycachegt-element-cache-settings"></a>&lt;memoryCache&gt; elementu (ustawienia pamięci podręcznej)
 Definiuje element, który jest używany do konfigurowania pamięci podręcznej, która jest oparta na <xref:System.Runtime.Caching.MemoryCache> klasy. <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> Klasa definiuje [memoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) elementu, którego można użyć do skonfigurowania pamięci podręcznej. Wiele wystąpień <xref:System.Runtime.Caching.MemoryCache> klasa może być używana w pojedynczej aplikacji. Każdy `memoryCache` w pliku konfiguracji może zawierać ustawienia dla nazwane <xref:System.Runtime.Caching.MemoryCache> wystąpienia.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498348"
 ---
 # <a name="servicemodel-transaction-configuration"></a>Konfiguracja transakcji modelu ServiceModel
 Windows Communication Foundation (WCF) zawiera trzy atrybuty dotyczące konfigurowania transakcji usługi: `transactionFlow`, `transactionProtocol`, i `transactionTimeout`.  

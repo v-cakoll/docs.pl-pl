@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410419"
 ---
 # <a name="wif-and-web-farms"></a>WIF i farmy serwerów sieci Web
 Korzystając z programu Windows Identity Foundation (WIF) do zabezpieczania zasobów jednostki uzależnionej aplikacji firmy (RP), które zostało wdrożone w farmie sieci web, należy wykonać określone kroki, aby upewnić się, że WIF może przetwarzać tokenów z wystąpień RP aplikacji uruchomionych na różnych komputery z farmy. Proces przetwarzania obejmuje sprawdzanie poprawności Podpisy tokenu sesji, szyfrowania i odszyfrowywania tokenów sesji, buforowanie tokeny sesji i wykrywanie odtwarzany tokenów zabezpieczających.  

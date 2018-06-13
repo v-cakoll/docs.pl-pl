@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522047"
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a><span data-ttu-id="051d3-102">Porady: kopiowanie pikseli w celi zmniejszenia migotania w formularzach systemu Windows</span><span class="sxs-lookup"><span data-stu-id="051d3-102">How to: Copy Pixels for Reducing Flicker in Windows Forms</span></span>
 <span data-ttu-id="051d3-103">Podczas animować proste grafiki, użytkownicy czasami może wystąpić, migotania lub innych niepożądanych skutków visual.</span><span class="sxs-lookup"><span data-stu-id="051d3-103">When you animate a simple graphic, users can sometimes encounter flicker or other undesirable visual effects.</span></span> <span data-ttu-id="051d3-104">Jednym ze sposobów ograniczenia tego problemu jest użycie procesu "bitblt" grafiki.</span><span class="sxs-lookup"><span data-stu-id="051d3-104">One way to limit this problem is to use a "bitblt" process on the graphic.</span></span> <span data-ttu-id="051d3-105">BitBlt jest "blok bitowy transferem" dane koloru z prostokąt pochodzenia pikseli do docelowy prostokąt pikseli.</span><span class="sxs-lookup"><span data-stu-id="051d3-105">Bitblt is the "bit-block transfer" of the color data from an origin rectangle of pixels to a destination rectangle of pixels.</span></span>  

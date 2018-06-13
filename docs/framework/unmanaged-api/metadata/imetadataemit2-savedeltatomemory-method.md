@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444773"
 ---
 # <a name="imetadataemit2savedeltatomemory-method"></a><span data-ttu-id="12117-102">IMetaDataEmit2::SaveDeltaToMemory — Metoda</span><span class="sxs-lookup"><span data-stu-id="12117-102">IMetaDataEmit2::SaveDeltaToMemory Method</span></span>
 <span data-ttu-id="12117-103">Zapisuje zmiany z bieżącej sesji edit-and-continue pamięci.</span><span class="sxs-lookup"><span data-stu-id="12117-103">Saves changes from the current edit-and-continue session to memory.</span></span>  

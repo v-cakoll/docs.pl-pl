@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446499"
 ---
 # <a name="imetadataimportenumevents-method"></a><span data-ttu-id="8c627-102">IMetaDataImport::EnumEvents — Metoda</span><span class="sxs-lookup"><span data-stu-id="8c627-102">IMetaDataImport::EnumEvents Method</span></span>
 <span data-ttu-id="8c627-103">Wylicza tokeny definicji zdarzenia dla określony token TypeDef.</span><span class="sxs-lookup"><span data-stu-id="8c627-103">Enumerates event definition tokens for the specified TypeDef token.</span></span>  

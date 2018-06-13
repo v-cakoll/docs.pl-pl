@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523572"
 ---
 # <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="4bc6e-102">Porady: uzyskiwanie dostępu do określonych elementów w formantach ComboBox, ListBox lub CheckedListBox formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="4bc6e-102">How to: Access Specific Items in a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
 <span data-ttu-id="4bc6e-103">Uzyskiwanie dostępu do elementów określonych w pole kombi formularzy systemu Windows, pole listy lub pole listy zaznaczenia jest podstawowych zadań.</span><span class="sxs-lookup"><span data-stu-id="4bc6e-103">Accessing specific items in a Windows Forms combo box, list box, or checked list box is an essential task.</span></span> <span data-ttu-id="4bc6e-104">Umożliwia ona programowo określić na liście w poszczególnych pozycji.</span><span class="sxs-lookup"><span data-stu-id="4bc6e-104">It enables you to programmatically determine what is in a list, at any given position.</span></span>  

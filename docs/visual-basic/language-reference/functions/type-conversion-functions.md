@@ -86,6 +86,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605085"
 ---
 # <a name="type-conversion-functions-visual-basic"></a><span data-ttu-id="8b4ac-102">Funkcje konwersji typu (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8b4ac-102">Type Conversion Functions (Visual Basic)</span></span>
 <span data-ttu-id="8b4ac-103">Te funkcje są skompilowaną wbudowaną, co oznacza, że kod konwersji jest częścią kodu, który wylicza wartość wyrażenia.</span><span class="sxs-lookup"><span data-stu-id="8b4ac-103">These functions are compiled inline, meaning the conversion code is part of the code that evaluates the expression.</span></span> <span data-ttu-id="8b4ac-104">Czasami nie istnieje żadne wywołanie procedury do wykonania konwersji, co zwiększa wydajność.</span><span class="sxs-lookup"><span data-stu-id="8b4ac-104">Sometimes there is no call to a procedure to accomplish the conversion, which improves performance.</span></span> <span data-ttu-id="8b4ac-105">Każda funkcja przekształca wyrażenie określonego typu danych.</span><span class="sxs-lookup"><span data-stu-id="8b4ac-105">Each function coerces an expression to a specific data type.</span></span>  

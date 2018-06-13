@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602791"
 ---
 # <a name="statements-visual-basic"></a><span data-ttu-id="73836-102">Instrukcje (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="73836-102">Statements (Visual Basic)</span></span>
 <span data-ttu-id="73836-103">Tematy w tej sekcji zawierają tabele deklaracji Visual Basic i instrukcje wykonywalne i ważne list, które dotyczą wiele instrukcji.</span><span class="sxs-lookup"><span data-stu-id="73836-103">The topics in this section contain tables of the Visual Basic declaration and executable statements, and of important lists that apply to many statements.</span></span>  

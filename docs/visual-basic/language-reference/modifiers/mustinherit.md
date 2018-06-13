@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602843"
 ---
 # <a name="mustinherit-visual-basic"></a><span data-ttu-id="1fc01-102">MustInherit (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1fc01-102">MustInherit (Visual Basic)</span></span>
 <span data-ttu-id="1fc01-103">Określa, że klasa może być używana tylko jako klasa bazowa i że nie można utworzyć obiektu bezpośrednio z niej.</span><span class="sxs-lookup"><span data-stu-id="1fc01-103">Specifies that a class can be used only as a base class and that you cannot create an object directly from it.</span></span>  

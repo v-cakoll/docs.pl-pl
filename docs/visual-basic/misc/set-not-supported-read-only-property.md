@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639418"
 ---
 # <a name="set-not-supported-read-only-property"></a><span data-ttu-id="8fc5c-102">Set nie jest możliwa (właściwość tylko do odczytu)</span><span class="sxs-lookup"><span data-stu-id="8fc5c-102">Set not supported (read-only property)</span></span>
 <span data-ttu-id="8fc5c-103">Próbowano ustawić lub zmienić właściwości, która jest tylko do odczytu.</span><span class="sxs-lookup"><span data-stu-id="8fc5c-103">You tried to set or change a property that is read only.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524069"
 ---
 # <a name="double-buffered-graphics"></a><span data-ttu-id="9f341-102">Podwójnie buforowana grafika</span><span class="sxs-lookup"><span data-stu-id="9f341-102">Double Buffered Graphics</span></span>
 <span data-ttu-id="9f341-103">Migotania jest to powszechny problem programowania grafiki.</span><span class="sxs-lookup"><span data-stu-id="9f341-103">Flicker is a common problem when programming graphics.</span></span> <span data-ttu-id="9f341-104">Operacje graficzne, wymagające wielu operacji malowania złożonego może spowodować renderowanych wyświetlania migotać ani w przeciwnym razie można zaakceptować wygląd obrazów.</span><span class="sxs-lookup"><span data-stu-id="9f341-104">Graphics operations that require multiple complex painting operations can cause the rendered images to appear to flicker or have an otherwise unacceptable appearance.</span></span> <span data-ttu-id="9f341-105">Aby rozwiązać te problemy, .NET Framework zapewnia dostęp do podwójnego buforowania.</span><span class="sxs-lookup"><span data-stu-id="9f341-105">To address these problems, the .NET Framework provides access to double buffering.</span></span>  

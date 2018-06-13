@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521721"
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a><span data-ttu-id="61034-102">Porady: określanie elementu podrzędnego MDI Active</span><span class="sxs-lookup"><span data-stu-id="61034-102">How to: Determine the Active MDI Child</span></span>
 <span data-ttu-id="61034-103">Czasem można udostępnić polecenia, który działa na formant, który ma fokus w formularzu podrzędnym obecnie aktywne.</span><span class="sxs-lookup"><span data-stu-id="61034-103">On occasion, you will want to provide a command that operates on the control that has focus on the currently active child form.</span></span> <span data-ttu-id="61034-104">Na przykład załóżmy, że chcesz skopiować zaznaczonego tekstu w polu tekstowym formularz podrzędny do Schowka.</span><span class="sxs-lookup"><span data-stu-id="61034-104">For example, suppose you want to copy selected text from the child form's text box to the Clipboard.</span></span> <span data-ttu-id="61034-105">Należy utworzyć procedury, która kopiuje zaznaczonego tekstu do Schowka przy użyciu <xref:System.Windows.Forms.Control.Click> zdarzeń Kopiuj element menu standardowe menu Edycja.</span><span class="sxs-lookup"><span data-stu-id="61034-105">You would create a procedure that copies selected text to the Clipboard using the <xref:System.Windows.Forms.Control.Click> event of the Copy menu item on the standard Edit menu.</span></span>  

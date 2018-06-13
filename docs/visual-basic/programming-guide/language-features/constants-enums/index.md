@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646395"
 ---
 # <a name="constants-and-enumerations-in-visual-basic"></a><span data-ttu-id="b67ce-102">Stałe i wyliczenia w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b67ce-102">Constants and Enumerations in Visual Basic</span></span>
 <span data-ttu-id="b67ce-103">Stałe są sposobem użycia łatwy do rozpoznania nazwy zamiast wartości, który nie ulega zmianie.</span><span class="sxs-lookup"><span data-stu-id="b67ce-103">Constants are a way to use meaningful names in place of a value that does not change.</span></span> <span data-ttu-id="b67ce-104">Stałe przechowywać wartości, które, jak nazwa wskazuje, pozostają stałe w trakcie wykonywania aplikacji.</span><span class="sxs-lookup"><span data-stu-id="b67ce-104">Constants store values that, as the name implies, remain constant throughout the execution of an application.</span></span> <span data-ttu-id="b67ce-105">Stałe służy do nadania łatwy do rozpoznania nazwy, zamiast numery wprowadzania czytelność kodu.</span><span class="sxs-lookup"><span data-stu-id="b67ce-105">You can use constants to provide meaningful names, instead of numbers, making your code more readable.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604428"
 ---
 # <a name="recommended-xml-tags-for-documentation-comments-visual-basic"></a><span data-ttu-id="d7be8-102">Zalecane tagi XML dla komentarzy dokumentacji (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d7be8-102">Recommended XML Tags for Documentation Comments (Visual Basic)</span></span>
 <span data-ttu-id="d7be8-103">Kompilator Visual Basic może przetwarzać komentarze do dokumentacji w kodzie do pliku XML.</span><span class="sxs-lookup"><span data-stu-id="d7be8-103">The Visual Basic compiler can process documentation comments in your code to an XML file.</span></span> <span data-ttu-id="d7be8-104">Dodatkowe narzędzia służy do przetwarzania pliku XML do dokumentacji.</span><span class="sxs-lookup"><span data-stu-id="d7be8-104">You can use additional tools to process the XML file into documentation.</span></span>  

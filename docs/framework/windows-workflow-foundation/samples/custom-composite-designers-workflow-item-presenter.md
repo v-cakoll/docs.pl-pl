@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517121"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a><span data-ttu-id="a469f-102">Niestandardowe projektantów złożonego - Prezenterze element przepływu pracy</span><span class="sxs-lookup"><span data-stu-id="a469f-102">Custom Composite Designers - Workflow Item Presenter</span></span>
 <span data-ttu-id="a469f-103"><xref:System.Activities.Presentation.WorkflowItemPresenter> Jest typem klucza w WF projektanta programowania modelu, który umożliwia tworzenie "strefy docelowej" rozmieszczenia dowolnego działania.</span><span class="sxs-lookup"><span data-stu-id="a469f-103">The <xref:System.Activities.Presentation.WorkflowItemPresenter> is a key type in the WF designer programming model that allows for the creation of a "drop zone" where an arbitrary activity can be placed.</span></span> <span data-ttu-id="a469f-104">W tym przykładzie przedstawiono sposób tworzenia Projektant działań tego powierzchni takiej "upuszczania strefy."</span><span class="sxs-lookup"><span data-stu-id="a469f-104">This sample shows how to build an activity designer that surfaces such a "drop zone."</span></span>  

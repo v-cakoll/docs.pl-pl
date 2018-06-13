@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412363"
 ---
 # <a name="icordebugfunction2setjmcstatus-method"></a><span data-ttu-id="229c7-102">ICorDebugFunction2::SetJMCStatus — Metoda</span><span class="sxs-lookup"><span data-stu-id="229c7-102">ICorDebugFunction2::SetJMCStatus Method</span></span>
 <span data-ttu-id="229c7-103">Funkcja reprezentowany przez ten ICorDebugFunction2 dla tylko mój kod oznacza wykonywanie krok po kroku.</span><span class="sxs-lookup"><span data-stu-id="229c7-103">Marks the function represented by this ICorDebugFunction2 for Just My Code stepping.</span></span>  

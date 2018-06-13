@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642898"
 ---
 # <a name="how-to-retrieve-the-shallow-value-of-an-element-visual-basic"></a><span data-ttu-id="3a4e2-102">Porady: pobieranie skrócona wartość elementu (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3a4e2-102">How to: Retrieve the Shallow Value of an Element (Visual Basic)</span></span>
 <span data-ttu-id="3a4e2-103">W tym temacie pokazano, jak pobrać pobieżną wartości elementu.</span><span class="sxs-lookup"><span data-stu-id="3a4e2-103">This topic shows how to get the shallow value of an element.</span></span> <span data-ttu-id="3a4e2-104">Skrócona wartość jest wartością tylko określonego elementu zamiast dokładnego wartość, która zawiera wartości wszystkich elementów podrzędnych połączone w jeden ciąg.</span><span class="sxs-lookup"><span data-stu-id="3a4e2-104">The shallow value is the value of the specific element only, as opposed to the deep value, which includes the values of all descendent elements concatenated into a single string.</span></span>  

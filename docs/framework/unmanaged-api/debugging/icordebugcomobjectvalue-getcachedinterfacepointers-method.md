@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411905"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacepointers-method"></a><span data-ttu-id="ea046-102">ICorDebugComObjectValue::GetCachedInterfacePointers — Metoda</span><span class="sxs-lookup"><span data-stu-id="ea046-102">ICorDebugComObjectValue::GetCachedInterfacePointers Method</span></span>
 <span data-ttu-id="ea046-103">Pobiera wskaźniki interfejsu pierwotnego, buforowane na bieżącym wywoływana otoka środowiska uruchomieniowego (otoki RCW).</span><span class="sxs-lookup"><span data-stu-id="ea046-103">Gets the raw interface pointers cached on the current runtime callable wrapper (RCW).</span></span>  

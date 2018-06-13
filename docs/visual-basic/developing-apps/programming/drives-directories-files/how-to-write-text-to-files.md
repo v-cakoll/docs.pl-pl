@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589434"
 ---
 # <a name="how-to-write-text-to-files-in-visual-basic"></a><span data-ttu-id="153d3-102">Porady: zapisywanie tekstu do plików w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="153d3-102">How to: Write Text to Files in Visual Basic</span></span>
 <span data-ttu-id="153d3-103"><xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> Metody umożliwia zapisywanie tekstu do plików.</span><span class="sxs-lookup"><span data-stu-id="153d3-103">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> method can be used to write text to files.</span></span> <span data-ttu-id="153d3-104">Jeśli określony plik nie istnieje, jest tworzony.</span><span class="sxs-lookup"><span data-stu-id="153d3-104">If the specified file does not exist, it is created.</span></span>  

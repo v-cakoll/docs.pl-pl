@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579252"
 ---
 # <a name="enum-design"></a><span data-ttu-id="78739-102">Projekt wyliczenia</span><span class="sxs-lookup"><span data-stu-id="78739-102">Enum Design</span></span>
 <span data-ttu-id="78739-103">Wyliczenia to specjalny rodzaj typu wartości.</span><span class="sxs-lookup"><span data-stu-id="78739-103">Enums are a special kind of value type.</span></span> <span data-ttu-id="78739-104">Istnieją dwa rodzaje wyliczenia: proste Typy wyliczeniowe i flagi wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="78739-104">There are two kinds of enums: simple enums and flag enums.</span></span>  

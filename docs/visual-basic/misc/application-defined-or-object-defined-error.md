@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597494"
 ---
 # <a name="application-defined-or-object-defined-error"></a><span data-ttu-id="d931d-102">Błąd zdefiniowane przez aplikację lub obiekt</span><span class="sxs-lookup"><span data-stu-id="d931d-102">Application-defined or object-defined error</span></span>
 <span data-ttu-id="d931d-103">Wystąpił błąd zdefiniowanym przez aplikację lub zdefiniowany przez użytkownika.</span><span class="sxs-lookup"><span data-stu-id="d931d-103">An application-defined or user-defined error occurred.</span></span> <span data-ttu-id="d931d-104">Sprawdź błąd.</span><span class="sxs-lookup"><span data-stu-id="d931d-104">Check the error.</span></span>  

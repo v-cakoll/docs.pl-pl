@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577179"
 ---
 # <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a><span data-ttu-id="9d9a6-102">XSLT skryptów przy użyciu arkusza stylów &lt;msxsl:script&gt;</span><span class="sxs-lookup"><span data-stu-id="9d9a6-102">XSLT Stylesheet Scripting Using &lt;msxsl:script&gt;</span></span>
 <span data-ttu-id="9d9a6-103"><xref:System.Xml.Xsl.XslTransform> Klasa obsługuje osadzonych skryptów przy użyciu `script` elementu.</span><span class="sxs-lookup"><span data-stu-id="9d9a6-103">The <xref:System.Xml.Xsl.XslTransform> class supports embedded scripting using the `script` element.</span></span>  

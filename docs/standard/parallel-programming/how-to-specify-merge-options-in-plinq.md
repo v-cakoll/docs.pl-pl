@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580448"
 ---
 # <a name="how-to-specify-merge-options-in-plinq"></a><span data-ttu-id="1b2dc-102">Porady: określanie opcji scalania w PLINQ</span><span class="sxs-lookup"><span data-stu-id="1b2dc-102">How to: Specify Merge Options in PLINQ</span></span>
 <span data-ttu-id="1b2dc-103">W tym przykładzie przedstawiono sposób Określanie opcji scalania, które będą stosowane do wszystkich kolejnych operatorów w zapytaniu PLINQ.</span><span class="sxs-lookup"><span data-stu-id="1b2dc-103">This example shows how to specify the merge options that will apply to all subsequent operators in a PLINQ query.</span></span> <span data-ttu-id="1b2dc-104">Nie trzeba jawnie ustaw opcje scalania, ale może to zwiększyć wydajność.</span><span class="sxs-lookup"><span data-stu-id="1b2dc-104">You do not have to set merge options explicitly, but doing so may improve performance.</span></span> <span data-ttu-id="1b2dc-105">Aby uzyskać więcej informacji na temat opcji scalania, zobacz [opcje scalania w PLINQ](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).</span><span class="sxs-lookup"><span data-stu-id="1b2dc-105">For more information about merge options, see [Merge Options in PLINQ](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).</span></span>  

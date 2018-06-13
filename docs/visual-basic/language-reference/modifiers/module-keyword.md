@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595280"
 ---
 # <a name="module-ltkeywordgt-visual-basic"></a><span data-ttu-id="95f75-102">Moduł &lt;— słowo kluczowe&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="95f75-102">Module &lt;keyword&gt; (Visual Basic)</span></span>
 <span data-ttu-id="95f75-103">Określa, że atrybut znajdujący się na początku pliku źródłowego dotyczy bieżącego modułu zestawu.</span><span class="sxs-lookup"><span data-stu-id="95f75-103">Specifies that an attribute at the beginning of a source file applies to the current assembly module.</span></span>  

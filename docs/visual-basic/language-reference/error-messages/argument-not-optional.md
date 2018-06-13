@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585119"
 ---
 # <a name="argument-not-optional-visual-basic"></a><span data-ttu-id="c45b5-102">Argument nie jest opcjonalny (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c45b5-102">Argument not optional (Visual Basic)</span></span>
 <span data-ttu-id="c45b5-103">Liczba i typy argumentów musi odpowiadać wartości oczekiwanych.</span><span class="sxs-lookup"><span data-stu-id="c45b5-103">The number and types of arguments must match those expected.</span></span> <span data-ttu-id="c45b5-104">Niepoprawna liczba argumentów jest albo pominięty argument nie jest opcjonalny.</span><span class="sxs-lookup"><span data-stu-id="c45b5-104">Either there is an incorrect number of arguments, or an omitted argument is not optional.</span></span> <span data-ttu-id="c45b5-105">Argument tylko można pominąć po wywołaniu procedury zdefiniowane przez użytkownika, jeśli został zadeklarowany jako `Optional` w definicji procedury.</span><span class="sxs-lookup"><span data-stu-id="c45b5-105">An argument can only be omitted from a call to a user-defined procedure if it was declared `Optional` in the procedure definition.</span></span>  

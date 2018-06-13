@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583156"
 ---
 # <a name="how-to-synchronize-concurrent-operations-with-a-barrier"></a><span data-ttu-id="14b1a-102">Porady: synchronizacja jednoczesnych operacji za pomocą bariery</span><span class="sxs-lookup"><span data-stu-id="14b1a-102">How to: Synchronize Concurrent Operations with a Barrier</span></span>
 <span data-ttu-id="14b1a-103">Poniższy przykład przedstawia sposób synchronizowanie równoczesnych zadań z <xref:System.Threading.Barrier>.</span><span class="sxs-lookup"><span data-stu-id="14b1a-103">The following example shows how to synchronize concurrent tasks with a <xref:System.Threading.Barrier>.</span></span>  

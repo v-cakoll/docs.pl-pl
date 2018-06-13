@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584142"
 ---
 # <a name="a-double-quote-is-not-a-valid-comment-token-for-delimited-fields-where-escapequote-is-set-to-true"></a><span data-ttu-id="0d4f7-102">Podwójny cudzysłów nie jest prawidłowym tokenem dla rozdzielonych pól, jeżeli parametr EscapeQuote ma wartość ustawioną na True</span><span class="sxs-lookup"><span data-stu-id="0d4f7-102">A double quote is not a valid comment token for delimited fields where EscapeQuote is set to True</span></span>
 <span data-ttu-id="0d4f7-103">Znak cudzysłowu zostały podane jako ogranicznik dla `TextFieldParser`, ale `EscapeQuotes` ma ustawioną wartość `True`.</span><span class="sxs-lookup"><span data-stu-id="0d4f7-103">A quotation mark has been supplied as the delimiter for the `TextFieldParser`, but `EscapeQuotes` is set to `True`.</span></span>  

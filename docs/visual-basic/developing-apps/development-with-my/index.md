@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584427"
 ---
 # <a name="development-with-my-visual-basic"></a><span data-ttu-id="3a157-102">Rozwój za pomocą My (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3a157-102">Development with My (Visual Basic)</span></span>
 <span data-ttu-id="3a157-103">Visual Basic udostępnia nowe funkcje do szybkiego opracowywania aplikacji poprawy wydajności i łatwości użycia, dostarczając zasilania.</span><span class="sxs-lookup"><span data-stu-id="3a157-103">Visual Basic provides new features for rapid application development that improve productivity and ease of use while delivering power.</span></span> <span data-ttu-id="3a157-104">Jedną z tych funkcji, o nazwie `My`, zapewnia dostęp do informacji i domyślnego wystąpienia obiektów, które odnoszą się do aplikacji i jej środowisko wykonawcze.</span><span class="sxs-lookup"><span data-stu-id="3a157-104">One of these features, called `My`, provides access to information and default object instances that are related to the application and its run-time environment.</span></span> <span data-ttu-id="3a157-105">Te informacje jest zorganizowana w formacie, który jest identyfikowana za pomocą funkcji IntelliSense i logicznie nakreślono zgodnie z użytku.</span><span class="sxs-lookup"><span data-stu-id="3a157-105">This information is organized in a format that is discoverable through IntelliSense and logically delineated according to use.</span></span>  

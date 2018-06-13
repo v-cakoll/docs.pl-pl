@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585739"
 ---
 # <a name="how-to-append-to-text-files-in-visual-basic"></a><span data-ttu-id="180bc-102">Porady: łączenie się plikami tekstowymi w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="180bc-102">How to: Append to Text Files in Visual Basic</span></span>
 <span data-ttu-id="180bc-103"><xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> Metody można użyć do dołączenia do pliku tekstowego, określając, który `append` ustawiono parametr `True`.</span><span class="sxs-lookup"><span data-stu-id="180bc-103">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> method can be used to append to a text file by specifying that the `append` parameter is set to `True`.</span></span>  

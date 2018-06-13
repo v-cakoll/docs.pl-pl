@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578992"
 ---
 # <a name="dispose-pattern"></a><span data-ttu-id="9fff6-102">Wzorzec Dispose</span><span class="sxs-lookup"><span data-stu-id="9fff6-102">Dispose Pattern</span></span>
 <span data-ttu-id="9fff6-103">Wszystkie programy uzyskać jeden lub więcej zasobów systemowych, np. pamięci, systemu obsługuje lub połączenia z bazą danych w trakcie ich wykonanie.</span><span class="sxs-lookup"><span data-stu-id="9fff6-103">All programs acquire one or more system resources, such as memory, system handles, or database connections, during the course of their execution.</span></span> <span data-ttu-id="9fff6-104">Deweloperzy muszą należy zachować ostrożność przy użyciu tych zasobów systemowych, ponieważ muszą zostać zwolnione po zostały zakupione i używane.</span><span class="sxs-lookup"><span data-stu-id="9fff6-104">Developers have to be careful when using such system resources, because they must be released after they have been acquired and used.</span></span>  

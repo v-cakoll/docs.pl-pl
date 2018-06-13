@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596671"
 ---
 # <a name="special-characters-visual-basic-reference"></a><span data-ttu-id="9f511-102">Znaki specjalne (odwołanie w Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9f511-102">Special Characters (Visual Basic Reference)</span></span>
 

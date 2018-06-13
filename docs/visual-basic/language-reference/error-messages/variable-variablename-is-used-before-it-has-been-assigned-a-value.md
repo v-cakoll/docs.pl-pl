@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596922"
 ---
 # <a name="variable-39ltvariablenamegt39-is-used-before-it-has-been-assigned-a-value"></a><span data-ttu-id="a7f74-102">Zmienna &#39; &lt;nazwa_zmiennej&gt; &#39; jest używana, zanim została do niej przypisana wartość</span><span class="sxs-lookup"><span data-stu-id="a7f74-102">Variable &#39;&lt;variablename&gt;&#39; is used before it has been assigned a value</span></span>
 <span data-ttu-id="a7f74-103">Zmienna "\<nazwa_zmiennej >" jest używana, zanim została do niej przypisana wartość.</span><span class="sxs-lookup"><span data-stu-id="a7f74-103">Variable '\<variablename>' is used before it has been assigned a value.</span></span> <span data-ttu-id="a7f74-104">W czasie wykonywania może wystąpić wyjątek odwołania zerowego.</span><span class="sxs-lookup"><span data-stu-id="a7f74-104">A null reference exception could result at run time.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583438"
 ---
 # <a name="performing-network-operations-visual-basic"></a><span data-ttu-id="0a579-102">Przeprowadzanie operacji sieciowych (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0a579-102">Performing Network Operations (Visual Basic)</span></span>
 <span data-ttu-id="0a579-103">W poniższych tabelach przedstawiono listę zadań skojarzonych z `My.Computer.Network` obiektu.</span><span class="sxs-lookup"><span data-stu-id="0a579-103">The following tables list tasks associated with the `My.Computer.Network` object.</span></span>  

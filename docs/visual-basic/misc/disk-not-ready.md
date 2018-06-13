@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33633681"
 ---
 # <a name="disk-not-ready"></a><span data-ttu-id="bd6f5-102">Dysk nie jest gotowy</span><span class="sxs-lookup"><span data-stu-id="bd6f5-102">Disk not ready</span></span>
 <span data-ttu-id="bd6f5-103">Dla określonego dysku nie dysku lub stację jest otwarty.</span><span class="sxs-lookup"><span data-stu-id="bd6f5-103">For the specified drive, either there is no disk or the drive door is open.</span></span>  

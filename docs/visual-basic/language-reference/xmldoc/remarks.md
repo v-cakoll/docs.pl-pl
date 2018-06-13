@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598202"
 ---
 # <a name="ltremarksgt-visual-basic"></a><span data-ttu-id="55143-102">&lt;Uwagi&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="55143-102">&lt;remarks&gt; (Visual Basic)</span></span>
 <span data-ttu-id="55143-103">Określa elementu członkowskiego w sekcji uwag.</span><span class="sxs-lookup"><span data-stu-id="55143-103">Specifies a remarks section for the member.</span></span>  

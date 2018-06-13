@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584212"
 ---
 # <a name="visual-basic-power-packs-controls"></a><span data-ttu-id="283eb-102">Formanty PowerPacks języka Visual Basic</span><span class="sxs-lookup"><span data-stu-id="283eb-102">Visual Basic Power Packs Controls</span></span>
 <span data-ttu-id="283eb-103">Formantów Powerpack Visual Basic są dodatkowe formanty formularzy systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="283eb-103">Visual Basic Power Packs controls are additional Windows Forms controls.</span></span> <span data-ttu-id="283eb-104">Nie są one uwzględnione w programie Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="283eb-104">They are not included in Visual Studio.</span></span>  <span data-ttu-id="283eb-105">Możesz [je pobrać](http://go.microsoft.com/fwlink/?LinkId=321343), ale są one udostępniane jako — jest bez obsługi.</span><span class="sxs-lookup"><span data-stu-id="283eb-105">You can [download them](http://go.microsoft.com/fwlink/?LinkId=321343), but they are provided as-is, without support.</span></span>  

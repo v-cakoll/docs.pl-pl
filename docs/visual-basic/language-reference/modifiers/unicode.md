@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595725"
 ---
 # <a name="unicode-visual-basic"></a><span data-ttu-id="0e294-102">Unicode (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0e294-102">Unicode (Visual Basic)</span></span>
 <span data-ttu-id="0e294-103">Określa, że Visual Basic powinien kierować wszystkie ciągi jako wartości Unicode, niezależnie od tego, nazwę procedury zewnętrznej, został zadeklarowany.</span><span class="sxs-lookup"><span data-stu-id="0e294-103">Specifies that Visual Basic should marshal all strings to Unicode values regardless of the name of the external procedure being declared.</span></span>  

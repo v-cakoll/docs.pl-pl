@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583422"
 ---
 # <a name="expression-too-complex"></a><span data-ttu-id="b1306-102">Wyrażenie jest zbyt złożone</span><span class="sxs-lookup"><span data-stu-id="b1306-102">Expression too complex</span></span>
 <span data-ttu-id="b1306-103">Zmiennoprzecinkowe wyrażenie zawiera zbyt wiele zagnieżdżonych zakresie.</span><span class="sxs-lookup"><span data-stu-id="b1306-103">A floating-point expression contains too many nested subexpressions.</span></span>  

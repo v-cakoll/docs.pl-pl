@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592356"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a><span data-ttu-id="df105-103">Definiowanie aplikacji usługi kontenera przy użyciu rozwiązania docker-compose.yml</span><span class="sxs-lookup"><span data-stu-id="df105-103">Defining your multi-container application with docker-compose.yml</span></span> 
 

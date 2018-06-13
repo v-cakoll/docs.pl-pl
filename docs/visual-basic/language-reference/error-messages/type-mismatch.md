@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593993"
 ---
 # <a name="type-mismatch-visual-basic"></a><span data-ttu-id="7e7a7-102">Niezgodność typów (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7e7a7-102">Type mismatch (Visual Basic)</span></span>
 <span data-ttu-id="7e7a7-103">Próbujesz konwertować wartość do innego typu w taki sposób, który jest nieprawidłowy.</span><span class="sxs-lookup"><span data-stu-id="7e7a7-103">You attempted to convert a value to another type in a way that is not valid.</span></span>  

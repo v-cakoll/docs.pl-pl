@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579512"
 ---
 # <a name="language-independence-and-language-independent-components"></a><span data-ttu-id="6d952-103">Niezależność od języka i elementy niezależne od języka</span><span class="sxs-lookup"><span data-stu-id="6d952-103">Language independence and language-independent components</span></span>
 

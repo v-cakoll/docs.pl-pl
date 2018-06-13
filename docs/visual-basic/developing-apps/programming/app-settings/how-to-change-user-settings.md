@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591992"
 ---
 # <a name="how-to-change-user-settings-in-visual-basic"></a><span data-ttu-id="4f870-102">Porady: zmienianie ustawień użytkownika w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="4f870-102">How to: Change User Settings in Visual Basic</span></span>
 <span data-ttu-id="4f870-103">Ustawienia użytkownika można zmienić, przypisując na nową wartość do ustawienia właściwości `My.Settings` obiektu.</span><span class="sxs-lookup"><span data-stu-id="4f870-103">You can change a user setting by assigning a new value to the setting's property on the `My.Settings` object.</span></span>  

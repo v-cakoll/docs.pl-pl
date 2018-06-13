@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580786"
 ---
 # <a name="securing-state-data"></a><span data-ttu-id="00a6c-102">Zabezpieczanie danych o stanie</span><span class="sxs-lookup"><span data-stu-id="00a6c-102">Securing State Data</span></span>
 <span data-ttu-id="00a6c-103">Aplikacji, które obsługują dane poufne lub wprowadzić dowolny rodzaj decyzje zabezpieczeń muszą zachować te dane pod kontrolą własne i nie może dopuścić do innych potencjalnie niebezpiecznego kodu bezpośrednio uzyskać dostęp do danych.</span><span class="sxs-lookup"><span data-stu-id="00a6c-103">Applications that handle sensitive data or make any kind of security decisions need to keep that data under their own control and cannot allow other potentially malicious code to access the data directly.</span></span> <span data-ttu-id="00a6c-104">Najlepszym sposobem na potrzeby ochrony danych w pamięci jest deklaruje dane jako prywatny lub wewnętrzny (z zakresem, ograniczone do tego samego zestawu) zmienne.</span><span class="sxs-lookup"><span data-stu-id="00a6c-104">The best way to protect data in memory is to declare the data as private or internal (with scope limited to the same assembly) variables.</span></span> <span data-ttu-id="00a6c-105">Jednak nawet te dane podlega dostępu, które należy zwrócić uwagę:</span><span class="sxs-lookup"><span data-stu-id="00a6c-105">However, even this data is subject to access you should be aware of:</span></span>  

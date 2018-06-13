@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603993"
 ---
 # <a name="nothing-visual-basic"></a><span data-ttu-id="15b5b-102">Nothing (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="15b5b-102">Nothing (Visual Basic)</span></span>
 <span data-ttu-id="15b5b-103">Reprezentuje wartość domyślną każdego typu danych.</span><span class="sxs-lookup"><span data-stu-id="15b5b-103">Represents the default value of any data type.</span></span> <span data-ttu-id="15b5b-104">Typy odwołań, wartością domyślną jest `null` odwołania.</span><span class="sxs-lookup"><span data-stu-id="15b5b-104">For reference types, the default value is the `null` reference.</span></span> <span data-ttu-id="15b5b-105">Dla typów wartości wartość domyślna zależy od tego, czy typ wartości jest null.</span><span class="sxs-lookup"><span data-stu-id="15b5b-105">For value types, the default value depends on whether the value type is nullable.</span></span>  

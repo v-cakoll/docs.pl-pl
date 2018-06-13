@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584686"
 ---
 # <a name="error-in-loading-dll-visual-basic"></a><span data-ttu-id="3fa8f-102">Błąd ładowania biblioteki DLL (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3fa8f-102">Error in loading DLL (Visual Basic)</span></span>
 <span data-ttu-id="3fa8f-103">Biblioteki dołączanej (dynamicznie DLL) jest określona w bibliotece `Lib` klauzuli `Declare` instrukcji.</span><span class="sxs-lookup"><span data-stu-id="3fa8f-103">A dynamic-link library (DLL) is a library specified in the `Lib` clause of a `Declare` statement.</span></span> <span data-ttu-id="3fa8f-104">Możliwe przyczyny tego błędu to:</span><span class="sxs-lookup"><span data-stu-id="3fa8f-104">Possible causes for this error include:</span></span>  

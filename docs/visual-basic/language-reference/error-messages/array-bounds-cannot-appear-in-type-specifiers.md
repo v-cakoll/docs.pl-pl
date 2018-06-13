@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583686"
 ---
 # <a name="array-bounds-cannot-appear-in-type-specifiers"></a><span data-ttu-id="988b2-102">Granice tablicy nie mogą wystąpić w specyfikatorze typu</span><span class="sxs-lookup"><span data-stu-id="988b2-102">Array bounds cannot appear in type specifiers</span></span>
 <span data-ttu-id="988b2-103">Rozmiar tablicy nie można zadeklarować jako część specyfikatora typu danych.</span><span class="sxs-lookup"><span data-stu-id="988b2-103">Array sizes cannot be declared as part of a data type specifier.</span></span>  

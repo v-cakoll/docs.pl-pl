@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637869"
 ---
 # <a name="no-mouse-is-present"></a><span data-ttu-id="c954f-102">Nie ma myszy</span><span class="sxs-lookup"><span data-stu-id="c954f-102">No mouse is present</span></span>
 <span data-ttu-id="c954f-103">Jedna z właściwości obiektu `My.Computer.Mouse` obiektu została wywołana, ale komputer nie ma myszy ani port myszy zainstalowany.</span><span class="sxs-lookup"><span data-stu-id="c954f-103">One of the properties of the `My.Computer.Mouse` object was called, but the computer has no mouse or mouse port installed.</span></span>  

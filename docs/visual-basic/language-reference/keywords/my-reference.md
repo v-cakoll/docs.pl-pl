@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597324"
 ---
 # <a name="my-reference-visual-basic"></a><span data-ttu-id="ce3a0-102">Moje odwołanie (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ce3a0-102">My Reference (Visual Basic)</span></span>
 <span data-ttu-id="ce3a0-103">`My` Dzięki funkcji programowania szybciej i łatwiej, zapewniając intuicyjne dostęp do najczęściej używanych metod, właściwości i zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="ce3a0-103">The `My` feature makes programming faster and easier by giving you intuitive access to commonly used methods, properties, and events.</span></span> <span data-ttu-id="ce3a0-104">W poniższej tabeli wymieniono obiekty należące do `My`i akcji, które można wykonywać z każdym.</span><span class="sxs-lookup"><span data-stu-id="ce3a0-104">This table lists the objects contained in `My`, and the actions that can be performed with each.</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581553"
 ---
 # <a name="how-to-unlink-dataflow-blocks"></a><span data-ttu-id="6cac4-102">Porady: Rozłączanie bloków przepływu danych</span><span class="sxs-lookup"><span data-stu-id="6cac4-102">How to: Unlink Dataflow Blocks</span></span>
 <span data-ttu-id="6cac4-103">Ten dokument zawiera opis sposobu odłączania docelowy bloku przepływu danych ze źródła.</span><span class="sxs-lookup"><span data-stu-id="6cac4-103">This document describes how to unlink a target dataflow block from its source.</span></span>

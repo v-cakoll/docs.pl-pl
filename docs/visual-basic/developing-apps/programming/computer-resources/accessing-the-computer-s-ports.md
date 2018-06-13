@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585544"
 ---
 # <a name="accessing-the-computer39s-ports-visual-basic"></a><span data-ttu-id="27228-102">Uzyskiwanie dostępu do komputera&#39;s portów (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="27228-102">Accessing the Computer&#39;s Ports (Visual Basic)</span></span>
 <span data-ttu-id="27228-103">`My.Computer.Ports` Obiektu udostępnia właściwości i metody do uzyskiwania dostępu do portów szeregowych komputera.</span><span class="sxs-lookup"><span data-stu-id="27228-103">The `My.Computer.Ports` object provides a property and a method for accessing the computer's serial ports.</span></span>  

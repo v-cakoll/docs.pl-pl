@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581856"
 ---
 # <a name="accessing-application-forms-visual-basic"></a><span data-ttu-id="364a0-102">Uzyskiwanie dostępu do formularzy aplikacji (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="364a0-102">Accessing Application Forms (Visual Basic)</span></span>
 <span data-ttu-id="364a0-103">`My.Forms` Obiekt zapewnia prosty sposób uzyskać dostęp do wystąpienia każdego formularza systemu Windows zadeklarowany w projekcie aplikacji.</span><span class="sxs-lookup"><span data-stu-id="364a0-103">The `My.Forms` object provides an easy way to access an instance of each Windows Form declared in the application's project.</span></span> <span data-ttu-id="364a0-104">Można również użyć właściwości `My.Application` obiekt dostępu do ekranu powitalnego i formularz główny aplikacji i pobranie listy otwartych formularzy aplikacji.</span><span class="sxs-lookup"><span data-stu-id="364a0-104">You can also use properties of the `My.Application` object to access the application's splash screen and main form, and get a list of the application's open forms.</span></span>  

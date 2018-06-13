@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583841"
 ---
 # <a name="bad-dll-calling-convention"></a><span data-ttu-id="763ac-102">Nieprawidłowa konwencja wywoływania biblioteki DLL</span><span class="sxs-lookup"><span data-stu-id="763ac-102">Bad DLL calling convention</span></span>
 <span data-ttu-id="763ac-103">Argumenty przekazane do biblioteki dołączanej (dynamicznie DLL) musi dokładnie odpowiadać wartości oczekiwanych przez procedurę.</span><span class="sxs-lookup"><span data-stu-id="763ac-103">Arguments passed to a dynamic-link library (DLL) must exactly match those expected by the routine.</span></span> <span data-ttu-id="763ac-104">Konwencje wywoływania uwzględniać liczbę, typ i kolejność argumentów.</span><span class="sxs-lookup"><span data-stu-id="763ac-104">Calling conventions deal with number, type, and order of arguments.</span></span> <span data-ttu-id="763ac-105">Program może wywołania procedury w bibliotece DLL, który jest przekazywany nieprawidłowego typu lub liczba argumentów.</span><span class="sxs-lookup"><span data-stu-id="763ac-105">Your program may be calling a routine in a DLL that is being passed the wrong type or number of arguments.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582902"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a><span data-ttu-id="e64aa-103">Wybierz między aplikacjami sieci Web tradycyjnych i aplikacje jednej strony (źródła)</span><span class="sxs-lookup"><span data-stu-id="e64aa-103">Choose Between Traditional Web Apps and Single Page Apps (SPAs)</span></span>
 

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582847"
 ---
 # <a name="accessing-user-data-visual-basic"></a><span data-ttu-id="de5c3-102">Uzyskiwanie dostępu do danych użytkownika (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="de5c3-102">Accessing User Data (Visual Basic)</span></span>
 <span data-ttu-id="de5c3-103">Ta sekcja zawiera tematy dotyczące `My.User` obiektu i zadań, które można wykonać za pomocą go.</span><span class="sxs-lookup"><span data-stu-id="de5c3-103">This section contains topics dealing with the `My.User` object and tasks that you can accomplish with it.</span></span>  

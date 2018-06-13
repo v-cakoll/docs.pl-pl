@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581371"
 ---
 # <a name="serialization-how-to-topics"></a><span data-ttu-id="db439-102">Serializacja — tematy porad</span><span class="sxs-lookup"><span data-stu-id="db439-102">Serialization How-to Topics</span></span>
 <span data-ttu-id="db439-103">Poniższa lista zawiera łącza do tematów dotyczące wykonywania określonych zadań znajdującego się w dokumentacji koncepcyjnego dla serializacji.</span><span class="sxs-lookup"><span data-stu-id="db439-103">The following list includes links to the How-to topics found in the conceptual documentation for serialization.</span></span>  

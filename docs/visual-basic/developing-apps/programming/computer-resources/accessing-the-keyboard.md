@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582654"
 ---
 # <a name="accessing-the-keyboard-visual-basic"></a><span data-ttu-id="7f758-102">Uzyskiwanie dostępu do klawiatury (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7f758-102">Accessing the Keyboard (Visual Basic)</span></span>
 <span data-ttu-id="7f758-103">`My.Computer.Keyboard` Obiektu zawiera właściwości do uzyskiwania dostępu do bieżącego stanu klawiatury, takie jak klucze, które są aktualnie naciśnięty i udostępnia metodę Wyślij naciśnięcia klawiszy do aktywnego okna.</span><span class="sxs-lookup"><span data-stu-id="7f758-103">The `My.Computer.Keyboard` object provides properties for accessing the current state of the keyboard, such as what keys are currently pressed, and provides a method to send keystrokes to the active window.</span></span>  

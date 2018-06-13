@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587459"
 ---
 # <a name="net-framework-cryptography-model"></a><span data-ttu-id="89ba9-102">Model kryptografii programu .NET Framework</span><span class="sxs-lookup"><span data-stu-id="89ba9-102">.NET Framework Cryptography Model</span></span>
 <span data-ttu-id="89ba9-103">.NET Framework zapewnia implementacji wiele standardowych algorytmów kryptograficznych.</span><span class="sxs-lookup"><span data-stu-id="89ba9-103">The .NET Framework provides implementations of many standard cryptographic algorithms.</span></span> <span data-ttu-id="89ba9-104">Algorytmy te są łatwe w użyciu i mieć najbezpieczniejszy możliwe domyślnych właściwości.</span><span class="sxs-lookup"><span data-stu-id="89ba9-104">These algorithms are easy to use and have the safest possible default properties.</span></span> <span data-ttu-id="89ba9-105">Ponadto model kryptografii .NET Framework dziedziczenia obiektu, strumienia projektowania i konfiguracji jest bardzo rozszerzonego.</span><span class="sxs-lookup"><span data-stu-id="89ba9-105">In addition, the .NET Framework cryptography model of object inheritance, stream design, and configuration is extremely extensible.</span></span>  

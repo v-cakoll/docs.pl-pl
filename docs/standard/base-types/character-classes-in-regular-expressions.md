@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579694"
 ---
 # <a name="character-classes-in-regular-expressions"></a><span data-ttu-id="fbad7-102">Klasy znaków w wyrażeniach regularnych</span><span class="sxs-lookup"><span data-stu-id="fbad7-102">Character Classes in Regular Expressions</span></span>
 <a name="Top"></a> <span data-ttu-id="fbad7-103">Klasy znaku definiuje zestaw znaków, jedno z nich może wystąpić w ciągu wejściowego dopasowanie powiodło się.</span><span class="sxs-lookup"><span data-stu-id="fbad7-103">A character class defines a set of characters, any one of which can occur in an input string for a match to succeed.</span></span> <span data-ttu-id="fbad7-104">Język wyrażeń regularnych programu .NET obsługuje następujących klas znaków:</span><span class="sxs-lookup"><span data-stu-id="fbad7-104">The regular expression language in .NET supports the following character classes:</span></span>  

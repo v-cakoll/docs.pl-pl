@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593288"
 ---
 # <a name="out-of-stack-space-visual-basic"></a><span data-ttu-id="6a917-102">Za mało miejsca na stosie (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6a917-102">Out of stack space (Visual Basic)</span></span>
 <span data-ttu-id="6a917-103">Stos jest obszar roboczy pamięci, który powiększa się i zmniejsza dynamicznie z wymaganiami wykonywania programu.</span><span class="sxs-lookup"><span data-stu-id="6a917-103">The stack is a working area of memory that grows and shrinks dynamically with the demands of your executing program.</span></span> <span data-ttu-id="6a917-104">Przekroczono limit.</span><span class="sxs-lookup"><span data-stu-id="6a917-104">Its limits have been exceeded.</span></span>  

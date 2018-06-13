@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635162"
 ---
 # <a name="line-ltnumbergt-cannot-be-read-because-it-exceeds-the-maximum-line-size"></a><span data-ttu-id="6a366-102">Wiersz &lt;numer&gt; nie można odczytać, ponieważ jego rozmiar przekracza maksymalny rozmiar wiersza.</span><span class="sxs-lookup"><span data-stu-id="6a366-102">Line &lt;number&gt; cannot be read because it exceeds the maximum line size.</span></span>
 <span data-ttu-id="6a366-103">Nie można odczytać wiersza, ponieważ jego rozmiar przekracza maksymalny rozmiar wiersza.</span><span class="sxs-lookup"><span data-stu-id="6a366-103">The line cannot be read because it exceeds the maximum line size.</span></span> <span data-ttu-id="6a366-104">Zwykle oznacza to, że istnieje otwierającego znaku cudzysłowu w pliku, ale nie cudzysłowu zamykającego.</span><span class="sxs-lookup"><span data-stu-id="6a366-104">Usually this means that there is an opening quotation mark in the file, but no closing quotation mark.</span></span>  

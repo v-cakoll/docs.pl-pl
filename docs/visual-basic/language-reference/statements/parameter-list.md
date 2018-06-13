@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605059"
 ---
 # <a name="parameter-list-visual-basic"></a><span data-ttu-id="ad38a-102">Lista parametrów (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ad38a-102">Parameter List (Visual Basic)</span></span>
 <span data-ttu-id="ad38a-103">Określa parametry, które oczekuje procedury, gdy jest wywoływana.</span><span class="sxs-lookup"><span data-stu-id="ad38a-103">Specifies the parameters a procedure expects when it is called.</span></span> <span data-ttu-id="ad38a-104">Wiele parametrów są oddzielone przecinkami.</span><span class="sxs-lookup"><span data-stu-id="ad38a-104">Multiple parameters are separated by commas.</span></span> <span data-ttu-id="ad38a-105">Poniżej przedstawiono składnię jeden parametr.</span><span class="sxs-lookup"><span data-stu-id="ad38a-105">The following is the syntax for one parameter.</span></span>  

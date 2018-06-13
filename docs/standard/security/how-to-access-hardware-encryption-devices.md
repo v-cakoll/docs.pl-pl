@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581719"
 ---
 # <a name="how-to-access-hardware-encryption-devices"></a><span data-ttu-id="bdb62-102">Porady: dostęp do sprzętowych urządzeń szyfrujących</span><span class="sxs-lookup"><span data-stu-id="bdb62-102">How to: Access Hardware Encryption Devices</span></span>
 <span data-ttu-id="bdb62-103">Można użyć <xref:System.Security.Cryptography.CspParameters> klasę, aby dostęp do sprzętowych urządzeń szyfrujących.</span><span class="sxs-lookup"><span data-stu-id="bdb62-103">You can use the <xref:System.Security.Cryptography.CspParameters> class to access hardware encryption devices.</span></span> <span data-ttu-id="bdb62-104">Na przykład można tej klasy integracji aplikacji z karty inteligentnej, sprzęt generatora liczb losowych lub implementacji sprzętu konkretnego algorytmu kryptograficznego.</span><span class="sxs-lookup"><span data-stu-id="bdb62-104">For example, you can use this class to integrate your application with a smart card, a hardware random number generator, or a hardware implementation of a particular cryptographic algorithm.</span></span>  

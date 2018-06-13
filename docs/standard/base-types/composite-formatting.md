@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579187"
 ---
 # <a name="composite-formatting"></a><span data-ttu-id="0c3a4-102">Złożone formatowanie</span><span class="sxs-lookup"><span data-stu-id="0c3a4-102">Composite Formatting</span></span>
 <span data-ttu-id="0c3a4-103">Funkcja formatowania złożonego .NET przyjmuje listę obiektów i ciąg formatu złożonego jako dane wejściowe.</span><span class="sxs-lookup"><span data-stu-id="0c3a4-103">The .NET composite formatting feature takes a list of objects and a composite format string as input.</span></span> <span data-ttu-id="0c3a4-104">Ciąg formatu złożonego składa się ze stałego tekstu zmieszanego z indeksowanymi symbolami zastępczymi (nazywanymi też elementami formatu), które odpowiadają obiektom na liście.</span><span class="sxs-lookup"><span data-stu-id="0c3a4-104">A composite format string consists of fixed text intermixed with indexed placeholders, called format items, that correspond to the objects in the list.</span></span> <span data-ttu-id="0c3a4-105">Operacja formatowania zwraca ciąg wynikowy, który składa się z oryginalnego stałego tekstu zmieszanego z ciągiem reprezentującym obiekty na liście.</span><span class="sxs-lookup"><span data-stu-id="0c3a4-105">The formatting operation yields a result string that consists of the original fixed text intermixed with the string representation of the objects in the list.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583971"
 ---
 # <a name="security-and-on-the-fly-code-generation"></a><span data-ttu-id="018b1-102">Zabezpieczenia i generowanie kodu na bieżąco</span><span class="sxs-lookup"><span data-stu-id="018b1-102">Security and On-the-Fly Code Generation</span></span>
 <span data-ttu-id="018b1-103">Działanie niektórych bibliotek, generowanie kodu i uruchomienie jej do wykonania niektórych operacji do obiektu wywołującego.</span><span class="sxs-lookup"><span data-stu-id="018b1-103">Some libraries operate by generating code and running it to perform some operation for the caller.</span></span> <span data-ttu-id="018b1-104">Podstawowy problem jest generowanie kodu w imieniu mniejszym zaufania kodu i uruchomić je na wyższe zaufania.</span><span class="sxs-lookup"><span data-stu-id="018b1-104">The basic problem is generating code on behalf of lesser-trust code and running it at a higher trust.</span></span> <span data-ttu-id="018b1-105">Problem worsens podczas wywołującego może mieć wpływ na generowanie kodu, dlatego należy upewnić się, że generowane jest tylko kod, który należy wziąć pod uwagę bezpieczne.</span><span class="sxs-lookup"><span data-stu-id="018b1-105">The problem worsens when the caller can influence code generation, so you must ensure that only code you consider safe is generated.</span></span>  

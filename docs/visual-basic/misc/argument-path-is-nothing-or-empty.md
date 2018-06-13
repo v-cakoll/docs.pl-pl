@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599483"
 ---
 # <a name="argument-39path39-is-nothing-or-empty"></a><span data-ttu-id="09eb1-102">Argument &#39;ścieżki&#39; ma wartość Nothing lub jest pusty</span><span class="sxs-lookup"><span data-stu-id="09eb1-102">Argument &#39;Path&#39; is Nothing or empty</span></span>
 <span data-ttu-id="09eb1-103">Nazwa ścieżki jest nieprawidłowa, ponieważ jest on zainicjowany `Nothing` lub jest pusty.</span><span class="sxs-lookup"><span data-stu-id="09eb1-103">A path name is not valid because it is initialized to `Nothing` or is empty.</span></span> <span data-ttu-id="09eb1-104">Ścieżka musi mieć typ danych i prawidłową nazwę.</span><span class="sxs-lookup"><span data-stu-id="09eb1-104">A path must have a specific data type and a valid name.</span></span>  

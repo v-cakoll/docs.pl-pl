@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582811"
 ---
 # <a name="scheduling-threads"></a><span data-ttu-id="9d0ac-102">Harmonogram wątków</span><span class="sxs-lookup"><span data-stu-id="9d0ac-102">Scheduling Threads</span></span>
 <span data-ttu-id="9d0ac-103">Każdy wątek ma priorytet wątku przypisane do niej.</span><span class="sxs-lookup"><span data-stu-id="9d0ac-103">Every thread has a thread priority assigned to it.</span></span> <span data-ttu-id="9d0ac-104">Utworzone w ramach środowisko uruchomieniowe języka wspólnego wątki są początkowo przypisana priorytet **ThreadPriority.Normal**.</span><span class="sxs-lookup"><span data-stu-id="9d0ac-104">Threads created within the common language runtime are initially assigned the priority of **ThreadPriority.Normal**.</span></span> <span data-ttu-id="9d0ac-105">Wątki utworzony poza środowisko uruchomieniowe zachować priorytet, który wcześniej one umieszczone w zarządzanym środowisku.</span><span class="sxs-lookup"><span data-stu-id="9d0ac-105">Threads created outside the runtime retain the priority they had before they entered the managed environment.</span></span> <span data-ttu-id="9d0ac-106">Można pobrać lub ustawić priorytet którymkolwiek wątku z **Thread.Priority** właściwości.</span><span class="sxs-lookup"><span data-stu-id="9d0ac-106">You can get or set the priority of any thread with the **Thread.Priority** property.</span></span>  

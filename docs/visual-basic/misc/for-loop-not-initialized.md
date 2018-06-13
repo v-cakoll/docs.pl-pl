@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636928"
 ---
 # <a name="for-loop-not-initialized-visual-basic"></a><span data-ttu-id="f0c2e-102">Aby uzyskać nie zainicjowano pętli (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f0c2e-102">For loop not initialized (Visual Basic)</span></span>
 <span data-ttu-id="f0c2e-103">Przeskoki do środka `For...Next` pętli.</span><span class="sxs-lookup"><span data-stu-id="f0c2e-103">You jumped into the middle of a `For...Next` loop.</span></span>  

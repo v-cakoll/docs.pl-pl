@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580942"
 ---
 # <a name="how-to-specify-the-execution-mode-in-plinq"></a><span data-ttu-id="f689f-102">Porady: określanie trybu wykonywania w PLINQ</span><span class="sxs-lookup"><span data-stu-id="f689f-102">How to: Specify the Execution Mode in PLINQ</span></span>
 <span data-ttu-id="f689f-103">W tym przykładzie pokazano, jak wymusić PLINQ do obejścia jego domyślny algorytm heurystyczny i parallelize zapytania niezależnie od tego zapytania kształtu.</span><span class="sxs-lookup"><span data-stu-id="f689f-103">This example shows how to force PLINQ to bypass its default heuristics and parallelize a query regardless of the query's shape.</span></span>  

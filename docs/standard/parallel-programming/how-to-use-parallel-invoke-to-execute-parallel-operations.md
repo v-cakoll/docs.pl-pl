@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580887"
 ---
 # <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a><span data-ttu-id="93650-102">Porady: korzystanie z parallel_invoke podczas przeprowadzania operacji równoległych</span><span class="sxs-lookup"><span data-stu-id="93650-102">How to: Use Parallel.Invoke to Execute Parallel Operations</span></span>
 <span data-ttu-id="93650-103">W tym przykładzie pokazano, jak parallelize operacje przy użyciu <xref:System.Threading.Tasks.Parallel.Invoke%2A> w bibliotece równoległych zadań.</span><span class="sxs-lookup"><span data-stu-id="93650-103">This example shows how to parallelize operations by using <xref:System.Threading.Tasks.Parallel.Invoke%2A> in the Task Parallel Library.</span></span> <span data-ttu-id="93650-104">Trzy operacje są wykonywane na udostępnione źródło danych.</span><span class="sxs-lookup"><span data-stu-id="93650-104">Three operations are performed on a shared data source.</span></span> <span data-ttu-id="93650-105">Ponieważ żadna z operacji modyfikuje źródło, mogą być wykonywane równolegle w sposób proste.</span><span class="sxs-lookup"><span data-stu-id="93650-105">Because none of the operations modifies the source, they can be executed in parallel in a straightforward manner.</span></span>  

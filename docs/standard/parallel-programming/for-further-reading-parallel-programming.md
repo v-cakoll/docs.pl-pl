@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580162"
 ---
 # <a name="for-further-reading-parallel-programming"></a><span data-ttu-id="3b95c-102">Dalsze informacje (Programowanie równoległe)</span><span class="sxs-lookup"><span data-stu-id="3b95c-102">For Further Reading (Parallel Programming)</span></span>
 

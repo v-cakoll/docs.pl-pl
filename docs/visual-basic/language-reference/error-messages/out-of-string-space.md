@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594449"
 ---
 # <a name="out-of-string-space-visual-basic"></a><span data-ttu-id="72c1f-102">Za mało miejsca na ciąg (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="72c1f-102">Out of string space (Visual Basic)</span></span>
 <span data-ttu-id="72c1f-103">Za pomocą Visual Basic można użyć ciągów bardzo duże.</span><span class="sxs-lookup"><span data-stu-id="72c1f-103">With Visual Basic, you can use very large strings.</span></span> <span data-ttu-id="72c1f-104">Wymagania inne programy i sposób pracy z Twojej ciągi nadal może jednak spowodować tego błędu.</span><span class="sxs-lookup"><span data-stu-id="72c1f-104">However, the requirements of other programs and the way you work with your strings can still cause this error.</span></span>  

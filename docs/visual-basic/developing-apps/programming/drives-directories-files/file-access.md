@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583308"
 ---
 # <a name="file-access-with-visual-basic"></a><span data-ttu-id="25836-102">Dostęp do plików za pomocą Visual Basic</span><span class="sxs-lookup"><span data-stu-id="25836-102">File Access with Visual Basic</span></span>
 <span data-ttu-id="25836-103">`My.Computer.FileSystem` Obiektu zawiera narzędzia do pracy z plikami i folderami.</span><span class="sxs-lookup"><span data-stu-id="25836-103">The `My.Computer.FileSystem` object provides tools for working with files and folders.</span></span> <span data-ttu-id="25836-104">Jego właściwości, metod i zdarzeń umożliwiają tworzenie, skopiować, przenieść, badanie i usuwać pliki i foldery.</span><span class="sxs-lookup"><span data-stu-id="25836-104">Its properties, methods, and events allow you to create, copy, move, investigate, and delete files and folders.</span></span> <span data-ttu-id="25836-105">`My.Computer.FileSystem` zapewnia lepszą wydajność niż funkcje starszej wersji (`FileOpen`, `FileClose`, `Input`, `InputString`, `LineInput`, itd.) są dostarczane przez program Visual Basic dla zgodności z poprzednimi wersjami.</span><span class="sxs-lookup"><span data-stu-id="25836-105">`My.Computer.FileSystem` provides better performance than the legacy functions (`FileOpen`, `FileClose`, `Input`, `InputString`, `LineInput`, etc.) that are provided by Visual Basic for backward compatibility.</span></span>  

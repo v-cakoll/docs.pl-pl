@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580734"
 ---
 # <a name="how-to-unwrap-a-nested-task"></a><span data-ttu-id="f5dd2-102">Porady: dekodowanie zadania zagnieżdżonego</span><span class="sxs-lookup"><span data-stu-id="f5dd2-102">How to: Unwrap a Nested Task</span></span>
 <span data-ttu-id="f5dd2-103">Można zwrócić zadania przy użyciu metody, a następnie zaczekaj na lub kontynuować z tego zadania, jak pokazano w poniższym przykładzie:</span><span class="sxs-lookup"><span data-stu-id="f5dd2-103">You can return a task from a method, and then wait on or continue from that task, as shown in the following example:</span></span>  

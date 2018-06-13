@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580900"
 ---
 # <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a><span data-ttu-id="c3d60-102">Porady: Implementowanie wzorca przepływu danych producent — konsument</span><span class="sxs-lookup"><span data-stu-id="c3d60-102">How to: Implement a Producer-Consumer Dataflow Pattern</span></span>
 <span data-ttu-id="c3d60-103">Ten dokument zawiera opis sposobu umożliwia Implementowanie wzorca producent — konsument przepływu danych tpl.</span><span class="sxs-lookup"><span data-stu-id="c3d60-103">This document describes how to use the TPL Dataflow Library to implement a producer-consumer pattern.</span></span> <span data-ttu-id="c3d60-104">W tym wzorcu *producent* wysyła komunikaty do bloku komunikatów i *konsumenta* odczytuje wiadomości z tego bloku.</span><span class="sxs-lookup"><span data-stu-id="c3d60-104">In this pattern, the *producer* sends messages to a message block, and the *consumer* reads messages from that block.</span></span>  

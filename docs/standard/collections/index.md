@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577231"
 ---
 # <a name="collections-and-data-structures"></a><span data-ttu-id="d0254-102">Kolekcje i struktury danych</span><span class="sxs-lookup"><span data-stu-id="d0254-102">Collections and Data Structures</span></span>
 <span data-ttu-id="d0254-103">Podobne dane często są obsługiwane wydajniej podczas przechowywania i manipulować jako kolekcja.</span><span class="sxs-lookup"><span data-stu-id="d0254-103">Similar data can often be handled more efficiently when stored and manipulated as a collection.</span></span> <span data-ttu-id="d0254-104">Można użyć <xref:System.Array?displayProperty=nameWithType> klasy lub klas w <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent>, System.Collections.Immutable przestrzeni nazw, aby dodać, usuwanie i modyfikowanie poszczególne elementy lub zakres elementów w kolekcji.</span><span class="sxs-lookup"><span data-stu-id="d0254-104">You can use the <xref:System.Array?displayProperty=nameWithType> class or the classes in the <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent>, System.Collections.Immutable namespaces to add, remove, and modify either individual elements or a range of elements in a collection.</span></span>  

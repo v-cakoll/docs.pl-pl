@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576497"
 ---
 # <a name="how-to-create-time-zones-with-adjustment-rules"></a><span data-ttu-id="225cd-102">Porady: tworzenie stref czasowych przy użyciu reguł korygowania</span><span class="sxs-lookup"><span data-stu-id="225cd-102">How to: Create time zones with adjustment rules</span></span>
 

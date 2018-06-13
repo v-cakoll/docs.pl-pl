@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588070"
 ---
 # <a name="const-directive"></a><span data-ttu-id="7b7f3-102">#Const — dyrektywa</span><span class="sxs-lookup"><span data-stu-id="7b7f3-102">#Const Directive</span></span>
 <span data-ttu-id="7b7f3-103">Definiuje warunkowe stałe kompilatora Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="7b7f3-103">Defines conditional compiler constants for Visual Basic.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579798"
 ---
 # <a name="garbage-collection-and-performance"></a><span data-ttu-id="adbaa-102">Odzyskiwanie pamięci i wydajność</span><span class="sxs-lookup"><span data-stu-id="adbaa-102">Garbage Collection and Performance</span></span>
 <a name="top"></a> <span data-ttu-id="adbaa-103">W tym temacie opisano problemy związane z użycia pamięci kolekcji i pamięci.</span><span class="sxs-lookup"><span data-stu-id="adbaa-103">This topic describes issues related to garbage collection and memory usage.</span></span> <span data-ttu-id="adbaa-104">Rozwiązuje problemy, które odnoszą się do sterty zarządzanej, a wyjaśniono sposób zminimalizować wpływ operacji wyrzucania elementów bezużytecznych w aplikacji.</span><span class="sxs-lookup"><span data-stu-id="adbaa-104">It addresses issues that pertain to the managed heap and explains how to minimize the effect of garbage collection on your applications.</span></span> <span data-ttu-id="adbaa-105">Każde wydanie zawiera łącza do procedur, które służy do badania problemów.</span><span class="sxs-lookup"><span data-stu-id="adbaa-105">Each issue has links to procedures that you can use to investigate problems.</span></span>  

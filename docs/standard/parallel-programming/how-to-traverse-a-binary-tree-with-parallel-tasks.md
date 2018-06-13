@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580367"
 ---
 # <a name="how-to-traverse-a-binary-tree-with-parallel-tasks"></a><span data-ttu-id="490b0-102">Porady: przenoszenie drzewa binarnego z zadaniami równoległymi</span><span class="sxs-lookup"><span data-stu-id="490b0-102">How to: Traverse a Binary Tree with Parallel Tasks</span></span>
 <span data-ttu-id="490b0-103">Poniższy przykład przedstawia dwa sposoby, w których zadań równoległych może służyć do przechodzenia drzewa struktura danych.</span><span class="sxs-lookup"><span data-stu-id="490b0-103">The following example shows two ways in which parallel tasks can be used to traverse a tree data structure.</span></span> <span data-ttu-id="490b0-104">Tworzenie drzewo pozostaje wykonywania.</span><span class="sxs-lookup"><span data-stu-id="490b0-104">The creation of the tree itself is left as an exercise.</span></span>  

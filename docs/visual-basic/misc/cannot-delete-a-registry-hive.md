@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635190"
 ---
 # <a name="cannot-delete-a-registry-hive"></a><span data-ttu-id="c62a1-102">Nie można usunąć gałąź rejestru</span><span class="sxs-lookup"><span data-stu-id="c62a1-102">Cannot delete a registry hive</span></span>
 <span data-ttu-id="c62a1-103">Nastąpiła próba można usunąć gałęzi rejestru.</span><span class="sxs-lookup"><span data-stu-id="c62a1-103">An attempt has been made to delete a registry hive.</span></span> <span data-ttu-id="c62a1-104">Gałęzie są klucze rejestru najwyższego poziomu, takich jak `HKEY_CURRENT_USER` i `HKEY_LOCAL_MACHINE`i nie można go usunąć.</span><span class="sxs-lookup"><span data-stu-id="c62a1-104">Hives are top-level registry keys, such as `HKEY_CURRENT_USER` and `HKEY_LOCAL_MACHINE`, and cannot be deleted.</span></span>  

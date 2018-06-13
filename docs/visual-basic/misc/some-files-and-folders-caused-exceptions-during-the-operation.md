@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638685"
 ---
 # <a name="some-files-and-folders-caused-exceptions-during-the-operation"></a><span data-ttu-id="d914a-102">Some files and folders caused exceptions during the operation</span><span class="sxs-lookup"><span data-stu-id="d914a-102">Some files and folders caused exceptions during the operation</span></span>
 <span data-ttu-id="d914a-103">Pliki i foldery mogą powodować wyjątki, gdy podczas próby wykonania operacji użytkownik nie ma wystarczających uprawnień.</span><span class="sxs-lookup"><span data-stu-id="d914a-103">Directories and files may cause exceptions when an operation is attempted but the user lacks necessary permissions.</span></span>  

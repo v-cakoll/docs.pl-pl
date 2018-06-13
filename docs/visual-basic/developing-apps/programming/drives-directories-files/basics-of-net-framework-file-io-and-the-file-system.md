@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591784"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a><span data-ttu-id="6d698-102">Podstawowe informacje o .NET Framework File I/O i systemie plików (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6d698-102">Basics of .NET Framework File I/O and the File System (Visual Basic)</span></span>
 <span data-ttu-id="6d698-103">Klasy w <xref:System.IO> przestrzeni nazw są używane do pracy z dysków, plików i katalogów.</span><span class="sxs-lookup"><span data-stu-id="6d698-103">Classes in the <xref:System.IO> namespace are used to work with drives, files, and directories.</span></span>  

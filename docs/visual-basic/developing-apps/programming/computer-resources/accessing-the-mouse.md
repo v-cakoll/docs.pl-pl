@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582593"
 ---
 # <a name="accessing-the-mouse-visual-basic"></a><span data-ttu-id="b46fa-102">Uzyskiwanie dostępu do myszy (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b46fa-102">Accessing the Mouse (Visual Basic)</span></span>
 <span data-ttu-id="b46fa-103">`My.Computer.Mouse` Obiekt zapewnia sposób znaleźć informacje o myszy komputera, np. Jeśli myszy istnieje, liczba przycisków myszy oraz szczegółowe informacje o kółka myszy.</span><span class="sxs-lookup"><span data-stu-id="b46fa-103">The `My.Computer.Mouse` object provides a way to find information about the computer's mouse, such as if a mouse exists, the number of mouse buttons, and details about the mouse wheel.</span></span>  

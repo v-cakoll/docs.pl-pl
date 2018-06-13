@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581823"
 ---
 # <a name="steps-in-the-serialization-process"></a><span data-ttu-id="07d54-102">Kroki procesu serializacji</span><span class="sxs-lookup"><span data-stu-id="07d54-102">Steps in the serialization process</span></span>
 <span data-ttu-id="07d54-103">Gdy <xref:System.Runtime.Serialization.Formatter.Serialize*> wywoływana jest metoda [program formatujący](xref:System.Runtime.Serialization.Formatter), serializacji obiektu będzie kontynuowana zgodnie z następującej reguły:</span><span class="sxs-lookup"><span data-stu-id="07d54-103">When the <xref:System.Runtime.Serialization.Formatter.Serialize*> method is called on a [formatter](xref:System.Runtime.Serialization.Formatter), object serialization proceeds according to the following sequence of rules:</span></span>

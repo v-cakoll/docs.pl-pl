@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584774"
 ---
 # <a name="39ltfunctionnamegt39-is-not-declared-smart-devicevisual-basic-compiler-error"></a><span data-ttu-id="7ae36-102">&#39;&lt;FunctionName&gt; &#39; nie jest zadeklarowany jako (inteligentne urządzenia/Visual Basic błąd kompilatora)</span><span class="sxs-lookup"><span data-stu-id="7ae36-102">&#39;&lt;functionname&gt;&#39; is not declared (Smart Device/Visual Basic Compiler Error)</span></span>
 <span data-ttu-id="7ae36-103"><`functionname`> nie został zadeklarowany.</span><span class="sxs-lookup"><span data-stu-id="7ae36-103"><`functionname`> is not declared.</span></span> <span data-ttu-id="7ae36-104">Funkcje We/Wy plików są zwykle dostępne w `Microsoft.VisualBasic` przestrzeni nazw, ale docelowa wersja programu .NET Compact Framework nie jest ona obsługiwana.</span><span class="sxs-lookup"><span data-stu-id="7ae36-104">File I/O functionality is normally available in the `Microsoft.VisualBasic` namespace, but the targeted version of the .NET Compact Framework does not support it.</span></span>  

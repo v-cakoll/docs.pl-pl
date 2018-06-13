@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598401"
 ---
 # <a name="then-statement"></a><span data-ttu-id="b4e2a-102">Then — Instrukcja</span><span class="sxs-lookup"><span data-stu-id="b4e2a-102">Then Statement</span></span>
 <span data-ttu-id="b4e2a-103">Wprowadza blok instrukcji do kompilacji lub wykonania, jeśli testowany warunek zostaje spełniony.</span><span class="sxs-lookup"><span data-stu-id="b4e2a-103">Introduces a statement block to be compiled or executed if a tested condition is true.</span></span>  

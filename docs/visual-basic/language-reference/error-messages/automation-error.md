@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583880"
 ---
 # <a name="automation-error"></a><span data-ttu-id="6a1a4-102">Błąd automatyzacji</span><span class="sxs-lookup"><span data-stu-id="6a1a4-102">Automation error</span></span>
 <span data-ttu-id="6a1a4-103">Wystąpił błąd podczas wykonywania metody lub pobierania lub ustawiania właściwości zmiennej obiektu.</span><span class="sxs-lookup"><span data-stu-id="6a1a4-103">An error occurred while executing a method or getting or setting a property of an object variable.</span></span> <span data-ttu-id="6a1a4-104">Błąd został zgłoszony przez aplikację, który utworzył obiekt.</span><span class="sxs-lookup"><span data-stu-id="6a1a4-104">The error was reported by the application that created the object.</span></span>  

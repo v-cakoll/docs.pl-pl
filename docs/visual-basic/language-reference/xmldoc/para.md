@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601728"
 ---
 # <a name="ltparagt-visual-basic"></a><span data-ttu-id="dfccd-102">&lt;para&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dfccd-102">&lt;para&gt; (Visual Basic)</span></span>
 <span data-ttu-id="dfccd-103">Określa, czy zawartość jest w formacie akapitu.</span><span class="sxs-lookup"><span data-stu-id="dfccd-103">Specifies that the content is formatted as a paragraph.</span></span>  

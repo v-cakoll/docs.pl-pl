@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579590"
 ---
 # <a name="common-type-system"></a><span data-ttu-id="7eb86-102">System typu wspólnego</span><span class="sxs-lookup"><span data-stu-id="7eb86-102">Common Type System</span></span>
 <span data-ttu-id="7eb86-103">Wspólny system typów definiuje jak typy są zadeklarowane, używane i zarządzane przez środowisko uruchomieniowe języka wspólnego, a także jest ważnym elementem obsługi środowiska uruchomieniowego integracji między językami.</span><span class="sxs-lookup"><span data-stu-id="7eb86-103">The common type system defines how types are declared, used, and managed in the common language runtime, and is also an important part of the runtime's support for cross-language integration.</span></span> <span data-ttu-id="7eb86-104">Wspólny system typów wykonuje następujące funkcje:</span><span class="sxs-lookup"><span data-stu-id="7eb86-104">The common type system performs the following functions:</span></span>  

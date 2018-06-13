@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584960"
 ---
 # <a name="timers"></a><span data-ttu-id="2b0d4-102">Czasomierze</span><span class="sxs-lookup"><span data-stu-id="2b0d4-102">Timers</span></span>
 <span data-ttu-id="2b0d4-103">Czasomierze są lekkie obiekty, które umożliwiają określenie delegata do wywołania w określonym czasie.</span><span class="sxs-lookup"><span data-stu-id="2b0d4-103">Timers are lightweight objects that enable you to specify a delegate to be called at a specified time.</span></span> <span data-ttu-id="2b0d4-104">Wątek w puli wątków wykonuje operację oczekiwania.</span><span class="sxs-lookup"><span data-stu-id="2b0d4-104">A thread in the thread pool performs the wait operation.</span></span>  

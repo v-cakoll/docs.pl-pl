@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595829"
 ---
 # <a name="xml-entity-references-are-not-supported"></a><span data-ttu-id="cef00-102">Odwołania do jednostek XML nie są obsługiwane</span><span class="sxs-lookup"><span data-stu-id="cef00-102">XML entity references are not supported</span></span>
 <span data-ttu-id="cef00-103">Odwołania do obiektu (na przykład `©`) nie jest zdefiniowany w XML 1.0 specyfikacji jest uwzględniona jako wartość literału XML.</span><span class="sxs-lookup"><span data-stu-id="cef00-103">An entity reference (for example, `©`) that is not defined in the XML 1.0 specification is included as a value for an XML literal.</span></span> <span data-ttu-id="cef00-104">Tylko `&`, `"`, `<`, `>`, i `'` odwołania do jednostek XML są obsługiwane w literałach XML.</span><span class="sxs-lookup"><span data-stu-id="cef00-104">Only `&`, `"`, `<`, `>`, and `'` XML entity references are supported in XML literals.</span></span>  

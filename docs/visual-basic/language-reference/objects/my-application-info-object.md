@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594598"
 ---
 # <a name="myapplicationinfo-object"></a><span data-ttu-id="752f4-102">My.Application.Info — Obiekt</span><span class="sxs-lookup"><span data-stu-id="752f4-102">My.Application.Info Object</span></span>
 <span data-ttu-id="752f4-103">Udostępnia właściwości do pobierania informacji o aplikacji, takich jak numer wersji, opis, załadowanych zestawów i tak dalej.</span><span class="sxs-lookup"><span data-stu-id="752f4-103">Provides properties for getting the information about the application, such as the version number, description, loaded assemblies, and so on.</span></span>  

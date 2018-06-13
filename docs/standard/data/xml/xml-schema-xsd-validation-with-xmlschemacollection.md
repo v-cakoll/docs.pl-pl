@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572200"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>Sprawdzanie poprawności schematu (XSD) XML z kolekcji XmlSchemaCollection
 Można użyć <xref:System.Xml.Schema.XmlSchemaCollection> do sprawdzania poprawności względem schematu XML definition language (XSD) schematów dokumentu XML. <xref:System.Xml.Schema.XmlSchemaCollection> Zwiększa wydajność dzięki przechowywaniu w kolekcji schematów, aby nie były załadowane do pamięci występuje każdego sprawdzania poprawności czasu. Jeśli schemat istnieje w kolekcji schematów `schemaLocation` atrybut służy do wyszukiwania schematu w kolekcji.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576315"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>Sprawdzanie poprawności dokumentu XML w modelu DOM
 <xref:System.Xml.XmlDocument> Klasy nie można zweryfikować XML w modelu DOM (Document Object) względem schematu XML definition language (XSD) schemat lub dokument definicji typu (DTD) domyślnie; XML tylko zweryfikowaniu jest poprawnie sformułowany.  

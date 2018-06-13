@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513100"
 ---
 # <a name="windows-workflow-architecture"></a>Architektura przepływu pracy systemu Windows
 Windows Workflow Foundation (WF) podnosi poziom abstrakcji umożliwiający projektowanie aplikacji interaktywnych długotrwałe. Jednostki pracy są hermetyzowane jako działania. Działań uruchamianych w środowisku, które zapewnia ułatwienia sterowanie przepływem, obsługa wyjątków, błędów propagacji trwałości danych o stanie, ładowanie i zwalnianie przepływów pracy w toku z pamięci, śledzenia i przepływu transakcji.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365332"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Dostęp do danych usługi zasobów (usługi danych WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obsługuje [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] do udostępnienia danych jako źródło danych z zasobami, które są adresowane przez identyfikator URI. Te zasoby są reprezentowane zgodnie z Konwencją Relacja jednostki z [modelu Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md). W tym modelu jednostki reprezentują operacyjne moduły danych, które są typy danych w domenie aplikacji, takich jak klienci, zamówienia, elementy i produktów. Jednostki dane są dostępne i zmieniać za pomocą semantyki representational stanu transfer (REST), w szczególności standardowa zleceń HTTP GET, PUT, POST i DELETE.  

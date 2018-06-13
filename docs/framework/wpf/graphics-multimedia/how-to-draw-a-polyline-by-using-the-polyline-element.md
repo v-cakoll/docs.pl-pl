@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561764"
 ---
 # <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>Jak narysować wielokąt przy użyciu elementu wielokątnego
 W tym przykładzie przedstawiono sposób rysowania linii łamanej, który jest szereg połączone linie przy użyciu <xref:System.Windows.Shapes.Polyline> elementu.  

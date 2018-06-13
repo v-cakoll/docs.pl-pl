@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572112"
 ---
 # <a name="xml-schema-object-model-overview"></a>Omówienie modelu obiektu schematu XML
 Model obiektu schematu (SOM) w programie Microsoft .NET Framework jest sformatowany interfejs API, który służy do tworzenia, edytowania i Zweryfikuj schematy programowo. SOM działa na dokumentach schematów XML w sposób podobny do modelu DOM (Document Object) funkcjonowania w dokumentach XML. Dokumenty XML schematu są prawidłowe pliki XML, które po załadowaniu do SOM, zmienić znaczenie dotyczących struktury i ważności inne dokumenty XML, które są zgodne ze schematem.  

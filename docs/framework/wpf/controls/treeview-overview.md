@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557787"
 ---
 # <a name="treeview-overview"></a>TreeView — Przegląd
 <xref:System.Windows.Controls.TreeView> Kontrola zapewnia sposób wyświetlania informacji w strukturę hierarchiczną przy użyciu zwijanej węzłów. W tym temacie przedstawiono <xref:System.Windows.Controls.TreeView> i <xref:System.Windows.Controls.TreeViewItem> formanty i zawiera proste przykłady ich użycia.  

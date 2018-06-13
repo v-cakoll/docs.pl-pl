@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386525"
 ---
 # <a name="how-to-create-and-initialize-trace-sources"></a>Porady: tworzenie i inicjowanie źródeł śledzenia
 <xref:System.Diagnostics.TraceSource> Klasa jest używana przez aplikacje do tworzenia śledzenia, które mogą być skojarzone z aplikacją. <xref:System.Diagnostics.TraceSource> udostępnia metody śledzenia, które pozwalają łatwo śledzić zdarzenia, dane śledzenia i zapisy informacyjne problem. Dane wyjściowe z śledzenia <xref:System.Diagnostics.TraceSource> można tworzyć i zainicjować z lub bez użycia plików konfiguracyjnych. Ten temat zawiera instrukcje dla obu opcji. Jednak zaleca się stosowania plików konfiguracji ułatwia ponowne konfigurowanie śledzenia utworzonego przez źródła śledzenia w czasie wykonywania.  

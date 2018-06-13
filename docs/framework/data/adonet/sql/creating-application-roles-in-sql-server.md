@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362530"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>Tworzenie ról aplikacji w programie SQL Server
 Role aplikacji umożliwiają przypisywanie uprawnień do aplikacji zamiast roli bazy danych lub użytkownika. Użytkownicy mogą połączenia z bazą danych, aktywować rolę aplikacji i założono uprawnienia do aplikacji. Uprawnienia przyznane roli aplikacji pozostają w mocy przez czas trwania połączenia.  

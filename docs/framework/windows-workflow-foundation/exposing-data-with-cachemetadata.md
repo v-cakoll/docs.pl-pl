@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515255"
 ---
 # <a name="exposing-data-with-cachemetadata"></a>Udostępnianie danych z CacheMetadata
 Przed wykonaniem działania, czas wykonywania przepływu pracy uzyskuje wszystkie informacje o działaniach wymaganych w celu zachowania jego wykonywania. Te informacje podczas wykonywania pobiera środowiska uruchomieniowego przepływu pracy <xref:System.Activities.Activity.CacheMetadata%2A> metody. Domyślna implementacja tej metody zawiera środowiska wykonawczego o wszystkich publicznych argumenty, zmienne i działań podrzędnych udostępnianych przez działania w czasie wykonania; Jeśli działanie wymaga więcej informacji do środowiska wykonawczego równą (na przykład prywatne elementy Członkowskie lub działań do zaplanowania przez działanie), ta metoda może zostać zastąpiona do tego celu.  

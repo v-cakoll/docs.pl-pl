@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365309"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Implementowanie transakcji niejawnej przy użyciu zakresu transakcji
 <xref:System.Transactions.TransactionScope> Klasa udostępnia w prosty sposób oznaczyć bloku kodu jako udział w transakcji, bez konieczności interakcji z transakcja. Zakres transakcji można wybrać i automatycznie zarządzać otoczenia transakcji. Ze względu na łatwość użycia i wydajności, zaleca się, że używasz <xref:System.Transactions.TransactionScope> klasy podczas opracowywania aplikacji transakcji.  

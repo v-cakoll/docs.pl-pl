@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516555"
 ---
 # <a name="workflow-hosting-options"></a>Hosting opcje przepływu pracy
 Większość przykładów programu Windows Workflow Foundation (WF) używane przepływy pracy, które znajdują się w aplikacji konsoli, ale nie jest to realistyczne scenariusz dla przepływów pracy w rzeczywistych. Przepływy pracy w aplikacjach biznesowych rzeczywiste będzie obsługiwana w trwałych procesów — usługi systemu Windows utworzone przez dewelopera lub aplikacji serwera, takich jak [!INCLUDE[iisver](../../../includes/iisver-md.md)] lub AppFabric. Dostępne są następujące różnice między tych metod.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362853"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Hosting usług danych (usługi danych WCF)
 Za pomocą [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], można utworzyć usługi, która opisuje dane jako [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych. Ta usługa danych jest zdefiniowany jako klasa, która dziedziczy <xref:System.Data.Services.DataService%601>. Ta klasa udostępnia funkcje wymagane do przetwarzania komunikatów żądań, przeprowadzania aktualizacji w źródle danych oraz do generowania wiadomości odpowiedzi, co jest wymagane przez [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Jednak usługa danych nie można powiązać i nasłuchiwania gniazda sieci dla przychodzących żądań HTTP. Dla tej funkcji wymagane usługi danych zależy od składnika hostingu.  

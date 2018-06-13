@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566759"
 ---
 # <a name="transforms-overview"></a>Przegląd Przekształcenia
 W tym temacie opisano sposób użycia [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> klasy obracanie, skalowanie, Przenieś (tłumaczenie) i pochylanie <xref:System.Windows.FrameworkElement> obiektów.  

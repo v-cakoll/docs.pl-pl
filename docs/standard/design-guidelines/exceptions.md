@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570606"
 ---
 # <a name="design-guidelines-for-exceptions"></a>Wskazówek dotyczących wyjątków
 Obsługa wyjątków ma wiele zalet w porównaniu z raportowania błędów na podstawie wartości zwracane. Projektowanie dobrej framework pomaga Deweloper aplikacji wykorzystać zalety wyjątków. W tej sekcji omówiono wyjątków zalet i przedstawia wskazówki dotyczące używania ich skutecznie.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360886"
 ---
 # <a name="how-to-define-a-service-operation-wcf-data-services"></a>Porady: Definiowanie operacji usługi (usługi danych WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ujawnia metody, które są zdefiniowane na serwerze jako operacji usługi. Operacje usługi Zezwalaj na dostęp za pomocą identyfikatora URI do metody, która jest zdefiniowana na serwerze usługi danych. Aby zdefiniować operacji usługi, należy zastosować [`WebGet]` lub `[WebInvoke]` atrybut do metody. Aby obsługiwać operatorów zapytań, musi zwracać operacji usługi <xref:System.Linq.IQueryable%601> wystąpienia. Operacje usługi może uzyskać dostępu do źródła danych za pośrednictwem <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> właściwość <xref:System.Data.Services.DataService%601>. Aby uzyskać więcej informacji, zobacz [operacji usługi](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  

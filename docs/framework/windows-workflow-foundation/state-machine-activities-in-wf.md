@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515772"
 ---
 # <a name="state-machine-activities-in-wf"></a>Działania automatu stanów w WF
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] zawiera kilka działań dostarczane przez system i projektantów działań do tworzenia przepływów pracy komputera stanu.  

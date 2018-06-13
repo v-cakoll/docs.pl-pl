@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568449"
 ---
 # <a name="creating-new-entity-references"></a>Tworzenie nowego odwołania do jednostek
 **CreateEntityReference** metoda tworzy nowy **XmlEntityReference** węzła. XML modelu DOM (Document Object) sprawdza, czy nazwa jednostki, do którego nastąpiło odwołanie została już zadeklarowana. Jeśli tak, węzły podrzędne **XmlEntityReference** węzła są kopiowane z węzła deklaracji entity. Jeśli nie ma żadnych deklaracji jednostki, która jest zgodna, węzeł pusty tekst jest dołączony jako element podrzędny tylko jednostki węzła odniesienia. Ponieważ węzły podrzędne **XmlEntityReference** węzła to kopie inne węzły, te węzły podrzędne są tylko do odczytu i nie może być modyfikowany.  

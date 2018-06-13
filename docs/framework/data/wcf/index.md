@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365959"
 ---
 # <a name="wcf-data-services-45"></a>Usługi danych WCF 4.5
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] (wcześniej znane jako "Usług danych ADO.NET") jest składnikiem programu .NET Framework, która umożliwia tworzenie usług, które używają [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] do ujawnia i konsumowania danych za pośrednictwem sieci Web lub intranet przy użyciu semantykę [representational stanu Transfer (REST)](http://go.microsoft.com/fwlink/?LinkId=113919). [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] przedstawia dane w postaci zasobów, które są adresowane przez identyfikator URI. Dane są dostępne i zmieniać przy użyciu standardowych poleceń HTTP z GET, PUT, POST i DELETE. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] używa konwencji Relacja jednostki z [modelu Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md) do udostępnienia zasobów jako zestawy jednostek, które są powiązane przez skojarzenia.  

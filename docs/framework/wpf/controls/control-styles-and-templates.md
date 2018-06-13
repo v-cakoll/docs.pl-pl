@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556916"
 ---
 # <a name="control-styles-and-templates"></a>Style i szablony formantu
 Formanty w systemie Windows Presentation Foundation (WPF) mają <xref:System.Windows.Controls.ControlTemplate> zawierający drzewa wizualnego tego formantu. Struktura i wyglądu formantu można zmienić, modyfikując <xref:System.Windows.Controls.ControlTemplate> tego formantu. Nie istnieje sposób zastąpić tylko część wizualnym drzewie kontrolki; Aby zmienić wizualnym drzewie kontrolki, należy ustawić <xref:System.Windows.Controls.Control.Template%2A> właściwości formantu do nowych i pełne <xref:System.Windows.Controls.ControlTemplate>.  

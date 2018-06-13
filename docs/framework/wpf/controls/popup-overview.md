@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557579"
 ---
 # <a name="popup-overview"></a>Przegląd Okna podręczne
 <xref:System.Windows.Controls.Primitives.Popup> Kontroli umożliwia wyświetlanie zawartości w oddzielnym oknie, który jest wyświetlany nad bieżące okno aplikacji względem wyznaczonych współrzędnych elementu lub ekranu. W tym temacie przedstawiono <xref:System.Windows.Controls.Primitives.Popup> kontroli i udostępnia informacje na temat jego używania.  

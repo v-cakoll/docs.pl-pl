@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571917"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Porady: konwertowanie liczbowych danych wejściowych użytkownika na liczby w formantach sieci Web
 Ponieważ strony sieci Web mogą być wyświetlane w dowolnym miejscu w świecie, użytkowników można wprowadzić dane liczbowe w <xref:System.Web.UI.WebControls.TextBox> formantu w praktycznie nieograniczoną liczbę formatów. W związku z tym jest bardzo ważne, aby określić ustawienia regionalne i kultury użytkownika strony sieci Web. Podczas analizy danych wejściowych użytkownika, aby potem stosować Konwencji formatowania zdefiniowany przez użytkownika ustawień regionalnych i kultur.  

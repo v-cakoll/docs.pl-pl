@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557626"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-key-frames"></a>Jak animować rotację 3D z wykorzystaniem klatek kluczowych
 W poniższym przykładzie <xref:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames> jest używane do obliczania obiektu 3D Obróć podczas jego oś obrotu animuje, co powoduje "wobble". Ta animacja używa następujących klatek kluczowych:  

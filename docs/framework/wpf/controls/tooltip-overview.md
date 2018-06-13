@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557241"
 ---
 # <a name="tooltip-overview"></a>ToolTip — Przegląd
 Etykietka narzędzia jest mała okno podręczne pojawia się po zatrzymaniu wskaźnika myszy nad elementem, takie jak ponad <xref:System.Windows.Controls.Button>. W tym temacie przedstawiono wskazówki i opisano, jak tworzyć i dostosowywać zawartość etykietka narzędzia.  

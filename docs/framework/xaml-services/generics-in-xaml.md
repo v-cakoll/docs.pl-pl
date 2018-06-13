@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563587"
 ---
 # <a name="generics-in-xaml"></a>Typy ogólne w XAML
 .NET Framework XAML usług zgodnie z implementacją w System.Xaml zapewnia obsługę przy użyciu ogólnych typów CLR. Ta obsługa obejmuje określenie ograniczenia ogólne jako argumentu typu i wymuszanie ograniczenia wywołując odpowiednie `Add` metody w przypadku kolekcji ogólnej. W tym temacie opisano aspekty przy użyciu i odwołuje się do typów ogólnych w języku XAML.  

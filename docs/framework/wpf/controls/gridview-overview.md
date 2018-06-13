@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557685"
 ---
 # <a name="gridview-overview"></a>GridView — Przegląd
 <xref:System.Windows.Controls.GridView> tryb wyświetlania jest jeden z trybów wyświetlania dla <xref:System.Windows.Controls.ListView> formantu. <xref:System.Windows.Controls.GridView> Klasy i jej klas pomocniczych umożliwiają i użytkowników do wyświetlania elementu kolekcji w tabeli, która zwykle używa przycisków jako nagłówków kolumn interaktywnego. W tym temacie przedstawiono <xref:System.Windows.Controls.GridView> klasy i omówiono jej użycia.  

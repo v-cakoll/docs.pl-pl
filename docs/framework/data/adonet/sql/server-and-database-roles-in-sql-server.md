@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364801"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Serwer i ról bazy danych w programie SQL Server
 Wszystkie wersje programu SQL Server, użyj opartej na rolach zabezpieczeń, dzięki czemu można przypisać uprawnienia do roli lub grupy użytkowników, a nie dla poszczególnych użytkowników. Stały server i bazy danych mają ustalony zbiór przypisane im uprawnienia.  

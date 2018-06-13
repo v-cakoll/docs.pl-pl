@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365790"
 ---
 # <a name="writing-a-windows-store-app-that-consumes-an-odata-service"></a>Pisanie aplikacji ze Sklepu Windows korzystającą z usługi OData
 Został wprowadzony nowy typ aplikacji systemu Windows 8: aplikacji ze Sklepu Windows. Aplikacje ze Sklepu Windows nowy wygląd i sposób działania, uruchom na różnych urządzeniach i stają się dostępne w Sklepie Windows. W tym temacie opisano sposób zapisania korzystającą z usługi OData, w szczególności usługi OData katalogu NetFlix aplikacji ze Sklepu Windows. Aby uzyskać więcej informacji dotyczących aplikacji ze Sklepu Windows, przeczytaj [wprowadzenie do korzystania z aplikacji ze Sklepu Windows](http://msdn.microsoft.com/library/windows/apps/br211386.aspx).  

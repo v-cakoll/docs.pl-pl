@@ -21,6 +21,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742838"
 ---
 # <a name="how-to-view-assembly-contents"></a>Porady: wyświetlanie zawartości zestawu
 Można użyć [Ildasm.exe (dezasembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) Aby wyświetlić informacje o języku pośrednim (MSIL) firmy Microsoft w pliku. Jeśli badane plik jest zestawem, te informacje mogą uwzględniać zestaw atrybutów, a także odwołania do innych modułów i zestawów. Informacje te mogą być pomocne w określeniu, czy plik jest zestawem lub część zestawu i określa, czy plik ma odwołania do innych modułach ani zestawów.  

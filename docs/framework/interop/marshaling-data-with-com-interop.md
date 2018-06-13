@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388358"
 ---
 # <a name="marshaling-data-with-com-interop"></a>Marshaling danych za pomocą modelu COM
 Współdziałanie z COM zapewnia obsługę zarówno przy użyciu obiektów COM z kodu zarządzanego i udostępnianie zarządzane obiekty do modelu COM. Obsługa przekazywanie danych do i z modelu COM jest rozbudowana i prawie zawsze zawiera poprawne zachowanie marshalingu.  

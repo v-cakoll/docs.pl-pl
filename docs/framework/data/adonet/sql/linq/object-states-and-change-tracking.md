@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364258"
 ---
 # <a name="object-states-and-change-tracking"></a>Stanów obiektów i śledzenie zmian
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obiekty zawsze uczestniczyć w niektórych *stanu*. Na przykład, jeśli [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tworzy nowy obiekt, gdy obiekt jest w `Unchanged` stanu. Możesz samodzielnie utworzyć nowy obiekt jest nieznany w <xref:System.Data.Linq.DataContext> i znajduje się w `Untracked` stanu. Po pomyślnym wykonaniu <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, wszystkie obiekty znane [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] w `Unchanged` stanu. (Jedynym wyjątkiem jest reprezentowana przez te, które zostały pomyślnie usunięte z bazy danych, które znajdują się w `Deleted` stanu i korzystanie z niej w tym <xref:System.Data.Linq.DataContext> wystąpienia.)  

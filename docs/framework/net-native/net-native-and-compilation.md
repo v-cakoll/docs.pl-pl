@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395531"
 ---
 # <a name="net-native-and-compilation"></a>Architektura .NET Native i kompilacja
 Aplikacje Windows 8.1 i aplikacje dla komputerów z systemem Windows przeznaczonych dla platformy.NET Framework są zapisywane w określonym języku programowania i skompilowany w języku pośrednim (IL). W czasie wykonywania kompilatora just in time (JIT) jest odpowiedzialny za kompilowanie IL do kodu natywnego dla komputera lokalnego, po prostu, przed wykonaniem metody po raz pierwszy. Z kolei łańcucha narzędzi dla platformy .NET Native konwertuje kodu źródłowego do kodu macierzystego w czasie kompilacji. W tym temacie porównuje platformy .NET Native z innymi technologiami kompilacji dostępne dla aplikacji .NET Framework, a także omówienie praktyczne jak platforma .NET Native tworzy kodu natywnego, które mogą ułatwić zrozumienie, dlaczego wyjątków, które występują w kodzie skompilowanym z .NET Macierzysty nie występują w kodzie kompilacji JIT.  

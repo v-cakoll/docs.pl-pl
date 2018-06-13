@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560372"
 ---
 # <a name="how-to-create-a-shape-using-a-streamgeometry"></a>Jak utworzyć kształt używając StreamGeometry
 <xref:System.Windows.Media.StreamGeometry> jest lekki zamiast <xref:System.Windows.Media.PathGeometry> tworzenia kształtów geometrycznych. Użyj <xref:System.Windows.Media.StreamGeometry> potrzebne do opisywania złożonych geometry, ale nie chcesz koszty obsługi wiązania z danymi, animacji lub modyfikacji. Na przykład ze względu na jego wydajność <xref:System.Windows.Media.StreamGeometry> klasy jest dobrym rozwiązaniem dla opisu modułu definiowania układu kodu.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512443"
 ---
 # <a name="getting-started-tutorial"></a>Wprowadzenie — samouczek
 Ta sekcja zawiera zestaw tematów wskazówki, które służą jako wprowadzenie do programowania aplikacji systemu Windows Workflow Foundation (WF). Zgodnie z instrukcjami opisanymi w tych tematach, zostanie utworzona aplikacja, która jest numer gry guessing. Pierwszym temacie samouczka poprowadzi Cię przez kroki tworzenia działań niestandardowych wymagane dla przepływu pracy. W drugim temacie te działania są łączone wraz z działań wbudowanych przepływów pracy w przepływie pracy schemat blokowy. W trzecim temacie aplikacja hosta jest skonfigurowana do uruchamiania przepływu pracy, a w ostatnim temacie wprowadzono trwałości. Każdy krok w procesie zależy od poprzednie kroki, tak więc zaleca się zakończyć je w kolejności.  

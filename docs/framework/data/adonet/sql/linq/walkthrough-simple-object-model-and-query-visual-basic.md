@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365738"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>Wskazówki: Prosty Model obiektów i zapytanie (Visual Basic)
 Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenariusza z minimalnym złożoności. Utworzy klasę jednostki, która modele tabeli klientów Northwind przykładowej bazy danych. Spowoduje to utworzenie prostego zapytania do listy klientów, którzy znajdują się w Londynie.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365358"
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>Tworzenie aplikacji klienckich programu .NET Framework (Szybki Start usługi danych WCF)
 To zadanie końcowego [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Szybki Start. W tym zadaniu zostanie dodać aplikację konsoli do rozwiązania, Dodaj odwołanie do [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych w tym nową aplikację klienta, a dostęp [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych z aplikacji klienta przy użyciu klasy usługi danych wygenerowanego klienta i klienta biblioteki.  

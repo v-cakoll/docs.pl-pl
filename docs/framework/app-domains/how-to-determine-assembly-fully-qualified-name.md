@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743189"
 ---
 # <a name="how-to-determine-an-assembly39s-fully-qualified-name"></a>Porady: określić zestawu&#39;s w pełni kwalifikowana nazwa
 Aby dowiedzieć się, w pełni kwalifikowanej nazwy zestawu w globalnej pamięci podręcznej zestawów, użyj narzędzie globalnej pamięci podręcznej zestawów ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md)). Zobacz [porady: wyświetlanie zawartości globalnej pamięci podręcznej zestawów](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md).  

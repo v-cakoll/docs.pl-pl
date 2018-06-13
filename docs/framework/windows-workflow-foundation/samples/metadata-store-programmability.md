@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517440"
 ---
 # <a name="metadata-store-programmability"></a>Programowanie magazynu metadanych
 Magazyn metadanych jest [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] typy funkcji, która umożliwia skojarzenie dowolnego metadane w formie atrybuty CLR w czasie wykonywania. Dzięki temu luźne powiązanie między składniki wykonawcze i ich odpowiedniki czasu projektowania, a także możliwość zmiany składniki czasu projektowania bez wpływu na środowisko uruchomieniowe. Przykładzie pokazano, jak program względem magazynu metadanych przez stosowanie atrybutów do typu run-time, źródło, dla którego mamy żadnej kontroli nad. Zwykle terminologii jest, że aplikacji obsługującej rejestruje metadanych dla zestawu typów.  

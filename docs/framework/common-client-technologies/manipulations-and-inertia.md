@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742156"
 ---
 # <a name="manipulations-and-inertia"></a>Manipulacje i bezwładność
 *Manipulacje* i *bezwładności* procesora klasy pomocy aplikacji podczas przenoszenia elementów interfejsu użytkownika na ekranie jak fizyczną i intuicyjne. Manipulacje Zezwól użytkownikom na przenoszenie, obracanie i rozmiaru składniki przy użyciu manipulatory, takie jak urządzenie myszy, Pióro lub (w przypadku bezpośredniego dotykowej scenariusza) swoich palców. *Bezwładności* emuluje zachowanie rzeczywistych dla elementów interfejsu użytkownika, które znajdują się w ruchu symulując wymusza tarcia dla elementów. Dzięki temu elementy na stopniowo powolne ich przepływ (liniowego i kątowego) przed przełączeniem do zatrzymania.  

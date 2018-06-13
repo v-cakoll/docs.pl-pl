@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568592"
 ---
 # <a name="editing-xml-data-using-xpathnavigator"></a>Edytowanie danych XML przy użyciu parametrem XPathNavigator
 <xref:System.Xml.XPath.XPathNavigator> Klasa dostarcza metody do wstawienia, modyfikowania i usuwania węzłów i wartości z dokumentu XML zawartych w <xref:System.Xml.XmlDocument> obiektu. Aby użyć dowolnej z tych metod do wstawienia, modyfikowania i usuwania węzłów i wartości, <xref:System.Xml.XPath.XPathNavigator> obiekt musi być edytowalny, czyli jego <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> właściwość musi mieć wartość true.  

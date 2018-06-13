@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365686"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>Implementowanie jawnych transakcji przy użyciu obiekcie CommittableTransaction
 <xref:System.Transactions.CommittableTransaction> Klasa umożliwia jawne dla aplikacji, aby używać transakcji, a nie za pomocą <xref:System.Transactions.TransactionScope> klasy niejawnie. Jest to przydatne w przypadku aplikacji, które mają być używane przez wiele wywołań funkcji lub wielu wywołań wątku tej samej transakcji. W odróżnieniu od <xref:System.Transactions.TransactionScope> klasy, moduł zapisujący aplikacji musi w szczególności wywołać <xref:System.Transactions.CommittableTransaction.Commit%2A> i <xref:System.Transactions.Transaction.Rollback%2A> metody, aby zatwierdzić lub przerwać transakcji.  

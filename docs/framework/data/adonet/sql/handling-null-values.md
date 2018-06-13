@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364274"
 ---
 # <a name="handling-null-values"></a>Obsługa wartości Null
 Wartość null w relacyjnej bazie danych jest używany, gdy wartość w kolumnie jest nieznany lub nieobecny. Wartość null nie jest ciągiem pustym (dla typów danych daty/godziny lub znakiem) ani wartość zero (dla liczbowych typów danych). Ze specyfikacją ANSI SQL-92 się informacja o wartości null musi być taka sama dla wszystkich typów danych tak, aby spójną wszystkie wartości null. <xref:System.Data.SqlTypes> Przestrzeń nazw zawiera wartości null semantyki zaimplementowanie <xref:System.Data.SqlTypes.INullable> interfejsu. Typy wszystkich danych w <xref:System.Data.SqlTypes> ma własną `IsNull` właściwości i `Null` wartość przypisana do wystąpienia tego typu danych.  

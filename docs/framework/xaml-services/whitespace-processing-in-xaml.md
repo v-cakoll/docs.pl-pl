@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565548"
 ---
 # <a name="whitespace-processing-in-xaml"></a>Przetwarzanie spacji w XAML
 Zasady języka XAML stanu, że znaczące światła muszą zostać przetworzone przez [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] implementacji procesora. W tym temacie omówiono te reguły języka XAML. Również dokumentów obsługi dodatkowych spacji jest definiowana za pomocą [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] implementacja procesora XAML i zapisywania XAML do serializacji.  

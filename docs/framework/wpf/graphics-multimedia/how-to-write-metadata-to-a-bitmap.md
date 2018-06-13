@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559426"
 ---
 # <a name="how-to-write-metadata-to-a-bitmap"></a>Jak wpisać metadane do mapy bitowej
 W tym przykładzie pokazano, jak można zapisać metadanych mapy bitowej przy użyciu języka zapytania metadanych.  

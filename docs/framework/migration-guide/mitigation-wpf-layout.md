@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387341"
 ---
 # <a name="mitigation-wpf-layout"></a>Ograniczenie: układ platformy WPF
 Układ formantów WPF mogą się nieznacznie zmieniać.  

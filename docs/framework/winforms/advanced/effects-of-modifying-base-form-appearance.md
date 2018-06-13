@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520555"
 ---
 # <a name="effects-of-modifying-a-base-form39s-appearance"></a>Efekty modyfikowania formularza podstawowego&#39;wygląd s
 Podczas tworzenia aplikacji, może być często konieczne zmienianie wyglądu formularza podstawowego, z którego są dziedziczone innych formularzy w projekcie (lub w innych projektów).  

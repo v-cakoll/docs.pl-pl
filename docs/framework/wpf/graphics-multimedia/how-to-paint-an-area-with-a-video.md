@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560780"
 ---
 # <a name="how-to-paint-an-area-with-a-video"></a>Jak malować obszar za pomocą wideo
 W tym przykładzie pokazano, jak namalować obszar z nośnika. Jednym ze sposobów Malowanie obszaru z nośnika jest użycie <xref:System.Windows.Controls.MediaElement> razem z <xref:System.Windows.Media.VisualBrush>. Użyj <xref:System.Windows.Controls.MediaElement> do ładowania i odtwarzanie multimediów i użyj jej do ustawienia <xref:System.Windows.Media.VisualBrush.Visual%2A> właściwość <xref:System.Windows.Media.VisualBrush>. Następnie można użyć <xref:System.Windows.Media.VisualBrush> namalować obszar o załadowane nośniki.  

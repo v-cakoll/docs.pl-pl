@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599847"
 ---
 # <a name="key-visual-basic"></a>Key (Visual Basic)
 `Key` — Słowo kluczowe można określić zachowanie dla właściwości typu anonimowego. Tylko właściwości wyznaczone jako właściwości klucza brać udziału w testach równość wystąpień typu anonimowego lub obliczenia wartości skrótu kodu. Nie można zmienić wartości właściwości klucza.  

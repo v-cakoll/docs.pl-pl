@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599980"
 ---
 # <a name="properties-visual-basic"></a>Właściwości (Visual Basic)
 Ta strona zawiera listę właściwości, które są członkami Moduły Visual Basic. Inne właściwości, które są członkami określonych obiektów Visual Basic są wymienione w [obiektów](../../visual-basic/language-reference/objects/index.md).  

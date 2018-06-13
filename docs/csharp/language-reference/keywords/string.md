@@ -15,6 +15,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172165"
 ---
 # <a name="string-c-reference"></a>string (odwołanie w C#)
 `string` Typu reprezentuje sekwencję zero lub więcej znaków Unicode. `string` alias jest <xref:System.String> w .NET.  

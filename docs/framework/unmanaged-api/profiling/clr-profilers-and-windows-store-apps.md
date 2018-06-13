@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462289"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Profilery CLR i aplikacji ze Sklepu Windows
 W tym temacie omówiono, jakie trzeba myśleć o podczas pisania narzędzia diagnostyczne analizy zarządzanego kodu uruchamianego w aplikacji ze Sklepu Windows.  Udostępnia również wytyczne do modyfikowania istniejących narzędzi rozwoju, aby nadal działa podczas wykonywania dla aplikacji ze Sklepu Windows.  Aby zrozumieć te informacje, najlepiej, jeśli znasz wspólnego języka środowiska uruchomieniowego profilowania API, już używane tego interfejsu API w narzędzia diagnostycznego, że działa prawidłowo, przed aplikacji klasycznych systemu Windows, a teraz jest zainteresowani modyfikowanie narzędzie jest do poprawnego działania względem aplikacji ze Sklepu Windows.  

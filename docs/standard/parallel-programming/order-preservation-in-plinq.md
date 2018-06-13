@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591643"
 ---
 # <a name="order-preservation-in-plinq"></a>Zamawianie zachowywania w PLINQ
 W PLINQ celem jest zmaksymalizować wydajność przy zachowaniu poprawności. Zapytanie powinien uruchamiana tak szybko jak to możliwe, ale nadal tworzyć poprawnych wyników. W niektórych przypadkach poprawności wymaga kolejność sekwencji źródłowej jest zachowywana; Jednak kolejność może być kosztowne w praktyce. W związku z tym domyślnie PLINQ nie zachowują kolejność sekwencji źródłowej. W tym zakresie podobny PLINQ [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)], ale różni się od LINQ do obiektów, które zachowania kolejności.  

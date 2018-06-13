@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529704"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Wskazówki: demonstrowanie dziedziczenia Visual
 Dziedziczenie Visual umożliwia sprawdzenie kontrolek w formularzu podstawowej i dodać nowe kontrolki. W tym przewodniku utworzysz formularza podstawowego i skompiluj go do biblioteki klas. Zostanie zaimportować tę bibliotekę klas do innego projektu i Utwórz nowy formularz, który dziedziczy z formularza podstawowego. W tym przewodniku przedstawiono sposób:  

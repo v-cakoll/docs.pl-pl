@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328139"
 ---
 # <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Porady: użycie wyrażeń lambda w kwerendzie (Przewodnik programowania w języku C#)
 Wyrażenia lambda nie należy używać bezpośrednio w składni zapytania, ale ich używać w wywołaniach metody i wyrażenia zapytania może zawierać wywołania metody. W rzeczywistości niektóre operacje zapytań może być wyrażona w składni metody. Aby uzyskać więcej informacji na temat różnic między składnia zapytania a składnia metody, zobacz [składnia zapytania a składnia metody w technologii LINQ](../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  

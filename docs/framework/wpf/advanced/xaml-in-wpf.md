@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548126"
 ---
 # <a name="xaml-in-wpf"></a>XAML w WPF
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] język znaczników dla aplikacji deklaratywne jest programowania. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] implementuje aXAML implementacji procesora i zapewnia obsługę języka XAML. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Typy są implementowane w taki sposób, że zapewniają wymagany typ kopii reprezentacja XAML. Ogólnie rzecz biorąc, można utworzyć większość Twojej [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] interfejsu użytkownika aplikacji w kodzie XAML.  

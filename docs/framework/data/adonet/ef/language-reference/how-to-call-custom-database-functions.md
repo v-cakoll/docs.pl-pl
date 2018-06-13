@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762848"
 ---
 # <a name="how-to-call-custom-database-functions"></a>Porady: wywoływać funkcje w niestandardowej bazie danych
 W tym temacie opisano sposób wywołania funkcji niestandardowych, które są zdefiniowane w bazie danych od w składniku LINQ do jednostek zapytań.  

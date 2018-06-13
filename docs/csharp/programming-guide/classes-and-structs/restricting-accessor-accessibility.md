@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322318"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>Ograniczanie dostępności metody dostępu (Przewodnik programowania w języku C#)
 [Uzyskać](../../../csharp/language-reference/keywords/get.md) i [ustawić](../../../csharp/language-reference/keywords/set.md) fragmenty właściwość lub indeksator są nazywane *metody dostępu*. Domyślnie te metody dostępu mają taką samą widoczność lub poziom dostępu: te właściwości lub indeksatora, do którego należą. Aby uzyskać więcej informacji, zobacz [poziomów ułatwień dostępu](../../../csharp/language-reference/keywords/accessibility-levels.md). Jednak czasami jest przydatne w celu ograniczenia dostępu do jednej z tych metod dostępu. Zazwyczaj polega to na ograniczanie dostępności `set` akcesor przy zachowaniu `get` akcesor publicznie. Na przykład:  

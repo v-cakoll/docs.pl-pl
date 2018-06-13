@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546677"
 ---
 # <a name="how-to-navigate-back-through-navigation-history"></a>Porady: przechodzenie wstecz przez historii nawigacji
 W tym przykładzie przedstawiono sposób przejdź do pozycji na spód historii nawigacji.  

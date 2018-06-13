@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530653"
 ---
 # <a name="how-to-author-controls-for-windows-forms"></a>Porady: formanty autoryzacji dla formularzy systemu Windows
 Formant reprezentuje graficznego łącza między użytkownikiem i program. Formant można podać przetwarzania danych, akceptuje dane wejściowe użytkownika, odpowiadanie na zdarzenia lub wykonać dowolną liczbę inne funkcje, które połączenia użytkownika i aplikacji. Ponieważ formant jest zasadniczo składnika z interfejsem graficznym, może służyć każda funkcja, która jest składnikiem, a także podać interakcji z użytkownikiem. Formanty są tworzone w celu obsługi określonych celów i tworzenia formantów jest po prostu inną zadań programowania. Z tym pamiętać następujące kroki reprezentują Omówienie procesu tworzenia formantu. Łącza zawierają dodatkowe informacje na temat poszczególnych kroków.  

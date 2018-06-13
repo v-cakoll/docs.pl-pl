@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324678"
 ---
 # <a name="objects-c-programming-guide"></a>Obiekty (Przewodnik programowania w języku C#)
 Definicja klasy lub struktury jest podobny do planu, określający, co można zrobić typu. Obiekt jest zasadniczo blok pamięci przydzielony i skonfigurowany zgodnie z planu. Program może tworzyć wiele obiektów o tej samej klasy. Obiekty są również nazywane wystąpień i mogą być przechowywane w nazwanej zmiennej lub tablicą lub kolekcją. Kod klienta jest kodem, który używa tych zmiennych do wywołania metody i uzyskać dostęp do publicznej właściwości obiektu. W języku zorientowane obiektowo takich jak C# typowego programu składa się z wielu obiektów interakcji dynamicznie.  

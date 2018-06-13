@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327695"
 ---
 # <a name="chaining-queries-example-c"></a>Tworzenie łańcuchów przykład kwerendy (C#)
 W tym przykładzie jest oparty na poprzednim przykładzie i pokazuje, co się stanie w przypadku łańcucha ze sobą dwie kwerendę dotyczącą zarówno Użyj odroczonego wykonania i obliczanie leniwe.  

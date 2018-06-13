@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546533"
 ---
 # <a name="how-to-refresh-a-page"></a>Porady: odświeżanie strony
 W tym przykładzie przedstawiono sposób wywoływania <xref:System.Windows.Navigation.NavigationWindow.Refresh%2A> metody w celu odświeżenia bieżącej zawartości w <xref:System.Windows.Navigation.NavigationWindow>.  

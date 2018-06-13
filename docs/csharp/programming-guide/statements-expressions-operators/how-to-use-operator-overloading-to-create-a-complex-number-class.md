@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328867"
 ---
 # <a name="how-to-use-operator-overloading-to-create-a-complex-number-class-c-programming-guide"></a>Porady: użycie przeładowania operatora do utworzenia złożonej klasy liczbowej (Przewodnik programowania w języku C#)
 W tym przykładzie pokazano, jak można użyć przeładowania operatora do utworzenia złożonej klasy liczbowej `Complex` definiuje dodanie złożonych. Program wyświetla zespoloną będzie skutkowało rzeczywistych części liczb i dodanie za pomocą zastąpienia z `ToString` metody.  

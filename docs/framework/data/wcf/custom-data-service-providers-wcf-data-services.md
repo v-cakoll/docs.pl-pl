@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354962"
 ---
 # <a name="custom-data-service-providers-wcf-data-services"></a>Niestandardowych dostawców usług danych (usługi danych WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obejmuje zestaw dostawców, który umożliwia zdefiniowanie na podstawie typów danych z późnym wiązaniem modelu danych.  

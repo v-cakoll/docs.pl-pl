@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339829"
 ---
 # <a name="using-exceptions-c-programming-guide"></a>Używanie wyjątków (Przewodnik programowania w języku C#)
 W języku C# błędów w programie w czasie wykonywania są propagowane za pośrednictwem programu przy użyciu mechanizmu o nazwie wyjątków. Wyjątki są zgłaszane przez kod, który wystąpi błąd i przechwycony przez kod, który może poprawić ten błąd. Wyjątki może zostać wygenerowany przez .NET Framework środowisko uruchomieniowe języka wspólnego (CLR) lub kodu w programie. Po wyjątku rozprzestrzenia się górę stosu wywołań do `catch` instrukcji dla wyjątku został znaleziony. Nieprzechwyconych wyjątków są obsługiwane przez program obsługi wyjątków ogólnych obsługiwanych przez system, który wyświetla okno dialogowe.  

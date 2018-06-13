@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328016"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Porady: łączenie i porównywanie kolekcji ciągów (LINQ) (C#)
 Ten przykład przedstawia sposób plików zawierających wierszy tekstu, a następnie Sortuj wyniki scalania. W szczególności widoczny jest sposób wykonywać proste łączenia, Unii i przecięcie na dwa zestawy wierszy tekstu.  

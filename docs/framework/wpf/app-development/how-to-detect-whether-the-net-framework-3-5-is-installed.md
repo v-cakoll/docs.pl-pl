@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546045"
 ---
 # <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>Porady: wykrywanie, czy jest zainstalowany program .NET Framework 3.5
 Przed Administratorzy mogą wdrażać aplikacje systemu Windows Presentation Foundation (WPF) w systemie, którego celem jest [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], ich najpierw upewnić się, że [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] środowiska uruchomieniowego jest obecny. Ten temat zawiera skrypt napisany w HTML/JavaScript, które Administratorzy mogą używać, aby określić, czy [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] jest obecny w systemie.  

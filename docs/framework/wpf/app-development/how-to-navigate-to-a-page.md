@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548392"
 ---
 # <a name="how-to-navigate-to-a-page"></a>Porady: Przejdź na stronę
 W tym przykładzie przedstawiono kilka sposobów, w których strona może zostać przesłane do z <xref:System.Windows.Navigation.NavigationWindow>.  

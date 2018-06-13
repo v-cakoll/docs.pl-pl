@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356466"
 ---
 # <a name="aspnet-applications-using-wait-handles"></a>Uchwyty oczekiwania aplikacji ASP.NET przy użyciu
 Wywołania zwrotnego i modele sondowania do obsługi operacji asynchronicznych są przydatne, gdy aplikacja przetwarza tylko jedną operację asynchroniczną naraz. Modele oczekiwania zapewnia bardziej elastyczne możliwości przetwarzania wielu operacji asynchronicznych. Istnieją dwa modele oczekiwania, o nazwie odpowiadającej <xref:System.Threading.WaitHandle> metody używane do ich wdrażania: model oczekiwania (wszystkie) i model oczekiwania (wszystkie).  

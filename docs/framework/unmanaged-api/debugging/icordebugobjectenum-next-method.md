@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422949"
 ---
 # <a name="icordebugobjectenumnext-method"></a>ICorDebugObjectEnum::Next — Metoda
 Pobiera względną wirtualnych adresów (RVAs) określoną liczbę obiektów z wyliczenia, zaczynając od bieżącego położenia.  

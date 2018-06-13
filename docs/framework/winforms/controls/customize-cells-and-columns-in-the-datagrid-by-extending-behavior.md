@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529136"
 ---
 # <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>Porady: dostosowywanie komórek i kolumn w formancie DataGridView (Formularze systemu Windows) przez rozszerzanie ich zachowania i wyglądu
 <xref:System.Windows.Forms.DataGridView> Kontrola zapewnia wiele sposobów, aby dostosować wygląd i zachowanie przy użyciu właściwości, zdarzenia oraz pomocniczy klasy. Czasami mogą mieć wymagania dla Twojego komórek wykraczające poza co te funkcje mogą mieć. Możesz utworzyć własne <xref:System.Windows.Forms.DataGridViewCell> klasę, aby umożliwić korzystanie z funkcji rozszerzonej.  

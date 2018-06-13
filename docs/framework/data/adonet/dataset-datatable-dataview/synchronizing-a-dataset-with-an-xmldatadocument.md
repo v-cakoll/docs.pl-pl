@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763270"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>Synchronizowanie zestawu danych z dokumentu XmlDataDocument
 W tej sekcji przedstawiono jeden krok w procesie przetwarzania zamówienia zakupu, za pomocą silnie typizowaną <xref:System.Data.DataSet> synchronizowane z <xref:System.Xml.XmlDataDocument>. Utwórz w przykładach **zestawu danych** ze schematem zminimalizowane, który jest zgodny tylko część dokumentu XML źródła. W przykładach użyto **dokumentu XmlDataDocument** Aby zachować wierność źródło dokumentu w formacie XML, włączanie **DataSet** służący do udostępnienia podzbiór dokumentu XML.  

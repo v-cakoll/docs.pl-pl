@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548967"
 ---
 # <a name="read-only-dependency-properties"></a>Właściwości zależności tylko do odczytu
 W tym temacie opisano właściwości zależności tylko do odczytu, włącznie z istniejącej właściwości tylko do odczytu zależności i scenariusze i techniki tworzenia właściwości niestandardowych zależności tylko do odczytu.  

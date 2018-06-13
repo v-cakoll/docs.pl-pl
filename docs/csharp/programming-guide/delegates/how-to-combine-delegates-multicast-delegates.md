@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327398"
 ---
 # <a name="how-to-combine-delegates-multicast-delegatesc-programming-guide"></a>Porady: łączenie obiektów delegowanych (obiekty delegowane multiemisji) (Przewodnik programowania w języku C#)
 W tym przykładzie pokazano, jak utworzyć obiekty delegowane multiemisji. Właściwość przydatne [delegować](../../../csharp/language-reference/keywords/delegate.md) obiektów jest, że wiele obiektów można przypisać do wystąpienia jednego delegata za pomocą `+` operatora. Delegat multiemisji znajduje się lista przydzielonych obiektów delegowanych. Po wywołaniu multiemisji delegata wywołuje delegatów na liście w kolejności. Można połączyć tylko delegatów tego samego typu.  

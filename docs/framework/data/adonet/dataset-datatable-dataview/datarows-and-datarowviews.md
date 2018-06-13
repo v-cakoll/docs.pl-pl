@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762874"
 ---
 # <a name="datarows-and-datarowviews"></a>Elementów DataRows i DataRowViews
 A <xref:System.Data.DataView> udostępnia kolekcję wyliczalny <xref:System.Data.DataRowView> obiektów. **DataRowView** obiektów uwidocznić wartości jako tablice obiektów, które są indeksowane według nazwy lub odwołania liczby porządkowej kolumny w tabeli podstawowej. Dostęp można uzyskać <xref:System.Data.DataRow> widoczne przy **DataRowView** za pomocą <xref:System.Data.DataRowView.Row%2A> właściwość **DataRowView**.  

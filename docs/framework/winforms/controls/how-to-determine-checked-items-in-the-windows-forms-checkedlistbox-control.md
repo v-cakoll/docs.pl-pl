@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531017"
 ---
 # <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>Porady: określanie elementów jako zaznaczone w formancie CheckedListBox formularzy systemu Windows
 Gdy prezentacji danych w formularzach systemu Windows <xref:System.Windows.Forms.CheckedListBox> kontroli, można to wykonać iterację kolekcji przechowywane w <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> właściwości lub kroku przy użyciu listy <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> metodę, aby określić elementy, które są sprawdzane. <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> Metoda przyjmuje jako argumentu numer indeksu elementu i zwraca `true` lub `false`. Sprzeczności z czego mogą oczekiwać <xref:System.Windows.Forms.ListBox.SelectedItems%2A> i <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> właściwości nie może określić elementy, które są sprawdzane; określają one, elementy, które są wyróżnione.  

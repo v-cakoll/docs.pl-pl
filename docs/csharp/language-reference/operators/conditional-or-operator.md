@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171809"
 ---
 # <a name="-operator-c-reference"></a>Operator || (odwołanie w C#)
 Operator warunkowy OR (`||`) wykonuje logiczne lub z jego `bool` argumentów operacji. Jeśli pierwszy argument operacji daje w wyniku `true`, drugi argument nie jest obliczane. Jeśli pierwszy argument operacji daje w wyniku `false`, drugi — operator określa, czy wyrażenie OR jako całość daje w wyniku `true` lub `false`.  

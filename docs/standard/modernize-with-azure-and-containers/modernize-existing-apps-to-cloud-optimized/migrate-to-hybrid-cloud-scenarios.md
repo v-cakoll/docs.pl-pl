@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33958207"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>Migrowanie do scenariuszy hybrydowych chmury
 

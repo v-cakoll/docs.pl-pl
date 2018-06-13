@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493641"
 ---
 # <a name="how-to-enable-streaming"></a>Instrukcje: Włączanie przesyłania strumieniowego
 Windows Communication Foundation (WCF) można wysyłać wiadomości przy użyciu transferu buforowane lub przesyłany strumieniowo. W domyślnym trybie buforowane transferu wiadomości musi być całkowicie dostarczana przed odbiorca może go odczytać. W tryb przesyłania strumieniowego odbiornika można rozpocząć przetworzyć komunikatu przed przekazaniem całkowicie. Tryb strumieniowy jest przydatne, gdy informacje przekazywane jest obszerne i mogą być przetwarzane pojedynczo. Tryb strumieniowy jest również przydatne, gdy komunikat jest zbyt duży, aby całkowicie buforowany.  

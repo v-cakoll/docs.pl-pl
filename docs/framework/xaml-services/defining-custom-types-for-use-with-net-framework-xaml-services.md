@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566499"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>Definiowanie typów niestandardowych do użytku z usługami .NET Framework XAML
 Zdefiniuj niestandardowe typy obiektów biznesowych lub typów, które nie mają zależności na określonych platformach, brak niektórych najlepszych rozwiązań dotyczących XAML, możesz wykonać. Po wykonaniu tych rozwiązań usług .NET Framework XAML i jego czytników XAML i zapisywania XAML może odnajdywanie właściwości XAML danego typu i nadaj odpowiednie reprezentacja w strumień węzłów XAML, przy użyciu systemu typu XAML. W tym temacie opisano najlepsze rozwiązania dotyczące definicji typu, elementu członkowskiego definicje i przypisywanie CLR typów lub elementy członkowskie.  

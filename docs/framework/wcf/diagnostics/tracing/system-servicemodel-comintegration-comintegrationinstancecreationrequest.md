@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33479511"
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationinstancecreationrequest"></a>System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationRequest
 System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationRequest  

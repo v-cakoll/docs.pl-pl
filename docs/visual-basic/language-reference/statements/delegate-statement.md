@@ -12,6 +12,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234681"
 ---
 # <a name="delegate-statement"></a>Delegate — Instrukcja
 Można zadeklarować obiektu delegowanego. Delegat jest typem referencyjnym, który odwołuje się do `Shared` metody typu lub metod wystąpień obiektu. Postępowanie z pasujących typów parametru i wróć może służyć do tworzenia wystąpienia tej klasy delegatu. Następnie procedurę później można wywołać za pomocą wystąpienia obiektu delegowanego.  

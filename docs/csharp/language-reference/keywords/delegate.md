@@ -14,6 +14,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172113"
 ---
 # <a name="delegate-c-reference"></a>delegate (odwołanie w C#)
 Deklaracja typu delegowanego jest podobny do sygnatury metody. Ma wartość zwracaną i dowolną liczbę parametrów dowolnego typu:  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488806"
 ---
 # <a name="clients"></a>Klienci
 Tematy w tej sekcji opisano sposób architektury klienta dostępu do usługi Windows Communication Foundation (WCF), jak skonfigurować klienta programu WCF i brany pod uwagę pewne zabezpieczeń dla klientów usługi WCF.  

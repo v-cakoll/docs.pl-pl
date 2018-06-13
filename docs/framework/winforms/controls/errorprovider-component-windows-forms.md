@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525873"
 ---
 # <a name="errorprovider-component-windows-forms"></a>ErrorProvider — Składnik (Formularze systemu Windows)
 Formularze systemu Windows `ErrorProvider` składnika służy do wyświetlenia użytkownika w sposób bez narzucania się im dany element jest nieprawidłowy. Jest ona zwykle używana w połączeniu z sprawdzanie poprawności danych wejściowych użytkownika dla formularza lub wyświetlanie błędów w elemencie dataset.  

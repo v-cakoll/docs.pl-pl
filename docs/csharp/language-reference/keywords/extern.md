@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172296"
 ---
 # <a name="extern-c-reference"></a>extern (odwołanie w C#)
 `extern` Modyfikator służy do deklarowania metodę, która jest zaimplementowana zewnętrznie. Typowym zastosowaniem `extern` modyfikator jest z `DllImport` atrybutu podczas korzystania z międzyoperacyjnego usług do wywołania do kodu niezarządzanego. W tym przypadku metoda również musi być zadeklarowany jako `static`, jak pokazano w poniższym przykładzie:  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33464530"
 ---
 # <a name="3413---httppipelinebeginprocessresponsestart"></a>3413 — HttpPipelineBeginProcessResponseStart
 ## <a name="properties"></a>Właściwości  

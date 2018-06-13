@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525850"
 ---
 # <a name="polygons-in-gdi"></a>Wielokąty w GDI+
 Wielokąt jest zamknięty kształt z co najmniej trzech stronach proste. Na przykład trójkąt ma wielokąta z trzech stron, prostokąt jest wielokąta z czterech stron, a pięciobok wielokąta z pięcioma stron. Na poniższej ilustracji przedstawiono kilka wielokątów.  

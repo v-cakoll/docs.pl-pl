@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474223"
 ---
 # <a name="end-to-end-tracing"></a>Kompleksowe śledzenie
 Kompleksowe śledzenie (e2e) umożliwia deweloperom wykonaj wykonywanie kodu w infrastrukturze Windows Communication Foundation (WCF) do badania, dlaczego ścieżka kodu nie powiodło się lub w celu zapewnienia szczegółowego śledzenia wydajności planowania i analiza wydajności. Windows Communication Foundation (WCF) udostępnia trzy mechanizmy korelacji, aby pomóc w zdiagnozowaniu przyczyny błędu: działań, przesyłania i propagacji.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388202"
 ---
 # <a name="loaderlock-mda"></a>loaderLock MDA
 `loaderLock` Zarządzany Asystent debugowania (MDA) wykrywa próby wykonania kodu zarządzanego w wątku, który posiada blokady modułu ładującego systemu operacyjnego Microsoft Windows.  Takie wykonanie jest niedozwolona, ponieważ może to prowadzić do zakleszczenia i korzystanie z bibliotek DLL, zanim zostały zainicjowane przez modułu ładującego systemu operacyjnego.  

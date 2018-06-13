@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541966"
 ---
 # <a name="custom-dependency-properties"></a>Niestandardowe właściwości zależności
 W tym temacie opisano przyczyny który [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] deweloperzy aplikacji autorów składnik może być utworzenie właściwości niestandardowe zależności i opisano kroki implementacji, a także niektóre opcje wdrażania, które może poprawić wydajność, użyteczność lub wszechstronność właściwości.  

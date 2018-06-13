@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543471"
 ---
 # <a name="how-to-store-multiple-data-formats-in-a-data-object"></a>Jak przechować wiele formatów danych w obiekcie danych
 Poniższy przykład przedstawia użycie <xref:System.Windows.DataObject.SetData%28System.String%2CSystem.Object%29> metody, aby dodać dane do obiektu danych w wielu formatach.  

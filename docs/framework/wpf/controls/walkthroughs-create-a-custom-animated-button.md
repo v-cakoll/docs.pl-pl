@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557111"
 ---
 # <a name="walkthroughs-create-a-custom-animated-button"></a>Wskazówki: utwórz niestandardowy przycisk animowany
 Zgodnie z sugestią, jego nazwa, Windows Presentation Foundation (WPF) doskonale nadaje się do tworzenia środowiska sformatowanego prezentacji dla klientów. Te wskazówki pokazują, jak dostosować wygląd i zachowanie przycisku (w tym animacji). Takie dostosowanie odbywa się przy użyciu stylu i szablonu, dzięki czemu można zastosować tego przycisku niestandardowego łatwe do dowolnego przycisków w aplikacji. Na poniższej ilustracji przedstawiono dostosowany przycisk zostanie utworzenie.  

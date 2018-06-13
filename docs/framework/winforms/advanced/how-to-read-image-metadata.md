@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526581"
 ---
 # <a name="how-to-read-image-metadata"></a>Porady: odczytywanie metadanych obrazu
 Niektóre pliki obrazów zawierać metadane, który można odczytać w celu określenia funkcji obrazu. Na przykład cyfrowych fotografii może zawierać metadane, który można odczytać w celu określenia marka i model aparatu służące do przechwytywania obrazu. Z [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], możesz przeczytać istniejące metadane i może także zapisać nowe metadane pliki obrazów.  

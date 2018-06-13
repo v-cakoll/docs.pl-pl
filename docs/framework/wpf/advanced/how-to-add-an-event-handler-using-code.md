@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542626"
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>Jak dodać obsługę zdarzeń z użyciem kodu
 W tym przykładzie przedstawiono sposób dodawania obsługi zdarzeń do elementu przy użyciu kodu.  

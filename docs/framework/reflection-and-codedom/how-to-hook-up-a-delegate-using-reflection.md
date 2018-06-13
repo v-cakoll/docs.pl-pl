@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397939"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>Porady: podłączanie delegata za pomocą odbicia
 Gdy używasz odbicia do ładowania i uruchamiania zestawy, nie można używać funkcji języka, takich jak C# `+=` operator lub Visual Basic [AddHandler — instrukcja](~/docs/visual-basic/language-reference/statements/addhandler-statement.md) do podpinanie zdarzeń. Poniższe procedury pokazują, jak Podłączanie istniejącą metodę do zdarzenia, uzyskując wszystkie wymagane typy przez odbicie i tworzenie dynamicznych metoda, za pomocą odbicia Emituj i podłącz go do zdarzenia.  

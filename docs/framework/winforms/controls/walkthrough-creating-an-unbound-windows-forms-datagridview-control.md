@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541157"
 ---
 # <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>Wskazówki: utworzenie niezwiązanego formantu DataGridView formularzy systemu Windows
 Często można wyświetlić danych tabelarycznych, który nie pochodzi z bazy danych. Na przykład można wyświetlić zawartości jest tablicą dwuwymiarową ciągów. <xref:System.Windows.Forms.DataGridView> Klasa umożliwia łatwe i dużym stopniu dostosowywane do wyświetlania danych bez powiązania ze źródłem danych. W tym przewodniku przedstawiono sposób wypełnienia <xref:System.Windows.Forms.DataGridView> sterowania i zarządzania dodawania i usuwania wierszy w trybie "niezwiązanego". Domyślnie użytkownik może dodawać nowych wierszy. Aby zapobiec dodawaniu, ustaw <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> jest właściwość `false`.  

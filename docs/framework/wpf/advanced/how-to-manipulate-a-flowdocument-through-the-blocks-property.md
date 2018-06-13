@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544066"
 ---
 # <a name="how-to-manipulate-a-flowdocument-through-the-blocks-property"></a>Jak zarządzać FlowDocument przez właściwość bloku
 Następujące przykłady przedstawiają niektóre z najczęściej operacje wykonywane na <xref:System.Windows.Documents.FlowDocument> za pośrednictwem <xref:System.Windows.Documents.FlowDocument.Blocks%2A> właściwości.  

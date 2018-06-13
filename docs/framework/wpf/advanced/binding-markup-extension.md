@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541888"
 ---
 # <a name="binding-markup-extension"></a>Rozszerzenie znaczników powiązania
 Różni się wartość właściwości wartość powiązane z danymi, tworzenie obiektu będącego wyrażeniem pośrednie i interpretowanie kontekstu danych, która ma zastosowanie do elementu i jego powiązanie w czasie wykonywania.  

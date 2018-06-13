@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365725"
 ---
 # <a name="query-projections-wcf-data-services"></a>Zapytanie projekcje (usługi danych WCF)
 Projekcja zapewnia mechanizm w [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Aby zmniejszyć ilość danych w źródle danych zwróconych przez zapytanie, określając, który niektórych właściwości jednostki są zwracane w odpowiedzi. Aby uzyskać więcej informacji, zobacz [OData: wybierz opcję zapytania systemu ($select)](http://go.microsoft.com/fwlink/?LinkId=186076).  

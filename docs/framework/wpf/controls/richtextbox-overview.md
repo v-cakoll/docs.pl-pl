@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557527"
 ---
 # <a name="richtextbox-overview"></a>RichTextBox — Przegląd
 <xref:System.Windows.Controls.RichTextBox> Kontroli umożliwia wyświetlanie lub edytowanie tym akapitów, obrazy, tabele i zawartości przepływu. W tym temacie przedstawiono <xref:System.Windows.Controls.TextBox> klasy i przykłady dotyczące używania go w obu [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] i C#.  

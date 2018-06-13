@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552730"
 ---
 # <a name="how-to-get-a-listboxitem"></a>Jak pobrać ListBoxItem
 Jeśli potrzebujesz określonej <xref:System.Windows.Controls.ListBoxItem> od określonego indeksu w <xref:System.Windows.Controls.ListBox>, można użyć <xref:System.Windows.Controls.ItemContainerGenerator>.  

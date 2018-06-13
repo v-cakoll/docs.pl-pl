@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546894"
 ---
 # <a name="hosting-wpf-applications"></a>Hosting aplikacji WPF
 Aplikacje przeglądarki WPF XAML (XBAP) są aplikacje wzbogaconego klienta, które można wdrożyć na serwerze sieci Web i uruchomiona w przeglądarce. Host WPF (PresentationHost.exe) jest zarejestrowany jako powłoki i MIME obsługi plików XBAP i języka XAML. W związku z tym program Internet Explorer wie, można uruchomić hosta WPF, po uruchomieniu XBAP. Firefox użytkownicy mogą instalować dodatki Firefox, umożliwiających Firefox hosta XBAP również. XBAP może być hostowana w innych przeglądarkach lub aplikacji autonomicznych przy użyciu przeglądarki natywnego hostingu interfejsów API podane przez WPF.  

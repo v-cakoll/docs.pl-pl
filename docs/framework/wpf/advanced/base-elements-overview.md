@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541836"
 ---
 # <a name="base-elements-overview"></a>Przegląd Elementy bazy
 Wysoki procent klas w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] są uzyskiwane z czterech klas, które są często określane w [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] dokumentacji jako klasy podstawowej elementu. Te klasy są <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>, <xref:System.Windows.ContentElement>, i <xref:System.Windows.FrameworkContentElement>. <xref:System.Windows.DependencyObject> Klasa również odnosi się, ponieważ jest wspólna klasa podstawowa obu <xref:System.Windows.UIElement> i <xref:System.Windows.ContentElement>  

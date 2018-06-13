@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529607"
 ---
 # <a name="bindingsource-component-overview"></a>BindingSource — Informacje o składniku
 <xref:System.Windows.Forms.BindingSource> Składnika zaprojektowano w celu uproszczenia procesu powiązania kontroli źródła danych. <xref:System.Windows.Forms.BindingSource> Składnika działa jako prosty kanał i źródła danych dla innych formantów powiązać. Udostępnia abstrakcję połączenie danych formularza podczas przekazywania za pomocą poleceń do podstawowej wykaz danych. Ponadto można dodać danych bezpośrednio do niego, tak aby sam składnik działa jako źródło danych.  

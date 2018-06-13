@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528986"
 ---
 # <a name="how-to-author-composite-controls"></a>Porady: autoryzowanie formantów złożonych
 Formanty złożone można zastosować na wiele sposobów. Można tworzyć je jako część projekt aplikacji komputerowych systemu Windows i ich używać tylko w formularzach w projekcie. Lub tworzyć je w projekcie Biblioteka formantów systemu Windows, skompiluj projekt do zestawu i użyj formantów w innych projektach. Można nawet dziedziczą z nich i umożliwia szybkie dostosować je do celów specjalnych dziedziczenie visual.  

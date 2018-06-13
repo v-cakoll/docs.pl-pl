@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529461"
 ---
 # <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>Wskazówki: wykonywanie operacji przeciągania i upuszczania w formularzach systemu Windows
 Wykonywanie operacji przeciągania i upuszczania w aplikacjach opartych na systemie Windows musi obsługiwać szereg zdarzeń, głównie <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, i <xref:System.Windows.Forms.Control.DragDrop> zdarzenia. Praca z informacji dostępnych w przypadku argumentów te zdarzenia, można łatwo ułatwienia operacji przeciągania i upuszczania.  

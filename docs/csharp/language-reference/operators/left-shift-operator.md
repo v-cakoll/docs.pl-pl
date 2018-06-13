@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33286178"
 ---
 # <a name="ltlt-operator-c-reference"></a>&lt;&lt; Operator (odwołanie w C#)
 Operator przesunięcia w lewo (`<<`) zmiany jego pierwszym argumentem pozostawionego przez liczbę bitów określony przez jego drugi argument operacji. Typ drugiego argumentu operacji musi być [int](../../../csharp/language-reference/keywords/int.md) lub typu, który ma wstępnie zdefiniowanych niejawna konwersja liczbowa na `int`.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528534"
 ---
 # <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>Porady: wyświetlanie określonych dni pogrubioną czcionką za pomocą formantu MonthCalendar formularzy systemu Windows
 Formularze systemu Windows <xref:System.Windows.Forms.MonthCalendar> formant może wyświetlać dni pogrubioną czcionką jako pojedynczej daty lub na podstawie powtarzających się. Możesz zrobić to, aby zwrócić uwagę na wybranych dat, takich jak dni wolnych i w weekendy.  

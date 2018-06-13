@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216045"
 ---
 # <a name="global-c-reference"></a>global (odwołanie w C#)
 `global` Kontekstowe słowo kluczowe, gdy znajduje się przed [:: operator](../../../csharp/language-reference/operators/namespace-alias-qualifer.md), odwołuje się do globalnej przestrzeni nazw, która jest domyślny obszar nazw dla dowolnego programu C#, a w przeciwnym razie jest bez nazwy. Aby uzyskać więcej informacji, zobacz [porady: użycie globalnych aliasów Namespace](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).  

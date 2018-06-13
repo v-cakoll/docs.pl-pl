@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545821"
 ---
 # <a name="resources-wpf"></a>Zasoby (WPF)
 Zasób jest obiekt, który mogą być ponownie używane w różnych miejscach w aplikacji. WPF obsługuje różnych typów zasobów. Te zasoby są głównie dwa typy zasobów: XAML zasobów i plików danych zasobów. Przykładami zasobów XAML pędzle i style. Pliki danych zasobów są pliki inne niż wykonywalne danych, które wymaga aplikacji.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545892"
 ---
 # <a name="inline-styles-and-templates"></a>Style i szablony wbudowane
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] udostępnia <xref:System.Windows.Style> obiekty i szablonu (<xref:System.Windows.FrameworkTemplate> podklasy) jako sposób definiowania wygląd elementu w zasobach, dzięki czemu mogą być używane wiele razy. Z tego powodu atrybutów w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] typy, które wymagają <xref:System.Windows.Style> i <xref:System.Windows.FrameworkTemplate> prawie zawsze zasobów odwołuje się do istniejącego style i szablony, zamiast definiować nowych wbudowanego.  

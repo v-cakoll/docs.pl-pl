@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531108"
 ---
 # <a name="how-to-customize-data-formatting-in-the-windows-forms-datagridview-control"></a>Porady: dostosowywanie formatowania danych w formancie DataGridView formularzy systemu Windows
 Poniższy przykład kodu pokazuje, jak wdrożyć program obsługi <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> zdarzeń, który zmienia sposób wyświetlania komórek w zależności od ich kolumny i wartości.  

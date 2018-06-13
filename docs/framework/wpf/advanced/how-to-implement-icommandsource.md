@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547030"
 ---
 # <a name="how-to-implement-icommandsource"></a>Porady: implementowanie ICommandSource
 W tym przykładzie pokazano, jak utworzyć źródło polecenia zaimplementowanie <xref:System.Windows.Input.ICommandSource>.  Źródło polecenia jest obiekt, który umożliwia wywołanie polecenia.  <xref:System.Windows.Input.ICommandSource> Interfejsu udostępnia trzy elementy członkowskie: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, i <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A> to polecenie, które zostanie wywołany. <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> Jest typem danych zdefiniowane przez użytkownika, który jest przekazywany z źródło polecenia do metody, która obsługuje polecenie. <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> To polecenie jest wykonywana na obiekt.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545366"
 ---
 # <a name="how-to-add-class-handling-for-a-routed-event"></a>Jak dodać obsługę klasy dla zdarzenia trasowanego
 Kierowane zdarzenia mogą być obsługiwane przez programy obsługi klasy lub wystąpienia obsługi na dowolny węzeł w trasie. Klasy obsługi są wywoływane najpierw i implementacji klasy można pominąć zdarzenia z obsługi wystąpienia lub wprowadzenie innych zachowań określonych zdarzeń na zdarzenia, które należą do klasy podstawowej. W tym przykładzie przedstawiono dwie metody ściśle związanych wykonawczych obsługę klas.  

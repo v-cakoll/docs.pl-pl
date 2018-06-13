@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529870"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>Porady: tworzenie złożonego interfejsu użytkownika z formularzami systemu Windows przy użyciu narzędzia Projektant
 W poniższej procedurze utworzysz złożonego interfejsu użytkownika podobny do tego używanego w programie Microsoft Outlook z **folderu** listy **wiadomości** okienku i **wwersjizapoznawczej** okienka. To rozmieszczenie odbywa się głównie za pośrednictwem dokowanie formantów w formularzu.  

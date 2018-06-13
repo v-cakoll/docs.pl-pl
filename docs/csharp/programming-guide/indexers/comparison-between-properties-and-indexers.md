@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330375"
 ---
 # <a name="comparison-between-properties-and-indexers-c-programming-guide"></a>Porównanie właściwości i indeksatorów (Przewodnik programowania w języku C#)
 Indeksatory są podobne do właściwości. Z wyjątkiem różnice przedstawiono w poniższej tabeli wszystkie reguły, które są zdefiniowane dla metod dostępu do właściwości dotyczą akcesorów indeksatora również.  

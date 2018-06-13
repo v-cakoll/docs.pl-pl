@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539543"
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Porady: zapewnienie synchronizacji wiązania wielu kontrolek z jednym źródłem danych
 Często, podczas pracy z powiązanie danych w formularzach systemu Windows, wielu formantów powiązanych z tym samym źródle danych. W niektórych przypadkach może być konieczne wykonać dodatkowe czynności, aby upewnić się, czy powiązania właściwości formantów pozostają zsynchronizowane ze sobą i źródła danych. Te kroki są niezbędne w dwóch sytuacjach:  

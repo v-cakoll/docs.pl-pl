@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546331"
 ---
 # <a name="optimizing-wpf-application-performance"></a>Optymalizacja wydajności aplikacji WPF
 W tej sekcji służy jako punkt odniesienia dla [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] deweloperów, którzy szukasz sposobów, aby poprawić wydajność aplikacji. Jeśli jesteś deweloperem, który jest nowym składnikiem programu Microsoft .NET Framework i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], należy najpierw zapoznać się z obu platform. W tej sekcji wymaga praktycznej wiedzy obu i jest przeznaczony dla programistów, którzy już wiesz, aby pobrać swoich aplikacji działa.  

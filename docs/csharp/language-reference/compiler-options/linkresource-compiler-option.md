@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219183"
 ---
 # <a name="-linkresource-c-compiler-options"></a>-linkresource (opcje kompilatora C#)
 Tworzy łącze do zasobu .NET Framework w pliku wyjściowym. Plik zasobu nie została dodana do pliku wyjściowego. To różni się od [-zasobów](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) opcję, która osadzić pliku zasobów w pliku wyjściowym.  

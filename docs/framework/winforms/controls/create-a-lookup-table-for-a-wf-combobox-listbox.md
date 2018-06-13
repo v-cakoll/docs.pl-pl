@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529382"
 ---
 # <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Porady: tworzenie tabeli wyszukiwania dla formantów ComboBox, ListBox i CheckedListBox formularzy systemu Windows
 Czasami jest przydatne do wyświetlania danych w formacie przyjazną dla użytkownika na formularzu systemu Windows, ale przechowywania danych w formacie, który jest bardziej zrozumiałej do programu. Na przykład w formularzu zamówienia ds może być wyświetlany elementów menu według nazwy w polu listy. Jednak w tabeli danych rejestrowania kolejność może zawierać unikatowe numery identyfikacyjne reprezentujący żywności. W poniższej tabeli przedstawiono przykład sposobu przechowywania i wyświetlania danych formularza zamówienia ds.  

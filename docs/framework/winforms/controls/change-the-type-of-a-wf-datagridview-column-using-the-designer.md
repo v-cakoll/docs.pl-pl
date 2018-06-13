@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527018"
 ---
 # <a name="how-to-change-the-type-of-a-windows-forms-datagridview-column-using-the-designer"></a>Porady: zmienianie typu formantu DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant
 Czasami można zmienić typu kolumny, który został już dodany do formularzy systemu Windows <xref:System.Windows.Forms.DataGridView> formantu. Na przykład można zmodyfikować typy niektóre kolumny, które są generowane automatycznie, gdy powiązywanie formantu ze źródłem danych. Jest to przydatne, po kolumny zawierające kluczy obcych do wierszy w tabeli powiązanej tabeli, które można wyświetlić. W takim przypadku można zastąpić tekst kolumny pole zawierające te klucze obce z kolumnami pole kombi, zawierające bardziej zrozumiałej wartości z powiązanych tabel.  

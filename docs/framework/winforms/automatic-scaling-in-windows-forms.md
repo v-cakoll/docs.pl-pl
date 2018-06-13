@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529886"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Automatyczne skalowanie w formularzach systemu Windows
 Umożliwia skalowanie automatyczne formularza i jego formantów pozwala na jednej maszynie czcionką niektórych wyświetlania rozwiązania lub system, wyświetlane odpowiednio na inny komputer o czcionki różne rozwiązania lub systemu. Gwarantuje on, że formularz i jego formantów inteligentnie spowoduje zmianę rozmiaru, aby były spójne z macierzystego systemu windows i innych aplikacji na komputerach z innymi deweloperami i użytkownika. Obsługę [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] automatyczne skalowanie i style wizualne umożliwia [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] aplikacje do obsługi spójny wygląd i zachowanie w porównaniu do natywnych aplikacji systemu Windows na komputerze każdego użytkownika.

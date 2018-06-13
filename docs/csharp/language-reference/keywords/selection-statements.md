@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267371"
 ---
 # <a name="selection-statements-c-reference"></a>Instrukcje wyboru (odwołanie w C#)
 Instrukcja zaznaczenie powoduje, że formant programu do przeniesienia do określonego przepływu ustalane na podstawie tego, czy jest określony warunek `true` lub nie.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546686"
 ---
 # <a name="document-serialization-and-storage"></a>Serializacja dokumentu i przechowywanie
 Program Microsoft .NET Framework udostępnia zaawansowane środowisko umożliwiające tworzenie i wyświetlanie dokumentów wysokiej jakości.  Ulepszone funkcje, które obsługują dokumenty stałej i dokumenty przepływu, zaawansowane wyświetlania formantów, połączeniu z zaawansowanych 2W oraz możliwości grafiki 3D zająć aplikacji .NET Framework do nowego poziomu jakości i środowisko użytkownika.  Możliwość elastycznego zarządzania reprezentacji w pamięci dokumentu jest kluczowym elementem programu .NET Framework, a możliwość efektywnego zapisywanie i ładowanie dokumentów z magazynu danych jest potrzeby prawie każdej aplikacji.  Proces konwersji dokumentu z reprezentacji w pamięci wewnętrznej do magazynu danych zewnętrznych jest określane jako serializacji.  Procesu odczytu z magazynu danych i ponowne utworzenie oryginalnego wystąpienia w pamięci jest określane jako deserializacji.  

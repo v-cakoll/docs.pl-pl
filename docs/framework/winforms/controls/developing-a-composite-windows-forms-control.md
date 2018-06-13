@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528302"
 ---
 # <a name="developing-a-composite-windows-forms-control"></a>Opracowywanie złożonego formantu formularzy systemu Windows
 Można tworzyć złożone formantu formularzy systemu Windows, łącząc inne formanty formularzy systemu Windows. Formanty złożone, które pochodzą z <xref:System.Web.UI.UserControl> są nazywane kontrolki użytkownika. Klasa podstawowa <xref:System.Windows.Forms.UserControl>, zapewnia klawiatury routingu dla formantów podrzędnych, w związku z tym zapewnienie, że formantów podrzędnych może odebrać fokus. Na przykład kontrolki użytkownika zobacz <xref:System.Windows.Forms.UserControl> przykładowa w [porady: zastosowanie atrybutów w formantach formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  

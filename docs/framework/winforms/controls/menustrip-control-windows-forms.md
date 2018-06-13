@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540193"
 ---
 # <a name="menustrip-control-windows-forms"></a>MenuStrip — Formant (Formularze systemu Windows)
 Ta aplikacja grup kontroli polecenia i udostępnianie ich łatwo dostępne.  

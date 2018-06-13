@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539403"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Funkcjonalność przeciągania i upuszczania w formularzach systemu Windows
 Formularze systemu Windows zawiera zestaw metod, zdarzeń i klasy, które implementują zachowanie przeciągania i upuszczania. Ten temat zawiera omówienie obsługi przeciągania i upuszczania w formularzach systemu Windows.  Zobacz też [operacji przeciągania i upuszczania oraz Obsługa schowka](http://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).  

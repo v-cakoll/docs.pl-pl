@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530136"
 ---
 # <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>Porady: powiązanie formantu ComboBox lub ListBox (Formularze systemu Windows) z danymi
 Możesz powiązać <xref:System.Windows.Forms.ComboBox> i <xref:System.Windows.Forms.ListBox> z danymi w celu wykonania zadań, takich jak przeglądanie danych w bazie danych, wprowadzania nowych danych lub edycji istniejących danych.  

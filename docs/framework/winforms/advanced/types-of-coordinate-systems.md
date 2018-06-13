@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529756"
 ---
 # <a name="types-of-coordinate-systems"></a>Typy systemów współrzędnych
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] używa trzech przestrzeni współrzędnych: world, strony i urządzenia. Współrzędnych świata są współrzędne użyta do modelowania określonego world grafiki i współrzędne, które są przekazywane do metody w programie .NET Framework. Układ współrzędnych używany przez powierzchni rysowania, takich jak formularz lub formant można znaleźć współrzędnych strony. Współrzędne urządzenia są współrzędne używany przez urządzenie fizyczne sformułowane, takich jak ekranu lub arkusza. Podczas wywoływania `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, punkty, które są przekazywane do <xref:System.Drawing.Graphics.DrawLine%2A> metoda —`(0, 0)` i `(160, 80)`— znajdują się w przestrzeni współrzędnych świata. Przed [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] można narysować linię na ekranie, współrzędne przekazuj sekwencję transformacji. Jeden przekształcania, nazywany transformacji świata konwertuje współrzędnych świata współrzędnych strony i innym przekształcania, nazywany transformacja strony konwertuje współrzędne strony współrzędnych urządzenia.  

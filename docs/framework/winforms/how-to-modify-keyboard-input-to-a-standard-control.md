@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540293"
 ---
 # <a name="how-to-modify-keyboard-input-to-a-standard-control"></a>Porady: modyfikowanie sygnału z klawiatury do kontrolki standardowej
 Program Windows Forms zapewnia możliwość zużywają i modyfikowanie danych wprowadzonych z klawiatury. Korzystanie z klucza odwołuje się do obsługi klucza wewnątrz obsługi metody lub zdarzenia, dzięki czemu innych metod i zdarzeń dalsze dół kolejki wiadomości nie mają wartości klucza. Modyfikowanie klucza odwołuje się do modyfikowania wartości klucza, aby metody i obsługi zdarzeń dalsze dół kolejki wiadomości odbierać różne wartości klucza. W tym temacie przedstawiono sposób wykonywania tych zadań.  

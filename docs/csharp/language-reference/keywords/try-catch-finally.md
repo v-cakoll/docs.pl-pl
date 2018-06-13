@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265804"
 ---
 # <a name="try-catch-finally-c-reference"></a>try-catch-finally (odwołanie w C#)
 Użycie wspólnych `catch` i `finally` jednocześnie jest do użycia zasobów w `try` bloków, postępowania w przypadku wyjątkowych okolicznościach w `catch` zablokować, a także zwolnić zasoby w `finally` bloku.  

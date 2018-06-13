@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529405"
 ---
 # <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>Porady: uzyskiwanie dostępu do obiektów na liście rozwijanej DataGridViewComboBoxCell formularzy systemu Windows
 Podobnie jak <xref:System.Windows.Forms.ComboBox> kontroli, <xref:System.Windows.Forms.DataGridViewComboBoxColumn> i <xref:System.Windows.Forms.DataGridViewComboBoxCell> typy umożliwiają dodanie dowolne obiekty do listy rozwijanej. W przypadku tej funkcji może reprezentować złożonych stany na liście rozwijanej bez konieczności przechowywania odpowiednimi obiektami w oddzielnych kolekcji.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762211"
 ---
 # <a name="initialization-expressions"></a>Wyrażenia inicjowania
 Wyrażenia inicjowania inicjuje nowy obiekt. Większość wyrażenia inicjowania są obsługiwane, tym większości nowych 3.0 C# i Visual Basic 9.0 inicjowania wyrażeń. Następujące typy mogą zainicjowany i zwrócony przez LINQ do jednostek kwerendy:  

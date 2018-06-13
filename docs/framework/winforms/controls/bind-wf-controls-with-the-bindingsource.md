@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527566"
 ---
 # <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>Porady: powiązywanie kontrolek formularzy systemu Windows ze składnikiem BindingSource przy użyciu narzędzia Projektant
 Po dodaniu formantów do formularza i ustalić interfejsu użytkownika dla aplikacji, kontrolki można powiązać źródła danych tak, aby w czasie wykonywania, użytkownicy mogą zmieniać i zapisywać danych związanych z aplikacją.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528351"
 ---
 # <a name="vector-graphics-overview"></a>Przegląd grafiki wektorowej
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Rysuje linii, prostokątów i innych kształtów w układzie współrzędnych. Można wybrać spośród różnych systemów współrzędnych, ale domyślny układ współrzędnych ma źródła w lewym górnym rogu z wskazanie osi y skierowany w dół i prawej osi x. Jednostka miary w układzie współrzędnych domyślny jest piksela.  

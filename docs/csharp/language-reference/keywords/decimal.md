@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219339"
 ---
 # <a name="decimal-c-reference"></a>decimal (odwołanie w C#)
 `decimal` — Słowo kluczowe wskazuje typ danych 128-bitowego. W porównaniu do innych typów zmiennoprzecinkowych `decimal` typ ma więcej precision i mniejszy zakres, dzięki czemu odpowiedni do obliczeń finansowych i finansowe. Zakresie i dokładność `decimal` typu przedstawiono w poniższej tabeli.  

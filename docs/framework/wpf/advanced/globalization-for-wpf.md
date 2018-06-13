@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547953"
 ---
 # <a name="globalization-for-wpf"></a>Globalizacja dla WPF
 W tym temacie przedstawiono problemy, które należy zwrócić uwagę podczas zapisywania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji na rynek globalnego. Globalizacja programistyczny są zdefiniowane w [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] w `System.Globalization`.  

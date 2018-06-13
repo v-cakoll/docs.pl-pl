@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529980"
 ---
 # <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>Porady: tworzenie list wzorzec-szczegół za pomocą formantu DataGrid formularzy systemu Windows przy użyciu narzędzia Projektant
 > [!NOTE]

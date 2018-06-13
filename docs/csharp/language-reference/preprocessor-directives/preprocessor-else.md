@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269158"
 ---
 # <a name="else-c-reference"></a>#else (odwołanie w C#)
 `#else`umożliwia utworzenie złożonej dyrektywy warunkowej polegającej na tym, że jeśli żadne z wyrażeń we wcześniejszych dyrektywach [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) i (opcjonalnie) [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md) nie zwróci wartości `true`, kompilator wykona kod między dyrektywą`#else` a następującą po niej dyrektywą`#endif`.  

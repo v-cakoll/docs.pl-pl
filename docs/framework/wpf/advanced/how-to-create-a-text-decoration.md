@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545412"
 ---
 # <a name="how-to-create-a-text-decoration"></a>Jak utworzyć dekorację tekstu
 A <xref:System.Windows.TextDecoration> obiekt jest visual ornamentacji, można dodać do tekstu. Istnieją cztery typy dekoracji tekstu: podkreślenia, linii bazowej, przekreślenia i nadkreślenia. W poniższym przykładzie przedstawiono lokalizacje dekoracji tekstu względem tekstu.  

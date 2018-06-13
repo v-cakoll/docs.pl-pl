@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546100"
 ---
 # <a name="storing-ink"></a>Przechowywanie atramentu
 <xref:System.Windows.Ink.StrokeCollection.Save%2A> Metody zapewniają obsługę przechowywania odręcznego jako pismo odręczne serializacji formatu (ISF). Konstruktory <xref:System.Windows.Ink.StrokeCollection> klasy zapewniają obsługę do odczytywania danych odręczne.  

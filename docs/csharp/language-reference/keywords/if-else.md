@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218758"
 ---
 # <a name="if-else-c-reference"></a>if-else (odwołanie w C#)
 `if` Identyfikuje instrukcji, które instrukcji do uruchomienia na podstawie wartości z `Boolean` wyrażenia. W poniższym przykładzie `Boolean` zmiennej `result` ustawiono `true` , a następnie zaewidencjonowany `if` instrukcji. Dane wyjściowe `The condition is true`.  

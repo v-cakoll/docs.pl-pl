@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527764"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Porady: dziedziczenie formularzy korzystających z okna dialogowego selektora dziedziczenia
 Najprostszym sposobem dziedziczą formularza lub innego obiektu jest użycie **selektora dziedziczenia** okno dialogowe. Dzięki temu można korzystać z interfejsów kodu lub użytkownika (UI), zostały już utworzone w innych rozwiązań.  

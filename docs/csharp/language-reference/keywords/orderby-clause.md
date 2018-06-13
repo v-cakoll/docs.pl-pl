@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268058"
 ---
 # <a name="orderby-clause-c-reference"></a>Klauzula orderby (odwołanie w C#)
 W wyrażeniu zapytania `orderby` klauzuli powoduje, że zwrócony sekwencji lub podsekwencji (grupa) mają być sortowane w kolejności rosnącej lub malejącej. Można określić wiele kluczy w celu wykonywania operacji dodatkowej sortowania jeden lub więcej. Sortowanie jest wykonywane przez domyślna funkcja porównująca dla typu elementu. Domyślna kolejność sortowania jest rosnąca. Można również określić Niestandardowa funkcja porównująca. Jednak jest tylko dostępne przy użyciu składni oparte na metodzie. Aby uzyskać więcej informacji, zobacz [sortowanie danych](../../programming-guide/concepts/linq/sorting-data.md).  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526025"
 ---
 # <a name="button-control-overview-windows-forms"></a>Informacje o kontrolce przycisku (Formularze systemu Windows)
 Formularze systemu Windows <xref:System.Windows.Forms.Button> formant umożliwia użytkownikowi kliknij go, aby wykonać akcję. Po kliknięciu przycisku wygląda, jakby trwa spoczywa i wydane. Gdy użytkownik kliknie przycisk <xref:System.Windows.Forms.Control.Click> jest wywoływana procedura obsługi zdarzeń. Umieść kod w <xref:System.Windows.Forms.Control.Click> obsługi zdarzeń do wykonywania dowolnych akcji wybierzesz.  

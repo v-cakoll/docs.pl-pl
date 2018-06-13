@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217964"
 ---
 # <a name="accessibility-domain-c-reference"></a>Domena dostępności (odwołanie w C#)
 Domena dostępności elementu członkowskiego Określa, w sekcjach program, który może być przywoływany element członkowski. Jeśli element członkowski jest zagnieżdżony w ramach innego rodzaju, jej domena dostępności jest określany przez zarówno [poziom dostępności](../../../csharp/language-reference/keywords/accessibility-levels.md) członka i domena dostępności typu zawierającego natychmiast.  

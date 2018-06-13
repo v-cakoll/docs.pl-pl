@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216249"
 ---
 # <a name="const-c-reference"></a>const (odwołanie w C#)
 Możesz użyć `const` — słowo kluczowe, aby zadeklarować pole stałej lub stałej lokalnej. Pola stałych i zmiennych lokalnych nie są zmienne i nie może być modyfikowany. Stałe można liczb, wartości logiczna, ciągi lub odwołanie o wartości null. Nie należy tworzyć stała do reprezentowania informacji, który będzie można zmienić w dowolnym momencie. Na przykład nie używaj pola stałej do przechowywania ceny usługi, numer wersji produktu lub nazwę firmy. Te wartości mogą ulec zmianie, a ponieważ kompilatory propagowane stałe, innych kodu skompilowanego za pomocą bibliotek będzie musiał ponownie skompilowana, aby zobaczyć zmiany. Zobacz też [tylko do odczytu](../../../csharp/language-reference/keywords/readonly.md) — słowo kluczowe. Na przykład:  

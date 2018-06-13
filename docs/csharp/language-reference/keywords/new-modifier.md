@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273971"
 ---
 # <a name="new-modifier-c-reference"></a>new — Modyfikator (odwołanie w C#)
 Gdy jest używany jako modyfikatory deklaracji, `new` — słowo kluczowe jawnie ukrywa element członkowski, który jest dziedziczona z klasy podstawowej. Ukrycie dziedziczonego elementu członkowskiego pochodnymi wersjami element członkowski zastępuje wersji klasy podstawowej. Mimo że można ukryć składniki bez użycia `new` modyfikator, zostanie wyświetlone ostrzeżenie kompilatora. Jeśli używasz `new` Aby jawnie ukrywa element członkowski, powoduje pominięcie to ostrzeżenie.  

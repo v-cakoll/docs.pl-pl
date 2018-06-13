@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216941"
 ---
 # <a name="async-c-reference"></a>async (odwołanie w C#)
 Użyj `async` modyfikator, aby określić, że w metodzie [wyrażenia lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md), lub [metody anonimowej](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) jest asynchroniczne. Jeśli używasz modyfikator metody lub wyrażenie, jest ona określana jako *metody asynchronicznej*. W poniższym przykładzie zdefiniowano metody asynchronicznej o nazwie `ExampleMethodAsync`: 

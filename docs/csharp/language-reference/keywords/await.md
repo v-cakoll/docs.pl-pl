@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218923"
 ---
 # <a name="await-c-reference"></a>await (odwołanie w C#)
 `await` Operator jest stosowany do zadania w można wstawić punktu zawieszenia podczas wykonywania metody do momentu ukończenia zadania Oczekiwano metody asynchronicznej. Zadanie reprezentuje pracy w toku.  

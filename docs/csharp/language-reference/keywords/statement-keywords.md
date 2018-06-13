@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269664"
 ---
 # <a name="statement-keywords-c-reference"></a>Słowa kluczowe instrukcji (odwołanie w C#)
 Instrukcje są instrukcje programu. Z wyjątkiem sytuacji opisanej w tematach, do którego odwołuje się w poniższej tabeli instrukcje są wykonywane w sekwencji. W poniższej tabeli wymieniono słowa kluczowe instrukcji C#. Aby uzyskać więcej informacji na temat instrukcji, które nie są wyrażane z słowa kluczowego zobacz [instrukcje](../../../csharp/programming-guide/statements-expressions-operators/statements.md).  

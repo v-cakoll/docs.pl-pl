@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217487"
 ---
 # <a name="group-clause-c-reference"></a>group — Klauzula (odwołanie w C#)
 `group` Klauzula zwraca sekwencji <xref:System.Linq.IGrouping%602> obiektów zawierających zero lub więcej elementów, które odpowiadają wartości klucza dla grupy. Na przykład można grupować sekwencję ciągi zgodnie z pierwszej litery każdego ciągu. W takim przypadku pierwszą literę jest klucz i ma typ [char](../../../csharp/language-reference/keywords/char.md)i są przechowywane w `Key` właściwości każdego <xref:System.Linq.IGrouping%602> obiektu. Kompilator wnioskuje typ klucza.  

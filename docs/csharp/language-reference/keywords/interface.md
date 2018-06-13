@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266545"
 ---
 # <a name="interface-c-reference"></a>interface (odwołanie w C#)
 Interfejs zawiera tylko sygnatur [metody](../../../csharp/programming-guide/classes-and-structs/methods.md), [właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md), [zdarzenia](../../../csharp/programming-guide/events/index.md) lub [indeksatory](../../../csharp/programming-guide/indexers/index.md). Klasy lub struktury, która implementuje interfejs musi implementować członków interfejsu, które są określone w definicji interfejsu. W poniższym przykładzie klasa `ImplementationClass` musi implementować metodę o nazwie `SampleMethod` czy nie ma parametrów i zwraca `void`.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398173"
 ---
 # <a name="security-and-remoting-considerations"></a><span data-ttu-id="b7d03-102">Zagadnienia dotyczące zabezpieczeń internetowych i zdalnego dostępu</span><span class="sxs-lookup"><span data-stu-id="b7d03-102">Security and Remoting Considerations</span></span>
 <span data-ttu-id="b7d03-103">Usługi zdalne umożliwia konfigurowanie przezroczysty wywoływania między domenami aplikacji, procesy lub komputery.</span><span class="sxs-lookup"><span data-stu-id="b7d03-103">Remoting allows you to set up transparent calling between application domains, processes, or computers.</span></span> <span data-ttu-id="b7d03-104">Jednak przeszukiwania stosu zabezpieczeń dostępu kodu nie może przekraczać granice procesu lub maszyny (dotyczy ona między domenami aplikacji tego samego procesu).</span><span class="sxs-lookup"><span data-stu-id="b7d03-104">However, the code access security stack walk cannot cross process or machine boundaries (it does apply between application domains of the same process).</span></span>  

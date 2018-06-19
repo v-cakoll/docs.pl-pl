@@ -34,6 +34,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461916"
 ---
 # <a name="profiling-overview"></a><span data-ttu-id="4dd62-102">Omówienie profilowania</span><span class="sxs-lookup"><span data-stu-id="4dd62-102">Profiling Overview</span></span>
 <a name="top"></a> <span data-ttu-id="4dd62-103">Profiler to narzędzie, które monitoruje wykonywanie innej aplikacji.</span><span class="sxs-lookup"><span data-stu-id="4dd62-103">A profiler is a tool that monitors the execution of another application.</span></span> <span data-ttu-id="4dd62-104">Typowe profiler środowiska uruchomieniowego (języka wspólnego CLR) języka jest biblioteki dołączanej (dynamicznie DLL), która składa się z funkcji, które odbierać komunikaty z i wysyłać wiadomości do środowiska CLR za pomocą interfejsu API profilowania.</span><span class="sxs-lookup"><span data-stu-id="4dd62-104">A common language runtime (CLR) profiler is a dynamic link library (DLL) that consists of functions that receive messages from, and send messages to, the CLR by using the profiling API.</span></span> <span data-ttu-id="4dd62-105">Biblioteki DLL profilera jest ładowany przez środowisko CLR w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="4dd62-105">The profiler DLL is loaded by the CLR at run time.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326953"
 ---
 # <a name="equality-operations-c"></a><span data-ttu-id="dc17d-102">Operacje równości (C#)</span><span class="sxs-lookup"><span data-stu-id="dc17d-102">Equality Operations (C#)</span></span>
 <span data-ttu-id="dc17d-103">Dwie sekwencje, której odpowiednie elementy są takie same i które mają taką samą liczbę elementów są traktowane jako równe.</span><span class="sxs-lookup"><span data-stu-id="dc17d-103">Two sequences whose corresponding elements are equal and which have the same number of elements are considered equal.</span></span>  

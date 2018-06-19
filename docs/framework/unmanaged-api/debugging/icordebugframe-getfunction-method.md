@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414846"
 ---
 # <a name="icordebugframegetfunction-method"></a><span data-ttu-id="34f78-102">ICorDebugFrame::GetFunction — Metoda</span><span class="sxs-lookup"><span data-stu-id="34f78-102">ICorDebugFrame::GetFunction Method</span></span>
 <span data-ttu-id="34f78-103">Pobiera funkcję, która zawiera kod skojarzony z tą ramką stosu.</span><span class="sxs-lookup"><span data-stu-id="34f78-103">Gets the function that contains the code associated with this stack frame.</span></span>  

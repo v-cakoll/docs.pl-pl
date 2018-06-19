@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509663"
 ---
 # <a name="troubleshooting-service-application-won39t-install"></a><span data-ttu-id="95f38-102">Rozwiązywanie problemów: Usługa aplikacji kupione&#39;instalacji t</span><span class="sxs-lookup"><span data-stu-id="95f38-102">Troubleshooting: Service Application Won&#39;t Install</span></span>
 <span data-ttu-id="95f38-103">Jeśli aplikacja usługi nie zainstaluje się poprawnie, sprawdź, upewnij się, że <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> właściwość klasy usługi jest ustawiona na tę samą wartość, przedstawioną w Instalatorze dla tej usługi.</span><span class="sxs-lookup"><span data-stu-id="95f38-103">If your service application will not install correctly, check to make sure that the <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> property for the service class is set to the same value as is shown in the installer for that service.</span></span> <span data-ttu-id="95f38-104">Wartość musi być taka sama w obu przypadkach, aby poprawnie zainstalować usługi.</span><span class="sxs-lookup"><span data-stu-id="95f38-104">The value must be the same in both instances in order for your service to install correctly.</span></span>  

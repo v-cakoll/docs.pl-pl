@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363117"
 ---
 # <a name="manipulating-data"></a><span data-ttu-id="acf37-102">Manipulowania danymi</span><span class="sxs-lookup"><span data-stu-id="acf37-102">Manipulating Data</span></span>
 <span data-ttu-id="acf37-103">Przed wprowadzeniem z wielu aktywnych zestawów wyników (MARS) deweloperzy było użycie wielu połączeń lub kursory po stronie serwera do rozwiązania niektórych scenariuszy.</span><span class="sxs-lookup"><span data-stu-id="acf37-103">Before the introduction of Multiple Active Result Sets (MARS), developers had to use either multiple connections or server-side cursors to solve certain scenarios.</span></span> <span data-ttu-id="acf37-104">Gdy wiele połączeń były używane w sytuacji transakcyjnych, powiązany połączeń (z **sp_getbindtoken** i **procedury sp_bindsession**) były wymagane.</span><span class="sxs-lookup"><span data-stu-id="acf37-104">In addition, when multiple connections were used in a transactional situation, bound connections (with **sp_getbindtoken** and **sp_bindsession**) were required.</span></span> <span data-ttu-id="acf37-105">W następujących scenariuszach przedstawiono sposób użycia połączenia z włączoną obsługą MARS zamiast wielu połączeń.</span><span class="sxs-lookup"><span data-stu-id="acf37-105">The following scenarios show how to use a MARS-enabled connection instead of multiple connections.</span></span>  

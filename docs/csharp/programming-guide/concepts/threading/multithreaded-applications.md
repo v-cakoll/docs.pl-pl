@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336046"
 ---
 # <a name="multithreaded-applications-c"></a><span data-ttu-id="346d6-102">Aplikacje wielowątkowe (C#)</span><span class="sxs-lookup"><span data-stu-id="346d6-102">Multithreaded Applications (C#)</span></span>
 <span data-ttu-id="346d6-103">Języku C# mogą pisać aplikacje, służących do wykonywania wielu zadań jednocześnie.</span><span class="sxs-lookup"><span data-stu-id="346d6-103">With C#, you can write applications that perform multiple tasks at the same time.</span></span> <span data-ttu-id="346d6-104">Zadania związane z możliwości maksymalnie innych zadań można wykonywać w oddzielnych wątkach proces znany jako *wielowątkowość* lub *wolne wątkowość*.</span><span class="sxs-lookup"><span data-stu-id="346d6-104">Tasks with the potential of holding up other tasks can execute on separate threads, a process known as *multithreading* or *free threading*.</span></span>  

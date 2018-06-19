@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570467"
 ---
 # <a name="xpathnavigator-in-transformations"></a>Element XPathNavigator w przekształcenia
 <xref:System.Xml.XPath.XPathNavigator> Klasy zapewnia dostęp losowy tylko do odczytu do danych i jest przeznaczony do użytku jako dane wejściowe rozszerzalny język arkusza stylów dla przekształceń XSLT (). Jest wdrażana w <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument>, i <xref:System.Xml.XmlDocument>. <xref:System.Xml.XPath.XPathNavigator> Jest oparty na modelu danych w sieci World Wide Web konsorcjum W3C, zgodnie z opisem w sekcji 5 zalecenie XML Path Language (XPath).  

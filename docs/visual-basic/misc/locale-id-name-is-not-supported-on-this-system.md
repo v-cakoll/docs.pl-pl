@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636503"
 ---
 # <a name="locale-id-39ltnamegt39-is-not-supported-on-this-system"></a>Identyfikator ustawień regionalnych &#39; &lt;nazwa&gt; &#39; nie jest obsługiwany w tym systemie
 Próbujesz użyć `VbStrConv`, ale system nie obsługuje określonych ustawień regionalnych.  

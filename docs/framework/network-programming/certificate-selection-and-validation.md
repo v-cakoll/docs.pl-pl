@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396795"
 ---
 # <a name="certificate-selection-and-validation"></a><span data-ttu-id="ca876-102">Wybór certyfikatu i sprawdzania poprawności</span><span class="sxs-lookup"><span data-stu-id="ca876-102">Certificate Selection and Validation</span></span>
 <span data-ttu-id="ca876-103"><xref:System.Net> Klasy obsługuje kilka sposobów, aby wybrać i zweryfikować <xref:System.Security.Cryptography.X509Certificates> dla połączeń Secure Socket Layer (SSL).</span><span class="sxs-lookup"><span data-stu-id="ca876-103">The <xref:System.Net> classes support several ways to select and validate <xref:System.Security.Cryptography.X509Certificates> for Secure Socket Layer (SSL) connections.</span></span> <span data-ttu-id="ca876-104">Klient może wybrać co najmniej jednego certyfikatu do samodzielnego uwierzytelnienia do serwera.</span><span class="sxs-lookup"><span data-stu-id="ca876-104">A client can select one or more certificates to authenticate itself to a server.</span></span> <span data-ttu-id="ca876-105">Serwer może wymagać, aby certyfikat klienta ma jeden lub więcej atrybutów określonych dla uwierzytelniania.</span><span class="sxs-lookup"><span data-stu-id="ca876-105">A server can require that a client certificate have one or more specific attributes for authentication.</span></span>  

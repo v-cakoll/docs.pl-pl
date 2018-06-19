@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592473"
 ---
 # <a name="managed-threading-best-practices"></a><span data-ttu-id="fde86-102">Zarządzana wątkowość — najlepsze rozwiązania</span><span class="sxs-lookup"><span data-stu-id="fde86-102">Managed Threading Best Practices</span></span>
 <span data-ttu-id="fde86-103">Wielowątkowość wymaga zachować ostrożność podczas programowania.</span><span class="sxs-lookup"><span data-stu-id="fde86-103">Multithreading requires careful programming.</span></span> <span data-ttu-id="fde86-104">W przypadku większości zadań można zmniejszyć złożoność kolejkowania wiadomości żądania do wykonania przez wątków z puli wątków.</span><span class="sxs-lookup"><span data-stu-id="fde86-104">For most tasks, you can reduce complexity by queuing requests for execution by thread pool threads.</span></span> <span data-ttu-id="fde86-105">Ten temat dotyczy sytuacji trudniej, takich jak koordynowanie pracy wiele wątków, lub obsługa wątki tego bloku.</span><span class="sxs-lookup"><span data-stu-id="fde86-105">This topic addresses more difficult situations, such as coordinating the work of multiple threads, or handling threads that block.</span></span>  

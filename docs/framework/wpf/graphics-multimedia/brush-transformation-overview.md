@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557657"
 ---
 # <a name="brush-transformation-overview"></a><span data-ttu-id="b7107-102">Przegląd Przekształcanie pędzla</span><span class="sxs-lookup"><span data-stu-id="b7107-102">Brush Transformation Overview</span></span>
 <span data-ttu-id="b7107-103">Klasa pędzla oferuje dwie właściwości przekształcenia: <xref:System.Windows.Media.Brush.Transform%2A> i <xref:System.Windows.Media.Brush.RelativeTransform%2A>.</span><span class="sxs-lookup"><span data-stu-id="b7107-103">The Brush class provides two transformation properties: <xref:System.Windows.Media.Brush.Transform%2A> and <xref:System.Windows.Media.Brush.RelativeTransform%2A>.</span></span> <span data-ttu-id="b7107-104">Właściwości umożliwiają obracanie, skalowanie pochylanie i tłumaczenie zawartość pędzla.</span><span class="sxs-lookup"><span data-stu-id="b7107-104">The properties enable you to rotate, scale, skew, and translate a brush's contents.</span></span> <span data-ttu-id="b7107-105">W tym temacie opisano różnice między te dwie właściwości i przykłady ich użycia.</span><span class="sxs-lookup"><span data-stu-id="b7107-105">This topic describes the differences between these two properties and provides examples of their usage.</span></span>  

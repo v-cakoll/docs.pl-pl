@@ -72,6 +72,8 @@
 ## [Wymagania wstępne systemu macOS](core/macos-prerequisites.md)
 ## [Wymagania wstępne systemu Linux](core/linux-prerequisites.md)
 ## [Co nowego w programie .NET Core](core/whats-new/index.md)
+### [Co nowego w programie .NET Core 2.1](core/whats-new/dotnet-core-2-1.md)
+### [Co nowego w programie .NET Core 2.0](core/whats-new/dotnet-core-2-0.md)
 ## [Samouczki](core/tutorials/index.md)
 ### [Tworzenie kompletnego rozwiązania .NET Core w systemie Windows przy użyciu programu Visual Studio 2017](core/tutorials/using-on-windows-full-solution.md)
 ### [Wprowadzenie do zestawu .NET SDK w systemie macOS](core/tutorials/using-on-macos.md)
@@ -96,6 +98,7 @@
 ### [Wdrażanie aplikacji za pomocą narzędzi interfejsu wiersza polecenia](core/deploying/deploy-with-cli.md)
 ### [Wdrażanie aplikacji za pomocą programu Visual Studio](core/deploying/deploy-with-vs.md)
 ### [Tworzenie pakietu NuGet za pomocą narzędzi międzyplatformowych](core/deploying/creating-nuget-packages.md)
+### [Przenoszenie do przodu w czasie samodzielnego środowiska uruchomieniowego wdrożenia](core/deploying/runtime-patch-selection.md)
 ### [Magazyn pakietu środowiska uruchomieniowego](core/deploying/runtime-store.md)
 ## [Docker](core/docker/index.md)
 ### [Wprowadzenie do platform .NET i Docker](core/docker/intro-net-docker.md)
@@ -122,20 +125,23 @@
 ## [Omówienie zestawu .NET Core SDK](core/sdk.md)
 ## [Narzędzia interfejsu wiersza polecenia platformy .NET Core](core/tools/index.md)
 ### [Telemetria](core/tools/telemetry.md)
+### [Narzędzia globalne](core/tools/global-tools.md)
 ### [Model rozszerzalności](core/tools/extensibility.md)
 ### [Ciągła integracja](core/tools/using-ci-with-cli.md)
 ### [Szablony niestandardowe](core/tools/custom-templates.md)
 ### [dotnet](core/tools/dotnet.md)
 ### [dotnet build](core/tools/dotnet-build.md)
+### [dotnet build-server](core/tools/dotnet-build-server.md)
 ### [dotnet clean](core/tools/dotnet-clean.md)
 ### [dotnet help](core/tools/dotnet-help.md)
 ### [dotnet install-script](core/tools/dotnet-install-script.md)
 ### [dotnet migrate](core/tools/dotnet-migrate.md)
 ### [dotnet msbuild](core/tools/dotnet-msbuild.md)
 ### [dotnet new](core/tools/dotnet-new.md)
-### [dotnet nuget delete](core/tools/dotnet-nuget-delete.md)
-### [dotnet nuget locals](core/tools/dotnet-nuget-locals.md)
-### [dotnet nuget push](core/tools/dotnet-nuget-push.md)
+### dotnet nuget
+#### [dotnet nuget delete](core/tools/dotnet-nuget-delete.md)
+#### [dotnet nuget locals](core/tools/dotnet-nuget-locals.md)
+#### [dotnet nuget push](core/tools/dotnet-nuget-push.md)
 ### [dotnet pack](core/tools/dotnet-pack.md)
 ### [dotnet publish](core/tools/dotnet-publish.md)
 ### [dotnet restore](core/tools/dotnet-restore.md)
@@ -143,6 +149,11 @@
 ### [dotnet sln](core/tools/dotnet-sln.md)
 ### [dotnet store](core/tools/dotnet-store.md)
 ### [dotnet test](core/tools/dotnet-test.md)
+### dotnet tool
+#### [dotnet tool install](core/tools/dotnet-tool-install.md)
+#### [dotnet tool list](core/tools/dotnet-tool-list.md)
+#### [dotnet tool uninstall](core/tools/dotnet-tool-uninstall.md)
+#### [dotnet tool update](core/tools/dotnet-tool-update.md)
 ### [dotnet vstest](core/tools/dotnet-vstest.md)
 ### Polecenia modyfikacji projektu
 #### Odwołania
@@ -155,6 +166,7 @@
 ### [global.json](core/tools/global-json.md)
 ## [Narzędzia dodatkowe platformy .NET Core](core/additional-tools/index.md)
 ### [WCF Web Service Reference Provider](core/additional-tools/wcf-web-service-reference-guide.md)
+### [dotnet-svcutil](core/additional-tools/dotnet-svcutil-guide.md)
 ### [Generator serializatora XML](core/additional-tools/xml-serializer-generator.md)
 ## [Przenoszenie z programu .NET Framework](core/porting/index.md)
 ### [Organizowanie projektów dla platformy .NET Core](core/porting/project-structure.md)
@@ -215,10 +227,11 @@
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
 ## [Co nowego w języku C#](csharp/whats-new/index.md)
-### [Co nowego w języku C# 7.2](csharp/whats-new/csharp-7-2.md)
-### [Co nowego w języku C# 7.1](csharp/whats-new/csharp-7-1.md)
-### [Co nowego w języku C# 7.0](csharp/whats-new/csharp-7.md)
-### [Co nowego w języku C# 6](csharp/whats-new/csharp-6.md)
+### [C# 7.3](csharp/whats-new/csharp-7-3.md)
+### [C# 7.2](csharp/whats-new/csharp-7-2.md)
+### [C# 7.1](csharp/whats-new/csharp-7-1.md)
+### [C# 7.0](csharp/whats-new/csharp-7.md)
+### [C# 6](csharp/whats-new/csharp-6.md)
 ### [Historia wersji języka C#](csharp/whats-new/csharp-version-history.md)
 ### [Relacje między językiem a platformą](csharp/whats-new/relationships-between-language-and-library.md)
 <!-- End What's New -->
@@ -549,6 +562,7 @@
 ### [Przewodnik: wdrażanie dziedziczenia z obiektami COM](visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
 
 ## [Dokumentacja języka](visual-basic/language-reference/index.md)
+### [Konfigurowanie wersji języka](visual-basic/language-reference/configure-language-version.md)
 ### [Konwencje związane z typografią i kodami](visual-basic/language-reference/typographic-and-code-conventions.md)
 ### [Elementy członkowskie biblioteki środowiska uruchomieniowego Visual Basic](visual-basic/language-reference/runtime-library-members.md)
 ### [Słowa kluczowe](visual-basic/language-reference/keywords/index.md)
@@ -1117,11 +1131,12 @@
 <!-- ML.NET Content -->
 # [Przewodnik po strukturze ML.NET](machine-learning/index.md)
 ## [Samouczki](machine-learning/tutorials/index.md)
-### [Analiza tonacji (klasyfikacja)](machine-learning/tutorials/sentiment-analysis.md)
+### [Analiza tonacji (klasyfikacja binarna)](machine-learning/tutorials/sentiment-analysis.md)
 ### [Przewidywanie opłat za taksówki (regresja)](machine-learning/tutorials/taxi-fare.md)
 ## [Zasoby](machine-learning/resources/index.md)
 ### [Glosariusz uczenia maszynowego](machine-learning/resources/glossary.md)
 ### [Podstawy uczenia maszynowego](machine-learning/resources/basics.md)
+### [Zadania uczenia maszynowego](machine-learning/resources/tasks.md)
 
 <!-- End ML.NET Content -->
 

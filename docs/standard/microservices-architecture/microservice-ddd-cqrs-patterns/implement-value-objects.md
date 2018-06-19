@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579310"
 ---
 # <a name="implementing-value-objects"></a><span data-ttu-id="e2bcd-103">Implementowanie obiekty wartości</span><span class="sxs-lookup"><span data-stu-id="e2bcd-103">Implementing value objects</span></span>
 

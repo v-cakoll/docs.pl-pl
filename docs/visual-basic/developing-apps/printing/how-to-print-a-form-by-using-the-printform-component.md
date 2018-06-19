@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590016"
 ---
 # <a name="how-to-print-a-form-by-using-the-printform-component-visual-basic"></a><span data-ttu-id="326f5-102">Porady: drukowanie formularza za pomocą składnika PrintForm (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="326f5-102">How to: Print a Form by Using the PrintForm Component (Visual Basic)</span></span>
 <span data-ttu-id="326f5-103"><xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> Składnika pozwala na szybkie wydrukowanie obrazu formularza, dokładnie tak, jak wygląda na to, na ekranie bez użycia <xref:System.Drawing.Printing.PrintDocument> składnika.</span><span class="sxs-lookup"><span data-stu-id="326f5-103">The <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component enables you to quickly print an image of a form exactly as it appears on screen without using a <xref:System.Drawing.Printing.PrintDocument> component.</span></span> <span data-ttu-id="326f5-104">Poniższe procedury pokazują, jak drukowanie formularza na drukarce, okno podglądu wydruku i plik Encapsulated PostScript.</span><span class="sxs-lookup"><span data-stu-id="326f5-104">The following procedures show how to print a form to a printer, to a print preview window, and to an Encapsulated PostScript file.</span></span>  

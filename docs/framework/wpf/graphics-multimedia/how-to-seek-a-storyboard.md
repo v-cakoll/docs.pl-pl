@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560289"
 ---
 # <a name="how-to-seek-a-storyboard"></a><span data-ttu-id="65430-102">Jak wyszukiwać scenorys</span><span class="sxs-lookup"><span data-stu-id="65430-102">How to: Seek a Storyboard</span></span>
 <span data-ttu-id="65430-103">Poniższy przykład przedstawia użycie <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> metody <xref:System.Windows.Media.Animation.Storyboard> aby przejść do każdej pozycji w animacji scenorysu.</span><span class="sxs-lookup"><span data-stu-id="65430-103">The following example shows how to use the <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> method of a <xref:System.Windows.Media.Animation.Storyboard> to jump to any position in a storyboard animation.</span></span>  

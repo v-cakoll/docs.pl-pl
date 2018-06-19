@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560426"
 ---
 # <a name="how-to-define-a-rectangle-using-a-rectanglegeometry"></a><span data-ttu-id="d8c81-102">Jak definiować prostokąt przy użyciu RectangleGeometry</span><span class="sxs-lookup"><span data-stu-id="d8c81-102">How to: Define a Rectangle Using a RectangleGeometry</span></span>
 <span data-ttu-id="d8c81-103">W tym przykładzie przedstawiono sposób użycia <xref:System.Windows.Media.RectangleGeometry> klasy do opisywania prostokąta.</span><span class="sxs-lookup"><span data-stu-id="d8c81-103">This example describes how to use the <xref:System.Windows.Media.RectangleGeometry> class to describe a rectangle.</span></span>  

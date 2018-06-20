@@ -1,124 +1,118 @@
 ---
 title: for (odwołanie w C#)
-ms.date: 07/20/2015
+ms.date: 06/13/2018
 f1_keywords:
 - for
 - for_CSharpKeyword
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: 2c099411499c6ca8396c55955bdc634e48caf621
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: beac7727c8ce83d8ea20f0fc578f80ceef3053e7
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/18/2018
-ms.locfileid: "34306530"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208388"
 ---
-# <a name="for-c-reference"></a><span data-ttu-id="b4f50-102">Aby uzyskać (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="b4f50-102">for (C# reference)</span></span>
+# <a name="for-c-reference"></a><span data-ttu-id="8a713-102">Aby uzyskać (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="8a713-102">for (C# reference)</span></span>
 
-<span data-ttu-id="b4f50-103">Za pomocą `for` pętli, można wykonać instrukcji lub blok instrukcji wielokrotnie aż wynikiem obliczenia określonego wyrażenia jest `false`.</span><span class="sxs-lookup"><span data-stu-id="b4f50-103">By using a `for` loop, you can run a statement or a block of statements repeatedly until a specified expression evaluates to `false`.</span></span> <span data-ttu-id="b4f50-104">Tego rodzaju pętli jest przydatne do Iterowanie przez tablice za i inne aplikacje, w których znasz z wyprzedzeniem jak często mają iteracji pętli.</span><span class="sxs-lookup"><span data-stu-id="b4f50-104">This kind of loop is useful for iterating over arrays and for other applications in which you know in advance how many times you want the loop to iterate.</span></span>
-  
-## <a name="example"></a><span data-ttu-id="b4f50-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="b4f50-105">Example</span></span>
+<span data-ttu-id="8a713-103">`for` Instrukcji wykonuje instrukcję lub blok instrukcji, podczas określonego wyrażenia logicznego daje w wyniku `true`.</span><span class="sxs-lookup"><span data-stu-id="8a713-103">The `for` statement executes a statement or a block of statements while a specified boolean expression evaluates to `true`.</span></span>
 
-<span data-ttu-id="b4f50-106">W poniższym przykładzie wartość `i` jest wyświetlony w konsoli i zwiększana o 1 podczas każdej iteracji pętli:</span><span class="sxs-lookup"><span data-stu-id="b4f50-106">In the following example, the value of `i` is written to the console and incremented by 1 during each iteration of the loop:</span></span>
+<span data-ttu-id="8a713-104">W dowolnym punktu w `for` blok instrukcji, można przerwać poza pętli przy użyciu [podziału](break.md) instrukcji lub krok do następnej iteracji w pętli przy użyciu [kontynuować](continue.md) instrukcji.</span><span class="sxs-lookup"><span data-stu-id="8a713-104">At any point within the `for` statement block, you can break out of the loop by using the [break](break.md) statement, or step to the next iteration in the loop by using the [continue](continue.md) statement.</span></span> <span data-ttu-id="8a713-105">Możesz również zakończyć działanie `for` pętli przez [przejdź do](goto.md), [zwracać](return.md), lub [throw](throw.md) instrukcje.</span><span class="sxs-lookup"><span data-stu-id="8a713-105">You also can exit a `for` loop by the [goto](goto.md), [return](return.md), or [throw](throw.md) statements.</span></span>
   
-[!code-csharp[csrefKeywordsIteration#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_1.cs)]
-  
-<span data-ttu-id="b4f50-107">[Dla instrukcji](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement) w poprzednim przykładzie wykonuje następujące czynności:</span><span class="sxs-lookup"><span data-stu-id="b4f50-107">The [for statement](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement) in the previous example performs the following actions:</span></span>
-  
-1.  <span data-ttu-id="b4f50-108">Po pierwsze, początkowej wartości zmiennej `i` zostanie nawiązane.</span><span class="sxs-lookup"><span data-stu-id="b4f50-108">First, the initial value of variable `i` is established.</span></span> <span data-ttu-id="b4f50-109">Ten krok odbywa się tylko raz, niezależnie od tego, jak często powtórzeń pętli.</span><span class="sxs-lookup"><span data-stu-id="b4f50-109">This step happens only once, regardless of how many times the loop repeats.</span></span> <span data-ttu-id="b4f50-110">Inicjowanie ten można traktować jako w toku poza procesem pętli.</span><span class="sxs-lookup"><span data-stu-id="b4f50-110">You can think of this initialization as happening outside the looping process.</span></span>
-  
-2.  <span data-ttu-id="b4f50-111">Próba sprawdzenia warunku (`i <= 5`), wartość `i` jest porównywany z 5.</span><span class="sxs-lookup"><span data-stu-id="b4f50-111">To evaluate the condition (`i <= 5`), the value of `i` is compared to 5.</span></span>
-  
-    -   <span data-ttu-id="b4f50-112">Jeśli `i` nie może być większa niż 5, warunek jest `true`, i są wykonywane następujące akcje.</span><span class="sxs-lookup"><span data-stu-id="b4f50-112">If `i` is less than or equal to 5, the condition evaluates to `true`, and the following actions occur.</span></span>  
-  
-        1.  <span data-ttu-id="b4f50-113">`Console.WriteLine` Instrukcji w treści pętli Wyświetla wartość `i`.</span><span class="sxs-lookup"><span data-stu-id="b4f50-113">The `Console.WriteLine` statement in the body of the loop displays the value of `i`.</span></span>  
-  
-        2.  <span data-ttu-id="b4f50-114">Wartość `i` jest zwiększana o 1.</span><span class="sxs-lookup"><span data-stu-id="b4f50-114">The value of `i` is incremented by 1.</span></span>  
-  
-        3.  <span data-ttu-id="b4f50-115">Zwraca pętli do początku krok 2, aby ponownie sprawdzić warunku.</span><span class="sxs-lookup"><span data-stu-id="b4f50-115">The loop returns to the start of step 2 to evaluate the condition again.</span></span>  
-  
-    -   <span data-ttu-id="b4f50-116">Jeśli `i` jest większa niż 5, wyrażenie `false`, i zamknąć pętli.</span><span class="sxs-lookup"><span data-stu-id="b4f50-116">If `i` is greater than 5, the condition evaluates to `false`, and you exit the loop.</span></span>  
-  
-<span data-ttu-id="b4f50-117">Należy zauważyć, że jeśli początkowa wartość `i` jest większa niż 5, treści pętli nie Uruchom jeszcze raz.</span><span class="sxs-lookup"><span data-stu-id="b4f50-117">Note that, if the initial value of `i` is greater than 5, the body of the loop doesn't run even once.</span></span>
+## <a name="structure-of-the-for-statement"></a><span data-ttu-id="8a713-106">Struktura `for` — instrukcja</span><span class="sxs-lookup"><span data-stu-id="8a713-106">Structure of the `for` statement</span></span>
 
-## <a name="sections-of-a-for-statement"></a><span data-ttu-id="b4f50-118">Sekcje dla instrukcji</span><span class="sxs-lookup"><span data-stu-id="b4f50-118">Sections of a for statement</span></span>
+<span data-ttu-id="8a713-107">`for` Definiuje instrukcji *inicjatora*, *warunku*, i *iterator* sekcje:</span><span class="sxs-lookup"><span data-stu-id="8a713-107">The `for` statement defines *initializer*, *condition*, and *iterator* sections:</span></span>
   
-<span data-ttu-id="b4f50-119">Każdy [dla instrukcji](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement) definiuje *inicjatora*, *warunku*, i *iterator* sekcje.</span><span class="sxs-lookup"><span data-stu-id="b4f50-119">Every [for statement](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement) defines *initializer*, *condition*, and *iterator* sections.</span></span> <span data-ttu-id="b4f50-120">Następujące sekcje są zazwyczaj określić liczbę iteracji pętli.</span><span class="sxs-lookup"><span data-stu-id="b4f50-120">These sections usually determine how many times the loop iterates.</span></span>  
-  
-```csharp  
+```csharp
 for (initializer; condition; iterator)  
     body  
-```  
-  
-<span data-ttu-id="b4f50-121">Sekcje służą do następujących celów:</span><span class="sxs-lookup"><span data-stu-id="b4f50-121">The sections serve the following purposes:</span></span>
-  
--   <span data-ttu-id="b4f50-122">W sekcji inicjatora ustawia warunków początkowych.</span><span class="sxs-lookup"><span data-stu-id="b4f50-122">The initializer section sets the initial conditions.</span></span> <span data-ttu-id="b4f50-123">Instrukcje w tej sekcji uruchomić tylko raz, przed wprowadzeniem pętli.</span><span class="sxs-lookup"><span data-stu-id="b4f50-123">The statements in this section run only once, before you enter the loop.</span></span> <span data-ttu-id="b4f50-124">Sekcja może zawierać tylko jeden z poniższych dwóch opcji.</span><span class="sxs-lookup"><span data-stu-id="b4f50-124">The section can contain only one of the following two options.</span></span>  
-  
-    -   <span data-ttu-id="b4f50-125">Deklaracji i inicjowania zmiennej lokalnej, jak w pierwszym przykładzie (`int i = 1`).</span><span class="sxs-lookup"><span data-stu-id="b4f50-125">The declaration and initialization of a local loop variable, as the first example shows (`int i = 1`).</span></span> <span data-ttu-id="b4f50-126">Zmienna jest lokalny dla pętli i nie mogą być dostępne spoza pętli.</span><span class="sxs-lookup"><span data-stu-id="b4f50-126">The variable is local to the loop and can't be accessed from outside the loop.</span></span>  
-  
-    -   <span data-ttu-id="b4f50-127">Zero lub więcej expressons instrukcji z poniższej listy rozdzielonych przecinkami.</span><span class="sxs-lookup"><span data-stu-id="b4f50-127">Zero or more statement expressons from the following list, separated by commas.</span></span>  
-  
-        -   <span data-ttu-id="b4f50-128">[Przypisanie](../../../csharp/language-reference/operators/assignment-operator.md) — instrukcja</span><span class="sxs-lookup"><span data-stu-id="b4f50-128">[assignment](../../../csharp/language-reference/operators/assignment-operator.md) statement</span></span>  
-  
-        -   <span data-ttu-id="b4f50-129">Wywołanie metody</span><span class="sxs-lookup"><span data-stu-id="b4f50-129">invocation of a method</span></span>  
-  
-        -   <span data-ttu-id="b4f50-130">Prefiks lub przyrostka [przyrostu](../../../csharp/language-reference/operators/increment-operator.md) wyrażenia, takich jak `++i` lub `i++`</span><span class="sxs-lookup"><span data-stu-id="b4f50-130">prefix or postfix [increment](../../../csharp/language-reference/operators/increment-operator.md) expression, such as `++i` or `i++`</span></span>  
-  
-        -   <span data-ttu-id="b4f50-131">Prefiks lub przyrostka [dekrementacji](../../../csharp/language-reference/operators/decrement-operator.md) wyrażenia, takich jak `--i` lub `i--`</span><span class="sxs-lookup"><span data-stu-id="b4f50-131">prefix or postfix [decrement](../../../csharp/language-reference/operators/decrement-operator.md) expression, such as `--i` or `i--`</span></span>  
-  
-        -   <span data-ttu-id="b4f50-132">Tworzenie obiektu przy użyciu [nowych](../../../csharp/language-reference/keywords/new-operator.md)</span><span class="sxs-lookup"><span data-stu-id="b4f50-132">creation of an object by using [new](../../../csharp/language-reference/keywords/new-operator.md)</span></span>  
-  
-        -   <span data-ttu-id="b4f50-133">[await](../../../csharp/language-reference/keywords/await.md) wyrażenia</span><span class="sxs-lookup"><span data-stu-id="b4f50-133">[await](../../../csharp/language-reference/keywords/await.md) expression</span></span>  
-  
--   <span data-ttu-id="b4f50-134">Sekcja warunku zawiera wyrażenie logiczne, które jest obliczane czy pętli powinny być kończone, czy powinno być ono uruchomione ponownie.</span><span class="sxs-lookup"><span data-stu-id="b4f50-134">The condition section contains a boolean expression that’s evaluated to determine whether the loop should exit or should run again.</span></span>  
-  
--   <span data-ttu-id="b4f50-135">Sekcja iteratora definiuje, co się stanie po każdej iteracji pętli treści.</span><span class="sxs-lookup"><span data-stu-id="b4f50-135">The iterator section defines what happens after each iteration of the body of the loop.</span></span> <span data-ttu-id="b4f50-136">Sekcja iteratora zawiera zero lub więcej z następujących wyrażenia instrukcji, oddzielonych przecinkami:</span><span class="sxs-lookup"><span data-stu-id="b4f50-136">The iterator section contains zero or more of the following statement expressions, separated by commas:</span></span>  
-  
-    -   <span data-ttu-id="b4f50-137">[Przypisanie](../../../csharp/language-reference/operators/assignment-operator.md) — instrukcja</span><span class="sxs-lookup"><span data-stu-id="b4f50-137">[assignment](../../../csharp/language-reference/operators/assignment-operator.md) statement</span></span>  
-  
-    -   <span data-ttu-id="b4f50-138">Wywołanie metody</span><span class="sxs-lookup"><span data-stu-id="b4f50-138">invocation of a method</span></span>  
-  
-    -   <span data-ttu-id="b4f50-139">Prefiks lub przyrostka [przyrostu](../../../csharp/language-reference/operators/increment-operator.md) wyrażenia, takich jak `++i` lub `i++`</span><span class="sxs-lookup"><span data-stu-id="b4f50-139">prefix or postfix [increment](../../../csharp/language-reference/operators/increment-operator.md) expression, such as `++i` or `i++`</span></span>  
-  
-    -   <span data-ttu-id="b4f50-140">Prefiks lub przyrostka [dekrementacji](../../../csharp/language-reference/operators/decrement-operator.md) wyrażenia, takich jak `--i` lub `i--`</span><span class="sxs-lookup"><span data-stu-id="b4f50-140">prefix or postfix [decrement](../../../csharp/language-reference/operators/decrement-operator.md) expression, such as `--i` or `i--`</span></span>  
-  
-    -   <span data-ttu-id="b4f50-141">Tworzenie obiektu przy użyciu [nowych](../../../csharp/language-reference/keywords/new-operator.md)</span><span class="sxs-lookup"><span data-stu-id="b4f50-141">creation of an object by using [new](../../../csharp/language-reference/keywords/new-operator.md)</span></span>  
-  
-    -   <span data-ttu-id="b4f50-142">[await](../../../csharp/language-reference/keywords/await.md) wyrażenia</span><span class="sxs-lookup"><span data-stu-id="b4f50-142">[await](../../../csharp/language-reference/keywords/await.md) expression</span></span>  
-  
--   <span data-ttu-id="b4f50-143">Treści pętli zawiera instrukcję, pustą instrukcję lub blok instrukcji, tworzonych przez otaczającej instrukcji zero lub więcej w nawiasach klamrowych.</span><span class="sxs-lookup"><span data-stu-id="b4f50-143">The body of the loop consists of a statement, an empty statement, or a block of statements, which you create by enclosing zero or more statements in braces.</span></span>  
-  
-     <span data-ttu-id="b4f50-144">Mogą być dzielone z `for` pętli przy użyciu [podziału](../../../csharp/language-reference/keywords/break.md) — słowo kluczowe, lub można krok do następnej iteracji przy użyciu [kontynuować](../../../csharp/language-reference/keywords/continue.md) — słowo kluczowe.</span><span class="sxs-lookup"><span data-stu-id="b4f50-144">You can break out of a `for` loop by using the [break](../../../csharp/language-reference/keywords/break.md) keyword, or you can step to the next iteration by using the [continue](../../../csharp/language-reference/keywords/continue.md) keyword.</span></span> <span data-ttu-id="b4f50-145">Za pomocą może zostać wyjść żadnych pętli [goto](../../../csharp/language-reference/keywords/goto.md), [zwracać](../../../csharp/language-reference/keywords/return.md), lub [throw](../../../csharp/language-reference/keywords/throw.md) instrukcji.</span><span class="sxs-lookup"><span data-stu-id="b4f50-145">You also can exit any loop by using a [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md), or [throw](../../../csharp/language-reference/keywords/throw.md) statement.</span></span>  
-  
-<span data-ttu-id="b4f50-146">Pierwszym przykładzie w tym temacie przedstawiono najbardziej typowe rodzaj `for` pętli, co sprawia, że następujące możliwości sekcje:</span><span class="sxs-lookup"><span data-stu-id="b4f50-146">The first example in this topic shows the most typical kind of `for` loop, which makes the following choices for the sections:</span></span>
-  
--   <span data-ttu-id="b4f50-147">Inicjator deklaruje i inicjuje zmiennej lokalnej `i`, który przechowuje liczba powtórzeń pętli.</span><span class="sxs-lookup"><span data-stu-id="b4f50-147">The initializer declares and initializes a local loop variable, `i`, that maintains a count of the iterations of the loop.</span></span>  
-  
--   <span data-ttu-id="b4f50-148">Warunek sprawdza wartości zmiennej pętli względem żadnej znanej wartości końcowej 5.</span><span class="sxs-lookup"><span data-stu-id="b4f50-148">The condition checks the value of the loop variable against a known final value, 5.</span></span>  
-  
--   <span data-ttu-id="b4f50-149">Sekcja iteratora używa instrukcję operatory przyrostka inkrementacji `i++`, aby sprawdzać każdej iteracji pętli.</span><span class="sxs-lookup"><span data-stu-id="b4f50-149">The iterator section uses a postfix increment statement, `i++`, to tally each iteration of the loop.</span></span>
+```
 
-## <a name="more-examples"></a><span data-ttu-id="b4f50-150">Więcej przykładów</span><span class="sxs-lookup"><span data-stu-id="b4f50-150">More examples</span></span>
+<span data-ttu-id="8a713-108">Wszystkie trzy sekcje są opcjonalne.</span><span class="sxs-lookup"><span data-stu-id="8a713-108">All three sections are optional.</span></span> <span data-ttu-id="8a713-109">Treść pętli jest instrukcji lub bloku instrukcji.</span><span class="sxs-lookup"><span data-stu-id="8a713-109">The body of the loop is either a statement or a block of statements.</span></span>
+
+<span data-ttu-id="8a713-110">W poniższym przykładzie przedstawiono `for` instrukcji z wszystkich zdefiniowanych sekcji:</span><span class="sxs-lookup"><span data-stu-id="8a713-110">The following example shows the `for` statement with all of the sections defined:</span></span>
+
+[!code-csharp-interactive[for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#5)]
+
+### <a name="the-initializer-section"></a><span data-ttu-id="8a713-111">*Inicjatora* sekcji</span><span class="sxs-lookup"><span data-stu-id="8a713-111">The *initializer* section</span></span>
+
+<span data-ttu-id="8a713-112">Instrukcje w *inicjatora* sekcji są wykonywane tylko raz, przed wprowadzeniem pętli.</span><span class="sxs-lookup"><span data-stu-id="8a713-112">The statements in the *initializer* section are executed only once, before entering the loop.</span></span> <span data-ttu-id="8a713-113">*Inicjatora* sekcja jest jedną z następujących czynności:</span><span class="sxs-lookup"><span data-stu-id="8a713-113">The *initializer* section is either of the following:</span></span>
+
+- <span data-ttu-id="8a713-114">Deklaracji i inicjowania zmiennej lokalnej nie mogą być dostępne spoza pętli.</span><span class="sxs-lookup"><span data-stu-id="8a713-114">The declaration and initialization of a local loop variable, which can't be accessed from outside the loop.</span></span>
+
+- <span data-ttu-id="8a713-115">Zero lub więcej wyrażenia instrukcji z poniższej listy rozdzielonych przecinkami:</span><span class="sxs-lookup"><span data-stu-id="8a713-115">Zero or more statement expressions from the following list, separated by commas:</span></span>
+
+  - <span data-ttu-id="8a713-116">[Przypisanie](../operators/assignment-operator.md) — instrukcja</span><span class="sxs-lookup"><span data-stu-id="8a713-116">[assignment](../operators/assignment-operator.md) statement</span></span>
+
+  - <span data-ttu-id="8a713-117">Wywołanie metody</span><span class="sxs-lookup"><span data-stu-id="8a713-117">invocation of a method</span></span>  
+
+  - <span data-ttu-id="8a713-118">Prefiks lub przyrostka [przyrostu](../operators/increment-operator.md) wyrażenia, takich jak `++i` lub `i++`</span><span class="sxs-lookup"><span data-stu-id="8a713-118">prefix or postfix [increment](../operators/increment-operator.md) expression, such as `++i` or `i++`</span></span>  
+
+  - <span data-ttu-id="8a713-119">Prefiks lub przyrostka [dekrementacji](../operators/decrement-operator.md) wyrażenia, takich jak `--i` lub `i--`</span><span class="sxs-lookup"><span data-stu-id="8a713-119">prefix or postfix [decrement](../operators/decrement-operator.md) expression, such as `--i` or `i--`</span></span>  
+
+  - <span data-ttu-id="8a713-120">Tworzenie obiektu przy użyciu [nowe](new-operator.md) — słowo kluczowe</span><span class="sxs-lookup"><span data-stu-id="8a713-120">creation of an object by using [new](new-operator.md) keyword</span></span>
+
+  - <span data-ttu-id="8a713-121">[await](await.md) wyrażenia</span><span class="sxs-lookup"><span data-stu-id="8a713-121">[await](await.md) expression</span></span>
+
+<span data-ttu-id="8a713-122">*Inicjatora* sekcji w powyższym przykładzie deklaruje i inicjuje zmiennej lokalnej `i`:</span><span class="sxs-lookup"><span data-stu-id="8a713-122">The *initializer* section in the example above declares and initializes the local loop variable `i`:</span></span>
+
+```csharp
+int i = 0
+```
+
+### <a name="the-condition-section"></a><span data-ttu-id="8a713-123">*Warunku* sekcji</span><span class="sxs-lookup"><span data-stu-id="8a713-123">The *condition* section</span></span>
+
+<span data-ttu-id="8a713-124">*Warunku* sekcji, jeśli jest obecny, musi być wyrażenie logiczne.</span><span class="sxs-lookup"><span data-stu-id="8a713-124">The *condition* section, if present, must be a boolean expression.</span></span> <span data-ttu-id="8a713-125">Czy wyrażenie jest obliczane przed każdym iteracji pętli.</span><span class="sxs-lookup"><span data-stu-id="8a713-125">That expression is evaluated before every loop iteration.</span></span> <span data-ttu-id="8a713-126">Jeśli *warunku* sekcji nie istnieje lub wyrażenie warunkowe daje w wyniku `true`następnej iteracji pętli jest wykonywane; w przeciwnym razie, pętla zostanie zakończone.</span><span class="sxs-lookup"><span data-stu-id="8a713-126">If the *condition* section is not present or the boolean expression evaluates to `true`, the next loop iteration is executed; otherwise, the loop is exited.</span></span>
+
+<span data-ttu-id="8a713-127">*Warunku* sekcja w powyższym przykładzie określa, czy pętli kończy się na podstawie wartości zmiennej lokalnej:</span><span class="sxs-lookup"><span data-stu-id="8a713-127">The *condition* section in the example above determines if the loop terminates based on the value of the local loop variable:</span></span>
+
+```csharp
+i < 5
+```
+
+### <a name="the-iterator-section"></a><span data-ttu-id="8a713-128">*Iterator* sekcji</span><span class="sxs-lookup"><span data-stu-id="8a713-128">The *iterator* section</span></span>
+
+<span data-ttu-id="8a713-129">*Iterator* sekcja definiuje co się stanie po każdej iteracji pętli treści.</span><span class="sxs-lookup"><span data-stu-id="8a713-129">The *iterator* section defines what happens after each iteration of the body of the loop.</span></span> <span data-ttu-id="8a713-130">*Iterator* sekcja zawiera zero lub więcej z następujących wyrażenia instrukcji, oddzielonych przecinkami:</span><span class="sxs-lookup"><span data-stu-id="8a713-130">The *iterator* section contains zero or more of the following statement expressions, separated by commas:</span></span>  
+
+- <span data-ttu-id="8a713-131">[Przypisanie](../operators/assignment-operator.md) — instrukcja</span><span class="sxs-lookup"><span data-stu-id="8a713-131">[assignment](../operators/assignment-operator.md) statement</span></span>
+
+- <span data-ttu-id="8a713-132">Wywołanie metody</span><span class="sxs-lookup"><span data-stu-id="8a713-132">invocation of a method</span></span>  
+
+- <span data-ttu-id="8a713-133">Prefiks lub przyrostka [przyrostu](../operators/increment-operator.md) wyrażenia, takich jak `++i` lub `i++`</span><span class="sxs-lookup"><span data-stu-id="8a713-133">prefix or postfix [increment](../operators/increment-operator.md) expression, such as `++i` or `i++`</span></span>  
+
+- <span data-ttu-id="8a713-134">Prefiks lub przyrostka [dekrementacji](../operators/decrement-operator.md) wyrażenia, takich jak `--i` lub `i--`</span><span class="sxs-lookup"><span data-stu-id="8a713-134">prefix or postfix [decrement](../operators/decrement-operator.md) expression, such as `--i` or `i--`</span></span>  
+
+- <span data-ttu-id="8a713-135">Tworzenie obiektu przy użyciu [nowe](new-operator.md) — słowo kluczowe</span><span class="sxs-lookup"><span data-stu-id="8a713-135">creation of an object by using [new](new-operator.md) keyword</span></span>
+
+- <span data-ttu-id="8a713-136">[await](await.md) wyrażenia</span><span class="sxs-lookup"><span data-stu-id="8a713-136">[await](await.md) expression</span></span>
+
+<span data-ttu-id="8a713-137">*Iterator* sekcji w powyższym przykładzie zwiększa zmiennej lokalnej:</span><span class="sxs-lookup"><span data-stu-id="8a713-137">The *iterator* section in the example above increments the local loop variable:</span></span>
+
+```csharp
+i++
+```
+
+## <a name="examples"></a><span data-ttu-id="8a713-138">Przykłady</span><span class="sxs-lookup"><span data-stu-id="8a713-138">Examples</span></span>
+
+<span data-ttu-id="8a713-139">Poniższy przykład przedstawia kilka mniej typowe zastosowania `for` sekcje instrukcji: przypisywanie wartości do zmiennej pętli zewnętrznych w *inicjatora* sekcji wywołania metody w obu  *Inicjator* i *iterator* sekcje i zmianę wartości dwie zmienne *iterator* sekcji.</span><span class="sxs-lookup"><span data-stu-id="8a713-139">The following example illustrates several less common usages of the `for` statement sections: assigning a value to an external loop variable in the *initializer* section, invoking a method in both the *initializer* and the *iterator* sections, and changing the values of two variables in the *iterator* section.</span></span> <span data-ttu-id="8a713-140">Wybierz **Uruchom** do uruchomienia przykładu kodu.</span><span class="sxs-lookup"><span data-stu-id="8a713-140">Select **Run** to run the example code.</span></span> <span data-ttu-id="8a713-141">Następnie można zmodyfikować kod i uruchom go ponownie.</span><span class="sxs-lookup"><span data-stu-id="8a713-141">After that you can modify the code and run it again.</span></span>
   
-<span data-ttu-id="b4f50-151">Poniższy przykład przedstawia kilka mniej typowe opcje: przypisywanie wartości do zmiennej pętli zewnętrznych w sekcji inicjatora, wywoływania `Console.WriteLine` metody zarówno inicjator i sekcje iteratora oraz zmienianie wartości dwu zmienne w sekcji iteratora.</span><span class="sxs-lookup"><span data-stu-id="b4f50-151">The following example illustrates several less common choices: assigning a value to an external loop variable in the initializer section, invoking the `Console.WriteLine` method in both the initializer and the iterator sections, and changing the values of two variables in the iterator section.</span></span>
+[!code-csharp-interactive[not typical for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#6)]
   
-[!code-csharp[csrefKeywordsIteration#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_2.cs)]  
+<span data-ttu-id="8a713-142">W poniższym przykładzie zdefiniowano nieskończone `for` Pętla:</span><span class="sxs-lookup"><span data-stu-id="8a713-142">The following example defines the infinite `for` loop:</span></span>
   
-<span data-ttu-id="b4f50-152">Wszystkie wyrażenia, które definiują `for` instrukcji są opcjonalne.</span><span class="sxs-lookup"><span data-stu-id="b4f50-152">All of the expressions that define a `for` statement are optional.</span></span> <span data-ttu-id="b4f50-153">Na przykład następująca instrukcja tworzy Pętla nieskończona:</span><span class="sxs-lookup"><span data-stu-id="b4f50-153">For example, the following statement creates an infinite loop:</span></span>
+[!code-csharp[infinite for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#7)]
   
-[!code-csharp[csrefKeywordsIteration#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_3.cs)]  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="b4f50-154">specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="b4f50-154">C# language specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="8a713-143">specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="8a713-143">C# language specification</span></span>  
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
   
-## <a name="see-also"></a><span data-ttu-id="b4f50-155">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b4f50-155">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8a713-144">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="8a713-144">See also</span></span>
 
-[<span data-ttu-id="b4f50-156">For — instrukcja (specyfikacja języka C#)</span><span class="sxs-lookup"><span data-stu-id="b4f50-156">The for statement (C# language specification)</span></span>](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)  
-[<span data-ttu-id="b4f50-157">Odwołanie w C#</span><span class="sxs-lookup"><span data-stu-id="b4f50-157">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-[<span data-ttu-id="b4f50-158">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="b4f50-158">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-[<span data-ttu-id="b4f50-159">Słowa kluczowe języka C#</span><span class="sxs-lookup"><span data-stu-id="b4f50-159">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-[<span data-ttu-id="b4f50-160">foreach, in</span><span class="sxs-lookup"><span data-stu-id="b4f50-160">foreach, in</span></span>](../../../csharp/language-reference/keywords/foreach-in.md)  
-[<span data-ttu-id="b4f50-161">for, instrukcja (C++)</span><span class="sxs-lookup"><span data-stu-id="b4f50-161">for Statement (C++)</span></span>](/cpp/cpp/for-statement-cpp)  
-[<span data-ttu-id="b4f50-162">Instrukcje iteracji</span><span class="sxs-lookup"><span data-stu-id="b4f50-162">Iteration Statements</span></span>](../../../csharp/language-reference/keywords/iteration-statements.md)
+[<span data-ttu-id="8a713-145">For — instrukcja (specyfikacja języka C#)</span><span class="sxs-lookup"><span data-stu-id="8a713-145">The for statement (C# language specification)</span></span>](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)  
+[<span data-ttu-id="8a713-146">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="8a713-146">C# Reference</span></span>](../index.md)  
+[<span data-ttu-id="8a713-147">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="8a713-147">C# Programming Guide</span></span>](../../programming-guide/index.md)  
+[<span data-ttu-id="8a713-148">Słowa kluczowe języka C#</span><span class="sxs-lookup"><span data-stu-id="8a713-148">C# Keywords</span></span>](index.md)  
+[<span data-ttu-id="8a713-149">foreach, in</span><span class="sxs-lookup"><span data-stu-id="8a713-149">foreach, in</span></span>](foreach-in.md)  
+[<span data-ttu-id="8a713-150">for, instrukcja (C++)</span><span class="sxs-lookup"><span data-stu-id="8a713-150">for Statement (C++)</span></span>](/cpp/cpp/for-statement-cpp)  
+[<span data-ttu-id="8a713-151">Instrukcje iteracji</span><span class="sxs-lookup"><span data-stu-id="8a713-151">Iteration Statements</span></span>](iteration-statements.md)

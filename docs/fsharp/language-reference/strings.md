@@ -2,12 +2,12 @@
 title: Ciągi (F#)
 description: 'Dowiedz się, jak typ "string" języka F # reprezentuje niezmienne tekst sekwencję znaków Unicode.'
 ms.date: 05/16/2016
-ms.openlocfilehash: bdd1d1a542e70bcd95fce51e75d0c1ddffceb008
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 80c08f5b768dd826745e07b8c5726093050ab730
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564862"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207108"
 ---
 # <a name="strings"></a>Ciągi
 
@@ -17,7 +17,7 @@ Interfejs API łącza odwołań w tym artykule spowoduje przejście do MSDN.  Do
 `string` Typu reprezentuje niezmienne tekst sekwencję znaków Unicode. `string` alias jest `System.String` w programie .NET Framework.
 
 ## <a name="remarks"></a>Uwagi
-Literały ciągu są rozdzielone znakiem cudzysłowu ("). Znak ukośnika odwrotnego (\) jest używany do kodowania niektórych znaków specjalnych. Ukośniku odwrotnym i znakiem następnym razem są nazywane *sekwencja unikowa*. Sekwencje obsługiwane w F # ciąg, który w poniższej tabeli przedstawiono literały specjalne.
+Literały ciągu są rozdzielone znakiem cudzysłowu ("). Znak ukośnika odwrotnego ( \\ ) jest używany do kodowania niektórych znaków specjalnych. Ukośniku odwrotnym i znakiem następnym razem są nazywane *sekwencja unikowa*. Sekwencje obsługiwane w F # ciąg, który w poniższej tabeli przedstawiono literały specjalne.
 
 |Znak|Sekwencja specjalna|
 |---------|---------------|

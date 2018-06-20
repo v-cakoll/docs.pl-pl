@@ -1,33 +1,34 @@
 ---
 title: Mikrousług hostowanych w Docker - C#
 description: Dowiedz się, jak utworzyć asp.net podstawowe usługi, które są uruchamiane w kontenerach Docker
-ms.date: 02/03/2017
+ms.date: 06/08/2017
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: 7428051c1d9a29ba98ca1f28288b3c50ea36ae1a
-ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
+ms.openlocfilehash: b043b0109bcf8a67867d2c73a5ab22e43a4963cf
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208387"
 ---
 # <a name="microservices-hosted-in-docker"></a>Mikrousług hostowanych w Docker
 
 W tym samouczku opisano zadania niezbędne do tworzenia i wdrażania mikrousługi platformy ASP.NET Core w kontenerze Docker. W trakcie tego samouczka dowiesz się:
 
-* Sposób generowania aplikacji platformy ASP.NET Core za pomocą narzędzia Yeoman
-* Jak utworzyć środowisko deweloperskie Docker
+* Jak wygenerować aplikacji platformy ASP.NET Core.
+* Jak utworzyć środowisko deweloperskie Docker.
 * Jak utworzyć obraz Docker na podstawie istniejącego obrazu.
 * Jak wdrożyć usługę w kontenerze Docker.
 
 Na bieżąco zostanie wyświetlony również pewne funkcje języka C#:
 
 * Jak konwertować obiekty C# ładunek JSON.
-* Jak tworzyć obiekty niezmienne transferu danych
-* Jak do przetwarzania przychodzących żądań HTTP oraz do generowania odpowiedzi HTTP
-* Jak pracować z typów wartości null
+* Jak utworzyć obiekty niezmienne transferu danych.
+* Jak do przetwarzania przychodzących żądań HTTP oraz do generowania odpowiedzi HTTP.
+* Jak pracować z typów wartości null.
 
 Możesz [wyświetlić lub pobrać przykładową aplikację](https://github.com/dotnet/samples/tree/master/csharp/getting-started/WeatherMicroservice) dla tego tematu. Instrukcje pobrania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-### <a name="why-docker"></a>Dlaczego Docker?
+## <a name="why-docker"></a>Dlaczego Docker?
 
 Docker można łatwo tworzyć obrazy standardowe maszyny do hostowania usług w centrum danych lub w chmurze publicznej. Docker umożliwia konfigurowanie obrazu i replikować ją w razie potrzeby można skalować instalacji aplikacji.
 
@@ -35,72 +36,57 @@ Cały kod w tym samouczku będzie działać w dowolnym środowisku .NET Core.
 Dodatkowe zadania dotyczące instalacji Docker będzie działać dla aplikacji platformy ASP.NET Core. 
 
 ## <a name="prerequisites"></a>Wymagania wstępne
-Należy skonfigurować komputer, aby uruchomić oprogramowanie .NET core. Instrukcje instalacji można znaleźć na [.NET Core](https://www.microsoft.com/net/core) strony.
-Można uruchomić tej aplikacji, w systemie Windows, Ubuntu Linux, macOS lub w kontenerze Docker. Należy zainstalować w edytorze kodu dotyczącego elementów ulubionych. Opisy poniżej użyj [Visual Studio Code](https://code.visualstudio.com/) czyli typu open source cross platform edytora. Można jednak użyć dowolnego narzędzia potrafisz.
+
+Należy skonfigurować komputer, aby uruchomić oprogramowanie .NET Core. Instrukcje instalacji można znaleźć na [.NET Core](https://www.microsoft.com/net/core) strony.
+Można uruchomić tej aplikacji, w systemie Windows, Linux, macOS lub w kontenerze Docker.
+Należy zainstalować w edytorze kodu dotyczącego elementów ulubionych. Opisy poniżej użyj [Visual Studio Code](https://code.visualstudio.com/) czyli typu open source cross platform edytora. Można jednak użyć dowolnego narzędzia potrafisz.
 
 Należy również zainstalować aparatem platformy Docker. Zobacz [strona instalacji Docker](http://www.docker.com/products/docker) instrukcje dla danej platformy.
 Docker można zainstalować wiele dystrybucje systemu Linux, macOS lub systemu Windows. Strona powyżej zawiera sekcje do każdego z dostępnych instalacji.
 
-Większość składników musi zostać zainstalowana, są wykonywane przez Menedżera pakietów. Jeśli masz Menedżera pakietów w node.js `npm` zainstalowany, możesz pominąć ten krok. W przeciwnym razie zainstaluj najnowszą NodeJs z [nodejs.org](https://nodejs.org) której zostanie zainstalowany Menedżer pakietów npm. 
-
-Na tym etapie należy zainstalować wiele narzędzi wiersza polecenia, które obsługuje platformy ASP.NET core programowanie. Szablony wiersza polecenia, użyj narzędzia Yeoman, Grunt, Bower i Gulp. Jeśli masz je zainstalowane, które dobrze, w przeciwnym razie wpisz następujące polecenie w ulubionych powłoki:
-
-`npm install -g yo bower grunt-cli gulp`
-
-`-g` Opcja wskazuje, że jest on zainstalowany globalne, a te narzędzia są dostępne całym systemie. (Zakresy lokalnej instalacji pakietu do pojedynczego projektu). Po zainstalowaniu te podstawowe narzędzia, musisz zainstalować generatory szablonu platformy ASP.NET narzędzia yeoman:
-
-`npm install -g generator-aspnet`
-
 ## <a name="create-the-application"></a>Tworzenie aplikacji
 
-Teraz, po zainstalowaniu wszystkich narzędzi do tworzenia nowej aplikacji platformy ASP.NET Core. Aby użyć generatora wiersza polecenia, należy wykonać następujące polecenie narzędzia yeoman w ulubionych powłoki:
+Teraz, po zainstalowaniu wszystkich narzędzi do tworzenia nowej aplikacji platformy ASP.NET Core. Aby to zrobić, Utwórz nowy katalog o nazwie "WeatherMicroservice" i uruchom następujące polecenie, w tym katalogu w ulubionych powłoki:
 
-`yo aspnet`
+```console
+dotnet new web
+```
 
-To polecenie wyświetla monit o wybranie rodzaju aplikacji, w którym chcesz utworzyć. Dla tego mikrousługi mają aplikacji sieci web najprostszy, najbardziej lekkie możliwe, dlatego wybierz pustą aplikację sieci Web. Szablon wyświetli monit o podanie nazwy. Wybierz "WeatherMicroservice". 
+`dotnet` Polecenia są uruchamiane narzędzia niezbędne do tworzenia aplikacji .NET. Każdy zlecenie wykonuje inne polecenie.
 
-Szablon tworzy osiem plików:
+`dotnet new` Polecenie służy do tworzenia .net Core projektów.
 
-* .Gitignore dostosowany do aplikacji platformy ASP.NET Core.
+Dla tego mikrousługi chcemy aplikacji sieci web najprostszy, najbardziej lekkie to możliwe, więc użyliśmy "Core pustego szablonu platformy ASP.NET", określając jej nazwę krótką `web`.
+
+Szablon tworzy cztery pliki:
+
 * Pliku Startup.cs. Zawiera podstawę aplikacji.
 * Plik Program.cs. Zawiera punkt wejścia aplikacji.
 * Plik WeatherMicroservice.csproj. To jest plik kompilacji dla aplikacji.
-* Plik Dockerfile. Ten skrypt tworzy obraz Docker dla aplikacji.
-* A README.md. Zawiera linki do innych zasobów platformy ASP.NET Core.
-* Plik web.config. Zawiera podstawowe informacje o konfiguracji.
-* Plik runtimeconfig.template.json. Zawiera ustawienia debugowania używane przez IDEs.
+* Plik Properties/launchSettings.json. Zawiera ustawienia debugowania używane przez IDEs.
 
-Teraz możesz uruchomić aplikacji szablonu wygenerowany. Który ma odbywa się za pomocą szereg narzędzi wiersza polecenia. `dotnet` Polecenia są uruchamiane narzędzia niezbędne do tworzenia aplikacji .NET. Inne polecenie wykonuje każdego zlecenia
-
-Pierwszym krokiem jest, aby przywrócić wszystkie zależności:
-
-```console
-dotnet restore
-```
-
-Przywracania DotNet stosuje Menedżera pakietów NuGet w celu zainstalowania wymaganych pakietów do katalogu aplikacji. Generuje plik project.json.lock. Ten plik zawiera informacje dotyczące każdego pakietu, do którego istnieje odwołanie. Po przywróceniu wszystkie zależności, należy skompilować aplikację:
-
-```console
-dotnet build
-```
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
-
-I po utworzeniu aplikacji, należy uruchomić z wiersza polecenia:
+Teraz możesz uruchomić aplikacji szablonu wygenerowanego:
 
 ```console
 dotnet run
 ```
 
+To polecenie spowoduje przywrócenie najpierw zależności wymagane do tworzenia aplikacji i późniejszego kompilowania aplikacji.
+
 Domyślna konfiguracja nasłuchuje `http://localhost:5000`. Można otworzyć przeglądarkę i przejdź do strony i "Witaj świecie!" w temacie Komunikat.
+
+Gdy wszystko będzie gotowe, można zamknąć aplikacji, naciskając klawisz <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 ### <a name="anatomy-of-an-aspnet-core-application"></a>Anatomia aplikacji platformy ASP.NET Core
 
-Teraz gdy masz utworzoną aplikację, Przyjrzyjmy się implementowania tej funkcji. Istnieją dwa wygenerowanych plików, które są w tym momencie zastosowanie szczególnie: pliku project.json i pliku Startup.cs. 
+Teraz gdy masz utworzoną aplikację, Przyjrzyjmy się implementowania tej funkcji. Istnieją dwa wygenerowanych plików, które są w tym momencie zastosowanie szczególnie: WeatherMicroservice.csproj i Startup.cs. 
 
-Project.JSON zawiera informacje o projekcie. Dwa węzły, które często będzie współpracować są 'zależności' i 'struktury'. Węzeł zależności zawiera listę wszystkich pakietów, które są wymagane dla tej aplikacji.
-W tej chwili jest węzłem małych wymagające tylko pakiety, które uruchomić serwera sieci web.
+Pliku .csproj zawiera informacje o projekcie.
+Są dwa węzły, które są najbardziej interesujące `<TargetFramework>` i `<PackageReference>`.
 
-Węzeł 'struktury' Określa wersje i konfiguracje programu .NET framework, która może uruchomić tę aplikację.
+`<TargetFramework>` Węzeł określa wersję platformy .NET, która może uruchomić tę aplikację.
+
+Każdy `<PackageReference>` węzła jest używany do określenia pakietu, który jest wymagany dla tej aplikacji.
 
 Aplikacja jest zaimplementowana w pliku Startup.cs. Ten plik zawiera klasę uruchamiania.
 
@@ -120,11 +106,13 @@ Istnieje wiele zadań, które należy wykonać w celu wdrożenia naszej usługi 
 
 Kolejnych sekcjach prowadzą użytkownika przez każdy z tych kroków.
 
-### <a name="parsing-the-query-string"></a>Podczas analizowania ciągu zapytania.
+### <a name="parsing-the-query-string"></a>Podczas analizowania ciągu zapytania
 
 Zostaną analizując ciąg zapytania. Usługa będzie akceptować "lat" i "long" argumentów dla ciągu zapytania w tym formularzu:
 
-`http://localhost:5000/?lat=-35.55&long=-12.35`  
+```
+http://localhost:5000/?lat=-35.55&long=-12.35
+```
 
 Wszystkie zmiany, które należy podjąć są zdefiniowane jako argument wyrażenia lambda `app.Run` w klasie uruchamiania.
 
@@ -132,7 +120,7 @@ Argument na wyrażeniu lambda jest `HttpContext` dla żądania. Jedną z właśc
 
 [!code-csharp[ReadQueryString](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#ReadQueryString "read variables from the query string")]
 
-Słownik wartości zapytania są `StringValue` typu. Tego typu może zawierać kolekcji ciągów. Usługi pogodzie każda wartość jest pojedynczy ciąg. Dlatego jest wywołanie `FirstOrDefault()` w powyższym kodzie. 
+`Query` Słownika wartości są `StringValue` typu. Tego typu może zawierać kolekcji ciągów. Usługi pogodzie każda wartość jest pojedynczy ciąg. Dlatego jest wywołanie `FirstOrDefault()` w powyższym kodzie. 
 
 Następnie należy konwertować ciągi na symulacyjnych. Metoda służy do przekonwertowania ciągu na wartość typu double jest `double.TryParse()`:
 
@@ -148,9 +136,13 @@ Metody rozszerzenia są metody, które są zdefiniowane jako metody statyczne, a
 
 [!code-csharp[TryParseExtension](../../../samples/csharp/getting-started/WeatherMicroservice/Extensions.cs#TryParseExtension "try parse to a nullable")]
 
-`default(double?)` Wyrażenie zwraca wartość domyślną `double?` typu. Czy wartość domyślna to wartość null (lub nie).
+Przed wywołaniem metody rozszerzenia, należy zmienić bieżącej kultury invariant:
 
-Ta metoda rozszerzenia służy do konwertowania argumenty ciągu zapytania do typu double:
+[!code-csharp[SetCulture](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#SetCulture "set current culture to invariant")]
+
+Dzięki temu, że Twojej aplikacji po analizie numery takie same na każdym serwerze, niezależnie od jego domyślną kulturę.
+
+Teraz można użyć — metoda rozszerzenia Aby przekonwertować typu double argumenty ciągu zapytania:
 
 [!code-csharp[UseTryParse](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#UseTryParse "Use the try parse extension method")]
 
@@ -167,7 +159,7 @@ Następnym zadaniem jest losowe prognozie pogody kompilacji. Zacznijmy od konten
 ```csharp
 public class WeatherReport
 {
-    private static readonly string[] PossibleConditions = new string[]
+    private static readonly string[] PossibleConditions =
     {
         "Sunny",
         "Mostly Sunny",
@@ -177,26 +169,35 @@ public class WeatherReport
         "Rain"
     };
 
-    public int HiTemperature { get; }
-    public int LoTemperature { get; }
-    public int AverageWindSpeed { get; }
-    public string Conditions { get; }
+    public int HighTemperatureFahrenheit { get; }
+    public int LowTemperatureFahrenheit { get; }
+    public int AverageWindSpeedMph { get; }
+    public string Condition { get; }
 }
 ```
 
-Następnie utwórz konstruktora, który losowo ustawia te wartości. Ten konstruktor korzysta wartości szerokości i długości geograficznej jako zalążek generatora liczb losowych. Oznacza to, że prognozy dla tej samej lokalizacji jest taka sama. Jeśli zmienisz argumenty współrzędne geograficzne, otrzymasz różnych prognozy (ponieważ rozpoczyna różnych inicjatora.)
+Następnie utwórz konstruktora, który losowo ustawia te wartości. Ten konstruktor korzysta wartości dla współrzędne geograficzne do inicjatora `Random` generatora liczb. Oznacza to, że prognozy dla tej samej lokalizacji jest taka sama. Jeśli zmienisz argumenty współrzędne geograficzne, uzyskasz różnych prognozy (ponieważ rozpoczynać różnych inicjatora).
 
 [!code-csharp[WeatherReportConstructor](../../../samples/csharp/getting-started/WeatherMicroservice/WeatherReport.cs#WeatherReportConstructor "Weather Report Constructor")]
 
 Teraz można wygenerować prognozy 5 dni w metodę odpowiedzi:
 
-[!code-csharp[GenerateRandomReport](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#GenerateRandomReport "Generate a random weather report")]
-
-### <a name="build-the-json-response"></a>Tworzenie odpowiedź w formacie JSON.
-
-Zadanie kodu końcowego na serwerze jest konwertowanie tablicy WeatherReport pakietów JSON, a następnie Wyślij to do klienta. Zacznijmy od utworzenia pakietu JSON. Serializator JSON NewtonSoft zostanie dodana do listy zależności. Możesz zrobić tego za pomocą `dotnet` interfejsu wiersza polecenia:
-
+```csharp
+if (latitude.HasValue && longitude.HasValue)
+{
+    var forecast = new List<WeatherReport>();
+    for (var days = 1; days <= 5; days++)
+    {
+        forecast.Add(new WeatherReport(latitude.Value, longitude.Value, days));
+    }
+}
 ```
+
+### <a name="build-the-json-response"></a>Tworzenie odpowiedź w formacie JSON
+
+Zadanie kodu końcowego na serwerze jest konwersja `WeatherReport` listy w dokumencie JSON i wysyłania, która z powrotem do klienta. Zacznijmy od utworzenia dokumentu JSON. Serializator Newtonsoft JSON zostanie dodana do listy zależności. Możesz to zrobić przy użyciu następujących `dotnet` polecenia:
+
+```console
 dotnet add package Newtonsoft.Json
 ```
 
@@ -204,7 +205,7 @@ Następnie należy użyć `JsonConvert` klasa umożliwiająca zapisanie obiektu 
 
 [!code-csharp[ConvertToJson](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#ConvertToJSON "Convert objects to JSON")]
 
-Powyższy kod konwertuje obiekt prognozy (lista `WeatherForecast` obiekty) w pakiecie JSON. Po skonstruowaniu pakiet odpowiedzi, Ustaw typ zawartości `application/json`i zapisać ciąg.
+Powyższy kod konwertuje obiekt prognozy (lista `WeatherForecast` obiekty) w dokumencie JSON. Po skonstruowaniu dokumentu odpowiedzi, Ustaw typ zawartości `application/json`i zapisać ciąg.
 
 Teraz aplikacji działa i zwraca losowe prognoz.
 
@@ -218,49 +219,74 @@ A ***kontenera Docker*** reprezentuje działającego wystąpienia obrazu Docker.
 
 Analogicznie, można traktować *obrazu Docker* jako *klasy*i *kontenera Docker* jako obiekt lub wystąpienia tej klasy.  
 
-Plik Dockerfile utworzonej przez szablon ASP.NET będzie służyć do naszej celów. Przejdźmy za pośrednictwem jego zawartość.
-
-Pierwszy wiersz określa obrazu źródłowego:
+Następujący plik Dockerfile będzie służyć do naszej celów:
 
 ```
-FROM microsoft/dotnet:1.1-sdk-msbuild
+FROM microsoft/dotnet:2.1-sdk AS build
+WORKDIR /app
+
+# Copy csproj and restore as distinct layers
+COPY *.csproj ./
+RUN dotnet restore
+
+# Copy everything else and build
+COPY . ./
+RUN dotnet publish -c Release -o out
+
+# Build runtime image
+FROM microsoft/dotnet:2.1-aspnetcore-runtime
+WORKDIR /app
+COPY --from=build /app/out .
+ENTRYPOINT ["dotnet", "WeatherMicroservice.dll"]
+```
+
+Przejdźmy za pośrednictwem jego zawartość.
+
+Pierwszy wiersz określa obrazu źródłowego używaną do tworzenia aplikacji:
+
+```
+FROM microsoft/dotnet:2.1-sdk AS build
 ```
 
 Docker pozwala na skonfigurowanie obraz maszyny, na podstawie szablonu źródłowego. To oznacza, nie trzeba podać parametry maszyny, podczas uruchamiania, wystarczy podać wszelkie zmiany. Zmiany w tym miejscu należy dołączyć naszej aplikacji.
 
-W tym przykładzie pierwsze użyjemy `1.1-sdk-msbuild` wersja obrazu dotnet. Jest to najprostszy sposób tworzenia działającego środowiska Docker. Ten obraz to podstawowego środowiska wykonawczego platformy dotnet i dotnet zestawu SDK. Który ułatwia rozpoczęcie pracy i kompilacji, ale utworzyć większy obraz.
+W tym przykładzie użyjemy `2.1-sdk` wersji `dotnet` obrazu. Jest to najprostszy sposób tworzenia działającego środowiska Docker. Ten obraz zawiera środowisko uruchomieniowe .NET Core i Core SDK platformy .NET.
+Który ułatwia rozpoczęcie pracy i kompilacji, ale utworzyć większy obraz, dlatego użyjemy tego obrazu do tworzenia aplikacji i inny obraz go uruchomić.
 
-Następne pięć wierszy Instalatora i skompilować aplikację:
+Następne wiersze Instalatora i skompilować aplikację:
 
 ```
 WORKDIR /app
 
-# copy csproj and restore as distinct layers
+# Copy csproj and restore as distinct layers
+COPY *.csproj ./
+RUN dotnet restore
 
-COPY WeatherMicroService.csproj .
-RUN dotnet restore 
-
-# copy and build everything else
-
-COPY . .
-
-# RUN dotnet restore
+# Copy everything else and build
+COPY . ./
 RUN dotnet publish -c Release -o out
 ```
 
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+Spowoduje to skopiuj plik projektu z bieżącego katalogu do maszyny Wirtualnej platformy Docker i przywrócić wszystkie pakiety. Użycie dotnet interfejsu wiersza polecenia oznacza, że obraz Docker musi zawierać .NET Core SDK. Po wykonaniu tej pozostałej części aplikacji są kopiowane i `dotnet
+publish` polecenie tworzy i pakiety aplikacji.
 
-Spowoduje to skopiuj plik projektu z bieżącego katalogu do maszyny Wirtualnej platformy Docker i przywrócić wszystkie pakiety. Użycie dotnet interfejsu wiersza polecenia oznacza, że obraz Docker musi zawierać .NET Core SDK. Po wykonaniu tej pozostałej części aplikacji są kopiowane i dotnet publikowanie polecenie kompilacji i pakiety aplikacji.
-
-Aplikacja jest uruchamiana w ostatnim wierszu pliku:
+Na koniec utworzymy obraz Docker drugiej, który uruchomi aplikację:
 
 ```
-ENTRYPOINT ["dotnet", "out/WeatherMicroService.dll", "--server.urls", "http://0.0.0.0:5000"]
+# Build runtime image
+FROM microsoft/dotnet:2.1-aspnetcore-runtime
+WORKDIR /app
+COPY --from=build /app/out .
+ENTRYPOINT ["dotnet", "WeatherMicroservice.dll"]
 ```
 
-Odwołuje się tego skonfigurowanego portu `--server.urls` argument `dotnet` w ostatnim wierszu plik Dockerfile. `ENTRYPOINT` Polecenie informuje Docker, jakie polecenia i opcje wiersza polecenia Uruchom usługę. 
+Używa tego obrazu `2.1-aspnetcore-runtime` wersji `dotnet` obrazu, który zawiera wszystkie elementy niezbędne do uruchomienia aplikacji platformy ASP.NET Core, ale nie zawiera zestawu SDK .NET Core. Oznacza to, ten obraz nie może służyć do tworzenia aplikacji platformy .NET Core, ale zapewnia także finalnego obrazu mniejsze.
 
-## <a name="building-and-running-the-image-in-a-container"></a>Tworzenie i uruchamianie obrazu w kontenerze.
+Aby działało, możemy skopiować zbudowanych aplikacji z pierwszego obrazu do drugiej.
+
+`ENTRYPOINT` Polecenie informuje Docker, jakie polecenia uruchamia usługę.
+
+## <a name="building-and-running-the-image-in-a-container"></a>Tworzenie i uruchamianie obrazu w kontenerze
 
 Umożliwia tworzenie obrazu i uruchom usługę w kontenerze Docker. Nie ma wszystkich plików z katalogu lokalnego kopiowane do obrazu. Zamiast tego zostanie utworzenie aplikacji w kontenerze. Utworzysz `.dockerignore` plik, aby określić katalogi, które nie są kopiowane do obrazu. Nie ma żadnego zasoby kompilacji skopiowane. Określ kompilację i publikowanie katalogów w `.dockerignore` pliku:
 
@@ -281,10 +307,10 @@ To polecenie tworzy obraz kontenera, zgodnie z informacjami w Twojej plik Docker
 Uruchom następujące polecenie, aby uruchomić kontenera i uruchomić usługi:
 
 ```console
-docker run -d -p 80:5000 --name hello-docker weather-microservice
+docker run -d -p 80:80 --name hello-docker weather-microservice
 ```
 
-`-d` Opcja oznacza, że Uruchom kontenera odłączona od bieżącego terminala. Oznacza to, że dane wyjściowe polecenia nie będą widzieć w terminalu. `-p` Opcja wskazuje mapowanie portów między usługą i hosta. W tym miejscu mówi, że wszystkie żądania przychodzącego na porcie 80 powinny zostać przekazane port 5000 w kontenerze. Za pomocą 5000 odpowiada port, którego nasłuchuje usługi z określonego w powyższym plik Dockerfile argumenty wiersza polecenia. `--name` Argument nazwy użytkownika uruchomionych kontenera. Jest to nazwa wygodny, używanej do pracy z tego kontenera. 
+`-d` Opcja oznacza, że Uruchom kontenera odłączona od bieżącego terminala. Oznacza to, że dane wyjściowe polecenia nie będą widzieć w terminalu. `-p` Opcja wskazuje mapowanie portów między usługą i hosta. W tym miejscu mówi, że wszystkie żądania przychodzącego na porcie 80 powinny być przekazywane do portu 80 w kontenerze. Przy użyciu 80 odpowiada port, który nasłuchiwanie usługi, który jest domyślnym portem dla aplikacji produkcyjnych. `--name` Argument nazwy użytkownika uruchomionych kontenera. Jest to nazwa wygodny, używanej do pracy z tego kontenera.
 
 Możesz sprawdzić, czy obraz jest uruchomiony przez sprawdzenie, polecenie:
 
@@ -302,20 +328,20 @@ http://localhost/?lat=35.5&long=40.75
 
 ## <a name="attaching-to-a-running-container"></a>Dołączanie do uruchomionego kontenera
 
-Podczas korzystania z usługi w oknie polecenia mogliby zobaczyć informacje diagnostyczne drukowane dla każdego żądania. Gdy z kontenera działa w trybie odłączony nie widzisz tych informacji. Polecenie Dołącz Docker umożliwia dołączanie do uruchomionego kontenera tak, aby informacje dziennika.  W oknie polecenie Uruchom następujące polecenie:
+Po uruchomieniu usługi w oknie polecenia mogliby zobaczyć informacje diagnostyczne drukowane dla każdego żądania. Gdy z kontenera działa w trybie odłączony nie widzisz tych informacji. Polecenie Dołącz Docker umożliwia dołączanie do uruchomionego kontenera tak, aby informacje dziennika.  W oknie polecenie Uruchom następujące polecenie:
 
 ```console
 docker attach --sig-proxy=false hello-docker
 ```
 
-`--sig-proxy=false` Argumentu oznacza, że `Ctrl-C` poleceń nie wysyłana do procesu kontenera, ale raczej zatrzymać `docker attach` polecenia. Ostatni argument jest nazwa kontenera w `docker run` polecenia. 
+`--sig-proxy=false` Argumentu oznacza, że <kbd>Ctrl</kbd>+<kbd>C</kbd> poleceń nie wysyłana do procesu kontenera, ale raczej zatrzymać `docker attach` polecenia. Ostatni argument jest nazwa kontenera w `docker run` polecenia. 
 
 > [!NOTE]
 > Umożliwia także Docker przypisany identyfikator kontenera do odwoływania się do dowolnego kontenera. Jeśli nie określono nazwę Twojej kontenera w `docker run` musisz użyć identyfikatora kontenera.
 
 Otwórz przeglądarkę i przejdź do usługi. Zostanie wyświetlone komunikaty diagnostyczne w systemie windows polecenie z dołączonego uruchomionych kontenera.
 
-Naciśnij klawisz `Ctrl-C` można zatrzymać procesu dołączania.
+Naciśnij klawisz <kbd>Ctrl</kbd>+<kbd>C</kbd> można zatrzymać procesu dołączania.
 
 Po zakończeniu pracy z Twojej kontenera, można zatrzymać go:
 

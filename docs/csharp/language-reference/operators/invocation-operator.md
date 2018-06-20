@@ -8,12 +8,12 @@ helpviewer_keywords:
 - cast operator [C#]
 - () operator [C#]
 ms.assetid: 846e1f94-8a8c-42fc-a42c-fbd38e70d8cc
-ms.openlocfilehash: 2ded01ef3192e0f34d586cd63d93b894b5347e7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 82dfc2e11d6a8a025aa9b7557255a13b69ffa508
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275028"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208405"
 ---
 # <a name="-operator-c-reference"></a>() — Operator (odwołanie w C#)
 Oprócz określania kolejności operacji w wyrażeniach nawiasy są też używane do następujących zadań:  
@@ -31,9 +31,7 @@ Oprócz określania kolejności operacji w wyrażeniach nawiasy są też używan
   
  Operator `()` nie może być przeciążony.  
   
- Aby uzyskać więcej informacji, zobacz [rzutowanie i konwersje typów](../../../csharp/programming-guide/types/casting-and-type-conversions.md).  
-  
- Wyrażenie cast może prowadzić do niejednoznaczności składni. Na przykład wyrażenie `(x)–y` może być interpretowane jako wyrażenie cast (rzutowanie -y na typ x) lub jako wyrażenie addytywne połączone z wyrażeniem w nawiasie, które oblicza wartość x — y.  
+ Aby uzyskać więcej informacji, zobacz [Rzutowanie i konwersje typów](../../../csharp/programming-guide/types/casting-and-type-conversions.md).   
   
  Aby uzyskać więcej informacji na temat wywołania metody, zobacz [metody](../../../csharp/programming-guide/classes-and-structs/methods.md).  
   
@@ -41,6 +39,6 @@ Oprócz określania kolejności operacji w wyrażeniach nawiasy są też używan
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
+ [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Operatory języka C#](../../../csharp/language-reference/operators/index.md)

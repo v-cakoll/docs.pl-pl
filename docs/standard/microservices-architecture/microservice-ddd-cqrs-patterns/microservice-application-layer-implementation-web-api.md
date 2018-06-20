@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: 7c785814c4726dd805ad7b0dccb6a3584118cc65
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9572540f17e5628d7f71c94ee68f7cba17d64d07
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579759"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207641"
 ---
 # <a name="implementing-the-microservice-application-layer-using-the-web-api"></a>Implementowanie mikrousługi warstwy aplikacji przy użyciu interfejsu API sieci Web
 
@@ -667,7 +667,7 @@ public class CreateOrderCommandHandler
 
 To jest kod odpowiadająca poleceń z programy obsługi poleceń. Program obsługi ma prostą klasę, ale dziedziczy on z RequestHandler&lt;T&gt;, oraz MediatR jest wywoływana z poprawną ładunku.
 
-## <a name="applying-cross-cutting-concerns-when-processing-commands-with-the-behaviors-in-meadiatr"></a>Stosowanie kompleksowymi problemy podczas przetwarzania polecenia za pomocą zachowań w MeadiatR
+## <a name="applying-cross-cutting-concerns-when-processing-commands-with-the-behaviors-in-mediatr"></a>Stosowanie kompleksowymi problemy podczas przetwarzania polecenia za pomocą zachowań w MediatR
 
 Istnieje więcej rzecz: możliwość dotyczą problemów kompleksowymi mediatora potoku. Można również sprawdzić na końcu kodu modułu rejestracji Autofac jak rejestruje typ zachowania, w szczególności, niestandardowe klasy LoggingBehavior i klasa ValidatorBehavior. Ale można dodać inne niestandardowe działania zbyt.
 
@@ -828,12 +828,12 @@ W podobny sposób można zaimplementować innych zachowań dodatkowe aspekty lub
 ##### <a name="the-mediator-pattern"></a>Wzorzec mediatora
 
 -   **Wzorzec mediatora**
-    [*https://en.wikipedia.org/wiki/Mediator\_wzorca*](https://en.wikipedia.org/wiki/Mediator_pattern)
+    [*https://en.wikipedia.org/wiki/Mediator\_pattern*](https://en.wikipedia.org/wiki/Mediator_pattern)
 
 ##### <a name="the-decorator-pattern"></a>Wzorzec dekoratora
 
 -   **Wzorzec dekoratora**
-    [*https://en.wikipedia.org/wiki/Decorator\_wzorca*](https://en.wikipedia.org/wiki/Decorator_pattern)
+    [*https://en.wikipedia.org/wiki/Decorator\_pattern*](https://en.wikipedia.org/wiki/Decorator_pattern)
 
 ##### <a name="mediatr-jimmy-bogard"></a>MediatR (Jimmy Bogard)
 

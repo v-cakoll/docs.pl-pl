@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: 85a50d5425b8eec0166c839440f15e31500f3984
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a38727a638f7764c01db5da6506b705267b7bd6e
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365569"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207485"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>Wiązanie danych do kontrolek (usługi danych WCF)
 Z [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], można powiązać formanty, takie jak `ComboBox` i `ListView` formantów na wystąpienie <xref:System.Data.Services.Client.DataServiceCollection%601> klasy. Ta kolekcja, która dziedziczy od <xref:System.Collections.ObjectModel.ObservableCollection%601> klasy, zawiera dane z [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych. Ta klasa reprezentuje kolekcję danych dynamicznych, która zapewnia powiadomienia, gdy elementy uzyskać dodane lub usunięte. Jeśli używasz wystąpienia <xref:System.Data.Services.Client.DataServiceCollection%601> dla powiązania danych [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bibliotek klienta obsługi tych zdarzeń, aby upewnić się, że obiekty są śledzone przez <xref:System.Data.Services.Client.DataServiceContext> pozostają zsynchronizowane z danymi w elemencie powiązania interfejsu użytkownika.  
@@ -22,7 +22,7 @@ Z [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], można powiązać
  <xref:System.Data.Services.Client.DataServiceCollection%601> (Pośrednio) Klasa implementuje <xref:System.Collections.Specialized.INotifyCollectionChanged> interfejsu alertu kontekstu, jeśli obiekty są dodane lub usunięte z kolekcji. Obiekty typu usługi danych używana z <xref:System.Data.Services.Client.DataServiceCollection%601> musi implementować też <xref:System.ComponentModel.INotifyPropertyChanged> interfejsu z alertem <xref:System.Data.Services.Client.DataServiceCollection%601> Jeśli zmieniono właściwości obiektów w kolekcji powiązania.  
   
 > [!NOTE]
->  Jeśli używasz **Dodaj odwołanie do usługi** okna dialogowego lub[DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) narzędzia z `/dataservicecollection` opcji do generowania klasy usługi danych klienta, klasy danych wygenerowanych implementować <xref:System.ComponentModel.INotifyPropertyChanged> interfejsu. Aby uzyskać więcej informacji, zobacz [porady: ręcznie wygenerować klienta usługi klas danych](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md).  
+>  Jeśli używasz **Dodaj odwołanie do usługi** okna dialogowego lub [DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) narzędzia z `/dataservicecollection` opcji do generowania klasy usługi danych klienta, klasy danych wygenerowanych implementować <xref:System.ComponentModel.INotifyPropertyChanged> interfejsu. Aby uzyskać więcej informacji, zobacz [porady: ręcznie wygenerować klienta usługi klas danych](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md).  
   
 ## <a name="creating-the-binding-collection"></a>Trwa tworzenie kolekcji powiązania  
  Utwórz nowe wystąpienie klasy <xref:System.Data.Services.Client.DataServiceCollection%601> klasy przez wywoływanie jednej z metod konstruktora klasy z dostarczonego <xref:System.Data.Services.Client.DataServiceContext> wystąpienia i opcjonalnie <xref:System.Data.Services.Client.DataServiceQuery%601> lub LINQ zapytanie zwracające, po jego wykonaniu <xref:System.Collections.Generic.IEnumerable%601> wystąpienia. To <xref:System.Collections.Generic.IEnumerable%601> zapewnia źródłowej obiektów kolekcji powiązania, które są zmaterializowany z [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych. Aby uzyskać więcej informacji, zobacz [Materialization obiektu](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md). Domyślnie, zmiany wprowadzone w powiązanych obiektów i elementów wstawianych do kolekcji automatycznie są śledzone przez <xref:System.Data.Services.Client.DataServiceContext>. Jeśli musisz ręcznie śledzić zmiany, wywołaj jedną z metod konstruktora, która przyjmuje `trackingMode` parametru i określ wartość <xref:System.Data.Services.Client.TrackingMode.None>.  

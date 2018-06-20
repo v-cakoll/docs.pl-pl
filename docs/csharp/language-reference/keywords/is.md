@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: c01152d016a852c15ffa1d1c82c16d6795965f31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16d318c1c1a5d8e560b97d9e996f1165a4566c6a
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289220"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208386"
 ---
 # <a name="is-c-reference"></a>is (odwołanie w C#) #
 
@@ -75,7 +75,7 @@ Korzystając ze wzorcem typu do realizacji dopasowania do wzorca, `is` sprawdza,
 
 gdzie *wyrażenie* wyrażenie obliczane do wystąpienia typu niektórych *typu* jest nazwa typu, do którego wynik *wyrażenie* należy skonwertować i *nazwa_zmiennej* obiektu, do którego wynik *wyrażenie* przekonwertowaniu Jeśli `is` testu jest `true`. 
 
-`is` Wyrażenie jest `true` Jeśli jest spełniony jeden z następujących czynności:
+`is` Wyrażenie jest `true` Jeśli *wyrażenie* nie jest `null`, i jest spełniony jeden z następujących czynności:
 
 - *wyrażenie* jest wystąpienie tego samego typu co *typu*.
 
@@ -85,7 +85,7 @@ gdzie *wyrażenie* wyrażenie obliczane do wystąpienia typu niektórych *typu* 
 
 - *wyrażenie* jest wystąpieniem typu, który implementuje *typu* interfejsu.
 
-Jeśli *exp* jest `true` i `is` jest używany z `if` instrukcji, *nazwa_zmiennej* przypisano i ma zasięg lokalny w `if` tylko instrukcji.
+Jeśli *wyrażenie* jest `true` i `is` jest używany z `if` instrukcji, *nazwa_zmiennej* przypisano i ma zasięg lokalny w `if` tylko instrukcji.
 
 W poniższym przykładzie użyto `is` typu wzorzec do implementacji typu <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> metody.
 
@@ -148,7 +148,7 @@ Należy pamiętać, że jeśli *wyrażenie* jest `null`, `is` wyrażenie nadal m
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
+ [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
  [typeof](../../../csharp/language-reference/keywords/typeof.md)  
  [as](../../../csharp/language-reference/keywords/as.md)  

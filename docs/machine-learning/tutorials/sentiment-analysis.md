@@ -4,12 +4,12 @@ description: Dowiedzieć się, jak za pomocą ML.NET w scenariuszu klasyfikacji 
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e6c9ae0eb91fcb570209ce25d4a18a4dcd104724
-ms.sourcegitcommit: 5b0802832fb9ad684d34e69b8644a16a5b7c4810
+ms.openlocfilehash: 85fb55582d891c67f172effa4952f15ac5604d50
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "35017293"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207667"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Samouczek: Użyj ML.NET w przypadku klasyfikacji binarnej analizy wskaźniki nastrojów klientów
 
@@ -179,7 +179,7 @@ Inicjuje nowe wystąpienie klasy <xref:Microsoft.ML.LearningPipeline> zawierają
 
 [!code-csharp[LearningPipeline](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#5 "Create a learning pipeline")]
 
-<xref:Microsoft.ML.TextLoader%601> Obiektu jest pierwszą częścią potoku i ładuje dane szkoleniowe pliku.
+<xref:Microsoft.ML.Data.TextLoader> Obiektu jest pierwszą częścią potoku i ładuje dane szkoleniowe pliku.
 
 [!code-csharp[TextLoader](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#6 "Add a text loader to the pipeline")]
 
@@ -239,7 +239,7 @@ Dodaj wywołanie do nowej metody z `Main` metoda, bezpośrednio pod `Train` wywo
 
 [!code-csharp[CallEvaluate](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#12 "Call the Evaluate method")]
 
-<xref:Microsoft.ML.TextLoader%601> Klasy ładuje nowego zestawu danych testowych z tego samego schematu. Należy ocenić modelu przy użyciu tego zestawu danych w celu sprawdzenia jakości. Dodaj następujący kod do `Evaluate` metody:
+<xref:Microsoft.ML.Data.TextLoader> Klasy ładuje nowego zestawu danych testowych z tego samego schematu. Należy ocenić modelu przy użyciu tego zestawu danych w celu sprawdzenia jakości. Dodaj następujący kod do `Evaluate` metody:
 
 [!code-csharp[LoadText](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#13 "Load the test dataset")]
 

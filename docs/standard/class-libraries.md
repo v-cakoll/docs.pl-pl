@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: 7d2f81ef08892c994163d609a56008c1accadaa8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8026ac821dfeed03127c894a5768a4c91b13beb3
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570614"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207176"
 ---
 # <a name="net-class-libraries"></a>Biblioteki klas .NET
 
@@ -39,11 +39,11 @@ Konfiguracja platformy można wybrać podczas tworzenia biblioteki przenośnej. 
 
 Wielu deweloperów biblioteki przełączono z produkujących wiele bibliotek specyficzne dla platformy z jednego źródła (przy użyciu dyrektywy warunkowej kompilacji) do bibliotek przenośnych. Istnieją [kilka metod](https://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html) do uzyskiwania dostępu do funkcji specyficzne dla platformy w przenośnych bibliotekach z [przynęta przełącznika](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/) najbardziej akceptowanego technika w tym momencie.
 
-### <a name="net-standard-class-libraries"></a>Biblioteki standardowe klas .NET
+## <a name="net-standard-class-libraries"></a>Biblioteki klas .NET standard
 
 Biblioteki .NET standard to zastąpienie pojęcia biblioteki specyficzne dla platformy i przenośnych. Są one specyficzne dla platformy w tym sensie, że udostępniają wszystkie funkcje z podstawowej platformy (nie syntetycznych platformy lub przecięcia platformy). Są one przenośne w tym sensie, że działają na wszystkich platformach pomocniczych.
 
-.NET Standard udostępnia zestaw biblioteki _kontrakty_. Implementacje .NET musi obsługiwać każdej umowy w całości lub w ogóle. Każda implementacja, w związku z tym obsługuje zestaw kontraktów .NET Standard. Jest następstwem czy każdego .NET Standard biblioteki klas jest obsługiwana na platformach, które obsługują tę jego zależności kontraktu.
+.NET Standard udostępnia zestaw biblioteki _kontrakty_. Implementacje .NET musi obsługiwać każdej umowy w całości lub w ogóle. Każda implementacja, w związku z tym obsługuje zestaw kontraktów .NET Standard. Następstwem jest, że każdy .NET Standard biblioteki klas jest obsługiwany na platformach, które obsługują zależnościami kontraktu.
 
 .NET Standard nie ujawnia funkcji całego programu .NET Framework (nie jest to, że cel), jednak udostępniają wiele API więcej niż przenośnej biblioteki klas. Interfejsy API więcej zostanie dodany wraz z upływem czasu.
 
@@ -60,6 +60,6 @@ Następujące platformy obsługuje bibliotek .NET Standard:
 
 Aby uzyskać więcej informacji, zobacz [.NET Standard](net-standard.md) tematu.
 
-### <a name="mono-class-libraries"></a>Biblioteki klas mono
+## <a name="mono-class-libraries"></a>Biblioteki klas mono
 
 Biblioteki klas są obsługiwane w Mono, w tym trzy rodzaje bibliotek opisane powyżej. Mono często zaobserwowano (poprawnie) jako implementację i platform, programu Microsoft .NET Framework. W części działo się tak dlatego specyficzne dla platformy .NET Framework biblioteki można uruchomić na Mono środowiska uruchomieniowego bez modyfikacji lub ponownej kompilacji. Ta cecha był zainstalowany przed tworzeniem bibliotek klas przenośnych została tak oczywiste wyboru umożliwiające binarne przenoszenia między .NET Framework i Mono (mimo że tylko działał w jednym kierunku).

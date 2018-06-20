@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 62aacdafb5c257a8824bc8c8241ead7a274c2e2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f6500fa5f8f5022c4e910da894f182dcc5525be5
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333274"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207383"
 ---
 # <a name="c-programming-guide"></a>Podręcznik programowania C#
 Ta sekcja zawiera szczegółowe informacje o kluczowych funkcjach języka C# oraz o funkcjach tego języka dostępnych przez platformę .NET Framework.  
   
- W większej części tej sekcji przyjęto założenie, że masz już pewną wiedzę na temat języka C# i ogólnie na temat programowania. Dla początkujących w dziedzinie programowania lub języka C# polecamy interaktywny samouczek [Wprowadzenie do języka C#](https://www.microsoft.com/net/tutorials/csharp/getting-started), w którym nie jest wymagana żadna wiedza na temat programowania.   
+ W większej części tej sekcji przyjęto założenie, że masz już pewną wiedzę na temat języka C# i ogólnie na temat programowania. Jeśli pełne początkujących programowania lub w języku C#, warto odwiedź [C# — przewodniki szybkiego startu](../quick-starts/index.md) lub [wprowadzenie do języka C#](https://www.microsoft.com/net/tutorials/csharp/getting-started) interaktywny samouczek, w których jest wymagane nie znajomość programowania.  
   
  Aby uzyskać informacje dotyczące określonych słów kluczowych, operatorów i dyrektyw preprocesora, zobacz sekcję [Dokumentacja języka C#](../../csharp/language-reference/index.md). Informacje o specyfikacji języka C# można znaleźć w temacie [Specyfikacja języka C#](../../csharp/language-reference/language-specification/index.md).  
   

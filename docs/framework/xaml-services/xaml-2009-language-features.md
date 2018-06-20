@@ -5,15 +5,15 @@ helpviewer_keywords:
 - XAML 2009 [XAML Services]
 - XAML [XAML Services], XAML 2009
 ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
-ms.openlocfilehash: 5014891b4edfa062f16d2c4b97c4d162d014fcd4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed0f638975c232638de4a46db5db82bb1e85668c
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563561"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207472"
 ---
 # <a name="xaml-2009-language-features"></a>XAML 2009— Funkcje językowe
-XAML 2009 jest skrócona termin nowe funkcje języka XAML, które rozszerzyć istniejącą specyfikacja języka XAML. XAML 2009 wprowadzono kilka nowych dyrektywy oraz elementów składowych. Obejmują one[x: Arguments — dyrektywa](../../../docs/framework/xaml-services/x-arguments-directive.md); [x: factorymethod — dyrektywa](../../../docs/framework/xaml-services/x-factorymethod-directive.md); [x: Reference — rozszerzenie znaczników](../../../docs/framework/xaml-services/x-reference-markup-extension.md); [x: typearguments — dyrektywa ](../../../docs/framework/xaml-services/x-typearguments-directive.md); i typy wbudowane dla wspólnych elementów podstawowych języka (na przykład `x:Char`).  
+XAML 2009 jest skrócona termin nowe funkcje języka XAML, które rozszerzyć istniejącą specyfikacja języka XAML. XAML 2009 wprowadzono kilka nowych dyrektywy oraz elementów składowych. Obejmują one [x: Arguments — dyrektywa](../../../docs/framework/xaml-services/x-arguments-directive.md); [x: factorymethod — dyrektywa](../../../docs/framework/xaml-services/x-factorymethod-directive.md); [x: Reference — rozszerzenie znaczników](../../../docs/framework/xaml-services/x-reference-markup-extension.md); [x: typearguments — dyrektywa ](../../../docs/framework/xaml-services/x-typearguments-directive.md); i typy wbudowane dla wspólnych elementów podstawowych języka (na przykład `x:Char`).  
   
 <a name="xaml_2009_support_in_wpf_and_visual_studio"></a>   
 ## <a name="xaml-2009-support-in-wpf-and-visual-studio"></a>Obsługa 2009 XAML w WPF i programu Visual Studio  

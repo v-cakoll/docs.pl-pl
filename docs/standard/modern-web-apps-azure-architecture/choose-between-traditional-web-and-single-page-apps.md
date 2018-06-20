@@ -4,12 +4,12 @@ description: Architektów nowoczesnych aplikacji sieci web platformy ASP.NET Cor
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
-ms.openlocfilehash: 834c71b92cb1bfd19bdc7fec8a19d3b2a87b74bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8c6a3b6c9c934cd44eb4fa402c8d792006ac560
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582902"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208511"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Wybierz między aplikacjami sieci Web tradycyjnych i aplikacje jednej strony (źródła)
 
@@ -71,10 +71,10 @@ Należy zauważyć, że często źródła implementuje funkcje, które są wbudo
 Zapisywanie źródła wymaga znajomości języka JavaScript i/lub TypeScript i technik programowania po stronie klienta i bibliotek. Zespół powinien być właściwe w pisaniu nowoczesnych JavaScript przy użyciu platformy SPA jak kątową.
 
 > ### <a name="references--spa-frameworks"></a>Odwołania — SPA struktur
-> - **AngularJS**  
-> <https://angularjs.org/>
-> - **Porównanie 4 JavaScript popularnych struktur**  
-> <https://www.developereconomics.com/feature-comparison-of-4-popular-js-mv-frameworks>
+> - **dyrektywy angular**  
+> <https://angular.io>
+> - **Porównywanie struktur JavaScript**  
+> <https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/>
 
 **Aplikacja już musi ujawniać interfejsu API dla innych klientów (wewnętrzny lub publiczny)**
 

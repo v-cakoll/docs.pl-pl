@@ -4,12 +4,12 @@ description: Poznaj inną maszynę uczenia zadań obsługiwanych w ML.NET.
 ms.date: 06/04/2018
 author: aditidugar
 ms.author: johalex
-ms.openlocfilehash: 22249ac2d275a4168dbd8b03b90d9698fe90f2d1
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: 875006a9cddb87b5f9436b78773420858fd842dd
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "35017288"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208317"
 ---
 # <a name="machine-learning-tasks"></a>Machine learning zadania
 
@@ -29,13 +29,17 @@ A [nadzorowanego uczenia maszynowego](glossary.md#supervised-machine-learning) z
 * Diagnozowanie czy pacjenta ma pewnej choroby, czy nie.
 * Podjęciem decyzji o oznaczyć wiadomości e-mail jako "spamu" lub nie.
 
-## <a name="multi-class-classification"></a>Klasa usługi klasyfikacji
+Aby uzyskać więcej informacji, zobacz [klasyfikacji binarnej](https://en.wikipedia.org/wiki/Binary_classification) artykuł w witrynie Wikipedia.
+
+## <a name="multiclass-classification"></a>wieloklasowej klasyfikacji
 
 A [nadzorowanego uczenia maszynowego](glossary.md#supervised-machine-learning) zadanie, które służy do prognozowania klasy (kategoria) wystąpienia danych. Algorytm klasyfikacji danych wejściowych jest zbiorem etykietą przykłady. Każda etykieta jest liczbą całkowitą od 0 do k-1, gdzie k liczby klas. Dane wyjściowe algorytm klasyfikacji jest klasyfikatora, która służy do prognozowania klasy nowe wystąpienia bez etykiety. Przykłady scenariuszy wielu klas klasyfikacji:
 
 * Określanie rodzaj dog jako "Siberian Husky", "Złotego odbiorcy", "Poodle",... itd.
 * Opis filmu przegląda jako "dodatnią", "neutralne" lub "ujemną".
 * Przegląda kategoryzowania hoteli jako "Lokalizacja", "price", "czystości" itp.
+
+Aby uzyskać więcej informacji, zobacz [Wieloklasowej klasyfikacji](https://en.wikipedia.org/wiki/Multiclass_classification) artykuł w witrynie Wikipedia.
 
 ## <a name="regression"></a>Regresja
 

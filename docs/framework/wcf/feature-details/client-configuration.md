@@ -2,12 +2,12 @@
 title: Konfiguracja klienta
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-ms.openlocfilehash: 0fd3d1a15164447275ef488ac91b9a8bd240032d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 26557b6cbbe33626152878eccab62de11d22660d
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493134"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207420"
 ---
 # <a name="client-configuration"></a>Konfiguracja klienta
 Konfiguracja klienta Windows Communication Foundation (WCF) służy do określania adresu, powiązania zachowania i kontraktu, właściwości "ABC" punktu końcowego klienta, których klienci używają do nawiązywania punktów końcowych usługi. [ \<Klienta >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) element ma [ \<punktu końcowego >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elementu, którego atrybuty służą do konfigurowania punktu końcowego podstaw. W sekcji "Konfigurowanie punktów końcowych" w tym temacie omówiono te atrybuty.  
@@ -91,7 +91,7 @@ Konfiguracja klienta Windows Communication Foundation (WCF) służy do określan
  `contract` Określa atrybut, który kontrakt jest ujawniany przez punkt końcowy. Ta wartość jest mapowany na <xref:System.ServiceModel.ServiceContractAttribute.ConfigurationName%2A> z <xref:System.ServiceModel.ServiceContractAttribute>. Wartość domyślna to pełna nazwa typu klasy, która implementuje usługę.  
   
 ### <a name="configuring-metadata"></a>Konfigurowanie metadanych  
- [ \<Metadanych >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) element jest używany do określenia, ustawienia używane do rejestrowania metadanych zaimportować rozszerzenia. Aby uzyskać więcej informacji na temat rozszerzanie systemu metadanych, zobacz[rozszerzanie systemu metadanych](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
+ [ \<Metadanych >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) element jest używany do określenia, ustawienia używane do rejestrowania metadanych zaimportować rozszerzenia. Aby uzyskać więcej informacji na temat rozszerzanie systemu metadanych, zobacz [rozszerzanie systemu metadanych](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Punkty końcowe: adresy, powiązania i kontrakty](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  

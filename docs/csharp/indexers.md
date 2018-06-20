@@ -3,12 +3,12 @@ title: Indeksatory
 description: Dowiedz się więcej o języku C# indeksatory i sposobu wdrażania indeksowane właściwości, które są właściwościami odwoływać się przy użyciu co najmniej jeden argument.
 ms.date: 06/20/2016
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 73f79f58cd20187a6fd0de29f53f1a31a269e0e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 012213a4cdf8b70ec919639a082d5700228dde6b
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218302"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207498"
 ---
 # <a name="indexers"></a>Indeksatory
 
@@ -176,7 +176,7 @@ Idiom tego projektu do modelowania dowolny rodzaj kolekcji można wykonać w prz
 
 ### <a name="dictionaries"></a>słowników
 
-Inny typowy scenariusz polega, gdy trzeba modelu słownika lub mapy. Ten scenariusz jest w przypadku danego typu przechowuje wartości oparte na kluczu, zwykle klucze tekstu. W tym przykładzie tworzy słownik mapujący argumenty wiersza polecenia do [wyrażenia lamdba](delegates-overview.md) który Zarządzanie tych opcji. W poniższym przykładzie przedstawiono dwie klasy: `ArgsActions` klasa, która mapuje opcji wiersza polecenia, aby `Action` delegować i `ArgsProcessor` używającą `ArgsActions` do wykonania poszczególnych `Action` po napotkaniu tej opcji.
+Inny typowy scenariusz polega, gdy trzeba modelu słownika lub mapy. Ten scenariusz jest w przypadku danego typu przechowuje wartości oparte na kluczu, zwykle klucze tekstu. W tym przykładzie tworzy słownik mapujący argumenty wiersza polecenia do [wyrażenia lambda](delegates-overview.md) który Zarządzanie tych opcji. W poniższym przykładzie przedstawiono dwie klasy: `ArgsActions` klasa, która mapuje opcji wiersza polecenia, aby `Action` delegować i `ArgsProcessor` używającą `ArgsActions` do wykonania poszczególnych `Action` po napotkaniu tej opcji.
 
 ```csharp
 public class ArgsProcessor

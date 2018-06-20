@@ -9,11 +9,12 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe1a15477e858a77ee7829f1d4a9d052457cd30f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbe14e6c05fd6ef155b564e499157e00c5d809e5
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208459"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Dwukierunkowa obsługa aplikacji Windows Forms
 Visual Studio służy do tworzenia aplikacji opartych na systemie Windows, które obsługują dwukierunkowego (od prawej do lewej) języków, takich jak arabski i hebrajski. Obejmuje to standardowych formularzy, okien dialogowych, formularze MDI i wszystkie formanty można pracować w nich — to znaczy, że wszystkie obiekty w <xref:System.Windows.Forms.Control> przestrzeni nazw.  
@@ -116,6 +117,7 @@ Visual Studio służy do tworzenia aplikacji opartych na systemie Windows, któr
   
  Niektóre kontrolki są zapieczętowane. W związku z tym nie może pochodzić nową kontrolkę z nich. Obejmują one <xref:System.Windows.Forms.ImageList> i <xref:System.Windows.Forms.ProgressBar> kontrolki.  
   
-## <a name="see-also"></a>Zobacz też  
- [Dwukierunkowa obsługa aplikacji sieci Web ASP.NET](http://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
- [Globalizacja formularzy Windows Forms](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+
+[Dwukierunkowa obsługa aplikacji sieci Web ASP.NET](http://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
+[Globalizowanie aplikacji Windows Forms](globalizing-windows-forms.md)

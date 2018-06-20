@@ -10,11 +10,12 @@ helpviewer_keywords:
 - Key attribute in XAML [XAML Services]
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
-ms.openlocfilehash: 511721c3ffffb3b80b339c4671ad99e16bafda93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 53e89b664b3885bea7d2da8633505488438a1af5
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207550"
 ---
 # <a name="xkey-directive"></a>x:Key — dyrektywa
 Identyfikuje elementy, które są tworzone i przywoływany w słowniku zdefiniowany w języku XAML. Dodawanie `x:Key` wartość do elementu obiektu XAML jest najczęściej do identyfikacji zasobu w słowniku zasobów, na przykład na platformie WPF <xref:System.Windows.ResourceDictionary>.  
@@ -72,7 +73,7 @@ Identyfikuje elementy, które są tworzone i przywoływany w słowniku zdefiniow
   
  Klucze i nazwy używają różnych dyrektywy i elementy języka (`x:Key` i `x:Name`) do podstawowych definicji XAML. Nazwy i klucze są również używane w różnych sytuacjach stosowania tych pojęć i definicji WPF. Aby uzyskać więcej informacji, zobacz [WPF XAML Namescopes](../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md).  
   
- Jak wspomniano wcześniej, wartość klucza mogą być dostarczane za pomocą rozszerzenia znacznika i może być inna niż wartość ciągu. Przykładowy scenariusz WPF jest wartością `x:Key` może być[ComponentResourceKey](../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md). Niektóre formanty ujawnia klucz styl tego typu zasobu styl niestandardowy, który wpływa bez całkowicie zastępowania styl części wygląd i zachowanie tego formantu. Przykładem takiego klucza jest <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>.  
+ Jak wspomniano wcześniej, wartość klucza mogą być dostarczane za pomocą rozszerzenia znacznika i może być inna niż wartość ciągu. Przykładowy scenariusz WPF jest wartością `x:Key` może być [ComponentResourceKey](../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md). Niektóre formanty ujawnia klucz styl tego typu zasobu styl niestandardowy, który wpływa bez całkowicie zastępowania styl części wygląd i zachowanie tego formantu. Przykładem takiego klucza jest <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>.  
   
  Funkcja połączony słownik WPF wprowadza dodatkowe zagadnienia dotyczące unikatowości klucza i zachowanie wyszukiwania klucza. Aby uzyskać więcej informacji, zobacz [scalić słowniki zasobów](../../../docs/framework/wpf/advanced/merged-resource-dictionaries.md).  
   

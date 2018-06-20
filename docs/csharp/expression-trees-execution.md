@@ -3,26 +3,28 @@ title: Wykonywanie drzew wyrażeń
 description: Więcej informacji na temat wykonywanie drzew wyrażeń konwertując je do pliku wykonywalnego instrukcje języku pośrednim (IL).
 ms.date: 06/20/2016
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: 54706cd5d8ebe60bb893bc82f05aecddae370602
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb9ec5f023587b4e5c74ab71acbd6a886e085e4a
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218166"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207394"
 ---
 # <a name="executing-expression-trees"></a>Wykonywanie drzew wyrażeń
 
 [Poprzednie — Framework typy obsługi drzewa wyrażeń](expression-classes.md)
 
 *Drzewo wyrażeń* jest strukturą danych, która reprezentuje kod.
-Nie jest skompilowany i wykonywalnego kodu. Jeśli chcesz wykonać kodu platformy .NET, reprezentowanym przez wyrażenie drzewa musi przekształcać je do pliku wykonywalnego instrukcji IL. 
+Nie jest skompilowany i wykonywalnego kodu. Jeśli chcesz wykonać kodu platformy .NET, reprezentowanym przez wyrażenie drzewa musi przekształcać je do pliku wykonywalnego instrukcji IL.
+
 ## <a name="lambda-expressions-to-functions"></a>Wyrażenia lambda na funkcje
-Możesz przekonwertować wszystkie LambdaExpression lub dowolny typ pochodny LambdaExpression do pliku wykonywalnego IL. Inne typy wyrażeń nie można przekonwertować bezpośrednio w kodzie. Ograniczenie to ma niewielki wpływ, w praktyce. Wyrażenia lambda są tylko typy wyrażeń, które chcesz wykonać konwersję na język pośredni pliku wykonywalnego (IL). (Pomyśl o jakie oznaczałoby to wykonać bezpośrednio `ConstantExpression`. Może to oznaczać niczego przydatne?) Wszelkie drzewo wyrażeń, który jest `LamdbaExpression`, lub typ pochodzący od `LambdaExpression` może zostać przekonwertowany na IL.
+
+Możesz przekonwertować wszystkie LambdaExpression lub dowolny typ pochodny LambdaExpression do pliku wykonywalnego IL. Inne typy wyrażeń nie można przekonwertować bezpośrednio w kodzie. Ograniczenie to ma niewielki wpływ, w praktyce. Wyrażenia lambda są tylko typy wyrażeń, które chcesz wykonać konwersję na język pośredni pliku wykonywalnego (IL). (Pomyśl o jakie oznaczałoby to wykonać bezpośrednio `ConstantExpression`. Może to oznaczać niczego przydatne?) Wszelkie drzewo wyrażeń, który jest `LambdaExpression`, lub typ pochodzący od `LambdaExpression` może zostać przekonwertowany na IL.
 Typ wyrażenia `Expression<TDelegate>` tylko konkretnych przykład w bibliotekach .NET Core. Jest ona używana do reprezentowania wyrażenia mapujący do dowolnego typu delegowanego. Ponieważ mapuje ten typ do typu delegata, .NET można zbadać wyrażenie i generowanie IL dla odpowiednich delegata, który pasuje do podpisu wyrażenia lambda. 
 
-W większości przypadków spowoduje to utworzenie prostego mapowanie między wyrażenia i jego odpowiedniego obiektu delegowanego. Na przykład drzewo wyrażenia, który jest reprezentowany przez `Expression<Func<int>>` zostanie przekonwertowana na delegata typu `Func<int>`. Wyrażenia lambda z zwracany typ i listy argumentów istnieje typ delegata, który typ docelowy dla kodu wykonywalnego reprezentowany przez tego wyrażenia lamdba.
+W większości przypadków spowoduje to utworzenie prostego mapowanie między wyrażenia i jego odpowiedniego obiektu delegowanego. Na przykład drzewo wyrażenia, który jest reprezentowany przez `Expression<Func<int>>` zostanie przekonwertowana na delegata typu `Func<int>`. Wyrażenia lambda z zwracany typ i listy argumentów istnieje typ delegata, który typ docelowy dla kodu wykonywalnego reprezentowany przez tego wyrażenia lambda.
 
-`LamdbaExpression` Typ zawiera `Compile` i `CompileToMethod` elementów członkowskich, które należy użyć, aby przekonwertować kod wykonywalny drzewo wyrażenia. `Compile` Metoda tworzy delegata. `CompileToMethod` Aktualizacje metody `MethodBuilder` obiektu IL, reprezentujący skompilowanych danych wyjściowych drzewa wyrażenia. Należy pamiętać, że `CompileToMethod` znajduje się tylko w ramach całego pulpitu, a nie na platformę .NET Core.
+`LambdaExpression` Typ zawiera `Compile` i `CompileToMethod` elementów członkowskich, które należy użyć, aby przekonwertować kod wykonywalny drzewo wyrażenia. `Compile` Metoda tworzy delegata. `CompileToMethod` Aktualizacje metody `MethodBuilder` obiektu IL, reprezentujący skompilowanych danych wyjściowych drzewa wyrażenia. Należy pamiętać, że `CompileToMethod` znajduje się tylko w ramach całego pulpitu, a nie w .NET Core.
 
 Opcjonalnie można też podać `DebugInfoGenerator` który otrzyma symbol informacji debugowania dla obiekt wygenerowanego obiektu delegowanego. Dzięki temu można ich przekonwertować na obiekt delegowany drzewa wyrażenia oraz pełne informacje o debugowaniu o wygenerowanego obiektu delegowanego.
 
@@ -35,11 +37,11 @@ var answer = func(); // Invoke Delegate
 Console.WriteLine(answer);
 ```
 
-Zwróć uwagę, że typ delegata jest oparty na typie wyrażenia. Zwracany typ i listy argumentów musi sprawdzić, czy ma być używany w sposób jednoznaczny obiektu delegowanego. `LambdaExpression.Compile()` Metoda zwraca `Delegate` typu. Należy rzutować go na typ delegata poprawne mieć żadnych narzędzi kompilacji, zapoznaj się z listą argumentów typu zwracanego.
+Zwróć uwagę, że typ delegata jest oparty na typie wyrażenia. Zwracany typ i listy argumentów musi sprawdzić, czy ma być używany w sposób jednoznaczny obiektu delegowanego. `LambdaExpression.Compile()` Metoda zwraca `Delegate` typu. Należy rzutować go na typ delegata poprawne mieć żadnych narzędzi kompilacji, zapoznaj się z listą argumentów lub typ zwrotny.
 
 ## <a name="execution-and-lifetimes"></a>Wykonanie i okresy istnienia
 
-Wykonanie kodu za pomocą delegowanego utworzony podczas wywołania `LamdbaExpression.Compile()`. Widać to powyżej where `add.Compile()` zwraca delegata. Wywoływanie tego delegata, wywołując `func()` wykonuje kod.
+Wykonanie kodu za pomocą delegowanego utworzony podczas wywołania `LambdaExpression.Compile()`. Widać to powyżej where `add.Compile()` zwraca delegata. Wywoływanie tego delegata, wywołując `func()` wykonuje kod.
 
 Ten delegat reprezentuje kod w drzewa wyrażenia. Możesz zachować dojścia do tego obiektu delegowanego i wywołać go później. Nie trzeba było skompilować drzewa wyrażenia zawsze będzie wykonywany kod, który reprezentuje. (Pamiętać, że drzew wyrażeń są niezmienne i później kompilowanie tym samym drzewie wyrażenie utworzy delegata, który wykonuje ten sam kod.)
 

@@ -39,14 +39,15 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6c61e4721e6daa548db2fffccc75606e98f71cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b6730e621a85dc8e656723647f949449241c407
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577309"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207459"
 ---
 # <a name="net-class-library-overview"></a>Przegląd biblioteki klas programu .NET
+
 Implementacje .NET zawierają klasy, interfejsy delegatów i typy wartości, które przyspieszenia i zoptymalizować proces rozwoju i zapewnienia dostępu do funkcji systemu. W celu ułatwienia współdziałanie między językami, większość typów .NET są zgodne ze specyfikacją CLS i w związku z tym można używać z dowolnego języka programowania, w których kompilatora odpowiada specyfikacja języka wspólnego (ze specyfikacją CLS).  
   
  Typy .NET są foundation na .NET, które są wbudowane aplikacji, składników i kontrolek. Implementacje .NET obejmują typy, które wykonują następujące funkcje:  
@@ -63,22 +64,24 @@ Implementacje .NET zawierają klasy, interfejsy delegatów i typy wartości, kt�
   
 -   Zapewnianie dostępu do danych, sformatowanego graficznego interfejsu użytkownika po stronie klienta i kontrolowane przez serwer, po stronie klienta graficznego interfejsu użytkownika.  
   
- .NET zawiera bogaty zestaw interfejsów, a także abstrakcyjna i konkretnych klas (system inny niż ogólny). Można używać konkretnych klas bez zmian lub w wielu przypadkach, pochodzi z ich własnych klas. Aby korzystać z funkcji interfejsu, należy utworzyć klasę, która implementuje interfejs lub wyprowadzenia klasy z jednej z klas .NET Framework, które implementuje interfejs.  
+ .NET zawiera bogaty zestaw interfejsów, a także abstrakcyjna i konkretnych klas (system inny niż ogólny). Można używać konkretnych klas bez zmian lub w wielu przypadkach, pochodzi z ich własnych klas. Aby korzystać z funkcji interfejsu, należy utworzyć klasę, która implementuje interfejs lub wyprowadzenia klasy z jednej z klas .NET, które implementuje interfejs.  
   
-## <a name="naming-conventions"></a>Konwencje nazewnictwa  
- Typy .NET Użyj schemat nazewnictwa kropka składni, które connotes hierarchii. Ta technika grupuje powiązanych typów w przestrzeni nazw, mogą być przeszukiwane i łatwiej odwołania. Pierwsza część pełną nazwę — maksymalnie kropki (.) po prawej stronie — jest nazwą przestrzeni nazw. Ostatnia część nazwa jest nazwą typu. Na przykład **System.Collections.ArrayList** reprezentuje **ArrayList** typu, który należy do **System.Collections** przestrzeni nazw. Typy w **System.Collections** może służyć do modyfikowania kolekcji obiektów.  
+## <a name="naming-conventions"></a>Konwencje nazewnictwa
+
+ Typy .NET Użyj schemat nazewnictwa kropka składni, które connotes hierarchii. Ta technika grupuje powiązanych typów w przestrzeni nazw, mogą być przeszukiwane i łatwiej odwołania. Pierwsza część pełną nazwę — maksymalnie kropki (.) po prawej stronie — jest nazwą przestrzeni nazw. Ostatnia część nazwa jest nazwą typu. Na przykład `System.Collections.Generic.List<T>` reprezentuje `List<T>` typu, który należy do `System.Collections.Generic` przestrzeni nazw. Typy w <xref:System.Collections.Generic> może służyć do pracy z kolekcji.  
   
  Ten schemat nazewnictwa ułatwia deweloperom biblioteki rozszerzanie [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] do tworzenia grup hierarchicznych typów i nazw je w sposób spójny, informacyjny. Umożliwia także typy jednoznacznie zidentyfikować przez ich pełną nazwę (oznacza to, według nazwy przestrzeni nazw i typ), co uniemożliwia konflikty nazw typu. Deweloperzy biblioteki oczekuje się podczas tworzenia nazw dla ich nazw, użyj następującej konwencji:  
   
  *CompanyName*.*TechnologyName*  
   
- Na przykład przestrzeni nazw Microsoft.Word odpowiada Niniejsze wytyczne.  
+ Na przykład w obszarze nazw `Microsoft.Word` odpowiada Niniejsze wytyczne.  
   
  Użyj wzorców nazewnictwa do grupy powiązanych typów w przestrzeni nazw jest bardzo przydatny sposób tworzenia i zarządzania dokumentami biblioteki klas. Jednak ten schemat nazewnictwa nie ma wpływu na widoczność, dostęp do elementu członkowskiego, dziedziczenia, zabezpieczeń lub powiązanie. Przestrzeń nazw może być podzielonym na partycje w wielu zestawów i jednym zestawie może zawierać typów z kilku obszarów nazw. Zestaw zawiera formalnej struktury przechowywania wersji, wdrażania, zabezpieczeń, ładowanie i wgląd w środowisko uruchomieniowe języka wspólnego.  
   
  Aby uzyskać więcej informacji o nazwach obszarów nazw i typ, zobacz [Wspólny System typów](../../docs/standard/base-types/common-type-system.md).  
   
-## <a name="system-namespace"></a>Namespace systemu  
+## <a name="system-namespace"></a>Przestrzeń nazw systemu
+
  <xref:System> Przestrzeń nazw jest przestrzeń nazw korzenia dla podstawowych typów programu .NET. Ta przestrzeń nazw zawiera klasy reprezentujące podstawowe typy danych używany przez wszystkie aplikacje: <xref:System.Object> (głównym hierarchii dziedziczenia), <xref:System.Byte>, <xref:System.Char>, <xref:System.Array>, <xref:System.Int32>, <xref:System.String>i tak dalej. Wiele z tych typów odpowiadają typy pierwotne danych, które używa języka programowania. Podczas pisania kodu przy użyciu typów .NET Framework, można użyć danego języka odpowiednie słowo kluczowe podczas .NET Framework jest oczekiwany typ danych podstawowych.  
   
  Poniższa tabela zawiera listę typów podstawowych, że .NET dostarcza krótko opisano każdy typ i wskazuje danego typu w Visual Basic, C#, C++ i F #.  
@@ -87,13 +90,13 @@ Implementacje .NET zawierają klasy, interfejsy delegatów i typy wartości, kt�
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |Liczba całkowita|<xref:System.Byte>|8-bitową nieznakowaną liczbą całkowitą.|**Byte**|**byte**|**char bez znaku**|**byte**|  
 ||<xref:System.SByte>|8-bitową liczbę całkowitą ze znakiem.<br /><br /> Nie zgodne z CLS.|**SByte**|**sbyte**|**char**<br /> —lub—<br /> **podpisana** **char**|**sbyte**|  
-||<xref:System.Int16>|16-bitową liczbę całkowitą ze znakiem.|**krótki**|**short**|**short**|**int16**|  
-||<xref:System.Int32>|Całkowita 32-bitowych.|**Liczba całkowita**|**int**|**int**<br /><br /> —lub—<br /><br /> **long**|**int**|  
-||<xref:System.Int64>|Całkowita 64-bitowych.|**długa**|**long**|**__int64**|**int64**|  
+||<xref:System.Int16>|16-bitową liczbę całkowitą ze znakiem.|**Short**|**short**|**short**|**int16**|  
+||<xref:System.Int32>|Całkowita 32-bitowych.|**Integer**|**int**|**int**<br /><br /> —lub—<br /><br /> **long**|**int**|  
+||<xref:System.Int64>|Całkowita 64-bitowych.|**Long**|**long**|**__int64**|**int64**|  
 ||<xref:System.UInt16>|16-bitową liczbę całkowitą bez znaku.<br /><br /> Nie zgodne z CLS.|**UShort**|**ushort**|**short bez znaku**|**uint16**|  
-||<xref:System.UInt32>|32-bitowa liczba całkowita bez znaku.<br /><br /> Nie zgodne z CLS.|**Uinteger —**|**uint**|**unsigned int**<br /> —lub—<br /> **unsigned long**|**uint32**|  
+||<xref:System.UInt32>|32-bitowa liczba całkowita bez znaku.<br /><br /> Nie zgodne z CLS.|**UInteger**|**uint**|**unsigned int**<br /> —lub—<br /> **unsigned long**|**uint32**|  
 ||<xref:System.UInt64>|64-bitowa liczba całkowita bez znaku.<br /><br /> Nie zgodne z CLS.|**ULong**|**ulong**|**__int64 bez znaku**|**uint64**|  
-|Liczba zmiennoprzecinkowa|<xref:System.Single>|Liczby zmiennoprzecinkowe (32-bitowy) pojedynczej precyzji.|**Pojedynczy**|**float**|**float**|**float32**</br> lub</br>**single**|  
+|Liczba zmiennoprzecinkowa|<xref:System.Single>|Liczby zmiennoprzecinkowe (32-bitowy) pojedynczej precyzji.|**Single**|**float**|**float**|**float32**</br> lub</br>**single**|  
 ||<xref:System.Double>|Liczba zmiennoprzecinkowa (64-bitowy) podwójnej precyzji.|**Double**|**double**|**double**|**float**</br> lub </br> **double**|  
 |Logiczne|<xref:System.Boolean>|Wartość logiczna (true lub false).|**Boolean**|**bool**|**bool**|**bool**|  
 |Inne|<xref:System.Char>|Znak Unicode (16-bitowe).|**char**|**char**|**wchar_t**|**char**|  

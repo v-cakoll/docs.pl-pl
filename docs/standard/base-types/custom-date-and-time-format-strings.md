@@ -16,11 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 665c90ca9950424be21539a83992e1c36dc51ba7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5dbdb4aa70fcd14a914e1cb1b608260f1e51c1d0
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208519"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Niestandardowe ciągi formatujące datę i godzinę
 Ciąg formatu daty i godziny definiuje Reprezentacja tekstowa typu <xref:System.DateTime> lub <xref:System.DateTimeOffset> wartość będącą wynikiem operacji formatowania. Może także definiować reprezentację wartości daty i godziny, która jest wymagana w operacji analizowania składni w celu pomyślnego przekonwertowania ciągu na datę i godzinę. Ciąg formatu niestandardowego składa się z co najmniej jednego specyfikatora niestandardowego formatu daty i godziny. Dowolny ciąg, który nie jest [standardowa Data i godzina ciąg formatu](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) jest interpretowana jako niestandardowa data i godzina ciąg formatu.  
@@ -90,7 +91,7 @@ Ciąg formatu daty i godziny definiuje Reprezentacja tekstowa typu <xref:System.
 |"/"|Separator daty.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "/"](#dateSeparator).|2009-06-15T13:45:30 -> / (en US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -&GT;. (tr-TR)|  
 |"*ciąg*"<br /><br /> "*ciąg*"|Ogranicznik ciągu literału.<br /><br /> Więcej informacji: [znak literały](#Literals).|2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P|  
 |%|Definiuje następujący znak jako specyfikator formatu niestandardowego.<br /><br /> Więcej informacji:[przy użyciu pojedynczego specyfikatory formatu niestandardowego](#UsingSingleSpecifiers).|2009-06-1 -> 15T13:45:30 (%h)|  
-|\|Znak ucieczki.<br /><br /> Więcej informacji: [znak literały](#Literals) i [przy użyciu znaku ucieczki](#escape).|2009-06-1 h -> 15T13:45:30 (h \h)|  
+|\\| Znak ucieczki.<br /><br /> Więcej informacji: [znak literały](#Literals) i [przy użyciu znaku ucieczki](#escape).|2009-06-1 h -> 15T13:45:30 (h \h)|  
 |Jakikolwiek inny znak|Znak jest kopiowany do ciągu wynikowego bez zmian.<br /><br /> Więcej informacji: [znak literały](#Literals).|2009-06-15T01:45:30 (t arr gg: mm) -> arr 01: 45 A|  
   
  W poniższych sekcjach przedstawiono dodatkowe informacje dotyczące poszczególnych specyfikatorów niestandardowego formatu daty i godziny. Jeśli nie podano inaczej, każdy specyfikator tworzy reprezentacji ciągu taki sam, niezależnie od tego, czy jest używany z <xref:System.DateTime> wartość lub <xref:System.DateTimeOffset> wartość.  

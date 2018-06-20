@@ -1,6 +1,6 @@
 ---
 title: Konfiguracja serwera proxy
-ms.date: 03/30/2017
+ms.date: 06/18/2018
 helpviewer_keywords:
 - Networking
 - adaptive proxies
@@ -14,12 +14,12 @@ ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 41e1dcee90531de605b6bddc1eedc1c44235d8eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6cf25d3d7dcde963f06729794716b75dffdb64ae
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397536"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207368"
 ---
 # <a name="proxy-configuration"></a>Konfiguracja serwera proxy
 Serwer proxy obsługuje żądania klientów dotyczące zasobów. Serwer proxy można zwrócić żądanych zasobów z pamięci podręcznej lub przesyła żądanie do serwera, na którym znajduje się zasób. Serwery proxy może zwiększyć wydajność sieci dzięki zmniejszeniu liczby żądań wysyłanych do serwerów zdalnych. Serwery proxy można również ograniczyć dostęp do zasobów.  
@@ -29,38 +29,16 @@ Serwer proxy obsługuje żądania klientów dotyczące zasobów. Serwer proxy mo
   
  Adaptacyjną serwery proxy są skonfigurowane za pomocą skryptu konfiguracji (zobacz [automatycznego wykrywania Proxy](../../../docs/framework/network-programming/automatic-proxy-detection.md)). Skrypt generuje zestaw protokołów aplikacji i serwer proxy dla każdego protokołu.  
   
- Kilka opcji kontrolować sposób uruchamiania skryptu konfiguracji. Można określić następujące czynności:  
-  
--   Jak często skryptu konfiguracji jest pobierane i uruchom.  
-  
--   Jak długo czekać na pobieranie skryptu.  
-  
--   Które poświadczeń systemu należy używać dostępu do serwera proxy.  
-  
--   Które poświadczeń systemu powinna być używana do pobrania skryptu konfiguracji.  
-  
  Zmiany w środowisku sieciowym może wymagać używane nowy zestaw serwerów proxy w systemie. Jeśli połączenie sieciowe ulegnie awarii lub nowego połączenia sieciowego jest zainicjowany, system musi odnaleźć Źródło odpowiedni skrypt konfiguracji w nowym środowisku i uruchom nowy skrypt.  
   
- W poniższej tabeli przedstawiono opcje konfiguracji dla serwera proxy adaptacyjną.  
-  
-|Ustawienie pliku atrybutu, właściwość lub konfiguracji|Opis|  
-|--------------------------------------------------------|-----------------|  
-|`scriptDownloadInterval`|Czas w sekundach między pobraniami skryptu.|  
-|`scriptDownloadTimeout`|Czas oczekiwania (w sekundach) dla skryptu do pobrania.|  
-|`useDefaultCredentials` lub <xref:System.Net.WebProxy.UseDefaultCredentials>|Określa, czy system używa sieci domyślne poświadczenia dostępu do serwera proxy.|  
-|`useDefaultCredentialForScriptDownload`|Określa, czy system używa poświadczeń domyślnych w sieci można pobrać skryptu konfiguracji.|  
-|`usesystemdefaults`|Określa, czy ustawienia serwera proxy statyczne (adres serwera proxy, listy obejścia i obejście na lokalnym) są odczytywane z ustawień serwera proxy programu Internet Explorer dla użytkownika. Jeśli ta wartość jest równa "true", a następnie ustawienia serwera proxy statyczne z programu Internet Explorer będzie używany.<br /><br /> Jeśli ta wartość wynosi "false" lub nie zestawu, a następnie ustawienia serwera proxy statycznych może być określony w konfiguracji i zastąpią ustawienia serwera proxy programu Internet Explorer. Ta wartość również musi mieć ustawioną "wartość false" lub nie została ustawiona dla adaptacyjną proxy włączenia.|  
+ Można użyć `usesystemdefault` atrybutu [ `<proxy>` ](../configure-apps/file-schema/network/proxy-element-network-settings.md) elementu w pliku konfiguracji. `usesystemdefault` Atrybut kontrolki, czy ustawienia serwera proxy statyczne (adres serwera proxy, listy obejścia i obejście na lokalnym) są odczytywane z ustawień serwera proxy programu Internet Explorer dla użytkownika. Jeśli ta wartość jest równa `true`, zostaną użyte ustawienia statycznych serwera proxy w programie Internet Explorer. Jeśli ta wartość jest `false` lub nie jest ustawiona, ustawienia serwera proxy statycznych może być określony w konfiguracji i zastąpią ustawienia serwera proxy programu Internet Explorer. Ta wartość musi również mieć ustawioną `false` lub nie ustawiono dla adaptacyjną proxy włączenia.  
   
  Poniższy przykład przedstawia konfiguracji typowych adaptacyjną serwera proxy.  
   
 ```xml  
 <system.net>  
     <defaultProxy>  
-      <proxy  scriptDownloadInterval="600"  
-              scriptDownloadTimeout="30"  
-              useDefaultCredentials="true"  
-              usesystemdefaults="true"  
-      />  
+      <proxy usesystemdefault="false" />
     </defaultProxy>  
 </system.net>  
 ```  
@@ -83,7 +61,7 @@ Serwer proxy obsługuje żądania klientów dotyczące zasobów. Serwer proxy mo
 |`proxyaddress` lub <xref:System.Net.WebProxy.Address>|Adres serwera proxy do użycia.|  
 |`bypassonlocal` lub <xref:System.Net.WebProxy.BypassProxyOnLocal>|Określa, czy serwer proxy jest pomijana dla adresów lokalnych.|  
 |`bypasslist` lub <xref:System.Net.WebProxy.BypassArrayList>|Opisuje za pomocą wyrażeń regularnych, zestaw adresów, które pominąć serwer proxy.|  
-|`usesystemdefaults`|Określa, czy ustawienia serwera proxy statyczne (adres serwera proxy, listy obejścia i obejście na lokalnym) są odczytywane z ustawień serwera proxy programu Internet Explorer dla użytkownika. Jeśli ta wartość jest równa "true", a następnie ustawienia serwera proxy statyczne z programu Internet Explorer będzie używany. .NET Framework 2.0, gdy ta wartość jest równa "true", ustawienia serwera proxy programu Internet Explorer ustawienia nie są zastępowane przez inne ustawienia serwera proxy w pliku konfiguracji. W programie .NET Framework 1.1 ustawienia serwera proxy programu Internet Explorer, może zostać przesłonięta przez inne ustawienia serwera proxy w pliku konfiguracji.<br /><br /> Jeśli ta wartość wynosi "false" lub nie zestawu, a następnie ustawienia serwera proxy statycznych może być określony w konfiguracji i zastąpią ustawienia serwera proxy programu Internet Explorer. Ta wartość również musi mieć ustawioną "wartość false" lub nie została ustawiona dla adaptacyjną proxy włączenia.|  
+|`usesystemdefault`|Określa, czy ustawienia serwera proxy statyczne (adres serwera proxy, listy obejścia i obejście na lokalnym) są odczytywane z ustawień serwera proxy programu Internet Explorer dla użytkownika. Jeśli ta wartość jest równa `true`, zostaną użyte ustawienia statycznych serwera proxy w programie Internet Explorer. .NET Framework 2.0, gdy ta wartość jest równa `true`, ustawienia serwera proxy programu Internet Explorer nie zostały zastąpione przez inne ustawienia serwera proxy w pliku konfiguracji. W programie .NET Framework 1.1 ustawienia serwera proxy programu Internet Explorer, może zostać przesłonięta przez inne ustawienia serwera proxy w pliku konfiguracji.<br /><br /> Jeśli ta wartość jest `false` lub nie został ustawiony, następnie statyczne ustawienia serwera proxy może być określony w konfiguracji i zastąpią ustawienia serwera proxy programu Internet Explorer. Ta wartość musi również mieć ustawioną `false` lub nie ustawiono dla adaptacyjną proxy włączenia.|  
   
  Poniższy przykład przedstawia konfiguracji typowych statycznych serwera proxy.  
   

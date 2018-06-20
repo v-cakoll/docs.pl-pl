@@ -5,11 +5,12 @@ helpviewer_keywords:
 - Windows Forms, enhancing
 - Windows Forms, adding features
 ms.assetid: 733d1219-d6ad-4256-a55b-9eccf47f5a06
-ms.openlocfilehash: 750d94caf08776ae457dbff153afbc8ec9368f07
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ab1a79bc3a799edc8b0472bb31983a7215f6f9e
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208468"
 ---
 # <a name="enhancing-windows-forms-applications"></a>Rozszerzanie aplikacji Windows Forms
 Formularze systemu Windows zawiera wiele funkcji, które można użyć w celu zwiększenia aplikacji opartych na systemie Windows do potrzeb użytkowników. W poniższych tematach opisano te funkcje oraz sposobu ich używania.  
@@ -30,7 +31,7 @@ Formularze systemu Windows zawiera wiele funkcji, które można użyć w celu zw
  [Sieć w aplikacjach Windows Forms](../../../../docs/framework/winforms/advanced/networking-in-windows-forms-applications.md)  
  Zawiera linki do tematów, w których opisano i przedstawiono sposoby używania sieci w formularzach systemu Windows.  
   
- [Globalizacja formularzy Windows Forms](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)  
+ [Globalizowanie aplikacji Windows Forms](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)  
  Zawiera łącza do tematów, które przedstawiają sposób globalize aplikacji formularzy systemu Windows.  
   
  [Formularze Windows Forms i niezarządzane aplikacje](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  

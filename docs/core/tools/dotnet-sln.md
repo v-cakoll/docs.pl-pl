@@ -3,13 +3,13 @@ title: polecenie sln DotNet - .NET Core interfejsu wiersza polecenia
 description: Polecenie dotnet sln oferuje wygodny możliwość dodawania, usuwania i wyświetlić listę projektów w pliku rozwiązania.
 author: mairaw
 ms.author: mairaw
-ms.date: 05/29/2018
-ms.openlocfilehash: dd77281b55b3e7fc7c293e402d11de016ef73cf8
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 06/13/2018
+ms.openlocfilehash: 65ae402ef5519863886c8cf833598f5314b4bdad
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696715"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208336"
 ---
 # <a name="dotnet-sln"></a>DotNet sln
 
@@ -33,6 +33,12 @@ dotnet sln [-h|--help]
 ## <a name="description"></a>Opis
 
 `dotnet sln` Polecenia oferuje wygodny sposób dodawania, usuwania i wyświetlić listę projektów w pliku rozwiązania.
+
+Aby użyć `dotnet sln` polecenia, pliku rozwiązania musi już istnieć. Aby go utworzyć, należy użyć [dotnet nowe](dotnet-new.md) polecenia, takich jak w poniższym przykładzie:
+
+```
+dotnet new sln
+```
 
 ## <a name="commands"></a>Polecenia
 

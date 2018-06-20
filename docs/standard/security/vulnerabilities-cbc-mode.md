@@ -4,16 +4,16 @@ description: Dowiedz się, jak wykrywanie i usuwanie luk w zabezpieczeniach chro
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: a07acbb943c430f6e26bec44f55a5c84306da513
-ms.sourcegitcommit: 73a662360bbe2f43c19aca1fbcc2565025c60cd8
-ms.translationtype: HT
+ms.openlocfilehash: 26f4d19f591ac02d792bebbd648e90b07d84de56
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35327270"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208516"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Luki w zabezpieczeniach chronometrażu z trybie CBC odszyfrowywania symetrycznego za pomocą wypełnienia
 
-Microsoft, w obecnie znane badaniach kryptograficznych, w oparciu uznaje, z wyjątkiem sytuacji bardzo specyficznego nie jest już bezpieczne odszyfrowanie danych zaszyfrowanych z trybem Cipher-Block Chaining (CBC) szyfrowania symetrycznego, gdy dopełnienie podlegające weryfikacji zastosowane bez pierwszy zapewniania integralności tekstu szyfrowanego.
+Firma Microsoft uzna, że nie jest już bezpieczne odszyfrowanie danych zaszyfrowanych w trybie Cipher-Block Chaining (CBC) szyfrowania symetrycznego, gdy zweryfikowania dopełnienie zostało zastosowane bez pierwszy zapewniania integralności tekstu szyfrowanego, z wyjątkiem bardzo szczegółowej okoliczności. Tej oceny jest oparta na aktualnie znane badań kryptograficznych. 
 
 ## <a name="introduction"></a>Wprowadzenie
 

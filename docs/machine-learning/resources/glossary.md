@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: dotnet-ml
 ms.devlang: dotnet
 manager: wpickett
-ms.openlocfilehash: 332d9e14bea165992f9f00b048286e185269ea79
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: b7690eb6931f4a491b1a03812fe3f2d8a64cfcd4
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "35017286"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208318"
 ---
 # <a name="machine-learning-glossary"></a>Machine learning słownik
 
@@ -33,7 +33,7 @@ Interfejs API powiązane ML.NET: <xref:Microsoft.ML.Models.BinaryClassificationM
 
 ## <a name="binary-classification"></a>klasyfikacji binarnej
 
-A [klasyfikacji](#classification) przypadek where [etykiety](#label) jest tylko jeden z dwóch klas. Aby uzyskać więcej informacji, zobacz [klasyfikacji binarnej](https://en.wikipedia.org/wiki/Binary_classification) artykuł w witrynie Wikipedia.
+A [klasyfikacji](#classification) przypadek where [etykiety](#label) jest tylko jeden z dwóch klas. Aby uzyskać więcej informacji, zobacz [klasyfikacji binarnej](tasks.md#binary-classification) sekcji [Machine learning zadania](tasks.md) tematu.
 
 ## <a name="classification"></a>Klasyfikacja
 
@@ -85,7 +85,7 @@ Tradycyjnie parametrów funkcji prognozowania. Na przykład obciążenia w model
 
 ## <a name="multiclass-classification"></a>wieloklasowej klasyfikacji
 
-A [klasyfikacji](#classification) przypadek where [etykiety](#label) jest jednym z co najmniej trzech klas. Aby uzyskać więcej informacji, zobacz [Wieloklasowej klasyfikacji](https://en.wikipedia.org/wiki/Multiclass_classification) artykuł w witrynie Wikipedia.
+A [klasyfikacji](#classification) przypadek where [etykiety](#label) jest jednym z co najmniej trzech klas. Aby uzyskać więcej informacji, zobacz [Wieloklasowej klasyfikacji](tasks.md#multiclass-classification) sekcji [Machine learning zadania](tasks.md) tematu.
 
 ## <a name="n-gram"></a>N-gramów
 
@@ -113,7 +113,7 @@ Interfejs API powiązane ML.NET: <xref:Microsoft.ML.Models.BinaryClassificationM
 
 ## <a name="regression"></a>Regresja
 
-A [nadzorowanego uczenia maszynowego](#supervised-machine-learning) zadań dane wyjściowe w przypadku rzeczywistych wartości, na przykład, double. Przykładami Prognozowanie cen akcji.
+A [nadzorowanego uczenia maszynowego](#supervised-machine-learning) zadań dane wyjściowe w przypadku rzeczywistych wartości, na przykład, double. Przykładami Prognozowanie cen akcji. Aby uzyskać więcej informacji, zobacz [regresji](tasks.md#regression) sekcji [Machine learning zadania](tasks.md) tematu.
 
 ## <a name="relative-absolute-error"></a>Względny błąd absolutny
 

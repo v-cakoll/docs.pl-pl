@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 00a1f25546bb8dd4f8a587c8a5f03f1043632e08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 77f69fb73d40c76257accc989d4a9a57ed992cf6
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549532"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207654"
 ---
 # <a name="input-overview"></a>Przegląd Dane wejściowe
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Podsystemu udostępnia zaawansowane [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] uzyskiwania danych wejściowych z różnych urządzeń, w tym myszy, klawiatury, touch i pióra. W tym temacie opisano usług świadczonych przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i opisano architekturę wejściowych systemów.  

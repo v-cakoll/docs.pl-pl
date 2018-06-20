@@ -3,12 +3,12 @@ title: Kompilowanie drzew wyrażeń
 description: Więcej informacji o technikach tworzenia drzewa wyrażeń.
 ms.date: 06/20/2016
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.openlocfilehash: 52e03bd1ea2635d75da6d70af6918b33b64622b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7751af17aafa8e2d1a14125da43352108b1c1f95
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216317"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207192"
 ---
 # <a name="building-expression-trees"></a>Kompilowanie drzew wyrażeń
 
@@ -43,10 +43,10 @@ var addition = Expression.Add(one, two);
 Po skonfigurowaniu wyrażenie dodanie można utworzyć wyrażenia lambda:
 
 ```csharp
-var lamdba = Expression.Lambda(addition);
+var lambda = Expression.Lambda(addition);
 ```
 
-To LambdaExpression bardzo proste, ponieważ zawiera ona żadnych argumentów.
+Jest to wyrażenie lambda bardzo proste, ponieważ zawiera bez argumentów.
 Później w tej sekcji, zobaczysz sposób mapowania argumenty parametrów i tworzenie bardziej złożonych.
 
 Wyrażeń, które są tak proste, jak ta mogą łączyć wszystkie wywołania do jednej instrukcji:

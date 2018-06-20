@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b816087f54e652f07dc791b7d66eb1af8f52f55e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: deea4e6128eace0ffa539d77bb63f7629eb72354
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406510"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207407"
 ---
 # <a name="corsegment-structure"></a>COR_SEGMENT — Struktura
 Zawiera informacje na temat obszar pamięci sterty zarządzanej.  
@@ -47,7 +47,7 @@ typedef struct _COR_SEGMENT {
 |`heap`|Liczba stosu, w której znajduje się obszar pamięci. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.|  
   
 ## <a name="remarks"></a>Uwagi  
- `COR_SEGMENTS` Struktury reprezentuje obszar pamięci sterty zarządzanej.  `COR_SEGMENTS` obiekty są członkami [ICorDebugHeapRegionEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) obiektu kolekcji, która jest wypełniana przez wywołanie metody[ICorDebugProcess5::EnumerateHeapRegions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md) metody.  
+ `COR_SEGMENTS` Struktury reprezentuje obszar pamięci sterty zarządzanej.  `COR_SEGMENTS` obiekty są członkami [ICorDebugHeapRegionEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) obiektu kolekcji, która jest wypełniana przez wywołanie metody [ICorDebugProcess5::EnumerateHeapRegions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md) metody.  
   
  `heap` Pole jest numer procesora, co odpowiada sterty zgłaszają. Moduły zbierające elementy bezużyteczne stacji roboczej jego wartość jest zawsze zero, ponieważ stacje robocze mają tylko jeden sterty kolekcji pamięci. Dla modułów zbierających dane pamięci serwera jego wartość odpowiada procesora, której jest dołączona sterty. Należy pamiętać, że może istnieć więcej lub mniej pamięci sterty, niż rzeczywista procesory z powodu szczegóły implementacji moduł garbage collector.  
   

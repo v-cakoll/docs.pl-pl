@@ -3,13 +3,13 @@ title: polecenie Nowy DotNet - .NET Core interfejsu wiersza polecenia
 description: Nowe polecenie dotnet tworzy nowe projekty .NET Core na podstawie określonego szablonu.
 author: mairaw
 ms.author: mairaw
-ms.date: 05/29/2018
-ms.openlocfilehash: ae24c4145cc67ca863c07e4d22af8a1c2c2dd732
-ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
+ms.date: 06/12/2018
+ms.openlocfilehash: f0ef91361dfbc2c2ba5532fbd607786289e98c69
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34570466"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208328"
 ---
 # <a name="dotnet-new"></a>nowe DotNet
 
@@ -151,8 +151,8 @@ Wyświetla listę szablonów zawierających określonej nazwy. Jeśli wywołane 
 
 Język szablonu do utworzenia. Język zaakceptowane, jest zależna od szablonu (zobacz ustawień domyślnych w [argumenty](#arguments) sekcji). Nie jest prawidłowy dla pewnych szablonów.
 
-    > [!NOTE]
-    > Some shells interpret `#` as a special character. In those cases, you need to enclose the language parameter value, such as `dotnet new console -lang "F#"`.
+> [!NOTE]
+> Niektóre powłok zinterpretować `#` jako znak specjalny. W takich przypadkach należy dołączyć wartość parametru języka, takich jak `dotnet new console -lang "F#"`.
 
 `-n|--name <OUTPUT_NAME>`
 
@@ -202,8 +202,8 @@ Wyświetla listę szablonów zawierających określonej nazwy. Jeśli wywołane 
 
 Język szablonu do utworzenia. Język zaakceptowane, jest zależna od szablonu (zobacz ustawień domyślnych w [argumenty](#arguments) sekcji). Nie jest prawidłowy dla pewnych szablonów.
 
-    > [!NOTE]
-    > Some shells interpret `#` as a special character. In those cases, you need to enclose the language parameter value, such as `dotnet new console -lang "F#"`.
+> [!NOTE]
+> Niektóre powłok zinterpretować `#` jako znak specjalny. W takich przypadkach należy dołączyć wartość parametru języka, takich jak `dotnet new console -lang "F#"`.
 
 `-n|--name <OUTPUT_NAME>`
 
@@ -243,8 +243,8 @@ Wyświetla listę szablonów zawierających określonej nazwy. Jeśli wywołane 
 
 Język szablonu do utworzenia. Język zaakceptowane, jest zależna od szablonu (zobacz ustawień domyślnych w [argumenty](#arguments) sekcji). Nie jest prawidłowy dla pewnych szablonów.
 
-    > [!NOTE]
-    > Some shells interpret `#` as a special character. In those cases, you need to enclose the language parameter value, such as `dotnet new console -lang "F#"`.
+> [!NOTE]
+> Niektóre powłok zinterpretować `#` jako znak specjalny. W takich przypadkach należy dołączyć wartość parametru języka, takich jak `dotnet new console -lang "F#"`.
 
 `-n|--name <OUTPUT_NAME>`
 
@@ -502,13 +502,13 @@ Utwórz .NET Standard projektu biblioteki klas w określonym katalogu (dostępne
 
 `dotnet new classlib -lang VB -o MyLibrary`
 
-Bez uwierzytelniania przeznaczonych dla platformy .NET Core 2.0, Utwórz nowy projekt aplikacji platformy ASP.NET Core C# MVC w bieżącym katalogu:
+Utwórz nowy projekt aplikacji platformy ASP.NET Core C# MVC w bieżącym katalogu bez uwierzytelniania:
 
-`dotnet new mvc -au None -f netcoreapp2.0`
+`dotnet new mvc -au None`
 
-Utwórz nową aplikację xUnit przeznaczonych dla platformy .NET Core 2.0:
+Utwórz nową aplikację xUnit:
 
-`dotnet new xunit --framework netcoreapp2.0`
+`dotnet new xunit`
 
 Lista wszystkich dostępnych szablonów dla platformy MVC:
 

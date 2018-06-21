@@ -13,12 +13,12 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: 65428132c885191b62c3b4a76c8937bf8f3f6732
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dc5f05ff4ea9f3c2b828cbe37860e1bd241fc604
+ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522047"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36270438"
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Porady: kopiowanie pikseli w celi zmniejszenia migotania w formularzach systemu Windows
 Podczas animować proste grafiki, użytkownicy czasami może wystąpić, migotania lub innych niepożądanych skutków visual. Jednym ze sposobów ograniczenia tego problemu jest użycie procesu "bitblt" grafiki. BitBlt jest "blok bitowy transferem" dane koloru z prostokąt pochodzenia pikseli do docelowy prostokąt pikseli.  
@@ -28,7 +28,7 @@ Podczas animować proste grafiki, użytkownicy czasami może wystąpić, migotan
  W poniższym przykładzie narysować kształt formularza w jego <xref:System.Windows.Forms.Control.Paint> obsługi zdarzeń. Następnie <xref:System.Drawing.Graphics.CopyFromScreen%2A> metoda jest używana do zduplikowane kształtu.  
   
 > [!NOTE]
->  Ustawienie formularza <xref:System.Windows.Forms.Control.DoubleBuffered%2A> właściwości `true` spowoduje, że kod na podstawie grafiki <xref:System.Windows.Forms.Control.Paint> zdarzeń można podwójnie buforowany. Gdy nie będzie to miało żadnych wzrost wydajności discernable przy użyciu poniższy kod, jest coś należy wziąć pod uwagę podczas pracy z bardziej złożonego kodu manipulowania grafiki.  
+>  Ustawienie formularza <xref:System.Windows.Forms.Control.DoubleBuffered%2A> właściwości `true` spowoduje, że kod na podstawie grafiki <xref:System.Windows.Forms.Control.Paint> zdarzeń można podwójnie buforowany. Gdy nie będzie to miało żadnych wzrost wydajności zauważalny przy użyciu poniższy kod, jest coś należy wziąć pod uwagę podczas pracy z bardziej złożonego kodu manipulowania grafiki.  
   
 ## <a name="example"></a>Przykład  
   

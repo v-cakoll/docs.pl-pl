@@ -5,12 +5,12 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: f069686866c4fd0e8e380af3ef448d282df34801
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf374f9d1fd7e343e5eba868d3f686784428a2d0
+ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389520"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36270451"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>Zainstaluj program .NET Framework w systemie Windows 10 i Windows Server 2016
 
@@ -66,7 +66,7 @@ Wersje programu .NET framework 4.x, to aktualizacje w miejscu do wcześniejszych
 
 - Nie można zainstalować starszej wersji programu .NET Framework na komputerze, jeśli jest już zainstalowana nowsza wersja.
 
-- wersje programu .NET Framework 4.x może służyć do uruchamiania aplikacji utworzonych dla programu .NET Framework 4.0, za pomocą tej wersji. Na przykład .NET Framework 4.7 może służyć do uruchamiania aplikacji utworzonych dla programu .NET Framework 4.0 za pośrednictwem 4.7. Najnowszą wersję (.NET Framework 4.7.1) może służyć do uruchamiania aplikacji utworzonych zostanie wszystkich wersji platformy .NET, począwszy od 4.0.
+- wersje programu .NET Framework 4.x może służyć do uruchamiania aplikacji utworzonych dla programu .NET Framework 4.0, za pomocą tej wersji. Na przykład .NET Framework 4.7 może służyć do uruchamiania aplikacji utworzonych dla programu .NET Framework 4.0 za pośrednictwem 4.7. Najnowszą wersję (.NET Framework 4.7.2) może służyć do uruchamiania aplikacji skompilowanej za pomocą wszystkich wersji platformy .NET, począwszy od 4.0.
 
 Aby uzyskać listę wszystkich wersji programu .NET Framework dostępnych do pobrania, zobacz [pobiera .NET](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral) strony.
 

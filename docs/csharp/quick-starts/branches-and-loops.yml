@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: interpolated-strings.yml
   nextTutorialTitle: Ciąg interpolacji w języku C#
-  ms.openlocfilehash: 787ea7c8eb7724fba82bf40621bde429450b1850
-  ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+  ms.openlocfilehash: 83061e2dfac30ce9b6012404259a223f7504e918
+  ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/07/2018
-  ms.locfileid: "33805645"
+  ms.lasthandoff: 06/20/2018
+  ms.locfileid: "36270321"
 items:
 - durationInMinutes: 1
   content: >
@@ -54,4 +54,30 @@ items:
     > Jest to środowisko programowania online w wersji zapoznawczej. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/spróbuj](https://github.com/dotnet/try/issues).
 - title: Żądanie ukończone
   durationInMinutes: 1
+  content: >
+    Czy można korzystać z przypominać?
+
+
+    ```csharp
+
+    int sum = 0;
+
+    for (int number = 1; number < 21; number++)
+
+    {
+      if (number % 3 == 0)
+      {
+        sum = sum + number;
+      }
+    }
+
+    Console.WriteLine($"The sum is {sum}");
+
+    ```
+
+
+    > [!NOTE]
+
+    > Jest to środowisko programowania online w wersji zapoznawczej. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/spróbuj](https://github.com/dotnet/try/issues).
+- title: Gratulacje!
   content: "Zakończono Szybki Start \"gałęzie i pętle\". \n\nTe przewodniki Szybki Start można kontynuować na środowiska deweloperskiego. Poznaj podstawy z [lokalne działania projektowe](local-environment.md) , a następnie wybierz Szybki Start. Możesz spróbować tego samego ćwiczenia, bezpośrednie przejście do następnej procedury szybkiego startu lub rozpoczynać ponownie w [numery w języku C#](numbers-in-csharp-local.md) Szybki Start.\n\nUżytkownik może dowiedzieć się więcej o tych pojęć w tych tematach:\n\n[Jeśli i else — instrukcja](../language-reference/keywords/if-else.md)   \n[While — instrukcja](../language-reference/keywords/while.md)   \n[— Instrukcja](../language-reference/keywords/do.md)   \n[For — instrukcja](../language-reference/keywords/for.md)"

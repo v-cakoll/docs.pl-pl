@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4f791ea339c9188ac8fada525611fc68821351d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f78df1a85bacae3019fe27857731174796d8a311
+ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743423"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36270425"
 ---
 # <a name="assembly-security-considerations"></a>Zagadnienia dotyczące zabezpieczeń zestawów
 <a name="top"></a> Podczas kompilowania zestawu można określić zestaw uprawnień wymaganych do uruchomienia zestawu. To, czy określone uprawnienia są przyznane do zestawu, czy nie, zależy od dowodów.  
@@ -45,9 +45,13 @@ ms.locfileid: "32743423"
  Podczas ładowania dowód zestawu jest wykorzystywany jako dane wejściowe dla zasad zabezpieczeń. Zasady zabezpieczeń są ustalane przez przedsiębiorstwo i administratora komputera, a także przez ustawienia zasad użytkownika. Określają one zestaw uprawnień przydzielanych całemu zarządzanemu kodowi podczas wykonywania. Zasady zabezpieczeń można ustanowić dla wydawcy zestawu (jeśli ma on podpis wygenerowany przez narzędzie do podpisywania), dla witryny internetowej i strefy (w znaczeniu używanym w programie Internet Explorer), z której zestaw został pobrany, lub dla silnej nazwy zestawu. Na przykład administrator komputera może ustanowić zasady zabezpieczeń, które pozwalają, aby kod pobrany z witryny internetowej i podpisany przez producenta danego oprogramowania miał dostęp do bazy danych na komputerze, ale nie przyznają dostępu umożliwiającego zapis na dysku komputera.  
   
 ## <a name="strong-named-assemblies-and-signing-tools"></a>Zestawy o silnej nazwie i narzędzia podpisywania  
+
+ > [!WARNING]
+ > Nie należy polegać na silnych nazw zabezpieczeń. Udostępniają one tylko unikatową tożsamość.
+
  Można podpisać zestawu na dwa sposoby różne, ale uzupełniające: przy użyciu silnej nazwy lub za pomocą [SignTool.exe (narzędzie podpisu)](../../../docs/framework/tools/signtool-exe.md). Podpisywanie zestawu silną nazwą dodaje szyfrowanie klucza publicznego do pliku zawierającego manifest zestawu. Podpisywanie za pomocą silnej nazwy pomaga zweryfikować unikatowość nazwy, zapobiec podszywaniu się pod nazwę oraz dostarczyć obiektom wywołującym jakąś tożsamość podczas rozpoznawania odwołań.  
   
- Jednak żaden poziom zaufania jest skojarzony z nazwą silną, dzięki czemu [SignTool.exe (narzędzie podpisu)](../../../docs/framework/tools/signtool-exe.md) ważne. Te dwa narzędzia podpisywania wymagają, aby wydawca potwierdził swoją tożsamość wobec zewnętrznego urzędu i uzyskał certyfikat. Certyfikat jest następnie osadzany w pliku i na jego podstawie administrator może decydować, czy ufa autentyczności kodu.  
+ Brak poziomu zaufania jest skojarzony z nazwą silną, dzięki czemu [SignTool.exe (narzędzie podpisu)](../../../docs/framework/tools/signtool-exe.md) ważne. Te dwa narzędzia podpisywania wymagają, aby wydawca potwierdził swoją tożsamość wobec zewnętrznego urzędu i uzyskał certyfikat. Certyfikat jest następnie osadzany w pliku i na jego podstawie administrator może decydować, czy ufa autentyczności kodu.  
   
  Można podać zarówno silnej nazwy i podpisu cyfrowego utworzone za pomocą [SignTool.exe (narzędzie podpisu)](../../../docs/framework/tools/signtool-exe.md) do zestawu, lub można użyć tylko. Oba narzędzia podpisywania mogą podpisywać tylko jeden plik jednocześnie. W przypadku zestawu wieloplikowego podpisuje się plik zawierający manifest zestawu. Silnej nazwy jest przechowywana w pliku manifestu zestawu zawierającego, ale podpisu utworzone za pomocą [SignTool.exe (narzędzie podpisu)](../../../docs/framework/tools/signtool-exe.md) są przechowywane w gnieździe zastrzeżone przenośny plik wykonywalny (PE) zawierający manifest zestawu. Podpisywanie zestawu za pomocą [SignTool.exe (narzędzie podpisu)](../../../docs/framework/tools/signtool-exe.md) można używać (z lub bez silnej nazwy) Jeśli już masz hierarchia zaufania, który korzysta[SignTool.exe (narzędzie podpisu)](../../../docs/framework/tools/signtool-exe.md) wygenerowany podpisów lub gdy zasady używa tylko część klucza i nie sprawdza łańcuch zaufania.  
   

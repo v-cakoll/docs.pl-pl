@@ -4,12 +4,12 @@ description: Dowiedzieć się, jak za pomocą ML.NET w scenariuszu klasyfikacji 
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 85fb55582d891c67f172effa4952f15ac5604d50
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 5194ec8b41304cc06848400607d5d76f288d42e6
+ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207667"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36298282"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Samouczek: Użyj ML.NET w przypadku klasyfikacji binarnej analizy wskaźniki nastrojów klientów
 
@@ -167,7 +167,7 @@ Zastąp `Console.WriteLine("Hello World!")` wiersza w następującym kodem `Main
 Utwórz `Train` metody tuż po `Main` metodę, przy użyciu następującego kodu:
 
 ```csharp
-public static PredictionModel<SentimentData, SentimentPrediction> Train()
+public static async Task<PredictionModel<SentimentData, SentimentPrediction>> Train()
 {
 
 }

@@ -3,15 +3,15 @@ title: Użyj ML.NET do prognozowania opłat taksówki nowego Jorku (Regresja)
 description: Dowiedz się, jak używać ML.NET w scenariuszu regresji.
 author: aditidugar
 ms.author: johalex
-ms.date: 06/05/2018
+ms.date: 06/18/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 048ed1d38408c1ba4901c554cae33d5552c9e303
-ms.sourcegitcommit: 5b0802832fb9ad684d34e69b8644a16a5b7c4810
+ms.openlocfilehash: 0bd92317b1cc6d708b44b4f2e8d2b226460a6706
+ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "35017292"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36298269"
 ---
 # <a name="tutorial-use-mlnet-to-predict-new-york-taxi-fares-regression"></a>Samouczek: Użyj ML.NET do prognozowania opłat taksówki nowego Jorku (Regresja)
 
@@ -26,7 +26,7 @@ Z tego samouczka, dowiesz się, jak:
 > * Wybierz zadanie learning odpowiednie maszyny
 > * Przygotowanie i zrozumieć dane
 > * Tworzenie potoku learning
-> * Ładowanie i przekształcenia danych
+> * Ładowania i przekształcania danych
 > * Wybierz algorytm uczenia
 > * Uczenie modelu
 > * Ocena modelu
@@ -44,75 +44,81 @@ Skupia się na ten problem **przewidywania opłatę taksówki rzeczy przed wyjaz
 
 Przewidywanie taryfy taksówki, najpierw wybierz zadanie learning odpowiednie maszyny. Chcesz przewidzieć rzeczywistej wartości (wartość o podwójnej precyzji reprezentującą cen) na podstawie od innych czynników, w zestawie danych. Możesz wybrać [ **regresji** ](../resources/glossary.md#regression) zadań.
 
-Proces uczenia modelu określa, jakie czynniki w zestawie danych są najbardziej znaczenie w przypadku, gdy przewidywanie ceny końcowego taryfy.
-
 ## <a name="create-a-console-application"></a>Tworzenie aplikacji konsoli
 
 1. Otwórz program Visual Studio 2017 r. Wybierz **pliku** > **nowy** > **projektu** na pasku menu. W **nowy projekt** okno dialogowe, wybierz opcję **Visual C#** węzła następuje **.NET Core** węzła. Następnie wybierz **aplikacji konsoli (.NET Core)** szablonu projektu. W **nazwa** polu tekstowym, wpisz "TaxiFarePrediction", a następnie wybierz **OK** przycisku.
 
-2. Utwórz katalog o nazwie *danych* w projekcie, aby zapisać pliki zestawu danych:
+2. Utwórz katalog o nazwie *danych* w projekcie, aby zapisać plik zestawu danych:
 
     W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt i wybierz **Dodaj** > **nowy Folder**. Wpisz "Dane" i naciśnij Enter.
 
 3. Zainstaluj **pakietu NuGet Microsoft.ML**:
 
-    W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz **Zarządzaj pakietami NuGet**. Wybierz polecenie "nuget.org" jako źródło pakietu, wybierz kartę Przeglądaj, wyszukaj **Microsoft.ML**, wybierz z listy tego pakietu i wybierz **zainstalować** przycisku. Wybierz **OK** znajdującego się na **podgląd zmian** okna dialogowego, a następnie wybierz **akceptuję** znajdującego się na **akceptacji licencji** okna dialogowego jeśli użytkownik Akceptuję warunki licencji dla pakietów na liście.
+    W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt i wybierz **Zarządzaj pakietami NuGet**. Wybierz "nuget.org" jako źródło pakietu, wybierz opcję **Przeglądaj** karcie, wyszukaj **Microsoft.ML**, wybierz z listy tego pakietu i wybierz **zainstalować** przycisku. Wybierz **OK** znajdującego się na **podgląd zmian** okna dialogowego, a następnie wybierz **akceptuję** znajdującego się na **akceptacji licencji** okna dialogowego jeśli użytkownik Akceptuję warunki licencji dla pakietów na liście.
 
-### <a name="prepare-and-understand-your-data"></a>Przygotowanie i zrozumieć dane
+## <a name="prepare-and-understand-the-data"></a>Przygotowanie i zrozumieć dane
 
-1. Pobierz [taksówki taryfy train.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-train.csv) i [taksówki taryfy test.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-test.csv) danych ustawia i zapisywanie ich *danych* folder utworzony wcześniej. Zestaw danych podróży taksówki przygotowuje modelu uczenia maszynowego i może służyć do oceny, jak dokładny jest modelu. Te zestawy danych są początkowo z [zestawu danych w podróży taksówki TLC NYC](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml).
+1. Pobierz [taksówki taryfy train.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-train.csv) i [taksówki taryfy test.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-test.csv) danych ustawia i zapisywanie ich *danych* folder utworzony w poprzednim kroku. Używamy tych zestawów danych do nauczenia modelu uczenia maszynowego, a następnie ocenę, jak dokładny jest modelu. Te zestawy danych są początkowo z [zestawu danych w podróży taksówki TLC NYC](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml).
 
-2. W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy każdy z \*pliki CSV i wybierz **właściwości**. W obszarze **zaawansowane**, zmień wartość **Kopiuj do katalogu wyjściowego** do **zawsze**.
+2. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy każdy z \*pliki CSV i wybierz **właściwości**. W obszarze **zaawansowane**, zmień wartość **Kopiuj do katalogu wyjściowego** do **zawsze**.
 
-3. Otwórz **taksówki taryfy train.csv** danych w edytorze kodu i przyjrzyj się nagłówki kolumn w pierwszym wierszu. Spójrz na każdej kolumny. Zrozumieć dane i zdecydować, które kolumny będą **funkcje** i **etykiety**.
+3. Otwórz **taksówki taryfy train.csv** danych ustaw i przyjrzyj się nagłówki kolumn w pierwszym wierszu. Spójrz na każdej kolumny. Zrozumieć dane i zdecydować, które kolumny będą **funkcje** i która jest **etykiety**.
 
 **Etykiety** jest identyfikator kolumny chcesz przewidzieć. Wskazywanego przez nią **funkcje** są używane do prognozowania etykiety.
+
+Podany zestaw danych zawiera następujące kolumny:
 
 * **vendor_id:** identyfikator dostawcy taksówki jest funkcją.
 * **rate_code:** typu szybkość podróży taksówki jest funkcją.
 * **passenger_count:** liczba osób w podróży jest funkcją.
-* **trip_time_in_secs:** trwało podróż ilość czasu. Aby dowiedzieć się, jak długo podróż przyjmuje dopiero po jego ukończeniu. W tej kolumnie są wykluczone z modelu.
+* **trip_time_in_secs:** trwało podróż ilość czasu. Chcesz przewidzieć taryfy podróży przed zakończeniem podróży. W tym momencie nie wiadomo, jak długo podróży zajmie. W związku z tym podczas podróży nie jest funkcją i będzie wykluczyć tę kolumnę z modelu.
 * **trip_distance:** odległość podróży jest funkcją.
 * **payment_type:** formy płatności (pieniężnych lub karta kredytowa) jest funkcją.
 * **fare_amount:** taryfy całkowita taksówki płatnej jest etykietą.
 
-### <a name="create-classes-and-define-paths"></a>Tworzenie klas i zdefiniować ścieżki
+## <a name="create-data-classes"></a>Tworzenie klas danych
 
-Dodaj następujące dodatkowe `using` instrukcje na początku *Program.cs* pliku:
-
-[!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
-
-Musisz utworzyć trzy zmienne globalne, aby zapisać modelu i do przechowywania ścieżek do ostatnio pobranych plików:
-
-* `_datapath` zawiera ścieżkę do danych używany do uczenia modelu.
-* `_testdatapath` zawiera ścieżkę do danych używany do oceny modelu.
-* `_modelpath` zawiera ścieżkę, w której jest przechowywany trenowanego modelu.
-
-Dodaj następujący kod do prawej wiersz powyżej `Main` do określenia ostatnio pobranych plików:
-
-[!code-csharp[InitializePaths](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#2 "Define variables to store the data file paths")]
-
-Następnie należy utworzyć klasy dla danych wejściowych i prognozy:
+Tworzenie klasy dla danych wejściowych i prognozy:
 
 1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt, a następnie wybierz **Dodaj** > **nowy element**.
 1. W **Dodaj nowy element** okno dialogowe, wybierz opcję **klasy** i zmienić **nazwa** do *TaxiTrip.cs*. Następnie wybierz opcję **Dodaj** przycisku.
 1. Dodaj następujące `using` instrukcje do nowego pliku:
 
-[!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/TaxiTrip.cs#1 "Add necessary usings")]
+   [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/TaxiTrip.cs#1 "Add necessary usings")]
 
 Usuń istniejącą definicję klasy i Dodaj następujący kod, który ma dwie klasy `TaxiTrip` i `TaxiTripFarePrediction`, do *TaxiTrip.cs* pliku:
 
 [!code-csharp[DefineTaxiTrip](../../../samples/machine-learning/tutorials/TaxiFarePrediction/TaxiTrip.cs#2 "Define the taxi trip and fare predictions classes")]
 
-`TaxiTrip` jest to klasa wejściowy zestaw danych i zawiera definicje dla każdej kolumny zestawu danych. `TaxiTripFarePrediction` Klasa jest używana do przewidywania po zakończenia uczenia modelu. Ma ona zmiennoprzecinkowych pojedynczej precyzji (`FareAmount`) i `Score` [ColumnName](xref:Microsoft.ML.Runtime.Api.ColumnNameAttribute) atrybut zastosowany.
+`TaxiTrip` jest to klasa danych wejściowych i zawiera definicje dla każdej kolumny zestawu danych. Użyj [kolumny](xref:Microsoft.ML.Runtime.Api.ColumnAttribute) atrybutu, aby określić wskaźników źródłowych kolumn w zestawie danych.
 
-Teraz przejdź wstecz do **Program.cs** pliku. W `Main`, Zastąp `Console.WriteLine("Hello World!")` następującym kodem:
+`TaxiTripFarePrediction` Klasa jest używana do reprezentowania wyniki przewidywane. Ma ona zmiennoprzecinkowych pojedynczej precyzji (`FareAmount`) pole z `Score` [ColumnName](xref:Microsoft.ML.Runtime.Api.ColumnNameAttribute) atrybut zastosowany. **Wynik** kolumna jest kolumną specjalne w ML.NET. Model danych wyjściowych przewidywane wartości w tej kolumnie.
+
+## <a name="define-data-and-model-paths"></a>Zdefiniuj ścieżki danych i modelu
+
+Wróć do *Program.cs* plików i Utwórz trzy stałe globalne do przechowywania ścieżki do plików z zestawami danych i zapisać modelu:
+
+* `_datapath` zawiera ścieżkę do danych używany do uczenia modelu.
+* `_testdatapath` zawiera ścieżkę do danych używany do oceny modelu.
+* `_modelpath` zawiera ścieżkę, w której jest przechowywany trenowanego modelu.
+
+Dodaj następujący kod do prawej wiersz powyżej `Main` metodę, aby określić tych ścieżek:
+
+[!code-csharp[InitializePaths](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#2 "Define variables to store the data file paths")]
+
+## <a name="create-a-learning-pipeline"></a>Tworzenie potoku learning
+
+Dodaj następujące dodatkowe `using` instrukcje na początku *Program.cs* pliku:
+
+[!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
+
+W `Main`, Zastąp `Console.WriteLine("Hello World!")` następującym kodem:
 
 ```csharp
 PredictionModel<TaxiTrip, TaxiTripFarePrediction> model = Train();
 ```
 
-`Train` Metody przygotowuje modelu. Tworzenie tej funkcji tylko poniżej `Main`, używając następującego kodu:
+`Train` Metody przygotowuje modelu. Tworzenie tej metody tylko poniżej `Main`, używając następującego kodu:
 
 ```csharp
 public static PredictionModel<TaxiTrip, TaxiTripFarePrediction> Train()
@@ -121,29 +127,29 @@ public static PredictionModel<TaxiTrip, TaxiTripFarePrediction> Train()
 }
 ```
 
-## <a name="create-a-learning-pipeline"></a>Tworzenie potoku learning
-
-Potok learning ładuje wszystkie dane i algorytmy niezbędne do nauczenia modelu. Dodaj następujący kod do `Train()` metody:
+Potok learning ładuje wszystkie dane i algorytmy niezbędne do nauczenia modelu. Dodaj następujący kod do `Train` metody:
 
 ```csharp
 var pipeline = new LearningPipeline();
 ```
 
-## <a name="load-and-transform-your-data"></a>Ładowanie i przekształcenia danych
+## <a name="load-and-transform-data"></a>Ładowania i przekształcania danych
 
-Następnie Załaduj dane do potoku. Wskaż `_datapath` początkowo utworzony i ogranicznik plik CSV (,). Dodaj następujący kod do `Train()` poniżej ostatni krok:
+Pierwszym krokiem, który wykonuje potoku learning ładuje dane z zestawu danych szkoleniowych. W tym przypadku szkoleniowy zestaw danych są przechowywane w pliku tekstowym ze ścieżką zdefiniowane przez `_datapath` stałej. Ten plik zawiera nagłówek z nazwami kolumn, w związku z czym pierwszy wiersz powinien być ignorowane podczas ładowania danych. Kolumny w pliku są oddzielone przecinkiem (","). Dodaj następujący kod do `Train` metody:
 
 ```csharp
-pipeline.Add(new TextLoader(_datapath).CreateFrom<TaxiTrip>(separator:','));
+pipeline.Add(new TextLoader(_datapath).CreateFrom<TaxiTrip>(useHeader: true, separator: ','));
 ```
 
-Będzie to odwołanie do kolumny bez podkreślenia w kodzie tworzonego. Kopiuj `FareAmount` kolumny w nową kolumnę o nazwie "Etykieta" przy użyciu `ColumnCopier()` funkcji. Ta kolumna jest **etykiety**.
+W następnych krokach możemy odwoływać się do kolumn za pomocą nazw zdefiniowana w `TaxiTrip` klasy.
+
+Gdy model jest uczony i obliczone wartości w **etykiety** kolumny są traktowane jako prawidłowe wartości do można przewidzieć. Ponieważ chcemy przewidzieć taksówki taryfy podróży, skopiuj `FareAmount` kolumny do **etykiety** kolumny. Aby to zrobić, użyj <xref:Microsoft.ML.Transforms.ColumnCopier> i Dodaj następujący kod:
 
 ```csharp
 pipeline.Add(new ColumnCopier(("FareAmount", "Label")));
 ```
 
-Należy przeprowadzić niektóre **Inżynieria** do przekształcania danych, dzięki czemu można skutecznie do uczenia maszynowego. Wymaga algorytmu, który przygotowuje modelu **liczbowych** funkcje, Przekształć dane podzielone na kategorie (`VendorId`, `RateCode`, i `PaymentType`) na liczby. `CategoricalOneHotVectorizer()` Funkcja przypisuje kluczy numerycznych wartości w każdej z tych kolumn. Przekształcanie danych, dodając ten kod:
+Wymaga algorytmu, który przygotowuje modelu **liczbowych** funkcji, dlatego należy przekształcić dane podzielone na kategorie (`VendorId`, `RateCode`, i `PaymentType`) wartości jako liczby. Aby to zrobić, użyj <xref:Microsoft.ML.Transforms.CategoricalOneHotVectorizer>, co powoduje przypisanie liczbowe różnych wartości różne wartości w każdej kolumny klucza i Dodaj następujący kod:
 
 ```csharp
 pipeline.Add(new CategoricalOneHotVectorizer("VendorId",
@@ -151,7 +157,7 @@ pipeline.Add(new CategoricalOneHotVectorizer("VendorId",
                                              "PaymentType"));
 ```
 
-Ostatni etap przygotowywania danych łączy wszystkie Twoje **funkcje** do jednego za pomocą wektora `ColumnConcatenator()` funkcji. W tym kroku niezbędne pomaga algorytm łatwo przetworzyć funkcje. Dodaj następujący kod:
+Ostatni etap przygotowywania danych łączy wszystkich kolumn funkcji do **funkcje** przy użyciu kolumny <xref:Microsoft.ML.Transforms.ColumnConcatenator> klasy transformacji. Ten krok jest niezbędny, ponieważ uczeń przetwarza tylko funkcje z **funkcje** kolumny. Dodaj następujący kod:
 
 ```csharp
 pipeline.Add(new ColumnConcatenator("Features",
@@ -162,42 +168,42 @@ pipeline.Add(new ColumnConcatenator("Features",
                                     "PaymentType"));
 ```
 
-Zwróć uwagę, że `trip_time_in_secs` kolumna nie jest dołączony. Już określone, że nie jest funkcją przydatne prognozowania.
+Zwróć uwagę, że `TripTime` kolumny, która odpowiada `trip_time_in_secs` kolumny w pliku zestawu danych nie jest uwzględniana. Już określone, że nie jest funkcją przydatne prognozowania.
 
 > [!NOTE]
 > Te kroki należy dodać do potoku w kolejności określonej powyżej do pomyślnego wykonania.
 
 ## <a name="choose-a-learning-algorithm"></a>Wybierz algorytm uczenia
 
-Po dodaniu danych do potoku i przekształcenia go w poprawnym formacie wejściowych, wybrać algorytm uczenia (**uczeń**). Algorytm uczenia przygotowuje modelu. Wybrano **zadań regresji** tego problemu, więc możesz dodać uczeń, nazywany `FastTreeRegressor()` do potoku, który używa **gradientu zwiększania**.
+Po dodaniu danych do potoku i przekształcenia go w poprawnym formacie wejściowych, wybrać algorytm uczenia (**uczeń**). Uczeń przygotowuje modelu. Wybrano **zadań regresji** tego problemu, więc możesz dodać <xref:Microsoft.ML.Trainers.FastTreeRegressor> uczeń, które jest jednym z uczących regresji dostarczonych przez ML.NET.
 
-Zwiększanie wyniku gradientu jest technika problemów regresji uczenia maszynowego. Zbudował każdego drzewa regresji w sposób stopniowy. Funkcja wstępnie zdefiniowane utraty używa do mierzenia błąd w każdym kroku i popraw go w następnej. Wynik jest modelu prognozowania, który jest rzeczywiście zespół słabszych modele predykcyjne. Aby uzyskać więcej informacji na temat zwiększania gradientu, zobacz [Boosted regresji drzewa decyzyjnego](https://docs.microsoft.com/azure/machine-learning/studio-module-reference/boosted-decision-tree-regression).
+<xref:Microsoft.ML.Trainers.FastTreeRegressor> Uczeń wykorzystuje zwiększania gradientu. Zwiększanie wyniku gradientu jest technika problemów regresji uczenia maszynowego. Zbudował każdego drzewa regresji w sposób stopniowy. Funkcja wstępnie zdefiniowane utraty używa do mierzenia błąd w każdym kroku i popraw go w następnej. Wynik jest modelu prognozowania, który jest rzeczywiście zespół słabszych modele predykcyjne. Aby uzyskać więcej informacji na temat zwiększania gradientu, zobacz [Boosted regresji drzewa decyzyjnego](/azure/machine-learning/studio-module-reference/boosted-decision-tree-regression).
 
-Dodaj następujący kod do `Train()` metody po kodzie przetwarzania danych dodanym w ostatnim kroku:
+Dodaj następujący kod do `Train` metody po kodzie przetwarzania danych dodanym w poprzednim kroku:
 
 ```csharp
 pipeline.Add(new FastTreeRegressor());
 ```
 
-Dodano powyższych kroków do potoku jako pojedyncze instrukcje, ale C# zawiera przydatny zestaw Inicjalizacja składni, dzięki którym łatwiej Utwórz i zainicjuj potoku. Zastąp kod zostały dodane do tej pory `Train()` metodę z następującym kodem:
+Dodano powyższych kroków do potoku jako pojedyncze instrukcje, ale C# zawiera przydatny zestaw Inicjalizacja składni, dzięki którym łatwiej Utwórz i zainicjuj potoku. Zastąp kod zostały dodane do tej pory `Train` metodę z następującym kodem:
 
 [!code-csharp[CreatePipeline](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#3 "Create and initialize the learning pipeline")]
 
 ## <a name="train-the-model"></a>Uczenie modelu
 
-Ostatnim krokiem jest do uczenia modelu. Do tego momentu zostało wykonane żadne w potoku. `pipeline.Train<T_Input, T_Output>()` Funkcja przyjmuje wstępnie zdefiniowane `TaxiTrip` typu klasy i dane wyjściowe `TaxiTripFarePrediction` typu. Dodaj ten końcowy fragment kodu do `Train()` funkcji:
+Ostatnim krokiem jest do uczenia modelu. Do tego momentu zostało wykonane żadne w potoku. `pipeline.Train<TInput, TOutput>` Metoda tworzy model, który przyjmuje wystąpienia `TInput` wpisz i wyświetla wystąpienia `TOutput` typu. Dodaj następujący kod do `Train` metody:
 
 [!code-csharp[TrainMOdel](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#4 "Train your model")]
 
-I to już wszystko! Pomyślnie zostały uczony model, który można przewidzieć taksówki opłat w NYC uczenia maszynowego. Teraz zapoznaj się z informacjami, aby dowiedzieć się, jak dokładny modelu i Dowiedz się, jak pobrać go.
+I to już wszystko! Pomyślnie zostały uczony model, który można przewidzieć taksówki opłat w NYC uczenia maszynowego. Teraz załóżmy podglądu, aby zrozumieć, jak dokładny model jest i Dowiedz się, jak używać go do prognozowania wartości taryfy taksówki.
 
-## <a name="save-the-model"></a>Zapisz model
+### <a name="save-the-model"></a>Zapisz model
 
-Przed przejściem do następnego kroku, Zapisz modelu w pliku zip, dodając następujący kod na końcu Twojej `Train()` funkcji:
+Przed przejściem do następnego kroku, Zapisz modelu w pliku zip, dodając następujący kod na końcu `Train` metody:
 
 [!code-csharp[SaveModel](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#5 "Save the model asynchronously and return the model")]
 
-Dodawanie `await` instrukcji `model.WriteAsync()` wywołania oznacza, że `Train()` metoda musi zostać zmieniona na to metoda asynchroniczna, która zwraca `Task`. Modyfikowanie podpis `Train` zgodnie z poniższym kodem:
+Dodawanie `await` instrukcji `model.WriteAsync` wywołania oznacza, że `Train` metoda musi zostać zmieniona na to metoda asynchroniczna, która zwraca zadanie. Modyfikowanie podpis `Train` zgodnie z poniższym kodem:
 
 [!code-csharp[AsyncTraining](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#6 "Make the Train method async and return a task.")]
 
@@ -205,26 +211,25 @@ Zmiana typu zwracanego przez `Train` metody oznacza, że należy dodać `await` 
 
 [!code-csharp[AwaitTraining](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#7 "Await the Train method")]
 
-Dodawanie `await` w Twojej `Main` oznacza, że metoda `Main` metoda musi mieć `async` modyfikator i przywracać `Task`:
+Przy użyciu `await` w `Main` oznacza, że metoda `Main` metoda musi mieć `async` modyfikator i przywracać `Task`:
 
 [!code-csharp[AsyncMain](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#8 "Make the Main method async and return a task.")]
 
-Należy również Dodaj następującą instrukcję using u góry pliku:
+Należy również dodać następujące `using` instrukcji w górnej części pliku:
 
 [!code-csharp[UsingTasks](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#9 "Add System.Threading.Tasks. to your usings.")]
 
-Ponieważ `async Main` metoda jest nową funkcją w C# 7.1 i domyślną wersję językową projektu jest 7.0 C#, musisz zmienić wersję języka C# 7.1 lub nowszy.
-W tym celu kliknij prawym przyciskiem myszy węzeł projektu w **Eksploratora rozwiązań** i wybierz **właściwości**. Wybierz **kompilacji** i wybierz **zaawansowane** przycisku. Na liście rozwijanej wybierz **C# 7.1** (lub nowszej wersji). Wybierz **OK** przycisku.
+Ponieważ `async Main` metody jest funkcją dodane w języku C# 7.1 i domyślną wersję językową projektu jest 7.0 C#, musisz zmienić wersję języka C# 7.1 lub nowszy. W tym celu kliknij prawym przyciskiem myszy węzeł projektu w **Eksploratora rozwiązań** i wybierz **właściwości**. Wybierz **kompilacji** i wybierz **zaawansowane** przycisku. Na liście rozwijanej wybierz **C# 7.1** (lub nowszej wersji). Wybierz **OK** przycisku.
 
 ## <a name="evaluate-the-model"></a>Ocena modelu
 
-Obliczanie jest proces sprawdzania, jak działa modelu. Należy pamiętać, że model sprawia, że dobrej prognoz na danych, który nie był używany, gdy została ona uczony. Aby zrobić to, Podziel dane na pociągu i testowania zestawów danych, tak jak w tym samouczku. Teraz, gdy udało się nauczyć model danych pociągu, zobacz temat jak wykonuje na danych testowych.
+Obliczanie jest proces sprawdzania, jak model przewiduje wartości etykiet. Należy pamiętać, że model sprawia, że dobrej prognoz na danych, który nie był używany do uczenia modelu. Jednym ze sposobów jest podzielić dane na pociągu i testowania zestawów danych, co jest wykonywane w ramach tego samouczka. Teraz, gdy udało się nauczyć model danych pociągu, zobacz temat jak wykonuje na danych testowych.
 
-Wróć do Twojej `Main` funkcji i Dodaj następujący kod poniżej wywołania `Train()`metody:
+Wróć do `Main` — metoda i Dodaj następujący kod poniżej wywołania `Train`metody:
 
 [!code-csharp[Evaluate](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#10 "Evaluate the model.")]
 
-`Evaluate()` Funkcja ocenia modelu. Tworzenie funkcji poniżej `Train()`. Dodaj następujący kod:
+`Evaluate` Metody ocenia modelu. Aby utworzyć tę metodę, Dodaj następujący kod poniżej `Train` metody:
 
 ```csharp
 private static void Evaluate(PredictionModel<TaxiTrip, TaxiTripFarePrediction> model)
@@ -233,19 +238,19 @@ private static void Evaluate(PredictionModel<TaxiTrip, TaxiTripFarePrediction> m
 }
 ```
 
-Ładowanie danych test za pomocą `TextLoader()` funkcji. Dodaj następujący kod do `Evaluate()` metody:
+Dodaj następujący kod do `Evaluate` metody instalacji ładowania danych testowych:
 
 [!code-csharp[LoadTestData](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#12 "Load the test data.")]
 
-Dodaj następujący kod, aby ocenić modelu oraz tworzenia metryki dla niej:
+Dodaj następujący kod, aby ocenić modelu oraz tworzenia metryki oceny:
 
 [!code-csharp[EvaluateAndMeasure](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#13 "Evaluate the model and its predictions.")]
 
-Usługi RMS jest jedna Metryka oceny problemów regresji. Im niższa jest, tym lepiej modelu. Dodaj następujący kod do `Evaluate()` funkcji Drukowanie usługi RMS dla modelu.
+[RMS](../resources/glossary.md##root-of-mean-squared-error-rmse) jest jednym z metryki oceny modelu regresji. Im niższa, tym lepiej model jest. Dodaj następujący kod do `Evaluate` metodę, aby wyświetlić wartość RMS:
 
 [!code-csharp[DisplayRMS](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#14 "Display the RMS metric.")]
 
-RSquared jest inny metryki oceny problemów regresji. RSquared będzie wartość z zakresu od 0 do 1. Bliższe są 1, tym lepiej modelu. Dodaj następujący kod do `Evaluate()` funkcji Drukowanie wartość RSquared dla modelu.
+[RSquared](../resources/glossary.md#coefficient-of-determination) jest inny metryki oceny modeli regresji. RSquared przyjmuje wartości od 0 do 1. Jego wartość jest bliższa 1, tym lepiej jest modelu. Dodaj następujący kod do `Evaluate` metodę, aby wyświetlić wartość RSquared:
 
 [!code-csharp[DisplayRSquared](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#15 "Display the RSquared metric.")]
 
@@ -257,21 +262,21 @@ Następnie należy utworzyć klasę, aby DOM scenariuszy testowania, których mo
 1. W **Dodaj nowy element** okno dialogowe, wybierz opcję **klasy** i zmienić **nazwa** do *TestTrips.cs*. Następnie wybierz opcję **Dodaj** przycisku.
 1. Modyfikowanie klasy statycznej, podobnie jak w poniższym przykładzie:
 
-[!code-csharp[StaticClass](../../../samples/machine-learning/tutorials/TaxiFarePrediction/TestTrips.cs#1 "Change class to be a static class.")]
+   [!code-csharp[StaticClass](../../../samples/machine-learning/tutorials/TaxiFarePrediction/TestTrips.cs#1 "Change class to be a static class.")]
 
-W tym samouczku korzysta z jednego podróży testu w ramach tej klasy. Później można dodać inne scenariusze do eksperymentów z tego przykładu. Dodaj następujący kod do `TestTrips` klasy:
+W tym samouczku korzysta z jednego podróży testu w ramach tej klasy. Później można dodać inne scenariusze do eksperymentów z modelu. Dodaj następujący kod do `TestTrips` klasy:
 
 [!code-csharp[TestData](../../../samples/machine-learning/tutorials/TaxiFarePrediction/TestTrips.cs#2 "Create aq trip to predict its cost.")]
 
-Rzeczywiste taryfy tego podróży jest 29.5, ale użyj wartości 0 jako symbol zastępczy. Algorytmu uczenia maszynowego będzie prognozowania opłatę.
+Rzeczywiste taryfy tego podróży jest 29.5. Użyj wartości 0 jako symbolu zastępczego, jak model zostanie prognozowania opłatę.
 
-Dodaj następujący kod w Twojej `Main` funkcji. Testowane się przy użyciu modelu `TestTrip` danych:
+Przewidywanie taryfy określonego podróży, przejdź wstecz do *Program.cs* i Dodaj następujący kod do `Main` metody:
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#16 "Try a prediction.")]
 
 Uruchom program, aby zobaczyć taryfy przewidywane taksówki dla przypadku testowego.
 
-Gratulacje! Zostały teraz pomyślnie skompilowane usługi machine learning model do przewidywania taksówki opłat, ocenić jego dokładność i przetestować go. Kod źródłowy można znaleźć w tym samouczku w [dotnet/przykłady](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TaxiFarePrediction) repozytorium.
+Gratulacje! Zostały teraz pomyślnie skompilowane usługi machine learning model do przewidywania taksówki podróży opłat, obliczone dokładność i używana do tworzenia prognoz. Kod źródłowy można znaleźć w tym samouczku w [dotnet/przykłady](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TaxiFarePrediction) repozytorium.
 
 ## <a name="next-steps"></a>Następne kroki
 
@@ -281,7 +286,7 @@ W tym samouczku przedstawiono sposób:
 > * Wybierz zadanie learning odpowiednie maszyny
 > * Przygotowanie i zrozumieć dane
 > * Tworzenie potoku learning
-> * Ładowanie i przekształcenia danych
+> * Ładowania i przekształcania danych
 > * Wybierz algorytm uczenia
 > * Uczenie modelu
 > * Ocena modelu

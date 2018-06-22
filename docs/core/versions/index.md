@@ -4,12 +4,12 @@ description: Dowiedz się, jak działa przechowywanie wersji platformy .NET Core
 author: bleroy
 ms.author: mairaw
 ms.date: 02/13/2018
-ms.openlocfilehash: 0cfd620d2b6e6e60531b0e2aa938c1ed64b6af23
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 33c545fdea254133fe6e65f4d6dd725f5184faec
+ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219017"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36298243"
 ---
 # <a name="net-core-versioning"></a>Przechowywanie wersji platformy .NET core
 
@@ -45,14 +45,14 @@ Instalator interfejsu użytkownika w tych plikach do pobrania została zmodyfiko
 Oto kilka przykładów tego formatu:
 
 ```
-dotnet-runtime-2.0.4-macos.10.12-x64.pkg            # Mac runtime installer
-dotnet-sdk-2.0.4-win10-x64.exe                      # Windows SDK installer
-dotnet-sdk-2.0.4-fedora.24-x64.tar.gz               # Fedora 24 binary archive
+dotnet-runtime-2.0.4-osx.10.12-x64.pkg            # Mac runtime installer
+dotnet-sdk-2.0.4-win-x64.exe                      # Windows SDK installer
+dotnet-sdk-2.0.4-linux-x64.tar.gz                 # Linux binary archive
 
 #Ubuntu file set needed for the SDK
-dotnet-host-2.0.4-ubuntu.16.04-x64.deb              # Host / muxer and host policy
-dotnet-runtime-2.0.4-ubuntu.16.04-x64.deb           # runtime
-dotnet-sdk-2.0.4-ubuntu.16.04-x64.deb               # SDK tools
+dotnet-host-2.0.4-ubuntu.16.04-x64.deb            # Host / muxer and host policy
+dotnet-runtime-2.0.4-ubuntu.16.04-x64.deb         # runtime
+dotnet-sdk-2.0.4-ubuntu.16.04-x64.deb             # SDK tools
 ```
 
 Format jest możliwy do odczytu i jasno wskazuje czego pobieranie wersji jest i gdzie można go użyć. Nazwa pakietu środowiska uruchomieniowego zawiera `runtime`, i zestaw SDK zawiera `SDK`.

@@ -1,6 +1,6 @@
 ---
 title: 'Porady: odczyt tekstu z pliku'
-ms.date: 03/30/2017
+ms.date: 06/19/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,26 +14,26 @@ helpviewer_keywords:
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0bb37c5beaaa529ea09fa23f31b55a0d6bc6d510
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7c54e5e55770f3df44819cdf6d2d2c866f7e0fc
+ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574533"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36298165"
 ---
 # <a name="how-to-read-text-from-a-file"></a>Porady: odczyt tekstu z pliku
 W poniższych przykładach pokazano, jak odczytać tekst synchronicznie i asynchronicznie z pliku tekstowego przy użyciu platformy .NET dla aplikacji komputerowych. W obu przykładach, podczas tworzenia wystąpienia <xref:System.IO.StreamReader> klasy, podaj względna lub bezwzględna ścieżka do pliku. W poniższych przykładach założono, że plik o nazwie TestFile.txt znajduje się w folderze aplikacji.  
   
- Te przykłady kodu nie dotyczą projektowania aplikacji do Sklepu Windows, ponieważ środowisko wykonawcze systemu Windows oferuje inne typy strumieni odczytujących i zapisujących pliki. Przykład pokazujący sposób odczyt tekstu z plików w kontekście aplikacji ze Sklepu Windows, temacie [Szybki Start: Odczyt i zapis plików](http://msdn.microsoft.com/library/windows/apps/hh758325.aspx). Przykłady sposobu konwersji między .NET Framework i strumieni środowiska wykonawczego systemu Windows można znaleźć [porady: konwertowanie między .NET Framework i strumieni środowiska wykonawczego systemu Windows](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md).  
+ Te przykłady kodu nie dotyczą tworzenie aplikacji dla aplikacji ze Sklepu Windows, ponieważ środowisko wykonawcze systemu Windows zapewnia strumienia różne typy odczytywanie i zapisywanie do plików. Przykład pokazujący sposób odczyt tekstu z pliku w aplikacji ze Sklepu Windows, temacie [Szybki Start: Odczyt i zapis plików](https://docs.microsoft.com/en-us/previous-versions/windows/apps/hh758325(v=win.10)). Przykłady, które pokazują, jak wykonać konwersji między .NET Framework i strumieni środowiska wykonawczego systemu Windows, temacie [porady: konwertowanie między .NET Framework i strumieni środowiska wykonawczego systemu Windows](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md).  
   
 ## <a name="example"></a>Przykład  
- W pierwszym przykładzie pokazano operację odczytu synchronicznego przy użyciu aplikacji konsoli. W tym przykładzie plik jest otwarty przy użyciu czytnik strumienia, zawartość jest kopiowana do ciągu i parametry są dane wyjściowe do konsoli.  
+ W poniższym przykładzie przedstawiono synchronicznych operacji odczytu w aplikacji konsoli. W tym przykładzie pliku tekstowego jest otwarty przy użyciu czytnik strumienia zawartości są kopiowane do ciągu i ciągu jest dane wyjściowe do konsoli.  
   
  [!code-csharp[Conceptual.BasicIO.TextFiles#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source3.cs#3)]
  [!code-vb[Conceptual.BasicIO.TextFiles#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source3.vb#3)]  
   
 ## <a name="example"></a>Przykład  
- W drugim przykładzie pokazano operację odczytu asynchronicznego przy użyciu aplikacji programu Windows Presentation Foundation (WPF).  
+ Poniższy przykład przedstawia operację asynchroniczną odczytu w aplikacji Windows Presentation Foundation (WPF).  
   
  [!code-csharp[Conceptual.BasicIO.TextFiles#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source6.cs#6)]
  [!code-vb[Conceptual.BasicIO.TextFiles#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source6.vb#6)]  

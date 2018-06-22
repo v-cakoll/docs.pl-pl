@@ -3,12 +3,12 @@ title: Klas i obiektów w języku C# — samouczek języka C#
 description: Jesteś nowym użytkownikiem C#? Przeczytaj ten przegląd klas, obiektów i dziedziczenie
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 1a8c34588cce21f4f4164df57aa8044074c23783
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e89d8b89e5f4f74d637a1e3674fb3959a231a49
+ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357345"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36298295"
 ---
 # <a name="classes-and-objects"></a>Klasy i obiekty
 
@@ -207,7 +207,7 @@ Następujące program używa `Expression` klasy można oszacować wyrażenia `x 
 
 ### <a name="method-overloading"></a>Przeciążenie metody
 
-Metoda *przeładowanie* zezwala na wiele metod w tej samej klasy mają taką samą nazwę jak długo mają unikatowe sygnatury. W przypadku kompilowania kodu wywołanie przeciążonej metody, kompilator używa *przeciążenia* ustalenie określonej metody do wywołania. Rozpoznanie przeciążenia znajduje jedną metodę czy najlepiej do argumentów nie pasuje lub zgłasza błąd, jeśli można znaleźć nie pojedynczego najlepsze dopasowanie. W poniższym przykładzie przedstawiono Rozpoznanie przeciążenia obowiązywać. Komentarz dla każdego wywołania w `Main` — metoda zawiera, którego metoda faktycznie jest wywoływany.
+Metoda *przeładowanie* zezwala na wiele metod w tej samej klasy mają taką samą nazwę jak długo mają unikatowe sygnatury. W przypadku kompilowania kodu wywołanie przeciążonej metody, kompilator używa *przeciążenia* ustalenie określonej metody do wywołania. Rozpoznanie przeciążenia znajduje jedną metodę czy najlepiej do argumentów nie pasuje lub zgłasza błąd, jeśli można znaleźć nie pojedynczego najlepsze dopasowanie. W poniższym przykładzie przedstawiono Rozpoznanie przeciążenia obowiązywać. Komentarz dla każdego wywołania w `UsageExample` — metoda zawiera, którego metoda faktycznie jest wywoływany.
 
 [!code-csharp[OverloadUsage](../../../samples/snippets/csharp/tour/classes-and-objects/Overloading.cs#L3-L41)]
 

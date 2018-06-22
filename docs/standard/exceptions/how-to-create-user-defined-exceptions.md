@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Porady: tworzenie wyjątków zdefiniowanych przez użytkownika'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard

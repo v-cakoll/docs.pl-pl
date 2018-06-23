@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc54b8bdc96a5038dc75111d9833e70e7ffd2e9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 207227b3e5c52b7c6e0f704543379874f3708c03
+ms.sourcegitcommit: ceca5a1c027627abcca2767567703c3879f33325
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578043"
+ms.lasthandoff: 06/23/2018
+ms.locfileid: "36338107"
 ---
 # <a name="general-naming-conventions"></a>Ogólne konwencje nazewnictwa
 W tej sekcji opisano ogólne konwencji nazewnictwa odnoszą się do wyboru word wskazówki na temat używania skrótów i akronimów i zalecenia dotyczące należy unikać nazw specyficzny dla języka.  
@@ -63,18 +63,18 @@ W tej sekcji opisano ogólne konwencji nazewnictwa odnoszą się do wyboru word 
 |---------|------------------|-----------|---------|  
 |**sbyte**|**SByte**|**char**|**SByte**|  
 |**byte**|**Byte**|**char bez znaku**|**Byte**|  
-|**short**|**krótki**|**short**|**Int16**|  
+|**short**|**Short**|**short**|**Int16**|  
 |**ushort**|**UInt16**|**short bez znaku**|**UInt16**|  
-|**int**|**Liczba całkowita**|**int**|**Int32**|  
+|**int**|**Integer**|**int**|**Int32**|  
 |**uint**|**UInt32**|**unsigned int**|**UInt32**|  
-|**long**|**długa**|**__int64**|**Int64**|  
+|**long**|**Long**|**__int64**|**Int64**|  
 |**ulong**|**UInt64 —**|**__int64 bez znaku**|**UInt64 —**|  
-|**float**|**Pojedynczy**|**float**|**Pojedynczy**|  
+|**float**|**Single**|**float**|**Single**|  
 |**double**|**Double**|**double**|**Double**|  
 |**bool**|**Boolean**|**bool**|**Boolean**|  
 |**char**|**char**|**wchar_t**|**char**|  
 |**string**|**Ciąg**|**Ciąg**|**Ciąg**|  
-|**object**|**Obiekt**|**Obiekt**|**Obiekt**|  
+|**object**|**obiekt**|**obiekt**|**obiekt**|  
   
  **CZY ✓** Użyj nazwą pospolitą, takiego jak `value` lub `item`, zamiast powtarzające się nazwa typu w rzadkich przypadkach, gdy identyfikator nie ma znaczenia semantycznego i typ parametru nie jest ważna.  
   
@@ -85,7 +85,7 @@ W tej sekcji opisano ogólne konwencji nazewnictwa odnoszą się do wyboru word 
   
  **CZY ✓** preferowane jest dodanie sufiksu zamiast prefiksu wskazać nową wersję istniejącego interfejsu API.  
   
- Ułatwi to Pomoc odnajdywania, przeglądając dokumentację, lub za pomocą funkcji Intellisense. Stara wersja interfejsu API zostaną zorganizowane bliski nowych interfejsów API, ponieważ większość przeglądarek i Intellisense Pokaż identyfikatorów w kolejności alfabetycznej.  
+ Ułatwi to Pomoc odnajdywania, przeglądając dokumentację, lub za pomocą funkcji IntelliSense. Stara wersja interfejsu API zostaną zorganizowane bliski nowych interfejsów API, ponieważ większość przeglądarek i IntelliSense Pokaż identyfikatorów w kolejności alfabetycznej.  
   
  **ROZWAŻ ✓** przy użyciu całkowicie nowe, ale łatwy do rozpoznania identyfikator, zamiast dodawania sufiks lub prefiks.  
   

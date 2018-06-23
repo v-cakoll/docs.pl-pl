@@ -8,49 +8,49 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: d7ea869c2e42e045149faa522b615c19a8ec5f60
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: af8491a2887f4a35e2cd9926304948c12a67623a
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549089"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314981"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Wskazówki: hosting formantu Win32 w WPF
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] udostępnia bogate środowisko do tworzenia aplikacji. Jednak jeśli masz znaczących inwestycji [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] kodu, może być bardziej skuteczne ponownie użyć co najmniej części kodu w Twojej [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji, zamiast ponownego zapisywania całkowicie. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia mechanizm prostego hosting [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] okna na [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] strony.  
+Windows Presentation Foundation (WPF) zawiera rozbudowane środowisko do tworzenia aplikacji. Jednak gdy znaczących inwestycji w kodzie Win32, może być bardziej skuteczne ponownie wykorzystać przynajmniej część tego kodu w aplikacji WPF, zamiast ponownego zapisywania całkowicie. WPF udostępnia proste mechanizm hosting okna Win32, na stronie WPF.  
   
- Ten temat przeprowadzi Cię przez aplikację, [Hosting kontrolki ListBox Win32 w przykładowym WPF](http://go.microsoft.com/fwlink/?LinkID=159998), że hosty [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] formant pola listy. Można rozszerzyć tę procedurę ogólne hosting żadnego [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] okna.  
+ Ten temat przeprowadzi Cię przez aplikację, [Hosting kontrolki ListBox Win32 w przykładowym WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control), aby kontrolować Win32 pole listy hostów. Ta procedura ogólne można rozszerzyć hosting dowolnego okna Win32.  
   
   
 <a name="requirements"></a>   
 ## <a name="requirements"></a>Wymagania  
- W tym temacie założono podstawowa znajomość zarówno [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programowania. Podstawowe wprowadzenie do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] programowania, zobacz [wprowadzenie](../../../../docs/framework/wpf/getting-started/index.md). Aby obejrzeć wprowadzenie do [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programowania, użytkownik powinien odwoływać się żadnego wiele książek na ten temat, w szczególności *programowania Windows* przez Petzold Charlesa.  
+ W tym temacie założono podstawowa znajomość programowania zarówno WPF i Win32. Aby uzyskać podstawowe wprowadzenie do programowania WPF, zobacz [wprowadzenie](../../../../docs/framework/wpf/getting-started/index.md). Wprowadzenie do programowania Win32, użytkownik powinien odwoływać się żadnego wiele książek na ten temat, w szczególności *programowania Windows* przez Petzold Charlesa.  
   
- Ponieważ dołączony w tym temacie próbki jest zaimplementowana w języku C#, umożliwia użycie [!INCLUDE[TLA#tla_pinvoke](../../../../includes/tlasharptla-pinvoke-md.md)] dostępu [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]. Masz pewną znajomość programu [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)] jest pomocna, ale nie są niezbędne.  
+ Ponieważ dołączony w tym temacie próbki jest zaimplementowana w języku C#, powoduje użycie usług wywołania platformy (PInvoke) w celu dostępu do interfejsu API Win32. Masz pewną znajomość programu PInvoke jest przydatne, ale nie są niezbędne.  
   
 > [!NOTE]
->  Ten temat zawiera wiele przykładów kodu z skojarzone próbki. Jednak aby zwiększyć czytelność, go nie ma kompletnego przykładowego kodu. Można uzyskać lub wyświetlić pełny kod z [Hosting kontrolki ListBox Win32 w przykładowym WPF](http://go.microsoft.com/fwlink/?LinkID=159998).  
+>  Ten temat zawiera wiele przykładów kodu z skojarzone próbki. Jednak aby zwiększyć czytelność, go nie ma kompletnego przykładowego kodu. Można uzyskać lub wyświetlić pełny kod z [Hosting kontrolki ListBox Win32 w przykładowym WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control).  
   
 <a name="basic_procedure"></a>   
 ## <a name="the-basic-procedure"></a>Podstawowe procedury  
- W tej sekcji opisano procedurę obsługi [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] okno na [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] strony. Pozostałe sekcje przejść przez szczegóły każdego kroku.  
+ W tej sekcji opisano procedurę hosting okna Win32 na stronie WPF. Pozostałe sekcje przejść przez szczegóły każdego kroku.  
   
  Podstawowa procedura obsługi jest:  
   
-1.  Implementowanie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] strony do okna obsługi. Co metoda polega na utworzeniu <xref:System.Windows.Controls.Border> element do zarezerwowania części strony hostowanej okna.  
+1.  Implementuje stronę WPF do hostowania okna. Co metoda polega na utworzeniu <xref:System.Windows.Controls.Border> element do zarezerwowania części strony hostowanej okna.  
   
 2.  Implementowanie do hostowania formantu, który dziedziczy z klasy <xref:System.Windows.Interop.HwndHost>.  
   
 3.  W tej klasie zastąpienie <xref:System.Windows.Interop.HwndHost> elementu członkowskiego klasy <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>.  
   
-4.  Tworzenie hostowanej okno jako element podrzędny okna zawierającego [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] strony. Mimo że konwencjonalnej [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] programowania nie należy jawnie z niej korzystać, strona hostingu jest okno z dojściem (HWND). Pojawi się Strona HWND za pośrednictwem `hwndParent` parametr <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> metody. Okno hostowanej powinny być tworzone jako element podrzędny tego HWND.  
+4.  Tworzenie hostowanej okno jako element podrzędny okna zawierającego strony WPF. Mimo że konwencjonalnej programowania WPF nie należy jawnie z niej korzystać, strona hostingu jest okno z dojściem (HWND). Pojawi się Strona HWND za pośrednictwem `hwndParent` parametr <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> metody. Okno hostowanej powinny być tworzone jako element podrzędny tego HWND.  
   
-5.  Po utworzeniu okno hosta zwraca HWND hostowanej okna. Jeśli chcesz udostępnić co najmniej jeden [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] formantów, są zazwyczaj tworzone okno hosta jako element podrzędny HWND i wprowadzić formanty elementy podrzędne tego okna hosta. Otaczania kontrolki w oknie hosta zapewnia prostą metodę dla Twojego [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] strony do odbierania powiadomień od formantów, którego dotyczy niektórych określonego [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] problemy z powiadomieniami granicy HWND.  
+5.  Po utworzeniu okno hosta zwraca HWND hostowanej okna. Jeśli chcesz udostępnić co najmniej jeden formant Win32 są zazwyczaj tworzone okno hosta jako element podrzędny HWND i wprowadzić formanty elementy podrzędne tego okna hosta. Zawijanie formantów w oknie hosta zapewnia prostą metodę strony WPF do odbierania powiadomień od formantów, którego dotyczy konkretnego Win32 problemy z powiadomieniami granicy HWND.  
   
 6.  Obsługa wybrane wiadomości wysyłane do okna hosta, takich jak powiadomienia z formantów podrzędnych. Istnieją dwa sposoby, w tym celu.  
   
     -   Jeśli wolisz obsługi wiadomości w klasie hostingu zastępują <xref:System.Windows.Interop.HwndHost.WndProc%2A> metody <xref:System.Windows.Interop.HwndHost> klasy.  
   
-    -   Jeśli preferujesz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obsługi wiadomości i obsługiwać <xref:System.Windows.Interop.HwndHost> klasy <xref:System.Windows.Interop.HwndHost.MessageHook> zdarzenie z kodem. To zdarzenie występuje dla każdy komunikat jest odbierany przez okno hostowanej. Jeśli wybierzesz tę opcję, należy zastąpić nadal <xref:System.Windows.Interop.HwndHost.WndProc%2A>, ale wymagane jest tylko minimalny implementacji.  
+    -   Jeśli preferujesz WPF obsługi wiadomości i obsługiwać <xref:System.Windows.Interop.HwndHost> klasy <xref:System.Windows.Interop.HwndHost.MessageHook> zdarzenie z kodem. To zdarzenie występuje dla każdy komunikat jest odbierany przez okno hostowanej. Jeśli wybierzesz tę opcję, należy zastąpić nadal <xref:System.Windows.Interop.HwndHost.WndProc%2A>, ale wymagane jest tylko minimalny implementacji.  
   
 7.  Zastąpienie <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> i <xref:System.Windows.Interop.HwndHost.WndProc%2A> metody <xref:System.Windows.Interop.HwndHost>. Musi zastępować te metody do zaspokojenia <xref:System.Windows.Interop.HwndHost> kontraktu, ale może być tylko konieczne minimalnego implementacji.  
   
@@ -60,9 +60,9 @@ ms.locfileid: "33549089"
   
 <a name="page_layout"></a>   
 ## <a name="implement-the-page-layout"></a>Zastosuj układ strony  
- Układ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] strony, który jest hostem kontrolki ListBox składa się z dwóch regionach. Lewej strony znajduje się kilka [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontrolki udostępniające [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] można manipulować [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] formantu. Prawym górnym rogu strony ma kwadratowy region hostowanej kontrolki ListBox.  
+ Układ strony WPF, który obsługuje kontrolki ListBox składa się z dwóch regionach. W lewej części strony znajduje się kilka formantów WPF, które zapewniają [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] można manipulować kontroli Win32. Prawym górnym rogu strony ma kwadratowy region hostowanej kontrolki ListBox.  
   
- Kod do implementacji tego układu jest bardzo proste. Element główny jest <xref:System.Windows.Controls.DockPanel> która ma dwa elementy podrzędne. Pierwsza to <xref:System.Windows.Controls.Border> element, który obsługuje kontrolki ListBox. Przypada 200 x 200 cali kwadratowych prawym górnym rogu strony. Druga <xref:System.Windows.Controls.StackPanel> element, który zawiera zbiór [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] formantów, które zawierają informacje i umożliwia manipulowanie kontrolki ListBox ustawiając widoczne współdziałanie właściwości. Dla każdego z elementów, które są elementami podrzędnymi <xref:System.Windows.Controls.StackPanel>, zobacz materiał odwołania dla różnych elementów używane szczegółowe informacje dotyczące tych elementów są co zrobić, te są wyświetlane w poniższym przykładowym kodzie, ale nie będzie omówione (podstawowe współdziałanie modelu nie wymaga żadnej z nich, są one udostępniane niektórych interakcyjności w przykładzie).  
+ Kod do implementacji tego układu jest bardzo proste. Element główny jest <xref:System.Windows.Controls.DockPanel> która ma dwa elementy podrzędne. Pierwsza to <xref:System.Windows.Controls.Border> element, który obsługuje kontrolki ListBox. Przypada 200 x 200 cali kwadratowych prawym górnym rogu strony. Druga <xref:System.Windows.Controls.StackPanel> element, który zawiera zbiór formantów WPF, wyświetlane informacje, które umożliwia manipulowanie kontrolki ListBox ustawiając widoczne współdziałanie właściwości. Dla każdego z elementów, które są elementami podrzędnymi <xref:System.Windows.Controls.StackPanel>, zobacz materiał odwołania dla różnych elementów używane szczegółowe informacje dotyczące tych elementów są co zrobić, te są wyświetlane w poniższym przykładowym kodzie, ale nie będzie omówione (podstawowe współdziałanie modelu nie wymaga żadnej z nich, są one udostępniane niektórych interakcyjności w przykładzie).  
   
  [!code-xaml[WPFHostingWin32Control#WPFUI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml#wpfui)]  
   
@@ -73,20 +73,20 @@ ms.locfileid: "33549089"
  [!code-csharp[WPFHostingWin32Control#ControlHostClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#controlhostclass)]
  [!code-vb[WPFHostingWin32Control#ControlHostClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#controlhostclass)]  
   
- Istnieje również zestaw stałych. Te stałe przede wszystkim są pobierane z Winuser.h i będzie można korzystać z konwencjonalnej nazwy podczas wywoływania metody [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] funkcji.  
+ Istnieje również zestaw stałych. Te stałe przede wszystkim są pobierane z Winuser.h i będzie można korzystać z konwencjonalnej nazwy podczas wywoływania funkcji Win32.  
   
  [!code-csharp[WPFHostingWin32Control#ControlHostConstants](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#controlhostconstants)]
  [!code-vb[WPFHostingWin32Control#ControlHostConstants](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#controlhostconstants)]  
   
 <a name="buildwindowcore"></a>   
 ### <a name="override-buildwindowcore-to-create-the-microsoft-win32-window"></a>Zastąpienie metoda BuildWindowCore do tworzenia okna Microsoft Win32  
- Należy przesłonić tę metodę, aby utworzyć [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] oknie, w którym będzie hostowana przez stronę i tworzenie połączenia między okna i na stronie. Ponieważ ten przykład obejmuje hosting kontrolki ListBox, są tworzone dwa okna. Pierwsza to okno faktycznie jest hostowana przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] strony. ListBox — formant jest tworzone jako element podrzędny tego okna.  
+ Należy przesłonić tę metodę można utworzyć okna Win32, w którym będzie hostowana przez stronę i tworzenie połączenia między okna i na stronie. Ponieważ ten przykład obejmuje hosting kontrolki ListBox, są tworzone dwa okna. Pierwsza to okno faktycznie jest hostowana przez stronę WPF. ListBox — formant jest tworzone jako element podrzędny tego okna.  
   
- Przyczyna tego podejścia jest uprościć proces odbieranie powiadomień w formancie. <xref:System.Windows.Interop.HwndHost> Klasa umożliwia przetwarzanie wiadomości wysyłane do okna, które obsługuje on. Jeśli na serwerze [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] sterowania bezpośrednio, komunikaty wysyłane do pętli komunikatów wewnętrzny formantu. Można wyświetlić kontroli i wysyłania, który go wiadomości, ale nie otrzymasz powiadomień, które kontrolki wysyła do jej okna nadrzędnego. Oznacza to, między innymi, że nie ma możliwości wykrycia, gdy użytkownik wchodzi w interakcję z formantem. Zamiast tego należy utworzyć okno hosta i ustaw kontrolkę elementem podrzędnym tego okna. Dzięki temu można przetworzyć wiadomości dla okna hosta, w tym powiadomienia wysyłane do niej przez formant. Dla wygody ponieważ okno hosta to po prostu niż proste otoki dla formantu, pakiet zostanie określane jako kontrolki ListBox.  
+ Przyczyna tego podejścia jest uprościć proces odbieranie powiadomień w formancie. <xref:System.Windows.Interop.HwndHost> Klasa umożliwia przetwarzanie wiadomości wysyłane do okna, które obsługuje on. Jeśli host Win32 kontrolować bezpośrednio, pojawi się komunikaty wysłane do pętli komunikatów wewnętrzny formantu. Można wyświetlić kontroli i wysyłania, który go wiadomości, ale nie otrzymasz powiadomień, które kontrolki wysyła do jej okna nadrzędnego. Oznacza to, między innymi, że nie ma możliwości wykrycia, gdy użytkownik wchodzi w interakcję z formantem. Zamiast tego należy utworzyć okno hosta i ustaw kontrolkę elementem podrzędnym tego okna. Dzięki temu można przetworzyć wiadomości dla okna hosta, w tym powiadomienia wysyłane do niej przez formant. Dla wygody ponieważ okno hosta to po prostu niż proste otoki dla formantu, pakiet zostanie określane jako kontrolki ListBox.  
   
 <a name="create_the_window_and_listbox"></a>   
 #### <a name="create-the-host-window-and-listbox-control"></a>Utwórz okno hosta i ListBox — formant  
- Można użyć [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)] utworzyć hosta okna dla formantu, tworząc i rejestrowanie klasy okna i tak dalej. Jednak znacznie prostsze jest można utworzyć okna z klasy wstępnie zdefiniowane okna "statyczny". Udostępnia procedurę okna niezbędną do odbierania powiadomień w formancie i wymaga minimalnego kodowania.  
+ Można utworzyć hosta okna dla formantu, tworząc i rejestrowanie klasy okna za pomocą funkcji PInvoke i tak dalej. Jednak znacznie prostsze jest można utworzyć okna z klasy wstępnie zdefiniowane okna "statyczny". Udostępnia procedurę okna niezbędną do odbierania powiadomień w formancie i wymaga minimalnego kodowania.  
   
  HWND formantu jest uwidaczniany za pośrednictwem właściwości tylko do odczytu, tak, aby strona hosta służy do wysyłania komunikatów do formantu.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "33549089"
  Przykład dołącza program obsługi do <xref:System.Windows.Interop.HwndHost.MessageHook> zdarzenie `ControlHost` odbierać komunikaty z formantu. To zdarzenie jest wywoływane dla każdej wiadomości wysyłane do okna hostowanej. W tym przypadku są komunikaty wysyłane do okna, który opakowuje rzeczywiste formantu ListBox, w tym powiadomienia z formantu. Przykład wywołuje SendMessage uzyskać informacji z formantu i zmodyfikuj jego zawartość. W następnej sekcji omówiono szczegóły jak strony komunikuje się za pomocą formantu.  
   
 > [!NOTE]
->  Zwróć uwagę, że istnieją dwa [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)] deklaracje dla SendMessage. Jest to konieczne, ponieważ korzysta z jednego `wParam` parametr do przekazania ciąg, a drugi używa go do przekazania liczbą całkowitą. Potrzebujesz oddzielnych deklaracji dla każdego podpisu upewnić się, że dane jest poprawnie przekazywane.  
+>  Zwróć uwagę, że istnieją dwa deklaracje funkcji PInvoke dla SendMessage. Jest to konieczne, ponieważ korzysta z jednego `wParam` parametr do przekazania ciąg, a drugi używa go do przekazania liczbą całkowitą. Potrzebujesz oddzielnych deklaracji dla każdego podpisu upewnić się, że dane jest poprawnie przekazywane.  
   
  [!code-csharp[WPFHostingWin32Control#HostWindowClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#hostwindowclass)]
  [!code-vb[WPFHostingWin32Control#HostWindowClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#hostwindowclass)]  
@@ -128,7 +128,7 @@ ms.locfileid: "33549089"
   
 <a name="communication"></a>   
 ## <a name="implement-communication-between-the-control-and-the-page"></a>Komunikacja między formantem a strony  
- Formant manipulować wysyłając komunikaty systemu Windows. Formant powiadamia, gdy użytkownik wchodzi w interakcję z nią poprzez wysłanie powiadomienia do okno hosta. [Hosting kontrolki ListBox Win32 w przykładowym WPF](http://go.microsoft.com/fwlink/?LinkID=159998) próbki obejmuje interfejsu użytkownika, który zawiera kilka przykładów jak to działa:  
+ Formant manipulować wysyłając komunikaty systemu Windows. Formant powiadamia, gdy użytkownik wchodzi w interakcję z nią poprzez wysłanie powiadomienia do okno hosta. [Hosting kontrolki ListBox Win32 na platformie WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control) próbki obejmuje interfejsu użytkownika, który zawiera kilka przykładów jak to działa:  
   
 -   Dołącz element do listy.  
   
@@ -138,18 +138,18 @@ ms.locfileid: "33549089"
   
 -   Wyświetlenia liczba elementów na liście.  
   
- Użytkownik może również wybrać element w polu listy, klikając go, podobnie jak w przypadku konwencjonalnych [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] aplikacji. Dane wyświetlane jest aktualizowana każdorazowo użytkownik zmieni stan pola listy przez zaznaczenie, dodając lub dołączanie elementu.  
+ Użytkownik może również wybrać element w polu listy, klikając go, tak samo, jak w przypadku konwencjonalnych aplikacją systemu Win32. Dane wyświetlane jest aktualizowana każdorazowo użytkownik zmieni stan pola listy przez zaznaczenie, dodając lub dołączanie elementu.  
   
- Aby dołączyć elementy, wysyłania pole listy wiadomości LB_ADDSTRING. Aby usunąć elementy, Wyślij LB_GETCURSEL, aby uzyskać indeks bieżącego zaznaczenia, a następnie LB_DELETESTRING można usunąć elementu. Próbka również wysyła LB_GETCOUNT i używa zwrócona wartość do aktualizacji ekranu, na którym jest wyświetlana liczba elementów. Oba te wystąpienia SendMessage użyj jednej z [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)] deklaracje opisanych w poprzedniej sekcji.  
+ Aby dołączyć elementy, Wyślij pola listy [ `LB_ADDSTRING` komunikat](https://msdn.microsoft.com/library/windows/desktop/bb775181(v=vs.85).aspx). Aby usunąć elementy, Wyślij [ `LB_GETCURSEL` ](https://msdn.microsoft.com/library/windows/desktop/bb775197(v=vs.85).aspx) uzyskać indeks bieżącego zaznaczenia, a następnie [ `LB_DELETESTRING` ](https://msdn.microsoft.com/library/windows/desktop/bb775183(v=vs.85).aspx) można usunąć elementu. Wysyła również próbki [ `LB_GETCOUNT` ](https://msdn.microsoft.com/library/windows/desktop/bb775195(v=vs.85).aspx)i używa zwracanej wartości, aby zaktualizować ekran, który pokazuje liczbę elementów. Oba te wystąpienia [ `SendMessage` ](https://msdn.microsoft.com/library/windows/desktop/ms644950(v=vs.85).aspx) użyj jednej z deklaracjami funkcji PInvoke opisanych w poprzedniej sekcji.  
   
  [!code-csharp[WPFHostingWin32Control#AppendDeleteText](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#appenddeletetext)]
  [!code-vb[WPFHostingWin32Control#AppendDeleteText](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#appenddeletetext)]  
   
- Gdy użytkownik wybiera element lub zmiany ich wyboru, formantu powiadamia okno hosta, wysyłając wiadomość WM_COMMAND, który powoduje <xref:System.Windows.Interop.HwndHost.MessageHook> zdarzenia dla strony. Program obsługi odbiera te same informacje jak procedura okno główne okno hosta. Przekazuje ono również odwołania na wartość logiczną `handled`. Możesz ustawić `handled` do `true` oznacza, że zapewnienia obsługi wiadomości i żadne dalsze przetwarzanie nie jest niezbędne.  
+ Gdy użytkownik wybiera element lub zmiany ich wyboru, formantu powiadamia okno hosta przez wysłanie ich [ `WM_COMMAND` komunikat](https://msdn.microsoft.com/library/windows/desktop/ms647591(v=vs.85).aspx), które generuje <xref:System.Windows.Interop.HwndHost.MessageHook> zdarzenia dla strony. Program obsługi odbiera te same informacje jak procedura okno główne okno hosta. Przekazuje ono również odwołania na wartość logiczną `handled`. Możesz ustawić `handled` do `true` oznacza, że zapewnienia obsługi wiadomości i żadne dalsze przetwarzanie nie jest niezbędne.  
   
- WM_COMMAND są wysyłane z różnych powodów, dlatego należy zbadać identyfikator powiadomień do ustalenia, czy zdarzenie, które chcesz obsługiwać. Identyfikator jest zawarta w wysokiej wyrazu `wParam` parametru. Ponieważ [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] jest ma makro HIWORD, próbki używa operatory bitowe można wyodrębnić identyfikatora. Jeśli wprowadzone przez użytkownika lub zmienić ich wyboru, identyfikator będzie LBN_SELCHANGE.  
+ [`WM_COMMAND`](https://msdn.microsoft.com/library/windows/desktop/ms647591(v=vs.85).aspx) są wysyłane z różnych powodów, dlatego należy zbadać identyfikator powiadomień do ustalenia, czy zdarzenie, które chcesz obsługiwać. Identyfikator jest zawarta w wysokiej wyrazu `wParam` parametru. W przykładzie użyto operatory bitowe można wyodrębnić identyfikatora. Jeśli wprowadzone przez użytkownika lub zmienić ich wyboru, będzie identyfikator [ `LBN_SELCHANGE` ](https://msdn.microsoft.com/library/windows/desktop/bb775161(v=vs.85).aspx).  
   
- Po odebraniu LBN_SELCHANGE próbki pobiera indeks wybranego elementu, wysyłając wiadomość LB_GETCURSEL formantu. Aby uzyskać tekst, należy najpierw utworzyć <xref:System.Text.StringBuilder>. Następnie wysyłania formantu LB_GETTEXT. Przekaż pustych <xref:System.Text.StringBuilder> obiekt jako `wParam` parametru. Gdy zwraca SendMessage, <xref:System.Text.StringBuilder> będzie zawierać tekst wybranego elementu. To zastosowanie SendMessage wymaga jeszcze inny [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)] deklaracji.  
+ Gdy [ `LBN_SELCHANGE` ](https://msdn.microsoft.com/library/windows/desktop/bb775161(v=vs.85).aspx) jest odebrane próbki pobiera indeks wybranego elementu, wysyłając formantu [ `LB_GETCURSEL` komunikat](https://msdn.microsoft.com/library/windows/desktop/bb775197(v=vs.85).aspx). Aby uzyskać tekst, należy najpierw utworzyć <xref:System.Text.StringBuilder>. Następnie należy wysłać formantu [ `LB_GETTEXT` komunikat](https://msdn.microsoft.com/library/windows/desktop/bb761313(v=vs.85).aspx). Przekaż pustych <xref:System.Text.StringBuilder> obiekt jako `wParam` parametru. Gdy [ `SendMessage` ](https://msdn.microsoft.com/library/windows/desktop/ms644950(v=vs.85).aspx) zwraca, <xref:System.Text.StringBuilder> będzie zawierać tekst wybranego elementu. To [ `SendMessage` ](https://msdn.microsoft.com/library/windows/desktop/ms644950(v=vs.85).aspx) wymaga jeszcze innej deklaracji funkcji PInvoke.  
   
  Wreszcie, ustaw `handled` do `true` aby wskazać, że komunikat został obsłużony.  
   

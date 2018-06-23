@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: b1925397fb7cad5e55f992feaa5be2e2d837aac8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: de5ff06e660d3c4e976c10043a7ebc72d102cff5
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592265"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314646"
 ---
 # <a name="tour-of-net"></a>Samouczek platformy .NET
 
@@ -25,7 +25,7 @@ Aby dowiedzieć się, jak skonfigurować środowisko deweloperskie do uruchamian
 
 ## <a name="programming-languages"></a>Języki programowania
 
-.NET obsługuje wiele języków programowania. Implementowanie implementacje .NET [infrastruktury języka wspólnego (CLI)](https://www.visualstudio.com/license-terms/ecma-c-common-language-infrastructure-standards/), między innymi określającej współdziałania środowisko uruchomieniowe i język niezależny od języka. Oznacza to, że wybrano żadnego języka .NET do tworzenia aplikacji i usług na platformie .NET.
+.NET obsługuje wiele języków programowania. Implementowanie implementacje .NET [infrastruktury języka wspólnego (CLI)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/), między innymi określającej współdziałania środowisko uruchomieniowe i język niezależny od języka. Oznacza to, że wybrano żadnego języka .NET do tworzenia aplikacji i usług na platformie .NET.
 
 Firma Microsoft aktywnie rozwija i obsługuje trzech językach .NET: C#, F # i Visual Basic (VB). 
 

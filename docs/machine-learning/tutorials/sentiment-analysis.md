@@ -4,12 +4,12 @@ description: Dowiedzieć się, jak za pomocą ML.NET w scenariuszu klasyfikacji 
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 5194ec8b41304cc06848400607d5d76f288d42e6
-ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
+ms.openlocfilehash: 898b4664120b6eeb0ef18aac3acdc94b0ca0bacd
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298282"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314841"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Samouczek: Użyj ML.NET w przypadku klasyfikacji binarnej analizy wskaźniki nastrojów klientów
 
@@ -35,7 +35,7 @@ Próbka jest aplikacji konsoli, która używa ML.NET do nauczenia modelu, który
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-* [Visual Studio 2017 15,6 lub nowszym](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) z obciążeniem "Programowanie wieloplatformowych .NET Core" zainstalowany.
+* [Visual Studio 2017 15,6 lub nowszym](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) z obciążeniem "Programowanie wieloplatformowych .NET Core" zainstalowany.
 
 * [Wikipedia detox wiersz danych karta rozdzielonych plików (wikiPedia-detox-250-wiersza data.tsv)](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv).
 * [Karta testu linii detox Wikipedia rozdzielonych plików (wikipedia-detox-250-wiersza test.tsv)](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-test.tsv).

@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: 4e2585d7fdeb89e7267f2615113f819d71236dc7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45917a9dbfbd6610c3cca9ab7dcf9f924c329c10
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580175"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314929"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Kiedy należy wybrać oprogramowanie .NET Core dla kontenerów Docker
 
@@ -25,9 +25,9 @@ Wyraźnie widać jeśli mają być aplikacji (aplikacji sieci web lub usługi), 
 
 Oprogramowanie .NET core obsługuje również system macOS jako platformy programistycznej. Jednak gdy wdrożeniem kontenerów do hostów Docker hostujących musi (obecnie) oparta na Linux lub Windows. Na przykład w środowisku programowania można użyć maszyny Wirtualnej systemu Linux uruchomionych na komputerach Mac.
 
-[Visual Studio](https://www.visualstudio.com/) zapewnia zintegrowane środowisko programistyczne (IDE) dla systemu Windows i obsługuje programowanie Docker. 
+[Visual Studio](https://visualstudio.microsoft.com/) zapewnia zintegrowane środowisko programistyczne (IDE) dla systemu Windows i obsługuje programowanie Docker. 
 
-[Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/) IDE ewolucja platformy Xamarin Studio, uruchomionych w macOS i obsługuje od połowy 2017 Docker.
+[Visual Studio for Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/) IDE ewolucja platformy Xamarin Studio, uruchomionych w macOS i obsługuje od połowy 2017 Docker.
 
 Można również użyć [Visual Studio Code](https://code.visualstudio.com/) (kodzie VS) na macOS, Linux i Windows. Kod programu VS w pełni obsługuje .NET Core, w tym IntelliSense i debugowania. Ponieważ kodzie VS jest lekki edytora, można użyć go do opracowywania aplikacji konteneryzowanych na Mac w połączeniu z poziomu interfejsu wiersza polecenia Docker i [narzędzi interfejsu wiersza polecenia (CLI) platformy .NET Core](../../../core/tools/index.md). Można również docelowych .NET Core edytory najbardziej innych firm, takich jak Sublime tekstu, Emacs vi i OmniSharp projekt open source, co zapewnia obsługę funkcji IntelliSense dla języków .NET. Oprócz IDEs i edytory można użyć interfejsu wiersza polecenia platformy .NET Core dla wszystkich obsługiwanych platformach.
 

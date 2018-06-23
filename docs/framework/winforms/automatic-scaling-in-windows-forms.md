@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: e27c56d9a6d745c7d1ff83986e7996aa1bebc879
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0018b9f8644ec7d222a416bb5f71a7c61671009e
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529886"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314766"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Automatyczne skalowanie w formularzach systemu Windows
 Umożliwia skalowanie automatyczne formularza i jego formantów pozwala na jednej maszynie czcionką niektórych wyświetlania rozwiązania lub system, wyświetlane odpowiednio na inny komputer o czcionki różne rozwiązania lub systemu. Gwarantuje on, że formularz i jego formantów inteligentnie spowoduje zmianę rozmiaru, aby były spójne z macierzystego systemu windows i innych aplikacji na komputerach z innymi deweloperami i użytkownika. Obsługę [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] automatyczne skalowanie i style wizualne umożliwia [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] aplikacje do obsługi spójny wygląd i zachowanie w porównaniu do natywnych aplikacji systemu Windows na komputerze każdego użytkownika.
@@ -42,14 +42,6 @@ Podczas wystarczające w większości przypadków ten mechanizm odniesionej go z
 - Automatyczne skalowanie został wdrożony tylko <xref:System.Windows.Forms.Form> klasy nie w <xref:System.Windows.Forms.ContainerControl> klasy. W związku z tym kontrolek użytkownika będzie skalować poprawnie tylko wtedy, gdy formant użytkownika został zaprojektowany na taką samą rozdzielczość formularza i została umieszczona w postaci, w czasie projektowania.
 
 - Formularzy i ich formantów podrzędnych może być jednocześnie przeznaczona wyłącznie przez deweloperów w wielu jeśli ich rozwiązania maszyny są takie same. Podobnie on również dziedziczenia formularza zależne od rozdzielczości skojarzone z formularza nadrzędnego.
-
-> [!NOTE]
-> Z najwyższą różnice w wyświetlania DPIs, szczególnie w nowoczesnych urządzeń 2-in-1 nadal możliwe z najnowszej wersji programu .NET Framework i Visual Studio. Aby rozwiązać ten w zespół przy użyciu różnych Wyświetla wartość DPI, zawsze upewnij się, że program Visual Studio, Projektant formularzy systemu Windows zawsze podstawowych obliczeń układu 96 DPI uruchamia w trybie bez-obsługującą ustawienia DPI. W tym celu wystarczy ustawić następujący klucz rejestru, aby wyłączyć świadomości HighDPI programu Visual Studio:
->
-> ```
-> [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\devenv.exe]
-> "dpiAwareness"=dword:00000000
-> ```
 
 - Nie jest zgodny z nowszą menedżerów układu wprowadzone w systemie [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] w wersji 2.0, takie jak <xref:System.Windows.Forms.FlowLayoutPanel> i <xref:System.Windows.Forms.TableLayoutPanel>.
 

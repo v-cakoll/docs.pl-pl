@@ -1,21 +1,21 @@
 ---
-title: Dane telemetryczne narzędzi interfejsu wiersza polecenia programu .NET core
-description: Odkryj funkcje telemetrii .NET Core narzędzia, które zbierają informacje o użyciu do analizy, które dane są zbierane i jak go wyłączyć.
+title: Dane telemetryczne zestawu SDK programu .NET core
+description: Odkryj funkcje telemetrii .NET Core SDK, które zbierają informacje o użyciu do analizy, które dane są zbierane i jak go wyłączyć.
 author: richlander
 ms.author: mairaw
-ms.date: 08/04/2017
-ms.openlocfilehash: 4c04867f5db512ef53c23ec41ea66db570a82021
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 06/20/2018
+ms.openlocfilehash: f60a1eaa7b869676dfbb67529e7878ca9b9ca34a
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216086"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314880"
 ---
-# <a name="net-core-cli-tools-telemetry"></a>Dane telemetryczne narzędzi interfejsu wiersza polecenia programu .NET core
+# <a name="net-core-sdk-telemetry"></a>Dane telemetryczne zestawu SDK programu .NET core
 
-[.NET Core SDK](index.md) obejmuje [funkcji telemetrii](https://github.com/dotnet/cli/pull/2145) która zbiera informacje o użyciu. Koniecznie zespołu .NET rozumie, używania narzędzi, aby firma Microsoft może je poprawić. Aby uzyskać więcej informacji, zobacz [co zostały dowiedzieliśmy się z .NET Core SDK Telemetrii](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/).
+[.NET Core SDK](index.md) obejmuje [funkcji telemetrii](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry) która zbiera informacje o użyciu. Jest ważne, czy .NET Team rozumie używania narzędzi, można poprawić. Aby uzyskać więcej informacji, zobacz [co zostały dowiedzieliśmy się z .NET Core SDK Telemetrii](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/).
 
-Zebrane dane są anonimowe i opublikowane w zagregowanej formie do użycia przez firmę Microsoft i społecznością w obszarze [Creative Commons autorstwa licencji](https://creativecommons.org/licenses/by/4.0/). 
+Zebrane dane są anonimowe i opublikowane w zagregowanej formie do użycia przez firmę Microsoft i społecznością w obszarze [Creative Commons autorstwa licencji](https://creativecommons.org/licenses/by/4.0/).
 
 ## <a name="scope"></a>Zakres
 
@@ -33,10 +33,9 @@ Dane telemetryczne *włączono* przy użyciu [polecenia interfejsu wiersza polec
 - `dotnet restore`
 - `dotnet run`
 
+## <a name="how-to-opt-out"></a>Jak wykluczyć
 
-## <a name="behavior"></a>Zachowanie
-
-Funkcja telemetrii .NET Core interfejsu wiersza polecenia narzędzia jest domyślnie włączona. Wypisz funkcji telemetrii przez ustawienie `DOTNET_CLI_TELEMETRY_OPTOUT` zmienną środowiskową `1` lub `true`.
+Funkcja telemetrii .NET Core SDK jest domyślnie włączona. Opcja rezygnacji z funkcją telemetrii przez ustawienie `DOTNET_CLI_TELEMETRY_OPTOUT` zmienną środowiskową `1` lub `true`.
 
 ## <a name="data-points"></a>Punkty danych
 
@@ -58,16 +57,17 @@ Począwszy od programu .NET Core SDK 2.0, nowe punkty danych są zbierane:
 - `dotnet` polecenie Opcje i argumenty: tylko znane opcje i argumenty są zbierane (nie dowolne ciągi).
 - Określa, czy zestaw SDK jest uruchomiona w kontenerze.
 - Docelowych platform.
-- Wartość skrótu adresów MAC: kryptograficznie (SHA256) anonimowych, jak i unikatowy identyfikator dla maszyny. Ta metryka nie został opublikowany.
+- Wartość skrótu adresów MAC: kryptograficznie (SHA256) anonimowych, jak i unikatowy identyfikator dla maszyny. Ten pomiar nie jest opublikowana.
 - Skrótu bieżącego katalogu roboczego.
 
 Funkcja nie zbieraj danych osobowych, takich jak nazwy użytkowników lub adresy e-mail. Nie skanuje kodu, a nie wyodrębnić poufnych danych na poziomie projektu, takie jak nazwa, repozytorium lub autora. Danych są bezpiecznie wysyłane do serwerów firmy Microsoft przy użyciu [usługi Microsoft Azure Application Insights](https://azure.microsoft.com/services/application-insights/) technologii, przechowywany w ograniczonym dostępem i publikowane w obszarze opcji ograniczeniami zabezpieczeń z bezpiecznego [usługi Azure Storage](https://azure.microsoft.com/services/storage/) systemów.
 
-Chcemy się dowiedzieć się, jak są używane narzędzia i jeśli działają poprawnie, nie co tworzysz przy użyciu narzędzi. Jeśli podejrzewasz, że dane telemetryczne jest zbieranie danych poufnych lub że jesteśmy nimi lub niewłaściwie obsługi danych, [plików problemu w repozytorium dotnet/cli problemów](https://github.com/dotnet/cli/issues) aby umożliwić zbadanie problemu.
+Zespół .NET chce dowiedzieć się, jak są używane narzędzia i jeśli działają poprawnie, nie co tworzysz przy użyciu narzędzi. Jeśli podejrzewasz zbiera dane telemetryczne danych poufnych lub że dane są nimi lub niewłaściwie obsługi plików problemu w [dotnet/cli](https://github.com/dotnet/cli/issues) repozytorium, aby umożliwić zbadanie problemu.
 
 ## <a name="published-data"></a>Opublikowane dane
 
 Dane publikowane jest dostępna co kwartał i znajduje się w [dane użycia zestawu SDK programu .NET Core](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md). Kolumn w pliku danych są:
+
 - Znacznik czasu
 - Occurrences&#8224;
 - Polecenie
@@ -77,7 +77,7 @@ Dane publikowane jest dostępna co kwartał i znajduje się w [dane użycia zest
 - OSVersion
 - Wersjazestawusdk
 
-&#8224;*Wystąpień* kolumny Wyświetla łączna liczba Użyj tego polecenia dla tego wiersza metryki danego dnia. 
+&#8224;*Wystąpień* kolumny Wyświetla łączna liczba Użyj tego polecenia dla tego wiersza metryki danego dnia.
 
 &#8225;Zazwyczaj *geograficzne* kolumnie jest wyświetlana nazwa kraju. W niektórych przypadkach kontynencie z Antarktyka pojawia się w tej kolumnie, albo z powodu pracowników naukowo-badawczych przy użyciu platformy .NET Core Antarktyka lub nieprawidłowej lokalizacji dane.
 
@@ -92,13 +92,13 @@ Dane publikowane jest dostępna co kwartał i znajduje się w [dane użycia zest
 [2016 - K3](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q3.tsv)  
 [2016 - KWARTAŁ 4](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q4.tsv)  
 [2017 - 1.](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q1.tsv)  
-[2017 - K2](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q2.tsv)
+[2017 - K2](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q2.tsv)  
+[2017 - K3](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q3.tsv)  
+[2017 - KWARTAŁ 4](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q4.tsv)  
 
-Dodatkowe zestawy danych są publikowane, przy użyciu standardowego formatu adresu URL. Zastąp `<YEAR>` roku i Zastąp `<QUARTER>` z kwartału roku (Użyj `1`, `2`, `3`, lub `4`). Pliki znajdują się w wartości tabulatorami (*TSV*) format. 
+Dodatkowe zestawy danych są publikowane, przy użyciu standardowego formatu adresu URL. Zastąp `<YEAR>` roku i Zastąp `<QUARTER>` z kwartału roku (Użyj `1`, `2`, `3`, lub `4`). Pliki znajdują się w wartości tabulatorami (*TSV*) format.
 
-```
-https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-<YEAR>-q<QUARTER>.tsv
-```
+`https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-<YEAR>-q<QUARTER>.tsv`
 
 ## <a name="license"></a>Licencji
 
@@ -110,22 +110,26 @@ Rozkład Microsoft .NET Core jest licencjonowana z [MICROSOFT .NET LIBRARY EULA]
 
 ## <a name="disclosure"></a>Ujawnienie
 
-Narzędzia .NET Core interfejsu wiersza polecenia, wyświetl następujący tekst przy pierwszym uruchomieniu polecenia (na przykład `dotnet restore`). Tekst może się nieco różnić w zależności od wersji zestawu SDK jest uruchomiona. To środowisko "najpierw uruchom" jest jak Microsoft powiadomi użytkownika o zbierania danych.
+.NET Core SDK zawiera następujący tekst przy pierwszym uruchomieniu jednego z [polecenia interfejsu wiersza polecenia platformy .NET Core](index.md) (na przykład `dotnet restore`). Tekst może się nieco różnić w zależności od wersji zestawu SDK jest uruchomiona. To środowisko "najpierw uruchom" jest jak Microsoft powiadomi użytkownika o zbierania danych.
 
 ```console
 Welcome to .NET Core!
 ---------------------
-Learn more about .NET Core @ https://aka.ms/dotnet-docs. Use dotnet --help to see available commands or go to https://aka.ms/dotnet-cli-docs.
- 
+Learn more about .NET Core: https://aka.ms/dotnet-docs
+Use 'dotnet --help' to see available commands or visit: https://aka.ms/dotnet-cli-docs
+
 Telemetry
---------------
-The .NET Core tools collect usage data in order to improve your experience. The data is anonymous and does not include command-line arguments. The data is collected by Microsoft and shared with the community.
-You can opt out of telemetry by setting a DOTNET_CLI_TELEMETRY_OPTOUT environment variable to 1 using your favorite shell.
-You can read more about .NET Core tools telemetry @ https://aka.ms/dotnet-cli-telemetry.
+---------
+The .NET Core tools collect usage data in order to help us improve your experience. 
+The data is anonymous and doesn't include command-line arguments. 
+The data is collected by Microsoft and shared with the community. 
+You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
+
+Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
 ```
 
 ## <a name="see-also"></a>Zobacz także
 
 [Co zostało dowiedzieliśmy się z .NET Core SDK Telemetrii](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/)  
-[Dane telemetryczne źródła odniesienia (repozytorium dotnet/cli; release/2.0.0 gałęzi)](https://github.com/dotnet/cli/tree/release/2.0.0/src/dotnet/Telemetry)   
-[Dane użycia zestawu SDK programu .NET core](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md)
+[Dane telemetryczne źródła odniesienia (repozytorium dotnet/cli)](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)  
+[Dane użycia zestawu SDK programu .NET core](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md)  

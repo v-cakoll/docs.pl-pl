@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ecac9d30b390be886e9d81f11623070301f7d38
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: 07b19c062d314fe3280d9ebed818b484ff9d1b13
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34312030"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314753"
 ---
 # <a name="get-started-with-the-net-framework"></a>Wprowadzenie do programu .NET Framework
 
@@ -71,7 +71,7 @@ Do tworzenia aplikacji programu .NET Framework lub składników należy wykonać
 
 2. Wybierz język lub języki obsługiwane przez program .NET Framework, która ma być używany do opracowywania aplikacji. Dostępnych jest kilka języków, w tym [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F #](../../fsharp/index.md)i C + +/ CLI firmy Microsoft. (Język programowania, który służy do opracowywania aplikacji dla programu .NET Framework jest zgodna [specyfikacji infrastruktury języka wspólnego (CLI)](http://go.microsoft.com/fwlink/?LinkId=199862).)
 
-3. Wybierz i zainstaluj rozwoju środowiska do tworzenia aplikacji i który obsługuje z wybranego języka programowania lub języków. Microsoft zintegrowane środowisko programistyczne (IDE) dla aplikacji .NET Framework jest [programu Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Jest ona dostępna w numerze wersji.
+3. Wybierz i zainstaluj rozwoju środowiska do tworzenia aplikacji i który obsługuje z wybranego języka programowania lub języków. Microsoft zintegrowane środowisko programistyczne (IDE) dla aplikacji .NET Framework jest [programu Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Jest ona dostępna w numerze wersji.
 
 Aby uzyskać więcej informacji na temat tworzenia aplikacji przeznaczonych dla platformy .NET Framework, zobacz [Podręcznik programowania](../../../docs/framework/development-guide.md).
 

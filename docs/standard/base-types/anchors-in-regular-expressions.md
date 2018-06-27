@@ -17,19 +17,20 @@ helpviewer_keywords:
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2cbf0ceb7d5f8e56955f8989e5eb4efba99540bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 24a579acacf41df24779252e1064e1c271310edc
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948592"
 ---
 # <a name="anchors-in-regular-expressions"></a>Zakotwiczenia w wyrażeniach regularnych
 <a name="top"></a> Kotwice lub niepodzielne asercje o zerowej szerokości, należy określić pozycji w ciągu, w którym musi wystąpić dopasowania. Gdy używasz zakotwiczenia w wyrażeniu wyszukiwania aparat wyrażeń regularnych nie przechodzić przez ciąg lub zużywać znaków. Wyszukuje dopasowania w określonej pozycji. Na przykład `^` Określa, że dopasowania musi zaczynać się na początku wiersza lub ciąg. W związku z tym wyrażenia regularnego `^http:` zgodny "http:" tylko wtedy, gdy wystąpi go na początku wiersza. W poniższej tabeli wymieniono kotwice obsługiwane przez wyrażeń regularnych programu .NET.  
   
 |Kotwica|Opis|  
 |------------|-----------------|  
-|`^`|Dopasowania musi występować na początku ciąg lub wiersza. Aby uzyskać więcej informacji, zobacz [Start ciąg lub wiersza](#Start).|  
-|`$`|Dopasowania musi występować na końcu ciągu lub wiersza lub przed `\n` na końcu ciągu lub wiersza. Aby uzyskać więcej informacji, zobacz [End of String lub wiersza](#End).|  
+|`^`|Domyślnie dopasowania muszą występować na początku ciąg; w trybie wielowierszowy musi wystąpić na początku wiersza. Aby uzyskać więcej informacji, zobacz [Start ciąg lub wiersza](#Start).|  
+|`$`|Domyślnie dopasowania musi występować na końcu ciągu lub przed `\n` na końcu ciągu; w trybie wielowierszowy muszą występować na końcu wiersza lub przed `\n` na końcu linii. Aby uzyskać więcej informacji, zobacz [End of String lub wiersza](#End).|  
 |`\A`|Dopasowania musi występować na początku tylko ciągi (bez obsługi wielowierszowe). Aby uzyskać więcej informacji, zobacz [Start z ciągu tylko](#StartOnly).|  
 |`\Z`|Dopasowania musi występować na końcu ciągu lub przed `\n` na końcu ciągu. Aby uzyskać więcej informacji, zobacz [End of String lub przed zakończeniem nowego wiersza](#EndOrNOnly).|  
 |`\z`|Dopasowania musi występować na końcu tylko ciągi. Aby uzyskać więcej informacji, zobacz [zakończenia z ciągu tylko](#EndOnly).|  
@@ -39,7 +40,7 @@ ms.lasthandoff: 05/04/2018
   
 <a name="Start"></a>   
 ## <a name="start-of-string-or-line-"></a>Początek ciągu lub wiersz: ^  
- `^` Zakotwiczenia określa, że następującego wzorca musi się rozpoczynać od pierwszego pozycja znaku w ciągu. Jeśli używasz `^` z <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> opcji (zobacz [opcje wyrażeń regularnych](../../../docs/standard/base-types/regular-expression-options.md)), dopasowania musi występować na początku każdego wiersza.  
+ Domyślnie `^` zakotwiczenia określa, że następującego wzorca musi się rozpoczynać od pierwszego pozycja znaku w ciągu. Jeśli używasz `^` z <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> opcji (zobacz [opcje wyrażeń regularnych](../../../docs/standard/base-types/regular-expression-options.md)), dopasowania musi występować na początku każdego wiersza.  
   
  W poniższym przykładzie użyto `^` zakotwiczenia w wyrażeniu regularnym, który wyodrębnia informacje o lat, podczas których istniał niektóre zespoły professional baseball. Przykład wywołuje dwa przeciążenia <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> metody:  
   

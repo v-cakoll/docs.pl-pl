@@ -2,12 +2,12 @@
 title: Obsługa SqlClient wysokiej dostępności, odzyskiwania po awarii
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: e3599c11743a33ca7cd071573bc67699eed7f606
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 001b99d7a7ec7dd7e483887ceeb0b2563a46da0a
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365712"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948527"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Obsługa SqlClient wysokiej dostępności, odzyskiwania po awarii
 W tym temacie omówiono SqlClient pomocy technicznej (dodany w [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) wysokiej dostępności, odzyskiwania po awarii — zawsze włączonych grup dostępności.  Funkcja zawsze włączonych grup dostępności zostało dodane do programu SQL Server 2012. Aby uzyskać więcej informacji na temat zawsze włączonych grup dostępności zobacz dokumentację SQL Server — książki Online.  
@@ -32,7 +32,7 @@ W tym temacie omówiono SqlClient pomocy technicznej (dodany w [!INCLUDE[net_v45
 2.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
 
 > [!NOTE]
->  Ustawienie `MultiSubnetFailover` do `true` nie jest wymagane w przypadku [!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)]) lub nowszy.
+>  Ustawienie `MultiSubnetFailover` do `true` nie jest wymagane w przypadku [!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)] lub nowszy.
   
 ## <a name="connecting-with-multisubnetfailover"></a>Łączenie z MultiSubnetFailover  
  Określ zawsze `MultiSubnetFailover=True` podczas nawiązywania połączenia odbiornika grupy dostępności programu SQL Server 2012 lub wystąpienie klastra pracy awaryjnej programu SQL Server 2012. `MultiSubnetFailover` Umożliwia przyspieszyć tryb failover dla wszystkich grup dostępności i wystąpienie klastra pracy awaryjnej programu SQL Server 2012 i będzie znacznie ograniczyć czas pracy awaryjnej dla pojedynczych i wielu podsieci topologie AlwaysOn. Podczas pracy awaryjnej wielu podsieci klient podejmie próbę połączenia równolegle. Podczas pracy awaryjnej podsieci agresywnie ponowi próbę połączenia TCP.  

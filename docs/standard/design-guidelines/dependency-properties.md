@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 212cfb1e-cec4-4047-94a6-47209b387f6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 039015f895a491d8709815d6aff52eb6139d779f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7398202cc265fbd55b9bf0b5a53367dedcab57b0
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576119"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948488"
 ---
 # <a name="dependency-properties"></a>Właściwości zależności
 Właściwości zależności (DP) jest regularne właściwość, która przechowuje wartość w magazynie właściwości zamiast magazynować je w zmiennej typu (pola), na przykład.  
@@ -43,7 +43,7 @@ Właściwości zależności (DP) jest regularne właściwość, która przechowu
   
  Klasycznym przykład dołączona właściwość <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType> właściwości. Właściwość reprezentuje pozycję w kolumnie przycisk (nie siatki), ale dotyczy on tylko jeśli przycisk jest zawarty w siatce, w związku z czym jest "dołączony" do przycisków przez siatki.  
   
-```  
+```xaml
 <Grid>  
     <Grid.ColumnDefinitions>  
         <ColumnDefinition />  
@@ -57,7 +57,7 @@ Właściwości zależności (DP) jest regularne właściwość, która przechowu
   
  Definicja właściwości dołączonej wygląda przede wszystkim z właściwością zależności regularnych z tą różnicą, że metody dostępu są reprezentowane przez statycznej metody Get i Set:  
   
-```  
+```csharp
 public class Grid {  
   
     public static int GetColumn(DependencyObject obj) {  

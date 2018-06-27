@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 06/18/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 690e39dcbd02d81b8d4afe918a74795aa02f7fc6
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 9706dad0a8e32651496e0404be4501c2c70e9d75
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314968"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948634"
 ---
 # <a name="tutorial-use-mlnet-to-predict-new-york-taxi-fares-regression"></a>Samouczek: Użyj ML.NET do prognozowania opłat taksówki nowego Jorku (Regresja)
 
@@ -82,7 +82,7 @@ Tworzenie klasy dla danych wejściowych i prognozy:
 
 1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt, a następnie wybierz **Dodaj** > **nowy element**.
 1. W **Dodaj nowy element** okno dialogowe, wybierz opcję **klasy** i zmienić **nazwa** do *TaxiTrip.cs*. Następnie wybierz opcję **Dodaj** przycisku.
-1. Dodaj następujące `using` instrukcje do nowego pliku:
+1. Dodaj następujące `using` dyrektywy do nowego pliku:
 
    [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/TaxiTrip.cs#1 "Add necessary usings")]
 
@@ -96,19 +96,23 @@ Usuń istniejącą definicję klasy i Dodaj następujący kod, który ma dwie kl
 
 ## <a name="define-data-and-model-paths"></a>Zdefiniuj ścieżki danych i modelu
 
-Wróć do *Program.cs* plików i Utwórz trzy stałe globalne do przechowywania ścieżki do plików z zestawami danych i zapisać modelu:
+Wróć do *Program.cs* pliku, a następnie dodaj trzy pola do przechowywania ścieżki do plików z zestawami danych i pliku do zapisania modelu:
 
-* `_datapath` zawiera ścieżkę do danych używany do uczenia modelu.
-* `_testdatapath` zawiera ścieżkę do danych używany do oceny modelu.
-* `_modelpath` zawiera ścieżkę, w której jest przechowywany trenowanego modelu.
+* `_datapath` zawiera ścieżkę do pliku z zestawem danych używany do uczenia modelu.
+* `_testdatapath` zawiera ścieżkę do pliku z zestawem danych używane do oceny modelu.
+* `_modelpath` zawiera ścieżkę do pliku, w którym przechowywana jest trenowanego modelu.
 
-Dodaj następujący kod do prawej wiersz powyżej `Main` metodę, aby określić tych ścieżek:
+Dodaj następujący kod nad `Main` metodę, aby określić tych ścieżek:
 
 [!code-csharp[InitializePaths](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#2 "Define variables to store the data file paths")]
 
+Aby poprzedni kod kompilacji, należy dodać następujące `using` dyrektywy w górnej części *Program.cs* pliku:
+
+[!code-csharp[AddUsingsForPaths](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#17 "Using statements for path definitions")]
+
 ## <a name="create-a-learning-pipeline"></a>Tworzenie potoku learning
 
-Dodaj następujące dodatkowe `using` instrukcje na początku *Program.cs* pliku:
+Dodaj następujące dodatkowe `using` dyrektywy na początku *Program.cs* pliku:
 
 [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
 
@@ -135,7 +139,7 @@ var pipeline = new LearningPipeline();
 
 ## <a name="load-and-transform-data"></a>Ładowania i przekształcania danych
 
-Pierwszym krokiem, który wykonuje potoku learning ładuje dane z zestawu danych szkoleniowych. W tym przypadku szkoleniowy zestaw danych są przechowywane w pliku tekstowym ze ścieżką zdefiniowane przez `_datapath` stałej. Ten plik zawiera nagłówek z nazwami kolumn, w związku z czym pierwszy wiersz powinien być ignorowane podczas ładowania danych. Kolumny w pliku są oddzielone przecinkiem (","). Dodaj następujący kod do `Train` metody:
+Pierwszym krokiem, który wykonuje potoku learning ładuje dane z zestawu danych szkoleniowych. W tym przypadku szkoleniowy zestaw danych są przechowywane w pliku tekstowym ze ścieżką zdefiniowane przez `_datapath` pola. Ten plik zawiera nagłówek z nazwami kolumn, w związku z czym pierwszy wiersz powinien być ignorowane podczas ładowania danych. Kolumny w pliku są oddzielone przecinkiem (","). Dodaj następujący kod do `Train` metody:
 
 ```csharp
 pipeline.Add(new TextLoader(_datapath).CreateFrom<TaxiTrip>(useHeader: true, separator: ','));
@@ -215,7 +219,7 @@ Przy użyciu `await` w `Main` oznacza, że metoda `Main` metoda musi mieć `asyn
 
 [!code-csharp[AsyncMain](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#8 "Make the Main method async and return a task.")]
 
-Należy również dodać następujące `using` instrukcji w górnej części pliku:
+Należy również dodać następujące `using` dyrektywy w górnej części pliku:
 
 [!code-csharp[UsingTasks](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#9 "Add System.Threading.Tasks. to your usings.")]
 

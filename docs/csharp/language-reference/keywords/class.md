@@ -1,5 +1,5 @@
 ---
-title: class (odwołanie w C#)
+title: Class — słowo kluczowe (odwołanie w C#)
 ms.date: 07/18/2017
 f1_keywords:
 - class_CSharpKeyword
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 20968d2f72195db6d16de1b726c6e946b91ffcd5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 04e64e825e4297ceb432393c7bd145a6cf4fcb2c
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216755"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948514"
 ---
 # <a name="class-c-reference"></a>class (odwołanie w C#)
 
@@ -21,12 +21,13 @@ Klasy są zadeklarowane za pomocą słowa kluczowego `class`, jak pokazano w pon
 ```csharp
 class TestClass
 {
-    // Methods, properties, fields, events, delegates 
+    // Methods, properties, fields, events, delegates
     // and nested classes go here.
 }
 ```
 
 ## <a name="remarks"></a>Uwagi
+
 Tylko pojedyncze dziedziczenie jest dozwolone w języku C#. Innymi słowy klasy mogą dziedziczyć implementacji tylko jedną klasę podstawową. Jednak klasy można zaimplementować więcej niż jeden interfejs. W poniższej tabeli przedstawiono przykłady dziedziczenia klas i implementacji interfejsu:
 
 |Dziedziczenie|Przykład|
@@ -40,7 +41,7 @@ Klasy, które deklaruje bezpośrednio z poziomu obszaru nazw, nie są zagnieżd�
 
 Elementów członkowskich klasy, w tym zagnieżdżonych klas, może być [publicznego](../../../csharp/language-reference/keywords/public.md), `protected internal`, [chronione](../../../csharp/language-reference/keywords/protected.md), [wewnętrzny](../../../csharp/language-reference/keywords/internal.md), [prywatnej](../../../csharp/language-reference/keywords/private.md), lub `private protected`. Elementy członkowskie są [prywatnej](../../../csharp/language-reference/keywords/private.md) domyślnie.
 
-Aby uzyskać więcej informacji, zobacz [modyfikatory dostępu](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).
+Aby uzyskać więcej informacji, zobacz [Modyfikatory dostępu](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md). 
 
 Można zadeklarować klas ogólnych, które mają parametry typu. Aby uzyskać więcej informacji, zobacz [klas rodzajowych](../../../csharp/programming-guide/generics/generic-classes.md).
 
@@ -73,11 +74,13 @@ Klasa może zawierać deklaracje następujące elementy:
 - [Struktury](../../../csharp/programming-guide/classes-and-structs/structs.md)
 
 ## <a name="example"></a>Przykład
+
 W poniższym przykładzie pokazano deklarujący pola klasy konstruktory i metody. Przedstawiono również podczas tworzenia wystąpienia obiektu i drukowanie danych wystąpienia. W tym przykładzie są deklarowane jako dwóch klas. To pierwsza klasa `Child`, zawiera dwa pola prywatne (`name` i `age`), dwa konstruktory publiczne i jeden publiczny metody. Klasa sekundę `StringTest`, zawiera `Main`.
 
-[!code-csharp[csrefKeywordsTypes#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/class_1.cs)]
+[!code-csharp[csrefKeywordsTypes#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#5)]
 
 ## <a name="comments"></a>Komentarze
+
 Zwróć uwagę, że w poprzednim przykładzie pól prywatnych (`name` i `age`) jest możliwy tylko za pośrednictwem publicznej metody `Child` klasy. Na przykład nazwa tego elementu podrzędnego, nie można drukować z `Main` metodę, przy użyciu instrukcji następująco:
 
 ```csharp
@@ -90,11 +93,13 @@ Typy zadeklarowane wewnątrz klasy bez domyślnego modyfikator dostępu do `priv
 
 Na koniec należy zauważyć, że dla obiektu, który został utworzony za pomocą konstruktora domyślnego (`child3`), wieku pole zostało zainicjowane do zera domyślnie.
 
-## <a name="c-language-specification"></a>Specyfikacja języka C#
+## <a name="c-language-specification"></a>specyfikacja języka C#
+
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Zobacz też
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
- [Typy odwołań](../../../csharp/language-reference/keywords/reference-types.md)
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
+[Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+[Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
+[Typy odwołań](../../../csharp/language-reference/keywords/reference-types.md)

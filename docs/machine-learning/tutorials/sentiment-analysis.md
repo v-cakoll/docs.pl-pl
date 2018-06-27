@@ -4,12 +4,12 @@ description: Dowiedzieć się, jak za pomocą ML.NET w scenariuszu klasyfikacji 
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 898b4664120b6eeb0ef18aac3acdc94b0ca0bacd
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 727718c00b9270e2bbbe0840879b3a7e164a02d8
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314841"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948621"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Samouczek: Użyj ML.NET w przypadku klasyfikacji binarnej analizy wskaźniki nastrojów klientów
 
@@ -113,13 +113,13 @@ Dodaj następujące dodatkowe `using` instrukcje na początku *Program.cs* pliku
 
 [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#1 "Add necessary usings")]
 
-Musisz utworzyć trzy zmienne globalne, aby mógł pomieścić ścieżka ostatnio pobranych plików:
+Musisz utworzyć trzy pola globalne do przechowywania ścieżek do ostatnio pobranych plików:
 
 * `_dataPath` zawiera ścieżkę do zestawu danych używany do uczenia modelu.
 * `_testDataPath` zawiera ścieżkę do zestawu danych używane do oceny modelu.
 * `_modelPath` zawiera ścieżkę, w której jest zapisywany trenowanego modelu.
 
-Dodaj następujący kod do prawej wiersz powyżej `Main` metodę, aby określić ostatnio pobranych plików:
+Dodaj następujący kod do prawej wiersz powyżej `Main` metodę, aby określić tych ścieżek:
 
 [!code-csharp[Declare file variables](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#2 "Declare variables to store data files")]
 

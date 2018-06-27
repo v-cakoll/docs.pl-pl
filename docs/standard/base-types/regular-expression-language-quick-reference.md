@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b41161d1511f7dce975ac5ad916750734972fa3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc0c1ebdc4f774858916dcc8ec8db2ba386b7a88
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579876"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948608"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Język wyrażeń regularnych — podręczny wykaz
 <a name="top"></a> Wyrażenie regularne jest wzorzec, który aparat wyrażeń regularnych próbuje dopasować w wejściowego tekstu. Wzorzec składa się z co najmniej jednego literału znakowego, operatora lub konstrukcji.  Aby uzyskać krótkie wprowadzenie, zobacz [wyrażeń regularnych programu .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -46,7 +46,7 @@ ms.locfileid: "33579876"
   
 <a name="character_escapes"></a>   
 ## <a name="character-escapes"></a>Znaki unikowe  
- Znak ukośnika odwrotnego (\\) w wyrażeniu regularnym wskazuje znak, który następuje albo znaków specjalnych (jak pokazano w poniższej tabeli) lub powinny być rozumiane jako literału. Aby uzyskać więcej informacji, zobacz [znaki specjalne](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md).  
+ Znak ukośnika odwrotnego (\\) w wyrażeniu regularnym wskazuje znak, który następuje albo znaków specjalnych (jak pokazano w poniższej tabeli) lub powinny być rozumiane jako literału. Aby uzyskać więcej informacji, zobacz [Znaki specjalne](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md).   
   
 |Znak poprzedzony znakiem ucieczki|Opis|Wzorzec|Dopasowania|  
 |-----------------------|-----------------|-------------|-------------|  
@@ -93,8 +93,8 @@ ms.locfileid: "33579876"
   
 |Asercja|Opis|Wzorzec|Dopasowania|  
 |---------------|-----------------|-------------|-------------|  
-|`^`|Dopasowanie musi rozpoczynać się na początku ciągu lub wiersza.|`^\d{3}`|„901” w ciągu<br /><br /> „901-333-”|  
-|`$`|Dopasowania musi występować na końcu ciągu lub przed `\n` na końcu wiersza lub ciąg.|`-\d{3}$`|"-333" w<br /><br /> „-901-333”|  
+|`^`|Domyślnie dopasowania musi rozpoczynać się od ciągu; w trybie wielowierszowy musi zaczynać się na początku wiersza.|`^\d{3}`|„901” w ciągu<br /><br /> „901-333-”|  
+|`$`|Domyślnie dopasowania musi występować na końcu ciągu lub przed `\n` na końcu ciągu; w trybie wielowierszowy musi wystąpić przed zakończeniem wiersza lub przed `\n` na końcu linii.|`-\d{3}$`|"-333" w<br /><br /> „-901-333”|  
 |`\A`|Dopasowanie musi wystąpić na początku ciągu.|`\A\d{3}`|„901” w ciągu<br /><br /> „901-333-”|  
 |`\Z`|Dopasowania musi występować na końcu ciągu lub przed `\n` na końcu ciągu.|`-\d{3}\Z`|"-333" w<br /><br /> „-901-333”|  
 |`\z`|Dopasowanie musi wystąpić na końcu ciągu.|`-\d{3}\z`|"-333" w<br /><br /> „-901-333”|  

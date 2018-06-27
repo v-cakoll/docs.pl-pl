@@ -119,7 +119,7 @@ Usługi danych WCF jest składnikiem [!INCLUDE[dnprdnshort](../../../includes/dn
  **xmlns:m = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"**  
  **xmlns = "http://www.w3.org/2005/Atom" >**  
  **\<Typ title = "text" > zamówień \< /title >**  
- **\<Identyfikator >http://services.odata.org/Northwind/Northwind.svc/Customers("ALFKI") / porządkuje \< /identyfikator >**  
+ **\<Identyfikator>http://services.odata.org/Northwind/Northwind.svc/Customers("ALFKI")/porządkuje\</identyfikato >**  
  **\<Zaktualizowano > 2010-05-19T19:37:07Z\</ zaktualizować >**  
  **\<Link rel = "Auto" title = "Zamówienia" href = "Zamówienia" / >**  
  **\<Wpis >**  

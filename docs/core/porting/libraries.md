@@ -4,12 +4,12 @@ description: Informacje o porcie projektów bibliotek z programu .NET Framework 
 author: cartermp
 ms.author: mairaw
 ms.date: 07/14/2017
-ms.openlocfilehash: 88513eaee35a82d6424fc2218f8cbbe635a8e02c
-ms.sourcegitcommit: ceca5a1c027627abcca2767567703c3879f33325
+ms.openlocfilehash: 0f1d79623b4ece836732010e76a3c93fbbf8099f
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "33218361"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37028048"
 ---
 # <a name="porting-to-net-core---libraries"></a>Eksportowanie do platformy .NET Core - bibliotek
 
@@ -72,18 +72,6 @@ Użyj granic zabezpieczeń dostarczane przez system operacyjny, takich jak konta
 Podobnie jak urzędy certyfikacji, przezroczystość zabezpieczeń umożliwia oddzielenie kodu w trybie piaskownicy od kodu krytycznego dla zabezpieczeń w sposób deklaratywne, ale jest [nie jest już obsługiwany jako granic zabezpieczeń](~/docs/framework/misc/security-transparent-code.md). Ta funkcja jest silnie używany przez program Silverlight. 
 
 Użyj granic zabezpieczeń dostarczane przez system operacyjny, takich jak konta użytkowników, kontenery i wirtualizacji dla uruchomionych procesów o najmniejszej zestaw uprawnień.
-
-### <a name="globaljson"></a>global.json
-
-*Global.json* plik jest opcjonalny plik, który umożliwia ustawienie wersji narzędzi platformy .NET Core projektu. Jeśli używasz co noc kompilacje .NET Core i chcesz określić określoną wersję zestawu SDK, określ wersję z *global.json* pliku. Zazwyczaj znajduje się on w bieżącym katalogu roboczym lub jeden z jego katalogi nadrzędne. 
-
-```json
-{
-  "sdk": {
-    "version": "2.1.0-preview1-006491"
-  }
-}
-```
 
 ## <a name="converting-a-pcl-project"></a>Konwertowanie projektu PCL
 

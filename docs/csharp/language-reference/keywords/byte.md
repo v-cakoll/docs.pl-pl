@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - byte keyword [C#]
 ms.assetid: 111f1db9-ca32-4f0e-b497-4783517eda47
-ms.openlocfilehash: 4ac913bd0d1bd178211ad26a720a80e22877c961
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 28acbe67b85637550fdb1f5e290a9abb60bf5c65
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172179"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37027892"
 ---
 # <a name="byte-c-reference"></a>byte (odwołanie w C#)
 
 `byte` Określa typ całkowity, który przechowuje wartości opisane w poniższej tabeli.  
   
-|Typ|Zakres|Rozmiar|Typ programu .NET Framework|  
+|Typ|Zakres|Rozmiar|Typ architektury .NET|  
 |----------|-----------|----------|-------------------------|  
 |`byte`|0 do 255.|Liczba całkowita bez znaku 8-bitowych|<xref:System.Byte?displayProperty=nameWithType>|  
   
@@ -106,7 +106,7 @@ SampleMethod((byte)5);
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Byte>  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
+ [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
  [Tabela typów całkowitych](../../../csharp/language-reference/keywords/integral-types-table.md)  

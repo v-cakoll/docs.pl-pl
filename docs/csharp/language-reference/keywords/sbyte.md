@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - sbyte keyword [C#]
 ms.assetid: 1a9c7b48-73d1-4d33-b485-c4faf0a816bc
-ms.openlocfilehash: 4a2d13463348c2f0c32aec076623f59040d1d81f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 94968ed61fced9716112740613a4e3a86622e2e3
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289195"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37028061"
 ---
 # <a name="sbyte-c-reference"></a>sbyte (odwołanie w C#)
 
 `sbyte` Określa typ całkowity, który przechowuje wartości w zależności od rozmiaru i zakres pokazano w poniższej tabeli.  
   
-|Typ|Zakres|Rozmiar|Typ programu .NET Framework|  
+|Typ|Zakres|Rozmiar|Typ architektury .NET|  
 |----------|-----------|----------|-------------------------|  
 |`sbyte`|-128 do 127 znaków.|8-bitową liczbę całkowitą ze znakiem|<xref:System.SByte?displayProperty=nameWithType>|  
   
@@ -106,7 +106,7 @@ sbyte y = (sbyte)3.0;  // OK: explicit conversion
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.SByte>  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
+ [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
  [Tabela typów całkowitych](../../../csharp/language-reference/keywords/integral-types-table.md)  

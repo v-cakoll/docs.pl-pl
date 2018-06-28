@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - short keyword [C#]
 ms.assetid: 04c10688-e51a-4a87-bfec-83f7fb42ff11
-ms.openlocfilehash: 657d5bb3866a3ad88226740ebf7ef12c3654e56b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7991259aadd391288caa37b35addd6e16e234878
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33288167"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37027866"
 ---
 # <a name="short-c-reference"></a>short (odwołanie w C#)
 
 `short` Określa typ całkowite danych, który przechowuje wartości w zależności od rozmiaru i zakres pokazano w poniższej tabeli.  
   
-|Typ|Zakres|Rozmiar|Typ programu .NET Framework|  
+|Typ|Zakres|Rozmiar|Typ architektury .NET|  
 |----------|-----------|----------|-------------------------|  
 |`short`|-32768 do 32 767.|16-bitową liczbę całkowitą ze znakiem|<xref:System.Int16?displayProperty=nameWithType>|  
   
@@ -102,7 +102,7 @@ short y = (short)3.0;   // OK: explicit conversion
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Int16>  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
+ [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
  [Tabela typów całkowitych](../../../csharp/language-reference/keywords/integral-types-table.md)  

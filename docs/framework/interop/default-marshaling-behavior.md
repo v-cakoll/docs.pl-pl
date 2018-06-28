@@ -1,6 +1,6 @@
 ---
 title: Domyślne zachowanie marshalingu
-ms.date: 03/30/2017
+ms.date: 06/26/2018
 dev_langs:
 - csharp
 - vb
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f5fef84250f9dbc10a921a6844f7020c72835cea
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 83bb8b0305e47ca7b354db03c7a9a3dd02f62d41
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457409"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37028074"
 ---
 # <a name="default-marshaling-behavior"></a>Domyślne zachowanie marshalingu
 Przekazywanie międzyoperacyjne działa w regułach tego dyktować zachowania danych skojarzonych z parametrami metody przesyłanych między zarządzanymi i niezarządzanymi pamięci. Te wbudowane reguły kontrolowania takich kierowania działań jako przekształcenia typu danych, czy wywoływany można zmienić przekazywania danych i zwracany do obiektu wywołującego te zmiany i w której okolicznościach organizatora zapewnia optymalizacji wydajności.  
@@ -113,7 +113,9 @@ interface DelegateTest : IDispatch {
 ```  
   
  Wskaźnik funkcji jest wyłuskiwany, tak samo, jak można usunąć odwołania innych wskaźnika funkcji niezarządzanej.  
-  
+
+W tym przykładzie, jeśli dwa obiekty delegowane są przekazywane jako <xref:System.Runtime.InteropServices.UnmanagedType.FunctionPtr?displayProperty=nameWithType>, wynikiem jest `int` i wskaźnika do `int`. Ponieważ typy delegatów są są przekazywane, `int` tutaj reprezentuje wskaźnik do void (`void*`), czyli adres delegata w pamięci. Innymi słowy, ten wynik jest specyficzna dla 32-bitowe systemy Windows, ponieważ `int` tutaj reprezentuje rozmiar wskaźnika funkcji.
+
 > [!NOTE]
 >  Odwołanie do wskaźnika funkcji do delegata zarządzanych przez kod niezarządzany nie zapobiega środowisko uruchomieniowe języka wspólnego wykonywania wyrzucanie elementów bezużytecznych do zarządzanego obiektu.  
   

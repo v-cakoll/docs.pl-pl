@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 4839cacfdc78abc45afc1c59652b944be4863877
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: ea465e240a1d74b3f473316ca63b05bd0ba90777
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948371"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37028035"
 ---
 # <a name="char-c-reference"></a>char (odwołanie w C#)
 
@@ -20,7 +20,7 @@ ms.locfileid: "36948371"
 
  Znaki Unicode są używane do reprezentowania większość języków pisanych na świecie.
 
-|Typ|Zakres|Rozmiar|Typ programu .NET Framework|
+|Typ|Zakres|Rozmiar|Typ architektury .NET|
 |----------|-----------|----------|-------------------------|
 |`char`|U + 0000 do U + FFFF|Znak Unicode 16-bitowych|<xref:System.Char?displayProperty=nameWithType>|
 

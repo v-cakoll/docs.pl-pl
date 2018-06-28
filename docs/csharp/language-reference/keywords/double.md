@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - double data type [C#]
 ms.assetid: 0980e11b-6004-4102-abcf-cfc280fc6991
-ms.openlocfilehash: b6f9ecc75fbdeff27bf8c0e183a585757860aff2
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 8e3a94bb79d46f2815e46b86f1aca92acc73e5c2
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948387"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37027853"
 ---
 # <a name="double-c-reference"></a>double (odwołanie w C#)
 
 `double` — Słowo kluczowe oznacza typu prostego, która przechowuje 64-bitowych wartości zmiennoprzecinkowych. W poniższej tabeli przedstawiono dokładność i zakres przybliżonej `double` typu.
 
-|Typ|Zakresie|Dokładność|Typ programu .NET Framework|
+|Typ|Zakresie|Dokładność|Typ architektury .NET|
 |----------|-----------------------|---------------|-------------------------|
 |`double`|±5.0 x 10<sup>−324</sup> do ±1.7 x 10<sup>308</sup>|15-16 cyfr|<xref:System.Double?displayProperty=nameWithType>|
 

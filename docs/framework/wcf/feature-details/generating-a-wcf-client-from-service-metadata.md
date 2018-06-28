@@ -2,12 +2,12 @@
 title: Generowanie klienta programu WCF na podstawie metadanych usługi
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: bd349099213a7818555a910aac1949999a57a58f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55034868b465b63dca3ca28238d81b348d9d6893
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494020"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37027931"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Generowanie klienta programu WCF na podstawie metadanych usługi
 W tym temacie opisano sposób użycia różnych przełączników w Svcutil.exe do generowania klientów z dokumentów metadanych.  
@@ -20,7 +20,7 @@ W tym temacie opisano sposób użycia różnych przełączników w Svcutil.exe d
   
 -   Żądanie DISCO (przy użyciu [DiscoveryClientProtocol](http://go.microsoft.com/fwlink/?LinkId=94777) z usług sieci Web programu ASP.NET) na podany adres.  
   
- Svcutil.exe generuje klienta oparte na sieci Web Services Description Language (WSDL) lub zasad pliku otrzymał od usługi. Główna nazwa użytkownika (UPN) jest generowana przez połączenie nazwy użytkownika z "@", a następnie dodanie w pełni kwalifikowaną nazwą domeny (FQDN). Jednak dla użytkowników, którzy zarejestrowane w usłudze Active Directory, ten format jest nieprawidłowy i nazwy UPN, generowany przez narzędzie powoduje to niepowodzenie w uwierzytelnianiu Kerberos z następujący komunikat o błędzie: **próba logowania nie powiodła się.** Aby rozwiązać ten problem, Usuń ręcznie generowany przez narzędzie pliku klienta.  
+ Svcutil.exe generuje klienta oparte na sieci Web Services Description Language (WSDL) lub zasad pliku otrzymał od usługi. Główna nazwa użytkownika (UPN) jest generowana przez połączenie nazwy użytkownika z "\@", a następnie dodanie w pełni kwalifikowaną nazwą domeny (FQDN). Jednak dla użytkowników, którzy zarejestrowane w usłudze Active Directory, ten format jest nieprawidłowy i nazwy UPN, generowany przez narzędzie powoduje to niepowodzenie w uwierzytelnianiu Kerberos z następujący komunikat o błędzie: **próba logowania nie powiodła się.** Aby rozwiązać ten problem, Usuń ręcznie generowany przez narzędzie pliku klienta.  
   
 ```  
 svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>  

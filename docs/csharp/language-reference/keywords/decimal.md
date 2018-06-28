@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - decimal keyword [C#]
 ms.assetid: b6522132-b5ee-4be3-ad13-3adfdb7de7a1
-ms.openlocfilehash: 589218e410d5c78b5df959bca84d409485e52e5d
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 18924abefb85012fc6c61073603c594de906b58d
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948475"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37027957"
 ---
 # <a name="decimal-c-reference"></a>decimal (odwołanie w C#)
 
 `decimal` — Słowo kluczowe wskazuje typ danych 128-bitowego. W porównaniu do innych typów zmiennoprzecinkowych `decimal` typ ma więcej precision i mniejszy zakres, dzięki czemu odpowiedni do obliczeń finansowych i finansowe. Zakresie i dokładność `decimal` typu przedstawiono w poniższej tabeli.
 
-|Typ|Przybliżony zakres|Dokładność|Typ programu .NET Framework|
+|Typ|Przybliżony zakres|Dokładność|Typ architektury .NET|
 |----------|-----------------------|---------------|-------------------------|
 |`decimal`|(-7.9 x 10<sup>28</sup> 7,9 x 10<sup>28</sup>) / (10<sup>0</sup> 10<sup>28</sup>)|28–29 cyfr znaczących|<xref:System.Decimal?displayProperty=nameWithType>|
 

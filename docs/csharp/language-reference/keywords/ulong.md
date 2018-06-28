@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - ulong keyword [C#]
 ms.assetid: f2ece624-837a-40cf-92c5-343e7f33397c
-ms.openlocfilehash: 1f291d2dd2706231f018a04f0af86051cef6c28a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 96975bcfc270694a59a19e7c40183083dbc5bd98
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33288310"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37027996"
 ---
 # <a name="ulong-c-reference"></a>ulong (odwołanie w C#)
 
 `ulong` — Słowo kluczowe Określa typ całkowity, który przechowuje wartości w zależności od rozmiaru i zakres pokazano w poniższej tabeli.  
   
-|Typ|Zakres|Rozmiar|Typ programu .NET Framework|  
+|Typ|Zakres|Rozmiar|Typ architektury .NET|  
 |----------|-----------|----------|-------------------------|  
 |`ulong`|0 — 18,446,744,073,709,551,615|Liczba całkowita bez znaku 64-bitowych|<xref:System.UInt64?displayProperty=nameWithType>|  
   
@@ -97,7 +97,7 @@ ulong y = (ulong)3.0;
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.UInt64>  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
+ [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
  [Tabela typów całkowitych](../../../csharp/language-reference/keywords/integral-types-table.md)  

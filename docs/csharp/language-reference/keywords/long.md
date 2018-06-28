@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - long keyword [C#]
 ms.assetid: f9b24319-1f39-48be-a42b-d528ee28a7fd
-ms.openlocfilehash: f2bdc34400215ad24d5dcec2e1e9f314a01430d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 106b832801a373ca387be455ef1c0df4233621d0
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33288457"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37027827"
 ---
 # <a name="long-c-reference"></a>long (odwołanie w C#)
 
 `long` Określa typ całkowity, który przechowuje wartości w zależności od rozmiaru i zakres pokazano w poniższej tabeli.  
   
-|Typ|Zakres|Rozmiar|Typ programu .NET Framework|  
+|Typ|Zakres|Rozmiar|Typ architektury .NET|  
 |----------|-----------|----------|-------------------------|  
 |`long`|-9,223,372,036,854,775,808 do 9,223,372,036,854,775,807|64-bitowa liczba całkowita|<xref:System.Int64?displayProperty=nameWithType>|  
   
@@ -104,7 +104,7 @@ long y = (long)3.0;   // OK: explicit conversion
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Int64>  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
+ [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
  [Tabela typów całkowitych](../../../csharp/language-reference/keywords/integral-types-table.md)  

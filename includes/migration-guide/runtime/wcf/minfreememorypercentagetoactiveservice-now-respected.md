@@ -6,5 +6,5 @@
 |Sugestia|Jeśli ilość wolnej pamięci dostępnej na serwerze sieci web jest mniejsza niż wartość procentowa zdefiniowane przez ustawienie konfiguracji wystąpienia wyjątku. Niektóre usługi WCF, które pomyślnie uruchomiona i został uruchomiony w środowisku ograniczonego pamięci teraz może zakończyć się niepowodzeniem.|
 |Zakres|Pomocnicza|
 |Wersja|4.5.1|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

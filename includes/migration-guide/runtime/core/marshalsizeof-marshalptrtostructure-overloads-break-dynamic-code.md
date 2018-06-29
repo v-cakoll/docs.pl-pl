@@ -6,5 +6,5 @@
 |Sugestia|Zaktualizuj skryptom wyraźnie wskazuje, które przeładowanie powinien być używany. Może to zazwyczaj wykonywane przez jawne rzutowanie parametrów typu metody jako <xref:System.Type>. Zobacz [to łącze](https://support.microsoft.com/kb/2909958/) dla bardziej szczegółowe informacje i przykłady tego, jak w celu obejścia tego problemu.|
 |Zakres|Pomocnicza|
 |Wersja|4.5.1|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

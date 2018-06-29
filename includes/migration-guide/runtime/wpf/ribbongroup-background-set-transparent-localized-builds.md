@@ -6,5 +6,5 @@
 |Sugestia|Uaktualnij do platformy .NET Framework 4.7|
 |Zakres|Krawędź|
 |Wersja|4.6.2|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

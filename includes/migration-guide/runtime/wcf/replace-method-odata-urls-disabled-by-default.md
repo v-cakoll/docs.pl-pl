@@ -6,6 +6,6 @@
 |Sugestia|Jeśli wymagana jest metoda Zamień (czyli rzadko), można ją ponownie włączyć za pomocą ustawień konfiguracji (<xref:System.Data.Services.Configuration.DataServicesFeaturesSection.ReplaceFunction?displayProperty=name>). Jednak metoda włączone Zamień można otworzyć luk w zabezpieczeniach i powinien być używany tylko po dokładne przeglądu.|
 |Zakres|Krawędź|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Data.Services.DataService%601?displayProperty=nameWithType></li></ul>|
 

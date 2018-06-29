@@ -6,6 +6,6 @@
 |Sugestia|Jeśli nazwa pliku dziennika jest ważne dla aplikacji, aplikacji powinny zostać uaktualnione oczekiwać _log.ldf standardowy format nazwy pliku.|
 |Zakres|Krawędź|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Data.Objects.ObjectContext.CreateDatabase?displayProperty=nameWithType></li></ul>|
 

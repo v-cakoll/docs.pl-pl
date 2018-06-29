@@ -6,5 +6,5 @@
 |Sugestia|Jeśli wystąpią problemy dotyczące porównywania wartości bez znaku 16-bitowe w .NET Framework 4.7, uaktualnienie do programu .NET Framework 4.7.1.|
 |Zakres|Krawędź|
 |Wersja|4.7|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

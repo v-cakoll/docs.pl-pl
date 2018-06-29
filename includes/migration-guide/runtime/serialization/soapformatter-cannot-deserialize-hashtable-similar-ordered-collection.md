@@ -6,6 +6,6 @@
 |Sugestia|<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter?displayProperty=name> serializacji powinna zostać zastąpiona <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=name> szeregowanie lub <xref:System.Runtime.Serialization.NetDataContractSerializer?displayProperty=name> pozwala uzyskać odporność na zmiany .NET Framework.|
 |Zakres|Pomocnicza|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Serialize(System.IO.Stream,System.Object)?displayProperty=nameWithType></li><li><xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Serialize(System.IO.Stream,System.Object,System.Runtime.Remoting.Messaging.Header[])?displayProperty=nameWithType></li><li><xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Deserialize(System.IO.Stream)?displayProperty=nameWithType></li><li><xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Deserialize(System.IO.Stream,System.Runtime.Remoting.Messaging.HeaderHandler)?displayProperty=nameWithType></li></ul>|
 

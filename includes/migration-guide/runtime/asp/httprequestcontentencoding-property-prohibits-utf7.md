@@ -6,6 +6,6 @@
 |Sugestia|Najlepiej, jeśli aplikacje powinien zostać zaktualizowany w taki sposób, aby nie używać UTF-7 kodowanie w <xref:System.Web.HttpRequest?displayProperty=name>s. Alternatywnie można przywracać starsze zachowanie przy użyciu <code>aspnet:AllowUtf7RequestContentEncoding</code> atrybutu [appSettings](https://msdn.microsoft.com/library/hh975440(v=vs.110).aspx) elementu.|
 |Zakres|Krawędź|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Web.HttpRequest.ContentEncoding?displayProperty=nameWithType></li></ul>|
 

@@ -5,5 +5,5 @@
 |Szczegóły|Nowa funkcja CodeDOM umożliwia kompilatora do kompilowania dla docelowej wersji biblioteki mscorlib.dll zamiast wersji .NET Framework 4.5 biblioteki mscorlib.dll.|
 |Zakres|Krawędź|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

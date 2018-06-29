@@ -6,6 +6,6 @@
 |Sugestia|Jeden z następujących czynności:<ol><li>Uaktualnij do platformy .NET Framework 4.7.</li><li>Instalowanie obsługi najnowsze poprawki dla programu .NET Framework 4.6.2.</li><li>Unikaj usuwanie kolumn do asynchronicznego odpowiedzi na <xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object)> zostało ukończone.</li></ol>|
 |Zakres|Krawędź|
 |Wersja|4.6.2|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object)?displayProperty=nameWithType></li><li><xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object,System.Windows.Controls.DataGridColumn)?displayProperty=nameWithType></li></ul>|
 

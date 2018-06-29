@@ -6,6 +6,6 @@
 |Sugestia|Nie oczekuje, że poprawnie porównuje reprezentacji ciągu ContentDispositions z różnych wersji .NET Framework ze sobą. Konwertowanie ciągów do ContentDispositions, jeśli to możliwe, przed przeprowadzeniem porównania.|
 |Zakres|Pomocnicza|
 |Wersja|4.6|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Net.Mime.ContentDisposition.ToString?displayProperty=nameWithType></li><li><xref:System.Net.Mime.ContentDisposition.GetHashCode?displayProperty=nameWithType></li></ul>|
 

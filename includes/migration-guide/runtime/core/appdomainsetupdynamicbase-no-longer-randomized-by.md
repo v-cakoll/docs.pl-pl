@@ -6,6 +6,6 @@
 |Sugestia|Należy pamiętać, że włączenie <code>UseRandomizedStringHashAlgorithm</code> nie spowoduje <xref:System.AppDomainSetup.DynamicBase> są wybierane. W razie potrzeby losowe base muszą być produkowane w kodzie aplikacji, a nie za pośrednictwem tego interfejsu API.|
 |Zakres|Krawędź|
 |Wersja|4.6|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.AppDomainSetup.DynamicBase?displayProperty=nameWithType></li></ul>|
 

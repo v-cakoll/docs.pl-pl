@@ -6,6 +6,6 @@
 |Sugestia|To zachowanie zostało rozwiązane w [GitHub problem #339](https://github.com/Microsoft/CodeContracts/issues/339). Aby usunąć to ostrzeżenie, możesz pobrać i skompilować zaktualizowaną wersję kodu źródłowego dla narzędzia kontraktów kodu z [GitHub](https://github.com/Microsoft/CodeContracts/blob/master/README.md). Pobierz informacje znajdują się w dolnej części strony.|
 |Zakres|Pomocnicza|
 |Wersja|4.6.1|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Diagnostics.Contracts.Contract.Invariant(System.Boolean)?displayProperty=nameWithType></li><li><xref:System.Diagnostics.Contracts.Contract.Requires(System.Boolean)?displayProperty=nameWithType></li></ul>|
 

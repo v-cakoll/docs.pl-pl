@@ -6,5 +6,5 @@
 |Sugestia|<xref:System.IndexOutOfRangeException?displayProperty=name> Jest zgłaszany wyjątek, jeśli <xref:System.Diagnostics.Tracing.EventListener?displayProperty=name> odczytuje <xref:System.Diagnostics.Tracing.EventSource?displayProperty=name> danych w procesie dla źródła zdarzenia, który narusza tego kontraktu.|
 |Zakres|Pomocnicza|
 |Wersja|4.5.1|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

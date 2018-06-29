@@ -6,6 +6,6 @@
 |Sugestia|Jeśli limit 100 cofania jest zbyt niska, limit można ustawić jawnie z <xref:System.Windows.Controls.Primitives.TextBoxBase.UndoLimit>|
 |Zakres|Krawędź|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Windows.Controls.TextBox?displayProperty=nameWithType></li></ul>|
 

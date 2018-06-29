@@ -6,5 +6,5 @@
 |Sugestia|Zaktualizuj kod kierowania do pracy z obiektami z systemem innym niż odbicia|
 |Zakres|Pomocnicza|
 |Wersja|4.6|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

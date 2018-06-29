@@ -6,5 +6,5 @@
 |Sugestia|Jeśli okaże się, że wyrażeń regularnych w aplikacji sieci web nie działają po uaktualnieniu do wersji .NET Framework 4.7.2, możesz je zaktualizować wartość <code>&quot;dataAnnotations:dataTypeAttribute:disableRegEx&quot;</code> ustawienie <code>false</code> można powrócić do poprzedniej zachowanie.<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;appsettings&gt;&#13;&#10;...&#13;&#10;&lt;add key=&quot;dataAnnotations:dataTypeAttribute:disableRegEx&quot; value=&quot;false&quot;/&gt;&#13;&#10;...&#13;&#10;&lt;/appsettings&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>|
 |Zakres|Pomocnicza|
 |Wersja|4.7.2|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

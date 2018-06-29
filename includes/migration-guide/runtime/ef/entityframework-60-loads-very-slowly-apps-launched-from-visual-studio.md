@@ -6,5 +6,5 @@
 |Sugestia|Ten problem został rozwiązany w EntityFramework 6.0.2. Zaktualizuj platformy EntityFramework, aby uniknąć problemu z wydajnością.|
 |Zakres|Krawędź|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

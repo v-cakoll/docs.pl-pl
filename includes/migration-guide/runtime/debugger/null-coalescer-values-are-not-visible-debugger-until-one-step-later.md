@@ -6,5 +6,5 @@
 |Sugestia|Wykonywanie krok po kroku jeden dodatkowy czas w debugerze spowoduje, że lokalny/pola. wartość zaktualizowania poprawnie. Ponadto ten problem został rozwiązany w .NET Framework 4.6; Uaktualnianie do tej wersji platformy powinno rozwiązać problem.|
 |Zakres|Krawędź|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

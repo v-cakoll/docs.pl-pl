@@ -6,5 +6,5 @@
 |Sugestia|Pliku SQL SqlWorkflowInstanceStoreSchemaUpgrade.sql musi zostać zastosowana do istniejących instalacji, aby to zmienić. Nowe instalacje bazy danych ma automatycznie zmiany.|
 |Zakres|Krawędź|
 |Wersja|4.7|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

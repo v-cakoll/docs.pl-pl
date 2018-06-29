@@ -6,6 +6,6 @@
 |Sugestia|Każdy kod, których wykonanie zależy od obsługi <xref:System.Security.Cryptography.CryptographicException?displayProperty=name> zamiast tego należy wykonać, jeśli uwierzytelnienie nie powiedzie się i metoda zwraca <strong>False</strong>.|
 |Zakres|Pomocnicza|
 |Wersja|4.6.2|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Security.Cryptography.RSACng.VerifyHash(System.Byte[],System.Byte[],System.Security.Cryptography.HashAlgorithmName,System.Security.Cryptography.RSASignaturePadding)?displayProperty=nameWithType></li></ul>|
 

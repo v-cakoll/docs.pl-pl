@@ -6,5 +6,5 @@
 |Sugestia|Ta zmiana umożliwia debugowanie w przypadkach, gdy długość komunikatu przekracza limity dozwolone przez ASP.NET lub usługi WCF. Należy zmodyfikować każdy kod przetwarza oparte na kod stanu HTTP 400.|
 |Zakres|Krawędź|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

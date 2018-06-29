@@ -6,6 +6,6 @@
 |Sugestia|Należy pamiętać, że niektóre dat wczesne i późne mogą być nieco inne w przypadku korzystania z PersianCalendar w .NET Framework 4.6. Ponadto podczas serializowania dat między procesami, które mogą być uruchamiane na różne wersje programu .NET Framework, nie należy przechowywać je jako ciągi daty PersianCalendar (ponieważ te wartości mogą się różnić).|
 |Zakres|Pomocnicza|
 |Wersja|4.6|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Globalization.PersianCalendar?displayProperty=nameWithType></li></ul>|
 

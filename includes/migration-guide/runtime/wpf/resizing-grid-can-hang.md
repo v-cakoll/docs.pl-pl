@@ -6,5 +6,5 @@
 |Sugestia|Uaktualnij do platformy .NET Framework 4.7.1.  Alternatywnie Jeśli nie ma potrzeby algorytm 4,7 alokacji służy następujące ustawienia konfiguracji:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Controls.Grid.StarDefinitionsCanExceedAvailableSpace=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
 |Zakres|Krawędź|
 |Wersja|4.7|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

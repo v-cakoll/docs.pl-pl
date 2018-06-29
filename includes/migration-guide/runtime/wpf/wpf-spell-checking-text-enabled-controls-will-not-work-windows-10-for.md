@@ -6,5 +6,5 @@
 |Sugestia|Należy pamiętać, że język lub tekst, który ma być sprawdzana pisownia muszą zostać dodane jako język do sprawdzania pisowni do pracy w systemie Windows 10.|
 |Zakres|Krawędź|
 |Wersja|4.6|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

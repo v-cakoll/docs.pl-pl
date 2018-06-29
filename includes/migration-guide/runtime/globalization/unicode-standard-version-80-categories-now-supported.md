@@ -6,6 +6,6 @@
 |Sugestia|Przegląd kodu i Usuń/Zmień logikę, która jest zależna od ustalony kategorie znaków Unicode.|
 |Zakres|Pomocnicza|
 |Wersja|4.6.2|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Char.GetUnicodeCategory(System.Char)?displayProperty=nameWithType></li><li><xref:System.Globalization.CharUnicodeInfo.GetUnicodeCategory(System.Char)?displayProperty=nameWithType></li><li><xref:System.Globalization.CharUnicodeInfo.GetUnicodeCategory(System.String,System.Int32)?displayProperty=nameWithType></li></ul>|
 

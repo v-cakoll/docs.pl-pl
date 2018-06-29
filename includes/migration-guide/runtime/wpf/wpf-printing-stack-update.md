@@ -6,5 +6,5 @@
 |Sugestia|Aby użyć starego stosu w systemie Windows 10 twórców aktualizacji, należy ustawić <code>UseXpsOMPrinting</code> wartości REG_DWORD <code>HKEY_CURRENT_USER\Software\Microsoft\.NETFramework\Windows Presentation Foundation\Printing</code> klucz rejestru w celu <code>1</code>.|
 |Zakres|Krawędź|
 |Wersja|4.7|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

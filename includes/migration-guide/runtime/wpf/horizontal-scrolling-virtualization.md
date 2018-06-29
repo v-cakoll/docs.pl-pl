@@ -6,6 +6,6 @@
 |Sugestia|Aplikacji, która używa wartości prognozowanej na <xref:System.Windows.Controls.Primitives.IScrollInfo.HorizontalOffset?displayProperty=name> należy zmienić można pobrać wartość rzeczywista (i wartość <xref:System.Windows.Controls.Primitives.IScrollInfo.ExtentWidth?displayProperty=name>) po przewijania poziomego, które mogą ulec zmianie <xref:System.Windows.Controls.Primitives.IScrollInfo.ExtentWidth?displayProperty=name> z powodu dezaktywowanie wirtualizacji.|
 |Zakres|Pomocnicza|
 |Wersja|4.6.2|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Windows.Controls.Primitives.IScrollInfo?displayProperty=nameWithType></li></ul>|
 

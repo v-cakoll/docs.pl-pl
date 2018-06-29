@@ -6,6 +6,6 @@
 |Sugestia|Ponieważ poprzednie jest deterministyczna, kod jest mało prawdopodobne zależą od niej. Jednak w przypadku mało prawdopodobne, że puste elementy wyliczalne są porównywane i powinny być czasem nierówne, jawne puste tablice należy utworzyć (<code>new T[0]</code>) zamiast <xref:System.Linq.Enumerable.Empty%60%601>.|
 |Zakres|Krawędź|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Linq.Enumerable.Empty%60%601?displayProperty=nameWithType></li></ul>|
 

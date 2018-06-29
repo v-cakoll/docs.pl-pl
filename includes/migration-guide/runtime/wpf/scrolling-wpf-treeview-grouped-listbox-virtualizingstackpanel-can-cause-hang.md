@@ -6,6 +6,6 @@
 |Sugestia|Tego błędu można uniknąć przez uaktualnienie do systemu .NET Framework 4.5.1. Alternatywnie marginesy można usunąć z kolekcji widoku (takich jak <xref:System.Windows.Controls.TreeView?displayProperty=name>s) w zwirtualizowanych stosu panele, jeśli wszystkie elementy mają taki sam rozmiar.|
 |Zakres|Główne|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Windows.Controls.VirtualizingStackPanel.SetIsVirtualizing(System.Windows.DependencyObject,System.Boolean)?displayProperty=nameWithType></li></ul>|
 

@@ -6,6 +6,6 @@
 |Sugestia|Oczekuje, że <xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=name> już spowoduje uszkodzenie danych z powodu kodowania różnice. Jeśli ciągi w pobliżu limit rozmiaru kolumny docelowej są kopiowane, może być konieczne albo wstępnie kodowania danych (ma zostać skopiowany do sprawdzenia, czy dane zmieści się w kolumnie docelowej) lub przechwycić <xref:System.Data.SqlClient.SqlException?displayProperty=name>s.|
 |Zakres|Krawędź|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlBulkCopy.%23ctor(System.Data.SqlClient.SqlConnection)?displayProperty=nameWithType></li></ul>|
 

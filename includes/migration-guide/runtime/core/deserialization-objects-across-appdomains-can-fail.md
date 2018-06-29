@@ -6,5 +6,5 @@
 |Sugestia|Zobacz [ograniczenie: deserializacja obiektów między domenami aplikacji](~/docs/framework/migration-guide/mitigation-deserialization-of-objects-across-app-domains.md)|
 |Zakres|Krawędź|
 |Wersja|4.5.1|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

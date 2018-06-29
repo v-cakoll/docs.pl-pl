@@ -6,5 +6,5 @@
 |Sugestia|Ta zmiana umożliwia <xref:System.DateTime?displayProperty=name> i <xref:System.DateTimeOffset?displayProperty=name> można wysyłać, zwracać wartości. Niestandardowe analizatory języka XAML, które zakładają, że wejściowy kod XAML znajduje się w składni atrybutów, nie będą działać poprawnie.|
 |Zakres|Krawędź|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

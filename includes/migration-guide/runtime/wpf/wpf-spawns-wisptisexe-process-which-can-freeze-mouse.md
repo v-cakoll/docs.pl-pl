@@ -6,5 +6,5 @@
 |Sugestia|Poprawkę dotyczącą tego problemu jest dostępna w obsługi wersji programu .NET Framework 4.5.2 (pakiet zbiorczy poprawek 3026376) lub przez uaktualnienie do programu .NET Framework 4.6|
 |Zakres|Główne|
 |Wersja|4.5.2|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

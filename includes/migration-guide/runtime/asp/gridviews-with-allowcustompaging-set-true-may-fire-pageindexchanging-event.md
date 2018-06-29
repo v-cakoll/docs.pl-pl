@@ -6,6 +6,6 @@
 |Sugestia|Ten problem został rozwiązany w .NET Framework 4.6 i mogą być kierowane przez uaktualnienie do tej wersji programu .NET Framework. Jako obejście, aplikację można wykonać jawne BindGrid na dowolnym <code>Page_Load</code> który czy trafień tych warunków ( <xref:System.Web.UI.WebControls.GridView?displayProperty=name> jest na ostatniej stronie i ostatnich<xref:System.Web.UI.WebControls.GridView.PageSize?displayProperty=name> różni się od <xref:System.Web.UI.WebControls.GridView.PageSize?displayProperty=name>). Alternatywnie aplikacji można zmodyfikować umożliwia stronicowania (zamiast stronicowania niestandardowego), w tym scenariuszu nie przedstawiać problemu.|
 |Zakres|Pomocnicza|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Web.UI.WebControls.GridView.AllowCustomPaging?displayProperty=nameWithType></li></ul>|
 

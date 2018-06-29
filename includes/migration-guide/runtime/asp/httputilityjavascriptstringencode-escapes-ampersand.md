@@ -6,6 +6,6 @@
 |Sugestia|Aplikacji zależy od poprzedniego zachowanie tej metody, można dodać ustawienie aspnet:JavaScriptDoNotEncodeAmpersand [ASP.NET appSettings element](https://msdn.microsoft.com/library/hh975440.aspx) w pliku konfiguracji.|
 |Zakres|Pomocnicza|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Web.HttpUtility.JavaScriptStringEncode(System.String)?displayProperty=nameWithType></li><li><xref:System.Web.HttpUtility.JavaScriptStringEncode(System.String,System.Boolean)?displayProperty=nameWithType></li></ul>|
 

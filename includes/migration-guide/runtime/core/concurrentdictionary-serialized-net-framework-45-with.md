@@ -6,5 +6,5 @@
 |Sugestia|Jeśli jest konieczne w celu serializacji i deserializacji <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=name> między .NET Framework 4.5 i 4.5.1/4.5.2 .NET Framework, takich jak alternatywny serializator <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=name> lub <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=name> serializator powinien być używany zamiast <xref:System.Runtime.Serialization.NetDataContractSerializer?displayProperty=name>. Alternatywnie ponieważ ten problem został rozwiązany w .NET Framework 4.6, mogą zostać rozwiązane przez uaktualnienie do tej wersji programu .NET Framework.|
 |Zakres|Pomocnicza|
 |Wersja|4.5.1|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

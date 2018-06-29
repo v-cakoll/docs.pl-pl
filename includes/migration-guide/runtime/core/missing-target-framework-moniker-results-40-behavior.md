@@ -6,5 +6,5 @@
 |Sugestia|A <xref:System.Runtime.Versioning.TargetFrameworkAttribute?displayProperty=name> powinien zostać podany, poprzez dodanie atrybutu bezpośrednio do zestawu lub określając platformy docelowej w [pliku projektu lub za pomocą programu Visual Studio projektu graficznego interfejsu użytkownika właściwości](http://blogs.msdn.com/b/visualstudio/archive/2010/05/19/visual-studio- managed-multi-targeting-part-1-concepts-target-framework-moniker-target-framework.aspx).|
 |Zakres|Główne|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

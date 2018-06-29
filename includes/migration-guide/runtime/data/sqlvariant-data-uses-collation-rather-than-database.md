@@ -6,5 +6,5 @@
 |Sugestia|Ta zmiana adresów uszkodzenie danych, jeśli sortowanie bazy danych różni się od <code>sql_variant</code> sortowania. W aplikacjach korzystających z uszkodzonych danych może wystąpić błąd.|
 |Zakres|Przezroczyste|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

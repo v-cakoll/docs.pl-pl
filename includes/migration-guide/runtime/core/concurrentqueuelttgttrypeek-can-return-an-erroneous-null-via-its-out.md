@@ -6,6 +6,6 @@
 |Sugestia|Tego problemu w programie .NET Framework 4.5.1. Uaktualnianie do tej struktury rozwiąże problem.|
 |Zakres|Główne|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Collections.Concurrent.ConcurrentQueue%601.TryPeek(%600@)?displayProperty=nameWithType></li></ul>|
 

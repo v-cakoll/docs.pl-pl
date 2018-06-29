@@ -6,5 +6,5 @@
 |Sugestia|<ul><li>Sprawdź, czy Twoje certyfikacji serwera i klienta jest wymagany identyfikator OID EKU. Jeśli nie, aktualizacja Twojego certyfikacji.</li><li>Sprawdź, czy certyfikat główny jest nieprawidłowy. Jeśli tak, zaktualizuj certyfikat główny.</li><li>Jak rezygnacji z zmiany: Jeśli nie można zaktualizować certyfikat, z następującymi ustawieniami konfiguracji można obejść istotne zmiany tymczasowo, jednak Rezygnacja z zmiany system pozostanie narażone na problem z zabezpieczeniami.</li></ul><pre><code class="lang-xml">&lt;appSettings&gt;&#13;&#10;&lt;add key=&quot;wcf:useLegacyCertificateUsagePolicy&quot; value=&quot;true&quot; /&gt;&#13;&#10;&lt;/appSettings&gt;&#13;&#10;</code></pre>|
 |Zakres|Pomocnicza|
 |Wersja|4.7.2|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

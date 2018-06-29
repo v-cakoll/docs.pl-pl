@@ -6,6 +6,6 @@
 |Sugestia|Kod powinien zostać zaktualizowany do unescape parametrów ciągu z trasy. W razie potrzeby oryginalnego identyfikatora URI jest dostępny z <xref:System.Net.HttpWebRequest.RequestUri>. OriginalString interfejsu API.|
 |Zakres|Pomocnicza|
 |Wersja|4.5.2|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Web.Mvc.RouteAttribute.%23ctor(System.String)?displayProperty=nameWithType></li></ul>|
 

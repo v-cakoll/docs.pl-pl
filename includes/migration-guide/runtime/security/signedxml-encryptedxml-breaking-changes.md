@@ -6,6 +6,6 @@
 |Sugestia|Deweloperzy mogą chcieć Sprawdź użycie elementu <xref:System.Security.Cryptography.Xml.XmlDsigXsltTransform> i <xref:System.Security.Cryptography.Xml.XmlDsigXsltTransform>, a także typy pochodzące z <xref:System.Security.Cryptography.Xml.Transform> od odbiornika dokumentu nie można go przetworzyć.|
 |Zakres|Pomocnicza|
 |Wersja|4.6.2|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Security.Cryptography.Xml.Transform?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.Xml.XmlDsigXsltTransform?displayProperty=nameWithType></li></ul>|
 

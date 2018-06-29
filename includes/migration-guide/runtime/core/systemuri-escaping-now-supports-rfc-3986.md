@@ -6,6 +6,6 @@
 |Sugestia|<ul><li>Aktualizowanie aplikacji nie polegać na <xref:System.Uri.UnescapeDataString(System.String)?displayProperty=name> ma zostać zgłoszony w przypadku nieprawidłową sekwencję ucieczki. Takie sekwencje muszą zostać wykryte bezpośrednio teraz.</li><li>Podobnie oczekują, że ciągów Escaped i URI niezmienionym znaczeniu oraz dane mogą się różnić od programu .NET Framework 4.0 i .NET Framework 4.5 i nie powinny być porównywane przez wersje .NET bezpośrednio. Zamiast tego należy można analizować i znormalizowany w jednej wersji platformy .NET, zanim wszystkie porównań.</li></ul>|
 |Zakres|Pomocnicza|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Uri.EscapeDataString(System.String)?displayProperty=nameWithType></li><li><xref:System.Uri.EscapeUriString(System.String)?displayProperty=nameWithType></li><li><xref:System.Uri.UnescapeDataString(System.String)?displayProperty=nameWithType></li></ul>|
 

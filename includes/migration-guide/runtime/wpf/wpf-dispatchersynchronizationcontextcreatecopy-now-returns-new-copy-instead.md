@@ -6,6 +6,6 @@
 |Sugestia|Należy pamiętać, że <xref:System.Windows.Threading.DispatcherSynchronizationContext.CreateCopy> teraz zwróci nowy <xref:System.Threading.SynchronizationContext?displayProperty=name> obiektu. Wcześniej kod, którego równoważność generowane w ten sposób odwołania został nie faktycznie sprawdza czy go w kontekście prawidłowego, ale nie w przypadku skompilowany dla platformy .NET Framework 4.5 lub nowszej.  Podczas, gdy jest to prawdopodobnie nie będzie powodować problemy, wykonywania ścieżek kodu powinny wystarczyć do ustalenia, czy stanowi to problem.|
 |Zakres|Pomocnicza|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Windows.Threading.DispatcherSynchronizationContext.CreateCopy?displayProperty=nameWithType></li></ul>|
 

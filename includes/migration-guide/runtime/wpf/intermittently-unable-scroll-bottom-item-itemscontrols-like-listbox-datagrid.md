@@ -6,5 +6,5 @@
 |Sugestia|Ten problem został rozwiązany w programie .NET Framework 4.5.2 i mogą być kierowane przez uaktualnienie do tej wersji (lub nowszym) programu .NET Framework. Alternatywnie użytkownicy nadal przeciągać pasków przewijania do końcowego elementów w kolekcjach, ale może być konieczne spróbuj dwa razy zrobić pomyślnie.|
 |Zakres|Pomocnicza|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

@@ -6,6 +6,6 @@
 |Sugestia|Ten błąd został rozwiązany w programie .NET Framework 4.5.2, więc można uniknąć przez uaktualnienie programu .NET Framework. Alternatywnie można uniknąć przez usunięcie wszelkich zainstalowanych z systemem innym niż — IFS dostawców LSP interfejsu Winsock.|
 |Zakres|Pomocnicza|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Data.SqlClient.SqlConnection.Open?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlConnection.OpenAsync(System.Threading.CancellationToken)?displayProperty=nameWithType></li></ul>|
 

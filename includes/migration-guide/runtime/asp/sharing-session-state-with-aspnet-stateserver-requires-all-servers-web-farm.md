@@ -6,6 +6,6 @@
 |Sugestia|Pamiętaj uaktualnić wersje programu .NET Framework na serwery sieci web, które współużytkują stanu w tym samym czasie.|
 |Zakres|Krawędź|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Web.SessionState.SessionStateMode.StateServer?displayProperty=nameWithType></li></ul>|
 

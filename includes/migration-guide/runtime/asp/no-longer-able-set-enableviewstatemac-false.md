@@ -6,5 +6,5 @@
 |Sugestia|EnableViewStateMac musi być założono, że to PRAWDA, a wynikowy błędy MAC należy usunąć (zgodnie z objaśnieniem w [w tych wskazówkach](https://support.microsoft.com/kb/2915218), który zawiera wiele rozdzielczości w zależności od tego, co jest przyczyną błędów MAC specyfice).|
 |Zakres|Główne|
 |Wersja|4.5.2|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

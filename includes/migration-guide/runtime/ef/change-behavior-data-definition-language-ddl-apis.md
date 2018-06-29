@@ -6,5 +6,5 @@
 |Sugestia|Te zmiany ułatwiają tworzenie narzędzi i aplikacji używających interfejsów API języka DDL. Te zmiany mogą wpływać na zgodność aplikacji w następujących scenariuszach:<ul><li>Użytkownik zapisuje kod wykonujący <code>DROP DATABASE</code> polecenia bezpośrednio zamiast wywoływać metodę <xref:System.Data.Objects.ObjectContext.DeleteDatabase%2A> Jeśli <xref:System.Data.Objects.ObjectContext.DatabaseExists%2A> zwraca <code>true</code>. Przerywa to działanie istniejącego kodu, jeśli baza danych nie jest dołączona, ale plik MDF istnieje.</li><li>Użytkownik zapisuje kod, który oczekuje <xref:System.Data.Objects.ObjectContext.DeleteDatabase%2A> metodę, aby zgłosić <xref:System.Data.SqlClient.SqlException> zamiast <xref:System.InvalidOperationException> po wykazu początkowego i MDF plik nie istnieje.</li></ul>|
 |Zakres|Pomocnicza|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

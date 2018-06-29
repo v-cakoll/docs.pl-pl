@@ -6,5 +6,5 @@
 |Sugestia|Zainstaluj aplikacje aktualizacji sondowanie dla platformy .NET Framework 4.5, wyszukując 4.5 klucze rejestru, aby zaakceptować również 4.6.|
 |Zakres|Krawędź|
 |Wersja|4.6|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

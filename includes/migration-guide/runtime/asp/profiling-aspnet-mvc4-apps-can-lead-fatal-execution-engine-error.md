@@ -6,5 +6,5 @@
 |Sugestia|Tego problemu w programie .NET Framework 4.5.2. Alternatywnie profilera mogą uniknąć tego problemu, określając <code>COR_PRF_DISABLE_ALL_NGEN_IMAGES</code> w jego maski zdarzeń.|
 |Zakres|Krawędź|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

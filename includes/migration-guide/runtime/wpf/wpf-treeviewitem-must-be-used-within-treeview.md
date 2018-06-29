@@ -6,5 +6,5 @@
 |Sugestia|Poprawki będą dostępne dla tego.|
 |Zakres|Pomocnicza|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

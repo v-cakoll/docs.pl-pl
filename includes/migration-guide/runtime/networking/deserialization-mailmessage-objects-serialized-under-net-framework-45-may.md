@@ -6,6 +6,6 @@
 |Sugestia|Upewnij się, że kod zawiera Obsługa wyjątków podczas deserializacji <xref:System.Web.Mail.MailMessage> obiektu.|
 |Zakres|Pomocnicza|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Web.Mail.MailMessage?displayProperty=nameWithType></li></ul>|
 

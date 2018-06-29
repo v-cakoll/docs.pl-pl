@@ -6,5 +6,5 @@
 |Sugestia|Uaktualnij do platformy .NET Framework 4.7.1.|
 |Zakres|Pomocnicza|
 |Wersja|4.7|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

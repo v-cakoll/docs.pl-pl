@@ -6,5 +6,5 @@
 |Sugestia|To zachowanie (kiedy należy przyciąć lub nie) może być wyraźnie ustawione, za pomocą <code>&lt;EnableMultiMonitorDisplayClipping&gt;</code> element <code>&lt;appSettings&gt;</code> w pliku konfiguracji aplikacji lub przez ustawienie <code>EnableMultiMonitorDisplayClipping</code> właściwości podczas uruchamiania aplikacji.|
 |Zakres|Pomocnicza|
 |Wersja|4.6|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

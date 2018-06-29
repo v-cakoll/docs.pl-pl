@@ -6,5 +6,5 @@
 |Sugestia|Ten problem został rozwiązany i poprzednie przywrócić w programie .NET Framework 4.6.2. Aby nawiązać połączenie rozwiązań programu SQL Server, który jest rozpoznawany jako <code>localhost</code>, przeprowadź uaktualnienie do programu .NET Framework 4.6.2.|
 |Zakres|Pomocnicza|
 |Wersja|4.6|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

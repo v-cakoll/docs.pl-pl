@@ -6,5 +6,5 @@
 |Sugestia|Ta zmiana wpływa tylko na kod, który używa QueryViews z 1-od 0 do 1 relacje uruchomiona kwerendę dotyczącą tego wywołania. Obejmują. Zwiększa niezawodność, a powinny być przezroczyste do niemal wszystkich aplikacji. Jednak jeśli spowoduje nieoczekiwane zachowanie, można wyłączyć ją, dodając następujący wpis do <code>&lt;appSettings&gt;</code> sekcji pliku konfiguracji aplikacji:<pre><code class="lang-xml">&lt;add key=&quot;EntityFramework_SimplifyUserSpecifiedViews&quot; value=&quot;false&quot; /&gt;&#13;&#10;</code></pre>|
 |Zakres|Krawędź|
 |Wersja|4.5.2|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

@@ -6,6 +6,6 @@
 |Sugestia|Praca z identyfikatorów URI spójnie zawierający Unicode aplikacji można powrotne użyto tego zachowania do odrzucenia odwołania do udziały UNC. Te aplikacje powinny używać <xref:System.Uri.IsUnc> zamiast tego.|
 |Zakres|Krawędź|
 |Wersja|4.7.2|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Uri?displayProperty=nameWithType></li></ul>|
 

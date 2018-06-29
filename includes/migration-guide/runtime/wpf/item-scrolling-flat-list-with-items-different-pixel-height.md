@@ -6,6 +6,6 @@
 |Sugestia|W przypadku iteracji w programie .NET Framework 4.6.1, ale nie w starszych wersjach — to znaczy, jeśli <xref:System.Windows.Controls.ItemsControl?displayProperty=name> jest element-przewijanie płaska lista z elementami wysokość różne pikseli - istnieją dwa środki zaradcze:<ol><li>Zainstaluj program .NET Framework 4.6.2.</li><li>Zainstaluj poprawkę HR 1605 dla programu .NET Framework 4.6.1.</li></ol>|
 |Zakres|Pomocnicza|
 |Wersja|4.6.1|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Windows.Controls.VirtualizingStackPanel?displayProperty=nameWithType></li></ul>|
 

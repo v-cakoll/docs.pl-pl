@@ -6,5 +6,5 @@
 |Sugestia|Aby utworzyć element serializujący dalszego korzystania MEF|
 |Zakres|Główne|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

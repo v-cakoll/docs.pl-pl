@@ -6,5 +6,5 @@
 |Sugestia|Poprzednio po wystąpieniu przepełnienia wynik zostałby dyskretnie obcięty. Teraz <xref:System.OverflowException?displayProperty=name> wyjątku.|
 |Zakres|Krawędź|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

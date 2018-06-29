@@ -6,5 +6,5 @@
 |Sugestia|Jeśli wymagane są możliwości specyficznych dla urządzeń iPad, należy zmodyfikować zachowanie iPad przez ustawienie możliwości refID wstępnie zdefiniowane bramy &quot;IPad&quot; zamiast generując nowy &quot;IPad&quot; identyfikator przez agenta użytkownika dopasowanie.|
 |Zakres|Krawędź|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

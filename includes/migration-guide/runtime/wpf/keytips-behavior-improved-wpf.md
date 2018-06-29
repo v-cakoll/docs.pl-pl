@@ -6,5 +6,5 @@
 |Sugestia|Brak|
 |Zakres|Krawędź|
 |Wersja|4.7.2|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

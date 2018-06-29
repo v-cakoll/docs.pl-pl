@@ -6,5 +6,5 @@
 |Sugestia|Jeśli istnieje potrzeba dla wiązania z danymi, ręczne wywoływanie databind w przypadku starszych po tyłu.|
 |Zakres|Krawędź|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 

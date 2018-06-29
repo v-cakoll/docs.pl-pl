@@ -6,6 +6,6 @@
 |Sugestia|Brak. Ta zmiana odpowiada oczekiwane zachowanie formanty <xref:System.Windows.Controls.TextBlock?displayProperty=name> formantu.|
 |Zakres|Pomocnicza|
 |Wersja|4.6.2|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Windows.UIElement.IsEnabled?displayProperty=nameWithType></li></ul>|
 

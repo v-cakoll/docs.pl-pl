@@ -6,6 +6,6 @@
 |Sugestia|Istnieje kilka możliwych obejścia tego problemu:<ul><li>Uaktualnienie serializacji do użycia w programie .NET Framework 4.5.1, jak również.</li><li>Użyj <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=name> zamiast <xref:System.Runtime.Serialization.NetDataContractSerializer?displayProperty=name> jako nie oczekuje dokładnie takie same typy CLR zarówno serializacji i deserializacji kończy się.</li><li>Użyj <xref:System.Collections.Generic.Dictionary%602?displayProperty=name> zamiast <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=name> od czasu nie występuje tego konkretnego 4.5 -&gt;Podziel 4.5.1.</li></ul>|
 |Zakres|Pomocnicza|
 |Wersja|4.5.1|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize(System.IO.Stream)?displayProperty=nameWithType></li></ul>|
 

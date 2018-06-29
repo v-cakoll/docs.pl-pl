@@ -6,6 +6,6 @@
 |Sugestia|Kod powinien zostać zaktualizowany w celu zależy od <xref:System.AppDomainSetup.TargetFrameworkName> przyjęto wartość domyślną wartość null. Jeśli wymagana jest, że ta właściwość w dalszym ciągu ma wartość null, można ją jawnie ustawić tej wartości.|
 |Zakres|Krawędź|
 |Wersja|4.6|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=nameWithType></li></ul>|
 

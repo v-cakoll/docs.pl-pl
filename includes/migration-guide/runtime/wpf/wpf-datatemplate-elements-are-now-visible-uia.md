@@ -6,6 +6,6 @@
 |Sugestia|Testy automatyzacji interfejsu użytkownika dla tej aplikacji może być konieczne zaktualizowane na wypadek drzewa funkcją UIA obecnie wcześniej niewidoczne <xref:System.Windows.DataTemplate?displayProperty=name> elementów. Na przykład testy, które oczekują niektóre elementy obok siebie może teraz zaistnieć oczekiwać wcześniej niewidocznych elementów funkcją UIA między. Lub testy, które opierają się na niektórych liczby lub indeksów dla elementów funkcją UIA może być konieczne zaktualizowane o nowe wartości.|
 |Zakres|Krawędź|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Windows.DataTemplate.%23ctor?displayProperty=nameWithType></li><li><xref:System.Windows.DataTemplate.%23ctor(System.Object)?displayProperty=nameWithType></li></ul>|
 

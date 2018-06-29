@@ -6,6 +6,6 @@
 |Sugestia|Jeśli <xref:System.AggregateException?displayProperty=name> przechwycono trwa jako sposób wykrywania zadanie, które zostało anulowane przed <xref:System.Threading.Tasks.Task.WaitAll%2A> wywołać wywoływanego kodu zrobić zamiast tego samego wykrywania za pośrednictwem <xref:System.Threading.Tasks.Task.IsCanceled%2A> właściwości (na przykład:. Any(t =&gt; t.IsCanceled)), ponieważ program .NET Framework 4.6 tylko zgłosi w tym przypadku jeśli wszystkie oczekiwano czynności zostały wykonane przed limit czasu.|
 |Zakres|Pomocnicza|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.Int32)?displayProperty=nameWithType></li><li><xref:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.Int32,System.Threading.CancellationToken)?displayProperty=nameWithType></li><li><xref:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.TimeSpan)?displayProperty=nameWithType></li></ul>|
 

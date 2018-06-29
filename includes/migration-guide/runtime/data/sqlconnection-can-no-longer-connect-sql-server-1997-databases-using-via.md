@@ -6,6 +6,6 @@
 |Sugestia|Protokół VIA jest przestarzały, więc alternatywnych protokołu używanego do nawiązania połączenia bazy danych SQL. Protokół najczęściej używany jest protokół TCP/IP. Instrukcje dotyczące włączania protokołu TCP/IP można znaleźć [tutaj](https://msdn.microsoft.com/library/bb909712.aspx). Jeśli bazy danych jest dostępne tylko z w intranecie, protokołu potoków udostępnionego może zapewnić lepszą wydajność, jeśli sieć jest powolne.|
 |Zakres|Krawędź|
 |Wersja|4.5|
-|Typ|Środowisko uruchomieniowe|
+|Typ|środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Data.SqlClient.SqlConnection.%23ctor(System.String)?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlConnection.%23ctor(System.String,System.Data.SqlClient.SqlCredential)?displayProperty=nameWithType></li></ul>|
 

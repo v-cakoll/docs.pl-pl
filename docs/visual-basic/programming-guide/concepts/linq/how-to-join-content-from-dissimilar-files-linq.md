@@ -1,20 +1,21 @@
 ---
 title: 'Porady: łączenie zawartości niepodobnych plików (LINQ) (Visual Basic)'
-ms.date: 07/20/2015
+ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: 1be067db9c248ae7f51d79f1193e185f9c1fe564
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d82e43449651ead5f39ec9c9442d3087b34d10ef
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643539"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37072049"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a><span data-ttu-id="c4afc-102">Porady: łączenie zawartości niepodobnych plików (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c4afc-102">How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="c4afc-103">W tym przykładzie pokazano, jak sprzęgać dane z dwóch plików rozdzielanych przecinkami, które mają wspólną wartość, które jest używane jako dopasowany klucz.</span><span class="sxs-lookup"><span data-stu-id="c4afc-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="c4afc-104">Ta metoda może być przydatna, jeśli masz połączyć dane z dwóch arkuszy kalkulacyjnych lub z arkusza kalkulacyjnego i z pliku innego formatu, który ma do nowego pliku.</span><span class="sxs-lookup"><span data-stu-id="c4afc-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="c4afc-105">Można zmodyfikować przykładu do pracy z dowolnego rodzaju strukturalnych tekstu.</span><span class="sxs-lookup"><span data-stu-id="c4afc-105">You can modify the example to work with any kind of structured text.</span></span>  
+# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a><span data-ttu-id="65d54-102">Porady: łączenie zawartości niepodobnych plików (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="65d54-102">How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)</span></span>
+
+<span data-ttu-id="65d54-103">W tym przykładzie pokazano, jak sprzęgać dane z dwóch plików rozdzielanych przecinkami, które mają wspólną wartość, które jest używane jako dopasowany klucz.</span><span class="sxs-lookup"><span data-stu-id="65d54-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="65d54-104">Ta metoda może być przydatna, jeśli masz połączyć dane z dwóch arkuszy kalkulacyjnych lub z arkusza kalkulacyjnego i z pliku innego formatu, który ma do nowego pliku.</span><span class="sxs-lookup"><span data-stu-id="65d54-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="65d54-105">Można zmodyfikować przykładu do pracy z dowolnego rodzaju strukturalnych tekstu.</span><span class="sxs-lookup"><span data-stu-id="65d54-105">You can modify the example to work with any kind of structured text.</span></span>  
   
-### <a name="to-create-the-data-files"></a><span data-ttu-id="c4afc-106">Aby utworzyć pliki danych</span><span class="sxs-lookup"><span data-stu-id="c4afc-106">To create the data files</span></span>  
+## <a name="to-create-the-data-files"></a><span data-ttu-id="65d54-106">Aby utworzyć pliki danych</span><span class="sxs-lookup"><span data-stu-id="65d54-106">To create the data files</span></span>
   
-1.  <span data-ttu-id="c4afc-107">Skopiuj następujące wiersze do pliku o nazwie scores.csv i zapisać go w folderze projektu.</span><span class="sxs-lookup"><span data-stu-id="c4afc-107">Copy the following lines into a file that is named scores.csv and save it to your project folder.</span></span> <span data-ttu-id="c4afc-108">Plik reprezentuje dane w arkuszu.</span><span class="sxs-lookup"><span data-stu-id="c4afc-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="c4afc-109">Kolumna 1 jest Identyfikatorem Studenta, a kolumny od 2 do 5 są wyniki testów.</span><span class="sxs-lookup"><span data-stu-id="c4afc-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
+1.  <span data-ttu-id="65d54-107">Skopiuj następujące wiersze do pliku o nazwie scores.csv i zapisać go w folderze projektu.</span><span class="sxs-lookup"><span data-stu-id="65d54-107">Copy the following lines into a file that is named scores.csv and save it to your project folder.</span></span> <span data-ttu-id="65d54-108">Plik reprezentuje dane w arkuszu.</span><span class="sxs-lookup"><span data-stu-id="65d54-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="65d54-109">Kolumna 1 jest Identyfikatorem Studenta, a kolumny od 2 do 5 są wyniki testów.</span><span class="sxs-lookup"><span data-stu-id="65d54-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
   
     ```  
     111, 97, 92, 81, 60  
@@ -31,7 +32,7 @@ ms.locfileid: "33643539"
     122, 94, 92, 91, 91  
     ```  
   
-2.  <span data-ttu-id="c4afc-110">Skopiuj następujące wiersze do pliku o nazwie names.csv i zapisać go w folderze projektu.</span><span class="sxs-lookup"><span data-stu-id="c4afc-110">Copy the following lines into a file that is named names.csv and save it to your project folder.</span></span> <span data-ttu-id="c4afc-111">Arkusz danych zawierający identyfikatora dla użytkowników domowych, imię i nazwisko studenta reprezentuje plik</span><span class="sxs-lookup"><span data-stu-id="c4afc-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
+2.  <span data-ttu-id="65d54-110">Skopiuj następujące wiersze do pliku o nazwie names.csv i zapisać go w folderze projektu.</span><span class="sxs-lookup"><span data-stu-id="65d54-110">Copy the following lines into a file that is named names.csv and save it to your project folder.</span></span> <span data-ttu-id="65d54-111">Arkusz danych zawierający identyfikatora dla użytkowników domowych, imię i nazwisko studenta reprezentuje plik</span><span class="sxs-lookup"><span data-stu-id="65d54-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -48,9 +49,12 @@ ms.locfileid: "33643539"
     Tucker,Michael,122  
     ```  
   
-## <a name="example"></a><span data-ttu-id="c4afc-112">Przykład</span><span class="sxs-lookup"><span data-stu-id="c4afc-112">Example</span></span>  
-  
-```vb  
+## <a name="example"></a><span data-ttu-id="65d54-112">Przykład</span><span class="sxs-lookup"><span data-stu-id="65d54-112">Example</span></span>  
+
+```vb
+Imports System.Collections.Generic
+Imports System.Linq
+
 Class JoinStrings  
   
     Shared Sub Main()  
@@ -77,7 +81,7 @@ Class JoinStrings
                          Let n = name.Split(New Char() {","})   
                             From id In scores   
                             Let n2 = id.Split(New Char() {","})   
-                            Where n(2) = n2(0)   
+                            Where Convert.ToInt32(n(2)) = Convert.ToInt32(n2(0))
                             Select n(0) & "," & n(1) & "," & n2(0) & "," & n2(1) & "," &  
                               n2(2) & "," & n2(3)  
   
@@ -101,25 +105,31 @@ Class JoinStrings
     End Sub  
 End Class  
 ' Output:  
-'Merge two spreadsheets:  
-'Adams,Terry,120, 99, 82, 81  
-'Fakhouri,Fadi,116, 99, 86, 90  
-'Feng,Hanying,117, 93, 92, 80  
-'Garcia,Cesar,114, 97, 89, 85  
-'Garcia,Debra,115, 35, 72, 91  
-'Garcia,Hugo,118, 92, 90, 83  
-'Mortensen,Sven,113, 88, 94, 65  
-'O'Donnell,Claire,112, 75, 84, 91  
-'Omelchenko,Svetlana,111, 97, 92, 81  
-'Tucker,Lance,119, 68, 79, 88  
-'Tucker,Michael,122, 94, 92, 91  
-'Zabokritski,Eugene,121, 96, 85, 91  
-'12 total names in list  
+' Merge two spreadsheets:
+' Omelchenko, 97, 92, 81, 60
+' O'Donnell, 75, 84, 91, 39
+' Mortensen, 88, 94, 65, 91
+' Garcia, 97, 89, 85, 82
+' Garcia, 35, 72, 91, 70
+' Fakhouri, 99, 86, 90, 94
+' Feng, 93, 92, 80, 87
+' Garcia, 92, 90, 83, 78
+' Tucker, 68, 79, 88, 92
+' Adams, 99, 82, 81, 79
+' Zabokritski, 96, 85, 91, 60
+' Tucker, 94, 92, 91, 91
+' 12 total names in list 
 ```  
+
+## <a name="compiling-the-code"></a><span data-ttu-id="65d54-113">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="65d54-113">Compiling the code</span></span>
+
+<span data-ttu-id="65d54-114">Utwórz i skompiluj projekt, który jest przeznaczony dla jednego z następujących opcji:</span><span class="sxs-lookup"><span data-stu-id="65d54-114">Create and compile a project that targets one of the following options:</span></span>
+
+- <span data-ttu-id="65d54-115">.NET framework w wersji 3.5 z odwołania do System.Core.dll.</span><span class="sxs-lookup"><span data-stu-id="65d54-115">.NET Framework version 3.5 with a reference to System.Core.dll.</span></span>
+- <span data-ttu-id="65d54-116">.NET framework w wersji 4.0 lub nowszy.</span><span class="sxs-lookup"><span data-stu-id="65d54-116">.NET Framework version 4.0 or higher.</span></span>
+- <span data-ttu-id="65d54-117">Wersja platformy .NET core wersji 1.0 lub nowszej.</span><span class="sxs-lookup"><span data-stu-id="65d54-117">.NET Core version 1.0 or higher.</span></span>
   
-## <a name="compiling-the-code"></a><span data-ttu-id="c4afc-113">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="c4afc-113">Compiling the Code</span></span>  
- <span data-ttu-id="c4afc-114">Tworzenie projektu przeznaczonego dla programu .NET Framework w wersji 3.5 lub nowszego z odwołania do System.Core.dll i `Imports` instrukcji System.Linq przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="c4afc-114">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="c4afc-115">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="c4afc-115">See Also</span></span>  
- [<span data-ttu-id="c4afc-116">LINQ i ciągi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c4afc-116">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [<span data-ttu-id="c4afc-117">LINQ i katalogi plików (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c4afc-117">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="65d54-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="65d54-118">See also</span></span>
+
+ [<span data-ttu-id="65d54-119">LINQ i ciągi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="65d54-119">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
+ [<span data-ttu-id="65d54-120">LINQ i katalogi plików (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="65d54-120">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

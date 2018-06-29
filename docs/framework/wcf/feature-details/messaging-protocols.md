@@ -2,12 +2,12 @@
 title: Protokoły obsługi komunikatów
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-ms.openlocfilehash: c900c8fde8b13b4766fb245de2bab46b5601f135
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d188c79d3879ef383d24f56c81d66973266636bc
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496640"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37072725"
 ---
 # <a name="messaging-protocols"></a>Protokoły obsługi komunikatów
 Stos kanał Windows Communication Foundation (WCF) zostają kanały transportu i kodowanie do transformacji reprezentacji wewnętrznej komunikatu do jego format danych przesyłanych w sieci i wysłać go przy użyciu danego transportu. Transport najczęściej używane na współdziałanie usług sieci Web, jest protokół HTTP i są najczęściej używane kodowanie, używane przez usługi sieci Web opartych na języku XML SOAP 1.1 i SOAP 1.2, mechanizmu optymalizacji transmisji wiadomości (MTOM).  
@@ -452,7 +452,7 @@ Content-Length: 0
   
 -   R4132: Nagłówek HTTP Content-Type musi mieć parametr typu o wartości `application/xop+xml` ujęta w znaki podwójnego cudzysłowu.  
   
- Podczas wymaganie, aby użyć podwójnego cudzysłowu nie jest jawną w dokumencie RFC 2387, tekst przestrzega, że wszystkie typu multipart/związane z nośnika, najprawdopodobniej parametrów zawiera zarezerwowanych znaków, takich jak "@" or "/" i w związku z tym należy podwójnych cudzysłowów prostych.  
+ Podczas wymaganie, aby użyć podwójnego cudzysłowu nie jest jawną w dokumencie RFC 2387, tekst przestrzega, wszystkie parametry typu multipart/związane z nośnika najprawdopodobniej zawierać znaków zastrzeżonych, takich jak "\@" lub "/" i w związku z tym wymagają cudzysłowu Znaczniki.  
   
 -   R4133: Nagłówek HTTP Content-Type musi mieć parametr start o wartości nagłówka Identyfikatora zawartości części MIME, który zawiera SOAP 1.x koperty ujęta w znaki podwójnego cudzysłowu. W przypadku pominięcia początkowa pierwsza część MIME musi zawierać SOAP 1.x koperty.  
   

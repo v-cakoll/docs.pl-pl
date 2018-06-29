@@ -2,12 +2,12 @@
 title: Generowanie kodu SQL modyfikacji
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: b7bb390fd4e221c70d5ed8da5873c557fcde3c98
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1d24775a7a50da1008a5097e1a2caf4e72c946e2
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766663"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071955"
 ---
 # <a name="modification-sql-generation"></a>Generowanie kodu SQL modyfikacji
 W tej sekcji omówiono sposób rozwijać modyfikacji modułu generowania SQL dla użytkownika (SQL:1999-danych zgodnej ze standardem) dostawcy. Ten moduł jest odpowiedzialny za tłumaczenia poziomu drzewa poleceń modyfikacji w odpowiedniej instrukcji SQL INSERT, UPDATE lub DELETE.  
@@ -104,7 +104,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 ## <a name="generating-an-insert-sql-command"></a>Generowanie polecenia SQL Insert  
  Dla danego DbInsertCommandTree w dostawcy próbki polecenia insert wygenerowanego następuje jeden z poniższych szablonów Wstaw dwa.  
   
- Pierwszy szablon ma polecenia można wykonać polecenia wstawienia podane wartości na liście SetClauses i instrukcję SELECT do zwrócenia właściwości określony we właściwości zwrócenie wstawionego wiersza, jeśli właściwość zwrócenie nie był zerowy. Element predykatu "@@ROWCOUNT > 0" ma wartość true, jeśli został wstawiony wiersz. Element predykatu "keyMemberI = keyValueI &#124; scope_identity()" przyjmuje kształtu "keyMemberI = scope_identity()" tylko wtedy, gdy keyMemeberI jest kluczem generowanych przez Magazyn, ponieważ scope_identity() Zwraca ostatnią wartość tożsamości wstawione do (tożsamości) Kolumna wygenerowana przez Magazyn).  
+ Pierwszy szablon ma polecenia można wykonać polecenia wstawienia podane wartości na liście SetClauses i instrukcję SELECT do zwrócenia właściwości określony we właściwości zwrócenie wstawionego wiersza, jeśli właściwość zwrócenie nie był zerowy. Element predykatu "\@ @ROWCOUNT > 0" ma wartość true, jeśli został wstawiony wiersz. Element predykatu "keyMemberI = keyValueI &#124; scope_identity()" przyjmuje kształtu "keyMemberI = scope_identity()" tylko wtedy, gdy keyMemeberI jest kluczem generowanych przez Magazyn, ponieważ scope_identity() Zwraca ostatnią wartość tożsamości wstawione do (tożsamości) Kolumna wygenerowana przez Magazyn).  
   
 ```  
 -- first insert Template  

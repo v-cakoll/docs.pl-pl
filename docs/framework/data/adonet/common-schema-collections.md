@@ -2,12 +2,12 @@
 title: Typowe kolekcje schematów
 ms.date: 03/30/2017
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
-ms.openlocfilehash: fc8b581a127fbef0f32cdee53eaa62d241e4ae31
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 29ccd2af4268a86ae4c2047ad2523f68b0f6489e
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759312"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37072127"
 ---
 # <a name="common-schema-collections"></a>Typowe kolekcje schematów
 Typowe kolekcje schematów są kolekcji schematu, które są implementowane przez każdego z dostawców zarządzane w programie .NET Framework. Można zbadać zarządzanego dostawcy .NET Framework, można ustalić listy kolekcji schematu obsługiwanych przez wywołanie metody **GetSchema** metody bez argumentów lub nazwą kolekcji schematów "MetaDataCollections". Spowoduje to zwrócenie <xref:System.Data.DataTable> z listą kolekcji obsługiwanych schematu, liczba ograniczeń obsługiwanych przez każdy z nich i części identyfikatora, które korzystają z. Te kolekcje, opis wszystkich wymaganych kolumn. Aby dodać dodatkowe kolumny, jeśli chcą mogą dostawców. Na przykład `SqlClient` i `OracleClient` ParameterName można dodać do kolekcji ograniczeń.  
@@ -19,18 +19,18 @@ Typowe kolekcje schematów są kolekcji schematu, które są implementowane prze
 ## <a name="metadatacollections"></a>MetaDataCollections  
  Ta kolekcja schematu przedstawia informacje o wszystkich kolekcji schematu obsługiwane przez zarządzanego dostawcy .NET Framework, która jest aktualnie używana do łączenia z bazą danych.  
   
-|Element columnName|Typ danych|Opis|  
+|Element ColumnName|Typ danych|Opis|  
 |----------------|--------------|-----------------|  
-|CollectionName|string|Nazwa kolekcji do przekazania do **GetSchema** metodę, aby powrócić do kolekcji.|  
+|collectionName|string|Nazwa kolekcji do przekazania do **GetSchema** metodę, aby powrócić do kolekcji.|  
 |NumberOfRestrictions|int|Liczba ograniczeń, które mogą zostać określone dla kolekcji.|  
 |NumberOfIdentifierParts|int|Liczba części w nazwie obiektu złożonego identyfikator/bazy danych. Na przykład w programie SQL Server, będzie to 3 dla tabel i 4 dla kolumn. W oprogramowaniu Oracle byłoby 2 dla tabel i 3 dla kolumn.|  
   
 ## <a name="datasourceinformation"></a>DataSourceInformation  
  Ta kolekcja schematu przedstawia informacje o źródle danych, podłączoną do zarządzanego dostawcy jest obecnie w programie .NET Framework.  
   
-|Element columnName|Typ danych|Opis|  
+|Element ColumnName|Typ danych|Opis|  
 |----------------|--------------|-----------------|  
-|CompositeIdentifierSeparatorPattern|string|Wyrażenie regularne do dopasowania złożonego separatorów w identyfikatorze złożonego. Na przykład "\\." (dla programu SQL Server) lub "@&#124;\\." (dla Oracle).<br /><br /> Identyfikator złożony jest zwykle do czego służy nazwa obiektu bazy danych, na przykład: pubs.dbo.authors lub pubs@dbo.authors.<br /><br /> Dla programu SQL Server, należy użyć wyrażenia regularnego "\\.". OracleClient, użyj "@&#124;\\.".<br /><br /> Użyj Catalog_name_seperator dla ODBC.<br /><br /> OLE DB używaj DBLITERAL_CATALOG_SEPARATOR lub DBLITERAL_SCHEMA_SEPARATOR.|  
+|CompositeIdentifierSeparatorPattern|string|Wyrażenie regularne do dopasowania złożonego separatorów w identyfikatorze złożonego. Na przykład "\\." (dla programu SQL Server) lub "\@&#124;\\." (dla Oracle).<br /><br /> Identyfikator złożony jest zwykle do czego służy nazwa obiektu bazy danych, na przykład: pubs.dbo.authors lub pubs@dbo.authors.<br /><br /> Dla programu SQL Server, należy użyć wyrażenia regularnego "\\.". OracleClient, można użyć "\@&#124;\\.".<br /><br /> Użyj Catalog_name_seperator dla ODBC.<br /><br /> OLE DB używaj DBLITERAL_CATALOG_SEPARATOR lub DBLITERAL_SCHEMA_SEPARATOR.|  
 |DataSourceProductName|string|Nazwa produktu, dostęp do dostawcy, takie jak "Oracle" lub "SQLServer".|  
 |DataSourceProductVersion|string|Wskazuje wersję produktu, dostęp do dostawcy, w formacie native źródeł danych, a nie w formacie Microsoft.<br /><br /> W niektórych przypadkach DataSourceProductVersion i DataSourceProductVersionNormalized będzie mieć taką samą wartość. W przypadku OLE DB i ODBC są jest zawsze taki sam są mapowane na to samo wywołanie funkcji w podstawowym natywnego interfejsu API.|  
 |DataSourceProductVersionNormalized|string|Znormalizowane wersji danych źródła, w taki sposób, że mogą zostać porównane z `String.Compare()`. Ten format jest zgodny dla wszystkich wersji dostawcy, aby zapobiec sortowania między 1 a wersją 2 w wersji 10.<br /><br /> Na przykład dostawca programu Oracle używa formatu "nn.nn.nn.nn.nn" dla wersji znormalizowane, co powoduje, że źródła danych Oracle 8i do zwrócenia "08.01.07.04.01". Program SQL Server używa typowy format "nn.nn.nnnn" firmy Microsoft.<br /><br /> W niektórych przypadkach DataSourceProductVersion i DataSourceProductVersionNormalized będzie mieć taką samą wartość. W przypadku OLE DB i ODBC są jest zawsze taki sam są mapowane na to samo wywołanie funkcji w podstawowym natywnego interfejsu API.|  
@@ -38,7 +38,7 @@ Typowe kolekcje schematów są kolekcji schematu, które są implementowane prze
 |IdentifierPattern|string|Wyrażenie regularne, który jest zgodny z identyfikatorem i ma wartość dopasowania identyfikatora. Na przykład "[A-Za-z0-9_ #$]".|  
 |IdentifierCase|<xref:System.Data.Common.IdentifierCase>|Wskazuje, czy-cytowane identyfikatory są traktowane jako wielkość liter, czy nie.|  
 |OrderByColumnsInSelect|bool|Określa, czy na liście wyboru musi być kolumn w klauzuli ORDER BY. Wartość true wskazuje, że są one wymagane na liście wybierz wartość false wskazuje, nie są wymagane się na liście wyboru.|  
-|ParameterMarkerFormat|string|Ciąg formatu, który reprezentuje sposób formatowania parametr.<br /><br /> Jeśli nazwane parametry są obsługiwane przez źródło danych, pierwszego symbolu zastępczego w tym ciągu powinna być gdzie powinien być sformatowany nazwę parametru.<br /><br /> Na przykład, jeśli źródło danych oczekuje parametrów o nazwie i jest poprzedzony prefiksem ":" to ":{0}". Podczas formatowania to nazwa parametru "p1" powstałe w ten sposób jest ciąg ": p1".<br /><br /> Jeśli źródło danych oczekuje parametrów się prefiksem "@", ale nazwy już je uwzględnić, będzie to "{0}" i wynik formatowania parametr o nazwie "@p1"po prostu może być"@p1".<br /><br /> Dla źródeł danych, które nie oczekują nazwane parametry i oczekują użycie "?" Ciąg formatu, który można określić tylko znak "?", który będzie ignorować nazwę parametru. Dla OLE DB zwróconych '?'.|  
+|ParameterMarkerFormat|string|Ciąg formatu, który reprezentuje sposób formatowania parametr.<br /><br /> Jeśli nazwane parametry są obsługiwane przez źródło danych, pierwszego symbolu zastępczego w tym ciągu powinna być gdzie powinien być sformatowany nazwę parametru.<br /><br /> Na przykład, jeśli źródło danych oczekuje parametrów o nazwie i jest poprzedzony prefiksem ":" to ":{0}". Podczas formatowania to nazwa parametru "p1" powstałe w ten sposób jest ciąg ": p1".<br /><br /> Jeśli źródło danych oczekuje parametry prefiksem "@", ale nazwy już je uwzględnić, będzie to "{0}" i wynik formatowania parametr o nazwie "\@p1" po prostu byłoby "\@p1".<br /><br /> Dla źródeł danych, które nie oczekują nazwane parametry i oczekują użycie "?" Ciąg formatu, który można określić tylko znak "?", który będzie ignorować nazwę parametru. Dla OLE DB zwróconych '?'.|  
 |ParameterMarkerPattern|string|Wyrażenie regularne dopasowuje znacznika parametru. Jeśli będzie mieć wartość dopasowania nazwę parametru.<br /><br /> Na przykład, jeśli nazwane parametry są obsługiwane przez "@" wiodącego znak, który zostanie uwzględniony w nazwie parametru to: "(@[A-Za-z0-9_ ##] *)".<br /><br /> Jednak jeśli nazwane parametry są obsługiwane przez ":" jak wiodącego znaków i nie jest częścią nazwy parametru, to: ": ([A-Za-z0-9_$ #]\*)".<br /><br /> Oczywiście jeśli źródło danych nie obsługuje parametrów nazwanych, po prostu to "?".|  
 |ParameterNameMaxLength|int|Maksymalna długość nazwy parametru w znakach. Visual Studio oczekuje, że jeśli nazwy parametrów są obsługiwane, wartość minimalna długość jest 30 znaków.<br /><br /> Jeśli źródło danych nie obsługuje parametrów nazwanych, ta właściwość zwraca zero.|  
 |ParameterNamePattern|string|Wyrażenie regularne pasuje do nazw poprawny parametr. Różnych źródeł danych mają różne zasady dotyczące znaków, które mogą być używane dla nazw parametrów.<br /><br /> Visual Studio oczekuje, że jeśli nazwy parametrów są obsługiwane, znaki "\p{Lu}\p{Ll}\p{Lt}\p{Lm}\p{Lo}\p{Nl}\p{Nd}" są obsługiwane minimalnego zestawu znaków, które są prawidłowe dla nazw parametrów.|  
@@ -51,7 +51,7 @@ Typowe kolekcje schematów są kolekcji schematu, które są implementowane prze
 ## <a name="datatypes"></a>Typy danych  
  Te informacje ujawnia kolekcji schematu o typach danych, które są obsługiwane przez bazę danych czy programu .NET Framework zarządzanego dostawcy jest aktualnie połączony z.  
   
-|Element columnName|Typ danych|Opis|  
+|Element ColumnName|Typ danych|Opis|  
 |----------------|--------------|-----------------|  
 |TypeName|string|Nazwa typu danych specyficznych dla dostawcy.|  
 |ProviderDbType|int|Wartość typu specyficznych dla dostawcy, które mają być używane podczas określania typu parametru. Na przykład SqlDbType.Money lub OracleType.Blob.|  
@@ -65,7 +65,7 @@ Typowe kolekcje schematów są kolekcji schematu, które są implementowane prze
 |IsFixedLength|bool|TRUE — kolumny tego typu danych utworzone za pomocą języka definicji danych (DDL) będą miały o stałej długości.<br /><br /> FALSE — będzie kolumny tego typu danych utworzone przy użyciu kodu DDL o zmiennej długości.<br /><br /> DBNull.Value—It nie jest znany, czy dostawca przypisze to pole z kolumną o stałej długości lub o zmiennej długości.|  
 |IsFixedPrecisionScale|bool|TRUE — typ danych ma stały precyzję i skalę.<br /><br /> FALSE — typ danych nie ma stałej precyzję i skalę.|  
 |IsLong|bool|TRUE — typ danych zawiera bardzo dużo danych. Definicja bardzo dużo danych jest specyficznych dla dostawcy.<br /><br /> FALSE — typ danych nie zawiera bardzo dużo danych.|  
-|isNullable|bool|TRUE — typ danych dopuszcza wartość null.<br /><br /> FALSE — typ danych nie jest dopuszczalna.<br /><br /> DBNull.Value—It nie jest znany, czy typ danych dopuszcza wartość null.|  
+|IsNullable|bool|TRUE — typ danych dopuszcza wartość null.<br /><br /> FALSE — typ danych nie jest dopuszczalna.<br /><br /> DBNull.Value—It nie jest znany, czy typ danych dopuszcza wartość null.|  
 |IsSearchable|bool|TRUE — typ danych może służyć w klauzuli WHERE z dowolnego operatora except w predykacie LIKE.<br /><br /> FALSE — typ danych nie można używać w klauzuli WHERE z dowolnego operatora except w predykacie LIKE.|  
 |IsSearchableWithLike|bool|TRUE — typu danych można używać z klauzulą LIKE<br /><br /> FALSE — typ danych nie można używać z klauzulą LIKE.|  
 |IsUnsigned|bool|TRUE — typ danych nie jest podpisany.<br /><br /> FALSE — typ danych jest podpisany.<br /><br /> DBNull.Value—Not dla typu danych.|  
@@ -80,9 +80,9 @@ Typowe kolekcje schematów są kolekcji schematu, które są implementowane prze
 ## <a name="restrictions"></a>Ograniczenia  
  Ta kolekcja schematu widoczne informacji na temat ograniczeń, które są obsługiwane przez zarządzanego dostawcy .NET Framework, która jest aktualnie używana do łączenia z bazą danych.  
   
-|Element columnName|Typ danych|Opis|  
+|Element ColumnName|Typ danych|Opis|  
 |----------------|--------------|-----------------|  
-|CollectionName|string|Nazwa kolekcji, którego dotyczą te ograniczenia.|  
+|collectionName|string|Nazwa kolekcji, którego dotyczą te ograniczenia.|  
 |RestrictionName|string|Nazwa ograniczenia w kolekcji.|  
 |RestrictionDefault|string|Ignorowane.|  
 |RestrictionNumber|int|Rzeczywista lokalizacja ograniczenia kolekcje, które znajduje się w szczególności ograniczenie.|  
@@ -90,7 +90,7 @@ Typowe kolekcje schematów są kolekcji schematu, które są implementowane prze
 ## <a name="reservedwords"></a>ReservedWords  
  Ta kolekcja schemat przedstawia informacji na temat słów, które zostały zastrzeżone przez bazę danych programu .NET Framework zarządzanego dostawcy, który jest aktualnie połączony z.  
   
-|Element columnName|Typ danych|Opis|  
+|Element ColumnName|Typ danych|Opis|  
 |----------------|--------------|-----------------|  
 |ReservedWord|string|Słowa zarezerwowanego właściwe dla dostawcy.|  
   

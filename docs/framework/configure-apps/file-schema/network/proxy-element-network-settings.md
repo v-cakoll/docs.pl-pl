@@ -11,12 +11,12 @@ ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: b5ae716994f9b8222a633699367c94480179c97b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8d2e224f710a1f344623440f29c2c6e0e9bd661e
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744450"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37072517"
 ---
 # <a name="ltproxygt-element-network-settings"></a>&lt;Serwer proxy&gt; elementu (ustawienia sieciowe)
 Definiuje serwera proxy.  
@@ -46,7 +46,7 @@ Definiuje serwera proxy.
 |**Atrybut**|**Opis**|  
 |-------------------|---------------------|  
 |`autoDetect`|Określa, czy serwer proxy jest wykrywany automatycznie. Wartość domyślna to `unspecified`.|  
-|`bypassonlocal`|Określa, czy serwer proxy jest pomijana dla zasobów lokalnych. Zasobów lokalnych obejmują serwer lokalny (http://localhost, http://loopback, lub http://127.0.0.1) i identyfikator URI bez kropki (http://webserver). Wartość domyślna to `unspecified`.|  
+|`bypassonlocal`|Określa, czy serwer proxy jest pomijana dla zasobów lokalnych. Zasobów lokalnych obejmują serwer lokalny (`http://localhost`, `http://loopback`, lub `http://127.0.0.1`) i identyfikator URI bez kropki (`http://webserver`). Wartość domyślna to `unspecified`.|  
 |`proxyaddress`|Określa identyfikator URI do użycia serwera proxy.|  
 |`scriptLocation`|Określa lokalizację skryptu konfiguracji.|  
 |`usesystemdefault`|Określa, czy ustawienia serwera proxy programu Internet Explorer. Jeśli ustawiono `true`, kolejne atrybuty spowoduje zastąpienie ustawień serwera proxy programu Internet Explorer. Wartość domyślna to `unspecified`.|  

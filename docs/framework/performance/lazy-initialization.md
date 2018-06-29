@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a826121a7f22d1db7287171c5add28e5fcd690cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88092c22e763e427203350065ff62b7c5e040b97
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398030"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37073219"
 ---
 # <a name="lazy-initialization"></a>Inicjalizacja z opóźnieniem
 *Inicjalizacja z opóźnieniem* obiektu oznacza, że jej tworzenia została odroczona aż najpierw jest używany. (W tym temacie warunki *incjalizacji* i *opóźnieniem wystąpienia* to samo.) Inicjalizacja z opóźnieniem służy głównie w celu zwiększenia wydajności, uniknąć niepotrzebne obliczeń i zmniejszyć wymagania dotyczące pamięci programu. Są to najbardziej typowych scenariuszy:  
@@ -140,7 +140,7 @@ ms.locfileid: "33398030"
  [!code-vb[Lazy#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#9)]  
   
 ## <a name="thread-local-variables-in-parallelfor-and-foreach"></a>Zmienne lokalne wątków w równoległej i ForEach  
- Jeśli używasz <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> metody lub <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> metody iteracyjne źródeł danych równolegle, korzystając z przeciążeń, które mają wbudowaną obsługę danych lokalnych wątku. W tych metod umiejscowienie wątku jest realizowane za pośrednictwem lokalnego delegatów do tworzenia, dostępu i wyczyścić dane. Aby uzyskać więcej informacji, zobacz [porady: zapisywanie równoległej pętli for ze zmiennymi lokalnymi wątku](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) i [porady: zapisywanie równoległej pętli Foreach ze zmiennymi lokalnymi wątku](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md).  
+ Jeśli używasz <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> metody lub <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> metody iteracyjne źródeł danych równolegle, korzystając z przeciążeń, które mają wbudowaną obsługę danych lokalnych wątku. W tych metod umiejscowienie wątku jest realizowane za pośrednictwem lokalnego delegatów do tworzenia, dostępu i wyczyścić dane. Aby uzyskać więcej informacji, zobacz [porady: zapisywanie równoległej pętli for ze zmiennymi lokalnymi wątku](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) i [porady: zapisywanie równoległej pętli Foreach ze zmiennymi lokalnymi partycji](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
   
 ## <a name="using-lazy-initialization-for-low-overhead-scenarios"></a>W scenariuszach niskiego obciążenia przy użyciu inicjowania z opóźnieniem  
  W scenariuszach, w których konieczne opóźnieniem zainicjować dużą liczbę obiektów, możesz określić zawijania każdego obiektu w <xref:System.Lazy%601> wymaga zbyt dużej ilości pamięci lub zbyt wiele zasobów obliczeniowych. Lub może być rygorystycznych wymagań o jak incjalizacji jest widoczna. W takich przypadkach można użyć `static` (`Shared` w języku Visual Basic) metody <xref:System.Threading.LazyInitializer?displayProperty=nameWithType> opóźnieniem inicjalizacji każdego obiektu bez zawijania go w wystąpieniu klasy <xref:System.Lazy%601>.  

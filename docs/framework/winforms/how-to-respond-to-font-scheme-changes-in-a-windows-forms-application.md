@@ -1,5 +1,5 @@
 ---
-title: 'Porady: reagowanie na zmiany schematu czcionek w aplikacji Windows Forms'
+title: 'Porady: odpowiadanie na zmiany schematu czcionek w aplikacji formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-ms.openlocfilehash: 455609ea602f450803718f5be34618b087560d21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2451885c673515eb6690b0784fd5bd22de629209
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539455"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071149"
 ---
-# <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Porady: reagowanie na zmiany schematu czcionek w aplikacji Windows Forms
+# <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Porady: odpowiadanie na zmiany schematu czcionek w aplikacji formularzy systemu Windows
 W systemach operacyjnych Windows użytkownik może zmienić ustawienia czcionki systemowe, aby upewnić domyślnej czcionki są wyświetlane, większy lub mniejszy. Zmiana tych ustawień czcionki jest kluczowa dla użytkowników, którzy są niedowidzących i wymagają większej typu tekstu na ekranie. Można dostosować aplikacji Windows Forms reagowanie na te zmiany, zwiększ lub Zmniejsz rozmiar formularza i wszystkich zawartych w niej tekstu przy każdej zmianie schematu czcionek. Jeśli chcesz, aby formularz, aby uwzględnić zmiany w rozmiarze czcionki dynamicznie, można dodać kod do formularza.  
   
  Zazwyczaj domyślnej czcionki używanej przez formularze systemu Windows jest czcionki zwrócony przez <xref:Microsoft.Win32> wywołanie przestrzeni nazw `GetStockObject(DEFAULT_GUI_FONT)`. Czcionki zwróconych przez to połączenie zostanie zmieniona tylko, gdy zmienia się rozdzielczość ekranu. Jak pokazano w poniższej procedurze, kod należy zmienić domyślną czcionkę do <xref:System.Drawing.SystemFonts.IconTitleFont%2A> na odpowiadanie na zmiany w rozmiarze czcionki.  
@@ -40,13 +40,13 @@ W systemach operacyjnych Windows użytkownik może zmienić ustawienia czcionki 
   
 5.  Na koniec implementuje obsługi dla <xref:System.Windows.Forms.Form.FormClosing> zdarzenie, które odłącza <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> obsługi zdarzeń.  
   
-> [!IMPORTANT]
->  Nie można dołączyć ten kod spowoduje, że aplikacja do wycieku pamięci.  
+     > [!IMPORTANT]
+     > Nie można dołączyć ten kod spowoduje, że aplikacja do wycieku pamięci.  
   
- [!code-csharp[WinFormsAutoScaling#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#5)]
- [!code-vb[WinFormsAutoScaling#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#5)]  
+     [!code-csharp[WinFormsAutoScaling#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#5)]
+     [!code-vb[WinFormsAutoScaling#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#5)]  
   
-1.  Kompilowanie i uruchamianie kodu.  
+6.  Kompilowanie i uruchamianie kodu.  
   
 ### <a name="to-manually-change-the-font-scheme-in-windows-xp"></a>Aby ręcznie zmienić schematu czcionek w systemie Windows XP  
   
@@ -56,7 +56,7 @@ W systemach operacyjnych Windows użytkownik może zmienić ustawienia czcionki 
   
 3.  Z **rozmiar czcionki** listy rozwijanej wybierz nowy rozmiar czcionki.  
   
-     Można zauważyć, że formularz teraz reaguje na Uruchom czasu zmiany schematu czcionek pulpitu. Gdy użytkownik zmieni się między **normalny**, **duże czcionki**, i **dodatkowe duże czcionki**, formularz zmiany czcionki i skaluje poprawnie.  
+     Można zauważyć, że formularz teraz w przypadku środowiska wykonawczego zmiany schematu czcionek pulpitu. Gdy użytkownik zmieni się między **normalny**, **duże czcionki**, i **dodatkowe duże czcionki**, formularz zmiany czcionki i skaluje poprawnie.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[WinFormsAutoScaling#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#1)]

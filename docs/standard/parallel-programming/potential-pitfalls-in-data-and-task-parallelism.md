@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da87531ff7f20181e1e5499acb8152d0fbadc8af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6d4fd91eccd5e8f3fd6be7c8a63ab1c097002382
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592395"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37073232"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Potencjalne pułapki związane z równoległością danych i zadań
 W wielu przypadkach <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> zapewnia znaczną poprawę wydajności za pośrednictwem zwykłego pętle sekwencyjnych. Jednak pracy parallelizing pętli wprowadza złożoności, który może prowadzić do problemów, które w kolejnych kodu nie są jako wspólne lub w ogóle nie wystąpi. W tym temacie wymieniono niektóre praktyki, których należy unikać podczas pisania pętle równoległe.  
@@ -24,7 +24,7 @@ W wielu przypadkach <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty
  W niektórych przypadkach równoległej pętli może działać wolniej niż jego odpowiednik sekwencyjnych. Podstawowe zasadą to pętle równoległe wyposażonych w kilka iteracji i delegatów szybkiego użytkownika prawdopodobnie nie będzie przyspieszenie znacznie. Jednak ponieważ wydajności są związane z wielu czynników, zalecamy zawsze miar rzeczywiste wyniki.  
   
 ## <a name="avoid-writing-to-shared-memory-locations"></a>Unikaj zapisywanie w lokalizacji pamięci współużytkowanej  
- W kolejnych kodu nie jest rzadko do odczytu lub zapisu zmienne statyczne lub pola klasy. Zawsze, gdy wiele wątków uzyskują dostęp do tych zmiennych współbieżnie, istnieje jednak możliwość big wyścigu. Mimo że używasz blokad synchronizujący dostęp do zmiennej, kosztów synchronizacji może pogarszać wydajność. W związku z tym zalecamy można uniknąć, lub co najmniej ograniczyć dostęp do udostępniania stanu w możliwie równoległej pętli. Najlepszym sposobem, w tym celu jest Użyj przeciążeń <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> używające <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> zmienną do przechowywania stanu lokalnego wątku podczas wykonywania pętli. Aby uzyskać więcej informacji, zobacz [porady: zapisywanie równoległej pętli for ze zmiennymi lokalnymi wątku](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) i [porady: zapisywanie równoległej pętli Foreach ze zmiennymi lokalnymi wątku](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md).  
+ W kolejnych kodu nie jest rzadko do odczytu lub zapisu zmienne statyczne lub pola klasy. Zawsze, gdy wiele wątków uzyskują dostęp do tych zmiennych współbieżnie, istnieje jednak możliwość big wyścigu. Mimo że używasz blokad synchronizujący dostęp do zmiennej, kosztów synchronizacji może pogarszać wydajność. W związku z tym zalecamy można uniknąć, lub co najmniej ograniczyć dostęp do udostępniania stanu w możliwie równoległej pętli. Najlepszym sposobem, w tym celu jest Użyj przeciążeń <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> używające <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> zmienną do przechowywania stanu lokalnego wątku podczas wykonywania pętli. Aby uzyskać więcej informacji, zobacz [porady: zapisywanie równoległej pętli for ze zmiennymi lokalnymi wątku](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) i [porady: zapisywanie równoległej pętli Foreach ze zmiennymi lokalnymi partycji](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
   
 ## <a name="avoid-over-parallelization"></a>Unikaj nadmiernego Paralelizacja  
  Za pomocą pętli równoległej ponosisz kosztów partycjonowania kolekcji źródłowej i synchronizowanie wątków roboczych. Korzyści równoległości dalsze są ograniczone przez liczbę procesorów w komputerze. Nie ma żadnych przyspieszenie, które można uzyskać, uruchamiając wiele wątków wiązaniem obliczeń w tylko jednym procesorze. W związku z tym należy uważać, aby nie nadmiernie parallelize pętli.  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce2c47b172afee8745cdf5f68323d64dd550ea59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6db9d2e1e075b9908e4c6db3d327f446980e98a5
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579148"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37072959"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>Używanie klasy StringBuilder w .NET
 <xref:System.String> Obiektu nie można modyfikować. Zawsze używać jednej z metod w <xref:System.String?displayProperty=nameWithType> klasy, należy utworzyć nowy obiekt ciąg w pamięci, co wymaga nowej przydzielenie miejsca dla nowego obiektu. W sytuacjach, w którym należy przeprowadzić modyfikacji powtarzane na ciąg, obciążenie skojarzone z tworzeniem nowego <xref:System.String> obiekt może być kosztowne. <xref:System.Text.StringBuilder?displayProperty=nameWithType> Klasa może być używana, gdy chcesz zmodyfikować ciąg bez tworzenia nowego obiektu. Na przykład za pomocą <xref:System.Text.StringBuilder> klasy może zwiększyć wydajność, gdy łączenie wielu ciągów w pętli.  
@@ -43,7 +43,7 @@ ms.locfileid: "33579148"
  [!code-vb[Conceptual.StringBuilder#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#1)]  
   
 ## <a name="setting-the-capacity-and-length"></a>Ustawienia pojemności i długość  
- Mimo że <xref:System.Text.StringBuilder> jest to obiekt dynamiczny, która pozwala na liczbę znaków w ciągu, który hermetyzuje, rozwiń można określić wartości maksymalnej liczby znaków, które może on zawierać. Ta wartość jest nazywana pojemności obiektu i nie należy mylić z długość ciągu który bieżącego <xref:System.Text.StringBuilder> przechowuje. Na przykład można utworzyć nowe wystąpienie klasy <xref:System.Text.StringBuilder> klasy z ciągiem "Hello", która ma długość 5, i może określić, że obiekt ma maksymalną pojemność 25. Po zmodyfikowaniu <xref:System.Text.StringBuilder>, nie alokację rozmiar dla siebie aż do osiągnięcia pojemność. W takim przypadku nowe miejsce jest przydzielane automatycznie i pojemność jest podwójny. Należy określić pojemność <xref:System.Text.StringBuilder> przy użyciu jednego z konstruktorów przeciążona. Poniższy przykład określa, że `MyStringBuilder` obiektu można rozszerzyć, aby maksymalnie 25 spacji.  
+ Mimo że <xref:System.Text.StringBuilder> jest to obiekt dynamiczny, która pozwala na liczbę znaków w ciągu, który hermetyzuje, rozwiń można określić wartości maksymalnej liczby znaków, które może on zawierać. Ta wartość jest nazywana pojemności obiektu i nie należy mylić z długość ciągu który bieżącego <xref:System.Text.StringBuilder> przechowuje. Na przykład można utworzyć nowe wystąpienie klasy <xref:System.Text.StringBuilder> klasy z ciągiem "Hello", która ma długość 5, i może określić, że obiekt ma maksymalną pojemność 25. Po zmodyfikowaniu <xref:System.Text.StringBuilder>, nie alokację rozmiar dla siebie aż do osiągnięcia pojemność. W takim przypadku nowe miejsce jest przydzielane automatycznie i pojemność jest podwójny. Należy określić pojemność <xref:System.Text.StringBuilder> przy użyciu jednego z konstruktorów przeciążona. Poniższy przykład określa, że `myStringBuilder` obiektu można rozszerzyć, aby maksymalnie 25 spacji.  
   
  [!code-cpp[Conceptual.StringBuilder#2](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#2)]
  [!code-csharp[Conceptual.StringBuilder#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#2)]

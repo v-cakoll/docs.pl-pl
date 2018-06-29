@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 011f37cbbfa3eacab92705cd8e4363b36a746cf1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ca518e1d98e26755167ec6cf2f67ba9f7295679
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33509154"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071334"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Narzędzie do obsługi metadanych elementu ServiceModel (Svcutil.exe)
 Narzędzie metadanych elementu ServiceModel narzędzie jest używane do generowania kodu modelu usługi z dokumentów metadanych i dokumentów metadanych z kodu modelu usługi.  
@@ -36,7 +36,7 @@ Narzędzie metadanych elementu ServiceModel narzędzie jest używane do generowa
 >   
 >  Ponadto `/r` i `/ct` przełączniki odwoływanie do typów są generowania kontraktów danych. Te przełączniki nie działają w przypadku przy użyciu elementu XmlSerializer.  
   
-### <a name="timeout"></a>Limit czasu  
+### <a name="timeout"></a>limit czasu  
  Narzędzie ma 5 minut przekroczenie limitu czasu podczas pobierania metadanych.  Ten limit ma zastosowanie tylko do pobierania metadanych za pośrednictwem sieci. Nie ma zastosowania do jakiegokolwiek przetwarzania tych metadanych.  
   
 ### <a name="multi-targetting"></a>Profilowanie wielu grup  
@@ -66,7 +66,7 @@ Narzędzie metadanych elementu ServiceModel narzędzie jest używane do generowa
  Usługi z punktem końcowym obiekt BasicHttpContextbinding Svcutil.exe generuje BasicHttpBinding z `allowCookies` ustawić atrybutu `true` zamiast tego. Pliki cookie są używane dla kontekstu na serwerze. Jeśli chcesz zarządzać kontekstu na kliencie, gdy usługa używa plików cookie, można ręcznie zmodyfikować konfigurację, aby użyć kontekstu powiązania.  
   
 > [!CAUTION]
->  Svcutil.exe generuje klienta na podstawie pliku WSDL lub zasady, otrzymał od usługi. Główna nazwa użytkownika (UPN) jest generowana przez połączenie nazwy użytkownika, "@" i w pełni kwalifikowaną nazwą domeny (FQDN). Jednak dla użytkowników, którzy zarejestrowane w usłudze Active Directory, ten format jest nieprawidłowy i UPN wygenerowany przez narzędzie powoduje to niepowodzenie w uwierzytelnianiu Kerberos z komunikatem o błędzie "Próba logowania nie powiodła się". Aby rozwiązać ten problem, należy ręcznie naprawić plik klienta generowanego przez to narzędzie.  
+>  Svcutil.exe generuje klienta na podstawie pliku WSDL lub zasady, otrzymał od usługi. Główna nazwa użytkownika (UPN) jest generowana przez połączenie nazwy użytkownika, "\@" i w pełni kwalifikowaną nazwą domeny (FQDN). Jednak dla użytkowników, którzy zarejestrowane w usłudze Active Directory, ten format jest nieprawidłowy i UPN wygenerowany przez narzędzie powoduje to niepowodzenie w uwierzytelnianiu Kerberos z komunikatem o błędzie "Próba logowania nie powiodła się". Aby rozwiązać ten problem, należy ręcznie naprawić plik klienta generowanego przez to narzędzie.  
   
  `svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>`  
   

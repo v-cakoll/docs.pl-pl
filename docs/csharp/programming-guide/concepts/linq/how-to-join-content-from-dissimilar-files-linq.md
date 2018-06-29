@@ -1,20 +1,21 @@
 ---
 title: 'Porady: łączenie zawartości niepodobnych plików (LINQ) (C#)'
-ms.date: 07/20/2015
+ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: c6af2c0f90d3ebb69438b670a4f0cecb10d8d2fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 444276f6ad68e988b2dbc2cd7401248a6f5da072
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319172"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071838"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Porady: łączenie zawartości niepodobnych plików (LINQ) (C#)
+
 W tym przykładzie pokazano, jak sprzęgać dane z dwóch plików rozdzielanych przecinkami, które mają wspólną wartość, które jest używane jako dopasowany klucz. Ta metoda może być przydatna, jeśli masz połączyć dane z dwóch arkuszy kalkulacyjnych lub z arkusza kalkulacyjnego i z pliku innego formatu, który ma do nowego pliku. Można zmodyfikować przykładu do pracy z dowolnego rodzaju strukturalnych tekstu.  
   
-### <a name="to-create-the-data-files"></a>Aby utworzyć pliki danych  
+## <a name="to-create-the-data-files"></a>Aby utworzyć pliki danych
   
-1.  Skopiuj następujące wiersze do pliku o nazwie scores.csv i zapisać go w folderze projektu. Plik reprezentuje dane w arkuszu. Kolumna 1 jest Identyfikatorem Studenta, a kolumny od 2 do 5 są wyniki testów.  
+1.  Skopiuj następujące wiersze do pliku o nazwie *scores.csv* i zapisać ją w folderze projektu. Plik reprezentuje dane w arkuszu. Kolumna 1 jest Identyfikatorem Studenta, a kolumny od 2 do 5 są wyniki testów.  
   
     ```  
     111, 97, 92, 81, 60  
@@ -31,7 +32,7 @@ W tym przykładzie pokazano, jak sprzęgać dane z dwóch plików rozdzielanych 
     122, 94, 92, 91, 91  
     ```  
   
-2.  Skopiuj następujące wiersze do pliku o nazwie names.csv i zapisać go w folderze projektu. Arkusz danych zawierający identyfikatora dla użytkowników domowych, imię i nazwisko studenta reprezentuje plik  
+2.  Skopiuj następujące wiersze do pliku o nazwie *names.csv* i zapisać ją w folderze projektu. Arkusz danych zawierający identyfikatora dla użytkowników domowych, imię i nazwisko studenta reprezentuje plik  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -49,8 +50,12 @@ W tym przykładzie pokazano, jak sprzęgać dane z dwóch plików rozdzielanych 
     ```  
   
 ## <a name="example"></a>Przykład  
-  
-```csharp  
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
 class JoinStrings  
 {  
     static void Main()  
@@ -78,7 +83,7 @@ class JoinStrings
             let nameFields = name.Split(',')  
             from id in scores  
             let scoreFields = id.Split(',')  
-            where nameFields[2] == scoreFields[0]  
+            where Convert.ToInt32(nameFields[2]) == Convert.ToInt32(scoreFields[0])
             select nameFields[0] + "," + scoreFields[1] + "," + scoreFields[2]   
                    + "," + scoreFields[3] + "," + scoreFields[4];  
   
@@ -102,26 +107,32 @@ class JoinStrings
     }  
 }  
 /* Output:  
-Merge two spreadsheets:  
-Adams, 99, 82, 81, 79  
-Fakhouri, 99, 86, 90, 94  
-Feng, 93, 92, 80, 87  
-Garcia, 97, 89, 85, 82  
-Garcia, 35, 72, 91, 70  
-Garcia, 92, 90, 83, 78  
-Mortensen, 88, 94, 65, 91  
-O'Donnell, 75, 84, 91, 39  
-Omelchenko, 97, 92, 81, 60  
-Tucker, 68, 79, 88, 92  
-Tucker, 94, 92, 91, 91  
-Zabokritski, 96, 85, 91, 60  
-12 total names in list  
+Merge two spreadsheets:
+Omelchenko, 97, 92, 81, 60
+O'Donnell, 75, 84, 91, 39
+Mortensen, 88, 94, 65, 91
+Garcia, 97, 89, 85, 82
+Garcia, 35, 72, 91, 70
+Fakhouri, 99, 86, 90, 94
+Feng, 93, 92, 80, 87
+Garcia, 92, 90, 83, 78
+Tucker, 68, 79, 88, 92
+Adams, 99, 82, 81, 79
+Zabokritski, 96, 85, 91, 60
+Tucker, 94, 92, 91, 91
+12 total names in list
  */  
-```  
+```
+
+## <a name="compiling-the-code"></a>Kompilowanie kodu
+
+Utwórz i skompiluj projekt, który jest przeznaczony dla jednego z następujących opcji:
+
+- .NET framework w wersji 3.5 z odwołania do System.Core.dll.
+- .NET framework w wersji 4.0 lub nowszy.
+- Wersja platformy .NET core wersji 1.0 lub nowszej.
   
-## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Tworzenie projektu przeznaczonego dla programu .NET Framework w wersji 3.5 lub nowszego z odwołania do System.Core.dll i `using` dyrektywy dla przestrzeni nazw System.Linq i System.IO.  
-  
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także
+
  [LINQ i ciągi (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
  [LINQ i katalogi plików (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

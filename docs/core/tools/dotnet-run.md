@@ -4,12 +4,12 @@ description: Dotnet, uruchom polecenie zapewnia to wygodny sposób do uruchamian
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 82c6e44e52aa6af7044edf72fd6e57b7614a70f3
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 609ac27f21e6801992b9e10c7d465a805492859e
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696315"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071763"
 ---
 # <a name="dotnet-run"></a>Uruchom DotNet
 
@@ -201,9 +201,9 @@ Uruchom projekt w bieżącym katalogu:
 
 Uruchamia określony projekt:
 
-`dotnet run --project /projects/proj1/proj1.csproj`
+`dotnet run --project ./projects/proj1/proj1.csproj`
 
-Uruchom projekt w bieżącym katalogu ( `--help` argument w tym przykładzie jest przekazywany do aplikacji, ponieważ `--` argument jest używany):
+Uruchom projekt w bieżącym katalogu ( `--help` argument w tym przykładzie jest przekazywany do aplikacji, ponieważ pustym `--` jest używana opcja):
 
 `dotnet run --configuration Release -- --help`
 

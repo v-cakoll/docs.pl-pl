@@ -13,12 +13,12 @@ ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: e20d414b3be41fc175037c6691518adf6a424b69
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 40eda14d4d578f10a77aa06843abd48f58c55f6a
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743030"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37073024"
 ---
 # <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;Usuń&gt; elementu webRequestModules — (ustawienia sieciowe)
 Usuwa niestandardowego modułu żądania sieci Web z aplikacji.  
@@ -57,7 +57,7 @@ Usuwa niestandardowego modułu żądania sieci Web z aplikacji.
 ## <a name="remarks"></a>Uwagi  
  `remove` Element usuwa zarejestrowanego modułu żądania sieci Web dla określonego prefiksu identyfikatora URI.  
   
- Wartość `prefix` atrybutu powinna być pierwszych znaków z prawidłowym identyfikatorem URI — na przykład "http" lub "http://www.contoso.com".  
+ Wartość `prefix` atrybutu powinna być pierwszych znaków z prawidłowym identyfikatorem URI — na przykład "http" lub "`http://www.contoso.com` ".  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
  Ten element może być użyty w pliku konfiguracji aplikacji lub pliku konfiguracji komputera (Machine.config).  

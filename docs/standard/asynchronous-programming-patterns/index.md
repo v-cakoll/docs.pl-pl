@@ -8,22 +8,22 @@ helpviewer_keywords:
 ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86ed48361e0868d9e2fa2b79b1c5fa8955018bef
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 809385bda48c6fb8dae125fe348228aaee375a6c
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32768778"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071308"
 ---
 # <a name="asynchronous-programming-patterns"></a>Wzorce programowania asynchronicznego
 
 .NET Framework udostępnia trzy wzorce do wykonywania operacji asynchronicznych:  
   
-- Asynchroniczny wzorzec modelu programowania (APM) (nazywane również <xref:System.IAsyncResult> wzorzec), których wymagają operacji asynchronicznych `Begin` i `End` metody (na przykład `BeginWrite` i `EndWrite` dla asynchronicznego zapisu operacji). Ten wzorzec już zaleca się nowych wdrożeń. Aby uzyskać więcej informacji, zobacz [asynchronicznego programowania modelu (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md).  
+- **Asynchronicznego programowania modelu (APM)** wzorca (nazywane również <xref:System.IAsyncResult> wzorzec), których wymagają operacji asynchronicznych `Begin` i `End` metody (na przykład `BeginWrite` i `EndWrite` dla asynchronicznego operacje zapisu). Ten wzorzec już zaleca się nowych wdrożeń. Aby uzyskać więcej informacji, zobacz [asynchronicznego programowania modelu (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md).  
   
-- Oparty na zdarzeniach asynchroniczne wzorca (EAP), która wymaga metody, która ma `Async` sufiks, a także wymaga co najmniej jednego zdarzenia, typów obiektu delegowanego obsługi zdarzeń, a `EventArg`-typów pochodnych. Protokół EAP został wprowadzony w .NET Framework 2.0. Zaleca się już w nowych wdrożeniach. Aby uzyskać więcej informacji, zobacz [oparty na zdarzeniach asynchroniczny wzorzec (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  
+- **Oparty na zdarzeniach asynchroniczny wzorzec (EAP)**, która wymaga metody, która ma `Async` sufiks, a także wymaga co najmniej jednego zdarzenia, typów obiektu delegowanego obsługi zdarzeń, i `EventArg`-typów pochodnych. Protokół EAP został wprowadzony w .NET Framework 2.0. Zaleca się już w nowych wdrożeniach. Aby uzyskać więcej informacji, zobacz [oparty na zdarzeniach asynchroniczny wzorzec (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  
   
-- Oparty na zadaniach asynchronicznej wzorca (TAP), który za pomocą pojedynczej metody reprezentują rozpoczęcie i zakończenie operacji asynchronicznej. NACIŚNIJ została wprowadzona w .NET Framework 4 i jest zalecane podejście do asynchronicznego programowania w programie .NET Framework. [Async](~/docs/csharp/language-reference/keywords/async.md) i [await](~/docs/csharp/language-reference/keywords/await.md) słów kluczowych w języku C# i [Async](~/docs/visual-basic/language-reference/modifiers/async.md) i [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) Obsługa języków w programie TAP dodać operatory w języku Visual Basic. Aby uzyskać więcej informacji, zobacz [opartego na zadaniach asynchronicznej wzorca (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).  
+- **Oparty na zadaniach asynchronicznej wzorca (TAP)**, który używa jednej metody w celu reprezentują rozpoczęcie i zakończenie operacji asynchronicznej. NACIŚNIJ została wprowadzona w .NET Framework 4 i jest zalecane podejście do asynchronicznego programowania w programie .NET Framework. [Async](~/docs/csharp/language-reference/keywords/async.md) i [await](~/docs/csharp/language-reference/keywords/await.md) słów kluczowych w języku C# i [Async](~/docs/visual-basic/language-reference/modifiers/async.md) i [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) Obsługa języków w programie TAP dodać operatory w języku Visual Basic. Aby uzyskać więcej informacji, zobacz [opartego na zadaniach asynchronicznej wzorca (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).  
   
 ## <a name="comparing-patterns"></a>Porównywanie wzorce  
 

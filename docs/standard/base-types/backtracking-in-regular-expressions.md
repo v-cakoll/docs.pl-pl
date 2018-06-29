@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7caf42ee45f31e374bd2cbf7c700992130281ff0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e05da1c2ed68f482cbb1280c5c40583ab54d71bb
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579772"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071867"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Śledzenie wsteczne w wyrażeniach regularnych
 <a name="top"></a> Śledzenie wsteczne występuje, gdy wzorzec wyrażenia regularnego zawiera opcjonalne [Kwantyfikatory](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) lub [konstrukcje alternacyjne](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md), i zwraca aparat wyrażeń regularnych do poprzedniego stanu zapisanego kontynuować jego wyszukiwane dopasowania. Wycofywanie stanowi podstawę dużych możliwości wyrażeń regularnych, ponieważ dzięki niemu wyrażenia oferują duże możliwości i są elastyczne, a także umożliwiają dopasowywanie bardzo złożonych wzorców. Jednocześnie te możliwości są obciążone kosztami. Wycofywanie często jest najważniejszym czynnikiem wpływającym na wydajność aparatu wyrażeń regularnych. Na szczęście deweloper ma kontrolę nad zachowaniem aparatu wyrażeń regularnych i sposobem użycia wycofywania. W tym temacie opisano zasadę działania wycofywania i możliwości sterowania nim.  
@@ -169,7 +169,7 @@ ms.locfileid: "33579772"
 |`[-.\w]*`|Dopasowuje zero, jedno lub większą liczbę wystąpień łącznika, kropki lub znaku słowa.|  
 |`[0-9A-Z]`|Dopasowuje znak alfanumeryczny.|  
 |`([-.\w]*[0-9A-Z])*`|Dopasowuje zero lub większą liczbę wystąpień kombinacji składających się z zera lub większej liczby łączników, kropek lub znaków słowa, po których występuje znak alfanumeryczny. Jest to pierwsza grupa przechwytywania.|  
-|`@`|Dopasowuje znak („@”).|  
+|`@`|Uwzględnij znak ("\@").|  
   
  Drugi wzorzec wyrażenia regularnego, `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@`, używa potwierdzenia dodatnie wybieganie wstecz. Definicję tego wyrażenia pokazano w poniższej tabeli.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "33579772"
 |`[0-9A-Z]`|Dopasowuje znak alfanumeryczny. To porównanie nie uwzględnia wielkości liter, ponieważ <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> metoda jest wywoływana z <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> opcji.|  
 |`[-.\w]*`|Dopasowuje zero lub większą liczbę wystąpień łącznika, kropki lub znaku słowa.|  
 |`(?<=[0-9A-Z])`|Sprawdza ostatni dopasowany znak i kontynuuje dopasowywanie, jeśli jest to znak alfanumeryczny. Należy zauważyć, że znaki alfanumeryczne stanowią podzestaw zestawu składającego się z kropek, łączników i wszystkich znaków słowa.|  
-|`@`|Dopasowuje znak („@”).|  
+|`@`|Uwzględnij znak ("\@").|  
   
 <a name="Lookahead"></a>   
 ### <a name="lookahead-assertions"></a>Asercje wyprzedzające  

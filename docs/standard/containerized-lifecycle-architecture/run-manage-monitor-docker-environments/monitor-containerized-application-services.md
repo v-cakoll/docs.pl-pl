@@ -4,12 +4,12 @@ description: Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Mi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 3877767117d8292644782fc07df6667931688be2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 368d99e92f80cf37965139cb67fc5f22b44f40cd
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575547"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106137"
 ---
 # <a name="monitor-containerized-application-services"></a>Monitor konteneryzowanych usługi aplikacji
 
@@ -42,7 +42,7 @@ Aby utworzyć zasobu usługi Application Insights, postępuj zgodnie z instrukcj
 -   **Monitor Docker aplikacji w usłudze Application Insights:**  [https://docs.microsoft.com/azure/application-insights/app-insights-docker](https://docs.microsoft.com/azure/application-insights/app-insights-docker)
 
 -   **Obraz Insights Docker aplikacji w Centrum Docker i Github:**  
-[https://hub.docker.com/r/microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/) I <https://github.com/Microsoft/ApplicationInsights-Docker>
+[https://hub.docker.com/r/microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/) i <https://github.com/Microsoft/ApplicationInsights-Docker>
 
 -   **Skonfiguruj usługę Application Insights dla platformy ASP.NET:**  
 [https://docs.microsoft.com/azure/application-insights/app-insights-asp-net](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net)
@@ -97,4 +97,5 @@ Zapisywanie kwerend również jest standardowa funkcja Operations Management Sui
 **Więcej informacji o** można znaleźć informacje o instalowaniu i konfigurowaniu Docker rozwiązania kontenera w [Operations Management Suite](http://microsoft.com/oms), przejdź do <https://docs.microsoft.com/azure/log-analytics/log-analytics-containers>.
 
 >[!div class="step-by-step"]
-[Poprzednie] (Zarządzanie produkcji — docker-environments.md) [dalej] (.. /Key-takeaways/index.MD)
+[Poprzednie](manage-production-docker-environments.md)
+[dalej](../key-takeaways/index.md)

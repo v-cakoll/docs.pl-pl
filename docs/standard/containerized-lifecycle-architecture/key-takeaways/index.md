@@ -1,17 +1,17 @@
 ---
-title: takeaways klucza
+title: Takeaways klucza
 description: Cykl życia aplikacji konteneryzowanych Docker z platformy Microsoft a _v1.1 narzędzia (Książka elektroniczna)
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 84ba63c1685fcc3a49c6333a5e88c363bdad8ed4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf5648b1aa21ffd783c76aaa11c8e81371f45d18
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568982"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104641"
 ---
-# <a name="key-takeaways"></a>takeaways klucza
+# <a name="key-takeaways"></a>Takeaways klucza
 
 -   Rozwiązania oparte na kontener zawiera istotne zalety oszczędności, ponieważ kontenery są rozwiązanie problemów wdrożenia spowodowane brakiem zależności w środowiskach produkcyjnych, w związku z tym znacznie poprawy operacje DevOps i produkcji .
 
@@ -26,4 +26,4 @@ ms.locfileid: "33568982"
 Visual Studio Team Services jest znacznie ułatwione wyznaczone do środowisk Docker z Twojej potoki ciągłego wdrażania, w tym proste środowisk Docker lub bardziej zaawansowanych orchestrators mikrousługi i kontener na podstawie środowiska opracowywania oprogramowania Azure.
 
 >[!div class="step-by-step"]
-[Poprzednie] (.. / run-manage-monitor-docker-environments/monitor-containerized-application-services.md)
+[Poprzednie](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)

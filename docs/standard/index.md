@@ -6,18 +6,20 @@ ms.author: ronpet
 ms.date: 05/02/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 01eb2e94b57da5e5dad0fa355246bcbcbc153dab
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: cbe08d87e90d319c074e85d0157e62fe023cce8c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457014"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105175"
 ---
 # <a name="net-guide"></a>.NET — przewodnik
 
 Przewodnik .NET zawiera dużą ilość informacji na temat platformy .NET.  W zależności od użytkownika znajomości .NET warto poznać różne sekcje w tym przewodniku i innych części dokumentacji platformy .NET.
 
 ## <a name="new-to-net"></a>Jesteś nowym użytkownikiem .NET
+
+Jeśli chcesz ogólne omówienie o .NET, zapoznaj się [co to jest .NET?](https://www.microsoft.com/net/learn/what-is-dotnet).
 
 Jeśli jesteś nowym użytkownikiem .NET, zapoznaj się [wprowadzenie](get-started.md) artykułu.
 

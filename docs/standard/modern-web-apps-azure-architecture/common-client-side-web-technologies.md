@@ -4,12 +4,12 @@ description: Projektowania nowoczesnych aplikacji sieci Web platformy ASP.NET Co
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/07/2017
-ms.openlocfilehash: 96bafce9c81a3a0486b7b8930367cf47ec5cbcb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79dac220e40274889783d29c0e04679dd878fda5
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592070"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106765"
 ---
 # <a name="common-client-side-web-technologies"></a>Typowe technologie sieci Web po stronie klienta
 
@@ -66,14 +66,14 @@ Na przykład załóżmy, że jeśli pole tekstowe wartość przekracza 10, eleme
 
 ### <a name="jquery-vs-a-spa-framework"></a>vs jQuery SPA Framework
 
-| **Współczynnik** | **jQuery** | **dyrektywy angular**|
+| **Współczynnik** | **jQuery** | **Dyrektywy angular**|
 |--------------------------|------------|-------------|
-| Abstracts modelu DOM | **Tak** | **Tak** |
-| Obsługa technologii AJAX | **Tak** | **Tak** |
-| Powiązanie danych deklaratywne | **Brak** | **Tak** |
-| Styl MVC routingu | **Brak** | **Tak** |
-| Tworzenia szablonów | **Brak** | **Tak** |
-| Głębokie łącze routingu | **Brak** | **Tak** |
+| Abstracts modelu DOM | **tak** | **tak** |
+| Obsługa technologii AJAX | **tak** | **tak** |
+| Powiązanie danych deklaratywne | **Brak** | **tak** |
+| Styl MVC routingu | **Brak** | **tak** |
+| Tworzenia szablonów | **Brak** | **tak** |
+| Głębokie łącze routingu | **Brak** | **tak** |
 
 Większość funkcji, które jQuery nie ma bardzo można dodać z uwzględnieniem innych bibliotek. Framework SPA, takich jak kątową zapewnia jednak te funkcje w sposób integracji, ponieważ jest on przeznaczony wszystkich z nich na uwadze od początku. Ponadto jQuery jest bardzo ważnych biblioteki, co oznacza konieczność wywoływać funkcje jQuery, aby można było wykonywać żadnych czynności z jQuery. Większość pracy i funkcje, które zapewniają struktur SPA można deklaratywnie, wymagających bez rzeczywistego kodu do zapisania.
 
@@ -104,7 +104,7 @@ Kątową powoduje dużą korzystanie z narzędzi wiersza polecenia (CLI). Wprowa
 
 Firma Microsoft opracowała aplikację odwołanie [eShopOnContainers](http://aka.ms/MicroservicesArchitecture), w tym implementację kątowego SPA. Ta aplikacja zawiera kątowego modułów do zarządzania Sklep internetowy zakupy koszyka, obciążenia i wyświetlania elementów z jego katalogu i obsługa tworzenia zamówienia. Można wyświetlić i pobrać przykładową aplikację z [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA).
 
-### <a name="react"></a>Reakcji
+### <a name="react"></a>reakcji
 
 W odróżnieniu od kątową, która zapewnia pełnej implementacji wzorca Model-View-Controller platformy React dotyczy jedynie widoków. Nie jest framework, po prostu biblioteki, tak aby utworzyć SPA musisz korzystać z dodatkowych bibliotek.
 
@@ -155,9 +155,9 @@ Struktury JavaScript nadal podlegać ewolucji o prędkości breakneck. Użyj zag
 > <https://jquery.com/>
 > - **jQuery vs AngularJS**  
 > <https://www.airpair.com/angularjs/posts/jquery-angularjs-comparison-migration-walkthrough>
-> - **dyrektywy angular**  
+> - **Dyrektywy angular**  
 > <https://angular.io/>
-> - **Reakcji**  
+> - **reakcji**  
 > <https://facebook.github.io/react/>
 > - **Zareagować Slingshot**  
 > <https://github.com/coryhouse/react-slingshot>
@@ -167,4 +167,5 @@ Struktury JavaScript nadal podlegać ewolucji o prędkości breakneck. Użyj zag
 > <https://hackernoon.com/5-best-javascript-frameworks-in-2017-7a63b3870282>
 
 >[!div class="step-by-step"]
-[Previous] (common-web-application-architectures.md) [Next] (develop-asp-net-core-mvc-apps.md)
+[Poprzednie](common-web-application-architectures.md)
+[dalej](develop-asp-net-core-mvc-apps.md)

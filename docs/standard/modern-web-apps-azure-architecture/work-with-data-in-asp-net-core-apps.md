@@ -4,12 +4,12 @@ description: Projektowania nowoczesnych aplikacji sieci Web platformy ASP.NET Co
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/07/2017
-ms.openlocfilehash: 89df46c8e04e1826c84058e5d2a92d089eb96098
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c9f1350f57ed649b9bf53968c19ab652b3c74384
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592525"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106178"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Praca z danymi w aplikacjach platformy ASP.NET Core
 
@@ -437,4 +437,5 @@ _cache.Get<CancellationTokenSource>("cts").Cancel();
 ```
 
 >[!div class="step-by-step"]
-[Previous] (develop-asp-net-core-mvc-apps.md) [Next] (test-asp-net-core-mvc-apps.md)
+[Poprzednie](develop-asp-net-core-mvc-apps.md)
+[dalej](test-asp-net-core-mvc-apps.md)

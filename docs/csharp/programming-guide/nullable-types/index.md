@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, nullable types
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-ms.openlocfilehash: fcff492f420a60a41b373bf9042ed0c2d66d0446
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 64b326b82cd022ed6590a232546690e2ec2a5c78
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34456591"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105491"
 ---
 # <a name="nullable-types-c-programming-guide"></a>Typy dopuszczające wartości zerowe (Przewodnik programowania w języku C#)
 Typy dopuszczające wartości null są wystąpieniami klasy <xref:System.Nullable%601?displayProperty=nameWithType> struktury. Typ dopuszczający wartość null może reprezentować poprawny zakres wartości dla jego typem podstawowym wartości, a także dodatkowe `null` wartość. Na przykład `Nullable<Int32>`, wyraźnym "Dopuszcza wartości null z Int32," można przypisać wartości od -2147483648 do 2147483647 lub można go przypisać `null` wartość. A `Nullable<bool>` można przypisać wartości [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md), lub [null](../../../csharp/language-reference/keywords/null.md). Możliwość przypisania `null` do typów liczbowych i logicznych jest szczególnie przydatne podczas mamy do czynienia z bazami danych i inne typy danych, które zawierają elementy, które nie może być przypisana wartość. Na przykład polem w bazie danych można zapisać wartości `true` lub `false`, lub może być niezdefiniowana. 
@@ -27,7 +27,7 @@ Aby uzyskać więcej przykładów, zobacz [przy użyciu typów dopuszczających 
   
 -   Składnia `T?` jest skróconą formą <xref:System.Nullable%601>, gdzie `T` jest typem wartości. Dwa formularze są wymienne.  
   
--   Przypisywanie wartości do typu dopuszczającego wartość null, tak samo jak dla typu wartości zwykłej, na przykład `int? x = 10;` lub `double? d = 4.108`. Typ dopuszczający wartość NULL można również przypisać wartość `null`: `int? x = null.`  
+-   Przypisywanie wartości do typu dopuszczającego wartość null, tak samo jak dla typu wartości zwykłej, na przykład `int? x = 10;` lub `double? d = 4.108;`. Typ dopuszczający wartość NULL można również przypisać wartość `null`: `int? x = null;`.  
   
 -   Użyj <xref:System.Nullable%601.GetValueOrDefault%2A?displayProperty=nameWithType> metodę, aby zwrócić przypisaną wartość lub wartość domyślna dla typu źródłowego, jeśli wartość jest `null`, na przykład `int j = x.GetValueOrDefault();`  
   
@@ -61,5 +61,5 @@ Aby uzyskać więcej przykładów, zobacz [przy użyciu typów dopuszczających 
  <xref:System.Nullable>  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [C#](../../../csharp/index.md)  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
+ [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
  [Co dokładnie "unosiło" oznacza?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)

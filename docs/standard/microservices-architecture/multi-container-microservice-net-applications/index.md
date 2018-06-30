@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 297a53d6d6d37b1fa4a0e021919c9df86edeca03
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 13abff090d42c5d59476612942560c126836dbb0
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571959"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104481"
 ---
 # <a name="designing-and-developing-multi-container-and-microservice-based-net-applications"></a>Projektowanie i tworzenie aplikacji na podstawie Mikrousługi i usługi kontenera platformy .NET
 
@@ -21,4 +21,5 @@ Jednak jeśli wiesz, jak projektowanie i tworzenie aplikacji na podstawie mikrou
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (.. /containerize-NET-Framework-Applications/index.MD) [dalej] (ruch design.md mikrousługi aplikacji)
+[Poprzednie](../containerize-net-framework-applications/index.md)
+[dalej](microservice-application-design.md)

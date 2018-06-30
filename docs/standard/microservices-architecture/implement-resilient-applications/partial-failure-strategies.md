@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: f1b2b59af96bf28035eeb32eb15eaa4105677cf4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c36ea31ad19b02fb02bc8e7185bfe8687b87764f
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578687"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104212"
 ---
 # <a name="strategies-for-handling-partial-failure"></a>Strategie dotyczące postępowania z częściowa awarii
 
@@ -46,4 +46,5 @@ Strategie dotyczące postępowania z błędami częściowe są następujące.
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (uchwyt partial-failure.md) [dalej] (wdrożenie-ponownych prób wykładniczej backoff.md)
+[Poprzednie](handle-partial-failure.md)
+[dalej](implement-retries-exponential-backoff.md)

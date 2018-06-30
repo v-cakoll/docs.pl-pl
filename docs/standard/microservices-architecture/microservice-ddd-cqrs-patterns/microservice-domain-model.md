@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
-ms.openlocfilehash: 2776412b96d4ed141f48814d19d2deaa1a71520d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e672685666c846ea63bcd9cdb713af58f5e6fb1b
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579460"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106255"
 ---
 # <a name="designing-a-microservice-domain-model"></a>Projektowanie modelu domeny mikrousługi
 
@@ -87,8 +87,8 @@ Obiekty wartości są trudne do zarządzania relacyjnymi bazami danych i ORMs, t
 -   **Wartość obiektu**
     [*http://deviq.com/value-object/*](http://deviq.com/value-object/)
 
--   **Wartości obiektów w rozwoju Test-Driven**
-    [*https://leanpub.com/tdd-ebook/read\#leanpub-auto wartość — obiekty*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
+-   **Obiekty wartości w Test-Driven Development**
+    [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
 -   **Evans marek. Projektowanie oparte na domenie: Czoła złożoności serca oprogramowania.** (Książki; zawiera omówienie obiekty wartości) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
@@ -134,7 +134,7 @@ Identyfikowanie i Praca z wartości zagregowanych wymaga badań i obsługi. Aby 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
 -   **Vaughn Vernon. Efektywnym projektowaniu agregacji — część I: modelowania pojedynczego agregacji**
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_SPOŁECZNOŚCI\_OPISOWYCH\_AGREGUJE\_części \_pdf 1.*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
+    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
 
 -   **Vaughn Vernon. Skuteczne agregacji projektu — część II: Tworzenie wartości zagregowanych współpracują**
     *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf> *
@@ -153,4 +153,5 @@ Identyfikowanie i Praca z wartości zagregowanych wymaga badań i obsługi. Aby 
 
 
 >[!div class="step-by-step"]
-[Previous] (ddd-oriented-microservice.md) [Next] (net-core-microservice-domain-model.md)
+[Poprzednie](ddd-oriented-microservice.md)
+[dalej](net-core-microservice-domain-model.md)

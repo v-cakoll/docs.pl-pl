@@ -4,12 +4,12 @@ description: Projektowania nowoczesnych aplikacji sieci Web platformy ASP.NET Co
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/08/2017
-ms.openlocfilehash: e27cdb4b785253edd27e9854d6f977e3ede02266
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: b22e0e109144b4abd04cd4199cfdec244d8fa7af
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208515"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106505"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Test platformy ASP.NET Core aplikacji MVC
 
@@ -273,4 +273,5 @@ public class CatalogControllerGetImage : BaseWebTest
 Ten test funkcjonalności wykonuje pełne stosu aplikacji ASP.NET Core MVC włącznie ze wszystkimi oprogramowanie pośredniczące, filtry, integratorów, itp., które mogą być stosowane. Sprawdza, czy podany trasy ("/ 1-katalogu/pic") zwraca tablicę bajtów oczekiwanego pliku w znanej lokalizacji. Wykonuje bez konfigurowania serwera sieci web prawdziwe, a więc pozwala uniknąć znacznie kruchości, który przy użyciu rzeczywistego sieci web serwera do testowania może wystąpić (na przykład problemy z ustawieniami zapory). Testy funkcjonalne, systemem względem elementu TestServer są zazwyczaj wolniej niż integracji i testów jednostkowych, ale jest znacznie szybsze niż testy, które może działać przez sieć do serwera sieci web testu.
 
 >[!div class="step-by-step"]
-[Poprzednie] (work-with-data-in-asp-net-core-apps.md) [dalej] (Programowanie — proces do azure.md)
+[Poprzednie](work-with-data-in-asp-net-core-apps.md)
+[dalej](development-process-for-azure.md)

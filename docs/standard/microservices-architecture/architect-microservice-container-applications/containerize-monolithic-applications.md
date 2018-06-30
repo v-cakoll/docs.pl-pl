@@ -4,11 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: f5d00c6ce4c965d66937dae3f8e5453883afb4b7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4e5b7a8202a0af26c8d61e315c3aa8f592ed45d9
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105926"
 ---
 # <a name="containerizing-monolithic-applications"></a>Containerizing wbudowanymi aplikacji
 
@@ -72,4 +73,5 @@ Jak również pokazano rysunek 4 — 4 przepływ publikowania wypycha obrazu za 
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (index.md) [dalej] (docker aplikacji — stan data.md)
+[Poprzednie](index.md)
+[dalej](docker-application-state-data.md)

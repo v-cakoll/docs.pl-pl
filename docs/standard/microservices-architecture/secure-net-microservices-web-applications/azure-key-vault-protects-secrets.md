@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 5ad5686909c29eba5916cbcc4b7115a16108a004
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 171d9120e4817065ddafc9dfa9caa362694ddeb3
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580406"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105287"
 ---
 # <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a>Ochrona kluczy tajnych w czasie produkcji za pomocą usługi Azure Key Vault
 
@@ -68,11 +68,12 @@ W tym przykładzie wywołanie AddAzureKeyVault pochodzi z końcem okresu rejestr
 -   **Konfigurowanie ochrony danych**
     [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview)
 
--   **Klucz zarządzania i okresem istnienia**
-    [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#— ustawienia ochrony danych domyślna*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)
+-   **Zarządzanie kluczami i okresem istnienia**
+    [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#data-protection-default-settings*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)
 
 -   **Microsoft.Extensions.Configuration.DockerSecrets.** Repozytorium GitHub.
     [*https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets*](https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets)
 
 >[!div class="step-by-step"]
-[Poprzednie] (developer-app-kluczy tajnych storage.md) [dalej] (.. / takeaways.md klucza)
+[Poprzednie](developer-app-secrets-storage.md)
+[dalej](../key-takeaways.md)

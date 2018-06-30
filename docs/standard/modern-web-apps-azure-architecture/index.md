@@ -4,12 +4,12 @@ description: Projektowania nowoczesnych aplikacji sieci Web platformy ASP.NET Co
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
-ms.openlocfilehash: 57c2a598e48f855dd540b96c7ebdb522b4197b91
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 085ec85002fc1661d6e20b3c3f11cf4b6ea2161b
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580266"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37103923"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Architektów nowoczesnych aplikacji sieci Web platformy ASP.NET Core i Azure
 
@@ -73,4 +73,4 @@ Możesz przesłać ten przewodnik do zespołu w celu zapewnienia zrozumienie tyc
 <https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server>
 
 >[!div class="step-by-step"]
-[Next] (modern-web aplikacje characteristics.md)
+[Next](modern-web-applications-characteristics.md)

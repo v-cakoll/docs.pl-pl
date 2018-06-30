@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 7d173133ab7c803c7ab48b39c50b02ee4f3b1721
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d079dc7eef2f4abfbdec5a01b4233c8504d449d
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578940"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106492"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Problemy i rozwiązania do zarządzania danymi rozproszonych
 
@@ -83,11 +83,11 @@ Użycie komunikacji asynchronicznej jest wyjaśnione w dokumencie o dodatkowe in
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Zakończenie Newtona**
-    [*https://en.wikipedia.org/wiki/CAP\_Newtona*](https://en.wikipedia.org/wiki/CAP_theorem)
+-   **Newtona centralnych zasad dostępu**
+    [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
 
 -   **Spójność ostateczna**
-    [*https://en.wikipedia.org/wiki/Eventual\_spójności*](https://en.wikipedia.org/wiki/Eventual_consistency)
+    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
 -   **Elementarz spójność danych**
     [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
@@ -109,4 +109,5 @@ Użycie komunikacji asynchronicznej jest wyjaśnione w dokumencie o dodatkowe in
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (logiczne i fizycznych architecture.md) [dalej] (zidentyfikować mikrousługi domeny — model-boundaries.md)
+[Poprzednie](logical-versus-physical-architecture.md)
+[dalej](identify-microservice-domain-model-boundaries.md)

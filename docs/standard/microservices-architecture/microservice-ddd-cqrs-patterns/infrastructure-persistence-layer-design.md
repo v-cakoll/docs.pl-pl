@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/08/2017
-ms.openlocfilehash: 2b15fcaeaa8934caceaeab963123650354abf291
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9da1020ac5b43971a8f976c518f4537bec866c26
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578920"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105849"
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a>Projektowanie infrastruktury warstwę trwałości
 
@@ -164,4 +164,5 @@ W kolejnych sekcjach jest wyjaśniono sposób implementacji wzorca specyfikacji 
     [*https://www.martinfowler.com/apsupp/spec.pdf/*](https://www.martinfowler.com/apsupp/spec.pdf)
 
 >[!div class="step-by-step"]
-[Previous] (domain-events-design-implementation.md) [Next] (infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+[Poprzednie](domain-events-design-implementation.md)
+[dalej](infrastructure-persistence-layer-implemenation-entity-framework-core.md)

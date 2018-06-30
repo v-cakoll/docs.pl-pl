@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: e8552f79a4196c161ec70d7ea46156215e52db26
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aab939af29849ceeef76d6f61b3d4f59d701094c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578888"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105465"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Organizowanie mikrousług i kontener wielu aplikacji o wysokiej skalowalności i dostępności
 
@@ -135,4 +135,5 @@ Usługi ACS jest obecnie dostępny dla serii Standard A, D DS, G i GS maszyn wir
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (odporność wysoki — dostępność microservices.md) [dalej] (przy użyciu azure usług fabric.md)
+[Poprzednie](resilient-high-availability-microservices.md)
+[dalej](using-azure-service-fabric.md)

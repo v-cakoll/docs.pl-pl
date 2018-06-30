@@ -4,12 +4,12 @@ description: Projektowania nowoczesnych aplikacji sieci Web platformy ASP.NET Co
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
-ms.openlocfilehash: e01d07f4006982b21ff952b89375b0ab0d8f36b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc4493bf8e45c41a94e8e6f719318b14ad5b05f1
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583058"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105810"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Właściwości nowoczesnych aplikacji sieci Web
 
@@ -77,4 +77,5 @@ Oprócz platformy ASP.NET Core tradycyjnych ASP.NET 4.x jest nadal niezawodna pl
 > <https://docs.microsoft.com/aspnet/core/testing/>
 
 >[!div class="step-by-step"]
-[Poprzednie] (index.md) [dalej] (choose-between-traditional-web-and-single-page-apps.md)
+[Poprzednie](index.md)
+[dalej](choose-between-traditional-web-and-single-page-apps.md)

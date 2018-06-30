@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/07/2018
-ms.openlocfilehash: 75a7c0557319ca948d2112ba0a58f1761368e6f3
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.openlocfilehash: 83ec054239814ba20ebeec1f3d50b9f7e6dcdd87
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35231554"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106281"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Wzorzec bramy interfejsu API i bezpośrednia komunikacja klient mikrousługi
 
@@ -178,4 +178,5 @@ Po początkowej architektury i wzorce wyjaśnienie sekcje, w kolejnych sekcjach 
 - **Clemens Vasters. Wiadomości i Mikrousług na GOTO 2016** (klip wideo)   [*https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
 
 >[!div class="step-by-step"]
-[Poprzednie] (zidentyfikować mikrousługi domeny — model-boundaries.md) [dalej] (komunikacji w — mikrousługi architecture.md)
+[Poprzednie](identify-microservice-domain-model-boundaries.md)
+[dalej](communication-in-microservice-architecture.md)

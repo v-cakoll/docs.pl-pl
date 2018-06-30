@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 9bcaacce323ed9afa482660f409312f9a1b82cfa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e41544a7c5f352321c3fa3e61a71568a6cf0f219
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576484"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106687"
 ---
 # <a name="microservices-architecture"></a>Architektura Mikrousług
 
@@ -63,4 +63,5 @@ Z nich tylko pierwsze trzy są objęte lub wprowadzone w tym przewodniku. Ostatn
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (usługa ukierunkowane architecture.md) [dalej] (danych suwerenności na microservice.md)
+[Poprzednie](service-oriented-architecture.md)
+[dalej](data-sovereignty-per-microservice.md)

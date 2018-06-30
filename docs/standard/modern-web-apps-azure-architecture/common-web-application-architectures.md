@@ -4,12 +4,12 @@ description: Projektowania nowoczesnych aplikacji sieci web platformy ASP.NET Co
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
-ms.openlocfilehash: 943163ca4c82ad75f177ebe73559d909e7292c52
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb9a1d68d4c7c66c6adab3a5e932ee37c3ea22b0
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592499"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106426"
 ---
 # <a name="common-web-application-architectures"></a>Typowe architekturach aplikacji sieci Web
 
@@ -225,4 +225,5 @@ Wbudowanymi aplikacje mogą korzystać z Docker podzielenie wbudowanymi aplikacj
 > - **Zaprojektowanie Mikrousług e-book** <http://aka.ms/MicroservicesEbook>
 
 >[!div class="step-by-step"]
-[Poprzednie] (architektury principles.md) [dalej] (typowe klienta-po stronie web-technologies.md)
+[Poprzednie](architectural-principles.md)
+[dalej](common-client-side-web-technologies.md)

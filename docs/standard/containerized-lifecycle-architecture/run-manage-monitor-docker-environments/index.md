@@ -4,12 +4,12 @@ description: Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Mi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 1bd1abccb55fe9f837b024cc0f61eea71d3b64c5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bc9cfe583b5e52b9bb3d089a4b12d285726d5c69
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567929"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106843"
 ---
 # <a name="run-manage-and-monitor-docker-production-environments"></a>Uruchom, zarządzanie i monitorowanie środowisk produkcyjnych Docker
 
@@ -21,4 +21,5 @@ Jak uruchomić konteneryzowanych aplikacji w środowisku produkcyjnym (technolog
 
 
 >[!div class="step-by-step"]
-[Previous] (../docker-devops-workflow/docker-application-outer-loop-devops-workflow.md) [Next] (run-microservices-based-applications-in-production.md)
+[Poprzednie](../docker-devops-workflow/docker-application-outer-loop-devops-workflow.md)
+[dalej](run-microservices-based-applications-in-production.md)

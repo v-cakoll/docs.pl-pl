@@ -1,14 +1,15 @@
 ---
-title: takeaways klucza
+title: Takeaways klucza
 description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | takeaways klucza
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 880f99228dbfe7374878b497582ccf540658fc12
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3366fa2494615db841b768f9149a070a65da58ee
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105517"
 ---
 # <a name="key-takeaways"></a>Takeaways klucza
 
@@ -37,4 +38,4 @@ Podsumowanie i takeaways klucza poniżej przedstawiono najważniejsze wnioski z 
 **Orchestrators.** Na podstawie kontenera orchestrators, takich jak te dostępne w usłudze kontenera platformy Azure (Kubernetes Mesos DC/OS i Docker Swarm) i sieci szkieletowej usług Azure są niezbędne dla każdej aplikacji na podstawie mikrousługi gotowe do produkcji, jak i dla dowolnej usługi kontenera Aplikacja o znaczących złożoności, skalowalność potrzeb i rozwoju stałej. W tym przewodniku została wprowadzona orchestrators i ich roli w rozwiązaniach mikrousługi, jak i na podstawie kontenera. Jeśli do potrzeb aplikacji przenosisz kierunku złożonych aplikacji konteneryzowanych, znajduje się on przydatne do poszukiwania dodatkowe zasoby, aby uzyskać więcej informacji na temat orchestrators
 
 >[!div class="step-by-step"]
-[Poprzednie] (secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md)
+[Poprzednie](secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md)

@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
-ms.openlocfilehash: ded2e5399938be25005776963b0310b6a49d0353
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 430fbe3fc6d63fd3b90b578f32b42831c368ba10
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592356"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106307"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definiowanie aplikacji usługi kontenera przy użyciu rozwiązania docker-compose.yml 
 
@@ -431,8 +431,8 @@ Należy pamiętać, że wartości środowiska uruchomieniowego zawsze zastąpien
 -   **Omówienie rozwiązania Docker Compose**
     [*https://docs.docker.com/compose/overview/*](https://docs.docker.com/compose/overview/)
 
--   **Wiele plików Redaguj**
-    [*https://docs.docker.com/compose/extends/\#wielu tworzą — pliki*](https://docs.docker.com/compose/extends/#multiple-compose-files)
+-   **Wiele plików tworzenia**
+    [*https://docs.docker.com/compose/extends/\#multiple-compose-files*](https://docs.docker.com/compose/extends/#multiple-compose-files)
 
 ### <a name="building-optimized-aspnet-core-docker-images"></a>Kompilowanie zoptymalizowanych obrazów ASP.NET Core Docker
 
@@ -548,4 +548,5 @@ Tutaj ogólną takeway jest zdolny do skompilowania aplikacji, w taki sam sposó
 
 
 >[!div class="step-by-step"]
-[Previous] (data-driven-crud-microservice.md) [Next] (database-server-container.md)
+[Poprzednie](data-driven-crud-microservice.md)
+[dalej](database-server-container.md)

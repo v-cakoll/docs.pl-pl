@@ -4,12 +4,12 @@ description: Projektowania nowoczesnych aplikacji sieci Web platformy ASP.NET Co
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/07/2017
-ms.openlocfilehash: aea8a54bdee7eebd977f8b67d9888c2288dcd26d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 756f74cacec0a9f5be502ee02659510869d79746
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590338"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105712"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Zalecenia dotyczące aplikacji sieci Web platformy ASP.NET Core hostingu Azure
 
@@ -20,7 +20,7 @@ ms.locfileid: "33590338"
 
 Niezależnie od aplikacji potrzeb i architektura systemu Windows Azure można jego obsługi. Potrzeb hostingu może być prosty jak witryny sieci web statyczny do aplikacji bardzo zaawansowane składa się z wielu usług. Dla obsługi usług i aplikacji sieci web wbudowanymi platformy ASP.NET Core istnieje kilka dobrze znanych konfiguracji, które są zalecane. Poniższe zalecenia są pogrupowane według rodzaju zasobu do możliwości hostowania, czy pełnego aplikacji, poszczególnych procesów i danych.
 
-## <a name="web-applications"></a>Aplikacje sieci Web
+## <a name="web-applications"></a>Aplikacje internetowe
 
 Aplikacje sieci Web mogą być przechowywane z:
 
@@ -126,4 +126,4 @@ Rysunek 11-2 przedstawiono przykład architekturę odwołania. Ten schemat przed
     <https://docs.microsoft.com/azure/app-service-web/choose-web-site-cloud-service-vm>
 
 >[!div class="step-by-step"]
-[Previous] (development-process-for-azure.md)
+[Poprzednie](development-process-for-azure.md)

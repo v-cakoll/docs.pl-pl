@@ -4,12 +4,12 @@ description: Architektów nowoczesnych aplikacji sieci web platformy ASP.NET Cor
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
-ms.openlocfilehash: a8c6a3b6c9c934cd44eb4fa402c8d792006ac560
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: bbb217b2f11901658fa70a5e5cff6521d157952c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208511"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104769"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Wybierz między aplikacjami sieci Web tradycyjnych i aplikacje jednej strony (źródła)
 
@@ -71,7 +71,7 @@ Należy zauważyć, że często źródła implementuje funkcje, które są wbudo
 Zapisywanie źródła wymaga znajomości języka JavaScript i/lub TypeScript i technik programowania po stronie klienta i bibliotek. Zespół powinien być właściwe w pisaniu nowoczesnych JavaScript przy użyciu platformy SPA jak kątową.
 
 > ### <a name="references--spa-frameworks"></a>Odwołania — SPA struktur
-> - **dyrektywy angular**  
+> - **Dyrektywy angular**  
 > <https://angular.io>
 > - **Porównywanie struktur JavaScript**  
 > <https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/>
@@ -92,4 +92,5 @@ W poniższej tabeli decyzji przedstawiono niektóre podstawowe czynniki, które 
   | Wymagania interfejsu użytkownika zaawansowane, złożone | **Ograniczone** | **Well-Suited** |
 
 >[!div class="step-by-step"]
-[Poprzednie] (modern-web aplikacje characteristics.md) [dalej](architectural-principles.md)
+[Poprzednie](modern-web-applications-characteristics.md)
+[dalej](architectural-principles.md)

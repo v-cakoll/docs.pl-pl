@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 02ee40ebab37ae1898dc46e215728cba512a23e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4716159d052fd8e229ac42e5d17c72717ac86d9f
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574089"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106463"
 ---
 # <a name="docker-containers-images-and-registries"></a>Kontenery docker, obrazy i rejestrów
 
@@ -34,4 +34,5 @@ Rejestrów prywatnej obrazu hostowanych lokalnie lub w chmurze, jest zalecana, g
 -   Chcesz, aby minimalna sieci opóźnienia między obrazów i środowiska wdrażania wybrany. Na przykład jeśli chmury Azure znajduje się w środowisku produkcyjnym, prawdopodobnie chcesz przechowywać obrazów w rejestrze kontenera platformy Azure, dzięki czemu jest minimalnego opóźnienia sieci. W podobny sposób w przypadku środowiska produkcyjnego w infrastrukturze lokalnej, możesz mieć lokalnymi Docker zaufane rejestru dostępne w ramach tej samej sieci lokalnej.
 
 >[!div class="step-by-step"]
-[Poprzednie] (docker-terminology.md) [dalej] (.. /NET-Core-NET-Framework-containers/index.MD)
+[Poprzednie](docker-terminology.md)
+[dalej](../net-core-net-framework-containers/index.md)

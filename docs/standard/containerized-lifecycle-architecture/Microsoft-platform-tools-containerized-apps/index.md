@@ -4,11 +4,12 @@ description: Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Mi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: 02bd144f5bfd64ab3a0b0d30aad642c5c3099c7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b14d361fb93b98de68b828514c7ea72811075fb8
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106194"
 ---
 # <a name="introduction-to-the-microsoft-platform-and-tools-for-containerized-apps"></a>Wprowadzenie do platformy firmy Microsoft i narzędzia dla aplikacji konteneryzowanych
 
@@ -58,4 +59,5 @@ Z programu VSTS, deweloperzy mogą tworzyć ukierunkowane kontenera DevOps dla p
 W związku z tym firma Microsoft oferuje pełną podstawę dla end-to-end konteneryzowanych Docker cyklu życia aplikacji. Jest jednak *kolekcji produktów i technologii, które umożliwiają opcjonalnie wybierz i zintegrować z istniejącym narzędzi i przetwarza*. Elastyczność w szerokie podejście wraz z siły szczegółowo funkcji umieszczania firmy Microsoft w położeniu silne konteneryzowanych tworzenie aplikacji platformy Docker.
 
 >[!div class="step-by-step"]
-[Poprzednie] (.. / Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md) [dalej] (.. /Design-develop-containerized-Apps/index.MD)
+[Poprzednie](../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md)
+[dalej](../design-develop-containerized-apps/index.md)

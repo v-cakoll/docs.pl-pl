@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: d65968e3d37f53cceee55120110ad4bb3c13d304
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5058023aa7cbb42bcf39d061a3273b30e0e9b74c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577681"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105823"
 ---
 # <a name="using-azure-service-fabric"></a>Za pomocą usługi Azure Service Fabric
 
@@ -89,4 +89,5 @@ Inne platformy mikrousługi, które umożliwiają stanowych usług, który obsł
 Należy zauważyć, że kontenery Docker bezstanowego same. Jeśli chcesz wdrożyć usługi stanowej, konieczne dodatkowe porady i wyższego poziomu struktur wspomniano wcześniej. 
 
 >[!div class="step-by-step"]
-[Poprzednie] (scalable-available-multi-container-microservice-applications.md) [dalej] (.. /docker-Application-Development-Process/index.MD)
+[Poprzednie](scalable-available-multi-container-microservice-applications.md)
+[dalej](../docker-application-development-process/index.md)

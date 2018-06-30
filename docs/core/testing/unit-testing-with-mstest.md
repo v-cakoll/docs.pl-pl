@@ -4,12 +4,12 @@ description: Dowiedz się pojęcia testu jednostki w języku C# i .NET Core za p
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.openlocfilehash: b76e577d3950dd13b038f47c1b133e3529867c38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6cfc389a1ee526d8dc4383c5efd6fb3299eb08d8
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216099"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105605"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>Jednostka testowania C# .NET Core i MSTest
 
@@ -17,7 +17,7 @@ Ten samouczek przedstawia interaktywna tworzenia przykładowe rozwiązanie krok 
 
 ### <a name="creating-the-source-project"></a>Tworzenie projektu źródłowego
 
-Umożliwia otwarcie okna powłoki. Utwórz katalog o nazwie *testowania — przy użyciu dotnet testu jednostkowego* do przechowywania rozwiązania. Wewnątrz tego nowego katalogu Uruchom [ `dotnet new sln` ](../tools/dotnet-new.md) do utworzenia nowego pliku rozwiązania dla biblioteki klas i projektu testowego. Następnie należy utworzyć *PrimeService* katalogu. Następujące konspektu dotychczasowych przedstawia strukturę katalogów i plików:
+Umożliwia otwarcie okna powłoki. Utwórz katalog o nazwie *jednostki — testowanie — przy użyciu mstest* do przechowywania rozwiązania. Wewnątrz tego nowego katalogu Uruchom [ `dotnet new sln` ](../tools/dotnet-new.md) do utworzenia nowego pliku rozwiązania dla biblioteki klas i projektu testowego. Następnie należy utworzyć *PrimeService* katalogu. Następujące konspektu dotychczasowych przedstawia strukturę katalogów i plików:
 
 ```
 /unit-testing-using-mstest

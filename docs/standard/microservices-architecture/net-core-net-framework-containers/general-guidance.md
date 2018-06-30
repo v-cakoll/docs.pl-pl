@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: ccaae99f4c46fe739041f9b9e907a702303e62f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd654c23cf8a8d0986575642ef25d6864251a4e4
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592577"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104082"
 ---
 # <a name="general-guidance"></a>Ogólne wskazówki
 
@@ -47,4 +47,5 @@ Za pomocą .NET Framework na Docker może poprawić komfort pracy wdrażania zmi
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (index.md) [dalej] (net-core kontenera scenarios.md)
+[Poprzednie](index.md)
+[dalej](net-core-container-scenarios.md)

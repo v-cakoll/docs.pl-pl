@@ -4,12 +4,12 @@ description: Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Mi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: cda9aa77ca033dced8b6b30538f19f28a5fa63a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e578599c61053704202946772c43bdb5ef895c2
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579213"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105592"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Przepływ pracy pętli wewnętrzny programowanie aplikacji Docker
 
@@ -122,7 +122,7 @@ Istnieją inne wiersze konfiguracji, które można dodać w plik DockerFile w za
 
 **Więcej informacji o** dla informacji o tworzeniu obrazy usługi Docker dla aplikacji .NET Core, przejdź do <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>.
 
-Aby dowiedzieć się więcej na temat tworzenia własnych obrazów, przejdź do [ https://docs.docker.com/engine/\samouczki/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/).
+Aby dowiedzieć się więcej na temat tworzenia własnych obrazów, przejdź do [ https://docs.docker.com/engine/\ samouczki/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/).
 
 **Repozytoria obrazu dla wielu platform**
 
@@ -259,4 +259,5 @@ Możesz również debugować kontenerów .NET Core w Docker przy użyciu program
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (docker aplikacje development-environment.md) [dalej] (visual-studio narzędzia do docker.md)
+[Poprzednie](docker-apps-development-environment.md)
+[dalej](visual-studio-tools-for-docker.md)

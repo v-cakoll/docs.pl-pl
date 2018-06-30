@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: cce0b11ca8cb4fe4d97e2f575888254f92543fc3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec3ccdd823e00d148bb8a97e906132f44e7fa727
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573675"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106674"
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a>Adresowanie Mikrousług oraz rejestr usługi
 
@@ -34,4 +34,5 @@ Należy pamiętać, że niektóre nakładania się rejestr usługi i wzorzec bra
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (Obsługa mikrousługi apis.md) [dalej] (microservice-based-composite-ui-shape-layout.md)
+[Poprzednie](maintain-microservice-apis.md)
+[dalej](microservice-based-composite-ui-shape-layout.md)

@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: b483214e7bd039a71ae642aa26e69d63222af8ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f6689468eda1dd1b12c24927e650b2b01381274
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580130"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104445"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-docker-containers"></a>Wybór między .NET Core i .NET Framework dla kontenerów Docker
 
@@ -17,4 +17,5 @@ Istnieją dwa implementacje obsługiwanych dla tworzenia po stronie serwera kont
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (.. / container-docker-introduction/docker-containers-images-registries.md) [dalej] (Ogólne guidance.md)
+[Poprzednie](../container-docker-introduction/docker-containers-images-registries.md)
+[dalej](general-guidance.md)

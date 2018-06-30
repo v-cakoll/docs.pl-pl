@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: a12012f115629a79734c18c3bc75733ae2fc8195
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 01b84d29a559bde02ebd30535488c272d5208167
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578836"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106518"
 ---
 # <a name="migrating-legacy-monolithic-net-framework-applications-to-windows-containers"></a>Migrowanie aplikacji starszych wbudowanymi .NET Framework do kontenerów systemu Windows
 
@@ -186,4 +186,5 @@ Istnieje kilka różnic między konfiguracji Programowanie i produkcji. W środo
 W środowisku programistycznym możesz uruchomić wszystkie kontenery w tej samej wersji systemu operacyjnego. CE docker dla systemu Windows nie obsługuje uruchamiania kontenery z systemem Windows i Linux w tym samym czasie. W środowisku produkcyjnym można zdecydować, czy chcesz uruchomić mikrousługi katalogu w kontenerze systemu Windows w jednym Docker hosta (lub klastra) lub formularzy sieci Web aplikacji komunikują się z wystąpieniem mikrousługi katalogu uruchomione w kontenerze systemu Linux na inną Docker host. To zależy od sposobu Optymalizuj dla opóźnienia sieci. W większości przypadków ma mikrousług, które aplikacje są zależne od uruchomione w tym samym hoście Docker (lub swarm) w celu ułatwienia wdrażania oraz mniejsze opóźnienia komunikacji. W tych konfiguracjach tylko kosztowne komunikacji jest między wystąpieniami mikrousługi i serwery wysokiej dostępności dla magazynu danych.
 
 >[!div class="step-by-step"]
-[Poprzednie] (.. / net-core-single-containers-linux-windows-server-hosts/index.md) [dalej] (.. /Multi-container-microservice-NET-Applications/index.MD)
+[Poprzednie](../net-core-single-containers-linux-windows-server-hosts/index.md)
+[dalej](../multi-container-microservice-net-applications/index.md)

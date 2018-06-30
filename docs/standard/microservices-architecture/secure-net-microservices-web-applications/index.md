@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: c2c7d692517c6a46225542936e05656db915bf0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ccdf6ecc30979e953d42a403c2c988780394df96
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591979"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106700"
 ---
 # <a name="securing-net-microservices-and-web-applications"></a>Zabezpieczanie Mikrousług .NET i aplikacji sieci Web
 
@@ -225,7 +225,7 @@ Oprogramowanie pośredniczące uwierzytelniania elementu nośnego JWT może rów
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
 -   **Udostępnianie plików cookie między aplikacjami**
-    [*https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing\#udostępnianie — uwierzytelnianie — pliki cookie między — aplikacje*](https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications)
+    [*https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing\#sharing-authentication-cookies-between-applications*](https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications)
 
 -   **Wprowadzenie do tożsamości**
     [*https://docs.microsoft.com/aspnet/core/security/authentication/identity*](https://docs.microsoft.com/aspnet/core/security/authentication/identity)
@@ -250,4 +250,5 @@ Oprogramowanie pośredniczące uwierzytelniania elementu nośnego JWT może rów
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (.. /Implement-resilient-Applications/Monitor-App-Health.MD) [dalej] (autoryzacji net mikrousług web-applications.md)
+[Poprzednie](../implement-resilient-applications/monitor-app-health.md)
+[dalej](authorization-net-microservices-web-applications.md)

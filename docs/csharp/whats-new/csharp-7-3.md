@@ -2,12 +2,12 @@
 title: Nowości w języku C# 7.3
 description: Omówienie nowych funkcji w języku C# 7.3
 ms.date: 05/16/2018
-ms.openlocfilehash: 96aa0290299755c00cbc698297661bd847ed4221
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 135351fa06a498e4aa90cb4d9372880b8119de0f
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948501"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106778"
 ---
 # <a name="whats-new-in-c-73"></a>Nowości w języku C# 7.3
 
@@ -93,7 +93,7 @@ ref VeryLargeStruct refLocal = ref veryLargeStruct; // initialization
 refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to different storage.
 ```
 
-Aby uzyskać więcej informacji, zobacz artykuł na [ `ref` zwraca i `ref` zmiennych lokalnych](../programming-guide/classes-and-structs/ref-returns.md).
+Aby uzyskać więcej informacji, zobacz artykuł na [ `ref` zwraca i `ref` zmiennych lokalnych](../programming-guide/classes-and-structs/ref-returns.md), a artykuł na temat [ `foreach` ](../language-reference/keywords/foreach-in.md).
 
 ### <a name="stackalloc-arrays-support-initializers"></a>`stackalloc` tablice obsługują inicjatory
 

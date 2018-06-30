@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 211814eff0f2aaf0cf71a19cfcaaeb44924fb6f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ddb0f54b15735b9192d2088495947588f59829a0
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573747"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106054"
 ---
 # <a name="implementing-resilient-applications"></a>Implementowanie odporność aplikacji
 
@@ -23,4 +23,5 @@ Wiele pojedynczych składników aplikacji powinien uwzględniać kondycji funkcj
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (.. / microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md) [dalej] (dojście partial-failure.md)
+[Poprzednie](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)
+[dalej](handle-partial-failure.md)

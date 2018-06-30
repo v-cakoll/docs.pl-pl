@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63767a3ba2831ca9cadd9b99998eb871780143e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40eeeab159bdef9fc286374fde8c1c1d3a9f5c2b
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579046"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105657"
 ---
 # <a name="file-and-stream-io"></a>We/Wy plików i strumieni
 Termin „We/Wy (wejście/wyjście) plików i strumieni” dotyczy transferu danych do lub z nośnika magazynowania. W programie .NET Framework `System.IO` przestrzenie nazw zawierają typy umożliwiające odczytywanie i zapisywanie synchronicznego i asynchronicznego, strumienie danych i plików. Te przestrzenie nazw zawierają również typy, które wykonują kompresję i dekompresję plików, oraz typy, które umożliwiają komunikację za pośrednictwem potoków i portów szeregowych.  
@@ -26,6 +26,8 @@ Termin „We/Wy (wejście/wyjście) plików i strumieni” dotyczy transferu dan
   
 ## <a name="files-and-directories"></a>Pliki i katalogi  
  Można używać typów w <xref:System.IO?displayProperty=nameWithType> przestrzeni nazw do interakcji z plików i katalogów. Na przykład można pobierać i ustawiać właściwości plików i katalogów oraz pobierać kolekcje plików i katalogów na podstawie kryteriów wyszukiwania.  
+
+Dla ścieżki konwencje nazewnictwa i sposoby express ścieżkę pliku w systemie Windows, włącznie z składni urządzenia systemu DOS obsługiwane w .NET Core 1.1 lub nowszej i .NET Framework 4.6.2 i nowsze, zobacz [ścieżka formatów plików w systemach Windows](file-path-formats.md). 
   
  Poniżej przedstawiono kilka powszechnie używanych klas związanych z plikami i katalogami:  
   

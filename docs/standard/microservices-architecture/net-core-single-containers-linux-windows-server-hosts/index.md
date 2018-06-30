@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: f429bc0c6e76c2be2e4f491768a15ab36ecb0d34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 662e1af8595c074ee1aeba5ad4d83660b667c1cd
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591097"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105530"
 ---
 # <a name="deploying-single-container-based-net-core-web-applications-on-linux-or-windows-nano-server-hosts"></a>Wdrażanie aplikacji sieci Web hosty z systemem Linux lub Windows Nano Server jeden kontener na podstawie .NET Core
 
@@ -142,4 +142,5 @@ Konieczne może być Zatrzymaj uruchomione procesy, podczas przełączania się 
 Kreator dodaje obsługę Docker komunikuje się z uruchomionym procesem Docker. Kreator nie będzie działać poprawnie Docker nie jest uruchomiony podczas uruchamiania kreatora. Ponadto Kreator sprawdza, czy bieżący wybór kontenera dodać poprawną obsługę Docker. Aby dodać obsługę kontenery systemu Windows, należy uruchomić kreatora, gdy masz Docker z kontenerów systemu Windows skonfigurowane. Jeśli chcesz dodać obsługę systemu Linux kontenerów, uruchom kreatora podczas Docker z kontenerów Linux skonfigurowany.
 
 >[!div class="step-by-step"]
-[Poprzednie] (.. / docker-application-development-process/docker-app-development-workflow.md) [dalej] (.. /containerize-NET-Framework-Applications/index.MD)
+[Poprzednie](../docker-application-development-process/docker-app-development-workflow.md)
+[dalej](../containerize-net-framework-applications/index.md)

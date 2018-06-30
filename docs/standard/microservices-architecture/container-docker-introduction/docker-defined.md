@@ -4,11 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: fadd2611283f0a7dadbf1734fe48f7d1a13096ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06dd5199b8dbc42ce3e9ae35bc5c3673d01cb4de
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106804"
 ---
 # <a name="what-is-docker"></a>Co to jest Docker?
 
@@ -57,4 +58,5 @@ Obraz kontenera to sposób pakietu aplikacji lub usługi, a następnie wdrożyć
 Deweloperzy docker nie powiedzieć "Działa na komputerze, dlaczego nie w środowisku produkcyjnym?" Mówią, "Jest uruchamiany na Docker". Docker spakowane aplikacje mogą być wykonywane na dowolnym obsługiwanym środowisku Docker. Docker spakowane aplikacje stale Uruchom na wszystkich docelowych wdrożenia (deweloperów, pytań i odpowiedzi, przemieszczania i produkcji).
 
 >[!div class="step-by-step"]
-[Poprzednie] (index.md) [dalej] (docker terminology.md)
+[Poprzednie](index.md)
+[dalej](docker-terminology.md)

@@ -4,12 +4,12 @@ description: Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Mi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 198313c260b36d3f3025606e73e220c361a7ebb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b88eb5637bf266ab2e0a6d255f2e83f6aadc8af2
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579005"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106165"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Kroki w przepływie pracy DevOps zewnętrzne pętli dla aplikacji Docker
 
@@ -234,4 +234,5 @@ W tym temacie jest uwzględniane w rozdziale dalej jako część zadania, które
 Tylko w przypadku monitorowania i diagnostyki 100 procent w obszarze DevOps są procesy monitorowania i analizy wykonywane przez zespół deweloperów dla środowisk testowych lub w wersji beta. Jest to realizowane przez wykonywania testów obciążenia lub po prostu beta lub środowiskach pytań i odpowiedzi, na którym próbujesz nowe wersje beta testerów monitorowania.
 
 >[!div class="step-by-step"]
-[Poprzednie] (index.md) [dalej] (.. /Run-Manage-Monitor-docker-environments/index.MD)
+[Poprzednie](index.md)
+[dalej](../run-manage-monitor-docker-environments/index.md)

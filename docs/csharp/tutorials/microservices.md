@@ -3,12 +3,12 @@ title: Mikrousług hostowanych w Docker - C#
 description: Dowiedz się, jak utworzyć asp.net podstawowe usługi, które są uruchamiane w kontenerach Docker
 ms.date: 06/08/2017
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: b043b0109bcf8a67867d2c73a5ab22e43a4963cf
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 1f4b38243beb1210b1374bd701fac66b2fa72cc5
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208387"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106353"
 ---
 # <a name="microservices-hosted-in-docker"></a>Mikrousług hostowanych w Docker
 
@@ -46,15 +46,17 @@ Docker można zainstalować wiele dystrybucje systemu Linux, macOS lub systemu W
 
 ## <a name="create-the-application"></a>Tworzenie aplikacji
 
-Teraz, po zainstalowaniu wszystkich narzędzi do tworzenia nowej aplikacji platformy ASP.NET Core. Aby to zrobić, Utwórz nowy katalog o nazwie "WeatherMicroservice" i uruchom następujące polecenie, w tym katalogu w ulubionych powłoki:
+Teraz, po zainstalowaniu wszystkich narzędzi, Utwórz nową aplikację platformy ASP.NET Core w katalogu o nazwie "WeatherMicroservice", wykonując następujące polecenie w ulubionych powłoki:
 
 ```console
-dotnet new web
+dotnet new web -o WeatherMicroservice
 ```
 
 `dotnet` Polecenia są uruchamiane narzędzia niezbędne do tworzenia aplikacji .NET. Każdy zlecenie wykonuje inne polecenie.
 
 `dotnet new` Polecenie służy do tworzenia .net Core projektów.
+
+`-o WeatherMicroservice` Po `dotnet new` polecenie służy do tworzenia aplikacji platformy ASP.NET Core lokalizację.
 
 Dla tego mikrousługi chcemy aplikacji sieci web najprostszy, najbardziej lekkie to możliwe, więc użyliśmy "Core pustego szablonu platformy ASP.NET", określając jej nazwę krótką `web`.
 

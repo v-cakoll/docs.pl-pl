@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: b11d2838539b8ddbe21bcfcb77845a10e466c760
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb02d2102659abd910f9a7e62652511c65574ab7
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578120"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106239"
 ---
 # <a name="identify-domain-model-boundaries-for-each-microservice"></a>Zidentyfikuj granice modelu domeny dla każdego mikrousługi
 
@@ -53,4 +53,5 @@ Istnieje wiele zalet nie współużytkowanie tej samej jednostki użytkownika z 
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (distributed-data-management.md) [dalej] (direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)
+[Poprzednie](distributed-data-management.md)
+[dalej](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)

@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/06/2017
-ms.openlocfilehash: 520f2928eb0d300ab0dc2d328d974455e102e4d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7793a3ffded788698fcbc4ba28edefde44268989
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579356"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105774"
 ---
 # <a name="designing-a-ddd-oriented-microservice"></a>Projektowanie zorientowane na DDD mikrousługi
 
@@ -106,4 +106,5 @@ W tym projekcie warstwy powinny być niezależne dla każdego mikrousługi. Jak 
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (cqrs mikrousługi reads.md) [dalej] (ruch model.md mikrousługi domeny)
+[Poprzednie](cqrs-microservice-reads.md)
+[dalej](microservice-domain-model.md)

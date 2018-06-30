@@ -4,11 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 4b57a0ed8c4e8a4cd36ef5cef4b40de0595f1284
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2ec577a12cf677c2ec5e20a6f3e862911c82fbb
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105696"
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>Tworzenie, rozwijającymi i przechowywanie wersji mikrousługi interfejsów API i kontrakty
 
@@ -37,4 +38,5 @@ Na koniec, w przypadku korzystania z architektury REST [hipermedialnych](https:/
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (asynchroniczne wiadomości — na podstawie communication.md) [dalej] (mikrousług adresowanie usług registry.md)
+[Poprzednie](asynchronous-message-based-communication.md)
+[dalej](microservices-addressability-service-registry.md)

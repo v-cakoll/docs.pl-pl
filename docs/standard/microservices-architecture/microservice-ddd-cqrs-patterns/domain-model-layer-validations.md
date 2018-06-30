@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: ce3cb0c79cbd492224ce1d4ecb25cd02062f11cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c071d269977ccecea9a7d4d79da78d7967bb1618
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578953"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105738"
 ---
 # <a name="designing-validations-in-the-domain-model-layer"></a>Projektowanie poprawności warstwy modelu domeny
 
@@ -132,4 +132,5 @@ Za pomocą pola weryfikacji przy użyciu adnotacji danych, na przykład nie dupl
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (wyliczenie klasy over wyliczenia types.md) [dalej] (po stronie klienta — ruch validation.md)
+[Poprzednie](enumeration-classes-over-enum-types.md)
+[dalej](client-side-validation.md)

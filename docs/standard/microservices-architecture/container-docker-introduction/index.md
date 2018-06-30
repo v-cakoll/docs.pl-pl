@@ -4,11 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: c1f78a8904270123188367a01bddbcac3f7f1b7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8d9334785b2f3ee770c5f0e6bd2e13faa995b6f2
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106830"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Wprowadzenie do kontenerów i Docker
 
@@ -30,4 +31,5 @@ Krótko mówiąc kontenery oferuje zalet izolacji, przenośność elastyczności
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (.. / index.md) [dalej] (docker defined.md)
+[Poprzednie](../index.md)
+[dalej](docker-defined.md)

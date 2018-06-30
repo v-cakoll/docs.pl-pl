@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: 0e384fabca88d8ad6f93ae626140fb3d5dcaf971
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c45fbb9f26e6cd315e1b623ba2c79d5d038a6919
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589327"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105303"
 ---
 # <a name="decision-table-net-frameworks-to-use-for-docker"></a>Tabela decyzji: platformy .NET Framework na potrzeby Docker
 
@@ -58,4 +58,5 @@ Istnieje kilka funkcji aplikacji, które mają wpływ na podstawie decyzji. Nale
     - Jeśli używasz interfejsów API dostępnych dla klienta *.NET Core*, można również wybrać *Linux kontenery i kontenery Windows*.
 
 >[!div class="step-by-step"]
-[Poprzednie] (net-framework — kontener scenarios.md) [dalej] (net kontenera os-targets.md)
+[Poprzednie](net-framework-container-scenarios.md)
+[dalej](net-container-os-targets.md)

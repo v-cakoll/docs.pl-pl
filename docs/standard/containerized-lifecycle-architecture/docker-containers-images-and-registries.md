@@ -4,12 +4,12 @@ description: Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Mi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 43b76f738fa4b7c89423a5b9fac7ef91f40880c5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff5a1f3e4b09ac9f7ea600d3f127523b96fcce55
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568735"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106366"
 ---
 # <a name="docker-containers-images-and-registries"></a>Kontenery docker, obrazy i rejestrów
 
@@ -34,4 +34,5 @@ Rejestry prywatnej obrazu obsługiwanego lokalnie lub w chmurze, zaleca się w n
 -   Chcesz, aby minimalna sieci opóźnienia między obrazów i środowiska wdrażania wybrany. Na przykład jeśli Azure znajduje się w środowisku produkcyjnym, prawdopodobnie chcesz przechowywać obrazów w rejestrze kontenera platformy Azure, dzięki czemu jest minimalnego opóźnienia sieci. W podobny sposób w przypadku środowiska produkcyjnego w infrastrukturze lokalnej, możesz mieć lokalnymi Docker zaufane rejestru dostępne w ramach tej samej sieci lokalnej.
 
 >[!div class="step-by-step"]
-[Poprzednie] (docker-terminology.md) [dalej] (Docker aplikacji-cyklu życia/index.md)
+[Poprzednie](docker-terminology.md)
+[dalej](Docker-application-lifecycle/index.md)

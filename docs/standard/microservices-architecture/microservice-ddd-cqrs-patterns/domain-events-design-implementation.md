@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: e6af18b1154759677c7749632eace30bad752591
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 44fbe79c9ed7cfd4a79daf6ee9b3d39afd33a910
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697199"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106028"
 ---
 # <a name="domain-events-design-and-implementation"></a>Zdarzenia domeny: projektowanie i wdrażanie
 
@@ -366,4 +366,5 @@ Jak już wspomniano, należy użyć domeny zdarzeń w celu jawne Implementowanie
 
 
 >[!div class="step-by-step"]
-[Previous] (client-side-validation.md) [Next] (infrastructure-persistence-layer-design.md)
+[Poprzednie](client-side-validation.md)
+[dalej](infrastructure-persistence-layer-design.md)

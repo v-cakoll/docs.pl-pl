@@ -4,12 +4,12 @@ description: Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Mi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: b27be902779c7e22a568c679362851f745ea494d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 438733b2cde1d4eff178a5fd4a4ed0bb93804f76
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569684"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105452"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Stan i dane w aplikacjach platformy Docker
 
@@ -51,4 +51,5 @@ Zdalnych źródeł danych i pamięci podręczne, takie jak bazy danych SQL usłu
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (wbudowanymi applications.md) [dalej] (soa applications.md)
+[Poprzednie](monolithic-applications.md)
+[dalej](soa-applications.md)

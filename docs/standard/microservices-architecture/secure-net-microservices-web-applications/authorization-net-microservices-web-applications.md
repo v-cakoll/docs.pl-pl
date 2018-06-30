@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 2ea56f5a28d115fc5d91a98604b82565c8bf5c78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b2981579f28c083a31d7af6ae42f4e3ca8bbd88
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582824"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105504"
 ---
 # <a name="about-authorization-in-net-microservices-and-web-applications"></a>Temat autoryzacji w aplikacji sieci web i mikrousług .NET
 
@@ -129,4 +129,5 @@ Przykład wymaganie autoryzacji niestandardowej i obsługi sprawdzania wiek uży
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (index.md) [dalej] (developer-app-kluczy tajnych storage.md)
+[Poprzednie](index.md)
+[dalej](developer-app-secrets-storage.md)

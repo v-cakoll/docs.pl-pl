@@ -9,12 +9,12 @@ ms.assetid: 110cceea-5932-4955-a1a6-13afc51422b2
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: c8eb7bfc56b4dddaf352477e3817864700460db7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aaafe77a71713b24752ed7db7ec016bfc14eb406
+ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409984"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37140245"
 ---
 # <a name="ui-automation-support-for-the-hyperlink-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu hiperłącze
 > [!NOTE]
@@ -60,7 +60,7 @@ ms.locfileid: "33409984"
 |---------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IInvokeProvider>|Tak|Wszystkie formanty hyperlink musi obsługiwać wzorzec Invoke.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|Zależy od|Formanty Hyperlink powinien obsługiwać Value — wzorzec formantu, gdy łącze zawiera informacje, które są użyteczne i zrozumiałą dla użytkownika.|  
-|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|Na przykład "http://www...."|Adres URL w Internecie lub intranecie adresie jest przykład hiperłącze, który zawiera informacje o zrozumiałą dla użytkownika. Programowe łącza, jednak jest znaczący tylko do aplikacji i nie jest zalecane dla właściwości Value.|  
+|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|Na przykład:`"http://www...."`|Adres URL w Internecie lub intranecie adresie jest przykład hiperłącze, który zawiera informacje o zrozumiałą dla użytkownika. Programowe łącza, jednak jest znaczący tylko do aplikacji i nie jest zalecane dla właściwości Value.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Zdarzeń automatyzacji interfejsu użytkownika wymagane  

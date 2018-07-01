@@ -2,12 +2,12 @@
 title: Konfiguracja i obsługa metadanych
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
-ms.openlocfilehash: 4dfeeba6db220e03ad981b13e2bb093bedcd43c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d316e373177d86b7ba2b715f29fe3dace9082e8b
+ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486727"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37140154"
 ---
 # <a name="configuration-and-metadata-support"></a>Konfiguracja i obsługa metadanych
 W tym temacie opisano sposób włączania obsługi konfiguracji i metadanych dla powiązania i elementy powiązań.  
@@ -182,7 +182,7 @@ if (transportBindingElement is UdpTransportBindingElement)
  Element powiązania niestandardowego można wyeksportować potwierdzenia zasad w powiązaniu WSDL dla punktu końcowego usługi Express możliwości tego elementu powiązania. Poniższy przykładowy kod jest pobierana z [transportu: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) próbki.  
   
 #### <a name="policy-export"></a>Eksportowanie zasad  
- `UdpTransportBindingElement` Typ implementuje ''<xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> Aby dodać obsługę eksportowania zasady. W związku z tym <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> obejmuje `UdpTransportBindingElement` generacji zasady dla żadnego powiązania, która go zawiera.  
+ `UdpTransportBindingElement` Typ implementuje <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> Aby dodać obsługę eksportowania zasady. W związku z tym <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> obejmuje `UdpTransportBindingElement` generacji zasady dla żadnego powiązania, która go zawiera.  
   
  W <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A?displayProperty=nameWithType>, dodawanie potwierdzenie dla protokołów UDP i innym potwierdzenia, jeśli kanał jest w trybie multiemisji. Wynika to tryb multiemisji ma wpływ na sposób stosu komunikacji jest tworzony i w związku z tym musi być między obie strony.  
   

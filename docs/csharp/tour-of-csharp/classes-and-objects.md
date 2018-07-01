@@ -3,12 +3,12 @@ title: Klas i obiektów w języku C# — samouczek języka C#
 description: Jesteś nowym użytkownikiem C#? Przeczytaj ten przegląd klas, obiektów i dziedziczenie
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 1e89d8b89e5f4f74d637a1e3674fb3959a231a49
-ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
+ms.openlocfilehash: 8e6b327c8391c3a3c97f7806f87dbb9656f0d00d
+ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298295"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37140284"
 ---
 # <a name="classes-and-objects"></a>Klasy i obiekty
 
@@ -55,7 +55,7 @@ Poniżej omówiono określonych rodzajów członków klasy może zawierać.
 
 ## <a name="accessibility"></a>Ułatwienia dostępu
 
-Każdy element członkowski klasy ma skojarzone ułatwień dostępu, który kontroluje regionów tekst programu, które są w stanie uzyskać dostępu do elementu członkowskiego. Istnieje pięć możliwych form ułatwień dostępu. Te są podsumowywane poniżej.
+Każdy element członkowski klasy ma skojarzone ułatwień dostępu, który kontroluje regionów tekst programu, które są w stanie uzyskać dostępu do elementu członkowskiego. Brak sześciu możliwe formy ułatwień dostępu. Te są podsumowywane poniżej.
 
 * `public`
     - Nie ograniczając dostęp
@@ -64,7 +64,7 @@ Każdy element członkowski klasy ma skojarzone ułatwień dostępu, który kont
 * `internal`
     - Dostęp ograniczony do bieżącego zestawu (.exe, .dll itp.)
 * `protected internal`
-    - Dostęp ograniczony do zawierający klasy lub klas pochodnych klasa zawierająca
+    - Dostęp ograniczony do klasy, klasy pochodnej z klasy zawierające lub klas w ramach tego samego zestawu zawierającego
 * `private`
     - Dostęp ograniczony do tej klasy
 * `private protected`

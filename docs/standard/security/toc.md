@@ -31,3 +31,4 @@
 ### [Zabezpieczenia i dane użytkownika](security-and-user-input.md)
 ### [Zabezpieczenia i sytuacja wyścigu](security-and-race-conditions.md)
 ### [Zabezpieczenia i generowanie kodu na bieżąco](security-and-on-the-fly-code-generation.md)
+### [Luki w zabezpieczeniach chronometrażu z odszyfrowywaniem symetrycznym w trybie CBC przy użyciu uzupełnienia](vulnerabilities-cbc-mode.md)

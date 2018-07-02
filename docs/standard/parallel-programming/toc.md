@@ -4,7 +4,7 @@
 #### [Instrukcje: zapisywanie prostej pętli Parallel.For](how-to-write-a-simple-parallel-for-loop.md)
 #### [Instrukcje: zapisywanie prostej pętli Parallel.ForEach](how-to-write-a-simple-parallel-foreach-loop.md)
 #### [Instrukcje: zapisywanie pętli Parallel.For ze zmiennymi lokalnymi wątku](how-to-write-a-parallel-for-loop-with-thread-local-variables.md)
-#### [Instrukcje: zapisywanie pętli Parallel.ForEach ze zmiennymi lokalnymi wątku](how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md)
+#### [Instrukcje: zapisywanie pętli Parallel.ForEach ze zmiennymi lokalnymi partycji](how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)
 #### [Instrukcje: anulowanie pętli Parallel.For lub ForEach](how-to-cancel-a-parallel-for-or-foreach-loop.md)
 #### [Instrukcje: obsługa wyjątków w pętlach równoległych](how-to-handle-exceptions-in-parallel-loops.md)
 #### [Instrukcje: przyspieszanie małych jednostek pętli](how-to-speed-up-small-loop-bodies.md)

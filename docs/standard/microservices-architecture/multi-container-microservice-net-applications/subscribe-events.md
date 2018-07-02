@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 8ef9f39b0d99db32438e7dcf83318a1aa9054967
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6cc5563f93915d1516e5a5f22a104012c1bb85d6
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592447"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106580"
 ---
 # <a name="subscribing-to-events"></a>Subskrybowanie zdarzeń
 
@@ -110,7 +110,7 @@ Jak wspomniano wcześniej, w sekcji architektury, może mieć kilka metod dotycz
 
 -   Przy użyciu [wzorzec Skrzynka nadawcza](http://gistlabs.com/2014/05/the-outbox/). Jest to transakcyjne tabelę do przechowywania zdarzeń integracji (Rozszerzanie transakcji lokalnej).
 
-W tym scenariuszu przy użyciu pełnego wzorca Sourcing zdarzenia (ES) jest jednym z najlepszych metod, jeśli *nie* najlepsze. Jednak w wielu scenariuszach aplikacji, nie można przeprowadzić pełną wersją systemu ES. ES oznacza przechowywanie tylko zdarzenia domeny transakcyjne bazy danych, zamiast zapisywania danych stanu bieżącego. Przechowywanie tylko zdarzenia domeny mogą mieć dużą korzyści, takich jak o historii dostępne systemu oraz możliwość określenia stanu systemu w dowolnym momencie w przeszłości. Jednak implementacja pełną wersją systemu ES wymaga rearchitect większość systemu i wprowadzono wiele skomplikowane i wymagań. Na przykład, czy chcesz użyć bazy danych celowo dla źródeł zdarzeń, takich jak [magazynu zdarzeń](https://geteventstore.com/), lub z bazą zorientowane na dokument, takie jak bazy danych Azure rozwiązania Cosmos, bazy danych MongoDB, Cassandra, CouchDB lub RavenDB. ES jest doskonałe rozwiązanie ten problem, ale nie najlepszym rozwiązaniem, jeśli nie znasz już źródłem zdarzeń.
+W tym scenariuszu przy użyciu pełnego wzorca Sourcing zdarzenia (ES) jest jednym z najlepszych metod, jeśli nie *najlepsze*. Jednak w wielu scenariuszach aplikacji, nie można przeprowadzić pełną wersją systemu ES. ES oznacza przechowywanie tylko zdarzenia domeny transakcyjne bazy danych, zamiast zapisywania danych stanu bieżącego. Przechowywanie tylko zdarzenia domeny mogą mieć dużą korzyści, takich jak o historii dostępne systemu oraz możliwość określenia stanu systemu w dowolnym momencie w przeszłości. Jednak implementacja pełną wersją systemu ES wymaga rearchitect większość systemu i wprowadzono wiele skomplikowane i wymagań. Na przykład, czy chcesz użyć bazy danych celowo dla źródeł zdarzeń, takich jak [magazynu zdarzeń](https://geteventstore.com/), lub z bazą zorientowane na dokument, takie jak bazy danych Azure rozwiązania Cosmos, bazy danych MongoDB, Cassandra, CouchDB lub RavenDB. ES jest doskonałe rozwiązanie ten problem, ale nie najlepszym rozwiązaniem, jeśli nie znasz już źródłem zdarzeń.
 
 Możliwość użycia dziennika transakcji wyszukiwania początkowo wygląda bardzo przezroczysty. Jednak aby użyć tej metody, mikrousługi ma zostać dołączone do RDBMS dziennika transakcji, takie jak dziennik transakcji programu SQL Server. Prawdopodobnie nie jest to pożądane. Inny wadą jest to, że na tym samym poziomie jako zdarzeń integracji wysokiego poziomu nie mogą być aktualizacje niskiego poziomu, rejestrowane w dzienniku transakcji. Jeśli tak, proces odtwarzania te operacje tworzenia dzienników transakcji może być trudne.
 
@@ -319,8 +319,8 @@ Jeśli jest ustawiona flaga "redelivered", odbiorca musi uwzględniać który, p
 -   **Rozwidlonych eShopOnContainers przy użyciu NServiceBus (konkretnego oprogramowania)**
     [*http://go.particular.net/eShopOnContainers*](http://go.particular.net/eShopOnContainers)
 
--   **Zdarzenia zmiennych wiadomości**
-    [*http://soapatterns.org/design\_wzorce lub zdarzenia\_zmiennych\_obsługi wiadomości*](http://soapatterns.org/design_patterns/event_driven_messaging)
+-   **Sterowane zdarzeniami obsługi wiadomości**
+    [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
 -   **Jimmy Bogard. Refaktoryzacja kierunku odporności: Ocena sprzężenia**
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
@@ -332,7 +332,7 @@ Jeśli jest ustawiona flaga "redelivered", odbiorca musi uwzględniać który, p
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
 -   **Spójność ostateczna**
-    [*https://en.wikipedia.org/wiki/Eventual\_spójności*](https://en.wikipedia.org/wiki/Eventual_consistency)
+    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
 -   **Brązowy Philip. Konteksty ograniczone strategii integracji**
     [*http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
@@ -352,8 +352,8 @@ Jeśli jest ustawiona flaga "redelivered", odbiorca musi uwzględniać który, p
 -   **Patrick Nommensen. Zarządzanie danymi zdarzeń dla Mikrousług**
     *<https://dzone.com/articles/event-driven-data-management-for-microservices-1> *
 
--   **Newtona zakończenia**
-    [*https://en.wikipedia.org/wiki/CAP\_Newtona*](https://en.wikipedia.org/wiki/CAP_theorem)
+-   **Newtona centralnych zasad dostępu**
+    [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
 
 -   **Co to jest zakończenie Newtona?**
     [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
@@ -367,15 +367,16 @@ Jeśli jest ustawiona flaga "redelivered", odbiorca musi uwzględniać który, p
 -   **Marek Brewera. Zakończenie później dwunastu lat: jak "Zasady" zostały zmienione**
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **Udział w transakcje zewnętrzne (DTC)** (MSMQ) [  *https://msdn.microsoft.com/library/ms978430.aspx \#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
+-   **Udział w transakcje zewnętrzne (DTC)** (MSMQ) [*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
 
 -   **Azure Service Bus. Komunikatów obsługiwanych przez brokera: Wykrywanie zduplikowanych**
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **Przewodnik niezawodności** (dokumentacja RabbitMQ) [  *https://www.rabbitmq.com/reliability.html \#konsumenta*](https://www.rabbitmq.com/reliability.html%23consumer)
+-   **Przewodnik niezawodności** (dokumentacja RabbitMQ) [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
 
 
 
 
 >[!div class="step-by-step"]
-[Previous] (rabbitmq-event-bus-development-test-environment.md) [Next] (test-aspnet-core-services-web-apps.md)
+[Poprzednie](rabbitmq-event-bus-development-test-environment.md)
+[dalej](test-aspnet-core-services-web-apps.md)

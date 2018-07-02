@@ -91,6 +91,7 @@
 ### [Zarządzanie zależnościami](core/tools/dependencies.md)
 ### [Dodatki do formatu csproj](core/tools/csproj.md)
 ## Migracja
+### [Program .NET Core 2.0 do 2.1](core/migration/20-21.md)
 ### [Migracja do formatu csproj](core/migration/index.md)
 ### [Mapowanie między formatami project.json i csproj](core/tools/project-json-to-csproj.md)
 ### [Migrowanie ze środowiska DNX](core/migration/from-dnx.md)
@@ -119,7 +120,6 @@
 ### [Testowanie jednostek — opublikowane dane wyjściowe](core/testing/unit-testing-published-output.md)
 ### [Korzystanie z funkcji Live Unit Testing dla projektów .NET Core w programie Visual Studio](/visualstudio/test/live-unit-testing-start)
 ## [Przechowywanie wersji](core/versions/index.md)
-### [Obsługa platformy .NET Core](core/versions/lts-current.md)
 <!--### [🔧 Servicing](core/versions/servicing.md)-->
 ## [Katalog identyfikatora środowiska uruchomieniowego](core/rid-catalog.md)
 ## [Omówienie zestawu .NET Core SDK](core/sdk.md)
@@ -200,7 +200,8 @@
 ### [Windows Workflow Foundation](framework/windows-workflow-foundation/)
 ### [Aplikacje usług systemu Windows](framework/windows-services/)
 ### [Aplikacje 64-bitowe](framework/64-bit-apps.md)
-### [Aplikacje sieci Web wykorzystujące technologie ASP.NET](framework/develop-web-apps-with-aspnet.md)
+### 
+  [Aplikacje internetowe wykorzystujące technologie ASP.NET](framework/develop-web-apps-with-aspnet.md)
 ### [Programowanie dla sieci w programie .NET Framework](framework/network-programming/)
 ### [Konfigurowanie aplikacji](framework/configure-apps/)
 ### [Kompilowanie aplikacji z architekturą .NET Native](framework/net-native/)
@@ -414,7 +415,7 @@
 ### [Przestrzenie nazw](fsharp/language-reference/namespaces.md)
 ### [Moduły](fsharp/language-reference/modules.md)
 ### [Deklaracje importowania: słowo kluczowe „open”](fsharp/language-reference/import-declarations-the-open-keyword.md)
-### [Podpisy](fsharp/language-reference/signatures.md)
+### [Pliki podpisów](fsharp/language-reference/signature-files.md)
 ### [Jednostki miary](fsharp/language-reference/units-of-measure.md)
 ### [Dokumentacja XML](fsharp/language-reference/xml-documentation.md)
 ### [Obliczenia powolne](fsharp/language-reference/lazy-computations.md)

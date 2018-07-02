@@ -1,4 +1,5 @@
 # [We/Wy plików i strumieni](index.md)
+## [Formaty ścieżek plików w systemie Windows](file-path-formats.md)
 ## [Typowe zadania We/Wy](common-i-o-tasks.md)
 ### [Instrukcje: kopiowanie katalogów](how-to-copy-directories.md)
 ### [Instrukcje: wyliczanie katalogów i plików](how-to-enumerate-directories-and-files.md)

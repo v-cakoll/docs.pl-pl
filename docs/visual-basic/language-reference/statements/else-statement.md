@@ -17,8 +17,8 @@ ms.locfileid: "33597689"
 Wprowadza grupę instrukcji do uruchomienia lub skompilowania, jeśli żadna inna warunkowa grupa instrukcji została uruchomiona lub skompilowana.
 
 ## <a name="remarks"></a>Uwagi
-
  Słowo kluczowe `Else` może być używane w następujących kontekstach:
+ 
  [If...Then...Else — instrukcja](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
 
  [Select...Case — instrukcja](../../../visual-basic/language-reference/statements/select-case-statement.md)

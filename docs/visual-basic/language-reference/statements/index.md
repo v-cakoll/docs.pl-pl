@@ -12,11 +12,9 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33602791"
 ---
 # <a name="statements-visual-basic"></a>Instrukcje (Visual Basic)
-
 Tematy w tej sekcji zawierają tabele deklaracji i instrukcji wykonywalnych Visual Basic oraz ważne listy, które dotyczą wielu instrukcji.
 
 ## <a name="in-this-section"></a>W tej sekcji
-
  [Instrukcje A-E](../../../visual-basic/language-reference/statements/a-e-statements.md)
 
  [Instrukcje F-P](../../../visual-basic/language-reference/statements/f-p-statements.md)
@@ -34,7 +32,6 @@ Tematy w tej sekcji zawierają tabele deklaracji i instrukcji wykonywalnych Visu
  [Lista typów](../../../visual-basic/language-reference/statements/type-list.md)
 
 ## <a name="related-sections"></a>Sekcje pokrewne
-
  [Dokumentacja języka Visual Basic](../../../visual-basic/language-reference/index.md)
 
  [Przewodnik języka Visual Basic](../../../visual-basic/index.md)

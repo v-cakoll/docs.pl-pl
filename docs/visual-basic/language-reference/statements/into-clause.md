@@ -15,8 +15,8 @@ ms.locfileid: "33598495"
 Identyfikuje funkcje agregujące lub grupy do zastosowania do kolekcji.
 
 ## <a name="remarks"></a>Uwagi
-
 Słowo kluczowe `Each` jest używane w następujących sytuacjach:
+
 [Aggregate — klauzula](../../../visual-basic/language-reference/queries/aggregate-clause.md)
 
 [Group By — klauzula](../../../visual-basic/language-reference/queries/group-by-clause.md)

@@ -51,8 +51,8 @@ End Structure
 |`End Structure`|Wymagane. Kończy definicję `Structure`.|
 
 ## <a name="remarks"></a>Uwagi
-
 Instrukcja `Structure` definiuje złożony typ wartości, który można dostosować. *Struktura* jest generalizacją typu definiowanego przez użytkownika (UDT) z poprzednich wersji programu Visual Basic. Aby uzyskać więcej informacji, zobacz [struktury](../../../visual-basic/programming-guide/language-features/data-types/structures.md).
+
 Struktury obsługują wiele tych samych zadań co klasy. Na przykład struktury mogą mieć właściwości i procedury, mogą implementować interfejsy i mogą mieć sparametryzowane konstruktory. Istnieją jednak istotne różnice między strukturami i klasami, w obszarach takich jak: dziedziczenia, deklaracje i użycie. Dodatkowo klasy to typy referencyjne, a struktury to typy wartościowe. Aby uzyskać więcej informacji, zobacz [struktury i klasy](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md).
 
 `Structure` można użyć tylko na poziomie przestrzeni nazw lub modułu. Oznacza to, że *kontekstem deklaracji* struktury musi być plik źródłowy, przestrzeń nazw, klasa, struktura, moduł lub interfejs i nie może być procedura lub blok. Aby uzyskać więcej informacji, zobacz [Kontekst deklaracji i domyślne poziomy dostępu](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).

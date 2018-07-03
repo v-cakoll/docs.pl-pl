@@ -20,98 +20,102 @@ ms.lasthandoff: 05/17/2018
 ms.locfileid: "34234468"
 ---
 # <a name="structure-statement"></a>Structure — Instrukcja
-Deklaruje nazwę struktury i wprowadza definicje zmiennych, właściwości, zdarzeń i procedur, które obejmuje struktury.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-[ <attributelist> ] [ accessmodifier ] [ Shadows ] [ Partial ] _  
-Structure name [ ( Of typelist ) ]  
-    [ Implements interfacenames ]  
-    [ datamemberdeclarations ]  
-    [ methodmemberdeclarations ]  
-End Structure  
-```  
-  
-## <a name="parts"></a>Części  
-  
-|Termin|Definicja|  
-|---|---|  
-|`attributelist`|Opcjonalna. Zobacz temat [Lista atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Opcjonalna. Może to być jeden z następujących elementów:<br /><br /> -   [Publiczna](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Chronione](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Prywatne](../../../visual-basic/language-reference/modifiers/private.md)<br />- [Friend chronionych](../../language-reference/modifiers/protected-friend.md)<br/>- [Prywatne chronione](../../language-reference/modifiers/private-protected.md) <br /><br /> Zobacz temat [Poziomy dostępu w języku Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Opcjonalna. Zobacz [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`Partial`|Opcjonalna. Wskazuje definicji częściowej struktury. Zobacz [częściowe](../../../visual-basic/language-reference/modifiers/partial.md).|  
-|`name`|Wymagana. Nazwa tej struktury. Zobacz temat[Zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`Of`|Opcjonalna. Określa, że jest to struktura generyczna.|  
-|`typelist`|Wymagane w przypadku użycia [z](../../../visual-basic/language-reference/statements/of-clause.md) — słowo kluczowe. Lista parametrów typu dla tej struktury. Zobacz [typu listy](../../../visual-basic/language-reference/statements/type-list.md).|  
-|`Implements`|Opcjonalna. Wskazuje, że ta struktura implementuje członkami jeden lub więcej interfejsów. Zobacz [implementuje instrukcji](../../../visual-basic/language-reference/statements/implements-statement.md).|  
-|`interfacenames`|Wymagane w przypadku użycia `Implements` instrukcji. Nazwy interfejsów, które implementuje tej struktury.|  
-|`datamemberdeclarations`|Wymagana. Zero lub więcej `Const`, `Dim`, `Enum`, lub `Event` instrukcje deklarowanie *elementy członkowskie danych* struktury.|  
-|`methodmemberdeclarations`|Opcjonalna. Deklaracje zero lub więcej `Function`, `Operator`, `Property`, lub `Sub` procedur, które stanowią *członków metody* struktury.|  
-|`End Structure`|Wymagana. Kończy definicję `Structure`.|  
-  
-## <a name="remarks"></a>Uwagi  
- `Structure` Instrukcji definiuje typ wartości złożonego, który można dostosować. A *struktury* jest generalizacji typu zdefiniowanego przez użytkownika (UDT) poprzednich wersji programu Visual Basic. Aby uzyskać więcej informacji, zobacz [struktury](../../../visual-basic/programming-guide/language-features/data-types/structures.md).  
-  
- Struktury obsługuje wiele te same funkcje co klasy. Na przykład struktury mogą mieć właściwości i procedury, miały zaimplementowane interfejsy i może mieć sparametryzowanych konstruktorów. Istnieją jednak istotne różnice między struktury i klasy w obszarach, takich jak dziedziczenia, deklaracje i użycia. Również typy referencyjne występują następujące klasy i struktury są typów wartości. Aby uzyskać więcej informacji, zobacz [struktury i klasy](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md).  
-  
- Można użyć `Structure` tylko na poziomie przestrzeni nazw lub modułu. Oznacza to, że *kontekście deklaracji* przez strukturę musi zawierać plik źródłowy, przestrzeni nazw, klasy, struktury, modułu lub interfejsu i nie może być procedurę lub blok. Aby uzyskać więcej informacji, zobacz [Declaration Contexts and Default Access Level](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md) (Kontekst deklaracji i domyślne poziomy dostępu).  
-  
- Domyślnie struktury [Friend](../../../visual-basic/language-reference/modifiers/friend.md) dostępu. Poziomy dostępu modułów można dostosować za pomocą modyfikatorów dostępu. Aby uzyskać więcej informacji, zobacz temat [Poziomy dostępu w języku Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
-  
-## <a name="rules"></a>Reguły  
-  
--   **Zagnieżdżania.** Można określić jedną struktury w innym. Zewnętrzny element jest nazywany *strukturze*, i struktura wewnętrznej nazywana jest *zagnieżdżone struktury*. Jednak nie masz dostępu do elementów zagnieżdżonej konstrukcji za pośrednictwem struktury zawierającego. Zamiast tego należy zadeklarować zmiennej typu zagnieżdżonego struktury danych.  
-  
--   **Deklaracja elementu członkowskiego.** Musisz zadeklarować każdy element członkowski struktury. Nie może być elementem członkowskim struktury [chronione](../../../visual-basic/language-reference/modifiers/protected.md) lub `Protected Friend` ponieważ nic nie może dziedziczyć z strukturze. Struktury, jednak może być `Protected` lub `Protected Friend`.  
-  
-     Można zadeklarować zero lub więcej zmiennych udostępniana lub udostępniana, standardowych zdarzeń w strukturze. Nawet jeśli niektóre z nich jest udostępniana nie może mieć tylko stałe, właściwości i procedur.  
-  
--   **Inicjowanie.** Nie można zainicjować wartość dowolnego elementu członkowskiego danych udostępniana struktury jako części swojej deklaracji. Musisz zainicjować element członkowski danych za pomocą sparametryzowanym konstruktorze struktury lub przypisać wartości do elementu członkowskiego, po utworzeniu wystąpienia struktury.  
-  
--   **Dziedziczenie.** Struktura nie może dziedziczyć z dowolnego typu innego niż <xref:System.ValueType>, z której dziedziczy wszystkie struktury. W szczególności co struktura nie może dziedziczyć z innego.  
-  
-     Nie można użyć [dziedziczy instrukcję](../../../visual-basic/language-reference/statements/inherits-statement.md) w definicji struktury, nawet do określenia <xref:System.ValueType>.  
-  
--   **Implementacja.** Jeśli używa struktury [Implements — instrukcja](../../../visual-basic/language-reference/statements/implements-statement.md), musisz zaimplementować każdego elementu członkowskiego zdefiniowane przez każdego interfejsu należy określić w `interfacenames`.  
-  
--   **Domyślna właściwość.** Struktura można określić co najwyżej jedną właściwość jako jego *domyślna właściwość*za pomocą [domyślne](../../../visual-basic/language-reference/modifiers/default.md) modyfikator. Aby uzyskać więcej informacji, zobacz [domyślne](../../../visual-basic/language-reference/modifiers/default.md).  
-  
-## <a name="behavior"></a>Zachowanie  
-  
--   **Poziom dostępu.** W ramach struktury mogą zadeklarować każdy element członkowski z poziomu dostępu. Domyślnie wszystkie elementy członkowskie struktury [publicznego](../../../visual-basic/language-reference/modifiers/public.md) dostępu. Należy pamiętać, że jeśli struktura się bardziej ograniczony poziom dostępu, to automatycznie ogranicza dostęp do jej elementów członkowskich, nawet jeśli dopasowywanie ich poziomy dostępu z modyfikatorów dostępu.  
-  
--   **Zakres.** Struktura jest w zakresie w całym jej zawierającego przestrzeni nazw, klasy, struktury lub modułu.  
-  
-     Zakres każdy element członkowski struktury jest cała struktura.  
-  
--   **Okres istnienia.** Struktura nie może mieć okres istnienia. Zamiast każde wystąpienie tej struktury ma okres istnienia niezależnie od innych wystąpień.  
-  
-     Okres istnienia wystąpienia uruchamia się, gdy jest tworzony przez [operatora New](../../../visual-basic/language-reference/operators/new-operator.md) klauzuli. Go kończy się po zakończeniu okresu istnienia zmiennej, która przechowuje.  
-  
-     Nie można rozszerzyć okres istnienia wystąpienia struktury. Zbliżenie do struktury statycznej funkcji jest udostępniana przez moduł. Aby uzyskać więcej informacji, zobacz [Module — instrukcja](../../../visual-basic/language-reference/statements/module-statement.md).  
-  
-     Elementy członkowskie struktury okresy istnienia w zależności od tego, jak i gdzie są zadeklarowane. Aby uzyskać więcej informacji, zobacz "Istnienia" w [Class — instrukcja](../../../visual-basic/language-reference/statements/class-statement.md).  
-  
--   **Kwalifikacji.** Kod poza strukturą musi nazwy członka o nazwie tej struktury.  
-  
-     Kod wewnątrz struktury zagnieżdżone wykonuje niekwalifikowane odwołanie do elementu programistycznego, Visual Basic wyszukuje element najpierw w strukturze zagnieżdżonych, następnie w jej zawierającego struktury i tak dalej do najbardziej zewnętrznego elementu zawierającego. Aby uzyskać więcej informacji, zobacz [odwołania do elementów zadeklarowany](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
-  
--   **Zużycie pamięci.** Podobnie jak w przypadku wszystkich złożone typy danych, nie można bezpiecznie obliczania zużycia całkowitej ilości pamięci struktury przez dodanie alokacji magazynu nominalnego jego elementów członkowskich. Ponadto nie można bezpiecznie zakładać, że kolejność magazynu w pamięci jest taka sama jak zamówienia deklaracji. Jeśli potrzebujesz do sterowania układem magazynu struktury, możesz zastosować <xref:System.Runtime.InteropServices.StructLayoutAttribute> atrybutu `Structure` instrukcji.  
-  
-## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto `Structure` instrukcji do zdefiniowania zestawu powiązanych danych do pracownika. Widoczny jest użycie `Public`, `Friend`, i `Private` elementy członkowskie, aby odzwierciedlić charakter elementów danych. Przedstawia on także procedury, właściwości i zdarzenia elementów członkowskich.  
-  
- [!code-vb[VbVbalrStatements#57](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/structure-statement_1.vb)]  
-  
-## <a name="see-also"></a>Zobacz też  
- [Class, instrukcja](../../../visual-basic/language-reference/statements/class-statement.md)  
- [Interface, instrukcja](../../../visual-basic/language-reference/statements/interface-statement.md)  
- [Module, instrukcja](../../../visual-basic/language-reference/statements/module-statement.md)  
- [Dim, instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)  
- [Const, instrukcja](../../../visual-basic/language-reference/statements/const-statement.md)  
- [Enum, instrukcja](../../../visual-basic/language-reference/statements/enum-statement.md)  
- [Event, instrukcja](../../../visual-basic/language-reference/statements/event-statement.md)  
- [Operator, instrukcja](../../../visual-basic/language-reference/statements/operator-statement.md)  
- [Property, instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)  
+
+Deklaruje nazwę struktury i wprowadza definicje zmiennych, właściwości, zdarzeń i procedur, które obejmuje struktura.
+
+## <a name="syntax"></a>Składnia
+
+```vb
+[ <attributelist> ] [ accessmodifier ] [ Shadows ] [ Partial ] _
+Structure name [ ( Of typelist ) ]
+[ Implements interfacenames ]
+[ datamemberdeclarations ]
+[ methodmemberdeclarations ]
+End Structure
+```
+
+## <a name="parts"></a>Części
+
+|Termin|Definicja|
+|---|---|
+|`attributelist`|Opcjonalne. Zobacz temat [Lista atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md).|
+|`accessmodifier`|Opcjonalne. Może to być jeden z następujących elementów:<br /><br /> - [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />- [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />- [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br/>- [Private protected](../../language-reference/modifiers/private-protected.md) <br /><br /> Zobacz temat [Poziomy dostępu w języku Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|
+|`Shadows`|Opcjonalne. Zobacz [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|
+|`Partial`|Opcjonalne. Wskazuje częściową definicję struktury. Zobacz [Partial](../../../visual-basic/language-reference/modifiers/partial.md).|
+|`name`|Wymagane. Nazwa tej struktury. Zobacz temat [Zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|
+|`Of`|Opcjonalne. Określa, że jest to struktura generyczna.|
+|`typelist`|Wymagane w przypadku użycia słowa kluczowego [Of](../../../visual-basic/language-reference/statements/of-clause.md). Lista parametrów typu dla tej struktury. Zobacz [Lista typów](../../../visual-basic/language-reference/statements/type-list.md).|
+|`Implements`|Opcjonalne. Wskazuje, że ta struktura implementuje jeden lub więcej członków interfejsów. Zobacz [Implements (instrukcja)](../../../visual-basic/language-reference/statements/implements-statement.md).|
+|`interfacenames`|Wymagane w przypadku użycia instrukcji `Implements`. Nazwy interfejsów, które implementuje ta struktura.|
+|`datamemberdeclarations`|Wymagane. Zero lub więcej instrukcji `Const`, `Dim`, `Enum`, lub `Event`, deklarujących *elementy członkowskie* struktury.|
+|`methodmemberdeclarations`|Opcjonalne. Zero lub więcej deklaracji `Function`, `Operator`, `Property`, lub procedur `Sub`, które stanowią *metody członkowskie* struktury.|
+|`End Structure`|Wymagane. Kończy definicję `Structure`.|
+
+## <a name="remarks"></a>Uwagi
+
+Instrukcja `Structure` definiuje złożony typ wartości, który można dostosować. *Struktura* jest generalizacją typu definiowanego przez użytkownika (UDT) z poprzednich wersji programu Visual Basic. Aby uzyskać więcej informacji, zobacz [struktury](../../../visual-basic/programming-guide/language-features/data-types/structures.md).
+
+Struktury obsługują wiele tych samych zadań co klasy. Na przykład struktury mogą mieć właściwości i procedury, mogą implementować interfejsy i mogą mieć sparametryzowane konstruktory. Istnieją jednak istotne różnice między strukturami i klasami, w obszarach takich jak: dziedziczenia, deklaracje i użycie. Dodatkowo klasy to typy referencyjne, a struktury to typy wartościowe. Aby uzyskać więcej informacji, zobacz [struktury i klasy](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md).
+
+`Structure` można użyć tylko na poziomie przestrzeni nazw lub modułu. Oznacza to, że *kontekstem deklaracji* struktury musi być plik źródłowy, przestrzeń nazw, klasa, struktura, moduł lub interfejs i nie może być procedura lub blok. Aby uzyskać więcej informacji, zobacz [Kontekst deklaracji i domyślne poziomy dostępu](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
+
+Domyślnie struktury posiadają poziom dostępu [Friend](../../../visual-basic/language-reference/modifiers/friend.md). Możesz dostosować ich poziom dostępu za pomocą modyfikatorów dostępu. Aby uzyskać więcej informacji, zobacz temat [Poziomy dostępu w języku Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+
+## <a name="rules"></a>Reguły
+
+- **Zagnieżdżanie.** Można zdefiniować jedną strukturę wewnątrz innej. Zewnętrzny element jest nazywany *strukturą zawierającą*, a struktura wewnętrzna nazywana jest *strukturą zagnieżdżoną*. Jednakże nie można uzyskać dostępu do elementów struktury zagnieżdżonej za pośrednictwem struktury zawierającej. Zamiast tego należy zadeklarować zmienną typu zagnieżdżonej struktury danych.
+
+- **Deklaracja elementu członkowskiego.** Musisz zadeklarować każdy element członkowski struktury. Element członkowski struktury nie może być [Protected](../../../visual-basic/language-reference/modifiers/protected.md) lub `Protected Friend` ponieważ nic nie może dziedziczyć z struktury. Sama struktura jednak może być `Protected` lub `Protected Friend`.
+
+Można zadeklarować zero lub więcej nieudostępnionych zmiennych lub nieudostępnionych standardowych zdarzeń w strukturze. Nie możesz mieć tylko stałych, właściwości i procedur, nawet jeśli niektóre z nich są nieudostępnione.
+
+- **Inicjowanie.** Nie można zainicjować wartości któregokolwiek elementu członkowskiego danych nieudostępnionych struktury w części jej deklaracji. Musisz zainicjować element członkowski danych za pomocą sparametryzowanego konstruktora struktury, lub przypisać wartości do elementu członkowskiego po utworzeniu wystąpienia struktury.
+
+- **Dziedziczenie.** Struktura nie może dziedziczyć z dowolnego typu innego niż <xref:System.ValueType>, z którego dziedziczą wszystkie struktury. W szczególności jedna struktura nie może dziedziczyć z innej.
+
+ Nie można użyć [instrukcji Implements](../../../visual-basic/language-reference/statements/inherits-statement.md) w definicji struktury, nawet do określenia <xref:System.ValueType>.
+
+- **Implementacja.** Jeśli struktura używa [instrukcji Implements](../../../visual-basic/language-reference/statements/implements-statement.md), musisz zaimplementować każdy element członkowski zdefiniowany przez każdy interfejs określony w `interfacenames`.
+
+- **Domyślna właściwość.** Struktura może wskazać co najwyżej jedną właściwość jako jego *właściwość domyślną* za pomocą modyfikatora [Default](../../../visual-basic/language-reference/modifiers/default.md). Aby uzyskać więcej informacji, zobacz [Default](../../../visual-basic/language-reference/modifiers/default.md).
+
+## <a name="behavior"></a>Zachowanie
+
+- **Poziom dostępu.** W ramach struktury można zadeklarować każdy element członkowski z własnym poziomem dostępu. Domyślnie wszystkie elementy członkowskie struktury mają dostęp [Public](../../../visual-basic/language-reference/modifiers/public.md). Należy pamiętać, że jeśli struktura ma bardziej ograniczony poziom dostępu, to automatycznie ogranicza to dostęp do jej elementów członkowskich, nawet jeśli dostosujesz ich poziomy dostępu za pomocą modyfikatorów dostępu.
+
+- **Zakres.** Struktura jest w zakresie zawierającej ją przestrzeni nazw, klasy, struktury lub modułu.
+
+ Zakresem każdego elementu członkowskiego struktury jest cała struktura.
+
+- **Okres istnienia.** Sama struktura nie może mieć okresu istnienia. Zamiast tego każde wystąpienie struktury ma okres istnienia niezależny od innych wystąpień.
+
+ Okres istnienia wystąpienia rozpoczyna się, gdy jest tworzona przez [operator New](../../../visual-basic/language-reference/operators/new-operator.md). Kończy się po zakończeniu okresu istnienia zmiennej, która ją przechowuje.
+
+ Nie można rozszerzyć okresu istnienia instancji struktury. Zbliżone do funkcjonalności struktury statycznej jest realizowane przez moduł. Aby uzyskać więcej informacji, zobacz [Module — instrukcja](../../../visual-basic/language-reference/statements/module-statement.md).
+
+ Elementy członkowskie struktury posiadają okresy istnienia zależne od tego, jak i gdzie są zadeklarowane. Aby uzyskać więcej informacji, zobacz "Okres istnienia" w [Class — instrukcja](../../../visual-basic/language-reference/statements/class-statement.md).
+
+- **Kwalifikacja.** Kod spoza struktury musi kwalifikować nazwę członka z nazwą tej struktury.
+
+ Jeśli kod wewnątrz struktury zagnieżdżonej wykonuje niekwalifikowane odwołanie do elementu programistycznego, Visual Basic wyszukuje element najpierw w strukturze zagnieżdżonej, następnie w strukturze zawierającej i tak dalej do najbardziej zewnętrznego elementu zawierającego. Aby uzyskać więcej informacji, zobacz [odwołania do elementów zadeklarowanych](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).
+
+- **Zużycie pamięci.** Podobnie jak w przypadku wszystkich złożonych typów danych, nie można bezpiecznie obliczyć wykorzystania pamięci przez strukturę poprzez dodanie nominalnej alokacji przestrzeni jej elementów członkowskich. Ponadto nie można bezpiecznie założyć, że kolejność przestrzeni w pamięci jest taka sama jak kolejność deklaracji. Jeśli potrzebujesz sterować układem przechowywania struktury, możesz zastosować atrybut <xref:System.Runtime.InteropServices.StructLayoutAttribute> w instrukcji `Structure`.
+
+## <a name="example"></a>Przykład
+
+ W poniższym przykładzie użyto instrukcji `Structure` do zdefiniowania zestawu powiązanych danych do pracownika. Widoczne jest użycie elementów członkowskich `Public`, `Friend` i `Private`, aby odzwierciedlić charakter elementów danych. Przedstawia on także procedury, właściwości i zdarzenia elementów członkowskich.
+
+ [!code-vb[VbVbalrStatements#57](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/structure-statement_1.vb)]
+
+## <a name="see-also"></a>Zobacz też
+
+ [Class, instrukcja](../../../visual-basic/language-reference/statements/class-statement.md)
+ [Interface, instrukcja](../../../visual-basic/language-reference/statements/interface-statement.md)
+ [Module, instrukcja](../../../visual-basic/language-reference/statements/module-statement.md)
+ [Dim, instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)
+ [Const, instrukcja](../../../visual-basic/language-reference/statements/const-statement.md)
+ [Enum, instrukcja](../../../visual-basic/language-reference/statements/enum-statement.md)
+ [Event, instrukcja](../../../visual-basic/language-reference/statements/event-statement.md)
+ [Operator, instrukcja](../../../visual-basic/language-reference/statements/operator-statement.md)
+ [Property, instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)
  [Struktury i klasy](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)

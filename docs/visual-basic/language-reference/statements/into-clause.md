@@ -12,13 +12,11 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33598495"
 ---
 # <a name="into-clause-visual-basic"></a>Into — Klauzula (Visual Basic)
-
 Identyfikuje funkcje agregujące lub grupy do zastosowania do kolekcji.
 
 ## <a name="remarks"></a>Uwagi
 
 Słowo kluczowe `Each` jest używane w następujących sytuacjach:
-
 [Aggregate — klauzula](../../../visual-basic/language-reference/queries/aggregate-clause.md)
 
 [Group By — klauzula](../../../visual-basic/language-reference/queries/group-by-clause.md)
@@ -26,5 +24,4 @@ Słowo kluczowe `Each` jest używane w następujących sytuacjach:
 [Group Join — klauzula](../../../visual-basic/language-reference/queries/group-join-clause.md)
 
 ## <a name="see-also"></a>Zobacz też
-
 [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)

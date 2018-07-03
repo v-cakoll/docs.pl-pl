@@ -20,7 +20,6 @@ ms.lasthandoff: 05/17/2018
 ms.locfileid: "34234468"
 ---
 # <a name="structure-statement"></a>Structure — Instrukcja
-
 Deklaruje nazwę struktury i wprowadza definicje zmiennych, właściwości, zdarzeń i procedur, które obejmuje struktura.
 
 ## <a name="syntax"></a>Składnia
@@ -54,7 +53,6 @@ End Structure
 ## <a name="remarks"></a>Uwagi
 
 Instrukcja `Structure` definiuje złożony typ wartości, który można dostosować. *Struktura* jest generalizacją typu definiowanego przez użytkownika (UDT) z poprzednich wersji programu Visual Basic. Aby uzyskać więcej informacji, zobacz [struktury](../../../visual-basic/programming-guide/language-features/data-types/structures.md).
-
 Struktury obsługują wiele tych samych zadań co klasy. Na przykład struktury mogą mieć właściwości i procedury, mogą implementować interfejsy i mogą mieć sparametryzowane konstruktory. Istnieją jednak istotne różnice między strukturami i klasami, w obszarach takich jak: dziedziczenia, deklaracje i użycie. Dodatkowo klasy to typy referencyjne, a struktury to typy wartościowe. Aby uzyskać więcej informacji, zobacz [struktury i klasy](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md).
 
 `Structure` można użyć tylko na poziomie przestrzeni nazw lub modułu. Oznacza to, że *kontekstem deklaracji* struktury musi być plik źródłowy, przestrzeń nazw, klasa, struktura, moduł lub interfejs i nie może być procedura lub blok. Aby uzyskać więcej informacji, zobacz [Kontekst deklaracji i domyślne poziomy dostępu](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
@@ -102,13 +100,11 @@ Można zadeklarować zero lub więcej nieudostępnionych zmiennych lub nieudost�
 - **Zużycie pamięci.** Podobnie jak w przypadku wszystkich złożonych typów danych, nie można bezpiecznie obliczyć wykorzystania pamięci przez strukturę poprzez dodanie nominalnej alokacji przestrzeni jej elementów członkowskich. Ponadto nie można bezpiecznie założyć, że kolejność przestrzeni w pamięci jest taka sama jak kolejność deklaracji. Jeśli potrzebujesz sterować układem przechowywania struktury, możesz zastosować atrybut <xref:System.Runtime.InteropServices.StructLayoutAttribute> w instrukcji `Structure`.
 
 ## <a name="example"></a>Przykład
-
  W poniższym przykładzie użyto instrukcji `Structure` do zdefiniowania zestawu powiązanych danych do pracownika. Widoczne jest użycie elementów członkowskich `Public`, `Friend` i `Private`, aby odzwierciedlić charakter elementów danych. Przedstawia on także procedury, właściwości i zdarzenia elementów członkowskich.
 
  [!code-vb[VbVbalrStatements#57](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/structure-statement_1.vb)]
 
 ## <a name="see-also"></a>Zobacz też
-
  [Class, instrukcja](../../../visual-basic/language-reference/statements/class-statement.md)
  [Interface, instrukcja](../../../visual-basic/language-reference/statements/interface-statement.md)
  [Module, instrukcja](../../../visual-basic/language-reference/statements/module-statement.md)

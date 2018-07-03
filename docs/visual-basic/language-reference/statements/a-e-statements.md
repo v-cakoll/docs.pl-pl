@@ -10,7 +10,6 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33600031"
 ---
 # <a name="a-e-statements"></a>A-E — Instrukcje
-
 Poniższa tabela zawiera listę instrukcji języka Visual Basic.
 
 |||||
@@ -22,7 +21,6 @@ Poniższa tabela zawiera listę instrukcji języka Visual Basic.
 |[Exit](../../../visual-basic/language-reference/statements/exit-statement.md)||||
 
 ## <a name="see-also"></a>Zobacz też
-
  [Instrukcje F-P](../../../visual-basic/language-reference/statements/f-p-statements.md)
  [Instrukcje Q-Z](../../../visual-basic/language-reference/statements/q-z-statements.md)
  [Dokumentacja języka Visual Basic](../../../visual-basic/language-reference/index.md)

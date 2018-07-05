@@ -6,13 +6,13 @@ helpviewer_keywords:
 ms.assetid: 1cbd7703-8d3b-48fd-831e-14c9cc85675a
 ms.openlocfilehash: 6c77a0e921038aca6cd9d2ed28cc34e588d9079f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
 ms.locfileid: "33602791"
 ---
 # <a name="statements-visual-basic"></a>Instrukcje (Visual Basic)
-Tematy w tej sekcji zawierają tabele deklaracji i instrukcji wykonywalnych Visual Basic oraz ważne listy, które dotyczą wielu instrukcji.
+Tematy w tej sekcji zawierają tabele deklaracji i instrukcji wykonywalnych języka Visual Basic oraz ważne listy, które dotyczą wielu instrukcji.
 
 ## <a name="in-this-section"></a>W tej sekcji
  [Instrukcje A-E](../../../visual-basic/language-reference/statements/a-e-statements.md)
@@ -34,4 +34,4 @@ Tematy w tej sekcji zawierają tabele deklaracji i instrukcji wykonywalnych Visu
 ## <a name="related-sections"></a>Sekcje pokrewne
  [Dokumentacja języka Visual Basic](../../../visual-basic/language-reference/index.md)
 
- [Przewodnik języka Visual Basic](../../../visual-basic/index.md)
+ [Visual Basic](../../../visual-basic/index.md)

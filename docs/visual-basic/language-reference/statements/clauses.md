@@ -12,7 +12,7 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33596596"
 ---
 # <a name="clauses-visual-basic"></a>Klauzule (Visual Basic)
-Tematy w tej części dokumentują klauzule środowiska wykonawczego Visual Basic.
+Tematy w tej sekcji dotyczą klauzul wykonawczych języka Visual Basic.
 
 ## <a name="in-this-section"></a>W tej sekcji
  [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)
@@ -32,4 +32,4 @@ Tematy w tej części dokumentują klauzule środowiska wykonawczego Visual Basi
 ## <a name="related-sections"></a>Sekcje pokrewne
  [Dokumentacja języka Visual Basic](../../../visual-basic/language-reference/index.md)
 
- [Przewodnik Visual Basic](../../../visual-basic/index.md)
+ [Visual Basic](../../../visual-basic/index.md)

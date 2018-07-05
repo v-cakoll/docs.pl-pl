@@ -12,26 +12,26 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33602791"
 ---
 # <a name="statements-visual-basic"></a>Instrukcje (Visual Basic)
-Tematy w tej sekcji zawierają tabele deklaracji Visual Basic i instrukcje wykonywalne i ważne list, które dotyczą wiele instrukcji.  
-  
-## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje A-E](../../../visual-basic/language-reference/statements/a-e-statements.md)  
-  
- [Instrukcje F-P](../../../visual-basic/language-reference/statements/f-p-statements.md)  
-  
- [Instrukcje Q-Z](../../../visual-basic/language-reference/statements/q-z-statements.md)  
-  
- [Klauzule](../../../visual-basic/language-reference/statements/clauses.md)  
-  
- [Kontekst deklaracji i domyślne poziomy dostępu](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)  
-  
- [Lista atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md)  
-  
- [Lista parametrów](../../../visual-basic/language-reference/statements/parameter-list.md)  
-  
- [Lista typów](../../../visual-basic/language-reference/statements/type-list.md)  
-  
-## <a name="related-sections"></a>Sekcje pokrewne  
- [Dokumentacja języka Visual Basic](../../../visual-basic/language-reference/index.md)  
-  
+Tematy w tej sekcji zawierają tabele deklaracji i instrukcji wykonywalnych języka Visual Basic oraz ważne listy, które dotyczą wielu instrukcji.
+
+## <a name="in-this-section"></a>W tej sekcji
+ [Instrukcje A-E](../../../visual-basic/language-reference/statements/a-e-statements.md)
+
+ [Instrukcje F-P](../../../visual-basic/language-reference/statements/f-p-statements.md)
+
+ [Instrukcje Q-Z](../../../visual-basic/language-reference/statements/q-z-statements.md)
+
+ [Klauzule](../../../visual-basic/language-reference/statements/clauses.md)
+
+ [Kontekst deklaracji i domyślne poziomy dostępu](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)
+
+ [Lista atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md)
+
+ [Lista parametrów](../../../visual-basic/language-reference/statements/parameter-list.md)
+
+ [Lista typów](../../../visual-basic/language-reference/statements/type-list.md)
+
+## <a name="related-sections"></a>Sekcje pokrewne
+ [Dokumentacja języka Visual Basic](../../../visual-basic/language-reference/index.md)
+
  [Visual Basic](../../../visual-basic/index.md)

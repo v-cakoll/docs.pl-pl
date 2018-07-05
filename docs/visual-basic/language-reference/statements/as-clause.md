@@ -16,10 +16,10 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33604266"
 ---
 # <a name="as-clause-visual-basic"></a>As — Klauzula (Visual Basic)
-Wprowadza `As` klauzuli, który określa typ danych w instrukcji deklaracji lub na liście ograniczenia parametru typu ogólnego.  
+Wprowadza klauzulę `As`, która określa typ danych w instrukcji deklaracji lub listę ograniczeń w parametrze typu ogólnego.
   
 ## <a name="remarks"></a>Uwagi  
- Instrukcja `As` <słowo kluczowe> może być używana w następujących kontekstach:  
+ Słowa kluczowego `As` można używać w następujących kontekstach: 
   
  [Aggregate, klauzula](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
   
@@ -37,9 +37,9 @@ Wprowadza `As` klauzuli, który określa typ danych w instrukcji deklaracji lub 
   
  [Event, instrukcja](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [Dla... Next — instrukcja](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [Instrukcje For... Next](../../../visual-basic/language-reference/statements/for-next-statement.md)  
   
- [For Each... Next — instrukcja](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [Instrukcje For Each... Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
   
  [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)  
   

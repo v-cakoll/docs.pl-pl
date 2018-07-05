@@ -31,34 +31,34 @@ Error errornumber
  Wymagana. Może być dowolnym prawidłowym numerem błędu.  
   
 ## <a name="remarks"></a>Uwagi  
- `Error` Instrukcja jest obsługiwana dla zgodności z poprzednimi wersjami. Nowy kod, szczególnie w przypadku tworzenia obiektów, użyj `Err` obiektu `Raise` metodę, aby generować błędy czasu wykonywania.  
+ Instrukcja `Error` jest obsługiwana dla zgodności z poprzednimi wersjami. W nowym kodzie, szczególnie w przypadku tworzenia obiektów, użyj metody `Raise` obiektu `Err`, aby generować błędy w czasie wykonywania.
   
- Jeśli `errornumber` jest zdefiniowany, `Error` instrukcji wywołuje program obsługi błędów po właściwości `Err` obiektu są przypisane następujące wartości domyślne:  
+ Jeśli `errornumber` jest zdefiniowany, instrukcja `Error` wywołuje program obsługi błędów po tym, jak do właściwości obiektu `Err` zostaną przypisane następujące wartości domyślne:
   
 |Właściwość|Wartość|  
 |--------------|-----------|  
-|`Number`|Wartość określona jako argument `Error` instrukcji. Może być dowolnym prawidłowym numerem błędu.|  
+|`Number`|Wartość określona jako argument instrukcji `Error`. Może być dowolnym prawidłowym numerem błędu.|  
 |`Source`|Nazwa bieżącego projektu Visual Basic.|  
-|`Description`|Wyrażenie odpowiadające zwracanej wartości tekstowe `Error` funkcja dla określonego `Number`, jeśli istnieje ten ciąg. Jeśli ciąg nie istnieje, `Description` zawiera ciąg o zerowej długości ("").|  
-|`HelpFile`|Dysk pełny, ścieżka i nazwa pliku odpowiedniego pliku Pomocy programu Visual Basic.|  
-|`HelpContext`|Odpowiednie pomocy programu Visual Basic identyfikator kontekstu błąd odpowiadający do pliku `Number` właściwości.|  
+|`Description`|Wyrażenie ciągu odpowiadające zwracanej wartości funkcji `Error` dla podanej wartości `Number`, jeśli taki ciąg istnieje. Jeśli ciąg nie istnieje, wartość `Description` zawiera ciąg znaków o zerowej długości ("").|  
+|`HelpFile`|W pełni kwalifikowany dysk, ścieżka i nazwa pliku odpowiedniego pliku Pomocy języka Visual Basic.|
+|`HelpContext`|Odpowiedni identyfikator kontekstu pomocy języka Visual Basic dla błędu odpowiadającego właściwości `Number`.|
 |`LastDLLError`|Zero.|  
   
- Jeśli istnieje bez obsługi błędu, lub jeśli brak jest włączona, komunikat o błędzie jest tworzone i wyświetlane z `Err` właściwości obiektu.  
+ Jeśli nie istnieje program do obsługi błędów lub jeśli żaden nie jest włączony, zostaje utworzony i wyświetlony komunikat o błędzie zawierający informacje z właściwości obiektu `Err`. 
   
 > [!NOTE]
->  Niektóre aplikacje hosta Visual Basic nie można utworzyć obiektów. Zapoznaj się dokumentacją aplikacji do określenia, czy można utworzyć w klas i obiektów.  
+>  Niektóre aplikacje hosta Visual Basic nie mogą tworzyć obiektów. Informacje o tym, czy aplikacja hosta może tworzyć klasy i obiekty, znajdziesz w jej dokumentacji.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto `Error` instrukcję do wygenerowania 11. numer błędu.  
+ W tym przykładzie instrukcja `Error` została użyta do wygenerowania błędu numer 11. 
   
 ```  
-On Error Resume Next   ' Defer error handling.  
-Error 11   ' Simulate the "Division by zero" error.  
+On Error Resume Next ' Defer error handling.   
+Error 11 ' Simulate the "Division by zero" error.   
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **Przestrzeń nazw:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)
   
  **Zestaw:** Visual Basic Runtime Library (w pliku Microsoft.VisualBasic.dll)  
   

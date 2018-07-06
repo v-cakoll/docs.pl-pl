@@ -13,7 +13,7 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33604077"
 ---
 # <a name="attribute-list-visual-basic"></a>Lista atrybutów (Visual Basic)
-Określa atrybuty, które ma zostać zastosowany do zadeklarowany element. Wiele atrybutów są rozdzielane przecinkami. Poniżej przedstawiono składnię jeden atrybut.  
+Określa atrybuty, które mają zostać zastosowane do zadeklarowanego elementu programowania. Wiele atrybutów rozdziela się przecinkami. Poniżej przedstawiono składnię z jednym atrybutem. 
   
 ## <a name="syntax"></a>Składnia  
   
@@ -22,44 +22,40 @@ Określa atrybuty, które ma zostać zastosowany do zadeklarowany element. Wiele
 ```  
   
 ## <a name="parts"></a>Części  
- `attributemodifier`  
- Wymagany dla atrybutów zastosowanych na początku pliku źródłowego. Może być [zestawu](../../../visual-basic/language-reference/modifiers/assembly.md) lub [modułu](../../../visual-basic/language-reference/modifiers/module-keyword.md).  
-  
- `attributename`  
- Wymagana. Nazwa atrybutu.  
-  
- `attributearguments`  
- Opcjonalna. Lista argumentów pozycyjnych dla tego atrybutu. Używanie wielu argumentów są oddzielone przecinkami.  
-  
- `attributeinitializer`  
- Opcjonalna. Listy inicjatorów zmienna lub właściwość dla tego atrybutu. Wiele inicjatory są oddzielone przecinkami.  
+|||
+|---|---|
+|`attributemodifier`|Wymagane dla atrybutów zastosowanych na początku pliku źródłowego. Może to być [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md) lub [Module](../../../visual-basic/language-reference/modifiers/module-keyword.md).|
+|`attributename`|Wymagane. Nazwa atrybutu.|
+|`attributearguments`|Opcjonalne. Lista argumentów pozycyjnych dla tego atrybutu. Wiele argumentów oddzielamy przecinkami.|
+|`attributeinitializer`|Opcjonalne. Lista zmiennych lub inicjatorów właściwości dla tego atrybutu. Wiele inicjatorów oddzielamy przecinkami.|
+|||
   
 ## <a name="remarks"></a>Uwagi  
- Co najmniej jeden atrybut można stosować do niemal dowolnego elementu programistycznego (typy, procedur, właściwości i tak dalej). Atrybuty są wyświetlane w metadanych zestawu i mogą pomóc adnotacji kodu lub określić sposób użycia konkretnego elementu programistycznego. Można zastosować atrybutów zdefiniowanych przez Visual Basic i .NET Framework, a można definiować własne atrybuty.  
+ Atrybuty (jeden lub więcej) można zastosować do niemal dowolnego elementu programistycznego (typu, procedury, właściwości itd.). Atrybuty są wyświetlane w metadanych zestawu i mogą pomóc w opisaniu kodu lub określeniu sposobu użycia konkretnego elementu programistycznego. Zastosować można atrybuty zdefiniowane przez Visual Basic i .NET Framework. Zdefiniować można także własne atrybuty.
 
- Aby uzyskać więcej informacji o tym, kiedy należy używać atrybutów, zobacz [Omówienie atrybutów](../../../visual-basic/programming-guide/concepts/attributes/index.md). Aby uzyskać informacje o nazwach atrybutów, zobacz [zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+ Aby uzyskać więcej informacji o stosowaniu atrybutów, zobacz artykuł [Omówienie atrybutów](../../../visual-basic/programming-guide/concepts/attributes/index.md). Aby uzyskać informacje o nazwach atrybutów, zobacz artykuł [Zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 ## <a name="rules"></a>Reguły  
   
--   **Umieszczanie.** Atrybuty można zastosować do najbardziej zadeklarowanych elementów programistycznych. Aby zastosować jeden lub więcej atrybutów, umieść *bloku attribute* na początku deklaracji elementu. Każdy wpis na liście atrybutów Określa atrybut, który chcesz zastosować i modyfikator i argumenty używanego dla tego wywołania atrybutu.  
+-   **Umieszczanie.** Atrybuty można zastosować do większości zadeklarowanych elementów programistycznych. Aby zastosować jeden lub więcej atrybutów, umieść *blok atrybutu* na początku deklaracji elementu. Każdy wpis na liście atrybutów określa atrybut, który chcesz zastosować, oraz modyfikator i argumenty używane dla tego wywołania atrybutu. 
   
--   **Nawiasy.** Jeśli podasz lista atrybutów, należy ująć go w nawiasy ("`<`"i"`>`").  
+-   **Nawiasy.** Podając listę atrybutów, musisz ująć ją w nawiasy (`<` i `>`).
   
--   **Część deklaracji.** Atrybut musi być w deklaracji elementu oddzielną instrukcję. Można użyć sekwencji kontynuacji wiersza (" `_`") do rozszerzenia instrukcji deklaracji na wiele wierszy kodu źródłowego.  
+-   **Część deklaracji.** Atrybut musi być częścią deklaracji elementu, a nie oddzielną instrukcją. Można użyć sekwencji kontynuacji wiersza (`_`) do rozszerzenia instrukcji deklaracji na wiele wierszy kodu źródłowego.
   
--   **Modyfikatory.** Modyfikator atrybutu (`Assembly` lub `Module`) jest wymagany na każdy atrybut zastosowany do elementu programistycznego na początku pliku źródłowego. Atrybut modyfikatorów nie są dozwolone na atrybuty stosowane do elementów, które nie są na początku pliku źródłowego.  
+-   **Modyfikatory.** Modyfikator atrybutu (`Assembly` lub `Module`) jest wymagany dla każdego atrybutu zastosowanego do elementu programistycznego na początku pliku źródłowego. Modyfikatory atrybutu nie są dozwolone w przypadku atrybutów stosowanych do elementów, które nie znajdują się na początku pliku źródłowego. 
   
--   **Argumenty.** Wszystkie argumenty pozycyjne atrybutu musi poprzedzać wszystkie inicjatory zmienna lub właściwość.  
+-   **Argumenty.** Wszystkie argumenty pozycyjne atrybutu muszą poprzedzać wszystkie inicjatory zmiennej lub właściwości. 
   
 ## <a name="example"></a>Przykład  
- Następujący przykład dotyczy <xref:System.Runtime.InteropServices.DllImportAttribute> atrybutu szkielet definicji `Function` procedury.  
+ W przykładzie poniżej atrybut <xref:System.Runtime.InteropServices.DllImportAttribute> został zastosowany dla definicji szkieletu procedury `Function`.
   
  [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/attribute-list_1.vb)]  
   
- <xref:System.Runtime.InteropServices.DllImportAttribute> Wskazuje, że procedura oparte na atrybutach reprezentuje punkt wejścia w niezarządzanych biblioteki dołączanej (dynamicznie DLL). Ten atrybut zawiera nazwy biblioteki DLL jako argument pozycyjny oraz inne informacje jako inicjatory zmiennej.  
+ <xref:System.Runtime.InteropServices.DllImportAttribute> wskazuje, że procedura z atrybutami reprezentuje punkt wejścia w niezarządzanej bibliotece dołączanej dynamicznie (DLL). Atrybut zawiera nazwę biblioteki DLL jako argument pozycyjny oraz inne informacje jako inicjatory zmiennych.
   
 ## <a name="see-also"></a>Zobacz też  
  [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)  
- [Moduł \<— słowo kluczowe >](../../../visual-basic/language-reference/modifiers/module-keyword.md)  
+ [Module \<słowo kluczowe>](../../../visual-basic/language-reference/modifiers/module-keyword.md) 
  [Atrybuty — omówienie](../../../visual-basic/programming-guide/concepts/attributes/index.md)  
  [Instrukcje: przerywanie i łączenie instrukcji w kodzie](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

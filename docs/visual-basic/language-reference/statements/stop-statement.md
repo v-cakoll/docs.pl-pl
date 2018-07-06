@@ -29,17 +29,17 @@ Stop
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Możesz umieścić `Stop` instrukcje w dowolnym miejscu procedury, aby wstrzymać wykonywania. Przy użyciu `Stop` instrukcji jest podobne do punktu przerwania w kodzie.  
+ Możesz umieścić instrukcję `Stop` w dowolnym miejscu procedury, aby wstrzymać wykonywanie. Użycie instrukcji `Stop` jest podobne do punktu przerwania w kodzie.  
   
- `Stop` Instrukcji wstrzymuje wykonywanie, lecz w przeciwieństwie do `End`, zamknij wszystkie pliki lub nie wyczyść wszystkie zmienne, chyba że jest wystąpił w pliku skompilowanego pliku wykonywalnego (.exe).  
+ Instrukcja `Stop` wstrzymuje wykonywanie, lecz w przeciwieństwie do `End`, nie zamyka żadnych plików ani nie czyści żadnych zmiennych, chyba że wystąpi w skompilowanym pliku wykonywalnym (.exe).  
   
 > [!NOTE]
->  Jeśli `Stop` napotkano instrukcji w kodzie, który działa poza zintegrowane środowisko programistyczne (IDE), Debuger jest wywoływany. Dotyczy to niezależnie od tego, czy kod został skompilowany w trybie debugowania lub wersji detalicznej.  
+>  Jeśli instrukcja `Stop` zostanie napotkana w kodzie, który działa poza zintegrowanym środowiskiem programistycznym (IDE), wywoływany jest debuger. Stanie się tak niezależnie od tego, czy kod został skompilowany w trybie debugowania czy wersji wdrożeniowej.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto `Stop` instrukcji, aby wstrzymać wykonywania dla każdej iteracji za pośrednictwem `For...Next` pętli.  
+ W tym przykładzie użyto instrukcję `Stop`, aby wstrzymać wykonywanie dla każdej iteracji pętli `For...Next`.  
   
  [!code-vb[VbVbalrStatements#56](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/stop-statement_1.vb)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [End Statement](../../../visual-basic/language-reference/statements/end-statement.md)
+ [Instrukcja End](../../../visual-basic/language-reference/statements/end-statement.md)

@@ -4,7 +4,7 @@ ms.date: 03/30/2017
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
 ms.openlocfilehash: 79cdf35128ac35920797060b09ff2fc5999708a7
 ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 06/27/2018
 ms.locfileid: "37028022"
@@ -54,7 +54,7 @@ Równości i nierówności są definiowane dla dowolnego typu obiektu, który ma
 |[< (Mniejsze niż)](less-than-entity-sql.md)|Porównuje dwa wyrażenia w celu określenia, czy wyrażenie po lewej stronie ma wartość mniejszą niż prawe wyrażenie.|
 |[<= (Mniejsze niż lub równe)](less-than-or-equal-to-entity-sql.md)|Porównuje dwa wyrażenia, aby określić, czy wyrażenie po lewej stronie ma wartość mniejszą niż lub równe prawe wyrażenie.|
 |[&#91;NOT&#93; BETWEEN](between-entity-sql.md)|Określa, czy wyrażenie wynikiem jest wartość w określonym zakresie.|
-|[!= (Nie równa się)](not-equal-to-entity-sql.md)|Porównuje dwa wyrażenia, aby określić, czy po lewej stronie wyrażenia nie jest równa prawe wyrażenie.|
+|[\!= (Nie równa się)](not-equal-to-entity-sql.md)|Porównuje dwa wyrażenia, aby określić, czy po lewej stronie wyrażenia nie jest równa prawe wyrażenie.|
 |[&#91;NOT&#93; LIKE](like-entity-sql.md)|Określa, czy dany ciąg znaków jest zgodna z określonym wzorcem.|
 
 ## <a name="logical-and-case-expression-operators"></a>Operatory logiczne i case wyrażenia
@@ -63,7 +63,7 @@ Operatory logiczne sprawdzić prawdy warunku. Wyrażenie CASE ocenia zestaw wyra
 
 |Operator|Opis|
 |--------------|-----------------|
-|[& & (Logiczne i)](and-entity-sql.md)|Operatora logicznego AND.|
+|[&& (Logiczne i)](and-entity-sql.md)|Operatora logicznego AND.|
 |[!, (NEGACJA)](not-entity-sql.md)|NEGACJA.|
 |[&#124;&#124;(Logiczne lub)](or-entity-sql.md)|Operatora logicznego OR.|
 |[CASE](case-entity-sql.md)|Ocenia zestaw wyrażeń logicznych w celu ustalenia wyniku.|

@@ -12,14 +12,14 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33598401"
 ---
 # <a name="then-statement"></a>Then — Instrukcja
-Wprowadza blok instrukcji do kompilacji lub wykonania, jeśli testowany warunek zostaje spełniony.
-
-## <a name="remarks"></a>Uwagi
-Słowa kluczowego `Then` można używać w następujących kontekstach:
-
-[#If... Then... #Else — dyrektywa](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
-
-[Dyrektywa #If...Then...#Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
-
-## <a name="see-also"></a>Zobacz też
-[Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)
+Wprowadza blok instrukcji do kompilacji lub wykonania, jeśli testowany warunek zostaje spełniony.  
+  
+## <a name="remarks"></a>Uwagi  
+ Słowa kluczowego `Then` można używać w następujących kontekstach:  
+  
+ [#If... Then... #Else — dyrektywa](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+  
+ [Dyrektywa #If...Then...#Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
+  
+## <a name="see-also"></a>Zobacz też  
+ [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)

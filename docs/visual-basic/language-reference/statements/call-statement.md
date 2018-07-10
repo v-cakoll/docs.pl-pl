@@ -10,13 +10,13 @@ helpviewer_keywords:
 ms.assetid: e5b31571-6867-406f-b8e7-a3f9aae4723a
 ms.openlocfilehash: 2074f44aedf59f1570e73c898a9bf64e57034923
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
 ms.locfileid: "33603395"
 ---
 # <a name="call-statement-visual-basic"></a>Call — Instrukcja (Visual Basic)
-Przekazuje sterowanie do `Function`, `Sub`, lub procedury biblioteki dołączanej (dynamicznie DLL).  
+Przekazuje sterowanie do `Function`, `Sub`, lub procedury biblioteki dołączanej dynamicznie (DLL).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,14 +32,14 @@ Przekazuje sterowanie do `Function`, `Sub`, lub procedury biblioteki dołączane
  Opcjonalna. Lista zmiennych lub wyrażeń reprezentujących argumenty, które są przekazywane do procedury, gdy jest wywoływana. Używanie wielu argumentów są oddzielone przecinkami. Jeśli dołączysz `argumentList`, musisz ją ująć go w nawiasach.  
   
 ## <a name="remarks"></a>Uwagi  
- Można użyć `Call` — słowo kluczowe po wywołaniu procedury. Dla większości wywołań procedur nie są wymagane do używania słowa kluczowego.  
+ Słowa kluczowego `Call` można użyć podczas wywoływania procedury. W większości wywołań procedur użycie tego słowa kluczowego nie jest konieczne.  
   
- Zazwyczaj używają `Call` — słowo kluczowe po nazwie wyrażenia nie zaczyna się od identyfikatora. Użycie `Call` — słowo kluczowe do innych celów nie jest zalecane.  
+ Słowa kluczowego `Call` zazwyczaj używa się, gdy wyrażenie nie zaczyna się od identyfikatora. Użycie słowa `Call` w innym celu nie jest zalecane.  
   
- Jeśli procedura zwróci wartość, `Call` instrukcji odrzuca je.  
+ Jeśli procedura zwróci wartość, instrukcja `Call` ją odrzuci.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przedstawia dwa przykłady gdzie `Call` — słowo kluczowe jest niezbędne wywołać procedurę. W obu przykładach wyrażenie wywoływanego nie zaczyna się od identyfikatora.  
+ W przykładowym kodzie poniżej przedstawiono dwie sytuacje, w których słowo kluczowe `Call` jest niezbędne do wywołania procedury. W obu przykładach wywoływane wyrażenie nie zaczyna się od identyfikatora.  
   
  [!code-vb[VbVbalrStatements#97](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/call-statement_1.vb)]  
   

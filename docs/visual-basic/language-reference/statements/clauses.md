@@ -12,24 +12,24 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33596596"
 ---
 # <a name="clauses-visual-basic"></a>Klauzule (Visual Basic)
-Tematy w tej sekcji dotyczą klauzul wykonawczych języka Visual Basic.
-
-## <a name="in-this-section"></a>W tej sekcji
- [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)
-
- [As](../../../visual-basic/language-reference/statements/as-clause.md)
-
- [Uchwyty](../../../visual-basic/language-reference/statements/handles-clause.md)
-
- [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)
-
- [In](../../../visual-basic/language-reference/statements/in-clause.md)
-
- [Into](../../../visual-basic/language-reference/statements/into-clause.md)
-
- [z](../../../visual-basic/language-reference/statements/of-clause.md)
-
-## <a name="related-sections"></a>Sekcje pokrewne
- [Dokumentacja języka Visual Basic](../../../visual-basic/language-reference/index.md)
-
+Tematy w tej sekcji dotyczą klauzul wykonawczych języka Visual Basic.  
+  
+## <a name="in-this-section"></a>W tej sekcji  
+ [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)  
+  
+ [As](../../../visual-basic/language-reference/statements/as-clause.md)  
+  
+ [Uchwyty](../../../visual-basic/language-reference/statements/handles-clause.md)  
+  
+ [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)  
+  
+ [In](../../../visual-basic/language-reference/statements/in-clause.md)  
+  
+ [Into](../../../visual-basic/language-reference/statements/into-clause.md)  
+  
+ [z](../../../visual-basic/language-reference/statements/of-clause.md)  
+  
+## <a name="related-sections"></a>Sekcje pokrewne  
+ [Dokumentacja języka Visual Basic](../../../visual-basic/language-reference/index.md)  
+  
  [Visual Basic](../../../visual-basic/index.md)

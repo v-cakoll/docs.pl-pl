@@ -14,7 +14,7 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33605267"
 ---
 # <a name="end-ltkeywordgt-statement-visual-basic"></a>End &lt;słowo kluczowe&gt; — instrukcja (Visual Basic)
-Gdy następuje dodatkowe słowo kluczowe, kończy definicję bloku instrukcji wynikające z tego słowa kluczowego.  
+Gdy następuje po nim dodatkowe słowo kluczowe, kończy definicję bloku instrukcji wynikającą z tego słowa kluczowego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -114,7 +114,7 @@ End With
  Wymagane do zakończenia `With` zablokować definicji rozpoczyna się od odpowiadającego mu `With` instrukcji. Zobacz [z... End With — instrukcja](../../../visual-basic/language-reference/statements/with-end-with-statement.md).  
   
 ## <a name="remarks"></a>Uwagi  
- [Instrukcji End](../../../visual-basic/language-reference/statements/end-statement.md), bez dodatkowych słowa kluczowego kończy wykonywanie natychmiast.  
+ [Instrukcja End](../../../visual-basic/language-reference/statements/end-statement.md) bez dodatkowego słowa kluczowego kończy wykonywanie natychmiast.  
   
  Gdy poprzedzone znakiem numeru (`#`), `End` — słowo kluczowe kończy wprowadzone przez odpowiednie dyrektywy przetwarzania wstępnego bloku.  
   
@@ -130,8 +130,8 @@ End With
  `#Region`  
  Wymagane do zakończenia bloku region źródłowego rozpoczyna się od odpowiadającego mu [#Region — dyrektywa](../../../visual-basic/language-reference/directives/region-directive.md).  
   
-## <a name="smart-device-developer-notes"></a>Uwagi dla deweloperów inteligentnych urządzeń  
- `End` Instrukcja bez dodatkowych — słowo kluczowe nie jest obsługiwana.  
+## <a name="smart-device-developer-notes"></a>Uwagi dla deweloperów urządzeń inteligentnych  
+ Instrukcja `End` bez dodatkowego słowa kluczowego nie jest obsługiwana.  
   
 ## <a name="see-also"></a>Zobacz też  
- [End Statement](../../../visual-basic/language-reference/statements/end-statement.md)
+ [Instrukcja End](../../../visual-basic/language-reference/statements/end-statement.md)

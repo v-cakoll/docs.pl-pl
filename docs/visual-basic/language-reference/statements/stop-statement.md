@@ -29,15 +29,15 @@ Stop
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Możesz umieścić instrukcję `Stop` w dowolnym miejscu procedury, aby wstrzymać wykonywanie. Użycie instrukcji `Stop` jest podobne do punktu przerwania w kodzie.  
+ Instrukcję `Stop` można umieścić w dowolnym miejscu procedur, aby wstrzymać ich wykonanie. Użycie instrukcji `Stop` przypomina ustawienie punktu przerwania w kodzie.	
   
- Instrukcja `Stop` wstrzymuje wykonywanie, lecz w przeciwieństwie do `End`, nie zamyka żadnych plików ani nie czyści żadnych zmiennych, chyba że wystąpi w skompilowanym pliku wykonywalnym (.exe).  
+ Instrukcja `Stop` wstrzymuje wykonywanie, ale w przeciwieństwie do `End` nie zamyka żadnych plików ani nie czyści żadnych zmiennych — chyba że występuje w skompilowanym pliku wykonywalnym (.exe).
   
 > [!NOTE]
->  Jeśli instrukcja `Stop` zostanie napotkana w kodzie, który działa poza zintegrowanym środowiskiem programistycznym (IDE), wywoływany jest debuger. Stanie się tak niezależnie od tego, czy kod został skompilowany w trybie debugowania czy wersji wdrożeniowej.  
+>  	Jeśli instrukcja `Stop` występuje w kodzie, który działa poza zintegrowanym środowiskiem programistycznym (IDE), wywoływany jest debuger. Stanie się tak niezależnie od tego, czy kod został skompilowany w trybie debugowania, czy wersji wdrożeniowej.
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto instrukcję `Stop`, aby wstrzymać wykonywanie dla każdej iteracji pętli `For...Next`.  
+ W tym przykładzie użyto instrukcji `Stop`, aby wstrzymać wykonanie każdej iteracji w pętli `For...Next`.
   
  [!code-vb[VbVbalrStatements#56](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/stop-statement_1.vb)]  
   

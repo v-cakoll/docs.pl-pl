@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: e5b31571-6867-406f-b8e7-a3f9aae4723a
 ms.openlocfilehash: 2074f44aedf59f1570e73c898a9bf64e57034923
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
 ms.locfileid: "33603395"
@@ -20,7 +20,7 @@ Przekazuje sterowanie do `Function`, `Sub`, lub procedury biblioteki dołączane
 
 ## <a name="syntax"></a>Składnia
 
-```vb
+```
 [ Call ] procedureName [ (argumentList) ]
 ```
 
@@ -32,14 +32,14 @@ Przekazuje sterowanie do `Function`, `Sub`, lub procedury biblioteki dołączane
 |||
 
 ## <a name="remarks"></a>Uwagi
- Można użyć słowa kluczowego `Call` do wywołania procedury. Dla większości wywołań procedur nie jest wymagane używanie tego słowa kluczowego.
+ Słowa kluczowego `Call` można użyć podczas wywoływania procedury. W większości wywołań procedur użycie tego słowa kluczowego nie jest konieczne.
 
- Zazwyczaj używa się słowa kluczowego `Call`, gdy wyrażenie nie zaczyna się od identyfikatora. Użycie `Call` do innych celów nie jest zalecane.
+ Słowa kluczowego `Call` zazwyczaj używa się, gdy wyrażenie nie zaczyna się od identyfikatora. Użycie słowa `Call` w innym celu nie jest zalecane.
 
- Jeśli procedura zwróci wartość, instrukcja `Call` je odrzuci.
+ Jeśli procedura zwróci wartość, instrukcja `Call` ją odrzuci.
 
 ## <a name="example"></a>Przykład
- Poniższy kod przedstawia dwa przykłady, gdzie słowo kluczowe `Call` jest niezbędne do wywołania procedury. W obu przykładach wyrażenie wywoływane nie zaczyna się od identyfikatora.
+ W przykładowym kodzie poniżej przedstawiono dwie sytuacje, w których słowo kluczowe `Call` jest niezbędne do wywołania procedury. W obu przykładach wywoływane wyrażenie nie zaczyna się od identyfikatora.
 
  [!code-vb[VbVbalrStatements#97](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/call-statement_1.vb)]
 

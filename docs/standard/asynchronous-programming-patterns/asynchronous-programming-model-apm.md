@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573792"
 ---
 # <a name="asynchronous-programming-model-apm"></a>Model programowania asynchronicznego (APM)
 Operacja asynchroniczna, która używa <xref:System.IAsyncResult> wzorca projektowego jest zaimplementowany jako dwie metody o nazwie **Begin *** OperationName* i **zakończenia *** OperationName* który rozpoczęcia i zakończenia asynchroniczną Operacja *OperationName* odpowiednio. Na przykład <xref:System.IO.FileStream> klasa udostępnia <xref:System.IO.FileStream.BeginRead%2A> i <xref:System.IO.FileStream.EndRead%2A> metody do asynchronicznego odczytywania bajtów z pliku. Te metody wdrożenia to wersja asynchroniczna elementu <xref:System.IO.FileStream.Read%2A> metody.  

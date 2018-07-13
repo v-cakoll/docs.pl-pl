@@ -2,23 +2,23 @@
 title: Przykład technologii serializacji typów ogólnych usług sieci Web
 ms.date: 03/30/2017
 ms.assetid: cdc15ea4-f678-4729-8ebe-188ae720bef7
-ms.openlocfilehash: 29cfa8f66f4b465d30c85c6944b8f3d94203f489
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 799206b1bd86e98c87441771174441d07074a325
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585619"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936779"
 ---
 # <a name="web-services-generics-serialization-technology-sample"></a>Przykład technologii serializacji typów ogólnych usług sieci Web
-[Pobieranie próbki](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
+[Pobierz przykładowe](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
   
- W tym przykładzie pokazano, jak i kontrolowanie serializacji typów ogólnych w usługach sieci Web ASP.NET.  
+ W tym przykładzie przedstawiono sposób użycia i sterować serializacji rodzajowych w usługach sieci Web programu ASP.NET.  
   
-### <a name="to-build-the-sample-using-visual-studio"></a>Aby samodzielnie tworzyć przykładowy przy użyciu programu Visual Studio  
+### <a name="to-build-the-sample-using-visual-studio"></a>Aby skompilować przykład za pomocą programu Visual Studio  
   
-1.  Otwórz program Visual Studio i wybierz **nowej witryny sieci Web** z **pliku** menu.  
+1.  Otwórz program Visual Studio i wybierz **nową witrynę sieci Web** z **pliku** menu.  
   
-2.  W **nowej witryny sieci Web** okno dialogowe, wybierz w okienku po lewej stronie odpowiedni język programowania, a następnie w okienku po prawej stronie wybierz **usługi sieci Web ASP.NET**.  
+2.  W **nową witrynę sieci Web** okno dialogowe, wybierz w okienku po lewej stronie język programowania, a następnie w okienku po prawej stronie wybierz **usługi sieci Web ASP.NET**.  
   
 3.  Kliknij przycisk **Przeglądaj** i przejdź do podkatalogu \CS\GenericsService.  
   
@@ -30,42 +30,42 @@ ms.locfileid: "33585619"
 >  Pierwszych pięć kroków na tej liście są opcjonalne. Środowisko uruchomieniowe programu .NET Framework automatycznie generuje razem usługi pierwszy sieci Web, gdy wymagane są usługi.  
   
 > [!NOTE]
->  Poniższe kroki są wymagane do utworzenia próbki.  
+>  Poniższe kroki są wymagane do utworzenia przykładu.  
   
 1.  Otwórz [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] i przejdź do podkatalogu \CS.  
   
-2.  Kliknij prawym przyciskiem myszy ikonę podkatalogu GenericsService, a następnie wybierz **udostępnianie i zabezpieczenia**.  
+2.  Kliknij prawym przyciskiem myszy ikonę podkatalogu GenericsService, a następnie wybierz pozycję **udostępnianie i zabezpieczenia**.  
   
-3.  W **udostępnianie w sieci Web** wybierz opcję **Udostępnij ten Folder**.  
-  
-> [!IMPORTANT]
->  Zanotuj nazwę katalogu wirtualnego, który znajduje się w **aliasy** okienka, ponieważ będą potrzebne do uruchomienia przykładu.  
-  
-### <a name="to-build-the-sample-using-internet-information-services"></a>Aby samodzielnie tworzyć przykładowy przy użyciu Internetowych usług informacyjnych  
-  
-1.  Otwórz **Internetowe usługi informacyjne** zarządzania przystawka i rozwiń **witryn sieci Web**.  
-  
-2.  Kliknięcie lewym przyciskiem myszy **domyślna witryna sieci Web**, wybierz pozycję **nowy**, a następnie wybierz **katalog wirtualny?** do utworzenia **Kreatora tworzenia katalogów wirtualnych**.  
-  
-3.  Kliknij przycisk **dalej**, wprowadź publicznym aliasem katalogu wirtualnego i kliknij przycisk **dalej**.  
-  
-4.  Wprowadź ścieżkę do katalogu, w którym zapisano próbki (zwykle w podkatalogu \CS\GenericsService), a następnie kliknij przycisk **dalej**. Kliknij przycisk **dalej** aby zakończyć pracę kreatora.  
+3.  W **udostępnianie w sieci Web** zaznacz **Udostępnij ten Folder**.  
   
 > [!IMPORTANT]
->  Zanotuj nazwę katalogu wirtualnego, który znajduje się w **Alias** okienka, ponieważ będą potrzebne do uruchomienia przykładu.  
+>  Zwróć uwagę na nazwy katalogu wirtualnego, który znajduje się w **aliasy** okienka, ponieważ będzie potrzebny do uruchomienia przykładu.  
   
-### <a name="to-run-the-sample"></a>Aby uruchomić przykładowy  
+### <a name="to-build-the-sample-using-internet-information-services"></a>Aby skompilować przykład za pomocą Internetowych usług informacyjnych  
+  
+1.  Otwórz **Internetowe usługi informacyjne** zarządzania przystawki i rozwiń **witryn sieci Web**.  
+  
+2.  Kliknięcie lewym przyciskiem myszy **domyślna witryna sieci Web**, wybierz opcję **nowy**, a następnie wybierz pozycję **katalog wirtualny?** utworzyć **Kreatora tworzenia katalogów wirtualnych**.  
+  
+3.  Kliknij przycisk **dalej**, wprowadź alias publicznego dla katalogu wirtualnego, a kliknij **dalej**.  
+  
+4.  Wprowadź ścieżkę do katalogu, w którym zapisywane próbce (zwykle podkatalogu \CS\GenericsService), a następnie kliknij przycisk **dalej**. Kliknij przycisk **dalej** aby zakończyć działanie kreatora.  
+  
+> [!IMPORTANT]
+>  Zwróć uwagę na nazwy katalogu wirtualnego, który znajduje się w **Alias** okienka, ponieważ będzie potrzebny do uruchomienia przykładu.  
+  
+### <a name="to-run-the-sample"></a>Aby uruchomić przykład  
   
 1.  Otwórz okno przeglądarki, a następnie wybierz jego paskiem adresu.  
   
-2.  Typ  **http://localhost/[wirtualnego directory]/Service.asmx**, gdzie [katalog wirtualny] reprezentuje katalog wirtualny utworzony podczas tworzenia przykładowej.  
+2.  Typ `http://localhost/[virtual directory]/Service.asmx`, gdzie `[virtual directory]` reprezentuje katalog wirtualny utworzony podczas tworzenia przykładu.  
   
 ## <a name="remarks"></a>Uwagi  
- Przykład przedstawia domyślnej strony ASP.NET, która zawiera łącza do definicji usługi sieci Web. Można dostosować wyświetlanie oprócz zmodyfikowanie kodu źródłowego dla usługi sieci Web. Aby uzyskać więcej informacji, zobacz [klientami usługi sieci Web XML budynku](https://msdn.microsoft.com/library/c606f3cb-4111-45b4-ae42-9300420fa16c).  
+ Przykład przedstawia domyślna strona programu ASP.NET, który zawiera łącza do definicji usługi sieci Web. Można dostosować wyświetlanie Oprócz modyfikowania kodu źródłowego dla usługi sieci Web. Aby uzyskać więcej informacji, zobacz [klientów usługi sieci Web XML budynku](https://msdn.microsoft.com/library/c606f3cb-4111-45b4-ae42-9300420fa16c).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Collections.Generic>  
  <xref:System.Web.Services>  
  <xref:System.Xml.Serialization>  
  [Serializacja](../../../docs/standard/serialization/index.md)  
- [Utworzone za pomocą programu ASP.NET i klientami usługi XML sieci Web usług XML sieci Web](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)
+ [Usługi sieci Web XML utworzone za pomocą platformy ASP.NET i klientów usługi sieci Web XML](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)

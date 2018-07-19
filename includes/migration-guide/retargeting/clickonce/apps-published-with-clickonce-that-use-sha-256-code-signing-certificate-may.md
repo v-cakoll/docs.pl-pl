@@ -2,9 +2,9 @@
 
 |   |   |
 |---|---|
-|Szczegóły|Plik wykonywalny jest podpisany za pomocą SHA256. Wcześniej był podpisany z SHA1 niezależnie od tego, czy certyfikat podpisywania kodu został SHA-1 lub SHA-256. Dotyczy to:<ul><li>Wszystkie aplikacje skompilowane z programu Visual Studio 2012 lub nowszym.</li><li>Aplikacje opracowane za pomocą programu Visual Studio 2010 lub wcześniej w przypadku systemów z obecne środowisko .NET Framework 4.5.</li></ul>Ponadto jeśli .NET Framework 4.5 lub nowszej, manifestu aplikacji ClickOnce są także podpisane z algorytmu SHA-256 w przypadku certyfikatów algorytmu SHA-256, niezależnie od wersji programu .NET Framework, względem którego został skompilowany.|
-|Sugestia|W pliku wykonywalnego ClickOnce podpisywania dotyczy tylko systemów Windows Server 2003; wymagają zainstalowania KB 938397. Zmiana podpisywanie manifestu z algorytmu SHA-256, nawet wtedy, gdy aplikacja jest przeznaczony dla programu .NET Framework 4.0 i jego wcześniejsze wersje wprowadza zależności środowiska uruchomieniowego .NET Framework 4.5 lub nowszej wersji.|
+|Szczegóły|Plik wykonywalny jest podpisany przy użyciu SHA256. Wcześniej został on podpisany SHA1 niezależnie od tego, czy certyfikat podpisywania kodu został SHA-1 lub SHA-256. Dotyczy to:<ul><li>Wszystkie aplikacje utworzone przy użyciu programu Visual Studio 2012 lub nowszym.</li><li>Aplikacji utworzonych za pomocą programu Visual Studio 2010 lub wcześniej w przypadku systemów za pomocą programu .NET Framework 4.5 obecne.</li></ul>Ponadto jeśli .NET Framework 4.5 lub nowszej jest obecny, ClickOnce manifest są także podpisane przy użyciu algorytmu SHA-256 w przypadku certyfikatów SHA-256, niezależnie od wersji programu .NET Framework, względem którego został skompilowany.|
+|Sugestia|Zmiana z rejestracją ClickOnce pliku wykonywalnego dotyczy tylko systemów Windows Server 2003; wymagają one, że KB 938397 zostanie zainstalowany. Zmiana podpisywania manifestu za pomocą algorytmu SHA-256, nawet wtedy, gdy aplikacja jest przeznaczony dla .NET Framework 4.0 i jego wcześniejsze wersje wprowadza zależność środowiska uruchomieniowego .NET Framework 4.5 lub nowszej wersji.|
 |Zakres|Krawędź|
 |Wersja|4.5|
-|Typ|Przekierowania|
+|Typ|Trwa przekierowywanie|
 

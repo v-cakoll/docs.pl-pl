@@ -1,16 +1,16 @@
 ## <a name="introduction"></a>Wprowadzenie
-Zmiany retargetingu wpływa na aplikacje, które są ponownie kompilowana pod kątem różnych .NET Framework. Obejmują one:
+Przekierowanie zmiany wpływają na aplikacje, które są ponownie kompilowane pod kątem różnych .NET Framework. Obejmują one:
 
-* Zmiany w środowisku projektowania. Na przykład narzędzia kompilacji może emitować ostrzeżenia, jeśli wcześniej nie jak.
+* Zmiany w środowisku czasu projektowania. Na przykład narzędzia do kompilacji może emitować ostrzeżenia, jeśli wcześniej nie dochodziło.
 
-* Zmiany środowiska uruchomieniowego. Wpływają one na tylko te aplikacje, konkretnie ukierunkowane retargeted .NET Framework. Aplikacje, które odnoszą się do poprzednich wersji programu .NET Framework zachowują się tak samo, jak podczas uruchamiania w tych wersjach.
+* Zmiany w środowisku uruchomieniowym. Mają one wpływu na tylko te aplikacje, które są specjalnie przeznaczone dla przebudowanymi pod inne środowisko .NET Framework. Aplikacje przeznaczone dla poprzednich wersji programu .NET Framework zachowują się tak samo, jak podczas uruchamiania w tych wersjach.
 
-W tematach opisano zmiany retargetingu możemy zostały sklasyfikowane poszczególne elementy przez ich oczekiwanej wpływ w następujący sposób:
+W tematach opisano zmiany przekierowanie firma Microsoft zostały sklasyfikowane poszczególne elementy według ich oczekiwanego wpływu w następujący sposób:
 
-**Główne** to istotna zmiana, który ma wpływ na wiele aplikacji lub wymagają znacznej modyfikacji kodu.
+**Główne** to istotną zmianę, która wpływa na dużej liczby aplikacji lub wymagającym istotnych zmian w kodzie.
 
-**Drobne** jest to zmiana, który ma wpływ na małej liczby aplikacji lub wymagają drobne zmiany kodu.
+**Drobne** to różni się to ma wpływ na niewielką liczbę aplikacji lub wymagają drobnych modyfikacji kodu.
 
-**Krawędzi przypadku** jest to zmiana, która wpływa na aplikacje w bardzo konkretnych scenariuszy, które nie są typowe.
+**Krawędzi przypadek** to zmianę, która wpływa na aplikacje w ramach bardzo konkretnych scenariuszy, które nie są wspólne.
 
-**Przezroczysty** to zmiany, która nie ma zauważalnego wpływu na deweloperem aplikacji lub użytkownika. Aplikacja nie powinny wymagać modyfikacji z powodu tej zmiany.
+**Przezroczysty** to zmianę, która nie ma zauważalnego wpływu na dewelopera aplikacji lub użytkownika. Aplikacja nie powinna wymagać modyfikacji ze względu na tę zmianę.

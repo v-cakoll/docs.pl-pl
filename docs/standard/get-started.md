@@ -1,36 +1,36 @@
 ---
 title: Rozpoczynanie pracy z platformą .NET
-description: Wyświetla listę różnych artykułów na temat rozpoczynania pracy z platformą .NET, zarówno z perspektywy języka i platformy.
+description: Wyświetla listę różnych artykuły na temat rozpoczynania pracy z platformą .NET, zarówno z punktu widzenia języka i platformy.
 author: cartermp
 ms.author: mairaw
 ms.date: 05/01/2017
 ms.technology: dotnet-standard
 ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
 ms.openlocfilehash: 341cea349984afd404c2a3b79e864e016fc6a95c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/23/2018
 ms.locfileid: "33571998"
 ---
 # <a name="get-started"></a>Rozpocznij
 
-Istnieje wiele sposobów, aby rozpocząć pracę z platformą .NET.  Ponieważ ogromną platformy .NET, istnieje wiele artykuły w tej dokumentacji, które wskazują, jak możesz rozpocząć pracę z platformą .NET, każdy z różnych perspektyw.
+Istnieje kilka sposobów na rozpoczęcie pracy z platformą .NET.  Ponieważ ogromnych platformy .NET, istnieje wiele artykuły w tej dokumentacji, które pokazują, jak możesz rozpocząć pracę z platformą .NET, każdy z różnych perspektyw.
 
-## <a name="get-started-using-net-languages"></a>Rozpoczynanie pracy przy użyciu języków .NET
+## <a name="get-started-using-net-languages"></a>Rozpoczęcie korzystania z języków .NET
 
-* [C# wprowadzenie](../csharp/getting-started/index.md) artykułów i [C# samouczki](../csharp/tutorials/index.md) zapewnić na kilka sposobów, aby rozpocząć pracę w języku C# — na sposób.
+* [C# wprowadzenie](../csharp/getting-started/index.md) artykuły i [samouczki języka C#](../csharp/tutorials/index.md) zapewniają wiele sposobów na rozpoczęcie pracy w języku C# — skoncentrowane na sposób.
 
-* [F # wprowadzenie](../fsharp/tutorials/getting-started/index.md) samouczki zawierają trzy podstawowe sposoby używania F #: Visual Studio, Visual Studio Code lub narzędzia wiersza polecenia.
+* [F # wprowadzenie](../fsharp/tutorials/getting-started/index.md) samouczki zawierają trzy podstawowe sposoby korzystania z F #: za pomocą programu Visual Studio, Visual Studio Code lub narzędzia wiersza polecenia.
 
-* [Wprowadzenie Visual Basic](../visual-basic/getting-started/index.md) artykuły zawierają przewodniki dotyczące korzystania z języka Visual Basic w programie Visual Studio.
+* [Wprowadzenie do języka Visual Basic](../visual-basic/getting-started/index.md) artykuły zawierają przewodniki dotyczące korzystania z języka Visual Basic w programie Visual Studio.
 
-## <a name="get-started-using-net-core"></a>Rozpoczynanie pracy przy użyciu platformy .NET Core
+## <a name="get-started-using-net-core"></a>Rozpoczęcie korzystania z platformy .NET Core
 
-* [Rozpoczynanie pracy z platformą .NET Core](../core/get-started.md) zawiera omówienie artykuły, które pokazują, jak rozpocząć pracę z platformą .NET Core w różnych systemach operacyjnych i przy użyciu różnych narzędzi.
+* [Wprowadzenie do platformy .NET Core](../core/get-started.md) zawiera omówienie artykułów, które pokazują, jak rozpocząć pracę z platformą .NET Core w różnych systemach operacyjnych i przy użyciu różnych narzędzi.
 
-* [.NET Core samouczki](../core/tutorials/index.md) szczegółowo opisano różne sposoby, możesz rozpocząć pracę z platformą .NET Core przy użyciu systemu operacyjnego oraz narzędzia wyboru.
+* [Samouczki programu .NET Core](../core/tutorials/index.md) szczegółów na wiele sposobów, możesz rozpocząć pracę z platformą .NET Core przy użyciu systemu operacyjnego i narzędzia wyboru.
 
-## <a name="get-started-using-docker-on-net-framework"></a>Rozpoczynanie pracy przy użyciu rozwiązania Docker na .NET Framework
+## <a name="get-started-using-docker-on-net-framework"></a>Rozpoczęcie korzystania z platformy Docker w programie .NET Framework
 
-[Docker na .NET Framework](../framework/docker/index.md) pokazuje, jak za pomocą .NET Framework do kontenerów Docker systemu Windows.
+[Platforma docker w programie .NET Framework](../framework/docker/index.md) pokazano, jak za pomocą środowiska .NET Framework w kontenerach Windows Docker.

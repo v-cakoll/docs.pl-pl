@@ -64,7 +64,7 @@ Operatory logiczne sprawdzić prawdy warunku. Wyrażenie CASE ocenia zestaw wyra
 |Operator|Opis|
 |--------------|-----------------|
 |[&& (Logiczne i)](and-entity-sql.md)|Operatora logicznego AND.|
-|[!, (NEGACJA)](not-entity-sql.md)|NEGACJA.|
+|[\! (NEGACJA)](not-entity-sql.md)|NEGACJA.|
 |[&#124;&#124;(Logiczne lub)](or-entity-sql.md)|Operatora logicznego OR.|
 |[CASE](case-entity-sql.md)|Ocenia zestaw wyrażeń logicznych w celu ustalenia wyniku.|
 |[THEN](then-entity-sql.md)|Wynik [podczas](http://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998) klauzuli gdy zwraca wartość true.|

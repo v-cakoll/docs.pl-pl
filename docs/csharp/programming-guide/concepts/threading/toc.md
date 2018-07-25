@@ -3,6 +3,5 @@
 ## [Parametry i wartości zwracane dla procedur wielowątkowości](parameters-and-return-values-for-multithreaded-procedures.md)
 ## [Przewodnik: wielowątkowość ze składnikiem BackgroundWorker](walkthrough-multithreading-with-the-backgroundworker-component.md)
 ## [Synchronizacja wątku](thread-synchronization.md)
-## [Czasomierze wątków](thread-timers.md)
 ## [Korzystanie z puli wątków](thread-pooling.md)
 ### [Instrukcje: korzystanie z puli wątków](how-to-use-a-thread-pool.md)

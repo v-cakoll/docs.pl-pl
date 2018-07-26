@@ -25,6 +25,9 @@
             - name: Mikrousługi .NET — metodyka DevOps (książka elektroniczna)
               tocHref: /dotnet/standard/containerized-lifecycle-architecture/
               topicHref: /dotnet/standard/containerized-lifecycle-architecture/index
+            - name: Aplikacje bezserwerowe — książka elektroniczna
+              tocHref: /dotnet/standard/serverless-architecture/
+              topicHref: /dotnet/standard/serverless-architecture/index
             - name: Wzorce programowania asynchronicznego
               tocHref: /dotnet/standard/asynchronous-programming-patterns/
               topicHref: /dotnet/standard/asynchronous-programming-patterns/index

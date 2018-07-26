@@ -1,5 +1,5 @@
 ---
-title: Imports — Instrukcja (przestrzeń nazw XML)
+title: Imports, instrukcja - Namespace XML (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ImportsXmlns
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-ms.openlocfilehash: ba7475416d8a4e2eb3c892d457c03eeb695045eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 51b63a11fd2987d82f9a7599b39d15856a0abb1d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604565"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39243831"
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports — Instrukcja (przestrzeń nazw XML)
 Importuje prefiksy przestrzeni nazw XML do użycia w literałach XML i właściwości osi XML.  
@@ -27,30 +27,30 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
   
 ## <a name="parts"></a>Części  
  `xmlNamespacePrefix`  
- Opcjonalna. Ciąg XML, które elementy i atrybuty mogą odwoływać się do `xmlNamespaceName`. Jeśli nie `xmlNamespacePrefix` jest podany, importowanych przestrzeni nazw XML jest domyślna przestrzeń nazw XML. Musi być prawidłowym identyfikatorem XML. Aby uzyskać więcej informacji, zobacz [nazwy z zadeklarowany elementów XML oraz atrybuty](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).  
+ Opcjonalna. Ciąg, który XML elementy i atrybuty mogą odwoływać się do `xmlNamespaceName`. Jeśli nie `xmlNamespacePrefix` jest podany, importowanych przestrzeni nazw XML jest domyślny obszar nazw XML. Musi być prawidłowym identyfikatorem XML. Aby uzyskać więcej informacji, zobacz [nazwy z zadeklarowane elementy i atrybuty XML](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).  
   
  `xmlNamespaceName`  
- Wymagana. Ciąg identyfikujący importowanych przestrzeni nazw XML.  
+ Wymagane. Ciąg identyfikujący importowanych przestrzeni nazw XML.  
   
 ## <a name="remarks"></a>Uwagi  
- Można użyć `Imports` instrukcji, aby zdefiniować globalnej przestrzeni nazw XML, korzystających z literały XML i właściwości osi XML lub przekazywane jako parametry do `GetXmlNamespace` operatora. (Aby uzyskać informacje o korzystaniu z `Imports` instrukcji, aby zaimportować alias, który może służyć, których nazwy typów są używane w kodzie, zobacz [Importy — instrukcja (.NET Namespace i Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).) Składnia deklaracji przestrzeni nazw XML przy użyciu `Imports` instrukcja jest taki sam jak składni używanej w kodzie XML. W związku z tym można skopiować deklaracja przestrzeni nazw z pliku XML i użyć go w `Imports` instrukcji.  
+ Możesz użyć `Imports` instrukcji, aby zdefiniować globalnej przestrzeni nazw XML, korzystających z literały XML i właściwości osi XML lub przekazywane jako parametry do `GetXmlNamespace` operatora. (Aby uzyskać informacje o używaniu `Imports` instrukcję, aby zaimportować alias, który może służyć użycia nazwy typów w kodzie, zobacz [Importy — instrukcja (.NET Namespace i Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).) Składnia deklaracji przestrzeni nazw XML przy użyciu `Imports` instrukcja jest taka sama jak składnią używaną w formacie XML. W związku z tym, możesz skopiować deklarację przestrzeni nazw z pliku XML i korzystać z niej w `Imports` instrukcji.  
   
- Prefiksy przestrzeni nazw XML są przydatne, gdy chcesz utworzyć wielokrotnie elementów XML, które pochodzą z tego samego obszaru nazw. Prefiks przestrzeni nazw XML zadeklarowana z `Imports` instrukcji jest globalna w tym sensie, że jest dostępna dla całego kodu w pliku. Można go użyć podczas tworzenia literały — element XML i jeśli dostęp do właściwości osi XML. Aby uzyskać więcej informacji, zobacz [literał elementu XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) i [właściwości osi XML](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md).  
+ Prefiksy przestrzeni nazw XML są przydatne, jeśli chcesz regularnie tworzyć elementy XML, które pochodzą z tej samej przestrzeni nazw. Prefiks przestrzeni nazw XML zadeklarowane za pomocą `Imports` instrukcja jest globalne w tym sensie, że jest ona dostępna dla całego kodu w pliku. Można użyć go po utworzeniu literały — element XML i jeśli uzyskujesz dostęp do właściwości osi XML. Aby uzyskać więcej informacji, zobacz [literał elementu XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) i [właściwości osi XML](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md).  
   
- Jeśli zdefiniujesz globalnej przestrzeni nazw XML bez prefiksu przestrzeni nazw (na przykład `Imports <xmlns="http://SomeNameSpace>"`), tej przestrzeni nazw jest traktowane jako domyślna przestrzeń nazw XML. Domyślny obszar nazw XML jest używany dla literałów XML elementu lub właściwości osi atrybutu XML, które nie określają jawnie przestrzeni nazw. Domyślnej przestrzeni nazw jest również używana, gdy określonego obszaru nazw jest pusta przestrzeń nazw (czyli `xmlns=""`). Domyślna przestrzeń nazw XML nie ma zastosowania do atrybutów XML w literałach XML lub właściwości osi atrybutu XML, które nie mają przestrzeni nazw.  
+ Jeśli zdefiniujesz globalnej przestrzeni nazw XML bez prefiksu przestrzeni nazw (na przykład `Imports <xmlns="http://SomeNameSpace>"`), przestrzeń nazw jest traktowane jako domyślny obszar nazw XML. Domyślny obszar nazw XML jest używany dla literałów — element XML i właściwości osi atrybutu XML, które nie są określone jawnie przestrzeni nazw. Domyślny obszar nazw jest również używana, gdy określonego obszaru nazw jest pusta przestrzeń nazw (czyli `xmlns=""`). Domyślny obszar nazw XML nie ma zastosowania do atrybutów XML w literałach XML lub do właściwości osi atrybutu XML, które nie mają przestrzeni nazw.  
   
- Przestrzenie nazw XML zdefiniowanego w pliku XML literału, które są nazywane *lokalnej przestrzeni nazw XML*, pierwszeństwo przestrzeni nazw XML, które są zdefiniowane przez `Imports` instrukcji jako globalnego. Przestrzenie nazw XML, które są definiowane przez `Imports` instrukcji mają pierwszeństwo przed zaimportowane dla projektu Visual Basic przestrzeni nazw XML. Jeśli literał XML definiuje obszar nazw XML, tym lokalną przestrzeń nazw nie ma zastosowania do wyrażenia osadzone.  
+ Obszary nazw XML, które są zdefiniowane w pliku XML literału, są one nazywane *lokalne obszary nazw XML*, pierwszeństwo przestrzeni nazw XML, które są zdefiniowane przez `Imports` instrukcję jako globalne. Przestrzenie nazw XML, które są definiowane przez `Imports` instrukcji mają pierwszeństwo przed przestrzeni nazw XML zaimportowane dla projektów języka Visual Basic. Jeśli literał XML definiuje obszar nazw XML, że lokalną przestrzeń nazw nie ma zastosowania do wyrażenia osadzone.  
   
- Globalne przestrzenie nazw XML zgodne z definicji i określania zakresu regułami jako przestrzenie nazw .NET Framework. W związku z tym można uwzględnić `Imports` instrukcji, aby zdefiniować globalnej przestrzeni nazw XML dowolnym można zaimportować obszaru nazw .NET Framework. Obejmuje to zarówno pliki kodu i importowane przestrzenie nazw poziom projektu. Informacje o poziomie projektu importowanych przestrzeni nazw, zobacz [strona odwołań, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic).  
+ Globalnej przestrzeni nazw XML, wykonaj te same reguły zakresu i definicji jako przestrzeni nazw .NET Framework. W rezultacie mogą obejmować `Imports` instrukcji, aby zdefiniować globalnej przestrzeni nazw XML dowolnym miejscu importujesz przestrzeń nazw .NET Framework. Obejmuje to zarówno pliki kodu, jak i na poziomie projektu importowanych przestrzeni nazw. Aby uzyskać informacji na temat importowanych przestrzeni nazw na poziomie projektu, zobacz [strona odwołań, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic).  
   
- Każdy plik źródłowy może zawierać dowolną liczbę `Imports` instrukcje. Te muszą być zgodne deklaracje opcji, takich jak `Option Strict` instrukcji i musi poprzedzać deklaracji elementu programowania, takich jak `Module` lub `Class` instrukcje.  
+ Każdy plik źródłowy może zawierać dowolną liczbę `Imports` instrukcji. Te należy wykonać, opcja deklaracji, takich jak `Option Strict` instrukcji, dlatego musi poprzedzać deklaracji elementu programowania, takich jak `Module` lub `Class` instrukcji.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład importuje domyślnej przestrzeni nazw XML i oznaczone symbolem prefiks przestrzeni nazw XML `ns`. Następnie tworzy literałów XML, które używają obu tych przestrzeni nazw.  
+ Następujący przykład importuje, domyślnej przestrzeni nazw XML i zidentyfikowanego za prefiks przestrzeni nazw XML `ns`. Następnie tworzy ona literałach XML, które używają obu tych przestrzeni nazw.  
   
  [!code-vb[VbXMLSamples#45](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_1.vb)]  
   
- Ten kod zawiera następujący tekst:  
+ Ten kod wyświetla następujący tekst:  
   
 ```xml  
 <ns:outer xmlns="http://DefaultNamespace"   
@@ -62,11 +62,11 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład importuje prefiks przestrzeni nazw XML `ns`. Tworzy literał XML używa prefiksu przestrzeni nazw, który wyświetla formularz końcowego elementu.  
+ Następujący przykład importuje prefiks przestrzeni nazw XML `ns`. Następnie tworzy literał XML używa prefiksu przestrzeni nazw, która wyświetla formularz końcowego elementu.  
   
  [!code-vb[VbXMLSamples#22](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_2.vb)]  
   
- Ten kod zawiera następujący tekst:  
+ Ten kod wyświetla następujący tekst:  
   
 ```xml  
 <ns:outer xmlns:ns="http://SomeNamespace">  
@@ -77,14 +77,14 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 </ns:outer>  
 ```  
   
- Zwróć uwagę, kompilator przekonwertować prefiks przestrzeni nazw XML z globalnego prefiksu do definicji lokalnego prefiks.  
+ Zwróć uwagę, kompilator przekonwertować prefiks przestrzeni nazw XML z globalnego prefiksu, do definicji lokalnego prefiks.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład importuje prefiks przestrzeni nazw XML `ns`. Następnie używa prefiks przestrzeni nazw do utworzenia literału XML i dostępu do pierwszy węzeł podrzędny o nazwie kwalifikowanej `ns:name`.  
+ Następujący przykład importuje prefiks przestrzeni nazw XML `ns`. Następnie używa prefiksu przestrzeni nazw tworzenie literałów XML i dostępem pierwszy węzeł podrzędny o nazwie kwalifikowanej `ns:name`.  
   
  [!code-vb[VbXMLSamples#19](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_3.vb)]  
   
- Ten kod zawiera następujący tekst:  
+ Ten kod wyświetla następujący tekst:  
   
  `Patrick Hines`  
   

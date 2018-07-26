@@ -8,15 +8,15 @@ helpviewer_keywords:
 - ulong keyword [C#]
 ms.assetid: f2ece624-837a-40cf-92c5-343e7f33397c
 ms.openlocfilehash: 96975bcfc270694a59a19e7c40183083dbc5bd98
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027996"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960224"
 ---
 # <a name="ulong-c-reference"></a>ulong (odwołanie w C#)
 
-`ulong` — Słowo kluczowe Określa typ całkowity, który przechowuje wartości w zależności od rozmiaru i zakres pokazano w poniższej tabeli.  
+`ulong` — Słowo kluczowe oznacza integralny typ, który przechowuje wartości w zależności od rozmiaru i zakres pokazano w poniższej tabeli.  
   
 |Typ|Zakres|Rozmiar|Typ architektury .NET|  
 |----------|-----------|----------|-------------------------|  
@@ -24,44 +24,44 @@ ms.locfileid: "37027996"
   
 ## <a name="literals"></a>Literały  
 
-Można zadeklarować i zainicjuj `ulong` zmiennej przypisując literał dziesiętny literałem szesnastkową lub (począwszy od 7.0 C#) literału do niego dane binarne.  Jeśli liczba całkowita literału jest poza zakresem `ulong` (to znaczy, jeśli jest mniejszy niż <xref:System.UInt64.MinValue?displayProperty=nameWithType> lub większa niż <xref:System.UInt64.MaxValue?displayProperty=nameWithType>), występuje błąd kompilacji. 
+Można zadeklarować i zainicjować `ulong` zmiennej przypisując literał dziesiętny szesnastkowy literał lub (rozpoczynający się znakami języka C# 7.0) literału do niego dane binarne.  Jeśli literał liczby całkowitej jest poza zakresem `ulong` (to znaczy, jeśli jest mniejszy niż <xref:System.UInt64.MinValue?displayProperty=nameWithType> lub większa niż <xref:System.UInt64.MaxValue?displayProperty=nameWithType>), wystąpi błąd kompilacji. 
 
-W poniższym przykładzie liczb całkowitych równa 7,934,076,125, które są reprezentowane jako dziesiętne szesnastkowych, i literały binarne są przypisane do `ulong` wartości.  
+W poniższym przykładzie liczb całkowitych równa 7,934,076,125, które są reprezentowane jako dziesiętne, szesnastkową, i literały binarne są przypisane do `ulong` wartości.  
   
 [!code-csharp[ulong](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#ULong)]  
 
 > [!NOTE] 
-> Użyj prefiksu `0x` lub `0X` do oznaczania szesnastkowe literału i prefiks `0b` lub `0B` do oznaczania literał binarny. Literałów dziesiętnych mają nie ma prefiksu. 
+> Użyj prefiksu `0x` lub `0X` do oznaczania szesnastkowy literał i prefiksem `0b` lub `0B` do oznaczania literału binarnego. Literały dziesiętna mieć żadnego prefiksu. 
 
-Uruchamianie z C# w wersji 7.0, dodano kilka funkcji w celu zwiększenia czytelności. 
+Uruchamianie przy użyciu języka C# 7.0, dodano kilka funkcji zwiększyć czytelność. 
  - C# 7.0 umożliwia użycie znaku podkreślenia `_`, jako separator cyfr.
- - C# 7.2 umożliwia `_` ma być używany jako separator cyfr dla literału binary lub szesnastkowe po prefiksie. Literał dziesiętny nie mogą mieć wiodące podkreślenia.
+ - Umożliwia w języku C# 7.2 `_` ma być używany jako separator cyfr dla literału binarnego lub szesnastkowego po prefiksie. Literał dziesiętny nie mogą mieć wiodącego podkreślenia.
 
 Poniżej przedstawiono kilka przykładów.
 
 [!code-csharp[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#LongS)]  
  
- Literały całkowite mogą również obejmować sufiks, który wskazuje typ. Sufiks `UL` lub `ul` jednoznacznie identyfikuje literałem jako `ulong` wartość. `L` Określa sufiks `ulong` jeśli przekracza wartość literału <xref:System.Int64.MaxValue?displayProperty=nameWithType>. I `U` lub `u` Określa sufiks `ulong` jeśli przekracza wartość literału <xref:System.UInt32.MaxValue?displayProperty=nameWithType>. W poniższym przykładzie użyto `ul` sufiks określający długich liczb całkowitych:
+ Literały całkowite mogą również zawierać sufiks, który oznacza typ. Sufiks `UL` lub `ul` jednoznacznie identyfikuje literał liczbowy jako `ulong` wartość. `L` Oznacza sufiks `ulong` jeśli przekracza wartość literału <xref:System.Int64.MaxValue?displayProperty=nameWithType>. I `U` lub `u` oznacza sufiks `ulong` jeśli przekracza wartość literału <xref:System.UInt32.MaxValue?displayProperty=nameWithType>. W poniższym przykładzie użyto `ul` sufiks do oznaczania długich liczb całkowitych:
  
 [!code-csharp[ulsuffix](../../../../samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#2)]
 
-Jeśli literał całkowity nie sufiks, jego typ jest pierwszy następujących typów, w których może być reprezentowany wartość: 
+Jeśli literał liczby całkowitej nie sufiksu, jego typ jest pierwszym następujące typy, w których jej wartość może być reprezentowana: 
 
 1. [int](int.md)
 2. [uint](../../../csharp/language-reference/keywords/uint.md)
 3. [long](long.md)
 4. `ulong`
 
-## <a name="compiler-overload-resolution"></a>Rozpoznanie przeciążenia kompilatora
+## <a name="compiler-overload-resolution"></a>Przeciążeń z późnym
   
- Typowe Użyj sufiksu jest wywołanie metody przeciążone. Należy wziąć pod uwagę, na przykład następujące przeciążone metody, które używają `ulong` i [int](../../../csharp/language-reference/keywords/int.md) parametry:  
+ Typowym zastosowaniem sufiks jest wywołanie metody przeciążone. Należy wziąć pod uwagę, na przykład, następujące przeciążone metody, które używają `ulong` i [int](../../../csharp/language-reference/keywords/int.md) parametry:  
   
 ```csharp  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(ulong l) {}  
 ```  
   
- Przy użyciu sufiksu z `ulong` parametru gwarantuje, że poprawne typu jest nazywana, na przykład:  
+ Przy użyciu sufiksu z `ulong` parametru gwarantuje, że poprawnego typu ma nazwę, na przykład:  
   
 ```csharp  
 SampleMethod(5);    // Calling the method with the int parameter  
@@ -69,17 +69,17 @@ SampleMethod(5UL);  // Calling the method with the ulong parameter
 ```  
   
 ## <a name="conversions"></a>Konwersje  
- Jest wstępnie zdefiniowanych niejawna konwersja z `ulong` do [float](../../../csharp/language-reference/keywords/float.md), [podwójne](../../../csharp/language-reference/keywords/double.md), lub [dziesiętną](../../../csharp/language-reference/keywords/decimal.md).  
+ Jest wstępnie zdefiniowanych niejawna konwersja z `ulong` do [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md), lub [dziesiętna](../../../csharp/language-reference/keywords/decimal.md).  
   
- Nie jest niejawna konwersja z `ulong` do dowolnego typu całkowitego. Na przykład następująca instrukcja spowoduje błąd kompilacji bez jawnego rzutowania:  
+ Istnieje niejawna konwersja z `ulong` do dowolnego typu całkowitoliczbowego. Na przykład następująca instrukcja generuje błąd kompilacji bez jawnego rzutowania:  
   
 ```csharp  
 long long1 = 8UL;   // Error: no implicit conversion from ulong  
 ```  
   
- Jest wstępnie zdefiniowanych niejawna konwersja z [bajtów](../../../csharp/language-reference/keywords/byte.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [uint](../../../csharp/language-reference/keywords/uint.md), lub [char](../../../csharp/language-reference/keywords/char.md) do `ulong`.  
+ Brak wstępnie zdefiniowanych niejawna konwersja z [bajtów](../../../csharp/language-reference/keywords/byte.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [uint](../../../csharp/language-reference/keywords/uint.md), lub [char](../../../csharp/language-reference/keywords/char.md) do `ulong`.  
   
- Ponadto nie jest niejawna konwersja z typów zmiennoprzecinkowych aby `ulong`. Na przykład następująca instrukcja generuje błąd kompilatora, chyba że używana jest jawnego rzutowania:  
+ Ponadto istnieje niejawna konwersja z typów zmiennoprzecinkowych `ulong`. Na przykład następująca instrukcja generuje błąd kompilatora, chyba że używana jest jawnego rzutowania:  
   
 ```csharp  
 // Error -- no implicit conversion from double:  
@@ -88,9 +88,9 @@ ulong x = 3.0;
 ulong y = (ulong)3.0;    
 ```  
   
- Informacje w wyrażeniach arytmetycznych mieszane typy zmiennoprzecinkowe i całkowite typy, zobacz [float](../../../csharp/language-reference/keywords/float.md) i [podwójne](../../../csharp/language-reference/keywords/double.md).  
+ Instrukcje dotyczące wyrażeniach arytmetycznych mieszane typy zmiennoprzecinkowe i całkowite typy, zobacz [float](../../../csharp/language-reference/keywords/float.md) i [double](../../../csharp/language-reference/keywords/double.md).  
   
- Aby uzyskać więcej informacji na niejawna konwersja liczbowa reguły, zobacz [niejawne numeryczne Tabela konwersji](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
+ Aby uzyskać więcej informacji na temat reguł niejawnych konwersji liczbowych, zobacz [Implicit Numeric Conversions Table](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

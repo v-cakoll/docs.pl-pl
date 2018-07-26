@@ -1,17 +1,17 @@
 ---
 title: Ograniczenia (F#)
-description: 'Więcej informacji na temat języka F # ograniczenia dotyczące parametrów typu ogólnego, aby określić wymagania dotyczące argument typu w typie ogólnym lub funkcji.'
+description: 'Więcej informacji na temat ograniczeń F #, które są stosowane do parametrów typu ogólnego, aby określić wymagania dotyczące argument typu w typie ogólnym lub funkcji.'
 ms.date: 05/16/2016
-ms.openlocfilehash: f0722cafe27a4e2c38dfbf091973edb136cf5228
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7af064159d2722256f0db8286a99fc02435a99cd
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562313"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936868"
 ---
 # <a name="constraints"></a>Ograniczenia
 
-W tym temacie opisano ograniczenia, które można zastosować do ogólnego typu w celu określenia wymagań dotyczących argument typu w typie ogólnym lub funkcji.
+W tym temacie opisano ograniczenia stosowane do ogólnych parametrów, aby określić wymagania dotyczące argument typu w typie ogólnym lub funkcji typu.
 
 
 ## <a name="syntax"></a>Składnia
@@ -21,28 +21,28 @@ type-parameter-list when constraint1 [ and constraint2]
 ```
 
 ## <a name="remarks"></a>Uwagi
-Istnieje kilka różnych ograniczeń, które można zastosować do ograniczania typów, których można użyć w typie ogólnym. Poniższa tabela zawiera listę oraz opis tych warunków ograniczających.
+Istnieje kilka różnych ograniczeń, które można zastosować, aby ograniczyć typy, które mogą być używane w typie podstawowym. Poniższej tabeli wymieniono i opisano te ograniczenia.
 
 |Ograniczenia|Składnia|Opis|
 |----------|------|-----------|
-|Ograniczenie typu|*Parametr typu* :&gt; *typu*|Podany typ musi być równa lub pochodnych z typem określonym lub, jeśli typ jest interfejsem, podany typ musi implementować interfejs.|
-|Ograniczenie wartości null|*Parametr typu* : wartość null|Podany typ musi obsługiwać literał wartości null. Dotyczy to również wszystkich typów obiektów platformy .NET, ale nie F # listy, spójnej kolekcji, funkcji, klasy, rekordu lub Unii.|
-|Ograniczenie jawnego członka|[()]*parametr typu* [lub lub *parametr typu*)]: (* sygnaturę elementu członkowskiego *)|Co najmniej jedna z podanych argumentów typu musi mieć element członkowski, który ma określony podpis; nie jest przeznaczone do użycia. Elementy członkowskie muszą być albo jawnie zdefiniowane na typ lub część rozszerzenia typu niejawnego jako prawidłowe elementy docelowe dla jawnego ograniczenia elementu członkowskiego.|
-|Ograniczenie konstruktora|*Parametr typu* : (new: jednostka -&gt; ")|Podany typ musi mieć konstruktora domyślnego.|
-|Ograniczenie typu wartości|: struktury|Podany typ musi być typem wartości .NET.|
+|Ograniczenia typu|*Parametr typu* :&gt; *typu*|Podany typ musi być większa lub równa pochodnej z typu określonego lub, jeśli typ jest interfejsem, podany typ musi implementować interfejs.|
+|Ograniczenie o wartości null|*Parametr typu* : wartość null|Podany typ musi obsługiwać literałem o wartości null. Obejmuje to wszystkie typy obiektów platformy .NET, ale nie F # listy, spójnej kolekcji, funkcji, klasy, rekord lub typy Unii.|
+|Ograniczenie jawnego członka|[()]*parametr typu* [lub... lub *parametr typu*)]: (*sygnatura elementu członkowskiego*)|Co najmniej jeden z podanych argumentów typu musi mieć element członkowski, który ma określony podpis; nie są przeznaczone w typowych zastosowaniach. Elementy członkowskie muszą być albo jawnie zdefiniowane na typ lub część rozszerzenia niejawnego typu jako prawidłowe obiekty docelowe dla jawnego ograniczenia elementu członkowskiego.|
+|Ograniczenie konstruktora|*Parametr typu* : (nowe: jednostka -&gt; ")|Podany typ musi mieć domyślnego konstruktora.|
+|Ograniczenie typu wartości|: — struktura|Podany typ musi być typem wartości platformy .NET.|
 |Ograniczenie typu odwołania|: nie — struktura|Podany typ musi być typem referencyjnym .NET.|
-|Ograniczenie typu wyliczenia|: wyliczenia&lt;*typu podstawowego*&gt;|Podany typ musi być Typ wyliczany określonego typu źródłowego; nie jest przeznaczone do użycia.|
-|Ograniczenie delegata|: delegować&lt;*krotki parametru typu*, *zwracanego typu*&gt;|Podany typ musi być typem delegata, który ma określone argumenty i zwracać wartość; nie jest przeznaczone do użycia.|
-|Ograniczenia porównania|: porównania|Podany typ musi obsługiwać porównania.|
+|Ograniczenie typu wyliczenia|: wyliczenia&lt;*typu bazowego*&gt;|Podany typ musi być typu wyliczeniowego, który ma określony typ podstawowy; nie są przeznaczone w typowych zastosowaniach.|
+|Ograniczenie delegata|: delegować&lt;*krotki parametr typu*, *zwracanego typu*&gt;|Podany typ musi być typem delegowanym, który ma określone argumenty i zwraca wartości; nie są przeznaczone w typowych zastosowaniach.|
+|Ograniczenia porównania|: porównanie|Podany typ musi obsługiwać porównania.|
 |Ograniczenie równości|: równości|Podany typ musi obsługiwać równości.|
-|Ograniczenie niezarządzane|: niezarządzane|Podany typ musi być typem niezarządzanym. Typy niezarządzanwe są albo niektórych typów pierwotnych (`sbyte`, `byte`, `char`, `nativeint`, `unativeint`, `float32`, `float`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint64`, lub `decimal`), Typy wyliczeniowe `nativeptr&lt;_&gt;`, lub struktury nieogólnego, których pola są wszystkie typy niezarządzane.|
-Należy dodać ograniczenie po kodzie można użyć funkcji, która jest dostępna na typ ograniczenia, ale nie w typach ogólnie. Na przykład jeśli ograniczenia typu należy użyć do określenia typu klasy, używając jednej z metod klas w ogólnym funkcja lub typ.
+|Ograniczenie Unmanaged|: niezarządzanych|Podany typ musi być typem niezarządzanym. Typy niezarządzanwe są albo niektóre typy pierwotne (`sbyte`, `byte`, `char`, `nativeint`, `unativeint`, `float32`, `float`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint64`, lub `decimal`), Typy wyliczeniowe `nativeptr&lt;_&gt;`, lub struktury nieogólnego, których pola są wszystkie typy niezarządzanych.|
+Masz Dodaj ograniczenie, jeśli kod ma można użyć funkcji, która jest ogólnie dostępne na typ ograniczenia, ale nie w typach. Na przykład ograniczenia typu umożliwia określenie typu klasy, można użyć jednej z metod tej klasy, typ lub funkcja ogólna.
 
-Określenie ograniczenia jest czasami wymagane podczas zapisywania parametrów typu jawnie, ponieważ bez ograniczenia, kompilator nie ma możliwości sprawdzenia, czy funkcje, które są używane będzie dostępny dla dowolnego typu, który może być dostarczony w czasie wykonywania dla typu parametr.
+Określanie ograniczeń czasami jest wymagana podczas zapisywania parametrów typu w sposób jawny, ponieważ bez ograniczeń, kompilator nie ma możliwości weryfikacji, że funkcje, które są używane będzie dostępna na dowolny typ, który może być dostarczane w czasie wykonywania dla typu parametr.
 
-Ograniczenia najczęściej używanych w kodzie języka F # są ograniczenia typu, których określić klasy podstawowej lub do interfejsów. Innych ograniczeń albo są używane przez biblioteki języka F # do wykonania niektórych funkcji, takich jak ograniczenia jawnego członka, które jest używane do implementowania przeładowanie operatorów arytmetycznych operatora lub znajdują się głównie, ponieważ język F # obsługuje pełną zestaw warunków ograniczających obsługiwaną przez środowisko uruchomieniowe języka wspólnego.
+Najbardziej typowe ograniczenia, używanej w kodzie języka F # to ograniczenia typu, określających klas podstawowych lub interfejsów. Innych ograniczeń albo są używane przez biblioteki języka F # do wykonania niektórych funkcji, takich jak ograniczenie jawny element członkowski, który jest używany do implementowania operatora przeciążania operatorów arytmetycznych lub znajdują się przede wszystkim, ponieważ język F # obsługuje pełne zestaw ograniczeń, który jest obsługiwany przez środowisko uruchomieniowe języka wspólnego.
 
-W trakcie wnioskowania typu niektóre ograniczenia są automatycznie wykryta przez kompilator. Na przykład, jeśli używasz `+` operatora w funkcji, kompilator wnioskuje ograniczenie jawnego członka typy zmiennych, które są używane w wyrażeniu.
+Podczas procesu wnioskowania typu niektóre ograniczenia są automatycznie wykryta przez kompilator. Na przykład, jeśli używasz `+` operatora w funkcji, kompilator wnioskuje ograniczenie jawnego członka typy zmiennych, które są używane w wyrażeniu.
 
 Poniższy kod ilustruje deklaracje pewne ograniczenia.
 

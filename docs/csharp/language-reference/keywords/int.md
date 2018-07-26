@@ -8,57 +8,57 @@ helpviewer_keywords:
 - int keyword [C#]
 ms.assetid: 212447b4-5d2a-41aa-88ab-84fe710bdb52
 ms.openlocfilehash: 41ee5ecdae815eaddf8652a4873c060fb8f92bc3
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028269"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199433"
 ---
 # <a name="int-c-reference"></a>int (odwołanie w C#)
 
-`int` Określa typ całkowity, który przechowuje wartości w zależności od rozmiaru i zakres pokazano w poniższej tabeli.  
+`int` Wskazuje, że integralny typ, który przechowuje wartości w zależności od rozmiaru i zakres pokazano w poniższej tabeli.  
   
 |Typ|Zakres|Rozmiar|Typ architektury .NET|  
 |----------|-----------|----------|-------------------------|  
-|`int`|-2 147 483 2 147 483 648 do 647|32-bitowa liczba całkowita|<xref:System.Int32?displayProperty=nameWithType>|  
+|`int`|-2 147 483 2 147 483 648 do 647|32-bitowa liczba całkowita ze znakiem|<xref:System.Int32?displayProperty=nameWithType>|  
   
 ## <a name="literals"></a>Literały  
  
-Można zadeklarować i zainicjuj `int` zmiennej przypisując literał dziesiętny literałem szesnastkową lub (począwszy od 7.0 C#) literału do niego dane binarne.  Jeśli liczba całkowita literału jest poza zakresem `int` (to znaczy, jeśli jest mniejszy niż <xref:System.Int32.MinValue?displayProperty=nameWithType> lub większa niż <xref:System.Int32.MaxValue?displayProperty=nameWithType>), występuje błąd kompilacji. 
+Można zadeklarować i zainicjować `int` zmiennej przypisując literał dziesiętny szesnastkowy literał lub (rozpoczynający się znakami języka C# 7.0) literału do niego dane binarne.  Jeśli literał liczby całkowitej jest poza zakresem `int` (to znaczy, jeśli jest mniejszy niż <xref:System.Int32.MinValue?displayProperty=nameWithType> lub większa niż <xref:System.Int32.MaxValue?displayProperty=nameWithType>), wystąpi błąd kompilacji. 
 
-W poniższym przykładzie liczb całkowitych równa 90,946, które są reprezentowane jako dziesiętne szesnastkowych, i literały binarne są przypisane do `int` wartości.  
+W poniższym przykładzie liczb całkowitych równa 90,946, które są reprezentowane jako dziesiętne, szesnastkową, i literały binarne są przypisane do `int` wartości.  
   
 [!code-csharp[int](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#Int)]  
 
 > [!NOTE] 
-> Użyj prefiksu `0x` lub `0X` do oznaczania szesnastkowe literału i prefiks `0b` lub `0B` do oznaczania literał binarny. Literałów dziesiętnych mają nie ma prefiksu. 
+> Użyj prefiksu `0x` lub `0X` do oznaczania szesnastkowy literał i prefiksem `0b` lub `0B` do oznaczania literału binarnego. Literały dziesiętna mieć żadnego prefiksu. 
 
-Uruchamianie z C# w wersji 7.0, dodano kilka funkcji w celu zwiększenia czytelności. 
+Uruchamianie przy użyciu języka C# 7.0, dodano kilka funkcji zwiększyć czytelność. 
  - C# 7.0 umożliwia użycie znaku podkreślenia `_`, jako separator cyfr.
- - C# 7.2 umożliwia `_` ma być używany jako separator cyfr dla literału binary lub szesnastkowe po prefiksie. Literał dziesiętny nie mogą mieć wiodące podkreślenia.
+ - Umożliwia w języku C# 7.2 `_` ma być używany jako separator cyfr dla literału binarnego lub szesnastkowego po prefiksie. Literał dziesiętny nie mogą mieć wiodącego podkreślenia.
 
 Poniżej przedstawiono kilka przykładów.
 
 [!code-csharp[int](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#IntS)]  
  
- Literały całkowite mogą również obejmować sufiks, który wskazuje typ, nie ma żadnych sufiks, który wskazuje, ale `int` typu. Jeśli literał całkowity nie sufiks, jego typ jest pierwszy następujących typów, w których może być reprezentowany wartość: 
+ Literały całkowite mogą również zawierać sufiks, który oznacza typ., mimo że istnieje nie przyrostka, który oznacza `int` typu. Jeśli literał liczby całkowitej nie sufiksu, jego typ jest pierwszym następujące typy, w których jej wartość może być reprezentowana: 
 
 1. `int`
 2. [uint](../../../csharp/language-reference/keywords/uint.md)
 3. [long](../../../csharp/language-reference/keywords/long.md)
 4. [ulong](../../../csharp/language-reference/keywords/ulong.md) 
  
-W tych przykładach 90946 literału jest typu `int`.
+W tych przykładach 90946 literał jest typu `int`.
   
 ## <a name="conversions"></a>Konwersje  
- Jest wstępnie zdefiniowanych niejawna konwersja z `int` do [długi](../../../csharp/language-reference/keywords/long.md), [float](../../../csharp/language-reference/keywords/float.md), [podwójne](../../../csharp/language-reference/keywords/double.md), lub [dziesiętną](../../../csharp/language-reference/keywords/decimal.md). Na przykład:  
+ Jest wstępnie zdefiniowanych niejawna konwersja z `int` do [długie](../../../csharp/language-reference/keywords/long.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md), lub [dziesiętna](../../../csharp/language-reference/keywords/decimal.md). Na przykład:  
   
 ```csharp  
 // '123' is an int, so an implicit conversion takes place here:  
 float f = 123;  
 ```  
   
- Jest wstępnie zdefiniowanych niejawna konwersja z [sbyte](../../../csharp/language-reference/keywords/sbyte.md), [bajtów](../../../csharp/language-reference/keywords/byte.md), [krótki](../../../csharp/language-reference/keywords/short.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), lub [char](../../../csharp/language-reference/keywords/char.md) Aby `int`. Na przykład następująca instrukcja przypisania spowoduje błąd kompilacji bez rzutowanie:  
+ Jest wstępnie zdefiniowanych niejawna konwersja z [sbyte](../../../csharp/language-reference/keywords/sbyte.md), [bajtów](../../../csharp/language-reference/keywords/byte.md), [krótki](../../../csharp/language-reference/keywords/short.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), lub [char](../../../csharp/language-reference/keywords/char.md) Aby `int`. Na przykład poniższa instrukcja przypisania spowoduje błąd kompilacji bez rzutowania:  
   
 ```csharp  
 long aLong = 22;  
@@ -66,14 +66,14 @@ int i1 = aLong;       // Error: no implicit conversion from long.
 int i2 = (int)aLong;  // OK: explicit conversion.  
 ```  
   
- Spójrz również, że nie jest niejawna konwersja z typów zmiennoprzecinkowych aby `int`. Na przykład następująca instrukcja generuje błąd kompilatora, chyba że używana jest jawnego rzutowania:  
+ Zwróć uwagę, że nie istnieje niejawna konwersja z typów zmiennoprzecinkowych `int`. Na przykład następująca instrukcja generuje błąd kompilatora, chyba że używana jest jawnego rzutowania:  
   
 ```csharp  
 int x = 3.0;         // Error: no implicit conversion from double.  
 int y = (int)3.0;    // OK: explicit conversion.  
 ```  
   
- Aby uzyskać więcej informacji w wyrażeniach arytmetycznych mieszane typy zmiennoprzecinkowe i całkowite typy, zobacz [float](../../../csharp/language-reference/keywords/float.md) i [podwójne](../../../csharp/language-reference/keywords/double.md).  
+ Aby uzyskać więcej informacji na wyrażeniach arytmetycznych mieszane typy zmiennoprzecinkowe i całkowite typy zobacz [float](../../../csharp/language-reference/keywords/float.md) i [double](../../../csharp/language-reference/keywords/double.md).  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

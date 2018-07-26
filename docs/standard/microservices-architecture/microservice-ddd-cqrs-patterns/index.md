@@ -1,74 +1,74 @@
 ---
-title: Poruszając złożoności firm Mikrousługi DDD i wzorce CQRS
-description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Poruszając złożoności firm Mikrousługi DDD i wzorce CQRS
+title: Co dzień do czynienia złożoności biznesowych w Mikrousługach przy użyciu wzorców CQRS i DDD
+description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Co dzień do czynienia złożoności biznesowych w Mikrousługach przy użyciu wzorców CQRS i DDD
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: af67f94b2c56f6a1ec794abbf7d3dad0d78033ec
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/06/2018
+ms.openlocfilehash: bc8ff6262436af6eb49a4ef8635d502e80b74b5a
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105761"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874390"
 ---
-# <a name="tackling-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>Poruszając złożoności firm Mikrousługi DDD i wzorce CQRS
+# <a name="tackling-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>Co dzień do czynienia złożoności biznesowych w Mikrousługach przy użyciu wzorców CQRS i DDD
 
-*Projektowanie modelu domeny dla każdego mikrousługi lub kontekstu ograniczone, odzwierciedlający wiedzę na temat domeny biznesowych.*
+*Projektowanie modelu domeny dla poszczególnych mikrousług lub ograniczony kontekst odzwierciedlającą znajomości domeny biznesowej.*
 
-Ta sekcja dotyczy przede wszystkim bardziej zaawansowanych mikrousług, który implementuje gdy zachodzi potrzeba rozwiązania złożonych podsystemów lub mikrousług pochodzące z wiedzy ekspertów domeny kiedykolwiek zmiana reguł biznesowych. Wzorce architektura używana w tej sekcji są oparte na projektowanie oparte na domenie (DDD) i podejścia poleceń i zapytań podział odpowiedzialności (CQRS), zgodnie z opisami w rysunek 9-1.
+Ta sekcja koncentruje się na bardziej zaawansowanych mikrousług, który implementuje, gdy trzeba czoła złożonych podsystemów lub mikrousług pochodzące z wiedzy i ekspertów z konkretnych dziedzin ciągle zmieniające reguły biznesowe. Wzorce architektury używanych w tej sekcji zależą od projektowania opartego na domenach (DDD) i podejścia polecenia i podział odpowiedzialności zapytania (CQRS), jak pokazano w rysunek 9-1.
 
 ![](./media/image1.png)
 
-**Rysunek 9-1**. Architektury mikrousługi zewnętrznego i wewnętrznej architektury wzorce dla każdego mikrousługi
+**Rysunek 9-1**. Opartych na architekturze mikrousług zewnętrznego i wewnętrznej architekturze wzorce dla poszczególnych mikrousług
 
-Jednak większość techniki mikrousług, takich jak implementacji usługi interfejsu API platformy ASP.NET Core sieci Web lub uwidaczniać metadane programu Swagger z Swashbuckle, opartych na danych mają również zastosowanie do bardziej zaawansowanych mikrousług, wewnętrznie zaimplementowany przy użyciu DDD wzorce. W tej sekcji jest rozszerzeniem poprzednich sekcjach, ponieważ większość rozwiązań opisem również zastosowanie w tym miejscu lub dla dowolnego rodzaju mikrousługi.
+Jednak większość technik dla danych opartych na mikrousługach, takie jak sposób implementacji usługi internetowego interfejsu API platformy ASP.NET Core lub jak do udostępnienia metadanych struktury Swagger przy użyciu pakietu Swashbuckle, mają również zastosowanie do bardziej zaawansowanych mikrousługi implementowane wewnętrznie z DDD wzorce. Ta sekcja jest rozszerzeniem przedstawione w poprzednich sekcjach, ponieważ większość rozwiązań wcześniej przedstawionych stosuje się także, w tym miejscu lub dla dowolnych mikrousług.
 
-Ta sekcja zawiera szczegółowe najpierw, uproszczone wzorce CQRS używane w aplikacji eShopOnContainers odwołania. Później otrzymasz Omówienie techniki DDD, które umożliwiają znaleźć typowe wzorce, które można wykorzystać w aplikacjach użytkownika.
+W tej sekcji najpierw zawiera szczegółowe informacje dotyczące uproszczonego wzorców CQRS używanych w ramach aplikacji eShopOnContainers aplikacji odwołanie. Później otrzymasz Przegląd techniki DDD, umożliwiających wyszukiwanie typowych wzorców, które można użyć ponownie w swoich aplikacjach.
 
-DDD jest duża tematu z bogaty zestaw zasoby szkoleniowe. Można uruchomić z książek, takich jak [projekt Domain-Driven](https://domainlanguage.com/ddd/) Evans marek i dodatkowe materiały z Vaughn Vernon, Jimmy Nilsson małych Gregowi, Udi Dahan, Jimmy Bogard i wiele innych ekspertów DDD/CQRS. Jednak w większości wszystkie muszą próby Dowiedz się, jak zastosować techniki DDD z konwersacji, whiteboarding i domeny sesji modelowania z ekspertami w domenie konkretnych biznesowych.
+DDD to duże temat bogaty zestaw zasoby szkoleniowe. Można uruchomić z książek, takich jak [projektowania driven](https://domainlanguage.com/ddd/) Eric Evans i dodatkowe materiały z Vaughn Vernon, Jimmy Nilsson, Grega Younga, Udi Dahan, Jimmy Bogard oraz inni eksperci DDD/CQRS. Ale w większości wszystkie próby Dowiedz się, jak zastosować techniki DDD z konwersacji, pracę na tablicach i sesji modelowania z ekspertami w domenie firmy konkretnych domeny.
 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
-##### <a name="ddd-domain-driven-design"></a>DDD (oparte na domenie projekt)
+##### <a name="ddd-domain-driven-design"></a>DDD (projektowania opartego na domenie)
 
--   **Evans marek. Język domeny**
+-   **Eric Evans. Język domeny**
     [*https://domainlanguage.com/*](https://domainlanguage.com/)
 
--   **Pole Fowler. Projektowanie oparte na domenie**
+-   **Martina Fowlera. Projektowania opartego na domenie**
     [*https://martinfowler.com/tags/domain%20driven%20design.html*](https://martinfowler.com/tags/domain%20driven%20design.html)
 
--   **Jimmy Bogard. Wzmocnienie domenę: Elementarz**
+-   **Jimmy Bogard. Wzmocnienie domenę: podstawowe informacje**
     [*https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/*](https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/)
 
-##### <a name="ddd-books"></a>DDD książek
+##### <a name="ddd-books"></a>Książki DDD
 
--   **Evans marek. Projektowanie oparte na domenie: Czoła złożoności serca oprogramowania**
+-   **Eric Evans. Projektowania opartego na domenie: Co dzień do czynienia złożoności serce oprogramowania**
     [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
--   **Evans marek. Odwołania projektu oparte na domenie: Definicje i wzorzec podsumowania**
+-   **Eric Evans. Dotyczące projektowania opartego na domenie: Definicje i wzorzec podsumowania**
     [*https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/*](https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/)
 
--   **Vaughn Vernon. Implementowanie projektu oparte na domenie**
+-   **Vaughn Vernon. Implementowanie projektu opartego na domenach**
     [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
 
--   **Vaughn Vernon. Projektowanie oparte na domenie destylowany**
+-   **Vaughn Vernon. Projektowania opartego na domenie, destylowany**
     [*https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/*](https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/)
 
--   **Jimmy Nilsson. Projektowanie oparte na domenie i wzorce**
+-   **Jimmy Nilsson. Stosowanie projektowania opartego na domenie i wzorców**
     [*https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/*](https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/)
 
--   **Torre de la Cesarowi. W Przewodniku dotyczącym architektury N-warstwowych zorientowane na domenie z platformą .NET**
+-   **Torre'a de la Cesarowi. Przewodnik N-warstwowe dotycząca architektury zorientowanej na domeny przy użyciu platformy .NET**
     [*https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/*](https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/)
 
--   **Avram abela i Floyd Marinescu. Domeny oparte na projekt szybko**
+-   **Abel Avram i Floyd Marinescu. Domain-Driven projektowania szybko**
     [*https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/*](https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/)
 
 Szkolenie DDD
 
--   **Julie Lerman i Steve Smith. Podstawowe informacje na temat projektowania oparte na domenie**
+-   **Julie Lerman i Steve Smith. Podstawowe informacje dotyczące projektowania opartego na domenie**
     [*http://bit.ly/PS-DDD*](http://bit.ly/PS-DDD)
 
 
 >[!div class="step-by-step"]
-[Poprzednie](../multi-container-microservice-net-applications/background-tasks-with-ihostedservice.md)
+[Poprzednie](../multi-container-microservice-net-applications/implement-api-gateways-with-ocelot.md)
 [dalej](apply-simplified-microservice-cqrs-ddd-patterns.md)

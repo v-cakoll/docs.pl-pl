@@ -1,38 +1,44 @@
 ---
 title: do (odwołanie w C#)
-ms.date: 07/20/2015
+ms.date: 05/28/2018
 f1_keywords:
 - do_CSharpKeyword
 - do
 helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
-ms.openlocfilehash: 5599f079e29fd094c4d6a6a75afba89fb562a166
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b918b378623a239803fb4e0a65fcf82fd677b21f
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961329"
 ---
 # <a name="do-c-reference"></a>do (odwołanie w C#)
-`do` Instrukcji, która wykonuje instrukcję lub blok instrukcji wielokrotnie aż wynikiem obliczenia określonego wyrażenia jest `false`. Treści pętli musi być ujęta w nawiasy klamrowe, `{}`, chyba że składa się z jednej instrukcji. W takim przypadku nawiasy klamrowe są opcjonalne.  
-  
-## <a name="example"></a>Przykład  
- W poniższym przykładzie `do-while` instrukcje pętli wykonania tak długo, jak zmienna `x` jest mniejsza niż 5.  
-  
- [!code-csharp[csrefKeywordsIteration#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/do_1.cs)]  
-  
- W odróżnieniu od [podczas](../../../csharp/language-reference/keywords/while.md) instrukcji `do-while` pętla jest wykonywana raz przed Obliczanie wyrażenia warunkowego.  
-  
- W dowolnym punktu `do-while` bloku, mogą być dzielone poza przy użyciu pętli [podziału](../../../csharp/language-reference/keywords/break.md) instrukcji. Można przejść bezpośrednio do `while` instrukcja obliczania wyrażeń przy użyciu [kontynuować](../../../csharp/language-reference/keywords/continue.md) instrukcji. Jeśli `while` wyrażenie ma wartość true, wykonywanie będzie kontynuowane przy pierwszej instrukcji w pętli. Jeśli wyrażenie ma wartość false, wykonywanie będzie kontynuowane przy pierwszej instrukcji po `do-while` pętli.  
-  
- A `do-while` pętli również można został zakończony przez [goto](../../../csharp/language-reference/keywords/goto.md), [zwracać](../../../csharp/language-reference/keywords/return.md), lub [throw](../../../csharp/language-reference/keywords/throw.md) instrukcje.  
-  
-## <a name="c-language-specification"></a>Specyfikacja języka C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
+
+`do` Instrukcji wykonuje instrukcję lub blok instrukcji, gdy określone wyrażenie logiczne, które daje w wyniku `true`. Ponieważ to wyrażenie jest oceniane po każdym wykonaniu pętli, `do-while` pętla jest wykonywana raz lub więcej razy. To różni się od [podczas](while.md) pętli, która wykonuje zero lub więcej razy.
+
+W dowolnym punkcie w `do` blok instrukcji, można zerwać pętlę za pomocą [podziału](break.md) instrukcji.
+
+Użytkownik może przechodzić bezpośrednio do obliczania `while` wyrażenie, używając [nadal](continue.md) instrukcji. Jeśli wyrażenie ma `true`, wykonywanie jest kontynuowane po pierwszej instrukcji w pętli. W przeciwnym razie wykonywanie jest kontynuowane po pierwszej instrukcji następującej po pętli.
+
+Możesz również wyjść `do-while` pętli przez [przejdź do](goto.md), [zwracają](return.md), lub [throw](throw.md) instrukcji.
+
+## <a name="example"></a>Przykład
+
+W poniższym przykładzie pokazano użycie `do` instrukcji. Wybierz **Uruchom** do uruchamiania kodu przykładu. Po tym można zmodyfikować kod i uruchom go ponownie.
+
+[!code-csharp-interactive[do loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#4)]
+
+## <a name="c-language-specification"></a>specyfikacja języka C#
+
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a>Zobacz także
+
+ [Dokumentacja języka C#](../index.md)  
+ [Przewodnik programowania w języku C#](../../programming-guide/index.md)  
+ [Słowa kluczowe języka C#](index.md)  
  [do-while, instrukcja (C++)](/cpp/cpp/do-while-statement-cpp)  
- [Instrukcje iteracji](../../../csharp/language-reference/keywords/iteration-statements.md)
+ [Instrukcje iteracji](iteration-statements.md)  
+ [while — instrukcja](while.md)  

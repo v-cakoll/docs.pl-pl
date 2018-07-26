@@ -1,43 +1,43 @@
 ---
-title: Obsługa częściowej awarii
-description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Obsługa częściowej awarii
+title: Obsługa częściowych niepowodzeń
+description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Obsługa częściowych niepowodzeń
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 957a0b1b8b4d217fac591db54e4ee053098bc7da
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/08/2018
+ms.openlocfilehash: 723719b22c1c7de63f19f68acf91e6499c1a4e43
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105198"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37875186"
 ---
-# <a name="handling-partial-failure"></a>Obsługa częściowej awarii
+# <a name="handling-partial-failure"></a>Obsługa częściowych niepowodzeń
 
-W systemach rozproszonych, takich jak aplikacje oparte na mikrousług istnieje ryzyko wszechobecne częściowej awarii. Na przykład jeden mikrousługi/kontener może zakończyć się niepowodzeniem lub mogą nie być dostępne do odpowiedzi przez krótki czas lub jednego serwera lub maszyny Wirtualnej może ulec awarii. Od klientów i usług są osobne procesy, usługi może nie być w stanie odpowiedzieć w odpowiednim momencie na żądanie klienta. Usługa może być przeciążona i odpowiada bardzo wolno do żądania lub po prostu nie mogą być niedostępne przez krótki czas z powodu problemów dotyczących sieci.
+W systemach rozproszonych, takich jak aplikacje oparte na mikrousługach istnieje ryzyko wszechobecnym częściowych niepowodzeń. Na przykład jeden mikrousług/kontener może zakończyć się niepowodzeniem lub mogą nie być dostępne odpowiedzi przez krótki czas lub pojedynczej maszyny Wirtualnej lub serwer może ulec awarii. Ponieważ klientów i usług są oddzielne procesy, usługa nie może być przygotowane w sposób terminowy do żądania klienta. Usługa może być przeciążona i działa prawidłowo, bardzo wolno do żądania lub po prostu nie mogą być niedostępne przez krótki czas ze względu na problemy z siecią.
 
-Na przykład należy wziąć pod uwagę strony szczegółów w kolejności od eShopOnContainers przykładowej aplikacji. Jeśli mikrousługi porządkowania nie odpowiada gdy użytkownik próbuje przesłać zamówienie, złą implementacją klasy procesu klienta (aplikacja sieci web MVC) — na przykład, jeśli kod klienta synchroniczne RPC za pomocą limitu czasu — umożliwia zablokowanie wątków nieskończoność Oczekiwanie na odpowiedź. Oprócz tworzenia płynność pracy, co nie odpowiada oczekiwania zużywa lub blokuje wątku i wątki są bardzo przydatne w aplikacjach wysokiej skalowalności. W przypadku wielu zablokowanych wątków po pewnym czasie poza wątków można uruchomić aplikacji w czasie wykonywania. W takim przypadku aplikacja może stać się globalny nie odpowiada, a nie tylko częściowo odpowiadać jako Pokaż w rysunek 10-1.
+Na przykład należy wziąć pod uwagę strona szczegółów zamówienia, w ramach aplikacji eShopOnContainers przykładowej aplikacji. Jeśli szeregowania mikrousługa odpowiada po użytkownik próbuje przesłać zamówienie, implementacja procesu klienta (aplikacja sieci web MVC) — na przykład, jeśli kod klienta była używana synchroniczne zdalnych wywołań procedury bez limitu czasu — na czas nieokreślony mogłyby spowodować zablokowanie wątków Oczekiwanie na odpowiedź. Oprócz tworzenia płynność pracy, co nie odpowiada oczekiwania zużywa lub blokuje wątek i wątki są bardzo przydatne w aplikacjach o wysokim stopniu skalowalności. W przypadku wielu zablokowane wątki po pewnym czasie poza wątki można uruchomić środowiska uruchomieniowego aplikacji. W takim przypadku aplikacja może stać się globalnie nie odpowiada, a nie tylko częściowo odpowiadać jako show w rysunek 10-1.
 
 ![](./media/image1.png)
 
-**Rysunek 10-1**. Częściowe błędy z powodu zależności, które mają wpływ na dostępność wątku usługi
+**Rysunek 10-1**. Błędy częściowe ze względu na zależności, które mają wpływ na dostępność wątku usługi
 
-W dużych aplikacji na podstawie mikrousług jakiekolwiek niepowodzenie częściowe mogą jest rozszerzona, zwłaszcza, jeśli większość interakcji wewnętrzny mikrousług opiera się na synchroniczne wywołania HTTP (które uważa się przed wzorzec). Zastanów się systemu, który odbiera miliony przychodzące wywołania dziennie. Jeśli system ma zły projekt, który jest oparty na długie łańcuchy synchroniczne wywołania HTTP, te połączenia przychodzące może skutkować milionów więcej połączeń wychodzących (Załóżmy, że stosunek 1:4) dziesiątki wewnętrzny mikrousług jako synchroniczne zależności. Taka sytuacja jest wyświetlany w rysunek 10-2, szczególnie zależności \#3.
+W przypadku dużej aplikacji opartych na mikrousługach wszelkie częściowych niepowodzeń można uzupełnić informacje, zwłaszcza, jeśli większość interakcji wewnętrznego mikrousług opiera się na synchroniczne wywołania HTTP (co jest uznawane za wzorzec niezalecane). Pomyśl o systemie, który odbiera milionów wywołań przychodzących na dzień. Jeśli system ma nieprawidłowy projekt, który jest oparty na długie łańcuchy synchroniczne wywołania HTTP, tych wywołań przychodzących może spowodować więcej milionów połączenia wychodzące (Załóżmy, że współczynnik 1:4) do dziesiątek, jak wewnętrznych mikrousług jako synchroniczna zależności. Ta sytuacja jest wyświetlany w rysunek 10-2, szczególnie zależności \#3.
 
 ![](./media/image2.png)
 
-**Rysunek 10-2**. Wpływ projektu niepoprawne o długie łańcuchy żądań HTTP
+**Rysunek 10-2**. Wpływ projektu niepoprawne, oferujący funkcje długie łańcuchy żądań HTTP
 
-Sporadyczne niepowodzenia jest praktycznie gwarantowana w rozproszonej i w chmurze oparte na systemie, nawet jeśli doskonałej dostępności ma zależności, co się. Powinno to być faktów, które należy wziąć pod uwagę.
+Sporadyczne niepowodzenia jest gwarantowane w systemie rozproszone i oparte na chmurze, nawet jeśli zależności, co sama ma doskonałej dostępności. Jest fakt, które należy wziąć pod uwagę.
 
-Jeśli nie projektowania i implementacji technik w celu zapewnienia odporności na uszkodzenia, można rozszerzone nawet małe awariami. Na przykład 50 zależności dostępności 99,99% spowoduje kilka godzin przestoju miesięcznie ze względu na to wpływ. Jeśli zależność mikrousługi nie powiodło się podczas obsługi dużej liczby żądań, błędu można szybko saturate — wszystkie wątki żądania dostępne w poszczególnych usług i awarii całej aplikacji.
+Jeśli nie projektować i implementować techniki, aby zapewnić odporność na uszkodzenia, nawet niewielkie przestoje można większy. Na przykład 50 zależności za pomocą dostępność przez 99,99% dostępności w rezultacie kilka godzin przestojów miesiąc ze względu na to wpływ. Jeśli zależność mikrousług nie powiodło się podczas obsługi dużej liczby żądań, błędów można szybko saturate wszystkie wątki żądania dostępne w poszczególnych usług i awarię całej aplikacji.
 
 ![](./media/image3.png)
 
-**Rysunek 10-3**. Częściowe niepowodzenie rozszerzone o mikrousług o długie łańcuchy synchroniczne wywołania HTTP
+**Rysunek 10-3**. Częściowe niepowodzenie rozszerzone o mikrousług długie łańcuchy synchroniczne wywołania HTTP
 
-Aby zminimalizować ten problem, w sekcji "*integracji asynchroniczne mikrousługi wymusić Autonomia w mikrousługi*" (w tym rozdziale architektury), firma Microsoft zaleca użycia komunikacji asynchronicznej między wewnętrznego mikrousług. Firma Microsoft krótko opisano bardziej w następnej sekcji.
+Aby zminimalizować ten problem, w sekcji "*integracji asynchroniczne mikrousług wymusić autonomię w mikrousługach*" (w rozdziale architektury), te wskazówki zachęca się przy użyciu komunikacji asynchronicznej między wewnętrzny mikrousług. 
 
-Ponadto ważne zaprojektowanie klienta i mikrousług aplikacji do obsługi błędów z częściowa jest — oznacza to, że tworzenie mikrousług odporne i klienta aplikacji.
+Ponadto jest istotne, projektowania aplikacji mikrousług i klienta, do obsługi częściowych niepowodzeń — czyli do kompilowania aplikacji mikrousług odporne na błędy i klienta.
 
 
 >[!div class="step-by-step"]

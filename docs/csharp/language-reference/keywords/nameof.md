@@ -6,19 +6,19 @@ f1_keywords:
 - nameof
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
 ms.openlocfilehash: 2695095aa4bf2035d8766f3cbcb82f4fbb290e22
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208377"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245638"
 ---
 # <a name="nameof-c-reference"></a>nameof (odwołanie w C#)
 
-Używany do uzyskania prostego ciągu (niekwalifikowane) nazwę zmiennej, typu lub elementu członkowskiego.  
+Można uzyskać prosty ciąg (niekwalifikowanej) nazwy zmiennej, typu lub elementu członkowskiego.  
 
-Podczas raportowania błędów w kodzie, Podłączanie model widok kontroler (MVC) łącza, wyzwalania zdarzenia zmiany właściwości, itd., często mają być przechwytywane nazwę ciągu metody.  Przy użyciu `nameof` pomaga zapewnić kodu prawidłowy przy zmianie nazwy definicji.  Przed konieczne było użycie literałów ciągów do odwoływania się do definicji, czyli łamliwa przy zmianie nazwy elementy kodu, ponieważ narzędzia nie wiadomo, aby sprawdzić te literałów ciągów.  
+Podczas zgłaszania błędów w kodzie, Podłączanie model-view-controller (MVC) łączy, wyzwalanie zdarzenia zmiany właściwości, itd., często mają być przechwytywane nazwą parametrów metody.  Za pomocą `nameof` pomaga zapewnić kodu prawidłowe przy zmianie nazwy definicji.  Wcześniej trzeba było Używaj literałów ciągów do odwoływania się do definicji, który jest elementem wrażliwym, podczas zmiany nazwy elementów kodu, ponieważ narzędzia nie wiadomo, aby sprawdzić te literałów ciągów.  
   
- A `nameof` wyrażenie ma tego formularza:  
+ A `nameof` wyrażenie ma tę formę:  
   
 ```csharp  
 if (x == null) throw new ArgumentNullException(nameof(x));  
@@ -26,7 +26,7 @@ WriteLine(nameof(person.Address.ZipCode)); // prints "ZipCode"
 ```  
   
 ## <a name="key-use-cases"></a>Przypadki użycia klucza  
- Poniższe przykłady pokazują przypadków użycia klucza dla `nameof`.  
+ W poniższych przykładach pokazano przypadki użycia klucza `nameof`.  
   
  Waliduj parametry:  
  ```csharp  
@@ -104,11 +104,11 @@ class Test {
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Argument `nameof` musi być prostą nazwą, nazwy kwalifikowanej, dostęp do elementu członkowskiego, dostępu bazowego z określonego elementu członkowskiego lub dostęp z określonego elementu członkowskiego.  Wyrażenie argumentu identyfikuje definicji kodu, ale nigdy nie jest obliczane.  
+ Argument `nameof` musi być prostą nazwą, kwalifikowana nazwa, dostęp do elementu członkowskiego, dostępu bazowego, z określonego elementu członkowskiego lub dostęp za pomocą określonego elementu członkowskiego.  Wyrażenie argumentu identyfikuje definicję kodu, ale nigdy nie jest obliczane.  
   
- Ponieważ argument musi być wyrażeniem składnię, istnieje wiele niedopuszczalne rzeczy, które nie są przydatne do tworzenia listy.  Warto zauważyć, że tworzy błędy są następujące: wstępnie zdefiniowanych typów (na przykład `int` lub `void`), typy dopuszczające wartości zerowe (`Point?`), typy tablicowe (`Customer[,]`), typów wskaźnika (`Buffer*`), kwalifikowaną alias (`A::B` ), a niepowiązanych typów ogólnych (`Dictionary<,>`), przetwarzania wstępnego symboli (`DEBUG`) oraz etykiety (`loop:`).  
+ Argument musi być wyrażeniem syntaktycznie, dlatego są niedozwolone, wiele rzeczy, które nie są przydatne do tworzenia listy.  Następujące warto wspomnieć o, który generuje błędy: wstępnie zdefiniowanych typów (na przykład `int` lub `void`), typy dopuszczające wartości zerowe (`Point?`), tablicy typów (`Customer[,]`), typów wskaźnika (`Buffer*`), aliasu kwalifikowaną (`A::B` ), a wskazanych typów ogólnych (`Dictionary<,>`), przetwarzania wstępnego symbole (`DEBUG`) i etykiet (`loop:`).  
   
- Jeśli trzeba uzyskać w pełni kwalifikowaną nazwę, możesz użyć `typeof` wyrażenie wraz z programem `nameof`.  Na przykład:
+ Jeśli musisz pobrać w pełni kwalifikowaną nazwę, możesz użyć `typeof` wraz z wyrażeniem `nameof`.  Na przykład:
 ```csharp  
 class C {
     void f(int i) {  
@@ -117,18 +117,18 @@ class C {
 }
 ``` 
 
- Niestety `typeof` nie jest wyrażeniem stałym, takich jak `nameof`, więc `typeof` nie można używać w połączeniu z `nameof` w tych samych umieszcza jako `nameof`.  Na przykład następujące mogłoby spowodować błąd kompilacji CS0182:
+ Niestety `typeof` nie jest wyrażeniem stałym, takich jak `nameof`, więc `typeof` nie można używać w połączeniu z `nameof` w tych samych miejsc co `nameof`.  Na przykład następujące mogłoby spowodować błąd kompilacji CS0182:
  ```csharp  
 [DebuggerDisplay("={" + typeof(C) + nameof(GetString) + "()}")]  
 class C {  
     string GetString() { }  
 }  
 ```    
- W przykładach Zobacz można użyć nazwy typu i dostęp do nazwy metody wystąpienia.  Nie trzeba mieć wystąpienia typu, jako wymaganego w obliczane wyrażenia.  Może być bardzo wygodny w niektórych sytuacjach i przy użyciu nazwy typu, ponieważ odnosi się tylko do nazwy i nie używa dane wystąpienia, nie trzeba przeprowadzać contrive wystąpienie zmiennej lub wyrażenie.  
+ W przykładach zobaczysz, że można użyć nazwy typu i dostęp do nazwy metody wystąpienia.  Nie trzeba mieć wystąpienia typu, jako wymaganego w wyrażenia ocenianego.  Może być wygodna w taki sposób, w niektórych sytuacjach i nazwy typu, ponieważ właśnie odwołujesz się do nazwy i nie używa danych wystąpienia, nie trzeba contrive wystąpienie zmiennej lub wyrażenia.  
   
- Możesz odwoływać się elementy członkowskie klasy w wyrażeniach atrybut klasy.  
+ Możesz odwoływać się elementy członkowskie klasy w wyrażeniach atrybut w klasie.  
   
- Nie istnieje sposób można pobrać informacji podpisów, takich jak "`Method1 (str, str)`".  Jedną z metod w tym celu jest użycie wyrażenia `Expression e = () => A.B.Method1("s1", "s2")`i ściągania MemberInfo z wynikowe drzewo wyrażeń.  
+ Nie ma możliwości można pobrać informacji podpisów, takie jak "`Method1 (str, str)`".  Jednym ze sposobów, aby to zrobić, jest użycie wyrażenia `Expression e = () => A.B.Method1("s1", "s2")`i ściąganie MemberInfo z wynikowego drzewa wyrażeń.  
   
 ## <a name="language-specifications"></a>Specyfikacje języka  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

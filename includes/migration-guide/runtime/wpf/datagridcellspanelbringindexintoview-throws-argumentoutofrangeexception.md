@@ -1,11 +1,11 @@
-### <a name="datagridcellspanelbringindexintoview-throws-argumentoutofrangeexception"></a>DataGridCellsPanel.BringIndexIntoView zgłasza ArgumentOutOfRangeException
+### <a name="datagridcellspanelbringindexintoview-throws-argumentoutofrangeexception"></a>DataGridCellsPanel.BringIndexIntoView zgłasza trwa wyjątku ArgumentOutOfRangeException
 
 |   |   |
 |---|---|
-|Szczegóły|<xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object)> będzie działać asynchronicznie, gdy włączona jest wirtualizacja kolumny, ale szerokości kolumn, które nie zostały jeszcze określić.  Jeśli kolumny zostaną usunięte przed sytuacji asynchroniczne <xref:System.ArgumentOutOfRangeException?displayProperty=name> może wystąpić.|
-|Sugestia|Jeden z następujących czynności:<ol><li>Uaktualnij do platformy .NET Framework 4.7.</li><li>Instalowanie obsługi najnowsze poprawki dla programu .NET Framework 4.6.2.</li><li>Unikaj usuwanie kolumn do asynchronicznego odpowiedzi na <xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object)> zostało ukończone.</li></ol>|
+|Szczegóły|<xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object)> będzie działać asynchronicznie, gdy włączona jest wirtualizacja kolumny, ale szerokości kolumn, które nie zostały jeszcze nieustalona.  Jeśli kolumny zostaną usunięte przed asynchronicznego praca będzie wykonywana, <xref:System.ArgumentOutOfRangeException?displayProperty=name> mogą wystąpić.|
+|Sugestia|Jeden z następujących czynności:<ol><li>Uaktualnianie do programu .NET Framework 4.7.</li><li>Zainstaluj obsługi najnowszej poprawki dla programu .NET Framework 4.6.2.</li><li>Należy unikać usuwanie kolumn do czasu odpowiedzi asynchronicznych <xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object)> zostało zakończone.</li></ol>|
 |Zakres|Krawędź|
 |Wersja|4.6.2|
-|Typ|środowisko uruchomieniowe|
+|Typ|Środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object)?displayProperty=nameWithType></li><li><xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object,System.Windows.Controls.DataGridColumn)?displayProperty=nameWithType></li></ul>|
 

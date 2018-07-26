@@ -1,73 +1,67 @@
 ---
-title: 'Rozpoczynanie pracy z F # w programie Visual Studio dla komputerów Mac'
-description: 'Dowiedz się, jak używać F # za pomocą programu Visual Studio dla komputerów Mac.'
-ms.date: 02/13/2017
-ms.openlocfilehash: 58e65e703b092f2ee5d74386051b158c932013b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+title: 'Wprowadzenie do F # w programie Visual Studio dla komputerów Mac'
+description: 'Dowiedz się, jak używać języka F # za pomocą programu Visual Studio dla komputerów Mac.'
+ms.date: 07/03/2018
+ms.openlocfilehash: 200c3a8fee072797a54d15d8989937f4cadb33e2
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33565561"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874656"
 ---
-# <a name="get-started-with-f-in-visual-studio-for-mac"></a>Rozpoczynanie pracy z F # w programie Visual Studio dla komputerów Mac
+# <a name="get-started-with-f-in-visual-studio-for-mac"></a>Wprowadzenie do F # w programie Visual Studio dla komputerów Mac
 
-F # i narzędzia Visual F # są obsługiwane w programie Visual Studio dla komputerów Mac IDE.  Aby rozpocząć, należy [pobierania programu Visual Studio dla komputerów Mac](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs), jeśli nie jest jeszcze.  W tym artykule wykorzystano 2017 społeczności usługi Visual Studio dla komputerów Mac, ale może użyć F # z wersją wybranych przez użytkownika.
-
-## <a name="installing-f"></a>Instalowanie F # #
-
-Po pobraniu programu Visual Studio dla komputerów Mac, wyświetli monit dotyczący o wybranie co chcesz zainstalować.  Na potrzeby tego artykułu firma Microsoft będzie można pozostawienia wartości domyślnych.  W przeciwieństwie do programu Visual Studio dla systemu Windows nie trzeba jawnie zainstalowany Obsługa F #.  Naciśnij przycisk Zainstaluj, aby kontynuować.
-
-Po zakończeniu instalacji wybierz pozycję "Uruchom Visual Studio".  Można również uruchomić go za pomocą wyszukiwania na macOS.
+Język F # i narzędzi Visual F # są obsługiwane w programie Visual Studio dla komputerów Mac środowiska IDE. Upewnij się, że masz [Visual Studio for Mac zainstalowane](install-fsharp.md#install-f-with-visual-studio-for-mac).
 
 ## <a name="creating-a-console-application"></a>Tworzenie aplikacji konsoli
 
-Jednym z najprostszych projekty w programie Visual Studio for Mac jest aplikacji konsoli.  Oto jak to zrobić.  Po otwarciu programu Visual Studio dla komputerów Mac:
+Jednym z najprostszych projektów w programie Visual Studio dla komputerów Mac jest aplikacji konsoli.  Oto jak to zrobić.  Po otwarciu programu Visual Studio dla komputerów Mac:
 
 1. Na **pliku** menu wskaż **nowe rozwiązanie**.
 
-2.  W oknie dialogowym Nowy projekt są 2 różnych szablonów dla aplikacji konsoli.  Istnieje Other -> .NET, który jest przeznaczony dla programu .NET Framework.  Ten szablon podlega .NET Core -> aplikacji, który jest przeznaczony dla platformy .NET Core.  Albo szablonu powinny działać na potrzeby tego artykułu.
+2.  W oknie dialogowym Nowy projekt istnieją 2 różnych szablonów dla aplikacji konsoli.  Jest węzłem Other -> .NET, który jest przeznaczony dla .NET Framework.  Ten szablon jest w ramach platformy .NET Core -> Aplikacja, która jest przeznaczony dla platformy .NET Core.  Albo szablonu powinny działać na potrzeby tego artykułu.
 
-3. W obszarze aplikacji konsoli w języku C# F # w razie potrzeby.  Wybierz **dalej** przycisk, aby przejść do przodu!  
+3. W obszarze aplikacji konsolowej w języku C# F # w razie potrzeby.  Wybierz **dalej** przycisk umożliwiający przenoszenie do przodu!  
 
-4. Nadaj nazwę projektu, a następnie wybierz odpowiednie opcje dla aplikacji.  Powiadomienia i w okienku podglądu przy krawędzi ekranu, który będzie informować o struktury katalogów, która zostanie utworzona na podstawie opcji wybrany.  
+4. Nadaj projektowi nazwę, a następnie wybierz odpowiednie opcje dla aplikacji.  Powiadomienia w okienku podglądu, aby stronie ekranu, pokazujące strukturę katalogu, który zostanie utworzony w oparciu o wybrane opcje.  
 
-5. Kliknij przycisk **Utwórz**.  Powinna zostać wyświetlona projektów F # w Eksploratorze rozwiązań.
+5. Kliknij przycisk **Utwórz**.  Powinien zostać wyświetlony projektu języka F # w Eksploratorze rozwiązań.
 
 ## <a name="writing-your-code"></a>Pisanie kodu
 
-Rozpocznijmy pisząc kodu.  Upewnij się, że `Program.fs` plik jest otwarty, a następnie zastąp jego zawartość następującym kodem:
+Zacznijmy napisanie kodu.  Upewnij się, że `Program.fs` plik jest otwarty, a następnie zastąp jego zawartość następującym kodem:
 
 [!code-fsharp[HelloSquare](../../../samples/snippets/fsharp/getting-started/hello-square.fs)]
 
-W poprzednim przykładzie kodu funkcji `square` zdefiniowano, który przyjmuje danych wejściowych o nazwie `x` i mnożona przez samego siebie.  Ponieważ F # używa [wnioskowanie o typie](../language-reference/type-inference.md), typ `x` nie muszą być określone.  Kompilator języka F # rozumie typy, których mnożenia jest prawidłowy i przypisze typu na `x` zależy od `square` jest wywoływana.  Jeśli w ustawieniu kursora `square`, należy znaleźć w następujących tematach:
+W poprzednim przykładzie kodu funkcji `square` zdefiniowano, który przyjmuje dane wejściowe o nazwie `x` i mnożona przez siebie.  Ponieważ F # używa [wnioskowanie o typie](../language-reference/type-inference.md), typ `x` nie muszą być określone.  Kompilator F # rozumie typów, gdzie mnożenie jest nieprawidłowy i spowoduje przypisanie typu `x` zależnie od `square` jest wywoływana.  Po umieszczeniu wskaźnika myszy nad `square`, powinny pojawić się następujące:
 
 ```
 val square: x:int -> int
 ```
 
-Jest to określane jako podpis typu funkcji.  Mogą być odczytywane następująco: "kwadratowa jest funkcją, która przyjmuje liczbą całkowitą o nazwie x i tworzy całkowitą".  Należy pamiętać, że kompilator nadać `square` `int` typu teraz — jest to ponieważ mnożenie nie jest rodzajowa między *wszystkie* typów, ale raczej jest rodzajowy zamkniętego zestawu typów.  Kompilator języka F # pobrane `int` dla tego punktu, ale dostosuje podpis typu połączeń `square` z innym typem wejściowych, takich jak `float`.
+Jest to, co jest nazywane podpisu typu funkcji.  Może zostać odczytany następująco: "kwadratu jest funkcją, która przyjmuje liczbą całkowitą o nazwie x i tworzy całkowitą".  Należy zauważyć, że kompilator nadaje `square` `int` typu teraz — jest to spowodowane mnożenie nie jest ogólna między *wszystkich* typów, ale raczej jest ogólny w zestawie zamknięte typy.  Kompilator F # pobrane `int` tej punkt, ale skoryguje sygnatura typu Jeśli wywołasz `square` przy użyciu innego typu danych wejściowych, takich jak `float`.
 
-Innej funkcji, `main`, jest zdefiniowany, który zostanie nadany `EntryPoint` powinny zacząć atrybutu, sprawdzić kompilator języka F #, wykonanie tego programu.  Wynika z tej samej Konwencji, jak inne [języków programowania w stylu języka C](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B), gdzie argumenty wiersza polecenia mogą zostać przekazane do tej funkcji i zostanie zwrócony kod liczba całkowita (zazwyczaj `0`).
+Inną funkcję, `main`, jest zdefiniowany, który zostanie nadany `EntryPoint` powinny zacząć atrybutu, aby poinformować kompilator F # wykonanie tego programu.  Jest zgodna z tej samej Konwencji co inne [języków programowania stylu C](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B), gdzie argumenty wiersza polecenia mogą być przekazywane do tej funkcji i zostanie zwrócony kod liczby całkowitej (zazwyczaj `0`).
 
-W tej funkcji, które nazywamy `square` funkcji z argumentem `12`.  Kompilator języka F # następnie przypisuje typ `square` jako `int -> int` (to znaczy funkcję, która przyjmuje `int` i tworzy `int`).  Wywołanie `printfn` jest sformatowany funkcję drukowania, który używa formatu ciągu, podobnie jak języków programowania w stylu języka C, parametry, które odpowiadają na określone w ciągu formatu, a następnie drukuje wyniki i znakiem nowego wiersza.
+Znajduje się w tej funkcji, które nazywamy `square` funkcji z argumentem `12`.  Kompilator F # następnie przypisuje typ `square` jako `int -> int` (oznacza to, że funkcja, która przyjmuje `int` i tworzy `int`).  Wywołanie `printfn` jest sformatowany funkcję drukowania, który używa formatu ciągu, podobny do języków programowania w stylu języka C, parametry, które odnoszą się do tych określonych w ciągu formatu, a następnie drukuje wyniki i nowy wiersz.
 
-## <a name="running-your-code"></a>Wykonywanie kodu użytkownika
+## <a name="running-your-code"></a>Uruchamianie kodu
 
-Można uruchomić kod i wyświetlić wyniki, klikając **Uruchom** z menu najwyższego poziomu, a następnie **uruchomić bez debugowania**.  To spowoduje uruchomienie programu bez debugowania i służy do wyświetlenia wyników.
+Można uruchomić kod i wyświetlić wyniki, klikając **Uruchom** menu najwyższego poziomu i następnie **Rozpocznij bez debugowania**.  To spowoduje Uruchom program bez debugowania i pozwala wyświetlić wyniki.
 
-Teraz powinny być widoczne następujące wypisywane w oknie konsoli, które tam pojawi programu Visual Studio for Mac:
+Powinien zostać wyświetlony wypisywane w oknie konsoli, które program Visual Studio for Mac pojawiające się następujące czynności:
 
 ```
 12 squared is 144!
 ```
 
-Gratulacje!  Utworzeniu pierwszego projektu F # w programie Visual Studio dla komputerów Mac, zapisywać funkcja F # drukowane wyników wywołania tej funkcji i uruchom projekt, aby wyświetlać pewnych wyników.
+Gratulacje!  Został utworzony pierwszego projektu F # w programie Visual Studio dla komputerów Mac, napisane, że funkcja języka F # drukowany wyników wywołania tej funkcji i uruchom projekt, aby wyświetlać pewnych wyników.
 
-## <a name="using-f-interactive"></a>Przy użyciu interakcyjne F #
+## <a name="using-f-interactive"></a>Używanie F # Interactive
 
-Jednym z najlepszych funkcji programu Visual F # narzędzi w programie Visual Studio for Mac jest okno interaktywne F #.  Umożliwia ona wysłania kodu do procesu, gdy wywołanie kodu i interakcyjnie zobaczyć wynik.
+Jednym z najlepszych funkcji programu Visual F # narzędzia w programie Visual Studio dla komputerów Mac jest okno interaktywne języka F #.  Pozwala ona do wysłania kodu do procesu, w którym można wywołać ten kod i interaktywnie wyświetlić wynik.
 
-Aby rozpocząć używanie go, zaznacz `square` funkcji zdefiniowanej w kodzie.  Przejdź do menu **Edytuj** z menu najwyższego poziomu.  Następnie wybierz **Wyślij zaznaczenie do narzędzia F # Interactive**.  Wykonuje kod okno interaktywne F #.  Alternatywnie kliknij zaznaczenie prawym przyciskiem myszy i wybierz polecenie **Wyślij zaznaczenie do narzędzia F # Interactive**.  Powinny pojawić się F # Interactive okna są wyświetlane następujące w niej:
+Aby zacząć z niego korzystać, wyróżnij `square` funkcję zdefiniowaną w kodzie.  Przejdź do menu **Edytuj** menu najwyższego poziomu.  Następnie wybierz pozycję **Wyślij zaznaczenie do programu F # Interactive**.  To wykonuje kod w oknie interaktywnym F #.  Alternatywnie, kliknij zaznaczenie prawym przyciskiem myszy i wybierz polecenie **Wyślij zaznaczenie do programu F # Interactive**.  Powinny zostać wyświetlone F # Interactive okna pojawiają się z następujących czynności w nim:
 
 ```
 >
@@ -77,7 +71,7 @@ val square : x:int -> int
 >
 ```
 
-Ta operacja wyświetla tę samą sygnaturę funkcji dla `square` funkcji, który został wcześniej wyświetlony po aktywowany przez funkcję.  Ponieważ `square` jest teraz zdefiniowana w proces narzędzia F # Interactive, można wywołać ją z różnymi wartościami:
+Pokazuje to taki sam podpis funkcji dla `square` funkcji, tak aby był wyświetlany po najechaniu za pośrednictwem funkcji.  Ponieważ `square` jest teraz zdefiniowana w F # Interactive procesu, można wywołać go z różnymi wartościami:
 
 ```
 > square 12;;
@@ -86,7 +80,7 @@ val it : int = 144
 val it : int = 169
 ```
 
-To wykonuje funkcję, wiąże wynik na nową nazwę `it`i wyświetla typ i wartość `it`.  Należy pamiętać, że należy zakończyć każdego wiersza `;;`.  Jest to, jak F # Interactive wie, po zakończeniu wywołania funkcji.  Istnieje także możliwość zdefiniowania nowych funkcji w F # Interactive:
+To wykonuje funkcję, łączy wynik pod nową nazwą `it`i wyświetla typ i wartość `it`.  Należy pamiętać, że musi kończyć się każdy wiersz z `;;`.  Jest to, jak F # Interactive wie, po zakończeniu wywołania funkcji.  Można również definiować nowe funkcje w F # Interactive:
 
 ```
 > let isOdd x = x % 2 <> 0;;
@@ -97,27 +91,27 @@ val isOdd : x:int -> bool
 val it : bool = false
 ```
 
-Powyższy kod definiuje nową funkcję, `isOdd`, która przyjmuje `int` i sprawdza, czy jest nieparzysta!  Możesz wywołać tę funkcję, aby sprawdzić, jakie zwraca z różnych danych wejściowych.  Można wywołać funkcji w ramach wywołania funkcji:
+Powyższe definiuje nową funkcję `isOdd`, która przyjmuje `int` i sprawdza, czy jest nieparzysta!  Możesz wywołać tę funkcję, aby zobaczyć zwróceniem przy użyciu różnych danych wejściowych.  Można wywołać funkcji w ramach wywołania funkcji:
 
 ```
 > isOdd (square 15);;
 val it : bool = true
 ```
 
-Można również użyć [operatora potoku następny](../language-reference/symbol-and-operator-reference/index.md) do potoku wartość do dwie funkcje:
+Można również użyć [operatora potoku — przekazywanie](../language-reference/symbol-and-operator-reference/index.md) do potoku wartość w dwie funkcje:
 
 ```
 > 15 |> square |> isOdd;;
 val it : bool = true
 ```
 
-Operator do przodu potoku i inne, znajdują się w kolejnych samouczkach.
+Operator do przodu potoku i innych zostały omówione w kolejnych samouczkach.
 
-Jest to tylko glimpse do czego z F # Interactive.  Aby dowiedzieć się więcej, zapoznaj się [interakcyjne programowania w języku F #](../tutorials/fsharp-interactive/index.md).
+Jest to tylko programistyczne do działania z F # Interactive.  Aby dowiedzieć się więcej, zapoznaj się z [interaktywne programowania w języku F #](../tutorials/fsharp-interactive/index.md).
 
 ## <a name="next-steps"></a>Następne kroki
 
-Jeśli nie jest jeszcze, zapoznaj się [samouczek programu F #](../tour.md), która obejmuje niektóre podstawowe funkcje języka F #.  Zostanie zawiera przegląd niektórych funkcji języka F # i zapewnić wystarczającą przykłady, które można skopiować do programu Visual Studio dla komputerów Mac i uruchomić.  Są także niektóre dużą zasobów zewnętrznych można używać, pokazywane w [przewodnik F #](../index.md).
+Jeśli jeszcze nie, zapoznaj się z [samouczek programu F #](../tour.md), które obejmują niektóre z podstawowych funkcji języka F #.  Spowoduje przedstawienie niektórych funkcji języka F # i podać przykłady wystarczającą ilość kodu, które można skopiować do programu Visual Studio dla komputerów Mac i uruchomić.  Dostępne są także kilka wspaniałych zasobów zewnętrznych, można użyć, pokazywane w [Podręcznik języka F #](../index.md).
 
 ## <a name="see-also"></a>Zobacz także
  [Visual F#](../index.md)  

@@ -2,9 +2,9 @@
 
 |   |   |
 |---|---|
-|Szczegóły|Używanie zestawów narzędzia NGEN/profile profilowania może ulec awarii PROFILOWANEGO aplikacji platformy ASP.NET MVC 4 przy uruchamianiu z "Wykonywania aparatu wyjątek krytyczny"|
-|Sugestia|Tego problemu w programie .NET Framework 4.5.2. Alternatywnie profilera mogą uniknąć tego problemu, określając <code>COR_PRF_DISABLE_ALL_NGEN_IMAGES</code> w jego maski zdarzeń.|
+|Szczegóły|Profilery za pomocą zestawów NGEN/profile może ulec awarii aplikacji ASP.NET MVC4 profilowanych przy uruchamianiu z "Wykonywanie aparatu wyjątek krytyczny"|
+|Sugestia|Ten problem został rozwiązany w .NET Framework 4.5.2. Alternatywnie program profilujący może uniknąć tego problemu, określając <code>COR_PRF_DISABLE_ALL_NGEN_IMAGES</code> w jego maski zdarzeń.|
 |Zakres|Krawędź|
 |Wersja|4.5|
-|Typ|środowisko uruchomieniowe|
+|Typ|Środowisko uruchomieniowe|
 

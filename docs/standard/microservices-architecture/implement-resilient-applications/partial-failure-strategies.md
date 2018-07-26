@@ -1,31 +1,31 @@
 ---
-title: Strategie dotyczące postępowania z częściowa awarii
-description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Strategie dotyczące postępowania z częściowa awarii
+title: Strategie dotyczące obsługi częściowych niepowodzeń
+description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Strategie dotyczące obsługi częściowych niepowodzeń
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: c36ea31ad19b02fb02bc8e7185bfe8687b87764f
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/08/2018
+ms.openlocfilehash: ac82f6d506213614c7a4079e0f55f798f26a6550
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104212"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874406"
 ---
-# <a name="strategies-for-handling-partial-failure"></a>Strategie dotyczące postępowania z częściowa awarii
+# <a name="strategies-for-handling-partial-failure"></a>Strategie dotyczące obsługi częściowych niepowodzeń
 
 Strategie dotyczące postępowania z błędami częściowe są następujące.
 
-**Użyj asynchroniczne komunikacji (na przykład oparta na komunikatach) na wewnętrznej mikrousług**. Stanowczo zaleca nie, aby utworzyć długie łańcuchy synchroniczne wywołania HTTP w wewnętrznych mikrousług, ponieważ tego projektu niepoprawne będzie przestać główną przyczynę awarii zła. Przeciwnie, z wyjątkiem frontonu komunikacji między aplikacjami klienta i pierwszy poziom mikrousług lub szczegółowych bramy interfejsu API, zaleca się do użycia tylko (oparta na komunikatach) komunikacji asynchronicznej raz osiągnęła początkowej żądania / Cykl odpowiedzi przez wewnętrzny mikrousług. Spójność ostateczna i architektur sterowane zdarzeniami pomogą zminimalizować wpływ ripple. Tych metod wymuszania wyższego poziomu Autonomia mikrousługi i w związku z tym zapobiegać problem oznaczane w tym miejscu.
+**Użyj asynchronicznej komunikacji (na przykład, oparta na komunikatach) na wewnętrznej mikrousług**. Zaleca się wysoce nie utworzyć długie łańcuchy synchroniczne wywołania HTTP między wewnętrznego mikrousług, ponieważ niepoprawne projektu staną się ostatecznie główną przyczynę awarii zła. Przeciwnie, z wyjątkiem frontonu komunikację między aplikacjami klienta i pierwszy poziom mikrousług lub szczegółowe bramy interfejsu API, zaleca się do użycia tylko (oparta na komunikatach) komunikacji asynchronicznej raz w przeszłości początkowego żądania / Cykl odpowiedzi na wewnętrzny mikrousług. Aby zminimalizować wpływ ripple pomoże oparte na zdarzeniach architektury i spójności ostatecznej. Te metody wymuszania wyższego poziomu autonomii mikrousług i w związku z tym zapobiec problem oznaczane w tym miejscu.
 
-**Ponowne próby za pomocą wykładniczego wycofywania**. Ta technika pozwala uniknąć krótki i błędami okresowymi, wykonując wywołanie ponowi próbę kilka razy, w przypadku, gdy usługa nie jest dostępna tylko w przypadku przez krótki czas. Może to być spowodowane problemami z siecią tymczasowymi lub mikrousługi/kontenera jest przenoszona do innego węzła w klastrze. Jednak jeśli te ponownych prób nie są prawidłowo zaprojektowane z obwodem podziałów, jego pogłębić efekty ripple ostatecznie nawet powodując [przeprowadzenie ataku typu "odmowa usługi" (DoS)](https://en.wikipedia.org/wiki/Denial-of-service_attack).
+**Użyj ponownych prób z wykorzystaniem wykładniczego wycofywania**. Ta technika pozwala uniknąć krótki i sporadycznych błędów, wykonując wywołanie ponawia próbę kilka razy, w przypadku, gdy usługa nie jest dostępna tylko przez krótki czas. Taka sytuacja może wystąpić z powodu problemów z sieciowych okresowymi lub mikrousług/kontenera zostanie przeniesiony do innego węzła w klastrze. Jednak jeśli te ponownych prób nie są zaprojektowane prawidłowo w przypadku wyłączników, jego pogłębić skutki ripple ostatecznie nawet powodujące [przeprowadzenie ataku typu "odmowa usługi" (DoS)](https://en.wikipedia.org/wiki/Denial-of-service_attack).
 
-**Obejść limity czasu sieci**. Ogólnie rzecz biorąc klientów należy tak zaprojektować nie blokuj nieograniczony czas i zawsze używaj przekroczeń limitu czasu podczas oczekiwania na odpowiedź. Korzystanie z limitów czasu zapewnia, że zasoby są nigdy nie blokowana przez nieograniczony czas.
+**Obejście sieci przekroczeń limitu czasu**. Ogólnie rzecz biorąc klientów powinny zaprojektowana, aby nie blokować w sposób ciągły i zawsze używaj przekroczeń limitu czasu podczas oczekiwania na odpowiedź. Korzystanie z limitów czasu zapewnia, że zasoby są nigdy nie blokowana przez czas nieokreślony.
 
-**Użyj wzorca wyłącznika**. W tym podejście procesu klienta śledzi liczbę niepomyślnych żądań. Jeśli częstotliwość błędów przekracza skonfigurowany limit, rund "wyłącznika", aby dalszych prób natychmiast się nie powieść. (Jeśli duża liczba żądań, które kończą się niepowodzeniem, które sugeruje usługa jest niedostępna i że wysyłania żądań jest bezcelowe.) Po upływie limitu czasu klienta należy ponownie i, jeśli nowych żądań nie powiodło się, zamknij wyłącznik.
+**Użyj wzorca wyłącznika**. W tym podejściu procesu klienta śledzi liczbę żądań zakończonych niepowodzeniem. Jeśli tak, aby dalszych prób od razu zakończyć się niepowodzeniem, współczynnik błędów przekracza skonfigurowany limit wycieczek "wyłącznik". (Jeśli dużą liczbę żądań kończą się niepowodzeniem, umożliwiającej wyświetlanie sugerowanych usługa jest niedostępna i że wysyłania żądań jest sensu.) Po upływie limitu czasu klient powinien ponownie i, jeśli nowe żądania się pomyślnie, zamykając wyłącznik.
 
-**Podaj przejścia**. W takie podejście proces klienta sprawdza logiki rezerwowej, gdy żądanie zakończy się niepowodzeniem, takich jak przekazywania danych z pamięci podręcznej lub wartość domyślną. Jest to podejście, które są odpowiednie dla zapytań i jest bardziej złożony dla aktualizacji lub poleceń.
+**Podaj planów awaryjnych**. W tym podejściu procesu klienta sprawdza logiki rezerwowej, gdy żądanie zakończy się niepowodzeniem, takie jak przekazywania danych z pamięci podręcznej lub wartość domyślną. To podejście jest odpowiednie dla zapytań i jest bardziej złożona dla aktualizacji lub poleceń.
 
-**Ogranicz liczbę żądań w kolejce**. Klienci także powinna nałożyć górnej granicy liczby oczekujących żądań, które mikrousługi klienta mogą wysyłać do określonej usługi. Jeśli został osiągnięty limit, jest prawdopodobnie bezcelowe dokonanie dodatkowych żądań i tymi próbami powinna zakończyć się niepowodzeniem natychmiast. W implementacji, Polly [izolacji grodziowego](https://github.com/App-vNext/Polly/wiki/Bulkhead) zasad może służyć do spełnienia tego wymagania. Ta metoda jest zasadniczo ograniczania paralelizacja z <xref:System.Threading.SemaphoreSlim> jako implementacja. Umożliwia on również "kolejki" poza grodzi. Nadmiarowe obciążenia nawet przed wykonaniem można pozostawia aktywnego, (na przykład, ponieważ za pojemność jest pełna). Dzięki temu można szybciej niż wyłącznika, ponieważ oczekuje wyłącznik niepowodzeń swojej odpowiedzi do pewnych scenariuszy awarii. Obiekt BulkheadPolicy w Polly udostępnia jak Pełna grodziowego są kolejki i zdarzenia oferty na przepełnienie tak mogą służyć do kierowania automatyczne skalowanie w poziomie.
+**Ogranicz liczbę żądań w kolejce**. Klienci także powinny nakładać górnej granicy liczby oczekujących żądań, które mikrousług klienta mogą wysyłać do określonej usługi. Jeśli zostanie osiągnięty limit jest prawdopodobnie sensu dodatkowych żądań i tych prób powinna zakończyć się niepowodzeniem natychmiast. Pod względem implementacji Polly [izolacji grodziowym](https://github.com/App-vNext/Polly/wiki/Bulkhead) zasady mogą służyć do spełnienia tego wymagania. To podejście jest zasadniczo ograniczania przetwarzania równoległego przy użyciu <xref:System.Threading.SemaphoreSlim> jako implementacja. Umożliwia on również poza grodzi "kolejki". Możesz proaktywnie zmniejszenia nadmiernego obciążenia, nawet przed wykonaniem, (na przykład, ponieważ za pojemność jest pełna). Dzięki temu swojej odpowiedzi do pewnych scenariuszy awarii szybciej, niż byłoby wyłącznika, ponieważ wyłącznik czeka, aż po awarii. Obiekt BulkheadPolicy Polly udostępnia jak Pełna grodziowym są kolejki i oferty zdarzenia przy przepełnieniu tak może także służyć do kierowania, automatyczne skalowanie w poziomie.
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
@@ -35,10 +35,10 @@ Strategie dotyczące postępowania z błędami częściowe są następujące.
 -   **Dodawanie odporności i optymalizacji wydajności**
     [*https://msdn.microsoft.com/library/jj591574.aspx*](https://msdn.microsoft.com/library/jj591574.aspx)
 
--   **Bulkhead.** Repozytorium GitHub. Wdrożenia z zasadami Polly. \
+-   **Bulkhead.** Repozytorium GitHub. Implementacja za pomocą zasad Polly. \
     [*https://github.com/App-vNext/Polly/wiki/Bulkhead*](https://github.com/App-vNext/Polly/wiki/Bulkhead)
 
--   **Projektowanie aplikacji odporne na platformie Azure**
+-   **Projektowanie aplikacji odpornych na błędy dla platformy Azure**
     [*https://docs.microsoft.com/azure/architecture/resiliency/*](https://docs.microsoft.com/azure/architecture/resiliency/)
 
 -   **Obsługa błędu przejściowego**

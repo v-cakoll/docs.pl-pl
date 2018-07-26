@@ -8,14 +8,14 @@ helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
 ms.openlocfilehash: 2ce870e8caa67d780ce603a6f1dbcc7cd303b842
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274222"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960962"
 ---
 # <a name="lock-statement-c-reference"></a>lock — Instrukcja (odwołanie w C#)
-`lock` — Słowo kluczowe oznacza blok instrukcji jako sekcja krytyczna uzyskania wzajemnego wykluczeń dla danego obiektu, wykonywania instrukcji, a następnie zwolnienie blokady. Poniższy przykład zawiera `lock` instrukcji.  
+`lock` — Słowo kluczowe oznacza blok instrukcji jako sekcję krytyczną uzyskując blokadę wykluczania wzajemnego dla danego obiektu, wykonując instrukcję i następnie zwalniając blokadę. Poniższy przykład zawiera `lock` instrukcji.  
   
 ```csharp  
 class Account  
@@ -37,34 +37,34 @@ class Account
 }  
 ```  
   
- Aby uzyskać więcej informacji, zobacz [wątku synchronizacji](../../programming-guide/concepts/threading/thread-synchronization.md).  
+ Aby uzyskać więcej informacji, zobacz [synchronizacji wątków](../../programming-guide/concepts/threading/thread-synchronization.md).  
   
 ## <a name="remarks"></a>Uwagi  
- `lock` — Słowo kluczowe gwarantuje, że jeden wątek nie wprowadził krytyczne sekcji kodu podczas inny wątek znajduje się w sekcji krytyczne. Jeśli inny wątek próbował wprowadzić kod zablokowany, będzie czekać, blokowanie, dopóki nie zostanie zwolniony obiektu.  
+ `lock` — Słowo kluczowe gwarantuje, że jeden wątek nie wprowadził krytycznych części kodu, podczas gdy inny wątek znajduje się w sekcji krytycznych. Jeśli inny wątek próbuje wprowadzić kod zablokowany, po upływie, zablokować, dopóki obiekt jest zwalniane.  
   
- Sekcja [wątki](../../programming-guide/concepts/threading/index.md) omówiono wątków.  
+ Sekcja [wątki](../../programming-guide/concepts/threading/index.md) w tym artykule omówiono, wątki.  
   
- `lock` Wywołania — słowo kluczowe <xref:System.Threading.Monitor.Enter%2A> na początku bloku i <xref:System.Threading.Monitor.Exit%2A> na końcu bloku. A <xref:System.Threading.ThreadInterruptedException> jest generowany, jeśli <xref:System.Threading.Thread.Interrupt%2A> przerwań wątku, który oczekuje na wprowadzenie `lock` instrukcji.  
+ `lock` Wywołania — słowo kluczowe <xref:System.Threading.Monitor.Enter%2A> na początku bloku i <xref:System.Threading.Monitor.Exit%2A> na końcu bloku. A <xref:System.Threading.ThreadInterruptedException> jest generowany, jeśli <xref:System.Threading.Thread.Interrupt%2A> przerywa działanie wątku, który oczekuje na wprowadzenie `lock` instrukcji.  
   
- Ogólnie rzecz biorąc, należy unikać blokowania na `public` typu lub wystąpień poza swój kod sterowania. Typowe konstrukcje `lock (this)`, `lock (typeof (MyType))`, i `lock ("myLock")` narusza niniejsze wytyczne:  
+ Ogólnie rzecz biorąc, należy unikać blokowania na `public` typu lub wystąpień będące poza kontrolą swój kod. Typowe konstrukcje `lock (this)`, `lock (typeof (MyType))`, i `lock ("myLock")` naruszenia niniejszych wytycznych:  
   
--   `lock (this)` jest to problem, jeśli wystąpienie jest dostępny publicznie.  
+-   `lock (this)` jest to problem, jeśli wystąpienie może być publicznie dostępne.  
   
--   `lock (typeof (MyType))` jest problem, jeśli `MyType` jest dostępny publicznie.  
+-   `lock (typeof (MyType))` jest to problem, jeśli `MyType` jest publicznie dostępny.  
   
--   `lock("myLock")` jest to problem, ponieważ innego kodu w procesie przy użyciu tych samych parametrach współużytkują tego samego blokady.  
+-   `lock("myLock")` jest to problem, ponieważ każdy inny kod proces, korzystając z tych samych parametrach współużytkują ten sam blokady.  
   
- Najlepszym rozwiązaniem jest określenie `private` obiekt, aby zablokować, lub `private static` zmienna obiektu, aby chronić dane wspólne dla wszystkich wystąpień.  
+ Najlepszym rozwiązaniem jest zdefiniowanie `private` obiektu można zablokować, lub `private static` zmiennej obiektu, aby chronić dane wspólne dla wszystkich wystąpień.  
   
  Nie można użyć [await](../../../csharp/language-reference/keywords/await.md) — słowo kluczowe w treści `lock` instrukcji.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład zawiera proste używanie wątków bez blokowania w języku C#.  
+ Poniższy przykład pokazuje prosty użytkowania wątki bez blokowania w języku C#.  
   
  [!code-csharp[csrefKeywordsFixedLock#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/lock-statement_1.cs)]  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto wątków i `lock`. Tak długo, jak `lock` instrukcji, blok instrukcji jest sekcja krytyczna i `balance` nigdy nie staną się liczbą ujemną.  
+ W poniższym przykładzie użyto wątków i `lock`. Tak długo, jak `lock` instrukcji, blok instrukcji to sekcja krytycznego i `balance` nigdy nie będzie liczbą ujemną.  
   
  [!code-csharp[csrefKeywordsFixedLock#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/lock-statement_2.cs)]  
   
@@ -74,7 +74,7 @@ class Account
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Reflection.MethodImplAttributes>  
  <xref:System.Threading.Mutex>  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
+ [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Wątkowość](../../programming-guide/concepts/threading/index.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  

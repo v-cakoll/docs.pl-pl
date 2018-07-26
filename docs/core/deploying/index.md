@@ -1,78 +1,78 @@
 ---
-title: Wdrażanie aplikacji .NET core
+title: Wdrożenie aplikacji programu .NET core
 description: Wdrażanie aplikacji .NET Core.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: 27f9260166f7e7899501e1798333b982fb728152
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a39efdd92cf9c3bb6aadf83949e02ce20960481
+ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33212678"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792429"
 ---
 # <a name="net-core-application-deployment"></a>Wdrażanie aplikacji .NET core
 
 Można tworzyć dwa typy wdrożeń dla aplikacji .NET Core:
 
-- Zależne od Framework wdrożenia. Jak wskazuje nazwę, zależne od framework wdrożenia (stacje) zależy od obecności udostępnionego systemowe wersji platformy .NET Core w systemie docelowym. Ponieważ .NET Core jest już obecny, aplikacji jest również przenosić między instalacji platformy .NET Core. Aplikacja zawiera tylko własnego kodu i wszelkie zależności innych firm, które znajdują się poza bibliotek .NET Core. Zawiera FDDs *.dll* pliki, które można uruchomić przy użyciu [narzędzie dotnet](../tools/dotnet.md) z wiersza polecenia. Na przykład `dotnet app.dll` działa aplikacja o nazwie `app`.
+- Wdrażanie zależny od struktury. Jak wskazuje nazwa, zależny od struktury wdrożenia (stacje) zależy od obecności udostępnione całego systemu w wersji programu .NET Core w systemie docelowym. Ponieważ platformy .NET Core jest już obecny, Twoja aplikacja jest również do przenoszenia pomiędzy instalacji programu .NET Core. Aplikacja zawiera tylko własnego kodu i wszelkie zależności innych firm, które znajdują się poza biblioteki .NET Core. Zawiera FDDs *.dll* pliki, które można uruchamiać przy użyciu [narzędzia dotnet](../tools/dotnet.md) z wiersza polecenia. Na przykład `dotnet app.dll` uruchamia aplikację o nazwie `app`.
 
-- Samodzielne wdrożenia. W odróżnieniu od Dyskietki niezależne wdrożenia (SCD) nie zależą od obecności współużytkowanych składników w systemie docelowym. Wszystkie składniki, w tym zarówno do bibliotek .NET Core i środowiska uruchomieniowego .NET Core, są dołączone do aplikacji i odizolowana od innych aplikacji .NET Core. SCDs obejmują plik wykonywalny (takich jak *app.exe* na platformach systemu Windows dla aplikacji o nazwie `app`), zmieniono nazwę wersji specyficzne dla platformy .NET Core hosta, a *.dll* plików (takich jak *app.dll*), która jest rzeczywista aplikacji.
+- Niezależne wdrożenia. W odróżnieniu od Dyskietki niezależna wdrożenia (— SCD) nie jest zależny od obecności składniki współużytkowane w systemie docelowym. Wszystkie składniki, łącznie z biblioteki .NET Core i środowisko uruchomieniowe platformy .NET Core, są dołączone do aplikacji i odizolowane od innych aplikacji .NET Core. SCDs obejmują plik wykonywalny (takie jak *app.exe* na platformach Windows, dla aplikacji o nazwie `app`), czyli wersji zmieniono nazwę hosta, specyficzne dla platformy .NET Core, a *.dll* pliku (np. *app.dll*), który jest rzeczywista aplikacja.
 
-## <a name="framework-dependent-deployments-fdd"></a>Zależne od Framework wdrożeń (stacje)
+## <a name="framework-dependent-deployments-fdd"></a>Zależny od struktury wdrożeń (stacje)
 
-STACJE wdrożeniem tylko aplikacji i zależności innych firm. Nie trzeba wdrażać .NET Core, ponieważ Twoja aplikacja będzie używać wersji programu .NET Core, która występuje na komputerze docelowym. Jest to domyślny model wdrażania dla aplikacji .NET Core.
+STACJE wdrożysz tylko aplikacji i wszelkich zależności innych firm. Nie trzeba wdrażać platformy .NET Core, ponieważ Twoja aplikacja będzie używać wersji programu .NET Core, który znajduje się w systemie docelowym. Jest to domyślny model wdrażania dla aplikacji platformy .NET Core.
 
-### <a name="why-create-a-framework-dependent-deployment"></a>Dlaczego warto utworzyć wdrożenia framework zależnych?
+### <a name="why-create-a-framework-dependent-deployment"></a>Dlaczego warto tworzyć wdrożenia zależny od struktury?
 
-Wdrażanie Dyskietki ma następujące korzyści:
+Wdrażanie z stacje ma szereg zalet:
 
-- Nie trzeba definiować systemów operacyjnych, które aplikacji .NET Core będą działać w wyprzedzeniem. Ponieważ .NET Core używa formacie pliku PE wspólne dla obiektów wykonywalnych i bibliotek niezależnie od systemu operacyjnego, platformy .NET Core można wykonać aplikacji niezależnie od systemu operacyjnego. Aby uzyskać więcej informacji o formacie pliku PE, zobacz [Format pliku zestawu .NET](../../standard/assembly-format.md).
+- Nie trzeba zdefiniować systemów operacyjnych, korzystających z aplikacji .NET Core będą z wyprzedzeniem. Ponieważ platformy .NET Core używa wspólny format plików PE w przypadku plików wykonywalnych i bibliotek, niezależnie od systemu operacyjnego, platformy .NET Core można wykonać aplikacji niezależnie od zasadniczego systemu operacyjnego. Aby uzyskać więcej informacji o formacie pliku PE, zobacz [Format pliku zestawu .NET](../../standard/assembly-format.md).
 
-- Rozmiar pakietu wdrażania jest mała. Można wdrażać tylko w aplikacji i jej zależności nie .NET Core samej siebie.
+- Rozmiar pakietu wdrażania jest mały. Można wdrażać tylko w aplikacji oraz jego zależności, a nie .NET Core sam.
 
-- Wiele aplikacji używać tej samej instalacji .NET Core, co zmniejsza zarówno miejsca i pamięć użycia dysku w systemach hosta.
+- Wiele aplikacji używać tego samego instalacji platformy .NET Core, co zmniejsza zarówno dysku miejsca oraz użycia pamięci w systemach hosta.
 
 Dostępne są również kilka wady:
 
-- Aplikację można uruchomić tylko wtedy, gdy jest to wersja platformy .NET Core, które są przeznaczone lub nowszy, jest już zainstalowana w systemie hosta.
+- Aplikację można uruchomić tylko wtedy, gdy jest to wersja platformy .NET Core, które są przeznaczone lub jego nowsza wersja jest już zainstalowany w systemie hosta.
 
-- Istnieje możliwość środowiska uruchomieniowego .NET Core i biblioteki można zmienić bez wiedzy użytkownika w przyszłych wersjach. W rzadkich przypadkach może to spowodować zmianę zachowania aplikacji.
+- Jest to możliwe, środowisko uruchomieniowe programu .NET Core i bibliotek, które można zmienić bez wiedzy użytkownika w przyszłych wersjach. W rzadkich przypadkach może to spowodować zmianę zachowania aplikacji.
 
-## <a name="self-contained-deployments-scd"></a>Samodzielne wdrożeń (SCD)
+## <a name="self-contained-deployments-scd"></a>Niezależne wdrożenia (— SCD)
 
-Niezależne wdrożenia możesz wdrożyć aplikację i wszystkie wymagane zależności innych firm oraz wersji platformy .NET Core, który był używany podczas kompilowania aplikacji. Tworzenie SCD nie zawiera [natywnego zależności programu .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) na różnych platformach, więc te musi występować przed uruchomieniem aplikacji.
+Niezależne wdrożenia możesz wdrożyć aplikację i wszystkie wymagane zależności innych firm, wraz z wersją programu .NET Core, używanym do tworzenia aplikacji. Tworzenie — SCD nie obejmuje [natywnych zależności platformy .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) na różnych platformach, więc te musi występować przed uruchomieniem aplikacji. Aby uzyskać więcej informacji, wiązanie wersji w czasie wykonywania, zobacz artykuł w [wiązanie wersji w programie .NET Core](../versions/selection.md)
 
-Wdrożenia Dyskietki i SCD Użyj hosta oddzielne pliki wykonywalne, więc możesz utworzyć pliku wykonywalnego hosta SCD w podpisie wydawcy.
+Wdrożenia z stacje i — SCD za pomocą hosta oddzielnych plików wykonywalnych, dzięki czemu możesz zarejestrować wykonywalnego hosta — SCD do podpisu wydawcy.
 
-### <a name="why-deploy-a-self-contained-deployment"></a>Dlaczego wdrożenia niezależne?
+### <a name="why-deploy-a-self-contained-deployment"></a>Dlaczego warto wdrożyć niezależna wdrożenia?
 
-Wdrażanie niezależne wdrożenia ma dwie główne zalety:
+Niezależna wdrożenie ma dwie główne korzyści:
 
-- Masz wyłączną kontrolę wersji platformy .NET Core, który jest wdrażany z aplikacją. Oprogramowanie .NET core może być obsługiwany tylko przez użytkownika.
+- Masz wyłączną kontrolę wersji platformy .NET Core, który jest wdrożony z aplikacją. .NET core może być obsługiwany tylko przez użytkownika.
 
-- Można mieć pewność, system docelowy można uruchomić aplikacji .NET Core, ponieważ jest zapewnienie wersji programu .NET Core, który będzie uruchamiany na.
+- Możesz mieć pewność, system docelowy można uruchomić aplikację .NET Core, ponieważ udostępniasz wersję platformy .NET Core, która zostanie uruchomiona na.
 
-Ma on również szereg wady:
+Ponadto wprowadzono szereg wady:
 
-- Ponieważ .NET Core znajduje się w pakiecie wdrożenia, musisz wybrać platformy docelowe, dla których tworzenia pakietów wdrożeniowych z wyprzedzeniem.
+- Ponieważ platformy .NET Core jest uwzględniony w pakiecie wdrożenia, należy wybrać platformy docelowe, dla których można tworzyć pakiety wdrożeniowe z wyprzedzeniem.
 
-- Rozmiar pakietu wdrażania jest stosunkowo dużej, ponieważ powinien obejmować oprogramowanie .NET Core, a także aplikacji i jej zależności innych firm.
+- Rozmiar pakietu wdrażania jest stosunkowo dużych, ponieważ należy dołączyć platformy .NET Core oraz aplikacji i jej zależności innych firm.
 
-- Wdrażania wielu niezależne aplikacji .NET Core do systemu, jaką może wykorzystać znacznej ilości miejsca na dysku, od każdej aplikacji duplikaty plików .NET Core.
+- Wdrażanie wielu samodzielne aplikacje platformy .NET Core w systemie może zużywać znacznej ilości miejsca na dysku, od każdej aplikacji duplikatów plików .NET Core.
 
 ## <a name="step-by-step-examples"></a>Przykłady krok po kroku
 
-Przykłady krok po kroku wdrażania aplikacji .NET Core za pomocą narzędzi interfejsu wiersza polecenia, zobacz [wdrażanie aplikacji programu .NET Core przy użyciu narzędzi interfejsu wiersza polecenia](deploy-with-cli.md). Przykłady krok po kroku wdrażania aplikacji .NET Core za pomocą programu Visual Studio, zobacz [wdrażanie aplikacji programu .NET Core z programem Visual Studio](deploy-with-vs.md). Każdego tematu zawiera przykłady następujących wdrożeń:
+Instrukcje krok po kroku wdrażania aplikacji .NET Core za pomocą narzędzi interfejsu wiersza polecenia, zobacz [wdrażanie aplikacji .NET Core za pomocą narzędzi interfejsu wiersza polecenia](deploy-with-cli.md). Instrukcje krok po kroku wdrażania aplikacji .NET Core za pomocą programu Visual Studio, zobacz [wdrażanie aplikacji .NET Core z programem Visual Studio](deploy-with-vs.md). Każdy temat zawiera przykłady następujących wdrożeń:
 
-- Zależne od Framework wdrożenia
-- Wdrożenie Framework zależne zależności innych firm
-- Samodzielne wdrożenia
-- Samodzielne wdrożenia zależności innych firm
+- Wdrożenie zależny od struktury
+- Wdrażanie zależny od struktury za pomocą zależności innych firm
+- Niezależne wdrożenia
+- Niezależne wdrożenia przy użyciu zależności innych firm
 
 # <a name="see-also"></a>Zobacz także
 
-[Wdrażanie aplikacji .NET Core za pomocą narzędzi interfejsu wiersza polecenia](deploy-with-cli.md)   
+[Wdrażanie aplikacji programu .NET Core za pomocą narzędzi interfejsu wiersza polecenia](deploy-with-cli.md)   
 [Wdrażanie aplikacji programu .NET Core z programem Visual Studio](deploy-with-vs.md)   
-[Pakiety, Metapackages i platform](../packages.md)   
-[Katalogu .NET core środowiska uruchomieniowego identyfikator (RID)](../rid-catalog.md)
+[Pakiety, Metapakiety i struktury](../packages.md)   
+[Katalog platformy .NET core środowiska uruchomieniowego identyfikator (RID)](../rid-catalog.md)

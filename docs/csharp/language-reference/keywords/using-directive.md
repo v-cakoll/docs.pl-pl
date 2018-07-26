@@ -5,39 +5,39 @@ helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
 ms.openlocfilehash: 180c038987e7de6b39a8eae0e86871eea41a40bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33280094"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960043"
 ---
 # <a name="using-directive-c-reference"></a>using — Dyrektywa (odwołanie w C#)
 `using` Dyrektywy ma trzy zastosowań:  
   
--   Aby zezwolić na użycie typów w przestrzeni nazw, dzięki czemu nie trzeba Zakwalifikuj użycie typu w tej przestrzeni nazw:  
+-   Aby zezwolić na używanie typów w przestrzeni nazw, tak, aby nie trzeba Zakwalifikuj użycie typu w tej przestrzeni nazw:  
   
     ```csharp  
     using System.Text;  
     ```  
   
--   Aby umożliwić dostęp do statycznych elementów członkowskich typu bez kwalifikacji dostępu o nazwie typu. 
+-   Aby zezwolić na dostęp do statycznych elementów członkowskich typu bez konieczności kwalifikuj dostęp do nazwą typu. 
   
     ```csharp  
     using static System.Math;  
     ```  
      
-    Aby uzyskać więcej informacji, zobacz [statycznych dyrektywa using](using-static.md).
+    Aby uzyskać więcej informacji, zobacz [using static, dyrektywa](using-static.md).
 
--   Aby utworzyć alias dla przestrzeni nazw lub typu. Ta metoda jest wywoływana *alias dyrektywa using*.  
+-   Aby utworzyć alias dla przestrzeni nazw lub typu. Jest to nazywane *użycie dyrektywy alias*.  
   
     ```csharp  
     using Project = PC.MyCompany.Project;  
     ```  
   
- `using` — Słowo kluczowe jest również używany do tworzenia *instrukcje using*, który pomocy, upewnij się, że <xref:System.IDisposable> obiekty, takie jak pliki i czcionki są prawidłowo obsługiwane. Zobacz [za pomocą instrukcji](../../../csharp/language-reference/keywords/using-statement.md) Aby uzyskać więcej informacji.  
+ `using` Słowo kluczowe jest również używane do tworzenia *za pomocą instrukcji*, co pomóc, upewnij się, że <xref:System.IDisposable> obiektów, takich jak pliki i czcionki są obsługiwane poprawnie. Zobacz [za pomocą instrukcji](../../../csharp/language-reference/keywords/using-statement.md) Aby uzyskać więcej informacji.  
   
-## <a name="using-static-type"></a>Przy użyciu typu statycznego  
- Statyczne elementy członkowskie typu dostępne bez konieczności zakwalifikować dostępu o nazwie:  
+## <a name="using-static-type"></a>Za pomocą typu statycznego  
+ Statyczne elementy członkowskie typu dostęp bez konieczności kwalifikuj dostęp do nazwą typu:  
   
 ```csharp  
 using static System.Console;   
@@ -52,27 +52,27 @@ class Program
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Zakres `using` dyrektywa jest ograniczona do pliku, w których występuje.  
+ Zakres `using` dyrektywa jest ograniczona do pliku, w której występuje.  
   
- Utwórz `using` alias, aby ułatwić kwalifikują się do przestrzeni nazw lub typ identyfikatora. Prawej stronie, używając aliasu dyrektywy zawsze musi być typem pełną niezależnie od tego, użycie dyrektywy znajdujące się przed nim.  
+ Utwórz `using` aliasu, aby ułatwić kwalifikują się do przestrzeni nazw lub typ identyfikatora. Prawego boku za pomocą aliasu dyrektywy zawsze musi być w pełni kwalifikowanego typu niezależnie od tego używając dyrektyw, które pochodzą przed nią.  
   
- Utwórz `using` dyrektywy można używać typów w przestrzeni nazw, bez konieczności określania przestrzeni nazw. A `using` dyrektywy nie udostępnia wszystkie przestrzenie nazw, które są zagnieżdżone w przestrzeni nazw, należy określić.  
+ Utwórz `using` dyrektywy na używanie typów w przestrzeni nazw bez konieczności określania przestrzeni nazw. A `using` dyrektywy nie umożliwiają dostęp do wszelkich przestrzenie nazw, które są zagnieżdżone w przestrzeni nazw, należy określić.  
   
- Przestrzenie nazw są dostępne w dwóch kategorii: zdefiniowane przez użytkownika i zdefiniowane przez system. Zdefiniowane przez użytkownika przestrzenie nazw są nazw zdefiniowanych w kodzie. Aby uzyskać listę obszarów nazw zdefiniowanych w systemie, zobacz [Przegląd biblioteki klas programu .NET Framework](../../../standard/class-library-overview.md).  
+ Przestrzenie nazw są dostępne w dwóch kategorii: zdefiniowane przez użytkownika i zdefiniowane przez system. Zdefiniowane przez użytkownika przestrzenie nazw są przestrzenie nazw zdefiniowane w kodzie. Aby uzyskać listę nazw zdefiniowaną przez system, zobacz [Przegląd biblioteki klas programu .NET Framework](../../../standard/class-library-overview.md).  
   
- Przykłady dotyczące odwoływania się do metody w innych zestawów można znaleźć [tworzenie i użyj zestawów przy użyciu wiersza polecenia](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
+ Przykłady dotyczące odwoływania się do metody w innych zestawach, zobacz [tworzenie i użyj zestawów przy użyciu wiersza polecenia](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
   
 ## <a name="example-1"></a>Przykład 1  
   
- Poniższy przykład przedstawia sposób zdefiniować i użyć `using` alias przestrzeni nazw:  
+ Poniższy przykład pokazuje, jak zdefiniować i zastosować `using` alias dla przestrzeni nazw:  
   
  [!code-csharp[csrefKeywordsNamespace#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_1.cs)]  
   
- Za pomocą dyrektywy alias nie może być otwartym typem ogólnym po prawej stronie. Na przykład nie można utworzyć za pomocą aliasu dla listy\<T >, ale można utworzyć listę\<int >.  
+ Using — dyrektywa alias nie może mieć to otwarty typ ogólny po prawej stronie. Na przykład nie można utworzyć za pomocą aliasu dla listy\<T >, ale można utworzyć listę\<int >.  
   
 ## <a name="example-2"></a>Przykład 2  
   
- Poniższy przykład przedstawia sposób definiowania `using` dyrektywy i `using` alias klasy:  
+ Poniższy przykład pokazuje jak zdefiniować `using` dyrektywy i `using` alias dla klasy:  
   
  [!code-csharp[csrefKeywordsNamespace#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_2.cs)]  
   
@@ -80,7 +80,7 @@ class Program
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
+ [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Używanie przestrzeni nazw](../../../csharp/programming-guide/namespaces/using-namespaces.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  

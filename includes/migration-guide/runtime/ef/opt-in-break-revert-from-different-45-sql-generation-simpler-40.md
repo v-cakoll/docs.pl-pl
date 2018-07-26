@@ -2,9 +2,9 @@
 
 |   |   |
 |---|---|
-|Szczegóły|Zapytania, które generują instrukcje sprzężenia i zawiera wywołanie ograniczającej operacji bez uprzedniego przy użyciu OrderBy teraz tworzyć prostsze SQL. Po uaktualnieniu do programu .NET Framework 4.5, te zapytania wyprodukowanych SQL bardziej skomplikowane niż w poprzednich wersjach.|
-|Sugestia|Ta funkcja jest domyślnie wyłączone. Jeśli Entity Framework generuje dodatkowe instrukcje JOIN, które powodują spadek wydajności, należy włączyć tę funkcję, dodając następujący wpis do <code>&lt;appSettings&gt;</code> sekcji pliku konfiguracji (app.config) aplikacji:<pre><code class="lang-xml">&lt;add key=&quot;EntityFramework_SimplifyLimitOperations&quot; value=&quot;true&quot; /&gt;&#13;&#10;</code></pre>|
+|Szczegóły|Zapytania, które generuje instrukcje JOIN i zawierać wywołanie ograniczającą operacji bez uprzedniego przy użyciu OrderBy teraz tworzyć prostsze SQL. Po uaktualnieniu do wersji .NET Framework 4.5, te zapytania utworzone SQL bardziej skomplikowane niż w starszych wersjach.|
+|Sugestia|Ta funkcja jest domyślnie wyłączone. Jeśli Entity Framework wygeneruje dodatkowe instrukcje JOIN, które powodują spadek wydajności, możesz włączyć tę funkcję, dodając następujący wpis do <code>&lt;appSettings&gt;</code> sekcję pliku konfiguracji aplikacji (app.config):<pre><code class="lang-xml">&lt;add key=&quot;EntityFramework_SimplifyLimitOperations&quot; value=&quot;true&quot; /&gt;&#13;&#10;</code></pre>|
 |Zakres|Przezroczyste|
 |Wersja|4.5.2|
-|Typ|środowisko uruchomieniowe|
+|Typ|Środowisko uruchomieniowe|
 

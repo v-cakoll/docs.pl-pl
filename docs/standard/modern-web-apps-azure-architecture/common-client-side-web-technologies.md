@@ -1,89 +1,87 @@
 ---
 title: Typowe technologie sieci web po stronie klienta
-description: Projektowania nowoczesnych aplikacji sieci Web platformy ASP.NET Core i Azure | Typowe technologie sieci web po stronie klienta
+description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy ASP.NET Core i platformy Azure | Typowe technologie sieci web po stronie klienta
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/07/2017
-ms.openlocfilehash: 79dac220e40274889783d29c0e04679dd878fda5
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 6/28/2018
+ms.openlocfilehash: 692c1bf243c26ef6dcf441be9324e43d6a93fe50
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106765"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404609"
 ---
-# <a name="common-client-side-web-technologies"></a>Typowe technologie sieci Web po stronie klienta
+# <a name="common-client-side-web-technologies"></a>Typowe technologie sieci web po stronie klienta
 
-> "Witryn sieci Web powinien wyglądać wewnątrz i out."  
-> _-Pawła Cookson_
+> "Witryny sieci Web powinna wyglądać wewnątrz i out".  
+> _— Paul Cookson_
 
-## <a name="summary"></a>Podsumowanie
+Aplikacje platformy ASP.NET Core to aplikacje sieci web i zwykle korzystają z technologii sieci web po stronie klienta, takich jak HTML, CSS i JavaScript. Oddzielając zawartości strony (HTML) od jego układu i stylów (CSS) i jego zachowanie (przy użyciu języka JavaScript), zasada oddzielenie obaw można używać w aplikacjach złożonej sieci. Przyszłe zmiany struktury, projektu lub zachowania aplikacji będzie możliwe więcej łatwo podczas tych problemów nie jest sprzężony.
 
-Aplikacje platformy ASP.NET Core są aplikacji sieci web i są one zwykle oparte na technologii sieci web po stronie klienta, takich jak HTML, CSS i JavaScript. Oddzielając zawartości strony (HTML) od jej układu i stylów (CSS) i jego zachowanie (za pośrednictwem kodu JavaScript), aplikacje sieci web złożonych można wykorzystać zasady separacji problemy. Przyszłe zmiany struktury, projektu lub zachowania aplikacji będzie możliwe więcej łatwo podczas tych problemów nie jest sprzężony.
-
-HTML i CSS są stosunkowo stabilny, JavaScript, za pomocą platformy aplikacji a deweloperom narzędzia do tworzenia aplikacji opartych na sieci web, ewoluuje breakneck szybkością. W tym rozdziale analizuje na kilka sposobów, JavaScript jest używana przez deweloperów sieci web w ramach tworzenia aplikacji, ponieważ zawiera ogólne omówienie kątową i platformy React bibliotek po stronie klienta.
+Mimo że HTML i CSS stosunkowo czasu trwania stanu stabilnego, JavaScript, za pomocą struktury aplikacji a deweloperom narzędzia do kompilowania aplikacji opartych na sieci web, ewoluuje breakneck szybkością. W tym rozdziale patrzy na kilka sposobów, JavaScript jest używana przez deweloperów sieci web jako część tworzenia aplikacji, ponieważ zawiera ogólne omówienie usługi Angular i języka React bibliotek po stronie klienta.
 
 ## <a name="html"></a>HTML
 
-HTML (HyperText Markup Language) to standardowy język używany do tworzenia strony sieci web i aplikacji sieci web. Jego elementy tworzą bloków konstrukcyjnych stron, reprezentujący sformatowanego tekstu, obrazów, dane wejściowe formularza i inne struktury. Gdy przeglądarką wysyła żądanie do adresu URL, czy pobierania strony lub aplikacji, po pierwsze jest zwracana jest dokumentu HTML. Ten dokument HTML może odwoływać się lub dołączania dodatkowych informacji o jego wygląd i układu w postaci CSS lub zachowanie w formie JavaScript.
+HTML (HyperText Markup Language) to standardowy język używany do tworzenia stron sieci web i aplikacji sieci web. Jego elementy tworzą bloki konstrukcyjne stron, reprezentujący sformatowany tekst, obrazy, dane wejściowe formularza i innych struktur. Podczas przeglądarce wysyła żądanie do adresu URL, czy pobierania strony sieci lub aplikacji, czyli po pierwsze zwrócony jest dokumentu HTML. Ten dokument HTML może odwoływać się lub zawierają dodatkowe informacje na temat jego wygląd i układu w formie CSS lub zachowanie w postaci kodu JavaScript.
 
 ## <a name="css"></a>CSS
 
-CSS (kaskadowych arkuszy stylów) służy do kontrolowania wygląd i układ elementów HTML. Style CSS można stosowane bezpośrednio do elementu HTML, określane oddzielnie na tej samej stronie, lub zdefiniowane w osobnym pliku i odwołuje się strony. Style cascade oparte na korzystania z nich do wybrania danego elementu HTML. Na przykład stylu mogą być stosowane do całego dokumentu, ale może zostać zastąpiona przez styl stosowany do określonego elementu. Podobnie styl specyficzne dla elementu zostanie przesłonięte przez styl, który dotyczy klasy CSS, która została zastosowana do elementu, który z kolei może zostać zastąpiona przez styl przeznaczonych dla określonego wystąpienia tego elementu (za pomocą jego identyfikatora). Rysunek 6-1
+CSS (kaskadowe arkusze stylów) jest używane do kontrolowania, to wygląd i układ elementy HTML. Style CSS można stosować bezpośrednio do elementu HTML, określane oddzielnie na tej samej stronie lub zdefiniowane w oddzielnym pliku i przywoływany przez stronę. Style cascade, w oparciu o ich używania do wybrania danego elementu HTML. Na przykład stylu mogą być stosowane do całego dokumentu, ale może być zastąpiona przez stylu, które są stosowane do określonego elementu. Podobnie styl specyficzne dla elementu może być zastąpiona przez styl, który dotyczy klasy CSS, która została zastosowana do elementu, który z kolei może być zastąpiona przez styl przeznaczonych dla określonego wystąpienia tego elementu (za pomocą jego identyfikatora). Rysunek 6-1
 
-**Rysunek 6-1.** Reguły CSS szczegółowością w kolejności.
+**Rysunek 6-1.** Reguły CSS specyficzności w kolejności.
 
 ![](./media/image6-1.png)
 
-Najlepiej, aby zachować style w swoich plików oddzielne arkusza stylów, a także do użycia na podstawie wyboru kaskadowych do zaimplementowania style spójne i do ponownego użycia w aplikacji. Należy unikać wprowadzania do reguły stylu w pliku HTML i stosowanie stylów do określonych poszczególne elementy (a nie całej klasy elementów lub elementów, które miały określonej klasy CSS stosowana do nich) powinna być wyjątek nie reguły.
+Najlepiej przechowywać style w swoich plików oddzielny arkusz stylów i przy użyciu na podstawie wyboru cascading style spójnego i wielokrotnego użytku w aplikacji. Należy unikać wprowadzania do reguł stylu w pliku HTML, a stosowanie stylów do określonych poszczególne elementy (a nie całej klasy elementów lub elementów, których konkretnej klasy CSS stosowany do nich) powinna być wyjątek nie reguły.
 
-### <a name="css-preprocessors"></a>CSS Preprocessors
+### <a name="css-preprocessors"></a>Preprocesorami standardów CSS
 
-Arkusze stylów CSS nie obsługują logikę warunkową, zmienne i inne funkcje języka programowania. W związku z tym duże arkusze stylów często obejmują aktualnymi, kolor czcionki i inne ustawienie jest stosowane do wielu różnych wariantów elementów HTML i klas CSS. CSS preprocessors mogą pomóc Twojej arkusze stylów, postępuj zgodnie z [suchej zasady](http://deviq.com/don-t-repeat-yourself/) przez dodanie obsługi logiki i zmienne.
+Arkusze stylów CSS nie obsługują logikę warunkową, zmienne i innych funkcji języków programowania. W związku z tym duże arkusze stylów często zawierają dużo powtórzeń, jak ten sam kolor, czcionki lub inne ustawienie jest stosowane do wielu różnych wariantów elementów kodu HTML i CSS klas. Preprocesorami standardów CSS może pomóc Twojej arkusze stylów, postępuj zgodnie z [susz zasady](https://deviq.com/don-t-repeat-yourself/) przez dodanie obsługi zmiennych i logiki.
 
-Najbardziej popularnym preprocessors CSS są Sass i mniejsza. Oba rozszerzenia CSS i są zgodne z poprzednimi wersjami, co oznacza, że zwykły plik CSS jest prawidłowy Sass lub MNIEJSZY plik. Sass jest oparta na protokole Ruby jest oparty na języku JavaScript i obie są zazwyczaj uruchamiane jako część procesu wdrożenia lokalnego. Mają polecenie wiersza narzędzia dostępne, a także wbudowana obsługa w programie Visual Studio do uruchamiania ich za pomocą Gulp lub Grunt zadań.
+Najbardziej popularne preprocesorami standardów CSS są Sass i KRÓTSZY. Oba rozszerzenia CSS i są zgodne z poprzednimi wersjami, co oznacza, że zwykły plik CSS prawidłowe Sass lub pliku języka LESS. Sass jest oparty na Ruby mniejsza jest w języku JavaScript i zarówno zazwyczaj uruchamiane w ramach procesu tworzenia aplikacji lokalnej. Istnieją polecenia wiersza narzędzia dostępne, a także wbudowaną obsługę w programie Visual Studio do uruchamiania ich przy użyciu zadań Gulp ani Grunt.
 
 ## <a name="javascript"></a>JavaScript
 
-JavaScript jest dynamiczny, interpretacji języka programowania, które w specyfikacji języka ECMAScript. Jest język programowania sieci Web. Podobnie jak CSS JavaScript można zdefiniować jako atrybuty w obrębie elementów HTML jako bloki skryptu na stronie lub w oddzielnym pliku. Podobnie jak CSS ogólnie zaleca się organizowania JavaScript w oddzielnych plików, wówczas zachowanie oddzielone możliwie z kodu HTML, znaleziono na stronach sieci web lub aplikacji widoków.
+JavaScript jest dynamiczny, interpretowanych języka programowania, którego normalizowane w specyfikacji języka ECMAScript. To język programowania sieci web. Podobnie jak CSS JavaScript można zdefiniować jako atrybutów w obrębie elementów HTML jako bloki skryptu na stronie lub w oddzielnych plikach. Podobnie jak CSS ogólnie zaleca się organizowania kodu JavaScript w osobnych plikach, utrzymywanie jej rozdzielonych możliwie z kodu HTML na stronach sieci web albo widoki aplikacji.
 
-Podczas pracy z JavaScript w aplikacji sieci web, istnieje kilka zadań, które należy zwykle wykonać:
+Podczas pracy z użyciem języka JavaScript w aplikacji sieci web, istnieje kilka zadań, które będzie najczęściej należy wykonać:
 
--   Wybranie elementu HTML i pobierania i/lub zaktualizowanie jego wartości
+- Wybieranie elementu HTML i pobierania i/lub aktualizowanie jego wartości.
 
--   Interfejs API sieci Web dla danych zapytań
+- Wykonywanie zapytania do internetowego interfejsu API danych.
 
--   Reagowanie na wywołanie zwrotne na jej wynik (i wysyłania polecenia do interfejsu API sieci Web)
+- Wysyłanie polecenia do internetowego interfejsu API (i reagowanie na nie z jego wynikiem wywołania zwrotnego).
 
--   Wykonywanie sprawdzania poprawności
+- Wykonywanie sprawdzania poprawności.
 
-Mogą wykonywać wszystkie te zadania JavaScript samodzielnie, ale istnieje wiele bibliotek ułatwiają te zadania. Jednym z pierwsze i najbardziej popularnych bibliotek tych jest jQuery, który jest nadal popularnych wybór dla uproszczenia te zadania na stronach sieci web. Aplikacje jednostronicowe (źródła) jQuery nie zapewniają wiele żądanych funkcji, które oferują kątową i bibliotece React.
+Mogą wykonywać wszystkie te zadania za pomocą języka JavaScript samodzielnie, ale istnieje wiele bibliotek, aby ułatwić te zadania. Pierwsze i najbardziej popularnych tych bibliotek on jQuery, która nadal jest to popularne wybór dla uproszczenia te zadania na stronach sieci web. Aplikacje jednostronicowe (źródła), aby uzyskać jQuery nie zapewnia wiele żądanych funkcji, które oferują usługi Angular i języka React.
 
-### <a name="legacy-web-apps-with-jquery"></a>Starsze aplikacje sieci Web z jQuery
+### <a name="legacy-web-apps-with-jquery"></a>Aplikacje internetowe w starszej wersji za pomocą technologii jQuery
 
-Mimo że starożytnych według standardów framework JavaScript, jQuery jest nadal bardzo często używane biblioteki do pracy z HTML/CSS i tworzenia aplikacji, które wywołań AJAX do interfejsów API sieci web. Jednak jQuery działa na poziomie przeglądarki document object model (DOM) i domyślnie oferuje tylko nadrzędnych, a nie deklaratywne, model.
+Chociaż starożytnych przez standardy framework JavaScript, jQuery jest nadal Biblioteka bardzo często używane do pracy z HTML/CSS oraz tworzenia aplikacji, które wykonywanie wywołań AJAX do interfejsów API sieci web. Jednak jQuery działa na poziomie przeglądarka document object model (DOM) i domyślnie oferuje tylko imperatywnego, zamiast deklaratywnym, model.
 
-Na przykład załóżmy, że jeśli pole tekstowe wartość przekracza 10, elementu na stronie powinny być widoczne. W jQuery to będzie zwykle realizowane przez pisanie programu obsługi zdarzeń z kodem, który będzie Sprawdź wartość w polu tekstowym, a następnie ustawić widoczności elementu docelowego na podstawie tej wartości. To podejście imperatywnych, opartych na kodzie. Framework innej zamiast tego użyć wiązania z danymi deklaratywnie powiązać widoczności elementu na wartość pola tekstowego. Nie wymagają pisania żadnego kodu, ale zamiast tego tylko wymaga dekoracji elementy związane z atrybutami powiązania danych. Wzrostem bardziej złożonych zachowań po stronie klienta wiązania z danymi zbliża się często wynik w rozwiązaniach prostsze mniej kodu i złożonością warunkowego.
+Załóżmy na przykład, jeśli wartość w polu tekstowym przekracza 10, element na stronie powinny być widoczne. W jQuery to będzie zwykle można zaimplementować, pisząc program obsługi zdarzeń z kodem, które może sprawdzić wartość w polu tekstowym, a następnie Ustaw widoczność elementu docelowego, na podstawie tej wartości. Jest to podejścia imperatywnego, oparte na kodzie. Framework innego zamiast tego użyć wiązania danych widoczności elementu można powiązać wartości pola tekstowego deklaratywnie. Nie wymaga pisania żadnego kodu, ale zamiast tego wymaga jedynie urządzanie elementy związane z atrybutów powiązania danych. Ponieważ coraz bardziej złożonych zachowań po stronie klienta powiązanie danych zbliża się często wynik w rozwiązaniach prostsze mniej kodu i złożonością warunkowe.
 
 ### <a name="jquery-vs-a-spa-framework"></a>vs jQuery SPA Framework
 
-| **Współczynnik** | **jQuery** | **Dyrektywy angular**|
+| **współczynnik** | **jQuery** | **Platformy angular**|
 |--------------------------|------------|-------------|
-| Abstracts modelu DOM | **tak** | **tak** |
-| Obsługa technologii AJAX | **tak** | **tak** |
-| Powiązanie danych deklaratywne | **Brak** | **tak** |
-| Styl MVC routingu | **Brak** | **tak** |
-| Tworzenia szablonów | **Brak** | **tak** |
-| Głębokie łącze routingu | **Brak** | **tak** |
+| Przenosi modelu DOM | **Tak** | **Tak** |
+| Obsługa technologii AJAX | **Tak** | **Tak** |
+| Powiązanie dane deklaratywne | **Brak** | **Tak** |
+| MVC styl routingu | **Brak** | **Tak** |
+| Tworzenie szablonów | **Brak** | **Tak** |
+| Głębokie łącze routingu | **Brak** | **Tak** |
 
-Większość funkcji, które jQuery nie ma bardzo można dodać z uwzględnieniem innych bibliotek. Framework SPA, takich jak kątową zapewnia jednak te funkcje w sposób integracji, ponieważ jest on przeznaczony wszystkich z nich na uwadze od początku. Ponadto jQuery jest bardzo ważnych biblioteki, co oznacza konieczność wywoływać funkcje jQuery, aby można było wykonywać żadnych czynności z jQuery. Większość pracy i funkcje, które zapewniają struktur SPA można deklaratywnie, wymagających bez rzeczywistego kodu do zapisania.
+Większość funkcji, które jQuery brakuje wewnętrznie można dodawać dodając inne biblioteki. SPA framework, takich jak Angular zapewnia jednak te funkcje w sposób bardziej zintegrowaną, ponieważ jest on zaprojektowany przy użyciu wszystkich z nich pamiętać od samego początku. Ponadto jQuery jest bardzo imperatywne biblioteki, co oznacza, trzeba wywoływać funkcje jQuery, aby można było korzystać z technologii jQuery. Większość pracy i funkcji, które oferują struktur SPA może odbywać się w sposób deklaratywny, wymaganie nie rzeczywisty kod do zapisania.
 
-Powiązanie danych jest doskonałym przykładem. W jQuery zwykle potrwa to tylko jeden wiersz kodu można uzyskać wartość elementu DOM lub ustawić wartości elementu. Niemniej jednak należy napisać ten kod w dowolnej chwili należy zmienić wartość elementu, a czasami będzie to miało miejsce wiele funkcji na stronie. Innym typowym przykładem jest widoczności elementu. W jQuery może być wielu różnych miejscach, w którym piszesz kodu do kontroli czy niektóre elementy były widoczne. W każdym z tych przypadków, gdy używanie powiązania danych żaden kod potrzebny do zapisania. Czy po prostu powiązać wartości lub widoczność elementów danego *viewmodel* na stronie i zmiany w tym viewmodel będzie automatycznie odzwierciedlane w elementów powiązania.
+Wiązanie danych jest doskonałym przykładem. W jQuery zwykle trwa tylko jeden wiersz kodu, można pobrać wartości elementu modelu DOM lub ustaw wartość elementu. Jednak trzeba napisać ten kod w dowolnym momencie należy zmienić wartość elementu, a czasami będzie to miało miejsce w wiele funkcji, na stronie. Innym typowym przykładem jest widoczności elementu. W jQuery może być wielu różnych miejsc, gdzie należy napisać kod do kontroli czy niektóre elementy były widoczne. W każdym z tych przypadków, gdy za pomocą powiązania danych żaden kod należałoby do zapisania. Czy po prostu powiązania wartości lub widoczność elementów danego *viewmodel* na stronie i zmiany do tego viewmodel będzie automatycznie odzwierciedlone w powiązanych elementów.
 
-### <a name="angular-spas"></a>Dyrektywy angular źródła
+### <a name="angular-spas"></a>Platformy angular aplikacji jednostronicowych
 
-AngularJS szybko stał się jedną z najbardziej popularnych struktur JavaScript na świecie. Z 2 kątowego zespołu odbudować się framework od podstaw (przy użyciu [TypeScript](https://www.typescriptlang.org/)) i rebranded z AngularJS, aby po prostu kąta. Obecnie w wersji 4 kątową jest nadal niezawodne framework do tworzenia jednej strony aplikacji.
+Moduł AngularJS szybko stało się jedną z najbardziej popularnych struktur JavaScript na świecie. Przy użyciu usługi Angular 2, zespół odbudować się framework od podstaw (przy użyciu [TypeScript](https://www.typescriptlang.org/)) i przemianowane z AngularJS, można po prostu Angular. Obecnie w wersji 4, usługi Angular jest nadal niezawodna architektura służąca do tworzenia aplikacji.
 
-Dyrektywy angular aplikacji są tworzone na podstawie składników. Składniki łączyć szablony HTML z obiektami specjalne i kontrolować części strony. Proste składnika z dokumentów firmy kątową jest następujący:
+Aplikacje angular są tworzone za pomocą składników. Składniki łączyć szablony HTML przy użyciu specjalnych obiektów i kontrolować części strony. Prostego składnika Angular dokumentach przedstawiono poniżej:
 
 ```js
 import { Component } from '@angular/core';
@@ -96,21 +94,21 @@ import { Component } from '@angular/core';
 export class AppComponent { name = 'Angular'; }
 ```
 
-Składniki są definiowane przy użyciu @Component funkcji dekoratora, który ma w metadanych dotyczących składnika. Właściwość selektora identyfikuje identyfikator elementu na stronie, gdy ten składnik będzie wyświetlany. Właściwości szablonu jest proste szablonu HTML, który zawiera symbol zastępczy odpowiadające właściwości name elementu, zdefiniowane w ostatnim wierszu.
+Składniki są definiowane przy użyciu @Component funkcji dekoratora, które pobiera metadane dotyczące składnika. Właściwość selektor identyfikuje identyfikator elementu na stronie, gdzie zostaną wyświetlone tego składnika. Właściwości szablonu to prosty szablon HTML, który zawiera symbol zastępczy, który odpowiada właściwości nazwy składnika, zdefiniowane w ostatnim wierszu.
 
-Praca z elementami i szablony, zamiast elementy modelu DOM kątowego aplikacji może działać na wyższym poziomie abstrakcji z mniej ogólny kodu niż w przypadku aplikacji napisanych przy użyciu tylko języka JavaScript (zwane również "waniliowe JS") lub z jQuery. Kątową nakłada także niektóre kolejności, w jaki sposób organizowania plików skryptu po stronie klienta. Według Konwencji kątowego aplikacji za pomocą wspólnej struktury folderów, module i składnik plików skryptów znajdujących się w folderze aplikacji. Skrypty kątowego związane z tworzenie, wdrażanie i testowanie aplikacji znajdują się zwykle w folderze wyższego poziomu.
+Praca z elementami i szablonów, zamiast elementów DOM aplikacji Angular może działać na wyższym poziomie abstrakcji i mniejszej ilości kodu ogólny niż aplikacje napisane przy użyciu tylko JavaScript (zwane również "vanilla JS") lub z jQuery. Platformy Angular nakłada również niektóre kolejność, w jaki sposób organizowania plików skryptu po stronie klienta. Zgodnie z Konwencją aplikacji Angular za pomocą wspólnej struktury folderów, moduł, jak i składnika pliki skryptów znajdujących się w folderze aplikacji. Platformy angular skrypty zaniepokojona tworzenie, wdrażanie i testowanie aplikacji zwykle znajdują się w folderze wyższego poziomu.
 
-Kątową powoduje dużą korzystanie z narzędzi wiersza polecenia (CLI). Wprowadzenie do korzystania z dyrektywy Angular programowanie lokalnie (przy założeniu, masz już git i npm zainstalowany) składa się z po prostu klonowanie repozytorium GitHub i działa \`instalacji narzędzia npm\` i \`npm start\`. Poza tym kątową dostarczany własne narzędzia interfejsu wiersza polecenia, które można tworzyć projekty, Dodaj pliki i ułatwić testowanie, tworzenie pakietów i wdrożenia zadania. Ten interfejs wiersza polecenia narzędzia łatwość zastosowania sprawia, że kątową szczególnie zgodne z platformy ASP.NET Core, które również funkcje dużą Obsługa interfejsu wiersza polecenia.
+Platformy Angular sprawia, że doskonałe korzystanie z narzędzi interfejsu wiersza polecenia (CLI). Wprowadzenie do usługi Angular programowanie lokalnie (przy założeniu, masz już git i narzędzia npm zainstalowane) składa się z po prostu klonowanie repozytorium z serwisu GitHub i uruchamianie `npm install` i `npm start`. Poza tym Angular jest dostarczany własne narzędzie interfejsu wiersza polecenia, można tworzyć projekty, dodanie plików, która uzyskanymi zadań testowania, tworzenie pakietów i wdrażanie. Ten interfejs wiersza polecenia narzędzia łatwość zastosowania sprawia, że Angular jest szczególnie zgodnych z platformą ASP.NET Core, która obejmuje także doskonałą obsługę interfejsu wiersza polecenia.
 
-Firma Microsoft opracowała aplikację odwołanie [eShopOnContainers](http://aka.ms/MicroservicesArchitecture), w tym implementację kątowego SPA. Ta aplikacja zawiera kątowego modułów do zarządzania Sklep internetowy zakupy koszyka, obciążenia i wyświetlania elementów z jego katalogu i obsługa tworzenia zamówienia. Można wyświetlić i pobrać przykładową aplikację z [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA).
+Firma Microsoft opracowała aplikację odwołanie [ramach aplikacji eShopOnContainers](https://aka.ms/MicroservicesArchitecture), który zawiera implementację Angular SPA. Ta aplikacja zawiera Angular modułów, aby zarządzać sklepu internetowego zakupy koszyka, ładowanie i wyświetlanie elementów ze swojego katalogu i obsługa tworzenia zamówienia. Możesz wyświetlić i pobrać przykładową aplikację z [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA).
 
-### <a name="react"></a>reakcji
+### <a name="react"></a>react
 
-W odróżnieniu od kątową, która zapewnia pełnej implementacji wzorca Model-View-Controller platformy React dotyczy jedynie widoków. Nie jest framework, po prostu biblioteki, tak aby utworzyć SPA musisz korzystać z dodatkowych bibliotek.
+Inaczej niż w przypadku szablonów Angular, która zapewnia pełnej implementacji wzorca Model-View-Controller, React dotyczy jedynie widoków. Nie jest framework, po prostu bibliotekę, aby tworzyć SPA należy korzystać z dodatkowych bibliotek.
 
-Jedną z najważniejszych funkcji w bibliotece React jest możliwość używania wirtualnej modelu DOM. DOM wirtualnych zapewnia platformy React wiele korzyści, w tym wydajności (DOM wirtualnych można zoptymalizować części rzeczywiste modelu DOM, które muszą zostać zaktualizowane) i testowania (nie trzeba mieć przeglądarkę do testowania platformy React i jego interakcje z jego DOM wirtualnego).
+Jedną z najważniejszych funkcji React firmy jest możliwość używania wirtualnej modelu DOM. DOM wirtualnego zapewnia kilka korzyści, takich jak wydajność, (DOM wirtualnych można zoptymalizować części rzeczywiste modelu DOM, które muszą zostać zaktualizowane) i testowania (nie trzeba mieć przeglądarki, aby przetestować platformy React i jego interakcje z jego wirtualnego modelu DOM) React.
 
-Platformy react jest również w sposób działania kodu HTML. Zamiast zareagować strict separacji między kodem i znaczników (z odwołaniami do języka JavaScript znajdujących się w atrybutach HTML prawdopodobnie), dodaje HTML bezpośrednio w ramach jego kod JavaScript jako JSX. JSX jest składnia notacji języka HTML, który umożliwia kompilację do czystych JavaScript. Na przykład:
+React jest również w jak współdziałają z kodu HTML. Zamiast strict separacji między kodem i znaczników (z odwołaniami do języka JavaScript znajdujących się w atrybutach HTML, być może), React dodaje HTML bezpośrednio w ramach jego kod JavaScript jako JSX. JSX to składnia przypominająca HTML, który może kompilować czystego kodu JavaScript. Na przykład:
 
 ```js
 <ul>
@@ -120,50 +118,50 @@ Platformy react jest również w sposób działania kodu HTML. Zamiast zareagowa
 </ul>
 ```
 
-Jeśli znasz już język JavaScript, powinno być łatwe uczenia platformy React. Nie ma prawie więcej naukę lub specjalnej składni zaangażowanych jako kątową lub innych popularnych bibliotek.
+Jeśli znasz już język JavaScript, nauka platformy React powinno być łatwe. Nie ma prawie tak dużej ilości nauki lub specjalnej składni zaangażowani jako przy użyciu usług Angular i innych popularnych bibliotek.
 
-Ponieważ platformy React nie jest pełną strukturę, zazwyczaj należy innych bibliotek do obsługi elementów, jak routingu, sieci web interfejsu API i zarządzania zależności. Dodatkową korzyścią jest najlepszym biblioteki można wybrać dla każdego z nich, ale wadą jest konieczność wszystkie te decyzje i sprawdź, czy wszystkie wybrane bibliotek siebie gdy wszystko będzie gotowe. Jeśli chcesz dobry punkt wyjścia, można użyć startowy, takich jak reagować Slingshot, który jednostkowych zestawu zgodnych bibliotek wraz z platformy React.
+Ponieważ React nie jest pełną strukturę, zazwyczaj należy innych bibliotek do obsługi elementów, takich jak routing, sieci web interfejsu API i zarządzanie zależnościami. Korzyścią jest, możesz wybrać najlepsze biblioteki dla każdego z nich, ale wadą jest konieczność wszystkie te decyzje i sprawdź, czy z wybranym bibliotek współdziałają również gdy wszystko będzie gotowe. Jeśli chcesz dobry punkt wyjścia, można użyć startowy, takich jak Slingshot reagować, który jednostkowych zestawu zgodnych bibliotek wraz z platformy React.
 
 ### <a name="choosing-a-spa-framework"></a>Wybieranie SPA Framework
 
-Przy uwzględnieniu architektury JavaScript, które będzie najlepiej do obsługi sieci SPA, należy pamiętać następujące kwestie:
+Podczas biorąc pod uwagę platformy JavaScript, która będzie działać najlepiej do obsługi usługi SPA, należy uwzględnić następujące kwestie:
 
--   Czy zespół zna platformę i jego zależności (takie jak TypeScript w niektórych przypadkach)?
+- Czy zespół jest zapoznać się z programu framework oraz jego zależności (takie jak TypeScript w niektórych przypadkach)
 
--   Jak opinionated jest strukturą, i są zgodne z jego domyślny sposób działania?
+- Jak ceniona jest strukturą, i są zgodne z jego domyślnej w sposób?
 
--   On (lub biblioteka pomocnika) zawiera wszystkie funkcje, które wymaga aplikacji?
+- On (lub biblioteki pomocnika) zawiera wszystkie funkcje, których wymaga aplikacja?
 
--   Jest to dobrze udokumentowane?
+- Jest to dobrze udokumentowane?
 
--   Jak aktywny jest jego społeczności? Nowe projekty tworzenia są tworzone z nim?
+- Jak aktywny jest jego społeczności? Czy nowe projekty tworzenia są tworzone za pomocą jej?
 
--   Jak aktywny jest jego zespół core? Problemy rozwiązane i nowej wersji jest są dostarczane regularnie?
+- Jak aktywny jest jego podstawowego zespołu? Problemy są rozwiązane i nowe wersje są dostarczane regularnie?
 
-Struktury JavaScript nadal podlegać ewolucji o prędkości breakneck. Użyj zagadnienia wymienionych powyżej w celu zmniejszenia ryzyka Wybieranie framework, który zostanie później Zrezygnuj jest zależne. Jeśli masz szczególnie ryzyka averse, należy wziąć pod uwagę platforma, która zapewnia obsługę handlowych i/lub jest opracowany przez dużych przedsiębiorstw.
+Będą dalej rozwijać się z szybkością breakneck platformy JavaScript. Użyj zagadnień wymienionych powyżej w celu zmniejszenia ryzyka framework, który będzie później Zrezygnuj jest zależne od wyboru. Jeśli masz szczególnie nielubiącym ryzyka, należy wziąć pod uwagę strukturę, która oferuje obsługę komercyjnych i/lub jest opracowywany dużych przedsiębiorstw.
 
 > ### <a name="references--client-web-technologies"></a>Odwołania — technologii sieci Web klienta
 > - **HTML i CSS**  
 > <https://www.w3.org/standards/webdesign/htmlcss>
-> - **Sass vs. LESS**  
+> - **Sass programu vs. LESS**  
 > <https://www.keycdn.com/blog/sass-vs-less/>
-> - **Ustawianie stylów aplikacji platformy ASP.NET Core jest mniejsza, Sass i świetny czcionki**  
+> - **Ustawianie stylów aplikacji platformy ASP.NET Core za pomocą LESS, Sass i Font Awesome**  
 > <https://docs.microsoft.com/aspnet/core/client-side/less-sass-fa>
-> - **Programowanie po stronie klienta w platformy ASP.NET Core**  
+> - **Programowanie po stronie klienta w programie ASP.NET Core**  
 > <https://docs.microsoft.com/aspnet/core/client-side/>
 > - **jQuery**  
 > <https://jquery.com/>
 > - **jQuery vs AngularJS**  
 > <https://www.airpair.com/angularjs/posts/jquery-angularjs-comparison-migration-walkthrough>
-> - **Dyrektywy angular**  
+> - **Platformy angular**  
 > <https://angular.io/>
-> - **reakcji**  
+> - **react**  
 > <https://facebook.github.io/react/>
-> - **Zareagować Slingshot**  
+> - **React Slingshot**  
 > <https://github.com/coryhouse/react-slingshot>
-> - **Zareagować vs kątowego porównania 2**  
+> - **Vs react porównanie usługi Angular 2**  
 > <https://www.codementor.io/codementorteam/react-vs-angular-2-comparison-beginners-guide-lvz5710ha>
-> - **5 najlepsze platformach JavaScript 2017**  
+> - **5 najlepszych platformy JavaScript 2017 r.**  
 > <https://hackernoon.com/5-best-javascript-frameworks-in-2017-7a63b3870282>
 
 >[!div class="step-by-step"]

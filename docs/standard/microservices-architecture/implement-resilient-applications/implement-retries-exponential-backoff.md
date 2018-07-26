@@ -1,21 +1,21 @@
 ---
-title: Implementowanie ponownych prób z wykładniczego wycofywania
-description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Implementowanie ponownych prób z wykładniczego wycofywania
+title: Implementowanie ponownych prób z wykorzystaniem wykładniczego wycofywania
+description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Implementowanie ponownych prób z wykorzystaniem wykładniczego wycofywania
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: ee5dd711484ba7861eedbd9613fda1209736d5b6
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/08/2018
+ms.openlocfilehash: a5ab15299ecb501691c26bbc6d377e22a38ee51e
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106921"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874367"
 ---
-# <a name="implementing-retries-with-exponential-backoff"></a>Implementowanie ponownych prób z wykładniczego wycofywania
+# <a name="implement-retries-with-exponential-backoff"></a>Implementowanie ponownych prób z wykorzystaniem wykładniczego wycofywania
 
-[*Ponowne próby z wykładniczego wycofywania* ](https://docs.microsoft.com/azure/architecture/patterns/retry) to technika, który próbuje ponowić próbę wykonania operacji, rośnie wykładniczo czas oczekiwania, aż do osiągnięcia maksymalnej liczby ponownych prób ( [wykładniczego wycofywania](https://en.wikipedia.org/wiki/Exponential_backoff) ). Ta metoda obejmuje fakt, że zasobów w chmurze mogą sporadycznie być niedostępne dla więcej niż kilka sekund różnych przyczyn. Na przykład orchestrator może być przenoszenie kontener do innego węzła w klastrze równoważenia obciążenia. W tym czasie niektórych żądań może zakończyć się niepowodzeniem. Innym przykładem może być bazy danych, takich jak Azure SQL, w których bazy danych można przenieść na inny serwer obciążenia równoważenia, co powoduje bazy danych będzie dostępny za kilka sekund.
+[*Ponowne próby z wykorzystaniem wykładniczego wycofywania* ](https://docs.microsoft.com/azure/architecture/patterns/retry) jest techniką, która podejmuje próbę operacji z wykładniczo rosnącym czas oczekiwania, aż do osiągnięcia maksymalnej liczby ponownych prób ( [wykładniczego wycofywania](https://en.wikipedia.org/wiki/Exponential_backoff) ). Metoda ta wykorzystuje fakt, że zasoby w chmurze może sporadycznie być niedostępne dla więcej niż kilku sekund z dowolnego powodu. Na przykład koordynatora może być przenoszenie kontenera do innego węzła w klastrze równoważenia obciążenia. W tym czasie niektórych żądań może zakończyć się niepowodzeniem. Innym przykładem może być bazy danych, takich jak Azure SQL, w których bazy danych mogą być przenoszone do innego serwera dla Równoważenie obciążenia, co powoduje bazy danych będzie dostępny przez kilka sekund.
 
-Istnieje wiele metod wdrożyć logikę ponownych prób z wykładniczego wycofywania.
+Dostępnych jest wiele metod, aby zaimplementować logikę ponowień z wykorzystaniem wykładniczego wycofywania.
 
 
 >[!div class="step-by-step"]

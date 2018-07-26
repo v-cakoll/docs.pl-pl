@@ -1,10 +1,10 @@
-### <a name="resizing-a-grid-can-hang"></a>Zmiana rozmiaru Siatka może zostać zawieszone.
+### <a name="resizing-a-grid-can-hang"></a>Zmiany rozmiaru siatki może zostać zawieszone.
 
 |   |   |
 |---|---|
-|Szczegóły|Pętla nieskończona mogą wystąpić podczas układ <code>T:System.Windows.Controls.Grid</code> w następujących okolicznościach:<ul><li>Definicje wierszy zawierać dwa *-wiersze z obu deklarowanie MinHeight i MaxHeight.</li><li>Treść *-wierszy nie może przekraczać odpowiednich MaxHeight</li><li>Pierwszy MinHeight przekracza dostępne wysokość siatki (oraz innych stałej lub Auto wierszy)</li><li>Aplikacja jest przeznaczony dla platformy .NET Framework 4.7 lub zdecyduje się algorytm 4,7 alokacji przez ustawienie <code>Switch.System.Windows.Controls.Grid.StarDefinitionsCanExceedAvailableSpace=false</code></li></ul>Pętla się również stanie z więcej niż dwa wiersze, lub w przypadku analogiczne do kolumny. Problem został rozwiązany w programie .NET Framework 4.7.1.|
-|Sugestia|Uaktualnij do platformy .NET Framework 4.7.1.  Alternatywnie Jeśli nie ma potrzeby algorytm 4,7 alokacji służy następujące ustawienia konfiguracji:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Controls.Grid.StarDefinitionsCanExceedAvailableSpace=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
+|Szczegóły|Wejścia w nieskończoną pętlę mogą wystąpić podczas układ <code>T:System.Windows.Controls.Grid</code> w następujących okolicznościach:<ul><li>Definicje wiersz zawiera dwa *-wiersze z obu deklarowanie MinHeight i MaxHeight.</li><li>Zawartość *-wierszy nie może przekraczać odpowiedniego MaxHeight</li><li>Pierwszy MinHeight przekracza dostępny wysokość siatki (oraz wszelkich innych ustalony rozmiar lub Auto wierszy)</li><li>Aplikacja jest przeznaczony dla .NET Framework 4.7 lub powoduje zasubskrybowanie algorytmu 4,7 alokacji, ustawiając <code>Switch.System.Windows.Controls.Grid.StarDefinitionsCanExceedAvailableSpace=false</code></li></ul>Pętla również się stanie z więcej niż dwóch wierszy lub w przypadku analogiczne dla kolumn. Problem został rozwiązany w programie .NET Framework 4.7.1.|
+|Sugestia|Uaktualnianie do programu .NET Framework 4.7.1.  Alternatywnie Jeśli nie potrzebujesz algorytmu 4,7 alokacji służy następujące ustawienie konfiguracji:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Controls.Grid.StarDefinitionsCanExceedAvailableSpace=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
 |Zakres|Krawędź|
 |Wersja|4.7|
-|Typ|środowisko uruchomieniowe|
+|Typ|Środowisko uruchomieniowe|
 

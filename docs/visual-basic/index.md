@@ -7,11 +7,11 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 03c9c118104f6fe3196d0a4bb13d28a6a122d859
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805545"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245731"
 ---
 # <a name="visual-basic-guide"></a>Przewodnik po Visual Basic
 
@@ -40,7 +40,7 @@ Visual Basic służy do efektywnego tworzenia bezpiecznych i zorientowanych obie
  W tym artykule omówiono różne aspekty programowania w języku Visual Basic, takie jak zabezpieczenia, obsługa wyjątków i używanie bibliotek klas [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].
 
  [Usługa międzyoperacyjna modelu COM](../visual-basic/programming-guide/com-interop/index.md)  
- Wyjaśniono problemami ze współdziałaniem skojarzone z tworzenie i używanie składnika object model (COM) obiektów za pomocą Visual Basic.  
+ Wyjaśnia, współdziałanie skojarzone z tworzenia i używania składnika object model (COM) obiektów za pomocą Visual Basic.  
   
  [Przykłady](../visual-basic/sample-applications.md)  
  Zawiera informacje o przykładach.  
@@ -52,5 +52,5 @@ Visual Basic służy do efektywnego tworzenia bezpiecznych i zorientowanych obie
  [Wprowadzenie do programowania w programie Visual Studio](/visualstudio/ide/get-started-developing-with-visual-studio)  
  Zawiera linki do tematów dotyczących podstaw programu Visual Studio.  
   
- [Przeglądarka interfejs API .NET](../../api/index.md)  
+ [Przeglądarka interfejsu API .NET](../../api/index.md)  
  Umożliwia dostęp do biblioteki klas, interfejsów i typów wartości dostępnych w zestawie Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK.

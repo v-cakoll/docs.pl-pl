@@ -1,10 +1,10 @@
-### <a name="pageloadcomplete-event-no-longer-causes-systemwebuiwebcontrolsentitydatasource-control-to-invoke-data-binding"></a>Zdarzenie Page.LoadComplete powoduje już formant System.Web.UI.WebControls.EntityDataSource wywołać powiązanie danych
+### <a name="pageloadcomplete-event-no-longer-causes-systemwebuiwebcontrolsentitydatasource-control-to-invoke-data-binding"></a>Zdarzenie Page.LoadComplete nie powoduje już kontroli System.Web.UI.WebControls.EntityDataSource wywołania wiązania danych
 
 |   |   |
 |---|---|
-|Szczegóły|<xref:System.Web.UI.Page.LoadComplete> Zdarzeń nie powoduje, że <xref:System.Web.UI.WebControls.EntityDataSource?displayProperty=name> formantu można wywołać powiązania danych zmiany do tworzenia/aktualizowania/usuwania parametrów. Ta zmiana eliminuje nadmiarowe podróży do bazy danych, uniemożliwia resetowania wartości formantów i tworzy zachowanie jest zgodne z innych formantów danych, takich jak <xref:System.Web.UI.WebControls.SqlDataSource?displayProperty=name> i <xref:System.Web.UI.WebControls.ObjectDataSource?displayProperty=name>. Ta zmiana spowoduje utworzenie inaczej, na wypadek, które aplikacje korzystają z wywołaniem powiązanie danych w <xref:System.Web.UI.Page.LoadComplete> zdarzeń.|
-|Sugestia|Jeśli istnieje potrzeba dla wiązania z danymi, ręczne wywoływanie databind w przypadku starszych po tyłu.|
+|Szczegóły|<xref:System.Web.UI.Page.LoadComplete> Zdarzeń nie powoduje już <xref:System.Web.UI.WebControls.EntityDataSource?displayProperty=name> kontroli wywołania wiązania danych w celu utworzenia/zaktualizowania/usunięcia parametrów. Tej zmiany eliminuje do bazy danych, zapobiega resetowaniu wartości formantów oraz tworzy zachowanie zgodne z innymi formantami danych, takich jak <xref:System.Web.UI.WebControls.SqlDataSource?displayProperty=name> i <xref:System.Web.UI.WebControls.ObjectDataSource?displayProperty=name>. Ta zmiana powoduje różne zachowanie w mało prawdopodobnym przypadku, w którym aplikacje polegają na wywoływaniu powiązań danych w <xref:System.Web.UI.Page.LoadComplete> zdarzeń.|
+|Sugestia|W przypadku potrzeby wiązania danych ręcznie wywołać powiązań danych w starszej w tle po zdarzeniu.|
 |Zakres|Krawędź|
 |Wersja|4.5|
-|Typ|środowisko uruchomieniowe|
+|Typ|Środowisko uruchomieniowe|
 

@@ -1,10 +1,10 @@
-### <a name="wpf-printing-stack-update"></a>Aktualizacja stosu drukowanie WPF
+### <a name="wpf-printing-stack-update"></a>Aktualizację stosu drukowanie WPF
 
 |   |   |
 |---|---|
-|Szczegóły|Przy użyciu drukowanie interfejsów API firmy WPF <xref:System.Printing.PrintQueue?displayProperty=name> teraz wywołać interfejs API pakietu dokument Drukuj okna na rzecz teraz przestarzałe API drukowania XPS. Zmieniono z użytkowanie pamiętać; Deweloperzy ani użytkowników powinny być widoczne wszelkie zmiany zachowania lub użycia interfejsu API. Nowe drukowania jest domyślnie włączona, podczas uruchamiania w systemie Windows 10 twórców aktualizacji. Stary stosu drukowania będą nadal działać tak jak poprzednio w starszych wersjach systemu Windows.|
-|Sugestia|Aby użyć starego stosu w systemie Windows 10 twórców aktualizacji, należy ustawić <code>UseXpsOMPrinting</code> wartości REG_DWORD <code>HKEY_CURRENT_USER\Software\Microsoft\.NETFramework\Windows Presentation Foundation\Printing</code> klucz rejestru w celu <code>1</code>.|
+|Szczegóły|Za pomocą drukowanie interfejsów API firmy WPF <xref:System.Printing.PrintQueue?displayProperty=name> teraz wywołania interfejsu API pakietu dokument Drukuj okna na rzecz teraz przestarzałe API drukowanie plików XPS. Zmiana została wprowadzona przy użyciu użytkowanie pamiętać; Użytkownicy ani deweloperzy nie powinny zostać wyświetlone wszelkie zmiany w zachowanie lub użycie interfejsu API. Nowy stos drukowania jest domyślnie włączona, podczas uruchamiania w systemie Windows 10 Creators Update. Stary stosu drukowania będą nadal działać tak jak wcześniej w starszych wersjach Windows.|
+|Sugestia|Aby użyć starego stosu w aktualizacji systemu Windows 10 dla twórców, ustaw <code>UseXpsOMPrinting</code> wartości REG_DWORD <code>HKEY_CURRENT_USER\Software\Microsoft\.NETFramework\Windows Presentation Foundation\Printing</code> klucza rejestru w celu <code>1</code>.|
 |Zakres|Krawędź|
 |Wersja|4.7|
-|Typ|środowisko uruchomieniowe|
+|Typ|Środowisko uruchomieniowe|
 

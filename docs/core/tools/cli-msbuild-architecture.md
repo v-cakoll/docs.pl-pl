@@ -1,51 +1,51 @@
 ---
 title: Architektura narzędzi wiersza polecenia programu .NET core
-description: Więcej informacji na temat platformy .NET Core narzędzi warstwy i co się zmieniło w nowszych wersjach.
+description: Więcej informacji na temat platformy .NET Core, narzędzia warstwy i co zmieniło się w nowszych wersjach.
 author: blackdwarf
 ms.date: 03/06/2017
 ms.openlocfilehash: 1d96a0b1e19bf84af0ab645ebd104afc899ae656
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696546"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245132"
 ---
-# <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>Ogólne omówienie zmian w narzędziach .NET Core
+# <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>Ogólne omówienie zmian w narzędziach platformy .NET Core
 
-W tym dokumencie opisano zmiany skojarzone z przenoszenie z *project.json* dla programu MSBuild i *csproj* projektu systemu informacji o zmiany kolejności nakładania się narzędzi platformy .NET Core i wykonanie polecenia interfejsu wiersza polecenia. Te zmiany na 7 marca 2017 wystąpił w wersji 1.0 zestawu SDK programu .NET Core i Visual Studio 2017 (zobacz [anonsu](https://blogs.msdn.microsoft.com/dotnet/2017/03/07/announcing-net-core-tools-1-0/)), ale początkowo zostały wprowadzone w wersji programu .NET Core SDK w wersji zapoznawczej 3.
+W tym dokumencie opisano zmiany związane z przenoszeniem z *project.json* do programu MSBuild i *csproj* projektu systemu z informacjami na temat zmian warstw zestaw narzędzi .NET Core i Implementacja poleceń interfejsu wiersza polecenia. Te zmiany podczas wersji platformy .NET Core SDK 1.0 i Visual Studio 2017 z 7 marca 2017 r. (zobacz [ogłoszenie](https://blogs.msdn.microsoft.com/dotnet/2017/03/07/announcing-net-core-tools-1-0/)), ale początkowo zostały wdrożone za pomocą wersji programu .NET Core SDK w wersji zapoznawczej 3.
 
-## <a name="moving-away-from-projectjson"></a>Przenoszenie od pliku project.json
-Największych zmiana narzędzi dla platformy .NET Core jest oczywiście [przenieść poza project.json csproj](https://blogs.msdn.microsoft.com/dotnet/2016/05/23/changes-to-project-json/) jako system projektu. Najnowsze wersje narzędzia wiersza polecenia nie obsługują *project.json* plików. Oznacza to, że nie może służyć do kompilacji, uruchomić lub publikowania aplikacji na podstawie pliku project.json i bibliotek. Aby można było używać tej wersji narzędzi, należy przeprowadzić migrację istniejących projektów lub Rozpocznij nowe. 
+## <a name="moving-away-from-projectjson"></a>Przejście od pliku project.json
+Największe zmiana narzędzi dla platformy .NET Core jest bez obaw [przesuwania kursora od pliku project.json do csproj](https://blogs.msdn.microsoft.com/dotnet/2016/05/23/changes-to-project-json/) jako system projektu. Najnowsze wersje narzędzi wiersza polecenia nie obsługują *project.json* plików. Oznacza to, że nie może służyć do tworzenia, uruchamiania lub publikowania aplikacji opartych na pliku project.json i bibliotek. Aby można było używać tej wersji narzędzi, konieczne będzie migracji istniejących projektów lub Rozpocznij nowe. 
 
-W ramach tego przeniesienia, aparat niestandardowej kompilacji, który został opracowany do kompilacji projektów project.json został zastąpiony aparatem dojrzałe i w pełni współpracować kompilacji o nazwie [MSBuild](https://github.com/Microsoft/msbuild). MSBuild jest dobrze znanego aparatu w społeczności .NET, ponieważ był to kluczowa technologia od pierwszej wersji platformy. Oczywiście ponieważ należy do tworzenia aplikacji platformy .NET Core, MSBuild systemie .NET Core i można używać na dowolnej platformie .NET Core uruchamianego na. Jedną z głównych zapowiedzi .NET Core jest to, że stosu wiele platform i wprowadzono się, że to przeniesienie przerwał tego promise.
-
-> [!NOTE]
-> Jeśli dopiero zaczynasz korzystać z programu MSBuild i chcesz dowiedzieć się więcej informacji na ten temat, możesz uruchomić odczytywania [pojęcia dotyczące programu MSBuild](/visualstudio/msbuild/msbuild-concepts) artykułu. 
-
-## <a name="the-tooling-layers"></a>Warstwy narzędzi
-Wraz z przejściem od istniejącego systemu projektów, a także budowania aparat przełączników pytanie naturalnie jest zmian zmienić ogólnej "warstwy" cały ekosystem narzędzi platformy .NET Core? Istnieją nowe usługi bits i składniki?
-
-Zacznijmy od szybkie odświeżacz na tworzenie warstw Preview 2 jak pokazano na poniższej ilustracji:
-
-![Architektura wysokiego poziomu narzędzi Preview 2](media/cli-msbuild-architecture/p2-arch.png)
-
-Tworzenie warstw narzędzi jest bardzo proste. W dolnej części jako podstawę zostały narzędzia wiersza polecenia programu .NET Core. Wszystkie inne, wyższego poziomu narzędzi takich jak Visual Studio lub Visual Studio Code, są zależne i zależne od interfejsu wiersza polecenia do kompilacji projektów, Przywróć zależności i tak dalej. Oznacza to, że na przykład, jeśli program Visual Studio do wykonania operacji przywracania, jego spowodowałoby wywołanie do `dotnet restore` ([patrz Uwaga](#dotnet-restore-note)) w interfejsu wiersza polecenia. 
-
-Wraz z przejściem do nowego systemu projektu poprzedni diagram zmiany: 
-
-![Architektura wysokiego poziomu zestawu SDK programu .NET core 1.0.0](media/cli-msbuild-architecture/p3-arch.png)
-
-Główną różnicą jest to, że interfejsu wiersza polecenia nie jest podstawowym warstwy już; Ta rola zostanie wypełniony przez "składnika współużytkowanego zestawu SDK". Ten składnik udostępnionego zestawu SDK jest zestaw elementów docelowych i skojarzone zadania, które są odpowiedzialne za kompilowanie kodu, publikowania, pakowanie pakietów NuGet itp. Sam zestaw SDK open source i jest dostępny w witrynie GitHub na [repozytorium SDK](https://github.com/dotnet/sdk). 
+W ramach tego przeniesienia, aparat niestandardowej kompilacji, który został opracowany, aby kompilować projekty project.json został zastąpiony z aparatem dojrzałe i pełną obsługę kompilacji o nazwie [MSBuild](https://github.com/Microsoft/msbuild). Program MSBuild jest aparatem dobrze znane w społeczności platformy .NET, ponieważ ma ono kluczowych technologii od pierwszej wersji tej platformy. Oczywiście ponieważ wymagane do kompilowania aplikacji platformy .NET Core, MSBuild wydajnej i .NET Core i może być używany na dowolnej platformie, która platformy .NET Core jest uruchamiany na. Jedną z głównych obietnic programu .NET Core jest to, że stosu wieloplatformowego opracowywania aplikacji, a firma Microsoft ma upewnienie się, że to przeniesienie nie mogą przerwać działania te zobowiązania.
 
 > [!NOTE]
-> "Miejsce docelowe" to termin MSBuild wskazuje nazwanego operacji, które może wywołać program MSBuild. Jest on zwykle połączone z jednego lub więcej zadań, które wykonać niektóre logiki element docelowy powinien wykonać. MSBuild obsługuje wiele gotowych elementów docelowych, takich jak `Copy` lub `Execute`; umożliwia także użytkownikom pisać własne zadania przy użyciu kodu zarządzanego i zdefiniuj cele do wykonania tych zadań. Aby uzyskać więcej informacji, zobacz [zadania programu MSBuild](/visualstudio/msbuild/msbuild-tasks). 
+> Jeśli jesteś nowym użytkownikiem programu MSBuild i chcesz dowiedzieć się więcej na ten temat, można zacząć od przeczytania [pojęcia dotyczące programu MSBuild](/visualstudio/msbuild/msbuild-concepts) artykułu. 
 
-Wszystkie procesami teraz korzystać z udostępnionego składnika zestawu SDK i jego elementów docelowych, interfejsu wiersza polecenia uwzględnione. Na przykład na następną wersję programu Visual Studio nie zostanie wywołany `dotnet restore` ([patrz Uwaga](#dotnet-restore-note)) polecenia do przywrócenia zależności dla platformy .NET Core projektów, zostanie użyty element docelowy "Przywracanie" bezpośrednio. Ponieważ są one docelowych elementów MSBuild, umożliwia także raw MSBuild można wykonać je za pomocą [dotnet msbuild](dotnet-msbuild.md) polecenia. 
+## <a name="the-tooling-layers"></a>Narzędzia warstwy
+Wraz z przejściem od istniejącego systemu projektów, a także od utworzenia przełączników aparatu pytanie, na które następuje naturalny jest tego typu zmian zmieniaj ogólnej "warstwy" całego ekosystemu narzędzi .NET Core? Czy istnieją nowe usługi bits i składniki?
+
+Zacznijmy od szybkiego przypomnienia informacji na temat wersji zapoznawczej 2 warstw, jak pokazano na poniższej ilustracji:
+
+![Architektura wysokiego poziomu narzędzi w wersji zapoznawczej 2](media/cli-msbuild-architecture/p2-arch.png)
+
+Warstwowe narzędzi jest bardzo proste. W dolnej części mamy narzędzi wiersza polecenia programu .NET Core jako podstawa. Wszystkie inne wyższego poziomu narzędzi takich jak Visual Studio lub Visual Studio Code, zależą od i zależą od interfejsu wiersza polecenia do tworzenia projektów, Przywróć zależności i tak dalej. Oznacza to, że na przykład, jeśli program Visual Studio chciał operacji przywracania, wywołałby do `dotnet restore` ([patrz Uwaga](#dotnet-restore-note)) polecenia interfejsu wiersza polecenia w pliku. 
+
+Wraz z przejściem do nowego systemu projektu zmienia poprzedniego diagramu: 
+
+![Architektura wysokiego poziomu zestawu SDK platformy .NET core 1.0.0](media/cli-msbuild-architecture/p3-arch.png)
+
+Główna różnica polega na, interfejsu wiersza polecenia nie jest podstawowe warstwy już; Ta rola zostanie wypełniony przez "składnik udostępnionego zestawu SDK". Tego składnika współużytkowanego zestawu SDK jest zbiorem obiektów docelowych i skojarzonych zadań, które są odpowiedzialne za kompilowania kodu, publikując je i pakowania pakietów NuGet itp. Zestaw SDK, sama jest typu open source i jest dostępny w witrynie GitHub na [repozytorium zestawu SDK](https://github.com/dotnet/sdk). 
+
+> [!NOTE]
+> "target" to termin MSBuild wskazującą o nazwie operacji, które może wywołać program MSBuild. Jest ona zwykle połączone z co najmniej jedno zadanie, które są wykonywane logikę i element docelowy powinien zrobić. Program MSBuild obsługuje wiele gotowych elementów docelowych, takie jak `Copy` lub `Execute`; umożliwia również użytkownikom napisać własne zadania przy użyciu kodu zarządzanego i zdefiniuj cele do wykonania tych zadań. Aby uzyskać więcej informacji, zobacz [zadania programu MSBuild](/visualstudio/msbuild/msbuild-tasks). 
+
+Wszystkie zestawy narzędzi teraz korzystać z udostępnionych składników zestawu SDK i interfejsu wiersza polecenia dołączone jego obiekty docelowe. Na przykład następnej wersji programu Visual Studio będzie nie mogą wywoływać `dotnet restore` ([patrz Uwaga](#dotnet-restore-note)) polecenia, aby przywrócić zależności dla projektów .NET Core, zostanie użyty element docelowy "Przywracanie" bezpośrednio. Ponieważ te elementy docelowe programu MSBuild, umożliwia także MSBuild pierwotne można wykonać je za pomocą [dotnet msbuild](dotnet-msbuild.md) polecenia. 
 
 ### <a name="cli-commands"></a>Polecenia interfejsu wiersza polecenia
-Składnik zestawu SDK udostępnionego oznacza, że większość istniejących poleceń interfejsu wiersza polecenia zostały ponownie zaimplementowane jako zadania programu MSBuild i obiektów docelowych. Co to znaczy polecenia interfejsu wiersza polecenia i użycie zestawu narzędzi 
+Składnika współużytkowanego zestawu SDK oznacza, że większość istniejących poleceń interfejsu wiersza polecenia zostały ponownie zaimplementowane jako cele i zadania programu MSBuild. Co to oznacza dla poleceń interfejsu wiersza polecenia i użycie zestawu narzędzi programu 
 
-Z perspektywy użycia nie zmienia sposób użycia interfejsu wiersza polecenia. Interfejsu wiersza polecenia nadal ma podstawowe polecenia, które istnieją w wersji Preview 2:
+Z perspektywy użycia go nie zmienia sposób użycia interfejsu wiersza polecenia. Interfejs wiersza polecenia nadal ma podstawowe polecenia, które istnieją w wersji 2 (wersja zapoznawcza):
 
 * `new`
 * `restore`
@@ -55,17 +55,17 @@ Z perspektywy użycia nie zmienia sposób użycia interfejsu wiersza polecenia. 
 * `test`
 * `pack` 
 
-Te polecenia są nadal oczekiwaniami (nowy projekt, skompiluj go, przed opublikowaniem, pakiet go i tak dalej). Większość opcji nie są zmieniane i nadal występują i można znaleźć ekrany pomocy poleceń (przy użyciu `dotnet <command> --help`) lub dokumentacji w tej lokacji, aby zapoznać się z wszelkie zmiany. 
+Te polecenia są nadal odpowiadają Twoim oczekiwaniom (nowy projekt, skompiluj go, opublikuj ją, pakiet go i tak dalej). Większość opcji nie są zmieniane i nadal istnieją i mogą analizować ekrany pomocy poleceń (przy użyciu `dotnet <command> --help`) lub dokumentacji w tej witrynie, aby zapoznać się ze wszystkimi zmianami. 
 
-Z perspektywy wykonanie polecenia interfejsu wiersza polecenia otrzymuje ich parametrów i utworzyć wywołanie "nieprzetworzonej" MSBuild, który będzie wymagane właściwości, a następnie uruchom wybrany element docelowy. Aby lepiej zilustrować ten, należy wziąć pod uwagę następujące polecenie: 
+Z perspektywy wykonywania poleceń interfejsu wiersza polecenia przyjmuje swoich parametrów i konstruowania wywołanie "pierwotne" MSBuild, będzie wymagane właściwości, a następnie uruchom wybraną docelową. Aby lepiej zilustrować to, należy wziąć pod uwagę następujące polecenie: 
 
    `dotnet publish -o pub -c Release`
     
-To polecenie jest publikowanie aplikacji w `pub` folderu za pomocą konfiguracji "Wersja". Wewnętrznie to polecenie pobiera przetłumaczyć następujące wywołanie MSBuild: 
+To polecenie jest publikowanie aplikacji w `pub` folder przy użyciu konfiguracji "Wersja". Wewnętrznie to polecenie pobiera przetłumaczyć następujące wywołania MSBuild: 
 
    `dotnet msbuild /t:Publish /p:OutputPath=pub /p:Configuration=Release`
 
-Godne wyjątkiem od tej reguły są `new` i `run` polecenia, ponieważ nie zostały one wdrożone jako docelowych elementów MSBuild.
+Godne uwagi wyjątkiem od tej reguły są `new` i `run` polecenia, ponieważ nie zostały one wdrożone jako elementy docelowe programu MSBuild.
 
 <a name="dotnet-restore-note"></a>  
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

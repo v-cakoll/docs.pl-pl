@@ -1,77 +1,77 @@
 ---
-title: 'Porady: modyfikowanie zawartości ciągu - przewodnik C#'
+title: 'Porady: modyfikowanie zawartości ciągu — Przewodnik po języku C#'
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
 ms.openlocfilehash: 99102fe90f5f675235e2993b7dd99f59214862d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217880"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39243752"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Porady: modyfikowanie zawartości ciągu w języku C# #
 
-W tym artykule przedstawiono kilka technik w celu utworzenia `string` przez zmodyfikowanie istniejącej `string`. Wszystkie techniki przedstawiona zwracają wynik jako nowe zmiany `string` obiektu. Aby zademonstrować to wyraźnie, wszystkie przykłady przechowywać wynik w nowej zmiennej. Następnie można sprawdzić zarówno oryginalny `string` i `string` wynikające z modyfikacji podczas uruchamiania każdy przykład.
+W tym artykule przedstawiono kilka technik w celu wygenerowania `string` , modyfikując istniejące `string`. Wszystkie techniki przedstawione w artykule zwracają wynik modyfikacji jako nową `string` obiektu. Aby zademonstrować to wyraźnie, wszystkie przykłady przechowuje wynik w nowej zmiennej. Następnie można sprawdzić zarówno oryginał `string` i `string` wynikające z modyfikacji, po uruchomieniu każdy przykład.
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-Istnieje kilka technik przedstawiona w tym artykule. Można zastąpić istniejącego tekstu. Można wyszukać wzorców i zamienić szukanego tekstu inny tekst. Ciąg można traktować jako sekwencja znaków. Umożliwia także podręczne metody, które Usuń biały znak. Należy wybrać techniki, które najlepiej pasują danego scenariusza.
+Istnieje kilka technik, które przedstawiono w tym artykule. Możesz zastąpić istniejący tekst. Możesz wyszukiwać wzorce i Zastąp pasujący tekst i inne teksty. Ciąg można traktować jako sekwencja znaków. Można również użyć metod jako udogodnienie, które Usuń biały znak. Należy wybrać technik, które najlepiej pasują do scenariusza.
 
-## <a name="replace-text"></a>Zastępowanie tekstu
+## <a name="replace-text"></a>Zastąp tekst
 
-Poniższy kod tworzy nowe parametry, zastępując istniejący tekst zastępczy.
+Poniższy kod tworzy nowy ciąg, zastępując istniejący tekst zastępczy.
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#1)]
 
-Poprzedni kod pokazuje to *niezmienne* właściwości ciągów. Można zobaczyć w poprzednim przykładzie który oryginalnego ciągu `source`, nie jest modyfikowany. <xref:System.String.Replace%2A?displayProperty=nameWithType> Metoda tworzy nowy `string` zawierające te zmiany.
+Poprzedni kod pokazuje to *niezmienne* właściwości ciągów. Widać w powyższym przykładzie, oryginalny ciąg `source`, nie jest modyfikowany. <xref:System.String.Replace%2A?displayProperty=nameWithType> Metoda tworzy nowy `string` zawierający modyfikacje.
 
-<xref:System.String.Replace%2A> Metody można zastąpić, ciągi lub pojedynczy znaki. W obu przypadkach każde wystąpienie poszukiwaną tekst został zastąpiony.  Poniższy przykład zastępuje wszystkie ' "znaków i zawierają"\_":
+<xref:System.String.Replace%2A> Metoda może zastąpić ciągi lub pojedyncze znaki. W obu przypadkach każde wystąpienie tekstu używanych jest zastępowany.  Poniższy przykład zastępuje wszystkie ' "znaków za pomocą"\_":
 
 [!code-csharp-interactive[replace characters](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#2)]
 
-Ciąg źródłowy jest bez zmian, a nowy ciąg z zastąpienia.
+Ciąg źródłowy pozostaje niezmieniony, a nowy ciąg jest zwracany za pomocą zastąpienia.
 
-## <a name="trim-white-space"></a>TRIM biały znak
+## <a name="trim-white-space"></a>Przytnij odstęp
 
-Można użyć <xref:System.String.Trim%2A?displayProperty=nameWithType>, <xref:System.String.TrimStart%2A?displayProperty=nameWithType>, i <xref:System.String.TrimEnd%2A?displayProperty=nameWithType> metod, aby usunąć wszystkie białe wiodących lub końcowych.  Poniższy kod przedstawia przykład każdego z nich. Ciąg źródłowy nie ulega zmianie; te metody zwracają nowe parametry z zawartością, zmodyfikowany.
+Możesz użyć <xref:System.String.Trim%2A?displayProperty=nameWithType>, <xref:System.String.TrimStart%2A?displayProperty=nameWithType>, i <xref:System.String.TrimEnd%2A?displayProperty=nameWithType> metody, aby usunąć wszystkie wiodące i końcowe białe.  Poniższy kod przedstawia przykład każdego z nich. Ciąg źródłowy nie zmienia się; tych metod zwraca nowy ciąg z zawartością zmodyfikowane.
 
 [!code-csharp-interactive[trim white space](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#3)]
 
 ## <a name="remove-text"></a>Usuń tekst
 
-Możesz usunąć tekst z ciągu za pomocą <xref:System.String.Remove%2A?displayProperty=nameWithType> metody. Ta metoda usuwa liczba znaków, zaczynając od określonego indeksu. Poniższy przykład przedstawia użycie <xref:System.String.IndexOf%2A?displayProperty=nameWithType> następuje <xref:System.String.Remove%2A> do usunięcia z ciągu tekstowego:
+Tekst można usunąć z na ciąg za pośrednictwem <xref:System.String.Remove%2A?displayProperty=nameWithType> metody. Ta metoda usuwa określonej liczby znaków, zaczynając od określonego indeksu. Poniższy przykład pokazuje, jak używać <xref:System.String.IndexOf%2A?displayProperty=nameWithType> następuje <xref:System.String.Remove%2A> Aby usunąć tekst z ciągu:
 
 [!code-csharp-interactive[remove text](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#4)]
 
 ## <a name="replace-matching-patterns"></a>Zastąp wzorce dopasowania
 
-Można użyć [wyrażeń regularnych](../../standard/base-types/regular-expressions.md) tekst wzorce nowym tekstem, prawdopodobnie wynika z wzorca dopasowania. W poniższym przykładzie użyto <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> klasy można znaleźć wzorzec ciągu źródła i Zamień odpowiednie wielkości liter. <xref:System.Text.RegularExpressions.Regex.Replace(System.String,System.String,System.Text.RegularExpressions.MatchEvaluator,System.Text.RegularExpressions.RegexOptions)?displayProperty=nameWithType> Metoda przyjmuje funkcja, która udostępnia logikę zastąpienia jako jeden z jego argumentów. W tym przykładzie, że funkcja `LocalReplaceMatchCase` jest **funkcja lokalna** deklarowane w przykładowej metody. `LocalReplaceMatchCase` używa <xref:System.Text.StringBuilder?displayProperty=nameWithType> klasa do tworzenia ciąg zastępczy z właściwego wielkość liter.
+Możesz użyć [wyrażeń regularnych](../../standard/base-types/regular-expressions.md) tekst wzorce nowym tekstem, prawdopodobnie zdefiniowane przez wzorzec dopasowywania. W poniższym przykładzie użyto <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> klasy w celu znalezienia wzorca w ciągu źródłowym i zastąp go właściwego użycia wielkich liter. <xref:System.Text.RegularExpressions.Regex.Replace(System.String,System.String,System.Text.RegularExpressions.MatchEvaluator,System.Text.RegularExpressions.RegexOptions)?displayProperty=nameWithType> Metoda przyjmuje funkcję, która udostępnia logikę zastąpienia jako jeden z jej argumentów. W tym przykładzie tej funkcji, `LocalReplaceMatchCase` jest **funkcja lokalna** zadeklarowana wewnątrz przykładowa metoda. `LocalReplaceMatchCase` używa <xref:System.Text.StringBuilder?displayProperty=nameWithType> klasa do tworzenia ciąg zastępujący przy użyciu prawidłowego użycia wielkich liter.
 
-Wyrażenia regularne są najbardziej przydatny w przypadku wyszukiwania i zastępowanie tekstu, która jest zgodna ze wzorcem zamiast tekstu znane. Zobacz [porady: wyszukiwanie ciągów](search-strings.md) więcej szczegółów. Wzorzec wyszukiwania "the\s" Wyszukiwanie słowa "" następuje biały znak. Części wzorca gwarantuje, że nie jest zgodna "Brak" w ciągu źródła. Aby uzyskać więcej informacji na elementy języka wyrażeń regularnych, zobacz [język wyrażeń regularnych — podręczny wykaz](../../standard/base-types/regular-expression-language-quick-reference.md).
+Wyrażenia regularne są najbardziej przydatne do wyszukiwania i zastępując tekst, który jest zgodna ze wzorcem, a nie znane tekstu. Zobacz [porady: wyszukiwanie ciągów](search-strings.md) Aby uzyskać więcej informacji. Wzorzec wyszukiwania "the\s" wyszukiwane słowa "" następuje znak odstępu. Tę część wzorca gwarantuje, że nie jest zgodna "Brak" w ciągu źródłowego. Aby uzyskać więcej informacji na temat elementy języka wyrażeń regularnych, zobacz [język wyrażeń regularnych — podręczny wykaz](../../standard/base-types/regular-expression-language-quick-reference.md).
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#5)]
 
-<xref:System.Text.StringBuilder.ToString%2A?displayProperty=nameWithType> Metoda zwraca niezmienny ciąg z zawartością w <xref:System.Text.StringBuilder> obiektu.
+<xref:System.Text.StringBuilder.ToString%2A?displayProperty=nameWithType> Metoda zwraca ciąg niezmienne z zawartością w <xref:System.Text.StringBuilder> obiektu.
 
-## <a name="modifying-individual-characters"></a>Modyfikowanie znaki
+## <a name="modifying-individual-characters"></a>Modyfikowanie pojedynczych znaków
 
-Można utworzyć tablicy znaków z ciągu, modyfikowania zawartości tablicy, a następnie utwórz nowe parametry z zmodyfikowanej zawartości tablicy.
+Można utworzyć tablicy znaków z ciągu, modyfikowania zawartości tablicy, a następnie utwórz nowy ciąg z zmodyfikowanej zawartości tablicy.
 
-Poniższy przykład pokazuje, jak zastąpić zestaw znaków w ciągu. Po pierwsze, używa <xref:System.String.ToCharArray?displayProperty=nameWithName> metodę w celu utworzenia tablicy znaków. Używa <xref:System.String.IndexOf%2A> metody do znalezienia indeks początkowy wyrazu "fox." Trzech kolejnych znaków są zastępowane innego programu word. Ponadto nowy ciąg jest tworzony z tablicy znaków zaktualizowane.
+Poniższy przykład pokazuje, jak zastąpić zestaw znaków w ciągu. Po pierwsze, używa <xref:System.String.ToCharArray?displayProperty=nameWithName> metodę, aby utworzyć tablicę znaków. Używa ona <xref:System.String.IndexOf%2A> metody do znalezienia indeks początkowy słowo "fox." Kolejne trzy znaki są zastępowane innego programu word. Na koniec nowy ciąg jest tworzony z tablicy znaków zaktualizowane.
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#6)]
 
-## <a name="unsafe-modifications-to-string"></a>Niebezpieczne modyfikacje na ciąg
+## <a name="unsafe-modifications-to-string"></a>Niebezpieczne modyfikacji ciągu
 
-Przy użyciu **niebezpieczne** kodu, ciąg "w miejscu" można modyfikować po został utworzony. Niebezpieczny kod pomijany wiele funkcji .NET zaprojektowany w celu zminimalizowania niektórych typów błędów w kodzie. Należy użyć można zmodyfikować ciąg w miejscu, ponieważ klasa ciąg został zaprojektowany jako niebezpieczny kod **niezmienialnych** typu. Po utworzeniu, jego wartość nie ulega zmianie. Niebezpieczny kod obejścia tej właściwości, uzyskiwanie dostępu i modyfikując pamięci używanej przez `string` bez użycia normalne `string` metody.
-Poniższy przykład jest dostępna dla tych rzadkich sytuacji, w której chcesz zmodyfikować ciąg w miejscu przy użyciu niebezpieczny kod. W przykładzie pokazano sposób użycia `fixed` — słowo kluczowe. `fixed` — Słowo kluczowe uniemożliwia przenoszenie z obiektem ciągu w pamięci, gdy kod uzyskuje dostęp do pamięci przy użyciu wskaźnika niebezpieczny moduł garbage collector (GC). Ilustruje też jedną możliwe ubocznym niebezpieczne operacje na ciągach będącą wynikiem sposób kompilatora C# wewnętrznie przechowuje ciągi (stażystów). Ogólnie rzecz biorąc nie należy użyć tej metody, chyba że jest bezwzględnie konieczne. Możesz dowiedzieć się więcej informacji, zobacz artykuły na [niebezpieczne](../language-reference/keywords/unsafe.md) i [stałej](../language-reference/keywords/fixed-statement.md). Dokumentacja interfejsu API dla <xref:System.String.Intern%2A> obejmuje inforamtion na interning ciągu.
+Przy użyciu **niebezpieczne** kodu, ciąg "w miejscu" można zmodyfikować po utworzeniu. Niebezpieczny kod pomija wielu funkcji programu .NET, aby zminimalizować niektórych rodzajów błędów w kodzie. Należy użyć niebezpieczny kod można zmodyfikować parametry w miejscu, ponieważ klasa string został zaprojektowany jako **niezmienne** typu. Po jego utworzeniu, jego wartość nie ulega zmianie. Niebezpieczny kod zmierzone tej właściwości przez dostęp i modyfikowania pamięci używanej przez `string` bez korzystania z normalnym `string` metody.
+Poniższy przykład znajduje się w tych rzadkich sytuacjach, gdzie chcesz zmodyfikować parametry w miejscu przy użyciu niebezpieczny kod. W przykładzie pokazano sposób użycia `fixed` — słowo kluczowe. `fixed` — Słowo kluczowe zapobiega przenoszenie z obiektem ciągu w pamięci, gdy kod uzyskuje dostęp do pamięci, przy użyciu wskaźnika niebezpieczny moduł odśmiecania pamięci (GC). Ilustruje też możliwe po stronie efektem użycia niebezpieczne operacje na ciągi powstałego w sposób, że kompilator języka C# wewnętrznie przechowuje ciągi (stażystów). Ogólnie rzecz biorąc nie należy używać tej techniki, chyba że jest to absolutnie konieczne. Możesz dowiedzieć się więcej, czytając artykuły na [niebezpieczne](../language-reference/keywords/unsafe.md) i [stałej](../language-reference/keywords/fixed-statement.md). Dokumentacja interfejsu API <xref:System.String.Intern%2A> obejmuje informacji na temat wewnętrzne przygotowanie ciągu.
 
 [!code-csharp-interactive[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
 
-Możesz spróbować te przykłady, sprawdzając kod w naszym [repozytorium GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Można również pobrać próbki [jako plik zip](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
+Możesz wypróbować te przykłady, patrząc na kod w naszym [repozytorium GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Można również pobrać przykłady [jako plik zip](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
 ## <a name="see-also"></a>Zobacz także
 
-[.NET framework — nieprawidłowe wyrażenia](../../standard/base-types/regular-expressions.md)  
+[Wyrażeń regularnych programu .NET framework](../../standard/base-types/regular-expressions.md)  
  [Język wyrażeń regularnych — podręczny wykaz](../../standard/base-types/regular-expression-language-quick-reference.md)  

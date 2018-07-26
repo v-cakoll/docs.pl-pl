@@ -1,10 +1,10 @@
-### <a name="keytips-behavior-improved-in-wpf"></a>Porady dotyczące klawiszy zachowanie ulepszone na platformie WPF
+### <a name="keytips-behavior-improved-in-wpf"></a>Zachowanie wskazówki ulepszone w WPF
 
 |   |   |
 |---|---|
-|Szczegóły|Porady dotyczące klawiszy zachowanie został zmodyfikowany w celu dostosowania parzystości z zachowanie w programach Microsoft Word i Eksploratora Windows. Przez sprawdzenie, czy jest włączony stan właściwości keytip lub nie w odniesieniu <xref:System.Windows.Input.KeyEventArgs.SystemKey> (w szczególności <xref:System.Windows.Input.Key> lub <xref:System.Windows.Input.Key.F11>) naciśnięty klawisz, WPF obsługuje kluczy właściwości keytip odpowiednio. Porady dotyczące klawiszy teraz zamknąć menu, nawet wtedy, gdy jest otwarty przez wskaźnik myszy.|
+|Szczegóły|Zachowanie wskazówki została zmodyfikowana, aby przenieść parzystości z zachowaniem programu Microsoft Word i Eksploratora Windows. Sprawdzając, czy jest włączony stan poradę dotyczącą klawiszy lub nie w przypadku właściwości <xref:System.Windows.Input.KeyEventArgs.SystemKey> (w szczególności <xref:System.Windows.Input.Key> lub <xref:System.Windows.Input.Key.F11>) naciskana, WPF obsługuje klucze poradę dotyczącą klawiszy odpowiednio. Porady dotyczące klawiszy teraz zamknąć menu, nawet wtedy, gdy plik jest otwarty przez myszy.|
 |Sugestia|Brak|
 |Zakres|Krawędź|
 |Wersja|4.7.2|
-|Typ|środowisko uruchomieniowe|
+|Typ|Środowisko uruchomieniowe|
 

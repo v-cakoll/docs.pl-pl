@@ -2,10 +2,10 @@
 
 |   |   |
 |---|---|
-|Szczegóły|W programie .NET Framework 4.5, <xref:System.Linq.Enumerable.Empty%60%601> zawsze zwraca buforowane wystąpienie wewnętrzny <xref:System.Collections.Generic.IEnumerable%601>. Wcześniej <xref:System.Linq.Enumerable.Empty%60%601> może buforować pustą <xref:System.Collections.Generic.IEnumerable%601> w czasie wywołano interfejsu API, co oznacza, że w niektórych sytuacjach, w którym <xref:System.Linq.Enumerable.Empty%60%601> została wywołana szybko i jednocześnie, różnych wystąpień tego typu mogą być zwracane dla różnych wywołań INTERFEJS API.|
-|Sugestia|Ponieważ poprzednie jest deterministyczna, kod jest mało prawdopodobne zależą od niej. Jednak w przypadku mało prawdopodobne, że puste elementy wyliczalne są porównywane i powinny być czasem nierówne, jawne puste tablice należy utworzyć (<code>new T[0]</code>) zamiast <xref:System.Linq.Enumerable.Empty%60%601>.|
+|Szczegóły|Począwszy od programu .NET Framework 4.5, <xref:System.Linq.Enumerable.Empty%60%601> zawsze zwraca buforowane wystąpienie wewnętrzne <xref:System.Collections.Generic.IEnumerable%601>. Wcześniej <xref:System.Linq.Enumerable.Empty%60%601> będzie buforować pustą <xref:System.Collections.Generic.IEnumerable%601> w czasie, interfejs API został wywołany, co oznacza, że w niektórych sytuacjach, w którym <xref:System.Linq.Enumerable.Empty%60%601> wywołano szybko i jednocześnie, różne wystąpienia tego typu mogą być zwracane dla różnych wywołań INTERFEJS API.|
+|Sugestia|Ponieważ poprzednie zachowanie jest deterministyczna, kod jest mało prawdopodobne, zależą od niej. Jednak w mało prawdopodobnym przypadku enumerables puste są porównywane i powinny być czasem nierównej, jawnych tablic pusty należy utworzyć (<code>new T[0]</code>) zamiast <xref:System.Linq.Enumerable.Empty%60%601>.|
 |Zakres|Krawędź|
 |Wersja|4.5|
-|Typ|środowisko uruchomieniowe|
+|Typ|Środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Linq.Enumerable.Empty%60%601?displayProperty=nameWithType></li></ul>|
 

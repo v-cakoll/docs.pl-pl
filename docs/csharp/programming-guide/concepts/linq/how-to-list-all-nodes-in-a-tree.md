@@ -1,27 +1,27 @@
 ---
-title: 'Porady: lista wszystkich węzłów w drzewie (C#)'
+title: 'Porady: wyświetlanie listy wszystkich węzłów w drzewie (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3e934371-f4c6-458b-9f6b-f9061b596f5b
 ms.openlocfilehash: 0ee4c51946ff6116fa37f4ca61bc42deed562532
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322133"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37959484"
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-c"></a>Porady: lista wszystkich węzłów w drzewie (C#)
-Czasami jest przydatne do tworzenia listy wszystkich węzłów w drzewie. Może to być przydatne podczas nauki, dokładnie tak jak metoda lub właściwość ma wpływ na drzewie. Jeden ze sposobów wyświetlania we wszystkich węzłach w postaci tekstowej polega na generowaniu XPath Wyrażenie identyfikujące dokładnie, a w szczególności dowolnego węzła drzewa.  
+# <a name="how-to-list-all-nodes-in-a-tree-c"></a>Porady: wyświetlanie listy wszystkich węzłów w drzewie (C#)
+Czasami warto wyświetlić listę wszystkich węzłów w drzewie. Może to być przydatne podczas nauki, dokładnie tak jak metoda lub właściwość ma wpływ na drzewie. Jedno z podejść do wyświetlania listy wszystkich węzłów w postaci tekstowej jest generowanie wyrażenia XPath, które dokładnie, zwłaszcza identyfikuje dowolny węzeł w drzewie.  
   
- Nie jest to szczególnie przydatne do wykonania za pomocą wyrażenia XPath [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Wyrażenia XPath ma daje mniejszą wydajność niż [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] kwerend i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] są bardziej zaawansowanych zapytań. Jednak sposób do identyfikowania węzłów w drzewie XML XPath działa dobrze.  
+ Nie jest to szczególnie przydatne do wykonania wyrażeń XPath przy użyciu [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Wyrażenia XPath ma mniejszą wydajność niż [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytań i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytania są znacznie większe możliwości. Jednak jako sposób identyfikacji węzłów w drzewie XML, XPath działa poprawnie.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie pokazano funkcji o nazwie `GetXPath` generujący określone wyrażenie XPath dla dowolnego węzła w drzewie XML. Generuje on odpowiedni wyrażenia XPath, nawet wtedy, gdy węzeł znajduje się w przestrzeni nazw. Wyrażenia XPath są generowane przy użyciu prefiksy przestrzeni nazw.  
+ W tym przykładzie przedstawiono funkcję o nazwie `GetXPath` generujący do określonego wyrażenia XPath dla dowolnego węzła w drzewie XML. Generuje on odpowiedni wyrażenia XPath, nawet wtedy, gdy węzły znajdują się w przestrzeni nazw. Wyrażenia XPath są generowane przy użyciu prefiksy przestrzeni nazw.  
   
- Przykład tworzy następnie małych drzewa XML, który zawiera przykładowy kilka typów węzłów. Następnie iterację w węzłach podrzędnych i wyświetla wyrażenie XPath dla każdego węzła.  
+ Ten przykład tworzy następnie małych drzewa XML, który zawiera przykład kilka typów węzłów. Następnie iterację w węzłach podrzędnych i drukuje wyrażenie XPath dla każdego węzła.  
   
- Można zauważyć, że deklaracja XML nie jest węzłem w drzewie.  
+ Zauważysz, że deklaracja XML nie jest węzłem w drzewie.  
   
- Poniżej znajduje się plik XML, który zawiera kilka typów węzłów:  
+ Oto pliku XML, który zawiera kilka typów węzłów:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -37,7 +37,7 @@ Czasami jest przydatne do tworzenia listy wszystkich węzłów w drzewie. Może 
 </Root>  
 ```  
   
- Oto lista węzłów w drzewie powyżej XML, wyrażonej w postaci wyrażenia XPath:  
+ Poniżej przedstawiono listę węzłów w drzewie XML powyżej, wyrażonej w postaci wyrażenia XPath:  
   
 ```  
 /processing-instruction()  
@@ -349,4 +349,4 @@ class Program
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zaawansowane techniki zapytania (LINQ do XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+ [Zaawansowane techniki zapytań (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

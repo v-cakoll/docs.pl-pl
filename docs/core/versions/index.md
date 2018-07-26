@@ -1,48 +1,57 @@
 ---
 title: Przechowywanie wersji platformy .NET core
-description: Dowiedz się, jak działa przechowywanie wersji platformy .NET Core.
+description: Dowiedz się, jak działa wersji platformy .NET Core.
 author: bleroy
 ms.author: mairaw
 ms.date: 02/13/2018
-ms.openlocfilehash: 33c545fdea254133fe6e65f4d6dd725f5184faec
-ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
+ms.openlocfilehash: aa4f05a1a95c1bfbd16f41ca695ea23d48606772
+ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298243"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792325"
 ---
 # <a name="net-core-versioning"></a>Przechowywanie wersji platformy .NET core
 
-Oprogramowanie .NET core składa się z [pakietów NuGet](../packages.md), narzędzia i platform, które są dystrybuowane jako jednostka. Każdy z tych warstw platformy może być kontrolą wersji oddzielnie, włączanie większą elastyczność. Wprawdzie w tym zakresie jest elastyczność znaczących przechowywania wersji, dostępna jest również chęć wersji platformy jako jednostki, aby ułatwić zrozumienie produktu.
+.NET core składa się z [pakiety NuGet](../packages.md), narzędzi i platform, które są dystrybuowane jako jednostka. Każdego z tych warstw platformy może być wersjonowany oddzielnie, umożliwiając lepsze elastyczność. Pewien stopień elastyczności znaczące przechowywania wersji, w tym zakresie, jest również dążenie do wersji platformy jako jednostka do sprawiają, że produkt jest łatwiejsze do zrozumienia.
 
-W tym artykule celem jest wyjaśnienie, jak są numerów wersji zestawu SDK programu .NET Core i środowiska uruchomieniowego.
+Celem jest wyjaśnienie, jak zestaw .NET Core SDK i środowisko uruchomieniowe są wersjonowane w tym artykule.
 
-Istnieje wiele części ruchome tej wersji niezależnie w .NET Core. Jednak począwszy od programu .NET Core 2.0 jest łatwy do zrozumienia numer wersji najwyższego poziomu każdy rozumie, aby można *wersji* ".NET Core" jako całość. Pozostała część tego dokumentu przechodzi w stan szczegółowe informacje o wersji tych części. Te informacje mogą być istotne, jeśli jesteś Menedżera pakietów, na przykład.
+Istnieje wiele ruchomych części tej wersji niezależnie od siebie platformie .NET Core. Jednak począwszy od programu .NET Core 2.0 jest łatwy do zrozumienia numer wersji najwyższego poziomu każdy rozumie, aby można *wersji* ".NET Core" jako całość. Pozostała część tego dokumentu przechodzi w stan szczegółowe informacje o wersji tych części. Informacje te mogą być ważne, jeśli na przykład masz Menedżera pakietów.
 
 > [!IMPORTANT]
-> Szczegóły versioning wyjaśnione w tym temacie nie dotyczą bieżącej wersji zestawu SDK programu .NET Core i środowiska uruchomieniowego.
-> Wersja schematu zmienia w przyszłych wersjach. Zostanie wyświetlony w bieżącej propozycji [dotnet/projektów](https://github.com/dotnet/designs/pull/29) repozytorium.
+> Szczegóły wersji opisane w tym temacie nie mają zastosowania do bieżącej wersji programu .NET Core SDK i środowiska uruchomieniowego.
+> Schemat wersja ulega zmianie w przyszłych wersjach. Możesz zobaczyć bieżące wniosek na [dotnet/projekty](https://github.com/dotnet/designs/pull/29) repozytorium.
 
-## <a name="versioning-details"></a>Przechowywanie wersji szczegóły
+## <a name="versioning-details"></a>Szczegóły wersji
 
-.NET Core 2.0 pliki do pobrania Pokaż numeru wersji pojedynczego w nazwach plików. Ujednolicone zostały następujące numery wersji:
+Przy użyciu platformy .NET Core 2.0 pliki do pobrania Pokaż numeru wersji pojedynczego w nazwie pliku. Ujednolicone zostały następujące numery wersji:
 
-* Udostępniony framework i skojarzone środowiska uruchomieniowego.
-* .NET Core SDK i interfejsu wiersza polecenia skojarzony .NET Core.
-* `Microsoft.NETCore.App` Metapackage.
+* Udostępnione środowisko i skojarzone środowiska uruchomieniowego.
+* Zestaw .NET Core SDK i skojarzony interfejsu wiersza polecenia platformy .NET Core.
+* `Microsoft.NETCore.App` Meta Microsoft.aspnetcore.all.
 
-Użycie jednej wersji numer sprawia, że ułatwia użytkownikom odnalezienie jakiej wersji zestawu SDK do zainstalowania na komputerach deweloperów i jakie odpowiednią wersję platformy udostępniony powinien być gdy czas do udostępnienia do środowiska produkcyjnego. Podczas pobierania zestawu SDK lub środowisko uruchomieniowe, numer wersji, który zostanie wyświetlony ma być takie same.
+Korzystanie z jednej wersji numer sprawia, że łatwiejsze dla użytkowników dowiedzieć się, jakie wersje zestawu SDK do zainstalowania na swoich komputerach deweloperskich i jakie odpowiednią wersję udostępnionej platformy należy go po przejściu do trybu czasu do aprowizowania w środowisku produkcyjnym. Podczas pobierania zestawu SDK lub środowisko uruchomieniowe, numer wersji, który zostanie wyświetlony będzie taka sama.
+
+### <a name="version-selection"></a>Wybór wersji
+
+.NET core stosuje zestaw zasad, które określają, które wersje środowiska uruchomieniowego .NET Core i zestawu SDK są używane w różnych scenariuszach. Te scenariusze i zasady są w pełni przedstawione w artykule na [wybór wersji](selection.md).
+
+Można potraktować te zasady, zgodnie z wykonaniem następujących ról:
+
+* Włącz łatwe i efektywne wdrażanie programu .NET Core, w tym zabezpieczeń i niezawodności aktualizacji.
+* Umożliwiają deweloperom używanie najnowsze narzędzia i polecenia niezależnie od docelowego środowiska uruchomieniowego.
 
 ### <a name="installers"></a>Pliki instalacyjne
 
-.NET Core 2.0, pliki do pobrania dla [codziennie kompilacje](https://github.com/dotnet/core-setup#daily-builds) i [zwalnia](https://www.microsoft.com/net/download/core) stosować się do nowego schemat nazewnictwa, która ułatwia zrozumienie.
-Instalator interfejsu użytkownika w tych plikach do pobrania została zmodyfikowana również wyraźnie przedstawić nazwy i wersje instalowanych składników. W szczególności tytułów teraz Pokaż numer wersji tego samego znajduje się w nazwie pliku pobierania.
+Za pomocą platformy .NET Core 2.0, pliki do pobrania dla [codzienne kompilacje](https://github.com/dotnet/core-setup#daily-builds) i [zwalnia](https://www.microsoft.com/net/download/core) stosować nowy schemat nazewnictwa, która jest łatwiejsze do zrozumienia.
+Interfejs użytkownika Instalatora w tych plikach do pobrania również została zmodyfikowana w celu wyraźnie stwarzać nazwy i wersje są zainstalowane składniki. W szczególności tytuły pokazują teraz ten sam numer wersji, który jest w nazwie pliku pliki do pobrania.
 
 #### <a name="file-name-format"></a>Format nazwy pliku
 
 `[product]-[component]-[major].[minor].[patch]-[previewN]-[optional build #]-[rid].[file ext]`
 
-Oto kilka przykładów tego formatu:
+Poniżej przedstawiono kilka przykładów tego formatu:
 
 ```
 dotnet-runtime-2.0.4-osx.10.12-x64.pkg            # Mac runtime installer
@@ -55,59 +64,59 @@ dotnet-runtime-2.0.4-ubuntu.16.04-x64.deb         # runtime
 dotnet-sdk-2.0.4-ubuntu.16.04-x64.deb             # SDK tools
 ```
 
-Format jest możliwy do odczytu i jasno wskazuje czego pobieranie wersji jest i gdzie można go użyć. Nazwa pakietu środowiska uruchomieniowego zawiera `runtime`, i zestaw SDK zawiera `SDK`.
+Format można odczytać i wyraźnie pokazuje, jakie są pobierane, jaka wersja jest i gdzie można go użyć. Nazwa pakietu środowiska uruchomieniowego zawiera `runtime`, a zestaw SDK zawiera `SDK`.
 
 #### <a name="ui-string-format"></a>Format ciągu interfejsu użytkownika
 
-Wszystkie opisy witryny sieci web i ciągi interfejsu użytkownika w instalatorów pozostają spójne, dokładne i proste. W poniższej tabeli przedstawiono kilka przykładów:
+Wszystkie witryny sieci web, opisy i ciągi interfejsu użytkownika w instalatory pozostają spójne, dokładne i proste. W poniższej tabeli przedstawiono kilka przykładów:
 
-| Instalator | Tytuł okna                          | Inną zawartość w Instalatorze | Co to jest zainstalowany                               |
+| Instalator | Tytuł okna                          | Innej zawartości w Instalatorze | Co to jest zainstalowany                               |
 | :--       | :--                                   | :--                        | :--                                             |
-| SDK       | Instalator programu .NET core 2.0 SDK (x 64)     | Oprogramowanie .NET core 2.0.4 zestawu SDK        | .NET Core 2.0.4 Tools + .NET Core 2.0.4 Runtime |
+| SDK       | Instalator programu .NET core 2.0 SDK (x 64)     | .NET core 2.0.4 zestawu SDK        | .NET Core 2.0.4 Tools + .NET Core 2.0.4 Runtime |
 | Środowisko uruchomieniowe   | Środowisko uruchomieniowe (x64) Instalatora programu .NET core 2.0 | .NET Core 2.0.4 Runtime    | .NET Core 2.0.4 Runtime                         |
 
-Wersje zapoznawcze różnią się tylko nieznacznie:
+Wersje zapoznawcze nieco tylko:
 
-| Instalator | Tytuł okna                                    | Inną zawartość w Instalatorze        | Co to jest zainstalowany                                                   |
+| Instalator | Tytuł okna                                    | Innej zawartości w Instalatorze        | Co to jest zainstalowany                                                   |
 | :--       | :--                                             | :--                               | :--                                                                 |
-| SDK       | Instalatora programu .NET core 2.0 wersja zapoznawcza 1 SDK (x 64)     | 1 — zestaw SDK platformy .NET core 2.0.0 w wersji Preview     | Narzędzia programu .NET core 2.0.0 Preview 1 + .NET Core 2.0.0 Preview 1 środowiska wykonawczego |
-| Środowisko uruchomieniowe   | Instalatora programu .NET core 2.0 wersja zapoznawcza 1 (x64) środowiska wykonawczego | Środowisko uruchomieniowe platformy .NET core 2.0.0 Preview 1 | Środowisko uruchomieniowe platformy .NET core 2.0.0 Preview 1                                   |
+| SDK       | Instalatora programu .NET core 2.0 (wersja zapoznawcza 1) zestawu SDK (x 64)     | 1 — zestaw SDK platformy .NET core 2.0.0 w wersji zapoznawczej     | Narzędzia programu .NET core 2.0.0 (wersja zapoznawcza 1) + platformy .NET Core 2.0.0 w wersji zapoznawczej 1 środowiska uruchomieniowego |
+| Środowisko uruchomieniowe   | Środowisko uruchomieniowe (x64) Instalatora programu .NET core 2.0 (wersja zapoznawcza 1) | Środowisko uruchomieniowe programu .NET core 2.0.0 1 (wersja zapoznawcza) | Środowisko uruchomieniowe programu .NET core 2.0.0 1 (wersja zapoznawcza)                                   |
 
-Może się zdarzyć, że wersja zestawu SDK zawiera więcej niż jedną wersję środowiska uruchomieniowego. W takim przypadku Instalator UX wygląda następująco (tylko wersja zestawu SDK jest wyświetlany i zainstalowanych wersji środowiska uruchomieniowego są wyświetlane na stronie podsumowania pod koniec procesu instalacji w systemach Windows i Mac):
+Może się zdarzyć, że wersja zestawu SDK zawiera więcej niż jedna wersja środowiska uruchomieniowego. Jeśli tak się stanie, Instalator UX wygląda podobnie do poniższego (tylko wersja zestawu SDK jest wyświetlany i zainstalowanych wersji środowiska uruchomieniowego są wyświetlane na stronie podsumowania pod koniec procesu instalacji na Windows i Mac):
 
-| Instalator | Tytuł okna                      | Inną zawartość w Instalatorze                                   | Co to jest zainstalowany                                                         |
+| Instalator | Tytuł okna                      | Innej zawartości w Instalatorze                                   | Co to jest zainstalowany                                                         |
 | :--       | :--                               | :--                                                          | :--                                                                       |
-| SDK       | Instalator programu .NET core 2.1 zestawu SDK (x 64) | .NET Core 2.1.1 SDK <br> .NET Core 2.1.1 Runtime <br> Środowisko uruchomieniowe platformy .NET core 2.0.6 | Narzędzia .NET core 2.1.1 + środowisko uruchomieniowe platformy .NET Core 2.1.1 środowisko uruchomieniowe platformy .NET Core 2.0.6 |
+| SDK       | Instalator programu .NET core 2.1 zestawu SDK (x 64) | .NET Core 2.1.1 SDK <br> .NET Core 2.1.1 Runtime <br> Środowisko uruchomieniowe programu .NET core 2.0.6 | Narzędzia programu .NET core 2.1.1, środowisko uruchomieniowe programu .NET Core 2.1.1 i środowisko uruchomieniowe programu .NET Core 2.0.6 |
 
-Istnieje również możliwość, że narzędzia .NET Core muszą zostać zaktualizowane, bez zmiany środowiska uruchomieniowego. W takim przypadku zwiększa się wersja zestawu SDK (na przykład, aby 2.1.2), a następnie środowiska uruchomieniowego przechwytuje następnym razem go (na przykład środowiska uruchomieniowego i zestawu SDK wysłać przy następnym jako 2.1.3) jest dostarczany.
+Istnieje również możliwość, że podstawowe narzędzia .NET muszą zostać zaktualizowane, bez zmiany środowiska uruchomieniowego. W takim przypadku zwiększa się wersja zestawu SDK (na przykład, aby 2.1.2), a następnie środowiska uruchomieniowego następnym razem go przechwycił dostarczany (na przykład, środowisko uruchomieniowe i zestaw SDK dostarczanie przy następnym jako 2.1.3).
 
-### <a name="package-managers"></a>Menedżerowie pakietu
+### <a name="package-managers"></a>Menedżery pakietów
 
-Oprogramowanie .NET core mogą być dystrybuowane przez inne jednostki, niż firmy Microsoft. W szczególności właścicieli dystrybucji systemu Linux i maintainers pakietu może Dodawanie pakietów platformy .NET Core ich menedżerów pakietu. Aby uzyskać zalecenia dotyczące sposobu tych pakietów powinny być nazywane i kontrolą wersji, zobacz [pakowania dystrybucji .NET Core](../build/distribution-packaging.md).
+.NET core mogą być dystrybuowane przez inne jednostki niż firmy Microsoft. W szczególności właściciele dystrybucji systemu Linux i maintainers pakietu mogą dodawać pakiety platformy .NET Core do ich menedżerów pakietów. Aby uzyskać zalecenia dotyczące sposobu te pakiety powinna być nazwane i kontrolą wersji, zobacz [tworzenie pakietów dystrybucji platformy .NET Core](../build/distribution-packaging.md).
 
 #### <a name="minimum-package-set"></a>Ustaw minimalną pakietu
 
-* `dotnet-runtime-[major].[minor]`: środowiska wykonawczego o określonej wersji (tylko najnowszą wersję poprawki dla danej głównych + pomocnicza kombinacji powinny być dostępne w Menedżera pakietów). Nowe wersje poprawki pakietu, ale nowe wersje pomocnicze lub główne są osobne pakiety.
+* `dotnet-runtime-[major].[minor]`: środowisko uruchomieniowe o określonej wersji (tylko najnowsza wersja poprawki dla danej głównych + pomocnicza kombinacji powinny być dostępne w Menedżerze pakietów). Nowe wersje poprawki pakietu aktualizacji, ale nowe wersje drobnych lub główne są oddzielne pakiety.
 
   **Zależności**: `dotnet-host`
 
-* `dotnet-sdk`: najnowszej wersji zestawu SDK. `update` przedstawia przekazywania głównych i pomocniczych i poprawka wersji.
+* `dotnet-sdk`: najnowszy zestaw SDK. `update` Przekazuj głównych i pomocniczych oraz stosowanie poprawek do wersji.
 
   **Zależności**: r `dotnet-sdk-[major].[minor]`.
 
-* `dotnet-sdk-[major].[minor]`: zestaw SDK o określonej wersji. Określona wersja jest najwyższej wersji dołączone dołączone struktur udostępnionych, tak, aby użytkownicy można łatwo dotyczą zestawu SDK udostępnionego framework. Nowe wersje poprawki pakietu, ale nowe wersje pomocnicze lub główne są osobne pakiety.
+* `dotnet-sdk-[major].[minor]`: zestaw SDK o określonej wersji. Określona wersja jest najwyższa wersja uwzględnione uwzględnione struktur udostępnionych, tak, aby użytkownicy mogą łatwo odnoszą się zestaw SDK do udostępnionej platformy. Nowe wersje poprawki pakietu aktualizacji, ale nowe wersje drobnych lub główne są oddzielne pakiety.
 
-  **Zależności**: `dotnet-host`, co najmniej jeden `dotnet-runtime-[major].[minor]` (jedna z tych jest używana przez zestaw SDK kodu, inne są tutaj dla użytkowników skompilować i uruchomić przed).
+  **Zależności**: `dotnet-host`, co najmniej jeden `dotnet-runtime-[major].[minor]` (jeden z nich jest używany przez sam kod zestawu SDK pozostałe wersje to tutaj dla użytkowników skompilować i uruchomić względem).
 
 * `dotnet-host`: najnowsze hosta.
 
-##### <a name="preview-versions"></a>Wersji Preview
+##### <a name="preview-versions"></a>Wersje (wersja zapoznawcza)
 
-Maintainers pakietu może zadecydować o obejmują wersje podglądu środowiska uruchomieniowego i zestawu SDK. Nie dołączaj tych wersji zapoznawczych wycofanie `dotnet-sdk` pakiet, ale można je zwolnić pakiety w wersji ze znacznikiem Podgląd dodatkowe dołączone do wersji głównej i pomocniczej części nazwy. Na przykład mogą istnieć `dotnet-sdk-2.0-preview1-final` pakietu.
+Pakiet maintainers może zdecydować o zawierają wersje środowiska uruchomieniowego i zestawu SDK w wersji zapoznawczej. Nie dołączaj tych wersji zapoznawczych niewersjonowanego `dotnet-sdk` pakietu, ale można je zwolnić jako numerów wersji pakietów ze znacznikiem dodatkowe podglądu dołączany do nazwy sekcji wersji głównych i pomocniczych. Na przykład mogą istnieć `dotnet-sdk-2.0-preview1-final` pakietu.
 
 ### <a name="docker"></a>Docker
 
-Ogólne tag Docker konwencji nazewnictwa jest umieszczenie numeru wersji przed nazwą składnika. Tę Konwencję może nadal być wykorzystywane. Bieżące znaczniki zawierają tylko wersję środowiska uruchomieniowego w następujący sposób.
+Ogólne Docker tag konwencji nazewnictwa jest umieścić numer wersji przed nazwą składnika. Ta konwencja mogą nadal być wykorzystywane. Bieżące znaczniki zawierają tylko wersja środowiska uruchomieniowego w następujący sposób.
 
 * 1.0.8-Runtime
 * 1.0.8-sdk
@@ -116,146 +125,146 @@ Ogólne tag Docker konwencji nazewnictwa jest umieszczenie numeru wersji przed n
 * 2.1.1-Runtime
 * 2.1.1-sdk
 
-Tagi SDK powinny zostać uaktualnione do reprezentowania wersji zestawu SDK zamiast środowiska wykonawczego.
+Tagi SDK powinien zostać zaktualizowany do reprezentowania wersji zestawu SDK, a nie środowiska uruchomieniowego.
 
-Istnieje również możliwość, usunięto narzędzi interfejsu wiersza polecenia platformy .NET Core (dołączony do zestawu SDK) ale reship z istniejącego środowiska wykonawczego. W takim przypadku zwiększa się wersja zestawu SDK (na przykład, aby 2.1.2), a następnie środowiska uruchomieniowego przechwytuje następnym razem go (na przykład środowiska uruchomieniowego i zestawu SDK wysłać następującym czasie jako 2.1.3) jest dostarczany.
+Istnieje również możliwość, usunięto narzędzia wiersza polecenia platformy .NET Core (dołączony do zestawu SDK) ale reship istniejących plików wykonywalnych. W takim przypadku zwiększa się wersja zestawu SDK (na przykład, aby 2.1.2), a następnie środowiska uruchomieniowego następnym razem go przechwycił dostarczany (na przykład, środowisko uruchomieniowe i zestaw SDK dostarczanie następującym czasie jako 2.1.3).
 
-## <a name="semantic-versioning"></a>Wersjonowania semantycznego
+## <a name="semantic-versioning"></a>Semantic Versioning
 
-Używa platformy .NET core [Wersjonowania semantycznego (programu SemVer)](http://semver.org/), przyjmowanie stosowania `MAJOR.MINOR.PATCH` versioning stopnia i typ zmiany jest opisywany przy użyciu różnych części numer wersji.
+Korzysta z platformy .NET core [Semantic Versioning (SemVer)](http://semver.org/), przyjęcie użytkowania `MAJOR.MINOR.PATCH` przechowywania wersji, użycie różnych części numeru wersji w celu opisania stopnia i typ zmiany.
 
 ```
 MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 ```
 
-Opcjonalny `PRERELEASE` i `BUILDNUMBER` części nigdy nie są częścią obsługiwanych wersji i istnieje tylko w przypadku kompilacji co noc, lokalne kompilacje ze źródła obiekty docelowe, i zwalnia nieobsługiwanej wersji zapoznawczej.
+Opcjonalny `PRERELEASE` i `BUILDNUMBER` części nigdy nie są częścią obsługiwanych wersji i istnieją tylko na nocnych kompilacji, lokalne kompilacje z celów źródła i nieobsługiwane wersje zapoznawcze.
 
-### <a name="how-version-numbers-are-incremented"></a>Jak są zwiększane, numery wersji?
+### <a name="how-version-numbers-are-incremented"></a>Jak są zwiększane numery wersji?
 
-`MAJOR` Kiedy jest zwiększany:
+`MAJOR` jest zwiększany, gdy:
 
 - Stara wersja nie jest już obsługiwana.
-- Nowszej `MAJOR` przyjęto wersję istniejącego zależności.
-- Domyślne ustawienie niedoskonałość zgodności zostanie zmieniona na "off".
+- Nowsze `MAJOR` przyjmuje się wersja istniejące zależności.
+- Domyślne ustawienie niedoskonałość zgodności jest zmieniana na "wyłączone".
 
-`MINOR` Kiedy jest zwiększany:
+`MINOR` jest zwiększany, gdy:
 
-- Dodawany jest publicznej powierzchni interfejsu API.
-- Dodawany jest nowe zachowanie.
-- Nowszej `MINOR` przyjęto wersję istniejącego zależności.
+- Publiczny obszar powierzchni interfejsu API jest dodawany.
+- Nowe zachowanie jest dodawany.
+- Nowsze `MINOR` przyjmuje się wersja istniejące zależności.
 - Wprowadzono nowe zależności.
 
-`PATCH` Kiedy jest zwiększany:
+`PATCH` jest zwiększany, gdy:
 
-- Wprowadzono poprawki błędów.
+- Poprawki zostały wprowadzone.
 - Zostanie dodana jego obsługa dla nowszej platformy.
-- Nowszej `PATCH` przyjęto wersję istniejącego zależności.
-- Inne zmiany nie mieści się jednym z poprzednich przypadków.
+- Nowsze `PATCH` przyjmuje się wersja istniejące zależności.
+- Inne zmiany nie mieści się jednego z poprzednich przypadków.
 
-W przypadku wielu zmian najwyższy element dotyczy poszczególnych zmian jest zwiększany, a następujące klucze są resetowane do zera. Na przykład, jeśli `MAJOR` jest zwiększany, `MINOR` i `PATCH` jest resetowany do zera. Gdy `MINOR` jest zwiększany, `PATCH` jest resetowany do zera podczas `MAJOR` jest pozostało bez zmian.
+W przypadku wielu zmian najwyższy element wpływ poszczególnych zmian jest zwiększany, a poniższych jest resetowany do zera. Na przykład, gdy `MAJOR` jest zwiększany `MINOR` i `PATCH` jest resetowany do zera. Gdy `MINOR` jest zwiększany `PATCH` jest resetowany do zera trochę `MAJOR` nie została zmieniona po lewej.
 
-### <a name="preview-versions"></a>Wersji Preview
+### <a name="preview-versions"></a>Wersje (wersja zapoznawcza)
 
-Podgląd wersji `-preview[number]-([build]|"final")` dołączone do wersji. Na przykład `2.0.0-preview1-final`.
+Wersji zapoznawczych mają `-preview[number]-([build]|"final")` dołączany do wersji. Na przykład `2.0.0-preview1-final`.
 
 ### <a name="servicing-versions"></a>Obsługa wersji
 
-Po zlecenia trafia, gałęzie, które zlecenia zwykle stop produkujących codziennie kompilacje i zamiast tego uruchomić produkujących obsługi kompilacji. Wersje obsługi mają `-servicing-[number]` dołączone do wersji. Na przykład `2.0.1-servicing-006924`.
+Po wydaniu trafia, gałęzie wydań jest ogólnie Zatrzymaj tworzenie codzienne kompilacje i zamiast tego zaczniesz tworzenie obsługi kompilacji. Wersje obsługi mają `-servicing-[number]` dołączany do wersji. Na przykład `2.0.1-servicing-006924`.
 
 ### <a name="lts-vs-current"></a>LTS, a bieżąca
 
-Istnieją dwa pociągu wersji dla platformy .NET Core: długi okres pomocy technicznej (LTS) i bieżący. Który umożliwia użytkownikom wybierz poziom stabilności i nowe funkcje, które mają, podczas nadal obsługiwane.
+Istnieją dwa pociągów wersji dla platformy .NET Core: długi okres pomocy technicznej (LTS) i bieżący. Który umożliwia użytkownikom na wybranie poziomu stabilności i nowe funkcje, które zechcą, podczas nadal obsługiwane.
 
-- LTS oznacza rzadziej pobrać nowe funkcje, ale masz więcej dojrzałe platformy. LTS ma również dłuższy okres pomocy technicznej.
-- Bieżąca oznacza częściej pobrać nowe funkcje i interfejsy API, ale wadą jest to, że masz krótszą okno czasu na zainstalowanie aktualizacji i aktualizacje wystąpić częściej. Aktualnie jest także w pełni obsługiwane, ale czas obsługi jest krótszy niż LTS.
+- LTS oznacza mniejszą częstotliwością uzyskuj nowe funkcje, ale masz bardziej dojrzałych platformy. LTS ma również dłuższy okres wsparcia.
+- Bieżąca oznacza, że możesz korzystać z nowych funkcji i interfejsów API częściej, ale wadą jest to, że masz krótsze okno czasu na zainstalowanie aktualizacji i te aktualizacje możliwe częściej. Bieżący jest również w pełni obsługiwane, ale czas pomocy technicznej jest krótszy niż LTS.
 
-Wersja "Bieżący" może pobrać podwyższony do LTS.
+"Bieżącej" wersji może uzyskać podwyższony do LTS.
 
-"LTS" i "Bieżący" należy traktować jako etykiety, które testujemy na określonymi wersjami, aby oświadczenie o skojarzone poziomu wsparcia.
+"LTS" i "Aktualne" powinny być uważane etykiety, które umieściliśmy w określonych wydaniach zapewnienie instrukcji o skojarzone poziom pomocy technicznej.
 
-Aby uzyskać więcej informacji, zobacz [.NET Core obsługi cyklu życia zestawieniem](https://www.microsoft.com/net/core/support).
+Aby uzyskać więcej informacji, zobacz [.NET Core pomocy technicznej cyklu życia zestawieniem](https://www.microsoft.com/net/core/support).
 
-## <a name="versioning-scheme-details"></a>Szczegóły systemu kontroli wersji
+## <a name="versioning-scheme-details"></a>Szczegóły schematu przechowywania wersji
 
-Oprogramowanie .NET core składa się z następujących części:
+.NET core składa się z następujących elementów:
 
-- Host: albo *dotnet.exe* dla aplikacji zależnych od framework lub  *\<nazwa_aplikacji > .exe* dla swojej aplikacji.
-- Zestaw SDK (zestaw niezbędnych narzędzi na komputerze dewelopera, ale nie w środowisku produkcyjnym).
-- Środowisko wykonawcze.
-- Implementacja udostępnionego framework dystrybuowanych jako pakietów. Każdy pakiet jest wersjonowany niezależnie, szczególnie w przypadku wersji poprawki.
-- Opcjonalnie, zbiór [metapackages](../packages.md) które zawierają odniesienia szczegółowych pakietów jako wersjonowaną jednostkę. Metapackages może mieć określonej wersji niezależnie od pakietów.
+- Host: albo *dotnet.exe* zależny od struktury aplikacji, lub  *\<nazwa_aplikacji > .exe* niezależna aplikacji.
+- Zestaw SDK (zestaw narzędzi niezbędnych na komputerze dewelopera, ale nie w środowisku produkcyjnym).
+- Środowisko uruchomieniowe.
+- Implementacja udostępnionej platformy rozpowszechniane w formie pakietów. Każdy pakiet jest wersjonowany niezależnie, szczególnie w przypadku wersji poprawki.
+- Opcjonalnie, zbiór [metapakiety](../packages.md) , odwołania się do szczegółowych pakietów jako jednostka numerów wersji. Metapakiety może być wersjonowany niezależnie od pakietów.
 
-Oprogramowanie .NET core zawiera także zestaw docelowych platform (na przykład `netstandard` lub `netcoreapp`) reprezentujące stopniowo większy zestaw interfejsu API, jak są zwiększane numerów wersji.
+.NET core zawiera także zestaw platform docelowych (na przykład `netstandard` lub `netcoreapp`) reprezentujące stopniowo większy zestaw interfejsów API, jak numery wersji są zwiększane.
 
 ### <a name="net-standard"></a>.NET standard
 
-.NET standard korzysta `MAJOR.MINOR` schemat przechowywania wersji. `PATCH` poziom nie jest przydatne w przypadku .NET Standard, ponieważ wyraża zestaw umów, które iterowane na rzadziej i nie stanowi te same wymagania dotyczące przechowywania wersji jako rzeczywistego wykonania.
+.NET standard używał `MAJOR.MINOR` schematu przechowywania wersji. `PATCH` poziom nie jest przydatne dla platformy .NET Standard, ponieważ wyraża zestaw umowy, które są postanowiliśmy rzadziej i nie Prezentuj takie same wymagania dotyczące wersji jako rzeczywiste wdrożenie.
 
-Nie istnieje żadne rzeczywiste sprzężenie wersje .NET Standard i .NET Core: .NET Core 2.0 stanie się implementuje standardowe .NET w wersji 2.0, ale nie ma gwarancji, że w przyszłych wersjach programu .NET Core przypisze do tej samej wersji platformy .NET Standard. Oprogramowanie .NET core mogą być interfejsów API, które nie są zdefiniowane przez .NET Standard i jako taki może nastąpić nowe wersje bez konieczności nowe standardowe .NET. .NET standard jest również pojęcie ma zastosowanie do innych celów, takich jak .NET Framework lub Mono, nawet jeśli jego powstania stało się pokrywa się z tym oprogramowanie .NET Core.
+Nie ma żadnych rzeczywistych sprzężenie wersje .NET Standard i .NET Core: .NET Core 2.0, stanie się z implementacji .NET Standard 2.0, ale nie ma żadnej gwarancji, że przyszłych wersjach programu .NET Core będzie zmapowana do tej samej wersji .NET Standard. .NET core może wysłać interfejsów API, które nie są zdefiniowane przez .NET Standard, a w efekcie może dostarczanie nowych wersji bez konieczności nowe .NET Standard. .NET standard jest również pojęcie, która ma zastosowanie do innych celów, takich jak .NET Framework lub platformy Mono, nawet wtedy, gdy jego powstania stało się pokrywać się z zakresem platformy .NET Core.
 
 ### <a name="packages"></a>Pakiety
 
-Pakiety bibliotekę rozwijać i wersji niezależnie. Pakiety, które nakładają się przy użyciu systemu .NET Framework. \* zestawy zazwyczaj używają wersji 4.x, dopasowanie się do przechowywania .NET Framework 4.x wersji (wybór historycznych). Pakiety, które nie nakładają się z bibliotekami .NET Framework (na przykład [ `System.Reflection.Metadata` ](https://www.nuget.org/packages/System.Reflection.Metadata)) zazwyczaj są liczone od 1.0 i zwiększyć stamtąd.
+Ewolucji pakietów biblioteki i wersji niezależnie. Pakiety, które pokrywają się z .NET Framework System. \* zestawy zazwyczaj używają wersji 4.x, dopasowanie się do wersji 4.x .NET Framework (wybór historycznych). Pakiety, które nie nakładają się z bibliotekami .NET Framework (na przykład [ `System.Reflection.Metadata` ](https://www.nuget.org/packages/System.Reflection.Metadata)) zazwyczaj rozpoczynają się od wersji 1.0 i zwiększ z tego miejsca.
 
-Pakiety opisanego przez [ `NETStandard.Library` ](https://www.nuget.org/packages/NETStandard.Library) są traktowane specjalnie z powodu w podstawowej platformy.
+Pakiety opisanego przez [ `NETStandard.Library` ](https://www.nuget.org/packages/NETStandard.Library) traktowania specjalnie ze względu na podstawowej platformy.
 
-`NETStandard.Library` pakiety zostaną zwykle wersji jako zestaw, ponieważ mają one poziomie implementacji zależności między nimi.
+`NETStandard.Library` pakiety będzie zazwyczaj wersji jako zestaw, ponieważ mają one poziomie implementacji zależności między nimi.
 
-### <a name="metapackages"></a>Metapackages
+### <a name="metapackages"></a>Metapakiety
 
-Przechowywanie wersji dla platformy .NET Core metapackages zależy od wersji platformy .NET Core, które są częścią.
+Przechowywanie wersji platformy .NET Core metapakiety zależy od wersji platformy .NET Core, są one częścią.
 
-Na przykład metapackages w .NET Core 2.1.3 powinien wszystkie mają 2.1 jako ich `MAJOR` i `MINOR` numerów wersji.
+Na przykład, metapakiety w programie .NET Core 2.1.3 powinny wszystkie mieć 2.1 jako ich `MAJOR` i `MINOR` numerów wersji.
 
-Wersja poprawki dla metapackage jest zwiększany za każdym razem, gdy są aktualizowane wszystkie pakiety, do którego istnieje odwołanie. Poprawka nie zawierają zaktualizowane framework w wersji. W związku z tym metapackages nie są ściśle zgodne programu SemVer ponieważ ich schemat przechowywania wersji nie reprezentuje stopnia zmiany w podstawowym pakietów, ale głównie z poziomu interfejsu API.
+Wersja poprawki meta Microsoft.aspnetcore.all jest zwiększany za każdym razem, gdy zaktualizowaniu dowolnego pakietu odwołania. Wersje poprawki nie zawierają zaktualizowaną wersję. W rezultacie metapakiety ściśle są niezgodne z SemVer, ponieważ jego schemat przechowywania wersji nie stanowią stopień zmian w pakietach podstawowego, ale przede wszystkim z poziomu interfejsu API.
 
-Obecnie nie istnieją dwa podstawowe metapackages dla platformy .NET Core:
+Obecnie istnieją dwa podstawowe metapakiety dla platformy .NET Core:
 
 **Microsoft.NETCore.App**
 
-- w wersji 1.0 lub nowszym .NET Core 1.0 (te wersje są zgodne).
+- V1.0, począwszy od platformy .NET Core 1.0 (te wersje są zgodne).
 - Mapuje `netcoreapp` framework.
-- Opisuje pakiety w dystrybucji .NET Core.
+- W tym artykule opisano pakietów dystrybucji platformy .NET Core.
 
-Uwaga: [ `Microsoft.NETCore.Portable.Compatibility` ](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) jest inny metapackage .NET Core, która istnieje na zgodność ze standardowej implementacji .NET wstępne platformy .NET. Go nie mapowania na określonej platformy, więc jego wersje, takich jak pakiet.
+Uwaga: [ `Microsoft.NETCore.Portable.Compatibility` ](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) jest inny meta Microsoft.aspnetcore.all platformy .NET Core, który istnieje w celu włączenia zgodności przy użyciu standardowej implementacji .NET wstępne platformy .NET. Go nie jest mapowany do określonej struktury, więc jego wersji, takich jak pakiet.
 
 **NETStandard.Library**
 
-[`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library) w tym artykule opisano bibliotek, które są częścią [.NET Standard](../../standard/library.md). Dotyczy wszystkich implementacji .NET, które obsługują .NET Standard, takich jak .NET Framework, .NET Core i Mono.
+[`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library) w tym artykule opisano bibliotek, które są częścią [.NET Standard](../../standard/library.md). Ma zastosowanie do wszystkich implementacje platformy .NET, które obsługują .NET Standard, takich jak .NET Framework i .NET Core, Mono.
 
-### <a name="target-frameworks"></a>Docelowych platform
+### <a name="target-frameworks"></a>Platformy docelowe
 
-TARGET framework w wersji zostały zaktualizowane po dodaniu nowych interfejsów API. Mają one nie zawierają wersji poprawki, ponieważ stanowią one kształtu interfejsu API i nie dotyczy implementacji. Wersje główne i pomocnicze jest zgodny z regułami programu SemVer określony wcześniej i pokrywa się z `MAJOR` i `MINOR` liczby dystrybucje .NET Core ich wdrażania.
+TARGET framework w wersji są aktualizowane, gdy zostaną dodane nowe interfejsy API. Mają one koncepcja wersja poprawki zabezpieczeń, ponieważ stanowią one kształt interfejsu API i nie dotyczy wdrożenia. Przechowywanie wersji głównych i pomocniczych regułom SemVer określonej wcześniej i pokrywa się z `MAJOR` i `MINOR` liczby dystrybucji platformy .NET Core, które je implementują.
 
 ## <a name="versioning-in-practice"></a>Przechowywanie wersji w praktyce
 
-Po pobraniu .NET Core nazwa pobranego pliku niesie wersji, na przykład `dotnet-sdk-2.0.4-win10-x64.exe`.
+Po pobraniu platformy .NET Core, nazwa pobranego pliku niesie ze sobą wersji, na przykład `dotnet-sdk-2.0.4-win10-x64.exe`.
 
-Brak zatwierdzeń i żądań ściągnięcia na repozytoriów .NET Core w serwisie GitHub codziennie, co nowego w tworzy wiele bibliotek. Nie jest praktyczne do tworzenia nowych wersji publicznej platformy .NET Core dla każdej zmiany. Zamiast tego zmiany są agregowane przez nieokreślony czas (na przykład, tygodnie lub miesiące) przed wprowadzeniem nowych publicznego stabilną wersję platformy .NET Core.
+Brak zatwierdzeń i żądań ściągnięcia z repozytoriów platformy .NET Core w usłudze GitHub codziennie, co nowe kompilacje wiele bibliotek. Nie jest praktyczne utworzyć nowy wersjach publicznych platformy .NET Core dla każdej zmiany. Zamiast tego zmiany są agregowane przez nieokreślony czas (na przykład, tygodni lub miesięcy) przed wprowadzeniem nowej publicznej stabilnej wersji platformy .NET Core.
 
-Nowa wersja programu .NET Core może oznaczać kilka kwestii:
+Nowa wersja programu .NET Core może oznaczać, że kilka rzeczy:
 
-- Nowe wersje pakietów i metapackages.
+- Nowe wersje pakietów i metapakiety.
 - Nowe wersje różnych platform, zakładając, że dodanie nowych interfejsów API.
-- Nowa wersja dystrybucji .NET Core.
+- Nowa wersja dystrybucji platformy .NET Core.
 
-### <a name="shipping-a-patch-release"></a>Wysyłanie zlecenia poprawki
+### <a name="shipping-a-patch-release"></a>Wysyłanie wydaniu poprawek
 
-Po wysyłania wydaniem .NET Core, takich jak wersji 2.0.0, poziom poprawki zmian do bibliotek .NET Core błędów i poprawa wydajności i niezawodności. Oznacza to, że zostały wprowadzone nie nowe interfejsy API. Różne metapackages są aktualizowane w celu odwołania się do zaktualizowanych pakietów biblioteki .NET Core. Kontrolą wersji jako poprawek i aktualizacji są metapackages (`MAJOR.MINOR.PATCH`). Docelowych platform nigdy nie są aktualizowane w ramach wersji poprawki. Nowe dystrybucji .NET Core zwolnieniu z numerem wersji, która odpowiada `Microsoft.NETCore.App` metapackage.
+Po wysyłania głównej wersji programu .NET Core w wersji 2.0.0, np. poziom poprawki zmian do bibliotek .NET Core, aby naprawić błędy i zwiększyć wydajność i niezawodność. Oznacza to, że zostały wprowadzone nie nowe interfejsy API. Różne metapakiety zostaną zaktualizowane do odniesienia zaktualizowanych pakietów biblioteki .NET Core. Metapakiety są określane jako poprawki, aktualizacje (`MAJOR.MINOR.PATCH`). Platformy docelowe nigdy nie są aktualizowane w ramach wersji poprawki. Nowe dystrybucji platformy .NET Core jest zwolniony z numeru wersji, który jest zgodny z typem `Microsoft.NETCore.App` meta Microsoft.aspnetcore.all.
 
-### <a name="shipping-a-minor-release"></a>Wysyłanie wersji pomocniczej
+### <a name="shipping-a-minor-release"></a>Wysyłanie wersję pomocniczą
 
-Po wysyłania wersji platformy .NET Core z zwiększany `MAJOR` numer wersji, nowe interfejsy API są dodawane do bibliotek .NET Core na potrzeby nowych scenariuszy. Różne metapackages są aktualizowane w celu odwołania się do zaktualizowanych pakietów biblioteki .NET Core. Metapackages są jako poprawek i aktualizacji z wersji `MAJOR` i `MINOR` dopasowania nowej wersji framework numerów wersji. Nowe nazwy framework docelowych z nowym `MAJOR.MINOR` wersji są dodawane do opisywania nowych interfejsów API (na przykład `netcoreapp2.1`). Nowe dystrybucji .NET Core jest publikowana z numeru wersji pasującego do `Microsoft.NETCore.App` metapackage.
+Po wysyłania wersji platformy .NET Core z zwiększona `MAJOR` numer wersji, nowe interfejsy API są dodawane do biblioteki .NET Core, aby umożliwić obsługę nowych scenariuszy. Różne metapakiety zostaną zaktualizowane do odniesienia zaktualizowanych pakietów biblioteki .NET Core. Metapakiety są określane jako aktualizacje poprawek za pomocą `MAJOR` i `MINOR` numery wersji dopasowania wersję szablonu. Nowe nazwy framework docelowej przy użyciu nowego `MAJOR.MINOR` wersji są dodawane do opisania nowe interfejsy API (na przykład `netcoreapp2.1`). Nowe dystrybucji platformy .NET Core jest zwolniony z zgodnych numer wersji do `Microsoft.NETCore.App` meta Microsoft.aspnetcore.all.
 
-### <a name="shipping-a-major-release"></a>Główna wersja wysyłania
+### <a name="shipping-a-major-release"></a>Wysyłanie głównej wersji
 
-Za każdym razem, gdy jest dostarczany w nowej wersji głównej .NET Core, `MAJOR` zwiększany pobiera numer wersji, a `MINOR` numer wersji jest resetowany do zera. Nowa wersja główna zawiera co najmniej wszystkich interfejsów API, które zostały dodane przez wersje pomocnicze po wcześniejszej wersji. Nowej wersji głównej należy włączyć ważne nowych scenariuszy, i może również porzucać obsługę starszych platformy.
+Za każdym razem, gdy jest dostarczany nowej wersji głównej programu .NET Core, `MAJOR` zwiększany pobiera numer wersji, a `MINOR` numer wersji jest resetowany do zera. Nowa wersja główna zawiera co najmniej wszystkie interfejsy API, które zostały dodane w wersji pomocniczej po wcześniejszej wersji głównej. Nowej wersji głównej, należy włączyć ważnych nowych scenariuszy i może również porzucać obsługę starszych platformy.
 
-Różne metapackages są aktualizowane w celu odwołania się do zaktualizowanych pakietów biblioteki .NET Core. [ `Microsoft.NETCore.App` ](https://www.nuget.org/packages/Microsoft.NETCore.App) Metapackage i `netcore` platformy docelowej są numerów wersji jako pasujący dużej aktualizacji `MAJOR` numer wersji nowej wersji.
+Różne metapakiety zostaną zaktualizowane do odniesienia zaktualizowanych pakietów biblioteki .NET Core. [ `Microsoft.NETCore.App` ](https://www.nuget.org/packages/Microsoft.NETCore.App) Meta Microsoft.aspnetcore.all i `netcore` platformy docelowej są określane jako ważna aktualizacja odpowiadający mu `MAJOR` numer wersji nowej wersji.
 
 ## <a name="see-also"></a>Zobacz także
 
 [Platformy docelowe](../../standard/frameworks.md)  
 [Tworzenie pakietów dystrybucji platformy .NET Core](../build/distribution-packaging.md)  
 [.NET core pomocy technicznej cyklu życia faktu arkusza](https://www.microsoft.com/net/core/support)  
-[.NET core 2 + wersji powiązania](https://github.com/dotnet/designs/issues/3)  
+[Wiązanie wersji programu .NET core 2 +](https://github.com/dotnet/designs/issues/3)  

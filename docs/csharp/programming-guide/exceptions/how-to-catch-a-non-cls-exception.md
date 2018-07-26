@@ -4,60 +4,49 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions [C#], non-CLS
 ms.assetid: db4630b3-5240-471a-b3a7-c7ff6ab31e8d
-ms.openlocfilehash: 6169f4b6de2efdfed0dbf43272d708c47b46dbca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c3153da78e0c25d59da7b5d83bd33f8080c7fae8
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340024"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198773"
 ---
 # <a name="how-to-catch-a-non-cls-exception"></a>Porady: przechwytywanie wyjątku typu non-CLS
-Niektóre języków .NET, w tym C + +/ CLI, pozwalają na zgłaszają wyjątki, które nie pochodzą z obiektów <xref:System.Exception>. Takie wyjątki są nazywane *wyjątki niezgodny ze specyfikacją CLS* lub *niebędące wyjątkami*. W środowisku Visual C# możesz nie można zgłosić wyjątki niezgodny ze specyfikacją CLS, ale można je catch na dwa sposoby:  
+Niektórych języków .NET, w tym C + +/ CLI, dopuszcza się użycia obiektów zgłaszają wyjątki, które nie pochodzą z <xref:System.Exception>. Takie wyjątki są nazywane *wyjątki niezgodnych ze specyfikacją CLS* lub *niebędące wyjątkami*. W języku C# nie generują wyjątki niezgodnych ze specyfikacją CLS, ale można przechwytywać na dwa sposoby:  
   
--   W ramach `catch (Exception e)` zablokować jako <xref:System.Runtime.CompilerServices.RuntimeWrappedException>.  
+-   W ramach `catch (RuntimeWrappedException e)` bloku.
   
-     Domyślnie zestawu Visual C# przechwytuje wyjątki niezgodny ze specyfikacją CLS jako wyjątki opakowana. Użyj tej metody, aby uzyskać dostęp do oryginalnego wyjątków, które mogą być udostępniane za pośrednictwem <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A> właściwości. Procedury później w tym temacie wyjaśniono, jak przechwytywanie wyjątków w ten sposób.  
+     Domyślnie zestaw Visual C# przechwytuje wyjątki niezgodnych ze specyfikacją CLS, jako wyjątki opakowana. Użyj tej metody, jeśli potrzebny jest dostęp do oryginalnego wyjątku, który jest możliwy za pośrednictwem <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A?displayProperty=nameWithType> właściwości. Procedury w dalszej części tego tematu opisano sposób przechwytywanie wyjątków w ten sposób.  
   
--   W bloku catch ogólne (blok catch bez określony typ wyjątku), który jest umieszczany po `catch (Exception)` lub `catch (Exception e)` bloku.  
+-   W ramach ogólnego bloku catch (catch blok bez określony typ wyjątku), który jest umieszczany po wszystkich innych `catch` bloków.
   
-     Użyj tej metody, gdy ma być wykonanie akcji (na przykład zapisywania do pliku dziennika) w odpowiedzi na wyjątki niezgodny ze specyfikacją CLS, oraz czy nie potrzebują dostępu do informacji o wyjątkach. Domyślnie środowisko uruchomieniowe języka wspólnego opakowuje wszystkie wyjątki. Aby wyłączyć to zachowanie, należy dodać ten atrybut poziomu zestawu do kodu, zwykle w pliku AssemblyInfo.cs: `[assembly: RuntimeCompatibilityAttribute(WrapNonExceptionThrows = false)]`.  
+     Metoda ta jest używana, gdy chcesz wykonać pewne działania (na przykład zapis do pliku dziennika) w odpowiedzi na wyjątki niezgodnych ze specyfikacją CLS i nie potrzebujesz dostępu do informacji o wyjątku. Domyślnie środowisko uruchomieniowe języka wspólnego opakowuje wszystkie wyjątki. Aby wyłączyć to zachowanie, należy dodać ten atrybut na poziomie zestawu w kodzie, zwykle w pliku AssemblyInfo.cs: `[assembly: RuntimeCompatibilityAttribute(WrapNonExceptionThrows = false)]`.  
   
-### <a name="to-catch-a-non-cls-exception"></a>Aby przechwytywać elementu exception niezgodny ze specyfikacją CLS  
+### <a name="to-catch-a-non-cls-exception"></a>Aby przechwycić wyjątek niezgodny ze specyfikacją  
   
-1.  W ramach `catch(Exception e) block`, użyj `as` — słowo kluczowe, aby sprawdzić czy `e` mogą być rzutowane na <xref:System.Runtime.CompilerServices.RuntimeWrappedException>.  
-  
-2.  Dostęp do oryginalnego wyjątku za pomocą <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A> właściwości.  
+W ramach `catch(RuntimeWrappedException e)` blokowania, dostęp do oryginalnego wyjątku za pośrednictwem <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A?displayProperty=nameWithType> właściwości.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia sposób catch wyjątek niezgodny ze specyfikacją CLS, który został zgłoszony z biblioteki klas napisany w języku C + +/ CLR. Należy pamiętać, że w tym przykładzie kodu klienta Visual C# zna wcześniej się typ wyjątek został zgłoszony <xref:System.String?displayProperty=nameWithType>. Można rzutować <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A> właściwości kopii jej oryginalnej typu pod warunkiem, że typ jest dostępny w kodzie.  
+ Poniższy przykład pokazuje, jak przechwycić wyjątek niezgodny ze specyfikacją, który został zgłoszony z biblioteki klas, napisany w języku C + +/ interfejsu wiersza polecenia. Należy pamiętać, że w tym przykładzie kodu klienta języka C# wie, z wyprzedzeniem to typ wyjątku jest zgłaszana <xref:System.String?displayProperty=nameWithType>. Można rzutować <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A?displayProperty=nameWithType> właściwości kopii jego typ oryginalny, tak długo, jak ten typ jest dostępny z poziomu kodu.  
   
-```  
-// Class library written in C++/CLR.  
-   ThrowNonCLS.Class1 myClass = new ThrowNonCLS.Class1();  
-  
-   try  
-   {  
+```csharp
+// Class library written in C++/CLI.
+var myClass = new ThrowNonCLS.Class1();
+
+try
+{
     // throws gcnew System::String(  
     // "I do not derive from System.Exception!");  
-    myClass.TestThrow();   
-   }  
-  
-   catch (Exception e)  
-   {  
-    RuntimeWrappedException rwe = e as RuntimeWrappedException;  
-    if (rwe != null)      
-    {  
-      String s = rwe.WrappedException as String;  
-      if (s != null)  
-      {  
-        Console.WriteLine(s);  
-      }  
-    }  
-    else  
-    {  
-       // Handle other System.Exception types.  
-    }  
-   }             
+    myClass.TestThrow();
+}
+catch (RuntimeWrappedException e)
+{
+    String s = e.WrappedException as String;
+    if (s != null)
+    {
+        Console.WriteLine(s);
+    }
+}
 ```  
   
 ## <a name="see-also"></a>Zobacz też  

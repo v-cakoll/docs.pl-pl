@@ -20,97 +20,97 @@ helpviewer_keywords:
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
 ms.openlocfilehash: c5ff9d097c0660956a9751a23511d8273766227c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655788"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245677"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>Rozwiązywanie problemów związanych z typami danych (Visual Basic)
-Ta strona zawiera listę typowych problemów, które mogą wystąpić podczas wykonywania operacji na typy danych wewnętrznych.  
+Ta strona zawiera listę niektórych typowych problemów, które mogą wystąpić podczas wykonywania operacji na typy danych wewnętrznych.  
   
-## <a name="floating-point-expressions-do-not-compare-as-equal"></a>Zmiennoprzecinkowe wyrażenia porównuje jako równe  
- Podczas pracy z liczb zmiennoprzecinkowych ([jednego typu danych](../../../../visual-basic/language-reference/data-types/single-data-type.md) i [— typ danych Double](../../../../visual-basic/language-reference/data-types/double-data-type.md)), należy pamiętać, że są one przechowywane jako binarne ułamków. Oznacza to, że nie posiadają dokładną reprezentację żadnych ilość, która nie jest binarny ułamek (w postaci k / (2 ^ n) gdzie k i n są liczbami całkowitymi). Na przykład 0,5 (= 1/2) i 0.3125 (= 5/16) może być przechowywany jako dokładne wartości, 0,2 (= 1/5) i 0,3 (= 3/10) może być tylko przybliżeniem.  
+## <a name="floating-point-expressions-do-not-compare-as-equal"></a>Zmiennoprzecinkowe wyrażeń nie porównują jako równe  
+ Podczas pracy z liczb zmiennoprzecinkowych ([jednego typu danych](../../../../visual-basic/language-reference/data-types/single-data-type.md) i [typ danych Double](../../../../visual-basic/language-reference/data-types/double-data-type.md)), należy pamiętać, że są przechowywane jako ułamki binarne. Oznacza to, że nie posiadają reprezentację w postaci dokładnie dowolnej ilości, która nie jest binarny ułamek (w postaci k / (2 ^ n) gdzie k i n są liczbami całkowitymi). Na przykład 0,5 (= 1/2) i 0.3125 (= 5/16) mogą być przechowywane dokładne wartości (= 1/5) 0.2 i 0.3 (= 3/10) może być tylko przybliżeniem.  
   
- W związku z tym błędu, możesz nie zależą od dokładne wyniki podczas działania na wartości zmiennoprzecinkowe. W szczególności dwie wartości, które są równe teoretycznie może być nieco inne oświadczenia.  
+ W związku z tym niedokładności, nie można polegać na dokładne wyniki podczas działania na wartości zmiennoprzecinkowe. W szczególności dwie wartości, które są równe teoretycznie może być nieco inne oświadczenia.  
   
-| Aby porównać liczb zmiennoprzecinkowych | 
+| Aby porównać liczby zmiennoprzecinkowe | 
 |---| 
-|1.  Obliczyć wartość bezwzględna różnica ich przy użyciu <xref:System.Math.Abs%2A> metody <xref:System.Math> klasy w <xref:System> przestrzeni nazw.<br />2.  Określ dopuszczalne maksymalnego różnica taki sposób, że należy wziąć pod uwagę dwa ilości, które mają być taka sama dla celów praktycznych, jeśli ich różnica jest nie większy.<br />3.  Porównanie wartości bezwzględne różnicy dopuszczalne różnicy.|  
+|1.  Oblicz wartość bezwzględną liczby ich różnica przy użyciu <xref:System.Math.Abs%2A> metody <xref:System.Math> klasy w <xref:System> przestrzeni nazw.<br />2.  Określ dopuszczalne maksymalna różnica tak, można rozważyć dwa ilości, które mają być taka sama ze względów praktycznych, jeśli ich różnica jest większa.<br />3.  Porównanie wartości bezwzględne, różnicy, różnica dopuszczalne.|  
   
- W poniższym przykładzie pokazano zarówno nieprawidłowych i poprawne porównanie dwóch `Double` wartości.  
+ Poniższy przykład pokazuje poprawne i niepoprawne porównanie dwóch `Double` wartości.  
   
  [!code-vb[VbVbalrDataTypes#10](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_1.vb)]  
   
- W poprzednim przykładzie użyto <xref:System.Double.ToString%2A> metody <xref:System.Double> struktury, dzięki czemu można określić większą dokładność niż `CStr` używa słowa kluczowego. Wartość domyślna to 15 cyfr, ale w formacie "G17" rozszerza on 17 cyfr.  
+ W poprzednim przykładzie użyto <xref:System.Double.ToString%2A> metody <xref:System.Double> struktury tak, aby go określić dokładność lepsze niż `CStr` używa słowa kluczowego. Wartość domyślna to 15 cyfr, ale w formacie "G17" rozszerza te możliwości 17 cyfr.  
   
-## <a name="mod-operator-does-not-return-accurate-result"></a>Mod — Operator nie zwraca wyniku dokładne  
- Z powodu błędu zmiennoprzecinkowe magazynu [Mod Operator](../../../../visual-basic/language-reference/operators/mod-operator.md) może zwrócić nieoczekiwany wynik, gdy co najmniej jeden z argumentów jest zmiennoprzecinkowych.  
+## <a name="mod-operator-does-not-return-accurate-result"></a>Mod — Operator nie może zwracać uzyskać dokładny wynik  
+ Ze względu na niedokładności zmiennoprzecinkowych magazynu [Mod — Operator](../../../../visual-basic/language-reference/operators/mod-operator.md) po co najmniej jeden z argumentów zmiennoprzecinkowych może zwrócić nieoczekiwany wynik.  
   
- [Typu danych dziesiętnych](../../../../visual-basic/language-reference/data-types/decimal-data-type.md) nie używa odwzorowanie liczby zmiennoprzecinkowej. Liczby, które są niedokładnymi w `Single` i `Double` są dokładnie w `Decimal` (na przykład 0.2 i 0,3). Mimo że arytmetyczne działa wolniej w `Decimal` niż w liczb zmiennoprzecinkowych, może być warto obniżenie wydajności w celu osiągnięcia lepszej dokładności.  
+ [Typu danych dziesiętnych](../../../../visual-basic/language-reference/data-types/decimal-data-type.md) nie używa odwzorowanie liczby zmiennoprzecinkowej. Liczby, które są niedokładne w `Single` i `Double` są dokładne w `Decimal` (na przykład 0.2 i 0.3). Chociaż arytmetyczny jest wolniejszy w `Decimal` niż w zmiennoprzecinkowych, może być warte obniżenie wydajności w celu osiągnięcia lepszej dokładności.  
   
-|Aby znaleźć pozostałej liczby całkowitej ilości liczb zmiennoprzecinkowych|  
+|Aby znaleźć pozostałej liczby całkowitej ilości zmiennoprzecinkowych|  
 |---|  
-|1.  Zadeklaruj zmienne jako `Decimal`.<br />2.  Znak literalny typu `D` wymusić literały do `Decimal`, w przypadku, gdy ich wartości są za szerokie dla `Long` — typ danych.|  
+|1.  Zadeklaruj zmienne jako `Decimal`.<br />2.  Użyj znaku typu literał `D` wymusić literałów `Decimal`, w przypadku, gdy ich wartości są zbyt duże, aby `Long` typu danych.|  
   
- W poniższym przykładzie pokazano ryzyko błędu argumentów operacji zmiennoprzecinkowej.  
+ W poniższym przykładzie pokazano potencjał niedokładności argumentów operacji zmiennoprzecinkowej.  
   
  [!code-vb[VbVbalrDataTypes#11](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_2.vb)]  
   
- W poprzednim przykładzie użyto <xref:System.Double.ToString%2A> metody <xref:System.Double> struktury, dzięki czemu można określić większą dokładność niż `CStr` używa słowa kluczowego. Wartość domyślna to 15 cyfr, ale w formacie "G17" rozszerza on 17 cyfr.  
+ W poprzednim przykładzie użyto <xref:System.Double.ToString%2A> metody <xref:System.Double> struktury tak, aby go określić dokładność lepsze niż `CStr` używa słowa kluczowego. Wartość domyślna to 15 cyfr, ale w formacie "G17" rozszerza te możliwości 17 cyfr.  
   
- Ponieważ `zeroPointTwo` jest `Double`, jego wartość 0,2 jest nieskończenie identycznych ułamek binarnego z wartością przechowywaną 0.20000000000000001. Podzielenie 2.0 przez ilość ta daje 9.9999999999999995 pozostałych 0.19999999999999991.  
+ Ponieważ `zeroPointTwo` jest `Double`, jego wartość 0.2 jest nieskończenie powtarzające się ułamek binarne, przy użyciu przechowywaną wartość 0.20000000000000001. Podzielenie 2.0 przez ilość ta daje 9.9999999999999995 z końca 0.19999999999999991.  
   
- W wyrażeniu dla `decimalRemainder`, znak literalny typu `D` wymusza oba argumenty do `Decimal`, i 0,2 ma reprezentację dokładne. W związku z tym `Mod` operatora daje Oczekiwano końca 0,0.  
+ W wyrażeniu dla `decimalRemainder`, znak literalny typu `D` wymusza oba operandy `Decimal`, i 0.2 jej reprezentacji dokładne. W związku z tym `Mod` operator daje Oczekiwano końca 0,0.  
   
- Należy pamiętać, że nie jest wystarczające, aby zadeklarować `decimalRemainder` jako `Decimal`. Należy też wymusić literały do `Decimal`, lub wykorzystują `Double` domyślnie i `decimalRemainder` odbiera tę samą wartość niedokładne jako `doubleRemainder`.  
+ Należy pamiętać, że nie jest wystarczające, aby zadeklarować `decimalRemainder` jako `Decimal`. Należy też wymusić literałów `Decimal`, lub używają `Double` domyślnie i `decimalRemainder` otrzymuje taką samą wartość niedokładne jak `doubleRemainder`.  
   
-## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>Typ Boolean nie konwertować na typ liczbowy dokładnie  
- [Boolean — typ danych](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) wartości nie są przechowywane jako liczby i przechowywane wartości nie są przeznaczone do równoważne cyfry. Dla zachowania zgodności z wcześniejszymi wersjami programu Visual Basic zawiera słowa kluczowe konwersji ([CType — funkcja](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt`i tak dalej) umożliwia konwersję pomiędzy `Boolean` typy liczbowe. Jednak inne języki czasem wykonywania tych konwersji inaczej, tak jak [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] metody.  
+## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>Typ wartości logicznej nie konwersji na typ liczbowy dokładnie  
+ [Typ danych Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) wartości nie są przechowywane jako liczby i przechowywane wartości nie są przeznaczone do równoważne liczb. Zapewnia zgodność z wcześniejszymi wersjami, słowa kluczowe konwersji Visual Basic ([funkcja CType](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt`i tak dalej) do konwersji między `Boolean` typy liczbowe. Jednak inne języki czasami wykonywaniu konwersji inaczej, tak jak [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] metody.  
   
- Nigdy nie powinien pisania kodu, który polega na równoważne wartości numerycznych `True` i `False`. Jeśli to możliwe, należy ograniczyć użycie `Boolean` zmienne do wartości logiczne, dla których są przeznaczone. Jeśli musisz mieszać `Boolean` i wartości liczbowe, upewnij się, że rozumiesz wybranej metody konwersji.  
+ Nigdy nie należy wpisać kod, który opiera się na równoważne wartości liczbowe `True` i `False`. Jeśli to możliwe, należy ograniczyć użycie `Boolean` zmienne do wartości logiczne, dla których są one przeznaczone. Po przemieszaniu musi `Boolean` oraz wartości liczbowych, upewnij się, że rozumiesz metodę konwersji, który wybierzesz.  
   
 ### <a name="conversion-in-visual-basic"></a>Konwersja w języku Visual Basic  
- Jeśli używasz `CType` lub `CBool` słowa kluczowe konwersji do konwersji liczbowych typów danych do `Boolean`, staje się 0 `False` i stać się wszystkie inne wartości `True`. Podczas konwertowania `Boolean` wartości na typy liczbowe za pomocą słowa kluczowe konwersji, `False` staje się 0 i `True` staje się wartość -1.  
+ Kiedy używasz `CType` lub `CBool` słowa kluczowe konwersji do konwersji liczbowych typów danych do `Boolean`, staje się 0 `False` i stają się wszystkie inne wartości `True`. Podczas konwertowania `Boolean` wartości liczbowych typów przy użyciu słowa kluczowe konwersji, `False` staje się 0 i `True` staje się -1.  
   
 ### <a name="conversion-in-the-framework"></a>Konwersja w ramach  
  <xref:System.Convert.ToInt32%2A> Metody <xref:System.Convert> klasy w <xref:System> konwertuje przestrzeń nazw `True` do + 1.  
   
- Jeśli trzeba przekonwertować `Boolean` wartości na dane typu liczbowego, należy zachować ostrożność o wyborze metody konwersji używasz.  
+ Jeśli musisz konwertować `Boolean` wartość zawierającą dane typu liczbowego, należy być ostrożnym o metodę konwersji, których używasz.  
   
-## <a name="character-literal-generates-compiler-error"></a>Literał znaku generuje błąd kompilatora  
- W przypadku braku znaków typu Visual Basic zakłada domyślne typy danych dla literałów. Domyślny typ literał znakowy — ujęta w znaki cudzysłowu (`" "`) — jest `String`.  
+## <a name="character-literal-generates-compiler-error"></a>Literału znakowego generuje błąd kompilatora  
+ W przypadku braku znaków typu języka Visual Basic przyjęto założenie, domyślne typy danych dla literałów. Domyślny typ dla literału znakowego — ujęta w znaki cudzysłowu (`" "`) — jest `String`.  
   
- `String` — Typ danych nie są rozszerzane [Char — typ danych](../../../../visual-basic/language-reference/data-types/char-data-type.md). Oznacza to, że jeśli chcesz przypisać literał do `Char` zmiennej, należy dokonać konwersji zawężającej lub wymusić literał do `Char` typu.  
+ `String` Typu danych nie mogą zostać poszerzone do [Char — typ danych](../../../../visual-basic/language-reference/data-types/char-data-type.md). Oznacza to, że jeśli chcesz przypisać do literału `Char` zmiennych, musisz wprowadzić konwersji zawężającej lub literał, aby wymusić `Char` typu.  
 
-|Aby utworzyć literał można przypisać do zmiennej lub stała wartość typu Char|
+|Aby utworzyć znaku literału można przypisać do zmiennej lub — stała|
 |---|  
-|1.  Deklarowanie zmiennej lub stała jako `Char`.<br />2.  Należy wpisać wartość znaku w cudzysłowie (`" "`).<br />3.  Wykonaj podwójnego cudzysłowu zamykającego znak literalny typu `C` wymusić literał do `Char`. Jest to konieczne, jeśli sprawdzanie typu przełącznik ([Option Strict — instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) jest `On`, i jest pożądane w każdym przypadku.|  
+|1.  Zadeklaruj zmienną lub stałą jako `Char`.<br />2.  Należy wpisać wartość znaku w cudzysłowie (`" "`).<br />3.  Postępuj zgodnie z podwójnego cudzysłowu zamykającego znaku typu literał `C` literał, aby wymusić `Char`. Jest to konieczne, jeśli kontrola typów w przełącznik ([Option Strict — instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) jest `On`, i jest pożądane w każdym przypadku.|  
   
- W poniższym przykładzie pokazano przypisania nie powiodło się jak pomyślnie literału do `Char` zmiennej.  
+ W poniższym przykładzie pokazano zarówno powiodło się, jak i pomyślnego przypisania literału do `Char` zmiennej.  
   
  [!code-vb[VbVbalrDataTypes#12](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_3.vb)]  
   
- Istnieje ryzyko za pomocą konwersji zawężającej, ponieważ może zakończyć się niepowodzeniem w czasie wykonywania. Na przykład konwersji `String` do `Char` może zakończyć się niepowodzeniem, jeśli `String` wartość zawiera więcej niż jeden znak. W związku z tym lepiej jest programowania do użycia `C` znaku typu.  
+ Istnieje ryzyko przy użyciu konwersji zawężających, ponieważ może zakończyć się niepowodzeniem w czasie wykonywania. Na przykład konwersja `String` do `Char` może zakończyć się niepowodzeniem, jeśli `String` wartość zawiera więcej niż jeden znak. W związku z tym, lepiej jest programowania do użycia `C` wpisz znak.  
   
 ## <a name="string-conversion-fails-at-run-time"></a>Konwersja ciągu nie powiedzie się w czasie wykonywania  
- [String — typ danych](../../../../visual-basic/language-reference/data-types/string-data-type.md) uczestniczy w bardzo mało poszerzanie konwersji. `String` rozszerzenie tylko do samego siebie i `Object`i tylko `Char` i `Char()` ( `Char` tablicy) rozszerzane `String`. Jest to spowodowane `String` zmiennych i stałych może zawierać wartości, które nie mogą zawierać inne typy danych.  
+ [String — typ danych](../../../../visual-basic/language-reference/data-types/string-data-type.md) uczestniczy w bardzo nielicznych konwersje rozszerzające. `String` rozszerza się tylko do samego siebie i `Object`i tylko `Char` i `Char()` ( `Char` tablicy) mogą zostać poszerzone do `String`. Jest to spowodowane `String` zmiennych i stałych może zawierać wartości, które nie mogą zawierać inne typy danych.  
   
- Podczas sprawdzania typu przełącznika ([Option Strict — instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) jest `On`, kompilator nie zezwala na wszystkich niejawnej konwersji zawężającej. Obejmuje to te obejmujące `String`. Kod można nadal używać słowa kluczowe konwersji takich jak `CStr` i [CType — funkcja](../../../../visual-basic/language-reference/functions/ctype-function.md), które bezpośrednio [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] próby konwersji.  
+ Podczas sprawdzania typu przełącznika ([Option Strict — instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) jest `On`, kompilator nie zezwala na wszystkie niejawne konwersje zawężające. Obejmuje to te, które są obejmujące `String`. Kod można nadal używać słowa kluczowe konwersji takich jak `CStr` i [CType — funkcja](../../../../visual-basic/language-reference/functions/ctype-function.md), które bezpośrednio [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] próby konwersji.  
   
 > [!NOTE]
->  Błąd zawężanie konwersji jest pomijane w przypadku konwersji z typu elementów w `For Each…Next` kolekcję, aby zmienna sterująca pętli for. Aby uzyskać dodatkowe informacje i przykłady, zobacz sekcję "Zawężanie konwersji" w [For Each... Następna instrukcja](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
+>  Błąd konwersji zawężających jest pomijana dla konwersji z elementów w `For Each…Next` kolekcję, aby zmienna sterująca pętli. Aby uzyskać więcej informacji i przykładów, zobacz sekcję "Konwersje zawężające" w [For Each... Następna instrukcja](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
 ### <a name="narrowing-conversion-protection"></a>Zawężanie konwersji ochrony  
- Zawężanie konwersji wadą jest to, że ich może zakończyć się niepowodzeniem w czasie wykonywania. Na przykład jeśli `String` zmiennej zawiera coś innego niż "Prawda" lub "Fałsz", nie można przekonwertować na `Boolean`. Jeśli zawiera znaki interpunkcyjne, konwersji do dowolnego typu liczbowego kończy się niepowodzeniem. Jeśli nie wiesz, że Twoje `String` zmienna zawsze przechowuje wartości, które może zaakceptować docelowego, nie należy spróbować konwersji.  
+ Wadą konwersji zawężających jest, że może działać w czasie wykonywania. Na przykład jeśli `String` zmienna zawiera coś innego niż "True" lub "Fałsz", nie można przekonwertować na `Boolean`. Zawiera on znaki interpunkcyjne, konwersja do dowolnego typu liczbowego kończy się niepowodzeniem. O ile nie wiesz, że Twoje `String` zmienna zawsze zawiera wartości, które może akceptować docelowy typ, nie należy spróbować konwersji.  
   
- Jeśli muszą być konwertowane z `String` na inny typ danych ma ujmij próba konwersji w możliwie najbezpieczniejszy procedura [spróbuj... CATCH... Instrukcji finally](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md). Dzięki temu można rozwiązać błąd czasu wykonywania.  
+ Jeśli musisz konwertować z `String` na inny typ danych jest ujęcie próba konwersji w najbezpieczniejszym procedury [spróbuj... CATCH... Na koniec instrukcji](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md). Dzięki temu można dotyczy błąd czasu wykonywania.  
   
 ### <a name="character-arrays"></a>Tablice znaków  
- Pojedynczy `Char` i tablica `Char` elementy zarówno rozszerzane `String`. Jednak `String` nie rozszerzane `Char()`. Aby przekonwertować `String` do wartości `Char` tablicy, można użyć <xref:System.String.ToCharArray%2A> metody <xref:System.String?displayProperty=nameWithType> klasy.  
+ Pojedynczy `Char` oraz tablicę `Char` elementy, które obie mogą zostać poszerzone do `String`. Jednak `String` nie mogą zostać poszerzone do `Char()`. Aby przekonwertować `String` wartość `Char` tablicy, możesz użyć <xref:System.String.ToCharArray%2A> metody <xref:System.String?displayProperty=nameWithType> klasy.  
   
-### <a name="meaningless-values"></a>Znaczenia wartości  
- Ogólnie rzecz biorąc `String` wartości nie są przydatne w przypadku innych typów danych, a konwersja jest wysoce sztuczne i niebezpieczne. Jeśli to możliwe, należy ograniczyć użycie `String` zmienne sekwencji znaków, dla których są przeznaczone. Nigdy nie powinien pisania kodu, który polega na równoważne wartości w innych typach.  
+### <a name="meaningless-values"></a>Ta nie ma znaczenia wartości  
+ Ogólnie rzecz biorąc `String` wartości nie są istotne w przypadku innych typów danych i konwersji jest niezwykle sztuczny i niebezpieczne. Jeśli to możliwe, należy ograniczyć użycie `String` zmienne sekwencji znaków, dla których są one przeznaczone. Nigdy nie należy napisać kod, który opiera się na równoważne wartości w innych typów.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  

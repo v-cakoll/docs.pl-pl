@@ -7,28 +7,32 @@ f1_keywords:
 helpviewer_keywords:
 - implicit keyword [C#]
 ms.assetid: 34db590e-eb3a-4f11-88d0-ffb3cd753dab
-ms.openlocfilehash: 160d9f7c0d58abd685bf1d799b53cc96a26aebe8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c731799fd51397b2bbbb190efcec63321ebae940
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215020"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39243738"
 ---
 # <a name="implicit-c-reference"></a>implicit (odwołanie w C#)
-`implicit` — Słowo kluczowe służy do deklarowania niejawne typu zdefiniowanego przez użytkownika operatora konwersji. Użycia, aby włączyć niejawne konwersje między typu zdefiniowanego przez użytkownika i innego typu, jeśli jest gwarantowana konwersji, aby nie spowodować utratę danych.  
-  
-## <a name="example"></a>Przykład  
- [!code-csharp[csrefKeywordsConversion#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/implicit_1.cs)]  
-  
- Eliminując niepotrzebnego rzutowania niejawne konwersje może poprawić czytelność kodu źródłowego. Jednak ponieważ niejawne konwersje nie wymagają programistów jawnie rzutowania z typu na drugi, należy uważać, aby uniknąć nieoczekiwanych wyników. Ogólnie rzecz biorąc operatory niejawnej konwersji należy nigdy nie zgłaszają wyjątki i nigdy nie utracić informacje, aby używać bezpiecznego bez świadomości programisty. Jeśli operator konwersji nie spełniają tych kryteriów, powinien być oznaczony `explicit`. Aby uzyskać więcej informacji, zobacz [przy użyciu operatorów konwersji](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md).  
-  
-## <a name="c-language-specification"></a>Specyfikacja języka C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
- [explicit](../../../csharp/language-reference/keywords/explicit.md)  
- [Operator (odwołanie w C#)](../../../csharp/language-reference/keywords/operator.md)  
- [Instrukcje: implementowanie zdefiniowanych przez użytkownika konwersji struktur](../../../csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
+
+`implicit` Słowo kluczowe jest używane do deklarowania niejawnego typu zdefiniowanego przez użytkownika operatora konwersji. Umożliwia włączanie niejawnych konwersji między typem zdefiniowanym przez użytkownika i innego typu, jeśli konwersja daje gwarancję spowodować utratę danych.
+
+## <a name="example"></a>Przykład
+
+[!code-csharp[csrefKeywordsConversion#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsConversion/CS/csrefKeywordsConversion.cs#5)]
+
+Dzięki wyeliminowaniu zbędnych rzutowania, niejawne konwersje można zwiększyć czytelność kodu źródłowego. Jednak ponieważ niejawne konwersje nie wymagają programistom jawnie rzutowane z jednego typu na drugi, należy uważać, aby uniknąć nieoczekiwanych wyników. Ogólnie rzecz biorąc operatory niejawnej konwersji powinno nigdy nie zgłaszają wyjątków i nigdy nie utracą informacje, aby używane bezpiecznie bez świadomości programisty. Jeśli operator konwersji nie spełniają te kryteria, powinien być oznaczony `explicit`. Aby uzyskać więcej informacji, zobacz [Używanie operatorów konwersji](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md).
+
+## <a name="c-language-specification"></a>specyfikacja języka C#
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja języka C#](../index.md)  
+[Przewodnik programowania w języku C#](../../programming-guide/index.md)  
+[Słowa kluczowe języka C#](index.md)  
+[explicit](explicit.md)  
+[Operator (odwołanie w C#)](operator.md)  
+[Instrukcje: implementowanie zdefiniowanych przez użytkownika konwersji struktur](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)

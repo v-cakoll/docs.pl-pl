@@ -5,23 +5,23 @@ helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
 ms.openlocfilehash: 64c175216cf21b7947462cf79e4b88ab6fcd6d86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591875"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245651"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Rozszerzanie modelu aplikacji Visual Basic
-Można dodać funkcje do modelu aplikacji przez zastąpienie `Overridable` członkami <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> klasy. Ta technika pozwala dostosować zachowanie aplikacji modelu, a następnie dodaj wywołania metod własnych aplikacji uruchamiania i wyłączania.  
+Można dodawać funkcjonalność model aplikacji poprzez zastąpienie `Overridable` członkowie <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> klasy. Ta technika umożliwia dostosowywanie zachowania dotyczącego modelu aplikacji i dodawać wywołania do swoje własne metody, jak aplikacja uruchamia się i kończy pracę.  
   
-## <a name="visual-overview-of-the-application-model"></a>Omówienie modelu aplikacji Visual  
+## <a name="visual-overview-of-the-application-model"></a>Wizualne omówienie modelu aplikacji  
  W tej sekcji przedstawiono wizualnie sekwencję wywołań funkcji w modelu aplikacji Visual Basic. W następnej sekcji opisano przeznaczenie każdej funkcji szczegółowo.  
   
- Na poniższym rysunku przedstawiono sekwencję wywołań modelu aplikacji w normalnym aplikacji formularzy systemu Windows w języku Visual Basic. Sekwencja uruchamiania, kiedy `Sub Main` wywołań procedur <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> metody.  
+ Na poniższym rysunku przedstawiono sekwencję wywołań modelu aplikacji w normalnym aplikacji formularzy Windows w języku Visual Basic. Ciąg rozpoczyna się, kiedy `Sub Main` wywołania procedur <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> metody.  
   
  ![Model aplikacji Visual Basic &#45; &#45; Uruchom](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelrun.gif "VB_ModelRun")  
   
- Udostępnia Model aplikacji Visual Basic <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> i <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> zdarzenia. Poniższej grafice zawierają mechanizm wywoływanie tych zdarzeń.  
+ Model aplikacji Visual Basic udostępnia również <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> i <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> zdarzenia. Następujące graficznych Pokaż wywoływanie tych zdarzeń przy użyciu mechanizmu.  
   
  ![Model aplikacji Visual Basic &#45; &#45; następne wystąpienie](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelnext.gif "VB_ModelNext")  
   
@@ -30,65 +30,65 @@ Można dodać funkcje do modelu aplikacji przez zastąpienie `Overridable` czło
 ## <a name="overriding-the-base-methods"></a>Nadpisywania metod bazowych  
  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> Metoda definiuje kolejność, w którym `Application` metody uruchamiania. Domyślnie `Sub Main` wywołuje procedurę dla aplikacji Windows Forms <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> metody.  
   
- Jeśli aplikacja jest normalne aplikacji (wiele wystąpień aplikacji) lub pierwszego wystąpienia jednego wystąpienia aplikacji, <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> wykonuje metodę `Overridable` metod w następującej kolejności:  
+ Jeśli aplikacja jest aplikacją normalny (aplikacja z wieloma wystąpieniami) lub pierwsze wystąpienie pojedyncze wystąpienie aplikacji, <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> metoda jest wykonywana `Overridable` metod w następującej kolejności:  
   
-1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A>. Domyślnie ta metoda ustawia stylów wizualnych, style wyświetlania tekstu i bieżący podmiot zabezpieczeń dla wątku głównego aplikacji (Jeśli aplikacja używa uwierzytelniania systemu Windows) i wywołania `ShowSplashScreen` Jeśli żadna `/nosplash` ani `-nosplash` jest używany jako argument wiersza polecenia.  
+1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A>. Domyślnie ta metoda ustawia stylów wizualnych, style wyświetlania tekstu i bieżący podmiot zabezpieczeń dla wątku głównego aplikacji (Jeśli aplikacja używa uwierzytelniania Windows) i wywołuje `ShowSplashScreen` Jeśli żadna `/nosplash` ani `-nosplash` służy jako argument wiersza polecenia.  
   
-     Sekwencja uruchamiania aplikacji zostało anulowane, jeśli ta funkcja zwraca `False`. Może to być przydatne, jeśli istnieją okoliczności, w których nie należy uruchamiać aplikacji.  
+     Sekwencja uruchamiania aplikacji została anulowana, jeśli ta funkcja zwróci `False`. Może to być przydatne, jeśli istnieją okoliczności, w których aplikacja nie powinna działać.  
   
      <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> Metoda wywołuje następujących metod:  
   
-    1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A>. Określa, czy aplikacja ma ekran powitalny zdefiniowane, a jeśli tak, wyświetla ekran powitalny w oddzielnym wątku.  
+    1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A>. Określa, czy aplikacja ma ekran powitalny zdefiniowane, a jeśli tak jest, wyświetla ekran powitalny w oddzielnym wątku.  
   
-         <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A> Metoda zawiera kod, który wyświetla to pozostawienie ekranu powitalnego ekranu dla wyrażony w milisekundach czas określony przez <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A> właściwości. Aby używać tej funkcji, należy dodać do swojej aplikacji za pomocą ekranu powitalnego **projektanta projektu** (który określa `My.Application.MinimumSplashScreenDisplayTime` właściwości do dwóch sekund), lub ustaw `My.Application.MinimumSplashScreenDisplayTime` właściwość w metodę, która zastępuje <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> lub <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> metody. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A>.  
+         <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A> Metoda zawiera kod, który wyświetla powitalny ekranu do wyrażony w milisekundach czas określony przez <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A> właściwości. Aby używać tej funkcji, należy dodać ekran powitalny do swojej aplikacji za pomocą **projektanta projektu** (który określa `My.Application.MinimumSplashScreenDisplayTime` właściwości dwóch sekund), lub ustawić `My.Application.MinimumSplashScreenDisplayTime` właściwość w metodę, która zastępuje <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> lub <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> metody. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A>.  
   
-    2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>. Umożliwia projektanta na emitowanie kodu, który inicjuje ekranu powitalnego.  
+    2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>. Umożliwia projektanta emitować Kod, który inicjuje ekran powitalny.  
   
-         Domyślnie ta metoda nie działa. Wybranie ekranu powitalnego aplikacji w języku Visual Basic **projektanta projektu**, zastępuje projektanta <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> metodę za pomocą metody, która ustawia <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> właściwości do nowego wystąpienia formularz ekranu powitalnego .  
+         Domyślnie ta metoda nie działa. Wybranie ekran powitalny dla aplikacji w języku Visual Basic **projektanta projektu**, Projektant zastępuje <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> metodę z metodą, która ustawia <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> właściwość nowe wystąpienie formularza ekran powitalny .  
   
-2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>. Udostępnia punkt rozszerzalności dla wywoływanie `Startup` zdarzeń. Zatrzymuje sekwencja uruchamiania aplikacji, jeśli ta funkcja zwraca `False`.  
+2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>. Udostępnia punkt rozszerzalności dla podnoszonego `Startup` zdarzeń. Sekwencja uruchamiania aplikacji zatrzyma, jeśli ta funkcja zwróci `False`.  
   
-     Domyślnie ta metoda zgłasza <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> zdarzeń. Jeśli program obsługi zdarzeń ustawia <xref:System.ComponentModel.CancelEventArgs.Cancel> właściwości argument zdarzenia `True`, metoda zwraca `False` anulować uruchamiania aplikacji.  
+     Domyślnie ta metoda wywołuje <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> zdarzeń. Jeśli program obsługi zdarzeń ustawia <xref:System.ComponentModel.CancelEventArgs.Cancel> właściwości argumentu zdarzenia `True`, metoda zwraca `False` do anulowania uruchomienia aplikacji.  
   
-3.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun%2A>. Zapewnia punkt początkowy podczas aplikacji głównej jest gotowy do uruchomienia, uruchomiona po ukończeniu inicjowania.  
+3.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun%2A>. Zapewnia punkt początkowy podczas aplikacji głównej jest gotowy do uruchomienia, uruchomione po zakończeniu inicjowania.  
   
-     Domyślnie przed uśpieniem pętli komunikatów formularzy systemu Windows, ta metoda wywołuje `OnCreateMainForm` (Aby utworzyć formularz główny aplikacji) i `HideSplashScreen` (aby zamknąć ekran powitalny) metod:  
+     Domyślnie przed uśpieniem pętli komunikatów Windows Forms, ta metoda wywołuje `OnCreateMainForm` (w celu utworzenia aplikacji formularza głównego) i `HideSplashScreen` (tak, aby zamknąć ekran powitalny) metody:  
   
-    1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>. Umożliwia projektanta na emitowanie kodu, który inicjuje formularz główny.  
+    1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>. Zapewnia sposób projektanta emitować Kod, który inicjuje formularza głównego.  
   
-         Domyślnie ta metoda nie działa. Jednak po wybraniu formularz główny aplikacji w języku Visual Basic **projektanta projektu**, zastępuje projektanta <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> metodę za pomocą metody, która ustawia <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> właściwości nowe wystąpienie klasy głównym formularza.  
+         Domyślnie ta metoda nie działa. Jednak po wybraniu formularza głównego dla aplikacji w języku Visual Basic **projektanta projektu**, Projektant zastępuje <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> metodę z metodą, która ustawia <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> właściwości do nowego wystąpienia formularza głównego.  
   
-    2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>. Jeśli aplikacja ma ekran powitalny zdefiniowany i jest otwarty, ta metoda powoduje zamknięcie ekranu powitalnego.  
+    2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>. Jeśli aplikacja ma ekran powitalny zdefiniowany i jest otwarty, ta metoda zamyka ekran powitalny.  
   
-         Domyślnie ta metoda powoduje zamknięcie ekranu powitalnego.  
+         Domyślnie ta metoda zamyka ekran powitalny.  
   
-4.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A>. Umożliwia dostosowanie zachowania pojedyncze wystąpienie aplikacji podczas uruchamiania inne wystąpienie aplikacji.  
+4.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A>. Zapewnia sposób dostosowywania, jak aplikacja o pojedynczym wystąpieniu zachowuje się podczas uruchamiania inne wystąpienie aplikacji.  
   
-     Domyślnie ta metoda zgłasza <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> zdarzeń.  
+     Domyślnie ta metoda wywołuje <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> zdarzeń.  
   
-5.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnShutdown%2A>. Udostępnia punkt rozszerzalności dla wywoływanie `Shutdown` zdarzeń. Ta metoda nie działa, jeśli wystąpi nieobsługiwany wyjątek w aplikacji głównej.  
+5.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnShutdown%2A>. Udostępnia punkt rozszerzalności dla podnoszonego `Shutdown` zdarzeń. Ta metoda nie działa, jeśli wystąpi nieobsługiwany wyjątek w głównej aplikacji.  
   
-     Domyślnie ta metoda zgłasza <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> zdarzeń.  
+     Domyślnie ta metoda wywołuje <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> zdarzeń.  
   
-6.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnUnhandledException%2A>. Należy wykonać, jeśli wystąpi nieobsługiwany wyjątek w dowolnej z metod wymienionych powyżej.  
+6.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnUnhandledException%2A>. Wykonywane, jeśli wystąpił nieobsługiwany wyjątek wystąpi w żadnej z wymienionych powyżej metod.  
   
-     Domyślnie ta metoda zgłasza <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> tak długo, jak nie jest dołączony debuger, a aplikacja jest obsługa zdarzeń `UnhandledException` zdarzeń.  
+     Domyślnie ta metoda wywołuje <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> tak długo, jak nie jest dołączony debuger i aplikacji jest obsługa zdarzeń `UnhandledException` zdarzeń.  
   
- Jeśli aplikacja jest pojedyncze wystąpienie aplikacji, a aplikacja jest już uruchomiona, kolejne wystąpienie aplikacji wywołuje <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A> metody w oryginalnym wystąpieniu aplikacji, a następnie zamyka.  
+ Jeśli aplikacja jest aplikacją pojedynczego wystąpienia, a aplikacja jest już uruchomiona, kolejne wystąpienie aplikacji wywołuje <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A> metody w oryginalnym wystąpieniu aplikacji, a następnie zamyka.  
  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)> Wywołania konstruktora <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> właściwości w celu określenia aparat renderowania tekstu stosowanie w formularzach aplikacji. Domyślnie <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> zwraca `False`, wskazującą, czy można używać aparatu renderowania tekstu GDI, co jest ustawieniem domyślnym w [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]. Można zastąpić <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> właściwości do zwrócenia `True`, która wskazuje, że używane aparat renderowania tekstu GDI +, co jest ustawieniem domyślnym w Visual Basic .NET 2002 i Visual Basic .NET 2003.  
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)> Konstruktor wywołuje <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> właściwości w celu określenia aparat renderowania tekstu do użycia dla aplikacji formularzy. Domyślnie <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> właściwość zwraca `False`, wskazując, że aparat renderowania GDI tekstu można użyć, co jest ustawieniem domyślnym w [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]. Można zastąpić <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> właściwości do zwrócenia `True`, która wskazuje, że używane tekstu aparat renderowania GDI +, co jest ustawieniem domyślnym w Visual Basic .NET 2002 i Visual Basic .NET 2003.  
   
 ## <a name="configuring-the-application"></a>Konfigurowanie aplikacji  
- W ramach modelu aplikacji Visual Basic <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering> klasa udostępnia właściwości chronionego, służące do konfiguracji aplikacji. Te właściwości należy ustawić w konstruktorze klasy implementującej.  
+ Jako część modelu aplikacji Visual Basic <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering> klasy zawiera właściwości chronionego, skonfigurowanych aplikacji. Te właściwości należy ustawić w konstruktorze klasy implementującej.  
   
- W projekcie domyślny program Windows Forms **projektanta projektu** tworzy kod, aby ustawić właściwości przy użyciu projektanta ustawień. Te właściwości są używane tylko wtedy, gdy aplikacja jest uruchamiana; Po uruchomieniu aplikacji ich ustawienie nie ma znaczenia.  
+ W domyślny projekt Windows Forms **projektanta projektu** tworzy kod, aby ustawić właściwości przy użyciu projektanta ustawień. Właściwości są używane tylko wtedy, gdy aplikacja jest uruchamiana; Po uruchomieniu aplikacji ich ustawienie nie ma znaczenia.  
   
 |Właściwość|Określa|Ustawienia w okienku aplikacji projektanta projektu|  
 |---|---|---|  
-|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.IsSingleInstance%2A>|Określa, czy aplikacja zostanie uruchomiona jako aplikacja wystąpienia jednego lub wielu wystąpień.|**Aplikacja pojedynczego wystąpienia** pole wyboru|  
-|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.EnableVisualStyles%2A>|Jeśli aplikacja będzie używać stylów wizualnych, zgodne z systemem Windows XP.|**Włącz style wizualne XP** pole wyboru|  
-|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SaveMySettingsOnExit%2A>|Jeśli aplikacja automatycznie zapisze zmiany ustawienia użytkownika aplikacji, po zamknięciu aplikacji.|**Zapisz My.Settings podczas zamykania** pole wyboru|  
-|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShutdownStyle%2A>|Co powoduje zamknięcie, np. gdy zamknie się formularz startowy lub gdy zostanie zamknięty ostatni formularz aplikacji.|**Tryb zamykania** listy|  
+|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.IsSingleInstance%2A>|Czy aplikacja działa jako aplikacja pojedynczego wystąpienia lub wieloma wystąpieniami.|**Pojedyncze wystąpienie aplikacji** pola wyboru|  
+|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.EnableVisualStyles%2A>|Jeśli aplikacja będzie używać stylów wizualnych, które odpowiadają Windows XP.|**Włączyć style wizualne XP** pola wyboru|  
+|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SaveMySettingsOnExit%2A>|Jeśli aplikacja automatycznie zapisuje zmiany ustawień użytkownika aplikacji, gdy aplikacja kończy działanie.|**Zapisz My.Settings podczas zamykania** pola wyboru|  
+|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShutdownStyle%2A>|Co powoduje, że aplikacja zakończyć, np. gdy zamyka formularz początkowy lub po zamknięciu ostatniego formularza.|**Tryb zamykania** listy|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  

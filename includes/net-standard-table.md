@@ -11,12 +11,12 @@
 | Windows Phone              | 8.1   | 8.1    | 8.1   |       |       |            |            |            |
 | Windows Phone Silverlight  | 8.0   |        |       |       |       |            |            |            |
 
-<sup>1 wersje programu .NET Framework na liście dotyczą .NET Core SDK 2.0 i nowsze wersje narzędzi. Starsze wersje użyć innego mapowania dla platformy .NET Standard w wersji 1.5 lub nowszego. </sup>
+<sup>1 wersje wymienione na platformie .NET dotyczą .NET Core SDK 2.0 i nowsze wersje zestawu narzędzi. Starsze wersje używane innego mapowania dla platformy .NET Standard w wersji 1.5 lub nowszej. </sup>
 
-- Kolumny reprezentują wersje .NET Standard. Każda komórka nagłówka jest łączem do dokumentu, który pokazuje API, które zostały dodane w tej wersji programu .NET Standard.
-- Wiersze reprezentują różnych implementacji .NET.
-- Wskazuje numer wersji w każdej komórce *minimalna* wersji implementacji będą potrzebne, aby skierować je do tej wersji platformy .NET Standard.
-- Interakcyjne tabeli, zobacz [wersje .NET Standard](http://immo.landwerth.net/netstandard-versions/#).
+- Kolumny reprezentują wersji .NET Standard. Każda komórka nagłówek jest łącze do dokumentu, który pokazuje, w których interfejsy API stało się dodane w tej wersji programu .NET Standard.
+- Wiersze reprezentują różne implementacje platformy .NET.
+- Numer wersji w każdej komórce wskazuje *minimalne* wersję implementacji należy, aby skierować je do tej wersji .NET Standard.
+- Interaktywny spis, można zobaczyć [wersji .NET Standard](http://immo.landwerth.net/netstandard-versions/#).
 
 [1.0]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.0.md
 [1.1]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.1.md

@@ -1,37 +1,37 @@
 ---
-title: 'Porady: Dołącz dwie kolekcje (LINQ do XML) (Visual Basic)'
+title: 'Porady: łączenie dwóch kolekcji (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 5a5758d4-906b-4285-908d-5b930db192e6
 ms.openlocfilehash: 3ceb9cf7dfdd1d18a07e93d15624fd8fac045d07
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643695"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245703"
 ---
-# <a name="how-to-join-two-collections-linq-to-xml-visual-basic"></a>Porady: Dołącz dwie kolekcje (LINQ do XML) (Visual Basic)
-Element lub atrybut w dokumencie XML czasami mogą odwoływać się do innego elementu lub atrybutu. Na przykład [przykładowego pliku XML: Klienci i zamówienia (LINQ do XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) dokument XML zawiera listę klientów i listę zleceń. Każdy `Customer` zawiera element `CustomerID` atrybutu. Każdy `Order` zawiera element `CustomerID` elementu. `CustomerID` Elementu w każdej kolejności odwołuje się do `CustomerID` atrybutu w klienta.  
+# <a name="how-to-join-two-collections-linq-to-xml-visual-basic"></a>Porady: łączenie dwóch kolekcji (LINQ to XML) (Visual Basic)
+Element lub atrybut w dokumencie XML czasami mogą odwoływać się do innego elementu lub atrybutu. Na przykład [przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) dokument XML zawiera listę klientów i listę zamówień. Każdy `Customer` element zawiera `CustomerID` atrybutu. Każdy `Order` element zawiera `CustomerID` elementu. `CustomerID` Elementu w ramach każdego zamówienia odwołuje się do `CustomerID` atrybutu w klienta.  
   
- Temat [przykładowy plik XSD: Klienci i zamówienia](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md) zawiera XSD, który może służyć do sprawdzania poprawności tego dokumentu. Używa `xs:key` i `xs:keyref` funkcje XSD ustalenie, czy `CustomerID` atrybutu `Customer` element jest klucz oraz do ustanawiania relacji między `CustomerID` elementu w każdym `Order` element i `CustomerID` atrybutu w każdym `Customer` elementu.  
+ Temat [przykładowy plik XSD: Klienci i zamówienia](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md) zawiera XSD, który może służyć do sprawdzania poprawności w tym dokumencie. Używa ona `xs:key` i `xs:keyref` funkcji XSD ustalenie, czy `CustomerID` atrybutu `Customer` element jest klucz oraz do ustanawiania relacji między `CustomerID` elementu w każdym `Order` elementu i `CustomerID` atrybutu w każdym `Customer` elementu.  
   
- Z [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], będzie można korzystać tej relacji przy użyciu `Join` klauzuli.  
+ Za pomocą [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], korzystać z zalet tej relacji, za pomocą `Join` klauzuli.  
   
- Należy zauważyć, że ponieważ bez indeksu nie jest dostępny, takie łączenie będzie runtime niską wydajność.  
+ Należy zauważyć, że indeks nie jest dostępne, takich dołączenie będzie runtime niską wydajność.  
   
  Aby uzyskać szczegółowe informacje o `Join`, zobacz [operacji Join (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md).  
   
 ## <a name="example"></a>Przykład  
- Następujące sprzężenia przykład `Customer` elementy `Order` elementów i generuje nowy dokument XML, który zawiera `CompanyName` element zamówienia.  
+ Następujące sprzężenia przykład `Customer` elementów `Order` elementy i generuje nowy dokument XML, który zawiera `CompanyName` element zamówienia.  
   
- Przed wykonaniem kwerendy, przykładzie sprawdza, czy dokument jest zgodny ze schematem w [przykładowy plik XSD: Klienci i zamówienia](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md). Daje to pewność, że zawsze będzie działać w klauzuli join.  
+ Przed wykonaniem kwerendy, przykład sprawdza, czy dokument jest zgodny ze schematem w [przykładowy plik XSD: Klienci i zamówienia](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md). Daje to gwarancję, że klauzuli join zawsze będzie działać.  
   
- To zapytanie najpierw pobiera wszystkie `Customer` elementy, a następnie łączy do `Order` elementów. Jest ona wybierana tylko zleceń dla klientów z `CustomerID` większa niż "K". Go następnie projektów nowy `Order` element, który zawiera informacje o kliencie w ramach każdego zamówienia.  
+ To zapytanie pobiera pierwszych wszystkie `Customer` elementów, a następnie dołącza je do `Order` elementów. Wybiera wszystkie zamówienia dla klientów korzystających z `CustomerID` większa niż "K". Go następnie projekty nową `Order` element, który zawiera informacje o kliencie w ramach każdego zamówienia.  
   
- W tym przykładzie użyto następujących dokumentu XML: [przykładowego pliku XML: Klienci i zamówienia (LINQ do XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ W tym przykładzie użyto następujący dokument XML: [przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
  W tym przykładzie użyto następujących schematu XSD: [przykładowy plik XSD: Klienci i zamówienia](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md).  
   
- Należy pamiętać, że łączenie w ten sposób nie będzie wykonywać bardzo dobrze. Sprzężenia są realizowane za pomocą wyszukiwania liniowego. Nie ma żadnych tabel skrótu lub indeksy ułatwiające wydajności.  
+ Należy pamiętać, że łączenie w ten sposób nie będzie wykonywać bardzo dobrze. Sprzężenia są realizowane za pośrednictwem wyszukiwania liniowego. Brak skrótu tabele i indeksy, aby poprawić wydajność.  
   
 ```vb  
 Public Class Program  
@@ -136,4 +136,4 @@ Attempting to validate, custOrdDoc validated
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zaawansowane techniki zapytania (LINQ do XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+ [Zaawansowane techniki zapytań (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

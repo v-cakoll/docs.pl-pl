@@ -8,34 +8,34 @@ helpviewer_keywords:
 - override keyword [C#]
 ms.assetid: dd1907a8-acf8-46d3-80b9-c2ca4febada8
 ms.openlocfilehash: 8f692dfdf8bd34ddb62623d86ec3dadd2b8dead3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33280156"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199267"
 ---
 # <a name="override-c-reference"></a>override (odwołanie w C#)
-`override` Modyfikator jest wymagana, aby rozszerzyć lub zmodyfikować abstrakcyjna lub wirtualna wykonania dziedziczonej metody, właściwość, indeksator lub zdarzenie.  
+`override` Modyfikator jest wymagane, aby rozszerzyć lub zmodyfikować implementacji abstrakcyjne lub wirtualne dziedziczonej metody, właściwości, indeksatora lub zdarzenia.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie `Square` klasy musi zapewniać implementację przesłoniętych z `Area` ponieważ `Area` jest dziedziczona z klasy abstrakcyjnej `ShapesClass`:  
+ W tym przykładzie `Square` klasa musi dostarczać implementację zgodnym z przesłoniętą `Area` ponieważ `Area` jest dziedziczony z abstrakcyjnej `ShapesClass`:  
   
  [!code-csharp[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/override_1.cs)]  
   
- `override` Metoda zawiera nową implementacją elementu członkowskiego, który jest dziedziczona z klasy podstawowej. Metoda, która zostanie zastąpiona przez `override` deklaracji nosi nazwę przesłoniętej metody podstawowej. Przesłoniętej metody podstawowej musi mieć taką samą sygnaturę jak `override` metody. Informacje o dziedziczeniu znajdują się w temacie [dziedziczenia](../../../csharp/programming-guide/classes-and-structs/inheritance.md).  
+ `override` Metoda dostarcza nową implementację elementu członkowskiego, który jest dziedziczony z klasy bazowej. Metoda, która została zastąpiona przez `override` deklaracji jest znany jako przesłonięte metody podstawowej. Zastąpione metody podstawowej musi mieć taką samą sygnaturę jak `override` metody. Aby uzyskać informacji na temat dziedziczenia, zobacz [dziedziczenia](../../../csharp/programming-guide/classes-and-structs/inheritance.md).  
   
- Nie można zastąpić metodę niewirtualną lub statycznej. Musi być przesłoniętej metody podstawowej `virtual`, `abstract`, lub `override`.  
+ Nie można zastąpić niewirtualną lub statycznej metody. Zastąpione metody podstawowej musi być `virtual`, `abstract`, lub `override`.  
   
- `override` Deklaracji nie można zmienić dostępności `virtual` metody. Zarówno `override` — metoda i `virtual` metody muszą mieć ten sam [poziomu modyfikator dostępu](../../../csharp/language-reference/keywords/access-modifiers.md).  
+ `override` Deklaracji nie można zmienić dostępności `virtual` metody. Zarówno `override` metody i `virtual` metoda musi mieć takie same [modyfikator dostępu dla poziomu](../../../csharp/language-reference/keywords/access-modifiers.md).  
   
  Nie można użyć `new`, `static`, lub `virtual` Modyfikatory do modyfikowania `override` metody.  
   
- Zastępowanie deklaracja właściwości należy określić dokładnie tego samego modyfikator dostępu, typ i nazwa jako właściwość dziedziczona i przesłanianej właściwości musi być `virtual`, `abstract`, lub `override`.  
+ Przesłanianie deklaracja właściwości należy określić jako właściwość dziedziczona dokładnie tych samych modyfikator dostępu, typ i nazwa i właściwości musi być `virtual`, `abstract`, lub `override`.  
   
- Aby uzyskać więcej informacji o sposobie używania `override` — słowo kluczowe, zobacz [przechowywanie wersji przesłonięć i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) i [użycie zastępowania i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
+ Aby uzyskać więcej informacji o sposobie używania `override` — słowo kluczowe, zobacz [przechowywanie wersji przesłonięć i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) i [użycie przesłonięć i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie definiuje klasę podstawową o nazwie `Employee`, a klasa pochodna o nazwie `SalesEmployee`. `SalesEmployee` Klasa zawiera dodatkowe właściwości `salesbonus`i zastępuje metodę `CalculatePay` w celu uwzględnienia konta.  
+ Ten przykład definiuje klasę bazową, o nazwie `Employee`, a klasa pochodna o nazwie `SalesEmployee`. `SalesEmployee` Klasa zawiera dodatkowe właściwości `salesbonus`i zastępuje metodę `CalculatePay` niezbędny do konta.  
   
  [!code-csharp[csrefKeywordsModifiers#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/override_2.cs)]  
   
@@ -43,7 +43,7 @@ ms.locfileid: "33280156"
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
+ [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Dziedziczenie](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  

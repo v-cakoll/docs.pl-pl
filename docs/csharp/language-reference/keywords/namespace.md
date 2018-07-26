@@ -9,19 +9,19 @@ helpviewer_keywords:
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
 ms.openlocfilehash: 343cce85dd235532fbe3fc90af0a785f48518db7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276022"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245618"
 ---
 # <a name="namespace-c-reference"></a>namespace (odwołanie w C#)
-`namespace` — Słowo kluczowe służy do deklarowania zakresu, który zawiera zestaw obiektów pokrewnych. Przestrzeń nazw można użyć do organizowania elementów kodu i tworzenia unikatowych typów.  
+`namespace` — Słowo kluczowe jest używane do deklarowania zakresu, który zawiera zestaw powiązanych obiektów. Przestrzeń nazw można użyć do organizowania elementów kodu oraz tworzenie globalnie unikatowy typów.  
   
  [!code-csharp[csrefKeywordsNamespace#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_1.cs)]  
   
 ## <a name="remarks"></a>Uwagi  
- W przypadku przestrzeni nazw można zadeklarować co najmniej jeden z następujących typów:  
+ W przestrzeni nazw można zadeklarować co najmniej jeden z następujących typów:  
   
 -   innej przestrzeni nazw  
   
@@ -35,16 +35,16 @@ ms.locfileid: "33276022"
   
 -   [delegate](../../../csharp/language-reference/keywords/delegate.md)  
   
- Czy jawnie zadeklarować przestrzeni nazw w pliku źródłowym C#, kompilator dodaje domyślnej przestrzeni nazw. Ta nienazwanej przestrzeni nazw, czasami określane jako globalnej przestrzeni nazw jest obecny w każdym pliku. Wszelkie identyfikator w globalnej przestrzeni nazw jest dostępny do użytku w nazwanych przestrzeni nazw.  
+ Czy jawnie deklarować przestrzeń nazw w pliku źródłowym języka C#, kompilator dodający domyślny obszar nazw. Tej nazwy przestrzeni nazw, czasami określane jako globalnej przestrzeni nazw jest obecny w każdym pliku. Każdego identyfikatora w globalnej przestrzeni nazw jest dostępna do użytku w przestrzeni nazw o nazwie.  
   
- Przestrzenie nazw niejawnie mają dostęp publiczny i nie jest to można modyfikować. Omówienie modyfikatorów dostępu można przypisać do elementów w przestrzeni nazw, zobacz [modyfikatory dostępu](../../../csharp/language-reference/keywords/access-modifiers.md).  
+ Przestrzenie nazw mają domyślnie dostęp publiczny i to nie można modyfikować. Omówienie modyfikatory dostępu, można przypisać do elementów w przestrzeni nazw, zobacz [modyfikatory dostępu](../../../csharp/language-reference/keywords/access-modifiers.md).  
   
- Jest możliwe określenie przestrzeni nazw w deklaracjach dwóch lub więcej. Na przykład w poniższym przykładzie zdefiniowano dwie klasy jako część `MyCompany` przestrzeni nazw:  
+ Istnieje możliwość definiowania przestrzeni nazw w dwóch lub więcej deklaracji. Na przykład w poniższym przykładzie zdefiniowano dwie klasy jako część `MyCompany` przestrzeni nazw:  
   
  [!code-csharp[csrefKeywordsNamespace#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_2.cs)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia sposób wywołania metody statycznej w zagnieżdżonych przestrzeni nazw.  
+ Poniższy przykład pokazuje sposób wywołania metody statycznej w zagnieżdżonej przestrzeni nazw.  
   
  [!code-csharp[csrefKeywordsNamespace#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_3.cs)]  
   
@@ -61,7 +61,7 @@ ms.locfileid: "33276022"
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
+ [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
  [Słowa kluczowe przestrzeni nazw](../../../csharp/language-reference/keywords/namespace-keywords.md)  

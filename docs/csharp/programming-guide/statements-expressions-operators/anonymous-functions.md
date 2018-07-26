@@ -6,15 +6,15 @@ helpviewer_keywords:
 - anonymous functions [C#]
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
-ms.openlocfilehash: 51a3c2e8399fdaae19ebe33f0d9ecc4bfd598799
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e368105c090f95435a4529470bdf1b41346d039c
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321850"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936753"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>Funkcje anonimowe (Przewodnik programowania w języku C#)
-Funkcja anonimowa jest instrukcji "wbudowany" lub wyrażenie, które mogą służyć wszędzie tam, gdzie oczekiwany jest typ delegata. Można go zainicjować delegata o nazwie lub przekaż go zamiast typu delegata o nazwie jako parametru metody.  
+Funkcja anonimowa jest "inline" instrukcję lub wyrażenie, który może służyć wszędzie tam, gdzie oczekiwany jest typ delegatu. Służy on do zainicjowania delegat nazwany lub przekazać je zamiast typu delegat nazwany, jako parametr metody.  
   
  Istnieją dwa rodzaje funkcje anonimowe, które są omawiane w następujących tematach:  
   
@@ -23,20 +23,21 @@ Funkcja anonimowa jest instrukcji "wbudowany" lub wyrażenie, które mogą słu�
 -   [Metody anonimowe](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
   
     > [!NOTE]
-    >  Wyrażenia lambda, może być powiązana do drzewa wyrażeń, a także do delegatów.  
+    >  Wyrażenia lambda może być powiązana, drzew wyrażeń, a także delegatów.  
   
 ## <a name="the-evolution-of-delegates-in-c"></a>Rozwój delegatów w języku C#  
- W języku C# 1.0 utworzonego wystąpienia delegata przez jawne inicjowanie za pomocą metody, która została zdefiniowana w innym miejscu w kodzie. C# 2.0 wprowadzono pojęcie usługi metod anonimowych jako sposób zapisu bloków instrukcji nienazwane wbudowanego wykonanych w wywołaniu obiektu delegowanego. C# 3.0 wprowadzono wyrażenia lambda, które są podobne do metod anonimowych, ale bardziej obszerne i zwięzłe. Te dwie funkcje są nazywane *funkcje anonimowe*. Ogólnie rzecz biorąc, aplikacje których docelowe wersji 3.5 lub nowszej [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] powinien użycie wyrażeń lambda.  
+ W języku C# w wersji 1.0 utworzono wystąpienie delegata przez jawne inicjowanie przy użyciu metody, która została zdefiniowana w innym miejscu w kodzie. C# w wersji 2.0 wprowadzono koncepcję metod anonimowych, jako sposób pisania bloków instrukcji nienazwane wbudowanych, które mogą być wykonywane w wywołaniu delegata. C# 3.0 wprowadzono wyrażenia lambda, które są podobne do metod anonimowych, ale bardziej ekspresyjnego i zwięzłe. Te dwie funkcje są określane zbiorczo jako *funkcjami anonimowymi*. Ogólnie rzecz biorąc, aplikacje przeznaczone na platformę w wersji 3.5 lub nowszy z [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] należy używać wyrażeń lambda.  
   
- W poniższym przykładzie pokazano ewolucję utworzenia delegata z C# w wersji 1.0 C# 3.0:  
+ W poniższym przykładzie pokazano ewolucji tworzenia delegata z C# w wersji 1.0 do języka C# 3.0:  
   
  [!code-csharp[csProgGuideLINQ#65](../../../csharp/programming-guide/arrays/codesnippet/CSharp/anonymous-functions_1.cs)]  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Instrukcje, wyrażenia i operatory](../../../csharp/programming-guide/statements-expressions-operators/index.md)  
- [Wyrażenia lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
- [Delegaci](../../../csharp/programming-guide/delegates/index.md)  
- [Drzewa wyrażeń](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)
+## <a name="see-also"></a>Zobacz także
+
+[Instrukcje, wyrażenia i operatory](../../../csharp/programming-guide/statements-expressions-operators/index.md)  
+[Wyrażenia lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+[Delegaci](../../../csharp/programming-guide/delegates/index.md)  
+[Drzewa wyrażeń (C#)](../concepts/expression-trees/index.md)  

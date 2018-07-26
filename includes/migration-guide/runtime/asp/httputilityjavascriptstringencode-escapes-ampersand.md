@@ -1,11 +1,11 @@
-### <a name="httputilityjavascriptstringencode-escapes-ampersand"></a>Wyprowadza HttpUtility.JavaScriptStringEncode handlowego "i"
+### <a name="httputilityjavascriptstringencode-escapes-ampersand"></a>HttpUtility.JavaScriptStringEncode specjalne handlowe "i"
 
 |   |   |
 |---|---|
-|Szczegóły|W programie .NET Framework 4.5 <xref:System.Web.HttpUtility.JavaScriptStringEncode(System.String)?displayProperty=name> specjalne handlowego "i" (&amp;) znaków.|
-|Sugestia|Aplikacji zależy od poprzedniego zachowanie tej metody, można dodać ustawienie aspnet:JavaScriptDoNotEncodeAmpersand [ASP.NET appSettings element](https://msdn.microsoft.com/library/hh975440.aspx) w pliku konfiguracji.|
+|Szczegóły|Począwszy od programu .NET Framework 4.5 <xref:System.Web.HttpUtility.JavaScriptStringEncode(System.String)?displayProperty=name> specjalne handlowe "i" (&amp;) znaków.|
+|Sugestia|Jeśli Twoja aplikacja zależy od poprzedniego zachowania tej metody, można dodać ustawienie ASPNET: javascriptdonotencodeampersand [elementu appSettings środowiska ASP.NET](https://msdn.microsoft.com/library/hh975440.aspx) w pliku konfiguracji.|
 |Zakres|Pomocnicza|
 |Wersja|4.5|
-|Typ|środowisko uruchomieniowe|
+|Typ|Środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Web.HttpUtility.JavaScriptStringEncode(System.String)?displayProperty=nameWithType></li><li><xref:System.Web.HttpUtility.JavaScriptStringEncode(System.String,System.Boolean)?displayProperty=nameWithType></li></ul>|
 

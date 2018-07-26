@@ -1,53 +1,53 @@
 ---
-title: Modelu rozszerzalności .NET core interfejsu wiersza polecenia
-description: Dowiedz się, jak można rozszerzyć narzędzi interfejsu wiersza polecenia (CLI).
+title: Model rozszerzalności interfejsu wiersza polecenia platformy .NET core
+description: Dowiedz się, jak można je rozszerzyć narzędzi interfejsu wiersza polecenia (CLI).
 author: blackdwarf
 ms.author: mairaw
 ms.date: 04/12/2017
 ms.openlocfilehash: 6cabd3959a29878788916ae26589be408c12e0ca
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956198"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244793"
 ---
-# <a name="net-core-cli-tools-extensibility-model"></a>Modelu rozszerzalności narzędzi interfejsu wiersza polecenia platformy .NET core
+# <a name="net-core-cli-tools-extensibility-model"></a>Model rozszerzalności narzędzi interfejsu wiersza polecenia platformy .NET core
 
-W tym dokumencie opisano różne sposoby, można rozszerzyć narzędzia .NET Core interfejsu wiersza polecenia (CLI) i opisano scenariusze, które dysków w każdej z nich z nich.
-Zobaczysz, jak korzystać z narzędzia, a także sposób tworzenia różnych typów narzędzi.
+W tym dokumencie opisano różne sposoby, można rozszerzyć narzędzia .NET Core interfejsu wiersza polecenia (CLI) i opisano scenariusze, które dysków z każdej z nich z nich.
+Zobaczysz, jak używać narzędzi, a także jak tworzyć różne typy narzędzi.
 
 ## <a name="how-to-extend-cli-tools"></a>Jak rozszerzyć narzędzi interfejsu wiersza polecenia
-Narzędzi interfejsu wiersza polecenia można ją rozszerzyć, przede wszystkim na trzy sposoby:
+Narzędzia interfejsu wiersza polecenia można rozszerzyć na trzy sposoby:
 
-1. [Za pomocą pakietów NuGet dla projektu](#per-project-based-extensibility)
+1. [Za pomocą pakietów NuGet w poszczególnych projektów](#per-project-based-extensibility)
 
-   -Projekt narzędzia są dostępne w kontekście projektu, ale pozwalają łatwo instalacji przez Przywracanie.
+   Narzędzia dla projektu są zawarte w kontekście projektu, ale pozwalają łatwej instalacji przy użyciu przywracania.
 
 2. [Za pomocą pakietów NuGet z niestandardowych elementów docelowych](#custom-targets)
 
-   Niestandardowe elementy docelowe pozwalają łatwo rozszerzyć proces kompilacji z niestandardowych zadań.
+   Niestandardowe obiekty docelowe pozwalają w prosty sposób rozszerzyć proces kompilacji przy użyciu niestandardowych zadań.
 
-3. [Za pomocą ścieżki systemu](#path-based-extensibility)
+3. [Za pomocą ścieżki systemowej](#path-based-extensibility)
 
-   Narzędzia oparte na ŚCIEŻCE są odpowiednie w ogólne, między projektami narzędzia, której można używać na jednym komputerze.
+   Narzędzia oparte na ŚCIEŻCE dla zastosowań dobre są ogólne, między projektami narzędzia, które można używać na jednym komputerze.
 
-Trzy mechanizmy rozszerzania opisanych powyżej nie są wyłączne. Można użyć jednego lub wszystkich, lub ich kombinacji. Która z nich do pobrania zależy przede wszystkim od cel, który chcesz osiągnąć z rozszerzeniem.
+Trzy mechanizmy rozszerzania opisanych powyżej, nie są wyłączne. Można użyć jednego lub wszystkich, lub ich kombinacji. Który z nich do wybrania zależy od większości cel, który próbujesz osiągnąć za pomocą rozszerzenia.
 
 ## <a name="per-project-based-extensibility"></a>Na podstawie rozszerzalność projektu
-Narzędzia dla projektu są [wdrożeń zależne od framework](../deploying/index.md#framework-dependent-deployments-fdd) dystrybuowanych jako pakietów NuGet. Narzędzia są dostępne tylko w kontekście projektu, który odwołuje się do nich i dla których zostaną przywrócone. Wywołanie poza kontekstem projektu (na przykład spoza katalogu, który zawiera projekt) zakończy się niepowodzeniem, ponieważ nie można odnaleźć polecenia.
+Narzędzia dla projektu są [wdrożeń zależny od struktury](../deploying/index.md#framework-dependent-deployments-fdd) dystrybuowanych jako pakiety NuGet. Narzędzia są dostępne tylko w kontekście projektu, który odwołuje się do nich i dla których zostaną przywrócone. Wywołanie poza kontekstem projektu (na przykład spoza katalogu, który zawiera projekt) zakończy się niepowodzeniem, ponieważ nie można odnaleźć polecenia.
 
-Te narzędzia są idealne w przypadku serwerów kompilacji, ponieważ nic poza pliku projektu jest potrzebny. Uruchamia proces kompilacji projektu go przywrócić kompilacji i narzędzi będzie dostępna. Projekty języka, takie jak F # są również w tej kategorii, ponieważ każdego projektu można zapisywać tylko w jednym języku określonych.
+Te narzędzia są doskonałe dla serwerów kompilacji, ponieważ nic nie poza plik projektu jest wymagana. Uruchamia proces kompilacji dla projektu go przywrócić kompilacje i narzędzia będą dostępne. Projekty języka, takie jak F # są również w tej kategorii, ponieważ każdy projekt może być zapisany tylko w jednym języku określonych.
 
-Na koniec tego modelu rozszerzalności zapewnia obsługę tworzenia narzędzi, które wymagają dostępu do skompilowanych danych wyjściowych projektu. Na przykład widoku Razor różnych narzędzi w [ASP.NET](https://www.asp.net/) aplikacji MVC należą do tej kategorii.
+Na koniec tego modelu rozszerzalności zapewnia obsługę tworzenia narzędzi, które muszą mieć dostęp do skompilowanych danych wyjściowych projektu. Na przykład widoku Razor dla różnych narzędzi w [ASP.NET](https://www.asp.net/) aplikacji MVC należą do tej kategorii.
 
-### <a name="consuming-per-project-tools"></a>Korzystanie z narzędzia — projekt
-Korzystanie z tych narzędzi, musisz dodać `<DotNetCliToolReference>` elementu do pliku projektu dla każdego narzędzia, którego chcesz użyć. Wewnątrz `<DotNetCliToolReference>` element, należy odwołują się do pakietu, w której znajduje się narzędzie i określ wersję należy. Po uruchomieniu [ `dotnet restore` ](dotnet-restore.md), narzędzia i jego zależności są przywracane.
+### <a name="consuming-per-project-tools"></a>Korzystanie z narzędzi dla projektów
+Korzystanie z tych narzędzi, musisz dodać `<DotNetCliToolReference>` element do pliku projektu dla każdego narzędzia, którego chcesz użyć. Wewnątrz `<DotNetCliToolReference>` elementu, należy odwołują się do pakietu, w której znajduje się narzędzie i określić wersji, potrzebujesz. Po uruchomieniu [ `dotnet restore` ](dotnet-restore.md), narzędzie i jego zależności zostaną przywrócone.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Narzędzia, które należy załadować danych wyjściowych kompilacji projektu do wykonania jest zazwyczaj innego zależności, która jest wyświetlana w obszarze regularne zależności w pliku projektu. Ponieważ interfejsu wiersza polecenia używa MSBuild jako jego aparatu kompilacji, zaleca się te części narzędzie mieć postać MSBuild niestandardowych [elementy docelowe](/visualstudio/msbuild/msbuild-targets) i [zadania](/visualstudio/msbuild/msbuild-tasks), ponieważ ich mogą następnie skorzystać całego procesu kompilacji. Ponadto może uzyskać wszystkie dane, łatwo utworzonym za pomocą kompilacji, takie jak lokalizacja plików wyjściowych bieżącej konfiguracji konstruowany itp. Wszystkie te informacje będą zbiór właściwości programu MSBuild, które mogą być odczytywane z dowolnego miejsca docelowego. Jak dodać element docelowy niestandardowych przy użyciu narzędzia NuGet w dalszej części tego dokumentu jest widoczny.
+Narzędzia, które należy załadować dane wyjściowe kompilacji projektu do wykonania jest zazwyczaj inny współzależność, która znajduje się w obszarze regularne zależności w pliku projektu. Ponieważ interfejs wiersza polecenia używa programu MSBuild jako jego aparatu kompilacji, zaleca się zapisać te elementy narzędzia w postaci niestandardowych MSBuild [cele](/visualstudio/msbuild/msbuild-targets) i [zadania](/visualstudio/msbuild/msbuild-tasks), ponieważ są one następnie wzięcia udziału w całego procesu kompilacji. Ponadto otrzymują wszystkie dane, łatwo utworzonym za pomocą kompilacji, takie jak lokalizacja plików wyjściowych bieżącej konfiguracji kompilowanego na bieżąco, itd. Wszystkie te informacje będą zbiór właściwości programu MSBuild, które mogą być odczytywane z dowolnej docelowej. Możesz dowiedzieć się, jak dodać niestandardowe obiekty docelowe, za pomocą narzędzia NuGet w dalszej części tego dokumentu.
 
-Umożliwia przeglądanie przykład dodawania prostego narzędzia tylko narzędzia do prostego projektu. Podano przykładowe polecenie o nazwie `dotnet-api-search` umożliwiają wyszukiwanie za pomocą pakietów NuGet dla określonego interfejsu API, w tym miejscu to pliku projektu aplikacji konsoli, która używa tego narzędzia:
+Omówmy teraz przykład dodawania proste narzędzie tylko do narzędzia do prostego projektu. Biorąc pod uwagę przykładowe polecenie o nazwie `dotnet-api-search` dzięki niemu można będzie przeszukiwać pakietów NuGet dla określonego interfejsu API, w tym miejscu jest plik projektu aplikacji konsoli, który korzysta z tego narzędzia:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -63,26 +63,26 @@ Umożliwia przeglądanie przykład dodawania prostego narzędzia tylko narzędzi
 </Project>
 ```
 
-`<DotNetCliToolReference>` Elementów ma strukturę w podobny sposób jak `<PackageReference>` elementu. Musi on identyfikator pakietu pakietu zawierającego narzędzie oraz jego wersję, można go przywrócić.
+`<DotNetCliToolReference>` Elementu są skonstruowane w podobny sposób jak `<PackageReference>` elementu. Musi ona identyfikator pakietu pakiet zawierający narzędzia i jego wersji, można przywrócić.
 
-### <a name="building-tools"></a>Narzędzia do budowania
-Jak wspomniano, narzędzia są aplikacje konsoli po prostu przenośnej. Narzędzi kompilacji, podczas tworzenia czy inna aplikacja konsoli.
-Po jego tworzenia, należy użyć [ `dotnet pack` ](dotnet-pack.md) polecenie, aby utworzyć pakiet NuGet (pliku .nupkg), który zawiera kod, informacje o jego zależności itd. Można przekazać dowolną nazwę pakietu, ale aplikacja wewnątrz narzędzie rzeczywiste binarnego, musi być zgodne z Konwencją `dotnet-<command>` aby `dotnet` aby można było ją wywołać.
+### <a name="building-tools"></a>Narzędzia do konstruowania
+Jak wspomniano, narzędzia są aplikacje konsoli po prostu przenośnej. Możesz tworzyć narzędzi, jak tworzysz czy inna aplikacja konsoli.
+Po jego tworzenia, należy użyć [ `dotnet pack` ](dotnet-pack.md) polecenie, aby utworzyć pakiet NuGet (plik .nupkg), który zawiera kod, informacje o jego zależności i tak dalej. Można nadać dowolną nazwę pakietu, ale aplikacji w narzędziu rzeczywiste binarne, musi być zgodna z Konwencją `dotnet-<command>` aby `dotnet` aby można było ją wywołać.
 
 > [!NOTE]
-> W wersji pre-RC3 narzędzi wiersza polecenia platformy .NET Core `dotnet pack` polecenia miał usterkę, która spowodowała `runtime.config.json` nie pakowane za pomocą narzędzia. Brak wyników tego pliku błędy w czasie wykonywania. Jeśli wystąpi ten problem, należy zaktualizować najnowsze narzędzia i spróbuj `dotnet pack` ponownie.
+> W wersji pre-RC3 narzędzia wiersza polecenia platformy .NET Core `dotnet pack` polecenia miał usterkę powodującą `runtime.config.json` nie będzie bogatymi w narzędziu. Brak wyników tego pliku, błędy w czasie wykonywania. Jeśli wystąpi ten problem, należy zaktualizować do najnowszych narzędzi i spróbuj `dotnet pack` ponownie.
 
-Ponieważ narzędzia przenośnych aplikacji, użytkowników korzystających z narzędzia musi mieć wersję biblioteki .NET Core, w których narzędzie został utworzony przed uruchomienie tego narzędzia. Inne zależności, czy używane narzędzie i który nie jest zawarty w bibliotek .NET Core jest przywrócona i umieszczane w pamięci podręcznej NuGet. Cały dlatego uruchomienie narzędzia przy użyciu zestawów z bibliotek .NET Core, a także zestawy z pamięci podręcznej NuGet.
+Narzędzia są aplikacje przenośne, użytkowników, korzystanie z narzędzia musi mieć wersję biblioteki .NET Core, które narzędzie została skompilowana, aby można było uruchomić narzędzie. Wszelkich innych zależności, że używa narzędzie i który nie jest zawarty w biblioteki .NET Core jest przywracane i umieszczane w pamięci podręcznej narzędzia NuGet. Cały dlatego uruchomienie narzędzia przy użyciu zestawów z biblioteki .NET Core, a także zestawy z pamięcią podręczną programu NuGet.
 
-Tego rodzaju narzędzia ma wykres zależności, który jest całkowicie niezależna od na wykresie zależności projektu, który używa tych. Proces przywracania najpierw przywraca zależności projektu i następnie przywrócenie wszystkich narzędzi oraz ich zależności.
+Tego rodzaju narzędzia ma wykres zależności, które łączą się z wykresu zależności projektu, który używa ich. Proces przywracania najpierw przywraca zależności projektu, a następnie przywrócenie wszystkich narzędzi i ich zależności.
 
-Można znaleźć przykłady bardziej zaawansowane funkcje i to w różnych kombinacji [repozytorium interfejsu wiersza polecenia platformy .NET Core](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestProjects).
-Możesz również sprawdzić [implementacji narzędzia używane](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestPackages) w tym samym repozytorium.
+Można znaleźć przykłady bardziej rozbudowane i różnych kombinacji w [repozytorium interfejsu wiersza polecenia platformy .NET Core](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestProjects).
+Można również wyświetlić [implementacji narzędzia używane](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestPackages) w tym samym repozytorium.
 
-### <a name="custom-targets"></a>Niestandardowe elementy docelowe
-NuGet ma możliwość [pakiet niestandardowy MSBuild cele i pliki właściwości](/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package). Wraz z przejściem z narzędzi .NET Core interfejsu wiersza polecenia, użyj programu MSBuild sam mechanizm rozszerzalności teraz ma zastosowanie do projektów platformy .NET Core. Czy używać tego typu rozszerzeń, gdy chcesz rozszerzyć procesu kompilacji lub chcesz uzyskać dostępu do żadnego artefaktów w procesie kompilacji, takich jak pliki generowane lub chcesz sprawdzić konfigurację, pod którą jest wywoływany kompilacji , itp.
+### <a name="custom-targets"></a>Niestandardowe obiekty docelowe
+NuGet ma możliwość [pakiet niestandardowego programu MSBuild cele i pliki właściwości](/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package). Wraz z przejściem narzędzi interfejsu wiersza polecenia platformy .NET Core, za pomocą programu MSBuild ten sam mechanizm rozszerzalności teraz ma zastosowanie do projektów .NET Core. Będzie używać tego typu rozszerzeń, gdy chcesz rozszerzyć proces kompilacji lub chcesz uzyskać dostęp do dowolnego z artefaktów w procesie kompilacji, takie jak wygenerowanych plików lub chcesz sprawdzić konfigurację w ramach której zostanie wywołana kompilacji , itp.
 
-W poniższym przykładzie widać projektu docelowego pliku przy użyciu `csproj` składni. To powoduje, że [ `dotnet pack` ](dotnet-pack.md) polecenia wybierania elementów do pakietu, umieszczenie plików elementy docelowe, a także zestawów do *kompilacji* folderu w pakiecie. Powiadomienie `<ItemGroup>` element, który ma `Label` ustawioną właściwość `dotnet pack instructions`, i element docelowy zdefiniowana poniżej.
+W poniższym przykładzie można zobaczyć projekt docelowy plik za pomocą `csproj` składni. To powoduje, że [ `dotnet pack` ](dotnet-pack.md) polecenia wybierania elementów do pakietu, umieszczania plików obiektów docelowych, a także zestawy w *kompilacji* folder wewnątrz pakietu. Zwróć uwagę `<ItemGroup>` element, który ma `Label` właściwością `dotnet pack instructions`, i docelowy zdefiniowane poniżej.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -131,21 +131,21 @@ W poniższym przykładzie widać projektu docelowego pliku przy użyciu `csproj`
 </Project>
 ```
 
-Korzystanie z niestandardowych elementów docelowych to zrobić, podając `<PackageReference>` wskazującego pakiet i jego wersja wewnątrz projektu, który zostanie rozszerzone. W przeciwieństwie do narzędzia ujęte pakietu niestandardowe obiekty docelowe do zamknięcia zależności projektu odbierającą.
+Korzystanie z niestandardowych elementów docelowych to zrobić, podając `<PackageReference>` wskazującego na pakiet i jego wersji wewnątrz projektu, który jest rozszerzany. W przeciwieństwie do narzędzia ujęte pakietu niestandardowe obiekty docelowe do zamknięcia zależności projektu odbierająca komunikaty.
 
-Przy użyciu niestandardowych docelowych zależy od wyłącznie konfiguracji. Ponieważ jest element docelowy programu MSBuild, może zależeć na dany obiekt docelowy, uruchom po inny element docelowy i może również być ręcznie wywoływane przy użyciu `dotnet msbuild /t:<target-name>` polecenia.
+Przy użyciu niestandardowe obiekty docelowe zależy wyłącznie od konfiguracji. Ponieważ jest obiekt docelowy programu MSBuild, może zależeć na danym obiektem docelowym Uruchom po innym elementem docelowym i może również być ręcznego wywołania odbywa się przy użyciu `dotnet msbuild /t:<target-name>` polecenia.
 
-Jednak jeśli chcesz zapewnić lepsze środowisko dla użytkowników, możesz łączyć narzędzia na projekt i niestandardowych obiektów docelowych. W tym scenariuszu narzędzie-projekt będzie zasadniczo wystarczy zaakceptować wymagane parametry i przekłada który do wymaganych [ `dotnet msbuild` ](dotnet-msbuild.md) wywołanie, którego elementem docelowym jest wykonywany. Można wyświetlić na przykład tego rodzaju współdziałania [przykłady MVP szczytu 2016 Hackathon](https://github.com/dotnet/MVPSummitHackathon2016) repozytorium w [ `dotnet-packer` ](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer) projektu.
+Jednak jeśli chcesz zapewnić lepsze środowisko użytkownika do użytkowników, można połączyć narzędzi dla projektów i niestandardowych elementów docelowych. W tym scenariuszu narzędzie-projekt będzie zasadniczo wystarczy zaakceptować dowolnie wymagane parametry i czy tłumaczenie, wymagane [ `dotnet msbuild` ](dotnet-msbuild.md) wywołania, które element docelowy jest wykonywany. Przykład tego rodzaju synergii może zobaczyć na [przykłady MVP Summit 2016 Hackathon](https://github.com/dotnet/MVPSummitHackathon2016) repozytorium w [ `dotnet-packer` ](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer) projektu.
 
-### <a name="path-based-extensibility"></a>Na podstawie ścieżki rozszerzalności
-Rozszerzalność na podstawie ścieżki jest zazwyczaj używane do tworzenia maszyn wymagających narzędziem koncepcyjnie obejmuje więcej niż jednego projektu. Główną wadą tego mechanizmu rozszerzenia jest, że zostały powiązane z maszyną gdzie narzędzie istnieje. Jeśli potrzebujesz go na innym komputerze, trzeba jej wdrożenia.
+### <a name="path-based-extensibility"></a>Rozszerzalność opartego na ŚCIEŻKACH
+Rozszerzalność opartego na ŚCIEŻKACH jest zazwyczaj używane do tworzenia maszyn wymagających to narzędzie, które pod względem koncepcyjnym obejmuje więcej niż jednego projektu. Główną wadą tego mechanizmu rozszerzenia jest, że jest powiązany z maszyną której istnieje narzędzie. Jeśli potrzebujesz jej na innym komputerze, trzeba ją wdrożyć.
 
-Ten wzorzec rozszerzalność narzędzi interfejsu wiersza polecenia jest bardzo prosty. Jak opisano w [omówienie interfejsu wiersza polecenia platformy .NET Core](index.md), `dotnet` sterownik można uruchomić z dowolnego polecenia o nazwie po `dotnet-<command>` Konwencji. Domyślna logika rozpoznawania najpierw sondy w kilku lokalizacjach, a na koniec przechodzi do systemowej PATH. Jeśli żądanego polecenia w systemie ŚCIEŻKA istnieje i jest plikiem binarnym, która może zostać wywołana, `dotnet` sterownik wywoła go.
+Ten wzorzec rozszerzalności narzędzi interfejsu wiersza polecenia jest bardzo proste. Zgodnie z opisem w [omówienie interfejsu wiersza polecenia platformy .NET Core](index.md), `dotnet` sterownik można uruchomić dowolne polecenie, który nosi nazwę po `dotnet-<command>` Konwencji. Domyślnej logiki rozpoznawania najpierw sondy w kilku lokalizacjach, a na koniec przechodzi do ścieżki systemu. Jeśli żądane polecenie w systemie ŚCIEŻKA istnieje i jest plik binarny, który może być wywołana, `dotnet` sterowników będzie go wywoływać.
 
-Plik musi być wykonywalne. W systemach Unix, oznacza to wszystko, co ma ustawiony bit execute za pośrednictwem `chmod +x`. W systemie Windows, można użyć *cmd* plików.
+Plik musi być pliku wykonywalnego. W systemach Unix, oznacza to wszystko, co ma ustawiony bit wykonania za pośrednictwem `chmod +x`. Windows, mogą używać *cmd* plików.
 
-Spójrzmy na bardzo prosta implementacja narzędzia "Hello World". Używamy zarówno `bash` i `cmd` w systemie Windows.
-Następujące polecenie spowoduje po prostu echo "Hello World" w konsoli.
+Spójrzmy na bardzo proste Wdrażanie narzędzia "Hello World". Będziemy używać zarówno `bash` i `cmd` na Windows.
+Następujące polecenie będzie po prostu echo "Hello World" do konsoli.
 
 ```bash
 #!/bin/bash
@@ -157,6 +157,6 @@ echo "Hello World!"
 echo "Hello World"
 ```
 
-Na macOS, można zapisać ten skrypt jako `dotnet-hello` i ustawić jej bit pliku wykonywalnego z `chmod +x dotnet-hello`. Następnie można utworzyć łącze symboliczne do niej w `/usr/local/bin` za pomocą polecenia `ln -s <full_path>/dotnet-hello /usr/local/bin/`. To umożliwi można wywołać za pomocą polecenia `dotnet hello` składni.
+W systemie macOS można zapisać skrypt jako `dotnet-hello` i ustaw jego bit pliku wykonywalnego z `chmod +x dotnet-hello`. Następnie możemy utworzyć łącze symboliczne do niego w `/usr/local/bin` za pomocą polecenia `ln -s <full_path>/dotnet-hello /usr/local/bin/`. Umożliwi to można wywołać za pomocą polecenia `dotnet hello` składni.
 
-W systemie Windows, można zapisać ten skrypt jako `dotnet-hello.cmd` i umieszcza je w lokalizacji, która znajduje się w ścieżce systemowej (lub można dodać go do folderu, który już znajduje się w ścieżce). Następnie można użyć `dotnet hello` do uruchomienia tego przykładu.
+W systemie Windows, firma Microsoft można zapisać skrypt jako `dotnet-hello.cmd` i umieścić go w lokalizacji, która znajduje się w ścieżce systemu (lub można dodać go do folderu, który już znajduje się w ścieżce). Dzięki temu wystarczy użyć `dotnet hello` do uruchomienia tego przykładu.

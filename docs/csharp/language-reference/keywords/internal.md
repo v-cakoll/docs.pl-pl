@@ -8,18 +8,18 @@ helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
 ms.openlocfilehash: d2fcc19bb7bc6de373412e7728f3025647c0435d
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172675"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961485"
 ---
 # <a name="internal-c-reference"></a>internal (odwołanie w C#)
-`internal` — Słowo kluczowe jest [modyfikator dostępu](../../../csharp/language-reference/keywords/access-modifiers.md) typy i elementy członkowskie typu. 
+`internal` Słowo kluczowe jest [modyfikator dostępu](../../../csharp/language-reference/keywords/access-modifiers.md) dla typów i elementów członkowskich typu. 
   
- > Ta strona zawiera `internal` dostępu. `internal` — Słowo kluczowe jest również częścią [ `protected internal` ](./protected-internal.md) modyfikator dostępu.
+ > Ta strona obejmuje `internal` dostępu. `internal` — Słowo kluczowe jest również częścią [ `protected internal` ](./protected-internal.md) modyfikator dostępu.
   
-Wewnętrzne typy i elementy członkowskie są dostępne tylko w plikach w tym samym zestawie, jak w poniższym przykładzie:  
+Typy wewnętrzne lub elementy członkowskie są dostępne tylko z poziomu plików w tym samym zestawie, jak w poniższym przykładzie:  
   
 ```csharp  
 public class BaseClass   
@@ -31,14 +31,14 @@ public class BaseClass
 
  Porównanie `internal` z innych modyfikatorów dostępu, zobacz [poziomów ułatwień dostępu](../../../csharp/language-reference/keywords/accessibility-levels.md) i [modyfikatory dostępu](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
- Aby uzyskać więcej informacji na temat zestawów, zobacz [zestawy i Global Assembly Cache](../../../csharp/programming-guide/concepts/assemblies-gac/index.md).  
+ Aby uzyskać więcej informacji na temat zestawów, zobacz [zestawy i Globalna pamięć podręczna zestawów](../../../csharp/programming-guide/concepts/assemblies-gac/index.md).  
   
- Zazwyczaj wewnętrznego dostępu jest używane w programowania opartego na składnik ponieważ dzięki grupy składników do współpracy w sposób prywatnej bez narażania z resztą kodu aplikacji. Na przykład można podać struktura umożliwiająca tworzenie graficznych interfejsów użytkownika `Control` i `Form` klasy, które współpracują przy użyciu elementów członkowskich z dostępem do wewnętrznego. Ponieważ te elementy członkowskie są wewnętrzne, ich nie są widoczne dla kodu, który używa programu framework.  
+ Typowym zastosowaniem dostępu wewnętrznego jest opracowywany oparty na komponentach, ponieważ umożliwia grupy składników do współpracy w sposób prywatne bez ujawniania w pozostałej części kodu aplikacji. Na przykład można dostarczyć umożliwiająca tworzenie graficznych interfejsów użytkownika `Control` i `Form` klas, które współpracują przy użyciu elementów członkowskich z dostępem do wewnętrznych. Ponieważ te elementy członkowskie są wewnętrzne, nie są one widoczne do kodu, który używa programu framework.  
   
- Jest błąd, aby odwoływać się do typu lub elementu członkowskiego o wewnętrznej dostęp spoza zestawu, w którym został zdefiniowany.  
+ Jest to błąd, aby odwoływać się do typu lub elementu członkowskiego z wewnętrznego dostępem spoza zestawu, w którym został zdefiniowany.  
   
 ## <a name="example"></a>Przykład  
- Ten przykład zawiera dwa pliki `Assembly1.cs` i `Assembly1_a.cs`. Wewnętrzna klasa podstawowa zawiera pierwszy plik `BaseClass`. W drugim pliku, próba utworzenia wystąpienia `BaseClass` spowoduje błąd.  
+ Ten przykład zawiera dwa pliki `Assembly1.cs` i `Assembly1_a.cs`. Pierwszy plik zawiera wewnętrzny klasy bazowej `BaseClass`. W drugim pliku, próba utworzenia wystąpienia `BaseClass` powoduje wygenerowanie błędu.  
   
 ```csharp  
 // Assembly1.cs  
@@ -62,7 +62,7 @@ class TestAccess
 ```  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie należy używać tych samych plików, które są używane w przykładzie 1 i zmienić poziom dostępności `BaseClass` do `public`. Również zmienić poziom dostępności elementu członkowskiego `IntM` do `internal`. W takim przypadku można utworzyć wystąpienia klasy, ale nie masz dostępu do wewnętrznego elementu członkowskiego.  
+ W tym przykładzie należy użyć tych samych plików, które są używane w przykładzie 1 i zmienić poziom dostępności `BaseClass` do `public`. Również zmienić poziom dostępności elementu członkowskiego `IntM` do `internal`. W takim przypadku można utworzyć wystąpienia klasy, ale nie masz dostępu do wewnętrznego elementu członkowskiego.  
   
 ```csharp  
 // Assembly2.cs  
@@ -90,7 +90,7 @@ public class TestAccess
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
+ [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
  [Modyfikatory dostępu](../../../csharp/language-reference/keywords/access-modifiers.md)  

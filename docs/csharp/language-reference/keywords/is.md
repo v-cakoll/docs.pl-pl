@@ -8,140 +8,140 @@ helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
 ms.openlocfilehash: 16d318c1c1a5d8e560b97d9e996f1165a4566c6a
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208386"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961407"
 ---
 # <a name="is-c-reference"></a>is (odwołanie w C#) #
 
-Sprawdza, czy obiekt jest zgodny z danego typu, lub (począwszy od wersji 7.0 C#) testów wyrażenia do wzorca.
+Sprawdza, czy obiekt jest zgodny z danego typu, lub (rozpoczynający się znakami języka C# 7.0) sprawdza się wyrażenie do wzorca.
 
 ## <a name="testing-for-type-compatibility"></a>Testowanie zgodności typu ##
 
-`is` — Słowo kluczowe ocenia zgodność typu w czasie wykonywania. Określa, czy wystąpienie obiektu lub można przekonwertować na określony typ wyniku wyrażenia. Ma ona składni
+`is` — Słowo kluczowe ocenia zgodność z typem w czasie wykonywania. Określa, czy wystąpienie obiektu lub wyniku wyrażenia można przekonwertować na określony typ. Ma składnię
 
 ```csharp
    expr is type
 ```
 
-gdzie *wyrażenie* wyrażenie obliczane do wystąpienia typu, i *typu* jest nazwa typu, do którego wynik *wyrażenie* do konwertowania. `is` Instrukcja jest `true` Jeśli *wyrażenie* jest inne niż null i wyniki z obliczenie wyrażenia można przekonwertować na obiekt *typu*; w przeciwnym razie zwraca `false`.
+gdzie *expr* jest wyrażeniem, które daje w wyniku wystąpienia określonego typu i *typu* jest nazwą typu, do której wynik *expr* do przekonwertowania. `is` Instrukcja jest `true` Jeśli *expr* jest inna niż null i wyniki z obliczając wartość wyrażenia można przekonwertować na obiekt *typu*; w przeciwnym razie zwraca `false`.
 
-Na przykład następujący kod określa, czy `obj` mogą być rzutowane na wystąpienie `Person` typu:
+Na przykład, poniższy kod określa, czy `obj` mogą być rzutowane na wystąpienie `Person` typu:
 
 [!code-csharp[is#1](../../../../samples/snippets/csharp/language-reference/keywords/is/is1.cs#1)]
 
 `is` Instrukcja jest wartość true, jeśli:
 
-- *wyrażenie* jest wystąpienie tego samego typu co *typu*.
+- *wyrażenie* to wystąpienie tego samego typu co *typu*.
 
-- *wyrażenie* jest wystąpieniem typu pochodzącego od *typu*. Innymi słowy, wynik *wyrażenie* może być upcast na wystąpienie *typu*.
+- *wyrażenie* jest wystąpieniem typu, który pochodzi od klasy *typu*. Innymi słowy, wynikiem *expr* może być rzutowany w górę do wystąpienia *typu*.
 
-- *wyrażenie* zawiera typ kompilacji jest klasą podstawową *typu*, i *wyrażenie* ma typ obsługi, który jest *typu* lub pochodzi z *typu*. *Typu kompilacji* zmiennej jest typu zmienną, zgodnie z definicją w jego deklaracji. *Typ środowiska uruchomieniowego* zmiennej jest typem wystąpienia, który jest przypisany do tej zmiennej.
+- *wyrażenie* ma typ kompilacji, która jest klasą bazową dla *typu*, i *expr* ma typ środowiska uruchomieniowego, który jest *typu* lub typu pochodnego względem *typu*. *Typów w czasie kompilacji* zmiennej jest typem zmiennej, zgodnie z definicją w jego deklaracji. *Typ środowiska uruchomieniowego* zmiennej jest typem wystąpienia, która jest przypisana do zmiennej.
 
 - *wyrażenie* jest wystąpieniem typu, który implementuje *typu* interfejsu.
 
-W poniższym przykładzie pokazano, że `is` wyrażenie ma `true` dla każdego z tych konwersji.
+Poniższy przykład pokazuje, że `is` wyrażenie daje w wyniku `true` dla każdej takiej konwersji.
 
 [!code-csharp[is#3](../../../../samples/snippets/csharp/language-reference/keywords/is/is3.cs#3)]
 
-`is` — Słowo kluczowe generuje ostrzeżenie kompilacji, jeśli wiadomo, że wyrażenie zawsze być `true` lub `false`. Traktuje tylko konwersje odwołań, konwersje boxing i konwersji unboxing; nie traktuje konwersje zdefiniowane przez użytkownika lub konwersje zdefiniowane przez określony typ [niejawne](implicit.md) i [jawne](explicit.md) operatorów. Poniższy przykład generuje ostrzeżenia, ponieważ wynik konwersji jest znany w czasie kompilacji. Należy pamiętać, że `is` wyrażenie dla konwersji z `int` do `long` i `double` zwraca wartość false, ponieważ te konwersje są obsługiwane przez [niejawne](implicit.md) operatora.
+`is` — Słowo kluczowe generuje ostrzeżenie kompilacji, jeśli wiadomo, że wyrażenie zawsze być `true` lub `false`. Analizuje ona tylko konwersje odwołań, konwersje boxing i konwersji unboxing; nie traktuje konwersje zdefiniowane przez użytkownika lub konwersje zdefiniowane przez typ [niejawne](implicit.md) i [jawne](explicit.md) operatorów. Poniższy przykład generuje ostrzeżenia, ponieważ wynik konwersji jest znany w czasie kompilacji. Należy pamiętać, że `is` wyrażenia w przypadku konwersji z typu `int` do `long` i `double` zwraca wartość FAŁSZ, ponieważ te konwersje są obsługiwane przez [niejawne](implicit.md) operatora.
 
 [!code-csharp[is#2](../../../../samples/snippets/csharp/language-reference/keywords/is/is2.cs#2)]
 
-`expr` może być dowolnym wyrażenie zwracające wartość, z wyjątkiem metody anonimowe i wyrażenia lambda. W poniższym przykładzie użyto `is` do oceny, zwracana wartość wywołania metody.   
+`expr` może to być wyrażenie zwracające wartość, z wyjątkiem metod anonimowych, jak i o wyrażenia lambda. W poniższym przykładzie użyto `is` można obliczyć wartość zwracaną przez wywołanie metody.   
 [!code-csharp[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
 
-Począwszy od wersji 7.0 C#, można użyć dopasowywanie do wzorca za [wzorzec typu](#type) do pisania kodu bardziej zwięzły, który używa `is` instrukcji.
+Począwszy od języka C# 7.0, można użyć dopasowywania do wzorca z [wpisz wzór](#type) napisać bardziej zwięzły widok kodu, który używa `is` instrukcji.
 
-## <a name="pattern-matching-with-is"></a>Dopasowywanie do wzorca z `is` ##
+## <a name="pattern-matching-with-is"></a>Dopasowywanie wzorca z `is` ##
 
-Począwszy od C# 7.0, `is` i [przełącznika](../../../csharp/language-reference/keywords/switch.md) instrukcje obsługuje dopasowywania do wzorca. `is` — Słowo kluczowe obsługuje następujące wzorce:
+Począwszy od C# 7.0, `is` i [Przełącz](../../../csharp/language-reference/keywords/switch.md) instrukcje obsługują dopasowywania do wzorca. `is` — Słowo kluczowe obsługuje następujące wzorce:
 
-- [Wzorzec typu](#type), która sprawdza, czy wyrażenie można przekonwertować na określony typ i, jeśli można ją, rzutuje zmiennej tego typu.
+- [Wpisz wzór](#type), który sprawdza, czy wyrażenie można przekonwertować na określony typ i, jeśli może zostać rzutuje zmiennej tego typu.
 
-- [Stałe wzorzec](#constant), która sprawdza, czy wyrażenie ma określoną wartość stałą.
+- [Wzór stałej](#constant), która sprawdza, czy wyrażenie ma określoną wartość stałą.
 
-- [var — wzorzec](#var), dopasowanie, która zawsze kończy się powodzeniem i wiąże wartość wyrażenia do zmiennej lokalnej. 
+- [wzorzec var](#var), dopasowania zawsze zakończy się pomyślnie i Nowa zmienna lokalna jest powiązana wartość wyrażenia. 
 
-### <a name="type" /> Wzorzec typu </a>
+### <a name="type" /> Wpisz wzór </a>
 
-Korzystając ze wzorcem typu do realizacji dopasowania do wzorca, `is` sprawdza, czy wyrażenie można przekonwertować na określony typ i, jeśli można ją, rzutuje zmiennej tego typu. Jest prosta rozszerzenie `is` instrukcji, która umożliwia ocenę zwięzła, typ i konwersji. Ogólny kształt `is` typu wzorzec jest:
+W przypadku używania wzorca typu do realizacji dopasowania do wzorca, `is` sprawdza, czy wyrażenie można przekonwertować na określony typ i, jeśli może zostać rzutuje zmiennej tego typu. To proste rozszerzenie `is` instrukcję, która umożliwia ocenę zwięzły typ i konwersji. Ogólna postać `is` typu wzorzec jest:
 
 ```csharp
    expr is type varname 
 ```
 
-gdzie *wyrażenie* wyrażenie obliczane do wystąpienia typu niektórych *typu* jest nazwa typu, do którego wynik *wyrażenie* należy skonwertować i *nazwa_zmiennej* obiektu, do którego wynik *wyrażenie* przekonwertowaniu Jeśli `is` testu jest `true`. 
+gdzie *expr* jest wyrażeniem, które daje w wyniku wystąpienia określonego typu *typu* nazwę typu, do którego jest wynikiem *wyrażenie* ma być przekonwertowany i *nazwa_zmiennej* obiekt, do którego jest wynikiem *expr* jest konwertowany, jeśli `is` test jest `true`. 
 
-`is` Wyrażenie jest `true` Jeśli *wyrażenie* nie jest `null`, i jest spełniony jeden z następujących czynności:
+`is` Wyrażenie jest `true` Jeśli *expr* nie `null`, i jest spełniony jeden z następujących czynności:
 
-- *wyrażenie* jest wystąpienie tego samego typu co *typu*.
+- *wyrażenie* to wystąpienie tego samego typu co *typu*.
 
-- *wyrażenie* jest wystąpieniem typu pochodzącego od *typu*. Innymi słowy, wynik *wyrażenie* może być upcast na wystąpienie *typu*.
+- *wyrażenie* jest wystąpieniem typu, który pochodzi od klasy *typu*. Innymi słowy, wynikiem *expr* może być rzutowany w górę do wystąpienia *typu*.
 
-- *wyrażenie* zawiera typ kompilacji jest klasą podstawową *typu*, i *wyrażenie* ma typ obsługi, który jest *typu* lub pochodzi z *typu*. *Typu kompilacji* zmiennej jest typu zmienną, zgodnie z definicją w jego deklaracji. *Typ środowiska uruchomieniowego* zmiennej jest typem wystąpienia, który jest przypisany do tej zmiennej.
+- *wyrażenie* ma typ kompilacji, która jest klasą bazową dla *typu*, i *expr* ma typ środowiska uruchomieniowego, który jest *typu* lub typu pochodnego względem *typu*. *Typów w czasie kompilacji* zmiennej jest typem zmiennej, zgodnie z definicją w jego deklaracji. *Typ środowiska uruchomieniowego* zmiennej jest typem wystąpienia, która jest przypisana do zmiennej.
 
 - *wyrażenie* jest wystąpieniem typu, który implementuje *typu* interfejsu.
 
-Jeśli *wyrażenie* jest `true` i `is` jest używany z `if` instrukcji, *nazwa_zmiennej* przypisano i ma zasięg lokalny w `if` tylko instrukcji.
+Jeśli *expr* jest `true` i `is` jest używana z `if` instrukcji, *nazwa_zmiennej* przypisano i ma zakres lokalny w ramach `if` tylko instrukcji.
 
-W poniższym przykładzie użyto `is` typu wzorzec do implementacji typu <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> metody.
+W poniższym przykładzie użyto `is` wpisz wzór do implementacji typu <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> metody.
 
 [!code-csharp[is#5](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern5.cs#5)]
 
-Bez wzorca dopasowania, ten kod może być zapisana w następujący sposób. Użycie typu dopasowanie wzorca tworzy kodu mniejszych, który może zostać odczytany, eliminując konieczność, aby sprawdzić, czy wynik konwersji jest `null`.  
+Bez dopasowywania do wzorca, ten kod może być zapisana w następujący sposób. Używanie dopasowania wzorca typu generuje kod bardziej zwarty, czytelny dzięki wyeliminowaniu konieczności, aby sprawdzić, czy wynik konwersji jest `null`.  
 
 [!code-csharp[is#6](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern6.cs#6)]
 
-`is` Wzorzec typu tworzy również mniejszych kodu podczas określania typu typu wartości. W poniższym przykładzie użyto `is` typu wzorzec do ustalenia, czy obiekt jest `Person` lub `Dog` wystąpienia przed wyświetleniem wartości odpowiednich właściwości. 
+`is` Wpisz wzór również generuje kod bardziej zwarty podczas określania typu o typie wartości. W poniższym przykładzie użyto `is` wpisz wzór, aby ustalić, czy obiekt jest `Person` lub `Dog` wystąpienia przed wyświetleniem wartości odpowiednich właściwości. 
 
 [!code-csharp[is#9](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern9.cs#9)]
 
-Odpowiednik kodu bez dopasowywania do wzorca wymaga oddzielnych przypisania, która obejmuje jawnego rzutowania.
+Równoważny kod bez dopasowywania do wzorca wymaga oddzielnych przypisania, które obejmuje jawnego rzutowania.
 
 [!code-csharp[is#10](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern10.cs#10)]
 
-### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> Stałe wzorzec ###
+### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> Wzór stałej ###
 
-Podczas wykonywania dopasowywanie do wzorca z wzorcem stałej `is` sprawdza, czy wyrażenie jest równe określonej stałej. W języku C# 6 i wcześniejszych wersjach stałe wzorzec jest obsługiwany przez [przełącznika](switch.md) instrukcji. Począwszy od wersji 7.0 C#, nie jest obsługiwany przez `is` również instrukcji. Składnia to:
+Podczas przeprowadzania dopasowywanie wzorca za wzór stałej `is` sprawdza, czy wyrażenie jest równe określonej stałej. W języku C# 6 i starszych wersji wzór stałej jest obsługiwana przez [Przełącz](switch.md) instrukcji. Począwszy od języka C# 7.0 nie jest obsługiwany przez `is` także instrukcji. Jego składnia jest następująca:
 
 ```csharp
    expr is constant
 ```
 
-gdzie *wyrażenie* jest wyrażenie do oceny, i *stałej* jest wartość do testowania. *Stała* może być dowolny z następujących wyrażenia stałe: 
+gdzie *expr* jest wyrażenie do oceny, i *stałej* jest wartością do testowania. *Stała* może być dowolną z następujących stałych wyrażeń: 
 
 - Wartość literału.
 
-- Nazwy deklarowanych `const` zmiennej.
+- Nazwa deklarowanej `const` zmiennej.
 
 - Stała wyliczenia.
 
 Stałe wyrażenie jest obliczane w następujący sposób:
 
-- Jeśli *wyrażenie* i *stałej* są typy całkowite operator równości C# Określa, czy wyrażenie zwraca `true` (to znaczy czy `expr == constant`).
+- Jeśli *expr* i *stałej* typów całkowitych operatora porównania języka C# Określa, czy wyrażenie zwraca `true` (oznacza to, czy `expr == constant`).
 
-- W przeciwnym razie wartość wyrażenia jest określana przez wywołanie do statycznego [Object.Equals (wyrażenie stałej)](xref:System.Object.Equals(System.Object,System.Object)) metody.  
+- W przeciwnym razie wartość wyrażenia jest określana przez wywołanie statycznego [metody Object.Equals (wyrażenie stałe)](xref:System.Object.Equals(System.Object,System.Object)) metody.  
 
-Poniższy przykład łączy wzorce typu i stała, aby sprawdzić, czy obiekt jest `Dice` wystąpienia, a jeśli tak jest, aby określić, czy wartość zbiorczego selekcji jest 6.
+Poniższy przykład łączy wzorców typu i stała, aby sprawdzić, czy obiekt jest `Dice` wystąpienia, a jeśli tak jest, aby określić, czy wartość skumulowane dice to 6.
 
 [!code-csharp[is#7](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern7.cs#7)]
  
-### <a name="var" /> var — wzorzec </a>
+### <a name="var" /> wzorzec var </a>
 
-Wzorzec dopasowania wzorca var zawsze kończy się powodzeniem. Składnia może się
+Dopasowanie do wzorca za pomocą wzorca var zawsze kończy się powodzeniem. Jest jego składni
 
 ```csharp 
    expr is var varname
 ```
 
-Jeżeli wartość *wyrażenie* jest zawsze przypisywana do zmiennej lokalnej o nazwie *nazwa_zmiennej*. *nazwa_zmiennej* jest zmienna statyczna tego samego typu co *wyrażenie*. Poniższy przykład korzysta ze wzorca var można przypisać wyrażenia do zmiennej o nazwie `obj`. Następnie wyświetla wartości i typ `obj`.
+gdy wartość *expr* jest zawsze przypisywana do zmiennej lokalnej o nazwie *nazwa_zmiennej*. *nazwa_zmiennej* jest zmienna statyczna tego samego typu co *expr*. W poniższym przykładzie użyto wzorca var można przypisać wyrażenia do zmiennej o nazwie `obj`. Następnie wyświetla wartość i typ `obj`.
 
 [!code-csharp[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
 
-Należy pamiętać, że jeśli *wyrażenie* jest `null`, `is` wyrażenie nadal ma wartość true i przypisuje `null` do *nazwa_zmiennej*. 
+Należy pamiętać, że jeśli *expr* jest `null`, `is` wyrażenie nadal ma wartość true, przypisuje `null` do *nazwa_zmiennej*. 
 
 # <a name="c-language-specification"></a>Specyfikacja języka C#
   

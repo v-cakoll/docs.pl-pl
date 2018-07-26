@@ -1,25 +1,25 @@
 ---
-title: Implementowanie odporność aplikacji
-description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Implementowanie odporność aplikacji
+title: Implementowanie aplikacji odpornych na błędy
+description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Implementowanie aplikacji odpornych na błędy
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: ddb0f54b15735b9192d2088495947588f59829a0
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/08/2018
+ms.openlocfilehash: dc0db8f0cdfa77bcca467c3c632b3d93de8851d8
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106054"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37875127"
 ---
-# <a name="implementing-resilient-applications"></a>Implementowanie odporność aplikacji
+# <a name="implementing-resilient-applications"></a>Implementowanie aplikacji odpornych na błędy
 
-*Twoje mikrousługi i w chmurze aplikacji musi obejmować częściowe błędów, które na pewno nastąpi po pewnym czasie. Należy więc był odporny na błędy te częściowe, Utwórz projekt swojej aplikacji.*
+*Na mikrousługach i aplikacji działających w chmurze musi obejmować częściowe błędy, które na pewno zostanie przeprowadzona po pewnym czasie. Należy tak zaprojektować aplikację, więc będą odporne na awarie, którym te częściowe.*
 
-Odporność jest możliwość skutków błędów i kontynuować działanie. Nie jest o unikanie błędów, ale akceptuje fakt, że nastąpi błędów i odpowiada na je w taki sposób, który pozwala uniknąć przestoju lub utraty danych. Celem odporności jest do zwrócenia aplikacji w pełni funkcjonalnej stan po awarii.
+Odporność to zdolność do odzyskiwania po awarii i kontynuowania działania. Nie jest o unikanie błędów, ale przyjmuje fakt, że będą zdarzać się błędy i reagowanie na ich w taki sposób, aby uniknąć przestoju lub utraty danych. Celem odporności jest przywrócenie aplikacji do stanu pełnej funkcjonalności po wystąpieniu awarii.
 
-Jest trudne do projektowania i wdrażania aplikacji na podstawie mikrousług. Jednak należy zachować uruchomiony w środowisku jakiegoś awarii w przypadku niektórych aplikacji. W związku z tym należy odporność aplikacji. Powinny być zaprojektowane do radzenia sobie z częściowa błędami, takich jak awarii sieci lub węzłów lub awarii w chmurze maszyn wirtualnych. Nawet mikrousług (kontenery) jest przenoszony do innego węzła w klastrze może powodować sporadyczne błędy krótkich w aplikacji.
+Jest trudne do projektowania i wdrażania aplikacji opartych na mikrousługach. Jednak trzeba będzie również nadal uruchomiony w środowisku jakieś awarii w przypadku niektórych aplikacji. W związku z tym aplikacja powinna być odporne na błędy. Powinny zostać tak zaprojektowane do radzenia sobie z błędami częściowych, takich jak awarii sieci lub węzłów lub awarii w chmurze maszyn wirtualnych. Nawet mikrousługi (kontenery) jest przenoszony do innego węzła w klastrze może powodować sporadyczne błędy krótki w ramach aplikacji.
 
-Wiele pojedynczych składników aplikacji powinien uwzględniać kondycji funkcji monitorowania. Wykonując wskazówki zawarte w tym rozdziale można utworzyć aplikacji działającej sprawnie mimo przejściowego przestój lub hiccups normalne, które występują w przypadku wdrożeń złożona i w chmurze.
+Wielu pojedynczych składników aplikacji powinien również zawierać funkcje monitorowania kondycji. Postępując zgodnie z wytycznymi podanymi w tym rozdziale, można utworzyć aplikację, która można sprawnie współpracować z autora przejściowy przestój lub skalujący normalne, które występują we wdrożeniach złożone i oparte na chmurze.
 
 
 >[!div class="step-by-step"]

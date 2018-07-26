@@ -8,14 +8,14 @@ helpviewer_keywords:
 - public keyword [C#]
 ms.assetid: 0ae45d16-a551-4b74-9845-57208de1328e
 ms.openlocfilehash: 9bef5d076d9ab84aa15e2cdec2d176db8d1ac82b
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34171996"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960247"
 ---
 # <a name="public-c-reference"></a>public (odwołanie w C#)
-`public` — Słowo kluczowe jest modyfikator dostępu dla typów i członków typu. Dostęp publiczny jest najbardziej ograniczająca poziom dostępu. Nie ma żadnych ograniczeń na dostęp do publicznych członków, jak w poniższym przykładzie:  
+`public` — Słowo kluczowe jest modyfikatorem dostępu dla typów i elementów członkowskich typu. Dostęp publiczny jest restrykcyjny poziom dostępu. Istnieją ograniczenia związane z dostępem do publicznych składowych, jak w poniższym przykładzie:  
   
 ```csharp  
 class SampleClass  
@@ -27,7 +27,7 @@ class SampleClass
  Zobacz [modyfikatory dostępu](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md) i [poziomów ułatwień dostępu](../../../csharp/language-reference/keywords/accessibility-levels.md) Aby uzyskać więcej informacji.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie są deklarowane jako dwie klasy, `PointTest` i `MainClass`. Publiczne elementy członkowskie `x` i `y` z `PointTest` są dostępne bezpośrednio z `MainClass`.  
+ W poniższym przykładzie zadeklarowano dwóch klas, `PointTest` i `MainClass`. Publiczne elementy członkowskie `x` i `y` z `PointTest` są dostępne bezpośrednio z `MainClass`.  
   
  [!code-csharp[csrefKeywordsModifiers#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/public_1.cs)]  
   
@@ -39,7 +39,7 @@ class SampleClass
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
+ [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Modyfikatory dostępu](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  

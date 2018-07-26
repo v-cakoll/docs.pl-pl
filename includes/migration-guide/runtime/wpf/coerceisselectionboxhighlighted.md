@@ -2,10 +2,10 @@
 
 |   |   |
 |---|---|
-|Szczegóły|Niektóre sekwencji akcje dotyczące <xref:System.Windows.Controls.ComboBox?displayProperty=name> i źródła danych może spowodować <xref:System.NullReferenceException?displayProperty=name>.|
-|Sugestia|Jeśli to możliwe Uaktualnij platformę .NET Framework 4.6.2.|
+|Szczegóły|Niektórych sekwencji działań dotyczących <xref:System.Windows.Controls.ComboBox?displayProperty=name> i źródłem danych może spowodować <xref:System.NullReferenceException?displayProperty=name>.|
+|Sugestia|Jeśli to możliwe Uaktualnij do platformy .NET Framework 4.6.2.|
 |Zakres|Pomocnicza|
 |Wersja|4.6|
-|Typ|środowisko uruchomieniowe|
+|Typ|Środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Windows.Controls.ComboBox.IsSelectionBoxHighlighted?displayProperty=nameWithType></li></ul>|
 

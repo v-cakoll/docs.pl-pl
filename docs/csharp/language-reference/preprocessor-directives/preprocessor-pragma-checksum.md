@@ -1,5 +1,5 @@
 ---
-title: '#Suma kontrolna pragma (odwołanie w C#)'
+title: '#pragma checksum (odwołanie w C#)'
 ms.date: 07/20/2015
 f1_keywords:
 - '#pragma checksum'
@@ -7,11 +7,11 @@ helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
 ms.openlocfilehash: 603b56325d7b690a153bd7db41f34621675a4ba6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33285697"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245459"
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma checksum (odwołanie w C#)
 Generuje sumy kontrolne dla plików źródłowych, aby pomóc w debugowaniu stron [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
@@ -24,7 +24,7 @@ Generuje sumy kontrolne dla plików źródłowych, aby pomóc w debugowaniu stro
   
 #### <a name="parameters"></a>Parametry  
  `"filename"`  
- Nazwa pliku, który wymaga monitorowania na zmiany lub aktualizacji.  
+ Nazwa pliku który wymaga monitorowania w celu zmiany lub aktualizacji.  
   
  `"{guid}"`  
  Globalnie unikatowy identyfikator (GUID) dla algorytmu wyznaczania wartości skrótu.  
@@ -37,7 +37,7 @@ Generuje sumy kontrolne dla plików źródłowych, aby pomóc w debugowaniu stro
   
  To rozwiązanie nie działa w przypadku projektów [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)], ponieważ obliczana suma kontrolna jest przeznaczona dla wygenerowanego pliku źródłowego, a nie pliku aspx.  Aby rozwiązać ten problem, dyrektywa `#pragma checksum` zapewnia obsługę sumy kontrolnej dla stron [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
   
- Po utworzeniu [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] sumy kontrolnej dla plików .aspx, z której źródłem jest generowany zawiera projekt języka Visual C#, wygenerowanym pliku źródłowym. Następnie kompilator zapisuje te informacje w pliku PDB.  
+ Po utworzeniu [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] projekt w języku Visual C# wygenerowanym pliku źródłowym zawiera sumy kontrolnej pliku .aspx, z którego jest generowany źródła. Następnie kompilator zapisuje te informacje w pliku PDB.  
   
  Jeśli kompilator nie napotka w pliku dyrektywy `#pragma checksum`, oblicza jego sumę kontrolną i zapisuje jej wartość w pliku PDB.  
   
@@ -54,6 +54,6 @@ class TestClass
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
+ [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Dyrektywy preprocesora C#](../../../csharp/language-reference/preprocessor-directives/index.md)

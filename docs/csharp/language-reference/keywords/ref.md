@@ -7,37 +7,36 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: a4d5719bccd240658880cc5c6e549e8c912ca1b9
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: a72624d5702ec12bfda98d49a16474cc84205ff0
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696397"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245755"
 ---
 # <a name="ref-c-reference"></a>ref (odwołanie w C#)
 
-`ref` — Słowo kluczowe wskazuje wartość, która jest przekazywana przez odwołanie. Jest on używany w trzech różnych kontekstach: 
+`ref` — Słowo kluczowe wskazuje wartość informującą który jest przekazywany przez odwołanie. Jest on używany w czterech różnych kontekstach:
 
-- W podpisie metody i w wywołaniu metody, przekazując argument do metody przez odwołanie. Zobacz [przekazywanie argumentów poprzez odwołanie](#passing-an-argument-by-reference) Aby uzyskać więcej informacji.
-
-- W podpisie metody, aby zwrócić wartość do obiektu wywołującego przez odwołanie. Zobacz [odwołanie zwracane wartości](#reference-return-values) Aby uzyskać więcej informacji.
-
-- W treści elementu członkowskiego aby wskazać, że odwołanie do wartości zwracanej są przechowywane lokalnie, jako odwołanie do wywołującego zamierza zmienić lub ogólnie rzecz biorąc, zmienna lokalna uzyskuje dostęp do innej wartości przez odwołanie. Zobacz [zmiennych lokalnych Ref](#ref-locals) Aby uzyskać więcej informacji.
+- W podpisie metody i w wywołaniu metody, aby przekazać argument do metody przez odwołanie. Zobacz [przekazywaniem argumentu według odwołania](#passing-an-argument-by-reference) Aby uzyskać więcej informacji.
+- W podpisie metody, aby zwrócić wartości do obiektu wywołującego przez odwołanie. Zobacz [wartości zwracane odwołanie](#reference-return-values) Aby uzyskać więcej informacji.
+- W treści elementu członkowskiego aby wskazać, że zwracana wartość odwołania są przechowywane lokalnie, jako odwołanie do obiektu wywołującego zamierza zmienić lub ogólnie rzecz biorąc, zmienna lokalna uzyskuje dostęp do innej wartości przez odwołanie. Zobacz [zmienne lokalne Ref](#ref-locals) Aby uzyskać więcej informacji.
+- W `struct` deklaracji, aby zadeklarować `ref struct` lub `ref readonly struct`. Zobacz [deklaracji struktury ref](#ref-struct-declarations) Aby uzyskać więcej informacji.
 
 ## <a name="passing-an-argument-by-reference"></a>Przekazywanie argumentów poprzez odwołanie
 
-W przypadku używania w liście parametrów metody, `ref` — słowo kluczowe wskazuje, że argument jest przekazywany przez odwołanie, nie przez wartość. Przekazywanie poprzez odwołanie powoduje, że każda zmiana argumentu w metodzie wywołane znajduje odzwierciedlenie w metody wywołującej. Na przykład jeśli wywołujący wyrażenie lokalnej zmiennej lub wyrażenie dostępu do elementu tablicy i wywołana metoda zastępuje obiekt, do którego odwołuje się parametr ref, a następnie lokalnego obiektu wywołującego zmiennej lub element tablicy teraz odwołuje się do nowego obiektu po Metoda zwraca.
+Gdy są używane w liście parametrów metody, `ref` słowo kluczowe wskazuje, że argument jest przekazywany przez odwołanie, nie przez wartość. Przekazywanie poprzez odwołanie powoduje, że każda zmiana argumentu w metodzie wywoływanej jest odzwierciedlana w wywoływania metody. Na przykład jeśli obiekt wywołujący przekazuje wyrażenie lokalnej zmiennej lub wyrażenia dostępu do elementu tablicy, a następnie wywoływana metoda zastępuje obiekt, do którego odwołuje się parametr ref, a następnie obiekt wywołujący użytkownika lokalnego zmienna lub element tablicy teraz odwołuje się do nowego obiektu po Metoda zwraca.
 
 > [!NOTE]
->  Nie należy mylić koncepcji przekazywanie poprzez odwołanie z pojęciem typy referencyjne. Dwa pojęcia nie są takie same. Parametr metody mogą być modyfikowane przez `ref` niezależnie od tego, czy jest typem wartości lub typem referencyjnym. Istnieje nie pakującej typu wartości, gdy jest przekazywana przez odwołanie.  
+> Nie należy mylić koncepcji przekazywanie poprzez odwołanie z pojęciem typy odwołań. Dwoma pojęciami nie są takie same. Parametr metody mogą być modyfikowane przez `ref` niezależnie od tego, czy jest typem wartości lub typem referencyjnym. Istnieje nie opakowanie typu wartości, gdy jest przekazywany przez odwołanie.  
 
-Aby użyć `ref` jawnie należy użyć parametru definicję metody i wywołanie metody `ref` — słowo kluczowe, jak pokazano w poniższym przykładzie.  
+Aby użyć `ref` jawnie użyć parametru, zarówno definicję metody, jak i wywoływania metody `ref` — słowo kluczowe, jak pokazano w poniższym przykładzie.  
 
 [!code-csharp-interactive[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#1)]
 
-Argument przekazywany do `ref` lub `in` parametr musi zostać zainicjowany przed przekazaniem. To różni się od [limit](out-parameter-modifier.md) parametrów, argumentów, których nie trzeba jawnie zainicjowane przed są one przekazywane.
+Argument, który jest przekazywany do `ref` lub `in` parametr musi zostać zainicjowany przed przekazaniem jej. To różni się od [się](out-parameter-modifier.md) parametrów, w której argumenty nie trzeba jawnie zainicjowane przed przekazaniem ich.
 
-Element członkowski klasy nie mogą mieć sygnatur różniących się tylko `ref`, `in`, lub `out`. Błąd kompilatora występuje, jeśli jedyną różnicą między dwoma elementami członkowskimi typu jest, że jedna z nich ma `ref` ma parametr, a druga `out`, lub `in` parametru. Na przykład następujący kod nie kompilacji.  
+Składowa klasy nie może mieć podpisów, które różnią się tylko przez `ref`, `in`, lub `out`. Błąd kompilatora występuje, jeśli jedyną różnicą między dwa elementy członkowskie typu jest, że jedna z nich ma `ref` parametru, a druga ma `out`, lub `in` parametru. Na przykład, poniższy kod nie kompilacji.  
 
 ```csharp
 class CS0663_Example
@@ -48,87 +47,93 @@ class CS0663_Example
     public void SampleMethod(ref int i) { }
 }
 ```
-Jednak metod można przeciążać, gdy ma jedną metodę `ref`, `in`, lub `out` parametr, a druga ma parametr wartość, jak pokazano w poniższym przykładzie.
+
+Jednak mogą być przeciążone metody, gdy ma jedną z metod `ref`, `in`, lub `out` parametru, a druga ma wartość parametru, jak pokazano w poniższym przykładzie.
   
 [!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#2)]
   
- W innych sytuacjach wymagających podpisu dopasowania, takich jak ukrywanie lub przesłonięcie `in`, `ref`, i `out` stanowią część podpisu i nie pasują do siebie.  
+ W innych sytuacjach, które wymagają podpis dopasowania, takich jak ukrywać lub zastępowanie `in`, `ref`, i `out` są dostępne w ramach sygnatury i nie pasują do siebie nawzajem.  
   
- Właściwości nie są zmiennymi. Metody i nie można przekazać do `ref` parametrów.  
+ Właściwości nie są zmienne. To metody, a nie można przekazać do `ref` parametrów.  
   
- Aby uzyskać informacje o sposobie przekazać tablice, zobacz [przekazywanie tablic za pomocą ref i out](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md).  
+ Aby dowiedzieć się, jak przekazać tablic, zobacz [przekazywanie tablic za pomocą ref i out](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md).  
   
  Nie można użyć `ref`, `in`, i `out` słowa kluczowe dla następujących rodzajów metod:  
   
-- Metody asynchroniczne, które definiują przy użyciu [async](../../../csharp/language-reference/keywords/async.md) modyfikator.  
-- Metody iteracyjne, które obejmują [yield return](../../../csharp/language-reference/keywords/yield.md) lub `yield break` instrukcji.  
+- Metody asynchroniczne, które można zdefiniować przy użyciu [async](../../../csharp/language-reference/keywords/async.md) modyfikator.  
+- Metody iteratora, które obejmują [yield return](../../../csharp/language-reference/keywords/yield.md) lub `yield break` instrukcji.  
 
 ## <a name="passing-an-argument-by-reference-an-example"></a>Przekazywanie argumentów poprzez odwołanie: przykład
 
-Poprzednich przykładach przekazuj typów wartości przez odwołanie. Można również użyć `ref` — słowo kluczowe do przekazania odwołania typów przez odwołanie. Przekazywanie poprzez odwołanie typu odwołania umożliwia wywołaną metodę zastąpić obiekt, do którego odwołuje się parametr odwołania w wywołującego. Lokalizacja magazynu obiektu jest przekazywany do metody jako wartość parametru odwołania. Wartość w lokalizacji przechowywania parametru (aby wskazywały nowy obiekt), możesz także zmiana lokalizacji przechowywania, do którego odwołuje się element wywołujący. Poniższy przykład przekazuje wystąpienia typu referencyjnego jako `ref` parametru.   
+Poprzednie przykłady przekazuj typów wartości przez odwołanie. Można również użyć `ref` — słowo kluczowe do przekazania odwołania typów przez odwołanie. Przekazywanie typu odwołania przez odwołanie pozwala zastąpić obiekt, do którego odwołuje się parametr odwołania w obiekcie wywołującym metodę o nazwie. Lokalizacja magazynu obiekt jest przekazywany do metody jako wartość parametru odwołania. Jeśli zmienisz wartość w określonej lokalizacji magazynu parametru (aby wskazywały nowy obiekt), możesz również zmienić lokalizację magazynu, do którego odwołuje się obiekt wywołujący. Poniższy przykład przekazuje wystąpienia typu referencyjnego jako `ref` parametru.
   
 [!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#3)]
 
-Aby uzyskać więcej informacji na temat przekazywania typów referencyjnych według wartości i według odwołania, zobacz [przekazywanie parametrów typu odwołanie](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md).
+Aby uzyskać więcej informacji dotyczących przekazywania typów referencyjnych według wartości i według odwołania, zobacz [przekazywanie parametrów typu odwołanie](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md).
   
-## <a name="reference-return-values"></a>Odwołanie do zwracanych wartości
+## <a name="reference-return-values"></a>Wartości zwracane odwołanie
 
-Odwołanie zwracane wartości (lub zwraca ref) to wartości, które metoda zwraca wartość przez odwołanie do obiektu wywołującego. Oznacza to wywołujący może zmodyfikować wartość zwrócona przez metodę, a zmiana ta jest uwzględniana w stan obiektu, który zawiera metodę. 
+Wartości zwracane odwołanie (lub zwracanych ref) są wartościami, które metoda zwraca wartość przez odwołanie do obiektu wywołującego. Oznacza to obiekt wywołujący, można zmodyfikować wartości zwracanej przez metodę, a ta zmiana jest odzwierciedlana w stan obiektu, który zawiera metodę.
 
-Odwołanie zwrócić wartość jest definiowana za pomocą `ref` — słowo kluczowe:
+Odwołanie zwracają wartość jest definiowana za pomocą `ref` — słowo kluczowe:
 
-- W podpisie metody. Na przykład następujące Określa podpis metody który `GetCurrentPrice` metoda zwraca <xref:System.Decimal> wartość przez odwołanie.
+- W podpisie metody. Na przykład, następujący podpis metody oznacza, że `GetCurrentPrice` metoda zwraca <xref:System.Decimal> wartość przez odwołanie.
 
-   ```csharp
-   public ref decimal GetCurrentValue()
-   ``` 
-- Między `return` token i zwracany w zmiennej `return` instrukcji w metodzie. Na przykład:
- 
-   ```csharp
-   return ref DecimalArray[0];
-   ``` 
+```csharp
+public ref decimal GetCurrentValue()
+```
 
-Aby dla obiekt wywołujący, aby zmodyfikować stan obiektu odwołania zwrócić wartość musi być przechowywany w zmiennej, który jest jawnie zdefiniowany jako [lokalnej typu ref](#ref-locals). 
+- Między `return` token i zmienna zwracane w `return` instrukcji w metodzie. Na przykład:
 
-Na przykład zobacz [A ref zwraca i przykładowe elementy lokalne ref](#a-ref-returns-and-ref-locals-example)
+```csharp
+return ref DecimalArray[0];
+```
+
+Aby obiekt wywołujący, aby zmodyfikować stan obiektu, musi być przechowywana wartość do zmiennej, która jest jawnie zdefiniowany jako zwrócić odwołanie [odwołanie lokalne](#ref-locals).
+
+Aby uzyskać przykład, zobacz [A wartości zwracane ref i przykład zmienne lokalne ref](#a-ref-returns-and-ref-locals-example)
 
 ## <a name="ref-locals"></a>Zmienne lokalne REF
 
-Zmienna lokalna ref jest używana do odwoływania się do wartości zwracanych przy użyciu `return ref`.  Zmienna lokalna ref należy zainicjować i przypisane do wartości zwracanej ref. Wszelkie modyfikacje wartość Zmienna lokalna ref są uwzględniane w stan obiektu, którego metoda zwróciła wartość przez odwołanie.
+Zmienna lokalna ref jest używana do odwoływania się do wartości zwracane wartości przy użyciu `return ref`.  Zmienna lokalna ref musi zainicjować i przypisać do wartości zwracane ref. Wszelkie modyfikacje, wartość Zmienna lokalna ref są odzwierciedlane w stan obiektu, którego metoda zwróciła wartość przez odwołanie.
 
-Zdefiniuj zmienna lokalna ref przy użyciu `ref` — słowo kluczowe przed deklaracją zmiennej, a także bezpośrednio przed wywołaniem metody, która zwraca wartość przez odwołanie. 
+Zmienna lokalna ref jest definiowane za pomocą `ref` — słowo kluczowe przed deklaracją zmiennej, a także bezpośrednio przed wywołaniem metody, która zwraca wartość przez odwołanie.
 
-Na przykład następująca instrukcja definiuje ref wartości lokalnej, który jest zwracany przez metodę o nazwie `GetEstimatedValue`:
+Na przykład następująca instrukcja definiuje lokalna wartość ref, który jest zwracany przez metodę o nazwie `GetEstimatedValue`:
 
 ```csharp
 ref decimal estValue = ref Building.GetEstimatedValue();
 ```
 
-Dostępne wartości przez odwołanie w taki sam sposób. W niektórych przypadkach dostępu do wartość przez odwołanie zwiększa wydajność, unikając operacji kopiowania potencjalnie kosztowne. Na przykład następująca instrukcja pokazuje, jak jedną można zdefiniować wartości lokalnej ref, służący do odwołać się do wartości.
+Dostępne wartości przez odwołanie, w taki sam sposób. W niektórych przypadkach uzyskiwanie dostępu do wartości przez odwołanie zwiększa wydajność, unikając operacji kopiowania potencjalnie kosztowne. Na przykład następująca instrukcja pokazuje, jak jeden można zdefiniować wartości lokalnej ref, służący do odwoływać się do wartości.
 
 ```csharp
 ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
-Należy pamiętać, że w obu przykładach `ref` — słowo kluczowe może być używane w obu miejscach lub kompilator generuje błąd CS8172 "Nie można zainicjować zmiennej dostępnej przez odwołanie o wartości". 
- 
-## <a name="a-ref-returns-and-ref-locals-example"></a>A przykład zmiennych lokalnych ref i zwraca ref
+Należy pamiętać, że w obu przykładach `ref` w obu miejscach, można użyć słowa kluczowego lub kompilator generuje błąd CS8172, "Nie można zainicjować zmiennej przez odwołanie o wartości".
 
-W poniższym przykładzie zdefiniowano `Book` klasy, która ma dwa <xref:System.String> pól, `Title` i `Author`. Definiuje również `BookCollection` klasa, która zawiera prywatne tablicę `Book` obiektów. Podręcznik poszczególnych obiektów są zwracane przez odwołanie przez wywołanie jego `GetBookByTitle` metody.
+## <a name="a-ref-returns-and-ref-locals-example"></a>Element wartości zwracane ref i przykład zmienne lokalne ref
+
+W poniższym przykładzie zdefiniowano `Book` klasę, która ma dwa <xref:System.String> pól `Title` i `Author`. Umożliwia on również definiowanie `BookCollection` klasa, która zawiera prywatne tablicę `Book` obiektów. Poszczególne książki obiekty są zwracane przez odwołanie, przez wywołanie jego `GetBookByTitle` metody.
 
 [!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#4)]
 
-Gdy obiekt wywołujący przechowuje wartość zwrócona przez `GetBookByTitle` metodę jako zmiennej lokalnej typu ref, zmiany wywołującego sprawia, że do wartości zwracanej są odzwierciedlane w `BookCollection` obiektu, jak przedstawiono na poniższym przykładzie.
+Gdy obiekt wywołujący przechowuje wartość zwrócona przez obiekt `GetBookByTitle` zmiany, które sprawia, że obiekt wywołujący na wartość zwracaną metody jako lokalną ref, są odzwierciedlane w `BookCollection` obiektu, co ilustruje poniższy przykład.
 
 [!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#5)]
 
-## <a name="c-language-specification"></a>Specyfikacja języka C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+## <a name="ref-struct-declarations"></a>Deklaracje struktury REF
+
+## <a name="c-language-specification"></a>Specyfikacja języka C#
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Zobacz także  
+## <a name="see-also"></a>Zobacz także
+
  [Semantyka odwołań z typami wartości](../../reference-semantics-with-value-types.md)  
  [Przekazywanie parametrów](../../programming-guide/classes-and-structs/passing-parameters.md)  
  [Parametry metody](method-parameters.md)  
- [Odwołanie w C#](../index.md)  
+ [Dokumentacja języka C#](../index.md)  
  [Przewodnik programowania w języku C#](../../programming-guide/index.md)  
  [Słowa kluczowe języka C#](index.md)

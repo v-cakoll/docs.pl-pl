@@ -1,5 +1,5 @@
 ---
-title: Error — Instrukcja
+title: Error — instrukcja (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.error
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: 3ecfe18392de15dc937d90565b49641415dd7e0a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84fce92183228cbfa5554a3ba45770a86e83bff5
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603889"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199482"
 ---
 # <a name="error-statement"></a>Error — Instrukcja
-Symuluje wystąpienie błędu.  
+Symuluje wystąpieniu błędu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -28,7 +28,7 @@ Error errornumber
   
 ## <a name="parts"></a>Części  
  `errornumber`  
- Wymagana. Może być dowolnym prawidłowym numerem błędu.  
+ Wymagane. Może być dowolnym prawidłowym numerem błędu.  
   
 ## <a name="remarks"></a>Uwagi  
  Instrukcja `Error` jest obsługiwana dla zgodności z poprzednimi wersjami. W nowym kodzie, szczególnie w przypadku tworzenia obiektów, użyj metody `Raise` obiektu `Err`, aby generować błędy w czasie wykonywania.  
@@ -38,7 +38,7 @@ Error errornumber
 |Właściwość|Wartość|  
 |--------------|-----------|  
 |`Number`||`Number`|Wartość określona jako argument `Error` instrukcji. Może być dowolnym prawidłowym numerem błędu.|  
-|`Source`|Nazwa bieżącego projektu Visual Basic.|  
+|`Source`|Nazwa bieżącego projektu języka Visual Basic.|  
 |`Description`|Wyrażenie ciągu odpowiadające zwracanej wartości funkcji `Error` dla podanej wartości `Number`, jeśli taki ciąg istnieje. Jeśli ciąg nie istnieje, wartość `Description` zawiera ciąg znaków o zerowej długości ("").|  
 |`HelpFile`|W pełni kwalifikowany dysk, ścieżka i nazwa pliku odpowiedniego pliku Pomocy języka Visual Basic.|  
 |`HelpContext`|Odpowiedni identyfikator kontekstu pomocy języka Visual Basic dla błędu odpowiadającego właściwości `Number`.|  

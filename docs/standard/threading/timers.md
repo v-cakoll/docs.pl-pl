@@ -1,6 +1,7 @@
 ---
 title: Czasomierze
-ms.date: 03/30/2017
+description: Dowiedz się, jakie czasomierzy .NET do użycia w środowisku wielowątkowym.
+ms.date: 07/03/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -10,29 +11,53 @@ helpviewer_keywords:
 - threading [.NET Framework], timers
 - timers, about timers
 ms.assetid: 7091500d-be18-499b-a942-95366ce185e5
-author: rpetrusha
+author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 478484651bf839f842148f0b4164c9387db3b98a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae41c535d8bc1c0a05174b9051ba34f1a0a34638
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584960"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37875069"
 ---
 # <a name="timers"></a>Czasomierze
-Czasomierze są lekkie obiekty, które umożliwiają określenie delegata do wywołania w określonym czasie. Wątek w puli wątków wykonuje operację oczekiwania.  
-  
- Przy użyciu <xref:System.Threading.Timer?displayProperty=nameWithType> klasy jest prosta. Możesz utworzyć **czasomierza**, przechodzącą <xref:System.Threading.TimerCallback> delegowany do metody wywołania zwrotnego, obiekt reprezentujący stan, który zostanie przekazany do wywołania zwrotnego, zgłoś początkowej czas i czas reprezentujący w okresie między wywołania zwrotnego. Aby anulować oczekujące czasomierza, należy wywołać **Timer.Dispose** funkcji.  
-  
+
+.NET oferuje dwa typy czasomierzy do użycia w środowisku wielowątkowym:
+
+- <xref:System.Threading.Timer?displayProperty=nameWithType>, który wykonuje metodę pojedynczego wywołania zwrotnego w <xref:System.Threading.ThreadPool> wątku w regularnych odstępach czasu.
+- <xref:System.Timers.Timer?displayProperty=nameWithType>, która domyślnie wywołuje zdarzenie, na <xref:System.Threading.ThreadPool> wątku w regularnych odstępach czasu.
+
 > [!NOTE]
->  Istnieją dwa inne klasy czasomierza. <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> Klasy jest formant, który działa za pomocą wizualnych projektantów i ma być używany w kontekstach interfejsu użytkownika; zgłasza zdarzenia w wątku interfejsu użytkownika. <xref:System.Timers.Timer?displayProperty=nameWithType> Pochodną klasy <xref:System.ComponentModel.Component>, dlatego może służyć za pomocą wizualnych projektantów; zgłasza zdarzeń, ale uruchamia je na <xref:System.Threading.ThreadPool> wątku. <xref:System.Threading.Timer?displayProperty=nameWithType> Klasy nawiązuje wywołania zwrotne <xref:System.Threading.ThreadPool> wątku i nie używa modelu zdarzeń w ogóle. Umożliwia także obiekt stanu do metody wywołania zwrotnego, które nie zawierają innych czasomierzy. Jest bardzo uproszczonego.  
+> Niektóre implementacje platformy .NET mogą obejmować czasomierzy dodatkowe:
+>
+> - <xref:System.Windows.Forms.Timer?displayProperty=nameWithType>: składnik Windows Forms, który uruchamia zdarzenie w regularnych odstępach czasu. Składnik nie ma interfejsu użytkownika i jest przeznaczony do użytku w środowisku apartamentem.  
+> - <xref:System.Web.UI.Timer?displayProperty=nameWithType>: składnik ASP.NET, który wykonuje ogłaszania zwrotnego asynchronicznego lub synchronicznego strony sieci web w regularnych odstępach czasu.
+> - <xref:System.Windows.Threading.DispatcherTimer?displayProperty=nameWithType>: czasomierz, który jest zintegrowany z <xref:System.Windows.Threading.Dispatcher> kolejki, która jest przetwarzana z określonym interwałem czasu i z priorytetem.
+
+## <a name="the-systemthreadingtimer-class"></a>Klasa System.Threading.Timer
+
+<xref:System.Threading.Timer?displayProperty=nameWithType> Klasy umożliwia ciągłe wywołanie delegata w określonych odstępach czasu. Możesz również użyć tej klasy można zaplanować wywołanie delegata w określonym przedziale czasu. Delegat jest wykonywane na <xref:System.Threading.ThreadPool> wątku.
+
+Po utworzeniu <xref:System.Threading.Timer?displayProperty=nameWithType> obiektu, należy określić <xref:System.Threading.TimerCallback> delegata, który definiuje metody wywołania zwrotnego, obiekt opcjonalne stanu, który jest przekazywany do wywołania zwrotnego, ilość czasu, opóźnienie przed pierwszym wywołaniem wywołania zwrotnego i przedział czasu między wywołania zwrotnego. Aby anulować oczekujące czasomierza, należy wywołać <xref:System.Threading.Timer.Dispose%2A?displayProperty=nameWithType> metody.
+
+Poniższy przykład tworzy czasomierz, który wywołuje delegata podane po raz pierwszy po sekundzie (1000 milisekund), a następnie wywołuje on co 2 sekundy. Obiekt stanu, w przykładzie jest używany policzyć ile razy nosi nazwę delegata. Czasomierz został zatrzymany, gdy delegat została wywołana co najmniej 10 razy.
+
+[!code-cpp[System.Threading.Timer#2](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Timer/CPP/source2.cpp#2)]
+[!code-csharp[System.Threading.Timer#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Timer/CS/source2.cs#2)]
+[!code-vb[System.Threading.Timer#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Timer/VB/source2.vb#2)]
+
+Aby uzyskać więcej informacji i przykładów, zobacz <xref:System.Threading.Timer?displayProperty=nameWithType>.
+
+## <a name="the-systemtimerstimer-class"></a>Klasa System.Timers.Timer
+
+Jest inny czasomierz, które mogą być używane w środowisku wielowątkowym <xref:System.Timers.Timer?displayProperty=nameWithType> która domyślnie wywołuje zdarzenie, na <xref:System.Threading.ThreadPool> wątku.
+
+Po utworzeniu <xref:System.Timers.Timer?displayProperty=nameWithType> obiektu, można określić interwał czasu, w którego zostanie wywołane <xref:System.Timers.Timer.Elapsed> zdarzeń. Użyj <xref:System.Timers.Timer.Enabled%2A> właściwości, aby wskazać, jeśli czasomierz, powinny wywoływać <xref:System.Timers.Timer.Elapsed> zdarzeń. Jeśli potrzebujesz <xref:System.Timers.Timer.Elapsed> zdarzenia tylko jeden raz po upływie określonego interwału, ustaw <xref:System.Timers.Timer.AutoReset%2A> do `false`. Wartość domyślna <xref:System.Timers.Timer.AutoReset%2A> właściwość `true`, co oznacza, że <xref:System.Timers.Timer.Elapsed> zdarzenie jest zgłaszane w regularnie w odstępach czasu zdefiniowanych przez <xref:System.Timers.Timer.Interval%2A> właściwości.
+
+Aby uzyskać więcej informacji i przykładów, zobacz <xref:System.Timers.Timer?displayProperty=nameWithType>.
   
- Poniższy przykładowy kod uruchamia czasomierz, która rozpoczyna się po jednej sekundy (1000 milisekund) i znaczniki co sekundę, dopóki nie zostanie naciśnięty klawisz **Enter** klucza. Zmienna zawierające odwołania do czasomierz jest polem poziomie klasy, aby upewnić się, że Czasomierz nie podlega wyrzucanie elementów bezużytecznych podczas nadal działa. Aby uzyskać więcej informacji na agresywne wyrzucanie elementów bezużytecznych, zobacz <xref:System.GC.KeepAlive%2A>.  
-  
- [!code-cpp[System.Threading.Timer#2](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Timer/CPP/source2.cpp#2)]
- [!code-csharp[System.Threading.Timer#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Timer/CS/source2.cs#2)]
- [!code-vb[System.Threading.Timer#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Timer/VB/source2.vb#2)]  
-  
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Threading.Timer>  
- [Wątkowość obiektów i funkcji](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>Zobacz także
+
+ <xref:System.Threading.Timer?displayProperty=nameWithType>  
+ <xref:System.Timers.Timer?displayProperty=nameWithType>  
+ [Wątkowość obiektów i funkcji](threading-objects-and-features.md)

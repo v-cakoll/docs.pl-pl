@@ -1,23 +1,23 @@
 ---
 title: Organizowanie i testowanie projektów przy użyciu wiersza polecenia platformy .NET Core
-description: W tym samouczku opisano sposób organizowania i testowanie projektów .NET Core w wierszu polecenia.
+description: W tym samouczku wyjaśniono, jak organizowanie i testowanie projektów .NET Core z poziomu wiersza polecenia.
 author: cartermp
 ms.author: mairaw
 ms.date: 05/16/2017
 ms.openlocfilehash: a49eb1d398ab80a4ece703b7889083ea967df862
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217646"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960986"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organizowanie i testowanie projektów przy użyciu wiersza polecenia platformy .NET Core
 
-W tym samouczku wykonuje [Rozpoczynanie pracy z platformą .NET Core w systemie Windows/Linux/macOS przy użyciu wiersza polecenia](using-with-xplat-cli.md), otwieranie poza tworzenie aplikacji konsoli simple do opracowywania zaawansowanych i dobrze zorganizowane aplikacji. Po przedstawiający sposób używania folderów do organizowania kodu, w tym samouczku przedstawiono sposób rozszerzyć aplikacji konsoli z [xUnit](https://xunit.github.io/) testowania framework.
+W tym samouczku następuje [rozpoczęcie pracy z platformą .NET Core w Windows/Linux/macOS przy użyciu wiersza polecenia](using-with-xplat-cli.md), otwieranie poza tworzenia aplikacji konsolowej proste do tworzenia zaawansowanych i dobrze zorganizowanego aplikacji. Po pokazujący, jak używać folderów do organizowania kodu, w tym samouczku dowiesz się, jak rozszerzyć aplikację konsoli przy użyciu [xUnit](https://xunit.github.io/) struktury testowania.
 
-## <a name="using-folders-to-organize-code"></a>Organizowanie kodu za pomocą folderów
+## <a name="using-folders-to-organize-code"></a>Za pomocą folderów do organizowania kodu
 
-Aby dodać nowe typy w aplikacji konsoli, możesz to zrobić przez dodanie plików zawierających typy do aplikacji. Na przykład możesz dodać pliki zawierające `AccountInformation` i `MonthlyReportRecords` typów do projektu, struktura pliku projektu jest prosty i nawigację:
+Wprowadzenie nowych typów do aplikacji konsoli, możesz to zrobić, dodając pliki zawierające typów aplikacji. Na przykład w przypadku dodania plików zawierających `AccountInformation` i `MonthlyReportRecords` typów do projektu, struktura pliku projektu jest daje płaski i nawigację:
 
 ```
 /MyProject
@@ -27,9 +27,9 @@ Aby dodać nowe typy w aplikacji konsoli, możesz to zrobić przez dodanie plik�
 |__Program.cs
 ```
 
-Jednak to działa tylko oraz gdy jest stosunkowo mały rozmiar projektu. Można w pewnym sensie co się stanie po dodaniu 20 typów do projektu? Ostatecznie projektu nie będą łatwe do nawigowania i obsługa z tym wiele plików littering katalog główny projektu.
+Jednak ta działa tylko w dobrze po stosunkowo mały rozmiar projektu. Możesz sobie wyobrazić co się stanie po dodaniu 20 typów do projektu? Zdecydowanie projektu nie być łatwe do nawigowania i obsługa z tym wiele plików littering katalogu głównego projektu.
 
-Aby zorganizować projektu, Utwórz nowy folder i nadaj mu nazwę *modele* do przechowywania plików typu. Umieścić pliki typu *modele* folderu:
+Aby zorganizować projekt, Utwórz nowy folder i nadaj mu nazwę *modeli* do przechowywania plików typu. Umieść pliki typu do *modeli* folderu:
 
 ```
 /MyProject
@@ -40,15 +40,15 @@ Aby zorganizować projektu, Utwórz nowy folder i nadaj mu nazwę *modele* do pr
 |__Program.cs
 ```
 
-Projekty, które logicznie grupy plików w folderach łatwych do nawigowania i obsługa. W następnej sekcji utworzysz próbkę bardziej złożonych z folderami i testowania jednostek.
+Projekty, które logicznie grupy plików do folderów, które są łatwe do nawigowania i obsługa. W następnej sekcji utworzysz przykładowe bardziej złożonych z folderów i testy jednostkowe.
 
-## <a name="organizing-and-testing-using-the-newtypes-pets-sample"></a>Organizowanie i testowania przy użyciu przykładowych zwierząt domowych NewTypes
+## <a name="organizing-and-testing-using-the-newtypes-pets-sample"></a>Organizowanie i testowanie, korzystając z przykładu zwierzęta NewTypes
 
-### <a name="building-the-sample"></a>Tworzenie przykładowej
+### <a name="building-the-sample"></a>Budowanie przykładu
 
-Dla następujących kroków, można to wykonać przy użyciu [NewTypes zwierząt domowych próbki](https://github.com/dotnet/samples/tree/master/core/console-apps/NewTypesMsBuild) lub tworzyć własne pliki i foldery. Typy są logicznie pogrupowane w struktury folderów, która pozwala na dodanie większej liczby typów później, a testy również logicznie są umieszczane w folderach umożliwiający dodanie większej liczby testów później.
+Dla następujących kroków możesz albo kontynuować pracę przy użyciu [przykładowe zwierzęta NewTypes](https://github.com/dotnet/samples/tree/master/core/console-apps/NewTypesMsBuild) lub tworzyć własne pliki i foldery. Typy są logicznie pogrupowane w strukturę folderów, która zezwala na dodawanie większej liczby typów później, a testy również logicznie są umieszczane w folderach, umożliwiające dodanie więcej testów później.
 
-Próbka zawiera dwa typy `Dog` i `Cat`i ich implementacji wspólny interfejs ma `IPet`. Dla `NewTypes` projektu, jest organizowania typów związanych z pet do *zwierząt domowych* folderu. Jeśli później dodać inny zestaw typów *WildAnimals* na przykład jest umieszczany w *NewTypes* folderu obok *zwierząt domowych* folderu. *WildAnimals* folder może zawierać typy zwierząt, które nie są zwierząt domowych, takich jak `Squirrel` i `Rabbit` typów. W ten sposób jako typy są dodawane, projekt pozostaje również zorganizowany. 
+Przykład zawiera dwa typy `Dog` i `Cat`i ma mu w zaimplementowaniu wspólny interfejs `IPet`. Aby uzyskać `NewTypes` projektu, dowiesz się, jak organizowania typów powiązanych pet do *zwierzęta* folderu. Jeśli inny zestaw typów zostanie dodany później *WildAnimals* na przykład, są umieszczane w *NewTypes* folder wraz z *zwierzęta* folderu. *WildAnimals* folderu może zawierają typy służące do zwierząt, które nie są zwierząt domowych, takich jak `Squirrel` i `Rabbit` typów. W ten sposób podczas dodawania typów projektu pozostaje dobrze zorganizowane. 
 
 Utwórz następującą strukturę folderów z zawartością pliku wskazanego:
 
@@ -84,7 +84,7 @@ Utwórz następującą strukturę folderów z zawartością pliku wskazanego:
 
 [!code-xml[NewTypes csproj](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/NewTypes.csproj)]
 
-Uruchom następujące polecenia:
+Wykonaj następujące polecenia:
 
 ```console
 dotnet run
@@ -97,21 +97,21 @@ Woof!
 Meow!
 ```
 
-Ćwiczenie opcjonalne: można dodać nowy typ domowych, takich jak `Bird`, rozszerzając tego projektu. Wprowadź ptaka `TalkToOwner` podać metodę `Tweet!` do właściciela. Ponownie uruchom aplikację. Dane wyjściowe będą zawierać `Tweet!`
+Opcjonalne Ćwiczenia: można dodać nowy typ domowych, takich jak `Bird`, rozszerzając tego projektu. Należy z lotu ptaka `TalkToOwner` zapewniają metody `Tweet!` do właściciela. Ponownie uruchom aplikację. Dane wyjściowe będą zawierać `Tweet!`
 
-### <a name="testing-the-sample"></a>Testowanie próbki
+### <a name="testing-the-sample"></a>Badanie próbki
 
-`NewTypes` Projektu jest już na miejscu i ułożone go przechowując powiązane zwierząt domowych typów w folderze. Następnie utwórz projekt testowy i rozpocząć pisanie testów z [xUnit](https://xunit.github.io/) struktury testowej. Testy jednostkowe umożliwia automatyczne sprawdzenie dostępności bevahior pet typów, aby upewnić się, że są one poprawnie działających.
+`NewTypes` Projektu w miejscu, a ułożone ją, przechowując typy związane z zwierzęta w folderze. Następnie utwórz projekt testu i zacząć pisać testy z [xUnit](https://xunit.github.io/) struktury testowej. Testy jednostkowe umożliwia automatyczne sprawdzenie dostępności bevahior pet typów, aby upewnić się, że są one działających prawidłowo.
 
-Utwórz *test* folder o *NewTypesTests* folderze. W wierszu polecenia z *NewTypesTests* folderu, wykonać `dotnet new xunit`. To tworzy dwa pliki: *NewTypesTests.csproj* i *UnitTest1.cs*.
+Tworzenie *test* folder z *NewTypesTests* folder znajdujący się w nim. W wierszu polecenia z *NewTypesTests* folderu wykonaj `dotnet new xunit`. Pozwala to na utworzenie dwóch plików: *NewTypesTests.csproj* i *UnitTest1.cs*.
 
-Projekt testowy nie może obecnie przetestować typów w `NewTypes` i wymaga odwołania projektu do `NewTypes` projektu. Aby dodać odwołanie do projektu, należy użyć [ `dotnet add reference` ](../tools/dotnet-add-reference.md) polecenia:
+Projekt testowy nie może obecnie testowanie typów w `NewTypes` i wymaga odwołania projektu do `NewTypes` projektu. Aby dodać odwołanie do projektu, należy użyć [ `dotnet add reference` ](../tools/dotnet-add-reference.md) polecenia:
 
 ```
 dotnet add reference ../../src/NewTypes/NewTypes.csproj
 ```
 
-Masz również możliwość ręcznie dodać odwołanie do projektu, dodając `<ItemGroup>` węzeł *NewTypesTests.csproj* pliku:
+Istnieje również opcja ręcznego dodawania odwołania projektu, dodając `<ItemGroup>` węzeł *NewTypesTests.csproj* pliku:
 
 ```xml
 <ItemGroup>
@@ -123,11 +123,11 @@ Masz również możliwość ręcznie dodać odwołanie do projektu, dodając `<I
 
 [!code-xml[NewTypesTests csproj](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/NewTypesTests.csproj)]
 
-*NewTypesTests.csproj* plik zawiera następujące:
+*NewTypesTests.csproj* plik zawiera następujące czynności:
 
-* Odwołanie do pakietu `Microsoft.NET.Test.Sdk`, .NET testowania infrastruktury
-* Odwołanie do pakietu `xunit`, xUnit testowania framework
-* Odwołanie do pakietu `xunit.runner.visualstudio`, uruchamiający
+* Odwołanie do pakietu `Microsoft.NET.Test.Sdk`, .NET, testowanie infrastruktury
+* Odwołanie do pakietu `xunit`, xUnit, struktury testowania
+* Odwołanie do pakietu `xunit.runner.visualstudio`, narzędzia test runner
 * Odwołanie do projektu `NewTypes`, kod do testowania
 
 Zmień nazwę *UnitTest1.cs* do *PetTests.cs* i Zastąp kod w pliku następującym kodem:
@@ -159,12 +159,12 @@ public class PetTests
 }
 ```
 
-Opcjonalne wykonywania: Jeśli dodano `Bird` wcześniej typu, który daje `Tweet!` do właściciela, Dodaj metodę testu *PetTests.cs* pliku `BirdTalkToOwnerReturnsTweet`, aby sprawdzić, czy `TalkToOwner` metoda działa poprawnie na `Bird` typu.
+Opcjonalne Ćwiczenia: Jeśli dodano `Bird` wcześniej typ, który daje `Tweet!` do właściciela, należy dodać metody testowej, aby *PetTests.cs* pliku `BirdTalkToOwnerReturnsTweet`, aby sprawdzić, czy `TalkToOwner` metoda działa prawidłowo dla `Bird` typu.
 
 > [!NOTE]
-> Mimo że oczekuje, że `expected` i `actual` wartości są równe, początkowej potwierdzenia z `Assert.NotEqual` kontroli Określ, czy są one *równa*. Zawsze początkowo tworzenie testów niepowodzenie raz w celu sprawdzenia logiki testów. Jest to ważny krok metodologii test-driven projektu (TDD). Po upewnieniu się, że testy zostaną zakończone niepowodzeniem, możesz dostosować potwierdzenia umożliwia im to do przekazania.
+> Mimo że można oczekiwać, że `expected` i `actual` wartości są równe, początkowej potwierdzenia z `Assert.NotEqual` kontroli określić, że są one *równa*. Zawsze utworzyć testy niepowodzenie raz, aby Sprawdź logikę testy. Jest to ważny krok w metodologię projektowania opartego na testach (TDD). Po upewnieniu się, że testy zostaną zakończone niepowodzeniem, możesz dopasować potwierdzenia, aby umożliwić im przekazać.
 
-Poniżej przedstawiono struktury kompletnego projektu:
+Poniżej przedstawiono strukturę kompletnego projektu:
 
 ```
 /NewTypes
@@ -182,12 +182,12 @@ Poniżej przedstawiono struktury kompletnego projektu:
       |__NewTypesTests.csproj
 ```
 
-Uruchom w *testu/NewTypesTests* katalogu. Przywracanie projektu testowego z [ `dotnet restore` ](../tools/dotnet-restore.md) polecenia. Uruchom testy z [ `dotnet test` ](../tools/dotnet-test.md) polecenia. To polecenie uruchamia uruchamiający określony w pliku projektu.
+Rozpocznij w *testów/NewTypesTests* katalogu. Przywróć projekt testowy z [ `dotnet restore` ](../tools/dotnet-restore.md) polecenia. Uruchom testy przy użyciu [ `dotnet test` ](../tools/dotnet-test.md) polecenia. To polecenie uruchamia narzędzie test runner, określone w pliku projektu.
 
  [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
  
-Zgodnie z oczekiwaniami, testowania kończy się niepowodzeniem i konsoli wyświetla następujące dane wyjściowe:
+Zgodnie z oczekiwaniami, testowania kończy się niepowodzeniem i konsoli wyświetlane następujące wyniki:
  
 ```
 Test run for C:\NewTypesMsBuild\test\NewTypesTests\bin\Debug\netcoreapp1.1\NewTypesTests.dll(.NETCoreApp,Version=v1.1)
@@ -231,11 +231,11 @@ Test Run Failed.
 Test execution time: 2.1371 Seconds
 ```
 
-Zmień potwierdzenia testów `Assert.NotEqual` do `Assert.Equal`:
+Zmień potwierdzenia testów z `Assert.NotEqual` do `Assert.Equal`:
 
 [!code-csharp[PetTests class](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/PetTests.cs)]
 
-Ponownie uruchom testy z `dotnet test` poleceń i uzyskać następujące dane wyjściowe:
+Ponownie uruchom testy z `dotnet test` polecenia i uzyskać następujące wyniki:
 
 ```
 Microsoft (R) Test Execution Command Line Tool Version 15.0.0.0
@@ -252,7 +252,7 @@ Test Run Successful.
 Test execution time: 1.6634 Seconds
 ```
 
-Testowanie przejścia. Metody typów pet zwracać poprawnych wartości komunikuje się z właścicielem.
+Testowanie przebiegów. Typów pet zwracają poprawne wartości w przypadku do właściciela.
 
-Znasz już techniki organizowanie i testowanie projektów przy użyciu xUnit. Przejdź do przodu z tych metod, stosując je do własnych projektów. *Kodowanie przyjemność!*
+Wyjaśniono techniki organizowanie i testowanie projektów przy użyciu xUnit. Przejdź do przodu, za pomocą tych metod, stosując je do własnych projektów. *Udanego kodowania!*
 

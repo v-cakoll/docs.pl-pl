@@ -1,2 +1,2 @@
 
-Każdy — opcja kompilatora jest dostępny w dwóch formach: **-opcja** i **/opcja**. Dokumentacja tylko wskazuje opcja formularza. 
+Każdy — opcja kompilatora jest dostępna w dwóch formach: **— opcja** i **/opcja**. Wyświetla tylko dokumentacji — opcja formularzu. 

@@ -1,5 +1,5 @@
 ---
-title: '&lt;sieci&gt; elementu (ustawienia sieciowe)'
+title: '&lt;sieć&gt; — Element (ustawienia sieci)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#network
@@ -11,15 +11,15 @@ ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: e53d39f15a01f751a93c5531b3079d77bf0040e4
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e6cf78b06d5afe950dd97381e99ba9eb77f818ca
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744671"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874562"
 ---
-# <a name="ltnetworkgt-element-network-settings"></a>&lt;sieci&gt; elementu (ustawienia sieciowe)
-Służy do konfigurowania opcji sieciowych do zewnętrznego serwera transportu protokołu SMTP (Simple Mail).  
+# <a name="ltnetworkgt-element-network-settings"></a>&lt;sieć&gt; — Element (ustawienia sieci)
+Konfiguruje opcje sieciowe dla zewnętrznego serwera transportu protokołu SMTP (Simple Mail).  
   
  \<Konfiguracja >  
 \<system.net>  
@@ -49,13 +49,13 @@ Służy do konfigurowania opcji sieciowych do zewnętrznego serwera transportu p
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`clientDomain`|Określa nazwę domeny klienta do użycia w początkowe żądanie protokołu SMTP, aby nawiązać połączenie z serwerem poczty SMTP. Wartość domyślna to nazwa hosta lokalnego komputera lokalnego wysyłania żądania.|  
-|`defaultCredentials`|Określa, czy domyślne poświadczenia użytkownika powinny być używane do uzyskania dostępu do serwera poczty SMTP dla transakcji SMTP. Wartość domyślna to `false`.|  
-|`enableSsl`|Określa, czy dostęp do serwera poczty SMTP używany jest protokół SSL. Wartość domyślna to `false`.|  
+|`clientDomain`|Określa nazwę domeny klienta do użycia w początkowego żądania protokołu SMTP, aby nawiązać połączenie z serwerem poczty SMTP. Wartość domyślna to nazwy localhost lokalnego komputera wysyłającego żądanie.|  
+|`defaultCredentials`|Określa, czy domyślne poświadczenia użytkownika powinien być używany do uzyskania dostępu do serwera poczty SMTP dla transakcji SMTP. Wartość domyślna to `false`.|  
+|`enableSsl`|Określa, czy protokół SSL umożliwia dostęp do serwera poczty SMTP. Wartość domyślna to `false`.|  
 |`host`|Określa nazwę hosta serwera poczty SMTP, który ma być używany dla transakcji SMTP. Ten atrybut nie ma wartości domyślnej.|  
 |`password`|Określa hasło używane do uwierzytelniania serwera poczty SMTP. Ten atrybut nie ma wartości domyślnej.|  
-|`port`|Określa numer portu na potrzeby nawiązania połączenia z serwerem poczty SMTP. Wartość domyślna to 25.|  
-|`targetName`|Określa nazwę dostawcy usługi (SPN) na potrzeby uwierzytelniania w przypadku używania ochrony rozszerzonej dla transakcji SMTP. Ten atrybut nie ma wartości domyślnej.|  
+|`port`|Określa numer portu do nawiązywania połączenia z serwerem poczty SMTP. Wartość domyślna to 25.|  
+|`targetName`|Określa nazwę dostawcy usługi (SPN) na potrzeby uwierzytelniania w przypadku używania mechanizmu rozszerzonej ochrony dla transakcji SMTP. Ten atrybut nie ma wartości domyślnej.|  
 |`userName`|Określa nazwę użytkownika do uwierzytelniania z serwerem poczty SMTP. Ten atrybut nie ma wartości domyślnej.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
@@ -65,40 +65,40 @@ Służy do konfigurowania opcji sieciowych do zewnętrznego serwera transportu p
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<SMTP > elementu (ustawienia sieciowe)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|Konfiguruje opcje wysyłania poczty transportu protokołu SMTP (Simple Mail).|  
+|[\<SMTP >, Element (ustawienia sieci)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|Konfiguruje opcje wysyłania poczty transportu protokołu SMTP (Simple Mail).|  
   
 ## <a name="remarks"></a>Uwagi  
- Niektóre serwery SMTP wymagają uwierzytelnienia użytkownika na serwerze przed użyciem. Jeśli chcesz uwierzytelnienia przy użyciu domyślnych poświadczeń sieci na hoście, ustaw `defaultCredentials` atrybutu `true`. <xref:System.Net.Configuration.SmtpNetworkElement.DefaultCredentials%2A?displayProperty=nameWithType> Właściwości można pobrać wartości bieżącego `defaultCredentials` atrybutu z plików zastosowania konfiguracji.  
+ Niektóre serwery SMTP wymagają uwierzytelnienia przy serwerowi przed użyciem. Jeśli chcesz uwierzytelnienia przy użyciu poświadczeń domyślnych sieci na hoście, ustaw `defaultCredentials` atrybutu `true`. <xref:System.Net.Configuration.SmtpNetworkElement.DefaultCredentials%2A?displayProperty=nameWithType> Właściwość może służyć do uzyskania bieżącej wartości `defaultCredentials` atrybut z właściwych plików konfiguracji.  
   
- Można również użyć uwierzytelnianie podstawowe (nazwa użytkownika i hasło) do uwierzytelniania osoby do serwera SMTP. Aby użyć tej opcji, należy określić prawidłową nazwę użytkownika i hasło dla określonego serwera SMTP.  
+ Można również użyć uwierzytelniania podstawowego (nazwa użytkownika i hasło) do uwierzytelniania osoby do serwera SMTP. Aby użyć tej opcji, należy określić prawidłową nazwę użytkownika i hasło dla określonego serwera SMTP.  
   
 > [!NOTE]
->  Uwierzytelnianie podstawowe przesyła `userName` i `password` wartości do serwera bez szyfrowania. Każda osoba, która monitorowanie ruchu w sieci można wyświetlać swoje poświadczenia i ich używać do łączenia się z serwerem. Należy rozważyć zastosowanie bardziej bezpieczne mechanizm uwierzytelniania, takie jak Kerberos lub programu NT LAN Manager (NTLM). Jeśli `defaultCredentials` jest `true`, protokołu Kerberos lub NTLM zostaną użyte, jeśli serwer obsługuje te protokoły.  
+>  Uwierzytelnianie podstawowe przesyła `userName` i `password` wartości na serwer niezaszyfrowanego. Każdy monitorowania ruchu sieciowego może wyświetlić swoje poświadczenia i używać ich do łączenia z serwerem. Należy rozważyć użycie bardziej bezpieczne mechanizm uwierzytelniania, takich jak Kerberos lub NT LAN Manager (NTLM). Jeśli `defaultCredentials` jest `true`, Kerberos lub NTLM zostaną użyte, jeśli serwer obsługuje te protokoły.  
   
- Podstawowe opcje poświadczenia sieci uwierzytelniania i domyślne wykluczają się wzajemnie; Jeśli ustawisz `defaultCredentials` do `true` i określ nazwę użytkownika i hasło, domyślnych poświadczeń sieciowych jest używany i danych uwierzytelniania podstawowego jest ignorowana.  
+ Podstawowe opcje poświadczeń sieci uwierzytelniania i domyślnych wzajemnie się wykluczają; Jeśli ustawisz `defaultCredentials` do `true` i określ nazwę użytkownika i hasło, domyślnych poświadczeń sieciowych jest używany i dane uwierzytelniania podstawowego zostaną zignorowane.  
   
- Dla uwierzytelniania podstawowego w przypadku określenia `userName`, należy określić również `password` uwierzytelnienia do serwera poczty.  
+ Dla uwierzytelniania podstawowego w przypadku określenia `userName`, należy także określić `password` do uwierzytelniania użytkownika na serwerze poczty e-mail.  
   
- <xref:System.Net.Configuration.SmtpNetworkElement.UserName%2A?displayProperty=nameWithType> Właściwości można pobrać wartości bieżącego `userName` atrybutu z plików zastosowania konfiguracji. <xref:System.Net.Configuration.SmtpNetworkElement.Password%2A?displayProperty=nameWithType> Właściwości można pobrać wartości bieżącego `password` atrybutu z plików zastosowania konfiguracji. A `password` atrybutu nie zwykle zostaną wprowadzone w plikach konfiguracji ze względów bezpieczeństwa.  
+ <xref:System.Net.Configuration.SmtpNetworkElement.UserName%2A?displayProperty=nameWithType> Właściwość może służyć do uzyskania bieżącej wartości `userName` atrybut z właściwych plików konfiguracji. <xref:System.Net.Configuration.SmtpNetworkElement.Password%2A?displayProperty=nameWithType> Właściwość może służyć do uzyskania bieżącej wartości `password` atrybut z właściwych plików konfiguracji. A `password` atrybutu nie zwykle zostaną wprowadzone w plikach konfiguracji ze względów bezpieczeństwa.  
   
- `clientDomain` Atrybut zmiany nazwy domeny klienta używany w początkowej żądania protokołu SMTP do serwera SMTP. `clientDomain` Atrybut można określać do w pełni kwalifikowaną nazwą domeny komputera lokalnego, a nie nazwy localhost, który jest używany domyślnie. Zapewnia to większą zgodności ze standardami protokołu SMTP. Wartość domyślna to nazwa hosta lokalnego komputera lokalnego wysyłania żądania. <xref:System.Net.Configuration.SmtpNetworkElement.ClientDomain%2A?displayProperty=nameWithType> Właściwości można pobrać wartości bieżącego `clientDomain` atrybutu z plików zastosowania konfiguracji.  
+ `clientDomain` Atrybut zmieni nazwę domeny klienta, które są używane w początkowego żądania protokołu SMTP do serwera SMTP. `clientDomain` Atrybut można określać w pełni kwalifikowana nazwa domeny komputera lokalnego, a nie nazwy localhost, który jest używany domyślnie. Zapewnia to większą zgodność ze standardami protokołu SMTP. Wartość domyślna to nazwy localhost lokalnego komputera wysyłającego żądanie. <xref:System.Net.Configuration.SmtpNetworkElement.ClientDomain%2A?displayProperty=nameWithType> Właściwość może służyć do uzyskania bieżącej wartości `clientDomain` atrybut z właściwych plików konfiguracji.  
   
- `targetName` Atrybut jest używany do uwierzytelniania, korzystając z ochrony rozszerzonej. Wartość domyślna to w postaci "SMTPSVC /\<hosta >" gdzie \<hosta > jest nazwą hosta serwera poczty SMTP. <xref:System.Net.Configuration.SmtpNetworkElement.TargetName%2A?displayProperty=nameWithType> Właściwości można pobrać wartości bieżącego `targetName` atrybutu z plików zastosowania konfiguracji.  
+ `targetName` Atrybut jest używany do uwierzytelniania przy użyciu mechanizmu rozszerzonej ochrony. Wartość domyślna ma postać "SMTPSVC /\<host >" gdzie \<host > jest nazwą hosta serwera poczty SMTP. <xref:System.Net.Configuration.SmtpNetworkElement.TargetName%2A?displayProperty=nameWithType> Właściwość może służyć do uzyskania bieżącej wartości `targetName` atrybut z właściwych plików konfiguracji.  
   
- `enableSsl` Atrybut określa, czy dostęp do serwera poczty SMTP używany jest protokół SSL. <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType> Klasa obsługuje tylko rozszerzenia usługi SMTP dla zabezpieczenia SMTP za pośrednictwem zabezpieczeń warstwy transportu zgodnie z definicją w dokumencie RFC 3207. W tym trybie sesji SMTP zaczyna się od nieszyfrowany kanał, a następnie polecenie STARTTLS wystawiony przez klienta do serwera, aby przełączyć się do zapewnienia bezpiecznej komunikacji przy użyciu protokołu SSL. Zobacz dokument RFC 3207 opublikowane przez Internet Engineering Task Force (IETF) Aby uzyskać więcej informacji.  
+ `enableSsl` Atrybut określa, czy protokół SSL umożliwia dostęp do serwera poczty SMTP. <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType> Klasy obsługuje tylko rozszerzenia usługi SMTP dla bezpiecznego protokołu SMTP za pośrednictwem Transport Layer Security zgodnie z definicją w dokumencie RFC 3207. W tym trybie rozpoczyna się i niezaszyfrowanego kanału sesji SMTP, a następnie polecenie STARTTLS wystawiony przez klienta do serwera, aby przełączyć się do bezpiecznej komunikacji przy użyciu protokołu SSL. Zobacz RFC 3207 opublikowane przez Internet Engineering Task Force (IETF) Aby uzyskać więcej informacji.  
   
- Metoda alternatywnego połączenia jest, gdzie sesji SSL nawiązaniu góry przed każdego protokołu, które polecenia są wysyłane. Ta metoda łączenia jest czasami nazywany SMTPS i domyślnie używa portu 465. Ta metoda alternatywnego połączenia przy użyciu protokołu SSL nie jest obecnie obsługiwane.  
+ Metody alternatywne połączenie jest, gdzie SSL zostanie utworzona sesja na początku przed protokołu wysłania polecenia. Tej metody połączenia jest czasami nazywane SMTPS i domyślnie używa portu 465. Ta metoda alternatywne połączenie przy użyciu protokołu SSL nie jest obecnie obsługiwane.  
   
- <xref:System.Net.Configuration.SmtpNetworkElement.EnableSsl%2A?displayProperty=nameWithType> Właściwości można pobrać wartości bieżącego `enableSsl` atrybutu z plików zastosowania konfiguracji.  
+ <xref:System.Net.Configuration.SmtpNetworkElement.EnableSsl%2A?displayProperty=nameWithType> Właściwość może służyć do uzyskania bieżącej wartości `enableSsl` atrybut z właściwych plików konfiguracji.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie odpowiednie parametry SMTP do wysyłania wiadomości e-mail przy użyciu poświadczeń domyślnych w sieci.  
+ Poniższy przykład określa odpowiednie parametry SMTP do wysyłania wiadomości e-mail przy użyciu poświadczeń domyślnych sieci.  
   
 ```xml  
 <configuration>  
   <system.net>  
     <mailSettings>  
-      <smtp deliveryMethod="network">  
+      <smtp deliveryMethod="Network">  
         <network  
           clientDomain="www.contoso.com"  
           defaultCredentials="true"  

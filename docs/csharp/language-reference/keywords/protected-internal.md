@@ -3,17 +3,17 @@ title: chronionych wewnętrznych (odwołanie w C#)
 ms.date: 11/15/2017
 author: sputier
 ms.openlocfilehash: 5ba2c811a1a4f095bcee65ed6678a7dc50fe94db
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172244"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244861"
 ---
 # <a name="protected-internal-c-reference"></a>chronionych wewnętrznych (odwołanie w C#)
-`protected internal` Kombinacja słów kluczowych jest modyfikator dostępu elementu członkowskiego. Chroniony element członkowski wewnętrznego jest dostępny, z bieżącego zestawu lub typów pochodzących od klasy zawierającego. Porównanie `protected internal` z innych modyfikatorów dostępu, zobacz [poziomów ułatwień dostępu](../../../csharp/language-reference/keywords/accessibility-levels.md). 
+`protected internal` Kombinacja słów kluczowych jest modyfikator dostępu składowej. Chronionych wewnętrznych składowych jest możliwy z bieżącego zestawu lub typy pochodzące z klasy zawierającej. Porównanie `protected internal` z innych modyfikatorów dostępu, zobacz [poziomów ułatwień dostępu](../../../csharp/language-reference/keywords/accessibility-levels.md). 
    
 ## <a name="example"></a>Przykład  
- Wewnętrzny chroniony element członkowski klasy podstawowej jest dostępna z dowolnego typu, w ramach zawierający go zestaw. Jest również dostępna w klasie pochodnej, która znajduje się w innym zestawie tylko wtedy, gdy występuje dostęp za pośrednictwem zmiennej typu klasy pochodnej. Rozważmy na przykład następujący segment kodu:  
+ Chronionych wewnętrznych elementu członkowskiego klasy bazowej jest dostępna z dowolnego typu w ramach własnego zestawu zawierającego. Jest również dostępna w klasie pochodnej znajduje się w innym zestawie, tylko wtedy, gdy dostęp odbywa się za pośrednictwem zmiennej o typie klasy pochodnej. Na przykład rozważmy następujący segment kodu:  
 
 ```csharp
 // Assembly1.cs  
@@ -52,9 +52,9 @@ class DerivedClass : BaseClass
     }
 } 
 ```  
- Ten przykład zawiera dwa pliki `Assembly1.cs` i `Assembly2.cs`. Pierwszy plik zawiera klasę podstawową publicznego `BaseClass`, a inna klasa `TestAccess`. `BaseClass` właścicielem członka chronionego wewnętrzny `myValue`, który jest dostępny po `TestAccess` typu. W drugim pliku, próba uzyskania dostępu do `myValue` za pośrednictwem wystąpienia `BaseClass` utworzy wystąpił błąd podczas dostępu do tego elementu członkowskiego przez wystąpienie klasy pochodnej, `DerivedClass` powiedzie się. 
+ Ten przykład zawiera dwa pliki `Assembly1.cs` i `Assembly2.cs`. Pierwszy plik zawiera klasę bazową publicznych `BaseClass`oraz inną klasę `TestAccess`. `BaseClass` jest właścicielem wewnętrzny elementu członkowskiego chronionego `myValue`, który jest dostępny po `TestAccess` typu. W drugim pliku, próba uzyskania dostępu do `myValue` za pośrednictwem wystąpienia `BaseClass` wystąpi błąd, podczas dostępu do tego elementu członkowskiego przez wystąpienie klasy pochodnej, `DerivedClass` zakończy się powodzeniem. 
 
- Członkowie struktury nie mogą być `protected internal` ponieważ struktury nie może być dziedziczona.  
+ Składowe struktury nie mogą być `protected internal` ponieważ struktura nie może być dziedziczona.  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
@@ -66,7 +66,7 @@ class DerivedClass : BaseClass
  [Modyfikatory dostępu](../../../csharp/language-reference/keywords/access-modifiers.md)   
  [Poziomy ułatwień dostępu](../../../csharp/language-reference/keywords/accessibility-levels.md)   
  [Modyfikatory](../../../csharp/language-reference/keywords/modifiers.md)   
- [Publiczna](../../../csharp/language-reference/keywords/public.md)   
+ [Publiczne](../../../csharp/language-reference/keywords/public.md)   
  [Prywatne](../../../csharp/language-reference/keywords/private.md)   
- [wewnętrzny](../../../csharp/language-reference/keywords/internal.md)   
- [Problemy z zabezpieczeniami dla wewnętrznego wirtualnego słowa kluczowe](https://msdn.microsoft.com/library/heyd8kky(v=vs.110))
+ [Wewnętrzne](../../../csharp/language-reference/keywords/internal.md)   
+ [Kwestie bezpieczeństwa wewnętrznych wirtualnych słów kluczowych](https://msdn.microsoft.com/library/heyd8kky(v=vs.110))

@@ -11,19 +11,19 @@ helpviewer_keywords:
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
 ms.openlocfilehash: d6dfdf14b518582388e655ec5616904928dfd8b5
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696442"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961437"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (odwołanie w C#)
-Instrukcji try-catch składa się z `try` bloku, po której następuje co najmniej jeden `catch` postanowienia Określ obsługę różnych wyjątków.  
+Instrukcja try-catch, który składa się z `try` bloku, po której następuje co najmniej jeden `catch` zdań, która określa programy obsługi dla różnych wyjątków.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli wyjątek szuka środowisko uruchomieniowe języka wspólnego (CLR) `catch` instrukcji, która obsługuje ten wyjątek. Jeśli aktualnie wykonywane — metoda nie zawiera takie `catch` zablokować wygląda CLR w metodę, która wywołuje bieżącej metody i tak dalej górę stosu wywołań. Jeśli nie `catch` bloku zostanie znaleziony, a następnie CLR jest wyświetlany komunikat nieobsługiwany wyjątek i zatrzymuje wykonywanie programu.  
+ Gdy wyjątek jest generowany, środowisko uruchomieniowe języka wspólnego (CLR) wyszukuje `catch` instrukcję, która obsługuje ten wyjątek. Jeśli aktualnie wykonywanej metody nie zawiera takie `catch` zablokować, CLR prezentuje metody, która wywołała bieżącą metodę, i tak dalej w górę stosu wywołań. Jeśli nie `catch` blok zostanie znaleziony, a następnie CLR zostanie wyświetlony komunikat nieobsługiwany wyjątek użytkownikowi i zatrzymuje wykonywanie programu.  
   
- `try` Blok zawiera ochroną kod, który może spowodować wyjątek. Blok jest wykonywana do czasu zgłoszenia wyjątku lub zakończyło się powodzeniem. Na przykład następujące próba rzutowania `null` obiekt zgłasza <xref:System.NullReferenceException> wyjątek:  
+ `try` Blok zawiera chronioną kod, który może spowodować wystąpienie wyjątku. Blok jest wykonywany, dopóki nie zostanie zgłoszony wyjątek lub zakończyło się powodzeniem. Na przykład, że próba zrzutowania `null` obiektu zgłasza <xref:System.NullReferenceException> wyjątek:  
   
 ```csharp  
 object o2 = null;  
@@ -33,7 +33,7 @@ try
 }  
 ```  
   
- Mimo że `catch` bez argumentów można użyć klauzuli w celu efektywnej dowolnego typu wyjątku, to użycie nie jest zalecane. Ogólnie rzecz biorąc powinien catch tylko te wyjątki, które należy znać sposób odzyskanie. W związku z tym należy zawsze podać argument obiektu pochodną <xref:System.Exception?displayProperty=nameWithType> na przykład:  
+ Mimo że `catch` bez argumentów można użyć klauzuli można przechwycić wyjątek dowolnego typu, to użycie nie jest zalecane. Ogólnie rzecz biorąc należy tylko przechwytywać te wyjątki, które należy znać sposób sprawności. W związku z tym, należy zawsze podać argument obiektu pochodną <xref:System.Exception?displayProperty=nameWithType> na przykład:  
   
 ```csharp  
 catch (InvalidCastException e)   
@@ -41,9 +41,9 @@ catch (InvalidCastException e)
 }  
 ```  
   
- Można użyć więcej niż jednej określonej `catch` klauzuli w tej samej instrukcji try-catch. W tym przypadku kolejność `catch` klauzule ważne jest, ponieważ `catch` klauzule są sprawdzane w kolejności. CATCH bardziej szczegółowe wyjątki przed mniej określonych zadań. Kompilator generuje błąd jeśli kolejność się, że Twoje catch blokuje tak, aby nigdy nie można połączyć się z blokiem nowsze.  
+ Istnieje możliwość użycia więcej niż jednej określonej `catch` klauzuli w tej samej instrukcji try-catch. W tym przypadku kolejność `catch` klauzule ważne jest, ponieważ `catch` klauzule są badane w kolejności. Rejestrować bardziej szczegółowe wyjątki przed mniej określone z nich. Kompilator generuje błąd, jeśli kolejność, że Twoje catch blokuje tak, aby nigdy nie jest osiągalna nowsze bloku.  
   
- Przy użyciu `catch` argumentów jest jednym ze sposobów Filtruj wyjątki mają być obsługiwane.  Umożliwia także filtru wyjątków, dalsze badający wyjątku, aby zdecydować, czy do jego obsługi.  Jeśli filtr wyjątku zwraca wartość false, jest tworzona wyszukiwania dla programu obsługi.  
+ Za pomocą `catch` argumentów jest jednym ze sposobów, aby filtrować pod kątem wyjątków, które ma obsługiwać.  Można również użyć filtr wyjątku, który dodatkowo sprawdza, czy wyjątek zdecydować, czy do jego obsługi.  Jeśli filtr wyjątku zwróci wartość false, wyszukiwanie w przypadku obsługi kontynuowane.  
   
 ```csharp  
 catch (ArgumentException e) when (e.ParamName == "…")  
@@ -51,9 +51,9 @@ catch (ArgumentException e) when (e.ParamName == "…")
 }  
 ```  
   
- Filtry wyjątków są preferowane przechwytywanie i ponowne generowanie (wyjaśniono poniżej), ponieważ stos nieokaleczone pozostaw filtrów.  Nowsze obsługi zrzuty stosu, widać gdzie wyjątek pierwotnie pochodzeniu, a nie tylko ostatnie miejsce, który został wywołany ponownie.  Rejestrowanie zdarzeń użycia wyrażeń filtru wyjątków.  Można utworzyć filtr, który zawsze zwraca wartość false, również zapisującego w dzienniku można rejestrować wyjątki, jak komputery przechodzą bez konieczności ich i ponownego zgłoszenia.  
+ Filtry wyjątków są preferowane w porównaniu do przechwytywania i ponowne generowanie (wyjaśnione poniżej), ponieważ filtry pozostaw stosu nieokaleczone.  Jeśli nowszej obsługi zrzuty stosu, zostanie wyświetlony, wyjątek pierwotnie pochodzenia, a nie tylko ostatnie miejsce, który był zgłaszany ponownie.  Typowym zastosowaniem wyrażenia filtru wyjątków jest rejestrowania.  Można utworzyć filtr, która zawsze zwraca wartość FAŁSZ, który również dane wyjściowe do dziennika, możesz rejestrować wyjątki jako komputery przechodzą bez konieczności ich i ponownego zgłoszenia.  
   
- A [throw](../../../csharp/language-reference/keywords/throw.md) instrukcja może być używana w `catch` bloku, aby można było ponownie zgłosić wyjątek, który zostanie przechwycony przez `catch` instrukcji. Poniższy przykład wyodrębnia informacje o źródle <xref:System.IO.IOException> wyjątek, a następnie zgłasza wyjątek do nadrzędnej metody.  
+ A [throw](../../../csharp/language-reference/keywords/throw.md) instrukcja może być używana w `catch` bloku, aby można było ponownie zgłosić wyjątek, który zostanie przechwycony przez `catch` instrukcji. Poniższy przykład wyodrębnia informacje o źródle <xref:System.IO.IOException> wyjątek i następnie zgłasza wyjątek do nadrzędnej metody.  
   
 ```csharp  
 catch (FileNotFoundException e)  
@@ -70,7 +70,7 @@ catch (IOException e)
 }  
 ```  
   
- Można przechwytywać elementu exception jednego i zgłoszenie wyjątku różnych. Gdy to zrobisz, określ wyjątek, który Przechwycono wewnętrzny wyjątek, jak pokazano w poniższym przykładzie.  
+ Można przechwycić jeden wyjątek i różnych wyjątku. Gdy to zrobisz, określ wyjątek, który przechwycono jako wewnętrzny wyjątek, jak pokazano w poniższym przykładzie.  
   
 ```csharp  
 catch (InvalidCastException e)   
@@ -80,7 +80,7 @@ catch (InvalidCastException e)
 }  
 ```  
   
- Użytkownik może również ponownie Zgłoś wyjątek podczas określony warunek ma wartość true, jak pokazano w poniższym przykładzie.  
+ Użytkownik może również ponowne zgłoszenie wyjątku, gdy określony warunek ma wartość true, jak pokazano w poniższym przykładzie.  
   
 ```csharp  
 catch (InvalidCastException e)  
@@ -97,7 +97,7 @@ catch (InvalidCastException e)
 ```  
 
 > [!NOTE]
-> Istnieje również możliwość Użyj filtru wyjątków, aby uzyskać wynik podobnie często bardziej przejrzysty sposób (a także nie modyfikowanie stosu, jak opisano wcześniej w tym dokumencie). W poniższym przykładzie przedstawiono podobne zachowanie dla wywoływania co w poprzednim przykładzie. Funkcja zwraca `InvalidCastException` powrotem do wywołującego podczas `e.Data` jest `null`.
+> Istnieje również możliwość Użyj filtra wyjątku, aby uzyskać podobny efekt w często bardziej przejrzysty sposób (a także nie modyfikowanie stosu, zgodnie z opisem we wcześniejszej części tego dokumentu). W poniższym przykładzie przedstawiono podobne zachowanie dla obiektów wywołujących, jak w poprzednim przykładzie. Funkcja zgłasza `InvalidCastException` obiektu wywołującego podczas `e.Data` jest `null`.
 > 
 > ```csharp
 > catch (InvalidCastException e) when (e.Data != null)   
@@ -106,7 +106,7 @@ catch (InvalidCastException e)
 > }
 > ```   
 
- Z wewnątrz `try` bloków, zainicjować tylko zmienne, które są zadeklarowane w nim. W przeciwnym razie wyjątek może wystąpić przed zakończeniem wykonywania bloku. Na przykład w poniższym przykładzie kodu zmiennej `n` zainicjowano wewnątrz `try` bloku. Próba użycia tej zmiennej poza `try` blok w `Write(n)` instrukcji wygeneruje błąd kompilatora.  
+ Z wewnątrz `try` zablokować, zainicjować tylko zmienne, które są zadeklarowane w nim. W przeciwnym razie może wystąpić wyjątek, przed zakończeniem wykonywania bloku. Na przykład w poniższym przykładzie kodu zmiennej `n` jest inicjowany wewnątrz `try` bloku. Próba użycia tej zmiennej poza `try` bloku `Write(n)` instrukcji spowoduje wygenerowanie błędu kompilatora.  
   
 ```csharp  
 static void Main()   
@@ -128,43 +128,43 @@ static void Main()
  Aby uzyskać więcej informacji na temat catch, zobacz [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md).  
   
 ## <a name="exceptions-in-async-methods"></a>Wyjątki w metodach asynchronicznych  
- Metody asynchronicznej zostało oznaczone przez [async](../../../csharp/language-reference/keywords/async.md) modyfikator i zwykle zawiera jeden lub więcej await wyrażenia lub instrukcji. Stosuje wyrażenie await [await](../../../csharp/language-reference/keywords/await.md) operatora <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601>.  
+ Metoda asynchroniczna jest oznaczony za [async](../../../csharp/language-reference/keywords/async.md) modyfikator i zwykle zawiera jeden lub więcej await wyrażeń lub instrukcji. Wyrażenie await stosuje [await](../../../csharp/language-reference/keywords/await.md) operatora <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601>.  
   
- Gdy kontrolować osiągnie `await` w metodzie asynchronicznej postęp w metodzie jest wstrzymana, aż do zakończenia oczekiwano zadań. Po zakończeniu zadania wykonywania można wznowić w metodzie. Aby uzyskać więcej informacji, zobacz [programowanie asynchroniczne z async i await](../../../csharp/programming-guide/concepts/async/index.md) i [przepływ sterowania w aplikacjach asynchronicznych](../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md).  
+ Gdy kontrola osiąga `await` w metodzie asynchronicznej postęp w metodzie jest wstrzymana, dopóki nie zakończy się oczekiwane zadanie. Kiedy zadanie zostanie ukończone, wykonanie można wznowić w metodzie. Aby uzyskać więcej informacji, zobacz [Asynchronous Programming with async i await](../../../csharp/programming-guide/concepts/async/index.md) i [Control Flow in Async Programs](../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md).  
   
- Zakończone zadanie, do którego `await` zastosowano może być stan z powodu nieobsługiwany wyjątek w metodzie, która zwraca zadanie. Oczekiwanie na zadanie zgłasza wyjątek. Zadania można także zakończyć w stanie Anulowane Jeśli proces asynchroniczny, która zwraca go została anulowana. Oczekiwanie na zadanie anulowane zgłasza `OperationCanceledException`. Aby uzyskać więcej informacji o sposobie anulować proces asynchroniczny, zobacz [Fine-Tuning Twoja aplikacja Async](../../programming-guide/concepts/async/fine-tuning-your-async-application.md).  
+ Ukończone zadanie podrzędne, do którego `await` jest stosowany z powodu nieobsługiwanego wyjątku w metodzie, która zwraca zadanie może znajdować się w nieprawidłowym stanie. Oczekiwanie na zadanie zgłasza wyjątek. Zadanie również można znajdą się w stanem anulowane, jeśli proces asynchroniczny, która zwraca go zostało anulowane. Oczekuje na anulowane zadanie zgłasza `OperationCanceledException`. Aby uzyskać więcej informacji o tym, jak można anulować proces asynchroniczny, zobacz [aplikacji asynchronicznej Fine-Tuning](../../programming-guide/concepts/async/fine-tuning-your-async-application.md).  
   
- Aby catch wyjątku, await zadanie w `try` zablokować, a także przechwytywanie wyjątków w skojarzonych `catch` bloku. Na przykład zobacz sekcję "Example".  
+ Aby przechwycić wyjątek, należy poczekać na zadanie `try` zablokować, a następnie przechwycić wyjątek w skojarzonej `catch` bloku. Aby uzyskać przykład zobacz sekcję "Przykład".  
   
- Zadanie może być stan, ponieważ w metodzie asynchronicznej oczekiwano wystąpił wiele wyjątków. Na przykład zadanie może być wynikiem wywołania do <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Await takie zadania, tylko jeden wyjątek zostanie przechwycony i nie można przewidzieć który wyjątek zostanie przechwycony. Na przykład zobacz sekcję "Example".  
+ Zadanie może być w nieprawidłowym stanie, ponieważ w metodzie async oczekiwane wystąpił wiele wyjątków. Na przykład zadanie może być wynikiem wywołania <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. W przypadku takich zadań, jest tylko jeden z wyjątków wychwytywane, a nie można przewidzieć, który wyjątek zostanie zgłoszony. Aby uzyskać przykład zobacz sekcję "Przykład".  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie `try` blok zawiera wywołanie `ProcessString` metodę, która może spowodować wyjątek. `catch` Klauzula zawiera program obsługi wyjątku, który właśnie na ekranie zostanie wyświetlony komunikat. Gdy `throw` instrukcji jest wywoływana z wewnątrz `MyMethod`, system wyszukuje `catch` instrukcji i wyświetlany jest komunikat `Exception caught`.  
+ W poniższym przykładzie `try` blok zawiera wywołanie `ProcessString` metodę, która może spowodować wyjątek. `catch` Klauzula zawiera program obsługi wyjątków, który po prostu wyświetla komunikat na ekranie. Gdy `throw` instrukcji jest wywoływana z wewnątrz `MyMethod`, system wyszukuje `catch` instrukcji i wyświetla komunikat `Exception caught`.  
   
  [!code-csharp[csrefKeywordsExceptions#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_1.cs)]  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie używane są dwa bloki catch, a specyficzny wyjątek, który zostanie osiągnięty jako pierwszy, zostanie przechwycony.  
+ W poniższym przykładzie są używane dwa bloki catch, a specyficzny wyjątek, który wykorzystasz, zostanie przechwycony.  
   
- Aby przechwytywać elementu exception najmniej specyficznych, można zastąpić w instrukcji throw `ProcessString` z następujących instrukcji: `throw new Exception()`.  
+ Aby przechwycić wyjątek najmniej specyficznych, możesz zastąpić instrukcji "throw" w `ProcessString` przy użyciu następującej instrukcji: `throw new Exception()`.  
   
- Jeśli najpierw umieścić blok catch do najmniej specyficznych w przykładzie zostanie wyświetlony następujący komunikat o błędzie: `A previous catch clause already catches all exceptions of this or a super type ('System.Exception')`.  
+ Jeśli najpierw umieścić blok catch do najmniej specyficznych w przykładzie pojawia się następujący komunikat o błędzie: `A previous catch clause already catches all exceptions of this or a super type ('System.Exception')`.  
   
  [!code-csharp[csrefKeywordsExceptions#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_2.cs)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia obsługi dla metod asynchronicznych wyjątków. Aby przechwytywać wyjątku, który zgłasza zadania asynchronicznego, umieść `await` wyrażenie w `try` zablokować, a także catch wyjątku w `catch` bloku.  
+ Poniższy przykład ilustruje wyjątków, obsługa do metod asynchronicznych. Aby przechwytywać wyjątek, który zgłasza zadania asynchronicznego, umieść `await` wyrażenia w `try` zablokować, a następnie przechwycić wyjątek w `catch` bloku.  
   
- Usuń znaczniki komentarza `throw new Exception` wiersza w przykładzie, aby zademonstrować obsługi wyjątków. Zadania `IsFaulted` właściwość jest ustawiona na `True`, zadania `Exception.InnerException` właściwość jest ustawiona na wyjątek i wyjątek w `catch` bloku.  
+ Usuń znaczniki komentarza `throw new Exception` wiersza w przykładzie, aby zademonstrować obsługi wyjątków. Zadania podrzędnego `IsFaulted` właściwość jest ustawiona na `True`, zadania podrzędnego `Exception.InnerException` właściwość jest ustawiona na wyjątek i wyjątek w `catch` bloku.  
   
- Usuń znaczniki komentarza `throw new OperationCancelledException` wiersza, aby zademonstrować, co się stanie w przypadku anulowania proces asynchroniczny. Zadania `IsCanceled` właściwość jest ustawiona na `true`, i wyjątek w `catch` bloku. W niektórych warunkach, które nie dotyczą w tym przykładzie zadanie w `IsFaulted` właściwość jest ustawiona na `true` i `IsCanceled` ma ustawioną wartość `false`.  
+ Usuń znaczniki komentarza `throw new OperationCancelledException` wiersz, aby zademonstrować, co się stanie, gdy anulujesz proces asynchroniczny. Zadania podrzędnego `IsCanceled` właściwość jest ustawiona na `true`, a wyjątek w `catch` bloku. W niektórych warunkach, które nie mają zastosowania do tego przykładu, zadania w `IsFaulted` właściwość jest ustawiona na `true` i `IsCanceled` ustawiono `false`.  
   
  [!code-csharp[csAsyncExceptions#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_3.cs)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia obsługi wyjątków, gdzie wiele zadań może spowodować wiele wyjątków. `try` Bloku oczekujące na zadanie, które jest zwracany przez wywołanie do <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Zadanie zostało ukończone, po zakończeniu trzech zadań, do których zastosowano WhenAll.  
+ Poniższy przykład ilustruje wyjątków, gdzie wiele zadań może spowodować wiele wyjątków. `try` Bloku czeka na zadanie, który jest zwracany przez wywołanie <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Zadanie zostało ukończone, po zakończeniu trzech zadań, do których zastosowano WhenAll.  
   
- Wszystkie trzy zadania powoduje zgłoszenie wyjątku. `catch` Bloku iteruje wyjątki, które znajdują się w `Exception.InnerExceptions` właściwość zadania, który został zwrócony przez <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>.  
+ Każdy z trzech zadań, powoduje wyjątek. `catch` Bloku wykonuje iterację przez wyjątki, które znajdują się w `Exception.InnerExceptions` właściwości zadania, który został zwrócony przez <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>.  
   
  [!code-csharp[csAsyncExceptions#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_4.cs)]  
   
@@ -172,7 +172,7 @@ static void Main()
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
+ [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
  [Instrukcje try, throw i catch (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)  

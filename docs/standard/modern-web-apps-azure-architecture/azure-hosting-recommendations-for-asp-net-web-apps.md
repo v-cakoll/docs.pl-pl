@@ -1,129 +1,131 @@
 ---
-title: Zalecenia dotyczące aplikacji sieci web platformy ASP.NET Core hostingu Azure
-description: Projektowania nowoczesnych aplikacji sieci Web platformy ASP.NET Core i Azure | Zalecenia dotyczące aplikacji sieci web ASP.NET hostingu Azure
+title: Zalecenia dotyczące aplikacji sieci web platformy ASP.NET Core hostingu platformy Azure
+description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy ASP.NET Core i platformy Azure | Zalecenia dotyczące aplikacji sieci web platformy ASP.NET hostingu platformy Azure
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/07/2017
-ms.openlocfilehash: 756f74cacec0a9f5be502ee02659510869d79746
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/27/2018
+ms.openlocfilehash: a70cb822c789638ca107b090d1aed2b88ccc6a5d
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105712"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404531"
 ---
-# <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Zalecenia dotyczące aplikacji sieci Web platformy ASP.NET Core hostingu Azure
+# <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Zalecenia dotyczące aplikacji sieci web platformy ASP.NET Core hostingu platformy Azure
 
-> "Biznesowych z liderów wszędzie są pomijanie działy IT, aby uzyskać aplikacje w chmurze (alias SaaS) i płatności dla nich jak Subskrypcja magazynu. I gdy usługa nie jest już wymagane, będzie można zrezygnować z subskrypcji z nie urządzeń pozostałych nieużywanych w prawym górnym rogu. "  
-> _\- Daryl Plummer, Gartner analityka_
+> "Line-of-business liderów wszędzie, gdzie są pomijanie działom IT Pobierz aplikacje z chmury (zwane również SaaS) i płacić je jak Subskrypcja magazynu. A gdy usługa nie jest już wymagane, ich może anulować subskrypcję, nie sprzęt, pozostanie nieużywana w prawym górnym rogu."  
+> _\- Daryl Plummer, analityk firmy Gartner_
 
-## <a name="summary"></a>Podsumowanie
-
-Niezależnie od aplikacji potrzeb i architektura systemu Windows Azure można jego obsługi. Potrzeb hostingu może być prosty jak witryny sieci web statyczny do aplikacji bardzo zaawansowane składa się z wielu usług. Dla obsługi usług i aplikacji sieci web wbudowanymi platformy ASP.NET Core istnieje kilka dobrze znanych konfiguracji, które są zalecane. Poniższe zalecenia są pogrupowane według rodzaju zasobu do możliwości hostowania, czy pełnego aplikacji, poszczególnych procesów i danych.
+Niezależnie od aplikacji potrzebom i architektura platformy Windows Azure może obsługiwać go. Twoje potrzeby hostingu mogą być proste i polega na statyczna witryna internetowa, do wyrafinowanych aplikacji składa się z wielu usług. Dla aplikacji monolitycznych sieci web platformy ASP.NET Core i usługi pomocnicze istnieje kilka znanych konfiguracje, które są zalecane. Zalecenia w tym artykule są grupowane w zależności od rodzaju zasobów, aby znajdować, czy pełna aplikacji, poszczególnych procesów i danych.
 
 ## <a name="web-applications"></a>Aplikacje internetowe
 
-Aplikacje sieci Web mogą być przechowywane z:
+Aplikacje sieci Web mogą być przechowywane za pomocą:
 
--   Aplikacje sieci Web usługi aplikacji
+- Aplikacje sieci Web usługi App Service
 
--   Kontenery
+- Kontenery
 
--   Azure Service Fabric
+- Azure Service Fabric
 
--   Maszynach wirtualnych (VM)
+- Maszyny wirtualne (VM)
 
-Z nich aplikacje sieci Web usługi aplikacji są zalecane podejście do większości scenariuszy. Dla architektury mikrousługi należy wziąć pod uwagę opartego na kontener lub usługi sieci szkieletowej. Aby uzyskać większą kontrolę nad maszynami aplikacji, należy wziąć pod uwagę maszynach wirtualnych platformy Azure.
+Z tych opcji App Service Web Apps to zalecane podejście do większości scenariuszy. Architektury mikrousługi należy wziąć pod uwagę podejście oparte na kontenerach lub usługi Service Fabric. Jeśli potrzebujesz większej kontroli nad maszynami działania aplikacji, należy wziąć pod uwagę maszyn wirtualnych platformy Azure.
 
-### <a name="app-service-web-apps"></a>Aplikacje sieci Web usługi aplikacji
+### <a name="app-service-web-apps"></a>Aplikacje sieci Web usługi App Service
 
-Usługi aplikacji Web Apps oferuje pełni zarządzana platforma zoptymalizowane pod kątem obsługi aplikacji sieci web. Jest platform-as-a-service(PaaS), oferty, że pozwala skupić się na logice biznesowej, podczas gdy platforma Azure jest odpowiedzialna infrastruktury potrzebne do uruchamiania i skalowania aplikacji. Niektóre główne funkcje aplikacji usługi sieci Web aplikacji:
+Usługa App Service Web Apps oferuje w pełni zarządzana platforma, zoptymalizowana pod kątem hostowania aplikacji sieci web. Jest to platforma jako usługa (PaaS), oferty, że umożliwia użytkownikom skoncentrowanie się na logice biznesowej, podczas gdy platforma Azure zajmie się infrastrukturą potrzebne do uruchamiania i skalowania aplikacji. Niektóre kluczowe funkcje usługi App Service Web Apps:
 
--   Optymalizacja metodyki DevOps (ciągłej integracji i dostarczania, wiele środowisk, A / B, testowanie, obsługi skryptów)
+- Optymalizacja metodyki DevOps (ciągła integracja i dostarczanie, wielu środowisk, A / B, testowanie, obsługi skryptów).
 
--   Globalne skalowanie i wysoka dostępność
+- Skala globalna i o wysokiej dostępności.
 
--   Połączenia z platformami SaaS i danych lokalnych
+- Połączenia z platformami SaaS i danych w środowisku lokalnym.
 
--   Zabezpieczeń i zgodności
+- Zabezpieczenia i zgodność.
 
--   integracja z programem Visual Studio
+- Integracja z programem Visual Studio.
 
-Usługa aplikacji Azure jest najlepszym rozwiązaniem w przypadku większości aplikacji sieci web. Wdrażania i zarządzania są zintegrowane z platformy witryny można szybko skalować do obsługi obciążeń dużego natężenia ruchu sieciowego i zapewnia wysoką dostępność, Menedżera ruchu i równoważenie obciążenia wbudowanych. Można przenieść istniejących witryn w usłudze Azure App Service, łatwo za pomocą narzędzia migracji w trybie online użyć aplikacji open source z galerii aplikacji sieci Web lub Utwórz nową witrynę za pomocą framework i narzędzia wybranych przez użytkownika. Funkcja zadań Webjob ułatwia Dodaj zadanie w tle przetwarzania do aplikacji sieci web usługi aplikacji.
+Usługa Azure App Service jest najlepszym wyborem dla większości aplikacji sieci web. Wdrażanie i zarządzanie są zintegrowane z platformą, witryny można szybko skalować w celu obsługi obciążeń z dużym ruchem i wbudowanego obciążenia równoważenia i usługa traffic manager zapewniają wysoką dostępność. Można przenieść istniejące witryny w usłudze Azure App Service za pomocą narzędzia do migracji online, korzystanie z aplikacji typu open source z galerii aplikacji sieci Web lub Utwórz nową witrynę przy użyciu framework i wybranych przez siebie narzędzi. Funkcja zadań Webjob ułatwia dodawanie zadania w tle przetwarzania do aplikacji sieci web usługi App Service.
 
-### <a name="containers-and-azure-container-service"></a>Kontenery i usługi kontenera platformy Azure
+### <a name="azure-kubernetes-service"></a>Usługa Azure Kubernetes Service
 
-Usługa kontenera platformy Azure uproszczono do tworzenia, konfigurowania i zarządzania klastrem maszyn wirtualnych, które są wstępnie skonfigurowane do uruchamiania aplikacji konteneryzowanych. Używa zoptymalizowane konfiguracji popularnych narzędzi planowania i aranżacji open source. Dzięki temu można korzystać z istniejących umiejętności lub sięgać duży i rosnącym treści doświadczenia społeczności, wdrażanie i zarządzanie nimi na podstawie kontenera aplikacji w systemie Microsoft Azure.
+Usługa Azure Kubernetes Service (AKS) zarządza hostowanym środowiskiem Kubernetes, pozwalając szybko i łatwo wdrażać konteneryzowane aplikacje i Zarządzaj bez doświadczenia z organizowaniem kontenerów. Eliminuje to również obciążenia i konserwacją dzięki inicjowania obsługi administracyjnej, aktualizowaniu i skalowaniu zasobów na żądanie bez przełączania aplikacji w trybie offline.
 
-Usługa kontenera platformy Azure uproszczono do tworzenia, konfigurowania i zarządzania klastrem maszyn wirtualnych, które są wstępnie skonfigurowane do uruchamiania aplikacji konteneryzowanych. Używa zoptymalizowane konfiguracji popularnych narzędzi planowania i aranżacji open source. Dzięki temu można korzystać z istniejących umiejętności lub sięgać duży i rosnącym treści doświadczenia społeczności, wdrażanie i zarządzanie nimi na podstawie kontenera aplikacji w systemie Microsoft Azure.
+Usługa AKS zmniejsza złożoność i nakłady operacyjne związane z zarządzaniem klastrem Kubernetes, przenosząc znaczną część tej odpowiedzialności na platformę Azure. Jako hostowana usługa Kubernetes, platforma Azure obsługuje krytyczne zadania, takie jak monitorowanie kondycji i konserwacja. Ponadto płacisz tylko za węzły agenta w ramach Twoich klastrów, nie za wzorce. Jako zarządzana usługa Kubernetes AKS zapewnia:
 
-Jeden cel usługi kontenera platformy Azure jest zapewnienie środowiska macierzystego kontenera za pomocą open source, narzędzia i technologie, które są obecnie popularnością wśród klientów firmy Microsoft. W tym celu usługi kontenera platformy Azure udostępnia standardowe punkty końcowe interfejsu API dla programu orchestrator wybrany (DC/OS, Docker Swarm lub Kubernetes). Korzystając z tych punktów końcowych, można wykorzystać dowolne oprogramowanie, które jest w stanie rozmowie z tych punktów końcowych. Na przykład w przypadku punktu końcowego Docker Swarm można użyć Docker interfejsu wiersza polecenia (CLI). Dla platformy DC/OS możesz wybrać DCOS interfejsu wiersza polecenia. Dla Kubernetes możesz wybrać kubectl. Rysunek 11-1 pokazuje, jak te punkty końcowe umożliwiają zarządzanie klastrów kontenera.
+- Automatyczne uaktualnienia wersji platformy Kubernetes i stosowanie poprawek.
+- Łatwe skalowanie klastra.
+- Samonaprawialną hostowaną warstwę kontroli (wzorce).
+- Oszczędności — płacisz tylko za uruchomione węzły puli agentów.
 
-![](./media/image11-1.png)
-
-**Rysunek 11-1.** Zarządzanie usługi kontenera platformy Azure z punktami końcowymi Docker, Kubernetes lub DC/OS.
+Platforma Azure obsługuje zarządzanie węzłami w klastrze AKS nie trzeba ręcznie wykonywać wielu zadań, takich jak Uaktualnianie klastra. Ponieważ platforma Azure wykonuje te krytyczne zadania konserwacji za Ciebie, AKS nie zapewnia bezpośredni dostęp (takich jak przy użyciu protokołu SSH) do klastra.
 
 ### <a name="azure-service-fabric"></a>Azure Service Fabric
 
-Sieć szkieletowa usług jest dobrym rozwiązaniem, jeśli tworzysz nową aplikację lub ponownego zapisywania istniejących aplikacji przy użyciu architektury mikrousługi. Aplikacje, które działają w udostępnionej puli maszyn, można rozpoczęcie od czegoś małego i powiększania na ogromną skalę z setkami lub tysiącami maszyn zgodnie z potrzebami. Usługi stanowej ułatwiają spójnie i niezawodne przechowywanie stanu aplikacji i sieci szkieletowej usług automatycznie zarządza partycjonowania usługi, skalowanie i dostępność dla Ciebie. Sieć szkieletowa usług obsługuje również WebAPI z interfejsu Open Web dla platformy .NET (OWIN) i ASP.NET Core. W porównaniu do usługi App Service, usługi sieć szkieletowa dostępne są także więcej kontroli nad lub bezpośredni dostęp do podstawowej infrastruktury. Możesz zdalnym do serwerów lub skonfigurować zadania uruchamiania serwera.
+Service Fabric to dobry wybór, jeśli tworzysz nową aplikację lub ponownego tworzenia istniejącej aplikacji opartych na architekturze mikrousług. Wdrożenie aplikacji działających w ramach współużytkowanej puli maszyn, można zacząć od małej i do ogromnej skali z setkami lub tysiącami maszyn, zgodnie z potrzebami. Usługi stanowe ułatwiają spójne i niezawodne przechowywanie stanu aplikacji, a Usługa Service Fabric automatycznie zarządza partycjonowaniem usługi, skalowaniem i dostępnością za Ciebie. Usługa Service Fabric obsługuje także interfejs WebAPI z Open Web Interface for .NET (OWIN) i ASP.NET Core. W porównaniu do usługi App Service, Service Fabric udostępnia więcej kontroli nad lub bezpośredni dostęp do podstawowej infrastruktury. Możesz zdalnym do serwerów lub skonfigurowania zadań uruchamiania serwera.
 
-### <a name="azure-virtual-machines"></a>Maszyny wirtualne platformy Azure
+### <a name="azure-virtual-machines"></a>Usługa Azure Virtual Machines
 
-Jeśli masz istniejącą aplikację wymagające istotne zmiany do uruchamiania w usługi aplikacji lub usługi sieci szkieletowej, można wybrać w celu uproszczenia migracji do chmury maszyn wirtualnych. Jednak poprawnie konfigurowania, zabezpieczania i obsługa maszyn wirtualnych wymaga znacznie więcej czasu i doświadczenia IT w porównaniu do usługi Azure App Service i sieci szkieletowej usług. Planując maszynach wirtualnych platformy Azure, upewnij się, że należy wziąć pod uwagę nakładu rutynowej konserwacji wymagane do stosowania poprawek, aktualizacji i zarządzania środowiskiem maszyny Wirtualnej. Maszyny wirtualne platformy Azure jest infrastruktury jako — usługa (IaaS), a usługi aplikacji i sieci szkieletowej usług platformy jako — usługa (Paas).
+Jeśli masz istniejącą aplikację, która wymagałaby istotnych zmian do uruchamiania w usłudze App Service lub Service Fabric, możesz wybrać maszyny wirtualne w celu uproszczenia migracji do chmury. Jednak poprawne skonfigurowanie, zabezpieczenie i konserwowanie maszyn wirtualnych wymaga znacznie więcej czasu i doświadczenia w zakresie IT w porównaniu do usługi Azure App Service i Service Fabric. Jeśli rozważasz usługę Azure Virtual Machines, upewnij się, że należy wziąć pod uwagę rutynowej konserwacji pracę wymaganą do dostarczenia poprawek, aktualizacji, a także zarządzać środowiskiem maszyny Wirtualnej. Usługa Azure Virtual Machines to infrastruktura jako usługa (IaaS), usługi App Service i Service Fabric są PaaS.
 
 #### <a name="feature-comparison"></a>Porównanie funkcji
 
-| Usługi aplikacji — funkcja | Sieci szkieletowej usług | Maszyny wirtualne |
-|---------|----------|----------|
-| Niemal natychmiastowe wdrożenia | X | X | |
-| Skalowanie w górę do większych maszyn bez ponownego wdrażania | X | X | |
-| Wystąpienia udostępniania zawartości i konfiguracji. konieczność ponownego wdrażania lub ponownej konfiguracji podczas skalowania | X | X | |
-| Wiele środowisk wdrażania (produkcji, przemieszczania) | X | X | |
-| Automatyczne zarządzanie aktualizacjami systemu operacyjnego | X | | |
-| Bezproblemowe przełączenie między platformami 32/x 64 | X | | |
-| Wdrażanie kodu za pomocą narzędzia Git, FTP | X | | X |
-| Wdrażanie kodu przy WebDeploy | X | | X |
-| Wdrażanie kodu z programem TFS | X | X | X |
-| Witryna sieci web hosta lub warstwy usług sieci web w wielowarstwowych architektury | X | X | X |
-| Dostęp do usług Azure, takich jak usługi Service Bus, magazynu, baza danych SQL | X | X | X |
-| Zainstaluj wszelkie niestandardowe MSI | | X | X |
+| Funkcja                                                                                    | Usługa App Service | Kontenery (AKS) | Usługa Service Fabric | Maszyna wirtualna |
+| ------------------------------------------------------------------------------------------ | ----------- | ---------------- | -------------- | --------------- |
+| Niemal natychmiastowe wdrażanie                                                                    | X           | X                | X              |                 |
+| Skalowanie na większe maszyny bez ponownego wdrażania                                               | X           | X                | X              |                 |
+| Wystąpienia współużytkują zawartość i konfigurację; nie ma potrzeby ponownego wdrażania lub ponownie podczas skalowania | X           | X                | X              |                 |
+| Wiele środowisk wdrażania (produkcyjne, przejściowe)                                     | X           | X                | X              |                 |
+| Automatyczne zarządzanie aktualizacjami systemu operacyjnego                                                             | X           | X                |                |                 |
+| Bezproblemowe przełączanie między platformami 64-32-bitowe                                             | X           | X                |                |                 |
+| Wdrażanie kodu za pomocą narzędzia Git, FTP                                                                  | X           | X                |                | X               |
+| Wdrażanie kodu za pomocą WebDeploy                                                                 | X           | X                |                | X               |
+| Wdrażanie kodu za pomocą serwera TFS                                                                       | X           | X                | X              | X               |
+| Sieć web hosta lub warstwy usługi sieci web architektury wielowarstwowej                                    | X           | X                | X              | X               |
+| Uzyskiwanie dostępu do usług platformy Azure, takich jak Service Bus, Storage, SQL Database                              | X           | X                | X              | X               |
+| Instalowanie dowolnego niestandardowego pakietu MSI                                                                     |             | X                | X              | X               |
 
-## <a name="logical-processes"></a>Procesy logiczne
+## <a name="logical-processes"></a>Logiczne procesów
 
-Poszczególnych logicznej procesów, które mogą być całkowicie niezależna od pozostałej części aplikacji może niezależnie wdrożyć do usługi Azure Functions w sposób "pliki". Środowisko Azure Functions umożliwia tylko napisać kod, potrzebnych dla danego problemu, nie martwiąc się o aplikacji lub infrastruktury, aby go uruchomić. Można wybierać spośród różnych języków programowania, w tym C\#, F\#, Node.js, Python i PHP, co umożliwia pobranie najbardziej produktywności języka zadania wykonywanego. Podobnie jak większość rozwiązań w chmurze płacisz tylko przez czas użytkowania i ufasz usługi Azure Functions można skalować zgodnie z potrzebami.
+Poszczególne logiczne procesów, które mogą być odłączone od reszty aplikacji można wdrażać niezależnie do usługi Azure Functions w sposób "bezserwerowych". Usługa Azure Functions umożliwia wystarczy napisać kod, potrzebne dla danego problemu, nie martwiąc się o aplikację lub infrastrukturę, aby go uruchomić. Możesz korzystać z różnych języków programowania, w tym C\#, F\#, Node.js, Python czy PHP, dzięki czemu możesz wybrać najbardziej wydajny język dla zadania pod ręką. Jak większość rozwiązań opartych na chmurze możesz płacić tylko za używane czasu używania i ufasz usługi Azure Functions, aby skalować w górę odpowiednio do potrzeb.
 
 ## <a name="data"></a>Dane
 
-System Azure oferuje szeroką gamę opcji przechowywania danych, dzięki czemu aplikacja może używać dostawcy danych odpowiednie dla danego danych.
+Platforma Azure oferuje szeroką gamę opcji przechowywania danych, dzięki czemu aplikacja może używać dostawcy danych odpowiednie dla danego danych.
 
-W przypadku danych transakcyjnych, relacyjnych baz danych SQL Azure są najlepszym rozwiązaniem. W przypadku wysokiej wydajności odczytu głównie danych pamięci podręcznej Redis obsługiwana przez bazę danych SQL Azure jest dobrym rozwiązaniem.
+W przypadku danych transakcyjnych, relacyjnej bazy danych SQL Azure są najlepszym rozwiązaniem. Dla o wysokiej wydajności odczytu głównie danych usługi Redis cache wspierana przez usługi Azure SQL Database jest doskonałym rozwiązaniem.
 
-Dane JSON bez struktury mogą być przechowywane w różnych sposobów, z kolumny bazy danych SQL do obiektów blob lub tabel w magazynie Azure DocumentDB. Z nich usługa DocumentDB oferuje najlepsze funkcjach zapytań i jest to zalecana opcja, w przypadku dużej liczby dokumentów opartych na formacie JSON, które muszą obsługiwać zapytań.
+Dane JSON bez określonej struktury mogą być przechowywane w na różne sposoby: z kolumny bazy danych SQL do obiektów blob lub tabel w usłudze Azure Storage do bazy danych DocumentDB. Z tych opcji baza danych DocumentDB oferuje najlepsze funkcje zapytań i jest to zalecana opcja, w przypadku dużej liczby opartych na formacie JSON dokumentów, które muszą obsługiwać zapytań.
 
-Przejściowa polecenia - lub opartego na zdarzeniach danych używane do organizowania zachowanie aplikacji można użyć usługi Azure Service Bus lub kolejek magazynu Azure. Azure Storage Bus zapewnia większą elastyczność i jest zalecany usługi nieuproszczony obsługi wiadomości w obrębie i między aplikacjami.
+Przejściowy polecenia lub zdarzenie oparte na danych, używane do organizowania zachowanie aplikacji, można użyć usługi Azure Service Bus lub kolejek usługi Azure Storage. Usługa Azure Storage Bus oferuje bardziej elastyczne i jest zalecana dla nietrywialnymi obsługi komunikatów w ramach i między aplikacjami.
 
 ## <a name="architecture-recommendations"></a>Zalecenia dotyczące architektury
 
-Wymagania dotyczące aplikacji powinny definiować jego architektury. Brak dostępnych wielu różnych usług Azure, wybierając właściwą jest bardzo ważne. Firma Microsoft oferuje galerii architektury odwołania do identyfikowania typowe architektury zoptymalizowane pod kątem typowych scenariuszy. Architektura referencyjna, że mapy do wymagań aplikacji lub na najmniej zapewnia punkt początkowy może powiązać.
+Twoja aplikacja powinna uwarunkowania jej architektury. Dostępne są różne usługi platformy Azure. Właściwy wybór jest ważnym krokiem. Firma Microsoft oferuje galerii architektury referencyjne, aby ułatwić identyfikację typowej architektury zoptymalizowane pod kątem typowych scenariuszy. Może się okazać, architektury referencyjnej, mapy do wymagań aplikacji lub na co najmniej oferuje początkowy punkt.
 
-Rysunek 11-2 przedstawiono przykład architekturę odwołania. Ten schemat przedstawia podejście zalecane architektura Sitecore witrynie system zarządzania zawartością zoptymalizowane pod kątem obrotu.
+Rysunek 11-2 przedstawiono przykład architektury referencyjnej. Ten diagram w tym artykule opisano podejście zalecaną architekturę Sitecore strony internetowej systemu zarządzania zawartością zoptymalizowane pod kątem marketing.
 
 ![](./media/image11-2.png)
 
-**Rysunek 11-2.** Sitecore marketing architektura referencyjna witryny sieci Web.
+**Rysunek 11-1.** Oprogramowanie Sitecore marketingu architektury referencyjnej witryny sieci Web.
 
-**Odwołania — zalecenia dotyczące hostingu Azure**
+**Odwołania — zalecenia dotyczące hostingu platformy Azure**
 
--   Architectures\ rozwiązania Azure
-    <https://azure.microsoft.com/solutions/architecture/>
+- Architectures\ rozwiązanie na platformie Azure
+  <https://azure.microsoft.com/solutions/architecture/>
 
--   Guide\ deweloperów platformy Azure
-    <https://azure.microsoft.com/campaigns/developer-guide/>
+- Guide\ dla deweloperów platformy Azure
+  <https://azure.microsoft.com/campaigns/developer-guide/>
 
--   Co to jest usługa aplikacji Azure? \
-    <https://docs.microsoft.com/azure/app-service/app-service-value-prop-what-is>
+- Overview\ aplikacji sieci Web
+  <https://docs.microsoft.com/azure/app-service/app-service-web-overview>
 
--   Usługa aplikacji Azure, maszyny wirtualne i usługi sieć szkieletowa Comparison\ usługi w chmurze
-    <https://docs.microsoft.com/azure/app-service-web/choose-web-site-cloud-service-vm>
+- Usługa Azure App Service, maszyny wirtualne, usługi Service Fabric i Cloud Services comparison\
+  <https://docs.microsoft.com/azure/app-service-web/choose-web-site-cloud-service-vm>
+
+- Wprowadzenie do usługi Azure Kubernetes Service (AKS) \
+  <https://docs.microsoft.com/azure/aks/intro-kubernetes>
 
 >[!div class="step-by-step"]
 [Poprzednie](development-process-for-azure.md)

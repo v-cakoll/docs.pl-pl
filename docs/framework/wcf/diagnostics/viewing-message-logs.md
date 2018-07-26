@@ -2,36 +2,36 @@
 title: Wyświetlanie dzienników komunikatów
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
-ms.openlocfilehash: 4fa205b52e3d19d2421d93297b5689422775f719
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 025d4020002a56deb9d5b8a2fe628f50cabad4d3
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33802980"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198513"
 ---
 # <a name="viewing-message-logs"></a>Wyświetlanie dzienników komunikatów
-W tym temacie opisano sposób wyświetlania dzienników komunikatów.  
+W tym temacie opisano, jak można wyświetlić dzienniki komunikatów.  
   
-## <a name="viewing-message-logs-in-the-service-trace-viewer"></a>Wyświetlanie komunikatów dzienniki w podglądzie śledzenia usługi  
- Wiadomość zostanie on przekształcony w trakcie przetwarzania przez usługę WCF. W związku z tym rejestrowany komunikat odzwierciedla tylko treści wiadomości w momencie zarejestrowania go, nie zawartości w sieci.  
+## <a name="viewing-message-logs-in-the-service-trace-viewer"></a>Wyświetlanie komunikatu dzienniki w podglądzie śledzenia usług  
+ Wiadomość zostanie przekształcona jest przetwarzany przez architekturę WCF. W związku z tym rejestrowane komunikat odzwierciedla tylko treści wiadomości w momencie zarejestrowania go, nie zawartość w sieci.  
   
- Ponieważ dane wyjściowe rejestrowania komunikatów nie ma relacji do formatu transferu wiadomości, zawsze rejestrowania komunikatów generuje dekodowane wiadomości. Jeśli zostały skonfigurowane prawidłowo rejestrowanie komunikatów, wszelkie zarejestrowany komunikat należy w postaci zwykłego tekstu. Na przykład format (zwykły tekst) zarejestrowane komunikaty, nie ma wpływu na użycie binarnego kodera wiadomości.  
+ Ponieważ dane wyjściowe rejestrowanie komunikatów nie ma relacji z formatem transferu wiadomości, zawsze rejestrowania komunikatów generuje zdekodowany komunikat. Jeśli zostały skonfigurowane prawidłowo rejestrowanie komunikatów, wszystkie zarejestrowane komunikaty powinna być w postaci zwykłego tekstu. Na przykład format (zwykły tekst) zarejestrowane komunikaty, nie oddziałuje użycie kodera binarnego komunikatów.  
   
- Dane wyjściowe XmlWriterTraceListener jest plik, który zawiera sekwencję fragmenty XML. Należy pamiętać, że plik nie jest prawidłowym plikiem XML. Zaleca się, że używasz [narzędzia podglądu śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) do wyświetlania plików dziennika komunikatów. Aby uzyskać więcej informacji na temat korzystania z tego narzędzia, zobacz [przy użyciu przeglądarki śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
+ Dane wyjściowe XmlWriterTraceListener jest plik, który zawiera sekwencję fragmenty XML. Należy pamiętać, że plik nie jest prawidłowym plikiem XML. Zaleca się, że używasz [narzędzie śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) do wyświetlania plików dziennika komunikatów. Aby uzyskać więcej informacji na temat używania tego narzędzia, zobacz [za pomocą przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów z](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
   
- W podglądzie śledzenia usługi, komunikaty są wyświetlane w **komunikat** kartę. Komunikaty, które spowodowały lub które są związane z, błąd przetwarzania są wyróżnione żółty (poziom ostrzeżenia) albo czerwony (poziom błędu), w zależności od ważności błędu. Dwukrotne kliknięcie komunikatu powoduje wyświetlenie komunikatów śledzenia w kontekście przetwarzania żądania.  
+ W podglądzie śledzenia usługi wiadomości są wymienione w **komunikat** kartę. Komunikaty, które spowodowały lub są związane, błąd przetwarzania są wyróżnione na żółto (poziom ostrzeżenia) lub czerwony (poziom błędu), w zależności od ważności błędu. Dwukrotne kliknięcie komunikatu, wywołuje śledzenie komunikatów w kontekście przetwarzania żądania.  
   
 > [!NOTE]
 >  Jeśli komunikat nie ma nagłówka, nie `<header/>` tag jest rejestrowane.  
   
-## <a name="viewing-messages-logged-by-a-client-a-relay-and-a-service"></a>Wyświetlanie informacji zarejestrowanych przez klienta, przekazywania i usługi  
- W środowisku może znajdować się klienta, który wysyła komunikat do przekazywania, który następnie przekazuje komunikat do usługi. Jeśli rejestrowanie komunikatów jest włączona na wszystkich trzech lokalizacji, a wszystkie trzy dzienniki wiadomości są wyświetlane w [narzędzia podglądu śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) jednocześnie, wymiany komunikatów dziennika są nieprawidłowo wyświetlane. Jest to spowodowane `CorrelationId` i `ActivityId` w nagłówku wiadomości nie są unikatowe dla każdej pary send-receive.  
+## <a name="viewing-messages-logged-by-a-client-a-relay-and-a-service"></a>Wyświetl komunikaty zarejestrowane przez klienta, wystąpienie usługi Relay i usługi  
+ Środowisko może zawierać klienta, który wysyła wiadomość do przekazywania, który następnie przekazuje komunikat do usługi. Gdy rejestrowanie komunikatów jest włączona na wszystkich trzech lokalizacji, a wszystkie trzy dzienników komunikatów są wyświetlane w [narzędzie śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) jednocześnie wymianę dziennik komunikatów będzie niepoprawnie renderowany. Jest to spowodowane `CorrelationId` i `ActivityId` w nagłówku komunikatu nie są unikatowe dla każdej pary send-receive.  
   
- Jedną z następujących metod służy do rozwiązania tego problemu.  
+ Aby rozwiązać ten problem, można użyć jednego z następujących metod.  
   
--   Tylko wyświetlić dwie z trzech dzienników wiadomości w [narzędzia podglądu śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) w dowolnym momencie.  
+-   Wyświetlać tylko dwa z trzech dzienników komunikatów w [narzędzie śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) w dowolnym momencie.  
   
--   Jeśli należy wyświetlić wszystkie trzy dzienniki w [narzędzia podglądu śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) w tym samym czasie, można zmodyfikować usługi przekazywania przez utworzenie nowej <xref:System.ServiceModel.Channels.Message> wystąpienia. To wystąpienie powinno być kopią treści komunikatu przychodzącego, a także wszystkich nagłówków z wyjątkiem `ActivityId` i `Action` nagłówków. Poniższy przykład kodu pokazuje, jak to zrobić.  
+-   Czy należy wyświetlać wszystkie trzy dzienniki w [narzędzie śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) w tym samym czasie można zmodyfikować usługi przekazywania przez utworzenie nowego <xref:System.ServiceModel.Channels.Message> wystąpienia. To wystąpienie powinno być kopią treści komunikatu przychodzącego, a także wszystkie nagłówki z wyjątkiem `ActivityId` i `Action` nagłówków. Poniższy przykład kodu pokazuje, jak to zrobić.  
   
 ```  
 Message outgoingMessage = Message.CreateMessage(incomingMessage.Version, incomingMessage.Headers.Action, incomingMessage.GetReaderAtBodyContents());  
@@ -47,18 +47,18 @@ incomingMessage.Headers[i].Name.Equals("Action", StringComparison.InvariantCultu
 }  
 ```  
   
-## <a name="exceptional-cases-for-inaccurate-message-logging-content"></a>Wyjątki dla zawartości rejestrowania komunikatów niedokładne  
- W następujących warunkach komunikaty są rejestrowane może nie być dokładnie reprezentację strumień oktetu obecny umieszczonego w.  
+## <a name="exceptional-cases-for-inaccurate-message-logging-content"></a>Wyjątkowych przypadkach komunikat niedokładne rejestrowanie zawartości  
+ W następujących warunkach rejestrowane komunikaty mogą nie być dokładnie reprezentacja strumień oktetu się na łączu.  
   
--   Dla klasy BasicHttpBinding, koperty nagłówki są rejestrowane na komunikaty przychodzące w / adresowania/Brak przestrzeni nazw.  
+-   Dla BasicHttpBinding, koperty nagłówki są rejestrowane dla przychodzących komunikatów w / adresowania/Brak przestrzeni nazw.  
   
--   Mogą być niezgodne białe znaki.  
+-   Może się nie zgadzać białych znaków.  
   
--   Dla komunikatów przychodzących pustych elementów może być reprezentowany inaczej. Na przykład \<tag >\</tagu > zamiast \<tagu / >  
+-   Dla wiadomości przychodzących pustych elementów może być reprezentowany inaczej. Na przykład \<tagu >\</tagu > zamiast \<tagu / >  
   
--   Gdy rejestrowanie znanych danych osobowych jest wyłączone przez domyślne lub enableLoggingKnownPii jawne ustawienie = "true".  
+-   Kiedy znane rejestrowanie dane osobowe jest wyłączone przez domyślne lub enableLoggingKnownPii jawne ustawienie = "true".  
   
--   Kodowanie jest włączona dla transformacji UTF-8.  
+-   Kodowanie jest włączona dla przekształcania w formacie UTF-8.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  

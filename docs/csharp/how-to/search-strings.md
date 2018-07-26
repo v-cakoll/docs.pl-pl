@@ -7,73 +7,73 @@ helpviewer_keywords:
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
 ms.openlocfilehash: d1e132093cc59c7b41a3f7d5b522fca2e224f779
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219043"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961222"
 ---
 # <a name="how-to-search-strings"></a>Porady: wyszukiwanie ciągów
 
-Dwie główne strategii służy do wyszukiwania tekstu w ciągach. Metody <xref:System.String> klasy, wyszukaj określony tekst. Wyrażenia regularne wyszukiwania wzorców w tekście.
+Aby wyszukać tekst w ciągach, można użyć dwóch strategii głównego. Metody <xref:System.String> Wyszukiwanie klas dla określonego tekstu. Wyrażenia regularne wyszukiwanie wzorców tekstu.
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-[Ciąg](../language-reference/keywords/string.md) typu, który jest aliasem dla <xref:System.String?displayProperty=nameWithType> klasy, udostępnia kilka metod przydatne wyszukiwania zawartości ciągu. Między nimi są <xref:System.String.Contains%2A>, <xref:System.String.StartsWith%2A>, <xref:System.String.EndsWith%2A>, <xref:System.String.IndexOf%2A>, <xref:System.String.LastIndexOf%2A>. <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> Klasa udostępnia bogate słownictwa wyszukiwania wzorców w tekście. W tym artykule dowiesz się, te techniki i Wybieranie najlepszej metody do własnych potrzeb.
+[Ciąg](../language-reference/keywords/string.md) typ, który jest aliasem dla <xref:System.String?displayProperty=nameWithType> klasy, udostępnia wiele użytecznych metod wyszukiwać zawartość ciągu. Między nimi są <xref:System.String.Contains%2A>, <xref:System.String.StartsWith%2A>, <xref:System.String.EndsWith%2A>, <xref:System.String.IndexOf%2A>, <xref:System.String.LastIndexOf%2A>. <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> Klasa oferuje rozbudowane słownictwa wyszukiwanie wzorców tekstu. W tym artykule dowiesz się, te techniki oraz sposobu wybierania najlepszą metodę do własnych potrzeb.
 
 ## <a name="does-a-string-contain-text"></a>Ciąg zawiera tekst?
 
-<xref:System.String.Contains%2A?displayProperty=nameWithType>, <xref:System.String.StartsWith%2A?displayProperty=nameWithType> i <xref:System.String.EndsWith%2A?displayProperty=nameWithType> metody wyszukiwanie ciągu dla określonego tekstu. W poniższym przykładzie przedstawiono każdej z tych metod i zmiany, która używa wyszukiwania bez uwzględniania wielkości liter:
+<xref:System.String.Contains%2A?displayProperty=nameWithType>, <xref:System.String.StartsWith%2A?displayProperty=nameWithType> i <xref:System.String.EndsWith%2A?displayProperty=nameWithType> metody wyszukują ciągu dla określonego tekstu. Poniższy przykład przedstawia każdego z tych metod oraz zmianę, która korzysta z search nie rozróżnia wielkości liter:
 
 [!code-csharp-interactive[search strings using methods](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#1)]
 
-Pokazano w powyższym przykładzie ważnym dotyczące korzystania z tych metod. Podczas wyszukiwania jest **z uwzględnieniem wielkości liter** domyślnie. Możesz użyć <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> wartości wyliczenia, aby określić wyszukiwania bez uwzględniania wielkości liter.
+Pokazano w powyższym przykładzie to ważny punkt dotyczące korzystania z tych metod. Podczas wyszukiwania jest **liter** domyślnie. Możesz użyć <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> wartość wyliczenia, aby określić wyszukiwania bez uwzględniania wielkości liter.
 
-## <a name="where-does-the-sought-text-occur-in-a-string"></a>Gdzie występuje poszukiwaną tekst w ciągu
+## <a name="where-does-the-sought-text-occur-in-a-string"></a>Gdzie występuje tekstu używanych w ciągu
 
-<xref:System.String.IndexOf%2A> i <xref:System.String.LastIndexOf%2A> metody również wyszukać tekst w ciągach. Te metody zwracają lokalizacji poszukiwanego tekstu. Jeśli tekst nie zostanie odnaleziony, zwracają `-1`. Poniższy przykład przedstawia wyszukiwanie imię i nazwisko wystąpienia wyrazu "metody" i wyświetla tekst między nimi.
+<xref:System.String.IndexOf%2A> i <xref:System.String.LastIndexOf%2A> metody również wyszukać tekst w ciągach. Te metody zwracają lokalizacja tekstu niestabilna. Jeśli tekst nie zostanie znaleziona, zwracają one `-1`. Poniższy przykład pokazuje, wyszukaj pierwsze i ostatnie wystąpienie wyrazu "metody" i wyświetla tekst między.
   
 [!code-csharp-interactive[search strings for indices](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#2)]
 
-## <a name="finding-specific-text-using-regular-expressions"></a>Wyszukiwanie tekstu określonego za pomocą wyrażeń regularnych
+## <a name="finding-specific-text-using-regular-expressions"></a>Określony tekst wyszukiwania za pomocą wyrażeń regularnych
 
-<xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> Klasa może być używana do wyszukiwania ciągów. Te wyszukiwania można dostosować w zakresie w złożoności z proste wzorce tekstu skomplikowane.
+<xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> Klasa może być używana do wyszukiwania ciągów. Wyszukiwanie można dostosować w zakresie złożonością, od prostych do wzorców tekstu skomplikowane.
 
-Poniższy przykład kodu wyszukuje słowo "" lub "ich" w zdaniu, bez uwzględnienia wielkości liter. Statyczna metoda <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> wykonuje wyszukiwanie. Możesz nadać jej ciągu wyszukiwania i wzorzec wyszukiwania. W takim przypadku trzeci argument określa wyszukiwania bez uwzględniania wielkości liter. Aby uzyskać więcej informacji, zobacz <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.  
+Poniższy przykładowy kod wyszukuje słowo "" lub "ich" w zdaniu, bez uwzględnienia wielkości liter. Metoda statyczna <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> wykonuje wyszukiwanie. Możesz nadać mu ciąg do wyszukiwania i wzorzec wyszukiwania. W tym przypadku trzeci argument określa wyszukiwanie bez uwzględniania wielkości liter. Aby uzyskać więcej informacji, zobacz <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.  
 
-Wzorzec wyszukiwania opisuje tekst wyszukiwania. W poniższej tabeli opisano każdy element wzorzec wyszukiwania. (W poniższej tabeli używa jednego `\` którego należy zastosować ucieczkę jako `\\` w ciągu języka C#).
+Wzorzec wyszukiwania w tym artykule opisano tekst, który możesz wyszukać. W poniższej tabeli opisano każdy element wzorzec wyszukiwania. (W poniższej tabeli używa pojedynczego `\` muszą być wyjściowym jako `\\` w ciągu języka C#).
 
 | wzorzec  | Znaczenie     |
 | -------- |-------------|
-| programu      | zgodny z tekstem "" |
-| (eir)?   | dopasowania 0 lub 1 wystąpieniem "eir" |
+| W      | tekst "" |
+| (eir)?   | dopasowania 0 lub 1 wystąpienie "eir" |
 | \s       | Dopasowuje znak odstępu    |
   
 [!code-csharp-interactive[Search using regular expressions](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#3)]
   
 > [!TIP]
-> `string` Metody są zazwyczaj lepiej opcje podczas wyszukiwania dokładnie taki ciąg znaków. Wyrażenia regularne są lepiej podczas wyszukiwania dla niektórych wzorzec jest ciąg źródła.
+> `string` Metody są zazwyczaj lepiej opcje podczas wyszukiwania dokładnie taki ciąg znaków. Wyrażenia regularne, są lepiej podczas wyszukiwania dla niektórych wzorzec jest ciągiem źródła.
 
 ## <a name="does-a-string-follow-a-pattern"></a>Ciąg jest zgodna z wzorcem?
 
-Poniższy kod używa wyrażeń regularnych do walidacji format każdego ciągu w tablicy. Sprawdzanie poprawności musi mieć każdy ciąg formę numer telefonu, w którym trzech grup cyfr są oddzielone kreskami, pierwsze dwie grupy zawierają trzech cyfr i trzecia grupa zawiera cztery cyfry. Wzorzec wyszukiwania używa wyrażenia regularnego `^\\d{3}-\\d{3}-\\d{4}$`. Aby uzyskać więcej informacji, zobacz [język wyrażeń regularnych — podręczny wykaz](../../standard/base-types/regular-expression-language-quick-reference.md).
+W poniższym kodzie użyto wyrażenia regularne, aby sprawdzić poprawność format każdego ciągu w tablicy. Weryfikacja wymaga każdego ciągu formularza numer telefonu, w którym trzy grupy cyfry są oddzielone kreskami, pierwsze dwie grupy zawierać trzy cyfry, a trzecia grupa zawiera cztery cyfry. Wzorzec wyszukiwania używa wyrażenia regularnego `^\\d{3}-\\d{3}-\\d{4}$`. Aby uzyskać więcej informacji, zobacz [język wyrażeń regularnych — podręczny wykaz](../../standard/base-types/regular-expression-language-quick-reference.md).
 
 | wzorzec  | Znaczenie                             |
 | -------- |-------------------------------------|
-| ^        | Dopasowuje początek ciągu |
-| \d{3}    | Dopasowuje dokładnie 3 znaki cyfrę  |
-| -        | Dopasowuje '-' znaków           |
-| \d{3}    | Dopasowuje dokładnie 3 znaki cyfrę  |
-| -        | Dopasowuje '-' znaków           |
-| \d{4}    | Dopasowuje dokładnie 4 cyfry znaków  |
+| ^        | pasuje do początku ciągu |
+| \d{3}    | Dopasowuje dokładnie 3 znaki cyfr  |
+| -        | pasuje do "-" znaków           |
+| \d{3}    | Dopasowuje dokładnie 3 znaki cyfr  |
+| -        | pasuje do "-" znaków           |
+| \d{4}    | Dopasowuje dokładnie 4 znaki cyfr  |
 | $        | Dopasowuje koniec ciągu       |
 
 
 [!code-csharp-interactive[csProgGuideStrings#4](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#4)]
 
-Ten wzorzec wyszukiwania pojedynczego odpowiada wielu prawidłowe ciągi. Wyrażenia regularne są lepiej wyszukiwania lub sprawdzania poprawności wzorca zamiast jeden ciąg tekstowy.
+Ten wzorzec wyszukiwania pojedynczego pasuje wiele prawidłowe ciągi. Wyrażenia regularne są lepiej wyszukiwania lub przeprowadzić walidacji względem wzorca, a nie jeden ciąg tekstowy.
 
-Możesz spróbować te przykłady, sprawdzając kod w naszym [repozytorium GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Można również pobrać próbki [jako plik zip](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
+Możesz wypróbować te przykłady, patrząc na kod w naszym [repozytorium GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Można również pobrać przykłady [jako plik zip](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
 ## <a name="see-also"></a>Zobacz też  
 
@@ -81,6 +81,6 @@ Możesz spróbować te przykłady, sprawdzając kod w naszym [repozytorium GitHu
  [Ciągi](../programming-guide/strings/index.md)  
  [LINQ i ciągi](../programming-guide/concepts/linq/linq-and-strings.md)   
  <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>     
- [.NET framework — nieprawidłowe wyrażenia](../../standard/base-types/regular-expressions.md)   
+ [Wyrażeń regularnych programu .NET framework](../../standard/base-types/regular-expressions.md)   
  [Język wyrażeń regularnych — podręczny wykaz](../../standard/base-types/regular-expression-language-quick-reference.md)   
- [Najlepsze rozwiązania dotyczące używania ciągów w .NET](../../standard/base-types/best-practices-strings.md)  
+ [Najlepsze rozwiązania dotyczące używania ciągów w programie .NET](../../standard/base-types/best-practices-strings.md)  

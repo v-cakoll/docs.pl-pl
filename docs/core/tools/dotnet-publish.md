@@ -1,15 +1,15 @@
 ---
-title: polecenie - .NET Core interfejsu wiersza polecenia Opublikuj DotNet
-description: Polecenie Publikuj dotnet publikuje projektu platformy .NET Core w katalogu.
+title: polecenia — interfejs wiersza polecenia platformy .NET Core publikowania DotNet
+description: Polecenia publikowania dotnet publikuje projekt .NET Core w katalogu.
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
 ms.openlocfilehash: 38224aa8472f99df107e523667e18892384a20b0
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696663"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39220675"
 ---
 # <a name="dotnet-publish"></a>Publikowanie DotNet
 
@@ -17,11 +17,11 @@ ms.locfileid: "34696663"
 
 ## <a name="name"></a>Nazwa
 
-`dotnet publish` -Pakietów aplikacji i jego zależności do folderu wdrożenia z systemem hostingu.
+`dotnet publish` -Pakietów aplikacji oraz jego zależności w folderze w celu wdrożenia systemu macierzystego.
 
 ## <a name="synopsis"></a>Streszczenie
 
-# <a name="net-core-21tabnetcore21"></a>[Oprogramowanie .NET core 2.1](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[.NET core 2.1](#tab/netcore21)
 ```
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-build] [--no-dependencies]
     [--no-restore] [-o|--output] [-r|--runtime] [--self-contained] [-v|--verbosity] [--version-suffix]
@@ -43,14 +43,14 @@ dotnet publish [-h|--help]
 
 ## <a name="description"></a>Opis
 
-`dotnet publish` kompiluje aplikacji odczytuje za pośrednictwem jego zależności, określona w pliku projektu i publikuje Wynikowy zestaw plików w katalogu. Dane wyjściowe zawierają następujące zasoby:
+`dotnet publish` kompiluje aplikację, czyta za pośrednictwem jego zależności, które określono w pliku projektu i publikuje Wynikowy zestaw plików w katalogu. Dane wyjściowe obejmują następujące zasoby:
 
-* Kod języka (IL) w zestawie z pośredniego *dll* rozszerzenia.
+* Pośredni Language (IL) kod w zestawie przy użyciu *dll* rozszerzenia.
 * *. deps.json* pliku, który zawiera wszystkie zależności projektu.
-* *. runtime.config.json* pliku, który określa udostępnionego środowisko uruchomieniowe, które oczekuje aplikacji, a także innych opcji konfiguracji dla środowiska uruchomieniowego (na przykład typ kolekcji pamięci).
-* Zależności aplikacji, które są kopiowane z pamięci podręcznej NuGet w folderze wyjściowym.
+* *. runtime.config.json* pliku, który określa udostępnionego środowiska uruchomieniowego, która oczekuje aplikacji, a także inne opcje konfiguracji środowiska uruchomieniowego (na przykład typ kolekcji wyrzucania elementów).
+* Zależności aplikacji, które są kopiowane z pamięcią podręczną programu NuGet do folderu wyjściowego.
 
-`dotnet publish` Danych wyjściowych polecenia jest gotowy do wdrożenia do obsługi systemu (na przykład serwer, PC, Mac, laptop) do wykonania. Jest jedynym sposobem wspieranych do przygotowania aplikacji do wdrożenia. W zależności od typu wdrożenia, który określa projekt system obsługujący może lub nie może być .NET Core współużytkowany środowiska uruchomieniowego na nim zainstalowany. Aby uzyskać więcej informacji, zobacz [wdrażanie aplikacji .NET Core](../deploying/index.md). Do struktury katalogu opublikowanej aplikacji, zobacz [struktury katalogów](/aspnet/core/hosting/directory-structure).
+`dotnet publish` Danych wyjściowych polecenia jest gotowa do wdrożenia systemu macierzystego (na przykład na serwerze, PC, Mac, laptop) do wykonania. Jest oficjalnie obsługiwana jedynie do przygotowania aplikacji do wdrożenia. W zależności od typu wdrożenia, który określa projektu systemu macierzystego może być lub może nie mieć platformy .NET Core udostępnionego środowiska uruchomieniowego na nim zainstalowany. Aby uzyskać więcej informacji, zobacz [wdrożenie aplikacji programu .NET Core](../deploying/index.md). Struktura katalogów opublikowanej aplikacji, można zobaczyć [strukturę katalogów](/aspnet/core/hosting/directory-structure).
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
@@ -58,11 +58,11 @@ dotnet publish [-h|--help]
 
 `PROJECT`
 
-Projekt do opublikowania. Jeśli nie zostanie określony, domyślnie do bieżącego katalogu.
+Projekt do opublikowania. Jeśli nie zostanie określony, jego wartość domyślna w bieżącym katalogu.
 
 ## <a name="options"></a>Opcje
 
-# <a name="net-core-21tabnetcore21"></a>[Oprogramowanie .NET core 2.1](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[.NET core 2.1](#tab/netcore21)
 
 `-c|--configuration {Debug|Release}`
 
@@ -70,44 +70,44 @@ Definiuje konfigurację kompilacji. Wartość domyślna to `Debug`.
 
 `-f|--framework <FRAMEWORK>`
 
-Publikowanie aplikacji dla określonego [platformy docelowej](../../standard/frameworks.md). Należy określić w pliku projektu platformy docelowej.
+Publikuje aplikację w określonym [platformę docelową](../../standard/frameworks.md). W pliku projektu, należy określić platformę docelową.
 
 `--force`
 
-Wymusza wszystkie zależności, które można rozwiązać, nawet jeśli ostatniego przywracanie zakończyło się pomyślnie. Określenie ta flaga jest taka sama jak usuwanie *project.assets.json* pliku.
+Wymusza wszystkie zależności rozwiązany, nawet wtedy, gdy ostatnie przywracanie zakończyło się pomyślnie. Określanie ta flaga jest taka sama jak usuwanie *project.assets.json* pliku.
 
 `-h|--help`
 
-Drukuje krótkich pomocy dla polecenia.
+Drukuje krótki pomoc dotyczącą polecenia.
 
 `--manifest <PATH_TO_MANIFEST_FILE>`
 
-Określa jeden lub kilka [target manifestów](../deploying/runtime-store.md) na potrzeby trim zestaw pakietów opublikowane z aplikacją. Plik manifestu jest częścią dane wyjściowe [ `dotnet store` polecenia](dotnet-store.md). Aby określić wiele manifestów, Dodaj `--manifest` opcji dla każdego manifestu. Ta opcja jest dostępna, począwszy od zestawu SDK programu .NET Core 2.0.
+Określa jeden lub kilka [docelowe manifesty](../deploying/runtime-store.md) na potrzeby trim zbiór pakiety opublikowane przy użyciu aplikacji. Plik manifestu jest częścią danych wyjściowych [ `dotnet store` polecenia](dotnet-store.md). Aby określić wiele manifestów, Dodaj `--manifest` opcji dla każdego manifestu. Ta opcja jest dostępna, począwszy od programu .NET Core 2.0 SDK.
 
 `--no-build`
 
-Nie Skompiluj projekt przed opublikowaniem. Niejawne także ustawia `--no-restore` flagi.
+Nie da się skompilować projektu przed opublikowaniem. Ustawia ona również niejawne `--no-restore` flagi.
 
 `--no-dependencies`
 
-Ignoruje odwołania projektu do projektu i przywraca tylko projektu głównego.
+Ignoruje odwołania projekt projekt i przywraca jedynie projektu głównego.
 
 `--no-restore`
 
-Podczas uruchamiania polecenia przywracania niejawne nie jest wykonywana.
+Przy uruchamianiu polecenia niejawne przywracania nie jest wykonywany.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-Określa ścieżkę do katalogu wyjściowego. Jeśli nie zostanie określony, domyślnie *./bin/[configuration]/[framework]/publish/* wdrożenia zależne od framework lub *./bin/[configuration]/[framework]/[runtime]/publish/* dla Samodzielne wdrożenia.
-W przypadku względną ścieżkę do katalogu wyjściowego, generowane jest względną wobec lokalizacji pliku projektu, aby bieżący katalog roboczy nie.
+Określa ścieżkę do katalogu wyjściowego. Jeśli nie zostanie określony, jego wartość domyślna to *./bin/[configuration]/[framework]/publish/* wdrożenia zależny od struktury lub *./bin/[configuration]/[framework]/[runtime]/publish/* dla niezależne wdrożenia.
+Jeśli ścieżka jest względna, katalog wyjściowy, generowany jest względem lokalizacji pliku projektu, aby bieżący katalog roboczy nie.
 
 `--self-contained`
 
-Publikuje środowiska uruchomieniowego .NET Core z aplikacji, więc środowisko uruchomieniowe nie musi być zainstalowany na komputerze docelowym. Jeśli określono identyfikator środowiska uruchomieniowego, jego wartość domyślna to `true`. Aby uzyskać więcej informacji na temat różne typy wdrożenia, zobacz [wdrażanie aplikacji .NET Core](../deploying/index.md).
+Publikuje środowisko uruchomieniowe platformy .NET Core za pomocą aplikacji, dzięki czemu środowisko uruchomieniowe nie muszą być zainstalowane na komputerze docelowym. Jeśli określono identyfikator środowiska uruchomieniowego, jego wartość domyślna to `true`. Aby uzyskać więcej informacji na temat różne typy wdrożenia, zobacz [wdrażanie aplikacji .NET Core](../deploying/index.md).
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-Publikowanie aplikacji dla danego środowiska uruchomieniowego. To jest używany podczas tworzenia [niezależne wdrożenia (SCD)](../deploying/index.md#self-contained-deployments-scd). Aby uzyskać listę identyfikatorów środowiska uruchomieniowego (RID), zobacz [katalogu RID](../rid-catalog.md). Domyślnie nie jest publikowanie [wdrożenia framework zależne (stacje)](../deploying/index.md#framework-dependent-deployments-fdd).
+Publikuje aplikację dla danego środowiska uruchomieniowego. To jest używany podczas tworzenia [niezależna wdrożenia (— SCD)](../deploying/index.md#self-contained-deployments-scd). Aby uzyskać listę identyfikatorów środowisk uruchomieniowych (RID), zobacz [katalogu RID](../rid-catalog.md). Domyślnie nie jest publikowanie [zależny od struktury wdrożenia (stacje)](../deploying/index.md#framework-dependent-deployments-fdd).
 
 `-v|--verbosity <LEVEL>`
 
@@ -115,7 +115,7 @@ Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m
 
 `--version-suffix <VERSION_SUFFIX>`
 
-Definiuje sufiksem wersji, aby zastąpić gwiazdka (`*`) w polu wersja pliku projektu.
+Określa sufiks wersji zastąpić gwiazdka (`*`) w polu wersja pliku projektu.
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
@@ -125,40 +125,40 @@ Definiuje konfigurację kompilacji. Wartość domyślna to `Debug`.
 
 `-f|--framework <FRAMEWORK>`
 
-Publikowanie aplikacji dla określonego [platformy docelowej](../../standard/frameworks.md). Należy określić w pliku projektu platformy docelowej.
+Publikuje aplikację w określonym [platformę docelową](../../standard/frameworks.md). W pliku projektu, należy określić platformę docelową.
 
 `--force`
 
-Wymusza wszystkie zależności, które można rozwiązać, nawet jeśli ostatniego przywracanie zakończyło się pomyślnie. Określenie ta flaga jest taka sama jak usuwanie *project.assets.json* pliku.
+Wymusza wszystkie zależności rozwiązany, nawet wtedy, gdy ostatnie przywracanie zakończyło się pomyślnie. Określanie ta flaga jest taka sama jak usuwanie *project.assets.json* pliku.
 
 `-h|--help`
 
-Drukuje krótkich pomocy dla polecenia.
+Drukuje krótki pomoc dotyczącą polecenia.
 
 `--manifest <PATH_TO_MANIFEST_FILE>`
 
-Określa jeden lub kilka [target manifestów](../deploying/runtime-store.md) na potrzeby trim zestaw pakietów opublikowane z aplikacją. Plik manifestu jest częścią dane wyjściowe [ `dotnet store` polecenia](dotnet-store.md). Aby określić wiele manifestów, Dodaj `--manifest` opcji dla każdego manifestu. Ta opcja jest dostępna, począwszy od zestawu SDK programu .NET Core 2.0.
+Określa jeden lub kilka [docelowe manifesty](../deploying/runtime-store.md) na potrzeby trim zbiór pakiety opublikowane przy użyciu aplikacji. Plik manifestu jest częścią danych wyjściowych [ `dotnet store` polecenia](dotnet-store.md). Aby określić wiele manifestów, Dodaj `--manifest` opcji dla każdego manifestu. Ta opcja jest dostępna, począwszy od programu .NET Core 2.0 SDK.
 
 `--no-dependencies`
 
-Ignoruje odwołania projektu do projektu i przywraca tylko projektu głównego.
+Ignoruje odwołania projekt projekt i przywraca jedynie projektu głównego.
 
 `--no-restore`
 
-Podczas uruchamiania polecenia przywracania niejawne nie jest wykonywana.
+Przy uruchamianiu polecenia niejawne przywracania nie jest wykonywany.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-Określa ścieżkę do katalogu wyjściowego. Jeśli nie zostanie określony, domyślnie *./bin/[configuration]/[framework]/publish/* wdrożenia zależne od framework lub *./bin/[configuration]/[framework]/[runtime]/publish/* dla Samodzielne wdrożenia.
-W przypadku względną ścieżkę do katalogu wyjściowego, generowane jest względną wobec lokalizacji pliku projektu, aby bieżący katalog roboczy nie.
+Określa ścieżkę do katalogu wyjściowego. Jeśli nie zostanie określony, jego wartość domyślna to *./bin/[configuration]/[framework]/publish/* wdrożenia zależny od struktury lub *./bin/[configuration]/[framework]/[runtime]/publish/* dla niezależne wdrożenia.
+Jeśli ścieżka jest względna, katalog wyjściowy, generowany jest względem lokalizacji pliku projektu, aby bieżący katalog roboczy nie.
 
 `--self-contained`
 
-Publikuje środowiska uruchomieniowego .NET Core z aplikacji, więc środowisko uruchomieniowe nie musi być zainstalowany na komputerze docelowym. Jeśli określono identyfikator środowiska uruchomieniowego, jego wartość domyślna to `true`. Aby uzyskać więcej informacji na temat różne typy wdrożenia, zobacz [wdrażanie aplikacji .NET Core](../deploying/index.md).
+Publikuje środowisko uruchomieniowe platformy .NET Core za pomocą aplikacji, dzięki czemu środowisko uruchomieniowe nie muszą być zainstalowane na komputerze docelowym. Jeśli określono identyfikator środowiska uruchomieniowego, jego wartość domyślna to `true`. Aby uzyskać więcej informacji na temat różne typy wdrożenia, zobacz [wdrażanie aplikacji .NET Core](../deploying/index.md).
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-Publikowanie aplikacji dla danego środowiska uruchomieniowego. To jest używany podczas tworzenia [niezależne wdrożenia (SCD)](../deploying/index.md#self-contained-deployments-scd). Aby uzyskać listę identyfikatorów środowiska uruchomieniowego (RID), zobacz [katalogu RID](../rid-catalog.md). Domyślnie nie jest publikowanie [wdrożenia framework zależne (stacje)](../deploying/index.md#framework-dependent-deployments-fdd).
+Publikuje aplikację dla danego środowiska uruchomieniowego. To jest używany podczas tworzenia [niezależna wdrożenia (— SCD)](../deploying/index.md#self-contained-deployments-scd). Aby uzyskać listę identyfikatorów środowisk uruchomieniowych (RID), zobacz [katalogu RID](../rid-catalog.md). Domyślnie nie jest publikowanie [zależny od struktury wdrożenia (stacje)](../deploying/index.md#framework-dependent-deployments-fdd).
 
 `-v|--verbosity <LEVEL>`
 
@@ -166,7 +166,7 @@ Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m
 
 `--version-suffix <VERSION_SUFFIX>`
 
-Definiuje sufiksem wersji, aby zastąpić gwiazdka (`*`) w polu wersja pliku projektu.
+Określa sufiks wersji zastąpić gwiazdka (`*`) w polu wersja pliku projektu.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -176,24 +176,24 @@ Definiuje konfigurację kompilacji. Wartość domyślna to `Debug`.
 
 `-f|--framework <FRAMEWORK>`
 
-Publikowanie aplikacji dla określonego [platformy docelowej](../../standard/frameworks.md). Należy określić w pliku projektu platformy docelowej.
+Publikuje aplikację w określonym [platformę docelową](../../standard/frameworks.md). W pliku projektu, należy określić platformę docelową.
 
 `-h|--help`
 
-Drukuje krótkich pomocy dla polecenia.
+Drukuje krótki pomoc dotyczącą polecenia.
 
 `--manifest <PATH_TO_MANIFEST_FILE>`
 
-Określa jeden lub kilka [target manifestów](../deploying/runtime-store.md) na potrzeby trim zestaw pakietów opublikowane z aplikacją. Plik manifestu jest częścią dane wyjściowe [ `dotnet store` polecenia](dotnet-store.md). Aby określić wiele manifestów, Dodaj `--manifest` opcji dla każdego manifestu. Ta opcja jest dostępna, począwszy od zestawu SDK programu .NET Core 2.0.
+Określa jeden lub kilka [docelowe manifesty](../deploying/runtime-store.md) na potrzeby trim zbiór pakiety opublikowane przy użyciu aplikacji. Plik manifestu jest częścią danych wyjściowych [ `dotnet store` polecenia](dotnet-store.md). Aby określić wiele manifestów, Dodaj `--manifest` opcji dla każdego manifestu. Ta opcja jest dostępna, począwszy od programu .NET Core 2.0 SDK.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-Określa ścieżkę do katalogu wyjściowego. Jeśli nie zostanie określony, domyślnie *./bin/[configuration]/[framework]/publish/* wdrożenia zależne od framework lub *./bin/[configuration]/[framework]/[runtime]/publish/* dla Samodzielne wdrożenia.
-W przypadku względną ścieżkę do katalogu wyjściowego, generowane jest względną wobec lokalizacji pliku projektu, aby bieżący katalog roboczy nie.
+Określa ścieżkę do katalogu wyjściowego. Jeśli nie zostanie określony, jego wartość domyślna to *./bin/[configuration]/[framework]/publish/* wdrożenia zależny od struktury lub *./bin/[configuration]/[framework]/[runtime]/publish/* dla niezależne wdrożenia.
+Jeśli ścieżka jest względna, katalog wyjściowy, generowany jest względem lokalizacji pliku projektu, aby bieżący katalog roboczy nie.
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-Publikowanie aplikacji dla danego środowiska uruchomieniowego. To jest używany podczas tworzenia [niezależne wdrożenia (SCD)](../deploying/index.md#self-contained-deployments-scd). Aby uzyskać listę identyfikatorów środowiska uruchomieniowego (RID), zobacz [katalogu RID](../rid-catalog.md). Domyślnie nie jest publikowanie [wdrożenia framework zależne (stacje)](../deploying/index.md#framework-dependent-deployments-fdd).
+Publikuje aplikację dla danego środowiska uruchomieniowego. To jest używany podczas tworzenia [niezależna wdrożenia (— SCD)](../deploying/index.md#self-contained-deployments-scd). Aby uzyskać listę identyfikatorów środowisk uruchomieniowych (RID), zobacz [katalogu RID](../rid-catalog.md). Domyślnie nie jest publikowanie [zależny od struktury wdrożenia (stacje)](../deploying/index.md#framework-dependent-deployments-fdd).
 
 `-v|--verbosity <LEVEL>`
 
@@ -201,33 +201,33 @@ Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m
 
 `--version-suffix <VERSION_SUFFIX>`
 
-Definiuje sufiksem wersji, aby zastąpić gwiazdka (`*`) w polu wersja pliku projektu.
+Określa sufiks wersji zastąpić gwiazdka (`*`) w polu wersja pliku projektu.
 
 ---
 
 ## <a name="examples"></a>Przykłady
 
-Publikuj projekt w bieżącym katalogu:
+Opublikuj projekt w bieżącym katalogu:
 
 `dotnet publish`
 
-Publikowanie aplikacji przy użyciu pliku określonego projektu:
+Publikowanie aplikacji przy użyciu pliku projektu:
 
 `dotnet publish ~/projects/app1/app1.csproj`
 
-Opublikować projekt w bieżącym katalogu, używając `netcoreapp1.1` framework:
+Opublikuj projekt w bieżącym katalogu przy użyciu `netcoreapp1.1` framework:
 
 `dotnet publish --framework netcoreapp1.1`
 
-Publikowanie bieżącej aplikacji przy użyciu `netcoreapp1.1` framework i środowiska uruchomieniowego dla `OS X 10.10` (musi zawierać ten identyfikatorów RID w pliku projektu).
+Publikowanie bieżącej aplikacji przy użyciu `netcoreapp1.1` struktura i środowisko uruchomieniowe dla `OS X 10.10` (musi zawierać ten identyfikatorów RID w pliku projektu).
 
 `dotnet publish --framework netcoreapp1.1 --runtime osx.10.11-x64`
 
-Publikowanie bieżącej aplikacji, ale nie należy przywracać projektu do projektu (P2P) odwołań, po prostu główny projekt podczas operacji przywracania (.NET Core SDK 2.0 i nowsze wersje):
+Publikowanie bieżącej aplikacji, ale nie zostaną przywrócone do projektu (P2P) odwołań, po prostu projekt główny podczas operacji przywracania (.NET Core SDK 2.0 i nowsze wersje):
 
 `dotnet publish --no-dependencies`
 
 ## <a name="see-also"></a>Zobacz także
 
 * [Platformy docelowe](../../standard/frameworks.md)
-* [Wykaz identyfikatora środowiska uruchomieniowego (RID)](../rid-catalog.md)
+* [Katalog identyfikatora środowiska uruchomieniowego (RID)](../rid-catalog.md)

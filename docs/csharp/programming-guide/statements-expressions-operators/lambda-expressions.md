@@ -8,17 +8,18 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: f20ba6845a6a84a57fa7636355d08b2f4e5cea2a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e043903647075587d1e7eec21c9a7b04f596dbf6
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340648"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37937052"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Wyrażenia lambda (Przewodnik programowania w języku C#)
-Wyrażenie lambda jest [funkcji anonimowej](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) używanej do tworzenia [delegaty](../../../csharp/programming-guide/delegates/using-delegates.md) lub [drzewo wyrażeń](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) typów. Za pomocą wyrażenia lambda można pisać funkcje lokalne, które mogą być przekazywane jako argumenty lub zwracane jako wartość wywołania funkcji. Wyrażenia lambda są szczególnie przydatne w przypadku pisania wyrażeń zapytań w języku LINQ.  
+
+Wyrażenie lambda jest [funkcja anonimowa](anonymous-methods.md) używanego do utworzenia [delegatów](../delegates/using-delegates.md) lub [drzewa wyrażeń](../concepts/expression-trees/index.md) typów. Za pomocą wyrażenia lambda można pisać funkcje lokalne, które mogą być przekazywane jako argumenty lub zwracane jako wartość wywołania funkcji. Wyrażenia lambda są szczególnie przydatne w przypadku pisania wyrażeń zapytań w języku LINQ.
   
- Aby utworzyć wyrażenie lambda, należy określić parametry wejściowe (jeśli istnieją) po lewej stronie operatora lambda [ => ](../../../csharp/language-reference/operators/lambda-operator.md), i umieszcza blok wyrażenia lub instrukcji z drugiej strony. Na przykład, wyrażenie lambda `x => x * x` określa parametr o nazwie `x` i zwraca wartość `x` kwadratów. To wyrażenie można przypisać do typu delegata, tak jak pokazano w poniższym przykładzie:  
+Aby utworzyć wyrażenie lambda, należy określić parametry wejściowe (jeśli istnieją) po lewej stronie operatora lambda [ => ](../../../csharp/language-reference/operators/lambda-operator.md), i umieścić blok wyrażenia lub instrukcji po drugiej stronie. Na przykład, wyrażenie lambda `x => x * x` określa parametr o nazwie `x` i zwraca wartość `x` kwadratów. To wyrażenie można przypisać do typu delegata, tak jak pokazano w poniższym przykładzie:  
   
 ```csharp  
 delegate int del(int i);  
@@ -46,20 +47,21 @@ namespace ConsoleApplication1
 }  
 ```  
   
- `=>` Operator ma takie samo pierwszeństwo jako przypisania (`=`) i jest [prawo asocjacyjnej](../../../csharp/programming-guide/statements-expressions-operators/operators.md) (zobacz sekcję "Kojarzenie" w artykule operatory).  
+ `=>` Operator ma ten sam priorytet, jako przydział (`=`) i jest [łączność do prawej strony](../../../csharp/programming-guide/statements-expressions-operators/operators.md) (zobacz sekcję "Łączność" artykułu operatory).  
   
- Wyrażenia lambda są używane w oparte na metodzie [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wysyła zapytanie jako argumenty do metod operator standardowej kwerendy, takich jak <xref:System.Linq.Enumerable.Where%2A>.  
+ Wyrażenia lambda są używane w oparte na metodzie [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] jako argumenty do standardowych metod operatorów kwerendy takich zapytań jak <xref:System.Linq.Enumerable.Where%2A>.  
   
- Jeśli używasz składni na podstawie metody do wywołania <xref:System.Linq.Enumerable.Where%2A> metody w <xref:System.Linq.Enumerable> klasy (tak jak w [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] do obiektów i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]) parametr jest typem obiektu delegowanego <xref:System.Func%602?displayProperty=nameWithType>. Użycie wyrażenia lambda jest najwygodniejszym sposobem tworzenia delegata. Podczas wywoływania tej samej metody, na przykład <xref:System.Linq.Queryable?displayProperty=nameWithType> klasy (tak jak w [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]), a następnie typ parametru jest <xref:System.Linq.Expressions.Expression?displayProperty=nameWithType>< Func\> Func w przypadku dowolnego delegatów Func o do szesnastu parametrów wejściowych. I znowu wyrażenie lambda jest tylko bardzo zwięzłym sposobem konstruowania takiego drzewa wyrażeń. Zezwalaj na wyrażeń lambda `Where` wywołań wyglądać podobnie, chociaż w rzeczywistości różni się typ obiektu utworzone na podstawie lambda.  
+ Kiedy używasz składni oparte na metodzie do wywołania <xref:System.Linq.Enumerable.Where%2A> method in Class metoda <xref:System.Linq.Enumerable> klasy (tak jak w [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] do obiektów i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]) parametr jest typem delegowanym <xref:System.Func%602?displayProperty=nameWithType>. Użycie wyrażenia lambda jest najwygodniejszym sposobem tworzenia delegata. Po wywołaniu tej samej metody, na przykład <xref:System.Linq.Queryable?displayProperty=nameWithType> klasy (tak jak w [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]), a następnie typ parametru jest <xref:System.Linq.Expressions.Expression?displayProperty=nameWithType>< Func\> gdzie Func jest dowolnym delegatem Func o długości do szesnastu parametrów wejściowych. I znowu wyrażenie lambda jest tylko bardzo zwięzłym sposobem konstruowania takiego drzewa wyrażeń. Dzięki wyrażeniom lambda `Where` wywołania wyglądają podobnie, choć w rzeczywistości typ obiektu utworzonego z lambdy jest inny.  
   
- W poprzednim przykładzie parametr typu wejściowy powiadomienie, że podpis delegata ma jedną niejawnie wpisanych `int`i zwraca `int`. Wyrażenia lambda można przekonwertować na delegata tego typu, ponieważ obejmuje ona również jeden parametr wejściowy (`x`) i które kompilator niejawnie przekonwertować na typ wartości zwracanej `int`. (Wnioskowanie typów omówiono bardziej szczegółowo w następnych sekcjach). Kiedy delegat jest wywołany za pomocą parametru wejściowego 5, zwraca wynik 25.  
+ W poprzednim przykładzie, zwróć uwagę, że podpis delegata ma jeden niejawnie wpisany parametr wejściowy typu `int`i zwraca `int`. Wyrażenie lambda można przekonwertować na delegata tego typu, ponieważ także ma jeden parametr wejściowy (`x`) i zwracana wartość, którą kompilator może niejawnie przekonwertować na typ `int`. (Wnioskowanie typów omówiono bardziej szczegółowo w następnych sekcjach). Kiedy delegat jest wywołany za pomocą parametru wejściowego 5, zwraca wynik 25.  
   
  Wyrażenia lambda nie są dozwolone w lewej części [jest](../../../csharp/language-reference/keywords/is.md) lub [jako](../../../csharp/language-reference/keywords/as.md) operatora.  
   
- Wszystkie ograniczenia, które dotyczą metod anonimowych, dotyczą także wyrażeń lambda. Aby uzyskać więcej informacji, zobacz [metod anonimowych](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md).  
+ Wszystkie ograniczenia, które dotyczą metod anonimowych, dotyczą także wyrażeń lambda. Aby uzyskać więcej informacji, zobacz [anonimowymi](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md).  
   
-## <a name="expression-lambdas"></a>Lambdy wyrażeń  
- Wyrażenia lambda za pomocą wyrażenia po prawej stronie = > — operator jest wywoływana *wyrażenia lambda*. Wyrażenia lambda są często używane w konstrukcji [drzew wyrażeń](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b). Lambda wyrażenia zwraca wynik wyrażenia i ma następującą podstawową formę:  
+## <a name="expression-lambdas"></a>Lambdy wyrażeń
+
+ Wyrażenie lambda z wyrażeniem po prawej stronie = > — operator jest wywoływana *wyrażenia lambda*. Lambdy wyrażeń są często używane w konstrukcji [drzew wyrażeń](../concepts/expression-trees/index.md). Lambda wyrażenia zwraca wynik wyrażenia i ma następującą podstawową formę:
   
 ```csharp
 (input-parameters) => expression
@@ -99,7 +101,7 @@ namespace ConsoleApplication1
  Lambd instrukcji, podobnie jak metod anonimowych, nie można używać do tworzenia drzew wyrażeń.  
   
 ## <a name="async-lambdas"></a>Lambdy asynchroniczne  
- Można jednak łatwo tworzyć wyrażenia lambda i instrukcje zawierające przetwarzania asynchronicznego przy użyciu [async](../../../csharp/language-reference/keywords/async.md) i [await](../../../csharp/language-reference/keywords/await.md) słów kluczowych. Na przykład w poniższym przykładzie formularzy systemu Windows zawiera program obsługi zdarzeń, który wywołuje i oczekujące na metody asynchronicznej `ExampleMethodAsync`.  
+ Możesz łatwo tworzyć wyrażenia lambda i instrukcje, które zawierają Przetwarzanie asynchroniczne przy użyciu [async](../../../csharp/language-reference/keywords/async.md) i [await](../../../csharp/language-reference/keywords/await.md) słów kluczowych. Na przykład, poniższy przykład Windows Forms zawiera program obsługi zdarzeń, który wywołuje i czeka na metodę asynchroniczną `ExampleMethodAsync`.  
   
 ```csharp
 public partial class Form1 : Form  
@@ -124,7 +126,7 @@ public partial class Form1 : Form
 }  
 ```
 
- Można dodać ten sam program obsługi zdarzeń, używając lambdy asynchronicznej. Aby dodać ten program obsługi, Dodaj `async` modyfikator przed listy parametrów lambda, jak przedstawiono na poniższym przykładzie.  
+ Można dodać ten sam program obsługi zdarzeń, używając lambdy asynchronicznej. Aby dodać ten program obsługi `async` modyfikator przed listą parametrów lambda, co ilustruje poniższy przykład.  
   
 ```csharp  
 public partial class Form1 : Form  
@@ -148,47 +150,47 @@ public partial class Form1 : Form
 }  
 ```  
 
- Aby uzyskać więcej informacji o sposobie tworzenia i używania metody asynchroniczne, zobacz [programowanie asynchroniczne z async i await](../../../csharp/programming-guide/concepts/async/index.md).  
+ Aby uzyskać więcej informacji na temat sposobu tworzenia i używania metod asynchronicznych, zobacz [Asynchronous Programming with async i await](../../../csharp/programming-guide/concepts/async/index.md).  
   
 ## <a name="lambdas-with-the-standard-query-operators"></a>Lambdy ze standardowymi operatorami zapytań  
- Wiele standardowych operatorów zapytań ma parametr wejściowy, którego typ jest jednym z <xref:System.Func%602> rodzina delegatów. Te delegaty używają parametrów typu użycia, aby zdefiniować liczbę i typy parametrów wejściowych oraz zwracany typ delegata. `Func` Obiekty delegowane są bardzo przydatne w przypadku hermetyzując wyrażenia zdefiniowane przez użytkownika, które są stosowane do każdego elementu w zestawie danych źródłowych. Na przykład rozważmy następujący typ delegata:  
+ Wiele operatorów standardowej kwerendy posiada parametr wejściowy, którego typ jest jednym z <xref:System.Func%602> rodziny ogólnych delegatów. Te delegaty używają parametrów typu użycia, aby zdefiniować liczbę i typy parametrów wejściowych oraz zwracany typ delegata. `Func` Obiekty delegowane są bardzo przydatne do hermetyzowania wyrażeń zdefiniowanych przez użytkownika, które są stosowane do każdego elementu w zestawie danych źródłowych. Na przykład rozważmy następujący typ delegata:  
   
 ```csharp  
 public delegate TResult Func<TArg0, TResult>(TArg0 arg0)  
 ```  
   
- Delegat można wdrożyć jako `Func<int,bool> myFunc` gdzie `int` jest parametrem wejściowym i `bool` jest zwracana wartość. Wartość zwracana jest zawsze określona w ostatnim parametrze typu. `Func<int, string, bool>` Definiuje delegata z dwóch parametrów wejściowych, `int` i `string`i typ zwracany `bool`. Następujące `Func` delegata, gdy jest wywoływana, zwraca wartość PRAWDA lub FAŁSZ, aby wskazać, czy parametr wejściowy jest równa 5:  
+ Delegat może być utworzone jako `Func<int,bool> myFunc` gdzie `int` jest parametrem wejściowym i `bool` jest wartością zwracaną. Wartość zwracana jest zawsze określona w ostatnim parametrze typu. `Func<int, string, bool>` Definiuje delegata z dwoma parametrami wejściowymi `int` i `string`, a zwracany typ `bool`. Następujące `Func` delegata, gdy jest wywoływany, zwróci wartość true lub false, aby wskazać, czy parametr wejściowy jest równy 5:  
   
 ```csharp  
 Func<int, bool> myFunc = x => x == 5;  
 bool result = myFunc(4); // returns false of course  
 ```  
   
- Może też podawać wyrażenia lambda, gdy typ argumentu jest `Expression<Func>`, na przykład w przypadku standardowych operatorów zapytań zdefiniowane w System.Linq.Queryable. Po określeniu `Expression<Func>` argument, wyrażenie lambda zostanie skompilowany na drzewo wyrażenia.  
+ Można również dostarczyć Wyrażenie lambda, gdy typ argumentu jest `Expression<Func>`, na przykład w standardowe operatory zapytań zdefiniowanych w System.Linq.Queryable. Po określeniu `Expression<Func>` argument, lambda będzie podawana do drzewa wyrażenie.  
   
- Operator zapytania standardowe <xref:System.Linq.Enumerable.Count%2A> metody, jest następujący:  
+ Operator standardowego zapytania, <xref:System.Linq.Enumerable.Count%2A> metody jest następująca:  
   
 ```csharp  
 int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };  
 int oddNumbers = numbers.Count(n => n % 2 == 1);  
 ```  
   
- Kompilator może wywnioskować typ parametru wejściowego, ale można go również określić w sposób jawny. To wyrażenie lambda określonej liczby tych liczb całkowitych (`n`) który podzielona przez dwa mieć reszty 1.  
+ Kompilator może wywnioskować typ parametru wejściowego, ale można go również określić w sposób jawny. To konkretne wyrażenie lambda liczy te liczby całkowite (`n`) które podzielone przez dwa dają resztę 1.  
   
- Następujący wiersz kodu tworzy sekwencję, który zawiera wszystkie elementy w `numbers` tablicy, które są do lewej strony 9, ponieważ jest to pierwszy numer w sekwencji, które nie spełniają warunek:  
+ Następujący wiersz kodu stworzy sekwencję która zawiera wszystkie elementy w `numbers` tablicy, które są po lewej stronie 9, ponieważ jest to pierwszy numer w sekwencji, która nie spełnia warunku:  
   
 ```csharp  
 var firstNumbersLessThan6 = numbers.TakeWhile(n => n < 6);  
 ```  
   
- W tym przykładzie pokazano, jak określić wiele parametrów danych wejściowych, umieszczając je w nawiasach. Metoda zwraca wszystkie elementy w tablicy liczb, dopóki nie napotka liczby, której wartość jest mniejsza niż jej pozycja. Nie należy mylić operatora lambda (`=>`) z operatorem większe lub równe (`>=`).  
+ W tym przykładzie pokazano, jak określić wiele parametrów danych wejściowych, umieszczając je w nawiasach. Metoda zwraca wszystkie elementy w tablicy liczb, dopóki nie napotka liczby, której wartość jest mniejsza niż jej pozycja. Nie należy mylić operatora lambda (`=>`) z operatorem większe niż lub równe (`>=`).  
   
 ```csharp  
 var firstSmallNumbers = numbers.TakeWhile((n, index) => n >= index);  
 ```  
   
 ## <a name="type-inference-in-lambdas"></a>Wnioskowanie typów w wyrażeniach lambda  
- Podczas pisania wyrażeń lambda często nie trzeba określać typu parametrów wejściowych, ponieważ kompilator może wywnioskować typ na podstawie treści wyrażenia lambda, typu delegata parametru i innych czynników, tak jak opisano w specyfikacji języka C#. Dla większości standardowych operatorów zapytań pierwszy element danych wejściowych jest typem elementów w sekwencji źródłowej. Tak, wyszukując `IEnumerable<Customer>`, następnie wejściowego zmiennej jest wywnioskowany jako `Customer` obiektu, co oznacza, że masz dostęp do właściwości i metod:  
+ Podczas pisania wyrażeń lambda często nie trzeba określać typu parametrów wejściowych, ponieważ kompilator może wywnioskować typ na podstawie treści wyrażenia lambda, typu delegata parametru i innych czynników, tak jak opisano w specyfikacji języka C#. Dla większości standardowych operatorów zapytań pierwszy element danych wejściowych jest typem elementów w sekwencji źródłowej. Tak, jeśli jest wykonywane zapytanie `IEnumerable<Customer>`, a następnie wywnioskowana jest zmienna wejściowa jest `Customer` obiektu, co oznacza, że masz dostęp do metod i właściwości:  
   
 ```csharp  
 customers.Where(c => c.City == "London");  
@@ -202,10 +204,10 @@ customers.Where(c => c.City == "London");
   
 -   Wartość zwracana wyrażenia lambda (jeżeli istnieje) musi umożliwiać niejawną konwersję na zwracany typ delegata.  
   
- Należy zauważyć, że wyrażenia lambda same w sobie nie mają typu, ponieważ system typów wspólnych nie obejmuje wewnętrznej koncepcji „wyrażenia lambda”. Jednak czasami wygodnie jest mówić potocznie o „typie” wyrażenia lambda. W takich przypadkach typ odwołuje się do typu delegata lub <xref:System.Linq.Expressions.Expression> wpisz jest konwertowane Wyrażenie lambda.  
+ Należy zauważyć, że wyrażenia lambda same w sobie nie mają typu, ponieważ system typów wspólnych nie obejmuje wewnętrznej koncepcji „wyrażenia lambda”. Jednak czasami wygodnie jest mówić potocznie o „typie” wyrażenia lambda. W takich przypadkach typ odnosi się do typu delegata lub <xref:System.Linq.Expressions.Expression> typ do którego jest konwertowane Wyrażenie lambda.  
   
 ## <a name="variable-scope-in-lambda-expressions"></a>Zakres zmiennych w wyrażeniach lambda  
- Wyrażenia lambda, może się odwoływać do *zmienne zewnętrzne* (zobacz [metod anonimowych](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)) w zakresie w metodę, która definiuje funkcję lambda, lub w zakresie w typie, który zawiera wyrażenie lambda. Przechwytywane w ten sposób zmienne są przechowywane do użytku w wyrażeniu lambda, nawet gdyby w innym wypadku te zmienne znalazłyby się poza zakresem i zostałyby usunięte w ramach odśmiecania pamięci. Zewnętrzna zmienna musi być zdecydowanie przypisana, aby można jej było użyć w wyrażeniu lambda. W poniższym przykładzie pokazano te reguły:  
+ Wyrażenia lambda mogą odwoływać się do *zmiennych zewnętrznych* (zobacz [anonimowymi](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)) znajdujących się w zakresie metody definiującej funkcję lambda lub w zakresie typu, który zawiera wyrażenie lambda. Przechwytywane w ten sposób zmienne są przechowywane do użytku w wyrażeniu lambda, nawet gdyby w innym wypadku te zmienne znalazłyby się poza zakresem i zostałyby usunięte w ramach odśmiecania pamięci. Zewnętrzna zmienna musi być zdecydowanie przypisana, aby można jej było użyć w wyrażeniu lambda. W poniższym przykładzie pokazano te reguły:  
   
 ```csharp  
 delegate bool D();  
@@ -259,23 +261,23 @@ class Test
   
 -   Zmienne zawarte w wyrażeniu lambda nie są widoczne w metodzie zewnętrznej.  
   
--   Wyrażenia lambda nie może bezpośrednio przechwytywania `in`, `ref`, lub `out` parametru z metody otaczającej.  
+-   Wyrażenie lambda nie może bezpośrednio przechwycić `in`, `ref`, lub `out` parametr z otaczającym metody.  
   
 -   Instrukcja return w wyrażeniu lambda nie powoduje wykonania instrukcji return w otaczającej go metodzie.  
   
--   Wyrażenia lambda nie może zawierać `goto` instrukcji, `break` instrukcji lub `continue` instrukcji, która znajduje się wewnątrz funkcji lambda w przypadku docelowej instrukcji skok poza blokiem. Błędem jest również instrukcja skoku poza blok funkcji lambda, jeśli obiekt docelowy znajduje się wewnątrz bloku.  
+-   Wyrażenie lambda nie może zawierać `goto` instrukcji `break` instrukcji lub `continue` instrukcję, która znajduje się wewnątrz funkcji lambda, jeśli obiekt docelowy instrukcji jump leży poza blokiem. Błędem jest również instrukcja skoku poza blok funkcji lambda, jeśli obiekt docelowy znajduje się wewnątrz bloku.  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="featured-book-chapter"></a>Polecany rozdział książki  
- [Obiekty delegowane, zdarzeń i wyrażenia Lambda](https://msdn.microsoft.com/library/orm-9780596516109-03-09.aspx) w [C# 3.0 Cookbook, trzecia edycja: ponad 250 rozwiązań dla programistów języka C# 3.0](https://msdn.microsoft.com/library/orm-9780596516109-03.aspx)  
+ [Delegatów, zdarzeń i wyrażenia Lambda](https://msdn.microsoft.com/library/orm-9780596516109-03-09.aspx) w [C# 3.0 Cookbook, wydanie trzecie: ponad 250 rozwiązań dla programistów C# 3.0](https://msdn.microsoft.com/library/orm-9780596516109-03.aspx)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [LINQ (zapytania o języku zintegrowanym)](../../../csharp/programming-guide/concepts/linq/index.md)  
+ [LINQ (Language-Integrated Query)](../../../csharp/programming-guide/concepts/linq/index.md)  
  [Metody anonimowe](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
  [is](../../../csharp/language-reference/keywords/is.md)  
  [Drzewa wyrażeń](../../../csharp/programming-guide/concepts/expression-trees/index.md)  
- [Visual Studio 2008 C# przykłady (zobacz zapytań LINQ przykładowe pliki i XQuery program)](http://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)  
- [Wyrażenia lambda cykliczne](https://blogs.msdn.microsoft.com/madst/2007/05/11/recursive-lambda-expressions/)
+ [Visual Studio 2008 C# Samples (zobacz pliki LINQ przykładowe zapytania i XQuery program)](http://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)  
+ [Powtarzalne wyrażenia lambda](https://blogs.msdn.microsoft.com/madst/2007/05/11/recursive-lambda-expressions/)

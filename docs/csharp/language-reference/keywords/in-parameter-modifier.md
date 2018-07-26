@@ -5,26 +5,26 @@ helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
 ms.openlocfilehash: 58500cf2caa1446af6b663f1b765c0be92309f1d
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34311913"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198425"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>w modyfikator parametrów (odwołanie w C#)
 
-`in` — Słowo kluczowe powoduje, że argumenty przekazywane przez odwołanie. Przypomina to [ref](ref.md) lub [limit](out-parameter-modifier.md) słów kluczowych, z wyjątkiem, że `in` argumentów nie można zmodyfikować przez metodę o nazwie. Podczas gdy `ref` argumenty mogą zostać zmodyfikowane, `out` argumenty muszą zostać zmodyfikowane przez obiekt wywołujący, a te zmiany są według w kontekście wywołującego.
+`in` — Słowo kluczowe powoduje, że argumenty przekazywane przez odwołanie. Jest on podobny do [ref](ref.md) lub [się](out-parameter-modifier.md) słów kluczowych, poza tym, że `in` argumentów nie można zmodyfikować przez metodę o nazwie. Natomiast `ref` argumentów może być modyfikowany, `out` argumenty muszą zostać zmodyfikowane przez obiekt wywołujący, a te zmiany są obserwowalnymi w kontekst wywołania.
 
 [!code-csharp-interactive[cs-in-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/InParameterModifier.cs#1)]  
 
-W poprzednim przykładzie pokazano, które `in` modyfikator zazwyczaj nie jest wykorzystywana w miejsce wywołania. Wymagane jest tylko w deklaracji metody.
+Poprzedni przykład pokazuje, że `in` modyfikator jest zazwyczaj zbędna w witrynie wywołania. Jest wymagany tylko w deklaracji metody.
 
 > [!NOTE] 
-> `in` — Słowo kluczowe można również z parametrem typu ogólnego w celu wskazania, że parametr typu jest kontrawariantny, jako część `foreach` instrukcji, lub jako część `join` klauzuli w zapytaniu składnika LINQ. Aby uzyskać więcej informacji dotyczących korzystania z `in` — słowo kluczowe w tych kontekstach, zobacz [w](in.md), który zawiera łącza do tych zastosowań.
+> `in` — Słowo kluczowe można również za pomocą parametru typu ogólnego do określenia, czy parametr typu jest kontrawariantny, jako część `foreach` instrukcji, lub jako część `join` klauzuli w zapytaniu LINQ. Aby uzyskać więcej informacji na temat użytkowania `in` Zobacz — słowo kluczowe w tych kontekstach [w](in.md), który zawiera łącza do wszystkich tych zastosowań.
   
- Zmienne przekazany jako `in` argumentów musi zostać zainicjowany przed przekazaniem w wywołaniu metody. Wywołana metoda nie może jednak przypisać wartość lub zmodyfikuj argument.  
+ Zmienne są przekazywane jako `in` argumentów musi zostać zainicjowany przed przesłaniem w wywołaniu metody. Jednak wywoływanej metody nie może przypisać wartość lub zmodyfikuj argumentu.  
   
- Mimo że `in`, `ref`, i `out` słowa kluczowe przyczynę inaczej w czasie wykonywania, nie są wliczane część podpisu metody w czasie kompilacji. W związku z tym nie może zostać przeciążony metody Jeśli jedyną różnicą jest to, że jedna metoda przyjmuje `ref` lub `in` argument i innych przyjmuje `out` argumentu. Następujący kod, na przykład nie zostanie skompilowany:  
+ Mimo że `in`, `ref`, i `out` słowa kluczowe powodować różne zachowanie w czasie wykonywania, ich nie są uważane za część podpisu metody w czasie kompilacji. W związku z tym, nie mogą być przeciążone metody, jeśli jedyna różnica polega na to, że jedna metoda przyjmuje strukturę `ref` lub `in` argument i drugie `out` argumentu. Poniższy kod, na przykład, nie zostanie skompilowany:  
   
 ```csharp
 class CS0663_Example
@@ -36,7 +36,7 @@ class CS0663_Example
 }
 ```
   
-Przeciążanie na podstawie obecności z `in` jest dozwolone:  
+Przeciążenie oparte na obecność `in` jest dozwolony:  
   
 ```csharp
 class InOverloads
@@ -46,21 +46,21 @@ class InOverloads
 }
 ```
 
-## <a name="overload-resolution-rules"></a>Zasady rozpoznawania przeciążenia
+## <a name="overload-resolution-rules"></a>Zasad rozpoznawania przeciążenia
 
-Można zrozumieć zasady rozpoznawania przeciążenia metody z przez wartość a `in` argumenty zrozumienie motywacją `in` argumentów. Definiowanie przy użyciu metody `in` parametrów jest potencjalnych optymalizacji wydajności. Niektóre `struct` argumentów typu mogą być duże i metody wywołanego w pętli ścisłej lub ścieżek kodu krytycznego koszt kopiowania tych konstrukcji jest krytyczne. Metody deklarować `in` w celu określenia, że argumenty mogą być przekazywane przez odwołanie bezpiecznie ponieważ wywołana metoda nie modyfikuje stan tego argumentu. Przekazywanie tych argumentów przez odwołanie pozwala uniknąć kopiowania (potencjalnie) kosztowne. 
+Rozumiesz reguły rozdzielczość przeciążenia dla metod z według wartości a `in` argumenty dzięki zrozumieniu motywacją `in` argumentów. Definiowanie metody przy użyciu `in` parametry są potencjalnymi optymalizacji wydajności. Niektóre `struct` argumentów typu może być duży, rozmiar i metody wywołanego w ścisłej pętli lub ścieżek kodu krytycznego koszt kopiowania tych konstrukcji jest krytyczny. Zadeklaruj metody `in` parametry, aby określić, że argumenty mogą być przekazywane przez odwołanie bezpiecznie ponieważ wywoływanej metody nie powoduje modyfikacji stanu tego argumentu. Przekazywanie tych argumentów poprzez odwołanie pozwala uniknąć kopiowania (potencjalnie). 
 
-Określanie `in` dla argumentów w wywołaniu lokacji jest zwykle opcjonalne. Nie ma żadnej semantycznego różnicy między przekazywanie argumentów według wartości i przekazywanie ich przy użyciu odwołania `in` modyfikator. `in` Modyfikator w witrynie wywołanie jest opcjonalny, ponieważ nie ma potrzeby wskazywać, że wartość argumentu może ulec zmianie. Jawnie dodać `in` modyfikator w miejsce wywołania, aby upewnić się, argument jest przekazywana przez odwołanie, nie przez wartość. Jawnie za pomocą `in` ma dwa następujące skutki:
+Określanie `in` dla argumentów w wywołaniu witryny jest zazwyczaj opcjonalna. Nie ma żadnej różnicy semantycznego między przekazywanie argumentów według wartości i przekazywania ich za pomocą odwołania `in` modyfikator. `in` Modyfikator lokacji wywołanie jest opcjonalny, ponieważ nie wymaga wskazać, że wartość argumentu może ulec zmianie. Jawnie dodać `in` modyfikator w witrynie wywołania, aby upewnić się, argument jest przekazywany przez odwołanie, nie przez wartość. Lepiej nie używać `in` ma następujące dwa skutki:
 
-Po pierwsze, określając `in` w wywołaniu lokacji wymusza kompilator, aby wybrać metodę zdefiniowane z odpowiadającego mu `in` parametru. W przeciwnym razie, gdy dwie metody różnią się jedynie w związku z występowaniem `in`, przez wartość przeciążenia jest lepszym dopasowaniem.
+Po pierwsze, określając `in` w wywołaniu witryny wymusza na kompilatorze o wybranie metody zdefiniowane przy użyciu zgodnego `in` parametru. W przeciwnym razie, gdy dwie metody różnią się tylko w obecności właściwości `in`, według wartości przeciążenia ma lepsze dopasowanie.
 
-Po drugie, określając `in` deklaruje zamiaru przekazywania argumentu przez odwołanie. Argument używany z `in` musi reprezentować lokalizacji, która może być bezpośrednio określonych. Zasady ogólne tej samej `out` i `ref` mają zastosowanie argumenty: nie można użyć stałe, właściwości zwykłych lub inne wyrażenia, które powodują powstanie wartości. W przeciwnym razie pominięcie `in` w wywołaniu lokacji informuje kompilator, że będą mogli go w celu utworzenia zmiennej tymczasowej przekazywane przez odwołanie tylko do odczytu do metody. Kompilator tworzy zmiennej tymczasowej, aby wyeliminować kilka ograniczeń z `in` argumentów:
+Po drugie, określając `in` deklaruje zgodne z zamiarami użytkownika do przekazywania argumentu przez odwołanie. Argument używane z `in` musi reprezentować lokalizacji, która może być bezpośrednio określonych. Ten sam ogólne reguły `out` i `ref` stosowanie argumentów: nie można używać stałych, właściwości zwykłych lub innych wyrażeń, które generują wartości. W przeciwnym razie pominięcie `in` w wywołaniu witryny informuje kompilator, będą mogli go, aby utworzyć zmiennej tymczasowej, aby przekazać tylko do odczytu odwołanie do metody. Kompilator tworzy zmienną tymczasową celu wyeliminowanie kilku ograniczeń za pomocą `in` argumenty:
 
-- Stałe kompilacji jako umożliwia zmiennej tymczasowej `in` parametrów.
-- Umożliwia zmiennej tymczasowej, właściwości lub inne wyrażenia `in` parametrów.
-- Zmiennej tymczasowej umożliwia argumentów w przypadku, gdy istnieje niejawna konwersja z typu argumentu na typ parametru.
+- Zmienna tymczasowa umożliwia stałe kompilacji jako `in` parametrów.
+- Zmienna tymczasowa umożliwia właściwości lub innych wyrażeń dla `in` parametrów.
+- Zmienna tymczasowa zezwala argumenty w przypadku, gdy istnieje niejawna konwersja z typu argumentu z typem parametru.
 
-We wszystkich powyższych przypadkach kompilator tworzy zmiennej tymczasowej, która zawiera wartość stałą, właściwości lub innego wyrażenia.
+We wszystkich wystąpieniach poprzedniej kompilator tworzy zmiennej tymczasowej, która przechowuje wartość stałą, właściwość lub innego wyrażenia.
 
 Poniższy kod ilustruje te reguły:
 
@@ -80,7 +80,7 @@ Method(i); // passed by readonly reference
 Method(in i); // passed by readonly reference, explicitly using `in`
 ```
 
-Załóżmy, że innej metody, używając argumentów była dostępna. Wyniki zmiany, jak pokazano w poniższym kodzie:
+Teraz załóżmy, że innej metody, używając wartości argumentów była dostępna. Wyniki zmiany, jak pokazano w poniższym kodzie:
 
 ```csharp
 static void Method(int argument)
@@ -103,23 +103,23 @@ Method(i); // Calls overload passed by value
 Method(in i); // passed by readonly reference, explicitly using `in`
 ```
 
-Tylko wywołania metody, gdy argument jest przekazywana przez odwołanie, jest to końcowy.
+Wywołanie metody tylko wtedy, gdy argument jest przekazywany przez odwołanie jest ostatecznej.
 
 > [!NOTE]
-> W poprzednim kodzie użyto `int` jako typ argumentu dla uproszczenia. Ponieważ `int` jest nie większy niż odwołanie w najbardziej nowoczesne urządzenia jest żadnych korzyści przekazywanie pojedynczy `int` jako odwołanie tylko do odczytu. 
+> W poprzednim kodzie użyto `int` jako typ argumentu dla uproszczenia. Ponieważ `int` jest nie większy niż odwołanie w większości współczesnych komputerów jest przekazanie pojedynczej żadnych korzyści `int` jako odwołanie tylko do odczytu. 
 
 ## <a name="limitations-on-in-parameters"></a>Ograniczenia dotyczące `in` parametrów
 
 Nie można użyć `in`, `ref`, i `out` słowa kluczowe dla następujących rodzajów metod:  
   
-- Metody asynchroniczne, które definiują przy użyciu [async](async.md) modyfikator.  
-- Metody iteracyjne, które obejmują [yield return](yield.md) lub `yield break` instrukcji.  
+- Metody asynchroniczne, które można zdefiniować przy użyciu [async](async.md) modyfikator.  
+- Metody iteratora, które obejmują [yield return](yield.md) lub `yield break` instrukcji.  
 
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../index.md)  
+ [Dokumentacja języka C#](../index.md)  
  [Przewodnik programowania w języku C#](../../programming-guide/index.md)  
  [Słowa kluczowe języka C#](index.md)  
- [Parametry metody](method-parameters.md) [odwołania semantyka typów wartości](../../reference-semantics-with-value-types.md)
+ [Parametry metody](method-parameters.md) [odwołania semantyki z typami wartości](../../reference-semantics-with-value-types.md)

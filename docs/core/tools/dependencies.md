@@ -1,33 +1,33 @@
 ---
-title: Zarządzanie zależności w narzędzi platformy .NET Core
-description: Wyjaśnia sposób zarządzania zależności przy użyciu narzędzi platformy .NET Core.
+title: Zarządzanie zależnościami w zestaw narzędzi .NET Core
+description: Wyjaśnia, jak zarządzanie zależnościami za pomocą narzędzi .NET Core.
 author: blackdwarf
 ms.author: mairaw
 ms.date: 03/06/2017
 ms.openlocfilehash: c8f40b8571523b98da55b047fea8d2bf03b390a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213665"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244231"
 ---
-# <a name="managing-dependencies-with-net-core-sdk-10"></a>Zarządzanie zależności z .NET Core SDK w wersji 1.0
+# <a name="managing-dependencies-with-net-core-sdk-10"></a>Zarządzanie zależnościami za pomocą platformy .NET Core SDK 1.0
 
-Wraz z przejściem .NET Core projektów z project.json csproj i MSBuild znaczącą inwestycję wystąpiło również zakończonych ujednolicenie pliku projektu i zasoby, które umożliwiają śledzenie zależności. Projekty platformy .NET Core jest to podobne do jakiego pliku project.json została. Plik nie istnieje oddzielne JSON i XML służący do śledzenia zależności NuGet. Dzięki tej zmianie także dodaliśmy innego typu *odwołania* do składni csproj o nazwie `<PackageReference>`. 
+Wraz z przejściem projektów .NET Core z pliku project.json do csproj i MSBuild znaczących inwestycji również się stało, przez co ujednolicenie słów kluczowych pliku projektu i zasoby, które umożliwiają śledzenie zależności. Dla projektów .NET Core, jest to podobne do jakiego pliku project.json zostało. Plik nie istnieje oddzielny JSON lub XML, który śledzi zależności NuGet. Dzięki tej zmianie wprowadziliśmy także innego typu *odwołania* w składni csproj, o nazwie `<PackageReference>`. 
 
-Ten dokument zawiera opis nowego typu odwołania. Widoczny jest również sposób Dodawanie zależności pakietu przy użyciu tego nowego typu odwołanie do projektu. 
+W tym dokumencie opisano nowy typ odwołania. Pokazano również, jak można dodać zależności pakietu, za pomocą tego nowego typu odwołania do projektu. 
 
-## <a name="the-new-packagereference-element"></a>Nowy \<PackageReference > — element
-`<PackageReference>` Ma następującą strukturę podstawowe:
+## <a name="the-new-packagereference-element"></a>Nowy \<PackageReference > element
+`<PackageReference>` Ma podstawowe następującą strukturę:
 
 ```xml
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" />
 ```
 
-Jeśli znasz program MSBuild, zostanie ona wyszukana znane inne typy odwołań, które już istnieją. Klucz jest `Include` instrukcji, która określa identyfikator pakietu, który chcesz dodać do projektu. `<Version>` Wersji, aby uzyskać określa element podrzędny. Wersje są określone w [reguły wersji NuGet](/nuget/create-packages/dependency-versions#version-ranges).
+Jeśli znasz program MSBuild będzie wyglądać dobrze znanych na inne typy odwołań, które już istnieją. Klucz jest `Include` instrukcji, która określa identyfikator pakietu, który chcesz dodać do projektu. `<Version>` Element podrzędny określa wersję można pobrać. Wersje są określone jako na [reguły wersji NuGet](/nuget/create-packages/dependency-versions#version-ranges).
 
 > [!NOTE]
-> Jeśli nie masz doświadczenia z ogólnym `csproj` składni, zobacz [odwołania projektu MSBuild](/visualstudio/msbuild/msbuild-project-file-schema-reference) dokumentacji, aby uzyskać więcej informacji.  
+> Jeśli nie jesteś zaznajomiony z ogólnych `csproj` składnię, zobacz [odwołanie do projektu programu MSBuild](/visualstudio/msbuild/msbuild-project-file-schema-reference) dokumentacji, aby uzyskać więcej informacji.  
 
 Dodawanie zależności, która jest dostępna tylko w określonej lokalizacji docelowej jest wykonywane przy użyciu warunki, takie jak w poniższym przykładzie:
 
@@ -35,14 +35,14 @@ Dodawanie zależności, która jest dostępna tylko w określonej lokalizacji do
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp1.0'" />
 ```
 
-Środków zależności będą tylko ważne, jeśli wykonywane kompilacji dla podanej docelowej. `$(TargetFramework)` w warunku jest właściwość MSBuild, która jest ustawiona w projekcie. Do najbardziej typowych zastosowań .NET Core nie musisz to zrobić. 
+Oznacza, że powyższe zależności będą tylko ważne, jeśli kompilacja się dzieje w tym element docelowy. `$(TargetFramework)` w warunku jest właściwość MSBuild, która jest ustawiona w projekcie. W przypadku najbardziej typowych aplikacji .NET Core nie należy w tym celu. 
 
 ## <a name="adding-a-dependency-to-your-project"></a>Dodawanie zależności do projektu
-Dodawanie zależności projektu jest prosta. Oto przykład sposobu dodawania wersji struktury Json.NET `9.0.1` do projektu. Oczywiście nie ma zastosowania do innych zależności NuGet. 
+Dodawanie zależności do projektu jest bardzo proste. Oto przykład sposobu dodawania wersji na składnik Json.NET `9.0.1` do projektu. Oczywiście ma zastosowanie do wszelkich innych zależności NuGet. 
 
-Po otwarciu pliku projektu, zobaczysz co najmniej dwóch `<ItemGroup>` węzłów. Można zauważyć, że jeden z węzłów ma już `<PackageReference>` elementy. Dodaj nowy zależność do tego węzła lub Utwórz nową; jest całkowicie od użytkownika jako wynik będzie taka sama. 
+Gdy otworzysz plik projektu, zostanie wyświetlony co najmniej dwóch `<ItemGroup>` węzłów. Można zauważyć, że jeden z węzłów ma już `<PackageReference>` elementy. Dodaj nowe zależność do tego węzła lub Utwórz nową; jest całkowicie do Ciebie jako wynik będzie taki sam. 
 
-W tym przykładzie używamy domyślny szablon, który jest porzuconych przez `dotnet new console`. Jest to prostej aplikacji konsolowej. Gdy firma Microsoft otworzyć projekt, najpierw znaleźliśmy `<ItemGroup>` z już istniejącym `<PackageReference>` w nim. Następnie możemy Dodaj następującą wartość do niej:
+W tym przykładzie użyto domyślnego szablonu, który został upuszczony przez `dotnet new console`. Jest to prostą aplikację konsolową. Gdy firma Microsoft otworzyć projekt, najpierw znaleźliśmy `<ItemGroup>` z już istniejącymi `<PackageReference>` w nim. Firma Microsoft następnie dodaj następujący kod do jego:
 
 ```xml
 <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
@@ -51,7 +51,7 @@ Po to, możemy zapisać projekt i uruchomić `dotnet restore` polecenie, aby zai
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Pełna projektu wygląda następująco:
+Pełny projekt wygląda następująco:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -66,5 +66,5 @@ Pełna projektu wygląda następująco:
 </Project>
 ```
 
-## <a name="removing-a-dependency-from-the-project"></a>Usuwanie zależności w projekcie
+## <a name="removing-a-dependency-from-the-project"></a>Usuwanie zależności projektu
 Usuwanie zależności z pliku projektu pociąga za sobą usunięcie `<PackageReference>` z pliku projektu.

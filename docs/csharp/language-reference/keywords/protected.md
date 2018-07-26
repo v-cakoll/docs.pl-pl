@@ -8,36 +8,36 @@ helpviewer_keywords:
 - protected keyword [C#]
 ms.assetid: 05ce3794-6675-4025-bddb-eaaa0ec22892
 ms.openlocfilehash: a3115fe82b452f52ee75cf222302ece0fc67b330
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269573"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39243629"
 ---
 # <a name="protected-c-reference"></a>protected (odwołanie w C#)
-`protected` — Słowo kluczowe jest modyfikator dostępu elementu członkowskiego. 
+`protected` — Słowo kluczowe jest modyfikator dostępu składowej. 
 
- > Ta strona zawiera `protected` dostępu. `protected` — Słowo kluczowe jest również częścią [ `protected internal` ](./protected-internal.md) i [ `private protected` ](./private-protected.md) modyfikatorów dostępu. 
+ > Ta strona obejmuje `protected` dostępu. `protected` — Słowo kluczowe jest również częścią [ `protected internal` ](./protected-internal.md) i [ `private protected` ](./private-protected.md) modyfikatorach dostępu. 
 
-Chroniony element członkowski jest dostępny w swojej klasie i wystąpień klasy pochodnej. 
+Chroniony element członkowski jest dostępny w ramach swojej klasy i wystąpienia klasy pochodnej. 
 
 Porównanie `protected` z innych modyfikatorów dostępu, zobacz [poziomów ułatwień dostępu](../../../csharp/language-reference/keywords/accessibility-levels.md). 
   
 ## <a name="example"></a>Przykład  
- Chroniony element członkowski klasy podstawowej jest dostępna w klasie pochodnej, tylko wtedy, gdy występuje dostęp za pośrednictwem typu klasy pochodnej. Rozważmy na przykład następujący segment kodu:  
+ Chronione elementy członkowskie klasy bazowej jest dostępna w klasie pochodnej, tylko wtedy, gdy dostęp odbywa się przez typ klasy pochodnej. Na przykład rozważmy następujący segment kodu:  
   
  [!code-csharp[csrefKeywordsModifiers#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/protected_1.cs)]  
   
- Instrukcja `a.x = 10` generuje błąd, ponieważ jest on w statycznej metody Main, a nie jest wystąpieniem klasy B.  
+ Wykonywanie instrukcji `a.x = 10` generuje błąd, ponieważ staje się wewnątrz metody statycznej Main, a nie jest wystąpieniem klasy B.  
   
- Elementy członkowskie struktury nie mogą być chronione, ponieważ struktura nie może być dziedziczona.  
+ Składowe struktury nie mogą być chronione, ponieważ struktura nie może być dziedziczona.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie klasa `DerivedPoint` jest pochodną `Point`. W związku z tym dostępne chronionych elementów członkowskich klasy podstawowej bezpośrednio z klasy pochodnej.  
+ W tym przykładzie klasa `DerivedPoint` jest tworzony na podstawie `Point`. W związku z tym dostęp chronionych elementów członkowskich klasy podstawowej, bezpośrednio z klasy pochodnej.  
   
  [!code-csharp[csrefKeywordsModifiers#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/protected_2.cs)]  
   
- Zmiana poziomów dostępu `x` i `y` do [prywatnej](../../../csharp/language-reference/keywords/private.md), kompilator będzie wystawiać komunikaty o błędach:  
+ Jeśli zmienisz poziomy dostępu `x` i `y` do [prywatnej](../../../csharp/language-reference/keywords/private.md), kompilator zgłosi komunikaty o błędach:  
   
  `'Point.y' is inaccessible due to its protection level.`  
   
@@ -47,7 +47,7 @@ Porównanie `protected` z innych modyfikatorów dostępu, zobacz [poziomów uła
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
+ [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
  [Modyfikatory dostępu](../../../csharp/language-reference/keywords/access-modifiers.md)  
@@ -56,4 +56,4 @@ Porównanie `protected` z innych modyfikatorów dostępu, zobacz [poziomów uła
  [public](../../../csharp/language-reference/keywords/public.md)  
  [private](../../../csharp/language-reference/keywords/private.md)  
  [internal](../../../csharp/language-reference/keywords/internal.md)  
- [Problemy z zabezpieczeniami dla wewnętrznego wirtualnego słowa kluczowe](https://msdn.microsoft.com/library/heyd8kky(v=vs.110))
+ [Kwestie bezpieczeństwa wewnętrznych wirtualnych słów kluczowych](https://msdn.microsoft.com/library/heyd8kky(v=vs.110))

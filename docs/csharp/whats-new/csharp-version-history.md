@@ -1,28 +1,28 @@
 ---
-title: Historia języka C# — przewodnik C#
-description: Języka jak wygląda w jego wersje i sposobu jego powstał od?
+title: Historia języka C# — Przewodnik po języku C#
+description: Język jak wygląda w jego wersje i jak go powstała od?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 3e3bf98d1435b237b2941758b8ed245baa970237
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 227cb2899a509d56910a2a07533a2178f53ef818
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207537"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404596"
 ---
 # <a name="the-history-of-c"></a>Historia języka C# #
 
-Języka jak wygląda w jego najwcześniejszą incarnations? I sposobu jego powstał w lat od?
+Język jak wygląda w jego Najwcześniejsza incarnations? I jak go powstała w latach od?
 
 ## <a name="c-version-10"></a>C# w wersji 1.0
 
-Gdy wrócić do poprzedniej strony i sprawdź, C# w wersji 1.0 zawierała znacznie przedstawione Java. Jako [część jej cele projektowania podane dla ECMA](http://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), miały być "prosty, Nowoczesny, ogólnego przeznaczenia zorientowany obiektowo język."  W tym czasie wyglądał Java, która miała ona osiągnąć te wczesne cele projektowania.
+Gdy cofając się i sprawdź, C# w wersji 1.0 oglądałem się znacznie takich jak Java. Jako [wchodzi w skład jego celów projektowania podane dla ECMA](http://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), miały być "prostych, nowoczesnych, ogólnego przeznaczenia obiektowy język."  W tym czasie wyszukiwania, takie jak Java przeznaczone go osiągnąć tych wczesnych cele projektu.
 
-Ale jeśli możesz Wstecz w języku C# 1.0 teraz, czy okaże się nieco dizzy. Brakuje w niej możliwości wbudowanego async i niektóre funkcje slick wokół ogólne trwania dla przyznane. Jak rzeczy brakuje w niej ogólne całkowicie.  I [LINQ](../linq/index.md)? Nie są dostępne jeszcze. Te dodatki zajmie kilka lat do.
+Ale można spojrzeć Wstecz w języku C# 1.0 teraz, czy okaże się, że to nieco dizzy. Brakuje w niej funkcje wbudowane async i niektóre funkcje sprawny wokół ogólne potrwać dla przyznane. Jak rzeczy brakuje w niej ogólne całkowicie.  I [LINQ](../linq/index.md)? Nie jest dostępny jeszcze. Te dodatki zajmie kilka lat na osiągnięcie.
 
-C# w wersji 1.0 wyszukiwanego pozbawionego włókien funkcji w porównaniu do dzisiaj. Czy okaże się, że pisanie kodu pełne. Ale jeszcze, trzeba uruchomić w innym miejscu. C# w wersji 1.0 został realną alternatywę języka Java na platformie systemu Windows.
+C# w wersji 1.0 znaleziono usuniętych funkcji, w porównaniu do dzisiaj. Czy okaże się, że pisanie kodu pełne. Ale jeszcze, trzeba uruchomić w innym miejscu. C# w wersji 1.0 został realną alternatywę do języka Java na platformie Windows.
 
-Uwzględnione najważniejszych funkcji języka C# 1.0:
+Główne funkcje języka C# 1.0 obejmuje:
 
 - [Klasy](../programming-guide/classes-and-structs/classes.md)
 - [Struktury](../programming-guide/classes-and-structs/structs.md)
@@ -37,7 +37,7 @@ Uwzględnione najważniejszych funkcji języka C# 1.0:
 
 ## <a name="c-version-20"></a>C# w wersji 2.0
 
-Teraz rozpocząć interesujący rzeczy. Spójrzmy na niektóre główne funkcje C# 2.0, wydane w 2005, wraz z programu Visual Studio 2005:
+Teraz rozpocząć pobieranie interesujących rzeczy. Spójrzmy na niektóre główne funkcje języka C# w wersji 2.0, wydany w 2005 r. wraz z Visual Studio 2005:
 
 - [Typy ogólne](../programming-guide/generics/index.md)
 - [Typy częściowe](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
@@ -46,102 +46,102 @@ Teraz rozpocząć interesujący rzeczy. Spójrzmy na niektóre główne funkcje 
 - [Iteratory](../programming-guide/concepts/iterators.md)
 - [Kowariancja i kontrawariancja](../programming-guide/concepts/covariance-contravariance/index.md)
 
-Inne funkcje 2.0 C# dodaje możliwości istniejących funkcji:
+Inne funkcje języka C# w wersji 2.0 dodaje funkcje do istniejących funkcji:
 
 - Metody pobierającej/ustawiającej oddzielne ułatwień dostępu
-- Konwersje grupy — metoda (obiekty delegowane)
+- Metoda grupy konwersje (delegatów)
 - Klasy statyczne
 - Wnioskowanie delegata
 
-Gdy C# mogło uruchomić jako ogólnego język Object-Oriented (OO), C# w wersji 2.0 zmienić który w czasu. Gdy miały ich stopy w ich poszło po niektóre poważne developer słabe punkty. A ich zakończył po ich w znaczący sposób.
+Gdy C# mogły zostać rozpoczęte jako ogólnego język Object-Oriented (wprowadzaniem), C# w wersji 2.0 zmieniła tę sytuację masz mało czasu. Gdy mieli oni ich stopy w ramach nich, błąd po niektóre słabe punkty poważne dla deweloperów. I ich po ich w znaczący sposób.
 
-Ogólne typy i metody może działać dla dowolnego typu, przy jednoczesnym zachowaniu bezpieczeństwa typu. Na przykład, mając <xref:System.Collections.Generic.List%601> pozwala mieć `List<string>` lub `List<int>` i wykonywać operacje bezpieczne na tych ciągów lub liczb całkowitych, gdy iterację je. Użycie typów ogólnych jest lepsze niż utworzyć `ListInt` która pochodzi z `ArrayList` lub głosujących z `Object` dla każdej operacji.
+Ogólne typy i metody mogą działać na dowolnego typu, przy jednoczesnym zachowaniu bezpieczeństwa typu. Na przykład masz <xref:System.Collections.Generic.List%601> pozwala mieć `List<string>` lub `List<int>` i wykonywać operacje bezpieczny, na tych ciągów lub liczby całkowite, podczas gdy iteracyjne przeglądanie ich. Za pomocą typów ogólnych jest lepsze niż tworzenie `ListInt` który pochodzi od klasy `ArrayList` lub głosujących z `Object` dla każdej operacji.
 
-C# w wersji 2.0 przełączony w tryb Iteratory. Aby umieścić krótkiej formie, Iteratory pozwalają sprawdzić wszystkie elementy w `List` (lub inne elementy typu Enumerable) z `foreach` pętli. O Iteratory w ramach pierwszej klasy języka znacznie rozszerzone czytelność język i osób umożliwia przeglądanie informacji o kod.
+C# w wersji 2.0 dostosowane Iteratory. Aby przełączyć krótkiej formie, Iteratory pozwalają sprawdzić wszystkie elementy w `List` (lub inne typy Wyliczalny) przy użyciu `foreach` pętli. O najwyższej jakości część języka Iteratory znacznie ulepszony czytelność język i osób umożliwia przeglądanie informacji o kodzie.
 
-I jeszcze, C# nadal odtwarzany z bitowego wyrównywania z językiem Java. Java ma już zwolnione typy ogólne i Iteratory wersjach. Ale która zmieniłaby wkrótce jako języków nadal podlegać ewolucji od siebie.
+I jeszcze, C# kontynuowane do odtwarzania znacznej liczby — wyrównywanie przy użyciu języka Java. Java już miał wydane wersje, które uwzględnione typy ogólne i Iteratory. Ale, szybko zmienić jako języków rozwijała się od siebie.
 
 ## <a name="c-version-30"></a>C# w wersji 3.0
 
-C# w wersji 3.0 pochodzi w późne 2007 oraz programu Visual Studio 2008, ale faktycznie przybyły pełne łodzi funkcji języka platformy .NET Framework w wersji 3.5. Ta wersja jest oznaczona jako istotne zmiany w rozwój języka C#. Stwierdzone C# jako naprawdę potężnych język programowania. Spójrzmy na niektóre główne funkcje w tej wersji:
+C# w wersji 3.0 materiał pod koniec 2007, wraz z programu Visual Studio 2008, chociaż pełną łodzi funkcji języka faktycznie przybyły, aby za pomocą platformy .NET Framework w wersji 3.5. Ta wersja oznaczona istotne zmiany w rozwoju języka C#. Stwierdzone C# jako naprawdę potężnych języka programowania. Spójrzmy na niektóre główne funkcje w tej wersji:
 
 - [Właściwości zaimplementowane automatycznie](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [Typy anonimowe](../programming-guide/classes-and-structs/anonymous-types.md)
 - [Wyrażenia zapytań](../linq/query-expression-basics.md)
-- [wyrażenia lambda](https://www.daedtech.com/introduction-to-c-lambda-expressions/)
+- [Wyrażenia lambda](https://www.daedtech.com/introduction-to-c-lambda-expressions/)
 - [Drzewa wyrażeń](https://blogs.msdn.microsoft.com/charlie/2008/01/31/expression-tree-basics/)
 - [Metody rozszerzenia](https://www.codeproject.com/Tips/709310/Extension-Method-In-Csharp)
 - [Niejawnie wpisane zmienne lokalne](../language-reference/keywords/var.md)
 - [Metody częściowe](../language-reference/keywords/partial-method.md)
-- Inicjatory obiektów i kolekcji
+- [Inicjatory obiektów i kolekcji](../programming-guide/classes-and-structs/object-and-collection-initializers.md)
 
-W retrospect wiele z tych funkcji prawdopodobnie zarówno nieuniknione i nierozdzielne. Wszystkie dopasowania strategicznie. Ogólnie należy uważać, że funkcja killer C# wersji była wyrażenia zapytania, nazywane również zapytania język Language-Integrated (LINQ).
+Spoglądając wstecz wiele z tych funkcji prawdopodobnie nierozdzielne i nieuniknione. Wszystkie one współdziałają ze sobą strategicznie. Ogólnie uważa się, że się opracować świetną funkcji języka C# wersji była wyrażenie zapytania, znany także jako Query Language-Integrated (LINQ).
 
-Wyświetl więcej nuanced sprawdza drzewa wyrażeń, wyrażenia lambda i typy anonimowe jako podstawa, na którym jest tworzony LINQ. Jednak w obu przypadkach C# 3.0 przedstawione Rewolucyjny koncepcji. C# 3.0 zaczęło przygotowawczych służący do włączania C# do funkcjonalności / zorientowany obiektowo język hybrydowego.
+Bardziej dopracowanego widoku sprawdza, czy drzew wyrażeń, wyrażeń lambda i typy anonimowe jako podstawę, na którym jest konstruowany LINQ. Jednak w obu przypadkach języka C# 3.0 prezentowane Rewolucyjny koncepcji. C# 3.0 zaczęło przygotowawczych Włączanie C# do hybrydowego rozwiązania łączącego program język zorientowany obiektowo / funkcjonalności.
 
-W szczególności można teraz zapisać SQL stylu, deklaratywne zapytania do wykonywania operacji w kolekcjach, między innymi. Zamiast zapisywania `for` pętli do obliczenia średniej listy liczb całkowitych, możesz teraz to zrobić tylko jako `list.Average()`. Kombinacja wyrażenia zapytania i metody rozszerzenia wprowadzone wygląda tak, jakby listę liczb całkowitych ma się coraz wiele inteligentny.
+W szczególności można teraz zapisać SQL stylu deklaratywne zapytania w celu wykonywania operacji na kolekcjach, między innymi. Zamiast pisania `for` pętli do obliczenia średniej na liście liczb całkowitych, możesz teraz to zrobić, tak po prostu jako `list.Average()`. Kombinacja wyrażenia zapytania i metody rozszerzenia mogła wyglądać tak, jakby listę liczb całkowitych miał punktowania całego inteligentniejsze.
 
-Zajęło czasu dla osób naprawdę niejasny i integrowanie pojęcia, ale jak stopniowo. I teraz lata później, kod jest bardziej zwięzły, proste i funkcjonalności.
+Zajęło czasu dla osób naprawdę zapoznanie się z nim i zintegruj pojęcia, ale stopniowo ta funkcjonalność była niedostępna. A teraz lata później, kod jest znacznie bardziej zwięzły, prosty i funkcjonalności.
 
 ## <a name="c-version-40"></a>C# w wersji 4.0
 
-C# w wersji 4.0 było trudne czas życia przełomowe stanu wersji 3.0 lub nowszej. W wersji 3.0 C# przeniósł język mocno limit w tle, Java i dostępność. Język został szybko stać się elegancki.
+C# w wersji 4.0 było trudne czas życia przełomowym stan wersji 3.0 lub nowszej. W wersji 3.0 C# przeniósł języka mocno na zewnątrz w tle języka Java i dostępność. Język został szybko staje się funkcją elegancki.
 
-Następnej wersji wprowadzić niektóre ciekawe nowe funkcje:
+Następna wersja wprowadzają interesujące nowe funkcje:
 
-- [Wiązania dynamicznego](../language-reference/keywords/dynamic.md)
+- [Wiązanie dynamiczne](../language-reference/keywords/dynamic.md)
 - [Argumenty nazwane opcjonalne](../programming-guide/classes-and-structs/named-and-optional-arguments.md)
-- [Rodzajowa kowariantnego i kontrawariantnego](../../standard/generics/covariance-and-contravariance.md)
+- [Ogólny kowariantne i kontrawariantne](../../standard/generics/covariance-and-contravariance.md)
 - [Osadzone typy międzyoperacyjne](https://stackoverflow.com/questions/20514240/whats-the-difference-setting-embed-interop-types-true-and-false-in-visual-studi)
 
-Osadzone typy międzyoperacyjne złagodzone słabe wdrożenia. Ogólny Kowariancja i kontrawariancja zapewniają więcej możliwości używaj danych generycznych wszędzie, ale są one nieco academic i prawdopodobnie najbardziej docenia przez autorów struktury i biblioteki. Parametry nazwane i opcjonalne pozwalają wyeliminować wiele przeciążenia metody i zapewnienia wygody. Ale żaden z tych funkcji są dokładnie modelu zmiany.
+Osadzone typy międzyoperacyjne złagodzone bolesne wdrożenia. Ogólny kowariancji i kontrawariancji zapewniają większe możliwości używaj typów ogólnych, ale są one nieco naukowych i prawdopodobnie większość Doceniamy przez autorów framework i biblioteki. Parametry nazwane i opcjonalne pozwalają wyeliminować wiele przeciążeń metody i zapewnia wygodę. Ale żaden z tych funkcji są dokładnie paradygmat zmiany.
 
-Funkcja głównych była wprowadzenie `dynamic` — słowo kluczowe. `dynamic` — Słowo kluczowe wprowadzono w języku C# w wersji 4.0 możliwość zastępowania kompilatora na wpisanie kompilacji. Za pomocą dynamiczne słowo kluczowe, można utworzyć konstrukcje podobne do językach takich jak JavaScript. Można utworzyć `dynamic x = "a string"` , a następnie dodaj sześć, pozostawiając środowiska uruchomieniowego do sortowania się, co powinno się zdarzyć, obok.
+Główna funkcja była wprowadzenie `dynamic` — słowo kluczowe. `dynamic` — Słowo kluczowe wprowadzone w języku C# w wersji 4.0 możliwość przesłaniania kompilatora w przypadku wpisywania w czasie kompilacji. Za pomocą słowa kluczowego dynamic, można utworzyć konstrukcje podobnie jak w językach takich jak JavaScript. Możesz utworzyć `dynamic x = "a string"` , a następnie dodaj sześć, pozostawiając je do środowiska uruchomieniowego, aby posortować się, co powinno się zdarzyć, obok.
 
-Wiązania dynamicznego umożliwia ryzyko błędów, ale również bardzo zasilania w języku.
+Wiązanie dynamiczne zawierają potencjalnych błędów, ale także mocą języka.
 
 ## <a name="c-version-50"></a>C# w wersji 5.0
 
-C# w wersji 5.0 został ukierunkowanych wersji języka. Prawie wszystkie działania dla tej wersji znajduje się w innym pojęcia języka przełomowe: `async` i `await` modelu programowania asynchronicznego.  Poniżej przedstawiono listę najważniejszych funkcji:
+C# w wersji 5.0 był konkretną wersję języka. Prawie wszystkich naruszeń nakładu pracy dla tej wersji pojawiły się w innym koncepcji języka przełomowym: `async` i `await` modelu programowania asynchronicznego.  Poniżej przedstawiono listę najważniejszych funkcji:
 
-- [Elementy członkowskie asynchroniczne](../async.md)
+- [Asynchroniczne elementów członkowskich](../async.md)
 - [Caller — atrybuty informacji](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
-Obiekt wywołujący atrybutu informacji pozwala łatwo pobierać informacje o kontekście, w którym pracujesz bez konieczności ogromne schematyczny kod odbicia. Ma on wiele zastosowań diagnostyki i zadań rejestrowania.
+Obiekt wywołujący atrybutu informacji pozwala łatwo pobrać informacje o kontekście, w którym pracujesz, bez konieczności uciekania się do ogromnej ilości standardowy kod odbicia. Ma wiele zastosowań w diagnostycznych i zadań rejestrowania.
 
-Ale `async` i `await` są prawdziwe gwiazdek w tej wersji. Gdy te funkcje pochodzi w 2012, C# zmienione gry ponownie przez pieczenia asynchrony język jako najwyższej jakości uczestnika. Jeśli kiedykolwiek zostały omówione długotrwałe operacje, jak i implementację sieciach wywołań zwrotnych, prawdopodobnie loved ta funkcja językowa.
+Ale `async` i `await` są prawdziwe gwiazdek w tej wersji. Gdy te funkcje pochodzi w 2012, C# gry jej ponownie zmienić przez pieczenie asynchroniczności w języku jako uczestnik najwyższej jakości. Jeśli nigdy nie zostały omówione długotrwałych operacji i wdrażanie witryny sieci Web wywołań zwrotnych, należy prawdopodobnie tak Ci się podobały tej funkcji języka.
 
 ## <a name="c-version-60"></a>C# w wersji 6.0
 
-W wersjach 3.0 i 5.0 C# były dodawane główne nowe funkcje w zorientowany obiektowo język. W wersji 6.0 czy go przed wykonaniem dominującą funkcji killer i zamiast tego wydania wiele funkcji mniejszych, wprowadzone programowania w języku C# bardziej wydajnej pracy. Oto niektóre z nich:
+W przypadku wersji 3.0 i 5.0 C# miał dodano główne nowe funkcje w języku zorientowane obiektowo. W wersji 6.0 będzie przejdź od wykonując dominujący funkcji się opracować świetną i zamiast tego wydania wiele mniejszych funkcji, które programowania C# bardziej produktywne. Poniżej przedstawiono niektóre z nich:
 
 - [Importy statyczne](../language-reference/keywords/using-static.md)
 - [Filtry wyjątków](https://www.thomaslevesque.com/2015/06/21/exception-filters-in-c-6/)
-- [Inicjatory właściwości](http://geekswithblogs.net/WinAZ/archive/2015/06/30/whatrsquos-new-in-c-6.0-auto-property-initializers.aspx)
-- [Wyrażenie zabudowanych elementy członkowskie](https://lostechies.com/jimmybogard/2015/12/17/c-6-feature-review-expression-bodied-function-members/)
-- [Propagator wartości null](https://davefancher.com/2014/08/14/c-6-0-null-propagation-operator/)
+- [Właściwości](http://geekswithblogs.net/WinAZ/archive/2015/06/30/whatrsquos-new-in-c-6.0-auto-property-initializers.aspx)
+- [Wyrażenie zabudowanych członków](https://lostechies.com/jimmybogard/2015/12/17/c-6-feature-review-expression-bodied-function-members/)
+- [Propagator o wartości null](https://davefancher.com/2014/08/14/c-6-0-null-propagation-operator/)
 - [Interpolacja ciągów](../language-reference/tokens/interpolated.md)
-- [operatorze nameof](https://stackoverflow.com/questions/31695900/what-is-the-purpose-of-nameof)
-- [Inicjatory indeksu](csharp-6.md#index-initializers)
+- [nameof operator](https://stackoverflow.com/questions/31695900/what-is-the-purpose-of-nameof)
+- [Inicjatory indeksów](csharp-6.md#index-initializers)
 
-Inne nowe funkcje:
+Inne nowe funkcje obejmują:
 
 - Await w blokach catch/finally
 - Domyślne wartości dla właściwości tylko do metody pobierającej
 
-Każda z tych funkcji jest ciekawe w sobie. Jednak ich całkowicie, możesz zobaczyć interesujące wzorca. W tej wersji języka C# wyeliminować standardowego języka aby kodu bardziej zwięzłym i do odczytu. Dlatego wentylatory prostemu kodu, ta wersja językowa zostało ogromnych win.
+Każda z tych funkcji jest interesujące samodzielną. Jednak jeśli przyjrzymy się je całkowicie, zobaczysz interesujące wzorca. W tej wersji języka C# wyeliminować standardowy język, aby zwięzła i bardziej czytelny kod. Aby dla kibiców prostemu kodu, ta wersja językowa był olbrzymią zaletę.
 
-Chociaż nie jest funkcją języka tradycyjnego w sobie jak jeden element wraz z tą wersją. Ukazania [Roslyn kompilatora jako usługa](https://github.com/dotnet/roslyn). Kompilator języka C# są teraz zapisywane w języku C# i kompilator można użyć jako część wysiłków programowania.
+Chociaż nie jest funkcją języka tradycyjnego sam jak jeden element wraz z tą wersją. Zespół [Roslyn kompilatora jako usługa](https://github.com/dotnet/roslyn). Kompilator języka C# są teraz zapisywane w języku C#, a kompilator można użyć jako część prace programistyczne.
 
 ## <a name="c-version-70"></a>C# w wersji 7.0
 
-Najnowszą wersją główną jest C# w wersji 7.0. Ta wersja ma kilka rzeczy ewolucyjny i chłodnego w szyjnej C# w wersji 6.0, ale bez kompilatora jako usługa. Poniżej przedstawiono niektóre nowe funkcje:
+Najbardziej aktualną wersję główną jest C# w wersji 7.0. Ta wersja ma kilka rzeczy ewolucyjny, jak i chłodnej w szyjnej języka C# 6.0, ale bez kompilator jako usługa. Poniżej przedstawiono nowe funkcje:
 
 - [Limit zmiennych](http://www.c-sharpcorner.com/article/out-variables-in-c-sharp-7-0/)
-- [Krotki i deconstruction](https://www.thomaslevesque.com/2016/08/23/tuple-deconstruction-in-c-7/)
+- [Dekonstrukcja i kolekcje](https://www.thomaslevesque.com/2016/08/23/tuple-deconstruction-in-c-7/)
 - [Dopasowanie wzorca](./csharp-7.md#pattern-matching)
 - [Funkcje lokalne](http://www.infoworld.com/article/3182416/application-development/c-7-in-depth-exploring-local-functions.html)
-- [Wyrażenie rozwinięte zabudowanych elementy członkowskie](./csharp-7.md#more-expression-bodied-members)
+- [Wyrażenie rozwiniętej zabudowanych członków](./csharp-7.md#more-expression-bodied-members)
 - [Zmienne lokalne ref i zwraca](./csharp-7.md#ref-locals-and-returns)
 
 Inne funkcje uwzględnione:
@@ -149,11 +149,11 @@ Inne funkcje uwzględnione:
 - [Odrzucenia](../discards.md)
 - [Literały binarne](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/binary-literals.md)
 - [Separatory cyfr](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/digit-separators.md)
-- Zwraca ref i zmienne lokalne
-- [Wyrażenia throw](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/throw-expression.md)
+- Wartości zwracane ref i zmienne lokalne
+- [Wyrażeń throw](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/throw-expression.md)
 
-Wszystkie te funkcje oferują chłodnych nowych funkcji dla deweloperów i możliwość zapisu nawet czyszczący kodu niż kiedykolwiek wcześniej. Wyróżnienie jest skondensowanie trzech deklaracji zmiennych do użycia z `out` — słowo kluczowe i zezwalając wiele wartości zwrotnych za pośrednictwem spójnych kolekcji.
+Wszystkie te funkcje oferują ciekawe nowe funkcje dla deweloperów i możliwość pisania kodu jeszcze bardziej przejrzyste niż kiedykolwiek wcześniej. Wyróżnienie jest skondensowanie trzech deklaracji zmiennych, za pomocą `out` — słowo kluczowe i umożliwiając z wieloma wartościami zwracanymi za pomocą spójnej kolekcji.
 
-Ale C# jest wprowadzenia do użycia kiedykolwiek szerszych. Oprogramowanie .NET core teraz jest przeznaczony dla dowolnego systemu operacyjnego i mocno ma jego oczu w chmurze i przenoszenia.  Te nowe funkcje pewnością zajmują się opinią projektantom języka i czasu, oprócz powtarzający się z nowych funkcji.
+Ale C# jest umieszczeniem do coraz szerszego użycia. .NET core teraz jest przeznaczony dla dowolnego systemu operacyjnego i oczy mocno na chmurze i przenośność.  Te nowe możliwości bez obaw zajmują projektantom języka pomysły i godzinę, oprócz pojawi się z nowymi funkcjami.
 
-_Artykuł_ [ _oryginalnie opublikowane w blogu NDepend_](https://blog.ndepend.com/c-versions-look-language-history/)_, dzięki uprzejmości: Dietricha Erik i Patrick Smacchia._
+_Artykuł_ [ _oryginalnie opublikowane na blogu NDepend_](https://blog.ndepend.com/c-versions-look-language-history/)_, uzyskajcie Dietricha Erik i Patrick Smacchia._

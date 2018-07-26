@@ -1,11 +1,11 @@
-### <a name="support-special-relative-uri-notation-when-unicode-is-present"></a>Obsługuje specjalne notacji względny identyfikator URI, gdy występuje Unicode
+### <a name="support-special-relative-uri-notation-when-unicode-is-present"></a>Obsługa specjalne względną identyfikatora URI notacji gdy obecny jest Unicode
 
 |   |   |
 |---|---|
-|Szczegóły|<xref:System.Uri> nie zgłosi <xref:System.NullReferenceException> podczas wywoływania metody <xref:System.Uri.TryCreate%2A> na niektórych względne identyfikatory URI zawierający Unicode.The reprodukowania najprostszym <xref:System.NullReferenceException> się dwie instrukcje równoważne poniżej:<pre><code class="lang-csharp">bool success = Uri.TryCreate(&quot;http:%C3%A8&quot;, UriKind.RelativeOrAbsolute, out Uri href);&#13;&#10;bool success = Uri.TryCreate(&quot;http:&#232;&quot;, UriKind.RelativeOrAbsolute, out Uri href);&#13;&#10;</code></pre>Aby odtworzyć <xref:System.NullReferenceException>, następujące elementy muszą być spełnione:<ul><li>Identyfikator URI musi być określona jako względną za dołączanie go przy użyciu "http:", a nie po jej wraz z opcją "/ /".</li><li>Identyfikator URI musi zawierać symboli bezwarunkowe lub procent zakodowane w formacie Unicode.</li></ul>|
-|Sugestia|Zamiast tego należy określić użytkowników w zależności od tego zachowania, aby uniemożliwić względne identyfikatory URI <xref:System.UriKind.Absolute?displayProperty=nameWithType> podczas tworzenia identyfikatora URI.|
+|Szczegóły|<xref:System.Uri> nie będzie już zgłaszać <xref:System.NullReferenceException> podczas wywoływania <xref:System.Uri.TryCreate%2A> na niektórych względne identyfikatory URI zawierający reprodukcja najprostszym Unicode.The <xref:System.NullReferenceException> znajduje się poniżej, przy użyciu dwóch instrukcji równoważne:<pre><code class="lang-csharp">bool success = Uri.TryCreate(&quot;http:%C3%A8&quot;, UriKind.RelativeOrAbsolute, out Uri href);&#13;&#10;bool success = Uri.TryCreate(&quot;http:&#232;&quot;, UriKind.RelativeOrAbsolute, out Uri href);&#13;&#10;</code></pre>Aby odtworzyć <xref:System.NullReferenceException>, następujące elementy muszą być spełnione:<ul><li>Identyfikator URI musi zostać określona jako względna przez dołączenie go z "http:" i postępuj zgodnie z nie "/ /".</li><li>Identyfikator URI musi zawierać procent zakodowane w formacie Unicode lub niezastrzeżone symboli.</li></ul>|
+|Sugestia|Użytkowników w zależności od tego zachowania nie zezwala na względne identyfikatory URI zamiast tego należy określić <xref:System.UriKind.Absolute?displayProperty=nameWithType> podczas tworzenia identyfikatora URI.|
 |Zakres|Krawędź|
 |Wersja|4.7.2|
-|Typ|środowisko uruchomieniowe|
+|Typ|Środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Uri.TryCreate(System.Uri,System.Uri,System.Uri@)?displayProperty=nameWithType></li><li><xref:System.Uri.TryCreate(System.String,System.UriKind,System.Uri@)?displayProperty=nameWithType></li><li><xref:System.Uri.TryCreate(System.Uri,System.String,System.Uri@)?displayProperty=nameWithType></li></ul>|
 

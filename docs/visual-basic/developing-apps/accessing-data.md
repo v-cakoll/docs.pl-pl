@@ -1,26 +1,26 @@
 ---
-title: Uzyskiwanie dostępu do danych w aplikacjach Visual Basic
+title: Uzyskiwanie dostępu do danych w aplikacjach Visual Studio
 ms.date: 07/20/2015
 helpviewer_keywords:
 - data [Visual Basic]
 - Visual Basic, data access
 ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
 ms.openlocfilehash: 2e6cfc3d6d8752b12fa20a357dedfeb1b3346dce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585830"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198864"
 ---
-# <a name="accessing-data-in-visual-basic-applications"></a>Uzyskiwanie dostępu do danych w aplikacjach Visual Basic
-Visual Basic zawiera kilka nowych funkcji, aby pomóc w tworzeniu aplikacji, które uzyskują dostęp do danych. Powiązane z danymi formularzy dla aplikacji systemu Windows są tworzone przez przeciąganie elementów z [Data Sources — okno](/visualstudio/data-tools/add-new-data-sources) na formularzu. Powiązanie formantów danych przez przeciąganie elementów z **Data Sources — okno** na istniejące kontrolki.  
+# <a name="accessing-data-in-visual-basic-applications"></a>Uzyskiwanie dostępu do danych w aplikacjach Visual Studio
+Visual Basic obejmuje kilka nowych funkcji ułatwiających projektowanie aplikacji uzyskujących dostęp do danych. Powiązane z danymi formularze dla aplikacji Windows są tworzone przez przeciąganie elementów z [okna źródeł danych](/visualstudio/data-tools/add-new-data-sources) na formularz. Powiązywanie kontrolek z danymi przez przeciąganie elementów z **okna źródeł danych** na istniejące kontrolki.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Uzyskiwanie dostępu do danych w programie Visual Studio](/visualstudio/data-tools/)  
  Dostarcza łącza do stron, które mówią o dołączaniu funkcji dostępu do danych do aplikacji.
 
  [Narzędzia do obsługi danych programu Visual Studio dla platformy .NET](/visualstudio/data-tools/visual-studio-data-tools-for-dotnet)  
- Zawiera łącza do stron dotyczących tworzenia aplikacji, które współpracują z danych, przy użyciu programu Visual Studio.  
+ Dostarcza łącza do stron dotyczących tworzenia aplikacji, które działają z danymi za pomocą programu Visual Studio.  
   
  [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)  
  Dostarcza łącza do tematów opisujących, jak używać programu LINQ z języka Visual Basic.  
@@ -28,19 +28,19 @@ Visual Basic zawiera kilka nowych funkcji, aby pomóc w tworzeniu aplikacji, kt�
  [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md)  
  Dostarcza informacje na temat [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]. Zawiera przykłady programowania.  
   
- [LINQ do SQL narzędzia w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
- Zawiera łącza do innych tematów dotyczących sposobu tworzenia [LINQ do SQL](../../framework/data/adonet/sql/linq/index.md) model obiektów w aplikacji.  
+ [LINQ to SQL Tools w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
+ Zawiera łącza do tematów dotyczących sposobu tworzenia [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md) modelu obiektów w aplikacji.  
   
  [Praca z zestawami danych w aplikacjach n-warstwowych](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)  
  Dostarcza łącza do tematów dotyczących tworzenia wielowarstwowych danych aplikacji.  
      
  [Dodaj nowe połączenia](/visualstudio/data-tools/add-new-connections)  
- Zawiera łącza do stron łączyć się z aplikacji do danych z narzędzia do projektowania i ADO.NET— obiekty połączenia przy użyciu programu Visual Studio.  
+ Dostarcza łącza do stron o łączeniu aplikacji z danymi za pomocą narzędzi czasu projektowania i obiektów połączeń ADO.NET, za pomocą programu Visual Studio.  
 
  [Narzędzia zestawu danych w programie Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio)  
  Dostarcza łącza do stron opisujących sposób ładowania danych do zestawów danych, a także sposób wykonania instrukcji SQL i procedur składowanych.  
   
- [Powiązywanie formantów z danymi w Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)  
+ [Powiązywanie kontrolek z danymi w programie Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)  
  Dostarcza łącza do stron, które opisują sposób wyświetlania danych na Windows Forms za pomocą powiązanych z danymi kontrolek.  
   
  [Edytowanie danych w zestawach danych](/visualstudio/data-tools/edit-data-in-datasets)  

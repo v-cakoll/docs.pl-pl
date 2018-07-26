@@ -1,39 +1,39 @@
 ---
-title: Testowanie platformy ASP.NET Core usług i aplikacji sieci web
-description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Testowanie platformy ASP.NET Core usług i aplikacji sieci web
+title: Testowanie aplikacji internetowych i usług platformy ASP.NET Core
+description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Testowanie aplikacji internetowych i usług platformy ASP.NET Core
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 5e06f582677e61209d0b226fc68bca81dfe593e5
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: f7bd75ecdd85e49524ccdf67f3e59aa4be46bdce
+ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104403"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792416"
 ---
-# <a name="testing-aspnet-core-services-and-web-apps"></a>Testowanie platformy ASP.NET Core usług i aplikacji sieci web
+# <a name="testing-aspnet-core-services-and-web-apps"></a>Testowanie aplikacji internetowych i usług platformy ASP.NET Core
 
-Kontrolery są środkowej części interfejsu API platformy ASP.NET Core usług i aplikacji sieci Web programu ASP.NET MVC. Tak powinien mieć pewność, które działają zgodnie z przeznaczeniem dla aplikacji. Testy automatyczne może udostępnić tym zaufania i może szybko wykrywać błędy przed dotarciem produkcji.
+Kontrolery są centralnym elementem interfejsu API platformy ASP.NET Core usług i aplikacji sieci Web programu ASP.NET MVC. W efekcie powinien mieć pewność, której działają zgodnie z przeznaczeniem dla aplikacji. Testy automatyczne udostępnić Ci ten zaufania i umożliwić wykrycie błędów, zanim dotrą produkcji.
 
-Należy przetestować, jak kontroler ma zachowywać się oparte na prawidłowe lub nieprawidłowe dane wejściowe i na podstawie wyniku prowadzonej działalności, którą wykonuje odpowiedzi kontrolera testu. Jednak powinny mieć następujące typy testów z mikrousług:
+Należy przetestować sposób działania oparte na prawidłowe lub nieprawidłowe dane wejściowe kontrolera i test controller odpowiedzi na podstawie wyniku operacji biznesowych, który wykonuje. Jednakże powinny mieć tego rodzaju testy mikrousługi:
 
--   Testy jednostkowe. Te upewnij się, że poszczególne składniki aplikacji działają zgodnie z oczekiwaniami. Potwierdzenia testu API składnika.
+-   Testy jednostkowe. Te upewnij się, że poszczególne składniki aplikacji działają zgodnie z oczekiwaniami. Potwierdzenia testowanie składników interfejsu API.
 
--   Testy integracji. Te upewnij się, że składnik interakcje działać zgodnie z oczekiwaniami przed zewnętrznych artefaktów, takich jak bazy danych. Potwierdzenia można przetestować składnika interfejsu API, interfejsu użytkownika lub efektami ubocznymi akcji, takich jak bazy danych we/wy, rejestrowanie, itp.
+-   Testy integracji. Te upewnij się, że interakcje składnika działać zgodnie z oczekiwaniami względem zewnętrznych artefaktów, takich jak bazy danych. Potwierdzenia można przetestować, składnik interfejsu API, interfejs użytkownika lub efekty uboczne akcji, takich jak bazy danych we/wy, rejestrowanie, itp.
 
--   Testy funkcjonalne dla każdego mikrousługi. Te upewnij się, że aplikacja działa zgodnie z oczekiwaniami z perspektywy użytkownika.
+-   Testy funkcjonalne dla poszczególnych mikrousług. Te upewnij się, że aplikacja działa zgodnie z oczekiwaniami z perspektywy użytkownika.
 
--   Testy usługi. Te upewnij się, sprawdzane są przypadki użycia usługi end-to-end, łącznie z testowaniem wielu usług w tym samym czasie. Dla tego typu testowania musisz najpierw przygotować środowisko. W takim przypadku oznacza to, uruchamiania usług (na przykład przy użyciu rozwiązania docker-compose się).
+-   Usługa badania. Te upewnij się, że są przetestowane przypadki użycia usługi end-to-end, w tym testowanie wielu usług, w tym samym czasie. Tego rodzaju kontrolach musisz najpierw przygotować środowisko. W takim przypadku oznacza to uruchamianie usług (na przykład przy użyciu narzędzia docker-compose się).
 
-### <a name="implementing-unit-tests-for-aspnet-core-web-apis"></a>Implementującej testów jednostkowych dla interfejsów API platformy ASP.NET Core sieci Web
+### <a name="implementing-unit-tests-for-aspnet-core-web-apis"></a>Implementowanie testów jednostkowych dla interfejsów API sieci Web programu ASP.NET Core
 
-Testy jednostkowe obejmuje testowania części aplikacji w izolacji od jego infrastruktury i zależności. Podczas testu jednostkowego możesz logiką kontrolera, tylko zawartość jednej akcji lub jest testowana metoda, nie zachowanie z jego zależności lub struktury, sam. Testy jednostkowe Nie wykrywaj problemy w interakcji między składnikami — to znaczy celem testów integracji.
+Testy jednostkowe polega części aplikacji w izolacji od jego infrastruktura i zależności. Podczas testów jednostkowych można logiką kontrolera, tylko zawartość jednej akcji lub metoda jest testowany, nie zachowanie jego zależności lub samej strukturze. Testy jednostkowe nie wykryto problemów, interakcja między składnikami — to znaczy celem testów integracji.
 
-Jako jednostki można przetestować akcji kontrolera, upewnij się, że można skupić się tylko na ich zachowanie. Kontroler testu jednostkowego pozwala uniknąć np. filtry routingu i wiązania modelu. Ponieważ one skupić się na tylko jeden element testowania, testy jednostkowe są zwykle proste do zapisu i szybkie uruchamianie. Dobrze napisane zbiór testy jednostkowe mogą być uruchamiane często bez znacznie obciążenie.
+Jako jednostki możesz przetestować akcji kontrolera, upewnij się, że możesz skoncentrować się tylko na ich zachowanie. Kontroler testu jednostkowego pozwala uniknąć elementów, takich jak filtrów routingu i wiązania modelu. Ponieważ skupiają się na testowanie tylko jedną z rzeczy, testy jednostkowe są zwykle łatwe do zapisania i szybkie uruchamianie. Dobrze napisane zestaw testów jednostkowych mogą być uruchamiane często bez koszty ogólne.
 
-Testy jednostkowe są implementowane oparte na platformach testu, takie jak xUnit.net, MSTest, Moq lub NUnit. EShopOnContainers przykładowej aplikacji użyto XUnit.
+Testy jednostkowe są implementowane w oparciu o struktury testów, takimi jak xUnit.net, MSTest, Moq lub NUnit. W ramach aplikacji eShopOnContainers przykładowej aplikacji użyto XUnit.
 
-Podczas pisania testów jednostkowych dla kontrolera interfejsu API sieci Web, można utworzyć wystąpienia klasy kontrolera, bezpośrednio za pomocą nowych słów kluczowych w języku C\#, dzięki czemu tak szybko jak to możliwe uruchomienia testu. Poniższy przykład pokazuje, jak na przykład przy użyciu [XUnit](https://xunit.github.io/) jako struktury testowej.
+Podczas pisania testów jednostkowych dla kontrolera interfejsu API sieci Web, tworzenia wystąpienia klasy kontrolera bezpośrednio przy użyciu słowa kluczowego new w języku C\#, dzięki czemu testy zostaną uruchomione tak szybko, jak to możliwe. Poniższy przykład pokazuje, jak to zrobić, korzystając z [XUnit](https://xunit.github.io/) jako struktury testowej.
 
 ```csharp
 [Fact]
@@ -53,19 +53,19 @@ public void Add_new_Order_raises_new_event()
 }
 ```
 
-### <a name="implementing-integration-and-functional-tests-for-each-microservice"></a>Wdrażanie integracji i testy funkcjonalne dla każdego mikrousługi
+### <a name="implementing-integration-and-functional-tests-for-each-microservice"></a>Implementowanie integracji i testów funkcjonalnych dla poszczególnych mikrousług
 
-Jak wspomniano, testów integracji i funkcjonalności mają różnych celów i cele. Jednak sposób implementowania zarówno podczas testowania kontrolery ASP.NET Core jest podobny, więc w tej sekcji możemy skoncentrować się na testów integracji.
+Jak wspomniano, testy integracji i testów funkcjonalnych mają różnych celów i cele. Jednak sposób implementacji zarówno podczas testowania kontrolerów platformy ASP.NET Core jest podobny, więc w tej sekcji możemy skoncentrować się na testy integracji.
 
-Testowanie integracji gwarantuje, że składniki aplikacji działać prawidłowo, jeśli połączone. Integracja obsługuje platformy ASP.NET Core testowania przy użyciu platform testów jednostkowych i wbudowane testu hosta sieci web, który może służyć do obsługi żądań bez obciążenie sieci.
+Testowanie integracji gwarantuje, że składniki aplikacji działać prawidłowo, jeśli połączone. Integracja obsługuje platformy ASP.NET Core testowania przy użyciu platform testów jednostkowych i testów wbudowanych hosta sieci web, który może służyć do obsługi żądań bez obciążenie sieci.
 
-W przeciwieństwie do przeprowadzania testów jednostkowych integracji testy obejmują często dotyczy infrastruktury aplikacji, takich jak bazy danych, system plików, zasobów sieciowych lub żądania sieci web i odpowiedzi. Testy jednostkowe Użyj elementów sztucznych lub mock obiektów zamiast te problemy. Ale testy integracji ma na celu potwierdzenie, że system działa zgodnie z oczekiwaniami w przypadku tych systemów, do integracji testowania nie używać elementów sztucznych ani mock obiektów. Zamiast tego możesz uwzględnić infrastruktury, takie jak wywołania dostępu lub usługi bazy danych z innych usług.
+W przeciwieństwie do testów jednostkowych testów integracji często obejmują obaw infrastruktury aplikacji, takich jak bazy danych, system plików, zasobów sieciowych lub żądania sieci web i odpowiedzi. Testy jednostkowe używane sztuczne elementy testowe lub testowanie obiektów, zamiast tych problemów. Ale testy integracji ma na celu upewnij się, że system działa zgodnie z oczekiwaniami w tych systemach, więc do testowania integracji nie używane sztuczne elementy testowe lub testowanie obiektów. Zamiast tego możesz uwzględnić infrastruktury, takich jak wywołania dostępu lub usługa bazy danych z innych usług.
 
-Ponieważ testy integracji wykonywania większych segmenty kodu niż testy jednostkowe i testy integracji zależne elementy infrastruktury, mają zwykle rzędów wolniej niż testy jednostkowe. W związku z tym jest dobrym rozwiązaniem, aby ograniczyć liczbę testów integracji zapisu i uruchom.
+Ponieważ testy integracji wykonywania większych segmenty kodu niż testy jednostkowe i testy integracji zależą elementy infrastruktury, mają zwykle rzędów wolniej niż testy jednostkowe. W związku z tym to dobry pomysł, aby ograniczyć liczbę testów integracji pisania i uruchamiania.
 
-Platformy ASP.NET Core obejmuje wbudowane testu sieci web hosta, który może służyć do obsługi żądań HTTP bez obciążenie sieci, co oznacza, że można uruchomić te testy szybciej używając hosta sieci web rzeczywistych. Host testów sieci web jest dostępna w składniku NuGet jako Microsoft.AspNetCore.TestHost. Można dodać do integracji projekty testowe, a używany do hostowania platformy ASP.NET Core aplikacji.
+Platforma ASP.NET Core zawiera wbudowany test hosta sieci web używanym do obsługi żądań HTTP bez obciążenie sieci, co oznacza, że mogą szybciej uruchamiania tych testów, korzystając z hosta sieci web rzeczywistych. Test hosta sieci web jest dostępna w składniku NuGet jako Microsoft.AspNetCore.TestHost. On mogą być dodawane do projektów testów integracji i używane do hosta platformy ASP.NET Core aplikacje.
 
-Jak widać w poniższym kodzie podczas tworzenia testów integracji dla platformy ASP.NET Core kontrolerów, można utworzyć wystąpienia kontrolerów przez hosta testów. To jest porównywalna do żądania HTTP, ale działa szybciej.
+Jak widać w poniższym kodzie, tworząc testy integracji dla platformy ASP.NET Core kontrolerów, tworzy się kontrolery, za pośrednictwem hosta testów. To jest porównywalna do żądania HTTP, ale działa szybciej.
 
 ```csharp
 public class PrimeWebDefaultRequestShould
@@ -96,17 +96,17 @@ public class PrimeWebDefaultRequestShould
 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Steve Smith. Testowanie kontrolerów** (platformy ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](/aspnet/core/mvc/controllers/testing)
+-   **Steve Smith. Kontrolery testów** (platformy ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](/aspnet/core/mvc/controllers/testing)
 
--   **Steve Smith. Testowanie integracji** (platformy ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/testing/integration-testing*](/aspnet/core/testing/integration-testing)
+-   **Steve Smith. Testowanie integracji** (platformy ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/test/integration-tests*](/aspnet/core/test/integration-tests)
 
--   **Jednostka testowania w .NET Core za pomocą testu dotnet**
+-   **Testowanie jednostek w .NET Core za pomocą polecenia dotnet test**
     [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 -   **xUnit.net**. Oficjalna witryna.
     [*https://xunit.github.io/*](https://xunit.github.io/)
 
--   **Teście jednostkowym.**
+-   **O teście jednostkowym.**
     [*https://msdn.microsoft.com/library/hh694602.aspx*](https://msdn.microsoft.com/library/hh694602.aspx)
 
 -   **Moq**. Repozytorium GitHub.
@@ -115,13 +115,13 @@ public class PrimeWebDefaultRequestShould
 -   **NUnit**. Oficjalna witryna.
     [*https://www.nunit.org/*](https://www.nunit.org/)
 
-### <a name="implementing-service-tests-on-a-multi-container-application"></a>Wdrażanie usługi testów w kontenerze wielu aplikacji 
+### <a name="implementing-service-tests-on-a-multi-container-application"></a>Wdrażanie usługi testów na aplikację obsługującą wiele kontenerów 
 
-Jak wspomniano wcześniej, podczas testowania aplikacji kontenera usługi, wszystkie mikrousług musi być uruchomiona w klastrze hosta lub kontener Docker. Testy na trasie usługi, obejmujące wiele operacji dotyczących kilku mikrousług wymagają wdrażanie i uruchamianie całej aplikacji na hoście Docker uruchamiając docker-tworzą w górę (lub porównywalny mechanizmu, jeśli używasz programu orchestrator). Po uruchomieniu całej aplikacji i jej usług, można wykonywać na trasie integracji i testy funkcjonalne.
+Jak wspomniano wcześniej, podczas testowania aplikacji obsługującej wiele kontenerów, wszystkie mikrousługi muszą działać w ramach klastra hostów lub kontenera Docker. Testy usług end-to-end, obejmujących wiele operacji obejmujących wiele mikrousług wymagają jej wdrażanie i uruchamianie całej aplikacji na hoście platformy Docker za pomocą platformy docker-compose up (lub porównywalny mechanizmu, jeśli używasz programu orchestrator). Gdy całej aplikacji i wszystkich jego usług jest uruchomiona, można wykonać end-to-end integracji i testów funkcjonalnych.
 
-Istnieje kilka metod, których można użyć. W plik docker-compose.yml, który umożliwia wdrażanie aplikacji (lub podobny migawek, takich jak docker compose.ci.build.yml), na poziomie rozwiązania można rozwinąć punkt wejścia, aby użyć [testu dotnet](../../../core/tools/dotnet-test.md). Umożliwia także innego pliku Redaguj, który będzie uruchomić testy w obrazie docelowych. Przy użyciu innego pliku compose dla testów integracji, które obejmują baz danych do kontenerów i mikrousług, na których, można upewnić się, że powiązanych danych zawsze jest resetowany do stanu pierwotnego przed uruchomieniem testów.
+Istnieje kilka metod, których można użyć. W pliku docker-compose.yml, który zostanie użyty do wdrożenia aplikacji (lub podobnych, takich jak docker-compose.ci.build.yml), na poziomie rozwiązania można rozwinąć punktu wejścia, aby użyć [polecenia dotnet test](../../../core/tools/dotnet-test.md). Można również użyć innego pliku compose, która może uruchomić testy na ilustracji, które są przeznaczone dla. Przy użyciu innego pliku compose dla testów integracyjnych, które obejmuje z mikrousług i bazami danych w kontenerach, należy upewnić się, że powiązanych danych zawsze jest resetowany do stanu pierwotnego przed uruchomieniem testów.
 
-Po skonfigurowaniu i uruchomieniu aplikacji tworzenia może potrwać z punktów przerwania i wyjątków zalet Jeśli używasz programu Visual Studio. Lub uruchom testy integracji automatycznie planowaną CI w Visual Studio Team Services lub inny system CI/CD, który obsługuje kontenery Docker.
+Po skonfigurowaniu i uruchomieniu aplikacji compose możesz korzystać z zalet punktów przerwania i wyjątków w przypadku korzystania z programu Visual Studio. Lub uruchomić testy integracji automatycznie w potoku ciągłej integracji w Visual Studio Team Services lub w innym systemie ciągłej integracji/ciągłego wdrażania, który obsługuje kontenery platformy Docker.
 
 >[!div class="step-by-step"]
 [Poprzednie](subscribe-events.md)

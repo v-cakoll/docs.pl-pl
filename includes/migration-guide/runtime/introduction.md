@@ -1,12 +1,12 @@
 ## <a name="introduction"></a>Wprowadzenie
-Zmiany środowiska uruchomieniowego wpływają na wszystkie aplikacje, które działają na platformie .NET Framework nie został skompilowany przed, które korzystają z poszczególnych funkcji.
+Zmiany środowiska uruchomieniowego wpływają na wszystkie aplikacje, które działają na platformie .NET Framework nie został wcześniej skompilowany, które używają poszczególnych funkcji.
 
-W tematach opisano zmiany środowiska uruchomieniowego możemy zostały sklasyfikowane poszczególne elementy przez ich oczekiwanej wpływ w następujący sposób:
+W tematach, które opisują zmiany środowiska uruchomieniowego możemy zostały sklasyfikowane poszczególne elementy według ich oczekiwanego wpływu w następujący sposób:
 
-**Główne** to istotna zmiana, który ma wpływ na wiele aplikacji lub wymagają znacznej modyfikacji kodu.
+**Główne** to istotną zmianę, która wpływa na dużej liczby aplikacji lub wymagającym istotnych zmian w kodzie.
 
-**Drobne** jest to zmiana, który ma wpływ na małej liczby aplikacji lub wymagają drobne zmiany kodu.
+**Drobne** to różni się to ma wpływ na niewielką liczbę aplikacji lub wymagają drobnych modyfikacji kodu.
 
-**Krawędzi przypadku** jest to zmiana, która wpływa na aplikacje w bardzo konkretnych scenariuszy, które nie są typowe.
+**Krawędzi przypadek** to zmianę, która wpływa na aplikacje w ramach bardzo konkretnych scenariuszy, które nie są wspólne.
 
-**Przezroczysty** to zmiany, która nie ma zauważalnego wpływu na deweloperem aplikacji lub użytkownika. Aplikacja nie powinny wymagać modyfikacji z powodu tej zmiany.
+**Przezroczysty** to zmianę, która nie ma zauważalnego wpływu na dewelopera aplikacji lub użytkownika. Aplikacja nie powinna wymagać modyfikacji ze względu na tę zmianę.

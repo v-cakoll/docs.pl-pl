@@ -1,79 +1,79 @@
 ---
 title: Wdrażanie aplikacji .NET core za pomocą narzędzi interfejsu wiersza polecenia
-description: Dowiedz się, wdrażanie aplikacji .NET Core za pomocą narzędzi interfejsu wiersza polecenia (CLI)
+description: Dowiedz się, wdrażanie aplikacji .NET Core za pomocą narzędzia interfejsu wiersza polecenia (CLI)
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
 ms.openlocfilehash: 7b009068422686442ebff83b9400c365f34a3154
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217836"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244754"
 ---
-# <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Wdrażanie aplikacji .NET Core za pomocą narzędzia interfejsu wiersza polecenia (CLI)
+# <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Wdrażanie aplikacji .NET Core za pomocą narzędzi interfejsu wiersza polecenia (CLI)
 
-Możesz wdrożyć aplikację .NET Core albo jako *wdrożenia zależne od framework*, który zawiera pliki binarne z aplikacji, ale zależy od obecności .NET Core w systemie docelowym lub jako *niezależne wdrożenie*, który zawiera pliki binarne .NET Core i aplikacji. Aby uzyskać ogólne informacje, zobacz [wdrażanie aplikacji .NET Core](index.md).
+Możesz wdrożyć aplikację platformy .NET Core albo jako *wdrożenia zależny od struktury*, który zawiera pliki binarne aplikacji, ale zależy od obecności platformy .NET Core w systemie docelowym lub jako *niezależna wdrożenie*, który zawiera pliki binarne .NET Core i aplikacji. Aby uzyskać przegląd, zobacz [wdrożenie aplikacji programu .NET Core](index.md).
 
-W poniższych sekcjach przedstawiono sposób użycia [narzędzi interfejsu wiersza polecenia platformy .NET Core](../tools/index.md) można utworzyć następujące typy wdrożeń:
+W poniższych sekcjach opisano sposób użycia [narzędzi interfejsu wiersza polecenia platformy .NET Core](../tools/index.md) do tworzenia następujących rodzajów wdrożenia:
 
-- Zależne od Framework wdrożenia
-- Wdrożenie Framework zależne zależności innych firm
-- Samodzielne wdrożenia
-- Samodzielne wdrożenia zależności innych firm
+- Wdrożenie zależny od struktury
+- Wdrażanie zależny od struktury za pomocą zależności innych firm
+- Niezależne wdrożenia
+- Niezależne wdrożenia przy użyciu zależności innych firm
 
-Podczas pracy z poziomu wiersza polecenia, można użyć dowolnego edytora programu. Jeśli w edytorze programu [Visual Studio Code](https://code.visualstudio.com), można otworzyć konsoli poleceń w środowisku Visual Studio Code, wybierając **widoku** > **zintegrowane terminali**.
+Podczas pracy z poziomu wiersza polecenia, można użyć dowolnego edytora w programie. Jeśli Edytor programu [programu Visual Studio Code](https://code.visualstudio.com), można otworzyć konsoli poleceń w środowisku Visual Studio Code, wybierając **widoku** > **zintegrowany Terminal**.
 
-## <a name="framework-dependent-deployment"></a>Zależne od Framework wdrożenia
+## <a name="framework-dependent-deployment"></a>Wdrożenie zależny od struktury
 
-Po prostu wdrażanie wdrożenia zależne od framework bez zależności innych firm obejmuje tworzenie, testowanie i publikowanie aplikacji. Prosty przykład napisane w języku C# przedstawiono proces. 
+Wdrożenie zależny od struktury bez zależności innych firm po prostu polega na tworzenia, testowania i publikowania aplikacji. Prosty przykład napisany w języku C# przedstawiono proces. 
 
 1. Utwórz katalog projektu.
 
-   Utwórz katalog projektu i stał się bieżącym katalogiem.
+   Utwórz katalog dla projektu, co bieżący katalog.
 
-1. Tworzenie projektu.
+1. Utwórz projekt.
 
-   W wierszu polecenia wpisz [dotnet nowej konsoli](../tools/dotnet-new.md) Aby utworzyć nowy projekt console C# w tym katalogu.
+   W wierszu polecenia wpisz polecenie [dotnet nową konsolę](../tools/dotnet-new.md) Aby utworzyć nowy projekt konsoli języka C#, w tym katalogu.
 
-1. Należy dodać kodu źródłowego aplikacji.
+1. Dodawanie kodu źródłowego aplikacji.
 
-   Otwórz *Program.cs* plik w edytorze i Zastąp następujący kod automatycznie wygenerowany kod. Monituje użytkownika o wprowadzenie tekstu, a Wyświetla poszczególnych wyrazów wprowadzony przez użytkownika. Używa wyrażenia regularnego `\w+` do oddzielania słów w wejściowego tekstu.
+   Otwórz *Program.cs* w edytorze i Zastęp automatycznie wygenerowany kod następującym kodem. On monituje użytkownika o wprowadzenie tekstu i wyświetla poszczególne wyrazy wprowadzonej przez użytkownika. Używa wyrażenia regularnego `\w+` do oddzielania słów w tekście wejściowym.
 
    [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
 1. Zależności projektu i narzędzia do aktualizacji.
  
-   Uruchom [przywracania dotnet](../tools/dotnet-restore.md) ([patrz Uwaga](#dotnet-restore-note)) polecenia, aby przywrócić zależności określony w projekcie.
+   Uruchom [dotnet restore](../tools/dotnet-restore.md) ([patrz Uwaga](#dotnet-restore-note)) polecenie, aby przywrócić zależności określony w projekcie.
 
-1. Utwórz kompilację debugowania aplikacji.
+1. Utworzenie kompilacja do debugowania aplikacji.
 
-   Użyj [kompilacji dotnet](../tools/dotnet-build.md) polecenie, aby skompilować aplikację lub [dotnet Uruchom](../tools/dotnet-run.md) polecenie, aby skompilować i uruchomić go.
+   Użyj [kompilacji dotnet](../tools/dotnet-build.md) polecenie, aby skompilować aplikację lub [dotnet, uruchom](../tools/dotnet-run.md) polecenie, aby skompilować i uruchomić ją.
 
 1. Wdrażanie aplikacji.
 
-   Po utworzeniu debugowania i przetestowane programu, tworzenia wdrożenia za pomocą następującego polecenia:
+   Po utworzeniu debugowania i przetestować program, należy utworzyć wdrożenie za pomocą następującego polecenia:
 
       ```console
       dotnet publish -f netcoreapp1.1 -c Release
       ```
-   Spowoduje to utworzenie zlecenia (zamiast debugowania) wersji aplikacji. Pliki wynikowe są umieszczane w katalogu o nazwie *publikowania* w podkatalogu projektu *bin* katalogu.
+   Spowoduje to utworzenie wydania (zamiast debugowania) wersję aplikacji. Pliki wynikowe są umieszczane w katalogu o nazwie *publikowania* znajdujący się w podkatalogu projektu *bin* katalogu.
 
-   Wraz z plikami aplikacji proces publikowania emituje plik bazy danych (.pdb) program, który zawiera informacje o debugowaniu aplikacji. Plik przydaje się głównie w celu debugowania wyjątków. Można pominąć rozpowszechnienie go z plikami aplikacji. Jednak należy go zapisać, w przypadku, gdy chcesz debugować kompilacji wersji aplikacji.
+   Wraz z plikami aplikacji proces publikowania emituje plik bazy danych (PDB) program, który zawiera informacje o debugowaniu dotyczących aplikacji. Plik jest przydatne głównie do debugowania wyjątków. Można nie rozprowadzić go z plikami aplikacji. Jednak należy je zapisać, w przypadku, gdy chcesz debugować kompilację wydania aplikacji.
 
-   Pełny zestaw plików aplikacji w dowolny sposób, który chcesz można wdrożyć. Na przykład można umieścić je w pliku Zip, użyć prostej `copy` polecenie lub wdrożyć je przy użyciu dowolnego pakietu instalacyjnego wybranych przez użytkownika.
+   Kompletny zestaw plików aplikacji w jakikolwiek sposób, który można wdrożyć. Na przykład, można umieścić je w pliku Zip, użyć prostego `copy` polecenie lub wdrożyć je przy użyciu dowolnego pakietu instalacyjnego wybranych przez użytkownika.
 
 1. Uruchamianie aplikacji
 
-   Po zainstalowaniu użytkowników można uruchamiać aplikacji przy użyciu `dotnet` polecenia i podania nazwy pliku aplikacji, takich jak `dotnet fdd.dll`.
+   Po zainstalowaniu, użytkownicy mogą wykonać aplikacji przy użyciu `dotnet` polecenia i podając nazwę pliku aplikacji, takich jak `dotnet fdd.dll`.
 
-   Oprócz plików binarnych aplikacji instalatorem należy również pakietu Instalatora udostępnionego framework albo wyszukać jako warunek wstępny jako część instalacji aplikacji.  Instalacja udostępnionego framework wymaga dostępu administratora/root.
+   Oprócz plików binarnych aplikacji Instalatora należy również pakietu Instalatora udostępnionego framework albo Wyszukaj jako warunek wstępny jako część instalacji aplikacji.  Instalacja udostępnionego framework wymaga dostępu administratora/root.
 
-## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>Wdrożenie Framework zależne zależności innych firm
+## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>Wdrażanie zależny od struktury za pomocą zależności innych firm
 
-Wdrażanie wdrożenie zależne od framework z co najmniej jeden zależności innych firm wymaga tych zależności dostępne do projektu. Wymagane są dwa dodatkowe czynności, przed uruchomieniem `dotnet restore` ([patrz Uwaga](#dotnet-restore-note)) polecenia:
+Wdrożenie zależny od struktury z co najmniej jeden zależności innych firm wymaga tych zależności dostępne dla projektu. Wymagane są dwa dodatkowe kroki, aby można było uruchomić `dotnet restore` ([patrz Uwaga](#dotnet-restore-note)) polecenia:
 
-1. Dodaj odwołania do wymaganych bibliotek innych firm do `<ItemGroup>` części Twojego *csproj* pliku. Następujące `<ItemGroup>` sekcja zawiera zależność na [Json.NET](http://www.newtonsoft.com/json) jako biblioteki innych firm:
+1. Dodaj odwołania do wymaganych bibliotek innych firm, aby `<ItemGroup>` części Twojej *csproj* pliku. Następujące `<ItemGroup>` sekcja zawiera zależność na [Json.NET](http://www.newtonsoft.com/json) jako biblioteki innej firmy:
 
       ```xml
       <ItemGroup>
@@ -81,33 +81,33 @@ Wdrażanie wdrożenie zależne od framework z co najmniej jeden zależności inn
       </ItemGroup>
       ```
 
-1. Jeśli nie jest jeszcze, Pobierz pakiet NuGet zawierający zależności innych firm. Aby pobrać pakiet, należy wykonać `dotnet restore` ([patrz Uwaga](#dotnet-restore-note)) polecenia po dodaniu zależności. Ponieważ zależność jest rozwiązany z lokalnej pamięci podręcznej NuGet w czasie publikacji, musi być dostępna w systemie.
+1. Jeśli jeszcze nie, Pobierz pakiet NuGet zawierający zależności innych firm. Aby pobrać pakiet, należy wykonać `dotnet restore` ([patrz Uwaga](#dotnet-restore-note)) polecenia po dodaniu zależności. Ponieważ zależność jest rozwiązany z lokalnej pamięci podręcznej narzędzia NuGet w czasu publikacji, musi on być dostępny w Twoim systemie.
 
-Należy pamiętać, że wdrożenie framework zależne zależności innych firm tylko jako przenośne jako jego zależności innych firm. Na przykład jeśli biblioteka innych firm obsługuje tylko macOS, aplikacja nie jest przenośne z systemami Windows. Dzieje się tak, jeśli zależności innych firm, sama zależy od kodu natywnego. Dobrym przykładem jest [serwera Kestrel](/aspnet/core/fundamentals/servers/kestrel), co wymaga natywnego zależności na [libuv](https://github.com/libuv/libuv). Podczas tworzenia Dyskietki dla aplikacji z tego rodzaju zależności innych firm publikowanych danych wyjściowych zawiera folder dla każdej [identyfikatora środowiska uruchomieniowego (RID)](../rid-catalog.md) obsługującego natywnego zależności (i znajdujące się w pakiecie NuGet).
+Należy pamiętać, że wdrożenie zależny od struktury z zależności innych firm tylko jako przenośne jako jego zależności innych firm. Na przykład jeśli biblioteki innych firm obsługuje tylko z systemem macOS, aplikacja nie jest przenośny z systemami Windows. Dzieje się tak, jeśli zależności innych firm, sama jest zależna od kodu natywnego. Dobrym przykładem jest [serwera Kestrel](/aspnet/core/fundamentals/servers/kestrel), co wymaga zależności natywnych na [libuv](https://github.com/libuv/libuv). Podczas tworzenia Dyskietki dla aplikacji za pomocą tego rodzaju zależności innych firm opublikowane dane wyjściowe zawiera folder dla każdego [identyfikator środowiska uruchomieniowego (RID)](../rid-catalog.md) obsługującego natywnych zależności (i znajdujące się w pakiecie NuGet).
 
-## <a name="simpleSelf"></a> Samodzielne wdrożenia bez zależności innych firm
+## <a name="simpleSelf"></a> Niezależne wdrożenia bez zależności innych firm
 
-Wdrażanie niezależne wdrożenia bez zależności innych firm obejmuje tworzenie projektu, modyfikując *csproj* plików, tworzenie, testowanie i publikowanie aplikacji. Prosty przykład napisane w języku C# przedstawiono proces. W przykładzie przedstawiono sposób tworzenia niezależne wdrożenia przy użyciu [narzędzie dotnet](../tools/dotnet.md) z wiersza polecenia.
+Wdrożenie niezależna bez zależności innych firm obejmuje tworzenie projektu i modyfikując *csproj* pliku, tworzenia, testowania i publikowania aplikacji. Prosty przykład napisany w języku C# przedstawiono proces. W przykładzie pokazano, jak utworzyć niezależna wdrożenia przy użyciu [narzędzia dotnet](../tools/dotnet.md) z wiersza polecenia.
 
-1. Utwórz katalog projektu.
+1. Utwórz katalog dla projektu.
 
-   Utwórz katalog projektu i stał się bieżącym katalogiem.
+   Utwórz katalog dla projektu i ułatwiają bieżącego katalogu.
 
-1. Tworzenie projektu.
+1. Utwórz projekt.
 
-   W wierszu polecenia wpisz [dotnet nowej konsoli](../tools/dotnet-new.md) Aby utworzyć nowy projekt console C# w tym katalogu.
+   W wierszu polecenia wpisz polecenie [dotnet nową konsolę](../tools/dotnet-new.md) Aby utworzyć nowy projekt konsoli języka C#, w tym katalogu.
 
-1. Należy dodać kodu źródłowego aplikacji.
+1. Dodawanie kodu źródłowego aplikacji.
 
-   Otwórz *Program.cs* plik w edytorze i Zastąp następujący kod automatycznie wygenerowany kod. Monituje użytkownika o wprowadzenie tekstu, a Wyświetla poszczególnych wyrazów wprowadzony przez użytkownika. Używa wyrażenia regularnego `\w+` do oddzielania słów w wejściowego tekstu.
+   Otwórz *Program.cs* w edytorze i Zastęp automatycznie wygenerowany kod następującym kodem. On monituje użytkownika o wprowadzenie tekstu i wyświetla poszczególne wyrazy wprowadzonej przez użytkownika. Używa wyrażenia regularnego `\w+` do oddzielania słów w tekście wejściowym.
 
    [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
-1. Zdefiniuj platformy, dla których aplikacja będzie obowiązywać.
+1. Zdefiniuj platformy, dla których będzie dotyczyć aplikacji.
 
-   Utwórz `<RuntimeIdentifiers>` tagów w `<PropertyGroup>` części Twojego *csproj* pliku, który definiuje platformy aplikacji elementów docelowych i podaj identyfikator środowiska uruchomieniowego (RID) dla każdej z platform docelowych. Należy pamiętać, że należy również dodać średnika do rozdzielenia identyfikatorów RID. Zobacz [katalogu identyfikator środowiska uruchomieniowego](../rid-catalog.md) dla identyfikatorów środowiska wykonawczego. 
+   Tworzenie `<RuntimeIdentifiers>` tagów w `<PropertyGroup>` części Twojej *csproj* pliku, który definiuje platform aplikacji jest przeznaczony dla i określ identyfikator środowiska uruchomieniowego (RID) dla każdej z platform docelowych. Należy zauważyć, że trzeba będzie również dodać średnika do rozdzielenia identyfikatorów RID. Zobacz [katalog identyfikatora środowiska uruchomieniowego](../rid-catalog.md) Lista identyfikatorów środowisk uruchomieniowych. 
 
-   Na przykład następująca `<PropertyGroup>` sekcji wskazuje, że aplikacja działa w 64-bitowych systemach operacyjnych Windows 10 i 64-bitowym systemie operacyjnym OS X 10.11 wersji.
+   Na przykład następująca `<PropertyGroup>` sekcja wskazuje, że aplikacja działa w 64-bitowych systemach operacyjnych Windows 10 i 64-bitowym systemie operacyjnym OS X w wersji 10.11.
 
      ```xml
      <PropertyGroup>
@@ -115,17 +115,17 @@ Wdrażanie niezależne wdrożenia bez zależności innych firm obejmuje tworzeni
      </PropertyGroup>
      ```
 
-   Należy pamiętać, że `<RuntimeIdentifiers>` element może występować w dowolnym `<PropertyGroup>` w Twojej *csproj* pliku. Kompletnego przykładu *csproj* plik pojawi się później w tej sekcji.
+   Należy pamiętać, że `<RuntimeIdentifiers>` element może znajdować się w dowolnym `<PropertyGroup>` w swojej *csproj* pliku. Pełny przykład *csproj* plik pojawia się w dalszej części w tej sekcji.
 
 1. Zależności projektu i narzędzia do aktualizacji.
 
-   Uruchom [przywracania dotnet](../tools/dotnet-restore.md) ([patrz Uwaga](#dotnet-restore-note)) polecenia, aby przywrócić zależności określony w projekcie.
+   Uruchom [dotnet restore](../tools/dotnet-restore.md) ([patrz Uwaga](#dotnet-restore-note)) polecenie, aby przywrócić zależności określony w projekcie.
 
-1. Utwórz kompilację debugowania aplikacji.
+1. Utworzenie kompilacja do debugowania aplikacji.
 
    W wierszu polecenia użyj [kompilacji dotnet](../tools/dotnet-build.md) polecenia.
 
-1. Po debugowania i przetestować program, należy utworzyć plików do wdrożenia z aplikacją dla poszczególnych platform jej celem.
+1. Po utworzeniu debugowania i przetestować program, należy utworzyć pliki do wdrożenia z aplikacją, dotyczącymi poszczególnych platform, że jest ono przeznaczone dla.
 
    Użyj `dotnet publish` polecenia dla obu platform docelowych w następujący sposób:
 
@@ -134,13 +134,13 @@ Wdrażanie niezależne wdrożenia bez zależności innych firm obejmuje tworzeni
       dotnet publish -c Release -r osx.10.11-x64
       ```
 
-   Spowoduje to utworzenie zlecenia (zamiast debugowania) wersji aplikacji dla każdej platformy docelowej. Pliki wynikowe są umieszczane w podkatalogu o nazwie *publikowania* w podkatalogu projektu *.\bin\Release\netcoreapp1.1\<runtime_identifier >* podkatalogu. Należy pamiętać, że każdy podkatalog zawiera pełny zestaw plików (pliki aplikacji i wszystkich plików .NET Core) potrzebne do uruchomienia aplikacji.
+   Spowoduje to utworzenie wydania (zamiast debugowania) wersję aplikacji dla każdej platformy docelowej. Pliki wynikowe są umieszczane w podkatalogu nazwanym *publikowania* znajdujący się w podkatalogu projektu *.\bin\Release\netcoreapp1.1\<runtime_identifier >* podkatalogu. Należy pamiętać, że każdy podkatalogu zawiera kompletny zestaw plików (pliki aplikacji i wszystkich plików z platformy .NET Core) potrzebnych do uruchomienia aplikacji.
 
-Wraz z plikami aplikacji proces publikowania emituje plik bazy danych (.pdb) program, który zawiera informacje o debugowaniu aplikacji. Plik przydaje się głównie w celu debugowania wyjątków. Możesz nie można skopiować pliki aplikacji. Jednak należy go zapisać, w przypadku, gdy chcesz debugować kompilacji wersji aplikacji.
+Wraz z plikami aplikacji proces publikowania emituje plik bazy danych (PDB) program, który zawiera informacje o debugowaniu dotyczących aplikacji. Plik jest przydatne głównie do debugowania wyjątków. Istnieje możliwość nie spakujesz ją z plikami aplikacji. Jednak należy je zapisać, w przypadku, gdy chcesz debugować kompilację wydania aplikacji.
 
-Wdrażanie plików publikowanych w dowolny sposób, który chcesz. Na przykład można umieścić je w pliku Zip, użyć prostej `copy` polecenie lub wdrożyć je przy użyciu dowolnego pakietu instalacyjnego wybranych przez użytkownika.
+Wdrażanie plików publikowanych w jakikolwiek sposób, który chcesz. Na przykład, można umieścić je w pliku Zip, użyć prostego `copy` polecenie lub wdrożyć je przy użyciu dowolnego pakietu instalacyjnego wybranych przez użytkownika.
 
-Poniżej przedstawiono pełną *csproj* pliku dla tego projektu.
+Poniżej przedstawiono pełne *csproj* pliku dla tego projektu.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -152,11 +152,11 @@ Poniżej przedstawiono pełną *csproj* pliku dla tego projektu.
 </Project>
 ```
 
-## <a name="self-contained-deployment-with-third-party-dependencies"></a>Samodzielne wdrożenia zależności innych firm
+## <a name="self-contained-deployment-with-third-party-dependencies"></a>Niezależne wdrożenia przy użyciu zależności innych firm
 
-Wdrażanie niezależne wdrożenie z co najmniej jeden zależności innych firm obejmuje dodawanie zależności. Wymagane są dwa dodatkowe czynności, przed uruchomieniem `dotnet restore` ([patrz Uwaga](#dotnet-restore-note)) polecenia:
+Niezależna wdrożenie z co najmniej jeden zależności innych firm obejmuje dodawanie zależności. Wymagane są dwa dodatkowe kroki, aby można było uruchomić `dotnet restore` ([patrz Uwaga](#dotnet-restore-note)) polecenia:
 
-1. Dodaj odwołania do bibliotek żadnych innych firm, które mają `<ItemGroup>` części Twojego *csproj* pliku. Następujące `<ItemGroup>` sekcji używa struktury Json.NET jako biblioteki innych firm.
+1. Dodaj odwołania do żadnych bibliotek innych firm, aby `<ItemGroup>` części Twojej *csproj* pliku. Następujące `<ItemGroup>` sekcji używa struktury Json.NET jako biblioteki innej firmy.
 
     ```xml
       <ItemGroup>
@@ -164,9 +164,9 @@ Wdrażanie niezależne wdrożenie z co najmniej jeden zależności innych firm o
       </ItemGroup>
     ```
 
-1. Jeśli nie jest jeszcze, Pobierz pakiet NuGet zawierający zależności innych firm w systemie. Aby udostępnić zależności aplikacji, należy wykonać `dotnet restore` ([patrz Uwaga](#dotnet-restore-note)) polecenia po dodaniu zależności. Ponieważ zależność jest rozwiązany z lokalnej pamięci podręcznej NuGet w czasie publikacji, musi być dostępna w systemie.
+1. Jeśli jeszcze nie, Pobierz pakiet NuGet zawierający zależności innych firm w systemie. Aby jednak udostępnić zależności aplikacji, należy wykonać `dotnet restore` ([patrz Uwaga](#dotnet-restore-note)) polecenia po dodaniu zależności. Ponieważ zależność jest rozwiązany z lokalnej pamięci podręcznej narzędzia NuGet w czasu publikacji, musi on być dostępny w Twoim systemie.
 
-Poniżej przedstawiono pełną *csproj* pliku dla tego projektu:
+Poniżej przedstawiono pełne *csproj* pliku dla tego projektu:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -181,15 +181,15 @@ Poniżej przedstawiono pełną *csproj* pliku dla tego projektu:
 </Project>
 ```
 
-Podczas wdrażania aplikacji, wszelkie zależności innych firm używane w aplikacji znajdują się również z plikami aplikacji. Biblioteki innych firm nie są wymagane na komputerze, na którym jest uruchomiona aplikacja.
+Podczas wdrażania aplikacji, wszelkie zależności innych firm używanych w aplikacji znajdują się również z plikami aplikacji. Bibliotek innych firm nie są wymagane w systemie, na którym działa aplikacja.
 
-Należy pamiętać, że można wdrożyć tylko autonomiczną wdrożenia z biblioteką innych firm na platformach obsługiwanych przez tej biblioteki. Przypomina o zależności innych firm z natywnego zależności w ramach wdrożenia zależne od framework gdzie zależności macierzysty musi być zgodny z platformy, na którym aplikacja jest wdrożona.
+Należy pamiętać, że można wdrożyć tylko niezależna wdrożenia przy użyciu biblioteki innej firmy na platformach obsługiwanych przez tej biblioteki. Jest to podobne do mających zależności innych firm za pomocą natywnego zależności w ramach wdrożenia zależny od struktury, gdzie zależności natywnych musi być zgodny z platform, w której wdrażana jest aplikacja.
 
 <a name="dotnet-restore-note"></a>
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 # <a name="see-also"></a>Zobacz także
 
-[Wdrażanie aplikacji .NET core](index.md)   
-[Katalogu .NET core środowiska uruchomieniowego identyfikator (RID)](../rid-catalog.md)   
+[Wdrożenie aplikacji programu .NET core](index.md)   
+[Katalog platformy .NET core środowiska uruchomieniowego identyfikator (RID)](../rid-catalog.md)   
 

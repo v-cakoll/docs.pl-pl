@@ -8,17 +8,17 @@ helpviewer_keywords:
 - operator keyword [C#]
 ms.assetid: 59218cce-e90e-42f6-a6bb-30300981b86a
 ms.openlocfilehash: d633a46e21f913aa8c05289dccfb63e71efd697e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267951"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37959549"
 ---
 # <a name="operator-c-reference"></a>operator (odwołanie w C#)
-Użyj `operator` — słowo kluczowe przeciążenia operatora wbudowane lub udzielenia konwersji zdefiniowanej przez użytkownika w deklaracji klasy lub struktury.  
+Użyj `operator` — słowo kluczowe przeciążenia wbudowanym operatorem lub podać konwersja zdefiniowana przez użytkownika, w deklaracji klasy lub struktury.  
   
 ## <a name="example"></a>Przykład  
- Poniżej znajduje się bardzo uproszczonego klasę liczbami ułamkowymi. Przeciąża `+` i `*` operatory przeprowadzić ułamkowych Dodawanie i mnożenie i udostępnia również operatora konwersji tego konwertuje `Fraction` typ `double` typu.  
+ Poniżej znajduje się bardzo uproszczone klasę cyfry ułamkowe. Przeciąża `+` i `*` operatory przeprowadzić ułamkowe Dodawanie i mnożenie, a także operator konwersji na to, że konwertuje `Fraction` typ `double` typu.  
   
  [!code-csharp[csrefKeywordsConversion#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/operator_1.cs)]  
   
@@ -26,7 +26,7 @@ Użyj `operator` — słowo kluczowe przeciążenia operatora wbudowane lub udzi
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
+ [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
  [implicit](../../../csharp/language-reference/keywords/implicit.md)  

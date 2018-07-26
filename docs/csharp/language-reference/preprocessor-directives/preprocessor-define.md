@@ -1,17 +1,17 @@
 ---
 title: '#Zdefiniuj (odwołanie w C#)'
-ms.date: 07/20/2015
+ms.date: 06/30/2018
 f1_keywords:
 - '#define'
 helpviewer_keywords:
 - '#define directive [C#]'
 ms.assetid: 23638b8f-779c-450e-b600-d55682de7d01
-ms.openlocfilehash: 1903b96de5f9dfa4efc252897a4a4bd18ed64924
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f40c32a89641256e4f8fe30cd24f523b898139d5
+ms.sourcegitcommit: dc02d7d95f1e3efcc7166eaf431b0ec0dc9d8dca
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33286737"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37143482"
 ---
 # <a name="define-c-reference"></a>#define (odwołanie w C#)
 Dyrektywa `#define` umożliwia zdefiniowanie symbolu. Jeżeli używasz symbolu jako wyrażenia, które jest przekazywane do dyrektywy [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md), wyrażenie zostanie oszacowane jako `true`, jak pokazano na poniższym przykładzie:  
@@ -29,9 +29,9 @@ Dyrektywa `#define` umożliwia zdefiniowanie symbolu. Jeżeli używasz symbolu j
   
  Symbol można zdefiniować, ale nie można do niego przypisać wartości. Dyrektywa `#define` musi występować w pliku, zanim będzie można wykonać instrukcje, które nie są również dyrektywami preprocesora.  
   
- Możesz również zdefiniować symbol za pomocą opcji kompilatora [/define](../../../csharp/language-reference/compiler-options/define-compiler-option.md). Aby anulować definicję symbolu, użyj dyrektywy [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md).  
+ Można również zdefiniować symbol za pomocą [— Zdefiniuj](../../../csharp/language-reference/compiler-options/define-compiler-option.md) — opcja kompilatora. Aby anulować definicję symbolu, użyj dyrektywy [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md).  
   
- Symbol zdefiniowany z użyciem opcji `/define` lub `#define` nie powoduje konfliktu ze zmienną o takiej samej nazwie. Oznacza to, że nazwa zmiennej nie powinna być przekazywana do dyrektywy preprocesora i symbol będzie można oszacować tylko przy użyciu tej dyrektywy.  
+ Symbol zdefiniowany z użyciem opcji `-define` lub `#define` nie powoduje konfliktu ze zmienną o takiej samej nazwie. Oznacza to, że nazwa zmiennej nie powinna być przekazywana do dyrektywy preprocesora i symbol będzie można oszacować tylko przy użyciu tej dyrektywy.  
   
  Zakresem symbolu utworzonego przy użyciu dyrektywy `#define` jest plik, w którym został zdefiniowany symbol.  
   
@@ -64,7 +64,7 @@ public class TestDefine
  Aby zapoznać się z przykładem anulowania definicji symbolu, zobacz [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
+ [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Dyrektywy preprocesora C#](../../../csharp/language-reference/preprocessor-directives/index.md)  
  [const](../../../csharp/language-reference/keywords/const.md)  

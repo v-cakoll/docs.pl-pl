@@ -1,52 +1,52 @@
 ---
 title: Aplikacja konsoli
-description: Ten samouczek zawiera szereg funkcji .NET Core i języka C#.
+description: W tym samouczku pokazano pewną liczbę funkcji platformy .NET Core i języka C#.
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
 ms.openlocfilehash: bae03c9ae02f2888b1b70617ca712ef7927e9dce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355489"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961420"
 ---
 # <a name="console-application"></a>Aplikacja konsoli
 
-Ten samouczek zawiera szereg funkcji .NET Core i języka C#. Dowiesz się:
+W tym samouczku pokazano pewną liczbę funkcji platformy .NET Core i języka C#. Dowiesz się:
 
-- Podstawowe informacje o .NET Core interfejsu wiersza polecenia (CLI)
+- Podstawowe narzędzia .NET Core interfejsu wiersza polecenia (CLI)
 - Struktura aplikacji Konsolowej C#
 - Konsola operacje We/Wy
-- Podstawy interfejsów API we/wy pliku w .NET
-- Podstawy opartego na zadaniach asynchronicznej Programowanie w .NET
+- Podstawowe informacje dotyczące interfejsów API we/wy pliku w programie .NET
+- Podstawy opartego na zadaniach asynchronicznej programowanie na platformie .NET
 
-Będzie utworzyć aplikację, która odczytuje plik tekstowy i zwraca zawartość tego pliku tekstowego do konsoli. Dane wyjściowe do konsoli jest użytkownika, aby dopasować go czytać na głos. Można przyspieszyć lub spowolnić tempo przez naciśnięcie przycisku "<" lub ">" kluczy.
+Skompiluj aplikację, która odczytuje plik tekstowy i zwraca zawartość tego pliku tekstowego do konsoli. Dane wyjściowe do konsoli jest realizowany do dopasowania wczytaniem go na głos. Można przyspieszyć lub zwolnić tempie, naciskając klawisz "<" lub ">" kluczy.
 
-Istnieje wiele funkcji, w tym samouczku. Utworzymy je jeden po drugim.
+Istnieje wiele funkcji, w tym samouczku. Utworzymy je jedno po drugim.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Należy skonfigurować komputer, aby uruchomić oprogramowanie .NET Core. Instrukcje instalacji można znaleźć na [.NET Core](https://www.microsoft.com/net/core) strony. Można uruchomić tej aplikacji, w systemie Windows, Linux, macOS lub w kontenerze Docker.
-Należy zainstalować w edytorze kodu dotyczącego elementów ulubionych.
+Należy skonfigurować maszynę w taki sposób, aby uruchomić platformy .NET Core. Instrukcje dotyczące instalacji można znaleźć na [platformy .NET Core](https://www.microsoft.com/net/core) strony. Windows, Linux, macOS lub w kontenerze platformy Docker, mogą uruchamiać tę aplikację.
+Musisz zainstalować wybrany edytor kodu.
 
 ## <a name="create-the-application"></a>Tworzenie aplikacji
 
-Pierwszym krokiem jest utworzenie nowej aplikacji. Otwórz wiersz polecenia i Utwórz nowy katalog aplikacji. Upewnij się, że sposób bieżącego katalogu. Wpisz polecenie `dotnet new console` w wierszu polecenia. Spowoduje to utworzenie plików starter podstawowe aplikacji "Hello World".
+Pierwszym krokiem jest utworzenie nowej aplikacji. Otwórz wiersz polecenia i Utwórz nowy katalog aplikacji. Upewnij się, że sposób bieżącego katalogu. Wpisz polecenie `dotnet new console` w wierszu polecenia. Spowoduje to utworzenie plikach startowych dla podstawowych aplikacji "Hello World".
 
-Przed wprowadzeniem modyfikacji przejdźmy do czynności, aby uruchomić prostej aplikacji Hello World. Po utworzeniu aplikacji, wpisz `dotnet restore` w wierszu polecenia. To polecenie uruchamia proces przywracania pakietów NuGet. NuGet jest Menedżera pakietów platformy .NET. To polecenie pobiera wszelkie brakujące zależności projektu. Jak jest to nowy projekt, Brak zależności są na miejscu, więc przy pierwszym uruchomieniu pobierze framework .NET Core. Po wykonaniu tego kroku początkowego, wystarczy uruchomić `dotnet restore` podczas dodawania nowych pakietów zależnych lub zaktualizować wersje zależności.
+Przed rozpoczęciem wprowadzania modyfikacji, Przejdźmy przez czynności, aby uruchomić prostej aplikacji Hello World. Po utworzeniu aplikacji wpisz `dotnet restore` w wierszu polecenia. To polecenie uruchamia proces przywracania pakietów NuGet. NuGet to Menedżer pakietów .NET. To polecenie pobiera wszystkich brakujących zależności dla Twojego projektu. Jak jest to nowy projekt, żaden z zależności jest w miejscu, dzięki czemu przy pierwszym uruchomieniu pobierze platformę .NET Core. Po wykonaniu tego kroku początkowego, wystarczy uruchomić `dotnet restore` podczas dodawania nowych pakietów zależnych lub zaktualizować wersje tych zależności.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Po przywróceniu pakietów, możesz uruchomić `dotnet build`. Wykonuje aparat kompilacji i tworzy aplikację pliku wykonywalnego. Na koniec wykonaj `dotnet run` do uruchamiania aplikacji.
+Po przywróceniu pakietów, możesz uruchomić `dotnet build`. Wykonuje aparat kompilacji i tworzy pliku wykonywalnego aplikacji. Na koniec wykonaj `dotnet run` do uruchamiania aplikacji.
 
-Jest prosty kod aplikacji Hello World w pliku Program.cs. Otwórz ten plik z w ulubionym edytorze tekstów. Jesteśmy wprowadzi naszym pierwszym zmiany.
+Prosty kod aplikacji Hello World znajduje się w pliku Program.cs. Otwórz ten plik za pomocą ulubionego edytora tekstu. Jesteśmy przeprowadzasz pierwszy zmian.
 W górnej części pliku, zobacz using instrukcji:
 
 ```csharp
 using System;
 ```
 
-Ta instrukcja informuje kompilator, że dowolne typy z `System` znajdują się w zakresie przestrzeni nazw. Jak który użyto innych języków obiektowo C# używa przestrzeni nazw do organizowania typów. Nie różni się ten program Hello World. Widać, że program jest ujęta w przestrzeni nazw o nazwie na podstawie nazwy bieżącego katalogu. W tym samouczku Zmieńmy nazwę przestrzeni nazw do `TeleprompterConsole`:
+Ta instrukcja informuje kompilator, że dowolne typy z `System` przestrzeni nazw znajdują się w zakresie. Podobnie jak może być użyty innych języków obiektowo języka C# korzysta przestrzenie nazw do organizowania typów. Ten program Hello World nie różni się. Aby zobaczyć, że program jest ujęty w przestrzeni nazw o nazwie na podstawie nazwy bieżącego katalogu. W tym samouczku zmienimy nazwę przestrzeni nazw do `TeleprompterConsole`:
 
 ```csharp
 namespace TeleprompterConsole
@@ -54,9 +54,9 @@ namespace TeleprompterConsole
 
 ## <a name="reading-and-echoing-the-file"></a>Odczytywanie i wyświetlania pliku
 
-Pierwszy funkcję tak, aby dodać jest możliwość odczytywanie pliku tekstowego i Wyświetl ten tekst do konsoli. Po pierwsze możemy dodać plik tekstowy. Kopiuj [sampleQuotes.txt](https://github.com/dotnet/samples/raw/master/csharp/getting-started/console-teleprompter/sampleQuotes.txt) plik z repozytorium GitHub dla tego [próbki](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter) w katalogu projektu. To będzie służyć jako skryptów dla aplikacji. Jeśli chcesz uzyskać informacje na temat Pobierz przykładową aplikację na ten temat, zapoznaj się z instrukcjami w [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples) tematu.
+Pierwszą funkcją do dodania jest możliwość odczytywanie pliku tekstowego i wyświetlić ten tekst do konsoli. Najpierw Dodajmy pliku tekstowego. Kopiuj [sampleQuotes.txt](https://github.com/dotnet/samples/raw/master/csharp/getting-started/console-teleprompter/sampleQuotes.txt) plik z repozytorium GitHub, w tym [przykładowe](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter) w katalogu projektu. To będzie służyć jako skrypt dla aplikacji. Jeśli chcesz uzyskać informacje dotyczące sposobu pobierania przykładowej aplikacji na potrzeby tego artykułu zapoznaj się z instrukcjami w [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples) tematu.
 
-Następnie dodaj następującą metodę w Twojej `Program` klasy (bezpośrednio pod `Main` metody):
+Następnie dodaj następującą metodę w swojej `Program` klasy (bezpośrednio poniżej `Main` metoda):
 
 ```csharp
 static IEnumerable<string> ReadFrom(string file)
@@ -72,7 +72,7 @@ static IEnumerable<string> ReadFrom(string file)
 }
 ```
 
-Ta metoda używa typów z dwóch nowych przestrzeni nazw. W tym celu należy skompilować należy dodać następujące dwa wiersze na początku pliku:
+Ta metoda używa typów z dwa nowe przestrzenie nazw. W tym można skompilować należy dodać następujące dwa wiersze na początku pliku:
 
 ```csharp
 using System.Collections.Generic;
@@ -81,13 +81,13 @@ using System.IO;
 
 <xref:System.Collections.Generic.IEnumerable%601> Interfejsu jest zdefiniowany w <xref:System.Collections.Generic> przestrzeni nazw. <xref:System.IO.File> Klasa jest zdefiniowana w <xref:System.IO> przestrzeni nazw.
 
-Ta metoda jest specjalnym rodzajem metody C# o nazwie *metody Iterator*. Moduł wyliczający metody zwracają sekwencji, które są oceniane w trybie opóźnienia. Oznacza to, że każdej pozycji w sekwencji jest generowany, zgodnie z wymaganiami kodu wykorzystywanie sekwencji. Moduł wyliczający metody to metody, które zawierają jedną lub więcej [ `yield return` ](../language-reference/keywords/yield.md) instrukcje. Obiekt zwrócony przez `ReadFrom` metoda zawiera kod, aby wygenerować każdej pozycji w sekwencji. W tym przykładzie, który obejmuje odczytu następnego wiersza tekstu z pliku źródłowego i zwraca ten ciąg. Za każdym żądaniem kod wywołujący następnego elementu z sekwencji kod odczytuje następnego wiersza tekstu z pliku i zwraca go. Jeśli plik jest całkowicie do odczytu, sekwencja wskazuje, że nie ma więcej elementów.
+Ta metoda jest specjalnym typem metodę języka C# o nazwie *metody iteratora*. Moduł wyliczający metody zwracają sekwencji, które zostaną ocenione opóźnieniem. Oznacza to, że każdy element w sekwencji jest generowany, zgodnie z żądaniem kodu korzystanie z sekwencji. Moduł wyliczający metody są metodami, które zawierają co najmniej jeden [ `yield return` ](../language-reference/keywords/yield.md) instrukcji. Obiekt zwrócony przez `ReadFrom` metoda zawiera kod, aby wygenerować każdego elementu w sekwencji. W tym przykładzie, który obejmuje odczytywanie kolejny wiersz tekstu z pliku źródłowego i zwraca ciąg. Za każdym żądaniem kod wywołujący następnego elementu w sekwencji, kod odczytuje następny wiersz tekstu z pliku i zwraca go. Gdy plik jest całkowicie do odczytu, sekwencja oznacza, że brak elementów.
 
-Istnieją dwa inne C# składni elementy, które mogą być nowe dla Ciebie. [ `using` ](../language-reference/keywords/using-statement.md) Instrukcji w tej metodzie zarządza oczyszczania zasobu. Zmienna, która została zainicjowana w `using` instrukcji (`reader`, w tym przykładzie) musi implementować <xref:System.IDisposable> interfejsu. Ten interfejs definiuje jedną metodę `Dispose`, która powinna być wywoływana, gdy zasobu powinny zostać zwolnione. Kompilator generuje tego wywołania, gdy wykonanie osiągnie zamykającym `using` instrukcji. Kod wygenerowany przez kompilator zapewnia zwolnienie zasobu, nawet w przypadku zgłoszenia wyjątku z kodu w bloku zdefiniowany przy użyciu instrukcji.
+Istnieją dwa inne C# składni elementy, które mogą być dla Ciebie nowe. [ `using` ](../language-reference/keywords/using-statement.md) Poufności informacji w tej metodzie zarządza czyszczenie zasobów. Zmienna, która jest inicjowana w `using` — instrukcja (`reader`, w tym przykładzie) należy zaimplementować <xref:System.IDisposable> interfejsu. Ten interfejs definiuje jedną metodę `Dispose`, która powinna być wywoływana, gdy zasobu powinny zostać opublikowane. Kompilator generuje to wywołanie, gdy wykonywanie osiągnie zamykającym nawiasem klamrowym `using` instrukcji. Kod wygenerowany przez kompilator zapewnia, jest zwolnienie zasobów nawet wtedy, gdy wyjątek jest generowany z kodu w bloku zdefiniowane za pomocą instrukcji.
 
-`reader` Zmiennej jest definiowana za pomocą `var` — słowo kluczowe. [`var`](../language-reference/keywords/var.md) definiuje *niejawnie wpisane zmiennej lokalnej*. Oznacza to, że typ zmiennej jest określana przez typ kompilacji obiektu przypisaną do zmiennej. Tutaj, która jest wartością zwracaną przez <xref:System.IO.File.OpenText(System.String)> metodę, która jest <xref:System.IO.StreamReader> obiektu.
+`reader` Zmienna jest zdefiniowana za pomocą `var` — słowo kluczowe. [`var`](../language-reference/keywords/var.md) definiuje *niejawnie typizowanej zmiennej lokalnej*. Oznacza to, że typ zmiennej jest określana przez typ kompilacji, przypisana do zmiennej obiektu. Tutaj, która jest wartością zwracaną z <xref:System.IO.File.OpenText(System.String)> metoda, która jest <xref:System.IO.StreamReader> obiektu.
 
-Teraz załóżmy wprowadź kod, aby odczytać plik w `Main` metody:
+Teraz możemy wypełnienie kodu, który można odczytać pliku w `Main` metody:
 
 ```csharp
 var lines = ReadFrom("sampleQuotes.txt");
@@ -97,13 +97,13 @@ foreach (var line in lines)
 }
 ```
 
-Uruchom program (przy użyciu `dotnet run`), aby zobaczyć każdy wiersz wydrukowane do konsoli.
+Uruchom program (przy użyciu `dotnet run`) i zobaczyć wszystkich wierszy drukowane do konsoli.
 
 ## <a name="adding-delays-and-formatting-output"></a>Dodawanie opóźnień i formatowanie danych wyjściowych
 
-Możesz mieć jest wyświetlany zbyt szybko, aby odczytywać. Teraz musisz dodać opóźnienia w danych wyjściowych. Po rozpoczęciu, użytkownik będzie zbudować części kodu core, który umożliwia przetwarzanie asynchroniczne. Jednak te pierwsze kroki są zgodne z kilku wzorców układ. Układ wzorce są wskazać w komentarzach Dodaj kod, a kod zostanie zaktualizowany w kolejnych krokach.
+Posiadane zasoby są wyświetlane w zbyt szybko, aby odczytywać. Teraz należy dodać opóźnienia w danych wyjściowych. Po rozpoczęciu, tworzyć część kodu core, która umożliwia przetwarzanie asynchroniczne. Jednak te pierwsze kroki są zgodne z kilku niezalecane wzorce. Niezalecane wzorce są wskazano w komentarzach, Dodaj kod, a kod zostanie zaktualizowany w kolejnych krokach.
 
-Istnieją dwa kroki, aby w tej sekcji. Najpierw będzie aktualizowana metodę iteratora Aby przywrócić pojedyncze słowa zamiast całego wierszy. Który wykonuje się za pomocą tych zmian. Zastąp `yield return line;` instrukcji z następującym kodem:
+Istnieją dwa kroki, aby w tej sekcji. Po pierwsze zostaną zaktualizowane metody iteratora, aby zwrócić pojedynczego słowa zamiast całego wierszy. Zostanie to zrobione za pomocą tych zmian. Zastąp `yield return line;` instrukcję, używając następującego kodu:
 
 ```csharp
 var words = line.Split(' ');
@@ -114,7 +114,7 @@ foreach (var word in words)
 yield return Environment.NewLine;
 ```
 
-Następnie należy zmodyfikować sposób korzystać wiersze pliku i Dodaj opóźnienia po zapisaniu każdego wyrazu. Zastąp `Console.WriteLine(line)` instrukcji w `Main` metodę z następującym fragmencie:
+Następnie należy zmodyfikować, jak używać wiersze pliku i dodawanie opóźnienia po zapisaniu każdego wyrazu. Zastąp `Console.WriteLine(line)` instrukcji w `Main` metody z następujący blok:
 
 ```csharp
 Console.Write(line);
@@ -128,19 +128,19 @@ if (!string.IsNullOrWhiteSpace(line))
 }
 ```
 
-<xref:System.Threading.Tasks.Task> Klasa znajduje się w <xref:System.Threading.Tasks> przestrzeni nazw, dlatego należy dodać go `using` instrukcji w górnej części pliku:
+<xref:System.Threading.Tasks.Task> Klasa się zebrała <xref:System.Threading.Tasks> przestrzeni nazw, dlatego należy go dodać `using` instrukcji w górnej części pliku:
 
 ```csharp
 using System.Threading.Tasks;
 ```
 
-Uruchamianie przykładowej i sprawdź dane wyjściowe. Teraz każdego pojedynczego wyrazu drukowania, a następnie z opóźnieniem 200 ms. Jednak wyświetlanych wyników zawiera niektóre problemy, ponieważ plik źródłowy, tekst ma kilka wierszy, które mają więcej niż 80 znaków bez podziału wiersza. Może to być trudny do odczytania, gdy jest on przewijanie przez. To łatwe rozwiązać problem. Będzie tylko informacje o długości każdego wiersza i generować nowy wiersz w każdym przypadku, gdy długość wiersza osiągnie określony próg. Deklarowanie zmiennej lokalnej po deklaracji `words` w `ReadFrom` metody, która przechowuje długość wiersza:
+Uruchamianie aplikacji przykładowej i sprawdź dane wyjściowe. Teraz każdego pojedynczego wyrazu drukowania, a następnie z opóźnieniem 200 ms. Jednak wyświetlane dane wyjściowe pokazują niektóre problemy, ponieważ źródłowy plik tekstowy zawiera kilka wierszy, które mają więcej niż 80 znaków bez podziału wiersza. Który może być trudny do odczytania, podczas gdy przewijanie jest przez. To łatwe rozwiązać problem. Można będzie po prostu śledzić długość każdego wiersza i wygenerować nowy wiersz, w każdym przypadku, gdy długość wiersza osiągnie określony próg. Zadeklaruj zmienną lokalnej po zadeklarowaniu `words` w `ReadFrom` metodę, która zawiera długość wiersza:
 
 ```csharp
 var lineLength = 0;
 ```
 
-Następnie dodaj następujący kod po `yield return word + " ";` instrukcji (przed nawiasem zamykającym):
+Następnie należy dodać następujący kod po `yield return word + " ";` — instrukcja (przed zamykający nawias klamrowy):
 
 ```csharp
 lineLength += word.Length + 1;
@@ -151,14 +151,14 @@ if (lineLength > 70)
 }
 ```
 
-Uruchom próbkę i będzie mogła odczytywać na jego wstępnie skonfigurowane tempie.
+Uruchom aplikację przykładową, a będzie można odczytywać w jej wstępnie skonfigurowanych tempie.
 
 ## <a name="async-tasks"></a>Zadań asynchronicznych
 
-W tym ostatnim kroku dodasz kod, aby zapisać dane wyjściowe asynchronicznie w jedno zadanie podczas również uruchamiania innego zadania, które można odczytać wejściowych od użytkownika, jeśli chcą, aby przyspieszyć lub spowolnić wyświetlania tekstu. Ma kilka kroków oraz do końca, będziesz mieć wszystkie aktualizacje, które są potrzebne.
-Pierwszym krokiem jest utworzenie asynchronicznego <xref:System.Threading.Tasks.Task> zwracanie metodę, która reprezentuje kod po utworzeniu wykonanej do tej pory do odczytywania i wyświetlić plik.
+W tym ostatnim kroku dodasz kod, aby zapisywać dane wyjściowe asynchronicznie w ramach jednego zadania podczas również działa inne zadanie, które można odczytać danych wejściowych od użytkownika, jeśli chcesz przyspieszyć lub zwolnić wyświetlania tekstu. Ma kilka kroków i do końca, będziesz mieć wszystkie aktualizacje, które są potrzebne.
+Pierwszym krokiem jest utworzenie asynchronicznego <xref:System.Threading.Tasks.Task> zwracania metody, która przedstawia kod do tej pory utworzono do odczytywania i wyświetlić plik.
 
-Dodaj tę metodę, aby Twoje `Program` klasy (jest ona pobierana z treści Twojej `Main` — metoda):
+Dodaj tę metodę, aby Twoje `Program` klasy (jest zajęta z treści usługi `Main` metody):
 
 ```csharp
 private static async Task ShowTeleprompter()
@@ -175,22 +175,22 @@ private static async Task ShowTeleprompter()
 }
 ```
 
-Można zauważyć dwie zmiany. Pierwszy w treści metody, zamiast wywoływać metodę <xref:System.Threading.Tasks.Task.Wait> synchronicznie oczekiwania na zakończenie zadania, korzysta z tej wersji `await` — słowo kluczowe. Aby to zrobić, należy dodać `async` modyfikator w podpisie metody. Ta metoda zwraca `Task`. Zwróć uwagę, że nie ma żadnych instrukcji return, które zwracają `Task` obiektu. Zamiast tego, który `Task` obiekt jest tworzony przez kompilator generuje, korzystając z kodu `await` operatora. Wyobraź sobie ta metoda zwraca po osiągnięciu `await`. Zwrócona `Task` wskazuje, że nie zakończył pracy.
-Metoda wznawia działanie po ukończeniu zadania oczekiwano. Gdy jest wykonywana do ukończenia zwróconego `Task` wskazuje, że została zakończona.
-Wywoływanie kodu można monitorować zwróconą `Task` ustalenie, kiedy została ukończona.
+Można zauważyć dwie zmiany. Po pierwsze, w treści metody, zamiast wywoływać metodę <xref:System.Threading.Tasks.Task.Wait> synchronicznie oczekiwania na zakończenie zadania, ta wersja wykorzystuje `await` — słowo kluczowe. Aby to zrobić, należy dodać `async` modyfikatora podpis metody. Ta metoda zwraca `Task`. Należy zauważyć, że nie istnieją żadne instrukcjach return, które zwracają `Task` obiektu. Zamiast tego, który `Task` obiekt jest tworzony przez kod, kompilator generuje, gdy używasz `await` operatora. Można sobie wyobrazić, że ta metoda zwraca po osiągnięciu `await`. Zwrócony `Task` wskazuje, że nie zakończył pracy.
+Metoda zostanie wznowione, gdy zakończy się oczekiwane zadanie. Kiedy zostało wykonane do zakończenia zwracanego `Task` wskazuje, że została zakończona.
+Wywoływanie kodu, można monitorować zwróconą `Task` ustalenie, kiedy zostało ono ukończone.
 
-Ta nowa metoda można wywołać w Twojej `Main` metody:
+Ta nowa metoda można wywołać w swojej `Main` metody:
 
 ```csharp
 ShowTeleprompter().Wait();
 ```
 
-W tym miejscu, w `Main`, kod synchronicznie oczekiwania. Należy używać `await` operator zamiast oczekiwać synchronicznie, jeśli to możliwe. Jednak w aplikacji konsoli `Main` metody, nie można użyć `await` operatora. Które mogłyby spowodować aplikacji został zakończony zanim wszystkie zadania zostały ukończone.
+W tym miejscu, w `Main`, kod synchronicznie oczekiwania. Należy używać `await` operatora, zamiast czekać synchronicznie, jeśli to możliwe. Jednak w aplikacji konsoli `Main` metody, nie można użyć `await` operatora. Które mogłyby spowodować zamykania aplikacji, zanim wszystkie zadania zostały ukończone.
 
 > [!NOTE]
-> Jeśli używasz 7.1 C# lub później, należy utworzyć aplikacje konsoli z [ `async` `Main` metody](../whats-new/csharp-7-1.md#async-main).
+> Jeśli używasz języka C# 7.1 lub nowszy, możesz tworzyć aplikacje konsoli przy użyciu [ `async` `Main` metoda](../whats-new/csharp-7-1.md#async-main).
 
-Następnie należy napisać drugi metody asynchronicznej do odczytu z konsoli i obserwować "<" i ">" kluczy. Oto metoda dodane do tego zadania:
+Następnie należy napisać drugiej metodzie asynchronicznej odczytywany z konsoli, zwracając uwagę na "<" i ">" kluczy. Poniżej przedstawiono metodę, którą możesz dodać do tego zadania:
 
 ```csharp
 private static async Task GetInput()
@@ -214,11 +214,11 @@ private static async Task GetInput()
 }
 ```
 
-Spowoduje to utworzenie wyrażenia lambda do reprezentowania <xref:System.Action> delegata, który będzie odczytywać klucza z konsoli i modyfikuje zmienną lokalną reprezentujący opóźnienie, gdy użytkownik naciśnie ' <' lub ' >' kluczy. Ta metoda używa <xref:System.Console.ReadKey> zablokować i poczekaj, aż użytkownik o naciśnięcie klawisza.
+Spowoduje to utworzenie wyrażenia lambda do reprezentowania <xref:System.Action> delegat, który odczytuje klucz z konsoli i modyfikuje zmienną lokalną, reprezentujący opóźnienie w przypadku, gdy użytkownik naciśnie "<" lub ">" kluczy. Ta metoda używa <xref:System.Console.ReadKey> do blokowania i poczekać na użytkownika poprzez naciśnięcie klawisza.
 
-Aby zakończyć tę funkcję, musisz utworzyć nowy `async Task` zwracanie metody, która rozpoczyna się oba te zadania (`GetInput` i `ShowTeleprompter`) i zarządza także udostępnionych danych między tymi dwoma zadaniami.
+Aby zakończyć tę funkcję, musisz utworzyć nowy `async Task` metodę, która rozpoczyna się w obu tych zadań zwracającą (`GetInput` i `ShowTeleprompter`), a także zarządza udostępnionych danych między te dwa zadania.
 
-Nadszedł czas, aby utworzyć klasę, która może obsłużyć udostępnionych danych między tymi dwoma zadaniami. Ta klasa zawiera dwie właściwości publicznej: opóźnienie i flagę `Done` wskazująca całkowicie odczytać pliku:
+Nadszedł czas, aby utworzyć klasę, która może obsłużyć udostępnionych danych między te dwa zadania. Ta klasa zawiera dwie właściwości publiczne: opóźnienie i flagi `Done` aby potwierdzić, że plik został całkowicie przeczytane:
 
 ```csharp
 namespace TeleprompterConsole
@@ -248,15 +248,15 @@ namespace TeleprompterConsole
 }
 ```
 
-Umieść tej klasy w pliku i ująć tej klasy w `TeleprompterConsole` przestrzeni nazw, jak pokazano powyżej. Należy również dodać `using static` instrukcji, dzięki czemu można odwoływać się `Min` i `Max` metody bez otaczającej nazwy klasy lub obszaru nazw. A [ `using static` ](../language-reference/keywords/using-static.md) instrukcji imports metody z jedną klasę. Jest to contrast z `using` instrukcji używany do tego punktu, które zostały zaimportowane wszystkie klasy z przestrzeni nazw.
+Umieść tej klasy w nowym pliku a następnie zamieścić tej klasy w `TeleprompterConsole` przestrzeni nazw, jak pokazano powyżej. Należy także dodać `using static` instrukcji, dzięki czemu możesz odwoływać się do `Min` i `Max` metody bez otaczającej nazwy klasy lub obszaru nazw. A [ `using static` ](../language-reference/keywords/using-static.md) instrukcji imports metody z jednej klasy. Jest to w przeciwieństwie `using` instrukcji używany do tej pory, które zostały zaimportowane wszystkie klasy z przestrzeni nazw.
 
 ```csharp
 using static System.Math;
 ```
 
-Jest inna funkcja języka, który jest nowy [ `lock` ](../language-reference/keywords/lock-statement.md) instrukcji. Ta instrukcja zapewnia tylko jednego wątku można w tym kod w danym momencie. Jeśli jeden wątek znajduje się w sekcji zablokowane, inne wątki należy poczekać na zakończenie tej sekcji pierwszy wątku. `lock` Instrukcja używa obiektu, który chroni sekcji blokady. Ta klasa jest zgodna standardowe idiom można zablokować obiektu prywatny w klasie.
+Z innych funkcji języka, co nowego jest [ `lock` ](../language-reference/keywords/lock-statement.md) instrukcji. Niniejszych gwarantuje, że tylko jednego wątku może należeć ten kod w dowolnym momencie. Jeśli jeden wątek znajduje się w sekcji zablokowane, inne wątki musi czekać na pierwszym wątku zakończyć tę sekcję. `lock` Instrukcja używa obiektu, który chroni sekcji blokady. Ta klasa jest zgodna standardowa idiom można zablokować obiektu prywatnego w klasie.
 
-Następnie należy zaktualizować `ShowTeleprompter` i `GetInput` metod do używania nowych `config` obiektu. Zapis final jeden `Task` zwracanie `async` metody w celu uruchamiania obu zadań i zamknąć po zakończeniu pierwszego zadania:
+Następnie należy zaktualizować `ShowTeleprompter` i `GetInput` metody, aby użyć nowego `config` obiektu. Zapis jeden końcowy `Task` zwracanie `async` metodę, aby uruchomić zarówno do zadań i Zakończ po zakończeniu pierwszego zadania:
 
 ```csharp
 private static async Task RunTeleprompter()
@@ -269,9 +269,9 @@ private static async Task RunTeleprompter()
 }
 ```
 
-Jeden nowej metody w tym miejscu jest <xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])> wywołania. Który tworzy `Task` który zakończy się natychmiast po ukończeniu zadań z listy argumentów.
+Jeden nowa metoda w tym miejscu jest <xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])> wywołania. Tworząca `Task` który zakończy się zaraz po zakończeniu wszystkich zadań na liście argumentów.
 
-Następnie należy zaktualizować zarówno `ShowTeleprompter` i `GetInput` metod do zastosowania `config` obiektu opóźnienia:
+Następnie należy zaktualizować obydwa `ShowTeleprompter` i `GetInput` metod do zastosowania `config` obiektu opóźnienia:
 
 ```csharp
 private static async Task ShowTeleprompter(TelePrompterConfig config)
@@ -304,7 +304,7 @@ private static async Task GetInput(TelePrompterConfig config)
 }
 ```
 
-Tej nowej wersji `ShowTeleprompter` odwołuje się nowa metoda `TeleprompterConfig` klasy. Teraz, musisz zaktualizować `Main` do wywołania `RunTeleprompter` zamiast `ShowTeleprompter`:
+Nowa wersja `ShowTeleprompter` wywołuje nową metodę `TeleprompterConfig` klasy. Teraz, musisz zaktualizować `Main` do wywołania `RunTeleprompter` zamiast `ShowTeleprompter`:
 
 ```csharp
 RunTeleprompter().Wait();
@@ -312,7 +312,7 @@ RunTeleprompter().Wait();
 
 ## <a name="conclusion"></a>Wniosek
 
-W tym samouczku przedstawiono możesz szereg funkcji języka C# i bibliotek .NET Core powiązane z pracy w aplikacji konsoli.
-Można tworzyć na ta wiedza, aby zapoznać się więcej o języku i klasy wprowadzone w tym miejscu. Przedstawiono podstawowe informacje o pliku i konsoli operacje We/Wy, użyj blokujące i nieblokujące programowania asynchronicznego opartego na zadaniach, samouczek języka C# i organizowania programów C# i interfejsu wiersza polecenia programu .NET Core i narzędzi.
+W tym samouczku pokazano, że możesz pewną liczbę funkcji wokół języka C# i biblioteki .NET Core związanych z pracą w aplikacjach konsoli.
+Możesz utworzyć na tej wiedzy do Dowiedz się więcej o języku, klas i wprowadzone w tym miejscu. Przedstawiono podstawowe informacje dotyczące plików i we/wy konsoli, blokowania i bez blokowania użycia asynchronicznego programowania opartego na zadaniach, samouczek języka C# oraz jak C# programy są uporządkowane i interfejs wiersza polecenia programu .NET Core oraz narzędzia.
 
-Aby uzyskać więcej informacji na temat We/Wy plików, zobacz [plików i we/wy strumienia](../../standard/io/index.md) tematu. Aby uzyskać więcej informacji na temat asynchronicznej model programowania używany w tym samouczku, zobacz [opartego na zadaniach asynchronicznej programowania](../..//standard/parallel-programming/task-based-asynchronous-programming.md) tematu i [programowanie asynchroniczne](../async.md) tematu.
+Aby uzyskać więcej informacji na temat operacji We/Wy w pliku zobacz [plików i we/wy Stream](../../standard/io/index.md) tematu. Aby uzyskać więcej informacji na temat asynchronicznego modelu programowania, w tym samouczku używane zobacz [opartego na zadaniach Asynchronous Programming](../..//standard/parallel-programming/task-based-asynchronous-programming.md) tematu i [programowania asynchronicznego](../async.md) tematu.

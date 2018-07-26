@@ -6,17 +6,17 @@ helpviewer_keywords:
 - SpecialDirectories object
 ms.assetid: d5f375c3-094b-4011-8438-17a31bc6df2b
 ms.openlocfilehash: 9ceede5a717b26d349f9a306864f74ac0ec33691
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33596980"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37959513"
 ---
 # <a name="mycomputerfilesystemspecialdirectories-object"></a>My.Computer.FileSystem.SpecialDirectories — Obiekt
-Zawiera właściwości do uzyskiwania dostępu do często odwołuje się do katalogów.  
+Udostępnia właściwości umożliwiające dostęp do często katalogi, do których odwołuje się.  
   
 ## <a name="remarks"></a>Uwagi  
- Informacje dotyczące metod i właściwości `My.Computer.FileSystem.SpecialDirectories` obiektów, zobacz <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>.  
+ Aby uzyskać informacje dotyczące metod i właściwości `My.Computer.FileSystem.SpecialDirectories` obiektu, zobacz <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>.  
   
  Aby uzyskać więcej informacji, zobacz [porady: pobieranie zawartości katalogu Moje dokumenty](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md).  
   

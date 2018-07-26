@@ -1,53 +1,54 @@
 ---
-title: Grupy wyników według ciągłych kluczy
-description: Jak grupowanie wyników według ciągłych kluczy.
+title: Grupowanie wyników według ciągłych kluczy (LINQ w C#)
+description: Jak grupowanie wyników według ciągłych kluczy za pomocą LINQ w C#.
 ms.date: 12/1/2016
 ms.assetid: cbda9c08-151b-4c9e-82f7-c3d7f3dac66b
-ms.openlocfilehash: a8d6ac133932a12154d5b23454065144c7652067
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ad08d861e2d0f5ee0f8a2eceeb8d82a9aa2a5a6
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281440"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404765"
 ---
-# <a name="group-results-by-contiguous-keys"></a>Grupy wyników według ciągłych kluczy
+# <a name="group-results-by-contiguous-keys"></a>Grupowanie wyników według ciągłych kluczy
 
-Poniższy przykład przedstawia sposób grupowania elementów na fragmenty, które reprezentują podciągów ciągłych kluczy. Załóżmy na przykład, zostanie wyświetlony następujący ciąg par klucz wartość:  
-  
-|Key|Wartość|  
-|---------|-----------|  
-|ELEMENT|Firma Microsoft|  
-|ELEMENT|Pomyśl|  
-|ELEMENT|który|  
-|B|LINQ|  
-|C|is|  
-|ELEMENT|naprawdę|  
-|B|Cool|  
-|B|!|  
-  
- Następujące grupy zostanie utworzony w następującej kolejności:  
-  
-1.  Firma Microsoft, wziąć pod uwagę, że  
-  
-2.  LINQ  
-  
-3.  is  
-  
-4.  naprawdę  
-  
-5.  Cool!  
-  
- Rozwiązanie jest implementowany jako metodę rozszerzenia, który jest wątkowo i które zwraca wyniki w sposób przesyłania strumieniowego. Innymi słowy tworzy jej grup przesyłane za pośrednictwem sekwencji źródłowej. W odróżnieniu od `group` lub `orderby` operatorów, jego można rozpocząć zwracanie grupy do obiektu wywołującego przed wszystkie sekwencji została przeczytana.  
-  
- Bezpieczeństwo wątków jest realizowane przez utworzenie kopii każdej grupy lub fragmentu, jak sekwencji źródłowej jest iterowane, zgodnie z objaśnieniem w komentarze w kodzie źródłowym. Jeśli sekwencji źródłowej ma duże sekwencję elementów ciągły, środowisko uruchomieniowe języka wspólnego może zgłaszać <xref:System.OutOfMemoryException>.  
-  
-## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano zarówno metodę rozszerzenia, jak i kodu klienta, który korzysta z niego.  
-  
- [!code-csharp[cscsrefContiguousGroups#1](../../../samples/snippets/csharp/concepts/linq/how-to-group-results-by-contiguous-keys_1.cs)]  
-  
- Aby używać metody rozszerzenia w projekcie, skopiuj `MyExtensions` klasy statycznej do nowego lub istniejącego źródła code pliku i w razie potrzeby, Dodaj `using` dyrektywy dla przestrzeni nazw, w którym znajduje się.  
-  
-## <a name="see-also"></a>Zobacz także  
- [Wyrażenia zapytań LINQ](index.md)  
- 
+Poniższy przykład pokazuje, jak należy zgrupować elementy na fragmenty, które reprezentują podciągów ciągłych kluczy. Na przykład załóżmy, że podano następującej pary klucz wartość:
+
+|Key|Wartość|
+|---------|-----------|
+|ELEMENT|Firma Microsoft|
+|ELEMENT|namysłu|
+|ELEMENT|który|
+|B|LINQ|
+|C|is|
+|ELEMENT|tak naprawdę|
+|B|chłodna|
+|B|!|
+
+Następujące grupy zostaną utworzone w następującej kolejności:
+
+1. Uważamy, że
+
+2. LINQ
+
+3. is
+
+4. tak naprawdę
+
+5. chłodna!
+
+Rozwiązanie jest implementowane jako metodę rozszerzenia, która jest bezpieczna dla wątków i który zwraca wyniki w sposób przesyłania strumieniowego. Innymi słowy tworzy jej grup kiedy przesuwa się on przez sekwencję źródłową. W odróżnieniu od `group` lub `orderby` operatorów, jego może rozpocząć zwracanie grup do obiektu wywołującego przed wszystkie sekwencji został odczytany.
+
+Bezpieczeństwo wątków odbywa się przez utworzenie kopii każdej grupy lub fragmentów, jak sekwencja źródłowa jest postanowiliśmy, zgodnie z objaśnieniem w komentarzach do kodu źródłowego. Jeśli sekwencja źródłowa jest duże sekwencję elementów sąsiadujących, środowisko uruchomieniowe języka wspólnego może zgłaszać <xref:System.OutOfMemoryException>.
+
+## <a name="example"></a>Przykład
+
+Poniższy kod przedstawia metody rozszerzenia i kod klienta, który korzysta z niego:
+
+[!code-csharp[cscsrefContiguousGroups#1](~/samples/snippets/csharp/concepts/linq/how-to-group-results-by-contiguous-keys_1.cs)]
+
+Aby użyć metody rozszerzenia w projekcie, skopiuj `MyExtensions` klasy statycznej do nowego lub istniejącego źródła plik kodu i jeśli jest to konieczne, należy dodać `using` dyrektywy dla przestrzeni nazw, w którym znajduje się.
+
+## <a name="see-also"></a>Zobacz także
+
+[Language Integrated Query (LINQ)](index.md)

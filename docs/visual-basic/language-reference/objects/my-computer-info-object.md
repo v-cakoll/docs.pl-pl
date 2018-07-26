@@ -1,26 +1,26 @@
 ---
-title: My.Computer.Info — Obiekt
+title: My.Computer.info — obiekt (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Info object
 ms.assetid: 2eb2aa5f-303d-426c-918d-989c8b7b08d0
-ms.openlocfilehash: f536f7915d8f8befcb4f1b0ca2494dd99a203ea6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9eabd2538d43c5a0104032c501da8cbf81b5c74d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594955"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198786"
 ---
 # <a name="mycomputerinfo-object"></a>My.Computer.Info — Obiekt
-Udostępnia właściwości do pobierania informacji o pamięci, załadowanych zestawów, nazwy i systemu operacyjnego komputera.  
+Udostępnia właściwości w celu uzyskania informacji na temat pamięci, załadowanych zestawów, nazwa i systemu operacyjnego komputera.  
   
 ## <a name="remarks"></a>Uwagi  
- Aby uzyskać informacje o właściwościach `My.Computer.Info` obiektów, zobacz <xref:Microsoft.VisualBasic.Devices.ComputerInfo>.  
+ Aby uzyskać informacje o właściwościach `My.Computer.Info` obiektu, zobacz <xref:Microsoft.VisualBasic.Devices.ComputerInfo>.  
   
 ## <a name="requirements"></a>Wymagania  
  **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Klasy:** <xref:Microsoft.VisualBasic.Devices.ComputerInfo>  
+ **Klasa:** <xref:Microsoft.VisualBasic.Devices.ComputerInfo>  
   
  **Zestaw:** Visual Basic Runtime Library (w pliku Microsoft.VisualBasic.dll)  
   

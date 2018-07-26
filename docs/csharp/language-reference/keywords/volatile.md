@@ -7,41 +7,41 @@ f1_keywords:
 helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
-ms.openlocfilehash: 7f3aafc1255667f2a3917c6e171ce4ddf0343b41
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64bd5ce7d7dfe3265c3c645467493ab7d8792172
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272587"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936881"
 ---
 # <a name="volatile-c-reference"></a>volatile (odwołanie w C#)
-`volatile` — Słowo kluczowe wskazuje, czy pole może zostać zmodyfikowany przez wiele wątków, które są wykonywane w tym samym czasie. Pola, które są zadeklarowane `volatile` nie są objęte optymalizacje kompilatora, które przyjmuje dostępu przez jednego wątku. Dzięki temu, czy aktualną wartość znajduje się w polu przez cały czas.  
+`volatile` — Słowo kluczowe wskazuje, że pola mogą zostać zmodyfikowane przez wiele wątków, które są wykonywane w tym samym czasie. Pola, które są zadeklarowane `volatile` nie są objęte optymalizacje kompilatora, które zakładają dostępu przez jednego wątku. Te ograniczenia upewnij się, że wszystkie wątki będzie przestrzegać volatile zapisów wykonywane przez inny wątek, w kolejności, w którym zostały wykonane. Nie ma żadnej gwarancji, pojedynczy całkowita kolejności volatile zapisów wyświetlanego ze wszystkich wątków wykonania.  
   
- `volatile` Modyfikator jest zwykle używany dla pola, który jest dostępny przez wiele wątków bez użycia [blokady](../../../csharp/language-reference/keywords/lock-statement.md) instrukcji do serializacji dostępu.  
+ `volatile` Modyfikator jest zwykle używany dla pola, która jest dostępna w wielu wątkach, bez użycia [blokady](../../../csharp/language-reference/keywords/lock-statement.md) instrukcję, aby serializować dostępu.  
   
- `volatile` — Słowo kluczowe może odnosić się do pól z następujących typów:  
+ `volatile` — Słowo kluczowe mogą być stosowane do pól z następujących typów:  
   
--   Typy referencyjne.  
+-   Typy odwołań.  
   
--   Typy wskaźnika (w niebezpiecznym kontekście). Należy pamiętać, że chociaż sama wskaźnik może być nietrwałe, obiekt, który wskazuje nie. Innymi słowy nie można zadeklarować "wskaźnik do volatile."  
+-   Typy wskaźników (w niebezpiecznym kontekście). Należy pamiętać, że chociaż wskaźnika, sama może być nietrwałe, obiekt, który wskazuje nie może. Innymi słowy nie można zadeklarować "wskaźnik volatile."  
   
--   Typy, takie jak sbyte, byte, short, ushort, int, uint, char, float i bool.  
+-   Typy takie jak sbyte, byte, short, ushort, int, uint, char, float i bool.  
   
 -   Typ wyliczeniowy z jednym z następujących typów podstawowych: byte, sbyte, short, ushort, int lub uint.  
   
--   Parametry typu ogólnego, znane jako typy referencyjne.  
+-   Parametry typu ogólnego, znane jako typy odwołań.  
   
 -   <xref:System.IntPtr> i <xref:System.UIntPtr>.  
   
- Volatile — słowo kluczowe można zastosować tylko do pól klasy lub struktury. Nie można deklarować zmiennych lokalnych `volatile`.  
+ Volatile — słowo kluczowe będzie stosowany tylko do pól klasy lub struktury. Nie można zadeklarować zmienne lokalne `volatile`.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia sposób zadeklarować zmiennej pole publiczne jako `volatile`.  
+ Poniższy przykład pokazuje sposób deklarowania zmiennej pole publiczne `volatile`.  
   
  [!code-csharp[csrefKeywordsModifiers#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_1.cs)]  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, jak wątek pomocniczy lub procesu roboczego można tworzyć i używane do przetwarzania równolegle z podstawowym wątku. Aby uzyskać ogólne informacje o wielowątkowości, zobacz [wątki (C#)](../../../standard/threading/index.md) i [zarządzanych wątków](../../programming-guide/concepts/threading/index.md).  
+ Poniższy przykład pokazuje, jak wątek wiadomości pomocniczych lub procesu roboczego można tworzyć i używany do wykonywania przetwarzania równolegle z wątku głównego. Aby uzyskać ogólne informacje o wielowątkowości, zobacz [zarządzana wątkowość](../../../standard/threading/index.md) i [wątki (C#)](../../programming-guide/concepts/threading/index.md).  
   
  [!code-csharp[csProgGuideThreading#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_2.cs)]  
   
@@ -49,7 +49,7 @@ ms.locfileid: "33272587"
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
+ [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
  [Modyfikatory](../../../csharp/language-reference/keywords/modifiers.md)

@@ -7,46 +7,46 @@ helpviewer_keywords:
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
 ms.openlocfilehash: de396ca4da2e115d221036d3ec49fb7b43d3d21d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335268"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244270"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Wyjątki i obsługa wyjątków (Przewodnik programowania w języku C#)
-Obsługa funkcji pomocy wyjątków języka C# uwzględniać nieoczekiwany lub wyjątkowych sytuacji, które wystąpić, gdy program jest uruchomiony. Obsługa używa wyjątków `try`, `catch`, i `finally` słów kluczowych, aby spróbować akcje, które może się nie powieść, do obsługi błędów w przypadku podjęcia decyzji, czy jest uzasadnione, aby to zrobić, a także aby wyczyścić zasoby później. Wyjątki mogą być generowane przez środowisko uruchomieniowe języka wspólnego (CLR) programu .NET Framework lub żadnych bibliotek innej firmy lub przez kod aplikacji. Wyjątki są tworzone za pomocą `throw` — słowo kluczowe.  
+Obsługa funkcji pomocy wyjątków języka C# zajmuje nieoczekiwane lub wyjątkowych sytuacji, które występują, gdy program jest uruchomiony. Używa obsługi wyjątków `try`, `catch`, i `finally` słów kluczowych obsługi błędów w przypadku podjęcia decyzji, że jest uzasadnione, aby to zrobić, a potem wyczyścić zasoby, aby spróbować akcje, które mogą się nie powieść. Wyjątki mogą być generowane przez środowisko uruchomieniowe języka wspólnego (CLR) .NET Framework lub żadnych bibliotek innych firm lub przez kod aplikacji. Wyjątki są tworzone za pomocą `throw` — słowo kluczowe.  
   
- W wielu przypadkach wyjątek może zostać zgłoszony, nie za pomocą metody, która kodu została wywołana bezpośrednio, ale przy użyciu innej metody bardziej szczegółowo w dół w stosie wywołań. W takim przypadku CLR będzie unwind stosu, wyszukiwanie metodę o `catch` zablokować dla na określony typ wyjątku który zostanie wykonany pierwszy takie `catch` zablokować, jeśli znajduje. W przypadku odnalezienia nie odpowiednie `catch` bloków w dowolnym miejscu w stosie wywołań, spowoduje zakończenie procesu i wyświetlić wiadomość do użytkownika.  
+ W wielu przypadkach wyjątek może zostać wygenerowany nie za pomocą metody, który wywołał kod bezpośrednio, ale przy użyciu innej metody w dalszej części stosu wywołań. W takiej sytuacji środowiska CLR będzie odkręcanie stosu, wyszukiwanie metody z `catch` blokowania dla typu określonego wyjątku który będzie wykonywał pierwszy takich `catch` blokowania, że jeśli znajdzie. W przypadku odnalezienia nie odpowiednie `catch` blokowania w dowolnym miejscu w stosie wywołań, będzie on zakończyć proces i wyświetlić komunikat dla użytkownika.  
   
- W tym przykładzie metoda testów dla dzielenia przez zero i przechwytuje błędu. Bez obsługi wyjątków, ten program będzie kończyć się **nieobsługiwany wyjątek dividebyzeroexception —** błędu.  
+ W tym przykładzie metoda sprawdza dzielenie przez zero i przechwytuje błędu. Bez obsługi wyjątków, ten program będzie kończyć się **dividebyzeroexception — został nieobsługiwany** błędu.  
   
  [!code-csharp[csProgGuideExceptions#18](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exceptions-and-exception-handling_1.cs)]  
   
-## <a name="exceptions-overview"></a>Omówienie wyjątków  
+## <a name="exceptions-overview"></a>Wyjątki — omówienie  
  Wyjątki mają następujące właściwości:  
   
--   Wyjątki są typów wyprowadzonych wszystkie ostatecznie z `System.Exception`.  
+-   Wyjątki są typy, które wszystkie ostatecznie pochodzą z `System.Exception`.  
   
--   Użyj `try` bloku wokół instrukcji, które mogą zgłaszać wyjątków.  
+-   Użyj `try` bloku wokół instrukcji, które może zgłaszać wyjątki.  
   
--   Gdy wystąpi wyjątek w `try` zablokować przepływu sterowania przechodzi do pierwszego programu obsługi skojarzony wyjątek, który znajduje się w dowolnym miejscu w stosie wywołań. W języku C# `catch` — słowo kluczowe jest używane do definiowania obsługi wyjątków.  
+-   Gdy wystąpi wyjątek w `try` zablokować, przepływu sterowania przechodzi do pierwszego programu obsługi wyjątków skojarzone, który znajduje się w dowolnym miejscu w stosie wywołań. W języku C# `catch` — słowo kluczowe jest używane do definiowania obsługi wyjątków.  
   
--   Jeśli żaden moduł obsługi wyjątku dla danego wyjątku, program zatrzymuje wykonywanie komunikat o błędzie.  
+-   Jeśli ma nie aparatu obsługi wyjątków dany wyjątek, program zatrzymuje wykonywanie komunikatu o błędzie.  
   
--   Nie przechwytuj wyjątek, chyba że można go obsłużyć i pozostawić aplikacji w znanego stanu. Jeśli zostaną wychwycone `System.Exception`, za pomocą rethrow `throw` — słowo kluczowe na końcu `catch` bloku.  
+-   Nie przechwytuj wyjątek, chyba że można go obsłużyć i pozostawić ją w znanym stanie. Jeśli przechwytujesz `System.Exception`, zgłoś ponownie go za pomocą `throw` — słowo kluczowe na końcu `catch` bloku.  
   
--   Jeśli `catch` bloku definiuje zmienną wyjątek, można go uzyskać więcej informacji na temat typ wyjątku, który wystąpił.  
+-   Jeśli `catch` bloku definiuje zmienną wyjątek, służy do uzyskania dalszych informacji o typ wyjątku, który wystąpił.  
   
--   Wyjątki można jawnie wygenerowanych przez program przy użyciu `throw` — słowo kluczowe.  
+-   Wyjątki mogą jawnie generowane przez program przy użyciu `throw` — słowo kluczowe.  
   
--   Obiekty wyjątków zawiera szczegółowe informacje na temat tego błędu, takie jak stan stosu wywołań i opis błędu.  
+-   Obiekty wyjątków zawierają szczegółowe informacje o błędzie, takie jak stan stos wywołań i tekst opisu błędu.  
   
--   Kod w `finally` blok jest wykonywana nawet wtedy, gdy jest zgłaszany wyjątek. Użyj `finally` bloku, aby zwolnić zasoby, na przykład zamknąć wszystkie strumienie lub pliki, które były otwarte w `try` bloku.  
+-   Możesz pisać kod w `finally` blok jest wykonywany, nawet wtedy, gdy zostanie zgłoszony wyjątek. Użyj `finally` bloku, aby zwolnić zasoby, na przykład zamknąć wszystkie strumienie lub pliki, które zostały otwarte w `try` bloku.  
   
--   Zarządzane wyjątki w programie .NET Framework są wdrażane na podstawie mechanizmu obsługi wyjątków strukturalnych Win32. Aby uzyskać więcej informacji, zobacz [strukturalnych obsługi wyjątków (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) i [A awarii kursu na głębokości systemu Win32 strukturalnych obsługi wyjątków](http://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm).  
+-   Zarządzane wyjątki w programie .NET Framework są wdrażane na podstawie mechanizm obsługi wyjątków strukturalnych Win32. Aby uzyskać więcej informacji, zobacz [obsługi wyjątków strukturalnych, (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) i [awarii kurs w głębi systemu Win32 ze strukturą wyjątków](http://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm).  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- Zobacz następujące tematy, aby uzyskać więcej informacji na temat wyjątki i obsługa wyjątków:  
+ Zobacz następujące tematy, aby uzyskać więcej informacji dotyczących wyjątków i wyjątków:  
   
 -   [Używanie wyjątków](../../../csharp/programming-guide/exceptions/using-exceptions.md)  
   
@@ -56,7 +56,7 @@ Obsługa funkcji pomocy wyjątków języka C# uwzględniać nieoczekiwany lub wy
   
 -   [Wyjątki generowane przez kompilator](../../../csharp/programming-guide/exceptions/compiler-generated-exceptions.md)  
   
--   [Porady: obsługa wyjątków za pomocą bloku try/catch (C# przewodnik programowania w języku)](../../../csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md)  
+-   [Porady: obsługa wyjątków za pomocą bloku try/catch (C# Programming Guide)](../../../csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md)  
   
 -   [Instrukcje: wykonywanie czyszczenia kodu za pomocą instrukcji finally](../../../csharp/programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md)  
   

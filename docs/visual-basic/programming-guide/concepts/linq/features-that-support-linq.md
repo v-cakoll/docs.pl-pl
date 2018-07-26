@@ -6,96 +6,96 @@ helpviewer_keywords:
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
 ms.openlocfilehash: db2eff2f7c19a3c510e7b212f5bb406d7a885439
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643903"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199150"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>Funkcje Visual Basic obsługujące LINQ
-Nazwa [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] odwołuje się do technologii w języku Visual Basic, czy składnia kwerendy obsługuje i inny język konstruuje bezpośrednio w języku. Z [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], nie masz nauczyć się nowego języka aby zapytanie dla zewnętrznego źródła danych. W języku Visual Basic można badać danych relacyjnych baz danych, Magazyny XML lub obiektów. Integracja funkcji kwerendy w języku umożliwia kompilacji sprawdzanie błędów składni i bezpieczeństwo typów. Integracja ta zapewnia również znanych większość musi wiedzieć, aby zapisać rozbudowane, zróżnicowane kwerendy w języku Visual Basic.  
+Nazwa [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] odnosi się do technologii w języku Visual Basic, że obsługuje składni zapytania i innym języku tworzy bezpośrednio w języku. Za pomocą [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], nie trzeba uczenia się nowego języka dla zewnętrznego źródła danych zapytania. Aby wykonać zapytanie względem danych w relacyjnych baz danych, Magazyny XML lub obiektów w języku Visual Basic. Ta integracja możliwości kwerend języka umożliwia kompilacji sprawdzania pod kątem błędów składniowych i bezpieczeństwo typów. Ta integracja zapewnia również znanych większość co musisz wiedzieć, aby pisać rozbudowane, zróżnicowane zapytania w języku Visual Basic.  
   
- W poniższych sekcjach opisano konstrukcji języka, które obsługują LINQ za mało szczegółowo ułatwia rozpoczęcie pracy podczas odczytywania wprowadzające dokumentacji, przykłady kodu i przykładowe aplikacje. Możesz również kliknąć łącza do bardziej szczegółowych wyjaśnień jak funkcje językowe grupuje umożliwiające zapytanie o języku zintegrowanym znaleźć. Jest dobrym miejscem do rozpoczęcia [wskazówki: Pisanie zapytań w języku Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).  
+ W poniższych sekcjach opisano konstrukcji języka, które obsługuje LINQ w wystarczającą ilość szczegółów, aby umożliwić wprowadzenie odczytywanie dokumentację wprowadzającą, przykłady kodu i przykładowe aplikacje. Możesz również kliknąć linki można znaleźć bardziej szczegółowe objaśnienia dotyczące jak funkcje językowe grupuje umożliwiające zapytanie o języku zintegrowanym. Jest dobrym miejscem do rozpoczęcia [wskazówki: Pisanie zapytań w języku Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).  
   
 ## <a name="query-expressions"></a>Wyrażenia zapytań  
- Wyrażenia zapytań w języku Visual Basic można wyrazić w składni deklaratywnej podobny do bazy danych SQL lub XQuery. W czasie kompilacji Składnia kwerendy jest konwertowany na wywołania metody do dostawcy LINQ implementacja metody rozszerzenia operator standardowej kwerendy. Określanie aplikacji standardowych operatorów zapytań należą do zakresu, określając odpowiedni obszar nazw o `Imports` instrukcji. Składnia wyrażenia zapytania języka Visual Basic wygląda następująco:  
+ Wyrażenia zapytań w języku Visual Basic mogą być wyrażone w składni deklaratywnej, podobnie jak w przypadku bazy danych SQL lub XQuery. W czasie kompilacji Składnia kwerendy jest konwertowane na wywołania metody dostawcę LINQ implementacji metody standardowego operatora zapytań rozszerzenia. Kontrolowanie aplikacji standardowych operatorów zapytań znajdują się w zakresie, określając odpowiedni obszar nazw z `Imports` instrukcji. Składnia wyrażenia zapytania języka Visual Basic wygląda następująco:  
   
  [!code-vb[VbLINQVbFeatures#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_1.vb)]  
   
  Aby uzyskać więcej informacji, zobacz [wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
   
 ## <a name="implicitly-typed-variables"></a>Niejawnie wpisane zmienne  
- Zamiast jawnego określania typu po zadeklarowaniu i zainicjuj zmienną, można włączyć kompilatora wnioskować i przypisać typu. Jest to określane jako *wnioskowanie o typie lokalnym*.  
+ Zamiast jawnego określania typu, jeśli zadeklarujesz i zainicjalizujesz zmienną, aby umożliwić kompilatorowi wywnioskowania i przypisać typu. Jest to określane jako *wnioskowanie o typie lokalnym*.  
   
- Zmienne, których typy są wywnioskować są silnie typizowane, podobnie jak zmienne o typie, określ w sposób jawny. Wnioskowanie o typie lokalnym działa tylko wtedy, gdy są definiowane zmiennej lokalnej wewnątrz treści metody. Aby uzyskać więcej informacji, zobacz [Option Infer — instrukcja](../../../../visual-basic/language-reference/statements/option-infer-statement.md) i [wnioskowanie o typie lokalnym](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
+ Zmienne, których typy są wnioskowane są silnie typizowane, podobnie jak zmienne o typie należy jawnie określić. Wnioskowanie o typie lokalnym działa tylko wtedy, gdy definiujesz zmienną lokalną wewnątrz treści metody. Aby uzyskać więcej informacji, zobacz [Option Infer — instrukcja](../../../../visual-basic/language-reference/statements/option-infer-statement.md) i [wnioskowanie o typie lokalnym](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   
- Poniższy przykład przedstawia wnioskowanie o typie lokalnym. Aby użyć tego przykładu, należy ustawić `Option Infer` do `On`.  
+ Poniższy przykład ilustruje wnioskowanie o typie lokalnym. Aby wykorzystać ten przykład, należy ustawić `Option Infer` do `On`.  
   
  [!code-vb[VbLINQVbFeatures#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_2.vb)]  
   
- Wnioskowanie o typie lokalnym również umożliwia tworzenie typy anonimowe, które zostały opisane dalej w tej sekcji oraz są niezbędne do kwerend LINQ.  
+ Wnioskowanie o typie lokalnym również umożliwia tworzenie anonimowych typów, które są opisane w dalszej części w tej sekcji i są konieczne do zapytań LINQ.  
   
- W poniższym przykładzie LINQ wnioskowanie o typie występuje, gdy `Option Infer` jest `On` lub `Off`. Błąd kompilacji występuje, gdy `Option Infer` jest `Off` i `Option Strict` jest `On`.  
+ W poniższym przykładzie LINQ, wnioskowanie o typie występuje, gdy `Option Infer` jest `On` lub `Off`. Występuje błąd kompilacji, jeśli `Option Infer` jest `Off` i `Option Strict` jest `On`.  
   
  [!code-vb[VbLINQVbFeatures#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_3.vb)]  
   
 ## <a name="object-initializers"></a>Inicjatory obiektów  
- Inicjatory obiektów są używane w wyrażeniach zapytań, podczas tworzenia typu anonimowego dla wyników zapytania. Ich można również zainicjować obiektów o nazwie typów poza zapytania. Za pomocą inicjatora obiektów, można zainicjować obiektu w jednym wierszu bez jawnego wywołania konstruktora. Zakładając, że istnieje klasa o nazwie `Customer` mający publicznego `Name` i `Phone` właściwości, oraz inne właściwości inicjatora obiektów mogą być używane w ten sposób:  
+ Inicjatory obiektów są używane w wyrażeniach zapytań, gdy trzeba utworzyć typ anonimowy do przechowywania wyników zapytania. One może również inicjować obiekty nazwanych typów poza zapytania. Za pomocą inicjatora obiektów, można zainicjować obiektu w pojedynczym wierszu bez jawnego wywołania konstruktora. Przy założeniu, że masz klasę o nazwie `Customer` ma publiczny `Name` i `Phone` właściwości, oraz inne właściwości inicjatora obiektów mogą być używane w ten sposób:  
   
  [!code-vb[VbLINQVbFeatures#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_4.vb)]  
   
  Aby uzyskać więcej informacji, zobacz [inicjatory obiektów: typy nazwane i anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
   
 ## <a name="anonymous-types"></a>Typy anonimowe  
- Typy anonimowe zapewnić wygodny sposób tymczasowo grupy zbiór właściwości do elementu, który ma być uwzględniony w wyniku zapytania. Dzięki temu można wybrać dowolną kombinację dostępnych pól w zapytaniu, w dowolnej kolejności bez zdefiniowania typu danych nazwanego elementu.  
+ Typy anonimowe zapewniają wygodny sposób w celu tymczasowego grupowania zestawu właściwości do elementu, który chcesz uwzględnić w wyniku zapytania. Dzięki temu można wybrać dowolną kombinację dostępnych pól w zapytaniu, w dowolnej kolejności bez zdefiniowania typu danych o nazwie elementu.  
   
- *Typu anonimowego* jest tworzony dynamicznie przez kompilator. Nazwa typu jest przypisywany przez kompilator i mogą ulec zmianie z każdej nowej kompilacji. W związku z tym nie można użyć nazwy bezpośrednio. Typy anonimowe są inicjowane w następujący sposób:  
+ *Typu anonimowego* jest tworzony dynamicznie przez kompilator. Nazwa typu jest przypisywany przez kompilator i mogą ulec zmianie z każdej nowej kompilacji. W związku z tym, nie można użyć nazwy bezpośrednio. Typy anonimowe są inicjowane w następujący sposób:  
   
  [!code-vb[VbLINQVbFeatures#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_5.vb)]  
   
  Aby uzyskać więcej informacji, zobacz [typy anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
   
 ## <a name="extension-methods"></a>Metody rozszerzeń  
- Metody rozszerzenia umożliwiają dodanie metody typu danych lub interfejsu poza definicją. Ta funkcja umożliwia, w efekcie Dodawanie nowych metod do istniejącego typu nie modyfikując typu. Standardowe operatory zapytań są zestawem metody rozszerzenia, które zapewniają [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania funkcji dla dowolnego typu, który implementuje <xref:System.Collections.Generic.IEnumerable%601>. Inne rozszerzenia <xref:System.Collections.Generic.IEnumerable%601> obejmują <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Union%2A>, i <xref:System.Linq.Enumerable.Intersect%2A>.  
+ Metody rozszerzające umożliwiają dodawanie metod do typu danych lub interfejs z poza definicją. Ta funkcja umożliwia, w efekcie dodanie nowych metod do istniejącego typu nie modyfikując typu. Standardowe operatory zapytań są same zestaw metod rozszerzenia, które zapewniają [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania funkcji dla dowolnego typu, który implementuje <xref:System.Collections.Generic.IEnumerable%601>. Inne rozszerzenia <xref:System.Collections.Generic.IEnumerable%601> obejmują <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Union%2A>, i <xref:System.Linq.Enumerable.Intersect%2A>.  
   
- Następującą metodę rozszerzenie dodaje metodę wydruku <xref:System.String> klasy.  
+ Następujące metody rozszerzenia dodaje metodę drukowania <xref:System.String> klasy.  
   
  [!code-vb[VbLINQVbFeatures#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_6.vb)]  
   
- Metoda jest wywoływana jak metod wystąpień zwykłej <xref:System.String>:  
+ Metoda jest wywoływana, takich jak to metoda zwykłego wystąpienia <xref:System.String>:  
   
  [!code-vb[VbLINQVbFeatures#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_7.vb)]  
   
  Aby uzyskać więcej informacji, zobacz [metody rozszerzenia](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).  
   
 ## <a name="lambda-expressions"></a>Wyrażenia lambda  
- Wyrażenie lambda jest funkcją bez nazwy, która jest obliczana i zwraca pojedynczą wartość. W przeciwieństwie do funkcji o nazwie wyrażenia lambda mogą być definiowane i wykonywane w tym samym czasie. W poniższym przykładzie przedstawiono 4.  
+ Wyrażenie lambda jest funkcją bez nazwy, który oblicza i zwraca wartość typu single. W przeciwieństwie do funkcji o nazwie wyrażenia lambda mogą być definiowane i wykonywane w tym samym czasie. Poniższy przykład wyświetla 4.  
   
  [!code-vb[VbLINQVbFeatures#8](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_8.vb)]  
   
- Można przypisać definicji wyrażenia lambda na nazwę zmiennej, a następnie użyj nazwy do wywołania tej funkcji. W poniższym przykładzie przedstawiono również 4.  
+ Można przypisać Definicja wyrażenia lambda do nazwy zmiennej, a następnie użyj nazwy w wywołaniu funkcji. Poniższy przykład wyświetla również 4.  
   
  [!code-vb[VbLINQVbFeatures#12](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_9.vb)]  
   
- W [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], wyrażenia lambda opierają się wiele standardowych operatorów zapytań. Kompilator tworzy wyrażenia lambda do przechwytywania obliczeń, które są zdefiniowane w metody podstawowych zapytań, takich jak `Where`, `Select`, `Order By`, `Take While`i inne.  
+ W [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], wyrażenia lambda podstawą wiele standardowych operatorów zapytań. Kompilator tworzy wyrażenia lambda do przechwytywania obliczenia, które są zdefiniowane w metody zapytań podstawowych, takich jak `Where`, `Select`, `Order By`, `Take While`i innym osobom.  
   
- Na przykład poniższy kod definiuje kwerendę, która zwraca wszystkich studentów wyższych z listy studentów.  
+ Na przykład poniższy kod definiuje zapytanie zwracające wszyscy uczniowie starszy z listy studentów.  
   
  [!code-vb[VbLINQVbFeatures#9](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_10.vb)]  
   
- Definicja zapytania jest kompilowany do kodu, który jest podobny do poniższego przykładu, które używa dwóch wyrażeń lambda, aby określić argumenty `Where` i `Select`.  
+ Definicja zapytania jest skompilowany na kod, który jest podobny do poniższego przykładu, który używa dwóch wyrażeń lambda, aby określić argumenty `Where` i `Select`.  
   
  [!code-vb[VbLINQVbFeatures#10](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_11.vb)]  
   
- Można uruchomić przy użyciu danej wersji `For Each` Pętla:  
+ Danej wersji, można uruchomić za pomocą `For Each` Pętla:  
   
  [!code-vb[VbLINQVbFeatures#11](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_12.vb)]  
   
- Aby uzyskać więcej informacji, zobacz [wyrażenia Lambda](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ Aby uzyskać więcej informacji, zobacz [wyrażeń Lambda](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zapytanie o języku zintegrowanym (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
- [Wprowadzenie do korzystania z LINQ w Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
+ [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
  [LINQ i ciągi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
  [Option Infer, instrukcja](../../../../visual-basic/language-reference/statements/option-infer-statement.md)  
  [Option Strict, instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

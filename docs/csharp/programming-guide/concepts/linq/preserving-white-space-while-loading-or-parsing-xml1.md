@@ -1,25 +1,25 @@
 ---
-title: Zachowanie podczas ładowania lub analizowania XML1 biały znak
+title: Zachowywanie białych znaków podczas ładowania lub analizowania XML1
 ms.date: 07/20/2015
 ms.assetid: f3ff58c4-55aa-4fcd-b933-e3a2ee6e706c
 ms.openlocfilehash: f863a80d3e949ddc2cfe630ae3c309009315d020
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340154"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39220974"
 ---
-# <a name="preserving-white-space-while-loading-or-parsing-xml"></a>Zachowywanie biały znak podczas ładowania lub analiza kodu XML
-W tym temacie opisano, jak można kontrolować zachowanie spacji [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
+# <a name="preserving-white-space-while-loading-or-parsing-xml"></a>Zachowywanie białych znaków podczas ładowania lub analizowania kodu XML
+W tym temacie opisano sposób kontrolowania zachowania białe [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
- Typowy scenariusz jest Odczytaj dane XML z wcięciami, utwórz drzewo XML w pamięci bez żadnych białe węzły tekstowe (to znaczy nie zachowania biały znak), operacji na pliku XML, a następnie zapisz plik XML z wcięcia. Podczas formatowania kodu XML, tylko znaczący biały znak w drzewie XML są zachowywane. Jest to domyślne zachowanie dla [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
+ Typowym scenariuszem jest Odczytaj dane XML z wcięciami, utworzyć drzewa XML w pamięci bez wszystkie węzły tekstowe białe miejsca (to znaczy nie zachowania biały), wykonywanie operacji na pliku XML, a następnie zapisz plik XML, z wcięciem. Po użytkownik serializacji XML za pomocą formatowania, tylko istotne biały znak w drzewie XML są zachowywane. Jest to domyślne zachowanie dla [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
- Inny typowy scenariusz polega może odczytywać i modyfikować XML, który już został celowo wcięcia. Nie można zmienić tej wcięcia w dowolny sposób. Aby to zrobić w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], można zachować biały znak w przypadku obciążenia lub analizy kodu XML i wyłączyć formatowania podczas serializacji XML.  
+ Inny typowy scenariusz polega na odczytywanie i modyfikację XML, który już został celowo z wcięciami. Nie można zmienić to wcięcie w dowolny sposób. Aby to zrobić w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], gdy obciążenia lub nemohla analyzovat kód XML i Wyłącz formatowanie podczas serializacji XML jest zachowany biały znak.  
   
- W tym temacie opisano zachowanie spacji metod, które wypełnić drzew XML. Informacje dotyczące sterowania biały znak, podczas serializacji XML drzewa, zobacz [zachowania biały znak podczas serializowania](../../../../csharp/programming-guide/concepts/linq/preserving-white-space-while-serializing.md).  
+ W tym temacie opisano biały metody służące do wypełniania drzew XML. Aby dowiedzieć się, jak kontrolowanie biały znak podczas serializowania drzew XML, zobacz [zachowania biały znak podczas serializowania](../../../../csharp/programming-guide/concepts/linq/preserving-white-space-while-serializing.md).  
   
-## <a name="behavior-of-methods-that-populate-xml-trees"></a>Zachowanie metody, które wypełnić drzew XML  
- Następujące metody w <xref:System.Xml.Linq.XElement> i <xref:System.Xml.Linq.XDocument> klasy wypełnić drzewo XML. Drzewo składni XML z pliku, można go wypełnić <xref:System.IO.TextReader>, <xref:System.Xml.XmlReader>, lub ciągiem:  
+## <a name="behavior-of-methods-that-populate-xml-trees"></a>Zachowanie metody służące do wypełniania drzew XML  
+ Następujące metody w klasie <xref:System.Xml.Linq.XElement> i <xref:System.Xml.Linq.XDocument> klasy wypełnianie drzewa XML. Możesz wypełnić drzewa XML z pliku, <xref:System.IO.TextReader>, <xref:System.Xml.XmlReader>, lub ciągiem:  
   
 -   <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>  
   
@@ -29,13 +29,13 @@ W tym temacie opisano, jak można kontrolować zachowanie spacji [!INCLUDE[sqlte
   
 -   <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>  
   
- Jeśli metoda nie przyjmuje <xref:System.Xml.Linq.LoadOptions> jako argument metody nie zachowa nieważny biały znak.  
+ Jeśli metoda nie przyjmuje <xref:System.Xml.Linq.LoadOptions> jako argument, metoda nie zachowa nieważny biały znak.  
   
- W większości przypadków, gdy metoda korzysta z <xref:System.Xml.Linq.LoadOptions> jako argument, można opcjonalnie Zachowaj nieważny biały znak jako tekst węzłów w drzewie XML. Jednak jeśli metoda Trwa ładowanie XML z <xref:System.Xml.XmlReader>, a następnie <xref:System.Xml.XmlReader> Określa, czy biały znak, zostaną zachowane, czy nie. Ustawienie <xref:System.Xml.Linq.LoadOptions.PreserveWhitespace> nie odniesie żadnego skutku.  
+ W większości przypadków, gdy ta metoda przyjmuje <xref:System.Xml.Linq.LoadOptions> jako argument, można opcjonalnie zachować nieważny biały znak jako węzły tekstowe w drzewie XML. Jednakże jeśli metoda Trwa ładowanie XML z <xref:System.Xml.XmlReader>, a następnie <xref:System.Xml.XmlReader> Określa, czy biały znak zostanie zachowany, czy nie. Ustawienie <xref:System.Xml.Linq.LoadOptions.PreserveWhitespace> odniesie żadnego skutku.  
   
- Z tych metod, jeśli biały znak jest zachowywany, nieważny biały znak jest wstawiany drzewa XML jako <xref:System.Xml.Linq.XText> węzłów. Jeśli nie są zachowywane biały znak, nie są wstawiane węzły tekstowe.  
+ Za pomocą tych metod, jeśli biały znak są zachowywane, nieważny biały znak jest wstawiany do drzewa XML jako <xref:System.Xml.Linq.XText> węzłów. Jeśli biały znak nie są zachowywane, nie są wstawiane węzły tekstowe.  
   
- Drzewo XML można tworzyć przy użyciu <xref:System.Xml.XmlWriter>. Węzły, które są zapisywane na <xref:System.Xml.XmlWriter> są wypełnione w drzewie. Jednak podczas kompilowania drzewo XML za pomocą tej metody, wszystkie węzły są konserwowane, niezależnie od tego, czy węzeł jest białe, czy nie, lub czy biały znak jest istotny, czy nie.  
+ Można utworzyć drzewa XML przy użyciu <xref:System.Xml.XmlWriter>. Węzły, które są zapisywane w <xref:System.Xml.XmlWriter> są wypełnione w drzewie. Jednak w przypadku tworzenia drzewa XML przy użyciu tej metody, wszystkie węzły są zachowanych, niezależnie od tego, czy węzeł jest biały znak, czy nie, oraz czy biały istotne lub nie.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Analiza kodu XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+ [Analizowanie kodu XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

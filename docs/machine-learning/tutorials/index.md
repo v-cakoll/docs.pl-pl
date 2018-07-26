@@ -1,19 +1,20 @@
 ---
-title: Samouczki ML.NET
-description: Poznaj te samouczki ML.NET informacje na temat tworzenia niestandardowych rozwiązań AI i integrowanie aplikacji platformy .NET.
-ms.date: 06/06/2018
-ms.openlocfilehash: 881398e3fda47c0faae2ba3aa9dd43d74fd93cb4
-ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
+title: Samouczki strukturze ML.NET
+description: Zapoznaj się z samouczkami strukturze ML.NET, aby dowiedzieć się, jak tworzyć niestandardowych rozwiązań sztucznej Inteligencji i integrowanie aplikacji .NET.
+ms.date: 07/02/2018
+ms.openlocfilehash: 09835da5df8697a3d1c0a6597550bded996fbd4c
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298334"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936903"
 ---
-# <a name="mlnet-tutorials"></a>Samouczki ML.NET
+# <a name="mlnet-tutorials"></a>Samouczki strukturze ML.NET
 
-Następujące samouczki pozwalają zrozumieć, jak używać [ML.NET](../index.md) do tworzenia rozwiązań do uczenia maszynowego niestandardowych i integrowanie aplikacji platformy .NET:
+Następujące samouczki umożliwiają zrozumienie metod wykorzystania [strukturze ML.NET](../index.md) rozwiązania niestandardowego uczenia maszynowego i integrowanie aplikacji .NET:
 
-* [Wskaźniki nastrojów klientów analizy](sentiment-analysis.md): pokazano, jak zastosować przy użyciu ML.NET zadania klasyfikacji binarnej.
-* [Prognoza taryfy taksówki](taxi-fare.md): pokazano, jak zastosować zadanie regresji przy użyciu ML.NET.
+- [Analiza tonacji](sentiment-analysis.md): Pokazuje, jak zastosować **klasyfikacji binarnej** zadań przy użyciu strukturze ML.NET.
+- [Prognoza taryfy taksówek](taxi-fare.md): Pokazuje, jak zastosować **regresji** zadań przy użyciu strukturze ML.NET.
+- [Klastrowanie Iris](iris-clustering.md): Pokazuje, jak zastosować **klastrowania** zadań przy użyciu strukturze ML.NET.
 
-Aby uzyskać więcej przykładów, które używają ML.NET, sprawdź [dotnet/machinelearning — przykłady](https://github.com/dotnet/machinelearning-samples) repozytorium GitHub.
+Aby uzyskać więcej przykładów, które używają strukturze ML.NET, sprawdź [machinelearning-dotnet-samples](https://github.com/dotnet/machinelearning-samples) repozytorium GitHub.

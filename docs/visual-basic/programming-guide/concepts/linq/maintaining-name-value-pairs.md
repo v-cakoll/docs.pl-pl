@@ -3,38 +3,38 @@ title: Obsługa pary nazwa wartość (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 57ac2072-d9f5-432b-84f0-a889c62fd813
 ms.openlocfilehash: 6d842adb1e21a7744f03f4a7e7fb0785ffb6a119
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646880"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39243800"
 ---
 # <a name="maintaining-namevalue-pairs-visual-basic"></a>Obsługa pary nazwa/wartość (Visual Basic)
-Wiele aplikacji ma do przechowywania informacji, które najlepiej jest przechowywane jako pary nazwa/wartość. Informacje te mogą być informacje o konfiguracji lub ustawień globalnych. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zawiera niektórych metod, które ułatwiają Zachowaj zestaw par nazwa/wartość. Możesz zachować informacje jako atrybuty lub zbiór podrzędnych elementów.  
+Masz wiele aplikacji do zarządzania danymi, który jest najlepiej pozostawić w postaci par nazwa/wartość. Te informacje mogą być informacje o konfiguracji lub ustawień globalnych. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zawiera niektóre metody, które ułatwiają zapewnienie zestaw par nazwa/wartość. Możesz zachować informacje jako atrybuty lub zbiór podrzędnych elementów.  
   
- Jeden różnica między jednoczesnym zachowaniu bezpieczeństwa informacji jako atrybuty lub jako elementy podrzędne jest atrybuty ograniczenia, że może istnieć tylko jeden atrybut o określonej nazwie dla elementu. To ograniczenie nie ma zastosowania do elementów podrzędnych.  
+ Jedną różnicą między przechowywanie informacji jako atrybutów lub elementów podrzędnych jest atrybuty ograniczenie, że może istnieć tylko jeden atrybut o określonej nazwie elementu. To ograniczenie nie ma zastosowania do elementów podrzędnych.  
   
 ## <a name="setattributevalue-and-setelementvalue"></a>SetAttributeValue i SetElementValue  
- Te dwie metody, które ułatwiają utrzymanie par nazwa/wartość są <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> i <xref:System.Xml.Linq.XElement.SetElementValue%2A>. Te dwie metody mają podobne semantyki.  
+ Te dwie metody, które ułatwiają utrzymanie par nazwa/wartość są <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> i <xref:System.Xml.Linq.XElement.SetElementValue%2A>. Te dwie metody mają podobną semantyką.  
   
  <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> można dodać, modyfikowanie lub usuwanie atrybutów elementu.  
   
--   Jeśli należy wywołać <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> z nazwą atrybutu, który nie istnieje, metoda tworzy nowy atrybut i dodaje go do określonego elementu.  
+-   Jeśli wywołasz <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> nazwą atrybutu, który nie istnieje metoda tworzy nowy atrybut i dodaje go do określonego elementu.  
   
--   Jeśli należy wywołać <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> z nazwą istniejącego atrybutu i niektóre określone zawartości, zawartość atrybutu są zastępowane z określoną zawartością.  
+-   Jeśli wywołasz <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> z nazwą istniejącego atrybutu i niektórych określonych zawartości, zawartość atrybutu są zastępowane określonej zawartości.  
   
--   Wywołanie <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> z nazwą istniejącego atrybutu, a następnie określ wartość null dla zawartości, atrybut jest usuwany po swoim obiekcie nadrzędnym.  
+-   Jeśli wywołasz <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> z nazwą istniejącego atrybutu, a następnie określ wartość null dla zawartości, ten atrybut jest usuwany z jego elementu nadrzędnego.  
   
- <xref:System.Xml.Linq.XElement.SetElementValue%2A> można dodać, modyfikowanie lub usuwanie elementów podrzędnych danego elementu.  
+ <xref:System.Xml.Linq.XElement.SetElementValue%2A> dodać, zmodyfikować lub usunąć elementy podrzędne elementu.  
   
--   Jeśli należy wywołać <xref:System.Xml.Linq.XElement.SetElementValue%2A> z nazwą elementu podrzędnego, który nie istnieje, metoda tworzy nowy element i dodaje go do określonego elementu.  
+-   Jeśli wywołasz <xref:System.Xml.Linq.XElement.SetElementValue%2A> nazwą elementu podrzędnego, który nie istnieje metoda tworzy nowy element i dodaje go do określonego elementu.  
   
--   Jeśli należy wywołać <xref:System.Xml.Linq.XElement.SetElementValue%2A> z nazwą istniejącego elementu i niektóre określone zawartości, zawartość elementu są zastępowane z określoną zawartością.  
+-   Jeśli wywołasz <xref:System.Xml.Linq.XElement.SetElementValue%2A> z nazwą istniejącego elementu i niektórych określonych zawartości, zawartość elementu są zastępowane określonej zawartości.  
   
--   Jeśli należy wywołać <xref:System.Xml.Linq.XElement.SetElementValue%2A> z nazwą istniejącego elementu i określ wartość null dla zawartości, element zostanie usunięty z jego elementu nadrzędnego.  
+-   Jeśli wywołasz <xref:System.Xml.Linq.XElement.SetElementValue%2A> z nazwą istniejącego elementu i określ wartość null w przypadku zawartości, element zostanie usunięty z jego elementu nadrzędnego.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład tworzy element bez atrybutów. Następnie używa <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> metodę, aby utworzyć i zachować listę par nazwa/wartość.  
+ Poniższy przykład tworzy element bez atrybutów. Następnie używa <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> metodę, aby utworzyć i utrzymywać listę par nazwa/wartość.  
   
 ```vb  
 ' Create an element with no content.  
@@ -66,7 +66,7 @@ Console.WriteLine(root)
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład tworzy element z nie podrzędnych elementów. Następnie używa <xref:System.Xml.Linq.XElement.SetElementValue%2A> metodę, aby utworzyć i zachować listę par nazwa/wartość.  
+ Poniższy przykład tworzy element z podrzędnych nie elementów. Następnie używa <xref:System.Xml.Linq.XElement.SetElementValue%2A> metodę, aby utworzyć i utrzymywać listę par nazwa/wartość.  
   
 ```vb  
 ' Create an element with no content.  
@@ -121,4 +121,4 @@ Console.WriteLine(root)
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>  
  <xref:System.Xml.Linq.XElement.SetElementValue%2A>  
- [Modyfikowanie drzew XML (LINQ do XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+ [Modyfikowanie drzew XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

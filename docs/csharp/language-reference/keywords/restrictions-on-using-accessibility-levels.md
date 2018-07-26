@@ -5,38 +5,38 @@ helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
 ms.openlocfilehash: fd2f9b11523aac1cb720559db44aa36029d52ddb
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172412"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960908"
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a>Ograniczenia dotyczące używania poziomów ułatwień dostępu (odwołanie w C#)
-Po określeniu typu w deklaracji, sprawdź, czy poziom dostępności typu zależy od poziomu dostępności elementu członkowskiego lub innego typu. Na przykład musi być co najmniej jako dostępne jako klasa pochodna bezpośredniej klasie podstawowej. Następujące deklaracje spowodować błąd kompilatora, ponieważ klasa podstawowa `BaseClass` jest mniej dostępny niż `MyClass`:  
+Po określeniu typu w deklaracji, sprawdź, czy poziom dostępności tego typu jest zależne od poziomu dostępności elementu członkowskiego lub innego typu. Na przykład bezpośredniej klasy podstawowej musi być co najmniej tak samo dostępna jak klasy pochodnej. Następujące deklaracje spowodują błąd kompilatora, ponieważ klasa bazowa `BaseClass` jest mniej dostępny niż `MyClass`:  
   
 ```csharp  
 class BaseClass {...}  
 public class MyClass: BaseClass {...} // Error  
 ```  
   
- W poniższej tabeli przedstawiono ograniczenia dotyczące poziomów ułatwień dostępu zadeklarowane.  
+ W poniższej tabeli podsumowano ograniczenia dotyczące poziomów deklarowana dostępność metody.  
   
 |Kontekst|Uwagi|  
 |-------------|-------------|  
-|[Klasy](../../../csharp/programming-guide/classes-and-structs/classes.md)|Bezpośrednia klasa podstawowa typu klasy musi być co najmniej jako dostępny jako samego typu klasy.|  
-|[Interfejsy](../../../csharp/programming-guide/interfaces/index.md)|Jawne interfejsy podstawowego typu interfejsu muszą być co najmniej jako dostępne jako samego typu interfejsu.|  
-|[Delegaci](../../../csharp/programming-guide/delegates/index.md)|Zwracany typ i typy parametrów typu delegata musi być co najmniej jako dostępny jako sam typ delegata.|  
-|[Stałe](../../../csharp/programming-guide/classes-and-structs/constants.md)|Typ stałej musi być co najmniej dostępny jako stałej sam.|  
-|[Pola](../../../csharp/programming-guide/classes-and-structs/fields.md)|Typ pola muszą być co najmniej jako dostępne jako samego pola.|  
-|[Metody](../../../csharp/programming-guide/classes-and-structs/methods.md)|Zwracany typ i typy parametrów, metody muszą być co najmniej jako dostępne jako tej metody.|  
-|[Właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md)|Typ właściwości musi być co najmniej dostępny jako samej właściwości.|  
-|[Zdarzenia](../../../csharp/programming-guide/events/index.md)|Typ zdarzenia musi być co najmniej dostępny jako samym zdarzeniu.|  
-|[Indeksatory](../../../csharp/programming-guide/indexers/index.md)|Typy typu i parametru indeksatora muszą być co najmniej jako dostępne jako indeksatora samej siebie.|  
-|[Operatory](../../../csharp/programming-guide/statements-expressions-operators/operators.md)|Zwracany typ i typy parametrów operatora musi być co najmniej jako dostępny jako operator samej siebie.|  
-|[Konstruktory](../../../csharp/programming-guide/classes-and-structs/constructors.md)|Typy parametrów konstruktora musi być co najmniej jako dostępny, co konstruktor samej siebie.|  
+|[Klasy](../../../csharp/programming-guide/classes-and-structs/classes.md)|Bezpośrednie klasy bazowej typu klasy musi być co najmniej tak samo dostępna jak samego typu klasy.|  
+|[Interfejsy](../../../csharp/programming-guide/interfaces/index.md)|Jawne interfejsy podstawowe typu interfejsu, musi być co najmniej tak samo dostępna jak samego typu interfejsu.|  
+|[Delegaci](../../../csharp/programming-guide/delegates/index.md)|Typ zwracany i typy parametrów typu delegowanego musi być co najmniej tak samo dostępna jak samego typu delegata.|  
+|[Stałe](../../../csharp/programming-guide/classes-and-structs/constants.md)|Typ stałej musi być co najmniej tak samo dostępna jak stała się.|  
+|[Pola](../../../csharp/programming-guide/classes-and-structs/fields.md)|Typ pola musi być co najmniej tak samo dostępna jak samo pole.|  
+|[Metody](../../../csharp/programming-guide/classes-and-structs/methods.md)|Typ zwracany i typy parametrów metody muszą być co najmniej tak samo dostępna jak sama metoda.|  
+|[Właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md)|Typ właściwości musi być co najmniej tak samo dostępna jak samej właściwości.|  
+|[Zdarzenia](../../../csharp/programming-guide/events/index.md)|Typ zdarzenia musi być co najmniej tak samo dostępna jak samego zdarzenia.|  
+|[Indeksatory](../../../csharp/programming-guide/indexers/index.md)|Typ i parametrów typów indeksatora musi być co najmniej tak samo dostępna jak indeksatora, sam.|  
+|[Operatory](../../../csharp/programming-guide/statements-expressions-operators/operators.md)|Typ zwracany i typy parametrów operatora musi być co najmniej tak samo dostępna jak operator sam.|  
+|[Konstruktory](../../../csharp/programming-guide/classes-and-structs/constructors.md)|Typy parametrów konstruktora musi być co najmniej tak samo dostępna jak sam Konstruktor.|  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład zawiera błędne deklaracje różnych typów. Komentarz po każdej deklaracji wskazuje błąd kompilatora oczekiwanego.  
+ Poniższy przykład zawiera błędne deklaracje różnych typów. Komentarz po każdym deklaracji wskazuje błąd kompilatora oczekiwane.  
   
 ```csharp  
 // Restrictions on Using Accessibility Levels  
@@ -105,7 +105,7 @@ public class A
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
+ [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
  [Modyfikatory dostępu](../../../csharp/language-reference/keywords/access-modifiers.md)  

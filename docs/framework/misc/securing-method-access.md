@@ -12,35 +12,35 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b0d9ddbd6c7b027a7c342f4c14192a7571beb592
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 314ceb86219ce143e84a00392727d610c0779e48
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397887"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39243681"
 ---
 # <a name="securing-method-access"></a>Zabezpieczanie dostępu metody
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- W przypadku niektórych metod może nie nadawać się do dowolnego kodu niezaufanej do wywołania. Takie metody stanowić zagrożenie kilka: metoda może zawierać niektórych ograniczone informacje; może być podejrzeń wszelkie informacje przekazywane może nie sprawdzanie błędów dla parametrów; lub z niewłaściwego parametrami, może być nieprawidłowe działanie lub czymś szkodliwe. Należy należy pamiętać o tych przypadkach i podjąć działania w celu ochrony metody.  
+ Niektóre metody może nie być odpowiednie dla dowolnego niezaufanego kodu do wywołania. Takie metody stanowić zagrożenie kilka: metoda może być podanie pewnych informacji w ograniczonym; może być uważa, wszelkie informacje przekazywane może nie sprawdzanie błędów dla parametrów; lub z niewłaściwego parametrami, może być nieprawidłowe działanie lub czymś szkodliwe. Należy należy pamiętać o tych przypadkach i podjąć działania w celu ochrony metody.  
   
- W niektórych przypadkach może być konieczne ograniczanie metod, które nie są przeznaczone do użytku publicznego, ale nadal muszą być publiczne. Na przykład może być interfejs, który musi być wywoływany przez własnych bibliotek DLL i dlatego muszą być publiczne, ale nie chcesz udostępnić go publicznie, aby uniemożliwić klientom korzystanie z niego lub aby uniemożliwić wykorzystanie punktem wejścia do składnika złośliwego kodu. Kolejny powód wspólnej do ograniczania metody nie przeznaczony do użytku publicznego (ale który muszą być publiczne) jest, aby uniknąć konieczności dokumentów i obsługi, co może być bardzo wewnętrznej.  
+ W niektórych przypadkach może być konieczne do ograniczania metody, które nie są przeznaczone do użytku publicznego, ale nadal muszą być publiczne. Na przykład może być interfejsem, który musi być wywoływany we własnych bibliotek DLL i dlatego musi być publiczna, ale nie chcesz udostępnić je publicznie, aby pozwolić użytkownikom korzystanie z niego lub uniemożliwić wykorzystanie punkt wejścia do składnika przez złośliwy kod. Kolejnym powodem wspólne do ograniczania metody nie jest przeznaczona do użytku publicznego (ale, muszą być publiczne) jest, aby uniknąć konieczności dokumentów i obsługi, co może być bardzo wewnętrznej.  
   
- Zarządzany kod oferuje kilka sposobów do ograniczania dostępu do metody:  
+ Zarządzane kodu oferuje kilka sposobów, aby ograniczyć dostęp do metody:  
   
--   Ograniczenie zakresu ułatwień dostępu do klasy, zestawu lub klasy pochodne, jeśli może być zaufane. Jest to najprostszy sposób, aby ograniczyć dostęp do metody. Należy pamiętać, że klasy pochodne — ogólnie rzecz biorąc, może być mniej zaufanego niż klasa, które pochodzą one od, chociaż w niektórych przypadkach mają tożsamości klasy nadrzędnej. W szczególności nie wnioskować zaufanie od słowa kluczowego **chronione**, który nie jest zawsze używany w kontekście zabezpieczeń.  
+-   Ograniczenie zakresu ułatwień dostępu do klasy, zestaw lub klasach pochodnych, jeśli może być zaufane. Jest to najprostszy sposób, aby ograniczyć dostęp do metody. Należy zauważyć, że ogólnie rzecz biorąc, klasy pochodne może być mniej wiarygodny niż klasa, z którego pochodzą one od, chociaż w niektórych przypadkach współużytkują one tożsamości klasy nadrzędnej. W szczególności są rozpoznawane przez relację zaufania z słowa kluczowego **chronione**, które nie jest koniecznie używane w kontekście zabezpieczeń.  
   
--   Ograniczenia dostępu metody wywołań określoną tożsamością — zasadniczo żadnych określonego [dowód](http://msdn.microsoft.com/library/64ceb7c8-a0b4-46c4-97dc-6c22da0539da) (silnej nazwy, wydawcy strefy i tak dalej) wybierz.  
+-   Ograniczyć dostęp do metody wywołań określonej tożsamości — zasadniczo dowolnego określonego [dowód](http://msdn.microsoft.com/library/64ceb7c8-a0b4-46c4-97dc-6c22da0539da) (silnej nazwy, wydawcy, strefy i tak dalej) wybierz.  
   
--   Ograniczenia dostępu metody dotyczące obiektów wywołujących uzyskanie niezależnie od uprawnień, należy wybrać.  
+-   Ograniczyć dostęp do metody dla kodu wywołującego, niezależnie od uprawnień, możesz wybrać.  
   
- Podobnie zabezpieczenia deklaratywne pozwala na kontrolowanie dziedziczenia klas. Można użyć **InheritanceDemand** wykonać następujące czynności:  
+ Podobnie zabezpieczenia deklaratywne pozwala na kontrolowanie dziedziczenia klas. Możesz użyć **InheritanceDemand** wykonać następujące czynności:  
   
--   Wymagaj klas pochodnych określona tożsamość lub uprawnienia.  
+-   Wymagaj klasy pochodne, aby mieć uprawnienie lub określonej tożsamości.  
   
--   Wymagaj klas pochodnych przesłaniające konkretnych metod określona tożsamość lub uprawnienia.  
+-   Wymagaj klas pochodnych, które zastępują konkretnych metod do określonej tożsamości lub uprawnień.  
   
- Poniższy przykład pokazuje, jak w celu ochrony klasą publiczną ograniczony dostęp przez wymaganie, aby obiekty wywołujące były podpisane przy użyciu określonego silnej nazwy. W tym przykładzie użyto <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> z **żądanie** silnej nazwy. Oparty na zadaniach informacji na temat podpisać zestaw o silnej nazwie, zobacz [tworzenie i zestawy Using Strong-Named](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md).  
+ Poniższy przykład pokazuje, jak chronić klasę publiczną ograniczony dostęp poprzez wymaganie, aby obiekty wywołujące były podpisane przy użyciu określonej silnej nazwy. W tym przykładzie użyto <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> z **żądanie** dla silnej nazwy. Oparta na zadaniach informacji na temat podpisać zestaw silną nazwą, zobacz [tworzenie i zestawy Using Strong-Named](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md).  
   
 ```vb  
 <StrongNameIdentityPermissionAttribute(SecurityAction.Demand, PublicKey := "…hex…", Name := "App1", Version := "0.0.0.0")>  _  
@@ -57,16 +57,16 @@ public class Class1
 ```  
   
 ## <a name="excluding-classes-and-members-from-use-by-untrusted-code"></a>Wyłączanie klas i członków z zasobów używanych przez niezaufany kod  
- Użyj deklaracji w tej sekcji, aby zapobiec używany przez kod częściowo zaufany określonej klasy i metody, jak również właściwości i zdarzenia. Stosując deklaracji klasy, stosują ochronę do jego metod, właściwości i zdarzeń; jednak należy pamiętać, że dostęp do pola nie ma wpływu na zabezpieczenia deklaratywne. Należy też zauważyć, że linkdemand pomoże zapewnić ochronę przed tylko bezpośredniego wywoływania i nadal mogą być narażone na ataki zapewnienia.  
+ Użyj deklaracji przedstawione w tej sekcji, aby uniemożliwić określonej klasy i metody, jak również właściwości i zdarzenia, używany przez częściowo zaufany kod. Stosując te deklaracje do klasy, zabezpieczać do jego metod, właściwości i zdarzeń; należy jednak zauważyć, że dostęp do pola nie są stosowane zabezpieczenia deklaratywne. Należy zauważyć, że zapotrzebowanie na łącza pomoże zapewnić ochronę przed tylko bezpośredniego wywoływania i nadal może podlegać zapewnienia ataków.  
   
 > [!NOTE]
->  Wprowadzono nowy model przezroczystość w [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. [Kod o przezroczystym poziomie bezpieczeństwa, poziom 2](../../../docs/framework/misc/security-transparent-code-level-2.md) modelu identyfikuje bezpieczny kod z <xref:System.Security.SecurityCriticalAttribute> atrybutu. Kod krytyczny dla zabezpieczeń wymaga zarówno wywołań i dziedziczenia, mogą być w pełni zaufany. Zestawy, które działają w ramach zasad zabezpieczeń dostępu kodu z wcześniejszych wersji .NET Framework mogą wywoływać zestawy poziomu 2. W takim przypadku atrybuty krytyczny dla zabezpieczeń będą traktowane jako linkdemand dla pełnego zaufania.  
+>  Nowy model przejrzystości został wprowadzony w [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. [Kod o przezroczystym poziomie bezpieczeństwa, poziom 2](../../../docs/framework/misc/security-transparent-code-level-2.md) modelu identyfikuje bezpiecznego kodu za pomocą <xref:System.Security.SecurityCriticalAttribute> atrybutu. Kod zabezpieczenia krytyczny wymaga obiektów wywołujących i obiektów dziedziczących jako w pełni zaufane. Zestawy, które są uruchomione w ramach zasad zabezpieczeń dostępu kodu z wcześniejszych wersji systemu .NET Framework, można wywołać zestawy poziomu 2. W tym przypadku zabezpieczenia krytyczny atrybuty są traktowane jak linkdemand dla pełnego zaufania.  
   
- W zestawy o silnych nazwach [LinkDemand](../../../docs/framework/misc/link-demands.md) jest stosowany do wszystkich publicznie dostępnych metod, właściwości i zdarzenia tam, aby ograniczyć ich stosowania do wywoływania w pełni zaufany. Aby wyłączyć tę funkcję, należy zastosować <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atrybutu. W związku z tym jawnie oznaczenie klasy do wykluczenia niezaufanych obiektów wywołujących jest niezbędne tylko w przypadku zestawy nieoznaczone lub zestawów z tym atrybutem; Możesz użyć tych deklaracjach tam zaznaczania podzbiór typy, które nie są przeznaczone do wywoływania w niezaufanych.  
+ W zestawach o silnej nazwie [LinkDemand](../../../docs/framework/misc/link-demands.md) jest stosowany do wszystkich publicznie dostępnych metod, właściwości i zdarzenia w nim w celu ograniczenia ich użycia dla w pełni zaufanego kodu wywołującego. Aby wyłączyć tę funkcję, należy najpierw zastosować <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atrybutu. W efekcie jawnie oznaczanie klas, które mają zostać wykluczone z niezaufanych wywołujących jest niezbędne tylko w przypadku zestawy nieoznaczone lub zestawy za pomocą tego atrybutu; Możesz użyć tych deklaracji do oznaczania tam podzbiór typów, które nie są przeznaczone do niezaufanych wywołujących.  
   
- Poniższe przykłady przedstawiają sposób uniemożliwiać korzystanie w kodzie niezaufanym klas i członków.  
+ Poniższe przykłady pokazują, jak uniemożliwić klas i składowych przez niezaufany kod.  
   
- Dla klas publicznych nonsealed:  
+ Aby uzyskać publiczny nonsealed klasy:  
   
 ```vb  
 <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.InheritanceDemand, Name := "FullTrust"), _   
@@ -83,7 +83,7 @@ public class CanDeriveFromMe
 }  
 ```  
   
- Dla publicznego zapieczętowane klasy:  
+ Zapieczętowane klasy publiczny:  
   
 ```vb  
 <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name := "FullTrust")>  _  
@@ -98,7 +98,7 @@ public sealed class CannotDeriveFromMe
 }  
 ```  
   
- Dla publicznych klasy abstrakcyjne:  
+ Aby uzyskać publiczne klasy abstrakcyjnej:  
   
 ```vb  
 <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.InheritanceDemand, Name := "FullTrust"), _  
@@ -110,10 +110,10 @@ End Class
 ```csharp  
 [System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.InheritanceDemand, Name="FullTrust")]  
 [System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name="FullTrust")]  
-public abstract class CannotCreateInstanceOfMe_CanCastToMe{}  
+public abstract class CannotCreateInstanceOfMe_CanCastToMe {}  
 ```  
   
- Dla publicznych funkcji wirtualnych:  
+ Aby uzyskać publiczny funkcje wirtualne:  
   
 ```vb  
 Class Base1   
@@ -134,7 +134,7 @@ System.Security.Permissions.SecurityAction.LinkDemand, Name="FullTrust")]
 }  
 ```  
   
- Dla publicznych funkcje abstrakcyjne:  
+ Dla funkcji publicznych abstrakcyjnej:  
   
 ```vb  
 MustInherit Class Base2  
@@ -145,7 +145,7 @@ End Class 'Base2
 ```  
   
 ```csharp  
-abstract class Base2{  
+abstract class Base2 {  
 [System.Security.Permissions.PermissionSetAttribute(  
 System.Security.Permissions.SecurityAction.InheritanceDemand, Name = "FullTrust")]  
 [System.Security.Permissions.PermissionSetAttribute(  
@@ -154,7 +154,7 @@ public abstract void MustOverrideMe();
 }  
 ```  
   
- Dla funkcji publicznego zastąpienie, gdzie klasy podstawowej nie wymaga pełnego zaufania:  
+ Dla funkcji publicznych zastąpienie, gdzie klasa bazowa nie wymagają pełnego zaufania:  
   
 ```vb  
 Class Derived  
@@ -177,7 +177,7 @@ class Derived : Base1
 }  
 ```  
   
- Dla funkcji zastąpienie publicznych gdzie klasa podstawowa wymaga pełnego zaufania:  
+ Dla funkcji publicznych przesłonięcia, gdzie klasy bazowej wymaga pełnego zaufania:  
   
 ```vb  
 Class Derived  
@@ -200,7 +200,7 @@ class Derived : Base1
 }  
 ```  
   
- Interfejsów publicznych:  
+ W przypadku publicznych interfejsów:  
   
 ```vb  
 Public Interface ICanCastToMe  
@@ -234,11 +234,11 @@ class Implemented : ICanCastToMe
 ## <a name="virtual-internal-overrides-or-overloads-overridable-friend"></a>Wirtualne wewnętrzne zastąpienia lub przeciążenia zastępowanego przyjaciela klasy  
   
 > [!NOTE]
->  W tej sekcji ostrzega o problem z zabezpieczeniami przy deklarowaniu metody jednocześnie jako `virtual` i `internal` (`Overloads``Overridable``Friend` w języku Visual Basic). To ostrzeżenie nie dotyczy wersji systemu .NET Framework 1.0 i 1.1, nie ma zastosowania do nowszych wersji.  
+>  W tej sekcji ostrzega o problem z zabezpieczeniami, podczas deklarowania metody jako `virtual` i `internal` (`Overloads``Overridable``Friend` w języku Visual Basic). To ostrzeżenie nie dotyczy wersji .NET Framework 1.0 i 1.1, nie ma zastosowania do nowszej wersji.  
   
- W wersji systemu .NET Framework 1.0 i 1.1 należy pamiętać o nuance ułatwień dostępu systemu typu po potwierdzeniu, że kod jest niedostępne dla innych zestawów. Metoda, która jest zadeklarowana jako **wirtualnego** i **wewnętrzny** (**Overloads możliwym do zastąpienia Friend** w języku Visual Basic) można zastąpić wpis vtable klasy nadrzędnej i mogą być używane tylko z w ramach tego samego zestawu, ponieważ jest on wewnętrzny. Jednak ułatwień dostępu dla zastępowanie jest określany przez **wirtualnego** — słowo kluczowe, a to może zostać zastąpiona z innego zestawu, pod warunkiem, że kod ma dostęp do samej klasy. Jeśli możliwość zastąpienia stanowi problem, użyj zabezpieczenia deklaratywne, aby go rozwiązać, lub usuń **wirtualnego** — słowo kluczowe, jeśli nie jest ścisłym wymogiem.  
+ W .NET Framework w wersji 1.0 i 1.1 należy pamiętać o nuance ułatwień dostępu systemu typu podczas potwierdzania, że Twój kod jest niedostępny dla innych zestawów. Metoda, która jest zadeklarowana **wirtualnego** i **wewnętrzny** (**Overloads Overridable Friend** w języku Visual Basic) można zastąpić wpis vtable klasy nadrzędnej i mogą być używane tylko z w ramach tego samego zestawu, ponieważ jest on wewnętrzny. Jednak ułatwień dostępu dla zastępowanie jest określana przez **wirtualnego** — słowo kluczowe i może to być zastąpiona z innego zestawu, tak długo, jak ten kod ma dostęp do samej klasy. Jeśli możliwość zastąpienia stanowi problem, użyj zabezpieczenia deklaratywne, aby go naprawić lub usunąć **wirtualnego** — słowo kluczowe, jeśli nie jest bezwzględnie konieczne.  
   
- Należy pamiętać, że nawet jeśli kompilatora języka uniemożliwia zastąpienia z powodu błędu kompilacji, możliwe kod napisany za pomocą inne kompilatory do zastąpienia.  
+ Należy pamiętać, że nawet wtedy, gdy kompilator języka uniemożliwia te zastąpienia z powodu błędu kompilacji, jest możliwe, że kod napisany za pomocą innych kompilatorów, aby zastąpić.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wytyczne dotyczące bezpiecznego programowania](../../../docs/standard/security/secure-coding-guidelines.md)

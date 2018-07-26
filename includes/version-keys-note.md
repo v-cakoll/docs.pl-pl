@@ -1,3 +1,3 @@
 
 > [!IMPORTANT]
-> W poniższej tabeli wymieniono klucze wydanej wersji programu .NET Framework tylko. Liście nie kluczy Podgląd lub wersje wstępne.
+> W poniższej tabeli wymieniono klucze wydane wersje tylko platforma .NET Framework. Go nie ma kluczy w wersji zapoznawczej ani wersji wstępnych.

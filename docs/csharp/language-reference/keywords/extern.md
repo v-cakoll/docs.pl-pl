@@ -9,38 +9,38 @@ helpviewer_keywords:
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
 ms.openlocfilehash: aca1a9fa0b57e9b3b0a515a805039ade2fe0c2f1
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027918"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199420"
 ---
 # <a name="extern-c-reference"></a>extern (odwołanie w C#)
 
-`extern` Modyfikator służy do deklarowania metodę, która jest zaimplementowana zewnętrznie. Typowym zastosowaniem `extern` modyfikator jest z `DllImport` atrybutu podczas korzystania z międzyoperacyjnego usług do wywołania do kodu niezarządzanego. W tym przypadku metoda również musi być zadeklarowany jako `static`, jak pokazano w poniższym przykładzie:
+`extern` Modyfikator jest używany do deklarowania metody implementowanej zewnętrznie. Typowym zastosowaniem `extern` jest modyfikator `DllImport` atrybutu podczas korzystania z usług międzyoperacyjnych w celu wywołania kodu niezarządzanego. W tym przypadku metoda musi być także zadeklarowana jako `static`, jak pokazano w poniższym przykładzie:
 
 ```csharp
 [DllImport("avifil32.dll")]
 private static extern void AVIFileInit();
 ```
 
-`extern` — Słowo kluczowe można również zdefiniować aliasu zewnętrznego zestawu, dzięki czemu można odwoływać się różne wersje tego samego składnika od w jednym zestawie. Aby uzyskać więcej informacji, zobacz [alias zewnętrzny](extern-alias.md).
+`extern` — Słowo kluczowe może także definiować alias zestawu zewnętrznego, który sprawia, że można odwoływać się do różnych wersji jednego składnika z poziomu jednego zestawu. Aby uzyskać więcej informacji, zobacz [alias zewnętrzny](extern-alias.md).
 
-Jest błędem [abstrakcyjny](abstract.md) i `extern` Modyfikatory ze sobą, aby zmodyfikować tego samego członka. Przy użyciu `extern` modyfikator oznacza, że metoda jest wykonywane poza kodu C# natomiast przy użyciu `abstract` modyfikator oznacza, że implementacja metody nie jest dostępny w klasie.
+Jest to błąd, aby użyć [abstrakcyjne](abstract.md) i `extern` Modyfikatory ze sobą, aby zmodyfikować tego samego członka. Za pomocą `extern` modyfikator oznacza, że metoda jest zaimplementowana poza kodu C#, natomiast przy użyciu `abstract` modyfikator oznacza, że implementacja metody nie znajduje się w klasie.
 
 Użycie słowa kluczowego extern podlega większym ograniczeniom w języku C# niż w języku C++. Aby porównać to słowo kluczowe w języku C# z wersją w języku C++, zobacz temat „Używanie słowa kluczowego extern w celu określenia powiązania” w dokumentacji języka C++.
 
 ## <a name="example-1"></a>Przykład 1
 
-W tym przykładzie program odbiera ciąg od użytkownika i wyświetla go w oknie komunikatu. Program używa `MessageBox` zaimportowany z biblioteki User32.dll metody.
+W tym przykładzie program odbiera ciąg od użytkownika i wyświetla go w oknie komunikatu. Program używa `MessageBox` metoda zaimportowany z biblioteki User32.dll.
 
 [!code-csharp[csrefKeywordsModifiers#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#8)]
 
 ## <a name="example-2"></a>Przykład 2
 
-W tym przykładzie przedstawiono program C#, który odwołuje się do biblioteki C (natywnej biblioteki DLL).
+Ten przykład ilustruje program C#, który wywołuje bibliotekę języka C (natywna Biblioteka DLL).
 
-1. Utworzyć następującego pliku C i nadaj mu nazwę `cmdll.c`:
+1. Utwórz następujący plik języka C i nadaj mu `cmdll.c`:
 
 ```c
 // cmdll.c
@@ -51,9 +51,9 @@ int __declspec(dllexport) SampleMethod(int i)
 }
 ```
 
-2. Otwórz okno Wiersz polecenia narzędzi natywnego x64 (lub x32) programu Visual Studio z poziomu katalogu instalacyjnego programu Visual Studio i skompilować `cmdll.c` pliku, wpisując **cl -LD cmdll.c** w wierszu polecenia.
+2. Otwórz okno Wiersz polecenia narzędzi Native Tools x64 (lub x32) programu Visual Studio w katalogu instalacyjnym programu Visual Studio i skompiluj `cmdll.c` pliku, wpisując **cl -LD cmdll.c** w wierszu polecenia.
 
-3. W tym samym katalogu, należy utworzyć następującego pliku C# i nadaj jej nazwę `cm.cs`:
+3. W tym samym katalogu Utwórz następujący plik języka C# i nadaj jej nazwę `cm.cs`:
 
 ```csharp
 // cm.cs
@@ -71,13 +71,13 @@ public class MainClass
 }
 ```
 
-4. Otwórz okno Wiersz polecenia narzędzi natywnego x64 (lub x32) programu Visual Studio z poziomu katalogu instalacyjnego programu Visual Studio i skompilować `cm.cs` pliku, wpisz:
+4. Otwórz okno Wiersz polecenia narzędzi Native Tools x64 (lub x32) programu Visual Studio w katalogu instalacyjnym programu Visual Studio i skompiluj `cm.cs` pliku, wpisując:
 
-> **CSC cm.cs** (dla x64 wiersza polecenia) — lub — **csc-platform: x 86 cm.cs** (dla x32 wiersza polecenia)
+> **CSC cm.cs** (x64 wiersza polecenia) — lub — **csc-platform: x 86 cm.cs** (dla x32 wiersza polecenia)
 
 Spowoduje to utworzenie pliku wykonywalnego `cm.exe`.
 
-5. Uruchom `cm.exe`. `SampleMethod` Metoda przekazuje wartość 5 do pliku DLL, która zwraca wartość pomnożona przez 10.  Program tworzy następujące dane wyjściowe:
+5. Uruchom `cm.exe`. `SampleMethod` Metoda przekazuje wartość 5 do pliku DLL, który zwraca tę wartość pomnożoną przez 10.  Program generuje następujące wyniki:
 
 ```
 SampleMethod() returns 50.

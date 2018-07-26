@@ -1,11 +1,11 @@
-### <a name="sqlbulkcopy-uses-destination-column-encoding-for-strings"></a>SqlBulkCopy używa docelowej kolumny kodowanie dla ciągów
+### <a name="sqlbulkcopy-uses-destination-column-encoding-for-strings"></a>SqlBulkCopy używa, miejsce docelowe kodowania kolumny ciągów
 
 |   |   |
 |---|---|
-|Szczegóły|Podczas wstawiania danych do kolumny, <xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=name> używa kodowania kolumna docelowa, a nie domyślne kodowanie <code>VARCHAR</code> i <code>CHAR</code> typów. Ta zmiana eliminuje możliwość uszkodzenia danych na skutek użycia domyślnego kodowania w sytuacji, gdy w kolumnie docelowej nie jest używane kodowanie domyślne. W rzadkich przypadkach istniejącej aplikacji może zgłoszenia wyjątku SqlException, jeśli dane, które jest zbyt duży, aby mieścił się w kolumnie docelowej powoduje zmianę w kodowaniu.|
-|Sugestia|Oczekuje, że <xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=name> już spowoduje uszkodzenie danych z powodu kodowania różnice. Jeśli ciągi w pobliżu limit rozmiaru kolumny docelowej są kopiowane, może być konieczne albo wstępnie kodowania danych (ma zostać skopiowany do sprawdzenia, czy dane zmieści się w kolumnie docelowej) lub przechwycić <xref:System.Data.SqlClient.SqlException?displayProperty=name>s.|
+|Szczegóły|Podczas wstawiania danych do kolumny, <xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=name> używa kodowania kolumny docelowej zamiast domyślnego kodowania <code>VARCHAR</code> i <code>CHAR</code> typów. Ta zmiana eliminuje możliwość uszkodzenia danych na skutek użycia domyślnego kodowania w sytuacji, gdy w kolumnie docelowej nie jest używane kodowanie domyślne. W rzadkich przypadkach istniejąca aplikacja może zgłaszać wyjątek sqlexception — Jeśli ta zmiana kodowania skutkuje danymi, które jest zbyt duży, aby mieściły się w kolumnie docelowej.|
+|Sugestia|Oczekuje, że <xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=name> już spowoduje uszkodzenie danych ze względu na różnice kodowania. Jeśli ciągi osiągnięty limit rozmiaru kolumny docelowej są kopiowane, może być konieczne albo wstępnie zakodowania danych (w celu skopiowania do sprawdzenia, czy dane będą zgodne w kolumnie docelowej) lub przechwycić <xref:System.Data.SqlClient.SqlException?displayProperty=name>s.|
 |Zakres|Krawędź|
 |Wersja|4.5|
-|Typ|środowisko uruchomieniowe|
+|Typ|Środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlBulkCopy.%23ctor(System.Data.SqlClient.SqlConnection)?displayProperty=nameWithType></li></ul>|
 

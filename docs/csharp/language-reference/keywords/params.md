@@ -9,21 +9,21 @@ helpviewer_keywords:
 - params keyword [C#]
 ms.assetid: 1690815e-b52b-4967-8380-5780aff08012
 ms.openlocfilehash: d7e0094d0f60aa201ae7229983f3e4b9764d2cbc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265473"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960198"
 ---
 # <a name="params-c-reference"></a>params (odwołanie w C#)
-Za pomocą `params` — słowo kluczowe, można określić [parametru metody](../../../csharp/language-reference/keywords/method-parameters.md) który przyjmuje zmienną liczbę argumentów.  
+Za pomocą `params` — słowo kluczowe, można określić [parametru metody](../../../csharp/language-reference/keywords/method-parameters.md) która przyjmuje zmienną liczbę argumentów.  
   
- Możesz wysłać rozdzielana przecinkami lista argumentów typu określonego w deklaracji parametru lub tablicę argumentów określonego typu. Możesz również wysłać bez argumentów. W przypadku wysłania bez argumentów długość `params` listy wynosi zero.  
+ Możesz wysłać rozdzielana przecinkami lista argumentów o typie określonym w deklaracji parametrów lub tablice argumentów określonego typu. Możesz również wysłać bez argumentów. Jeśli wyślesz żadnych argumentów, długość `params` listy wynosi zero.  
   
  Żadne dodatkowe parametry są dozwolone po `params` — słowo kluczowe w deklaracji metody i tylko jeden `params` słowo kluczowe jest dozwolone w deklaracji metody.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano różne sposoby, w których argumenty mogą zostać przesłane do `params` parametru.  
+ W poniższym przykładzie pokazano różne sposoby, w których argumenty mogą być wysyłane do `params` parametru.  
   
  [!code-csharp[csrefKeywordsMethodParams#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/params_1.cs)]  
   
@@ -31,7 +31,7 @@ Za pomocą `params` — słowo kluczowe, można określić [parametru metody](..
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
+ [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
  [Parametry metody](../../../csharp/language-reference/keywords/method-parameters.md)

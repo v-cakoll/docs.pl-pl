@@ -1,11 +1,11 @@
-### <a name="sqlconnectionopen-fails-on-windows-7-with-non-ifs-winsock-bsp-or-lsp-present"></a>SqlConnection.Open w systemie Windows 7 kończy się niepowodzeniem z systemem innym niż — IFS podstawowego dostawcy usługi Winsock lub LSP obecne
+### <a name="sqlconnectionopen-fails-on-windows-7-with-non-ifs-winsock-bsp-or-lsp-present"></a>SqlConnection.Open Windows 7 kończy się niepowodzeniem bez IFS Winsock BSP lub LSP obecne
 
 |   |   |
 |---|---|
-|Szczegóły|<xref:System.Data.SqlClient.SqlConnection.Open> i <xref:System.Data.SqlClient.SqlConnection.OpenAsync(System.Threading.CancellationToken)> Niepowodzenie w programie .NET Framework 4.5, jeśli zostanie uruchomione na komputerze z systemem Windows 7 z systemem innym niż — IFS podstawowego dostawcy usługi Winsock lub LSP znajdują się na komputerze. Aby określić, czy zainstalowano podstawowego dostawcy nie - IFS lub LSP, użyj <code>netsh WinSock Show Catalog</code> polecenia i sprawdź, czy każdy <code>Winsock Catalog Provider Entry</code> elementu, który jest zwracany. Jeśli ma wartość flagi usługi <code>0x20000</code> ustawiony bit, dostawca używa uchwytów IFS i będzie pracował prawidłowo. Jeśli <code>0x20000</code> bit jest wyczyszczone (nie ustawiono), jest podstawowego dostawcy nie - IFS lub LSP.|
-|Sugestia|Ten błąd został rozwiązany w programie .NET Framework 4.5.2, więc można uniknąć przez uaktualnienie programu .NET Framework. Alternatywnie można uniknąć przez usunięcie wszelkich zainstalowanych z systemem innym niż — IFS dostawców LSP interfejsu Winsock.|
+|Szczegóły|<xref:System.Data.SqlClient.SqlConnection.Open> i <xref:System.Data.SqlClient.SqlConnection.OpenAsync(System.Threading.CancellationToken)> się niepowodzeniem w .NET Framework 4.5, jeśli działająca na maszynie Windows 7 przy użyciu innego niż IFS Winsock BSP lub dostawcą rozwiązań Licencjonowania są dostępne na komputerze. Aby określić, czy zainstalowano BSP bez IFS lub dostawcą rozwiązań Licencjonowania, użyj <code>netsh WinSock Show Catalog</code> polecenie i zbadaj co <code>Winsock Catalog Provider Entry</code> elementu, który jest zwracany. Jeśli ma wartość flagi usługi <code>0x20000</code> ustawiony bit, dostawca używa IFS obsługuje i będzie działać poprawnie. Jeśli <code>0x20000</code> bit jest jasne (nie ustawiono), jest inne niż IFS BSP lub dostawcą rozwiązań Licencjonowania.|
+|Sugestia|Ten błąd został naprawiony w programie .NET Framework 4.5.2, dzięki czemu można uniknąć przez uaktualnienie programu .NET Framework. Alternatywnie można uniknąć, usuwając wszystkie zainstalowane bez - IFS Winsock nazywani.|
 |Zakres|Pomocnicza|
 |Wersja|4.5|
-|Typ|środowisko uruchomieniowe|
+|Typ|Środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Data.SqlClient.SqlConnection.Open?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlConnection.OpenAsync(System.Threading.CancellationToken)?displayProperty=nameWithType></li></ul>|
 

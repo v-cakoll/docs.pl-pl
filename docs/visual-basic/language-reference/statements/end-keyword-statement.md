@@ -1,4 +1,4 @@
----
+﻿---
 title: End &lt;słowo kluczowe&gt; — instrukcja (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
@@ -14,7 +14,7 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33605267"
 ---
 # <a name="end-ltkeywordgt-statement-visual-basic"></a>End &lt;słowo kluczowe&gt; — instrukcja (Visual Basic)
-Gdy następuje po nim dodatkowe słowo kluczowe, kończy definicję bloku instrukcji wynikającą z tego słowa kluczowego.  
+Gdy następuje po nim dodatkowe słowo kluczowe, kończy definicję bloku instrukcji, wynikającą z tego słowa kluczowego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,94 +44,54 @@ End With
 ```  
   
 ## <a name="parts"></a>Części  
- `End`  
- Wymagana. Kończy definicję elementu programowania.  
-  
- `AddHandler`  
- Wymagane do zakończenia `AddHandler` akcesor rozpoczyna się od odpowiadającego mu `AddHandler` instrukcji w niestandardowej [Event — instrukcja](../../../visual-basic/language-reference/statements/event-statement.md).  
-  
- `Class`  
- Wymagane do zakończenia definicję klasy rozpoczyna się od odpowiadającego mu [Class — instrukcja](../../../visual-basic/language-reference/statements/class-statement.md).  
-  
- `Enum`  
- Wymagane do zakończenia definicja wyliczenia rozpoczyna się od odpowiadającego mu [Enum — instrukcja](../../../visual-basic/language-reference/statements/enum-statement.md).  
-  
- `Event`  
- Wymagane do zakończenia `Custom` definicji zdarzenia uruchomione przez odpowiadającą jej instrukcją [Event — instrukcja](../../../visual-basic/language-reference/statements/event-statement.md).  
-  
- `Function`  
- Wymagane do zakończenia `Function` Definicja procedury rozpoczyna się od odpowiadającego mu [instrukcji Function](../../../visual-basic/language-reference/statements/function-statement.md). Jeśli wykonanie napotkał `End``Function` instrukcji sterowania zwraca do wywołującego kodu.  
-  
- `Get`  
- Wymagane do zakończenia `Property` Definicja procedury rozpoczyna się od odpowiadającego mu [instrukcja Get](../../../visual-basic/language-reference/statements/get-statement.md). Jeśli wykonanie napotkał `End``Get` instrukcji sterowania zwraca do instrukcji żąda wartość właściwości.  
-  
- `If`  
- Wymagane do zakończenia `If`... `Then`... `Else` zablokować definicji rozpoczyna się od odpowiadającego mu `If` instrukcji. Zobacz [Jeśli... Następnie... Else — instrukcja](../../../visual-basic/language-reference/statements/if-then-else-statement.md).  
-  
- `Interface`  
- Wymagane do zakończenia definicji interfejsu rozpoczętej przez odpowiadającą jej instrukcją [Interface — instrukcja](../../../visual-basic/language-reference/statements/interface-statement.md).  
-  
- `Module`  
- Wymagane do zakończenia definicji modułu rozpoczyna się od odpowiadającego mu [Module — instrukcja](../../../visual-basic/language-reference/statements/module-statement.md).  
-  
- `Namespace`  
- Wymagane do zakończenia definicję przestrzeni nazw, rozpoczyna się od odpowiadającego mu [instrukcji Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md).  
-  
- `Operator`  
- Wymagane do zakończenia definicja operatora rozpoczętej przez odpowiadającą jej instrukcją [operator — instrukcja](../../../visual-basic/language-reference/statements/operator-statement.md).  
-  
- `Property`  
- Wymagane do zakończenia definicji właściwości rozpoczyna się od odpowiadającego mu [Property — instrukcja](../../../visual-basic/language-reference/statements/property-statement.md).  
-  
- `RaiseEvent`  
- Wymagane do zakończenia `RaiseEvent` akcesor rozpoczyna się od odpowiadającego mu `RaiseEvent` instrukcji w niestandardowej [Event — instrukcja](../../../visual-basic/language-reference/statements/event-statement.md).  
-  
- `RemoveHandler`  
- Wymagane do zakończenia `RemoveHandler` akcesor rozpoczyna się od odpowiadającego mu `RemoveHandler` instrukcji w niestandardowej [Event — instrukcja](../../../visual-basic/language-reference/statements/event-statement.md).  
-  
- `Select`  
- Wymagane do zakończenia `Select`... `Case` zablokować definicji rozpoczyna się od odpowiadającego mu `Select` instrukcji. Zobacz [wybierz... Case — instrukcja](../../../visual-basic/language-reference/statements/select-case-statement.md).  
-  
- `Set`  
- Wymagane do zakończenia `Property` Definicja procedury rozpoczyna się od odpowiadającego mu [Instrukcja Set](../../../visual-basic/language-reference/statements/set-statement.md). Jeśli wykonanie napotkał `End``Set` instrukcji sterowania zwraca do instrukcji ustawiania wartości właściwości.  
-  
- `Structure`  
- Wymagane do zakończenia definicji struktury rozpoczyna się od odpowiadającego mu [Structure — instrukcja](../../../visual-basic/language-reference/statements/structure-statement.md).  
-  
- `Sub`  
- Wymagane do zakończenia `Sub` Definicja procedury rozpoczyna się od odpowiadającego mu [Sub — instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md). Jeśli wykonanie napotkał `End``Sub` instrukcji sterowania zwraca do wywołującego kodu.  
-  
- `SyncLock`  
- Wymagane do zakończenia `SyncLock` zablokować definicji rozpoczyna się od odpowiadającego mu `SyncLock` instrukcji. Zobacz [SyncLock — instrukcja](../../../visual-basic/language-reference/statements/synclock-statement.md).  
-  
- `Try`  
- Wymagane do zakończenia `Try`... `Catch`... `Finally` zablokować definicji rozpoczyna się od odpowiadającego mu `Try` instrukcji. Zobacz [spróbuj... CATCH... Instrukcji finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
-  
- `While`  
- Wymagane do zakończenia `While` pętli definicji rozpoczyna się od odpowiadającego mu `While` instrukcji. Zobacz [podczas... End While — instrukcja](../../../visual-basic/language-reference/statements/while-end-while-statement.md).  
-  
- `With`  
- Wymagane do zakończenia `With` zablokować definicji rozpoczyna się od odpowiadającego mu `With` instrukcji. Zobacz [z... End With — instrukcja](../../../visual-basic/language-reference/statements/with-end-with-statement.md).  
-  
+|Część|Opis|
+|---|---|
+|`End`|Wymagane. Kończy definicję elementu programowania.|
+|`AddHandler`|Wymagane do zakończenia akcesora `AddHandler`, rozpoczętego przez odpowiadającą instrukcję `AddHandler` w niestandardowej [instrukcji Event](../../../visual-basic/language-reference/statements/event-statement.md).|
+|`Class`|Wymagane do zakończenia definicji klasy, rozpoczętej przez odpowiadającą [instrukcję Class](../../../visual-basic/language-reference/statements/class-statement.md).|
+|`Enum`|Wymagane do zakończenia definicji wyliczenia, rozpoczętej przez odpowiadającą [instrukcję Enum](../../../visual-basic/language-reference/statements/enum-statement.md).|
+|`Event`|Wymagane do zakończenia definicji zdarzenia `Custom`, rozpoczętej przez odpowiadającą [instrukcję Event](../../../visual-basic/language-reference/statements/event-statement.md).|
+|`Function`|Wymagane do zakończenia definicji procedury `Function`, rozpoczętej przez odpowiadającą [instrukcję Function](../../../visual-basic/language-reference/statements/function-statement.md). Jeśli wykonanie napotka instrukcję `End Function`, sterowanie wraca do wywołującego kodu.|
+|`Get`|Wymagane do zakończenia definicji procedury `Property`, rozpoczętej przez odpowiadającą [instrukcję Get](../../../visual-basic/language-reference/statements/get-statement.md). Jeśli wykonanie napotka instrukcję `End Get`, sterowania wraca do instrukcji żądającej wartość właściwości.|
+|`If`|Wymagane do zakończenia definicji bloku `If`... `Then`... `Else`, rozpoczętej przez odpowiadającą instrukcję `If`. Zobacz [If... Then... Else — instrukcja](../../../visual-basic/language-reference/statements/if-then-else-statement.md).|
+|`Interface`|Wymagane do zakończenia definicji interfejsu, rozpoczętej przez odpowiadającą [instrukcję Interface](../../../visual-basic/language-reference/statements/interface-statement.md).|
+|`Module`|Wymagane do zakończenia definicji modułu, rozpoczętej przez odpowiadającą [instrukcję Module](../../../visual-basic/language-reference/statements/module-statement.md).|
+|`Namespace`|Wymagane do zakończenia definicji przestrzeni nazw, rozpoczętej przez odpowiadającą [instrukcję Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md).|
+|`Operator`|Wymagane do zakończenia definicji operatora, rozpoczętej przez odpowiadającą [instrukcję operator](../../../visual-basic/language-reference/statements/operator-statement.md).|
+|`Property`|Wymagane do zakończenia definicji właściwości, rozpoczętej przez odpowiadającą [instrukcję Property](../../../visual-basic/language-reference/statements/property-statement.md).|
+|`RaiseEvent`|Wymagane do zakończenia akcesora `RaiseEvent`, rozpoczętego przez odpowiadającą instrukcję `RaiseEvent` w niestandardowej [instrukcji Event](../../../visual-basic/language-reference/statements/event-statement.md).|
+|`RemoveHandler`|Wymagane do zakończenia akcesora `RemoveHandler`, rozpoczętego przez odpowiadającą instrukcję `RemoveHandler` w niestandardowej [instrukcji Event](../../../visual-basic/language-reference/statements/event-statement.md).|
+|`Select`|Wymagane do zakończenia definicji bloku `Select`... `Case`, rozpoczętej przez odpowiadającą instrukcję `Select`. Zobacz [Select... Case — instrukcja](../../../visual-basic/language-reference/statements/select-case-statement.md).|
+|`Set`|Wymagane do zakończenia definicji procedury `Property`, rozpoczętej przez odpowiadającą [instrukcję Set](../../../visual-basic/language-reference/statements/set-statement.md). Jeśli wykonanie napotka instrukcję `End Set` sterowanie wraca do instrukcji ustawiającej wartość właściwości.|
+|`Structure`|Wymagane do zakończenia definicji struktury, rozpoczętej przez odpowiadającą [instrukcję Structure](../../../visual-basic/language-reference/statements/structure-statement.md).|
+|`Sub`|Wymagane do zakończenia definicji procedury `Sub`, rozpoczętej przez odpowiadającą [instrukcję Sub](../../../visual-basic/language-reference/statements/sub-statement.md). Jeśli wykonanie napotka instrukcję `End Sub` sterowanie wraca do wywołującego kodu.|
+|`SyncLock`|Wymagane do zakończenia definicji bloku `SyncLock`, rozpoczętej przez odpowiadającą [instrukcję SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md)|
+|`Try`|Wymagane do zakończenia definicji bloku `Try`... `Catch`... `Finally`, rozpoczętej przez odpowiadającą instrukcję `Try`. Zobacz [Try... Catch... Finally — instrukcja](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).|
+|`While`|Wymagane do zakończenia definicji pętli `While`, rozpoczętej przez odpowiadającą instrukcję `While`. Zobacz [While... End While — instrukcja](../../../visual-basic/language-reference/statements/while-end-while-statement.md).|
+|`With`|Wymagane do zakończenia definicji bloku `With`, rozpoczętej przez odpowiadającą instrukcję `With`. Zobacz [With... End With — instrukcja](../../../visual-basic/language-reference/statements/with-end-with-statement.md).|
+|||
+
+## <a name="directives"></a>Dyrektywy
+ Gdy poprzedzone znakiem `#`, słowo kluczowe `End` kończy blok przetwarzania wstępnego wprowadzony przez odpowiadającą dyrektywę.  
+ ```
+ #End ExternalSource
+ #End If
+ #End Region
+ ```
+  |Część|Opis|
+  |---|---|
+  |`#End`|Wymagane. Kończy definicję bloku przetwarzania wstępnego.|
+  |`ExternalSource`|Wymagane do zakończenia bloku źródła zewnętrznego, rozpoczętego przez odpowiadającą [dyrektywę #ExternalSource](../../../visual-basic/language-reference/directives/externalsource-directive.md).|
+  |`If`|Wymagane do zakończenia bloku kompilacji warunkowej, rozpoczętego przez odpowiadającą dyrektywę `#If`. Zobacz [#If... Then... #Else — dyrektywy](../../../visual-basic/language-reference/directives/if-then-else-directives.md).|
+  |`Region`|Wymagane do zakończenia bloku źródłowego region, rozpoczętego przez odpowiadającą [dyrektywę #Region](../../../visual-basic/language-reference/directives/region-directive.md).|
+  |||
+
 ## <a name="remarks"></a>Uwagi  
  [Instrukcja End](../../../visual-basic/language-reference/statements/end-statement.md) bez dodatkowego słowa kluczowego kończy wykonywanie natychmiast.  
   
- Gdy poprzedzone znakiem numeru (`#`), `End` — słowo kluczowe kończy wprowadzone przez odpowiednie dyrektywy przetwarzania wstępnego bloku.  
-  
- `#End`  
- Wymagana. Kończy definicję bloku przetwarzania wstępnego.  
-  
- `#ExternalSource`  
- Wymagane do zakończenia bloku źródła zewnętrznego rozpoczyna się od odpowiadającego mu [#ExternalSource — dyrektywa](../../../visual-basic/language-reference/directives/externalsource-directive.md).  
-  
- `#If`  
- Wymagane do zakończenia bloku kompilacja warunkowa rozpoczyna się od odpowiadającego mu `#If` dyrektywy. Zobacz [#If... Then... #Else — dyrektywy](../../../visual-basic/language-reference/directives/if-then-else-directives.md).  
-  
- `#Region`  
- Wymagane do zakończenia bloku region źródłowego rozpoczyna się od odpowiadającego mu [#Region — dyrektywa](../../../visual-basic/language-reference/directives/region-directive.md).  
   
 ## <a name="smart-device-developer-notes"></a>Uwagi dla deweloperów urządzeń inteligentnych  
  Instrukcja `End` bez dodatkowego słowa kluczowego nie jest obsługiwana.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Instrukcja End](../../../visual-basic/language-reference/statements/end-statement.md)
+ [End — instrukcja](../../../visual-basic/language-reference/statements/end-statement.md)

@@ -1,33 +1,33 @@
 ---
-title: polecenie restore DotNet - .NET Core interfejsu wiersza polecenia
-description: Dowiedz się, jak przywrócić narzędzia specyficzne dla projektu przy użyciu polecenia przywracania dotnet i zależności.
+title: polecenie restore DotNet — interfejs wiersza polecenia platformy .NET Core
+description: Dowiedz się, jak przywrócić zależności i narzędzi specyficznych dla projektu za pomocą polecenia dotnet restore.
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
 ms.openlocfilehash: 0eaab1aa1bc52bd5b3c51a6ed2dd7a59c35a4aa5
-ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37140258"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960598"
 ---
-# <a name="dotnet-restore"></a><span data-ttu-id="21ae4-103">Przywracanie DotNet</span><span class="sxs-lookup"><span data-stu-id="21ae4-103">dotnet restore</span></span>
+# <a name="dotnet-restore"></a><span data-ttu-id="8d11d-103">DotNet restore</span><span class="sxs-lookup"><span data-stu-id="8d11d-103">dotnet restore</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a><span data-ttu-id="21ae4-104">Nazwa</span><span class="sxs-lookup"><span data-stu-id="21ae4-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="8d11d-104">Nazwa</span><span class="sxs-lookup"><span data-stu-id="8d11d-104">Name</span></span>
 
-<span data-ttu-id="21ae4-105">`dotnet restore` -Przywraca zależności i narzędzia do projektu.</span><span class="sxs-lookup"><span data-stu-id="21ae4-105">`dotnet restore` - Restores the dependencies and tools of a project.</span></span>
+<span data-ttu-id="8d11d-105">`dotnet restore` -Przywraca zależności i narzędzia do projektu.</span><span class="sxs-lookup"><span data-stu-id="8d11d-105">`dotnet restore` - Restores the dependencies and tools of a project.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="21ae4-106">Streszczenie</span><span class="sxs-lookup"><span data-stu-id="21ae4-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="8d11d-106">Streszczenie</span><span class="sxs-lookup"><span data-stu-id="8d11d-106">Synopsis</span></span>
 
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="21ae4-107">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="21ae4-107">.NET Core 2.x</span></span>](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="8d11d-107">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="8d11d-107">.NET Core 2.x</span></span>](#tab/netcore2x)
 ```
 dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--force] [--ignore-failed-sources] [--no-cache]
     [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity]
 dotnet restore [-h|--help]
 ```
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="21ae4-108">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="21ae4-108">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="8d11d-108">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="8d11d-108">.NET Core 1.x</span></span>](#tab/netcore1x)
 ```
 dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--ignore-failed-sources] [--no-cache]
     [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity]
@@ -35,23 +35,23 @@ dotnet restore [-h|--help]
 ```
 ---
 
-## <a name="description"></a><span data-ttu-id="21ae4-109">Opis</span><span class="sxs-lookup"><span data-stu-id="21ae4-109">Description</span></span>
+## <a name="description"></a><span data-ttu-id="8d11d-109">Opis</span><span class="sxs-lookup"><span data-stu-id="8d11d-109">Description</span></span>
 
-<span data-ttu-id="21ae4-110">`dotnet restore` Polecenie używa NuGet, aby przywrócić zależności, a także narzędzia specyficzne dla projektu, które są określone w pliku projektu.</span><span class="sxs-lookup"><span data-stu-id="21ae4-110">The `dotnet restore` command uses NuGet to restore dependencies as well as project-specific tools that are specified in the project file.</span></span> <span data-ttu-id="21ae4-111">Domyślnie przywracania zależności oraz narzędzia są wykonywane równolegle.</span><span class="sxs-lookup"><span data-stu-id="21ae4-111">By default, the restoration of dependencies and tools are executed in parallel.</span></span>
+<span data-ttu-id="8d11d-110">`dotnet restore` Polecenie używa NuGet, aby przywrócić zależności, a także narzędzi specyficznych dla projektu, które są określone w pliku projektu.</span><span class="sxs-lookup"><span data-stu-id="8d11d-110">The `dotnet restore` command uses NuGet to restore dependencies as well as project-specific tools that are specified in the project file.</span></span> <span data-ttu-id="8d11d-111">Domyślnie przywrócenie zależności i narzędzia są wykonywane równolegle.</span><span class="sxs-lookup"><span data-stu-id="8d11d-111">By default, the restoration of dependencies and tools are executed in parallel.</span></span>
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-<span data-ttu-id="21ae4-112">Aby przywrócić zależności, NuGet musi źródeł danych, w którym znajdują się pakiety.</span><span class="sxs-lookup"><span data-stu-id="21ae4-112">To restore the dependencies, NuGet needs the feeds where the packages are located.</span></span> <span data-ttu-id="21ae4-113">Źródła danych zwykle są udostępniane za pośrednictwem *NuGet.config* pliku konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="21ae4-113">Feeds are usually provided via the *NuGet.config* configuration file.</span></span> <span data-ttu-id="21ae4-114">Domyślny plik konfiguracji jest udostępniane po zainstalowaniu narzędzi interfejsu wiersza polecenia.</span><span class="sxs-lookup"><span data-stu-id="21ae4-114">A default configuration file is provided when the CLI tools are installed.</span></span> <span data-ttu-id="21ae4-115">Określ dodatkowe źródła danych, tworząc własne *NuGet.config* pliku w katalogu projektu.</span><span class="sxs-lookup"><span data-stu-id="21ae4-115">You specify additional feeds by creating your own *NuGet.config* file in the project directory.</span></span> <span data-ttu-id="21ae4-116">Należy także określić dodatkowych źródeł danych dla wywołania w wierszu polecenia.</span><span class="sxs-lookup"><span data-stu-id="21ae4-116">You also specify additional feeds per invocation at a command prompt.</span></span>
+<span data-ttu-id="8d11d-112">Aby przywrócić zależności, NuGet wymaga źródła danych, gdzie znajdują się pakiety.</span><span class="sxs-lookup"><span data-stu-id="8d11d-112">To restore the dependencies, NuGet needs the feeds where the packages are located.</span></span> <span data-ttu-id="8d11d-113">Źródła danych zwykle są udostępniane za pośrednictwem *NuGet.config* pliku konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="8d11d-113">Feeds are usually provided via the *NuGet.config* configuration file.</span></span> <span data-ttu-id="8d11d-114">Domyślny plik konfiguracji znajduje się po zainstalowaniu narzędzi interfejsu wiersza polecenia.</span><span class="sxs-lookup"><span data-stu-id="8d11d-114">A default configuration file is provided when the CLI tools are installed.</span></span> <span data-ttu-id="8d11d-115">Określ dodatkowe źródła danych, tworząc własne *NuGet.config* pliku w katalogu projektu.</span><span class="sxs-lookup"><span data-stu-id="8d11d-115">You specify additional feeds by creating your own *NuGet.config* file in the project directory.</span></span> <span data-ttu-id="8d11d-116">Należy również określić dodatkowych źródeł danych dla wywołania w wierszu polecenia.</span><span class="sxs-lookup"><span data-stu-id="8d11d-116">You also specify additional feeds per invocation at a command prompt.</span></span>
 
-<span data-ttu-id="21ae4-117">Dla zależności, należy określić rozmieszczenia przywróconej pakietów podczas przy użyciu operacji przywracania `--packages` argumentu.</span><span class="sxs-lookup"><span data-stu-id="21ae4-117">For dependencies, you specify where the restored packages are placed during the restore operation using the `--packages` argument.</span></span> <span data-ttu-id="21ae4-118">Jeśli nie jest określony, pamięć podręczną pakietów NuGet domyślnej jest używana, znajdującej się w `.nuget/packages` katalogu w katalogu macierzystego użytkownika we wszystkich systemach operacyjnych.</span><span class="sxs-lookup"><span data-stu-id="21ae4-118">If not specified, the default NuGet package cache is used, which is found in the `.nuget/packages` directory in the user's home directory on all operating systems.</span></span> <span data-ttu-id="21ae4-119">Na przykład */home/Użytkownik1* w systemie Linux lub *C:\Users\user1* w systemie Windows.</span><span class="sxs-lookup"><span data-stu-id="21ae4-119">For example, */home/user1* on Linux or *C:\Users\user1* on Windows.</span></span>
+<span data-ttu-id="8d11d-117">Dla zależności, należy określić, gdzie przywróconej pakiety są wprowadzane w przy użyciu operacji przywracania `--packages` argumentu.</span><span class="sxs-lookup"><span data-stu-id="8d11d-117">For dependencies, you specify where the restored packages are placed during the restore operation using the `--packages` argument.</span></span> <span data-ttu-id="8d11d-118">Jeśli nie zostanie określony, domyślny pakiet NuGet z pamięci podręcznej jest używany, który znajduje się w `.nuget/packages` katalogu w katalogu macierzystym użytkownika we wszystkich systemach operacyjnych.</span><span class="sxs-lookup"><span data-stu-id="8d11d-118">If not specified, the default NuGet package cache is used, which is found in the `.nuget/packages` directory in the user's home directory on all operating systems.</span></span> <span data-ttu-id="8d11d-119">Na przykład */home/Użytkownik1* w systemie Linux lub *C:\Users\user1* na Windows.</span><span class="sxs-lookup"><span data-stu-id="8d11d-119">For example, */home/user1* on Linux or *C:\Users\user1* on Windows.</span></span>
 
-<span data-ttu-id="21ae4-120">Dla narzędzia specyficzne dla projektu `dotnet restore` najpierw przywraca pakietu, w którym narzędzie jest spakowane, a następnie przywrócić zależności narzędzia określone w pliku projektu.</span><span class="sxs-lookup"><span data-stu-id="21ae4-120">For project-specific tooling, `dotnet restore` first restores the package in which the tool is packed, and then proceeds to restore the tool's dependencies as specified in its project file.</span></span>
+<span data-ttu-id="8d11d-120">W przypadku narzędzi specyficznych dla projektu `dotnet restore` najpierw przywraca pakietu, w którym narzędzie jest pakowany, a następnie przywrócić narzędzia zależności, jak określono w pliku projektu.</span><span class="sxs-lookup"><span data-stu-id="8d11d-120">For project-specific tooling, `dotnet restore` first restores the package in which the tool is packed, and then proceeds to restore the tool's dependencies as specified in its project file.</span></span>
 
-<span data-ttu-id="21ae4-121">Zachowanie `dotnet restore` polecenia wpływ na niektóre ustawienia w *Nuget.Config* pliku, jeśli jest obecny.</span><span class="sxs-lookup"><span data-stu-id="21ae4-121">The behavior of the `dotnet restore` command is affected by some of the settings in the *Nuget.Config* file, if present.</span></span> <span data-ttu-id="21ae4-122">Na przykład ustawienie `globalPackagesFolder` w *NuGet.Config* umieszcza przywróconej pakietów NuGet w określonym folderze.</span><span class="sxs-lookup"><span data-stu-id="21ae4-122">For example, setting the `globalPackagesFolder` in *NuGet.Config* places the restored NuGet packages in the specified folder.</span></span> <span data-ttu-id="21ae4-123">Jest to alternatywa do określania `--packages` opcja `dotnet restore` polecenia.</span><span class="sxs-lookup"><span data-stu-id="21ae4-123">This is an alternative to specifying the `--packages` option on the `dotnet restore` command.</span></span> <span data-ttu-id="21ae4-124">Aby uzyskać więcej informacji, zobacz [odwołanie do pliku NuGet.Config](/nuget/schema/nuget-config-file).</span><span class="sxs-lookup"><span data-stu-id="21ae4-124">For more information, see the [NuGet.Config reference](/nuget/schema/nuget-config-file).</span></span>
+<span data-ttu-id="8d11d-121">Zachowanie `dotnet restore` polecenia jest zależna od niektórych ustawień w *Nuget.Config* pliku, jeśli jest obecny.</span><span class="sxs-lookup"><span data-stu-id="8d11d-121">The behavior of the `dotnet restore` command is affected by some of the settings in the *Nuget.Config* file, if present.</span></span> <span data-ttu-id="8d11d-122">Na przykład ustawienie `globalPackagesFolder` w *NuGet.Config* umieszcza przywróconej pakietów NuGet w określonym folderze.</span><span class="sxs-lookup"><span data-stu-id="8d11d-122">For example, setting the `globalPackagesFolder` in *NuGet.Config* places the restored NuGet packages in the specified folder.</span></span> <span data-ttu-id="8d11d-123">Jest to alternatywa do określania `--packages` opcja `dotnet restore` polecenia.</span><span class="sxs-lookup"><span data-stu-id="8d11d-123">This is an alternative to specifying the `--packages` option on the `dotnet restore` command.</span></span> <span data-ttu-id="8d11d-124">Aby uzyskać więcej informacji, zobacz [odwołanie do pliku NuGet.Config](/nuget/schema/nuget-config-file).</span><span class="sxs-lookup"><span data-stu-id="8d11d-124">For more information, see the [NuGet.Config reference](/nuget/schema/nuget-config-file).</span></span>
 
-## <a name="implicit-dotnet-restore"></a><span data-ttu-id="21ae4-125">Niejawne `dotnet restore`</span><span class="sxs-lookup"><span data-stu-id="21ae4-125">Implicit `dotnet restore`</span></span>
+## <a name="implicit-dotnet-restore"></a><span data-ttu-id="8d11d-125">Niejawne `dotnet restore`</span><span class="sxs-lookup"><span data-stu-id="8d11d-125">Implicit `dotnet restore`</span></span>
 
-<span data-ttu-id="21ae4-126">Począwszy od programu .NET Core 2.0, `dotnet restore` uruchomieniu niejawnie w razie potrzeby w przypadku wysyłania następujące polecenia:</span><span class="sxs-lookup"><span data-stu-id="21ae4-126">Starting with .NET Core 2.0, `dotnet restore` is run implicitly if necessary when you issue the following commands:</span></span>
+<span data-ttu-id="8d11d-126">Począwszy od programu .NET Core 2.0, `dotnet restore` zostanie ona uruchomiona niejawnie w razie potrzeby uruchom następujące polecenia:</span><span class="sxs-lookup"><span data-stu-id="8d11d-126">Starting with .NET Core 2.0, `dotnet restore` is run implicitly if necessary when you issue the following commands:</span></span>
 
 - [`dotnet new`](dotnet-new.md)
 - [`dotnet build`](dotnet-build.md)
@@ -61,124 +61,124 @@ dotnet restore [-h|--help]
 - [`dotnet publish`](dotnet-publish.md)
 - [`dotnet pack`](dotnet-pack.md)
 
-<span data-ttu-id="21ae4-127">W większości przypadków, nie musisz jawnie użyć `dotnet restore` polecenia.</span><span class="sxs-lookup"><span data-stu-id="21ae4-127">In most cases, you no longer need to explicitly use the `dotnet restore` command.</span></span>
+<span data-ttu-id="8d11d-127">W większości przypadków nie trzeba już jawnie użyć `dotnet restore` polecenia.</span><span class="sxs-lookup"><span data-stu-id="8d11d-127">In most cases, you no longer need to explicitly use the `dotnet restore` command.</span></span>
 
-<span data-ttu-id="21ae4-128">Czasami może być niewygodne uruchomić `dotnet restore` niejawnie.</span><span class="sxs-lookup"><span data-stu-id="21ae4-128">Sometimes, it might be inconvenient to run `dotnet restore` implicitly.</span></span> <span data-ttu-id="21ae4-129">Na przykład zautomatyzowanych systemów, takich jak systemy, należy wywołać `dotnet restore` jawnie w celu kontrolowania, podczas przywracania występuje decydować użycie sieci.</span><span class="sxs-lookup"><span data-stu-id="21ae4-129">For example, some automated systems, such as build systems, need to call `dotnet restore` explicitly to control when the restore occurs so that they can control network usage.</span></span> <span data-ttu-id="21ae4-130">Aby zapobiec `dotnet restore` z niejawnie działa, możesz użyć `--no-restore` flagi z dowolnego z tych poleceń, aby wyłączyć niejawne przywracania.</span><span class="sxs-lookup"><span data-stu-id="21ae4-130">To prevent `dotnet restore` from running implicitly, you can use the `--no-restore` flag with any of these commands to disable implicit restore.</span></span>
+<span data-ttu-id="8d11d-128">Czasami może być niewygodne uruchomić `dotnet restore` niejawnie.</span><span class="sxs-lookup"><span data-stu-id="8d11d-128">Sometimes, it might be inconvenient to run `dotnet restore` implicitly.</span></span> <span data-ttu-id="8d11d-129">Na przykład, niektóre zautomatyzowane systemy, takich jak systemy kompilacji, należy wywołać `dotnet restore` jawnie, aby kontrolować, podczas przywracania odbywa się tak, aby kontrolować użycie sieci.</span><span class="sxs-lookup"><span data-stu-id="8d11d-129">For example, some automated systems, such as build systems, need to call `dotnet restore` explicitly to control when the restore occurs so that they can control network usage.</span></span> <span data-ttu-id="8d11d-130">Aby zapobiec `dotnet restore` z niejawnie działa, możesz użyć `--no-restore` flagi z dowolnego z tych poleceń, aby wyłączyć niejawne przywracania.</span><span class="sxs-lookup"><span data-stu-id="8d11d-130">To prevent `dotnet restore` from running implicitly, you can use the `--no-restore` flag with any of these commands to disable implicit restore.</span></span>
 
-## <a name="arguments"></a><span data-ttu-id="21ae4-131">Argumenty</span><span class="sxs-lookup"><span data-stu-id="21ae4-131">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="8d11d-131">Argumenty</span><span class="sxs-lookup"><span data-stu-id="8d11d-131">Arguments</span></span>
 
 `ROOT`
 
-<span data-ttu-id="21ae4-132">Opcjonalna ścieżka do pliku projektu do przywrócenia.</span><span class="sxs-lookup"><span data-stu-id="21ae4-132">Optional path to the project file to restore.</span></span>
+<span data-ttu-id="8d11d-132">Opcjonalna ścieżka do pliku projektu do przywrócenia.</span><span class="sxs-lookup"><span data-stu-id="8d11d-132">Optional path to the project file to restore.</span></span>
 
-## <a name="options"></a><span data-ttu-id="21ae4-133">Opcje</span><span class="sxs-lookup"><span data-stu-id="21ae4-133">Options</span></span>
+## <a name="options"></a><span data-ttu-id="8d11d-133">Opcje</span><span class="sxs-lookup"><span data-stu-id="8d11d-133">Options</span></span>
 
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="21ae4-134">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="21ae4-134">.NET Core 2.x</span></span>](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="8d11d-134">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="8d11d-134">.NET Core 2.x</span></span>](#tab/netcore2x)
 
 `--configfile <FILE>`
 
-<span data-ttu-id="21ae4-135">Plik konfiguracji NuGet (*NuGet.config*) do użycia dla operacji przywracania.</span><span class="sxs-lookup"><span data-stu-id="21ae4-135">The NuGet configuration file (*NuGet.config*) to use for the restore operation.</span></span>
+<span data-ttu-id="8d11d-135">Plik konfiguracyjny NuGet (*NuGet.config*) na potrzeby operacji przywracania.</span><span class="sxs-lookup"><span data-stu-id="8d11d-135">The NuGet configuration file (*NuGet.config*) to use for the restore operation.</span></span>
 
 `--disable-parallel`
 
-<span data-ttu-id="21ae4-136">Wyłącza Przywracanie wielu projektów równolegle.</span><span class="sxs-lookup"><span data-stu-id="21ae4-136">Disables restoring multiple projects in parallel.</span></span>
+<span data-ttu-id="8d11d-136">Wyłącza Przywracanie wielu projektów wykonywane równolegle.</span><span class="sxs-lookup"><span data-stu-id="8d11d-136">Disables restoring multiple projects in parallel.</span></span>
 
 `--force`
 
-<span data-ttu-id="21ae4-137">Wymusza wszystkie zależności, które można rozwiązać, nawet jeśli ostatniego przywracanie zakończyło się pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="21ae4-137">Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="21ae4-138">Określenie ta flaga jest taka sama jak usuwanie *project.assets.json* pliku.</span><span class="sxs-lookup"><span data-stu-id="21ae4-138">Specifying this flag is the same as deleting the *project.assets.json* file.</span></span>
+<span data-ttu-id="8d11d-137">Wymusza wszystkie zależności rozwiązany, nawet wtedy, gdy ostatnie przywracanie zakończyło się pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="8d11d-137">Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="8d11d-138">Określanie ta flaga jest taka sama jak usuwanie *project.assets.json* pliku.</span><span class="sxs-lookup"><span data-stu-id="8d11d-138">Specifying this flag is the same as deleting the *project.assets.json* file.</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="21ae4-139">Drukuje krótkich pomocy dla polecenia.</span><span class="sxs-lookup"><span data-stu-id="21ae4-139">Prints out a short help for the command.</span></span>
+<span data-ttu-id="8d11d-139">Drukuje krótki pomoc dotyczącą polecenia.</span><span class="sxs-lookup"><span data-stu-id="8d11d-139">Prints out a short help for the command.</span></span>
 
 `--ignore-failed-sources`
 
-<span data-ttu-id="21ae4-140">Jeśli ma spełnia wymagania wersji pakietów tylko Ostrzegaj o źródła nie powiodło się.</span><span class="sxs-lookup"><span data-stu-id="21ae4-140">Only warn about failed sources if there are packages meeting the version requirement.</span></span>
+<span data-ttu-id="8d11d-140">Tylko Ostrzegaj o źródłach nie powiodło się, jeśli ma pakietów spełniających wymaganie dotyczące wersji.</span><span class="sxs-lookup"><span data-stu-id="8d11d-140">Only warn about failed sources if there are packages meeting the version requirement.</span></span>
 
 `--no-cache`
 
-<span data-ttu-id="21ae4-141">Określa, że nie pamięci podręcznej pakietów i żądań HTTP.</span><span class="sxs-lookup"><span data-stu-id="21ae4-141">Specifies to not cache packages and HTTP requests.</span></span>
+<span data-ttu-id="8d11d-141">Określa, że nie pamięci podręcznej pakietów oraz żądania HTTP.</span><span class="sxs-lookup"><span data-stu-id="8d11d-141">Specifies to not cache packages and HTTP requests.</span></span>
 
 `--no-dependencies`
 
-<span data-ttu-id="21ae4-142">Podczas przywracania projektu z projektu do projektu (P2P) odwołań, przywraca i nie odwołuje się do projektu głównego.</span><span class="sxs-lookup"><span data-stu-id="21ae4-142">When restoring a project with project-to-project (P2P) references, restores the root project and not the references.</span></span>
+<span data-ttu-id="8d11d-142">Podczas przywracania projektu z projektu do projektu (P2P) odwołań, przywraca projektu głównego, a nie odwołania.</span><span class="sxs-lookup"><span data-stu-id="8d11d-142">When restoring a project with project-to-project (P2P) references, restores the root project and not the references.</span></span>
 
 `--packages <PACKAGES_DIRECTORY>`
 
-<span data-ttu-id="21ae4-143">Określa katalog dla przywróconych pakietów.</span><span class="sxs-lookup"><span data-stu-id="21ae4-143">Specifies the directory for restored packages.</span></span>
+<span data-ttu-id="8d11d-143">Określa katalog dla przywróconej pakietów.</span><span class="sxs-lookup"><span data-stu-id="8d11d-143">Specifies the directory for restored packages.</span></span>
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-<span data-ttu-id="21ae4-144">Określa środowisko uruchomieniowe dla Przywracanie pakietu.</span><span class="sxs-lookup"><span data-stu-id="21ae4-144">Specifies a runtime for the package restore.</span></span> <span data-ttu-id="21ae4-145">Umożliwia przywracanie pakietów dla środowisk uruchomieniowych nie są jawnie wymienione w `<RuntimeIdentifiers>` tagów w *.csproj* pliku.</span><span class="sxs-lookup"><span data-stu-id="21ae4-145">This is used to restore packages for runtimes not explicitly listed in the `<RuntimeIdentifiers>` tag in the *.csproj* file.</span></span> <span data-ttu-id="21ae4-146">Aby uzyskać listę identyfikatorów środowiska uruchomieniowego (RID), zobacz [katalogu RID](../rid-catalog.md).</span><span class="sxs-lookup"><span data-stu-id="21ae4-146">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span> <span data-ttu-id="21ae4-147">Podaj wielu identyfikatorów RID, określając tę opcję wiele razy.</span><span class="sxs-lookup"><span data-stu-id="21ae4-147">Provide multiple RIDs by specifying this option multiple times.</span></span>
+<span data-ttu-id="8d11d-144">Określa środowiska wykonawczego Przywracanie pakietu.</span><span class="sxs-lookup"><span data-stu-id="8d11d-144">Specifies a runtime for the package restore.</span></span> <span data-ttu-id="8d11d-145">Jest on używany do przywrócenia pakietów dla środowisk uruchomieniowych nie zostały jawnie wymienione w `<RuntimeIdentifiers>` tagów w *.csproj* pliku.</span><span class="sxs-lookup"><span data-stu-id="8d11d-145">This is used to restore packages for runtimes not explicitly listed in the `<RuntimeIdentifiers>` tag in the *.csproj* file.</span></span> <span data-ttu-id="8d11d-146">Aby uzyskać listę identyfikatorów środowisk uruchomieniowych (RID), zobacz [katalogu RID](../rid-catalog.md).</span><span class="sxs-lookup"><span data-stu-id="8d11d-146">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span> <span data-ttu-id="8d11d-147">Użycie tej opcji wiele razy, aby przekazać wiele identyfikatorów RID.</span><span class="sxs-lookup"><span data-stu-id="8d11d-147">Provide multiple RIDs by specifying this option multiple times.</span></span>
 
 `-s|--source <SOURCE>`
 
-<span data-ttu-id="21ae4-148">Określa źródło pakietu NuGet do użycia podczas operacji przywracania.</span><span class="sxs-lookup"><span data-stu-id="21ae4-148">Specifies a NuGet package source to use during the restore operation.</span></span> <span data-ttu-id="21ae4-149">To ustawienie przesłania wszystkie źródła określone w *NuGet.config* plików.</span><span class="sxs-lookup"><span data-stu-id="21ae4-149">This setting overrides all of the sources specified in the *NuGet.config* files.</span></span> <span data-ttu-id="21ae4-150">Wiele źródeł można podać, określając tę opcję wiele razy.</span><span class="sxs-lookup"><span data-stu-id="21ae4-150">Multiple sources can be provided by specifying this option multiple times.</span></span>
+<span data-ttu-id="8d11d-148">Określa źródło pakietu NuGet ma być używany podczas operacji przywracania.</span><span class="sxs-lookup"><span data-stu-id="8d11d-148">Specifies a NuGet package source to use during the restore operation.</span></span> <span data-ttu-id="8d11d-149">Ustawienie to zastępuje wszystkie źródła określony w *NuGet.config* plików.</span><span class="sxs-lookup"><span data-stu-id="8d11d-149">This setting overrides all of the sources specified in the *NuGet.config* files.</span></span> <span data-ttu-id="8d11d-150">Wiele źródeł może być udostępniane przez użycie tej opcji wiele razy.</span><span class="sxs-lookup"><span data-stu-id="8d11d-150">Multiple sources can be provided by specifying this option multiple times.</span></span>
 
 `--verbosity <LEVEL>`
 
-<span data-ttu-id="21ae4-151">Ustawia poziom szczegółowości polecenia.</span><span class="sxs-lookup"><span data-stu-id="21ae4-151">Sets the verbosity level of the command.</span></span> <span data-ttu-id="21ae4-152">Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, i `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="21ae4-152">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
+<span data-ttu-id="8d11d-151">Ustawia poziom szczegółowości polecenia.</span><span class="sxs-lookup"><span data-stu-id="8d11d-151">Sets the verbosity level of the command.</span></span> <span data-ttu-id="8d11d-152">Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, i `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="8d11d-152">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="21ae4-153">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="21ae4-153">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="8d11d-153">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="8d11d-153">.NET Core 1.x</span></span>](#tab/netcore1x)
 
 `--configfile <FILE>`
 
-<span data-ttu-id="21ae4-154">Plik konfiguracji NuGet (*NuGet.config*) do użycia dla operacji przywracania.</span><span class="sxs-lookup"><span data-stu-id="21ae4-154">The NuGet configuration file (*NuGet.config*) to use for the restore operation.</span></span>
+<span data-ttu-id="8d11d-154">Plik konfiguracyjny NuGet (*NuGet.config*) na potrzeby operacji przywracania.</span><span class="sxs-lookup"><span data-stu-id="8d11d-154">The NuGet configuration file (*NuGet.config*) to use for the restore operation.</span></span>
 
 `--disable-parallel`
 
-<span data-ttu-id="21ae4-155">Wyłącza Przywracanie wielu projektów równolegle.</span><span class="sxs-lookup"><span data-stu-id="21ae4-155">Disables restoring multiple projects in parallel.</span></span>
+<span data-ttu-id="8d11d-155">Wyłącza Przywracanie wielu projektów wykonywane równolegle.</span><span class="sxs-lookup"><span data-stu-id="8d11d-155">Disables restoring multiple projects in parallel.</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="21ae4-156">Drukuje krótkich pomocy dla polecenia.</span><span class="sxs-lookup"><span data-stu-id="21ae4-156">Prints out a short help for the command.</span></span>
+<span data-ttu-id="8d11d-156">Drukuje krótki pomoc dotyczącą polecenia.</span><span class="sxs-lookup"><span data-stu-id="8d11d-156">Prints out a short help for the command.</span></span>
 
 `--ignore-failed-sources`
 
-<span data-ttu-id="21ae4-157">Jeśli ma spełnia wymagania wersji pakietów tylko Ostrzegaj o źródła nie powiodło się.</span><span class="sxs-lookup"><span data-stu-id="21ae4-157">Only warn about failed sources if there are packages meeting the version requirement.</span></span>
+<span data-ttu-id="8d11d-157">Tylko Ostrzegaj o źródłach nie powiodło się, jeśli ma pakietów spełniających wymaganie dotyczące wersji.</span><span class="sxs-lookup"><span data-stu-id="8d11d-157">Only warn about failed sources if there are packages meeting the version requirement.</span></span>
 
 `--no-cache`
 
-<span data-ttu-id="21ae4-158">Określa, że nie pamięci podręcznej pakietów i żądań HTTP.</span><span class="sxs-lookup"><span data-stu-id="21ae4-158">Specifies to not cache packages and HTTP requests.</span></span>
+<span data-ttu-id="8d11d-158">Określa, że nie pamięci podręcznej pakietów oraz żądania HTTP.</span><span class="sxs-lookup"><span data-stu-id="8d11d-158">Specifies to not cache packages and HTTP requests.</span></span>
 
 `--no-dependencies`
 
-<span data-ttu-id="21ae4-159">Podczas przywracania projektu z projektu do projektu (P2P) odwołań, przywraca i nie odwołuje się do projektu głównego.</span><span class="sxs-lookup"><span data-stu-id="21ae4-159">When restoring a project with project-to-project (P2P) references, restores the root project and not the references.</span></span>
+<span data-ttu-id="8d11d-159">Podczas przywracania projektu z projektu do projektu (P2P) odwołań, przywraca projektu głównego, a nie odwołania.</span><span class="sxs-lookup"><span data-stu-id="8d11d-159">When restoring a project with project-to-project (P2P) references, restores the root project and not the references.</span></span>
 
 `--packages <PACKAGES_DIRECTORY>`
 
-<span data-ttu-id="21ae4-160">Określa katalog dla przywróconych pakietów.</span><span class="sxs-lookup"><span data-stu-id="21ae4-160">Specifies the directory for restored packages.</span></span>
+<span data-ttu-id="8d11d-160">Określa katalog dla przywróconej pakietów.</span><span class="sxs-lookup"><span data-stu-id="8d11d-160">Specifies the directory for restored packages.</span></span>
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-<span data-ttu-id="21ae4-161">Określa środowisko uruchomieniowe dla Przywracanie pakietu.</span><span class="sxs-lookup"><span data-stu-id="21ae4-161">Specifies a runtime for the package restore.</span></span> <span data-ttu-id="21ae4-162">Umożliwia przywracanie pakietów dla środowisk uruchomieniowych nie są jawnie wymienione w `<RuntimeIdentifiers>` tagów w *.csproj* pliku.</span><span class="sxs-lookup"><span data-stu-id="21ae4-162">This is used to restore packages for runtimes not explicitly listed in the `<RuntimeIdentifiers>` tag in the *.csproj* file.</span></span> <span data-ttu-id="21ae4-163">Aby uzyskać listę identyfikatorów środowiska uruchomieniowego (RID), zobacz [katalogu RID](../rid-catalog.md).</span><span class="sxs-lookup"><span data-stu-id="21ae4-163">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span> <span data-ttu-id="21ae4-164">Podaj wielu identyfikatorów RID, określając tę opcję wiele razy.</span><span class="sxs-lookup"><span data-stu-id="21ae4-164">Provide multiple RIDs by specifying this option multiple times.</span></span>
+<span data-ttu-id="8d11d-161">Określa środowiska wykonawczego Przywracanie pakietu.</span><span class="sxs-lookup"><span data-stu-id="8d11d-161">Specifies a runtime for the package restore.</span></span> <span data-ttu-id="8d11d-162">Jest on używany do przywrócenia pakietów dla środowisk uruchomieniowych nie zostały jawnie wymienione w `<RuntimeIdentifiers>` tagów w *.csproj* pliku.</span><span class="sxs-lookup"><span data-stu-id="8d11d-162">This is used to restore packages for runtimes not explicitly listed in the `<RuntimeIdentifiers>` tag in the *.csproj* file.</span></span> <span data-ttu-id="8d11d-163">Aby uzyskać listę identyfikatorów środowisk uruchomieniowych (RID), zobacz [katalogu RID](../rid-catalog.md).</span><span class="sxs-lookup"><span data-stu-id="8d11d-163">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span> <span data-ttu-id="8d11d-164">Użycie tej opcji wiele razy, aby przekazać wiele identyfikatorów RID.</span><span class="sxs-lookup"><span data-stu-id="8d11d-164">Provide multiple RIDs by specifying this option multiple times.</span></span>
 
 `-s|--source <SOURCE>`
 
-<span data-ttu-id="21ae4-165">Określa źródło pakietu NuGet do użycia podczas operacji przywracania.</span><span class="sxs-lookup"><span data-stu-id="21ae4-165">Specifies a NuGet package source to use during the restore operation.</span></span> <span data-ttu-id="21ae4-166">Przesłania wszystkie źródła określone w *NuGet.config* plików.</span><span class="sxs-lookup"><span data-stu-id="21ae4-166">This overrides all of the sources specified in the *NuGet.config* files.</span></span> <span data-ttu-id="21ae4-167">Wiele źródeł można podać, określając tę opcję wiele razy.</span><span class="sxs-lookup"><span data-stu-id="21ae4-167">Multiple sources can be provided by specifying this option multiple times.</span></span>
+<span data-ttu-id="8d11d-165">Określa źródło pakietu NuGet ma być używany podczas operacji przywracania.</span><span class="sxs-lookup"><span data-stu-id="8d11d-165">Specifies a NuGet package source to use during the restore operation.</span></span> <span data-ttu-id="8d11d-166">Ustawienie to zastępuje wszystkie źródła określony w *NuGet.config* plików.</span><span class="sxs-lookup"><span data-stu-id="8d11d-166">This overrides all of the sources specified in the *NuGet.config* files.</span></span> <span data-ttu-id="8d11d-167">Wiele źródeł może być udostępniane przez użycie tej opcji wiele razy.</span><span class="sxs-lookup"><span data-stu-id="8d11d-167">Multiple sources can be provided by specifying this option multiple times.</span></span>
 
 `--verbosity <LEVEL>`
 
-<span data-ttu-id="21ae4-168">Ustawia poziom szczegółowości polecenia.</span><span class="sxs-lookup"><span data-stu-id="21ae4-168">Sets the verbosity level of the command.</span></span> <span data-ttu-id="21ae4-169">Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, i `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="21ae4-169">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
+<span data-ttu-id="8d11d-168">Ustawia poziom szczegółowości polecenia.</span><span class="sxs-lookup"><span data-stu-id="8d11d-168">Sets the verbosity level of the command.</span></span> <span data-ttu-id="8d11d-169">Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, i `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="8d11d-169">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="21ae4-170">Przykłady</span><span class="sxs-lookup"><span data-stu-id="21ae4-170">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="8d11d-170">Przykłady</span><span class="sxs-lookup"><span data-stu-id="8d11d-170">Examples</span></span>
 
-<span data-ttu-id="21ae4-171">Przywróć zależności i narzędzi dla projektu w bieżącym katalogu:</span><span class="sxs-lookup"><span data-stu-id="21ae4-171">Restore dependencies and tools for the project in the current directory:</span></span>
+<span data-ttu-id="8d11d-171">Przywróć zależności i narzędzia dla projektów w bieżącym katalogu:</span><span class="sxs-lookup"><span data-stu-id="8d11d-171">Restore dependencies and tools for the project in the current directory:</span></span>
 
 `dotnet restore`
 
-<span data-ttu-id="21ae4-172">Przywróć zależności i narzędzia do `app1` znaleziono projektu w podanej ścieżce:</span><span class="sxs-lookup"><span data-stu-id="21ae4-172">Restore dependencies and tools for the `app1` project found in the given path:</span></span>
+<span data-ttu-id="8d11d-172">Przywracanie zależności i narzędzia dla `app1` projekt znaleziony w podanej ścieżce:</span><span class="sxs-lookup"><span data-stu-id="8d11d-172">Restore dependencies and tools for the `app1` project found in the given path:</span></span>
 
 `dotnet restore ~/projects/app1/app1.csproj`
 
-<span data-ttu-id="21ae4-173">Przywróć zależności i narzędzi dla projektu w bieżącym katalogu przy użyciu ścieżki pliku w źródle:</span><span class="sxs-lookup"><span data-stu-id="21ae4-173">Restore the dependencies and tools for the project in the current directory using the file path provided as the source:</span></span>
+<span data-ttu-id="8d11d-173">Przywróć zależności i narzędzia dla projektów w bieżącym katalogu przy użyciu ścieżki pliku w źródle:</span><span class="sxs-lookup"><span data-stu-id="8d11d-173">Restore the dependencies and tools for the project in the current directory using the file path provided as the source:</span></span>
 
 `dotnet restore -s c:\packages\mypackages`
 
-<span data-ttu-id="21ae4-174">Przywróć zależności i narzędzi dla projektu w bieżącym katalogu przy użyciu ścieżek plików dostarczana jako źródeł:</span><span class="sxs-lookup"><span data-stu-id="21ae4-174">Restore the dependencies and tools for the project in the current directory using the two file paths provided as sources:</span></span>
+<span data-ttu-id="8d11d-174">Przywróć zależności i narzędzia dla projektów w bieżącym katalogu przy użyciu ścieżki dwóch plików, podana jako źródła:</span><span class="sxs-lookup"><span data-stu-id="8d11d-174">Restore the dependencies and tools for the project in the current directory using the two file paths provided as sources:</span></span>
 
 `dotnet restore -s c:\packages\mypackages -s c:\packages\myotherpackages`
 
-<span data-ttu-id="21ae4-175">Przywróć zależności i narzędzi dla projektu w bieżącym katalogu i pokazuje tylko minimalne dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="21ae4-175">Restore dependencies and tools for the project in the current directory and shows only minimal output:</span></span>
+<span data-ttu-id="8d11d-175">Przywróć zależności i narzędzia dla projektów w bieżącym katalogu i pokazuje tylko minimalne dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="8d11d-175">Restore dependencies and tools for the project in the current directory and shows only minimal output:</span></span>
 
 `dotnet restore --verbosity minimal`

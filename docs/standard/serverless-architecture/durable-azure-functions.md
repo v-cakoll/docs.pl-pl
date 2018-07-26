@@ -1,0 +1,106 @@
+---
+title: Trwałe funkcje platformy Azure — aplikacje niekorzystające z serwera
+description: Niezawodne usługi Azure functions rozszerza środowisko uruchomieniowe usługi Azure Functions umożliwia stanowych przepływów pracy w kodzie.
+author: cecilphillip
+ms.author: cephilli
+ms.date: 06/26/2018
+ms.openlocfilehash: 03197ad57813b8132fe592f4e555c6a35edbd9bd
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404962"
+---
+# <a name="durable-azure-functions"></a><span data-ttu-id="2bf4c-103">Trwałe funkcje platformy Azure</span><span class="sxs-lookup"><span data-stu-id="2bf4c-103">Durable Azure functions</span></span>
+
+<span data-ttu-id="2bf4c-104">Podczas tworzenia aplikacji bez użycia serwera za pomocą usługi Azure Functions, zwykle być zaprojektowane operacje będą uruchamiane w sposób bezstanowe.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-104">When creating serverless applications with Azure Functions, your operations will typically be designed to run in a stateless manner.</span></span> <span data-ttu-id="2bf4c-105">Przyczyna tego uzasadnienie wyboru tych elementów jest, ponieważ jako skale platformy trudno wiedzieć, jakie serwery, wykonywany jest kod.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-105">The reason for this design choice is because as the platform scales, it becomes difficult to know what servers the code is running on.</span></span> <span data-ttu-id="2bf4c-106">Również trudno wiedzieć, ile wystąpień są aktywne w dowolnym danym momencie.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-106">It also becomes difficult to know how many instances are active at any given point.</span></span> <span data-ttu-id="2bf4c-107">Istnieją jednak klasy aplikacji, które wymagają bieżący stan procesu, żeby Cię widziano.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-107">However, there are classes of applications that require the current state of a process to be known.</span></span> <span data-ttu-id="2bf4c-108">Należy wziąć pod uwagę proces przesyłania zamówienia do sklepu internetowego.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-108">Consider the process of submitting an order to an online store.</span></span> <span data-ttu-id="2bf4c-109">Operacja wyewidencjonowania może być przepływ pracy, który składa się z wielu operacji, które trzeba znać stan procesu.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-109">The checkout operation might be a workflow that is composed of multiple operations that need to know the state of the process.</span></span> <span data-ttu-id="2bf4c-110">Takie informacje mogą obejmować spis produktów, jeśli odbiorca nie ma żadnych środków na swoje konto, a także wyniki przetwarzania danych karty kredytowej.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-110">Such information may include the product inventory, if the customer has any credits on their account, and also the results of processing the credit card.</span></span> <span data-ttu-id="2bf4c-111">Te operacje można łatwo własne wewnętrzne przepływy pracy lub nawet usługi z systemami innych firm.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-111">These operations could easily be their own internal workflows or even services from third-party systems.</span></span>
+
+<span data-ttu-id="2bf4c-112">Różnych wzorców istnieje już dziś tego asysta przy użyciu koordynacji stan aplikacji między systemami wewnętrznymi i zewnętrznymi.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-112">Various patterns exist today that assist with the coordination of application state between internal and external systems.</span></span> <span data-ttu-id="2bf4c-113">Są często się spotkać się z rozwiązania, które polegają na tych systemach kolejkowania, rozproszonych klucz wartość magazynów lub udostępnionych baz danych służący do zarządzania nim.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-113">It's common to come across solutions that rely on centralized queuing systems, distributed key-value stores, or shared databases to manage that state.</span></span> <span data-ttu-id="2bf4c-114">Są one jednak wszystkie dodatkowe zasoby, które teraz muszą być udostępniana i zarządzana.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-114">However, these are all additional resources that now need to be provisioned and managed.</span></span> <span data-ttu-id="2bf4c-115">W środowisku bezserwerowym Twój kod może stać się skomplikowane, próby ręcznie skontaktować się z tymi zasobami.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-115">In a serverless environment, your code could become cumbersome trying to coordinate with these resources manually.</span></span> <span data-ttu-id="2bf4c-116">Usługa Azure Functions oferuje alternatywą dla tworzenia stanowych funkcji o nazwie funkcje trwałe.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-116">Azure Functions offers an alternative for creating stateful functions called Durable Functions.</span></span>
+
+<span data-ttu-id="2bf4c-117">Funkcje trwałe to rozszerzenie do środowiska uruchomieniowego usługi Azure Functions, umożliwiająca definicji stanowych przepływów pracy w kodzie.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-117">Durable Functions is an extension to the Azure Functions runtime that enables the definition of stateful workflows in code.</span></span> <span data-ttu-id="2bf4c-118">Dzieląc przepływy pracy do działań, rozszerzenia funkcji trwałych można Zarządzanie stanem, tworzyć punkty kontrolne w toku i obsługiwać dystrybucji wywołania funkcji na serwerach.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-118">By breaking down workflows into activities, the Durable Functions extension can manage state, create progress checkpoints, and handle the distribution of function calls across servers.</span></span> <span data-ttu-id="2bf4c-119">W tle ułatwia korzystanie z konta usługi Azure Storage w celu utrwalanie historii wykonywania, zaplanować działania funkcji i pobrać odpowiedzi.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-119">In the background, it makes use of an Azure Storage account to persist execution history, schedule activity functions and retrieve responses.</span></span> <span data-ttu-id="2bf4c-120">Kod bez użycia serwera nigdy nie powinny korzystać z utrwalonych danych na tym koncie magazynu i zazwyczaj nie jest coś, z którym deweloperzy muszą wchodzić w interakcje.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-120">Your serverless code should never interact with persisted information in that storage account, and is typically not something with which developers need to interact.</span></span>
+
+## <a name="triggering-a-stateful-workflow"></a><span data-ttu-id="2bf4c-121">Wyzwalanie stanowych przepływu pracy</span><span class="sxs-lookup"><span data-stu-id="2bf4c-121">Triggering a stateful workflow</span></span>
+
+<span data-ttu-id="2bf4c-122">Stanowe przepływów pracy w programie trwałe funkcje można podzielić na dwa składniki wewnętrzne; Wyzwalacze aranżacji i działania.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-122">Stateful workflows in Durable Functions can be broken down into two intrinsic components; orchestration and activity triggers.</span></span> <span data-ttu-id="2bf4c-123">Wyzwalacze i powiązania są podstawowe składniki używane przez usługi Azure Functions umożliwia swoje funkcje niewymagające użycia serwera otrzymywać powiadomienia, aby rozpocząć odbieranie danych wejściowych, gdy zwrócenia wyników.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-123">Triggers and bindings are core components used by Azure Functions to enable your serverless functions to be notified when to start, receive input, and return results.</span></span>
+
+### <a name="working-with-the-orchestration-client"></a><span data-ttu-id="2bf4c-124">Korzystanie z klienckiego aranżacji</span><span class="sxs-lookup"><span data-stu-id="2bf4c-124">Working with the Orchestration client</span></span>
+
+<span data-ttu-id="2bf4c-125">Aranżacji są unikatowe, w porównaniu z innymi stylami wyzwolone operacje w usłudze Azure Functions.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-125">Orchestrations are unique when compared to other styles of triggered operations in Azure Functions.</span></span> <span data-ttu-id="2bf4c-126">Funkcje trwałe umożliwia wykonanie funkcji, które może potrwać do godziny, a nawet dni.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-126">Durable Functions enables the execution of functions that may take hours or even days to complete.</span></span> <span data-ttu-id="2bf4c-127">Tego rodzaju zachowanie jest dostarczany z potrzebami, aby było możliwe sprawdzić stan uruchomionych aranżacji, Zakończ prewencyjnego lub wysyłać powiadomienia o zdarzenia zewnętrzne.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-127">That type of behavior comes with the need to able to check the status of a running orchestration, preemptively terminate, or send notifications of external events.</span></span>
+
+<span data-ttu-id="2bf4c-128">W takich przypadkach udostępnia rozszerzenia funkcji trwałych `DurableOrchestrationClient` klasy, która pozwala na interakcję z zorganizowanych funkcji.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-128">For such cases, the Durable Functions extension provides the `DurableOrchestrationClient` class that allows you to interact with orchestrated functions.</span></span> <span data-ttu-id="2bf4c-129">Uzyskaj dostęp do aranżacji klienta przy użyciu `OrchestrationClientAttribute` powiązania.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-129">You get access to the orchestration client by using the `OrchestrationClientAttribute` binding.</span></span> <span data-ttu-id="2bf4c-130">Ogólnie rzecz biorąc, należy dołączyć ten atrybut z innym typem wyzwalacza, takich jak `HttpTrigger` lub `ServiceBusTrigger`.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-130">Generally, you would include this attribute with another trigger type, such as an `HttpTrigger` or `ServiceBusTrigger`.</span></span> <span data-ttu-id="2bf4c-131">Po wyzwoleniu funkcji źródła klient orkiestracji można uruchomić funkcję orkiestratora.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-131">Once the source function has been triggered, the orchestration client can be used to start an orchestrator function.</span></span>
+
+```csharp
+[FunctionName("KickOff")]
+public static async Task<HttpResponseMessage> Run(
+    [HttpTrigger(AuthorizationLevel.Function, "POST")]HttpRequestMessage req,
+    [OrchestrationClient ] DurableOrchestrationClient<orchestrationClient>)
+{
+    OrderRequestData data = await req.Content.ReadAsAsync<OrderRequestData>();
+
+    string instanceId = await orchestrationClient.StartNewAsync("PlaceOrder", data);
+
+    return orchestrationClient.CreateCheckStatusResponse(req, instanceId);
+}
+```
+
+### <a name="the-orchestrator-function"></a><span data-ttu-id="2bf4c-132">Funkcja programu orchestrator</span><span class="sxs-lookup"><span data-stu-id="2bf4c-132">The orchestrator function</span></span>
+
+<span data-ttu-id="2bf4c-133">Dodawanie adnotacji do funkcji z OrchestrationTriggerAttribute znakami usługi Azure Functions w tej funkcji jako funkcję orkiestratora.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-133">Annotating a function with the OrchestrationTriggerAttribute in Azure Functions marks that function as an orchestrator function.</span></span> <span data-ttu-id="2bf4c-134">Jest odpowiedzialny za zarządzanie różnych działań, które tworzą stanowych przepływu pracy.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-134">It's responsible for managing the various activities that make up your stateful workflow.</span></span>
+
+<span data-ttu-id="2bf4c-135">Funkcje programu orchestrator nie są w stanie się korzystanie z powiązania innych niż OrchestrationTriggerAttribute.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-135">Orchestrator functions are unable to make use of bindings other than the OrchestrationTriggerAttribute.</span></span> <span data-ttu-id="2bf4c-136">Ten atrybut można używać tylko z typem parametru DurableOrchestrationContext.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-136">This attribute can only be used with a parameter type of DurableOrchestrationContext.</span></span> <span data-ttu-id="2bf4c-137">Brak danych wejściowych może służyć ponieważ deserializacji danych wejściowych w sygnaturze funkcji nie jest obsługiwana.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-137">No other inputs can be used since deserialization of inputs in the function signature isn't supported.</span></span> <span data-ttu-id="2bf4c-138">Można pobrać danych wejściowych dostarczonych przez klienta aranżacji, GetInput\<T\> metoda musi być używana.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-138">To get inputs provided by the orchestration client, the GetInput\<T\> method must be used.</span></span>
+
+<span data-ttu-id="2bf4c-139">Ponadto zwracane typy funkcji aranżacji musi mieć wartość void, zadania lub wartość serializacji JSON.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-139">Also, the return types of orchestration functions must be either void, Task, or a JSON serializable value.</span></span>
+
+> <span data-ttu-id="2bf4c-140">*Został pozostawiono kodu obsługi błędów w celu skrócenia programu*</span><span class="sxs-lookup"><span data-stu-id="2bf4c-140">*Error handling code has been left out for brevity*</span></span>
+
+```csharp
+[FunctionName("PlaceOrder")]
+public static async Task<string> PlaceOrder([OrchestrationTrigger] DurableOrchestrationContext context)
+{
+    OrderRequestData orderData = context.GetInput<OrderRequestData>();
+
+    await context.CallActivityAsync<bool>("CheckAndReserveInventory", orderData);
+    await context.CallActivityAsync<string>("ProcessPayment", orderData);
+
+    string trackingNumber = await context.CallActivityAsync<string>("ScheduleShipping", orderData);
+    await context.CallActivityAsync<string>("EmailCustomer", trackingNumber);
+
+    return trackingNumber;
+}
+```
+
+<span data-ttu-id="2bf4c-141">Wiele wystąpień aranżacji może być uruchomione w tym samym czasie.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-141">Multiple instances of an orchestration can be started and running at the same time.</span></span> <span data-ttu-id="2bf4c-142">Wywoływanie `StartNewAsync` metody `DurableOrchestrationClient` uruchamia nowe wystąpienie klasy aranżacji.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-142">Calling the `StartNewAsync` method on the `DurableOrchestrationClient` launches a new instance of the orchestration.</span></span> <span data-ttu-id="2bf4c-143">Metoda ta zwraca `Task<string>` który zostaje ukończony po aranżacji została uruchomiona.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-143">The method returns a `Task<string>` that completes when the orchestration has started.</span></span> <span data-ttu-id="2bf4c-144">Wystąpił wyjątek typu `TimeoutException` pobiera wygenerowany, jeśli organizacja nie zostało rozpoczęte w ciągu 30 sekund.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-144">An exception of type `TimeoutException` gets thrown if the orchestration hasn't started within 30 seconds.</span></span>
+
+<span data-ttu-id="2bf4c-145">Gotowy `Task<string>` z `StartNewAsync` powinien zawierać unikatowy identyfikator wystąpienia aranżacji.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-145">The completed `Task<string>` from `StartNewAsync` should contain the unique ID of the orchestration instance.</span></span> <span data-ttu-id="2bf4c-146">Ten identyfikator wystąpienia może służyć do wywołania operacji na tym określonym aranżacji.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-146">This instance ID can be used to invoke operations on that specific orchestration.</span></span> <span data-ttu-id="2bf4c-147">Orchestration można badane stanu lub wysyłane powiadomienia o zdarzeniach.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-147">The orchestration can be queried for the status or sent event notifications.</span></span>
+
+### <a name="the-activity-functions"></a><span data-ttu-id="2bf4c-148">Funkcje działań</span><span class="sxs-lookup"><span data-stu-id="2bf4c-148">The activity functions</span></span>
+
+<span data-ttu-id="2bf4c-149">Działanie funkcji są osobne operacje, które Pobierz składa się ze sobą w ramach funkcji aranżacji w taki sposób, aby utworzyć przepływ pracy.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-149">Activity functions are the discrete operations that get composed together within an orchestration function to create the workflow.</span></span> <span data-ttu-id="2bf4c-150">Poniżej przedstawiono, gdzie większość rzeczywista praca będzie mieć miejsce.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-150">Here is where most of actual work would take place.</span></span> <span data-ttu-id="2bf4c-151">Które reprezentują logikę biznesową, długie, uruchomione procesy i części logiczne, aby większe rozwiązania.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-151">They represent the business logic, long running processes, and the puzzle pieces to a larger solution.</span></span>
+
+<span data-ttu-id="2bf4c-152">`ActivityTriggerAttribute` Służy do dodawania adnotacji typu parametru funkcji `DurableActivityContext`.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-152">The `ActivityTriggerAttribute` is used to annotate a function parameter of type `DurableActivityContext`.</span></span> <span data-ttu-id="2bf4c-153">Przy użyciu adnotacji informuje środowisko uruchomieniowe, funkcja jest przeznaczona do użycia jako funkcja działania.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-153">Using the annotation informs the runtime that the function is intended to be used as an activity function.</span></span> <span data-ttu-id="2bf4c-154">Wartości wejściowe dla funkcji działań są pobierane przy użyciu `GetInput<T>` metody `DurableActivityContext` parametru.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-154">Input values to activity functions are retrieved using the `GetInput<T>` method of the `DurableActivityContext` parameter.</span></span>
+
+<span data-ttu-id="2bf4c-155">Podobnie jak w funkcji aranżacji, typów zwracanych elementów funkcje działań musi mieć wartość void, zadania lub wartość serializacji JSON.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-155">Similar to orchestration functions, the return types of activity functions must be either void, Task, or a JSON serializable value.</span></span>
+
+<span data-ttu-id="2bf4c-156">Nieobsłużone wyjątki, które Pobierz zgłoszone w ramach działania funkcji spowoduje pobieranie przesłane do wywoływania funkcji programu orchestrator i przedstawiane jako `TaskFailedException`.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-156">Any unhandled exceptions that get thrown within activity functions will get sent up to the calling orchestrator function and presented as a `TaskFailedException`.</span></span> <span data-ttu-id="2bf4c-157">W tym momencie błędu można przechwytywane i rejestrowane w programie orchestrator i mogą być ponawiane działania.</span><span class="sxs-lookup"><span data-stu-id="2bf4c-157">At this point, the error can be caught and logged in the orchestrator, and the activity can be retried.</span></span>
+
+```csharp
+[FunctionName("CheckAndReserveInventory")]
+public static bool CheckAndReserveInventory([ActivityTrigger] DurableActivityContext context)
+{
+    OrderRequestData orderData = context.GetInput<OrderRequestData>();
+
+    // Connect to inventory system and try to reserve items
+    return true;
+}
+```
+
+## <a name="recommended-resources"></a><span data-ttu-id="2bf4c-158">Zalecane zasoby</span><span class="sxs-lookup"><span data-stu-id="2bf4c-158">Recommended resources</span></span>
+
+* [<span data-ttu-id="2bf4c-159">Trwałe funkcje</span><span class="sxs-lookup"><span data-stu-id="2bf4c-159">Durable Functions</span></span>](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
+* [<span data-ttu-id="2bf4c-160">Powiązania trwałe funkcje</span><span class="sxs-lookup"><span data-stu-id="2bf4c-160">Bindings for Durable Functions</span></span>](https://docs.microsoft.com/azure/azure-functions/durable-functions-bindings)
+* [<span data-ttu-id="2bf4c-161">Zarządzanie wystąpieniami w funkcje trwałe</span><span class="sxs-lookup"><span data-stu-id="2bf4c-161">Manage instances in Durable Functions</span></span>](https://docs.microsoft.com/azure/azure-functions/durable-functions-instance-management)
+
+>[!div class="step-by-step"]
+<span data-ttu-id="2bf4c-162">[Poprzednie](event-grid.md)
+[dalej](orchestration-patterns.md)</span><span class="sxs-lookup"><span data-stu-id="2bf4c-162">[Previous](event-grid.md)
+[Next](orchestration-patterns.md)</span></span>

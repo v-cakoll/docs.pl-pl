@@ -2,12 +2,12 @@
 title: Wątkowość (C#)
 ms.date: 07/20/2015
 ms.assetid: 236d157d-37c0-4ee8-89fc-721e6c596325
-ms.openlocfilehash: 8325132a359c8b65572943bb79c9f02a485eb290
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: f9ba0793876f38b3ada2f65c4594562ea1a66983
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874669"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39296185"
 ---
 # <a name="threading-c"></a>Wątkowość (C#)
 Wątkowość Włącza program C# do wykonania współbieżnych przetwarzanie, dzięki czemu możesz zrobić więcej niż jedną operację naraz. Na przykład umożliwia wątkowości monitorować dane wejściowe od użytkownika, wykonywanie zadań w tle i obsługi równoczesnymi strumieniami danych wejściowych.  
@@ -38,8 +38,6 @@ Wątkowość Włącza program C# do wykonania współbieżnych przetwarzanie, dz
 |Tytuł|Opis|  
 |-----------|-----------------|  
 |[Aplikacje wielowątkowe (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)|Opisuje sposób tworzenia i używania wątków.|  
-|[Parametry i wartości zwracane dla procedur wielowątkowości (C#)](../../../../csharp/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)|W tym artykule opisano, jak przekazywać i zwrócić parametrów za pomocą aplikacji wielowątkowych.|  
-|[Wskazówki: Wielowątkowość ze składnikiem BackgroundWorker (C#)](../../../../csharp/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md)|Przedstawia sposób tworzenia prostej aplikacji wielowątkowych.|  
 |[Synchronizacja wątku (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)|W tym artykule opisano sposób kontrolowania interakcje wątków.|  
 |[Wątek puli (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)|Opisuje sposób korzystanie z puli wątków roboczych, które są zarządzane przez system.|  
 |[Porady: Korzystanie z puli wątków (C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|Pokazuje zsynchronizowane używanie wielu wątków w puli wątków.|  

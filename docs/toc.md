@@ -201,8 +201,7 @@
 ### [Windows Workflow Foundation](framework/windows-workflow-foundation/)
 ### [Aplikacje usług systemu Windows](framework/windows-services/)
 ### [Aplikacje 64-bitowe](framework/64-bit-apps.md)
-### 
-  [Aplikacje internetowe wykorzystujące technologie ASP.NET](framework/develop-web-apps-with-aspnet.md)
+### [Aplikacje internetowe wykorzystujące technologie ASP.NET](framework/develop-web-apps-with-aspnet.md)
 ### [Programowanie dla sieci w programie .NET Framework](framework/network-programming/)
 ### [Konfigurowanie aplikacji](framework/configure-apps/)
 ### [Kompilowanie aplikacji z architekturą .NET Native](framework/net-native/)

@@ -1,4 +1,4 @@
----
+﻿---
 title: Into — Klauzula (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -12,16 +12,16 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33598495"
 ---
 # <a name="into-clause-visual-basic"></a>Into — Klauzula (Visual Basic)
-Identyfikuje funkcje agregujące lub grupy do zastosowania do kolekcji.  
-  
-## <a name="remarks"></a>Uwagi  
- Słowa kluczowego `Each` można użyć w następujących kontekstach:  
-  
- [Klauzula Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
-  
- [Klauzula Group By](../../../visual-basic/language-reference/queries/group-by-clause.md)  
-  
- [Klauzula Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)
+Identyfikuje funkcje agregujące lub grupy do zastosowania do kolekcji.
+
+## <a name="remarks"></a>Uwagi
+Słowa kluczowego `Each` można użyć w następujących kontekstach:
+
+[Klauzula Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md)
+
+[Klauzula Group By](../../../visual-basic/language-reference/queries/group-by-clause.md)
+
+[Klauzula Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)	
+
+## <a name="see-also"></a>Zobacz też
+[Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)

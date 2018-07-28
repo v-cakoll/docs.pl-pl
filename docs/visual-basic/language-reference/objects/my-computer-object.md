@@ -1,26 +1,26 @@
 ---
-title: My.Computer — Obiekt
+title: My.Computer — obiekt (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer object
 ms.assetid: cc814d79-6f7f-4e54-8b9d-5ecfdd77a0b8
-ms.openlocfilehash: c3af674bf56694d1ccf589033f97421faafd8c46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0518a380ee8b1e33a9b1ceeac7db6c0251c48edf
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597350"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39323043"
 ---
 # <a name="mycomputer-object"></a>My.Computer — Obiekt
 Udostępnia właściwości do manipulowania komputera składniki, takie jak audio, zegara, klawiatura, system plików i tak dalej.  
   
 ## <a name="remarks"></a>Uwagi  
- Informacje dotyczące metod i właściwości `My.Computer` obiektów, zobacz <xref:Microsoft.VisualBasic.Devices.Computer>. Klasa podstawowa <xref:Microsoft.VisualBasic.Devices.ServerComputer> zawiera elementów członkowskich, które są dostępne we wszystkich projektach.  
+ Aby uzyskać informacje dotyczące metod i właściwości `My.Computer` obiektu, zobacz <xref:Microsoft.VisualBasic.Devices.Computer>. Klasa bazowa <xref:Microsoft.VisualBasic.Devices.ServerComputer> oferuje elementy członkowskie, które są dostępne we wszystkich projektach.  
   
 ## <a name="requirements"></a>Wymagania  
  **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Klasa:** <xref:Microsoft.VisualBasic.Devices.Computer> (klasa podstawowa <xref:Microsoft.VisualBasic.Devices.ServerComputer> zawiera elementów członkowskich, które są dostępne we wszystkich projektach).  
+ **Klasa:** <xref:Microsoft.VisualBasic.Devices.Computer> (klasę bazową <xref:Microsoft.VisualBasic.Devices.ServerComputer> oferuje elementy członkowskie, które są dostępne we wszystkich projektach).  
   
  **Zestaw:** Visual Basic Runtime Library (w pliku Microsoft.VisualBasic.dll)  
   

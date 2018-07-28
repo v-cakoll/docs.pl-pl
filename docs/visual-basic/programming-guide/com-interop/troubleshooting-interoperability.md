@@ -17,60 +17,60 @@ helpviewer_keywords:
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
 ms.openlocfilehash: 65005dbbe42f52b3159c8e595972dace3064f986
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643708"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332671"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Rozwiązywanie problemów związanych z współdziałaniem (Visual Basic)
-Gdy współpraca między COM i kod zarządzany [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], mogą wystąpić co najmniej jeden z następujących typowych problemów.  
+Gdy współdziałania między COM i kodu zarządzanego z [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], może wystąpić co najmniej jeden z następujących typowych problemów.  
   
-##  <a name="vbconinteroperabilitymarshalinganchor1"></a> Przekazywanie międzyoperacyjne  
- W czasie, należy użyć typów danych, które nie są częścią [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Zestawy międzyoperacyjne obsługiwać większość pracy dla obiektów COM, ale może być konieczne kontrolować typów danych, które są używane, gdy obiekty zarządzane są widoczne dla modelu COM. Na przykład określić struktury w bibliotekach klas `BStr` niezarządzany typ na ciągach wysyłane do obiektów COM utworzonych przez Visual Basic 6.0 i starszych wersji. W takich przypadkach można użyć <xref:System.Runtime.InteropServices.MarshalAsAttribute> atrybutu spowodować typy zarządzane mają być uwidaczniane jako typy niezarządzane.  
+##  <a name="vbconinteroperabilitymarshalinganchor1"></a> Marshaling międzyoperacyjny  
+ Czasami może być używanie typów danych, które nie są częścią [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Zestawy międzyoperacyjne obsługiwać większość pracy dla obiektów COM, ale może być konieczne kontrolować typów danych, które są używane, gdy zarządzane obiekty są widoczne dla modelu COM. Na przykład, należy określić struktur w bibliotekach klas `BStr` niezarządzany typ na ciągi wysyłana do obiektów COM, utworzone przez program Visual Basic 6.0 i starszych wersji. W takich przypadkach można użyć <xref:System.Runtime.InteropServices.MarshalAsAttribute> atrybutu, aby spowodować, że typy zarządzane ujawnianie jako typy niezarządzanych.  
   
-##  <a name="vbconinteroperabilitymarshalinganchor2"></a> Eksportowanie do kodu niezarządzanego ciągi o stałej długości  
- W Visual Basic 6.0 i starszych wersjach ciągi zostaną wyeksportowane do obiektów COM jako sekwencję bajtów bez znaku zakończenia o wartości null. Zgodność z innymi językami Visual Basic .NET zawiera znak zakończenia podczas eksportowania ciągów. Najlepszym sposobem rozwiązania tej niezgodności nie jest eksportowane ciągów, których brakuje znaku zakończenia jako tablice `Byte` lub `Char`.  
+##  <a name="vbconinteroperabilitymarshalinganchor2"></a> Eksportowanie ciągi o stałej długości do kodu niezarządzanego  
+ W Visual Basic 6.0 i starszych wersjach ciągi są eksportowane do obiektów COM jako sekwencje bajtów bez znaku null zakończenie. Zgodność z innymi językami Visual Basic .NET zawiera znak zakończenia, podczas eksportowania ciągów. Najlepszym sposobem rozwiązania ta niezgodność nie jest eksportowane ciągów, które nie mają znak zakończenia jako tablice tego `Byte` lub `Char`.  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor3"></a> Eksportowanie hierarchii dziedziczenia  
- Zarządzane klasy hierarchie spłaszczanie wychodzących, gdy udostępniony jako obiekty COM. Na przykład jeśli definiuje klasę podstawową z elementem członkowskim, a następnie dziedziczyć klasa podstawowa w klasie pochodnej uwidocznioną jak dla obiektu COM, klientów, którzy używają klasy pochodnej w obiekcie COM nie będzie mógł używać dziedziczone elementy członkowskie. Elementów członkowskich klasy podstawowej są dostępne z obiektów COM tylko wystąpienia klasy podstawowej, a następnie tylko wtedy, gdy tworzona jest również klasy podstawowej jako obiekt COM.  
+ Zarządzane klasy, która hierarchii, spłaszczenie się ujawniane jako obiekty COM. Na przykład jeśli zdefiniować klasę bazową z elementem członkowskim, a następnie dziedziczyć klasy podstawowej w klasie pochodnej, która jest widoczna jako obiekt COM, klientów, którzy używają klasy pochodnej w obiekcie COM nie będzie używać dziedziczone elementy członkowskie. Składowych klasy bazowej są dostępne z obiektami COM tylko jako wystąpienia klasy bazowej, a następnie tylko wtedy, gdy klasa bazowa jest tworzona jako obiekt COM.  
   
-## <a name="overloaded-methods"></a>Metody przeciążane  
- Chociaż przeciążonych metod można tworzyć za pomocą Visual Basic, nie są obsługiwane przez COM. Gdy klasa, która zawiera przeciążonej metody jest ujawniona jako obiekt COM, nowe nazwy metody są generowane dla przeciążonej metody.  
+## <a name="overloaded-methods"></a>Przeciążone metody  
+ Chociaż przeciążonych metod można tworzyć za pomocą Visual Basic, nie są obsługiwane przez model COM. Ujawniane klasę, która zawiera przeciążonych metod jako obiekt COM nowe nazwy metody są generowane dla przeciążonych metod.  
   
- Rozważmy na przykład klasy, która ma dwa przeciążenia `Synch` metody. Jeśli klasa jest ujawniona jako obiekt COM, nowych nazw wygenerowane metody może być `Synch` i `Synch_2`.  
+ Rozważmy na przykład klasa, która ma dwa przeciążenia metody `Synch` metody. Gdy klasa jest udostępniana jako obiekt COM, nowe nazwy wygenerowana metoda może być `Synch` i `Synch_2`.  
   
- Zmiana nazwy może spowodować problemy w dwóch dla konsumentów obiektu COM.  
+ Zmiana nazwy może spowodować dwa problemy w konsumentach napisanych obiektu COM.  
   
-1.  Klienci nie mogą wymagać nazwy metod wygenerowany.  
+1.  Klienci mogą nie oczekuje nazwy wygenerowanej metody.  
   
-2.  Po dodaniu nowego przeciążeń klasy lub jej klasa podstawowa, można zmienić nazwy wygenerowane metody w klasie udostępniony jako obiekt COM. Może to powodować problemy przechowywania wersji.  
+2.  Nazwy wygenerowanej metody w klasie widoczne jako obiekt COM można zmienić, gdy nowe przeciążenia są dodawane do klasy lub jej klasy bazowej. Może to spowodować problemy z wersjonowaniem.  
   
- Aby rozwiązać problemy z obu, nadaj każdej metodzie unikatową nazwę, zamiast przeładowanie podczas opracowywania obiektów, które mają być widoczne jako obiekty COM.  
+ Aby rozwiązać problemy z obu, nadaj każdej metodzie unikatową nazwę, a nie za pomocą przeciążenia, podczas tworzenia obiektów, które będą dostępne jako obiekty COM.  
   
-##  <a name="vbconinteroperabilitymarshalinganchor4"></a> Korzystanie z obiektów COM za pomocą zestawy międzyoperacyjne  
- Możesz użyć zestawy międzyoperacyjne niemal tak, jakby były kodu zarządzanego zastępujące obiektów COM, które reprezentują. Jednak ponieważ są one otoki, a nie rzeczywiste obiektów COM, istnieją pewne różnice między używaniem zestawy międzyoperacyjne i standardowe zestawy. Te obszary różnicy to narażenia klas i typów danych parametrów i zwracanych wartości.  
+##  <a name="vbconinteroperabilitymarshalinganchor4"></a> Korzystanie z obiektów COM, przy użyciu zestawów międzyoperacyjnych  
+ Możesz użyć usług międzyoperacyjnych prawie tak, jakby były zamiany kodu zarządzanego dla obiektów COM, które reprezentują. Jednakże ponieważ są one otoki, a nie rzeczywiste obiektów COM, istnieją pewne różnice między przy użyciu zestawów międzyoperacyjnych i standardowe zestawy. Te obszary różnicy to narażenie klas i typów danych parametrów i zwracanych wartości.  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor5"></a> Klasy widoczne jako dotyczą obu interfejsów i klasy  
- W przeciwieństwie do klas w standardowe zestawy klasy COM są widoczne w zestawy międzyoperacyjne jako klasa, która reprezentuje klasy COM i interfejsu. Nazwa interfejsu jest identyczna jak klasa COM. Nazwa klasy międzyoperacyjny jest takie samo jak oryginalne klasy COM, ale ze słowem "Class" jest dołączany. Załóżmy na przykład projektu z odwołania do zestawu międzyoperacyjnego dla obiekt COM. Jeśli nosi nazwę klasy COM `MyComClass`, IntelliSense i przeglądarka obiektów Pokaż interfejs o nazwie `MyComClass` i klasę o nazwie `MyComClassClass`.  
+ W odróżnieniu od klas w standardowe zestawy klasy COM są widoczne w zestawach międzyoperacyjnych jako interfejs i klasę, która reprezentuje klasę modelu COM. Nazwa interfejsu jest taka sama jak w przypadku klasy COM. Nazwa klasy międzyoperacyjny jest taka sama, jak w przypadku oryginalnej klasy COM, ale wyrazem "Class" jest dołączona. Na przykład załóżmy, że masz projekt za pomocą odwołania do zestawu międzyoperacyjnego dla obiektu COM. Jeśli klasa COM nosi nazwę `MyComClass`, funkcja IntelliSense i przeglądarki obiektów pokazać interfejs o nazwie `MyComClass` i klasę o nazwie `MyComClassClass`.  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor6"></a> Tworzenie wystąpienia klasy .NET Framework  
- Ogólnie rzecz biorąc, można utworzyć wystąpienia [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] przy użyciu `New` instrukcję, określając nazwę klasy. Klasy COM reprezentowany przez zestaw międzyoperacyjny jest jeden przypadek, w którym można użyć `New` instrukcji przy użyciu interfejsu. Tylko w przypadku korzystania z klasy COM `Inherits` instrukcji, można użyć interfejsu, tak jak w klasie. Poniższy kod przedstawia sposób tworzenia `Command` obiektu w projekcie, który zawiera odwołanie do obiektu Microsoft ActiveX danych obiektów 2.8 biblioteki COM:  
+ Ogólnie rzecz biorąc, Utwórz wystąpienie [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] przy użyciu `New` instrukcję, określając nazwę klasy. Klasa COM, reprezentowane przez zestaw międzyoperacyjny jest jeden przypadek, w którym można użyć `New` instrukcji przy użyciu interfejsu. Jeśli nie używasz klasy COM za pomocą `Inherits` instrukcji, tak samo jak klasy, można użyć interfejsu. Poniższy kod przedstawia sposób tworzenia `Command` obiektu w projekcie, który zawiera odwołanie do obiektu ActiveX firmy Microsoft danych 2.8 obiektów biblioteki modelu COM:  
   
  [!code-vb[VbVbalrInterop#20](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_1.vb)]  
   
- Jeśli używasz klasy COM jako podstawa dla klasy pochodnej, musi jednak użyć międzyoperacyjnego klasa, która reprezentuje klasy COM, zgodnie z poniższym kodem:  
+ Jednak jeśli używasz klasy modelu COM jako podstawy dla klasy pochodnej, należy użyć międzyoperacyjny klasę, która reprezentuje klasę modelu COM, zgodnie z poniższym kodem:  
   
  [!code-vb[VbVbalrInterop#21](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_2.vb)]  
   
 > [!NOTE]
->  Zestawy międzyoperacyjne niejawnie zaimplementować interfejsów, które reprezentują klasy COM. Nie należy próbować użyć `Implements` spowoduje instrukcji do realizacji tych interfejsów lub wystąpił błąd.  
+>  Zestawy międzyoperacyjne niejawnie implementować interfejsy, które reprezentują klasy COM. Nie należy próbować użyć `Implements` spowoduje instrukcję, aby zaimplementować te interfejsy lub komunikat o błędzie.  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor7"></a> Typy danych dla parametrów i zwracanych wartości  
- W przeciwieństwie do członków standardowe zestawy zestawu międzyoperacyjnego członkowie mogą mieć typów danych, które różnią się od używanych w oryginalnej deklaracji obiektu. Mimo że zestawy międzyoperacyjne niejawnie przekonwertować typów COM niezgodne typy środowiska uruchomieniowego języka wspólnego, należy zwrócić uwagę na typy danych, które są używane przez obie strony, aby zapobiec wystąpieniu błędów czasu wykonywania. Na przykład w modelu COM obiektów tworzonych w Visual Basic 6.0 i starszych wersjach, wartości typu `Integer` założono [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] odpowiednik typu `Short`. Zalecane jest, użyj przeglądarki obiektów do sprawdzenia właściwości elementów członkowskich zaimportowane przed ich użyciem.  
+ W odróżnieniu od członków standardowe zestawy zestaw międzyoperacyjny członkowie mogą mieć typów danych, które różnią się od tych używanych w oryginalnej deklaracji obiektu. Mimo że zestawy międzyoperacyjne niejawnie przekonwertować typy modelu COM zgodnych typów środowiska wykonawczego języka wspólnego, należy zwrócić uwagę na typy danych, które są używane przez obie strony, aby zapobiec wystąpieniu błędów środowiska uruchomieniowego. Na przykład w przypadku obiektów COM, utworzone w języku Visual Basic 6.0 i starsze wersje, wartości typu `Integer` założono [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] równoważny typ `Short`. Zalecane jest, użyj przeglądarki obiektów do zbadania właściwości elementów członkowskich zaimportowane przed ich użyciem.  
   
-##  <a name="vbconinteroperabilitymarshalinganchor8"></a> Moduł metody na poziomie modelu COM  
- Większość obiektów COM są używane przez utworzenie wystąpienia klasy modelu COM przy użyciu `New` — słowo kluczowe, a następnie podczas wywoływania metody obiektu. Jedynym wyjątkiem od tej reguły obejmuje obiekty COM, które zawierają `AppObj` lub `GlobalMultiUse` klasy COM. Takie klasy przypominać modułu poziomu metod w klasach Visual Basic .NET. Visual Basic 6.0 i starszych wersji niejawnie tworzy wystąpienia takich obiektów, należy wywołać metod ich po raz pierwszy. Na przykład w Visual Basic 6.0 można dodać odwołanie do biblioteki obiektów Microsoft DAO 3,6 i wywołanie `DBEngine` metody bez tworzenia wystąpienia:  
+##  <a name="vbconinteroperabilitymarshalinganchor8"></a> Moduł metod na poziomie modelu COM  
+ Większość obiektów COM są używane przez utworzenie wystąpienia klasy modelu COM za pomocą `New` — słowo kluczowe, a następnie wywoływania metod obiektu. Jedynym wyjątkiem od tej reguły pociąga za sobą obiektów COM, które zawierają `AppObj` lub `GlobalMultiUse` klasy COM. Takich klas przypominają modułu poziomu metod w klasach Visual Basic .NET. Visual Basic 6.0 i starsze wersje niejawnie tworzy wystąpienia takich obiektów, należy wywołać metody ich po raz pierwszy. Na przykład w języku Visual Basic 6.0 można dodać odwołanie do biblioteki obiektów Microsoft DAO 3.6 i wywołanie `DBEngine` metody bez tworzenia wystąpienia:  
   
 ```vb  
 Dim db As DAO.Database  
@@ -79,52 +79,52 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
 ' Use the database object.  
 ```  
   
- Visual Basic .NET wymaga zawsze twórz wystąpienia obiektów COM przed użyciem ich metod. Aby korzystać z tych metod w języku Visual Basic, zadeklarować zmiennej odpowiednią klasę i użyj słowa kluczowego nowe można przypisać obiektu zmiennej obiektu. `Shared` — Słowo kluczowe może służyć, jeśli chcesz upewnić się, że tylko jedno wystąpienie klasy jest tworzone.  
+ Visual Basic .NET wymaga zawsze tworzenia wystąpień obiektów COM przed użyciem ich metod. Aby korzystać z tych metod w języku Visual Basic, Zadeklaruj zmienną odpowiednią klasę i użyj słowa kluczowego new, aby przypisać obiekt do zmiennej obiektu. `Shared` — Słowo kluczowe może służyć, jeśli chcesz upewnić się, że tylko jedno wystąpienie tej klasy jest tworzona.  
   
  [!code-vb[VbVbalrInterop#23](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_3.vb)]  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor9"></a> Nieobsługiwane błędy w obsłudze zdarzeń  
- Jednym z typowych problemów międzyoperacyjnego obejmuje błędy w obsłudze zdarzenia, które obsługi zdarzenia generowane przez obiekty COM. Takie błędy są ignorowane w szczególności należy sprawdzić błędy, używając `On Error` lub `Try...Catch...Finally` instrukcje. Na przykład poniższy przykład pochodzi z projektu programu Visual Basic .NET, który zawiera odwołanie do obiektu Microsoft ActiveX danych obiektów 2.8 biblioteki COM.  
+ Jednym z typowych problemów międzyoperacyjny polega na błędy w procedurze obsługi zdarzeń, obsługujące zdarzenia generowane przez obiekty COM. Takie błędy są ignorowane, chyba że specjalnie sprawdzania błędów przy użyciu `On Error` lub `Try...Catch...Finally` instrukcji. Na przykład poniższy przykład pochodzi z projektu języka Visual Basic .NET, który zawiera odwołanie do obiektu ActiveX firmy Microsoft danych 2.8 obiektów biblioteki modelu COM.  
   
  [!code-vb[VbVbalrInterop#24](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_4.vb)]  
   
- W tym przykładzie zgłasza błąd, zgodnie z oczekiwaniami. Jednak Jeśli spróbujesz tym samym przykładzie bez `Try...Catch...Finally` bloku, błąd jest ignorowany, jak w przypadku korzystania `OnError Resume Next` instrukcji. Brak obsługi błędów dzielenie przez zero dyskretnie nie powiedzie się. Ponieważ takie błędy nigdy nie Zgłoś błędy nieobsługiwany wyjątek, ważne jest użycie jakiegoś obsługi wyjątków w obsługi zdarzeń z obiektami COM procedury obsługi zdarzeń.  
+ W tym przykładzie zgłasza błąd, zgodnie z oczekiwaniami. Jednak jeśli zostanie podjęta w tym samym przykładzie bez `Try...Catch...Finally` bloku, błąd jest ignorowany, jak w przypadku korzystania `OnError Resume Next` instrukcji. Bez obsługi błędów, dzielenie przez zero dyskretnie kończy się niepowodzeniem. Ponieważ takie błędy nigdy nie zgłaszać błędy nieobsługiwany wyjątek, jest ważne, że używasz pewnego rodzaju obsługi wyjątków w procedury obsługi zdarzeń, które obsługują zdarzenia z obiektami COM.  
   
-### <a name="understanding-com-interop-errors"></a>Opis COM interop błędów  
- Bez obsługi błędów wywołania międzyoperacyjnego często generowanie błędów, które zapewniają niewielka ilość informacji. Jeśli to możliwe, należy użyć strukturalnych obsługi zapewniające więcej informacji na temat problemów podczas występowania błędów. Może to być szczególnie przydatne podczas debugowania aplikacji. Na przykład:  
+### <a name="understanding-com-interop-errors"></a>Informacje o błędach międzyoperacyjnego modelu COM  
+ Bez obsługi błędów wywołań międzyoperacyjnych często generować błędy, które zapewniają trochę informacji. Możliwe, używaj ze strukturą obsługę błędów do Podaj więcej informacji na temat problemów, kiedy się pojawią. Może to być szczególnie przydatne podczas debugowania aplikacji. Na przykład:  
   
  [!code-vb[VbVbalrInterop#25](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_5.vb)]  
   
- Informacje, takie jak opis błędu HRESULT i źródła COM błędów można znaleźć, sprawdzając zawartość obiektu wyjątku.  
+ Informacje, takie jak opis błędu HRESULT i źródłem błędów COM można znaleźć, sprawdzając zawartość obiektu wyjątku.  
   
-##  <a name="vbconinteroperabilitymarshalinganchor10"></a> Problemy z formantu ActiveX  
- Większość formantów ActiveX, które współpracują z Visual Basic 6.0 pracować z Visual Basic .NET bez problemów. Główne wyjątki są kontrole kontenerów lub kontrolki, które wizualnie zawierają inne formanty. Przykłady starsze formantów, które nie działają prawidłowo z programem Visual Studio są następujące:  
+##  <a name="vbconinteroperabilitymarshalinganchor10"></a> Problemy z kontrolki ActiveX  
+ Większość kontrolki ActiveX, współpracujących z Visual Basic 6.0 pracować w Visual Basic .NET, które bez problemów. Główne wyjątki są kontrole kontenerów lub formanty, które będzie zawierać inne kontrolki. Kilka przykładów starsze formantów, które nie będą działać poprawnie z programem Visual Studio są następujące:  
   
--   Formant Microsoft Forms 2.0 ramki  
+-   Formant programu Microsoft Forms 2.0 ramki  
   
--   Formantu góra-dół, znanej także jako pokrętła  
+-   Góra-dół kontrolki, znany także jako kontrolki pokrętła  
   
--   Sheridan formantu karty  
+-   Kontrolka karty Sheridan  
   
- Istnieje tylko kilka obejścia nieobsługiwany problemów formantu ActiveX. Można przeprowadzić migrację istniejących formantów do programu Visual Studio, jeśli oryginalny kod źródłowy. W przeciwnym razie możesz skontaktować się z dostawcami oprogramowania dla aktualizacji. NET zgodnej wersji formantów, aby zastąpić nieobsługiwane formantów ActiveX.  
+ Istnieją tylko kilka obejścia nieobsługiwany występują problemy z kontrolki ActiveX. Można przeprowadzić migrację istniejących kontrolek do programu Visual Studio, jeśli jesteś właścicielem oryginalnego kodu źródłowego. W przeciwnym razie możesz skontaktować się z dostawcami oprogramowania dla aktualizacji. NET zgodnej wersji formantów, aby zastąpić nieobsługiwane formanty ActiveX.  
   
-##  <a name="vbconinteroperabilitymarshalinganchor11"></a> Właściwości tylko do odczytu przekazywanie ByRef formantów  
- Visual Basic .NET czasami zgłasza błędy COM, takie jak "CTL_E_SETNOTSUPPORTED 0x800A017F błąd", podczas przekazywania `ReadOnly` właściwości niektóre starsze formantów ActiveX jako `ByRef` parametrów do innych procedur. Podobne wywołań procedur w języku Visual Basic 6.0 Nie wywołuj błąd, a parametry są traktowane jako przekazany przez wartość. Komunikat o błędzie w języku Visual Basic .NET wskazuje, czy chcesz zmienić właściwość, która nie ma właściwości `Set` procedury.  
+##  <a name="vbconinteroperabilitymarshalinganchor11"></a> Przekazywanie tylko do odczytu właściwości formantów ByRef  
+ Jeśli przekazujesz Visual Basic .NET czasami zgłasza błędy COM, takie jak "Błąd 0x800A017F CTL_E_SETNOTSUPPORTED" `ReadOnly` właściwości niektóre starsze formanty ActiveX jako `ByRef` parametry do innych procedur. Podobnie w przypadku wywołania procedur z Visual Basic 6.0 nie zgłaszaj błąd, a parametry są traktowane tak, jakby przekazywane przez wartość. Komunikat o błędzie Visual Basic .NET wskazuje na to, czy chcesz zmienić właściwość, która nie ma właściwości `Set` procedury.  
   
- Jeśli masz dostęp do procedury wywoływanej można uniknąć tego błędu przy użyciu `ByVal` — słowo kluczowe, aby zadeklarować parametrów, które akceptują `ReadOnly` właściwości. Na przykład:  
+ Jeśli masz dostęp do procedury wywoływana, możesz uniknąć tego błędu, za pomocą `ByVal` — słowo kluczowe do deklarowania parametry, które akceptują `ReadOnly` właściwości. Na przykład:  
   
  [!code-vb[VbVbalrInterop#26](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_6.vb)]  
   
- Jeśli nie masz dostępu do kodu źródłowego dla procedury wywoływanej, możesz wymusić właściwości przekazywany przez wartość przez dodanie dodatkowych zbiór nawiasy wywołanie procedury. Na przykład w projekcie, które zawiera odwołanie do obiektu Microsoft ActiveX danych obiektów 2.8 biblioteki COM, można:  
+ Jeśli nie masz dostępu do kodu źródłowego dla procedury wywoływana, możesz wymusić właściwości, które mają być przekazane przez wartość, dodając dodatkowy zestaw nawiasów wokół procedury wywołującej. Na przykład w projekcie, który zawiera odwołanie do obiektu ActiveX firmy Microsoft danych 2.8 obiektów biblioteki modelu COM, należy użyć:  
   
  [!code-vb[VbVbalrInterop#27](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_7.vb)]  
   
-##  <a name="vbconinteroperabilitymarshalinganchor12"></a> Wdrażanie zestawów, które udostępniają Interop  
- Wdrażanie zestawów, które udostępniają interfejsy modelu COM przedstawia niektóre wyjątkowe wyzwanie. Na przykład potencjalny problem występuje, gdy aplikacje oddzielne odwoływać się do tego samego zestawu COM. Ta sytuacja jest wspólne, gdy instalowana jest nowa wersja zestawu i starą wersję zestawu nadal jest używany przez inną aplikację. Po odinstalowaniu zestawu, który udostępnia bibliotekę DLL, użytkownik może przypadkowo był dostępny dla innych zestawów.  
+##  <a name="vbconinteroperabilitymarshalinganchor12"></a> Wdrażanie zestawów, które uwidaczniają międzyoperacyjności  
+ Wdrażanie zestawów, które uwidaczniają interfejsów COM przedstawiono niektóre wyzwania. Na przykład potencjalny problem występuje, gdy aplikacje oddzielne odwoływać się do tego samego zestawu COM. Ta sytuacja jest typowa, gdy nowa wersja zestawu jest zainstalowany i starą wersję zestawu nadal jest używany przez inną aplikację. Po odinstalowaniu zestawu, który udostępnia bibliotekę DLL, użytkownik może przypadkowo był dostępny dla innych zestawów.  
   
- Aby uniknąć tego problemu, należy zainstalować udostępnionych zestawów do globalnej pamięci podręcznej zestawów (GAC) i użycia dla składowej MergeModule. Jeśli nie można zainstalować aplikacji w pamięci podręcznej GAC, należy zainstalować na CommonFilesFolder w podkatalogu określonej wersji.  
+ Aby uniknąć tego problemu, możesz zainstalować współużytkowanych zestawów do globalnej pamięci podręcznej zestawów (GAC) i użyj MergeModule dla składnika. Jeśli aplikacja nie można zainstalować w GAC, powinien być zainstalowany na CommonFilesFolder w podkatalogu specyficzny dla wersji.  
   
- Zestawy, które nie są udostępnione powinien znajdować się obok siebie w katalogu z aplikacji wywołującej.  
+ Zestawy, które nie są współdzielone powinny się znajdować obok siebie w katalogu z aplikacji wywołującej.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>  

@@ -1,23 +1,23 @@
 ---
-title: 'Porady: znajdowanie elementu podrzędnego (XPath-LINQ do XML) (Visual Basic)'
+title: 'Porady: Wyszukiwanie elementu podrzędnego (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: adb46c98-a650-42e2-b62d-835920fe8421
 ms.openlocfilehash: 122cc269b95a3f35b8eef71e9c7ca1d50af4210b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640461"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332616"
 ---
-# <a name="how-to-find-a-child-element-xpath-linq-to-xml-visual-basic"></a>Porady: znajdowanie elementu podrzędnego (XPath-LINQ do XML) (Visual Basic)
-W tym temacie porównuje osi elementu podrzędnego XPath do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> metody.  
+# <a name="how-to-find-a-child-element-xpath-linq-to-xml-visual-basic"></a>Porady: Wyszukiwanie elementu podrzędnego (XPath-LINQ to XML) (Visual Basic)
+W tym temacie porównano osi elementu podrzędnego XPath do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> metody.  
   
  Wyrażenie XPath jest `DeliveryNotes`.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie znajduje element podrzędny `DeliveryNotes`.  
+ W tym przykładzie wyszukuje element podrzędny `DeliveryNotes`.  
   
- W tym przykładzie użyto następujących dokumentu XML: [przykładowego pliku XML: wiele zakupów (LINQ do XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ W tym przykładzie użyto następujący dokument XML: [przykładowy plik XML: wiele zamówień zakupu (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Dim cpo As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -47,4 +47,4 @@ Results are identical
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [LINQ do XML dla wyrażenia XPath użytkowników (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+ [LINQ to XML dla użytkowników metody XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

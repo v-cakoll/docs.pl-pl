@@ -1,29 +1,29 @@
 ---
-title: 'Porady: strumienia fragmenty XML z element XmlReader (Visual Basic)'
+title: 'Porady: Stream fragmentów kodu XML z elementu XmlReader (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: f67ce598-4a12-4dcb-9a07-24deca02a111
 ms.openlocfilehash: 38a81e83421dffc997a2cbfd6d0996da5ece18d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643392"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332704"
 ---
-# <a name="how-to-stream-xml-fragments-from-an-xmlreader-visual-basic"></a>Porady: strumienia fragmenty XML z element XmlReader (Visual Basic)
-Podczas przetwarzania dużych plików XML, może nie być możliwe do załadowania całego drzewa XML do pamięci. W tym temacie przedstawiono sposób strumienia fragmenty przy użyciu <xref:System.Xml.XmlReader>.  
+# <a name="how-to-stream-xml-fragments-from-an-xmlreader-visual-basic"></a>Porady: Stream fragmentów kodu XML z elementu XmlReader (Visual Basic)
+W przypadku przetwarzania dużych plików XML, może nie być możliwe do załadowania całego drzewa XML do pamięci. W tym temacie pokazano, jak przesyłać strumieniowo fragmentów przy użyciu <xref:System.Xml.XmlReader>.  
   
- Jedną z najbardziej skutecznych sposobów użycia <xref:System.Xml.XmlReader> odczytać <xref:System.Xml.Linq.XElement> obiektów jest napisanie własnej metody niestandardowe osi. Metoda osi takich jak zwykle zwraca kolekcję <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement>, jak pokazano w przykładzie w tym temacie. W metodzie niestandardowych osi, po utworzeniu fragmentu XML przez wywołanie metody <xref:System.Xml.Linq.XNode.ReadFrom%2A> metody zwrócić przy użyciu kolekcji `yield return`. Zapewnia to wykonanie odroczone semantyki do metody niestandardowe osi.  
+ Jedną z najbardziej skutecznych sposobów użycia <xref:System.Xml.XmlReader> odczytać <xref:System.Xml.Linq.XElement> obiektów jest napisanie własnej metody osi niestandardowych. Metody osi takich jak zwykle zwraca kolekcję <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement>, jak pokazano w przykładzie w tym temacie. W metodzie niestandardowej osi po utworzeniu XML fragment, wywołując <xref:System.Xml.Linq.XNode.ReadFrom%2A> metody zwracają kolekcję przy użyciu `yield return`. Dzięki temu semantyki wykonanie odroczone do metody osi niestandardowych.  
   
- Po utworzeniu drzewo XML z <xref:System.Xml.XmlReader> obiektu <xref:System.Xml.XmlReader> musi być umieszczony w elemencie. <xref:System.Xml.Linq.XNode.ReadFrom%2A> Nie może zwracać metoda dopóki odczyta tagu zamknięcia elementu.  
+ Podczas tworzenia drzewa XML z <xref:System.Xml.XmlReader> obiektu <xref:System.Xml.XmlReader> musi być umieszczony w elemencie. <xref:System.Xml.Linq.XNode.ReadFrom%2A> Metoda nie zwraca, dopóki odczyta Zamknij tagu elementu.  
   
- Jeśli chcesz utworzyć drzewa częściowe, można utworzyć wystąpienia <xref:System.Xml.XmlReader>, umieść czytnik na węźle, który ma zostać przekonwertowany na <xref:System.Xml.Linq.XElement> drzewa, a następnie utwórz <xref:System.Xml.Linq.XElement> obiektu.  
+ Jeśli chcesz utworzyć drzewo częściowe, można utworzyć wystąpienie <xref:System.Xml.XmlReader>, umieść czytelnika na węźle, który chcesz przekonwertować <xref:System.Xml.Linq.XElement> drzewa, a następnie utwórz <xref:System.Xml.Linq.XElement> obiektu.  
   
- Temat [porady: strumień fragmenty XML z dostępem do informacji w nagłówku (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) zawiera informacje i przykład dotyczące strumienia bardziej złożonych dokumentu.  
+ Temat [jak: Stream XML fragmentów z dostępem do informacji w nagłówku (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) zawiera informacje i obejrzeć przykład do przesyłania strumieniowego bardziej złożonych dokumentów.  
   
- Temat [porady: wykonaj przesyłania strumieniowego przekształcenie o dużych dokumentów XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) zawiera przykład LINQ do XML do transformacji dokumentów XML wyjątkowa przy zachowaniu zużycia pamięci.  
+ Temat [jak: wykonywać przesyłania strumieniowego Przekształcanie z dużymi dokumentami XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) zawiera przykład korzystania z LINQ to XML do transformowania bardzo dużych dokumentów XML przy zachowaniu zużycie pamięci.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie tworzy metodę niestandardowych osi. Odpytywaną przy użyciu [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania. Metody niestandardowe osi `StreamRootChildDoc`, to metoda, która jest zaprojektowany specjalnie w celu odczytu dokumentu, który zawiera powtarzające się `Child` elementu.  
+ W tym przykładzie tworzy metodę niestandardowe osi. Można tworzyć zapytania przy użyciu [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania. Metoda niestandardowe osi `StreamRootChildDoc`, to metoda, która jest przeznaczona specjalnie do odczytu dokumentu, który zawiera powtarzające się `Child` elementu.  
   
 ```vb  
 Module Module1  
@@ -143,8 +143,8 @@ bbb
 ccc  
 ```  
   
- W tym przykładzie dokument źródłowy jest bardzo mała. Jednak nawet wtedy, gdy było miliony `Child` elementów, w tym przykładzie nadal będzie miał zużycie pamięci.  
+ W tym przykładzie dokument źródłowy jest bardzo mały. Jednak nawet wtedy, gdy było milionów `Child` elementów, w tym przykładzie nadal będzie miał zużycie pamięci.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wskazówki: Wdrażanie IEnumerable(Of T) w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/control-flow/walkthrough-implementing-ienumerable-of-t.md)  
- [Analiza kodu XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+ [Analizowanie kodu XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

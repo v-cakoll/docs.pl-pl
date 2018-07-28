@@ -6,77 +6,77 @@ helpviewer_keywords:
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
 ms.openlocfilehash: 41fd612695fbeacbc7b53cb9e5dbf67939e73482
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654742"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332603"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Wpływ kultury na ciągi w Visual Basic
-Ta strona pomocy opisano, jak Visual Basic używa informacji o kulturze do wykonywania konwersji ciągów i porównania.  
+Tej strony Pomocy opisano, jak Visual Basic używa informacji o kulturze przeprowadzenie ciąg konwersje i porównań.  
   
 ## <a name="when-to-use-culture-specific-strings"></a>Kiedy należy używać ciągów specyficzne dla kultury  
- Zazwyczaj powinien Użyj parametrów specyficzne dla kultury dla wszystkich danych, przedstawione i odczytywać użytkowników, użyj parametrów niezmiennej kultury dla danych wewnętrznych aplikacji.  
+ Zazwyczaj należy używać ciągów specyficzne dla kultury dla wszystkich danych przedstawiony w usłudze i odczytu z użytkowników i używać parametrów niezmiennej kultury dla danych wewnętrznych aplikacji.  
   
- Na przykład jeśli aplikacja prosi użytkowników o celu wprowadź datę jako ciąg, powinien oczekiwać użytkowników do formatowania ciągi zgodnie z ich kultury, a aplikacji należy odpowiednio przekonwertować ciągu. Jeśli następnie aplikacja przedstawia datę w interfejsie użytkownika, jego powinni przedstawić kulturę użytkownika.  
+ Na przykład jeśli aplikacja prosi użytkowników podania datę jako ciąg znaków, należy się spodziewać użytkownicy do formatowania ciągów zgodnie z ich kultury i aplikacji należy przekonwertować ciąg odpowiednio. Jeśli następnie aplikacja wyświetla datę w interfejsie użytkownika, ona powinny prezentować kultury użytkownika.  
   
- Jednak jeśli aplikacja prześle daty do centralnego serwera, należy sformatować ciągu zgodnie z jedną określoną kulturę, aby uniknąć pomylenia formaty daty innej.  
+ Jednak jeśli aplikacja przekazuje daty do centralnego serwera, należy sformatować ciąg według jedną określoną kulturę, aby zapobiec niejasności między formatami potencjalnie inną datę.  
   
 ## <a name="culture-sensitive-functions"></a>Funkcje zależne od kultury  
- Wszystkie funkcje Konwersja ciągu języka Visual Basic (z wyjątkiem `Str` i `Val` funkcje) umożliwia upewnienie się, że konwersje i porównania są odpowiednie dla kultury aplikacji informacje o ustawieniach kulturowych aplikacji użytkownik.  
+ Wszystkie funkcje konwersji ciągów w Visual Basic (z wyjątkiem `Str` i `Val` funkcji) Użyj informacji o kulturze aplikacji, aby upewnić się, konwersji i porównania są właściwe dla kultury aplikacji użytkownik.  
   
- Aby pomyślnie przy użyciu funkcji konwersji ciągów na aplikacje, które działają na komputerach z ustawieniami inną kulturę należy zrozumieć, jakie funkcje ustawienie określoną kulturę, a które wykorzystują bieżące ustawienie kultury. Zwróć uwagę, że aplikacja, ustawienia kultury domyślnie dziedziczone z ustawienia kultury, system operacyjny. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>, <xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>, <xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Conversion.Hex%2A>, <xref:Microsoft.VisualBasic.Conversion.Oct%2A>, i [funkcje konwersji typu](../../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
+ Kluczem do pomyślnie przy użyciu funkcji konwersji ciągów w aplikacjach, które są uruchamiane na komputerach z ustawieniami inną kulturę jest zrozumienie, jakie funkcje ustawienie określonej kultury, a które użyć bieżącego ustawienia kultury. Należy zauważyć, że ustawienia kultury aplikacji domyślnie odziedziczone ustawienia kultury systemu operacyjnego. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>, <xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>, <xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Conversion.Hex%2A>, <xref:Microsoft.VisualBasic.Conversion.Oct%2A>, i [funkcje konwersji typu](../../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
   
- `Str` (Konwertuje wartości do ciągów) i `Val` funkcji (konwertowania ciągów na liczby) nie należy używać informacji o kulturze aplikacji podczas konwersji między ciągi i liczby. Zamiast tego uznają tylko kropki (.), prawidłowe separatorem dziesiętnym. Kulturalnie obsługujący stosować te funkcje są:  
+ `Str` (Konwertuje liczb na ciągi znaków) i `Val` funkcji (konwertuje ciągi na liczby) należy używać informacji o kulturze aplikacji podczas konwersji między ciągi i liczby. Zamiast tego mogą rozpoznać tylko kropki (.) jako separator dziesiętny prawidłowy. Kulturalnie obsługujących podobne produkty z tych funkcji są następujące:  
   
--   **Konwersje korzystających z bieżącej kultury.** `CStr` i `Format` funkcje konwertowanie liczby na ciąg znaków i `CDbl` i `CInt` funkcji: konwertowanie ciągu na liczbę.  
+-   **Konwersje, które używają bieżącej kultury.** `CStr` i `Format` funkcji konwertuje liczbę na ciąg i `CDbl` i `CInt` funkcji konwertuje ciąg na liczbę.  
   
--   **Konwersje korzystających z określoną kulturę.** Każdy obiekt numer ma `ToString(IFormatProvider)` metodę, która konwertuje liczbę na ciąg znaków, i `Parse(String, IFormatProvider)` metodę, która konwertuje ciąg na liczbę. Na przykład `Double` typ zapewnia <xref:System.Double.ToString%28System.IFormatProvider%29> i <xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29> metody.  
+-   **Konwersje, które używają określonej kultury.** Każdy obiekt numer ma `ToString(IFormatProvider)` metodę, która konwertuje liczbę na ciąg i `Parse(String, IFormatProvider)` metodę, która konwertuje ciąg na liczbę. Na przykład `Double` typ zapewnia <xref:System.Double.ToString%28System.IFormatProvider%29> i <xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29> metody.  
   
  Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.Conversion.Str%2A> i <xref:Microsoft.VisualBasic.Conversion.Val%2A>.  
   
-## <a name="using-a-specific-culture"></a>Używając określonej kultury  
- Załóżmy, że opracowujesz aplikację, która wysyła do usługi sieci Web Data (sformatowany jako ciąg). W takim przypadku aplikacja musi używać określoną kulturę konwersji ciągu. Aby zilustrować przyczyny, należy wziąć pod uwagę wynik z datą <xref:System.DateTime.ToString> metody: Jeśli aplikacja korzysta z tej metody do formatowania daty 4 lipca 2005 zwraca "2005-7/4 12:00:00 AM" uruchomienia z kulturą Polska angielski (en US), ale zwraca " 04.07.2005 00:00:00 "uruchomienia z kulturą niemiecki (de-DE).  
+## <a name="using-a-specific-culture"></a>Przy użyciu określonej kultury  
+ Wyobraź sobie, że opracowujesz aplikację, która wysyła daty (sformatowany jako ciąg) do usługi sieci Web. W tym przypadku aplikacja musi używać określonej kultury do konwersji ciągu. Do zilustrowania Dlaczego, należy wziąć pod uwagę wynik za pomocą daty <xref:System.DateTime.ToString> metoda: Jeśli aplikacja korzysta z tej metody do formatowania daty 4 lipca 2005, zwraca "7/4/2005 12:00:00 AM" uruchamiania z kulturą Stanów Zjednoczonych angielski (en US), ale zwraca " 04.07.2005 00:00:00 "uruchamiania z kulturą niemiecki (de-DE).  
   
- Gdy trzeba wykonać Konwersja ciągu w formacie określoną kulturę, należy używać `CultureInfo` klasy, która jest wbudowana w [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Można utworzyć nowy `CultureInfo` obiektu dla określonej kultury przekazując nazwę kultury <xref:System.Globalization.CultureInfo.%23ctor%2A> konstruktora. Nazwy kultury obsługiwane są wymienione w <xref:System.Globalization.CultureInfo> klasy strony pomocy.  
+ Gdy zachodzi potrzeba wykonania konwersji ciągu w formacie określonej kultury, należy użyć `CultureInfo` klasy, która jest wbudowana w [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Można utworzyć nową `CultureInfo` obiektu dla określonej kultury, przekazując nazwę kultury, aby <xref:System.Globalization.CultureInfo.%23ctor%2A> konstruktora. Nazwy kultury obsługiwane są wymienione w <xref:System.Globalization.CultureInfo> klasy strony pomocy.  
   
- Alternatywnie można pobrać wystąpienia *Niezmienna kultura* z <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> właściwości. Niezmienna kultura opiera się na angielski kultury, ale istnieją pewne różnice. Na przykład Niezmienna kultura określa 24-godzinnym zamiast 12-godzinnym.  
+ Alternatywnie można pobrać wystąpienia *niezmiennej kultury* z <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> właściwości. Zależy od kultury niezmiennej kultury angielski, ale istnieją pewne różnice. Na przykład niezmiennej kultury określa zegara 24-godzinnego, zamiast 12-godzinnym.  
   
- Aby przekonwertować datę na ciąg kultury, należy przekazać <xref:System.Globalization.CultureInfo> obiektu do obiektu data <xref:System.DateTime.ToString%28System.IFormatProvider%29> metody. Na przykład poniższy kod wyświetla "07/04/2005 00:00:00", niezależnie od ustawienia kultury aplikacji.  
+ Aby przekonwertować datę na ciąg kultury, należy przekazać <xref:System.Globalization.CultureInfo> obiektu do obiektu daty <xref:System.DateTime.ToString%28System.IFormatProvider%29> metody. Na przykład, poniższy kod wyświetla "07/04/2005 00:00:00", niezależnie od ustawień kultury aplikacji.  
   
  [!code-vb[VbVbalrConcepts#1](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/VisualBasic/how-culture-affects-strings_1.vb)]  
   
 > [!NOTE]
->  Literały daty są zawsze interpretowane zgodnie z kulturą angielskiej wersji językowej.  
+>  Literały daty są zawsze interpretowane zgodnie z kulturą angielskiego.  
   
 ## <a name="comparing-strings"></a>Porównywanie ciągów  
- Istnieją dwie sytuacje ważne, gdy są potrzebne porównywania ciągów:  
+ Istnieją dwie ważne sytuacje, w których porównania ciągów są wymagane:  
   
--   **Sortowanie danych w celu wyświetlenia dla użytkownika.** Użyj operacji oparte na bieżącej kultury, więc ciągi odpowiednio sortować.  
+-   **Sortowanie danych w celu wyświetlenia użytkownikowi.** Użyj operacji opartych na bieżącej kultury, aby posortować ciągi, odpowiednio.  
   
--   **Określanie, czy dwa ciągi wewnętrznych aplikacji dokładnie odpowiadać (zazwyczaj ze względów bezpieczeństwa).** Użyj operacji, które pominąć bieżącej kultury.  
+-   **Określanie, jeśli dwa ciągi wewnętrznych aplikacji dokładnie odpowiadać (zwykle ze względów bezpieczeństwa).** Użyj operacji, które nie brać pod uwagę bieżącej kultury.  
   
- Można wykonać oba typy porównania z programem Visual Basic <xref:Microsoft.VisualBasic.Strings.StrComp%2A> funkcji. Określ opcjonalny `Compare` argumentu, aby kontrolować typ porównania: `Text` dla większości danych wejściowych i wyjściowych `Binary` określania dokładne dopasowania.  
+ Można wykonać obu rodzajów porównań, za pomocą Visual Basic <xref:Microsoft.VisualBasic.Strings.StrComp%2A> funkcji. Określ opcjonalne `Compare` argumentem do sterowania typ porównania: `Text` dla większości danych wejściowych i wyjściowych `Binary` określania dokładne dopasowania.  
   
- `StrComp` Funkcja zwróci liczbę całkowitą wskazującą relacji między dwa ciągi porównaniu na podstawie kolejności sortowania. Wartość dodatnią dla wyniku wskazuje, że pierwszy ciąg jest większy niż drugi ciąg. Wynik negatywny wskazuje pierwszy ciąg jest mniejszy, a następnie zero oznacza równość ciągi.  
+ `StrComp` Funkcji zwraca liczbę całkowitą, wskazującą, związek między dwa ciągi w porównaniu na podstawie kolejności sortowania. Wartość dodatnia wynik wskazuje, czy pierwszy ciąg jest większy niż drugi ciąg. Wynik ujemny wskazuje pierwszy ciąg jest mniejszy, wartość zero wskazuje równości pomiędzy ciągi.  
   
  [!code-vb[VbVbalrStrings#22](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_2.vb)]  
   
- Można również użyć [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] partnera partner of `StrComp` funkcji <xref:System.String.Compare%2A?displayProperty=nameWithType> metody. Jest to statyczne, przeciążonej metody klasy podstawowej ciągu. Poniższy przykład przedstawia, jak ta metoda jest używana:  
+ Można również użyć [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] partner `StrComp` funkcji <xref:System.String.Compare%2A?displayProperty=nameWithType> metody. Jest to statyczne, przeciążone metody klasy bazowej ciągu. W poniższym przykładzie pokazano, jak ta metoda jest używana:  
   
  [!code-vb[VbVbalrStrings#48](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_3.vb)]  
   
- Aby uzyskać bardziej precyzyjną kontrolę nad realizację porównanie, można użyć dodatkowych przeciążeń <xref:System.String.Compare%2A> metody. Z <xref:System.String.Compare%2A?displayProperty=nameWithType> metody, można użyć `comparisonType` argumentu, aby określić typ porównania do użycia.  
+ W przypadku bardziej precyzyjną kontrolę nad jak porównania są wykonywane, można użyć dodatkowych przeciążenia <xref:System.String.Compare%2A> metody. Za pomocą <xref:System.String.Compare%2A?displayProperty=nameWithType> metody, można użyć `comparisonType` argumentu, aby określić typ porównania do użycia.  
   
-|Wartość `comparisonType` argumentu|Typ porównania|Kiedy używać|  
+|Wartość `comparisonType` argumentu|Typ porównania|Kiedy należy używać|  
 |---|---|---|  
-|`Ordinal`|Porównanie w bajtach składnika ciągów.|Użyj tej wartości, podczas porównywania: identyfikatory z uwzględnieniem wielkości liter, ustawienia zabezpieczeń lub innych identyfikatorów językowe, gdzie bajtów muszą być zgodne.|  
-|`OrdinalIgnoreCase`|Porównanie w bajtach składnika ciągów.<br /><br /> `OrdinalIgnoreCase` Niezmienna kultura informacje są używane do określania, kiedy dwa znaki różnią się tylko wielkością liter.|Użyj tej wartości, podczas porównywania: identyfikatorów bez uwzględniania wielkości liter, ustawień zabezpieczeń i danych przechowywanych w systemie Windows.|  
-|`CurrentCulture` lub `CurrentCultureIgnoreCase`|Porównań opartych na ciągi są interpretacji w bieżącej kultury.|Użyj tych wartości, podczas porównywania: dane wyświetlane dla użytkownika, większość danych wejściowych użytkownika i inne dane, które wymaga interpretacji językowe.|  
-|`InvariantCulture` lub `InvariantCultureIgnoreCase`|Porównań opartych na ciągi są interpretacji w Niezmienna kultura.<br /><br /> Ta lokalizacja jest inna niż `Ordinal` i `OrdinalIgnoreCase`, ponieważ Niezmienna kultura traktuje znaki poza zakresem akceptowane jako równoważne niezmiennej znaków.|Tylko przy porównywaniu danych trwałych lub wyświetlania zależnej odpowiednie dane, które wymaga stałej sortowania, należy użyć tych wartości.|  
+|`Ordinal`|Porównanie, w bajtach składników ciągów.|Użyj tej wartości podczas porównywania: identyfikatory uwzględniana wielkość liter, ustawienia związane z zabezpieczeniami lub innych nielingwistyczne identyfikatorów, w którym bajtów musi dokładnie pasować.|  
+|`OrdinalIgnoreCase`|Porównanie, w bajtach składników ciągów.<br /><br /> `OrdinalIgnoreCase` informacje Niezmienna kultura są używane do określania, kiedy dwa znaki różnią się jedynie wielkość liter.|Użyj tej wartości podczas porównywania: bez uwzględniania wielkości liter identyfikatorów, ustawienia związane z zabezpieczeniami i dane przechowywane w Windows.|  
+|`CurrentCulture` lub `CurrentCultureIgnoreCase`|Porównań opartych na interpretację ciągów w bieżącej kultury.|Podczas porównywania, używając następujących wartości: danych, który jest wyświetlany użytkownikowi, większość danych wejściowych użytkownika i innych danych, które wymagają interpretacji językowej.|  
+|`InvariantCulture` lub `InvariantCultureIgnoreCase`|Porównań opartych na interpretację ciągów niezmiennej kultury.<br /><br /> Stanowi to odmianę `Ordinal` i `OrdinalIgnoreCase`, ponieważ niezmiennej kultury traktuje znaki spoza zakresu akceptowanych jako równoważne znaki niezmienna.|Tylko podczas porównywania utrwalanie danych lub wyświetlania językowo odpowiednie dane, które wymaga stałej sortowania, należy użyć tych wartości.|  
   
 ### <a name="security-considerations"></a>Zagadnienia dotyczące zabezpieczeń  
- Jeśli aplikacji podejmowania decyzji w procesie zabezpieczeń na podstawie wyniku porównania lub operacji w przypadku zmiany, a następnie należy użyć operacji <xref:System.String.Compare%2A?displayProperty=nameWithType> — metoda i przekazać `Ordinal` lub `OrdinalIgnoreCase` dla `comparisonType` argumentu.  
+ Jeśli aplikacja podejmuje decyzje dotyczące bezpieczeństwa, w oparciu o wyniki porównania lub operację zmiany sprawy, a następnie operacja powinna użyć <xref:System.String.Compare%2A?displayProperty=nameWithType> metody i przekazać `Ordinal` lub `OrdinalIgnoreCase` dla `comparisonType` argumentu.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Globalization.CultureInfo>  

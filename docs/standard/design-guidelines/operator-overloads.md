@@ -22,25 +22,25 @@ Przeciążenia operatorów Zezwalaj typy framework się tak, jakby były w nim e
   
  Dozwolone i w niektórych sytuacjach przydatne, przeciążenia operatora należy używać ostrożnie. Istnieje wiele przypadków, w którym operator przeładowanie ma zostały użyte, takich jak uruchomienia framework Designer na operatory dla operacji, które powinny być proste metody. Poniższe wskazówki powinny pomóc w określeniu, kiedy i jak użycie przeładowania operatora.  
   
- **X należy UNIKAĆ** Definiowanie przeciążenia operatora w typów, które powinny uznać, takich jak typy pierwotne (wbudowane).  
+ **X AVOID** Definiowanie przeciążenia operatora w typów, które powinny uznać, takich jak typy pierwotne (wbudowane).  
   
- **ROZWAŻ ✓** Definiowanie przeciążenia operatora w typie, który powinien uznać, takie jak typ pierwotny.  
+ **✓ CONSIDER** Definiowanie przeciążenia operatora w typie, który powinien uznać, takie jak typ pierwotny.  
   
  Na przykład <xref:System.String?displayProperty=nameWithType> ma `operator==` i `operator!=` zdefiniowane.  
   
- **CZY ✓** definiować przeciążeń operatora w strukturach, które reprezentują numery (takie jak <xref:System.Decimal?displayProperty=nameWithType>).  
+ **✓ DO** definiować przeciążeń operatora w strukturach, które reprezentują numery (takie jak <xref:System.Decimal?displayProperty=nameWithType>).  
   
- **X nie** można cute podczas definiowania przeciążenia operatora.  
+ **X DO NOT** można cute podczas definiowania przeciążenia operatora.  
   
  Przeładowanie operatora jest przydatne w sytuacjach, w których jest od razu widoczne co wynik operacji będzie. Na przykład, warto mieć możliwość odjąć jedną <xref:System.DateTime> z innego `DateTime` i uzyskać <xref:System.TimeSpan>. Jednak nie jest odpowiedni, użyj logicznego operator union, union kwerend dwie bazy danych lub użyj operatora shift, aby zapisać do strumienia.  
   
- **X nie** Podaj operator overloads, chyba że jest co najmniej jeden z argumentów typu Definiowanie przeciążenia.  
+ **X DO NOT** Podaj operator overloads, chyba że jest co najmniej jeden z argumentów typu Definiowanie przeciążenia.  
   
- **CZY ✓** przeciążać operatory w sposób symetrycznego.  
+ **✓ DO** przeciążać operatory w sposób symetrycznego.  
   
  Na przykład, jeśli można przeciążać `operator==`, powinien także przeciążać `operator!=`. Podobnie jeśli można przeciążać `operator<`, powinien także przeciążać `operator>`i tak dalej.  
   
- **ROZWAŻ ✓** zapewniając metod przyjaznych nazw, które odpowiadają do każdego przeciążonego operatora.  
+ **✓ CONSIDER** zapewniając metod przyjaznych nazw, które odpowiadają do każdego przeciążonego operatora.  
   
  Przeładowanie operatora nie obsługują wiele języków. Z tego powodu zaleca się, że typy, które przeciążać operatory obejmuje dodatkowej metody z odpowiednią nazwę specyficznego dla domeny, która udostępnia podobne funkcje.  
   
@@ -93,21 +93,21 @@ Przeciążenia operatorów Zezwalaj typy framework się tak, jakby były w nim e
 ### <a name="conversion-operators"></a>Operatory konwersji  
  Operatory konwersji są operatory jednoargumentowe, umożliwiających konwersja z typu na inny. Operatory musi być zdefiniowany jako statyczne elementy członkowskie na argument lub typ zwracany. Istnieją dwa typy operatory konwersji: jawne i niejawne.  
   
- **X nie** Podaj operatora konwersji, jeśli takie konwersja nie jest wyraźnie oczekiwany przez użytkowników końcowych.  
+ **X DO NOT** Podaj operatora konwersji, jeśli takie konwersja nie jest wyraźnie oczekiwany przez użytkowników końcowych.  
   
- **X nie** definiować operatory konwersji poza domeny typu.  
+ **X DO NOT** definiować operatory konwersji poza domeny typu.  
   
  Na przykład <xref:System.Int32>, <xref:System.Double>, i <xref:System.Decimal> są wszystkie typy liczbowe, podczas gdy <xref:System.DateTime> nie jest. W związku z tym nie powinny istnieć żaden operator konwersji, aby przekonwertować `Double(long)` do `DateTime`. W takim przypadku jest preferowane konstruktora.  
   
- **X nie** Podaj operator niejawnej konwersji, jeśli konwersja jest potencjalnie stratnej.  
+ **X DO NOT** Podaj operator niejawnej konwersji, jeśli konwersja jest potencjalnie stratnej.  
   
  Na przykład nie należy niejawna konwersja z `Double` do `Int32` ponieważ `Double` ma większej niż `Int32`. Operator jawnej konwersji można podać, nawet jeśli konwersja jest potencjalnie stratnej.  
   
- **X nie** zgłaszanie wyjątków z niejawnego rzutowania.  
+ **X DO NOT** zgłaszanie wyjątków z niejawnego rzutowania.  
   
  Jest bardzo trudne dla użytkowników końcowych zorientować się, ponieważ nie może być należy pamiętać, że konwersja jest wykonywana.  
   
- **CZY ✓** throw <xref:System.InvalidCastException?displayProperty=nameWithType> jeśli powoduje wywołanie operatora rzutowania stratnej konwersji i kontrakt operator nie zezwala stratnej konwersji.  
+ **✓ DO** throw <xref:System.InvalidCastException?displayProperty=nameWithType> jeśli powoduje wywołanie operatora rzutowania stratnej konwersji i kontrakt operator nie zezwala stratnej konwersji.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   

@@ -18,20 +18,20 @@ ms.locfileid: "33570490"
 # <a name="naming-parameters"></a>Nazwy parametrów
 Poza oczywiste Przyczyna czytelności koniecznie postępuj zgodnie z wytycznymi dla nazw parametrów, ponieważ parametry są wyświetlane w dokumentacji i w projektancie, podając Intellisense i przeglądania funkcje klasy narzędzi do projektowania visual.  
   
- **CZY ✓** Użyj camelCasing w nazwach parametrów.  
+ **✓ DO** Użyj camelCasing w nazwach parametrów.  
   
- **CZY ✓** Użyj nazwy opisowej parametrów.  
+ **✓ DO** Użyj nazwy opisowej parametrów.  
   
- **ROZWAŻ ✓** przy użyciu nazwy parametru znaczenie niż typ parametru.  
+ **✓ CONSIDER** przy użyciu nazwy parametru znaczenie niż typ parametru.  
   
 ### <a name="naming-operator-overload-parameters"></a>Nazwy parametrów przeciążenia operatora  
- **CZY ✓** użyj `left` i `right` dla nazw parametrów przeciążenia operatora binarnego Jeśli znaczenia parametrów nie istnieje.  
+ **✓ DO** użyj `left` i `right` dla nazw parametrów przeciążenia operatora binarnego Jeśli znaczenia parametrów nie istnieje.  
   
- **CZY ✓** użyj `value` dla Jednoargumentowy operator przeciążenia nazwy parametrów, jeśli żadnego znaczenia parametrów nie istnieje.  
+ **✓ DO** użyj `value` dla Jednoargumentowy operator przeciążenia nazwy parametrów, jeśli żadnego znaczenia parametrów nie istnieje.  
   
- **ROZWAŻ ✓** łatwy do rozpoznania nazwy dla operatora przeciążenia parametrów, jeśli wykonanie tej tak dodaje wartość.  
+ **✓ CONSIDER** łatwy do rozpoznania nazwy dla operatora przeciążenia parametrów, jeśli wykonanie tej tak dodaje wartość.  
   
- **X nie** Użyj skrótów lub wskaźniki liczbowe dla operatora przeciążenia nazwy parametrów.  
+ **X DO NOT** Użyj skrótów lub wskaźniki liczbowe dla operatora przeciążenia nazwy parametrów.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   

@@ -24,11 +24,11 @@ Mówiąc ściślej klasa staje się klasę podstawową, gdy inna klasa pochodzi 
   
  Jak już wspomniano klasy podstawowe zapewniają cenne pomocy dla użytkowników, którzy muszą implementować obiektów abstrakcyjnych, ale w tym samym czasie może być istotne odpowiedzialności. One Dodaj powierzchni i zwiększyć głębokość hierarchii dziedziczenia i dlatego koncepcyjnie skomplikować platformę. W związku z tym klas podstawowej należy używać tylko wtedy, gdy zawierają wartość użytkownikom platformy. Jeśli zawierają wartość tylko do obiektów implementujących RAM, w którym wielkość delegowania do wewnętrznej implementacji zamiast dziedziczenia z klasy podstawowej należy uznać należy unikać ich.  
   
- **ROZWAŻ ✓** wprowadzania base klasy abstrakcyjny, nawet jeśli nie zawierają żadnych abstrakcyjne elementy członkowskie. To wyraźnie komunikuje się dla użytkowników, że klasa jest przeznaczona wyłącznie do być dziedziczone z.  
+ **✓ CONSIDER** wprowadzania base klasy abstrakcyjny, nawet jeśli nie zawierają żadnych abstrakcyjne elementy członkowskie. To wyraźnie komunikuje się dla użytkowników, że klasa jest przeznaczona wyłącznie do być dziedziczone z.  
   
- **ROZWAŻ ✓** umieszczenie w oddzielnych nazw typów połączeniach scenariusz klas podstawowych. Zgodnie z definicją klasy podstawowe są przeznaczone do rozszerzalności zaawansowanych scenariuszy i w związku z tym nie są interesujące większości użytkowników.  
+ **✓ CONSIDER** umieszczenie w oddzielnych nazw typów połączeniach scenariusz klas podstawowych. Zgodnie z definicją klasy podstawowe są przeznaczone do rozszerzalności zaawansowanych scenariuszy i w związku z tym nie są interesujące większości użytkowników.  
   
- **X należy UNIKAĆ** nazw klas podstawowych z sufiksem "Podstawowy", jeśli klasa jest przeznaczona do użycia w publicznych interfejsach API.  
+ **X AVOID** nazw klas podstawowych z sufiksem "Podstawowy", jeśli klasa jest przeznaczona do użycia w publicznych interfejsach API.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   

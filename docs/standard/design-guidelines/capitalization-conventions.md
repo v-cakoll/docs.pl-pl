@@ -43,9 +43,9 @@ Wskazówki zawarte w ten rozdział układ prostą metodę przy użyciu przypadek
  `ioStream`  
  `htmlTag`  
   
- **CZY ✓** Użyj PascalCasing dla wszystkich publicznych nazw elementu członkowskiego, typ i przestrzeń nazw składającą się z wielu wyrazów.  
+ **✓ DO** Użyj PascalCasing dla wszystkich publicznych nazw elementu członkowskiego, typ i przestrzeń nazw składającą się z wielu wyrazów.  
   
- **CZY ✓** camelCasing na użytek nazwy parametrów.  
+ **✓ DO** camelCasing na użytek nazwy parametrów.  
   
  W poniższej tabeli opisano reguły wielkości liter dla różnych typów identyfikatorów.  
   
@@ -64,7 +64,7 @@ Wskazówki zawarte w ten rozdział układ prostą metodę przy użyciu przypadek
 ## <a name="capitalizing-compound-words-and-common-terms"></a>Zamiany wyrazy złożone i typowe terminy  
  Większość warunki złożone są traktowane jako pojedyncze wyrazy na potrzeby użycia wielkich liter.  
   
- **X nie** własne w tzw wyrazy złożone zamknąć formularz.  
+ **X DO NOT** własne w tzw wyrazy złożone zamknąć formularz.  
   
  Są zapisywane jako pojedynczego wyrazu, takie jak punkt końcowy wyrazy złożone. Na potrzeby wielkości liter dla skrótowców Traktuj wyraz złożony zamknięciu formularza jako pojedynczego wyrazu. Użyj bieżącego słownika, aby określić, czy wyraz złożony są zapisywane w postaci zamknięte.  
   
@@ -99,7 +99,7 @@ Wskazówki zawarte w ten rozdział układ prostą metodę przy użyciu przypadek
 ## <a name="case-sensitivity"></a>Uwzględniana wielkość liter  
  Języki, które można uruchamiać na CLR są nie muszą obsługiwać uwzględnianie wielkości liter, mimo że niektóre czy. Nawet jeśli język obsługuje tę funkcję, innych języków, które mogą uzyskiwać dostęp do Twojego framework nie. Wszystkie interfejsy API, które są dostępne z zewnątrz, w związku z tym nie zależą od wielkości liter, samodzielnie, aby rozróżnić dwóch nazw w tym samym kontekście.  
   
- **X nie** założono, że wszystkie języki programowania jest uwzględniana wielkość liter. Nie są one. Nazwy nie mogą się różnić w przypadku samodzielnie.  
+ **X DO NOT** założono, że wszystkie języki programowania jest uwzględniana wielkość liter. Nie są one. Nazwy nie mogą się różnić w przypadku samodzielnie.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   

@@ -23,23 +23,23 @@ Mimo że większość interfejsów API najlepiej są modelowane przy użyciu kla
   
  Sytuacja, w których definiowanie interfejsu jest jest przy tworzeniu wspólnego interfejsu, który może być obsługiwany przez kilka typów, w tym niektórych typów wartości. Typy wartości nie może dziedziczyć z typów innych niż <xref:System.ValueType>, ale miały zaimplementowane interfejsy, za pomocą interfejsu jest jedyną opcją w celu zapewnienia wspólnego typu podstawowego.  
   
- **CZY ✓** interfejs umożliwia określenie, czy należy niektórych typowych interfejsu API, obsługiwane przez zestaw typów, który zawiera typy wartości.  
+ **✓ DO** interfejs umożliwia określenie, czy należy niektórych typowych interfejsu API, obsługiwane przez zestaw typów, który zawiera typy wartości.  
   
- **ROZWAŻ ✓** Definiowanie interfejsu, jeśli zachodzi konieczność obsługi jej funkcji dla typów dziedziczących z innego typu.  
+ **✓ CONSIDER** Definiowanie interfejsu, jeśli zachodzi konieczność obsługi jej funkcji dla typów dziedziczących z innego typu.  
   
- **X należy UNIKAĆ** za pomocą znacznika interfejsów (interfejsy bez członków).  
+ **X AVOID** za pomocą znacznika interfejsów (interfejsy bez członków).  
   
  Jeśli potrzebujesz Oznacz klasę jako mający określonej właściwości (znacznik), ogólnie rzecz biorąc, użyj atrybutu niestandardowego zamiast interfejsu.  
   
- **CZY ✓** Podaj co najmniej jeden typ, który jest implementacją interfejsu.  
+ **✓ DO** Podaj co najmniej jeden typ, który jest implementacją interfejsu.  
   
  Wykonywanie dzięki temu można sprawdzić poprawności projektu interfejsu. Na przykład <xref:System.Collections.Generic.List%601> jest implementacją <xref:System.Collections.Generic.IList%601> interfejsu.  
   
- **CZY ✓** Podaj co najmniej jeden interfejs API, który wykorzystuje każdego interfejsu należy zdefiniować (metody interfejsu jako parametr lub właściwość typu interfejsu).  
+ **✓ DO** Podaj co najmniej jeden interfejs API, który wykorzystuje każdego interfejsu należy zdefiniować (metody interfejsu jako parametr lub właściwość typu interfejsu).  
   
  Wykonywanie dzięki temu można sprawdzić poprawności projektu interfejsu. Na przykład <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> zużywa <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> interfejsu.  
   
- **X nie** dodawać członków do interfejsu, która została wcześniej dostarczona.  
+ **X DO NOT** dodawać członków do interfejsu, która została wcześniej dostarczona.  
   
  W ten sposób spowoduje przerwanie implementacji interfejsu. Aby uniknąć problemów z kontroli wersji, należy utworzyć nowy interfejs.  
   

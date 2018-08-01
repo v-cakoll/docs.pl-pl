@@ -24,15 +24,15 @@ Klasa statyczna jest zdefiniowany jako klasa, która zawiera tylko elementy czł
   
  Klasy statyczne są kompromis między czystym obiektowego i prostota. Często są one używane do zapewnienia skróty do innych operacji (takich jak <xref:System.IO.File?displayProperty=nameWithType>), posiadaczy metody rozszerzenia lub funkcji, dla którego jest nieuzasadnione otoka pełnej zorientowane obiektowo (takie jak <xref:System.Environment?displayProperty=nameWithType>).  
   
- **CZY ✓** oszczędnie używać klas statycznych.  
+ **✓ DO** oszczędnie używać klas statycznych.  
   
  Klasy statyczne należy używać tylko jako klasy pomocnicze dla core zorientowane obiektowo platformy.  
   
- **X nie** Traktuj klas statycznych jako różne zasobnika.  
+ **X DO NOT** Traktuj klas statycznych jako różne zasobnika.  
   
- **X nie** zadeklarować lub zastąpienie elementów członkowskich wystąpienia w klasie statycznej.  
+ **X DO NOT** zadeklarować lub zastąpienie elementów członkowskich wystąpienia w klasie statycznej.  
   
- **CZY ✓** zadeklarować klas statycznych jako sealed, abstrakcyjny i dodać Konstruktor prywatny wystąpienia, jeśli język programowania nie ma wbudowaną obsługę klas statycznych.  
+ **✓ DO** zadeklarować klas statycznych jako sealed, abstrakcyjny i dodać Konstruktor prywatny wystąpienia, jeśli język programowania nie ma wbudowaną obsługę klas statycznych.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   

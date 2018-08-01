@@ -21,29 +21,29 @@ ms.locfileid: "33571020"
 # <a name="equality-operators"></a>Operatory równości
 W tej sekcji omówiono przeciążania Operatory równości i odwołuje się do `operator==` i `operator!=` jako operatory równości.  
   
- **X nie** jedną Operatory równości i nie inne przeciążenia.  
+ **X DO NOT** jedną Operatory równości i nie inne przeciążenia.  
   
- **CZY ✓** upewnij się, że <xref:System.Object.Equals%2A?displayProperty=nameWithType> i operatory porównania ma dokładnie tej samej semantyki i podobne charakterystyki wydajności.  
+ **✓ DO** upewnij się, że <xref:System.Object.Equals%2A?displayProperty=nameWithType> i operatory porównania ma dokładnie tej samej semantyki i podobne charakterystyki wydajności.  
   
  Często oznacza to, że `Object.Equals` musi zostać zastąpiona, gdy są przeciążone operatory równości.  
   
- **X należy UNIKAĆ** zgłaszanie wyjątków z Operatory równości.  
+ **X AVOID** zgłaszanie wyjątków z Operatory równości.  
   
  Na przykład zwróci wartość false, jeśli jeden z argumentów ma wartość null zamiast zgłaszanie `NullReferenceException`.  
   
 ## <a name="equality-operators-on-value-types"></a>Operatory równości dla typów wartości  
- **CZY ✓** przeciążać Operatory równości w typach wartości, jeśli równości jest łatwy do rozpoznania.  
+ **✓ DO** przeciążać Operatory równości w typach wartości, jeśli równości jest łatwy do rozpoznania.  
   
  W większości języków programowania, nie ma żadnych domyślną implementację `operator==` dla typów wartości.  
   
 ## <a name="equality-operators-on-reference-types"></a>Operatory równości w typach referencyjnych  
- **X należy UNIKAĆ** przeładowanie operatorów równości w typach referencyjnych.  
+ **X AVOID** przeładowanie operatorów równości w typach referencyjnych.  
   
  Wiele języków ma operatory wbudowanych równości dla typów odwołań. Wbudowane Operatorzy zazwyczaj zaimplementować równości odwołań, a wielu deweloperów są zaskoczeniem, w przypadku zmiany domyślnego zachowania na równości wartości.  
   
  Ten problem jest skorygowane dla typów odwołań niezmienne, ponieważ immutability utrudnia znacznie należy zauważyć różnicę między równości odwołań i o równość wartości.  
   
- **X należy UNIKAĆ** przeładowanie operatorów równości w typach referencyjnych, jeśli implementacja będzie znacznie mniejsza niż w przypadku równości odwołań.  
+ **X AVOID** przeładowanie operatorów równości w typach referencyjnych, jeśli implementacja będzie znacznie mniejsza niż w przypadku równości odwołań.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   

@@ -26,21 +26,21 @@ Zagnieżdżony typ jest typ zdefiniowany w zakresie innego typu, która jest wyw
   
  Zagnieżdżone typy są najbardziej odpowiednie dla modelowania szczegóły implementacji ich typu otaczającego. Użytkownik końcowy powinna rzadko muszą przeciążać Zadeklaruj zmienne typu zagnieżdżonego i prawie nigdy nie powinien mieć można jawnie utworzyć wystąpienia typów zagnieżdżonych. Na przykład moduł wyliczający kolekcji może być zagnieżdżony typ tej kolekcji. Moduły wyliczające wystąpienia są zazwyczaj tworzone przez ich typu otaczającego i ponieważ instrukcji foreach obsługuje wiele języków, zmienne modułu wyliczającego rzadko muszą być deklarowana przez użytkownika końcowego.  
   
- **CZY ✓** używać zagnieżdżonych typów w przypadku relacji między typu zagnieżdżonego i jej typu zewnętrznego taki sposób, że dostępność elementu członkowskiego semantyka pożądane.  
+ **✓ DO** używać zagnieżdżonych typów w przypadku relacji między typu zagnieżdżonego i jej typu zewnętrznego taki sposób, że dostępność elementu członkowskiego semantyka pożądane.  
   
- **X nie** Użyj publicznego typów zagnieżdżonych jako logiczne grupowanie skonstruować; Użyj przestrzeni nazw dla tego.  
+ **X DO NOT** Użyj publicznego typów zagnieżdżonych jako logiczne grupowanie skonstruować; Użyj przestrzeni nazw dla tego.  
   
- **X należy UNIKAĆ** publicznie udostępnione typy zagnieżdżone. Jedynym wyjątkiem jest zmienne typu zagnieżdżonego muszą być deklarowane tylko w rzadkich scenariuszy, takich jak tworzenie podklas lub innych scenariuszy zaawansowanego dostosowania.  
+ **X AVOID** publicznie udostępnione typy zagnieżdżone. Jedynym wyjątkiem jest zmienne typu zagnieżdżonego muszą być deklarowane tylko w rzadkich scenariuszy, takich jak tworzenie podklas lub innych scenariuszy zaawansowanego dostosowania.  
   
- **X nie** Użyj zagnieżdżone typy, jeśli typ może odwoływać się poza typu zawierającego.  
+ **X DO NOT** Użyj zagnieżdżone typy, jeśli typ może odwoływać się poza typu zawierającego.  
   
  Na przykład wyliczenia przekazany do metody zdefiniowanej dla klasy, nie powinien być zdefiniowany jako typu zagnieżdżonego w klasie.  
   
- **X nie** używać zagnieżdżonych typów, jeśli muszą zostać utworzone przez kod klienta.  Jeśli typ ma konstruktora publicznego, prawdopodobnie nie powinien być zagnieżdżone.  
+ **X DO NOT** używać zagnieżdżonych typów, jeśli muszą zostać utworzone przez kod klienta.  Jeśli typ ma konstruktora publicznego, prawdopodobnie nie powinien być zagnieżdżone.  
   
  Jeśli można utworzyć wystąpienia typu, który wydaje się, że wskazuje typ ma miejsce w ramach samodzielnie (można go utworzyć, z którą go, zniszczyć bez kiedykolwiek przy użyciu typu zewnętrznego) i dlatego nie powinny być zagnieżdżone. Typy wewnętrzne nie powinna być powszechnie używana poza typu zewnętrznego bez żadnej z relacji jakiejkolwiek do typu zewnętrznego.  
   
- **X nie** zagnieżdżony typ jako element członkowski interfejsu. Wiele języków nie obsługują takich konstrukcji.  
+ **X DO NOT** zagnieżdżony typ jako element członkowski interfejsu. Wiele języków nie obsługują takich konstrukcji.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   

@@ -25,13 +25,13 @@ Wirtualne elementy Członkowskie mogą zostać zastąpione, w związku z tym zmi
   
  Wirtualne elementy członkowskie, takie jak wywołania zwrotne i może być większa niż wywołań zwrotnych, są kosztowne do projektowania, testowania i konserwacji, ponieważ jakiekolwiek odwołania do elementu członkowskiego wirtualnego może zostać zastąpiona w sposób nieprzewidziany i może zostać uruchomiony dowolny kod. Ponadto znacznie więcej wysiłku jest zazwyczaj wymagane jasno zdefiniować kontrakt wirtualne elementy członkowskie, więc koszt projektowanie i dokumentowanie ich jest wyższy.  
   
- **X nie** tworzenie elementów członkowskich wirtualnego, chyba że masz powód, dla zrobić i poznać wszystkich kosztów związanych z projektowania i testowania oraz Obsługa wirtualnych elementów członkowskich.  
+ **X DO NOT** tworzenie elementów członkowskich wirtualnego, chyba że masz powód, dla zrobić i poznać wszystkich kosztów związanych z projektowania i testowania oraz Obsługa wirtualnych elementów członkowskich.  
   
  Wirtualne elementy członkowskie są mniej forgiving pod względem zmiany wprowadzone do nich w bez przerywania zgodności. Ponadto są one wolniej niż członków-virtual, przede wszystkim, ponieważ wywołania wirtualne elementy członkowskie nie są wbudowane.  
   
- **ROZWAŻ ✓** ograniczanie rozszerzalności tylko co to jest bezwzględnie konieczne.  
+ **✓ CONSIDER** ograniczanie rozszerzalności tylko co to jest bezwzględnie konieczne.  
   
- **CZY ✓** Preferuj dostępności chronione przed powszechnej dostępności dla wirtualnych elementów członkowskich. Publiczne elementy Członkowskie powinny rozszerzalność (jeśli jest to wymagane) przez wywołanie do chronionego członka wirtualnego.  
+ **✓ DO** Preferuj dostępności chronione przed powszechnej dostępności dla wirtualnych elementów członkowskich. Publiczne elementy Członkowskie powinny rozszerzalność (jeśli jest to wymagane) przez wywołanie do chronionego członka wirtualnego.  
   
  Publiczne elementy członkowskie klasy powinien zapewnić prawidłowego zestawu funkcji do bezpośredniego konsumentów tej klasy. Wirtualne elementy członkowskie zaprojektowano do zastąpienia w podklasach i dostępność chronionych jest to dobry sposób na zakres wszystkie punkty rozszerzalności wirtualnego, gdzie mogą być używane.  
   

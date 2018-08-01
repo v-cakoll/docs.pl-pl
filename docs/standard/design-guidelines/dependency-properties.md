@@ -17,26 +17,26 @@ Właściwości zależności (DP) jest regularne właściwość, która przechowu
   
  Właściwości dołączone zależności jest rodzajem modelowane jako statycznej metody Get i Set "właściwości" opisujące relacje między obiektami i ich kontenery reprezentujący właściwości zależności (np. pozycja `Button` obiekt na `Panel` kontener).  
   
- **CZY ✓** Podaj właściwości zależności, jeśli potrzebujesz właściwości do obsługi funkcji WPF, takie jak style, wyzwalaczy, wiązania z danymi, animacji, dynamicznych zasobów i dziedziczenia.  
+ **✓ DO** Podaj właściwości zależności, jeśli potrzebujesz właściwości do obsługi funkcji WPF, takie jak style, wyzwalaczy, wiązania z danymi, animacji, dynamicznych zasobów i dziedziczenia.  
   
 ## <a name="dependency-property-design"></a>Zależności właściwości projektu  
- **CZY ✓** dziedziczyć <xref:System.Windows.DependencyObject>, lub jeden z jego podtypach podczas implementowania właściwości zależności. Typ zawiera bardzo wydajny Implementacja magazynu właściwości i automatycznie obsługuje powiązanie danych WPF.  
+ **✓ DO** dziedziczyć <xref:System.Windows.DependencyObject>, lub jeden z jego podtypach podczas implementowania właściwości zależności. Typ zawiera bardzo wydajny Implementacja magazynu właściwości i automatycznie obsługuje powiązanie danych WPF.  
   
- **CZY ✓** Podaj regularne właściwość CLR i publicznym statycznym polem tylko do odczytu przechowywania wystąpienia <xref:System.Windows.DependencyProperty?displayProperty=nameWithType> dla każdej właściwości zależności.  
+ **✓ DO** Podaj regularne właściwość CLR i publicznym statycznym polem tylko do odczytu przechowywania wystąpienia <xref:System.Windows.DependencyProperty?displayProperty=nameWithType> dla każdej właściwości zależności.  
   
- **CZY ✓** implementuje właściwości zależności przez wywołanie metody wystąpienia <xref:System.Windows.DependencyObject.GetValue%2A?displayProperty=nameWithType> i <xref:System.Windows.DependencyObject.SetValue%2A?displayProperty=nameWithType>.  
+ **✓ DO** implementuje właściwości zależności przez wywołanie metody wystąpienia <xref:System.Windows.DependencyObject.GetValue%2A?displayProperty=nameWithType> i <xref:System.Windows.DependencyObject.SetValue%2A?displayProperty=nameWithType>.  
   
- **CZY ✓** nazwę pola statycznego właściwości zależności suffixing nazwa właściwości z "Property".  
+ **✓ DO** nazwę pola statycznego właściwości zależności suffixing nazwa właściwości z "Property".  
   
- **X nie** jawnie ustawić wartości domyślnych właściwości zależności w kodzie; ustawić je w metadanych.  
+ **X DO NOT** jawnie ustawić wartości domyślnych właściwości zależności w kodzie; ustawić je w metadanych.  
   
  Jeśli jawnie ustawione wartości domyślnej właściwości, może uniemożliwić ustawiany w sposób niejawny, takie jak style tej właściwości.  
   
- **X nie** umieść kod w akcesorach właściwości innych niż standardowe kodu można uzyskać dostępu do statycznego pola.  
+ **X DO NOT** umieść kod w akcesorach właściwości innych niż standardowe kodu można uzyskać dostępu do statycznego pola.  
   
  Kod nie będzie wykonanie jeśli właściwość jest ustawiona w sposób niejawny, stylów, np. ponieważ style używa pola statycznego bezpośrednio.  
   
- **X nie** zabezpieczać danych za pomocą właściwości zależności. Właściwości zależności nawet prywatne będą dostępne publicznie.  
+ **X DO NOT** zabezpieczać danych za pomocą właściwości zależności. Właściwości zależności nawet prywatne będą dostępne publicznie.  
   
 ## <a name="attached-dependency-property-design"></a>Zależności dołączonych właściwości projektu  
  Właściwości zależności opisane w poprzedniej sekcji reprezentują wewnętrzne właściwości typ deklarujący; na przykład `Text` właściwość jest właściwością `TextButton`, który deklaruje element. Specjalny rodzaj właściwość zależności jest właściwości dołączonych zależności.  
@@ -82,15 +82,15 @@ public class Grid {
   
  Niestety metod dostępu do właściwości zależności nie mogą zawierać dowolny kod. Zamiast tego należy określić podczas rejestracji właściwości logikę weryfikacji właściwości zależności.  
   
- **X nie** umieść logikę sprawdzania poprawności właściwości zależności w akcesorach właściwości. Zamiast tego należy przekazać wywołanie zwrotne weryfikacji do `DependencyProperty.Register` metody.  
+ **X DO NOT** umieść logikę sprawdzania poprawności właściwości zależności w akcesorach właściwości. Zamiast tego należy przekazać wywołanie zwrotne weryfikacji do `DependencyProperty.Register` metody.  
   
 ## <a name="dependency-property-change-notifications"></a>Powiadomienia o zmianie właściwości zależności  
- **X nie** zaimplementować Zmień logikę powiadomień w akcesorach właściwości zależności. Właściwości zależności mają wbudowane zmiany funkcji powiadomienia, używany podając wywołania zwrotnego powiadomienia zmiany do <xref:System.Windows.PropertyMetadata>.  
+ **X DO NOT** zaimplementować Zmień logikę powiadomień w akcesorach właściwości zależności. Właściwości zależności mają wbudowane zmiany funkcji powiadomienia, używany podając wywołania zwrotnego powiadomienia zmiany do <xref:System.Windows.PropertyMetadata>.  
   
 ## <a name="dependency-property-value-coercion"></a>Koercja wartość właściwości zależności  
  Koercja właściwości ma miejsce, gdy wartość właściwości metody ustawiającej jest modyfikowany przez metodę ustawiającą, zanim Magazyn właściwości faktycznie jest modyfikowany.  
   
- **X nie** wdrożyć logikę koercja w akcesorach właściwości zależności.  
+ **X DO NOT** wdrożyć logikę koercja w akcesorach właściwości zależności.  
   
  Właściwości zależności dostępna jest funkcja wbudowana koercja i może służyć podając koercja wywołanie zwrotne do `PropertyMetadata`.  
   

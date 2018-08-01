@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573558"
 ---
 # <a name="member-overloading"></a>Przeciążenie elementu członkowskiego
 Przeciążenie elementu członkowskiego oznacza, że utworzenie dwóch lub więcej elementów członkowskich do tego samego typu, które różnią się jedynie liczby lub typów parametrów, ale mają taką samą nazwę. Na przykład w poniższych `WriteLine` metody jest przeciążona:  
@@ -33,23 +34,23 @@ public static class Console {
   
  Przeciążanie jest jednym z najważniejszych technik dla poprawy użyteczność, wydajności i czytelność biblioteki do ponownego użycia. Przeciążanie liczby parametrów umożliwia zapewnienie prostsze wersje konstruktory i metody. Przeciążanie na typ parametru umożliwia Użyj takiej samej nazwie elementu członkowskiego dla operacji identyczne na wybrany zestaw różnych typów elementów członkowskich.  
   
- **CZY ✓** próby Użyj nazwy opisowej parametrów, aby wskazać, wartość domyślna używana przez krótszy przeciążenia.  
+ **✓ DO** próby Użyj nazwy opisowej parametrów, aby wskazać, wartość domyślna używana przez krótszy przeciążenia.  
   
- **X należy UNIKAĆ** arbitralnie różne nazwy parametrów w przeciążenia. Jeśli parametr w przeciążeniami reprezentuje dane wejściowe tego samego jako parametru w innego przeciążenia, parametry muszą mieć taką samą nazwę.  
+ **X AVOID** arbitralnie różne nazwy parametrów w przeciążenia. Jeśli parametr w przeciążeniami reprezentuje dane wejściowe tego samego jako parametru w innego przeciążenia, parametry muszą mieć taką samą nazwę.  
   
- **X należy UNIKAĆ** niespójne w kolejności parametrów w przeciążeniu elementy członkowskie. Parametry o takiej samej nazwie powinna pojawić się w tej samej pozycji w wszystkie przeciążenia.  
+ **X AVOID** niespójne w kolejności parametrów w przeciążeniu elementy członkowskie. Parametry o takiej samej nazwie powinna pojawić się w tej samej pozycji w wszystkie przeciążenia.  
   
- **CZY ✓** Tworzenie wirtualnego najdłuższym przeciążenia (Jeśli wymagane jest rozszerzalności). Przeciążenia krótszą po prostu powinny wywoływać za pomocą przeciążenia dłużej.  
+ **✓ DO** Tworzenie wirtualnego najdłuższym przeciążenia (Jeśli wymagane jest rozszerzalności). Przeciążenia krótszą po prostu powinny wywoływać za pomocą przeciążenia dłużej.  
   
- **X nie** użyj `ref` lub `out` Modyfikatory do przeciążenia elementów członkowskich.  
+ **X DO NOT** użyj `ref` lub `out` Modyfikatory do przeciążenia elementów członkowskich.  
   
  W przypadku niektórych języków nie można rozpoznać wywołania przeciążenia następująco. Ponadto takie przeciążenia zwykle ma semantykę różną całkowicie i prawdopodobnie nie powinien być przeciążenia, ale dwa oddzielne metody zamiast tego.  
   
- **X nie** mają przeciążenia z parametrami w tej samej pozycji i podobnych typów jeszcze z różnych semantyki.  
+ **X DO NOT** mają przeciążenia z parametrami w tej samej pozycji i podobnych typów jeszcze z różnych semantyki.  
   
- **CZY ✓** Zezwalaj `null` do przekazania na argumenty opcjonalne.  
+ **✓ DO** Zezwalaj `null` do przekazania na argumenty opcjonalne.  
   
- **CZY ✓** używać elementu członkowskiego przeładowanie, a nie Definiowanie elementów członkowskich z argumentami domyślnymi.  
+ **✓ DO** używać elementu członkowskiego przeładowanie, a nie Definiowanie elementów członkowskich z argumentami domyślnymi.  
   
  Argumenty domyślne nie są zgodne ze specyfikacją CLS.  
   

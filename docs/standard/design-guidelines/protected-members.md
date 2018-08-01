@@ -24,9 +24,9 @@ Chronione elementy członkowskie samodzielnie nie dostarcza żadnych rozszerzaln
   
  Projektanci Framework konieczne należy zachować ostrożność przy chronionych elementów członkowskich, ponieważ nazwa "protected", który pozwala false rozumieniu zabezpieczeń. Każda osoba, która jest w stanie podklasą klasy niezapieczętowany i dostęp do chronionych elementów członkowskich, a więc te same obrony praktyk kodowania elementów publicznych dotyczą chronionych elementów członkowskich.  
   
- **ROZWAŻ ✓** przy użyciu chronione elementy członkowskie dostosowania zaawansowanego.  
+ **✓ CONSIDER** przy użyciu chronione elementy członkowskie dostosowania zaawansowanego.  
   
- **CZY ✓** Traktuj chronionych elementów członkowskich w klasach otwarty jako public na potrzeby analizy zabezpieczeń, dokumentacji i zgodności.  
+ **✓ DO** Traktuj chronionych elementów członkowskich w klasach otwarty jako public na potrzeby analizy zabezpieczeń, dokumentacji i zgodności.  
   
  Każda osoba, która dziedziczy z klasy, a dostęp do chronionych elementów członkowskich.  
   

@@ -15,13 +15,14 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573746"
 ---
 # <a name="sealing"></a>Pieczętowanie
 Jedną z funkcji zorientowane obiektowo struktury jest deweloperzy może rozszerzyć i dostosować je w sposób nieprzewidziane przez projektantów framework. Jest to możliwości i zagrożenia extensible projektu. Podczas projektowania sieci framework, dlatego też jest bardzo ważne, dokładnie projektować pod kątem rozszerzalności, gdy wymagane jest i ograniczyć rozszerzalności, gdy jest niebezpieczne.  
   
  Pieczętowanie jest zaawansowanym mechanizmem, który uniemożliwia rozszerzalności. Można Zapieczętuj klasę lub poszczególne elementy. Klasa pieczętowania uniemożliwia użytkownikom dziedziczenia z klasy. Element członkowski pieczętowania uniemożliwia użytkownikom zastępowania określonego elementu członkowskiego.  
   
- **X nie** zapieczętować klasy bez konieczności powody, aby to zrobić.  
+ **X DO NOT** zapieczętować klasy bez konieczności powody, aby to zrobić.  
   
  Pieczętowania klasy, ponieważ nie można traktować scenariusza rozszerzalności nie jest dobrym przyczyny. Dziedziczenie z klasy z różnych powodów nonobvious, takich jak dodawanie członków wygody, takich jak użytkownicy Framework. Zobacz [niezapieczętowanych klas](../../../docs/standard/design-guidelines/unsealed-classes.md) przykłady nonobvious powodów użytkownik chce dziedziczyć po typie.  
   
@@ -35,11 +36,11 @@ Jedną z funkcji zorientowane obiektowo struktury jest deweloperzy może rozszer
   
 -   Klasa jest atrybut, który wymaga środowiska uruchomieniowego bardzo szybko wyszukiwania. Atrybuty zapieczętowanego mają nieco wyższego poziomu wydajności niż niezapieczętowany z nich. Zobacz [atrybutów](../../../docs/standard/design-guidelines/attributes.md).  
   
- **X nie** deklaruj chronionych i wirtualnych elementów członkowskich w typach zapieczętowanych.  
+ **X DO NOT** deklaruj chronionych i wirtualnych elementów członkowskich w typach zapieczętowanych.  
   
  Zgodnie z definicją typów zapieczętowanych nie może być dziedziczona z. To oznacza, że nie można wywołać chronionych elementów członkowskich w typach zapieczętowanych i wirtualnych metod w typach zapieczętowanych nie można zastąpić.  
   
- **ROZWAŻ ✓** pieczętowania elementów członkowskich, które można zastąpić.  
+ **✓ CONSIDER** pieczętowania elementów członkowskich, które można zastąpić.  
   
  Problemy, które mogą być wynikiem wprowadzenie wirtualnych elementów członkowskich (omówiona w [wirtualne elementy członkowskie](../../../docs/standard/design-guidelines/virtual-members.md)) dotyczą również zastąpienia chociaż nieco mniejszym stopniu. Pieczętowanie zastąpienia osłony można z tych problemów, począwszy od tego momentu w hierarchii dziedziczenia.  
   

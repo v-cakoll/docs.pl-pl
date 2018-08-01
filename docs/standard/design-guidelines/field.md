@@ -23,19 +23,19 @@ Zasada hermetyzacji jest jednym z najważniejsze koncepcje zorientowane obiektow
   
  Wyłączamy stałej i statycznego pola tylko do odczytu z tego ograniczenia strict, ponieważ takie pola prawie zgodnie z definicją nigdy nie wymaga zmiany.  
   
- **X nie** Podaj pól wystąpień, które są publiczne lub chronione.  
+ **X DO NOT** Podaj pól wystąpień, które są publiczne lub chronione.  
   
  Należy podać właściwości do uzyskiwania dostępu do pola zamiast nadawania publiczne lub chronione.  
   
- **CZY ✓** Użyj stałych pól na stałe, które nigdy nie zmieni.  
+ **✓ DO** Użyj stałych pól na stałe, które nigdy nie zmieni.  
   
  Kompilator pali wartości pól const bezpośrednio do wywoływania z kodu. W związku z tym wartości stałych nigdy nie można zmienić bez ryzyka fundamentalne zgodności.  
   
- **CZY ✓** Użyj publiczne statyczne `readonly` pól dla wstępnie zdefiniowanych obiektów.  
+ **✓ DO** Użyj publiczne statyczne `readonly` pól dla wstępnie zdefiniowanych obiektów.  
   
  W przypadku wystąpienia wstępnie zdefiniowanego typu zadeklarować je jako publiczną pola statycznego tylko do odczytu tego samego typu.  
   
- **X nie** przypisać wystąpień typów modyfikowalną do `readonly` pola.  
+ **X DO NOT** przypisać wystąpień typów modyfikowalną do `readonly` pola.  
   
  Modyfikowalne typ jest typem z wystąpieniami, które można zmodyfikować po utrzymującego. Na przykład tablic, większość kolekcji i strumienie są modyfikowalne typów, ale <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Uri?displayProperty=nameWithType>, i <xref:System.String?displayProperty=nameWithType> są niezmienne wszystkie. Wystąpienie przechowywana w polu od zastępowanego uniemożliwia modyfikatora tylko do odczytu w polu typu odwołania, ale nie zapobiega danych wystąpienia w polu przed modyfikacją przez wywołanie członków zmiana wystąpienia programu.  
   

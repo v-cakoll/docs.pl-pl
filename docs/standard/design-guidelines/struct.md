@@ -18,27 +18,28 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572739"
 ---
 # <a name="struct-design"></a>Projektowanie struktury
 Typ wartości ogólnego przeznaczenia najczęściej nazywa się struktury, jego słowo kluczowe języka C#. Ta sekcja zawiera wskazówki dotyczące projektowania struktury ogólne.  
   
- **X nie** Podaj domyślnego konstruktora dla struktury.  
+ **X DO NOT** Podaj domyślnego konstruktora dla struktury.  
   
  Niniejsze wytyczne po umożliwia tablice struktur ma zostać utworzony bez konieczności uruchamiania Konstruktora na każdy element tablicy. Zwróć uwagę, że C# nie zezwala na struktury ma domyślnych konstruktorów.  
   
- **X nie** Definiowanie typów modyfikowalne wartości.  
+ **X DO NOT** Definiowanie typów modyfikowalne wartości.  
   
  Typy wartości modyfikowalne ma kilka problemów. Na przykład gdy metody pobierającej właściwość zwraca typ wartości, wywołujący wysyłana kopia. Ponieważ kopia zostanie utworzona niejawnie, deweloperzy mogą nie być pamiętać, że są mutacja kopia i nie oryginalnej wartości. Ponadto w przypadku niektórych języków (dynamiczny języki, w szczególności) występują problemy przy użyciu typów wartości modyfikowalne, ponieważ nawet zmiennych lokalnych, gdy wyłuskiwany, spowodować kopii ma zostać wykonane.  
   
- **CZY ✓** zapewnić, że stan, w którym wszystkie dane wystąpienia jest ustawiony na zero, wartość false lub wartość null (zgodnie z potrzebami) jest nieprawidłowa.  
+ **✓ DO** zapewnić, że stan, w którym wszystkie dane wystąpienia jest ustawiony na zero, wartość false lub wartość null (zgodnie z potrzebami) jest nieprawidłowa.  
   
  Zapobiega przypadkowemu tworzenia wystąpień nieprawidłowy, po utworzeniu tablicę struktury.  
   
- **CZY ✓** zaimplementować <xref:System.IEquatable%601> w typach wartości.  
+ **✓ DO** zaimplementować <xref:System.IEquatable%601> w typach wartości.  
   
  <xref:System.Object.Equals%2A?displayProperty=nameWithType> Metody w typach wartości powoduje, że opakowywanie i jego domyślna implementacja nie jest bardzo wydajny, ponieważ używa odbicia. <xref:System.IEquatable%601.Equals%2A> może być znacznie lepszą wydajność i można zaimplementować tak, aby nie spowoduje boxing.  
   
- **X nie** jawnie rozszerzyć <xref:System.ValueType>. W rzeczywistości większość języków temu zapobiec.  
+ **X DO NOT** jawnie rozszerzyć <xref:System.ValueType>. W rzeczywistości większość języków temu zapobiec.  
   
  Ogólnie rzecz biorąc struktury może być bardzo przydatne, ale należy używać tylko w małych, jednego, modyfikować wartości, które nie można spakować często.  
   

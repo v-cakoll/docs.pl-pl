@@ -41,15 +41,15 @@ Wszystkie programy uzyskać jeden lub więcej zasobów systemowych, np. pamięci
   
  Głównym celem wzorca jest uproszczeniu wykonania <xref:System.Object.Finalize%2A> i <xref:System.IDisposable.Dispose%2A> metody. Złożoność wynika z faktu, że metody udostępniania niektórych, ale nie wszystkie ścieżki kodu (różnice są opisane w dalszej części rozdziału). Ponadto istnieje historycznych przyczyn niektórych elementów powiązanych do zmiany języka obsługę zarządzania zasobami deterministyczne wzorca.  
   
- **CZY ✓** zaimplementować podstawowy wzorzec Dispose w typach zawierający wystąpienia typów, możliwe do rozporządzania. Zobacz [podstawowy wzorzec Dispose](#basic_pattern) sekcji szczegółowe informacje na temat podstawowych wzorca.  
+ **✓ DO** zaimplementować podstawowy wzorzec Dispose w typach zawierający wystąpienia typów, możliwe do rozporządzania. Zobacz [podstawowy wzorzec Dispose](#basic_pattern) sekcji szczegółowe informacje na temat podstawowych wzorca.  
   
  Jeśli typ jest odpowiedzialny za okres istnienia inne obiekty możliwe do rozporządzania, deweloperzy muszą mieć możliwość usunięcia ich zbyt. Za pomocą kontenera `Dispose` jest wygodny sposób, aby było to możliwe.  
   
- **CZY ✓** wdrożenia podstawowy wzorzec Dispose i zapewnić finalizator typów zawierający zasoby, które mają zostać zwolniony jawnie i które nie mają finalizatory.  
+ **✓ DO** wdrożenia podstawowy wzorzec Dispose i zapewnić finalizator typów zawierający zasoby, które mają zostać zwolniony jawnie i które nie mają finalizatory.  
   
  Na przykład wzorzec powinny zostać wdrożone na typy buforów pamięci niezarządzanym przechowywania. [Finalizable typy](#finalizable_types) sekcji omówiono wskazówki związane z implementacją finalizatory.  
   
- **ROZWAŻ ✓** implementacja podstawowe wzorca Dispose klasy się nie przytrzymaj niezarządzane zasoby lub obiekty możliwe do rozporządzania ale prawdopodobnie podtypów, które wykonują.  
+ **✓ CONSIDER** implementacja podstawowe wzorca Dispose klasy się nie przytrzymaj niezarządzane zasoby lub obiekty możliwe do rozporządzania ale prawdopodobnie podtypów, które wykonują.  
   
  Jest doskonałym przykładem <xref:System.IO.Stream?displayProperty=nameWithType> klasy. Abstrakcyjna klasa podstawowa, która nie zawiera żadnych zasobów, ale większość jej podklasach czy i w związku z tym implementuje tego wzorca.  
   
@@ -85,7 +85,7 @@ public class DisposableResourceHolder : IDisposable {
   
  Ponadto ta sekcja dotyczy klasy z podstawowej, która już nie implementuje wzorzec Dispose. Jeśli możesz są dziedziczy z klasy, która już implementuje wzorzec, po prostu zastąpić `Dispose(bool)` metodę w celu zapewnienia dodatkowych zasobów oczyszczania logiki.  
   
- **CZY ✓** zadeklarować `protected virtual void Dispose(bool disposing)` metody, można scentralizować całą logikę związany ze zwalnianiem zasoby niezarządzane.  
+ **✓ DO** zadeklarować `protected virtual void Dispose(bool disposing)` metody, można scentralizować całą logikę związany ze zwalnianiem zasoby niezarządzane.  
   
  Oczyszczanie zasobów wszystkie powinien wystąpić w przypadku tej metody. Metoda jest wywoływana z obu finalizator i `IDisposable.Dispose` metody. Parametr nie będzie miał wartość false, jeśli jest wywoływany z wewnątrz finalizator. Stosuje się do upewnij się, że każdy kod działania podczas finalizacji nie uzyskuje dostęp do innych obiektów finalizable. Szczegóły dotyczące implementowania finalizatory są opisane w następnej sekcji.  
   
@@ -97,7 +97,7 @@ protected virtual void Dispose(bool disposing) {
 }  
 ```  
   
- **CZY ✓** zaimplementować `IDisposable` interfejsu, wywołując po prostu `Dispose(true)` następuje `GC.SuppressFinalize(this)`.  
+ **✓ DO** zaimplementować `IDisposable` interfejsu, wywołując po prostu `Dispose(true)` następuje `GC.SuppressFinalize(this)`.  
   
  Wywołanie `SuppressFinalize` może występować tylko, jeśli `Dispose(true)` wykonana pomyślnie.  
   
@@ -108,7 +108,7 @@ public void Dispose(){
 }  
 ```  
   
- **X nie** upewnij bez parametrów `Dispose` metody wirtualnej.  
+ **X DO NOT** upewnij bez parametrów `Dispose` metody wirtualnej.  
   
  `Dispose(bool)` Metoda jest tą, która powinna zostać zastąpiona przez podklasy.  
   
@@ -126,11 +126,11 @@ public class DisposableResourceHolder : IDisposable {
 }  
 ```  
   
- **X nie** zadeklarować wszystkie przeciążenia `Dispose` metody inne niż `Dispose()` i `Dispose(bool)`.  
+ **X DO NOT** zadeklarować wszystkie przeciążenia `Dispose` metody inne niż `Dispose()` i `Dispose(bool)`.  
   
  `Dispose` należy rozważyć słowem zastrzeżonym, ułatwia skodyfikować tego wzorca i uniknąć nieporozumień wśród implementacje, użytkowników i kompilatory. W przypadku niektórych języków może wybrać automatycznie Wdrażaj tego wzorca dla niektórych typów.  
   
- **CZY ✓** Zezwalaj `Dispose(bool)` metodę można wywołać więcej niż raz. Metoda może wybrać nic nie rób po pierwszym wywołaniu.  
+ **✓ DO** Zezwalaj `Dispose(bool)` metodę można wywołać więcej niż raz. Metoda może wybrać nic nie rób po pierwszym wywołaniu.  
   
 ```csharp
 public class DisposableResourceHolder : IDisposable {  
@@ -146,13 +146,13 @@ public class DisposableResourceHolder : IDisposable {
 }  
 ```  
   
- **X należy UNIKAĆ** Zgłaszanie wyjątku z poziomu `Dispose(bool)` z wyjątkiem sytuacji krytycznych gdzie zawierającego proces został uszkodzony (przecieków, niespójna udostępnionego itp.).  
+ **X AVOID** Zgłaszanie wyjątku z poziomu `Dispose(bool)` z wyjątkiem sytuacji krytycznych gdzie zawierającego proces został uszkodzony (przecieków, niespójna udostępnionego itp.).  
   
  Użytkownicy oczekują, że wywołanie `Dispose` nie zgłosi wyjątku.  
   
  Jeśli `Dispose` może zgłosić wyjątek, dalsze logiki oczyszczania bloku finally nie zostanie wykonany. Aby obejść ten problem, użytkownik musi być zawijany każdego wywołania `Dispose` (wewnątrz bloku finally!) w bloku try, która prowadzi do obsługi oczyszczania bardzo złożonych. Jeśli wykonywania `Dispose(bool disposing)` metody, nigdy nie throw jako wyjątek, jeśli disposing ma wartość false. Dzięki temu zakończy proces, jeśli wykonywane w kontekście finalizatora.  
   
- **CZY ✓** throw <xref:System.ObjectDisposedException> z dowolnego elementu członkowskiego, który nie może zostać użyty obiekt został usunięty z.  
+ **✓ DO** throw <xref:System.ObjectDisposedException> z dowolnego elementu członkowskiego, który nie może zostać użyty obiekt został usunięty z.  
   
 ```csharp
 public class DisposableResourceHolder : IDisposable {  
@@ -173,7 +173,7 @@ public class DisposableResourceHolder : IDisposable {
 }  
 ```  
   
- **✓ ROZWAŻ** udostępnia metody `Close()`, oprócz `Dispose()`, jeśli jest blisko terminologii w obszarze.  
+ **✓ CONSIDER** udostępnia metody `Close()`, oprócz `Dispose()`, jeśli jest blisko terminologii w obszarze.  
   
  Dzięki temu, ważne jest wykonanie `Close` taka sama jak implementacja `Dispose` i rozważ zaimplementowanie `IDisposable.Dispose` — metoda jawnie.  
   
@@ -230,15 +230,15 @@ public class ComplexResourceHolder : IDisposable {
 }  
 ```  
   
- **X należy UNIKAĆ** wprowadzania finalizable typów.  
+ **X AVOID** wprowadzania finalizable typów.  
   
  Należy rozważyć w każdym przypadku, w którym uważasz, że wymagane jest finalizator. Brak rzeczywistych kosztów związanych z wystąpień finalizatory z punktu widzenia złożoności wydajności i kod. Preferowane jest przy użyciu otoki zasobów, takich jak <xref:System.Runtime.InteropServices.SafeHandle> aby hermetyzować zasoby niezarządzane, jeśli jest to możliwe, w którym to przypadku finalizator staje się niepotrzebne ponieważ otoka jest odpowiedzialny za własną Oczyszczanie zasobów.  
   
- **X nie** tworzenie finalizable typów wartości.  
+ **X DO NOT** tworzenie finalizable typów wartości.  
   
  Tylko typy referencyjne uzyskać faktycznie opracowane przez środowisko CLR, a w związku z tym każda próba umieść finalizator na typ wartości zostaną zignorowane. C# i kompilatory C++ wymusić tę regułę.  
   
- **CZY ✓** upewnij typu finalizable, jeśli typ jest odpowiedzialny za zwolnienie niezarządzanego zasobu, który nie ma własną finalizatora.  
+ **✓ DO** upewnij typu finalizable, jeśli typ jest odpowiedzialny za zwolnienie niezarządzanego zasobu, który nie ma własną finalizatora.  
   
  Podczas implementowania finalizator, po prostu Wywołaj `Dispose(false)` i umieść całą logikę Oczyszczanie zasobów wewnątrz `Dispose(bool disposing)` metody.  
   
@@ -255,25 +255,25 @@ public class ComplexResourceHolder : IDisposable {
 }  
 ```  
   
- **CZY ✓** wdrożenia dla każdego typu finalizable podstawowy wzorzec Dispose.  
+ **✓ DO** wdrożenia dla każdego typu finalizable podstawowy wzorzec Dispose.  
   
  Dzięki temu użytkownicy typu sposób jawnie przeprowadzi deterministyczne Oczyszczanie tych samych zasobów, za które odpowiada finalizatora.  
   
- **X nie** uzyskać dostępu do żadnych obiektów finalizable w ścieżce kodu finalizator, ponieważ istnieje duże ryzyko, że ich będzie mieć już sfinalizowany.  
+ **X DO NOT** uzyskać dostępu do żadnych obiektów finalizable w ścieżce kodu finalizator, ponieważ istnieje duże ryzyko, że ich będzie mieć już sfinalizowany.  
   
  Na przykład obiekt finalizable A, który zawiera odwołanie do innego obiektu finalizable B niezawodnie nie można użyć B w A finalizator, albo na odwrót. Finalizatory są wywoływane w kolejności losowej (zbyt mała słabe gwarancji porządkowania finalizacji krytyczne).  
   
  Ponadto należy pamiętać, że obiekty przechowywane w zmienne statyczne będą uzyskać zbierane w niektórych punktach podczas zwalniania domeny aplikacji lub podczas zamykania procesu. Uzyskiwanie dostępu do zmienną statyczną, która odwołuje się do obiektu finalizable (lub wywołanie metody statycznej, który może używać wartości przechowywane w zmiennych statycznych) może nie być bezpieczne w przypadku <xref:System.Environment.HasShutdownStarted%2A?displayProperty=nameWithType> zwraca wartość true.  
   
- **CZY ✓** upewnij Twojej `Finalize` metody chronione.  
+ **✓ DO** upewnij Twojej `Finalize` metody chronione.  
   
  C#, C++ i VB.NET deweloperzy nie ma potrzeby martwić się o to, ponieważ kompilatory pomóc wymusić Niniejsze wytyczne.  
   
- **X nie** escape let wyjątki od logiki finalizator, z wyjątkiem błędy krytyczne systemu.  
+ **X DO NOT** escape let wyjątki od logiki finalizator, z wyjątkiem błędy krytyczne systemu.  
   
  Jeśli finalizator jest zgłaszany wyjątek, aparat CLR spowoduje zamknięcie cały proces (począwszy od platformy .NET Framework w wersji 2.0), inne finalizatory uniemożliwia wykonywanie i zasobów z został wydany w kontrolowany sposób.  
   
- **ROZWAŻ ✓** tworzenie i używanie obiektu finalizable krytycznego (typ z hierarchii typów, który zawiera <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject>) w sytuacjach, w których finalizator bezwzględnie wykonać nawet w wypadku zwalnia domeny wymuszone aplikacji i wątków przerywa.  
+ **✓ CONSIDER** tworzenie i używanie obiektu finalizable krytycznego (typ z hierarchii typów, który zawiera <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject>) w sytuacjach, w których finalizator bezwzględnie wykonać nawet w wypadku zwalnia domeny wymuszone aplikacji i wątków przerywa.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   

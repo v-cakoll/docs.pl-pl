@@ -21,15 +21,15 @@ ms.locfileid: "33571189"
 # <a name="naming-resources"></a>Nadawanie nazw zasobów
 Ponieważ zlokalizowania zasobów można odwoływać się za pośrednictwem niektórych obiektów tak jakby były to właściwości, nazewnictwa wytyczne dotyczące zasobów są podobne do właściwości wytyczne.  
   
- **CZY ✓** programu PascalCasing klucze zasobów.  
+ **✓ DO** programu PascalCasing klucze zasobów.  
   
- **CZY ✓** Podaj opisową zamiast krótkich identyfikatorów.  
+ **✓ DO** Podaj opisową zamiast krótkich identyfikatorów.  
   
- **X nie** użyj słowa kluczowe specyficzne dla języka głównego języków CLR.  
+ **X DO NOT** użyj słowa kluczowe specyficzne dla języka głównego języków CLR.  
   
- **CZY ✓** Użyj tylko znaki alfanumeryczne oraz znaki podkreślenia w nazw zasobów.  
+ **✓ DO** Użyj tylko znaki alfanumeryczne oraz znaki podkreślenia w nazw zasobów.  
   
- **CZY ✓** używać następującej konwencji nazewnictwa dla zasobów komunikat wyjątku.  
+ **✓ DO** używać następującej konwencji nazewnictwa dla zasobów komunikat wyjątku.  
   
  Identyfikator zasobu powinny być nazwa typu wyjątku plus krótki identyfikator wyjątku:  
   

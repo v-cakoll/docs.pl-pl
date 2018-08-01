@@ -32,7 +32,7 @@ Z punktu widzenia środowiska CLR, dostępne są tylko dwie kategorie typów —
   
  Delegatów, wyjątki atrybuty, tablic i kolekcje są wszystkie szczególnych przypadkach typy referencyjne przeznaczonych do określonych celów i wskazówki dotyczące ich projektowania i użycia w innym miejscu, omówiono w książce.  
   
- **CZY ✓** upewnij się, że każdy typ jest dobrze zdefiniowany zestaw elementów członkowskich powiązane, nie tylko losowe kolekcji funkcji niepowiązanych.  
+ **✓ DO** upewnij się, że każdy typ jest dobrze zdefiniowany zestaw elementów członkowskich powiązane, nie tylko losowe kolekcji funkcji niepowiązanych.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Wybieranie między klasą i strukturą](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)  

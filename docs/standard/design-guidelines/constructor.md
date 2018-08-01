@@ -30,50 +30,50 @@ Istnieją dwa rodzaje konstruktory: wpisz konstruktorów i konstruktorów wystą
   
  Konstruktory są najbardziej naturalny sposób można utworzyć wystąpienia typu. Większość deweloperów będzie wyszukiwanie i spróbuj użyć konstruktora przed uznają alternatywnych sposobów tworzenia wystąpień (na przykład metodami factory).  
   
- **ROZWAŻ ✓** udostępnia prostą, najlepiej domyślne, konstruktorów.  
+ **✓ CONSIDER** udostępnia prostą, najlepiej domyślne, konstruktorów.  
   
  Prosty konstruktor ma bardzo małą liczbę parametrów, a wszystkie parametry są pierwotnych lub wyliczeń. Takie proste konstruktorów zwiększyć użyteczność platformy.  
   
- **ROZWAŻ ✓** przy użyciu metody statycznej fabryki zamiast konstruktora semantykę Żądana operacja nie mapują bezpośrednio do tworzenia nowego wystąpienia, lub zgodnie z wytycznymi projektowania konstruktora tak nienaturalnej.  
+ **✓ CONSIDER** przy użyciu metody statycznej fabryki zamiast konstruktora semantykę Żądana operacja nie mapują bezpośrednio do tworzenia nowego wystąpienia, lub zgodnie z wytycznymi projektowania konstruktora tak nienaturalnej.  
   
- **CZY ✓** parametry konstruktora jako skróty do ustawiania właściwości głównego.  
+ **✓ DO** parametry konstruktora jako skróty do ustawiania właściwości głównego.  
   
  Nie powinna istnieć różnicy w semantyki między przy użyciu pustego konstruktora następuje niektóre zestawy właściwości i konstruktora z wieloma argumentami.  
   
- **CZY ✓** Użyj takiej samej nazwy dla parametrami konstruktora a właściwością, jeśli używane są parametry konstruktora wystarczy ustawić właściwości.  
+ **✓ DO** Użyj takiej samej nazwy dla parametrami konstruktora a właściwością, jeśli używane są parametry konstruktora wystarczy ustawić właściwości.  
   
  Jedyną różnicą między tych parametrów i właściwości powinny być wielkość liter.  
   
- **CZY ✓** minimalnego pracy w konstruktorze.  
+ **✓ DO** minimalnego pracy w konstruktorze.  
   
  Konstruktory należy wykonać dużo pracy innych niż przechwytywania parametrami konstruktora. Powinno zostać opóźnione koszt żadnych innych operacji, dopóki wymagane.  
   
- **CZY ✓** zgłaszanie wyjątków z konstruktorów wystąpienia, w razie potrzeby.  
+ **✓ DO** zgłaszanie wyjątków z konstruktorów wystąpienia, w razie potrzeby.  
   
- **CZY ✓** jawnie deklarować publicznego konstruktora domyślnego w klasach, jeśli takie Konstruktor jest wymagana.  
+ **✓ DO** jawnie deklarować publicznego konstruktora domyślnego w klasach, jeśli takie Konstruktor jest wymagana.  
   
  Wszystkie konstruktory nie jawnie zadeklarowana w typie, wiele języków (na przykład C#) automatycznie doda publiczny konstruktor domyślny. (Klas abstrakcyjnych get Konstruktor chroniony).  
   
  Dodawanie sparametryzowanym konstruktorze do klasy uniemożliwia kompilator Dodawanie domyślnego konstruktora. Powoduje to często przypadkowemu najważniejszych zmian.  
   
- **X należy UNIKAĆ** jawnie Definiowanie domyślnych konstruktorów w strukturach.  
+ **X AVOID** jawnie Definiowanie domyślnych konstruktorów w strukturach.  
   
  Dzięki temu utworzenia tablicy szybciej, ponieważ jeśli nie zdefiniowano domyślnego konstruktora, ma być uruchamiane na każdym miejsca w tablicy. Należy pamiętać, że struktury mieć konstruktorów bez parametrów z tego powodu nie zezwalaj na wiele kompilatorów, w tym C#.  
   
- **X należy UNIKAĆ** wywoływania wirtualne elementy członkowskie dla obiekt wewnątrz jego konstruktora.  
+ **X AVOID** wywoływania wirtualne elementy członkowskie dla obiekt wewnątrz jego konstruktora.  
   
  Wywołanie elementu członkowskiego wirtualnego spowoduje najdalszych pochodnych zastąpienie do wywołania, nawet wtedy, gdy Konstruktor typu najbardziej pochodnej nie pełni uruchomiono jeszcze.  
   
 ### <a name="type-constructor-guidelines"></a>Wskazówki dotyczące konstruktora typu  
- **CZY ✓** Oznacz jako prywatne konstruktory statyczne.  
+ **✓ DO** Oznacz jako prywatne konstruktory statyczne.  
   
  Konstruktor statyczny, nazywany również konstruktora klasy służy do inicjowania typu. Środowisko CLR wywołuje konstruktor statyczny przed utworzeniu pierwszego wystąpienia typu lub są nazywane żadnych statycznych elementów członkowskich tego typu. Użytkownik nie ma kontroli nad podczas wywołania konstruktora statycznego. Jeśli Konstruktor statyczny nie jest prywatne, może być wywoływany przez kod innych niż środowiska CLR. W zależności od operacji wykonywanych w Konstruktorze może to spowodować nieoczekiwane zachowanie. Kompilator języka C# wymusza konstruktory statyczne ma charakter prywatny.  
   
- **X nie** zgłaszanie wyjątków z konstruktorów statycznych.  
+ **X DO NOT** zgłaszanie wyjątków z konstruktorów statycznych.  
   
  Jeśli z konstruktora typu jest zgłaszany wyjątek, typ nie jest użyteczne w bieżącej domenie aplikacji.  
   
- **ROZWAŻ ✓** inicjowanie pól statycznych zamiast jawnie konstruktory statyczne, ponieważ środowisko uruchomieniowe jest w stanie zoptymalizować wydajność typy, które nie mają jawnie zdefiniowanych Konstruktor statyczny.  
+ **✓ CONSIDER** inicjowanie pól statycznych zamiast jawnie konstruktory statyczne, ponieważ środowisko uruchomieniowe jest w stanie zoptymalizować wydajność typy, które nie mają jawnie zdefiniowanych Konstruktor statyczny.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   

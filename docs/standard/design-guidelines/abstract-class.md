@@ -20,17 +20,17 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33570570"
 ---
 # <a name="abstract-class-design"></a>Projekt klasy abstrakcyjnej
-**X nie** zdefiniuj public lub protected wewnętrzny konstruktorów w typach abstrakcyjnych.  
+**X DO NOT** zdefiniuj public lub protected wewnętrzny konstruktorów w typach abstrakcyjnych.  
   
  Konstruktory powinny być publiczne, tylko wtedy, gdy użytkownicy będą musieli tworzyć wystąpienia typu. Ponieważ nie można utworzyć wystąpienia typu abstrakcyjnego, typ ogólny z publicznym konstruktorem jest niepoprawnie zaprojektowany i mylące dla użytkowników.  
   
- **CZY ✓** Definiowanie chronionych lub wewnętrzny konstruktora w klas abstrakcyjnych.  
+ **✓ DO** Definiowanie chronionych lub wewnętrzny konstruktora w klas abstrakcyjnych.  
   
  Konstruktor chroniony jest najczęściej i po prostu umożliwia klasy podstawowej w celu własną inicjowania podczas tworzenia podtypów.  
   
  Wewnętrzny Konstruktor może służyć do ograniczania konkretnych implementacji klasy abstrakcyjnej do zestawu Definiowanie klasy.  
   
- **CZY ✓** Podaj co najmniej jednego typu konkretnego, która dziedziczy po każdej klasy abstrakcyjnej, którą można wysłać.  
+ **✓ DO** Podaj co najmniej jednego typu konkretnego, która dziedziczy po każdej klasy abstrakcyjnej, którą można wysłać.  
   
  Wykonywanie dzięki temu można sprawdzić poprawności projektu klasy abstrakcyjnej. Na przykład <xref:System.IO.FileStream?displayProperty=nameWithType> jest implementacją <xref:System.IO.Stream?displayProperty=nameWithType> klasy abstrakcyjnej.  
   

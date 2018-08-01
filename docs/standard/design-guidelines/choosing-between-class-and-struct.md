@@ -36,9 +36,9 @@ Jednym z podstawowych decyzji projektowych który skierowany framework designer 
   
  Zasadą większość typów w ramach powinny być klasy. Istnieje jednak kilka sytuacji, w których typ wartości właściwości stał się bardziej odpowiednie do użycia w strukturach.  
   
- **ROZWAŻ ✓** definiowania struktury zamiast klasy, jeśli wystąpienia typu małych i często krótkim okresie lub często są osadzone w innych obiektach.  
+ **✓ CONSIDER** definiowania struktury zamiast klasy, jeśli wystąpienia typu małych i często krótkim okresie lub często są osadzone w innych obiektach.  
   
- **X należy UNIKAĆ** definiowania struktury, chyba że typ ma wszystkie następujące właściwości:  
+ **X AVOID** definiowania struktury, chyba że typ ma wszystkie następujące właściwości:  
   
 -   Logicznie reprezentuje pojedynczą wartość, podobnie jak typy pierwotne (`int`, `double`itp.).  
   

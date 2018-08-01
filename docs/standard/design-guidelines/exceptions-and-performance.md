@@ -21,7 +21,7 @@ ms.locfileid: "33575339"
 # <a name="exceptions-and-performance"></a>Wyjątki i wydajności
 Jednej wspólnej problemem związanym z wyjątkami jest, że wyjątki są używane do kodu, który regularnie zakończy się niepowodzeniem, wydajność implementacji zostaną nie do przyjęcia. Jest to prawidłowy niepożądane. Gdy członek zgłasza wyjątek, jego wydajność może być rzędów wolniej. Jednak jest możliwe uzyskanie dobrą wydajność ściśle przestrzegając wskazówki wyjątków, które nie zezwalaj na korzystanie z kodów błędów. Dwa wzorce opisane w tej sekcji sugestie sposobów, w tym celu.  
   
- **X nie** używa kody błędów ze względu na problemy, czy wyjątki może negatywnie wpłynąć na wydajność.  
+ **X DO NOT** używa kody błędów ze względu na problemy, czy wyjątki może negatywnie wpłynąć na wydajność.  
   
  Aby zwiększyć wydajność, jest możliwość użycia wzorca Tester Doer lub wzorcu analizy spróbuj opisanego w dwóch następnych sekcjach.  
   
@@ -45,7 +45,7 @@ if(!numbers.IsReadOnly){
   
  Element członkowski wykorzystywane do testowania warunek, który w naszym przykładzie jest właściwość `IsReadOnly`, jest określany jako tester. Element członkowski używany do wykonywania operacji potencjalnie przerzucane, `Add` metody w tym przykładzie jest określana jako doer.  
   
- **ROZWAŻ ✓** wzorzec Tester Doer dla elementów członkowskich, które zgłaszają wyjątki, może być wspólnych scenariuszy, aby uniknąć problemów z wydajnością związane z wyjątków.  
+ **✓ CONSIDER** wzorzec Tester Doer dla elementów członkowskich, które zgłaszają wyjątki, może być wspólnych scenariuszy, aby uniknąć problemów z wydajnością związane z wyjątków.  
   
 ## <a name="try-parse-pattern"></a>Spróbuj analizy wzorca  
  W przypadku bardzo ważnych wydajności interfejsów API należy użyć wzorzec szybszy niż wzorzec Tester Doer opisanych w poprzedniej sekcji. Wzorzec wywołuje dostosowywania nazwę elementu członkowskiego, aby dobrze zdefiniowany testu przypadek część semantyki elementu członkowskiego. Na przykład <xref:System.DateTime> definiuje <xref:System.DateTime.Parse%2A> metodę, która zgłasza wyjątek, jeśli podczas analizowania ciągu nie powiedzie się. Definiuje również odpowiedniego <xref:System.DateTime.TryParse%2A> metodę, która podejmuje próbę analizy, ale zwraca wartość false, jeśli podczas analizowania zakończy się niepowodzeniem i zwraca wynik w pomyślnym analizy przy użyciu `out` parametru.  
@@ -63,11 +63,11 @@ public struct DateTime {
   
  Podczas używania tego wzorca, jest zdefiniowanie funkcji spróbuj względem strict. W przypadku niepowodzenia element członkowski przyczyn innych niż spróbuj dobrze zdefiniowany element członkowski musi nadal throw odpowiednich wyjątków.  
   
- **ROZWAŻ ✓** wzorzec spróbuj analizy dla elementów członkowskich, które zgłaszają wyjątki, może być wspólnych scenariuszy, aby uniknąć problemów z wydajnością związane z wyjątków.  
+ **✓ CONSIDER** wzorzec spróbuj analizy dla elementów członkowskich, które zgłaszają wyjątki, może być wspólnych scenariuszy, aby uniknąć problemów z wydajnością związane z wyjątków.  
   
- **CZY ✓** Użyj prefiksu "Try" i wartość logiczną zwracanego typu dla metody implementacja tego wzorca.  
+ **✓ DO** Użyj prefiksu "Try" i wartość logiczną zwracanego typu dla metody implementacja tego wzorca.  
   
- **CZY ✓** Podaj elementu członkowskiego zgłaszanie wyjątków dla każdego elementu członkowskiego przy użyciu wzorca spróbuj analizy.  
+ **✓ DO** Podaj elementu członkowskiego zgłaszanie wyjątków dla każdego elementu członkowskiego przy użyciu wzorca spróbuj analizy.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   

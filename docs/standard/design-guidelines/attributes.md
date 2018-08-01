@@ -26,25 +26,25 @@ ms.locfileid: "33574637"
   
  Właściwości, które nie muszą być określone, gdy jest stosowany atrybut są nazywane właściwości opcjonalnych (lub argumentów opcjonalnych). Są one reprezentowane przez można ustawić właściwości. Kompilatory Podaj specjalnej składni ustawić te właściwości, gdy jest stosowany atrybut. Na przykład <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> właściwość reprezentuje opcjonalny argument.  
   
- **CZY ✓** nazwy klas atrybutów niestandardowych z sufiksem "Atrybutu".  
+ **✓ DO** nazwy klas atrybutów niestandardowych z sufiksem "Atrybutu".  
   
- **CZY ✓** zastosować <xref:System.AttributeUsageAttribute> atrybutów niestandardowych.  
+ **✓ DO** zastosować <xref:System.AttributeUsageAttribute> atrybutów niestandardowych.  
   
- **CZY ✓** Podaj można ustawić właściwości dla argumentów opcjonalnych.  
+ **✓ DO** Podaj można ustawić właściwości dla argumentów opcjonalnych.  
   
- **CZY ✓** Podaj właściwości tylko do pobrania dla wymaganych argumentów.  
+ **✓ DO** Podaj właściwości tylko do pobrania dla wymaganych argumentów.  
   
- **CZY ✓** podać parametry konstruktora zainicjować właściwości odpowiadającej wymaganych argumentów. Każdy parametr powinien mieć taką samą nazwę (mimo że za pomocą innej wielkości liter), jak odpowiadających im właściwości.  
+ **✓ DO** podać parametry konstruktora zainicjować właściwości odpowiadającej wymaganych argumentów. Każdy parametr powinien mieć taką samą nazwę (mimo że za pomocą innej wielkości liter), jak odpowiadających im właściwości.  
   
- **X należy UNIKAĆ** podając parametrami konstruktora zainicjować właściwości odpowiadającej Argumenty opcjonalne.  
+ **X AVOID** podając parametrami konstruktora zainicjować właściwości odpowiadającej Argumenty opcjonalne.  
   
  Innymi słowy nie ma właściwości, które można ustawić za pomocą metody konstruktora, jak i ustawiającej. Niniejsze wytyczne sprawia, że bardzo jawne argumenty, które są opcjonalne i które są wymagane i pozwala uniknąć konieczności ten sam efekt na dwa sposoby.  
   
- **X należy UNIKAĆ** przeładowania konstruktorów atrybutu niestandardowego.  
+ **X AVOID** przeładowania konstruktorów atrybutu niestandardowego.  
   
  Wyraźnie mających tylko jeden konstruktor komunikuje się użytkownika, które argumentów wymaganych i opcjonalnych.  
   
- **CZY ✓** zapieczętować klas atrybutów niestandardowych, jeśli to możliwe. Dzięki temu można szybciej wyszukiwania dla atrybutu.  
+ **✓ DO** zapieczętować klas atrybutów niestandardowych, jeśli to możliwe. Dzięki temu można szybciej wyszukiwania dla atrybutu.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   

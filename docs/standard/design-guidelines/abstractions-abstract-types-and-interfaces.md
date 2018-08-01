@@ -28,11 +28,11 @@ Abstrakcja jest typem, który opisuje kontrakt, ale nie zapewnia pełnej impleme
   
  Jednak abstrakcje rozszerzalność niezwykle wydajnych innych mechanizmów rozszerzalności często nie pasuje. Są one fundament wiele architektury wzorców, takich jak dodatki plug-in, Inwersja kontroli (IoC), potoki i tak dalej. Są one również bardzo ważne dla pola struktury. Dobrym abstrakcje umożliwiają stub limit duże zależności na potrzeby testowania jednostek. Podsumowując obiekty abstrakcyjne są odpowiedzialne za sought-after formatem nowoczesny zorientowany obiektowo struktury.  
   
- **X nie** Podaj obiektów abstrakcyjnych, chyba że są one przetestowane przez kilka konkretnych implementacji i interfejsów API korzystających z obiekty abstrakcyjne.  
+ **X DO NOT** Podaj obiektów abstrakcyjnych, chyba że są one przetestowane przez kilka konkretnych implementacji i interfejsów API korzystających z obiekty abstrakcyjne.  
   
- **CZY ✓** dokładnie wybór między klasą abstrakcyjną i interfejs podczas projektowania abstrakcję.  
+ **✓ DO** dokładnie wybór między klasą abstrakcyjną i interfejs podczas projektowania abstrakcję.  
   
- **ROZWAŻ ✓** podając odwołanie testy konkretnych implementacji obiektów abstrakcyjnych. Testy te należy umożliwić użytkownikom sprawdzić, czy ich implementacji prawidłowo zaimplementować kontrakt.  
+ **✓ CONSIDER** podając odwołanie testy konkretnych implementacji obiektów abstrakcyjnych. Testy te należy umożliwić użytkownikom sprawdzić, czy ich implementacji prawidłowo zaimplementować kontrakt.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   

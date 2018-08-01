@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571387"
 ---
 # <a name="designing-for-extensibility"></a>Projektowanie pod kątem rozszerzalności
 Ważnym aspektem Projektowanie struktury jest sprawdzanie, czy starannie przemyślane extensibility Framework. Wymaga to, że rozumiesz kosztów i korzyści związanych z różne mechanizmy rozszerzania. Ten rozdział pomaga w podjęciu decyzji, które mechanizmy rozszerzania — podklasy, zdarzenia wirtualne elementy członkowskie, wywołania zwrotne i tak dalej — mogą najlepiej spełnić wymagania Twojej platformy.  

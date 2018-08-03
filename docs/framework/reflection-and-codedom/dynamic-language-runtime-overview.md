@@ -1,5 +1,5 @@
 ---
-title: Omówienie środowiska uruchomieniowego języka dynamicznego | Dokumentacja firmy Microsoft
+title: Przegląd środowiska uruchomieniowego języka dynamicznego | Dokumentacja firmy Microsoft
 ms.date: 03/30/2017
 helpviewer_keywords:
 - dynamic language runtime
@@ -10,86 +10,86 @@ ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 09cd345daffa2418b33f032e8bab47c81e2a8526
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33397289"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Przegląd środowiska uruchomieniowego języka dynamicznego
-*Środowisko uruchomieniowe języka dynamicznego* (DLR) jest środowisko uruchomieniowe, który dodaje zestaw usług dla języków dynamicznych do środowisko uruchomieniowe języka wspólnego (CLR). DLR ułatwia tworzenie dynamicznych języki do uruchomienia w programie .NET Framework oraz dodawać funkcje dynamicznego do statycznie językach.  
+*Środowisko uruchomieniowe języka dynamicznego* (DLR) jest środowisko uruchomieniowe, który dodaje zestaw usług dla języków dynamicznych do środowisko uruchomieniowe języka wspólnego (CLR). DLR sprawia, że łatwiej tworzyć języki dynamiczne, do uruchamiania na .NET Framework i dodawania funkcji dynamicznego do języków statycznie wpisane.  
   
- Dynamiczne języków można zidentyfikować typu obiektu w czasie wykonywania, natomiast w statycznie wpisana języków, takich jak C# i Visual Basic (Jeśli używasz `Option Explicit On`) należy określić typy obiektów w czasie projektowania. Przykładami dynamiczne są Lisp, Smalltalk, JavaScript, PHP, Ruby, Python, ColdFusion, Lua, Cobra i Groovy.  
+ Języki dynamiczne można zidentyfikować typ obiektu w czasie wykonywania, natomiast w statycznie wpisane języków, takich jak C# i Visual Basic (Jeśli używasz `Option Explicit On`) należy określić typy obiektów w czasie projektowania. Przykładami języki dynamiczne są Lisp, Smalltalk, JavaScript, PHP, Ruby, Python, ColdFusion, Lua, Cobra i Groovy.  
   
- Najbardziej dynamiczną języków zapewniają następujące korzyści dla deweloperów:  
+ Języki najbardziej dynamiczne zapewniają następujące korzyści dla deweloperów:  
   
--   Możliwość używania pętlę szybkie opinii (REPL lub pętli odczytu oceny drukarek). Dzięki temu można wprowadzić kilka deklaracji i natychmiast wykonać je, aby wyświetlić wyniki.  
+-   Możliwość używania pętlę błyskawicznych opinii (REPL lub odczytu oceny — Drukuj pętli). Dzięki temu można wprowadzić kilka instrukcji i natychmiast wykonać je, aby wyświetlić wyniki.  
   
--   Obsługę góra dół programowanie i bardziej tradycyjnej programowanie z dołu do góry. Na przykład użycie metody góry do dołu, można wywoływać funkcje, które nie zostały jeszcze zaimplementowane, a następnie dodaj podstawowej implementacji, gdy będziesz potrzebować.  
+-   Obsługa dla rozwoju góra dół i bardziej tradycyjny rozwoju od dołu do góry. Na przykład korzystając z podejścia góra dół, można wywoływać funkcje, które nie są jeszcze zaimplementowane, a następnie dodać podstawowej implementacji, gdy ich potrzebujesz.  
   
--   Łatwiejsze refaktoryzacji i kodu zmian, ponieważ nie trzeba zmienić typ statyczny deklaracje w całym kodzie.  
+-   Łatwiejsze refaktoryzacji i kodu modyfikacji, ponieważ nie trzeba zmienić deklaracje typu statycznego w całym kodzie.  
   
- Dynamiczne języków należy znakomity języków skryptowych. Klientów można z łatwością rozszerzyć aplikacje utworzone przy użyciu języków dynamiczne nowych poleceń i funkcjonalność. Języki dynamiczne są również często używane do tworzenia witryn sieci Web i testów przewodów, obsługa farmy serwerów, tworzenie różnych narzędzi i przekształcenia danych.  
+ Języki dynamiczne należy doskonałą językach skryptów. Klienci mogą łatwo rozbudowywać aplikacje utworzone przy użyciu języków dynamicznych nowe polecenia i funkcje. Języki dynamiczne są również często używane do tworzenia witryn sieci Web i test, wiązka, utrzymywanie farm serwerów, różne narzędzia do tworzenia i wykonywanie przekształceń danych.  
   
- Celem Runtime jest umożliwienie system dynamiczne języki do uruchamiania w programie .NET Framework i nadaj im współdziałaniu .NET. Runtime wprowadza obiekty dynamiczne C# i Visual Basic w programie Visual Studio 2010 do obsługi dynamicznego zachowania w tych językach i włączanie ich współdziałanie języków dynamicznych.  
+ Celem DLR jest aby włączyć system języków dynamicznych do uruchamiania na .NET Framework i nadaj im współdziałaniu .NET. DLR wprowadza obiektów dynamicznych do języka C# i Visual Basic w programie Visual Studio 2010 do obsługi dynamicznego działania w tych językach i włączanie ich współdziałanie języków dynamicznych.  
   
- Runtime umożliwia również tworzenie bibliotek, które obsługują operacji dynamicznych. Na przykład jeśli masz biblioteki, która używa obiektów XML lub JavaScript Object Notation (JSON), może wystąpić obiektów obiekty dynamiczne na języki, które używają Runtime. Umożliwia to użytkownikom biblioteki napisać kod składniowo prostszy i bardziej naturalne do pracy z obiektami i uzyskiwania dostępu do elementów członkowskich obiektu.  
+ DLR ułatwia również tworzenie bibliotek, które obsługują operacji dynamicznych. Na przykład jeśli masz bibliotekę, która używa obiektów XML lub JavaScript Object Notation (JSON), może występować obiektów obiektów dynamicznych dla języków, które używają DLR. Pozwala to użytkownikom bibliotekę w kodzie składniowo prostszy i bardziej naturalne na potrzeby świadczenia z obiektami i uzyskiwania dostępu do członków obiektu.  
   
- Może na przykład użyć poniższego kodu, aby zwiększyć licznik w pliku XML w języku C#.  
+ Poniższy kod może na przykład użyć, aby zwiększyć licznik w formacie XML w języku C#.  
   
  `Scriptobj.SetProperty("Count", ((int)GetProperty("Count")) + 1);`  
   
- Za pomocą Runtime, możesz użyć poniższego kodu zamiast tego tej samej operacji.  
+ Za pomocą DLR, możesz użyć następującego kodu zamiast tej samej operacji.  
   
  `scriptobj.Count += 1;`  
   
- Podobnie jak CLR Runtime jest częścią programu .NET Framework i jest dostarczana z pakietów instalacyjnych .NET Framework i Visual Studio. Jest również dostępny do pobrania w wersji open source Runtime [IronLanguages/Runtime](https://github.com/IronLanguages/dlr) repozytorium w witrynie GitHub.  
+ Podobnie jak CLR DLR jest częścią programu .NET Framework i jest dostarczana z pakiety instalacyjne systemu .NET Framework i programu Visual Studio. Jest również dostępna do pobrania w wersji typu open-source DLR [IronLanguages/dlr](https://github.com/IronLanguages/dlr) repozytorium w witrynie GitHub.  
   
 > [!NOTE]
->  Wersja open source Runtime ma wszystkie funkcje DLR, który znajduje się w programie Visual Studio i .NET Framework. Umożliwia także dodatkowe wsparcie dla obiektów implementujących języka. Aby uzyskać więcej informacji, zobacz dokumentację na [IronLanguages/Runtime](https://github.com/IronLanguages/dlr) repozytorium w witrynie GitHub. 
+>  Wersja typu open-source DLR ma wszystkie funkcje DLR, który znajduje się w programie Visual Studio i .NET Framework. Zapewnia także dodatkową obsługę języka implementacje. Aby uzyskać więcej informacji, zobacz dokumentację na [IronLanguages/dlr](https://github.com/IronLanguages/dlr) repozytorium w witrynie GitHub. 
   
- Przykłady opracowano na podstawie Runtime języki są następujące:  
+ Przykłady opracowano na podstawie DLR języków są następujące:  
   
--   IronPython. Dostępny jako oprogramowanie open source z [GitHub](https://github.com/IronLanguages/ironpython2) witryny sieci Web.  
+-   IronPython. Dostępne jako oprogramowanie open source z [GitHub](https://github.com/IronLanguages/ironpython2) witryny sieci Web.  
   
--   IronRuby. Dostępny jako oprogramowanie open source z [RubyForge](http://go.microsoft.com/fwlink/?LinkId=141044) witryny sieci Web.  
+-   IronRuby. Dostępne jako oprogramowanie open source z [RubyForge](http://go.microsoft.com/fwlink/?LinkId=141044) witryny sieci Web.  
   
-## <a name="primary-dlr-advantages"></a>Podstawowe zalety Runtime  
+## <a name="primary-dlr-advantages"></a>Podstawowe zalety DLR  
  DLR zapewnia następujące korzyści.  
   
-### <a name="simplifies-porting-dynamic-languages-to-the-net-framework"></a>Upraszcza przenoszenie dynamiczne języków .NET Framework  
- Runtime umożliwia implementacje języka uniknąć tworzenia leksykalne analizatorów, analizatory składni semantycznego analizatorów, generatory kodu i innych narzędzi, które miały tradycyjnie można utworzyć samodzielnie. Aby użyć Runtime, język musi utworzyć *drzew wyrażeń*, które reprezentują kodu języka na poziomie w strukturze drzewa w kształcie, procedury pomocnika środowiska uruchomieniowego, i opcjonalne dynamiczne obiekty, które implementuje <xref:System.Dynamic.IDynamicMetaObjectProvider> interfejsu. Runtime oraz programu .NET Framework zautomatyzować wiele analizy kodu i zadania generowania kodu. Dzięki temu implementacje języka skoncentrować się na funkcjach języka unikatowy.  
+### <a name="simplifies-porting-dynamic-languages-to-the-net-framework"></a>Upraszcza przenoszenie języki dynamiczne w .NET Framework  
+ DLR umożliwia implementacji języka uniknąć tworzenia analizatory leksykalne, analizatory składni, analizatory semantyczne, generatorów kodu i inne narzędzia, które tradycyjnie było, aby utworzyć samodzielnie. Aby użyć DLR, język wymaga utworzenia *drzew wyrażeń*, reprezentujący kodu poziomu języka w strukturze drzewa w kształcie procedury pomocnika czasu wykonywania, i opcjonalnie dynamiczne obiekty, które implementuje <xref:System.Dynamic.IDynamicMetaObjectProvider> interfejsu. DLR i .NET Framework zautomatyzować wiele analizy kodu i zadania generowania kodu. Dzięki temu implementacji języka skoncentrować się na funkcje językowe unikatowy.  
   
-### <a name="enables-dynamic-features-in-statically-typed-languages"></a>Umożliwia korzystanie z funkcji dynamicznego w językach statycznie  
- Istniejące języków .NET Framework, takich jak C# i Visual Basic można tworzyć dynamiczne obiekty i ich używać z typami statycznymi obiektami. Na przykład C# i Visual Basic można użyć obiektami dynamicznymi w celu odbicia HTML, modelu DOM (Document Object) i .NET.  
+### <a name="enables-dynamic-features-in-statically-typed-languages"></a>Umożliwia korzystanie z funkcji dynamicznego w językach statycznie wpisane  
+ Istniejące języków .NET Framework, takich jak C# i Visual Basic można tworzyć obiektów dynamicznych i ich używać z typami statycznymi obiektami. Na przykład C# i Visual Basic można użyć obiektów dynamicznych w celu odbicia HTML Document Object Model (DOM) i .NET.  
   
-### <a name="provides-future-benefits-of-the-dlr-and-net-framework"></a>Zalety przyszłych Runtime i .NET Framework  
- Języki implementowane przy użyciu DLR mogą korzystać z przyszłe ulepszenia Runtime i .NET Framework. Na przykład programu .NET Framework udostępnia nową wersję ulepszone modułu zbierającego elementy bezużyteczne lub szybsze zestawu czasu ładowania, języków implementowane przy użyciu Runtime natychmiast uzyskać takie same korzyści. Jeśli DLR dodaje optymalizacji, np. lepszą kompilacji, wydajność także usprawnia dla wszystkich języków implementowane przy użyciu Runtime.  
+### <a name="provides-future-benefits-of-the-dlr-and-net-framework"></a>Zalety przyszłych DLR i .NET Framework  
+ Języki implementowane przy użyciu DLR mogą korzystać z przyszłe ulepszenia DLR i .NET Framework. Na przykład .NET Framework wydaje nową wersję, która ma ulepszoną moduł odśmiecania pamięci lub zestawu szybciej czas ładowania, języki implementowane przy użyciu DLR natychmiast uzyskać takie same korzyści. Jeśli DLR dodaje optymalizacje, takie jak lepsza kompilacji, wydajność zwiększa również dla wszystkich języków implementowane przy użyciu DLR.  
   
 ### <a name="enables-sharing-of-libraries-and-objects"></a>Umożliwia udostępnianie biblioteki i obiektów  
- Obiekty i biblioteki zaimplementowana w jednym języku mogą posłużyć innych języków. Runtime umożliwia współdziałanie między językami statycznie maszynowy i dynamicznych. Na przykład C# można zadeklarować obiekt dynamiczny, który korzysta z biblioteki, która jest napisany w języku dynamicznej. W tym samym czasie dynamiczne języków można użyć bibliotek z programu .NET Framework.  
+ Obiekty i biblioteki zaimplementowane w jednym języku może służyć przez innych języków. DLR umożliwia także współdziałanie między językami statycznie wpisane i dynamicznych. Na przykład C# można zadeklarować obiekt dynamiczny, który używa biblioteki, która jest napisana w języku dynamicznych. W tym samym czasie języki dynamiczne mogą korzystać z bibliotek z programu .NET Framework.  
   
 ### <a name="provides-fast-dynamic-dispatch-and-invocation"></a>Zapewnia szybkie dynamicznej alokacji i wywołanie  
- DLR zapewnia szybkie wykonywanie operacji dynamicznych dzięki obsłudze zaawansowane polimorficznych buforowania. DLR tworzy powiązanie operacji korzystających z obiektów do implementacji środowiska uruchomieniowego konieczne zasady, a następnie buforuje te reguły, aby uniknąć obliczenia powiązanie wyczerpaniem zasobów podczas kolejnych wykonań tego samego kodu na takich samych typach obiektów.  
+ DLR zapewnia szybkie wykonywanie operacji dynamicznych dzięki obsłudze zaawansowane polimorficznych buforowania. DLR tworzy reguły dla powiązania operacji korzystających z obiektów do implementacji konieczne środowiska uruchomieniowego, a następnie buforuje te zasady, aby uniknąć wyczerpaniem zasobów powiązania obliczeń podczas kolejnymi wykonaniami ten sam kod na tych samych typach obiektów.  
   
-## <a name="dlr-architecture"></a>Architektura Runtime  
- Na poniższej ilustracji przedstawiono architekturę środowiska uruchomieniowego języka dynamicznego.  
+## <a name="dlr-architecture"></a>Architektura DLR  
+ Na poniższej ilustracji przedstawiono architekturę środowisko uruchomieniowe języka dynamicznego.  
   
- ![Przegląd architektury środowiska uruchomieniowego języka dynamicznego](../../../docs/framework/reflection-and-codedom/media/dlr-archoverview.png "DLR_ArchOverview")  
-Architektura Runtime  
+ ![Omówienie architektury środowiska uruchomieniowego języka dynamicznego](../../../docs/framework/reflection-and-codedom/media/dlr-archoverview.png "DLR_ArchOverview")  
+Architektura DLR  
   
- Runtime dodaje zestaw usług do środowiska CLR dla lepszej obsługi języków dynamicznych. Te usługi są następujące:  
+ DLR dodaje zestaw usług do środowiska CLR dla lepiej obsługuje języki dynamiczne. Te usługi są następujące:  
   
--   Drzewa wyrażeń. Runtime używa drzew wyrażeń do reprezentowania semantykę języka. W tym celu Runtime ma rozszerzone LINQ drzew wyrażeń do uwzględnienia przepływu sterowania, przypisywania i inne węzły język modelowania. Aby uzyskać więcej informacji, zobacz [drzew wyrażeń](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b).  
+-   Drzewa wyrażeń. DLR używa drzew wyrażeń, który reprezentuje semantykę języka. W tym celu DLR ma rozszerzone drzew wyrażeń LINQ do uwzględnienia przepływ sterowania, przypisywania i inne węzły modelowanie języka. Aby uzyskać więcej informacji, zobacz [drzew wyrażeń](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b).  
   
--   Wywołanie buforowanie lokacji. A *lokacji wywołania dynamicznego* to miejsce w kodzie, gdzie można wykonać operacji, takich jak `a + b` lub `a.b()` na obiekty dynamiczne. Właściwości buforuje DLR `a` i `b` (zazwyczaj typy te obiekty) i informacje na temat operacji. Jeśli takie działanie ma zostać wykonane wcześniej, Runtime pobiera niezbędne informacje z pamięci podręcznej na potrzeby szybkiego wysyłania.  
+-   Wywołaj buforowanie lokacji. A *witryny wywołania dynamicznego* to miejsce w kodzie, gdzie można wykonać operacji, takiej jak `a + b` lub `a.b()` obiektów dynamicznych. DLR buforuje charakterystyki `a` i `b` (zazwyczaj typy tych obiektów) i informacje na temat operacji. Jeśli taka operacja została wykonana wcześniej, DLR pobiera wszystkie niezbędne informacje z pamięci podręcznej na potrzeby szybkiego wysyłania.  
   
--   Współdziałanie obiekt dynamiczny. DLR zapewnia zbiór klasy i interfejsy, które reprezentują dynamiczne obiekty i operacje i mogą być używane przez implementacje języka i autorów dynamicznej biblioteki. Te klasy i interfejsy obejmują <xref:System.Dynamic.IDynamicMetaObjectProvider>, <xref:System.Dynamic.DynamicMetaObject>, <xref:System.Dynamic.DynamicObject>, i <xref:System.Dynamic.ExpandoObject>.  
+-   Współdziałanie obiekt dynamiczny. DLR zawiera zestaw klas i interfejsów, które reprezentują obiektów dynamicznych i operacje i mogą być używane przez implementacji języka i autorzy bibliotekami dynamicznymi. Te klasy i interfejsy obejmują <xref:System.Dynamic.IDynamicMetaObjectProvider>, <xref:System.Dynamic.DynamicMetaObject>, <xref:System.Dynamic.DynamicObject>, i <xref:System.Dynamic.ExpandoObject>.  
   
- Runtime używa integratorów w miejsc wywołania do komunikowania się nie tylko w środowisku .NET Framework, ale z innymi infrastruktury i usług, w tym Silverlight i modelu COM. Integratorów Hermetyzowanie semantykę języka i określ sposób przeprowadzenia operacji w witrynie wywołanie za pomocą drzewa wyrażeń. To umożliwia dynamiczne i statycznie wpisane języków, które używają DLR do udziału biblioteki, a dostęp do wszystkich technologie, które obsługuje Runtime.  
+ DLR używa integratorów wywołania do komunikowania się nie tylko przy użyciu programu .NET Framework, ale z innymi infrastruktur i usług, w tym programu Silverlight i modelu COM. Integratorów hermetyzacji semantykę języka i określ, jak wykonywać operacje w witrynie wywołania przy użyciu drzew wyrażeń. To umożliwia dynamiczne i statycznie wpisane języki, które umożliwiają DLR Udostępnianie biblioteki i uzyskać dostęp do wszystkich technologii, które obsługuje DLR.  
   
-## <a name="dlr-documentation"></a>Dokumentacja Runtime  
- Aby uzyskać więcej informacji o sposobie używania wersji typu open source DLR dodać dynamicznego zachowania do języka lub temat Korzystanie z języka dynamicznego z programu .NET Framework, zobacz dokumentację na [IronLanguages/Runtime](https://github.com/IronLanguages/dlr/tree/master/Docs) repozytorium w witrynie GitHub.  
+## <a name="dlr-documentation"></a>Dokumentacja DLR  
+ Aby uzyskać więcej informacji o sposobie używania wersji "open source" DLR dodanie zachowania dynamiczny język lub o tym, jak umożliwia korzystanie z języka dynamicznego przy użyciu programu .NET Framework, zobacz dokumentację na [IronLanguages/dlr](https://github.com/IronLanguages/dlr/tree/master/Docs) repozytorium w witrynie GitHub.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Dynamic.ExpandoObject>  

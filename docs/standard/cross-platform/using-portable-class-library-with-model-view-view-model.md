@@ -1,6 +1,6 @@
 ---
 title: Korzystanie z przenośnej biblioteki klas w połączeniu z modelem Model-View-View Model
-ms.date: 03/30/2017
+ms.date: 07/18/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -12,80 +12,82 @@ ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: aa8423c5c9453a9edb1058f0d5bdf4c494ece088
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33574111"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Korzystanie z przenośnej biblioteki klas w połączeniu z modelem Model-View-View Model
-Można użyć programu .NET Framework [przenośnej biblioteki klas](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) implementacji wzorca Model-View-View Model (MVVM) i udostępnianie zestawów na wielu platformach.  
+Można użyć programu .NET Framework [Portable Class Library](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) implementacji wzorca Model-View-View Model (MVVM) i udostępnianie zestawów na wielu platformach.  
+
+[!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
+
+ MVVM jest wzorzec aplikacji, który izoluje w interfejsie użytkownika z podstawowej logiki biznesowej. Można wdrożyć modelu i widoku klasy modelu w [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] projektu w [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], a następnie Utwórz widoki, które są dostosowywane na różnych platformach. Dzięki temu można zapisać danych modelu i logikę biznesową tylko raz i użycia, ten kod z .NET Framework, Silverlight, Windows Phone i [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, jak pokazano na poniższej ilustracji.  
   
- MVVM to wzorzec aplikacji, który wyodrębnia interfejsu użytkownika z podstawowej logiki biznesowej. Można wdrożyć modelu i widoku klasy modelu w [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] projektu w [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], a następnie Utwórz widoki, które są dostosowane dla różnych platform. Takie podejście umożliwia zapisać danych modelu i logiki biznesowej tylko raz, a następnie użyj tego kodu .NET Framework, Silverlight, Windows Phone i [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, jak pokazano na poniższej ilustracji.  
+ ![Przenośne przy użyciu diagramu MVVM](../../../docs/standard/cross-platform/media/portablemvvmdiagram.png "PortableMVVMdiagram")  
   
- ![Przenośne z modelem MVVM diagram](../../../docs/standard/cross-platform/media/portablemvvmdiagram.png "PortableMVVMdiagram")  
-  
- Ten temat nie zawiera ogólne informacje o wzorcu MVVM. Zapewnia tylko informacje o sposobie używania [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] do zaimplementowania MVVM. Aby uzyskać więcej informacji na temat MVVM, zobacz [szybkiego startu MVVM](https://msdn.microsoft.com/library/gg430869(v=PandP.40).aspx).  
+ Ten temat nie zawiera ogólne informacje dotyczące wzorca MVVM. Zapewnia tylko informacje o sposobie używania [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] do zaimplementowania MVVM. Aby uzyskać więcej informacji na temat MVVM zobacz [Szybki Start MVVM](https://msdn.microsoft.com/library/gg430869(v=PandP.40).aspx).  
   
 ## <a name="classes-that-support-mvvm"></a>Klasy, które obsługują MVVM  
- Jeśli zostanie rozpoczęta [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], Silverlight, lub Windows Phone w wersji 7.5 dla Twojego [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] projektu, następujące klasy są dostępne w zakresie implementacji wzorca MVVM:  
+ Jeśli platformą docelową jest program [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], Silverlight lub Windows Phone 7.5 dla Twojego [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] projektu, następujące klasy są dostępne do implementowania wzorca MVVM:  
   
--   <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType> Klasy  
+-   <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType> Klasa  
   
--   <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType> Klasy  
+-   <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType> Klasa  
   
--   <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType> Klasy  
+-   <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType> Klasa  
   
--   <xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType> Klasy  
+-   <xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType> Klasa  
   
--   <xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType> Klasy  
+-   <xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType> Klasa  
   
--   <xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType> Klasy  
+-   <xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType> Klasa  
   
--   <xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType> Klasy  
+-   <xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType> Klasa  
   
--   <xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType> Klasy  
+-   <xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType> Klasa  
   
--   <xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType> Klasy  
+-   <xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType> Klasa  
   
--   <xref:System.Windows.Input.ICommand?displayProperty=nameWithType> Klasy  
+-   <xref:System.Windows.Input.ICommand?displayProperty=nameWithType> Klasa  
   
 -   Wszystkie klasy w <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> przestrzeni nazw  
   
 ## <a name="implementing-mvvm"></a>Implementowanie MVVM  
- Aby zaimplementować MVVM, zwykle tworzenia modelu i model widoku w [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] projektu, ponieważ [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] projektu nie może odwoływać się nieprzenośny projekt. Model i model widoku można w tym samym projekcie lub w oddzielnych projektów. Jeśli używasz osobne projekty, Dodaj odwołanie z widoku projektu modelu do projektu modelu.  
+ Aby zaimplementować MVVM, zwykle tworzysz modelu i model widoku w [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] projektu, ponieważ [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] projektu nie może odwoływać się do projektu nieprzenośnych. Model i widoku modelu może być w tym samym projekcie lub w oddzielnych projektów. Użycie oddzielnych projektów, Dodaj odwołanie z projektu modelu widoku projektu modelu.  
   
- Po skompilować model i przeglądać projekty modelu odwołują się te zestawy w aplikacji, która zawiera widok. Jeśli widok współpracuje tylko z modelu widoku, wystarczy odwoływać się do zestawu, który zawiera model widoku.  
+ Po skompilować model i wyświetlanie modelu projektów, możesz tych zestawów odwołań w aplikację, która zawiera widok. Jeśli widok współdziała tylko z modelu widoku, wystarczy odwołać się do zestawu, który zawiera model widoku.  
   
 ### <a name="model"></a>Model  
- W poniższym przykładzie pokazano uproszczony model klasy, która może znajdować się w [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] projektu.  
+ W poniższym przykładzie pokazano klasę uproszczony model, który może znajdować się w [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] projektu.  
   
  [!code-csharp[PortableClassLibraryMVVM#1](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customer.cs#1)]
  [!code-vb[PortableClassLibraryMVVM#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customer.vb#1)]  
   
- W poniższym przykładzie przedstawiono prosty sposób wypełniania, pobierania i aktualizowania danych w [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] projektu. W rzeczywistym aplikacji może pobrać danych ze źródła, takie jak usługi Windows Communication Foundation (WCF).  
+ Poniższy przykład pokazuje prosty sposób wypełnić, pobieranie i aktualizowanie danych w [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] projektu. W rzeczywistej aplikacji może pobrać dane ze źródła, takich jak usługi Windows Communication Foundation (WCF).  
   
  [!code-csharp[PortableClassLibraryMVVM#2](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customerrepository.cs#2)]
  [!code-vb[PortableClassLibraryMVVM#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerrepository.vb#2)]  
   
 ### <a name="view-model"></a>Model widoku  
- Podczas implementowania wzorzec MVVM często dodawany jest klasą bazową dla modeli widoku. W poniższym przykładzie przedstawiono klasę podstawową.  
+ Klasa bazowa dla modeli widoków często jest dodawany podczas implementowania wzorca MVVM. Poniższy przykład przedstawia klasę bazową.  
   
  [!code-csharp[PortableClassLibraryMVVM#3](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/viewmodelbase.cs#3)]
  [!code-vb[PortableClassLibraryMVVM#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/viewmodelbase.vb#3)]  
   
- Implementacja interfejsu <xref:System.Windows.Input.ICommand> interfejs jest często używany ze wzorcem MVVM. Poniższy przykład przedstawia implementację <xref:System.Windows.Input.ICommand> interfejsu.  
+ Implementacja <xref:System.Windows.Input.ICommand> interfejsu jest często używany przy użyciu wzorca MVVM. W poniższym przykładzie pokazano implementację <xref:System.Windows.Input.ICommand> interfejsu.  
   
  [!code-csharp[PortableClassLibraryMVVM#4](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/relaycommand.cs#4)]
  [!code-vb[PortableClassLibraryMVVM#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/relaycommand.vb#4)]  
   
- W poniższym przykładzie pokazano uproszczony widok modelu.  
+ Poniższy przykład pokazuje wzór uproszczony widok.  
   
  [!code-csharp[PortableClassLibraryMVVM#5](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainpageviewmodel.cs#5)]
  [!code-vb[PortableClassLibraryMVVM#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerviewmodel.vb#5)]  
   
 ### <a name="view"></a>Widok  
- Z [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] aplikacji, [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, oparte na technologii Silverlight aplikację lub aplikację systemu Windows Phone 7.5, możesz odwoływać się do zestawu, który zawiera projekty modelu modelu i widoku.  Następnie można utworzyć widoku, który współdziała z modelu widoku. W poniższym przykładzie pokazano uproszczony aplikacji Windows Presentation Foundation (WPF), która pobiera i aktualizuje dane z modelu widoku. Widoki podobnie można utworzyć w programie Silverlight, Windows Phone lub [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji.  
+ Z [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] aplikacji [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] app, aplikacji opartych na technologii Silverlight lub aplikacji Windows Phone 7.5 można odwoływać się zestaw, który zawiera projekty modelu i widoku modelu.  Następnie utworzysz widok, który wchodzi w interakcję z modelu widoku. Poniższy przykład przedstawia uproszczoną aplikację Windows Presentation Foundation (WPF), która pobiera i aktualizuje dane z modelu widoku. Można utworzyć podobne widoki w programie Silverlight, Windows Phone lub [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji.  
   
  [!code-xaml[PortableClassLibraryMVVM#6](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainwindow.xaml#6)]  
   

@@ -19,100 +19,100 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f471d62ca31096b955dd6f703c70faabe91cb55b
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "36208517"
 ---
 # <a name="standard-numeric-format-strings"></a>Standardowe ciągi formatujące liczby
 
-Ciągi standardowych formatów liczb służą do formatowania popularnych typów liczbowych. Ciąg formatu liczbowego standardowe mają postać `Axx`, gdzie:  
+Ciągi standardowych formatów liczb służą do formatowania popularnych typów liczbowych. Ciąg standardowego formatu liczb ma postać `Axx`, gdzie:  
   
--   `A` jest nazywana pojedynczy znak alfabetu *specyfikatorze formatu*. Dowolny ciąg formatu liczb, który zawiera więcej niż jeden znak alfabetyczny, w tym znak odstępu, jest interpretowany jako ciąg niestandardowego formatu liczb. Aby uzyskać więcej informacji, zobacz [niestandardowe ciągi formatów liczbowych](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
+-   `A` nosi nazwę jednego znaku alfabetycznego *specyfikatora formatu*. Dowolny ciąg formatu liczb, który zawiera więcej niż jeden znak alfabetyczny, w tym znak odstępu, jest interpretowany jako ciąg niestandardowego formatu liczb. Aby uzyskać więcej informacji, zobacz [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
   
--   `xx` jest nazywana całkowitą opcjonalne *Specyfikator dokładności*. Specyfikator dokładności ma zakres od 0 do 99 i wpływa na liczbę cyfr w wyniku. Należy pamiętać, że Specyfikator dokładności określa liczbę cyfr w reprezentacji ciągu z liczbą. Nie zaokrągla samej liczby. Aby wykonać operację zaokrąglania, użyj <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType>, lub <xref:System.Math.Round%2A?displayProperty=nameWithType> metody.  
+-   `xx` jest opcjonalną liczbą całkowitą o nazwie *Specyfikator dokładności*. Specyfikator dokładności ma zakres od 0 do 99 i wpływa na liczbę cyfr w wyniku. Należy pamiętać, że Specyfikator dokładności określa liczbę cyfr w ciągu reprezentującym liczbę. Nie zaokrągla samej liczby. Aby wykonać operację zaokrąglenia, użyj <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType>, lub <xref:System.Math.Round%2A?displayProperty=nameWithType> metody.  
   
-     Gdy *Specyfikator dokładności* określa liczbę cyfr ułamkowych w ciągu wynik, ciągów wynikowych odzwierciedlają numery, które są zaokrąglane w kierunku od zera (oznacza to, za pomocą <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).  
+     Gdy *Specyfikator dokładności* kontroluje liczbę cyfr ułamkowych w ciągu wynikowym, ciągi wynikowe odzwierciedlają liczby są zaokrąglane dalej od zera (oznacza to, za pomocą <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).  
   
     > [!NOTE]
-    >  Specyfikator dokładności określa liczbę cyfr w ciągu wynik. Aby konsoli ciągu wyników z początkowe lub końcowe spacje, użyj [złożone formatowanie](../../../docs/standard/base-types/composite-formatting.md) funkcji oraz definiowania *składnika wyrównanie* w elemencie formatu.  
+    >  Specyfikator dokładności określa liczbę cyfr w ciągu wynikowym. Aby uzupełnić ciąg wynikowy, za pomocą spacji wiodących albo końcowych, użycia [formatowania złożonego](../../../docs/standard/base-types/composite-formatting.md) funkcji oraz definiowania *składnik wyrównania* w elemencie formatu.  
   
-Standardowe ciągi formatujące liczby obsługiwanych przez:
+Ciągi standardowego formatu liczb są obsługiwane przez:
 
-- Niektóre przeciążeń `ToString` metody wszystkie typy liczbowe. Na przykład można podać ciąg formatu liczbowego <xref:System.Int32.ToString%28System.String%29?displayProperty=nameWithType> i <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> metody. 
+- Niektóre przeciążenia `ToString` metoda wszystkich typów liczbowych. Na przykład można podać ciąg w formacie liczbowym do <xref:System.Int32.ToString%28System.String%29?displayProperty=nameWithType> i <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> metody. 
  
-- Programu .NET [złożonych funkcji formatowania](../../../docs/standard/base-types/composite-formatting.md), który jest używany przez niektóre `Write` i `WriteLine` metody <xref:System.Console> i <xref:System.IO.StreamWriter> klas, <xref:System.String.Format%2A?displayProperty=nameWithType> metody i <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> — metoda. Funkcja format złożonego umożliwia obejmują jako jeden ciąg znaków, aby określić szerokość pola i dopasowanie liczb w polu reprezentacja ciągu wielu elementów danych. Aby uzyskać więcej informacji, zobacz [złożone formatowanie](../../../docs/standard/base-types/composite-formatting.md).  
+- .NET [funkcję formatowania złożonego](../../../docs/standard/base-types/composite-formatting.md), która jest używana przez niektóre `Write` i `WriteLine` metody <xref:System.Console> i <xref:System.IO.StreamWriter> klas, <xref:System.String.Format%2A?displayProperty=nameWithType> metody i <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> metody. Funkcja formatowania złożonego umożliwia obejmują reprezentację ciągu wielu elementów danych jako jeden ciąg znaków, aby określić szerokość pola i wyrównanie liczb w polu. Aby uzyskać więcej informacji, zobacz [formatowania złożonego](../../../docs/standard/base-types/composite-formatting.md).  
 
-- [Ciągi interpolowane](../../csharp/language-reference/tokens/interpolated.md) w języku C# i Visual Basic, które zapewniają uproszczoną składnię w porównaniu do ciągi formatujące złożonego.
+- [Ciągi interpolowane](../../csharp/language-reference/tokens/interpolated.md) w języku C# i Visual Basic, które zapewniają uproszczoną składnię, w porównaniu do ciągów formatowania złożonego.
  
 > [!TIP]
->  Możesz pobrać [formatowania narzędzie](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)ciągi aplikacji, która umożliwia zastosowanie formatu liczbowego lub daty i czasu wartości i wyświetla ciąg wyniku.  
+>  Możesz pobrać [narzędzie do formatowania](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), aplikację, która umożliwia zastosowanie formatu ciągów liczbowego lub daty i godziny, wartości oraz wyświetlenie ciągu wynikowego.  
   
-<a name="table"></a> Poniższej tabeli opisano specyfikatorów formatu liczbowego standardowe i zawiera przykładowe dane wyjściowe generowane przez każdego specyfikator formatu. Zobacz [uwagi](#NotesStandardFormatting) sekcji, aby uzyskać dodatkowe informacje o używaniu standardowe ciągi formatujące liczby i [przykład](#example) sekcji ilustracyjną kompleksowe ich użycia.  
+<a name="table"></a> Poniższej tabeli opisano specyfikatory standardowych formatów liczb i pokazano przykładowe dane wyjściowe wytwarzane przez każdy specyfikator formatu. Zobacz [uwagi](#NotesStandardFormatting) sekcji, aby uzyskać dodatkowe informacje dotyczące używania ciągów standardowego formatu liczb oraz [przykład](#example) sekcji, w której dokładnie opisano ich użycie.  
   
 |Specyfikator formatu|Nazwa|Opis|Przykłady|  
 |----------------------|----------|-----------------|--------------|  
-|„C” lub „c”|Waluta|Wynik: wartość waluty.<br /><br /> Obsługiwany przez: wszystkie typy liczbowe.<br /><br /> Specyfikator dokładności: liczba cyfr dziesiętnych.<br /><br /> Domyślna Specyfikator dokładności: zdefiniowane przez <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Więcej informacji: [waluty specyfikator formatu ("C")](#CFormatString).|123.456 ("C", en-US) -> $123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 ("C3", en US) -> ($123.456)<br /><br /> €-123,456 ->-123.456 ("C3", fr-FR)<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|  
+|„C” lub „c”|Waluta|Wynik: wartość waluty.<br /><br /> Obsługiwany przez: wszystkie typy liczbowe.<br /><br /> Specyfikator dokładności: liczba cyfr dziesiętnych.<br /><br /> Domyślny Specyfikator dokładności: zdefiniowany przez <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Więcej informacji: [("C") specyfikator formatu waluty](#CFormatString).|123.456 ("C", en-US) -> $123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 ("C3", en US) -> ($123.456)<br /><br /> -123.456 ("C3", fr-FR) ->-123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|  
 |„D” lub „d”|Wartość dziesiętna|Wynik: liczby całkowite z opcjonalnym znakiem minus.<br /><br /> Obsługiwane przez: tylko typy całkowite.<br /><br /> Specyfikator dokładności: minimalna liczba cyfr.<br /><br /> Domyślny specyfikator dokładności: minimalna liczba wymaganych cyfr.<br /><br /> Więcej informacji: [specyfikator formatu Decimal("D")](#DFormatString).|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|  
-|„E” lub „e”|Wartość wykładnicza (naukowa)|Wynik: zapis wykładniczy.<br /><br /> Obsługiwany przez: wszystkie typy liczbowe.<br /><br /> Specyfikator dokładności: liczba cyfr dziesiętnych.<br /><br /> Domyślny specyfikator dokładności: 6.<br /><br /> Więcej informacji: [wykładniczej ("E") specyfikator formatu](#EFormatString).|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1, 052033e + 003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr_FR) -> -1, 05E + 003|  
-|„F” lub „f”|Wartość stałoprzecinkowa|Wynik: cyfry całkowite i dziesiętne z opcjonalnym znakiem minus.<br /><br /> Obsługiwany przez: wszystkie typy liczbowe.<br /><br /> Specyfikator dokładności: liczba cyfr dziesiętnych.<br /><br /> Domyślna Specyfikator dokładności: zdefiniowane przez <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Więcej informacji: [stałoprzecinkowe specyfikator ("F") w formacie](#FFormatString).|1234.567 ("F" en US) -> 1234,57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1" en US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.5600 ->-1234.56 ("F4", en US)<br /><br /> -1234.56 ("F4", de-DE) -> - 1234,5600|  
-|„G” lub „g”|Ogólne|Wynik: Więcej compact stałoprzecinkowej lub naukowych notacji.<br /><br /> Obsługiwany przez: wszystkie typy liczbowe.<br /><br /> Specyfikator dokładności: liczba cyfr znaczących.<br /><br /> Domyślny specyfikator dokładności: zależy od typu liczbowego.<br /><br /> Więcej informacji: [ogólny ("G") specyfikator formatu](#GFormatString).|-123.456 ->-123.456 ("G", en US)<br /><br /> -123.456 ("G", sv-SE) -> -123,456<br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en-US) -> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25|  
-|„N” lub „n”|Wartość liczbowa|Wynik: cyfry całkowite i dziesiętne, separatory grup i separator dziesiętny z opcjonalnym znaku minus.<br /><br /> Obsługiwany przez: wszystkie typy liczbowe.<br /><br /> Specyfikator dokładności: wymagana liczba miejsc dziesiętnych.<br /><br /> Domyślna Specyfikator dokładności: zdefiniowane przez <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Więcej informacji: [specyfikator formatu liczbowego ("N")](#NFormatString).|1234.567 ("N" en US) -> 1234,57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1" en US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1,234.560 ->-1234.56 ("N3", en US)<br /><br /> 234,560-1 ->-1234.56 ("N3", ru-RU)|  
-|„P” lub „p”|Wartość procentowa|Wynik: liczba pomnożona przez 100 i wyświetlana z symbolem procentu.<br /><br /> Obsługiwany przez: wszystkie typy liczbowe.<br /><br /> Specyfikator dokładności: wymagana liczba miejsc dziesiętnych.<br /><br /> Domyślna Specyfikator dokładności: zdefiniowane przez <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Więcej informacji: [Percent ("P"), specyfikator formatu](#PFormatString).|1 ("P" en US) -> % 100,00<br /><br /> 1 ("P", fr-FR) -> 100,00%<br /><br /> -0.39678 ("P1" en US) ->-39.7%<br /><br /> -0.39678 ("1", fr-FR) -> - 39,7%|  
-|„R” lub „r”|Wartość dwustronna|Wynik: ciąg, który można dwustronnie konwertować na identyczny numer.<br /><br /> Obsługiwane przez: <xref:System.Single>, <xref:System.Double>, i <xref:System.Numerics.BigInteger>.<br /><br /> Uwaga: Zalecane w przypadku <xref:System.Numerics.BigInteger> tylko typu. Aby uzyskać <xref:System.Double> typów, użyj "G17"; dla <xref:System.Single> typów, użyj "G9". </br> Specyfikator dokładności: ignorowany.<br /><br /> Więcej informacji: [wyrównana specyfikator formatu ("R")](#RFormatString).|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|  
-|„X” lub „x”|Wartość szesnastkowa|Wynik: ciąg szesnastkowy.<br /><br /> Obsługiwane przez: tylko typy całkowite.<br /><br /> Specyfikator dokładności: liczba cyfr w ciągu wynikowym.<br /><br /> Więcej informacji: [szesnastkowym ("X") specyfikator formatu](#XFormatString).|255 ("X") -> FF<br /><br /> one -> -1 ("x")<br /><br /> 00ff -> 255 ("x4")<br /><br /> -1 ("X4") -> 00FF|  
-|Jakikolwiek inny pojedynczy znak|Nieznany specyfikator|Wynik: Zwraca <xref:System.FormatException> w czasie wykonywania.||  
+|„E” lub „e”|Wartość wykładnicza (naukowa)|Wynik: zapis wykładniczy.<br /><br /> Obsługiwany przez: wszystkie typy liczbowe.<br /><br /> Specyfikator dokładności: liczba cyfr dziesiętnych.<br /><br /> Domyślny specyfikator dokładności: 6.<br /><br /> Więcej informacji: [specyfikator formatu wykładniczego ("E")](#EFormatString).|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1, 052033e + 003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr_FR) -> -1, 05E + 003|  
+|„F” lub „f”|Wartość stałoprzecinkowa|Wynik: cyfry całkowite i dziesiętne z opcjonalnym znakiem minus.<br /><br /> Obsługiwany przez: wszystkie typy liczbowe.<br /><br /> Specyfikator dokładności: liczba cyfr dziesiętnych.<br /><br /> Domyślny Specyfikator dokładności: zdefiniowany przez <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Więcej informacji: [specyfikator formatu stałoprzecinkowego ("F")](#FFormatString).|1234.567 ("F", en US) -> 1234,57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1", en US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.56 ("F4", en US) ->-1234.5600<br /><br /> -1234.56 ("F4", de-DE) -> - 1234,5600|  
+|„G” lub „g”|Ogólne|Wynik: Więcej zwartą notację stałoprzecinkową lub naukową.<br /><br /> Obsługiwany przez: wszystkie typy liczbowe.<br /><br /> Specyfikator dokładności: liczba cyfr znaczących.<br /><br /> Domyślny specyfikator dokładności: zależy od typu liczbowego.<br /><br /> Więcej informacji: [specyfikator formatu ogólnego ("G")](#GFormatString).|-123.456 ("G", en US) ->-123.456<br /><br /> -123.456 ("G", sv-SE) -> -123,456<br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en-US) -> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25|  
+|„N” lub „n”|Wartość liczbowa|Wynik: cyfry całkowite i dziesiętne, separatory grup i separator dziesiętny z opcjonalnym znaku minus.<br /><br /> Obsługiwany przez: wszystkie typy liczbowe.<br /><br /> Specyfikator dokładności: wymagana liczba miejsc dziesiętnych.<br /><br /> Domyślny Specyfikator dokładności: zdefiniowany przez <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Więcej informacji: [specyfikator formatu liczbowego ("N")](#NFormatString).|1234.567 ("N", en US) -> 1234,57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en US) ->-1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> 234,560-1|  
+|„P” lub „p”|Wartość procentowa|Wynik: liczba pomnożona przez 100 i wyświetlana z symbolem procentu.<br /><br /> Obsługiwany przez: wszystkie typy liczbowe.<br /><br /> Specyfikator dokładności: wymagana liczba miejsc dziesiętnych.<br /><br /> Domyślny Specyfikator dokładności: zdefiniowany przez <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Więcej informacji: [specyfikator formatu procentowego ("P")](#PFormatString).|1 ("P", en US) -> 100.00%<br /><br /> 1 ("P", fr-FR) -> 100,00%<br /><br /> -0.39678 ("P1", en US) ->-39.7%<br /><br /> -0.39678 ("P1", fr-FR) -> - 39,7%|  
+|„R” lub „r”|Wartość dwustronna|Wynik: ciąg, który można dwustronnie konwertować na identyczny numer.<br /><br /> Obsługiwane przez: <xref:System.Single>, <xref:System.Double>, i <xref:System.Numerics.BigInteger>.<br /><br /> Uwaga: Zalecane w przypadku <xref:System.Numerics.BigInteger> tylko typu. Aby uzyskać <xref:System.Double> typów, użyj "G17"; w przypadku <xref:System.Single> typów, użyj "G9". </br> Specyfikator dokładności: ignorowany.<br /><br /> Więcej informacji: [("R") specyfikator formatu dwustronnej konwersji](#RFormatString).|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|  
+|„X” lub „x”|Wartość szesnastkowa|Wynik: ciąg szesnastkowy.<br /><br /> Obsługiwane przez: tylko typy całkowite.<br /><br /> Specyfikator dokładności: liczba cyfr w ciągu wynikowym.<br /><br /> Więcej informacji: [specyfikator formatu szesnastkowego ("X")](#XFormatString).|255 ("X") -> FF<br /><br /> -1 ("x") -> ff<br /><br /> 255 ("x4") -> 00ff<br /><br /> -1 ("X4") -> 00FF|  
+|Jakikolwiek inny pojedynczy znak|Nieznany specyfikator|Wynik: Generuje wyjątek <xref:System.FormatException> w czasie wykonywania.||  
   
 <a name="Using"></a>   
 ## <a name="using-standard-numeric-format-strings"></a>Korzystając ze standardowego, numerycznego ciągu formatującego  
 
-[!INCLUDE[interactive-note](~/includes/csharp-interactive-with-culture-note.md)]
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
 Ciąg standardowego formatu liczb może służyć do definiowania formatowania wartości liczbowej na jeden z dwóch sposobów:  
   
--   Mogą zostać przekazane do przeciążenia `ToString` metodę, która ma `format` parametru. Poniższy przykład formatuje wartość numeryczną jako ciąg waluty w bieżącej kultury (w tym przypadku kultury en US).  
+-   Może być przekazywany do przeciążenia `ToString` metody, która ma `format` parametru. Poniższy przykład formatuje wartość numeryczną jako ciąg waluty w bieżącej kultury (w tym przypadku kultury en US).  
   
      [!code-cpp[Formatting.Numeric.Standard#10](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#10)]
      [!code-csharp-interactive[Formatting.Numeric.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#10)]
      [!code-vb[Formatting.Numeric.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#10)]  
   
--   Można podać jako `formatString` argumentów w elemencie format używany z tych metod jako <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, i <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. Aby uzyskać więcej informacji, zobacz [złożone formatowanie](../../../docs/standard/base-types/composite-formatting.md). W poniższym przykładzie element formatu jest używany do wstawienia wartości waluty w ciągu.  
+-   Może być podany jako `formatString` argumentów w elemencie formatu używangoe z takich metod jako <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, i <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. Aby uzyskać więcej informacji, zobacz [formatowania złożonego](../../../docs/standard/base-types/composite-formatting.md). W poniższym przykładzie element formatu jest używany do wstawienia wartości waluty w ciągu.  
   
      [!code-cpp[Formatting.Numeric.Standard#11](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#11)]
      [!code-csharp-interactive[Formatting.Numeric.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#11)]
      [!code-vb[Formatting.Numeric.Standard#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#11)]  
   
-     Opcjonalnie możesz podać `alignment` argumentu, aby określić szerokość pola numerycznego i czy jej wartość jest wyrównany do prawej lub lewej strony. Poniższy przykład powoduje wyrównanie lewej wartości waluty w polu 28 znaków, a jego prawej wyrównuje wartości waluty w polu 14 znaków.  
+     Opcjonalnie możesz podać `alignment` argumentu, aby określić szerokość pola numerycznego i czy jej wartość jest wyrównany do prawej lub lewej strony. Poniższy przykład powoduje wyrównanie po lewej stronie wartości waluty w polu 28-znakowego, a jej prawej wyrównuje wartość waluty w polu 14 znaków.  
   
      [!code-cpp[Formatting.Numeric.Standard#12](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#12)]
      [!code-csharp-interactive[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
      [!code-vb[Formatting.Numeric.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#12)]  
   
--   Można podać jako `formatString` argumentów w elemencie interpolowanego wyrażenia w ciągu interpolowanym. Aby uzyskać więcej informacji, zobacz [ciągu interpolacji](../../csharp/language-reference/tokens/interpolated.md) tematu w odwołanie w C# lub [ciągi interpolowane](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) tematu w odwołanie w Visual Basic.  
+-   Może być podany jako `formatString` argumentów w elemencie wyrażenie interpolowane w ciągu interpolowanym. Aby uzyskać więcej informacji, zobacz [Interpolacja ciągów](../../csharp/language-reference/tokens/interpolated.md) temat w dokumentacji języka C# lub [ciągi interpolowane](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) tematu w odwołanie w Visual Basic.  
   
  Poniższe sekcje zawierają szczegółowe informacje o poszczególnych ciągach standardowego formatu liczb.  
   
 <a name="CFormatString"></a>   
 ## <a name="the-currency-c-format-specifier"></a>Specyfikator formatu waluty („C”)  
- Specyfikator formatu C (currency) konwertuje liczbę na ciąg przedstawiający kwotę w walucie. Specyfikator dokładności określa żądaną liczbę miejsc dziesiętnych w wynikowym ciągu. W przypadku pominięcia Specyfikator dokładności domyślna dokładność jest definiowana za pomocą <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType> właściwości.  
+ Specyfikator formatu C (currency) konwertuje liczbę na ciąg przedstawiający kwotę w walucie. Specyfikator dokładności określa żądaną liczbę miejsc dziesiętnych w wynikowym ciągu. W przypadku pominięcia specyfikatora dokładności domyślna dokładność jest definiowana przez <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType> właściwości.  
   
  Jeśli wartość do sformatowania ma więcej miejsc dziesiętnych niż określona lub domyślna liczba miejsc dziesiętnych, wartość ułamkowa zostanie zaokrąglona w wynikowym ciągu. Jeśli wartość na prawo od określonej liczby miejsc dziesiętnych wynosi 5 lub więcej, ostatnia cyfra w ciągu wynikowym jest zaokrąglana w kierunku od zera.  
   
- Wpływ na informacje dotyczące formatowania bieżącego ciąg wyniku <xref:System.Globalization.NumberFormatInfo> obiektu. W poniższej tabeli wymieniono <xref:System.Globalization.NumberFormatInfo> właściwości sterujące formatowania zwracany ciąg.  
+ Ciąg wynikowy mają wpływ informacje o formatowaniu bieżącego <xref:System.Globalization.NumberFormatInfo> obiektu. W poniższej tabeli wymieniono <xref:System.Globalization.NumberFormatInfo> właściwości, które sterują formatowaniem zwracanego ciągu.  
   
 |Właściwość NumberFormatInfo|Opis|  
 |-------------------------------|-----------------|  
 |<xref:System.Globalization.NumberFormatInfo.CurrencyPositivePattern%2A>|Definiuje położenie symbolu waluty dla wartości dodatnich.|  
-|<xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern%2A>|Definiuje położenie symbol waluty dla wartości ujemnych i określa, czy znakiem minus jest reprezentowana przez nawiasy lub <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A> właściwości.|  
-|<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Definiuje znakiem minus używane, jeśli <xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern%2A> wskazuje, że nawiasy nie są używane.|  
+|<xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern%2A>|Definiuje położenie symbolu waluty dla wartości ujemnych i określa, czy znak minus jest reprezentowany przez nawiasy lub <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A> właściwości.|  
+|<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Definiuje znak minus używany, jeśli <xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern%2A> wskazuje, że nawiasy nie są używane.|  
 |<xref:System.Globalization.NumberFormatInfo.CurrencySymbol%2A>|Definiuje symbol waluty.|  
 |<xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A>|Definiuje domyślną liczbę cyfr dziesiętnych w wartości waluty. Tę wartość można zastąpić przy użyciu specyfikatora dokładności.|  
 |<xref:System.Globalization.NumberFormatInfo.CurrencyDecimalSeparator%2A>|Definiuje ciąg oddzielający cyfry całkowite i cyfry dziesiętne.|  
 |<xref:System.Globalization.NumberFormatInfo.CurrencyGroupSeparator%2A>|Definiuje ciąg oddzielający grupy liczb całkowitych.|  
 |<xref:System.Globalization.NumberFormatInfo.CurrencyGroupSizes%2A>|Definiuje liczbę cyfr liczby całkowitej, które pojawiają się w grupie.|  
   
- Następujące przykładowe formaty <xref:System.Double> wartość ze specyfikatorem formacie waluty.  
+ Poniższy przykład formatuje <xref:System.Double> przy użyciu specyfikatora formatu waluty.  
   
  [!code-cpp[Formatting.Numeric.Standard#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#1)]
  [!code-csharp-interactive[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
@@ -126,13 +126,13 @@ Ciąg standardowego formatu liczb może służyć do definiowania formatowania w
   
  Specyfikator dokładności określa minimalną liczbę miejsc dziesiętnych w ciągu wynikowym. Jeśli to konieczne, liczba jest dopełniana zerami po lewej stronie w celu uzyskania liczby cyfr określonej przez specyfikator dokładności. Jeśli nie zostanie określony specyfikator dokładności, wartością domyślną jest wartość minimalna wymagana do przedstawienia wartości całkowitej bez zer wiodących.  
   
- Wpływ na informacje dotyczące formatowania bieżącego ciąg wyniku <xref:System.Globalization.NumberFormatInfo> obiektu. Jak pokazano w poniższej tabeli, jedna właściwość ma wpływ na formatowanie ciągu wynikowego.  
+ Ciąg wynikowy mają wpływ informacje o formatowaniu bieżącego <xref:System.Globalization.NumberFormatInfo> obiektu. Jak pokazano w poniższej tabeli, jedna właściwość ma wpływ na formatowanie ciągu wynikowego.  
   
 |Właściwość NumberFormatInfo|Opis|  
 |-------------------------------|-----------------|  
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Definiuje ciąg, który wskazuje, że liczba jest ujemna.|  
   
- Następujące przykładowe formaty <xref:System.Int32> wartość ze specyfikatorem formatu dziesiętnego.  
+ Poniższy przykład formatuje <xref:System.Int32> przy użyciu specyfikatora formatu dziesiętnego.  
   
  [!code-cpp[Formatting.Numeric.Standard#2](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#2)]
  [!code-csharp-interactive[Formatting.Numeric.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#2)]
@@ -148,7 +148,7 @@ Ciąg standardowego formatu liczb może służyć do definiowania formatowania w
   
  Wielkość liter specyfikatora formatu wskazuje, czy wykładnik potęgi ma być poprzedzany prefiksem „E”, czy „e”. Wykładnik zawsze składa się ze znaku plus lub minus i co najmniej trzech cyfr. W razie potrzeby wykładnik jest dopełniany zerami w celu spełnienia tego minimum.  
   
- Wpływ na informacje dotyczące formatowania bieżącego ciąg wyniku <xref:System.Globalization.NumberFormatInfo> obiektu. W poniższej tabeli wymieniono <xref:System.Globalization.NumberFormatInfo> właściwości sterujące formatowania zwracany ciąg.  
+ Ciąg wynikowy mają wpływ informacje o formatowaniu bieżącego <xref:System.Globalization.NumberFormatInfo> obiektu. W poniższej tabeli wymieniono <xref:System.Globalization.NumberFormatInfo> właściwości, które sterują formatowaniem zwracanego ciągu.  
   
 |Właściwość NumberFormatInfo|Opis|  
 |-------------------------------|-----------------|  
@@ -156,7 +156,7 @@ Ciąg standardowego formatu liczb może służyć do definiowania formatowania w
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Określa ciąg oddzielający cyfry całkowite od cyfr dziesiętnych we współczynniku.|  
 |<xref:System.Globalization.NumberFormatInfo.PositiveSign%2A>|Określa ciąg, który wskazuje, że wykładnik jest dodatni.|  
   
- Następujące przykładowe formaty <xref:System.Double> wartość ze specyfikatorem notacji wykładniczej.  
+ Poniższy przykład formatuje <xref:System.Double> przy użyciu specyfikatora formatu wykładniczego.  
   
  [!code-cpp[Formatting.Numeric.Standard#3](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#3)]
  [!code-csharp-interactive[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
@@ -166,11 +166,11 @@ Ciąg standardowego formatu liczb może służyć do definiowania formatowania w
   
 <a name="FFormatString"></a>   
 ## <a name="the-fixed-point-f-format-specifier"></a>Specyfikator formatu stałoprzecinkowego („F”)  
- Stałoprzecinkowe specyfikator formatu ("F") konwertuje liczbę na ciąg w formie "-CCC, CCC..." gdzie każdy "d" oznacza cyfrę (0 – 9). Ciąg rozpoczyna się od znaku minus, jeśli liczba jest ujemna.  
+ Specyfikator formatu stałoprzecinkowego ("F") konwertuje liczbę na ciąg w formie "-CCC..." gdzie każdy "d" oznacza cyfrę (0 – 9). Ciąg rozpoczyna się od znaku minus, jeśli liczba jest ujemna.  
   
- Specyfikator dokładności określa żądaną liczbę miejsc dziesiętnych. W przypadku pominięcia Specyfikator dokładności bieżącego <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> właściwości dostarcza dokładność liczbowych.  
+ Specyfikator dokładności określa żądaną liczbę miejsc dziesiętnych. Jeśli Specyfikator dokładności zostanie pominięty, bieżące <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> właściwości dostarcza wartość dokładności liczbowej.  
   
- Wpływ na informacje dotyczące formatowania bieżącego ciąg wyniku <xref:System.Globalization.NumberFormatInfo> obiektu. W poniższej tabeli wymieniono właściwości <xref:System.Globalization.NumberFormatInfo> obiekt, który kontrolować sposób formatowania ciągu wynik.  
+ Ciąg wynikowy mają wpływ informacje o formatowaniu bieżącego <xref:System.Globalization.NumberFormatInfo> obiektu. Poniższa tabela zawiera listę właściwości <xref:System.Globalization.NumberFormatInfo> obiektów, które sterują formatowaniem ciągu wynikowego.  
   
 |Właściwość NumberFormatInfo|Opis|  
 |-------------------------------|-----------------|  
@@ -178,7 +178,7 @@ Ciąg standardowego formatu liczb może służyć do definiowania formatowania w
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Definiuje ciąg oddzielający cyfry całkowite od cyfr dziesiętnych.|  
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A>|Definiuje domyślną liczbę cyfr dziesiętnych. Tę wartość można zastąpić przy użyciu specyfikatora dokładności.|  
   
- Następujące przykładowe formaty <xref:System.Double> i <xref:System.Int32> wartość ze specyfikatorem formatu stałoprzecinkowe.  
+ Poniższy przykład formatuje <xref:System.Double> i <xref:System.Int32> przy użyciu specyfikatora formatu stałoprzecinkowego.  
   
  [!code-cpp[Formatting.Numeric.Standard#4](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#4)]
  [!code-csharp-interactive[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
@@ -188,7 +188,7 @@ Ciąg standardowego formatu liczb może służyć do definiowania formatowania w
   
 <a name="GFormatString"></a>   
 ## <a name="the-general-g-format-specifier"></a>Specyfikator formatu ogólnego („G”)  
- Ogólne specyfikator formatu ("G") konwertuje liczbę więcej compact notacji stałoprzecinkowej lub naukowych, w zależności od liczby i określa, czy znajduje się Specyfikator dokładności. Specyfikator dokładności określa maksymalną liczbę cyfr znaczących, które mogą być wyświetlane w ciągu wynikowym. Jeżeli specyfikator dokładności zostanie pominięty lub będzie równy zero, typ liczby określa dokładność domyślną, tak jak opisano w poniższej tabeli.  
+ Specyfikator formatu ogólnego ("G") konwertuje liczbę na więcej zwartą notację stałoprzecinkową lub naukową notacji, w zależności od typu liczby i tego, czy jest obecny Specyfikator dokładności. Specyfikator dokładności określa maksymalną liczbę cyfr znaczących, które mogą być wyświetlane w ciągu wynikowym. Jeżeli specyfikator dokładności zostanie pominięty lub będzie równy zero, typ liczby określa dokładność domyślną, tak jak opisano w poniższej tabeli.  
   
 |Typ liczbowy|Dokładność domyślna|  
 |------------------|-----------------------|  
@@ -197,25 +197,25 @@ Ciąg standardowego formatu liczb może służyć do definiowania formatowania w
 |<xref:System.Int32> lub <xref:System.UInt32>|10 cyfr|  
 |<xref:System.Int64>|19 cyfr|  
 |<xref:System.UInt64>|20 cyfr|  
-|<xref:System.Numerics.BigInteger>|Nieograniczone (taki sam jak ["R"](#RFormatString))|  
+|<xref:System.Numerics.BigInteger>|Bez ograniczeń (taka sama jak ["R"](#RFormatString))|  
 |<xref:System.Single>|7 cyfr|  
-|<xref:System.Double>|15 cyfr.|  
+|<xref:System.Double>|do 15 cyfr|  
 |<xref:System.Decimal>|29 cyfr|  
   
  Notacja stałoprzecinkowa jest używana, jeśli wykładnik, który byłby wynikiem wyrażenia liczby w notacji wykładniczej, jest większy niż -5 i mniejszy niż specyfikator dokładności. W przeciwnym wypadku jest używana notacja wykładnicza. Wynik zawiera punkt dziesiętny, jeśli jest to wymagane, a zera końcowe po punkcie dziesiętnym są pomijane. Jeśli specyfikator dokładności jest obecny i liczba cyfr znaczących w wyniku przekracza określoną dokładność, nadmiarowe cyfry końcowe są usuwane przez zaokrąglenie.  
   
- Jednak jeśli liczba jest <xref:System.Decimal> Specyfikator dokładności zostanie pominięty, notacji stałoprzecinkowej jest zawsze używana usługa i końcowe zera zostaną zachowane.  
+ Jednakże jeśli liczba jest <xref:System.Decimal> i pominięto Specyfikator dokładności, stałoprzecinkowa Notacja jest zawsze używana i końcowe zera zostaną zachowane.  
   
  Jeśli jest używana notacja wykładnicza, wykładnik w wyniku otrzymuje prefiks „E”, jeśli specyfikatorem formatu jest „G”, lub „e”, jeśli specyfikatorem formatu jest „g”. Wykładnik zawiera co najmniej dwie cyfry. Różni się to od formatu notacji wykładniczej tworzonej przez specyfikator formatu wykładniczego, który obejmuje co najmniej trzy cyfry wykładnika.  
  
-Należy zauważyć, że w przypadku użycia z <xref:System.Double> wartość specyfikator formatu "G17" upewnia się, że oryginalne <xref:System.Double> wartość pomyślnie przechodzenia. Jest to spowodowane <xref:System.Double> jest IEEE 754 2008-CLS podwójnej precyzji (`binary64`) zawierający maksymalnie 17 cyfr znaczących dokładności liczba zmiennoprzecinkowa. Firma Microsoft zaleca użycie zamiast [specyfikatorze formatu "R"](#RFormatString), ponieważ w niektórych przypadkach "R" nie może pomyślnie obustronne podwójnej precyzji wartości zmiennoprzecinkowych. Poniższy przykład przedstawia w takim przypadku.
+Należy zauważyć, że gdy jest używane z <xref:System.Double> wartości, specyfikator formatu "G17" zapewnia, że oryginalna <xref:System.Double> wartość pomyślnie rund. Jest to spowodowane <xref:System.Double> jest IEEE 754 2008-CLS podwójnej precyzji (`binary64`) zapewniającej z dokładnością do 17 cyfr znaczących liczbę zmiennoprzecinkową. Zaleca się jej użycie zamiast [specyfikatora formatu "R"](#RFormatString), ponieważ w niektórych przypadkach "R" nie może pomyślnie obustronne podwójnej precyzji wartości zmiennoprzecinkowe. Poniższy przykład ilustruje takiej sytuacji.
 
 [!code-csharp-interactive[Round-tripping a Double](../../../samples/snippets/standard/base-types/format-strings/csharp/g17.cs)]   
 [!code-vb[Round-tripping a Double](../../../samples/snippets/standard/base-types/format-strings/vb/g17.vb)]   
 
-W przypadku użycia z <xref:System.Single> wartość specyfikator formatu "G9" zapewnia, że oryginalne <xref:System.Single> wartość pomyślnie przechodzenia. Jest to spowodowane <xref:System.Single> jest IEEE 754 2008-CLS pojedynczej precyzji (`binary32`) zawierający maksymalnie dziewięć cyfr znaczących dokładności liczba zmiennoprzecinkowa. Ze względu na wydajność, firma Microsoft zaleca użycie zamiast [specyfikatorze formatu "R"](#RFormatString).
+Gdy jest używane z <xref:System.Single> wartości, specyfikator formatu "G9" zapewnia, że oryginalna <xref:System.Single> wartość pomyślnie rund. Jest to spowodowane <xref:System.Single> jest IEEE 754 2008-CLS pojedynczej precyzji (`binary32`) zapewniającej maksymalnie dziewięć cyfr znaczących liczbę zmiennoprzecinkową. Ze względu na wydajność zaleca się jej użycie zamiast [specyfikatora formatu "R"](#RFormatString).
 
- Wpływ na informacje dotyczące formatowania bieżącego ciąg wyniku <xref:System.Globalization.NumberFormatInfo> obiektu. W poniższej tabeli wymieniono <xref:System.Globalization.NumberFormatInfo> właściwości sterujące formatowania ciągu wynik.  
+ Ciąg wynikowy mają wpływ informacje o formatowaniu bieżącego <xref:System.Globalization.NumberFormatInfo> obiektu. W poniższej tabeli wymieniono <xref:System.Globalization.NumberFormatInfo> właściwości, które sterują formatowaniem ciągu wynikowego.  
   
 |Właściwość NumberFormatInfo|Opis|  
 |-------------------------------|-----------------|  
@@ -233,14 +233,14 @@ W przypadku użycia z <xref:System.Single> wartość specyfikator formatu "G9" z
   
 <a name="NFormatString"></a>   
 ## <a name="the-numeric-n-format-specifier"></a>Specyfikator formatu numerycznego („N”)  
- Specyfikator formatu liczbowego („N”) konwertuje liczbę na ciąg w postaci „-d ddd ddd,ddd…”, gdzie „-” oznacza w razie potrzeby liczbę ujemną, „d” oznacza cyfrę (0–9), „ ” oznacza separator grupy, a „,” oznacza symbol punktu dziesiętnego. Specyfikator dokładności określa żądaną liczbę cyfr po punkcie dziesiętnym. W przypadku pominięcia Specyfikator dokładności liczbę miejsc dziesiętnych jest zdefiniowana przez bieżące <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> właściwości.  
+ Specyfikator formatu liczbowego („N”) konwertuje liczbę na ciąg w postaci „-d ddd ddd,ddd…”, gdzie „-” oznacza w razie potrzeby liczbę ujemną, „d” oznacza cyfrę (0–9), „ ” oznacza separator grupy, a „,” oznacza symbol punktu dziesiętnego. Specyfikator dokładności określa żądaną liczbę cyfr po punkcie dziesiętnym. W przypadku pominięcia specyfikatora dokładności liczba miejsc dziesiętnych jest definiowany przez bieżącą <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> właściwości.  
   
- Wpływ na informacje dotyczące formatowania bieżącego ciąg wyniku <xref:System.Globalization.NumberFormatInfo> obiektu. W poniższej tabeli wymieniono <xref:System.Globalization.NumberFormatInfo> właściwości sterujące formatowania ciągu wynik.  
+ Ciąg wynikowy mają wpływ informacje o formatowaniu bieżącego <xref:System.Globalization.NumberFormatInfo> obiektu. W poniższej tabeli wymieniono <xref:System.Globalization.NumberFormatInfo> właściwości, które sterują formatowaniem ciągu wynikowego.  
   
 |Właściwość NumberFormatInfo|Opis|  
 |-------------------------------|-----------------|  
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Definiuje ciąg, który wskazuje, że liczba jest ujemna.|  
-|<xref:System.Globalization.NumberFormatInfo.NumberNegativePattern%2A>|Definiuje format wartości ujemnych i określa, czy znakiem minus jest reprezentowana przez nawiasy lub <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A> właściwości.|  
+|<xref:System.Globalization.NumberFormatInfo.NumberNegativePattern%2A>|Definiuje format wartości ujemnych i określa, czy znak minus jest reprezentowany przez nawiasy lub <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A> właściwości.|  
 |<xref:System.Globalization.NumberFormatInfo.NumberGroupSizes%2A>|Definiuje liczbę cyfr liczby całkowitej, które pojawiają się pomiędzy separatorami grup.|  
 |<xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A>|Definiuje ciąg oddzielający grupy liczb całkowitych.|  
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Definiuje ciąg oddzielający cyfry całkowite i cyfry dziesiętne.|  
@@ -256,9 +256,9 @@ W przypadku użycia z <xref:System.Single> wartość specyfikator formatu "G9" z
   
 <a name="PFormatString"></a>   
 ## <a name="the-percent-p-format-specifier"></a>Specyfikator formatu procenta („P”)  
- Specyfikator formatu procentowego („P”) mnoży liczbę przez 100 i konwertuje ją na ciąg, który przedstawia wartość procentową. Specyfikator dokładności określa żądaną liczbę miejsc dziesiętnych. W przypadku pominięcia Specyfikator dokładności domyślna dokładność liczbowych dostarczonych przez bieżący <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A> właściwość jest używana.  
+ Specyfikator formatu procentowego („P”) mnoży liczbę przez 100 i konwertuje ją na ciąg, który przedstawia wartość procentową. Specyfikator dokładności określa żądaną liczbę miejsc dziesiętnych. W przypadku pominięcia specyfikatora dokładności domyślna dokładność liczbowa dostarczona przez bieżącą <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A> właściwość jest używana.  
   
- W poniższej tabeli wymieniono <xref:System.Globalization.NumberFormatInfo> właściwości sterujące formatowania zwracany ciąg.  
+ W poniższej tabeli wymieniono <xref:System.Globalization.NumberFormatInfo> właściwości, które sterują formatowaniem zwracanego ciągu.  
   
 |Właściwość NumberFormatInfo|Opis|  
 |-------------------------------|-----------------|  
@@ -281,14 +281,14 @@ W przypadku użycia z <xref:System.Single> wartość specyfikator formatu "G9" z
   
 <a name="RFormatString"></a>   
 ## <a name="the-round-trip-r-format-specifier"></a>Specyfikator formatu obustronnej konwersji („R”)  
- Obustronne specyfikator formatu ("R") próbuje upewnij się, że wartość numeryczną, która jest konwertowana na ciąg jest analizowana wrócić do tego samego wartość liczbową. Ten format jest obsługiwany tylko w przypadku <xref:System.Single>, <xref:System.Double>, i <xref:System.Numerics.BigInteger> typów.  
+ Obustronne specyfikator formatu ("R") próbuje upewnij się, że wartość liczbowa, która jest konwertowana na ciąg jest przetworzona z powrotem na tę samą wartość liczbową. Ten format jest obsługiwany tylko w przypadku <xref:System.Single>, <xref:System.Double>, i <xref:System.Numerics.BigInteger> typów.  
 
-Aby uzyskać <xref:System.Double> wartości, specyfikator formatu "R" w niektórych przypadkach nie powiedzie się pomyślnie obustronne oryginalnej wartości. Dla obu <xref:System.Double> i <xref:System.Single> wartości, a także oferuje stosunkowo niska wydajność. Zamiast tego zaleca się używanie ["G17"](#GFormatString) specyfikatora formatu <xref:System.Double> wartości i ["G9"](#GFormatString) specyfikatorze do pomyślnie obustronne formatu <xref:System.Single> wartości.
+Aby uzyskać <xref:System.Double> wartości, specyfikator formatu "R" w niektórych przypadkach nie może pomyślnie obustronne oryginalną wartość. Dla obu <xref:System.Double> i <xref:System.Single> wartości, zapewnia ona również stosunkowo niska wydajność. Zamiast tego zaleca się używanie ["G17"](#GFormatString) specyfikatora dla formatu <xref:System.Double> wartości i ["G9"](#GFormatString) specyfikatora, aby pomyślnie obustronne formatu <xref:System.Single> wartości.
 
- Gdy <xref:System.Numerics.BigInteger> wartość jest sformatowany za pomocą tego specyfikatora, reprezentacji ciągu zawiera cyfr znaczących w <xref:System.Numerics.BigInteger> wartość.  
+ Gdy <xref:System.Numerics.BigInteger> wartość jest formatowana przy użyciu tego specyfikatora, reprezentujący ją ciąg zawiera wszystkie znaczące cyfry w <xref:System.Numerics.BigInteger> wartość.  
   
  Można dodawać specyfikator dokładności, ale jest on ignorowany. W przypadku korzystania z tego specyfikatora konwersje dwustronne mają pierwszeństwo przed dokładnością.    
- Wpływ na informacje dotyczące formatowania bieżącego ciąg wyniku <xref:System.Globalization.NumberFormatInfo> obiektu. W poniższej tabeli wymieniono <xref:System.Globalization.NumberFormatInfo> właściwości sterujące formatowania ciągu wynik.  
+ Ciąg wynikowy mają wpływ informacje o formatowaniu bieżącego <xref:System.Globalization.NumberFormatInfo> obiektu. W poniższej tabeli wymieniono <xref:System.Globalization.NumberFormatInfo> właściwości, które sterują formatowaniem ciągu wynikowego.  
   
 |Właściwość NumberFormatInfo|Opis|  
 |-------------------------------|-----------------|  
@@ -296,16 +296,16 @@ Aby uzyskać <xref:System.Double> wartości, specyfikator formatu "R" w niektór
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Definiuje ciąg oddzielający cyfry całkowite od cyfr dziesiętnych.|  
 |<xref:System.Globalization.NumberFormatInfo.PositiveSign%2A>|Określa ciąg, który wskazuje, że wykładnik jest dodatni.|  
   
- Następujące przykładowe formaty <xref:System.Numerics.BigInteger> wartość ze specyfikatorem formatu błądzenia.  
+ Poniższy przykład formatuje <xref:System.Numerics.BigInteger> przy użyciu specyfikatora formatu Rundy.  
   
  [!code-cpp[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.cpp)]
  [!code-csharp-interactive[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.cs)]
  [!code-vb[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.vb)]  
   
 > [!IMPORTANT]
->  W niektórych przypadkach <xref:System.Double> wartości sformatowany w systemie nie pomyślnie obustronne ciągu standardowego formatu liczbowego "R" Jeśli skompilowana przy użyciu `/platform:x64` lub `/platform:anycpu` przełączników i wykonywania na 64-bitowym. Zobacz poniższe akapitu, aby uzyskać więcej informacji.  
+>  W niektórych przypadkach <xref:System.Double> wartości sformatowane przy użyciu nie pomyślnie obustronne czy ciąg standardowego formatu liczb "R", gdy skompilowano przy użyciu `/platform:x64` lub `/platform:anycpu` przełączników i działają na 64-bitowym. Zobacz następujący akapit, aby uzyskać więcej informacji.  
   
- Aby obejść ten problem z <xref:System.Double> wartości sformatowane przy użyciu standardowego formatu liczbowego "R" string nie zostało pomyślnie dwustronną komunikację, jeśli skompilowana przy użyciu `/platform:x64` lub `/platform:anycpu` przełączników i wykonywania w systemach 64-bitowych. można też <xref:System.Double> wartości przy użyciu ciągu standardowego formatu liczbowego "G17". W poniższym przykładzie użyto ciągu formatu "R" z <xref:System.Double> wartość tego obustronne nie ma pomyślnie, a także format używa "G17" ciąg pomyślnie obustronne oryginalnej wartości.  
+ Aby obejść ten problem z <xref:System.Double> wartości sformatowane przy użyciu standardowego formatu liczb "R" ciągu nie zostało pomyślnie Pełna zgodnooć wersji, gdy skompilowano przy użyciu `/platform:x64` lub `/platform:anycpu` przełączników i wykonywania w systemach 64-bitowych. możesz sformatować <xref:System.Double> wartości przy użyciu ciągu standardowego formatu liczb "G17". W poniższym przykładzie użyto ciągu formatu "R", przy użyciu <xref:System.Double> wartość, która nie obustronne nie pomyślnie i również używa "G17" format ciąg, który ma pomyślnie obustronne oryginalną wartość.  
   
  [!code-csharp-interactive[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#5)]
  [!code-vb[System.Double.ToString#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Double.ToString/vb/roundtripex1.vb#5)]  
@@ -318,9 +318,9 @@ Aby uzyskać <xref:System.Double> wartości, specyfikator formatu "R" w niektór
   
  Specyfikator dokładności określa minimalną liczbę miejsc dziesiętnych w ciągu wynikowym. Jeśli to konieczne, liczba jest dopełniana zerami po lewej stronie w celu uzyskania liczby cyfr określonej przez specyfikator dokładności.  
   
- Ciąg wyniku nie ma wpływu na informacje dotyczące formatowania bieżącego <xref:System.Globalization.NumberFormatInfo> obiektu.  
+ Informacje o formatowaniu bieżącego nie są stosowane do ciągu wynikowego <xref:System.Globalization.NumberFormatInfo> obiektu.  
   
- Następujące przykładowe formaty <xref:System.Int32> specyfikatorze formatu wartości szesnastkowym.  
+ Poniższy przykład formatuje <xref:System.Int32> specyfikatora formatu wartości szesnastkowych.  
   
  [!code-cpp[Formatting.Numeric.Standard#9](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#9)]
  [!code-csharp-interactive[Formatting.Numeric.Standard#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#9)]
@@ -332,27 +332,27 @@ Aby uzyskać <xref:System.Double> wartości, specyfikator formatu "R" w niektór
 ## <a name="notes"></a>Uwagi  
   
 ### <a name="control-panel-settings"></a>Ustawienia panelu sterowania  
- Ustawienia w **Opcje regionalne i językowe** elementu w Panelu sterowania wpływ ciąg wyniku utworzone przez operację formatowania. Te ustawienia są używane do zainicjowania <xref:System.Globalization.NumberFormatInfo> obiekt skojarzony z bieżącej kultury wątku, co zapewnia wartości używane do sterowania formatowania. Na komputerach, na których są używane różne ustawienia, są generowane różne ciągi wynikowe.  
+ Ustawienia w **Opcje regionalne i językowe** elementu w Panelu sterowania wpływają na ciągi wynikowe generowane przez operację formatowania. Te ustawienia są stosowane do inicjalizacji <xref:System.Globalization.NumberFormatInfo> obiekt skojarzony z bieżącą kulturą wątku, która zapewnia wartości stosowane do zarządzania formatowaniem. Na komputerach, na których są używane różne ustawienia, są generowane różne ciągi wynikowe.  
   
- Ponadto jeśli <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> Konstruktor jest używany do utworzenia wystąpienia nowy <xref:System.Globalization.CultureInfo> obiekt, który reprezentuje tego samego kultury bieżącej kultury systemu, wszelkie dostosowania ustala **Opcje regionalne i językowe** w Panelu sterowania zostaną zastosowane do nowego <xref:System.Globalization.CultureInfo> obiektu. Można użyć <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> konstruktora w celu utworzenia <xref:System.Globalization.CultureInfo> obiekt, który nie odzwierciedla dostosowania systemu.  
+ Ponadto jeśli <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> Konstruktor jest używany do tworzenia wystąpienia nowego <xref:System.Globalization.CultureInfo> obiekt, który reprezentuje tę samą kulturę co bieżąca kultura systemu, wszelkie dostosowania ustanowione przez **Opcje regionalne i językowe** w Panelu sterowania zostaną zastosowane do nowego <xref:System.Globalization.CultureInfo> obiektu. Możesz użyć <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> Konstruktor do tworzenia <xref:System.Globalization.CultureInfo> obiektu, który nie będzie odzwierciedlał dostosowań systemu.  
   
 ### <a name="numberformatinfo-properties"></a>Właściwości klasy NumberFormatInfo  
- Formatowanie ma wpływ właściwości bieżącego <xref:System.Globalization.NumberFormatInfo> obiektu, który jest dostarczany niejawnie według bieżącej kultury wątku lub jawnie <xref:System.IFormatProvider> parametru metody, która wywołuje formatowania. Określ <xref:System.Globalization.NumberFormatInfo> lub <xref:System.Globalization.CultureInfo> obiekt dla tego parametru.  
+ Formatowanie mają wpływ właściwości bieżącego <xref:System.Globalization.NumberFormatInfo> obiektu, dostarczane niejawnie przez bieżącą kulturę wątku lub jawnie przez <xref:System.IFormatProvider> parametru metody, która wywołuje formatowanie. Określ <xref:System.Globalization.NumberFormatInfo> lub <xref:System.Globalization.CultureInfo> obiektu dla tego parametru.  
   
 > [!NOTE]
->  Uzyskać informacji o dostosowywaniu wzorców i ciągi używaną w formatowaniu wartości liczbowe, zobacz <xref:System.Globalization.NumberFormatInfo> klasy tematu.  
+>  Aby uzyskać informacje na temat dostosowywania wzorców lub ciągów używanych w formatowaniu wartości numerycznych, zobacz <xref:System.Globalization.NumberFormatInfo> temat poświęcony klasie.  
   
 ### <a name="integral-and-floating-point-numeric-types"></a>Całkowite i zmiennoprzecinkowe rodzaje wartości numerycznych  
- Niektóre opisy specyfikatorów standardowego formatu liczb odnoszą się do całkowitych lub zmiennoprzecinkowych typów liczbowych. Typy całkowite liczbowych są <xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>, i <xref:System.Numerics.BigInteger>. Typy liczbowe zmiennoprzecinkowe są <xref:System.Decimal>, <xref:System.Single>, i <xref:System.Double>.  
+ Niektóre opisy specyfikatorów standardowego formatu liczb odnoszą się do całkowitych lub zmiennoprzecinkowych typów liczbowych. Całkowite typy liczbowe to <xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>, i <xref:System.Numerics.BigInteger>. Zmiennoprzecinkowe typy liczbowe to <xref:System.Decimal>, <xref:System.Single>, i <xref:System.Double>.  
   
 ### <a name="floating-point-infinities-and-nan"></a>Zmiennoprzecinkowe nieskończoności i NaN  
- Niezależnie od ciąg formatu Jeśli wartość <xref:System.Single> lub <xref:System.Double> typ zmiennoprzecinkowy nieskończoności dodatniej, nieskończoności ujemnej lub niebędące liczbą (NaN), sformatowanego ciągu jest wartością odpowiednio <xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol%2A>, <xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol%2A>, lub <xref:System.Globalization.NumberFormatInfo.NaNSymbol%2A> właściwość, która jest określona przez stosowane obecnie <xref:System.Globalization.NumberFormatInfo> obiektu.  
+ Bez względu na ciąg formatu Jeśli wartość <xref:System.Single> lub <xref:System.Double> typu zmiennoprzecinkowego jest nieskończoności dodatniej, minus nieskończonością lub nie jest liczbą (NaN), sformatowany ciąg ma wartość omawianych <xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol%2A>, <xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol%2A>, lub <xref:System.Globalization.NumberFormatInfo.NaNSymbol%2A> właściwość, która jest określona przez stosowany obecnie <xref:System.Globalization.NumberFormatInfo> obiektu.  
   
 ## <a name="example"></a>Przykład  
  
-[!INCLUDE[interactive-note](~/includes/csharp-interactive-with-culture-note.md)]
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
  
- W poniższym przykładzie całkowita i zmiennoprzecinkowa wartość liczbowa jest formatowana przy użyciu kultury en-US i wszystkich specyfikatorów standardowego formatu liczb. W tym przykładzie używane są dwa typy liczbowe konkretnego (<xref:System.Double> i <xref:System.Int32>), ale będzie podobne wyniki dla każdego z innych liczbowych typów podstawowych (<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>, <xref:System.Numerics.BigInteger>, <xref:System.Decimal>, i <xref:System.Single>).  
+ W poniższym przykładzie całkowita i zmiennoprzecinkowa wartość liczbowa jest formatowana przy użyciu kultury en-US i wszystkich specyfikatorów standardowego formatu liczb. W tym przykładzie użyto określone typy liczbowe (<xref:System.Double> i <xref:System.Int32>), ale wyniki byłyby podobne jakichkolwiek innych typów podstawowych (<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>, <xref:System.Numerics.BigInteger>, <xref:System.Decimal>, i <xref:System.Single>).  
   
  [!code-csharp-interactive[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#1)]
  [!code-vb[system.x.tostring-and-culture#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.X.ToString-and-Culture/vb/xts.vb#1)]  
@@ -362,5 +362,5 @@ Aby uzyskać <xref:System.Double> wartości, specyfikator formatu "R" w niektór
  [Niestandardowe ciągi formatujące liczby](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
  [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)  
  [Instrukcje: Uzupełnianie liczby zerami wiodącymi](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
- [Przykład: .NET Framework 4 formatowania narzędzia](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)  
+ [Przykład: .NET Framework 4 formatowanie narzędzia](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)  
  [Złożone formatowanie](../../../docs/standard/base-types/composite-formatting.md)

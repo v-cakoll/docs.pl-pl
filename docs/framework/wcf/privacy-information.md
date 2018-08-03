@@ -7,149 +7,149 @@ helpviewer_keywords:
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
 ms.openlocfilehash: e278b28e5c0015eeab549b04d3870dfa247a57ed
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33808874"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informacje o prywatności dotyczące architektury WCF (Windows Communication Foundation)
-Firma Microsoft dba o ochronę prywatności użytkowników końcowych. W przypadku kompilowania aplikacji przy użyciu systemu Windows Communication Foundation (WCF), wersja 3.0, aplikacja może mieć wpływ na prywatność użytkowników końcowych. Na przykład aplikacja jawnie może zbierać informacje kontaktowe użytkownika lub może zażądać, lub wysłać informacje przez Internet do witryny sieci Web. Jeśli technologii firmy Microsoft możesz osadzić w aplikacji, technologia ta może być własną zachowanie, które mogą mieć wpływ na prywatność. Usługi WCF nie wysyła żadnych informacji do firmy Microsoft z aplikacji, chyba że użytkownik lub użytkownik końcowy wybrać do wysyłania do nas.  
+Firma Microsoft jest zaangażowana w ochronę prywatności użytkowników końcowych. Podczas tworzenia aplikacji przy użyciu funkcji Windows Communication Foundation (WCF), wersja 3.0, aplikacja może mieć wpływ na prywatność użytkowników końcowych. Na przykład aplikacja jawnie może zbierać informacje kontaktowe użytkownika, lub może zażądać lub wysyłanie informacji przez Internet do witryny sieci Web. Technologii firmy Microsoft w przypadku osadzenia w aplikacji, technologia ta może mieć własną zachowanie, które mogą mieć wpływ na prywatność. Usługi WCF nie wysyła żadnych informacji do firmy Microsoft z aplikacji, chyba że użytkownik lub użytkownik końcowy chce wysłać ją do nas.  
   
-## <a name="wcf-in-brief"></a>Usługi WCF w Brief  
- Usługi WCF jest rozproszonej framework wiadomości przy użyciu programu Microsoft .NET Framework, która umożliwia deweloperom tworzenie aplikacji rozproszonych. Komunikaty przekazywane między dwiema aplikacjami zawierają informacje nagłówek i treść.  
+## <a name="wcf-in-brief"></a>Usługi WCF w skrócie  
+ Usługi WCF jest platforma obsługi komunikatów rozproszonych przy użyciu programu Microsoft .NET Framework, która umożliwia deweloperom tworzenie aplikacji rozproszonych. Komunikaty przekazywane między dwiema aplikacjami zawierają informacje, nagłówek i treść.  
   
- Nagłówki może zawierać rozsyłania wiadomości, informacje o zabezpieczeniach transakcji i dłużej w zależności od usługi używane przez aplikację. Komunikaty są zwykle domyślnie szyfrowane. Jedynym wyjątkiem jest przy użyciu `BasicHttpBinding`, który został zaprojektowany do użytku z usługami sieci Web nie jest zabezpieczony, starszej wersji. Projektant aplikacji jest odpowiedzialny za ostatecznego projektu. W treści protokołu SOAP wiadomości dane specyficzne dla aplikacji; Jednak te dane, takie jak zdefiniowane przez aplikację informacje osobiste, mogły być chronione przy użyciu funkcji WCF szyfrowania i poufności. W poniższych sekcjach opisano funkcje, które mogą mieć wpływ na prywatność.  
+ Może zawierać nagłówki, routing komunikatów, informacje o zabezpieczeniach, transakcji i dłużej w zależności od usług używanych przez aplikację. Komunikaty są zazwyczaj domyślne szyfrowanie przekazywanego materiału. Jedynym wyjątek polega na użyciu `BasicHttpBinding`, który został zaprojektowany do użytku z niezabezpieczonych, starszej wersji usługi sieci Web. Projektant aplikacji odpowiedzialność za ostatecznego projektu. Komunikaty w treści protokołu SOAP zawierają dane specyficzne dla aplikacji; Jednak te dane, takie jak zdefiniowane przez aplikację informacje osobiste mogą być chronione za pomocą funkcji szyfrowania lub poufności WCF. W poniższych sekcjach opisano funkcje, które mogłoby to wpłynąć na zachowania.  
   
 ## <a name="messaging"></a>Obsługa wiadomości  
- Każdy komunikat WCF ma nagłówek adres, który określa lokalizację docelową wiadomości i gdzie odpowiedzi.  
+ Każdy komunikat WCF ma nagłówek adres, który określa miejsce docelowe wiadomości i gdzie odpowiedzi.  
   
- Składnik adres adresu punktu końcowego jest zasobów identyfikator URI (Uniform), który identyfikuje punkt końcowy. Adres może być adresu sieciowego lub adres logiczny. Adres może zawierać nazwy komputera (nazwa hosta, pełna nazwa domeny) i adres IP. Adres punktu końcowego może również zawierać unikatowy identyfikator globalny (GUID) lub kolekcja identyfikatorów GUID adresowania tymczasowych używany do wykrycia każdy adres. Każdy komunikat zawiera identyfikator wiadomości, który jest identyfikatorem GUID. Ta funkcja jest zgodna standardowego wzorca WS-Addressing.  
+ Składnik adresu adresu punktu końcowego jest jednolite zasobów identyfikator (URI), który identyfikuje punkt końcowy. Adres może być adresu sieciowego lub adres logiczny. Adres może zawierać nazwy komputera (nazwa hosta, w pełni kwalifikowana nazwa domeny) i adres IP. Adres punktu końcowego może również zawierać unikatowy identyfikator globalny (GUID) lub zbiór identyfikatorów GUID do adresowania tymczasowe umożliwia brakowi rozróżnienia każdego z adresów. Każdy komunikat zawiera identyfikator komunikatu, który jest identyfikatorem GUID. Ta funkcja postępuje zgodnie ze standardowym odwołanie WS-Addressing.  
   
- Warstwa obsługi wiadomości WCF nie zapisuje żadnych informacji osobistych na komputerze lokalnym. Jednak go może propagowania informacji osobistych na poziomie sieci Jeśli dewelopera usługi utworzył to usługa, która udostępnia takie informacje (na przykład za pomocą nazwisko osoby w nazwie punktu końcowego, lub w tym informacje osobiste w sieci Web punktu końcowego Services Description Language, ale nie wymaga klientów do używania protokołu https można uzyskać dostępu do WSDL). Ponadto, gdy działa dewelopera [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) narzędzie względem punktu końcowego, który opisuje informacje osobiste, dane wyjściowe narzędzia mogą zawierać te informacje i są zapisywane w pliku docelowym lokalny dysk twardy.  
+ Warstwa obsługi komunikatów usługi WCF nie zapisuje żadnych danych osobowych do komputera lokalnego. Jednak go może propagację informacje osobiste, na poziomie sieci jeśli deweloper usługi został utworzony, to usługa, która udostępnia takie informacje (np. przez przy użyciu nazwy osoby w nazwy punktu końcowego lub w tym informacje osobiste w sieci Web punktu końcowego Usługi języka opisu, ale nie wymaga klientom dostęp do pliku WSDL przy użyciu protokołu https). Ponadto jeśli deweloper działa [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) narzędzie względem punktu końcowego, który udostępnia informacje osobiste, dane wyjściowe narzędzia firmy mogą zawierać te informacje, i jest zapisywany plik wyjściowy lokalny dysk twardy.  
   
 ## <a name="hosting"></a>Hosting  
- Funkcja obsługi w programie WCF umożliwia aplikacjom można uruchomić na żądanie lub włączyć Udostępnianie portów między wieloma aplikacjami. Aplikacja WCF może być hostowana w Internet Information Services (IIS), podobny do [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  
+ Hostingu funkcji w programie WCF umożliwia aplikacjom, które można uruchomić na żądanie lub włączanie udostępniania portów między wieloma aplikacjami. Aplikacja usługi WCF, mogą być hostowane w Internet Information Services (IIS), podobnie jak [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  
   
- Hosting nie ujawnia żadnych określonych informacji w sieci i nie przechowuje danych na tym komputerze.  
+ Hostingu nie ujawnia żadnych konkretnych informacji o sieci i nie przechowuje danych na maszynie.  
   
 ## <a name="message-security"></a>Zabezpieczenia komunikatów  
- Zabezpieczenia WCF zapewnia funkcje zabezpieczeń dla aplikacji do obsługi wiadomości. Dostępne funkcje zabezpieczeń obejmują uwierzytelniania i autoryzacji.  
+ Zabezpieczenia programu WCF zapewnia funkcje zabezpieczeń dla aplikacji do obsługi wiadomości. Dostępne funkcje zabezpieczeń obejmują uwierzytelnianie i autoryzację.  
   
- Uwierzytelnianie jest wykonywane przez przekazanie poświadczeń między klientami i usługami. Uwierzytelniania mogą być przez zabezpieczenia na poziomie transportu lub za pośrednictwem protokołu SOAP wiadomości poziomu zabezpieczeń, w następujący sposób:  
+ Uwierzytelnianie jest wykonywane przez przekazywanie poświadczeń między klientami i usługami. Uwierzytelnianie można za pomocą zabezpieczeń na poziomie transportu lub za pośrednictwem protokołu SOAP wiadomości zabezpieczenia na poziomie, w następujący sposób:  
   
--   W ramach zabezpieczeń komunikatów SOAP uwierzytelnianie jest przeprowadzane za pomocą poświadczeń, takie jak nazwa użytkownika/hasła, certyfikaty X.509 biletów Kerberos i tokeny SAML, które mogą zawierać informacje osobiste, w zależności od wystawcy.  
+-   W ramach zabezpieczeń komunikatów protokołu SOAP uwierzytelnianie będzie przeprowadzane przy użyciu poświadczeń, takie jak nazwy użytkownika i hasła, certyfikaty X.509, bilety protokołu Kerberos i tokeny SAML, które mogą zawierać informacje osobiste, w zależności od wystawcy.  
   
--   Za pomocą zabezpieczeń transportu, uwierzytelnianie odbywa się za pośrednictwem tradycyjnych transportu mechanizmów uwierzytelniania, takich jak schematy uwierzytelniania HTTP (Basic, Digest, Negotiate, zintegrowanej autoryzacji systemu Windows, NTLM, None i anonimowe) i uwierzytelniania formularzy.  
+-   Za pomocą zabezpieczeń transportu, uwierzytelnianie odbywa się za pośrednictwem tradycyjnych transportu mechanizmów uwierzytelniania, takich jak schematy uwierzytelniania HTTP (Basic, Digest, Negotiate, zintegrowanej autoryzacji Windows, NTLM, None i anonimowych) i uwierzytelniania formularzy.  
   
- Uwierzytelnianie może spowodować bezpiecznej sesji między komunikacji punktów końcowych. Sesja jest identyfikowany przez identyfikator GUID, który jest ważny przez czas ich istnienia sesji zabezpieczeń. W poniższej tabeli pokazano, co jest zachowywane i gdzie.  
+ Uwierzytelnianie może spowodować bezpiecznej sesji między komunikujące się punkty końcowe. Sesja jest identyfikowana przez identyfikator GUID, który trwa okres istnienia sesji zabezpieczeń. W poniższej tabeli przedstawiono, jakie są przechowywane i gdzie.  
   
 |Dane|Magazyn|  
 |----------|-------------|  
-|Poświadczenia prezentacji, takie jak nazwa użytkownika, certyfikaty X.509, tokeny protokołu Kerberos i odwołania do poświadczeń.|Standardowy system Windows poświadczeń mechanizmów zarządzania, takich jak magazynu certyfikatów systemu Windows.|  
-|Członkostwo informacje o użytkowniku, takie jak nazwy użytkowników i hasła.|[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] dostawcy członkostwa.|  
-|Informacje dotyczące usługi używany do uwierzytelniania usługi dla klientów tożsamości.|Adres punktu końcowego usługi.|  
+|Prezentacja poświadczenia, takie jak nazwa użytkownika, certyfikatów X.509, tokenów protokołu Kerberos i odwołania do poświadczeń.|Standardowa Windows poświadczeń mechanizmami zarządzania, takich jak Sklep Windows certyfikatu.|  
+|Członkostwo w informacje o użytkowniku, takie jak nazwy użytkowników i hasła.|[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] dostawcy członkostwa.|  
+|Informacje identyfikacyjne dotyczące usługi używany do uwierzytelniania usługi dla klientów.|Adres punktu końcowego usługi.|  
 |Informacje o wywołującym.|Dzienniki inspekcji.|  
   
 ## <a name="auditing"></a>Inspekcja  
- Inspekcja rejestruje sukces i niepowodzenie zdarzeń uwierzytelniania i autoryzacji. Rekordy inspekcji zawierają następujące dane: z identyfikatora URI, identyfikator URI akcji i identyfikator obiektu wywołującego.  
+ Inspekcja rejestruje sukcesów i niepowodzeń zdarzenia uwierzytelniania i autoryzacji. Rekordy inspekcji zawierają następujące dane: identyfikator URI, identyfikator URI akcji oraz identyfikator obiektu wywołującego.  
   
- Inspekcja również są rejestrowane podczas administrator Modyfikuje konfigurację rejestrowanie komunikatów (Włączanie on lub off), ponieważ rejestrowanie komunikatów mogą rejestrować dane specyficzne dla aplikacji w nagłówkach i treści. Aby uzyskać [!INCLUDE[wxp](../../../includes/wxp-md.md)], rekord jest rejestrowane w dzienniku zdarzeń aplikacji. Aby uzyskać [!INCLUDE[wv](../../../includes/wv-md.md)] i [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], rekord jest rejestrowane w dzienniku zdarzeń zabezpieczeń.  
+ Inspekcja również są rejestrowane po administrator Modyfikuje konfigurację rejestrowania komunikatów (Włączanie on lub off), ponieważ rejestrowanie komunikatów mogą rejestrować dane specyficzne dla aplikacji w nagłówki i treść. Aby uzyskać [!INCLUDE[wxp](../../../includes/wxp-md.md)], rekord jest rejestrowane w dzienniku zdarzeń aplikacji. Aby uzyskać [!INCLUDE[wv](../../../includes/wv-md.md)] i [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], rekord jest rejestrowane w dzienniku zdarzeń zabezpieczeń.  
   
 ## <a name="transactions"></a>Transakcje  
- Funkcja transakcji zapewnia transakcyjnych usług do aplikacji usługi WCF.  
+ Funkcja transakcji udostępnia transakcyjne usługi aplikacji WCF.  
   
- Nagłówki transakcji używanych w propagacji transakcji mogą zawierać identyfikatorów transakcji lub rejestracji identyfikatorów, które są identyfikatorami GUID.  
+ Nagłówki transakcji używanych w propagacji transakcji może zawierać identyfikatory transakcji lub identyfikatorów rejestracji, które są identyfikatory GUID.  
   
- Funkcja transakcji używa Menedżera transakcji koordynatora transakcji rozproszonych (MSDTC) (składnik systemu Windows) do zarządzania stanem transakcji. Domyślnie komunikacja między menedżerami transakcje są szyfrowane. Menedżerowie transakcji mogą rejestrować odwołania do punktu końcowego, identyfikatory transakcji i identyfikatory rejestracji w ramach stanu trwałego. Okres istnienia tego stanu jest określana przez okres istnienia pliku dziennika Menedżera transakcji. Usługa MSDTC jest właścicielem i przechowuje ten dziennik.  
+ Funkcja transakcji używa transakcji Koordynator MSDTC (Microsoft Distributed) Menedżera transakcji (składnik Windows) do zarządzania stanem transakcji. Domyślnie komunikacja między menedżerami transakcje są szyfrowane. Menedżerowie transakcji mogą rejestrować się odwołania do endpoint, identyfikatory transakcji i identyfikatorów rejestracji, w ramach stanu trwałego. Okres istnienia tego stanu jest określana przez okres istnienia pliku dziennika Menedżera transakcji. Usługa MSDTC jest właścicielem i przechowuje ten dziennik.  
   
- Funkcja transakcji implementuje standardy koordynacji WS i protokołu WS-AT.  
+ Funkcja transakcji implementuje standardów WS koordynacji i WS-Atomic Transaction.  
   
 ## <a name="reliable-sessions"></a>Niezawodne sesje  
- Niezawodne sesje w programie WCF Podaj przesyłanie wiadomości wystąpieniu transportu lub pośredniczące błędów. Udostępniają one dokładnie — raz transferu wiadomości, nawet wtedy, gdy transportu źródłowego rozłącza (na przykład połączenie TCP w sieci bezprzewodowej) lub utraci wiadomości (serwer proxy HTTP porzucenie komunikat wychodzące lub przychodzące). Niezawodne sesje także odzyskać komunikat zmianę kolejności (co może się tak zdarzyć w przypadku wielu ścieżek routing), zachowując kolejności, w jakiej zostały wysłane wiadomości.  
+ Niezawodne sesje w programie WCF zapewniają przesyłanie wiadomości, gdy transportu lub pośredniczący błędy występują. Zapewniają one dokładnie — raz przesyłanie komunikatów, nawet wtedy, gdy transportu źródłowego odłącza (np. połączenia protokołu TCP w sieci bezprzewodowej) lub utraci komunikat (serwer proxy HTTP porzucenie wiadomości wychodzące lub przychodzące). Niezawodne sesje także odzyskać komunikat zmiany kolejności (co może się zdarzyć w przypadku routing wielościeżkowego), jednoczesnym zapewnieniu właściwej kolejności, w jakiej zostały wysłane wiadomości.  
   
- Niezawodne sesje są implementowane za pomocą protokołu WS-ReliableMessaging (WS-RM). Dodaj one nagłówków protokołu WS-RM, zawierające informacje sesji, który jest używany do identyfikowania komunikatów wszystkich skojarzonych z określonym niezawodnej sesji. Każdej sesji protokołu WS-RM ma identyfikator, który jest identyfikatorem GUID.  
+ Niezawodne sesje są implementowane przy użyciu protokołu WS-ReliableMessaging (WS-RM). Dodają WS-RM nagłówki, które zawierają informacje o sesji, który jest używany do identyfikowania wszystkie komunikaty skojarzone z określonym niezawodnej sesji. Każda sesja WS-RM ma identyfikator, który jest identyfikatorem GUID.  
   
  Żadne informacje osobiste nie są przechowywane na komputerze użytkownika końcowego.  
   
-## <a name="queued-channels"></a>Kanały w kolejce  
- Kolejki przechowywania komunikatów z aplikacja wysyłająca imieniu aplikację i później przekazywanie tych wiadomości do aplikacji odbierającej. One zapewnić transferu wiadomości z aplikacji wysyłającej aplikacje odbierające, na przykład aplikacja odbierająca jest przejściowy. Usługi WCF zapewnia obsługę dla usługi kolejkowania wiadomości przy użyciu usługi kolejkowania wiadomości firmy Microsoft (MSMQ) do ich przenoszenia.  
+## <a name="queued-channels"></a>Kanały umieszczonych w kolejce  
+ Kolejki przechowywanie komunikatów w aplikacji wysyłającej w imieniu aplikacji odbierającej i później przekazuje te komunikaty odbierający aplikacji. Łatwiej jest zapewnić przesyłanie wiadomości z aplikacji wysyłającej aplikacje odbierające, gdy na przykład aplikacja odbierająca jest przejściowy. Usługi WCF zapewnia obsługę usługi kolejkowania wiadomości przy użyciu Microsoft usługi kolejkowania komunikatów (MSMQ) jako transportu.  
   
- Funkcja kanałów w kolejce nie dodaje nagłówki na wiadomość. Zamiast tego tworzy komunikatów usługi kolejkowania komunikatów z odpowiedniego zbioru właściwości komunikatów usługi kolejkowania komunikatów i wywołuje metody kolejkowania put wiadomości w kolejce usługi kolejkowania komunikatów. Usługa kolejkowania komunikatów jest opcjonalnym składnikiem, który jest dostarczany z systemem Windows.  
+ Funkcja kanały umieszczonych w kolejce nie dodaje nagłówki do wiadomości. Zamiast tego tworzy komunikatów usługi kolejkowania komunikatów za pomocą odpowiedni zestaw właściwości komunikatów usługi kolejkowania komunikatów i wywołuje metody usługi kolejkowania komunikatów, aby przełączyć komunikat do kolejki usługi kolejkowania komunikatów. Usługa kolejkowania komunikatów jest opcjonalnym składnikiem, który jest dostarczany z programem Windows.  
   
- Nie informacje są przechowywane na komputerze użytkownika końcowego przez funkcję umieszczonych w kolejce kanałów, ponieważ używa usługi kolejkowania komunikatów jako kolejkowania infrastruktury.  
+ Żadne informacje nie są przechowywane na komputerze użytkownika końcowego przez funkcję kanały umieszczonych w kolejce, ponieważ używa ona usługi kolejkowania komunikatów jako infrastruktura do kolejkowania.  
   
 ## <a name="com-integration"></a>Integracja modelu COM+  
- Ta funkcja jest zawijana istniejące funkcje COM i COM + do tworzenia usług, które są zgodne z usługi WCF. Ta funkcja nie korzysta z określonych nagłówków i nie zachowuje danych na komputerze użytkownika końcowego.  
+ Ta funkcja jest zawijany istniejących funkcji COM i COM +, do tworzenia usług, które są zgodne z usługi WCF. Ta funkcja nie używa określone nagłówki i nie zachowuje danych na komputerze użytkownika końcowego.  
   
-## <a name="com-service-moniker"></a>Moniker usługi COM  
- Zapewnia to niezarządzany otoki standardowe klienta WCF. Ta funkcja nie ma określonego nagłówki przesyłania ani jest utrwalenia danych na tym komputerze.  
+## <a name="com-service-moniker"></a>COM monikera  
+ Zapewnia to niezarządzanych otoki standardowe klienta programu WCF. Ta funkcja nie ma określonych nagłówków na potrzeby przesyłu ani jest zachować dane na maszynie.  
   
 ## <a name="peer-channel"></a>Kanał elementu równorzędnego  
- Kanał elementu równorzędnego umożliwia programowanie wielopartyjnej aplikacji przy użyciu programu WCF. Wiadomości wielopartyjnej występuje w kontekście siatki. Siatki są identyfikowane przez nazwę, która może dołączać węzłów. Każdy węzeł w kanału równorzędnego tworzy odbiornika TCP w porcie określone przez użytkownika i ustanawia połączenie z innych węzłach w sieci w celu zapewnienia odporności. Aby połączyć inne węzły w siatce, węzły wymiany niektórych danych, w tym adres odbiornika i adresów IP na komputerze, na innych węzłach w sieci. Komunikaty wysyłane wokół w siatce może zawierać zabezpieczeń informacji dotyczących nadawcy, aby uniknąć fałszowania wiadomości i naruszeniu.  
+ Kanał elementu równorzędnego umożliwia tworzenie wielostronnej aplikacji przy użyciu usługi WCF. Komunikaty wielostronnej występuje w kontekście siatki. Oczek są identyfikowane przez nazwę, która dołączyć do węzłów. Każdy węzeł w kanał elementu równorzędnego tworzy odbiornika TCP w porcie określonych przez użytkownika i ustanawia połączenie z innymi węzłami w siatce w celu zapewnienia odporności. Aby połączyć z innych węzłów w siatce, węzły wymiany niektóre dane, w tym adres odbiornika i adresy IP na komputerze, z innych węzłów w siatce. Komunikaty wysyłane wokół w siatce może zawierać informacje o zabezpieczeniach, które odnoszą się do nadawcy, aby zapobiec fałszowanie wiadomości i manipulowania.  
   
  Żadne informacje osobiste nie są przechowywane na komputerze użytkownika końcowego.  
   
-## <a name="it-professional-experience"></a>Środowisko pracy specjalistów IT  
+## <a name="it-professional-experience"></a>Profesjonalne środowisko IT  
   
 ### <a name="tracing"></a>Śledzenie  
- Funkcja diagnostyki infrastruktury WCF rejestruje komunikaty, które przechodzą przez transportu i warstwy modelu usług oraz działania i zdarzenia związane z tych wiadomości. Ta funkcja jest domyślnie wyłączona. Jest włączone, za pomocą pliku konfiguracji aplikacji i zachowanie śledzenia może być modyfikowany przy użyciu dostawcy WMI usługi WCF w czasie wykonywania. Po włączeniu Infrastruktura śledzenia emituje śledzenia diagnostycznego, zawierający wiadomości, działań i odbiorników skonfigurowanych przetwarzania zdarzeń. Format i lokalizacja danych wyjściowych zależą od opcji konfiguracji odbiornika administratora, ale jest zwykle sformatowanym plikiem XML. Administrator jest odpowiedzialny za ustawienie listy kontroli dostępu (ACL) dla plików śledzenia. W szczególności obsługiwany przez System aktywacji systemu Windows (WAS), administrator powinien upewnij się, że pliki nie są obsługiwane z katalogu publiczny wirtualnego katalogu głównego, jeśli nie jest wymagana.  
+ Funkcję diagnostyki, infrastruktura WCF rejestruje komunikaty, które przechodzą przez transportu i warstwy modelu usług i działania oraz zdarzeń związanych z tych komunikatów. Ta funkcja jest domyślnie wyłączona. Jest włączona, przy użyciu pliku konfiguracji aplikacji i zachowanie śledzenia może być modyfikowany, przy użyciu dostawcy WMI usługi WCF w czasie wykonywania. Po włączeniu Infrastruktura śledzenia emituje śledzenia diagnostycznego, który zawiera komunikaty, działań i przetwarzanie zdarzeń do odbiorników skonfigurowanych. Format i lokalizację danych wyjściowych są określane przez opcje konfiguracji odbiornika administratora, ale zazwyczaj jest sformatowany plik XML. Administrator jest odpowiedzialny za ustawiania listy kontroli dostępu (ACL) plików śledzenia. W szczególności gdy hostowany przez System Windows Activation (WAS), administrator powinien upewnij się, że pliki nie są obsługiwane z publicznego katalogu wirtualnego, jeśli nie jest wymagana.  
   
- Istnieją dwa typy śledzenie: rejestrowanie komunikatów i modelu usługi diagnostyczne śledzenia, opisane w poniższej sekcji. Każdy typ jest skonfigurowana za pośrednictwem źródła śledzenia: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> i <xref:System.ServiceModel>. Oba te źródła śledzenia rejestrowania przechwytywania danych, które są lokalne dla aplikacji.  
+ Istnieją dwa typy śledzenia: rejestrowanie komunikatów i Model usługi diagnostyczne śledzenia, opisane w poniższej sekcji. Każdy typ jest skonfigurowana za pośrednictwem źródła śledzenia: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> i <xref:System.ServiceModel>. Oba te źródła śledzenia rejestrowania przechwytywania danych, które są lokalne dla aplikacji.  
   
 ### <a name="message-logging"></a>Rejestrowanie komunikatów  
- Rejestrowanie źródła śledzenia komunikatów (<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>) umożliwia administratorom komunikaty dziennika przepływające za pośrednictwem systemu. Za pomocą konfiguracji użytkownik może zadecydować o dziennika całego wiadomości lub tylko nagłówki komunikatu, czy mają być rejestrowane w modelu warstwy transportu i/lub usługi i czy mają być źle sformułowane wiadomości. Ponadto użytkownik może konfigurować filtrowania do ograniczenia, które komunikaty są rejestrowane.  
+ Rejestrowanie źródła śledzenia komunikatów (<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>) umożliwia administratorom komunikaty dziennika z tego przepływu za pośrednictwem systemu. Za pomocą konfiguracji użytkownik może zdecydować o dziennika całej wiadomości lub tylko nagłówki komunikatu, czy mają być rejestrowane w modelu warstwy transportu i/lub usługę i czy mają zostać dołączone źle sformułowane komunikaty. Ponadto użytkownik może skonfigurować filtrowanie, aby ograniczyć zakres komunikatów są rejestrowane.  
   
- Domyślnie rejestrowanie komunikatów jest wyłączona. Administratora komputera lokalnego uniemożliwi włączanie komunikat logowania administratora poziomie aplikacji.  
+ Domyślnie rejestrowanie komunikatów jest wyłączona. Administratorem komputera lokalnego można zapobiec włączenie komunikat logowania administratora dodatku poziomu aplikacji.  
   
-#### <a name="encrypted-and-decrypted-message-logging"></a>Rejestrowanie komunikatów zaszyfrowane i odszyfrowane  
+#### <a name="encrypted-and-decrypted-message-logging"></a>Rejestrowanie komunikatów zaszyfrowany i odszyfrowany  
  Komunikaty są rejestrowane, szyfrowane lub odszyfrować, zgodnie z opisem w następujących warunkach.  
   
  Rejestrowanie transportu  
- Rejestruje komunikaty odebranych i wysłanych na poziomie transportu. Te komunikaty zawierają wszystkie nagłówki i może być zaszyfrowany przed wysłaniem przesyłania i podczas odbierane.  
+ Rejestruje komunikaty odbieranych i wysyłanych na poziomie transportu. Te komunikaty zawierają wszystkie nagłówki i może być zaszyfrowany przed wysłaniem przesyłania i podczas jego odebrania.  
   
- W przypadku wiadomości są szyfrowane przed wysłaniem przesyłania i po odebraniu, są rejestrowane również szyfrowane. Wyjątek jest gdy protokół zabezpieczeń jest używana (https): są następnie rejestrowane odszyfrować przed wysłaniem i po nich odbierane, nawet jeśli są one zaszyfrowane w trakcie przesyłania.  
+ Jeśli komunikaty są szyfrowane przed wysłaniem przesyłania, a po ich odebraniu są rejestrowane są również szyfrowane. Wyjątkiem jest, gdy protokół zabezpieczeń jest używana (https): są następnie rejestrowane odszyfrowywany przed wysłaniem i po odbierane, nawet jeśli są one zaszyfrowane na łączu.  
   
- Usługa rejestrowania  
- Rejestruje komunikaty odebranych lub wysłanych na poziomie modelu usługi, po podczas przetwarzania nagłówka kanału, bezpośrednio przed i po wprowadzeniu kodu użytkownika.  
+ Rejestrowanie usługi  
+ Rejestruje komunikaty odebrania lub wysłania na poziomie modelu usługi, po kanału nagłówka zostało wykonane przetwarzanie, tuż przed i po wprowadzeniu kodu użytkownika.  
   
- Komunikaty zarejestrowane na tym poziomie są odszyfrowywane, nawet jeśli były zabezpieczone i zaszyfrowane w trakcie przesyłania.  
+ Komunikaty zarejestrowane na tym poziomie są odszyfrowywane, nawet jeśli były one chronione i szyfrowane w sieci.  
   
  Rejestrowanie komunikatów źle sformułowany  
- Rejestruje komunikaty infrastruktura WCF nie może zrozumieć lub przetworzenia.  
+ Rejestruje komunikaty infrastruktura WCF nie może zrozumieć i przetworzyć.  
   
- Komunikaty są rejestrowane jako — to znaczy szyfrowane lub nie  
+ Komunikaty są rejestrowane jako — oznacza to zaszyfrowane, czy nie  
   
- Gdy komunikaty są rejestrowane odszyfrowane lub niezaszyfrowane formularza, domyślnie WCF usuwa kluczy zabezpieczeń i potencjalnie danych osobowych komunikaty przed ich zalogowaniem. Kolejne sekcje opisują, jakie informacje zostaną usunięte oraz kiedy. Administrator maszyny i jednocześnie wdrażania aplikacji należy wykonać pewne akcje konfiguracji, aby zmienić domyślne zachowanie logowania kluczy i potencjalnie danych osobowych.  
+ Gdy komunikaty są rejestrowane formie odszyfrowany lub niezaszyfrowanym domyślnie WCF usuwa kluczy zabezpieczeń i potencjalnie dane osobowe z komunikatów przed ich zalogowaniem. W kolejnych sekcjach opisano, jakie informacje są usuwane i kiedy. Administrator maszyny i jednocześnie wdrażania aplikacji należy wykonać określone akcje konfiguracji, aby zmienić domyślne zachowanie logowania kluczy i potencjalnie dane osobowe.  
   
-#### <a name="information-removed-from-message-headers-when-logging-decryptedunencrypted-messages"></a>Informacje o usunięte z nagłówków komunikatu podczas logowania się odszyfrować niezaszyfrowane wiadomości  
- Jeśli komunikaty są rejestrowane w odszyfrować niezaszyfrowanej postaci kluczy zabezpieczeń i potencjalnie danych osobowych są usuwane domyślnie nagłówki komunikatów i treści wiadomości, zanim są rejestrowane. Na poniższej liście przedstawiono co WCF uwzględnia kluczy i potencjalnie danych osobowych.  
+#### <a name="information-removed-from-message-headers-when-logging-decryptedunencrypted-messages"></a>Informacje — usunięte z nagłówków komunikatu podczas logowania się odszyfrować niezaszyfrowanej wiadomości  
+ Gdy komunikaty są rejestrowane w odszyfrować niezaszyfrowanej postaci kluczy zabezpieczeń i potencjalnie dane osobowe są usuwane domyślnie na podstawie nagłówków wiadomości oraz treść wiadomości przed ich zarejestrowaniu. Na poniższej liście przedstawiono, jakie WCF uwzględnia kluczy i potencjalnie dane osobowe.  
   
- Klucze, które zostały usunięte:  
+ Klucze, które są usuwane:  
   
- \- Xmlns:wst = "http://schemas.xmlsoap.org/ws/2004/04/trust" i xmlns:wst = "http://schemas.xmlsoap.org/ws/2005/02/trust"  
+ \- Aby uzyskać xmlns:wst = "http://schemas.xmlsoap.org/ws/2004/04/trust" i xmlns:wst = "http://schemas.xmlsoap.org/ws/2005/02/trust"  
   
  wst:BinarySecret  
   
  Wst:Entropy  
   
- \- Xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" i xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- Aby uzyskać xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" i xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Password  
   
  wsse:nonce  
   
- Potencjalnie osobiste informacje zostaną usunięte:  
+ Informacje osobiste potencjalnie, który zostanie usunięty:  
   
- \- Xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" i xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- Aby uzyskać xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" i xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:username  
   
  wsse:BinarySecurityToken  
   
- \- Dla xmlns:saml = "urn: oasis: nazwy: tc: SAML:1.0:assertion" są usuwane elementy pogrubione (poniżej):  
+ \- Aby uzyskać xmlns:saml = "urn: oasis: nazwy: tc: SAML:1.0:assertion" elementy pogrubione (poniżej) są usuwane:  
   
- \<Potwierdzenia  
+ \<potwierdzenie  
   
  MajorVersion="1"  
   
@@ -157,7 +157,7 @@ Firma Microsoft dba o ochronę prywatności użytkowników końcowych. W przypad
   
  AssertionId="[ID]"  
   
- Wystawca = "[parametry]"  
+ Wystawca = "[string]"  
   
  IssueInstant="[dateTime]"  
   
@@ -173,7 +173,7 @@ Firma Microsoft dba o ochronę prywatności użytkowników końcowych. W przypad
   
  \<DoNotCacheCondition / > *  
   
- <\!--abstrakcyjnej typu podstawowego  
+ <\!--abstrakcji typu podstawowego  
   
  \<Warunek / > *  
   
@@ -181,17 +181,17 @@ Firma Microsoft dba o ochronę prywatności użytkowników końcowych. W przypad
   
  \</ Warunki >?  
   
- \<Porady >  
+ \<Doradztwo >  
   
- \<AssertionIDReference > [identyfikator]\</AssertionIDReference > *  
+ \<AssertionIDReference > [ID]\</AssertionIDReference > *  
   
- \<Potwierdzenie > [potwierdzenie]\</Assertion > *  
+ \<Potwierdzenie > [asercji]\</Assertion > *  
   
  [any] *  
   
- \</ Porady >?  
+ \</ Porady dotyczące >?  
   
- <\!--Abstrakcyjnych typów podstawowych  
+ <\!--Abstrakcyjne typy podstawowe  
   
  \<Instrukcja / > *  
   
@@ -235,7 +235,7 @@ Firma Microsoft dba o ochronę prywatności użytkowników końcowych. W przypad
   
  >  
   
- [Podmiotu]  
+ [Tematu]  
   
  `<SubjectLocality`  
   
@@ -259,7 +259,7 @@ Firma Microsoft dba o ochronę prywatności użytkowników końcowych. W przypad
   
  \<AttributeStatement>  
   
- [Podmiotu]  
+ [Tematu]  
   
  \<Atrybut  
   
@@ -283,30 +283,30 @@ Firma Microsoft dba o ochronę prywatności użytkowników końcowych. W przypad
   
  >  
   
- [Podmiotu]  
+ [Tematu]  
   
- \<Akcja Namespace = "[identyfikator uri]" > [parametry]\<Action > +  
+ \<Akcja, Namespace = "[identyfikator uri]" > [string]\<Action > +  
   
  \<Dowód >  
   
- \<AssertionIDReference > [identyfikator]\</AssertionIDReference > +  
+ \<AssertionIDReference > [ID]\</AssertionIDReference > +  
   
- \<Potwierdzenie > [potwierdzenie]\</Assertion > +  
+ \<Potwierdzenie > [asercji]\</Assertion > +  
   
- \</ Dowody >?  
+ \</ Dowód >?  
   
  \</AuthorizationDecisionStatement>*  
   
  \</Assertion>  
   
-#### <a name="information-removed-from-message-bodies-when-logging-decryptedunencrypted-messages"></a>Informacje o usuwane z treści wiadomości, gdy rejestrowanie komunikatów odszyfrować niezaszyfrowanej  
- Jak opisano wcześniej, klucze usuwa WCF i znanych potencjalnie osobowymi z nagłówki komunikatów zarejestrowane komunikaty odszyfrować niezaszyfrowane. Ponadto WCF usuwa klucze i znanych potencjalnie dane osobowe z treści wiadomości treści elementy i działania na poniższej liście, które opisują komunikaty zabezpieczeń związane z wymiany kluczy.  
+#### <a name="information-removed-from-message-bodies-when-logging-decryptedunencrypted-messages"></a>Informacje — usunięte z treści wiadomości, podczas logowania się odszyfrować niezaszyfrowanej wiadomości  
+ Jak opisano wcześniej, klucze usuwa WCF i znane potencjalnie osobowych z nagłówków komunikatu rejestrowane komunikaty odszyfrować niezaszyfrowane. Ponadto WCF usuwa klucze i znanych potencjalnie dane osobowe z treści wiadomości elementy treści i działań na poniższej liście, które opisują komunikaty zabezpieczeń związane z wymiany kluczy.  
   
  Dla następujących przestrzeni nazw:  
   
  xmlns:WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" i xmlns:wst = "http://schemas.xmlsoap.org/ws/2005/02/trust" (na przykład, jeśli brak dostępnych akcji)  
   
- Informacje są usuwane z tych elementów treści, które obejmują wymiany kluczy:  
+ Informacje są usuwane dla tych elementów treści, które obejmują wymiany kluczy:  
   
  wst:RequestSecurityToken  
   
@@ -357,49 +357,49 @@ Firma Microsoft dba o ochronę prywatności użytkowników końcowych. W przypad
  http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT-Amend  
   
 #### <a name="no-information-is-removed-from-application-specific-headers-and-body-data"></a>Informacje nie zostaną usunięte z nagłówków specyficzne dla aplikacji i danych treści  
- Usługi WCF nie śledzi informacje osobiste w nagłówkach specyficzne dla aplikacji (na przykład ciągi zapytań) lub treści danych (na przykład numer karty kredytowej).  
+ Usługi WCF nie śledzi informacje osobiste w nagłówkach specyficzne dla aplikacji (na przykład ciągów zapytań) lub dane treści (na przykład numer karty kredytowej).  
   
- Po włączeniu rejestrowania komunikatów informacje osobiste w nagłówkach specyficzne dla aplikacji i informacje mogą być widoczne w dziennikach. Ponownie wdrażania aplikacji jest odpowiedzialny za ustawienie listy kontroli dostępu dla plików dziennika i konfiguracji. Może on również wyłączenie rejestrowania, jeśli on nie chce, aby te informacje mają być wyświetlane lub może on filtrować te informacje z plików dziennika po jest rejestrowany.  
+ Jeśli rejestrowanie komunikatów jest włączona, informacje osobiste w nagłówkach specyficzne dla aplikacji i treść informacji mogą być widoczne w dziennikach. Ponownie narzędzia do wdrażania aplikacji jest odpowiedzialna za ustawienie listy kontroli dostępu dla plików dziennika i konfiguracji. Może on także wyłączyć rejestrowanie, jeśli użytkownik nie chce, aby te informacje mają być wyświetlane lub może on filtrować te informacje w plikach dziennika po jej zarejestrowaniu.  
   
 ### <a name="service-model-tracing"></a>Śledzenie modelu usług  
- Źródła śledzenia modelu usług (<xref:System.ServiceModel>) umożliwia śledzenie działań i zdarzenia związane z przetwarzania komunikatów. Ta funkcja korzysta z funkcji diagnostycznych .NET Framework z <xref:System.Diagnostics>. Jak <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> właściwości, lokalizację i jego listy ACL są użytkownika — można skonfigurować za pomocą plików konfiguracji aplikacji .NET Framework. Podobnie jak w przypadku rejestrowania komunikatów lokalizacja pliku jest zawsze konfigurowane gdy administrator włączy śledzenie; w związku z tym administrator kontroluje listy ACL.  
+ Źródło śladu Model usługi (<xref:System.ServiceModel>) umożliwia śledzenie działań i zdarzenia związane z przetwarzania wiadomości. Ta funkcja korzysta z funkcji diagnostycznych systemu .NET Framework z <xref:System.Diagnostics>. Podobnie jak w przypadku <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> właściwości, lokalizację i jego listy ACL są konfigurowanych przez użytkownika za pomocą plików konfiguracji aplikacji .NET Framework. Podobnie jak w przypadku rejestrowania komunikatów lokalizacja pliku jest zawsze konfigurowane podczas administrator włącza śledzenie; w związku z tym administrator steruje listy ACL.  
   
- Ślady zawierał nagłówków komunikatów, gdy komunikat jest w zakresie. Te same zasady ukrywania potencjalnie osobowych w nagłówkach wiadomości w poprzedniej sekcji: dane osobowe wcześniej ustaloną jest usuwane domyślnie z nagłówków śladów. Zarówno administrator maszyny i wdrażania aplikacji musi zmodyfikować konfigurację, aby można było zalogować potencjalnie danych osobowych. Jednak osobiste informacje zawarte w nagłówkach specyficzne dla aplikacji są rejestrowane w śladów. Narzędzia wdrażania aplikacji jest odpowiedzialny za ustawienie listy kontroli dostępu do plików konfiguracji i śledzenia. On również wyłączyć śledzenie Jeśli on nie chce, aby te informacje mają być wyświetlane lub on można odfiltrować te informacje z plików śledzenia, po jest rejestrowany.  
+ Ślady zawierają nagłówki wiadomości, gdy komunikat jest w zakresie. Zastosuj te same zasady stosowania ukrywanie potencjalnie osobowe w nagłówkach wiadomości w poprzedniej sekcji: wcześniej zidentyfikować dane osobowe są usuwane domyślnie z nagłówków w śladach. Administrator maszyny i wdrażania aplikacji należy zmodyfikować konfigurację rejestrowania potencjalnie dane osobowe. Jednak informacji osobistych znajdujących się w nagłówkach specyficzne dla aplikacji jest rejestrowane w śladach. Narzędzia do wdrażania aplikacji jest odpowiedzialna za ustawienie listy kontroli dostępu dla plików konfiguracji i śledzenia. On również wyłączyć śledzenie Jeśli użytkownik nie chce, aby te informacje mają być wyświetlane lub on można odfiltrować te informacje z plików śledzenia, po ich zarejestrowaniem.  
   
- W ramach śledzenia ServiceModel unikatowe identyfikatory (nazywane identyfikatory aktywności i zazwyczaj identyfikator GUID) łączenie różnych działań jako wiadomości przez różne części infrastruktury.  
+ W ramach modelu ServiceModel śledzenia, unikatowe identyfikatory (nazywane identyfikatory aktywności i zazwyczaj identyfikator GUID) łączenie różnych działań jako wiadomość odbywa się za pośrednictwem różnych części infrastruktury.  
   
-#### <a name="custom-trace-listeners"></a>Obiekty nasłuchujące śledzenia niestandardowych  
- Dla obu komunikat rejestrowania i śledzenia można skonfigurować odbiornik śledzenia niestandardowego, który może wysyłać dane śledzenia i komunikaty umieszczonego w (na przykład do zdalnej bazy danych). Narzędzia wdrażania aplikacji jest odpowiedzialny za konfigurowanie niestandardowych odbiorników lub umożliwienie użytkownikom to zrobić. Odpowiada on też żadnych informacji osobistych widoczne w lokalizacji zdalnej i stosowania prawidłowo listy kontroli dostępu do tej lokalizacji.  
+#### <a name="custom-trace-listeners"></a>Obiekty nasłuchujące śledzenia niestandardowe  
+ Dla obu komunikatu rejestrowania i śledzenia można skonfigurować odbiornik śledzenia niestandardowego, który można wysłać danych śledzenia i wiadomości na łączu (na przykład do zdalnej bazy danych). Narzędzia do wdrażania aplikacji jest odpowiedzialny za konfigurowanie niestandardowe odbiorniki lub umożliwienie użytkownikom to zrobić. Jest on również odpowiedzialny za wszelkie informacje osobiste, które zostały ujawnione w lokalizacji zdalnej i prawidłowo zastosowania list ACL do tej lokalizacji.  
   
 ### <a name="other-features-for-it-professionals"></a>Inne funkcje dla specjalistów IT  
- Usługi WCF jest dostawca WMI, który opisuje informacje o konfiguracji infrastruktury WCF za pomocą usługi WMI (dostarczane z systemem Windows). Domyślnie interfejs WMI są dostępne dla administratorów.  
+ Usługi WCF jest dostawca WMI, która udostępnia informacje o konfiguracji infrastruktury usług WCF za pomocą usługi WMI (dostarczane z programem Windows). Domyślnie interfejs usługi WMI są dostępne dla administratorów.  
   
- Konfiguracji usługi WCF używa mechanizmu konfiguracji .NET Framework. Pliki konfiguracji są przechowywane na tym komputerze. Deweloper aplikacji i administrator utworzyć pliki konfiguracji i listy ACL dla każdego wymagania aplikacji. Plik konfiguracji może zawierać adresy punktów końcowych i łącza do certyfikaty w magazynie certyfikatów. Certyfikaty mogą służyć do zapewnienia danych aplikacji, aby skonfigurować różne właściwości funkcje używane przez aplikację.  
+ Mechanizm konfiguracji .NET Framework korzysta z konfiguracji usługi WCF. Pliki konfiguracji są przechowywane na komputerze. Deweloper aplikacji i administrator tworzyć pliki konfiguracji i listy ACL dla każdego wymagania aplikacji. Plik konfiguracji może zawierać adresy punktów końcowych i łącza do certyfikatów w magazynie certyfikatów. Certyfikaty mogą służyć do zapewnienia danych aplikacji, aby skonfigurować różne właściwości funkcje używane przez aplikację.  
   
- Usługi WCF używa również funkcje .NET Framework zrzutu procesu przez wywołanie metody <xref:System.Environment.FailFast%2A> metody.  
+ Usługi WCF również korzysta z funkcji zrzutu procesu .NET Framework, wywołując <xref:System.Environment.FailFast%2A> metody.  
   
 ### <a name="it-pro-tools"></a>IT Pro Tools  
- Usługi WCF zawiera również następujące narzędzia specjalistów IT, które są dostępne w zestawie Windows SDK.  
+ Usługi WCF zapewnia również następujące IT profesjonalne narzędzia, które są dostępne w zestawie Windows SDK.  
   
 #### <a name="svctraceviewerexe"></a>SvcTraceViewer.exe  
- Przeglądarka wyświetla pliki śledzenia WCF. Podgląd pokazuje, niezależnie od informacji znajduje się w dane śledzenia.  
+ Przeglądarka wyświetla pliki śledzenia WCF. Podgląd pokazuje wszelkie informacje zawarte w śladów.  
   
 #### <a name="svcconfigeditorexe"></a>SvcConfigEditor.exe  
- Edytor zezwala użytkownikowi na tworzyć i edytować pliki konfiguracji usługi WCF. Edytor pokazuje, niezależnie od informacje są przechowywane w plikach konfiguracji. Tego samego zadania można osiągnąć za pomocą edytora tekstu.  
+ Edytor zezwala użytkownikowi na tworzenie i edytowanie plików konfiguracyjnych WCF. Edytor pokazuje dowolne informacje są zawarte w plikach konfiguracji. Tego samego zadania można wykonywać za pomocą edytora tekstów.  
   
 #### <a name="servicemodelreg"></a>ServiceModel_Reg  
- To narzędzie umożliwia użytkownikom zarządzanie ServiceModel instaluje na komputerze. Narzędzie wyświetla komunikaty o stanie w oknie konsoli, kiedy uruchamia i, w procesie, mogą być wyświetlane informacje o konfiguracji instalacji usługi WCF.  
+ To narzędzie umożliwia użytkownikowi zarządzanie ServiceModel instaluje na komputerze. Narzędzie wyświetla komunikaty o stanie w oknie konsoli, gdy go, w procesie, mogą być wyświetlane informacje o konfiguracji instalacji usługi WCF.  
   
 #### <a name="wsatconfigexe-and-wsatuidll"></a>WSATConfig.exe i WSATUI.dll  
- Te narzędzia umożliwiają specjalistów IT skonfigurować interoperacyjne Obsługa sieci WS-AtomicTransaction w programie WCF. Narzędzia wyświetlania i Zezwalaj użytkownikowi na zmianę wartości najczęściej używane ustawienia protokołu WS-AtomicTransaction przechowywane w rejestrze.  
+ Te narzędzia umożliwiają specjalistom IT Konfigurowanie obsługi sieci w usłudze interoperacyjne WS-AtomicTransaction programu WCF. Narzędzia, wyświetlaj i Zezwalaj użytkownikowi na zmianę wartości najczęściej używanych ustawień WS-AtomicTransaction przechowywane w rejestrze.  
   
-## <a name="cross-cutting-features"></a>Kompleksowe funkcje  
- Następujące funkcje są powiązane. Oznacza to, że można je składa się z żadnym z powyższych funkcji.  
+## <a name="cross-cutting-features"></a>Funkcje ogólne  
+ Następujące funkcje są kompleksowymi. Oznacza to mogą być złożone z żadnym z powyższych funkcji.  
   
 ### <a name="service-framework"></a>Struktura usługi  
- Nagłówki może zawierać identyfikator wystąpienia, który jest identyfikatorem GUID, który kojarzy komunikat z wystąpienia klasy CLR.  
+ Nagłówki może zawierać Identyfikatora wystąpienia, który jest identyfikatorem GUID, który kojarzy wiadomość z wystąpieniem klasy CLR.  
   
- Web Services Description Language (WSDL) zawiera definicję portu. Każdy port ma adres punktu końcowego i powiązania, które reprezentuje usługi używane przez aplikację. Udostępnianie WSDL można wyłączyć za pomocą konfiguracji. Żadne informacje nie są przechowywane na tym komputerze.  
+ Web Services Description Language (WSDL) zawiera definicję portu. Każdy port ma adres punktu końcowego i powiązania, który reprezentuje usług używanych przez aplikację. Udostępnianie WSDL można wyłączyć za pomocą konfiguracji. Żadne informacje nie są przechowywane na komputerze.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Windows Communication Foundation](http://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)  

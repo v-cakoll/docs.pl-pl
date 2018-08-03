@@ -14,51 +14,56 @@ ms.assetid: 52b32222-e185-4f42-91a7-eaca65c0ab6d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 96c0c898f103c058c370a0d108568056b1ff8196
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33586581"
 ---
 # <a name="creating-threads-and-passing-data-at-start-time"></a>Tworzenie wątków i przekazywanie danych w czasie rozpoczęcia
-Po utworzeniu procesu systemu operacyjnego, systemu operacyjnego injects wątku wykonania kodu w tego procesu, w tym wszelkie oryginalnego domeny aplikacji. Od tego momentu można tworzyć i zniszczone bez żadnych wątków systemu operacyjnego zawsze tworzona lub zniszczony domen aplikacji. Jeśli kod wykonywany jest zarządzany kod, a następnie <xref:System.Threading.Thread> obiekt wątku wykonywania w bieżącej domenie aplikacji można uzyskać, pobierając statycznych <xref:System.Threading.Thread.CurrentThread%2A> właściwości typu <xref:System.Threading.Thread>. W tym temacie opisano tworzenie wątków i omówiono alternatyw przekazywania danych do procedury wątku.  
+
+Po utworzeniu procesu systemu operacyjnego, system operacyjny wprowadza wątku w celu wykonania kodu w tym procesie, w tym wszelkie oryginalną domenę aplikacji. Od tego momentu można tworzyć i zniszczone bez żadnych wątków systemu operacyjnego, niekoniecznie są utworzone lub zniszczone domen aplikacji. Jeśli wykonywany kod jest zarządzany kod, a następnie <xref:System.Threading.Thread> obiekt wykonywany wątek w bieżącej domenie aplikacji można uzyskać przez pobranie statycznej <xref:System.Threading.Thread.CurrentThread%2A> właściwości typu <xref:System.Threading.Thread>. W tym temacie opisano tworzenie wątków i omówiono alternatywy przekazywania danych do procedury wątku.  
   
-## <a name="creating-a-thread"></a>Tworzenie wątku  
- Tworzenie nowego <xref:System.Threading.Thread> obiektu tworzy nowego wątku zarządzanego. <xref:System.Threading.Thread> Klasa ma konstruktorów przyjmujących <xref:System.Threading.ThreadStart> delegować lub <xref:System.Threading.ParameterizedThreadStart> delegata; delegat opakowuje wywoływanej przez nowego wątku po wywołaniu metody <xref:System.Threading.Thread.Start%2A> metody. Wywoływanie <xref:System.Threading.Thread.Start%2A> więcej niż raz spowoduje, że <xref:System.Threading.ThreadStateException> zostanie wygenerowany.  
+## <a name="creating-a-thread"></a>Tworzenie wątku
+
+ Tworzenie nowego <xref:System.Threading.Thread> obiektu tworzy nowy wątek. <xref:System.Threading.Thread> Klasa ma konstruktory, które przyjmują <xref:System.Threading.ThreadStart> delegować lub <xref:System.Threading.ParameterizedThreadStart> delegować; delegat opakowuje metodę, która jest wywoływana przez nowy wątek, gdy wywołujesz <xref:System.Threading.Thread.Start%2A> metody. Wywoływanie <xref:System.Threading.Thread.Start%2A> więcej niż jeden raz powoduje, że <xref:System.Threading.ThreadStateException> zostanie wygenerowany.  
   
- <xref:System.Threading.Thread.Start%2A> Metoda zwraca natychmiast, często przed nowego wątku rzeczywiście została uruchomiona. Można użyć <xref:System.Threading.Thread.ThreadState%2A> i <xref:System.Threading.Thread.IsAlive%2A> właściwości, aby określić stan wątku w danym momencie, ale te właściwości nie mogą być używane do synchronizacji działania wątków.  
+ <xref:System.Threading.Thread.Start%2A> Metoda zwraca natychmiast, często przed faktycznie został uruchomiony nowy wątek. Możesz użyć <xref:System.Threading.Thread.ThreadState%2A> i <xref:System.Threading.Thread.IsAlive%2A> właściwości, aby określić stan wątku w danym momencie, ale te właściwości nie mogą być używane do synchronizowania działania wątków.  
   
 > [!NOTE]
->  Po uruchomieniu wątku nie jest konieczne do zachowania odwołanie do <xref:System.Threading.Thread> obiektu. Wątek w dalszym ciągu wykonania do czasu zakończenia procedury wątku.  
+> Po uruchomieniu wątek nie jest konieczne do przechowywania odwołań do <xref:System.Threading.Thread> obiektu. Wątek w dalszym ciągu wykonania do czasu zakończenia procedury wątku.  
   
- Poniższy przykład kodu tworzy dwa nowe wątki wywołanie wystąpienia i metod statycznych na inny obiekt.  
+ Poniższy przykład kodu tworzy dwa nowe wątki wywołanie wystąpienia i metody statyczne na inny obiekt.  
   
  [!code-cpp[System.Threading.ThreadStart2#2](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CPP/source2.cpp#2)]
  [!code-csharp[System.Threading.ThreadStart2#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CS/source2.cs#2)]
  [!code-vb[System.Threading.ThreadStart2#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ThreadStart2/VB/source2.vb#2)]  
   
-## <a name="passing-data-to-threads-and-retrieving-data-from-threads"></a>Przekazywanie danych do wątków i pobierania danych z wątków  
- W programie .NET Framework w wersji 2.0 <xref:System.Threading.ParameterizedThreadStart> delegowanie umożliwia łatwe do przekazania obiekt zawierający dane do wątku po wywołaniu <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> przeciążenie metody. Zobacz <xref:System.Threading.ParameterizedThreadStart> dla przykładowego kodu.  
+## <a name="passing-data-to-threads"></a>Przekazywanie danych do wątków
+
+ W .NET Framework w wersji 2.0 <xref:System.Threading.ParameterizedThreadStart> delegata zapewnia łatwy sposób przekazać obiekt zawierający dane do wątku, po wywołaniu <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> przeciążenie metody. Zobacz <xref:System.Threading.ParameterizedThreadStart> dla przykładu kodu.  
   
- Przy użyciu <xref:System.Threading.ParameterizedThreadStart> delegat nie jest bezpieczny sposób przekazywania danych, ponieważ <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> przeciążenie metody akceptuje dowolny obiekt. Alternatywą jest Hermetyzowanie procedury wątku i danych w klasie pomocy i użyj <xref:System.Threading.ThreadStart> delegata do wykonywania procedury wątku. Ta technika przedstawiono w przykładach dwóch kodu, które należy wykonać.  
-  
- Oba te obiekty delegowane ma wartość zwracaną, ponieważ nie istnieje żadne miejsce do zwrócić dane z wywołanie asynchroniczne. Można pobrać wyników metody wątku, używając metody wywołania zwrotnego, jak pokazano w drugim przykładzie kodu.  
-  
+ Za pomocą <xref:System.Threading.ParameterizedThreadStart> delegat nie jest bezpieczny sposób przekazywania danych, ponieważ <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> przeciążenie metody akceptuje dowolny obiekt. Alternatywą jest hermetyzacji procedury wątku i dane w klasie pomocy i użyj <xref:System.Threading.ThreadStart> delegata do wykonania procedury wątku. Poniższy przykład pokazuje tej techniki:
+
  [!code-cpp[System.Threading.ThreadStart2#3](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CPP/source3.cpp#3)]
  [!code-csharp[System.Threading.ThreadStart2#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CS/source3.cs#3)]
  [!code-vb[System.Threading.ThreadStart2#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ThreadStart2/VB/source3.vb#3)]  
+
+Ani <xref:System.Threading.ThreadStart> ani <xref:System.Threading.ParameterizedThreadStart> pełnomocnik ma wartość zwracaną, ponieważ nie istnieje żadne miejsce do zwracania danych z wywołania asynchronicznego. Do pobierania wyników metoda wątku, można użyć metody wywołania zwrotnego, jak pokazano w następnej sekcji.
   
-### <a name="retrieving-data-with-callback-methods"></a>Pobieranie danych z metody wywołania zwrotnego  
- W poniższym przykładzie pokazano metodę wywołania zwrotnego, która pobiera dane z wątku. Konstruktor klasy, która zawiera dane, a także metoda wątku również akceptuje delegata reprezentującego metodę wywołania zwrotnego; przed zakończeniem metody wątku wywołuje delegata wywołania zwrotnego.  
+## <a name="retrieving-data-from-threads-with-callback-methods"></a>Pobieranie danych z wątków, z metodami wywołania zwrotnego
+
+ W poniższym przykładzie pokazano metodę wywołania zwrotnego, która pobiera dane z wątku. Konstruktor dla klasy, która zawiera dane, a także metoda wątku akceptuje także obiekt delegowany reprezentujący metodę wywołania zwrotnego; przed zakończeniem metoda wątek wywołuje delegata wywołania zwrotnego.  
   
  [!code-cpp[System.Threading.ThreadStart2#4](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CPP/source4.cpp#4)]
  [!code-csharp[System.Threading.ThreadStart2#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CS/source4.cs#4)]
  [!code-vb[System.Threading.ThreadStart2#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ThreadStart2/VB/source4.vb#4)]  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także
+
  <xref:System.Threading.Thread>  
  <xref:System.Threading.ThreadStart>  
  <xref:System.Threading.ParameterizedThreadStart>  
  <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>  
- [Wątkowość](../../../docs/standard/threading/index.md)  
- [Używanie wątków i wątkowości](../../../docs/standard/threading/using-threads-and-threading.md)
+ [Wątkowość](index.md)  
+ [Używanie wątków i wątkowości](using-threads-and-threading.md)

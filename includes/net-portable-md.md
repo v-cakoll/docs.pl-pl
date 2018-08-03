@@ -1,1 +1,1 @@
-<span data-ttu-id="34b51-101">Biblioteka klas przenośnych</span><span class="sxs-lookup"><span data-stu-id="34b51-101">Portable Class Library</span></span>
+<span data-ttu-id="8bf22-101">Biblioteka klas przenośnych</span><span class="sxs-lookup"><span data-stu-id="8bf22-101">Portable Class Library</span></span>

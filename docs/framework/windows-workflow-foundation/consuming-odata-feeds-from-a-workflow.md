@@ -123,7 +123,7 @@ Usługi danych WCF jest składnikiem [!INCLUDE[dnprdnshort](../../../includes/dn
  **\<Zaktualizowano > 2010-05-19T19:37:07Z\</ zaktualizować >**  
  **\<Link rel = "self" title = "Orders" href = "Orders" / >**  
  **\<Wpis >**  
- **\<Identyfikator >http://services.odata.org/Northwind/Northwind.svc/Orders(10643)\</id>**  
+ **\<Identyfikator>http://services.odata.org/Northwind/Northwind.svc/Orders(10643)\</id>**  
  **\<Typ title = "text" > \< /title >**  
  **\<Zaktualizowano > 2010-05-19T19:37:07Z\</ zaktualizować >**  
  **\<Autor >**  

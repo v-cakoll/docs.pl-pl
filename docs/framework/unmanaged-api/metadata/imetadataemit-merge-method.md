@@ -45,7 +45,7 @@ HRESULT Merge (
  [in] Wskaźnik do [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) obiekt, który określa token mapowane ponownie.  
   
  `pHandleer`  
- [in] Wskaźnik do <!--<<!--zzxref:IUnknown --> `IUnknown` >-->  `IUnknown` obiekt, który określa błędy.  
+ [in] Wskaźnik do <!--<<!--zzxref:IUnknown --> `IUnknown`>--> `IUnknown` obiekt, który określa błędy.  
   
 ## <a name="remarks"></a>Uwagi  
  Wywołanie [IMetaDataEmit::MergeEnd](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md) aby wyzwolić połączenia metadanych w pojedynczy zakres.  

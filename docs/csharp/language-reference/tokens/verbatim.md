@@ -11,29 +11,29 @@ ms.assetid: 89bc7e53-85f5-478a-866d-1cca003c4e8c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bdf8735894594acab31586e539f90e426db97f24
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "33289181"
 ---
 # <a name="-c-reference"></a>@ (Odwołanie w C#)
 
 `@` Znak specjalny służy jako identyfikator dosłownego wyrażenia. Mogą być używane w następujący sposób:
 
-1. Aby włączyć słowa kluczowe języka C# ma być używany jako identyfikatory. `@` Znak prefiksy element kodu, które kompilator jest interpretowany jako identyfikator zamiast słowo kluczowe języka C#. W poniższym przykładzie użyto `@` znak, aby zdefiniować identyfikator o nazwie `for` używającej w `for` pętli.
+1. Aby włączyć słowa kluczowe języka C#, aby można używać jako identyfikatorów. `@` Znak prefiksy element kodu, który kompilator ma interpretować jako identyfikator zamiast słowa kluczowego języka C#. W poniższym przykładzie użyto `@` znak definiują identyfikatora o nazwie `for` używającej w `for` pętli.
 
    [!code-csharp[verbatim1](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#1)]
 
-1. Wskazuje, że literału ciągu jest interpretowane verbatim. `@` Definiuje znaków w tym wystąpieniu *literał ciągu dosłownego wyrażenia*. Sekwencje unikowe proste (takich jak `"\\"` dla ukośnik odwrotny) szesnastkową sekwencje specjalne (takie jak `"\x0041"` a wielkie litery) i sekwencje specjalne Unicode (takich jak `"\u0041"` a wielkie litery) będą interpretowane jako literału. Tylko sekwencja specjalna oferta (`""`) nie jest interpretowany jako literału; generuje pojedynczy cudzysłów. Ponadto w przypadku dosłownego wyrażenia [interpolowane ciąg](interpolated.md) nawiasu klamrowego sekwencje specjalne (`{{` i `}}`) nie będą interpretowane jako literału; wygenerowanie nawiasu klamrowego pojedynczy znaki. W poniższym przykładzie zdefiniowano dwie ścieżki pliku identyczne, za pomocą literału ciągu regularnych, a druga za pomocą literału ciągu dosłownego wyrażenia. Jest to jeden z najczęściej używa literałów ciągu dosłownego wyrażenia.
+1. Aby wskazać, że literał ciągu ma być interpretowany dosłownie. `@` Definiuje znak, w tym wystąpieniu *verbatim literału ciągu*. Proste sekwencje ucieczki (takich jak `"\\"` dla ukośnik odwrotny) szesnastkową sekwencje unikowe (takich jak `"\x0041"` a wielkie litery) i sekwencje unikowe Unicode (takich jak `"\u0041"` wielkie litery a) jest interpretowany dosłownie. Tylko sekwencja unikowa oferty (`""`) nie jest interpretowany dosłownie; generuje pojedynczy znak cudzysłowu. Ponadto w przypadku verbatim [ciągiem interpolowanym](interpolated.md) sekwencje unikowe nawiasu klamrowego (`{{` i `}}`) nie jest interpretowany dosłownie; produkują znaki pojedynczy nawias klamrowy. W poniższym przykładzie zdefiniowano dwie ścieżki identyczny plik za pomocą literału ciągu regularnych, a druga za pomocą literału ciągu verbatim. Jest to jedna z bardziej powszechne zastosowania verbatim literałów.
 
    [!code-csharp[verbatim2](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#2)]
 
-   Poniższy przykład ilustruje efekt definiowania literału ciągu regularnych i zawierających sekwencje znaków identyczne literału ciągu dosłownego wyrażenia.
+   Poniższy przykład ilustruje efekt Definiowanie regularne literału ciągu i ciąg verbatim literał, która zawiera sekwencje znaków identyczne.
 
    [!code-csharp[verbatim3](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#3)]
 
-1. Aby włączyć kompilatora odróżnić atrybutów w przypadku konfliktu nazw. Atrybut jest typu pochodzącego od <xref:System.Attribute>. Jego nazwa typu zwykle zawiera sufiks **atrybutu**, mimo że kompilator nie wymusza tę Konwencję. Ten atrybut można odwoływać w kodu przez jego pełną nazwę typu (na przykład `[InfoAttribute]` lub jego skróconą nazwę (na przykład `[Info]`). Jednak wystąpi konflikt nazw, jeśli dwa skrócony atrybutu nazwy typów są identyczne, i zawiera jedną nazwę typu **atrybutu** sufiks, ale druga nie. Na przykład następujący kod nie powiedzie się skompilować kompilator nie może ustalić czy `Info` lub `InfoAttribute` atrybut jest stosowany do `Example` klasy.
+1. Aby umożliwić kompilatorowi rozróżnienie między atrybutami w przypadku konfliktu nazw. Atrybut jest typu, która pochodzi od klasy <xref:System.Attribute>. Nazwa jej typu obejmują zazwyczaj sufiks **atrybutu**, mimo że kompilator nie wymusza tę Konwencję. Ten atrybut może odwoływać w kodzie przez jego pełna nazwa typu (na przykład `[InfoAttribute]` lub jego skróconą nazwę (na przykład `[Info]`). Jednak konflikt nazw występuje, jeśli dwa skrócone nazwy typu atrybutu są identyczne, i zawiera jedną nazwę typu **atrybut** sufiks, ale innych nie. Na przykład, poniższy kod nie zostanie skompilowany, ponieważ kompilator nie może określić czy `Info` lub `InfoAttribute` atrybut jest stosowany do `Example` klasy.
 
    ```csharp
    using System;
@@ -70,11 +70,11 @@ ms.locfileid: "33289181"
    }
    ```  
 
-   Jeśli identyfikator dosłownego wyrażenia służy do identyfikowania `Info` atrybutu przykładzie kompiluje pomyślnie.
+   Jeśli identyfikator dosłownego wyrażenia jest używany do identyfikowania `Info` atrybutu przykład pomyślnie wykonuje kompilację.
 
    [!code-csharp[verbatim4](../../../../samples/snippets/csharp/language-reference/keywords/verbatim4.cs#1)]
 
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
+ [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Znaki specjalne języka C#](../../../csharp/language-reference/tokens/index.md)

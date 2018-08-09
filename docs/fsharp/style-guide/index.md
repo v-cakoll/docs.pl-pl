@@ -1,48 +1,48 @@
 ---
-title: 'Przewodnik po stylu F #'
-description: 'Dowiedz się pięć zasadami dobrej kodzie języka F #.'
+title: 'Przewodnik stylistyczny F #'
+description: 'Dowiedz się pięciu zasady dobrej kodzie języka F #.'
 ms.date: 05/14/2018
 ms.openlocfilehash: 6d8c1336ca991040a8f6e13290d209cb3b70054d
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "34235908"
 ---
-# <a name="f-style-guide"></a>Przewodnik po stylu F #
+# <a name="f-style-guide"></a>Przewodnik stylistyczny F #
 
-Poniższe artykuły zawierają wskazówki dotyczące formatowania kodu F # i miejscowego wskazówki dotyczące funkcji języka i jak powinny być używane.
+Następujące artykuły opisano wskazówki dotyczące formatowania kodu F # i miejscowego wskazówki dotyczące funkcji języka i jak powinna być używana.
 
-W tych wskazówkach został opracowany na podstawie użycia języka F # w dużych codebases z różnych grupy programistów. W tych wskazówkach zwykle prowadzi do pomyślnego użycia języka F # i minimalizuje frustrations zmiany wymogów dla programów wraz z upływem czasu.
+Niniejsze wskazówki został opracowany na podstawie użycia języka F # w dużych ścieżek bazowych kodów z różnych grupa programistów. Niniejsze wskazówki zwykle prowadzi do pomyślnego użycia języka F # i minimalizuje frustrations, gdy zmienią się wymagania dla programów wraz z upływem czasu.
 
 ## <a name="five-principles-of-good-f-code"></a>Pięć zasadami dobrej kodzie języka F #
 
-Następujące zasady należy mieć na uwadze za każdym razem zapisu kodzie języka F #, szczególnie w systemach, które zmieni się wraz z upływem czasu. Każdą wskazówki w artykułach dalsze wynika z tych punktów pięć.
+Następujące zasady należy mieć na uwadze każdym razem, gdy piszesz kod F #, szczególnie w przypadku systemów, które zostaną zmienione wraz z upływem czasu. Każdy element ze wskazówkami zawartymi w dalsze artykuły wynika z tych pięciu punktów.
 
-1. **Dobrym kodzie języka F # jest zwięzły i obszerne**
+1. **Dobre kodzie języka F # jest zwięzły i obszerne strategie**
 
-    F # ma wiele funkcji, które umożliwiają express działaniami w mniej wierszy kodu i ponowne użycie funkcji ogólnego. Biblioteki podstawowej F # zawiera także wiele przydatne typy i funkcje do pracy z typowych kolekcji danych. Jako ogólną regułę Jeśli rozwiązanie problemu w mniej wierszy kodu można wyrazić inni deweloperzy (lub użytkownika samoobsługowego przyszłych) będzie znaczących. Również zdecydowanie zaleca się, że używasz biblioteki, takich jak plikiem FSharp.Core, [przeważająca bibliotek .NET](https://docs.microsoft.com/dotnet/api/) uruchomioną F #, lub innych firm pakietu na [NuGet](https://www.nuget.org/) kiedy trzeba wykonać zadanie proste.
+    F # zawiera wiele funkcji, które umożliwiają express akcje w mniejszej liczby linii kodu i ponowne użycie ogólną funkcję. Biblioteka core F # zawiera również wiele typów przydatne i funkcje do pracy z typowych kolekcji danych. Zgodnie z ogólną zasadą Jeśli rozwiązanie problemu w mniejszą liczbę wierszy kodu można wyrazić innym deweloperom (lub z własnym przyszłych) będzie przynosi. Również zdecydowanie zaleca się, że używasz biblioteki, takie jak elementu FSharp.Core, [ogromnej biblioteki .NET](https://docs.microsoft.com/dotnet/api/) uruchomionym F #, lub pakiet innych firm na [NuGet](https://www.nuget.org/) kiedy trzeba będzie wykonać proste zadanie.
 
-2. **Współdziałanie jest dobrym kodzie języka F #**
+2. **Dobre kodzie języka F # jest współpracujący**
 
-    Współdziałanie może zająć wiele formy, wykorzystywanie kodu w różnych językach. Granice swój kod, który jest współpraca z innych klientów są najistotniejsze uzyskać prawo. Podczas zapisywania F # możesz powinien zawsze pomyśleć o jak inny kod wywoła do kodu, który pisania, w tym, jeśli w tym celu w innym języku, takich jak C#. [F # składnika zaleceń dotyczących projektowania](component-design-guidelines.md) współdziałanie szczegółowo opisano.
+    Współdziałanie można Przybieranie wielu form, w tym korzystanie z kodu w różnych językach. Granice swój kod, który współdziałać inne obiekty wywołujące są najistotniejsze, aby uzyskać odpowiednie. Podczas pisania F #, możesz powinien zawsze pomyśleć o jak inny kod wywoła do kodu, którą piszesz, w tym, jeśli to zrobią z innego języka C#. [F # składnika wytyczne dotyczące projektowania](component-design-guidelines.md) współdziałanie szczegółowo opisano.
 
-3. **Dobrym kodzie języka F # sprawia, że Użyj programowania obiektu, ponieważ obiekt nie orientacji**
+3. **Dobre kodzie języka F # sprawia, że używają programowania obiektu, obiekt nie orientacji**
 
-    F # ma pełną obsługę programowania z obiektami w środowisku .NET, w tym [klasy](../language-reference/classes.md), [interfejsów](../language-reference/interfaces.md), [modyfikatorów dostępu](../language-reference/access-control.md), [klasyabstrakcyjne](../language-reference/abstract-classes.md)i tak dalej. Dla bardziej złożonego kodu funkcjonalności, takich jak funkcje, które muszą być kontekstu obsługujący obiekty łatwo umożliwiająca Hermetyzowanie informacje kontekstowe w sposób, w którym nie funkcji. Funkcje, takie jak [następujące parametry opcjonalne](../language-reference/members/methods.md#optional-arguments) i [przeładowanie](../language-reference/members/methods.md#overloaded-methods) również pomocy użycie tej funkcji dla wywoływania.
+    F # zawiera pełne wsparcie dla programowania przy użyciu obiektów na platformie .NET, w tym [klasy](../language-reference/classes.md), [interfejsów](../language-reference/interfaces.md), [modyfikatorach dostępu](../language-reference/access-control.md), [klasyabstrakcyjne](../language-reference/abstract-classes.md)i tak dalej. Dla bardziej skomplikowanego kodu funkcjonalności, takich jak funkcje, które muszą być oparte na kontekście obiekty można łatwo hermetyzować informacje kontekstowe w sposób, który nie funkcji. Funkcje, takie jak [następujące parametry opcjonalne](../language-reference/members/methods.md#optional-arguments) i dokładnej użytkowania [przeciążenie](../language-reference/members/methods.md#overloaded-methods) ułatwia użycie tej funkcji dla obiektów wywołujących.
 
-4. **Wykonuje dobrej kodzie języka F # nie udostępnianie mutacji**
+4. **Dobre kodzie języka F # wykonuje się dobrze, bez narażania mutacji**
 
-    Nie jest brak tajne, że aby napisać kod wysokiej wydajności, należy użyć mutacji. Jest komputerów działania, po wszystkich. Taki kod jest często podatne na błędy i trudne do pobrania prawo. Unikaj udostępnianie mutacji wywołań. Wyszukiwanie funkcjonalności interfejsu na podstawie mutacji implementacji.
+    Nie jest tajemnicą, aby napisać kod o wysokiej wydajności, należy użyć mutacji. To, jak komputery działają, gdy wszystkie. Taki kod jest często podatne na błędy i problemy z uzyskaniem prawo. Należy unikać udostępnianie mutacji dotyczące obiektów wywołujących. Zamiast tego [tworzenie funkcjonalności interfejsu, która ukrywa implementacji opartej na mutacji](conventions.md#performance) Jeśli wydajność ma kluczowe znaczenie.
 
 5. **Biorąc to dobry kodzie języka F #**
 
-    Narzędzia są cenne dla pracy w dużych codebases, można napisać kod w języku F # tak, aby mógł być używany w bardziej efektywnie z narzędziami języka F #. Przykładem jest upewnienie się, że możesz nie nadużywać stylem bez punktu programowania, dzięki czemu można sprawdzić wartości pośrednich z debugera. Innym przykładem jest przy użyciu [komentarze dokumentacji XML](../language-reference/xml-documentation.md) opisujące konstrukcje tak, aby etykietki narzędzi w edytorach można wyświetlać te komentarze na miejsce wywołania. Zawsze traktować jak kodu będzie można odczytać, przejście debugowania i manipulować innych programistów z ich narzędzi.
+    Narzędzia są nieocenieni dla pracy w dużych bazach kodu, a następnie można napisać kod F # w taki sposób, aby mogły być używane w bardziej wydajnie za pomocą narzędzi języka F #. Przykładem jest upewnienie się, że użytkownik nie nadużywać stylem bezpłatne punktu programowania, tak, aby wartości pośrednich mogą być kontrolowane za pomocą debugera. Innym przykładem jest przy użyciu [komentarze dokumentacji XML](../language-reference/xml-documentation.md) opisujące konstrukcje w taki sposób, że etykietki narzędzi w edytorach można wyświetlać te komentarze w witrynie wywołania. Zawsze zastanowić, jak kod będzie można odczytać, przejście, debugowania i zmieniane przez innych programistów przy użyciu swoich narzędzi.
 
 ## <a name="next-steps"></a>Następne kroki
 
-[Wskazówki dotyczące formatowania kodu języka F #](formatting.md) zawierają wskazówki dotyczące formatowania kodu, dzięki czemu jest łatwy do odczytania.
+[Wskazówki dotyczące formatowania kodu F #](formatting.md) zawierają wskazówki dotyczące formatowania kodu, aby była łatwa do odczytania.
 
-[F # konwencje kodowania](conventions.md) zawierają wskazówki dla codebases idioms pomagających długoterminowej obsługi większych języka F # programowania w języku F #.
+[Konwencje kodowania F #](conventions.md) zapewniają wskazówki dotyczące programowania idiomy pomagających długoterminowej obsługi większych języka F # F # bazach kodu.
 
-[F # składnika zaleceń dotyczących projektowania](component-design-guidelines.md) zawierają wskazówki dotyczące tworzenia F # składniki, takie jak biblioteki.
+[F # składnika wytyczne dotyczące projektowania](component-design-guidelines.md) zawierają wskazówki dotyczące tworzenia F # składników, takich jak biblioteki.

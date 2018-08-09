@@ -1,65 +1,233 @@
 ---
 title: Wyrażenia obliczeń (F#)
-description: 'Dowiedz się, jak utworzyć wygodny składnię pisanie obliczenia w F # można sekwencjonowania i łączyć, używając konstrukcji przepływu sterowania i powiązania.'
-ms.date: 05/16/2016
+description: 'Dowiedz się, jak utworzyć wygodnej składni do pisania obliczeń w F #, który może być sekwencjonowania i łączyć, używając konstrukcji przepływów sterowania i powiązania.'
+ms.date: 07/27/2018
 ms.openlocfilehash: 4995efc757d99a575ee9fad3abf0465a32398c44
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "36207436"
 ---
 # <a name="computation-expressions"></a>Wyrażenia obliczeń
 
-Wyrażenia obliczeń w języku F # zapewniają wygodną składni zapisywania obliczenia, które mogą być sekwencjonowania i łączyć, używając konstrukcji przepływu sterowania i powiązania. One może służyć do zapewnienia wygodny składnię *monady*, funkcjonalności funkcji programowania, który może służyć do zarządzania danych, sterowania i efekty uboczne w programach funkcjonalności.
+Wyrażenia obliczeń w języku F # Obejmij wygodnej składni pisania obliczeń, które mogą być sekwencjonowania i łączyć, używając konstrukcji przepływów sterowania i powiązania. W zależności od rodzaju wyrażenia obliczeń one można traktować jako sposób express monads, monoids, transformatory monad i applicative funktory. Jednak w przeciwieństwie do innych języków (takie jak *zapisu czy* w Haskell), nie są powiązane z jednym pozyskiwania i nie należy polegać na makr lub innych form metaprogramowanie wykonywania wygodne i kontekstowym składni.
 
+## <a name="overview"></a>Omówienie
 
-## <a name="built-in-workflows"></a>Wbudowanych przepływów pracy
+Obliczenia może mieć wiele form. Najczęściej używany typ wyliczenia jest jednowątkowym wykonywania, który jest łatwy do zrozumienia i modyfikować. Jednak nie wszystkie rodzaje obliczeń są tak proste jak jednowątkowe wykonywania. Niektóre przykłady:
 
-Wyrażenia sekwencji są przykładem wyrażenie do obliczenia są asynchroniczne przepływy pracy i wyrażenia zapytania. Aby uzyskać więcej informacji, zobacz [sekwencji](sequences.md), [Asynchroniczne przepływy pracy](asynchronous-workflows.md), i [wyrażenia zapytania](query-expressions.md).
+* Nie deterministyczne obliczeń
+* Asynchroniczne obliczenia
+* Effectful obliczeń
+* Generatywną obliczeń
 
-Niektóre funkcje są wspólne dla wyrażenia sekwencji i asynchroniczne przepływy pracy i zilustrowania podstawowa składnia wyrażenia obliczenia:
+Ogólnie rzecz biorąc, istnieją *kontekstową* obliczenia, które należy wykonać w niektórych części aplikacji. Pisanie kodu kontekstową może stanowić wyzwanie, ponieważ jest łatwy do obliczenia "przeciek" poza podanym kontekście bez abstrakcji, aby zapobiec temu. Te elementy abstrakcji często wyzwaniem napisać samodzielnie, dlatego F # został uogólniony sposób przeprowadzenia tak zwane **wyrażenia obliczeń**.
 
-```fsharp
-builder-name { expression }
+Wyrażenia obliczeń oferuje jednolite składni i abstrakcji model dla kodowania kontekstową obliczeń.
+
+Każde wyrażenie obliczeń opiera się na *konstruktora* typu. Typ Konstruktor określa operacje, które są dostępne dla wyrażenia obliczeń. Zobacz [tworzenia nowego typu z wyrażenia obliczeń](computation-expressions.md#creating-a-new-type-of-computation-expression), który przedstawia sposób tworzenia wyrażenia obliczeń niestandardowych.
+
+### <a name="syntax-overview"></a>Omówienie składni
+
+Wszystkie wyrażenia obliczeń mają następującą postać:
+
+```
+builder-expr { cexper }
 ```
 
-Poprzednie składni Określa, że podane wyrażenie jest wyrażenie do obliczenia typu określony przez *nazwa konstruktora*. Wyrażenia obliczeń może być wbudowane przepływu pracy, takich jak `seq` lub `async`, lub może być coś należy zdefiniować. *Nazwa konstruktora* jest identyfikator wystąpienia specjalny typ znany jako *typu konstruktora*. Typ konstruktora jest typu klasy, który definiuje specjalne metody rządzących sposób fragmentów wyrażenie obliczeń, są połączone, oznacza to, że kod tej kontrolki jak wykonuje wyrażenie. Innym sposobem opisano konstruktora klasy jest powiedzieć umożliwia dostosowywanie operacji konstrukcji wiele F #, takich jak pętle i powiązania.
+gdzie `builder-expr` jest nazwą typu konstruktora, który definiuje wyrażenie obliczeń i `cexper` treści wyrażenia wyrażenia obliczeń. Na przykład `async` obliczenie wyrażenia kodu może wyglądać następująco:
 
-W wyrażeniach obliczeń dwa formularze są dostępne dla niektórych typowych konstrukcji języka. Konstrukcje variant można wywołać za pomocą! (bang) sufiks na niektórych słów kluczowych, takich jak `let!`, `do!`i tak dalej. Formach specjalne spowodować, że pewne funkcje zdefiniowana w klasie konstruktora zastąpić zwykłe zachowanie wbudowane te operacje. Formularze przypominać `yield!` formę `yield` — słowo kluczowe, które jest używane w wyrażeniach sekwencji. Aby uzyskać więcej informacji, zobacz [sekwencji](sequences.md).
+```fsharp
+let fetchAndDownload url =
+    async {
+        let! data = downloadData url
 
+        let processedData = processData data
 
-## <a name="creating-a-new-type-of-computation-expression"></a>Tworzenie nowego typu — wyrażenie obliczeń
-Można zdefiniować właściwości wyrażenia obliczenia tworzenie konstruktora klasy, a niektóre specjalne metody w klasie. Konstruktor klasy można opcjonalnie zdefiniować metody wymienionych w poniższej tabeli.
+        return processedData
+    }
+```
+
+Brak dostępnej specjalnych i dodatkowe składni w wyrażeniu obliczeń, jak pokazano w poprzednim przykładzie. Możliwe za pomocą wyrażenia obliczeń są następujące formy wyrażeń:
+
+```fsharp
+expr { let! ... }
+expr { do! ... }
+expr { yield ... }
+expr { yield! ... }
+expr { return ... }
+expr { return! ... }
+expr { match! ... }
+```
+
+Każda z tych słów kluczowych i innych standardowych F # słowa kluczowe są dostępne tylko w wyrażeniu obliczeń jeśli zostały zdefiniowane w zapasowy typ konstruktora. Jedynym wyjątkiem jest `match!`, która sama jest sugar składni do użycia z `let!` następuje dopasowania do wzorca w wyniku.
+
+Typ konstruktora jest obiektem, który definiuje specjalne metody, które określają sposób, w jaki fragmenty wyrażenia obliczeń są łączone; oznacza to, że jego metod kontroli zachowania wyrażenia obliczeń. Inny sposób w celu opisania klasy, Konstruktor jest powiedzieć, pozwala dostosować działanie wielu konstrukcje F #, takie jak pętle i powiązania.
+
+### `let!`
+
+`let!` — Słowo kluczowe wiąże nazwę wyniku wywołania do innego wyrażenia obliczeń:
+
+```fsharp
+let doThingsAsync url =
+    async {
+        let! data = getDataAsync url
+        ...
+    }
+```
+
+Jeśli powiązać wywołanie wyrażenia obliczeń, za pomocą `let`, nie będzie można uzyskać wynik wyrażenia obliczeń. Zamiast tego możesz będzie mieć powiązana wartość *niezrealizowane* wywołanie tego wyrażenia obliczeń. Użyj `let!` powiązać z wynikiem.
+
+`let!` jest definicją `Bind(x, f)` składowej typu konstruktora.
+
+### `do!`
+
+`do!` — Słowo kluczowe jest wywołanie wyrażenia obliczeń, który zwraca `unit`— takich jak typ (zdefiniowany przez `Zero` elementu członkowskiego w konstruktorze):
+
+```fsharp
+let doThingsAsync data url =
+    async {
+        do! sumbitData data url
+        ...
+    }
+```
+
+Aby uzyskać [asynchronicznego przepływu pracy](asynchronous-workflows.md), ten typ jest `Async<unit>`. Dla innych wyrażeń obliczeń mogą być jest typ `CExpType<unit>`.
+
+`do!` jest definiowany przez `Bind(x, f)` składowej typu konstruktora, gdzie `f` tworzy `unit`.
+
+### `yield`
+
+`yield` — Słowo kluczowe jest zwracanie wartości z wyrażenia obliczeń, dzięki czemu mogą być używane jako <xref:System.Collections.Generic.IEnumerable%601>:
+
+```fsharp
+let squares =
+    seq {
+        for i in 1..10 do
+            yield i * i
+    }
+
+for sq in squares do
+    printfn "%d" sq
+```
+
+Podobnie jak w przypadku [yield — słowo kluczowe w języku C#](../../csharp/language-reference/keywords/yield.md), każdy element w wyrażeniu obliczeń jest uzyskane nagrania, ponieważ jest ona postanowiliśmy.
+
+`yield` jest definiowany przez `Yield(x)` składowej typu konstruktora, gdzie `x` element umożliwiające uzyskanie ponownie.
+
+### `yield!`
+
+`yield!` — Słowo kluczowe jest spłaszczanie kolekcję wartości w wyrażeniu obliczeń:
+
+```fsharp
+let squares =
+    seq {
+        for i in 1..3 -> i * i
+    }
+
+let cubes =
+    seq {
+        for i in 1..3 -> i * i * i
+    }
+
+let squaresAndCubes =
+    seq {
+        yield! squares
+        yield! cubes
+    }
+
+printfn "%A" squaresAndCubes // Prints - 1; 4; 9; 1; 8; 27
+```
+
+Podczas oceny, wyrażenia obliczeń wywoływane przez `yield!` będzie mieć elementy zwróciło wstecz jeden po drugim, spłaszczanie wynik.
+
+`yield!` jest definiowany przez `YieldFrom(x)` składowej typu konstruktora, gdzie `x` to zbiór wartości.
+
+### `return`
+
+`return` — Słowo kluczowe otacza wartość w polu Typ odpowiadający wyrażenia obliczeń. Oprócz wyrażenia obliczeń przy użyciu `yield`, jest używany do "complete" wyrażenia obliczeń:
+
+```fsharp
+let req = // 'req' is of type is 'Async<data>'
+    async {
+        let! data = fetch url
+        return data
+    }
+
+// 'result' is of type 'data'
+let result = Async.RunSynchronously req
+```
+
+`return` jest definiowany przez `Return(x)` składowej typu konstruktora, gdzie `x` element do opakowania.
+
+### `return!`
+
+`return!` — Słowo kluczowe zawiera wartość wyrażenia obliczeń i otacza wynik w typie odpowiadający wyrażenia obliczeń:
+
+```fsharp
+let req = // 'req' is of type is 'Async<data>'
+    async {
+        return! fetch url
+    }
+
+// 'result' is of type 'data'
+let result = Async.RunSynchronously req
+```
+
+`return!` jest definiowany przez `ReturnFrom(x)` składowej typu konstruktora, gdzie `x` jest innym wyrażeniem obliczeń.
+
+### `match!`
+
+Począwszy od F # 4.5, `match!` — słowo kluczowe pozwala na tekście wywołania do innego obliczenie wyrażenia i wzorzec dopasowania na jego wynik:
+
+```fsharp
+let doThingsAsync url =
+    async {
+        match! callService url with
+        | Some data -> ...
+        | None -> ...
+    }
+```
+
+Podczas wywoływania wyrażeniu obliczeń z `match!`, będzie weź pod uwagę wynik wywołania, takie jak `let!`. Jest to często używane podczas wywoływania wyrażenia obliczeń, której wynikiem jest [opcjonalne](options.md).
+
+## <a name="built-in-computation-expressions"></a>Wyrażenia obliczeń wbudowane
+
+Biblioteka core F # definiuje trzy wyrażenia obliczeń wbudowane: [wyrażenia sekwencji](sequences.md), [Asynchroniczne przepływy pracy](asynchronous-workflows.md), i [wyrażenia zapytań](query-expressions.md).
+
+## <a name="creating-a-new-type-of-computation-expression"></a>Tworzenie nowego typu wyrażenia obliczeń
+
+Można zdefiniować właściwości wyrażenia obliczeń, tworząc klasę konstruktora i definiowanie pewne specjalne metody w klasie. Klasa konstruktora Opcjonalnie można zdefiniować metody, zgodnie z opisem w poniższej tabeli.
 
 W poniższej tabeli opisano metody, których można użyć w klasie konstruktora przepływu pracy.
 
-
-|**— Metoda**|**Typowy podpisy**|**Opis**|
+|**— Metoda**|**Typowe podpisy**|**Opis**|
 |----|----|----|
-|`Bind`|`M<'T> * ('T -> M<'U>) -> M<'U>`|Wywołuje się dla `let!` i `do!` w wyrażeniach obliczeń.|
-|`Delay`|`(unit -> M<'T>) -> M<'T>`|Opakowuje wyrażenie do obliczenia w funkcji.|
-|`Return`|`'T -> M<'T>`|Wywołuje się dla `return` w wyrażeniach obliczeń.|
-|`ReturnFrom`|`M<'T> -> M<'T>`|Wywołuje się dla `return!` w wyrażeniach obliczeń.|
-|`Run`|`M<'T> -> M<'T>` lub<br /><br />`M<'T> -> 'T`|Wykonuje wyrażenie do obliczenia.|
-|`Combine`|`M<'T> * M<'T> -> M<'T>` lub<br /><br />`M<unit> * M<'T> -> M<'T>`|Wywołuje się do sekwencjonowania w wyrażeniach obliczeń.|
-|`For`|`seq<'T> * ('T -> M<'U>) -> M<'U>` lub<br /><br />`seq<'T> * ('T -> M<'U>) -> seq<M<'U>>`|Wywołuje się dla `for...do` wyrażenia w wyrażeniach obliczeń.|
-|`TryFinally`|`M<'T> * (unit -> unit) -> M<'T>`|Wywołuje się dla `try...finally` wyrażenia w wyrażeniach obliczeń.|
-|`TryWith`|`M<'T> * (exn -> M<'T>) -> M<'T>`|Wywołuje się dla `try...with` wyrażenia w wyrażeniach obliczeń.|
-|`Using`|`'T * ('T -> M<'U>) -> M<'U> when 'U :> IDisposable`|Wywołuje się dla `use` powiązania w wyrażeniach obliczeń.|
-|`While`|`(unit -> bool) * M<'T> -> M<'T>`|Wywołuje się dla `while...do` wyrażenia w wyrażeniach obliczeń.|
-|`Yield`|`'T -> M<'T>`|Wywołuje się dla `yield` wyrażenia w wyrażeniach obliczeń.|
-|`YieldFrom`|`M<'T> -> M<'T>`|Wywołuje się dla `yield!` wyrażenia w wyrażeniach obliczeń.|
-|`Zero`|`unit -> M<'T>`|Wywoływana dla pustego `else` gałęzi elementu `if...then` wyrażenia w wyrażeniach obliczeń.|
-Wiele metod w klasie konstruktora użycia i zwracać `M<'T>` konstrukcji, która jest zazwyczaj oddzielnie zdefiniowanego typu, która charakteryzuje typu obliczenia łączonych, na przykład, `Async<'T>` dla Asynchroniczne przepływy pracy i `Seq<'T>` dla przepływów pracy w sekwencji. Podpisy tych metod umożliwiały można łączyć i zagnieżdżone ze sobą, tak, aby przepływ pracy obiektu zwróconego z jednego konstrukcji mogą zostać przekazane do następnego. Kompilator po przeanalizowaniu wyrażenie do obliczenia konwertuje wyrażenie na serię zagnieżdżonych wywołań funkcji przy użyciu metod w powyższej tabeli i kodu w wyrażeniu obliczenia.
+|`Bind`|`M<'T> * ('T -> M<'U>) -> M<'U>`|Wywoływana dla `let!` i `do!` w wyrażenia obliczeń.|
+|`Delay`|`(unit -> M<'T>) -> M<'T>`|Opakowuje wyrażeniu obliczeń w funkcji.|
+|`Return`|`'T -> M<'T>`|Wywoływana dla `return` w wyrażenia obliczeń.|
+|`ReturnFrom`|`M<'T> -> M<'T>`|Wywoływana dla `return!` w wyrażenia obliczeń.|
+|`Run`|`M<'T> -> M<'T>` lub<br /><br />`M<'T> -> 'T`|Wykonuje wyrażenia obliczeń.|
+|`Combine`|`M<'T> * M<'T> -> M<'T>` lub<br /><br />`M<unit> * M<'T> -> M<'T>`|Wywoływana dla sekwencjonowania w wyrażenia obliczeń.|
+|`For`|`seq<'T> * ('T -> M<'U>) -> M<'U>` lub<br /><br />`seq<'T> * ('T -> M<'U>) -> seq<M<'U>>`|Wywoływana dla `for...do` wyrażeń w wyrażenia obliczeń.|
+|`TryFinally`|`M<'T> * (unit -> unit) -> M<'T>`|Wywoływana dla `try...finally` wyrażeń w wyrażenia obliczeń.|
+|`TryWith`|`M<'T> * (exn -> M<'T>) -> M<'T>`|Wywoływana dla `try...with` wyrażeń w wyrażenia obliczeń.|
+|`Using`|`'T * ('T -> M<'U>) -> M<'U> when 'U :> IDisposable`|Wywoływana dla `use` powiązania w wyrażenia obliczeń.|
+|`While`|`(unit -> bool) * M<'T> -> M<'T>`|Wywoływana dla `while...do` wyrażeń w wyrażenia obliczeń.|
+|`Yield`|`'T -> M<'T>`|Wywoływana dla `yield` wyrażeń w wyrażenia obliczeń.|
+|`YieldFrom`|`M<'T> -> M<'T>`|Wywoływana dla `yield!` wyrażeń w wyrażenia obliczeń.|
+|`Zero`|`unit -> M<'T>`|Wywoływana dla pusta `else` gałęzi z `if...then` wyrażeń w wyrażenia obliczeń.|
 
-Zagnieżdżone wyrażenia ma następujący format:
+Wiele metod w klasie konstruktora użycia i zwracają `M<'T>` konstrukcji, która jest zwykle oddzielnie zdefiniowanego typu, który charakteryzuje rodzaju obliczeń połączone, przykładowo, `Async<'T>` asynchronicznych przepływów pracy i `Seq<'T>` w przypadku przepływów pracy sekwencji. Podpisy metody te je włączyć połączone i zagnieżdżone ze sobą, tak, aby obiekt przepływu pracy, zwracany z jedną konstrukcję może być przekazywany do następnej. Po przeanalizowaniu wyrażenia obliczeń, kompilator konwertuje wyrażenie w serii zagnieżdżonych wywołań funkcji przy użyciu metod przedstawionych w powyższej tabeli i kodu w wyrażeniu obliczeń.
+
+Zagnieżdżone wyrażenie ma następującą postać:
 
 ```fsharp
 builder.Run(builder.Delay(fun () -> {| cexpr |}))
 ```
 
-W kodzie powyżej wywołań `Run` i `Delay` są pomijane, jeśli nie są zdefiniowane w klasie Konstruktor wyrażeń obliczeń. Treść wyrażenia obliczeń, w tym miejscu jest oznaczona jako `{| cexpr |}`, przetłumaczyć wywołania metody konstruktora klasy obejmujące przez tłumaczeń opisane w poniższej tabeli. Wyrażenia obliczeń `{| cexpr |}` jest zdefiniowane cyklicznie zgodnie z tymi tłumaczeń gdzie `expr` wyrażenie F # i `cexpr` jest wyrażenie do obliczenia.
+W kodzie powyżej wywołania `Run` i `Delay` są pomijane, jeśli nie są zdefiniowane w klasie Konstruktor wyrażeń obliczeń. Treść wyrażenia obliczeń, w tym miejscu są oznaczone jako `{| cexpr |}`, przetłumaczyć obejmujące metod klasy konstruktora połączeń przez tłumaczenia opisane w poniższej tabeli. Wyrażenia obliczeń `{| cexpr |}` jest zdefiniowanego cyklicznie zgodnie z ich gdzie `expr` jest wyrażeniem F # i `cexpr` jest wyrażenia obliczeń.
 
 
 
@@ -85,9 +253,9 @@ W kodzie powyżej wywołań `Run` i `Delay` są pomijane, jeśli nie są zdefini
 |<code>{&#124; cexpr1; cexpr2 &#124;}</code>|<code>builder.Combine({&#124;cexpr1 &#124;}, {&#124; cexpr2 &#124;})</code>|
 |<code>{&#124; other-expr; cexpr &#124;}</code>|<code>expr; {&#124; cexpr &#124;}</code>|
 |<code>{&#124; other-expr &#124;}</code>|`expr; builder.Zero()`|
-W poprzedniej tabeli `other-expr` opisuje wyrażenie, które w przeciwnym razie nie jest wyszczególniony w tabeli. Konstruktor klasy nie trzeba zaimplementować wszystkie metody i obsługują wszystkie tłumaczeń wymienione w powyższej tabeli. Tych konstrukcji, które nie są zaimplementowane nie są dostępne w wyrażeniach obliczeń tego typu. Na przykład, jeśli nie chcesz obsługiwać `use` — słowo kluczowe w Twojej wyrażenia obliczeń, można pominąć definicji `Use` w klasie konstruktora.
+W poprzedniej tabeli `other-expr` opisuje wyrażenie, które w przeciwnym razie nie został wymieniony w tabeli. Klasa konstruktora nie trzeba implementować wszystkie metody i obsługiwać wszystkich tłumaczeń wymienionych w powyższej tabeli. Te konstrukcje, które nie są implementowane nie są dostępne w wyrażenia obliczeń tego typu. Na przykład, jeśli nie chcesz obsługiwać `use` słowa kluczowego w Twojej wyrażenia obliczeń, można pominąć definicji `Use` w klasie konstruktora.
 
-Poniższy przykład kodu pokazuje — wyrażenie obliczeń hermetyzujący obliczenia serie kroków, które mogą być obliczane krok naraz. Typ Unii Suma rozłączna — A `OkOrException`, koduje stanu błędu wyrażenia obliczonego w do tej pory. Ten kod przedstawiono kilka typowych wzorców, które można używać w sieci wyrażenia obliczeń, takich jak implementacje umożliwiającego niektóre metody konstruktora.
+Poniższy przykład kodu pokazuje wyrażenie obliczeń hermetyzujący obliczeń serię kroków, które mogą być obliczane jeden krok w danym momencie. A Suma rozłączna typ union `OkOrException`, koduje stanu błędu wyrażenia obliczonego do tej pory. Ten przykład demonstruje kilka typowych wzorców, które można używać w swojej wyrażenia obliczeń, takich jak standardowy implementacje niektórych metod konstruktora.
 
 ```fsharp
 // Computations that can be run step by step
@@ -215,10 +383,23 @@ comp |> step |> step |> step |> step |> step |> step
 comp |> step |> step |> step |> step |> step |> step |> step |> step
 ```
 
-Wyrażenie do obliczenia ma odpowiedni typ, który zwraca wartość wyrażenia. Typ źródłowy może reprezentować obliczona wynik lub opóźnione obliczeń, który może być wykonana lub może zapewnić sposób iterację pewien typ kolekcji. W poprzednim przykładzie, typ podstawowy został **ostatecznie**. Wyrażenia sekwencji jest typem podstawowym <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Wyrażenia zapytania jest typem podstawowym <xref:System.Linq.IQueryable?displayProperty=nameWithType>. Asychronous przepływu pracy, jest typem podstawowym [ `Async` ](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7). `Async` Obiekt reprezentuje pracy do wykonania można obliczyć wyniku. Na przykład wywołać [ `Async.RunSynchronously` ](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) wykonać obliczenia i zwraca wynik.
+Wyrażenia obliczeń ma typu podstawowego, który zwraca wartość wyrażenia. Typ podstawowy może reprezentować obliczony wynik lub opóźnione obliczenie, które mogą być wykonywane lub może ona dostarczać sposób do iteracji przez kolekcję określonego typu. W poprzednim przykładzie był typem podstawowym **ostatecznie**. To wyrażenie sekwencji jest typem podstawowym <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Wyrażenie zapytania, typ podstawowy jest <xref:System.Linq.IQueryable?displayProperty=nameWithType>. Dla asynchronicznego przepływu pracy jest typem podstawowym [ `Async` ](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7). `Async` Obiekt reprezentuje pracy do wykonania do obliczania wyniku. Na przykład wywołać [ `Async.RunSynchronously` ](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) do wykonywania obliczeń i zwracają wynik.
 
 ## <a name="custom-operations"></a>Operacje niestandardowe
-Można zdefiniować niestandardowe operacja na wyrażeniu obliczenia i Użyj niestandardowej operacji jako operator w wyrażeniu obliczenia. Na przykład operator zapytania można uwzględnić w wyrażeniu zapytania. Podczas definiowania niestandardowych operacji, należy zdefiniować wydajność i metod w wyrażeniu obliczenia. Aby zdefiniować operacja niestandardowa, umieść ją w klasie konstruktora dla wyrażenia obliczeń, a następnie Zastosuj [ `CustomOperationAttribute` ](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19). Ten atrybut ma ciąg jako argument, czyli nazwa do użycia w ramach operacji niestandardowych. Ta nazwa wchodzi w zakres na początku otwierający nawias klamrowy wyrażenia obliczenia. W związku z tym nie można używać identyfikatorów, które mają taką samą nazwę jak operacja niestandardowa w tym bloku. Na przykład, takich jak należy unikać użycia identyfikatorów `all` lub `last` w wyrażeniach zapytań.
+Można zdefiniować niestandardowe operacja na wyrażeniu obliczeń i użyć niestandardowych operacji jako operator w wyrażeniu obliczeń. Na przykład może zawierać operatora zapytania "w" w wyrażeniu zapytania. Podczas definiowania operacji niestandardowej, należy zdefiniować wydajność i metod w wyrażeniu obliczeń. Aby zdefiniować niestandardowe działanie, umieść go w klasę konstruktora dla wyrażenia obliczeń, a następnie Zastosuj [ `CustomOperationAttribute` ](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19). Ten atrybut przyjmuje ciąg jako argument, jest to nazwa, która ma być używany w niestandardowych operacji. Ta nazwa jest dostarczany do zakresu na początku otwierającym nawiasie klamrowym wyrażenia obliczeń. Dlatego nie należy używać identyfikatorów, które mają taką samą nazwę jak niestandardowe działania w tym bloku. Na przykład należy unikać stosowanie identyfikatorów, takich jak `all` lub `last` w wyrażeniach zapytań.
+
+### <a name="extending-existing-builders-with-new-custom-operations"></a>Rozszerzanie istniejących producenci nowe operacje niestandardowe
+Jeśli masz już klasa konstruktora, jego operacje niestandardowe można rozszerzyć z poza tym konstruktora klasy. Rozszerzenia musi być zadeklarowany w modułach. Przestrzenie nazw nie może zawierać elementy członkowskie rozszerzeń z wyjątkiem w tym samym pliku i tej samej grupie deklaracji przestrzeni nazw, gdy typ jest zdefiniowany.
+
+Poniższy przykład pokazuje rozszerzenie istniejącej `Microsoft.FSharp.Linq.QueryBuilder` klasy.
+
+```fsharp
+type Microsoft.FSharp.Linq.QueryBuilder with
+
+    [<CustomOperation("existsNot")>]
+    member __.ExistsNot (source: QuerySource<'T, 'Q>, predicate) =
+        Enumerable.Any (source.Source, Func<_,_>(predicate)) |> not
+```
 
 ## <a name="see-also"></a>Zobacz też
 [Dokumentacja języka F#](index.md)

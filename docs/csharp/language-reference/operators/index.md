@@ -19,198 +19,198 @@ helpviewer_keywords:
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
 ms.openlocfilehash: 2b0441dfebb6692cbea0d1ab7909d7b8f04490cb
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "34457611"
 ---
 # <a name="c-operators"></a>Operatory C#
-C# zawiera wielu operatorów, które są symbole, które określają, jakie operacje (matematyczne, indeksowania, wywołanie funkcji itp.) w celu wykonania w wyrażeniu. Możesz [przeciążenia](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) wielu operatorów, aby zmienić ich znaczenia w przypadku zastosowania do typu zdefiniowanego przez użytkownika.  
+C# zawiera wiele operatorów, które są symbolami określającymi operacje (matematycznych, indeksowanie, wywołanie funkcji itp.) do wykonania w wyrażeniu. Możesz [przeciążenia](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) wiele operatorów, aby zmienić ich znaczenia w przypadku zastosowania do typu zdefiniowanego przez użytkownika.  
   
- Operacje na typy całkowite (takich jak `==`, `!=`, `<`, `>`, `&`, `|`) są zwykle jest dozwolony w wyliczeniu (`enum`) typów.  
+ Operacje na typach całkowitoliczbowych (takie jak `==`, `!=`, `<`, `>`, `&`, `|`) są ogólnie dozwolone w wyliczeniu (`enum`) typy.  
   
- Poniższe rozdziały zawierają listę operatory C# uruchamianie o najwyższym priorytecie do najniższego. Operatory w każdej sekcji udostępnianie na tym samym poziomie priorytetu.  
+ Poniższe rozdziały zawierają listę operatorów języka C# od o najwyższym priorytecie do najniższego. Operatory w każdej sekcji udostępniać na tym samym poziomie pierwszeństwa.  
  
 ## <a name="primary-operators"></a>Operatory podstawowe  
  Są to najwyższy pierwszeństwo operatorów.
   
  [x.y](../../../csharp/language-reference/operators/member-access-operator.md) — dostęp do elementu członkowskiego.  
   
- [x?. y](../../../csharp/language-reference/operators/null-conditional-operators.md) — dostęp warunkowy element członkowski o wartości null. Zwraca `null` Jeśli lewego operandu daje w wyniku `null`.  
+ [x? y](../../../csharp/language-reference/operators/null-conditional-operators.md) — wartość null, dostęp warunkowy elementu członkowskiego. Zwraca `null` Jeśli po lewej stronie operand ma wartość `null`.  
  
- [x? [y] ](../../../csharp/language-reference/operators/null-conditional-operators.md) -dostępu warunkowego indeks o wartości null. Zwraca `null` Jeśli lewego operandu daje w wyniku `null`.
+ [x? [t] ](../../../csharp/language-reference/operators/null-conditional-operators.md) — wartość null, dostęp warunkowy indeksu. Zwraca `null` Jeśli po lewej stronie operand ma wartość `null`.
  
  [f(x)](../../../csharp/language-reference/operators/invocation-operator.md) — wywołania funkcji.  
   
- [&#91;x&#93; ](../../../csharp/language-reference/operators/index-operator.md) — indeksowania obiektu agregacji.  
+ [&#91;x&#93; ](../../../csharp/language-reference/operators/index-operator.md) — indeksowanie obiektu agregacji.  
    
- [x ++](../../../csharp/language-reference/operators/increment-operator.md) — przyrostka inkrementacji. Zwraca wartość x, a następnie aktualizuje lokalizację magazynu o wartości x, które jest większe (zazwyczaj dodaje całkowitą 1).  
+ [x ++](../../../csharp/language-reference/operators/increment-operator.md) — zwiększenie przyrostkowe. Zwraca wartość x, a następnie aktualizuje lokalizację przechowywania z wartością x, która jest większa o jeden (zazwyczaj dodaje liczbę całkowitą 1).  
   
- [x--](../../../csharp/language-reference/operators/decrement-operator.md) — dekrementacji przyrostka. Zwraca wartość x, a następnie aktualizuje lokalizację magazynu o wartości x, które jest mniej (zazwyczaj odejmuje całkowitą 1).  
+ [x —](../../../csharp/language-reference/operators/decrement-operator.md) — zmniejszenie przyrostkowe. Zwraca wartość x, a następnie aktualizuje lokalizację przechowywania z wartością x, która jest mniejsza (zazwyczaj odejmuje liczbę całkowitą 1).  
   
  [nowe](../../../csharp/language-reference/keywords/new-operator.md) — podczas tworzenia wystąpienia typu.  
   
  [TypeOf](../../../csharp/language-reference/keywords/typeof.md) — zwraca <xref:System.Type> obiekt reprezentujący argument.  
   
- [zaznaczone](../../../csharp/language-reference/keywords/checked.md) — umożliwia przepełnienie sprawdzanie operacji liczby całkowitej.  
+ [zaznaczone](../../../csharp/language-reference/keywords/checked.md) — umożliwia przepełnienie sprawdzania pod kątem operacji liczby całkowitej.  
   
- [Zaznaczenie opcji](../../../csharp/language-reference/keywords/unchecked.md) — wyłącza przepełnienie sprawdzanie operacji liczby całkowitej. Jest to domyślne zachowanie kompilatora.  
+ [unchecked](../../../csharp/language-reference/keywords/unchecked.md) — wyłącza przepełnienie sprawdzania pod kątem operacji liczby całkowitej. Jest to domyślne zachowanie kompilatora.  
   
- [Default(T)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md) — tworzy domyślną wartość typu T.  
+ [wartość Default(T)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md) — tworzy domyślną wartość typu T.  
   
- [Delegowanie](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) — deklaruje i zwraca wystąpienie obiektu delegowanego.  
+ [Delegowanie](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) — deklaruje i zwraca wystąpienie delegata.  
   
- [sizeof](../../../csharp/language-reference/keywords/sizeof.md) — zwraca rozmiar w bajtach argumentu typu.  
+ [Operator sizeof](../../../csharp/language-reference/keywords/sizeof.md) — zwraca rozmiar w bajtach argument typu.  
   
- [->](../../../csharp/language-reference/operators/dereference-operator.md) — wskaźnik dereferencji połączone z dostęp do elementu członkowskiego.  
+ [->](../../../csharp/language-reference/operators/dereference-operator.md) — wyłuskanie wskaźnika w połączeniu z dostępu do elementu członkowskiego.  
   
 ## <a name="unary-operators"></a>Operatory jednoargumentowe  
- Tych operatorów mają wyższy priorytet niż następnej sekcji i niższy priorytet niż poprzedniej sekcji.  
+ Te operatory mają wyższy priorytet niż następnej sekcji i niższy priorytet niż w poprzedniej sekcji.  
   
  [+ x](../../../csharp/language-reference/operators/addition-operator.md) — zwraca wartość x.  
   
  [-x](../../../csharp/language-reference/operators/subtraction-operator.md) — negacji liczbowych.  
   
- [\!x](../../../csharp/language-reference/operators/logical-negation-operator.md) — logiczny negacji.  
+ [\!x](../../../csharp/language-reference/operators/logical-negation-operator.md) — negacji logicznej.  
   
- [~ x](../../../csharp/language-reference/operators/bitwise-complement-operator.md) — dopełnienia bitowego.  
+ [~ x](../../../csharp/language-reference/operators/bitwise-complement-operator.md) — uzupełnienie bitowe.  
   
- [++ x](../../../csharp/language-reference/operators/increment-operator.md) — prefiks przyrostu. Zwraca wartość x po zaktualizowaniu lokalizacji magazynu o wartości x, które jest większe (zazwyczaj dodaje całkowitą 1).  
+ [++ x](../../../csharp/language-reference/operators/increment-operator.md) — przedrostkowe. Zwraca wartość x po zaktualizowaniu lokalizacji magazynu z wartością x, który jest jednym większą (zazwyczaj dodaje liczbę całkowitą 1).  
   
- [--x](../../../csharp/language-reference/operators/decrement-operator.md) — prefiks zmniejszenie. Zwraca wartość x po zaktualizowaniu lokalizacji magazynu o wartości x, które jest mniej (zazwyczaj odejmuje całkowitą 1).  
+ [--x](../../../csharp/language-reference/operators/decrement-operator.md) — przedrostkowe. Zwraca wartość x po zaktualizowaniu lokalizacji magazynu o wartości x, która jest mniejsza (zazwyczaj odejmuje liczbę całkowitą 1).  
   
- [[T] x](../../../csharp/language-reference/operators/invocation-operator.md) — typ rzutowania.  
+ [(T) x](../../../csharp/language-reference/operators/invocation-operator.md) — typ rzutowania.  
   
- [await](../../../csharp/language-reference/keywords/await.md) — oczekujące na `Task`.  
+ [await](../../../csharp/language-reference/keywords/await.md) — czeka `Task`.  
   
  [& x](../../../csharp/language-reference/operators/and-operator.md) — adres.  
   
- [* x](../../../csharp/language-reference/operators/multiplication-operator.md) — usuwania odwołań.  
+ [* x](../../../csharp/language-reference/operators/multiplication-operator.md) — dereferencji.  
   
 ## <a name="multiplicative-operators"></a>Operatory mnożne  
- Tych operatorów mają wyższy priorytet niż następnej sekcji i niższy priorytet niż poprzedniej sekcji.  
+ Te operatory mają wyższy priorytet niż następnej sekcji i niższy priorytet niż w poprzedniej sekcji.  
   
  [x * y](../../../csharp/language-reference/operators/multiplication-operator.md) — mnożenia.  
   
- [x / y](../../../csharp/language-reference/operators/division-operator.md) — dzielenia. Jeśli argumenty są liczbami całkowitymi, wyniku jest liczbą całkowitą obcięty w kierunku zera (na przykład `-7 / 2 is -3`).  
+ [x / y](../../../csharp/language-reference/operators/division-operator.md) — dzielenia. Jeśli argumenty są liczbami całkowitymi, wynik jest liczbą całkowitą obcięte w kierunku zera (na przykład `-7 / 2 is -3`).  
   
- [x % y](../../../csharp/language-reference/operators/remainder-operator.md) — pozostałe. Argumenty operacji są liczbami całkowitymi, to zwraca resztę podziału x przez y.  Jeśli `q = x / y` i `r = x % y`, następnie `x = q * y + r`.  
+ [x, % y](../../../csharp/language-reference/operators/remainder-operator.md) — resztę. Jeśli argumenty są liczbami całkowitymi, to zwraca resztę z dzielenia podziału x, y.  Jeśli `q = x / y` i `r = x % y`, następnie `x = q * y + r`.  
   
 ## <a name="additive-operators"></a>Operatory addytywne  
- Tych operatorów mają wyższy priorytet niż następnej sekcji i niższy priorytet niż poprzedniej sekcji.  
+ Te operatory mają wyższy priorytet niż następnej sekcji i niższy priorytet niż w poprzedniej sekcji.  
   
  [x + y](../../../csharp/language-reference/operators/addition-operator.md) — Dodawanie.  
   
- [x-y](../../../csharp/language-reference/operators/subtraction-operator.md) — odejmowanie.  
+ [x – y](../../../csharp/language-reference/operators/subtraction-operator.md) — odejmowania.  
   
 ## <a name="shift-operators"></a>Operatory przesunięcia  
- Tych operatorów mają wyższy priorytet niż następnej sekcji i niższy priorytet niż poprzedniej sekcji.  
+ Te operatory mają wyższy priorytet niż następnej sekcji i niższy priorytet niż w poprzedniej sekcji.  
   
- [x <\< y](../../../csharp/language-reference/operators/left-shift-operator.md) — przesunięcia bitów w lewo i wypełnienie zera po prawej stronie.  
+ [x <\< y](../../../csharp/language-reference/operators/left-shift-operator.md) — przesunięcia bitów w lewo i wypełnić zero po prawej stronie.  
   
- [x >> y](../../../csharp/language-reference/operators/right-shift-operator.md) — shift liczby bitów w prawo. Jeśli lewy operand jest `int` lub `long`, a następnie po lewej stronie bity są wypełnione z bitem. Jeśli lewy operand jest `uint` lub `ulong`, a następnie po lewej stronie bity są wypełniane zero.  
+ [x >> y](../../../csharp/language-reference/operators/right-shift-operator.md) — shift bits po prawej stronie. Jeśli Lewy argument operacji jest `int` lub `long`, a następnie po lewej stronie bity są wypełnione bitu znaku. Jeśli Lewy argument operacji jest `uint` lub `ulong`, a następnie po lewej stronie bity są wypełnione zero.  
   
-## <a name="relational-and-type-testing-operators"></a>Operatory relacyjne i testowania typu  
- Tych operatorów mają wyższy priorytet niż następnej sekcji i niższy priorytet niż poprzedniej sekcji.  
+## <a name="relational-and-type-testing-operators"></a>Operatory relacyjne i badania typu  
+ Te operatory mają wyższy priorytet niż następnej sekcji i niższy priorytet niż w poprzedniej sekcji.  
   
- [x \< y](../../../csharp/language-reference/operators/less-than-operator.md) — mniej niż (wartość true, jeśli x jest mniejsza niż y).  
+ [x \< y](../../../csharp/language-reference/operators/less-than-operator.md) — mniejsze niż (wartość true, jeśli x jest mniejsza niż y).  
   
- [x > y](../../../csharp/language-reference/operators/greater-than-operator.md) — większa niż (wartość true, jeśli x jest większa niż y).  
+ [x > y](../../../csharp/language-reference/operators/greater-than-operator.md) — większa (wartość true, jeśli x jest większa niż y).  
   
  [x \<= y](../../../csharp/language-reference/operators/less-than-equal-operator.md) — mniejsze niż lub równe.  
   
- [x > = y](../../../csharp/language-reference/operators/greater-than-equal-operator.md) — większa niż lub równe.  
+ [x > = y](../../../csharp/language-reference/operators/greater-than-equal-operator.md) — większa lub równa.  
   
- [jest](../../../csharp/language-reference/keywords/is.md) — wpisz zgodności. Zwraca wartość PRAWDA, jeśli obliczane lewy operand mogą być rzutowane na typ określony w prawy operand (typ statyczny).  
+ [jest](../../../csharp/language-reference/keywords/is.md) — wpisz zgodności. Zwraca wartość PRAWDA, jeśli ocenianą lewy operand mogą być rzutowane na typ określony w prawy operand (typu statycznego).  
   
- [jako](../../../csharp/language-reference/keywords/as.md) — konwersja typu. Zwraca lewy operand rzutowany na typ określony przez prawy operand (typ statyczny), ale `as` zwraca `null` gdzie `(T)x` spowoduje zgłoszenie wyjątku.  
+ [jako](../../../csharp/language-reference/keywords/as.md) — konwersja typu. Zwraca lewy operand rzutowany na typ określony przez prawy operand (typ statycznej), ale `as` zwraca `null` gdzie `(T)x` spowoduje zgłoszenie wyjątku.  
   
 ## <a name="equality-operators"></a>Operatory równości  
- Tych operatorów mają wyższy priorytet niż następnej sekcji i niższy priorytet niż poprzedniej sekcji.  
+ Te operatory mają wyższy priorytet niż następnej sekcji i niższy priorytet niż w poprzedniej sekcji.  
   
- [x == y](../../../csharp/language-reference/operators/equality-comparison-operator.md) — równości. Domyślnie dla odwołania do typów innych niż `string`, to zwraca odwołanie równości (test tożsamości). Jednak można przeciążać typy `==`, więc jeśli Twoje celem jest, aby sprawdzić tożsamość, najlepiej użyć `ReferenceEquals` metoda `object`.  
+ [x == y](../../../csharp/language-reference/operators/equality-comparison-operator.md) — równości. Domyślnie dla odwołania do typów innych niż `string`ten zwraca odwołania równości (test tożsamości). Jednak typów może doprowadzić do przeciążenia `==`, więc jeśli zgodne z zamiarami użytkownika jest, aby sprawdzić tożsamość, najlepiej użyć `ReferenceEquals` metody `object`.  
   
- [x! = y](../../../csharp/language-reference/operators/not-equal-operator.md) — jest nierówne. Zobacz komentarz dotyczący `==`. Jeśli typem overloads `==`, a następnie go muszą przeciążać `!=`.  
+ [x! = y](../../../csharp/language-reference/operators/not-equal-operator.md) — są nierówne. Zobacz komentarz dotyczący `==`. Jeśli typem przeciążenia `==`, a następnie przeciąża musi `!=`.  
   
 ## <a name="logical-and-operator"></a>Operator logiczny AND  
- Ten operator ma wyższy priorytet niż następnej sekcji i niższy priorytet niż poprzedniej sekcji.  
+ Ten operator ma wyższy priorytet niż następnej sekcji i niższy priorytet niż w poprzedniej sekcji.  
   
- [x & y](../../../csharp/language-reference/operators/and-operator.md) — logicznych lub bitowego koniunkcji binarnej. Zazwyczaj służy ono z typami liczb całkowitych i `enum` typów.  
+ [x i y](../../../csharp/language-reference/operators/and-operator.md) — operatora logicznego lub bitowego AND. Zazwyczaj można użyć tego z typami całkowitymi i `enum` typów.  
   
 ## <a name="logical-xor-operator"></a>Logiczne XOR — Operator  
- Ten operator ma wyższy priorytet niż następnej sekcji i niższy priorytet niż poprzedniej sekcji.  
+ Ten operator ma wyższy priorytet niż następnej sekcji i niższy priorytet niż w poprzedniej sekcji.  
   
- [x ^ y](../../../csharp/language-reference/operators/xor-operator.md) — logicznych lub bitowego XOR. Zazwyczaj służy ono z typami liczb całkowitych i `enum` typów.  
+ [x ^ y](../../../csharp/language-reference/operators/xor-operator.md) — logicznych lub bitowe XOR. Zazwyczaj można użyć tego z typami całkowitymi i `enum` typów.  
   
-## <a name="logical-or-operator"></a>Logiczny OR Operator  
- Ten operator ma wyższy priorytet niż następnej sekcji i niższy priorytet niż poprzedniej sekcji.  
+## <a name="logical-or-operator"></a>Logiczne OR — Operator  
+ Ten operator ma wyższy priorytet niż następnej sekcji i niższy priorytet niż w poprzedniej sekcji.  
   
- [x &#124; y](../../../csharp/language-reference/operators/or-operator.md) — logicznych lub bitowego OR. Zazwyczaj służy ono z typami liczb całkowitych i `enum` typów.  
+ [x &#124; y](../../../csharp/language-reference/operators/or-operator.md) — logicznych lub bitowe OR. Zazwyczaj można użyć tego z typami całkowitymi i `enum` typów.  
   
 ## <a name="conditional-and-operator"></a>Operator warunkowy AND  
- Ten operator ma wyższy priorytet niż następnej sekcji i niższy priorytet niż poprzedniej sekcji.  
+ Ten operator ma wyższy priorytet niż następnej sekcji i niższy priorytet niż w poprzedniej sekcji.  
   
- [x & & y](../../../csharp/language-reference/operators/conditional-and-operator.md) — operatora logicznego AND. Jeśli pierwszy argument operacji nie jest spełniony, następnie C# nie może oszacować drugiego argumentu operacji.  
+ [x & & y](../../../csharp/language-reference/operators/conditional-and-operator.md) — operatora logicznego AND. Jeśli pierwszy operand zwróci wartość false, następnie C# nie może oszacować drugiego operandu.  
   
-## <a name="conditional-or-operator"></a>Warunkowy OR — Operator  
- Ten operator ma wyższy priorytet niż następnej sekcji i niższy priorytet niż poprzedniej sekcji.  
+## <a name="conditional-or-operator"></a>Warunkowego lub operatora  
+ Ten operator ma wyższy priorytet niż następnej sekcji i niższy priorytet niż w poprzedniej sekcji.  
   
- [x &#124; &#124; y](../../../csharp/language-reference/operators/conditional-or-operator.md) — operatora logicznego OR. Jeśli pierwszy argument operacji daje w wyniku wartość true, następnie C# nie może oszacować drugiego argumentu operacji.  
+ [x &#124; &#124; y](../../../csharp/language-reference/operators/conditional-or-operator.md) — operator logiczny lub. Jeśli pierwszy argument zwraca wartość true, następnie C# nie może oszacować drugiego operandu.  
   
-## <a name="null-coalescing-operator"></a>Łączenie null — Operator  
- Ten operator ma wyższy priorytet niż następnej sekcji i niższy priorytet niż poprzedniej sekcji.  
+## <a name="null-coalescing-operator"></a>Operatorem łączenia wartości null  
+ Ten operator ma wyższy priorytet niż następnej sekcji i niższy priorytet niż w poprzedniej sekcji.  
   
- [x? y](../../../csharp/language-reference/operators/null-coalescing-operator.md) — zwraca `x` jeśli ją ma wartość inną niż`null`; w przeciwnym razie zwraca `y`.  
+ [x? y](../../../csharp/language-reference/operators/null-coalescing-operator.md) — zwraca `x` jeśli je ma wartość inną niż`null`; w przeciwnym razie zwraca `y`.  
   
 ## <a name="conditional-operator"></a>Operator warunkowy  
- Ten operator ma wyższy priorytet niż następnej sekcji i niższy priorytet niż poprzedniej sekcji.  
+ Ten operator ma wyższy priorytet niż następnej sekcji i niższy priorytet niż w poprzedniej sekcji.  
   
- [t? x: y](../../../csharp/language-reference/operators/conditional-operator.md) — Jeśli test `t` daje w wyniku wartość true, a następnie ocenić i zwracać `x`; w przeciwnym razie ocenić i zwracać `y`.  
+ [t? x: y](../../../csharp/language-reference/operators/conditional-operator.md) — w przypadku testowania `t` daje w wyniku wartość true, a następnie oceniana i zwracana `x`; w przeciwnym razie oceniana i zwracana `y`.  
   
-## <a name="assignment-and-lambda-operators"></a>Przypisanie i operatory Lambda  
- Tych operatorów mają wyższy priorytet niż następnej sekcji i niższy priorytet niż poprzedniej sekcji.  
+## <a name="assignment-and-lambda-operators"></a>Operatory Lambda i przypisanie  
+ Te operatory mają wyższy priorytet niż następnej sekcji i niższy priorytet niż w poprzedniej sekcji.  
   
  [x = y](../../../csharp/language-reference/operators/assignment-operator.md) — przypisania.  
   
- [x += y](../../../csharp/language-reference/operators/addition-assignment-operator.md) — przyrostu. Dodaj wartość `y` wartość `x`, zapisać wynik w `x`i zwraca nową wartość. Jeśli `x` wyznacza `event`, następnie `y` musi mieć odpowiednią funkcję, która C# dodaje jako program obsługi zdarzeń.  
+ [x += y](../../../csharp/language-reference/operators/addition-assignment-operator.md) — przyrostu. Dodaj wartość `y` wartość `x`, zapisują wynik w `x`i zwraca nową wartość. Jeśli `x` wyznacza `event`, następnie `y` musi mieć odpowiednią funkcję, dodającego C# jako program obsługi zdarzeń.  
   
- [x-= y](../../../csharp/language-reference/operators/subtraction-assignment-operator.md) — zmniejszyć. Odejmowanie wartość `y` od wartości `x`, zapisać wynik w `x`i zwraca nową wartość. Jeśli `x` wyznacza `event`, następnie `y` musi mieć odpowiednią funkcję, która C# usuwa jako program obsługi zdarzeń  
+ [x-= y](../../../csharp/language-reference/operators/subtraction-assignment-operator.md) — zmniejszanie. Odejmuje wartość `y` od wartości `x`, zapisują wynik w `x`i zwraca nową wartość. Jeśli `x` wyznacza `event`, następnie `y` musi mieć odpowiednią funkcję, który C# usuwa jako program obsługi zdarzeń  
   
- [x * = y](../../../csharp/language-reference/operators/multiplication-assignment-operator.md) — przypisania mnożenia. Należy pomnożyć wartość `y` wartość `x`, zapisać wynik w `x`i zwraca nową wartość.  
+ [x * = y](../../../csharp/language-reference/operators/multiplication-assignment-operator.md) — mnożenie i przypisanie. Mnoży wartość `y` wartość `x`, zapisują wynik w `x`i zwraca nową wartość.  
   
- [x / = y](../../../csharp/language-reference/operators/division-assignment-operator.md) — przypisania dzielenia. Podziel wartość `x` przez wartość `y`, zapisać wynik w `x`i zwraca nową wartość.  
+ [x / = y](../../../csharp/language-reference/operators/division-assignment-operator.md) — dzielenie i przypisanie. Dzieli wartość `x` przez wartość `y`, zapisują wynik w `x`i zwraca nową wartość.  
   
- [x % = y](../../../csharp/language-reference/operators/remainder-assignment-operator.md) — remainder przypisania. Podziel wartość `x` przez wartość `y`, przechowywać resztę w `x`i zwraca nową wartość.  
+ [x % = y](../../../csharp/language-reference/operators/remainder-assignment-operator.md) — remainder przypisania. Dzieli wartość `x` przez wartość `y`, przechowywać resztę w `x`i zwraca nową wartość.  
   
- [x & = y](../../../csharp/language-reference/operators/and-assignment-operator.md) — i przypisania. WARTOŚĆ `y` z wartością `x`, zapisać wynik w `x`i zwraca nową wartość.  
+ [x & = y](../../../csharp/language-reference/operators/and-assignment-operator.md) — i przypisanie. I wartość `y` z wartością `x`, zapisują wynik w `x`i zwraca nową wartość.  
   
- [x &#124;= y](../../../csharp/language-reference/operators/or-assignment-operator.md) — przypisanie OR. LUB wartość `y` z wartością `x`, zapisać wynik w `x`i zwraca nową wartość.  
+ [x &#124;= y](../../../csharp/language-reference/operators/or-assignment-operator.md) — i przypisanie. LUB wartość `y` z wartością `x`, zapisują wynik w `x`i zwraca nową wartość.  
   
- [x ^ = y](../../../csharp/language-reference/operators/xor-assignment-operator.md) — XOR przypisania. XOR wartość z `y` z wartością `x`, zapisać wynik w `x`i zwraca nową wartość.  
+ [x ^ = y](../../../csharp/language-reference/operators/xor-assignment-operator.md) — przypisanie XOR. XOR wartość z `y` z wartością `x`, zapisują wynik w `x`i zwraca nową wartość.  
   
- [x << = y](../../../csharp/language-reference/operators/left-shift-assignment-operator.md) — przypisania przesunięcia w lewo. Wartość przesunięcia `x` po lewej stronie przez `y` miejsca przechowywania wyników w `x`i zwraca nową wartość.  
+ [x << = y](../../../csharp/language-reference/operators/left-shift-assignment-operator.md) — przypisania przesunięcia w lewo. Przesuwa wartość `x` po lewej stronie, `y` miejscach, zapisują wynik w `x`i zwraca nową wartość.  
   
- [x >> = y](../../../csharp/language-reference/operators/right-shift-assignment-operator.md) — przypisania przesunięcia w prawo. Wartość przesunięcia `x` prawo `y` miejsca przechowywania wyników w `x`i zwraca nową wartość.  
+ [x >> = y](../../../csharp/language-reference/operators/right-shift-assignment-operator.md) — przypisania przesunięcia w prawo. Przesuwa wartość `x` bezpośrednio przez `y` miejscach, zapisują wynik w `x`i zwraca nową wartość.  
   
  [=>](../../../csharp/language-reference/operators/lambda-operator.md) — deklaracji lambda.  
   
 ## <a name="arithmetic-overflow"></a>Przepełnienie arytmetyczne  
- Operatory arytmetyczne ([+](../../../csharp/language-reference/operators/addition-operator.md), [ - ](../../../csharp/language-reference/operators/subtraction-operator.md), [ * ](../../../csharp/language-reference/operators/multiplication-operator.md), [ / ](../../../csharp/language-reference/operators/division-operator.md)) może dostarczyło wyników, które są poza zakresem możliwe wartości liczbowe rodzaju. Należy zapoznać się w sekcji na konkretnym operatorze, aby uzyskać więcej informacji, ale w ogólne:  
+ Operatory arytmetyczne ([+](../../../csharp/language-reference/operators/addition-operator.md), [ - ](../../../csharp/language-reference/operators/subtraction-operator.md), [ * ](../../../csharp/language-reference/operators/multiplication-operator.md), [ / ](../../../csharp/language-reference/operators/division-operator.md)) może generuje wyniki, które wykraczają poza zakres możliwych wartości dla typu liczbowego. Należy zapoznać się z sekcją na konkretnym operatorze, aby uzyskać szczegółowe informacje, ale ogólnie rzecz biorąc:  
   
-- Albo zgłasza przepełnienie arytmetyczne całkowitą <xref:System.OverflowException> lub odrzuca najbardziej znaczących bitów wyniku. Dzielenie liczby całkowitej przez zero zawsze zwraca <xref:System.DivideByZeroException>.  
+- Arytmetyka przepełnienia liczb całkowitych zgłasza <xref:System.OverflowException> lub odrzuca najbardziej znaczące bity wyniku. Dzielenie liczby całkowitej przez zero zawsze generuje wyjątek <xref:System.DivideByZeroException>.  
 
-   Gdy wystąpi przepełnienie liczby całkowitej, co się stanie, zależy od kontekstu wykonywania, który może być [zaznaczenie](../../../csharp/language-reference/keywords/checked-and-unchecked.md). W kontekście zaznaczone <xref:System.OverflowException> jest generowany. W kontekście niezaznaczone najbardziej znaczących bitów wyniku zostaną odrzucone i kontynuuje wykonywanie. W związku z tym C# umożliwia wybór obsługi lub ignorowanie przepełnienia. Domyślnie operacje arytmetyczne występują w *niezaznaczone* kontekstu. 
+   Jeśli występuje przepełnienie liczby całkowitej, co się stanie, zależy od kontekstu wykonywania, który może być [zaznaczony lub niezaznaczony](../../../csharp/language-reference/keywords/checked-and-unchecked.md). W kontekście sprawdzanym <xref:System.OverflowException> zgłaszany. W kontekście niesprawdzanym najbardziej znaczące bity wyniku są odrzucane, a wykonywanie jest kontynuowane. W związku z tym C# umożliwia wybranie obsługi lub zignorowanie przepełnienie. Domyślnie operacje arytmetyczne występują w *unchecked* kontekstu. 
 
-   Oprócz operacji arytmetycznej, rzutowania typu całkowitego — do całkowitych typów może spowodować przepełnienie (np. gdy rzutowania [długi](../../../csharp/language-reference/keywords/long.md) do [int](../../../csharp/language-reference/keywords/int.md)) i wymagają wykonania zaznaczać lub usuwać zaznaczenia. Jednak operatory bitowe i operatory przesunięcia nigdy nie spowodować przepełnienie.  
+   Oprócz operacje arytmetyczne rzutowania typu całkowitego do typu całkowitego mogą spowodować przepełnienie (np. Jeśli zrzutować [długie](../../../csharp/language-reference/keywords/long.md) do [int](../../../csharp/language-reference/keywords/int.md)) i podlegają wykonaniu sprawdzanemu lub niesprawdzanemu. Jednakże operatory bitowe i operatory przesunięcia nigdy nie powodują przepełnienia.  
    
--   Nigdy nie zgłasza wyjątek zmiennoprzecinkowy przepełnienia arytmetycznego lub dzielenie przez zero, ponieważ typy zmiennoprzecinkowe są oparte na IEEE 754 i tak mają postanowienia reprezentujący nieskończoności i NaN (nieliczbową).  
+-   Zmiennoprzecinkowe przepełnienia arytmetycznego lub dzielenie przez zero nigdy nie zgłasza wyjątek, ponieważ typy zmiennoprzecinkowe są oparte na standardzie IEEE 754, dlatego mają mechanizmy reprezentowania nieskończoności i NaN (nieliczbową).  
   
--   [Decimal](../../../csharp/language-reference/keywords/decimal.md) zawsze zgłasza wyjątek przepełnienia arytmetycznego <xref:System.OverflowException>. Decimal dzielenie przez zero zawsze zwraca <xref:System.DivideByZeroException>.  
+-   [Dziesiętna](../../../csharp/language-reference/keywords/decimal.md) przepełnienie arytmetyczne zawsze wyrzuca <xref:System.OverflowException>. Dzielenie dziesiętne przez zero zawsze generuje wyjątek <xref:System.DivideByZeroException>.  
   
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
+ [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [C#](../../../csharp/index.md) [operatory z możliwością przeciążenia](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)

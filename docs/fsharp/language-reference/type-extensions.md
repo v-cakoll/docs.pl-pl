@@ -1,105 +1,174 @@
 ---
 title: Rozszerzenia typu (F#)
-description: 'Dowiedz się, jak rozszerzenia typu F # zezwala na dodawanie nowych elementów członkowskich do typu wcześniej zdefiniowanego obiektu.'
-ms.date: 05/16/2016
+description: 'Dowiedz się, jak rozszerzeń typu F # zezwala na dodawanie nowych członków do typu obiektu zdefiniowanego wcześniej.'
+ms.date: 07/20/2018
 ms.openlocfilehash: 2181745ea75894fbfe35d5522c130baaf1876455
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "33566889"
 ---
 # <a name="type-extensions"></a>Rozszerzenia typu
 
-Typ rozszerzenia umożliwiają dodawanie nowych elementów członkowskich do typu wcześniej zdefiniowanego obiektu.
+Rozszerzenia typu (nazywane również _rozszerzeniach_) to rodzina funkcji, które pozwalają na dodawanie nowych członków do typu obiektu zdefiniowanego wcześniej. Są trzy funkcje:
+
+* Rozszerzeń typu wewnętrznego
+* Opcjonalnych rozszerzeń typów
+* Metody rozszerzenia
+
+Każda mogą być używane w różnych scenariuszach i zawiera różne kompromisy.
 
 ## <a name="syntax"></a>Składnia
 
 ```fsharp
-// Intrinsic extension.
+// Intrinsic and optional extensions
 type typename with
     member self-identifier.member-name =
         body
     ...
-[ end ]
 
-// Optional extension.
-type typename with
-    member self-identifier.member-name =
+// Extension methods
+open System.Runtime.CompilerServices
+
+[<Extension>]
+type Extensions() =
+    [static] member self-identifier.extension-name (ty: typename, [args]) =
         body
     ...
-[ end ]
 ```
 
-## <a name="remarks"></a>Uwagi
-Istnieją dwie formy rozszerzeń typu, które ma nieco inną składnię i zachowania. *Rozszerzenie wewnętrzne* to rozszerzenie, które pojawia się w tej samej przestrzeni nazw lub modułu, w tym samym pliku źródłowego, a w tym samym zestawie (plik DLL lub plik wykonywalny) jako rozszerzanego typu. *Opcjonalne rozszerzenie* to rozszerzenie, które znajduje się poza oryginalnego modułu, przestrzeni nazw lub zestawie rozszerzanego typu. Wewnętrzne rozszerzenia są wyświetlane na typ po typ się zbadana przez odbicie, ale opcjonalne rozszerzenia nie. Opcjonalne rozszerzenia musi być w modułach i są tylko w zakresie po otwarciu moduł, który zawiera rozszerzenia.
+## <a name="intrinsic-type-extensions"></a>Rozszerzeń typu wewnętrznego
 
-W poprzednich składni *typename* reprezentuje typ, który zostanie rozszerzone. Można ją rozszerzyć dowolnego typu, który jest dostępny, ale nazwa typu musi być nazwą typu rzeczywistego nie skrót typu. Można zdefiniować wiele elementów członkowskich w jeden typ rozszerzenia. *Własny identyfikator* reprezentuje wystąpienie obiektu wywoływany, tak jak w przypadku zwykłej elementów członkowskich.
+Rozszerzenie typu wewnętrznego jest rozszerzeniem typu, która rozszerza typ zdefiniowany przez użytkownika.
 
-`end` — Słowo kluczowe jest opcjonalna w lightweight — składnia.
+Rozszerzeń typu wewnętrznego musi być zdefiniowany w tym samym pliku **i** w tej samej przestrzeni nazw lub module jako typ, są one rozszerzanie. Inne definicji spowoduje ich trwa [opcjonalnych rozszerzeń typów](type-extensions.md#optional-type-extensions).
 
-Elementów członkowskich zdefiniowanych w rozszerzenia typu może służyć podobnie jak w innych elementach członkowskich w typie klasy. Podobnie jak inni członkowie ich być statyczne lub wystąpienia elementów członkowskich. Te metody są również znane jako *metody rozszerzenia*; właściwości są określane jako *właściwości rozszerzenia*i tak dalej. Rozszerzenie opcjonalne elementy członkowskie są kompilowane do statycznych elementów członkowskich, dla których wystąpienie obiektu jest przekazywany niejawnie jako pierwszym parametrem. Działają one jednak, tak jakby były elementów członkowskich wystąpień lub statycznych elementów członkowskich w zależności od sposobu są zadeklarowane. Elementy członkowskie rozszerzeń niejawne są uwzględnione jako elementy członkowskie tego typu i można go używać bez ograniczeń.
-
-Metody rozszerzenia nie może być metody wirtualne lub abstrakcyjne. One przeciążenia innych metod o tej samej nazwie, ale kompilator daje preferencje metody bez rozszerzenia w przypadku niejednoznaczne wywołanie.
-
-Jeśli istnieje wiele rozszerzeń typu wewnętrznej dla jednego typu, wszystkie elementy członkowskie muszą być unikatowe. Dla typu opcjonalne rozszerzenia elementy członkowskie w rozszerzeniach innego typu na ten sam typ mogą mieć tych samych nazwach. Niejednoznaczności błędów tylko wtedy, gdy kod klienta otwiera dwa różne zakresy, które definiują tej samej nazwy elementów członkowskich.
-
-W poniższym przykładzie typu w module ma rozszerzenie typu wewnętrznego. Dla kodu klienta poza modułu rozszerzenia typu pojawia się jako zwykły element członkowski typu we wszystkich aspektach.
-
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet3701.fs)]
-
-Rozszerzenia typu wewnętrznej służy do oddzielnych definicji typu na sekcje. Może to być przydatne w zarządzaniu definicje dużego typu, na przykład zachowanie oddzielny kod wygenerowany przez kompilator i napisanego kodu lub zgrupować kodu utworzone przez różne osoby lub skojarzone z różnych funkcji.
-
-W poniższym przykładzie opcjonalny type — rozszerzenie rozszerza `System.Int32` typ z metody rozszerzenia `FromString` wywołującym statycznego elementu członkowskiego `Parse`. `testFromString` Metody pokazuje, że nowy element członkowski jest nazywany podobnie jak wszystkie wystąpienia elementu członkowskiego.
-
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet3702.fs)]
-
-Podobnie jak wszystkie inne metody pojawi się nowy element członkowski wystąpienia `Int32` typu w funkcji IntelliSense, ale tylko wtedy, gdy moduł, który zawiera rozszerzenie jest otwarte lub w inny sposób w zakresie.
-
-## <a name="generic-extension-methods"></a>Metody rozszerzenia w ogólnych
-Przed F # 3.1, kompilator języka F # nie obsługuje języka C# — styl metody rozszerzenia zmienną typu ogólnego, typu tablicy, typ krotki lub typem funkcji języka F # jako parametr "this". 3.1 F # obsługuje korzystanie z tych elementów członkowskich rozszerzenia.
-
-Na przykład w kodzie języka F # 3.1, można użyć metody rozszerzenia podpisów, które przypominają następującej składni w języku C#:
-
-```csharp
-static member Method<T>(this T input, T other)
-```
-
-Ta metoda jest szczególnie przydatne, gdy parametr typu ogólnego jest ograniczony. Ponadto można zadeklarować elementów członkowskich rozszerzenia następująco w kodzie języka F # i zdefiniować dodatkowe, semantycznie bogaty zestaw metod rozszerzenia. W języku F # zazwyczaj zdefiniowane jako w poniższym przykładzie przedstawiono elementy członkowskie rozszerzeń:
+Rozszerzeń typu wewnętrznego są czasami bardziej przejrzysty sposób oddzielić funkcje od deklaracji typu. Poniższy przykład pokazuje jak zdefiniować rozszerzenie typu wewnętrznego:
 
 ```fsharp
+namespace Example
+
+type Variant =
+    | Num of int
+    | Str of string
+  
+module Variant =
+    let print v =
+        match v with
+        | Num n -> printf "Num %d" n
+        | Str s -> printf "Str %s" s
+
+// Add a member to Variant as an extension
+type Variant with
+    member x.Print() = Variant.print x
+```
+
+Przy użyciu rozszerzenia typu umożliwia rozdzielenie każdego z następujących czynności:
+
+* Deklaracja `Variant` typu
+* Funkcje, aby wydrukować `Variant` klasy, w zależności od jego "kształt"
+* Możliwość dostępu do funkcji drukowania stylem obiektu `.`— Notacja
+
+Jest to alternatywa do definiowania wszystko jako członka na `Variant`. Chociaż nie jest z natury lepszym rozwiązaniem, może być oczyszczarki reprezentacja tych funkcji w niektórych sytuacjach.
+
+Rozszerzeń typu wewnętrznego są kompilowane jako elementy członkowskie typu rozszerzania i są wyświetlane w typie, gdy typ jest badany przez odbicie.
+
+## <a name="optional-type-extensions"></a>Opcjonalnych rozszerzeń typów
+
+Opcjonalne rozszerzenie typu to rozszerzenie, które pojawia się poza oryginalnym module, przestrzeni nazw lub zestawu typ zostanie przedłużony.
+
+Opcjonalnych rozszerzeń typów są przydatne do rozszerzania typu, który nie został zdefiniowany samodzielnie. Na przykład:
+
+```fsharp
+module Extensions
+
 open System.Collections.Generic
 
 type IEnumerable<'T> with
     /// Repeat each element of the sequence n times
     member xs.RepeatElements(n: int) =
-        seq { for x in xs do for i in 1 .. n do yield x }
+        seq {
+            for x in xs do
+                for i in 1 .. n do
+                    yield x
+        }
 ```
 
-Jednak dla typu ogólnego, zmienna typu może nie być ograniczone. Teraz można zadeklarować C# — styl Członkowskim rozszerzenia języka F # w celu obejścia tego ograniczenia. Łącząc tego rodzaju deklaracji przy użyciu funkcji wbudowanej języka F # można przedstawić ogólnego algorytmów jako elementy członkowskie rozszerzeń.
+Teraz uzyskiwać dostęp do `RepeatElements` tak, jakby jest członkiem <xref:System.Collections.Generic.IEnumerable%601> tak długo, jak `Extensions` modułu jest otwarty w zakresie, w którym pracujesz.
 
-Należy wziąć pod uwagę następujące oświadczenie:
+Opcjonalne rozszerzenia nie są wyświetlane w typie rozszerzonym, gdy badany przez odbicie. Opcjonalne rozszerzenia muszą być w modułach i są one w zakresie wyłącznie wtedy, gdy moduł, który zawiera rozszerzenie jest otwarty lub jest w zakresie.
+
+Opcjonalne elementy członkowskie rozszerzeń są kompilowane do statycznych elementów członkowskich, dla których wystąpienie obiektu jest przekazywane niejawnie jako pierwszy parametr. Jednak działają one tak, jakby były elementami członkowskimi wystąpień lub elementami statycznymi według tego jak są one zdeklarowane.
+
+## <a name="generic-limitation-of-intrinsic-and-optional-type-extensions"></a>Ogólne ograniczenia rozszerzeń typu wewnętrzne i opcjonalne
+
+Istnieje możliwość zadeklarować rozszerzenie typu dla typu ogólnego, gdy zmienna typu jest ograniczone. Wymagane jest, że ograniczenie deklaracji rozszerzenia pasuje do ograniczenia zadeklarowanym typem.
+
+Jednak nawet wtedy, gdy ograniczenia są dopasowywane między zadeklarowanym typem i rozszerzenie typu, jest możliwe ograniczenie był wywnioskowany przez jednostkę rozszerzonej elementu członkowskiego, która nakłada różnych wymagań dla parametru typu niż zadeklarowanym typem. Na przykład:
 
 ```fsharp
+open System.Collections.Generic
+
+// NOT POSSIBLE AND FAILS TO COMPILE!
+//
+// The member 'Sum' has a different requirement on 'T than the type IEnumerable<'T>
+type IEnumerable<'T> with
+    member this.Sum() = Seq.sum this
+```
+
+Nie istnieje sposób, aby otrzymać ten kod, aby pracować z opcjonalne rozszerzenie typu:
+
+* Podobnie jak, `Sum` składowa ma różne ograniczenia `'T` (`static member get_Zero` i `static member (+)`) niż określa rozszerzenie typu.
+* Modyfikowanie rozszerzenie typu mają ten sam ograniczenie jako `Sum` nie będzie już zgodny zdefiniowane ograniczenia na `IEnumerable<'T>`.
+* Tworzenie, zmienianie członka do `member inline Sum` zapewni błąd niezgodność ograniczenia typu
+
+Co to jest pożądane to metody statyczne, "float w miejscu", które może być prezentowana tak, jakby ich one rozszerzanie typu. Jest to, gdzie metody rozszerzenia stają się niezbędne.
+
+## <a name="extension-methods"></a>Metody rozszerzenia
+
+Na koniec metody rozszerzenia (nazywane czasem "C# styl elementy członkowskie rozszerzeń") może być zadeklarowana w F # jako metodę statyczną składową klasy.
+
+Metody rozszerzenia są przydatne w przypadku gdy chcesz zdefiniować rozszerzenia dla typu ogólnego, który będzie ograniczać zmienna typu. Na przykład:
+
+```fsharp
+namespace Extensions
+
+open System.Runtime.CompilerServices
+
 [<Extension>]
-type ExtraCSharpStyleExtensionMethodsInFSharp () =
+type IEnumerableExtensions() =
     [<Extension>]
     static member inline Sum(xs: IEnumerable<'T>) = Seq.sum xs
 ```
 
-Za pomocą tej deklaracji, można napisać kod, podobny do poniższego polecenia.
+W przypadku tego kodu spowoduje, że będzie wyglądała, jakby `Sum` jest zdefiniowany w <xref:System.Collections.Generic.IEnumerable%601>, tak długo, jak `Extensions` został otwarty lub znajduje się w zakresie.
 
-```fsharp
-let listOfIntegers = [ 1 .. 100 ]
-let listOfBigIntegers = [ 1I to 100I ]
-let sum1 = listOfIntegers.Sum()
-let sum2 = listOfBigIntegers.Sum()
-```
+## <a name="other-remarks"></a>Inne uwagi
 
-W tym kodzie ten sam kod arytmetyczne ogólnego jest stosowany do listy dwa typy bez przeładowanie, definiując rozszerzenia jednego członka.
+Rozszerzenia typu dostępne są także następujące atrybuty:
 
+* Można rozszerzyć dowolny typ, który jest możliwy.
+* Rozszerzenia typu wewnętrzne i opcjonalnych można zdefiniować _wszelkie_ typ elementu członkowskiego, nie tylko metody. Dlatego właściwości rozszerzenia są również możliwe, na przykład.
+* `self-identifier` Tokenu w [składni](type-extensions.md#syntax) reprezentuje wystąpienie tego typu wywoływany, podobnie jak zwykłych członków.
+* Rozszerzone członkowie mogą być statyczne lub wystąpieniami elementów członkowskich.
+* Zmienne typu rozszerzenia typu musi być zgodna ograniczenia zadeklarowanym typem.
 
-## <a name="see-also"></a>Zobacz też
+Dla typu rozszerzenia dostępne są także następujące ograniczenia:
+
+* Typ rozszerzenia nie obsługują wirtualne ani abstrakcyjne.
+* Rozszerzenia typu nie obsługują zastąpienie metody jako rozszerzenia.
+* Typ rozszerzenia nie obsługują [statycznie rozwiązywanych parametrach typu](generics/statically-resolved-type-parameters.md).
+* Opcjonalne rozszerzenia typu nie obsługują konstruktory jako rozszerzenia.
+* Rozszerzenia typu nie może być zdefiniowana w [skróty typów](type-abbreviations.md).
+* Rozszerzenia typu nie są prawidłowe dla `byref<'T>` (chociaż może być deklarowane).
+* Rozszerzenia typu jest nieprawidłowa dla atrybutów (chociaż może być deklarowane).
+* Można zdefiniować rozszerzenia, które przeciążać inne metody o tej samej nazwie, ale kompilator F # preferuje metod bez rozszerzeń w przypadku wywołania niejednoznacznego.
+
+Na koniec Jeśli istnieje wiele rozszerzeń typu wewnętrznego dla jednego typu, wszystkie elementy członkowskie muszą być unikatowe. Dla opcjonalnych rozszerzeń typów elementy członkowskie w innych rozszerzeniach typów tego samego typu mogą mieć tej samej nazwy. Dwuznaczne błędy występują tylko wtedy, gdy kod klienta otwiera dwa różne zakresy definiujące te same nazwy składników.
+
+## <a name="see-also"></a>Zobacz także
+
 [Dokumentacja języka F#](index.md)
 
 [Elementy członkowskie](members/index.md)

@@ -19,10 +19,10 @@ ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 114d24c1fc523d5501deb4aa17f9541c5a918276
-ms.sourcegitcommit: 7fe772c6c05a982153655d618c826e9839d39cac
+ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
+ms.lasthandoff: 08/14/2018
 ms.locfileid: "33574650"
 ---
 # <a name="writing-custom-attributes"></a>Wpisywanie atrybutów niestandardowych

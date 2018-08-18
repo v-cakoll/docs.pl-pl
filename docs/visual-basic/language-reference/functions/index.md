@@ -13,10 +13,10 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33595930"
 ---
 # <a name="functions-visual-basic"></a>Funkcje (Visual Basic)
-Tematy w tej sekcji zawierają tabele funkcji Członkowskich środowiska wykonawczego Visual Basic.  
+Tematy w tej sekcji zawierają tabele funkcji członkowskich środowiska wykonawczego Visual Basic.  
   
 > [!NOTE]
->  Można również tworzyć funkcje i połączeń telefonicznych z nimi. Aby uzyskać więcej informacji, zobacz [instrukcji Function](../../../visual-basic/language-reference/statements/function-statement.md) i [porady: Tworzenie procedury, która zwraca wartość](../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-procedure-that-returns-a-value.md).  
+>  Można również tworzyć funkcje i wywoływać je. Aby uzyskać więcej informacji, zobacz [instrukcja Function](../../../visual-basic/language-reference/statements/function-statement.md) i [porady: tworzenie procedury, która zwraca wartość](../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-procedure-that-returns-a-value.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Funkcje konwersji](../../../visual-basic/language-reference/functions/conversion-functions.md)  

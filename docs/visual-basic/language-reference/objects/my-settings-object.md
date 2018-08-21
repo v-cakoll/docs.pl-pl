@@ -18,18 +18,18 @@ ms.locfileid: "33603035"
 Udostępnia właściwości i metody dostępu do ustawień aplikacji.  
   
 ## <a name="remarks"></a>Uwagi  
- Obiekt `My.Settings` zapewnia dostęp do ustawień aplikacji i pozwala dynamicznie zapisywać i pobierać ustawienia właściwości i inne informacje dotyczące aplikacji. Aby uzyskać więcej informacji, zobacz [Zarządzanie ustawieniami aplikacji (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
+ Obiekt `My.Settings` zapewnia dostęp do ustawień aplikacji i pozwala dynamicznie zapisywać oraz pobierać ustawienia właściwości i inne informacje dotyczące aplikacji. Aby uzyskać więcej informacji, zobacz [Zarządzanie ustawieniami aplikacji (.NET)](/visualstudio/ide/managing-application-settings-dotnet).
   
 ## <a name="properties"></a>Właściwości  
  Właściwości obiektu `My.Settings` zapewniają dostęp do ustawień aplikacji. Aby dodać lub usunąć ustawienia, należy użyć **projektanta ustawień**.  
   
- Każde ustawienie ma **nazwę**, **typ**, **zakres**, i **wartość**, i te ustawienia określają, jak pojawia się właściwość dostępu do każdego ustawienia w obiekcie `My.Settings`:  
+ Każde ustawienie ma **nazwę**, **typ**, **zakres** i **wartość**. Ustawienia te określają, jak właściwość dostępu do każdego ustawienia wyświetla się w obiekcie `My.Settings`: 
   
 -   **Nazwa** Określa nazwę właściwości.  
   
 -   **Typ** Określa typ właściwości.  
   
--   **Zakres** wskazuje, czy właściwość jest tylko do odczytu. Jeśli wartością jest **aplikacja**, właściwość jest tylko do odczytu; jeśli wartością jest **użytkownik**, ta właściwość jest do odczytu / zapisu.  
+-   **Zakres** wskazuje, czy właściwość jest tylko do odczytu. Jeśli wartością jest **aplikacja**, właściwość jest tylko do odczytu. Jeśli wartością jest **użytkownik**, ta właściwość jest do odczytu i zapisu. 
   
 -   **Wartość** jest wartością domyślną właściwości.  
   
@@ -43,21 +43,21 @@ Udostępnia właściwości i metody dostępu do ustawień aplikacji.
  Obiekt `My.Settings` udostępnia zaawansowane właściwości i metody odziedziczone z klasy <xref:System.Configuration.ApplicationSettingsBase>.  
   
 ## <a name="tasks"></a>Zadania  
- W poniższej tabeli przedstawiono przykłady dotyczące zadań obiektu `My.Settings`.  
+ W poniższej tabeli przedstawiono przykłady zadań z obiektem `My.Settings`.
   
 |Zadanie|Zobacz|  
 |---|---|  
-|Odczyt ustawień aplikacji|[Porady: odczytywanie ustawień aplikacji w języku Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
+|Odczyt ustawienia aplikacji|[Porady: odczytywanie ustawień aplikacji w języku Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|
 |Zmiana ustawienia użytkownika|[Porady: zmiana ustawień użytkownika w języku Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
 |Utrwalanie ustawień użytkownika|[Porady: utrwalanie ustawień użytkownika w języku Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
 |Tworzenie siatki właściwości dla ustawień użytkownika|[Porady: tworzenie siatek właściwości dla ustawień użytkownika w języku Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie wyświetlono wartość ustawienia `Nickname`.  
+ W tym przykładzie jest wyświetlana wartość ustawienia `Nickname`.
   
  [!code-vb[VbVbalrMyResources#14](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-settings-object_1.vb)]  
   
- Aby ten przykład zadziałał, aplikacja musi mieć ustawienie `Nickname` typu `String`.  
+ Aby ten przykład działał, aplikacja musi mieć ustawienie `Nickname` typu `String`.
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Configuration.ApplicationSettingsBase>  

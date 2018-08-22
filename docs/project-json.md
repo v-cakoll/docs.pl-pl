@@ -1,5 +1,5 @@
 ---
-title: "pliku Project.JSON i programu Visual Studio 2015 z platformą .NET Core"
+title: "Plik project.json i program Visual Studio 2015 z platformą .NET Core"
 description: "Gdzie można znaleźć w dokumentacji wersji wstępnej narzędzi dla platformy .NET Core i ASP.NET Core (pliku project.json i programu Visual Studio 2015)."
 keywords: Project.JSON, programu Visual Studio 2015, .NET Core, platformy ASP.NET Core
 author: mairaw
@@ -15,25 +15,25 @@ ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 10/18/2017
 ---
-# <a name="projectjson-and-visual-studio-2015-with-net-core"></a>pliku Project.JSON i programu Visual Studio 2015 z platformą .NET Core
+# <a name="projectjson-and-visual-studio-2015-with-net-core"></a>Plik project.json i program Visual Studio 2015 z platformą .NET Core
 
-Na 7 marca 2017 dokumentacji platformy .NET Core i ASP.NET Core został zaktualizowany na potrzeby wersji programu Visual Studio 2017 r. Używać poprzedniej wersji dokumentacji programu Visual Studio 2015 i narzędzi wersji wstępnej na podstawie *project.json* pliku.
+7 marca 2017 r. dokumentacja platform .NET Core i ASP.NET Core została zaktualizowana w związku z wydaniem programu Visual Studio 2017. Poprzednia wersja dokumentacji dotyczyła programu Visual Studio 2015 oraz przedpremierowych narzędzi na podstawie pliku *project.json*.
 
-Wersja dokumentacji z przed 7 marca aktualizacji jest dostępna w pliku PDF i w gałęzi w repozytorium dokumentacji.
+Wersja dokumentacji sprzed aktualizacji 7 marca jest dostępna w formacie PDF i w odpowiedniej gałęzi w repozytorium dokumentacji.
 
 ## <a name="pdf-files"></a>Pliki PDF
 
-Najlepszym źródłem dokumentacji wcześniejszych jest plików PDF:
+Najlepszym źródłem starszej dokumentacji są pliki PDF:
 
-* [Oprogramowanie .NET core - PDF do pliku project.json i programu Visual Studio 2015](https://github.com/dotnet/docs/blob/project.json/net-core-project-json.pdf)
-* [Platformy ASP.NET Core - PDF do pliku project.json i programu Visual Studio 2015](https://github.com/aspnet/Docs/blob/master/aspnetcore/common/_static/aspnet-core-project-json.pdf)
+* [Platforma .NET Core — dokument PDF dotyczący pliku project.json i programu Visual Studio 2015](https://github.com/dotnet/docs/blob/project.json/net-core-project-json.pdf)
+* [Platforma ASP.NET Core — dokument PDF dotyczący pliku project.json i programu Visual Studio 2015](https://github.com/aspnet/Docs/blob/master/aspnetcore/common/_static/aspnet-core-project-json.pdf)
 
-## <a name="documentation-repository-branch"></a>Dokumentacja gałęzi repozytorium
+## <a name="documentation-repository-branch"></a>Gałąź repozytorium dokumentacji
 
-Starszą wersję dokumentacji można wyświetlić w repozytorium, ale wiele połączeń nie będą działać i wielu fragmentów kodu są odwołania, które nie są rozwinięte.
+Starszą wersję dokumentacji można wyświetlić w repozytorium, ale wiele linków nie będzie działać. Ponadto wiele fragmentów kodu jest odwołaniami, których nie można rozwinąć.
 
-* [Oprogramowanie .NET core - project.json gałęzi w repozytorium dokumentacji](https://github.com/dotnet/docs/tree/project.json/docs)
-* [Platformy ASP.NET Core - project.json gałęzi w repozytorium dokumentacji](https://github.com/aspnet/Docs/tree/project.json/aspnetcore)
+* [Platforma .NET core — gałąź project.json w repozytorium dokumentacji](https://github.com/dotnet/docs/tree/project.json/docs)
+* [Platforma ASP.NET Core — gałąź project.json w repozytorium dokumentacji](https://github.com/aspnet/Docs/tree/project.json/aspnetcore)
 
 ## <a name="current-version-of-the-documentation"></a>Bieżąca wersja dokumentacji
 

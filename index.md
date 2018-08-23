@@ -62,7 +62,7 @@ ms.locfileid: "39227961"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>Dokumentacja interfejsów API programu .NET Framework</h3>
+                                    <h3>Dokumentacja interfejsów API platformy .NET Framework</h3>
                                 </div>
                             </div>
                         </div>
@@ -112,7 +112,7 @@ ms.locfileid: "39227961"
                                                 <h3><a href="/dotnet/core">Przewodnik platformy .NET Core</a></h3>
                                                 <p><a href="/dotnet/core/get-started">Wprowadzenie</a></p>
                                                 <p><a href="/dotnet/core/tutorials">Samouczki</a></p>
-                                                <p><a href="/dotnet/core/porting">Przenoszenie z programu .NET Framework</a></p>
+                                                <p><a href="/dotnet/core/porting">Przenoszenie z platformy .NET Framework</a></p>
                                                 <p><a href="/aspnet/core/getting-started">ASP.NET Core</a></p>
                                                 <p><a href="/ef/core/index">EF Core</a></p>
                                             </div>
@@ -241,7 +241,7 @@ ms.locfileid: "39227961"
                             <li class="fullSpan">
                                 <div class="container footer">
                                     <p><a href="https://github.com/dotnet/Docs/blob/master/CONTRIBUTING.md">Współtworzenie dokumentacji i przykładów dotyczących platformy .NET</a></p>
-                                    <p><a href="/dotnet/project-json">Znajdź wersję programu Visual Studio 2015/pliku project.json dokumentacji</a></p>
+                                    <p><a href="/dotnet/project-json">Znajdź wersję dokumentacji Visual Studio 2015/project.json</a></p>
                                 </div>
                             </li>
                         </ul>

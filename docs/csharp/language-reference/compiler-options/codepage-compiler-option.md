@@ -8,15 +8,15 @@ helpviewer_keywords:
 - codepage compiler option [C#]
 - -codepage compiler option [C#]
 ms.assetid: 75942989-b69a-4308-90a0-840c73d2c478
-ms.openlocfilehash: 04a0d3a62ebd2b3a938445995725994d72d5bd4a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 615160088ee3a884919628152f153bd34c81b8a9
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216928"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42755070"
 ---
 # <a name="-codepage-c-compiler-options"></a>-codepage (opcje kompilatora C#)
-Ta opcja określa, które stronę kodową do używania podczas kompilacji, jeśli wymagane strony nie jest bieżącym domyślna strona kodowa systemu.  
+Ta opcja określa, które stronę kodową do użycia podczas kompilacji, jeśli strona wymagany jest bieżący domyślną stroną kodową systemu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,14 +26,14 @@ Ta opcja określa, które stronę kodową do używania podczas kompilacji, jeśl
   
 ## <a name="arguments"></a>Argumenty  
  `id`  
- Identyfikator strony kodowej do użycia dla wszystkich plików kodu źródłowego w kompilacji.  
+ Identyfikator stronę kodową dla wszystkich plikach kodu źródłowego w kompilacji.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli kompilacja jeden lub więcej plików kodu źródłowego, które nie zostały utworzone do użycia na domyślną stronę kodową na komputerze, możesz użyć **- codepage** opcję, aby określić stronę kodową, która będzie używana. **-codepage** ma zastosowanie do wszystkich plików kodu źródłowego w sieci kompilacji.  
+ Jeśli kompilujesz jeden lub więcej plików kodu źródłowego, które nie zostały utworzone do użycia z domyślną stroną kodową na komputerze, możesz użyć **- strona kodowa** opcję, aby określić, stronę kodową, która będzie używana. **-codepage** ma zastosowanie do wszystkich plikach kodu źródłowego w kompilacji.  
   
- Jeśli zostały utworzone pliki kodu źródłowego za pomocą tego samego stronę kodową, która działa na komputerze lub jeśli pliki kodu źródłowego zostały utworzone z UNICODE lub UTF-8, należy stosować **- codepage**.  
+ Jeśli pliki kodu źródłowego zostały utworzone za pomocą tej samej strony kodowej, która działa na komputerze lub w plikach kodu źródłowego zostały utworzone przy użyciu standardu UNICODE lub UTF-8, należy stosować **- strona kodowa**.  
   
- Zobacz [GetCPInfo](https://msdn.microsoft.com/library/dd318078(VS.85).aspx) informacji na temat znajdowania które kodu strony są obsługiwane w tym systemie.  
+ Zobacz [GetCPInfo](/windows/desktop/api/winnls/nf-winnls-getcpinfo) informacji na temat można znaleźć kodu strony są obsługiwane w systemie.  
   
  Ta opcja kompilatora jest niedostępna w programie Visual Studio i nie można zmienić programowo.  
   

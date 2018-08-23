@@ -10,77 +10,77 @@ helpviewer_keywords:
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
 manager: douge
-ms.openlocfilehash: 2c73ccd75bdbd1298371921bababa87ba4520495
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5de4c90361033df603bb63fbb365514d6bb5ea0c
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518053"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752272"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>Porady: debugowanie aplikacji usług systemu Windows
-Usługa musi być uruchamiane w kontekście Menedżera sterowania usługami, a nie z poziomu programu Visual Studio. Z tego powodu debugowania usługi nie jest równie proste jak debugowanie różnych typów aplikacji Visual Studio. Aby debugować usługi, należy uruchomić usługę i następnie dołączyć do procesu, w którym jest uruchomiony. Można następnie Debuguj aplikację przy użyciu wszystkich standardowych funkcji debugowania programu Visual Studio.  
+Usługa musi być uruchamiane w kontekście Menedżera sterowania usługami, a nie z poziomu programu Visual Studio. Z tego powodu debugowanie usługi jest tak proste jak debugowanie innych typów aplikacji Visual Studio. Aby debugować usługę, należy uruchomić usługę i następnie dołączyć debuger do procesu, w którym jest uruchomiony. Następnie można debugować aplikację za pomocą wszystkich standardowych funkcji debugowania programu Visual Studio.  
   
 > [!CAUTION]
->  Należy nie dołączyć procesu, jeśli nie masz pewności, co proces jest i konsekwencje związane z a prawdopodobnie skasowanie tego procesu. Na przykład jeśli dołączyć do procesu logowania do systemu Windows, a następnie zatrzymać debugowanie, system zostanie zatrzymany, ponieważ nie może działać bez usługi WinLogon.  
+>  Nie należy dołączać do procesu, chyba że wiesz, co ten proces i rozumiesz, jakie skutki dołączenia i ewentualne skutki zniszczenia tego procesu. Na przykład jeśli dołączyć do procesu WinLogon, a następnie zatrzymasz debugowanie, system zatrzyma się, ponieważ nie może działać bez usługi WinLogon.  
   
- Tylko do uruchomionej usługi można dołączyć debugera. Przerywa proces załącznika bieżącego działania usługi; faktycznie nie zatrzymać lub wstrzymać przetwarzania usługi. Oznacza to jeśli usługa jest uruchomiona, po rozpoczęciu debugowania, jest nadal technicznie w stanie uruchomiono jego debugowania, ale jego przetwarzanie zostało zawieszone.  
+ Można dołączyć debuger, tylko do czynnej usługi. Proces załącznika przerywa bieżące działanie usługi; faktycznie nie zatrzymać lub wstrzymać przetwarzania usługi. Oznacza to jeśli usługa jest uruchomiona, po rozpoczęciu debugowania, jest technicznie nadal w stanie uruchomiona podczas jej debugowania, ale jej przetwarzanie jest wstrzymane.  
   
- Po dołączeniu do procesu, można ustawić punktów przerwania i ich używać do debugowania kodu. Po zamknięciu okna dialogowego, który służy do dołączania do procesu jesteś skutecznie w trybie debugowania. W Menedżerze sterowania usługami umożliwia uruchamianie, zatrzymywanie, wstrzymywanie i kontynuować usługi, w związku z tym naciśnięcie punktów przerwania ustawionych. Później można usunąć tej usługi fikcyjny po debugowania zakończy się pomyślnie.  
+ Po dołączeniu do procesu, możesz ustawić punkty przerwania i ich użyć do debugowania kodu. Po zamknięciu okna dialogowego, które służy do dołączania do procesu, jesteś w trybie debugowania. Aby uruchomić, zatrzymać, wstrzymać lub kontynuować usługę, w tym samym osiągając ustawione punkty przerwania, można użyć Menedżera sterowania usługami. Po pomyślnym debugowaniu, można później usunąć tę fikcyjną usługę.  
   
- W tym artykule omówiono debugowania to usługa, która jest uruchomiona na komputerze lokalnym, ale również można debugować usług systemu Windows, które są uruchomione na komputerze zdalnym. Zobacz [zdalnego debugowania](/visualstudio/debugger/debug-installed-app-package).  
+ W tym artykule opisano profilowanie to usługa, która jest uruchomiona na komputerze lokalnym, ale można również debugować usług Windows, które są uruchomione na komputerze zdalnym. Zobacz [zdalne debugowanie](/visualstudio/debugger/debug-installed-app-package).  
   
 > [!NOTE]
->  Debugowanie <xref:System.ServiceProcess.ServiceBase.OnStart%2A> metoda może być trudne, ponieważ Menedżera sterowania usługami związany z ograniczeniem 30 sekund na wszystkie próby uruchomienia usługi. Aby uzyskać więcej informacji, zobacz [Rozwiązywanie problemów: debugowanie usług systemu Windows](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).  
+>  Debugowanie <xref:System.ServiceProcess.ServiceBase.OnStart%2A> metoda może być trudne, ponieważ Menedżera sterowania usługami nakłada limit 30-sekundowy na wszystkie próby uruchomienia usługi. Aby uzyskać więcej informacji, zobacz [Rozwiązywanie problemów: debugowanie usług Windows](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).  
   
 > [!WARNING]
->  Aby uzyskać przydatne informacje dotyczące debugowania, debuger programu Visual Studio musi znaleźć pliki symboli dla danych binarnych, które są debugowane. Jeśli debugujesz usługi, które zostały utworzone w programie Visual Studio, plików symboli (.pdb, pliki) znajdują się w tym samym folderze co plik wykonywalny lub biblioteka i debuger ładuje je automatycznie. Jeśli usługa, która nie kompilacji debugowania, należy najpierw odnaleźć symboli dla usługi i upewnij się, że są one przez debuger. Zobacz [Określ symboli (.pdb) i pliki źródłowe](http://msdn.microsoft.com/library/1105e169-5272-4e7c-b3e7-cda1b7798a6b). Jeśli debugowanie procesów systemowych lub mają symboli dla wywołań systemowych w usługach, należy dodać serwerów symboli firmy Microsoft. Zobacz [symbole debugowania](http://msdn.microsoft.com/windows/desktop/ee416588.aspx).  
+>  Aby uzyskać istotne informacje dotyczące debugowania, debuger programu Visual Studio musi znaleźć pliki symboli dla plików binarnych, które są debugowane. Jeśli debugujesz to usługa, która jest wbudowana w programie Visual Studio, plików symboli (pliki .pdb) znajdują się w tym samym folderze co plik wykonywalny lub biblioteka i debuger ładuje je automatycznie. Jeśli debugujesz usługa, która nie została skompilowana, należy najpierw Znajdź symbole dla usługi i upewnij się, że są one przez debuger. Zobacz [Określ symboli (.pdb) i pliki źródłowe](http://msdn.microsoft.com/library/1105e169-5272-4e7c-b3e7-cda1b7798a6b). Jeśli debugowanie procesów systemowych lub mają symbole dla wywołania systemowe w usługach, należy dodać serwery symboli firmy Microsoft. Zobacz [symboli debugowania](/windows/desktop/DxTechArts/debugging-with-symbols).  
   
-### <a name="to-debug-a-service"></a>Aby debugować usługi  
+### <a name="to-debug-a-service"></a>Aby debugować usługę  
   
 1.  Tworzenie usługi w konfiguracji debugowania.  
   
-2.  Zainstaluj usługi. Aby uzyskać więcej informacji, zobacz [porady: Instalowanie i odinstalowywanie usług](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
+2.  Zainstaluj swoje usługi. Aby uzyskać więcej informacji, zobacz [porady: Instalowanie i odinstalowywanie usług](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
   
-3.  Uruchomić usługę, albo z **Menedżera sterowania usługami**, **Eksploratora serwera**, lub z kodu. Aby uzyskać więcej informacji, zobacz [porady: Uruchom usługi](../../../docs/framework/windows-services/how-to-start-services.md).  
+3.  Uruchom usługę z **Menedżera sterowania usługami**, **Eksploratora serwera**, lub z kodu. Aby uzyskać więcej informacji, zobacz [porady: uruchamianie usług](../../../docs/framework/windows-services/how-to-start-services.md).  
   
-4.  Uruchom program Visual Studio przy użyciu poświadczeń administracyjnych, więc można dołączyć do procesów systemowych.  
+4.  Uruchom program Visual Studio przy użyciu poświadczeń administracyjnych, dzięki czemu możesz dołączyć do procesów systemowych.  
   
-5.  (Opcjonalnie) Na pasku menu programu Visual Studio wybierz **narzędzia**, **opcje**. W **opcje** oknie dialogowym wybierz **debugowanie**, **symbole**, wybierz pozycję **serwerów symboli firmy Microsoft** pole wyboru, a następnie wybierz pozycję **OK** przycisku.  
+5.  (Opcjonalnie) Na pasku menu programu Visual Studio, wybierz **narzędzia**, **opcje**. W **opcje** okna dialogowego wybierz **debugowanie**, **symbole**, wybierz opcję **serwery symboli firmy Microsoft** pole wyboru, a następnie wybierz pozycję **OK** przycisku.  
   
-6.  Na pasku menu wybierz **dołączyć do procesu** z **debugowania** lub **narzędzia** menu. (Klawiatury: Ctrl + Alt + P)  
+6.  Na pasku menu wybierz **dołączyć do procesu** z **debugowania** lub **narzędzia** menu. (Klawiatura: Ctrl + Alt + P)  
   
-     **Procesów** zostanie wyświetlone okno dialogowe.  
+     **Procesy** pojawi się okno dialogowe.  
   
 7.  Wybierz **Pokaż procesy wszystkich użytkowników** pole wyboru.  
   
-8.  W **dostępne procesy** sekcji, wybierz proces usługi, a następnie wybierz pozycję **Attach**.  
+8.  W **dostępne procesy** sekcji, wybierz proces danej usługi, a następnie wybierz **Dołącz**.  
   
     > [!TIP]
-    >  Proces ma taką samą nazwę jak plik wykonywalny dla usługi.  
+    >  Proces będzie mieć taką samą nazwę jak plik wykonywalny dla usługi.  
   
-     **Dołączyć do procesu** zostanie wyświetlone okno dialogowe.  
+     **Dołączyć do procesu** pojawi się okno dialogowe.  
   
 9. Wybierz odpowiednie opcje, a następnie wybierz **OK** aby zamknąć okno dialogowe.  
   
     > [!NOTE]
     >  Jesteś teraz w trybie debugowania.  
   
-10. Ustaw wszystkie punkty przerwania, który ma być używany w kodzie.  
+10. Ustaw wszelkie punkty przerwania, którego chcesz użyć w kodzie.  
   
-11. Dostęp do Menedżera sterowania usługami manipulowania Twojej usługi, wysyłania Zatrzymaj, Wstrzymaj i Kontynuuj polecenia trafienie punkty przerwań. Aby uzyskać więcej informacji dotyczących uruchamiania Menedżera kontroli usług, zobacz [porady: Uruchom usługi](../../../docs/framework/windows-services/how-to-start-services.md). Zobacz też [Rozwiązywanie problemów: debugowanie usług systemu Windows](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).  
+11. Dostęp do Menedżera sterowania usługami i manipulowania Twojej usługi, wysyłając polecenia Zatrzymaj, Wstrzymaj i Kontynuuj do punktów przerwania. Aby uzyskać więcej informacji na temat uruchamiania Menedżera sterowania usługami, zobacz [porady: uruchamianie usług](../../../docs/framework/windows-services/how-to-start-services.md). Zobacz też [Rozwiązywanie problemów: debugowanie usług Windows](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).  
   
-## <a name="debugging-tips-for-windows-services"></a>Debugowanie porady dla usług systemu Windows  
- Dołączanie do procesu usługi umożliwia debugowanie najbardziej, ale nie wszystkie kod dla tej usługi. Na przykład, ponieważ usługa została już uruchomiona, nie można debugować kodu w tej usłudze <xref:System.ServiceProcess.ServiceBase.OnStart%2A> metody lub kod w `Main` metodę, która jest używana do załadowania usługi w ten sposób. Jest jednym ze sposobów obejścia tego ograniczenia można utworzyć tymczasowej usługi drugi w aplikacji usługi, który istnieje tylko w celu ułatwienia debugowania. Można zainstalować obie usługi, a następnie uruchom tę usługę fikcyjny załadować procesu usługi. Po rozpoczęciu procesu tymczasowej usługi można użyć **debugowania** menu programu Visual Studio, aby dołączyć do procesu usługi.  
+## <a name="debugging-tips-for-windows-services"></a>Wskazówki dotyczące debugowania dla usług Windows  
+ Dołączanie do procesu usługi pozwala debugować większość, ale nie wszystkie kod dla tej usługi. Na przykład, ponieważ usługa została już uruchomiona, nie można debugować kodu w usłudze <xref:System.ServiceProcess.ServiceBase.OnStart%2A> metody lub kod w `Main` metodę, która jest używana do ładowania usługi w ten sposób. Jednym ze sposobów obejścia tego ograniczenia jest utworzyć tymczasowej drugiej usługi w aplikacji usługi, która istnieje tylko do pomocy w debugowaniu. Można zainstalować obie usługi, a następnie uruchom tę fikcyjną usługę, aby załadować procesu usługi. Po rozpoczęciu procesu tymczasowej usługi można użyć **debugowania** menu w programie Visual Studio, aby dołączyć do procesu usługi.  
   
- Spróbuj dodać wywołania <xref:System.Threading.Thread.Sleep%2A> metodę opóźnienie akcji, dopóki nie możesz dołączyć do procesu.  
+ Spróbuj dodać wywołania <xref:System.Threading.Thread.Sleep%2A> metody akcji opóźniania, dopóki nie można dołączyć do procesu.  
   
- Spróbuj zmienić program w aplikacji konsoli regularne. Aby to zrobić, należy zmodyfikować `Main` w następujący sposób, dlatego można je uruchomić usługi systemu Windows oraz w aplikacji konsoli, w zależności od tego, jak została uruchomiona.  
+ Spróbuj zmienić program w aplikacji konsolowej regularne. Aby to zrobić, napisz ponownie `Main` metody w następujący sposób, dzięki czemu może działać jako usługa Windows i jako aplikację konsolową w języku, w zależności od sposobu uruchamiania.  
   
-#### <a name="how-to-run-a-windows-service-as-a-console-application"></a>Porady: uruchamianie usługi systemu Windows jako aplikacji konsoli  
+#### <a name="how-to-run-a-windows-service-as-a-console-application"></a>Porady: uruchamianie usługi Windows jako aplikację konsolową w języku  
   
-1.  Dodaj metodę z uruchomioną usługą <xref:System.ServiceProcess.ServiceBase.OnStart%2A> i <xref:System.ServiceProcess.ServiceBase.OnStop%2A> metod:  
+1.  Dodaj metodę z uruchomioną usługą <xref:System.ServiceProcess.ServiceBase.OnStart%2A> i <xref:System.ServiceProcess.ServiceBase.OnStop%2A> metody:  
   
-    ```  
+    ```csharp  
     internal void TestStartupAndStop(string[] args)  
     {  
         this.OnStart(args);  
@@ -91,30 +91,31 @@ Usługa musi być uruchamiane w kontekście Menedżera sterowania usługami, a n
   
 2.  Ponowne zapisywanie adresów `Main` metody w następujący sposób:  
   
-    ```  
+    ```csharp  
     static void Main(string[] args)  
-            {  
-                if (Environment.UserInteractive)  
-                {  
-                    MyNewService service1 = new MyNewService(args);  
-                    service1.TestStartupAndStop(args);  
-                }  
-                else  
-                {  
-                    // Put the body of your old Main method here.  
-                }  
+    {  
+        if (Environment.UserInteractive)  
+        {  
+            MyNewService service1 = new MyNewService(args);  
+            service1.TestStartupAndStop(args);  
+        }  
+        else  
+        {  
+            // Put the body of your old Main method here.  
+        }  
+    }
     ```  
   
-3.  W **aplikacji** we właściwościach projektu ustaw **Output typu** do **aplikacji konsoli**.  
+3.  W **aplikacji** na karcie właściwości projektu, ustaw **typ danych wyjściowych** do **aplikację Konsolową**.  
   
 4.  Wybierz **Rozpocznij debugowanie** (F5).  
   
-5.  Aby ponownie uruchomić program jako usługa systemu Windows, należy go zainstalować i uruchomić go w zwykły sposób usługi systemu Windows. Nie jest konieczne, aby odwrócić tych zmian.  
+5.  Aby ponownie uruchomić program jako usługę Windows, należy go zainstalować i uruchomić go w zwykły sposób usługi Windows. Nie jest konieczne zmiany można cofnąć.  
   
- W niektórych przypadkach, takich jak kiedy chcesz debugować problem, który występuje tylko podczas uruchamiania systemu należy użyć debugera systemu Windows. Zainstaluj [narzędzia do debugowania dla systemu Windows](http://msdn.microsoft.com/windows/hardware/hh852365) i zobacz [debugowanie usług systemu Windows](http://support.microsoft.com/kb/824344).  
+ W niektórych przypadkach, np. Jeśli chcesz debugować problem, który występuje tylko podczas uruchamiania systemu należy użyć debugera Windows. Zainstaluj [Debugging Tools for Windows](http://msdn.microsoft.com/windows/hardware/hh852365) zobaczyć [sposób debugowania usług Windows](http://support.microsoft.com/kb/824344).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzenie do aplikacji usług systemu Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
  [Instrukcje: instalowanie i odinstalowywanie usług](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
  [Instrukcje: uruchamianie usług](../../../docs/framework/windows-services/how-to-start-services.md)  
- [Debugowanie usługi](http://msdn.microsoft.com/library/windows/desktop/ms682546.aspx)
+ [Debugowanie usługi](/windows/desktop/Services/debugging-a-service)

@@ -8,50 +8,50 @@ helpviewer_keywords:
 - from clause [C#]
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
-ms.openlocfilehash: e8bb7782fc60a3af20d5926e609a5edea68fd1a3
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 6efcdb720e0d83e69df647c5176feaa9dcc9b023
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027983"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42753999"
 ---
 # <a name="from-clause-c-reference"></a>Klauzula From (odwołanie w C#)
 
-Wyrażenia zapytania musi rozpoczynać się od `from` klauzuli. Ponadto wyrażeniu zapytania może zawierać podzapytaniach, które również rozpoczynać `from` klauzuli. `from` Klauzuli określa następujące elementy:
+Wyrażenie zapytania musi zaczynać się od `from` klauzuli. Ponadto wyrażenie zapytania może zawierać podzapytaniach, które również zaczynają się od `from` klauzuli. `from` Klauzula określa następujące czynności:
 
 - Źródło danych, na którym uruchomiona jest zapytaniu lub podzapytaniu.
 
 - Lokalny *zmiennej zakresu* reprezentujący każdego elementu w sekwencji źródłowej.
 
-Zarówno zmienną zakresu, jak i źródła danych są silnie typizowane. Źródło danych, do którego odwołuje się `from` klauzuli musi mieć typ <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, ani typem pochodnym, takich jak <xref:System.Linq.IQueryable%601>.
+Zmienna zakresu i źródła danych są silnie typizowane. Źródło danych, do którego odwołuje się `from` klauzula musi mieć typ <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, lub typ pochodny, takie jak <xref:System.Linq.IQueryable%601>.
 
-W poniższym przykładzie `numbers` jest źródłem danych i `num` jest zmienną zakresu. Należy pamiętać, że obie zmienne są silnie typizowane nawet za pomocą [var](var.md) słowo kluczowe jest używane.
+W poniższym przykładzie `numbers` jest źródłem danych i `num` jest zmiennej zakresu. Należy pamiętać, że obie zmienne są silnie typizowane mimo [var](var.md) słowo kluczowe jest używane.
 
 [!code-csharp[cscsrefQueryKeywords#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/From.cs#1)]
 
 ## <a name="the-range-variable"></a>Zmienna zakresu
 
-Kompilator wnioskuje typu zmienną zakresu, jeśli źródło danych implementuje <xref:System.Collections.Generic.IEnumerable%601>. Na przykład, jeśli źródłowy ma typ `IEnumerable<Customer>`, następnie zmienna zakresu jest wywnioskowany jako `Customer`. Tylko wtedy, który należy określić typ jawnie jest, gdy źródłem jest inny niż ogólny `IEnumerable` wpisz na przykład <xref:System.Collections.ArrayList>. Aby uzyskać więcej informacji, zobacz [porady: zapytanie w ArrayList za pomocą LINQ](../../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).
+Kompilator wnioskuje typ zmiennej zakresu, gdy źródło danych implementuje <xref:System.Collections.Generic.IEnumerable%601>. Na przykład, jeśli źródło ma typ `IEnumerable<Customer>`, a następnie wywnioskowana jest zmienna zakresu można `Customer`. Jedyną sytuacją, który musi określać typ jawnie jest, gdy źródłem jest nieogólnego `IEnumerable` wpisz na przykład <xref:System.Collections.ArrayList>. Aby uzyskać więcej informacji, zobacz [porady: zapytanie w ArrayList za pomocą LINQ](../../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).
 
-W poprzednim przykładzie `num` jest wartością typu `int`. Ponieważ silnie jest typu zmienną zakresu, można wywoływać metod w nim lub go używać w innych operacji. Na przykład zamiast zapisywania `select num`, można zapisać `select num.ToString()` spowodować wyrażenia zapytania do zwrócenia sekwencję ciągów zamiast liczb całkowitych. Lub można zapisać `select n + 10` spowodować wyrażenie, które ma zwrócić sekwencji 14, 11, 13, 12, 10. Aby uzyskać więcej informacji, zobacz [klauzuli select](select-clause.md).
+W poprzednim przykładzie `num` jest wnioskowany typ `int`. Ponieważ zmienna zakresu zdecydowanie jest wpisane, można wywoływać metody na nim lub używać go w innych operacji. Na przykład zamiast zapisywania `select num`, można napisać `select num.ToString()` spowodować wyrażenia zapytania w celu zwrócenia sekwencji, a nie liczby całkowite. Lub możesz napisać `select n + 10` spowodować wyrażenia w celu zwrócenia sekwencji 14, 11, 13, 12, 10. Aby uzyskać więcej informacji, zobacz [klauzuli select](select-clause.md).
 
-Zmienna zakresu jest podobna do zmiennej iteracji w [foreach](foreach-in.md) instrukcji z wyjątkiem jednego bardzo istotną różnicą: zmienna zakresu nigdy przechowuje dane ze źródła. Go, który właśnie składni wygody umożliwiającą kwerenda Opisz, co ma miejsce, gdy zapytanie jest wykonywane. Aby uzyskać więcej informacji, zobacz [wprowadzenie do kwerend LINQ (C#)](../../programming-guide/concepts/linq/introduction-to-linq-queries.md).
+Zmienna zakresu jest podobna do zmiennej iteracji w [foreach](foreach-in.md) instrukcji, z wyjątkiem jednego bardzo istotną różnicą: zmienną zakresu faktycznie nigdy nie przechowuje dane ze źródła. On po prostu składni wygody umożliwiająca zapytania do opisywania, co ma miejsce, gdy zapytanie jest wykonywane. Aby uzyskać więcej informacji, zobacz [wprowadzenie do zapytań LINQ (C#)](../../programming-guide/concepts/linq/introduction-to-linq-queries.md).
 
-## <a name="compound-from-clauses"></a>Złożone klauzul from
+## <a name="compound-from-clauses"></a>Złożone z klauzul
 
-W niektórych przypadkach każdego elementu w sekwencji źródłowej może sam być albo sekwencji lub zawierać sekwencji. Na przykład źródło danych może być `IEnumerable<Student>` gdzie każdy obiekt uczniów w sekwencji zawiera listę wyniki testów. Dostęp do listy wewnętrzny w ramach każdej `Student` elementu, można użyć złożonego `from` klauzul. Techniki działa jak przy użyciu zagnieżdżone [foreach](foreach-in.md) instrukcje. Możesz dodać [gdzie](partial-method.md) lub [orderby](orderby-clause.md) klauzule albo `from` klauzuli do filtrowania wyników. W poniższym przykładzie przedstawiono sekwencję `Student` obiektów, z których każdy zawiera wewnętrzny `List` liczb całkowitych reprezentujący wyników testów. Dostęp do wewnętrznych listy, użyj związek `from` klauzuli. Możesz wstawić klauzule między nimi `from` klauzule, jeśli to konieczne.
+W niektórych przypadkach każdego elementu w sekwencji źródłowej sam jest sekwencją albo lub zawiera sekwencję. Na przykład źródła danych może być `IEnumerable<Student>` gdzie każdy obiekt dla uczniów w sekwencji zawiera listę wyniki testów. Dostępu do wewnętrznej listy w ramach każdej `Student` elementu, można użyć złożonego `from` klauzul. Technika działa jak przy użyciu zagnieżdżonych [foreach](foreach-in.md) instrukcji. Możesz dodać [gdzie](partial-method.md) lub [orderby](orderby-clause.md) klauzule albo `from` klauzuli do filtrowania wyników. W poniższym przykładzie przedstawiono sekwencję `Student` obiektów, z których każdy zawiera wewnętrzny `List` liczb całkowitych reprezentujących wyników testów. Aby uzyskać dostęp do wewnętrznej listy, należy użyć związek `from` klauzuli. Możesz wstawić klauzule między tymi dwoma `from` klauzul, jeśli to konieczne.
 
 [!code-csharp[cscsrefQueryKeywords#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/From.cs#2)]
 
-## <a name="using-multiple-from-clauses-to-perform-joins"></a>Wykonanie sprzężeń za pomocą wielu klauzul from
+## <a name="using-multiple-from-clauses-to-perform-joins"></a>Wykonywanie sprzężeń za pomocą wielu z klauzul
 
-Związek `from` klauzuli umożliwia dostęp do kolekcji wewnętrznej w pojedynczego źródła danych. Jednak zapytanie może również zawierać wiele `from` klauzule generujących uzupełniające zapytania ze źródeł danych niezależne. Ta technika pozwala na wykonywanie pewnych operacji łączenia, które nie są możliwe przy użyciu [klauzuli join](join-clause.md).
+Związek `from` klauzuli umożliwia dostęp do wewnętrznego kolekcji w jednym źródle danych. Jednak zapytanie może również zawierać wiele `from` klauzul, które generują zapytania uzupełniające ze źródeł danych niezależnych. Ta technika pozwala na wykonywanie pewnych operacji łączenia, która nie jest możliwa przy użyciu [klauzuli join](join-clause.md).
 
-W poniższym przykładzie przedstawiono sposób dwóch `from` klauzule można tworzyć pełne sprzężenie krzyżowe dwóch źródeł danych.
+W poniższym przykładzie pokazano jak dwa `from` klauzule może służyć w celu utworzenia pełne sprzężenie krzyżowe z dwoma źródłami danych.
 
 [!code-csharp[cscsrefQueryKeywords#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/From.cs#3)]
 
-Aby uzyskać więcej informacji na temat operacji łączenia, które używają wielu `from` klauzule, zobacz [wykonaj Lewe sprzężenia zewnętrzne](../../linq/perform-left-outer-joins.md).
+Aby uzyskać więcej informacji na temat operacji łączenia, które używają wielu `from` zdań, zobacz [wykonaj Lewe sprzężenia zewnętrzne](../../linq/perform-left-outer-joins.md).
 
 ## <a name="see-also"></a>Zobacz także
 

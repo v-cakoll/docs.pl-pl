@@ -8,11 +8,11 @@ helpviewer_keywords:
 - typeof keyword [C#]
 ms.assetid: 0c08d880-515e-46bb-8cd2-48b8dd62c08d
 ms.openlocfilehash: 4203b597d7045a13ffed9e61ddbbde57e2113c23
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34171944"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42753986"
 ---
 # <a name="typeof-c-reference"></a>typeof (odwołanie w C#)
 Uzywany do uzyskania obiektu `System.Type` dla typu. Wyrazenie `typeof` ma nastepujaca postac:  
@@ -51,7 +51,7 @@ string s = method.ReturnType.GetInterface
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Type?displayProperty=nameWithType>  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
+ [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
  [is](../../../csharp/language-reference/keywords/is.md)  

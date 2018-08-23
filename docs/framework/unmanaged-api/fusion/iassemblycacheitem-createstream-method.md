@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8057406552525be19f8e6457de9faf841edc6e68
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3a0b3242e8ae29b9d21dc50d3ea0476967e9746f
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429504"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752263"
 ---
 # <a name="iassemblycacheitemcreatestream-method"></a>IAssemblyCacheItem::CreateStream — Metoda
 Tworzy strumień o określonej nazwie i format.  
@@ -48,16 +48,16 @@ HRESULT CreateStream (
  [in] Nazwa strumienia, który ma zostać utworzony.  
   
  `dwFormat`  
- [in] Format pliku, który ma być przesłana strumieniowo.  
+ [in] Format pliku do celów przesyłania strumieniowego.  
   
  `dwFormatFlags`  
- [in] Flagi specyficzne dla formatu zdefiniowane w Fusion.idl.  
+ [in] Zdefiniowane w Fusion.idl flagi specyficzne dla formatu.  
   
  `ppIStream`  
- [out] Wskaźnik do adresu zwracana [IStream](https://msdn.microsoft.com/library/aa380034.aspx) wystąpienia.  
+ [out] Wskaźnik na adres zwracanego [IStream](/windows/desktop/api/objidl/nn-objidl-istream) wystąpienia.  
   
  `puliMaxSize`  
- [w, opcjonalnie] Maksymalny rozmiar strumienia odwołuje się `ppIStream`.  
+ [in, opcjonalny] Maksymalny rozmiar strumienia odwołuje się `ppIStream`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

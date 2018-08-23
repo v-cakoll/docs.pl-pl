@@ -7,63 +7,63 @@ f1_keywords:
 helpviewer_keywords:
 - sealed keyword [C#]
 ms.assetid: 8e4ed5d3-10be-47db-9488-0da2008e6f3f
-ms.openlocfilehash: bd4fe2cfe80930c121a11d03c848b2c4eca152d6
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: be13e04dce12dfb60a1179e05a0a47eca1df1af4
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172126"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42753964"
 ---
 # <a name="sealed-c-reference"></a>sealed (odwołanie w C#)
-Po zastosowaniu do klasy, `sealed` modyfikator uniemożliwia innym klasom dziedziczenie z tego. W poniższym przykładzie klasa `B` dziedziczy z klasy `A`, ale klasa nie może dziedziczyć po klasie `B`.  
+Po zastosowaniu do klasy, `sealed` modyfikator uniemożliwia innych klas z niego dziedziczącego. W poniższym przykładzie klasa `B` dziedziczy z klasy `A`, ale klasa nie może dziedziczyć z klasy `B`.  
   
 ```csharp  
 class A {}      
 sealed class B : A {}  
 ```  
   
- Można również użyć `sealed` modyfikator metoda lub właściwość, która zastępuje metody wirtualnej lub w klasie podstawowej. Dzięki temu można zezwolić klas pochodzi od klasy i uniemożliwić przesłanianie określonej wirtualnej metody lub właściwości.  
+ Można również użyć `sealed` modyfikator metoda lub właściwość, która zastępuje metodę wirtualną lub właściwości w klasie bazowej. Dzięki temu można umożliwić klasy pochodzi od klasy i uniemożliwić zastępowanie konkretnych metod wirtualnych lub właściwości.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie `Z` dziedziczy `Y` , ale `Z` nie może przesłonić funkcji wirtualnej `F` zadeklarowanego w `X` i zapieczętowany w `Y`.  
+ W poniższym przykładzie `Z` dziedziczy `Y` , ale `Z` nie może przesłonić funkcji wirtualnej `F` zadeklarowanego w `X` i zamkniętych w `Y`.  
   
  [!code-csharp[csrefKeywordsModifiers#16](../../../csharp/language-reference/keywords/codesnippet/CSharp/sealed_1.cs)]  
   
- Podczas definiowania nowej metody lub właściwości w klasie, można zapobiec klas pochodnych zastąpieniem przez nie deklarowanie je jako [wirtualnego](../../../csharp/language-reference/keywords/virtual.md).  
+ Definiując nowe metody lub właściwości w klasie, można zapobiec klas pochodnych zastępowania ich nie deklarując je jako [wirtualnego](../../../csharp/language-reference/keywords/virtual.md).  
   
- Jest błędem [abstrakcyjny](../../../csharp/language-reference/keywords/abstract.md) modyfikator z klasy zapieczętowanej, ponieważ klasa abstrakcyjna muszą być dziedziczone przez klasy, która udostępnia implementację metody abstrakcyjne lub właściwości.  
+ Jest to błąd, aby użyć [abstrakcyjne](../../../csharp/language-reference/keywords/abstract.md) modyfikator za pomocą klasy zapieczętowanej ponieważ klasy abstrakcyjnej muszą być dziedziczone przez klasę, która dostarcza implementację metody abstrakcyjne lub właściwości.  
   
  Po zastosowaniu do metody lub właściwości, `sealed` modyfikator zawsze musi być używany z [zastąpienia](../../../csharp/language-reference/keywords/override.md).  
   
- Ponieważ niejawnie są zapieczętowane struktury, nie może być dziedziczona.  
+ Ponieważ struktury niejawnie są zamknięte, nie może być dziedziczona.  
   
  Aby uzyskać więcej informacji, zobacz [dziedziczenia](../../../csharp/programming-guide/classes-and-structs/inheritance.md).  
   
- Aby uzyskać więcej przykładów, zobacz [abstrakcyjne i zapieczętowane klasy oraz członkowie klas](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
+ Aby uzyskać więcej przykładów, zobacz [abstrakcyjnych i zapieczętowanych klas i składowych klasy](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csrefKeywordsModifiers#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/sealed_2.cs)]  
   
- W poprzednim przykładzie możesz spróbować dziedziczona z klasy zapieczętowanej przy użyciu następujących instrukcji:  
+ W poprzednim przykładzie możesz spróbować dziedziczą z klasy zapieczętowanej przy użyciu następujących instrukcji:  
   
  `class MyDerivedC: SealedClass {}   // Error`  
   
  Wynik jest komunikat o błędzie:  
   
- `'MyDerivedC' cannot inherit from sealed class 'SealedClass'.`  
+ `'MyDerivedC': cannot derive from sealed type 'SealedClass'`  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="remarks"></a>Uwagi  
- Aby ustalić, czy zapieczętować klasy, metody lub właściwości, zazwyczaj należy rozważyć następujące dwa punkty:  
+ Aby ustalić, czy ma być Zapieczętuj klasę, metodę lub właściwość, zazwyczaj należy rozważyć następujące dwa punkty:  
   
--   Potencjalnych korzyści, że wyprowadzanie klas może uzyskać za pośrednictwem możliwość dostosowania swojej klasy.  
+-   Potencjalnych korzyści, że wyprowadzanie klas mogą uzyskać za pośrednictwem możliwość dostosowania swojej klasy.  
   
--   Ryzyko, że wyprowadzanie klas może zmodyfikować klas w taki sposób, że będzie już działać poprawnie lub oczekiwano.  
+-   Ryzyko, że wyprowadzanie klas można zmodyfikować klas w taki sposób, że będzie już działać poprawnie lub oczekuje.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
+ [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
  [Klasy statyczne i statyczne elementy członkowskie klas](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)  

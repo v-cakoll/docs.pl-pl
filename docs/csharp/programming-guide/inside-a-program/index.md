@@ -6,14 +6,14 @@ helpviewer_keywords:
 - Visual C#, program structure
 ms.assetid: 9551354b-33f0-4e11-bbf0-1a35e3702b22
 ms.openlocfilehash: b1a6ab513420081ef4629eac93a5b5c568fc57b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339397"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42753932"
 ---
 # <a name="inside-a-c-program"></a>Konstrukcja programu C#
-Sekcji omówiono ogólna struktura programu w języku C# i zawiera standardowe "Hello, World!" przykład.  
+Sekcja w tym artykule omówiono ogólna struktura programu w języku C# i zawiera standardowy "Hello, World!" przykład.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
@@ -27,9 +27,9 @@ Sekcji omówiono ogólna struktura programu w języku C# i zawiera standardowe "
   
 -   [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
   
--   [Odwołanie w C#](../../../csharp/language-reference/index.md)  
+-   [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
   
--   [\<paveover > C# przykładowe aplikacje](http://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
+-   [\<paveover > C# — przykładowe aplikacje](http://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

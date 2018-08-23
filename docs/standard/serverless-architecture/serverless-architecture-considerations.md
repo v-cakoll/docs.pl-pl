@@ -4,12 +4,12 @@ description: Poznaj wyzwania związane z architektury aplikacji bez użycia serw
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 8b0b5241e6bae0bb4c77451e500b6c623c206fbf
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 5f175351cf42f3d9966add72750d64a4efe14e07
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404958"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42754688"
 ---
 # <a name="serverless-architecture-considerations"></a>Zagadnienia dotyczące architektury bezserwerowej
 
@@ -79,7 +79,7 @@ Aby uzyskać więcej informacji, zobacz [Implementowanie wzorca wyłącznika](..
 
 ## <a name="versioning-and-greenblue-deployments"></a>Przechowywanie wersji i zielony i niebieski wdrożeń
 
-Główną zaletą bez użycia serwera jest możliwość uaktualnienia określoną funkcję bez konieczności ponownego wdrożenia całej aplikacji. Dotyczącymi uaktualniania zakończy się powodzeniem funkcje muszą być poddany kontroli wersji, tak, aby je podczas wywoływania usługi są kierowane do poprawnej wersji kodu. Ważne jest również strategię wdrażania nowych wersji. Typowym podejściem jest użycie "zielony i niebieski wdrożeń." Zielonego wdrożenia jest bieżącą funkcję. Nowa wersja "niebieski" jest wdrażana w środowisku produkcyjnym i przetestowany. Podczas testowania przebiegów, wersji zielonego i niebieskiego zostały zamienione, nowa wersja jest dostępna na żywo. Jeśli zostaną napotkane problemy, może być zamienione ponownie. Obsługa wersjonowania i wdrażania zielony i niebieski wymaga kombinacji tworzenia funkcji w celu uwzględnienia zmiany wersji i pracy z platformą bez użycia serwera do obsługi wdrożenia. Jedno z możliwych podejść jest użycie serwerów proxy, które są opisane w [./azure-functions.md](Azure serverless platform) rozdziale.
+Główną zaletą bez użycia serwera jest możliwość uaktualnienia określoną funkcję bez konieczności ponownego wdrożenia całej aplikacji. Dotyczącymi uaktualniania zakończy się powodzeniem funkcje muszą być poddany kontroli wersji, tak, aby je podczas wywoływania usługi są kierowane do poprawnej wersji kodu. Ważne jest również strategię wdrażania nowych wersji. Typowym podejściem jest użycie "zielony i niebieski wdrożeń." Zielonego wdrożenia jest bieżącą funkcję. Nowa wersja "niebieski" jest wdrażana w środowisku produkcyjnym i przetestowany. Podczas testowania przebiegów, wersji zielonego i niebieskiego zostały zamienione, nowa wersja jest dostępna na żywo. Jeśli zostaną napotkane problemy, może być zamienione ponownie. Obsługa wersjonowania i wdrażania zielony i niebieski wymaga kombinacji tworzenia funkcji w celu uwzględnienia zmiany wersji i pracy z platformą bez użycia serwera do obsługi wdrożenia. Jedno z możliwych podejść jest użycie serwerów proxy, które są opisane w [platformy Azure bez użycia serwera](azure-functions.md#proxies) rozdziale.
 
 >[!div class="step-by-step"]
 [Poprzednie](serverless-architecture.md)

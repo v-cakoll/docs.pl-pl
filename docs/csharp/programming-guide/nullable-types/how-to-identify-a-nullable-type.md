@@ -1,51 +1,39 @@
 ---
-title: 'Porady: identyfikowanie typu dopuszczającego wartość zerową (Przewodnik programowania w języku C#)'
-ms.date: 07/20/2015
+title: 'Porady: Identyfikowanie typu dopuszczającego wartość null (C# Programming Guide)'
+description: Dowiedz się, jak ustalić, czy typ jest typ dopuszczający wartość null lub jest wystąpieniem typu dopuszczającego wartość null
+ms.date: 08/06/2018
 helpviewer_keywords:
 - nullable types [C#], identifying
 ms.assetid: d4b67ee2-66e8-40c1-ae9d-545d32c71387
-ms.openlocfilehash: f3ac4ebd77fc92a133eb326919d5ba55264ced97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb7ab2b8c13c2b8b4b6cd60e7959a391cd7e75c1
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333186"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42754959"
 ---
-# <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>Porady: identyfikowanie typu dopuszczającego wartość zerową (Przewodnik programowania w języku C#)
-Można użyć języka C# [typeof](../../../csharp/language-reference/keywords/typeof.md) operatora do utworzenia <xref:System.Type> obiekt, który reprezentuje typ dopuszczający wartość null:  
+# <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>Porady: Identyfikowanie typu dopuszczającego wartość null (C# Programming Guide)
+
+Poniższy przykład pokazuje, jak ustalić, czy <xref:System.Type?displayProperty=nameWithType> wystąpienie reprezentuje typ dopuszczający wartość null:
+
+[!code-csharp-interactive[whether Type is nullable](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#1)]
+
+Jak pokazano w przykładzie, możesz użyć [typeof](../../language-reference/keywords/typeof.md) operatora do utworzenia <xref:System.Type?displayProperty=nameWithType> obiektu.  
   
-```  
-System.Type type = typeof(int?);  
-```  
+Jeśli chcesz określić, czy wystąpienie jest typ dopuszczający wartość null, nie używaj <xref:System.Object.GetType%2A?displayProperty=nameWithType> metodę, aby uzyskać <xref:System.Type> wystąpienia z poprzedniego kodu. Gdy wywołujesz <xref:System.Object.GetType%2A?displayProperty=nameWithType> metody w wystąpieniu typu dopuszczającego wartość null, wystąpienie jest [opakowany](using-nullable-types.md#boxing-and-unboxing) do <xref:System.Object>. Pakowanie instancji innych niż null typu dopuszczającego wartość null jest odpowiednikiem pakowania wartości typu podstawowego <xref:System.Object.GetType%2A> zwraca <xref:System.Type> obiekt, który reprezentuje typ podstawowy elementu typu dopuszczającego wartość null:
+
+[!code-csharp-interactive[GetType example](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#2)]
+
+Nie używaj [jest](../../language-reference/keywords/is.md) operator, aby ustalić, czy wystąpienie jest typu dopuszczającego wartość null. Jak pokazano na poniższym przykładzie, nie rozróżnia typów wystąpień typu dopuszczającego wartość null i jej typ podstawowy przy użyciu `is` operator:
+
+[!code-csharp-interactive[is operator example](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#3)]
+
+Kod przedstawiony w poniższym przykładzie służy do ustalania, czy wystąpienie jest typ dopuszczający wartość null:
+
+[!code-csharp-interactive[whether an instance is of a nullable type](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#4)]
   
- Można również użyć klasy i metody <xref:System.Reflection> przestrzeni nazw, aby wygenerować <xref:System.Type> obiektów, które reprezentują typy dopuszczające wartości zerowe. Jednak Jeśli spróbujesz uzyskać informacji o typie z wartości null zmienne w czasie wykonywania za pomocą <xref:System.Object.GetType%2A> — metoda lub `is` operatora, wynikiem jest <xref:System.Type> obiekt, który reprezentuje typ podstawowy nie Nullable wpisz samej siebie.  
-  
- Wywoływanie `GetType` na typu Nullable typu powoduje, że na opakowanie operacji można wykonać, gdy typ jest niejawnie przekonwertowana na <xref:System.Object>. W związku z tym <xref:System.Object.GetType%2A> zawsze zwraca <xref:System.Type> obiekt, który reprezentuje typ podstawowy typ dopuszczający wartość null.  
-  
-```  
-int? i = 5;  
-Type t = i.GetType();  
-Console.WriteLine(t.FullName); //"System.Int32"  
-```  
-  
- C# [jest](../../../csharp/language-reference/keywords/is.md) operator również działa na typ podstawowy typu Nullable. W związku z tym nie można użyć `is` do ustalenia, czy zmienna jest typu dopuszczającego wartość null. W poniższym przykładzie pokazano, że `is` operator traktuje typu Nullable\<int > zmiennej jako int.  
-  
-```  
-static void Main(string[] args)  
-{  
-  int? i = 5;  
-  if (i is int) // true  
-    //…  
-}  
-```  
-  
-## <a name="example"></a>Przykład  
- Poniższy kod umożliwia określenie, czy <xref:System.Type> obiekt reprezentuje typ dopuszczający wartość null. Należy pamiętać, że ten kod zawsze zwraca wartość false, jeśli `Type` obiektu zwróconego przez wywołanie <xref:System.Object.GetType%2A>, jak opisano wcześniej w tym temacie.  
-  
-```  
-if (type.IsGenericType && type.GetGenericTypeDefinition() == typeof(Nullable<>)) {…}  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Typy dopuszczające wartości null](../../../csharp/programming-guide/nullable-types/index.md)  
- [Konwersja boxing typów dopuszczających wartości null](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)
+## <a name="see-also"></a>Zobacz także
+
+[Typy dopuszczające wartości zerowe](index.md)  
+[Przy użyciu typów dopuszczających wartości zerowe](using-nullable-types.md)  
+<xref:System.Nullable.GetUnderlyingType%2A>  

@@ -1,35 +1,35 @@
 ---
-title: Uwierzytelnianie programu SQL Server
+title: Uwierzytelnianie w programie SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: f2d290d22d27c43cf7fb3250bf7898e8260dce2b
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: 85f441d2181d434ec9fccca5841296106d0d7e3f
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472390"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752316"
 ---
-# <a name="authentication-in-sql-server"></a>Uwierzytelnianie programu SQL Server
-SQL Server obsługuje dwa tryby uwierzytelniania, tryb uwierzytelniania systemu Windows i w trybie mieszanym.  
+# <a name="authentication-in-sql-server"></a>Uwierzytelnianie w programie SQL Server
+SQL Server obsługuje dwa tryby uwierzytelniania, tryb uwierzytelniania Windows i w trybie mieszanym.  
   
--   Uwierzytelnianie systemu Windows jest ustawieniem domyślnym i jest często określany jako zintegrowanych zabezpieczeń, ponieważ ten model zabezpieczeń programu SQL Server jest ściśle zintegrowany z systemem Windows. Określonych kont użytkowników i grup systemu Windows są zaufane logować się do programu SQL Server. Nie masz użytkowników systemu Windows, którzy już zostali uwierzytelnieni do prezentowania dodatkowych poświadczeń.  
+-   Uwierzytelnianie Windows jest ustawieniem domyślnym i jest często określane jako zabezpieczenia zintegrowane ponieważ ten model zabezpieczeń programu SQL Server jest ściśle zintegrowany z programem Windows. Określone konta użytkowników i grup Windows są zaufane do logowania do programu SQL Server. Windows użytkowników, którzy już zostali uwierzytelnieni jest konieczne przedstawić dodatkowych poświadczeń.  
   
--   Tryb mieszany obsługuje uwierzytelnianie zarówno przez system Windows i program SQL Server. Pary nazwy i hasła użytkowników są obsługiwane w programie SQL Server.  
+-   Tryb mieszany obsługuje uwierzytelnianie za pomocą zarówno Windows, jak i przez program SQL Server. Pary nazwy i hasła użytkowników są przechowywane w programie SQL Server.  
   
 > [!IMPORTANT]
->  Firma Microsoft zaleca używanie uwierzytelniania systemu Windows, gdy jest to możliwe. Uwierzytelnianie systemu Windows używa szereg zaszyfrowane wiadomości do uwierzytelniania użytkowników w programie SQL Server. Podczas logowania do programu SQL Server są używane, nazwy logowania programu SQL Server i hasła szyfrowane są przekazywane w sieci, dzięki czemu ich mniej bezpieczne.  
+>  Zaleca się korzystania z uwierzytelniania Windows wszędzie tam, gdzie to możliwe. Uwierzytelnianie Windows przy użyciu szeregu szyfrowanych komunikatów do uwierzytelniania użytkowników w programie SQL Server. Podczas logowania do programu SQL Server są używane, nazwy logowania programu SQL Server i zaszyfrowane hasła są przekazywane za pośrednictwem sieci, co sprawia, że są ich mniej bezpieczna opcja.  
   
- Z uwierzytelnianiem systemu Windows użytkownicy są już zalogowany do systemu Windows i nie trzeba oddzielnie logowania do programu SQL Server. Następujące `SqlConnection.ConnectionString` Określa uwierzytelnianie systemu Windows bez konieczności wprowadzania nazwy użytkownika ani hasła.  
+ Przy użyciu uwierzytelniania Windows użytkowników jest już zalogowany na Windows i nie musisz oddzielnie Zaloguj się do programu SQL Server. Następujące `SqlConnection.ConnectionString` Określa uwierzytelnianie Windows bez konieczności nazwa użytkownika lub hasło.  
   
 ```  
 "Server=MSSQL1;Database=AdventureWorks;Integrated Security=true;  
 ```  
   
 > [!NOTE]
->  Logowania różnią się od użytkowników baz danych. Nazwy logowania lub grupy systemu Windows musi być zamapowany do bazy danych użytkowników lub ról w oddzielnych operacji. Następnie przydziel uprawnienia dla użytkowników lub ról, dostęp do obiektów bazy danych.  
+>  Identyfikatory logowania różnią się od użytkowników bazy danych. Nazwy logowania lub grup Windows musi być mapowane do bazy danych użytkowników lub ról w oddzielnych operacji. Następnie przydziel uprawnienia dla użytkowników lub ról, dostęp do obiektów bazy danych.  
   
 ## <a name="authentication-scenarios"></a>Scenariusze uwierzytelniania  
- Uwierzytelnianie systemu Windows jest zwykle najlepszym rozwiązaniem w następujących sytuacjach:  
+ Uwierzytelnianie Windows jest zwykle najlepszym wyborem w następujących sytuacjach:  
   
 -   Jest kontrolerem domeny.  
   
@@ -43,44 +43,44 @@ SQL Server obsługuje dwa tryby uwierzytelniania, tryb uwierzytelniania systemu 
   
 -   Łączenie użytkowników z innej, niezaufanej domeny.  
   
--   Aplikacje internetowe, takich jak [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
+-   Aplikacje internetowe, takie jak [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
   
 > [!NOTE]
->  Określanie uwierzytelniania systemu Windows nie wyłączać logowania do programu SQL Server. Użyj polecenia ALTER LOGIN Wyłącz [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrukcji, aby wyłączyć uprawnieniach logowania programu SQL Server.  
+>  Określanie uwierzytelniania Windows nie wyłączać logowania programu SQL Server. Użyj polecenia ALTER LOGIN Wyłącz [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrukcję, aby wyłączyć logowania programu SQL Server w uprawnieniach.  
   
 ## <a name="login-types"></a>Typy logowania  
- SQL Server obsługuje trzy typy logowania:  
+ Program SQL Server obsługuje trzy typy danych logowania:  
   
--   Lokalne konto użytkownika systemu Windows lub konto domeny zaufanej. Program SQL Server korzysta z systemu Windows do uwierzytelniania kont użytkowników systemu Windows.  
+-   Lokalne konto użytkownika Windows lub konto domeny zaufanej. Program SQL Server opiera się na Windows do uwierzytelniania kont użytkowników Windows.  
   
--   Grupy systemu Windows. Udzielanie dostępu do grupy systemu Windows daje dostęp do wszystkich logowania użytkownika do systemu Windows, które są elementami członkowskimi grupy.  
+-   Grupa Windows. Udzielanie dostępu do grupy Windows udziela dostępu do wszystkich logowań użytkowników Windows, które są członkami grupy.  
   
--   Logowanie do serwera SQL. Program SQL Server przechowuje zarówno nazwa użytkownika oraz skrót hasła w bazie danych master, przy użyciu metody uwierzytelniania wewnętrznego, aby sprawdzić prób logowania.  
+-   Dane logowania programu SQL Server. SQL Server przechowuje nazwy użytkownika i wartość skrótu hasła w bazie danych master przy użyciu metody uwierzytelniania wewnętrznego, aby sprawdzić prób logowania.  
   
 > [!NOTE]
->  Program SQL Server stanowi logowania utworzone na podstawie certyfikaty lub klucze asymetryczne, które są używane tylko w przypadku podpisywania kodu. Ich nie można nawiązać połączenia z programem SQL Server.  
+>  SQL Server udostępnia logowania utworzone na podstawie certyfikaty lub klucze asymetryczne, które są używane tylko w przypadku podpisywania kodu. One nie można nawiązać połączenia z programem SQL Server.  
   
 ## <a name="mixed-mode-authentication"></a>Uwierzytelnianie w trybie mieszanym  
- Jeśli należy użyć uwierzytelniania w trybie mieszanym, należy utworzyć logowania do programu SQL Server, które są przechowywane w programie SQL Server. Następnie należy podać nazwę użytkownika serwera SQL i hasło w czasie wykonywania.  
+ Jeśli musisz użyć uwierzytelniania w trybie mieszanym, należy utworzyć nazwy logowania programu SQL Server, które są przechowywane w programie SQL Server. Następnie musisz podać nazwę użytkownika programu SQL Server i hasło w czasie wykonywania.  
   
 > [!IMPORTANT]
->  Instaluje program SQL Server z danych logowania SQL Server o nazwie `sa` (skrót od "administrator systemu"). Przypisz silne hasło, aby `sa` logowania i nie używaj `sa` logowania w aplikacji. `sa` Logowania mapowany na `sysadmin` stałej roli serwera, mającej nieodwołalną poświadczeń administracyjnych na całego serwera. Nie ma żadnych limitów w celu potencjalne szkody, jeśli osoba atakująca uzyska dostęp administrator systemu. Wszystkie elementy członkowskie systemu Windows `BUILTIN\Administrators` grupy (grupy administratorów lokalnych) są elementami członkowskimi `sysadmin` roli domyślnie, ale można ją usunąć z tej roli.  
+>  Program SQL Server instaluje się za pomocą identyfikatora logowania programu SQL Server o nazwie `sa` (skrót od "administrator systemu"). Przypisz silne hasło, aby `sa` logowania i nie używaj `sa` logowania w aplikacji. `sa` Identyfikator logowania mapowany na `sysadmin` stałej roli serwera, mającej nieodwołalnej poświadczeń administracyjnych na całego serwera. Nie ma ograniczeń na potencjalne szkody jeśli atakujący uzyska dostęp jako administrator systemu. Wszyscy członkowie Windows `BUILTIN\Administrators` (grupy administratora lokalnego) są elementami członkowskimi `sysadmin` roli domyślnie, ale można je usunąć z tej roli.  
   
- Program SQL Server stanowi mechanizmów zasad haseł systemu Windows dla logowania do programu SQL Server uruchomionej [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] lub nowszy. Zasady złożoności haseł są przeznaczone do ograniczanie ataków siłowych przez odpowiednie zwiększenie liczby możliwych haseł. SQL Server można zastosować te same zasady złożoności i wygaśnięcia używane w [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] do hasła używane w programie SQL Server.  
+ Program SQL Server zapewnia Windows mechanizmy zasad haseł logowania do programu SQL Server, gdy jest uruchomiona na [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] lub nowszy. Zasady dotyczące złożoności haseł są przeznaczone do sądowym ataków siłowych, zwiększając liczbę możliwych haseł. Program SQL Server można zastosować te same zasady złożoności i wygaśnięcia używana w [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] to haseł używanych w programie SQL Server.  
   
 > [!IMPORTANT]
->  Łączenie ciągów połączenia z danych wejściowych użytkownika może sprawić, że użytkownik narażony na atak iniekcji ciągu połączenia. Użyj <xref:System.Data.SqlClient.SqlConnectionStringBuilder> Aby utworzyć parametry połączenia nieprawidłową składnię w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [Konstruktorzy ciągów połączenia](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
+>  Łączenie ciągów połączenia z danych wejściowych użytkownika może sprawić, że użytkownik narażony na atak iniekcji ciąg połączenia. Użyj <xref:System.Data.SqlClient.SqlConnectionStringBuilder> do tworzenia parametrów połączenia nieprawidłową składnię w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [Konstruktorzy parametrów połączeń](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
   
 ## <a name="external-resources"></a>Zasoby zewnętrzne  
  Aby uzyskać więcej informacji zobacz następujące zasoby.  
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Podmioty zabezpieczeń](http://msdn.microsoft.com/library/bb543165.aspx) w dokumentacji SQL Server Books Online|Opisuje logowania i innych podmiotów zabezpieczeń w programie SQL Server.|  
+|[Podmiotów zabezpieczeń](/sql/relational-databases/security/authentication-access/principals-database-engine)|W tym artykule opisano identyfikatory logowania i inne podmioty zabezpieczeń w programie SQL Server.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [Scenariusze zabezpieczeń aplikacji w programie SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
  [Nawiązywanie połączenia ze źródłem danych](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
  [Parametry połączeń](../../../../../docs/framework/data/adonet/connection-strings.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2f0e766a3a310bdb58f7cbffd8d49404eb5e0b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 24ba4b37cc8221df4e018d172996c0910ec07f7d
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459642"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752261"
 ---
 # <a name="getobjecttext-function"></a>Funkcja GetObjectText
 Zwraca tekstową renderowanie obiektu w składni Managed Object Format (MOF).
@@ -42,40 +42,40 @@ HRESULT GetObjectText (
 ## <a name="parameters"></a>Parametry
 
 `vFunc`  
-[in] Ten parametr nie jest używana.
+[in] Ten parametr jest nieużywany.
 
 `ptr`  
-[in] Wskaźnik do [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) wystąpienia.
+[in] Wskaźnik do [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienia.
 
 `lFlags`  
-[in] Zazwyczaj 0. Jeśli `WBEM_FLAG_NO_FLAVORS` (lub 0x1) określono kwalifikatorów są uwzględniane bez informacji o propagację lub wersji.
+[in] Zazwyczaj 0. Jeśli `WBEM_FLAG_NO_FLAVORS` (lub 0x1) jest określony, kwalifikatory to wiąże się z nim informacje propagację lub wersja.
 
 `pstrObjectText`   
-[out] Wskaźnik do `null` zapisu. Zwraca na, nowo przydzielone `BSTR` zawierający renderowania składnią MOF obiektu.  
+[out] Wskaźnik do `null` przy uruchamianiu. Wróć na, nowo przydzielonego `BSTR` zawierający renderowanie składnią MOF obiektu.  
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.h* pliku nagłówka, lub należy je zdefiniować jako stałe w kodzie:
+Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Wystąpił błąd ogólny. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametr jest nieprawidłowy. |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Za mało pamięci jest dostępna do wykonania operacji. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Nie ma wystarczającej ilości pamięci jest dostępny do ukończenia tej operacji. |
 |`WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
   
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zawijana wywołanie [IWbemClassObject::GetObjectText](https://msdn.microsoft.com/library/aa391448(v=vs.85).aspx) metody.
+Ta funkcja zawija wywołanie do [IWbemClassObject::GetObjectText](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getobjecttext) metody.
 
-Tekst MOF zwrócił nie zawiera wszystkich informacji o obiekcie, ale tylko tych informacji dla kompilatora MOF można było ponownie utworzyć obiekt oryginalnego. Na przykład nie propagowany kwalifikatory lub właściwości klasy nadrzędnej są uwzględniane.
+Tekst MOF zwracany nie zawiera wszystkich informacji o obiekcie, ale tylko za mało informacji dla kompilatora MOF można było odtworzyć oryginalnego obiektu. Na przykład nie propagowany kwalifikatory ani właściwości klasy nadrzędnej, są uwzględniane.
 
-Następujący algorytm służy do rekonstrukcji tekst parametry metody:
+Następującego algorytmu jest używana do rekonstrukcji tekst parametry metody:
 
-1. Parametry są z ponownie określoną kolejnością według ich wartości identyfikatora.
-1. Parametry, które są określone jako `[in]` i `[out]` są połączone w jeden parametr.
+1. Z ponownie parametry określoną kolejnością zgodnie z kolejnością ich wartości identyfikatora.
+1. Parametry, które są określone jako `[in]` i `[out]` są łączone w pojedynczy parametr.
  
-`pstrObjectText` musi być wskaźnikiem do `null` po wywołaniu funkcji; nie musi wskazywać na ciąg, który jest prawidłowy przed wywołaniem metody, ponieważ wskaźnik myszy zostanie nie można cofnąć alokacji.
+`pstrObjectText` musi być wskaźnikiem do `null` gdy wywoływana jest funkcja; nie musi wskazywać na ciąg, który jest prawidłowy, przed wywołaniem metody, ponieważ wskaźnik będzie nie można cofnąć alokacji.
 
 ## <a name="requirements"></a>Wymagania  
 **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -85,4 +85,4 @@ Następujący algorytm służy do rekonstrukcji tekst parametry metody:
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
-[Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)
+[Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

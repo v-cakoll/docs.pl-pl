@@ -1,28 +1,28 @@
 ---
-title: My.Computer.Network — Obiekt
+title: My.Computer.Network — obiekt (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Network object
 ms.assetid: 94ddbade-aff1-42f8-a6c8-88b78c28c0db
-ms.openlocfilehash: 542d4af063e48314982f8e3a5c4e265a5ef4166d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ab190dfbb654749845e0824c85118f35522fb6e9
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33596967"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42754287"
 ---
 # <a name="mycomputernetwork-object"></a>My.Computer.Network — Obiekt
-Udostępnia właściwości, zdarzeń i metody interakcji z sieci, do której komputer jest połączony.  
+Udostępnia właściwości, zdarzeń i metod do interakcji z sieci, do której komputer jest połączony.  
   
 ## <a name="remarks"></a>Uwagi  
- Informacje dotyczące metod i właściwości `My.Computer.Network` obiektów, zobacz <xref:Microsoft.VisualBasic.Devices.Network>.  
+ Aby uzyskać informacje dotyczące metod i właściwości obiektu `My.Computer.Network`, zobacz <xref:Microsoft.VisualBasic.Devices.Network>.  
   
- Aby uzyskać więcej informacji, zobacz [wykonywania operacji sieciowych](../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md).  
+ Aby uzyskać więcej informacji, zobacz [przeprowadzania operacji sieciowych](../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md).  
   
 ## <a name="requirements"></a>Wymagania  
  **Namespace:** <xref:Microsoft.VisualBasic.Devices?displayProperty=nameWithType>  
   
- **Klasy:** <xref:Microsoft.VisualBasic.Devices.Network>  
+ **Klasa:** <xref:Microsoft.VisualBasic.Devices.Network>  
   
  **Zestaw:** Visual Basic Runtime Library (w pliku Microsoft.VisualBasic.dll)  
   

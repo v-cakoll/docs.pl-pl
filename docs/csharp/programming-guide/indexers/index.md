@@ -8,50 +8,50 @@ helpviewer_keywords:
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
 ms.openlocfilehash: acc82ca370a71a0469fc543d042da9c279d69fb2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334223"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42753968"
 ---
 # <a name="indexers-c-programming-guide"></a>Indeksatory (Przewodnik programowania w języku C#)
 
-Indeksatory Zezwalaj wystąpienia klasy lub struktury zostać pomyślnie zindeksowane, podobnie jak tablic. Indeksowane wartość można ustawić ani pobrać bez jawnego określenia członka typu lub wystąpienia. Indeksatory przypominać [właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md) z tą różnicą, że ich metod dostępu przyjmować parametrów.  
+Indeksatory umożliwiają wystąpienia klasy lub struktury, które mają być indeksowane, podobnie jak tablice. Indeksowanej wartości można ustawić lub pobrać bez jawne określenie typu lub wystąpienia elementu członkowskiego. Indeksatory przypominają [właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md) z tą różnicą, że ich metod dostępu przyjmują parametry.  
  
- W poniższym przykładzie zdefiniowano klasy ogólnej przy prostego [uzyskać](../../../csharp/language-reference/keywords/get.md) i [ustawić](../../../csharp/language-reference/keywords/set.md) metod dostępu, aby przypisać lub pobrać wartości. `Program` Klasy tworzy wystąpienie tej klasy do przechowywania ciągów.  
+ W poniższym przykładzie zdefiniowano klasę ogólną za pomocą prostego [uzyskać](../../../csharp/language-reference/keywords/get.md) i [ustaw](../../../csharp/language-reference/keywords/set.md) metody dostępu do przypisywania i pobierać wartości. `Program` Klasy tworzy wystąpienie tej klasy do przechowywania ciągów.  
   
  [!code-csharp[indexers#1](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-1.cs)]  
   
 > [!NOTE]
 >  Aby uzyskać więcej przykładów, zobacz [sekcje pokrewne](../../../csharp/programming-guide/indexers/index.md#BKMK_RelatedSections).  
   
-## <a name="expression-body-definitions"></a>Definicje treść wyrażenia  
+## <a name="expression-body-definitions"></a>Definicje treści wyrażenia  
  
-Bardzo często indeksator get lub składać się z jednej instrukcji, która zwraca lub ustawia wartość metody dostępu set. Członkowie zabudowanych wyrażenie zapewniają uproszczoną składnię tego scenariusza. Począwszy od języka C# 6, indeksatora tylko do odczytu można zaimplementować jako zabudowanych wyrażenie elementu członkowskiego, jak przedstawiono na poniższym przykładzie.
+Bardzo często indeksator get lub metody dostępu set składają się z pojedynczej instrukcji, która zwraca lub ustawia wartość. Elementy członkowskie z wyrażeniem zapewniają uproszczoną składnię do obsługi tego scenariusza. Począwszy od C# 6, indeksator tylko do odczytu można zaimplementować jako wyrażeniem w treści elementu członkowskiego, co ilustruje poniższy przykład.
 
 [!code-csharp[indexers#2](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-2.cs)]  
 
-Należy pamiętać, że `=>` wprowadza treść wyrażenia, a `get` — słowo kluczowe nie jest używany. 
+Należy pamiętać, że `=>` wprowadza treści wyrażenia, a `get` — słowo kluczowe nie jest używany. 
 
-Począwszy od C# 7.0, zarówno get, jak i metody dostępu set może być wdrożony jako członków zabudowanych wyrażenia. W takim przypadku zarówno `get` i `set` słowa kluczowe muszą być używane. Na przykład:
+Począwszy od C# 7.0, zarówno get, jak i metody dostępu set mogą być implementowane jako elementy członkowskie z wyrażeniem. W takim przypadku zarówno `get` i `set` należy używać słów kluczowych. Na przykład:
 
 [!code-csharp[indexers#3](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-3.cs)]  
   
 ## <a name="indexers-overview"></a>Omówienie indeksatorów  
   
--   Indeksatory Włącz obiektów do zindeksowania w sposób podobny do tablic.  
+-   Indeksatory Włącz obiekty, które mają być indeksowane w sposób podobny do tablic.  
   
 -   A `get` akcesor zwraca wartość. A `set` akcesor przypisuje wartość.  
   
 -   [To](../../../csharp/language-reference/keywords/this.md) — słowo kluczowe jest używane do definiowania indeksatora.  
   
--   [Wartość](../../../csharp/language-reference/keywords/value.md) — słowo kluczowe jest używane do definiowania przypisywane przez wartość `set` indeksatora.  
+-   [Wartość](../../../csharp/language-reference/keywords/value.md) — słowo kluczowe jest używane do definiowania wartości przypisywane przez `set` indeksatora.  
   
--   Indeksatory nie muszą być indeksowane według całkowitą; jest możesz sposób definiowania mechanizm określonego wyszukiwania.  
+-   Indeksatory nie muszą być indeksowane przez wartość całkowitą; jest do Ciebie sposób definiowania mechanizm określonych wyszukiwania.  
   
 -   Indeksatory mogą być przeciążone.  
   
--   Indeksatory może mieć więcej niż jeden parametr formalny, na przykład podczas uzyskiwania dostępu do tablicą dwuwymiarową.  
+-   Indeksatory może mieć więcej niż jeden parametr formalny, na przykład podczas uzyskiwania dostępu do tablicy dwuwymiarowej.  
   
 ##  <a name="BKMK_RelatedSections"></a> Sekcje pokrewne  
   

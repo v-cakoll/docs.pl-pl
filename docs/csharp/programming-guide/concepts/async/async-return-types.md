@@ -2,12 +2,12 @@
 title: Asynchroniczne typy zwracane (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 02e3cdd433d5d6d4d58667d56592b9fc2bf374c4
-ms.sourcegitcommit: dc02d7d95f1e3efcc7166eaf431b0ec0dc9d8dca
+ms.openlocfilehash: 5ea3ef538bd0e3d74bbdcbd41519ae5041556b7e
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37143560"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42753969"
 ---
 # <a name="async-return-types-c"></a>Asynchroniczne typy zwracane (C#)
 Metody asynchroniczne mogą być zwracane typy:
@@ -33,7 +33,7 @@ W poniższym przykładzie `GetLeisureHours` metoda asynchroniczna `return` instr
 
 Podczas `GetLeisureHours` jest wywoływana z poziomu wyrażenia await w `ShowTodaysInfo` metodę, wyrażenie await pobiera wartość całkowitą (wartość `leisureHours`) jest przechowywana w zadaniu zwrócony przez `GetLeisureHours` metody. Aby uzyskać więcej informacji dotyczących wyrażeń oczekiwania, zobacz [await](../../../../csharp/language-reference/keywords/await.md).  
   
-Można lepiej zrozumieć, jak to się dzieje oddzielając wywołanie `GetLeisureHours` ze stosowania `await`, jak pokazano w poniższym kodzie. Wywołanie metody `TaskOfT_MethodAsync` , która nie jest oczekiwana natychmiast zwraca `Task<int>`, jak można oczekiwać od deklaracji metody. Zadanie zostanie przypisane do `integerTask` zmiennej w przykładzie. Ponieważ `integerTask` jest <xref:System.Threading.Tasks.Task%601>, zawiera on <xref:System.Threading.Tasks.Task%601.Result> właściwości typu `TResult`. W tym przypadku TResult reprezentuje typ liczby całkowitej. Gdy `await` jest stosowany do `integerTask`, wyrażenie czekania zwraca wynik zawartość <xref:System.Threading.Tasks.Task%601.Result%2A> właściwość `integerTask`. Wartość jest przypisywana do `result2` zmiennej.  
+Można lepiej zrozumieć, jak to się dzieje oddzielając wywołanie `GetLeisureHours` ze stosowania `await`, jak pokazano w poniższym kodzie. Wywołanie metody `GetLeisureHours` , która nie jest oczekiwana natychmiast zwraca `Task<int>`, jak można oczekiwać od deklaracji metody. Zadanie zostanie przypisane do `infoTask` zmiennej w przykładzie. Ponieważ `infoTask` jest <xref:System.Threading.Tasks.Task%601>, zawiera on <xref:System.Threading.Tasks.Task%601.Result> właściwości typu `TResult`. W tym przypadku `TResult` reprezentuje typ liczby całkowitej. Gdy `await` jest stosowany do `infoTask`, wyrażenie czekania zwraca wynik zawartość <xref:System.Threading.Tasks.Task%601.Result%2A> właściwość `infoTask`. Wartość jest przypisywana do `ret` zmiennej.  
   
 > [!IMPORTANT]
 >  <xref:System.Threading.Tasks.Task%601.Result%2A> Właściwość jest właściwością blokowania. Jeśli spróbujesz się do niej dostęp przed zakończeniem jej zadania, wątek, który jest obecnie aktywny jest zablokowany do momentu ukończenia zadania i wartość jest dostępna. W większości przypadków należy dostęp do wartości przy użyciu `await` zamiast bezpośrednio dostęp do właściwości. <br/> Poprzedni przykład pobrać wartość <xref:System.Threading.Tasks.Task%601.Result%2A> właściwości do blokowania wątku głównego, aby `ShowTodaysInfo` metoda może zakończyć wykonywania przed aplikacji zakończył się.  
@@ -49,7 +49,7 @@ W poniższym przykładzie `WaitAndApologize` metoda asynchroniczna nie zawiera `
   
 `WaitAndApologize` jest oczekiwane, za pomocą instrukcji await, a nie wyrażenia await, podobnie do instrukcji wywołujące na metodę asynchroniczną zwracającą typ void. W tym przypadku zastosowanie operatora await nie generuje wartości.  
   
-Jak w poprzednim <xref:System.Threading.Tasks.Task%601> przykład, można oddzielić wywołanie `Task_MethodAsync` z aplikacji operatora await, jak poniższy kod przedstawia. Jednak należy pamiętać, że `Task` nie ma `Result` właściwość i że wartość nie jest generowany, gdy await operator jest stosowany do `Task`.  
+Jak w poprzednim <xref:System.Threading.Tasks.Task%601> przykład, można oddzielić wywołanie `WaitAndApologize` z aplikacji operatora await, jak poniższy kod przedstawia. Jednak należy pamiętać, że `Task` nie ma `Result` właściwość i że wartość nie jest generowany, gdy await operator jest stosowany do `Task`.  
   
 Poniższy kod oddziela wywoływanie metody `WaitAndApologize` metody z Oczekujące na zadanie, które zwraca metoda.  
  

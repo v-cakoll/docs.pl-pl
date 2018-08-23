@@ -8,12 +8,12 @@ helpviewer_keywords:
 - parameters [C#], params
 - params keyword [C#]
 ms.assetid: 1690815e-b52b-4967-8380-5780aff08012
-ms.openlocfilehash: d7e0094d0f60aa201ae7229983f3e4b9764d2cbc
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 692c2f61ae99f1c1c8e04a5a1bcad08814d286fe
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960198"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42753953"
 ---
 # <a name="params-c-reference"></a>params (odwołanie w C#)
 Za pomocą `params` — słowo kluczowe, można określić [parametru metody](../../../csharp/language-reference/keywords/method-parameters.md) która przyjmuje zmienną liczbę argumentów.  
@@ -21,6 +21,8 @@ Za pomocą `params` — słowo kluczowe, można określić [parametru metody](..
  Możesz wysłać rozdzielana przecinkami lista argumentów o typie określonym w deklaracji parametrów lub tablice argumentów określonego typu. Możesz również wysłać bez argumentów. Jeśli wyślesz żadnych argumentów, długość `params` listy wynosi zero.  
   
  Żadne dodatkowe parametry są dozwolone po `params` — słowo kluczowe w deklaracji metody i tylko jeden `params` słowo kluczowe jest dozwolone w deklaracji metody.  
+ 
+ Deklarowany typ `params` parametr musi być tablicy jednowymiarowej, co ilustruje poniższy przykład. W przeciwnym razie błąd kompilatora [CS0225](../../../csharp/misc/cs0225.md) występuje.
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano różne sposoby, w których argumenty mogą być wysyłane do `params` parametru.  

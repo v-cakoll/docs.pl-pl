@@ -1,6 +1,6 @@
 ---
-title: Wiersz polecenia dla programu Visual Studio deweloperów
-ms.date: 06/18/2018
+title: Wiersz polecenia programisty dla programu Visual Studio
+ms.date: 08/14/2018
 helpviewer_keywords:
 - command prompt, Windows SDK
 - Visual Studio command prompt
@@ -12,83 +12,83 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8e64facffd4face929b28d660ffd5210f127c3bd
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 4c95074190419dd3e984c7659ede917b83b97f08
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36315228"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752280"
 ---
-# <a name="developer-command-prompt-for-visual-studio"></a>Wiersz polecenia dla programu Visual Studio deweloperów
+# <a name="developer-command-prompt-for-visual-studio"></a>Wiersz polecenia programisty dla programu Visual Studio
 
-Wiersz polecenia dla programu Visual Studio deweloperów automatycznie ustawia zmienne środowiskowe, które pozwalają łatwo za pomocą narzędzia .NET Framework. Wiersz polecenia dewelopera jest instalowany z full lub społeczności wersji programu Visual Studio. Nie jest on instalowany w wersjach Express programu Visual Studio.
+Wiersz polecenia dla deweloperów programu Visual Studio automatycznie ustawia zmienne środowiskowe, które pozwalają na łatwe używanie narzędzi programu .NET Framework.
 
 > [!div class="button"]
 [Pobierz program Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 
 ## <a name="searching-for-the-command-prompt-on-your-machine"></a>Wyszukiwanie w wierszu polecenia na komputerze
 
-Może pojawić się wiele wierszy polecenia, w zależności od wersji programu Visual Studio i wszelkie dodatkowe zestawy SDK został zainstalowany. Na przykład 64-bitowe wersje programu Visual Studio oferują 32-bitowy i 64-bitowy wiersz polecenia. (Wersje 32-bitowe i 64-bitowe Większość narzędzi są takie same; jednak kilka narzędzi zmiany określonego środowiska 32-bitowe i 64-bitowe). Jeśli nie działają następujące kroki, możesz spróbować [ręcznie lokalizowanie plików na tym komputerze](#manually-locating-the-files-on-your-machine) lub [polecenia monitu w programie Visual Studio](#running-command-prompt-from-inside-visual-studio).
+Może mieć kilka wierszy polecenia, w zależności od wersji programu Visual Studio oraz wszelkie dodatkowe zainstalowanych zestawów SDK. Na przykład 64-bitowe wersje programu Visual Studio oferują 32-bitowy i 64-bitowy wiersz polecenia. (32-bitowych i 64-bitowe wersje większości narzędzi są takie same; jednak niektóre narzędzia wprowadzają zmiany specyficzne dla środowisk 32-bitowych i 64-bitowych). Jeśli poniższe kroki nie zadziałają, spróbuj [ręcznie lokalizowania plików na maszynie](#manually-locating-the-files-on-your-machine) lub [uruchamiając wiersz polecenia z poziomu programu Visual Studio](#running-command-prompt-from-inside-visual-studio).
 
 ### <a name="in-windows-10"></a>W systemie Windows 10
 
-1. W polu wyszukiwania na pasku zadań, rozpocznij wpisywanie nazwy narzędzia, takie jak `dev` lub `developer command prompt`. Dzięki temu udostępniają listę zainstalowanych aplikacji, spełniających kryteria wyszukiwania. Jeśli szukasz innego wiersza polecenia, spróbuj wprowadzić inny wyszukiwany termin, takich jak `prompt`.
+1. W polu wyszukiwania na pasku zadań, należy uruchomić, wpisując nazwę narzędzia, takie jak `dev` lub `developer command prompt`. Wyświetlenie listy zainstalowanych aplikacji spełniających kryteria wyszukiwania. Jeśli potrzebujesz innego wiersza polecenia, spróbuj wprowadzić różne wyszukiwany termin takich jak `prompt`.
 
-2. Wybierz **wiersza polecenia dewelopera** (lub w wierszu polecenia, którego chcesz użyć).
+2. Wybierz **wiersz polecenia dla deweloperów** (lub wiersza polecenia, którego chcesz użyć).
 
 ### <a name="in-windows-81"></a>W Windows 8.1
 
-1. Przejdź do **Start** ekran, naciskając klawisz z logo systemu Windows ![logo systemu Windows](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") na klawiaturze, na przykład.
+1. Przejdź do **Start** ekran przez naciśnięcie klawiszy logo Windows ![Windows logo](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") na klawiaturze, na przykład.
 
 2. Na **Start** ekranu, naciśnij klawisz `CTRL + TAB` otworzyć **aplikacje** listy, a następnie wprowadź `V`. Wybranie tej opcji powoduje listy, która zawiera wszystkie zainstalowane wiersz polecenia programu Visual Studio.
 
-3. Wybierz **wiersza polecenia dewelopera** (lub w wierszu polecenia, którego chcesz użyć).
+3. Wybierz **wiersz polecenia dla deweloperów** (lub wiersza polecenia, którego chcesz użyć).
 
 ### <a name="in-windows-8"></a>W systemie Windows 8
 
-1. Przejdź do **Start** ekran, naciskając klawisz z logo systemu Windows ![logo systemu Windows](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") na klawiaturze, na przykład.
+1. Przejdź do **Start** ekran przez naciśnięcie klawiszy logo Windows ![Windows logo](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") na klawiaturze, na przykład.
 
-2. Na **Start** ekranu, naciśnij klawisz z logo systemu Windows ![logo systemu Windows](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") `+ Z`.
+2. Na **Start** ekranu, naciśnij klawisze logo Windows ![Windows logo](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") `+ Z`.
 
 3. Wybierz **wyświetlić aplikacje** ikony w dolnej części ekranu, a następnie wprowadź `V`. Wybranie tej opcji powoduje listy, która zawiera wszystkie zainstalowane wiersz polecenia programu Visual Studio.
 
-4. Wybierz **wiersza polecenia dewelopera** (lub w wierszu polecenia, którego chcesz użyć).
+4. Wybierz **wiersz polecenia dla deweloperów** (lub wiersza polecenia, którego chcesz użyć).
 
-### <a name="in-windows-7"></a>W systemie Windows 7
+### <a name="in-windows-7"></a>W Windows 7
 
 1. Wybierz **Start**, rozwiń węzeł **wszystkie programy**, a następnie rozwiń węzeł **programu Microsoft Visual Studio**.
 
-2. W zależności od wersji programu Visual Studio po zainstalowaniu, wybierz **programu Visual Studio Tools**, **wiersz polecenia programu Visual Studio**, lub w wierszu polecenia, którego chcesz użyć.
+2. W zależności od wersji programu Visual Studio po zainstalowaniu wybierz **Visual Studio Tools**, **Visual Studio Command Prompt**, lub z wiersza polecenia, którego chcesz użyć.
 
-Jeśli masz inne zainstalowano zestaw SDK usługi takie jak [zestawu Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk) lub [poprzednie wersje](https://developer.microsoft.com/windows/downloads/sdk-archive) zainstalowany, może zostać wyświetlony dodatkowe polecenie monituje o ARM, x 86 lub x64 architektury. W dokumentacji poszczególnych narzędzi można sprawdzić, której wersji wiersza polecenia należy użyć.
+W przypadku innych zestawów SDK zainstalowany, takich jak [zestawu Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk) lub [poprzednie wersje](https://developer.microsoft.com/windows/downloads/sdk-archive), może zostać wyświetlony dodatkowe wiersze polecenia dla ARM, x 86 lub x64 architektury. W dokumentacji poszczególnych narzędzi można sprawdzić, której wersji wiersza polecenia należy użyć.
 
-## <a name="manually-locating-the-files-on-your-machine"></a>Ręcznie lokalizowanie plików na tym komputerze
+## <a name="manually-locate-the-files-on-your-machine"></a>Ręcznie lokalizowania plików na komputerze
 
-Zwykle, skróty klawiaturowe polecenie monituje o zainstalowaniu są umieszczane na **Start Menu** folderu dla programu Visual Studio, taki jak C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2017\Visual w Studio Tools. Ale jeśli z jakiegoś powodu wyszukiwanie w wierszu polecenia nie zachowa oczekiwanych rezultatów, możesz spróbować ręcznie zlokalizować skrót na tym komputerze. Spróbuj wyszukiwania dla nazwy pliku wiersza polecenia, takich jak *VsDevCmd.bat*, lub przejdź do folderu narzędzi takich jak C:\Program Files (x86) \Microsoft Visual Studio\2017\Enterprise\Common7\Tools (ścieżka zmian zgodnie z Visual Studio wersji, wersji i instalacji lokalizacji).
+Zwykle, skróty klawiaturowe wiersz polecenia, zainstalowane są umieszczane na **Start Menu** folderu dla programu Visual Studio, takich jak narzędzia Studio 2017\Visual C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio. Ale jeśli z jakiegoś powodu, wyszukiwanie w wierszu polecenia nie zachowa oczekiwanych rezultatów, możesz spróbować ręcznie zlokalizować skrót na swojej maszynie. Spróbuj wyszukać nazwę pliku polecenia, takie jak *VsDevCmd.bat*, lub przejdź do folderu Tools, np. C:\Program Files (x86) \Microsoft Visual Studio\2017\Enterprise\Common7\Tools (ścieżka zmiany na podstawie wizualizacji Studio wersji i edycji oraz z instalacji lokalizacji).
 
-## <a name="running-command-prompt-from-inside-visual-studio"></a>Uruchomienie polecenia monitu w programie Visual Studio
+## <a name="run-command-prompt-from-inside-visual-studio"></a>Uruchom polecenie prompt z poziomu programu Visual Studio
 
-W celu ułatwienia dostępu można dodać wiersz polecenia dewelopera programu Visual Studio lub innych poleceń do menu Narzędzia w programie Visual Studio przez dodanie go do listy narzędzi zewnętrznych. Jest to, jak można wykonać który:
+W celu ułatwienia dostępu, można dodać wiersz polecenia dla deweloperów Visual Studio lub inne polecenia do **narzędzia** menu w programie Visual Studio. Aby udostępnić narzędzia, należy go dodać do listy zewnętrznych narzędzi. Poniżej przedstawiono kroki:
 
 1. Otwórz program Visual Studio.
 
-2. Wybierz **narzędzia** menu i wybierz polecenie **zewnętrznych narzędzi**.
+2. Wybierz **narzędzia** menu, a następnie wybierz **zewnętrznych narzędzi**.
 
-3. Na **zewnętrznych narzędzi** oknie dialogowym wybierz **Dodaj** przycisku. Zostanie wyświetlony nowy wpis.
+3. Na **zewnętrznych narzędzi** okna dialogowego wybierz **Dodaj** przycisku. Pojawi się nowy wpis.
 
 4. Wprowadź **tytuł** dla nowego elementu menu, takich jak `Command Prompt`.
 
 5. W **polecenia** Określ plik, który chcesz uruchomić, takich jak `%comspec%` lub `C:\Windows\System32\cmd.exe`.
 
-6. W **argumenty** Określ, gdzie można znaleźć określonego wiersza polecenia, którego chcesz użyć, takich jak `/k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools\VsDevCmd.bat"` (to polecenie uruchamia Developer wierszu polecenia, który jest instalowany z programu Visual Studio Enterprise 2017). Zmień tę wartość w zależności od lokalizacji wersji, wersji i instalacji programu Visual Studio.
+6. W **argumenty** pola, określ, gdzie można znaleźć określonego wiersza polecenia, którego chcesz użyć, takie jak `/k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools\VsDevCmd.bat"` (to polecenie uruchamia wiersz polecenia dla deweloperów jest instalowany z programem Visual Studio 2017 Enterprise). Zmień tę wartość, zgodnie z lokalizacją wersji i edycji oraz z instalacji programu Visual Studio.
 
-7. Wybierz wartość dla **katalog początkowy** pola, takie jak **katalogu projektu**.
+7. Wybierz wartość dla **Czątkowy katalog** pola, takie jak **katalogu projektu**.
 
 8. Wybierz **OK** przycisku.
 
-Po wykonaniu tej zostanie dodany nowy element menu i może uzyskać dostępu do wiersza polecenia z **narzędzia** menu.
+   Zostanie dodany nowy element menu, a są dostępne z wiersza polecenia z **narzędzia** menu.
 
 ## <a name="see-also"></a>Zobacz także
 
- [Narzędzia](../../../docs/framework/tools/index.md)  
- [Zarządzanie narzędziami zewnętrznymi](/visualstudio/ide/managing-external-tools)  
+- [Narzędzia](../../../docs/framework/tools/index.md)
+- [Zarządzanie narzędziami zewnętrznymi](/visualstudio/ide/managing-external-tools)

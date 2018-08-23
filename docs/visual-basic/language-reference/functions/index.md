@@ -16,7 +16,7 @@ ms.locfileid: "33595930"
 Tematy w tej sekcji zawierają tabele funkcji członkowskich środowiska wykonawczego Visual Basic.  
   
 > [!NOTE]
->  Można również tworzyć i wywoływać funkcje. Aby uzyskać więcej informacji, zobacz [Instrukcja Function](../../../visual-basic/language-reference/statements/function-statement.md) i [Porady: Tworzenie procedury, która zwraca wartość](../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-procedure-that-returns-a-value.md). 
+>  Można również tworzyć i wywoływać funkcje. Aby uzyskać więcej informacji, zobacz [Instrukcja Function](../../../visual-basic/language-reference/statements/function-statement.md) i [Porady: Tworzenie procedury, która zwraca wartość](../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-procedure-that-returns-a-value.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Funkcje konwersji](../../../visual-basic/language-reference/functions/conversion-functions.md)  

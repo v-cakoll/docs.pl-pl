@@ -18,7 +18,7 @@ Zapewnia dostęp do informacji o bieżącym użytkowniku.
 ## <a name="remarks"></a>Uwagi  
  Aby uzyskać informacje dotyczące metod i właściwości obiektu `My.User`, zobacz <xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType>.  
   
- Aby uzyskać więcej informacji, zobacz [Uzyskiwanie dostępu do danych użytkownika](../../../visual-basic/developing-apps/programming/accessing-user-data.md). 
+ Aby uzyskać więcej informacji, zobacz [Uzyskiwanie dostępu do danych użytkownika](../../../visual-basic/developing-apps/programming/accessing-user-data.md).  
   
 ## <a name="requirements"></a>Wymagania  
  **Zestaw:** Visual Basic Runtime Library (w pliku Microsoft.VisualBasic.dll)  

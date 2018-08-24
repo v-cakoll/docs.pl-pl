@@ -2,22 +2,22 @@
 title: Wyzwalacze CLR
 ms.date: 03/30/2017
 ms.assetid: defe379c-30c7-487f-9abd-9c5e12ff49be
-ms.openlocfilehash: f7a009af7a343a0dbc2003eb76b30318f4d2830a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c526e16949c76272ba6c6e17233c86daf9d0d1d2
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352867"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752270"
 ---
 # <a name="clr-triggers"></a>Wyzwalacze CLR
-Wyzwalacz jest specjalnym rodzajem procedury przechowywanej, która uruchamia się automatycznie po wykonuje zdarzenia języka. Dzięki integracji programu Microsoft SQL Server z .NET Framework środowisko uruchomieniowe języka wspólnego (CLR) można użyć dowolnego języka .NET Framework, można utworzyć wyzwalaczy CLR.  
+Wyzwalacz jest specjalny rodzaj procedury przechowywanej, która uruchamia się automatycznie podczas wykonywania zdarzenia języka. Dzięki integracji programu Microsoft SQL Server przy użyciu .NET Framework środowisko uruchomieniowe języka wspólnego (CLR) można użyć dowolnego języka .NET Framework do tworzenia wyzwalaczy CLR.  
   
- Aby uzyskać szczegółowe informacje Zobacz wersji programu SQL Server — książki Online dla wersji programu SQL Server są przy użyciu.  
+ Aby uzyskać więcej informacji, zobacz [dokumentacji programu SQL Server](/sql) dla wersji programu SQL Server jest używany.
   
- **SQL Server — książki Online**  
+ **Dokumentacja programu SQL Server**
   
-1.  [Wyzwalacze CLR](http://go.microsoft.com/fwlink/?LinkId=115397)  
+1. [Wyzwalacze CLR](/sql/database-engine/dev-guide/clr-triggers)
   
 ## <a name="see-also"></a>Zobacz też  
  [Tworzenie obiekty programu SQL Server 2005 w kodzie zarządzanym](http://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](http://go.microsoft.com/fwlink/?LinkId=217917)

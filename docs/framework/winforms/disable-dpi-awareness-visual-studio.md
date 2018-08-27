@@ -1,0 +1,72 @@
+---
+title: Wyłącz rozpoznawanie DPI w programie Visual Studio
+description: W tym artykule omówiono ograniczenia Windows Forms Designer na monitorach HDPI oraz sposobu uruchamiania programu Visual Studio jako proces świadomości DPI.
+ms.date: 08/14/2018
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-designers
+author: gewarren
+ms.author: gewarren
+manager: douge
+ms.openlocfilehash: 65c997e12aa033b3b08d32c8ab76372e3c52a803
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935633"
+---
+# <a name="disable-dpi-awareness-in-visual-studio"></a><span data-ttu-id="1aded-103">Wyłącz rozpoznawanie DPI w programie Visual Studio</span><span class="sxs-lookup"><span data-stu-id="1aded-103">Disable DPI-awareness in Visual Studio</span></span>
+
+<span data-ttu-id="1aded-104">Program Visual Studio jest kropki na aplikację świadomą CAL (DPI), co oznacza automatycznie skaluje ekran.</span><span class="sxs-lookup"><span data-stu-id="1aded-104">Visual Studio is a dots per inch (DPI) aware application, which means the display scales automatically.</span></span> <span data-ttu-id="1aded-105">Jeśli aplikacja stwierdzający, że nie jest obsługującą ustawienia DPI, systemu operacyjnego można skalować aplikację jako mapę bitową.</span><span class="sxs-lookup"><span data-stu-id="1aded-105">If an application states that it's not DPI-aware, the operating system scales the application as a bitmap.</span></span> <span data-ttu-id="1aded-106">To zachowanie jest również nazywany wirtualizacji DPI.</span><span class="sxs-lookup"><span data-stu-id="1aded-106">This behavior is also called DPI virtualization.</span></span> <span data-ttu-id="1aded-107">Aplikacji nadal sądzą, że działa on w 100%, skalowanie lub rozdzielczości 96 dpi.</span><span class="sxs-lookup"><span data-stu-id="1aded-107">The application still thinks that it's running at 100% scaling, or 96 dpi.</span></span>
+
+## <a name="windows-forms-designer-on-hdpi-monitors"></a><span data-ttu-id="1aded-108">Windows Forms Designer na monitorach HDPI</span><span class="sxs-lookup"><span data-stu-id="1aded-108">Windows Forms Designer on HDPI monitors</span></span>
+
+<span data-ttu-id="1aded-109">**Windows Forms Designer** w programie Visual Studio nie ma skalowanie pomocy technicznej.</span><span class="sxs-lookup"><span data-stu-id="1aded-109">The **Windows Forms Designer** in Visual Studio doesn't have scaling support.</span></span> <span data-ttu-id="1aded-110">Powoduje to, że problemy z wyświetlaniem otwieraniu niektórych formularzy w **Windows Forms Designer** na dużej liczbie punktów na cal (HDPI) monitorów.</span><span class="sxs-lookup"><span data-stu-id="1aded-110">This causes display issues when you open some forms in the **Windows Forms Designer** on high dots per inch (HDPI) monitors.</span></span> <span data-ttu-id="1aded-111">Aby uzyskać przykłady formanty może okazać się nakładają się, jak pokazano na poniższej ilustracji:</span><span class="sxs-lookup"><span data-stu-id="1aded-111">For examples, controls can appear to overlap as shown in the following image:</span></span>
+
+![Windows Forms Designer w monitorze HDPI](media/disable-dpi-awareness-visual-studio/win-forms-designer-hdpi.png)
+
+<span data-ttu-id="1aded-113">W programie Visual Studio 2017 w wersji należy zachować 15,8 i nowszych, po otwarciu formularza w **Windows Forms Designer** na monitorem HDPI programu Visual Studio wyświetli żółte informacyjny paska w górnej części projektanta:</span><span class="sxs-lookup"><span data-stu-id="1aded-113">In Visual Studio 2017 version 15.8 and later, when you open a form in the **Windows Forms Designer** on an HDPI monitor, Visual Studio displays a yellow informational bar at the top of the designer:</span></span>
+
+![Pasek informacyjny w programie Visual Studio, aby ponownie uruchomić w trybie świadomości DPI](media/disable-dpi-awareness-visual-studio/scaling-gold-bar.png)
+
+<span data-ttu-id="1aded-115">Odczytuje komunikat **skalowanie na ekranie głównym jest ustawiona na 200% (192 dpi). Może to spowodować problemy z renderowaniem w oknie projektanta.**</span><span class="sxs-lookup"><span data-stu-id="1aded-115">The message reads **Scaling on your main display is set to 200% (192 dpi). This might cause rendering problems in the designer window.**</span></span>
+
+<span data-ttu-id="1aded-116">Jeśli nie działają w projektancie, a nie trzeba dostosować układ formularza, można zignorować pasek informacyjny i kontynuować pracę w edytorze kodu lub w innych typach projektantów.</span><span class="sxs-lookup"><span data-stu-id="1aded-116">If you aren't working in the designer and don't need to adjust the layout of your form, you can ignore the informational bar and continue working in the code editor or in other types of designers.</span></span> <span data-ttu-id="1aded-117">Tylko **Windows Forms Designer** dotyczy problem.</span><span class="sxs-lookup"><span data-stu-id="1aded-117">Only the **Windows Forms Designer** is affected.</span></span> <span data-ttu-id="1aded-118">Jeśli musisz pracować w **Windows Forms Designer**, następna sekcja pomoże Ci [stwierdzenie](#to-resolve-the-problem).</span><span class="sxs-lookup"><span data-stu-id="1aded-118">If you do need to work in the **Windows Forms Designer**, the next section helps you [resolve the problem](#to-resolve-the-problem).</span></span>
+
+## <a name="to-resolve-the-problem"></a><span data-ttu-id="1aded-119">Aby rozwiązać ten problem</span><span class="sxs-lookup"><span data-stu-id="1aded-119">To resolve the problem</span></span>
+
+<span data-ttu-id="1aded-120">Istnieją trzy opcje, aby rozwiązać problem z wyświetlaniem.</span><span class="sxs-lookup"><span data-stu-id="1aded-120">There are three options to resolve the display problem.</span></span>
+
+### <a name="restart-visual-studio-as-a-dpi-unaware-process"></a><span data-ttu-id="1aded-121">Uruchom program Visual Studio jako proces świadomości DPI</span><span class="sxs-lookup"><span data-stu-id="1aded-121">Restart Visual Studio as a DPI-unaware process</span></span>
+
+<span data-ttu-id="1aded-122">Możesz ponownie uruchomić program Visual Studio jako proces świadomości DPI, wybierając opcję na żółty pasek informacyjny.</span><span class="sxs-lookup"><span data-stu-id="1aded-122">You can restart Visual Studio as a DPI-unaware process by selecting the option on the yellow informational bar.</span></span> <span data-ttu-id="1aded-123">Jest to preferowany sposób rozwiązanie problemu.</span><span class="sxs-lookup"><span data-stu-id="1aded-123">This is the preferred way of resolving the problem.</span></span>
+
+<span data-ttu-id="1aded-124">Po uruchomieniu programu Visual Studio jako proces świadomości DPI są rozwiązywane problemy układu projektanta, ale czcionki mogą pojawić się rozmyty.</span><span class="sxs-lookup"><span data-stu-id="1aded-124">When Visual Studio runs as a DPI-unaware process, the designer layout issues are resolved, but fonts may appear blurry.</span></span> <span data-ttu-id="1aded-125">Programu Visual Studio wyświetla inny komunikat informacyjny żółty, gdy jest uruchamiany jako proces świadomości DPI, informujący, że **Visual Studio jest uruchomiony jako proces świadomości DPI. Projektanci WPF i XAML mogą być wyświetlane nieprawidłowo.**</span><span class="sxs-lookup"><span data-stu-id="1aded-125">Visual Studio displays a different yellow informational message when it runs as a DPI-unaware process that says **Visual Studio is running as a DPI-unaware process. WPF and XAML designers might not display correctly.**</span></span> <span data-ttu-id="1aded-126">Pasek informacyjny zawiera także opcję **ponowne uruchomienie programu Visual Studio jako obsługującą ustawienia DPI proces**.</span><span class="sxs-lookup"><span data-stu-id="1aded-126">The informational bar also provides an option to **Restart Visual Studio as a DPI-aware process**.</span></span>
+
+> [!NOTE]
+> - <span data-ttu-id="1aded-127">Jeśli było oddokowane okien narzędzi w programie Visual Studio, w przypadku wybrania opcji, aby ponownie uruchomić jako proces świadomości DPI, położenie tych okien narzędzi, mogą ulec zmianie.</span><span class="sxs-lookup"><span data-stu-id="1aded-127">If you had undocked tool windows in Visual Studio when you selected the option to restart as a DPI-unaware process, the position of those tool windows may change.</span></span>
+> - <span data-ttu-id="1aded-128">Jeśli używasz profilu domyślnego języka Visual Basic lub jeśli masz **Zapisz nowe projekty po utworzeniu** opcja jest wyłączona w **narzędzia** > **opcje**  >  **Projekty i rozwiązania**, Visual Studio nie można ponownie otworzyć projekt, po jej ponownym uruchomieniu jako proces świadomości DPI.</span><span class="sxs-lookup"><span data-stu-id="1aded-128">If you use the default Visual Basic profile, or if you have the **Save new projects when created** option deselected in **Tools** > **Options** > **Projects and Solutions**, Visual Studio cannot reopen your project when it restarts as a DPI-unaware process.</span></span> <span data-ttu-id="1aded-129">Jednak można otworzyć projektu, wybierając je w obszarze **pliku** > **niedawne projekty i rozwiązania**.</span><span class="sxs-lookup"><span data-stu-id="1aded-129">However, you can open the project by selecting it under **File** > **Recent Projects and Solutions**.</span></span>
+
+<span data-ttu-id="1aded-130">Ważne jest, aby ponownie program Visual Studio jako obsługującą ustawienia DPI proces po zakończeniu pracy w **Windows Forms Designer**.</span><span class="sxs-lookup"><span data-stu-id="1aded-130">It's important to restart Visual Studio as a DPI-aware process when you're finished working in the **Windows Forms Designer**.</span></span> <span data-ttu-id="1aded-131">Gdy jest uruchomiona jako proces świadomości DPI, czcionki mogą wyglądać rozmyte i może zostać wyświetlony problemów w innych projektantów, takich jak **projektanta XAML**.</span><span class="sxs-lookup"><span data-stu-id="1aded-131">When it's running as a DPI-unaware process, fonts can look blurry and you may see issues in other designers such as the **XAML Designer**.</span></span> <span data-ttu-id="1aded-132">Po zamknięciu i ponownym otwarciu Visual Studio, gdy jest uruchomiona w trybie świadomości DPI, zostanie on obsługującą ustawienia DPI ponownie.</span><span class="sxs-lookup"><span data-stu-id="1aded-132">If you close and reopen Visual Studio when it's running in DPI-unaware mode, it becomes DPI-aware again.</span></span> <span data-ttu-id="1aded-133">Możesz również kliknąć **ponowne uruchomienie programu Visual Studio jako obsługującą ustawienia DPI proces** opcja na pasku informacyjnym.</span><span class="sxs-lookup"><span data-stu-id="1aded-133">You can also click the **Restart Visual Studio as a DPI-aware process** option in the informational bar.</span></span>
+
+### <a name="add-a-registry-entry"></a><span data-ttu-id="1aded-134">Należy dodać wpis rejestru</span><span class="sxs-lookup"><span data-stu-id="1aded-134">Add a registry entry</span></span>
+
+<span data-ttu-id="1aded-135">Visual Studio można oznaczyć jako świadomości DPI przez modyfikację rejestru.</span><span class="sxs-lookup"><span data-stu-id="1aded-135">You can mark Visual Studio as DPI-unaware by modifying the registry.</span></span> <span data-ttu-id="1aded-136">Otwórz **Edytora rejestru** i Dodaj wpis do **HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers** podklucz:</span><span class="sxs-lookup"><span data-stu-id="1aded-136">Open **Registry Editor** and add an entry to the **HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers** subkey:</span></span>
+
+<span data-ttu-id="1aded-137">**Wpis**: % ProgramFiles (x86) %\Microsoft Visual Studio\2017\your-edition\Common7\IDE\devenv.exe</span><span class="sxs-lookup"><span data-stu-id="1aded-137">**Entry**: %ProgramFiles(x86)%\Microsoft Visual Studio\2017\your-edition\Common7\IDE\devenv.exe</span></span>
+
+<span data-ttu-id="1aded-138">**Typ**: REG_SZ</span><span class="sxs-lookup"><span data-stu-id="1aded-138">**Type**: REG_SZ</span></span>
+
+<span data-ttu-id="1aded-139">**Wartość**: DPIUNAWARE</span><span class="sxs-lookup"><span data-stu-id="1aded-139">**Value**: DPIUNAWARE</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="1aded-140">Program Visual Studio pozostaje w trybie świadomości DPI, dopóki nie usuniesz wpisu rejestru.</span><span class="sxs-lookup"><span data-stu-id="1aded-140">Visual Studio remains in DPI-unaware mode until you remove the registry entry.</span></span>
+
+### <a name="set-your-display-scaling-setting-to-100"></a><span data-ttu-id="1aded-141">Ustaw skalowanie ustawienie do 100%</span><span class="sxs-lookup"><span data-stu-id="1aded-141">Set your display scaling setting to 100%</span></span>
+
+<span data-ttu-id="1aded-142">Aby ustawić ekranu skalowanie ustawienie do 100% w systemie Windows 10, wpisz **ustawienia wyświetlania** na pasku wyszukiwania, a następnie zaznacz zadań **Zmienianie ustawień wyświetlania**.</span><span class="sxs-lookup"><span data-stu-id="1aded-142">To set your display scaling setting to 100% in Windows 10, type **display settings** in the task bar search box, and then select **Change display settings**.</span></span> <span data-ttu-id="1aded-143">W **ustawienia** oknie **Zmień rozmiar tekstu, aplikacji i innych elementów** do **100%**.</span><span class="sxs-lookup"><span data-stu-id="1aded-143">In the **Settings** window, set **Change the size of text, apps, and other items** to **100%**.</span></span>
+
+<span data-ttu-id="1aded-144">Ustawianie ekranu skalowanie do 100% może być niepożądane, może sprawić, że interfejs użytkownika zbyt mały, może być używany.</span><span class="sxs-lookup"><span data-stu-id="1aded-144">Setting your display scaling to 100% may be undesirable, because it can make the user interface too small to be usable.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="1aded-145">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="1aded-145">See also</span></span>
+
+- [<span data-ttu-id="1aded-146">Automatyczne skalowanie w formularzach Windows Forms</span><span class="sxs-lookup"><span data-stu-id="1aded-146">Automatic scaling in Windows Forms</span></span>](automatic-scaling-in-windows-forms.md)

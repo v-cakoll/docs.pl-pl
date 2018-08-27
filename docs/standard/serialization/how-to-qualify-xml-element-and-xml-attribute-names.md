@@ -10,37 +10,37 @@ helpviewer_keywords:
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
 ms.openlocfilehash: 6b4d58f6b5bf23cbce2ace8fb40730d7b73994de
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
-ms.translationtype: HT
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42908047"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930885"
 ---
-# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a><span data-ttu-id="6acc0-102">Instrukcje: kwalifikowanie elementu XML i nazw atrybutów XML</span><span class="sxs-lookup"><span data-stu-id="6acc0-102">How to: Qualify XML Element and XML Attribute Names</span></span>
+# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a><span data-ttu-id="d49ef-102">Instrukcje: kwalifikowanie elementu XML i nazw atrybutów XML</span><span class="sxs-lookup"><span data-stu-id="d49ef-102">How to: Qualify XML Element and XML Attribute Names</span></span>
 
-<span data-ttu-id="6acc0-103">Obszary nazw XML zawartych wystąpienia <xref:System.Xml.Serialization.XmlSerializerNamespaces> klasy musi być zgodna ze specyfikacją World Wide Web Consortium (W3C) o nazwie [przestrzeni nazw w kodzie XML](https://www.w3.org/TR/REC-xml-names/).</span><span class="sxs-lookup"><span data-stu-id="6acc0-103">XML namespaces contained by instances of the <xref:System.Xml.Serialization.XmlSerializerNamespaces> class must conform to the World Wide Web Consortium (W3C) specification called [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/).</span></span>
+<span data-ttu-id="d49ef-103">Obszary nazw XML zawartych wystąpienia <xref:System.Xml.Serialization.XmlSerializerNamespaces> klasy musi być zgodna ze specyfikacją World Wide Web Consortium (W3C) o nazwie [przestrzeni nazw w kodzie XML](https://www.w3.org/TR/REC-xml-names/).</span><span class="sxs-lookup"><span data-stu-id="d49ef-103">XML namespaces contained by instances of the <xref:System.Xml.Serialization.XmlSerializerNamespaces> class must conform to the World Wide Web Consortium (W3C) specification called [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/).</span></span>
 
-<span data-ttu-id="6acc0-104">Obszary nazw XML umożliwiają uprawniających nazwy elementów XML i atrybutów XML w dokumentach XML.</span><span class="sxs-lookup"><span data-stu-id="6acc0-104">XML namespaces provide a method for qualifying the names of XML elements and XML attributes in XML documents.</span></span> <span data-ttu-id="6acc0-105">Kwalifikowana nazwa składa się z prefiksu i lokalna nazwa, rozdzielone średnikiem.</span><span class="sxs-lookup"><span data-stu-id="6acc0-105">A qualified name consists of a prefix and a local name, separated by a colon.</span></span> <span data-ttu-id="6acc0-106">Prefiks, który działa tylko jako symbolu zastępczego; jest mapowany do identyfikatora URI, który określa obszar nazw.</span><span class="sxs-lookup"><span data-stu-id="6acc0-106">The prefix functions only as a placeholder; it is mapped to a URI that specifies a namespace.</span></span> <span data-ttu-id="6acc0-107">Kombinacja powszechnie zarządzanych nazw identyfikatora URI i lokalna nazwa tworzy nazwę, która może być unikatowym.</span><span class="sxs-lookup"><span data-stu-id="6acc0-107">The combination of the universally managed URI namespace and the local name produces a name that is guaranteed to be universally unique.</span></span>
+<span data-ttu-id="d49ef-104">Obszary nazw XML umożliwiają uprawniających nazwy elementów XML i atrybutów XML w dokumentach XML.</span><span class="sxs-lookup"><span data-stu-id="d49ef-104">XML namespaces provide a method for qualifying the names of XML elements and XML attributes in XML documents.</span></span> <span data-ttu-id="d49ef-105">Kwalifikowana nazwa składa się z prefiksu i lokalna nazwa, rozdzielone średnikiem.</span><span class="sxs-lookup"><span data-stu-id="d49ef-105">A qualified name consists of a prefix and a local name, separated by a colon.</span></span> <span data-ttu-id="d49ef-106">Prefiks, który działa tylko jako symbolu zastępczego; jest mapowany do identyfikatora URI, który określa obszar nazw.</span><span class="sxs-lookup"><span data-stu-id="d49ef-106">The prefix functions only as a placeholder; it is mapped to a URI that specifies a namespace.</span></span> <span data-ttu-id="d49ef-107">Kombinacja powszechnie zarządzanych nazw identyfikatora URI i lokalna nazwa tworzy nazwę, która może być unikatowym.</span><span class="sxs-lookup"><span data-stu-id="d49ef-107">The combination of the universally managed URI namespace and the local name produces a name that is guaranteed to be universally unique.</span></span>
 
-<span data-ttu-id="6acc0-108">Utworzenie wystąpienia `XmlSerializerNamespaces` i Dodawanie obiektu pary nazw, można określić prefiksy używane w dokumencie XML.</span><span class="sxs-lookup"><span data-stu-id="6acc0-108">By creating an instance of `XmlSerializerNamespaces` and adding the namespace pairs to the object, you can specify the prefixes used in an XML document.</span></span>
+<span data-ttu-id="d49ef-108">Utworzenie wystąpienia `XmlSerializerNamespaces` i Dodawanie obiektu pary nazw, można określić prefiksy używane w dokumencie XML.</span><span class="sxs-lookup"><span data-stu-id="d49ef-108">By creating an instance of `XmlSerializerNamespaces` and adding the namespace pairs to the object, you can specify the prefixes used in an XML document.</span></span>
 
-## <a name="to-create-qualified-names-in-an-xml-document"></a><span data-ttu-id="6acc0-109">Aby utworzyć kwalifikowane nazwy w dokumencie XML</span><span class="sxs-lookup"><span data-stu-id="6acc0-109">To create qualified names in an XML document</span></span>
+## <a name="to-create-qualified-names-in-an-xml-document"></a><span data-ttu-id="d49ef-109">Aby utworzyć kwalifikowane nazwy w dokumencie XML</span><span class="sxs-lookup"><span data-stu-id="d49ef-109">To create qualified names in an XML document</span></span>
 
-1. <span data-ttu-id="6acc0-110">Utworzenie wystąpienia `XmlSerializerNamespaces` klasy.</span><span class="sxs-lookup"><span data-stu-id="6acc0-110">Create an instance of the `XmlSerializerNamespaces` class.</span></span>
+1. <span data-ttu-id="d49ef-110">Utworzenie wystąpienia `XmlSerializerNamespaces` klasy.</span><span class="sxs-lookup"><span data-stu-id="d49ef-110">Create an instance of the `XmlSerializerNamespaces` class.</span></span>
 
-2. <span data-ttu-id="6acc0-111">Dodaj wszystkie prefiksy i pary nazw do `XmlSerializerNamespaces`.</span><span class="sxs-lookup"><span data-stu-id="6acc0-111">Add all prefixes and namespace pairs to the `XmlSerializerNamespaces`.</span></span>
+2. <span data-ttu-id="d49ef-111">Dodaj wszystkie prefiksy i pary nazw do `XmlSerializerNamespaces`.</span><span class="sxs-lookup"><span data-stu-id="d49ef-111">Add all prefixes and namespace pairs to the `XmlSerializerNamespaces`.</span></span>
 
-3. <span data-ttu-id="6acc0-112">Zastosuj odpowiedni `System.Xml.Serialization` atrybut do każdej składowej lub klasy, które <xref:System.Xml.Serialization.XmlSerializer> ma serializować do dokumentu XML.</span><span class="sxs-lookup"><span data-stu-id="6acc0-112">Apply the appropriate `System.Xml.Serialization` attribute to each member or class that the <xref:System.Xml.Serialization.XmlSerializer> is to serialize into an XML document.</span></span>
+3. <span data-ttu-id="d49ef-112">Zastosuj odpowiedni `System.Xml.Serialization` atrybut do każdej składowej lub klasy, które <xref:System.Xml.Serialization.XmlSerializer> ma serializować do dokumentu XML.</span><span class="sxs-lookup"><span data-stu-id="d49ef-112">Apply the appropriate `System.Xml.Serialization` attribute to each member or class that the <xref:System.Xml.Serialization.XmlSerializer> is to serialize into an XML document.</span></span>
 
-  <span data-ttu-id="6acc0-113">Dostępne są następujące atrybuty: <xref:System.Xml.Serialization.XmlAnyElementAttribute>, <xref:System.Xml.Serialization.XmlArrayAttribute>, <xref:System.Xml.Serialization.XmlArrayItemAttribute>, <xref:System.Xml.Serialization.XmlAttributeAttribute>, <xref:System.Xml.Serialization.XmlElementAttribute>, <xref:System.Xml.Serialization.XmlRootAttribute>, i <xref:System.Xml.Serialization.XmlTypeAttribute>.</span><span class="sxs-lookup"><span data-stu-id="6acc0-113">The available attributes are: <xref:System.Xml.Serialization.XmlAnyElementAttribute>, <xref:System.Xml.Serialization.XmlArrayAttribute>, <xref:System.Xml.Serialization.XmlArrayItemAttribute>, <xref:System.Xml.Serialization.XmlAttributeAttribute>, <xref:System.Xml.Serialization.XmlElementAttribute>, <xref:System.Xml.Serialization.XmlRootAttribute>, and <xref:System.Xml.Serialization.XmlTypeAttribute>.</span></span>
+  <span data-ttu-id="d49ef-113">Dostępne są następujące atrybuty: <xref:System.Xml.Serialization.XmlAnyElementAttribute>, <xref:System.Xml.Serialization.XmlArrayAttribute>, <xref:System.Xml.Serialization.XmlArrayItemAttribute>, <xref:System.Xml.Serialization.XmlAttributeAttribute>, <xref:System.Xml.Serialization.XmlElementAttribute>, <xref:System.Xml.Serialization.XmlRootAttribute>, i <xref:System.Xml.Serialization.XmlTypeAttribute>.</span><span class="sxs-lookup"><span data-stu-id="d49ef-113">The available attributes are: <xref:System.Xml.Serialization.XmlAnyElementAttribute>, <xref:System.Xml.Serialization.XmlArrayAttribute>, <xref:System.Xml.Serialization.XmlArrayItemAttribute>, <xref:System.Xml.Serialization.XmlAttributeAttribute>, <xref:System.Xml.Serialization.XmlElementAttribute>, <xref:System.Xml.Serialization.XmlRootAttribute>, and <xref:System.Xml.Serialization.XmlTypeAttribute>.</span></span>
 
-4. <span data-ttu-id="6acc0-114">Ustaw `Namespace` właściwości każdego atrybutu do jednej z tych wartości nazw z `XmlSerializerNamespaces`.</span><span class="sxs-lookup"><span data-stu-id="6acc0-114">Set the `Namespace` property of each attribute to one of the namespace values from the `XmlSerializerNamespaces`.</span></span>
+4. <span data-ttu-id="d49ef-114">Ustaw `Namespace` właściwości każdego atrybutu do jednej z tych wartości nazw z `XmlSerializerNamespaces`.</span><span class="sxs-lookup"><span data-stu-id="d49ef-114">Set the `Namespace` property of each attribute to one of the namespace values from the `XmlSerializerNamespaces`.</span></span>
 
-5. <span data-ttu-id="6acc0-115">Przekaż `XmlSerializerNamespaces` do `Serialize` metody `XmlSerializer`.</span><span class="sxs-lookup"><span data-stu-id="6acc0-115">Pass the `XmlSerializerNamespaces` to the `Serialize` method of the `XmlSerializer`.</span></span>
+5. <span data-ttu-id="d49ef-115">Przekaż `XmlSerializerNamespaces` do `Serialize` metody `XmlSerializer`.</span><span class="sxs-lookup"><span data-stu-id="d49ef-115">Pass the `XmlSerializerNamespaces` to the `Serialize` method of the `XmlSerializer`.</span></span>
 
-## <a name="example"></a><span data-ttu-id="6acc0-116">Przykład</span><span class="sxs-lookup"><span data-stu-id="6acc0-116">Example</span></span>
+## <a name="example"></a><span data-ttu-id="d49ef-116">Przykład</span><span class="sxs-lookup"><span data-stu-id="d49ef-116">Example</span></span>
 
-<span data-ttu-id="6acc0-117">Poniższy przykład tworzy `XmlSerializerNamespaces`, i dodaje dwie pary prefiksu i obszaru nazw do obiektu.</span><span class="sxs-lookup"><span data-stu-id="6acc0-117">The following example creates an `XmlSerializerNamespaces`, and adds two prefix and namespace pairs to the object.</span></span> <span data-ttu-id="6acc0-118">Tworzy kod `XmlSerializer` używany do serializacji wystąpienia `Books` klasy.</span><span class="sxs-lookup"><span data-stu-id="6acc0-118">The code creates an `XmlSerializer` that is used to serialize an instance of the `Books` class.</span></span> <span data-ttu-id="6acc0-119">Wywołania kodu `Serialize` metody z `XmlSerializerNamespaces`, umożliwiając XML zawiera prefiksem obszary nazw.</span><span class="sxs-lookup"><span data-stu-id="6acc0-119">The code calls the `Serialize` method with the `XmlSerializerNamespaces`, allowing the XML to contain prefixed namespaces.</span></span>
+<span data-ttu-id="d49ef-117">Poniższy przykład tworzy `XmlSerializerNamespaces`, i dodaje dwie pary prefiksu i obszaru nazw do obiektu.</span><span class="sxs-lookup"><span data-stu-id="d49ef-117">The following example creates an `XmlSerializerNamespaces`, and adds two prefix and namespace pairs to the object.</span></span> <span data-ttu-id="d49ef-118">Tworzy kod `XmlSerializer` używany do serializacji wystąpienia `Books` klasy.</span><span class="sxs-lookup"><span data-stu-id="d49ef-118">The code creates an `XmlSerializer` that is used to serialize an instance of the `Books` class.</span></span> <span data-ttu-id="d49ef-119">Wywołania kodu `Serialize` metody z `XmlSerializerNamespaces`, umożliwiając XML zawiera prefiksem obszary nazw.</span><span class="sxs-lookup"><span data-stu-id="d49ef-119">The code calls the `Serialize` method with the `XmlSerializerNamespaces`, allowing the XML to contain prefixed namespaces.</span></span>
 
 ```vb
 Option Explicit
@@ -169,16 +169,16 @@ public class Book
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="6acc0-120">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="6acc0-120">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d49ef-120">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="d49ef-120">See Also</span></span>
 
-<span data-ttu-id="6acc0-121"><xref:System.Xml.Serialization.XmlSerializer>
+<span data-ttu-id="d49ef-121"><xref:System.Xml.Serialization.XmlSerializer>
 [Narzędzie definicji schematu XML i serializacja XML](the-xml-schema-definition-tool-and-xml-serialization.md)
 [wprowadzenie do serializacji XML](introducing-xml-serialization.md)
 [klasy XmlSerializer](xref:System.Xml.Serialization.XmlSerializer) 
  [Atrybutów, które kontrolują serializacji XML](attributes-that-control-xml-serialization.md)
 [jak: Określ nazwę elementu alternatywny Stream XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
 [instrukcje: serializacja obiektu](how-to-serialize-an-object.md) 
- [Jak: wykonywać deserializację obiektu](how-to-deserialize-an-object.md)</span><span class="sxs-lookup"><span data-stu-id="6acc0-121"><xref:System.Xml.Serialization.XmlSerializer>
+ [Jak: wykonywać deserializację obiektu](how-to-deserialize-an-object.md)</span><span class="sxs-lookup"><span data-stu-id="d49ef-121"><xref:System.Xml.Serialization.XmlSerializer>
 [The XML Schema Definition Tool and XML Serialization](the-xml-schema-definition-tool-and-xml-serialization.md)
 [Introducing XML Serialization](introducing-xml-serialization.md)
 [XmlSerializer Class](xref:System.Xml.Serialization.XmlSerializer)

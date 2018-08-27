@@ -1,84 +1,116 @@
 ---
-title: Wprowadzenie do użycia atramentu
-ms.date: 03/30/2017
+title: Tworzenie InkCanvas w aplikacji WPF w programie Visual Studio
+ms.date: 08/15/2018
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - procedural code in lieu of XAML [WPF]
-- gradient brush [WPF], animating colors of
 - XAML [WPF], procedural code in lieu of
-- animation [WPF], gradient brush colors
-- brushes [WPF], animating colors of
+- InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: 9a1b53d0513eeef377fe8e012a8d5d7ea3f8a984
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 600d8528125606c6e1af5b031e2fc31aabb79206
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546240"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925047"
 ---
-# <a name="getting-started-with-ink"></a><span data-ttu-id="fd2d9-102">Wprowadzenie do użycia atramentu</span><span class="sxs-lookup"><span data-stu-id="fd2d9-102">Getting Started with Ink</span></span>
-<span data-ttu-id="fd2d9-103">Włączenie elektroniczne pismo odręczne aplikacji jest łatwiejsze niż kiedykolwiek.</span><span class="sxs-lookup"><span data-stu-id="fd2d9-103">Incorporating digital ink into your applications is easier than ever.</span></span> <span data-ttu-id="fd2d9-104">Odręczne powstał z jest następstwem COM i formularze systemu Windows metody programowania do osiągnięcia Pełna integracja [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="fd2d9-104">Ink has evolved from being a corollary to the COM and Windows Forms method of programming to achieving full integration into the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="fd2d9-105">Nie trzeba zainstalować oddzielne zestawy SDK lub bibliotek środowiska uruchomieniowego.</span><span class="sxs-lookup"><span data-stu-id="fd2d9-105">You do not need to install separate SDKs or runtime libraries.</span></span>  
-  
-## <a name="prerequisites"></a><span data-ttu-id="fd2d9-106">Wymagania wstępne</span><span class="sxs-lookup"><span data-stu-id="fd2d9-106">Prerequisites</span></span>  
- <span data-ttu-id="fd2d9-107">Aby użyć w poniższych przykładach, należy najpierw zainstalować program Microsoft Visual Studio 2005 i [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)].</span><span class="sxs-lookup"><span data-stu-id="fd2d9-107">To use the following examples, you must first install Microsoft Visual Studio 2005 and the [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)].</span></span> <span data-ttu-id="fd2d9-108">Należy także zrozumienie sposobu pisania aplikacji dla [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="fd2d9-108">You should also understand how to write applications for the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="fd2d9-109">Aby uzyskać więcej informacji na temat rozpoczynania pracy z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], zobacz [wskazówki: Moje pierwszą aplikację pulpitu WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).</span><span class="sxs-lookup"><span data-stu-id="fd2d9-109">For more information about getting started with the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], see [Walkthrough: My first WPF desktop application](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).</span></span>  
-  
-## <a name="quick-start"></a><span data-ttu-id="fd2d9-110">Szybki Start</span><span class="sxs-lookup"><span data-stu-id="fd2d9-110">Quick Start</span></span>  
- <span data-ttu-id="fd2d9-111">Ta sekcja pomoże Ci napisać prosty [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji, która gromadzi odręczne.</span><span class="sxs-lookup"><span data-stu-id="fd2d9-111">This section helps you write a simple [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application that collects ink.</span></span>  
-  
- <span data-ttu-id="fd2d9-112">Jeśli jeszcze tego nie zrobiono, zainstaluj program Microsoft Visual Studio 2005 i [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)].</span><span class="sxs-lookup"><span data-stu-id="fd2d9-112">If you haven't already done so, install Microsoft Visual Studio 2005 and the [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)].</span></span> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="fd2d9-113"> aplikacje zazwyczaj muszą być skompilowane zanim będzie możliwe wyświetlenie ich, nawet jeśli ich składać się wyłącznie z [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="fd2d9-113"> applications usually must be compiled before you can view them, even if they consist entirely of [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span> <span data-ttu-id="fd2d9-114">Jednak [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)] obejmuje aplikacji edytor XamlPad, zaprojektowane, aby przyspieszyć proces wdrażania [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]— na podstawie interfejsu użytkownika.</span><span class="sxs-lookup"><span data-stu-id="fd2d9-114">However, the [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)] includes an application, XamlPad, designed to speed up the process of implementing a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-based UI.</span></span> <span data-ttu-id="fd2d9-115">Aby wyświetlić i tinker z pierwszego kilka przykładów w tym dokumencie, można użyć tej aplikacji.</span><span class="sxs-lookup"><span data-stu-id="fd2d9-115">You can use that application to view and tinker with the first few samples in this document.</span></span> <span data-ttu-id="fd2d9-116">Proces tworzenia skompilowanych aplikacji z [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] jest uwzględnione w dalszej części tego dokumentu.</span><span class="sxs-lookup"><span data-stu-id="fd2d9-116">The process of creating compiled applications from [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] is covered later in this document.</span></span>  
-  
- <span data-ttu-id="fd2d9-117">Aby uruchomić Edytor XAMLPad, kliknij przycisk **Start** menu wskaż **wszystkie programy**, wskaż polecenie **Microsoft Windows SDK**, wskaż polecenie **narzędzia**i kliknij przycisk **Edytor XAMLPad**.</span><span class="sxs-lookup"><span data-stu-id="fd2d9-117">To launch XAMLPad, click the **Start** menu, point to **All Programs**, point to **Microsoft Windows SDK**, point to **Tools**, and click **XAMLPad**.</span></span> <span data-ttu-id="fd2d9-118">W okienku renderowania Edytor XAMLPad renderuje kod XAML, napisany w okienku kodu.</span><span class="sxs-lookup"><span data-stu-id="fd2d9-118">In the rendering pane, XAMLPad renders the XAML code written in the code pane.</span></span> <span data-ttu-id="fd2d9-119">Można edytować kodu XAML, a zmiany są natychmiast widoczne w okienku renderowania.</span><span class="sxs-lookup"><span data-stu-id="fd2d9-119">You can edit the XAML code, and the changes immediately appear in the rendering pane.</span></span>  
-  
-#### <a name="got-ink"></a><span data-ttu-id="fd2d9-120">Otrzymano odręczne?</span><span class="sxs-lookup"><span data-stu-id="fd2d9-120">Got Ink?</span></span>  
- <span data-ttu-id="fd2d9-121">Aby uruchomić pierwszego [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji, która obsługuje odręczne:</span><span class="sxs-lookup"><span data-stu-id="fd2d9-121">To start your first [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application that supports ink:</span></span>  
-  
-1.  <span data-ttu-id="fd2d9-122">Open Microsoft Visual Studio 2005</span><span class="sxs-lookup"><span data-stu-id="fd2d9-122">Open Microsoft Visual Studio 2005</span></span>  
-  
-2.  <span data-ttu-id="fd2d9-123">Utwórz nową **aplikacji systemu Windows (WPF)**</span><span class="sxs-lookup"><span data-stu-id="fd2d9-123">Create a new **Windows Application (WPF)**</span></span>  
-  
-3.  <span data-ttu-id="fd2d9-124">Typ `<InkCanvas/>` między `<Grid>` tagów</span><span class="sxs-lookup"><span data-stu-id="fd2d9-124">Type `<InkCanvas/>` between the `<Grid>` tags</span></span>  
-  
-4.  <span data-ttu-id="fd2d9-125">Naciśnij klawisz **F5** do uruchamiania aplikacji w debugerze</span><span class="sxs-lookup"><span data-stu-id="fd2d9-125">Press **F5** to launch your application in the debugger</span></span>  
-  
-5.  <span data-ttu-id="fd2d9-126">Przy użyciu pióro lub mysz, zapisać **Witaj świecie** w oknie</span><span class="sxs-lookup"><span data-stu-id="fd2d9-126">Using a stylus or mouse, write **hello world** in the window</span></span>  
-  
- <span data-ttu-id="fd2d9-127">Napisanych odpowiednikiem odręczne aplikacja "hello world" o tylko 12 naciśnięcia klawiszy!</span><span class="sxs-lookup"><span data-stu-id="fd2d9-127">You've written the ink equivalent of a "hello world" application with only 12 keystrokes!</span></span>  
-  
-#### <a name="spice-up-your-application"></a><span data-ttu-id="fd2d9-128">Przypraw się na aplikację</span><span class="sxs-lookup"><span data-stu-id="fd2d9-128">Spice Up Your Application</span></span>  
- <span data-ttu-id="fd2d9-129">Teraz korzystać z niektórych funkcji [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="fd2d9-129">Let’s take advantage of some features of the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span>  <span data-ttu-id="fd2d9-130">Zastąp wszystko pomiędzy otwierającym \<okna > i zamykanie \</Window > tagów z następujący kod, aby uzyskać pędzla gradientu tła powierzchni pisma odręcznego.</span><span class="sxs-lookup"><span data-stu-id="fd2d9-130">Replace everything between the opening \<Window> and closing \</Window> tags with the following markup to get a gradient brush background on your inking surface.</span></span>  
-  
- [!code-xaml[DigitalInkTopics#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#1)]  
-[!code-xaml[DigitalInkTopics#1a](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#1a)]  
-  
-#### <a name="using-animation"></a><span data-ttu-id="fd2d9-131">Przy użyciu animacji</span><span class="sxs-lookup"><span data-stu-id="fd2d9-131">Using Animation</span></span>  
- <span data-ttu-id="fd2d9-132">Dla zabawy umożliwia animować kolory pędzla gradientu.</span><span class="sxs-lookup"><span data-stu-id="fd2d9-132">For fun, let's animate the colors of the gradient brush.</span></span> <span data-ttu-id="fd2d9-133">Dodaj następujące [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] po upływie `</InkCanvas>` tag, ale przed zamknięciem `</Page>` tagu.</span><span class="sxs-lookup"><span data-stu-id="fd2d9-133">Add the following [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] after the closing `</InkCanvas>` tag but before the closing `</Page>` tag.</span></span>  
-  
- [!code-xaml[DigitalInkTopics#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#2)]  
-  
-#### <a name="adding-some-code-behind-the-xaml"></a><span data-ttu-id="fd2d9-134">Dodanie niektórych kodzie XAML</span><span class="sxs-lookup"><span data-stu-id="fd2d9-134">Adding Some Code Behind the XAML</span></span>  
- <span data-ttu-id="fd2d9-135">Gdy XAML ułatwia bardzo Projektowanie interfejsu użytkownika, dowolnej aplikacji rzeczywistych musi Dodaj kod obsługi zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="fd2d9-135">While XAML makes it very easy to design the user interface, any real-world application needs to add code to handle events.</span></span> <span data-ttu-id="fd2d9-136">Poniżej przedstawiono prosty przykład, który powiększa pismo odręczne w odpowiedzi kliknij prawym przyciskiem myszy:</span><span class="sxs-lookup"><span data-stu-id="fd2d9-136">Here is a simple example that zooms in on the ink in response to a right-click from a mouse:</span></span>  
-  
- <span data-ttu-id="fd2d9-137">Ustaw `MouseRightButtonUp` obsługi w Twojej [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]:</span><span class="sxs-lookup"><span data-stu-id="fd2d9-137">Set the `MouseRightButtonUp` handler in your [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]:</span></span>  
-  
- [!code-xaml[DigitalInkTopics#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]  
-  
- <span data-ttu-id="fd2d9-138">W Eksploratorze rozwiązań programu Visual Studio rozwiń Windows1.xaml i Otwórz plik CodeBehind Window1.xaml.cs lub Window1.xaml.vb, jeśli używasz programu Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="fd2d9-138">In Visual Studio’s Solution Explorer, expand Windows1.xaml and open the code-behind file, Window1.xaml.cs or Window1.xaml.vb if you are using Visual Basic.</span></span> <span data-ttu-id="fd2d9-139">Dodaj następujący kod obsługi zdarzenia:</span><span class="sxs-lookup"><span data-stu-id="fd2d9-139">Add the following event handler code:</span></span>  
-  
- [!code-csharp[DigitalInkTopics#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
- [!code-vb[DigitalInkTopics#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]  
-  
- <span data-ttu-id="fd2d9-140">Teraz uruchom aplikację.</span><span class="sxs-lookup"><span data-stu-id="fd2d9-140">Now, run your application.</span></span> <span data-ttu-id="fd2d9-141">Dodaj część pisma odręcznego, a następnie prawym przyciskiem myszy lub wykonaj odpowiednika naciśnij i przytrzymaj za pomocą pióra.</span><span class="sxs-lookup"><span data-stu-id="fd2d9-141">Add some ink and then right-click with the mouse or perform a press-and-hold equivalent with a stylus.</span></span>  
-  
-#### <a name="using-procedural-code-instead-of-xaml"></a><span data-ttu-id="fd2d9-142">Przy użyciu kodu procedurach zamiast XAML</span><span class="sxs-lookup"><span data-stu-id="fd2d9-142">Using Procedural Code Instead of XAML</span></span>  
- <span data-ttu-id="fd2d9-143">Dostęp do wszystkich [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funkcji z kodu procedurach.</span><span class="sxs-lookup"><span data-stu-id="fd2d9-143">You can access all [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] features from procedural code.</span></span> <span data-ttu-id="fd2d9-144">Oto "odręczne aplikacji Hello World" dla [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] który nie używa żadnego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] wcale.</span><span class="sxs-lookup"><span data-stu-id="fd2d9-144">Here is a "Hello Ink World" application for [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] that doesn’t use any [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] at all.</span></span> <span data-ttu-id="fd2d9-145">Wklej poniższy kod do pustej aplikacji konsoli w programie Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="fd2d9-145">Paste the code below into an empty Console Application in Visual Studio.</span></span> <span data-ttu-id="fd2d9-146">Dodaj odwołania do zestawów PresentationCore, PresentationFramework i WindowsBase i skompilować aplikację, naciskając klawisz **F5**:</span><span class="sxs-lookup"><span data-stu-id="fd2d9-146">Add references to the PresentationCore, PresentationFramework, and WindowsBase assemblies, and build the application by pressing **F5**:</span></span>  
-  
- [!code-csharp[InkCanvasConsoleApp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
- [!code-vb[InkCanvasConsoleApp#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]  
-  
-## <a name="see-also"></a><span data-ttu-id="fd2d9-147">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="fd2d9-147">See Also</span></span>  
- [<span data-ttu-id="fd2d9-148">Cyfrowy atrament</span><span class="sxs-lookup"><span data-stu-id="fd2d9-148">Digital Ink</span></span>](../../../../docs/framework/wpf/advanced/digital-ink.md)  
- [<span data-ttu-id="fd2d9-149">Zbieranie atramentu</span><span class="sxs-lookup"><span data-stu-id="fd2d9-149">Collecting Ink</span></span>](../../../../docs/framework/wpf/advanced/collecting-ink.md)  
- [<span data-ttu-id="fd2d9-150">Rozpoznawanie pisma odręcznego</span><span class="sxs-lookup"><span data-stu-id="fd2d9-150">Handwriting Recognition</span></span>](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)  
- [<span data-ttu-id="fd2d9-151">Przechowywanie pisma odręcznego</span><span class="sxs-lookup"><span data-stu-id="fd2d9-151">Storing Ink</span></span>](../../../../docs/framework/wpf/advanced/storing-ink.md)
+# <a name="get-started-with-ink-in-wpf"></a><span data-ttu-id="75317-102">Rozpoczynanie pracy z usługą pisma odręcznego na platformie WPF</span><span class="sxs-lookup"><span data-stu-id="75317-102">Get Started with Ink in WPF</span></span>
+
+<span data-ttu-id="75317-103">Windows Presentation Foundation (WPF) zawiera funkcję pisma odręcznego, ułatwiająca włączenie cyfrowy atrament w swojej aplikacji.</span><span class="sxs-lookup"><span data-stu-id="75317-103">Windows Presentation Foundation (WPF) has an ink feature that makes it easy to incorporate digital ink into your app.</span></span>
+
+## <a name="prerequisites"></a><span data-ttu-id="75317-104">Wymagania wstępne</span><span class="sxs-lookup"><span data-stu-id="75317-104">Prerequisites</span></span>
+
+<span data-ttu-id="75317-105">Można użyć poniższych przykładów, najpierw [zainstalować program Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).</span><span class="sxs-lookup"><span data-stu-id="75317-105">To use the following examples, first [install Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).</span></span> <span data-ttu-id="75317-106">Pomaga również wiedzieć, jak napisać podstawowych aplikacji WPF.</span><span class="sxs-lookup"><span data-stu-id="75317-106">It also helps to know how to write basic WPF apps.</span></span> <span data-ttu-id="75317-107">Aby uzyskać pomoc, wprowadzenie do WPF, zobacz [Instruktaż: Mój pierwszy aplikacji klasycznej WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).</span><span class="sxs-lookup"><span data-stu-id="75317-107">For help getting started with WPF, see [Walkthrough: My first WPF desktop application](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).</span></span>
+
+## <a name="quick-start"></a><span data-ttu-id="75317-108">Przewodnik Szybki Start</span><span class="sxs-lookup"><span data-stu-id="75317-108">Quick Start</span></span>
+
+<span data-ttu-id="75317-109">Ta sekcja ułatwia pisanie prostą aplikację WPF, która gromadzi pisma odręcznego.</span><span class="sxs-lookup"><span data-stu-id="75317-109">This section helps you write a simple WPF application that collects ink.</span></span>
+
+### <a name="got-ink"></a><span data-ttu-id="75317-110">Masz pisma odręcznego?</span><span class="sxs-lookup"><span data-stu-id="75317-110">Got Ink?</span></span>
+
+<span data-ttu-id="75317-111">Aby utworzyć aplikację WPF, która obsługuje pisma odręcznego:</span><span class="sxs-lookup"><span data-stu-id="75317-111">To create a WPF app that supports ink:</span></span>
+
+1. <span data-ttu-id="75317-112">Otwórz program Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="75317-112">Open Visual Studio.</span></span>
+
+2. <span data-ttu-id="75317-113">Utwórz nową **aplikacja WPF**.</span><span class="sxs-lookup"><span data-stu-id="75317-113">Create a new **WPF App**.</span></span>
+
+   <span data-ttu-id="75317-114">W **nowy projekt** okna dialogowego, rozwiń węzeł **zainstalowane** > **Visual C#** lub **języka Visual Basic**  >   **Windows Desktop** kategorii.</span><span class="sxs-lookup"><span data-stu-id="75317-114">In the **New Project** dialog, expand the **Installed** > **Visual C#** or **Visual Basic** > **Windows Desktop** category.</span></span> <span data-ttu-id="75317-115">Następnie wybierz **aplikacja WPF (.NET Framework)** szablonu aplikacji.</span><span class="sxs-lookup"><span data-stu-id="75317-115">Then, select the **WPF App (.NET Framework)** app template.</span></span> <span data-ttu-id="75317-116">Wprowadź nazwę, a następnie wybierz **OK**.</span><span class="sxs-lookup"><span data-stu-id="75317-116">Enter a name, and then select **OK**.</span></span>
+
+   <span data-ttu-id="75317-117">Program Visual Studio tworzy projekt, a *MainWindow.xaml* zostanie otwarty w projektancie.</span><span class="sxs-lookup"><span data-stu-id="75317-117">Visual Studio creates the project, and *MainWindow.xaml* opens in the designer.</span></span>
+
+3. <span data-ttu-id="75317-118">Typ `<InkCanvas/>` między `<Grid>` tagów.</span><span class="sxs-lookup"><span data-stu-id="75317-118">Type `<InkCanvas/>` between the `<Grid>` tags.</span></span>
+
+   ![Projektant XAML z tagiem InkCanvas](media/getting-started-with-ink/inkcanvas-xaml.png)
+
+4. <span data-ttu-id="75317-120">Naciśnij klawisz **F5** do uruchomienia aplikacji w debugerze.</span><span class="sxs-lookup"><span data-stu-id="75317-120">Press **F5** to launch your application in the debugger.</span></span>
+
+5. <span data-ttu-id="75317-121">Za pomocą pióra lub mysz, zapis **Witaj, świecie** w oknie.</span><span class="sxs-lookup"><span data-stu-id="75317-121">Using a stylus or mouse, write **hello world** in the window.</span></span>
+
+<span data-ttu-id="75317-122">Napisanych pisma odręcznego wielokrotność aplikację "hello world" przy użyciu tylko 12 naciśnięć klawiszy!</span><span class="sxs-lookup"><span data-stu-id="75317-122">You've written the ink equivalent of a "hello world" application with only 12 keystrokes!</span></span>
+
+### <a name="spice-up-your-app"></a><span data-ttu-id="75317-123">Popraw aplikacji w górę</span><span class="sxs-lookup"><span data-stu-id="75317-123">Spice Up Your App</span></span>
+
+<span data-ttu-id="75317-124">Przyjrzyjmy się korzystać z niektórych funkcji WPF.</span><span class="sxs-lookup"><span data-stu-id="75317-124">Let’s take advantage of some features of the WPF.</span></span> <span data-ttu-id="75317-125">Zastąp wszystkie między otwierającym i zamykającym \<okna > Znaczniki następującym kodem:</span><span class="sxs-lookup"><span data-stu-id="75317-125">Replace everything between the opening and closing \<Window> tags with the following markup:</span></span>
+
+```xaml
+<Page>
+  <InkCanvas Name="myInkCanvas" MouseRightButtonUp="RightMouseUpHandler">
+    <InkCanvas.Background>
+      <LinearGradientBrush>
+        <GradientStop Color="Yellow" Offset="0.0" />
+          <GradientStop Color="Blue" Offset="0.5" />
+            <GradientStop Color="HotPink" Offset="1.0" />
+              </LinearGradientBrush>
+    </InkCanvas.Background>
+  </InkCanvas>
+</Page>
+```
+
+<span data-ttu-id="75317-126">Ta XAML tworzy pędzla gradientu tła powierzchni pisma odręcznego.</span><span class="sxs-lookup"><span data-stu-id="75317-126">This XAML creates a gradient brush background on your inking surface.</span></span>
+
+![Gradient kolorów na pisma odręcznego narażonego na ataki w aplikacji WPF](media/getting-started-with-ink/gradient-colors.png)
+
+### <a name="add-some-code-behind-the-xaml"></a><span data-ttu-id="75317-128">Dodawanie kodu za XAML</span><span class="sxs-lookup"><span data-stu-id="75317-128">Add Some Code Behind the XAML</span></span>
+
+<span data-ttu-id="75317-129">Gdy XAML sprawia, że można łatwo projektować interfejs użytkownika, dowolnej aplikacji w rzeczywistych warunkach musi dodać kod do obsługi zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="75317-129">While XAML makes it very easy to design the user interface, any real-world application needs to add code to handle events.</span></span> <span data-ttu-id="75317-130">Poniżej przedstawiono prosty przykład, który powiększa pisma odręcznego w odpowiedzi kliknij prawym przyciskiem myszy z myszy.</span><span class="sxs-lookup"><span data-stu-id="75317-130">Here is a simple example that zooms in on the ink in response to a right-click from a mouse.</span></span>
+
+1. <span data-ttu-id="75317-131">Ustaw `MouseRightButtonUp` obsługi w swojej XAML:</span><span class="sxs-lookup"><span data-stu-id="75317-131">Set the `MouseRightButtonUp` handler in your XAML:</span></span>
+
+   [!code-xaml[DigitalInkTopics#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]
+
+1. <span data-ttu-id="75317-132">W **Eksploratora rozwiązań**, rozwiń węzeł MainWindow.xaml i Otwórz plik związany z kodem (MainWindow.xaml.cs lub MainWindow.xaml.vb).</span><span class="sxs-lookup"><span data-stu-id="75317-132">In **Solution Explorer**, expand MainWindow.xaml and open the code-behind file (MainWindow.xaml.cs or MainWindow.xaml.vb).</span></span> <span data-ttu-id="75317-133">Dodaj następujący kod procedury obsługi zdarzeń:</span><span class="sxs-lookup"><span data-stu-id="75317-133">Add the following event handler code:</span></span>
+
+   [!code-csharp[DigitalInkTopics#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
+   [!code-vb[DigitalInkTopics#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]
+
+1. <span data-ttu-id="75317-134">Uruchom aplikację.</span><span class="sxs-lookup"><span data-stu-id="75317-134">Run the application.</span></span> <span data-ttu-id="75317-135">Dodaj część pisma odręcznego, a następnie kliknij prawym przyciskiem myszy, za pomocą myszy lub wykonać odpowiednik naciśnięcie i przytrzymanie za pomocą pióra.</span><span class="sxs-lookup"><span data-stu-id="75317-135">Add some ink, and then right-click with the mouse or perform a press-and-hold equivalent with a stylus.</span></span>
+
+   <span data-ttu-id="75317-136">Wyświetlanie powiększa za każdym razem, który kliknięto prawym przyciskiem myszy.</span><span class="sxs-lookup"><span data-stu-id="75317-136">The display zooms in each time you click with the right mouse button.</span></span>
+
+### <a name="use-procedural-code-instead-of-xaml"></a><span data-ttu-id="75317-137">Zamiast kod proceduralny XAML</span><span class="sxs-lookup"><span data-stu-id="75317-137">Use Procedural Code Instead of XAML</span></span>
+
+<span data-ttu-id="75317-138">Można uzyskać dostęp do wszystkich funkcji środowiska WPF z kodu proceduralnego.</span><span class="sxs-lookup"><span data-stu-id="75317-138">You can access all WPF features from procedural code.</span></span> <span data-ttu-id="75317-139">Wykonaj następujące kroki, aby utworzyć aplikację "Hello pisma odręcznego World" dla WPF, który nie używa żadnych XAML w ogóle.</span><span class="sxs-lookup"><span data-stu-id="75317-139">Follow these steps to create a "Hello Ink World" application for WPF that doesn’t use any XAML at all.</span></span>
+
+1. <span data-ttu-id="75317-140">Utwórz nowy projekt aplikacji konsoli w programie Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="75317-140">Create a new console application project in Visual Studio.</span></span>
+
+   <span data-ttu-id="75317-141">W **nowy projekt** okna dialogowego, rozwiń węzeł **zainstalowane** > **Visual C#** lub **języka Visual Basic**  >   **Windows Desktop** kategorii.</span><span class="sxs-lookup"><span data-stu-id="75317-141">In the **New Project** dialog, expand the **Installed** > **Visual C#** or **Visual Basic** > **Windows Desktop** category.</span></span> <span data-ttu-id="75317-142">Następnie wybierz **Aplikacja konsoli (.NET Framework)** szablonu aplikacji.</span><span class="sxs-lookup"><span data-stu-id="75317-142">Then, select the **Console App (.NET Framework)** app template.</span></span> <span data-ttu-id="75317-143">Wprowadź nazwę, a następnie wybierz **OK**.</span><span class="sxs-lookup"><span data-stu-id="75317-143">Enter a name, and then select **OK**.</span></span>
+
+1. <span data-ttu-id="75317-144">Wklej następujący kod do pliku Program.cs lub Program.vb:</span><span class="sxs-lookup"><span data-stu-id="75317-144">Paste the following code into the Program.cs or Program.vb file:</span></span>
+
+   [!code-csharp[InkCanvasConsoleApp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
+   [!code-vb[InkCanvasConsoleApp#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]
+
+1. <span data-ttu-id="75317-145">Dodaj odwołania do zestawów PresentationCore PresentationFramework i WindowsBase, klikając prawym przyciskiem myszy **odwołania** w **Eksploratora rozwiązań** i wybierając pozycję **Dodaj odwołanie**.</span><span class="sxs-lookup"><span data-stu-id="75317-145">Add references to the PresentationCore, PresentationFramework, and WindowsBase assemblies by right-clicking on **References** in **Solution Explorer** and choosing **Add Reference**.</span></span>
+
+   ![Menadżer odwołań PresentationCore i PresentationFramework](media/getting-started-with-ink/references.png)
+
+1. <span data-ttu-id="75317-147">Kompiluj aplikację, naciskając klawisz **F5**.</span><span class="sxs-lookup"><span data-stu-id="75317-147">Build the application by pressing **F5**.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="75317-148">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="75317-148">See Also</span></span>
+
+- [<span data-ttu-id="75317-149">Cyfrowy atrament</span><span class="sxs-lookup"><span data-stu-id="75317-149">Digital Ink</span></span>](../../../../docs/framework/wpf/advanced/digital-ink.md)
+- [<span data-ttu-id="75317-150">Zbieranie atramentu</span><span class="sxs-lookup"><span data-stu-id="75317-150">Collecting Ink</span></span>](../../../../docs/framework/wpf/advanced/collecting-ink.md)
+- [<span data-ttu-id="75317-151">Rozpoznawanie pisma odręcznego</span><span class="sxs-lookup"><span data-stu-id="75317-151">Handwriting Recognition</span></span>](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)
+- [<span data-ttu-id="75317-152">Przechowywanie pisma odręcznego</span><span class="sxs-lookup"><span data-stu-id="75317-152">Storing Ink</span></span>](../../../../docs/framework/wpf/advanced/storing-ink.md)

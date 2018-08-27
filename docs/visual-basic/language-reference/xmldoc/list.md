@@ -13,17 +13,17 @@ helpviewer_keywords:
 - item XML tag
 - <term> XML tag
 ms.assetid: ec35fced-d58e-4520-a764-0691256e014b
-ms.openlocfilehash: f03924217393e1e909b086b282f1c62ddb471522
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 98c3b8bd809ac550468a5d80e01e6fd16e6d96ea
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603616"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924937"
 ---
-# <a name="ltlistgt-visual-basic"></a><span data-ttu-id="24398-102">&lt;Lista&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="24398-102">&lt;list&gt; (Visual Basic)</span></span>
-<span data-ttu-id="24398-103">Definiuje listy lub tabeli.</span><span class="sxs-lookup"><span data-stu-id="24398-103">Defines a list or table.</span></span>  
+# <a name="ltlistgt-visual-basic"></a><span data-ttu-id="7e34c-102">&lt;Lista&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7e34c-102">&lt;list&gt; (Visual Basic)</span></span>
+<span data-ttu-id="7e34c-103">Definiuje listy lub tabeli.</span><span class="sxs-lookup"><span data-stu-id="7e34c-103">Defines a list or table.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="24398-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="24398-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7e34c-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="7e34c-104">Syntax</span></span>  
   
 ```xml  
 <list type="type">  
@@ -38,29 +38,29 @@ ms.locfileid: "33603616"
 </list>  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="24398-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="24398-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="7e34c-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="7e34c-105">Parameters</span></span>  
  `type`  
- <span data-ttu-id="24398-106">Typ listy.</span><span class="sxs-lookup"><span data-stu-id="24398-106">The type of the list.</span></span> <span data-ttu-id="24398-107">Musi być "bullet" do listy punktowanej, "numer" Lista numerowana lub "Tabela" dla tabeli dwie kolumny.</span><span class="sxs-lookup"><span data-stu-id="24398-107">Must be a "bullet" for a bulleted list, "number" for a numbered list, or "table" for a two-column table.</span></span>  
+ <span data-ttu-id="7e34c-106">Typ listy.</span><span class="sxs-lookup"><span data-stu-id="7e34c-106">The type of the list.</span></span> <span data-ttu-id="7e34c-107">Musi być "bullet" na liście punktowanej we wcześniejszej, "number", dla listy numerowanej lub "table" dla tabeli dwie kolumny.</span><span class="sxs-lookup"><span data-stu-id="7e34c-107">Must be a "bullet" for a bulleted list, "number" for a numbered list, or "table" for a two-column table.</span></span>  
   
  `term`  
- <span data-ttu-id="24398-108">Używana tylko w przypadku `type` jest "table".</span><span class="sxs-lookup"><span data-stu-id="24398-108">Only used when `type` is "table."</span></span> <span data-ttu-id="24398-109">Termin Aby zdefiniować, który jest zdefiniowany w tagu opis.</span><span class="sxs-lookup"><span data-stu-id="24398-109">A term to define, which is defined in the description tag.</span></span>  
+ <span data-ttu-id="7e34c-108">Używana tylko w przypadku `type` jest "table".</span><span class="sxs-lookup"><span data-stu-id="7e34c-108">Only used when `type` is "table."</span></span> <span data-ttu-id="7e34c-109">Termin, aby zdefiniować, która jest zdefiniowana w tagu opis.</span><span class="sxs-lookup"><span data-stu-id="7e34c-109">A term to define, which is defined in the description tag.</span></span>  
   
  `description`  
- <span data-ttu-id="24398-110">Gdy `type` "bullet" lub "number" `description` jest pozycją na liście po `type` jest "tabeli" `description` znajduje się definicja metody `term`.</span><span class="sxs-lookup"><span data-stu-id="24398-110">When `type` is "bullet" or "number," `description` is an item in the list When `type` is "table," `description` is the definition of `term`.</span></span>  
+ <span data-ttu-id="7e34c-110">Gdy `type` "bullet" lub "number" `description` element na liście po `type` jest "tabeli" `description` jest definicja `term`.</span><span class="sxs-lookup"><span data-stu-id="7e34c-110">When `type` is "bullet" or "number," `description` is an item in the list When `type` is "table," `description` is the definition of `term`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="24398-111">Uwagi</span><span class="sxs-lookup"><span data-stu-id="24398-111">Remarks</span></span>  
- <span data-ttu-id="24398-112">`<listheader>` Bloku definiuje nagłówek tabeli lub definicji listy.</span><span class="sxs-lookup"><span data-stu-id="24398-112">The `<listheader>` block defines the heading of either a table or definition list.</span></span> <span data-ttu-id="24398-113">Podczas definiowania tabeli, wystarczy podać wpis dotyczący `term` w nagłówku.</span><span class="sxs-lookup"><span data-stu-id="24398-113">When defining a table, you only have to supply an entry for `term` in the heading.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7e34c-111">Uwagi</span><span class="sxs-lookup"><span data-stu-id="7e34c-111">Remarks</span></span>  
+ <span data-ttu-id="7e34c-112">`<listheader>` Bloku określa nagłówek tabeli lub definicji listy.</span><span class="sxs-lookup"><span data-stu-id="7e34c-112">The `<listheader>` block defines the heading of either a table or definition list.</span></span> <span data-ttu-id="7e34c-113">Podczas definiowania tabeli, wystarczy podać wpis dla `term` w nagłówku.</span><span class="sxs-lookup"><span data-stu-id="7e34c-113">When defining a table, you only have to supply an entry for `term` in the heading.</span></span>  
   
- <span data-ttu-id="24398-114">Każdy element na liście zostanie określony z `<item>` bloku.</span><span class="sxs-lookup"><span data-stu-id="24398-114">Each item in the list is specified with an `<item>` block.</span></span> <span data-ttu-id="24398-115">Podczas tworzenia listy definicji, należy określić zarówno `term` i `description`.</span><span class="sxs-lookup"><span data-stu-id="24398-115">When creating a definition list, you must specify both `term` and `description`.</span></span> <span data-ttu-id="24398-116">Jednak dla tabeli, lista punktowana lub Lista numerowana, wystarczy podać wpis dotyczący `description`.</span><span class="sxs-lookup"><span data-stu-id="24398-116">However, for a table, bulleted list, or numbered list, you only have to supply an entry for `description`.</span></span>  
+ <span data-ttu-id="7e34c-114">Każdy element na liście jest określony za pomocą `<item>` bloku.</span><span class="sxs-lookup"><span data-stu-id="7e34c-114">Each item in the list is specified with an `<item>` block.</span></span> <span data-ttu-id="7e34c-115">Podczas tworzenia listy definicji, należy określić zarówno `term` i `description`.</span><span class="sxs-lookup"><span data-stu-id="7e34c-115">When creating a definition list, you must specify both `term` and `description`.</span></span> <span data-ttu-id="7e34c-116">Jednak dla tabeli, listy punktowanej lub numerowanej, wystarczy podać wpis dla `description`.</span><span class="sxs-lookup"><span data-stu-id="7e34c-116">However, for a table, bulleted list, or numbered list, you only have to supply an entry for `description`.</span></span>  
   
- <span data-ttu-id="24398-117">Listy lub tabeli może mieć tyle `<item>` blokuje zgodnie z potrzebami.</span><span class="sxs-lookup"><span data-stu-id="24398-117">A list or table can have as many `<item>` blocks as needed.</span></span>  
+ <span data-ttu-id="7e34c-117">Masz tyle listy lub tabeli `<item>` blokuje zgodnie z potrzebami.</span><span class="sxs-lookup"><span data-stu-id="7e34c-117">A list or table can have as many `<item>` blocks as needed.</span></span>  
   
- <span data-ttu-id="24398-118">Kompiluj z użyciem [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) na przetwarzanie komentarzy dokumentacji do pliku.</span><span class="sxs-lookup"><span data-stu-id="24398-118">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="7e34c-118">Kompiluj przy użyciu [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) do Przetwarzaj komentarze dokumentacji do pliku.</span><span class="sxs-lookup"><span data-stu-id="7e34c-118">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="24398-119">Przykład</span><span class="sxs-lookup"><span data-stu-id="24398-119">Example</span></span>  
- <span data-ttu-id="24398-120">W tym przykładzie użyto `<list>` tag do definiowania listy punktowanej w sekcji uwag.</span><span class="sxs-lookup"><span data-stu-id="24398-120">This example uses the `<list>` tag to define a bulleted list in the remarks section.</span></span>  
+## <a name="example"></a><span data-ttu-id="7e34c-119">Przykład</span><span class="sxs-lookup"><span data-stu-id="7e34c-119">Example</span></span>  
+ <span data-ttu-id="7e34c-120">W tym przykładzie użyto `<list>` tag, aby zdefiniować listy punktowanej w sekcji uwag.</span><span class="sxs-lookup"><span data-stu-id="7e34c-120">This example uses the `<list>` tag to define a bulleted list in the remarks section.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#5](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/list_1.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="24398-121">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="24398-121">See Also</span></span>  
- [<span data-ttu-id="24398-122">Tagi komentarza XML</span><span class="sxs-lookup"><span data-stu-id="24398-122">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="7e34c-121">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="7e34c-121">See Also</span></span>  
+ [<span data-ttu-id="7e34c-122">Tagi komentarza XML</span><span class="sxs-lookup"><span data-stu-id="7e34c-122">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)

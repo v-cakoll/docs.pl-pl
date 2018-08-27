@@ -7,11 +7,11 @@ helpviewer_keywords:
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
 ms.openlocfilehash: f9bb4ec21685d21d0975529c7460944b5f0f9fc6
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42753927"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925775"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ i typy ogólne (C#)
 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania są oparte na typach ogólnych, które zostały wprowadzone w wersji 2.0 programu [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Nie potrzebujesz dogłębnej znajomości ogólne przed rozpoczęciem pisania zapytań. Jednak warto zrozumieć dwa podstawowe pojęcia:  

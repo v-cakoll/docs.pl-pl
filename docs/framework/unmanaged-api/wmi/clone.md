@@ -1,6 +1,6 @@
 ---
 title: Funkcja klonowania (niezarządzany wykaz interfejsów API)
-description: Funkcja klonowania zwraca nowy obiekt, która jest klonem pełne obecną.
+description: Funkcja klonowania zwraca nowy obiekt, który jest kompletny klonowania bieżący proces.
 ms.date: 11/06/2017
 api_name:
 - Clone
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5841c89cf394502f68381dfed42593c9debdcb1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5cd87cb619ef2dc1e0548c7553585b7e51e94c4f
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457319"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924778"
 ---
-# <a name="clone-function"></a>Clone — funkcja
-Zwraca nowy obiekt, który jest pełny klonowania bieżącego obiektu.   
+# <a name="clone-function"></a>Funkcja clone
+Zwraca nowy obiekt, który jest kompletny klonowania bieżącego obiektu.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -41,30 +41,30 @@ HRESULT Clone (
 ## <a name="parameters"></a>Parametry
 
 `vFunc`  
-[in] Ten parametr nie jest używana.
+[in] Ten parametr jest nieużywany.
 
 `ptr`  
-[in] Wskaźnik do [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) wystąpienia.
+[in] Wskaźnik do [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienia.
 
 `ppCopy`  
-[out] Nowy obiekt, który jest kompletna pojedynczy z `ptr`. Ten argument nie może być `null` po otrzymaniu kopię bieżącego obiektu.
+[out] Nowy obiekt, który jest kompletna pojedynczy z `ptr`. Ten argument nie może być `null` jeżeli otrzyma kopię bieżącego obiektu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.h* pliku nagłówka, lub należy je zdefiniować jako stałe w kodzie:
+Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Wystąpił błąd ogólny. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null` został określony jako parametru, a nie jest dozwolone w ten sposób użycia. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Za mało pamięci jest dostępna w celu sklonowania obiektu. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null` został określony jako parametr, a nie jest dozwolone w tym użycie. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Nie ma wystarczającej ilości pamięci jest dostępny w celu sklonowania obiektu. |
 | `WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
   
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zawijana wywołanie [IWbemClassObject::Clone](https://msdn.microsoft.com/library/aa391436(v=vs.85).aspx) metody.
+Ta funkcja zawija wywołanie do [IWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) metody.
 
-Sklonowany obiekt to obiekt COM, który ma liczebności referencyjnej równej 1.
+Sklonowany obiekt jest obiektem COM, który ma liczebności referencyjnej równej 1.
 
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -74,4 +74,4 @@ Sklonowany obiekt to obiekt COM, który ma liczebności referencyjnej równej 1.
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
-[Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)
+[Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

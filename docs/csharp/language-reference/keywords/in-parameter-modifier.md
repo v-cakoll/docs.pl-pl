@@ -4,12 +4,12 @@ ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: 58500cf2caa1446af6b663f1b765c0be92309f1d
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 913957e6afad1d9d516a01f4bb0e377b94a40aea
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198425"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924991"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>w modyfikator parametrów (odwołanie w C#)
 
@@ -122,4 +122,5 @@ Nie można użyć `in`, `ref`, i `out` słowa kluczowe dla następujących rodza
  [Dokumentacja języka C#](../index.md)  
  [Przewodnik programowania w języku C#](../../programming-guide/index.md)  
  [Słowa kluczowe języka C#](index.md)  
- [Parametry metody](method-parameters.md) [odwołania semantyki z typami wartości](../../reference-semantics-with-value-types.md)
+ [Parametry metody](method-parameters.md)  
+ [Semantyka odwołań z typami wartości](../../reference-semantics-with-value-types.md)  

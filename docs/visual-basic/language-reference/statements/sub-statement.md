@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-ms.openlocfilehash: 08be38cdbec82914b567ab5b86eed71181efcf57
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 7baa4e25bc876ebfbe03c316b2020e01aedbc88d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34234179"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924498"
 ---
 # <a name="sub-statement-visual-basic"></a>Sub — Instrukcja (Visual Basic)
 Deklaruje nazwę, parametry i kod, który definiuje `Sub` procedury.  
@@ -54,11 +54,11 @@ End Sub
   
 -   `attributelist`  
   
-     Opcjonalna. Zobacz temat [Lista atrybutów](attribute-list.md).  
+     Opcjonalna. Zobacz [Lista atrybutów](attribute-list.md).  
   
 -   `Partial`  
   
-     Opcjonalna. Wskazuje definicję metody częściowej. Zobacz [metody częściowe](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md).  
+     Opcjonalna. Wskazuje definicji metody częściowej. Zobacz [metod częściowych](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md).  
   
 -   `accessmodifier`  
   
@@ -72,9 +72,9 @@ End Sub
   
     -   [Private](../modifiers/private.md)  
   
-    - [Friend chronionych](../../language-reference/modifiers/protected-friend.md)
+    - [Chronione Friend](../../language-reference/modifiers/protected-friend.md)
 
-    - [Prywatne chronione](../../language-reference/modifiers/private-protected.md)
+    - [Prywatny chroniony](../../language-reference/modifiers/private-protected.md)
   
      Zobacz temat [Poziomy dostępu w języku Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
@@ -98,7 +98,7 @@ End Sub
   
 -   `Shared`  
   
-     Opcjonalna. Zobacz [udostępnionych](../modifiers/shared.md).  
+     Opcjonalna. Zobacz [udostępnione](../modifiers/shared.md).  
   
 -   `Shadows`  
   
@@ -110,23 +110,23 @@ End Sub
   
 -   `name`  
   
-     Wymagana. Nazwa procedury. Zobacz temat[Zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md). Aby utworzyć procedury konstruktora dla klasy, ustaw nazwę `Sub` procedura `New` — słowo kluczowe. Aby uzyskać więcej informacji, zobacz [okres istnienia obiektów: sposób obiekty są utworzone i Destroyed](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
+     Wymagane. Nazwa procedury. Zobacz temat[Zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md). Aby utworzyć procedurę konstruktora dla klasy, ustaw nazwę `Sub` procedury, aby `New` — słowo kluczowe. Aby uzyskać więcej informacji, zobacz [okres istnienia obiektów: jak obiekty są utworzone i Destroyed](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
   
 -   `typeparamlist`  
   
-     Opcjonalna. Lista parametrów typu ogólnego procedurę. Zobacz [typu listy](type-list.md).  
+     Opcjonalna. Lista parametrów typu ogólnego procedury. Zobacz [Lista typów](type-list.md).  
   
 -   `parameterlist`  
   
-     Opcjonalna. Lista nazwy zmiennych lokalnych reprezentujący parametry tej procedury. Zobacz [listy parametrów](parameter-list.md).  
+     Opcjonalna. Lista nazwy zmiennych lokalnych reprezentującą parametry tej procedury. Zobacz [listy parametrów](parameter-list.md).  
   
 -   `Implements`  
   
-     Opcjonalna. Wskazuje, że ta procedura implementuje co najmniej jeden `Sub` procedur, każdą z nich zdefiniowane w interfejsie zaimplementowany przez klasę lub strukturę zawierającego tę procedurę. Zobacz [implementuje instrukcji](implements-statement.md).  
+     Opcjonalna. Wskazuje, że ta procedura implementuje co najmniej jeden `Sub` procedury, każdy z nich zdefiniowane w interfejsie zaimplementowany przez klasę lub strukturę zawierającego tę procedurę. Zobacz [Implements, instrukcja](implements-statement.md).  
   
 -   `implementslist`  
   
-     Jeśli wymagane `Implements` podano. Lista `Sub` procedury implementowana.  
+     Jeśli wymagane `Implements` podano. Lista `Sub` procedury są wdrożone.  
   
      `implementedprocedure [ , implementedprocedure ... ]`  
   
@@ -136,8 +136,8 @@ End Sub
   
     |Część|Opis|  
     |---|---|  
-    |`interface`|Wymagana. Nazwa interfejsu implementowanego przez tej procedury zawierający klasy lub struktury.|  
-    |`definedname`|Wymagana. Za pomocą którego procedura została określona w nazwie `interface`.|  
+    |`interface`|Wymagane. Nazwa interfejsu implementowany przez tej procedury zawierający klasy lub struktury.|  
+    |`definedname`|Wymagane. Nazwa, za pomocą którego procedura jest zdefiniowany w `interface`.|  
   
 -   `Handles`  
   
@@ -155,8 +155,8 @@ End Sub
   
     |Część|Opis|  
     |---|---|  
-    |`eventvariable`|Wymagana. Zmienna obiektu zadeklarowane z typem danych klasy lub struktury, który wywołuje zdarzenie.|  
-    |`event`|Wymagana. Nazwa zdarzenia, które obsługuje tę procedurę.|  
+    |`eventvariable`|Wymagane. Zmienna obiektu zadeklarowane z typem danych klasy lub struktury, która wywołuje zdarzenia.|  
+    |`event`|Wymagane. Nazwa zdarzenia, które obsługuje tę procedurę.|  
   
 -   `statements`  
   
@@ -167,19 +167,19 @@ End Sub
      Kończy definicję tej procedury.  
   
 ## <a name="remarks"></a>Uwagi  
- Cały kod wykonywalny musi znajdować się w procedurze. Użyj `Sub` procedury, jeśli nie chcesz zwrócić wartość do wywołującego kodu. Użyj `Function` procedury, jeśli chcesz zwrócić wartość.  
+ Cały kod wykonywalny musi być wewnątrz procedury. Użyj `Sub` procedury, jeśli nie chcesz zwracać wartość do wywołującego kodu. Użyj `Function` procedury zwracać wartość.  
   
-## <a name="defining-a-sub-procedure"></a>Definiowanie procedury Sub  
- Można zdefiniować `Sub` procedury tylko na poziomie modułu. Kontekst deklaracji procedurę sub dlatego należy klasy, struktury, modułu lub interfejsu i nie może być plik źródłowy, przestrzeni nazw, procedurę lub blok. Aby uzyskać więcej informacji, zobacz [Declaration Contexts and Default Access Level](declaration-contexts-and-default-access-levels.md) (Kontekst deklaracji i domyślne poziomy dostępu).  
+## <a name="defining-a-sub-procedure"></a>Definiujący procedurę Sub  
+ Można zdefiniować `Sub` procedury tylko na poziomie modułu. Kontekst deklaracji procedurę sub dlatego należy klasy, struktury, modułem lub interfejsem, a nie może być plikiem źródłowym, przestrzeń nazw, procedurę lub blok. Aby uzyskać więcej informacji, zobacz [Kontekst deklaracji i domyślne poziomy dostępu](declaration-contexts-and-default-access-levels.md).  
   
  `Sub` Domyślnie procedur dostępu publicznego. Modyfikatory dostępu można dostosować ich poziomy dostępu.  
   
- Jeśli procedura używa `Implements` — słowo kluczowe, zawierające klasy lub struktury musi mieć `Implements` instrukcji poniższą jego `Class` lub `Structure` instrukcji. `Implements` Instrukcja musi zawierać każdy interfejs, który jest określony w `implementslist`. Jednak nazwy za pomocą którego definiuje interfejs `Sub` (w `definedname`) nie musi być zgodna z nazwą w tej procedurze (w `name`).  
+ Jeśli w procedurze użyto `Implements` — słowo kluczowe, zawierający klasy lub struktury, musi mieć `Implements` instrukcji, który następuje bezpośrednio po jego `Class` lub `Structure` instrukcji. `Implements` Instrukcja musi zawierać każdego interfejsu, który jest określony w `implementslist`. Jednak nazwy za pomocą którego interfejs definiuje `Sub` (w `definedname`) nie musi być zgodna z nazwą w tej procedurze (w `name`).  
   
 ## <a name="returning-from-a-sub-procedure"></a>Zwracanie z procedurę Sub  
- Gdy `Sub` procedura zwraca do kodu wywołującego, wykonanie będzie kontynuowane przy użyciu instrukcji następującej po instrukcji, która ją.  
+ Gdy `Sub` procedury zwraca do kodu wywołującego, wykonywanie jest kontynuowane przy użyciu instrukcji następującej po instrukcji, która nazwała go.  
   
- W poniższym przykładzie przedstawiono typ zwracany `Sub` procedury.  
+ W poniższym przykładzie pokazano zwracany `Sub` procedury.  
   
 ```vb  
 Sub mySub(ByVal q As String)  
@@ -187,32 +187,32 @@ Sub mySub(ByVal q As String)
 End Sub   
 ```  
   
- `Exit Sub` i `Return` instrukcje powoduje natychmiastowe wyjście z `Sub` procedury. Dowolną liczbę `Exit Sub` i `Return` instrukcje mogą występować w dowolnym miejscu w procedurze, a można mieszać `Exit Sub` i `Return` instrukcje.  
+ `Exit Sub` i `Return` instrukcji powodują natychmiastowego wyjścia z `Sub` procedury. Dowolną liczbę `Exit Sub` i `Return` instrukcji może występować w dowolnym miejscu w ramach procedury i możesz mieszać `Exit Sub` i `Return` instrukcji.  
   
-## <a name="calling-a-sub-procedure"></a>Wywołanie procedury Sub  
- Należy wywołać `Sub` procedury przy użyciu nazwy procedury w instrukcji i następnie wykonując tej nazwy z listą argumentów w nawiasach. Można pominąć nawiasów, tylko wtedy, gdy nie podawaj żadnych argumentów. Jednak kod jest bardziej przejrzysta zawsze używać nawiasów.  
+## <a name="calling-a-sub-procedure"></a>Wywoływanie procedury Sub  
+ Należy wywołać `Sub` procedury przy użyciu nazwy procedury w instrukcji i postępuj zgodnie z tej nazwy z listą argumentów w nawiasach. Nawiasy można pominąć, tylko, jeśli nie podasz żadnych argumentów. Jednak kod jest bardziej czytelny, jeśli zawsze zawierać nawiasy.  
   
- A `Sub` procedury i `Function` procedura może mieć parametrów i wykonać serię instrukcji. Jednak `Function` procedury zwraca wartość i a `Sub` nie procedury. W związku z tym nie można użyć `Sub` procedury w wyrażeniu.  
+ A `Sub` procedury i `Function` procedury mogą mieć parametry i wykonać serię instrukcji. Jednak `Function` procedury zwraca wartość, a w `Sub` nie procedury. W związku z tym, nie można użyć `Sub` procedury w wyrażeniu.  
   
- Można użyć `Call` — słowo kluczowe podczas wywoływania `Sub` procedura, ale tego słowa kluczowego nie jest zalecane w przypadku zastosowań. Aby uzyskać więcej informacji, zobacz [instrukcji Call](call-statement.md).  
+ Możesz użyć `Call` — słowo kluczowe po wywołaniu `Sub` procedura, ale że — słowo kluczowe nie jest zalecany dla większości zastosowań. Aby uzyskać więcej informacji, zobacz [instrukcji Call](call-statement.md).  
   
- Visual Basic Reorganizuje czasami wyrażenia arytmetyczne, aby zwiększyć wydajność wewnętrznego. Z tego powodu jeśli lista argumentów zawiera wyrażeń, które wywołują inne procedury możesz nie należy założyć, że te wyrażenia zostanie wywołana w określonej kolejności.  
+ Visual Basic Reorganizuje czasami wyrażenia arytmetyczne, aby zwiększyć wydajność wewnętrznej. Z tego powodu jeśli lista argumentów zawiera wyrażenia, które wywołują innych procedur, nie należy zakładać, że że te wyrażenia zostaną wywołane w określonej kolejności.  
   
 ## <a name="async-sub-procedures"></a>Async Sub — procedury  
- Korzystając z funkcji asynchronicznych, można wywołać funkcji asynchronicznych bez za pomocą jawnego wywołania zwrotne i ręcznie dzielenia kodu wielu funkcji lub wyrażenia lambda.  
+ Za pomocą funkcji asynchronicznych, można wywoływać funkcje asynchroniczne bez za pomocą jawnego wywołania zwrotne lub ręcznego podziału kodu na wielu funkcji lub wyrażenia lambda.  
   
- Jeśli procedura o [Async](../modifiers/async.md) modyfikator, można użyć [Await](../../../visual-basic/language-reference/operators/await-operator.md) operatora w procedurze. Gdy kontrolować osiągnie `Await` wyrażenie w `Async` procedury kontroli zwraca wywołującego i postępu w procedurze jest wstrzymana, aż do zakończenia zadań oczekiwano. Po zakończeniu zadania wykonywania można wznowić w procedurze.  
+ Po oznaczeniu procedury z [Async](../modifiers/async.md) modyfikator, można użyć [Await](../../../visual-basic/language-reference/operators/await-operator.md) operatora w procedurze. Gdy kontrola osiąga `Await` wyrażenia w `Async` procedury, sterowanie powraca do obiektu wywołującego, a postęp w procedurze jest wstrzymana, dopóki nie zakończy się oczekiwane zadanie. Kiedy zadanie zostanie ukończone, wykonanie można wznowić w procedurze.  
   
 > [!NOTE]
->  `Async` Procedury zwraca do wywołującego po napotkaniu albo pierwszego oczekiwano obiekt, który nie został jeszcze ukończony lub na końcu `Async` osiągnięciu procedury cokolwiek nastąpi najpierw.  
+>  `Async` Procedury powraca do obiektu wywołującego, po napotkaniu albo pierwszego oczekiwane obiekt, który nie został jeszcze ukończony lub na końcu `Async` procedury zostanie osiągnięty, zależnie co nastąpi wcześniej.  
   
- Można również zaznaczyć [instrukcji Function](function-statement.md) z `Async` modyfikator. `Async` Funkcja może mieć typ zwracany <xref:System.Threading.Tasks.Task%601> lub <xref:System.Threading.Tasks.Task>. Przykład później w tym temacie przedstawiono `Async` funkcja, która ma typ zwracany <xref:System.Threading.Tasks.Task%601>.  
+ Można również oznaczyć [Function — instrukcja](function-statement.md) z `Async` modyfikator. `Async` Funkcji może mieć typ zwracany <xref:System.Threading.Tasks.Task%601> lub <xref:System.Threading.Tasks.Task>. Przykład później w tym temacie przedstawiono `Async` funkcję, która ma typ zwracany <xref:System.Threading.Tasks.Task%601>.  
   
- `Async` `Sub` procedury są używane głównie dla programów obsługi zdarzeń, których nie można zwrócić wartość. `Async``Sub` Procedura nie jest oczekiwane oraz funkcji wywołującej `Async``Sub` procedury nie przechwytuje wyjątków który `Sub` zgłasza procedury.  
+ `Async` `Sub` procedury są głównie używane do obsługi zdarzeń, których nie można zwrócić wartość. `Async` `Sub` Procedura nie może być oczekiwany, a obiekt wywołujący `Async` `Sub` procedura nie może przechwytywać wyjątków, `Sub` zgłasza procedury.  
   
- `Async` Procedury nie można zadeklarować żadnego [ByRef](../modifiers/byref.md) parametrów.  
+ `Async` Procedura nie może deklarować [ByRef](../modifiers/byref.md) parametrów.  
   
- Aby uzyskać więcej informacji na temat `Async` procedury, zobacz [programowanie asynchroniczne z Async i Await](../../../visual-basic/programming-guide/concepts/async/index.md), [przepływ sterowania w aplikacjach asynchronicznych](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md), i [Async zwracać typów](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
+ Aby uzyskać więcej informacji na temat `Async` procedury, zobacz [Asynchronous Programming with Async and Await](../../../visual-basic/programming-guide/concepts/async/index.md), [Control Flow in Async Programs](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md), i [Async Return Types](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie użyto `Sub` instrukcji, aby zdefiniować nazwę, parametry i kod, który tworzą treści `Sub` procedury.  
@@ -220,9 +220,9 @@ End Sub
  [!code-vb[VbVbalrStatements#58](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/sub-statement_1.vb)]  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie `DelayAsync` jest `Async``Function` mający typ zwracany <xref:System.Threading.Tasks.Task%601>. `DelayAsync` ma `Return` instrukcji, która zwraca liczbę całkowitą. W związku z tym funkcja deklaracja `DelayAsync` musi mieć typ zwracany `Task(Of Integer)`. Ponieważ typ zwracany jest `Task(Of Integer)`, oceny `Await` wyrażenie w `DoSomethingAsync` tworzy całkowitą, jak przedstawiono na poniższym instrukcji: `Dim result As Integer = Await delayTask`.  
+ W poniższym przykładzie `DelayAsync` jest `Async` `Function` zawierający typ zwracany <xref:System.Threading.Tasks.Task%601>. `DelayAsync` ma `Return` instrukcję, która zwraca liczbę całkowitą. W związku z tym, funkcja deklaracji `DelayAsync` musi mieć typ zwracany `Task(Of Integer)`. Ponieważ typem zwracanym jest `Task(Of Integer)`, oceny `Await` wyrażenia w `DoSomethingAsync` tworzy liczbą całkowitą, co pokazuje poniższa instrukcja: `Dim result As Integer = Await delayTask`.  
   
- `startButton_Click` Procedura jest przykładem `Async Sub` procedury. Ponieważ `DoSomethingAsync` jest `Async` funkcji, zadanie dla wywołania `DoSomethingAsync` musi być oczekiwane, jak przedstawiono na poniższym instrukcji: `Await DoSomethingAsync()`. `startButton_Click``Sub` Procedury musi być zdefiniowany za pomocą `Async` modyfikator ponieważ ma ona `Await` wyrażenia.  
+ `startButton_Click` Procedura to przykład `Async Sub` procedury. Ponieważ `DoSomethingAsync` jest `Async` funkcji, zadanie do wywołań `DoSomethingAsync` musi być oczekiwana, co pokazuje poniższa instrukcja: `Await DoSomethingAsync()`. `startButton_Click` `Sub` Procedury muszą być zdefiniowane przy użyciu `Async` modyfikator ponieważ ma ona `Await` wyrażenia.  
   
  [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/sub-statement_2.vb)]  
   

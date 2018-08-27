@@ -10,57 +10,57 @@ helpviewer_keywords:
 - applications [Visual Basic], output location
 ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
 ms.openlocfilehash: fa177fa1f07c52d900f57e5bf61c967f06203c4f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590936"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42908228"
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>Wskazówki: ustalanie, gdzie My.Application.Log zapisuje informacje (Visual Basic)
-`My.Application.Log` Obiektu można zapisać informacji do kilku odbiorniki dzienników. Odbiorniki logu są konfigurowane przez plik konfiguracji komputera i może zostać zastąpiona przez pliku konfiguracji aplikacji. W tym temacie opisano ustawienia domyślne i jak określić ustawienia aplikacji.  
+`My.Application.Log` Obiektu można zapisać informacji do kilku odbiorniki logu. Odbiorniki logu są konfigurowane przez plik konfiguracji komputera i może zostać przesłonięta przez plik konfiguracji aplikacji. W tym temacie opisano domyślne ustawienia i jak określić ustawienia aplikacji.  
   
- Aby uzyskać więcej informacji o domyślnych lokalizacji danych wyjściowych, zobacz [Praca z dziennikami aplikacji](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).  
+ Aby uzyskać więcej informacji na temat domyślnych lokalizacji danych wyjściowych, zobacz [Praca z dziennikami aplikacji](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).  
   
 ### <a name="to-determine-the-listeners-for-myapplicationlog"></a>Aby określić odbiorników dla obiektu My.Application.Log  
   
-1.  Zlokalizuj plik konfiguracji zestawu. Jeśli tworzysz zestawu, możesz uzyskać dostęp app.config w programie Visual Studio z **Eksploratora rozwiązań**. W przeciwnym razie nazwa pliku konfiguracji jest nazwą zestawu dołączony ".config" i znajduje się w tym samym katalogu co zestaw.  
+1.  Zlokalizuj plik konfiguracji zestawu. Tworzysz zestawu, można przejść do pliku app.config w programie Visual Studio z **Eksploratora rozwiązań**. W przeciwnym razie nazwa pliku konfiguracji jest dołączona za pomocą "config" Nazwa zestawu i znajduje się w tym samym katalogu co zestaw.  
   
     > [!NOTE]
-    >  Nie każdy zestaw ma pliku konfiguracji.  
+    >  Nie każdy zestaw ma plik konfiguracji.  
   
-     Plik konfiguracji jest plikiem XML.  
+     Plik konfiguracji jest plik XML.  
   
-2.  Zlokalizuj `<listeners>` sekcji w `<source>` sekcji z `name` atrybutu "DefaultSource" znajduje się w `<sources>` sekcji. `<sources>` Sekcja znajduje się w `<system.diagnostics>` części, lokacja najwyższego poziomu `<configuration>` sekcji.  
+2.  Znajdź `<listeners>` sekcji w `<source>` sekcji z `name` atrybutu "DefaultSource" znajdujący się w `<sources>` sekcji. `<sources>` Sekcji znajduje się w `<system.diagnostics>` sekcji w najwyższego poziomu `<configuration>` sekcji.  
   
-     Jeśli nie istnieją następujące sekcje, a następnie skonfigurować pliku konfiguracji komputera `My.Application.Log` dziennika odbiorników. W poniższych krokach opisano sposób określania definiuje plik konfiguracji komputera:  
+     Jeśli nie istnieją następujące sekcje, a następnie skonfigurować w pliku konfiguracji komputera `My.Application.Log` dziennika odbiorników. W poniższych krokach opisano sposób określania definiuje plik konfiguracji komputera:  
   
-    1.  Znajdź plik machine.config komputera. Zazwyczaj znajduje się on w *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* katalogu, gdzie `SystemRoot` katalog systemu operacyjnego i `frameworkVersion` jest wersja [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+    1.  Zlokalizuj plik machine.config komputera. Zazwyczaj znajduje się on w *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* katalogu, gdzie `SystemRoot` to nazwa katalogu systemu operacyjnego i `frameworkVersion` jest wersją [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
   
-         Ustawienia w pliku machine.config może zostać przesłonięta przez pliku konfiguracji aplikacji.  
+         Ustawienia w pliku machine.config mogą zostać zastąpione przez plik konfiguracji aplikacji.  
   
-         Jeśli nie istnieją elementy opcjonalne wymienione poniżej, można je utworzyć.  
+         Jeśli nie istnieją opcjonalne elementy wymienione poniżej, można je utworzyć.  
   
-    2.  Zlokalizuj `<listeners>` sekcji w `<source>` sekcji z `name` atrybutu "DefaultSource" w `<sources>` sekcji w `<system.diagnostics>` części, lokacja najwyższego poziomu `<configuration>` sekcji.  
+    2.  Znajdź `<listeners>` sekcji w `<source>` sekcji z `name` atrybutu "DefaultSource" w `<sources>` sekcji w `<system.diagnostics>` sekcji w najwyższego poziomu `<configuration>` sekcji.  
   
-         Jeśli nie istnieją tych sekcji, a następnie `My.Application.Log` ma odbiorniki logu domyślne.  
+         Jeśli te sekcje nie istnieje, a następnie `My.Application.Log` ma odbiorniki logu domyślne.  
   
-3.  Zlokalizuj <`add>` elementów <`listeners>` sekcji.  
+3.  Znajdź <`add>` elementów w <`listeners>` sekcji.  
   
-     Odbiorniki logu nazwanego, aby dodać te elementy `My.Application.Log` źródła.  
+     Te elementy Dodaj odbiorniki logu o nazwie, aby `My.Application.Log` źródła.  
   
-4.  Zlokalizuj `<add>` elementy z nazwami odbiorniki logu w `<sharedListeners>` sekcji w `<system.diagnostics>` części, lokacja najwyższego poziomu `<configuration>` sekcji.  
+4.  Znajdź `<add>` elementy o nazwach odbiorniki logu w `<sharedListeners>` sekcji w `<system.diagnostics>` sekcji w najwyższego poziomu `<configuration>` sekcji.  
   
-5.  Dla wielu typów udostępnione obiekty nasłuchujące dane inicjowania odbiornika zawiera opis gdzie odbiornika kieruje dane:  
+5.  Dla wielu typów współdzielonych detektorów dane inicjowania odbiornika zawiera opis gdzie odbiornik kieruje dane:  
   
-    -   A <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> odbiornika zapisuje do pliku dziennika, zgodnie z opisem w wprowadzenie.  
+    -   A <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> odbiornika zapisuje do pliku dziennika, jak opisano we wprowadzeniu.  
   
-    -   A <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> odbiornika zapisuje informacje w dzienniku zdarzeń komputera określona przez `initializeData` parametru. Aby wyświetlić dziennik zdarzeń, można użyć **Eksploratora serwera** lub **Podgląd zdarzeń systemu Windows**. Aby uzyskać więcej informacji, zobacz [zdarzenia ETW w programie .NET Framework](../../../../framework/performance/etw-events.md).  
+    -   A <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> odbiornika zapisuje informacje w dzienniku zdarzeń komputera, które są określone przez `initializeData` parametru. Aby wyświetlić dziennik zdarzeń, można użyć **Eksploratora serwera** lub **Podgląd zdarzeń Windows**. Aby uzyskać więcej informacji, zobacz [zdarzenia ETW w programie .NET Framework](../../../../framework/performance/etw-events.md).  
   
-    -   <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> i <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> odbiorników zapisać do pliku określonego w `initializeData` parametru.  
+    -   <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> i <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> odbiorników zapis do pliku określonego w `initializeData` parametru.  
   
-    -   A <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> odbiornika zapisuje do wiersza polecenia konsoli.  
+    -   A <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> odbiornika zapisuje konsoli wiersza polecenia.  
   
-    -   Aby dowiedzieć się, w którym innych typów odbiorniki logu zapisywać informacje zapoznaj się dokumentacją tego typu.  
+    -   Uzyskać informacji o tym, gdzie innych rodzajów odbiorniki logu wpisać informacje zapoznaj się dokumentacją tego typu.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: fc15818883736015419f8599d482185bbab5120a
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 5d1860a5703c79bd77331cfd821c3bff69f317ff
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960520"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925821"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizatory (C# Programming Guide)
 Finalizatory są używane do niszczenia wystąpień klas.  
@@ -57,7 +57,9 @@ protected override void Finalize()
 > [!NOTE]
 >  Nie należy używać puste finalizatory. Gdy klasa zawiera finalizator, zapis jest tworzony w `Finalize` kolejki. Wywołanego finalizator moduł odśmiecania pamięci jest wywoływana, aby przetworzyć kolejkę. Pusty finalizator powoduje po prostu niepotrzebnego utrata wydajności.  
   
- Programistę nie ma kontroli nad po wywołaniu finalizatora, ponieważ jest to określane przez moduł odśmiecania pamięci. Moduł zbierający elementy bezużyteczne sprawdza, czy obiekty nie są już używane przez aplikację. Jeśli obiekt kwalifikuje się do finalizacji, wywołuje finalizator (jeśli istnieje) i odzyskuje pamięć używaną do przechowywania obiektu. Finalizatory również są wywoływane, gdy program jest zamykany.  
+ Programistę nie ma kontroli nad po wywołaniu finalizatora, ponieważ jest to określane przez moduł odśmiecania pamięci. Moduł zbierający elementy bezużyteczne sprawdza, czy obiekty nie są już używane przez aplikację. Jeśli obiekt kwalifikuje się do finalizacji, wywołuje finalizator (jeśli istnieje) i odzyskuje pamięć używaną do przechowywania obiektu. 
+ 
+ W aplikacjach .NET Framework (ale nie w aplikacjach platformy .NET Core) finalizatory są również nazywane, gdy zamyka program. 
   
  Istnieje możliwość wymuszenia wyrzucania elementów bezużytecznych przez wywołanie metody <xref:System.GC.Collect%2A>, ale w większości przypadków, to należy unikać, ponieważ mogą one stanowić problemy z wydajnością.  
   

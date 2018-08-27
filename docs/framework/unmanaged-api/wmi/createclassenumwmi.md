@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f84902586a2b940d52eb6365a141af61af802dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b38e4753105932d2464bf78797a6979aeb0a0aee
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461457"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42908186"
 ---
-# <a name="createclassenumwmi-function"></a>Funkcja CreateClassEnumWmi
+# <a name="createclassenumwmi-function"></a>CreateClassEnumWmi — funkcja
 Zwraca moduł wyliczający dla wszystkich klas, które spełniają kryteria określonego zaznaczenia.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -48,27 +48,27 @@ HRESULT CreateClassEnumWmi (
 ## <a name="parameters"></a>Parametry
 
 `strSuperclass`    
-[in] Jeśli nie `null` lub puste, określa nazwę klasy nadrzędnej; modułu wyliczającego zwraca tylko podklasy tej klasy. Jeśli jest `null` lub jest pusty i `lFlags` WBEM_FLAG_SHALLOW, zwraca tylko klasy najwyższego poziomu (klasy z klasy nadrzędnej, nie). Jeśli jest `null` lub jest pusty i `lFlags` jest `WBEM_FLAG_DEEP`, zwraca wszystkie klasy w przestrzeni nazw.
+[in] W przeciwnym razie `null` lub puste, określa nazwę klasy nadrzędnej; moduł wyliczający zwraca tylko podklasy tej klasy. Jeśli jest `null` lub puste i `lFlags` WBEM_FLAG_SHALLOW, zwraca tylko klas najwyższego poziomu (klas z nie klasy nadrzędnej). Jeśli jest `null` lub puste i `lFlags` jest `WBEM_FLAG_DEEP`, zwraca wszystkie klasy w przestrzeni nazw.
 
 `lFlags`   
-[in] Kombinacja flag, które wpływają na działanie tej funkcji. Następujące wartości są zdefiniowane w *WbemCli.h* pliku nagłówka, lub należy je zdefiniować jako stałe w kodzie: 
+[in] Kombinacja flag, które mają wpływ na zachowanie tej funkcji. Następujące wartości są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie: 
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Jeśli zestaw, funkcja pobiera poprawionych kwalifikatorów przechowywane w zlokalizowanych nazw ustawień regionalnych bieżącego połączenia. <br/> Jeśli nie zestawu, funkcja pobiera tylko kwalifikatory przechowywane w przestrzeni nazw bezpośrednim. |
-| `WBEM_FLAG_DEEP` | 0 | Wyliczenie zawiera podklasami w hierarchii, ale nie do tej klasy. |
-| `WBEM_FLAG_SHALLOW` | 1 | Wyliczenie zawiera tylko czysty wystąpienia tej klasy i wyklucza wszystkie wystąpienia podklas, które dostarczają właściwości nie można odnaleźć w tej klasie. |
-| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Flaga powoduje Półsynchroniczne wywołania. |
-| `WBEM_FLAG_FORWARD_ONLY` | 0x20 | Funkcja zwraca tylko do przodu modułu wyliczającego. Zwykle tylko do przodu moduły wyliczające są szybsze i używają mniej pamięci niż wyliczenia z konwencjonalnej, ale nie zezwalają na wywołania [klonowania](clone.md). |
-| `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI zachowuje wskaźników do obiektów w enumration, dopóki ich wydania. | 
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Jeśli zestaw, funkcja pobiera poprawionych kwalifikatorów, przechowywane w zlokalizowanych nazw ustawień regionalnych bieżącego połączenia. <br/> W przeciwnym razie zestawu, funkcja pobiera kwalifikatory przechowywanych w bezpośrednim przestrzeni nazw. |
+| `WBEM_FLAG_DEEP` | 0 | Wyliczenie zawiera podklasami w hierarchii, ale nie tej klasy. |
+| `WBEM_FLAG_SHALLOW` | 1 | Wyliczenie zawiera tylko czyste wystąpienia tej klasy i nie obejmuje wszystkich wystąpień podklas, które dostarczają właściwości nie można odnaleźć w tej klasie. |
+| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Flaga powoduje, że wywołanie półsynchronicznej. |
+| `WBEM_FLAG_FORWARD_ONLY` | 0x20 | Funkcja zwraca tylko do przodu modułu wyliczającego. Zwykle tylko do przodu moduły wyliczające są realizowane szybciej i używać mniej pamięci niż moduły wyliczające konwencjonalnych, ale nie zezwalają na wywołania [klonowania](clone.md). |
+| `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI zachowuje wskaźników do obiektów w enumration, dopóki ich wydaniu. | 
 
-Zalecane flagi są `WBEM_FLAG_RETURN_IMMEDIATELY` i `WBEM_FLAG_FORWARD_ONLY` najlepszą wydajność.
+Zalecane flagi są `WBEM_FLAG_RETURN_IMMEDIATELY` i `WBEM_FLAG_FORWARD_ONLY` uzyskać najlepszą wydajność.
 
 `pCtx`  
-[in] Ta wartość jest zazwyczaj `null`. W przeciwnym razie jest wskaźnik do [IWbemContext](https://msdn.microsoft.com/library/aa391465(v=vs.85).aspx) wystąpienie, które mogą być używane przez dostawcę, który dostarcza żądanej klasy. 
+[in] Ta wartość jest zazwyczaj `null`. W przeciwnym razie jest wskaźnikiem do [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) wystąpienie, które mogą być używane przez dostawcę, który dostarcza żądanej klasy. 
 
 `ppEnum`  
-[out] Uzyskuje wskaźnik do modułu wyliczającego.
+[out] Otrzymuje wskaźnik do modułu wyliczającego.
 
 `authLevel`  
 [in] Poziom autoryzacji.
@@ -76,7 +76,7 @@ Zalecane flagi są `WBEM_FLAG_RETURN_IMMEDIATELY` i `WBEM_FLAG_FORWARD_ONLY` naj
 `impLevel` [in] Poziom personifikacji.
 
 `pCurrentNamespace`   
-[in] Wskaźnik do [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) obiekt, który reprezentuje bieżącej przestrzeni nazw.
+[in] Wskaźnik do [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) obiekt, który reprezentuje bieżącej przestrzeni nazw.
 
 `strUser`   
 [in] Nazwa użytkownika. Zobacz [ConnectServerWmi](connectserverwmi.md) funkcji, aby uzyskać więcej informacji.
@@ -89,7 +89,7 @@ Zalecane flagi są `WBEM_FLAG_RETURN_IMMEDIATELY` i `WBEM_FLAG_FORWARD_ONLY` naj
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.h* pliku nagłówka, lub należy je zdefiniować jako stałe w kodzie:
+Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
@@ -97,16 +97,16 @@ Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.
 | `WBEM_E_FAILED` | 0x80041001 | Wystąpił nieokreślony błąd. |
 | `WBEM_E_INVALID_CLASS` | 0x80041010 | `strSuperClass` nie istnieje. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametr jest nieprawidłowy. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Za mało pamięci jest dostępna do wykonania operacji. |
-| `WBEM_E_SHUTTING_DOWN` | 0x80041033 | Usługa WMI jest prawdopodobnie zatrzymana i ponownie uruchomić. Wywołanie [ConnectServerWmi](connectserverwmi.md) ponownie. |
-| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Procedury zdalnej łącze wywołań (procedur RPC) między bieżącym procesem a usługą WMI nie powiodło się. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Nie ma wystarczającej ilości pamięci jest dostępny do ukończenia tej operacji. |
+| `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI został prawdopodobnie zatrzymane i ponowne uruchamianie. Wywołaj [ConnectServerWmi](connectserverwmi.md) ponownie. |
+| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Procedury zdalnej łącza wywołania (procedur RPC) między bieżącym procesem a usługą WMI nie powiodło się. |
 |`WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
   
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zawijana wywołanie [metodę IWbemServices::CreateClassEnum](https://msdn.microsoft.com/library/aa392095(v=vs.85).aspx) metody.
+Ta funkcja zawija wywołanie do [metodę IWbemServices::CreateClassEnum](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-createclassenum) metody.
 
-Jeśli wystąpi błąd wywołania funkcji, można uzyskać dodatkowe informacje o błędzie przez wywołanie metody [GetErrorInfo](geterrorinfo.md) funkcji.
+Jeśli wywołanie funkcji zakończy się niepowodzeniem, można uzyskać dodatkowe informacje o błędzie, wywołując [geterrorinfo —](geterrorinfo.md) funkcji.
 
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -116,4 +116,4 @@ Jeśli wystąpi błąd wywołania funkcji, można uzyskać dodatkowe informacje 
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
-[Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)
+[Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

@@ -12,14 +12,14 @@ ms.assetid: fec8a3f1-b791-4a37-8af7-344859f8212d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 162c7d58350c381ec667e8a4cd11c03e83fcdf44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654768"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925688"
 ---
 # <a name="-sdkpath"></a>-sdkpath
-Określa lokalizację pliku mscorlib.dll i pliku Microsoft.VisualBasic.dll.  
+Określa lokalizację mscorlib.dll i Microsoft.VisualBasic.dll.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -29,25 +29,25 @@ Określa lokalizację pliku mscorlib.dll i pliku Microsoft.VisualBasic.dll.
   
 ## <a name="arguments"></a>Argumenty  
  `path`  
- Katalog zawierający wersji biblioteki mscorlib.dll i pliku Microsoft.VisualBasic.dll do użycia podczas kompilacji. Ta ścieżka nie została zweryfikowana, dopóki nie został załadowany. Nazwę katalogu należy ująć w cudzysłów ("") zawiera spację.  
+ Katalog zawierający wersji biblioteki mscorlib.dll i Microsoft.VisualBasic.dll na potrzeby kompilacji. Ta ścieżka nie została zweryfikowana, dopóki nie jest ładowany. Nazwę katalogu należy ująć w znaki cudzysłowu ("") zawiera spację.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta opcja informuje kompilator Visual Basic można załadować pliku mscorlib.dll i pliku Microsoft.VisualBasic.dll plików z lokalizacji innych niż domyślne. `-sdkpath` Opcja został zaprojektowany do użytku z [- netcf](../../../visual-basic/reference/command-line-compiler/netcf.md). [!INCLUDE[Compact](~/includes/compact-md.md)] Używa różne wersje tych obsługuje bibliotek, aby uniknąć użycia typy i funkcje językowe nie znajdujące się na urządzeniach.  
+ Ta opcja nakazuje kompilatorowi języka Visual Basic obciążenia mscorlib.dll i Microsoft.VisualBasic.dll pliki z lokalizacji innych niż domyślne. `-sdkpath` Opcja została zaprojektowana do użycia z [- netcf —](../../../visual-basic/reference/command-line-compiler/netcf.md). [!INCLUDE[Compact](~/includes/compact-md.md)] Używa różnych wersji tych Obsługa bibliotek, aby uniknąć użycia typów i funkcji języka, które nie znajdują się na urządzeniach.  
   
 > [!NOTE]
->  `-sdkpath` Opcja nie jest dostępne w środowisku programowania Visual Studio; jest dostępna tylko podczas kompilowania kodu w wierszu polecenia. `-sdkpath` Opcja została ustawiona podczas ładowania projektu Visual Basic urządzenia.  
+>  `-sdkpath` Opcja nie jest dostępne w środowisku programowania Visual Studio; jest dostępna tylko podczas kompilowania kodu w wierszu polecenia. `-sdkpath` Ustawiono opcję po załadowaniu projektu urządzenia języka Visual Basic.  
   
- Można określić, czy kompilator powinien skompilować bez odwołania do Visual Basic Runtime Library przy użyciu `-vbruntime` — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [- vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md).  
+ Można określić, czy kompilator powinien kompilować bez odwołania do biblioteki środowiska uruchomieniowego Visual Basic przy użyciu `-vbruntime` — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [- vbruntime —](../../../visual-basic/reference/command-line-compiler/vbruntime.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod kompiluje `Myfile.vb` z [!INCLUDE[Compact](~/includes/compact-md.md)], przy użyciu wersji biblioteki Mscorlib.dll i pliku Microsoft.VisualBasic.dll znajdujące się w katalogu instalacji domyślnej z [!INCLUDE[Compact](~/includes/compact-md.md)] na dysku C. Zazwyczaj należy użyć najnowszej wersji [!INCLUDE[Compact](~/includes/compact-md.md)].  
+ Poniższy kod kompiluje `Myfile.vb` z [!INCLUDE[Compact](~/includes/compact-md.md)], przy użyciu wersji biblioteki Mscorlib.dll i Microsoft.VisualBasic.dll znajduje się w katalogu instalacji domyślnej z [!INCLUDE[Compact](~/includes/compact-md.md)] na dysku C. Zazwyczaj używasz najnowszej wersji [!INCLUDE[Compact](~/includes/compact-md.md)].  
   
 ```console
 vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb  
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Kompilator w wierszu polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
  [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
  [-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)  
  [-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)

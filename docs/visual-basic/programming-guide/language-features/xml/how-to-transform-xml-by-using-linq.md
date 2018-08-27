@@ -6,24 +6,24 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], transforming XML
 ms.assetid: 815687f4-0bc2-4c0b-adc6-d78744aa356f
 ms.openlocfilehash: 94ad5180c7921a5ace09f9161de5f275475e46d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652964"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924912"
 ---
 # <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>Porady: przekształcanie XML za pomocą LINQ (Visual Basic)
-[Literały XML](../../../../visual-basic/language-reference/xml-literals/index.md) ułatwiają Odczytaj dane XML z jednego źródła i przekształcenie go do nowego formatu XML. Można korzystać z zapytania LINQ do pobierania zawartości do transformacji lub zmieniać zawartość istniejącego dokumentu do nowego formatu XML.  
+[Literały XML](../../../../visual-basic/language-reference/xml-literals/index.md) ułatwiają Odczytaj dane XML z jednego źródła i przekształcić je do nowego formatu XML. Możesz korzystać z zalet zapytania LINQ, aby pobrać zawartość do przekształcenia lub zmieniać zawartość istniejącego dokumentu do nowego formatu XML.  
   
- Przykład, w tym temacie przekształca zawartości z dokumentu XML źródła w formacie HTML do wyświetlenia w przeglądarce.  
+ W przykładzie w tym temacie przekształca zawartość w dokumencie źródłowym XML w formacie HTML do wyświetlenia w przeglądarce.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-transform-an-xml-document"></a>Do transformacji dokumentów XML  
+### <a name="to-transform-an-xml-document"></a>Aby przekształcić dokumentu XML  
   
-1.  W programie Visual Studio Utwórz nowy projekt Visual Basic w **aplikacji konsoli** szablonu projektu.  
+1.  W programie Visual Studio Utwórz nowy projekt języka Visual Basic w **aplikację Konsolową** szablonu projektu.  
   
-2.  Kliknij dwukrotnie plik Module1.vb utworzone w projekcie, aby zmodyfikować kod Visual Basic. Dodaj następujący kod do `Sub Main` z `Module1` modułu. Ten kod tworzy dokument XML źródła jako <xref:System.Xml.Linq.XDocument> obiektu.  
+2.  Kliknij dwukrotnie plik Module1.vb utworzone w projekcie, aby zmodyfikować kod języka Visual Basic. Dodaj następujący kod do `Sub Main` z `Module1` modułu. Ten kod tworzy dokumencie źródłowym XML jako <xref:System.Xml.Linq.XDocument> obiektu.  
   
     ```vb  
     Dim catalog =   
@@ -57,11 +57,11 @@ ms.locfileid: "33652964"
         </Catalog>  
     ```  
   
-     [Porady: ładowanie XML z pliku, ciągu lub strumienia](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md).  
+     [Porady: ładowanie XML z pliku, ciągu lub Stream](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md).  
   
-3.  Po kodzie można utworzyć dokumentu XML źródła, Dodaj następujący kod, aby pobrać wszystkie \<książki > elementy z obiektu i przekształcania dokumentu HTML. Lista \<książki > elementów jest tworzona przy użyciu zapytania LINQ, która zwraca kolekcję <xref:System.Xml.Linq.XElement> obiektów zawierających przekształcone HTML. Wyrażenia osadzone umożliwia umieszczanie wartości z dokumentu źródłowego do nowego formatu XML.  
+3.  Po kodzie, który można utworzyć dokumentu XML źródła, Dodaj następujący kod, aby pobrać wszystkie \<książki > elementy z obiektu i przekształca je w dokumencie HTML. Lista \<książki > elementów jest tworzona przy użyciu zapytania LINQ, które zwraca kolekcję <xref:System.Xml.Linq.XElement> obiektów, które zawierają HTML przekształcone. Wyrażenia osadzone można użyć, aby umieszczać wartości z dokumentu źródłowego do nowego formatu XML.  
   
-     Wynikowy dokument HTML jest zapisywane w pliku za pomocą <xref:System.Xml.Linq.XElement.Save%2A> metody.  
+     Wynikowy dokumentu HTML są zapisywane do pliku za pomocą <xref:System.Xml.Linq.XElement.Save%2A> metody.  
   
     ```vb  
     Dim htmlOutput =   
@@ -82,9 +82,9 @@ ms.locfileid: "33652964"
     htmlOutput.Save("BookDescription.html")  
     ```  
   
-4.  Po `Sub Main` z `Module1`, dodać nową metodę (`Sub`) do przekształcania \<opis > węzła w określonym formacie HTML. Ta metoda jest wywoływany przez kod w poprzednim kroku i pozwala zachować format \<opis > elementów.  
+4.  Po `Sub Main` z `Module1`, Dodaj nową metodę (`Sub`) do przekształcania \<opis > węzła w określonym formacie HTML. Ta metoda jest wywoływana przez kod w poprzednim kroku i służy do zachowania format \<opis > elementy.  
   
-     Ta metoda zastępuje elementy podrzędne elementu \<opis > elementu HTML. `ReplaceWith` Metoda jest używana w celu zachowania położenie elementów podrzędnych. Po przekształceniu zawartość \<opis > element znajduje się w akapitu HTML (\<p >) elementu. <xref:System.Xml.Linq.XContainer.Nodes%2A> Właściwość służy do pobierania zawartości po przekształceniu \<opis > elementu. Daje to pewność, że elementy podrzędne są uwzględniane w zawartości po przekształceniu.  
+     Ta metoda zastępuje elementy podrzędne \<opis > elementu HTML. `ReplaceWith` Metoda jest używana, aby zachować położenie elementów podrzędnych. Po przekształceniu zawartość \<opis > element znajduje się w akapicie HTML (\<p >) elementu. <xref:System.Xml.Linq.XContainer.Nodes%2A> Właściwość jest używana do pobierania zawartości po przekształceniu \<opis > element. Daje to gwarancję, że elementy podrzędne są uwzględniane w przekształconej zawartości.  
   
      Dodaj następujący kod po `Sub Main` z `Module1`.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "33652964"
   
 5.  Zapisz zmiany.  
   
-6.  Naciśnij klawisz F5, aby uruchomić kod. Powstałe w ten sposób zapisać dokumentu będą wyglądać w następujący sposób:  
+6.  Naciśnij klawisz F5, aby uruchomić kod. Wartość wynikowa zapisany dokument będzie wyglądać w następujący sposób:  
   
     ```  
     <?xml version="1.0"?>  

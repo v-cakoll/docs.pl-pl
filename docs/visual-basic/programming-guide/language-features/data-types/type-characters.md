@@ -38,22 +38,22 @@ helpviewer_keywords:
 ms.assetid: 6353cb9b-6ee4-4af6-a5a8-88ce39f90cc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9262c57c5773b947f18fd9e8cf9087bb8e02de7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31dc703598fa6d92b3f312b2b5f0bf5fadab9c04
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653510"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42911825"
 ---
-# <a name="type-characters-visual-basic"></a>Wpisz znaki (Visual Basic)
+# <a name="type-characters-visual-basic"></a>Wpisywanie znaków (Visual Basic)
 
-Oprócz określenia typu danych w instrukcji deklaracji, można wymusić na typ danych niektórych elementów programowania o *znaku typu*. Znak typu musi występować zaraz po elemencie, bez znaków pośredniczące dowolnego rodzaju.
+Oprócz określenia typu danych w instrukcji deklaracji, można wymusić typ danych niektórych elementów programowania za pomocą *wpisz znak*. Znak typu natychmiast postępuj zgodnie z elementu, bez znaków pośredniczące wszelkiego rodzaju.
 
-Znaku typu nie jest częścią nazwy elementu. Element zdefiniowany ze znakiem typu można odwoływać się bez znaku typu.
+Znak typu nie jest częścią nazwy elementu. Element zdefiniowane przy użyciu znaku typu mogą być przywoływane bez znaku typu.
 
 ## <a name="identifier-type-characters"></a>Znaki typu identyfikator
 
-Visual Basic dostarcza zestaw *znaki typu identyfikator* czy można użyć w deklaracji, aby określić typ danych zmiennej lub stała. W poniższej tabeli przedstawiono znaki typu identyfikator dostępne z przykładem użycia.
+Visual Basic dostarcza zestaw *znaki typu identyfikator* , można użyć w deklaracji, aby określić typ danych zmiennej lub stała. W poniższej tabeli przedstawiono znaki typu identyfikator dostępna wraz z przykładami użycia.
   
 |Znak typu identyfikator|Typ danych|Przykład|  
 |-------------------------------|---------------|-------------|  
@@ -64,11 +64,11 @@ Visual Basic dostarcza zestaw *znaki typu identyfikator* czy można użyć w dek
 |`#`|`Double`|`Dim X#`|  
 |`$`|`String`|`Dim V$ = "Secret"`|  
   
- Znaki typu identyfikator, nie istnieje dla `Boolean`, `Byte`, `Char`, `Date`, `Object`, `SByte`, `Short`, `UInteger`, `ULong`, lub `UShort` typy danych ani złożone typy danych, takich jak tablice lub struktury.
+ Znaki typu identyfikator, nie istnieje dla `Boolean`, `Byte`, `Char`, `Date`, `Object`, `SByte`, `Short`, `UInteger`, `ULong`, lub `UShort` typy danych, ani złożone typy danych takich jak tablice lub struktury.
 
-W niektórych przypadkach możesz dołączyć `$` znak funkcji języka Visual Basic, na przykład `Left$` zamiast `Left`, aby uzyskać zwrócona wartość typu `String`.
+W niektórych przypadkach można dołączyć `$` znaku do funkcji języka Visual Basic, na przykład `Left$` zamiast `Left`w celu uzyskania wartości zwracanego typu `String`.
 
-We wszystkich przypadkach znak typu Identyfikator musi występować zaraz po nazwy identyfikatora.
+We wszystkich przypadkach znak typu identyfikator natychmiast postępuj według nazwy identyfikatora.
 
 ## <a name="literal-type-characters"></a>Znaki literalne
 
@@ -76,19 +76,19 @@ A *literału* tekstowa reprezentacja wartości określonego typu danych.
 
 ### <a name="default-literal-types"></a>Domyślne typy literału
 
-Formularz literału wyświetlaną w kodzie zwykle określa jego typu danych. W poniższej tabeli przedstawiono te typy domyślne.  
+Formularz literału pojawia się w kodzie zazwyczaj określa jego typu danych. W poniższej tabeli przedstawiono te domyślne typy.  
   
 |Postaci tekstowej literału|Domyślny typ danych|Przykład|  
 |-----------------------------|-----------------------|-------------|  
-|Numeryczne, nie ułamkowych części|`Integer`|`2147483647`|  
-|Numeryczne, nie ułamkowych części, zbyt duży dla `Integer`|`Long`|`2147483648`|  
-|Numeryczne, ułamkowych części|`Double`|`1.2`|  
+|Numeryczne, nie ułamkową część|`Integer`|`2147483647`|  
+|Numeryczne, nie ułamkową część, zbyt duże, aby `Integer`|`Long`|`2147483648`|  
+|Numeryczne, ułamkową część|`Double`|`1.2`|  
 |Ujęta w znaki podwójnego cudzysłowu|`String`|`"A"`|  
-|Ujęta w znaki numeru|`Date`|`#5/17/1993 9:32 AM#`|  
+|Ujęty w znaki liczby|`Date`|`#5/17/1993 9:32 AM#`|  
 
-### <a name="forced-literal-types"></a>Wymuszone typy literału
+### <a name="forced-literal-types"></a>Wymuszone typy literałów
 
-Visual Basic dostarcza zestaw *znaki literalne*, którym można wymusić literał założenie typu danych innego niż jego formularza wskazuje. W tym dodając znak na końcu literału. W poniższej tabeli przedstawiono znaki literalne dostępne z przykładem użycia.
+Visual Basic dostarcza zestaw *znaki literalne*, którym można wymusić literału z nich przejmować typu danych innym niż jego formularza wskazuje. Można to zrobić, dodając znak na końcu literału. W poniższej tabeli przedstawiono znaków dostępne literalne wraz z przykładami użycia.
   
 |Znak literalny typu|Typ danych|Przykład|  
 |----------------------------|---------------|-------------|  
@@ -103,38 +103,38 @@ Visual Basic dostarcza zestaw *znaki literalne*, którym można wymusić litera�
 |`UL`|`ULong`|`N = 347UL`|
 |`C`|`Char`|`Q = "."C`|
 
-Znaki literalne, nie istnieje dla `Boolean`, `Byte`, `Date`, `Object`, `SByte`, lub `String` typy danych, lub dla wszystkich typów danych, takich jak tablice lub struktury.
+Znaki literalne typu, nie istnieje dla `Boolean`, `Byte`, `Date`, `Object`, `SByte`, lub `String` typów danych lub dowolnego złożone typy danych takich jak tablice lub struktury.
 
-Literały umożliwia także znaki typu identyfikator (`%`, `&`, `@`, `!`, `#`, `$`), jak można zmienne, stałe i wyrażenia. Jednak literał wpisz znaki (`S`, `I`, `L`, `D`, `F`, `R`, `C`) może być używany tylko z literały.
+Literały można również użyć znaki typu identyfikator (`%`, `&`, `@`, `!`, `#`, `$`), jak zmienne, stałe i wyrażeń. Jednak literału typu znaków (`S`, `I`, `L`, `D`, `F`, `R`, `C`) mogą być używane tylko z literałów.
 
-We wszystkich przypadkach znak literalny typu musi występować zaraz po wartość literału.
+We wszystkich przypadkach znak literalny typu musi bezpośrednio po wartości literału.
 
-## <a name="hexadecimal-binary-and-octal-literals"></a>Literały szesnastkowe binarne i ósemkowe
+## <a name="hexadecimal-binary-and-octal-literals"></a>Literały, binarne, ósemkowa i szesnastkowym
 
-Kompilator interpretuje zwykle literał całkowity w układzie dziesiętnych (o podstawie 10). Istnieje także możliwość zdefiniowania całkowitą literałów jako liczbę szesnastkową (podstawa 16) z `&H` prefiksu jako dane binarne (podstawa 2) z `&B` prefiksu i jako ósemkowe (podstawa 8) numer `&O` prefiks. Cyfr, które należy wykonać prefiks musi być odpowiednia dla systemu liczbowego. W poniższej tabeli przedstawiono to.  
+Kompilator interpretuje zwykle literał liczby całkowitej w układzie dziesiętny (podstawa 10). Można również zdefiniować literał liczby całkowitej jako liczbę szesnastkową (podstawa 16) `&H` prefiksu jako liczbę plik binarny (podstawa 2) `&B` prefiksu oraz liczbę ósemkową (podstawa 8) numeru `&O` prefiks. Cyfr, które należy wykonać prefiks musi być odpowiednia dla systemu liczbowego. W poniższej tabeli przedstawiono to.  
   
-|Podstawowy numer|Prefiks|Wartości prawidłową cyfrą|Przykład|
+|Numer podstawowy|Prefiks|Wartości jednocyfrowe prawidłowe|Przykład|
 |-----------------|------------|------------------------|-------------|
-|Liczba szesnastkowa (16 podstawowy)|`&H`|0-9 i A-F|`&HFFFF`|
-|Dane binarne (podstawa 2)|`&B`|0-1|`&B01111100`|
+|Szesnastkową (podstawa 16)|`&H`|0-9 i A-F|`&HFFFF`|
+|Plik binarny (podstawa 2)|`&B`|0-1|`&B01111100`|
 |Octal (podstawa 8)|`&O`|0-7|`&O77`|
 
-Począwszy od 2017 Visual Basic, można użyć znaku podkreślenia (`_`) jako separator grupy, aby zwiększyć czytelność literał całkowity. W poniższym przykładzie użyto `_` znak do pliku binarnego literału w 8-bitową grup:
+Począwszy od 2017 Visual Basic można użyć znaku podkreślenia (`_`) jako separator grup, aby zwiększyć czytelność literał typu całkowitego. W poniższym przykładzie użyto `_` znaku, aby pogrupować dane binarne literału w grupy 8-bitowych:
 
 ```vb
 Dim number As Integer = &B00100010_11000101_11001111_11001101
 ```
 
-Możesz wykonać prefiksem literału z znak literalny typu. W poniższym przykładzie pokazano to.
+Możesz wykonać prefiksem właściwość literal o znak literalny typu. Poniższy przykład przedstawia to.
 
 ```vb
 Dim counter As Short = &H8000S
 Dim flags As UShort = &H8000US
 ```
 
-W poprzednim przykładzie `counter` ma wartość dziesiętna -32768, i `flags` ma wartość dziesiętna +32768.
+W poprzednim przykładzie `counter` ma wartość dziesiętną od -32768, i `flags` ma wartość dziesiętna +32768.
 
-Począwszy od programu Visual Basic 15,5 cala, umożliwia także znaku podkreślenia (`_`) jako separator wiodące między prefiks i cyfr szesnastkowych, binarne lub ósemkowo. Na przykład:
+Począwszy od wersji 15.5 programu Visual Basic umożliwia także znaku podkreślenia (`_`) jako wiodący separator między prefiks i cyfr szesnastkowych, binarne lub ósemkowo. Na przykład:
 
 ```vb
 Dim number As Integer = &H_C305_F860
@@ -150,4 +150,4 @@ Dim number As Integer = &H_C305_F860
  [Konwersje typów w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
  [Rozwiązywanie problemów związanych z typami danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
  [Deklaracja zmiennej](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [Typy danych](../../../../visual-basic/language-reference/data-types/data-type-summary.md)
+ [Typy danych](../../../../visual-basic/language-reference/data-types/index.md)

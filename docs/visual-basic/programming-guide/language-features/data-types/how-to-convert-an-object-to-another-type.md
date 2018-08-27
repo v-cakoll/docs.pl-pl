@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
-ms.openlocfilehash: 367991e4bbca710df54edf73179f855ff79bb56e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f168b3021ee1dbe3c82edc22fc779767c30446b8
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647621"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42912016"
 ---
 # <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>Porady: konwertowanie obiektu do innego typu w Visual Basic
-Możesz przekonwertować `Object` zmiennej na inny typ danych przy użyciu słowa kluczowego konwersji, takich jak [CType — funkcja](../../../../visual-basic/language-reference/functions/ctype-function.md).  
+Możesz przekonwertować `Object` zmiennej na inny typ danych przy użyciu słowa kluczowego konwersji, takich jak [funkcja CType](../../../../visual-basic/language-reference/functions/ctype-function.md).  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład konwertuje `Object` zmienną `Integer` i `String`.  
@@ -26,7 +26,7 @@ Public Sub objectConversion(ByVal anObject As Object)
 End Sub  
 ```  
   
- Jeśli wiesz, że zawartość `Object` są zmiennej typu danych, warto przekonwertować zmiennej typu danych. Jeśli będziesz nadal używać `Object` zmiennej, ponosisz albo *boxing* i *rozpakowującej* (dla typu wartości) lub *późne wiązanie* (dla typu odwołania). Te operacje wszystkie zająć dodatkowy czas wykonywania i upewnij wydajność wolniejszej.  
+ Jeśli wiesz, że zawartość `Object` zmiennych są typu danych, zaleca się przekonwertować zmiennej tego typu danych. Jeśli będziesz nadal używać `Object` zmiennej, wiąże się z jednej *pakowania* i *Rozpakowywanie* (w przypadku typu wartości) lub *późnym wiązaniu* (dla typu odwołania). Te operacje wszystkie zająć dodatkowy czas wykonywania i wprowadź wydajność wolniej.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
@@ -41,5 +41,5 @@ End Sub
  [Konwertowanie między ciągami a innymi typami danych](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
  [Konwersje tablic](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
  [Struktury](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Typy danych](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Typy danych](../../../../visual-basic/language-reference/data-types/index.md)  
  [Funkcje konwersji typu](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

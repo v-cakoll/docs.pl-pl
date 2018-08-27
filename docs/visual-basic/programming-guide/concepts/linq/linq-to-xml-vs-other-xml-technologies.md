@@ -1,56 +1,56 @@
 ---
-title: LINQ do XML programu vs. Inne Technologies2 XML
+title: LINQ to XML a. Inne Technologies2 XML
 ms.date: 07/20/2015
 ms.assetid: 72ce3a82-ffc6-488c-98e7-b9b40f3591ec
 ms.openlocfilehash: 926f1a1ab49a627331a614ef68790ea289b3dcff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648427"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42908079"
 ---
-# <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ do XML programu vs. Inne technologie XML
-W tym temacie porównuje [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] następujące technologie XML: <xref:System.Xml.XmlReader>, XSLT, MSXML i XmlLite. Te informacje mogą pomóc w określeniu technologii.  
+# <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML a. Inne technologie XML
+W tym temacie porównano [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] następujące technologie XML: <xref:System.Xml.XmlReader>, XSLT, MSXML i XmlLite. Te informacje mogą pomóc w podjęciu decyzji technologie stosowaną do.  
   
- Porównanie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] do modelu DOM (Document Object), zobacz [LINQ do XML programu vs. Modelu DOM (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-dom.md).  
+ Porównanie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] do modelu DOM (Document Object), zobacz [LINQ to XML a. Modelu DOM (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-dom.md).  
   
-## <a name="linq-to-xml-vs-xmlreader"></a>LINQ do XML programu vs. Element XmlReader  
- <xref:System.Xml.XmlReader> jest szybkie, tylko do przodu, buforowanie analizatora składni.  
+## <a name="linq-to-xml-vs-xmlreader"></a>LINQ to XML a. Element XmlReader  
+ <xref:System.Xml.XmlReader> jest analizatorem szybkie tylko do przodu, bez buforowania.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zaimplementowano nad <xref:System.Xml.XmlReader>, i są ściśle powiązane. Jednak umożliwia także <xref:System.Xml.XmlReader> przez samego siebie.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] jest implementowana w górnej części <xref:System.Xml.XmlReader>, i są one ściśle zintegrowane. Jednak możesz również użyć <xref:System.Xml.XmlReader> samodzielnie.  
   
- Na przykład załóżmy, że są tworzenia usługi sieci Web analizy setki dokumentów XML na sekundę i dokumenty ma taką samą strukturę, co oznacza, że masz zapisu jedna implementacja kodu do analizy kodu XML. W takim przypadku będzie prawdopodobnie chcesz użyć <xref:System.Xml.XmlReader> przez samego siebie.  
+ Na przykład załóżmy, że są tworzenia usługi sieci Web analizy setki dokumentów XML na sekundę i dokumenty mają tę samą strukturę, co oznacza, że masz do zapisania jedna implementacja kodu, które można przeanalizować pliku XML. W takim przypadku prawdopodobnie chcesz użyć <xref:System.Xml.XmlReader> samodzielnie.  
   
- Z kolei, jeśli tworzysz system analizuje dużo mniejsze dokumentów XML i każdej z nich jest inny, czy chcesz korzystając z usprawnień wydajności który [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] udostępnia.  
+ Z kolei jeśli tworzysz systemu, która analizuje wiele mniejszych dokumentów XML, a każdy z nich jest inny, chcesz korzystać z zalet udoskonalenia dotyczące produktywności, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] udostępnia.  
   
-## <a name="linq-to-xml-vs-xslt"></a>LINQ do XML programu vs. XSLT  
- Zarówno [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] i XSLT zapewniają szeroką gamę możliwości transformacji dokumentów XML. XSLT jest oparty na regułach, deklaratywny podejściem. Zaawansowane XSLT programistów zapisu XSLT w stylu programowania funkcjonalności który wyróżniane bezstanowych podejście. Przekształcenia można pisać przy użyciu czystych funkcji, które są implementowane bez efekty uboczne. Takie podejście reguły lub funkcjonalności nieznany wielu deweloperów i może być trudny i czasochłonny dowiedzieć się więcej.  
+## <a name="linq-to-xml-vs-xslt"></a>LINQ to XML a. XSLT  
+ Zarówno [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] i XSLT zapewnia rozbudowane możliwości transformacji dokumentów XML. XSLT jest oparty na regułach podejścia deklaratywnego. Zaawansowane XSLT programistów zapisu XSLT w stylu programowania funkcjonalnego która kładzie nacisk bezstanowe podejście. Przekształcenia można pisać przy użyciu czystej funkcji, które są wykonywane bez efektów ubocznych. To podejście oparte na regułach lub funkcjonalności nie jest zaznajomiony do wielu deweloperów i może być trudna i czasochłonna dowiedzieć się więcej.  
   
- XSLT może być bardzo wydajni systemu, który daje skalowalnych aplikacji wysokiej wydajności. Na przykład niektóre duże sieci Web firmy użyć XSLT jako sposób generowania kodu HTML z pliku XML, który został pobierane z różnych magazynów danych. Aparatu zarządzanego XSLT kompiluje XSLT do kodu CLR, a nawet lepszą w niektórych scenariuszach niż silnik natywny XSLT.  
+ XSLT, może być bardzo wydajni system, który daje aplikacji o wysokiej wydajności. Na przykład niektóre duże firmy w sieci Web użyj XSLT jako sposób generują kod HTML z pliku XML, który ma zostały pobrane z różnych magazynów danych. Zarządzanego aparatu XSLT kompiluje XSLT do kodu CLR i wykonuje jeszcze lepiej w niektórych scenariuszach niż silnik natywny XSLT.  
   
- Jednak XSLT nie korzystać z wiedzy C# i Visual Basic, które mają wielu deweloperów. Wymaga to deweloperom pisanie kodu w języku programowania różnych i złożoności. Przy użyciu dwóch — zintegrowane programowanie systemów, takich jak C# (lub Visual Basic) i XSLT wyniki w systemach oprogramowania, które są trudne do opracowywania i obsługa.  
+ Jednak XSLT nie korzystaj z wiedzy języka C# i Visual Basic, mających przez wielu deweloperów. Wymaga to deweloperom pisanie kodu w języku programowania różnych i złożone. W systemach oprogramowania, które są trudne do rozwijania i utrzymywania przy użyciu dwóch niezintegrowany programowanie systemów, takich jak C# (lub Visual Basic) i wyniki XSLT.  
   
- Po opanowaniu [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] wyrażenia, zapytań [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] przekształceń są zaawansowanych technologii, która jest łatwy w użyciu. Zasadniczo formowania dokument XML przy użyciu konstrukcji funkcjonalności ściąganie danych z różnych źródeł, konstruowania <xref:System.Xml.Linq.XElement> dynamicznie obiekty i zebrania całego w nowym drzewie XML. Transformacja mogą generować całkowicie nowy dokument. Konstruowanie przekształcenia w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] jest względnie proste i intuicyjne, a wynikowy kod jest możliwy do odczytu. Pozwala to ograniczyć koszty rozwoju i konserwacji.  
+ Po opanowaniu [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] wyrażenia zapytania [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] przekształcenia są zaawansowaną technologię, która jest łatwa w użyciu. Po prostu opracowywania dokument XML za pomocą konstrukcja funkcjonalna ściąganie danych z różnych źródeł, konstruowanie <xref:System.Xml.Linq.XElement> dynamicznie obiekty i złożenia całego do nowego drzewa XML. Transformacja może generować całkowicie nowy dokument. Konstruowanie przekształcenia w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] jest względnie proste i intuicyjne, a następnie kod wynikowy jest czytelna. Zmniejsza koszty tworzenia i konserwacji.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nie ma zastąpić XSLT. XSLT jest nadal narzędzie ulubionym skomplikowane i zorientowany transformacji XML, zwłaszcza, jeśli nie zdefiniowano także strukturę dokumentu.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nie ma na celu zastąpienia XSLT. XSLT jest nadal narzędzie wyborem dla przekształcenia skomplikowane i skoncentrowane na dokumencie XML, zwłaszcza, jeśli nie zdefiniowano również strukturę dokumentu.  
   
- Zaletą jest konsorcjum World Wide Web (W3C) standardowy jest XSLT. Jeśli masz wymagane użycie tylko technologii, które są standardy, może być bardziej odpowiednie XSLT.  
+ XSLT zaletą jest World Wide Web Consortium (W3C) standardowa. Jeśli masz wymagane używanie tylko tych technologii, które są standardy, bardziej odpowiednie może być XSLT.  
   
- XSLT jest XML i w związku z tym można programowo manipulować.  
+ XSLT jest plikiem XML, a w związku z tym można programowo manipulować.  
   
-## <a name="linq-to-xml-vs-msxml"></a>LINQ do XML programu vs. PROGRAM MSXML  
- Program MSXML jest technologią oparte na modelu COM dla przetwarzania kodu XML, która jest zawarta w systemie Microsoft Windows. Program MSXML zapewnia implementacji native modelu DOM z obsługą języka XPath i XSLT. Zawiera ona także SAX2 analizator-buforowania, oparty na zdarzeniach.  
+## <a name="linq-to-xml-vs-msxml"></a>LINQ to XML a. MSXML  
+ MSXML jest technologii opartych na modelu COM dla przetwarzania XML, który jest dołączony program Microsoft Windows. MSXML oferuje natywnej implementacji modelu DOM, z obsługą języka XPath i XSLT. Zawiera ona także SAX2 parser bez buforowania, oparte na zdarzeniach.  
   
- MSXML wykonuje również jest domyślnie w większości przypadków bezpieczne i dostępne w programie Internet Explorer do wykonania XML po stronie klienta przetwarzanie w aplikacje w stylu AJAX. Program MSXML może służyć od języka programowania, obsługujący COM, w tym C++, JavaScript i Visual Basic 6.0.  
+ MSXML wykonuje również jest domyślnie w większości przypadków bezpieczne i dostępne w programie Internet Explorer do wykonywania przetwarzania w aplikacje w stylu AJAX XML po stronie klienta. MSXML może służyć w dowolnym języku programowania, który obsługuje COM, takich jak C++, JavaScript i Visual Basic 6.0.  
   
- Program MSXML nie jest zalecane używanie w kodzie zarządzanym, w oparciu o środowisko uruchomieniowe języka wspólnego (CLR).  
+ MSXML nie jest zalecane do użytku w kodzie zarządzanym, w oparciu o środowisko uruchomieniowe języka wspólnego (CLR).  
   
-## <a name="linq-to-xml-vs-xmllite"></a>LINQ do XML programu vs. XmlLite  
- XmlLite jest bez buforowania, do przodu, ściągnięcia analizatora. Deweloperzy przede wszystkim za pomocą XmlLite C++. Nie zaleca się deweloperom XmlLite za pomocą kodu zarządzanego.  
+## <a name="linq-to-xml-vs-xmllite"></a>LINQ to XML a. XmlLite  
+ XmlLite jest bez buforowania, do przodu tylko ściągania analizatora. Deweloperzy używają głównie XmlLite przy użyciu języka C++. Nie jest zalecane dla deweloperów XmlLite za pomocą kodu zarządzanego.  
   
- Główną zaletą XmlLite jest niewielka, szybkie analizator składni XML jest zabezpieczone w większości scenariuszy. Jej powierzchni zagrożenie jest bardzo mała. Jeśli chcesz chronić przed atakami, jak "odmowa usługi" lub ujawnieniem danych należy przeanalizować niezaufanych dokumentów, XmlLite może być dobrym rozwiązaniem.  
+ Główną zaletą XmlLite jest lekkie, szybkie analizatora XML, który jest bezpieczny w większości scenariuszy. Jej zagrożeń powierzchni jest bardzo mały. Jeśli chcesz chronić przed atakami, takie jak "odmowa usługi" i narażaniu danych należy przeanalizować niezaufanych dokumentów, XmlLite może być dobrym rozwiązaniem.  
   
- XmlLite nie jest zintegrowany z [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. Nie przekazuje on programistę udoskonalenia wydajności, które są motywujące życie za [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
+ XmlLite nie jest zintegrowany z [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. Nie przekazuje on programistę udoskonalenia dotyczące produktywności, które są motywującego życie za [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzenie (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

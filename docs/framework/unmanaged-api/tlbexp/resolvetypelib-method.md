@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 96a9672ee05cb1fe2573620bd1dea23e57339c93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: be2558e760be8519e528baeff438273c8871f320
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460844"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924472"
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib — Metoda
 Rozpoznaje prostą nazwę biblioteki typów, przywracając jego w pełni kwalifikowaną ścieżkę.  
@@ -40,30 +40,30 @@ HRESULT ResolveTypeLib(
   
 #### <a name="parameters"></a>Parametry  
  `bstrSimpleName`  
- [in] A [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) zawierającą prostą nazwę biblioteki typów.  
+ [in] A [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) zawierający prostą nazwę biblioteki typów.  
   
  `tlbid`  
- [in] Identyfikator GUID przypisane do biblioteki typów w rejestrze.  
+ [in] Identyfikator GUID jest przypisany do biblioteki typów w rejestrze.  
   
  `lcid`  
  [in] Identyfikator lokalizacji biblioteki typów.  
   
  `wMajorVersion`  
- [in] Numer wersji głównej biblioteki typów. Na przykład w przypadku wersji *x.y*, numer wersji głównej jest *x*.  
+ [in] Główny numer wersji biblioteki typów. Na przykład w przypadku wersji *x.y*, główny numer wersji jest *x*.  
   
  `wMinorVersion`  
- [in] Podrzędny numer wersji biblioteki typów. Na przykład w przypadku wersji *x.y*, podrzędny numer wersji jest *y*.  
+ [in] Pomocniczy numer wersji biblioteki typów. Na przykład w przypadku wersji *x.y*, pomocniczy numer wersji jest *y*.  
   
  `syskind`  
- [in] A [SYSKIND](http://msdn.microsoft.com/library/662048b2-59a8-48ca-9e4f-2f9a5306faa1) Flaga, która identyfikuje środowisku operacyjnym. Typowe wartości to SYS_WIN32 i SYS_WIN64.  
+ [in] A [SYSKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ne-oaidl-tagsyskind) flagę, która identyfikuje środowisko operacyjne. Typowe wartości to SYS_WIN32 i SYS_WIN64.  
   
  `pbstrResolvedTlbName`  
- [out] Wskaźnik do [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) zawiera pełną ścieżkę do biblioteki typów o nazwie w `bstrSimpleName` parametru.  
+ [out] Wskaźnik do [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) zawierającą pełną ścieżkę do biblioteki typów o nazwie w `bstrSimpleName` parametru.  
   
 ## <a name="remarks"></a>Uwagi  
  `ResolveTypeLib` Metoda jest wywoływana przez [loadtypelibwithresolver — funkcja](../../../../docs/framework/unmanaged-api/tlbexp/loadtypelibwithresolver-function.md) podczas [Tlbexp.exe (Eksporter biblioteki typów)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) przetwarzania.  
   
- Niestandardowe implementacje tego interfejsu musi zwracać [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) zawiera pełną ścieżkę do biblioteki typów o nazwie w `bstrSimpleName` parametru.  
+ Niestandardowe implementacje tego interfejsu musi zwracać [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) zawierającą pełną ścieżkę do biblioteki typów o nazwie w `bstrSimpleName` parametru.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -76,4 +76,4 @@ HRESULT ResolveTypeLib(
   
 ## <a name="see-also"></a>Zobacz też  
  [Tlbexp, funkcje pomocy](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [LoadTypeLibEx](http://msdn.microsoft.com/library/56a7f9e1-810b-4a42-aa4d-691f4304f5ef)
+ [LoadTypeLibEx](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

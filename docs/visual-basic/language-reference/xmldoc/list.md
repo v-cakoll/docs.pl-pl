@@ -13,12 +13,12 @@ helpviewer_keywords:
 - item XML tag
 - <term> XML tag
 ms.assetid: ec35fced-d58e-4520-a764-0691256e014b
-ms.openlocfilehash: f03924217393e1e909b086b282f1c62ddb471522
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 98c3b8bd809ac550468a5d80e01e6fd16e6d96ea
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603616"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924937"
 ---
 # <a name="ltlistgt-visual-basic"></a>&lt;Lista&gt; (Visual Basic)
 Definiuje listy lub tabeli.  
@@ -40,27 +40,27 @@ Definiuje listy lub tabeli.
   
 #### <a name="parameters"></a>Parametry  
  `type`  
- Typ listy. Musi być "bullet" do listy punktowanej, "numer" Lista numerowana lub "Tabela" dla tabeli dwie kolumny.  
+ Typ listy. Musi być "bullet" na liście punktowanej we wcześniejszej, "number", dla listy numerowanej lub "table" dla tabeli dwie kolumny.  
   
  `term`  
- Używana tylko w przypadku `type` jest "table". Termin Aby zdefiniować, który jest zdefiniowany w tagu opis.  
+ Używana tylko w przypadku `type` jest "table". Termin, aby zdefiniować, która jest zdefiniowana w tagu opis.  
   
  `description`  
- Gdy `type` "bullet" lub "number" `description` jest pozycją na liście po `type` jest "tabeli" `description` znajduje się definicja metody `term`.  
+ Gdy `type` "bullet" lub "number" `description` element na liście po `type` jest "tabeli" `description` jest definicja `term`.  
   
 ## <a name="remarks"></a>Uwagi  
- `<listheader>` Bloku definiuje nagłówek tabeli lub definicji listy. Podczas definiowania tabeli, wystarczy podać wpis dotyczący `term` w nagłówku.  
+ `<listheader>` Bloku określa nagłówek tabeli lub definicji listy. Podczas definiowania tabeli, wystarczy podać wpis dla `term` w nagłówku.  
   
- Każdy element na liście zostanie określony z `<item>` bloku. Podczas tworzenia listy definicji, należy określić zarówno `term` i `description`. Jednak dla tabeli, lista punktowana lub Lista numerowana, wystarczy podać wpis dotyczący `description`.  
+ Każdy element na liście jest określony za pomocą `<item>` bloku. Podczas tworzenia listy definicji, należy określić zarówno `term` i `description`. Jednak dla tabeli, listy punktowanej lub numerowanej, wystarczy podać wpis dla `description`.  
   
- Listy lub tabeli może mieć tyle `<item>` blokuje zgodnie z potrzebami.  
+ Masz tyle listy lub tabeli `<item>` blokuje zgodnie z potrzebami.  
   
- Kompiluj z użyciem [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) na przetwarzanie komentarzy dokumentacji do pliku.  
+ Kompiluj przy użyciu [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) do Przetwarzaj komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto `<list>` tag do definiowania listy punktowanej w sekcji uwag.  
+ W tym przykładzie użyto `<list>` tag, aby zdefiniować listy punktowanej w sekcji uwag.  
   
  [!code-vb[VbVbcnXmlDocComments#5](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/list_1.vb)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Tagi komentarza XML](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [Tagi komentarza XML](../../../visual-basic/language-reference/xmldoc/index.md)

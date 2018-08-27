@@ -14,59 +14,66 @@ helpviewer_keywords:
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2231758130630988e20fd9094c7a0bcfc67499d0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fdbad4a5eb9a9d0c81ae8d29394652e9f6df136e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363591"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935861"
 ---
 # <a name="contextswitchdeadlock-mda"></a>contextSwitchDeadlock MDA
-`contextSwitchDeadlock` Zarządzany Asystent debugowania (MDA) została aktywowana po wykryciu zakleszczenie podczas próby przejścia kontekstu COM.  
-  
-## <a name="symptoms"></a>Symptomy  
- Najbardziej typowe objaw jest wywołanie niezarządzane składnika modelu COM z kodu zarządzanego nie zwraca.  Kolejnym objawem może być użycie pamięci zwiększa się w czasie.  
-  
-## <a name="cause"></a>Przyczyna  
- Najbardziej prawdopodobną przyczyną jest to, że wątku jednowątkowego apartamentu (STA) nie jest przekazywanie komunikatów. Wątku STA. jest albo oczekiwania bez przekazywania komunikatów lub operacji długie i nie zezwala na wiadomości w kolejce pompa.  
-  
- Użycie pamięci zwiększa się w czasie jest spowodowany przez wątek finalizatora próba wywołania `Release` niezarządzane COM składnika i składnik ten nie zwraca.  Zapobiega to odzyskiwanie inne obiekty finalizatora.  
-  
- Jest domyślnie pozostaje tryb komórek jednowątkowych model wątkowy wątku głównego aplikacji konsoli języka Visual Basic To zdarzenie MDA jest włączone, jeśli wątku STA. używa współdziałanie COM bezpośrednio lub pośrednio przez środowisko uruchomieniowe języka wspólnego lub formantu innych firm.  Aby uniknąć aktywowanie to zdarzenie MDA w aplikacji konsoli języka Visual Basic, zastosuj <xref:System.MTAThreadAttribute> atrybut do głównej metody lub zmodyfikować aplikację tak, by przekazywać komunikaty.  
-  
- Jest to możliwe, że to zdarzenie MDA do fałszywie aktywowany, gdy są spełnione wszystkie następujące warunki:  
-  
--   Aplikacja tworzy składniki modelu COM z wątki STA bezpośrednio lub pośrednio do biblioteki.  
-  
--   Aplikacja została zatrzymana w debugerze, a użytkownik nadal aplikacji lub wykonać operacji kroku.  
-  
--   Nie włączono debugowanie niezarządzane.  
-  
- Aby ustalić, czy MDA fałszywie aktywowana, wyłącz wszystkie punkty przerwania, ponownie uruchom aplikację i zezwolenie na uruchamianie bez zatrzymania. Jeśli nie włączono MDA, prawdopodobnie początkowej aktywacji była wartość false. W takim przypadku należy wyłączyć MDA w celu uniknięcia konfliktów z sesji debugowania.  
-  
+
+`contextSwitchDeadlock` Zarządzanego Asystenta debugowania (MDA) jest aktywowana po wykryciu zakleszczenie podczas próby przejścia kontekstu COM.
+
+## <a name="symptoms"></a>Symptomy
+
+Najbardziej typowym symptomem jest wywołanie składnika COM niezarządzane z kodu zarządzanego nie zwraca.  Kolejnym objawem może być to wykorzystania pamięci zwiększa się wraz z upływem czasu.
+
+## <a name="cause"></a>Przyczyna
+
+Najbardziej prawdopodobna przyczyna to, że wątek jednowątkowego apartamentu (STA) nie jest przekazywanie komunikatów. Wątku STA. jest albo oczekiwania bez przekazywania komunikatów operacji długotrwałej lub nie zezwala na kolejki komunikatów, która pompy.
+
+Użycie pamięci zwiększa się wraz z upływem czasu jest spowodowany przez wątek finalizatora, próba wywołania `Release` niezarządzanych com i ten składnik nie powraca.  To uniemożliwia to finalizatorowi odzyskiwaniu innych obiektów.
+
+Domyślnie modelu wątkowości dla głównego wątku aplikacji konsoli języka Visual Basic jest komórce jednowątkowej To zdarzenie MDA jest aktywowane, jeśli w wątku STA. używa współdziałania COM bezpośrednio lub pośrednio za pośrednictwem środowiska uruchomieniowego języka wspólnego lub kontroli innych firm.  Aby uniknąć aktywowanie to zdarzenie MDA w aplikację konsolową w języku Visual Basic, należy zastosować <xref:System.MTAThreadAttribute> atrybutu do głównej metody lub zmodyfikować aplikację tak, by przekazywać komunikaty.
+
+Możliwe jest, to zdarzenie MDA błędnie zostanie uaktywniony, gdy są spełnione wszystkie następujące warunki:
+
+-   Aplikacja tworzy składników COM z wątków STA bezpośrednio lub pośrednio za pośrednictwem biblioteki.
+
+-   Aplikacja została zatrzymana w debugerze, a użytkownik nadal aplikacji lub wykonana operacja kroku.
+
+-   Debugowanie niezarządzane nie jest włączona.
+
+Aby określić, jeśli zdarzenie MDA jest aktywowane błędnie, wyłącz wszystkie punkty przerwania, uruchom ponownie aplikację i zezwolenia na jego uruchomienie bez zatrzymywania. Jeśli zdarzenie MDA nie został aktywowany, prawdopodobnie początkowej aktywacji została wartość false. W takim przypadku należy wyłączyć MDA, aby uniknąć zakłócenia w sesji debugowania.
+
 > [!NOTE]
->  To zdarzenie MDA znajduje się w domyślnym zestawem dla [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] i nowszych wersjach. Podczas procesu hostingu jest włączone w programie Visual Studio, nie można wyłączyć mda ustawionych w domyślnym. Proces hostingu jest włączona domyślnie, więc musi być jawnie wyłączone. Aby dowiedzieć się, jak wyłączyć mda, zobacz "Włączanie i wyłączanie mda" w [diagnozowanie problemów z Asystenci zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
-  
-## <a name="resolution"></a>Rozwiązanie  
- Wykonaj COM zasady dotyczące przekazywanie komunikatów STA.  
-  
-## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
- To zdarzenie MDA nie ma wpływu na środowisko CLR. Zwraca tylko dane o kontekstach COM.  
-  
-## <a name="output"></a>Dane wyjściowe  
- Komunikat opisujący bieżący kontekst i kontekst docelowy.  
-  
-## <a name="configuration"></a>Konfiguracja  
-  
-```xml  
-<mdaConfig>  
-  <assistants>  
-    <contextSwitchDeadlock />  
-  </assistants>  
-</mdaConfig>  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)
+> To zdarzenie MDA jest domyślnym zestawem dla programu Visual Studio. Aby uzyskać informacje na temat wyłączania mda, zobacz [diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md#enable-and-disable-mdas).
+
+## <a name="resolution"></a>Rozwiązanie
+
+Postępuj zgodnie z COM reguły dotyczące przekazywanie komunikatów STA.
+
+## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe
+
+To zdarzenie MDA nie ma wpływu na środowisko CLR. Informuje jedynie dane o kontekstach COM.
+
+## <a name="output"></a>Dane wyjściowe
+
+Komunikat opisujący bieżący kontekst i kontekst docelowego.
+
+## <a name="configuration"></a>Konfiguracja
+
+```xml
+<mdaConfig>
+  <assistants>
+    <contextSwitchDeadlock />
+  </assistants>
+</mdaConfig>
+```
+
+## <a name="see-also"></a>Zobacz też
+
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)

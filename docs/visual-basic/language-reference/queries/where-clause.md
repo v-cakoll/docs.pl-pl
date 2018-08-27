@@ -8,12 +8,12 @@ helpviewer_keywords:
 - queries [Visual Basic], Where
 - Where clause [Visual Basic]
 ms.assetid: 48b5c2c5-3181-429c-8545-894296798c89
-ms.openlocfilehash: 0b61a52a366fb37a0834c9223bc8b7f099354d16
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: de7b4bf3e7dc1145b7e95197c7bd05c66acdabd6
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604045"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934333"
 ---
 # <a name="where-clause-visual-basic"></a>Where — Klauzula (Visual Basic)
 Określa warunek filtrowania dla zapytania.  
@@ -26,17 +26,17 @@ Where condition
   
 ## <a name="parts"></a>Części  
  `condition`  
- Wymagana. Wyrażenie, które określa, czy wartości dla bieżącego elementu w kolekcji są dołączane do kolekcji danych wyjściowych. Wyrażenia musi być `Boolean` wartość lub odpowiednikiem `Boolean` wartość. Jeśli wynikiem warunku jest `True`, element jest uwzględnione w wynikach zapytania; w przeciwnym razie, element są wykluczane w wyniku zapytania.  
+ Wymagane. Wyrażenie, które określa, czy wartości bieżącego elementu w kolekcji są uwzględnione w zbiorze danych wyjściowych. Wyrażenia musi być `Boolean` wartość lub równoważny `Boolean` wartość. Jeśli warunek jest `True`, element jest uwzględniony w wyniku kwerendy; w przeciwnym razie, element jest wykluczony z wyniku zapytania.  
   
 ## <a name="remarks"></a>Uwagi  
- `Where` Klauzuli umożliwia filtrowanie danych zapytania, wybierając tylko te elementy, które spełniają określone kryteria. Elementy, których wartości powodują `Where` klauzuli mogła zwrócić `True` znajdują się w wynikach zapytania; inne elementy są wyłączone. Wyrażenie, które jest używane w `Where` musi mieć klauzulę `Boolean` lub odpowiednikiem `Boolean`, takie jak liczba całkowita, która daje w wyniku `False` po jego wartość wynosi zero. Można połączyć wiele wyrażeń w `Where` klauzuli przy użyciu operatorów logicznych, takich jak `And`, `Or`, `AndAlso`, `OrElse`, `Is`, i `IsNot`.  
+ `Where` Klauzuli pozwala na filtrowanie zapytania o dane, wybierając tylko te elementy, które spełniają określone kryteria. Elementy, których wartości powodują `Where` klauzuli na `True` znajdują się w wyniku zapytania; inne elementy są wyłączone. Wyrażenie, które jest używane w `Where` klauzuli musi zwrócić `Boolean` lub równoważny `Boolean`, takie jak liczba całkowita, która daje w wyniku `False` po jego wartość wynosi zero. Można połączyć wiele wyrażeń w `Where` klauzuli przy użyciu operatorów logicznych, takich jak `And`, `Or`, `AndAlso`, `OrElse`, `Is`, i `IsNot`.  
   
- Domyślnie wyrażenia zapytania nie są obliczane aż do uzyskiwania do nich — na przykład, gdy są one powiązane z danymi lub powtórzyć za pośrednictwem w `For` pętli. W związku z tym `Where` klauzula nie jest oceniany, aż do uzyskiwania dostępu do zapytania. Jeśli masz wartości zewnętrznych do zapytania, które są używane w `Where` klauzuli, upewnij się, że odpowiednią wartość jest używana w `Where` klauzuli w czasie wykonywania zapytania. Aby uzyskać więcej informacji na temat wykonywania zapytania, zobacz [Your pierwszego zapytania LINQ zapisu](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).  
+ Domyślnie wyrażenia zapytania nie są sprawdzane, dopóki nie są one używane — na przykład, gdy znajdują się powiązanych z danymi lub iterowany przy użyciu w `For` pętli. W rezultacie `Where` klauzula nie jest oceniany, dopóki nie odbywa się zapytania. Jeśli masz zewnętrzne w stosunku do zapytania, które są używane w wartości `Where` klauzuli, upewnij się, że odpowiednie wartość jest używana w `Where` klauzuli w czasie wykonywania zapytania. Aby uzyskać więcej informacji na temat wykonywania zapytań, zobacz [Your pierwszego zapytania LINQ pisania](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).  
   
- Można wywołać funkcji w ramach `Where` klauzuli, aby wykonać obliczenie lub operacja na wartości z bieżącego elementu w kolekcji. Wywoływanie funkcji w `Where` klauzuli może spowodować wykonanie zapytania w celu wykonania natychmiast, gdy jest on zdefiniowany zamiast, gdy jest on dostępny. Aby uzyskać więcej informacji na temat wykonywania zapytania, zobacz [Your pierwszego zapytania LINQ zapisu](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).  
+ Można wywołać funkcji w ramach `Where` klauzuli wykonać obliczenia lub operacji na podstawie wartości z bieżącego elementu w kolekcji. Wywoływanie funkcji w `Where` klauzuli może spowodować, że zapytanie jest wykonywane natychmiast, gdy jest on zdefiniowany zamiast, gdy jest on dostępny. Aby uzyskać więcej informacji na temat wykonywania zapytań, zobacz [Your pierwszego zapytania LINQ pisania](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).  
   
 ## <a name="example"></a>Przykład  
- Następujące zapytanie używa wyrażenia `From` klauzuli, aby zadeklarować zmienną zakresu `cust` dla każdego `Customer` obiektu w `customers` kolekcji. `Where` Klauzuli używa zmiennej zakresu, aby ograniczyć dane wyjściowe do klientów z określonego regionu. `For Each` Pętli Wyświetla nazwę firmy dla każdego klienta w wyniku zapytania.  
+ Następujące zapytanie używa wyrażenia `From` klauzulę, aby zadeklarować zmienną zakresu `cust` dla każdego `Customer` obiektu `customers` kolekcji. `Where` Klauzuli używa zmiennej zakresu, aby uniemożliwić klientom określonego regionu danych wyjściowych. `For Each` Pętli Wyświetla nazwę firmy, dla każdego klienta, w wyniku zapytania.  
   
  [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/where-clause_1.vb)]  
   
@@ -47,7 +47,7 @@ Where condition
   
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Zapytania](../../../visual-basic/language-reference/queries/queries.md)  
+ [Zapytania](../../../visual-basic/language-reference/queries/index.md)  
  [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)  
  [Select, klauzula](../../../visual-basic/language-reference/queries/select-clause.md)  
  [For Each...Next, instrukcja](../../../visual-basic/language-reference/statements/for-each-next-statement.md)

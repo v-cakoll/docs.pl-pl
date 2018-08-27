@@ -1,5 +1,5 @@
 ---
-title: -refonly (Visual Basic)
+title: -jest opcja SET refonly (Visual Basic)
 ms.date: 03/16/2018
 f1_keywords:
 - -refonly
@@ -10,15 +10,15 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e8f6c15084ac9b1a07aef8a0311edfcc4a93337c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653049"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932666"
 ---
-# <a name="-refonly-visual-basic"></a>-refonly (Visual Basic)
+# <a name="-refonly-visual-basic"></a>-jest opcja SET refonly (Visual Basic)
 
-**- Refonly** opcja wskazuje, czy główny wynik kompilacji powinien być zestaw odwołania, zamiast zestawu implementacji. `-refonly` Parametr dyskretnie wyłącza Generowanie plików PDB, jak zestawy odwołań nie może zostać wykonana.
+**Jest opcja refonly -** opcja wskazuje, że główny wynik kompilacji należy zamiast zestawu implementacji zestawu odwołania. `-refonly` Parametr dyskretnie wyłącza podawania plików PDB, ponieważ zestawy odwołań nie można wykonać.
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
 
@@ -30,15 +30,15 @@ ms.locfileid: "33653049"
 
 ## <a name="remarks"></a>Uwagi
 
-Obsługa języka Visual Basic `-refout` przełącznika, począwszy od wersji 15 ustęp 3.
+Obsługa języka Visual Basic `-refout` przełącznika, począwszy od wersji 15.3.
 
-Zestawy referencyjne są tylko metadane zestawy, które zawierają metadanych, ale żaden kod implementacji. Obejmują one informacje o wszystkim poza typy anonimowe typu i element członkowski. Przyczyna przy użyciu `throw null` jest jednostki (w przeciwieństwie do treści), dzięki czemu PEVerify można uruchamiać i przekazywania (w związku z tym sprawdzanie poprawności kompletności metadanych).
+Zestawy referencyjne są tylko metadane zestawów, które zawierają metadane, ale bez kodu realizacji. Obejmują one informacje typów i elementów członkowskich dla wszystkim, z wyjątkiem typów anonimowych. Przyczyna przy użyciu `throw null` treści (w przeciwieństwie do treści) jest tak, aby PEVerify można uruchomić i przekazać (dlatego sprawdzanie poprawności kompletność metadanych).
 
-Zestawy referencyjne obejmuje dane poziomu zestawu [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) atrybutu. Ten atrybut można określić w źródle (następnie kompilator nie będzie trzeba go syntetyzowania). Z powodu tego atrybutu środowisk uruchomieniowych będzie odmawiał załadowania zestawów odwołań do wykonania (ale nadal może być załadowany w kontekstu reflection-only). Narzędzia, które odzwierciedlać zestawów konieczne upewnij się, że są ładowane zestawów odwołań jako tylko do odbicia. w przeciwnym razie zwraca środowiska uruchomieniowego <xref:System.BadImageFormatException>.
+Zestawy referencyjne zawierają poziomie zestawu [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) atrybutu. Ten atrybut może być określony w źródle (następnie kompilator nie będzie konieczne jej syntetyzowania). Z powodu tego atrybutu środowisk wykonawczych będzie odmawiał załadowania zestawy referencyjne do wykonania (ale nadal może być załadowany w kontekstu reflection-only). Narzędzia, które odzwierciedlają zestawów, należy upewnić się, że są one ładowane odwołań do zestawów jako tylko do odbicia. w przeciwnym wypadku środowisko wykonawcze zgłasza <xref:System.BadImageFormatException>.
 
-`-refonly` i [ `-refout` ](refout-compiler-option.md) wykluczają się wzajemnie.
+`-refonly` i [ `-refout` ](refout-compiler-option.md) opcje wykluczają się wzajemnie.
 
 ## <a name="see-also"></a>Zobacz także
-[-refout](refout-compiler-option.md)   
-[Kompilator w wierszu polecenia programu Visual Basic](index.md)  
+[-opcji refout](refout-compiler-option.md)   
+[Kompilator wiersza polecenia programu Visual Basic](index.md)  
 [Przykłady kompilacji — wiersze poleceń](sample-compilation-command-lines.md)   

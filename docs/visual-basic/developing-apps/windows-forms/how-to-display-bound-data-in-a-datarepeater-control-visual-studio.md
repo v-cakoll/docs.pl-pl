@@ -6,43 +6,43 @@ helpviewer_keywords:
 - DataRepeater, displaying bound controls
 ms.assetid: 56a15326-1334-4275-af4e-075cad79e6f7
 ms.openlocfilehash: b96fb33a0dcf80a86d1fcb6e219e5f35b1f7351c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589870"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933409"
 ---
 # <a name="how-to-display-bound-data-in-a-datarepeater-control-visual-studio"></a>Porady: wyświetlanie powiązanych danych w formancie DataRepeater (Visual Studio)
-Najczęściej używane <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> sterowania są wyświetlane powiązane dane z bazy danych lub inne źródła danych.  
+Najbardziej powszechnym zastosowaniem programu <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> kontroli jest wyświetlanie powiązanych danych z bazy danych lub innego źródła danych.  
   
- Oprócz formanty powiązane, można dodać inne formanty, takie jak statyczną etykietę lub obraz jest powtarzany na każdej pozycji w <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> formantu. Aby uzyskać więcej informacji, zobacz [porady: wyświetlanie formantów niepowiązanych w formancie Datarepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md).  
+ Oprócz formanty powiązania, warto dodać inne kontrolki, takie jak etykieta statyczna lub obraz jest powtarzany w każdym elemencie w <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> kontroli. Aby uzyskać więcej informacji, zobacz [porady: wyświetlanie formantów niepowiązanych w formancie DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md).  
   
- Można także powiązać ze źródłem danych w czasie wykonywania przez ustawienie <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A> właściwości `True` i przypisywanie źródło danych do <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DataSource%2A> właściwości. W takim przypadku należy zarządzać wszystkie interakcje ze źródłem danych. Aby uzyskać więcej informacji, zobacz [tryb wirtualny w formancie DataRepeater](../../../visual-basic/developing-apps/windows-forms/virtual-mode-in-the-datarepeater-control-visual-studio.md).  
+ Możesz również powiązać ze źródłem danych w czasie wykonywania, ustawiając <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A> właściwości `True` i źródło danych w celu przypisywania <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DataSource%2A> właściwości. W takim przypadku należy zarządzać wszystkie interakcje ze źródłem danych. Aby uzyskać więcej informacji, zobacz [tryb wirtualny w formancie DataRepeater](../../../visual-basic/developing-apps/windows-forms/virtual-mode-in-the-datarepeater-control-visual-studio.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-create-a-data-bound-datarepeater"></a>Aby utworzyć DataRepeater powiązane z danymi  
+### <a name="to-create-a-data-bound-datarepeater"></a>Aby utworzyć DataRepeater powiązanych z danymi  
   
-1.  Przeciągnij <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> kontrolować z **Visual Basic PowerPacks** karcie **przybornika** formularza lub kontenera formantu.  
+1.  Przeciągnij <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> z kontrolować **Visual Basic PowerPacks** karcie **przybornika** formularza lub kontener formantu.  
   
-2.  Przeciągnij uchwyt zmiany rozmiaru i pozycji do rozmiaru i pozycji formantu.  
+2.  Przeciągając uchwyty zmiany rozmiaru i położenia rozmiar i położenie formantu.  
   
-     Należy pamiętać, że kontrolka ma dwóch regionach prostokątny. Górny obszar jest *szablon elementu*; formanty dodawane do szablonu zostanie powtórzona w każdej pozycji w <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> formantu w czasie wykonywania. Niższe region jest *okienka ekranu*, której elementy będą wyświetlane.  
+     Należy pamiętać, że kontrolka ma dwa regiony prostokątny. Jest górnego regionu *szablon elementu*; formantów dodanych do szablonu zostanie powtórzona w każdym elemencie w <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> formantu w czasie wykonywania. Jest dolnego regionu *okienka ekranu*, gdzie elementy zostaną wyświetlone.  
   
-     Można również rozmiaru i pozycji formant lub szablon elementu zmieniając **rozmiar** i **pozycji** właściwości w oknie właściwości.  
+     Można także rozmiar i położenie szablonu elementu lub formantu, zmieniając **rozmiar** i **pozycji** właściwości w oknie dialogowym właściwości.  
   
-3.  Na **danych** menu, kliknij przycisk **Pokaż źródeł danych**.  
+3.  Na **danych** menu, kliknij przycisk **Pokaż źródła danych**.  
   
     > [!NOTE]
-    >  Jeśli **źródeł danych** okna jest pusta, Dodaj źródło danych do niej. Aby uzyskać więcej informacji, zobacz [Dodawanie nowych źródeł danych](/visualstudio/data-tools/add-new-data-sources).  
+    >  Jeśli **źródeł danych** okna jest pusta, Dodaj źródło danych do niego. Aby uzyskać więcej informacji, zobacz [dodasz nowe źródła danych](/visualstudio/data-tools/add-new-data-sources).  
   
 4.  W **źródeł danych** okna, wybierz węzeł najwyższego poziomu dla tabeli, która zawiera dane, które chcesz powiązać.  
   
-5.  Zmień typ docelowej tabeli `Details` klikając `Details` na liście rozwijanej na węźle tabeli.  
+5.  Zmień upuszczany typ tabeli, aby `Details` , klikając pozycję `Details` w węźle tabeli na liście rozwijanej.  
   
-6.  Wybierz węzeł tabeli i przeciągnij go na region szablonu elementu <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> formantu.  
+6.  Wybierz węzeł tabeli i przeciągnij go na region szablonu elementu <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> kontroli.  
   
-     Można określić, jakie typy formantów są wyświetlane dla każdego pola. Aby uzyskać więcej informacji, zobacz [Ustawianie formantu do utworzenia podczas przeciągania z okna źródeł danych](/visualstudio/data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window).  
+     Można określić, jakie typy kontrolek będą wyświetlane dla każdego pola. Aby uzyskać więcej informacji, zobacz [Ustawianie formantu do utworzenia podczas przeciągania z okna źródeł danych](/visualstudio/data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  

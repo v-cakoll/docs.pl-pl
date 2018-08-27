@@ -2,12 +2,12 @@
 title: Wątkowość (C#)
 ms.date: 07/20/2015
 ms.assetid: 236d157d-37c0-4ee8-89fc-721e6c596325
-ms.openlocfilehash: f9ba0793876f38b3ada2f65c4594562ea1a66983
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 35f0ee3bfd67104d9eaab7c4dde7e35a28a374c5
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39296185"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934704"
 ---
 # <a name="threading-c"></a>Wątkowość (C#)
 Wątkowość Włącza program C# do wykonania współbieżnych przetwarzanie, dzięki czemu możesz zrobić więcej niż jedną operację naraz. Na przykład umożliwia wątkowości monitorować dane wejściowe od użytkownika, wykonywanie zadań w tle i obsługi równoczesnymi strumieniami danych wejściowych.  
@@ -37,8 +37,5 @@ Wątkowość Włącza program C# do wykonania współbieżnych przetwarzanie, dz
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Aplikacje wielowątkowe (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)|Opisuje sposób tworzenia i używania wątków.|  
 |[Synchronizacja wątku (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)|W tym artykule opisano sposób kontrolowania interakcje wątków.|  
-|[Wątek puli (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)|Opisuje sposób korzystanie z puli wątków roboczych, które są zarządzane przez system.|  
-|[Porady: Korzystanie z puli wątków (C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|Pokazuje zsynchronizowane używanie wielu wątków w puli wątków.|  
 |[Wątkowość](../../../../../docs/standard/threading/index.md)|Opisuje sposób implementacji wątkowości w programie .NET Framework.|

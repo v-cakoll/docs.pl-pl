@@ -17,34 +17,34 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - declarations [Visual Basic], namespaces
 ms.assetid: 08ba2738-df52-4140-bc55-f57c871c9b73
-ms.openlocfilehash: eb1f5653d968e81168833cd57813219e8f049b70
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd07c883c576e917cf1aa5072505854bc906eb3f
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648583"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933969"
 ---
 # <a name="enumerations-and-name-qualification-visual-basic"></a>Wyliczenie i kwantyfikacja nazwy (Visual Basic)
-Zwykle podczas odwoływania się do elementu członkowskiego wyliczenia, muszą kwalifikować się nazwę elementu członkowskiego o nazwie wyliczenia. Na przykład, aby odwołać się do `Sunday` członka Twojej `Days` wyliczenia, należy użyć następującej składni:  
+Zwykle przy odwoływaniu się do elementu członkowskiego wyliczenia, masz prawo nazwę elementu członkowskiego o nazwie wyliczenia. Na przykład, aby odwołać się do `Sunday` członek Twojego `Days` wyliczenia, należy użyć następującej składni:  
   
  [!code-vb[VbEnumsTask#18](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_1.vb)]  
   
-## <a name="using-the-imports-statement"></a>Przy użyciu Importy — instrukcja  
- Możesz uniknąć używania w pełni kwalifikowane nazwy przez dodanie `Imports` instrukcji w sekcji deklaracji przestrzeni nazw kodu, jak w poniższym przykładzie:  
+## <a name="using-the-imports-statement"></a>Za pomocą Importy — instrukcja  
+ Możesz uniknąć używania w pełni kwalifikowanych nazw, dodając `Imports` instrukcję do sekcji deklaracji przestrzeni nazw w kodzie, jak w poniższym przykładzie:  
   
  [!code-vb[VbEnumsTask#22](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_2.vb)]  
   
- `Imports` Instrukcji imports nazwy przestrzeni nazw z przywoływane projekty i zestawy, a za pomocą tego samego projektu jako moduł, w której występuje instrukcja. Po dodaniu tej instrukcji można odwołać się do członków wyliczenia bez kwalifikacji, jak w poniższym przykładzie:  
+ `Imports` Instrukcja importuje nazwy przestrzeni nazw z przywoływane projekty i zespoły i w tym samym projekcie jako moduł, w której występuje instrukcja. Po dodaniu tej instrukcji, możesz zapoznać się z elementów członkowskich wyliczenia bez kwalifikacji, jak w poniższym przykładzie:  
   
  [!code-vb[VbEnumsTask#24](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_3.vb)]  
   
- Poprzez organizowanie zestawów powiązanych stałe w wyliczenia, można użyć tych samych nazw stałej w różnych kontekstach. Na przykład można użyć tych samych nazw stałe dzień tygodnia w `Days` i `WorkDays` wyliczenia. Jeśli używasz `Imports` instrukcji z Twojej wyliczenia, należy zachować ostrożność uniknąć niejednoznacznych odwołań. Rozważmy następujący przykład:  
+ Organizując zestawów powiązanych stałe wyliczeń, można użyć takich samych nazwach stałej w różnych kontekstach. Na przykład, można użyć tej samej nazwy dla stałych dzień tygodnia, w `Days` i `WorkDays` wyliczenia. Jeśli używasz `Imports` instrukcji związanych z wyliczeniami usługi, należy uważać, aby uniknąć niejednoznacznego odwołania. Rozważmy następujący przykład:  
   
  [!code-vb[VbEnumsTask#22](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_2.vb)]  
   
  [!code-vb[VbEnumsTask#25](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_4.vb)]  
   
- Przy założeniu, że `Monday` jest elementem członkowskim `Days` wyliczenie i `Workdays` wyliczenia, ten kod generowany jest błąd kompilatora. Aby uniknąć niejednoznacznych odwołań podczas odwoływania się do poszczególnych stała, Zakwalifikuj nazwę przez stałej z jego wyliczenia. Poniższy kod odwołuje się do `Saturday` stałe w `Days` i `WorkDays` wyliczenia.  
+ Przy założeniu, że `Monday` jest elementem członkowskim `Days` wyliczenie i `Workdays` wyliczenia, ten kod generuje błąd kompilatora. Aby uniknąć niejednoznacznych odwołań przy odwoływaniu się do poszczególnych stałą, kwalifikują się stałe nazwą jego wyliczenia. Poniższy kod, który odwołuje się do `Saturday` stałe w `Days` i `WorkDays` wyliczenia.  
   
  [!code-vb[VbEnumsTask#32](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_5.vb)]  
   
@@ -58,4 +58,4 @@ Zwykle podczas odwoływania się do elementu członkowskiego wyliczenia, muszą 
  [Typy danych Stała i Literał](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)  
  [Enum, instrukcja](../../../../visual-basic/language-reference/statements/enum-statement.md)  
  [Imports, instrukcja (przestrzeń nazw i typ .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [Typy danych](../../../../visual-basic/language-reference/data-types/data-type-summary.md)
+ [Typy danych](../../../../visual-basic/language-reference/data-types/index.md)

@@ -1,16 +1,16 @@
 ---
-title: 'Przykładowy plik XML: Przetestować konfigurację w Namespace1'
+title: 'Przykładowy plik XML: Konfiguracja testowa w {1 & gt'
 ms.date: 07/20/2015
 ms.assetid: e75ad1bc-5636-4623-9a34-a286a8c485d6
 ms.openlocfilehash: 04d66eaa7fd134fdf368614ca94261b80c16d4d9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333056"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932083"
 ---
-# <a name="sample-xml-file-test-configuration-in-a-namespace"></a>Przykładowy plik XML: Przetestować konfigurację w Namespace
-Następujący plik XML jest używany w różnych przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji. Jest to plik konfiguracji testu. Plik XML jest w przestrzeni nazw.  
+# <a name="sample-xml-file-test-configuration-in-a-namespace"></a>Przykładowy plik XML: Konfiguracja testowa w Namespace
+Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji. Jest to plik konfiguracji testu. Kod XML jest w przestrzeni nazw.  
   
 ## <a name="testconfiginnamespacexml"></a>TestConfigInNamespace.xml  
   

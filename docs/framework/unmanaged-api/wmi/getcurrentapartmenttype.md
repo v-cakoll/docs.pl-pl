@@ -1,6 +1,6 @@
 ---
 title: Funkcja GetCurrentApartmentType (niezarządzany wykaz interfejsów API)
-description: Funkcja GetCurrentApartmentType pobiera typu Apartment, w którym jest wykonywany wywołującego.
+description: Funkcja GetCurrentApartmentType pobiera typu apartment, w którym jest wykonywany obiekt wywołujący.
 ms.date: 11/06/2017
 api_name:
 - GetCurrentApartmentType
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca7b5fa5bf6d845d542d3e80c0571e59f3d4c1e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4de85eb310de70dc8fd61f7c06abca95ec267f87
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461727"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931418"
 ---
-# <a name="getcurrentapartmenttype-function"></a>Funkcja GetCurrentApartmentType
-Pobiera rodzaj typu apartment, w którym jest wykonywany wywołującego.   
+# <a name="getcurrentapartmenttype-function"></a>GetCurrentApartmentType — funkcja
+Pobiera rodzaj typu apartment, w którym jest wykonywany obiekt wywołujący.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -41,13 +41,13 @@ HRESULT GetCurrentApartmentType (
 ## <a name="parameters"></a>Parametry
 
 `vFunc`  
-[in] Ten parametr nie jest używana.
+[in] Ten parametr jest nieużywany.
 
 `ptr`  
-[in] Wskaźnik do [IComThreadingInfo](https://msdn.microsoft.com/library/windows/desktop/ms694502(v=vs.85).aspx) wystąpienia.
+[in] Wskaźnik do [IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo) wystąpienia.
 
 `aptType`  
-[out] Wskaźnik do [APTTYPE](https://msdn.microsoft.com/library/windows/desktop/ms693793(v=vs.85).aspx) wartość wyliczenia wskazująca apartamentu obiektu wywołującego.
+[out] Wskaźnik do [APTTYPE](/windows/desktop/api/objidlbase/ne-objidlbase-_apttype) wartość wyliczenia wskazująca apartamentu obiektu wywołującego.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -59,7 +59,7 @@ HRESULT GetCurrentApartmentType (
   
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zawijana wywołanie [IComThreadingInfo::GetCurrentApartmentType](https://msdn.microsoft.com/library/windows/desktop/ms683752(v=vs.85).aspx) metody.
+Ta funkcja zawija wywołanie do [IComThreadingInfo::GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) metody.
 
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -69,4 +69,4 @@ Ta funkcja jest zawijana wywołanie [IComThreadingInfo::GetCurrentApartmentType]
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
-[Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)
+[Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

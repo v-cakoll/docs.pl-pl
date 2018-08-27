@@ -6,16 +6,16 @@ helpviewer_keywords:
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: 75016fad-0141-42de-8564-5051be29487e
 ms.openlocfilehash: 41dc6ef8d2ec2ffd6cd1cf793911f2e09f1a1e77
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652272"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929519"
 ---
 # <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>Porady: osadzanie wyrażeń w literałach XML (Visual Basic)
-Literały XML można łączyć z wyrażenia osadzone, aby utworzyć dokumentu XML, fragment lub element zawartości utworzona w czasie wykonywania. W poniższych przykładach pokazano, jak używać wyrażenia osadzone do wypełniania elementu zawartości, atrybuty i nazwy elementów w czasie wykonywania.  
+Literały XML można połączyć z wyrażenia osadzone, aby utworzyć dokumentu XML, fragment lub element, który zawiera zawartość tworzony w czasie wykonywania. W poniższych przykładach pokazano sposób użycia wyrażenia osadzone w celu wypełnienia zawartości elementu i atrybuty nazwy elementów w czasie wykonywania.  
   
- Składnia wyrażenia osadzonego jest `<%=` `exp` `%>`, która jest taka sama składnia który [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] używa. Aby uzyskać więcej informacji, zobacz [wyrażenia osadzone w XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
+ Składnia wyrażenia osadzone jest `<%=` `exp` `%>`, który jest w tej samej składni, [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] używa. Aby uzyskać więcej informacji, zobacz [wyrażenia osadzone w XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
   
  Można również użyć [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] interfejsów API, aby utworzyć [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] obiektów. Aby uzyskać więcej informacji, zobacz <xref:System.Xml.Linq.XElement>.  
   
@@ -23,7 +23,7 @@ Literały XML można łączyć z wyrażenia osadzone, aby utworzyć dokumentu XM
   
 #### <a name="to-insert-text-as-element-content"></a>Aby wstawić tekst jako element zawartości  
   
--   Poniższy przykład przedstawia sposób wstawić tekst, który jest zawarty w `contactName` zmiennej między elementami nazwa otwierający i zamykający.  
+-   Poniższy przykład pokazuje, jak wstawić tekst, który jest zawarty w `contactName` zmiennej między elementami nazwa otwierający i zamykający.  
   
      [!code-vb[VbXMLSamples#39](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_1.vb)]  
   
@@ -37,7 +37,7 @@ Literały XML można łączyć z wyrażenia osadzone, aby utworzyć dokumentu XM
   
 #### <a name="to-insert-text-as-an-attribute-value"></a>Aby wstawić tekst jako wartość atrybutu  
   
--   Poniższy przykład przedstawia sposób wstawić tekst, który znajduje się w `phoneType` zmiennej jako wartości `type` atrybutu.  
+-   Poniższy przykład pokazuje, jak wstawić tekst, który jest zawarty w `phoneType` zmiennej jako wartości `type` atrybutu.  
   
      [!code-vb[VbXMLSamples#40](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_2.vb)]  
   
@@ -51,9 +51,9 @@ Literały XML można łączyć z wyrażenia osadzone, aby utworzyć dokumentu XM
   
 #### <a name="to-insert-text-for-an-element-name"></a>Aby wstawić tekst dla nazwy elementu  
   
--   Poniższy przykład przedstawia sposób wstawić tekst, który jest zawarty w `elementName` zmiennej jako nazwa elementu.  
+-   Poniższy przykład pokazuje, jak wstawić tekst, który jest zawarty w `elementName` zmiennej jako nazwę elementu.  
   
-     Podczas tworzenia elementów za pomocą tej metody, należy zamknąć je za pomocą \</ > tagu.  
+     Podczas tworzenia elementów za pomocą tej techniki, należy zamknąć je za pomocą \</ > tag.  
   
      [!code-vb[VbXMLSamples#41](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_3.vb)]  
   

@@ -7,39 +7,40 @@ helpviewer_keywords:
 - += operator [C#]
 - addition assignment operator (+=) [C#]
 ms.assetid: 9cdf97e6-331d-492b-85e1-3ec3171484e9
-ms.openlocfilehash: bcd56acad8e2b08585e5ae60f1c3cf8183b5664a
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: bd0997ec5b7d79a41e01f9c2b17533293e412c1e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34171882"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933790"
 ---
 # <a name="-operator-c-reference"></a>+= — Operator (odwołanie w C#)
 Operator przypisania dodawania.  
   
 ## <a name="remarks"></a>Uwagi  
- Za pomocą wyrażenia `+=` operator przypisania, takich jak  
+ Wyrażenie używające operatora przypisania `+=`, takie jak  
   
 ```csharp  
 x += y  
 ```  
   
- jest równoważny  
+ odpowiada wyrażeniu  
   
 ```csharp  
 x = x + y  
 ```  
   
- z tą różnicą, że `x` jest tylko jeden raz obliczone. Znaczenie [+ — operator](../../../csharp/language-reference/operators/addition-operator.md) zależy od typów `x` i `y` (oprócz dla argumentów operacji liczbowych, łączenia dla argumentów ciągu i tak dalej).  
+ z tą różnicą, że `x` jest obliczany tylko raz. Znaczenie [+ — operator](../../../csharp/language-reference/operators/addition-operator.md) zależy od typów `x` i `y` (Dodawanie liczbową argumentów operacji, łączenia dla argumentów ciągu i tak dalej).  
   
- `+=` Operator nie może zostać przeciążony bezpośrednio, ale typy danych zdefiniowane przez użytkownika można przeciążać [+ — operator](../../../csharp/language-reference/operators/addition-operator.md) (zobacz [operator](../../../csharp/language-reference/keywords/operator.md)).  
+ `+=` Operator nie może zostać przeciążony bezpośrednio, ale typy zdefiniowane przez użytkownika może doprowadzić do przeciążenia [+ — operator](../../../csharp/language-reference/operators/addition-operator.md) (zobacz [operator](../../../csharp/language-reference/keywords/operator.md)).  
   
- `+=` Operator służy również do określają metodę, która będzie wywoływana w odpowiedzi na zdarzenia; metody te są wywoływane programy obsługi zdarzeń. Korzystanie z `+=` operatora w tym kontekście jest określany jako *subskrybowanie zdarzeń*. Aby uzyskać więcej informacji, zobacz [porady: subskrybowanie i anulowanie subskrypcji zdarzeń](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md) i [delegatów](../../../csharp/programming-guide/delegates/index.md).  
+ `+=` Operator jest również używany do określają metodę, która będzie wywoływana w odpowiedzi na zdarzenie; metody te są wywoływane programy obsługi zdarzeń. Korzystanie z `+=` operatora w tym kontekście jest określany jako *subskrybowanie zdarzenia*. Aby uzyskać więcej informacji, zobacz [porady: subskrybowanie i anulowanie subskrypcji zdarzeń](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md) i [delegatów](../../../csharp/programming-guide/delegates/index.md).  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csRefOperators#35](../../../csharp/language-reference/operators/codesnippet/CSharp/addition-assignment-operator_1.cs)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Operatory języka C#](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Operatory języka C#](../../../csharp/language-reference/operators/index.md)

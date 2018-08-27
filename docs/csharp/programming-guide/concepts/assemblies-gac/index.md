@@ -2,53 +2,53 @@
 title: Zestawy i Globalna pamięć podręczna zestawów (C#)
 ms.date: 07/20/2015
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
-ms.openlocfilehash: 994498525aed3ebb08f2de7926c7adc2d3d95f56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07ee54fc19abecba5e8335f063277418ede80b36
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320930"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933028"
 ---
 # <a name="assemblies-and-the-global-assembly-cache-c"></a>Zestawy i Globalna pamięć podręczna zestawów (C#)
-Zestawy stanowią podstawową jednostkę wdrożenia, kontroli wersji, ponownemu, zakresu aktywacji i uprawnień zabezpieczeń dla. Aplikacja Asp.net. Zestawy formę plik wykonywalny (.exe) lub dołączana dynamicznie biblioteka (dll) pliku i są blokami konstrukcyjnymi programu .NET Framework. Zawierają środowisko uruchomieniowe języka wspólnego o informacje, które należy znać typ implementacji. Można potraktować zestawu jako kolekcję typów i zasobów, które tworzą jednostkę logiczną funkcjonalności i są tworzone współdziałają ze sobą.  
+Zespoły tworzą podstawową jednostką wdrażania, kontroli wersji, ponownego użycia, określania zakresu aktywacji i uprawnień zabezpieczeń. Aplikacja oparta na sieci. Zestawy formę dołączana dynamicznie biblioteka (dll) pliku lub plik wykonywalny (.exe) i są blokami konstrukcyjnymi programu .NET Framework. Zapewniają one środowiska uruchomieniowego języka wspólnego informacje, które musi być znane implementacje typu. Można potraktować zestawu jako kolekcję typów i zasobów, które tworzą jednostkę logiczną funkcji i zostały opracowane w celu współpracują ze sobą.  
   
- Zestawy mogą zawierać przynajmniej jeden moduł. Na przykład większych projektów mogą być planowane w taki sposób, że kilka indywidualnych deweloperów działać w oddzielnych modułów, wszystkie najbliższych, aby utworzyć w jednym zestawie. Aby uzyskać więcej informacji o modułach, zobacz temat [porady: tworzenie zestawów Multifile](../../../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md).  
+ Zespoły mogą zawierać przynajmniej jeden moduł. Na przykład większe projekty mogą być planowane w taki sposób, że kilka indywidualnych deweloperów działać na osobne moduły, wszystkie nadchodzące ze sobą, aby utworzyć pojedynczy zestaw. Aby uzyskać więcej informacji na temat modułów, zobacz temat [porady: kompilacja zestawów Multifile](../../../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md).  
   
- Zestawy mieć następujące właściwości:  
+ Zestawy mają następujące właściwości:  
   
--   Zestawy są zaimplementowane jako pliki .exe lub dll.  
+-   Zestawy są implementowane jako pliki .exe lub .dll.  
   
--   Można udostępniać zestawu między aplikacjami, ustawiając dla niego w globalnej pamięci podręcznej zestawów. Zestawy muszą być o silnych nazwach, aby mogły one zostać uwzględnione w globalnej pamięci podręcznej zestawów. Aby uzyskać więcej informacji, zobacz [zestawy Strong-Named](../../../../../docs/framework/app-domains/strong-named-assemblies.md).  
+-   Można udostępniać między aplikacjami przez umieszczenie go w globalnej pamięci podręcznej zestawu. Zestawy muszą być o silnej nazwie aby mogły zostać uwzględnione w globalnej pamięci podręcznej. Aby uzyskać więcej informacji, zobacz [zestawy Strong-Named](../../../../../docs/framework/app-domains/strong-named-assemblies.md).  
   
--   Zestawy są ładowane do pamięci tylko wtedy, jeśli są wymagane. Jeśli nie są używane, nie są załadowane. Oznacza to, że zestawy mogą być wydajnym sposobem zarządzania zasobami w większych projektów.  
+-   Zestawy są ładowane do pamięci tylko wtedy, jeśli są one wymagane. Jeśli nie są one używane, nie są one załadowane. Oznacza to, że zestawy może być wydajnym sposobem zarządzania zasobami w dużych projektach.  
   
 -   Informacje o zestawie można uzyskać programistycznie przy użyciu odbicia. Aby uzyskać więcej informacji, zobacz [odbicia (C#)](../../../../csharp/programming-guide/concepts/reflection.md).  
   
--   Jeśli do załadowania zestawu jedynie, aby sprawdzić, należy użyć metody takich jak <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>.  
+-   Jeśli do załadowania zestawu tylko, aby sprawdzić, należy użyć metody takie jak <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>.  
   
 ## <a name="assembly-manifest"></a>Manifest zestawu  
- W każdym zestawie jest *manifest zestawu*. Podobnie jak spisu treści, manifest zestawu zawiera następujące elementy:  
+ W ramach każdego zestawu istnieje *manifestu zestawu*. Podobnie jak w spisie treści, manifest zestawu zawiera następujące informacje:  
   
 -   Tożsamość zestawu (jego nazwa i wersja).  
   
--   Tabela plików opisujące wszystkie pliki wchodzące w skład zestawu, na przykład innych zestawów utworzonego pliku .exe lub .dll opiera się na, lub nawet mapy bitowej i pliki Readme.  
+-   Tabela plików opisujące wszystkie pliki wchodzące w skład zestawu, na przykład innych zestawów utworzonych, plik .exe lub .dll opiera się na, lub nawet mapy bitowej i pliki Readme.  
   
--   *Lista odwołań zestawu*, który znajduje się lista wszystkich zależności zewnętrznych — biblioteki lub inne pliki wymagań aplikacji, które mogło zostać utworzone przez innego użytkownika. Odwołania do zestawów zawierają odwołania do obiektów zarówno globalnych, jak i prywatnych. Globalne obiekty znajdują się w globalnej pamięci podręcznej zestawów, obszar dostępne dla innych aplikacji. Obiekty prywatne muszą być w katalogu albo poziomu jako lub poniżej katalogu, w którym jest zainstalowana aplikacja.  
+-   *Listę odwołań zestawu*, który znajduje się lista wszystkich zależności zewnętrznych — dll debuggle lub inne pliki do potrzeb aplikacji, które mogą zostać utworzone przez inną osobę. Odwołania do zestawów zawierają odwołania do obiektów globalnych i prywatnych. Obiekty globalne znajdują się w globalnej pamięci podręcznej, obszaru, które są dostępne dla innych aplikacji. Obiekty prywatne musi znajdować się w katalogu na poziomie tym samym poziomie, jak i poniżej katalogu, w którym jest zainstalowana aplikacja.  
   
- Ponieważ zestawy zawierają informacje o zawartości, przechowywanie wersji i zależności, aplikacje utworzone przy użyciu języka C# nie należy polegać na wartości rejestru systemu Windows w celu poprawnego działania. Zestawy zmniejszyć konflikty .dll i upewnić aplikacji, bardziej niezawodne i łatwiejsze do wdrożenia. W wielu przypadkach można zainstalować. Aplikacji opartej na sieci za pomocą kopiowania plików do komputera docelowego.  
+ Ponieważ zestawy zawierają informacje o zawartości, przechowywanie wersji i zależności, aplikacje utworzone przy użyciu języka C# nie należy polegać na wartości rejestru Windows, aby działać prawidłowo. Zestawy zmniejszyć konflikty .dll i dzięki którym Twoje aplikacje bardziej niezawodne i łatwiejsze do wdrożenia. W wielu przypadkach można zainstalować. Aplikacja oparta na sieci poprzez kopiowaniem plików do komputera docelowego.  
   
  Aby uzyskać więcej informacji, zobacz [manifestu zestawu](../../../../../docs/framework/app-domains/assembly-manifest.md).  
   
 ## <a name="adding-a-reference-to-an-assembly"></a>Dodawanie odwołania do zestawu  
- Aby użyć zestawu, należy dodać odwołanie do niej. Następnie użyj [dyrektywa using](../../../../csharp/language-reference/keywords/using-directive.md) wybierz przestrzeń nazw elementów, którego chcesz użyć. Po odwołuje się do zestawu i zaimportowane, wszystkie dostępne klasy, właściwości, metody i inni członkowie ich przestrzenie nazw są dostępne dla aplikacji tak, jakby ich kodem należały pliku źródłowego.  
+ Aby korzystać z zestawu, należy dodać odwołanie do niej. Następnie użyj [użycie dyrektywy](../../../../csharp/language-reference/keywords/using-directive.md) wybrać przestrzeń nazw elementów, w której chcesz użyć. Gdy odwołanie do zestawu i zaimportowaniu wszystkich dostępnych klas, właściwości, metod i inni członkowie jej przestrzenie nazw są dostępne dla aplikacji tak, jakby ich kod były częścią pliku źródłowego.  
   
- W języku C# umożliwia także dwie wersje tego samego zestawu w pojedynczej aplikacji. Aby uzyskać więcej informacji, zobacz [alias zewnętrzny](../../../../csharp/language-reference/keywords/extern-alias.md).  
+ W języku C# umożliwia także dwie wersje tego samego zestawu w jednej aplikacji. Aby uzyskać więcej informacji, zobacz [alias zewnętrzny](../../../../csharp/language-reference/keywords/extern-alias.md).  
   
 ## <a name="creating-an-assembly"></a>Tworzenie zestawu  
- Skompiluj aplikację, klikając **kompilacji** na **kompilacji** menu lub przez skompilowanie go z poziomu wiersza polecenia przy użyciu kompilatora wiersza polecenia. Aby uzyskać więcej informacji o tworzeniu zestawów z wiersza polecenia, zobacz [kompilowania z wiersza polecenia csc.exe](../../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
+ Kompiluj aplikację, klikając **kompilacji** na **kompilacji** menu lub tworząc je z poziomu wiersza polecenia za pomocą kompilatora wiersza polecenia. Aby uzyskać szczegółowe informacje o tworzeniu zestawów z wiersza polecenia, zobacz [wiersza polecenia tworzenia przy użyciu csc.exe](../../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
   
 > [!NOTE]
->  Tworzenie zestawu w programie Visual Studio na **kompilacji** menu wybierz **kompilacji**.  
+>  Tworzenie zestawu w programie Visual Studio na **kompilacji** menu wybierz opcję **kompilacji**.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku C#](../../../../csharp/programming-guide/index.md)  
@@ -56,7 +56,7 @@ Zestawy stanowią podstawową jednostkę wdrożenia, kontroli wersji, ponownemu,
  [Przyjazne zestawy (C#)](friend-assemblies.md)  
  [Porady: dzielenie się zestawem z innymi aplikacjami (C#)](how-to-share-an-assembly-with-other-applications.md)  
  [Porady: ładowanie i zwalnianie zestawów (C#)](how-to-load-and-unload-assemblies.md)  
- [Porady: Określanie, czy plik jest zestawem (C#)](how-to-determine-if-a-file-is-an-assembly.md)  
- [Porady: tworzenie i korzystanie z zestawów przy użyciu wiersza polecenia (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)  
- [Wskazówki: Osadzanie typów z zarządzanych zestawów w programie Visual Studio (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
- [Wskazówki: Osadzanie informacji o typie z zestawów Microsoft Office w Visual Studio (C#)](walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
+ [Porady: Określanie, jeśli plik jest zestawem (C#)](how-to-determine-if-a-file-is-an-assembly.md)  
+ [Porady: tworzenie i używanie zestawów przy użyciu wiersza polecenia (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)  
+ [Przewodnik: Osadzanie typów z zarządzanych zestawów w programie Visual Studio (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
+ [Przewodnik: Osadzanie informacji o typie z zestawów Microsoft Office w programie Visual Studio (C#)](walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)

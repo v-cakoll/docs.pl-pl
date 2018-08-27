@@ -2,47 +2,47 @@
 title: SQL Server i ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
-ms.openlocfilehash: 87e46ad9e83929e40daecc3e3af2eb1281c5ced9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfb24be22ebec9a49c489ddcbff4824c4cd3cf34
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360716"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935087"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server i ADO.NET
-W tej sekcji opisano funkcje i zachowania, które są specyficzne dla dostawcy danych programu .NET Framework dla programu SQL Server (<xref:System.Data.SqlClient>).  
+W tej sekcji opisano funkcji i zachowań, które są specyficzne dla dostawcy danych programu .NET Framework dla programu SQL Server (<xref:System.Data.SqlClient>).  
   
- <xref:System.Data.SqlClient> zapewnia dostęp do wersji programu SQL Server, który hermetyzuje protokołów specyficzny dla bazy danych. Funkcje dostawcy danych zaprojektowano w sposób podobny do dostawcy danych .NET Framework dla OLE DB i ODBC, Oracle. <xref:System.Data.SqlClient> zawiera dane tabelaryczne analizator strumienia (TDS) do bezpośredniego komunikowania się z serwerem SQL.  
+ <xref:System.Data.SqlClient> zapewnia dostęp do wersji programu SQL Server, który hermetyzuje protokołów określonej bazy danych. Funkcje dostawcy danych programu zaprojektowano w sposób podobny do tego dostawcy danych .NET Framework dla OLE DB i ODBC, Oracle. <xref:System.Data.SqlClient> zawiera dane tabelaryczne analizator stream (TDS) do komunikowania się bezpośrednio z programu SQL Server.  
   
 > [!NOTE]
->  Aby użyć dostawcy danych programu .NET Framework dla programu SQL Server, musi odwoływać się aplikacji <xref:System.Data.SqlClient> przestrzeni nazw.  
+>  Aby użyć .NET Framework Data Provider for SQL Server, aplikacja musi odwoływać <xref:System.Data.SqlClient> przestrzeni nazw.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Zabezpieczenia serwera SQL](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- Zawiera omówienie funkcji zabezpieczeń programu SQL Server i scenariusze aplikacji do tworzenia bezpiecznego aplikacji ADO.NET obiektu docelowego programu SQL Server.  
+ Omówienie funkcji zabezpieczeń programu SQL Server i scenariuszy aplikacji do tworzenia bezpiecznych aplikacji ADO.NET, których platformą docelową programu SQL Server.  
   
  [Typy danych programu SQL Server i ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- Opisuje sposób pracy z typami danych programu SQL Server oraz sposób ich interakcji z typami danych .NET Framework.  
+ W tym artykule opisano sposób pracy z typami danych programu SQL Server i sposobów interakcji z typów danych programu .NET Framework.  
   
  [Dane binarne i dużej wartości w programie SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- Opisuje sposób pracy z danymi duża wartość w programie SQL Server.  
+ W tym artykule opisano sposób pracy z danymi o dużej wartości w programie SQL Server.  
   
  [Operacje danych serwera SQL w ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
- Opisuje sposób pracy z danymi w programie SQL Server. Zawiera sekcje dotyczące operacje kopiowania masowego, MARS operacji asynchronicznych i parametry przechowywanymi w tabeli.  
+ W tym artykule opisano sposób pracy z danymi w programie SQL Server. Zawiera sekcje dotyczące operacje kopiowania masowego, MARS, asynchroniczne operacje i parametry z wartościami przechowywanymi w tabeli.  
   
  [Funkcje Serwera SQL i ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
- Zawiera opis funkcji programu SQL Server, które są przydatne dla deweloperów aplikacji ADO.NET.  
+ W tym artykule opisano funkcje programu SQL Server, które są przydatne dla deweloperów aplikacji ADO.NET.  
   
  [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
- Opisuje podstawowe bloki konstrukcyjne, procesów i technik wymagane do utworzenia LINQ do SQL aplikacji.  
+ W tym artykule opisano podstawowe bloki konstrukcyjne, procesów i technik wymagane do utworzenia LINQ do SQL aplikacji.  
   
- Pełną dokumentację aparatu bazy danych programu SQL Server dla programu SQL Server — książki Online dla używanej wersji programu SQL Server są używane.  
+ Aby uzyskać pełną dokumentację aparatu bazy danych programu SQL Server zobacz programu SQL Server — książki Online dla wersji programu SQL Server, którego używasz.  
   
- [SQL Server — książki Online](http://msdn.microsoft.com/library/ms130214.aspx)  
+ [SQL Server — książki Online](/sql/sql-server/sql-server-technical-documentation)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [Mapowanie typu danych w ADO.NET](../../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
  [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [Pobieranie i modyfikowanie danych ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](http://go.microsoft.com/fwlink/?LinkId=217917)

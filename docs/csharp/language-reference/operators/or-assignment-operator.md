@@ -7,37 +7,38 @@ helpviewer_keywords:
 - OR assignment operator (|=) [C#]
 - '|= operator (OR assignment) [C#]'
 ms.assetid: 8315b8cf-dd15-402f-92f0-c7db931696ca
-ms.openlocfilehash: 18246d013275c8d6c8ad7e05409387457afc3442
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: fe56005ce94656b5e8a075cddfb91dc0da096cf7
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34171520"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929917"
 ---
 # <a name="-operator-c-reference"></a>|= — Operator (odwołanie w C#)
 Operator przypisania OR.  
   
 ## <a name="remarks"></a>Uwagi  
- Za pomocą wyrażenia `|=` operator przypisania, takich jak  
+ Wyrażenie używające operatora przypisania `|=`, takie jak  
   
 ```csharp  
 x |= y  
 ```  
   
- jest równoważny  
+ odpowiada wyrażeniu  
   
 ```csharp  
 x = x | y  
 ```  
   
- z tą różnicą, że `x` jest tylko jeden raz obliczone. [ &#124; Operator](../../../csharp/language-reference/operators/or-operator.md) dokonuje logicznego OR operacji na całkowite operandy i logiczne lub argumentów bool.  
+ z tą różnicą, że `x` jest obliczany tylko raz. [ &#124; Operator](../../../csharp/language-reference/operators/or-operator.md) wykonuje bitowe logicznej operacji lub w przypadku argumentów operacji typu całkowitego i operator logiczny lub w przypadku argumentów bool operacji.  
   
- `|=` Operator nie może zostać przeciążony bezpośrednio, ale typy danych zdefiniowane przez użytkownika można przeciążać [ &#124; operator](../../../csharp/language-reference/operators/or-operator.md) (zobacz [operator](../../../csharp/language-reference/keywords/operator.md)).  
+ `|=` Operator nie może zostać przeciążony bezpośrednio, ale typy zdefiniowane przez użytkownika może doprowadzić do przeciążenia [ &#124; operator](../../../csharp/language-reference/operators/or-operator.md) (zobacz [operator](../../../csharp/language-reference/keywords/operator.md)).  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csRefOperators#10](../../../csharp/language-reference/operators/codesnippet/CSharp/or-assignment-operator_1.cs)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Operatory języka C#](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Operatory języka C#](../../../csharp/language-reference/operators/index.md)

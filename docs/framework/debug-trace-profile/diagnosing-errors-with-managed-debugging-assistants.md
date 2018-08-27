@@ -1,6 +1,6 @@
 ---
 title: Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania
-ms.date: 03/30/2017
+ms.date: 08/14/2018
 f1_keywords:
 - EHMDA
 helpviewer_keywords:
@@ -31,155 +31,153 @@ helpviewer_keywords:
 ms.assetid: 76994ee6-9fa9-4059-b813-26578d24427c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16a039a5edb0e1023551f97deefbf7874a19638b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b745fa6a78ab2a7ab0b3a94c9921883d3c56c1b7
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392323"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935747"
 ---
-# <a name="diagnosing-errors-with-managed-debugging-assistants"></a>Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania
-Asystenci debugowania zarządzanego (mda) debugowania pomocy, które działają w połączeniu z środowisko uruchomieniowe języka wspólnego (CLR), aby podać informacje dotyczące stanu czasu wykonywania. Asystenci Generowanie komunikaty o zdarzeniach środowiska uruchomieniowego, które w przeciwnym razie nie komunikat pułapki. Mda można użyć do izolowania usterki twarde do znalezienia aplikacji, występujących podczas przejścia między zarządzanymi i niezarządzanymi kodu. Można włączyć lub wyłączyć wszystkie mda przez dodanie klucza do rejestru systemu Windows lub przez ustawienie zmiennej środowiskowej. Można włączyć mda określone przy użyciu ustawienia konfiguracji aplikacji. Dodatkowe ustawienia konfiguracji dla niektórych poszczególnych mda można ustawić w pliku konfiguracji aplikacji. Ponieważ te pliki konfiguracji są w sytuacji, gdy załadowano środowiska uruchomieniowego, należy włączyć MDA przed uruchomieniem aplikacji zarządzanej. Nie można go włączyć dla aplikacji, które zostało już rozpoczęte.  
-  
-> [!NOTE]
->  Po włączeniu MDA jest aktywna nawet gdy kodu nie jest wykonywana w debugerze. Jeśli zdarzenie MDA jest wywoływane, gdy nie jest obecny debuger, komunikaty o zdarzeniach są prezentowane w nieobsługiwanych wyjątków — okno dialogowe, chociaż nie jest nieobsługiwany wyjątek. Aby uniknąć okno dialogowe, należy usunąć ustawienia umożliwiające MDA, gdy kodu nie jest wykonywana w środowisku debugowania.  
-  
-> [!NOTE]
->  Gdy kod jest wykonywany w Visual Studio zintegrowane środowisko programistyczne (IDE), można uniknąć, okno dialogowe wyjątek pojawiający się określonych zdarzeń MDA. Aby to zrobić, na **debugowania** menu, kliknij przycisk **wyjątki**. (Jeśli **debugowania** nie zawiera menu **wyjątki** polecenia, kliknij przycisk **Dostosuj** na **narzędzia** menu, aby dodać go.) W **wyjątki** okna dialogowego rozwiń **Asystenci zarządzanego debugowania** listy, a następnie wyczyść **wyrzuconych** pole wyboru dla poszczególnych MDA. Na przykład, aby uniknąć okno dialogowe wyjątek [contextSwitchDeadlock](../../../docs/framework/debug-trace-profile/contextswitchdeadlock-mda.md) wyczyść **wyrzuconych** pole wyboru znajdujące się obok jego nazwy w **Asystenci zarządzanego debugowania** listy. Aby włączyć wyświetlanie okien dialogowych wyjątek MDA umożliwia także tego okna dialogowego.  
-  
- W poniższej tabeli wymieniono mda, które są dostarczane z programu .NET Framework.  
-  
-|||  
-|-|-|  
-|[asynchronousThreadAbort](../../../docs/framework/debug-trace-profile/asynchronousthreadabort-mda.md)|[bindingFailure](../../../docs/framework/debug-trace-profile/bindingfailure-mda.md)|  
-|[callbackOnCollectedDelegate](../../../docs/framework/debug-trace-profile/callbackoncollecteddelegate-mda.md)|[contextSwitchDeadlock](../../../docs/framework/debug-trace-profile/contextswitchdeadlock-mda.md)|  
-|[dangerousThreadingAPI](../../../docs/framework/debug-trace-profile/dangerousthreadingapi-mda.md)|[dateTimeInvalidLocalFormat](../../../docs/framework/debug-trace-profile/datetimeinvalidlocalformat-mda.md)|  
-|[dirtyCastAndCallOnInterface](../../../docs/framework/debug-trace-profile/dirtycastandcalloninterface-mda.md)|[disconnectedContext](../../../docs/framework/debug-trace-profile/disconnectedcontext-mda.md)|  
-|[dllMainReturnsFalse](../../../docs/framework/debug-trace-profile/dllmainreturnsfalse-mda.md)|[exceptionSwallowedOnCallFromCom](../../../docs/framework/debug-trace-profile/exceptionswallowedoncallfromcom-mda.md)|  
-|[failedQI](../../../docs/framework/debug-trace-profile/failedqi-mda.md)|[fatalExecutionEngineError](../../../docs/framework/debug-trace-profile/fatalexecutionengineerror-mda.md)|  
-|[gcManagedToUnmanaged](../../../docs/framework/debug-trace-profile/gcmanagedtounmanaged-mda.md)|[gcUnmanagedToManaged](../../../docs/framework/debug-trace-profile/gcunmanagedtomanaged-mda.md)|  
-|[illegalPrepareConstrainedRegion](../../../docs/framework/debug-trace-profile/illegalprepareconstrainedregion-mda.md)|[invalidApartmentStateChange](../../../docs/framework/debug-trace-profile/invalidapartmentstatechange-mda.md)|  
-|[invalidCERCall](../../../docs/framework/debug-trace-profile/invalidcercall-mda.md)|[invalidFunctionPointerInDelegate](../../../docs/framework/debug-trace-profile/invalidfunctionpointerindelegate-mda.md)|  
-|[invalidGCHandleCookie](../../../docs/framework/debug-trace-profile/invalidgchandlecookie-mda.md)|[invalidIUnknown](../../../docs/framework/debug-trace-profile/invalidiunknown-mda.md)|  
-|[invalidMemberDeclaration](../../../docs/framework/debug-trace-profile/invalidmemberdeclaration-mda.md)|[invalidOverlappedToPinvoke](../../../docs/framework/debug-trace-profile/invalidoverlappedtopinvoke-mda.md)|  
-|[invalidVariant](../../../docs/framework/debug-trace-profile/invalidvariant-mda.md)|[jitCompilationStart](../../../docs/framework/debug-trace-profile/jitcompilationstart-mda.md)|  
-|[loaderLock](../../../docs/framework/debug-trace-profile/loaderlock-mda.md)|[loadFromContext](../../../docs/framework/debug-trace-profile/loadfromcontext-mda.md)|  
-|[marshalCleanupError](../../../docs/framework/debug-trace-profile/marshalcleanuperror-mda.md)|[marshaling](../../../docs/framework/debug-trace-profile/marshaling-mda.md)|  
-|[memberInfoCacheCreation](../../../docs/framework/debug-trace-profile/memberinfocachecreation-mda.md)|[moduloObjectHashcode](../../../docs/framework/debug-trace-profile/moduloobjecthashcode-mda.md)|  
-|[nonComVisibleBaseClass](../../../docs/framework/debug-trace-profile/noncomvisiblebaseclass-mda.md)|[notMarshalable](../../../docs/framework/debug-trace-profile/notmarshalable-mda.md)|  
-|[openGenericCERCall](../../../docs/framework/debug-trace-profile/opengenericcercall-mda.md)|[overlappedFreeError](../../../docs/framework/debug-trace-profile/overlappedfreeerror-mda.md)|  
-|[pInvokeLog](../../../docs/framework/debug-trace-profile/pinvokelog-mda.md)|[pInvokeStackImbalance](../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)|  
-|[raceOnRCWCleanup](../../../docs/framework/debug-trace-profile/raceonrcwcleanup-mda.md)|[reentrancy](../../../docs/framework/debug-trace-profile/reentrancy-mda.md)|  
-|[releaseHandleFailed](../../../docs/framework/debug-trace-profile/releasehandlefailed-mda.md)|[reportAvOnComRelease](../../../docs/framework/debug-trace-profile/reportavoncomrelease-mda.md)|  
-|[streamWriterBufferedDataLost](../../../docs/framework/debug-trace-profile/streamwriterbuffereddatalost-mda.md)|[virtualCERCall](../../../docs/framework/debug-trace-profile/virtualcercall-mda.md)|  
-  
- Domyślnie program .NET Framework aktywuje podzbiór mda dla wszystkich zarządzanych debugery. Możesz wyświetlić domyślnie w programie Visual Studio, klikając **wyjątki** na **debugowania** menu i rozszerzanie **Asystenci zarządzanego debugowania** listy.  
-  
-## <a name="enabling-and-disabling-mdas"></a>Włączanie i wyłączanie mda  
- Można włączyć lub wyłączyć mda przy użyciu klucza rejestru, wartość zmiennej środowiskowej i ustawienia konfiguracji aplikacji. Należy włączyć klucz rejestru lub zmiennej środowiskowej, aby użyć ustawienia konfiguracji aplikacji.  
-  
- W programie Visual Studio 2005 i nowszych wersjach podczas procesu hostingu jest włączone, nie można wyłączyć mda, które znajdują się w domyślnym zestawem lub Włącz mda ustawionych nie w domyślnym. Proces hostingu jest włączona domyślnie, więc musi być jawnie wyłączone.  
-  
- Aby wyłączyć procesu hostingu w programie Visual Studio, wykonaj następujące czynności:  
-  
-1.  W **Eksploratora rozwiązań**, wybierz projekt.  
-  
-2.  Na **projektu** menu, kliknij przycisk **właściwości**.  
-  
-     **Projektanta projektu** zostanie wyświetlone okno.  
-  
-3.  Kliknij przycisk **debugowania** kartę.  
-  
-4.  W **włączyć debugery** sekcji, wyczyść **włączyć procesu hostingu Visual Studio** pole wyboru.  
-  
- Jednak wyłączanie procesu hostingu może wpłynąć na wydajność. Aby uniknąć konieczności wyłączanie mda przy uniemożliwia wyświetlanie okna dialogowego MDA zawsze, gdy otrzyma powiadomienie o MDA programu Visual Studio. Aby to zrobić, kliknij przycisk **wyjątki** na **debugowania** menu, rozwiń węzeł **Asystenci zarządzanego debugowania** listy, a następnie zaznacz lub wyczyść **wyrzuconych**pole wyboru dla poszczególnych MDA.  
-  
-### <a name="enabling-and-disabling-mdas-by-using-a-registry-key"></a>Włączanie i wyłączanie mda przy użyciu klucza rejestru  
- Można włączyć mda, dodając HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. Podklucz NETFramework\MDA (typ: REG_SZ, wartość 1) w rejestrze systemu Windows. Skopiuj poniższy przykład do pliku tekstowego o nazwie MDAEnable.reg. Otwórz Edytor rejestru (RegEdit.exe) systemu Windows i z **pliku** menu wybierz **importu**. Wybierz plik MDAEnable.reg, aby umożliwić mda na tym komputerze. Ustawienie podklucz ciąg wartość 1 (nie wartość DWORD 1) umożliwia odczytywanie ustawień MDA *ApplicationName.suffix*. mda.config pliku. (Na przykład Notatnik pliku konfiguracyjnego MDA będą miały postać notepad.exe.mda.config)  
-  
-```  
-Windows Registry Editor Version 5.00  
-  
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework]  
-"MDA"="1"  
-```  
-  
- Jeśli komputer działa w 32-bitowej aplikacji na 64-bitowym systemie operacyjnym, klucz MDA powinna być ustawiona podobne do poniższych:  
-  
-```  
-      Windows Registry Editor Version 5.00   
-  
-[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework]  
-"MDA"="1"  
-```  
-  
- Zobacz [Włączanie i wyłączanie mda przez za pomocą ustawień konfiguracji specyficznych dla aplikacji](#appConfig) Aby uzyskać więcej informacji. Ustawienia rejestru mogą zostać zastąpione przez zmienną środowiskową COMPLUS_MDA. Zobacz [Włączanie i wyłączanie mda za pomocą zmiennej środowiskowej](#envVariable) Aby uzyskać więcej informacji.  
-  
- Aby wyłączyć mda, ustaw podklucz MDA 0 (zero), za pomocą Edytora rejestru systemu Windows.  
-  
- Domyślnie niektóre mda są włączone po uruchomieniu aplikacji, która jest dołączona do debugera, nawet jeśli nie Dodawanie klucza rejestru. Przykłady takich Asystenci [pInvokeStackImbalance](../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md) i [invalidApartmentStateChange](../../../docs/framework/debug-trace-profile/invalidapartmentstatechange-mda.md). Asystenci te można wyłączyć, uruchamiając plik MDADisable.reg, jak opisano wcześniej w tej sekcji.  
-  
-<a name="envVariable"></a>   
-### <a name="enabling-and-disabling-mdas-by-using-an-environment-variable"></a>Włączanie i wyłączanie mda za pomocą zmiennej środowiskowej  
- MDA aktywacji można również kontrolowane przez zmienną środowiskową COMPLUS_MDA, zastępująca klucza rejestru. Ciąg COMPLUS_MDA jest bez uwzględniania wielkości liter, Rozdzielana średnikami lista nazw MDA lub inne ciągi kontroli. Uruchamianie w debugerze zarządzane lub niezarządzane udostępnia zestaw mda domyślnie. Jest to realizowane dołączając niejawnie Rozdzielana średnikami lista mda domyślnie włączone w obszarze debugery do wartości środowiskowej zmiennej lub klucza rejestru. Ciągi kontroli specjalne są następujące:  
-  
--   `0` -Dezaktywuje mda wszystkie.  
-  
--   `1` -Odczytuje ustawienia MDA z *ApplicationName*. mda.config.  
-  
--   `managedDebugger` -Jawnie aktywuje wszystkie mda, niejawnie aktywowanych przy uruchamianiu zarządzanego pliku wykonywalnego w debugerze.  
-  
--   `unmanagedDebugger` -Jawnie aktywuje wszystkie mda, niejawnie aktywowanych przy uruchamianiu niezarządzany plik wykonywalny w debugerze.  
-  
- W przypadku wystąpienia konfliktu ustawień ostatnio używanych ustawień zastąpić poprzednie ustawienia:  
-  
--   `COMPLUS_MDA=0` Wyłącza wszystkie mda, w tym niejawnie włączone w debugerze.  
-  
--   `COMPLUS_MDA=gcUnmanagedToManaged` Włącza `gcUnmanagedToManaged` oprócz żadnych mda, które są domyślnie włączone w debugerze.  
-  
--   `COMPLUS_MDA=0;gcUnmanagedToManaged` Włącza `gcUnmanagedToManaged` , ale wyłącza mda, które w przeciwnym razie mogłyby być niejawnie włączone w debugerze.  
-  
-<a name="appConfig"></a>   
-### <a name="enabling-and-disabling-mdas-by-using-application-specific-configuration-settings"></a>Włączanie i wyłączanie mda przy użyciu ustawień konfiguracji specyficznych dla aplikacji  
- Można włączyć, wyłączyć i indywidualnie skonfigurować niektóre Asystenci w pliku konfiguracyjnym MDA dla aplikacji. Aby włączyć korzystanie z pliku konfiguracji aplikacji do konfigurowania mda, można ustawić klucz rejestru MDA lub zmiennej środowiskowej COMPLUS_MDA. Plik konfiguracji aplikacji jest zazwyczaj znajduje się w tym samym katalogu co plik wykonywalny (.exe) aplikacji. Nazwa pliku ma postać *ApplicationName*. mda.config, na przykład notepad.exe.mda.config. Asystenci, które są włączone w pliku konfiguracji aplikacji może mieć atrybutów ani elementów specjalnie zaprojektowane do kontrolowania zachowania tego pomocnika. Poniższy przykład przedstawia sposób włączania i konfigurowania [marshaling](../../../docs/framework/debug-trace-profile/marshaling-mda.md).  
-  
-```xml  
-<mdaConfig>  
-  <assistants>  
-    <marshaling>  
-      <methodFilter>  
-        <match name="*"/>  
-      </methodFilter>  
-      <fieldFilter>  
-        <match name="*"/>  
-      </fieldFilter>  
-    </marshaling>  
-  </assistants>  
-</mdaConfig>  
-```  
-  
- `Marshaling` MDA emituje informacje o typ zarządzany, który jest są przekazywane do niezarządzanego typu dla każdego przejścia niezarządzany zarządzany w aplikacji. `Marshaling` MDA można również filtrować nazwy metody i pola struktury dostarczane w `<methodFilter>` i `<fieldFilter>` elementy podrzędne, odpowiednio.  
-  
- Poniższy przykład przedstawia sposób włączania wielu mda przy użyciu ustawień domyślnych.  
-  
-```xml  
-<mdaConfig>  
-  <assistants>  
-    <illegalPrepareConstrainedRegion />  
-    <invalidCERCall />  
-    <openGenericCERCall />  
-    <virtualCERCall />  
-  </assistants>  
-</mdaConfig>  
-```  
-  
+# <a name="diagnose-errors-with-managed-debugging-assistants"></a>Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania
+
+Zarządzanie debugowaniem asystentów (mda) jest debugowany pomocy, które działają w połączeniu z środowisko uruchomieniowe języka wspólnego (CLR) zawiera informacje na temat stanu środowiska uruchomieniowego. Asystenci Generowanie komunikaty o zdarzeniach środowiska uruchomieniowego, które w przeciwnym razie nie komunikat pułapki. Mda umożliwia oddzieleniu błędów twardych znajdowanie aplikacji, które występują podczas przenoszenia między kodem zarządzanym i niezarządzanym.
+
+Możesz [włączać lub wyłączać](#enable-and-disable-mdas) wszystkich mda przez dodanie klucza w rejestrze Windows lub przez ustawienie zmiennej środowiskowej. Można włączyć określonego mda przy użyciu ustawień konfiguracji aplikacji. Dodatkowe ustawienia konfiguracji dla niektórych poszczególnych mda można ustawić w pliku konfiguracji aplikacji. Ponieważ te pliki konfiguracyjne są w sytuacji, gdy jest ładowany przez środowisko uruchomieniowe, należy włączyć MDA przed uruchomieniem aplikacji zarządzanej. Nie możesz włączyć dla aplikacji, które zostały już uruchomione.
+
+W poniższej tabeli wymieniono mda, które są dostarczane za pomocą programu .NET Framework:
+
+|||
+|-|-|
+|[asynchronousThreadAbort](../../../docs/framework/debug-trace-profile/asynchronousthreadabort-mda.md)|[bindingFailure](../../../docs/framework/debug-trace-profile/bindingfailure-mda.md)|
+|[callbackOnCollectedDelegate](../../../docs/framework/debug-trace-profile/callbackoncollecteddelegate-mda.md)|[contextSwitchDeadlock](../../../docs/framework/debug-trace-profile/contextswitchdeadlock-mda.md)|
+|[dangerousThreadingAPI](../../../docs/framework/debug-trace-profile/dangerousthreadingapi-mda.md)|[dateTimeInvalidLocalFormat](../../../docs/framework/debug-trace-profile/datetimeinvalidlocalformat-mda.md)|
+|[dirtyCastAndCallOnInterface](../../../docs/framework/debug-trace-profile/dirtycastandcalloninterface-mda.md)|[disconnectedContext](../../../docs/framework/debug-trace-profile/disconnectedcontext-mda.md)|
+|[dllMainReturnsFalse](../../../docs/framework/debug-trace-profile/dllmainreturnsfalse-mda.md)|[exceptionSwallowedOnCallFromCom](../../../docs/framework/debug-trace-profile/exceptionswallowedoncallfromcom-mda.md)|
+|[failedQI](../../../docs/framework/debug-trace-profile/failedqi-mda.md)|[fatalExecutionEngineError](../../../docs/framework/debug-trace-profile/fatalexecutionengineerror-mda.md)|
+|[gcManagedToUnmanaged](../../../docs/framework/debug-trace-profile/gcmanagedtounmanaged-mda.md)|[gcUnmanagedToManaged](../../../docs/framework/debug-trace-profile/gcunmanagedtomanaged-mda.md)|
+|[illegalPrepareConstrainedRegion](../../../docs/framework/debug-trace-profile/illegalprepareconstrainedregion-mda.md)|[invalidApartmentStateChange](../../../docs/framework/debug-trace-profile/invalidapartmentstatechange-mda.md)|
+|[invalidCERCall](../../../docs/framework/debug-trace-profile/invalidcercall-mda.md)|[invalidFunctionPointerInDelegate](../../../docs/framework/debug-trace-profile/invalidfunctionpointerindelegate-mda.md)|
+|[invalidGCHandleCookie](../../../docs/framework/debug-trace-profile/invalidgchandlecookie-mda.md)|[invalidIUnknown](../../../docs/framework/debug-trace-profile/invalidiunknown-mda.md)|
+|[invalidMemberDeclaration](../../../docs/framework/debug-trace-profile/invalidmemberdeclaration-mda.md)|[invalidOverlappedToPinvoke](../../../docs/framework/debug-trace-profile/invalidoverlappedtopinvoke-mda.md)|
+|[invalidVariant](../../../docs/framework/debug-trace-profile/invalidvariant-mda.md)|[jitCompilationStart](../../../docs/framework/debug-trace-profile/jitcompilationstart-mda.md)|
+|[loaderLock](../../../docs/framework/debug-trace-profile/loaderlock-mda.md)|[loadFromContext](../../../docs/framework/debug-trace-profile/loadfromcontext-mda.md)|
+|[marshalCleanupError](../../../docs/framework/debug-trace-profile/marshalcleanuperror-mda.md)|[marshaling](../../../docs/framework/debug-trace-profile/marshaling-mda.md)|
+|[memberInfoCacheCreation](../../../docs/framework/debug-trace-profile/memberinfocachecreation-mda.md)|[moduloObjectHashcode](../../../docs/framework/debug-trace-profile/moduloobjecthashcode-mda.md)|
+|[nonComVisibleBaseClass](../../../docs/framework/debug-trace-profile/noncomvisiblebaseclass-mda.md)|[notMarshalable](../../../docs/framework/debug-trace-profile/notmarshalable-mda.md)|
+|[openGenericCERCall](../../../docs/framework/debug-trace-profile/opengenericcercall-mda.md)|[overlappedFreeError](../../../docs/framework/debug-trace-profile/overlappedfreeerror-mda.md)|
+|[pInvokeLog](../../../docs/framework/debug-trace-profile/pinvokelog-mda.md)|[pInvokeStackImbalance](../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)|
+|[raceOnRCWCleanup](../../../docs/framework/debug-trace-profile/raceonrcwcleanup-mda.md)|[reentrancy](../../../docs/framework/debug-trace-profile/reentrancy-mda.md)|
+|[releaseHandleFailed](../../../docs/framework/debug-trace-profile/releasehandlefailed-mda.md)|[reportAvOnComRelease](../../../docs/framework/debug-trace-profile/reportavoncomrelease-mda.md)|
+|[streamWriterBufferedDataLost](../../../docs/framework/debug-trace-profile/streamwriterbuffereddatalost-mda.md)|[virtualCERCall](../../../docs/framework/debug-trace-profile/virtualcercall-mda.md)|
+
+Domyślnie program .NET Framework aktywuje podzbiór mda dla wszystkich zarządzanych debugerów. Możesz wyświetlić domyślnie w programie Visual Studio, wybierając **Windows** > **ustawienia wyjątków** na **debugowania** menu, a następnie rozwijając **Asystentów zarządzanego debugowania** listy.
+
+![Okno ustawień wyjątków w programie Visual Studio](media/diagnosing-errors-with-managed-debugging-assistants/exception-settings-mdas.png)
+
+## <a name="enable-and-disable-mdas"></a>Włączanie i wyłączanie mda
+
+Można włączyć i wyłączyć mda przy użyciu klucza rejestru, zmienna środowiskowa i ustawienia konfiguracji aplikacji. Należy włączyć klucz rejestru lub zmienną środowiskową Aby użyć ustawienia konfiguracji aplikacji.
+
+> [!TIP]
+> Zamiast wyłączanie mda, można zapobiec programu Visual Studio wyświetlanie okna dialogowego MDA zawsze wtedy, gdy zostanie odebrana wiadomość z powiadomieniem MDA. Aby to zrobić, wybierz **Windows** > **ustawienia wyjątków** na **debugowania** menu, rozwiń węzeł **zarządzane debugowanie asystentów**listy, a następnie zaznacz lub wyczyść **Przerwij gdy zgłoszony** pole wyboru dla poszczególnych MDA.
+
+### <a name="registry-key"></a>Klucz rejestru
+
+Aby włączyć mda, Dodaj **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework\MDA** podklucz (typu REG_SZ, wartość 1) w rejestrze systemu Windows. Skopiuj poniższy przykład do pliku tekstowego o nazwie *MDAEnable.reg*. Otwórz Edytor rejestru (RegEdit.exe), Windows i z **pliku** menu wybierz opcję **importu**. Wybierz *MDAEnable.reg* plik, aby umożliwić mda na tym komputerze. Ustawienie go na wartość ciągu **1** (nie wartość DWORD **1**) umożliwia odczyt ustawień MDA *ApplicationName.suffix*. plik mda.config. Na przykład plik konfiguracji MDA Notatnik będzie nosić notepad.exe.mda.config.
+
+```text
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework]
+"MDA"="1"
+```
+
+Jeśli komputer działa aplikacja 32-bitowa w 64-bitowym systemie operacyjnym, klucz MDA powinna być ustawiona podobnie do poniższych:
+
+```text
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework]
+"MDA"="1"
+```
+
+Zobacz [ustawień konfiguracji specyficznych dla aplikacji](#application-specific-configuration-settings) Aby uzyskać więcej informacji. Ustawienie rejestru może być zastąpiona przez zmienną środowiskową COMPLUS_MDA. Zobacz [zmienna środowiskowa](#environment-variable) Aby uzyskać więcej informacji.
+
+Aby wyłączyć mda, równa podklucz MDA **0** (zero) za pomocą Edytora rejestru Windows.
+
+Domyślnie niektóre mda są włączone podczas uruchamiania aplikacji, która jest dołączona do debugera, nawet bez dodanie klucza rejestru. Można wyłączyć tych osób, uruchamiając *MDADisable.reg* plików zgodnie z wcześniejszym opisem w tej sekcji.
+
+### <a name="environment-variable"></a>Zmienna środowiskowa
+
+MDA aktywacji może także kontrolowane przez zmienną środowiskową COMPLUS_MDA, która zastępuje klucz rejestru. Ciąg COMPLUS_MDA jest bez uwzględniania wielkości liter, rozdzielaną średnikami listę nazw MDA lub inne ciągi kontroli. Uruchamianie w debugerze zarządzanych lub niezarządzanych zapewnia zestaw mda domyślnie. Odbywa się przez niejawnie poprzedzenie jej rozdzieloną średnikami listę mda włączona domyślnie w ramach debugery wartość środowiska zmiennej lub klucza rejestru. Ciągi kontroli specjalne są następujące:
+
+- `0` -Dezaktywuje wszystkich mda.
+
+- `1` -Odczytuje ustawienia MDA z *ApplicationName*. mda.config.
+
+- `managedDebugger` -Jawnie aktywuje wszystkich mda, niejawnie są aktywowane podczas uruchamiania zarządzanego pliku wykonywalnego w debugerze.
+
+- `unmanagedDebugger` -Jawnie aktywuje wszystkich mda, niejawnie są aktywowane podczas uruchamiania pliku wykonywalnego niezarządzanych w debugerze.
+
+W przypadku ustawienia powodujące konflikt ostatnio używanych ustawień Zastąp poprzednie ustawienia:
+
+- `COMPLUS_MDA=0` Wyłącza wszystkie mda, łącznie z tymi włączana domyślnie w debugerze.
+
+- `COMPLUS_MDA=gcUnmanagedToManaged` Włącza `gcUnmanagedToManaged` oprócz wszelkich mda, które są domyślnie włączone w debugerze.
+
+- `COMPLUS_MDA=0;gcUnmanagedToManaged` Włącza `gcUnmanagedToManaged` , ale wyłącza mda, które w przeciwnym razie można włączyć niejawnie w debugerze.
+
+### <a name="application-specific-configuration-settings"></a>Ustawienia konfiguracji specyficzne dla aplikacji
+
+Można włączyć, wyłączyć i skonfigurować niektóre asystentów osobno w pliku konfiguracyjnym MDA dla aplikacji. Aby włączyć korzystanie z pliku konfiguracji aplikacji do konfigurowania mda, można ustawić klucz rejestru MDA lub zmiennej środowiskowej COMPLUS_MDA. Plik konfiguracyjny aplikacji zwykle znajduje się w tym samym katalogu co plik wykonywalny (.exe) aplikacji. Nazwa pliku ma postać *ApplicationName*. mda.config, na przykład notepad.exe.mda.config. Asystenci, które są włączone w pliku konfiguracji aplikacji mogą mieć atrybutów lub elementów zaprojektowane specjalnie w celu sterowania zachowaniem tej Asystenta ustawień.
+
+Poniższy przykład pokazuje, jak włączyć i skonfigurować [marshaling](../../../docs/framework/debug-trace-profile/marshaling-mda.md):
+
+```xml
+<mdaConfig>
+  <assistants>
+    <marshaling>
+      <methodFilter>
+        <match name="*"/>
+      </methodFilter>
+      <fieldFilter>
+        <match name="*"/>
+      </fieldFilter>
+    </marshaling>
+  </assistants>
+</mdaConfig>
+```
+
+`Marshaling` MDA emituje informacje o typ zarządzany, który jest są przekazywane do typu niezarządzanego, dla każdego przejścia zarządzane do niezarządzanego w aplikacji. `Marshaling` MDA można również filtrować nazwy metod i pól struktury dostarczane w **methodFilter** i **fieldFilter** elementy podrzędne, odpowiednio.
+
+Poniższy przykład pokazuje, jak włączyć wielu mda przy użyciu ustawień domyślnych:
+
+```xml
+<mdaConfig>
+  <assistants>
+    <illegalPrepareConstrainedRegion />
+    <invalidCERCall />
+    <openGenericCERCall />
+    <virtualCERCall />
+  </assistants>
+</mdaConfig>
+```
+
 > [!IMPORTANT]
->  Po określeniu więcej niż jeden Asystenta w pliku konfiguracji musi zawierać je w kolejności alfabetycznej. Na przykład, jeśli chcesz włączyć zarówno `virtualCERCall` i `invalidCERCall` mda, należy dodać `<invalidCERCall />` wpis przed `<virtualCERCall />` wpisu. Jeśli dane nie są w porządku alfabetycznym, zostanie wyświetlony komunikat wyjątku pliku nieobsługiwany nieprawidłową konfigurację.  
-  
-### <a name="mda-output"></a>Dane wyjściowe MDA  
- MDA wynik jest podobny do poniższego przykładu, które zawierają dane wyjściowe z `pInvokeStackImbalance` MDA.  
-  
- `A call to PInvoke function 'MDATest!MDATest.Program::StdCall' has unbalanced the stack. This is likely because the managed PInvoke signature does not match the unmanaged target signature. Check that the calling convention and parameters of the PInvoke signature match the target unmanaged signature.`  
-  
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie, śledzenie i profilowanie](../../../docs/framework/debug-trace-profile/index.md)
+> Po określeniu więcej niż jeden Asystenta ustawień w pliku konfiguracji należy wyświetlić je w kolejności alfabetycznej. Na przykład, jeśli chcesz włączyć obie opcje `virtualCERCall` i `invalidCERCall` mda, należy dodać `<invalidCERCall />` wpis przed `<virtualCERCall />` wpisu. Jeśli wpisy nie są w kolejności alfabetycznej, zostanie wyświetlony komunikat wyjątku pliku nieobsługiwany nieprawidłowej konfiguracji.
+
+## <a name="mda-exceptions"></a>Wyjątki MDA
+
+Po włączeniu MDA jest aktywna nawet po kodzie nie może być wykonane w debugerze. Jeśli zdarzenie MDA jest wywoływane, gdy nie jest debugera, komunikatów o zdarzeniach są prezentowane w oknie dialogowym nieobsługiwany wyjątek, chociaż nie jest to nieobsługiwany wyjątek. Aby uniknąć okno dialogowe, należy usunąć ustawienia włączania MDA, gdy kod nie jest wykonywany w środowisku debugowania.
+
+Podczas wykonywania kodu w programie Visual Studio zintegrowane środowisko programistyczne (IDE), można uniknąć, okno dialogowe wyjątku, który pojawia się dla określonego zdarzenia MDA. Aby to zrobić, na **debugowania** menu, wybierz **Windows** > **ustawienia wyjątków**. W **ustawienia wyjątków** okna, rozwiń węzeł **asystentów zarządzanego debugowania** listy, a następnie wyczyść **Przerwij gdy zgłoszony** pole wyboru dla poszczególnych MDA. Można również użyć tego okna dialogowego do *Włącz* wyświetlanie okien dialogowych wyjątek MDA.
+
+## <a name="mda-output"></a>Dane wyjściowe MDA
+
+MDA rezultat jest podobny do poniższego przykładu, który pokazuje dane wyjściowe z `PInvokeStackImbalance` MDA:
+
+**Wywołanie funkcji PInvoke "MDATest! MDATest.Program::StdCall "ma niezrównoważone stosu. Jest to prawdopodobnie, ponieważ zarządzanego podpisu PInvoke jest niezgodna z niezarządzanego podpisu docelowego. Sprawdź, czy Konwencja wywoływania i parametry podpisu funkcji PInvoke odpowiadają niezarządzanego podpisu docelowego.**
+
+## <a name="see-also"></a>Zobacz także
+
+- [Debugowanie, śledzenie i profilowanie](../../../docs/framework/debug-trace-profile/index.md)

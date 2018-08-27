@@ -1,6 +1,6 @@
 ---
 title: Funkcja QualifierSet_Delete (niezarządzany wykaz interfejsów API)
-description: Funkcja QualifierSet_Delete usuwa kwalifikatora według nazwy.
+description: Funkcja QualifierSet_Delete powoduje usunięcie kwalifikatorze według nazwy.
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_Delete
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0e96ba458edfe7261fd5857b7bcb8486f4a6636
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7ca4cc9fb65d1a4bd8713f969bbda5551ce5a2e2
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460048"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929785"
 ---
-# <a name="qualifiersetdelete-function"></a>Funkcja QualifierSet_Delete
-Usuwa określony kwalifikatora według nazwy.  
+# <a name="qualifiersetdelete-function"></a>QualifierSet_Delete — funkcja
+Usuwa określony kwalifikator według nazwy.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -41,31 +41,31 @@ HRESULT QualifierSet_Delete (
 ## <a name="parameters"></a>Parametry
 
 `vFunc`  
-[in] Ten parametr nie jest używana.
+[in] Ten parametr jest nieużywany.
 
 `ptr`   
-[in] Wskaźnik do [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) wystąpienia.
+[in] Wskaźnik do [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) wystąpienia.
 
 `wszName`   
 [in] Nazwa kwalifikatora do usunięcia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.h* pliku nagłówka, lub należy je zdefiniować jako stałe w kodzie:
+Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszName` Parametr jest nieprawidłowy. |
 |`WBEM_E_INVALID_OPERATION` | 0x80041016 | Usunięcie tego kwalifikatora jest niedozwolone. |
-|`WBEM_E_NOT_FOUND` | 0x80041002 | Nie można odnaleźć określonego kwalifikatora. |
+|`WBEM_E_NOT_FOUND` | 0x80041002 | Nie można odnaleźć określonego kwalifikator. |
 |`WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
-| `WBEM_S_RESET_TO_DEFAULT` | 0x40002 | Zastąpienie lokalnej został usunięty, i oryginalnego kwalifikator z obiektu nadrzędnego wznowił zakresu. |
+| `WBEM_S_RESET_TO_DEFAULT` | 0x40002 | Zastąpienie lokalnych została usunięta i oryginalny kwalifikator z obiektu nadrzędnego wznowił zakresu. |
 
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zawijana wywołanie [IWbemQualifierSet::Delete](https://msdn.microsoft.com/library/aa391864(v=vs.85).aspx) metody.
+Ta funkcja zawija wywołanie do [IWbemQualifierSet::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-delete) metody.
 
-Ze względu na zasady propagacji kwalifikator kwalifikator określonego może zostały odziedziczone z innym obiektem i jedynie zastąpione w bieżącej klasy lub wystąpienia. W takim przypadku `QualifierSet_Delete` metoda powoduje zresetowanie kwalifikator to oryginalnej wartości dziedziczone. W takim przypadku funkcja kod stanu `WBEM_S_RESET_TO_DEFAULT`.
+Ze względu na zasady propagacji kwalifikator kwalifikator określonego może zostały odziedziczone z innym obiektem i jedynie zastąpione w bieżącej klasy lub wystąpienia. W tym przypadku `QualifierSet_Delete` metoda powoduje zresetowanie kwalifikator do oryginalnej wartości dziedziczone. Funkcja w takiej sytuacji zwraca kod stanu `WBEM_S_RESET_TO_DEFAULT`.
 
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -75,4 +75,4 @@ Ze względu na zasady propagacji kwalifikator kwalifikator określonego może zo
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
-[Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)
+[Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

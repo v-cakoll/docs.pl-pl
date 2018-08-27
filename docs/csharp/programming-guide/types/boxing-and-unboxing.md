@@ -9,97 +9,97 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: eff5f05aa8b5081069b9e0f2f5f152669afaea18
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: b4bf63af1955582083e7ff54a5717f1ce56dfbb1
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208385"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929289"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Konwersja boxing i konwersja unboxing (Przewodnik programowania w języku C#)
-Opakowanie jest proces konwersji [typu wartości](../../../csharp/language-reference/keywords/value-types.md) do typu `object` lub do dowolnego typu interfejsu zaimplementowany przez ten typ wartości. Gdy CLR pola typu wartości, opakowuje wartość wewnątrz elementu System.Object i zapisze go na stercie zarządzanej. Rozpakowywanie wyodrębnia typ wartości z obiektu. Opakowanie jest niejawne; Rozpakowywanie jest jawne. Pojęcie boxing i konwersja unboxing źródłową widoku unified C# system typów, w którym wartość dowolnego typu może być traktowana jako obiekt.  
+OPAKOWYWANIE to proces konwersji [typu wartości](../../../csharp/language-reference/keywords/value-types.md) typowi `object` lub dowolny typ interfejsu implementowany przez ten typ wartości. Gdy środowisko CLR opakowuje typ wartości, otacza wartość wewnątrz elementu System.Object i zapisuje go w zarządzanym stosie. Rozpakowywanie wyodrębnia typ wartości z obiektu. OPAKOWYWANIE jest niejawne; Rozpakowywanie jest jawne. Pojęcie pakowania i rozpakowywania źródłową C# postrzega system typów, w którym wartość dowolnego typu może być traktowana jako obiekt.  
   
- W poniższym przykładzie zmienna całkowitoliczbowa `i` jest *opakowany* i przypisany do obiektu `o`.  
+ W poniższym przykładzie zmienna liczba całkowita `i` jest *opakowany* i przypisana do obiektu `o`.  
   
  [!code-csharp[csProgGuideTypes#14](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_1.cs)]  
   
- Obiekt `o` może następnie być rozpakowany i przypisane zmienna całkowitoliczbowa `i`:  
+ Obiekt `o` może następnie być rozpakowany i przypisany do zmiennej całkowitej `i`:  
   
  [!code-csharp[csProgGuideTypes#15](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_2.cs)]  
   
- Poniższe przykłady przedstawiają sposób opakowanie jest używana w języku C#.  
+ Poniższe przykłady ilustrują, jak pakowanie jest używane w języku C#.  
   
  [!code-csharp[csProgGuideTypes#47](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_3.cs)]  
   
 ## <a name="performance"></a>Wydajność  
- W odniesieniu do przypisania prostego opakowywanie i rozpakowywanie to procesy praktyce kosztowne. Gdy typ wartości jest opakowany, nowy obiekt musi przydzielone i zbudowane. W mniejszym stopniu rzutowanie wymagane dla Rozpakowywanie również jest kosztowne praktyce. Aby uzyskać więcej informacji, zobacz [wydajności](https://msdn.microsoft.com/library/ms173196(VS.110).aspx).  
+ Stosunku do prostych zadań pakowanie i rozpakowywanie są obciążającymi procesami. Gdy typ wartości jest zapakowany, nowy obiekt musi być przydzielane i zbudowane. W mniejszym stopniu cast wymagany do rozpakowywania również jest kosztowne praktyce. Aby uzyskać więcej informacji, zobacz [wydajności](../../../../docs/framework/performance/performance-tips.md).  
   
 ## <a name="boxing"></a>Boxing  
- Opakowanie jest używany do przechowywania typów wartości w stercie zbierane pamięci. Opakowanie jest niejawnej konwersji wartości [typu wartości](../../../csharp/language-reference/keywords/value-types.md) do typu `object` lub do dowolnego typu interfejsu zaimplementowany przez ten typ wartości. Konwersja boxing typów wartości przydziela wystąpienia obiektów na stercie i skopiowanie wartości do nowego obiektu.  
+ OPAKOWYWANIE służy do przechowywania typów wartości w stosie zebranych elementów bezużytecznych. OPAKOWYWANIE to niejawna konwersja [typu wartości](../../../csharp/language-reference/keywords/value-types.md) typowi `object` lub dowolny typ interfejsu implementowany przez ten typ wartości. Opakowanie typu wartości przydziela wystąpienie obiektu do stosu i kopiuje wartość do nowego obiektu.  
   
- Należy wziąć pod uwagę następujące deklaracja zmiennej typu wartość:  
+ Rozważmy następującą deklarację zmiennej typu wartości:  
   
  [!code-csharp[csProgGuideTypes#17](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_4.cs)]  
   
- Następująca instrukcja niejawnie stosuje operacja opakowanie w zmiennej `i`:  
+ Poniższa instrukcja stosuje niejawnie operację pakowania na zmiennej `i`:  
   
  [!code-csharp[csProgGuideTypes#18](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_5.cs)]  
   
- Wynik tej instrukcji jest utworzenie odwołania do obiektu `o`, na stosie, który odwołuje się do wartości typu `int`, na stosie. Ta wartość jest kopią wartości typu wartość przypisaną do zmiennej `i`. Różnica między dwie zmienne `i` i `o`, przedstawiono na poniższej ilustracji.  
+ Wyniku tego instrukcja tworzy odwołanie do obiektu `o`, na stosie, który odwołuje się do wartości typu `int`, na stosie. Ta wartość jest kopią wartości Typ-wartość przypisana do zmiennej `i`. Różnica między dwiema zmiennymi `i` i `o`, przedstawiono na poniższej ilustracji.  
   
  ![BoxingConversion — grafika](../../../csharp/programming-guide/types/media/vcboxingconversion.gif "vcBoxingConversion")  
 Konwersja boxing  
   
- Istnieje również możliwość wykonania konwersji boxing jawnie jak w poniższym przykładzie, ale jawnej konwersji boxing nigdy nie jest wymagane:  
+ Jest również możliwe przeprowadzenie pakowania, które jawnie jak w poniższym przykładzie, ale jawne pakowanie nigdy nie jest wymagane:  
   
  [!code-csharp[csProgGuideTypes#19](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_6.cs)]  
   
 ## <a name="description"></a>Opis  
- W tym przykładzie konwertuje zmienna całkowitoliczbowa `i` do obiektu `o` za pomocą konwersji boxing. Następnie, wartość przechowywana w zmiennej `i` została zmieniona z `123` do `456`. W przykładzie pokazano, że oryginalny typ wartości obiektu spakowanego lokalizacjami osobną pamięć i dlatego mogą przechowywać różne wartości.  
+ Ten przykład konwertuje zmienną całkowitą `i` do obiektu `o` za pomocą pakowania. Następnie wartość przechowywana w zmiennej `i` zostało zmienione z `123` do `456`. W przykładzie pokazano, że oryginalny typ wartości i spakowany obiekt Użyj lokalizacji pamięci i dlatego mogą przechowywać różne wartości.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csProgGuideTypes#16](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_7.cs)]  
   
 ## <a name="unboxing"></a>Rozpakowywanie  
- Rozpakowywanie jest jawna konwersja z typu `object` do [typu wartości](../../../csharp/language-reference/keywords/value-types.md) lub z typu interfejsu do typu wartości, który implementuje interfejs. Rozpakowywanie operacja obejmuje:  
+ Rozpakowywanie to konwersja jawna z typu `object` do [typu wartości](../../../csharp/language-reference/keywords/value-types.md) lub z typu interfejsu na typ wartości, która implementuje interfejs. Operacja rozpakowania składa się z:  
   
--   Sprawdzanie, czy wystąpienie obiektu do upewnij się, że jest wartości spakowanej typu podanej wartości.  
+-   Sprawdzanie wystąpienie obiektu, aby upewnić się, że jest zapakowaną wartością danego typu wartości.  
   
--   Kopiowanie wartości z wystąpienia w zmiennej typu wartości.  
+-   Kopiowanie wartości z instancji do zmiennej typu wartości.  
   
- Poniższe instrukcje pokazują zarówno konwersja boxing i rozpakowywanie operacje:  
+ Następujące instrukcje pokazują zarówno pakowania, jak i rozpakowania operacje:  
   
  [!code-csharp[csProgGuideTypes#21](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_8.cs)]  
   
- Na poniższym rysunku pokazano wyniku poprzednich instrukcji.  
+ Następujący rysunek ilustruje wynik poprzednich instrukcji.  
   
- ![Grafika konwersji Rozpakowującej](../../../csharp/programming-guide/types/media/vcunboxingconversion.gif "vcUnBoxingConversion")  
-Konwersja unboxing  
+ ![Grafika przedstawiająca konwersję unBoxing](../../../csharp/programming-guide/types/media/vcunboxingconversion.gif "vcUnBoxingConversion")  
+Konwersja rozpakowująca  
   
- Dla Rozpakowywanie typów wartości się pomyślnie w czasie wykonywania element trwa rozpakowany musi być odwołaniem do obiektu, który został wcześniej utworzony przez konwersja boxing wystąpienia tego typu wartości. Podjęto próbę unbox — `null` powoduje, że <xref:System.NullReferenceException>. Podjęto próbę unbox — odwołanie do niezgodną wartość typu przyczyny <xref:System.InvalidCastException>.  
+ Dla rozpakowywania typów wartości, które zakończyło się sukcesem w czasie wykonywania, rozpakowywany element musi być odwołaniem do obiektu, który został wcześniej utworzony przez pakowanie instancji tego typu wartości. Próba rozpakowania `null` powoduje, że <xref:System.NullReferenceException>. Próba rozpakowania odwołania do niezgodną wartość typu powoduje, że <xref:System.InvalidCastException>.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano przypadku nieprawidłowy Rozpakowywanie i powstałe w ten sposób `InvalidCastException`. Przy użyciu `try` i `catch`, gdy wystąpi błąd jest wyświetlany komunikat o błędzie.  
+ Poniższy przykład ilustruje przypadek nieprawidłowy Rozpakowywanie i wynikowy `InvalidCastException`. Za pomocą `try` i `catch`, komunikat o błędzie jest wyświetlany, gdy wystąpi błąd.  
   
  [!code-csharp[csProgGuideTypes#20](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_9.cs)]  
   
- Ten program danych wyjściowych:  
+ Ten program wyświetla:  
   
  `Specified cast is not valid. Error: Incorrect unboxing.`  
   
- Jeśli zmienisz instrukcji:  
+ Jeśli zmienisz instrukcję:  
   
-```  
+```csharp
 int j = (short) o;  
 ```  
   
  na:  
   
-```  
+```csharp
 int j = (int) o;  
 ```  
   
- Konwersja zostanie wykonane, a otrzymasz dane wyjściowe:  
+ Konwersja zostanie przeprowadzona i otrzymasz dane wyjściowe:  
   
  `Unboxing OK.`  
   

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f231c4f9782518e30cbaa89c6b085c72aafcc92
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aa9e7a4dacceb492dfe037b4b64f22f231323de5
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445448"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933225"
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags — Wyliczenie
-Zawiera wartości flag, które kontrolują zachowanie metadanych podczas otwierania plików manifestu.  
+Zawiera wartości flagi, które kontrolują zachowanie metadanych podczas otwierania plików manifestu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -52,24 +52,24 @@ typedef enum CorOpenFlags
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`ofRead`|Wskazuje, że plik powinien zostać otwarty tylko odczyt.|  
-|`ofWrite`|Wskazuje, że plik powinien zostać otwarty do zapisu.<br /><br /> Jeśli używasz `ofWrite` Flaga podczas otwierania pliku winmd, należy również przekazać `ofNoTransform` flagi.|  
+|`ofRead`|Wskazuje, czy można otworzyć pliku do odczytu tylko.|  
+|`ofWrite`|Wskazuje, że plik powinien zostać otwarty do zapisu.<br /><br /> Jeśli używasz `ofWrite` Flaga podczas otwierania pliku winmd, należy także przekazać `ofNoTransform` flagi.|  
 |`ofReadWriteMask`|Maska do odczytu i zapisu.|  
-|`ofCopyMemory`|Wskazuje, że można odczytać pliku do pamięci. Metadane należy korzystać z własnej kopii.|  
+|`ofCopyMemory`|Wskazuje, że można odczytać pliku do pamięci. Metadane należy zachować własną kopię.|  
 |`ofCacheImage`|Nieaktualne. Ta flaga jest ignorowana.|  
 |`ofManifestMetadata`|Nieaktualne. Ta flaga jest ignorowana.|  
-|`ofReadOnly`|Wskazuje, że plik powinien zostać otwarty do odczytu i że wywołanie `QueryInterface` dla [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) nie można dokonać korekty.|  
-|`ofTakeOwnership`|Wskazuje, że pamięć został przydzielony przy użyciu wywołania [CoTaskMemAlloc](http://msdn.microsoft.com/library/c4cb588d-9482-4f90-a92e-75b604540d5c) i zostanie zwolniona w metadanych.|  
+|`ofReadOnly`|Wskazuje, że dla odczytu, które można otworzyć pliku wywołanie `QueryInterface` dla [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) nie może zostać wykonana.|  
+|`ofTakeOwnership`|Wskazuje, że pamięć została przydzielona za pomocą wywołania [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) i zostanie zwolniona w metadanych.|  
 |`ofNoTypeLib`|Nieaktualne. Ta flaga jest ignorowana.|  
-|`ofNoTransform`|Wskazuje, należy wyłączyć automatyczne transformacje plików winmd. Innymi słowy można wyłączyć projekcji typu środowiska wykonawczego systemu Windows, aby typ .NET Framework. Aby uzyskać więcej informacji, zobacz [Underneath maską .NET i środowiska wykonawczego systemu Windows](http://msdn.microsoft.com/magazine/jj651569.aspx).|  
-|`ofReserved1`|Zarezerwowany do użytku wewnętrznego.|  
-|`ofReserved2`|Zarezerwowany do użytku wewnętrznego.|  
-|`ofReserved`|Zarezerwowany do użytku wewnętrznego.|  
+|`ofNoTransform`|Wskazuje, należy wyłączyć automatyczne transformacje plików winmd. Innymi słowy należy wyłączyć projekcji typu środowiska wykonawczego Windows, aby typ .NET Framework. Aby uzyskać więcej informacji, zobacz [poniżej składniki przy użyciu platformy .NET i środowiska wykonawczego Windows](http://msdn.microsoft.com/magazine/jj651569.aspx).|  
+|`ofReserved1`|Zarezerwowane do użytku wewnętrznego.|  
+|`ofReserved2`|Zarezerwowane do użytku wewnętrznego.|  
+|`ofReserved`|Zarezerwowane do użytku wewnętrznego.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorHdr.h  
+ **Nagłówek:** sekcję CorHdr.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

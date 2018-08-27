@@ -1,146 +1,146 @@
 ---
-title: Samouczek platformy .NET
-description: Przewodnik po niektóre z widocznym funkcje platformy .NET.
+title: Przewodnik po środowisku .NET
+description: Przewodnik po przez niektóre z widocznym funkcje platformy .NET.
 author: cartermp
 ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: de5ff06e660d3c4e976c10043a7ebc72d102cff5
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
-ms.translationtype: MT
+ms.openlocfilehash: f9b4e3d885725afc4181256e02e3b174318e3ece
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314646"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42907681"
 ---
-# <a name="tour-of-net"></a>Samouczek platformy .NET
+# <a name="tour-of-net"></a>Przewodnik po środowisku .NET
 
-.NET jest to platforma programistyczna ogólnego przeznaczenia. Ma ona najważniejsze funkcje, takie jak obsługa wielu języków programowania, modele programowania asynchronicznego i równoczesnych i natywnego współdziałanie umożliwiające szerokiego zakresu scenariuszy na wielu platformach.
+.NET to platforma deweloperska ogólnego przeznaczenia. Posiada kilka kluczowych funkcji, takich jak obsługa wielu języków programowania, asynchroniczne i współbieżne modele programowania i interoperacyjności macierzystej umożliwiających szerokiej gamy scenariuszy na wielu platformach.
 
-Ten artykuł zawiera przewodnik niektóre z kluczowych funkcji programu .NET. Zobacz [składników architektury .NET](components.md) tematu, aby dowiedzieć się więcej o fragmentów architektury .NET i ich używać.
+Ten artykuł zawiera samouczek przez niektóre kluczowe funkcje programu .NET. Zobacz [składniki architektury .NET](components.md) tematu, aby dowiedzieć się więcej o części architektury .NET i ich używania.
 
-## <a name="how-to-run-the-code-samples"></a>Jak uruchomić przykłady kodu
+## <a name="how-to-run-the-code-samples"></a>Sposób uruchamiania przykładów kodu
 
-Aby dowiedzieć się, jak skonfigurować środowisko deweloperskie do uruchamiania przykładów kodu, zobacz [wprowadzenie](get-started.md) tematu. Skopiuj i Wklej przykłady kodu z tej strony do środowiska, aby je wykonać. 
+Aby dowiedzieć się, jak skonfigurować środowisko deweloperskie do uruchamiania przykładów kodu, zobacz [wprowadzenie](get-started.md) tematu. Skopiuj i Wklej przykłady kodu z tej strony w środowisku do ich wykonania. 
 
 ## <a name="programming-languages"></a>Języki programowania
 
-.NET obsługuje wiele języków programowania. Implementowanie implementacje .NET [infrastruktury języka wspólnego (CLI)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/), między innymi określającej współdziałania środowisko uruchomieniowe i język niezależny od języka. Oznacza to, że wybrano żadnego języka .NET do tworzenia aplikacji i usług na platformie .NET.
+.NET obsługuje wiele języków programowania. Implementowanie implementacji .NET [Common Language Infrastructure (CLI)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/), między innymi określający niezależny od języka środowiska uruchomieniowego i interoperacyjności języka. Oznacza to, że wybierasz dowolnego języka platformy .NET do tworzenia aplikacji i usług na platformie .NET.
 
-Firma Microsoft aktywnie rozwija i obsługuje trzech językach .NET: C#, F # i Visual Basic (VB). 
+Firma Microsoft aktywnie opracowuje i obsługuje trzy języków .NET: C#, F # i Visual Basic (VB). 
 
-* C# jest proste, zaawansowane, bezpieczne i zorientowane obiektowo przy zachowaniu wyrazistość i przejrzysty wygląd stylu języka C języków. Każda osoba, która zapoznać się z C i podobne języki znajduje kilka problemów w dostosowywaniu C#. Zapoznaj się z [przewodnik C#](../csharp/index.md) Aby dowiedzieć się więcej na temat języka C#.
+* C# to prosta, wydajna, bezpieczne i zorientowane obiektowo, przy zachowaniu wyrazistości i elegancji stylów języka c. Każdego kto zna C i podobne języki znajduje kilka problemów w dostosowanie do języka C#. Zapoznaj się z [przewodnik C#](../csharp/index.md) Aby dowiedzieć się więcej na temat języka C#.
 
-* F # i platform, funkcjonalny język programowania, który również obsługuje tradycyjne programowanie zorientowane obiektowo i konieczne jest. Zapoznaj się z [przewodnik F #](../fsharp/index.md) Aby dowiedzieć się więcej na temat języka F #.
+* Język F # jest dla wielu platform, funkcjonalny język programowania, który obsługuje również tradycyjne programowanie zorientowane obiektowo i bezwzględne. Zapoznaj się z [Podręcznik języka F #](../fsharp/index.md) Aby dowiedzieć się więcej na temat języka F #.
 
-* Visual Basic jest łatwe języka Aby dowiedzieć się, umożliwia tworzenie różnych aplikacji uruchamianych na platformie .NET. Między językami .NET składnia VB jest najbardziej zbliżony do zwykłych języka ludzi, często ułatwieniu dla osób nowych do rozwoju oprogramowania.
+* Visual Basic to łatwe języka, aby dowiedzieć się, że umożliwia tworzenie różnych aplikacji uruchamianych na platformie .NET. Między językami .NET składnia VB jest najbardziej zbliżony do zwykłych języka ludzi, często ułatwiając dla osób nowych do tworzenia oprogramowania.
 
 ## <a name="automatic-memory-management"></a>Automatyczne zarządzanie pamięcią
 
-Używa .NET [wyrzucanie elementów bezużytecznych (GC)](garbagecollection/index.md) aby zapewnić automatyczne zarządzanie pamięcią dla programów. Wykaz Globalny działa na opóźnieniem podejście do zarządzania pamięcią preferowanie przepływność aplikacji do natychmiastowego kolekcji pamięci. Aby dowiedzieć się więcej na temat .NET GC, zapoznaj się [podstawy dotyczące wyrzucania elementów bezużytecznych (GC)](garbagecollection/fundamentals.md).
+Używa .NET [wyrzucania elementów bezużytecznych (GC)](garbagecollection/index.md) umożliwia automatyczne zarządzanie pamięcią programów. GC działa z opóźnieniem podejścia do zarządzania pamięcią preferowanie przepływność aplikacji do natychmiastowego kolekcji w pamięci. Aby dowiedzieć się więcej na temat odzyskiwania pamięci platformy .NET, zapoznaj się z [podstawowe informacje na temat wyrzucania elementów bezużytecznych (GC)](garbagecollection/fundamentals.md).
 
 Następujące dwa wiersze zarówno przydzielić pamięci:
 
 [!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L1-L2)]
 
-Brak — słowo kluczowe nie analogiczne do przydzielić pamięci, dezaktywowanie alokacji jest wykonywana automatycznie, gdy moduł garbage collector zwraca pamięci za pomocą jego planowanym uruchomieniu.
+Istnieje nie analogiczne słowo kluczowe, aby usunąć przydział pamięci, cofnięcia przydziału jest wykonywane automatycznie, gdy moduł zbierający elementy bezużyteczne odzyskuje ilość pamięci, za pośrednictwem jego zaplanowane uruchomienie.
 
-Moduł zbierający elementy bezużyteczne to jedna z usług, które ułatwiają zapewnienie *bezpieczeństwa pamięci*. Program jest bezpieczne, jeśli uzyskuje dostęp do pamięci tylko przydzielonej pamięci. Na przykład środowiska uruchomieniowego zapewnia, że aplikacja nie dostęp do pamięci nieprzydzielonego poza granice tablicy.
+Moduł odśmiecania pamięci jest jednym z usług, które zapewnią *bezpieczeństwo pamięci*. Program jest bezpieczne, jeśli uzyskuje dostęp do pamięci tylko przydzielonej pamięci. Na przykład środowisko uruchomieniowe gwarantuje, że aplikacja nie mają dostęp do pamięci nieprzydzielone poza granice tablicy.
 
-W poniższym przykładzie zgłasza wyjątek środowiska uruchomieniowego `InvalidIndexException` wyjątku, aby wymusić bezpieczeństwa pamięci:
+W poniższym przykładzie, środowisko wykonawcze zgłasza `InvalidIndexException` wyjątek, aby wymusić bezpieczeństwo pamięci:
 
 [!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
-## <a name="working-with-unmanaged-resources"></a>Praca z zasobów niezarządzanych
+## <a name="working-with-unmanaged-resources"></a>Praca z niezarządzanych zasobów
 
-Odwołanie do niektórych obiektów *niezarządzane zasoby*. Niezarządzane zasoby są elementami, które nie są automatycznie zachowywane przez środowisko uruchomieniowe platformy .NET. Na przykład dojście do pliku jest niezarządzanym zasobem. A <xref:System.IO.FileStream> obiekt jest obiektem zarządzanym, ale odwołuje się do dojścia do pliku, który będzie zarządzany. Po zakończeniu przy użyciu <xref:System.IO.FileStream>, musisz zwolnić dojście do pliku.
+Niektóre obiekty odwołanie *niezarządzane zasoby*. Zasoby niezarządzane są zasoby, które nie są automatycznie zachowywane przez środowisko uruchomieniowe platformy .NET. Na przykład dojście do pliku jest niezarządzany zasób. A <xref:System.IO.FileStream> obiekt jest obiektem zarządzanym, lecz przywołuje dojście do pliku, który jest niezarządzany. Po zakończeniu przy użyciu <xref:System.IO.FileStream>, musisz zwolnić obsługę pliku.
 
-W środowisku .NET, zaimplementować obiekty, które odwołują się niezarządzane zasoby <xref:System.IDisposable> interfejsu. Po zakończeniu przy użyciu obiektu, należy wywołać obiektu <xref:System.IDisposable.Dispose> metodę, która jest odpowiedzialna za zwolnienie żadnych niezarządzanych zasobów. Zapewnić wygodny sposób języków .NET `using` składnię takie obiekty, jak pokazano w poniższym przykładzie:
+Na platformie .NET, zaimplementować obiekty odwołujące się do niezarządzanych zasobów <xref:System.IDisposable> interfejsu. Po zakończeniu korzystania z obiektu, należy wywołać obiektu <xref:System.IDisposable.Dispose> metody, która odpowiada za zwolnienie niezarządzanych zasobów. Języki .NET zapewniają wygodny sposób `using` składnię obiektów, jak pokazano w poniższym przykładzie:
 
 [!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 
-Raz `using` zakończeniu bloku, środowisko uruchomieniowe platformy .NET automatycznie wywołuje `stream` obiektu <xref:System.IDisposable.Dispose> metodę, która zwalnia dojście do pliku. Środowisko uruchomieniowe robi to także jeśli wyjątek powoduje, że formant pozostaw blok.
+Gdy `using` bloku zakończeniu środowiska uruchomieniowego .NET automatycznie wywołuje `stream` obiektu <xref:System.IDisposable.Dispose> metody, która uwalnia dojście do pliku. Środowisko uruchomieniowe wykonuje to również jeśli wyjątek powoduje, że formant pozostaw blok.
 
 Aby uzyskać więcej informacji zobacz następujące tematy:
 
-* Język C#, zobacz [using — instrukcja (odwołanie w C#)](../csharp/language-reference/keywords/using-statement.md) tematu.
-* W F #, zobacz [zarządzanie zasobami: use — słowo kluczowe](../fsharp/language-reference/resource-management-the-use-keyword.md).
-* Dla VB, zobacz [przy użyciu — instrukcja (Visual Basic)](../visual-basic/language-reference/statements/using-statement.md) tematu.
+* Dla języka C#, zobacz [using — instrukcja (odwołanie w C#)](../csharp/language-reference/keywords/using-statement.md) tematu.
+* W języku F #, zobacz [zarządzanie zasobami: use — słowo kluczowe](../fsharp/language-reference/resource-management-the-use-keyword.md).
+* Dla języka VB, zobacz [przy użyciu — instrukcja (Visual Basic)](../visual-basic/language-reference/statements/using-statement.md) tematu.
 
-## <a name="type-safety"></a>Zabezpieczenie typów
+## <a name="type-safety"></a>Bezpieczeństwo typów
 
-Obiekt jest wystąpienia określonego typu. Tylko operacje dozwolone dla danego obiektu są jego typu. A `Dog` typ może mieć `Jump` i `WagTail` metody, ale nie `SumTotal` metody. Program tylko wywołuje metody należących do danego typu. Inne wywołania spowodować błąd kompilacji lub wyjątek czasu wykonywania (w przypadku używania funkcji dynamicznego lub `object`).
+Obiekt to wystąpienie określonego typu. Jedyne operacje, które są dozwolone w przypadku danego obiektu są zależne od jego typu. A `Dog` typ może mieć `Jump` i `WagTail` metody, ale nie `SumTotal` metody. Program tylko wywołuje metody należących do danego typu. Inne wywołania powoduje błąd kompilacji lub wyjątek czasu wykonywania (w przypadku używania funkcji dynamicznego lub `object`).
 
-Języków .NET są zorientowane obiektowo z hierarchii klas podstawowych i pochodnych. Środowisko uruchomieniowe platformy .NET umożliwia tylko rzutowania obiektu i wywołania, które są wyrównane z hierarchii obiektów. Należy pamiętać, że każdy typ zdefiniowany w dowolnym języku .NET pochodzi od podstawy <xref:System.Object> typu.
+Języków .NET są zorientowane obiektowo z hierarchii klas podstawowych i pochodnych. Środowisko uruchomieniowe platformy .NET umożliwia tylko rzutowania obiektu i wywołania zharmonizowanych z hierarchii obiektów. Należy pamiętać, że każdy typ zdefiniowany w dowolnym języku .NET pochodzi od podstawy <xref:System.Object> typu.
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L19-L23)]
 
-Zabezpieczenie typów umożliwia również ułatwić wymuszenie hermetyzacji gwarantując dokładność słowa kluczowe dostępu. Słowa kluczowe dostępu są artefaktów, które kontrolują dostęp do członków danego typu przez inny kod. Te są zwykle stosowane dla różnych typów danych w określonym typie, które są używane do zarządzania jego zachowania.
+Bezpieczeństwo typów umożliwia również egzekwują przestrzeganie hermetyzacji gwarantując wierności słowa kluczowe dostępu. Słowa kluczowe dostępu są artefaktów, które kontrolują dostęp do elementów członkowskich danego typu przez inny kod. Są one zazwyczaj używane dla różnych rodzajów danych w ramach danego typu, które są używane do zarządzania jego zachowanie.
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
 
-C#, VB i F # obsługuje lokalnego *wnioskowanie typu*. Wnioskowanie o typie oznacza, że kompilator deduces typ wyrażenia po lewej stronie wyrażenia po prawej stronie. To nie oznacza to, że bezpieczeństwo typów jest uszkodzony lub unikać. Wynikowy typ ma silnego typu z wszystko, co oznacza. W poprzednim przykładzie `dog` i `cat` są ulegną wprowadzenie wnioskowanie o typie, i różni się w pozostałej części przykładzie:
+C#, VB i F # obsługuje lokalnego *wnioskowanie o typie*. Wnioskowanie o typie oznacza, że kompilator określi typ wyrażenia po lewej stronie wyrażenia po prawej stronie. Nie oznacza to, że bezpieczeństwa typu jest uszkodzony lub unikać. Wynikowy typ ma silnego typu wszystko kojarzący się. W poprzednim przykładzie `dog` jest przepisane, aby wprowadzić wnioskowanie o typie, i ulega w pozostałej części przykładu:
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 
-F # jeszcze bardziej ma typ wnioskowania możliwości niż lokalne metody wnioskowanie znalezionych w języku C# i VB. Aby dowiedzieć się więcej, zobacz [wnioskowanie o typie](../fsharp/language-reference/type-inference.md).
+F # jeszcze bardziej ma funkcje wnioskowania typu niż metoda local wnioskowanie znalezionych w języku C# i VB. Aby dowiedzieć się więcej, zobacz [wnioskowanie o typie](../fsharp/language-reference/type-inference.md).
 
-## <a name="delegates-and-lambdas"></a>Delegaci i wyrażeń lambda
+## <a name="delegates-and-lambdas"></a>Delegaci i wyrażenia lambda
 
-Delegat jest reprezentowana przez podpis metody. Dowolnej metody tego podpisem można przypisać do obiektu delegowanego i jest wykonywane, gdy jest wywoływany delegat.
+Obiekt delegowany jest reprezentowany przez podpis metody. Dowolną metodą mającą ten podpis delegata można przypisać i jest wykonywany, gdy obiekt delegowany jest wywoływany.
 
-Obiekty delegowane są podobne do wskaźników funkcji języka C++, z wyjątkiem tego, że są one bezpieczne typu. Są one rodzaj odłączonego metody w systemie typów CLR. Regularne metody są powiązane z klasą i są tylko bezpośrednio można wywołać za pomocą statyczny lub wywołaniem wystąpienia Konwencji.
+Delegaty są podobne do wskaźników funkcji języka C++, z tą różnicą, że są one bezpieczne dla typów. Są one rodzaj odłączonego metody w ramach systemu typu CLR. Regularne metody są dołączone do klasy i są tylko bezpośrednio wywoływane za pośrednictwem statyczne lub wywoływania wystąpienia Konwencji.
 
-W środowisku .NET delegatów są często używane w programów obsługi zdarzeń, definiując operacji asynchronicznych i wyrażenia lambda, które są podstawy LINQ. Dowiedz się więcej w [delegaci i wyrażeń lambda](delegates-lambdas.md) tematu.
+Na platformie .NET obiekty delegowane są często używane w procedurze obsługi zdarzeń, definiując operacji asynchronicznych i w wyrażeniach lambda, które są podstawą LINQ. Dowiedz się więcej w [delegaci i wyrażenia lambda](delegates-lambdas.md) tematu.
 
 ## <a name="generics"></a>Typy ogólne
 
-Zezwalaj na ogólne programisty wprowadzenie *parametr typu* podczas projektowania ich klasy, które umożliwia określenie dokładnego typu zastępującą parametr typu kodu klienta (użytkownicy typu).
+Ogólne umożliwić programiście wprowadzenie *parametr typu* podczas projektowania ich klasy, które umożliwia określenie dokładnie tego samego typu należy użyć zamiast parametru typu przez kod klienta (użytkownicy typu).
 
-Typy ogólne zostały dodane do pomocy programistów zaimplementować struktur danych typu ogólnego. Przed ich przybyciem kolejności dla typu, takich jak `List` wpisz, aby wartość była ogólna, będzie musiał pracować z elementami, które były typu `object`. Ma to różnych semantycznego problemów, wraz z błędy podczas wykonywania niewielkie możliwe i wydajności. Jest najbardziej odpowiedzialne tych przy zawiera struktury danych, na przykład liczby całkowite i ciągi oraz `InvalidCastException` jest zgłaszany na temat pracy z listy członków.
+Typy ogólne zostały dodane do pomocy ekspertów w programowaniu w implementacji struktur danych typu ogólnego. Przed ich przybyciem kolejności dla typu, takie jak `List` typ ma być ogólna, będzie trzeba pracować z elementami, które były typu `object`. To było różnych semantycznego problemów, wraz z błędów możliwych subtelne środowiska uruchomieniowego i wydajności. Jest najbardziej notorious drugiego, gdy zawiera strukturę danych, na przykład liczby całkowite i ciągi, a `InvalidCastException` jest generowany na temat pracy z listy członków.
 
-Poniższy przykład przedstawia działającego programu podstawowe za pomocą wystąpienia <xref:System.Collections.Generic.List%601> typów:
+Poniższy przykład pokazuje podstawowe programu przy użyciu wystąpienia <xref:System.Collections.Generic.List%601> typów:
 
 [!code-csharp[GenericsShort](../../samples/csharp/snippets/tour/GenericsShort.csx)]
 
-Aby uzyskać więcej informacji, zobacz [ogólne typy (Ogólne) — omówienie](generics.md) tematu.
+Aby uzyskać więcej informacji, zobacz [ogólnych typów (Ogólne) — omówienie](generics.md) tematu.
 
 ## <a name="async-programming"></a>Programowanie asynchroniczne
 
-Programowanie asynchroniczne to pojęcie pierwszą klasą w .NET z obsługą asynchronicznych w czasie wykonywania, biblioteki framework oraz konstrukcji języka .NET. Wewnętrznie, są one oparte na obiekty (takie jak `Task`), który wykorzystać do wykonywania zadań I/E-granica jak najbardziej wydajny system operacyjny.
+Programowanie asynchroniczne jest najwyższej jakości pojęcie w ramach platformy .NET przy użyciu asynchroniczna pomoc techniczna w środowisku uruchomieniowym bibliotek platformy i konstrukcji języka .NET. Wewnętrznie, są oparte na obiektach (takie jak `Task`), który zalet systemu operacyjnego do wykonywania zadań I/O-granicę w jak najbardziej wydajny.
 
-Aby dowiedzieć się więcej na temat programowania asynchronicznego w programie .NET, Rozpocznij od [omówienie Async](async.md) tematu.
+Aby dowiedzieć się więcej na temat programowania asynchronicznego w .NET, zacznij od [Przegląd Async](async.md) tematu.
 
-## <a name="language-integrated-query-linq"></a>Język zapytania zintegrowanym (LINQ)
+## <a name="language-integrated-query-linq"></a>Zapytanie o języku zintegrowanym (LINQ)
 
-LINQ to zaawansowany zestaw funkcji języka C# i VB, dzięki którym można napisać kod prosty, deklaratywny pracy na danych. Dane mogą być w wielu formularzach (np. obiektów w pamięci, bazą danych SQL lub dokument XML), ale zazwyczaj programowanego kodu LINQ nie różnią się od źródła danych.
+LINQ to zaawansowany zestaw funkcji języka C# i VB, które umożliwiają pisanie prostego, deklaratywnego kod działających na danych. Dane mogą być w wielu formularzach (np. obiektów w pamięci, bazie danych SQL lub dokumentu XML), ale tworzonego zazwyczaj kodu LINQ nie różnią się od źródła danych.
 
-Aby dowiedzieć się więcej i zobaczyć niektóre przykłady, zobacz [LINQ (zapytania zintegrowane języka)](using-linq.md) tematu.
+Aby dowiedzieć się więcej i zobacz przykłady, zobacz [LINQ (Language Integrated Query)](using-linq.md) tematu.
 
-## <a name="native-interoperability"></a>Współdziałanie natywnego
+## <a name="native-interoperability"></a>Współdziałanie natywne
 
-Każdy system operacyjny, obejmuje interfejs programowania aplikacji (API), który udostępnia usług systemowych. .NET udostępnia kilka metod wywoływania tych interfejsów API.
+Każdy system operacyjny, obejmuje interfejs programowania aplikacji (API), które świadczy usługi systemu. .NET oferuje kilka sposobów, aby wywołać tych interfejsów API.
 
-Główne sposobów natywnego współdziałanie odbywa się za pośrednictwem "wywołanie platformy" lub P/Invoke skrócie, który jest obsługiwany na platformach systemu Linux i Windows. Tylko do systemu Windows w sposób możliwie natywnego współdziałanie nazywa się "Usługa międzyoperacyjna modelu COM," który jest używany do pracy z [składniki COM](/cpp/atl/introduction-to-com) w kodzie zarządzanym. Jest oparty na szczycie infrastruktury P/Invoke, ale działa w niewielkim stopniu różne sposoby.
+Główne sposób interoperacyjności macierzystej jest za pośrednictwem "wywołania platformy" lub P/Invoke w skrócie, który jest obsługiwany na platformach Windows i Linux. Windows — tylko w sposób interoperacyjności macierzystej jest znany jako "Usługa międzyoperacyjna modelu COM," który jest używany do pracy z [składników COM](/cpp/atl/introduction-to-com) w kodzie zarządzanym. Jest on oparty na szczycie infrastruktury P/Invoke, ale działa w niewielkim stopniu różne sposoby.
 
-Większość jego Mono (i w związku z tym w Xamarin) współdziałanie obsługę języka Java i Objective-C są wbudowane podobnie, oznacza to, używają tych samych zasad.
+Większość przez narzędzie Mono (i w związku z tym Xamarin) współdziałanie obsługę języka Java i języka Objective-C są zbudowane Analogicznie, oznacza to, że używają tych samych zasad.
 
-Dowiedz się więcej o natywnych współdziałanie w [natywnego współdziałanie](native-interop.md) tematu.
+Dowiedz się więcej o współdziałanie natywne w [interoperacyjności macierzystej](native-interop.md) tematu.
 
-## <a name="unsafe-code"></a>Kod niezabezpieczony
+## <a name="unsafe-code"></a>Niebezpieczny kod
 
-W zależności od obsługi language CLR umożliwia dostęp do pamięci natywnej i wykonać arytmetyki wskaźnika za pośrednictwem `unsafe` kodu. Operacje te są wymagane dla niektórych algorytmów i współdziałanie systemu. Chociaż wydajne, użyj niebezpieczny kod nie jest zalecane chyba że jest współdziałanie z interfejsów API systemu, lub wdrożyć najbardziej efektywny algorytmu. Niebezpieczny kod nie może wykonać taki sam sposób jak w różnych środowiskach i również utraci zalety modułu zbierającego elementy bezużyteczne i bezpieczeństwo typów. Zaleca się ograniczenie i scentralizowanie możliwie niebezpieczny kod i dokładnie przetestuj kodu.
+W zależności od języka pomocy technicznej, CLR umożliwia dostęp do pamięci natywnej i wykonać arytmetyki wskaźnika za pomocą `unsafe` kodu. Te operacje są wymagane dla pewnych algorytmów i współdziałania systemu. Mimo że jest to wydajne, użyj niebezpieczny kod nie jest zalecane, chyba że jest niezbędne do współdziałania z interfejsów API systemu, lub implementować algorytm najbardziej efektywny sposób. Niebezpieczny kod nie może być wykonywane tak samo w różnych środowiskach i utraci również zalety modułu odśmiecania pamięci i bezpieczeństwo typów. Zaleca się ograniczenie oraz scentralizowanie możliwie niebezpieczny kod i dokładnie przetestuj kod.
 
-Poniższy przykład jest zmodyfikowanej wersji `ToString()` metody `StringBuilder` klasy. Zastosowano jak polecenie `unsafe` kodu wydajnie można wdrożyć algorytm przy bezpośrednio przenoszenia fragmentów pamięci:
+Poniższy przykład to zmodyfikowana wersja `ToString()` metody z `StringBuilder` klasy. Przykład ilustruje jak przy użyciu `unsafe` kodu efektywnie można implementować algorytm gry przez poruszanie fragmentów pamięci bezpośrednio:
 
 [!code-csharp[Unsafe](../../samples/csharp/snippets/tour/Unsafe.csx)]
 
 ## <a name="next-steps"></a>Następne kroki
 
-Jeśli interesuje Cię Przewodnik po funkcji C#, zapoznaj się [samouczek z C#](../csharp/tour-of-csharp/index.md).
+Jeśli interesuje Cię prezentacją funkcji w języku C#, zapoznaj się z [samouczka dla języka C#](../csharp/tour-of-csharp/index.md).
 
-Jeśli interesuje Cię Przewodnik po funkcji F #, zobacz [samouczek programu F #](../fsharp/tour.md).
+Jeśli interesuje Cię prezentacją funkcji w języku F #, zobacz [samouczek programu F #](../fsharp/tour.md).
 
 Jeśli chcesz rozpocząć pisanie kodu własny, odwiedź stronę [wprowadzenie](get-started.md).
 
-Informacje na temat ważnych składników platformy .NET, zapoznaj się [składników architektury .NET](components.md).
+Aby poznać ważne składniki .NET, zapoznaj się z [składniki architektury .NET](components.md).

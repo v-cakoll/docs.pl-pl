@@ -4,12 +4,12 @@ description: Dowiedz się więcej o nowych funkcjach w programie .NET Core 2.1.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/06/2018
-ms.openlocfilehash: 52fe2d47dbca9bc43c2f1274b0d9e535ba9f9abc
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: ec9a8d238dc47f604a1ac0ee7628bf079e89b9c2
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874575"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935582"
 ---
 # <a name="whats-new-in-net-core-21"></a>What's new in .NET Core 2.1
 
@@ -123,7 +123,7 @@ Przy użyciu zestawu .NET Core 2.0 SDK, samodzielne aplikacje są publikowane w 
 
 ## <a name="windows-compatibility-pack"></a>Windows Compatibility Pack
 
-Jeśli przeniesiesz istniejący kod z programu .NET Framework i .NET Core, możesz użyć [systemie Windows Compatibility Pack](https://www.nuget.org/packages/Microsoft.Windows.Compatibility). Zapewnia dostęp do 20 000 więcej interfejsów API, niż jest dostępnych w programie .NET Core. Te interfejsy API i obejmuje dodatkowe typy w <xref:System.Drawing?displayProperty="nameWithType"> przestrzeni nazw, <xref:System.Diagnostics.EventLog> klasy, usługi WMI, liczniki wydajności, usług Windows i Windows rejestru typów i członków.
+Jeśli przeniesiesz istniejący kod z programu .NET Framework i .NET Core, możesz użyć [systemie Windows Compatibility Pack](https://www.nuget.org/packages/Microsoft.Windows.Compatibility). Zapewnia dostęp do 20 000 więcej interfejsów API, niż jest dostępnych w programie .NET Core. Te interfejsy API i obejmuje dodatkowe typy w <xref:System.Drawing?displayProperty=nameWithType> przestrzeni nazw, <xref:System.Diagnostics.EventLog> klasy, usługi WMI, liczniki wydajności, usług Windows i Windows rejestru typów i członków.
 
 ## <a name="jit-compiler-improvements"></a>Ulepszenia kompilatora JIT
 
@@ -195,7 +195,7 @@ W poniższym przykładzie użyto <xref:System.Span%601> wystąpienia, aby przeds
 
   - <xref:System.Security.Cryptography.CryptographicOperations.ZeroMemory%2A> to nie można zoptymalizować procedura czyszczenia pamięci.
 
-- Statyczne <xref:System.Security.Cryptography.RandomNumberGenerator.Fill%2A?displayProperty=fullName> wypełnienia metoda <xref:System.Span%601> przy użyciu wartości losowych.
+- Statyczne <xref:System.Security.Cryptography.RandomNumberGenerator.Fill%2A?displayProperty=nameWithType> wypełnienia metoda <xref:System.Span%601> przy użyciu wartości losowych.
 
 - <xref:System.Security.Cryptography.Pkcs.EnvelopedCms?displayProperty=nameWithType> Jest teraz obsługiwana w systemie Linux i maxOS.
 
@@ -215,7 +215,7 @@ Implementacja gniazda, wprowadzone w programie .NET Core 2.1 ma szereg zalet:
 
 - Spójne zachowanie na wszystkich platformach .NET Core.
 
-<xref:System.Net.Http.SocketsHttpHandler> jest implementacją domyślną w programie .NET Core 2.1. Jednak należy skonfigurować aplikację do starszej wersji <xref:System.Net.Http.HttpClientHandler> klasy przez wywołanie metody <xref:System.AppContext.SetSwitch%2A?displayProperty="nameWithType"> metody:
+<xref:System.Net.Http.SocketsHttpHandler> jest implementacją domyślną w programie .NET Core 2.1. Jednak należy skonfigurować aplikację do starszej wersji <xref:System.Net.Http.HttpClientHandler> klasy przez wywołanie metody <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> metody:
 
 ```csharp
 AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", false);

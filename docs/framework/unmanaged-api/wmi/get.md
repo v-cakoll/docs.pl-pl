@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f837a526879f80177bc9979e1d7671edfcd8d4f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb7475623961fe2ee5fc821c5f237f0a2acfae1a
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460151"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933336"
 ---
 # <a name="get-function"></a>Get — funkcja
-Pobiera wartość określonej właściwości, jeśli istnieje.
+Pobiera wartość określonej właściwości, jeśli taki istnieje.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -45,47 +45,47 @@ HRESULT Get (
 ## <a name="parameters"></a>Parametry
 
 `vFunc`  
-[in] Ten parametr nie jest używana.
+[in] Ten parametr jest nieużywany.
 
 `ptr`  
-[in] Wskaźnik do [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) wystąpienia.
+[in] Wskaźnik do [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienia.
 
 `wszName`  
 [in] Nazwa właściwości.
 
-`lFlags` [in] Zastrzeżone. Ten parametr musi wynosić 0.
+`lFlags` [in] Zastrzeżone. Ten parametr musi być 0.
 
-`pVal` [out] Jeśli funkcja zwraca pomyślnie, zawiera wartość `wszName` właściwości. `pval` Argumentu przypisano poprawny typ i wartość kwalifikatora.
+`pVal` [out] Jeśli funkcja zwraca pomyślnie, zawiera wartość `wszName` właściwości. `pval` Argument jest przypisany poprawny typ i wartość kwalifikatora.
 
-`pvtType` [out] Jeśli funkcja zwraca pomyślnie, zawiera [stała typ CIM](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) wskazujące typ właściwości. Można też wartość `null`. 
+`pvtType` [out] Jeśli funkcja zwraca pomyślnie, zawiera [stałą typu modelu wspólnych informacji](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration) oznacza typ właściwości. Wartość może być również `null`. 
 
-`plFlavor` [out] Jeśli funkcja zwraca pomyślnie, otrzymuje informacje o źródła właściwości. Wartość może być `null`, lub jeden z następujących stałych WBEM_FLAVOR_TYPE zdefiniowanych w *WbemCli.h* plik nagłówka: 
+`plFlavor` [out] Jeśli funkcja zwraca pomyślnie, otrzymuje informacje na temat źródła właściwości. Wartość może być `null`, lub jeden z następujących stałych WBEM_FLAVOR_TYPE zdefiniowane w *WbemCli.h* pliku nagłówka: 
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
-| `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | Właściwość jest właściwością standardowy system. |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Dla klasy: właściwość jest dziedziczona z klasy nadrzędnej. </br> Dla wystąpienia obiektu: właściwości, podczas gdy dziedziczone z klasy nadrzędnej, nie został zmodyfikowany przez to wystąpienie.  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Dla klasy: właściwość należy do klasy pochodnej. </br> Dla wystąpienia obiektu: właściwość jest modyfikowany przez wystąpienie; oznacza to, że podano wartości lub kwalifikator został dodany lub zmodyfikowany. |
+| `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | Właściwość jest właściwością standardowych systemowych. |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Dla klasy: właściwość jest dziedziczona z klasy nadrzędnej. </br> W przypadku wystąpienia: właściwość, podczas gdy dziedziczone z klasy nadrzędnej, nie został zmodyfikowany przez to wystąpienie.  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Dla klasy: właściwość należy do klasy pochodnej. </br> W przypadku wystąpienia: Ta właściwość jest modyfikowana przez wystąpienie; oznacza to, że podano wartość lub kwalifikator został dodany lub zmodyfikowany. |
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.h* pliku nagłówka, lub należy je zdefiniować jako stałe w kodzie:
+Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Wystąpił błąd ogólny. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Jeden lub więcej parametrów nie są prawidłowe. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Jeden lub więcej parametrów są nieprawidłowe. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Nie znaleziono określonej właściwości. |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Za mało pamięci jest dostępna do wykonania operacji. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Nie ma wystarczającej ilości pamięci jest dostępny do ukończenia tej operacji. |
 |`WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
   
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zawijana wywołanie [IWbemClassObject::Get](https://msdn.microsoft.com/library/aa391442(v=vs.85).aspx) metody.
+Ta funkcja zawija wywołanie do [IWbemClassObject::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get) metody.
 
-`Get` Funkcji można również zwrócić właściwości systemu.
+`Get` Funkcji może również zwracać właściwości systemu.
 
-`pVal` Argumentu przypisano poprawny typ i wartość kwalifikator i COM [VariantInit](https://msdn.microsoft.com/library/ms221402(v=vs.85).aspx) — funkcja
+`pVal` Argument jest przypisany poprawny typ i wartość kwalifikatora i COM [VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit) — funkcja
 
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -95,4 +95,4 @@ Ta funkcja jest zawijana wywołanie [IWbemClassObject::Get](https://msdn.microso
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
-[Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)
+[Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

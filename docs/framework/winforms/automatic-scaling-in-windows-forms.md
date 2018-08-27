@@ -5,98 +5,104 @@ helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: 0018b9f8644ec7d222a416bb5f71a7c61671009e
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: d3981be7977b56af0b60f9796519b78dc9ac5db3
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314766"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931654"
 ---
-# <a name="automatic-scaling-in-windows-forms"></a>Automatyczne skalowanie w formularzach systemu Windows
-Umożliwia skalowanie automatyczne formularza i jego formantów pozwala na jednej maszynie czcionką niektórych wyświetlania rozwiązania lub system, wyświetlane odpowiednio na inny komputer o czcionki różne rozwiązania lub systemu. Gwarantuje on, że formularz i jego formantów inteligentnie spowoduje zmianę rozmiaru, aby były spójne z macierzystego systemu windows i innych aplikacji na komputerach z innymi deweloperami i użytkownika. Obsługę [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] automatyczne skalowanie i style wizualne umożliwia [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] aplikacje do obsługi spójny wygląd i zachowanie w porównaniu do natywnych aplikacji systemu Windows na komputerze każdego użytkownika.
-  
-W większości przypadków automatyczne skalowanie działa zgodnie z oczekiwaniami w [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] w wersji 2.0 lub nowszej. Jednak zmiany schematu czcionek może sprawiać problemy. Aby zapoznać się przykładem rozwiązać ten problem, zobacz [porady: odpowiadanie na zmiany schematu czcionek w aplikacji formularzy systemu Windows](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
-  
-## <a name="need-for-automatic-scaling"></a>Potrzebę automatyczne skalowanie  
-Bez automatycznego skalowania aplikacji przeznaczony dla jednego rozdzielczości lub czcionki albo pojawi się zbyt małej lub zbyt duży podczas rozpoznawania lub czcionki zostanie zmieniona. Na przykład jeśli aplikacja została opracowana za pomocą punktu Tahoma 9 jako linii bazowej, bez dopasowania pojawi się zbyt mały Uruchom na komputerze, którym czcionki systemowej Tahoma 12 punktu. Tekst elementów, takich jak tytuły, menu zawartości pola tekstowego i tak dalej spowoduje, że mniejszy niż inne aplikacje. Ponadto rozmiar elementów interfejsu użytkownika, które zawierają tekstu, na przykład na pasku tytułu, menu i wielu formantów są zależne od używanej czcionki. W tym przykładzie te elementy są również pojawi się stosunkowo mniejsze.
+# <a name="automatic-scaling-in-windows-forms"></a>Automatyczne skalowanie w formularzach Windows Forms
 
-Analogiczna sytuacja występuje, gdy aplikacja jest przeznaczona dla niektórych rozdzielczość ekranu. Najbardziej typowe rozdzielczość ekranu jest 96 punktów na cal (DPI), który wynosi 100% skalowanie ekranu, ale wyświetlacze o wysokiej rozdzielczości obsługi 125%, 150%, 200% (które odpowiednio równy 120, 144 i 192 DPI) i nowszych stają się coraz bardziej powszechne. Bez dopasowania, aplikacji, szczególnie grafiki na podstawie jednej, przeznaczony dla jednego rozdzielczości będą wyświetlane jest za duża albo za mała uruchomienia na inne rozwiązanie.
+Automatycznego skalowania umożliwia formularza i jego formantów, przeznaczone na jednym komputerze przy użyciu określonych wyświetlania systemu lub rozpoznawanie czcionki, mają być wyświetlane odpowiednio na innym komputerze przy użyciu czcionki systemu lub rozpoznawanie innego ekranu. Gwarantuje on, że formularz i jego formantów inteligentnie spowoduje zmianę rozmiaru, aby były zgodne z macierzystego systemu windows i innych aplikacji na komputerach z innymi deweloperami i użytkownika. Wsparcie [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] automatycznego skalowania i stylów wizualnych umożliwia [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] aplikacji, aby utrzymać spójny wygląd i zachowanie w porównaniu do natywnych aplikacji Windows na komputerach poszczególnych użytkowników.
 
-Automatyczne skalowanie ma na celu rzecz poprawy funkcjonowania te problemy przez automatyczna zmiana rozmiaru formularza i jej kontrolkach podrzędnych zgodnie z odpowiedniego rozmiaru czcionki lub rozdzielczości ekranu. System operacyjny Windows obsługuje automatyczne skalowanie okien dialogowych za pomocą względną jednostki miary o nazwie jednostki okna dialogowego. Jednostki okna dialogowego jest oparta na czcionki systemowej i ich relacji z pikseli może być jednak określić funkcji Win32 SDK `GetDialogBaseUnits`. Gdy użytkownik zmienia motywu używanego przez system Windows, wszystkie okna dialogowe są automatycznie dostosowana. Ponadto [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] obsługuje automatyczne skalowanie, albo zgodnie z domyślnej czcionki systemowej lub rozdzielczość ekranu. Opcjonalnie automatyczne skalowanie można wyłączyć w aplikacji.
+W większości przypadków, automatyczne skalowanie działa zgodnie z oczekiwaniami w [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] wersji 2.0 lub nowszej. Jednak zmiany schematu czcionek, może być problematyczne. Na przykład jak rozwiązać ten problem, zobacz [porady: odpowiadanie na zmiany schematu czcionek w aplikacji Windows Forms](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
 
-## <a name="original-support-for-automatic-scaling"></a>Oryginalny obsługę automatyczne skalowanie
-W wersjach 1.0 i 1.1 z [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] obsługiwane automatyczne skalowanie w sposób prostego zależał Windows domyślną czcionkę interfejsu użytkownika, reprezentowany przez wartość Win32 SDK **DEFAULT_GUI_FONT**. Tę czcionkę zwykle jest zmieniane tylko gdy zmienia się rozdzielczość ekranu. Następującego mechanizmu został użyty do wdrożenia skalowania automatycznego:
+## <a name="need-for-automatic-scaling"></a>Potrzeby automatycznego skalowania
 
-1. W czasie projektowania <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> ustawiono właściwość (która jest teraz przestarzałe) wysokość i szerokość domyślnej czcionki systemowej na komputerze dewelopera.
+Bez skalowania automatycznego, aplikacja jest przeznaczona dla rozdzielczość ekranu co lub czcionki albo pojawi się zbyt małej lub zbyt duży podczas rozpoznawania lub czcionki zmodyfikowaniu. Na przykład jeśli aplikacja została zaprojektowana tak, przy użyciu punktu Tahoma 9 jako punkt odniesienia, bez dopasowania pojawi się zbyt mały uruchamiany na komputerze, gdzie czcionki systemowej jest punktem Tahoma 12. Elementy tekstu, takie jak tytuły, menu, zawartości pola tekstowego i tak dalej, że będzie mniejszy niż inne aplikacje. Ponadto rozmiar elementów interfejsu użytkownika, które zawierają tekst, takie jak pasek tytułu, menu i wielu formantów są zależne od czcionkę. W tym przykładzie te elementy zostaną również zostać wyświetlony stosunkowo mniejsze.
+
+Taka sytuacja jest analogiczne występuje, gdy aplikacja jest przeznaczona dla niektórych rozdzielczość ekranu. Najbardziej typowe rozdzielczość ekranu jest 96 punktów na cal (DPI), która jest równa skalowanie ekranu 100%, ale wyświetlacze o wysokiej rozdzielczości obsługi 125%, 150%, 200% (które odpowiednio równy 120, 144 i 192 DPI) i nowszych stają się coraz bardziej powszechne. Bez dostosowania, aplikacji, szczególnie na podstawie grafiki jeden, przeznaczony dla jednego rozwiązania pojawi się zbyt duży lub za mały uruchamiania o inne rozwiązanie.
+
+Automatyczne skalowanie ma na celu powodowane te problemy przez automatyczna zmiana rozmiaru w formularzu i jego formantów podrzędnych zgodnie z odpowiedniego rozmiaru czcionki lub rozdzielczość ekranu. System operacyjny Windows obsługuje automatyczne skalowanie przy użyciu względne jednostki miary o nazwie jednostki okna dialogowego w oknach dialogowych. Jednostki okna dialogowego opiera się na czcionki systemowej i jej relacji z pikseli, można jednak określić funkcję Win32 SDK `GetDialogBaseUnits`. Gdy użytkownik zmienia motyw użyty przez Windows, wszystkie okna dialogowe są automatycznie odpowiednio dostosowane. Ponadto [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] obsługuje automatyczne skalowanie, albo przy użyciu domyślnej czcionki systemowej, czy rozdzielczość ekranu. Opcjonalnie Skalowanie automatyczne można wyłączyć w aplikacji.
+
+## <a name="original-support-for-automatic-scaling"></a>Oryginalny obsługę automatycznego skalowania
+
+Wersje 1.0 i 1.1 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] obsługiwane automatyczne skalowanie w prosty sposób, który był zależny od Windows domyślną czcionkę dla interfejsu użytkownika, reprezentowany przez wartość Win32 SDK **DEFAULT_GUI_FONT**. Tę czcionkę zwykle jest zmieniany tylko w przypadku zmiany rozdzielczość ekranu. Następującego mechanizmu został użyty do wdrożenia, automatycznego skalowania:
+
+1. W czasie projektowania <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> (która jest już przestarzały) była właściwością wysokość i szerokość domyślnej czcionki systemowej na komputerze dewelopera.
 
 2. W czasie wykonywania, domyślnej czcionki systemowej maszyny użytkownika został użyty do zainicjowania <xref:System.Windows.Forms.Control.Font%2A> właściwość <xref:System.Windows.Forms.Form> klasy.
 
-3. Przed wyświetleniem formularzu <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A> wywołano metodę skalowania formularza. Ta metoda obliczana rozmiary skali względnej z <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> i <xref:System.Windows.Forms.Control.Font%2A> następnie wywołuje <xref:System.Windows.Forms.Control.Scale%2A> metody faktycznie skalowania formularz i jego elementów podrzędnych.
+3. Przed wyświetleniem formularza <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A> wywołano metodę skalowania w formularzu. Ta metoda obliczane rozmiarach względnej skali od <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> i <xref:System.Windows.Forms.Control.Font%2A> następnie wywoływana <xref:System.Windows.Forms.Control.Scale%2A> metoda faktycznie skalowania w formularzu i jego elementów podrzędnych.
 
-4. Wartość <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> został zaktualizowany tak to kolejnych wywołań <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A> nie zmienił stopniowo rozmiaru formularza.
+4. Wartość <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> został zaktualizowany tak oznacza kolejne wywołania <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A> nie zmienił stopniowo rozmiaru formularza.
 
-Podczas wystarczające w większości przypadków ten mechanizm odniesionej go z następującymi ograniczeniami:
+Podczas tego mechanizmu jest wystarczające w większości przypadków, jego jest z następującymi ograniczeniami:
 
-- Ponieważ <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> właściwość reprezentuje rozmiar czcionki linii bazowej jako wartości całkowite, wystąpią błędy zaokrąglania, które stają się oczywiste po ponownym włączeniu formularza za pomocą wielu rozwiązania.
+- Ponieważ <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> właściwość reprezentuje rozmiar czcionki punktu odniesienia jako wartości całkowite, występują błędy zaokrągleń, które stają się oczywiste, po ponownym włączeniu formularza za pomocą wielu rozdzielczości.
 
-- Automatyczne skalowanie został wdrożony tylko <xref:System.Windows.Forms.Form> klasy nie w <xref:System.Windows.Forms.ContainerControl> klasy. W związku z tym kontrolek użytkownika będzie skalować poprawnie tylko wtedy, gdy formant użytkownika został zaprojektowany na taką samą rozdzielczość formularza i została umieszczona w postaci, w czasie projektowania.
+- Automatyczne skalowanie został wdrożony tylko <xref:System.Windows.Forms.Form> klasy, nie w <xref:System.Windows.Forms.ContainerControl> klasy. W rezultacie kontrolki użytkownika będzie skalować poprawnie tylko wtedy, gdy formant użytkownika został zaprojektowany na tego samego rozwiązania co formularz i została umieszczona w postaci, w czasie projektowania.
 
-- Formularzy i ich formantów podrzędnych może być jednocześnie przeznaczona wyłącznie przez deweloperów w wielu jeśli ich rozwiązania maszyny są takie same. Podobnie on również dziedziczenia formularza zależne od rozdzielczości skojarzone z formularza nadrzędnego.
+- Formularzy i ich formantów podrzędnych może być jednocześnie przeznaczona wyłącznie przez wielu deweloperów dostępnych rozwiązaniach poszczególnych problemów maszyny były takie same. Podobnie on również dziedziczenia formularza zależy od rozdzielczości skojarzone z formularza nadrzędnego.
 
-- Nie jest zgodny z nowszą menedżerów układu wprowadzone w systemie [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] w wersji 2.0, takie jak <xref:System.Windows.Forms.FlowLayoutPanel> i <xref:System.Windows.Forms.TableLayoutPanel>.
+- Nie jest zgodny z nowszą menedżerów układu wprowadzone w programie [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] w wersji 2.0, takich jak <xref:System.Windows.Forms.FlowLayoutPanel> i <xref:System.Windows.Forms.TableLayoutPanel>.
 
-- Nie obsługuje skalowania oparty bezpośrednio na rozdzielczość ekranu, wymaganego do zgodność z [!INCLUDE[compact](../../../includes/compact-md.md)].
+- Nie obsługuje skalowania oparty bezpośrednio na rozdzielczość ekranu, który jest wymagane dla zachowania zgodności, aby [!INCLUDE[compact](../../../includes/compact-md.md)].
 
-Chociaż ten mechanizm jest zachowywana w [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] w wersji 2.0 w celu zachowania zgodności z poprzednimi wersjami, została zastąpiona przez bardziej niezawodne skalowania mechanizm opisane w dalszej części. W konsekwencji <xref:System.Windows.Forms.Form.AutoScale%2A>, <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A>, <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A>, a niektóre <xref:System.Windows.Forms.Control.Scale%2A> przeciążenia są oznaczone jako przestarzałe.
+Mimo że ten mechanizm jest zachowywana w [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] w wersji 2.0 w celu zachowania zgodności z poprzednimi wersjami, została zastąpiona przez bardziej niezawodny mechanizm skalowania opisane w dalszej części. W konsekwencji <xref:System.Windows.Forms.Form.AutoScale%2A>, <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A>, <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A>, a niektóre <xref:System.Windows.Forms.Control.Scale%2A> przeciążenia są oznaczone jako przestarzałe.
 
 > [!NOTE]
-> Można bezpiecznie usunąć odwołania do tych elementów członkowskich, podczas uaktualniania starszego kodu do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] w wersji 2.0.
+> Można bezpiecznie usunąć odwołania do tych członków, podczas uaktualniania starszego kodu [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] w wersji 2.0.
 
-## <a name="current-support-for-automatic-scaling"></a>Bieżąca obsługa automatyczne skalowanie
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] w wersji 2.0 surmounts poprzedniego ograniczenia, wprowadzając następujące zmiany do skalowania automatycznego formularzy systemu Windows:
+## <a name="current-support-for-automatic-scaling"></a>Bieżący obsługę automatycznego skalowania
 
-- Podstawowy obsługę skalowanie został przeniesiony do <xref:System.Windows.Forms.ContainerControl> klasy, aby otrzymały formularze, kontrolki natywne złożonego i kontrolek użytkownika wszystkie uniform skalowania pomocy technicznej. Nowe elementy członkowskie <xref:System.Windows.Forms.ContainerControl.AutoScaleFactor%2A>, <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>, <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> i <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A> zostały dodane.
+[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] w wersji 2.0 surmounts wcześniejszych ograniczeń, wprowadzając następujące zmiany do automatycznego skalowania dla formularzy Windows:
 
-- <xref:System.Windows.Forms.Control> Klasa ma również kilka nowych elementów członkowskich, które umożliwić mu uczestniczenie w skalowanie i do obsługi mieszanym skalowanie na tym samym formularzu. W szczególności <xref:System.Windows.Forms.Control.Scale%2A>, <xref:System.Windows.Forms.Control.ScaleChildren%2A>, i <xref:System.Windows.Forms.Control.GetScaledBounds%2A> skalowania elementów członkowskich.
+- Podstawowa pomoc techniczna dla skalowania została przeniesiona do <xref:System.Windows.Forms.ContainerControl> klasy tak, aby formularze, kontrolki złożonej natywne i formanty użytkownika wszystkie uzyskania jednolitego skalowania pomocy technicznej. Nowi członkowie <xref:System.Windows.Forms.ContainerControl.AutoScaleFactor%2A>, <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>, <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> i <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A> zostały dodane.
 
-- Do skalowania ustalane na podstawie rozdzielczości ekranu dodano obsługę uzupełnienie obsługi czcionki systemowej, zgodnie z definicją <xref:System.Windows.Forms.AutoScaleMode> wyliczenia. Ten tryb jest zgodny z obsługiwanych przez skalowanie automatyczne [!INCLUDE[compact](../../../includes/compact-md.md)] włączenie łatwiejsze migracji aplikacji.
+- <xref:System.Windows.Forms.Control> Klasa ma również kilka nowych członków, zezwalające do wzięcia udziału w skalowania i obsługi mieszane skalowanie na tym samym formularzu. W szczególności <xref:System.Windows.Forms.Control.Scale%2A>, <xref:System.Windows.Forms.Control.ScaleChildren%2A>, i <xref:System.Windows.Forms.Control.GetScaledBounds%2A> wspierać członków.
 
-- Zgodność z menedżerów układu, takich jak <xref:System.Windows.Forms.FlowLayoutPanel> i <xref:System.Windows.Forms.TableLayoutPanel> został dodany do wdrożenia Skalowanie automatyczne.
+- W przypadku skalowania na podstawie rozdzielczości ekranu dodano obsługę jako uzupełnienie obsługi czcionki systemowej, zgodnie z definicją <xref:System.Windows.Forms.AutoScaleMode> wyliczenia. Ten tryb jest zgodny z automatycznego skalowania, obsługiwane przez [!INCLUDE[compact](../../../includes/compact-md.md)] Włączanie łatwiejsza migracja aplikacji.
 
-- Czynniki skalowania teraz są reprezentowane jako przestawne wartości, zwykle za pomocą <xref:System.Drawing.SizeF> struktury, dzięki czemu praktycznie wyeliminowaniu błędów zaokrąglania.
+- Zgodność z menedżerów układu, takie jak <xref:System.Windows.Forms.FlowLayoutPanel> i <xref:System.Windows.Forms.TableLayoutPanel> została dodana do wykonania automatycznego skalowania.
+
+- Czynniki skalowania są teraz reprezentowane jako wartości, zazwyczaj przy użyciu zmiennoprzecinkowych <xref:System.Drawing.SizeF> struktury, tak aby błędy zaokrągleń zostały wyeliminowane praktycznie.
 
 > [!CAUTION]
-> Dowolne mieszanki DPI i skalowania tryby czcionki nie są obsługiwane. Mimo że może skalowania formantu użytkownika przy użyciu trybu (na przykład DPI) i umieść go w formie przy użyciu innego trybu (czcionki) bez problemów, ale mieszanie formularza podstawowego w trybie jednego i pochodne formularza w innym może prowadzić do nieoczekiwanych wyników.
+> Dowolne mieszanki DPI i skalowania tryby czcionki nie są obsługiwane. Mimo że może skalować kontrolki użytkownika przy użyciu trybu (na przykład DPI) i umieść go w formularzu za pomocą innego trybu (czcionka) bez żadnych problemów, ale mieszanie formularza podstawowego w trybie jednego i pochodnej formularza w innym może prowadzić do nieoczekiwanych wyników.
 
 ### <a name="automatic-scaling-in-action"></a>Automatyczne skalowanie w akcji
-Formularze systemu Windows używa teraz następującą logiką automatycznie skalować formularzy i ich zawartość:
 
-1. W czasie projektowania każdy <xref:System.Windows.Forms.ContainerControl> rejestruje bieżącego rozwiązania w trybie skalowanie i <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> i <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>odpowiednio.
+Formularze Windows używa teraz Poniższa logika automatycznego skalowania, formularzy i ich zawartość:
 
-2. W czasie wykonywania, rzeczywiste rozwiązania są przechowywane w <xref:System.Windows.Forms.ContainerControl.CurrentAutoScaleDimensions%2A> właściwości. <xref:System.Windows.Forms.ContainerControl.AutoScaleFactor%2A> Właściwości dynamicznie oblicza stosunek rozpoznawania skalowania środowiska wykonawczego i czasu projektowania.
+1. W czasie projektowania każdy <xref:System.Windows.Forms.ContainerControl> rejestruje trybu skalowania i aktualna rozdzielczość w <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> i <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>, odpowiednio.
 
-3. Podczas ładowania formularza, jeśli wartości <xref:System.Windows.Forms.ContainerControl.CurrentAutoScaleDimensions%2A> i <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> są różne, a następnie <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A> wywoływana jest metoda skalowania formantu i jego elementów podrzędnych. Ta metoda wstrzymuje układ i wywołania <xref:System.Windows.Forms.Control.Scale%2A> metodę w celu skalowania rzeczywistych. Później, wartość <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> jest aktualizowana w celu uniknięcia stopniowego skalowania.
+2. W czasie wykonywania, rzeczywistej rozdzielczości są przechowywane w <xref:System.Windows.Forms.ContainerControl.CurrentAutoScaleDimensions%2A> właściwości. <xref:System.Windows.Forms.ContainerControl.AutoScaleFactor%2A> Właściwość dynamicznie obliczy stosunek rozpoznawania skalowania środowiska wykonawczego i w czasie projektowania.
 
-4. <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A> jest również wywoływana automatycznie, w następujących sytuacjach:
+3. Podczas ładowania formularza, jeśli wartości <xref:System.Windows.Forms.ContainerControl.CurrentAutoScaleDimensions%2A> i <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> są różne, a następnie <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A> metoda jest wywoływana w celu skalowania formantem i jego elementów podrzędnych. Ta metoda wstrzymuje układ i wywołania <xref:System.Windows.Forms.Control.Scale%2A> metodę w celu rzeczywiste skalowanie. Później, wartość <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> zostanie zaktualizowany w celu uniknięcia stopniowego skalowania.
 
-    - W odpowiedzi na <xref:System.Windows.Forms.Control.OnFontChanged%2A> zdarzeń, jeśli tryb skalowania jest <xref:System.Windows.Forms.AutoScaleMode.Font>.
-  
-    - Po wykryciu układu wznawia formantu kontenera i zmiany w <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> lub <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> właściwości.
-  
-    - Jako niejawnego powyżej, gdy element nadrzędny <xref:System.Windows.Forms.ContainerControl> wykonywane jest skalowanie. Każdy kontener jest odpowiedzialny za skalowanie podrzędnych za pomocą własnego skalowanie czynniki i nie jeden z jego kontenera nadrzędnego.
+4. <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A> automatycznie jest wywoływana w następujących sytuacjach:
 
-5. Formanty podrzędne można zmodyfikować ich zachowanie skalowania za pomocą kilku środków:
+    - W odpowiedzi na <xref:System.Windows.Forms.Control.OnFontChanged%2A> zdarzeń, jeśli jest to tryb skalowania <xref:System.Windows.Forms.AutoScaleMode.Font>.
 
-    - <xref:System.Windows.Forms.Control.ScaleChildren%2A> Właściwości może zostać zastąpiona w celu określenia, czy ich formantów podrzędnych powinien być skalowany.
+    - Po wykryciu układu wznawia kontroli kontenera i zmiany w <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> lub <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> właściwości.
 
-    - <xref:System.Windows.Forms.Control.GetScaledBounds%2A> Metodę można przesłonić, aby dopasować granice, które formant są skalowane w celu, ale nie logiki skalowania.
+    - Jako niejawnego powyżej, gdy element nadrzędny <xref:System.Windows.Forms.ContainerControl> wykonywane jest skalowanie. Każdy formant kontenera jest odpowiedzialny za skalowanie jego elementy podrzędne przy użyciu własnej skalowanie czynników, a nie jednego z jej kontenera nadrzędnego.
 
-    - <xref:System.Windows.Forms.Control.ScaleControl%2A> Metodę można przesłonić, aby zmienić skalowania logikę bieżącego formantu.
+5. Formanty podrzędne można zmodyfikować, aby ich zachowanie skalowania za pomocą kilku środków:
+
+    - <xref:System.Windows.Forms.Control.ScaleChildren%2A> Właściwość może być zastąpiona w celu ustalenia, jeśli jego formantów podrzędnych powinny być skalowane.
+
+    - <xref:System.Windows.Forms.Control.GetScaledBounds%2A> Metodę można przesłonić, aby dopasować granice, które kontrolki są skalowane do, ale nie skalowanie logika.
+
+    - <xref:System.Windows.Forms.Control.ScaleControl%2A> Metodę można przesłonić, aby zmienić skalowanie logika kontrolą bieżącą.
 
 ## <a name="see-also"></a>Zobacz także
- <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>  
- <xref:System.Windows.Forms.Control.Scale%2A>  
- <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>  
- <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>  
- [Renderowanie kontrolek przy użyciu stylów wizualnych](./controls/rendering-controls-with-visual-styles.md)  
- [Instrukcje: poprawianie wydajności dzięki unikaniu automatycznego skalowania](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)
+
+- <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>
+- <xref:System.Windows.Forms.Control.Scale%2A>
+- <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
+- <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>
+- [Renderowanie kontrolek przy użyciu stylów wizualnych](./controls/rendering-controls-with-visual-styles.md)
+- [Instrukcje: poprawianie wydajności dzięki unikaniu automatycznego skalowania](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)

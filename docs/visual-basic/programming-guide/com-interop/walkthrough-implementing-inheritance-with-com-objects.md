@@ -8,33 +8,34 @@ helpviewer_keywords:
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
 ms.openlocfilehash: a1c1b7c247d3277c6614a4774395650c4c069c2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930001"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>Wskazówki: wdrażanie dziedziczenia z obiektami COM (Visual Basic)
-Mogą pochodzić klas języka Visual Basic z `Public` klasy obiektów COM, nawet te utworzone we wcześniejszych wersjach programu Visual Basic. Zastąpiona lub przeciążony podobnie jak właściwości właściwości i metody dziedziczone z obiektami COM klasy i metody innych klasy podstawowej można zastąpić lub przeciążony. Dziedziczenia z obiektami COM jest przydatne w przypadku istniejącej biblioteki klas, którego chcesz ponownie skompilować.  
+Utworzeniu klasy pochodnej klasy Visual Basic z `Public` klas obiektów COM, nawet te, utworzone we wcześniejszych wersjach programu Visual Basic. Właściwości i metody klasy dziedziczone z obiektów COM mogą być zastąpione lub przeciążone, podobnie jak właściwości i metody inne klasy bazowej można zastąpić lub przeciążone. Dziedziczenie z obiektami COM jest przydatne, jeśli masz istniejące biblioteki klas, które nie chcesz ponownie skompilować.  
   
- Poniższa procedura pokazuje, jak Visual Basic 6.0 do utworzenia obiektu COM, który zawiera klasę, a następnie użyć jej jako klasę podstawową.  
+ Poniższa procedura pokazuje, jak używać języka Visual Basic 6.0 do tworzenia obiektów COM, który zawiera klasę, a następnie użyć go jako klasę bazową.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-build-the-com-object-that-is-used-in-this-walkthrough"></a>Aby utworzyć obiekt COM, który jest używany w tym przewodniku  
+### <a name="to-build-the-com-object-that-is-used-in-this-walkthrough"></a>Aby zbudować obiekt COM, który jest używany w tym przewodniku  
   
-1.  Otwórz nowy projekt ActiveX biblioteki DLL w Visual Basic 6.0. Projekt o nazwie `Project1` jest tworzony. Ma klasę o nazwie `Class1`.  
+1.  W Visual Basic 6.0 otwórz nowy projekt ActiveX DLL. Projekt o nazwie `Project1` zostanie utworzony. Ma ona klasę o nazwie `Class1`.  
   
-2.  W **Eksplorator projektów**, kliknij prawym przyciskiem myszy **Project1**, a następnie kliknij przycisk **Project1 właściwości**. **Właściwości projektu** zostanie wyświetlone okno dialogowe.  
+2.  W **Eksplorator projektów**, kliknij prawym przyciskiem myszy **projektu Project1**, a następnie kliknij przycisk **właściwości projektu Project1**. **Właściwości projektu** zostanie wyświetlone okno dialogowe.  
   
 3.  Na **ogólne** karcie **właściwości projektu** okno dialogowe Zmień nazwę projektu, wpisując `ComObject1` w **Nazwa projektu** pola.  
   
-4.  W **Eksplorator projektów**, kliknij prawym przyciskiem myszy `Class1`, a następnie kliknij przycisk **właściwości**. **Właściwości** zostanie wyświetlone okno klasy.  
+4.  W **Eksplorator projektów**, kliknij prawym przyciskiem myszy `Class1`, a następnie kliknij przycisk **właściwości**. **Właściwości** zostanie wyświetlone okno dla tej klasy.  
   
-5.  Zmień `Name` właściwości `MathFunctions`.  
+5.  Zmiana `Name` właściwość `MathFunctions`.  
   
-6.  W **Eksplorator projektów**, kliknij prawym przyciskiem myszy `MathFunctions`, a następnie kliknij przycisk **kod widoku**. **Edytora kodu** jest wyświetlany.  
+6.  W **Eksplorator projektów**, kliknij prawym przyciskiem myszy `MathFunctions`, a następnie kliknij przycisk **Wyświetl kod**. **Edytor kodu** jest wyświetlana.  
   
-7.  Dodawanie zmiennej lokalnej do przechowywania wartości właściwości:  
+7.  Dodaj zmienną lokalną, do przechowywania wartości właściwości:  
   
     ```  
     ' Local variable to hold property value  
@@ -54,7 +55,7 @@ Mogą pochodzić klas języka Visual Basic z `Public` klasy obiektów COM, nawet
     End Property  
     ```  
   
-9. Dodaj funkcję:  
+9. Dodawanie funkcji:  
   
     ```  
     Function AddNumbers(   
@@ -65,68 +66,68 @@ Mogą pochodzić klas języka Visual Basic z `Public` klasy obiektów COM, nawet
     End Function  
     ```  
   
-10. Tworzenie i zarejestrować obiektu COM, klikając **upewnij ComObject1.dll** na **pliku** menu.  
+10. Utwórz i zarejestruj obiekt COM, klikając **wprowadzić ComObject1.dll** na **pliku** menu.  
   
     > [!NOTE]
-    >  Mimo że można również ujawnia klasy utworzonej za pomocą Visual Basic jako obiekt COM, nie jest obiektem COM. wartość true i nie można użyć w tym przewodniku. Aby uzyskać więcej informacji, zobacz [współdziałanie COM w aplikacjach .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
+    >  Chociaż można także udostępnić klasy utworzonej za pomocą Visual Basic jako obiekt COM, nie jest obiektem COM wartość true, a nie może być używana w tym przewodniku. Aby uzyskać więcej informacji, zobacz [współdziałanie COM w aplikacjach .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
 ## <a name="interop-assemblies"></a>Zestawy międzyoperacyjne  
- W poniższej procedury spowoduje utworzenie zestawu międzyoperacyjnego, który działa jako mostka między kodu niezarządzanego (np. obiekt COM) i kod zarządzany, który korzysta z programu Visual Studio. Zestawu międzyoperacyjnego, który tworzy Visual Basic obsługi wielu szczegółów pracy z obiektami COM, takie jak *przekazywanie międzyoperacyjne*, proces tworzenia pakietów parametrów i zwracanych wartości na dane równoważne typy jako przechodzą do i obiekty COM. Wskazuje zestawu międzyoperacyjnego, a nie rzeczywiste obiektu COM odwołanie w aplikacji Visual Basic.  
+ W poniższej procedurze utworzysz zestawu międzyoperacyjnego, który działa jako Most między kodem niezarządzanym (np. obiekt COM) i kod zarządzany, który korzysta z programu Visual Studio. Zestawu międzyoperacyjnego, który tworzy języka Visual Basic obsługuje wiele szczegółów pracy z obiektami COM, takich jak *marshaling międzyoperacyjny*, proces tworzenia pakietów parametrów i zwracanych wartości danych równoważne typy przechodzące do a obiekty COM. W aplikacji Visual Basic wskazuje odwołanie do zestawu międzyoperacyjnego nie rzeczywistego obiektu COM.  
   
-#### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>Aby użyć obiektów COM z Visual Basic 2005 lub nowszym  
+#### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>Obiekt COM za pomocą programu Visual Basic 2005 i nowszych wersjach  
   
-1.  Otwórz nowy projekt aplikacji systemu Windows w języku Visual Basic.  
+1.  Otwórz nowy projekt aplikacji Windows Visual Basic.  
   
 2.  Na **projektu** menu, kliknij przycisk **Dodaj odwołanie**.  
   
      **Dodaj odwołanie** zostanie wyświetlone okno dialogowe.  
   
-3.  Na **COM** karcie, kliknij dwukrotnie `ComObject1` w **nazwa składnika** listy i kliknij przycisk **OK**.  
+3.  Na **COM** kartę, kliknij dwukrotnie `ComObject1` w **nazwa składnika** listy, a następnie kliknij przycisk **OK**.  
   
 4.  Na **projektu** menu, kliknij przycisk **Dodaj nowy element**.  
   
      **Dodaj nowy element** zostanie wyświetlone okno dialogowe.  
   
-5.  W **szablony** okienku, kliknij przycisk **klasy**.  
+5.  W **szablony** okienku kliknij **klasy**.  
   
-     Domyślna nazwa pliku `Class1.vb`, zostanie wyświetlony w **nazwa** pola. Zmień to pole na MathClass.vb i kliknij przycisk **Dodaj**. Spowoduje to utworzenie klasy o nazwie `MathClass`i wyświetla jego kod.  
+     Domyślna nazwa pliku `Class1.vb`, pojawia się w **nazwa** pola. Zmień to pole na MathClass.vb, a następnie kliknij przycisk **Dodaj**. Spowoduje to utworzenie klasę o nazwie `MathClass`i wyświetla jego kod.  
   
-6.  Dodaj następujący kod do góry `MathClass` dziedziczona z klasy COM.  
+6.  Dodaj następujący kod na górze `MathClass` dziedziczyć z klasy COM.  
   
      [!code-vb[VbVbalrInterop#31](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_1.vb)]  
   
-7.  Przeciążenia publicznej metody klasy podstawowej, dodając następujący kod do `MathClass`:  
+7.  Przeciążenia metody publiczne klasy bazowej, dodając następujący kod do `MathClass`:  
   
      [!code-vb[VbVbalrInterop#32](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_2.vb)]  
   
-8.  Rozszerzenie klasy dziedziczonej, dodając następujący kod do `MathClass`:  
+8.  Rozszerzanie odziedziczoną klasę, dodając następujący kod do `MathClass`:  
   
      [!code-vb[VbVbalrInterop#33](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_3.vb)]  
   
- Nowa klasa dziedziczy właściwości klasy podstawowej w obiekcie COM, overloads metody i definiuje nową metodę rozszerzenie klasy.  
+ Nowa klasa dziedziczy właściwości klasy bazowej w obiekcie COM, przeciążenia metody i definiuje nową metodę rozszerzenia klasy.  
   
-#### <a name="to-test-the-inherited-class"></a>Aby przetestować dziedziczonej klasie  
+#### <a name="to-test-the-inherited-class"></a>Aby przetestować odziedziczoną klasę  
   
-1.  Dodawanie przycisku do formularza uruchamiania, a następnie kliknij dwukrotnie, aby wyświetlić jego kod.  
+1.  Dodawanie przycisku do uruchamiania formularza, a następnie go dwukrotnie, aby wyświetlić jej kod.  
   
-2.  Przycisk `Click` procedury obsługi zdarzeń, Dodaj następujący kod, aby utworzyć wystąpienie `MathClass` i wywoływać przeciążenia metody:  
+2.  W przycisku `Click` procedury obsługi zdarzeń, Dodaj następujący kod, aby utworzyć wystąpienie `MathClass` i wywołania przeciążonych metod:  
   
      [!code-vb[VbVbalrInterop#34](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_4.vb)]  
   
 3.  Uruchom projekt, naciskając klawisz F5.  
   
- Po kliknięciu przycisku w formularzu `AddNumbers` najpierw wywoływana jest metoda o `Short` typ danych liczb, i Visual Basic wybiera odpowiednią metodę z klasy podstawowej. Drugie wywołanie `AddNumbers` zostaje skierowany do przeciążenia metody z `MathClass`. Trzeci wywołania wywołania `SubtractNumbers` metodę, która rozszerza klasę. Ustawiono właściwości w klasie podstawowej, a wartość jest wyświetlana.  
+ Po kliknięciu przycisku w formularzu `AddNumbers` metoda najpierw jest wywoływana z `Short` liczb, typ danych i Visual Basic wybiera odpowiednią metodę z klasy bazowej. Drugie wywołanie `AddNumbers` zostaje skierowany do przeciążenia metody z `MathClass`. Trzecie wywołanie wywołania `SubtractNumbers` metody, która rozszerza klasę. Ustawiono właściwość w klasie bazowej, a wartość jest wyświetlana.  
   
 ## <a name="next-steps"></a>Następne kroki  
- Można zauważyć, że przeciążenia `AddNumbers` funkcja wydaje się mają ten sam typ jako metody dziedziczona z klasy podstawowej obiektu COM danych. Wynika to z faktu, argumentów i parametrów metody klasy podstawowej są zdefiniowane jako 16-bitowych liczb całkowitych w Visual Basic 6.0, ale są one widoczne jako 16-bitowych liczb całkowitych typu `Short` w nowszych wersjach programu Visual Basic. Nowa funkcja akceptuje 32-bitowych liczb całkowitych i overloads funkcji klasy podstawowej.  
+ Być może zauważono, że przeciążone `AddNumbers` funkcja wydaje się mieć taki sam typ jako metody dziedziczone z klasy bazowej obiektu COM danych. Jest to spowodowane argumentów i parametrów metody klasy bazowej są definiowane jako 16-bitowych liczb całkowitych w języku Visual Basic 6.0, ale są one widoczne jako 16-bitowych liczb całkowitych typu `Short` w nowszych wersjach programu Visual Basic. Nowa funkcja akceptuje 32-bitowych liczb całkowitych i przeciążenia funkcji klasy bazowej.  
   
- Podczas pracy z obiektami COM, upewnij się, że należy sprawdzić rozmiar i danych typów parametrów. Na przykład jeśli używasz obiektu COM, który akceptuje obiekt kolekcji Visual Basic 6.0 jako argument nie może dostarczyć kolekcji z nowszej wersji programu Visual Basic.  
+ Podczas pracy z obiektami COM, upewnij się, że należy sprawdzić, rozmiar i typy danych parametrów. Na przykład korzystając z obiektu COM, który akceptuje jako argument obiektu kolekcji Visual Basic 6.0, nie może dostarczyć kolekcji z nowszej wersji programu Visual Basic.  
   
- Właściwości i metody odziedziczona z klasy COM może zostać zastąpiona, co oznacza, że można zadeklarować lokalnego właściwości lub metody, które zastępuje właściwość lub dziedziczone z podstawową klasę com. Zasady zastępowania odziedziczone właściwości modelu COM są podobne do reguły zastępowania inne właściwości i metody z następującymi wyjątkami:  
+ Właściwości i metody dziedziczone z klasy COM można przesłonić, co oznacza, że można zadeklarować lokalnego właściwości lub metody, która zastępuje właściwość lub dziedziczone z klasy bazowej COM. Reguły zastępowania dziedziczonych właściwości modelu COM są podobne do reguł zastępowanie innych właściwości i metod z następującymi wyjątkami:  
   
--   Należy zastąpić wszystkie właściwości lub metody odziedziczona z klasy COM, należy zastąpić wszystkie odziedziczone właściwości i metody.  
+-   Jeśli zastąpisz każda właściwość lub metoda odziedziczoną z klasy COM muszą przesłaniać wszystkie odziedziczone właściwości i metody.  
   
--   Właściwości, które używają `ByRef` parametrów nie może zostać zastąpiona.  
+-   Właściwości, które używają `ByRef` parametrów nie może być zastąpiona.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Współdziałanie COM w aplikacjach .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  

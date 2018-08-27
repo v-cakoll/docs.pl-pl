@@ -1,31 +1,31 @@
 ---
 title: Operatory bitowe (F#)
-description: 'Więcej informacji na temat operatory bitowe, które są dostępne w języku programowania w języku F #.'
-ms.date: 05/16/2016
-ms.openlocfilehash: bc653ae7ff6dd6bc2c269aaba344f073df1fb708
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+description: 'Więcej informacji na temat operatory bitowe, które są dostępne w F # języka programowania.'
+ms.date: 07/20/2018
+ms.openlocfilehash: abd2778eba422b3ce2a3472efd458446854b3d2f
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33565330"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42933618"
 ---
 # <a name="bitwise-operators"></a>Operatory bitowe
 
 W tym temacie opisano operatory bitowe, które są dostępne w języku F #.
 
 ## <a name="summary-of-bitwise-operators"></a>Podsumowanie operatory bitowe
-W poniższej tabeli opisano operatory bitowe, które są obsługiwane w przypadku rozpakowany typy całkowite w języku F #.
+W poniższej tabeli opisano operatory bitowe, które są obsługiwane w przypadku rozpakowany typów całkowitych w języku F #.
 
 |Operator|Uwagi|
 |--------|-----|
-|`&&&`|Bitowy operator AND. Usługa BITS w wyniku ma wartość 1, tylko wtedy, gdy odpowiednich bitów w obu źródłowe argumenty operacji są 1.|
-|<code>&#124;&#124;&#124;</code>|Bitowy operator OR. Usługi BITS w wyniku ma wartość 1, jeśli dowolny z odpowiednich bitów w źródle argumenty operacji są 1.|
-|`^^^`|Operator wyłączny operator OR. Usługi BITS w wyniku ma wartość 1, tylko wtedy, gdy w źródłowe argumenty operacji mają nierówne wartości.|
-|`~~~`|Operator negacji bitowej. To jest operatora jednoargumentowego i zwraca wynik, w którym wszystkie bity 0 w operandu źródła są konwertowane na bitów 1 i wszystkie bity 1 są konwertowane na bitów 0.|
-|`<<<`|Bitowy operator przesunięcia w lewo. Wynik jest pierwszy argument operacji z bitami przesunięte liczbę bitów w drugi argument operacji po lewej. Bity przesunąć poza najbardziej znaczących pozycji nie są obracane do najmniej znaczący pozycji. Najmniej znaczących bitów jest uzupełniana zerami z. Typ drugiego argumentu jest `int32`.|
-|`>>>`|Bitowy operator przesunięcia w prawo. Wynik jest pierwszym argumentem z bitami przesunięte liczbę bitów w drugi argument operacji po prawej. Bity przesunąć poza najmniej znaczący pozycji nie są obracane do najważniejszych pozycji. Typy bez znaku, aby uzyskać najbardziej znaczących bitów jest uzupełniana zerami z. Typy ze znakiem, aby uzyskać najbardziej znaczących bitów są dopełniane przy tych. Typ drugiego argumentu jest `int32`.|
+|`&&&`|Bitowy operator AND. Usługi BITS w wyniku ma wartość 1, tylko wtedy, gdy odpowiednich bitów w oba operandy źródło to 1.|
+|<code>&#124;&#124;&#124;</code>|Bitowy operator OR. Usługa BITS w wyniku ma wartość 1, jeśli odpowiednich bitów w źródle operandy są 1.|
+|`^^^`|Bitowe or wyłączny operator OR. Usługa BITS w wyniku ma wartość 1, tylko wtedy, gdy usługi bits w źródłowe argumenty operacji mają różne wartości.|
+|`~~~`|Operator negacji bitowej. Jest operator jednoargumentowy i daje wynik, w którym wszystkie bity 0 w operandu źródła są konwertowane na bitów 1, a wszystkie bity 1 są konwertowane na bitów 0.|
+|`<<<`|Bitowy operator przesunięcia w lewo. Wynik jest pierwszy operand z bitami przesunięte liczbę bitów w drugim argumencie operacji po lewej stronie. Przesunięte poza pozycji najbardziej znaczące bity nie są obracane do najmniej znaczących określonej pozycji. Co najmniej znaczące bity są dopełniane zerami. Typ drugiego argumentu jest `int32`.|
+|`>>>`|Bitowy operator przesunięcia w prawo. Wynik jest pierwszym operandem z bitami przesunięte w prawo o liczbę bitów w drugim argumencie operacji. Bity przesunięte poza najmniej znaczący pozycji nie są obracane do najważniejszych pozycji. Typy bez znaku, aby uzyskać najbardziej znaczące bity są dopełniane zerami. Na typy ze znakiem z wartości ujemnych najbardziej znaczące bity są dopełniane przy użyciu tych. Typ drugiego argumentu jest `int32`.|
 
-Następujące typy mogą być używane z bitowego operatory: `byte`, `sbyte`, `int16`, `uint16`, `int32 (int)`, `uint32`, `int64`, `uint64`, `nativeint`, i `unativeint`.
+Następujące typy mogą być używane z operatorów bitowe: `byte`, `sbyte`, `int16`, `uint16`, `int32 (int)`, `uint32`, `int64`, `uint64`, `nativeint`, i `unativeint`.
 
 ## <a name="see-also"></a>Zobacz też
 [Odwołanie do symboli i operatorów](index.md)

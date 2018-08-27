@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - keywords [C#], exception handling
 ms.assetid: 6d0323a3-3164-411c-9b84-a3606bd0e13c
-ms.openlocfilehash: 1b429ce3c5838a824f9b6799332bc810bd3a5a82
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d48981e0d36053fce1249b27cd15551ed59dc91
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213226"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931088"
 ---
 # <a name="exception-handling-statements-c-reference"></a>Instrukcje obsługi wyjątków (odwołanie w C#)
-C# udostępnia wbudowaną obsługę nietypowych sytuacjach, znane jako wyjątki, które mogą wystąpić podczas wykonywania programu obsługi. Wyjątki te są obsługiwane przez kod, który znajduje się poza przepływu sterowania.  
+C# udostępnia wbudowaną obsługę obsługi nietypowych sytuacjach, znane jako wyjątki, które mogą wystąpić podczas wykonywania programu. Te wyjątki są obsługiwane przez kod, który znajduje się poza normalny przepływ sterowania.  
   
- W tej sekcji objaśniono następujące tematy obsługi wyjątków:  
+ W poniższych tematach obsługi wyjątków są szczegółowo opisane w tej sekcji:  
   
 -   [throw](../../../csharp/language-reference/keywords/throw.md)  
   
@@ -25,8 +25,9 @@ C# udostępnia wbudowaną obsługę nietypowych sytuacjach, znane jako wyjątki,
 -   [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
- [Słowa kluczowe instrukcji](../../../csharp/language-reference/keywords/statement-keywords.md)  
- [Wyjątki i obsługa wyjątków](../../../csharp/programming-guide/exceptions/index.md)
+
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
+- [Słowa kluczowe instrukcji](../../../csharp/language-reference/keywords/statement-keywords.md)  
+- [Wyjątki i obsługa wyjątków](../../../csharp/programming-guide/exceptions/index.md)

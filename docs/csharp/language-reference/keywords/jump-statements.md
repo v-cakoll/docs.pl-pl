@@ -5,15 +5,15 @@ helpviewer_keywords:
 - jump statements [C#]
 - branch statements [C#]
 ms.assetid: 58da6ae7-7388-491e-828f-e74485d87d53
-ms.openlocfilehash: 363e0cfa9d31479caeb8c71e2454db3e28d372bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1eb72fc599eae85b6c51b5030ffcd5072b7d7cef
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265223"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934103"
 ---
 # <a name="jump-statements-c-reference"></a>Instrukcje skoku (odwołanie w C#)
-Rozgałęzianie odbywa się przy użyciu instrukcje skoku, które powodują natychmiastowego przekazanie sterowania programu. Poniższe słowa kluczowe są używane w instrukcjach przeskoku:  
+Rozgałęzianie odbywa się przy użyciu instrukcji skoku, które powodują natychmiastowe przekazywanie sterowania programem. Następujące słowa kluczowe są używane w instrukcji skoku:  
   
 -   [break](../../../csharp/language-reference/keywords/break.md)  
   
@@ -25,8 +25,9 @@ Rozgałęzianie odbywa się przy użyciu instrukcje skoku, które powodują naty
   
 -   [throw](../../../csharp/language-reference/keywords/throw.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
- [Słowa kluczowe instrukcji](../../../csharp/language-reference/keywords/statement-keywords.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
+- [Słowa kluczowe instrukcji](../../../csharp/language-reference/keywords/statement-keywords.md)

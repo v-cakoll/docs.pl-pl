@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6c7bf332d829a440fe216756f7a23ec1277e6c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c9babd5e50166be2c2d1b7bc32a5fc11d1ad8ba9
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449289"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930567"
 ---
 # <a name="imetadataassemblyimportfindassembliesbyname-method"></a>IMetaDataAssemblyImport::FindAssembliesByName — Metoda
-Pobiera tablicę zestawy z określonym `szAssemblyName` parametr, przy użyciu standardowych zasad stosowanych przez środowisko uruchomieniowe języka wspólnego (CLR) do rozpoznawania odwołań.  
+Pobiera tablicę elementów zestawów z określonym `szAssemblyName` parametru, przy użyciu standardowych zasad stosowanych przez środowisko uruchomieniowe języka wspólnego (CLR) do rozpoznawania odwołań.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,38 +42,38 @@ HRESULT FindAssembliesByName (
   
 #### <a name="parameters"></a>Parametry  
  `szAppBase`  
- [in] Katalog główny wyszukiwania dla danego zestawu. Jeśli ta wartość jest równa `null`, `FindAssembliesByName` będzie szukać tylko w pamięci podręcznej GAC zestawu.  
+ [in] Katalog główny, w których należy szukać w danym zestawie. Jeśli ta wartość jest równa `null`, `FindAssembliesByName` będzie szukać tylko w globalnej pamięci podręcznej zestawów.  
   
  `szPrivateBin`  
- [in] Lista Rozdzielana średnikami podkatalogi (na przykład "bin; pojemnik 2"), w obszarze katalogu głównego, w których będą poszukiwane zestawu. Te katalogi są sondowany oprócz tych określonych w domyślnym sondowanie zasad.  
+ [in] Lista Rozdzielana średnikami (na przykład "bin; bin2"), zestawu podkatalogów w katalogu głównym, w których należy szukać zestawu. Te katalogi są sondowany oprócz tych określonych w domyślnych sondowania zasad.  
   
  `szAssemblyName`  
- [in] Nazwa zestawu można znaleźć. Format ten ciąg jest zdefiniowany w odwołaniu klasy dla <xref:System.Reflection.AssemblyName>.  
+ [in] Nazwa zestawu, aby znaleźć. Format ten ciąg jest zdefiniowany w stronie dokumentacji klasy <xref:System.Reflection.AssemblyName>.  
   
  `ppIUnk`  
- [in] Tablica typu <<!--zzxref:IUnknown --> `IUnknown`> w której chcesz umieścić `IMetadataAssemblyImport` wskaźniki interfejsu.  
+ [in] Tablica typu [IUnknown](/cpp/atl/iunknown) w której chcesz umieścić `IMetadataAssemblyImport` wskaźniki interfejsu.  
   
  `cMax`  
- [out] Maksymalna liczba wskaźniki interfejsu, które można umieścić w `ppIUnk`.  
+ [out] Maksymalna liczba wskaźniki interfejsu, które mogą być umieszczane w `ppIUnk`.  
   
  `pcAssemblies`  
- [out] Zwrócono liczbę wskaźniki interfejsu. Oznacza to, że liczba wskaźniki interfejsu faktycznie umieszczonych w `ppIUnk`.  
+ [out] Zwrócono liczbę wskaźniki interfejsu. Oznacza to, że numer wskaźniki interfejsu faktycznie umieszczonych w `ppIUnk`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`FindAssembliesByName` zwrócona pomyślnie.|  
+|`S_OK`|`FindAssembliesByName` pomyślnie zwrócił.|  
 |`S_FALSE`|Nie ma żadnych zestawów.|  
   
 ## <a name="remarks"></a>Uwagi  
- Podana nazwa zestawu `FindAssembliesByName` metoda znajdzie zestawu wykonując standardowych zasad rozpoznawania odwołań do zestawu. (Aby uzyskać więcej informacji, zobacz [jak zestawy środowiska wykonawczego lokalizuje](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).) `FindAssembliesByName` umożliwia obiekt wywołujący, aby skonfigurować różne aspekty kontekst rozpoznawania zestawu, takie jak ścieżka wyszukiwania podstawowego i prywatnych aplikacji.  
+ Podana nazwa zestawu, `FindAssembliesByName` metoda znajdzie zestawu, wykonując standardowe reguły rozpoznawania odwołań do zestawów. (Aby uzyskać więcej informacji, zobacz [jak środowisko uruchomieniowe lokalizuje zestawy](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).) `FindAssembliesByName` umożliwia obiektowi wywołującemu skonfigurować różne aspekty kontekstu mechanizm rozpoznawania zestawów, takich jak ścieżki wyszukiwania podstawowego i prywatne aplikacji.  
   
- `FindAssembliesByName` Metoda wymaga środowiska CLR do zainicjowania procesu w celu wywołania logiki rozpoznawania zestawu. W związku z tym należy wywołać [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) (przekazywanie COINITEE_DEFAULT) przed wywołaniem `FindAssembliesByName`, a następnie postępuj zgodnie z wywołaniem do [CoUninitializeCor](../../../../docs/framework/unmanaged-api/hosting/couninitializecor-function.md).  
+ `FindAssembliesByName` Metoda wymaga środowiska CLR do zainicjowania procesu w celu wywołania logiki rozpoznawania zestawu. W związku z tym, należy wywołać [coinitializeee —](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) (przekazywanie COINITEE_DEFAULT) przed wywołaniem `FindAssembliesByName`, a następnie postępuj zgodnie z wywołaniem [couninitializecor —](../../../../docs/framework/unmanaged-api/hosting/couninitializecor-function.md).  
   
- `FindAssembliesByName` Zwraca [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) wskaźnika do pliku zawierającego manifest zestawu dla nazwy zestawu, który jest przekazywany w. Jeśli podana nazwa zestawu nie określono pełni (na przykład, jeśli nie ma wersji), może być zwrócony wiele zestawów.  
+ `FindAssembliesByName` Zwraca [imetadataimport —](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) wskaźnika do pliku zawierającego manifest zestawu dla nazwy zestawu, który jest przekazywany w. Jeśli nazwa danego zestawu nie jest w pełni określona (na przykład, jeśli nie ma wersji), może zostać zwrócona wiele zestawów.  
   
- `FindAssembliesByName` to powszechnie używane przez kompilator, który próbuje odnaleźć przywoływanego zestawu w czasie kompilacji.  
+ `FindAssembliesByName` najczęściej jest używana przez kompilator, który próbuje odnaleźć przywoływanego zestawu w czasie kompilacji.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

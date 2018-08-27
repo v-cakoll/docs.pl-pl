@@ -6,42 +6,42 @@ helpviewer_keywords:
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
 ms.openlocfilehash: 60e4c6e98ca9e71d1a095a0c7ee1df6be6d13f4b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334353"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934876"
 ---
 # <a name="namespaces-c-programming-guide"></a>Przestrzenie nazw (Przewodnik programowania w języku C#)
-Przestrzenie nazw silnie są używane w na dwa sposoby programowania w języku C#. Najpierw .NET Framework używa przestrzeni nazw do organizowania jego wiele klas w następujący sposób:  
+Przestrzenie nazw są intensywnie używane w języku C# programming na dwa sposoby. Po pierwsze .NET Framework używa przestrzeni nazw do organizowania jego wiele klas w następujący sposób:  
   
  [!code-csharp[csProgGuide#22](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_1.cs)]  
   
- `System` jest przestrzenią nazw i `Console` jest klasą w tej przestrzeni nazw. `using` Można można użyć słowa kluczowego, dzięki czemu Pełna nazwa nie jest wymagane, jak w poniższym przykładzie:  
+ `System` jest to obszar nazw i `Console` jest klasą w tej przestrzeni nazw. `using` — Słowo kluczowe może służyć tak, aby pełna nazwa nie jest wymagane, jak w poniższym przykładzie:  
   
  [!code-csharp[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_2.cs)]  
   
  [!code-csharp[csProgGuide#25](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_3.cs)]  
   
- Aby uzyskać więcej informacji, zobacz [dyrektywa using](../../../csharp/language-reference/keywords/using-directive.md).  
+ Aby uzyskać więcej informacji, zobacz [użycie dyrektywy](../../../csharp/language-reference/keywords/using-directive.md).  
   
- Po drugie deklarowanie własnych przestrzeni nazw ułatwia kontrolowanie zakresu nazw klasy i metody w większych projektów programowania. Użyj [przestrzeni nazw](../../../csharp/language-reference/keywords/namespace.md) słowo kluczowe, aby zadeklarować przestrzeni nazw, jak w poniższym przykładzie:  
+ Po drugie deklarowania własne przestrzenie nazw mogą pomóc Ci kontrolować zakres nazwy klasy i metody w dużych projektach programowania. Użyj [przestrzeni nazw](../../../csharp/language-reference/keywords/namespace.md) — słowo kluczowe do deklarowania, przestrzeń nazw, jak w poniższym przykładzie:  
   
  [!code-csharp[csProgGuideNamespaces#6](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/index_4.cs)]  
   
-## <a name="namespaces-overview"></a>Omówienie przestrzenie nazw  
- Przestrzenie nazw ma następujące właściwości:  
+## <a name="namespaces-overview"></a>Przegląd przestrzeni nazw  
+ Przestrzenie nazw mają następujące właściwości:  
   
 -   Ich organizowanie kodu dużych projektów.  
   
 -   Są rozdzielane przy użyciu `.` operatora.  
   
--   `using directive` Eliminuje konieczność Określ nazwę obszaru nazw dla każdej klasy.  
+-   `using directive` Eliminuje konieczność określenia nazwy obszaru nazw dla każdej klasy.  
   
--   `global` Przestrzeni nazw jest przestrzenią nazw "root": `global::System` zawsze odwołuje się do przestrzeni nazw .NET Framework `System`.  
+-   `global` Przestrzeń nazw jest przestrzeń nazw "root": `global::System` zawsze będzie odnosił się do przestrzeni nazw .NET Framework `System`.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- Zobacz następujące tematy, aby uzyskać więcej informacji o przestrzeni nazw:  
+ Zobacz następujące tematy, aby uzyskać więcej informacji na temat przestrzenie nazw:  
   
 -   [Używanie przestrzeni nazw](../../../csharp/programming-guide/namespaces/using-namespaces.md)  
   

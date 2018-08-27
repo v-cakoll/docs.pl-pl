@@ -10,27 +10,27 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: 1e1efd6db6efa3a0b85d7d7794be7d3728da8c85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93eda6d6a13d6a510f2aeb06ab1c66d0cd40927f
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557514"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931543"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Rozszerz szklaną klatkę na aplikację WPF
-W tym temacie przedstawiono sposób rozszerzyć [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] szkła ramki do obszaru klienckiego aplikacji Windows Presentation Foundation (WPF).  
+W tym temacie pokazano, jak rozszerzyć [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] szklaną klatkę do obszaru klienckiego aplikacji Windows Presentation Foundation (WPF).  
   
 > [!NOTE]
->  W tym przykładzie będzie działać tylko na [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] maszyny z systemem Menedżera okien pulpitu (DWM) z szkła włączone. [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] Home edition podstawowa nie obsługuje efekt szkła przezroczysty. Obszary, które zwykle pozbawia efekt szkła przezroczysty na inne wersje [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] są renderowane przezroczystości.  
+>  W tym przykładzie będą działać tylko na [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] maszyny z systemem Menedżera okien pulpitu (DWM) przy użyciu szkła włączone. [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] Macierzysty wersji podstawowa nie obsługuje efekt szkła przezroczysty. Obszary, które zazwyczaj będzie renderowania przy użyciu efektu szkła przezroczyste w innych wersjach [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] — zostaną zrenderowane nieprzezroczystości.  
   
 ## <a name="example"></a>Przykład  
- Na poniższym obrazie przedstawiono szkła ramki rozszerzony do adresu pasek programu Internet Explorer 7.  
+ Na poniższym obrazie przedstawiono szklaną klatkę rozszerzony do adresu pasek w programie Internet Explorer 7.  
   
- **Program Internet Explorer z rozszerzonego szkła ramki za paska adresu.**  
+ **Internet Explorer przy użyciu rozszerzonych szklaną klatkę poza pasek adresu.**  
   
- ![IE7 szkła ramki rozszerzony poza pasek adresu. ] (../../../../docs/framework/wpf/graphics-multimedia/media/ie7glasstopbar.PNG "IE7glasstopbar")  
+ ![IE7 ramki szkła rozszerzony poza pasek adresu. ](../../../../docs/framework/wpf/graphics-multimedia/media/ie7glasstopbar.PNG "IE7glasstopbar")  
   
- Aby rozszerzyć szkła ramki na [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji, dostęp do niezarządzanego [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] jest wymagana. Poniższy przykładowy kod jest wywołanie platformy (pinvoke) dla dwóch [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] spełnić w celu rozszerzenia ramki do obszaru klienckiego. Każdy z tych [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] został zadeklarowany w klasie o nazwie **NonClientRegionAPI**.  
+ Aby rozszerzyć szklaną klatkę na [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji, dostęp do niezarządzanego [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] jest wymagana. Poniższy przykład kodu jest wywołanie platformy (funkcja pinvoke) dla dwóch [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] spełnić w celu rozszerzenia ramki do obszaru klienckiego. Każda z tych [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] są zadeklarowane w klasie o nazwie **NonClientRegionAPI**.  
   
 ```csharp  
 [StructLayout(LayoutKind.Sequential)]  
@@ -62,10 +62,10 @@ public static extern int DwmExtendFrameIntoClientArea(
         End Function  
 ```  
   
- [DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx) jest funkcja Menedżera okien pulpitu, rozszerzający ramki do obszaru klienckiego. Trwa dwóch parametrów; uchwyt okna i [MARGINESY](https://msdn.microsoft.com/library/bb773244.aspx) struktury. [MARGINESY](https://msdn.microsoft.com/library/bb773244.aspx) informuje Menedżera okien pulpitu, ile bardzo ramki powinien zostać rozszerzony do obszaru klienckiego.  
+ [Dwmextendframeintoclientarea —](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) jest funkcją Menedżera okien pulpitu, która obejmuje ramki obszaru klienta. Trwa dwóch parametrów; uchwyt okna i [MARGINESY](/windows/desktop/api/uxtheme/ns-uxtheme-_margins) struktury. [MARGINESY](/windows/desktop/api/uxtheme/ns-uxtheme-_margins) informuje Menedżera okien pulpitu, ile dodatkowych ramki powinien zostać rozszerzony do obszaru klienckiego.  
   
 ## <a name="example"></a>Przykład  
- Aby użyć [DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx) funkcji, należy uzyskać uchwytu okna. W [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], można uzyskać uchwytu okna <xref:System.Windows.Interop.HwndSource.Handle%2A> właściwość <xref:System.Windows.Interop.HwndSource>. W poniższym przykładzie ramki jest rozszerzony do obszaru klienckiego na <xref:System.Windows.FrameworkElement.Loaded> zdarzenia okna.  
+ Aby użyć [dwmextendframeintoclientarea —](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) funkcji, należy uzyskać uchwyt okna. W [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], uchwyt okna można uzyskać z <xref:System.Windows.Interop.HwndSource.Handle%2A> właściwość <xref:System.Windows.Interop.HwndSource>. W poniższym przykładzie ramki jest rozszerzany do obszaru klienckiego na <xref:System.Windows.FrameworkElement.Loaded> zdarzeń okna.  
   
 ```csharp  
 void OnLoaded(object sender, RoutedEventArgs e)  
@@ -109,7 +109,7 @@ void OnLoaded(object sender, RoutedEventArgs e)
 ```  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono prosty okna, w którym ramki jest rozszerzony do obszaru klienckiego. Ramki jest rozszerzona za górnej krawędzi, która zawiera dwa <xref:System.Windows.Controls.TextBox> obiektów.  
+ Proste okno, w którym ramki jest rozszerzony do obszaru klienckiego można znaleźć w poniższym przykładzie. Ramki jest rozszerzona za górne krawędzie, który zawiera dwa <xref:System.Windows.Controls.TextBox> obiektów.  
   
 ```xaml  
 <Window x:Class="SDKSample.Window1"  
@@ -143,13 +143,13 @@ void OnLoaded(object sender, RoutedEventArgs e)
 </Window>  
 ```  
   
- Na poniższym obrazie przedstawiono szkła ramki rozszerzone do postaci [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji.  
+ Na poniższym obrazie przedstawiono szklaną klatkę rozszerzone do postaci [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji.  
   
- **Szkła ramki rozszerzone do postaci**[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]**aplikacji.**  
+ **Ramki szkła rozszerzone do postaci**[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]**aplikacji.**   
   
- ![Szkła ramki rozszerzonych w aplikacji WPF. ] (../../../../docs/framework/wpf/graphics-multimedia/media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")  
+ ![Szkła ramki rozszerzone do postaci aplikacji WPF. ](../../../../docs/framework/wpf/graphics-multimedia/media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")  
   
 ## <a name="see-also"></a>Zobacz też  
- [Omówienie Menedżera okien pulpitu](https://msdn.microsoft.com/library/aa969540.aspx)  
- [Omówienie rozmycia Menedżera okien pulpitu](https://msdn.microsoft.com/library/aa969537.aspx)  
- [DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx)
+ [Omówienie Menedżera okien pulpitu](/windows/desktop/dwm/dwm-overview)  
+ [Omówienie Rozmycie Menedżera okien pulpitu](/windows/desktop/dwm/blur-ovw)  
+ [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea)

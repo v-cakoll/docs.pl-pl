@@ -1,5 +1,5 @@
 ---
-title: Biblioteki dodatkowe klasy i interfejsy API
+title: Dodatkowe biblioteki klas i interfejsów API
 ms.date: 01/29/2018
 helpviewer_keywords:
 - Additional class libraries
@@ -9,37 +9,37 @@ helpviewer_keywords:
 ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bdba02feb8cacc6ab1886c12f88716184aa2a81a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 049268c29946e95ca7bb194f6cae38baf8f060f6
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752432"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933533"
 ---
-# <a name="additional-class-libraries-and-apis"></a>Biblioteki dodatkowe klasy i interfejsy API
+# <a name="additional-class-libraries-and-apis"></a>Dodatkowe biblioteki klas i interfejsów API
 
-Stale ewoluuje programu .NET Framework i wydania w celu ulepszania wiele platform lub wprowadzenie nowych funkcji wcześniej dla naszych klientów, nowych funkcji poza pasmem (OOB). Ten temat zawiera listę projektów OOB, które firma Microsoft udostępnia w dokumentacji.  
+Jest stale rozwijana i .NET Framework. Aby poprawić programowanie dla wielu platform i wprowadzać nowe funkcjonalności wcześnie, nowe funkcje są wydawane poza pasmem (OOB). Ten temat zawiera listę projektów OOB, które firma Microsoft zapewnia dokumentacji.  
   
-Ponadto niektóre biblioteki docelowych określonych platform lub implementacji programu .NET Framework. Na przykład <xref:System.Text.CodePagesEncodingProvider> klasy udostępnia kodowania strony kodu do aplikacji platformy uniwersalnej systemu Windows opracowana za pomocą programu .NET Framework. W tym temacie wymieniono także tych bibliotek.  
+Ponadto niektóre biblioteki kierować konkretnych platform lub implementacji .NET Framework. Na przykład <xref:System.Text.CodePagesEncodingProvider> klasy sprawia, że stron kodowych są dostępne dla aplikacji platformy uniwersalnej systemu Windows, opracowane przy użyciu programu .NET Framework. Ten temat zawiera również tych bibliotek.  
   
 ## <a name="oob-projects"></a>Projekty OOB
   
 | Projekt | Opis |  
 | ------- | ----------- |  
-| <xref:System.Collections.Immutable> | Zawiera kolekcje, które są wątkowo bezpieczne i zagwarantowanie odpowiednich nigdy nie ulegną zmianie ich zawartość. |
-| <xref:System.Net.Http.WinHttpHandler> | Udostępnia program obsługi komunikatów dla <xref:System.Net.Http.HttpClient> oparte na interfejsie WinHTTP systemu Windows. |
-| [System.Numerics.Vectors](https://msdn.microsoft.com/library/mt452176.aspx) | Udostępnia bibliotekę typów wektora, które można wykorzystać SIMD przyspieszanie sprzętowe.| 
-| <xref:System.Threading.Tasks.Dataflow> | Biblioteka przepływu danych tpl zawiera składniki przepływu danych, aby zwiększyć niezawodność aplikacji z obsługą współbieżności. |  
+| <xref:System.Collections.Immutable> | Zawiera kolekcje, które są wątkowo bezpieczne i gwarancji nigdy nie zmieni się ich zawartości. |
+| <xref:System.Net.Http.WinHttpHandler> | Udostępnia program obsługi komunikatów dla <xref:System.Net.Http.HttpClient> oparte na interfejsie WinHTTP Windows. |
+| [System.Numerics.Vectors](https://msdn.microsoft.com/library/mt452176.aspx) | Zawiera bibliotekę typy wektorowe, które mogą korzystać SIMD przyspieszanie sprzętowe.| 
+| <xref:System.Threading.Tasks.Dataflow> | Biblioteka przepływu danych TPL zapewnia składników przepływu danych, aby zwiększyć niezawodność aplikacji obsługujących współbieżności. |  
 
-## <a name="platform-specific-libraries"></a>Biblioteki specyficzne dla platformy
+## <a name="platform-specific-libraries"></a>Biblioteki charakterystyczne dla platformy
   
 | Projekt | Opis |  
 | ------- | ----------- |  
-| <xref:System.Text.CodePagesEncodingProvider> | Rozszerza <xref:System.Text.EncodingProvider> klasy, aby udostępnić kodowania strony kodu aplikacji przeznaczonych dla platformy uniwersalnej systemu Windows. |  
+| <xref:System.Text.CodePagesEncodingProvider> | Rozszerza <xref:System.Text.EncodingProvider> klasy w celu udostępnienia aplikacji przeznaczonych dla platformy uniwersalnej Windows stron kodowych. |  
   
-## <a name="private-apis"></a>Interfejsy API prywatnych  
+## <a name="private-apis"></a>Interfejsy API z prywatnym  
 
-Te interfejsy API obsługuje infrastrukturę programu produktu i nie są/obsługiwane przeznaczonych do użycia bezpośrednio w kodzie.  
+Te interfejsy API obsługuje infrastrukturę produktu i nie/obsługiwanych przeznaczonych do użycia bezpośrednio w kodzie.  
   
 | Nazwa interfejsu API |
 | -------- |

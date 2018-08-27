@@ -8,12 +8,12 @@ helpviewer_keywords:
 - float keyword [C#]
 - floating-point numbers [C#], float keyword
 ms.assetid: 1e77db7b-dedb-48b7-8dd1-b055e96a9258
-ms.openlocfilehash: 9500aceed62904e68d6b7ee8bec569d12103bb18
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 98f89ba3d79f7679b69ce10fd875b3caf69c5257
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "40239882"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932913"
 ---
 # <a name="float-c-reference"></a>float (odwołanie w C#)
 
@@ -21,7 +21,7 @@ ms.locfileid: "40239882"
 
 |Typ|Przybliżony zakres|Dokładność|Typ architektury .NET|  
 |----------|-----------------------|---------------|-------------------------|  
-|`float`|-3,4 x 10<sup>38</sup> do + 3,4 x 10<sup>38</sup>|7 cyfr|<xref:System.Single?displayProperty=nameWithType>|  
+|`float`|±1.5 x 10<sup>−45</sup> do ±3.4 x 10<sup>38</sup>|7 cyfr|<xref:System.Single?displayProperty=nameWithType>|  
 
 ## <a name="literals"></a>Literały
 
@@ -37,9 +37,9 @@ Jeśli nie używasz sufiks w poprzedniej deklaracji, otrzymasz błąd kompilacji
 
 Możesz mieszać liczbowych typów całkowitych i zmiennoprzecinkowych w wyrażeniu. W tym przypadku typów całkowitych są konwertowane do typów zmiennoprzecinkowych. Obliczania wyrażenia odbywa się zgodnie z następującymi zasadami:
 
-- Po spełnieniu jednego z typów zmiennoprzecinkowych [double](double.md), wyrażenie ma [double](double.md) lub [bool](bool.md) w wyrażeniach relacyjnych lub wartości logicznej.
+- Po spełnieniu jednego z typów zmiennoprzecinkowych [double](double.md), wyrażenie ma [double](double.md), lub [bool](bool.md) w porównania relacyjne i porównania dla równości.
 
-- W przypadku nie [double](double.md) wpisz wyrażenie wyrażenie daje w wyniku `float` lub [bool](bool.md) w wyrażeniach relacyjnych lub wartości logicznej.
+- W przypadku nie [double](double.md) wpisz wyrażenie wyrażenie daje w wyniku `float`, lub [bool](bool.md) w porównania relacyjne i porównania dla równości.
 
 Wyrażenie typu zmiennoprzecinkowego może zawierać następujące zestawy wartości:
 
@@ -65,12 +65,12 @@ W poniższym przykładzie [int](int.md), [krótki](short.md), a `float` są zawa
 
 ## <a name="see-also"></a>Zobacz także
 
-<xref:System.Single>  
-[Dokumentacja języka C#](../index.md)  
-[Przewodnik programowania w języku C#](../../programming-guide/index.md)  
-[Rzutowanie i konwersje typów](../../programming-guide/types/casting-and-type-conversions.md)  
-[Słowa kluczowe języka C#](index.md)  
-[Tabela typów całkowitych](integral-types-table.md)  
-[Tabela typów wbudowanych](built-in-types-table.md)  
-[Tabela niejawnych konwersji liczbowych](implicit-numeric-conversions-table.md)  
-[Tabela jawnych konwersji liczbowych](explicit-numeric-conversions-table.md)  
+- <xref:System.Single>  
+- [Dokumentacja języka C#](../index.md)  
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)  
+- [Rzutowanie i konwersje typów](../../programming-guide/types/casting-and-type-conversions.md)  
+- [Słowa kluczowe języka C#](index.md)  
+- [Tabela typów całkowitych](integral-types-table.md)  
+- [Tabela typów wbudowanych](built-in-types-table.md)  
+- [Tabela niejawnych konwersji liczbowych](implicit-numeric-conversions-table.md)  
+- [Tabela jawnych konwersji liczbowych](explicit-numeric-conversions-table.md)  

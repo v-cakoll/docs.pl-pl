@@ -1,5 +1,5 @@
 ---
-title: Specyfikacja języka C# w wersji 6.0
+title: Specyfikacja języka C# 6.0
 ms.date: 05/22/2018
 ms.topic: language-reference
 helpviewer_keywords:
@@ -8,26 +8,27 @@ helpviewer_keywords:
 - Visual C#, C# language specification
 - language specification [C#]
 ms.assetid: e5d5a5cc-636b-4bff-b9c8-a8edc6207c22
-ms.openlocfilehash: 5ed035d5e1e524de9f86254d03e3276966293bf6
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: 976282ab51ec3e9990161abf2dd089798bd949dd
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472792"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931279"
 ---
-# <a name="c-60-draft-language-specification"></a>Specyfikacja języka C# w wersji 6.0
+# <a name="c-60-draft-language-specification"></a>Specyfikacja języka C# 6.0
 
-Specyfikacja języka C# jest ostatecznym źródłem informacji o składni i użyciu C#. Określenie tej wartości zawiera szczegółowe informacje dotyczące wszystkich aspektów języka, w tym wiele punktów, których nie opisano w dokumentacji C#.
+Specyfikacja języka C# to ostateczne źródło C# składni i użycia. Tej specyfikacji zawiera szczegółowe informacje dotyczące wszystkich aspektów języka, łącznie z wieloma punktami, których nie obejmuje dokumentacja dla języka C#.
 
-Wersja 5.0 specyfikacji została wydana w grudniu 2017 jako [standardowe ECMA-334 5. Wersja](https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-334.pdf) dokumentu.
+Wersja 5.0 specyfikacji wydano w grudniu 2017 r jako [Standard ECMA-334 5th Edition](https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-334.pdf) dokumentu.
 
-W wersji 6.0 specyfikacji nie została zatwierdzona jako standard. Ta witryna zawiera [ *projekt* specyfikacji języka C# w wersji 6.0](../../../../_csharplang/spec/introduction.md). Jest zbudowany zawartych w plikach markdown [repozytorium GitHub dotnet/csharplang](https://github.com/dotnet/csharplang/blob/master/spec/README.md).
+W wersji 6.0 specyfikacji wersji składnika nie została zatwierdzona jako standardowa. Ta witryna zawiera [ *projekt* specyfikacji języka C# 6.0](../../../../_csharplang/spec/introduction.md). Jest zbudowany pliki markdown znajdujące się w [dotnet/csharplang GitHub repozytorium](https://github.com/dotnet/csharplang/blob/master/spec/README.md).
 
-Kwestie dotyczące specyfikacji wersji roboczej należy utworzyć w [dotnet/csharplang](https://github.com/dotnet/csharplang/issues) repozytorium. Lub, jeśli interesuje Cię poprawiania błędów można znaleźć, możesz przesłać [żądanie ściągnięcia](https://github.com/dotnet/csharplang/pulls) do tego samego repozytorium.
+Problemy ze specyfikacji wersji roboczej należy utworzyć w [dotnet/csharplang](https://github.com/dotnet/csharplang/issues) repozytorium. Lub, jeśli interesują Cię poprawiania błędów można znaleźć, możesz przesłać [żądania ściągnięcia](https://github.com/dotnet/csharplang/pulls) na tym samym repozytorium.
 
 ## <a name="see-also"></a>Zobacz także
- [Odwołanie w C#](../index.md)  
- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+
+- [Dokumentacja języka C#](../index.md)  
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 
 >[!div class="step-by-step"]
 [Next](../../../../_csharplang/spec/introduction.md)

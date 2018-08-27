@@ -1,6 +1,6 @@
 ---
 title: Funkcja ExecQueryWmi (niezarządzany wykaz interfejsów API)
-description: Funkcja ExecQueryWmi wykonuje zapytanie w celu pobrania obiektów.
+description: Funkcja ExecQueryWmi wykonuje zapytanie, aby pobrać obiekty.
 ms.date: 11/06/2017
 api_name:
 - ExecQueryWmi
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b482f2ca2e2d5c06e69945adb71aa6c0f5d26465
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dc22edf51cbd726b69dff3da2f0540b2c3864f2e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33462094"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929629"
 ---
 # <a name="execquerywmi-function"></a>Funkcja ExecQueryWmi
-Wykonuje zapytanie w celu pobrania obiektów.  
+Wykonuje zapytanie, aby pobrać obiekty.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -49,31 +49,31 @@ HRESULT ExecQueryWmi (
 ## <a name="parameters"></a>Parametry
 
 `strQueryLanguage`    
-[in] Ciąg z prawidłowego zapytania języka obsługiwanego przez zarządzanie systemem Windows. Musi być "WQL" akronim język zapytań usługi WMI.
+[in] Ciąg z językiem prawidłowe zapytanie obsługiwane przez Windows Management. Musi to być "WQL" akronim języka WMI Query Language.
 
 `strQuery`  
 [in] Tekst zapytania. Ten parametr nie może być `null`.
 
 `lFlags`   
-[in] Kombinacja flag, które wpływają na działanie tej funkcji. Następujące wartości są zdefiniowane w *WbemCli.h* pliku nagłówka, lub należy je zdefiniować jako stałe w kodzie: 
+[in] Kombinacja flag, które mają wpływ na zachowanie tej funkcji. Następujące wartości są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie: 
 
 | Stała | Wartość  | Opis  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Jeśli zestaw, funkcja pobiera poprawionych kwalifikatorów przechowywane w zlokalizowanych nazw ustawień regionalnych bieżącego połączenia. <br/> Jeśli nie zestawu, funkcja pobiera tylko kwalifikatory przechowywane w przestrzeni nazw bezpośrednim. |
-| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Flaga powoduje Półsynchroniczne wywołania. |
-| `WBEM_FLAG_FORWARD_ONLY` | 0x20 | Funkcja zwraca tylko do przodu modułu wyliczającego. Zwykle tylko do przodu moduły wyliczające są szybsze i używają mniej pamięci niż wyliczenia z konwencjonalnej, ale nie zezwalają na wywołania [klonowania](clone.md). |
-| `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI zachowuje wskaźników do obiektów w enumration, dopóki ich wydania. | 
-| `WBEM_FLAG_ENSURE_LOCATABLE` | 0x100 | Zapewnia żadnego zwracane obiekty mają wystarczającą ilość informacji w nich sposób tej właściwości systemu, takich jak **__PATH**, **pobieranie właściwości __RELPATH**, i **__SERVER**, nie są `null`. |
-| `WBEM_FLAG_PROTOTYPE` | 2 | Ta flaga jest wykorzystywana do tworzenia prototypów. Nie wykonuj zapytania, a zamiast tego zwraca obiekt, który wygląda jak obiekt wyniku typowych. |
-| `WBEM_FLAG_DIRECT_READ` | 0x200 | Przyczyny bezpośredni dostęp do dostawcy dla klasy określonej niezależnie od swojej klasy nadrzędnej lub podklasy. |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Jeśli zestaw, funkcja pobiera poprawionych kwalifikatorów, przechowywane w zlokalizowanych nazw ustawień regionalnych bieżącego połączenia. <br/> W przeciwnym razie zestawu, funkcja pobiera kwalifikatory przechowywanych w bezpośrednim przestrzeni nazw. |
+| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Flaga powoduje, że wywołanie półsynchronicznej. |
+| `WBEM_FLAG_FORWARD_ONLY` | 0x20 | Funkcja zwraca tylko do przodu modułu wyliczającego. Zwykle tylko do przodu moduły wyliczające są realizowane szybciej i używać mniej pamięci niż moduły wyliczające konwencjonalnych, ale nie zezwalają na wywołania [klonowania](clone.md). |
+| `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI zachowuje wskaźników do obiektów w enumration, dopóki ich wydaniu. | 
+| `WBEM_FLAG_ENSURE_LOCATABLE` | 0x100 | Zapewnia dowolnej zwracane obiekty mają wystarczającą ilość informacji w nich tak tej właściwości systemu, takie jak **__PATH**, **pobieranie właściwości __RELPATH**, i **__SERVER**, nie są `null`. |
+| `WBEM_FLAG_PROTOTYPE` | 2 | Ta flaga jest używana do tworzenia prototypów. Go nie jest wykonywane zapytanie, a zamiast tego zwraca obiekt, który wygląda jak obiekt wyniku typowe. |
+| `WBEM_FLAG_DIRECT_READ` | 0x200 | Powoduje, że bezpośredni dostęp do dostawcy dla klasy określona bez względu na swoją klasą nadrzędną lub podklasy. |
 
-Zalecane flagi są `WBEM_FLAG_RETURN_IMMEDIATELY` i `WBEM_FLAG_FORWARD_ONLY` najlepszą wydajność.
+Zalecane flagi są `WBEM_FLAG_RETURN_IMMEDIATELY` i `WBEM_FLAG_FORWARD_ONLY` uzyskać najlepszą wydajność.
 
 `pCtx`  
-[in] Ta wartość jest zazwyczaj `null`. W przeciwnym razie jest wskaźnik do [IWbemContext](https://msdn.microsoft.com/library/aa391465(v=vs.85).aspx) wystąpienie, które mogą być używane przez dostawcę, który dostarcza żądanej klasy. 
+[in] Ta wartość jest zazwyczaj `null`. W przeciwnym razie jest wskaźnikiem do [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) wystąpienie, które mogą być używane przez dostawcę, który dostarcza żądanej klasy. 
 
 `ppEnum`  
-[out] Jeśli nie występują błędy, uzyskuje wskaźnik do moduł wyliczający, który umożliwia obiekt wywołujący, aby pobrać wystąpień w zestawie wyników kwerendy. Zapytania mogą mieć zestaw wyników z wystąpień zero. Zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji.
+[out] Jeśli żaden błąd nie wystąpi, otrzymuje wskaźnik, aby moduł wyliczający, który umożliwia obiektowi wywołującemu, można pobrać wystąpień w zestawie wyników zapytania. Zapytanie może mieć zestaw wyników z zerową wystąpień. Zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji.
 
 `authLevel`  
 [in] Poziom autoryzacji.
@@ -81,7 +81,7 @@ Zalecane flagi są `WBEM_FLAG_RETURN_IMMEDIATELY` i `WBEM_FLAG_FORWARD_ONLY` naj
 `impLevel` [in] Poziom personifikacji.
 
 `pCurrentNamespace`   
-[in] Wskaźnik do [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) obiekt, który reprezentuje bieżącej przestrzeni nazw.
+[in] Wskaźnik do [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) obiekt, który reprezentuje bieżącej przestrzeni nazw.
 
 `strUser`   
 [in] Nazwa użytkownika. Zobacz [ConnectServerWmi](connectserverwmi.md) funkcji, aby uzyskać więcej informacji.
@@ -94,31 +94,31 @@ Zalecane flagi są `WBEM_FLAG_RETURN_IMMEDIATELY` i `WBEM_FLAG_FORWARD_ONLY` naj
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.h* pliku nagłówka, lub należy je zdefiniować jako stałe w kodzie:
+Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | Użytkownik nie ma uprawnień do wyświetlania przynajmniej jednej z klas, które może zwracać funkcji. |
 | `WBEM_E_FAILED` | 0x80041001 | Wystąpił nieokreślony błąd. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametr jest nieprawidłowy. |
-| `WBEM_E_INVALID_QUERY` | 0x80041017 | Zapytania wystąpił błąd składni. |
+| `WBEM_E_INVALID_QUERY` | 0x80041017 | Zapytania ma błąd składni. |
 | `WBEM_E_INVALID_QUERY_TYPE` | 0x80041018 | Żądany język kwerendy nie jest obsługiwane. |
 | `WBEM_E_QUOTA_VIOLATION` | 0x8004106c | Zapytanie jest zbyt złożony. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Za mało pamięci jest dostępna do wykonania operacji. |
-| `WBEM_E_SHUTTING_DOWN` | 0x80041033 | Usługa WMI jest prawdopodobnie zatrzymana i ponownie uruchomić. Wywołanie [ConnectServerWmi](connectserverwmi.md) ponownie. |
-| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Procedury zdalnej łącze wywołań (procedur RPC) między bieżącym procesem a usługą WMI nie powiodło się. |
-| `WBEM_E_NOT_FOUND` | 0x80041002 | Kwerenda Określa klasę, która nie istnieje. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Nie ma wystarczającej ilości pamięci jest dostępny do ukończenia tej operacji. |
+| `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI został prawdopodobnie zatrzymane i ponowne uruchamianie. Wywołaj [ConnectServerWmi](connectserverwmi.md) ponownie. |
+| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Procedury zdalnej łącza wywołania (procedur RPC) między bieżącym procesem a usługą WMI nie powiodło się. |
+| `WBEM_E_NOT_FOUND` | 0x80041002 | Zapytanie Określa klasę, która nie istnieje. |
 | `WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
   
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zawijana wywołanie [IWbemServices::ExecQuery](https://msdn.microsoft.com/library/aa392107(v=vs.85).aspx) metody.
+Ta funkcja zawija wywołanie do [IWbemServices::ExecQuery](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-execquery) metody.
 
-Ta funkcja przetwarza zapytanie określone w `strQuery` parametru i tworzy moduł wyliczający, przez który wywołującego mogą uzyskiwać dostęp do wyników zapytania. Moduł wyliczający jest wskaźnik do [IEnumWbemClassObject](https://msdn.microsoft.com/library/aa390857(v=vs.85).aspx) interfejsu; zapytanie wyniki są wystąpieniami klasy obiektów dostępne za pośrednictwem [IWbemClassObject](https://msdn.microsoft.com/library/aa391433(v=vs.85).aspx) interfejsu.
+Ta funkcja przetwarza zapytanie określone w `strQuery` parametru i tworzy moduł wyliczający, przez który obiekt wywołujący mogą uzyskiwać dostęp do wyników zapytania. Moduł wyliczający jest wskaźnikiem do [IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject) interfejsu; zapytanie wyniki są wystąpieniami typów obiektów klas udostępniane za pośrednictwem [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) interfejsu.
 
-Istnieją ograniczenia liczby `AND` i `OR` słów kluczowych, które mogą być używane w zapytaniach WQL. Dużą liczbą słów kluczowych języka WQL używanych w zapytaniu złożonych może spowodować WMI do zwrócenia `WBEM_E_QUOTA_VIOLATION` (lub 0x8004106c) kod błędu jako `HRESULT` wartość. Limit słów kluczowych języka WQL zależy od tego, jak złożoność zapytanie jest.
+Istnieją limity liczby `AND` i `OR` słów kluczowych, które mogą być używane w kwerendach WQL. Dużej liczby WQL słowa kluczowe używane w złożonych kwerend może spowodować, że usługi WMI do zwrócenia `WBEM_E_QUOTA_VIOLATION` (lub 0x8004106c) kod błędu, jako `HRESULT` wartość. Limit słowa kluczowe języka WQL zależy od tego, jak złożona jest zapytanie.
 
-Jeśli wystąpi błąd wywołania funkcji, można uzyskać dodatkowe informacje o błędzie przez wywołanie metody [GetErrorInfo](geterrorinfo.md) funkcji.
+Jeśli wywołanie funkcji zakończy się niepowodzeniem, można uzyskać dodatkowe informacje o błędzie, wywołując [geterrorinfo —](geterrorinfo.md) funkcji.
 
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -128,4 +128,4 @@ Jeśli wystąpi błąd wywołania funkcji, można uzyskać dodatkowe informacje 
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
-[Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)
+[Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

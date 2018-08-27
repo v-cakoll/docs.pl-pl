@@ -5,28 +5,28 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5a29de74-acfc-4134-8616-829dd7ce0710
-ms.openlocfilehash: 719e529c7813679f1e927b66e7db0e110714e438
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: aebd38cf57d602fef61c1ad4e6679f37227b1355
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758164"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930865"
 ---
 # <a name="connection-events"></a>Zdarzenia połączeń
-Wszystkich dostawców danych .NET Framework jest **połączenia** obiekty o dwa zdarzenia, których można pobrać komunikaty informacyjne ze źródła danych lub można określić, czy stan **połączenia** ma zmienić. W poniższej tabeli opisano zdarzenia **połączenia** obiektu.  
+Wszystkie dostawcy danych .NET Framework mają **połączenia** obiekty o dwa zdarzenia, które można pobrać komunikaty informacyjne ze źródła danych lub do określenia, czy stan **połączenia** ma zmienione. W poniższej tabeli opisano zdarzenia **połączenia** obiektu.  
   
 |Zdarzenie|Opis|  
 |-----------|-----------------|  
-|**InfoMessage**|Występuje, gdy zwracany jest komunikat informacyjny ze źródła danych. Komunikaty informacyjne są komunikatów ze źródła danych, które nie powodują wyjątek.|  
+|**InfoMessage**|Występuje, gdy zwracany jest komunikat informacyjny ze źródła danych. Komunikaty informacyjne to komunikaty ze źródła danych, które nie powodują rzuceniem wyjątku.|  
 |**StateChange**|Występuje, gdy stan **połączenia** zmiany.|  
   
-## <a name="working-with-the-infomessage-event"></a>Praca z InfoMessage zdarzeń  
- Ostrzeżenia i komunikaty informacyjne można pobrać z serwera SQL źródła danych przy użyciu <xref:System.Data.SqlClient.SqlConnection.InfoMessage> zdarzenie <xref:System.Data.SqlClient.SqlConnection> obiektu. Błędy zwrócone ze źródła danych na poziomie ważność 11 do 16 spowodować wyjątków. Jednak <xref:System.Data.SqlClient.SqlConnection.InfoMessage> zdarzeń może służyć do uzyskiwania wiadomości ze źródła danych, które nie są skojarzone z powodu błędu. W przypadku programu Microsoft SQL Server jest uważany za komunikat informacyjny błędu z o wadze 10 lub mniej, a można przechwycić przy użyciu <xref:System.Data.SqlClient.SqlConnection.InfoMessage> zdarzeń. Aby uzyskać więcej informacji zobacz temat "Poziomy ważności komunikat błędu" w dokumentacji SQL Server — książki Online.  
+## <a name="working-with-the-infomessage-event"></a>Praca ze zdarzeniem InfoMessage  
+ Możesz pobrać ostrzeżenia i komunikaty informacyjne z programu SQL Server źródła danych przy użyciu <xref:System.Data.SqlClient.SqlConnection.InfoMessage> zdarzenia <xref:System.Data.SqlClient.SqlConnection> obiektu. Błędy zwrócone ze źródła danych z poziomem ważności 11 do 16 powodować zgłoszenie wyjątku. Jednak <xref:System.Data.SqlClient.SqlConnection.InfoMessage> zdarzeń może służyć do uzyskania komunikatów ze źródła danych, które nie są skojarzone z powodu błędu. W przypadku programu Microsoft SQL Server, dowolnego błędu o o wadze 10 lub mniej jest uznawana za komunikat informacyjny i mogą zostać przechwycone przy użyciu <xref:System.Data.SqlClient.SqlConnection.InfoMessage> zdarzeń. Aby uzyskać więcej informacji, zobacz [ważności błąd aparatu bazy danych](/sql/relational-databases/errors-events/database-engine-error-severities) artykułu.
   
- <xref:System.Data.SqlClient.SqlConnection.InfoMessage> Odbiera zdarzenia <xref:System.Data.SqlClient.SqlInfoMessageEventArgs> zawierający obiekt, jego **błędy** właściwości, kolekcję komunikatów ze źródła danych. Można zbadać **błąd** obiektów w tej kolekcji tekst numer i komunikat błędu, a także źródła błędu. .NET Framework Data Provider for SQL Server zawiera także szczegółowe informacje o bazie danych, procedur składowanych i numer wiersza, którego wiadomość pochodzi z.  
+ <xref:System.Data.SqlClient.SqlConnection.InfoMessage> Odbiera zdarzenia <xref:System.Data.SqlClient.SqlInfoMessageEventArgs> zawierającą obiekt, jego **błędy** właściwość, kolekcję komunikatów ze źródła danych. Można tworzyć zapytania **błąd** obiektów w tej kolekcji tekst numer i komunikat błędu, a także źródła błędu. .NET Framework Data Provider for SQL Server zawiera także szczegółowe informacje o bazie danych, procedury składowanej i numer wiersza, którego wiadomość pochodzi z.  
   
 ### <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono sposób dodawania obsługi zdarzenia <xref:System.Data.SqlClient.SqlConnection.InfoMessage> zdarzeń.  
+ Poniższy przykład kodu pokazuje, jak dodać obsługę zdarzeń dla <xref:System.Data.SqlClient.SqlConnection.InfoMessage> zdarzeń.  
   
 ```vb  
 ' Assumes that connection represents a SqlConnection object.  
@@ -66,17 +66,17 @@ protected static void OnInfoMessage(
 ```  
   
 ## <a name="handling-errors-as-infomessages"></a>Obsługa błędów jako InfoMessages  
- <xref:System.Data.SqlClient.SqlConnection.InfoMessage> Zdarzeń zwykle zostanie zastosowana tylko do komunikaty informacyjne i ostrzeżenia, które są wysyłane z serwera. Jednak gdy rzeczywista wystąpi błąd, wykonanie **ExecuteNonQuery** lub **ExecuteReader** metody, który zainicjował operację serwera jest zatrzymywany i jest zgłaszany wyjątek.  
+ <xref:System.Data.SqlClient.SqlConnection.InfoMessage> Zdarzeń zwykle będą uruchamiane tylko w przypadku komunikaty informacyjne i ostrzeżenia, które są wysyłane z serwera. Jednak gdy rzeczywisty wystąpi błąd, wykonanie **ExecuteNonQuery** lub **ExecuteReader** metodą, która zainicjowała działanie serwera jest zatrzymywana i zgłaszany jest wyjątek.  
   
- Jeśli chcesz kontynuować przetwarzania pozostałe instrukcje w polecenia, bez względu na błędy generowane przez serwer, ustaw <xref:System.Data.SqlClient.SqlConnection.FireInfoMessageEventOnUserErrors%2A> właściwość <xref:System.Data.SqlClient.SqlConnection> do `true`. W ten sposób spowoduje, że połączenie uruchomienie <xref:System.Data.SqlClient.SqlConnection.InfoMessage> zdarzenia błędów zamiast generowania wyjątku i przerywania przetwarzania. Aplikacja kliencka można obsłużyć tego zdarzenia i odpowiadanie na błędy.  
+ Jeśli chcesz kontynuować przetwarzanie resztę instrukcji w poleceniu, niezależnie od tego, błędy generowane przez serwer, ustaw <xref:System.Data.SqlClient.SqlConnection.FireInfoMessageEventOnUserErrors%2A> właściwość <xref:System.Data.SqlClient.SqlConnection> do `true`. W ten sposób powoduje, że połączenie ognia <xref:System.Data.SqlClient.SqlConnection.InfoMessage> zdarzenia błędów zamiast zgłaszać wyjątek i przerywania przetwarzania. Aplikacja kliencka można obsługiwać to zdarzenie i reagować na błędy.  
   
 > [!NOTE]
->  Błąd poziomu ważności 17 lub nowszym, który powoduje, że serwer zatrzymania przetwarzania polecenia musi być obsługiwane jako wyjątek. W takim przypadku jest zwracany wyjątek, niezależnie od sposobu obsługi błędu w <xref:System.Data.SqlClient.SqlConnection.InfoMessage> zdarzeń.  
+>  Błąd z poziomem ważności 17 lub nowszej, który powoduje, że serwer zatrzymać przetwarzanie, polecenie musi być obsługiwany jako wyjątek. W tym przypadku jest zgłaszany wyjątek, niezależnie od tego, jak obsługiwany jest błąd w <xref:System.Data.SqlClient.SqlConnection.InfoMessage> zdarzeń.  
   
-## <a name="working-with-the-statechange-event"></a>Praca z zdarzenie StateChange  
- **StateChange** zdarzenie po stan **połączenia** zmiany. **StateChange** odbiera zdarzenia <xref:System.Data.StateChangeEventArgs> umożliwiające ustalenie, jaka zmiana w stanie **połączenia** za pomocą **OriginalState** i **CurrentState** właściwości. **OriginalState** właściwość jest <xref:System.Data.ConnectionState> wyliczenia, które wskazuje stan **połączenia** przed go zmienić. **CurrentState** jest <xref:System.Data.ConnectionState> wyliczenia, które wskazuje stan **połączenia** po zmianie go.  
+## <a name="working-with-the-statechange-event"></a>Praca ze zdarzeniem StateChange  
+ **StateChange** zdarzenie występuje gdy stan **połączenia** zmiany. **StateChange** odbiera zdarzenia <xref:System.Data.StateChangeEventArgs> umożliwiające ustalić zmiany w stanie **połączenia** przy użyciu **OriginalState** i **CurrentState** właściwości. **OriginalState** właściwość <xref:System.Data.ConnectionState> wyliczenie, które wskazuje stan **połączenia** poprzedzających go zmienić. **CurrentState** jest <xref:System.Data.ConnectionState> wyliczenie, które wskazuje stan **połączenia** po jego zmianie.  
   
- Poniższy przykład kodu wykorzystuje **StateChange** zdarzeń można zapisać komunikatu w konsoli po stan **połączenia** zmiany.  
+ Poniższy przykład kodu wykorzystuje **StateChange** zdarzenie, aby zapisać komunikat do konsoli po stan **połączenia** zmiany.  
   
 ```vb  
 ' Assumes connection represents a SqlConnection object.  
@@ -107,4 +107,4 @@ protected static void OnStateChange(object sender,
   
 ## <a name="see-also"></a>Zobacz też  
  [Nawiązywanie połączenia ze źródłem danych](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](http://go.microsoft.com/fwlink/?LinkId=217917)

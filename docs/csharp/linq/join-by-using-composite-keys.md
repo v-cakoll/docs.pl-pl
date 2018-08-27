@@ -3,12 +3,12 @@ title: Sprzęganie za pomocą kluczy złożonych (LINQ w C#)
 description: Dowiedz się, jak sprzęgać za pomocą kluczy złożonych w składniku LINQ.
 ms.date: 12/1/2016
 ms.assetid: da70b54d-3213-45eb-8437-fbe75cbcf935
-ms.openlocfilehash: dd3f5e949b5c1bc6abc592dc135e73a91be801e9
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: ae37d03f996f0b0cc184a86663f16d62e6c29c69
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404031"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932337"
 ---
 # <a name="join-by-using-composite-keys"></a>Sprzęganie za pomocą kluczy złożonych
 
@@ -38,6 +38,6 @@ Klucze złożone, które mogą być również używane w `group` klauzuli.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Language Integrated Query (LINQ)](index.md)  
-[join, klauzula](../language-reference/keywords/join-clause.md)  
-[group, klauzula](../language-reference/keywords/group-clause.md)  
+- [Language Integrated Query (LINQ)](index.md)  
+- [join, klauzula](../language-reference/keywords/join-clause.md)  
+- [group, klauzula](../language-reference/keywords/group-clause.md)  

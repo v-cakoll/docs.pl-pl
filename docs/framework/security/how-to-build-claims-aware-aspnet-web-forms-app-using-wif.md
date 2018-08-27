@@ -1,17 +1,17 @@
 ---
-title: 'Porady: Tworzenie aplikacji formularzy sieci Web obsługujący oświadczenia ASP.NET za pomocą WIF'
+title: 'Instrukcje: Tworzenie obsługującej oświadczenia aplikacji ASP.NET Web Forms przy użyciu programu WIF'
 ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: e8dc6b1c5073ac55be224eb0d410ad7f87d135d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 764e7fba31a7fb3fc40ec85ab4d0fb6e18e57390
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400097"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931775"
 ---
-# <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>Porady: Tworzenie aplikacji formularzy sieci Web obsługujący oświadczenia ASP.NET za pomocą WIF
+# <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>Instrukcje: Tworzenie obsługującej oświadczenia aplikacji ASP.NET Web Forms przy użyciu programu WIF
 ## <a name="applies-to"></a>Dotyczy:  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
@@ -19,7 +19,7 @@ ms.locfileid: "33400097"
 -   ASP.NET® formularzy sieci Web  
   
 ## <a name="summary"></a>Podsumowanie  
- To instrukcje zawiera szczegółowe procedury krok po kroku dotyczące tworzenia prostej aplikacji obsługującej oświadczenia formularzy sieci Web ASP.NET. Umożliwia także instrukcje dotyczące testowania prostej aplikacji składnika ASP.NET Web Forms obsługujący oświadczenia dla pomyślnego wykonania uwierzytelniania federacyjnego. Ta porada nie ma szczegółowe instrukcje dotyczące tworzenia tokenu usługi zabezpieczenia (STS) i przyjęto założenie, że zostały już skonfigurowane usługi tokenu Zabezpieczającego.  
+ Niniejszy instruktaż zawiera szczegółowe procedury krok po kroku dotyczące tworzenia prostej aplikacji formularzy sieci Web programu ASP.NET obsługującej oświadczenia. On również instrukcje testowania prostą aplikację formularzy sieci Web programu ASP.NET obsługującej oświadczenia dla pomyślnego wdrożenia uwierzytelniania federacyjnego. Niniejszy instruktaż nie zawiera szczegółowych instrukcji tworzenia Usługa tokenu zabezpieczającego (STS), a przyjęto założenie, że zostały już skonfigurowane usługi tokenu Zabezpieczającego.  
   
 ## <a name="contents"></a>Spis treści  
   
@@ -27,43 +27,43 @@ ms.locfileid: "33400097"
   
 -   Zestawienie czynności  
   
--   Krok 1: tworzenie aplikacji formularzy sieci Web ASP.NET proste  
+-   Krok 1. Tworzenie prostych aplikacji ASP.NET Web Forms  
   
--   Krok 2: Konfigurowanie aplikacji formularzy sieci Web platformy ASP.NET dla uwierzytelniania opartego na oświadczeniach  
+-   Krok 2 — Konfigurowanie aplikacji formularzy sieci Web platformy ASP.NET dla uwierzytelniania opartego na oświadczeniach  
   
 -   Krok 3 — Przetestowanie rozwiązania  
   
 ## <a name="objectives"></a>Cele  
   
--   Konfigurowanie aplikacji składnika ASP.NET Web Forms dla uwierzytelniania opartego na oświadczeniach  
+-   Konfigurowanie aplikacji formularzy sieci Web platformy ASP.NET dla uwierzytelniania opartego na oświadczeniach  
   
--   Testowanie pomyślne obsługujący oświadczenia aplikacji formularzy sieci Web ASP.NET  
+-   Testowanie pomyślne obsługującej oświadczenia aplikacji formularzy sieci Web ASP.NET  
   
 ## <a name="summary-of-steps"></a>Zestawienie czynności  
   
--   Krok 1: tworzenie aplikacji formularzy sieci Web ASP.NET proste  
+-   Krok 1. Tworzenie prostych aplikacji ASP.NET Web Forms  
   
--   Krok 2: Konfigurowanie aplikacji formularzy sieci Web platformy ASP.NET dla uwierzytelniania federacyjnego  
+-   Krok 2 — Konfigurowanie aplikacji formularzy sieci Web platformy ASP.NET dla uwierzytelniania federacyjnego  
   
 -   Krok 3 — Przetestowanie rozwiązania  
   
-## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Krok 1: tworzenie aplikacji formularzy sieci Web ASP.NET proste  
+## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Krok 1. Tworzenie prostych aplikacji ASP.NET Web Forms  
  W tym kroku utworzysz nową aplikację ASP.NET Web Forms.  
   
-#### <a name="to-create-a-simple-aspnet-application"></a>Aby utworzyć prostą aplikację ASP.NET  
+#### <a name="to-create-a-simple-aspnet-application"></a>Aby utworzyć prostą aplikację platformy ASP.NET  
   
-1.  Uruchom program Visual Studio, a następnie kliknij przycisk **pliku**, **nowy**, a następnie **projektu**.  
+1.  Uruchom program Visual Studio, a następnie kliknij przycisk **pliku**, **New**, a następnie **projektu**.  
   
 2.  W **nowy projekt** okna, kliknij przycisk **aplikacji formularzy sieci Web ASP.NET**.  
   
 3.  W **nazwa**, wprowadź `TestApp` i naciśnij klawisz **OK**.  
   
-## <a name="step-2--configure-aspnet-web-forms-application-for-claims-based-authentication"></a>Krok 2: Konfigurowanie aplikacji formularzy sieci Web platformy ASP.NET dla uwierzytelniania opartego na oświadczeniach  
- W tym kroku zostanie dodania wpisów konfiguracji do *Web.config* pliku konfiguracji aplikacji składnika ASP.NET Web Forms dokonanie obsługujący oświadczenia.  
+## <a name="step-2--configure-aspnet-web-forms-application-for-claims-based-authentication"></a>Krok 2 — Konfigurowanie aplikacji formularzy sieci Web platformy ASP.NET dla uwierzytelniania opartego na oświadczeniach  
+ W tym kroku dodasz wpisy konfiguracji *Web.config* pliku konfiguracji aplikacji ASP.NET Web Forms się obsługujących oświadczenia.  
   
 #### <a name="to-configure-aspnet-application-for-claims-based-authentication"></a>Aby skonfigurować aplikację ASP.NET do uwierzytelniania opartego na oświadczeniach  
   
-1.  Dodaj następujące wpisy sekcji konfiguracji do *Web.config* plik konfiguracyjny natychmiast po  **\<konfiguracji >** otwarcia elementu:  
+1.  Dodaj następujące wpisy konfiguracji w sekcji, aby *Web.config* plik konfiguracyjny natychmiast po  **\<konfiguracji >** otwarcia elementu:  
   
     ```xml  
     <configSections>  
@@ -72,7 +72,7 @@ ms.locfileid: "33400097"
     </configSections>  
     ```  
   
-2.  Dodaj  **\<lokalizacji >** elementu, który umożliwia dostęp do metadanych Federacji aplikacji:  
+2.  Dodaj  **\<lokalizacja >** elementu, który umożliwia dostęp do metadanych Federacji aplikacji:  
   
     ```xml  
     <location path="FederationMetadata">  
@@ -84,7 +84,7 @@ ms.locfileid: "33400097"
     </location>  
     ```  
   
-3.  Dodaj następujące pozycje konfiguracji w ramach  **\<system.web >** elementy, aby uniemożliwić użytkownikom, Wyłącz uwierzytelnianie macierzystego i Włącz WIF zarządzać uwierzytelnianiem.  
+3.  Dodaj następujące wpisy konfiguracji w ramach  **\<system.web >** elementy, aby odmówić użytkownikom, Wyłącz uwierzytelnianie natywnych i włączanie programu WIF zarządzać uwierzytelnianiem.  
   
     ```xml  
     <authorization>  
@@ -93,7 +93,7 @@ ms.locfileid: "33400097"
     <authentication mode="None" />  
     ```  
   
-4.  Dodaj  **\<system.webServer >** element, który definiuje modułów uwierzytelniania federacyjnego. Należy pamiętać, że *PublicKeyToken* atrybut musi być taka sama jak *PublicKeyToken* atrybutu dla  **\<configSections >** wpisy dodane wcześniej:  
+4.  Dodaj  **\<system.webServer >** element, który definiuje modułów dla uwierzytelniania federacyjnego. Należy pamiętać, że *PublicKeyToken* atrybut musi być taka sama jak *PublicKeyToken* atrybutu dla  **\<configSections >** wpisy dodano wcześniej:  
   
     ```xml  
     <system.webServer>  
@@ -104,7 +104,7 @@ ms.locfileid: "33400097"
     </system.webServer>  
     ```  
   
-5.  Dodaj następujące Windows Identity Foundation powiązane pozycje konfiguracji i upewnij się, że adres URL aplikacji platformy ASP.NET i numer portu pasują do wartości w  **\<audienceUris >** wpisu, **obszaru**  atrybutu  **\<wsFederation >** elementu i **odpowiedzi** atrybutu  **\<wsFederation >** elementu. Ponadto upewnij się, że **wystawcy** wartość pasuje do adresu URL zabezpieczeń usługi tokenów (STS).  
+5.  Dodaj następujące Windows Identity Foundation powiązane wpisy konfiguracji i upewnij się, że adres URL aplikacji ASP.NET i numer portu pasuje do wartości w  **\<audienceUris >** wpisu **obszaru**  atrybutu  **\<wsFederation >** elementu, a **odpowiedzi** atrybutu  **\<wsFederation >** elementu. Ponadto upewnij się, że **wystawcy** pasuje do wartości adresu URL Usługa tokenu zabezpieczającego (STS).  
   
     ```xml  
     <system.identityModel>  
@@ -122,8 +122,8 @@ ms.locfileid: "33400097"
     </system.identityModel>  
     <system.identityModel.services>  
         <federationConfiguration>  
-            <cookieHandler requireSsl="false" />  
-            <wsFederation passiveRedirectEnabled="true" issuer="http://localhost:13922/wsFederationSTS/Issue" realm="http://localhost:28503/" reply="http://localhost:28503/" requireHttps="false" />  
+            <cookieHandler requireSsl="true" />  
+            <wsFederation passiveRedirectEnabled="true" issuer="http://localhost:13922/wsFederationSTS/Issue" realm="http://localhost:28503/" reply="http://localhost:28503/" requireHttps="true" />  
         </federationConfiguration>  
     </system.identityModel.services>  
     ```  
@@ -133,11 +133,11 @@ ms.locfileid: "33400097"
 7.  Skompiluj rozwiązanie, aby upewnić się, że nie ma żadnych błędów.  
   
 ## <a name="step-3--test-your-solution"></a>Krok 3 — Przetestowanie rozwiązania  
- W tym kroku zostanie testowania aplikacji składnika ASP.NET Web Forms skonfigurowany do uwierzytelniania opartego na oświadczeniach. Aby wykonać podstawowy test, należy dodać kodu, który wyświetla oświadczenia w tokenie wystawiony przez zabezpieczenia usługi tokenów (STS).  
+ W tym kroku przetestujesz aplikację ASP.NET Web Forms skonfigurowany do uwierzytelniania opartego na oświadczeniach. Aby wykonać podstawowy test, należy dodać kod, który przedstawia oświadczenia w tokenie, wystawiony przez Usługa tokenu zabezpieczającego (STS).  
   
 #### <a name="to-test-your-aspnet-web-form-application-for-claims-based-authentication"></a>Aby przetestować aplikację formularza sieci Web platformy ASP.NET dla uwierzytelniania opartego na oświadczeniach  
   
-1.  Otwórz **Default.aspx** plików w obszarze **TestApp** projektu i zastąp jego istniejących znaczników następujący kod:  
+1.  Otwórz **Default.aspx** plik **TestApp** projektu i zastąp jego znaczników istniejący następującym kodem:  
   
     ```  
     %@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
@@ -159,10 +159,10 @@ ms.locfileid: "33400097"
     </html>  
     ```  
   
-2.  Zapisz **Default.aspx**, a następnie otwórz jego kodzie pliku o nazwie **Default.aspx.cs**.  
+2.  Zapisz **Default.aspx**, a następnie otwórz jego kod związany z pliku o nazwie **Default.aspx.cs**.  
   
     > [!NOTE]
-    >  **Default.aspx.cs** mogą być ukryte pod **Default.aspx** w Eksploratorze rozwiązań. Jeśli **Default.aspx.cs** nie jest widoczny, rozwiń węzeł **Default.aspx** , klikając trójkąt obok niej.  
+    >  **Default.aspx.cs** może być ukryty pod **Default.aspx** w Eksploratorze rozwiązań. Jeśli **Default.aspx.cs** nie jest widoczny, rozwiń węzeł **Default.aspx** , klikając trójkąta obok niej.  
   
 3.  Zastąp istniejący kod w **Page_Load** metody **Default.aspx.cs** następującym kodem:  
   
@@ -207,4 +207,4 @@ ms.locfileid: "33400097"
   
 5.  Uruchom rozwiązanie, naciskając klawisz **F5** klucza.  
   
-6.  Powinna pojawić na stronie zostaną wyświetlone oświadczenia w tokenie, który został wystawiony przez usługę tokenu zabezpieczającego.
+6.  Powinno zostać wyświetlone ze stroną, które zostaną wyświetlone oświadczenia w tokenie, który został wystawiony przez usługę tokenu zabezpieczającego.

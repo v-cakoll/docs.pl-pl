@@ -8,15 +8,15 @@ helpviewer_keywords:
 - queries [Visual Basic], Take
 - Take clause [Visual Basic]
 ms.assetid: 77bf87b2-1476-4456-957f-fee922fbad8c
-ms.openlocfilehash: 0dddb411af1b4ee269e091c07553a94589d90b2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bfaccf470d93a6a72451e7ad8b41e8dbb1171c71
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604032"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932473"
 ---
 # <a name="take-clause-visual-basic"></a>Take — Klauzula (Visual Basic)
-Zwraca określoną liczbę elementów ciągłe na początku kolekcji.  
+Zwraca określoną liczbę elementów sąsiadujących z początku kolekcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,25 +26,25 @@ Take count
   
 ## <a name="parts"></a>Części  
  `count`  
- Wymagana. Wartość lub wyrażenie obliczane do liczby elementów sekwencji do zwrócenia.  
+ Wymagane. Wartość lub wyrażenie zwracające liczbę elementów w sekwencji do zwrócenia.  
   
 ## <a name="remarks"></a>Uwagi  
- `Take` Klauzuli powoduje uwzględnienie określoną liczbę sąsiadujących elementów od początku listy wyników zapytania. Liczba elementów do uwzględnienia jest określona przez `count` parametru.  
+ `Take` Klauzuli powoduje, że zapytanie uwzględnić określoną liczbę elementów sąsiadujących z początku listy wyników. Liczba elementów do uwzględnienia jest określona przez `count` parametru.  
   
- Można użyć `Take` klauzuli z `Skip` klauzuli do zwrócenia zakres danych z dowolnego segmentu zapytania. Aby to zrobić, należy przekazać indeks pierwszego elementu zakresu `Skip` klauzuli i rozmiar zakresu `Take` klauzuli. W takim przypadku `Take` musi być określona klauzula po `Skip` klauzuli.  
+ Możesz użyć `Take` klauzula `Skip` klauzuli, która zwraca zakres danych z dowolnego segmentu zapytania. Aby to zrobić, należy przekazać indeksu pierwszego elementu zakresu `Skip` klauzuli i rozmiar zakresu `Take` klauzuli. W tym przypadku `Take` musi być określona klauzula po `Skip` klauzuli.  
   
- Jeśli używasz `Take` klauzuli w zapytaniu, może być również konieczne upewnij się, że wyniki są zwracane w kolejności, która umożliwi `Take` klauzuli uwzględnienie zamierzone wyniki. Aby uzyskać więcej informacji na temat Porządkowanie wyników zapytania, zobacz [klauzula Order By](../../../visual-basic/language-reference/queries/order-by-clause.md).  
+ Kiedy używasz `Take` w klauzuli kwerendy, może być również konieczne upewnij się, że wyniki są zwracane w kolejności, która umożliwi `Take` klauzuli obejmujący zamierzone wyniki. Aby uzyskać więcej informacji na temat kolejności wyników zapytania, zobacz [klauzula Order By](../../../visual-basic/language-reference/queries/order-by-clause.md).  
   
- Można użyć `TakeWhile` klauzuli, aby określić, że tylko niektóre elementy zwrócone, w zależności od warunek podany.  
+ Możesz użyć `TakeWhile` klauzulę, aby określić, czy tylko niektóre elementy zostać zwrócone, w zależności od podanym warunku.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu wykorzystuje `Take` klauzuli razem z `Skip` klauzuli, aby zwrócić dane z zapytania w stronach. Używa funkcji GetCustomers `Skip` klauzuli obejść klienci na liście do momentu dostarczony początkowego indeksu wartość i używa `Take` klauzuli, aby powrócić do strony klientów, począwszy od tej wartości indeksu.  
+ Poniższy przykład kodu wykorzystuje `Take` klauzuli wraz z `Skip` klauzulę, aby zwrócić dane z zapytania na stronach. Używa funkcji GetCustomers `Skip` klauzuli, aby pominąć klienci na liście do momentu podany początkowy indeks wartości i używa `Take` klauzuli zwracane strony klientów, począwszy od tej wartości indeksu.  
   
  [!code-vb[VbSimpleQuerySamples#1](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/take-clause_1.vb)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Zapytania](../../../visual-basic/language-reference/queries/queries.md)  
+ [Zapytania](../../../visual-basic/language-reference/queries/index.md)  
  [Select, klauzula](../../../visual-basic/language-reference/queries/select-clause.md)  
  [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)  
  [Order By, klauzula](../../../visual-basic/language-reference/queries/order-by-clause.md)  

@@ -1,33 +1,33 @@
 ---
-title: Framework typy obsługi drzewa wyrażeń
-description: Informacje o typach framework obsługi drzewa wyrażeń tworzenia drzewa wyrażeń i techniki pracy z drzewa wyrażenia interfejsów API.
+title: Typy platform obsługujące drzewa wyrażeń
+description: Informacje o typach framework obsługuje drzew wyrażeń, tworzenia drzew wyrażeń i technik do pracy z drzewa wyrażeń interfejsów API.
 ms.date: 06/20/2016
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: 3110f2a9534085aba95fcb5c8e76f66229e79f86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 687b521c52c1ca380a12e18469b5f66000049d3c
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214948"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934795"
 ---
-# <a name="framework-types-supporting-expression-trees"></a>Framework typy obsługi drzewa wyrażeń
+# <a name="framework-types-supporting-expression-trees"></a>Typy platform obsługujące drzewa wyrażeń
 
-[Poprzedniej — Wyjaśniono drzew wyrażeń](expression-trees-explained.md)
+[Poprzednie — Drzewa wyrażeń — objaśnienie](expression-trees-explained.md)
 
-Brak obszerne listy klas w ramach platformy .NET Core, które współpracują z drzewa wyrażeń.
-Można zapoznać się z pełną listą [tutaj](/dotnet/core/api/System.Linq.Expressions).
-Zamiast uruchamiania za pomocą z pełną listą, Przyjrzyjmy się, jak zostały zaprojektowane klasy framework.
+Istnieje duża lista klas w ramach platformy .NET Core, współpracujących z drzewa wyrażeń.
+Można zobaczyć pełną listę w <xref:System.Linq.Expressions>.
+Zamiast uruchamiania za pośrednictwem z pełną listą, Przyjrzyjmy się, jak zostały zaprojektowane klasy framework.
 
-W języku wyrażenie jest treści kodu, który oblicza i zwraca wartość. Wyrażenia może być bardzo prosta: wyrażenie stałe `1` zwraca stała wartość 1. Może być bardziej skomplikowane: wyrażenie `(-B + Math.Sqrt(B*B + 4 * A * C)) / (2 * A)` zwraca jeden katalog główny dla kwadratowe równości (w przypadku, gdy równanie ma rozwiązania).  
+W projekcie języka wyrażenie jest treść kod, który oblicza i zwraca wartość. Wyrażenia może być bardzo prosta: wyrażenie stałe `1` zwraca stałej wartości 1. Może być bardziej skomplikowane: wyrażenie `(-B + Math.Sqrt(B*B - 4 * A * C)) / (2 * A)` zwraca jeden certyfikat główny dla równaniu kwadratowym (w przypadku, gdy równanie ma rozwiązania).  
 
-## <a name="it-all-starts-with-systemlinqexpression"></a>Rozpoczyna się System.Linq.Expression
+## <a name="it-all-starts-with-systemlinqexpression"></a>Wszystko zaczyna się od System.Linq.Expression
 
-Jednym z złożonością, Praca z drzewa wyrażeń jest różne rodzaje wyrażeń są prawidłowe w wielu miejscach w programach. Należy wziąć pod uwagę wyrażenia przypisania. Po prawej stronie przypisania może być wartością stałą, zmienną, wyrażenie wywołania metody lub innych użytkowników. Ten język elastyczność oznacza, mogą wystąpić wiele typów różnych wyrażenie w dowolnym miejscu węzły drzewa przechodzenie drzewo wyrażenia. W związku z tym podczas pracy z typem wyrażenia podstawowego, który jest najprostszym sposobem pracy. Czasami potrzebny dowiedzieć się więcej.
-Klasa podstawowa wyrażenie zawiera `NodeType` właściwości w tym celu.
-Zwraca `ExpressionType` czyli wyliczenie typów możliwy wyrażeniu.
-Po sprawdzeniu typ węzła rzutowania go do tego typu, a wykonywanie określonych czynności, które wiedząc typ węzła wyrażenia. Wyszukiwanie niektórych typów węzłów i następnie pracować z określone właściwości typu wyrażenia.
+Jest jeden komplikacje związane z pracy z drzew wyrażeń, różne rodzaje wyrażeń są prawidłowe w wielu miejscach w programach. Należy wziąć pod uwagę wyrażenia przypisania. Po prawej stronie przypisania może być wartością stałą, zmienną, metodę wyrażenie wywołania lub inne osoby. Elastyczność tego języka oznacza, że może wystąpić wiele typów innego wyrażenia w dowolnym miejscu węzłach drzewa podczas przechodzenia do drzewa wyrażenie. W związku z tym gdy typ bazowy wyrażenia można pracować, to najprostszy sposób pracy. Czasami potrzebny dowiedzieć się więcej.
+Klasa bazowa wyrażenie zawiera `NodeType` właściwości w tym celu.
+Zwraca `ExpressionType` czyli wyliczenie typy możliwe wyrażenia.
+Jeśli znasz już typ węzła, można rzutować go do tego typu i wykonać konkretne akcje, wiedząc, typ węzła wyrażenia. Można wyszukiwania dla niektórych typów węzłów, a następnie pracować z określonymi właściwościami, tego rodzaju wyrażenia.
 
-Na przykład ten kod będzie drukować nazwę zmiennej w wyrażeniu dostępu do zmiennych. Już zostały wykonane praktyka Sprawdzanie typu węzła, a następnie rzutowania wyrażenia do dostępu do zmiennych, a następnie zaznaczając właściwości Typ określonego wyrażenia:
+Na przykład ten kod będzie drukować nazwę zmiennej dla wyrażenia dostępu do zmiennej. Czy mogę wykonano praktyka Sprawdzanie typu węzła, a następnie rzutowania wyrażenia dostępu do zmiennej, a następnie zaznaczając właściwości typu określonego wyrażenia:
 
 ```csharp
 Expression<Func<int, int>> addFive = (num) => num + 5;
@@ -43,9 +43,9 @@ if (addFive.NodeType == ExpressionType.Lambda)
 }
 ```
 
-## <a name="creating-expression-trees"></a>Tworzenie drzewa wyrażeń
+## <a name="creating-expression-trees"></a>Tworzenie drzew wyrażeń
 
-`System.Linq.Expression` Klasa zawiera także wiele metod statycznych do tworzenia wyrażenia. Te metody tworzenia węzła wyrażenia przy użyciu argumentów dla jego elementów podrzędnych. W ten sposób tworzenia wyrażenia z jego węzłów liści. Na przykład ten kod tworzy wyrażenie Dodaj:
+`System.Linq.Expression` Klasa zawiera także wiele metod statycznych, aby tworzyć wyrażenia. Te metody tworzenia węzła wyrażenie, przy użyciu argumenty podane dla jego elementów podrzędnych. W ten sposób możesz utworzyć wyrażenie z jego węzły liści. Na przykład ten kod tworzy Dodaj wyrażenie:
 
 ```csharp
 // Addition is an add expression for "1 + 2"
@@ -54,15 +54,15 @@ var two = Expression.Constant(2, typeof(int));
 var addition = Expression.Add(one, two);
 ```
 
-Widać w tym prostym przykładzie, że wiele typów są zaangażowane w tworzenie i Praca z drzewa wyrażeń. Złożoność jest niezbędne do zapewnienia możliwości sformatowanego słownictwa podał języka C#.
+Możesz zobaczyć ten prosty przykład, że wiele typów są zaangażowane w tworzenie i Praca z drzewa wyrażeń. Czy złożoność jest zapewnienie możliwości sformatowanego słownictwa zawartym w języku C#.
 
-## <a name="navigating-the-apis"></a>Nawigowanie po interfejsy API
-Brak wyrażenia typy węzłów, które mapują prawie wszystkie elementy składni języka C#. Każdy typ ma określonej metody dla tego typu elementu języka. Istnieje wiele przechowywanych w nagłówek w tym samym czasie. Zamiast próby pamiętania wszystko, Oto techniki, używanych do pracy z drzewa wyrażeń:
-1. Przyjrzyj się członków `ExpressionType` wyliczenia można określić możliwych węzłów, użytkownik powinien być badanie. Pomaga to naprawdę umożliwia przechodzenie między danymi i zrozumienie drzewo wyrażenia.
-2. Przyjrzyj się statyczne elementy członkowskie `Expression` klasa do tworzenia wyrażenia. Tych metod można tworzyć dowolnego typu wyrażenia z zestawu jej podrzędnych węzłów.
-3. Przyjrzyj się `ExpressionVisitor` klasa do tworzenia drzewa wyrażenia zmodyfikowane.
+## <a name="navigating-the-apis"></a>Przejdź do interfejsów API
+Istnieją typy węzłów wyrażenie, które mapują na niemal wszystkie elementy składni języka C#. Każdy typ ma określonych metod dla tego typu elementu języka. To znacznie ułatwia głowę w tym samym czasie. Zamiast próbować pamiętania wszystko, Oto techniki, używanych do pracy z drzewa wyrażeń:
+1. Przyjrzyj się członkowie `ExpressionType` wyliczenia, aby ustalić możliwe węzły, które powinny być testowania oprogramowania. Pomaga to tak naprawdę, gdy użytkownik chce przejść i zrozumieć drzewo wyrażenia.
+2. Spójrz na statyczne elementy członkowskie `Expression` klasa do tworzenia wyrażenia. Tych metod można tworzyć dowolnego typu wyrażenia z zestawu jej podrzędnych węzłów.
+3. Przyjrzyj się `ExpressionVisitor` klasa do tworzenia drzewa wyrażeń zmodyfikowane.
 
-Można znaleźć więcej podczas wyszukiwania na każdym z tych trzech obszarach. Znajdziesz się niezmiennie, należy podczas uruchamiania jednego z tych trzech kroków.
+Można znaleźć więcej jak Przyjrzyj się każdej z tych trzech obszarów. Znajdziesz się niezmiennie, należy podczas uruchamiania przy użyciu jednego z tych trzech kroków.
  
- [Next — Wykonywanie drzew wyrażeń](expression-trees-execution.md)
+ [Dalej — Wykonywanie drzew wyrażeń](expression-trees-execution.md)
  

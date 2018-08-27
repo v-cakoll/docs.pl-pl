@@ -18,37 +18,37 @@ helpviewer_keywords:
 - Short data type
 - literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
-ms.openlocfilehash: ef99743828d8d80844486b651178622ff45fd554
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb218a9b72208b13700ebd18dbf588066839203d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590715"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930155"
 ---
 # <a name="short-data-type-visual-basic"></a>Short — typ danych (Visual Basic)
-Blokad podpisany 16-bitowych liczb całkowitych (2-bajtowych) o wartości od-32 768 do 32 767.  
+Przechowuje podpisany 16-bitowych liczb całkowitych (2-bajtowych), z zakresu wartości od-32 768 za pośrednictwem 32 767 znaków.  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj `Short` — typ danych zawierający wartości całkowite, które nie wymagają szerokość pełnych danych `Integer`. W niektórych przypadkach można pakietu środowisko uruchomieniowe języka wspólnego programu `Short` zmienne ściśle współpracują, a następnie zapisz zużycie pamięci.  
+ Użyj `Short` typu danych, które zawierają wartości całkowitych, które nie wymagają szerokość pełnych danych `Integer`. W niektórych przypadkach można pakietu środowiska uruchomieniowego języka wspólnego swoje `Short` zmienne ściśle współpracują, a następnie zapisz zużycie pamięci.  
   
- Wartość domyślna `Short` ma wartość 0.  
+ Wartość domyślna `Short` wynosi 0.  
   
-## <a name="literal-assignments"></a>Przydziały literału
+## <a name="literal-assignments"></a>Literał przypisania
 
-Można zadeklarować i zainicjuj `Short` zmiennej przez przypisanie dziesiętną literału, literałem szesnastkowe ósemkowe literał lub (począwszy od 2017 Visual Basic) literał binarny. Jeśli liczba całkowita literału jest poza zakresem `Short` (to znaczy, jeśli jest mniejszy niż <xref:System.Int16.MinValue?displayProperty=nameWithType> lub większa niż <xref:System.Int16.MaxValue?displayProperty=nameWithType>, występuje błąd kompilacji.
+Można zadeklarować i zainicjować `Short` zmiennej przez przypisanie dziesiętna literałem szesnastkowy literał ósemkową literał lub (począwszy od 2017 Visual Basic) literału binarnego. Jeśli literał liczby całkowitej jest poza zakresem `Short` (to znaczy, jeśli jest mniejszy niż <xref:System.Int16.MinValue?displayProperty=nameWithType> lub większa niż <xref:System.Int16.MaxValue?displayProperty=nameWithType>, występuje błąd kompilacji.
 
-W poniższym przykładzie liczb całkowitych równa 1,034, które są reprezentowane jako dziesiętne szesnastkowych, i literały binarne są niejawnie konwertowane z [całkowitą](integer-data-type.md) do `Short` wartości.
+W poniższym przykładzie liczb całkowitych równa 1,034, które są reprezentowane jako dziesiętne, szesnastkową, i literały binarne są niejawnie konwertowane z [całkowitą](integer-data-type.md) do `Short` wartości.
 
 [!code-vb[Short](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Short)]
 
 > [!NOTE]
-> Użyj prefiksu `&h` lub `&H` do oznaczania literałem szesnastkowe prefiks `&b` lub `&B` do oznaczania literał binarny i prefiks `&o` lub `&O` do oznaczania ósemkowe literału. Literałów dziesiętnych mają nie ma prefiksu.
+> Użyj prefiksu `&h` lub `&H` do oznaczania szesnastkowy literał, prefiks `&b` lub `&B` do oznaczania literału binarnego i prefiksem `&o` lub `&O` do oznaczania ósemkową literału. Literały dziesiętna mieć żadnego prefiksu.
 
-Począwszy od 2017 Visual Basic, umożliwia także znaku podkreślenia `_`, jako separator cyfr w celu zwiększenia czytelności, jak w poniższym przykładzie pokazano.
+Począwszy od 2017 Visual Basic umożliwia także znaku podkreślenia `_`, jako separator cyfr w celu zwiększenia czytelności w poniższym przykładzie pokazano.
 
 [!code-vb[Short](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ShortS)]
 
-Począwszy od programu Visual Basic 15,5 cala, umożliwia także znaku podkreślenia (`_`) jako separator wiodące między prefiks i cyfr szesnastkowych, binarne lub ósemkowo. Na przykład:
+Począwszy od wersji 15.5 programu Visual Basic umożliwia także znaku podkreślenia (`_`) jako wiodący separator między prefiks i cyfr szesnastkowych, binarne lub ósemkowo. Na przykład:
 
 ```vb
 Dim number As Short = &H_3264
@@ -56,7 +56,7 @@ Dim number As Short = &H_3264
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Literały numeryczne mogą również obejmować `S` [znaku typu](../../programming-guide\language-features\data-types/type-characters.md) do oznaczania `Short` typu danych, jak przedstawiono na poniższym przykładzie.
+Literały numeryczne mogą również obejmować `S` [wpisz znak](../../programming-guide\language-features\data-types/type-characters.md) do oznaczania `Short` typu danych, co ilustruje poniższy przykład.
 
 ```vb
 Dim number = &H_3264S
@@ -64,16 +64,16 @@ Dim number = &H_3264S
 
 ## <a name="programming-tips"></a>Porady dotyczące programowania
 
--   **Rozszerzanie.** `Short` Rozszerzenie typu danych do `Integer`, `Long`, `Decimal`, `Single`, lub `Double`. Oznacza to, że można przekonwertować `Short` do dowolnego z tych typów bez napotkania <xref:System.OverflowException?displayProperty=nameWithType> błędu.  
+-   **Rozszerzanie.** `Short` — Typ danych rozszerza się na `Integer`, `Long`, `Decimal`, `Single`, lub `Double`. Oznacza to, że możesz przekonwertować `Short` do jednej z tych typów, nie powodując <xref:System.OverflowException?displayProperty=nameWithType> błędu.  
   
--   **Znaki typu.** Znak literalny typu dołączanie `S` do literału wymusza `Short` — typ danych. `Short` nie ma identyfikatora typu znaku.  
+-   **Znaki typu.** Dołączanie znaku typu literał `S` do literału wymusza `Short` typu danych. `Short` nie ma identyfikatora typ znaku.  
   
--   **Typ struktury.** Danego typu w programie .NET Framework jest <xref:System.Int16?displayProperty=nameWithType> struktury.  
+-   **Typ Framework.** Odpowiedni typ w .NET Framework jest <xref:System.Int16?displayProperty=nameWithType> struktury.  
   
 ## <a name="see-also"></a>Zobacz także
 
  <xref:System.Int16?displayProperty=nameWithType>  
- [Typy danych](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Typy danych](../../../visual-basic/language-reference/data-types/index.md)  
  [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
  [Integer, typ danych](../../../visual-basic/language-reference/data-types/integer-data-type.md)  

@@ -14,43 +14,43 @@ helpviewer_keywords:
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
 ms.openlocfilehash: b0963457e22bf0c3fc92d33c5ed0eb699be27cf7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326335"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932045"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Argumenty nazwane i opcjonalne (Przewodnik programowania w języku C#)
-[!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] wprowadza argumenty nazwane i opcjonalne. *Argumenty nazwane o* można określić argumentu dla parametru określonego przez skojarzenie argument o nazwie parametru, a nie parametru pozycji na liście parametrów. *Argumenty opcjonalne* można pominąć argumenty dla niektórych parametrów. Obie techniki można używać z metod, indeksatorów konstruktory i delegatów.  
+[!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] wprowadza argumentów nazwanych i opcjonalnych. *Argumenty nazwane* umożliwiają określenie argumentu dla parametru określonego argumentu można skojarzyć z nazwą parametru, a nie za pomocą parametru pozycji na liście parametrów. *Argumenty opcjonalne* umożliwia pominięcie argumentów dla niektórych parametrów. Obu tych technik może służyć za pomocą metod, indeksatorów, konstruktorów i delegatów.  
   
- Użycie argumentów nazwanych i opcjonalnych argumentach są oceniane w kolejności, w którym są wyświetlane na liście argumentów nie listy parametrów.  
+ Użycie argumentów nazwanych i opcjonalnych, argumenty są obliczane w kolejności, w jakiej są wyświetlane na liście argumentów nie listy parametrów.  
   
- Parametry nazwane i opcjonalne, gdy jest używany razem umożliwiają podać argumenty tylko kilka parametrów z listy parametrów opcjonalnych. Ta funkcja znacznie ułatwia wywołania do interfejsów modelu COM, takie jak interfejsy API Microsoft Office automatyzacji.  
+ Parametry nazwane i opcjonalne, gdy jest używana razem umożliwiają podać argumenty tylko kilka parametrów z listy parametrów opcjonalnych. Ta funkcja znacznie ułatwia wywołania interfejsów COM, takich jak interfejsów API automatyzacji usługi Microsoft Office.  
   
 ## <a name="named-arguments"></a>Argumenty nazwane  
- Argumenty nazwane pozbawione potrzebę do zapamiętania lub wyszukania kolejność parametrów na listach parametrem wywoływane metody. Parametr dla każdego argumentu można określić nazwę parametru. Na przykład funkcja, która wyświetla szczegóły zamówienia (takich jak nazwy sprzedawcy, kolejność numer & produktu nazwy), wysyłając argumentów według pozycji w kolejności, zdefiniowany przez funkcję można wywołać w sposób standardowy.
+ Argumenty nazwane pozbawione potrzebę Pamiętaj lub wyszukać kolejność parametrów na liście parametrów wywoływanych metod. Parametr dla każdego argumentu można określić nazwę parametru. Na przykład funkcja, która wyświetla szczegóły zamówienia (takie jak nazwa sprzedawcy, nazwa produktu & liczby zamówienia) może zostać wywołany w sposób standardowy, wysyłając argumentów według pozycji w kolejności, zdefiniowanych przez funkcję.
   
  `PrintOrderDetails("Gift Shop", 31, "Red Mug");`
   
- Jeśli nie pamięta kolejność parametrów, ale znasz ich nazw, możesz wysłać argumenty w dowolnej kolejności.  
+ Jeśli nie pamiętasz kolejności parametrów, ale znasz ich nazw, można wysyłać argumenty w dowolnej kolejności.  
   
  `PrintOrderDetails(orderNum: 31, productName: "Red Mug", sellerName: "Gift Shop");`
   
  `PrintOrderDetails(productName: "Red Mug", sellerName: "Gift Shop", orderNum: 31);`
   
- Argumenty nazwane również poprawić czytelność kodu, określając reprezentuje każdy argument. W metodzie przykładzie poniżej `sellerName` nie może mieć wartości null ani biały znak. Jednocześnie jako `sellerName` i `productName` są typu ciąg, zamiast wysyłać argumentów według pozycji, warto użyć nazwane argumenty do odróżniania dwóch i uniknąć pomyłek dla każdego odczytywania kod.
+ Argumenty nazwane również poprawić czytelność kodu, określając, co reprezentuje każdy argument. W metodzie przykład poniżej `sellerName` nie może mieć wartość null lub biały znak. Oba `sellerName` i `productName` są typami parametrów, zamiast wysyłać argumentów według pozycji, dobrym pomysłem będzie używać argumentów nazwanych do odróżniania dwóch i unikanie pomyłek dla każdego, kto kodu.
   
- Nazwane argumenty, gdy jest używany z argumenty pozycyjne, są prawidłowe tak długo, jak 
+ Nazwane argumenty, gdy jest używane z argumentów pozycyjnych, są prawidłowe tak długo, jak 
 
-- nie są one następuje argumenty pozycyjne lub
+- mogą one nie następuje argumenty pozycyjne, lub
 
  `PrintOrderDetails("Gift Shop", 31, productName: "Red Mug");`
 
-- _począwszy od C# 7.2_, są używane w poprawnej pozycji. W przykładzie poniżej parametr `orderNum` jest w prawidłowym miejscu, ale nie jest jawnie nazwane.
+- _począwszy od C# 7.2_, są używane w poprawnej pozycji. W przykładzie poniżej, parametr `orderNum` jest w prawidłowym położeniu, ale nie jest jawnie nazwane.
 
  `PrintOrderDetails(sellerName: "Gift Shop", 31, productName: "Red Mug");`
   
- Jednak poza kolejnością nazwane argumenty są nieprawidłowe, jeśli jest następuje argumenty pozycyjne.
+ Jednak argumenty nazwane poza kolejnością jest nieprawidłowy, jeśli masz następuje argumentów pozycyjnych.
 
  ```csharp
  // This generates CS1738: Named argument specifications must appear after all fixed arguments have been specified.
@@ -62,22 +62,22 @@ ms.locfileid: "33326335"
   
  [!code-csharp[csProgGuideNamedAndOptional#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_1.cs)]  
   
-## <a name="optional-arguments"></a>Argumenty opcjonalne  
- Definicja metody, konstruktora, indeksatora lub delegata można określić, czy wymagane są jego parametrów lub że są opcjonalne. Każde wywołanie podać argumenty dla wszystkich wymaganych parametrów, ale można pominąć argumentów dla parametrów opcjonalnych.  
+## <a name="optional-arguments"></a>Argumenty opcjonalne.  
+ Definicję metody, konstruktora, indeksatora lub delegata można określić, że jej parametry są wymagane lub czy są opcjonalne. Każde wywołanie należy podać argumenty dla wszystkich wymaganych parametrów, ale można pominąć argumenty dla parametrów opcjonalnych.  
   
- Każdy opcjonalny parametr ma wartość domyślną w ramach swojej definicji. Jeśli argument nie jest wysyłany dla tego parametru, zostanie użyta domyślna wartość. Wartość domyślna musi mieć jedną z następujących typów wyrażeń:  
+ Każdy parametr opcjonalny ma wartość domyślną, jako część jego definicji. Jeśli żaden argument nie zostanie wysłany dla tego parametru, wartością domyślną jest używany. Wartość domyślna musi być jedną z następujących typów wyrażeń:  
   
 -   wyrażenie stałe;  
   
--   wyrażenie w postaci `new ValType()`, gdzie `ValType` jest typem wartości, takich jak [wyliczenia](../../../csharp/language-reference/keywords/enum.md) lub [struktury](../../../csharp/programming-guide/classes-and-structs/structs.md);  
+-   wyrażenie w formie `new ValType()`, gdzie `ValType` jest typem wartości, takich jak [wyliczenia](../../../csharp/language-reference/keywords/enum.md) lub [struktury](../../../csharp/programming-guide/classes-and-structs/structs.md);  
   
--   wyrażenie w postaci [default(ValType)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md), gdzie `ValType` jest typem wartości.  
+-   wyrażenie w formie [default(ValType)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md), gdzie `ValType` jest typem wartości.  
   
- Parametry opcjonalne są definiowane na końcu listy parametrów po wszelkie wymagane parametry. Jeśli element wywołujący zapewnia argumentu dla dowolnego kolejne parametry opcjonalne, podaj argumenty dla wszystkich powyższych parametrów opcjonalnych. Rozdzielana przecinkami luk w liście argumentów nie są obsługiwane. Na przykład w poniższym kodzie metody wystąpienia `ExampleMethod` jest zdefiniowana z jednym wymagane i dwa parametry opcjonalne.  
+ Opcjonalne parametry są definiowane na końcu listy parametrów po wszelkie wymagane parametry. Obiekt wywołujący dostarcza argumentu jednego z kolejnych następujące parametry opcjonalne, wymagają podania dla wszystkich poprzednich parametry opcjonalne argumenty. Rozdzielana przecinkami przerwy na liście argumentów nie są obsługiwane. Na przykład w poniższym kodzie metodę wystąpienia `ExampleMethod` jest zdefiniowana za pomocą jednego wymagany i dwa parametry opcjonalne.  
   
  [!code-csharp[csProgGuideNamedAndOptional#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_2.cs)]  
   
- Następujące wywołanie do `ExampleMethod` powoduje błąd kompilatora, ponieważ argument podano trzeci parametr, ale nie dla drugiego.  
+ Następujące wywołanie `ExampleMethod` powoduje błąd kompilatora, ponieważ argument zostanie podany, trzeci parametr, ale nie do drugiego.  
   
  `//anExample.ExampleMethod(3, ,4);`  
   
@@ -85,45 +85,45 @@ ms.locfileid: "33326335"
   
  `anExample.ExampleMethod(3, optionalint: 4);`  
   
- IntelliSense używa nawiasów w celu wskazania następujące parametry opcjonalne, jak pokazano na poniższej ilustracji.  
+ Funkcja IntelliSense używa nawiasów, aby wskazać parametry opcjonalne, jak pokazano na poniższej ilustracji.  
   
- ![Szybkie informacje funkcji IntelliSense dla metody ExampleMethod. ] (../../../csharp/programming-guide/classes-and-structs/media/optional_parameters.png "Optional_Parameters")  
+ ![Szybkie informacje technologii IntelliSense dla metody ExampleMethod. ](../../../csharp/programming-guide/classes-and-structs/media/optional_parameters.png "Optional_Parameters")  
 Parametry opcjonalne w ExampleMethod  
   
 > [!NOTE]
->  Parametry opcjonalne może deklarować także przy użyciu programu .NET <xref:System.Runtime.InteropServices.OptionalAttribute> klasy. `OptionalAttribute` Parametry nie wymagają wartości domyślnej.  
+>  Można również zadeklarować następujące parametry opcjonalne przy użyciu platformy .NET <xref:System.Runtime.InteropServices.OptionalAttribute> klasy. `OptionalAttribute` Parametry nie wymagają wartości domyślnej.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie, Konstruktor `ExampleClass` ma jeden parametr, który jest opcjonalne. Metoda wystąpienia `ExampleMethod` ma jeden wymagany parametr `required`i dwa parametry opcjonalne, `optionalstr` i `optionalint`. Kod w `Main` przedstawiono różne sposoby, w którym można wywołać konstruktora i metody.  
+ W poniższym przykładzie, Konstruktor `ExampleClass` ma jeden parametr, który jest opcjonalny. Metodę wystąpienia `ExampleMethod` ma jeden parametr wymagany, `required`i dwa parametry opcjonalne, `optionalstr` i `optionalint`. Kod w `Main` pokazano różne sposoby, w którym można wywołać konstruktora i metody.  
   
  [!code-csharp[csProgGuideNamedAndOptional#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_3.cs)]  
   
 ## <a name="com-interfaces"></a>Interfejsy modelu COM  
- Argumenty nazwane i opcjonalne mechanizmy obiekty dynamiczne i inne rozszerzenia znacznie zwiększyć współdziałanie z interfejsów API modelu COM, takie jak interfejsów API automatyzacji pakietu Office.  
+ Argumenty nazwane i opcjonalne oraz obsługę obiektów dynamicznych i inne ulepszenia znacznie poprawić współdziałanie z interfejsów API modelu COM, takich jak interfejsy API usługi Automation pakietu Office.  
   
- Na przykład [Autoformatowanie](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.autoformat(v=office.15).aspx) metody w programie Microsoft Office Excel [zakres](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range(v=office.15).aspx) interfejs ma siedmiu parametrów, które są opcjonalne. Te parametry są wyświetlane na poniższej ilustracji.  
+ Na przykład [AutoFormat](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.autoformat(v=office.15).aspx) metodę w programie Microsoft Office Excel [zakres](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range(v=office.15).aspx) interfejs ma siedem parametry, z których wszystkie są opcjonalne. Te parametry są wyświetlane na poniższej ilustracji.  
   
- ![Szybkie informacje funkcji IntelliSense dla metody Autoformatowanie. ] (../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")  
-Parametry Autoformatowanie  
+ ![Szybkie informacje technologii IntelliSense dla metody AutoFormat. ](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")  
+Autoformat — parametry  
   
- W języku C# 3.0 i wcześniejszych wersjach, wymagany jest argument dla każdego parametru, jak pokazano w poniższym przykładzie.  
+ W języku C# 3.0 i wcześniejszych wersjach argument jest wymagany dla każdego parametru, jak pokazano w poniższym przykładzie.  
   
  [!code-csharp[csProgGuideNamedAndOptional#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_4.cs)]  
   
- Jednak może bardzo uprościć wywołanie `AutoFormat` przy użyciu argumentów nazwanych i opcjonalnych wprowadzono w języku C# w wersji 4.0. Nazwę i opcjonalne argumenty umożliwiają Pomiń argumentu dla parametru opcjonalnego, jeśli nie chcesz zmienić wartość domyślna parametru. W poniższym wywołaniu określono wartość tylko dla jednego z parametrów siedem.  
+ Jednak znacznie upraszczają wywołanie `AutoFormat` przy użyciu argumentów nazwanych i opcjonalnych, wprowadzona w języku C# 4.0. Nazwę i opcjonalne argumenty umożliwiają pominięcia argumentu dla parametru opcjonalnego, jeśli nie chcesz zmienić wartość domyślną parametru. W poniższym wywołaniu określono wartość tylko dla jednego z siedmiu parametrów.  
   
  [!code-csharp[csProgGuideNamedAndOptional#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_5.cs)]  
   
- Aby uzyskać dodatkowe informacje i przykłady, zobacz [porady: stosowanie nazwanych i argumentów opcjonalnych w programowaniu Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md) i [porady: dostępu do obiektów międzyoperacyjności pakietu Office za pomocą Visual C# funkcji](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md).  
+ Aby uzyskać więcej informacji i przykładów, zobacz [porady: stosowanie nazwanych i argumentów opcjonalnych w programowaniu Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md) i [jak: obiektów międzyoperacyjności pakietu Office dostęp za pomocą funkcji Visual C#](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md).  
   
 ## <a name="overload-resolution"></a>Rozpoznanie przeciążenia  
  Użycie argumentów nazwanych i opcjonalnych wpływa na rozpoznanie przeciążenia w następujący sposób:  
   
--   Metoda, indeksator lub Konstruktor jest kandydatem do wykonania, jeśli każdego z jego parametrów jest opcjonalny, albo odpowiada według nazwy lub stanie pojedynczy argument w instrukcji wywołującego, oraz że argument można przekonwertować na typ parametru.  
+-   Metoda, indeksator lub Konstruktor jest kandydatem do wykonywania w przypadku każdego z jego parametrów jest opcjonalny albo odpowiada według nazwy lub pozycji, aby jeden argument w instrukcji wywołujące, i że argument można przekonwertować na typ parametru.  
   
--   Jeśli zostanie znaleziony więcej niż jednego kandydata, zasady rozpoznawania przeciążenia preferowanych konwersje są stosowane do argumentów, które zostały jawnie określone. Pominięcia Argumenty opcjonalne parametry są ignorowane.  
+-   Jeśli zostanie znalezione więcej niż jeden Release candidate, zasady rozpoznawania przeciążenia preferowanych konwersje są stosowane do argumentów, które są jawnie określone. Pominięty Argumenty opcjonalne parametry są ignorowane.  
   
--   Jeśli dwa kandydatów zostaną ocenione jako jednakowo dobry, preferencji prowadzi do kandydujących, który nie ma następujące parametry opcjonalne dla których argumenty zostały pominięte w wywołaniu. Jest to konsekwencją Ogólne preferencji w wiązaniem dla elementów, które mają mniej parametrów.  
+-   Jeśli dwa kandydatów zostaną ocenione one równie dobrze, preferencji jest przesyłany do Release candidate, który nie ma parametrów opcjonalnych, które zostały pominięte argumentów w wywołaniu. Jest to konsekwencją Ogólne preferencji w przeciążeniu rozdzielczości dla kandydatów, które mają mniej parametrów.  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

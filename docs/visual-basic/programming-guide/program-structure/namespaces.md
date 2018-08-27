@@ -17,56 +17,56 @@ helpviewer_keywords:
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
 ms.openlocfilehash: c1302bf4b424c7c03fb6c2d8132b086c4d30fd87
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655561"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934456"
 ---
 # <a name="namespaces-in-visual-basic"></a>Przestrzenie nazw w Visual Basic
-Przestrzenie nazw organizowanie obiektów zdefiniowanych w zestawie. Zestawy może zawierać wiele obszarów nazw, który z kolei może zawierać innych przestrzeniach nazw. Przestrzenie nazw uniknąć niejednoznaczności i uprościć odwołań w przypadku przy użyciu dużych grup obiektów, takich jak biblioteki klas.  
+Przestrzenie nazw organizują obiekty zdefiniowane w zestawie. Zespoły mogą zawierać wiele przestrzeni nazw, który z kolei może zawierać innych przestrzeniach nazw. Przestrzenie nazw uniknąć niejednoznaczności i uprościć odwołania, korzystając z dużych grup obiektów, takich jak biblioteki klas.  
   
- Na przykład [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] definiuje <xref:System.Windows.Forms.ListBox> klasy w <xref:System.Windows.Forms?displayProperty=nameWithType> przestrzeni nazw. Poniższy fragment kodu przedstawia sposób zadeklarować zmiennej przy użyciu w pełni kwalifikowana nazwa dla tej klasy:  
+ Na przykład [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] definiuje <xref:System.Windows.Forms.ListBox> klasy w <xref:System.Windows.Forms?displayProperty=nameWithType> przestrzeni nazw. Poniższy fragment kodu pokazuje sposób deklarowania zmiennej za pomocą w pełni kwalifikowana nazwa dla tej klasy:  
   
  [!code-vb[VbVbalrApplication#6](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_1.vb)]  
   
 ## <a name="avoiding-name-collisions"></a>Unikanie konfliktów nazw  
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] przestrzenie nazw rozwiązać problem czasami nazywane *zanieczyszczenie przestrzeni nazw*, w którym dewelopera biblioteki klas jest utrudniona przez stosowanie podobnych nazw w innej bibliotece. Te konflikty z istniejącymi elementami są nazywane *kolizji nazw*.  
+ [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] przestrzenie nazw rozwiązać problem, czasami nazywane *zanieczyszczenie przestrzeni nazw*, w której Deweloper biblioteki klas dostęp utrudniają przy użyciu podobnych nazwach w innej bibliotece. Te konflikty z istniejącymi elementami są czasami nazywane *Kolizje nazw*.  
   
- Na przykład, jeśli tworzysz nową klasę o nazwie `ListBox`, może być używany w projekcie bez kwalifikacji. Jednak jeśli chcesz użyć [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox> klasy w tym samym projekcie, aby odnieść unikatowy należy użyć pełni kwalifikowane odwołanie. Jeśli odwołanie nie jest unikatowa, Visual Basic generuje komunikat o błędzie informujący, że nazwa jest niejednoznaczna. Poniższy przykładowy kod przedstawia sposób zadeklarować tych obiektów:  
+ Na przykład, jeśli tworzysz nową klasę o nazwie `ListBox`, można go użyć wewnątrz projektu bez kwalifikacji. Jednakże jeśli chcesz używać [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox> klasy w tym samym projekcie, należy użyć w pełni kwalifikowane odwołanie unikatowość odwołania. Jeśli odwołanie nie jest unikatowa, Visual Basic generuje komunikat o błędzie informujący, że nazwa jest niejednoznaczna. Poniższy przykład kodu pokazuje sposób deklarowania tych obiektów:  
   
  [!code-vb[VbVbalrApplication#7](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_2.vb)]  
   
- Na poniższej ilustracji przedstawiono dwie hierarchie przestrzeni nazw, w obu zawierający obiekt o nazwie `ListBox`.  
+ Na poniższej ilustracji przedstawiono dwie hierarchie przestrzeni nazw, w obu zawierającą obiekt o nazwie `ListBox`.  
   
  ![Hierarchia Namespace](../../../visual-basic/programming-guide/program-structure/media/vanamespacehierarchy.gif "vaNamespaceHierarchy")  
   
- Domyślnie każdy plik wykonywalny, utworzone przy użyciu języka Visual Basic zawiera obszarze nazw o nazwie identycznej z nazwą projektu. Na przykład, jeśli zdefiniowania obiektu, w ramach projektu o nazwie `ListBoxProject`, plik wykonywalny ListBoxProject.exe zawiera obszar nazw o nazwie `ListBoxProject`.  
+ Domyślnie co plik wykonywalny, utworzonej za pomocą Visual Basic zawiera przestrzeń nazw o takiej samej nazwie co projekt. Na przykład, jeśli zdefiniujesz obiekt w ramach projektu o nazwie `ListBoxProject`, plik wykonywalny ListBoxProject.exe zawiera przestrzeń nazw o nazwie `ListBoxProject`.  
   
- Wiele zestawów można użyć tego samego obszaru nazw. Visual Basic traktowane jako pojedynczy zestaw nazw. Na przykład można zdefiniować klasy dla przestrzeni nazw o nazwie `SomeNameSpace` w zestawie o nazwie `Assemb1`i zdefiniować dodatkowe klasy dla tego samego obszaru nazw z zestawu o nazwie `Assemb2`.  
+ Wiele zestawów, można użyć tej samej przestrzeni nazw. Visual Basic traktuje je jako pojedynczy zestaw nazw. Na przykład można zdefiniować klasy w przestrzeni nazw o nazwie `SomeNameSpace` w zestawie o nazwie `Assemb1`i zdefiniować dodatkowe klasy dla tej samej przestrzeni nazw z zestawu o nazwie `Assemb2`.  
   
 ## <a name="fully-qualified-names"></a>W pełni kwalifikowane nazwy  
- W pełni kwalifikowane nazwy są odwołania do obiektów, które są poprzedzane prefiksem nazwy przestrzeni nazw, w którym zdefiniowana jest obiekt. Można użyć obiektów zdefiniowanych w innych projektach, jeśli utworzono odwołanie do klasy (przez wybranie **Dodaj odwołanie** z **projektu** menu), a następnie użyj w pełni kwalifikowana nazwa obiektu w kodzie. Poniższy fragment kodu przedstawia sposób użycia w pełni kwalifikowana nazwa obiektu z innego projektu przestrzeni nazw:  
+ W pełni kwalifikowane nazwy są odwołania do obiektów, które są poprzedzone nazwą przestrzeni nazw, w którym jest zdefiniowany obiekt. Można użyć obiektów zdefiniowanych w innych projektach, jeśli tworzysz odwołanie do klasy (wybierając **Dodaj odwołanie** z **projektu** menu), a następnie użyć w pełni kwalifikowana nazwa obiektu w kodzie. Poniższy fragment kodu przedstawia sposób używania w pełni kwalifikowana nazwa obiektu z innego projektu w przestrzeni nazw:  
   
  [!code-vb[VbVbalrApplication#8](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_3.vb)]  
   
- W pełni kwalifikowane nazwy zapobiec nazw powoduje konflikt, ponieważ są one umożliwiać kompilator, aby określić obiektu, który jest w użyciu. Jednak nazwy można uzyskać długich i skomplikowane. Aby uzyskać obejścia tego problemu, można użyć `Imports` instrukcji, aby zdefiniować *alias*— skróconą nazwę można użyć zamiast w pełni kwalifikowana nazwa. Na przykład poniższy przykład kodu tworzy aliasów dla dwóch w pełni kwalifikowane nazwy i używa tych aliasy, aby zdefiniować dwa obiekty.  
+ W pełni kwalifikowanych nazw zapobiec nazw powoduje konflikt, ponieważ umożliwiają one programowi, aby kompilator mógł określić obiektu, który jest używany. Jednak same nazwy, można uzyskać długich i kłopotliwe. Aby obejść ten problem, można użyć `Imports` instrukcji, aby zdefiniować *alias*— skrócona nazwa, można użyć zamiast w pełni kwalifikowana nazwa. Na przykład poniższy kod tworzy aliasy dla dwóch w pełni kwalifikowanych nazw i używa te aliasy, aby zdefiniować dwa obiekty.  
   
  [!code-vb[VbVbalrApplication#9](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_4.vb)]  
   
  [!code-vb[VbVbalrApplication#10](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_5.vb)]  
   
- Jeśli używasz `Imports` instrukcji bez aliasu, można używać wszystkich nazw w tej przestrzeni nazw bez kwalifikacji, podane, są one unikatowe do projektu. Jeśli projekt zawiera `Imports` instrukcje dla przestrzeni nazw, która zawiera elementy o takiej samej nazwie, użytkownik musi pełnej nazwy tego przypadku użycia jej. Załóżmy na przykład projekt zawiera dwa `Imports` instrukcji:  
+ Jeśli używasz `Imports` instrukcji bez aliasu, można użyć wszystkich nazw w tej przestrzeni nazw bez kwalifikacji, podane są unikatowe dla projektu. Jeśli projekt zawiera `Imports` instrukcji dla przestrzeni nazw, które zawierają elementy o takiej samej nazwie, muszą w pełni kwalifikujesz się do tej nazwy wykorzystane moce. Załóżmy na przykład projekt zawiera dwie poniższe `Imports` instrukcji:  
   
  [!code-vb[VbVbalrApplication#11](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_6.vb)]  
   
- Jeśli próba użycia `Class1` bez pełni kwalifikujące go, Visual Basic generuje komunikat o błędzie informujący, że nazwa `Class1` jest niejednoznaczna.  
+ Jeśli spróbujesz użyć `Class1` bez w pełni kwalifikowania go, Visual Basic generuje komunikat o błędzie informujący, że nazwa `Class1` jest niejednoznaczna.  
   
-## <a name="namespace-level-statements"></a>Poziom Namespace — instrukcje  
- W obszarze nazw należy zdefiniować elementy, takie jak moduły, interfejsów, klas, obiektów delegowanych, wyliczeń, struktur i innych przestrzeniach nazw. Nie można zdefiniować elementy, takie jak właściwości, procedur, zmiennych i zdarzenia na poziomie przestrzeni nazw. Te elementy muszą być zadeklarowane w kontenerach, takich jak moduły, struktury lub klasy.  
+## <a name="namespace-level-statements"></a>Poziom Namespace instrukcji  
+ W przestrzeni nazw można zdefiniować elementy, takie jak moduły, interfejsy, klasy, delegatów, wyliczenia, struktur i inne przestrzenie nazw. Nie można zdefiniować elementy, takie jak właściwości, procedur, zmienne i zdarzenia na poziomie przestrzeni nazw. Te elementy muszą być zadeklarowane w kontenerach, takich jak moduły, struktury lub klasy.  
   
 ## <a name="global-keyword-in-fully-qualified-names"></a>Global — słowo kluczowe w pełni kwalifikowane nazwy  
- Jeśli zdefiniowano hierarchii zagnieżdżonych obszarów nazw kodu wewnątrz tej hierarchii może zostać zablokowany dostęp do <xref:System?displayProperty=nameWithType> przestrzeni nazw programu .NET Framework. Poniższy przykład przedstawia hierarchię, w którym `SpecialSpace.System` przestrzeni nazw zablokuje dostęp do <xref:System?displayProperty=nameWithType>.  
+ Jeśli zdefiniowano hierarchię zagnieżdżoną przestrzenie nazw, kod wewnątrz tej hierarchii mogą mieć zablokowany dostęp do <xref:System?displayProperty=nameWithType> przestrzeni nazw programu .NET Framework. Poniższy przykład ilustruje, hierarchię, w którym `SpecialSpace.System` przestrzeni nazw powoduje zablokowanie dostępu do <xref:System?displayProperty=nameWithType>.  
   
 ```vb  
 Namespace SpecialSpace  
@@ -81,7 +81,7 @@ Namespace SpecialSpace
 End Namespace  
 ```  
   
- W związku z tym kompilator Visual Basic nie można rozpoznać odwołania do <xref:System.Int32?displayProperty=nameWithType>, ponieważ `SpecialSpace.System` nie definiuje `Int32`. Można użyć `Global` — słowo kluczowe, aby uruchomić łańcucha kwalifikacji na poziomie najbardziej zewnętrznego w bibliotece klas programu .NET Framework. Dzięki temu można określić <xref:System?displayProperty=nameWithType> przestrzeni nazw lub innych przestrzeni nazw w bibliotece klas. Ilustruje to poniższy przykład.  
+ Co w efekcie kompilator Visual Basic nie można pomyślnie rozpoznać odwołania do <xref:System.Int32?displayProperty=nameWithType>, ponieważ `SpecialSpace.System` nie definiuje `Int32`. Możesz użyć `Global` — słowo kluczowe, można uruchomić w łańcuchu kwalifikacji na poziomie najbardziej zewnętrznej biblioteki klas .NET Framework. Dzięki temu można określić <xref:System?displayProperty=nameWithType> przestrzeni nazw lub innych przestrzeni nazw w bibliotece klas. Ilustruje to poniższy przykład.  
   
 ```vb  
 Namespace SpecialSpace  
@@ -96,26 +96,26 @@ Namespace SpecialSpace
 End Namespace  
 ```  
   
- Można użyć `Global` można uzyskać dostępu do innych przestrzeniach nazw poziomu głównego, takich jak <xref:Microsoft.VisualBasic?displayProperty=nameWithType>i skojarzone z projektu przestrzeni nazw.  
+ Możesz użyć `Global` do dostępu do innych obszarów nazw do poziomu głównego, takich jak <xref:Microsoft.VisualBasic?displayProperty=nameWithType>i dowolnego obszaru nazw skojarzonej z projektem.  
   
-## <a name="global-keyword-in-namespace-statements"></a>Global — słowo kluczowe w instrukcjach "Namespace"  
- Można również użyć `Global` — słowo kluczowe w [instrukcji Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md). Dzięki temu można zdefiniować przestrzeni nazw poza głównej przestrzeni nazw projektu.  
+## <a name="global-keyword-in-namespace-statements"></a>Global — słowo kluczowe w instrukcjach Namespace  
+ Można również użyć `Global` — słowo kluczowe w [Namespace, instrukcja](../../../visual-basic/language-reference/statements/namespace-statement.md). Dzięki temu można zdefiniować obszar nazw poza głównej przestrzeni nazw projektu.  
   
- Wszystkie przestrzenie nazw w projekcie są oparte na przestrzeń nazw korzenia dla projektu.  Program Visual Studio przypisuje nazwę projektu jako domyślną główną przestrzeń nazw dla całego kodu w projekcie.  Na przykład jeśli projekt nosi nazwę `ConsoleApplication1`, jego elementy programistyczne należą do przestrzeni nazw `ConsoleApplication1`. W przypadku `Namespace Magnetosphere`, odwołuje się do `Magnetosphere` w projekcie będą uzyskiwać dostęp do `ConsoleApplication1.Magnetosphere`.  
+ Wszystkie przestrzenie nazw w projekcie opierają się na przestrzeń nazw korzenia dla projektu.  Program Visual Studio przypisuje nazwę projektu jako domyślną główną przestrzeń nazw dla całego kodu w projekcie.  Na przykład jeśli projekt nosi nazwę `ConsoleApplication1`, jego elementy programistyczne należą do przestrzeni nazw `ConsoleApplication1`. Jeśli zadeklarujesz `Namespace Magnetosphere`, odwołuje się do `Magnetosphere` w projekcie będą miały dostęp `ConsoleApplication1.Magnetosphere`.  
   
- W poniższych przykładach użyto `Global` — słowo kluczowe, aby zadeklarować przestrzeni nazw poza głównej przestrzeni nazw dla projektu.  
+ W poniższych przykładach używane `Global` — słowo kluczowe do deklarowania, przestrzeń nazw z głównej przestrzeni nazw dla projektu.  
   
  [!code-vb[VbVbalrApplication#22](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_7.vb)]  
   
- W deklaracji przestrzeni nazw `Global` nie mogą być zagnieżdżone w innej przestrzeni nazw.  
+ W deklaracji przestrzeni nazw `Global` nie może być zagnieżdżona w innej przestrzeni nazw.  
   
- Można użyć [strona aplikacji, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic) do wyświetlania i modyfikowania **Namespace głównego** projektu.  Dla nowych projektów **Namespace głównego** domyślnie nazwa projektu. Powoduje `Global` się przestrzeni nazw najwyższego poziomu, można wyczyścić **Namespace głównego** wpis tak, że pole jest puste. Wyczyszczenie **Namespace głównego** eliminuje to potrzebę `Global` — słowo kluczowe w deklaracjach przestrzeni nazw.  
+ Możesz użyć [strona aplikacji, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic) wyświetlać i modyfikować **Namespace głównego** projektu.  Dla nowych projektów **Namespace głównego** domyślnie ustawiana na nazwę projektu. Aby spowodować `Global` jako przestrzeń nazw najwyższego poziomu, można wyczyścić **Namespace głównego** wpis tak, że pole jest puste. Czyszczenie **Namespace głównego** eliminuje potrzebę `Global` — słowo kluczowe w deklaracji przestrzeni nazw.  
   
- Jeśli `Namespace` instrukcji deklaruje nazwę, która jest również przestrzeni nazw w programie .NET Framework, obszaru nazw .NET Framework jest niedostępny Jeśli `Global` — słowo kluczowe nie jest używany w pełni kwalifikowanej nazwy. Aby umożliwić dostęp do tego obszaru nazw .NET Framework bez użycia `Global` — słowo kluczowe, mogą obejmować `Global` — słowo kluczowe w `Namespace` instrukcji.  
+ Jeśli `Namespace` instrukcja deklaruje nazwę, która jest również przestrzeni nazw w programie .NET Framework, obszaru nazw .NET Framework staje się niedostępny Jeśli `Global` — słowo kluczowe nie jest używany w pełni kwalifikowanej nazwy. Aby umożliwić dostęp do tego obszaru nazw .NET Framework bez użycia `Global` — słowo kluczowe, mogą obejmować `Global` — słowo kluczowe w `Namespace` instrukcji.  
   
- W poniższym przykładzie przedstawiono `Global` — słowo kluczowe w `System.Text` deklaracji przestrzeni nazw.  
+ W poniższym przykładzie przedstawiono `Global` — słowo kluczowe w `System.Text` deklarację przestrzeni nazw.  
   
- Jeśli `Global` — słowo kluczowe nie była obecna w deklaracji przestrzeni nazw <xref:System.Text.StringBuilder> nie było możliwe bez określania `Global.System.Text.StringBuilder`. Dla projektu o nazwie `ConsoleApplication1`, odwołuje się do `System.Text` może uzyskać dostępu do `ConsoleApplication1.System.Text` Jeśli `Global` nie użyto słowa kluczowego.  
+ Jeśli `Global` — słowo kluczowe nie była obecna w deklaracji przestrzeni nazw <xref:System.Text.StringBuilder> nie jest dostępna bez określania `Global.System.Text.StringBuilder`. Dla projektu o nazwie `ConsoleApplication1`, odwołuje się do `System.Text` dostęp do `ConsoleApplication1.System.Text` Jeśli `Global` nie użyto słowa kluczowego.  
   
  [!code-vb[VbVbalrApplication#21](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_8.vb)]  
   

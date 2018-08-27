@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c15c554e0ec135b33d671a83b5e27d0a2a89b731
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: faa9bc412e67e0e49ee969bd8b246a424fe628a0
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444259"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930940"
 ---
 # <a name="imetadataemitapplyeditandcontinue-method"></a>IMetaDataEmit::ApplyEditAndContinue — Metoda
-Aktualizuje bieżącego zakresu zestawu zmian w określonych metadanych.  
+Aktualizuje bieżącego zakresu zestawu zmian wprowadzonych w określonych metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,9 +37,9 @@ HRESULT ApplyEditAndContinue (
   
 #### <a name="parameters"></a>Parametry  
  `pImport`  
- [in] Wskaźnik do <<!--zzxref:IUnknown --> `IUnknown`> obiekt, który reprezentuje delta metadanych z pliku przenośny plik wykonywalny (PE).  
+ \[w\] wskaźnik do [IUnknown](/cpp/atl/iunknown) obiekt, który reprezentuje metadane różnicowych z plików przenośnych plików wykonywalnych (PE).
   
- Metadane delta jest blok metadanych, które zawiera kopię rzeczywistego metadane modułu zostały wprowadzone zmiany.  
+ Metadane różnicowe są blok metadanych, który zawiera zmiany, które zostały wprowadzone na kopię rzeczywistego metadane modułu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

@@ -1,5 +1,5 @@
 ---
-title: 'Porady: Zastąp wybór globalnych serwera Proxy'
+title: 'Porady: Przesłoń wyboru globalnego serwera Proxy'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ ms.assetid: 0da481a9-b414-4230-beb0-e3ceba882fe5
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: c10cff979a18d8e07a1e7089f96157e4c38f040e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 244315b5df4200524685bc5b9fb75a0d7fd9b39e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393909"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930831"
 ---
-# <a name="how-to-override-a-global-proxy-selection"></a>Porady: Zastąp wybór globalnych serwera Proxy
-W tym przykładzie wysyła **WebRequest** do www.contoso.com zastępujący wybór globalnych serwera proxy z serwerem proxy o nazwie `alternateproxy` na porcie 80.  
+# <a name="how-to-override-a-global-proxy-selection"></a>Porady: Przesłoń wyboru globalnego serwera Proxy
+W tym przykładzie wysyła **WebRequest** do `www.contoso.com` , zastępuje wyboru globalnego serwera proxy przy użyciu serwera proxy, o nazwie `alternateproxy` na porcie 80.  
   
 ## <a name="example"></a>Przykład  
   
@@ -33,7 +33,7 @@ req.Proxy = New WebProxy("http://alternateproxy:80/")
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Odwołuje się do **System.Net** przestrzeni nazw.  
+-   A [ `using` dyrektywy](~/docs/csharp/language-reference/keywords/using-directive.md) dla **przestrzeni nazw System.Net** przestrzeni nazw.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z protokołów aplikacji](../../../docs/framework/network-programming/using-application-protocols.md)  

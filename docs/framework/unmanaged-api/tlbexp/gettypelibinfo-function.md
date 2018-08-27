@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56a9b97f37240e385dbd1788bafea62578d687a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ec28c581b8e6e0aff3a2765720b6e9795be931b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457871"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931708"
 ---
 # <a name="gettypelibinfo-function"></a>GetTypeLibInfo — Funkcja
-Zwraca informacje na temat określonej biblioteki typów, sprawdzając jego [TLIBATTR](https://msdn.microsoft.com/library/ms221376\(v=vs.85\).aspx) struktury.  
+Zwraca informacje dotyczące określonej biblioteki typu, sprawdzając jego [TLIBATTR](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagtlibattr) struktury.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -50,18 +50,18 @@ HRESULT GetTypeLibInfo(
  [out] Identyfikator lokalizacji biblioteki typów.  
   
  `pTypeLibPlatform`  
- [out] A [SYSKIND](https://msdn.microsoft.com/library/ms221272\(v=vs.85\).aspx) flagę, która identyfikuje docelowego systemu operacyjnego dla biblioteki typów. Typowe wartości to SYS_WIN32 i SYS_WIN64.  
+ [out] A [SYSKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ne-oaidl-tagsyskind) flagę, która identyfikuje docelowego systemu operacyjnego dla biblioteki typów. Typowe wartości to SYS_WIN32 i SYS_WIN64.  
   
  `pTypeLibMajorVer`  
- [out] Numer wersji głównej biblioteki typów. Na przykład w przypadku wersji *x.y*, numer wersji głównej jest *x*.  
+ [out] Główny numer wersji biblioteki typów. Na przykład w przypadku wersji *x.y*, główny numer wersji jest *x*.  
   
  `pTypeLibMinorVer`  
- [out] Podrzędny numer wersji biblioteki typów. Na przykład w przypadku wersji *x.y*, podrzędny numer wersji jest *y*.  
+ [out] Pomocniczy numer wersji biblioteki typów. Na przykład w przypadku wersji *x.y*, pomocniczy numer wersji jest *y*.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetTypeLibInfo` Funkcja jest wywoływana przez [Tlbexp.exe (Eksporter biblioteki typów)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md). Narzędzie to generuje biblioteki typów, który opisuje typów w zestawie wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR).  
+ `GetTypeLibInfo` Funkcja jest wywoływana przez [Tlbexp.exe (Eksporter biblioteki typów)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md). To narzędzie generuje bibliotekę typów opisującą typy w zestawie środowiska uruchomieniowego (języka wspólnego CLR) języka wspólnego.  
   
- Jeśli żadnych parametrów ma wartość null, funkcja zwraca `HRESULT` z `E_POINTER`. W przeciwnym razie zwraca `S_OK`.  
+ Jeśli którykolwiek z parametrów ma wartość null, funkcja zwraca `HRESULT` z `E_POINTER`. W przeciwnym razie zwraca `S_OK`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -74,4 +74,4 @@ HRESULT GetTypeLibInfo(
   
 ## <a name="see-also"></a>Zobacz też  
  [Tlbexp, funkcje pomocy](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [Funkcja LoadTypeLibEx](https://msdn.microsoft.com/library/ms221249\(v=vs.85\).aspx)
+ [LoadTypeLibEx — funkcja](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

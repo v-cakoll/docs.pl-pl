@@ -10,129 +10,135 @@ helpviewer_keywords:
 - else keyword [C#]
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
-ms.openlocfilehash: eb8fe4c3a02cab8f8c887ec37244bede04b8a663
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 77ee6e86017eb24d565842b3401533ebda1add35
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218758"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932374"
 ---
 # <a name="if-else-c-reference"></a>if-else (odwołanie w C#)
-`if` Identyfikuje instrukcji, które instrukcji do uruchomienia na podstawie wartości z `Boolean` wyrażenia. W poniższym przykładzie `Boolean` zmiennej `result` ustawiono `true` , a następnie zaewidencjonowany `if` instrukcji. Dane wyjściowe `The condition is true`.  
-  
- [!code-csharp[csrefKeywordsSelection#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_1.cs)]  
-  
- Przykłady można uruchomić w tym temacie, umieszczając je w `Main` metoda aplikacji konsoli.  
-  
- `if` Instrukcji w języku C# może zająć dwie formy, jak przedstawiono na poniższym przykładzie.  
-  
-```csharp  
-// if-else statement  
-if (condition)  
-{  
-    then-statement;  
-}  
-else  
-{  
-    else-statement;  
-}  
-// Next statement in the program.  
-  
-// if statement without an else  
-if (condition)  
-{  
-    then-statement;  
-}  
-// Next statement in the program.  
-```  
-  
- W `if-else` instrukcji, jeśli `condition` zwraca wartość true, `then-statement` działa. Jeśli `condition` ma wartość false, `else-statement` działa. Ponieważ `condition` nie może być jednocześnie true i false, `then-statement` i `else-statement` z `if-else` instrukcji nigdy oba uruchomić. Po `then-statement` lub `else-statement` działa, kontroli są przesyłane do następnej instrukcji po `if` instrukcji.  
-  
- W `if` instrukcji, która nie zawiera `else` instrukcji, jeśli `condition` ma wartość true, `then-statement` działa. Jeśli `condition` ma wartość false, sterowania są przesyłane do następnej instrukcji po `if` instrukcji.  
-  
- Zarówno `then-statement` i `else-statement` składa się z jednej instrukcji lub wiele instrukcji, które są ujęte w nawiasy klamrowe (`{}`). Dla jednej instrukcji nawiasy klamrowe są opcjonalne, ale zalecane.  
-  
- Instrukcji lub instrukcjach w `then-statement` i `else-statement` mogą być dowolnego rodzaju, włącznie z innego `if` zagnieżdżonych instrukcji w oryginalnej `if` instrukcji. Zagnieżdżone w `if` instrukcji każdego `else` klauzuli należy do ostatniego `if` który nie ma odpowiedniego elementu `else`. W poniższym przykładzie `Result1` jest wyświetlany, jeśli obie `m > 10` i `n > 20` zwrócić wartość true. Jeśli `m > 10` ma wartość true, ale `n > 20` ma wartość false, `Result2` pojawi się.  
-  
- [!code-csharp[csrefKeywordsSelection#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_2.cs)]  
-  
- Jeśli natomiast ma `Result2` się pojawiać, gdy `(m > 10)` ma wartość false, to skojarzenie można określić za pomocą nawiasów klamrowych ustanowienie początek i koniec zagnieżdżone `if` instrukcji, jak przedstawiono na poniższym przykładzie.  
-  
- [!code-csharp[csrefKeywordsSelection#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_3.cs)]  
-  
- `Result2` jest wyświetlana, gdy warunek `(m > 10)` daje w wyniku wartość false.  
-  
-## <a name="example"></a>Przykład  
- W poniższym przykładzie, wpisz znak z klawiatury, a program używa zagnieżdżoną `if` instrukcji, aby określić, czy znak wejściowy jest znakiem alfabetycznym. Jeśli znak wejściowy jest litera, program sprawdza, czy znak wejściowy jest małe lub wielkie litery. Pojawi się komunikat dla każdego przypadku.  
-  
- [!code-csharp[csrefKeywordsSelection#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_4.cs)]  
-  
-## <a name="example"></a>Przykład  
- Ponadto można zagnieżdżać `if` instrukcji wewnątrz innego bloku, jak przedstawiono na poniższym kodu częściowej. Przykład zagnieżdża `if` instrukcje wewnątrz dwa bloki else i jeden blok następnie. Komentarze Określ warunki, które są true lub false w każdym bloku.  
-  
- [!code-csharp[csrefKeywordsSelection#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_5.cs)]  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład określa, czy znak wejściowy jest mała litera, wielką literą lub cyfrą. Jeśli wszystkie trzy warunki false, znak nie jest znakiem alfanumerycznym. Przykład wyświetla komunikat dla każdego przypadku.  
-  
- [!code-csharp[csrefKeywordsSelection#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_6.cs)]  
-  
- Tak samo, jak instrukcji else bloku lub następnie bloku może być dowolnym prawidłową instrukcję, używając dowolne prawidłowe wyrażenie logiczne dla warunku. Można użyć operatorów logicznych, takich jak [ && ](../../../csharp/language-reference/operators/conditional-and-operator.md), [ & ](../../../csharp/language-reference/operators/and-operator.md), [ &#124; &#124; ](../../../csharp/language-reference/operators/conditional-or-operator.md), [ &#124; ](../../../csharp/language-reference/operators/or-operator.md) i [!](../../../csharp/language-reference/operators/logical-negation-operator.md) Aby można było złożonych warunków. Poniższy kod przedstawia przykłady.  
-  
-```csharp  
-// NOT  
-bool result = true;  
-if (!result)  
-{  
-    Console.WriteLine("The condition is true (result is false).");  
-}  
-else  
-{  
-    Console.WriteLine("The condition is false (result is true).");  
-}  
-  
-// Short-circuit AND  
-int m = 9;  
-int n = 7;  
-int p = 5;  
-if (m >= n && m >= p)  
-{  
-    Console.WriteLine("Nothing is larger than m.");  
-}  
-  
-// AND and NOT  
-if (m >= n && !(p > m))  
-{  
-    Console.WriteLine("Nothing is larger than m.");  
-}  
-  
-// Short-circuit OR  
-if (m > n || m > p)  
-{  
-    Console.WriteLine("m isn't the smallest.");  
-}  
-  
-// NOT and OR  
-m = 4;  
-if (!(m >= n || m >= p))  
-{  
-    Console.WriteLine("Now m is the smallest.");  
-}  
-// Output:  
-// The condition is false (result is true).  
-// Nothing is larger than m.  
-// Nothing is larger than m.  
-// m isn't the smallest.  
-// Now m is the smallest.  
-```  
-  
-## <a name="c-language-specification"></a>Specyfikacja języka C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
- [?:, operator](../../../csharp/language-reference/operators/conditional-operator.md)  
- [if-else, instrukcja (C++)](/cpp/cpp/if-else-statement-cpp)  
- [switch](../../../csharp/language-reference/keywords/switch.md)
+
+`if` Instrukcja identyfikuje, które instrukcji do uruchomienia na podstawie wartości z `Boolean` wyrażenia. W poniższym przykładzie `Boolean` zmiennej `result` ustawiono `true` i następnie zaewidencjonować `if` instrukcji. Dane wyjściowe są `The variable is set to true.`.
+
+[!code-csharp[csrefKeywordsSelection#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#1)]
+
+Można uruchomić przykłady w tym temacie, umieszczając je w `Main` metoda aplikacji konsoli.
+
+`if` Instrukcji w języku C# może potrwać dwie formy, co ilustruje poniższy przykład.
+
+```csharp
+// if-else statement
+if (condition)
+{
+    then-statement;
+}
+else
+{
+    else-statement;
+}
+// Next statement in the program.
+
+// if statement without an else
+if (condition)
+{
+    then-statement;
+}
+// Next statement in the program.
+```
+
+W `if-else` instrukcji, jeśli `condition` zwraca wartość true, `then-statement` działa. Jeśli `condition` ma wartość FAŁSZ, `else-statement` działa. Ponieważ `condition` nie może być jednocześnie true i false, `then-statement` i `else-statement` z `if-else` instrukcji może nigdy nie jednocześnie uruchomione. Po `then-statement` lub `else-statement` przebiegów, kontrola jest przekazywana do następnej instrukcji po `if` instrukcji.
+
+W `if` instrukcję, która nie obejmuje `else` instrukcji, jeśli `condition` ma wartość true, `then-statement` działa. Jeśli `condition` ma wartość FAŁSZ, kontrola jest przekazywana do następnej instrukcji po `if` instrukcji.
+
+Zarówno `then-statement` i `else-statement` składa się z pojedynczej instrukcji lub wiele instrukcji, które są ujęte w nawiasy klamrowe (`{}`). W przypadku pojedynczej instrukcji nawiasy klamrowe są opcjonalne, ale zalecane.
+
+Instrukcji lub instrukcji w `then-statement` i `else-statement` mogą być dowolnego rodzaju, w tym innego `if` instrukcji zagnieżdżonych w oryginalnym `if` instrukcji. W zagnieżdżonej `if` instrukcji każdego `else` klauzuli należy do ostatniego `if` , która nie ma odpowiadającej `else`. W poniższym przykładzie `Result1` jest wyświetlana, gdy oba `m > 10` i `n > 20` przyjmowało wartość true. Jeśli `m > 10` ma wartość true, ale `n > 20` ma wartość FAŁSZ, `Result2` pojawia się.
+
+[!code-csharp[csrefKeywordsSelection#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#2)]
+
+Jeśli zamiast tego chcesz, aby `Result2` się pojawiać, gdy `(m > 10)` ma wartość FAŁSZ, można określić tego skojarzenia przy użyciu nawiasów klamrowych, można ustanowić początek i koniec zagnieżdżonego `if` instrukcji, co ilustruje poniższy przykład.
+
+[!code-csharp[csrefKeywordsSelection#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#3)]
+
+`Result2` jest wyświetlana, gdy warunek `(m > 10)` zwróci wartość false.
+
+## <a name="example"></a>Przykład
+
+W poniższym przykładzie, wpisz znak przy użyciu klawiatury i program używa zagnieżdżoną `if` instrukcię, aby określić, czy znak danych wejściowych jest znakiem alfabetycznym. Jeśli wejściowy znak jest znakiem alfabetycznym, program sprawdza, czy znak danych wejściowych jest wielką czy małą literą. Pojawia się komunikat dla każdego przypadku.
+
+[!code-csharp[csrefKeywordsSelection#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#4)]
+
+## <a name="example"></a>Przykład
+
+Można także zagnieżdżać `if` instrukcji wewnątrz innego bloku, co ilustruje poniższy kod częściowe. Przykład zagnieżdża instrukcje `if` instrukcji wewnątrz dwóch bloków jeszcze jeden blok następnie. Komentarze Określ warunki, które są prawdziwe lub fałszywe w każdym bloku.
+
+[!code-csharp[csrefKeywordsSelection#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#5)]
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład określa, czy znak danych wejściowych jest mała litera, Wielka litera lub liczbą. Jeśli wszystkie trzy warunki mają wartość false, znak jest znakiem alfanumerycznym. Przykład wyświetla komunikat w każdym przypadku.
+
+[!code-csharp[csrefKeywordsSelection#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#6)]
+
+Tak, jak instrukcji else bloku lub bloku następnie może być dowolną prawidłową instrukcją, można użyć dowolne prawidłowe wyrażenie logiczne dla warunku. Można użyć operatorów logicznych, takich jak [ && ](../operators/conditional-and-operator.md), [ & ](../operators/and-operator.md), [ &#124; &#124; ](../operators/conditional-or-operator.md), [ &#124; ](../operators/or-operator.md) i [!](../operators/logical-negation-operator.md) Aby złożone warunki. Poniższy kod przedstawia przykłady.
+
+```csharp
+// NOT
+bool result = true;
+if (!result)
+{
+    Console.WriteLine("The condition is true (result is false).");
+}
+else
+{
+    Console.WriteLine("The condition is false (result is true).");
+}
+
+// Short-circuit AND
+int m = 9;
+int n = 7;
+int p = 5;
+if (m >= n && m >= p)
+{
+    Console.WriteLine("Nothing is larger than m.");
+}
+
+// AND and NOT
+if (m >= n && !(p > m))
+{
+    Console.WriteLine("Nothing is larger than m.");
+}
+
+// Short-circuit OR
+if (m > n || m > p)
+{
+    Console.WriteLine("m isn't the smallest.");
+}
+
+// NOT and OR
+m = 4;
+if (!(m >= n || m >= p))
+{
+    Console.WriteLine("Now m is the smallest.");
+}
+// Output:
+// The condition is false (result is true).
+// Nothing is larger than m.
+// Nothing is larger than m.
+// m isn't the smallest.
+// Now m is the smallest.
+```
+
+## <a name="c-language-specification"></a>specyfikacja języka C#
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a>Zobacz też
+
+- [Dokumentacja języka C#](../index.md)  
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)  
+- [Słowa kluczowe języka C#](index.md)  
+- [?:, operator](../operators/conditional-operator.md)  
+- [if-else, instrukcja (C++)](/cpp/cpp/if-else-statement-cpp)  
+- [switch](switch.md)  

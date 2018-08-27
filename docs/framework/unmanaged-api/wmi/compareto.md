@@ -1,5 +1,5 @@
 ---
-title: CompareTo — funkcja (niezarządzany wykaz interfejsów API)
+title: Funkcja CompareTo (niezarządzany wykaz interfejsów API)
 description: Funkcja CompareTo porównuje obiekt do innego obiektu WMI.
 ms.date: 11/06/2017
 api_name:
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db4431da90842f4f96a0f09a2f28dc473d956ee3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bde25ae7455dd7fe35fe1a0a43bb2a6b560c0e3e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460411"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935011"
 ---
-# <a name="compareto-function"></a>CompareTo — funkcja
-Porównuje obiekt do innego obiektu zarządzania systemu Windows.  
+# <a name="compareto-function"></a>Funkcja CompareTo
+Porównuje obiekt do innego obiektu zarządzania Windows.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -42,47 +42,47 @@ HRESULT CompareTo (
 ## <a name="parameters"></a>Parametry
 
 `vFunc`  
-[in] Ten parametr nie jest używana.
+[in] Ten parametr jest nieużywany.
 
 `ptr`  
-[in] Wskaźnik do [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) wystąpienia.
+[in] Wskaźnik do [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienia.
 
 `flags`  
-[in] Bitowe połączenie flagi określające właściwości obiektu wziąć pod uwagę do porównania. Zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji.
+[in] Bitowa kombinacja flagi określające właściwości obiektu do rozważenia do porównania. Zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji.
 
 `pCompareTo`  
 
-[in] Obiekt do porównania. `pcompareTo` musi być prawidłową [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) wystąpienia klasy nie może być `null`.
+[in] Obiekt do porównania. `pcompareTo` musi być prawidłowym [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienia klasy nie może być `null`.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.h* pliku nagłówka, lub należy je zdefiniować jako stałe w kodzie:
+Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Wystąpił nieokreślony błąd. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametr jest nieprawidłowy. |
-| `WBEM_E_UNEXPECTED` | 0x8004101d | Drugie wywołanie `BeginEnumeration` został utworzony bez wywołania pośredniczące [ `EndEnumeration` ](endenumeration.md). |
+| `WBEM_E_UNEXPECTED` | 0x8004101d | Drugie wywołanie `BeginEnumeration` został utworzony bez interwencyjnego wywołania [ `EndEnumeration` ](endenumeration.md). |
 | `WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
 | `WBEM_S_DIFFERENT` | 0x40003 | Obiekty są różne. |
-| `WBEM_S_SAME` | 0 | Obiekty są takie same oparte na flagi porównania. |
+| `WBEM_S_SAME` | 0 | Obiekty są takie same oparte na porównanie flag. |
   
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zawijana wywołanie [IWbemClassObject::CompareTo](https://msdn.microsoft.com/library/aa391437(v=vs.85).aspx) metody.
+Ta funkcja zawija wywołanie do [IWbemClassObject::CompareTo](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-compareto) metody.
 
-Flagi, które mogą być przekazywane jako `lEnumFlags` argumentu są zdefiniowane w *WbemCli.h* pliku nagłówka, lub należy je zdefiniować jako stałe w kodzie. Można określić objętego Porównanie cech, podając bitowe połączenie z następujących flag:
+Flagi, które mogą być przekazywane jako `lEnumFlags` argument są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie. Należy określić cech zaangażowanych w porównaniu, określając bitową kombinację następujących flag:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
 | `WBEM_FLAG_IGNORE_OBJECT_SOURCE` | 2 | Ignoruj źródło (serwer i przestrzeni nazw, które pochodzą z). |
-| `WBEM_FLAG_IGNORE_QUALIFIERS` | 1 | Ignoruj wszystkie Kwalifikatory (łącznie z **klucza** i **dynamiczne**) |
-| `WBEM_FLAG_IGNORE_DEFAULT_VALUES` | 4 | Ignoruj wartości domyślnej właściwości. Ta flaga ma zastosowanie tylko do porównania z klas. |
-| `WBEM_FLAG_IGNORE_FLAVOR` | 0x20 | Ignorowanie kwalifikatora odmian. Ta flaga nadal uwzględnia kwalifikatory, ale ignoruje różnice wersji, takie jak reguły propagacji i zastępowanie ograniczeń. |
-| `WBEM_FLAG_IGNORE_CASE` | 0x10 | Ignoruj wielkość liter w porównanie wartości ciągu. Dotyczy to zarówno do ciągów i wartości kwalifikatora. Porównanie właściwości i kwalifikator nazwy zawsze jest rozróżniana wielkość liter, niezależnie od tego, czy ta flaga jest ustawiona. |
-| `WBEM_FLAG_IGNORE_CLASS` | 0x8 | Załóżmy, że są porównywane obiekty są instanes tej samej klasy. W związku z tym ta flaga porównuje tylko informacje z związane z wystąpienia. Optymalizowanie wydajności przy użyciu tej flagi. Jeśli obiekty nie znajdują się w tej samej klasy, wyniki są niezdefiniowane. |
+| `WBEM_FLAG_IGNORE_QUALIFIERS` | 1 | Ignoruj wszystkie Kwalifikatory (w tym **klucz** i **dynamiczne**) |
+| `WBEM_FLAG_IGNORE_DEFAULT_VALUES` | 4 | Pomiń domyślne wartości właściwości. Ta flaga ma zastosowanie tylko do porównania z klas. |
+| `WBEM_FLAG_IGNORE_FLAVOR` | 0x20 | Ignorowanie kwalifikatora odmian. Ta flaga nadal uwzględnia kwalifikatorów, ale ignoruje różnice wersji, takich jak zasady propagacji i zastąpić ograniczenia. |
+| `WBEM_FLAG_IGNORE_CASE` | 0x10 | Ignoruj wielkość liter przy porównywaniu wartości ciągu. Dotyczy to zarówno do ciągów i wartość kwalifikatora. Porównanie nazw właściwości i kwalifikator zawsze jest rozróżniana wielkość liter, niezależnie od tego, czy ta flaga jest ustawiona. |
+| `WBEM_FLAG_IGNORE_CLASS` | 0x8 | Przyjęto założenie, czy obiekty są porównywane są instanes tej samej klasy. W związku z tym ta flaga porównuje dotyczącego wystąpienia wyłącznie informacyjne. Użyj tej flagi w celu zoptymalizowania wydajności. Jeśli obiekty nie są tego samego rodzaju, wyniki są niezdefiniowane. |
 
-Lub możesz określić pojedynczy flagę złożonego w następujący sposób:
+Lub można określić pojedynczej flagi złożonego w następujący sposób:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
@@ -96,4 +96,4 @@ Lub możesz określić pojedynczy flagę złożonego w następujący sposób:
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
-[Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)
+[Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

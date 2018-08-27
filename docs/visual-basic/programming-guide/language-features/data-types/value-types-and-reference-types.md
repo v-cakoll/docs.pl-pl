@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
 ms.openlocfilehash: 9456316f71a213905bcb50336533c4e618f5174a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651586"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934188"
 ---
 # <a name="value-types-and-reference-types"></a>Typy wartości i odwołań
-W języku Visual Basic typy danych są wdrażane na podstawie ich klasyfikacji. Typy danych Visual Basic mogą być klasyfikowane w zależności od tego, czy zmienna określonego typu przechowuje własnych danych lub wskaźnikiem do danych. Jeśli przechowuje własnych danych jest *typu wartości*; jeśli posiada wskaźnik do danych w pamięci jest *zawierają odwołania do typu*.  
+W języku Visual Basic typy danych są implementowane w na podstawie ich klasyfikacji. Typy danych Visual Basic mogą być klasyfikowane według tego, czy zmienna określonego typu przechowuje własnych danych lub wskaźnik do danych. Jeśli przechowuje swoje własne dane *typu wartości*; Jeśli przechowuje wskaźnik do danych w pamięci jest *odwołania do typu*.  
   
 ## <a name="value-types"></a>Typy wartości  
  Typ danych jest *typu wartości* Jeśli przechowuje dane w obrębie własnej alokacji pamięci. Typy wartości są następujące:  
@@ -27,35 +27,35 @@ W języku Visual Basic typy danych są wdrażane na podstawie ich klasyfikacji. 
   
 -   `Boolean`, `Char`, i `Date`  
   
--   Wszystkie struktury, nawet jeśli ich elementy członkowskie są typy odwołań  
+-   Wszystkie struktury, nawet jeśli ich elementy członkowskie są typami odwołań  
   
 -   Wyliczenia, ponieważ jego typ podstawowy jest zawsze `SByte`, `Short`, `Integer`, `Long`, `Byte`, `UShort`, `UInteger`, lub `ULong`  
   
- Co struktura jest typem wartości, nawet wtedy, gdy zawiera on elementy członkowskie typu odwołania. Z tego powodu wartość typy takich jak `Char` i `Integer` są implementowane przez struktury .NET Framework.  
+ Co struktura jest typem wartości, nawet wtedy, gdy zawiera on elementy członkowskie typu odwołania. Z tego powodu wartość typy takie jak `Char` i `Integer` są implementowane przez struktury .NET Framework.  
   
- Można zadeklarować typu wartości za pomocą zastrzeżonym słowem kluczowym, na przykład `Decimal`. Można również użyć `New` — słowo kluczowe można zainicjować typu wartości. Jest to szczególnie przydatne, jeśli typ ma konstruktora, który przyjmuje parametry. Na przykład jest <xref:System.Decimal.%23ctor%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2CSystem.Byte%29> konstruktora, który tworzy nową `Decimal` wartości z części dostarczony.  
+ Typ wartości można zadeklarować za pomocą zastrzeżonego słowa kluczowego, na przykład `Decimal`. Można również użyć `New` — słowo kluczowe można zainicjować typu wartości. Jest to szczególnie przydatne, jeśli typ ma konstruktora przyjmującego parametry. Na przykład <xref:System.Decimal.%23ctor%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2CSystem.Byte%29> konstruktora, który tworzy nową `Decimal` wartości z części podane.  
   
 ## <a name="reference-types"></a>Typy odwołań  
- A *zawierają odwołania do typu* zawiera wskaźnik do innej lokalizacji pamięci, która przechowuje dane. Typy odwołań są następujące:  
+ A *odwołania do typu* zawiera wskaźnik do innej lokalizacji w pamięci, która przechowuje dane. Typy odwołań są następujące:  
   
 -   `String`  
   
--   Wszystkie tablice, nawet jeśli ich elementy są typy wartości  
+-   Wszystkie tablice, nawet jeśli ich elementy są typami wartości  
   
--   Typy klas, takich jak <xref:System.Windows.Forms.Form>  
+-   Klasa typów, takich jak <xref:System.Windows.Forms.Form>  
   
 -   Delegaty  
   
- Klasa jest *zawierają odwołania do typu*. Z tego powodu typy referencyjne takich jak `Object` i `String` są obsługiwane przez [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] klasy. Należy pamiętać, że każdy tablicy typu odwołania, nawet jeśli jego elementów członkowskich typów wartości.  
+ Klasa jest *odwołania do typu*. Z tego powodu typy odwołań takich jak `Object` i `String` są obsługiwane przez [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] klasy. Należy pamiętać, że każda tablica typu odwołania, nawet jeśli jego członkowie są typami wartości.  
   
- Ponieważ każdy typ referencyjny reprezentuje klasy .NET Framework, należy użyć [operatora New](../../../../visual-basic/language-reference/operators/new-operator.md) — słowo kluczowe podczas jego inicjowania. Poniższa instrukcja inicjuje tablicy.  
+ Ponieważ każdy typ odniesienia reprezentuje podstawowej klasy .NET Framework, należy użyć [operatora New](../../../../visual-basic/language-reference/operators/new-operator.md) — słowo kluczowe, podczas jego inicjowania. Poniższa instrukcja inicjuje tablicę.  
   
 ```  
 Dim totals() As Single = New Single(8) {}  
 ```  
   
 ## <a name="elements-that-are-not-types"></a>Elementy, które nie są typami  
- Następujące elementy programowania nie kwalifikuje się jako typów, ponieważ nie można określić ich jako typ danych zadeklarowany element:  
+ Następujące elementy programowania nie kwalifikują się jako typów, ponieważ nie można określić dowolny z nich jako element zadeklarowany typ danych:  
   
 -   Namespaces  
   
@@ -65,12 +65,12 @@ Dim totals() As Single = New Single(8) {}
   
 -   Właściwości i procedury  
   
--   Pola, stałe i zmienne  
+-   Zmienne, stałe i pola  
   
 ## <a name="working-with-the-object-data-type"></a>Praca z typem danych obiektu  
- Można przypisać typu odwołania lub typu wartości do zmiennej `Object` typu danych. `Object` Zmienna zawsze przechowuje wskaźnikiem do danych, a nie dane. Jednak jeśli przypisać do typu wartość `Object` zmiennej, działa tak, jakby posiada własnych danych. Aby uzyskać więcej informacji, zobacz [Object — typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md).  
+ Można przypisać do zmiennej typu odwołania lub typu wartościowego `Object` typu danych. `Object` Zawsze zmienna przechowuje wskaźnik do danych, nigdy nie dane. Jednak jeśli przypisujesz typ wartości do `Object` zmiennej działa tak, jakby posiada własnych danych. Aby uzyskać więcej informacji, zobacz [Object — typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md).  
   
- Można sprawdzić, czy `Object` zmiennej działa jako typu odwołania lub typu wartościowego, przekazując go do <xref:Microsoft.VisualBasic.Information.IsReference%2A> metody w <xref:Microsoft.VisualBasic.Information> klasy <xref:Microsoft.VisualBasic?displayProperty=nameWithType> przestrzeni nazw. <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> Zwraca `True` Jeśli zawartość `Object` zmienna reprezentuje typ referencyjny.  
+ Można dowiedzieć się, czy `Object` zmiennej działa jako typu odwołania lub typu wartościowego przez przekazanie jej do <xref:Microsoft.VisualBasic.Information.IsReference%2A> method in Class metoda <xref:Microsoft.VisualBasic.Information> klasy <xref:Microsoft.VisualBasic?displayProperty=nameWithType> przestrzeni nazw. <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> Zwraca `True` Jeśli zawartość `Object` zmienna reprezentuje typ odwołania.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Typy wartości dopuszczających wartości null](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  

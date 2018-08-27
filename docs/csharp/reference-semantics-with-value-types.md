@@ -1,129 +1,122 @@
 ---
-title: Semantykę odwołania z typami wartości
-description: Zrozumieć funkcje językowe, co minimalizuje bezpiecznie kopiowania struktury
+title: Semantyka odwołań z typami wartości
+description: Omówienie funkcji języka, które bezpiecznie zminimalizować kopiowania struktury
 ms.date: 11/10/2017
 ms.custom: mvc
-ms.openlocfilehash: 3c53a426a6adb37f5091e4ad61835fef6c9f7729
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f241219994d7a03192a4aea69b912bf1ac5ed29c
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930652"
 ---
-# <a name="reference-semantics-with-value-types"></a>Semantykę odwołania z typami wartości
+# <a name="reference-semantics-with-value-types"></a>Semantyka odwołań z typami wartości
 
-Zaletą używania typów wartości jest, aby uniknąć często Alokacje sterty.
-Wadą jest to, że są one kopiowane wartości. Ta zależnościami utrudnia zoptymalizować algorytmy, które pracują w dużych ilości danych. Nowe funkcje języka C# 7.2 zapewniają mechanizmy, które Włącz semantykę przekazywany przez odwołanie z typami wartości. Rozsądny sposób używać tych funkcji, aby zminimalizować zarówno alokacji i operacje kopiowania. Ten artykuł opisuje te nowe funkcje.
+Zaletą używania typów wartości jest, aby uniknąć często alokacji sterty.
+Wadą jest to, że są one kopiowane przez wartość. To kosztem utrudnienie Optymalizowanie algorytmów, które działają na dużych ilości danych. Nowe funkcje języka w języku C# 7.2 zapewniają mechanizmy, które umożliwiają semantyki przekazywany przez odwołanie z typami wartości. Należy uważnie używać tych funkcji do minimum zarówno alokacji i operacje kopiowania. W tym artykule przeanalizowano tych nowych funkcji.
 
-Większość przykładowy kod w tym artykule przedstawiono funkcje dodane w języku C# 7.2. Aby można było używać tych funkcji, należy skonfigurować projektu do języka C# 7,2 lub nowszej. Visual Studio można użyć, aby go wybrać. Dla każdego projektu, zaznacz **projektu** z menu, następnie **właściwości**. Wybierz **kompilacji** i kliknij polecenie **zaawansowane**. Z tego miejsca skonfiguruj wersji językowej. Wybierz opcję "7.2" lub "najnowszej".  W razie potrzeby można edytować *csproj* plik i dodać następującego węzła:
-
-```XML
-  <PropertyGroup>
-    <LangVersion>7.2</LangVersion>
-  </PropertyGroup>
-```
-
-Można użyć "7,2" lub "najnowszej" dla wartości.
+Duża część przykładowego kodu w tym artykule przedstawiono funkcje dodane w języku C# 7.2. Aby można było używać tych funkcji, należy skonfigurować projekt do języka C# 7.2 lub nowsza. Aby uzyskać więcej informacji na temat ustawiania wersji języka zobacz [skonfigurować wersję językową](language-reference/configure-language-version.md).
 
 ## <a name="passing-arguments-by-readonly-reference"></a>Przekazywanie argumentów poprzez odwołanie tylko do odczytu
 
-C# 7.2 dodaje `in` — słowo kluczowe, aby mogła uzupełniać istniejące `ref` i `out` słowa kluczowe, aby przekazywać argumentów przez odwołanie. `in` — Słowo kluczowe określa przekazywanie argumentów poprzez odwołanie, ale wywołaną metodę nie modyfikuje wartość. 
+Dodaje w języku C# 7.2 `in` słowa kluczowego jako uzupełnienie istniejących `ref` i `out` słów kluczowych, aby przekazywać argumentów przez odwołanie. `in` — Słowo kluczowe Określa, przekazywanie argumentu przez odwołanie, ale wywoływanej metody nie modyfikuje wartości. 
 
-To dodawanie zapewnia pełne słownictwa Express z celem projektu. Typy wartości są kopiowane, gdy przekazana do metody o nazwie, jeśli nie określisz żadnego z następujących modyfikatorów w podpisie metody. Każdy z tych Modyfikatory Określa, że typ wartości jest przekazywana przez odwołanie, unikając kopiowania. Każdy modyfikator wyraża innego zamiaru:
+To dodawanie zapewnia pełną słownictwa wyrażenia zgodną z planem projektu. Typy wartości są kopiowane, gdy przekazywane do metody o nazwie, jeśli nie określisz dowolną z następujących modyfikatorów w podpisie metody. Każda z tych modyfikatorów Określa, że typ wartości jest przekazywany przez odwołanie, unikając kopiowania. Każdy modyfikator wyraża innego zamiaru:
 
-- `out`: Ta metoda określa wartość argumentu używany jako parametr.
-- `ref`: Ta metoda może ustawić wartość argumentu używany jako parametr.
-- `in`: Ta metoda nie modyfikuje wartość argumentu używany jako parametr.
+- `out`: Ta metoda ustawia wartość argumentu jako parametr.
+- `ref`: Ta metoda może ustawić wartość argumentu jako parametr.
+- `in`: Ta metoda nie modyfikuje wartość argumentu jako parametr.
 
-Dodaj `in` modyfikator do przekazywania argumentu przez odwołanie ani deklarować zamiaru projektowania przekazywać argumentów przez odwołanie, aby uniknąć niepotrzebnych kopiowania. Nie chcesz zmodyfikować obiekt używany jako tego argumentu. Poniższy kod przedstawia przykład metodę, która oblicza odległość między dwoma punktami w przestrzeni 3D. 
+Dodaj `in` modyfikator do przekazywania argumentu przez odwołanie i Zadeklaruj swoje założenia projektowe, aby przekazywać argumentów przez odwołanie, aby uniknąć niepotrzebnego kopiowania. Nie zamierzasz zmodyfikować obiekt używany w roli tego argumentu. Poniższy kod przedstawia przykład metody, które oblicza odległość między dwoma punktami w przestrzeni 3D. 
 
 [!code-csharp[InArgument](../../samples/csharp/reference-semantics/Program.cs#InArgument "Specifying an In argument")]
 
-Argumenty są dwie struktury, że każdy zawiera trzy symulacyjnych. Wartość o podwójnej precyzji jest 8 bajtów, dzięki czemu każdy argument jest 24 bajty. Określając `in` modyfikator, należy przekazać 4-bajtowych lub 8-bajtowych odwołanie do tych argumentów, w zależności od architektury komputera. Różnica w rozmiarze jest mały, ale jego można szybko dodać po aplikacji wywołuje tę metodę w pętli ścisłej przy użyciu wielu różnych wartości.
+Argumenty są dwie struktury, że każdy zawiera trzech liczb typu Double. Wartość o podwójnej precyzji jest 8 bajtów, dzięki czemu każdy argument jest 24 bajty. Określając `in` modyfikatora, należy przekazać odwołanie 4-bajtowych lub 8 bajtów do tych argumentów, w zależności od architektury komputera. Różnica w rozmiarze jest mała, ale jego można szybko dodać gdy Twoja aplikacja wywołuje tę metodę w pętli za pomocą wielu różnych wartości.
  
-`in` Uzupełnia modyfikator `out` i `ref` także inne sposoby. Nie można utworzyć przeciążenia metody, które różnią się jedynie w związku z występowaniem `in`, `out`, lub `ref`. Te nowe reguły rozszerzania zawsze ma zdefiniowany dla tego samego zachowania `out` i `ref` parametrów.
+`in` Uzupełniające modyfikator `out` i `ref` w inny sposób, jak również. Nie można utworzyć przeciążenia metody, które różnią się tylko w obecności właściwości `in`, `out`, lub `ref`. Te nowe reguły rozszerzyć takie samo zachowanie, które zawsze miały zostały zdefiniowane dla `out` i `ref` parametrów.
 
-`in` Modyfikator mogą być stosowane do dowolnego członka, który przyjmuje parametry: metody, delegatów, wyrażenia lambda, funkcje lokalne, indeksatorów, operatorów.
+`in` Modyfikator mogą być stosowane do wszystkich elementów członkowskich, która przyjmuje parametry: metod delegatów, wyrażeń lambda, funkcji lokalnych, indeksatory, operatorów.
 
-W odróżnieniu od `ref` i `out` argumenty, można użyć wartości literałów ani stałe dla argumentu `in` parametru. Ponadto, w przeciwieństwie do `ref` lub `out` parametr, nie trzeba zastosować `in` modyfikator w miejsce wywołania. Poniższy kod przedstawia dwa przykłady wywołania metody `CalculateDistance` metody. Pierwszy korzysta z dwóch zmiennych lokalnych przekazywana przez odwołanie. Drugi zawiera zmiennej tymczasowej utworzone jako część wywołania metody. 
+W odróżnieniu od `ref` i `out` argumentów, możesz użyć wartości literałów lub stałe dla argumentu dla `in` parametru. Ponadto, w odróżnieniu od `ref` lub `out` parametru, nie trzeba zastosować `in` modyfikator w witrynie wywołania. Poniższy kod pokazuje dwa przykłady wywoływania `CalculateDistance` metody. Pierwszy używa dwóch zmiennych lokalnych, przekazywany przez odwołanie. Drugi zawiera zmienną tymczasową utworzonych jako część wywołania metody. 
 
 [!code-csharp[UseInArgument](../../samples/csharp/reference-semantics/Program.cs#UseInArgument "Specifying an In argument")]
 
-Istnieje kilka sposobów, w których kompilator zapewnia, które tylko do odczytu rodzaj `in` argument jest wymuszana.  Przede wszystkim wywołaną metodę nie można przypisać bezpośrednio do `in` parametru. Bezpośrednio nie można przypisać do dowolnego pola `in` parametru, jeśli ta wartość jest `struct` typu. Ponadto nie można przekazać `in` parametr przy użyciu dowolnej metody `ref` lub `out` modyfikator.
-Te reguły dotyczą wszystkie pola z `in` podany parametr pole jest `struct` typu i parametru jest również `struct` typu. W rzeczywistości te reguły mają zastosowanie dla wielu warstw dostępu do elementu członkowskiego podane, są typy na wszystkich poziomach dostęp do elementu członkowskiego `structs`. Wymusza kompilator, który `struct` typów przekazywane jako `in` argumentów i ich `struct` elementy członkowskie są zmienne tylko do odczytu, gdy jest używany jako argumenty do innych metod.
+Istnieje kilka sposobów, w których kompilator zapewnia, które tylko do odczytu rodzaj `in` argument jest wymuszany.  Po pierwsze, wywoływanej metody nie można przypisać bezpośrednio do `in` parametru. Bezpośrednio nie można przypisać do dowolnego pola `in` parametr, gdy ta wartość jest `struct` typu. Ponadto nie można przekazać `in` parametr przy użyciu dowolnej metody `ref` lub `out` modyfikator.
+Te reguły mają zastosowanie do dowolnego pola `in` parametru podane, pole jest `struct` typu, a parametr jest również `struct` typu. W rzeczywistości te reguły stosuje się na wiele warstw dostępu do elementu członkowskiego, pod warunkiem typy na wszystkich poziomach dostępu do elementu członkowskiego `structs`. Kompilator wymusza, który `struct` typy przekazane jako `in` argumentów i ich `struct` elementy członkowskie są zmienne tylko do odczytu, gdy jest używana jako argumenty do innych metod.
 
-Korzystanie z `in` parametry pozwala uniknąć potencjalne koszty wydajności tworzenia kopii. Nie zmienia semantykę wszystkie wywołania metody. W związku z tym nie należy określić `in` modyfikator w miejsce wywołania. Jednakże, pomijając `in` modyfikator w witrynie wywołania informuje kompilator czy może on być kopię argumentu z następujących powodów:
+Korzystanie z `in` parametry pozwala uniknąć potencjalnych kosztów wydajności tworzenia kopii. Nie zmienia semantykę każde wywołanie metody. W związku z tym, nie należy określić `in` modyfikator w witrynie wywołania. Jednakże, pomijając `in` modyfikator w witrynie wywołania informuje kompilator, że może on być kopię argumentu z następujących powodów:
 
-- Istnieje niejawna konwersja, ale nie tożsamości konwersja z typu argumentu na typ parametru.
-- Argument jest wyrażeniem, ale nie ma zmienną znane magazynu.
-- Istnieje inna obecności lub braku `in`. W takim przypadku wartość przeciążenia jest lepszym dopasowaniem.
+- Istnieje niejawna konwersja, ale nie tożsamość konwersję z typu argumentu z typem parametru.
+- Argument jest wyrażeniem, ale nie ma zmienną znanych magazynu.
+- Istnieje przeciążenie różni się obecności lub braku `in`. W takim przypadku według wartości przeciążenia ma lepsze dopasowanie.
 
-Reguły te są przydatne, jak aktualizacji istniejącego kodu do argumenty odwołania tylko do odczytu. Wewnątrz wywołaną metodę można wywołać dowolnej metody wystąpienia używanego przez wartości parametrów. W tych przypadkach kopię `in` utworzeniu parametru. Ponieważ kompilator można utworzyć zmiennej tymczasowej dla każdego `in` parametru, można również określić wartości domyślnej dla żadnego `in` parametru. Poniższy kod określa punkt początkowy (punkt 0,0) z wartością domyślną dla drugiego punktu:
+Reguły te są przydatne w przypadku aktualizowania istniejącego kodu do argumenty odwołania tylko do odczytu. Wewnątrz metody o nazwie możesz wywołać dowolnej metody wystąpienia, która używa parametrów wielowartościowych. W tych przypadkach kopię `in` utworzeniu parametru. Ponieważ kompilator może tworzyć zmiennej tymczasowej dla każdej `in` parametru, można również określić wartości domyślnych dla każdej `in` parametru. Poniższy kod określa pochodzenia (punkt 0,0) jako wartość domyślna dla drugi punkt:
 
 [!code-csharp[InArgumentDefault](../../samples/csharp/reference-semantics/Program.cs#InArgumentDefault "Specifying defaults for an in parameter")]
 
-Aby wymusić kompilatora do odczytu tylko argument jest przekazywany przez odwołanie, określ `in` modifer na argumenty w witrynie wywołanie, jak pokazano w poniższym kodzie:
+Aby wymusić na kompilatorze odczytu tylko argument jest przekazywany przez odwołanie, należy określić `in` modifer dla argumentów w witrynie wywołania, jak pokazano w poniższym kodzie:
 
 [!code-csharp[UseInArgument](../../samples/csharp/reference-semantics/Program.cs#ExplicitInArgument "Specifying an In argument")]
 
-To zachowanie ułatwia przyjęcie `in` parametry z czasem w dużej codebases, gdy wzrost wydajności są możliwe. Możesz dodać `in` modyfikator do metody sygnatur pierwszy. Następnie można dodać `in` modyfikator na callsites i Utwórz `readonly struct` typów, aby włączyć kompilatora uniknąć tworzenia obrony kopie `in` parametrów w więcej lokalizacji.
+To zachowanie ułatwia przyjęcie `in` parametrów wraz z upływem czasu w dużych bazach kodu, gdzie możliwe są wzrost wydajności. Możesz dodać `in` modyfikatora podpisy metod pierwszy. Następnie należy dodać `in` modyfikator na callsites i utworzyć `readonly struct` typy umożliwiające kompilatorowi unikanie tworzenia kopii obrony `in` parametrów w większej liczby lokalizacji.
 
-`in` Parametr oznaczenia można również typy odwołań lub wartości liczbowe. Jednak korzyści w obu przypadkach są minimalne, jeśli istnieje.
+`in` Nazwy parametru może również służyć za pomocą typów referencyjnych lub wartości liczbowych. Jednak korzyści w obu przypadkach są minimalne, jeśli istnieje.
 
 ## <a name="ref-readonly-returns"></a>`ref readonly` Zwraca
 
-Można również zwrócić przez odwołanie typu wartości, ale nie zezwalaj na obiekt wywołujący modyfikowanie tej wartości. Użyj `ref readonly` modyfikator Express celem tego projektu. Czy są zwracane jest odwołanie do istniejących danych, ale nie zezwala na modyfikowanie powiadomi czytników. 
+Można również zwrócić przez odwołanie, typ wartości, ale zabronić wywołującego od modyfikowania tej wartości. Użyj `ref readonly` modyfikatora express przeznaczenie tego projektu. Czy są zwracanie odwołania do istniejących danych, ale nie zezwala na modyfikowanie, powiadamia czytników. 
 
-Kompilator wymusza, że obiekt wywołujący nie można zmodyfikować odwołania. Próby bezpośrednio przypisać wartość generuje błąd kompilacji. Jednak kompilator nie wiadomo, jeśli metoda dowolnego elementu członkowskiego modyfikuje stan struktury.
-Aby upewnić się, że obiekt nie jest modyfikowany, kompilator tworzy kopię i wywołuje element członkowski odwołań za pomocą tej kopii. Wszystkie modyfikacje są obrony ją. 
+Kompilator wymusza to, że obiekt wywołujący nie można zmodyfikować odwołania. Podejmowana jest próba przypisania wartości bezpośrednio wygenerować błąd kompilacji. Jednak kompilator nie wiadomo, jeśli metoda dowolnego elementu członkowskiego modyfikuje stan struktury.
+Aby upewnić się, że obiekt nie jest modyfikowany, kompilator tworzy kopię i wywołuje element członkowski odwołań za pomocą tej kopii. Wszystkie modyfikacje są tym kopia obronna. 
 
-Istnieje prawdopodobieństwo, że przy użyciu biblioteki `Point3D` często użyje źródła w całym kodzie. Każde wystąpienie tworzy nowy obiekt na stosie. Może być korzystne utworzyć stałą i zwracać jej przez odwołanie. Jednak jeśli zwraca odwołanie do wewnętrznej pamięci masowej, może zajść potrzeba wymuszenia, że obiekt wywołujący nie można zmodyfikować magazynu, do którego istnieje odwołanie. Poniższy kod definiuje właściwości tylko do odczytu, która zwraca `readonly ref` do `Point3D` , który określa punkt początkowy.
+Istnieje prawdopodobieństwo, że przy użyciu biblioteki `Point3D` często użyje źródła w całym kodzie. Każde wystąpienie tworzy nowy obiekt na stosie. Może być korzystne, aby utworzyć stałą i przywrócić go przez odwołanie. Jednak jeśli zwracane odwołanie do pamięci wewnętrznej, możesz chcieć wymusić, że obiekt wywołujący nie można zmodyfikować odwołania magazynu. Poniższy kod definiuje właściwość tylko do odczytu, która zwraca `readonly ref` do `Point3D` , który określa punkt początkowy.
 
 [!code-csharp[OriginReference](../../samples/csharp/reference-semantics/Point3D.cs#OriginReference "Creating a readonly Origin reference")]
 
-Tworzenie kopii tylko do odczytu ref zwracany jest prosty: tylko przypisz go do zmiennej, nie jest zadeklarowana z `ref readonly` modyfikator. Kompilator generuje kod, aby skopiować obiekt w ramach przypisania. 
+Tworzenie kopii tylko do odczytu ref zwracany jest proste: wystarczy przypisać ją do zmiennej nie jest zadeklarowana za pomocą `ref readonly` modyfikator. Kompilator generuje kod, aby skopiować obiekt w ramach przypisania. 
 
-Po przypisaniu zmiennej `ref readonly return`, można określić `ref readonly` zmiennej lub przez wartość kopię tylko do odczytu odwołania:
+Po przypisaniu zmiennej, aby `ref readonly return`, można określić `ref readonly` zmiennej lub kopię przez wartość odniesienia tylko do odczytu:
 
 [!code-csharp[AssignRefReadonly](../../samples/csharp/reference-semantics/Program.cs#AssignRefReadonly "Assigning a ref readonly")]
 
-Pierwsze przypisanie w poprzednim kodzie tworzy kopię `Origin` stała i przypisuje, które skopiować. Drugi przypisuje odwołanie. Zwróć uwagę, że `readonly` modyfikator musi być częścią deklaracja zmiennej. Nie można zmodyfikować odwołania, do którego się odwołuje. Próbuje zrobić spowodować błąd kompilacji.
+Pierwsze przypisanie w poprzednim kodzie tworzy kopię `Origin` stałych i przypisuje kopiujących. Drugi przypisuje odwołania. Należy zauważyć, że `readonly` modyfikator musi być częścią deklaracja zmiennej. Nie można zmodyfikować odwołania, do którego się odwołuje. Próba wykonania tej czynności powoduje błąd kompilacji.
 
 ## <a name="readonly-struct-type"></a>`readonly struct` Typ
 
-Stosowanie `ref readonly` na wykorzystanie dużym natężeniu ruchu struktury mogą być wystarczające.
-Innym razem, można utworzyć niezmienialny struktury. Zawsze można następnie przekazać przez odwołanie tylko do odczytu. Czy rozwiązanie usuwa ataku kopiuje tego miejsce, gdy uzyskujesz dostęp do metody struktury używane jako `in` parametru.
+Stosowanie `ref readonly` do zastosowań o dużym natężeniu ruchu struktury mogą być wystarczające.
+W innych sytuacjach można utworzyć niemodyfikowalny struktury. Zawsze można następnie przekazać według odwołania tylko do odczytu. Czy rozwiązanie usuwa ataku kopiuje tego miejsce, gdy uzyskujesz dostęp do metod struktury, używane jako `in` parametru.
 
-Możesz to zrobić, tworząc `readonly struct` typu. Możesz dodać `readonly` modyfikatora w deklaracji struktury. Kompilator wymusza, że wszystkie elementy członkowskie wystąpień struktury są `readonly`; `struct` musi być niezmienialne.
+Możesz to zrobić, tworząc `readonly struct` typu. Możesz dodać `readonly` modyfikatora deklaracji struktury. Kompilator wymusza na to, że wszystkie składowe wystąpienia struktury są `readonly`; `struct` musi być niezmienialne.
 
-Istnieją inne optymalizacje dla `readonly struct`. Można użyć `in` modyfikator w każdej lokalizacji gdzie `readonly struct` jest argumentem. Ponadto można zwrócić `readonly struct` jako `ref return` po zwróconego obiektu, którego okres istnienia wykracza poza zakres metoda zwraca obiekt.
+Istnieją inne optymalizacje dla `readonly struct`. Możesz użyć `in` modyfikator w każdym miejscu gdzie `readonly struct` jest argumentem. Ponadto, można zwrócić `readonly struct` jako `ref return` kiedy jest zwracany obiekt, którego okres istnienia wykracza poza zakres metoda zwraca obiekt.
 
-Na koniec kompilator generuje kod efektywniejsze podczas wywoływania członkami `readonly struct`: `this` odwołania, zamiast kopiowania odbiornika, jest zawsze `in` parametr przekazywany przez odwołanie do elementu członkowskiego. Tego rodzaju optymalizacji zapisuje więcej kopiowania, korzystając z `readonly struct`. `Point3D` Jest doskonałym kandydatem do tej zmiany. Poniższy kod przedstawia zaktualizowaną `ReadonlyPoint3D` struktury:
+Na koniec, kompilator generuje kod bardziej efektywne, gdy wywołujesz członkowie `readonly struct`: `this` odwołanie, zamiast kopii receiver, jest zawsze `in` parametr przekazywany przez odwołanie do elementu członkowskiego. Tego rodzaju optymalizacji zapisuje więcej kopiowanie, gdy używasz `readonly struct`. `Point3D` Jest doskonałym kandydatem do tej zmiany. Poniższy kod przedstawia zaktualizowaną `ReadonlyPoint3D` strukturę:
 
 [!code-csharp[ReadonlyOnlyPoint3D](../../samples/csharp/reference-semantics/Point3D.cs#ReadonlyOnlyPoint3D "Defining an immutable structure")]
 
 ## <a name="ref-struct-type"></a>`ref struct` Typ
 
-Inna funkcja języka powiązane jest możliwość zadeklarować typu wartości, który musi znajdować się na stosie. Innymi słowy te typy nigdy nie można utworzyć na stercie członkiem innej klasy. Główną motywacją do tej funkcji został <xref:System.Span%601> i powiązanych struktury. <xref:System.Span%601> może zawierać wskaźnika zarządzane jako jeden z jego elementów członkowskich, inne są długość zakresu. Wdrażana jest nieco inaczej ponieważ C# nie obsługuje wskaźników do pamięci zarządzanej poza niebezpiecznym kontekście. Wszelkie zapisu, która zmienia wskaźnika oraz długość nie jest atomic. Oznacza to, że <xref:System.Span%601> będzie podlegać poza zakresem błędy lub innego typu naruszenia bezpieczeństwa zostały nie ograniczone do ramki stosu pojedynczego. Ponadto zwykle umieszczenie wskaźnika zarządzanego na stercie GC ulega awarii podczas JIT.
+Kolejną funkcją języka powiązane jest zdolność do deklarowania typu wartości, która musi być na stosie. Innymi słowy te typy nigdy nie można utworzyć na stosie jest członkiem innej klasy. Główną motywacją do tej funkcji został <xref:System.Span%601> i pokrewne struktury. <xref:System.Span%601> może zawierać wskaźnika zarządzanych jako jeden z jej członków, inne są długość zakresu. Wdrażana jest nieco inaczej ponieważ języka C# nie obsługuje wskaźników do pamięci zarządzanej poza niebezpieczny kontekst. Wszelkie zapisu, która zmienia się wskaźnik i długość nie jest atomic. Oznacza to, że <xref:System.Span%601> byłoby podlegają poza zakresem błędy lub inne naruszenia bezpieczeństwa typu nie, nie jest ona ograniczona do ramki stosu. Ponadto umieszczenie wskaźnika zarządzanych na stercie GC zazwyczaj kończy się niepowodzeniem w momencie JIT.
 
-Może być podobne wymagania dotyczące pracy z pamięci utworzone za pomocą [ `stackalloc` ](language-reference/keywords/stackalloc.md) lub w przypadku używania pamięci z międzyoperacyjnego interfejsów API. Można definiować własnych `ref struct` typy dla tych potrzeb. W tym artykule, zobacz przykłady użycia `Span<T>` dla uproszczenia.
+Masz podobnych wymaganiach dotyczących pracy z pamięcią utworzone za pomocą [ `stackalloc` ](language-reference/keywords/stackalloc.md) lub w przypadku używania pamięci za pomocą międzyoperacyjnych interfejsów API. Definiowanie swoich własnych `ref struct` typy dla tych wymagań. W tym artykule, zobacz przykłady użycia `Span<T>` dla uproszczenia.
 
-`ref struct` Deklaracji deklaruje struktury tego typu musi być na stosie. Reguły języka zapewnienia bezpiecznego korzystania z tych typów. Inne typy zadeklarowane jako `ref struct` obejmują <xref:System.ReadOnlySpan%601>. 
+`ref struct` Deklaracji deklaruje strukturę tego typu muszą znajdować się na stosie. Reguły języka zapewnienia bezpiecznego korzystania z tych typów. Inne typy zadeklarowane jako `ref struct` obejmują <xref:System.ReadOnlySpan%601>. 
 
-Celem porządkowania `ref struct` typu jako zmienną przydzielony stos wprowadzono kilka reguł, które kompilator wymusza dla wszystkich `ref struct` typów.
+Celem zachowywaniu `ref struct` wpisz zmienną przydzielanych ze stosów wprowadza kilka reguł, które kompilator wymusza dla wszystkich `ref struct` typów.
 
-- Nie można polu `ref struct`. Nie można przypisać `ref struct` typ zmiennej typu `object`, `dynamic`, albo typu interfejsu.
-- Nie można zadeklarować `ref struct` jako element członkowski klasy lub struktury normalnego.
-- Nie można deklarować zmiennych lokalnych, które są `ref struct` typów w metodach asynchronicznych. Można je zadeklarować w metod synchronicznych, które zwracają `Task`, `Task<T>` lub typów zadań.
+- Nie można polu `ref struct`. Nie można przypisać `ref struct` typ do zmiennej typu `object`, `dynamic`, lub dowolny typ interfejsu.
+- Nie można zadeklarować `ref struct` jako członek klasy lub struktury normalny.
+- Nie można zadeklarować zmienne lokalne, które są `ref struct` typów w metodach asynchronicznych. Można zadeklarować je metod synchronicznych, które zwracają `Task`, `Task<T>` lub typu przypominającego zadanie.
 - Nie można zadeklarować `ref struct` zmiennych lokalnych w iteratorach.
-- Nie można przechwycić `ref struct` zmiennych w wyrażeniach lambda lub funkcje lokalne.
+- Nie można dokonać przechwytu `ref struct` zmiennych w wyrażeniach lambda lub funkcji lokalnych.
 
-Upewnij się, te ograniczenia nie używasz przypadkowo `ref struct` w taki sposób, który można podwyższyć sterty zarządzanej.
+Te ograniczenia, upewnij się, nie używasz przypadkowo `ref struct` w taki sposób, który można podwyższyć poziom do zarządzanej sterty.
 
 ## <a name="readonly-ref-struct-type"></a>`readonly ref struct` Typ
 
-Deklarowanie struktury jako `readonly ref` łączy korzyści i ograniczeń dotyczących `ref struct` i `readonly struct` delcarations. 
+Deklarowanie struktury jako `readonly ref` łączy korzyści i ograniczeń dotyczących `ref struct` i `readonly struct` deklaracji. 
 
-W poniższym przykładzie pokazano deklaracja `readonly ref struct`.
+W poniższym przykładzie pokazano deklaracji `readonly ref struct`.
 
 ```csharp
 readonly ref struct ReadOnlyRefPoint2D
@@ -137,4 +130,4 @@ readonly ref struct ReadOnlyRefPoint2D
 
 ## <a name="conclusions"></a>Wnioski
 
-Te ulepszenia języka C# są przeznaczone dla algorytmów krytyczne wydajności, których alokacji pamięci może być krytyczne znaczenie dla osiągnięcia niezbędne wydajności. Może się okazać, że nie są często używane te funkcje w kodzie zostanie zapisany. Jednak te ulepszenia zostały przyjęte w wielu lokalizacjach w programie .NET Framework. Jak coraz więcej interfejsów API należy używać tych funkcji, zobaczysz poprawy wydajności własnych aplikacji.
+Te ulepszenia języka C# są przeznaczone dla algorytmów krytyczne wydajności, gdzie alokacji pamięci może być mają kluczowe znaczenie dla osiągnięcia niezbędne wydajności. Może się okazać, że nie są często używane funkcje te w kodzie, którą piszesz. Jednak te ulepszenia zostały przyjęte w wielu lokalizacjach w programie .NET Framework. Ponieważ coraz więcej interfejsy API korzystać z tych funkcji, zobaczysz wydajności własnych aplikacji, zwiększyć.

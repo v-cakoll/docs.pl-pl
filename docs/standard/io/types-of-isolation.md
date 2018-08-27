@@ -20,47 +20,47 @@ helpviewer_keywords:
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c0c888181b5f2150c37a87957cd932e10a36f7f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8c1d4674c84fad1b7ae6021c4868e7f5a053c5a4
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577619"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935629"
 ---
 # <a name="types-of-isolation"></a>Typy izolacji
-Dostęp do magazynu izolowanego zawsze jest ograniczony do użytkownika, który go utworzył. Aby wdrożyć ten typ izolacji, środowisko uruchomieniowe języka wspólnego używa tego samego pojęcia tożsamości użytkownika, która rozpoznaje systemu operacyjnego, czyli tożsamość skojarzoną z procesem, w którym wykonywany jest kod po otwarciu Sklepu. Ta tożsamość jest tożsamość uwierzytelnionego użytkownika, ale personifikacji może spowodować tożsamości bieżącego użytkownika można zmienić dynamicznie.  
+Dostęp do wydzielonej pamięci masowej zawsze jest ograniczony do użytkownika, który go utworzył. Wdrożenie tego typu izolacji, środowisko uruchomieniowe języka wspólnego używa tego samego pojęcia tożsamości użytkownika, który rozpoznaje systemu operacyjnego, czyli tożsamość skojarzoną z procesem, w którym wykonywany jest kod, gdy jest otwierany magazyn. Ta tożsamość jest tożsamość uwierzytelnionego użytkownika, ale personifikacji może spowodować, że tożsamość bieżącego użytkownika, aby zmienić dynamicznie.  
   
- Dostęp do magazynu izolowanego również jest ograniczony zgodnie z tożsamość skojarzoną z domeny aplikacji i zestawu lub samego zestawu. Środowisko uruchomieniowe uzyskuje tymi tożsamościami w następujący sposób:  
+ Dostęp do wydzielonej pamięci masowej jest także ograniczona zgodnie z tożsamością skojarzonego z domeny i zestawu aplikacji lub z samego zestawu. Środowisko uruchomieniowe uzyskuje tych tożsamości w następujący sposób:  
   
--   Tożsamość domeny reprezentuje świadectwo aplikacji, która w przypadku aplikacji sieci web może być pełny adres URL. Hostowana powłoki kodu tożsamość domeny może być oparta na ścieżkę katalogu aplikacji. Na przykład jeśli plik wykonywalny uruchamiany ze ścieżki C:\Office\MyApp.exe, tożsamość domeny będzie C:\Office\MyApp.exe.  
+-   Tożsamość domeny reprezentuje dowód aplikacji, w przypadku aplikacji sieci web może być pełny adres URL. Kod, hostowany przez powłokę tożsamość domeny może opierać się na ścieżce katalogu aplikacji. Na przykład jeśli plik wykonywalny jest uruchomiony przy użyciu ścieżki C:\Office\MyApp.exe, tożsamość domeny będzie C:\Office\MyApp.exe.  
   
--   Tożsamość zestawu jest świadectwa zestawu. Obiekt może pochodzić z kryptograficznych podpis cyfrowy, który może być zestawu [silnej nazwy](../../../docs/framework/app-domains/strong-named-assemblies.md), wydawca oprogramowania zestaw lub jego tożsamość adresu URL. Jeśli zestaw ma silną nazwę i tożsamości wydawcy oprogramowania, używana jest tożsamość wydawcy oprogramowania. Jeśli zestaw jest dostarczany z Internetem i nie jest podpisany, używana jest tożsamość adresu URL. Aby uzyskać więcej informacji na temat zestawów i silne nazwy, zobacz [programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md).  
+-   Tożsamość zestawu jest dowód zestawu. Obiekt może pochodzić z kryptograficznych podpis cyfrowy, który może być zestawu [silnej nazwy](../../../docs/framework/app-domains/strong-named-assemblies.md), wydawca oprogramowania zestawu lub jego tożsamość adresu URL. Jeśli zestaw ma silną nazwę i tożsamość wydawcy oprogramowania, używana jest tożsamość wydawcy oprogramowania. Jeśli zestaw pochodzi z Internetu i bez znaku, tożsamość adresu URL jest używana. Aby uzyskać więcej informacji na temat zestawów i silnych nazw, zobacz [programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md).  
   
--   Magazyny mobilnego przenieść z użytkownikiem, który ma mobilny profil użytkownika. Pliki są zapisywane w katalogu sieciowym i są pobierane na dowolnym komputerze użytkownik loguje się do. Aby uzyskać więcej informacji na temat profilów użytkowników mobilnych, zobacz <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.  
+-   Przenieś magazynach mobilnych z użytkownikiem, który ma profil użytkownika mobilnego. Pliki są zapisywane w katalogu sieciowego i zostaną pobrane na dowolnym komputerze logują użytkownika. Aby uzyskać więcej informacji na temat profilów użytkowników mobilnych, zobacz <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.  
   
- Łącząc pojęcia użytkownika, domena i tożsamości zestawu izolowanych magazynów można odizolować danych w następujący sposób, z których każdy ma własny scenariusze użycia:  
+ Łącząc pojęcia dotyczące użytkownika, domeny i tożsamość zestawu, wydzielonej pamięci masowej można odizolować dane w następujący sposób, z których każdy ma własny scenariusze użycia:  
   
 -   [Izolacja według użytkownika i zestawu](#UserAssembly)  
   
--   [Izolacja przez użytkownika, domena i zestawu](#UserDomainAssembly)  
+-   [Izolacja według użytkownika, domeny i zestawu](#UserDomainAssembly)  
   
- Jedną z tych izolacji można łączyć z profilu użytkownika mobilnego. Aby uzyskać więcej informacji, zobacz sekcję [izolowanych magazynów oraz mobilne](#Roaming).  
+ Jedną z tych izolacji można łączyć z profilu użytkownika mobilnego. Aby uzyskać więcej informacji, zobacz sekcję [izolowany magazyn i Roaming](#Roaming).  
   
- Poniższa ilustracja przedstawia, jak magazyny są izolowane w innych zakresach.  
+ Poniższa ilustracja przedstawia, jak magazyny są izolowane w różnych zakresach.  
   
  ![Izolacja według użytkownika i zestawu](../../../docs/standard/io/media/typesofisolation.gif "typesofisolation")  
-Typy izolowanego magazynu  
+Typy wydzielonej pamięci masowej  
   
- Należy pamiętać, że z wyjątkiem roamingu magazynów, izolowanego magazynu jest zawsze niejawnie izolowana przez komputer ponieważ używa funkcji magazynu, które są lokalne dla danego komputera.  
+ Należy zauważyć, że z wyjątkiem roamingu magazynów, wydzielona pamięć masowa jest zawsze niejawnie izolowane przez komputer ponieważ używa ona magazynów, które są lokalne dla danego komputera.  
   
 > [!IMPORTANT]
->  Izolowany magazyn jest niedostępny dla [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji. Zamiast tego należy użyć klasy danych aplikacji w `Windows.Storage` obszary nazw dołączane w [!INCLUDE[wrt](../../../includes/wrt-md.md)] interfejsu API do przechowywania plików i danych lokalnych. Aby uzyskać więcej informacji, zobacz [danych aplikacji](/previous-versions/windows/apps/hh464917(v=win.10)) w Centrum deweloperów systemu Windows.  
+>  Wydzielona pamięć masowa nie jest dostępna dla [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji. Zamiast tego należy użyć klas danych aplikacji w `Windows.Storage` uwzględnione w przestrzeni nazw [!INCLUDE[wrt](../../../includes/wrt-md.md)] interfejsu API, aby przechować lokalne dane i pliki. Aby uzyskać więcej informacji, zobacz [dane aplikacji](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) w Centrum deweloperów Windows.  
   
 <a name="UserAssembly"></a>   
 ## <a name="isolation-by-user-and-assembly"></a>Izolacja według użytkownika i zestawu  
- Zestaw, który używa danych przechowywania musi być dostępny z domeny dowolnej aplikacji, izolacji użytkowników i zestawu jest odpowiedni. Zazwyczaj w takiej sytuacji izolowanego magazynu jest używany do przechowywania danych, które stosuje dla wielu aplikacji i nie jest związana z określonej aplikacji, takie jak nazwa użytkownika lub informacje o licencji. Dostęp do magazynu samodzielnie przez użytkownika i zestaw, kod musi być zaufany w celu przekazywania informacji między aplikacjami. Zazwyczaj izolacji użytkowników i zestawu jest dozwolona w sieci intranet, ale nie w Internecie. Podczas wywoływania statycznych <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A?displayProperty=nameWithType> — metoda i przekazywanie przez użytkownika i zestaw <xref:System.IO.IsolatedStorage.IsolatedStorageScope> zwraca magazynu z tego typu izolacji.  
+ Gdy zestaw, który używa tych danych są przechowywane musi być dostępna z dowolnej aplikacji domeny, izolacja według użytkownika i zestawu jest odpowiednie. Zazwyczaj w takiej sytuacji wydzielonej pamięci masowej służy do przechowywania danych, które mają zastosowanie dla wielu aplikacji i nie jest związany z określonej aplikacji, takie jak nazwa użytkownika lub informacje o licencji. Dostęp do magazynu izolowanego według użytkowników i zestaw, kod musi być zaufany w celu przekazywania informacji między aplikacjami. Zazwyczaj Izolacja według użytkownika i zestawu jest dozwolona w intranecie, ale nie w Internecie. Wywołanie metody statyczne <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A?displayProperty=nameWithType> metody i przekazywanie przez użytkownika i zestawu <xref:System.IO.IsolatedStorage.IsolatedStorageScope> zwraca magazynu przy użyciu tego rodzaju izolacji.  
   
- Poniższy przykładowy kod pobiera sklepu, która jest odizolowana przez użytkownika i zestawu. Magazyn jest możliwy za pośrednictwem `isoFile` obiektu.  
+ Poniższy przykładowy kod pobiera magazynu, który jest izolowany dla konkretnego użytkownika i zestawu. Magazyn jest możliwy za pośrednictwem `isoFile` obiektu.  
   
  [!code-cpp[Conceptual.IsolatedStorage#17](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source11.cpp#17)]
  [!code-csharp[Conceptual.IsolatedStorage#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source11.cs#17)]
@@ -68,7 +68,7 @@ Typy izolowanego magazynu
   
  Na przykład, który korzysta z parametrów dowód, zobacz <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%28System.IO.IsolatedStorage.IsolatedStorageScope%2CSystem.Security.Policy.Evidence%2CSystem.Type%2CSystem.Security.Policy.Evidence%2CSystem.Type%29>.  
   
- <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> Metoda jest dostępna jako skrót, jak pokazano w poniższym przykładzie kodu. Ten skrót nie może służyć do otwierania magazynów, które są w stanie mobilnego; Użyj <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> w takich przypadkach.  
+ <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> Metoda jest dostępny jako skrót, jak pokazano w poniższym przykładzie kodu. Ten skrót, nie można otworzyć magazynów, które są w stanie mobilnych; Użyj <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> w takich przypadkach.  
   
  [!code-cpp[Conceptual.IsolatedStorage#18](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source11.cpp#18)]
  [!code-csharp[Conceptual.IsolatedStorage#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source11.cs#18)]
@@ -76,15 +76,15 @@ Typy izolowanego magazynu
   
 <a name="UserDomainAssembly"></a>   
 ## <a name="isolation-by-user-domain-and-assembly"></a>Izolacja według użytkownika, domeny i zestawu  
- Jeśli aplikacja korzysta z zestawu innej firmy, który wymaga magazynu danych, można użyć izolowanego magazynu do przechowywania danych prywatnych. Izolacja przez użytkownika, domena i zestawu zapewnia, że tylko kod w danym zestawie ma dostęp do danych i tylko wtedy, gdy zestaw jest używany przez aplikację, która była uruchomiona w chwili zestawu utworzony magazyn i tylko wtedy, gdy użytkownik, dla którego został utworzony magazyn działa  aplikacja. Izolacja przez użytkownika, domena i zestawu zachowuje zestawu innej firmy przed wyciekiem danych do innych aplikacji. Tego typu izolacji należy wybór domyślny, jeśli znasz chcesz używać izolowanego magazynu, ale nie pewności, jakiego typu izolacji do użycia. Podczas wywoływania statycznych <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> metody <xref:System.IO.IsolatedStorage.IsolatedStorageFile> i przekazując użytkownika, domena i zestawu <xref:System.IO.IsolatedStorage.IsolatedStorageScope> zwraca magazynu z tego typu izolacji.  
+ Jeśli aplikacja korzysta z zestawu innych firm, który wymaga magazynu danych prywatnych, można użyć wydzielonej pamięci masowej do przechowywania danych prywatnych. Izolacja według użytkownika, domeny i zestawu zapewnia, że tylko kod w danym zestawie mogą uzyskiwać dostęp do danych i tylko wtedy, gdy zestaw jest używany przez aplikację, która była uruchomiona, gdy zestaw utworzony magazyn, a tylko wtedy, gdy użytkownik, dla którego został utworzony magazyn uruchamia  aplikacja. Izolacja według użytkownika, domeny i zestawu przechowuje zestawu innej firmy przed wyciekiem danych do innych aplikacji. Ten typ izolacji powinna być dowolnie domyślne, jeśli wiesz, aby używać wydzielonej pamięci masowej, ale nie pewności, jakiego typu izolacji używanych. Wywołanie metody statyczne <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> metody <xref:System.IO.IsolatedStorage.IsolatedStorageFile> i przekazując użytkownika, domeny i zestawu <xref:System.IO.IsolatedStorage.IsolatedStorageScope> zwraca magazynu przy użyciu tego rodzaju izolacji.  
   
- Poniższy przykładowy kod pobiera sklepu samodzielnie przez użytkownika, domena i zestawu. Magazyn jest możliwy za pośrednictwem `isoFile` obiektu.  
+ Poniższy przykładowy kod pobiera magazynu izolowanego według użytkownika, domeny i zestawu. Magazyn jest możliwy za pośrednictwem `isoFile` obiektu.  
   
  [!code-cpp[Conceptual.IsolatedStorage#14](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source10.cpp#14)]
  [!code-csharp[Conceptual.IsolatedStorage#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source10.cs#14)]
  [!code-vb[Conceptual.IsolatedStorage#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source10.vb#14)]  
   
- Inną metodą jest dostępna jako skrót, jak pokazano w poniższym przykładzie kodu. Ten skrót nie może służyć do otwierania magazynów, które są w stanie mobilnego; Użyj <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> w takich przypadkach.  
+ Inną metodą jest dostępny jako skrót, jak pokazano w poniższym przykładzie kodu. Ten skrót, nie można otworzyć magazynów, które są w stanie mobilnych; Użyj <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> w takich przypadkach.  
   
  [!code-cpp[Conceptual.IsolatedStorage#15](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source10.cpp#15)]
  [!code-csharp[Conceptual.IsolatedStorage#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source10.cs#15)]
@@ -92,15 +92,15 @@ Typy izolowanego magazynu
   
 <a name="Roaming"></a>   
 ## <a name="isolated-storage-and-roaming"></a>Izolowany magazyn i roaming  
- Profile użytkowników mobilnych są funkcji systemu Windows, który umożliwia użytkownikowi skonfigurować tożsamości w sieci i używać tej tożsamości do zalogowania się do dowolnego komputera w sieci, przeniesienie wszystkich spersonalizowanych ustawień. Zestaw, który korzysta z magazynu izolowanego można określić, że izolowanych magazynów użytkownika należy przenieść z profilu mobilnego użytkownika. Roaming może służyć w połączeniu z funkcją izolowania użytkowników i zestawu lub przy użyciu izolacji przez użytkownika, domena i zestawu. Jeśli zakres mobilne nie jest używany, magazynów nie będzie są przekazywane nawet wtedy, gdy jest używany profil użytkownika mobilnego.  
+ Profile użytkowników mobilnych są funkcją Windows, która pozwala użytkownikowi na Ustawianie tożsamości w sieci i Użyj tej tożsamości do logowania się na każdym komputerze w sieci, przeniesienie wszystkich spersonalizowanych ustawień. Zestaw, który używa wydzielonej pamięci masowej można określić, że wydzielonej pamięci masowej przez użytkownika, należy przenieść z profilu mobilnego użytkownika. Roaming może służyć w połączeniu z izolacją Izolacja według użytkownika i zestawu lub przez użytkownika, domeny i zestawu. Jeżeli nie zastosowano zakres mobilnego, magazyny nie "wędrują" nawet, jeśli jest używany profil użytkownika mobilnego.  
   
- Poniższy przykładowy kod pobiera mobilnego sklepu samodzielnie przez użytkownika i zestawu. Magazyn jest możliwy za pośrednictwem `isoFile` obiektu.  
+ Poniższy przykładowy kod pobiera mobilnego magazynu izolowanego według użytkownika i zestawu. Magazyn jest możliwy za pośrednictwem `isoFile` obiektu.  
   
  [!code-cpp[Conceptual.IsolatedStorage#11](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source9.cpp#11)]
  [!code-csharp[Conceptual.IsolatedStorage#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source9.cs#11)]
  [!code-vb[Conceptual.IsolatedStorage#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source9.vb#11)]  
   
- Zakresu domeny można dodać do utworzenia magazynu mobilnego samodzielnie przez użytkownika, domena i aplikacji. W poniższym przykładzie kodu pokazano to.  
+ Zakresu domeny można dodać do utworzenia mobilnego magazynu izolowanego według użytkownika, domeny i aplikacji. Poniższy przykład kodu pokazuje to.  
   
  [!code-cpp[Conceptual.IsolatedStorage#12](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source9.cpp#12)]
  [!code-csharp[Conceptual.IsolatedStorage#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source9.cs#12)]

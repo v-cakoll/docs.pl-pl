@@ -4,12 +4,12 @@ description: Dowiedz się, jak zaimplementować bramy interfejsu API za pomocą 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 7400603aa11b2a741db727c97c2e4b2a17268ac0
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: dbb3fdb27175a86291d3a942ff168a5aae787c0c
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37878824"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930801"
 ---
 # <a name="implementing-api-gateways-with-ocelot"></a>Wdrażanie bramy interfejsu API za pomocą Ocelot
 
@@ -65,6 +65,7 @@ Widać, że mikrousługa wykazu jest typowym projekcie internetowego interfejsu 
 ```csharp
 [HttpGet]
 [Route("items/{id:int}")]
+[ProducesResponseType((int)HttpStatusCode.BadRequest)]
 [ProducesResponseType((int)HttpStatusCode.NotFound)]
 [ProducesResponseType(typeof(CatalogItem),(int)HttpStatusCode.OK)]
 public async Task<IActionResult> GetItemById(int id)
@@ -545,7 +546,7 @@ Gdy wdrażasz ramach aplikacji eShopOnContainers do Kuberentes udostępnia kilka
 
 -   `/` SPA klienta aplikacji sieci web
 -   `/webmvc` dla klienta aplikacji sieci web MVC
--   `/webstatus` Wyświetlanie stanu/healchecks aplikacji sieci web klienta
+-   `/webstatus` Wyświetlanie stanu/healthchecks aplikacji sieci web klienta
 -   `/webshoppingapigw` dla sieci web BFF i zakupów procesów biznesowych
 -   `/webmarketingapigw` dla sieci web BFF i marketingu procesów biznesowych
 -   `/mobileshoppingapigw` dla mobilnych BFF i zakupów procesów biznesowych

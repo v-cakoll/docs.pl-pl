@@ -2,29 +2,29 @@
 title: Włączanie dostępu między bazami danych w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-ms.openlocfilehash: 22fa2b48d795fb81b4740ce882f9bff632deabbd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e041a6c90940ad33e17d83e5f0400d05c645ada
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353465"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934566"
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>Włączanie dostępu między bazami danych w programie SQL Server
-Łańcucha między bazami danych własność występuje, gdy procedura w jednej bazie danych jest zależna od obiektów w innej bazie danych. Łańcuch własności między bazami danych działa w taki sam sposób jak własność łańcucha w ramach pojedynczej bazy danych, z tą różnicą, że łańcucha własności nieprzerwany wymaga, aby wszystkich właścicieli obiektów są mapowane do tego samego konta logowania. Jeśli obiekt źródłowy w źródłowej bazy danych i obiektów docelowych w z docelowymi bazami danych są własnością tego samego konta logowania, programu SQL Server nie sprawdza uprawnienia do obiektów docelowych.  
+Tworzenie łańcucha własności między bazami danych występuje, gdy procedura w jednej bazie danych jest zależna od obiektów w innej bazie danych. Łańcucha własności między bazami danych działa w taki sam sposób jak łańcucha własności, w ramach pojedynczej bazy danych, z tą różnicą, że łańcucha własności nieprzerwany wymaga, że wszyscy właściciele obiektu są mapowane do tego samego konta logowania. Jeśli obiekt źródłowy w źródłowej bazie danych i obiektów docelowych w docelowych baz danych są własnością tego samego konta logowania, programu SQL Server nie sprawdza uprawnienia do obiektów docelowych.  
   
-## <a name="off-by-default"></a>Domyślnie wyłączone  
- Własność łańcucha między bazami danych jest domyślnie wyłączona. Firma Microsoft zaleca wyłączenie łańcucha własności między bazami danych, ponieważ ujawnia on należy do następujących zagrożenia bezpieczeństwa:  
+## <a name="off-by-default"></a>Funkcja domyślnie wyłączona  
+ Własność łańcucha w bazach danych jest domyślnie wyłączona. Firma Microsoft zaleca wyłączenie łańcucha własności między bazami danych, ponieważ prezentuje następujące niebezpieczeństwa:  
   
--   Bazy danych właścicieli i członkowie `db_ddladmin` lub `db_owners` ról bazy danych można tworzyć obiektów, które są własnością innych użytkowników. Te obiekty potencjalnie może kierować obiektów w innych bazach danych. Oznacza to, że po włączeniu procesu tworzenia łańcucha między bazami danych własności musi pełnego zaufania, tych użytkowników z danymi w wszystkie bazy danych.  
+-   Właściciele i członkowie bazy danych `db_ddladmin` lub `db_owners` ról bazy danych można tworzyć obiekty, które są własnością innych użytkowników. Te obiekty mogą potencjalnie kierować obiektów w innych bazach danych. Oznacza to, że jeśli włączysz tworzenie łańcucha własności między bazami danych, należy pełnego zaufania, tych użytkowników, danych we wszystkich bazach danych.  
   
--   Użytkownicy mający uprawnienie CREATE DATABASE można tworzyć nowych baz danych i dołączać istniejącej bazy danych. Jeśli włączono tworzenie łańcucha między bazami danych własność tych użytkowników są dostępne obiektów w innych bazach danych, które mogą nie mieć uprawnień nowo utworzony lub dołączone baz danych, które tworzą.  
+-   Użytkownicy mający uprawnienie Tworzenie bazy danych można tworzyć nowe bazy danych i dołączanie istniejących baz danych. Jeśli włączono tworzenie łańcucha własności między bazami danych tych użytkowników może uzyskać dostęp do obiektów w innych bazach danych, które mogą nie mieć uprawnień z bazy danych nowo utworzone lub dołączone, które tworzą.  
   
 ## <a name="enabling-cross-database-ownership-chaining"></a>Włączanie łańcucha własności między bazami danych  
- Tworzenie łańcucha między bazami danych własność powinna być włączona tylko w środowiskach, w którym można w pełni zaufane uprawnieniach użytkowników. Można skonfigurować podczas instalacji dla wszystkich baz danych lub selektywnie dla baz danych przy użyciu [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] polecenia `sp_configure` i `ALTER DATABASE`.  
+ Tworzenie łańcucha własności między bazami danych należy włączyć tylko w środowiskach, w którym można w pełni zaufane wysoce uprzywilejowanych użytkowników. Można skonfigurować podczas instalacji dla wszystkich baz danych lub selektywnie dla określonych baz danych przy użyciu [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] polecenia `sp_configure` i `ALTER DATABASE`.  
   
- Aby selektywnie skonfigurować tworzenie łańcucha własności między bazami danych, użyj `sp_configure` jej wyłączenia serwera. Następnie za pomocą polecenia ALTER DATABASE USTAWIĆ ON DB_CHAINING skonfigurować tworzenie łańcucha tylko baz danych, które tego wymagają własności między bazami danych.  
+ Aby selektywnie skonfigurować tworzenie łańcucha własności między bazami danych, użyj `sp_configure` wyłączenia serwera. Następnie użyj polecenia ALTER DATABASE za pomocą zestawu ON DB_CHAINING do skonfigurowania własności między bazami danych, tworzenie łańcucha tylko bazy danych, które tego wymagają.  
   
- Poniższy przykład powoduje włączenie łańcucha między bazami danych własności dla wszystkich baz danych:  
+ Poniższy przykład powoduje włączenie łańcucha własności między bazami danych, dla wszystkich baz danych:  
   
 ```  
 EXECUTE sp_configure 'show advanced', 1;  
@@ -33,22 +33,22 @@ EXECUTE sp_configure 'cross db ownership chaining', 1;
 RECONFIGURE;  
 ```  
   
- Poniższy przykład powoduje włączenie łańcucha między bazami danych własności dla baz danych:  
+ Poniższy przykład powoduje włączenie łańcucha własności między bazami danych, do konkretnych baz danych:  
   
 ```  
 ALTER DATABASE Database1 SET DB_CHAINING ON;  
 ALTER DATABASE Database2 SET DB_CHAINING ON;  
 ```  
   
-### <a name="dynamic-sql"></a>Dynamiczne SQL  
- Tworzenie łańcucha własności między bazami danych nie działa w przypadku, gdy utworzony dynamicznie instrukcji SQL są wykonywane, chyba że ten sam użytkownik istnieje w obu bazach danych. Można obejść to w programie SQL Server, tworząc procedury przechowywanej, która uzyskuje dostęp do danych w innej bazie danych i podpisywania procedury przy użyciu certyfikatu, który istnieje w obu bazach danych. To umożliwia użytkownikom dostęp do zasobów bazy danych używane przez procedurę bez przyznawania im dostępu do bazy danych lub uprawnieniami.  
+### <a name="dynamic-sql"></a>Dynamiczny język SQL  
+ Tworzenie łańcucha własności między bazami danych nie działa w przypadku których dynamicznie utworzoną instrukcje SQL są wykonywane, chyba że ten sam użytkownik istnieje w obu bazach danych. Można obejść to w programie SQL Server, tworząc procedury przechowywanej, która uzyskuje dostęp do danych w innej bazie danych i podpisywania procedury przy użyciu certyfikatu, który znajduje się w obu bazach danych. To zapewnia użytkownikom dostęp do zasobów bazy danych używane przez tę procedurę, bez nadawania im dostępu do bazy danych lub uprawnienia.  
   
 ## <a name="external-resources"></a>Zasoby zewnętrzne  
  Aby uzyskać więcej informacji zobacz następujące zasoby.  
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Rozszerzanie personifikacji bazy danych przy użyciu EXECUTE AS](http://msdn.microsoft.com/library/ms188304\(SQL.105\).aspx) i [Cross własność DB łańcucha opcja](http://msdn.microsoft.com/library/ms188694.aspx)podręcznikach programu SQL Server w trybie Online.|Tematach opisano sposób konfigurowania bazy danych między własność łańcucha dla wystąpienia programu SQL Server.|  
+|[Rozszerzanie personifikacji bazy danych przy użyciu EXECUTE AS](http://msdn.microsoft.com/library/ms188304\(SQL.105\).aspx) i [obejmujące wiele własności DB łańcucha opcji](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option)podręcznikach programu SQL Server w trybie Online.|Tematach opisano sposób konfigurowania własności między bazami danych z łańcucha dla wystąpienia programu SQL Server.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
@@ -56,4 +56,4 @@ ALTER DATABASE Database2 SET DB_CHAINING ON;
  [Zarządzanie uprawnieniami za pomocą procedur składowanych w programie SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
  [Pisanie bezpiecznego dynamicznego kodu SQL w programie SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
  [Rejestrowanie procedur składowanych w programie SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](http://go.microsoft.com/fwlink/?LinkId=217917)

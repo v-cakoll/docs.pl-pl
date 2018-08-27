@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Select clause [Visual Basic]
 - queries [Visual Basic], Select
 ms.assetid: 27a3f61c-5960-4692-9b91-4d0c4b6178fe
-ms.openlocfilehash: 55c1e79b9e8e26483c1b7374a755bf977129169b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7d959c0717a3ef44dfc23c90d99ec7b83421efaa
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604409"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935954"
 ---
 # <a name="select-clause-visual-basic"></a>Select — Klauzula (Visual Basic)
 Definiuje wyniku zapytania.  
@@ -26,34 +26,34 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
   
 ## <a name="parts"></a>Części  
  `var1`  
- Opcjonalna. Alias, który może służyć do odwołania wynik wyrażenia kolumny.  
+ Opcjonalna. Alias, który może służyć do odwołania wyniki wyrażenia kolumny.  
   
  `fieldName1`  
- Wymagana. Nazwa pola, które ma zostać zwrócone w wyniku zapytania.  
+ Wymagane. Nazwa pola do zwrócenia w wyniku zapytania.  
   
 ## <a name="remarks"></a>Uwagi  
- Można użyć `Select` klauzuli do definiowania wyników do zwrócenia z zapytania. Dzięki temu można zdefiniować elementów członkowskich nowego typu anonimowego, który jest tworzony przez zapytanie lub docelowych elementów członkowskich typu nazwanego, zwracane przez zapytanie. `Select` Klauzula nie jest wymagana dla zapytania. Jeśli nie `Select` jest określona klauzula, zapytanie zwraca typ na podstawie wszystkich elementów członkowskich zmiennych zakresu dla bieżącego zakresu. Aby uzyskać więcej informacji, zobacz [typy anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md). Gdy zapytanie tworzy typ nazwany, zwróci wyniku typu <xref:System.Collections.Generic.IEnumerable%601> gdzie `T` jest utworzony typ.  
+ Możesz użyć `Select` klauzulę, aby zdefiniować wyników do zwrócenia z zapytania. Dzięki temu można zdefiniować członkowie nowy typ anonimowy, który jest tworzony przez zapytania lub docelowych elementów członkowskich typu nazwanego, który jest zwracany przez zapytanie. `Select` Klauzula nie jest wymagana dla zapytania. Jeśli nie `Select` określono klauzulę, kwerenda będzie zwracać typ zależny od wszystkich elementów członkowskich zmiennych zakresu dla bieżącego zakresu. Aby uzyskać więcej informacji, zobacz [typy anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md). Gdy zapytanie tworzy typ nazwany, zwróci wynik o typie <xref:System.Collections.Generic.IEnumerable%601> gdzie `T` jest utworzony typ.  
   
- `Select` Klauzuli można odwoływać się do żadnych zmiennych w bieżącym zakresie. Dotyczy to również określonych w zmiennych zakresu `From` klauzuli (lub `From` klauzule). Obejmuje też wszystkie nowe zmienne utworzone za pomocą aliasu przez `Aggregate`, `Let`, `Group By`, lub `Group Join` klauzule lub zmienne z poprzedniej `Select` klauzuli w wyrażeniu zapytania. `Select` Klauzuli mogą również obejmować wartości statyczne. Na przykład poniższy przykładowy kod przedstawia wyrażenia zapytania, w którym `Select` klauzuli definiuje wynik zapytania jako nowy typ anonimowy z czterech członków: `ProductName`, `Price`, `Discount`, i `DiscountedPrice`. `ProductName` i `Price` wartości elementów członkowskich są pobierane z zmienną zakresu produktu, który jest zdefiniowany w `From` klauzuli. `DiscountedPrice` Wartość elementu członkowskiego jest obliczane w `Let` klauzuli. `Discount` Element członkowski jest wartością statyczną.  
+ `Select` Klauzuli można odwoływać się do żadnych zmiennych w bieżącym zakresie. Obejmuje to zmienne zakresu określonej w `From` — klauzula (lub `From` klauzule). Obejmuje również wszelkie nowe zmienne utworzone za pomocą aliasu przez `Aggregate`, `Let`, `Group By`, lub `Group Join` klauzule lub zmiennych z poprzedniego `Select` klauzula w wyrażeniu zapytania. `Select` Klauzuli mogą również obejmować wartości statyczne. Na przykład, poniższy przykład kodu pokazuje wyrażenie zapytania, w którym `Select` klauzuli definiuje wynik zapytania jako nowy typ anonimowy z cztery elementy członkowskie: `ProductName`, `Price`, `Discount`, i `DiscountedPrice`. `ProductName` i `Price` wartości elementów członkowskich są pobierane z zmiennej zakresu produktu, który jest zdefiniowany w `From` klauzuli. `DiscountedPrice` Wartość elementu członkowskiego jest obliczany w `Let` klauzuli. `Discount` Element członkowski jest wartość statyczną.  
   
  [!code-vb[VbSimpleQuerySamples#27](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_1.vb)]  
   
- `Select` Klauzuli wprowadzono nowy zestaw zmiennych zakresu klauzule kolejne zapytania i poprzednich zmiennych zakresu nie są już w zakresie. Ostatni `Select` klauzuli w wyrażeniu zapytania określa wartość zwracaną przez zapytanie. Na przykład następujące zapytanie zwraca firmy nazwy i kolejność Identyfikatora dla każdego zamówienie klienta, dla której liczba przekracza 500. Pierwszy `Select` klauzuli identyfikuje zmienne zakresu `Where` klauzuli, a drugi `Select` klauzuli. Drugi `Select` klauzuli identyfikuje wartości zwróconych przez zapytanie jako nowego typu anonimowego.  
+ `Select` Klauzuli wprowadzono nowy zestaw zmiennych zakresu klauzule kolejnych zapytań i poprzedniej zmiennych zakresu nie są już w zakresie. Ostatni `Select` klauzula w wyrażeniu zapytania określa wartość zwracaną przez zapytanie. Na przykład następujące zapytanie zwraca firmy nazwy i kolejność Identyfikatora dla każdego zamówienia klienta, dla których suma przekracza 500. Pierwszy `Select` klauzula identyfikuje zmienne zakresu `Where` klauzuli, a druga `Select` klauzuli. Drugi `Select` klauzula identyfikuje wartości zwracane przez kwerendy w postaci nowym typem anonimowym.  
   
  [!code-vb[VbSimpleQuerySamples#28](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_2.vb)]  
   
- Jeśli `Select` klauzuli identyfikuje jeden element, aby zwrócić, wyrażenia zapytania zwraca kolekcję typu ten pojedynczy element. Jeśli `Select` klauzuli identyfikuje wielu elementów do zwrócenia, wyrażenia zapytania zwraca kolekcję nowego typu anonimowego, na podstawie wybranych elementów. Na przykład następujące dwa zapytania zwrócić kolekcje dwóch różnych typów, na podstawie `Select` klauzuli. Pierwsza kwerenda zwraca kolekcję nazw firmy jako ciągi. Drugie zapytanie zwraca kolekcję `Customer` obiektów wypełniane przy użyciu nazwy firmy i informacje o adresie.  
+ Jeśli `Select` klauzula identyfikuje jeden element, aby powrócić, wyrażenia zapytania zwraca kolekcję typ ten pojedynczy element. Jeśli `Select` klauzula identyfikuje wielu elementów do zwrócenia, wyrażenia zapytania zwraca kolekcję nowym typem anonimowym, w oparciu o wybrane elementy. Na przykład, następujące dwa zapytania zwracają kolekcje dwa różne typy na podstawie `Select` klauzuli. Pierwsze zapytanie zwraca kolekcję nazwy firmy jako ciągi. Drugie zapytanie zwraca kolekcję `Customer` obiektów wypełniane przy użyciu nazwy firmy i informacje o adresie.  
   
  [!code-vb[VbSimpleQuerySamples#29](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_3.vb)]  
   
 ## <a name="example"></a>Przykład  
- Następujące zapytanie używa wyrażenia `From` klauzuli, aby zadeklarować zmienną zakresu `cust` dla `customers` kolekcji. `Select` Klauzuli wybiera klienta nazwa i wartość Identyfikatora i wypełnia `CompanyName` i `CustomerID` kolumn nowej zmiennej zakresu. `For Each` Instrukcji pętli każdego zwróconego obiektu i wyświetla `CompanyName` i `CustomerID` kolumn dla każdego rekordu.  
+ Następujące zapytanie używa wyrażenia `From` klauzulę, aby zadeklarować zmienną zakresu `cust` dla `customers` kolekcji. `Select` Klauzula wybiera nazwę klienta i wartość Identyfikatora i wypełnia `CompanyName` i `CustomerID` kolumn nowej zmiennej zakresu. `For Each` Instrukcji pętli każdego zwróconego obiektu i wyświetla `CompanyName` i `CustomerID` kolumnach dla każdego rekordu.  
   
  [!code-vb[VbSimpleQuerySamples#30](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_4.vb)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Zapytania](../../../visual-basic/language-reference/queries/queries.md)  
+ [Zapytania](../../../visual-basic/language-reference/queries/index.md)  
  [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)  
  [Where, klauzula](../../../visual-basic/language-reference/queries/where-clause.md)  
  [Order By, klauzula](../../../visual-basic/language-reference/queries/order-by-clause.md)  

@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1fac897f743ca452c38282143cdf822b682df1df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d20701237501834c611c4e498c39597cf275176
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460118"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43001466"
 ---
-# <a name="qualifiersetbeginenumeration-function"></a>Funkcja QualifierSet_BeginEnumeration
-Resetuje moduł wyliczający kwalifikatory obiekt na początek wyliczenia.  
+# <a name="qualifiersetbeginenumeration-function"></a>QualifierSet_BeginEnumeration — funkcja
+Resetuje moduł wyliczający kwalifikatory obiektu na początku tego wyliczenia.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -41,38 +41,38 @@ HRESULT QualifierSet_BeginEnumeration (
 ## <a name="parameters"></a>Parametry
 
 `vFunc`   
-[in] Ten parametr nie jest używana.
+[in] Ten parametr jest nieużywany.
 
 `ptr`   
-[in] Wskaźnik do [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) wystąpienia.
+[in] Wskaźnik do [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) wystąpienia.
 
 `lFlags`   
-[in] Bitowe połączenie flagi lub wartości opisanych w [uwagi](#remarks) sekcja, która określa kwalifikatory do uwzględnienia w wyliczeniu.
+[in] Bitowa kombinacja wartości opisanych w lub flag [uwagi](#remarks) sekcja, która określa kwalifikatory do uwzględnienia w wyliczeniu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.h* pliku nagłówka, lub należy je zdefiniować jako stałe w kodzie:
+Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lFlags` Parametr jest nieprawidłowy. |
-|`WBEM_E_UNEXPECTED` | 0x8004101d | Drugie wywołanie `QualifierSet_BeginEnumeration` został utworzony bez wywołania pośredniczące [ `QualifierSet_EndEnumeration` ](qualifierset-endenumeration.md). |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Można rozpocząć nowego wyliczenia jest za mało pamięci. |
+|`WBEM_E_UNEXPECTED` | 0x8004101d | Drugie wywołanie `QualifierSet_BeginEnumeration` został utworzony bez interwencyjnego wywołania [ `QualifierSet_EndEnumeration` ](qualifierset-endenumeration.md). |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Nie ma wystarczającej ilości pamięci jest dostępny rozpocząć nowe wyliczenie. |
 |`WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
   
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zawijana wywołanie [IWbemQualifierSet::BeginEnumeration](https://msdn.microsoft.com/library/aa391861(v=vs.85).aspx) metody.
+Ta funkcja zawija wywołanie do [IWbemQualifierSet::BeginEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-beginenumeration) metody.
 
-Aby wyliczyć wszystkie kwalifikatory dla obiekt, ta metoda musi zostać wywołana przed pierwsze wywołanie w celu [QualifierSet_Next](qualifierset-next.md). Kolejność, w którym są wyliczane kwalifikatory gwarantuje to niezmiennej danego wyliczenia.
+Wyliczono wszystkie kwalifikatory dla obiektu, ta metoda musi zostać wywołana przed pierwszym wywołaniu [QualifierSet_Next](qualifierset-next.md). Kolejność, w którym są wyliczane kwalifikatory może być inwariantny dla danego wyliczenia.
 
-Flagi, które mogą być przekazywane jako `lEnumFlags` argumentu są zdefiniowane w *WbemCli.h* pliku nagłówka, lub należy je zdefiniować jako stałe w kodzie.   
+Flagi, które mogą być przekazywane jako `lEnumFlags` argument są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie.   
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
 |  | 0 | Zwraca nazwy wszystkich kwalifikatorów. |
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Zwraca tylko nazwy kwalifikatory określonych bieżącą właściwość lub obiekt. <br/> Dla właściwości: zwracać tylko kwalifikatory określonego we właściwości (w tym zastąpień), a nie te kwalifikatory propagowane z definicji klasy. <br/> Dla wystąpienia obiektu: zwraca tylko nazwy kwalifikator danego wystąpienia. <br/> Dla klasy: przywrócenie tylko kwalifikatory określonych beiong klasy pochodnej.
-|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Powrót propagowane tylko nazwy kwalifikatory z innego obiektu. <br/> Dla właściwości: zwracane tylko kwalifikatory propagowane do tej właściwości z definicji klasy, a nie te z samej właściwości. <br/> Dla wystąpienia obiektu: Powrót propagowane tylko tych kwalifikatory z definicji klasy. <br/> Dla klasy: zwracane tylko nazwy kwalifikator odziedziczona z klasy nadrzędnej. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Zwróć tylko nazwy kwalifikatory określonych do bieżącej właściwości lub obiektu. <br/> Dla właściwości: zwracać tylko kwalifikatory określonych właściwości (w tym zastąpień), a nie te kwalifikatory propagowane z poziomu definicji klasy. <br/> W przypadku wystąpienia: zwracać tylko nazwy kwalifikator danego wystąpienia. <br/> Dla klasy: przywrócenie tylko kwalifikatory określonych beiong klasy pochodnej.
+|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Zwróć tylko nazwy kwalifikatory propagowane z innego obiektu. <br/> Dla właściwości: Zwróć tylko kwalifikatory propagowane do tej właściwości z definicji klasy, a nie te z samej właściwości. <br/> W przypadku wystąpienia: zwrócenia tylko tych kwalifikatory propagowane z poziomu definicji klasy. <br/> Dla klasy: zwrócenia tylko nazwy kwalifikator dziedziczone z klasy nadrzędnej. |
 
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -82,4 +82,4 @@ Flagi, które mogą być przekazywane jako `lEnumFlags` argumentu są zdefiniowa
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
-[Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)
+[Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

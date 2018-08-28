@@ -7,37 +7,38 @@ helpviewer_keywords:
 - remainder assignment operator (%=) [C#]
 - '%= assignment operator (remainder assignment) [C#]'
 ms.assetid: 47e5f068-1d97-4010-bd3b-e21b5d3a77f5
-ms.openlocfilehash: aadcb5ef969ff408cc1e738fc0f5b67152fdc78b
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 009c162b13fab05ba349d0535fe8dfae206502f3
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34171970"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998659"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="3de83-102">Operator %= (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="3de83-102">%= Operator (C# Reference)</span></span>
-<span data-ttu-id="3de83-103">Operator przypisania reszty.</span><span class="sxs-lookup"><span data-stu-id="3de83-103">The remainder assignment operator.</span></span>  
+# <a name="-operator-c-reference"></a><span data-ttu-id="5223f-102">Operator %= (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="5223f-102">%= Operator (C# Reference)</span></span>
+<span data-ttu-id="5223f-103">Operator przypisania reszty.</span><span class="sxs-lookup"><span data-stu-id="5223f-103">The remainder assignment operator.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3de83-104">Uwagi</span><span class="sxs-lookup"><span data-stu-id="3de83-104">Remarks</span></span>  
- <span data-ttu-id="3de83-105">Za pomocą wyrażenia `%=` operator przypisania, takich jak</span><span class="sxs-lookup"><span data-stu-id="3de83-105">An expression using the `%=` assignment operator, such as</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5223f-104">Uwagi</span><span class="sxs-lookup"><span data-stu-id="5223f-104">Remarks</span></span>  
+ <span data-ttu-id="5223f-105">Wyrażenie używające operatora przypisania `%=`, takie jak</span><span class="sxs-lookup"><span data-stu-id="5223f-105">An expression using the `%=` assignment operator, such as</span></span>  
   
 ```csharp  
 x %= y  
 ```  
   
- <span data-ttu-id="3de83-106">jest równoważny</span><span class="sxs-lookup"><span data-stu-id="3de83-106">is equivalent to</span></span>  
+ <span data-ttu-id="5223f-106">odpowiada wyrażeniu</span><span class="sxs-lookup"><span data-stu-id="5223f-106">is equivalent to</span></span>  
   
 ```csharp  
 x = x % y  
 ```  
   
- <span data-ttu-id="3de83-107">z tą różnicą, że `x` jest tylko jeden raz obliczone.</span><span class="sxs-lookup"><span data-stu-id="3de83-107">except that `x` is only evaluated once.</span></span> <span data-ttu-id="3de83-108">[% Operator](../../../csharp/language-reference/operators/remainder-operator.md) jest wstępnie zdefiniowane na typy liczbowe do obliczenia resztę po dzielenia.</span><span class="sxs-lookup"><span data-stu-id="3de83-108">The [% operator](../../../csharp/language-reference/operators/remainder-operator.md) is predefined for numeric types to compute the remainder after division.</span></span>  
+ <span data-ttu-id="5223f-107">z tą różnicą, że `x` jest obliczany tylko raz.</span><span class="sxs-lookup"><span data-stu-id="5223f-107">except that `x` is only evaluated once.</span></span> <span data-ttu-id="5223f-108">[% — Operator](../../../csharp/language-reference/operators/remainder-operator.md) wstępnie zdefiniowany dla typów liczbowych do obliczania pozostałej po dzielenia.</span><span class="sxs-lookup"><span data-stu-id="5223f-108">The [% operator](../../../csharp/language-reference/operators/remainder-operator.md) is predefined for numeric types to compute the remainder after division.</span></span>  
   
- <span data-ttu-id="3de83-109">`%=` Operator nie może zostać przeciążony bezpośrednio, ale typy danych zdefiniowane przez użytkownika można przeciążać [% operator](../../../csharp/language-reference/operators/remainder-operator.md) (zobacz [— operator (odwołanie w C#)](../../../csharp/language-reference/keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="3de83-109">The `%=` operator cannot be overloaded directly, but user-defined types can overload the [% operator](../../../csharp/language-reference/operators/remainder-operator.md) (see [operator (C# Reference)](../../../csharp/language-reference/keywords/operator.md)).</span></span>  
+ <span data-ttu-id="5223f-109">`%=` Operator nie może zostać przeciążony bezpośrednio, ale typy zdefiniowane przez użytkownika może doprowadzić do przeciążenia [operatora %](../../../csharp/language-reference/operators/remainder-operator.md) (zobacz [— operator (odwołanie w C#)](../../../csharp/language-reference/keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="5223f-109">The `%=` operator cannot be overloaded directly, but user-defined types can overload the [% operator](../../../csharp/language-reference/operators/remainder-operator.md) (see [operator (C# Reference)](../../../csharp/language-reference/keywords/operator.md)).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3de83-110">Przykład</span><span class="sxs-lookup"><span data-stu-id="3de83-110">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="5223f-110">Przykład</span><span class="sxs-lookup"><span data-stu-id="5223f-110">Example</span></span>  
  [!code-csharp[csRefOperators#4](../../../csharp/language-reference/operators/codesnippet/CSharp/modulus-assignment-operator_1.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="3de83-111">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="3de83-111">See Also</span></span>  
- [<span data-ttu-id="3de83-112">Odwołanie w C#</span><span class="sxs-lookup"><span data-stu-id="3de83-112">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="3de83-113">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="3de83-113">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="3de83-114">Operatory języka C#</span><span class="sxs-lookup"><span data-stu-id="3de83-114">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a><span data-ttu-id="5223f-111">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="5223f-111">See Also</span></span>
+
+- [<span data-ttu-id="5223f-112">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="5223f-112">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="5223f-113">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="5223f-113">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="5223f-114">Operatory języka C#</span><span class="sxs-lookup"><span data-stu-id="5223f-114">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)

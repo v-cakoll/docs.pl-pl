@@ -1,181 +1,181 @@
 ---
-title: Wzorzec bramy interfejsu API i bezpośrednia komunikacja klient mikrousługi
-description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Wzorzec bramy interfejsu API i bezpośrednia komunikacja klient mikrousługi
+title: Wzorzec bramy interfejsu API i bezpośrednia komunikacja klienta z mikrousługą
+description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Wzorzec bramy interfejsu API i bezpośrednia komunikacja klienta z mikrousługą
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/07/2018
-ms.openlocfilehash: 83ec054239814ba20ebeec1f3d50b9f7e6dcdd87
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: f820b0ed866c539beda641164ef42631263490d3
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106281"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000074"
 ---
-# <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Wzorzec bramy interfejsu API i bezpośrednia komunikacja klient mikrousługi
+# <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Wzorzec bramy interfejsu API i bezpośrednia komunikacja klienta z mikrousługą
 
-W architekturze mikrousług każdego mikrousługi udostępnia zestaw (zwykle) fine‑grained punktów końcowych. Ten fakt może wpływać na komunikacji client‑to‑microservice, zgodnie z objaśnieniem w tej sekcji.
+W architekturze mikrousług każda mikrousługa ujawnia zestaw (zazwyczaj) fine‑grained punktów końcowych. Ten fakt może mieć wpływ na komunikację client‑to‑microservice, zgodnie z opisem w tej sekcji.
 
-## <a name="direct-client-to-microservice-communication"></a>Bezpośrednia komunikacja klient mikrousługi
+## <a name="direct-client-to-microservice-communication"></a>Bezpośrednia komunikacja klienta z mikrousługą
 
-Jest możliwe podejście do użycia z architektury bezpośrednia komunikacja klient mikrousługi. W tym podejście aplikacji klienckiej mogą wysyłać żądania bezpośrednio do niektórych mikrousług, jak pokazano na rysunku 4-12.
+Możliwych podejść jest bezpośrednia komunikacja klienta z mikrousługą opartych na architekturze. W tej metodzie aplikacja kliencka mogą wysyłać żądania bezpośrednio do niektórych mikrousług, jak pokazano na rysunku 4-12.
 
-![Diagram przedstawiający bezpośrednia komunikacja klient mikrousługi architektury](./media/image12.png)
+![Diagram przedstawiający architekturę bezpośrednia komunikacja klienta z mikrousługą](./media/image12.png)
 
-**Rysunek 4-12**. Przy użyciu architektury bezpośrednia komunikacja klient mikrousługi
+**Rysunek 4-12**. Przy użyciu architektury bezpośrednia komunikacja klienta z mikrousługą
 
-W tej metody. Każdy mikrousługi ma publiczny punkt końcowy, niekiedy z różnych portów TCP dla każdego mikrousługi. Przykładowy adres URL dla określonej usługi może być następujący adres URL na platformie Azure:
+W tym podejściu poszczególne mikrousługi ma publiczny punkt końcowy, czasami z różnych portów TCP dla poszczególnych mikrousług. Przykładowy adres URL dla określonej usługi może być następujący adres URL na platformie Azure:
 
 <http://eshoponcontainers.westus.cloudapp.azure.com:88/>
 
-W środowisku produkcyjnym, oparty na klastrze, mapującej adres URL do modułu równoważenia obciążenia używanych w klastrze, który z kolei rozdzielaj żądania między mikrousług. W środowiskach produkcyjnych, może mieć aplikacji dostarczania kontrolera (ADC) jak [brama aplikacji w usłudze Azure](https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction) Twojego mikrousług od Internetu. To dodatkowe przezroczyste warstwy, która nie przeprowadza równoważenia obciążenia tylko zabezpiecza oferując kończenia żądań SSL z usługami. Zwiększa to obciążenia hosty dzięki przeniesieniu kończenia żądań SSL użycie Procesora CPU i inne routingu obowiązków na bramie aplikacji Azure. W każdym przypadku modułu równoważenia obciążenia i ADC są niewidoczne z aplikacji logicznych architektura punktu widzenia.
+W środowisku produkcyjnym, oparte na klastrze mapującej adres URL do modułu równoważenia obciążenia, używany w klastrze, który z kolei rozkłada żądania na mikrousługi. W środowiskach produkcyjnych, może mieć Application Delivery kontrolera (ADC) takich jak [usługi Azure Application Gateway](https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction) mikrousługi od Internetu. Jest to zabezpieczenie przezroczyste warstwy, która nie przeprowadza równoważenia obciążenia tylko zabezpiecza usług, oferując kończenia żądań SSL. Zwiększa to obciążenie hostów, przenosząc kończenia żądań SSL mocy procesora CPU i inne opłaty routingu do usługi Azure Application Gateway. W każdym przypadku modułu równoważenia obciążenia i ADC są niewidoczne z aplikacji logicznych architektury punktu widzenia.
 
-Architektura bezpośrednia komunikacja klient mikrousługi może to być dobry małych aplikacji opartej na mikrousługi, szczególnie w przypadku aplikacji klienckiej aplikacji sieci web po stronie serwera, takie jak aplikacja ASP.NET MVC. Jednak podczas kompilowania dużych i złożonych aplikacji opartych na mikrousługi (na przykład podczas obsługi wielu rodzajów mikrousługi), a szczególnie w przypadku aplikacji klienta zdalnego aplikacji mobilnych lub aplikacji sieci web SPA tego podejścia skierowany kilka problemów.
+Architektura bezpośrednia komunikacja klienta z mikrousługą może być wystarczające dla małych aplikacji opartych na mikrousługach, zwłaszcza, jeśli aplikacja kliencka jest aplikacją sieci web po stronie serwera, np. aplikację ASP.NET MVC. Jednak podczas kompilowania dużych i złożonych aplikacji opartych na mikrousługach (na przykład podczas obsługi dziesiątek, jak mikrousługi typów), a zwłaszcza w przypadku, gdy aplikacje klienckie są zdalnej aplikacji mobilnych lub aplikacji sieci web SPA, takie podejście twarzy kilka kwestii.
 
-Podczas tworzenia dużej aplikacji oparte na mikrousług, należy wziąć pod uwagę następujące kwestie:
+Podczas tworzenia dużych aplikacji opartego na mikrousługach, należy wziąć pod uwagę następujące kwestie:
 
-- *Jak aplikacje klienckie zminimalizować liczbę żądań do wewnętrznej bazy danych i zmniejszyć chatty komunikacji wielu mikrousług?*
+- *Jak aplikacje klienckie zminimalizować liczbę żądań do wewnętrznej bazy danych i ograniczyć nasilenie komunikacji do wielu mikrousług?*
 
-Interakcji z wieloma mikrousług do tworzenia jednym ekranie interfejsu użytkownika powoduje zwiększenie liczby rund w Internecie. Zwiększa to opóźnienie i złożoność po stronie interfejsu użytkownika. W idealnym przypadku odpowiedzi wydajnie agregowania po stronie serwera. Zmniejsza to opóźnienia, ponieważ wiele rodzajów danych wróć równolegle i niektóre interfejsu użytkownika można wyświetlić danych, jak jest gotowy.
+Interakcja z wielu mikrousług, co umożliwia tworzenie jednego ekranu interfejsu użytkownika powoduje zwiększenie liczby rund w Internecie. Zwiększa to opóźnienie i złożoność po stronie interfejsu użytkownika. W idealnym przypadku odpowiedzi efektywnie agregowania po stronie serwera. Zmniejsza to opóźnienia, ponieważ wiele rodzajów danych możesz wrócić w sposób równoległy, a niektóre interfejsu użytkownika można wyświetlać dane, gdy tylko będzie gotowa.
 
-- *Jak można obsługiwać kompleksowymi problemów, takich jak autoryzacja, przekształcenia danych i wysyła żądanie dynamiczne?*
+- *Jak obsługiwać odciąż przekrojowe zagadnienia, takie jak autoryzacja, przekształcenia danych i wysyła żądanie dynamiczne?*
 
-Implementacja zabezpieczeń oraz kompleksowymi problemy, np. zabezpieczeń i uwierzytelniania w każdym mikrousługi może wymagać znaczących nakład pracy. Możliwe podejście jest tych usług w ramach Docker host lub klaster wewnętrzny ograniczyć bezpośredni dostęp do nich z zewnątrz i wdrożenie tych problemów kompleksowymi w centralnym miejscu, podobnie jak bramy usługi interfejsu API.
+Implementowanie zabezpieczeń i odciąż przekrojowe zagadnienia, takie jak zabezpieczenia i autoryzacji w mikrousługach, co może wymagać znaczących postanowiło. Możliwych podejść jest tych usług w ramach wewnątrz klastra lub hosta platformy Docker, aby ograniczyć bezpośredni dostęp do nich z zewnątrz i do implementowania tych odciąż przekrojowe zagadnienia w centralnym miejscu, takie jak bramy interfejsu API.
 
-- *Jak aplikacje klienckie mogą komunikować się z usług, które używają protokołów innych niż przyjazne Internet?*
+- *Jak aplikacje klienckie mogą komunikować się z usługami, które używają protokołów innych niż przyjazne Internet?*
 
-Protokoły używane po stronie serwera (na przykład protokołu AMQP lub protokołów binarnych) zwykle nie są obsługiwane w aplikacjach klienckich. W związku z tym żądania musi być wykonywane za pośrednictwem protokołów, takich jak HTTP/HTTPS i później translacji na innych protokołów. A *man-in--middle* może pomóc w takiej sytuacji.
+Protokoły używane po stronie serwera (na przykład protokół AMQP lub protokołów binarnych) zwykle nie są obsługiwane w aplikacjach klienckich. W związku z tym żądania musi być wykonywane za pośrednictwem protokołów, takich jak HTTP/HTTPS i przetłumaczone na inne protokoły później. A *ataków typu man-in--middle* podejście może pomóc w takiej sytuacji.
 
-- *Jak można kształtu fasad, szczególnie wprowadzone dla aplikacji mobilnych*
+- *Jak możesz kształtować fasada szczególnie wprowadzone dla aplikacji mobilnych*
 
-Interfejs API z wielu mikrousług może nie dobrze zaprojektowanej na potrzeby aplikacji innego klienta. Na przykład na potrzeby aplikacji mobilnej może różnić się od potrzeb aplikacji sieci web. Dla aplikacji mobilnych konieczne może być jeszcze bardziej zoptymalizować tak, aby dane odpowiedzi może być skuteczniejsza. Może to zrobić przez agregowanie danych z wielu mikrousług i zwracanie jednego zestawu danych, a czasami wyeliminowanie żadnych danych w odpowiedzi, które nie są wymagane przez aplikację mobilną. I oczywiście można kompresować dane. Ponownie fasad lub interfejsu API Between aplikacji mobilnej i mikrousług mogą być użyteczne dla tego scenariusza.
+Interfejs API z wielu mikrousług może nie dobrze zaprojektowany na potrzeby różnych aplikacji klienckich. Na przykład na potrzeby aplikacji mobilnej może być inny niż na potrzeby aplikacji sieci web. Dla aplikacji mobilnych konieczne może być jeszcze bardziej zoptymalizować, tak, aby dane odpowiedzi może być bardziej efektywne. Być może w tym celu agregowania danych z wielu mikrousług, zwracając jednego zestawu danych i czasami wyeliminowanie wszelkich danych w odpowiedzi, które nie są wymagane przez aplikację mobilną. I oczywiście, można kompresować dane. Ponownie fasady lub interfejsu API Between mikrousług i aplikacji mobilnej może być wygodna dla tego scenariusza.
 
-## <a name="why-consider-api-gateways-instead-of-direct-client-to-microservice-communication"></a>Dlaczego należy wziąć pod uwagę bram interfejsu API zamiast bezpośredniej komunikacji klient mikrousługi
+## <a name="why-consider-api-gateways-instead-of-direct-client-to-microservice-communication"></a>Dlaczego warto wziąć pod uwagę bramy interfejsu API, zamiast bezpośredniej komunikacji klienta z mikrousługą
 
-W architekturze mikrousług aplikacje klienckie zwykle muszą korzystać z funkcji z więcej niż jeden mikrousługi. Jeśli użycie tego jest wykonywana bezpośrednio, klient musi obsługiwać wielu wywołań do punktów końcowych mikrousługi. Co się dzieje podczas rozwoju aplikacji i wprowadzane są nowe mikrousług lub aktualizacji istniejącego mikrousług? Jeśli aplikacja ma wiele mikrousług, obsługi tak wielu punktów końcowych z aplikacji klienta może być nightmare. Ponieważ aplikacja kliencka może zostać dołączone do tych wewnętrznych punktów końcowych, rozwijającymi mikrousług w przyszłości może spowodować duże znaczenie dla aplikacji klienckich.
+W architekturze mikrousług aplikacje klienckie zwykle konieczne używanie funkcji z więcej niż jeden mikrousług. Jeśli użycie tego jest wykonywana bezpośrednio, klient musi obsługiwać wiele wywołań do punktów końcowych mikrousług. Co się dzieje podczas rozwoju aplikacji i nowych mikrousług są wprowadzane lub aktualizacji istniejącej mikrousług? Jeśli aplikacja ma wiele mikrousług, obsługi tak wielu punktów końcowych z aplikacji klienta może być okropnej. Ponieważ aplikacja kliencka może zostać dołączone do tych wewnętrznych punktów końcowych, ewoluują mikrousługi w przyszłości może spowodować duży wpływ na aplikacje klienckie.
 
-W związku z tym poziomie pośrednim lub warstwy pośredni (bramy) może być bardzo wygodny dla aplikacji opartych na mikrousługi. Jeśli nie masz bram interfejsu API aplikacji klienta musi wysyłać żądania bezpośrednio do mikrousług i który stwarza problemy, takie jak następujące problemy:
+W związku z tym poziom pośredni lub warstwy pośredni (brama) może być wygodna dla aplikacji opartych na mikrousługach. Jeśli nie masz bramy interfejsu API, aplikacje klienckie musi wysyłać żądania bezpośrednio do mikrousług i która zgłasza problemy, takie jak następujące problemy:
 
-- **Sprzężenia**: bez wzorca bramy interfejsu API aplikacji klienta są powiązane do wewnętrznego mikrousług. Aplikacje klient musi wiedzieć, jak wiele obszarów aplikacji są rozłożone w mikrousług. Gdy zmieniające się i refaktoryzacji mikrousług wewnętrznego, wpływ tych czynności konserwacji pretty nieprawidłowo ponieważ spowodują one najważniejszych zmian w aplikacjach klienta z powodu bezpośrednie odwołanie do wewnętrznego mikrousług z klienta aplikacji. Aplikacje klienta muszą zostać zaktualizowane często, co przeszkodę podlegać ewolucji rozwiązania.
+- **Sprzężenia**: bez wzorzec bramy interfejsu API, aplikacje klienckie są ściśle do wewnętrznego mikrousług. Aplikacje klienckie, trzeba wiedzieć, jak wiele obszarów aplikacji są rozłożone w mikrousługach. Gdy ewoluują i refaktoryzacji wewnętrznego mikrousług, wpływ na te akcje konserwacji wygląda niewłaściwie ponieważ powodują one przełomowe zmiany w aplikacjach klienta z powodu bezpośrednie odwołanie do wewnętrznego mikrousług z klienta aplikacji. Aplikacje klienckie muszą zostać zaktualizowane, co rozwiązanie trudniejsze ciągły rozwój.
 
-- **Zbyt wiele rund**: jednej strony/ekranu w aplikacji klienta może wymagać wielu wywołań wielu usług. Czy można doprowadzi do wielu sieci przekazywanych między klientem i serwerem, dodawanie znaczne opóźnienia. Obsługiwane w poziomie pośrednim agregacji może poprawić wydajność i środowisko użytkownika dla aplikacji klienckich.
+- **Zbyt wiele rund**: pojedynczej strony/ekranu w aplikacji klienckiej może wymagać kilka wywołań do wielu usług. Czy można wynik na liście sieci wielu rund między klientem i serwerem oraz dodawanie znaczne opóźnienie. Obsługiwane w poziom pośredni agregacji może poprawić wydajność i środowisko użytkownika dla aplikacji klienckich.
 
-- **Problemy z zabezpieczeniami**: bez bramy, muszą być widoczne wszystkie mikrousług "zewnętrzne World", co obszar narażony na ataki większych niż ukryć wewnętrzny mikrousług bezpośrednio używane przez aplikacje klienckie. Jest mniejszy obszar narażony na ataki, bezpieczniejsze może być aplikacji.
+- **Problemy z zabezpieczeniami**: bez bramy, muszą być widoczne wszystkie mikrousługi "zewnętrznych world", dzięki czemu obszar narażony na ataki większy niż ukryjesz mikrousług wewnętrzne nie są bezpośrednio używane przez aplikacje klienckie. Jest mniejszy obszar narażony na ataki, bezpieczniejsze może być aplikacji.
 
-- **Dotyczy kompleksowymi**: każdego publicznie opublikowanych mikrousługi musi obsługiwać dotyczy takich jak autoryzacja, SSL, itp. W wielu sytuacjach te problemy można obsługiwane w pojedynczej warstwie, więc wewnętrzny mikrousług są uproszczone.
+- **Odciąż przekrojowe zagadnienia**: każdego publikowanego publicznie mikrousług musi obsługiwać problemy takie jak uwierzytelnianie, protokół SSL, itp. W wielu sytuacjach te problemy można obsługiwane w pojedynczej warstwie, więc wewnętrznego mikrousługi są uproszczone.
 
 ## <a name="what-is-the-api-gateway-pattern"></a>Co to jest wzorzec bramy interfejsu API?
 
-Podczas projektowania i tworzenie dużych lub złożonych mikrousługi aplikacji z wielu klientów aplikacji może być dobrym sposobem należy wziąć pod uwagę [bramy interfejsu API](https://microservices.io/patterns/apigateway.html). Jest to usługa, która zapewnia jeden punkt wejścia dla niektórych grup mikrousług. Jest on podobny do [wzorzec fasady](https://en.wikipedia.org/wiki/Facade_pattern) od object‑oriented projektu, ale w takim przypadku tego część rozproszonego systemu.
-Wzorzec bramy interfejsu API jest również nazywany "wewnętrzna frontonu" [(BFF)](https://samnewman.io/patterns/architectural/bff/) ponieważ skompiluj go podczas planowania na potrzeby aplikacji klienckiej.
+Podczas projektowania i tworzenia aplikacji w dużej lub złożonej aplikacji opartych na mikrousługach za pomocą wielu klientów może być dobrym sposobem należy wziąć pod uwagę [bramy interfejsu API](https://microservices.io/patterns/apigateway.html). Jest to usługa, która zapewnia jeden punkt wejścia dla niektórych grup mikrousług. Jest on podobny do [wzorzec fasady](https://en.wikipedia.org/wiki/Facade_pattern) od object‑oriented projektu, ale w takim przypadku swoich części systemu rozproszonego.
+Wzorzec bramy interfejsu API jest również nazywany "wewnętrzna frontonu" [(BFF)](https://samnewman.io/patterns/architectural/bff/) a ponieważ tworzysz podczas myśleć o potrzeby aplikacji klienckiej.
 
-W związku z tym API bramy znajduje się między aplikacjami klienta i mikrousług. Działa ona jako zwrotny serwer proxy, routingu żądań od klientów do usług. Można też podać dodatkowe funkcje kompleksowymi, takich jak uwierzytelnianie, kończenia żądań SSL i pamięci podręcznej.
+W związku między aplikacjami klienta i mikrousługi znajduje się brama interfejsu API. Działa ona jako zwrotny serwer proxy kierowania żądań od klientów do usługi. Można też podać dodatkowe funkcje przekrojowe, takie jak uwierzytelnianie, kończenie żądań SSL i pamięci podręcznej.
 
-Rysunek 4-13 przedstawiono, jak brama niestandardowego interfejsu API można umieścić w uproszczenia architektury mikrousługi na podstawie z kilku mikrousług.
+Rysunek 4 — 13 przedstawiono, jak niestandardowe bramy interfejsu API można dopasować do uproszczenia architektury oparte na mikrousługach przy użyciu zaledwie kilku mikrousług.
 
-![Diagram pokazujący, że bramy usługi interfejsu API zaimplementowano ją jako niestandardowe usługi](./media/image13.png)
+![Diagram przedstawiający, że bramy interfejsu API zaimplementowane jako usługa niestandardowa](./media/image13.png)
 
-**Rysunek 4-13**. Przy użyciu bramy interfejsu API zaimplementowano ją jako niestandardowe usługi
+**Rysunek 4 — 13**. Przy użyciu bramy interfejsu API zaimplementowane jako usługa niestandardowa
 
-W tym przykładzie brama interfejsu API będzie można zaimplementować jako niestandardowe usługi hosta sieci Web platformy ASP.NET Core uruchomionej jako kontener.
+W tym przykładzie brama interfejsu API będzie można zaimplementować jako to usługa niestandardowa hostem sieci Web platformy ASP.NET Core uruchomionego jako kontener.
 
-Ważne jest, aby wyróżnić który na tym diagramie, jak można przy użyciu jednej usługi interfejsu API bramy niestandardowych skierowane w wielu i aplikacjach innego klienta. Fakt można poważne zagrożenie, ponieważ usługi bramy interfejsu API zostanie powiększania i zmieniających się na podstawie wielu różne wymagania z aplikacji klienta. Po pewnym czasie będzie przeglądarek z powodu tych różnych potrzeb i efektywnie może być bardzo podobna do wbudowanymi aplikacji lub usługi wbudowanymi. To jest znacznie zalecane jest podzielenie bramy interfejsu API w wielu usługach lub wielu mniejszych interfejsu API bram, po jednym dla każdego typu obudowie aplikacji klienta, na przykład.
+Jest ważne podkreślić że na tym diagramie, jak można przy użyciu jednej niestandardowych usługi bramy interfejsu API połączonego z wieloma i klienta w różnych aplikacjach. Czy fakt może być ważne ryzyka, ponieważ usługi bramy interfejsu API będzie stałym wzbogacaniu i zmieniających się na podstawie wielu różnych wymagań aplikacji klienckich. Po pewnym czasie będzie przeglądarek z powodu tych różnych potrzeb i skutecznie może być dość podobne do aplikacji monolitycznej lub monolityczne usługi. Właśnie dlatego znacznie zalecane jest podzielenie bramy interfejsu API w wielu usługach lub wielu mniejszych bramy interfejsu API, jeden na typ współczynnika postaci aplikacji klienckich, na przykład.
 
-Należy zachować ostrożność podczas implementowania wzorzec bramy interfejsu API. Zwykle nie jest dobrym pomysłem jest mieć pojedynczy bramy interfejsu API agregowanie wszystkich mikrousług wewnętrznych aplikacji. Jeśli tak, działa jako wbudowanymi agregator lub orchestrator i narusza Autonomia mikrousługi przez wszystkie mikrousług sprzężenia.
+Należy zachować ostrożność podczas implementowania wzorca bramy interfejsu API. Zwykle nie jest dobry pomysł, aby mieć pojedynczy interfejs API bramy agregowania wszystkie mikrousługi wewnętrznych aplikacji. Jeśli tak jest, działa jako monolityczny agregatora lub programu orchestrator i narusza Autonomia mikrousług przez wszystkie mikrousługi sprzężenia.
 
-W związku z tym bram interfejsu API powinno rozdzielony na podstawie granice firm i aplikacji klienckich i nie act jako pojedynczy agregatora dla wszystkich wewnętrzny mikrousług.
+W związku z tym bramy interfejsu API powinno rozdzielony na podstawie granic firm i aplikacje klienckie i nie act jako pojedynczy agregatora wewnętrznego mikrousług.
 
-W przypadku dzielenia warstwy interfejsu API bramy do wielu bram interfejsu API, jeśli aplikacja ma wiele aplikacji klienta, które mogą być podstawowy pivot podczas identyfikowania wiele typów bram interfejsu API, dzięki czemu mają różne fasad na potrzeby każdej aplikacji klienta. Ten przypadek to wzorzec o nazwie "Wewnętrznej bazy danych dla serwera sieci Web" ([BFF](http://samnewman.io/patterns/architectural/bff/)) w przypadku, gdy każdej bramy interfejsu API zapewniają interfejs API różnych dostosowane do każdego typu aplikacji klienta, prawdopodobnie nawet na podstawie współczynnika formularza klienta zaimplementowanie określonej karty kod który na dole wywołuje wielu mikrousług wewnętrznych, jak pokazano na poniższej ilustracji:
+W przypadku dzielenia warstwa bramy interfejsu API do wielu bram interfejsu API, jeśli aplikacja ma wiele aplikacji klienckich, które mogą być tabelę przestawną podstawowej przy identyfikowaniu wiele typów bramy interfejsu API, dzięki czemu może mieć różne fasada dla potrzeb każdej aplikacji klienta. Ten przypadek jest wzorcem o nazwie "Wewnętrznej bazy danych dla serwera sieci Web" ([BFF](http://samnewman.io/patterns/architectural/bff/)) w przypadku, gdy każda brama interfejsu API może zapewnić innego interfejsu API, dostosowane do poszczególnych typów aplikacji klienckich, potencjalnie nawet na podstawie współczynnika postaci klienta przez zaimplementowanie określonej karty kodu, który na dole wywołuje wiele mikrousług wewnętrznych, jak pokazano na poniższej ilustracji:
 
-![Diagram przedstawiający wielu bram niestandardowego interfejsu API](./media/image13.1.png)
+![Diagram przedstawiający kilka niestandardowych bramy interfejsu API](./media/image13.1.png)
 
-**Rysunek 4-13.1**. Korzystanie z wielu bram niestandardowego interfejsu API
+**Rysunek 4-13.1**. Za pomocą wielu niestandardowych bramy interfejsu API
 
-Na poprzedniej ilustracji przedstawiono uproszczenia architektury z wielu bram szczegółowych interfejsu API. W takim przypadku granice dla każdej bramy interfejsu API są oparte wyłącznie na "wewnętrznej bazy danych dla serwera sieci Web" ([BFF](http://samnewman.io/patterns/architectural/bff/)) wzorzec, dlatego oparte tylko na potrzeby każdej aplikacji klienta interfejsu API. Jednak w dużych aplikacji należy również Przejdź dalej i utworzyć dodatkowe bram interfejsu API w oparciu firm granice jako drugi pivot projektu.
+Na poprzedniej ilustracji przedstawiono uproszczona architektura o wiele szczegółowych bramy interfejsu API. W tym przypadku granice dla każdej bramy interfejsu API są oparte wyłącznie na "Wewnętrznej bazy danych dla frontonu" ([BFF](http://samnewman.io/patterns/architectural/bff/)) wzorzec, dlatego tylko na podstawie interfejsu API potrzebne dla aplikacji klienckich. Jednak w dużych aplikacji należy również użyteczność i utworzyć dodatkowe bramy interfejsu API oparte na granice firmy jako drugi pivot projektu.
 
-## <a name="main-features-in-the-api-gateway-pattern"></a>Główne funkcje we wzorcu interfejsu API bramy
+## <a name="main-features-in-the-api-gateway-pattern"></a>Główne funkcje we wzorcu bramy interfejsu API
 
-Brama usługi interfejsu API można oferują wiele funkcji. W zależności od produktu może oferować bardziej zaawansowane funkcje lub prostsze funkcje jednak najważniejsze i podstawowych funkcji wszystkie bramy interfejsu API są następujące wzorce projektowe:
+Brama interfejsu API oferują wiele funkcji. W zależności od produktu może zaoferować bardziej rozbudowane lub prostsze funkcje jednak najważniejsze i podstawowe funkcje dla żadnej bramy interfejsu API są następujące wzorce projektowe:
 
-**Wycofaj serwera proxy lub bramy routingu**. Brama interfejsu API oferuje zwrotny serwer proxy do przekierowywania lub kierować żądania (warstwy 7 routingu, zazwyczaj w żądaniach Http) do punktów końcowych mikrousług wewnętrzny. Brama zapewnia jeden punkt końcowy lub adres URL dla klienta aplikacji, a następnie wewnętrznie mapuje żądania do grupy mikrousług wewnętrznego. Rozdzielenie aplikacji klienta z mikrousług pomaga routingu, ale jest również bardzo wygodny podczas modernizacji wbudowanymi interfejsu API przez działo bramy interfejsu API Between wbudowanymi interfejsu API i aplikacje klienckie, a następnie można dodać nowych interfejsów API jako mikrousług nowy Podczas nadal przy użyciu starszej wersji interfejsu API z wbudowanymi do momentu jej jest podzielony na wiele mikrousług w przyszłości. Ze względu na bramie interfejsu API aplikacji klienta nie będzie Zwróć uwagę, jeśli interfejsy API używane są zaimplementowane jako mikrousług wewnętrzny lub wbudowanymi interfejsu API i co ważniejsze, gdy zmieniające się i refaktoryzacji wbudowanymi interfejsu API w mikrousług, Dziękujemy bramy Interfejs API routingu , nie będzie mieć wpływ na aplikacje klienckie przy każdej zmianie identyfikatora URI.
+**Odwrotnego serwera proxy lub routingu bramy**. Brama interfejsu API oferuje zwrotny serwer proxy do przekierowania lub kierować żądania (routingu warstwy 7, zwykle żądań HTTP) do punktów końcowych wewnętrznego mikrousług. Brama zapewnia jeden punkt końcowy lub adres URL dla klienta aplikacji, a następnie wewnętrznie mapuje żądania do grupy wewnętrznej mikrousług. Ta funkcja routingu pomaga oddzielić aplikacje klienckie z mikrousług, ale jest również bardzo wygodne po modernizowanie monolityczne interfejsu API przez znajdują się brama interfejsu API Between monolityczne interfejsu API i aplikacje klienckie, a następnie możesz dodać nowe interfejsy API jako nowych mikrousług czas nadal przy użyciu starszej wersji interfejsu API z monolitycznego, dopóki dzieli się na wielu mikrousług, co w przyszłości. Ze względu na bramę interfejsu API aplikacje klienckie nie będą zauważyć, jeśli interfejsy API używane są implementowane jako wewnętrzny mikrousług lub monolityczne interfejsu API i co ważniejsze, kiedy ewolucji i refaktoryzacji monolityczne interfejsu API na mikrousługi, dziękuję routingu bramy interfejsu API , nie będzie mieć wpływ na aplikacje klienckie w przypadku każdej zmiany identyfikatora URI.
 
 Aby uzyskać więcej informacji, zobacz [wzorzec routingu bramy](https://docs.microsoft.com/azure/architecture/patterns/gateway-routing).
 
-**Żąda agregacji**. W ramach wzorzec bramy może agregować wiele żądań klientów (zazwyczaj żądań Http) przeznaczonych dla wielu mikrousług wewnętrznego na pojedyncze żądanie klienta. Ten wzorzec jest zwłaszcza wtedy, gdy ekran/strony klienta wymaga informacji z kilku mikrousług. Z tej metody aplikacja kliencka wysyła pojedyncze żądanie do bramy interfejsu API, która wywołuje kilka żądań do wewnętrznego mikrousług, a następnie agreguje wyniki i wysyła wszystkie elementy z powrotem do aplikacji klienckiej. Celem tego wzorca projektowego i główne korzyści jest zmniejszenie chattiness między aplikacjami klienta i zaplecza interfejsu API, który jest szczególnie ważne dla aplikacji zdalnych poza centrum danych, gdzie mikrousług na żywo, takich jak aplikacje mobilne lub żądania pochodzące z aplikacji JEDNOSTRONICOWEJ który pochodzą z języka Javascript w przeglądarkach zdalnego klienta. Dla aplikacji web regularne wykonywanie żądania w środowisku serwera (np. aplikacji sieci web platformy ASP.NET Core MVC) ten wzorzec nie jest tak ważne, jak opóźnienie jest znacznie mniejszy niż w przypadku aplikacji klienta zdalnego.
+**Agregacja żądań**. Jako część wzorca bramy można zagregować wiele żądań klientów (zazwyczaj żądań HTTP) przeznaczone dla wielu mikrousług wewnętrznego na jedno żądanie klienta. Ten wzorzec jest zwłaszcza wtedy, gdy ekran/strony klienta wymaga informacji z wielu mikrousług. Dzięki tej metodzie aplikacja kliencka wysyła pojedynczego żądania do bramy interfejsu API, która wywołuje kilka żądań do wewnętrznego mikrousług, a następnie agreguje wyniki i wysyła wszystkie elementy z powrotem do aplikacji klienckiej. Główne korzyści i celów związanych z tym wzorcu projektowym jest ograniczenie liczby operacji między aplikacjami klienta i zaplecza interfejsu API, który jest szczególnie ważne w przypadku aplikacji zdalnych poza centrum danych, gdzie mikrousług na żywo, takie jak aplikacja mobilna lub żądania pochodzące z aplikacji SPA, pochodzą z języka Javascript w przeglądarkach zdalnego klienta. Dla zwykłych aplikacji internetowych Wykonywanie żądań w środowisku serwera (na przykład aplikacja sieci web platformy ASP.NET Core MVC) ten wzorzec nie jest tak ważne, ponieważ opóźnienie jest znacznie mniejszy niż w przypadku aplikacji klienta zdalnego.
 
-W zależności od używanego produktu do bramy interfejsu API może być możliwe do wykonania tej agregacji. Jednak w wielu przypadkach jest bardziej elastyczne, aby utworzyć mikrousług agregacji w zakresie bramy interfejsu API, zdefiniuj agregacji w kodzie (to znaczy kodu C#).
+W zależności od produktu bramy interfejsu API, których używasz może być możliwe do wykonania tej agregacji. Jednak w wielu przypadkach jest bardziej elastyczna, że można tworzyć mikrousługi agregacji w zakresie bramy interfejsu API, aby zdefiniować agregacji w kodzie (czyli kodu C#).
 
-Aby uzyskać więcej informacji, zobacz [wzorzec agregacji bramy](https://docs.microsoft.com/azure/architecture/patterns/gateway-aggregation).
+Aby uzyskać więcej informacji, zobacz [wzorzec agregacji za pomocą bramy](https://docs.microsoft.com/azure/architecture/patterns/gateway-aggregation).
 
-**Problemy kompleksowymi lub Odciążanie bramy**. W zależności od funkcji oferowanych przez każdy z produktów bramy interfejsu API można odciążenia funkcjonalności z poszczególnych mikrousług do bramy, która ułatwia implementację każdego mikrousługi dzięki konsolidacji kompleksowymi problemy w jedną warstwę. Jest to szczególnie wygodne specjalne funkcje, które mogą być skomplikowane, aby prawidłowo zaimplementować w każdym mikrousługi wewnętrzne, takie jak następujące funkcje:
+**Odciąż przekrojowe zagadnienia lub Odciążanie bramy**. W zależności od funkcji oferowanych przez każdy produkt bramy interfejsu API można odciążyć działaniu między poszczególne mikrousługi bramy, która ułatwia implementację poszczególne mikrousługi konsolidując odciąż przekrojowe zagadnienia do jednej warstwy. Jest to szczególnie wygodne specjalne funkcje, które mogą być złożone, aby prawidłowo zaimplementować w każdej mikrousługi wewnętrznych, takich jak następujące funkcje:
 
 - Uwierzytelnianie i autoryzacja
-- Usługi integracji odnajdywania
+- Integracja z usługą odnajdywania
 - Buforowanie odpowiedzi
 - Ponów próbę wykonania zasady, wyłącznika i QoS
-- Limitów szybkości i ograniczania przepustowości
+- Ograniczanie szybkości i ograniczania przepustowości
 - Równoważenie obciążenia
-- Rejestrowanie śledzenia korelacji
-- Nagłówki, ciągów zapytania i przekształcania oświadczeń
-- Listę dozwolonych podobnej IP
+- Rejestrowanie i śledzenie korelacji
+- Nagłówki, ciągów zapytań i przekształcania oświadczeń
+- Listy dozwolonych adresów IP
 
-Aby uzyskać więcej informacji, zobacz [bramy Odciążanie wzorzec](https://docs.microsoft.com/azure/architecture/patterns/gateway-offloading).
+Aby uzyskać więcej informacji, zobacz [wzorzec odciążania bramy](https://docs.microsoft.com/azure/architecture/patterns/gateway-offloading).
 
-## <a name="using-products-with-api-gateway-features"></a>Funkcje interfejsu API bramy przy użyciu produktów
+## <a name="using-products-with-api-gateway-features"></a>Za pomocą produktów dzięki funkcjom bramy interfejsu API
 
-Może istnieć wiele więcej dotyczy kompleksowymi oferowane przez produkty bram interfejsu API w zależności od każdego wdrożenia. Na przykład [Azure API Management](https://azure.microsoft.com/services/api-management/) (jak pokazano w rysunek 4-14) nie tylko rozwiązuje potrzeb bramy interfejsu API, ale zawiera funkcje, takie jak zbieranie szczegółowych informacji z swoje interfejsy API. Jeśli korzystasz z interfejsu API rozwiązania do zarządzania, bramę interfejsu API jest tylko składnik w tym pełnego rozwiązania do zarządzania interfejsu API.
+Może istnieć wiele więcej odciąż przekrojowe zagadnienia oferowane przez produkty bramy interfejsu API, w zależności od każdego wdrożenia. Na przykład [usługi Azure API Management](https://azure.microsoft.com/services/api-management/) (jak pokazano w rysunek 4 – 14) nie tylko rozwiązuje potrzeb bramy interfejsu API, ale zapewnia funkcje, takie jak zbieranie szczegółowych informacji z interfejsów API. Jeśli używasz interfejsu API rozwiązania do zarządzania, bramy interfejsu API jest tylko składnik w tym pełnego rozwiązania zarządzania interfejsu API.
 
-![Diagram przedstawiający bramy interfejsu API z interfejsu API Azure Architektura zarządzania](./media/image14.png)
+![Diagram przedstawiający bramy interfejsu API za pomocą architektury zarządzania interfejsem API usługi Azure](./media/image14.png)
 
-**Rysunek 4-14**. Za pomocą usługi Azure API Management bramy interfejsu API
+**Rysunek 4 – 14**. Za pomocą usługi Azure API Management dla swojej bramy interfejsu API
 
-W takim przypadku przy użyciu produktu, takich jak Azure API Management, fakt, że może być pojedyncza brama interfejsu API nie jest więc ryzykowne ponieważ tego rodzaju bram interfejsu API są "grubsza", co oznacza, że nie implementują niestandardowego kodu C#, który można przekształcenia wbudowanymi składnik.
+W takim przypadku korzystać z produktu, takich jak usługi Azure API Management, fakt, że może być pojedynczą bramą interfejsu API jest, więc ryzykowne ponieważ tego rodzaju bramy interfejsu API "cieńsza", co oznacza, nie Implementowanie niestandardowego kodu C#, rozwijać kierunku monolityczne składnik.
 
-Produkty bramy interfejsu API zwykle działać tak jak zwrotny serwer proxy dla komunikacji wejściowych, można gdzie także filtrować interfejsy API z wewnętrznego mikrousług oraz dotyczą autoryzacji opublikowanych interfejsów API w tej warstwie pojedynczego.
+Produkty bramy interfejsu API zazwyczaj pełnić rolę zwrotnego serwera proxy do komunikacji z transferem danych przychodzących, można gdzie też filtrować interfejsów API z wewnętrznego mikrousługi oraz dotyczą autoryzacji opublikowanych interfejsów API w tej warstwie pojedynczego.
 
-Dostępne z pomocy systemu zarządzanie interfejsami API szczegółowych danych zawierają opis sposobu używania swoje interfejsy API i jak są wykonywane. Robią to, co pozwala wyświetlać niemal analiz w czasie rzeczywistym raporty oraz identyfikowanie trendów, które mogą mieć wpływ na firmy. Ponadto można mieć dzienniki o działaniu żądania i odpowiedzi w celu dalszej analizy online i offline.
+Dostępne z usługi API Management system pomocy szczegółowe informacje zawierają opis sposobu używania interfejsów API i jak są wykonywane. Robią to, co pozwala wyświetlać niemal do użycia raportów analitycznych w czasie rzeczywistym i identyfikowania trendów, które mogą mieć wpływ na działalność. Ponadto może mieć rejestruje działanie żądania i odpowiedzi w celu dalszej analizy online i offline.
 
-Z usługą Azure API Management można zabezpieczyć swoje interfejsy API przy użyciu klucza, token i filtrowanie IP. Te funkcje umożliwiają wymuszanie przydziały elastyczne i szczegółowych i limity szybkości, zmodyfikować kształt i zachowanie swoje interfejsy API przy użyciu zasad i poprawić wydajność z buforowania odpowiedzi.
+Dzięki usłudze Azure API Management można zabezpieczyć swoje interfejsy API przy użyciu klucza, token oraz filtrowania adresów IP. Te funkcje umożliwiają wymuszanie limitów przydziałów elastycznych i szczegółowych i limity szybkości, Modyfikuj kształt i zachowanie interfejsów API przy użyciu zasad i poprawianie wydajności za pomocą buforowanie odpowiedzi.
 
-W tym przewodniku i odwołanie przykładowej aplikacji (eShopOnContainers) architektura jest ograniczona do prostszy i utworzone przez użytkownika architektura konteneryzowanych aby skupić się na zwykły kontenery bez użycia PaaS produktów, takich jak zarządzanie interfejsami API Azure. Jednak duża mikrousługi aplikacji wdrażanych w Microsoft Azure, firma Microsoft zachęca do oceny usługi Azure API Management jako podstawa dla bram sieci interfejsu API w środowisku produkcyjnym.
+W tym przewodniku i odwołanie do przykładowej aplikacji (w ramach aplikacji eShopOnContainers) architektury jest ograniczona do prostszy i poza biurem architektura konteneryzowanych celu skupiania się na kontenery zwykłego bez korzystania z produktów PaaS, takich jak usługi Azure API Management. Jednak w przypadku dużych opartych na mikrousługach aplikacji, które zostały wdrożone na platformie Microsoft Azure, firma Microsoft zachęca do oceny usługi Azure API Management jako podstawy dla bram Twojego interfejsu API w środowisku produkcyjnym.
 
-**Ocelot.** Dla metod prostszy lekkie bramy interfejsu API, takich jak Ocelot jest zalecane. [Ocelot](https://github.com/ThreeMammals/Ocelot) open source bramy oparte na .NET Core API szczególnie staje się dla architektury mikrousług, wymagającym ujednoliconego punktów wejścia w systemie. Jest lekki, szybkie i skalowalne i udostępnia routingu i uwierzytelniania między wiele innych funkcji.
+**Ocelot.** W przypadku prostszych metod uproszczonej bramy interfejsu API, takich jak Ocelot jest zalecane. [Ocelot](https://github.com/ThreeMammals/Ocelot) typu open source na podstawie platformy .NET Core bramy interfejsu API szczególnie wysłaniu architektury mikrousług, wymagających ujednoliconego punktów wejścia w ich systemie. Jest lekkie, szybkie i skalowalne i zapewnia routingu i uwierzytelniania między wiele innych funkcji.
 
-Głównym celem Dlaczego Ocelot został użyty w [eShopOnContainers odwołania aplikacji](https://github.com/dotnet-architecture/eShopOnContainers) ponieważ .NET Core lekkie interfejsu API bramy można wdrożyć na tym samym środowisku wdrażania aplikacji, którym jest wdrażany jest Ocelot mikrousług/kontenerów, takich jak Docker Host, Kubernetes, Service Fabric, itp. Ponieważ jest on oparty na .NET Core, jest wieloplatformowych, co umożliwia wdrażanie w systemie Linux lub Windows i.
+Głównym powodem, dlaczego Ocelot została użyta w [ramach aplikacji eShopOnContainers odwołania aplikacji](https://github.com/dotnet-architecture/eShopOnContainers) jest, ponieważ Ocelot platformy .NET Core uproszczone brama interfejsu API, którą można wdrożyć na tym samym środowisku wdrożenia aplikacji, którym jest wdrażany mikrousługi/kontenerów, takich jak Host platformy Docker, Kubernetes, usługi Service Fabric itp. I ponieważ jest on oparty na platformie .NET Core, Międzyplatformowe, dzięki czemu można wdrażać w systemie Linux lub Windows.
 
-Poprzednich diagramach przedstawiający niestandardowych bramy interfejsu API w kontenerach są dokładnie sposób można także uruchomić Ocelot w aplikacji opartej na mikrousługi i kontenera.
+Poprzednich diagramach, przedstawiający niestandardowe bramy interfejsu API działających w kontenerach są dokładnie, jak można również uruchomić Ocelot w kontenerze i aplikacji opartych na mikrousługach.
 
-Ponadto istnieje wiele innych produktów na rynku, oferujący funkcje interfejsu API bram, takie jak Apigee, Kong, MuleSoft, WSO2, i innych produktów, takich jak Linkerd i Istio usługi siatki funkcje kontrolera wejściowych.
+Ponadto w rynku, oferujący funkcje bramy interfejsu API, takich jak Apigee, Hongkong, MuleSoft WSO2, istnieje wiele innych produktów i innych produktów, takich jak Linkerd i Istio usługi siatki funkcje kontrolera danych przychodzących.
 
-Po początkowej architektury i wzorce wyjaśnienie sekcje, w kolejnych sekcjach wyjaśniono sposób implementacji interfejsu API bramy przy użyciu [Ocelot](https://github.com/ThreeMammals/Ocelot).
+Po początkowej architektura i wzorce wyjaśnienie sekcje, w kolejnych sekcjach wyjaśniono, jak zaimplementować bramy interfejsu API za pomocą [Ocelot](https://github.com/ThreeMammals/Ocelot).
 
-## <a name="drawbacks-of-the-api-gateway-pattern"></a>Wady wzorca bramy interfejsu API
+## <a name="drawbacks-of-the-api-gateway-pattern"></a>Wady wzorzec bramy interfejsu API
 
-- Najważniejsze wadą jest to, że podczas implementowania interfejsu API bramy w przypadku sprzężenia warstwa z wewnętrznego mikrousług. Sprzężenia w następujący sposób może powodować poważne problemy dla aplikacji. Vaster Clemens architektów w zespół usługi Azure Service Bus odwołuje się do tego potencjalne problemy jako "nowe ESB" w "[obsługi wiadomości i Mikrousług](https://www.youtube.com/watch?v=rXi5CLjIQ9k)" sesji na GOTO 2016.
+- Najważniejsze wadą jest to, że podczas implementowania bramy interfejsu API są sprzężenia tej warstwy za pomocą wewnętrznego mikrousług. Sprzężenia, np. to może powodować poważne problemy dla swojej aplikacji. Vaster Clemensa Architekt zespół usługi Azure Service Bus odwołuje się do tego potencjalnych trudności, jako "nowe ESB" w "[komunikatów i Mikrousług](https://www.youtube.com/watch?v=rXi5CLjIQ9k)" sesji Konferencji GOTO 2016.
 
-- Przy użyciu mikrousług interfejsu API bramy tworzy dodatkowe możliwości pojedynczego punktu awarii.
+- Przy użyciu mikrousług bramy interfejsu API tworzy dodatkowe możliwości pojedynczy punkt awarii.
 
-- Brama usługi interfejsu API można wprowadzać czas odpowiedzi zwiększona z powodu wywołania dodatkowe sieci. To wywołanie dodatkowe ma zazwyczaj mniej wpływ niż o kliencie interfejs, który jest zbyt chatty bezpośrednio wywołać wewnętrzny mikrousług.
+- Brama interfejsu API może wprowadzić wydłużenia czasów odpowiedzi ze względu na wywołanie dodatkowe sieci. To dodatkowe wywołanie ma zwykle mniejszym wpływem na niż posiadanie klienta interfejs, który jest zbyt duża liczba bezpośrednie wywoływanie wewnętrznego mikrousług.
 
-- Brama interfejsu API nie skalować w poziomie prawidłowo, może być wąskiego gardła.
+- Nie skalowana w poziomie prawidłowo, może stać się wąskim gardłem przez bramy interfejsu API.
 
-- Bramy usługi interfejsu API wymaga programowanie dodatkowych kosztów i konserwacji w przyszłości, jeśli zawiera on niestandardowej logiki i agregacja danych. Deweloperzy muszą aktualizuje bramy interfejsu API w celu ekspozycji punktów końcowych każdego mikrousługi. Ponadto zmiany implementacji w wewnętrznej mikrousług może spowodować zmiany kodu na poziomie interfejsu API bramy. Jednak jeśli bramy interfejsu API jest po prostu stosowania zabezpieczeń, rejestrowanie i przechowywanie wersji (w przypadku korzystania z usługi Azure API Management), ten koszt dodatkowe programowanie może nie mieć zastosowania.
+- Bramy interfejsu API wymaga dodatkowego programowania kosztów i konserwacji w przyszłości, jeśli zawiera logikę niestandardową i agregacja danych. Deweloperzy muszą aktualizuje bramy interfejsu API w celu uwidaczniają punkty końcowe poszczególne mikrousługi. Ponadto wdrożenia zmiany w wewnętrznych mikrousług może spowodować zmiany kodu na poziomie bramy interfejsu API. Jednakże jeśli brama interfejsu API po prostu są stosowane zabezpieczenia, rejestrowanie i przechowywanie wersji (tak jak w przypadku korzystania z usługi Azure API Management), ten koszt dodatkowego programowania może nie mieć zastosowania.
 
-- Jeśli brama interfejsu API opracowanego przez jeden zespół, może być wąskie gardło rozwoju. Jest to kolejny powód, dlaczego lepszym rozwiązaniem jest kilka dopasowanymi grzywną interfejsu API bram, które odpowiadają na potrzeby innego klienta. Brama interfejsu API można również segregowanie wewnętrznie do wielu obszarów i warstwy, które należą do różnych zespołów pracuje wewnętrzny mikrousług.
+- Jeśli brama interfejsu API jest opracowany przez jeden zespół, może to być "wąskie gardło" rozwoju. Jest to kolejny powód, dlaczego lepszym rozwiązaniem jest zapewnienie kilku karę szczegółowej bramy interfejsu API na potrzeby innego klienta. Brama interfejsu API można również segregowanie wewnętrznie do wielu obszarów i warstwy, które należą do różnych zespołów nad wewnętrznego mikrousług.
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Lesiak Charlesa. Wzorzec: Interfejs API bramy / wewnętrznej bazy danych dla frontonu** [*https://microservices.io/patterns/apigateway.html*](https://microservices.io/patterns/apigateway.html)
+- **Charles Leonard. Wzorzec: Brama interfejsu API / zaplecza dla frontonu** [*https://microservices.io/patterns/apigateway.html*](https://microservices.io/patterns/apigateway.html)
 
 - **Wzorzec bramy interfejsu API** [*https://docs.microsoft.com/azure/architecture/microservices/gateway*](https://docs.microsoft.com/azure/architecture/microservices/gateway)
 
 - **Wzorzec agregacji i kompozycji** [*http://microservices.io/patterns/data/api-composition.html*](http://microservices.io/patterns/data/api-composition.html)
 
-- **Zarządzanie interfejsami API Azure** [*https://azure.microsoft.com/services/api-management/*](https://azure.microsoft.com/services/api-management/)
+- **Usługa Azure API Management** [*https://azure.microsoft.com/services/api-management/*](https://azure.microsoft.com/services/api-management/)
 
 - **Udi Dahan. Kompozycja zorientowane na usługę**\
     [*http://udidahan.com/2014/07/30/service-oriented-composition-with-video/*](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
 
-- **Clemens Vasters. Wiadomości i Mikrousług na GOTO 2016** (klip wideo)   [*https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
+- **Clemensa Vastersa. Obsługa komunikatów i Mikrousług w GOTO 2016** (wideo)   [*https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
 
 >[!div class="step-by-step"]
 [Poprzednie](identify-microservice-domain-model-boundaries.md)

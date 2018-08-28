@@ -1,5 +1,5 @@
 ---
-title: User-Defined Data Type
+title: Typ danych zdefiniowany przez użytkownika (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - UserDefined
@@ -23,45 +23,45 @@ helpviewer_keywords:
 - user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
-ms.openlocfilehash: 07f04fb111863ca18d4966a7f0f967f11719aeec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1dac93145b6e11a0d149f03b43e1e0b28b770925
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590678"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003177"
 ---
 # <a name="user-defined-data-type"></a>User-Defined Data Type
-Przechowuje dane w formacie, który należy zdefiniować. `Structure` Instrukcji definiuje format.  
+Przechowuje dane w postaci, jaką zdefiniujesz. `Structure` Instrukcja definiuje format.  
   
- Poprzednie wersje programu Visual Basic obsługuje typ zdefiniowany przez użytkownika (UDT). Bieżąca wersja rozszerza UDT do *struktury*. Struktura jest złączeniem co najmniej jeden *członków* różnych typów danych. Visual Basic traktuje jako pojedynczą jednostkę, struktury, chociaż można także przejść do jego elementów członkowskich indywidualnie.  
+ Poprzednie wersje języka Visual Basic obsługuje typ zdefiniowany przez użytkownika (UDT). Bieżąca wersja rozwija UDT do *struktury*. Struktura jest łączenia jednej lub więcej *członków* różnych typów danych. Visual Basic traktuje struktury jako pojedynczą jednostkę, chociaż można także przejść do jego członków indywidualnie.  
   
 ## <a name="remarks"></a>Uwagi  
- Definiowanie i używać typu danych struktury, gdy trzeba połączyć różnych typów danych w pojedynczą jednostkę, lub żaden z typów podstawowych danych z potrzebami.  
+ Definiowanie i korzystanie z typem struktury danych, gdy trzeba połączyć różne typy danych w pojedynczą jednostkę, lub gdy żaden z typów podstawowych danych spełniały Twoje potrzeby.  
   
- Wartość domyślna typu danych struktury składa się z kombinacji wartości domyślne wszystkich jej członków.  
+ Wartość domyślna typu danych struktury składa się z kombinacji wartości domyślne wszystkich członków.  
   
 ## <a name="declaration-format"></a>Format deklaracji  
- Rozpoczyna się od deklaracji struktury [Structure — instrukcja](../../../visual-basic/language-reference/statements/structure-statement.md) i kończy `End``Structure` instrukcji. `Structure` Instrukcja zawiera nazwę struktury, która jest również identyfikator typu danych, jest zdefiniowanie struktury. Inne części kodu, można użyć tego identyfikatora do deklarowania zmiennych, parametry i funkcja zwracają wartości typu danych tej struktury.  
+ Deklaracji struktury zaczyna się od [Structure — instrukcja](../../../visual-basic/language-reference/statements/structure-statement.md) i kończy `End Structure` instrukcji. `Structure` Instrukcji dostarcza nazwę struktury, która jest również identyfikator typu danych jest zdefiniowanie struktury. Inne części kodu można użyć tego identyfikatora do deklarowania zmiennych, parametrów i funkcja zwraca wartości o typie danych tej struktury.  
   
- Deklaracje między `Structure` i `End``Structure` instrukcje zdefiniować elementów członkowskich struktury.  
+ Deklaracje między `Structure` i `End Structure` instrukcji Definiowanie elementów członkowskich struktury.  
   
 ## <a name="member-access-levels"></a>Poziomy dostępu elementu członkowskiego  
- Musisz zadeklarować każdego elementu członkowskiego przy użyciu [instrukcji Dim](../../../visual-basic/language-reference/statements/dim-statement.md) lub instrukcję, która określa poziom dostępu, takich jak [publicznego](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), lub [prywatnego](../../../visual-basic/language-reference/modifiers/private.md). Jeśli używasz `Dim` instrukcji, wartości domyślnych poziomu dostępu do publicznej.  
+ Należy zadeklarować każdego członka za pomocą [instrukcji Dim](../../../visual-basic/language-reference/statements/dim-statement.md) lub instrukcję, która określa poziom dostępu, takich jak [publicznych](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), lub [prywatne](../../../visual-basic/language-reference/modifiers/private.md). Jeśli używasz `Dim` instrukcja, wartości domyślnych poziomu dostępu na wartość publiczne.  
   
 ## <a name="programming-tips"></a>Porady dla programistów  
   
--   **Zużycie pamięci.** Podobnie jak w przypadku wszystkich złożone typy danych, nie można bezpiecznie obliczania zużycia całkowitej ilości pamięci struktury przez dodanie alokacji magazynu nominalnego jego elementów członkowskich. Ponadto nie można bezpiecznie zakładać, że kolejność magazynu w pamięci jest taka sama jak zamówienia deklaracji. Jeśli potrzebujesz do sterowania układem magazynu struktury, możesz zastosować <xref:System.Runtime.InteropServices.StructLayoutAttribute> atrybutu `Structure` instrukcji.  
+-   **Zużycie pamięci.** Podobnie jak w przypadku wszystkich złożonych typów danych, nie można bezpiecznie obliczyć łącznego zużycia pamięci przez strukturę, dodając do siebie nominalne alokacje magazynu jej składowych. Ponadto nie można bezpiecznie założyć, że kolejność magazynowania w pamięci jest taka sama jak kolejność deklaracji. Jeśli musisz kontrolować układ magazynu struktury, możesz zastosować atrybut <xref:System.Runtime.InteropServices.StructLayoutAttribute> w instrukcji `Structure`.  
   
--   **Zagadnienia dotyczące współdziałania.** Jeśli użytkownik są relacje ze składników, które nie są zapisywane dla programu .NET Framework, na przykład obiektów automatyzacji lub COM, należy pamiętać, że typy danych zdefiniowane przez użytkownika w innych środowiskach nie są zgodne z programem Visual Basic struktury typów.  
+-   **Uwagi dotyczące współdziałania.** Jeśli są komunikowanie się ze składnikami programu .NET Framework, na przykład obiektami automatyzacji lub COM, należy pamiętać, że typy danych zdefiniowane przez użytkownika w innych środowiskach nie są zgodne z języka Visual Basic strukturę typów.  
   
--   **Rozszerzanie.** Nie jest automatyczna konwersja do lub z dowolnego typu danych struktury. Operatory konwersji można zdefiniować na przy użyciu struktury [operator — instrukcja](../../../visual-basic/language-reference/statements/operator-statement.md), a każdy operatora konwersji można zadeklarować `Widening` lub `Narrowing`.  
+-   **Rozszerzanie.** Nie jest automatyczna konwersja do / z dowolnego typu danych struktury. Operatory konwersji można zdefiniować w sieci za pomocą struktury [operator — instrukcja](../../../visual-basic/language-reference/statements/operator-statement.md), i można zadeklarować każdego operatora konwersji `Widening` lub `Narrowing`.  
   
 -   **Znaki typu.** Typy danych struktury mieć znak literalny typu lub znak typu identyfikator.  
   
--   **Typ struktury.** Nie ma odpowiedniego typu w programie .NET Framework. Wszystkie struktury dziedziczyć po klasie .NET Framework <xref:System.ValueType?displayProperty=nameWithType>, ale nie poszczególnych struktura odpowiada <xref:System.ValueType?displayProperty=nameWithType>.  
+-   **Typ Framework.** W .NET Framework, nie ma żadnego odpowiedniego typu. Wszystkie struktury dziedziczą z klasy .NET Framework <xref:System.ValueType?displayProperty=nameWithType>, ale nie struktury poszczególnych odnosi się do <xref:System.ValueType?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Przykład  
- Następujące modelu zawiera konturu deklaracji struktury.  
+ Następujące paradygmat przedstawia zarys deklaracji struktury.  
   
 ```  
 [Public | Protected | Friend | Protected Friend | Private] Structure structname  
@@ -74,7 +74,7 @@ End Structure
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ValueType>  
  <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
- [Typy danych](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Typy danych](../../../visual-basic/language-reference/data-types/index.md)  
  [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
  [Structure, instrukcja](../../../visual-basic/language-reference/statements/structure-statement.md)  

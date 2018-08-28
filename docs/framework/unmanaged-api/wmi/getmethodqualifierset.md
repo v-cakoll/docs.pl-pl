@@ -1,6 +1,6 @@
 ---
 title: Funkcja GetMethodQualifierSet (niezarządzany wykaz interfejsów API)
-description: Funkcja GetMethodQualifierSet pobiera metody kwalifikatora zestawu.
+description: Funkcja GetMethodQualifierSet pobiera zestaw kwalifikator metody.
 ms.date: 11/06/2017
 api_name:
 - GetMethodQualifierSet
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b1f73e999738fbb59342aeab391132ac454c8dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a363591f5db7a2dbcba1147df35d8c023c9b0707
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459114"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43001412"
 ---
 # <a name="getmethodqualifierset-function"></a>Funkcja GetMethodQualifierSet
-Pobiera kwalifikator ustawić dla określonej metody.
+Pobiera kwalifikator ustawione dla konkretnych metod.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -42,20 +42,20 @@ HRESULT GetMethodQualifierSet (
 ## <a name="parameters"></a>Parametry
 
 `vFunc`  
-[in] Ten parametr nie jest używana.
+[in] Ten parametr jest nieużywany.
 
 `ptr`  
-[in] Wskaźnik do [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) wystąpienia.
+[in] Wskaźnik do [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienia.
 
 `wszMethod`  
-[in] Nazwa metody. `wszMethod` musi wskazywać prawidłowe `LPCWSTR`. 
+[in] Nazwa metody. `wszMethod` musi wskazywać prawidłowy `LPCWSTR`. 
 
 `ppQualSet`  
-[out] Uzyskuje wskaźnik interfejsu, który zezwala na dostęp do kwalifikatory metody. `ppQualSet` nie może być `null`. Jeśli wystąpi błąd, nowego obiektu nie są zwracane, a wskaźnik ma ustawioną wartość wskaż `null`. 
+[out] Otrzymuje wskaźnik interfejsu, który umożliwia dostęp do kwalifikatory metody. `ppQualSet` nie może być `null`. Jeśli wystąpi błąd, nowy obiekt nie jest zwracana i wskaźnik jest ustawiony na wskaż `null`. 
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.h* pliku nagłówka, lub należy je zdefiniować jako stałe w kodzie:
+Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
@@ -65,11 +65,11 @@ Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.
   
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zawijana wywołanie [IWbemClassObject::GetMethodQualifierSet](https://msdn.microsoft.com/library/aa391446(v=vs.85).aspx) metody. 
+Ta funkcja zawija wywołanie do [IWbemClassObject::GetMethodQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethodqualifierset) metody. 
 
-Wywołanie tej funkcji jest obsługiwana tylko wtedy, gdy bieżący obiekt jest definicję klasy modelu wspólnych informacji. Metoda manipulowania nie jest dostępna dla [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) ponters wskazujące wystąpienia modelu CIM.
+Wywołanie tej funkcji jest obsługiwana tylko wtedy, gdy bieżący obiekt jest definicją klasy modelu wspólnych informacji. Metoda manipulowania nie jest dostępna dla [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ponters wskazujące wystąpienia modelu CIM.
 
-Ponieważ każda metoda może mieć własną kwalifikatory [wskaźnika IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) umożliwia wywołującego dodać, edytować lub usunąć kwalifikatory.
+Ponieważ każda metoda może mieć własną kwalifikatory [wskaźnik IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) umożliwia obiekt wywołujący, dodawać, edytować lub usuwać kwalifikatory.
 
 ## <a name="requirements"></a>Wymagania  
 **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -79,4 +79,4 @@ Ponieważ każda metoda może mieć własną kwalifikatory [wskaźnika IWbemQual
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
-[Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)
+[Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

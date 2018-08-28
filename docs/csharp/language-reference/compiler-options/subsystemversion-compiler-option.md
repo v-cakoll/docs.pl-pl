@@ -3,17 +3,17 @@ title: -subsystemversion (opcje kompilatora C#)
 ms.date: 07/20/2015
 ms.assetid: a99fce81-9d92-4813-9874-bee777041445
 ms.openlocfilehash: 25391dd504fb8a2b9458fd9495477258fc23d81a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215517"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43001396"
 ---
 # <a name="-subsystemversion-c-compiler-options"></a>-subsystemversion (opcje kompilatora C#)
-Określa minimalną wersję podsystemu, na którym można uruchomić wygenerowanego pliku wykonywalnego, określając wersje systemu Windows, na którym można uruchomić pliku wykonywalnego. Najczęściej ta opcja zapewnia, że plik wykonywalny mogą korzystać z funkcji zabezpieczeń, które nie są dostępne w starszych wersjach systemu Windows.  
+Określa minimalną wersję podsystemu, na którym można uruchomić wygenerowany plik wykonywalny, określając w ten sposób wersje systemu Windows, na którym można uruchomić pliku wykonywalnego. Najczęściej ta opcja zapewnia, że plik wykonywalny mogą korzystać z funkcji zabezpieczeń, które nie są dostępne ze starszymi wersjami systemu Windows.  
   
 > [!NOTE]
->  Aby określić podsystem, użyj [-docelowy](../../../csharp/language-reference/compiler-options/target-compiler-option.md) — opcja kompilatora.  
+>  Aby określić samego podsystemu, użyj [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) — opcja kompilatora.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -23,14 +23,14 @@ Określa minimalną wersję podsystemu, na którym można uruchomić wygenerowan
   
 #### <a name="parameters"></a>Parametry  
  `major.minor`  
- Minimalna wymagana wersja podsystemu, wyrażone w kropkowego dla wersji głównej i pomocniczej. Na przykład można określić, że aplikacja nie można uruchomić w systemie operacyjnym, który jest starsze niż Windows 7 można ustawić wartości tej opcji 6.01, zgodnie z opisem w tabeli w dalszej części tego tematu. Należy określić wartości `major` i `minor` liczbami całkowitymi.  
+ Minimalna wymagana wersja podsystemu, wyrażone w notacji z kropką dla wersji głównych i pomocniczych. Na przykład można określić, że aplikacja nie może działać w system operacyjny starszy niż Windows 7 po ustawieniu wartości tej opcji na 6.01, zgodnie z opisem w tabeli w dalszej części tego tematu. Należy określić wartości dla `major` i `minor` jako liczby całkowite.  
   
- Wiodące wyzerowania `minor` wersji nie zmieniają wersji, ale czy końcowe zera. Na przykład 6.1 i 6.01 odwołują się do tej samej wersji, ale 6.10 odwołuje się do innej wersji. Firma Microsoft zaleca, przedstawiając wersja pomocnicza jako dwie cyfry, aby uniknąć pomyłek.  
+ Wiodące wyzerowania `minor` wersji nie zmieniają wersji, ale czy końcowe zera. Na przykład 6.1 i 6.01 odwołują się do tej samej wersji, ale 6.10 odwołuje się do innej wersji. Zaleca się, wyrażanie wersję pomocniczą w postaci dwóch cyfr, aby uniknąć mylenia go.  
   
 ## <a name="remarks"></a>Uwagi  
- W poniższej tabeli wymieniono typowe podsystemu wersjach systemu Windows.  
+ W poniższej tabeli wymieniono typowe wersji podsystemu Windows.  
   
-|Wersja systemu Windows|Wersję podsystemu|  
+|Wersja Windows|Wersję podsystemu|  
 |---------------------|-----------------------|  
 |Windows 2000|5.00|  
 |Windows XP|5.01|  
@@ -41,9 +41,9 @@ Określa minimalną wersję podsystemu, na którym można uruchomić wygenerowan
 |[!INCLUDE[win8](~/includes/win8-md.md)]|6.02|  
   
 ## <a name="default-values"></a>Wartości domyślne  
- Wartość domyślna **- subsystemversion** — opcja kompilatora zależy od warunków na poniższej liście:  
+ Wartość domyślna **- subsystemversion** — opcja kompilatora jest zależna od warunki na poniższej liście:  
   
--   Wartość domyślna to 6.02, jeśli ustawiono żadnych — opcja kompilatora na poniższej liście:  
+-   Wartość domyślna to 6.02, jeśli jest ustawiona na poniższej liście wszelkie — opcja kompilatora:  
   
     -   [-target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md)  
   
@@ -51,12 +51,12 @@ Określa minimalną wersję podsystemu, na którym można uruchomić wygenerowan
   
     -   [-platform: arm](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)  
   
--   Wartość domyślna to 6,00, jeśli używasz programu MSBuild, docelowych [!INCLUDE[net_v45](~/includes/net-v45-md.md)], i nie zostały jeszcze skonfigurowane opcje kompilatora, które zostały określone we wcześniejszej części tej listy.  
+-   Wartość domyślna to 6.00, jeśli używasz programu MSBuild, gdy elementem docelowym [!INCLUDE[net_v45](~/includes/net-v45-md.md)], i nie został ustawiony opcji kompilatora, które zostały określone we wcześniejszej części tej listy.  
   
--   Wartość domyślna to 4.00, jeśli żaden z powyższych warunków nie jest spełniony.  
+-   Wartość domyślna to 4.00, jeśli żaden z poprzednich warunków jest spełniony.  
   
 ## <a name="setting-this-option"></a>Ustawienie tej opcji  
- Aby ustawić **- subsystemversion** — opcja kompilatora w programie Visual Studio, należy otworzyć pliku .csproj i określić wartość dla `SubsystemVersion` właściwości w kodzie XML programu MSBuild. Nie można ustawić tej opcji w programie Visual Studio IDE. Aby uzyskać więcej informacji, zobacz "Wartości domyślnej" we wcześniejszej części tego tematu lub [wspólne właściwości projektów MSBuild](/visualstudio/msbuild/common-msbuild-project-properties).  
+ Aby ustawić **- subsystemversion** — opcja kompilatora w programie Visual Studio, możesz Otwórz plik .csproj i określić wartość dla `SubsystemVersion` właściwość MSBuild XML. Nie można ustawić tę opcję w środowisku IDE programu Visual Studio. Aby uzyskać więcej informacji, zobacz "Wartości domyślnej" wcześniej w tym temacie lub [wspólne właściwości projektów MSBuild](/visualstudio/msbuild/common-msbuild-project-properties).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)

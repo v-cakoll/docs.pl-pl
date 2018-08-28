@@ -12,45 +12,45 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], data changes in database
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
-ms.openlocfilehash: 617bb62f9009c507658b5d1262657cb4dfa860e9
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: afc8474cd12042b0c60c9afb4d1af79d8b260f63
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827114"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000966"
 ---
 # <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Porady: modyfikowanie danych w bazie danych za pomocą LINQ (Visual Basic)
-Zintegrowane języka zapytań zapytania (LINQ) ułatwiają dostęp do bazy danych i modyfikować wartości w bazie danych.  
+Language-Integrated Query (LINQ) zapytania ułatwiają dostęp do bazy danych informacji i zmodyfikuj wartości w bazie danych.  
   
- Poniższy przykład przedstawia sposób tworzenia nowej aplikacji, które są pobierane i informacji o aktualizacjach w bazie danych programu SQL Server.  
+ Poniższy przykład pokazuje, jak utworzyć nową aplikację, która pobiera i informacji o aktualizacjach w bazie danych programu SQL Server.  
   
- W przykładach w tym temacie użyto przykładowej bazy danych Northwind. Jeśli nie ma tej bazy danych na komputerze deweloperskim, można go pobrać z Microsoft Download Center. Aby uzyskać instrukcje, zobacz [pobieranie przykładowe bazy danych](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ W przykładach w tym temacie użyto przykładowej bazy danych Northwind. Jeśli nie masz tej bazy danych na komputerze deweloperskim, możesz ją pobrać z Microsoft Download Center. Aby uzyskać instrukcje, zobacz [Downloading Sample Databases](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 ### <a name="to-create-a-connection-to-a-database"></a>Aby utworzyć połączenie z bazą danych  
   
-1.  W programie Visual Studio Otwórz **Eksploratora serwera**/**Eksploratora bazy danych** klikając **widoku** menu, a następnie wybierz **wEksploratorzeserwera** / **Bazy danych Explorer**.  
+1.  W programie Visual Studio, otwórz **Eksploratora serwera**/**Eksplorator bazy danych** , klikając **widoku** menu, a następnie wybierz pozycję **Eksploratora serwera** / **Database Explorer**.  
   
-2.  Kliknij prawym przyciskiem myszy **połączenia danych** w **Eksploratora serwera**/**Eksploratora bazy danych**i kliknij przycisk **Dodawanie połączenia**.  
+2.  Kliknij prawym przyciskiem myszy **połączeń danych** w **Eksploratora serwera**/**Eksplorator bazy danych**i kliknij przycisk **Dodaj połączenie**.  
   
 3.  Określ prawidłowe połączenie z przykładową bazą danych Northwind.  
   
-### <a name="to-add-a-project-with-a-linq-to-sql-file"></a>Aby dodać projekt za pomocą LINQ do SQL pliku  
+### <a name="to-add-a-project-with-a-linq-to-sql-file"></a>Aby dodać projekt za pomocą LINQ do pliku SQL  
   
-1.  W programie Visual Studio na **pliku** menu wskaż **nowy** , a następnie kliknij przycisk **projektu**. Wybierz pozycję Visual Basic **aplikacji Windows Forms** jako typ projektu.  
+1.  W programie Visual Studio na **pliku** menu wskaż **New** a następnie kliknij przycisk **projektu**. Wybierz pozycję Visual Basic **aplikacja interfejsu Windows Forms** jako typ projektu.  
   
 2.  Na **projektu** menu, kliknij przycisk **Dodaj nowy element**. Wybierz **klasy LINQ do SQL** szablon elementu.  
   
-3.  Nadaj nazwę plikowi `northwind.dbml`. Kliknij przycisk **Dodaj**. Projektant obiektów relacyjnych (Projektanta obiektów relacyjnych) jest otwarty dla `northwind.dbml` pliku.  
+3.  Nadaj plikowi nazwę `northwind.dbml`. Kliknij przycisk **Dodaj**. Object Relational Designer (O/R Designer) jest otwarty w celu `northwind.dbml` pliku.  
   
-### <a name="to-add-tables-to-query-and-modify-to-the-designer"></a>Aby dodać tabele, aby zapytania i modyfikować do projektanta  
+### <a name="to-add-tables-to-query-and-modify-to-the-designer"></a>Aby dodać tabele do zapytania i modyfikację do projektanta  
   
-1.  W **Eksploratora serwera**/**Eksploratora bazy danych**, rozwiń węzeł połączenia z bazą danych Northwind. Rozwiń węzeł **tabel** folderu.  
+1.  W **Eksploratora serwera**/**Eksplorator bazy danych**, rozwiń węzeł połączenia z bazą danych Northwind. Rozwiń **tabel** folderu.  
   
-     Po zamknięciu Projektanta obiektów relacyjnych, możesz uruchomić go przez dwukrotne kliknięcie `northwind.dbml` pliku dodanego wcześniej.  
+     Jeśli zamknięto O/R Designer, należy go ponownie otworzyć przez dwukrotne kliknięcie `northwind.dbml` pliku, który dodano wcześniej.  
   
-2.  Tabeli Klienci kliknij i przeciągnij go do lewego okienka projektanta.  
+2.  Kliknij tabelę klientów i przeciągnij go do okienka po lewej stronie projektanta.  
   
-     Projektant tworzy nowy obiekt klienta dla projektu.  
+     Projektant tworzy nowy obiekt klienta dla Twojego projektu.  
   
 3.  Zapisz zmiany i zamknij projektanta.  
   
@@ -58,13 +58,13 @@ Zintegrowane języka zapytań zapytania (LINQ) ułatwiają dostęp do bazy danyc
   
 ### <a name="to-add-code-to-modify-the-database-and-display-the-results"></a>Aby dodać kod do modyfikowania bazy danych i wyświetlić wyniki  
   
-1.  Z **przybornika**, przeciągnij <xref:System.Windows.Forms.DataGridView> formant na domyślnego formularza systemu Windows dla projektu, Form1.  
+1.  Z **przybornika**, przeciągnij <xref:System.Windows.Forms.DataGridView> formant na domyślnego formularza Windows do projektu formularz Form1.  
   
-2.  Po dodaniu tabel do Projektanta obiektów relacyjnych projektanta dodane <xref:System.Data.Linq.DataContext> obiektu do projektu. Ten obiekt zawiera kod, który można uzyskać dostępu do tabeli klientów. Zawiera kod, który definiuje obiekt klienta i kolekcję klientów dla tabeli. <xref:System.Data.Linq.DataContext> Obiektu dla nosi nazwę projektu na podstawie nazwy pliku .dbml. Dla tego projektu <xref:System.Data.Linq.DataContext> nosi nazwę obiektu `northwindDataContext`.  
+2.  Po dodaniu tabel do Projektanta obiektów relacyjnych projektanta dodano <xref:System.Data.Linq.DataContext> obiektu do projektu. Ten obiekt zawiera kod, który umożliwia dostęp do tabeli Customers. Zawiera kod, który definiuje lokalnego obiektu klienta i kolekcji klientów dla tabeli. <xref:System.Data.Linq.DataContext> Obiektu dla Twojego projektu jest nazwany na podstawie nazwy pliku dbml. Dla tego projektu <xref:System.Data.Linq.DataContext> nosi nazwę obiektu `northwindDataContext`.  
   
-     Można utworzyć wystąpienia <xref:System.Data.Linq.DataContext> obiektu w kodzie i zapytania i modyfikować kolekcji klientów określony przez Projektanta obiektów relacyjnych. Zmiany wprowadzone do kolekcji klientów nie są uwzględniane w bazie danych do czasu przesłania przez wywołanie metody <xref:System.Data.Linq.DataContext.SubmitChanges%2A> metody <xref:System.Data.Linq.DataContext> obiektu.  
+     Można utworzyć wystąpienia <xref:System.Data.Linq.DataContext> obiektu w kodzie i zapytań i modyfikowania kolekcji klientów określone przez projektanta O/R. Zmiany wprowadzone do kolekcji klientów nie są odzwierciedlane w bazie danych, dopóki przesyłanie ich przez wywołanie metody <xref:System.Data.Linq.DataContext.SubmitChanges%2A> metody <xref:System.Data.Linq.DataContext> obiektu.  
   
-     Kliknij dwukrotnie formularza systemu Windows, Formularz1, aby dodać kod, aby <xref:System.Windows.Forms.Form.Load> zdarzenia kwerendę klientów tabelę, która jest ujawniona jako właściwość z <xref:System.Data.Linq.DataContext>. Dodaj następujący kod:  
+     Kliknij dwukrotnie pozycję Windows formularzu Form1, aby dodać kod, aby <xref:System.Windows.Forms.Form.Load> zdarzeń do wykonywania zapytań w tabeli Klienci, który jest udostępniany jako właściwość swoje <xref:System.Data.Linq.DataContext>. Dodaj następujący kod:  
   
     ```vb  
     Private db As northwindDataContext  
@@ -86,9 +86,9 @@ Zintegrowane języka zapytań zapytania (LINQ) ułatwiają dostęp do bazy danyc
     End Sub  
     ```  
   
-3.  Z **przybornika**, przeciągnij trzy <xref:System.Windows.Forms.Button> formantów do formularza. Wybierz pierwsze `Button` formantu. W **właściwości** ustaw `Name` z `Button` formant `AddButton` i `Text` do `Add`. Wybierz przycisk drugi i ustaw `Name` właściwości `UpdateButton` i `Text` właściwości `Update`. Wybierz przycisk trzeci i ustaw `Name` właściwości `DeleteButton` i `Text` właściwości `Delete`.  
+3.  Z **przybornika**, przeciągnij trzy <xref:System.Windows.Forms.Button> formanty do formularza. Zaznacz pierwszą pozycję `Button` kontroli. W **właściwości** oknie `Name` z `Button` kontrolę `AddButton` i `Text` do `Add`. Wybierz drugi przycisk i ustaw `Name` właściwości `UpdateButton` i `Text` właściwość `Update`. Wybierz trzeci przycisk i ustaw `Name` właściwości `DeleteButton` i `Text` właściwość `Delete`.  
   
-4.  Kliknij dwukrotnie **Dodaj** przycisk, aby dodać kod, aby jego `Click` zdarzeń. Dodaj następujący kod:  
+4.  Kliknij dwukrotnie **Dodaj** przycisk, aby dodać kod do jego `Click` zdarzeń. Dodaj następujący kod:  
   
     ```vb  
     Private Sub AddButton_Click(ByVal sender As System.Object,   
@@ -113,7 +113,7 @@ Zintegrowane języka zapytań zapytania (LINQ) ułatwiają dostęp do bazy danyc
     End Sub  
     ```  
   
-5.  Kliknij dwukrotnie **aktualizacji** przycisk, aby dodać kod, aby jego `Click` zdarzeń. Dodaj następujący kod:  
+5.  Kliknij dwukrotnie **aktualizacji** przycisk, aby dodać kod do jego `Click` zdarzeń. Dodaj następujący kod:  
   
     ```vb  
     Private Sub UpdateButton_Click(ByVal sender As System.Object, _  
@@ -134,7 +134,7 @@ Zintegrowane języka zapytań zapytania (LINQ) ułatwiają dostęp do bazy danyc
     End Sub  
     ```  
   
-6.  Kliknij dwukrotnie **usunąć** przycisk, aby dodać kod, aby jego `Click` zdarzeń. Dodaj następujący kod:  
+6.  Kliknij dwukrotnie **Usuń** przycisk, aby dodać kod do jego `Click` zdarzeń. Dodaj następujący kod:  
   
     ```vb  
     Private Sub DeleteButton_Click(ByVal sender As System.Object, _  
@@ -155,11 +155,11 @@ Zintegrowane języka zapytań zapytania (LINQ) ułatwiają dostęp do bazy danyc
     End Sub  
     ```  
   
-7.  Naciśnij klawisz F5, aby uruchomić projekt. Kliknij przycisk **Dodaj** do dodawania nowego rekordu. Kliknij przycisk **aktualizacji** można zmodyfikować w nowym rekordzie. Kliknij przycisk **usunąć** do usunięcia w nowym rekordzie.  
+7.  Naciśnij klawisz F5, aby uruchomić projekt. Kliknij przycisk **Dodaj** do dodawania nowego rekordu. Kliknij przycisk **aktualizacji** do modyfikowania nowego rekordu. Kliknij przycisk **Usuń** można usunąć nowy rekord.  
   
 ## <a name="see-also"></a>Zobacz też  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Zapytania](../../../../visual-basic/language-reference/queries/queries.md)  
+ [Zapytania](../../../../visual-basic/language-reference/queries/index.md)  
  [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [Metody DataContext (Projektanta obiektów relacyjnych)](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
- [Porady: przypisywanie procedur składowanych do wykonywania aktualizacji, wstawienia i usunięcia (Projektanta obiektów relacyjnych)](http://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)
+ [Metody DataContext (O/R Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
+ [Instrukcje: przypisywanie procedur składowanych na potrzeby wykonywania aktualizacji, wstawiania i usuwania (O/R Designer)](http://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)

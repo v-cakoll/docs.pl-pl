@@ -1,6 +1,6 @@
 ---
 title: Funkcja GetMethodOrigin (niezarządzany wykaz interfejsów API)
-description: Funkcja GetMethodOrigin Określa klasę, w którym zadeklarowany jest metoda.
+description: Funkcja GetMethodOrigin Określa klasę, w którym zadeklarowany jest metodą.
 ms.date: 11/06/2017
 api_name:
 - GetMethodOrigin
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35e56494d0082db970afce21da8e63a597f0a535
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d1cc754fcf7d1defa815bb0a74b7c2b4a6909478
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458153"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999396"
 ---
 # <a name="getmethodorigin-function"></a>Funkcja GetMethodOrigin
-Określa klasę, w którym zadeklarowany jest metoda.
+Określa klasę, w którym zadeklarowany jest metodą.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -42,34 +42,34 @@ HRESULT GetMethodOrigin (
 ## <a name="parameters"></a>Parametry
 
 `vFunc`  
-[in] Ten parametr nie jest używana.
+[in] Ten parametr jest nieużywany.
 
 `ptr`  
-[in] Wskaźnik do [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) wystąpienia.
+[in] Wskaźnik do [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienia.
 
 `wszMethodName`  
-[in] Nazwa metody dla obiektu, w których klasa będąca właścicielem jest wymagany. 
+[in] Nazwa metody dla obiektu, którego klasa będąca właścicielem jest wymagana. 
 
 `pstrClassName`  
 [out] Uzyskuje nazwę klasy, która jest właścicielem metody.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.h* pliku nagłówka, lub należy je zdefiniować jako stałe w kodzie:
+Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Nie można odnaleźć określonej metody. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Jeden lub więcej parametrów nie są prawidłowe. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Jeden lub więcej parametrów są nieprawidłowe. |
 |`WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
   
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zawijana wywołanie [IWbemClassObject::GetMethodOrigin](https://msdn.microsoft.com/library/aa391443(v=vs.85).aspx) metody.
+Ta funkcja zawija wywołanie do [IWbemClassObject::GetMethodOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod) metody.
 
-Ponieważ klasy mogą dziedziczyć metody co najmniej jednej klasy podstawowej, deweloperzy często chcą określić klasę, w którym jest zdefiniowany danej metody.
+Ponieważ klasa może dziedziczyć metody z jednego lub więcej klas bazowych, deweloperzy często chcą określić klasę, w którym zdefiniowano danej metody.
 
-`pstrClassName` Parametru nie musi wskazywać na prawidłową `BSTR` przed wywołaniem funkcji, ponieważ jest to `out` parametru; ten wskaźnik nie cofnięciu przydziału po funkcja zwraca wartość.
+`pstrClassName` Parametru nie musi wskazywać na prawidłową `BSTR` przed wywołaniem funkcji, ponieważ jest to `out` parametru; ten wskaźnik nie cofnięto przydziału po powrocie z tej funkcji.
 
 ## <a name="requirements"></a>Wymagania  
 **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -79,4 +79,4 @@ Ponieważ klasy mogą dziedziczyć metody co najmniej jednej klasy podstawowej, 
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
-[Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)
+[Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

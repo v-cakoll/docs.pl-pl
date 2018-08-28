@@ -1,6 +1,6 @@
 ---
 title: Funkcja BeginMethodEnumeration (niezarządzany wykaz interfejsów API)
-description: Funkcja BeginMethodEnumeration rozpoczyna wyliczenie metody obiektu
+description: Funkcja BeginMethodEnumeration, rozpoczyna się wyliczenie metod obiektu
 ms.date: 11/06/2017
 api_name:
 - BeginMethodEnumeration
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d87627b8bb3414860d994273396dbb4e64acdea7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e69625184aca7d1ebd4bb0b7dc7c4958596b906a
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459879"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000346"
 ---
 # <a name="beginenumeration-function"></a>Funkcja Beingenumeration
-Rozpoczyna się wyliczenia metod dla obiekt.  
+Rozpoczyna się wyliczenie metody dostępne dla obiektu.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -41,33 +41,33 @@ HRESULT BeginMethodEnumeration (
 ## <a name="parameters"></a>Parametry
 
 `vFunc`  
-[in] Ten parametr nie jest używana.
+[in] Ten parametr jest nieużywany.
 
 `ptr`  
-[in] Wskaźnik do [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) wystąpienia.
+[in] Wskaźnik do [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienia.
 
 `lEnumFlags`  
-[in] Wartość zero (0) dla wszystkich metod lub flaga, która określa zakres wyliczenia. Następujące flagi są zdefiniowane w *WbemCli.h* pliku nagłówka, lub należy je zdefiniować jako stałe w kodzie:
+[in] Zero (0) dla wszystkich metod lub flagę, która określa zakres wyliczenia. Następujące flagi są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
 
 Stała  |Wartość  |Opis  |
 |---------|---------|---------|
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Ogranicz wyliczenia metod, które są zdefiniowane w samej klasy. |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Ogranicz wyliczenia właściwości, które są dziedziczone z klas podstawowych. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Ograniczenie wyliczenia do metod, które są zdefiniowane w samej klasy. |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Ograniczenie wyliczenia właściwości, które są dziedziczone z klasy bazowej. |
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.h* pliku nagłówka, lub należy je zdefiniować jako stałe w kodzie:
+Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lEnnumFlags` jest różna od zera i nie jest jednym z określonych flag. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lEnnumFlags` jest różna od zera i nie jest jedną z określonych flag. |
 |`WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
   
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zawijana wywołanie [IWbemClassObject::BeginMethodEnumeration](https://msdn.microsoft.com/library/aa391435(v=vs.85).aspx) metody.
+Ta funkcja zawija wywołanie do [IWbemClassObject::BeginMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-beginmethodenumeration) metody.
 
-Wywołanie tej metody jest obsługiwana tylko, jeśli bieżący obiekt jest definicją klasy. Metoda manipulowania nie jest dostępna z [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) wskaźników, które wskazują wystąpień. Kolejność, w którym są wyliczane metody gwarantuje to niezmiennej dla danego wystąpienia [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx).
+Wywołanie tej metody jest obsługiwana tylko w przypadku, jeśli bieżący obiekt jest definicją klasy. Metoda manipulowania nie jest dostępna z [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wskaźniki prowadzące do wystąpienia. Kolejność, w którym są wyliczane metody może być inwariantny dla danego wystąpienia programu [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject).
 
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -77,4 +77,4 @@ Wywołanie tej metody jest obsługiwana tylko, jeśli bieżący obiekt jest defi
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
-[Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)
+[Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

@@ -2,24 +2,24 @@
 title: Hierarchiczny model konfiguracji
 ms.date: 03/30/2017
 ms.assetid: 28dcc698-226c-4b77-9e51-8bf45a36216c
-ms.openlocfilehash: 233a8d4ba36835ab26e0c4a8cd044cf60d497a0b
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: ce0bc69424495594e0ee9c6b950a5fa9c4d5f993
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806633"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000104"
 ---
 # <a name="hierarchical-configuration-model"></a>Hierarchiczny model konfiguracji
-W tym przykładzie pokazano, jak wdrożyć hierarchia pliki konfiguracji dla usług. Pokazuje też, jak powiązania zachowania usługi i zachowania punktu końcowego są dziedziczone z wyższego poziomu w hierarchii.  
+Ten przykład demonstruje sposób implementacji hierarchii plików konfiguracji usługi. Pokazuje również, jak powiązania, zachowań usługi i zachowań punktu końcowego są dziedziczone z poziomu w hierarchii.  
   
-## <a name="sample-details"></a>Szczegóły próbki  
- Jedną z funkcji opracowanych dla usług WCF w [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] ulepszenia w hierarchiczny model konfiguracji. Przykładem modelu hierarchiczna konfiguracji może być zdefiniowana w pliku Machine.config -> Rootweb.config -> pliku Web.config. W [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], tych powiązań i zachowania, które są zdefiniowane w górnym poziomów w hierarchii konfiguracji są dodawane do usługi z jawnym konfiguracji. W tym przykładzie pokazano, jak możliwe jest uproszczenie konfiguracji usługi przez jednostki uzależnionej w elementach konfiguracji zdefiniowanych w komputerze lub na poziomie aplikacji.  
+## <a name="sample-details"></a>Przykład szczegółów  
+ Jedna z funkcji opracowanych dla usług WCF w [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] jest poprawę hierarchiczny model konfiguracji. Przykładem hierarchiczny model konfiguracji jest zdefiniowana w pliku Machine.config -> Rootweb.config -> pliku Web.config. W [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], te powiązania i zachowań, które są zdefiniowane w wyższe poziomy w hierarchii konfiguracji, które są dodawane do usługi bez jawnej konfiguracji. Ten przykład pokazuje, jak można uproszczenie konfiguracji usługi, opierając się na elementy konfiguracji, zdefiniowanych na komputerze lub na poziomie aplikacji.  
   
- W tym przykładzie składa się z dziewięciu usług, określonych w trzech poziomach hierarchii. `Service1` znajduje się w folderze głównym. `Service2` i `Service3` dziedziczą domyślne elementy z `Service1`. `Service4`, `Service5`, `Service6` i `Service7` są definiowane na trzeci poziom hierarchii dziedziczenia domyślne elementy z `Service3`. Na koniec `Service10` i `Service11` są czwartego poziomu hierarchii.  
+ W tym przykładzie składa się z dziewięciu usługi, zdefiniowane w trzech poziomów hierarchii. `Service1` jest w katalogu głównym. `Service2` i `Service3` dziedziczą domyślne elementy z `Service1`. `Service4`, `Service5`, `Service6` i `Service7` są definiowane na trzeci poziom w hierarchii dziedziczenia domyślne elementy z `Service3`. Na koniec `Service10` i `Service11` znajdują się na czwartego poziomu w hierarchii.  
   
- Wszystkie usługi wdrożenia `IDesc` kontraktu. Poniżej znajduje się definicja `IDesc` interfejs, który zawiera metody ujawnione w tym interfejsie. `IDesc` Interfejsu jest zdefiniowany w Service1.cs.  
+ Wszystkie usługi implementują `IDesc` kontraktu. Poniżej przedstawiono definicję `IDesc` interfejs, który zawiera metody, dostępne w tym interfejsie. `IDesc` Interfejsu jest zdefiniowany w plikach Service1.cs.  
   
-```  
+```csharp  
 // Define a service contract  
 [ServiceContract(Namespace="http://Microsoft.Samples.ConfigHierarchicalModel")]  
 public interface IDesc  
@@ -33,45 +33,45 @@ public interface IDesc
 }  
 ```  
   
- Implementacja metody te przez usługi jest prosta. `ListEndpoints` wykonuje iterację wszystkie punkty końcowe usługi i zwraca listę wszystkich punktów końcowych, które usługa ma. `ListServiceBehaviors` wykonuje iterację wszystkie zachowania dodane do usługi i zwraca listę wszystkich zachowań usługi związane z usługą. `ListEndpointBehaviors` działa w podobny sposób jak `ListServiceBehaviors`, ale zamiast tego zwraca listę zachowania punktu końcowego.  
+ Implementacja metody te przez usługi jest bardzo proste. `ListEndpoints` wykonuje iterację przez wszystkie punkty końcowe usługi i zwraca listę wszystkich punktów końcowych, które usługa ma. `ListServiceBehaviors` wykonuje iterację przez wszystkie zachowania, które są dodawane do usługi i zwraca listę wszystkich zachowań usługi związane z usługą. `ListEndpointBehaviors` zachowuje się w podobny sposób jak `ListServiceBehaviors`, ale zamiast tego zwraca listę zachowań punktu końcowego.  
   
- Ta implementacja umożliwia jest ujawniany przez klienta, aby wiedzieć, jak wiele punktów końcowych usługi i które zachowania usługi i zachowania punktu końcowego zostały dodane do usługi. Klient, który został zaimplementowany jako część próbki dodaje odwołania do usługi do wszystkich usług w rozwiązaniu i zawiera te elementy dla każdego z nich usługi.  
+ Ta implementacja umożliwia, jest ujawniany przez klienta, aby wiedzieć, ile punktów końcowych usługi i które zachowania usług i zachowań punktu końcowego zostały dodane do usługi. Klient, który został zaimplementowany jako części przykładu dodaje odwołanie usługi do wszystkich usług w rozwiązaniu i pokazuje te elementy, dla każdej z nich usługi.  
   
 ## <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
   
-#### <a name="to-run-the-client"></a>Uruchom klienta  
+#### <a name="to-run-the-client"></a>Aby uruchomić klienta  
   
-1.  Przy użyciu [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], otwórz plik ConfigHierarchicalModel.sln.  
+1.  Za pomocą [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], otwórz plik ConfigHierarchicalModel.sln.  
   
-2.  Projekt klienta nie już ustawiono jako projekt rozruchu, wykonaj następujące kroki.  
+2.  Projekt klienta nie już skonfigurowano jako projekt startowy, wykonaj następujące kroki.  
   
     1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy rozwiązanie, a następnie wybierz **właściwości**.  
   
-    2.  W **wspólne właściwości**, wybierz pozycję **projekt startowy**, a następnie kliknij przycisk **jednego projektu startowego**.  
+    2.  W **wspólne właściwości**, wybierz opcję **projekt startowy**, a następnie kliknij przycisk **pojedynczy projekt startowy**.  
   
-    3.  Z **jednego projektu startowego** listy rozwijanej, wybierz pozycję **klienta**.  
+    3.  Z **pojedynczy projekt startowy** listę rozwijaną, wybierz opcję **klienta**.  
   
     4.  Kliknij przycisk **OK** aby zamknąć okno dialogowe.  
   
-3.  Aby samodzielnie tworzyć przykładowy, naciśnij kombinację klawiszy CTRL + SHIFT + B.  
+3.  Aby stworzyć próbkę, naciśnij klawisze CTRL + SHIFT + B.  
   
 4.  Aby uruchomić klienta, naciśnij kombinację klawiszy Ctrl + F5.  
   
 > [!NOTE]
->  Jeśli te kroki nie działają, następnie upewnij się, że środowiska nie został prawidłowo skonfigurowany, wykonując następujące kroki.  
+>  Jeśli te kroki nie działa, upewnij się, czy środowiska prawidłowo skonfigurowano, wykonując następujące czynności:  
 >   
->  1.  Upewnij się, że wykonano procedurę [jednorazowego procedurę instalacji dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
-> 2.  Postępuj zgodnie z instrukcjami w celu skompilowania rozwiązania, [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
-> 3.  Aby uruchomić przykład w jednym lub wielu konfiguracji komputera, postępuj zgodnie z instrukcjami [uruchamiania przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+> 1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
+> 2.  Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](building-the-samples.md).  
+> 3.  Do uruchomienia przykładu w jednej lub wielu konfiguracji komputera, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](running-the-samples.md).  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigHierarchicalModel`  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przykłady zarządzania AppFabric](http://go.microsoft.com/fwlink/?LinkId=193960)
+ [Przykładami dotyczącymi zarządzania AppFabric](http://go.microsoft.com/fwlink/?LinkId=193960)

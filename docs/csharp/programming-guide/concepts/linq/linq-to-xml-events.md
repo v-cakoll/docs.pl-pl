@@ -1,40 +1,40 @@
 ---
-title: LINQ do XML zdarzeń (C#)
+title: Zdarzenia LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: ce7de951-cba7-4870-9962-733eb01cd680
 ms.openlocfilehash: 3dd4eaa0261ae7d878e188572d260b34b64fc031
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322396"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999944"
 ---
-# <a name="linq-to-xml-events-c"></a>LINQ do XML zdarzeń (C#)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zdarzenia umożliwiają powiadomienia, gdy zostanie zmieniona drzewo XML.  
+# <a name="linq-to-xml-events-c"></a>Zdarzenia LINQ to XML (C#)
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zdarzenia umożliwiają otrzymasz powiadomienie, gdy zostanie zmieniona drzewa XML.  
   
- Zdarzenia można dodawać do wystąpienia dowolnego <xref:System.Xml.Linq.XObject>. Program obsługi zdarzeń Zadzwonimy zdarzenia dla zmian w tym <xref:System.Xml.Linq.XObject> i wszystkie jego elementy podrzędne. Można na przykład, Dodaj program obsługi zdarzeń do katalogu głównego drzewa i obsługiwać wszystkie modyfikacje w drzewie z tej obsługi zdarzeń.  
+ Można dodać zdarzenia do dowolnego wystąpienia <xref:System.Xml.Linq.XObject>. Zadzwonimy zdarzenia dla zmian do tego programu obsługi zdarzeń <xref:System.Xml.Linq.XObject> i wszystkich jego obiektów podrzędnych. Na przykład możesz dodać program obsługi zdarzeń do katalogu głównego drzewa i obsługiwać wszystkie modyfikacje w drzewie z tej obsługi zdarzeń.  
   
  Przykłady [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zdarzenia, zobacz <xref:System.Xml.Linq.XObject.Changing> i <xref:System.Xml.Linq.XObject.Changed>.  
   
 ## <a name="types-and-events"></a>Typy i zdarzenia  
- Podczas pracy ze zdarzeniami, można użyć następujących typów:  
+ Podczas pracy ze zdarzeniami należy użyć następujących typów:  
   
 |Typ|Opis|  
 |----------|-----------------|  
 |<xref:System.Xml.Linq.XObjectChange>|Określa typ zdarzenia, gdy zdarzenie jest wywoływane dla <xref:System.Xml.Linq.XObject>.|  
 |<xref:System.Xml.Linq.XObjectChangeEventArgs>|Udostępnia dane dla <xref:System.Xml.Linq.XObject.Changing> i <xref:System.Xml.Linq.XObject.Changed> zdarzenia.|  
   
- Następujące zdarzenia są generowane po zmodyfikowaniu drzewo XML:  
+ Następujące zdarzenia są wywoływane, gdy modyfikowanie drzewa XML:  
   
 |Zdarzenie|Opis|  
 |-----------|-----------------|  
-|<xref:System.Xml.Linq.XObject.Changing>|Występuje bezpośrednio przed tym <xref:System.Xml.Linq.XObject> lub dowolnego z jego węzłów podrzędnych ma zmienić.|  
-|<xref:System.Xml.Linq.XObject.Changed>|Występuje, gdy <xref:System.Xml.Linq.XObject> został zmieniony lub dowolną z jego elementy podrzędne zostały zmienione.|  
+|<xref:System.Xml.Linq.XObject.Changing>|Występuje zaraz przed tym <xref:System.Xml.Linq.XObject> lub przechodzi do dowolnego z jego obiektów podrzędnych do zmiany.|  
+|<xref:System.Xml.Linq.XObject.Changed>|Występuje, gdy <xref:System.Xml.Linq.XObject> został zmieniony lub dowolnego z jego elementy podrzędne zostały zmienione.|  
   
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- Zdarzenia są przydatne, jeśli chcesz zachować niektóre agregują informacje w drzewie XML. Można na przykład obsługa Suma faktury, który jest sumą pozycje, faktury. W tym przykładzie użyto zdarzeń, aby zachować Suma wszystkich elementów podrzędnych w elemencie złożonych `Items`.  
+ Zdarzenia są przydatne, gdy użytkownik chce przechowywać pewne informacje agregacji w drzewie XML. Na przykład można zachować Suma faktury, która jest sumą pozycje faktury. W tym przykładzie użyto zdarzeń do obsługi sumę wszystkich elementów podrzędnych w elemencie złożonych `Items`.  
   
 ### <a name="code"></a>Kod  
   
@@ -98,4 +98,4 @@ Total:308
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zaawansowane LINQ do XML programowania (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+ [Zaawansowane LINQ to XML programowania (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

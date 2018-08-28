@@ -9,45 +9,45 @@ helpviewer_keywords:
 - literals [Visual Basic], coercing data type
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
-ms.openlocfilehash: 8d110ec17bcdb03f339d779b2950ba56d77957cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d030f8058cd497212c20bca8f064f2bedc99fce
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649851"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999930"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>Stała i typy literałów (Visual Basic)
-Literał jest wartość, która jest wyrażona jako samej siebie, a nie wartość zmiennej lub wynik wyrażenia, takich jak numer 3 lub ciąg "Hello". Stała jest znaczącą nazwę, która ma miejsce literału i zachowuje tej samej wartości w programie, w przeciwieństwie do zmiennej, którego wartość może zmienić.  
+Literał jest wartość, która jest wyrażona w swoim imieniu, a nie jako wartość zmiennej lub wyniku wyrażenia, takie jak numer 3 lub ciąg "Hello". Stałe są znaczącą nazwę, która zajmuje miejsce literału i zachowuje ta sama wartość w całym programie, w przeciwieństwie do zmiennej, którego wartość może ulec zmianie.  
   
- Gdy [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) jest `Off` i [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) jest `On`, musisz jawnie zadeklarować wszystkich stałych o typie danych. W poniższym przykładzie typu danych `MyByte` jawnie jest zadeklarowany jako typ danych `Byte`:  
+ Gdy [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) jest `Off` i [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) jest `On`, należy jawnie zadeklarować wszystkich stałych o typie danych. W poniższym przykładzie typ danych `MyByte` jest jawnie zadeklarowana jako typ danych `Byte`:  
   
  [!code-vb[VbVbalrConstants#1](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_1.vb)]  
   
- Gdy `Option Infer` jest `On` lub `Option Strict` jest `Off`, mogą zadeklarować stałą bez określania typu danych z `As` klauzuli. Kompilator Określa typ stałej z typem wyrażenia. Literał całkowity liczbowych jest rzutowane domyślnie `Integer` — typ danych. Domyślny typ danych liczb zmiennoprzecinkowych jest `Double`i słowa kluczowe `True` i `False` określ `Boolean` stałej.  
+ Gdy `Option Infer` jest `On` lub `Option Strict` jest `Off`, stałej można zadeklarować bez określania typu danych za pomocą `As` klauzuli. Kompilator Określa typ stałej z typu wyrażenia. Liczbowe literał liczby całkowitej jest rzutowany domyślnie `Integer` typu danych. Domyślny typ danych liczb zmiennoprzecinkowych jest `Double`i słowa kluczowe `True` i `False` określ `Boolean` stałej.  
   
-## <a name="literals-and-type-coercion"></a>Literały i koercja typu  
- W niektórych przypadkach można wymusić literału do określonego typu danych; na przykład podczas przypisywania szczególnie dużej wartości całkowitych wartość literału do zmiennej typu `Decimal`. Poniższy przykład powoduje błąd:  
+## <a name="literals-and-type-coercion"></a>Literały i wymuszenia typu  
+ W niektórych przypadkach możesz chcieć wymusić literału do określonego typu danych; na przykład podczas przypisywania szczególnie dużą wartość całkowitą literału do zmiennej typu `Decimal`. Poniższy przykład generuje błąd:  
   
 ```  
 Dim myDecimal as Decimal  
 myDecimal = 100000000000000000000   ' This causes a compiler error.  
 ```  
   
- Błąd wynika z reprezentację literału. `Decimal` — Typ danych można, przytrzymaj wartość będzie rozmiarze, ale literał niejawnie jest reprezentowany jako `Long`, które nie.  
+ Ten błąd wynika z reprezentacji literału. `Decimal` Typu danych można zawierającą wartość parametru tak dużej, ale literał niejawnie jest reprezentowany jako `Long`, które nie mogą.  
   
- Można wymusić literału do określonego typu danych na dwa sposoby: przez dodanie do niej znak typu lub umieszczając je w ramach otaczającej znaków. Znak typu lub Załączanie znaków musi bezpośrednio poprzedzać i/lub wykonaj literału, bez interwencji miejsca lub znaków dowolnego rodzaju.  
+ Można wymusić literału do określonego typu danych na dwa sposoby: przez dodanie znaku typu do niego lub przez umieszczenie ich w ramach otaczającej znaków. Znak typu lub Załączanie znaków musi bezpośrednio poprzedzać i/lub wykonaj literału, bez pośredniczące miejsca lub znaków jakiegokolwiek rodzaju.  
   
- Aby w poprzednim przykładzie działa, możesz dołączyć `D` wpisz znak literal, co powoduje, że jej może być reprezentowana jako `Decimal`:  
+ Aby w poprzednim przykładzie działają, można dołączyć `D` wpisz znak literału, który powoduje, że może być reprezentowana jako `Decimal`:  
   
  [!code-vb[VbVbalrConstants#2](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_2.vb)]  
   
- W poniższym przykładzie pokazano poprawne użycie znaków typu lub otaczającego znaków:  
+ Poniższy przykład pokazuje poprawne użycie typu znaki i znaki otaczającej:  
   
  [!code-vb[VbVbalrConstants#3](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_3.vb)]  
   
- Poniższej tabeli otaczającego znaków i znaki typu są dostępne w języku Visual Basic.  
+ Pokazano w poniższej tabeli otaczającego znaki i znaki typu, które są dostępne w języku Visual Basic.  
   
-|Typ danych|Znak otaczającego|Znak typu dołączany|  
+|Typ danych|Otaczający znaków|Znak typu dołączonych|  
 |---|---|---|  
 |`Boolean`|(Brak)|(Brak)|  
 |`Byte`|(Brak)|(Brak)|  
@@ -70,5 +70,5 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
  [Wyliczenia — przegląd](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)  
  [Porady: deklarowanie wyliczeń](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)  
  [Wyliczenia i kwalifikacja nazw](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)  
- [Typy danych](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Typy danych](../../../../visual-basic/language-reference/data-types/index.md)  
  [Stałe i wyliczenia](../../../../visual-basic/language-reference/constants-and-enumerations.md)

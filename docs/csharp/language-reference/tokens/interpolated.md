@@ -1,6 +1,6 @@
 ---
-title: $ - ciąg interpolacji (odwołanie w C#)
-description: Ciąg interpolacji zapewnia bardziej czytelny i wygodne składni do formatowania danych wyjściowych ciąg niż tradycyjne ciąg złożone formatowanie.
+title: $ — Interpolacja ciągów (odwołanie w C#)
+description: Interpolacja ciągów pozwala bardziej czytelne i wygodne składni do formatowania danych wyjściowych ciąg znaków, niż tradycyjne ciągu formatowania złożonego.
 ms.date: 03/26/2018
 f1_keywords:
 - $_CSharpKeyword
@@ -12,26 +12,26 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 407ca9e4744ea9be45867a08e87c502821226472
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.openlocfilehash: 2009b3620bc4874520221a4ea847222feafca01b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34058839"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000979"
 ---
-# <a name="---string-interpolation-c-reference"></a>$ - ciąg interpolacji (odwołanie w C#)
+# <a name="---string-interpolation-c-reference"></a>$ — Interpolacja ciągów (odwołanie w C#)
 
-`$` Znak specjalny identyfikuje ciąg literału jako *interpolowane ciąg*. Ciągu interpolowanym jest ciągiem literału, który może zawierać *interpolowane wyrażenia*. Po usunięciu ciągu interpolowanym ciąg wyniku, elementów z wyrażenia interpolowane zastępuje reprezentacji ciągu wyników wyrażenia. Ta funkcja jest dostępna w C# 6 i nowsze wersje języka.
+`$` Znak specjalny identyfikuje literał ciągu zgodny z *ciągiem interpolowanym*. Ciągu interpolowanego jest ciągiem literału, który może zawierać *wyrażeń interpolowanych*. Po usunięciu ciągu interpolowanego do ciągu wynikowego, elementy z wyrażeń interpolowanych są zastępowane przez ciągów reprezentujących wyniki wyrażenia. Ta funkcja jest dostępna w języku C# 6 i nowsze wersje języka.
 
-Ciąg interpolacji zapewnia bardziej czytelny i wygodne składni utworzyć ciągi sformatowane niż [ciągu formatowania złożonego](../../../standard/base-types/composite-formatting.md) funkcji. W poniższym przykładzie użyto obie funkcje do tworzenia tych samych danych wyjściowych:
+Interpolacja ciągów pozwala bardziej czytelne i wygodne składni utworzyć sformatowane ciągi niż [ciągu formatowania złożonego](../../../standard/base-types/composite-formatting.md) funkcji. W poniższym przykładzie użyto obu funkcji, aby utworzyć ten sam wynik:
 
 [!code-csharp-interactive[compare with composite formatting](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#1)]
 
-## <a name="structure-of-an-interpolated-string"></a>Struktura ciągu interpolowanym
+## <a name="structure-of-an-interpolated-string"></a>Struktura ciągu interpolowanego
 
-Aby zidentyfikować ciąg literału jako ciągu interpolowanym, dołączenie wartości za pomocą `$` symbolu. Nie może zawierać żadnego odstępu między `$` i `"` zaczynającym się literału ciągu. To powoduje błąd kompilacji.
+Aby zidentyfikować literał ciągu zgodny z ciągu interpolowanego, dodaj ją za pomocą `$` symboli. Nie może mieć dowolny biały obszar między `$` i `"` którego początkowe literału ciągu. Ten sposób powoduje błąd kompilacji.
 
-Struktura element o interpolowanego wyrażenia jest następujący:
+Struktura element na wyrażenie interpolowane jest następująca:
 
 ```
 {<interpolatedExpression>[,<alignment>][:<formatString>]}
@@ -41,59 +41,60 @@ Elementy w nawiasach kwadratowych są opcjonalne. W poniższej tabeli opisano ka
 
 |Element|Opis|
 |-------------|-----------------|
-|`interpolatedExpression`|Wyrażenie, które daje wynik formatowania. Reprezentacja ciągu `null` wynik jest <xref:System.String.Empty?displayProperty=nameWithType>.|
-|`alignment`|Wyrażenie stałe, którego wartość określa minimalną liczbę znaków w reprezentację ciągu wynik interpolowanego wyrażenia. Jeśli jest dodatnia, reprezentacja tekstowa jest wyrównany do prawej; Jeśli ujemną, jest wyrównany. Aby uzyskać więcej informacji, zobacz [składnika wyrównanie](../../../standard/base-types/composite-formatting.md#alignment-component).|
-|`formatString`|Ciąg formatu, który jest obsługiwany przez ten typ wyniku wyrażenia. Aby uzyskać więcej informacji, zobacz [składnika ciąg formatu](../../../standard/base-types/composite-formatting.md#format-string-component).|
+|`interpolatedExpression`|Wyrażenie, które daje wynik do sformatowania. Ciąg reprezentujący `null` wynik jest <xref:System.String.Empty?displayProperty=nameWithType>.|
+|`alignment`|Wyrażenie stałe, którego wartość określa minimalną liczbę znaków w ciągu reprezentującego wynik wyrażenia interpolowane. Jeśli jest to dodatnia, reprezentacji w postaci ciągu jest wyrównany do prawej; Jeśli jest negatywny, jest wyrównany do lewej. Aby uzyskać więcej informacji, zobacz [składnik wyrównania](../../../standard/base-types/composite-formatting.md#alignment-component).|
+|`formatString`|Ciąg formatu, który jest obsługiwany przez typ wyniku wyrażenia. Aby uzyskać więcej informacji, zobacz [element ciągu formatującego](../../../standard/base-types/composite-formatting.md#format-string-component).|
 
-W poniższym przykładzie użyto opcjonalnych składników formatowania opisane powyżej:
+W poniższym przykładzie użyto opcjonalne składniki formatowania opisane powyżej:
 
 [!code-csharp-interactive[specify alignment and format string](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#2)]
 
 ## <a name="special-characters"></a>Znaki specjalne
 
-Uwzględnienie nawias klamrowy "{" lub "}", w tekście utworzonego przez ciągu interpolowanym, użyj dwóch nawiasów klamrowych, "{{" lub "}}". Aby uzyskać więcej informacji, zobacz [anulowanie nawiasów klamrowych](../../../standard/base-types/composite-formatting.md#escaping-braces).
+Aby uwzględnić nawiasu klamrowego, "{" lub "}", w tekście, generowane przez ciągu interpolowanego, użyj dwóch nawiasów klamrowych, "{{" lub "}}". Aby uzyskać więcej informacji, zobacz [anulowania zapewnianego element nawiasów klamrowych](../../../standard/base-types/composite-formatting.md#escaping-braces).
 
-Jako dwukropkiem (":") ma specjalne znaczenie w elemencie interpolowanego wyrażenia, aby można było używać [operator warunkowy](../operators/conditional-operator.md) w wyrażeniu interpolowane ujmij tego wyrażenia w nawiasach.
+Jako dwukropkiem (":") ma specjalne znaczenie w elemencie wyrażenie interpolowane, aby można było używać [operator warunkowy](../operators/conditional-operator.md) w wyrażenie interpolowane ująć to wyrażenie w nawiasach.
 
-W poniższym przykładzie pokazano, jak dołączyć nawiasu klamrowego ciągu wynik i sposobu użycia operator warunkowy w wyrażeniu interpolowane:
+Poniższy przykład pokazuje, jak dołączyć nawiasu klamrowego w ciągu wynikowym i sposobu użycia operatora warunkowego w wyrażenie interpolowane:
 
 [!code-csharp-interactive[example with ternary conditional operator](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
-Rozpoczyna się od ciągu dosłownego wyrażenia interpolowane `$` następuje znak `@` znaków. Aby uzyskać więcej informacji na temat ciągi verbatim zobacz [ciąg](../keywords/string.md) i [dosłownego wyrażenia identyfikator](verbatim.md) tematów.
+Ciąg verbatim interpolowane zaczyna się od `$` następuje znak `@` znaków. Aby uzyskać więcej informacji na temat ciągi verbatim zobacz [ciąg](../keywords/string.md) i [identyfikator dosłownego wyrażenia](verbatim.md) tematów.
 
 > [!NOTE]
-> `$` Token musi występować przed `@` token w ciągu interpolowanym dosłownego wyrażenia.
+> `$` Tokenu musi występować przed `@` tokenu w verbatim ciągu interpolowanym.
 
 ## <a name="implicit-conversions-and-specifying-iformatprovider-implementation"></a>Niejawne konwersje i określając `IFormatProvider` implementacji
 
-Istnieją trzy niejawną konwersję z ciągu interpolowanym:
+Istnieją trzy niejawną konwersję z ciągu interpolowanego:
 
-1. Konwersja ciągu interpolowanym do <xref:System.String> wystąpienie, które jest wynikiem rozdzielczość ciągu interpolowanym interpolowanego wyrażenia elementów zastępowane z reprezentacji ciągu prawidłowo sformatowane ich wyników. Ta konwersja używa bieżącej kultury.
+1. Konwersja ciągu interpolowanego do <xref:System.String> wystąpienia, która jest wynikiem rozdzielczość ciąg interpolowany z wyrażenia interpolowanego elementy zastępowane poprawnie sformatowanych ciągów reprezentujących ich wyniki. Ta konwersja skorzysta z bieżącej kultury.
 
-1. Konwersja ciągu interpolowanym do <xref:System.FormattableString> wystąpienie, które reprezentuje ciąg formatu złożonego wraz z wynikiem wyrażenia do sformatowania. Który umożliwia tworzenie wielu ciągów wyników z specyficzne dla kultury zawartości z jednej <xref:System.FormattableString> wystąpienia. Robić, które wywołują jedną z następujących metod:
+1. Konwersja ciągu interpolowanego do <xref:System.FormattableString> wystąpienia, która reprezentuje ciąg formatu złożonego wraz z wynikami wyrażenia do sformatowania. Pozwala to do utworzenia wielu ciągów wynik z specyficzne dla kultury zawartości z jednego <xref:System.FormattableString> wystąpienia. Który wywołać jedną z następujących metod:
 
-      - A <xref:System.FormattableString.ToString> przeciążenia, które tworzy ciąg wynik <xref:System.Globalization.CultureInfo.CurrentCulture>.
-      - <xref:System.FormattableString.Invariant%2A> Metodę, która tworzy ciąg wynik <xref:System.Globalization.CultureInfo.InvariantCulture>.
-      - A <xref:System.FormattableString.ToString(System.IFormatProvider)> metodę, która tworzy ciąg wynik określonej kultury.
+      - A <xref:System.FormattableString.ToString> przeciążenia, które tworzy ciąg wyniku <xref:System.Globalization.CultureInfo.CurrentCulture>.
+      - <xref:System.FormattableString.Invariant%2A> Metodę, która tworzy ciąg wyniku <xref:System.Globalization.CultureInfo.InvariantCulture>.
+      - A <xref:System.FormattableString.ToString(System.IFormatProvider)> metodę, która daje ciąg wynikowy dla określonej kultury.
 
-    Można też użyć <xref:System.FormattableString.ToString(System.IFormatProvider)> metodę, aby udostępnić implementację użytkownika <xref:System.IFormatProvider> interfejsu, który obsługuje niestandardowe formatowanie. Aby uzyskać więcej informacji, zobacz [niestandardowe formatowanie ICustomFormatter](../../../standard/base-types/formatting-types.md#custom-formatting-with-icustomformatter).
+    Możesz również użyć <xref:System.FormattableString.ToString(System.IFormatProvider)> metodę, aby udostępnić implementację zdefiniowanych przez użytkownika z <xref:System.IFormatProvider> interfejsu, który obsługuje formatowanie niestandardowe. Aby uzyskać więcej informacji, zobacz [niestandardowe formatowanie z ICustomFormatter](../../../standard/base-types/formatting-types.md#custom-formatting-with-icustomformatter).
 
-1. Konwersja ciągu interpolowanym do <xref:System.IFormattable> ciągi wystąpienie, które umożliwia tworzenie wielu wyników z zawartością specyficzne dla kultury z jednej <xref:System.IFormattable> wystąpienia.
+1. Konwersja ciągu interpolowanego do <xref:System.IFormattable> ciągi specyficzne dla kultury zawartości z jednego wystąpienia, które umożliwia również tworzenie wielu wyników <xref:System.IFormattable> wystąpienia.
 
-W poniższym przykładzie użyto niejawnej konwersji <xref:System.FormattableString> można utworzyć ciągów wynikowych specyficzne dla kultury:
+W poniższym przykładzie użyto niejawnej konwersji <xref:System.FormattableString> utworzyć ciągi wynikowe charakterystyczne dla kultury:
 
 [!code-csharp-interactive[create culture-specific result strings](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#4)]
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
-Jeśli jesteś nowym użytkownikiem interpolacji ciągu, zobacz [ciągu interpolacji w języku C#](../../quick-starts/interpolated-strings.yml) Szybki Start. Aby uzyskać więcej przykładów, zobacz [ciągu interpolacji w języku C#](../../tutorials/string-interpolation.md) samouczka.
+Jeśli jesteś nowym użytkownikiem Interpolacja ciągów, zobacz [Interpolacja w języku C# ciągów](../../quick-starts/interpolated-strings.yml) Szybki Start. Aby uzyskać więcej przykładów, zobacz [Interpolacja w języku C# ciągów](../../tutorials/string-interpolation.md) samouczka.
 
-## <a name="see-also"></a>Zobacz także  
- <xref:System.String.Format%2A?displayProperty=nameWithType>  
- <xref:System.FormattableString?displayProperty=nameWithType>  
- <xref:System.IFormattable?displayProperty=nameWithType>  
- [Złożone formatowanie](../../../standard/base-types/composite-formatting.md)  
- [Ciągi](../../programming-guide/strings/index.md)  
- [Przewodnik programowania w języku C#](../../programming-guide/index.md)  
- [Znaki specjalne języka C#](index.md)  
- [Odwołanie w C#](../index.md)  
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.String.Format%2A?displayProperty=nameWithType>
+- <xref:System.FormattableString?displayProperty=nameWithType>
+- <xref:System.IFormattable?displayProperty=nameWithType>
+- [Złożone formatowanie](../../../standard/base-types/composite-formatting.md)
+- [Ciągi](../../programming-guide/strings/index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Znaki specjalne języka C#](index.md)
+- [Dokumentacja języka C#](../index.md)

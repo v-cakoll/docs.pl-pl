@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc1d3ffc34cd74d68bf10cb677b68f0a75bb7c67
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4680187de7318a6438bf6a5e6bd7c5f3acd05c2
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444233"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998906"
 ---
 # <a name="startupflags-enumeration"></a>STARTUP_FLAGS — Wyliczenie
-Zawiera wartości, które wskazują zachowanie uruchamiania środowisko uruchomieniowe języka wspólnego (CLR). Domyślnie, wyrzucanie elementów bezużytecznych jest niewspółbieżnego i tylko biblioteki klasy podstawowej są ładowane do obszaru neutralne dla domen.  
+Zawiera wartości, które wskazują zachowanie uruchamiania środowiska uruchomieniowego języka wspólnego (CLR). Domyślnie, wyrzucanie elementów bezużytecznych jest niewspółbieżne i tylko Biblioteka klasy podstawowej jest załadowana do obszaru neutralnej domeny.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -57,29 +57,29 @@ typedef enum {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`STARTUP_CONCURRENT_GC`|Określa, czy ma być używany współbieżne odzyskiwanie pamięci. Jeśli element wywołujący pyta o kompilacji serwera i współbieżne odzyskiwanie pamięci na komputerze z jednym procesorem, należy zamiast tego uruchomić są kompilacji stacji roboczej i niewspółbieżnego wyrzucanie elementów bezużytecznych. **Uwaga:** współbieżne odzyskiwanie pamięci nie jest obsługiwany w aplikacji, które są uruchomione WOW64 x86 emulator na 64-bitowe systemy, które implementują architektura Intel Itanium (nazywanych IA-64). Aby uzyskać więcej informacji o używaniu WOW64 na 64-bitowym systemie Windows, temacie [uruchomiona 32-bitowych aplikacji](http://msdn.microsoft.com/library/windows/desktop/aa384249.aspx).|  
-|`STARTUP_LOADER_OPTIMIZATION_MASK`|Określa, że ma miejsce tej optymalizacji modułu ładującego.|  
-|`STARTUP_LOADER_OPTIMIZATION_SINGLE_DOMAIN`|Określa, że zestawy nie są ładowane jako neutralne dla domen.|  
-|`STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN`|Określa, że wszystkie zestawy są ładowane jako neutralne dla domen.|  
-|`STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN_HOST`|Określa, że wszystkie zestawy o silnych nazwach są ładowane jako neutralne dla domen.|  
-|`STARTUP_LOADER_SAFEMODE`|Określa, że zasady wersji środowiska CLR nie zostaną zastosowane do wersji przekazano. Zostanie załadowana dokładnej wersji określony środowiska CLR. Podkładka nie może oszacować zasady, aby określić najnowszą zgodnej wersji.|  
-|`STARTUP_LOADER_SETPREFERENCE`|Określa, że preferowanego środowiska uruchomieniowego zostanie ustawiony, ale faktycznie nie jest uruchomiona.|  
-|`STARTUP_SERVER_GC`|Określa użytą pamięci serwera.|  
-|`STARTUP_HOARD_GC_VM`|Określa, że wyrzucanie elementów bezużytecznych zachowa wirtualny adres używany.|  
-|`STARTUP_SINGLE_VERSION_HOSTING_INTERFACE`|Określa, czy mieszanie interfejsu obsługi będzie niemożliwe.|  
-|`STARTUP_LEGACY_IMPERSONATION`|Określa, czy personifikacja nie powinien przepływ między punktami asynchroniczne domyślnie.|  
-|`STARTUP_DISABLE_COMMITTHREADSTACK`|Określa, że stosu wątku pełne nie powinny być zatwierdzone, gdy wątek zacznie działać.|  
-|`STARTUP_ALWAYSFLOW_IMPERSONATION`|Określa, że zarządzane impersonations i impersonations, stosując platformy wywoływał będą przepływać między punktami asynchronicznego. Domyślnie tylko zarządzane impersonations będą przepływać między punktami asynchronicznego.|  
-|`STARTUP_TRIM_GC_COMMIT`|Określa, że wyrzucanie elementów bezużytecznych będzie używać mniej przydzielone miejsce, gdy jest za mało pamięci systemu. Zobacz `gcTrimCommitOnLowMemory` w [optymalizacji usługi hostingu sieci Web udostępnionego](../../../../docs/standard/garbage-collection/optimization-for-shared-web-hosting.md).|  
-|`STARTUP_ETW`|Określa, że śledzenie zdarzeń systemu Windows (ETW) jest włączone dla zdarzenia środowiska uruchomieniowego języka wspólnego. Począwszy od systemu Windows Vista, śledzenie zdarzeń jest zawsze włączony, dlatego ta flaga nie ma wpływu. Zobacz [kontrolowanie .NET Framework rejestrowania](../../../../docs/framework/performance/controlling-logging.md).|  
-|`STARTUP_ARM`|Określa, czy jest włączone monitorowanie zasobów domen aplikacji. Zobacz <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> właściwości i [ \<appdomainresourcemonitoring — > elementu](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md).|  
+|`STARTUP_CONCURRENT_GC`|Określa, że powinny być używane współbieżne wyrzucanie elementów bezużytecznych. Jeśli obiekt wywołujący prosi o kompilację serwera i równoczesne wyrzucania elementów bezużytecznych na komputerze jednoprocesorowym, stacja robocza kompilacji i niewspółbieżnym wyrzucaniem elementów bezużytecznych zostaną uruchomione w zamian. **Uwaga:** współbieżne wyrzucanie elementów bezużytecznych nie jest obsługiwane w aplikacji, które są uruchomione przez środowisko WOW64 x86 emulatora w systemach 64-bitowych, które implementują architekturę Intel Itanium (wcześniej noszącą nazwę IA-64). Aby uzyskać więcej informacji o używaniu WOW64 w 64-bitowych systemach Windows, zobacz [uruchomiona 32-bitowych aplikacji](/windows/desktop/WinProg64/running-32-bit-applications).|  
+|`STARTUP_LOADER_OPTIMIZATION_MASK`|Określa, że Optymalizacja programu ładującego powinna występować.|  
+|`STARTUP_LOADER_OPTIMIZATION_SINGLE_DOMAIN`|Określa, że żadne zespoły nie są ładowane jako niezależne od domeny.|  
+|`STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN`|Określa, że wszystkie zespoły są ładowane jako niezależne od domeny.|  
+|`STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN_HOST`|Określa, że wszystkie zestawy o silnej nazwie są ładowane jako niezależne od domeny.|  
+|`STARTUP_LOADER_SAFEMODE`|Określa, że zasady wersji środowiska CLR nie zostaną zastosowane do wersji przekazania. Dokładna wersja określona w CLR zostanie załadowana. Podkładka nie ocenia uprawnień do ustalenia najnowszej zgodnej wersji.|  
+|`STARTUP_LOADER_SETPREFERENCE`|Określa, że preferowanego czasu wykonywania zostanie ustawiona, ale faktycznie nie jest uruchomiony.|  
+|`STARTUP_SERVER_GC`|Określa, że serwer wyrzucania elementów bezużytecznych zostanie użyty.|  
+|`STARTUP_HOARD_GC_VM`|Określa, że wyrzucanie elementów bezużytecznych zostanie zachowana, aby adres wirtualny używany.|  
+|`STARTUP_SINGLE_VERSION_HOSTING_INTERFACE`|Określa, że mieszanie hostingu interfejsu będzie niemożliwe.|  
+|`STARTUP_LEGACY_IMPERSONATION`|Określa, że personifikacja nie powinna przepływać przez punkty asynchroniczne domyślnie.|  
+|`STARTUP_DISABLE_COMMITTHREADSTACK`|Określa, że stos pełnego wątku nie powinien być ustalony podczas uruchamiania wątku.|  
+|`STARTUP_ALWAYSFLOW_IMPERSONATION`|Określa, że zarządzane personifikacje i personifikacje osiągnięte przez platformę wywołania będą przepływać przez punkty asynchroniczne. Domyślnie tylko zarządzane impersonacje będą przepływać przez punkty asynchroniczne.|  
+|`STARTUP_TRIM_GC_COMMIT`|Określa, że wyrzucanie elementów bezużytecznych będzie używać mniej przydzielonych miejsc, gdy brakuje pamięci systemowej. Zobacz `gcTrimCommitOnLowMemory` w [Optymalizacja udostępnionej usługi hostingu internetowego](../../../../docs/standard/garbage-collection/optimization-for-shared-web-hosting.md).|  
+|`STARTUP_ETW`|Określa, że śledzenie zdarzeń dla Windows (ETW) jest włączone dla typowych zdarzeń środowiska wykonawczego języka. Począwszy od systemów Windows Vista, śledzenie zdarzeń jest zawsze włączone, więc ta flaga nie ma wpływu. Zobacz [Kontrolowanie logowania w programie .NET Framework](../../../../docs/framework/performance/controlling-logging.md).|  
+|`STARTUP_ARM`|Określa, czy jest włączone monitorowanie zasobów domen aplikacji. Zobacz <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> właściwości i [ \<appdomainresourcemonitoring — > Element](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md).|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** biblioteki MSCorEE.dll  
+ **Biblioteka:** MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

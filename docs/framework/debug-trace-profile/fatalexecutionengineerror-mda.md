@@ -14,24 +14,24 @@ helpviewer_keywords:
 ms.assetid: 8b559e44-2393-4e4e-8160-7558d37a4a89
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4595049d4ea71de30cf13334e32cd4bb2699f2ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f12b94198b88111d559cfe372c28bdbf4b37e3fe
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392541"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999138"
 ---
 # <a name="fatalexecutionengineerror-mda"></a>fatalExecutionEngineError MDA
-`fatalExecutionEngine``Error` Zarządzany Asystent debugowania (MDA) jest aktywowany, gdy wykryto błąd krytyczny w środowisku uruchomieniowym języka (wspólnego CLR). Proces zostanie zakończony.  
+`fatalExecutionEngineError` Zarządzanego Asystenta debugowania (MDA) jest aktywowany, gdy wykryto błąd krytyczny w środowisku uruchomieniowym języka (wspólnego CLR). Proces zostanie zakończony.  
   
 ## <a name="symptoms"></a>Symptomy  
- Kończenie procesu nieoczekiwany. Nie można określić inne objawy, ponieważ błąd CLR może wystąpić z różnych przyczyn.  
+ Kończenie procesu nieoczekiwany. Nie można określić inne objawy, ponieważ może wystąpić błąd CLR, z różnych powodów.  
   
 ## <a name="cause"></a>Przyczyna  
- Środowisko CLR śmiertelnie została uszkodzona. W większości przypadków jest to spowodowane uszkodzeniem danych, która może być spowodowana przez liczbę problemów, takie jak wywołania platformy źle sformułowane wywołania funkcji i przekazywanie nieprawidłowe dane do środowiska CLR.  
+ Środowisko CLR jest uszkodzony krytycznego. W większości przypadków jest to spowodowane uszkodzeniem danych, która może wpływać wiele problemów, takich jak wywołania platformy źle sformułowane wywołania funkcji i przekazanie nieprawidłowe dane do środowiska CLR.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Włączanie dodatkowych MDA może zidentyfikować problem. Następujące MDA może być szczególnie przydatne w zdiagnozowaniu problemu:  
+ Włączanie dodatkowych MDA może ułatwić zidentyfikowanie problemu. Następujące MDA może być szczególnie przydatne podczas diagnozowania problemu:  
   
 -   [invalidOverlappedToPinvoke](../../../docs/framework/debug-trace-profile/invalidoverlappedtopinvoke-mda.md)  
   
@@ -58,10 +58,10 @@ ms.locfileid: "33392541"
 -   [invalidGCHandleCookie](../../../docs/framework/debug-trace-profile/invalidgchandlecookie-mda.md)  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
- To zdarzenie MDA nie ma wpływu na zachowanie środowiska uruchomieniowego.  
+ To zdarzenie MDA nie ma wpływu na działanie w środowisku uruchomieniowym.  
   
 ## <a name="output"></a>Dane wyjściowe  
- Adres funkcji CLR, która spowodowała błąd krytyczny, identyfikator wątku, w którym wystąpił błąd i kod błędu.  
+ Adres funkcji CLR, który spowodował błąd krytyczny, identyfikator wątku, w którym wystąpił błąd i kod błędu.  
   
 ## <a name="configuration"></a>Konfiguracja  
   

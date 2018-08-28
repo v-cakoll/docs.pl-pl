@@ -10,11 +10,11 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 21cea76f31bdf2ac5fcf434ee759f874f917617b
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42751929"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999471"
 ---
 # <a name="-refout-visual-basic"></a>-opcji refout (Visual Basic)
 

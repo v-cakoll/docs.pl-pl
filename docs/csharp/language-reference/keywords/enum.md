@@ -7,85 +7,85 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 634fbd846993d32ae529f87e96fd91857e5c1883
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: a64559ac1127f5ec296cf3892dd521c3ad8ac2be
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028282"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003245"
 ---
 # <a name="enum-c-reference"></a>enum (odwołanie w C#)
 
-`enum` — Słowo kluczowe służy do deklarowania wyliczenie różne typu, który zawiera zestaw stałe nazwane o nazwie listy modułu wyliczającego.  
+`enum` Słowo kluczowe jest używane do deklarowania wyliczania, typem samodzielnym, który zawiera zestaw nazwanych stałych zwanego listą modułów wyliczających.  
 
-Zazwyczaj najlepiej jest zdefiniowanie wyliczenia bezpośrednio z poziomu obszaru nazw, tak aby wszystkie klasy w przestrzeni nazw do niego dostęp z wygody takie same. Jednak wyliczenia mogą być zagnieżdżone w obrębie klasy lub struktury.
+Zazwyczaj najlepiej jest zdefiniowanie wyliczenia bezpośrednio w przestrzeni nazw, tak, aby wszystkie klasy w przestrzeni nazw do niego dostęp za pomocą równy wygody. Jednak wyliczenia może być zagnieżdżona w klasie lub strukturze.
 
-Domyślnie pierwszy modułu wyliczającego ma wartość 0, a wartość każdego kolejnych modułu wyliczającego jest zwiększana o 1. Na przykład w następujących wyliczenia `Sat` jest `0`, `Sun` jest `1`, `Mon` jest `2`, itd.
+Domyślnie pierwszy moduł wyliczający ma wartość 0, a wartość każdego kolejnych moduł wyliczający jest zwiększana o 1. Na przykład w następujących wyliczenia `Sat` jest `0`, `Sun` jest `1`, `Mon` jest `2`, i tak dalej.
 
 ```csharp
 enum Day {Sat, Sun, Mon, Tue, Wed, Thu, Fri};
 ```
 
-Moduły wyliczające umożliwia inicjatory zastąpić wartości domyślne, jak pokazano w poniższym przykładzie.
+Moduły wyliczające umożliwia inicjatory przesłonić wartości domyślne, jak pokazano w poniższym przykładzie.
 
 ```csharp
 enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 ```
 
-W tym wyliczeniu sekwencję elementów wymusza na uruchamianie z `1` zamiast `0`. Jednak zaleca się tym stałą, który ma wartość 0. Aby uzyskać więcej informacji, zobacz [Typy wyliczeniowe](../../programming-guide/enumeration-types.md).
+W tym wyliczeniu sekwencję elementów jest zmuszony do uruchamiania z `1` zamiast `0`. Jednak zaleca się tym stałą, który ma wartość 0. Aby uzyskać więcej informacji, zobacz [Typy wyliczeniowe](../../programming-guide/enumeration-types.md).
 
-Każdy typ wyliczeniowy ma odpowiedni typ, który może być dowolnego typu całkowitego z wyjątkiem [char](char.md). Domyślny typ bazowy typu wyliczenia elementów jest [int](int.md). Aby zadeklarować wyliczenie innego typu całkowitego, takich jak [bajtów](byte.md), użyj dwukropka po identyfikatorze, a następnie według typu, jak pokazano w poniższym przykładzie.
+Każdy typ wyliczenia ma podstawowy typ, który może być dowolnego typu całkowitoliczbowego z wyjątkiem [char](char.md). Domyślny typ podstawowy wyliczenia elementów to [int](int.md). Aby zadeklarować wyliczenie innego typu całkowitego, takich jak [bajtów](byte.md), użyj dwukropka po identyfikatorze, a następnie według typu, jak pokazano w poniższym przykładzie.
 
 ```csharp
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 ```
 
-Istnieją typy zatwierdzone dla wyliczenia [bajtów](byte.md), [sbyte](sbyte.md), [krótki](short.md), [ushort](ushort.md), [int](int.md), [uint](uint.md), [długi](long.md), lub [ulong](ulong.md).
+Zatwierdzone typy wyliczenia [bajtów](byte.md), [sbyte](sbyte.md), [krótki](short.md), [ushort](ushort.md), [int](int.md), [uint](uint.md), [długie](long.md), lub [ulong](ulong.md).
 
-Zmienna typu `Day` można przypisać dowolną wartość z zakresu od typu źródłowego; wartości nie są ograniczone do stałe nazwane.
+Zmienna typu `Day` można przypisać dowolną wartość z zakresu typu podstawowego; wartości nie są ograniczone do nazwanych stałych.
 
 Wartość domyślna `enum E` jest wartością produkowane przez wyrażenie `(E)0`.
 
 > [!NOTE]
 > Moduł wyliczający nie może zawierać biały znak w nazwie.
 
-Podstawowy typ Określa, ile miejsca do magazynowania jest przydzielona dla każdego modułu wyliczającego. Jednak jawnego rzutowania jest niezbędne do przekonwertowania z `enum` typu na typ całkowity. Na przykład następująca instrukcja przypisuje modułu wyliczającego `Sun` do zmiennej typu [int](int.md) przy użyciu rzutowanie do przekonwertowania z `enum` do `int`.
+Podstawowy typ Określa, ile pamięci masowej jest przydzielany dla każdego typu wyliczeniowego. Jednak jawnego rzutowania jest niezbędne do konwersji z `enum` typu na typ całkowitoliczbowy. Na przykład następująca instrukcja przypisuje modułu wyliczającego `Sun` do zmiennej typu [int](int.md) przy użyciu rzutowanie do konwersji z `enum` do `int`.
 
 ```csharp
 int x = (int)Day.Sun;
 ```
 
-Po zastosowaniu <xref:System.FlagsAttribute?displayProperty=nameWithType> na wyliczenie, który zawiera elementy, które można łączyć z bitowego `OR` operacji, ten atrybut ma wpływ na zachowanie `enum` gdy jest używana z niektóre narzędzia. Można zauważyć tych zmian, korzystając z narzędzi takich jak <xref:System.Console> klas, metod i ewaluatora wyrażenia. (Zobacz przykład trzeci).
+Po zastosowaniu <xref:System.FlagsAttribute?displayProperty=nameWithType> z wyliczeniem, który zawiera elementy, które mogą być łączone z bitową `OR` operacji, ten atrybut ma wpływ na zachowanie `enum` gdy jest używany z narzędziami. Można zauważyć te zmiany, korzystając z narzędzi takich jak <xref:System.Console> klas, metod i ewaluatora wyrażenia. (Zobacz trzeci przykład).
 
 ## <a name="robust-programming"></a>Skuteczne programowanie
 
-Tak jak w przypadku dowolnego stała wszystkie odwołania do poszczególnych wartości wyliczenia są konwertowane na literałach numerycznych w czasie kompilacji. To utworzenie potencjalne problemy z wersjonowaniem, zgodnie z opisem w [stałe](../../programming-guide/classes-and-structs/constants.md).
+Podobnie jak w przypadku dowolną stałą wszystkie odwołania do poszczególnych wartości wyliczenia są konwertowane na literały numeryczne w czasie kompilacji. To utworzenie potencjalne problemy z wersjonowaniem, zgodnie z opisem w [stałe](../../programming-guide/classes-and-structs/constants.md).
 
-Przypisywanie wartości dodatkowe do nowej wersji wyliczenia lub zmianę wartości członkowie wyliczenia w nowej wersji, mogą powodować problemy dla kodu źródłowego zależnych. Wartości wyliczenia są często używane w [przełącznika](switch.md) instrukcje. Jeśli dodatkowe elementy zostały dodane do `enum` typu, domyślnej sekcji instrukcji switch można wybrać nieoczekiwanie.
+Przypisywanie dodatkowych wartości do nowych wersji wyliczenia lub zmiana wartości elementów członkowskich wyliczenia w nowej wersji, może powodować problemy, które kodu źródłowego zależnych. Wartości wyliczeniowe są często używane w [Przełącz](switch.md) instrukcji. Jeśli dodatkowe elementy zostały dodane do `enum` nieoczekiwanie można wybrać domyślną sekcję instrukcji switch typu.
 
-Inni deweloperzy użycie kodu, wskazówki dotyczące sposobu ich kod powinien reagują, gdy nowe elementy są dodawane do dowolnego należy zapewnić `enum` typów.
+Użycie kodu, inni deweloperzy dostarczają wytyczne dotyczące sposobu ich kod powinien reagować, jeśli nowe elementy są dodawane do dowolnej `enum` typów.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie wyliczenie `Day`, jest zadeklarowany. Dwa moduły wyliczające jawnie przekonwertować na liczbę całkowitą i przypisane do zmiennych liczby całkowitej.
+W poniższym przykładzie wyliczenie `Day`, jest zadeklarowana. Dwa moduły wyliczające są jawnie konwertowany na liczbę całkowitą i przypisane do zmiennych całkowitych.
 
 [!code-csharp[csrefKeywordsTypes#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#10)]
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie opcji typu base służy do deklarowania `enum` której członkami są typu `long`. Należy zauważyć, że nawet jeśli typ podstawowy wyliczenia jest `long`, elementy członkowskie wyliczenia nadal musi być jawnie przekonwertować na typ `long` przy użyciu rzutowanie.
+W poniższym przykładzie opcja Typ podstawowy jest używane do deklarowania `enum` której członkami są typu `long`. Należy zauważyć, że nawet jeśli jest podstawowym typem wyliczenia `long`, elementy członkowskie wyliczenia nadal muszą być jawnie konwertowane na typ `long` przy użyciu rzutowania.
 
 [!code-csharp[csrefKeywordsTypes#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#11)]
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykładowy kod przedstawia użycie i wpływu <xref:System.FlagsAttribute?displayProperty=nameWithType> atrybutu `enum` deklaracji.
+Poniższy przykład kodu ilustruje stosowanie i efekt <xref:System.FlagsAttribute?displayProperty=nameWithType> atrybutu na `enum` deklaracji.
 
 [!code-csharp[csrefKeywordsTypes#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#12)]
 
 ## <a name="comments"></a>Komentarze
 
-Jeśli usuniesz `Flags`, przykładzie wyświetlane są następujące wartości:
+Jeśli usuniesz `Flags`, w przykładzie są wyświetlane następujące wartości:
 
 `5`
 
@@ -97,11 +97,11 @@ Jeśli usuniesz `Flags`, przykładzie wyświetlane są następujące wartości:
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja języka C#](../index.md)  
-[Typy wyliczeniowe](../../programming-guide/enumeration-types.md)  
-[Słowa kluczowe języka C#](index.md)  
-[Tabela typów całkowitych](integral-types-table.md)  
-[Tabela typów wbudowanych](built-in-types-table.md)  
-[Tabela niejawnych konwersji liczbowych](implicit-numeric-conversions-table.md)  
-[Tabela jawnych konwersji liczbowych](explicit-numeric-conversions-table.md)  
-[Konwencje nazewnictwa wyliczenia](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)
+- [Dokumentacja języka C#](../index.md)  
+- [Typy wyliczeniowe](../../programming-guide/enumeration-types.md)  
+- [Słowa kluczowe języka C#](index.md)  
+- [Tabela typów całkowitych](integral-types-table.md)  
+- [Tabela typów wbudowanych](built-in-types-table.md)  
+- [Tabela niejawnych konwersji liczbowych](implicit-numeric-conversions-table.md)  
+- [Tabela jawnych konwersji liczbowych](explicit-numeric-conversions-table.md)  
+- [Konwencje nazewnictwa typu wyliczeniowego](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)

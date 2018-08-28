@@ -1,5 +1,5 @@
 ---
-title: -docelowego (opcje kompilatora C#)
+title: -target (opcje kompilatora C#)
 ms.date: 07/20/2015
 f1_keywords:
 - /target
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - -target compiler options [C#]
 ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
 ms.openlocfilehash: 7736b8850a7b09f7212e83e05acf0e1994bce0fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215501"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000007"
 ---
-# <a name="-target-c-compiler-options"></a>-docelowego (opcje kompilatora C#)
-**-Docelowy** — opcja kompilatora można określić w jednym z czterech formularzy:  
+# <a name="-target-c-compiler-options"></a>-target (opcje kompilatora C#)
+**-Target** — opcja kompilatora można określić w jednej z czterech form:  
   
  [-target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md)  
  Aby utworzyć plik .exe [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplikacji.  
@@ -26,28 +26,28 @@ ms.locfileid: "33215501"
  Aby utworzyć plik .exe.  
   
  [-target:library](../../../csharp/language-reference/compiler-options/target-library-compiler-option.md)  
- Aby utworzyć biblioteki kodu.  
+ Aby utworzyć bibliotekę kodu.  
   
  [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md)  
  Aby utworzyć moduł.  
   
  [-target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)  
- Aby utworzyć program systemu Windows.  
+ Aby utworzyć Windows program.  
   
  [-target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)  
  Aby utworzyć plik pośredni .winmdobj.  
   
- Chyba że zostanie **-docelowych: moduł**, **-docelowy** powoduje, że manifestu zestawu .NET Framework do umieszczenia w pliku wyjściowym. Aby uzyskać więcej informacji, zobacz [zestawy w środowisku uruchomieniowym języka](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md) i [takie same atrybuty wspólne](../../programming-guide/concepts/attributes/common-attributes.md).  
+ Chyba że określisz **-target: module**, **-target** powoduje, że manifest zestawu .NET Framework, należy umieścić w pliku wyjściowego. Aby uzyskać więcej informacji, zobacz [zestawów w środowisko uruchomieniowe języka wspólnego](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md) i [wspólne atrybuty](../../programming-guide/concepts/attributes/common-attributes.md).  
   
- Manifest zestawu jest umieszczany w pierwszym pliku wyjściowego .exe w kompilacji lub w pierwszej biblioteki DLL, jeśli plik wyjściowy .exe nie istnieje. Na przykład, w wierszu polecenia następujący plik manifestu zostaną umieszczone w `1.exe`:  
+ Manifest zestawu jest umieszczany w pierwszym pliku wyjściowego .exe w kompilacji lub w pierwszym pliku DLL, jeśli nie ma żadnego pliku wyjściowego .exe. Na przykład, w wierszu polecenia następujące manifestu zostaną umieszczone w `1.exe`:  
   
 ```console  
 csc -out:1.exe t1.cs -out:2.netmodule t2.cs  
 ```  
   
- Kompilator tworzy tylko jeden manifest zestawu kompilacji. Informacje o wszystkich plików w kompilacji jest umieszczany w manifeście zestawu. Wszystkie pliki z wyjątkiem tych, utworzone za pomocą wyjściowe **-docelowych: moduł** może zawierać manifest zestawu. Podczas produkowania wielu plików wyjściowych w wierszu polecenia, można utworzyć tylko jeden zestaw manifestu i należy przejść do pierwszego pliku wyjściowego, określona w wierszu polecenia. Niezależnie od tego, jakie pierwszy plik wyjściowy jest (**-docelowych: exe**, **-docelowych: winexe**, **— docelowa: Biblioteka** lub **-docelowych: moduł**) wszystkie inne pliki wyjściowe wygenerowane w tej samej kompilacji musi być modułów (**-docelowych: moduł**).  
+ Kompilator tworzy tylko jeden manifest zestawu kompilacji. Informacje o wszystkich plikach w zestawieniu jest umieszczany w manifeście zestawu. Wszystkie pliki, z wyjątkiem tych utworzonych za pomocą wyjściowe **-target: module** może zawierać manifest zestawu. Podczas produkowania wiele plików wyjściowych w wierszu polecenia, można utworzyć tylko jedną manifestu dla aplikacji i musi przejść do pierwszego pliku wyjściowego, określone w wierszu polecenia. Niezależnie od tego, jakie pierwszy plik wyjściowy jest (**-target: exe**, **-target: winexe**, **-target: library** lub **-target: module**) wszystkie inne pliki wyjściowe utworzone w tej samej kompilacji musi być modułów (**-target: module**).  
   
- W przypadku utworzenia zestawu, może oznaczać, że całość lub część kodu jest zgodny ze specyfikacją CLS <xref:System.CLSCompliantAttribute> atrybutu.  
+ Jeśli utworzysz zestaw, można wskazać, że całość lub część kodu jest zgodne ze specyfikacją CLS <xref:System.CLSCompliantAttribute> atrybutu.  
   
 ```csharp  
 // target_clscompliant.cs  
@@ -60,7 +60,7 @@ public class TestClass
 }  
 ```  
   
- Aby uzyskać więcej informacji na temat ustawiania tej opcji kompilatora programowo, zobacz <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
+ Aby uzyskać więcej informacji na temat programowego ustawiania tę opcję kompilatora, zobacz <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  

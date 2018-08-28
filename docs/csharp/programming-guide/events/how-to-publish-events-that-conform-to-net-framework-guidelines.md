@@ -5,27 +5,27 @@ helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
 ms.openlocfilehash: 830f86be43f1499bd87ff02690061b08f8f7f86d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322640"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43001268"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>Porady: publikowanie zdarzeń zgodnych ze wskazówkami dotyczącymi .NET Framework (Przewodnik programowania w języku C#)
-W poniższej procedurze przedstawiono sposób dodawania zdarzenia, które są zgodne ze standardem [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] wzorzec do klas i struktur. Wszystkie zdarzenia w [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] biblioteki klas są oparte na <xref:System.EventHandler> delegata, która jest zdefiniowana w następujący sposób:  
+W poniższej procedurze przedstawiono sposób dodawania zdarzenia, które są zgodne ze standardem [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] wzorzec do klas i struktur. Wszystkie zdarzenia w [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] biblioteki klas są oparte na <xref:System.EventHandler> delegować, która została zdefiniowana w następujący sposób:  
   
 ```csharp  
 public delegate void EventHandler(object sender, EventArgs e);  
 ```  
   
 > [!NOTE]
->  [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] Przedstawiono ogólny wersji tego obiektu delegowanego <xref:System.EventHandler%601>. Następujące przykłady przedstawiają sposób użycia obie wersje.  
+>  [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] Wprowadza ogólnego wersji tego obiektu delegowanego <xref:System.EventHandler%601>. Następujące przykłady przedstawiają sposób użycia obu wersji.  
   
- Mimo że zdarzeń w klasach zdefiniowanych przez użytkownika może być oparta na dowolnego typu delegata prawidłowe nawet pełnomocników, które zwracają wartości, jest zwykle zalecane na podstawie zdarzeń [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] wzorca za pomocą <xref:System.EventHandler>, jak pokazano w poniższym przykładzie.  
+ Mimo że zdarzeń w klasach, które definiujesz może bazować na dowolnego typu delegata prawidłowe nawet obiektów delegowanych, które zwracają wartość, ogólnie zaleca się na podstawie zdarzeń [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] wzorca za pomocą <xref:System.EventHandler>, jak pokazano w poniższym przykładzie.  
   
-### <a name="to-publish-events-based-on-the-eventhandler-pattern"></a>Aby opublikować zdarzenia oparte na wzorcu EventHandler  
+### <a name="to-publish-events-based-on-the-eventhandler-pattern"></a>Do publikowania zdarzeń oparta na wzorcu EventHandler  
   
-1.  (Pomiń ten krok i przejdź do kroku 3a, jeśli nie masz do wysyłania danych niestandardowych z wydarzenia). Zadeklarować klasy w niestandardowych danych w zakresie, widocznego dla obu wydawcy i subskrybenta klasy. Następnie dodaj członków wymagane do przechowywania danych zdarzenia niestandardowego. W tym przykładzie zostanie zwrócony ciąg proste.  
+1.  (Pomiń ten krok i przejdź do kroku 3a, jeśli nie masz do wysyłania niestandardowych danych za pomocą zdarzenia). Deklarowanie klasy dla niestandardowych danych w zakresie, który jest widoczny dla obu wydawcy i subskrybenta klasy. Następnie dodaj wymagane elementy członkowskie do przechowywania danych zdarzenia niestandardowego. W tym przykładzie zwracany jest prosty ciąg.  
   
     ```csharp  
     public class CustomEventArgs : EventArgs  
@@ -42,34 +42,34 @@ public delegate void EventHandler(object sender, EventArgs e);
     }  
     ```  
   
-2.  (Ten krok można pominąć, jeśli używasz wersji ogólnego <xref:System.EventHandler%601> .) Zadeklarować obiektu delegowanego w klasie publikowania. Nadaj nazwę, która kończy się *EventHandler*. Drugi parametr określa typ EventArgs swojego niestandardowych.  
+2.  (Pomiń ten krok, jeśli używasz wersji ogólnych <xref:System.EventHandler%601> .) Należy zadeklarować delegata w klasie publikowania. Nadaj mu nazwę, która kończy się *EventHandler*. Drugi parametr określa swój niestandardowy typ EventArgs.  
   
     ```csharp  
     public delegate void CustomEventHandler(object sender, CustomEventArgs a);  
     ```  
   
-3.  Deklarowanie zdarzenia w klasie publikowania za pomocą jednej z następujących czynności.  
+3.  Zadeklaruj zdarzenie w klasie publikacji przy użyciu jednej z następujących czynności.  
   
-    1.  Jeśli masz nie niestandardowej klasy EventArgs danego typu zdarzenia będą delegata EventHandler nierodzajową. Nie należy deklarować delegata, ponieważ jest już zadeklarowany w <xref:System> przestrzeni nazw, która jest dołączana w przypadku tworzenia projektu C#. Dodaj następujący kod do klasy wydawcy.  
+    1.  Jeśli nie masz żadnych niestandardowej klasy EventArgs, typu zdarzenia będą delegata EventHandler nieogólnego. Nie trzeba zadeklarować obiektu delegowanego, ponieważ jest już zadeklarowana w <xref:System> przestrzeni nazw, która jest dołączana w przypadku utworzenia projektu języka C#. Dodaj następujący kod do klasy wydawcy.  
   
         ```csharp  
         public event EventHandler RaiseCustomEvent;  
         ```  
   
-    2.  Jeśli używasz wersji nieogólnego <xref:System.EventHandler> i mieć niestandardowej klasy pochodzącej od <xref:System.EventArgs>, zadeklarować wydarzenia w klasie publikowania i używana jako typ pełnomocnika w kroku 2.  
+    2.  Jeśli używasz wersji nieogólnego <xref:System.EventHandler> i masz niestandardowej klasy pochodzącej od <xref:System.EventArgs>zadeklarować zdarzenia wewnątrz klasy publikowania i używanie swoim delegacie z kroku 2 jako typu.  
   
         ```csharp  
         public event CustomEventHandler RaiseCustomEvent;  
         ```  
   
-    3.  Jeśli używasz wersji ogólnego, nie trzeba niestandardowego obiektu delegowanego. Zamiast tego w klasie publikowania, musisz wybrać typ użytkownika zdarzeń jako `EventHandler<CustomEventArgs>`, zastępując nazwę klasy między nawiasami.  
+    3.  Jeśli używasz wersji ogólnego, nie trzeba niestandardową klasę delegatów. Zamiast tego, w klasie publikacji, należy określić typu zdarzenia jako `EventHandler<CustomEventArgs>`, zastępując nazwę klasy między nawiasami.  
   
         ```csharp  
         public event EventHandler<CustomEventArgs> RaiseCustomEvent;  
         ```  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano poprzednich kroków za pomocą niestandardowej klasy EventArgs i <xref:System.EventHandler%601> jako typ zdarzenia.  
+ W poniższym przykładzie pokazano poprzednich krokach za pomocą niestandardowej klasy EventArgs i <xref:System.EventHandler%601> jako typ zdarzenia.  
   
  [!code-csharp[csProgGuideEvents#2](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-publish-events-that-conform-to-net-framework-guidelines_1.cs)]  
   

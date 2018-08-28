@@ -14,27 +14,27 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: afec9965c4ff728094e901eb4924ac94c432b300
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 44c67470def430a9ba924483899f0db6a9c798a2
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643029"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999912"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Porady: wywoływanie funkcji Windows wykorzystującej typy bez znaku (Visual Basic)
-Zużywają klasy, modułu lub struktury, która ma elementów członkowskich typu Liczba całkowita bez znaku, można uzyskać dostępu do tych elementów członkowskich za pomocą Visual Basic.  
+Używanym klasy, modułu lub struktura, która ma składowych typu Liczba całkowita bez znaku, można uzyskać dostęp do tych członków, za pomocą Visual Basic.  
   
-### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Wywoływanie funkcji Windows wykorzystującej typu bez znaku  
+### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Aby wywołać funkcję Windows, która przyjmuje typ bez znaku  
   
-1.  Użyj [instrukcji Declare](../../../visual-basic/language-reference/statements/declare-statement.md) mówić Visual Basic biblioteki, który zawiera funkcję, jego nazwa jest w tej bibliotece jest jego sekwencja wywoływania i sposób konwertowania ciągów podczas wywoływania metody go.  
+1.  Użyj [instrukcji Declare](../../../visual-basic/language-reference/statements/declare-statement.md) mówić języka Visual Basic, biblioteki, która zawiera funkcję, jego nazwa jest w tej bibliotece, co to jest jego sekwencja wywoływania i sposób konwertowania ciągów przy wywoływaniu tego elementu.  
   
-2.  W `Declare` instrukcji, użyj `UInteger`, `ULong`, `UShort`, lub `Byte` odpowiednio dla każdego parametru z typu bez znaku.  
+2.  W `Declare` instrukcji, użyj `UInteger`, `ULong`, `UShort`, lub `Byte` odpowiednio dla każdego parametru za pomocą typ bez znaku.  
   
-3.  Zajrzyj do dokumentacji wywoływany można znaleźć nazwy i wartości stałe, który używa funkcji systemu Windows. Wiele z tych są zdefiniowane w pliku WinUser.h.  
+3.  Zajrzyj do dokumentacji dla funkcji Windows, wywoływany można znaleźć nazwy i wartości stałe, które są używane. Wiele z nich są zdefiniowane w pliku WinUser.h.  
   
-4.  Deklarowanie stałych niezbędne w kodzie. Wiele stałe systemu Windows są wartościami typu unsigned 32-bitowe i należy je określić `As``UInteger`.  
+4.  Deklarowanie stałych niezbędne w kodzie. Wiele stałe Windows są wartości bez znaku 32-bitowe i należy je zadeklarować `As``UInteger`.  
   
-5.  Wywołanie funkcji w zwykły sposób. Poniższy przykład wywołuje funkcję Windows `MessageBox`, który przyjmuje argument liczby całkowitej bez znaku.  
+5.  Wywołaj funkcję w normalny sposób. Poniższy przykład wywołuje funkcję Windows `MessageBox`, który przyjmuje argument typu Liczba całkowita bez znaku.  
   
     ```  
     Public Class windowsMessage  
@@ -59,7 +59,7 @@ Zużywają klasy, modułu lub struktury, która ma elementów członkowskich typ
     End Class  
     ```  
   
-     Można przetestować funkcji `messageThroughWindows` następującym kodem.  
+     Możesz przetestować funkcję `messageThroughWindows` następującym kodem.  
   
     ```  
     Public Sub consumeWindowsMessage()  
@@ -69,16 +69,16 @@ Zużywają klasy, modułu lub struktury, która ma elementów członkowskich typ
     ```  
   
     > [!CAUTION]
-    >  `UInteger`, `ULong`, `UShort`, I `SByte` typy danych nie są częścią [niezależność od języka i elementy niezależne od języka](../../../standard/language-independence-and-language-independent-components.md) (ze specyfikacją CLS), więc kodu zgodne ze specyfikacją CLS nie może korzystać składnik który używa ich.  
+    >  `UInteger`, `ULong`, `UShort`, I `SByte` typy danych nie są częścią [niezależność od języka i składniki niezależne od języka](../../../standard/language-independence-and-language-independent-components.md) (CLS), więc kodu zgodne ze specyfikacją CLS nie może używać składnika, są one używane.  
   
     > [!IMPORTANT]
-    >  Wywołania do kodu niezarządzanego, takich jak interfejsu programowania aplikacji (API), system Windows udostępnia kodu na potencjalne zagrożenia bezpieczeństwa.  
+    >  Wywołania do kodu niezarządzanego, takich jak interfejsu programowania aplikacji (API), Windows udostępnia kod na potencjalne zagrożenia bezpieczeństwa.  
   
     > [!IMPORTANT]
-    >  Wywołanie interfejsu API systemu Windows wymaga uprawnień kodu niezarządzanego, co może wpływać na jej wykonanie w sytuacjach częściowego zaufania. Aby uzyskać więcej informacji, zobacz <xref:System.Security.Permissions.SecurityPermission> i [uprawnienia dostępu do kodu](http://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675).  
+    >  Wywołanie interfejsu API Windows wymaga uprawnienie niezarządzanego kodu, które mogą mieć wpływ na jej wykonanie w sytuacjach częściowego zaufania. Aby uzyskać więcej informacji, zobacz <xref:System.Security.Permissions.SecurityPermission> i [uprawnienia dostępu kodu](http://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Typy danych](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Typy danych](../../../visual-basic/language-reference/data-types/index.md)  
  [Integer, typ danych](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
  [UInteger, typ danych](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
  [Declare, instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)  

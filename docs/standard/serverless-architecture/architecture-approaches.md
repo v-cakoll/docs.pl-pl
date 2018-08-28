@@ -4,12 +4,12 @@ description: Wprowadzenie do architektury zbliża się do tworzenia aplikacji op
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: b080e029fb1214ebf4d2717902c3b6d4af06d254
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 21e191f17e7d0b4f2d64454fb14c46a4831a8375
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404961"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999886"
 ---
 # <a name="architecture-approaches"></a>Metody dotyczące architektury
 
@@ -75,7 +75,7 @@ Aplikacje niewymagające użycia serwera może służyć do zaimplementować jed
 * Usługi nie są zależne od pojedynczym magazynie danych.
 * System został zaprojektowany z błędem, pamiętając, a aplikacja może nadal działać, nawet wtedy, gdy niektóre usługi nie.
 
-Mikrousługi nie muszą być wzajemnego do innych metod architektury. Na przykład architektury N-warstwowej, może używać mikrousług dla warstwy środkowej. Istnieje również możliwość mikrousługi w na różne sposoby, z katalogów wirtualnych na hostach usług IIS do kontenerów. Cechy mikrousług były szczególnie idealne rozwiązanie w przypadku implementacji bez użycia serwera.
+Mikrousługi nie muszą być wzajemnie wykluczających się do innych metod architektury. Na przykład architektury N-warstwowej, może używać mikrousług dla warstwy środkowej. Istnieje również możliwość mikrousługi w na różne sposoby, z katalogów wirtualnych na hostach usług IIS do kontenerów. Cechy mikrousług były szczególnie idealne rozwiązanie w przypadku implementacji bez użycia serwera.
 
 ![Architektura Mikrousług](./media/microservices-architecture.png)
 

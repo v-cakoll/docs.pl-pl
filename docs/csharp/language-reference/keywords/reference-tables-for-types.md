@@ -8,15 +8,15 @@ helpviewer_keywords:
 - types [C#], reference tables
 - C# language, data types
 ms.assetid: 1d2b6a9b-31fd-4fa6-a7b2-bfd9c806ac8a
-ms.openlocfilehash: c432140dfd009518290ac6a21129cfb968f661b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a46766b17f413346c22dd6980b461421af26391c
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266814"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999110"
 ---
 # <a name="reference-tables-for-types-c-reference"></a>Tabele odwołań dla typów (odwołanie w C#)
-W poniższych tabelach odwołanie podsumowanie typów C#:  
+W poniższych tabelach odwołań podsumowanie typów języka C#:  
   
  [Tabela typów wbudowanych](../../../csharp/language-reference/keywords/built-in-types-table.md)  
   
@@ -24,7 +24,7 @@ W poniższych tabelach odwołanie podsumowanie typów C#:
   
  [Typy zmiennoprzecinkowe](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
   
- [wartości domyślne](../../../csharp/language-reference/keywords/default-values-table.md)  
+ [Wartości domyślne](../../../csharp/language-reference/keywords/default-values-table.md)  
   
  [Typy wartości](../../../csharp/language-reference/keywords/value-types-table.md)  
   
@@ -32,10 +32,11 @@ W poniższych tabelach odwołanie podsumowanie typów C#:
   
  [Tabela jawnych konwersji liczbowych](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
   
- Aby uzyskać informacje na formatowanie danych wyjściowych typy liczbowe, zobacz [formatowanie tabeli wyników liczbowych](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md).  
+ Aby uzyskać informacje na temat formatowania danych wyjściowych typy liczbowe, zobacz [formatowanie tabeli wyników liczbowych](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Typy odwołań](../../../csharp/language-reference/keywords/reference-types.md)  
- [Typy wartości](../../../csharp/language-reference/keywords/value-types.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Typy odwołań](../../../csharp/language-reference/keywords/reference-types.md)  
+- [Typy wartości](../../../csharp/language-reference/keywords/value-types.md)

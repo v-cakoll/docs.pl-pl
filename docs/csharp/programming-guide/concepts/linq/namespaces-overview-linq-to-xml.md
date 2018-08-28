@@ -1,27 +1,27 @@
 ---
-title: Omówienie przestrzenie nazw (LINQ do XML)
+title: Przegląd przestrzeni nazw (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 16283322-8238-4918-ab11-802ac6748eb7
 ms.openlocfilehash: 03451f50605adf6de0d43f19d220aaeed382f13c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323852"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999228"
 ---
-# <a name="namespaces-overview-linq-to-xml"></a>Omówienie przestrzenie nazw (LINQ do XML)
-W tym temacie przedstawiono obszary nazw, <xref:System.Xml.Linq.XName> klasy, a <xref:System.Xml.Linq.XNamespace> klasy.  
+# <a name="namespaces-overview-linq-to-xml"></a>Przegląd przestrzeni nazw (LINQ to XML)
+W tym temacie przedstawiono przestrzeni nazw, <xref:System.Xml.Linq.XName> klasy, a <xref:System.Xml.Linq.XNamespace> klasy.  
   
 ## <a name="xml-names"></a>Nazwy XML  
- Nazwy XML często są źródłem złożoności programowania w języku XML. Nazwa XML składa się z przestrzeni nazw XML (nazywanych również identyfikator URI przestrzeni nazw XML) i nazwa lokalna. Obszar nazw XML jest podobny do przestrzeni nazw w [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-programu. Umożliwia ona zakwalifikować unikatowej nazwy elementów i atrybutów. Dzięki temu można uniknąć konfliktów nazw między różnymi składnikami dokumentu XML. Po zadeklarowaniu przestrzeni nazw XML, można wybrać nazwę lokalną o tylko musi być unikatowa w obrębie tej przestrzeni nazw.  
+ Nazwy XML są często źródłem złożoności w programowaniu XML. Nazwa XML składa się z przestrzeni nazw XML (nazywane również identyfikator URI przestrzeni nazw XML) i lokalna nazwa. Przestrzeń nazw XML jest podobny do przestrzeni nazw w [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]— na podstawie programu. Pozwala ona jednoznacznie kwalifikowania nazwy elementów i atrybutów. Pomaga to uniknąć konfliktów nazw między różne części dokumentu XML. Jeśli zadeklarowano nazw XML, można wybrać nazwę lokalną o tylko musi być unikatowa w obrębie tej przestrzeni nazw.  
   
- Innym aspektem nazw XML jest XML *prefiksy przestrzeni nazw*. Prefiksy XML, że większość złożoność nazwy XML. Tymi prefiksami umożliwiają tworzenie skrótu dla przestrzeni nazw XML, co sprawia, że dokument XML bardziej zwięzłe i zrozumienia. Jednak prefiksy XML w zależności od kontekstu ma znaczenie, który dodaje złożoności. Na przykład prefiks XML `aw` może być skojarzony z jedną przestrzeń nazw XML w jednej części drzewa XML oraz z różnych przestrzeni nazw XML w innej części drzewa XML.  
+ Innym aspektem nazw XML jest XML *prefiksy przestrzeni nazw*. Prefiksy XML spowodować, że większość złożoność nazwy XML. Prefiksy te umożliwiają tworzenie skrótów dla przestrzeni nazw XML, co sprawia, że dokument XML bardziej zwięzłe i zrozumiałe. Jednak prefiksy XML w zależności od kontekstu ma znaczenie, które zwiększa złożoność. Na przykład prefiks XML `aw` może być skojarzony z jedną przestrzeń nazw XML w jednej części drzewa XML oraz z innej przestrzeni nazw XML w innej części drzewa XML.  
   
- Jedną z zalet funkcji [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] języku C# jest, że nie trzeba używać prefiksów XML. Gdy [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ładuje lub analizuje dokument XML prefiksami XML nie zostanie rozwiązany do jego odpowiedniej przestrzeni nazw XML. Po wykonaniu tej podczas pracy z dokumentu, który używa przestrzeni nazw, możesz prawie zawsze dostęp do przestrzeni nazw przez identyfikator URI przestrzeni nazw, a nie przez prefiks przestrzeni nazw. Podczas pracy deweloperów z nazw XML w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zawsze pracują z nazwą XML pełną (to, że przestrzeń nazw XML i nazwa lokalna). Jednakże, gdy jest to konieczne, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] służy do pracy z i kontrolować prefiksy przestrzeni nazw.  
+ Jedną z zalet funkcji [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] przy użyciu języka C# jest, że nie trzeba używać prefiksów XML. Gdy [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ładuje lub analizuje dokument XML prefiksu dla każdego XML nie zostanie rozwiązany do jego odpowiedniej przestrzeni nazw XML. Po tym podczas pracy z dokumentu, który używa przestrzeni nazw, należy prawie zawsze dostęp do przestrzeni nazw za pomocą identyfikatora URI obszaru nazw, a nie przy użyciu prefiksu przestrzeni nazw. Gdy deweloperzy pracują z nazwami XML w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zawsze pracują z w pełni kwalifikowana nazwa XML (czyli przestrzeni nazw XML i lokalna nazwa). Jednakże, gdy jest to konieczne, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] umożliwia pracę i kontrolowanie prefiksów przestrzeni nazw.  
   
- W [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], jest klasa, która reprezentuje nazw XML <xref:System.Xml.Linq.XName>. Nazwy XML często są wyświetlane w całym [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] interfejsu API, i wszędzie tam, gdzie nazwa XML jest wymagana, można znaleźć <xref:System.Xml.Linq.XName> parametru. Jednak rzadko pracę bezpośrednio z <xref:System.Xml.Linq.XName>. <xref:System.Xml.Linq.XName> zawiera niejawna konwersja z ciągu.  
+ W [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], klasa, która reprezentuje nazwy XML jest <xref:System.Xml.Linq.XName>. Nazwy XML są często widoczne w całym [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] interfejsu API i wszędzie tam, gdzie nazwa XML jest wymagana, można znaleźć <xref:System.Xml.Linq.XName> parametru. Jednak rzadko pracę bezpośrednio z <xref:System.Xml.Linq.XName>. <xref:System.Xml.Linq.XName> zawiera niejawną konwersję z ciągu.  
   
  Aby uzyskać więcej informacji, zobacz <xref:System.Xml.Linq.XNamespace> i <xref:System.Xml.Linq.XName>.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Praca z przestrzeni nazw XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+ [Praca z przestrzeniami nazw XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)

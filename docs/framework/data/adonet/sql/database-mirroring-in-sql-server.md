@@ -1,46 +1,46 @@
 ---
-title: Dublowania w programie SQL Server bazy danych
+title: Dublowania w programie SQL Server
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: cbb4b729475c8f77c204c3a9250d48d4b0cd3bc5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 349cc10062cd73def0b8b3966a17ae9cbd0deab5
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362273"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003089"
 ---
-# <a name="database-mirroring-in-sql-server"></a>Dublowania w programie SQL Server bazy danych
-Funkcja dublowania baz danych w programie SQL Server pozwala na zachowanie kopiowania lub dublowania bazy danych programu SQL Server na serwerze wstrzymania. Dublowanie gwarantuje, że dwa osobne kopie danych istnieje przez cały czas, wysokiej dostępności i ukończyć nadmiarowość danych. Dostawcy danych programu .NET dla programu SQL Server obsługuje niejawne dublowania bazy danych, dzięki czemu deweloper nie trzeba podejmować żadnych działań lub pisania kodu, gdy została skonfigurowana dla bazy danych programu SQL Server. Ponadto <xref:System.Data.SqlClient.SqlConnection> obiektu obsługuje tryb jawne połączenie, który umożliwia podanie nazwy serwera partnerskiego trybu failover w <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
+# <a name="database-mirroring-in-sql-server"></a>Dublowania w programie SQL Server
+Funkcja dublowania baz danych w programie SQL Server pozwala na zachowanie kopiowania lub dublowania bazy danych programu SQL Server na serwerze wstrzymania. Dublowanie gwarantuje, że dwie oddzielne kopie danych istnieją przez cały czas, zapewniając wysoką dostępność i ukończyć nadmiarowości danych. .NET Data Provider for SQL Server obsługuje niejawne dublowania bazy danych, tak aby deweloper nie trzeba podejmować żadnych działań lub pisania kodu, gdy został skonfigurowany dla bazy danych programu SQL Server. Ponadto <xref:System.Data.SqlClient.SqlConnection> obiekt obsługuje tryb jawne połączenie, który umożliwia podanie nazwy serwera partnerskiego trybu failover, w <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
- Ma miejsce następująca sekwencja uproszczony zdarzeń dla <xref:System.Data.SqlClient.SqlConnection> obiektu, którego celem jest skonfigurowany dla funkcji dublowania bazy danych:  
+ Poniższy uproszczony sekwencja zdarzeń dla <xref:System.Data.SqlClient.SqlConnection> obiektu, który jest przeznaczony dla skonfigurowano obsługę dublowania bazy danych:  
   
-1.  Aplikacja kliencka połączy się z główną bazą danych, a serwer odsyła nazwę serwera partnerskiego, które następnie są buforowane na kliencie.  
+1.  Aplikacja kliencka połączy się z główną bazą danych, a serwer odsyła nazwę serwera partnera, który następnie jest buforowana na kliencie.  
   
-2.  Jeśli serwer zawierający główna baza danych nie powiedzie się lub połączenie zostanie przerwane, stan połączenia i transakcji zostaną utracone. Aplikacja kliencka próbuje ponownie ustanowić połączenia z główną bazą danych i nie powiedzie się.  
+2.  Jeśli serwer zawierający dublowanej bazy danych ulegnie awarii lub połączenie zostało przerwane, stan połączenia i transakcji zostaną utracone. Aplikacja kliencka próbuje ponownie ustanowić połączenia z główną bazą danych i kończy się niepowodzeniem.  
   
-3.  Przezroczysty następnie aplikacja kliencka próbuje nawiązać połączenie z duplikatu bazy danych na serwer partnerski. Jeśli próba powiedzie się, połączenie jest przekierowywany do duplikatu bazy danych, która staje się nowego podmiotu zabezpieczeń bazy danych.  
+3.  Następnie aplikacja kliencka przezroczyste próbuje nawiązać połączenie z duplikatu bazy danych na serwerze partnerskim. Jeśli się powiedzie, połączenie jest przekierowywane do duplikatu bazy danych, które następnie staje się nowej nazwy głównej bazy danych.  
   
-## <a name="specifying-the-failover-partner-in-the-connection-string"></a>Określanie serwer partnerski trybu Failover w parametrach połączenia  
- Jeśli podasz nazwę serwera partnerskiego trybu failover w parametrach połączenia klienta niewidocznie prób połączenia z serwer partnerski trybu failover, jeśli główna baza danych jest niedostępna, jeśli aplikacja kliencka pierwszy raz łączy.  
+## <a name="specifying-the-failover-partner-in-the-connection-string"></a>Określanie serwera partnerskiego trybu Failover w parametrach połączenia  
+ Jeśli podasz nazwę serwera partnerskiego trybu failover w parametrach połączenia klienta przezroczyste prób połączenia z serwera partnerskiego trybu failover, jeśli główna baza danych jest niedostępny przy pierwszym połączeniu z aplikacji klienckiej.  
   
 ```  
 ";Failover Partner=PartnerServerName"  
 ```  
   
- Jeśli pominięto nazwę serwera partnerskiego trybu failover i główna baza danych jest niedostępny podczas aplikacja kliencka pierwszy raz łączy następnie <xref:System.Data.SqlClient.SqlException> jest wywoływane.  
+ Jeśli pominięto nazwę serwera partnerskiego trybu failover i główna baza danych jest niedostępna podczas aplikacja kliencka najpierw łączy się następnie <xref:System.Data.SqlClient.SqlException> jest wywoływane.  
   
- Gdy <xref:System.Data.SqlClient.SqlConnection> jest poprawnie otwarty, jest zwracany przez serwer Nazwa partnera pracy awaryjnej i zastępuje wszelkie wartości dostarczone w parametrach połączenia.  
+ Gdy <xref:System.Data.SqlClient.SqlConnection> został pomyślnie otwarty, Nazwa partnera pracy awaryjnej jest zwracany przez serwer i zastępuje wszystkie wartości podane w parametrach połączenia.  
   
 > [!NOTE]
->  Nazwa początkowego wykazu lub bazy danych należy jawnie określić w parametrach połączenia dla scenariuszy dublowania bazy danych. Jeśli klient otrzymuje informacje trybu failover na połączenie, które nie mają jawnie określona początkowego wykazu lub bazy danych, informacje trybu failover nie są buforowane, a aplikacja nie będzie podejmował prób w przypadku awarii podmiotu zabezpieczeń serwera w trybie Failover. Jeśli parametry połączenia ma wartość serwer partnerski trybu failover, ale żadnej wartości dla początkowego wykazu lub bazy danych, `InvalidArgumentException` jest wywoływane.  
+>  Początkowa nazwa katalogu lub bazy danych musi być jawnie określone w ciąg połączenia dla scenariuszy dublowania bazy danych. Jeśli klient otrzymuje informacje trybu failover dla połączenia, który nie ma jawnie określonego katalogu początkowego lub bazy danych, informacje o pracy awaryjnej nie jest buforowana i aplikacja nie jest podejmowana próba pracy awaryjnej w przypadku awarii serwera podmiotu zabezpieczeń. Jeśli ciąg połączenia ma wartość dla serwera partnerskiego trybu failover, ale brak wartości dla katalogu początkowego lub bazy danych, `InvalidArgumentException` jest wywoływane.  
   
 ## <a name="retrieving-the-current-server-name"></a>Pobieranie bieżącej nazwy serwera  
- W przypadku trybu failover, możesz pobrać nazwę serwera, do którego bieżące połączenie jest rzeczywiście połączony przy użyciu <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> właściwość <xref:System.Data.SqlClient.SqlConnection> obiektu. Poniższy fragment kodu pobiera nazwę aktywnego serwera, przy założeniu, że zmienna połączenia odwołuje się do otwartego <xref:System.Data.SqlClient.SqlConnection>.  
+ Zdarzenia na pracę awaryjną, możesz pobrać nazwę serwera, do którego bieżące połączenie jest rzeczywiście połączone za pomocą <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> właściwość <xref:System.Data.SqlClient.SqlConnection> obiektu. Poniższy fragment kodu pobiera nazwę ASP, zakładając, że zmienna połączenia odwołuje się otwartą <xref:System.Data.SqlClient.SqlConnection>.  
   
- Po wystąpieniu zdarzenia pracy awaryjnej i połączenia się przełączone do serwer duplikatu **źródła danych** właściwości jest aktualizowana w celu odzwierciedlenia nazwy duplikatu.  
+ Po wystąpieniu zdarzenia pracy awaryjnej i połączenie zostanie przełączone na serwer duplikatu **DataSource** właściwość zostanie zaktualizowany w celu odzwierciedlenia nazwy dublowania.  
   
 ```vb  
 Dim activeServer As String = connection.DataSource  
@@ -51,17 +51,17 @@ string activeServer = connection.DataSource;
 ```  
   
 ## <a name="sqlclient-mirroring-behavior"></a>Zachowanie funkcji dublowania SqlClient  
- Klient zawsze próbuje nawiązać połączenia z bieżącym serwerze dublowanym. W przypadku niepowodzenia podejmuje serwer partnerski trybu failover. Jeśli już duplikatu bazy danych została przełączona na głównej roli na serwerze partnerskim, połączenie powiedzie się i nowe mapowanie dublowany podmiot zabezpieczeń są wysyłane do klienta i w pamięci podręcznej przez czas ich istnienia wywołujący <xref:System.AppDomain>. Nie są przechowywane w magazynie trwałe i nie jest dostępna dla kolejnych połączeń w innej **elementu AppDomain** lub inny proces. Jednak nie jest dostępny do kolejnych połączeń, w tym samym **elementu AppDomain**. Uwaga to inny **elementu AppDomain** lub proces uruchomiony na tym samym lub innym komputerze zawsze ma puli połączeń, a te połączenia nie są resetowane. W takim przypadku głównej bazy danych ulegnie awarii, każdy proces lub **elementu AppDomain** raz kończy się niepowodzeniem i puli są automatycznie usuwane.  
+ Klient zawsze próbuje połączyć się z bieżącym serwerze dublowanym. Jeśli nie powiedzie się, próbuje serwera partnerskiego trybu failover. Jeśli główna rola na serwerze partnerskim już został przełączony duplikatu bazy danych, połączenie powiedzie się, a nowe mapowanie dublowane jednostki jest wysyłane do klienta w pamięci podręcznej i okresem istnienia wywołania <xref:System.AppDomain>. Nie są przechowywane w magazynie trwałym i nie jest dostępna dla kolejnych połączeń w innej **AppDomain** lub procesu. Jednak jest dostępna tylko dla kolejnych połączeń, w tym samym **AppDomain**. Uwaga oznacza innego **AppDomain** lub proces uruchomiony na tym samym lub innym komputerze zawsze ma puli połączeń i te połączenia nie są resetowane. W takim przypadku podstawowej bazy danych ulegnie awarii, każdy proces lub **AppDomain** kończy się niepowodzeniem, jeden raz i puli są automatycznie usuwane.  
   
 > [!NOTE]
->  Funkcja dublowania obsługi na serwerze jest skonfigurowana na podstawie na bazę danych. Jeśli operacje manipulacji danych są wykonywane w innych bazach danych nie są uwzględniane w zestawie principal/duplikatu, przy użyciu nazwy wieloczęściowej lub zmieniając bieżącej bazy danych zmiany tych baz danych nie są propagowane w przypadku awarii. Nie zostanie wygenerowany błąd modyfikacji danych w bazie danych, która nie jest dublowana. Deweloper musi być możliwy wpływ takich operacji.  
+>  Funkcja dublowania obsługi na serwerze jest skonfigurowana na podstawie poszczególnych baz danych. Jeśli operacji na strumieniach danych są wykonywane w odniesieniu do innych baz danych, które nie są uwzględniane w zestawie jednostki/woluminu dublowanego, przy użyciu nazwy wieloczęściowej lub zmieniając bieżącej bazy danych zmian do tych baz danych nie propagować awarii. Nie zostanie wygenerowany błąd modyfikacji danych w bazie danych, która nie jest dublowana. Deweloper musi zwrócić możliwy wpływ takich operacji.  
   
 ## <a name="database-mirroring-resources"></a>Zasoby dublowania bazy danych  
- Dokumentacja koncepcyjna i informacji na temat konfigurowania wdrażania i administrowania dublowania, zobacz następujące zasoby w programie SQL Server — książki Online.  
+ Dokumentacja koncepcyjna i informacji na temat konfigurowania wdrażania i administrowania dublowania, zobacz następujące zasoby w dokumentacji SQL Server.  
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Funkcja dublowania baz danych](http://msdn.microsoft.com/library/bb934127.aspx) w dokumentacji SQL Server Books Online|Opisuje sposób instalowania i konfigurowania funkcji dublowania w programie SQL Server.|  
+|[Funkcja dublowania baz danych](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|Opisuje sposób instalowania i konfigurowania dublowania w programie SQL Server.|  
   
 ## <a name="see-also"></a>Zobacz też  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](http://go.microsoft.com/fwlink/?LinkId=217917)

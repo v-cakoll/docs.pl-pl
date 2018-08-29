@@ -1,5 +1,5 @@
 ---
-title: Me, My, MyBase, i MyClass w Visual Basic
+title: Me, My, MyBase i MyClass w Visual Basic
 ms.date: 07/20/2015
 f1_keywords:
 - MyClass
@@ -28,13 +28,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 07/25/2018
 ms.locfileid: "39244715"
 ---
-# <a name="me-my-mybase-and-myclass-in-visual-basic"></a>Me, My, MyBase, i MyClass w Visual Basic
-`Me`, `My`, `MyBase`, i `MyClass` w języku Visual Basic mają podobne nazwy, ale różnych celów. W tym temacie opisano każdy z tych obiektów, aby odróżnić je.  
+# <a name="me-my-mybase-and-myclass-in-visual-basic"></a>Me, My, MyBase i MyClass w Visual Basic
+`Me`, `My`, `MyBase` i `MyClass` w języku Visual Basic mają podobne nazwy, ale różne cele. W tym temacie opisano każdy z tych obiektów w celu ich rozróżnienia.  
   
-## <a name="me"></a>Mnie  
- `Me` — Słowo kluczowe zapewnia sposób odwołania do konkretnego wystąpienia klasy lub struktury, w którym aktualnie wykonuje kod. `Me` zachowuje się jak zmienna obiektu lub zmiennej struktury, odwołanie do bieżącego wystąpienia. Za pomocą `Me` jest szczególnie przydatne do przekazywania informacji o obecnie wykonywanym wystąpienia klasy lub struktury do procedury w innej klasy, struktury lub modułu.  
+## <a name="me"></a>Me  
+ Słowo kluczowe `Me` umożliwia odwołanie się do konkretnego wystąpienia klasy lub struktury, w którym aktualnie wykonywany jest kod. `Me` zachowuje się jak zmienna obiektu lub struktury, odwołując się do bieżącego wystąpienia. Używanie słowa kluczowego `Me` jest szczególnie przydatne do przekazywania informacji o aktualnie wykonywanej instancji klasy lub struktury do procedury w innej klasie, strukturze lub module.
   
- Na przykład załóżmy, że masz następujące procedury w module.  
+ Załóżmy na przykład, że masz w module następującą procedurę.  
   
 ```  
 Sub ChangeFormColor(FormName As Form)  
@@ -43,20 +43,20 @@ Sub ChangeFormColor(FormName As Form)
 End Sub  
 ```  
   
- Możesz wywołać tę procedurę i przekazywać bieżące wystąpienie <xref:System.Windows.Forms.Form> klasy jako argument przy użyciu następujących instrukcji.  
+ Możesz wywołać tę procedurę i przekazać bieżące wystąpienie klasy <xref:System.Windows.Forms.Form> jako argument, używając następującej instrukcji.  
   
 ```  
 ChangeFormColor(Me)  
 ```  
   
-## <a name="my"></a>Moje  
- `My` Funkcji umożliwia łatwe i intuicyjne dostęp do wielu [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] klas, umożliwiając użytkownikowi języka Visual Basic do interakcji z komputera, aplikacji, ustawień, zasobów i tak dalej.  
+## <a name="my"></a>My  
+ Właściwość `My` pozwala na łatwy i intuicyjny dostęp do wielu klas [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], umożliwiając użytkownikowi języka Visual Basic interakcję z komputerem, aplikacją, ustawieniami, zasobami i innymi elementami.  
   
 ## <a name="mybase"></a>MyBase  
- `MyBase` — Słowo kluczowe zachowuje się jak zmienna obiektu odwołujące się do klasy bazowej bieżącego wystąpienia klasy. `MyBase` jest najczęściej używany do dostępu do składowych klasy bazowej, które zostały zastąpione lub pada w klasie pochodnej. `MyBase.New` Służy do jawnie wywołać konstruktora klasy bazowej w konstruktorze klasy pochodnej.  
+ Słowo kluczowe `MyBase` zachowuje się jak zmienna obiektu odwołująca się do klasy bazowej bieżącego wystąpienia klasy. Słowo kluczowe `MyBase` jest najczęściej używane do dostępu do składowych klasy bazowej, które zostały zastąpione lub przesłonięte w klasie pochodnej. `MyBase.New` służy do jawnego wywołania konstruktora klasy bazowej w konstruktorze klasy pochodnej.  
   
 ## <a name="myclass"></a>MyClass  
- `MyClass` — Słowo kluczowe zachowuje się jak odwołanie do bieżącego wystąpienia klasy pierwotnie zaimplementowanych zmiennej obiektu. `MyClass` jest podobny do `Me`, ale wszystkie wywołania metody na nim są traktowane tak, jakby były metody `NotOverridable`.  
+ Słowo kluczowe `MyClass` zachowuje się jak odwołanie do bieżącego wystąpienia klasy zgodnie z pierwotną implementacją. `MyClass` przypomina `Me`, ale wszystkie wywołania metod na tym słowie kluczowym są traktowane tak, jakby były `NotOverridable`. 
   
 ## <a name="see-also"></a>Zobacz też  
  [Podstawowe informacje o dziedziczeniu](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

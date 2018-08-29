@@ -23,13 +23,13 @@ Udostępnia właściwości i metody dostępu do ustawień aplikacji.
 ## <a name="properties"></a>Właściwości  
  Właściwości obiektu `My.Settings` zapewniają dostęp do ustawień aplikacji. Aby dodać lub usunąć ustawienia, należy użyć **projektanta ustawień**.  
   
- Każdy ma **nazwa**, **typu**, **zakres**, i **wartość**, i te ustawienia określają, jak właściwości każdego ustawienia dostępu do zostanie wyświetlony w `My.Settings` obiektu:  
+ Każde ustawienie ma **nazwę**, **typ**, **zakres** i **wartość**. Ustawienia te określają, jak właściwość dostępu do każdego ustawienia wyświetla się w obiekcie `My.Settings`:  
   
 -   **Nazwa** Określa nazwę właściwości.  
   
 -   **Typ** Określa typ właściwości.  
   
--   **Zakres** wskazuje, czy właściwość jest tylko do odczytu. Jeśli wartość jest **aplikacji**, właściwość jest tylko do odczytu; Jeśli wartość jest **użytkownika**, ta właściwość jest do odczytu / zapisu.  
+-   **Zakres** wskazuje, czy właściwość jest tylko do odczytu. Jeśli wartością jest **aplikacja**, właściwość jest tylko do odczytu. Jeśli wartością jest **użytkownik**, ta właściwość jest do odczytu i zapisu.  
   
 -   **Wartość** jest wartością domyślną właściwości.  
   

@@ -1,39 +1,39 @@
 ---
-title: Architektura logiczna i fizycznej architektury
-description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Architektura logiczna i fizycznej architektury
+title: Architektura logiczna a architektura fizyczna
+description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Architektura logiczna a architektura fizyczna
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: d675ba753903e181c67712e34eea82fed72df0d7
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: ebbae336761c6fa7954862cd41052e8832bf8e77
+ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105439"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43238419"
 ---
-# <a name="logical-architecture-versus-physical-architecture"></a>Architektura logiczna i fizycznej architektury
+# <a name="logical-architecture-versus-physical-architecture"></a>Architektura logiczna a architektura fizyczna
 
-Jest przydatne w tym momencie do zatrzymywania i omówienia różnicy między Architektura logiczna i architektura fizycznych, jak dotyczy to projekt aplikacji opartych na mikrousługi.
+Jest to przydatne w tym momencie zatrzymać, a omówić rozróżnienia między Architektura logiczna a architektura fizyczna i jak to ma zastosowanie do projektowania aplikacji opartych na mikrousługach.
 
-Aby rozpocząć, tworzenie mikrousług nie korzystają z żadnych określonych technologii. Na przykład kontenery Docker nie są wymagane, aby można było utworzyć architektura mikrousługi. Mikrousług tych można również uruchomić jako zwykły procesów. Mikrousług to architektura logiczna.
+Aby rozpocząć, tworzenia mikrousług nie wymaga użycia każdej określonej technologii. Na przykład kontenery platformy Docker nie są wymagane, aby można było utworzyć opartych na mikrousługach architektury. Te mikrousług może także uruchomić jako zwykły procesy. Mikrousługi to architektura logiczna.
 
-Ponadto, nawet wtedy, gdy mikrousługi fizycznie implementacji jako pojedynczą usługę, proces lub kontenera (sake na prostotę jest podejście przyjęte w pierwotnej wersji [eShopOnContainers](http://aka.ms/MicroservicesArchitecture)), to parzystość platformy mikrousługi biznesowe i usługa fizycznego lub kontenera nie jest zawsze wymagane we wszystkich przypadkach podczas kompilowania dużych i złożonych aplikacji, składa się z wielu dziesiątek, a nawet setki usług.
+Ponadto, nawet wtedy, gdy mikrousługi można fizycznie zaimplementować jako pojedynczą usługę, procesu lub kontenera (sake firmy prostotę, to podejście w pierwotnej wersji [ramach aplikacji eShopOnContainers](http://aka.ms/MicroservicesArchitecture)), to parzystość mikrousługi biznesowych i fizycznych usługi lub kontenera nie jest zawsze wymagany we wszystkich przypadkach podczas kompilowania dużych i złożonych aplikacji, składające się z wielu dziesiątek, jak i nawet setki usług.
 
-Jest to, gdy ma różnicy między architektury logicznej i fizycznej architektury aplikacji. Architektura logiczna i logiczne granice systemu nie zawsze mapują jeden do jednego z architekturą fizycznej lub wdrożenia. Może się zdarzyć, ale często nie.
+To jest, gdy istnieje różnica między Architektura logiczna a architektura fizyczna aplikacji. Architektura logiczna a logiczne granice systemu nie są zawsze mapowane jeden do jednego z architekturą fizycznej lub wdrożenia. Może się zdarzyć, ale często nie.
 
-Mimo że może zidentyfikowano niektórych mikrousług biznesowych lub ograniczonych kontekstów, oznacza to, że najlepszym sposobem wykonania jest zawsze przez utworzenie jednego usługi (np. interfejsu API sieci Web programu ASP.NET) lub jeden kontener Docker dla każdego mikrousługi biznesowych. Posiadanie reguły każdego mikrousługi firm informujący o tym, realizowane przy użyciu jednej usługi lub kontener rezygnujesz.
+Chociaż może być zidentyfikowano niektórych mikrousług firmy lub ograniczonych kontekstów, nie oznacza to, zawsze jest najlepszym sposobem ich wdrażania, tworząc pojedynczą usługę (np. interfejsu API sieci Web platformy ASP.NET) lub pojedynczym kontenerem platformy Docker dla poszczególnych mikrousług biznesowych. Reguła informujący o tym, każda mikrousługa firm ma być implementowane przy użyciu jednej usługi lub kontener jest zbyt sztywne.
 
-W związku z tym mikrousługi biznesowych lub ograniczonych kontekstu jest architektura logiczna, która może mieć odpowiedniki (lub nie) z architekturą fizycznych. Istotne jest czy mikrousługi biznesowych lub ograniczonych kontekstu musi być autonomiczne, zezwalając kod stanu niezależnie określonej wersji, wdrożyć i skalowania.
+Dlatego mikrousług biznesowych lub ograniczony kontekst jest logiczną architekturę, która może być pokrywają się (lub nie) przy użyciu architektury fizycznych. Istotną kwestią jest to, że mikrousług biznesowych lub ograniczony kontekst musi być autonomiczne, umożliwiając kodu i stanie się oddzielnie wersjonowanych, wdrażanie i skalowanie.
 
-Jak pokazano na rysunku 4-8, mikrousługi firm katalogu może składać się z kilku usług lub procesów. Mogą to być wiele usług interfejsu API sieci Web ASP.NET lub dowolny inny rodzaj usług przy użyciu protokołu HTTP lub innych protokołów. Co ważniejsze usługi można udostępnić te same dane, tak długo, jak te usługi są spójne względem tej samej domenie biznesowych.
+Jak pokazano na rysunku 4 – 8, mikrousługi firm katalogu może składać się z kilku usług lub procesów. Mogą to być wiele usług interfejsu API sieci Web platformy ASP.NET lub dowolny inny rodzaj usługi przy użyciu protokołu HTTP lub innych protokołów. Co ważniejsze usług można udostępnić te same dane, tak długo, jak te usługi są spójne w odniesieniu do tej samej domeny biznesowej.
 
 ![](./media/image8.png)
 
-**Rysunek 4-8**. Mikrousługi biznesowe z kilku usług fizycznych
+**Rysunek 4 – 8**. Mikrousługi biznesowych za pomocą kilku usług fizycznych
 
-Usług w przykładzie udostępnianie tego samego modelu danych, ponieważ te same dane co usługa wyszukiwania jest przeznaczony dla usługi interfejsu API sieci Web. Dlatego w fizycznych implementacji mikrousługi biznesowych, jest dzielona tej funkcji, można skalować każdej z tych usług wewnętrznego w górę lub w dół zgodnie z potrzebami. Może być usługi interfejsu API sieci Web zwykle wymaga więcej wystąpień usługi wyszukiwania, lub na odwrót.)
+Usługi w przykładzie udostępnić ten sam model danych, ponieważ te same dane co usługa wyszukiwania jest przeznaczony dla usługi interfejsu API sieci Web. Dlatego w fizycznych implementacji mikrousług biznesowych jest dzielona tę funkcję, dzięki czemu możesz skalować każdą z tych usług wewnętrznej w górę lub w dół odpowiednio do potrzeb. Może być usługa internetowego interfejsu API zazwyczaj wymaga więcej wystąpień niż usługi wyszukiwania lub na odwrót.
 
-Krótko mówiąc architektura logiczna mikrousług nie zawsze musi pokrywa się z architekturą fizycznego wdrożenia. W tym przewodniku zawsze, gdy firma Microsoft wspomina mikrousługi, możemy oznacza firmy lub mikrousługi logiczne, które można mapować do co najmniej jednej usługi. W większości przypadków będzie to jednej usługi, ale może być więcej.
+Krótko mówiąc logiczną architekturę mikrousług nie zawsze ma postoju architektura wdrożenia fizycznych. W tym przewodniku zawsze wtedy, gdy firma Microsoft wspomnieć o mikrousługach, mamy na myśli przez firmę lub mikrousług logiczne, które można zamapować na co najmniej jednej usługi. W większości przypadków będzie to pojedyncza usługa, ale może być więcej.
 
 
 >[!div class="step-by-step"]

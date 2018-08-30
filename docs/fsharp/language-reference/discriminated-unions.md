@@ -1,17 +1,17 @@
 ---
 title: Sumy rozłączne (F#)
-description: 'Dowiedz się, jak używać F # Suma rozłączna Unii.'
+description: 'Dowiedz się, jak używać języka F # związków wyróżniających.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 617c659e26df52819a98294bcbfa081ab82fed03
-ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
+ms.openlocfilehash: 3340933ac8e2b6fe0215c684691d216a28b64787
+ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/12/2018
-ms.locfileid: "34149078"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43238527"
 ---
 # <a name="discriminated-unions"></a>Sumy rozłączne
 
-Sumy rozłączne zapewniają obsługę wartości, które może być jedną z liczbą przypadków, prawdopodobnie każde z nich różne wartości i typy. Sumy rozłączne są przydatne w przypadku danych heterogenicznych; dane, które mogą mieć szczególnych przypadkach, w tym nieprawidłowy i w przypadku wystąpienia błędów; dane, które może być różna w typie z jednego wystąpienia i jako alternatywę dla małego obiektu hierarchii. Ponadto suma rozłączna cykliczne unie są używane do reprezentowania struktur danych drzewa.
+Połączenia rozróżniane zapewniają obsługę wartości, które mogą być jednym z wielu przypadków nazwanych, prawdopodobnie każdy z różnych wartości i typów. Połączenia rozróżniane są przydatne w przypadku heterogenicznych danych; dane, które mogą mieć specjalne przypadki, włączając przypadku prawidłowe i błędy; dane, które różni się w typie z jednego wystąpienia i jako alternatywa dla małych obiektów hierarchii. Ponadto rekursywne sumy rozłączne są używane do reprezentowania struktur drzew danych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -20,15 +20,17 @@ Sumy rozłączne zapewniają obsługę wartości, które może być jedną z lic
 type [accessibility-modifier] type-name =
     | case-identifier1 [of [ fieldname1 : ] type1 [ * [ fieldname2 : ] type2 ...]
     | case-identifier2 [of [fieldname3 : ]type3 [ * [ fieldname4 : ]type4 ...]
-...
+
+    [ member-list ]
 ```
 
 ## <a name="remarks"></a>Uwagi
-Sumy rozłączne są podobne do typów złożenia w innych językach, ale różnią się. Jako typ union w języku C++ lub typ wariantu w języku Visual Basic danych przechowywanych w wartości nie jest stały; może być jedną z kilku różne opcje. W przeciwieństwie do złożenia w tych językach, jednak wszystkich możliwych opcji podano *identyfikator przypadku*. Identyfikatory przypadku są nazwy dla różnych rodzajów wartości, które mogą być obiekty tego typu; wartości są opcjonalne. Jeśli nie podano wartości, że wielkość liter jest odpowiednikiem wariant wyliczenia. Jeśli istnieją wartości, każda wartość albo może być pojedynczą wartość określonego typu lub spójnej kolekcji, który agreguje wiele pól w tych samych lub różnych typów. Pojedyncze pole można podać nazwę, ale nazwa jest opcjonalny, nawet jeśli są nazywane innych pól w przypadku tego samego.
 
-Ułatwienia dostępu dla rozłączne domyślnie `public`.
+Połączenia rozróżniane są podobne do typów połączeń w innych językach, ale istnieją różnice. Jako typ union w języku C++ lub typ wariantu w języku Visual Basic danych przechowywanych w wartości nie zostanie usunięty; może być jednym z kilku opcji distinct. W przeciwieństwie do złożeń w tych innych językach, jednak każda z możliwych opcji otrzymuje *identyfikator przypadku*. Identyfikatory przypadków to nazwy dla różnych możliwych typów wartości, które mogą być obiekty tego typu; wartości są opcjonalne. Jeśli wartości nie są obecne, wielkość liter jest równoważna do wielkości liter w wyliczeniu. Jeśli wartości są obecne, każda wartością może być jedną wartością z określonego typu lub spójną kolekcją, która agreguje wiele pól tych samych lub różnych typów. Poszczególnym polom można nadać nazwę, ale nazwa jest opcjonalna, nawet wtedy, gdy inne pola, w tym samym przypadku są nazwane.
 
-Na przykład należy wziąć pod uwagę następujące deklaracji typu kształtu.
+Wartością domyślną jest ułatwień dostępu dla sum rozłącznych `public`.
+
+Na przykład rozważmy następującą deklarację typu kształt.
 
 ```fsharp
 type Shape =
@@ -37,9 +39,9 @@ type Shape =
     | Prism of width : float * float * height : float
 ```
 
-Poprzedni kod deklaruje rozróżnianą Unię kształtu, który może mieć wartości dowolnej z trzech przypadkach: prostokąt, okrąg i biblioteki Prism. Każdej sprawy ma inny zestaw pól. Prostokąt przypadek ma dwa o nazwie pola, zarówno typu `float`, które mają nazwy szerokości i długości. W przypadku okrąg ma tylko jedno pole o nazwie, usługi radius. W przypadku biblioteki Prism ma trzy pola są dwa (szerokość i wysokość) o nazwie pola. Nazwy pól są określane jako pola anonimowego.
+Powyższy kod deklaruje kształt złożenia dyskryminowanego, który może zawierać wartości dowolnego z trzech przypadków: prostokąt, okrąg i pryzmat. Każdy przypadek ma inny zestaw pól. Przypadek prostokąt ma dwa o nazwane pola, oba typu `float`, które mają szerokości i długości nazwy. Przypadek okręg ma tylko jedno nazwane pole, promień. Przypadek pryzmat ma trzy pola są dwa (szerokość i wysokość) o nazwie pola. Bez nazwy pól są określane jako pola anonimowe.
 
-Podając wartości w polach nazwane i anonimowe zgodnie z poniższych przykładach utworzymy obiektów.
+Konstruujesz obiekty podając wartości dla pól nazwanych i anonimowych według poniższych przykładów.
 
 ```fsharp
 let rect = Rectangle(length = 1.3, width = 10.0)
@@ -47,9 +49,9 @@ let circ = Circle (1.0)
 let prism = Prism(5., 2.0, height = 3.0)
 ```
 
-Ten kod pokazuje, że możesz użyć pola o nazwie inicjowania lub mogą polegać na kolejność pól w deklaracji i z kolei wystarczy podać wartości dla każdego pola. Wywołanie konstruktora dla `rect` w poprzednim kodzie używa pola o nazwie, ale wywołanie konstruktora dla `circ` używa kolejność. Można mieszać uporządkowanych pól i o nazwie pola, tak jak konstrukcji `prism`.
+Ten kod wskazuje, że możesz użyć nazwanych pól podczas inicjowania lub możesz polegać na określeniu kolejności pól w deklaracji i po prostu Podaj wartości dla każdego pola, z kolei. Wywołanie konstruktora dla `rect` w poprzednim kodzie używa pól nazwanych, ale wywołanie konstruktora dla `circ` używa kolejności. Możesz mieszać pola zamówione i pola nazwane, tak jak w konstrukcji `prism`.
 
-`option` Typ jest proste rozróżnianą Unię biblioteki podstawowej F #. `option` Typ został zadeklarowany w następujący sposób.
+`option` Typu jest proste złożeniem dyskryminowanym w podstawowej biblioteki języka F #. `option` Typ jest zadeklarowany w następujący sposób.
 
 ```fsharp
 // The option type is a discriminated union.
@@ -58,17 +60,17 @@ type Option<'a> =
     | None
 ```
 
-Poprzedni kod określa, że typ `Option` jest rozróżnianą Unię z dwóch przypadków `Some` i `None`. `Some` Przypadek ma skojarzoną wartość, która składa się z co najmniej dwa pola anonimowego, którego typ jest reprezentowana przez parametr typu `'a`. `None` Case nie ma skojarzonej wartości. W związku z tym `option` typ określa typu ogólnego, który ma wartość pewien typ lub brak wartości. Typ `Option` ma również alias typu małych `option`, to znaczy więcej często używane.
+Powyższy kod określa, że typ `Option` to złożenie dyskryminowane, które posiada dwa przypadki `Some` i `None`. `Some` Przypadek ma skojarzoną wartość, która składa się z jednego pola anonimowego, którego typ jest reprezentowany przez parametr typu `'a`. `None` Przypadek nie ma przypisanej wartości. Ten sposób `option` typ Określa typ ogólny, który ma wartość pewnego typu, lub brak wartości. Typ `Option` ma również alias z małej litery, `option`, czyli więcej często używane.
 
-Identyfikatory przypadku może służyć jako konstruktorów typu Unii rozłącznych. Na przykład poniższy kod służy do tworzenia wartości `option` typu.
+Identyfikatory przypadków mogą służyć jako konstruktory dla dyskryminowanego typu złożenia. Na przykład, poniższy kod służy do tworzenia wartości `option` typu.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2001.fs)]
 
-Identyfikatory przypadku są również używane w wyrażeniach dopasowywania do wzorca. We wzorcu zgodnego wyrażeniem identyfikatory są dostępne dla wartości skojarzone z poszczególnych przypadków. Na przykład w poniższym kodzie `x` identyfikator znajduje się wartość, z którym skojarzony jest `Some` przypadku `option` typu.
+Identyfikatory przypadków są również używane w wyrażeniach dopasowania do wzorca. W wyrażeniu dopasowania do wzorca identyfikatory są dostarczane dla wartości skojarzonych z indywidualnych przypadkami. Na przykład w poniższym kodzie `x` jest identyfikatorem otrzymującym wartość, która jest skojarzona z `Some` przypadku `option` typu.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2002.fs)]
 
-We wzorcu pasujące wyrażeń pola o nazwie służy do określenia dopasowań Unii rozłącznych. Typu, który został wcześniej zadeklarowany jako można użyć pola o nazwie, jak poniższy kod przedstawia wyodrębnianie wartości pól.
+W wyrażeniach dopasowania do wzorca można użyć nazwanych pól do określenia dopasowań złożenia dyskryminowanego. Dla typu kształt, który został uprzednio zadeklarowany można użyć nazwanych pól, jak w poniższym kodzie pokazano do wyodrębnienia wartości pól.
 
 ```fsharp
 let getShapeHeight shape =
@@ -78,16 +80,17 @@ let getShapeHeight shape =
     | Prism(height = h) -> h
 ```
 
-Identyfikatory przypadku można zwykle bez zakwalifikowanie ich nazwą Unii. Jeśli nazwa zawsze być kwalifikowane nazwą Unii, można zastosować [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15) atrybutu do definicji typu union.
+Zazwyczaj identyfikatory przypadków mogą służyć bez kwalifikowania ich nazwą Unii. Jeśli chcesz, aby nazwa zawsze była kwalifikowana nazwą złożenia, można zastosować [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15) atrybutu do definicji typu złożenia.
 
-### <a name="unwrapping-discriminated-unions"></a>Odkodowywanie rozłączne
+### <a name="unwrapping-discriminated-unions"></a>Odkodowywanie sumy rozłączne
 
-W F # Suma rozłączna unie są często używane w domenie modelowania zawijania jednego typu. Jest łatwy do wyodrębnienia odpowiednia wartość za pomocą, jak również dopasowanie wzorca. Nie trzeba używać wyrażenie dopasowania dla pojedynczego przypadku:
+W F # sumy rozłączne są często używane w domenie modelowania zawijania jednego typu. To ułatwia wyodrębnić wartości podstawowej za pomocą także dopasowywania do wzorca. Nie należy użyć wyrażenia dopasowania dla jednego przypadku:
+
 ```fsharp
 let ([UnionCaseName] [values]) = [UnionValue]
 ```
 
-W poniższym przykładzie pokazano to:
+Poniższy przykład przedstawia to:
 
 ```fsharp
 type ShaderProgram = | ShaderProgram of id:int
@@ -98,9 +101,9 @@ let someMethodUsingShaderProgram shaderProgram =
     ..
 ```
 
-## <a name="struct-discriminated-unions"></a>Unie Suma rozłączna — struktura
+## <a name="struct-discriminated-unions"></a>Sumy rozłączne
 
-Począwszy od 4.1 F #, może także reprezentować Suma rozłączna unie jako struktury.  Jest to zrobić za pomocą `[<Struct>]` atrybutu.
+Począwszy od F # 4.1, może również reprezentować sumy rozłączne jako struktury.  Jest to zrobić za pomocą `[<Struct>]` atrybutu.
 
 ```fsharp
 [<Struct>]
@@ -113,22 +116,23 @@ type Multicase =
     | Case3 of Case3 : double
 ```
 
-Ponieważ te są typy wartości i typy referencyjne nie istnieją dodatkowe zagadnienia, w porównaniu z odwołaniem Suma rozłączna unie:
+Ponieważ te są typami wartości i typy referencyjne nie istnieją dodatkowe zagadnienia dotyczące w porównaniu z odwołaniem rekord z wariantami:
 
-1. Są kopiowane jako typów wartości i mogą wywoływać semantyka typów wartości.
-2. Definicja typu rekursywnego nie można używać struktury multicase Discriminated Union.
-3. Podaj unikatowe nazwy multicase struktury Discriminated Unii.
+1. Zostaną skopiowane jako typów wartości i mogą wywoływać semantyka typów wartości.
+2. Nie można używać definicji typu cyklicznego multicase struktury Discriminated Unii.
+3. Należy podać unikatowe nazwy przypadków multicase struktury Discriminated Unii.
 
-## <a name="using-discriminated-unions-instead-of-object-hierarchies"></a>Za pomocą rozłączne zamiast hierarchie obiektów
-Często służą rozróżnianą Unię prostsze alternatywę do hierarchii małego obiektu. Na przykład można użyć następujących rozróżnianą Unię zamiast `Shape` podstawowa klasa, która ma pochodnych typów koło, kwadratowa itd.
+## <a name="using-discriminated-unions-instead-of-object-hierarchies"></a>Używanie dyskryminowanych związków zamiast hierarchii obiektu
+
+Często można użyć złożenia dyskryminowanego jako prostszej alternatywy dla hierarchii małych obiektów. Na przykład następującej sumy rozłączonej można użyć zamiast `Shape` podstawowej klasy, która ma pochodne typy dla okręgu, kwadratu, i tak dalej.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2003.fs)]
 
-Zamiast tego metody wirtualnej można obliczyć obszar lub obwód, możesz mogą używać w implementację zorientowany obiektowo, możesz użyć wzorzec dopasowany do gałęzi odpowiednie formuły można obliczyć ilości te. W poniższym przykładzie różne formuły są używane do obliczenia obszaru, w zależności od kształtu.
+Zamiast tego metody wirtualnej do obliczenia powierzchni lub obwodu, która zostałaby użyta w implementacji zorientowanej, można użyć wzorca dopasowania w celu odgałęzienia odpowiednich formuł do obliczania tych ilości. W poniższym przykładzie różne formuły służą do obliczania powierzchni, w zależności od kształtu.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2004.fs)]
 
-Wynik jest następujący:
+Dane wyjściowe wyglądają następująco:
 
 ```
 Area of circle that has radius 15.000000: 706.858347
@@ -136,29 +140,31 @@ Area of square that has side 10.000000: 100.000000
 Area of rectangle that has height 5.000000 and width 10.000000 is 50.000000
 ```
 
-## <a name="using-discriminated-unions-for-tree-data-structures"></a>Za pomocą rozłączne dla struktur danych drzewa
-Sumy rozłączne można cyklicznej, co oznacza, że sam Unii można dołączyć do typu jeden lub więcej przypadków. Cykliczne rozłączne może służyć do tworzenia struktury drzewa, które są używane do wyrażenia modelu w językach programowania. W poniższym kodzie Suma rozłączna cyklicznej union jest używana do tworzenia struktury danych binarnych drzewa. Unia składa się z dwóch przypadków `Node`, który jest węzłem z wartością całkowitą i lewy i prawy poddrzewa, i `Tip`, która kończy drzewa.
+## <a name="using-discriminated-unions-for-tree-data-structures"></a>Używanie dyskryminowanych związków dla struktur drzewa danych
+
+Połączenia rozróżniane mogą być cykliczne, co oznacza, że samo połączenie mogły zostać uwzględnione w rodzaju jeden lub więcej przypadków. Cykliczne związki dyskryminowane mogą służyć do tworzenia struktur drzewa, które są używane do modelowania wyrażeń w językach programowania. W poniższym kodzie cykliczna Suma rozłączna jest używana do tworzenia struktury drzewa danych binarnych. Złożenie składa się z dwóch przypadków `Node`, który jest węzłem o wartości całkowitej oraz poddrzew lewego i prawego, i `Tip`, który kończy drzewo.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2005.fs)]
 
-W poprzednim kodzie `resultSumTree` ma wartość 10. Na poniższej ilustracji przedstawiono struktury drzewa `myTree`.
+W poprzednim kodzie `resultSumTree` ma wartość 10. Poniższa ilustracja przedstawia strukturę drzewa dla `myTree`.
 
-![Struktura drzewa myTree](../media/TreeStructureDiagram.png)
+![Struktura drzewa dla myTree](../media/TreeStructureDiagram.png)
 
-Sumy rozłączne działa również w przypadku węzłów w drzewie heterogenicznych. W poniższym kodzie typ `Expression` reprezentuje drzewa składni abstrakcyjnej wyrażenia w prosty język programowania, który obsługuje dodawanie i mnożenia zmiennych i cyfry. Niektóre przypadków Unii nie są cykliczne i liczby albo (`Number`) lub zmiennych (`Variable`). Zdarza się to cykliczne, stanowiące operacji (`Add` i `Multiply`), gdzie argumenty operacji są również wyrażenia. `Evaluate` Funkcja korzysta z wyrażenia dopasowania do procesu rekursywnie drzewa składni.
+Połączenia rozróżniane działają dobrze, jeśli węzłów w drzewie są heterogeniczne. W poniższym kodzie typ `Expression` reprezentuje drzewo abstrakcyjnej składni wyrażenia w prostym języku programowania, który obsługuje dodawanie i mnożenie liczb i zmiennych. Niektórych przypadki nie są cykliczne i reprezentują liczby (`Number`) lub zmienne (`Variable`). Inne przypadki są cykliczne i reprezentują operacje (`Add` i `Multiply`), gdzie argumenty operacji są również wyrażeniami. `Evaluate` Funkcja używa wyrażenia dopasowania, aby procesu cyklicznie przetwarzać drzewo składni.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2006.fs)]
 
-Po wykonaniu tego kodu, wartość `result` wynosi 5.
+Kiedy ten kod jest wykonywany, wartość `result` wynosi 5.
 
 ## <a name="common-attributes"></a>Atrybuty wspólne
 
-Następujące atrybuty są zwykle widoczne w rozłączne:
+Następujące atrybuty są często widoczne w połączenia dyskryminowanych:
 
 * `[RequireQualifiedAccess]`
 * `[NoEquality]`
 * `[NoComparison]`
-* `[Struct]` (F # 4.1 i nowsze)
+* `[Struct]`
 
 ## <a name="see-also"></a>Zobacz też
+
 [Dokumentacja języka F#](index.md)

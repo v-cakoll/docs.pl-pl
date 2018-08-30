@@ -3,12 +3,12 @@ title: Wykonywanie niestandardowych operacji łączenia (LINQ w C#)
 description: Dowiedz się, jak wykonać niestandardowych operacji łączenia LINQ w C#.
 ms.date: 12/1/2016
 ms.assetid: 56a2a4a5-7299-497d-b3c3-23c848678911
-ms.openlocfilehash: 09ed0a202627a07ac8958de6ac46d7dc6c2837d0
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: a0e08396c006f68949357c50a28b3b0982f0dd83
+ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37403973"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43238433"
 ---
 # <a name="perform-custom-join-operations"></a>Wykonywanie niestandardowych operacji łączenia
 
@@ -43,6 +43,6 @@ W poniższym przykładzie zapytanie należy przyłączyć dwie sekwencje oparta 
 
 ## <a name="see-also"></a>Zobacz także
 
-[Language Integrated Query (LINQ)](index.md)  
-[join, klauzula](../language-reference/keywords/join-clause.md)  
-[Kolejność wyników klauzuli join](order-the-results-of-a-join-clause.md)  
+- [Language Integrated Query (LINQ)](index.md)  
+- [join, klauzula](../language-reference/keywords/join-clause.md)  
+- [Kolejność wyników klauzuli join](order-the-results-of-a-join-clause.md)  

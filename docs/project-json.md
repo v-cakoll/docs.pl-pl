@@ -1,7 +1,7 @@
 ---
-title: "Plik project.json i program Visual Studio 2015 z platformą .NET Core"
-description: "Gdzie można znaleźć w dokumentacji wersji wstępnej narzędzi dla platformy .NET Core i ASP.NET Core (pliku project.json i programu Visual Studio 2015)."
-keywords: Project.JSON, programu Visual Studio 2015, .NET Core, platformy ASP.NET Core
+title: Plik Project.JSON i programu Visual Studio 2015 za pomocą programu .NET Core
+description: Gdzie można znaleźć dokumentację w wersji wstępnej narzędzia dla platformy .NET Core i ASP.NET Core (plik project.json i programu Visual Studio 2015).
+keywords: Plik Project.JSON, programu Visual Studio 2015, .NET Core, ASP.NET Core
 author: mairaw
 ms.author: mairaw
 ms.date: 03/08/2017
@@ -9,33 +9,33 @@ ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: e282c43b-593e-40a6-af91-de0babcd7b72
-ms.openlocfilehash: 82c221b133080b708832649a80f511ce5162c1fe
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 2bfacd28a1560cd60f252b8f8368a8abdddab5bd
+ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "34566061"
 ---
-# <a name="projectjson-and-visual-studio-2015-with-net-core"></a>Plik project.json i program Visual Studio 2015 z platformą .NET Core
+# <a name="projectjson-and-visual-studio-2015-with-net-core"></a>Plik Project.JSON i programu Visual Studio 2015 za pomocą programu .NET Core
 
-7 marca 2017 r. dokumentacja platform .NET Core i ASP.NET Core została zaktualizowana w związku z wydaniem programu Visual Studio 2017. Poprzednia wersja dokumentacji dotyczyła programu Visual Studio 2015 oraz przedpremierowych narzędzi na podstawie pliku *project.json*.
+7 marca 2017 r. dokumentacji platformy .NET Core i ASP.NET Core została zaktualizowana do wersji programu Visual Studio 2017. Poprzednią wersję dokumentacji używać programu Visual Studio 2015 i narzędzi wersji wstępnej, na podstawie *project.json* pliku.
 
-Wersja dokumentacji sprzed aktualizacji 7 marca jest dostępna w formacie PDF i w odpowiedniej gałęzi w repozytorium dokumentacji.
+Wersja dokumentacji z przed 7 marca aktualizacja jest dostępna, w pliku PDF i gałąź w repozytorium dokumentacji.
 
 ## <a name="pdf-files"></a>Pliki PDF
 
-Najlepszym źródłem starszej dokumentacji są pliki PDF:
+Najlepsze źródło dokumentacji wcześniej to pliki PDF:
 
-* [Platforma .NET Core — dokument PDF dotyczący pliku project.json i programu Visual Studio 2015](https://github.com/dotnet/docs/blob/project.json/net-core-project-json.pdf)
-* [Platforma ASP.NET Core — dokument PDF dotyczący pliku project.json i programu Visual Studio 2015](https://github.com/aspnet/Docs/blob/master/aspnetcore/common/_static/aspnet-core-project-json.pdf)
+* [.NET core — PDF dla plików project.json i Visual Studio 2015](https://github.com/dotnet/docs/blob/project.json/net-core-project-json.pdf)
+* [ASP.NET Core — PDF dla plików project.json i Visual Studio 2015](https://github.com/aspnet/Docs/blob/master/aspnetcore/common/_static/aspnet-core-project-json.pdf)
 
 ## <a name="documentation-repository-branch"></a>Gałąź repozytorium dokumentacji
 
-Starszą wersję dokumentacji można wyświetlić w repozytorium, ale wiele linków nie będzie działać. Ponadto wiele fragmentów kodu jest odwołaniami, których nie można rozwinąć.
+W repozytorium można wyświetlić starszą wersję dokumentacji, ale nie będzie działać wiele łączy się z wielu fragmentów kodu odwołania, które nie są rozwinięte.
 
-* [Platforma .NET core — gałąź project.json w repozytorium dokumentacji](https://github.com/dotnet/docs/tree/project.json/docs)
-* [Platforma ASP.NET Core — gałąź project.json w repozytorium dokumentacji](https://github.com/aspnet/Docs/tree/project.json/aspnetcore)
+* [.NET core — project.json gałęzi w repozytorium dokumentacji](https://github.com/dotnet/docs/tree/project.json/docs)
 
 ## <a name="current-version-of-the-documentation"></a>Bieżąca wersja dokumentacji
 
 * [Dokumentacja platformy .NET core](./core/index.md)
-* [Dokumentacja platformy ASP.NET Core](/aspnet/core/)
+* [Dokumentacja programu ASP.NET Core](/aspnet/core/)

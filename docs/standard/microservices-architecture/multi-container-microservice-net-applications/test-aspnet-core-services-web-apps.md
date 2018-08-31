@@ -4,18 +4,18 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Te
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: f7bd75ecdd85e49524ccdf67f3e59aa4be46bdce
-ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
+ms.openlocfilehash: 63576445a44df0c0bdbd22b263754bb3d2919963
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792416"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254914"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Testowanie aplikacji internetowych i usług platformy ASP.NET Core
 
 Kontrolery są centralnym elementem interfejsu API platformy ASP.NET Core usług i aplikacji sieci Web programu ASP.NET MVC. W efekcie powinien mieć pewność, której działają zgodnie z przeznaczeniem dla aplikacji. Testy automatyczne udostępnić Ci ten zaufania i umożliwić wykrycie błędów, zanim dotrą produkcji.
 
-Należy przetestować sposób działania oparte na prawidłowe lub nieprawidłowe dane wejściowe kontrolera i test controller odpowiedzi na podstawie wyniku operacji biznesowych, który wykonuje. Jednakże powinny mieć tego rodzaju testy mikrousługi:
+Należy przetestować sposób działania oparte na prawidłowe lub nieprawidłowe dane wejściowe kontrolera i test controller odpowiedzi na podstawie wyniku operacji biznesowych, który wykonuje. Jednak tego rodzaju testy powinny być zapisane na mikrousługi:
 
 -   Testy jednostkowe. Te upewnij się, że poszczególne składniki aplikacji działają zgodnie z oczekiwaniami. Potwierdzenia testowanie składników interfejsu API.
 
@@ -31,9 +31,9 @@ Testy jednostkowe polega części aplikacji w izolacji od jego infrastruktura i 
 
 Jako jednostki możesz przetestować akcji kontrolera, upewnij się, że możesz skoncentrować się tylko na ich zachowanie. Kontroler testu jednostkowego pozwala uniknąć elementów, takich jak filtrów routingu i wiązania modelu. Ponieważ skupiają się na testowanie tylko jedną z rzeczy, testy jednostkowe są zwykle łatwe do zapisania i szybkie uruchamianie. Dobrze napisane zestaw testów jednostkowych mogą być uruchamiane często bez koszty ogólne.
 
-Testy jednostkowe są implementowane w oparciu o struktury testów, takimi jak xUnit.net, MSTest, Moq lub NUnit. W ramach aplikacji eShopOnContainers przykładowej aplikacji użyto XUnit.
+Testy jednostkowe są implementowane w oparciu o struktury testów, takimi jak xUnit.net, MSTest, Moq lub NUnit. W ramach aplikacji eShopOnContainers przykładowej aplikacji użyto xUnit.
 
-Podczas pisania testów jednostkowych dla kontrolera interfejsu API sieci Web, tworzenia wystąpienia klasy kontrolera bezpośrednio przy użyciu słowa kluczowego new w języku C\#, dzięki czemu testy zostaną uruchomione tak szybko, jak to możliwe. Poniższy przykład pokazuje, jak to zrobić, korzystając z [XUnit](https://xunit.github.io/) jako struktury testowej.
+Podczas pisania testów jednostkowych dla kontrolera interfejsu API sieci Web, tworzenia wystąpienia klasy kontrolera bezpośrednio przy użyciu słowa kluczowego new w języku C\#, dzięki czemu testy zostaną uruchomione tak szybko, jak to możliwe. Poniższy przykład pokazuje, jak to zrobić, korzystając z [xUnit](https://xunit.github.io/) jako struktury testowej.
 
 ```csharp
 [Fact]

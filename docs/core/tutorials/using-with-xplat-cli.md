@@ -1,102 +1,102 @@
 ---
-title: Rozpoczynanie pracy z platformą .NET Core za pomocą interfejsu wiersza polecenia
-description: Samouczek krok po kroku, pokazujący sposób rozpocząć pracę z platformą .NET Core w systemie Windows, Linux lub macOS przy użyciu interfejsu wiersza polecenia (CLI) platformy .NET Core.
+title: Wprowadzenie do platformy .NET Core przy użyciu interfejsu wiersza polecenia
+description: Samouczek krok po kroku, pokazujący sposób rozpocząć pracę z platformą .NET Core w Windows, Linux lub macOS przy użyciu interfejsu wiersza polecenia (CLI) platformy .NET Core.
 author: cartermp
 ms.author: mairaw
 ms.date: 03/08/2017
 ms.technology: dotnet-cli
-ms.openlocfilehash: 57045a91ce62a730493d219bdf7c30e90fe57759
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ec7168ebc2ee4fc428d1ab520e986842f111ca7
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216343"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43256768"
 ---
-# <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Rozpoczynanie pracy z platformą .NET Core w systemie Windows/Linux/macOS przy użyciu wiersza polecenia
+# <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Rozpoczęcie pracy z platformą .NET Core w Windows/Linux/macOS przy użyciu wiersza polecenia
 
-W tym temacie opisano, jak można rozpocząć tworzenie aplikacji cross platform na tym komputerze przy użyciu narzędzi interfejsu wiersza polecenia platformy .NET Core.
+W tym temacie pokazują sposób rozpoczęcia tworzenia aplikacji dla wielu platform, na komputerze przy użyciu narzędzi interfejsu wiersza polecenia platformy .NET Core.
 
-Jeśli znasz zestaw narzędzi interfejsu wiersza polecenia platformy .NET Core odczytu [Omówienie zestawu SDK programu .NET Core](../tools/index.md).
+Jeśli jesteś zaznajomiony z zestawu narzędzi interfejsu wiersza polecenia platformy .NET Core, zapoznaj się z [Omówienie zestawu .NET Core SDK](../tools/index.md).
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- [Oprogramowanie .NET core SDK 1.0](https://www.microsoft.com/net/download/core).
-- Edytor tekstu lub dowolnego edytora kodu.
+- [.NET core SDK 1.0](https://www.microsoft.com/net/download/core).
+- Edytor tekstu lub ulubionego edytora kodu.
 
-## <a name="hello-console-app"></a>Witaj, aplikacji konsoli!
+## <a name="hello-console-app"></a>Witaj, aplikacja Konsolowa!
 
-Możesz [wyświetlić lub pobrać przykładowy kod](https://github.com/dotnet/samples/tree/master/core/console-apps/HelloMsBuild) z repozytorium GitHub dotnet/próbek. Instrukcje pobrania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Możesz [wyświetlić lub pobrać przykładowy kod](https://github.com/dotnet/samples/tree/master/core/console-apps/HelloMsBuild) z repozytorium dotnet/samples w witrynie GitHub. Aby uzyskać instrukcje pobierania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-Otwórz wiersz polecenia i Utwórz folder o nazwie *Hello*. Przejdź do folderu, który został utworzony i wpisz następujące polecenie:
+Otwórz wiersz polecenia i Utwórz folder o nazwie *Hello*. Przejdź do folderu, który został utworzony, a następnie wpisz następujące polecenie:
 
-```
+```console
 $ dotnet new console
 $ dotnet restore
 $ dotnet run
 ```
 
-Poznajmy Szybkie wskazówki:
+Zróbmy szybkiego przewodnika:
 
 1. `$ dotnet new console`
 
-   [`dotnet new`](../tools/dotnet-new.md) Tworzy aktualne `Hello.csproj` pliku projektu z zależnościami, które są niezbędne do tworzenia aplikacji konsoli.  Tworzy również `Program.cs`, podstawowe plik zawierający punkt wejścia dla aplikacji.
-   
+   [`dotnet new`](../tools/dotnet-new.md) Tworzy aktualnej `Hello.csproj` pliku projektu z zależnościami, które są niezbędne do tworzenia aplikacji konsolowej.  Tworzy również `Program.cs`, podstawowy plik zawierający punkt wejścia dla aplikacji.
+
    `Hello.csproj`:
 
-   [!code[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]   
+   [!code[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]
 
    Plik projektu określa wszystko, co jest potrzebne do przywrócenia zależności i kompilacji programu.
 
-   * `OutputType` Określa tag tworzymy plik wykonywalny, innymi słowy aplikacji konsoli.
-   * `TargetFramework` Tag Określa, jakie implementacji .NET możemy docelowych. Realizując bardziej zaawansowany scenariusz, można określić wiele platform docelowych i kompilacji do wszystkich tych w ramach jednej operacji. W tym samouczku firma Microsoft będzie osadzania kompilowanie tylko dla platformy .NET Core 1.0.
+   * `OutputType` Tag Określa, czy tworzymy plik wykonywalny, innymi słowy aplikację konsolową w języku.
+   * `TargetFramework` Tagów Określa, jakie firma Microsoft objęci implementacja programu .NET. W zaawansowanym scenariuszu można określić wielu platform docelowych i kompilacja — przejście do wszystkich tych w ramach jednej operacji. W tym samouczku używany będzie tworzenie tylko dla platformy .NET Core 1.0.
 
    `Program.cs`:
 
-   [!code-csharp[Program.cs](../../../samples/core/console-apps/HelloMsBuild/Program.cs)]   
+   [!code-csharp[Program.cs](../../../samples/core/console-apps/HelloMsBuild/Program.cs)]
 
-   Program, który rozpoczyna się od `using System`, co oznacza, że "Przenieś wszystko `System` przestrzeni nazw do zakresu dla tego pliku". `System` Przestrzeń nazw zawiera podstawowe konstrukcji `string`, lub typy liczbowe.
+   Program, który rozpoczyna się od `using System`, co oznacza, że "Przenieś wszystko `System` przestrzeni nazw do zakresu dla tego pliku". `System` Przestrzeń nazw zawiera podstawowymi konstrukcjami `string`, lub typów liczbowych.
 
-   Następnie definicję przestrzeni nazw o nazwie `Hello`. Można to zmienić, do dowolnych znaków. Klasa o nazwie `Program` jest zdefiniowany w tej przestrzeni nazw z `Main` metody pobierającej tablicy ciągów jako jej argument. Ta tablica zawiera listę argumentów przekazana wywołanego skompilowany program. Ta tablica nie jest używany, jak: wszystkich zadań programu jest napisanie "Witaj świecie!" w konsoli. Później, wybierzemy zmiany do kodu, który będzie używać tego argumentu.
+   Następnie definiujemy przestrzeń nazwy wywołaną `Hello`. Można to zmienić, do żadnego elementu, który ma. Klasa o nazwie `Program` jest zdefiniowana w ramach tej przestrzeni nazw za pomocą `Main` metody, która przyjmuje tablicę ciągów, jako argumentem. Ta tablica zawiera listę argumentów przekazywanych do wywołanego skompilowanego programu. I nie jest używana ta tablica: wszystkie działania programu służy do zapisania "Hello World!" w konsoli. Później, wybierzemy zmiany do kodu, który będzie używać tego argumentu.
 
    [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 2. `$ dotnet restore`
 
-   [`dotnet restore`](../tools/dotnet-restore.md) Wywołano [NuGet](https://www.nuget.org/) (.NET package manager) w celu przywrócenia drzewie zależności. Analizuje NuGet *Hello.csproj* plików, pliki do pobrania zależności określone w pliku (lub grabs je z pamięci podręcznej na komputerze) i zapisuje *obj/project.assets.json* pliku.  *Project.assets.json* plik jest niezbędny można było skompilować i uruchomić.
-   
-   *Project.assets.json* plik jest utrwalona i pełny zestaw wykres zależności NuGet i inne informacje opisujące aplikację.  Ten plik jest odczytywany przez innych narzędzi, takich jak [ `dotnet build` ](../tools/dotnet-build.md) i [ `dotnet run` ](../tools/dotnet-run.md), umożliwiając im procesu kodu źródłowego z poprawny zestaw zależności NuGet i powiązanie rozwiązania.
-   
+   [`dotnet restore`](../tools/dotnet-restore.md) wywoła [NuGet](https://www.nuget.org/) (.NET package manager) w celu przywrócenia drzewo zależności. Analizuje NuGet *Hello.csproj* plików, pliki do pobrania zależności, o których wspomniano w pliku (lub bierze ich z pamięci podręcznej na komputerze) i zapisuje *obj/project.assets.json* pliku.  *Project.assets.json* plik jest niezbędny można było skompilować i uruchomić.
+
+   *Project.assets.json* plik jest utrwalona i kompletny zestaw wykres zależności NuGet i inne informacje opisujące aplikację.  Ten plik jest odczytywany przez innych narzędzi, takich jak [ `dotnet build` ](../tools/dotnet-build.md) i [ `dotnet run` ](../tools/dotnet-run.md), włączenie ich do procesu kodu źródłowego z poprawną zestawem zależności NuGet i powiązania rozwiązania.
+
 3. `$ dotnet run`
 
-   [`dotnet run`](../tools/dotnet-run.md) wywołania [ `dotnet build` ](../tools/dotnet-build.md) do upewnij się, że kompilacji są wbudowane elementy docelowe, a następnie wywołania `dotnet <assembly.dll>` do uruchomienia aplikacji docelowej.
-   
-    ```
+   [`dotnet run`](../tools/dotnet-run.md) wywołania [ `dotnet build` ](../tools/dotnet-build.md) do upewnij się, że kompilacji, utworzone elementy docelowe, a następnie wywołania `dotnet <assembly.dll>` do uruchamiania aplikacji docelowej.
+
+    ```console
     $ dotnet run
     Hello World!
     ```
 
-    Alternatywnie można również wykonywać [ `dotnet build` ](../tools/dotnet-build.md) skompilować kod bez uruchamiania Kompilowanie aplikacji konsoli. Powoduje to skompilowanej aplikacji jako plik DLL, który może być uruchamiane przy `dotnet bin\Debug\netcoreapp1.0\Hello.dll` w systemie Windows (Użyj `/` dla systemów z systemem innym niż Windows). Argumenty do aplikacji mogą określać również, jak można zauważyć później na temat.
+    Alternatywnie można również wykonać [ `dotnet build` ](../tools/dotnet-build.md) skompilować kod bez konieczności uruchamiania kompilacji aplikacji konsoli. Skutkuje to skompilowaną aplikację jako plik DLL, który można uruchomić z `dotnet bin\Debug\netcoreapp1.0\Hello.dll` na Windows (Użyj `/` systemów innych niż Windows). Jak zobaczysz później tematu można też określić argumenty do aplikacji.
 
-    ```
+    ```console
     $ dotnet bin\Debug\netcoreapp1.0\Hello.dll
     Hello World!
     ```
 
-    W ramach scenariusza zaawansowanego jest możliwe utworzenie aplikacji jako autonomiczny zestaw plików specyficzne dla platformy, które mogą być wdrożone i uruchom na komputerze, na którym nie muszą być .NET Core zainstalowane. Zobacz [wdrażanie aplikacji .NET Core](../deploying/index.md) szczegółowe informacje.
+    W ramach scenariusza zaawansowanego jest możliwe utworzenie aplikacji jako autonomiczny zestaw plików specyficznych dla platformy, które można wdrożyć i uruchomić na komputerze, na którym nie musi koniecznie mieć platformy .NET Core zainstalowane. Zobacz [wdrożenie aplikacji programu .NET Core](../deploying/index.md) Aby uzyskać szczegółowe informacje.
 
-### <a name="augmenting-the-program"></a>Rozbudować program
+### <a name="augmenting-the-program"></a>Rozszerzając program
 
-Zmieńmy nieco program. Numery Fibonacci fun, więc Dodajmy oprócz Użyj argument greet osoby uruchomiona aplikacja.
+Zmieńmy nieco program. Numery Fibonacci zabawy, Dodajmy oprócz Użyj argumentu w celu powitania osoby uruchamiania aplikacji.
 
-1. Zastąp zawartość z *Program.cs* pliku następującym kodem:
+1. Zastąp zawartość swojej *Program.cs* pliku następującym kodem:
 
-   [!code-csharp[Fibonacci](../../../samples/core/console-apps/fibonacci-msbuild/Program.cs)]   
+   [!code-csharp[Fibonacci](../../../samples/core/console-apps/fibonacci-msbuild/Program.cs)]
 
-2. Wykonanie [ `dotnet build` ](../tools/dotnet-build.md) do kompilacji zmian.
+2. Wykonaj [ `dotnet build` ](../tools/dotnet-build.md) skompilować zmiany.
 
-3. Uruchom program przekazanie parametru do aplikacji:
+3. Uruchom program przekazywania parametru do aplikacji:
 
-   ```
+   ```console
    $ dotnet run -- John
    Hello John!
    Fibonacci Numbers 1-15:
@@ -117,25 +117,26 @@ Zmieńmy nieco program. Numery Fibonacci fun, więc Dodajmy oprócz Użyj argume
    15: 377
    ```
 
-I to już wszystko!  Można rozszerzyć `Program.cs` żadnym chcesz.
+I to wszystko!  Można rozszerzyć `Program.cs` sposób chcesz.
 
 ## <a name="working-with-multiple-files"></a>Praca z wieloma plikami
 
-Pojedynczych plików jest poprawna dla programów jednorazowe prostego, ale jeśli tworzysz złożonych aplikacji jest teraz zawierają wiele plików źródłowych w projekcie najczęściej kompilacji wylogowuje na poprzednim przykładzie Fibonacci przez buforowanie niektórych wartości Fibonacci i dodać niektóre cykliczne funkcje. 
+Pojedynczych plików są w dobrym stanie, proste, jednorazowe programów, ale jeśli tworzysz bardziej złożonych aplikacji są teraz zawierają wiele plików źródłowych w projekcie najczęściej kompilacji zniżki w stosunku do poprzedniego przykładu Fibonacci przez buforowanie niektórych wartości Fibonacci i dodaj kilka cykliczne funkcje.
 
 1. Dodaj nowy plik wewnątrz *Hello* katalog o nazwie *FibonacciGenerator.cs* następującym kodem:
 
-   [!code-csharp[Fibonacci Generator](../../../samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]   
+   [!code-csharp[Fibonacci Generator](../../../samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]
 
-2. Zmień `Main` metody w Twojej *Program.cs* plik, aby utworzyć wystąpienia klasy nowy i Wywołaj jej metodę jak w poniższym przykładzie:
+2. Zmiana `Main` method in Class metoda swoje *Program.cs* plik, aby utworzyć nowe wystąpienie klasy i wywołać jej metodę jak w poniższym przykładzie:
 
    [!code-csharp[New Program.cs](../../../samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
 
-3. Wykonanie [ `dotnet build` ](../tools/dotnet-build.md) do kompilacji zmian.
+3. Wykonaj [ `dotnet build` ](../tools/dotnet-build.md) skompilować zmiany.
 
-4. Uruchamianie aplikacji, wykonując [ `dotnet run` ](../tools/dotnet-run.md). Poniżej przedstawiono dane wyjściowe programu:
+4. Uruchom aplikację, wykonując [ `dotnet run` ](../tools/dotnet-run.md). Poniżej przedstawiono dane wyjściowe programu:
 
-   ```
+   ```console
+   $ dotnet run
    0
    1
    1
@@ -153,10 +154,10 @@ Pojedynczych plików jest poprawna dla programów jednorazowe prostego, ale jeś
    377
    ```
 
-I to już wszystko! Teraz możesz rozpocząć używać, podstawowe koncepcje przedstawiono w tym miejscu do tworzenia własnych programów.
+I to wszystko! Teraz można uruchomić przy użyciu podstawowych pojęć w tym miejscu przedstawiono tworzenie własnych programów.
 
-Należy pamiętać, że poleceń i kroki opisane w tym samouczku do uruchamiania aplikacji są używane tylko w czasie tworzenia. Gdy wszystko jest gotowe do wdrożenia aplikacji, należy spojrzeć na różnych [strategii wdrażania](../deploying/index.md) dla aplikacji .NET Core i [ `dotnet publish` ](../tools/dotnet-publish.md) polecenia.
+Należy pamiętać, że polecenia i kroki opisane w tym samouczku do uruchamiania aplikacji są używane tylko w czasie projektowania. Gdy wszystko będzie gotowe do wdrożenia aplikacji, należy spojrzeć na poszczególne [strategie wdrażania](../deploying/index.md) dla aplikacji platformy .NET Core i [ `dotnet publish` ](../tools/dotnet-publish.md) polecenia.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Organizowanie i testowanie projektów przy użyciu narzędzi interfejsu wiersza polecenia platformy .NET Core](testing-with-cli.md)
+* [Organizowanie i testowanie projektów przy użyciu narzędzi interfejsu wiersza polecenia platformy .NET Core](testing-with-cli.md)

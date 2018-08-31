@@ -8,12 +8,12 @@ helpviewer_keywords:
 - codepage compiler option [C#]
 - -codepage compiler option [C#]
 ms.assetid: 75942989-b69a-4308-90a0-840c73d2c478
-ms.openlocfilehash: 615160088ee3a884919628152f153bd34c81b8a9
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 66edb32d24dd1dc543097b98ff3744f0aa0a7145
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42755070"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43255322"
 ---
 # <a name="-codepage-c-compiler-options"></a>-codepage (opcje kompilatora C#)
 Ta opcja określa, które stronę kodową do użycia podczas kompilacji, jeśli strona wymagany jest bieżący domyślną stroną kodową systemu.  
@@ -38,5 +38,6 @@ Ta opcja określa, które stronę kodową do użycia podczas kompilacji, jeśli 
  Ta opcja kompilatora jest niedostępna w programie Visual Studio i nie można zmienić programowo.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

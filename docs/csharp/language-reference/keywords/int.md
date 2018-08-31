@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - int keyword [C#]
 ms.assetid: 212447b4-5d2a-41aa-88ab-84fe710bdb52
-ms.openlocfilehash: 41ee5ecdae815eaddf8652a4873c060fb8f92bc3
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 95ac267bc70d2e7873593c08e0b10cb50fefd8c8
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199433"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43255465"
 ---
 # <a name="int-c-reference"></a>int (odwołanie w C#)
 
@@ -78,12 +78,13 @@ int y = (int)3.0;    // OK: explicit conversion.
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Int32>  
- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
- [Tabela typów całkowitych](../../../csharp/language-reference/keywords/integral-types-table.md)  
- [Tabela typów wbudowanych](../../../csharp/language-reference/keywords/built-in-types-table.md)  
- [Tabela niejawnych konwersji liczbowych](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
- [Tabela jawnych konwersji liczbowych](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+## <a name="see-also"></a>Zobacz też
+
+- <xref:System.Int32>  
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
+- [Tabela typów całkowitych](../../../csharp/language-reference/keywords/integral-types-table.md)  
+- [Tabela typów wbudowanych](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [Tabela niejawnych konwersji liczbowych](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- [Tabela jawnych konwersji liczbowych](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

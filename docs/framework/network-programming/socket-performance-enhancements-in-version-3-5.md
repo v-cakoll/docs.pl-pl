@@ -5,36 +5,36 @@ ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: db52123167648744141657d885f3d3dcc524dd3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0570241fa81b0870500daa9d6e94b45c28042737
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395882"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43255383"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>Ulepszenia wydajności gniazda w wersji 3.5
-<xref:System.Net.Sockets.Socket?displayProperty=nameWithType> Klasa została rozszerzona w wersji 3.5 do użycia przez aplikacje używające sieci asynchroniczne We/Wy, aby osiągnąć najwyższą wydajność. Dodano szereg nowych klas jako część zestawu rozszerzeń <xref:System.Net.Sockets.Socket> klasy, która zapewnić alternatywne wzorca asynchronicznego, które mogą być używane przez aplikacje specjalistyczne gniazda wysokiej wydajności. Te ulepszenia zostały zaprojektowane specjalnie dla aplikacji serwera sieci, które wymagają wysokiej wydajności. Aplikację można używać wyłącznie rozszerzone wzorca asynchronicznego lub tylko w docelowe gorących obszary aplikacji (w przypadku odbierania dużej ilości danych, na przykład).  
+<xref:System.Net.Sockets.Socket?displayProperty=nameWithType> Klasa została rozszerzona w wersji 3.5 do użycia przez aplikacje, które używają sieci asynchronicznych operacji We/Wy, aby osiągnąć najwyższą wydajność. Szereg nowych klas zostały dodane jako część zbioru ulepszeń klasy <xref:System.Net.Sockets.Socket> klasy, która zapewnia alternatywny wzorzec asynchroniczny, które mogą być używane przez aplikacje specjalistyczne gniazda o wysokiej wydajności. Te ulepszenia zostały zaprojektowane specjalnie dla sieci serwer aplikacji, które wymagają wysokiej wydajności. Aplikację można użyć wyłącznie rozszerzone wzorca asynchronicznego lub tylko w docelowej gorąca obszarów aplikacji (w przypadku odbierania dużej ilości danych, na przykład).  
   
-## <a name="class-enhancements"></a>Rozszerzenia klasy  
- Funkcja głównego tych rozszerzeń jest unikanie powtarzane alokacji i synchronizacji obiektów w trakcie dużych gniazda asynchroniczne We/Wy. Wzorzec projektowy początek i koniec obecnie implementowane przez <xref:System.Net.Sockets.Socket> klasy dla gniazda asynchroniczne We/Wy wymaga <xref:System.IAsyncResult?displayProperty=nameWithType> obiektu przydzielone dla każdej operacji asynchronicznej gniazda.  
+## <a name="class-enhancements"></a>Klasa rozszerzenia  
+ Główna funkcja te rozszerzenia funkcjonalności jest unikanie powtarzanych alokacji i synchronizacji obiektów w trakcie gniazda asynchronicznego dużej liczby operacji We/Wy. Wzorzec projektowy początek/koniec, które są obecnie implementowane przez <xref:System.Net.Sockets.Socket> klasy dla gniazda asynchronicznych operacji We/Wy wymaga <xref:System.IAsyncResult?displayProperty=nameWithType> obiektu można przydzielić dla każdej operacji asynchronicznych gniazda.  
   
- W nowym <xref:System.Net.Sockets.Socket> klasy rozszerzenia gniazda asynchroniczne operacje, których dotyczą wielokrotnego użytku <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType> klasy obiektów przydzielone i obsługiwane przez aplikację. Aplikacje wysokiej wydajności gniazda najlepiej znać ilość operacji nakładających się gniazda, które muszą być przez dłuższy czas. Aplikację można utworzyć dowolną liczbę z <xref:System.Net.Sockets.SocketAsyncEventArgs> obiektów, które są wymagane. Na przykład jeśli aplikacja serwera wymaga się 15 gniazda zaakceptować oczekujące operacje przez cały czas do obsługi przychodzących szybkości połączenia klienta, go przydzielić 15 wielokrotnego użytku <xref:System.Net.Sockets.SocketAsyncEventArgs> obiektów wcześniej w tym celu.  
+ W nowym <xref:System.Net.Sockets.Socket> klasy rozszerzenia asynchronicznego gniazda operacje są opisane przez wielokrotnego użytku, do <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType> klasy obiekty przydzielone i utrzymywane przez aplikację. Aplikacji wykorzystujących gniazda o wysokiej wydajności najlepiej znać ilości operacji nachodzące gniazda, które muszą być utrzymywane. Aplikację można utworzyć dowolną liczbę z <xref:System.Net.Sockets.SocketAsyncEventArgs> obiekty, których potrzebuje. Na przykład jeśli aplikacja serwera musi mieć 15 gniazda zaakceptować oczekujących operacji przez cały czas do obsługi przychodzących szybkości połączenia klienta, go przydzielić 15 wielokrotnego użytku <xref:System.Net.Sockets.SocketAsyncEventArgs> obiektów z wyprzedzeniem do tego celu.  
   
- Wzorzec do wykonywania asynchroniczna Operacja gniazda z tą klasą składa się z następujących czynności:  
+ Wzorzec do wykonywania operacji asynchronicznej gniazda z tą klasą składa się z następujących czynności:  
   
-1.  Przydziel nowej <xref:System.Net.Sockets.SocketAsyncEventArgs> kontekst obiektu lub uzyskać bezpłatne od puli aplikacji.  
+1.  Przydziel nowej <xref:System.Net.Sockets.SocketAsyncEventArgs> kontekst obiektu lub pobrać za darmo z puli aplikacji.  
   
-2.  Ustawianie właściwości w kontekście obiektu do operacji o należy wykonać (wywołanie zwrotne obiektu delegowanego — metoda i danych buforu, na przykład).  
+2.  Ustawianie właściwości w kontekście obiektu do operacji o być wykonana (wywołanie zwrotne delegata metody i danych buforu, na przykład).  
   
-3.  Wywołaj metodę odpowiednie gniazda (xxxAsync) można zainicjować operacji asynchronicznej.  
+3.  Wywołaj metodę odpowiednią gniazda (xxxAsync), aby zainicjować operację asynchroniczną.  
   
-4.  Jeśli metoda asynchroniczne gniazda (xxxAsync) zwraca wartość true, podczas wywołania zwrotnego, zapytania właściwości kontekstu stan ukończenia.  
+4.  Jeśli metoda asynchronicznego gniazda (xxxAsync) zwraca wartość true, podczas wywołania zwrotnego, tworzenie zapytań o właściwości kontekstu dla stanu ukończenia.  
   
-5.  Jeśli metoda asynchroniczne gniazda (xxxAsync) zwraca wartość false w wywołania zwrotnego, operacja została wykonana synchronicznie. Właściwości kontekstu może żądać dla wyniku operacji.  
+5.  Jeśli metoda asynchronicznego gniazda (xxxAsync) zwraca wartość false podczas wywołania zwrotnego, operacja została ukończona synchronicznie. Właściwości kontekstu może być badane wyniku operacji.  
   
-6.  Ponowne użycie w kontekście innej operacji, umieść ją w puli lub odrzucić go.  
+6.  Ponowne użycie w kontekście innej operacji, umieścić go w puli lub go odrzucić.  
   
- Okres istnienia nowy obiekt kontekstu operacji asynchronicznych gniazda jest określana przez odwołań w kodzie aplikacji i odwołania do asynchronicznego We/Wy. Nie jest niezbędna dla aplikacji, aby zachować odwołanie do obiektu kontekstu operacji asynchronicznych gniazda po przesłaniu go jako parametr do jednej z metod operacji asynchronicznych gniazda. Pozostanie do którego istnieje odwołanie do momentu ukończenia wywołania zwrotnego zwraca. Jednak jest korzystne dla aplikacji, aby zachować odwołanie do obiektu context, dzięki czemu mogą być ponownie używane dla przyszłych asynchroniczna Operacja gniazda.  
+ Okres istnienia nowy obiekt kontekstu operację asynchronicznego gniazda zależy od odwołania w kodzie aplikacji i odwołania do asynchronicznego We/Wy. Nie jest wymagane dla aplikacji, aby zachować odwołanie do obiektu kontekstu operację asynchronicznego gniazda dopiero po przesłaniu go jako parametr do jednej z metod operację asynchronicznego gniazda. Pozostanie on odwołania do momentu ukończenia wywołania zwrotnego zwraca. Jednak jest korzystna dla aplikacji, aby zachować odwołanie do obiektu context, dzięki czemu mogą być ponownie używane dla operacji przyszłych asynchronicznego gniazda.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>  
@@ -42,4 +42,4 @@ ms.locfileid: "33395882"
  <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>  
  <xref:System.Net.Sockets.SocketAsyncOperation?displayProperty=nameWithType>  
  [Przykłady programowania sieciowego](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Próbka technologii wydajności gniazda](http://go.microsoft.com/fwlink/?LinkID=179570)
+ [Przykłady kodu gniazd](socket-code-examples.md)

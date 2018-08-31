@@ -1,44 +1,57 @@
 ---
 title: Tabela typów wartości (odwołanie w C#)
-ms.date: 07/20/2015
+ms.date: 08/24/2018
 helpviewer_keywords:
 - value types [C#], table
-- Visual C#, types
 - types [C#], value types
 - types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: a3979a9c269c6268ef679d0494cf4da501201c97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bc7143b9f006af20b0bb91203d3093410d4ac0bf
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33280897"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254620"
 ---
 # <a name="value-types-table-c-reference"></a>Tabela typów wartości (odwołanie w C#)
-W poniższej tabeli wymieniono typy wartości języka C# według kategorii.  
+
+W poniższej tabeli przedstawiono typy wartości języka C#.  
   
-|Typ wartości|Kategoria|Sufiks typu|  
+|Typ wartości|Kategoria|Sufiksem typu|  
 |----------------|--------------|-----------------|  
-|[bool](../../../csharp/language-reference/keywords/bool.md)|Boolean||  
-|[byte](../../../csharp/language-reference/keywords/byte.md)|Typy całkowite bez znaku, numeryczną,||  
-|[char](../../../csharp/language-reference/keywords/char.md)|Typy całkowite bez znaku, numeryczną,||  
-|[decimal](../../../csharp/language-reference/keywords/decimal.md)|Liczbowe dziesiętną|M lub m|  
-|[double](../../../csharp/language-reference/keywords/double.md)|Liczbowych zmiennoprzecinkowych|D lub d|  
-|[enum](../../../csharp/language-reference/keywords/enum.md)|Wyliczenie||  
-|[float](../../../csharp/language-reference/keywords/float.md)|Liczbowych zmiennoprzecinkowych|F lub f|  
-|[int](../../../csharp/language-reference/keywords/int.md)|Podpisem, liczbowe, wartości całkowitych||  
-|[long](../../../csharp/language-reference/keywords/long.md)|Podpisem, liczbowe, wartości całkowitych|L lub l|  
-|[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|Podpisem, liczbowe, wartości całkowitych||  
-|[short](../../../csharp/language-reference/keywords/short.md)|Podpisem, liczbowe, wartości całkowitych||  
-|[struct](../../../csharp/language-reference/keywords/struct.md)|Struktury zdefiniowane przez użytkownika||  
-|[uint](../../../csharp/language-reference/keywords/uint.md)|Typy całkowite bez znaku, numeryczną,|U lub u|  
-|[ulong](../../../csharp/language-reference/keywords/ulong.md)|Typy całkowite bez znaku, numeryczną,|UL lub ul|  
-|[ushort](../../../csharp/language-reference/keywords/ushort.md)|Typy całkowite bez znaku, numeryczną,||  
-  
-## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Tabela wartości domyślnych](../../../csharp/language-reference/keywords/default-values-table.md)  
- [Typy wartości](../../../csharp/language-reference/keywords/value-types.md)  
- [Formatowanie tabeli wyników liczbowych](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)  
- [Tabele odwołań dla typów](../../../csharp/language-reference/keywords/reference-tables-for-types.md)
+|[bool](bool.md)|Boolean||  
+|[byte](byte.md)|Nieoznaczona, numeryczne, [typu całkowitego](integral-types-table.md)||  
+|[char](char.md)|Nieoznaczona, numeryczne, [typu całkowitego](integral-types-table.md)||  
+|[decimal](decimal.md)|Numeryczne, [zmiennoprzecinkowych](floating-point-types-table.md)|M lub m|  
+|[double](double.md)|Numeryczne, [zmiennoprzecinkowych](floating-point-types-table.md)|D lub d|  
+|[enum](enum.md)|Wyliczenie||  
+|[float](float.md)|Numeryczne, [zmiennoprzecinkowych](floating-point-types-table.md)|F lub f|  
+|[int](int.md)|Podpisany, numeryczne, [typu całkowitego](integral-types-table.md)||  
+|[long](long.md)|Podpisany, numeryczne, [typu całkowitego](integral-types-table.md)|L lub l|  
+|[sbyte](sbyte.md)|Podpisany, numeryczne, [typu całkowitego](integral-types-table.md)||  
+|[short](short.md)|Podpisany, numeryczne, [typu całkowitego](integral-types-table.md)||  
+|[struct](struct.md)|Struktura zdefiniowanych przez użytkownika||  
+|[uint](uint.md)|Nieoznaczona, numeryczne, [typu całkowitego](integral-types-table.md)|U lub u|  
+|[ulong](ulong.md)|Nieoznaczona, numeryczne, [typu całkowitego](integral-types-table.md)|UL, Ul, uL, ul, LU, Lu, lU lub lu|  
+|[ushort](ushort.md)|Nieoznaczona, numeryczne, [typu całkowitego](integral-types-table.md)||  
+
+## <a name="remarks"></a>Uwagi
+
+Sufiksem typu umożliwia określenie typu literał wartości liczbowych. Na przykład:
+
+```csharp
+decimal a = 0.1M;
+```
+
+Jeśli [literał numeryczny liczby całkowitej](/dotnet/csharp/language-reference/language-specification/lexical-structure#integer-literals) nie sufiks ma pierwszy następujące typy, w których jej wartość może być reprezentowana: `int`, `uint`, `long`, `ulong`.
+
+Jeśli [literał liczby rzeczywistej wartości liczbowych](/dotnet/csharp/language-reference/language-specification/lexical-structure#real-literals) nie sufiks jest typu `double`.
+
+## <a name="see-also"></a>Zobacz także
+
+- [Dokumentacja języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Tabele odwołań dla typów](reference-tables-for-types.md)
+- [Tabela wartości domyślnych](default-values-table.md)
+- [Typy wartości](value-types.md)
+- [Formatowanie tabeli wyników liczbowych](formatting-numeric-results-table.md)

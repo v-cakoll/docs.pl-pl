@@ -8,11 +8,11 @@ helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
 ms.openlocfilehash: c6ef926d6fb2c79b7b7f71c3b24b86a7ab057c88
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42930953"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43256794"
 ---
 # <a name="for-c-reference"></a>Aby uzyskać (odwołanie w C#)
 

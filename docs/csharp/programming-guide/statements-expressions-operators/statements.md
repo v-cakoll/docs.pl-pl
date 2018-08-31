@@ -5,12 +5,12 @@ helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: 68f7f799ebbfe52c99820083eb22761c79f66483
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: 9c278a47c2072b3f2dac8cfd4cf0dab1c488411e
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39220753"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43256742"
 ---
 # <a name="statements-c-programming-guide"></a>Instrukcje (Przewodnik programowania w języku C#)
 Akcje, które przyjmuje programu są wyrażane w instrukcjach. Typowe akcje obejmują zadeklarowania zmiennych, przypisywania wartości, wywoływanie metod, zapętlenie przez kolekcje i gałęzi do jednej lub drugiej bloku kodu, w zależności od danego warunku. Kolejność, w którym wykonywane są instrukcje w programie nosi nazwę przepływu sterowania lub przepływem wykonania. Przepływ sterowania, mogą się różnić w każdym uruchomieniu programu, w zależności od tego, jak program reaguje na dane wejściowe, że będzie ona otrzymywać w czasie wykonywania.  
@@ -24,8 +24,8 @@ Akcje, które przyjmuje programu są wyrażane w instrukcjach. Typowe akcje obej
   
 |Kategoria|Słowa kluczowe języka C# / informacje o|  
 |--------------|---------------------------|  
-|Instrukcje deklaracji|Instrukcji deklaracji wprowadza nową zmienną lub stałą. Deklaracja zmiennej, można opcjonalnie przypisać wartość do zmiennej. W deklaracji stałej przydziału jest wymagana.<br /><br /> [!code-csharp[csProgGuideStatements#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_2.cs)]|  
-|Instrukcje wyrażeń|Instrukcje wyrażeń, które obliczają wartość wartości muszą być przechowywane w zmiennej.<br /><br /> [!code-csharp[csProgGuideStatements#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_3.cs)]|  
+|[Instrukcje deklaracji](#declaration-statements)|Instrukcji deklaracji wprowadza nową zmienną lub stałą. Deklaracja zmiennej, można opcjonalnie przypisać wartość do zmiennej. W deklaracji stałej przydziału jest wymagana.|  
+|[Instrukcje wyrażeń](expressions.md)|Instrukcje wyrażeń, które obliczają wartość wartości muszą być przechowywane w zmiennej. Aby uzyskać więcej informacji, zobacz [instrukcje wyrażeń](#expression-statements).|  
 |[Instrukcje wyboru](../../../csharp/language-reference/keywords/selection-statements.md)|Instrukcje wyboru umożliwiają gałęzi do różnych sekcji kodu, w zależności od tego, co najmniej jeden określony warunek. Więcej informacji znajduje się w następujących tematach:<br /><br /> [Jeśli](../../../csharp/language-reference/keywords/if-else.md), [else](../../../csharp/language-reference/keywords/if-else.md), [Przełącz](../../../csharp/language-reference/keywords/switch.md), [case](../../../csharp/language-reference/keywords/switch.md)|  
 |[Instrukcje iteracji](../../../csharp/language-reference/keywords/iteration-statements.md)|Iteracja — instrukcje umożliwiają jednoczesne kolekcji, takich jak tablice lub wykonać ten sam zestaw instrukcji wielokrotnie do momentu spełnienia określonego warunku. Więcej informacji znajduje się w następujących tematach:<br /><br /> [czy](../../../csharp/language-reference/keywords/do.md), [dla](../../../csharp/language-reference/keywords/for.md), [foreach](../../../csharp/language-reference/keywords/foreach-in.md), [w](../../../csharp/language-reference/keywords/foreach-in.md), [podczas](../../../csharp/language-reference/keywords/while.md)|  
 |[Instrukcje skoku](../../../csharp/language-reference/keywords/jump-statements.md)|Szybkie instrukcji transfer kontroli do innej części kodu. Więcej informacji znajduje się w następujących tematach:<br /><br /> [podział](../../../csharp/language-reference/keywords/break.md), [nadal](../../../csharp/language-reference/keywords/continue.md), [domyślne](../../../csharp/language-reference/keywords/switch.md), [przejdź do](../../../csharp/language-reference/keywords/goto.md), [zwracają](../../../csharp/language-reference/keywords/return.md), [yield](../../../csharp/language-reference/keywords/yield.md)|  
@@ -36,9 +36,28 @@ Akcje, które przyjmuje programu są wyrażane w instrukcjach. Typowe akcje obej
 |`fixed` — Instrukcja|Fixed — instrukcja zapobiega przemieszczanie zmienną ruchome moduł odśmiecania pamięci. Aby uzyskać więcej informacji, zobacz [stałej](../../../csharp/language-reference/keywords/fixed-statement.md).|  
 |`lock` — Instrukcja|Instrukcji "lock" można ograniczyć dostęp do bloków kodu, aby tylko jeden wątek jednocześnie. Aby uzyskać więcej informacji, zobacz [blokady](../../../csharp/language-reference/keywords/lock-statement.md).|  
 |Labeled — instrukcje|Możesz nadać instrukcję etykietę, a następnie użyć [goto](../../../csharp/language-reference/keywords/goto.md) — słowo kluczowe, aby przejść do instrukcja labeled. (Zobacz przykład w poniższym wierszu).|  
-|Pusta instrukcja|Pusta instrukcja składa się z pojedynczego średnikami. On nic nie robi i mogą być używane w miejscach, w której instrukcję jest wymagany, ale musi zostać wykonana żadna akcja. W poniższych przykładach pokazano dwa zastosowania pustą instrukcję:<br /><br /> [!code-csharp[csProgGuideStatements#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_4.cs)]|  
+|[Pusta instrukcja](#the-empty-statement)|Pusta instrukcja składa się z pojedynczego średnikami. On nic nie robi i mogą być używane w miejscach, w której instrukcję jest wymagany, ale musi zostać wykonana żadna akcja.|  
   
-## <a name="embedded-statements"></a>Osadzone instrukcje  
+## <a name="declaration-statements"></a>Instrukcje deklaracji
+
+Poniższy kod przedstawia przykłady deklaracji zmiennych z lub bez początkowego przydziału i deklaracji stałej z inicjalizacją niezbędne.
+
+[!code-csharp[csProgGuideStatements#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_2.cs)]
+
+## <a name="expression-statements"></a>Instrukcje wyrażeń
+
+Poniższy kod przedstawia przykładowe instrukcje wyrażeń, łącznie z przypisania, utworzenie obiektu za pomocą przydziałów i wywołanie metody.
+
+[!code-csharp[csProgGuideStatements#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_3.cs)]
+
+## <a name="the-empty-statement"></a>Pusta instrukcja
+
+W poniższych przykładach pokazano dwa zastosowania pustą instrukcję:
+
+[!code-csharp[csProgGuideStatements#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_4.cs)]
+
+## <a name="embedded-statements"></a>Osadzone instrukcje
+
  Niektóre instrukcje, w tym [czy](../../../csharp/language-reference/keywords/do.md), [podczas](../../../csharp/language-reference/keywords/while.md), [dla](../../../csharp/language-reference/keywords/for.md), i [foreach](../../../csharp/language-reference/keywords/foreach-in.md), zawsze mają osadzona instrukcja, który następuje po nich. To osadzona instrukcja może być pojedynczą instrukcję lub wiele instrukcji ujęta w {} nawiasów kwadratowych w bloku instrukcji. Osadzone instrukcje nawet jednego wiersza mogą być ujęte w {} nawiasy kwadratowe, jak pokazano w poniższym przykładzie:  
   
  [!code-csharp[csProgGuideStatements#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_5.cs)]  

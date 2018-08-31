@@ -9,25 +9,25 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: ce938d922560c96b5ce3c76756d409af5858492d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 275ae52a36ed9766e2569bd6c8ecdea78ea56e0b
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522905"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43255085"
 ---
 # <a name="how-to-inherit-windows-forms"></a>Porady: dziedziczenie formularzy systemu Windows
-Tworzenie nowych formularzy systemu Windows przez dziedziczenie z formularzy podstawowy jest to wygodna metoda mają zostać zduplikowane starań bez pośrednictwa całkowicie odtworzenie formularza za każdym razem, gdy wymagają tego procesu.  
+Tworzenie nowych formularzy Windows przez dziedziczenie z formularzy podstawowy jest wygodny sposób zduplikowane starań bez przechodzenia przez proces całkowicie ponownego tworzenia formularza, za każdym razem, gdy jej potrzebujesz.  
   
- Aby uzyskać więcej informacji na temat dziedziczenie formularzy przy użyciu czasu projektowania **selektora dziedziczenia** okno dialogowe i jak wizualnie rozróżnienia poziomów zabezpieczeń dziedziczone formantów, zobacz [porady: dziedziczenie formularzy przy użyciu Okno dialogowe selektora dziedziczenia](../../../../docs/framework/winforms/advanced/how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md).  
+ Aby uzyskać więcej informacji na temat dziedziczenie formularzy przy użyciu czasu projektowania **selektor dziedziczenia** okno dialogowe i jak wizualnie rozróżnienie między poziomy zabezpieczeń dziedziczone formantów, zobacz [porady: dziedziczenie formularzy przy użyciu Selektor dziedziczenia — okno dialogowe](../../../../docs/framework/winforms/advanced/how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md).  
   
- **Uwaga** aby dziedziczyć z formularza, pliku lub przestrzeni nazw zawierającej formularza musi skompilowano do pliku wykonywalnego lub DLL. Aby utworzyć projekt, wybierz **kompilacji** z **kompilacji** menu. Ponadto odwołanie do przestrzeni nazw musi można dodać do klasy dziedziczy formularza. Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+ **Uwaga** celu dziedziczą z formularza, pliku lub przestrzeni nazw, zawierające ten formularz musi zostały skompilowane do pliku wykonywalnego lub biblioteki DLL. Aby skompilować projekt, wybierz opcję **kompilacji** z **kompilacji** menu. Ponadto należy można dodać odwołania do przestrzeni nazw do klasy dziedziczące formularza. Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-### <a name="to-inherit-a-form-programmatically"></a>Aby programowo dziedziczą formularza  
+### <a name="to-inherit-a-form-programmatically"></a>Programowe dziedziczyć formularza  
   
 1.  W klasie Dodaj odwołanie do przestrzeni nazw zawierający formularz, który chcesz dziedziczyć.  
   
-2.  W definicji klasy Dodaj odwołanie do formularza, aby dziedziczyć. Odwołania powinny zawierać nazw, zawierający formularz, a następnie okres, a następnie nazwę samego formularza podstawowego.  
+2.  W definicji klasy Dodaj odwołanie do formularza, aby dziedziczyć. Odwołania powinny zawierać przestrzeń nazw zawierająca formularz, następuje kropka, a następnie nazwa podstawowa samego formularza.  
   
     ```vb  
     Public Class Form2  
@@ -38,7 +38,7 @@ Tworzenie nowych formularzy systemu Windows przez dziedziczenie z formularzy pod
     public class Form2 : Namespace1.Form1  
     ```  
   
- Przy dziedziczenie formularzy, należy pamiętać o tym, jakie problemy mogą się pojawić w odniesieniu do obsługi zdarzeń wywoływana dwukrotnie, ponieważ każde zdarzenie jest obsługiwane przez klasę podstawową i dziedziczonej klasie. Aby uzyskać więcej informacji na temat uniknąć tego problemu, zobacz [Rozwiązywanie problemów z dziedziczone programów obsługi zdarzeń w języku Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).  
+ Gdy dziedziczenie formularzy, należy pamiętać o tym, jakie problemy mogą się pojawić w odniesieniu do programów obsługi zdarzeń, wywoływana dwa razy, ponieważ każde zdarzenie jest obsługiwane zarówno przez klasę bazową i odziedziczoną klasę. Aby uzyskać więcej informacji na temat uniknąć tego problemu, zobacz [Rozwiązywanie problemów z dziedziczone procedury obsługi zdarzeń w języku Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Inherits, instrukcja](~/docs/visual-basic/language-reference/statements/inherits-statement.md)  

@@ -2,84 +2,86 @@
 title: Kompilowanie przykładów programu Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-ms.openlocfilehash: 637b862d81ce4eeddc56acb24a527e6937f33f64
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 46f4015c00916a5cab932e8fd2539c7c86588a30
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806958"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43256755"
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Kompilowanie przykładów programu Windows Communication Foundation
-Przykłady Windows Communication Foundation (WCF) mogą być tworzone przy użyciu programu Visual Studio 2010 lub **msbuild** polecenie w wierszu polecenia. Zarówno procedury opisane w tym temacie.  
-  
+
+Mogą być wbudowane przykładów Windows Communication Foundation (WCF), za pomocą środowiska IDE programu Visual Studio lub **msbuild** polecenie w wierszu polecenia. Obie procedury są opisane w tym temacie.
+
 > [!NOTE]
->  Przed kompilowania lub z dowolnym przykłady WCF, upewnij się, mogły być wykonane [jednorazowego procedurę instalacji dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
-  
-### <a name="to-build-the-sample-using-a-command-prompt"></a>Aby samodzielnie tworzyć przykładowy przy użyciu wiersza polecenia  
-  
-1.  Otwórz [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] wiersz z uprawnieniami administratora polecenia i przejdź do podkatalogu specyficzne dla języka w obszarze na lokalizację katalogu, w którym zainstalowano próbki.  
-  
-2.  Typ `msbuild` w wierszu polecenia. Pliki programu klienta są przeznaczone do client\bin i pliki programu usługi są przeznaczone do service\bin. Jeśli usługa jest obsługiwana przez Internet Information Services (IIS), pliki programu usługi są również kopiowane do katalogu servicemodelsamples i jej podkatalog \bin.  
-  
+> Przed przystąpieniem do tworzenia lub z dowolnym przykłady WCF, upewnij się, kiedy została wykonana [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+
+## <a name="to-build-the-sample-using-a-command-prompt"></a>Aby skompilować przykład za pomocą wiersza polecenia
+
+1.  Otwórz wiersz polecenia dla deweloperów programu Visual Studio i przejdź do podkatalogu specyficzny dla języka, w lokalizacji katalogu, w której zainstalowany próbki.
+
+2.  Typ `msbuild` w wierszu polecenia. Pliki programu klienta zostały opracowane w celu *client\bin* i plików programu usługi zostały opracowane w celu *service\bin*. Jeśli usługa jest obsługiwana przez Internetowe usługi informacyjne (IIS), plików programu usługi są również kopiowane do *servicemodelsamples* katalogu i jego *\bin* podkatalogu.
+
 > [!NOTE]
->  Należy ustawić listy ACL na %systemdrive%\inetpub\wwwroot udzielenia modyfikowania uprawnień do konta, na którym są uruchomione. W przeciwnym razie niektóre po kompilacji zdarzenia błędów. Alternatywnie można pozostawić listy kontroli dostępu i uruchom SDK wiersz polecenia jako administrator.  
-  
-### <a name="to-build-the-sample-using-visual-studio"></a>Aby samodzielnie tworzyć przykładowy przy użyciu programu Visual Studio  
-  
-1.  Jeśli używasz [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 lub Windows Server 2008 R2, a także program [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], trzeba uruchomić Visual Studio z podniesionymi uprawnieniami. Aby to zrobić, kliknij prawym przyciskiem myszy ikonę w Start menu, a następnie kliknij przycisk **Uruchom jako administrator**.  
-  
-2.  Z **pliku** menu programu Visual Studio kliknij **Otwórz**, następnie kliknij przycisk **projektu/rozwiązania**. Przejdź do podkatalogu specyficzne dla języka w katalogu, w którym zainstalowano próbki, a następnie kliknij dwukrotnie ikonę pliku SLN, aby otworzyć rozwiązanie programu Visual Studio.  
-  
-3.  W **kompilacji** menu, wybierz opcję **Kompiluj ponownie rozwiązanie**. Pliki programu klienta są przeznaczone do client\bin i pliki programu usługi są przeznaczone do service\bin. Jeśli usługa jest obsługiwana w usługach IIS, pliki programu usługi są również kopiowane do katalogu servicemodelsamples i jej podkatalog \bin.  
-  
+> Listy ACL należy ustawić na *%systemdrive%\inetpub\wwwroot* udzielenia modyfikowania uprawnień do konta, w którym są uruchomione. W przeciwnym razie niektóre po awarii zdarzeń kompilacji. Alternatywnie można pozostawić listy ACL, i uruchom wiersz polecenia zestawu SDK jako administrator.
+
+## <a name="to-build-the-sample-using-visual-studio"></a>Aby skompilować przykład za pomocą programu Visual Studio
+
+1. Z **pliku** menu w programie Visual Studio, wybierz **Otwórz** > **projekt/rozwiązanie**. Przejdź do podkatalogu specyficzny dla języka w katalogu, w którym zainstalowano próbki, a następnie kliknij dwukrotnie ikonę pliku .sln, aby otworzyć rozwiązanie w programie Visual Studio.
+
+1. Z **kompilacji** menu, wybierz opcję **Kompiluj rozwiązanie**.
+
+   Pliki programu klienta zostały opracowane w celu client\bin i plików programu usługi zostały opracowane w celu service\bin. Jeśli usługa jest hostowana w usługach IIS, pliki programów service również są kopiowane do *servicemodelsamples* katalogu i jego *\bin* podkatalogu.
+
 > [!NOTE]
->  Należy ustawić listy ACL na %systemdrive%\inetpub\wwwroot udzielenia modyfikowania uprawnień do konta, na którym są uruchomione. W przeciwnym razie niektóre po kompilacji zdarzenia błędów. Alternatywnie można pozostawić listy kontroli dostępu i uruchom wiersz polecenia zestawu SDK lub Visual Studio jako administrator. Niektóre akcje programu Visual Studio (takich jak dołączanie debugera do procesu roboczego ASP.Net) wymagają również uprawnienia administracyjne.  
-  
-## <a name="setup-batch-files-and-scripts"></a>Pliki wsadowe Instalatora i skryptów  
- Pliki wsadowe Setup.exe i Cleanup.exe i skrypty powinien zostać uruchomiony z wiersza polecenia programu Visual Studio. Kilka zestawu w górę i oczyszczania plików wykonywanie zadań, które wymagają uprawnień administratora i powinna być uruchamiana z uprawnieniami administratora.  
-  
-## <a name="important-security-information-about-metadata-endpoints"></a>Ważne informacje dotyczące zabezpieczeń dotyczące punkty końcowe metadanych  
- Aby zapobiec przypadkowe ujawnienie metadanych usługi potencjalnie poufnych, konfigurację domyślną dla usług Windows Communication Foundation (WCF) wyłącza Publikowanie metadanych. To zachowanie jest domyślnie bezpieczne, ale również zaimportować narzędzia (na przykład Svcutil.exe) oznacza, że metadane nie można użyć do generowania kodu klienta wymaganych do wywołania tej usługi, chyba że jawnie włączone jest zachowanie podczas publikowania metadanych usługi w konfiguracji. Aby eksperymentowanie z próbek łatwiejsze, prawie wszystkie próbki ujawniać punkt końcowy publikowania metadanych niezabezpieczona. Takie punkty końcowe są potencjalnie dostępne dla anonimowych użytkowników nieuwierzytelnionych i należy uważać przed wdrożeniem takich punktów końcowych w celu zapewnienia publicznie ujawniająca metadanych usługi odpowiednie. Aby uzyskać więcej informacji o publikowaniu metadanych usługi, zobacz [zachowanie podczas publikowania metadanych](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) próbki. Zobacz [punktu końcowego metadanych niestandardowy bezpieczny](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) przykładowa przykładowe zabezpieczanie punktu końcowego metadanych.  
-  
-## <a name="exception-handling"></a>Obsługa wyjątków  
- Ogólnie rzecz biorąc, te przykłady nie obejmują obsługi wyjątków, aby zachować koncentruje się na temat próbki kodu. Aby uzyskać więcej informacji na temat obsługi wyjątków, zobacz [oczekiwane wyjątki](../../../../docs/framework/wcf/samples/expected-exceptions.md) próbki.  
-  
-## <a name="regenerating-clients-and-configuration-with-svcutil"></a>Trwa ponowne generowanie klientów i konfiguracji z narzędzia Svcutil  
- Można użyć [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) można ponownie wygenerować kod klienta i konfiguracji dla większości próbek. Niektóre przykłady wymagają konfiguracji ręcznie edytowane. Na przykład jeśli używasz Svcutil.exe ponownego generowania konfiguracji dla przykładu, który używa poświadczeń certyfikatu klienta, muszą ręcznie określić poświadczenia, wcześniej skonfigurowany. Niektóre przykłady użycia określonych opcji Svcutil.exe wpływ na wygenerowany kod, te opcje są określone w tematy szczególnych próbek.  
-  
-#### <a name="to-regenerate-the-client-and-configuration-files"></a>Można ponownie wygenerować pliki klienta i konfiguracji  
-  
-1.  Otwórz wiersz polecenia z zestawu SDK i przejdź do podkatalogu specyficzne dla języka w obszarze na lokalizację katalogu, w którym zainstalowano próbki.  
-  
-2.  Jeśli usługa jest typem hostowanych w sieci Web, użyj następującego polecenia.  
-  
-    ```  
-    svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /out:generatedClient.cs  
-    ```  
-  
-     Jeśli usługa jest samodzielnie hostowana wpisz następujące polecenie.  
-  
-    ```  
-    svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost:8000/servicemodelsamples/service.svc/mex /out:generatedClient.cs  
-    ```  
-  
-     Zastąp http://localhost:8000/ServiceModelSamples/service.svc/mex adres punktu końcowego mex samodzielnie hostowana usługa.  
-  
-     Aby wygenerować klienta w typie Visual Basic, użyj następującego polecenia.  
-  
-    ```  
-    svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /l:vb /out:generatedClient.vb  
-    ```  
-  
-     Jeśli usługa jest siebie typu, użyj następującego polecenia.  
-  
-    ```  
-    svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost:8000/servicemodelsamples/service.svc/mex /l:vb /out:generatedClient.vb  
-    ```  
-  
+> Musisz ustawić list ACL %systemdrive%\inetpub\wwwroot udzielenia modyfikowania uprawnień do konta, w którym są uruchomione. W przeciwnym razie niektóre po awarii zdarzeń kompilacji. Alternatywnie można pozostawić listy ACL, i uruchom wiersz polecenia zestawu SDK lub programu Visual Studio jako administrator. Niektóre akcje programu Visual Studio (na przykład dołączanie debugera do procesu roboczego ASP.Net) również wymagają uprawnień administratora.
+
+## <a name="setup-batch-files-and-scripts"></a>Pliki wsadowe Instalatora i skryptów
+ Setup.exe i Cleanup.exe pliki wsadowe i skryptów można uruchamiać z wiersza polecenia dla deweloperów programu Visual Studio. Kilka zestawu w górę i oczyszczania plików wykonywania zadań, które wymagają uprawnień administratora i powinien zostać uruchomiony z uprawnieniami administratora.
+
+## <a name="important-security-information-about-metadata-endpoints"></a>Ważne informacje dotyczące zabezpieczeń dotyczące punktów końcowych metadanych
+ Aby zapobiegać niezamierzonym ujawnieniem metadanych usługi potencjalnie poufnych, konfigurację domyślną dla usług Windows Communication Foundation (WCF) powoduje wyłączenie publikowania metadanych. To zachowanie jest domyślnie bezpieczny, ale również zaimportować narzędzia (takie jak Svcutil.exe) oznacza, że metadane nie można użyć do wygenerowania kodu klienta wymaganych do wywołania tej usługi, chyba że jawnie włączone jest zachowanie publikowania metadanych usługi w konfiguracji. Aby upewnić się, eksperymentowania z przykładów łatwiejsze, prawie wszystkie przykłady uwidocznić punkt końcowy publikowania metadanych niezabezpieczona. Takie punkty końcowe są potencjalnie dostępne dla anonimowe, nieuwierzytelnione konsumentów i należy uważać, przed wdrożeniem tych punktów końcowych w celu zapewnienia publicznie ujawniająca metadanych usługi odpowiednie. Aby uzyskać więcej informacji na temat publikowania metadanych usługi, zobacz [zachowanie publikowania metadanych](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) próbki. Zobacz [niestandardowy bezpieczny punkt końcowy metadanych](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) przykładowe przykład zabezpieczenia punktu końcowego metadanych.
+
+## <a name="exception-handling"></a>Obsługa wyjątków
+ Ogólnie rzecz biorąc te przykłady nie obejmują obsługi wyjątków, aby zachować zgodność kodu koncentruje się na ten temat próbki. Aby uzyskać więcej informacji na temat obsługi wyjątków, zobacz [oczekiwane wyjątki](../../../../docs/framework/wcf/samples/expected-exceptions.md) próbki.
+
+## <a name="regenerating-clients-and-configuration-with-svcutil"></a>Trwa ponowne generowanie klientów i konfiguracji za pomocą narzędzia Svcutil
+ Możesz użyć [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) ponownego generowania kodu klienta i konfiguracji dla większości próbek. Niektóre przykłady wymagają konfiguracji ręcznie edytowane. Na przykład w przypadku używasz Svcutil.exe ponownego generowania konfiguracji dla przykładu, który używa poświadczeń certyfikatu klienta muszą ręcznie określić poświadczeń wcześniej skonfigurowane. Przykłady wpływa na kod wygenerowany przy użyciu określonych opcji Svcutil.exe, te opcje są określone w tematach określonych przykładowe.
+
+### <a name="to-regenerate-the-client-and-configuration-files"></a>Aby ponownie wygenerować pliki klienta i konfiguracji
+
+1.  Otwórz wiersz polecenia z zestawu SDK i przejdź do podkatalogu specyficzny dla języka, w lokalizacji katalogu, w której zainstalowany próbki.
+
+2.  Jeśli usługa jest typem hostowanych w sieci Web, użyj następującego polecenia.
+
+    ```
+    svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /out:generatedClient.cs
+    ```
+
+     Jeśli usługa jest Self-Hosted wpisz następujące polecenie.
+
+    ```
+    svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost:8000/servicemodelsamples/service.svc/mex /out:generatedClient.cs
+    ```
+
+     Zastąp http://localhost:8000/ServiceModelSamples/service.svc/mex przy użyciu adresu punktu końcowego mex samodzielnie hostowanej usługi.
+
+     Aby wygenerować klienta w typie języka Visual Basic, użyj następującego polecenia.
+
+    ```
+    svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /l:vb /out:generatedClient.vb
+    ```
+
+     Jeśli usługa jest typem Self-Hosted, użyj następującego polecenia.
+
+    ```
+    svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost:8000/servicemodelsamples/service.svc/mex /l:vb /out:generatedClient.vb
+    ```
+
     > [!NOTE]
-    >  Aby pominąć generowanie konfiguracji klienta dodać **/noconfig** opcji.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Uruchamianie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md)  
- [Narzędzie do obsługi metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+    > Aby pominąć generowanie konfiguracji klienta należy dodać **/noconfig** opcji.
+
+## <a name="see-also"></a>Zobacz też
+
+- [Uruchamianie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md)
+- [Narzędzie do obsługi metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

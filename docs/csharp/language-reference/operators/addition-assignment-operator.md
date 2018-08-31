@@ -8,11 +8,11 @@ helpviewer_keywords:
 - addition assignment operator (+=) [C#]
 ms.assetid: 9cdf97e6-331d-492b-85e1-3ec3171484e9
 ms.openlocfilehash: bd0997ec5b7d79a41e01f9c2b17533293e412c1e
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933790"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43257334"
 ---
 # <a name="-operator-c-reference"></a>+= — Operator (odwołanie w C#)
 Operator przypisania dodawania.  

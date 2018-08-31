@@ -5,45 +5,45 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: ce4585a1c5c2b9acbdb7ec33c62a1e91851b720e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 26bc136ea2b7e5bda4a57c5dad65ec3522efcd3d
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538835"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43258724"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Porady: tworzenie prostego formantu powiązanego na formularzu systemu Windows
-Z *proste powiązanie*, element danych, np. wartość kolumny z tabeli zestawu danych, można wyświetlić w formancie. Możesz można prosty — wiązanie żadnej właściwości formantu do wartości danych.  
+Za pomocą *proste powiązanie*, można wyświetlić elementu danych jednego, takiego jak wartość kolumny z tabeli zestawu danych w formancie. Użytkownik może prosty wiązania dowolnej właściwości kontrolki z wartością danych.  
   
 > [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-### <a name="to-simple-bind-a-control"></a>Prosty polecenia BIND formant  
+### <a name="to-simple-bind-a-control"></a>Do wiązania prostego formantu  
   
-1.  Połączenie ze źródłem danych. Aby uzyskać więcej informacji, zobacz [połączenie ze źródłem danych](../../../docs/framework/data/adonet/connecting-to-a-data-source.md).  
+1.  Łączenie ze źródłem danych. Aby uzyskać więcej informacji, zobacz [nawiązania połączenia ze źródłem danych](../../../docs/framework/data/adonet/connecting-to-a-data-source.md).  
   
-2.  W formularzu, wybierz kontrolkę i wyświetlić **właściwości** okna.  
+2.  W formularzu wybierz kontrolkę i wyświetlić **właściwości** okna.  
   
-3.  Rozwiń węzeł **(DataBindings)** właściwości.  
+3.  Rozwiń **(powiązania danych)** właściwości.  
   
-     Właściwości często powiązane są wyświetlane poniżej **(DataBindings)** właściwości. Na przykład w przypadku większości formantów **tekst** właściwości najczęściej jest powiązany.  
+     Właściwości najczęściej powiązane są wyświetlane poniżej **(powiązania danych)** właściwości. Na przykład w przypadku większości kontrolek **tekstu** właściwość najczęściej jest powiązana.  
   
-4.  Jeśli właściwość ma zostać powiązania nie jest jednym z często powiązane właściwości, kliknij pozycję **wielokropka** przycisk (![VisualStudioEllipsesButton — zrzut ekranu](../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton") ) w **(zaawansowane)** pole, aby wyświetlić **formatowanie i zaawansowane powiązanie** okno dialogowe z pełną listę właściwości dla tego formantu.  
+4.  Jeśli właściwość, którą chcesz powiązania nie jest jednym z powszechnie powiązanych właściwości, kliknij pozycję **wielokropka** przycisku (![VisualStudioEllipsesButton — zrzut ekranu](../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton") ) w **(zaawansowane)** pole, aby wyświetlić **formatowanie i powiązywanie zaawansowane** okno dialogowe z pełną listę właściwości dla tej kontrolki.  
   
-5.  Wybierz właściwość, aby powiązać i kliknij strzałkę listy rozwijanej w obszarze **powiązanie**.  
+5.  Wybierz właściwość do powiązania, a następnie kliknij strzałkę listy rozwijanej w obszarze **powiązanie**.  
   
      Zostanie wyświetlona lista dostępnych źródeł danych.  
   
-6.  Rozwiń źródło danych, które chcesz powiązać do momentu znalezienia element danych, który ma. Na przykład są wiązane wartość kolumny w tabeli zestawu danych, rozwiń nazwę zestawu danych, a następnie rozwiń nazwę tabeli, aby wyświetlić nazwy kolumn.  
+6.  Rozwiń źródło danych, które chcesz powiązać, dopóki nie znajdziesz element danych jednego, który ma. Na przykład jeśli dokonywane jest wiązanie wartość kolumny w tabeli zestawu danych, rozwiń węzeł z nazwą zestawu danych, a następnie rozwiń nazwę tabeli, aby wyświetlić nazwy kolumn.  
   
-7.  Kliknij nazwę elementu, aby powiązać.  
+7.  Kliknij nazwę elementu można powiązać.  
   
-8.  Podczas pracy **formatowanie i zaawansowane powiązanie** okno dialogowe, kliknij przycisk **OK** aby powrócić do **właściwości** okna.  
+8.  Jeśli pracujesz **formatowanie i powiązywanie zaawansowane** okno dialogowe, kliknij przycisk **OK** aby powrócić do **właściwości** okna.  
   
 9. Jeśli chcesz powiązać dodatkowe właściwości formantu, powtórz kroki od 3 do 7.  
   
     > [!NOTE]
-    >  Ponieważ formanty powiązane z prostą Pokaż tylko danych jednego elementu, jest bardzo typowy do uwzględnienia w formularzu systemu Windows z formantów powiązanych z prostą logiki nawigacji.  
+    >  Ponieważ formanty powiązane z prostego pokazać tylko danych jednego elementu, to bardzo typowy do uwzględnienia nawigacji logiki w formularzu Windows za pomocą formantów powiązanych z prostego.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.Binding>  

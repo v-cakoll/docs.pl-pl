@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: aa9e7a4dacceb492dfe037b4b64f22f231323de5
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933225"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43258336"
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags — Wyliczenie
 Zawiera wartości flagi, które kontrolują zachowanie metadanych podczas otwierania plików manifestu.  

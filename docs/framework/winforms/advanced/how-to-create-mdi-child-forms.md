@@ -9,54 +9,54 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-ms.openlocfilehash: d4351e88de896f366ae2c4050f0e1c32aa0188a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bdfbe59ef779de242e32be11ca28c84f68437240
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527502"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253724"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Porady: tworzenie formularzy podrzędnych MDI
-Formularze podrzędne MDI jest podstawowym elementem [aplikacje interfejsu wielu dokumentów (MDI)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), jak te są Centrum interakcji z użytkownikiem.  
+Formularze podrzędne MDI jest podstawowym elementem [aplikacje interfejsu wielu dokumentów (MDI)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), jak te formularze są środek interakcji z użytkownikiem.  
   
- W poniższej procedurze utworzysz formularz podrzędny MDI, który wyświetla <xref:System.Windows.Forms.RichTextBox> kontroli podobna do innych aplikacji. Zastępowanie <xref:System.Windows.Forms> sterować za pomocą inne formanty, takie jak <xref:System.Windows.Forms.DataGridView> kontroli oraz ich kombinacjami formantów umożliwia tworzenie okien podrzędnych MDI (a przez rozszerzenie, aplikacje MDI) z różnych możliwości.  
+ W poniższej procedurze utworzysz formularz podrzędny MDI, która wyświetla <xref:System.Windows.Forms.RichTextBox> kontrolki, podobne do innych aplikacji. Podstawianie <xref:System.Windows.Forms> kontrolką inne formanty, takie jak <xref:System.Windows.Forms.DataGridView> formantu lub kombinację kontrolki pozwala na tworzenie elementu podrzędnego MDI systemu windows (a w konsekwencji, aplikacje MDI) z różnych możliwości.  
   
 > [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-### <a name="to-create-mdi-child-forms"></a>Do tworzenia formularzy podrzędnych MDI  
+### <a name="to-create-mdi-child-forms"></a>Umożliwia tworzenie formularzy podrzędnych MDI  
   
-1.  Utwórz nowy projekt formularzy systemu Windows. W **okna właściwości** formularza, ustaw jej <xref:System.Windows.Forms.Form.IsMdiContainer%2A> właściwości `true`i jego `WindowsState` właściwości `Maximized`.  
+1.  Utwórz nowy projekt Windows Forms. W **Windows właściwości** formularza, ustaw jego <xref:System.Windows.Forms.Form.IsMdiContainer%2A> właściwości `true`, a jego `WindowsState` właściwość `Maximized`.  
   
      Określa formularza jako kontenera okien podrzędnych MDI.  
   
-2.  Z `Toolbox`, przeciągnij <xref:System.Windows.Forms.MenuStrip> sterowania do formularza. Ustaw jego `Text` właściwości **pliku**.  
+2.  Z `Toolbox`, przeciągnij <xref:System.Windows.Forms.MenuStrip> formantu do formularza. Ustaw jego `Text` właściwości **pliku**.  
   
-3.  Kliknij przycisk wielokropka (...) obok pozycji **elementów** właściwości, a następnie kliknij przycisk **Dodaj** można dodać dwóch elementów menu paska narzędzia podrzędnych. Ustaw `Text` właściwości dla tych elementów do **nowy** i **okna**.  
+3.  Kliknij przycisk z wielokropkiem (...) obok pozycji **elementów** właściwości, a następnie kliknij przycisk **Dodaj** można dodać dwa elementy menu paska narzędzi podrzędnych. Ustaw `Text` właściwości dla tych elementów do **New** i **okna**.  
   
-4.  W **Eksploratora rozwiązań**, kliknij projekt prawym przyciskiem myszy, wskaż polecenie **Dodaj**, a następnie wybierz **Dodaj nowy element**.  
+4.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt, wskaż **Dodaj**, a następnie wybierz pozycję **Dodaj nowy element**.  
   
-5.  W **Dodaj nowy element** okno dialogowe, wybierz opcję **formularza systemu Windows** (w języku Visual Basic lub języka Visual C#) lub **aplikacji formularzy systemu Windows (.NET)** (w [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) z  **Szablony** okienka. W **nazwa** pozycję Nazwa formularza **formularz2**. Kliknij przycisk **Otwórz** przycisk, aby dodać formularza do projektu.  
+5.  W **Dodaj nowy element** okno dialogowe, wybierz opcję **formularza Windows** (w języku Visual Basic lub języka Visual C#) lub **Windows Forms aplikacji (.NET)** (w [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) z  **Szablony** okienka. W **nazwa** pola, określ nazwę formularza **formularz2**. Kliknij przycisk **Otwórz** przycisk, aby dodać formularz do projektu.  
   
     > [!NOTE]
-    >  Formularz podrzędny MDI utworzone w tym kroku jest standardowe formularza systemu Windows. W efekcie ma <xref:System.Windows.Forms.Form.Opacity%2A> właściwość, która umożliwia kontrolowanie przezroczystości formularza. Jednak <xref:System.Windows.Forms.Form.Opacity%2A> właściwość została zaprojektowana dla systemu windows najwyższego poziomu. Nie należy używać go z formularzy podrzędnych MDI, jak mogą wystąpić problemy rysowania.  
+    >  Formularz podrzędny MDI, który został utworzony w tym kroku jest standardowy formularz Windows. W efekcie ma <xref:System.Windows.Forms.Form.Opacity%2A> właściwość, która umożliwia kontrolowanie przezroczystości formularza. Jednak <xref:System.Windows.Forms.Form.Opacity%2A> właściwość została zaprojektowana dla okien najwyższego poziomu. Nie używaj go za pomocą formularzy podrzędnych MDI, jak mogą wystąpić problemy malowania.  
   
      Ten formularz będzie szablonu dla formularzy podrzędnych MDI.  
   
-     **Projektant formularzy systemu Windows** otwiera wyświetlanie **formularz2**.  
+     **Windows Forms Designer** otwiera się i wyświetla **formularz2**.  
   
-6.  Z **przybornika**, przeciągnij **RichTextBox** sterowania do formularza.  
+6.  Z **przybornika**, przeciągnij **RichTextBox** formantu do formularza.  
   
-7.  W **właściwości** ustaw `Anchor` właściwości **, lewa górna** i `Dock` właściwości **wypełnienia**.  
+7.  W **właściwości** oknie `Anchor` właściwości **, lewa górna** i `Dock` właściwości **wypełnienia**.  
   
-     Powoduje to <xref:System.Windows.Forms.RichTextBox> sterowania, aby wypełnić obszar formularz podrzędny MDI, nawet wtedy, gdy zmieni się rozmiar formularza.  
+     Powoduje to, że <xref:System.Windows.Forms.RichTextBox> sterowania, aby całkowicie wypełnić obszaru formularz podrzędny MDI, nawet w przypadku, gdy zmieniany jest rozmiar formularza.  
   
-8.  Kliknij dwukrotnie **nowy** element menu, aby utworzyć <xref:System.Windows.Forms.Control.Click> obsługi zdarzenia.  
+8.  Kliknij dwukrotnie **New** element menu, aby utworzyć <xref:System.Windows.Forms.Control.Click> obsługi zdarzeń.  
   
-9. Wstawianie kodu podobne do następujących czynności, aby utworzyć nowy formularz podrzędny MDI, gdy użytkownik kliknie **nowy** elementu menu.  
+9. Wstawianie kodu podobne do następujących czynności, aby utworzyć nowy formularz podrzędny MDI, gdy użytkownik kliknie **New** elementu menu.  
   
     > [!NOTE]
-    >  W poniższym przykładzie obsługuje program obsługi zdarzeń <xref:System.Windows.Forms.Control.Click> zdarzenia dla `MenuItem2`. Należy pamiętać, że, w zależności od specyfiki architektury aplikacji, z **nowy** element menu nie mogą być `MenuItem2`.  
+    >  W poniższym przykładzie obsługuje program obsługi zdarzeń <xref:System.Windows.Forms.Control.Click> zdarzenie `MenuItem2`. Należy pamiętać, w zależności od specyfiki architektury aplikacji, usługi **New** element menu może nie być `MenuItem2`.  
   
     ```vb  
     Protected Sub MDIChildNew_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem2.Click  
@@ -91,20 +91,20 @@ Formularze podrzędne MDI jest podstawowym elementem [aplikacje interfejsu wielu
        }  
     ```  
   
-     W [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], Dodaj następujący `#include` dyrektywy w górnej części Form1.h:  
+     W [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], Dodaj następujący kod `#include` dyrektywę w górnej części Form1.h:  
   
     ```cpp  
     #include "Form2.h"  
     ```  
   
-10. Na liście rozwijanej na górze **właściwości** okna, wybierz paska menu, która odpowiada **pliku** paska menu i zestaw <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> właściwości do okna <xref:System.Windows.Forms.ToolStripMenuItem>.  
+10. Na liście rozwijanej w górnej części **właściwości** okna, wybierz pasek menu, który odpowiada **pliku** paska menu i ustaw <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> właściwości w oknie <xref:System.Windows.Forms.ToolStripMenuItem>.  
   
-     Spowoduje to włączenie **okna** menu, aby utrzymywać listę okien podrzędnych MDI znacznik wyboru obok okna podrzędnego active.  
+     Spowoduje to włączenie **okna** menu, aby utrzymywać listę otwartych okien podrzędnych MDI znacznik wyboru obok okna podrzędnego active.  
   
-11. Naciśnij klawisz F5, aby uruchomić aplikację. Wybierając **nowy** z **pliku** menu, można utworzyć nowego formularzy podrzędnych MDI, które są przechowywane informacje o w **okna** elementu menu.  
+11. Naciśnij klawisz F5, aby uruchomić aplikację. Wybierając **New** z **pliku** menu, można utworzyć nowych formularzy podrzędnych MDI, które są przechowywane informacje o w **okna** elementu menu.  
   
     > [!NOTE]
-    >  Gdy formularz podrzędny MDI ma <xref:System.Windows.Forms.MainMenu> składnik (z, zazwyczaj struktury menu elementów menu) i jest otwarty w formularza nadrzędnego MDI, który ma <xref:System.Windows.Forms.MainMenu> składnik (z, zazwyczaj struktury menu elementów menu), automatycznie scali elementów menu Jeśli ustawiono <xref:System.Windows.Forms.MenuItem.MergeType%2A> właściwości (i opcjonalnie <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> właściwości). Ustaw <xref:System.Windows.Forms.MenuItem.MergeType%2A> właściwość obu <xref:System.Windows.Forms.MainMenu> składników i wszystkich elementów menu do formularza podrzędnego <xref:System.Windows.Forms.MenuMerge.MergeItems>. Ponadto, ustawić <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> właściwości, aby elementów menu z obu menu są wyświetlane w odpowiedni sposób. Ponadto należy pamiętać, że po zamknięciu formularza nadrzędnego MDI każdego elementu podrzędnego MDI formularzy zgłasza <xref:System.Windows.Forms.Form.Closing> zdarzeń przed <xref:System.Windows.Forms.Form.Closing> nadrzędnego MDI zdarzenia. Anulowanie podrzędnych MDI <xref:System.Windows.Forms.Form.Closing> zdarzeń nie zapobiega element nadrzędny MDI <xref:System.Windows.Forms.Form.Closing> zdarzenia z zgłaszanych; jednak <xref:System.ComponentModel.CancelEventArgs> argument element nadrzędny MDI <xref:System.Windows.Forms.Form.Closing> zdarzeń zostanie teraz ustawiony na `true`. Możesz wymusić element nadrzędny MDI i wszystkie formularze podrzędne MDI, aby zamknąć przez ustawienie <xref:System.ComponentModel.CancelEventArgs> argument `false`.  
+    >  Jeśli formularz podrzędny MDI ma <xref:System.Windows.Forms.MainMenu> składnika (z, zwykle struktury menu elementów menu) i jest otwarty w ramach formularza nadrzędnego MDI, która ma <xref:System.Windows.Forms.MainMenu> składnik (z, zwykle struktury menu elementów menu), menu, automatycznie scali elementów Jeśli ustawiono <xref:System.Windows.Forms.MenuItem.MergeType%2A> właściwości (i ewentualnie <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> właściwości). Ustaw <xref:System.Windows.Forms.MenuItem.MergeType%2A> właściwość obu <xref:System.Windows.Forms.MainMenu> składników i wszystkie elementy menu formularza podrzędnego <xref:System.Windows.Forms.MenuMerge.MergeItems>. Ponadto, ustawić <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> właściwość tak, aby elementy menu, zarówno menu są wyświetlane w odpowiedni sposób. Ponadto należy pamiętać o tym, że po zamknięciu formularza nadrzędnego MDI każdego elementu podrzędnego MDI formularzy zgłasza <xref:System.Windows.Forms.Form.Closing> zdarzenie przed <xref:System.Windows.Forms.Form.Closing> jest wywoływane zdarzenie nadrzędnego MDI. Anulowanie podrzędnym MDI <xref:System.Windows.Forms.Form.Closing> zdarzeń nie zapobiega nadrzędny MDI <xref:System.Windows.Forms.Form.Closing> zdarzenia wywoływane; jednak <xref:System.ComponentModel.CancelEventArgs> argumentu dla elementu nadrzędnego MDI <xref:System.Windows.Forms.Form.Closing> zdarzenie zostanie teraz ustawiony na `true`. Można wymusić nadrzędnych MDI i wszystkie formularze podrzędne MDI, aby zamknąć, ustawiając <xref:System.ComponentModel.CancelEventArgs> argument `false`.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Aplikacje interfejsu wielu dokumentów (MDI)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)  

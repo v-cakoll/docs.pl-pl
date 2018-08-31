@@ -12,77 +12,77 @@ helpviewer_keywords:
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9fabf1a133ca3c3b3ba39a4898ce0aceb378f76d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbea588604ebd5ad39e134a4ecfe771c89fb1121
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571985"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43256658"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Inne konstrukcje w wyrażeniach regularnych
-Wyrażeń regularnych programu .NET obejmują trzy różne języka konstrukcje. Co pozwala włączyć lub wyłączyć opcjami pasującego środku wzorzec wyrażenia regularnego. Dwóch pozostałych pozwala na uwzględnianie komentarzy w wyrażeniu regularnym.  
+Wyrażenia regularne w .NET obejmują trzy konstrukcji językowych różne. Jeden pozwala włączyć lub wyłączyć określonego opcje dopasowania w środku wzorca wyrażenia regularnego. Dwóch pozostałych pozwala na uwzględnianie komentarzy w wyrażeniu regularnym.  
   
-## <a name="inline-options"></a>Wbudowane opcje  
- Możesz ustawić lub wyłącz określonego wzorca dopasowania opcje część wyrażenia regularnego przy użyciu składni  
+## <a name="inline-options"></a>Opcje określane w tekście  
+ Można ustawić lub wyłączyć określony wzorzec dopasowywania opcje dla części wyrażenia regularnego przy użyciu składni  
   
 ```  
 (?imnsx-imnsx)  
 ```  
   
- Możesz wyświetlić listę opcje, które chcesz włączyć po znaku zapytania i opcje, które mają zostać wyłączone po znaku minus. W tabeli poniżej opisano wszystkie opcje. Aby uzyskać więcej informacji na temat poszczególnych opcji, zobacz [opcje wyrażeń regularnych](../../../docs/standard/base-types/regular-expression-options.md).  
+ Możesz wyświetlić listę opcje, które chcesz włączyć po znaku zapytania, a także opcje, które chcesz wyłączyć po znaku minus. W tabeli poniżej opisano wszystkie opcje. Aby uzyskać więcej informacji na temat poszczególnych opcji, zobacz [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).  
   
 |Opcja|Opis|  
 |------------|-----------------|  
 |`i`|Dopasowywanie bez uwzględniania wielkości liter.|  
-|`m`|Wielowierszowy tryb.|  
-|`n`|Jawne przechwytywanie tylko. (Nawiasy mają nie zachowywać się jak przechwytywanie grup.)|  
-|`s`|Jednowierszowy tryb.|  
-|`x`|Ignoruj niezmienionym znaczeniu biały znak, a następnie poczekanie komentarze w trybie x.|  
+|`m`|Tryb wielowierszowy.|  
+|`n`|Tylko jawne przechwytywania. (Nawias mają nie zachowywać się jak grupy przechwytywania.)|  
+|`s`|Trybu jednowierszowego.|  
+|`x`|Ignoruj niekodowany biały znak i umożliwiają komentarz trybu x.|  
   
- Zmiany w opcjach wyrażenia regularnego zdefiniowane przez `(?imnsx-imnsx)` w celu utworzenia pozostaje aż do zakończenia otaczające grupy.  
+ Wszelkie zmiany w opcje wyrażeń regularnych zdefiniowane przez `(?imnsx-imnsx)` konstruowania pozostają w mocy aż do zakończenia otaczającego grupy.  
   
 > [!NOTE]
->  `(?imnsx-imnsx:` *Podwyrażenie* `)` konstrukcji grupowania udostępnia funkcję identyczne dla podwyrażenia. Aby uzyskać więcej informacji, zobacz [konstrukcji grupowania](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+>  `(?imnsx-imnsx:` *Podwyrażenie* `)` konstrukcja grupująca zapewnia identyczne funkcje podwyrażenia. Aby uzyskać więcej informacji, zobacz [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
- W poniższym przykładzie użyto `i`, `n`, i `x` opcje umożliwiające liter i jawne przechwytywanie i Ignoruj biały znak w wzorzec wyrażenia regularnego w trakcie wykonywania wyrażenia regularnego.  
+ W poniższym przykładzie użyto `i`, `n`, i `x` opcje umożliwiające ignorowanie wielkości liter i jawne przechwytywania i ignoruje biały znak we wzorcu wyrażenia regularnego w trakcie wykonywania wyrażenia regularnego.  
   
  [!code-csharp[RegularExpressions.Language.Miscellaneous#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.miscellaneous/cs/miscellaneous1.cs#1)]
  [!code-vb[RegularExpressions.Language.Miscellaneous#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.miscellaneous/vb/miscellaneous1.vb#1)]  
   
- W przykładzie zdefiniowano dwóch wyrażeń regularnych. Pierwsza strona, `\b(D\w+)\s(d\w+)\b`, odpowiada dwa kolejne słowa zaczynające się wielkie litery "D" i "d" jedną małą literę. Drugie wyrażenie regularne, `\b(D\w+)(?ixn) \s (d\w+) \b`, używa wbudowanego opcji do modyfikowania tego wzorca, zgodnie z opisem w poniższej tabeli. Porównanie wyników potwierdza efekt `(?ixn)` utworzenia.  
+ W przykładzie zdefiniowano dwóch wyrażeń regularnych. Pierwsza strona, `\b(D\w+)\s(d\w+)\b`, dopasowuje dwa kolejne wyrazy rozpoczynające się od wielkiej "D" i "d" małymi literami. Drugie wyrażenie regularne `\b(D\w+)(?ixn) \s (d\w+) \b`, używa opcji wbudowanej do modyfikowania tego wzorca, zgodnie z opisem w poniższej tabeli. Porównanie wyników potwierdza efekt `(?ixn)` konstruowania.  
   
 |Wzorzec|Opis|  
 |-------------|-----------------|  
 |`\b`|Rozpoczyna na granicy wyrazu.|  
-|`(D\w+)`|Zgodne kapitału "D", po którym następuje co najmniej jeden znak programu word. Jest to pierwsza grupa przechwytywania.|  
-|`(?ixn)`|Z tego punktu na marka porównania bez uwzględniania wielkości liter markę tylko jawne przechwytuje i Ignoruj biały znak w wzorzec wyrażenia regularnego.|  
+|`(D\w+)`|Dopasowuje wielkiej litery "D", po którym następuje co najmniej jeden znak słowa. Jest to pierwsza grupa przechwytywania.|  
+|`(?ixn)`|Od tej pory na marki porównania bez uwzględniania wielkości liter upewnij tylko jawne przechwytuje i Ignoruj biały znak we wzorcu wyrażenia regularnego.|  
 |`\s`|Dopasowuje znak odstępu.|  
-|`(d\w+)`|Zgodne wielkie i małe litery "d" następuje co najmniej jeden znak programu word. Ta grupa nie jest przechwycona, ponieważ `n` została włączona opcja (jawne przechwytywanie).|  
+|`(d\w+)`|Dopasowuje wielkimi lub małymi literami "d" następuje jeden lub więcej znaków słowa. Ta grupa nie jest przechwytywany, ponieważ `n` została włączona opcja (jawne przechwytywania)...|  
 |`\b`|Dopasowuje granicę wyrazu.|  
   
 ## <a name="inline-comment"></a>Komentarz w tekście  
- `(?#` *Komentarz* `)` konstrukcja pozwala umieścić komentarz w tekście w wyrażeniu regularnym. Pomimo że komentarz zawiera ciąg, który jest zwracany przez aparat wyrażeń regularnych nie używa dowolną część komentarz w dopasowywania do wzorca <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType> metody. Komentarz kończy się przy pierwszym nawiasie zamykającym.  
+ `(?#` *Komentarz* `)` konstrukcja pozwala dołączyć komentarz w tekście w wyrażeń regularnych. Aparat wyrażeń regularnych nie korzysta z dowolnej części komentarz w dopasowywania do wzorca, chociaż komentarz znajduje się w ciągu, który jest zwracany przez <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType> metody. Komentarz kończy się przy pierwszym nawiasie zamykającym.  
   
- Poniższy przykład powtarza pierwszy wzorzec wyrażenia regularnego z przykładu w poprzedniej sekcji. Dodaje dwa komentarzy wewnętrznych do wyrażenia regularnego, aby wskazać, czy wynik porównania jest rozróżniana wielkość liter. Wzorzec wyrażenia regularnego `\b((?# case-sensitive comparison)D\w+)\s((?#case-insensitive comparison)d\w+)\b`, jest zdefiniowany w następujący sposób.  
+ Poniższy przykład jest powtarzany wzorca pierwszego wyrażenia regularnego z przykładu w poprzedniej sekcji. Dodaje dwa komentarze w tekście do wyrażenia regularnego, aby wskazać, czy wynikiem porównania jest uwzględniana wielkość liter. Wzorzec wyrażenia regularnego `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b`, jest zdefiniowana w następujący sposób.  
   
 |Wzorzec|Opis|  
 |-------------|-----------------|  
 |`\b`|Rozpoczyna na granicy wyrazu.|  
-|`(?# case-sensitive comparison)`|Komentarz. Nie ma ona wpływu na zachowanie dopasowywanie do wzorca.|  
-|`(D\w+)`|Zgodne kapitału "D", po którym następuje co najmniej jeden znak programu word. Jest to pierwsza grupa przechwytywania.|  
+|`(?# case-sensitive comparison)`|Komentarz. Nie ma wpływu na zachowanie dopasowania do wzorca.|  
+|`(D\w+)`|Dopasowuje wielkiej litery "D", po którym następuje co najmniej jeden znak słowa. Jest to pierwsza grupa przechwytywania.|  
 |`\s`|Dopasowuje znak odstępu.|  
-|`(?ixn)`|Z tego punktu na marka porównania bez uwzględniania wielkości liter markę tylko jawne przechwytuje i Ignoruj biały znak w wzorzec wyrażenia regularnego.|  
-|`(?#case-insensitive comparison)`|Komentarz. Nie ma ona wpływu na zachowanie dopasowywanie do wzorca.|  
-|`(d\w+)`|Zgodne wielkie i małe litery "d" następuje co najmniej jeden znak programu word. Jest to drugi grupa przechwytywania.|  
+|`(?ixn)`|Od tej pory na marki porównania bez uwzględniania wielkości liter upewnij tylko jawne przechwytuje i Ignoruj biały znak we wzorcu wyrażenia regularnego.|  
+|`(?#case-insensitive comparison)`|Komentarz. Nie ma wpływu na zachowanie dopasowania do wzorca.|  
+|`(d\w+)`|Dopasowuje wielkimi lub małymi literami "d" następuje jeden lub więcej znaków słowa. Jest to druga grupa przechwytywania.|  
 |`\b`|Dopasowuje granicę wyrazu.|  
   
  [!code-csharp[RegularExpressions.Language.Miscellaneous#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.miscellaneous/cs/miscellaneous2.cs#2)]
  [!code-vb[RegularExpressions.Language.Miscellaneous#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.miscellaneous/vb/miscellaneous2.vb#2)]  
   
 ## <a name="end-of-line-comment"></a>Komentarz do końca wiersza  
- Znak liczby (`#`) oznacza komentarz w trybie x, który rozpoczyna się od znaku # niezmienionym znaczeniu na końcu wzorzec wyrażenia regularnego i jest kontynuowane do końca wiersza. Aby użyć tej konstrukcji, należy albo Włącz `x` opcja (przy użyciu opcji wbudowany) lub podać <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> do wartości `option` parametru podczas tworzenia wystąpienia <xref:System.Text.RegularExpressions.Regex> obiektu lub wywoływania statycznych <xref:System.Text.RegularExpressions.Regex> — metoda.  
+ Znak numeru (`#`) oznacza komentarz trybu x, która rozpoczyna się od znaku # o niezmienionym znaczeniu na końcu wzorca wyrażenia regularnego i jest kontynuowany aż do końca wiersza. Aby użyć tej konstrukcji, musisz albo Włącz `x` opcji (za pomocą opcji wbudowanych) lub podać <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> wartość `option` parametru podczas tworzenia wystąpienia <xref:System.Text.RegularExpressions.Regex> obiektu lub wywoływania statycznej <xref:System.Text.RegularExpressions.Regex> metody.  
   
- Poniższy przykład przedstawia konstrukcja komentarz końca wiersza. Określają one, czy ciąg formatu złożony, który zawiera co najmniej jeden element formatu ciągu. W poniższej tabeli opisano konstrukcje w wzorzec wyrażenia regularnego:  
+ W poniższym przykładzie pokazano konstrukcję końca wiersza komentarza. Określa, czy ciąg jest ciąg formatu złożonego, który zawiera co najmniej jeden element formatu. W poniższej tabeli opisano konstrukcje we wzorcu wyrażenia regularnego:  
   
  `\{\d+(,-*\d+)*(\:\w{1,4}?)*\}(?x) # Looks for a composite format item.`  
   
@@ -90,17 +90,16 @@ Wyrażeń regularnych programu .NET obejmują trzy różne języka konstrukcje. 
 |-------------|-----------------|  
 |`\{`|Zgodny z nawiasem otwierającym.|  
 |`\d+`|Dopasowanie do co najmniej jednej cyfry dziesiętnej.|  
-|`(,-*\d+)*`|Zgodne wystąpienie zero lub jeden przecinkami, i opcjonalnie znak minus następuje co najmniej jeden cyfr dziesiętnych.|  
-|`(\:\w{1,4}?)*`|Zgodne wystąpienie zero lub jeden dwukropek, następuje 1 do 4, ale jak najmniejszej liczby znaków, jak to możliwe, biały znak.|  
-|`(?#case insensitive comparison)`|Komentarz w tekście. Go nie ma wpływu na zachowanie dopasowywanie do wzorca.|  
-|`\}`|Zgodny nawiasem zamykającym.|  
-|`(?x)`|Tak, aby komentarz końca wiersza zostanie rozpoznany, należy włączyć opcję białe wzorzec ignorowania.|  
+|`(,-*\d+)*`|Dopasowuje wystąpienia zero lub jeden przecinek, następuje opcjonalny znak minusa, następuje jeden lub więcej cyfr dziesiętnych.|  
+|`(\:\w{1,4}?)*`|Dopasowuje zero lub jeden wystąpienie dwukropek i 1 do 4, ale tak małą możliwie białych znaków.|  
+|`\}`|Dopasowuje zamykającego nawiasu klamrowego.|  
+|`(?x)`|Włącz opcję Ignoruj wzorca odstępu komentarz końca wiersza zostanie rozpoznana.|  
 |`# Looks for a composite format item.`|Komentarz do końca wiersza.|  
   
  [!code-csharp[RegularExpressions.Language.Miscellaneous#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.miscellaneous/cs/miscellaneous3.cs#3)]
  [!code-vb[RegularExpressions.Language.Miscellaneous#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.miscellaneous/vb/miscellaneous3.vb#3)]  
   
- Należy zauważyć, że zamiast dostarczanie `(?x)` skonstruować w wyrażeniu regularnym komentarz można również zostały uznane przez wywołanie metody <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> — metoda i przekazanie jej <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> wartość wyliczenia.  
+ Należy zauważyć, że zamiast podawać `(?x)` konstruowania w wyrażeniu regularnym komentarz może również zostały uznane przez wywołanie metody <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> metody i przekazanie do niej <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> wartość wyliczenia.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Język wyrażeń regularnych — podręczny wykaz](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - CS3024
 ms.assetid: fef9db31-9a7f-42d5-ad37-3e7faf661f95
-ms.openlocfilehash: c4c2f915d6172e3c30fc32c5c57fe9921c3f915d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5d8781117b80dbebe6a01488b8bd66feb12d3e3c
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33280348"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43252911"
 ---
 # <a name="compiler-warning-cs3024"></a>CS3024 ostrzeżenia kompilatora
-Typ ograniczenia "type" nie jest zgodne ze specyfikacją CLS.  
+Typ ograniczenia "type" nie jest zgodny ze specyfikacją CLS.  
   
- Kompilator generuje to ostrzeżenie, ponieważ użycie specyfikacją CLS typu jako ograniczenia typu ogólnego może uniemożliwić kod napisany w przypadku niektórych języków do korzystania z klasy ogólnej.  
+ Kompilator generuje to ostrzeżenie, ponieważ korzystanie ze specyfikacją CLS niezgodne ze specyfikacją typu jako ograniczenia typu ogólnego może spowodować, że dla kodu napisanego w przypadku niektórych języków do korzystania z klasy ogólnej.  
   
-### <a name="to-eliminate-this-warning"></a>Aby wyeliminować to ostrzeżenie  
+### <a name="to-eliminate-this-warning"></a>Aby usunąć to ostrzeżenie  
   
 1.  Użyj zgodnych ze specyfikacją CLS typu dla ograniczenia typu.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład generuje CS3024 w wielu lokalizacjach:  
+ Poniższy przykład generuje CS3024 w kilku miejscach:  
   
 ```csharp  
 // cs3024.cs  
@@ -55,5 +55,6 @@ public class Test
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Ograniczenia dotyczące parametrów typu](../../csharp/programming-guide/generics/constraints-on-type-parameters.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Ograniczenia dotyczące parametrów typu](../../csharp/programming-guide/generics/constraints-on-type-parameters.md)

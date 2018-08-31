@@ -15,29 +15,29 @@ helpviewer_keywords:
 - easing functions [WPF], customizing
 - animations [WPF], applying
 ms.assetid: 075b9c2b-82c4-43fa-b3cd-de0b6236eb38
-ms.openlocfilehash: 3ce7c1824dc53c154ba1091ea62c1b8950b757c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 038d9423ddae6f16165ed0618beab8391c462ac9
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557566"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253214"
 ---
 # <a name="easing-functions"></a>Zwalnianie funkcji
-Funkcji sterowania tempem zmian umożliwiają stosowanie niestandardowych matematycznymi do animacji. Na przykład możesz obiektu realistycznie Odbijanie lub zachowują się tak, jakby była na źródła. Można użyć do przybliżonego określenia tych skutków ramki klucza lub nawet z lub do/przez animacje, ale zajmuje dużo pracy, a następnie animacji będzie dokładności mniejszej niż przy użyciu formuły matematycznych.  
+Funkcji easingu umożliwiają zastosowanie niestandardowych wzory matematyczne do animacji. Na przykład może być obiekt realistycznie Odbijanie lub zachowują się tak, jakby był na platformy spring. Można użyć kluczowych klatek lub nawet od/do/przez animacji, które znajdują się obliczyć przybliżoną te skutki, ale zająć znaczną ilość pracy, a następnie animacji będzie mniej dokładnie niż przy użyciu formuły matematyczne.  
   
- Oprócz tworzenia własnej niestandardowej funkcji sterowania tempem zmian przez dziedziczenie z <xref:System.Windows.Media.Animation.EasingFunctionBase>, można użyć jednej z kilku funkcji sterowania tempem zmian dostarczonym w czasie wykonywania można utworzyć typowe skutki.  
+ Oprócz tworzenia własnych niestandardowych funkcji sterowania tempem zmian przez dziedziczenie z <xref:System.Windows.Media.Animation.EasingFunctionBase>, używasz jednej z kilku funkcji sterowania tempem zmian dostarczane przez środowisko uruchomieniowe do tworzenia efektów wspólnej.  
   
--   <xref:System.Windows.Media.Animation.BackEase>: Wycofuje ruchu animacji nieco przed rozpoczęciem animacji w wskazanej ścieżce.  
+-   <xref:System.Windows.Media.Animation.BackEase>: Wycofuje ruchu animacji nieco przed jego rozpoczęciem animować w wskazanej ścieżce.  
   
--   <xref:System.Windows.Media.Animation.BounceEase>: Efekt podskakujące tworzy.  
+-   <xref:System.Windows.Media.Animation.BounceEase>: Tworzy efekt odbijania.  
   
--   <xref:System.Windows.Media.Animation.CircleEase>: Tworzy animacji, które przyspieszają i/lub zwalnia przy użyciu funkcji cyklicznej.  
+-   <xref:System.Windows.Media.Animation.CircleEase>: Tworzy animacji, które przyspieszają i/lub zwalnia przy użyciu funkcji cykliczne.  
   
 -   <xref:System.Windows.Media.Animation.CubicEase>: Tworzy animacji, które przyspieszają i/lub zwalnia przy użyciu formuły *f*(*t*) = *t*<sup>3</sup>.  
   
--   <xref:System.Windows.Media.Animation.ElasticEase>: Tworzy animacji podobny sprężynowy Densytometr i z powrotem do momentu zakończenia rest.  
+-   <xref:System.Windows.Media.Animation.ElasticEase>: Tworzy animacji podobny platformy spring Densytometr i z powrotem do momentu zakończenia rest.  
   
--   <xref:System.Windows.Media.Animation.ExponentialEase>: Tworzy animacji, które przyspieszają i/lub zwalnia przy użyciu formuły wykładniczej.  
+-   <xref:System.Windows.Media.Animation.ExponentialEase>: Tworzy animacji, które przyspieszają i/lub zwalnia przy użyciu wykładniczego formuły.  
   
 -   <xref:System.Windows.Media.Animation.PowerEase>: Tworzy animacji, które przyspieszają i/lub zwalnia przy użyciu formuły *f*(*t*) = *t*<sup>p</sup> gdzie p jest równa <xref:System.Windows.Media.Animation.PowerEase.Power%2A>właściwości.  
   
@@ -49,82 +49,72 @@ Funkcji sterowania tempem zmian umożliwiają stosowanie niestandardowych matema
   
 -   <xref:System.Windows.Media.Animation.SineEase>: Tworzy animacji, które przyspieszają i/lub zwalnia przy użyciu formuły sinus.  
   
- Można sprawdzić działanie tych funkcji sterowania tempem zmian z następującym przykładowym.  
-  
- [Uruchomienie tego przykładu](http://go.microsoft.com/fwlink/?LinkId=139798&sref=easing_functions_gallery)  
-  
- Aby zastosować funkcji sterowania tempem zmian do animacji, użyj `EasingFunction` właściwości animacji Określ funkcji sterowania tempem zmian do zastosowania do animacji. Następujący przykład dotyczy <xref:System.Windows.Media.Animation.BounceEase> łatwiejszym funkcji <xref:System.Windows.Media.Animation.DoubleAnimation> utworzyć podskakujące efekt.  
-  
- [Uruchomienie tego przykładu](http://go.microsoft.com/fwlink/?LinkId=139798&sref=BounceEase)  
+ Aby zastosować funkcję przyspieszania do animacji, należy użyć `EasingFunction` właściwość animacji określać funkcję przyspieszania do zastosowania do animacji. Następujący przykład dotyczy <xref:System.Windows.Media.Animation.BounceEase> funkcja do przyspieszania <xref:System.Windows.Media.Animation.DoubleAnimation> utworzyć efekt odbijania.  
   
  [!code-xaml[BounceEase_snippet#BounceEase](../../../../samples/snippets/csharp/VS_Snippets_Wpf/bounceease_snippet/CS/window1.xaml#bounceease)]  
   
- W poprzednim przykładzie funkcji sterowania tempem zmian została zastosowana do From lub do/przez animacji. Tych funkcji sterowania tempem zmian może dotyczyć również klucza ramki animacji. Poniższy przykład przedstawia użycie klatek kluczowych napięcia skojarzonych z nimi funkcje, aby utworzyć animację prostokąt kontraktów w górę, spowalnia, a następnie rozwijane w dół (tak, jakby objętych) i następnie odrzuceń do zatrzymania.  
-  
- [Uruchomienie tego przykładu](http://go.microsoft.com/fwlink/?LinkId=139798&sref=EasingFunctionDoubleKeyFrame)  
+ W poprzednim przykładzie zastosowano funkcję sterowania tempem zmian do od/do/przez animację. Tych funkcji sterowania tempem zmian można dotyczą również Animacja kluczowych klatek. Poniższy przykład pokazuje, jak za pomocą klatek kluczowych skojarzonych z nimi funkcje easingu utworzyć animację prostokąt, który kontraktów w górę, spowalnia, a następnie rozwija stawki rabatowe (tak, jakby objętych) i następnie odbija zostać zatrzymane.  
   
  [!code-xaml[EasingFunctionDoubleKeyFrame_snippet#EasingFunctionDoubleKeyFrame](../../../../samples/snippets/csharp/VS_Snippets_Wpf/easingfunctiondoublekeyframe_snippet/CS/window1.xaml#easingfunctiondoublekeyframe)]  
   
- Można użyć <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> zmienić właściwości do zmiany funkcji sterowania tempem zmian zachowania, oznacza to, jak interpolacji animacji. Istnieją trzy możliwe wartości można nadać dla <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>:  
+ Możesz użyć <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> właściwości do zmiany funkcji sterowania tempem zmian zachowania, oznacza to zmienić, jak interpolacji animacji. Istnieją trzy możliwe wartości, możesz nadać dla <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>:  
   
--   <xref:System.Windows.Media.Animation.EasingMode.EaseIn>: Interpolacji następuje formuła matematyczna skojarzone z funkcji sterowania tempem zmian.  
+-   <xref:System.Windows.Media.Animation.EasingMode.EaseIn>: Interpolacja następuje formuły matematyczne skojarzone z funkcji sterowania tempem zmian.  
   
--   <xref:System.Windows.Media.Animation.EasingMode.EaseOut>: Interpolacji następuje interpolacji 100% minus dane wyjściowe formuły skojarzone z funkcji sterowania tempem zmian.  
+-   <xref:System.Windows.Media.Animation.EasingMode.EaseOut>: Interpolacja poniżej 100% interpolacji minus dane wyjściowe formuły skojarzone z funkcji sterowania tempem zmian.  
   
--   <xref:System.Windows.Media.Animation.EasingMode.EaseInOut>: Używa interpolacji <xref:System.Windows.Media.Animation.EasingMode.EaseIn> dla pierwszej połowy animacji i <xref:System.Windows.Media.Animation.EasingMode.EaseOut> dla drugiej połowie tematu.  
+-   <xref:System.Windows.Media.Animation.EasingMode.EaseInOut>: Używa Interpolacja <xref:System.Windows.Media.Animation.EasingMode.EaseIn> w pierwszej połowie animacji i <xref:System.Windows.Media.Animation.EasingMode.EaseOut> przez drugą połowę.  
   
- Wykresy poniżej pokazują różne wartości <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> gdzie *f*(*x*) reprezentuje postęp animacji i *t* reprezentuje czas.  
+ Poniższe wykresy pokazują różne wartości <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> gdzie *f*(*x*) reprezentuje postęp animacji i *t* reprezentuje czas.  
   
  <xref:System.Windows.Media.Animation.BackEase>  
   
- ![Wykresy obiektu BackEase w trybie. ] (../../../../docs/framework/wpf/graphics-multimedia/media/backease-graph.png "BackEase_Graph")  
+ ![Wykresy obiektu BackEase w trybie. ](../../../../docs/framework/wpf/graphics-multimedia/media/backease-graph.png "BackEase_Graph")  
   
  <xref:System.Windows.Media.Animation.BounceEase>  
   
- ![Wykresy obiektu BounceEase w trybie. ] (../../../../docs/framework/wpf/graphics-multimedia/media/bounceease-graph.png "BounceEase_Graph")  
+ ![Wykresy obiektu BounceEase w trybie. ](../../../../docs/framework/wpf/graphics-multimedia/media/bounceease-graph.png "BounceEase_Graph")  
   
  <xref:System.Windows.Media.Animation.CircleEase>  
   
- ![Wykresy obiektu CircleEase w trybie. ] (../../../../docs/framework/wpf/graphics-multimedia/media/circleease-graph.png "CircleEase_Graph")  
+ ![Wykresy obiektu CircleEase w trybie. ](../../../../docs/framework/wpf/graphics-multimedia/media/circleease-graph.png "CircleEase_Graph")  
   
  <xref:System.Windows.Media.Animation.CubicEase>  
   
- ![Wykresy obiektu CubicEase w trybie. ] (../../../../docs/framework/wpf/graphics-multimedia/media/cubicease-graph.png "CubicEase_Graph")  
+ ![Wykresy obiektu CubicEase w trybie. ](../../../../docs/framework/wpf/graphics-multimedia/media/cubicease-graph.png "CubicEase_Graph")  
   
  <xref:System.Windows.Media.Animation.ElasticEase>  
   
- ![Obiekt ElasticEase wykresy dla różnych trybów EasingMode. ] (../../../../docs/framework/wpf/graphics-multimedia/media/elasticease-graph.png "ElasticEase_Graph")  
+ ![Obiekt ElasticEase wykresów dla różnych trybów EasingMode. ](../../../../docs/framework/wpf/graphics-multimedia/media/elasticease-graph.png "ElasticEase_Graph")  
   
  <xref:System.Windows.Media.Animation.ExponentialEase>  
   
- ![Wykresy obiektu ExponentialEase dla różnych trybów EasingMode. ] (../../../../docs/framework/wpf/graphics-multimedia/media/exponentialease-graph.png "ExponentialEase_Graph")  
+ ![Obiekt ExponentialEase wykresy dla różnych trybów EasingMode. ](../../../../docs/framework/wpf/graphics-multimedia/media/exponentialease-graph.png "ExponentialEase_Graph")  
   
  <xref:System.Windows.Media.Animation.PowerEase>  
   
- ![Obiekt QuarticEase wykresy dla różnych trybów EasingMode. ] (../../../../docs/framework/wpf/graphics-multimedia/media/quarticease-graph.png "QuarticEase_Graph")  
+ ![Obiekt QuarticEase wykresów dla różnych trybów EasingMode. ](../../../../docs/framework/wpf/graphics-multimedia/media/quarticease-graph.png "QuarticEase_Graph")  
   
  <xref:System.Windows.Media.Animation.QuadraticEase>  
   
- ![Obiekt QuadraticEase wykresy dla różnych trybów EasingMode](../../../../docs/framework/wpf/graphics-multimedia/media/quadraticease-graph.png "QuadraticEase_Graph")  
+ ![Obiekt QuadraticEase wykresów dla różnych trybów EasingMode](../../../../docs/framework/wpf/graphics-multimedia/media/quadraticease-graph.png "QuadraticEase_Graph")  
   
  <xref:System.Windows.Media.Animation.QuarticEase>  
   
- ![Obiekt QuarticEase wykresy dla różnych trybów EasingMode. ] (../../../../docs/framework/wpf/graphics-multimedia/media/quarticease-graph.png "QuarticEase_Graph")  
+ ![Obiekt QuarticEase wykresów dla różnych trybów EasingMode. ](../../../../docs/framework/wpf/graphics-multimedia/media/quarticease-graph.png "QuarticEase_Graph")  
   
  <xref:System.Windows.Media.Animation.QuinticEase>  
   
- ![Obiekt QuinticEase wykresy dla różnych trybów EasingMode. ] (../../../../docs/framework/wpf/graphics-multimedia/media/quinticease-graph.png "QuinticEase_Graph")  
+ ![Obiekt QuinticEase wykresów dla różnych trybów EasingMode. ](../../../../docs/framework/wpf/graphics-multimedia/media/quinticease-graph.png "QuinticEase_Graph")  
   
  <xref:System.Windows.Media.Animation.SineEase>  
   
  ![SineEase dla różnych wartości obiektu](../../../../docs/framework/wpf/graphics-multimedia/media/sineease-graph.png "SineEase_Graph")  
   
 > [!NOTE]
->  Można użyć <xref:System.Windows.Media.Animation.PowerEase> można utworzyć zachowania <xref:System.Windows.Media.Animation.CubicEase>, <xref:System.Windows.Media.Animation.QuadraticEase>, <xref:System.Windows.Media.Animation.QuarticEase>, i <xref:System.Windows.Media.Animation.QuinticEase> przy użyciu <xref:System.Windows.Media.Animation.PowerEase.Power%2A> właściwości. Na przykład, jeśli chcesz użyć <xref:System.Windows.Media.Animation.PowerEase> do zastąpienia dla <xref:System.Windows.Media.Animation.CubicEase>, określ <xref:System.Windows.Media.Animation.PowerEase.Power%2A> wartość 3.  
+>  Możesz użyć <xref:System.Windows.Media.Animation.PowerEase> takie samo zachowanie, jak utworzyć <xref:System.Windows.Media.Animation.CubicEase>, <xref:System.Windows.Media.Animation.QuadraticEase>, <xref:System.Windows.Media.Animation.QuarticEase>, i <xref:System.Windows.Media.Animation.QuinticEase> przy użyciu <xref:System.Windows.Media.Animation.PowerEase.Power%2A> właściwości. Na przykład, jeśli chcesz użyć <xref:System.Windows.Media.Animation.PowerEase> do podstawienia w <xref:System.Windows.Media.Animation.CubicEase>, określ <xref:System.Windows.Media.Animation.PowerEase.Power%2A> wartość 3.  
   
- Oprócz przy użyciu funkcji sterowania tempem zmian, zawarte w czasie wykonywania, można tworzyć własne niestandardowe funkcji sterowania tempem zmian przez dziedziczenie z <xref:System.Windows.Media.Animation.EasingFunctionBase>. Poniższy przykład przedstawia sposób tworzenia prostego niestandardowej funkcji sterowania tempem zmian. Można dodać własną logikę matematyczną dla zachowania funkcji sterowania tempem zmian przez zastąpienie <xref:System.Windows.Media.Animation.EasingFunctionBase.EaseInCore%2A> metody.  
-  
- [Uruchomienie tego przykładu](http://go.microsoft.com/fwlink/?LinkId=139798&sref=CustomEasingFunction)  
+ Oprócz używania funkcji easingu zawarte w czasie wykonywania, można utworzyć własne niestandardowe funkcje sterowania tempem zmian przez dziedziczenie z <xref:System.Windows.Media.Animation.EasingFunctionBase>. Poniższy przykład przedstawia sposób tworzenia prostej niestandardowych funkcji sterowania tempem zmian. Można dodać własną logiką matematyczne do zachowania funkcji sterowania tempem zmian przez zastąpienie <xref:System.Windows.Media.Animation.EasingFunctionBase.EaseInCore%2A> metody.   
   
  [!code-csharp[CustomEasingFunction#CustomEasingFunction](../../../../samples/snippets/csharp/VS_Snippets_Wpf/customeasingfunction/csharp/customlog10easingfunction.cs#customeasingfunction)]
  [!code-vb[CustomEasingFunction#CustomEasingFunction](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/customeasingfunction/visualbasic/customlog10easingfunction.vb#customeasingfunction)]

@@ -1,5 +1,5 @@
 ---
-title: Niestety, mamy ADAM&#39;t są dostępne szczegółowe informacje na temat tego błędu języka C#
+title: Niestety, firma Microsoft nie&#39;t są dostępne szczegółowe informacje na temat tego błędu języka C#
 ms.date: 07/20/2015
 f1_keywords:
 - CS1583
@@ -882,32 +882,33 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: 5e9c0aff2df5c46e707fa9f85506758327b58d80
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 81b33378519747060e604610ac1f3b9090332c11
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33314073"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253652"
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>Niestety, mamy ADAM&#39;t są dostępne szczegółowe informacje na temat tego błędu języka C#
-Przepraszamy, ale nie mamy żadnych szczegółowych informacji o tym błędzie. Możesz wyszukać numer błędu i treść komunikatu, aby znaleźć więcej informacji w sieci web. Lub poproś inni deweloperzy przy użyciu jednej z tych fora:  
+# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>Niestety, firma Microsoft nie&#39;t są dostępne szczegółowe informacje na temat tego błędu języka C#
+Przepraszamy, ale nie mamy żadnych szczegółowych informacji o tym błędzie. Możesz wyszukać numer błędu i treść komunikatu, aby znaleźć więcej informacji w sieci web. Lub możesz poprosić, aby inni deweloperzy przy użyciu jednej z tych forów:  
   
- [Visual C# — język](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
- Zapewnia forum pytania dotyczące i ogólnych dyskusjach składni języka Visual C# i kompilatora.  
+ [W języku Visual C#](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
+ Udostępnia forum dla pytania na temat oraz prowadzić ogólne dyskusje na składni języka Visual C# i kompilatora.  
   
- [Środowiska IDE programu Visual C#](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
- Udostępnia forum odpowiedzi na pytania dotyczące pracy w środowisku Visual Studio.  
+ [Środowisko IDE programu Visual C#](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
+ Udostępnia forum pytania na temat sposobu pracy w środowisku Visual Studio.  
   
  [Visual C# ogólne](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
- Udostępnia forum odpowiedzi na pytania dotyczące i problemy z Visual C#, które nie zostały omówione w innych forach.  
+ Udostępnia forum dla pytania o i problemy z Visual C#, nie są omawiane na innych forach.  
   
  [StackOverflow](http://stackoverflow.com/questions/tagged/c%23)  
- Udostępnia forum odpowiedzi na pytania dotyczące i problemy z Visual C#.  
+ Udostępnia forum dla pytania o i problemy z Visual C#.  
   
  Zobacz też:  
  [Zasoby dodatkowe dla programistów Visual C#](../../csharp/getting-started/additional-resources.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [Przewodnik programowania w języku C#](../../csharp/programming-guide/index.md)  
- [Odwołanie w C#](../../csharp/language-reference/index.md)  
- [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)  
+## <a name="see-also"></a>Zobacz też
+
+- [Przewodnik programowania w języku C#](../../csharp/programming-guide/index.md)  
+- [Dokumentacja języka C#](../../csharp/language-reference/index.md)  
+- [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)  

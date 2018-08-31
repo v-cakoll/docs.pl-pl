@@ -8,30 +8,30 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-ms.openlocfilehash: 663e816cdc31ed7854f7ebd060bffcfa5b85f475
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f1779752cea467cbd7ee25235821ca99fc5cbdb5
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535028"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253355"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Porady: ustawianie opcji siatki dla wszystkich formularzy systemu Windows
-Stają się używane do pracy w środowisku programowania Visual Studio, można ustawić preferencje dotyczące wszystkich formularzy i projektów, którymi współpracujesz w narzędziu Projektant dla formularzy systemu Windows.  
+Stają się używane do pracy w środowisku programowania Visual Studio, można ustawić preferencje dotyczące wszystkich formularzy i projektów, nad którymi pracujesz w programie Windows Forms Designer.  
   
 > [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-### <a name="to-set-global-windows-forms-options"></a>Aby ustawić opcji globalnych formularzy systemu Windows  
+### <a name="to-set-global-windows-forms-options"></a>Aby ustawić opcje globalne Windows Forms  
   
 1.  Z **narzędzia** menu, wybierz opcję **opcje**.  
   
-2.  W lewym okienku **opcje** okno dialogowe, kliknij przycisk **Projektant formularzy systemu Windows**.  
+2.  W okienku po lewej stronie **opcje** okno dialogowe, kliknij przycisk **Windows Forms Designer**.  
   
-     W prawym okienku w obszarze **ustawień układu** nagłówek, można ustawić domyślne ustawienia siatki dla wszystkich nowych formularzy, należy utworzyć. Te ustawienia obejmują rozmiar siatki, czy formanty mają być przyciągane do niej, czy jest włączone i domyślnie. Ponadto można wybrać między **SnapToGrid** i **linie przyciągania** tryby układu. Aby uzyskać więcej informacji dotyczących linie przyciągania, zobacz [wskazówki: rozmieszczanie formantów na formularzach systemu Windows przy użyciu linie przyciągania](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
+     W okienku po prawej stronie w obszarze **ustawienia układu** nagłówka, możesz ustawić domyślne ustawienia siatki dla wszystkich nowych formularzy, należy utworzyć. Te ustawienia obejmują rozmiar siatki, czy formanty mają być przyciągane do niego i czy są to domyślne. Ponadto, możesz wybrać między **SnapToGrid** i **linii przyciągania** trybami układów. Aby uzyskać więcej informacji na temat linii przyciągania, zobacz [wskazówki: rozmieszczanie formantów Windows Forms za pomocą linii przyciągania](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik: rozmieszczanie kontrolek na formularzach Windows Forms za pomocą linii przyciągania](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
- [Ogólne, Projektant formularzy systemu Windows, opcje — Okno dialogowe](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
+ [Ogólne, Windows Forms Designer, okno dialogowe Opcje](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
  [Kontrolki formularzy Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
  [Instrukcje: dodawanie kontrolek do formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
  [Rozmieszczanie kontrolek na formularzach Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  

@@ -5,19 +5,19 @@ helpviewer_keywords:
 - keywords [C#], operators
 - operators [C#], keywords
 ms.assetid: f745c81f-f8d8-4673-86a1-0f3a85cc63c3
-ms.openlocfilehash: 19be5aadf68f7812f2cb4a4e694a6600c5203af4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6a7fbc08647ace73676403937f4b0f79e7ff585
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273318"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253859"
 ---
 # <a name="operator-keywords-c-reference"></a>Słowa kluczowe operatora (odwołanie w C#)
-Używane do wykonywania dodatkowych akcji, takich jak tworzenie obiektów Sprawdzanie czasu wykonywania typu obiektu, uzyskiwanie rozmiar typu, a także innych działaniach. W tej sekcji przedstawiono następujące słowa kluczowe:  
+Używane do wykonywania różnych akcji, takich jak tworzenie obiektów, sprawdzanie typu run-time obiektu uzyskiwania rozmiaru typu, a także innych działaniach. W tej sekcji przedstawiono następujące słowa kluczowe:  
   
--   [jako](../../../csharp/language-reference/keywords/as.md) konwertuje zgodne z typem obiektu.  
+-   [jako](../../../csharp/language-reference/keywords/as.md) Konwertuje obiekt typu zgodny.  
   
--   [await](../../../csharp/language-reference/keywords/await.md) wstrzymuje to metoda asynchroniczna, do czasu ukończenia zadania oczekiwano.  
+-   [await](../../../csharp/language-reference/keywords/await.md) wstrzymuje wykonywanie metody asynchronicznej, aż oczekiwane zadanie jest ukończone.  
   
 -   [jest](../../../csharp/language-reference/keywords/is.md) sprawdza typu run-time obiektu.  
   
@@ -25,38 +25,39 @@ Używane do wykonywania dodatkowych akcji, takich jak tworzenie obiektów Sprawd
   
     -   [New Operator](../../../csharp/language-reference/keywords/new-operator.md) tworzy obiekty.  
   
-    -   [New — modyfikator](../../../csharp/language-reference/keywords/new-modifier.md) ukrywa dziedziczony element członkowski.  
+    -   [New — modyfikator](../../../csharp/language-reference/keywords/new-modifier.md) ukrywa dziedziczoną składową.  
   
     -   [New — ograniczenie](../../../csharp/language-reference/keywords/new-constraint.md) kwalifikuje się do parametru typu.  
   
--   [nameof](nameof.md) uzyskuje prostego ciągu (niekwalifikowane) nazwę zmiennej, typu lub elementu członkowskiego.
+-   [nameof](nameof.md) uzyskuje prostego ciągu (niekwalifikowanej) Nazwa zmiennej, typu lub elementu członkowskiego.
  
--   [sizeof](../../../csharp/language-reference/keywords/sizeof.md) uzyskuje rozmiar typu.  
+-   [Operator sizeof](../../../csharp/language-reference/keywords/sizeof.md) uzyskuje rozmiar typu.  
   
 -   [TypeOf](../../../csharp/language-reference/keywords/typeof.md) uzyskiwany **System.Type** obiektu dla typu.  
   
 -   [true](../../../csharp/language-reference/keywords/true.md)  
   
-    -   [TRUE — Operator](../../../csharp/language-reference/keywords/true-operator.md) zwraca wartość PRAWDA wartość logiczna wskazująca, wartość PRAWDA, a w przeciwnym razie zwraca wartość false.  
+    -   [wartość true, Operator](../../../csharp/language-reference/keywords/true-operator.md) zwraca wartość true wartość logiczną, aby wskazać wartość PRAWDA, a w przeciwnym razie zwraca wartość false.  
   
-    -   [TRUE Literal](../../../csharp/language-reference/keywords/true-literal.md) reprezentuje wartość logiczną PRAWDA.  
+    -   [wartość true, literał](../../../csharp/language-reference/keywords/true-literal.md) reprezentuje wartość logiczną true.  
   
 -   [false](../../../csharp/language-reference/keywords/false.md)  
   
-    -   [FALSE — Operator](../../../csharp/language-reference/keywords/false-operator.md) zwraca wartość PRAWDA wartość logiczna wskazująca, false, a w przeciwnym razie zwraca wartość false.  
+    -   [FALSE — Operator](../../../csharp/language-reference/keywords/false-operator.md) zwraca wartość true wartość logiczną, aby wskazać wartość false, a w przeciwnym razie zwraca wartość false.  
   
-    -   [FALSE — literał](../../../csharp/language-reference/keywords/false-literal.md) reprezentuje wartość logiczną FAŁSZ.  
+    -   [FALSE — literał](../../../csharp/language-reference/keywords/false-literal.md) reprezentuje wartość logiczną false.  
   
--   [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md) przydziela bloku pamięci na stosie.  
+-   [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md) przydziela blok pamięci na stosie.  
   
- Omówiono następujące słowa kluczowe, które mogą być używane jako operatory i oświadczenia, [instrukcje](../../../csharp/language-reference/keywords/statement-keywords.md) sekcji:  
+ Następujące słowa kluczowe, które mogą być używane jako operatory i instrukcje, są objęte [instrukcji](../../../csharp/language-reference/keywords/statement-keywords.md) sekcji:  
   
--   [zaznaczone](../../../csharp/language-reference/keywords/checked.md) określa zaznaczone kontekstu.  
+-   [zaznaczone](../../../csharp/language-reference/keywords/checked.md) kontekstu określa zaznaczone.  
   
--   [Zaznaczenie opcji](../../../csharp/language-reference/keywords/unchecked.md) Określa kontekst niezaznaczone.  
+-   [unchecked](../../../csharp/language-reference/keywords/unchecked.md) kontekście niesprawdzanym określa.  
   
-## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
- [Operatory języka C#](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
+- [Operatory języka C#](../../../csharp/language-reference/operators/index.md)

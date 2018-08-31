@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 89e41a81-0f41-45ad-8f20-a120e4ff24fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c89845008307e4cfb00d0f9b9a168a43ba5378c0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7f4fff4f2c2b3dd04625f4cf50b8b19a0ef6f39
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402366"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254662"
 ---
 # <a name="axlauthenticodetimestamperinfo-structure"></a>Struktura AXL_AUTHENTICODE_TIMESTAMPER_INFO
 Definiuje informacje stamper czasu Authenticode.  
@@ -34,7 +34,7 @@ typedef struct _AXL_AUTHENTICODE_SIGNER_INFO {
 |`dwError`|Kod błędu.|  
 |`algHash`|Algorytm wyznaczania wartości skrótu.|  
 |`ftTimestamp`|Czas sygnaturę czasową.|  
-|`pChainContext`|Kontekst łańcucha stamper czasu.  Zobacz [CERT_CONTEXT](http://msdn.microsoft.com/library/windows/desktop/aa377189.aspx) struktury.|  
+|`pChainContext`|Kontekst łańcucha stamper czasu.  Zobacz [CERT_CONTEXT](/windows/desktop/api/wincrypt/ns-wincrypt-_cert_context) struktury.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)

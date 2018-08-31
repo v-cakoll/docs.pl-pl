@@ -8,11 +8,11 @@ helpviewer_keywords:
 - '>= operator [C#]'
 ms.assetid: 0db4dcaf-56a3-4884-a7ad-35f64978a58d
 ms.openlocfilehash: 8749d1dc0670a5a76bda5ee0d69a4a142671c1e6
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43000288"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254038"
 ---
 # <a name="gt-operator-c-reference"></a>&gt;= — Operator (odwołanie w C#)
 Wszystkie typy numeryczne i wyliczenie zdefiniować "większe lub równe" operator relacyjny, `>=` zwracającego `true` Jeśli pierwszy operand jest większa niż lub równe drugiemu, `false` inaczej.  

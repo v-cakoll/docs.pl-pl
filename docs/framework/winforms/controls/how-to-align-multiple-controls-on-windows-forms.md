@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
-ms.openlocfilehash: 6520aef7d04694b6fcd7f50da84a2a9cea6e7b64
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 44bbf2503087a0e8b7f178b1c7b7fe65b50496d8
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528593"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253227"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>Porady: wyrównywanie formantów na formularzach systemu Windows
-Aby ustandaryzować układ interfejsu użytkownika (UI) aplikacji opartych na systemie Windows, można umieścić grup formantów za pomocą jednego polecenia.  
+Aby ustandaryzować układ interfejsu użytkownika (UI), oparte na Windows aplikacji, można umieścić grup formantów za pomocą jednego polecenia.  
   
 > [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-### <a name="to-align-multiple-controls-on-a-form"></a>Aby wyrównywanie formantów w formularzu  
+### <a name="to-align-multiple-controls-on-a-form"></a>Aby wyrównywanie formantów na formularzu  
   
-1.  Otwórz formularz, w którym chcesz umieścić w formanty **Projektant formularzy systemu Windows**.  
+1.  Otwieranie formularza zawiera kontrolki, aby umieścić w **Windows Forms Designer**.  
   
-2.  Zaznacz formanty, które mają być wyrównane tak, aby pierwszy formant, który należy wybrać głównej formantu, do którego innych powinno być wyrównane.  
+2.  Zaznacz formanty, które mają być wyrównane tak, aby pierwszy formant, którą wybierzesz kontrolki podstawowej, do której inne powinno być wyrównane.  
   
 3.  Na **Format** menu wskaż **Wyrównaj**, a następnie kliknij jedną z dostępnych opcji siedem.  
   

@@ -6,30 +6,34 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 688736aa8556719789b02d7db25858f442b4309e
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 5f4bcf9957f91fe3ee8a62a8dc68448188df4188
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245724"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43256056"
 ---
 # <a name="classes-c-programming-guide"></a>Klasy (Przewodnik programowania w języku C#)
 A *klasy* to konstrukcja, która pozwala na tworzenie własnych typach niestandardowych przez grupowanie zmienne innych typów, metod i zdarzeń. Klasa jest podobna do planu. Definiuje dane i zachowania tego typu. Jeśli klasa nie jest zadeklarowana jako statyczna, kod klienta może utworzyć *wystąpień* go. Te wystąpienia są *obiektów* przypisane do zmiennej. Wystąpienie klasy pozostaje w pamięci, dopóki wszystkie odwołania do niego wykraczają poza zakres. W tym czasie CLR oznacza je jako kwalifikuje się do wyrzucania elementów bezużytecznych. Jeśli klasa jest zadeklarowana jako [statyczne](../../../csharp/language-reference/keywords/static.md), nie można utworzyć wystąpień i kod klienta tylko do niego dostęp za pośrednictwem samej klasy. Aby uzyskać więcej informacji, zobacz [klasy statyczne i statyczne elementy członkowskie klasy](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
 
 ## <a name="reference-types"></a>Typy odwołań  
-Typ, który jest zdefiniowany jako [klasy](../../../csharp/language-reference/keywords/class.md) jest *odwołania do typu*. W czasie wykonywania, kiedy Deklarujesz zmienną typu odwołania, zmienna zawiera wartość [null](../../../csharp/language-reference/keywords/null.md) aż jawnie tworzone jest wystąpienie klasy za pomocą [nowe](../../../csharp/language-reference/keywords/new.md) operatora lub obiektu, została utworzona w innych miejscach, jak pokazano w poniższym przykładzie:
+Typ, który jest zdefiniowany jako [klasy](../../../csharp/language-reference/keywords/class.md) jest *odwołania do typu*. W czasie wykonywania, kiedy Deklarujesz zmienną typu odwołania, zmienna zawiera wartość [null](../../../csharp/language-reference/keywords/null.md) aż jawnie tworzone jest wystąpienie klasy za pomocą [nowe](../../../csharp/language-reference/keywords/new.md) operatora, lub obiekt niezgodny typ, który mógł zostać utworzony w innych miejscach, jak pokazano w poniższym przykładzie:
 
 ```csharp
+//Declaring a object of type MyClass.
 MyClass mc = new MyClass();
+
+//Declaring another object of the same type, assigning it the value of the first object.
 MyClass mc2 = mc;
 ```
 
-Po utworzeniu obiektu pamięć jest alokowane na zarządzanym stosie, a zmienna zawiera tylko odwołanie do lokalizacji obiektu. Typy na zarządzanym stosie wymagają narzutu zarówno kiedy są alokowane oraz kiedy są odbierane przez funkcjonalność zarządzania pamięcią automatyczną CLR, który jest znany jako *wyrzucania elementów bezużytecznych*. Jednak wyrzucanie elementów bezużytecznych jest również bardzo dobrze zoptymalizowane i w większości scenariuszy nie powoduje problemów z wydajnością. Aby uzyskać więcej informacji dotyczących wyrzucania elementów bezużytecznych, zobacz [pamięcią automatyczną zarządzania i wyrzucania elementów kolekcji](../../../standard/garbage-collection/gc.md).  
+Po utworzeniu obiektu wystarczającej ilości pamięć jest alokowane na zarządzanym stosie dla tego określonego obiektu, a zmienna zawiera tylko odwołanie do lokalizacji obiektu wymienionych. Typy na zarządzanym stosie wymagają narzutu zarówno kiedy są alokowane oraz kiedy są odbierane przez funkcjonalność zarządzania pamięcią automatyczną CLR, który jest znany jako *wyrzucania elementów bezużytecznych*. Jednak wyrzucanie elementów bezużytecznych jest również bardzo dobrze zoptymalizowane i w większości scenariuszy nie powoduje problemów z wydajnością. Aby uzyskać więcej informacji dotyczących wyrzucania elementów bezużytecznych, zobacz [pamięcią automatyczną zarządzania i wyrzucania elementów kolekcji](../../../standard/garbage-collection/gc.md).  
   
 ## <a name="declaring-classes"></a>Deklarowanie klas  
- Klasy są deklarowane przy użyciu [klasy](../../../csharp/language-reference/keywords/class.md) — słowo kluczowe, jak pokazano w poniższym przykładzie:
+ Klasy są deklarowane przy użyciu [klasy](../../../csharp/language-reference/keywords/class.md) — słowo kluczowe, a następnie za pomocą unikatowego identyfikatora, jak pokazano w poniższym przykładzie:
 
  ```csharp
+//[access modifier] - [class] - [identifier]
  public class Customer
  {
     // Fields, properties, methods and events go here...

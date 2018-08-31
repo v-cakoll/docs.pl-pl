@@ -7,18 +7,18 @@ helpviewer_keywords:
 - right shift assignment operator (>>=) [C#]
 - '>>= operator (right-shift assignment) [C#]'
 ms.assetid: b593778c-b9b4-440d-8b29-c1ac22cb81c0
-ms.openlocfilehash: ccc3f688d985b9e35404550f0c53a7acf8095dd5
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: f2bac6a4320980d80a9b6c2597dcf8dc6f08ac70
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34171421"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43252814"
 ---
 # <a name="gtgt-operator-c-reference"></a>&gt;&gt;= — Operator (odwołanie w C#)
 Operator przypisania przesunięcia w prawo.  
   
 ## <a name="remarks"></a>Uwagi  
- Wyrażenie w postaci  
+ Wyrażenie formularza  
   
 ```csharp  
 x >>= y  
@@ -37,7 +37,8 @@ x = x >> y
 ## <a name="example"></a>Przykład  
  [!code-csharp[csRefOperators#11](../../../csharp/language-reference/operators/codesnippet/CSharp/right-shift-assignment-operator_1.cs)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Operatory języka C#](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Operatory języka C#](../../../csharp/language-reference/operators/index.md)

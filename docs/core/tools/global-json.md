@@ -3,14 +3,14 @@ title: Omówienie Global.JSON
 description: Dowiedz się, jak za pomocą plik global.json Ustaw wersję .NET Core SDK, podczas uruchamiania poleceń interfejsu wiersza polecenia platformy .NET Core.
 author: mairaw
 ms.author: mairaw
-ms.date: 07/02/2018
+ms.date: 07/30/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: a7c9301e1beea49eebace5c8f8a7d159a8c12466
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 8241b3afb518acf237c7b6181085e19576e5ce2f
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936974"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43252963"
 ---
 # <a name="globaljson-overview"></a>Omówienie Global.JSON
 
@@ -103,8 +103,8 @@ To ostrzeżenie wskazuje, że projekt jest kompilowany przy użyciu zestawu .NET
 > [!WARNING]
 > Platformy elementy docelowe projektu "{Projekt startowy}" Uruchamianie ". Element NETCoreApp "wersja"{targetFrameworkVersion}". Ta wersja narzędzia wiersza polecenia programu Entity Framework Core .NET obsługuje tylko w wersji 2.0 lub nowszej. Aby uzyskać informacji na temat używania starszych wersji narzędzia Zobacz https://go.microsoft.com/fwlink/?linkid=871254
 
-Począwszy od platformy .NET Core SDK 2.1 (v. 2.1.300) `dotnet ef` polecenia jest uwzględniony w zestawie SDK. To ostrzeżenie wskazuje, że projekt jest ukierunkowany EF Core 1.0 i 1.1, która nie jest zgodna z platformy .NET Core SDK 2.1 i nowsze wersje. Aby skompilować projekt, zainstaluj zestaw .NET Core SDK 2.0 (v. 2.1.201) i starszych na swojej maszynie. Aby uzyskać więcej informacji, zobacz [narzędzia wiersza polecenia platformy .NET Core EF](/ef/core/miscellaneous/cli/dotnet).
+Począwszy od platformy .NET Core SDK 2.1 (v. 2.1.300) `dotnet ef` polecenia jest uwzględniony w zestawie SDK. To ostrzeżenie wskazuje, że projekt jest ukierunkowany EF Core 1.0 i 1.1, która nie jest zgodna z platformy .NET Core SDK 2.1 i nowsze wersje. Aby skompilować projekt, zainstaluj zestaw .NET Core SDK 2.0 (v. 2.1.201) i starszych na Twojej maszynie i definiują żądany zestaw SDK w wersji przy użyciu *global.json* pliku. Aby uzyskać więcej informacji na temat `dotnet ef` polecenia, zobacz [narzędzia wiersza polecenia platformy .NET Core EF](/ef/core/miscellaneous/cli/dotnet).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Jak są rozwiązywane projektów zestawów SDK](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)
+* [Jak są rozwiązywane projektów zestawów SDK](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)

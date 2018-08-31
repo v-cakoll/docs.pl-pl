@@ -5,46 +5,46 @@ helpviewer_keywords:
 - Windows Forms controls, locking
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
-ms.openlocfilehash: f05da53f134f13bf5edbbe7ab8c5973f79bbca4f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8de22ae6667446620867f3c15aac3c4af65582bf
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534748"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253633"
 ---
 # <a name="how-to-lock-controls-to-windows-forms"></a>Porady: blokowanie formantów do formularzy systemu Windows
-Podczas projektowania interfejsu użytkownika (UI) aplikacji systemu Windows, można zablokować formantów po znajdują się one poprawnie, tak aby nie mogą przypadkowo przenieść lub zmienić ich rozmiar przy ustawianiu inne właściwości.  
+Podczas projektowania interfejsu użytkownika (UI) w aplikacji Windows, można zablokować kontrolki po znajdują się one poprawnie, tak aby wątkami aby przypadkowo nie przenosić lub zmieniać ich rozmiar przy ustawianiu inne właściwości.  
   
- Ponadto można zablokować i odblokować wszystkich kontrolek w formularzu jednocześnie, co jest przydatne w przypadku wielu formantów, lub można odblokować pojedynczych formantów. Po umieszczeniu wszystkich kontrolek żądanym na formularzu, należy zablokować je w miejscu, aby zapobiec błędnej przepływu.  
+ Ponadto można zablokować i odblokować wszystkie formanty w formularzu jednocześnie, co jest przydatne w przypadku formularzy z wieloma formantami, albo można odblokować pojedynczych formantów. Po umieszczeniu wszystkich kontrolek odpowiednie miejsca w formularzu, należy zablokować je w miejscu, aby uniknąć przenoszenia błędne.  
   
 > [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-### <a name="to-lock-a-control"></a>Aby zablokować formantu  
+### <a name="to-lock-a-control"></a>Aby zablokować kontrolki  
   
-1.  W **właściwości** okna, kliknij przycisk **zablokowany** właściwości i wybierz `true`. (Dwukrotne kliknięcie nazwy Przełącza ustawienie właściwości).  
+1.  W **właściwości** okna, kliknij przycisk **zablokowany** właściwości i wybierz pozycję `true`. (Dwukrotne kliknięcie nazwy Przełącza ustawienie właściwości).  
   
-     Alternatywnie kliknij formant prawym przyciskiem myszy i wybierz polecenie **formanty blokady**.  
-  
-    > [!NOTE]
-    >  Blokowanie formantów zapobiega ich przeciąganie do nowego rozmiaru lub lokalizacji na powierzchni projektu. Jednak nadal zmianą rozmiaru lub lokalizacji formantów za pomocą klasy **właściwości** okna lub w kodzie.  
-  
-### <a name="to-lock-all-the-controls-on-a-form"></a>Aby zablokować wszystkich kontrolek w formularzu  
-  
-1.  Z **Format** menu, wybierz **formanty blokady**.  
+     Alternatywnie, kliknij prawym przyciskiem myszy formant i wybierz **formantów blokady**.  
   
     > [!NOTE]
-    >  To polecenie blokuje również rozmiar formularza, ponieważ formularz jest formantem.  
+    >  Blokowanie formantów uniemożliwia ich przeciąganie nowy rozmiar lub lokalizacji na powierzchni projektowej. Jednak nadal można zmienić rozmiar lub położenie kontrolki poprzez **właściwości** oknie lub w kodzie.  
   
-### <a name="to-unlock-all-locked-controls-on-a-form"></a>Aby odblokować wszystkie zablokowane formantów w formularzu  
+### <a name="to-lock-all-the-controls-on-a-form"></a>Aby zablokować wszystkie formanty w formularzu  
   
-1.  Z **Format** menu, wybierz **formanty blokady**.  
+1.  Z **Format** menu, wybierz **formantów blokady**.  
   
-     Wszystkie poprzednio zablokowanymi kontrolek w formularzu są teraz odblokowane.  
+    > [!NOTE]
+    >  To polecenie umożliwia zablokowanie rozmiar formularza, ponieważ kontrolki formularza.  
   
-### <a name="to-unlock-locked-controls-individually"></a>Aby odblokować formanty zablokowane indywidualnie  
+### <a name="to-unlock-all-locked-controls-on-a-form"></a>Aby odblokować wszystkie zablokowane kontrolek w formularzu  
   
-1.  W **właściwości** okna, kliknij przycisk **zablokowany** właściwości i wybierz `false`. (Dwukrotne kliknięcie nazwy Przełącza ustawienie właściwości).  
+1.  Z **Format** menu, wybierz **formantów blokady**.  
+  
+     Wszystkie uprzednio zablokowaną kontrolki w formularzu są teraz odblokowane.  
+  
+### <a name="to-unlock-locked-controls-individually"></a>Aby odblokować zablokowany formantów indywidualnie  
+  
+1.  W **właściwości** okna, kliknij przycisk **zablokowany** właściwości i wybierz pozycję `false`. (Dwukrotne kliknięcie nazwy Przełącza ustawienie właściwości).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Kontrolki formularzy Windows Forms](../../../../docs/framework/winforms/controls/index.md)  

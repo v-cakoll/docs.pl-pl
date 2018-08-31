@@ -15,60 +15,60 @@ helpviewer_keywords:
 - literals [Visual Basic], Date
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
-ms.openlocfilehash: b7827206d6e145b559d9716df5ec4a98ac4ea0b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32bd0912b0bae3340cffed010fc67431d0efb376
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591823"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43252950"
 ---
 # <a name="date-data-type-visual-basic"></a>Date — Typ danych (Visual Basic)
-Przechowuje wartości (8-bajtowych) IEEE 64-bitowe, które reprezentują z zakresu od 1 stycznia 0001 roku do 31 grudnia 9999 roku daty i godziny od 00:00:00: 00 (północ) za pośrednictwem 11:59:59.9999999 PM. Jednostka reprezentuje 100 nanosekundach czas, który upłynął od początku 1 stycznia 1 rok kalendarza gregoriańskiego. Maksymalna wartość reprezentuje 100 nanosekundach przed rozpoczęciem 1 stycznia roku 10000.  
+Przechowuje wartości (8-bajtową) IEEE 64-bitowych, które reprezentują w zakresie od 1 stycznia 0001 roku do 31 grudnia 9999 roku daty i godziny od 0:00:00: 00 (północ) za pośrednictwem 11:59:59.9999999 PM. Każdy przyrost reprezentuje 100 nanosekund czas, który upłynął od początku 1 stycznia 1 roku w kalendarzu gregoriańskim. Maksymalna wartość reprezentuje 100 nanosekund przed rozpoczęciem 1 stycznia roku 10000.  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj `Date` — typ danych zawierający wartości daty, wartości godziny lub wartości daty i godziny.  
+ Użyj `Date` typu danych, które zawierają wartości dat, wartości czasu lub wartości daty i godziny.  
   
- Wartość domyślna `Date` 0:00:00 (północ) 1 stycznia 0001.  
+ Wartość domyślna `Date` wynosi 0:00:00 (północ), 1 stycznia 0001.  
   
- Można uzyskać bieżącą datę i godzinę z <xref:Microsoft.VisualBasic.DateAndTime> klasy.  
+ Możesz uzyskać bieżącą datę i godzinę, z <xref:Microsoft.VisualBasic.DateAndTime> klasy.  
   
 ## <a name="format-requirements"></a>Wymagania dotyczące formatu  
- Musisz ją ująć `Date` literału w znaki numeru (`# #`). Należy określić wartość daty w formacie M/d/rrrr, na przykład `#5/31/1993#`, lub RRRR MM-dd, na przykład `#1993-5-31#`. Można użyć ukośniki, określając roku najpierw.  To wymaganie jest niezależne od ustawień regionalnych użytkownika i komputera ustawienia daty i godziny format.  
+ Należy ująć `Date` literału w ramach krzyżyki (`# #`). Należy określić wartość daty w formacie M/d/rrrr, na przykład `#5/31/1993#`, lub RRRR MM-dd, na przykład `#1993-5-31#`. Podczas określania roku najpierw, można używać ukośników.  To wymaganie jest niezależne od ustawień regionalnych użytkownika i komputera ustawienia daty i godziny formatu.  
   
- Przyczyna to ograniczenie jest, że znaczenie kodu nigdy nie należy zmieniać w zależności od ustawień regionalnych, w którym aplikacja jest uruchomiona. Załóżmy, że należy trwale kodować `Date` literału z `#3/4/1998#` i ma on oznacza 4 marca 1998. W ustawieniach regionalnych mm/dd/rrrr 3/4/1998 kompiluje jako planowane. Ale Załóżmy, że w przypadku wdrażania aplikacji w wielu krajach. W ustawieniach regionalnych dd/mm/rrrr literał z wpisaną na stałe będzie kompilacji do 3 kwietnia 1998. W ustawieniach regionalnych rrrr/mm/dd., może być nieważny literał (kwiecień 1998 0003) i spowodować błąd kompilatora.  
+ Przyczyną tego ograniczenia to, że znaczenie kod nigdy nie należy zmieniać w zależności od ustawień regionalnych, w którym aplikacja jest uruchomiona. Załóżmy, że należy trwale kodować `Date` literału `#3/4/1998#` i ma on oznacza 4 marca 1998 r. W ustawieniach regionalnych, który używa mm/dd/rrrr 3/4/1998 kompiluje, jak planowane. Jednak Załóżmy, że możesz wdrożyć aplikację w wielu krajach. W ustawieniach regionalnych, który używa dd/mm/rrrr literał swoje zakodowane będzie kompilacji do 3 kwietnia 1998 r. W ustawieniach regionalnych, który używa rrrr/mm/dd, literał byłyby nieprawidłowe (kwiecień 1998 0003) i spowodują błąd kompilatora.  
   
 ## <a name="workarounds"></a>Rozwiązania  
- Aby przekonwertować `Date` literał format ustawień regionalnych, lub formatu niestandardowego, podaj literał do <xref:Microsoft.VisualBasic.Strings.Format%2A> funkcja Określanie formatu daty wstępnie zdefiniowanych lub zdefiniowanych przez użytkownika. W poniższym przykładzie pokazano to.  
+ Aby przekonwertować `Date` literał format ustawień regionalnych lub formatu niestandardowego, podaj literału do <xref:Microsoft.VisualBasic.Strings.Format%2A> funkcji, określając format daty wstępnie zdefiniowanych lub zdefiniowanych przez użytkownika. Poniższy przykład przedstawia to.  
   
 ```  
 MsgBox("The formatted date is " & Format(#5/31/1993#, "dddd, d MMM yyyy"))  
 ```  
   
- Alternatywnie można użyć jednej przeciążone konstruktory <xref:System.DateTime> struktury gromadzi wartość daty i godziny. Poniższy przykład tworzy wartość do reprezentowania 31 maja 1993 na 12:14 po południu.  
+ Alternatywnie możesz użyć jednej z przeciążenia konstruktorów z <xref:System.DateTime> struktury, aby zestawić wartości daty i godziny. Poniższy przykład tworzy wartość do reprezentowania 31 maja 1993 o 12:14 po południu.  
   
 ```  
 Dim dateInMay As New System.DateTime(1993, 5, 31, 12, 14, 0)  
 ```  
   
 ## <a name="hour-format"></a>Format godziny  
- Można określić wartość czasu w formacie 12-godzinnym lub 24-godzinnym, na przykład `#1:15:30 PM#` lub `#13:15:30#`. Jednak jeśli nie określisz, minuty i sekundy, należy określić AM lub PM.  
+ Można określić wartość godziny w formacie 12-godzinny lub 24-godzinnym, na przykład `#1:15:30 PM#` lub `#13:15:30#`. Jednakże jeśli nie określisz, minuty lub sekundy, należy określić AM lub PM.  
   
-## <a name="date-and-time-defaults"></a>Data i godzina ustawienia domyślne  
- Jeśli nie obejmują datę w daty/godziny literału, Visual Basic ustawia część daty wartości 1 stycznia 0001. Jeśli nie zostanie uwzględniony czas w literale daty/godziny, Visual Basic ustawia składnik godziny z wartości na początek dnia, to znaczy północy (0: 00:00).  
+## <a name="date-and-time-defaults"></a>Daty i godziny wartości domyślne  
+ Jeśli wartość typu date nie zostanie uwzględniony w daty/godziny literału, Visual Basic ustawia składnik daty z wartości na 1 stycznia 0001. Jeśli nie zostanie uwzględniony czas w literał daty/godziny, Visual Basic ustawia składnik godziny z wartości na początku dnia, oznacza to, o północy (0: 00:00).  
   
 ## <a name="type-conversions"></a>Konwersje typu  
- W przypadku przekonwertowania `Date` do wartości `String` typu, Visual Basic renderuje datę ustawioną format daty krótkiej określony przez ustawienia regionalne czasu wykonywania i renderowania czasu zgodnie z formatu godziny (12-godzinnym lub 24-godzinnym) określone przez Ustawienia regionalne czasu wykonywania.  
+ Po skonwertowaniu `Date` wartość `String` typu, Visual Basic powoduje wyświetlenie daty zgodnie z formatu daty krótkiej, określony przez ustawienia regionalne czasu wykonywania i renderowania czas zgodnie z format godziny (12-godzinny lub 24-godzinny), określony przez Ustawienia regionalne czasu wykonywania.  
   
 ## <a name="programming-tips"></a>Porady dla programistów  
   
--   **Zagadnienia dotyczące współdziałania.** Jeśli są relacje ze składników, które nie są zapisywane dla programu .NET Framework, na przykład obiektów automatyzacji lub COM, należy pamiętać, że typy w innych środowiskach daty i godziny nie są zgodne z programem Visual Basic `Date` typu. Jeśli argument daty/godziny jest przekazywany do takich składników, Zadeklaruj ją jako `Double` zamiast `Date` w nowego języka Visual Basic code, a za pomocą metody konwersji <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> i <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>.  
+-   **Uwagi dotyczące współdziałania.** Jeśli są komunikowanie się ze składnikami programu .NET Framework, na przykład obiektami automatyzacji lub COM, należy pamiętać, że typy w innych środowiskach daty/godziny, nie są zgodne z języka Visual Basic `Date` typu. Jeśli przekazujesz argumentu daty/godziny do takiego składnika, Zadeklaruj go jako `Double` zamiast `Date` Twojego nowego języka Visual Basic w kodzie oraz użyć metody konwersji <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> i <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>.  
   
--   **Znaki typu.** `Date` nie ma znak literalny typu ani znak typu identyfikator. Jednak kompilator traktuje literały ujęta w znaki numeru (`# #`) jako `Date`.  
+-   **Znaki typu.** `Date` nie ma znak literalny typu lub znak typu identyfikator. Jednak kompilator traktuje literały ujęty w znaki cyfry (`# #`) jako `Date`.  
   
--   **Typ struktury.** Danego typu w programie .NET Framework jest <xref:System.DateTime?displayProperty=nameWithType> struktury.  
+-   **Typ Framework.** Odpowiedni typ w .NET Framework jest <xref:System.DateTime?displayProperty=nameWithType> struktury.  
   
 ## <a name="example"></a>Przykład  
- Zmienna lub stała `Date` — typ danych zawiera zarówno daty i czasu. Ilustruje to poniższy przykład.  
+ Zmienną lub stałą `Date` — typ danych przechowuje daty i godziny. Ilustruje to poniższy przykład.  
   
 ```  
 Dim someDateAndTime As Date = #8/13/2002 12:14 PM#  
@@ -76,7 +76,7 @@ Dim someDateAndTime As Date = #8/13/2002 12:14 PM#
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.DateTime?displayProperty=nameWithType>  
- [Typy danych](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Typy danych](../../../visual-basic/language-reference/data-types/index.md)  
  [Standardowe ciągi formatujące datę i godzinę](../../../standard/base-types/standard-date-and-time-format-strings.md)  
  [Niestandardowe ciągi formatujące datę i godzinę](../../../standard/base-types/custom-date-and-time-format-strings.md)  
  [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  

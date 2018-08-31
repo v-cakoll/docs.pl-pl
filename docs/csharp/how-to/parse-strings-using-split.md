@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
-ms.openlocfilehash: e2d788b27f54ac068922f0ebe558a2aea8a475ca
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: b6170be2dbb3f11906bbaa6e5c3be3e48a976246
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960013"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253077"
 ---
 # <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>Porady: analizowanie ciągów za pomocą funkcji String.Split (Przewodnik C#)
 
@@ -32,9 +32,11 @@ Każde wystąpienie znak separatora tworzy wartości zwróconej tablicy. Następ
 
 To zachowanie ułatwia w przypadku formatów takich jak pliki wartości (CSV) rozdzielonych przecinkami reprezentująca dane tabelaryczne. Kolejne przecinkami reprezentują pustej kolumnie.
 
-Możesz przekazać opcjonalny <xref:System.StringSplitOptions.RemoveEmptyEntries?displayProperty=nameWithType> parametru, aby wykluczyć wszelkie puste ciągi w zwróconej tablicy. W przypadku bardziej skomplikowanych przetwarzania zwrócona kolekcja, można użyć [LINQ](../programming-guide/concepts/linq/index.md) do manipulowania sekwencji wynik.    
+Możesz przekazać opcjonalny <xref:System.StringSplitOptions.RemoveEmptyEntries?displayProperty=nameWithType> parametru, aby wykluczyć wszelkie puste ciągi w zwróconej tablicy. W przypadku bardziej skomplikowanych przetwarzania zwrócona kolekcja, można użyć [LINQ](../programming-guide/concepts/linq/index.md) do manipulowania sekwencji wynik.
 
-<xref:System.String.Split%2A?displayProperty=nameWithType> można użyć wielu znaków separatora. W poniższym przykładzie użyto miejsca do magazynowania, przecinki, kropki, dwukropki i kartach wszystkich przekazanych tablicę zawierającą je do oddzielania znaków, <xref:System.String.Split%2A>.  Pętla w dolnej części kodu wyświetla poszczególnych wyrazów w zwróconej tablicy.  
+<xref:System.String.Split%2A?displayProperty=nameWithType> można użyć wielu znaków separatora.
+W poniższym przykładzie użyto miejsca do magazynowania, przecinki, kropki, dwukropki i kartach wszystkich przekazanych tablicę zawierającą je do oddzielania znaków, <xref:System.String.Split%2A>.
+Pętla w dolnej części kodu wyświetla poszczególnych wyrazów w zwróconej tablicy.  
 
 [!code-csharp-interactive[split strings using multiple separators](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#3)]
 
@@ -48,7 +50,8 @@ Kolejne wystąpienia dowolnego separator dawać pusty ciąg w tablicy danych wyj
 
 Możesz wypróbować te przykłady, patrząc na kod w naszym [repozytorium GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Można również pobrać przykłady [jako plik zip](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
-## <a name="see-also"></a>Zobacz też  
- [Przewodnik programowania w języku C#](../programming-guide/index.md)  
- [Ciągi](../programming-guide/strings/index.md)  
- [Wyrażeń regularnych programu .NET](../../standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Przewodnik programowania w języku C#](../programming-guide/index.md)  
+- [Ciągi](../programming-guide/strings/index.md)  
+- [Wyrażeń regularnych programu .NET](../../standard/base-types/regular-expressions.md)

@@ -3,12 +3,12 @@ title: Historia języka C# — Przewodnik po języku C#
 description: Język jak wygląda w jego wersje i jak go powstała od?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 90f480d7b25ebe308d1f1cb3d4c117f36f7dd9bf
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 7a7030eb9479ebae553f3bb4d569c9a9f931db9a
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42753924"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254941"
 ---
 # <a name="the-history-of-c"></a>Historia języka C# #
 
@@ -34,6 +34,10 @@ Główne funkcje języka C# 1.0 obejmuje:
 - [Instrukcje](../programming-guide/statements-expressions-operators/statements.md)
 - [Atrybuty](../programming-guide/concepts/attributes/index.md)
 - Literały
+
+## <a name="c-version-12"></a>C# w wersji 1.2
+
+C# w wersji 1.2 dostarczane z programem Visual Studio 2003. Zawiera kilka ulepszeń małych dla języka. Większość warto jest uruchamianie z tą wersją, kod generowany w `foreach` pętli wywołuje <xref:System.IDisposable.Dispose%2A> na <xref:System.Collections.IEnumerator> podczas który <xref:System.Collections.IEnumerator> zaimplementowane <xref:System.IDisposable>.
 
 ## <a name="c-version-20"></a>C# w wersji 2.0
 

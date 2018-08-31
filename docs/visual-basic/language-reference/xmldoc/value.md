@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <value> XML tag
 - value XML tag
 ms.assetid: 0b84b02e-9e6d-41b5-a926-0d5dc76dacb5
-ms.openlocfilehash: f33a4ec32b45d8996bd39f0cc49097b5fd9252e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef14836c438cf6a1de300270d9882c1e53e716ee
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602462"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43258046"
 ---
 # <a name="ltvaluegt-visual-basic"></a>&lt;wartość&gt; (Visual Basic)
 Określa opis właściwości.  
@@ -26,14 +26,14 @@ Określa opis właściwości.
  Opis właściwości.  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj `<value>` tag do opisu właściwości. Należy pamiętać, że podczas dodawania właściwości przy użyciu Kreatora kodu w środowisku projektowym Visual Studio, spowoduje to dodanie [ \<podsumowania >](../../../visual-basic/language-reference/xmldoc/summary.md) tag nowej właściwości. Następnie należy ręcznie dodać `<value>` tag do opisywania wartość, która reprezentuje właściwość.  
+ Użyj `<value>` tag do opisywania właściwości. Należy pamiętać, że podczas dodawania właściwości, za pomocą Kreatora kodów w środowisku programowania Visual Studio, spowoduje to dodanie [ \<podsumowania >](../../../visual-basic/language-reference/xmldoc/summary.md) tag w przypadku nowej właściwości. Następnie należy ręcznie dodać `<value>` tag do opisania wartość, która reprezentuje właściwość.  
   
- Kompiluj z użyciem [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) na przetwarzanie komentarzy dokumentacji do pliku.  
+ Kompiluj przy użyciu [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) do Przetwarzaj komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto `<value>` tag do opisywania jakie korzyści `Counter` właściwości blokad.  
+ W tym przykładzie użyto `<value>` tag do opisania wartość, jaką `Counter` przechowuje właściwości.  
   
  [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/value_1.vb)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Tagi komentarza XML](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [Tagi komentarza XML](../../../visual-basic/language-reference/xmldoc/index.md)

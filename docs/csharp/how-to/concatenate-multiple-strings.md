@@ -7,12 +7,12 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-ms.openlocfilehash: d4e57347a11b804f3ea7f4bb9736c134c4b71929
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 355e56acf36b6212ee4563f34722b10b56a0fb47
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961316"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43256101"
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>Porady: łączenie wielu ciągów (Przewodnik C#)
 
@@ -23,7 +23,6 @@ ms.locfileid: "37961316"
 W poniższym przykładzie użyto łączenia, aby podzielić ciąg literału mniejszych ciągów w celu poprawienia czytelności w kodzie źródłowym. Te elementy są łączone w pojedynczy ciąg w czasie kompilacji. Nie ma żadnych kosztów wydajności w czasie wykonywania, bez względu na liczbę ciągów zaangażowane.  
   
  [!code-csharp-interactive[Combining strings at compile time](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#1)]  
-  
 
 Aby połączyć zmiennych ciągu, można użyć `+` lub `+=` operatorów, [Interpolacja ciągów](../language-reference/tokens/interpolated.md) lub <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.String.Concat%2A?displayProperty=nameWithType>, <xref:System.String.Join%2A?displayProperty=nameWithType> lub <xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType> metody. `+` Operator jest łatwa w użyciu i sprawia, że kod intuicyjne. Nawet w przypadku używania kilku `+` operatorów w jednej instrukcji, ciąg zawartości jest kopiowany tylko raz. Poniższy kod pokazuje przykłady stosowania `+` i `+=` operatory łączenia ciągów:
 
@@ -34,7 +33,7 @@ W niektórych wyrażeniach łatwiej jest łączenie ciągów przy użyciu interp
 [!code-csharp-interactive[building strings using string interpolation](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#3)]  
   
 > [!NOTE]
->  W ramach operacji łączenia ciągu kompilator języka C# traktuje pusty ciąg takie same jako pusty ciąg.
+> W ramach operacji łączenia ciągu kompilator języka C# traktuje pusty ciąg takie same jako pusty ciąg.
 
 Druga metoda łączenia ciągów jest <xref:System.String.Format%2A?displayProperty=nameWithType>. Ta metoda działa dobrze w przypadku, gdy tworzysz ciąg z małą liczbą składników ciągów.
 
@@ -54,8 +53,9 @@ Ostatnio, możesz użyć [LINQ](../programming-guide/concepts/linq/index.md) i <
 
 Możesz wypróbować te przykłady, patrząc na kod w naszym [repozytorium GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Można również pobrać przykłady [jako plik zip](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
-## <a name="see-also"></a>Zobacz też  
- <xref:System.String>  
- <xref:System.Text.StringBuilder>  
- [Przewodnik programowania w języku C#](../programming-guide/index.md)  
- [Ciągi](../programming-guide/strings/index.md)
+## <a name="see-also"></a>Zobacz też
+
+- <xref:System.String>  
+- <xref:System.Text.StringBuilder>  
+- [Przewodnik programowania w języku C#](../programming-guide/index.md)  
+- [Ciągi](../programming-guide/strings/index.md)

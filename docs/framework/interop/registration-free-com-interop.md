@@ -12,47 +12,47 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32ee3babe054d55a45cc8826843252dba6aa2be7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 939630726f399184c264f73ee01270f50981e83a
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390253"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332216"
 ---
 # <a name="registration-free-com-interop"></a>Współdziałanie z modelem COM bez rejestrowania
-Współdziałanie z COM bez rejestrowania aktywuje składnika bez za pomocą rejestru systemu Windows do przechowywania informacji o zestawie. Zamiast zarejestrować składników na komputerze podczas wdrażania, można tworzyć pliki manifestu Win32 stylu w czasie projektowania, zawierających informacje o powiązaniu i aktywacji. Te pliki manifestu, zamiast klucze rejestru, bezpośrednie aktywacji obiektu.  
+Współdziałanie COM interop aktywuje składnika bez za pomocą rejestru Windows do przechowywania informacji o zestawie. Zamiast rejestrowanie składników na komputerze podczas wdrażania, utworzysz plik manifestu Win32 stylu w czasie projektowania, które zawierają informacje dotyczące powiązania i aktywacji. Te pliki manifestu, zamiast kluczy rejestru, bezpośrednie aktywacji obiektu.  
   
- Przy użyciu aktywacji bez rejestracji dla ponownie zestawy zamiast zarejestrować ich podczas wdrażania oferuje dwie zalety:  
+ Przy użyciu aktywacji bez rejestracji dla zestawów zamiast rejestrowania ich podczas wdrażania ma dwie zalety:  
   
--   Można kontrolować, która wersja biblioteki DLL jest aktywowany, gdy więcej niż jedna wersja jest zainstalowany na komputerze.  
+-   Można kontrolować, którą wersję biblioteki DLL jest aktywowany, gdy więcej niż jedna wersja jest zainstalowana na komputerze.  
   
--   Umożliwia użytkownikom XCOPY lub FTP można skopiować aplikacji do odpowiedniego katalogu na swoim komputerze. Aplikacja może następnie uruchamiana z tego katalogu.  
+-   Użytkownicy końcowi można użyć polecenia XCOPY lub FTP można skopiować aplikacji do odpowiedniego katalogu na komputerze. Aplikacja może następnie uruchamiana z tego katalogu.  
   
- W tej sekcji opisano dwa typy manifestów potrzebne do międzyoperacyjności z modelem COM bez rejestrowania: manifestów aplikacji i składnika. Te manifesty są plikami XML. Manifest aplikacji, który jest tworzony przez dewelopera aplikacji, zawiera metadane opisujące zestawów i zależności zestawu. Manifestu składnika, utworzonych przez dewelopera składnika zawiera informacje, w przeciwnym razie znajduje się w rejestrze systemu Windows.  
+ W tej sekcji opisano dwa typy służące do współdziałania z modelem COM bez rejestrowania manifesty: manifestów aplikacji i składników. Te manifesty są plikami XML. Manifest aplikacji, który jest tworzony przez dewelopera aplikacji, zawiera metadane opisujące zestawów i zależności zestawu. Manifestu składnika, utworzonych przez dewelopera składnik zawiera informacje, w przeciwnym razie znajduje się w rejestrze systemu Windows.  
   
-### <a name="requirements-for-registration-free-com-interop"></a>Wymagania dotyczące współdziałanie z COM bez rejestrowania  
+### <a name="requirements-for-registration-free-com-interop"></a>Wymagania dotyczące współdziałania z modelem COM bez rejestrowania  
   
-1.  Obsługa współdziałanie z COM bez rejestrowania różni się nieco w zależności od typu biblioteki zestawu; w szczególności czy zestaw jest niezarządzane (COM side-by-side) lub zarządzanych (. NET-based). W poniższej tabeli przedstawiono wymagania dotyczące wersji .NET Framework dla każdego typu zestawu i system operacyjny.  
+1.  Obsługa rejestracji wolnego modelu COM interop różni się nieco w zależności od typu biblioteki zestawu; w szczególności zestaw niezarządzanych (COM side-by-side) czy jest zarządzany (. NET-based). W poniższej tabeli przedstawiono systemu operacyjnego i wymagania dotyczące wersji .NET Framework dla każdego typu zestawu.  
   
     |Typ zestawu|System operacyjny|Wersja programu .NET Framework|  
     |-------------------|----------------------|----------------------------|  
     |COM side-by-side|Microsoft Windows XP|Nie jest wymagane.|  
     |. Na podstawie NET|Windows XP z dodatkiem SP2|NET Framework w wersji 1.1 lub nowszej.|  
   
-     System Windows Server 2003 obsługuje również współdziałanie COM bez rejestrowania dla. Zestawy opartych na sieci.  
+     W systemach z rodziny Windows Server 2003 obsługuje również bez rejestracji usługa międzyoperacyjna modelu COM dla. Zestawy oparte na sieci.  
   
-     Aby uzyskać. Oparte na sieci klasy, aby był zgodny z rejestru bez aktywacji z modelu COM, klasa musi mieć konstruktora domyślnego i muszą być publiczne.  
+     Aby uzyskać. Na podstawie NET klasy, aby był zgodny z bezpłatnych rejestru aktywacji z modelu COM, klasa musi mieć konstruktora domyślnego i muszą być publiczne.  
   
 ### <a name="configuring-com-components-for-registration-free-activation"></a>Konfigurowanie aktywacji bez rejestracji składników COM  
   
-1.  Dla składnika modelu COM o uczestnictwie w aktywacji bez rejestracji musi być wdrożony jako zestawu side-by-side. Zestawy Side-by-side są niezarządzane zestawów.  Aby uzyskać więcej informacji, zobacz [używanie zestawów Side-by-side](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx).  
+1.  Dla składnika modelu COM do wzięcia udziału w aktywacji bez rejestracji musi zostać wdrożony jako zestawu side-by-side. Side-by-side zestawy są niezarządzane zestawów.  Aby uzyskać więcej informacji, zobacz [używanie zestawów Side-by-side](/windows/desktop/SbsCs/using-side-by-side-assemblies).  
   
-     Używanie zestawów side-by-side COM,. Deweloper aplikacji opartych na sieci należy podać manifest aplikacji, który zawiera informacje o powiązaniu i aktywacji. Obsługa niezarządzane zestawy side-by-side jest wbudowane w system operacyjny Windows XP. COM środowiska uruchomieniowego, obsługiwane przez system operacyjny skanuje manifest aplikacji, aby uzyskać informacje dotyczące aktywacji, gdy składnik aktywowane nie jest w rejestrze.  
+     Używanie zestawów side-by-side COM,. Deweloper aplikacji opartych na sieci należy podać manifest aplikacji, który zawiera informacje dotyczące powiązania i aktywacji. Obsługa dla niezarządzanych zestawów side-by-side jest wbudowana w system operacyjny Windows XP. Środowisko uruchomieniowe modelu COM, obsługiwana przez system operacyjny skanuje manifest aplikacji, aby uzyskać informacje o aktywacji, gdy składnik aktywowanego nie znajduje się w rejestrze.  
   
-     Aktywacja bez rejestrowania jest opcjonalne dla składników modelu COM w systemie Windows XP. Aby uzyskać szczegółowe instrukcje dotyczące dodawania zestawu side-by-side do aplikacji, zobacz [używanie zestawów Side-by-side](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx).  
+     Aktywacji bez rejestracji jest opcjonalne dla składników COM, w systemie Windows XP. Aby uzyskać szczegółowe instrukcje na temat dodawania zestawów side-by-side do aplikacji, zobacz [używanie zestawów Side-by-side](/windows/desktop/SbsCs/using-side-by-side-assemblies).  
   
     > [!NOTE]
-    >  Wykonanie Side-by-side jest funkcja .NET Framework, która umożliwia wielu wersji środowiska uruchomieniowego i wiele wersji aplikacji i składników, których używana jest wersja środowiska uruchomieniowego, do uruchamiania na tym samym komputerze, w tym samym czasie. Wykonanie Side-by-side i zestawy side-by-side są różne mechanizmy dostarczanie side-by-side funkcji.  
+    >  Wykonanie Side-by-side jest funkcja .NET Framework, która umożliwia wielu wersji środowiska uruchomieniowego i wiele wersji aplikacji i składników, korzystających z wersji środowiska uruchomieniowego, aby uruchomić na tym samym komputerze, w tym samym czasie. Wykonanie Side-by-side i zestawów side-by-side są różne mechanizmy dostarczanie funkcji side-by-side.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Instrukcje: Konfigurowanie aktywacji bez rejestracji składników COM opartych na platformie .NET Framework](../../../docs/framework/interop/configure-net-framework-based-com-components-for-reg.md)

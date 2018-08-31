@@ -1,5 +1,5 @@
 ---
-title: Wprowadzenie — przewodnik C#
+title: Wprowadzenie — przewodnik po języku C#
 description: Zapoznaj się z krótkimi samouczkami, dzięki którym szybko nauczysz się podstawowych pojęć z zakresu C# i tworzenia aplikacji .NET Core.
 helpviewer_keywords:
 - Visual C#, getting started
@@ -7,14 +7,14 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/23/2017
-ms.openlocfilehash: 8c9b2803819b4ffcf0edce7994b9fdbc1c6c6951
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aa34c181073d089d137ac0ef64c85c8fe2772093
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33212632"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331375"
 ---
-# <a name="get-started-with-c"></a>Wprowadzenie do języka C# #
+# <a name="get-started-with-c"></a>Rozpoczynanie pracy przy użyciu języka C\#
 
 Ta sekcja zawiera krótki, prosty samouczek, dzięki któremu szybko stworzysz aplikację przy użyciu języka C# i .NET Core. Znajdziesz tu tematy wprowadzające do Visual Studio 2017 i Visual Studio Code. Możesz utworzyć prostą aplikację Hello World lub (jeśli masz program Visual Studio 2017) prostą bibliotekę klas, której mogą używać inne aplikacje.
 
@@ -22,7 +22,7 @@ Dostępne są następujące tematy:
 
 * [Wprowadzenie do języka C# i .NET Framework](introduction-to-the-csharp-language-and-the-net-framework.md)
 
-     Zawiera omówienie języka C# i platformy .NET.
+     Zawiera omówienie języka C# i .NET.
 
 * [Tworzenie aplikacji Hello world w języku C# na platformie .NET Core w programie Visual Studio 2017](../../core/tutorials/with-visual-studio.md)
 
@@ -63,4 +63,5 @@ Dostępne są następujące tematy:
     Zawiera linki do przewodników programowania w języku C# wraz z krótkimi opisami poszczególnych przewodników.
 
 ## <a name="see-also"></a>Zobacz także
- [Wprowadzenie do języków Visual C# i Visual Basic w programie Visual Studio](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+
+* [Wprowadzenie do języków Visual C# i Visual Basic w programie Visual Studio](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

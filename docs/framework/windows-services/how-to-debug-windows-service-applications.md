@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
 manager: douge
-ms.openlocfilehash: 5de4c90361033df603bb63fbb365514d6bb5ea0c
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: a0c57ab049fff699d5bb12004fd48d90a226e514
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935690"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43330974"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>Porady: debugowanie aplikacji usług systemu Windows
 Usługa musi być uruchamiane w kontekście Menedżera sterowania usługami, a nie z poziomu programu Visual Studio. Z tego powodu debugowanie usługi jest tak proste jak debugowanie innych typów aplikacji Visual Studio. Aby debugować usługę, należy uruchomić usługę i następnie dołączyć debuger do procesu, w którym jest uruchomiony. Następnie można debugować aplikację za pomocą wszystkich standardowych funkcji debugowania programu Visual Studio.  
@@ -33,7 +33,7 @@ Usługa musi być uruchamiane w kontekście Menedżera sterowania usługami, a n
 >  Debugowanie <xref:System.ServiceProcess.ServiceBase.OnStart%2A> metoda może być trudne, ponieważ Menedżera sterowania usługami nakłada limit 30-sekundowy na wszystkie próby uruchomienia usługi. Aby uzyskać więcej informacji, zobacz [Rozwiązywanie problemów: debugowanie usług Windows](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).  
   
 > [!WARNING]
->  Aby uzyskać istotne informacje dotyczące debugowania, debuger programu Visual Studio musi znaleźć pliki symboli dla plików binarnych, które są debugowane. Jeśli debugujesz to usługa, która jest wbudowana w programie Visual Studio, plików symboli (pliki .pdb) znajdują się w tym samym folderze co plik wykonywalny lub biblioteka i debuger ładuje je automatycznie. Jeśli debugujesz usługa, która nie została skompilowana, należy najpierw Znajdź symbole dla usługi i upewnij się, że są one przez debuger. Zobacz [Określ symboli (.pdb) i pliki źródłowe](http://msdn.microsoft.com/library/1105e169-5272-4e7c-b3e7-cda1b7798a6b). Jeśli debugowanie procesów systemowych lub mają symbole dla wywołania systemowe w usługach, należy dodać serwery symboli firmy Microsoft. Zobacz [symboli debugowania](/windows/desktop/DxTechArts/debugging-with-symbols).  
+>  Aby uzyskać istotne informacje dotyczące debugowania, debuger programu Visual Studio musi znaleźć pliki symboli dla plików binarnych, które są debugowane. Jeśli debugujesz to usługa, która jest wbudowana w programie Visual Studio, plików symboli (pliki .pdb) znajdują się w tym samym folderze co plik wykonywalny lub biblioteka i debuger ładuje je automatycznie. Jeśli debugujesz usługa, która nie została skompilowana, należy najpierw Znajdź symbole dla usługi i upewnij się, że są one przez debuger. Zobacz [Określ symboli (.pdb) i pliki źródłowe](https://msdn.microsoft.com/library/1105e169-5272-4e7c-b3e7-cda1b7798a6b). Jeśli debugowanie procesów systemowych lub mają symbole dla wywołania systemowe w usługach, należy dodać serwery symboli firmy Microsoft. Zobacz [symboli debugowania](/windows/desktop/DxTechArts/debugging-with-symbols).  
   
 ### <a name="to-debug-a-service"></a>Aby debugować usługę  
   
@@ -112,7 +112,7 @@ Usługa musi być uruchamiane w kontekście Menedżera sterowania usługami, a n
   
 5.  Aby ponownie uruchomić program jako usługę Windows, należy go zainstalować i uruchomić go w zwykły sposób usługi Windows. Nie jest konieczne zmiany można cofnąć.  
   
- W niektórych przypadkach, np. Jeśli chcesz debugować problem, który występuje tylko podczas uruchamiania systemu należy użyć debugera Windows. Zainstaluj [Debugging Tools for Windows](http://msdn.microsoft.com/windows/hardware/hh852365) zobaczyć [sposób debugowania usług Windows](http://support.microsoft.com/kb/824344).  
+ W niektórych przypadkach, np. Jeśli chcesz debugować problem, który występuje tylko podczas uruchamiania systemu należy użyć debugera Windows. Zainstaluj [Debugging Tools for Windows](https://msdn.microsoft.com/windows/hardware/hh852365) zobaczyć [sposób debugowania usług Windows](https://support.microsoft.com/kb/824344).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzenie do aplikacji usług systemu Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  

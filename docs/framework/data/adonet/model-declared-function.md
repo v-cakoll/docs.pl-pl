@@ -2,29 +2,29 @@
 title: Funkcja zadeklarowana modelu
 ms.date: 03/30/2017
 ms.assetid: aba87f13-5685-4f6b-ad14-918e8a7d5c2a
-ms.openlocfilehash: fd573df4eb93b44622bb3b2f611ed726f4700b1d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f92bdfedaefca7182b5de72abae9852965d83ff7
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757245"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332049"
 ---
 # <a name="model-declared-function"></a>Funkcja zadeklarowana modelu
-A *funkcja zadeklarowana modelu* to funkcja, która jest zadeklarowana w modelu koncepcyjnym, ale nie jest zdefiniowany w modelu koncepcyjnym. Funkcja może być zdefiniowana w środowisku obsługującym lub magazynu. Na przykład funkcja zadeklarowana modelu może być mapowana na funkcję, która jest zdefiniowana w bazie danych, w związku z tym udostępnianie funkcje po stronie serwera w modelu koncepcyjnym.  
+A *funkcja zadeklarowana modelu* jest funkcją, która jest zadeklarowana w modelu koncepcyjnym, ale nie jest zdefiniowany w tym modelu koncepcyjnego. Funkcja może być zdefiniowana w środowisku hostingu lub magazynu. Na przykład funkcja zadeklarowana modelu może być mapowana do funkcji, która jest zdefiniowana w bazie danych, w związku z tym udostępnianie funkcje po stronie serwera w modelu koncepcyjnym.  
   
- Deklaracja funkcji zadeklarowany modelu zawiera następujące informacje:  
+ Deklaracja funkcji zadeklarowana modelu zawiera następujące informacje:  
   
 -   Nazwa funkcji. (Wymagane)  
   
--   Typ zwracanej wartości. (opcjonalnie)  
+-   Typ wartości zwracanej. (opcjonalnie)  
   
     > [!NOTE]
-    >  Jeśli wartość zwrotu nie zostanie określona, typ zwracany jest typ void.  
+    >  Jeśli żadna wartość zwracana jest określony, zwracany typ jest typ void.  
   
--   Informacje o parametrach, jak nazwa parametru typu. (opcjonalnie)  
+-   Informacje o parametrach, takie jak nazwa parametru i typu. (opcjonalnie)  
   
 ## <a name="example"></a>Przykład  
- [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) używa języka specyficznego dla domeny (DSL) w nazwie schematu koncepcyjnego definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) do definiowania modeli koncepcyjnych. W pliku CSDL, jest jedna implementacja funkcji zadeklarowany modelu [import funkcji](http://msdn.microsoft.com/library/125704ae-56c7-4233-80b7-389a10f3a65d). Następujący plik CSDL definiuje kontenera jednostek z definicji funkcji importu. Należy pamiętać, że typ zwracany dla funkcji void, ponieważ nie zwracany określono typu.  
+ [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) używa języka specyficznego dla domeny (DSL), o nazwie język definicji schematu koncepcyjnego ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) do definiowania modeli koncepcyjnych. W CSDL, jest jedna implementacja funkcja zadeklarowana modelu [funkcji importu](https://msdn.microsoft.com/library/125704ae-56c7-4233-80b7-389a10f3a65d). Następujące CSDL definiuje kontener jednostek, definicje importu funkcji. Należy zauważyć, że zwracany typ funkcji jest nieważne, ponieważ określono bez zwrotu typu.  
   
  [!code-xml[EDM_Example_Model#FunctionImport](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#functionimport)]  
   

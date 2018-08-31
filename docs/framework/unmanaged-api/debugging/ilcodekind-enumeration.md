@@ -14,17 +14,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0881b3903200c023cfa2fe32bf89f62234da29c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a02c26b72fc7039a5050ee369043f081c32cd7ec
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424030"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331390"
 ---
 # <a name="ilcodekind-enumeration"></a>Wyliczenie ILCodeKind
 [Obsługiwane w programie .NET Framework 4.5.2 i nowszych wersjach]  
   
- Zawiera wartości, które określają, czy debuger jest w stanie uzyskać dostęp do zmiennych lokalnych lub kodzie dodanym w ReJIT Instrumentacji profilera.  
+ Zawiera wartości, które określają, czy debuger jest w stanie uzyskać dostęp do zmiennych lokalnych lub kodzie dodanym w profilerze ReJIT instrumentacji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,7 +43,7 @@ typedef enum ILCodeKind {
 |`ILCODE_REJIT_IL`|Debuger ma dostęp do informacji z ReJIT instrumentacji.|  
   
 ## <a name="remarks"></a>Uwagi  
- Członek `ILCodeKind` wyliczenia mogą zostać przekazane do [EnumerateLocalVariablesEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md) i [GetLocalVariableEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md) metod umożliwiających ustalenie, czy debuger może uzyskiwać dostęp do zmiennych dodany do programu profiler Instrumentacja ReJIT i [GetCodeEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md) metodę, aby określić, czy debuger może uzyskiwać dostęp do Instrumentacji IL.  
+ Członek `ILCodeKind` wyliczenia mogą być przekazywane do [EnumerateLocalVariablesEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md) i [GetLocalVariableEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md) metod umożliwiających ustalenie, czy debuger może uzyskać dostęp do zmiennych dodane w programie profiler Instrumentacja ReJIT i [GetCodeEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md) metodę pozwala ustalić, czy debuger może uzyskiwać dostęp do Instrumentacji IL.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -57,4 +57,4 @@ typedef enum ILCodeKind {
 ## <a name="see-also"></a>Zobacz też  
  [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
  [ICorDebugILFrame4, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-interface.md)  
- [ReJIT: Przewodnik](http://blogs.msdn.com/b/davbr/archive/2011/10/12/rejit-a-how-to-guide.aspx)
+ [ReJIT: Przewodnik](https://blogs.msdn.com/b/davbr/archive/2011/10/12/rejit-a-how-to-guide.aspx)

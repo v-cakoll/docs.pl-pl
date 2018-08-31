@@ -10,18 +10,18 @@ ms.assetid: 72c80262-8ca9-4624-9bd6-96984c5b7c5c
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: de41c00f4c494d15f84965e65fd5bdcdc7576268
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5b67340ca63637bd5ba2e59e4e5b774abbae58d
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405593"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331879"
 ---
 # <a name="ui-automation-control-patterns-how-to-topics"></a>Wzorce kontrolek automatyzacji interfejsu użytkownika — Tematy porad
 > [!NOTE]
->  Ta dokumentacja jest przeznaczony dla deweloperów .NET Framework, które chcą korzystać zarządzanej [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejsu API systemu Windows automatyzacji: automatyzacji interfejsu użytkownika](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Ta sekcja zawiera szczegółowe informacje na temat implementowania wzorców formantu.  
+ Ta sekcja zawiera szczegółowe informacje na temat implementowania wzorców kontrolek.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Udostępnianie zawartości tabel za pomocą automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  

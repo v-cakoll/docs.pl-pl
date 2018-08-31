@@ -13,74 +13,74 @@ helpviewer_keywords:
 - datasets [Windows Forms], displaying in DataGridView control
 - DataGridView control [Windows Forms]
 ms.assetid: dbee73f2-bba6-4874-9389-cd21d44309be
-ms.openlocfilehash: 3c642a2a0eccc5a2b08cee71ca719515b115b2f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2ef387437befe3df67e261b719140456a3fde9dd
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529928"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332510"
 ---
 # <a name="datagridview-control-windows-forms"></a>DataGridView — Formant (Formularze systemu Windows)
-`DataGridView` Kontrola zapewnia wydajny i elastyczny sposób wyświetlania danych w formacie tabelarycznym. Można użyć `DataGridView` sterowania do wyświetlenia w widokach tylko do odczytu małe ilości danych lub można skalować, aby pokazać widokach edytowalnych bardzo dużych zestawów danych.  
+`DataGridView` Kontrola zapewnia wydajny i elastyczny sposób wyświetlania danych w formacie tabelarycznym. Możesz użyć `DataGridView` sterowania do wyświetlenia w widokach tylko do odczytu z małą ilością danych oraz skalowania, aby pokazać widokach edytowalnych bardzo dużych zestawów danych.  
   
- Można rozszerzyć `DataGridView` sterowania na kilka różnych sposobów tworzenia niestandardowych zachowania w aplikacji. Na przykład można programowo określić własne sortowanie algorytmów i własnych typów komórek. Można łatwo dostosować wygląd `DataGridView` kontroli, wybierając spośród kilku właściwości. Wiele typów magazynów danych może służyć jako źródła danych lub `DataGridView` formant może działać bez powiązane z nim źródła danych.  
+ Możesz rozszerzyć `DataGridView` kontroli na wiele sposobów, aby tworzyć niestandardowe zachowania w aplikacjach. Na przykład można programowo określić własny algorytmy sortujące i swój własny typ komórki. Można łatwo dostosować wygląd `DataGridView` kontroli, wybierając między kilka właściwości. Wiele typów magazynów danych może służyć jako źródła danych lub `DataGridView` kontroli może działać bez źródła danych powiązane z nim.  
   
- W tematach w tej sekcji opisano pojęcia i techniki, które służy do tworzenia `DataGridView` funkcje do aplikacji.  
+ W tematach w tej sekcji opisano pojęć i technik, które służą do tworzenia `DataGridView` funkcji w aplikacjach.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [DataGridView, kontrolka — omówienie](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)  
- Udostępnia tematów dotyczących architektury i podstawowe pojęcia formularzy systemu Windows `DataGridView` formantu.  
+ Zawiera tematy, które opisują architekturę i podstawowe pojęcia formularzy Windows Forms `DataGridView` kontroli.  
   
  [Funkcje domyślne w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/default-functionality-in-the-windows-forms-datagridview-control.md)  
- Opis domyślny wygląd i zachowanie formularzy systemu Windows `DataGridView` kontroli, gdy jest ona powiązana ze źródłem danych.  
+ W tym artykule opisano domyślny wygląd i zachowanie formularzy Windows `DataGridView` kontroli, gdy jest powiązana ze źródłem danych.  
   
  [Typy kolumn w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)  
- W tym artykule opisano typy kolumn w formularzach systemu Windows `DataGridView` kontrolkę służącą do wyświetlania danych i Zezwalaj użytkownikom na modyfikowanie lub dodawanie danych.  
+ W tym artykule opisano typy kolumn w formularzach Windows Forms `DataGridView` kontrolkę służącą do wyświetlania danych i Zezwalaj użytkownikom na modyfikowanie lub dodawanie danych.  
   
  [Podstawowe funkcje komórek, wierszy i kolumn w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
- Udostępnia tematów opisujących najczęściej używanych właściwości komórek, wierszy i kolumn.  
+ Zawiera tematy, które opisują najczęściej używanych właściwości komórek, wierszy i kolumn.  
   
  [Podstawowe formatowanie i style w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
- Udostępnia tematach opisano sposób modyfikowania podstawowe wygląd formantu i formatowania wyświetlania danych komórki.  
+ Zawiera tematy, które opisują sposób modyfikowania wyglądu podstawowego formantu i formatowania wyświetlania danych komórki.  
   
  [Wyświetlanie danych w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
- Zawiera tematy, które opisują sposób wypełnienia formantu z danymi w sposób ręczny lub z zewnętrznego źródła danych.  
+ Zawiera tematy, które opisują sposób wypełnienia kontrolki z danymi ręczny lub z zewnętrznego źródła danych.  
   
  [Zmiana rozmiaru wierszy i kolumn w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)  
- Udostępnia tematów opisujących sposób rozmiaru wierszy i kolumn można dostosować automatycznie dopasowana do zawartości komórki lub aby dopasować dostępne szerokość formantu.  
+ Zawiera tematy, które opisują, jak rozmiar wierszy i kolumn można dostosować automatycznie Dopasuj zawartość komórki lub Dopasuj dostępne szerokość kontrolki.  
   
  [Sortowanie danych w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/sorting-data-in-the-windows-forms-datagridview-control.md)  
- Udostępnia tematów opisujących funkcji sortowania w formancie.  
+ Zawiera tematy, które opisują funkcje sortowania w formancie.  
   
  [Wprowadzanie danych w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  
- Udostępnia tematów opisujących sposób zmiany przez użytkowników, dodawanie i modyfikowanie danych w formancie.  
+ Zawiera tematy, które opisują sposób zmiany przez użytkowników, dodawanie i modyfikowanie danych w formancie.  
   
  [Wybór i używanie schowka za pomocą kontrolki DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)  
- Udostępnia tematów opisujących funkcje wyboru komórek, wierszy i kolumn w formancie.  
+ Zawiera tematy, które opisano funkcje Zaznaczanie komórek, wierszy i kolumn w formancie.  
   
  [Programowanie przy użyciu komórek, wierszy i kolumn w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)  
- Zawiera tematy dotyczące sposobu programu z komórek, wierszy i kolumn obiektów.  
+ Zawiera tematy, które opisują sposób programowania przy użyciu komórek, wierszy i kolumn obiektów.  
   
  [Dostosowywanie kontrolki DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)  
- Udostępnia tematów opisujących rysowania niestandardowych `DataGridView` komórek i wierszy oraz tworzenie pochodnych komórki, kolumny i typy wierszy.  
+ Zawiera tematy, które opisują niestandardowego rysowania `DataGridView` komórek i wierszy oraz tworzenie pochodnych komórki, kolumny i typy wierszy.  
   
  [Dostrajanie wydajności w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
- Udostępnia tematów opisujących sposób efektywnie wykorzystać formantu, aby uniknąć problemów z wydajnością, podczas pracy z dużą ilością danych.  
+ Zawiera tematy, które opisują sposób efektywnie wykorzystać formantu, aby uniknąć problemów z wydajnością podczas pracy z dużymi ilościami danych.  
   
  [Domyślna obsługa myszy i klawiatury w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)  
- Zawiera opis sposobu interakcji użytkowników z `DataGridView` sterowanie za pośrednictwem klawiatury i myszy.  
+ W tym artykule opisano, jak użytkownicy mogą korzystać z `DataGridView` sterowanie za pośrednictwem klawiatury i myszy.  
   
  [Różnice między kontrolkami DataGridView i DataGrid formularzy Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)  
- Opisuje sposób `DataGridView` kontroli poprawia i zastępuje <xref:System.Windows.Forms.DataGrid> formantu.  
+ W tym artykule opisano sposób, w jaki `DataGridView` kontroli poprawia i zastępuje <xref:System.Windows.Forms.DataGrid> kontroli.  
   
- Zobacz też [z formantu DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant](http://msdn.microsoft.com/library/ms171593\(v=vs.110\)).  
+ Zobacz też [przy użyciu narzędzia Projektant z formantu DataGridView formularzy Windows](using-the-designer-with-the-windows-forms-datagridview-control.md).  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.DataGridView>  
- Zawiera dokumentacja referencyjna dla <xref:System.Windows.Forms.DataGridView> formantu.  
+ Zawiera dokumentację referencyjną dla <xref:System.Windows.Forms.DataGridView> kontroli.  
   
  <xref:System.Windows.Forms.BindingSource>  
- Zawiera dokumentacja referencyjna dla <xref:System.Windows.Forms.BindingSource> składnika. <xref:System.Windows.Forms.DataGridView> Kontroli i <xref:System.Windows.Forms.BindingSource> składnika są przeznaczone do ściśle współpracować.  
+ Zawiera dokumentację referencyjną dla <xref:System.Windows.Forms.BindingSource> składnika. <xref:System.Windows.Forms.DataGridView> Kontroli i <xref:System.Windows.Forms.BindingSource> składnika są przeznaczone do ściśle współpracować.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

@@ -2,44 +2,44 @@
 title: Podstawowe sprawdzanie poprawności
 ms.date: 03/30/2017
 ms.assetid: ba1343cc-aaab-4ade-b0c0-1dd5063bf4ad
-ms.openlocfilehash: db7db339d0b7bfd756d8ba22fb8488b8f7ecfa3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 74d99e2d426e9ea5701fad80418fdf019112cc9e
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514090"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332736"
 ---
 # <a name="basic-validation"></a>Podstawowe sprawdzanie poprawności
-W tym przykładzie składa się z działania `CreateProduct`, która sprawdza, czy jego `Cost` argument jest mniejszy niż lub równy jego `Price` argumentu.  
+W tym przykładzie składa się z działań `CreateProduct`, która sprawdza, czy jego `Cost` argument jest mniejszy niż lub równa jego `Price` argumentu.  
   
-## <a name="sample-details"></a>Szczegóły próbki  
- Istnieją dwa autorów, korzystających z weryfikacji, określony przez autora działania (tworzy logikę weryfikacji dla działania) i autor przepływu pracy, który wywołuje usługi weryfikacji dla określonego przepływu pracy. W tym scenariuszu określony przez autora działania chce wymusić, że każde wystąpienie jego działania musi mieć mniejszy lub równy koszt niż cena.  
+## <a name="sample-details"></a>Przykład szczegółów  
+ Istnieją dwa autorów, którzy sprawdzania poprawności, autor działania (tworzy logikę weryfikacji dla działania) i autor przepływu pracy, który wywołuje usług weryfikacji dla określonego przepływu pracy. W tym scenariuszu działanie chce, aby wymusić na to, że każde wystąpienie swojej działalności, musi mieć mniejszy lub równy koszt niż cena.  
   
- Określony przez autora działania (wewnątrz działania), musi:  
+ Tworzenie działania (wewnątrz działania) musi:  
   
--   Tworzenie ograniczenia (`PriceGreaterThanCost`). Jest to, gdzie znajduje się całą logikę sprawdzania poprawności.  
+-   Tworzenie ograniczenia (`PriceGreaterThanCost`). Jest to, gdzie znajduje się całą logikę weryfikacji.  
   
--   Zastąpienie `System.Activities.CodeActivity.OnGetConstraints()` i Dodaj ograniczenie (`PriceGreaterThanCost`) do ograniczenia <xref:System.Collections.IList>.  
+-   Zastąp `System.Activities.CodeActivity.OnGetConstraints()` i Dodaj ograniczenie (`PriceGreaterThanCost`) do ograniczenia <xref:System.Collections.IList>.  
   
- Autor przepływu pracy (główny program), musi:  
+ Tworzenie przepływu pracy (główny program) musi:  
   
--   Tworzenie przepływów pracy przy użyciu wystąpienia działania do sprawdzania poprawności (`CreateProduct`).  
+-   Tworzenie przepływu pracy z wystąpieniem działanie do sprawdzania poprawności (`CreateProduct`).  
   
--   Wywołanie <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>, która zwraca <xref:System.Activities.Validation.ValidationResults> kolekcji <xref:System.Activities.Validation.ValidationError>.  
+-   Wywołaj <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>, co powoduje zwrócenie <xref:System.Activities.Validation.ValidationResults> zbiór <xref:System.Activities.Validation.ValidationError>.  
   
 -   (Opcjonalnie) Drukuj <xref:System.Activities.Validation.ValidationError> obiektów.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Otwórz rozwiązanie próbki BasicValidation.sln w [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  Otwórz rozwiązanie przykładowe BasicValidation.sln w [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-2.  Tworzenie i uruchamianie rozwiązania.  
+2.  Skompiluj i uruchom rozwiązanie.  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Validation\BasicValidation`

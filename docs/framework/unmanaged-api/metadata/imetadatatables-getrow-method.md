@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 954b4df6b341e18c5a995b57541a72e236278c45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d24dbcbdd8b0ed0736f7b59564cf72dffaa5a8f8
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449598"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331336"
 ---
 # <a name="imetadatatablesgetrow-method"></a>IMetaDataTables::GetRow — Metoda
-Pobiera wiersz w indeksie określony wiersz, w tabeli w indeksie określonej tabeli.  
+Pobiera wiersz indeksu określony wiersz w tabeli pod indeksem określonej tabeli.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,13 +42,13 @@ HRESULT GetRow (
  [in] Indeks tabeli, z którego będą pobierane wiersza.  
   
  `rid`  
- [in] Indeks wiersza do pobrania.  
+ [in] Indeks wiersza, który można pobrać.  
   
  `ppRow`  
- [out] Wskaźnik na wskaźnik do wiersza.  
+ [out] Wskaźnik do wskaźnika do wiersza.  
   
 ## <a name="remarks"></a>Uwagi  
- Zaleca się korzystanie z tej metody, ponieważ nie zwraca spójne wyniki. Informacje o tabeli identyfikatora GUID w dokumentacji infrastruktury języka wspólnego (CLI), szczególnie "partycji II: metadane definicji i semantyki". Dokumentacja jest dostępna w trybie online; zobacz [ECMA C# i wspólne normy infrastruktury języka](http://go.microsoft.com/fwlink/?LinkID=99212) w witrynie MSDN i [standardowe ECMA-335 - infrastruktury języka wspólnego (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552) w witrynie sieci Web międzynarodowej Ecma.  
+ Firma Microsoft nie zaleca się użycie tej metody, ponieważ zwraca spójne wyniki. Informacje w tabeli z identyfikatorem GUID zobacz dokumentację Common Language Infrastructure (CLI), szczególnie "partycja II: metadane definicji i semantyka". Dokumentacja jest dostępna w trybie online; zobacz [ECMA C# and Common Language Infrastructure Standards](https://go.microsoft.com/fwlink/?LinkID=99212) w witrynie MSDN i [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) w witrynie Ecma International w sieci Web.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

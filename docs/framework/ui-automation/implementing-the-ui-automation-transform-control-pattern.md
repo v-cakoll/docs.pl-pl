@@ -9,36 +9,36 @@ ms.assetid: 5f49d843-5845-4800-9d9c-56ce0d146844
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 65c90e8e9f0653181b98645bf453c9d78c14bc15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6f193380619d5e75eaacebe00f602a3716d91ddf
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408268"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332763"
 ---
 # <a name="implementing-the-ui-automation-transform-control-pattern"></a>Implementacja wzorca kontrolki przekształcania automatyzacji interfejsu użytkownika
 > [!NOTE]
->  Ta dokumentacja jest przeznaczony dla deweloperów .NET Framework, które chcą korzystać zarządzanej [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejsu API systemu Windows automatyzacji: automatyzacji interfejsu użytkownika](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- W tym temacie przedstawiono wskazówki i konwencje dotyczące implementowania <xref:System.Windows.Automation.Provider.ITransformProvider>, wraz z informacjami dotyczącymi właściwości, metod i zdarzeń. Łącza do dodatkowe informacje są wyświetlane na końcu tego tematu.  
+ W tym temacie przedstawiono wskazówki i konwencje dotyczące implementowania <xref:System.Windows.Automation.Provider.ITransformProvider>, wraz z informacjami dotyczącymi właściwości, metody i zdarzenia. Łącza do dodatkowe informacje są wyświetlane na końcu tego tematu.  
   
- <xref:System.Windows.Automation.TransformPattern> — Wzorzec formantu jest używana do obsługi formantów, które można przenieść, rozmiaru lub obracać dwuwymiarowa miejsce. Przykłady formantów, które implementują wzorzec tego formantu można znaleźć [formantu wzorzec mapowania dla klientów automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ <xref:System.Windows.Automation.TransformPattern> — Wzorzec kontrolki jest używana do obsługi formantów, które mogą być przenoszone, rozmiaru lub obrócone w przestrzeni dwuwymiarowej. Przykłady formantów, które implementują wzorzec tej kontrolki, zobacz [kontroli wzorzec mapowania dla klientów automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Implementacja — wskazówki i konwencje  
- Gdy implementacja wzorca kontrolki przekształcania, należy zwrócić uwagę następujące wskazówki i konwencje:  
+## <a name="implementation-guidelines-and-conventions"></a>Wytyczne dotyczące implementacji i konwencje  
+ Jeśli implementacja wzorca kontrolki przekształcania, należy zwrócić uwagę następujących wytycznych i konwencje:  
   
--   Obsługa tego wzorca formantu nie jest ograniczona do obiektów na pulpicie. Ten wzorzec formantu również musi obsługiwane przez element podrzędny obiektu kontenera, gdy elementy podrzędne można przenieść, zmiany rozmiaru lub obracać za darmo w granicach kontenera.  
+-   Obsługa tego wzorca kontrolki nie jest ograniczona do obiektów na pulpicie. Ten wzorzec kontroli muszą być obsługiwane przez element podrzędny obiektu kontenera, jeśli elementy podrzędne mogą być przeniesione, rozmiaru lub obracać za darmo w granicach kontenera.  
   
--   Obiekt nie można przenosić, zmiany rozmiaru ani obracać lokalizacji ekranu wynikowy będzie można całkowicie poza współrzędne swojego kontenera i w związku z tym niedostępne do klawiatury lub myszy (na przykład w przypadku, gdy okno najwyższego poziomu zostanie przesunięty ekranem lub a obiekt podrzędny zostanie przeniesiona poza granice tego kontenera okienka ekranu). W takich przypadkach obiekt znajduje się maksymalnie zbliżony współrzędne ekranu żądanego możliwie z góry lub lewej współrzędne zastąpiona w granicach kontenera.  
+-   Obiekt nie można przenosić, ze zmienionym rozmiarem ani obrócone w taki sposób, że jej lokalizacja wynikowa ekranu będzie całkowicie przekraczających współrzędne jego kontenera i w związku z tym niedostępne do klawiatury lub myszy (na przykład w przypadku, gdy okno jest przesuwany ekranem lub w obiekt podrzędny zostanie przeniesiona poza granice kontenera okienka ekranu). W takich przypadkach obiekt jest umieszczany była jak najbliżej współrzędne ekranu żądanego możliwie z góry lub lewej współrzędne zastąpiona w granicach kontenera.  
   
--   Monitor wielu systemów Jeśli obiekt jest przenoszony, po zmianie rozmiaru lub obrócony całkowicie poza współrzędne ekranu pulpitu połączonych obiektu jest umieszczona na podstawowy monitor maksymalnie zbliżony żądanego współrzędne, jak to możliwe.  
+-   Systemów wielu monitorów Jeśli obiekt zostanie przeniesiony, o zmienionym rozmiarze lub obrócony całkowicie poza współrzędne ekranu pulpitu połączonego obiektu jest umieszczony na podstawowy monitor była jak najbliżej żądanego współrzędne, jak to możliwe.  
   
--   Wszystkie parametry i wartości właściwości są niezależne od ustawień regionalnych i bezwzględne.  
+-   Wszystkie parametry i wartości właściwości są bezwzględne i niezależne od ustawień regionalnych.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-itransformprovider"></a>Wymagane elementy ITransformProvider  
- Poniższe właściwości i metody są wymagane do wykonania <xref:System.Windows.Automation.Provider.ITransformProvider>.  
+ Poniższe właściwości i metod wymaganych do implementowania <xref:System.Windows.Automation.Provider.ITransformProvider>.  
   
 |Wymagane elementy członkowskie|Typ elementu członkowskiego|Uwagi|  
 |----------------------|-----------------|-----------|  
@@ -49,11 +49,11 @@ ms.locfileid: "33408268"
 |<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|Metoda|Brak|  
 |<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|Metoda|Brak|  
   
- Wzorzec ten formant nie ma żadnych zdarzeń skojarzone.  
+ Ten wzorzec formantu nie ma żadnych skojarzonych zdarzeń.  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Wyjątki  
- Dostawców należy zgłosić następujące wyjątki.  
+ Dostawcy należy zgłaszać następujące wyjątki.  
   
 |Typ wyjątku|Warunek|  
 |--------------------|---------------|  

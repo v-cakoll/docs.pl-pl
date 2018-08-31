@@ -2,24 +2,24 @@
 title: Wnioskowanie tabel
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
-ms.openlocfilehash: b14cbc39b02136ac7f226faf2636a69ac072f529
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 38709f91e01c7f85d9e8482bdd49bc0892121f09
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757830"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332856"
 ---
 # <a name="inferring-tables"></a>Wnioskowanie tabel
-Gdy wnioskowanie schematu dla <xref:System.Data.DataSet> z dokumentu XML ADO.NET najpierw określi, elementy XML, które reprezentują tabel. Następujące struktury XML powoduje tabelę dla **DataSet** schematu:  
+Podczas wnioskowania schematu dla <xref:System.Data.DataSet> z dokumentu XML ADO.NET najpierw określi, elementy XML, które reprezentują tabele. Następujące struktury XML wynik w tabeli **DataSet** schematu:  
   
 -   Elementy z atrybutami  
   
--   Elementów z elementów podrzędnych  
+-   Elementy z elementami podrzędnymi  
   
--   Powtarzających się elementów  
+-   Powtarzalne elementy  
   
 ## <a name="elements-with-attributes"></a>Elementy z atrybutami  
- Elementów, które mają atrybuty określone w nich spowodować wywnioskować tabel. Rozważmy na przykład następujący kod XML:  
+ Elementy, które mają atrybuty określone w nich spowodować wywnioskować tabel. Na przykład rozważmy następujący kod XML:  
   
 ```xml  
 <DocumentElement>  
@@ -28,19 +28,19 @@ Gdy wnioskowanie schematu dla <xref:System.Data.DataSet> z dokumentu XML ADO.NET
 </DocumentElement>  
 ```  
   
- Proces wnioskowania spowoduje utworzenie tabeli o nazwie "Element1."  
+ Procesu wnioskowania tworzy tabelę o nazwie "Element1."  
   
- **Zestaw danych:** DocumentElement  
+ **Zestaw danych:** elementu DocumentElement  
   
  **Tabela:** Element1  
   
 |attr1|Element1_Text|  
 |-----------|--------------------|  
 |Wartość1||  
-|Wartość2|Tekst1|  
+|Wartość2|TEXT1|  
   
-## <a name="elements-with-child-elements"></a>Elementów z elementów podrzędnych  
- Elementów, które mają wynik elementów podrzędnych w wywnioskować tabel. Rozważmy na przykład następujący kod XML:  
+## <a name="elements-with-child-elements"></a>Elementy z elementami podrzędnymi  
+ Elementy, które mają wynik elementy podrzędne w wywnioskować tabel. Na przykład rozważmy następujący kod XML:  
   
 ```xml  
 <DocumentElement>  
@@ -50,17 +50,17 @@ Gdy wnioskowanie schematu dla <xref:System.Data.DataSet> z dokumentu XML ADO.NET
 </DocumentElement>  
 ```  
   
- Proces wnioskowania spowoduje utworzenie tabeli o nazwie "Element1."  
+ Procesu wnioskowania tworzy tabelę o nazwie "Element1."  
   
- **Zestaw danych:** DocumentElement  
+ **Zestaw danych:** elementu DocumentElement  
   
  **Tabela:** Element1  
   
 |ChildElement1|  
 |-------------------|  
-|Tekst1|  
+|TEXT1|  
   
- Dokument lub kluczu głównym elementu wynik tabeli wykrywany, jeśli ma ona atrybuty i elementy podrzędne, które są wywnioskować jako kolumny. Jeśli element dokumentu nie atrybutów i nie elementy podrzędne, które będzie można wywnioskować jako kolumny, element jest wywnioskowany jako **zestawu danych**. Rozważmy na przykład następujący kod XML:  
+ Dokumentu lub katalogu głównego, element wynik tabeli wykrywany, jeśli ma on atrybutów lub elementów podrzędnych, które są wnioskowane jako kolumny. Jeśli element dokumentu ma żadnych atrybutów i nie elementy podrzędne, które będzie można wywnioskować jako kolumny, element jest wnioskowany jako **zestawu danych**. Na przykład rozważmy następujący kod XML:  
   
 ```xml  
 <DocumentElement>  
@@ -69,17 +69,17 @@ Gdy wnioskowanie schematu dla <xref:System.Data.DataSet> z dokumentu XML ADO.NET
 </DocumentElement>  
 ```  
   
- Proces wnioskowania spowoduje utworzenie tabeli o nazwie "DocumentElement".  
+ Procesu wnioskowania tworzy tabelę o nazwie "elementu DocumentElement".  
   
  **Zestaw danych:** NewDataSet  
   
- **Tabela:** DocumentElement  
+ **Tabela:** elementu DocumentElement  
   
-|Element1|Element2|  
+|element1|element2|  
 |--------------|--------------|  
-|Tekst1|Tekst2|  
+|TEXT1|Tekst2|  
   
- Możesz też wziąć pod uwagę następujące XML:  
+ Można również rozważyć następujący kod XML:  
   
 ```xml  
 <DocumentElement>  
@@ -87,9 +87,9 @@ Gdy wnioskowanie schematu dla <xref:System.Data.DataSet> z dokumentu XML ADO.NET
 </DocumentElement>  
 ```  
   
- W procesie wnioskowania **DataSet** o nazwie "DocumentElement", który zawiera tabeli o nazwie "Element1."  
+ Tworzy procesu wnioskowania **DataSet** o nazwie elementu "DocumentElement", który zawiera tabelę o nazwie "Element1."  
   
- **Zestaw danych:** DocumentElement  
+ **Zestaw danych:** elementu DocumentElement  
   
  **Tabela:** Element1  
   
@@ -97,8 +97,8 @@ Gdy wnioskowanie schematu dla <xref:System.Data.DataSet> z dokumentu XML ADO.NET
 |-----------|-----------|  
 |Wartość1|Wartość2|  
   
-## <a name="repeating-elements"></a>Powtarzające się elementy  
- Elementy, które Powtórz wynik w jednej tabeli wywnioskowany. Rozważmy na przykład następujący kod XML:  
+## <a name="repeating-elements"></a>Powtarzalne elementy  
+ Elementy, które Powtórz wynik w jednej tabeli wykrywany. Na przykład rozważmy następujący kod XML:  
   
 ```xml  
 <DocumentElement>  
@@ -107,15 +107,15 @@ Gdy wnioskowanie schematu dla <xref:System.Data.DataSet> z dokumentu XML ADO.NET
 </DocumentElement>  
 ```  
   
- Proces wnioskowania spowoduje utworzenie tabeli o nazwie "Element1."  
+ Procesu wnioskowania tworzy tabelę o nazwie "Element1."  
   
- **Zestaw danych:** DocumentElement  
+ **Zestaw danych:** elementu DocumentElement  
   
  **Tabela:** Element1  
   
 |Element1_Text|  
 |--------------------|  
-|Tekst1|  
+|TEXT1|  
 |Tekst2|  
   
 ## <a name="see-also"></a>Zobacz też  
@@ -124,4 +124,4 @@ Gdy wnioskowanie schematu dla <xref:System.Data.DataSet> z dokumentu XML ADO.NET
  [Ładowanie informacji o schemacie elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
  [Używanie języka XML w elemencie DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

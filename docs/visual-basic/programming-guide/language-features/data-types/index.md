@@ -8,31 +8,31 @@ helpviewer_keywords:
 - Visual Basic code, data types
 - data types [Visual Basic], improving speed with
 ms.assetid: 5e1b9aaf-c7ca-4b29-9b22-0e82ed8e85e2
-ms.openlocfilehash: 855e32463284604fc27d4b73331ae48967dddefb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83c3d9976f61513165e917da73dd50e846db3e83
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650455"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43330948"
 ---
 # <a name="data-types-in-visual-basic"></a>Typy danych w Visual Basic
-*— Typ danych* elementu programowania odwołuje się do jakiego rodzaju dane można przechowywać i jak są przechowywane dane. Typy danych są stosowane do wszystkich wartości, które mogą być przechowywane w pamięci komputera lub udziału podczas obliczania wyrażenia. Każdej zmiennej, literał, stała, wyliczenie, właściwości, parametru procedury, argumentu procedury oraz procedury zwracanej wartości musi typu danych.  
+*— Typ danych* elementu programistycznego odwołuje się do jakiego rodzaju dane można przechowywać i jak są przechowywane dane. Typy danych są stosowane do wszystkich wartości, które mogą być przechowywane w pamięci komputera i uczestniczyć w wyniku obliczenia wyrażenia. Każdej zmiennej, literał, — stała, wyliczenia, właściwości, parametr procedury, argumentu procedury i procedury zwracana wartość ma typ danych.  
   
-## <a name="declared-data-types"></a>Zadeklarowany typy danych  
- Zdefiniuj elementu programistycznego z instrukcją deklaracji oraz określić jego typu danych z `As` klauzuli. W poniższej tabeli przedstawiono instrukcje używanego do zadeklarowania różnych elementów.  
+## <a name="declared-data-types"></a>Zadeklarowane typy danych  
+ Należy zdefiniować element programowania za pomocą instrukcji deklaracji i określić typ jej danych w taki sposób, przy użyciu `As` klauzuli. W poniższej tabeli przedstawiono instrukcje, których używasz do deklarowania różnych elementów.  
   
 |Element programowania|Deklaracja typu danych|  
 |-------------------------|---------------------------|  
 |Zmienna|W [Dim — instrukcja](../../../../visual-basic/language-reference/statements/dim-statement.md)<br /><br /> `Dim`   `amount As Double`<br /><br /> `Static`   `yourName As String`<br /><br /> `Public`   `billsPaid As Decimal = 0`|  
-|Literału|Znak literalny typu; zobacz "Literał znaków typu" w [znaki typu](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)<br /><br /> `Dim searchChar As Char = "."`  `C`|  
+|literał|Znak literalny typu; zobacz "Znaki literału typu" w [znaki typu](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)<br /><br /> `Dim searchChar As Char = "."`  `C`|  
 |Stała|W [Const — instrukcja](../../../../visual-basic/language-reference/statements/const-statement.md)<br /><br /> `Const`   `modulus As Single = 4.17825F`|  
 |Wyliczenie|W [Enum — instrukcja](../../../../visual-basic/language-reference/statements/enum-statement.md)<br /><br /> `Public`   `Enum`   `colors`|  
 |Właściwość|W [Property — instrukcja](../../../../visual-basic/language-reference/statements/property-statement.md)<br /><br /> `Property`   `region() As String`|  
-|Parametr procedury|W [Sub instrukcji](../../../../visual-basic/language-reference/statements/sub-statement.md), [funkcji instrukcji](../../../../visual-basic/language-reference/statements/function-statement.md), lub [operator — instrukcja](../../../../visual-basic/language-reference/statements/operator-statement.md)<br /><br /> `Sub addSale(ByVal`   `amount`   `As Double)`|  
-|Argumentu procedury|W wywoływanym kodzie; Każdy argument jest elementem programowania, który został już zadeklarowany lub wyrażenia zawierającego zadeklarowane elementy<br /><br /> `subString = Left(`  `inputString`  `,`   `5`  `)`|  
+|Parametr procedury|W [Sub — instrukcja](../../../../visual-basic/language-reference/statements/sub-statement.md), [funkcji instrukcji](../../../../visual-basic/language-reference/statements/function-statement.md), lub [operator — instrukcja](../../../../visual-basic/language-reference/statements/operator-statement.md)<br /><br /> `Sub addSale(ByVal`   `amount`   `As Double)`|  
+|Argumentu procedury|W wywoływanym kodzie; Każdy argument jest elementem programowania, który został już zadeklarowany lub wyrażeniu zawierającym zadeklarowane elementy<br /><br /> `subString = Left(`  `inputString`  `,`   `5`  `)`|  
 |Wartość zwracana procedury|W [funkcji instrukcji](../../../../visual-basic/language-reference/statements/function-statement.md) lub [operator — instrukcja](../../../../visual-basic/language-reference/statements/operator-statement.md)<br /><br /> `Function convert(ByVal b As Byte)`   `As String`|  
   
- Aby uzyskać listę typy danych Visual Basic, zobacz [typy danych](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
+ Aby uzyskać listę typów danych języka Visual Basic, zobacz [typy danych](../../../../visual-basic/language-reference/data-types/index.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Znaki typu](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
@@ -44,5 +44,5 @@ ms.locfileid: "33650455"
  [Struktury](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
  [Krotki](tuples.md)     
  [Rozwiązywanie problemów związanych z typami danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Typy danych](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Typy danych](../../../../visual-basic/language-reference/data-types/index.md)  
  [Skuteczne stosowanie typów danych](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

@@ -9,21 +9,21 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4034a23b076bc0f3041f09dc4756646a926d6915
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 208dc3048b52cc895a5142a7686829390d1d4503
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314688"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332523"
 ---
 # <a name="net-framework-tools"></a>Narzędzia programu .NET Framework
 Narzędzia programu .NET Framework ułatwiają tworzenie i wdrażanie aplikacji oraz składników współpracujących z programem .NET Framework oraz zarządzanie nimi.  
   
-Większość narzędzi programu .NET Framework, które są opisane w tej sekcji, jest automatycznie instalowana z programem Visual Studio. Aby pobrać program Visual Studio, odwiedź stronę [programu Visual Studio pobiera](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) strony.
+Większość narzędzi programu .NET Framework, które są opisane w tej sekcji, jest automatycznie instalowana z programem Visual Studio. Aby pobrać program Visual Studio, odwiedź stronę [pobieranie Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) strony.
   
  Można uruchomić wszystkie narzędzia z wiersza polecenia, z wyjątkiem Assembly Cache Viewer (Shfusion.dll). Należy przejść do Shfusion.dll z Eksploratora plików.  
   
- Najlepszym sposobem uruchamiania narzędzi wiersza polecenia jest używanie wiersza polecenia dla deweloperów w programie Visual Studio. Te funkcje umożliwiają łatwe uruchamianie narzędzi bez przechodzenia do folderu instalacji. Aby uzyskać więcej informacji, zobacz [wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Najlepszym sposobem uruchamiania narzędzi wiersza polecenia jest używanie wiersza polecenia dla deweloperów w programie Visual Studio. Te funkcje umożliwiają łatwe uruchamianie narzędzi bez przechodzenia do folderu instalacji. Aby uzyskać więcej informacji, zobacz [wiersz polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
 > [!NOTE]
 >  Niektóre narzędzia są właściwe dla komputerów 32- lub 64-bitowych. Należy pamiętać, aby uruchomić wersję narzędzia odpowiednią dla swojego komputera.  
@@ -36,7 +36,7 @@ Większość narzędzi programu .NET Framework, które są opisane w tej sekcji,
  Konwertuje definicje typów w bibliotece typów modelu COM dla formantu ActiveX do formantu Windows Forms.  
   
  [Caspol.exe (narzędzie zasad zabezpieczeń dostępu do kodu)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)  
- Umożliwia wyświetlanie i konfigurowanie zasad zabezpieczeń na poziomie zasad komputera, poziomie zasad użytkownika i poziomie zasad przedsiębiorstwa. W [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] i później, to narzędzie nie wpływa na zasady zabezpieczeń (CAS) kodu dostępu chyba że [ \<legacyCasPolicy > element](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) ma ustawioną wartość `true`. Aby uzyskać więcej informacji, zobacz [zmiany zabezpieczeń](../../../docs/framework/security/security-changes.md).  
+ Umożliwia wyświetlanie i konfigurowanie zasad zabezpieczeń na poziomie zasad komputera, poziomie zasad użytkownika i poziomie zasad przedsiębiorstwa. W [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] i nowszych to narzędzie nie ma wpływu na zasady zabezpieczenia dostępu kodu chyba że [ \<legacyCasPolicy > element](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) ustawiono `true`. Aby uzyskać więcej informacji, zobacz [zmiany zabezpieczeń](../../../docs/framework/security/security-changes.md).  
   
  [Cert2spc.exe (narzędzie testowe certyfikatów wydawców oprogramowania)](../../../docs/framework/tools/cert2spc-exe-software-publisher-certificate-test-tool.md)  
  Tworzy certyfikat wydawcy oprogramowania (SPC) na podstawie co najmniej jednego certyfikatu X.509. To narzędzie jest przeznaczone wyłącznie do celów testowych.  
@@ -45,7 +45,7 @@ Większość narzędzi programu .NET Framework, które są opisane w tej sekcji,
  Zarządza certyfikatami, listami zaufania certyfikatów (CTL) i listami odwołania certyfikatów (CRL).  
   
  [Clrver.exe (narzędzie wersji środowiska CLR)](../../../docs/framework/tools/clrver-exe-clr-version-tool.md)  
- Raporty wszystkich zainstalowanych wersji środowisko uruchomieniowe języka wspólnego (CLR) na komputerze.  
+ Raporty wszystkich zainstalowanych wersji środowiska uruchomieniowego języka wspólnego (CLR) na komputerze.  
   
  [CorFlags.exe (narzędzie konwersji CorFlags)](../../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md)  
  Pozwala skonfigurować sekcję CorFlags w nagłówku obrazu przenośnego pliku wykonywalnego (PE).  
@@ -63,7 +63,7 @@ Większość narzędzi programu .NET Framework, które są opisane w tej sekcji,
  Pobiera przenośny plik wykonywalny (PE), który zawiera kod języka pośredniego (IL) i tworzy z niego plik tekstowy, który może być użyty jako wejście do asemblera IL (Ilasm.exe).  
   
  [Installutil.exe (narzędzie instalatora)](../../../docs/framework/tools/installutil-exe-installer-tool.md)  
- Umożliwia instalowanie i odinstalowywanie zasobów serwera przez wykonywanie składników instalatora w określonym zestawie. (Współpracuje z klas w <xref:System.Configuration.Install> przestrzeni nazw.) Umożliwia instalowanie i odinstalowywanie zasobów serwera przez wykonywanie składników instalatora w określonym zestawie. (Współpracuje z klas w <xref:System.Configuration.Install> przestrzeni nazw.)  
+ Umożliwia instalowanie i odinstalowywanie zasobów serwera przez wykonywanie składników instalatora w określonym zestawie. (Działa z klasami w <xref:System.Configuration.Install> przestrzeni nazw.) Umożliwia instalowanie i odinstalowywanie zasobów serwera przez wykonywanie składników instalatora w określonym zestawie. (Działa z klasami w <xref:System.Configuration.Install> przestrzeni nazw.)  
   
  [Lc.exe (kompilator licencji)](../../../docs/framework/tools/lc-exe-license-compiler.md)  
  Czyta pliki tekstowe, które zawierają informacje o licencjonowaniu i tworzy plik .licenses, który może zostać osadzony jako zasób w pliku wykonywalnym środowiska uruchomieniowego języka wspólnego. Czyta pliki tekstowe, które zawierają informacje o licencjonowaniu i tworzy plik .licenses, który może zostać osadzony jako zasób w pliku wykonywalnym środowiska uruchomieniowego języka wspólnego.  
@@ -123,14 +123,14 @@ Większość narzędzi programu .NET Framework, które są opisane w tej sekcji,
  Konwertuje definicje typów znalezione w bibliotece typów modelu COM do równoważnych definicji w zestawie środowiska uruchomieniowego języka wspólnego.  
   
  [Winmdexp.exe (narzędzie eksportowania metadanych środowiska uruchomieniowego systemu Windows)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)  
- Eksportuje zestawu .NET Framework, która ma być kompilowana jako plik .winmdobj do składnika środowiska wykonawczego systemu Windows, która jest dostarczana jako plik winmd, który zawiera zarówno informacje metadanych i implementacji środowiska wykonawczego systemu Windows.  
+ Eksportuje zestaw .NET Framework, który jest kompilowany jako plik .winmdobj do składnika wykonawczego Windows, który jest spakowany jako plik .winmd, który zawiera zarówno Windows Runtime metadane i informacje o implementacji.  
   
  [Winres.exe (Edytor zasobów formularzy Windows Forms)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)  
  Pomaga lokalizować zasoby (pliki .resx lub .resources) interfejsu użytkownika (UI), które są używane przez Windows Forms. Można tłumaczyć ciągi, a następnie zmieniać rozmiar, przenosić i ukrywać kontrolki, aby pomieścić zlokalizowane ciągi.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Narzędzia](http://msdn.microsoft.com/library/f533241c-317c-445e-88ca-c80c8d078fca)  
- Obejmuje narzędzia, takie jak narzędzie zgodności isXPS (isXPS.exe) i narzędzia profilowania wydajności.  
+ [Narzędzia](https://msdn.microsoft.com/library/f533241c-317c-445e-88ca-c80c8d078fca)  
+ Zawiera narzędzia, takie jak narzędzie zgodności isXPS (isXPS.exe) i wydajności narzędzi profilowania.  
   
  [Narzędzia programu Windows Communication Foundation](../../../docs/framework/wcf/tools.md)  
  Zawiera narzędzia, które ułatwiają tworzenie, wdrażanie i zarządzanie aplikacjami Windows Communication Foundation (WCF).

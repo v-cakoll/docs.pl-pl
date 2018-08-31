@@ -9,11 +9,11 @@ helpviewer_keywords:
 - binary operator (|) [C#]
 ms.assetid: 82d6bb78-54c8-40bf-b679-531180ddaf70
 ms.openlocfilehash: d95fe29aa7ffab9938e8edc57999445268fe41a8
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43001233"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332000"
 ---
 # <a name="-operator-c-reference"></a>| — Operator (odwołanie w C#)
 Operatory binarne `|` są wstępnie zdefiniowane dla typów całkowitych i `bool`. W przypadku typów całkowitych `|` oblicza logiczną lub jego operandu. Dla `bool` operandów, `|` oblicza logiczne OR operandów; oznacza to wynik jest `false` tylko wtedy, gdy oba jego operandy są `false`.  

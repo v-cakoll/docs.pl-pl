@@ -1,18 +1,18 @@
 ---
-title: Mapowanie relacji określonych dla elementów zagnieżdżonych
+title: Mapowanie relacji określonych dla zagnieżdżonych elementów
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
-ms.openlocfilehash: e1fde0ef585621a6821838613a7e77dedf7042b1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0346ba04fd8af6b5abc81fe994dd40f9a6a37c1d
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756699"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332471"
 ---
-# <a name="map-relations-specified-for-nested-elements"></a>Mapowanie relacji określonych dla elementów zagnieżdżonych
-Schemat mogą obejmować **msdata:Relationship** adnotacji, aby jawnie określić mapowanie między wszelkie dwa elementy w schemacie. Dwa elementy określone **msdata:Relationship** mogą być zagnieżdżane w schemacie, ale nie trzeba być. Proces mapowania **msdata:Relationship** w schemacie wygenerować podstawowy klucz/relacji klucza obcego między dwiema kolumnami.  
+# <a name="map-relations-specified-for-nested-elements"></a>Mapowanie relacji określonych dla zagnieżdżonych elementów
+Schemat może zawierać **msdata:Relationship** adnotacji, aby jawnie określić mapowanie między dowolne dwa elementy w schemacie. Dwa elementy, które są określone w **msdata:Relationship** może być zagnieżdżona w schemacie, ale nie trzeba być. Proces mapowania używa **msdata:Relationship** w schemacie, aby wygenerować podstawowy klucz/relacji klucza obcego między dwiema kolumnami.  
   
- W poniższym przykładzie przedstawiono schematu XML, w którym **OrderDetail** element jest elementem podrzędnym **kolejności**. **Msdata:Relationship** identyfikuje tę relację nadrzędny podrzędny i określa, że **OrderNumber** kolumny powstałe w ten sposób **kolejności** tabela jest powiązana z **OrderNo** kolumny powstałe w ten sposób **OrderDetail** tabeli.  
+ Poniższy przykład przedstawia schematu XML, w którym **OrderDetail** element jest elementem podrzędnym **kolejności**. **Msdata:Relationship** identyfikuje tę relację nadrzędny podrzędny i określa, że **OrderNumber** kolumny wynikowe **kolejności** tabela jest powiązana z **OrderNo** kolumny wynikowe **OrderDetail** tabeli.  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -52,7 +52,7 @@ Schemat mogą obejmować **msdata:Relationship** adnotacji, aby jawnie określi�
 </xs:schema>  
 ```  
   
- Proces mapowania schematu XML tworzy następujące opcje w <xref:System.Data.DataSet>:  
+ Proces mapowania schematu XML tworzy następujące <xref:System.Data.DataSet>:  
   
 -   **Kolejności** i **OrderDetail** tabeli.  
   
@@ -61,7 +61,7 @@ Schemat mogą obejmować **msdata:Relationship** adnotacji, aby jawnie określi�
     OrderDetail(OrderNo, ItemNo)  
     ```  
   
--   Relacja między **kolejności** i **OrderDetail** tabel. **Zagnieżdżone** ma ustawioną wartość właściwości dla tej relacji **True** ponieważ **kolejności** i **OrderDetail** elementy są zagnieżdżone w schemacie .  
+-   Relacja między **kolejności** i **OrderDetail** tabel. **Zagnieżdżone** dla tej relacji jest właściwością **True** ponieważ **kolejności** i **OrderDetail** elementów jest zagnieżdżanych w schemacie .  
   
     ```  
     ParentTable: Order  
@@ -77,4 +77,4 @@ Schemat mogą obejmować **msdata:Relationship** adnotacji, aby jawnie określi�
 ## <a name="see-also"></a>Zobacz też  
  [Generowanie relacji elementu DataSet na podstawie schematu XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
  [Mapowanie ograniczeń schematu XML (XSD) na ograniczenia elementu DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

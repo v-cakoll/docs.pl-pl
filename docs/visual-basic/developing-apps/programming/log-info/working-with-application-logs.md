@@ -7,11 +7,11 @@ helpviewer_keywords:
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
 ms.openlocfilehash: c11e1f0c99b3189c7a353e6778c701667b0a1d12
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254549"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332536"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Praca z dziennikami aplikacji w Visual Basic
 `My.Applicaton.Log` i `My.Log` obiektów ułatwiają zapisu rejestrowania i śledzenia informacji w dziennikach.  

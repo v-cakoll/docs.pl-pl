@@ -14,19 +14,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0881b3903200c023cfa2fe32bf89f62234da29c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a02c26b72fc7039a5050ee369043f081c32cd7ec
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424030"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331390"
 ---
-# <a name="ilcodekind-enumeration"></a><span data-ttu-id="68895-102">Wyliczenie ILCodeKind</span><span class="sxs-lookup"><span data-stu-id="68895-102">ILCodeKind Enumeration</span></span>
-<span data-ttu-id="68895-103">[Obsługiwane w programie .NET Framework 4.5.2 i nowszych wersjach]</span><span class="sxs-lookup"><span data-stu-id="68895-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
+# <a name="ilcodekind-enumeration"></a><span data-ttu-id="e3fb3-102">Wyliczenie ILCodeKind</span><span class="sxs-lookup"><span data-stu-id="e3fb3-102">ILCodeKind Enumeration</span></span>
+<span data-ttu-id="e3fb3-103">[Obsługiwane w programie .NET Framework 4.5.2 i nowszych wersjach]</span><span class="sxs-lookup"><span data-stu-id="e3fb3-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
   
- <span data-ttu-id="68895-104">Zawiera wartości, które określają, czy debuger jest w stanie uzyskać dostęp do zmiennych lokalnych lub kodzie dodanym w ReJIT Instrumentacji profilera.</span><span class="sxs-lookup"><span data-stu-id="68895-104">Provides values that specify whether the debugger is able to access local variables or code added in profiler ReJIT instrumentation.</span></span>  
+ <span data-ttu-id="e3fb3-104">Zawiera wartości, które określają, czy debuger jest w stanie uzyskać dostęp do zmiennych lokalnych lub kodzie dodanym w profilerze ReJIT instrumentacji.</span><span class="sxs-lookup"><span data-stu-id="e3fb3-104">Provides values that specify whether the debugger is able to access local variables or code added in profiler ReJIT instrumentation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="68895-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="68895-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e3fb3-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="e3fb3-105">Syntax</span></span>  
   
 ```cpp
 typedef enum ILCodeKind {  
@@ -35,26 +35,26 @@ typedef enum ILCodeKind {
 } ILCodeKind;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="68895-106">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="68895-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="e3fb3-106">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="e3fb3-106">Members</span></span>  
   
-|<span data-ttu-id="68895-107">Nazwa elementu członkowskiego</span><span class="sxs-lookup"><span data-stu-id="68895-107">Member name</span></span>|<span data-ttu-id="68895-108">Opis</span><span class="sxs-lookup"><span data-stu-id="68895-108">Description</span></span>|  
+|<span data-ttu-id="e3fb3-107">Nazwa elementu członkowskiego</span><span class="sxs-lookup"><span data-stu-id="e3fb3-107">Member name</span></span>|<span data-ttu-id="e3fb3-108">Opis</span><span class="sxs-lookup"><span data-stu-id="e3fb3-108">Description</span></span>|  
 |-----------------|-----------------|  
-|`ILCODE_ORIGINAL_IL`|<span data-ttu-id="68895-109">Debuger nie ma dostępu do informacji z ReJIT instrumentacji.</span><span class="sxs-lookup"><span data-stu-id="68895-109">The debugger does not have access to information from ReJIT instrumentation.</span></span>|  
-|`ILCODE_REJIT_IL`|<span data-ttu-id="68895-110">Debuger ma dostęp do informacji z ReJIT instrumentacji.</span><span class="sxs-lookup"><span data-stu-id="68895-110">The debugger has access to information from ReJIT instrumentation.</span></span>|  
+|`ILCODE_ORIGINAL_IL`|<span data-ttu-id="e3fb3-109">Debuger nie ma dostępu do informacji z ReJIT instrumentacji.</span><span class="sxs-lookup"><span data-stu-id="e3fb3-109">The debugger does not have access to information from ReJIT instrumentation.</span></span>|  
+|`ILCODE_REJIT_IL`|<span data-ttu-id="e3fb3-110">Debuger ma dostęp do informacji z ReJIT instrumentacji.</span><span class="sxs-lookup"><span data-stu-id="e3fb3-110">The debugger has access to information from ReJIT instrumentation.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="68895-111">Uwagi</span><span class="sxs-lookup"><span data-stu-id="68895-111">Remarks</span></span>  
- <span data-ttu-id="68895-112">Członek `ILCodeKind` wyliczenia mogą zostać przekazane do [EnumerateLocalVariablesEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md) i [GetLocalVariableEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md) metod umożliwiających ustalenie, czy debuger może uzyskiwać dostęp do zmiennych dodany do programu profiler Instrumentacja ReJIT i [GetCodeEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md) metodę, aby określić, czy debuger może uzyskiwać dostęp do Instrumentacji IL.</span><span class="sxs-lookup"><span data-stu-id="68895-112">A member of the `ILCodeKind` enumeration can be passed to the [EnumerateLocalVariablesEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md) and [GetLocalVariableEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md) methods to determine whether the debugger can access variables added in profiler ReJIT instrumentation, and to the [GetCodeEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md) method to determine whether the debugger can access instrumented IL.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e3fb3-111">Uwagi</span><span class="sxs-lookup"><span data-stu-id="e3fb3-111">Remarks</span></span>  
+ <span data-ttu-id="e3fb3-112">Członek `ILCodeKind` wyliczenia mogą być przekazywane do [EnumerateLocalVariablesEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md) i [GetLocalVariableEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md) metod umożliwiających ustalenie, czy debuger może uzyskać dostęp do zmiennych dodane w programie profiler Instrumentacja ReJIT i [GetCodeEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md) metodę pozwala ustalić, czy debuger może uzyskiwać dostęp do Instrumentacji IL.</span><span class="sxs-lookup"><span data-stu-id="e3fb3-112">A member of the `ILCodeKind` enumeration can be passed to the [EnumerateLocalVariablesEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md) and [GetLocalVariableEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md) methods to determine whether the debugger can access variables added in profiler ReJIT instrumentation, and to the [GetCodeEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md) method to determine whether the debugger can access instrumented IL.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="68895-113">Wymagania</span><span class="sxs-lookup"><span data-stu-id="68895-113">Requirements</span></span>  
- <span data-ttu-id="68895-114">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="68895-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e3fb3-113">Wymagania</span><span class="sxs-lookup"><span data-stu-id="e3fb3-113">Requirements</span></span>  
+ <span data-ttu-id="e3fb3-114">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e3fb3-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="68895-115">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="68895-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e3fb3-115">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e3fb3-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="68895-116">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="68895-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e3fb3-116">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e3fb3-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="68895-117">**Wersje programu .NET framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="68895-117">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
+ <span data-ttu-id="e3fb3-117">**Wersje programu .NET framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e3fb3-117">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="68895-118">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="68895-118">See Also</span></span>  
- [<span data-ttu-id="68895-119">Debugowanie, wyliczenia</span><span class="sxs-lookup"><span data-stu-id="68895-119">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
- [<span data-ttu-id="68895-120">ICorDebugILFrame4, interfejs</span><span class="sxs-lookup"><span data-stu-id="68895-120">ICorDebugILFrame4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-interface.md)  
- [<span data-ttu-id="68895-121">ReJIT: Przewodnik</span><span class="sxs-lookup"><span data-stu-id="68895-121">ReJIT: A How-To Guide</span></span>](http://blogs.msdn.com/b/davbr/archive/2011/10/12/rejit-a-how-to-guide.aspx)
+## <a name="see-also"></a><span data-ttu-id="e3fb3-118">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="e3fb3-118">See Also</span></span>  
+ [<span data-ttu-id="e3fb3-119">Debugowanie, wyliczenia</span><span class="sxs-lookup"><span data-stu-id="e3fb3-119">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
+ [<span data-ttu-id="e3fb3-120">ICorDebugILFrame4, interfejs</span><span class="sxs-lookup"><span data-stu-id="e3fb3-120">ICorDebugILFrame4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-interface.md)  
+ [<span data-ttu-id="e3fb3-121">ReJIT: Przewodnik</span><span class="sxs-lookup"><span data-stu-id="e3fb3-121">ReJIT: A How-To Guide</span></span>](https://blogs.msdn.com/b/davbr/archive/2011/10/12/rejit-a-how-to-guide.aspx)

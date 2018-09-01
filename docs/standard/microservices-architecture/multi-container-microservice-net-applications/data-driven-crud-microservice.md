@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Tw
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 18ffbf56cf9d324e86fc288a2ba4a387831af925
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 28955b2309b3efb321e40e19db821052b8ce42ab
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935396"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396119"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Tworzenie prostego mikrousługi CRUD na podstawie danych
 
@@ -326,7 +326,7 @@ Metadane programu swagger w to, co Microsoft Flow, PowerApps i Azure Logic Apps 
 
 ### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>Jak zautomatyzować struktury Swagger interfejsu API generowania metadanych przy użyciu pakietu Swashbuckle NuGet
 
-Generowanie metadanych struktury Swagger ręcznie (w pliku JSON lub YAML) może być uciążliwe pracy. Jednak można zautomatyzować odnajdywania interfejsu API usług interfejsu API sieci Web platformy ASP.NET przy użyciu [pakietu Swashbuckle NuGet](http://aka.ms/swashbuckledotnetcore) do dynamicznego generowania metadanych interfejsu API struktury Swagger.
+Generowanie metadanych struktury Swagger ręcznie (w pliku JSON lub YAML) może być uciążliwe pracy. Jednak można zautomatyzować odnajdywania interfejsu API usług interfejsu API sieci Web platformy ASP.NET przy użyciu [pakietu Swashbuckle NuGet](https://aka.ms/swashbuckledotnetcore) do dynamicznego generowania metadanych interfejsu API struktury Swagger.
 
 Pakiet Swashbuckle generuje automatycznie metadanych struktury Swagger dla projektów ASP.NET Web API. Obsługuje projekty ASP.NET Core Web API i tradycyjne ASP.NET Web API i innych wersji, takich jak aplikacji interfejsu API platformy Azure, aplikacji mobilnej platformy Azure, Azure Service Fabric mikrousług oparte na programie ASP.NET. Obsługuje ona również zwykły wdrożonych kontenerów, podobnie jak w aplikacji odwołanie do interfejsu API sieci Web.
 

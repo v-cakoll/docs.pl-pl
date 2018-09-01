@@ -7,82 +7,84 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: 78212365c4183d31bcd5f1b1628c3443d48909a8
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: d0a51afe61e75b750ed8bf336ca4636cb58dfbba
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396902"
 ---
 # <a name="abstract-c-reference"></a>abstract (odwołanie w C#)
-`abstract` Modyfikator oznacza, że element jest modyfikowany ma implementacji brakujące lub niekompletne. Modyfikator abstract można używać z klas, metod, właściwości, indeksatorów i zdarzeń. Użyj `abstract` modyfikatora w deklaracji klasy, aby wskazać, że klasa jest przeznaczona tylko jako klasę podstawową innych klas. Elementy członkowskie oznaczony jako abstrakcyjny lub częścią klasa abstrakcyjna, musi być implementowana przez klasy, które pochodzi z klasy abstrakcyjnej.  
+`abstract` Modyfikator oznacza, że rzecz modyfikowanego ma implementacji brakujące lub niekompletne. Abstrakcyjna modyfikatora można używać z klas, metod, właściwości, indeksatorów i zdarzeń. Użyj `abstract` modyfikatora w deklaracji klasy, aby wskazać, że klasa jest przeznaczona do użycia wyłącznie jako klasa bazowa innych klas. Elementy członkowskie oznaczony jako abstrakcyjny lub zawarte w klasie abstrakcyjnej, muszą być zaimplementowane przez klasy, które pochodzą z klasy abstrakcyjnej.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie klasa `Square` musi zapewniać implementację elementu `Area` ponieważ dziedziczy `ShapesClass`:  
+ W tym przykładzie klasa `Square` musi dostarczać implementację `Area` ponieważ dziedziczy `ShapesClass`:  
   
- [!code-csharp[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_1.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#1)]
   
- Klasy abstrakcyjne są następujące funkcje:  
+ Klasy abstrakcyjne oferują następujące funkcje:  
   
 -   Nie można utworzyć wystąpienia klasy abstrakcyjnej.  
   
--   Abstrakcyjna klasa może zawierać metody abstrakcyjne i metody dostępu.  
+-   Klasa abstrakcyjna może zawierać metody abstrakcyjne i metod dostępu.  
   
--   Nie można modyfikować klasy abstrakcyjnej jest [zapieczętowanego](../../../csharp/language-reference/keywords/sealed.md) modyfikator ponieważ przeciwną znaczenie ma dwa modyfikatorów. `sealed` Modyfikator uniemożliwia dziedziczone przez klasy i `abstract` modyfikator wymaga klasy być dziedziczone.  
+-   Nie można modyfikować klasy abstrakcyjnej jest [zapieczętowanego](../../../csharp/language-reference/keywords/sealed.md) modyfikator ponieważ dwie modyfikatorów mają znaczenie odwrotną. `sealed` Modyfikator zapobiega są dziedziczone przez klasy i `abstract` modyfikator wymaga klasy dziedziczone.  
   
--   Nieabstrakcyjnej klasy pochodnej z klasy abstrakcyjnej muszą zawierać rzeczywiste implementacje wszystkich dziedziczonej metody abstrakcyjne i metody dostępu.  
+-   Nieabstrakcyjnej klasy pochodnej z klasy abstrakcyjnej muszą zawierać rzeczywistej implementacji wszystkie odziedziczone metody abstrakcyjne i metod dostępu.  
   
- Użyj `abstract` modyfikatora w deklaracji metody lub właściwości, aby wskazać, że ta metoda lub właściwość nie zawiera implementacji.  
+ Użyj `abstract` modyfikatora w deklaracji metody lub właściwości w celu wskazania, że metoda lub właściwość nie zawiera implementacji.  
   
- Metody abstrakcyjne są następujące funkcje:  
+ Metody abstrakcyjne oferują następujące funkcje:  
   
--   Metoda abstrakcyjna niejawnie jest metoda wirtualna.  
+-   Metoda abstrakcyjna jest niejawnie metodę wirtualną.  
   
--   Deklaracje metody abstrakcyjnej są dozwolone tylko w klasie abstrakcyjnej.  
+-   Deklaracje metody abstrakcyjne są dozwolone tylko w klas abstrakcyjnych.  
   
--   Deklaracja metody abstrakcyjnej udostępnia nie rzeczywistego wykonania, więc nie istnieje żadne treści metody; Deklaracja metody kończy się po prostu średnikiem i nie ma żadnych nawiasy klamrowe ({}) po podpisu. Na przykład:  
+-   Ponieważ deklaracja metody abstrakcyjnej zapewnia nie rzeczywiste wdrożenie, jest nie treści metody; Deklaracja metody po prostu kończy się średnikiem wiąże się nie nawiasów klamrowych ({}) po podpis. Na przykład:  
   
     ```csharp  
     public abstract void MyMethod();  
     ```  
   
-     Implementacja jest zapewniana przez metodę [zastąpienia](../../../csharp/language-reference/keywords/override.md), który jest elementem członkowskim klasy nieabstrakcyjnej.  
+     Implementacja znajduje się za pomocą metody [zastąpienia](../../../csharp/language-reference/keywords/override.md), który jest członkiem klasy nieabstrakcyjnej.  
   
--   Jest błędem [statycznych](../../../csharp/language-reference/keywords/static.md) lub [wirtualnego](../../../csharp/language-reference/keywords/virtual.md) Modyfikatory w deklaracji metody abstrakcyjnej.  
+-   Jest to błąd, aby użyć [statyczne](../../../csharp/language-reference/keywords/static.md) lub [wirtualnego](../../../csharp/language-reference/keywords/virtual.md) Modyfikatory w deklaracji metody abstrakcyjnej.  
   
- Właściwości abstrakcyjne przypominają metody abstrakcyjne, z wyjątkiem różnice w deklaracji i wywołanie składni.  
+ Właściwości abstrakcyjne zachowują się jak metody abstrakcyjne, z wyjątkiem różnic w składni deklaracji i wywoływania.  
   
--   Jest błędem `abstract` modyfikator na właściwość statyczna.  
+-   Jest to błąd, aby użyć `abstract` modyfikator na właściwość statyczna.  
   
--   Właściwość abstrakcyjną dziedziczone może zostać przesłonięta w klasie pochodnej przez tym deklaracji właściwości, która używa [zastąpienia](../../../csharp/language-reference/keywords/override.md) modyfikator.  
+-   To właściwość dziedziczona abstrakcyjna może zostać przesłonięta w klasie pochodnej przez tym deklaracja właściwości, która używa [zastąpienia](../../../csharp/language-reference/keywords/override.md) modyfikator.  
   
- Aby uzyskać więcej informacji na temat klas abstrakcyjnych, zobacz [abstrakcyjne i zapieczętowane klasy oraz członkowie klas](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
+ Aby uzyskać więcej informacji na temat klasy abstrakcyjne, zobacz [abstrakcyjnych i zapieczętowanych klas i składowych klasy](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
- Klasa abstrakcyjna musi zapewniać implementację dla wszystkich członków interfejsu.  
+ Klasa abstrakcyjna należy podać implementacja dla wszystkich członków interfejsu.  
   
- Klasa abstrakcyjna, która implementuje interfejs mogą być mapowane na metody abstrakcyjne metod interfejsu. Na przykład:  
+ Klasa abstrakcyjna, która implementuje interfejs może mapować metod interfejsu do metody abstrakcyjne. Na przykład:  
   
- [!code-csharp[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_2.cs)]  
+[!code-csharp[csrefKeywordsModifiers#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#2)]
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie klasa `DerivedClass` pochodzi z klasy abstrakcyjnej `BaseClass`. Abstrakcyjna klasa zawiera metody abstrakcyjnej `AbstractMethod`, a dwie właściwości abstrakcyjnych, `X` i `Y`.  
+ W tym przykładzie klasa `DerivedClass` pochodzi z klasy abstrakcyjnej `BaseClass`. Abstrakcyjna klasa zawiera metody abstrakcyjnej, `AbstractMethod`, a dwie właściwości abstrakcyjnych, `X` i `Y`.  
   
- [!code-csharp[csrefKeywordsModifiers#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_3.cs)]  
+[!code-csharp[csrefKeywordsModifiers#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#3)]
   
- W poprzednim przykładzie, jeśli podjęto próbę utworzenia wystąpienia klasy abstrakcyjnej przy użyciu instrukcji w następujący sposób:  
+ W poprzednim przykładzie, jeśli użytkownik podejmie próbę utworzenia wystąpienia klasy abstrakcyjnej, przy użyciu instrukcji w następujący sposób:  
   
 ```csharp
 BaseClass bc = new BaseClass();   // Error  
 ```  
   
-wystąpi błąd informujący o tym, że kompilator nie można utworzyć wystąpienia klasy abstrakcyjnej "Baseclass —".  
+Otrzymasz błąd informujący o tym, że kompilator nie można utworzyć wystąpienia klasy abstrakcyjnej "BaseClass".  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Modyfikatory](../../../csharp/language-reference/keywords/modifiers.md)  
- [virtual](../../../csharp/language-reference/keywords/virtual.md)  
- [override](../../../csharp/language-reference/keywords/override.md)  
- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)
+
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Modyfikatory](../../../csharp/language-reference/keywords/modifiers.md)  
+- [virtual](../../../csharp/language-reference/keywords/virtual.md)  
+- [override](../../../csharp/language-reference/keywords/override.md)  
+- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)

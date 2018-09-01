@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f20db5cfb13f788ae0f8670f0d1c3b221db3e43b
-ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
+ms.openlocfilehash: 7f304adb567e3568fb4624b3c5e9ec4585009a05
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2018
-ms.locfileid: "42752166"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403192"
 ---
 # <a name="standard-numeric-format-strings"></a>Standardowe ciągi formatujące liczby
 
@@ -33,8 +33,10 @@ Ciągi standardowych formatów liczb służą do formatowania popularnych typów
   
 -   `xx` jest opcjonalną liczbą całkowitą o nazwie *Specyfikator dokładności*. Specyfikator dokładności ma zakres od 0 do 99 i wpływa na liczbę cyfr w wyniku. Należy pamiętać, że Specyfikator dokładności określa liczbę cyfr w ciągu reprezentującym liczbę. Nie zaokrągla samej liczby. Aby wykonać operację zaokrąglenia, użyj <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType>, lub <xref:System.Math.Round%2A?displayProperty=nameWithType> metody.  
   
-     Gdy *Specyfikator dokładności* kontroluje liczbę cyfr ułamkowych w ciągu wynikowym, ciągi wynikowe odzwierciedlają liczby są zaokrąglane dalej od zera (oznacza to, za pomocą <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).  
-  
+    Gdy *Specyfikator dokładności* formantów liczba cyfr dziesiętnych w ciągu wynikowym, ciąg wynikowy odzwierciedla liczbę, która jest zaokrąglana do stałego wyniku najbardziej zbliżona nieskończenie dokładny wynik. Jeśli istnieją dwa jednakowo blisko stałego wyniki:
+    - **W programie .NET Framework i .NET Core do platformy .NET Core 2.0**, środowisko uruchomieniowe wybiera wynik z większą najmniej znaczącą cyfrę (czyli używania <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).
+    - **W programie .NET Core 2.1 lub nowszym**, środowisko uruchomieniowe wybiera wynik z nawet najmniej znaczące cyfry (czyli używania <xref:System.MidpointRounding.ToEven?displayProperty=nameWithType>). 
+
     > [!NOTE]
     >  Specyfikator dokładności określa liczbę cyfr w ciągu wynikowym. Aby uzupełnić ciąg wynikowy, za pomocą spacji wiodących albo końcowych, użycia [formatowania złożonego](../../../docs/standard/base-types/composite-formatting.md) funkcji oraz definiowania *składnik wyrównania* w elemencie formatu.  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6c86870bf0089c25d402cf8f28a513e953ef28f
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 628c571ce645710482a29c813adb4fe1a59fd349
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933706"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400185"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Tworzenie aplikacji dla wielu platform przy użyciu przenośnej biblioteki klas
 Typ projektu przenośnej biblioteki klas .NET Framework w programie Visual Studio pomaga w tworzeniu aplikacji dla wielu platform i bibliotek dla platform firmy Microsoft, szybkie i łatwe.  
@@ -25,7 +25,7 @@ Typ projektu przenośnej biblioteki klas .NET Framework w programie Visual Studi
   
  Nawet po Utwórz projekt biblioteki klas przenośnych w programie Visual Studio i zacznij programować go, możesz zmienić platformy docelowe. Program Visual Studio będzie kompilować biblioteki za pomocą nowych zestawów, który pomaga zidentyfikować zmiany, które należy wprowadzić w kodzie.  
   
- W tym artykule omówiono tworzenie aplikacji w programie Visual Studio, ale firma Microsoft udostępnia również Portable Class Library zestawy odwołań, które służą do tworzenia aplikacji i bibliotek z innych narzędzi, takich jak Xamarin. Te aplikacje i biblioteki można użyć w dowolnej runtime oparte na programie .NET Framework na platformach firmy Microsoft. Aby uzyskać więcej informacji na temat zestawów odwołań, zobacz wpis na blogu [przenośnych klasy biblioteki (PCL) teraz dostępne na wszystkich platformach](http://blogs.msdn.com/b/dotnet/archive/2013/10/14/portable-class-library-pcl-now-available-on-all-platforms.aspx). Aby pobrać zestawy, zobacz [zestawy odwołań biblioteki przenośnej platformy .NET firmy Microsoft](http://www.microsoft.com/download/details.aspx?id=40727) w programie Microsoft Download Center. Aby uzyskać więcej informacji na temat używania zestawów za pomocą platformy Xamarin, zobacz wpis na blogu [PCL i bibliotek programu .NET NuGet teraz włączone dla programu Xamarin](http://blogs.msdn.com/b/dotnet/archive/2013/11/13/pcl-and-net-nuget-libraries-are-now-enabled-for-xamarin.aspx).  
+ W tym artykule omówiono tworzenie aplikacji w programie Visual Studio, ale firma Microsoft udostępnia również Portable Class Library zestawy odwołań, które służą do tworzenia aplikacji i bibliotek z innych narzędzi, takich jak Xamarin. Te aplikacje i biblioteki można użyć w dowolnej runtime oparte na programie .NET Framework na platformach firmy Microsoft. Aby uzyskać więcej informacji na temat zestawów odwołań, zobacz wpis na blogu [przenośnych klasy biblioteki (PCL) teraz dostępne na wszystkich platformach](https://blogs.msdn.com/b/dotnet/archive/2013/10/14/portable-class-library-pcl-now-available-on-all-platforms.aspx). Aby pobrać zestawy, zobacz [zestawy odwołań biblioteki przenośnej platformy .NET firmy Microsoft](https://www.microsoft.com/download/details.aspx?id=40727) w programie Microsoft Download Center. Aby uzyskać więcej informacji na temat używania zestawów za pomocą platformy Xamarin, zobacz wpis na blogu [PCL i bibliotek programu .NET NuGet teraz włączone dla programu Xamarin](https://blogs.msdn.com/b/dotnet/archive/2013/11/13/pcl-and-net-nuget-libraries-are-now-enabled-for-xamarin.aspx).  
   
  Visual Studio zawiera szablony ułatwiające opracowywanie z zastosowaniem biblioteki klas przenośnych. W zależności od tego, która wersja programu Visual Studio jest używany dostępne szablony i menu mogą się różnić od tych opisanych w tym artykule.  
   
@@ -110,7 +110,7 @@ Przenośne biblioteki klas strony właściwości dla programu Visual Studio 2013
   
  Jeśli zmienisz docelowe, interfejsów API, które są dostępne i umożliwiają tworzenie projektu zmieni się na dopasować wybór. Visual Studio zgłasza błędy i ostrzeżenia, które może wyniknąć z elementów docelowych, zmiana.  
   
- Jeśli chcesz przeprowadzić ocenę przenośność zestawy przed wprowadzić zmiany w programie Visual Studio, można użyć [narzędzia .NET Portability Analyzer](http://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b).  
+ Jeśli chcesz przeprowadzić ocenę przenośność zestawy przed wprowadzić zmiany w programie Visual Studio, można użyć [narzędzia .NET Portability Analyzer](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b).  
   
  Opcje menu różnią się w zależności od wersji programu Visual Studio jest używany.  
   
@@ -224,6 +224,6 @@ Przykład — informacje o wersji
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z biblioteki klas przenośnych z modelem MVVM](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)  
  [Zasoby aplikacji dla bibliotek przeznaczonych do wielu platform](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)  
- [Narzędzia .NET portability Analyzer](http://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)  
+ [Narzędzia .NET portability Analyzer](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)  
  [Obsługa programu .NET Framework dla aplikacji ze Sklepu Windows i środowiska wykonawczego systemu Windows](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
  [Wdrażanie](../../../docs/framework/deployment/net-framework-applications.md)

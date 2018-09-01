@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09cd345daffa2418b33f032e8bab47c81e2a8526
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 5a4645efc9276429cbdb0812f1ca501c89ea5dbb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33397289"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393770"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Przegląd środowiska uruchomieniowego języka dynamicznego
 *Środowisko uruchomieniowe języka dynamicznego* (DLR) jest środowisko uruchomieniowe, który dodaje zestaw usług dla języków dynamicznych do środowisko uruchomieniowe języka wspólnego (CLR). DLR sprawia, że łatwiej tworzyć języki dynamiczne, do uruchamiania na .NET Framework i dodawania funkcji dynamicznego do języków statycznie wpisane.  
@@ -52,7 +52,7 @@ ms.locfileid: "33397289"
   
 -   IronPython. Dostępne jako oprogramowanie open source z [GitHub](https://github.com/IronLanguages/ironpython2) witryny sieci Web.  
   
--   IronRuby. Dostępne jako oprogramowanie open source z [RubyForge](http://go.microsoft.com/fwlink/?LinkId=141044) witryny sieci Web.  
+-   IronRuby. Dostępne jako oprogramowanie open source z [RubyForge](https://go.microsoft.com/fwlink/?LinkId=141044) witryny sieci Web.  
   
 ## <a name="primary-dlr-advantages"></a>Podstawowe zalety DLR  
  DLR zapewnia następujące korzyści.  
@@ -80,7 +80,7 @@ Architektura DLR
   
  DLR dodaje zestaw usług do środowiska CLR dla lepiej obsługuje języki dynamiczne. Te usługi są następujące:  
   
--   Drzewa wyrażeń. DLR używa drzew wyrażeń, który reprezentuje semantykę języka. W tym celu DLR ma rozszerzone drzew wyrażeń LINQ do uwzględnienia przepływ sterowania, przypisywania i inne węzły modelowanie języka. Aby uzyskać więcej informacji, zobacz [drzew wyrażeń](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b).  
+-   Drzewa wyrażeń. DLR używa drzew wyrażeń, który reprezentuje semantykę języka. W tym celu DLR ma rozszerzone drzew wyrażeń LINQ do uwzględnienia przepływ sterowania, przypisywania i inne węzły modelowanie języka. Aby uzyskać więcej informacji, zobacz [drzew wyrażeń](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b).  
   
 -   Wywołaj buforowanie lokacji. A *witryny wywołania dynamicznego* to miejsce w kodzie, gdzie można wykonać operacji, takiej jak `a + b` lub `a.b()` obiektów dynamicznych. DLR buforuje charakterystyki `a` i `b` (zazwyczaj typy tych obiektów) i informacje na temat operacji. Jeśli taka operacja została wykonana wcześniej, DLR pobiera wszystkie niezbędne informacje z pamięci podręcznej na potrzeby szybkiego wysyłania.  
   
@@ -95,5 +95,5 @@ Architektura DLR
  <xref:System.Dynamic.ExpandoObject>  
  <xref:System.Dynamic.DynamicObject>  
  [Środowisko uruchomieniowe języka wspólnego](../../../docs/standard/clr.md)  
- [Drzewa wyrażeń](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)  
+ [Drzewa wyrażeń](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)  
  [Wskazówki: Tworzenie obiektów dynamicznych i posługiwanie](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

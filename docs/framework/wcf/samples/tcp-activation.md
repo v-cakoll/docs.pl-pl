@@ -2,31 +2,31 @@
 title: Aktywacja TCP
 ms.date: 03/30/2017
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-ms.openlocfilehash: 9f08864c1d5139160ac25e0733ddcfc1c8557ad9
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: c10cc1edfb06d55fc8a59a32bf905c95b20a19dc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807413"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396106"
 ---
-# <a name="tcp-activation"></a><span data-ttu-id="4c05b-102">Aktywacja TCP</span><span class="sxs-lookup"><span data-stu-id="4c05b-102">TCP Activation</span></span>
-<span data-ttu-id="4c05b-103">W przykładzie pokazano obsługującego usługę korzystającą z usługi aktywacji procesów systemu Windows (WAS) można aktywować usługi, która komunikuje się za pomocą protokołu net.tcp.</span><span class="sxs-lookup"><span data-stu-id="4c05b-103">This sample demonstrates hosting a service that uses Windows Process Activation Services (WAS) to activate a service that communicates over the net.tcp protocol.</span></span> <span data-ttu-id="4c05b-104">Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="4c05b-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span>  
+# <a name="tcp-activation"></a><span data-ttu-id="f0384-102">Aktywacja TCP</span><span class="sxs-lookup"><span data-stu-id="f0384-102">TCP Activation</span></span>
+<span data-ttu-id="f0384-103">Niniejszy przykład pokazuje usługi, który używa usługi aktywacji procesów Windows (WAS), aby aktywować usługę, która komunikuje się za pośrednictwem protokołu net.tcp hosta.</span><span class="sxs-lookup"><span data-stu-id="f0384-103">This sample demonstrates hosting a service that uses Windows Process Activation Services (WAS) to activate a service that communicates over the net.tcp protocol.</span></span> <span data-ttu-id="f0384-104">Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="f0384-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="4c05b-105">Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.</span><span class="sxs-lookup"><span data-stu-id="4c05b-105">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="f0384-105">Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.</span><span class="sxs-lookup"><span data-stu-id="f0384-105">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="4c05b-106">Próbki mogą być zainstalowane na tym komputerze.</span><span class="sxs-lookup"><span data-stu-id="4c05b-106">The samples may already be installed on your computer.</span></span> <span data-ttu-id="4c05b-107">Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).</span><span class="sxs-lookup"><span data-stu-id="4c05b-107">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="f0384-106">Przykłady może już być zainstalowany na tym komputerze.</span><span class="sxs-lookup"><span data-stu-id="f0384-106">The samples may already be installed on your computer.</span></span> <span data-ttu-id="f0384-107">Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).</span><span class="sxs-lookup"><span data-stu-id="f0384-107">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="4c05b-108">Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek.</span><span class="sxs-lookup"><span data-stu-id="4c05b-108">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="4c05b-109">W tym przykładzie znajduje się w następującym katalogu.</span><span class="sxs-lookup"><span data-stu-id="4c05b-109">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="f0384-108">Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów.</span><span class="sxs-lookup"><span data-stu-id="f0384-108">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="f0384-109">W tym przykładzie znajduje się w następującym katalogu.</span><span class="sxs-lookup"><span data-stu-id="f0384-109">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\TCPActivation`  
   
- <span data-ttu-id="4c05b-110">Próbki składa się z konsoli programu klienckiego (.exe) i usługi biblioteki (.dll), hostowana w procesie roboczym aktywowany przez usługę WAS.</span><span class="sxs-lookup"><span data-stu-id="4c05b-110">The sample consists of a client console program (.exe) and a service library (.dll) hosted in a worker process activated by WAS.</span></span> <span data-ttu-id="4c05b-111">Aktywność klienta jest widoczna w oknie konsoli.</span><span class="sxs-lookup"><span data-stu-id="4c05b-111">Client activity is visible in the console window.</span></span>  
+ <span data-ttu-id="f0384-110">Przykład składa się z konsoli program kliencki (.exe) i usługi biblioteki (.dll), hostowana w procesie roboczym aktywowany przez WAS.</span><span class="sxs-lookup"><span data-stu-id="f0384-110">The sample consists of a client console program (.exe) and a service library (.dll) hosted in a worker process activated by WAS.</span></span> <span data-ttu-id="f0384-111">Aktywność klienta jest widoczna w oknie konsoli.</span><span class="sxs-lookup"><span data-stu-id="f0384-111">Client activity is visible in the console window.</span></span>  
   
- <span data-ttu-id="4c05b-112">Usługa implementuje kontrakt definiuje wzorzec komunikacji żądanie odpowiedź.</span><span class="sxs-lookup"><span data-stu-id="4c05b-112">The service implements a contract that defines a request-reply communication pattern.</span></span> <span data-ttu-id="4c05b-113">Kontrakt jest definiowana za pomocą `ICalculator` interfejsu, który udostępnia operacji matematycznych (Dodawanie, odjąć mnożenia i dzielenia), jak pokazano w poniższym kodzie próbki:</span><span class="sxs-lookup"><span data-stu-id="4c05b-113">The contract is defined by the `ICalculator` interface, which exposes math operations (Add, Subtract, Multiply, and Divide), as shown in the following sample code:</span></span>  
+ <span data-ttu-id="f0384-112">Usługa implementuje kontraktu, który definiuje wzorzec komunikacji "żądanie-odpowiedź".</span><span class="sxs-lookup"><span data-stu-id="f0384-112">The service implements a contract that defines a request-reply communication pattern.</span></span> <span data-ttu-id="f0384-113">Kontrakt jest definiowany przez `ICalculator` interfejs, który udostępnia operacje matematyczne (dodawania, odejmowania, mnożenia i dzielenia,) jak pokazano w poniższym przykładowym kodzie:</span><span class="sxs-lookup"><span data-stu-id="f0384-113">The contract is defined by the `ICalculator` interface, which exposes math operations (Add, Subtract, Multiply, and Divide), as shown in the following sample code:</span></span>  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -43,7 +43,7 @@ public interface ICalculator
 }  
 ```  
   
- <span data-ttu-id="4c05b-114">Implementacja usługi oblicza i zwraca wynik w odpowiednich:</span><span class="sxs-lookup"><span data-stu-id="4c05b-114">The service implementation calculates and returns the appropriate result:</span></span>  
+ <span data-ttu-id="f0384-114">Implementacja usługi oblicza i zwraca odpowiedni wynik:</span><span class="sxs-lookup"><span data-stu-id="f0384-114">The service implementation calculates and returns the appropriate result:</span></span>  
   
 ```  
 // Service class that implements the service contract.  
@@ -68,9 +68,9 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- <span data-ttu-id="4c05b-115">W przykładzie użyto wariant net.tcp powiązanie o włączone udostępnianie portów TCP i zabezpieczeń wyłączone.</span><span class="sxs-lookup"><span data-stu-id="4c05b-115">The sample uses a variant of the net.tcp binding with TCP port sharing enabled and security turned off.</span></span> <span data-ttu-id="4c05b-116">Jeśli chcesz użyć zabezpieczonych powiązanie TCP, Zmień tryb zabezpieczeń serwera na odpowiednie ustawienie i uruchom ponownie Svcutil.exe na kliencie, aby wygenerować plik konfiguracji aktualizacji klienta.</span><span class="sxs-lookup"><span data-stu-id="4c05b-116">If you want to use a secured TCP binding, change the server's security mode to the desired setting and re-run Svcutil.exe on the client to generate an update client configuration file.</span></span>  
+ <span data-ttu-id="f0384-115">W przykładzie użyto wariant net.tcp, powiązanie z włączone udostępnianie portów TCP i zabezpieczeń wyłączona.</span><span class="sxs-lookup"><span data-stu-id="f0384-115">The sample uses a variant of the net.tcp binding with TCP port sharing enabled and security turned off.</span></span> <span data-ttu-id="f0384-116">Jeśli chcesz używać bezpiecznego powiązania protokołu TCP, Zmień tryb zabezpieczeń serwera na odpowiednie ustawienie i Svcutil.exe Uruchom ponownie na kliencie, aby wygenerować plik konfiguracji aktualizacji klienta.</span><span class="sxs-lookup"><span data-stu-id="f0384-116">If you want to use a secured TCP binding, change the server's security mode to the desired setting and re-run Svcutil.exe on the client to generate an update client configuration file.</span></span>  
   
- <span data-ttu-id="4c05b-117">Poniższy przykład przedstawia konfigurację usługi:</span><span class="sxs-lookup"><span data-stu-id="4c05b-117">The following sample shows the configuration for the service:</span></span>  
+ <span data-ttu-id="f0384-117">Poniższy przykład pokazuje konfiguracji dla usługi:</span><span class="sxs-lookup"><span data-stu-id="f0384-117">The following sample shows the configuration for the service:</span></span>  
   
 ```xml  
 <system.serviceModel>  
@@ -108,7 +108,7 @@ public class CalculatorService : ICalculator
   </system.serviceModel>  
 ```  
   
- <span data-ttu-id="4c05b-118">Punkt końcowy klienta jest skonfigurowane, jak pokazano na następujący kod:</span><span class="sxs-lookup"><span data-stu-id="4c05b-118">The client's endpoint is configured as shown in the following sample code:</span></span>  
+ <span data-ttu-id="f0384-118">Punkt końcowy klienta został skonfigurowany, jak pokazano w poniższym przykładowym kodzie:</span><span class="sxs-lookup"><span data-stu-id="f0384-118">The client's endpoint is configured as shown in the following sample code:</span></span>  
   
 ```xml  
 <system.serviceModel>  
@@ -127,7 +127,7 @@ public class CalculatorService : ICalculator
 </system.serviceModel>  
 ```  
   
- <span data-ttu-id="4c05b-119">Po uruchomieniu próbki operację żądania i odpowiedzi są wyświetlane w oknie konsoli klienta.</span><span class="sxs-lookup"><span data-stu-id="4c05b-119">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="4c05b-120">Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.</span><span class="sxs-lookup"><span data-stu-id="4c05b-120">Press ENTER in the client window to shut down the client.</span></span>  
+ <span data-ttu-id="f0384-119">Po uruchomieniu przykładu, operacja żądań i odpowiedzi są wyświetlane w oknie konsoli klienta.</span><span class="sxs-lookup"><span data-stu-id="f0384-119">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="f0384-120">Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.</span><span class="sxs-lookup"><span data-stu-id="f0384-120">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -138,36 +138,36 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="4c05b-121">Aby skonfigurować, kompilacji, a następnie uruchom próbki</span><span class="sxs-lookup"><span data-stu-id="4c05b-121">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="f0384-121">Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej</span><span class="sxs-lookup"><span data-stu-id="f0384-121">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="4c05b-122">Upewnij się, że [!INCLUDE[iisver](../../../../includes/iisver-md.md)] jest zainstalowany.</span><span class="sxs-lookup"><span data-stu-id="4c05b-122">Ensure that [!INCLUDE[iisver](../../../../includes/iisver-md.md)] is installed.</span></span> [!INCLUDE[iisver](../../../../includes/iisver-md.md)]<span data-ttu-id="4c05b-123"> jest wymagany dla aktywacji WAS.</span><span class="sxs-lookup"><span data-stu-id="4c05b-123"> is required for WAS activation.</span></span>  
+1.  <span data-ttu-id="f0384-122">Upewnij się, że [!INCLUDE[iisver](../../../../includes/iisver-md.md)] jest zainstalowany.</span><span class="sxs-lookup"><span data-stu-id="f0384-122">Ensure that [!INCLUDE[iisver](../../../../includes/iisver-md.md)] is installed.</span></span> [!INCLUDE[iisver](../../../../includes/iisver-md.md)]<span data-ttu-id="f0384-123"> jest wymagany do aktywacji WAS.</span><span class="sxs-lookup"><span data-stu-id="f0384-123"> is required for WAS activation.</span></span>  
   
-2.  <span data-ttu-id="4c05b-124">Pamiętaj, że wykonano procedurę [jednorazowego procedurę instalacji dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="4c05b-124">Be sure you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+2.  <span data-ttu-id="f0384-124">Pamiętaj, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="f0384-124">Be sure you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-     <span data-ttu-id="4c05b-125">Ponadto należy zainstalować składniki Aktywacja bez HTTP usług WCF:</span><span class="sxs-lookup"><span data-stu-id="4c05b-125">In addition, you must install the WCF non-HTTP activation components:</span></span>  
+     <span data-ttu-id="f0384-125">Ponadto należy zainstalować składniki Aktywacja bez HTTP programu WCF:</span><span class="sxs-lookup"><span data-stu-id="f0384-125">In addition, you must install the WCF non-HTTP activation components:</span></span>  
   
-    1.  <span data-ttu-id="4c05b-126">Z **Start** menu, wybierz **Panelu sterowania**.</span><span class="sxs-lookup"><span data-stu-id="4c05b-126">From the **Start** menu, choose **Control Panel**.</span></span>  
+    1.  <span data-ttu-id="f0384-126">Z **Start** menu, wybierz **Panelu sterowania**.</span><span class="sxs-lookup"><span data-stu-id="f0384-126">From the **Start** menu, choose **Control Panel**.</span></span>  
   
-    2.  <span data-ttu-id="4c05b-127">Wybierz **programy i funkcje**.</span><span class="sxs-lookup"><span data-stu-id="4c05b-127">Select **Programs and Features**.</span></span>  
+    2.  <span data-ttu-id="f0384-127">Wybierz **programy i funkcje**.</span><span class="sxs-lookup"><span data-stu-id="f0384-127">Select **Programs and Features**.</span></span>  
   
-    3.  <span data-ttu-id="4c05b-128">Kliknij przycisk **Włącz składniki systemu Windows lub wyłącz**.</span><span class="sxs-lookup"><span data-stu-id="4c05b-128">Click **Turn Windows Components on or Off**.</span></span>  
+    3.  <span data-ttu-id="f0384-128">Kliknij przycisk **włączyć składników Windows lub wyłączyć**.</span><span class="sxs-lookup"><span data-stu-id="f0384-128">Click **Turn Windows Components on or Off**.</span></span>  
   
-    4.  <span data-ttu-id="4c05b-129">Rozwiń węzeł **Microsoft .NET Framework 3.0** węzeł i wyboru **Aktywacja bez HTTP programu systemu Windows Communication Foundation** funkcji.</span><span class="sxs-lookup"><span data-stu-id="4c05b-129">Expand the **Microsoft .NET Framework 3.0** node and check the **Windows Communication Foundation Non-HTTP Activation** feature.</span></span>  
+    4.  <span data-ttu-id="f0384-129">Rozwiń **Microsoft .NET Framework 3.0** węzła i wyboru **Aktywacja bez HTTP programu Windows Communication Foundation** funkcji.</span><span class="sxs-lookup"><span data-stu-id="f0384-129">Expand the **Microsoft .NET Framework 3.0** node and check the **Windows Communication Foundation Non-HTTP Activation** feature.</span></span>  
   
-3.  <span data-ttu-id="4c05b-130">Skonfiguruj WAS do obsługi aktywacji TCP.</span><span class="sxs-lookup"><span data-stu-id="4c05b-130">Configure WAS to support TCP activation.</span></span>  
+3.  <span data-ttu-id="f0384-130">Skonfiguruj WAS do obsługi aktywacji TCP.</span><span class="sxs-lookup"><span data-stu-id="f0384-130">Configure WAS to support TCP activation.</span></span>  
   
-     <span data-ttu-id="4c05b-131">Dla wygody następujące dwa kroki są implementowane w pliku wsadowym o nazwie AddNetTcpSiteBinding.cmd znajduje się w katalogu próbki.</span><span class="sxs-lookup"><span data-stu-id="4c05b-131">As a convenience, the following two steps are implemented in a batch file called AddNetTcpSiteBinding.cmd located in the sample directory.</span></span>  
+     <span data-ttu-id="f0384-131">Dla wygody następujące dwa kroki są implementowane w pliku wsadowym, o nazwie AddNetTcpSiteBinding.cmd znajduje się w katalogu próbki.</span><span class="sxs-lookup"><span data-stu-id="f0384-131">As a convenience, the following two steps are implemented in a batch file called AddNetTcpSiteBinding.cmd located in the sample directory.</span></span>  
   
-    1.  <span data-ttu-id="4c05b-132">Aby zapewnić obsługę aktywacji net.tcp, domyślnej witryny sieci Web musi zostać powiązana do portów net.tcp.</span><span class="sxs-lookup"><span data-stu-id="4c05b-132">To support net.tcp activation, the default Web site must first be bound to a net.tcp port.</span></span> <span data-ttu-id="4c05b-133">Można to zrobić przy użyciu Appcmd.exe, który jest instalowany z zestawu narzędzi zarządzania usługi Internet Information Services 7.0 (IIS).</span><span class="sxs-lookup"><span data-stu-id="4c05b-133">This can be done using Appcmd.exe, which is installed with the Internet Information Services 7.0 (IIS) management toolset.</span></span> <span data-ttu-id="4c05b-134">Z wiersza polecenia z uprawnieniami administratora na poziomie uruchom następujące polecenie:</span><span class="sxs-lookup"><span data-stu-id="4c05b-134">From an administrator-level command prompt, run the following command:</span></span>  
+    1.  <span data-ttu-id="f0384-132">Aby zapewnić obsługę aktywacji net.tcp, domyślna witryna sieci Web musi zostać powiązana portów net.tcp.</span><span class="sxs-lookup"><span data-stu-id="f0384-132">To support net.tcp activation, the default Web site must first be bound to a net.tcp port.</span></span> <span data-ttu-id="f0384-133">Można to zrobić za pomocą Appcmd.exe, który jest instalowany z zestawem narzędzi zarządzania programu Internet Information Services 7.0 (IIS).</span><span class="sxs-lookup"><span data-stu-id="f0384-133">This can be done using Appcmd.exe, which is installed with the Internet Information Services 7.0 (IIS) management toolset.</span></span> <span data-ttu-id="f0384-134">Z wiersza polecenia z uprawnieniami administratora na poziomie uruchom następujące polecenie:</span><span class="sxs-lookup"><span data-stu-id="f0384-134">From an administrator-level command prompt, run the following command:</span></span>  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']  
         ```  
   
         > [!TIP]
-        >  <span data-ttu-id="4c05b-135">To polecenie jest pojedynczy wiersz tekstu.</span><span class="sxs-lookup"><span data-stu-id="4c05b-135">This command is a single line of text.</span></span> <span data-ttu-id="4c05b-136">To polecenie dodaje powiązania witryny net.tcp, do domyślnej witryny sieci Web nasłuchiwanie na porcie TCP 808 z dowolnej nazwy hosta.</span><span class="sxs-lookup"><span data-stu-id="4c05b-136">This command adds a net.tcp site binding to the default Web site listening on TCP port 808 with any hostname.</span></span>  
+        >  <span data-ttu-id="f0384-135">To polecenie jest pojedynczy wiersz tekstu.</span><span class="sxs-lookup"><span data-stu-id="f0384-135">This command is a single line of text.</span></span> <span data-ttu-id="f0384-136">To polecenie dodaje powiązanie witryny net.tcp, do domyślnej witryny sieci Web nasłuchiwanie na porcie TCP 808 przy użyciu dowolnej nazwy hosta.</span><span class="sxs-lookup"><span data-stu-id="f0384-136">This command adds a net.tcp site binding to the default Web site listening on TCP port 808 with any hostname.</span></span>  
   
-    2.  <span data-ttu-id="4c05b-137">Mimo że wszystkie aplikacje w obrębie lokacji korzystają wspólnej powiązanie net.tcp, każdej aplikacji można włączyć obsługę net.tcp pojedynczo.</span><span class="sxs-lookup"><span data-stu-id="4c05b-137">Although all applications within a site share a common net.tcp binding, each application can enable net.tcp support individually.</span></span> <span data-ttu-id="4c05b-138">Aby włączyć net.tcp dla aplikacji /servicemodelsamples, uruchom następujące polecenie z wiersza polecenia z uprawnieniami administratora na poziomie:</span><span class="sxs-lookup"><span data-stu-id="4c05b-138">To enable net.tcp for the /servicemodelsamples application, run the following command from an administrator-level command prompt:</span></span>  
+    2.  <span data-ttu-id="f0384-137">Mimo że wszystkie aplikacje w ramach lokacji mają wspólne powiązanie net.tcp, każdej aplikacji można włączyć obsługę net.tcp indywidualnie.</span><span class="sxs-lookup"><span data-stu-id="f0384-137">Although all applications within a site share a common net.tcp binding, each application can enable net.tcp support individually.</span></span> <span data-ttu-id="f0384-138">Aby włączyć net.tcp aplikacji /servicemodelsamples, uruchom następujące polecenie z wiersza polecenia z uprawnieniami administratora na poziomie:</span><span class="sxs-lookup"><span data-stu-id="f0384-138">To enable net.tcp for the /servicemodelsamples application, run the following command from an administrator-level command prompt:</span></span>  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set app   
@@ -175,17 +175,17 @@ Press <ENTER> to terminate client.
         ```  
   
         > [!NOTE]
-        >  <span data-ttu-id="4c05b-139">To polecenie jest pojedynczy wiersz tekstu.</span><span class="sxs-lookup"><span data-stu-id="4c05b-139">This command is a single line of text.</span></span> <span data-ttu-id="4c05b-140">To polecenie umożliwia aplikacji /servicemodelsamples uzyskać dostęp za pomocą obu http://localhost/servicemodelsamples i net.tcp://localhost/servicemodelsamples.</span><span class="sxs-lookup"><span data-stu-id="4c05b-140">This command enables the /servicemodelsamples application to be accessed using both http://localhost/servicemodelsamples and net.tcp://localhost/servicemodelsamples.</span></span>  
+        >  <span data-ttu-id="f0384-139">To polecenie jest pojedynczy wiersz tekstu.</span><span class="sxs-lookup"><span data-stu-id="f0384-139">This command is a single line of text.</span></span> <span data-ttu-id="f0384-140">To polecenie włącza aplikację /servicemodelsamples można uzyskać za pomocą zarówno http://localhost/servicemodelsamples i net.tcp://localhost/servicemodelsamples.</span><span class="sxs-lookup"><span data-stu-id="f0384-140">This command enables the /servicemodelsamples application to be accessed using both http://localhost/servicemodelsamples and net.tcp://localhost/servicemodelsamples.</span></span>  
   
-4.  <span data-ttu-id="4c05b-141">Tworzenie wersji języka C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="4c05b-141">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+4.  <span data-ttu-id="f0384-141">Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="f0384-141">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-5.  <span data-ttu-id="4c05b-142">Aby uruchomić przykładowy w konfiguracji pojedynczej lub między komputerami, postępuj zgodnie z instrukcjami w [uruchamiania przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="4c05b-142">To run the sample in a single- or cross-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+5.  <span data-ttu-id="f0384-142">Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="f0384-142">To run the sample in a single- or cross-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
-     <span data-ttu-id="4c05b-143">Usuń powiązanie witryny net.tcp, dodane dla tego przykładu.</span><span class="sxs-lookup"><span data-stu-id="4c05b-143">Remove the net.tcp site binding you added for this sample.</span></span>  
+     <span data-ttu-id="f0384-143">Usuń powiązanie witryny net.tcp, dodane dla tego przykładu.</span><span class="sxs-lookup"><span data-stu-id="f0384-143">Remove the net.tcp site binding you added for this sample.</span></span>  
   
-     <span data-ttu-id="4c05b-144">Dla wygody następujące dwa kroki są implementowane w pliku wsadowym o nazwie RemoveNetTcpSiteBinding.cmd znajduje się w katalogu próbki.</span><span class="sxs-lookup"><span data-stu-id="4c05b-144">As a convenience, the following two steps are implemented in a batch file called RemoveNetTcpSiteBinding.cmd located in the sample directory.</span></span>  
+     <span data-ttu-id="f0384-144">Dla wygody następujące dwa kroki są implementowane w pliku wsadowym, o nazwie RemoveNetTcpSiteBinding.cmd znajduje się w katalogu próbki.</span><span class="sxs-lookup"><span data-stu-id="f0384-144">As a convenience, the following two steps are implemented in a batch file called RemoveNetTcpSiteBinding.cmd located in the sample directory.</span></span>  
   
-    1.  <span data-ttu-id="4c05b-145">Usuń net.tcp z listy włączonych protokołów, uruchamiając następujące polecenie z wiersza polecenia z uprawnieniami administratora na poziomie:</span><span class="sxs-lookup"><span data-stu-id="4c05b-145">Remove net.tcp from the list of enabled protocols by running the following command from an administrator-level command prompt:</span></span>  
+    1.  <span data-ttu-id="f0384-145">Usuń z listy włączone protokoły net.tcp, uruchamiając następujące polecenie z wiersza polecenia z uprawnieniami administratora na poziomie:</span><span class="sxs-lookup"><span data-stu-id="f0384-145">Remove net.tcp from the list of enabled protocols by running the following command from an administrator-level command prompt:</span></span>  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set app   
@@ -193,9 +193,9 @@ Press <ENTER> to terminate client.
         ```  
   
         > [!NOTE]
-        >  <span data-ttu-id="4c05b-146">To polecenie należy wprowadzić jako pojedynczy wiersz tekstu.</span><span class="sxs-lookup"><span data-stu-id="4c05b-146">This command must be entered as a single line of text.</span></span>  
+        >  <span data-ttu-id="f0384-146">To polecenie muszą zostać wprowadzone jako pojedynczy wiersz tekstu.</span><span class="sxs-lookup"><span data-stu-id="f0384-146">This command must be entered as a single line of text.</span></span>  
   
-    2.  <span data-ttu-id="4c05b-147">Usuń powiązanie witryny net.tcp, uruchamiając następujące polecenie z wiersza polecenia z uprawnieniami administratora na poziomie:</span><span class="sxs-lookup"><span data-stu-id="4c05b-147">Remove the net.tcp site binding by running the following command from an administrator-level command prompt:</span></span>  
+    2.  <span data-ttu-id="f0384-147">Usuń powiązanie witryny net.tcp, uruchamiając następujące polecenie z wiersza polecenia z uprawnieniami administratora na poziomie:</span><span class="sxs-lookup"><span data-stu-id="f0384-147">Remove the net.tcp site binding by running the following command from an administrator-level command prompt:</span></span>  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   
@@ -203,7 +203,7 @@ Press <ENTER> to terminate client.
         ```  
   
         > [!NOTE]
-        >  <span data-ttu-id="4c05b-148">To polecenie należy wpisać w jako pojedynczy wiersz tekstu.</span><span class="sxs-lookup"><span data-stu-id="4c05b-148">This command must be typed in as a single line of text.</span></span>  
+        >  <span data-ttu-id="f0384-148">To polecenie musi być wpisana w jako pojedynczy wiersz tekstu.</span><span class="sxs-lookup"><span data-stu-id="f0384-148">This command must be typed in as a single line of text.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4c05b-149">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="4c05b-149">See Also</span></span>  
- [<span data-ttu-id="4c05b-150">Przykłady trwałości i hostingu AppFabric</span><span class="sxs-lookup"><span data-stu-id="4c05b-150">AppFabric Hosting and Persistence Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a><span data-ttu-id="f0384-149">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="f0384-149">See Also</span></span>  
+ [<span data-ttu-id="f0384-150">Przykłady trwałości i hostingu AppFabric</span><span class="sxs-lookup"><span data-stu-id="f0384-150">AppFabric Hosting and Persistence Samples</span></span>](https://go.microsoft.com/fwlink/?LinkId=193961)

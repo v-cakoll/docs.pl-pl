@@ -5,32 +5,32 @@ helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-ms.openlocfilehash: bfa03c7ebe82f3f6a03666d908a5fa9d4e386172
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eea2bb524496a3db22146586df323437d9f84242
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325412"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396734"
 ---
 # <a name="interface-properties-c-programming-guide"></a>Właściwości interfejsu (Przewodnik programowania w języku C#)
-Właściwości mogą być deklarowane w [interfejsu](../../../csharp/language-reference/keywords/interface.md). Poniżej przedstawiono przykład metody dostępu interfejsu indeksatora:  
+Właściwości mogą być deklarowane na [interfejsu](../../../csharp/language-reference/keywords/interface.md). Oto przykład metody dostępu właściwości interfejsu:  
   
  [!code-csharp[csProgGuideProperties#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_1.cs)]  
   
- Metody dostępu właściwości interfejsu nie ma treści. W związku z tym celem metody dostępu jest wskazuje, czy właściwość jest do odczytu / zapisu, tylko do odczytu lub tylko do zapisu.  
+ Metoda dostępu właściwość interfejsu nie ma treści. W związku z tym celem metody dostępu jest wskazuje, czy właściwość jest odczytu i zapisu, tylko do odczytu lub tylko do zapisu.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie interfejs `IEmployee` ma właściwość odczytu i zapisu, `Name`, a właściwość tylko do odczytu, `Counter`. Klasa `Employee` implementuje `IEmployee` interfejsu i używa te dwie właściwości. Program odczytuje nazwę nowych pracowników i bieżącą liczbę pracowników i wyświetla nazwę pracowników i numer obliczona pracownika.  
+ W tym przykładzie interfejs `IEmployee` ma właściwość odczytu i zapisu, `Name`, a właściwość tylko do odczytu `Counter`. Klasa `Employee` implementuje `IEmployee` interfejs i korzysta z tych dwóch właściwości. Program odczytuje nazwę nowego pracownika i bieżącą liczbę pracowników i wyświetla nazwę pracowników i liczba pracowników obliczanej.  
   
- Można użyć w pełni kwalifikowana nazwa właściwość, która odwołuje się do interfejsu, w którym zadeklarowano ten element członkowski. Na przykład:  
-  
- [!code-csharp[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_2.cs)]  
-  
- Ta metoda jest wywoływana [jawnej implementacji interfejsu](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md). Na przykład jeśli klasa `Employee` implementuje dwa interfejsy `ICitizen` i `IEmployee` i dotyczą obu interfejsów `Name` właściwość, implementacja interfejsu jawnego członka będzie to konieczne. Oznacza to, że następujące deklaracja właściwości:  
+ Można użyć w pełni kwalifikowaną nazwę właściwości, która odwołuje się do interfejsu, w którym zadeklarowany jest element członkowski. Na przykład:  
   
  [!code-csharp[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_2.cs)]  
   
- implementuje `Name` właściwość `IEmployee` interfejsu podczas następujące oświadczenie:  
+ Jest to nazywane [jawnej implementacji interfejsu](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md). Na przykład jeśli klasa `Employee` implementuje dwa interfejsy `ICitizen` i `IEmployee` i dotyczą obu interfejsów `Name` właściwości jawną implementacją członków będzie to konieczne. Oznacza to, że następująca deklaracja właściwości:  
+  
+ [!code-csharp[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_2.cs)]  
+  
+ implementuje `Name` właściwość `IEmployee` interfejsu podczas następującą deklarację:  
   
  [!code-csharp[csProgGuideProperties#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_3.cs)]  
   

@@ -7,21 +7,21 @@ helpviewer_keywords:
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f4712970b2d3ebecf12cbb7b8f9b7fcdb317986
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9d00fb16ac5b71c8fb8f8560f68d20f1f33987d7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410354"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396889"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (Narzędzie adnotacji dotyczące zabezpieczeń w programach .NET)
-Narzędzie adnotacji zabezpieczeń .NET (SecAnnotate.exe) jest aplikacją wiersza polecenia, który identyfikuje `SecurityCritical` i `SecuritySafeCritical` części jeden lub więcej zestawów.  
+Narzędzie .NET Security Annotator (SecAnnotate.exe) jest aplikacją wiersza polecenia, który identyfikuje `SecurityCritical` i `SecuritySafeCritical` części jeden lub więcej zestawów.  
   
- Rozszerzenia programu Visual Studio [Security Annotator](http://go.microsoft.com/fwlink/?LinkId=198007), zawiera graficzny interfejs użytkownika do SecAnnotate.exe i umożliwia uruchamianie narzędzia w programie Visual Studio.  
+ Rozszerzenia programu Visual Studio [Security Annotator](https://go.microsoft.com/fwlink/?LinkId=198007)zapewnia graficzny interfejs użytkownika do SecAnnotate.exe i umożliwia uruchomić narzędzie z poziomu programu Visual Studio.  
   
- To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, należy użyć wiersza polecenia dewelopera (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, należy użyć wiersza polecenia dewelopera (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersz polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
- W wierszu polecenia wpisz następujące polecenie, gdzie *parametry* są opisane w poniższej sekcji i *zestawy* składają się z co najmniej jedną nazwę zestawu, oddzielonych puste wartości:  
+ W wierszu polecenia wpisz następujące polecenie, gdzie *parametry* są opisane w poniższej sekcji i *zestawy* składają się z jednego lub więcej nazw zestawów rozdzielonych odstępami:  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,7 +40,7 @@ SecAnnotate.exe [parameters] [assemblies]
 |`/o:` *OUTPUT.XML*<br /><br /> lub<br /><br /> `/out:` *OUTPUT.XML*|Określa wyjściowy plik adnotacji.|  
 |`/p:` *maxpasses*<br /><br /> lub<br /><br /> `/maximumpasses:` *maxpasses*|Określa maksymalną liczbę adnotacji, które można przekazać do zestawów przed zatrzymaniem generowania nowych adnotacji.|  
 |`/q`<br /><br /> lub<br /><br /> `/quiet`|Określa tryb cichy, w którym moduł oznaczający adnotacjami nie wyświetla komunikatów o stanie, ale tylko informacje o błędach.|  
-|`/r:` *Zestawu*<br /><br /> lub<br /><br /> `/referenceassembly:` *Zestawu*|Dołącza określony zestaw podczas rozpoznawania zestawów zależnych w trakcie oznaczania adnotacjami. Zestawy, do których występują odwołania, otrzymują większy priorytet niż zestawy znajdujące się w ścieżce odwołania.|  
+|`/r:` *Zestaw*<br /><br /> lub<br /><br /> `/referenceassembly:` *Zestaw*|Dołącza określony zestaw podczas rozpoznawania zestawów zależnych w trakcie oznaczania adnotacjami. Zestawy, do których występują odwołania, otrzymują większy priorytet niż zestawy znajdujące się w ścieżce odwołania.|  
 |`/s:` *RuleName*<br /><br /> lub<br /><br /> `/suppressrule:` *RuleName*|Pomija uruchamianie określonych reguł przezroczystości w zestawach wejściowych.|  
 |`/t`<br /><br /> lub<br /><br /> `/forcetransparent`|Wymusza, aby narzędzie Annotator traktowało wszystkie zestawy, które nie mają adnotacji przezroczystości, tak jakby były całkowicie przezroczyste.|  
 |`/t`:*zestawu*<br /><br /> lub<br /><br /> `/forcetransparent`:*zestawu*|Wymusza przezroczystość danego zestawu, niezależnie od jego bieżących adnotacji na poziomie zestawu.|  
@@ -52,6 +52,6 @@ SecAnnotate.exe [parameters] [assemblies]
 ## <a name="remarks"></a>Uwagi  
  Parametry i zestawy można także podać w pliku odpowiedzi, który jest określany w wierszu polecenia i poprzedzany znakiem (@). Każdy wiersz w pliku odpowiedzi musi zawierać pojedynczy parametr lub nazwę zestawu.  
   
- Aby uzyskać więcej informacji na temat Annotator zabezpieczeń .NET, zobacz wpis [przy użyciu SecAnnotate do analizowania zestawów Your za naruszenia przezroczystość](http://go.microsoft.com/fwlink/?LinkId=187648) w blogu .NET zabezpieczeń.  
+ Aby uzyskać więcej informacji dotyczących narzędzia .NET Security Annotator, zobacz wpis [przy użyciu SecAnnotate w celu analizowania zestawów pod kątem naruszeń przezroczystości](https://go.microsoft.com/fwlink/?LinkId=187648) w blogu dotyczącym zabezpieczeń .NET.  
   
 ## <a name="examples"></a>Przykłady

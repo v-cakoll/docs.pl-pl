@@ -7,15 +7,15 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF], how-to topics
 ms.assetid: 006aa461-fe37-4cd8-860a-d38d76e8b9f7
-ms.openlocfilehash: 9e43e5661d3e6b559a1f9c9acb52313ff0a37e31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2319ea8522a90705cf65006ffb368801921cda57
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555766"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397530"
 ---
 # <a name="textbox-how-to-topics"></a>TextBox — Tematy porad
-Ta sekcja zawiera przykłady, które pokazują, jak wykonywać typowe zadania za pomocą <xref:System.Windows.Controls.TextBox> formantu.  
+Ta sekcja zawiera przykłady pokazujące, jak wykonywać typowe zadania za pomocą <xref:System.Windows.Controls.TextBox> kontroli.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Tworzenie wielowierszowej kontrolki TextBox](../../../../docs/framework/wpf/controls/how-to-create-a-multiline-textbox-control.md)  
@@ -42,5 +42,5 @@ Ta sekcja zawiera przykłady, które pokazują, jak wykonywać typowe zadania za
  <xref:System.Windows.Controls.PasswordBox>  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przykładu z galerii formantów WPF](http://go.microsoft.com/fwlink/?LinkID=160053)  
+ [Przykładu z galerii kontrolki WPF](https://go.microsoft.com/fwlink/?LinkID=160053)  
  [TextBox — style i szablony](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)

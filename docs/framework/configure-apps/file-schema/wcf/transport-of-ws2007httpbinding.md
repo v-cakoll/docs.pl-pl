@@ -2,15 +2,15 @@
 title: '&lt;transport&gt; w &lt;ws2007HttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: 3be9d4e64e63b32156cb64257f5bed8230cee3aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 35af47551f742b0e48220611a874605fb752b626
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350950"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396800"
 ---
 # <a name="lttransportgt-of-ltws2007httpbindinggt"></a>&lt;transport&gt; w &lt;ws2007HttpBinding&gt;
-Definiuje ustawienia uwierzytelniania dla transportu HTTP.  
+Definiuje ustawienia uwierzytelniania dla protokołu HTTP.  
   
  \<system.serviceModel>  
 \<powiązania >  
@@ -39,8 +39,8 @@ transport clientCredentialType =
 |Atrybut|Opis|  
 |---------------|-----------------|  
 |`clientCredentialType`|Określa poświadczenia używane do uwierzytelniania klienta do usługi. Ten atrybut jest typu <xref:System.ServiceModel.HttpClientCredentialType>.|  
-|`proxyCredentialType`|Określa poświadczenia używane do uwierzytelniania klienta na serwerze proxy domeny. Ten atrybut jest typu <xref:System.ServiceModel.HttpProxyCredentialType>.|  
-|`realm`|Obszar uwierzytelniania dla uwierzytelniania podstawowego lub szyfrowanego. Wartość domyślna to ciąg pusty.<br /><br /> Obszar uwierzytelniania określa co najmniej nazwę hosta, który przeprowadza uwierzytelnianie. Można również określić zbiór użytkowników, którzy mają dostęp. Użytkownik może zapytania obszaru uwierzytelniania, aby określić jedną z kilku możliwych nazwy użytkowników i hasła może służyć.|  
+|`proxyCredentialType`|Określa poświadczenia używane do uwierzytelniania klienta do domeny serwera proxy. Ten atrybut jest typu <xref:System.ServiceModel.HttpProxyCredentialType>.|  
+|`realm`|Obszar uwierzytelniania dla uwierzytelniania podstawowego lub szyfrowanego. Wartość domyślna to ciąg pusty.<br /><br /> Obszar uwierzytelniania co najmniej Określa nazwę hosta, który przeprowadza uwierzytelnianie. Można również określić zbiór użytkowników, którzy mają dostęp. Użytkownika można badać obszaru uwierzytelniania, aby określić jedną z kilku możliwych nazw użytkowników i haseł może służyć.|  
   
 ## <a name="clientcredentialtype-attribute"></a>właściwości ClientCredentialType o wartości atrybutu  
   
@@ -48,10 +48,10 @@ transport clientCredentialType =
 |-----------|-----------------|  
 |Brak|Zabezpieczenia są wyłączone.|  
 |Podstawowy|Korzysta z uwierzytelniania podstawowego.|  
-|Skrót|Uwierzytelnianie szyfrowane używa.|  
-|Uwierzytelnianie NTLM|Korzysta z uwierzytelniania NTLM, jako rezerwowe z domeny systemu Windows.|  
-|Windows|Używa zintegrowanego uwierzytelniania systemu Windows.|  
-|certyfikat|Używa certyfikatów X.509 do uwierzytelniania klienta.|  
+|Podsumowanie|Uwierzytelnianie szyfrowane używa.|  
+|Uwierzytelnianie NTLM|Korzysta z uwierzytelniania NTLM, jako rezerwowe z domeną systemu Windows.|  
+|Windows|Używa zintegrowanego uwierzytelniania Windows.|  
+|Certyfikat|Przy użyciu certyfikatów X.509 do uwierzytelniania klienta.|  
   
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType atrybutu  
   
@@ -59,10 +59,10 @@ transport clientCredentialType =
 |-----------|-----------------|  
 |Brak|Zabezpieczenia są wyłączone.|  
 |Podstawowy|Korzysta z uwierzytelniania podstawowego.|  
-|Skrót|Uwierzytelnianie szyfrowane używa.|  
-|Uwierzytelnianie NTLM|Używa protokołu NTLM jako rezerwowe z domeny systemu Windows.|  
-|Windows|Używa zintegrowanego uwierzytelniania systemu Windows.|  
-|certyfikat|Używa certyfikatów X.509 do uwierzytelniania klienta.|  
+|Podsumowanie|Uwierzytelnianie szyfrowane używa.|  
+|Uwierzytelnianie NTLM|Wykorzystuje NTLM jako rezerwowe z domeną systemu Windows.|  
+|Windows|Używa zintegrowanego uwierzytelniania Windows.|  
+|Certyfikat|Przy użyciu certyfikatów X.509 do uwierzytelniania klienta.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -81,5 +81,5 @@ transport clientCredentialType =
  [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
  [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie usług Windows Communication Foundation i klientów za pomocą powiązań](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Konfigurowanie Windows Communication Foundation i klientów za pomocą powiązań](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

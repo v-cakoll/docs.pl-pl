@@ -2,15 +2,15 @@
 title: Mapowanie typu danych ODBC
 ms.date: 03/30/2017
 ms.assetid: 43c35d32-831d-480f-a150-78f7e869d17f
-ms.openlocfilehash: bfabdb73b9435a98b4d0d625a8392723bdcdbc37
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ece9397e8c8e8b9d26f8aac2298aa25173ac2d93
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765428"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397325"
 ---
 # <a name="odbc-data-type-mappings"></a>Mapowanie typu danych ODBC
-W poniższej tabeli przedstawiono wnioskowany [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typu dla typów danych z dostawcy danych programu .NET Framework dla ODBC (<xref:System.Data.Odbc>). Metody dostępu typu dla <xref:System.Data.Odbc.OdbcDataReader> są także wyświetlone.  
+W poniższej tabeli przedstawiono wywnioskowane [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typu dla typów danych od dostawcy danych programu .NET Framework dla ODBC (<xref:System.Data.Odbc>). Metody typizowane metody dostępu dla <xref:System.Data.Odbc.OdbcDataReader> są również wymienione.  
   
 |Typ ODBC|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Typ|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typizowane metody dostępu|  
 |---------------|----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
@@ -37,4 +37,4 @@ W poniższej tabeli przedstawiono wnioskowany [!INCLUDE[dnprdnshort](../../../..
   
 ## <a name="see-also"></a>Zobacz też  
  [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

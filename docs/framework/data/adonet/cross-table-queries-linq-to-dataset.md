@@ -1,30 +1,30 @@
 ---
-title: Tabeli zapytania (LINQ do DataSet)
+title: Wielotabelowe (LINQ to DataSet)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6819a16f-8656-41af-a54d-dfec0cb66366
-ms.openlocfilehash: 17f9e683161fba0fe57279952acecd9e4399d0aa
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 811d177b730a6a2160e37ef827a2456e6ac589e4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757193"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396281"
 ---
-# <a name="cross-table-queries-linq-to-dataset"></a>Tabeli zapytania (LINQ do DataSet)
-Oprócz wykonywania zapytania w jednej tabeli, można również wykonywać zapytania między tabelami w [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Jest to zrobić za pomocą *sprzężenia*. Sprzężenia jest skojarzenie obiektów w jedno źródło danych z obiektów, które udostępnianie wspólny atrybut w inne źródło danych, takich jak produkt, lub skontaktuj się z identyfikatorem. W programowanie zorientowane obiektowo relacje między obiektami są stosunkowo łatwa do nawigować, ponieważ każdy obiekt ma elementu członkowskiego, który odwołuje się do innego obiektu. W przypadku tabel zewnętrznych baz danych jednak nawigowanie po relacjach nie jest równie proste. Tabele bazy danych nie zawierają wbudowanych relacji. W takich przypadkach można operacji tworzenia sprzężenia zgodne elementy z każdego źródła. Przykładowo podana dwóch tabel, które zawierają informacje o produkcie i informacji o sprzedaży, można operacji tworzenia sprzężenia do dopasowania informacji o sprzedaży i produkty do tej samej kolejności sprzedaży.  
+# <a name="cross-table-queries-linq-to-dataset"></a>Wielotabelowe (LINQ to DataSet)
+Oprócz wykonywania zapytań pojedynczej tabeli, można również wykonać wielotabelowe w [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Jest to wykonywane przy użyciu *sprzężenia*. Sprzężenie jest skojarzenie obiektów w jednym źródle danych z obiektami, które udostępniać wspólny atrybut w innym źródle danych, takie jak produkt lub skontaktuj się z identyfikatora. W programowanie zorientowane obiektowo relacje między obiektami są stosunkowo łatwo można przejść, ponieważ każdy obiekt ma element członkowski, który odwołuje się do innego obiektu. W tabelach zewnętrznej bazy danych jednak nawigowanie po relacjach nie jest tak proste. Tabele bazy danych nie zawierają wbudowane relacji. W takich przypadkach operacja join może służyć do dopasowania elementy z każdego źródła. Na przykład biorąc pod uwagę dwie tabele, które zawierają informacje o produkcie i informacji o sprzedaży, można użyć operacji tworzenia sprzężenia do dopasowania informacji o sprzedaży i produkty do tego samego zamówienia sprzedaży.  
   
- [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] Framework zapewnia dołączyć dwa operatory, <xref:System.Linq.Enumerable.Join%2A> i <xref:System.Linq.Enumerable.GroupJoin%2A>. Wykonaj te operatory *sprzężeniami*: oznacza to, sprzężenia, które pasują dwóch danych źródła tylko wtedy, gdy ich kluczy są takie same. (Natomiast [!INCLUDE[tsql](../../../../includes/tsql-md.md)] obsługuje dołączenia innych niż operatory `equals`, takich jak `less than` operatora.)  
+ [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] Framework zawiera dwa operatory, sprzężenia <xref:System.Linq.Enumerable.Join%2A> i <xref:System.Linq.Enumerable.GroupJoin%2A>. Wykonaj te operatory *sprzężeniami*: oznacza to, sprzężenia, które odpowiadają dwóch źródeł, tylko wtedy, gdy ich klucze są takie same. (Natomiast [!INCLUDE[tsql](../../../../includes/tsql-md.md)] innych niż operatory sprzężenia obsługuje `equals`, takich jak `less than` operator.)  
   
- W warunkach relacyjnej bazy danych <xref:System.Linq.Enumerable.Join%2A> implementuje sprzężenia wewnętrznego. Typ sprzężenia jest sprzężenie wewnętrzne w zwracane są tylko te obiekty, które mają odpowiednika w przeciwną zestawu danych.  
+ W warunkach relacyjnej bazy danych <xref:System.Linq.Enumerable.Join%2A> implementuje sprzężenia wewnętrznego. Sprzężenie wewnętrzne to rodzaj sprzężenia w zwracane są tylko te obiekty, które mają pasujących przeciwny zestawu danych.  
   
- <xref:System.Linq.Enumerable.GroupJoin%2A> Operatory nie mają bezpośredniego odpowiednika w warunkach relacyjnej bazy danych; wdrażają podzbiorem sprzężenia wewnętrzne i lewe sprzężenia zewnętrzne. Lewe sprzężenie zewnętrzne jest sprzężenia, które zwraca każdy element pierwszej kolekcji (po lewej), nawet jeśli go nie ma żadnych elementów skorelowane w druga kolekcja.  
+ <xref:System.Linq.Enumerable.GroupJoin%2A> Operatory mają bezpośredniego odpowiednika w warunkach relacyjnej bazy danych; implementują nadzbiorem sprzężenia wewnętrzne lewych sprzężeń zewnętrznych. Lewe sprzężenie zewnętrzne jest sprzężenie zwracające każdego elementu pierwszej kolekcji (po lewej stronie), nawet wtedy, gdy go nie ma żadnych elementów skorelowane w drugiej kolekcji.  
   
- Aby uzyskać więcej informacji na temat sprzężeń, zobacz [operacji Join](http://msdn.microsoft.com/library/442d176d-028c-4beb-8d22-407d4ef89107).  
+ Aby uzyskać więcej informacji na temat sprzężenia, zobacz [operacji Join](https://msdn.microsoft.com/library/442d176d-028c-4beb-8d22-407d4ef89107).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład wykonuje tradycyjnych przyłączenia `SalesOrderHeader` i `SalesOrderDetail` tabel z przykładowej bazy danych AdventureWorks uzyskanie zamówień online w ciągu miesiąca sierpnia.  
+ Poniższy przykład wykonuje tradycyjnych przyłączenia `SalesOrderHeader` i `SalesOrderDetail` tabel z przykładowej bazy danych AdventureWorks uzyskać zamówienia online z sierpień.  
   
  [!code-csharp[DP LINQ to DataSet Examples#Join](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#join)]
  [!code-vb[DP LINQ to DataSet Examples#Join](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#join)]  
@@ -33,5 +33,5 @@ Oprócz wykonywania zapytania w jednej tabeli, można również wykonywać zapyt
  [Wykonywanie zapytania do zestawów danych](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
  [Zapytania jednotabelowe](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)  
  [Wykonywanie zapytania do typizowanych zestawów danych](../../../../docs/framework/data/adonet/querying-typed-datasets.md)  
- [Operacje połączone](http://msdn.microsoft.com/library/442d176d-028c-4beb-8d22-407d4ef89107)  
+ [Operacje połączone](https://msdn.microsoft.com/library/442d176d-028c-4beb-8d22-407d4ef89107)  
  [Przykłady LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

@@ -7,44 +7,44 @@ helpviewer_keywords:
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99d62eca26e19d343b3f8f6afb9824c009610fb4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f0b18f33c0cbc83f955c32477a21f77b09c7546c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585090"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396477"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Struktury danych dla Programowania równoległego
-.NET Framework w wersji 4 wprowadzono kilka nowych typów, które są przydatne w Programowanie równoległe, w tym zestaw kolekcji współbieżnych klas, elementy podstawowe synchronizacji lekkie i typy dla inicjowania z opóźnieniem. Z kodem aplikacji wielowątkowych, włączając w bibliotece równoległych zadań i PLINQ można używać tych typów.  
+.NET Framework w wersji 4 wprowadza kilka nowych typów, które są przydatne do programowania równoległego, w tym zestaw klas kolekcji współbieżnych, podstawowych uproszczone synchronizacji i typów d inicjowania z opóźnieniem. Można użyć tych typów, zawierające kod aplikacji wielowątkowych, w tym w bibliotece równoległych zadań i PLINQ.  
   
-## <a name="concurrent-collection-classes"></a>Klasy kolekcji współbieżnych  
- Kolekcja klas w <xref:System.Collections.Concurrent?displayProperty=nameWithType> przestrzeni nazw zapewnić bezpieczne wątkowo dodawania i usuwania działań, które uniknąć blokad, gdy jest to możliwe oraz użyć szczegółowych blokowania, gdzie blokady są niezbędne. W przeciwieństwie do kolekcji, które zostały wprowadzone w wersji systemu .NET Framework 1.0 i 2.0 klasy kolekcji współbieżnych nie wymaga kod użytkownika zostały wszystkie blokady, gdy uzyskuje dostęp do elementów. Klasy kolekcji współbieżnych może znacznie poprawić wydajność przez typy takich jak <xref:System.Collections.ArrayList?displayProperty=nameWithType> i <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> (z zaimplementowana użytkownika blokowanie) w scenariuszach, w której wiele wątków Dodawanie i usuwanie elementów z kolekcji.  
+## <a name="concurrent-collection-classes"></a>Klas kolekcji współbieżnych  
+ Kolekcja klas w <xref:System.Collections.Concurrent?displayProperty=nameWithType> przestrzeni nazw podać metodą o bezpiecznych wątkach dodawania i usuwania operacji, które uniknąć blokad, tam gdzie to możliwe oraz Użyj blokowanie szczegółowe, gdzie blokady są niezbędne. W przeciwieństwie do kolekcji, które zostały wprowadzone w .NET Framework w wersji 1.0 i 2.0 klasy kolekcji współbieżnych nie wymaga kod użytkownika do podejmowania żadnych blokad, gdy uzyskuje dostęp do elementów. Klasy kolekcji współbieżnych może znacznie poprawić wydajność przez typy takie jak <xref:System.Collections.ArrayList?displayProperty=nameWithType> i <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> (z blokowanie zaimplementowane przez użytkownika) w scenariuszach, gdzie Dodawanie i usuwanie elementów z kolekcji w wielu wątkach.  
   
- W poniższej tabeli wymieniono nowe klasy kolekcji współbieżnych:  
+ Poniższa tabela zawiera listę nowych klas kolekcji współbieżnych:  
   
 |Typ|Opis|  
 |----------|-----------------|  
-|<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>|Umożliwia blokowanie i ograniczenia możliwości kolekcje bezpieczne wątkowo, które implementują <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType>. Producent wątków zablokować, jeśli nie ma dostępnych miejsc lub jeśli kolekcja jest pełna. Wątki konsumenta zablokować, jeśli kolekcja jest pusta. Ten typ obsługuje również bez blokowania dostępu przez konsumentów i producentów. <xref:System.Collections.Concurrent.BlockingCollection%601> mogą być używane jako klasę podstawową lub magazyn do blokowania i ograniczenia dla każdej klasy kolekcji, która obsługuje zapasowy <xref:System.Collections.Generic.IEnumerable%601>.|  
-|<xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>|Implementację zbioru wątkowo, która oferuje skalowalne Dodaj i operacje pobierania.|  
-|<xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>|Typ równoczesnych i skalowalne słownika.|  
-|<xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType>|Kolejka FIFO równoczesnych i skalowalność.|  
-|<xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=nameWithType>|Stos LIFO równoczesnych i skalowalność.|  
+|<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>|Zapewnia blokowania i ograniczenia możliwości kolekcje obsługujące wielowątkowość, które implementują <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType>. Wątki producenta zablokować, jeśli nie ma dostępnych miejsc, lub jeśli kolekcja jest pełna. Wątki konsumenta zablokować, jeśli kolekcja jest pusta. Ten typ obsługuje również nieblokującej na poziomie dostępu przez konsumentów i producentów. <xref:System.Collections.Concurrent.BlockingCollection%601> może służyć jako klasę bazową lub magazyn, aby zapewnić blokowanie i blokujących dla każdej klasy kolekcji, która obsługuje zapasowy <xref:System.Collections.Generic.IEnumerable%601>.|  
+|<xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>|Implementację zbiór metodą o bezpiecznych wątkach, która oferuje skalowalne, dodać i operacjami pobierania.|  
+|<xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>|Typ słownika równocześnie i skalowalne.|  
+|<xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType>|Kolejki FIFO równocześnie i skalowalne.|  
+|<xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=nameWithType>|Stosu LIFO równocześnie i skalowalne.|  
   
  Aby uzyskać więcej informacji, zobacz [kolekcje obsługujące wielowątkowość](../../../docs/standard/collections/thread-safe/index.md).  
   
-## <a name="synchronization-primitives"></a>Elementy podstawowe synchronizacji  
- Nowych elementów podstawowych synchronizacji w <xref:System.Threading?displayProperty=nameWithType> przestrzeni nazw włączenia szczegółowych współbieżności i zwiększyć wydajność, unikając kosztowne mechanizmy blokady w starszej wersji kodu wielowątkowości. Niektóre z nowych typów, takie jak <xref:System.Threading.Barrier?displayProperty=nameWithType> i <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> mieć nie odpowiedników we wcześniejszych wersjach programu .NET Framework.  
+## <a name="synchronization-primitives"></a>Podstawowych synchronizacji  
+ Nowych elementów podstawowych synchronizacji, w <xref:System.Threading?displayProperty=nameWithType> przestrzeni nazw Włącz współbieżność szczegółową i zwiększyć wydajność dzięki unikaniu kosztownych mechanizmy blokady w starszej wersji kodu wielowątkowości. Niektóre z nowych typów, takich jak <xref:System.Threading.Barrier?displayProperty=nameWithType> i <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> mają nie odpowiedniki we wcześniejszych wersjach programu .NET Framework.  
   
- W poniższej tabeli wymieniono nowe typy synchronizacji:  
+ Poniższa tabela zawiera listę nowych typów synchronizacji:  
   
 |Typ|Opis|  
 |----------|-----------------|  
-|<xref:System.Threading.Barrier?displayProperty=nameWithType>|Umożliwia wiele wątków do pracy w algorytm równocześnie zapewniając punktu, jaką każdego zadania można zasygnalizować jego a następnie zablokować dopóki niektóre lub wszystkie zadania zostały dostarczone. Aby uzyskać więcej informacji, zobacz [bariery](../../../docs/standard/threading/barrier.md).|  
-|<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|Ułatwia rozwidlenia i Dołącz do scenariuszy, zapewniając mechanizm easy spotkania. Aby uzyskać więcej informacji, zobacz [CountdownEvent](../../../docs/standard/threading/countdownevent.md).|  
-|<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|Podobnie jak podstawowy synchronizacji <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>. <xref:System.Threading.ManualResetEventSlim> jest jaśniejszego wagi, ale mogą służyć tylko do komunikacji wewnątrz procesu. Aby uzyskać więcej informacji, zobacz [ManualResetEvent i ManualResetEventSlim](../../../docs/standard/threading/manualresetevent-and-manualreseteventslim.md).|  
-|<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>|Podstawowy synchronizacji, która ogranicza liczbę wątków, które można jednocześnie uzyskać dostęp do zasobu lub pulę zasobów. Aby uzyskać więcej informacji, zobacz [semafor i klasa SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md).|  
-|<xref:System.Threading.SpinLock?displayProperty=nameWithType>|Podstawowy blokady wzajemne wykluczenie powodujący wątek próbuje uzyskać blokady oczekiwania w pętli, lub *pokrętła*, w danym okresie czasu przed jego quantum produkcji. W scenariuszach, w którym powinien być krótki, oczekiwanie na blokadę <xref:System.Threading.SpinLock> zapewnia większą wydajność niż inne formy blokowania. Aby uzyskać więcej informacji, zobacz [struktury SpinLock](../../../docs/standard/threading/spinlock.md).|  
-|<xref:System.Threading.SpinWait?displayProperty=nameWithType>|Małe, lekkie typu, który będzie pokrętła przez określony czas i po pewnym czasie umieść wątku w stan oczekiwania, po przekroczeniu liczby pokrętła.  Aby uzyskać więcej informacji, zobacz [metody SpinWait](../../../docs/standard/threading/spinwait.md).|  
+|<xref:System.Threading.Barrier?displayProperty=nameWithType>|Umożliwia wielu wątków do pracy nad algorytmu równoległego, podając punkt, w której każde zadanie podrzędne może sygnalizują jego następnie blokowane, aż już korzystać z niektórych lub wszystkich zadań. Aby uzyskać więcej informacji, zobacz [barierę](../../../docs/standard/threading/barrier.md).|  
+|<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|Upraszcza scenariusze rozwidlenia i sprzężenia, dostarczając mechanizmu łatwego spotkania. Aby uzyskać więcej informacji, zobacz [CountdownEvent](../../../docs/standard/threading/countdownevent.md).|  
+|<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|Element synchronizacji, podobnie jak <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>. <xref:System.Threading.ManualResetEventSlim> to lekki, ale można używać tylko do komunikacji wewnątrz procesu. Aby uzyskać więcej informacji, zobacz [ManualResetEvent i ManualResetEventSlim](../../../docs/standard/threading/manualresetevent-and-manualreseteventslim.md).|  
+|<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>|Element synchronizacji, która ogranicza liczbę wątków, które można jednocześnie uzyskać dostęp do zasobu lub puli zasobów. Aby uzyskać więcej informacji, zobacz [Semaphore i SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md).|  
+|<xref:System.Threading.SpinLock?displayProperty=nameWithType>|Podstawowego blokady wzajemne wykluczenie, który powoduje wątku, który próbuje uzyskać blokady oczekiwać w pętli, lub *pokrętła*, okres czasu przed jego quantum reaguje. W scenariuszach, w którym powinien być krótki, czas oczekiwania na blokadę <xref:System.Threading.SpinLock> zapewnia większą wydajność niż inne formy blokowania. Aby uzyskać więcej informacji, zobacz [struktury SpinLock](../../../docs/standard/threading/spinlock.md).|  
+|<xref:System.Threading.SpinWait?displayProperty=nameWithType>|Małe, lekkie typ, który będzie pokrętła przez określony czas i ostatecznie umieścić wątku w stan oczekiwania, po przekroczeniu liczby pokrętła.  Aby uzyskać więcej informacji, zobacz [metody SpinWait](../../../docs/standard/threading/spinwait.md).|  
   
  Aby uzyskać więcej informacji, zobacz:  
   
@@ -53,20 +53,20 @@ ms.locfileid: "33585090"
 -   [Porady: synchronizacja jednoczesnych operacji za pomocą bariery](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
   
 ## <a name="lazy-initialization-classes"></a>Inicjalizacja z opóźnieniem klas  
- Pamięci dla obiekt z Inicjalizacja z opóźnieniem, nie jest przydzielona, dopóki nie jest wymagana. Inicjalizacja z opóźnieniem może poprawić wydajność przez rozłożenie obiekt alokacji równomiernie okres istnienia programu. Inicjalizacja z opóźnieniem dla dowolnego typu niestandardowego można włączyć zawijania typ <xref:System.Lazy%601>.  
+ Przy użyciu inicjowania z opóźnieniem pamięci dla obiektu nie jest przydzielony, dopóki nie jest to konieczne. Inicjalizacja z opóźnieniem może zwiększyć wydajność przez rozłożenie przydziały obiektów równomiernie na okres istnienia programu. Można włączyć inicjowania z opóźnieniem dla dowolnego typu niestandardowego przez opakowywanie typ <xref:System.Lazy%601>.  
   
- Poniższa tabela zawiera listę typów Inicjalizacja z opóźnieniem:  
+ Poniższa tabela zawiera listę typów inicjowania z opóźnieniem:  
   
 |Typ|Opis|  
 |----------|-----------------|  
-|<xref:System.Lazy%601?displayProperty=nameWithType>|Udostępnia niewielka, obsługującej wielowątkowość Inicjalizacja z opóźnieniem.|  
-|<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>|Zapewnia wartość opóźnieniem zainicjować na podstawie dla każdego wątku każdy wątek opóźnieniem wywoływania funkcji inicjowania.|  
-|<xref:System.Threading.LazyInitializer?displayProperty=nameWithType>|Udostępnia metody statyczne, które uniknąć konieczności przydzielić dedykowane wystąpienie Inicjalizacja z opóźnieniem. W zamian użyj ich odwołań do upewnij się, że zainicjowano elementy docelowe, ponieważ są one używane.|  
+|<xref:System.Lazy%601?displayProperty=nameWithType>|Udostępnia lekki, wątkowo inicjowania z opóźnieniem —.|  
+|<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>|Zapewnia wartość opóźnieniem zainicjowana na zasadzie na wątek, każdy wątek opóźnieniem wywoływania funkcji inicjowania.|  
+|<xref:System.Threading.LazyInitializer?displayProperty=nameWithType>|Udostępnia metody statyczne, które uniknąć konieczności przydzielić dedykowane wystąpienie inicjowania z opóźnieniem. Zamiast tego używają odwołań, aby upewnić się, że elementy docelowe zostały zainicjowane, ponieważ są one używane.|  
   
- Aby uzyskać więcej informacji, zobacz [Incjalizacji](../../../docs/framework/performance/lazy-initialization.md).  
+ Aby uzyskać więcej informacji, zobacz [inicjowania z opóźnieniem](../../../docs/framework/performance/lazy-initialization.md).  
   
-## <a name="aggregate-exceptions"></a>Łączny wyjątków  
- <xref:System.AggregateException?displayProperty=nameWithType> Typu może służyć do przechwytywania wielu wyjątków, które są zgłaszane jednocześnie w oddzielnych wątkach i przywróć ich łącząca wątku pojedynczego wyjątek. <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> typów i PLINQ używają <xref:System.AggregateException> często w tym celu. Aby uzyskać więcej informacji, zobacz [NIB: porady: obsługa wyjątków zgłaszanych przez zadania](https://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d) i [porady: obsługi wyjątków w zapytaniu PLINQ](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).  
+## <a name="aggregate-exceptions"></a>Wyjątki agregacji  
+ <xref:System.AggregateException?displayProperty=nameWithType> Typ może być używany do przechwytywania wielu wyjątków, które są zgłaszane jednocześnie w oddzielnych wątkach i przywrócić je do sąsiadującego wątku pojedynczego wyjątek. <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> typów i PLINQ używać <xref:System.AggregateException> często w tym celu. Aby uzyskać więcej informacji, zobacz [wyjątków](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) i [porady: obsługa wyjątków w zapytaniu PLINQ](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>  

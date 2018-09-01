@@ -1,147 +1,147 @@
 ---
-title: Zatrudniania procesu
+title: Proces zatrudniania
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 87327692e35e9386dab4cf906ab33cbe08d73fdd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 41f5508ea5805581282389e0731a00dde7796bc0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519766"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396323"
 ---
-# <a name="hiring-process"></a>Zatrudniania procesu
-W tym przykładzie pokazano, jak zaimplementować proces biznesowy przy użyciu działań obsługi wiadomości i dwóch przepływów pracy hostowany jako usługi przepływu pracy. Te przepływy pracy są częścią infrastruktury IT fikcyjnej firmy o nazwie Contoso, Inc.  
+# <a name="hiring-process"></a>Proces zatrudniania
+Ten przykład demonstruje sposób implementacji procesu biznesowego, przy użyciu działań dotyczących komunikatów i dwa przepływy pracy hostowany jako usług przepływu pracy. Te przepływy pracy są częścią infrastruktury IT w fikcyjnej firmy o nazwie Contoso, Inc.  
   
- `HiringRequest` Procesu przepływu pracy (zaimplementowane jako <xref:System.Activities.Statements.Flowchart>) żąda autoryzacji z kilku menedżerów w organizacji. Na osiągnięcie tego celu, przepływ pracy używa innych istniejących usług w organizacji (w tym przypadku usługa skrzynki odbiorczej i Usługa danych organizacji zaimplementowane jako zwykły usług Windows Communication Foundation (WCF)).  
+ `HiringRequest` Procesu przepływu pracy (zaimplementowane jako <xref:System.Activities.Statements.Flowchart>) poprosi o podanie autoryzacji z kilku menedżerów w organizacji. Aby osiągnąć ten cel, przepływ pracy używa innych istniejących usług w organizacji (w naszym przypadku skrzynki odbiorczej usługi i usługi danych organizacji, zaimplementowane jako zwykły usług Windows Communication Foundation (WCF)).  
   
- `ResumeRequest` Przepływu pracy (zaimplementowane jako <xref:System.Activities.Statements.Sequence>) publikuje zadania w witrynie sieci Web firmy Contoso zewnętrznych możliwości podnoszenia kwalifikacji i zarządza nabycie wznawia. Publikowanie zadania jest dostępny w sieci Web zewnętrznej witryny na czas (dopóki nie zostanie przekroczony został limit wygasa) lub do pracownika z firmy Contoso decyduje o tym, aby usunąć go.  
+ `ResumeRequest` Przepływu pracy (zaimplementowane jako <xref:System.Activities.Statements.Sequence>) publikuje zadania opublikowanie w witrynie sieci Web kariery zewnętrznych firmy Contoso i zarządza nimi przejęcia wznawia. Publikowanie zadań jest dostępna w zewnętrznej sieci Web, witryny w ustalonym czasie (aż do wygaśnięcia limitu czasu) lub do momentu pracownika z firmy Contoso decyduje o jej usunięcie.  
   
- W tym przykładzie pokazano poniższe funkcje [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]:  
+ W tym przykładzie przedstawiono następujące funkcje [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]:  
   
--   <xref:System.Activities.Statements.Flowchart> i <xref:System.Activities.Statements.Sequence> przepływy pracy dla modelowania procesów biznesowych.  
+-   <xref:System.Activities.Statements.Flowchart> i <xref:System.Activities.Statements.Sequence> przepływów pracy na potrzeby modelowania procesów biznesowych.  
   
 -   Usługi przepływu pracy.  
   
 -   Działania dotyczące komunikatów.  
   
--   Na podstawie zawartości korelacji.  
+-   Korelacja oparta na zawartości.  
   
--   Działania niestandardowe (deklaratywne i opartych na kodzie).  
+-   Działania niestandardowe (deklaratywne i oparte na kodzie).  
   
--   Dostarczane przez system trwałości serwera SQL.  
+-   Dostarczane przez system server stanów trwałych programu SQL.  
   
 -   Niestandardowe <xref:System.Activities.Persistence.PersistenceParticipant>.  
   
 -   Niestandardowe śledzenia.  
   
--   Zdarzenia śledzenia do śledzenia systemu Windows (ETW).  
+-   Śledzenie zdarzeń dla zdarzeń śledzenia Windows (ETW).  
   
--   Skład działań.  
+-   Kompozycja działań.  
   
 -   <xref:System.Activities.Statements.Parallel> działania.  
   
 -   <xref:System.Activities.Statements.CancellationScope> działanie.  
   
--   Czasomierze trwałe (<xref:System.Activities.Statements.Delay> działania).  
+-   Czasomierze trwałe (<xref:System.Activities.Statements.Delay> działanie).  
   
 -   Transakcje.  
   
 -   Więcej niż jeden przepływ pracy w tym samym rozwiązaniu.  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\HiringProcess`  
   
 ## <a name="description-of-the-process"></a>Opis procesu  
- Firmy Contoso, Inc. chce mieć ścisłej kontroli nad zatrudnionych w każdej jego działów. W związku z tym w dowolnym momencie każdy pracownik chce uruchomić nowego procesu zatrudniania, muszą przejść przez zatrudniania zatwierdzenia procesu żądania przed rekrutacji zdarzyć faktycznie. Ten proces jest nazywany zatrudniania przetworzyć żądania (zdefiniowany w projekcie HiringRequestService) i obejmuje następujące kroki:  
+ Contoso, Inc. chce, aby mieć ścisłą kontrolę nad zatrudnionych w każdym z jego działów. W związku z tym w dowolnym momencie każdy pracownik chce, aby rozpocząć nowy proces zatrudniania, muszą przejść przez zatrudniania zatwierdzenia proces żądania, zanim rekrutacji może rzeczywiście wystąpi. Ten proces jest nazywany zatrudniania żądanie procesu (zdefiniowane w projekcie HiringRequestService) i składa się z następujących czynności:  
   
-1.  Pracownik (obiektu żądającego) uruchamia zatrudniania przetworzyć żądania.  
+1.  Pracownik (osoby żądającej) uruchamia zatrudniania żądanie procesu.  
   
 2.  Menedżer żądającego musi zatwierdzić żądanie:  
   
-    1.  Menedżer może odrzucać żądania.  
+    1.  Menedżer może odrzucić żądanie.  
   
-    2.  Menedżer może zwracać żądania do zleceniodawcy, aby uzyskać dodatkowe informacje:  
+    2.  Menedżer może zwrócić żądania do zleceniodawcy, aby uzyskać dodatkowe informacje:  
   
-        1.  Żądający monitoruje i wysyła żądanie z powrotem do menedżera.  
+        1.  Osoby żądającej przeglądów i wysyła żądanie do menedżera.  
   
     3.  Menedżer może zatwierdzić.  
   
-3.  Po Menedżera żądającego zatwierdza, właściciel działu musi zatwierdzić żądanie:  
+3.  Po Menedżera żądającego zatwierdza, właściciel działu, musisz zatwierdzić żądanie:  
   
-    1.  Właściciel działu można odrzucić.  
+    1.  Właściciel działu może odrzucić.  
   
     2.  Właściciel działu mogą zatwierdzać.  
   
-4.  Po zatwierdza właściciela działu, proces wymaga zatwierdzenia menedżerów 2 h lub Dyrektora:  
+4.  Po zatwierdzeniu przez właściciela działu, ten proces wymaga zatwierdzenia menedżerów 2 h lub dyrektora generalnego:  
   
-    1.  Proces może przejść w stan zatwierdzone lub odrzucone.  
+    1.  Ten proces można przejść do stanu zaakceptowane lub odrzucone.  
   
-    2.  Jeśli proces jest akceptowany, nowe wystąpienie klasy `ResumeRequest` przepływ pracy jest uruchomiony (`ResumeRequest` jest połączony z HiringRequest.csproj za pomocą odwołania do usługi.)  
+    2.  Jeśli proces zostanie zaakceptowana, nowe wystąpienie klasy `ResumeRequest` uruchamiania przepływu pracy (`ResumeRequest` jest połączony z HiringRequest.csproj poprzez odwołanie do usługi.)  
   
- Po menedżerów zatwierdzenie zatrudnienia pracownika, HR musi znaleźć odpowiednie kandydata. Ten proces odbywa się w drugim przepływu pracy (`ResumeRequest`zdefiniowanej w ResumeRequestService.csproj). Ten przepływ pracy definiuje proces przesyłania zadania Księgowanie za pomocą zawodowych możliwość zewnętrznej witryny sieci Web możliwości podnoszenia kwalifikacji firmy Contoso, odbiera wznawia z kandydatów i monitoruje stan delegowania zadania. Pozycje są dostępne w danym okresie ustalonym (do czasu wygaśnięcia) lub do momentu pracownika z firmy Contoso decyduje o tym usunąć go. `ResumeRequest` Przepływ pracy składa się z następujących czynności:  
+ Po zatwierdzić menedżerowie zatrudniania nowych pracowników działu KADR muszą znaleźć odpowiednim kandydatem. Ten proces odbywa się przez drugi przepływu pracy (`ResumeRequest`zdefiniowaną w ResumeRequestService.csproj). Ten przepływ pracy definiuje proces przesyłania zadania publikowanie za pomocą kariery możliwość zewnętrznej witryny sieci Web kariery firmy Contoso, otrzyma wznawia od kandydatów, a następnie monitoruje stan delegowania zadań. Pozycje są dostępne przez stały okres (aż do czasu wygaśnięcia) lub dopóki pracownika z firmy Contoso decyduje go usunąć. `ResumeRequest` Przepływu pracy składa się z następujących czynności:  
   
-1.  Pracownika z firmy Contoso typy informacje dotyczące pozycji i okres limitu czasu. Gdy typy pracowników w tych informacji, pozycja jest opublikowana w witrynie sieci Web możliwości podnoszenia kwalifikacji.  
+1.  Pracownika z firmy Contoso typów w informacje na temat pozycji i okres limitu czasu. Gdy typy pracowników te informacje, pozycja jest publikowany w witrynie sieci Web kariery.  
   
-2.  Po opublikowaniu informacji zainteresowanych stron można przesłać wznawia ich. Po przesłaniu wznowienia, znajduje się w rekordzie powiązany otwierania zadania.  
+2.  Po opublikowaniu informacji zainteresowane strony mogą przesyłać wznawia ich. Po przesłaniu życiorysu znajduje się w rekordzie połączone do otwarcia zadania.  
   
-3.  Kandydaci mogą przesyłać wznawia, dopóki przekroczeniu limitu czasu lub ktoś z działu Contoso HR jawnie postanowi usunąć delegowania zatrzymywania procesu.  
+3.  Kandydaci mogą przesyłać wznawia, do momentu wygaśnięcia limitu czasu lub ktoś z działu KADR Contoso jawnie postanowi usunąć delegowania zatrzymywania procesu.  
   
-## <a name="projects-in-the-sample"></a>Projekty w próbce.  
- W poniższej tabeli przedstawiono projektów w rozwiązaniu próbki.  
+## <a name="projects-in-the-sample"></a>Projekty w przykładzie  
+ W poniższej tabeli przedstawiono projektów w przykładowym rozwiązaniu.  
   
 |Projekt|Opis|  
 |-------------|-----------------|  
-|ContosoHR|Zawiera klasy repozytorium, obiektów biznesowych i kontraktów danych.|  
-|HiringRequestService|Zawiera definicję przepływu pracy zatrudnienia proces żądania.<br /><br /> Ten projekt jest wdrażany jako aplikacji konsoli własnym obsługującego przepływu pracy (plik xaml) jako usługa.|  
-|ResumeRequestService|Usługi przepływu pracy, która gromadzi wznawia z kandydatów do chwili osiągnięcia limitu czasu lub inna decyduje o tym, że proces musi zostać zatrzymana.<br /><br /> Ten projekt jest wdrażany jako usługa deklaracyjnego przepływu pracy (xamlx).|  
-|OrgService|Usługa, która udostępnia informacje organizacyjne (pracowników, pozycje PositionTypes i działów). Tę usługę można traktować jako modułu organizacji firmy z zasobów przedsiębiorstwa planowanie (ERP).<br /><br /> Ten projekt jest wdrażany jako aplikacja konsolowa, która udostępnia usługi Windows Communication Foundation (WCF).|  
-|InboxService|Skrzynka odbiorcza zawiera zadań dla pracowników.<br /><br /> Ten projekt jest wdrażany jako aplikacja konsolowa, która udostępnia usługi WCF.|  
-|InternalClient|Aplikacji sieci Web do interakcji z procesem. Użytkownicy mogą uruchomić, udziału i przeglądać ich HiringProcess przepływów pracy. Za pomocą tej aplikacji, mogą także uruchomić i monitorować procesy ResumeRequest.<br /><br /> Ta lokacja jest implementowany jako wewnętrzne sieci intranet firmy Contoso. Ten projekt jest wdrażany jako witryny sieci Web ASP.NET.|  
-|CareersWebSite|Zewnętrznej witryny sieci Web, który ujawnia Otwórz pozycje w firmie Contoso. Wszelkie potencjalne kandydata można przejść do tej witryny i przesłać Wznów.|  
+|ContosoHR|Zawiera klasy repozytorium, obiektów biznesowych i kontrakty danych.|  
+|HiringRequestService|Zawiera definicję przepływu pracy, proces zatrudniania żądania.<br /><br /> Ten projekt jest wdrażany jako aplikację konsolową, która samodzielnie obsługuje przepływu pracy (plik xaml) jako usługę.|  
+|ResumeRequestService|Usługi przepływu pracy, która gromadzi wznawia z kandydatów, dopóki nie upłynie limit czasu wygaśnięcia lub ktoś decyduje o tym, że proces musi zostać zatrzymana.<br /><br /> Ten projekt jest wdrażany jako usługa deklaracyjnego przepływu pracy (xamlx).|  
+|OrgService|To usługa, która udostępnia informacje organizacyjne (pracownicy, pozycje, PositionTypes i działów). Tę usługę można traktować jako moduł organizacji firmy z zasobów przedsiębiorstwa Plan (ERP).<br /><br /> Ten projekt jest wdrażany jako aplikację konsolową, która udostępnia usługi Windows Communication Foundation (WCF).|  
+|InboxService|Skrzynka odbiorcza, zawierający informacje z możliwością działania zadania dla pracowników.<br /><br /> Ten projekt jest wdrażany jako aplikację konsolową, która udostępnia usługi WCF.|  
+|InternalClient|Aplikacja sieci Web do interakcji z procesu. Użytkownicy mogą uruchomić, udział i przeglądać ich HiringProcess przepływów pracy. Za pomocą tej aplikacji, mogą także uruchomić i monitorować procesy ResumeRequest.<br /><br /> Ta witryna jest implementowany jako wewnętrzne sieci intranet firmy Contoso. Ten projekt jest wdrażany jako witryny sieci Web ASP.NET.|  
+|CareersWebSite|Zewnętrznej witryny sieci Web, która udostępnia stanowiska w firmie Contoso. Wszelkie potencjalne Release candidate można przejść do tej witryny i przesłać życiorysu.|  
   
 ## <a name="feature-summary"></a>Podsumowanie funkcji  
- W poniższej tabeli opisano, jak każdej funkcji jest używany w tym przykładzie.  
+ W poniższej tabeli opisano, jak każda funkcja jest używana w tym przykładzie.  
   
 |Funkcja|Opis|Projekt|  
 |-------------|-----------------|-------------|  
-|Schemat blokowy|Proces biznesowy jest reprezentowany jako blokowego. Ten opis schemat blokowy przedstawia proces w taki sam sposób, w którym firma będzie mieć narysowana go w tablicy.|HiringRequestService|  
-|usługi przepływu pracy|Schemat blokowy procesu definicji znajduje się w usłudze (w tym przykładzie usługa znajduje się w aplikacji konsoli).|HiringRequestService|  
-|Działania dotyczące komunikatów|Schemat blokowy używa działania obsługi komunikatów na dwa sposoby:<br /><br /> — Aby uzyskać informacje od użytkownika (Aby odbierać decyzje i powiązane informacje w każdym kroku zatwierdzenia).<br />— W celu wchodzenia w interakcje z innymi usługami istniejących (InboxService i OrgDataService używane za pośrednictwem odwołania do usług).|HiringRequestService|  
-|Korelacja na podstawie zawartości|Korelowanie zatwierdzenia wiadomości o właściwości ID zatrudniania żądania:<br /><br /> — Po uruchomieniu procesu dojścia korelacji jest zainicjowany przy użyciu Identyfikatora żądania.<br />-Korelowanie przychodzących komunikatów zatwierdzenia na ich ID (pierwszy parametr każdy komunikat zatwierdzenia jest identyfikatorem żądania).|HiringRequestService / ResumeRequestService|  
-|Działania niestandardowe (deklaratywne i kod na podstawie)|Istnieje kilka niestandardowych działań w tym przykładzie:<br /><br /> -   `SaveActionTracking`: Działanie emituje niestandardowego <xref:System.Activities.Tracking.TrackingRecord> (przy użyciu <xref:System.Activities.NativeActivityContext.Track%2A>). To działanie został utworzony przy użyciu kodu konieczne rozszerzenie <xref:System.Activities.NativeActivity>.<br />-   `GetEmployeesByPositionTypes`: To działanie odbiera listę pozycji typu identyfikatorów i zwraca listę użytkowników, którzy mają tej pozycji w firmie Contoso. To działanie został utworzony deklaratywnie (przy użyciu narzędzia Projektant działań).<br />-   `SaveHiringRequestInfo`: Działanie zapisuje informacje o `HiringRequest` (przy użyciu `HiringRequestRepository.Save`). To działanie został utworzony przy użyciu kodu konieczne rozszerzenie <xref:System.Activities.CodeActivity>.|HiringRequestService|  
-|Trwałość serwera SQL dostarczane przez system|<xref:System.ServiceModel.Activities.WorkflowServiceHost> Wystąpienie, schemat blokowy procesu definicji jest skonfigurowana do używania trwałości programu SQL Server dostarczane przez system.|HiringRequestService / ResumeRequestService|  
-|Niestandardowe śledzenia|Przykład obejmuje uczestnika niestandardowych śledzenia, który zapisuje historię `HiringRequestProcess` (to rejestruje czynności zostały wykonane, kto i kiedy). Kod źródłowy jest w folderze śledzenia HiringRequestService.|HiringRequestService|  
+|Schemat blokowy|Proces biznesowy jest przedstawiana jako schematu blokowego. Opis ten schemat blokowy przedstawia proces w taki sam sposób, w którym firma będzie narysuje je w tablicy.|HiringRequestService|  
+|Usługi przepływu pracy|Schemat blokowy z definicji procesu znajduje się w usłudze (w tym przykładzie usługa znajduje się w aplikacji konsoli).|HiringRequestService|  
+|Działania dotyczące komunikatów|Schemat blokowy używa działań komunikatów na dwa sposoby:<br /><br /> -Aby uzyskać informacje od użytkownika (Aby odbierać decyzje i powiązane informacje w każdym kroku zatwierdzenia).<br />-Aby wchodzić w interakcje z innymi usługami istniejących (InboxService i OrgDataService, używane za pośrednictwem odwołań do usług).|HiringRequestService|  
+|Korelacja na podstawie zawartości|Korelowanie komunikatów zatwierdzenia na właściwość ID zatrudniania żądania:<br /><br /> -Rozpoczęcie procesu, uchwyt korelacji jest inicjowany z identyfikator żądania.<br />— Komunikaty przychodzące zatwierdzenia skorelować na ich ID (identyfikator żądania jest pierwszy parametr każdy komunikat zatwierdzenia).|HiringRequestService / ResumeRequestService|  
+|Działania niestandardowe (deklaratywne i kodu na podstawie)|Istnieje kilka niestandardowych działań w tym przykładzie:<br /><br /> -   `SaveActionTracking`: To działanie wyemituje niestandardowego <xref:System.Activities.Tracking.TrackingRecord> (przy użyciu <xref:System.Activities.NativeActivityContext.Track%2A>). To działanie został utworzony przy użyciu kodu imperatywnego rozszerzanie <xref:System.Activities.NativeActivity>.<br />-   `GetEmployeesByPositionTypes`: To działanie odbiera listę typie stanowisk identyfikatory i zwraca listę osób, które mają tej pozycji w firmie Contoso. To działanie został utworzony w sposób deklaratywny (z wykorzystaniem projektanta działań).<br />-   `SaveHiringRequestInfo`: To działanie zapisuje informacje o `HiringRequest` (przy użyciu `HiringRequestRepository.Save`). To działanie został utworzony przy użyciu kodu imperatywnego rozszerzanie <xref:System.Activities.CodeActivity>.|HiringRequestService|  
+|Trwałość serwera SQL dostarczane przez system|<xref:System.ServiceModel.Activities.WorkflowServiceHost> Wystąpienie, schemat blokowy definicji procesu jest skonfigurowany do używania dostarczane przez system stanów trwałych programu SQL Server.|HiringRequestService / ResumeRequestService|  
+|Niestandardowe śledzenie|Przykład obejmuje uczestnikiem niestandardowe śledzenia, która zapisuje historii `HiringRequestProcess` (to rekordy, jakie działania zostały wykonane, przez kogo i kiedy). Kod źródłowy jest w folderze śledzenia HiringRequestService.|HiringRequestService|  
 |Śledzenie zdarzeń systemu Windows|Dostarczane przez system śledzenia zdarzeń systemu Windows jest skonfigurowany w pliku App.config w usłudze HiringRequestService.|HiringRequestService|  
-|Kompozycja działań|Definicja proces używa wolnego skład <xref:System.Activities.Activity>. Schemat blokowy zawiera kilka sekwencji i działania równoległe, które jednocześnie zawierać innych działań (i tak dalej).|HiringRequestService|  
-|Działania równoległe|-   <xref:System.Activities.Statements.ParallelForEach%601> Służy do rejestrowania w skrzynce odbiorczej Prezes i menedżerów HR równoległe (oczekiwanie na menedżerów dwóch HR zatwierdzenia kroku).<br />-   <xref:System.Activities.Statements.Parallel> Służy do wykonywania niektórych zadań oczyszczania w krokach ukończone i odrzucone|HiringRequestService|  
-|Anulowanie modelu|Schemat blokowy używa <xref:System.Activities.Statements.CancellationScope> można utworzyć zachowania anulowania (w tym przypadku nie niektórych oczyszczania.)|HiringRequestService|  
-|Uczestnika trwałości klienta|`HiringRequestPersistenceParticipant` zapisuje dane z zmiennej przepływu pracy do tabeli w bazie danych Contoso HR.|HiringRequestService|  
-|Usługi przepływu pracy|`ResumeRequestService` zaimplementowano przy użyciu usługi przepływu pracy. Informacje o definicji i usługi przepływu pracy znajduje się w ResumeRequestService.xamlx. Usługa jest skonfigurowana do używania trwałości i śledzenia.|ResumeRequestService|  
-|Czasomierze trwałych|`ResumeRequestService` używa czasomierze trwałe, aby zdefiniować czas trwania księgowej zlecenia (po przekroczeniu limitu czasu, księgowanie zadania jest zamknięty).|ResumeRequestService|  
-|Transakcje|<xref:System.Activities.Statements.TransactionScope> Służy do zapewnienia spójności danych w ramach wykonania kilku czynności (po odebraniu nowego resume).|ResumeRequestService|  
-|Transakcje|Uczestnika trwałości niestandardowe (`HiringRequestPersistenceParticipant`) i uczestnika niestandardowych śledzenia (`HistoryFileTrackingParticipant`) Użyj tej samej transakcji.|HiringRequestService|  
-|Przy użyciu [!INCLUDE[wf1](../../../../includes/wf1-md.md)] w [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji.|Przepływy pracy są dostępne z dwóch [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji.|InternalClient / CareersWebSite|  
+|Kompozycja działań|Definicja proces używa bezpłatnego skład <xref:System.Activities.Activity>. Schemat blokowy zawiera kilka sekwencji i działania równoległe, zawierające w tym samym czasie inne działania (i tak dalej).|HiringRequestService|  
+|Działania równoległe|-   <xref:System.Activities.Statements.ParallelForEach%601> Służy do rejestrowania w skrzynce odbiorczej, Dyrektor Generalny i menedżerów działu KADR równolegle (oczekiwanie na krok zatwierdzenia menedżerów dwóch HR).<br />-   <xref:System.Activities.Statements.Parallel> Służy do wykonywania niektórych zadań oczyszczania w krokach ukończone i odrzucony|HiringRequestService|  
+|Unieważnieniu modelu|Schemat blokowy używa <xref:System.Activities.Statements.CancellationScope> utworzyć zachowanie anulowania (w tym przypadku nie niektóre oczyszczanie.)|HiringRequestService|  
+|Klient uczestnika stanów trwałych|`HiringRequestPersistenceParticipant` zapisuje dane ze zmiennej przepływu pracy do tabeli w bazie danych HR firmy Contoso.|HiringRequestService|  
+|Usługi przepływu pracy|`ResumeRequestService` jest implementowany przy użyciu usług przepływu pracy. Informacje o definicji i usługi przepływu pracy znajduje się w ResumeRequestService.xamlx. Usługa jest skonfigurowana do użycia, trwałość i śledzenia.|ResumeRequestService|  
+|Czasomierze trwałe|`ResumeRequestService` używa czasomierzy trwałe, aby zdefiniować czas trwania zadania księgowania (po wygaśnięciu limitu czasu, publikowanie zadania zostanie zamknięte).|ResumeRequestService|  
+|Transakcje|<xref:System.Activities.Statements.TransactionScope> Służy do zapewnienia spójności danych w ramach wykonania kilku czynności (po odebraniu nowych resume).|ResumeRequestService|  
+|Transakcje|Niestandardowego uczestnika stanów trwałych (`HiringRequestPersistenceParticipant`) i niestandardowego uczestnika śledzenia (`HistoryFileTrackingParticipant`) Użyj tej samej transakcji.|HiringRequestService|  
+|Za pomocą [!INCLUDE[wf1](../../../../includes/wf1-md.md)] w [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji.|Przepływy pracy są dostępne z dwóch [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji.|InternalClient / CareersWebSite|  
   
 ## <a name="data-storage"></a>Magazyn danych  
- Dane są przechowywane w bazie danych programu SQL Server o nazwie `ContosoHR` (skrypt służący do tworzenia tej bazy danych znajduje się w `DbSetup` folderu). Wystąpienia przepływu pracy są przechowywane w bazie danych programu SQL Server o nazwie `InstanceStore` (skrypty służące do tworzenia w magazynie wystąpień są częścią [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] dystrybucji).  
+ Dane są przechowywane w bazie danych programu SQL Server o nazwie `ContosoHR` (skryptu do tworzenia tej bazy danych znajduje się w `DbSetup` folder). Wystąpienia przepływu pracy są przechowywane w bazie danych programu SQL Server o nazwie `InstanceStore` (skrypty służące do tworzenia magazyn wystąpienia są częścią [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] dystrybucji).  
   
- Obie bazy danych są tworzone przez uruchomienie skryptu Setup.cmd z wiersza polecenia programu Visual Studio.  
+ Obu bazach danych są tworzone przez uruchomienie skryptu plik Setup.cmd w wierszu polecenia programu Visual Studio.  
   
-## <a name="running-the-sample"></a>Uruchomiona próbki  
+## <a name="running-the-sample"></a>Działa aplikacja przykładowa  
   
 #### <a name="to-create-the-databases"></a>Do tworzenia baz danych  
   
 1.  Otwórz wiersz polecenia programu Visual Studio.  
   
-2.  Przejdź do folderu próbki.  
+2.  Przejdź do folderu przykładu.  
   
-3.  Uruchom Setup.cmd.  
+3.  Uruchom plik Setup.cmd.  
   
 4.  Sprawdź, czy dwie bazy danych `ContosoHR` i `InstanceStore` zostały utworzone w programie SQL Express.  
   
@@ -153,71 +153,71 @@ W tym przykładzie pokazano, jak zaimplementować proces biznesowy przy użyciu 
   
 3.  Wybierz opcję **wiele projektów startowych** i ustaw **CareersWebSite**, **InternalClient**, **HiringRequestService**, i **ResumeRequestService** do **Start**. Pozostaw **ContosoHR**, **InboxService**, i **OrgService** None.  
   
-4.  Skompiluj rozwiązanie, naciskając klawisze CTRL + SHIFT + B. Sprawdź, czy kompilacja powiodła się.  
+4.  Skompiluj rozwiązanie, naciskając klawisze CTRL + SHIFT + B. Sprawdź, czy kompilacja zakończyła się pomyślnie.  
   
 #### <a name="to-run-the-solution"></a>Aby uruchomić rozwiązanie  
   
-1.  Po rozwiązaniu kompilacje, naciśnij kombinację klawiszy CTRL + F5, aby uruchomić bez debugowania. Sprawdź, czy wszystkie usługi zostały uruchomione.  
+1.  Po kompilacji rozwiązania, naciśnij klawisze CTRL + F5, aby uruchomić bez debugowania. Sprawdź, czy wszystkie usługi zostały uruchomione.  
   
-2.  Kliknij prawym przyciskiem myszy **InternalClient** w rozwiązaniu, a następnie wybierz **Wyświetl w przeglądarce**. Domyślna strona dla `InternalClient` jest wyświetlany. Upewnij się, że usługi są uruchomione i kliknij łącze.  
+2.  Kliknij prawym przyciskiem myszy **InternalClient** w rozwiązaniu, a następnie wybierz **Pokaż w przeglądarce**. Domyślna strona dla `InternalClient` jest wyświetlana. Upewnij się, że usługi są uruchomione, a następnie kliknij łącze.  
   
-3.  **HiringRequest** modułu jest wyświetlany. Możesz wykonać scenariusz szczegółowo w tym miejscu.  
+3.  **HiringRequest** modułu jest wyświetlana. Możesz wykonać scenariusz przedstawione w tym miejscu.  
   
-4.  Raz `HiringRequest` jest zakończone, można uruchomić `ResumeRequest`. Możesz wykonać scenariusz szczegółowo w tym miejscu.  
+4.  Gdy `HiringRequest` jest zakończone, możesz rozpocząć `ResumeRequest`. Możesz wykonać scenariusz przedstawione w tym miejscu.  
   
-5.  Gdy `ResumeRequest` jest opublikowane, jest dostępna w publicznej witryny sieci Web (witryna sieci Web firmy Contoso możliwości podnoszenia kwalifikacji). Aby zobaczyć, księgowanie zadania (i zastosować dla pozycji), przejdź do witryny sieci Web możliwości podnoszenia kwalifikacji.  
+5.  Gdy `ResumeRequest` jest opublikowana, jest dostępna w publicznej witrynie sieci Web (witryna sieci Web kariery firmy Contoso). Aby zobaczyć, publikując zadania (i zastosować dla pozycji), przejdź do witryny sieci Web kariery.  
   
-6.  Kliknij prawym przyciskiem myszy **CareersWebSite** rozwiązania i wybierz **Wyświetl w przeglądarce**.  
+6.  Kliknij prawym przyciskiem myszy **CareersWebSite** w rozwiązaniu i wybierz **Pokaż w przeglądarce**.  
   
-7.  Przejdź z powrotem do `InternalClient` przez kliknięcie prawym przyciskiem myszy **InternalClient** w rozwiązaniu i wybierając **Wyświetl w przeglądarce**.  
+7.  Przejdź z powrotem do `InternalClient` przez kliknięcie prawym przyciskiem myszy **InternalClient** w rozwiązaniu i wybierając polecenie **Pokaż w przeglądarce**.  
   
-8.  Przejdź do **JobPostings** sekcji klikając **zadań** łącze w menu u góry skrzynki odbiorczej. Możesz wykonać scenariusz szczegółowo w tym miejscu.  
+8.  Przejdź do **JobPostings** sekcji, klikając **zadań** link w menu u góry skrzynki odbiorczej. Możesz wykonać scenariusz przedstawione w tym miejscu.  
   
 ## <a name="scenarios"></a>Scenariusze  
   
-### <a name="hiring-request"></a>Zatrudniania żądania  
+### <a name="hiring-request"></a>Żądanie zatrudniania  
   
-1.  Jan Alexander (inżynier oprogramowania) chce, aby zażądać nowego położenia zatrudnienia inżyniera testowego (SDET) oprogramowania działu inżynierii, który ma co najmniej 3 latach doświadczeń w języku C#.  
+1.  Jan Alexander (inżynier oprogramowania) chce zażądać nowego położenia zatrudnienia programista testu (SDET) działu inżynierii, który ma co najmniej 3 lata doświadczenia w języku C#.  
   
-2.  Utworzone żądanie pojawia się w skrzynce odbiorczej na Michael (kliknij **Odśwież** Jeśli nie widzisz żądania) oczekujące na zatwierdzenie Peterowi Brehm, będącego jego Michael menedżera.  
+2.  Utworzone żądanie pojawi się w skrzynce odbiorczej przez Michaela (kliknij **Odśwież** Jeśli nie widzisz żądania) oczekuje na zatwierdzenie Peter Brehm, kto jest kierownikiem firmy Michael.  
   
-3.  Peterowi potrzebuje do działania w jego Michael żądania. Wymagania pozycji z C# obsługi zamiast 3, 5 lat on sądzi, wysyła on jego komentarze wstecz do przeglądu.  
+3.  Peter chce działać na żądanie przez Michaela. ADAM sądzą zapotrzebowanie pozycji 5 lat środowisko C#, a nie 3, więc użytkownik wysyła swoje komentarze, wróć do przeglądu.  
   
-4.  Jan zobaczy komunikat w swojej Skrzynce odbiorczej z menedżerowi i chce działania. Jan widzi historii żądania pozycji i jest zgodna z Peterowi. Jan modyfikuje opis, aby wymagać 5 latach doświadczeń C# i akceptuje modyfikacji.  
+4.  Michael zobaczy komunikat w swojej Skrzynce odbiorczej z menedżerowi i chce działać. Michael widzi historię żądań pozycji i zgadza się z Peter. Michael modyfikuje opis, który wymaga 5 lat doświadczenia w języku C# i akceptuje modyfikacji.  
   
-5.  Peterowi działa na żądanie zmodyfikowane przez Michael i akceptuje on. Żądanie musi zostać zatwierdzone przez dyrektora z zespołu inżynieryjnego, Reiterowi Tsvi firmy.  
+5.  Peter działa na żądanie zmodyfikowane przez Michaela i akceptuje je. Żądanie musi zostać zatwierdzone, Dyrektor ds. inżynierii, Reiterowi Tsvi firmy.  
   
-6.  Reiterowi Tsvi firmy chce przyspieszyć żądania, więc on umieszcza w komentarz oznacza, że żądanie jest pilnych i akceptuje on.  
+6.  Reiterowi Tsvi firmy chce, aby przyspieszyć żądania, dlatego umieszcza się on w komentarzu powiedzieć, że żądanie jest pilne i akceptuje je.  
   
-7.  Żądanie zawiera teraz zatwierdzenia przez dwa HR menedżerów lub Dyrektora. Dyrektora Richard Goldstein Brianowi, widzi wniosku przez Tsvi. On działa na żądanie, akceptując związku z czym pomijany zatwierdzenia przez dwa HR menedżerów.  
+7.  Żądanie zawiera teraz zostać zatwierdzone przez dwa HR menedżerowie lub dyrektora Generalnego. Dyrektor Generalny, Brian Richard Goldstein, widzi nagłe żądanie przez Tsvi. On działa na żądanie, akceptując, związku z czym pomijany zatwierdzenia przez menedżerów dwóch HR.  
   
-8.  Żądanie zostanie usunięty ze skrzynki odbiorczej w Michael i procesu zatrudnienia SDET zostało teraz uruchomione.  
+8.  Żądanie zostanie usunięty ze skrzynki odbiorczej Michael firmy, a teraz rozpoczął proces zatrudniania specjalistów SDET.  
   
-### <a name="start-resume-request"></a>Uruchom żądanie wznowienia  
+### <a name="start-resume-request"></a>Rozpocznij żądanie wznowienia  
   
-1.  Teraz, pozycja zadanie oczekuje na można opublikować do zewnętrznej witryny sieci Web, w którym użytkownicy mogą stosować (można to sprawdzić kliknięcie **zadań** link). Obecnie pozycji zadania znajduje się z przedstawicielem HR, kto jest odpowiedzialny za finalizowanie pozycji zadania i przesłanie go.  
+1.  Teraz, pozycja zadanie oczekuje na zostać opublikowane do zewnętrznej witryny sieci Web, w którym użytkownicy mogą stosować (można to sprawdzić kliknięcie **zadań** link). Obecnie pozycji zadania znajdują się z przedstawicielem działu KADR, który jest odpowiedzialny za finalizowanie pozycji zadania i opublikuj go.  
   
-2.  HR chce edytować tej pozycji zadania (klikając **Edytuj** link) przez ustawienie limitu czasu 60 minut (w rzeczywistych, może to być dni lub tygodni). Limit czasu umożliwia stanowisko podejmowane poza zewnętrznej witryny sieci Web zgodnie z określonym czasie.  
+2.  HR chce edytować tej pozycji zadania (klikając **Edytuj** link), ustawiając limit czasu 60 minut (w realnym, może to być dni lub tygodni). Limit czasu umożliwia pozycji zadania, aby zdjąć zewnętrznej witryny sieci Web zgodnie z określonym czasie.  
   
-3.  Po zapisaniu edytowanego stanowisko, prawdopodobnie w **odbieranie wznawia** kartę (odświeżania strony sieci Web, aby zobaczyć nowe położenie zadania).  
+3.  Po zapisaniu edytowanego stanowisko, zostanie on wyświetlony na **odbieranie wznawia** karcie (w wyniku odświeżenia strony sieci Web, aby zobaczyć nowe położenie zadania).  
   
 ### <a name="collecting-resumes"></a>Wznawia zbieranie  
   
-1.  Pozycja zadania powinna pojawić się w zewnętrznej witryny sieci Web. Osoby zainteresowane stosowania zadania mogą odnoszą się do tej pozycji i przesłać Twojej wznowienia.  
+1.  Pozycja zadania powinny pojawić się na zewnętrznej witryny sieci Web. Jako osoba zainteresowani zastosowanie dla zadania możesz poprosić o tej pozycji i Prześlij swój życiorys.  
   
-2.  Jeśli możesz powrócić do listy wpisów zadań usługi, możesz "wyświetlić wznawia" do tej pory które zostały zebrane.  
+2.  Jeśli możesz wrócić do usługi listy ogłoszeń zadania, możesz "wyświetlić wznawia", zostały zebrane do tej pory.  
   
-3.  HR można też zatrzymać zbieranie wznawia (na przykład po wykryto prawo candidate).  
+3.  GODZ. je również zatrzymać zbieranie wznawia (np. Po zidentyfikowaniu prawo Release candidate).  
   
 ## <a name="troubleshooting"></a>Rozwiązywanie problemów  
   
 1.  Upewnij się, że używasz programu Visual Studio z uprawnieniami administratora.  
   
-2.  W przypadku niepowodzenia rozwiązania do tworzenia sprawdzić następujące kwestie:  
+2.  Jeśli rozwiązanie nie twórz, sprawdź następujące informacje:  
   
     -   Odwołanie do `ContosoHR` nie brakuje `InternalClient` lub `CareersWebSite` projektów.  
   
-3.  Jeśli rozwiązania wykonanie nie powiedzie się, sprawdź następujące informacje:  
+3.  Jeśli rozwiązanie wykonanie nie powiedzie się, sprawdź następujące informacje:  
   
     1.  Wszystkie usługi są uruchomione.  
   
@@ -225,12 +225,12 @@ W tym przykładzie pokazano, jak zaimplementować proces biznesowy przy użyciu 
   
         1.  Otwórz App_WebReferences folder  
   
-        2.  Kliknij prawym przyciskiem myszy **Contoso** i wybierz **odwołania sieci Web/usługa aktualizacji**.  
+        2.  Kliknij prawym przyciskiem myszy **Contoso** i wybierz **aktualizacja odwołań sieci Web/usługi**.  
   
         3.  Ponownie skompiluj rozwiązanie, naciskając klawisze CTRL + SHIFT + B w programie Visual Studio.  
   
-## <a name="uninstalling"></a>Odinstalowanie  
+## <a name="uninstalling"></a>Odinstalowywanie  
   
-1.  Usuń magazyn wystąpienia programu SQL Server, uruchamiając Cleanup.bat znajdujący się w folderze Program DbSetup.  
+1.  Usuń magazyn wystąpienia programu SQL Server, uruchamiając Cleanup.bat, znajdujący się w folderze Program DbSetup.  
   
-2.  Usuń dysk twardy w formie kodu źródłowego.
+2.  Usuń w formie kodu źródłowego na dysku twardym.

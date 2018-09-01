@@ -2,20 +2,20 @@
 title: Profile śledzenia
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: 4f70964ea7e2456f82aeac4bfb9aedfdb239d58a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6651b79a474125f57c1cad773ae858dc7654d58a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519987"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396993"
 ---
 # <a name="tracking-profiles"></a>Profile śledzenia
-Śledzenie profile zawierają zapytania dotyczące śledzenia, które umożliwiają śledzenie uczestnika do subskrybowanie zdarzeń przepływu pracy, które są emitowane po zmianie stanu wystąpienia przepływu pracy w czasie wykonywania.  
+Śledzenie profile zawiera śledzenia zapytań, pozwalające uczestnikiem śledzenia do subskrybowania zdarzenia przepływu pracy, które są emitowane po zmianie stanu wystąpienia przepływu pracy w czasie wykonywania.  
   
 ## <a name="tracking-profiles"></a>Profile śledzenia  
- Profile śledzenia służą do określania, jakie informacje śledzenia jest emitowany dla wystąpienia przepływu pracy. Jeśli profil nie jest określona, wszystkie zdarzenia śledzenia są emitowane. Jeśli profil jest określony, zdarzenia śledzenia określone w profilu zostanie wyemitowany. W zależności od wymagań monitorowania może zapisać profil, który jest bardzo ogólnych, które subskrybuje niewielki zestaw zmian stanu ogólny przepływ pracy. Z drugiej strony może utworzyć profil bardzo szczegółowe którego wynikowy zdarzenia są sformatowanego odtworzenie przepływu szczegółowe wykonywania później.  
+ Profile śledzenia są używane do określania, jakie informacje śledzenia jest emitowane dla wystąpienia przepływu pracy. Jeśli profil nie jest określony, wszystkie zdarzenia śledzenia są emitowane. Jeśli profil jest określony, zdarzenia śledzenia określone w profilu będzie emitowane. W zależności od wymagań dotyczących monitorowania może zapisu profil, który jest bardzo ogólny, które subskrybuje niewielkiego zestawu zmian stanu wysokiego poziomu w przepływie pracy. Z drugiej strony można utworzyć bardzo szczegółowe profil którego wynikowego zdarzenia są rozbudowanych, odtworzenie przepływ wykonania szczegółowe później.  
   
- Profile śledzenia pojawiają się jako elementów XML w ramach standardowego [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] pliku konfiguracji lub określona w kodzie. Poniższy przykład jest [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] profil w pliku konfiguracji, który umożliwia śledzenie uczestnika do subskrybowania śledzenia `Started` i `Completed` zdarzeń przepływu pracy.  
+ Profile śledzenia objawy elementy XML w ramach standardowej [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] pliku konfiguracji lub określone w kodzie. Poniższy przykład jest [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] profil w pliku konfiguracji, który umożliwia śledzenia uczestnika do subskrybowania śledzenia `Started` i `Completed` zdarzenia przepływu pracy.  
   
 ```xml  
 <system.serviceModel>  
@@ -39,7 +39,7 @@ ms.locfileid: "33519987"
 </system.serviceModel>  
 ```  
   
- W poniższym przykładzie przedstawiono odpowiednikiem śledzenia profil utworzony przy użyciu kodu.  
+ Poniższy przykład pokazuje odpowiednik śledzenia profil został utworzony przy użyciu kodu.  
   
 ```csharp  
 TrackingProfile profile = new TrackingProfile()  
@@ -57,15 +57,15 @@ TrackingProfile profile = new TrackingProfile()
 };  
 ```  
   
- Śledzenie rekordów są filtrowane w trybie widoczność w profilu śledzenia przy użyciu <xref:System.Activities.Tracking.ImplementationVisibility> atrybutu. Działanie złożone jest najwyższego poziomu działanie, które zawiera inne działania, które tworzą jego wykonania. Tryb widoczności określa rekordy śledzenia wyemitowanego z złożonego działań w ramach działania przepływu pracy, aby określić, czy działania, które tworzą wdrożenia są śledzone.  Tryb widoczności zastosuje w śledzenia profilu poziom. Filtrowanie rekordów dla poszczególnych działań w przepływie pracy śledzenia jest kontrolowana przez kwerend w profilu śledzenia. Aby uzyskać więcej informacji, zobacz **śledzenia typy zapytań profilu** części tego dokumentu.  
+ Rekordy śledzenia są filtrowane w trybie widoczność w profilu śledzenia przy użyciu <xref:System.Activities.Tracking.ImplementationVisibility> atrybutu. Działanie złożone jest czynnością najwyższego poziomu, zawierający innych działań, które tworzą jego wykonania. Określa tryb widoczności, rekordów śledzenia emitowane z złożonych działań wewnątrz działania elementu przepływu pracy, aby określić, jeśli działania, które tworzą implementację są śledzone.  Tryb widoczności odnosi się na śledzenie poziomu profilu. Filtrowanie rekordów dla poszczególnych działań w przepływie pracy śledzenia jest kontrolowane przez zapytania w profilu śledzenia. Aby uzyskać więcej informacji, zobacz **śledzenie typów zapytań profilu** sekcji tego dokumentu.  
   
- Widoczność dwóch trybów określony przez `implementationVisibility` w profilu śledzenia są `RootScope` i `All`. Przy użyciu `RootScope` tryb Pomija rekordy śledzenia działań, które tworzą implementacja działania, w przypadku, gdy działanie złożone nie jest elementem głównym przepływu pracy.  Oznacza to, że po dodaniu działania, która jest zaimplementowana przy użyciu innych działań w przepływie pracy i `implementationVisibility` wartość RootScope, śledzić działania najwyższego poziomu w obrębie tego działania złożonego. Jeśli działanie jest głównego przepływu pracy, a następnie wykonanie działania jest przepływ pracy się i śledzenie rekordów są emitowane działań, które tworzą implementacji. Przy użyciu trybu wszystkich zezwala na wszystkie rekordy śledzenia, aby emitować dla działania głównego i jego działań złożonych.  
+ Tryby widoczność dwie określone przez `implementationVisibility` atrybutu w profilu śledzenia `RootScope` i `All`. Za pomocą `RootScope` tryb Pomija rekordy śledzenia działań, które tworzą implementację działanie w przypadku, gdy działanie złożone nie jest głównym przepływu pracy.  Oznacza to, że po dodaniu działania, który jest implementowany przy użyciu innych działań w przepływie pracy i `implementationVisibility` wartość RootScope, działanie najwyższego poziomu w ramach tego działania złożonego jest śledzone. Jeśli działanie jest głównym przepływu pracy, a następnie wykonanie działania jest przepływ pracy wraz z śledzenia rekordów, które są emitowane dla działań, które tworzą implementację. Przy użyciu trybu wszystkich zezwala na wszystkich rekordów śledzenia emitowane dla działania głównego i wszystkich jego działań złożonych.  
   
- Załóżmy na przykład, *MyActivity* jest działania złożonego, którego implementację zawiera dwa działania *działania Activity1* i *Activity2*.  Gdy to działanie jest dodawany do przepływu pracy i śledzenie jest włączone w profilu śledzenia z `implementationVisibility` ustawioną `RootScope`, śledzenie rekordów są emitowane tylko w przypadku *MyActivity*.  Jednak żadne rekordy są emitowane działań *działania Activity1* i *Activity2*.  
+ Na przykład, załóżmy, że *MyActivity* jest czynnością złożonego, którego implementacja zawiera dwa działania *działania Activity1* i *Activity2*.  Gdy to działanie jest dodawany do przepływu pracy i śledzenia włączono profil śledzenia z `implementationVisibility` równa `RootScope`, tylko w przypadku są emitowane rekordów śledzenia *MyActivity*.  Jednak żadne rekordy nie są emitowane działań *działania Activity1* i *Activity2*.  
   
- Jednak jeśli `implementationVisisbility` atrybutu dla profilu śledzenia jest ustawiony na `All`, a następnie rejestruje śledzenia są emitowane nie tylko w przypadku *MyActivity*, ale także dla działań *działania Activity1* i  *Activity2*.  
+ Jednak jeśli `implementationVisisbility` atrybutu dla profilu śledzenia jest ustawiony na `All`, a następnie są emitowane rekordów śledzenia nie tylko *MyActivity*, ale również dla działań *działania Activity1* i  *Activity2*.  
   
- `implementationVisibility` Flaga jest stosowana do następujących typów rekordów śledzenia:  
+ `implementationVisibility` Flaga ma zastosowanie do następujące typy rekordów śledzenia:  
   
 -   ActivityStateRecord  
   
@@ -76,9 +76,9 @@ TrackingProfile profile = new TrackingProfile()
 -   ActivityScheduledRecord  
   
 > [!NOTE]
->  CustomTrackingRecords wyemitowanego z implementacji działania nie są odfiltrowywane przez ustawienie implementationVisibility.  
+>  CustomTrackingRecords emitowane przez implementację działania nie są odfiltrowywane przez ustawienie implementationVisibility.  
   
- `implementationVisibility` Funkcji jest określony jako <xref:System.Activities.Tracking.ImplementationVisibility.RootScope> na śledzenie profilu w kodzie w następujący sposób:  
+ `implementationVisibility` Funkcji jest określony jako <xref:System.Activities.Tracking.ImplementationVisibility.RootScope> śledzenia profilu w kodzie w następujący sposób:  
   
 ```  
 TrackingProfile sampleTrackingProfile = new TrackingProfile()  
@@ -88,7 +88,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 };  
 ```  
   
- `implementationVisibility` Funkcji jest określony jako <xref:System.Activities.Tracking.ImplementationVisibility.All> w konfiguracji profilu śledzenia plików w następujący sposób:  
+ `implementationVisibility` Funkcji jest określony jako <xref:System.Activities.Tracking.ImplementationVisibility.All> w profilu śledzenia w konfiguracji pliku w następujący sposób:  
   
 ```xml  
 <tracking>  
@@ -102,12 +102,12 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 </tracking>  
 ```  
   
- `ImplementationVisibility` Ustawienie w profilu śledzenia jest opcjonalne. Domyślnie, jego wartość jest równa `RootScope`. Wartości dla tego atrybutu jest uwzględniana wielkość liter.  
+ `ImplementationVisibility` Ustawienie w profilu śledzenia jest opcjonalne. Domyślnie, jej wartość jest równa `RootScope`. Wartości dla tego atrybutu jest uwzględniana wielkość liter.  
   
 ### <a name="tracking-profile-query-types"></a>Typy zapytań profilu śledzenia  
- Profile śledzenia mają strukturę jako deklaratywne subskrypcji dla śledzenia rekordy, które umożliwiają zapytania dla rekordów śledzenie wersję wykonawczą przepływu pracy. Istnieje kilka typów zapytania umożliwiające subskrybować różnych klas <xref:System.Activities.Tracking.TrackingRecord> obiektów. Śledzenie profile można określić w konfiguracji lub za pomocą kodu. W tym miejscu są najczęściej używane typy zapytań:  
+ Profile śledzenia mają strukturę jako deklaratywne subskrypcji dla śledzenia rekordy, które umożliwiają zapytania dla rekordów śledzenie wersję wykonawczą przepływu pracy. Istnieje kilka typów zapytania, które umożliwiają subskrybować różnymi klasami <xref:System.Activities.Tracking.TrackingRecord> obiektów. Śledzenie profile można określić w konfiguracji lub za pomocą kodu. Poniżej przedstawiono najbardziej typowych zapytań:  
   
--   <xref:System.Activities.Tracking.WorkflowInstanceQuery> -Służy do śledzenia zmiany cyklu życia wystąpienia przepływu pracy, takich jak wcześniej — zostało to pokazane `Started` i `Completed`. <xref:System.Activities.Tracking.WorkflowInstanceQuery> Jest używana do subskrybowania następujących <xref:System.Activities.Tracking.TrackingRecord> obiektów:  
+-   <xref:System.Activities.Tracking.WorkflowInstanceQuery> — Umożliwia śledzenie zmian cyklu życia wystąpienia przepływu pracy, takich jak wcześniej — pokazano `Started` i `Completed`. <xref:System.Activities.Tracking.WorkflowInstanceQuery> Jest używana do subskrybowania następujących <xref:System.Activities.Tracking.TrackingRecord> obiektów:  
   
     -   <xref:System.Activities.Tracking.WorkflowInstanceRecord>  
   
@@ -119,9 +119,9 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
   
     -   <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>  
   
-     Stany, które może być subskrybowana są określone w <xref:System.Activities.Tracking.WorkflowInstanceStates> klasy.  
+     Stany, które mogą być subskrybowane są określone w <xref:System.Activities.Tracking.WorkflowInstanceStates> klasy.  
   
-     Konfiguracja lub kod używany do subskrybowania śledzenia rekordy na poziomie wystąpienia przepływu pracy `Started` wystąpienie stanu przy użyciu <xref:System.Activities.Tracking.WorkflowInstanceQuery> przedstawiono w poniższym przykładzie.  
+     Konfiguracja lub kod używany do subskrybowania rekordów dla śledzenia na poziomie wystąpienia przepływu pracy `Started` wystąpienie stanu za pomocą <xref:System.Activities.Tracking.WorkflowInstanceQuery> przedstawiono w poniższym przykładzie.  
   
     ```xml  
     <workflowInstanceQueries>  
@@ -147,7 +147,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
     };  
     ```  
   
--   <xref:System.Activities.Tracking.ActivityStateQuery> -Służy do śledzenia zmian cyklu życia działań, które tworzą wystąpienia przepływu pracy. Na przykład może być do śledzenia każdorazowo po ukończeniu działania "Wyślij wiadomość E-Mail" w ramach wystąpienia przepływu pracy. To zapytanie jest niezbędne do <xref:System.Activities.Tracking.TrackingParticipant> do subskrybowania <xref:System.Activities.Tracking.ActivityStateRecord> obiektów. Dostępne stany do subskrybowania są określone w <xref:System.Activities.Tracking.ActivityStates>.  
+-   <xref:System.Activities.Tracking.ActivityStateQuery> — Ten służy do śledzenia zmian cyklem życia działań, które tworzą wystąpienie przepływu pracy. Na przykład chcesz do śledzenia za każdym razem, gdy kończy działanie "Wyślij wiadomość E-Mail", w ramach wystąpienie przepływu pracy. To zapytanie jest niezbędne do <xref:System.Activities.Tracking.TrackingParticipant> do subskrybowania <xref:System.Activities.Tracking.ActivityStateRecord> obiektów. Stany do subskrybowania są wyszczególnione w <xref:System.Activities.Tracking.ActivityStates>.  
   
      Konfiguracja i kod używany do subskrybowania rekordów śledzenia stanu działania, korzystających z <xref:System.Activities.Tracking.ActivityStateQuery> dla `SendEmailActivity` działania przedstawiono w poniższym przykładzie.  
   
@@ -179,9 +179,9 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
     > [!NOTE]
     >  Jeśli wiele elementów activityStateQuery mają taką samą nazwę, tylko Stany w ostatnim elemencie są używane w profilu śledzenia.  
   
--   <xref:System.Activities.Tracking.ActivityScheduledQuery> — To zapytanie umożliwia śledzenie działania zaplanowane do uruchomienia przez działania nadrzędnego. Zapytanie jest niezbędne do <xref:System.Activities.Tracking.TrackingParticipant> do subskrybowania <xref:System.Activities.Tracking.ActivityScheduledRecord> obiektów.  
+-   <xref:System.Activities.Tracking.ActivityScheduledQuery> — To zapytanie pozwala do śledzenia działania zaplanowane do wykonania przez działanie nadrzędne. Zapytanie jest niezbędne dla <xref:System.Activities.Tracking.TrackingParticipant> do subskrybowania <xref:System.Activities.Tracking.ActivityScheduledRecord> obiektów.  
   
-     Konfiguracja i kod używany do subskrybowania rekordy związane z `SendEmailActivity` działanie podrzędne planowany przy użyciu <xref:System.Activities.Tracking.ActivityScheduledQuery> przedstawiono w poniższym przykładzie.  
+     Konfiguracja i kod używany do subskrybowania rekordów związanych z `SendEmailActivity` działania podrzędnego zaplanowanej przy użyciu <xref:System.Activities.Tracking.ActivityScheduledQuery> przedstawiono w poniższym przykładzie.  
   
     ```xml  
     <activityScheduledQueries>  
@@ -204,9 +204,9 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
     };  
     ```  
   
--   <xref:System.Activities.Tracking.FaultPropagationQuery> -Służy do śledzenia Obsługa błędów występujących w ramach działania. Zapytanie jest niezbędne do <xref:System.Activities.Tracking.TrackingParticipant> do subskrybowania <xref:System.Activities.Tracking.FaultPropagationRecord> obiektów.  
+-   <xref:System.Activities.Tracking.FaultPropagationQuery> — Ten służy do śledzenia obsługi błędów występujących w ramach działania. Zapytanie jest niezbędne dla <xref:System.Activities.Tracking.TrackingParticipant> do subskrybowania <xref:System.Activities.Tracking.FaultPropagationRecord> obiektów.  
   
-     Konfiguracja i kod używany do subskrybowania rekordy powiązane z użyciem propagacji błędów <xref:System.Activities.Tracking.FaultPropagationQuery> przedstawiono w poniższym przykładzie.  
+     Konfiguracja i kod używany do subskrybowania rekordów związanych z propagacji błędów <xref:System.Activities.Tracking.FaultPropagationQuery> przedstawiono w poniższym przykładzie.  
   
     ```xml  
     <faultPropagationQueries>  
@@ -229,9 +229,9 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
     };  
     ```  
   
--   <xref:System.Activities.Tracking.CancelRequestedQuery> — Umożliwia śledzenie żądań, aby anulować działanie podrzędne przez działania nadrzędnego. Zapytanie jest niezbędne do <xref:System.Activities.Tracking.TrackingParticipant> do subskrybowania <xref:System.Activities.Tracking.CancelRequestedRecord> obiektów.  
+-   <xref:System.Activities.Tracking.CancelRequestedQuery> — Ten służy do śledzenia żądań, aby anulować działanie podrzędne przez działanie nadrzędne. Zapytanie jest niezbędne dla <xref:System.Activities.Tracking.TrackingParticipant> do subskrybowania <xref:System.Activities.Tracking.CancelRequestedRecord> obiektów.  
   
-     Konfiguracja i kod używany do subskrybowania rekordy powiązane z użyciem anulowania działania <xref:System.Activities.Tracking.CancelRequestedQuery> przedstawiono w poniższym przykładzie.  
+     Konfiguracja i kod używany do subskrybowania rekordów związanych z anulowania działania <xref:System.Activities.Tracking.CancelRequestedQuery> przedstawiono w poniższym przykładzie.  
   
     ```xml  
     <cancelRequestedQueries>  
@@ -254,9 +254,9 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
     };  
     ```  
   
--   <xref:System.Activities.Tracking.CustomTrackingQuery> -Służy do śledzenia zdarzeń zdefiniowanych w działaniach kodu. Zapytanie jest niezbędne do <xref:System.Activities.Tracking.TrackingParticipant> do subskrybowania <xref:System.Activities.Tracking.CustomTrackingRecord> obiektów.  
+-   <xref:System.Activities.Tracking.CustomTrackingQuery> — Ten służy do śledzenia zdarzeń zdefiniowanych przez użytkownika w działaniach kodu. Zapytanie jest niezbędne dla <xref:System.Activities.Tracking.TrackingParticipant> do subskrybowania <xref:System.Activities.Tracking.CustomTrackingRecord> obiektów.  
   
-     Konfiguracja i kod używany do subskrybowania rekordy związane z śledzenia niestandardowych rekordów przy użyciu <xref:System.Activities.Tracking.CustomTrackingQuery> przedstawiono w poniższym przykładzie.  
+     Konfiguracja i kod używany do subskrybowania rekordów powiązanych śledzenia niestandardowe rekordów przy użyciu <xref:System.Activities.Tracking.CustomTrackingQuery> przedstawiono w poniższym przykładzie.  
   
     ```xml  
     <customTrackingQueries>  
@@ -279,9 +279,9 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
     };  
     ```  
   
--   <xref:System.Activities.Tracking.BookmarkResumptionQuery> -Służy do śledzenia wznowienie zakładki w ramach wystąpienia przepływu pracy. To zapytanie jest niezbędne do <xref:System.Activities.Tracking.TrackingParticipant> do subskrybowania <xref:System.Activities.Tracking.BookmarkResumptionRecord> obiektów.  
+-   <xref:System.Activities.Tracking.BookmarkResumptionQuery> — Ten służy do śledzenia wznowienie zakładki w ramach wystąpienie przepływu pracy. To zapytanie jest niezbędne do <xref:System.Activities.Tracking.TrackingParticipant> do subskrybowania <xref:System.Activities.Tracking.BookmarkResumptionRecord> obiektów.  
   
-     Konfiguracja i kod używany do subskrybowania rekordy powiązane z użyciem wznowienie zakładki <xref:System.Activities.Tracking.BookmarkResumptionQuery> przedstawiono w poniższym przykładzie.  
+     Konfiguracja i kod używany do subskrybowania rekordów związanych z wznowienie zakładki <xref:System.Activities.Tracking.BookmarkResumptionQuery> przedstawiono w poniższym przykładzie.  
   
     ```xml  
     <bookmarkResumptionQueries>  
@@ -304,9 +304,9 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
     ```  
   
 ### <a name="annotations"></a>Adnotacje  
- Adnotacje umożliwiają arbitralnie tag śledzenia rekordów o wartości, które mogą być skonfigurowane po czas kompilacji. Na przykład może być kilka rekordów śledzenia między kilka przepływy pracy, aby być oznaczane "Serwera poczty" == "Poczty serwer1". To ułatwia znalezienie wszystkich rekordów z tym znacznikiem podczas wykonywania zapytania rekordów śledzenia później.  
+ Adnotacje umożliwiają arbitralnie tag śledzenia rekordów o wartości, które mogą być skonfigurowane po czas kompilacji. Na przykład może być kilka rekordów śledzenia na kilka przepływy pracy służące do być oznakowane za pomocą "Serwer poczty" == "Serwer1 poczty". To ułatwia znalezienie wszystkich rekordów z tym znacznikiem podczas wykonywania zapytania rekordów śledzenia później.  
   
- Aby to zrobić, adnotacja została dodana do zapytania śledzenia, jak pokazano w poniższym przykładzie.  
+ Aby to osiągnąć, adnotacja jest dodawany do zapytania śledzenia, jak pokazano w poniższym przykładzie.  
   
 ```xml  
 <activityStateQuery activityName="SendEmailActivity">  
@@ -320,7 +320,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 ```  
   
 ### <a name="how-to-create-a-tracking-profile"></a>Jak utworzyć profil śledzenia  
- Elementy zapytania śledzenia są używane do tworzenia profilu śledzenia przy użyciu pliku konfiguracji XML lub [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]kodu.  Oto przykład profilu śledzenia, który został utworzony przy użyciu pliku konfiguracji.  
+ Elementy zapytania śledzenia są używane do tworzenia profilu śledzenia przy użyciu pliku konfiguracji XML lub [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]kodu.  Poniżej przedstawiono przykład profilu śledzenia, który został utworzony przy użyciu pliku konfiguracji.  
   
 ```xml  
 <system.serviceModel>  
@@ -337,15 +337,15 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 ```  
   
 > [!WARNING]
->  Przy użyciu hosta usługi przepływu pracy WF profilu śledzenia jest zwykle utworzona przy użyciu pliku konfiguracji. Istnieje również możliwość utworzenia profilu śledzenia z kodu przy użyciu profilu śledzenia i śledzenie zapytania interfejsu API.  
+>  Dla programu WF przy użyciu hosta usługi przepływu pracy profilu śledzenia jest zwykle tworzony, przy użyciu pliku konfiguracji. Istnieje również możliwość tworzenia profilu śledzenia przy użyciu kodu przy użyciu profilu śledzenia i śledzenia interfejsu API zapytań.  
   
- Skonfigurowany jako plik konfiguracyjny XML profilu jest stosowany do uczestnika śledzenia przy użyciu rozszerzenia zachowania. To jest dodawane do obiektu WorkflowServiceHost, zgodnie z opisem w dalszej części artykułu [Konfigurowanie śledzenia przepływu pracy](../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
+ Profil, który został skonfigurowany jako plik konfiguracyjny XML jest stosowany do śledzenia uczestnika, za pomocą rozszerzenia zachowania. To jest dodawany do klasy WorkflowServiceHost zgodnie z opisem w dalszej części [Konfigurowanie śledzenia przepływu pracy](../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
   
- Poziom szczegółowości śledzenia rekordy emitowane przez hosta jest określana przez ustawienia konfiguracji w profilu śledzenia. Uczestnik śledzenia subskrybuje śledzenie rekordów przez dodanie zapytania do profilu śledzenia. Aby subskrybować wszystkie rekordy śledzenia, należy określić wszystkie zapytania dotyczące śledzenia przy użyciu profilu śledzenia "*" w polach Nazwa każdego zapytania.  
+ Poziom szczegółowości rekordów śledzenia emitowane przez hosta jest określana przez ustawienia konfiguracji w profilu śledzenia. Subskrybuje uczestnikiem śledzenia do śledzenia rekordów przez dodanie zapytania do profilu śledzenia. Aby subskrybować wszystkie rekordy śledzenia, należy określić wszystkie zapytania śledzenia przy użyciu profilu śledzenia "*" w polach Nazwa we wszystkich zapytań.  
   
- Poniżej przedstawiono niektóre typowe przykłady śledzenia profilów.  
+ Poniżej przedstawiono niektóre typowe przykłady śledzenie profile.  
   
--   Profil śledzenia uzyskanie rekordów wystąpienia przepływu pracy i usterek.  
+-   Profil śledzenia do uzyskania rekordów wystąpienia przepływu pracy i usterek.  
   
 ```xml  
 <trackingProfile name="Instance and Fault Records">  
@@ -368,7 +368,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 </trackingProfile>  
 ```  
   
-1.  Profil śledzenia można uzyskać wszystkie rekordy śledzenia niestandardowych.  
+1.  Profil śledzenia można uzyskać wszystkie niestandardowe rekordy śledzenia.  
   
 ```xml  
 <trackingProfile name="Instance_And_Custom_Records">  
@@ -382,5 +382,5 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
   
 ## <a name="see-also"></a>Zobacz też  
  [Śledzenie SQL](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)  
- [Windows Server AppFabric monitorowania](http://go.microsoft.com/fwlink/?LinkId=201273)  
- [Monitorowanie aplikacji przy użyciu rozwiązania AppFabric](http://go.microsoft.com/fwlink/?LinkId=201275)
+ [Windows Server AppFabric monitorowania](https://go.microsoft.com/fwlink/?LinkId=201273)  
+ [Monitorowanie aplikacji przy użyciu rozwiązania AppFabric](https://go.microsoft.com/fwlink/?LinkId=201275)

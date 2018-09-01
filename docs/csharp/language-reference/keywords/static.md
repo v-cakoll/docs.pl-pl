@@ -8,11 +8,11 @@ helpviewer_keywords:
 - static keyword [C#]
 ms.assetid: 5509e215-2183-4da3-bab4-6b7e607a4fdf
 ms.openlocfilehash: db12ef80752bba913e6792ccb38f598a664efb0b
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258420"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397670"
 ---
 # <a name="static-c-reference"></a>static (odwołanie w C#)
 Użyj `static` modyfikator, aby zadeklarować statyczną składową, która należy do samego typu, a nie do określonego obiektu. `static` Modyfikator mogą być używane z klasy, pola, metody, właściwości, operatory, zdarzenia i konstruktory, ale nie można używać z indeksatorów, finalizatory lub typów innych niż klasy. Aby uzyskać więcej informacji, zobacz [klasy statyczne i statyczne elementy członkowskie klasy](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  

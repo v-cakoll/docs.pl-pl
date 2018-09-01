@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6c0b353d-79ee-4e61-b348-be49ad0e9a16
-ms.openlocfilehash: 8f9af42078bd01cc7de0ea33f4f8e4a395cf961a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee15fd37390f8bf4ca3bc287f9a3dbd5f8ebd935
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500909"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396786"
 ---
 # <a name="custom-binding-transport-and-encoding"></a>Transport i kodowanie powiązań niestandardowych
-Wiązanie niestandardowe jest zdefiniowana przez uporządkowaną listę elementów wiązania odrębny. W tym przykładzie pokazano, jak skonfigurować niestandardowego powiązania z różnymi transport i kodowanie elementów komunikatu.  
+Powiązanie niestandardowe jest definiowany przez uporządkowaną listą elementy powiązania dyskretnych. Niniejszy przykład pokazuje, jak skonfigurować powiązania niestandardowego z różnymi transport i kodowanie elementów wiadomości.  
   
 > [!NOTE]
->  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
+>  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
   
- Ten przykład jest oparty na [hosta samodzielnego](../../../../docs/framework/wcf/samples/self-host.md)i został zmodyfikowany w celu konfigurowania trzech punktów końcowych do obsługi protokołu HTTP, TCP i nazwany potok transportów wiązań niestandardowych. Podobnie modyfikacji konfiguracji klienta i zmienić kod klienta do komunikowania się z wszystkich trzech punktów końcowych.  
+ Ten przykład jest oparty na [hosta samodzielnego](../../../../docs/framework/wcf/samples/self-host.md)i została zmodyfikowana, aby skonfigurować trzy punkty końcowe do obsługi protokołu HTTP, TCP i nazwany potok transportów powiązań niestandardowych. Podobnie modyfikacji konfiguracji klienta, a następnie zmienić kodu klienta do komunikowania się z każdym z trzech punktów końcowych.  
   
- Przykład pokazuje, jak skonfigurować niestandardowego powiązania, który obsługuje danego transportu i kodowanie komunikatu. Jest to osiągane przez konfigurowanie transport i kodowanie komunikatu `binding` elementu. Kolejność elementów wiązania jest ważne podczas definiowania niestandardowego powiązania, ponieważ każdy reprezentuje warstwę stosu kanał (zobacz [niestandardowego powiązania](../../../../docs/framework/wcf/extending/custom-bindings.md)). Ten przykład konfiguruje trzy powiązania niestandardowe: protokół transportu HTTP z kodowaniem tekstu, transportu TCP za pomocą kodowania tekstu i transportu nazwany potok kodowania binarnego.  
+ W przykładzie pokazano, jak skonfigurować niestandardowe powiązanie, które obsługuje danego transportu i kodowanie komunikatu. Jest to realizowane przez skonfigurowanie transport i kodowanie komunikatu `binding` elementu. Określanie kolejności elementów wiązania jest ważny w celu definiowania niestandardowego powiązania, ponieważ każdy z nich reprezentuje warstwę w stosie kanału (zobacz [powiązań niestandardowych](../../../../docs/framework/wcf/extending/custom-bindings.md)). Ten przykład umożliwia skonfigurowanie trzy powiązań niestandardowych: protokół transportu HTTP przy użyciu kodowania tekstu, warstwy transportowej TCP za pomocą kodowania tekstu i transport nazwany potok przy użyciu kodowania binarnego.  
   
- Konfiguracja usługi definiuje niestandardowego powiązania w następujący sposób:  
+ Konfiguracja usługi definiuje powiązań niestandardowych w następujący sposób:  
   
 ```xml  
 <bindings>  
@@ -44,9 +44,9 @@ Wiązanie niestandardowe jest zdefiniowana przez uporządkowaną listę element�
 </bindings>  
 ```  
   
- Po uruchomieniu próbki operację żądania i odpowiedzi są wyświetlane w oknie konsoli usługi i klienta. Klient komunikuje się z wszystkich trzech punktów końcowych, uzyskiwanie dostępu do pierwszego protokołu HTTP, a następnie TCP, a na końcu nazwany potok. Naciśnij klawisz ENTER w każdym okna konsoli można zamknąć usługę i klienta.  
+ Po uruchomieniu przykładu, operacja żądań i odpowiedzi są wyświetlane w oknie konsoli usługi i klienta. Klient komunikuje się z każdym z trzech punktów końcowych, uzyskiwanie dostępu do pierwszego HTTP, a następnie TCP, a na końcu nazwany potok. Naciśnij klawisz ENTER każdego okna konsoli, aby zamknąć usługę i klienta.  
   
- `namedPipeTransport` Powiązania nie obsługuje operacji maszyny do komputera. Jest on używany tylko do komunikacji na tym samym komputerze. W związku z tym kiedy uruchomiona próbki w scenariuszu między komputerami, komentarz następujące wiersze w pliku kodu klienta:  
+ `namedPipeTransport` Powiązanie nie obsługuje operacji od maszyny. Jest on używany tylko do komunikacji na tym samym komputerze. W związku z tym gdy działa aplikacja przykładowa w scenariuszu między komputerami, jako komentarz następujące wiersze w pliku kodu klienta:  
   
 ```csharp  
 CalculatorClient client = new CalculatorClient("default");  
@@ -67,22 +67,22 @@ client.Close()
 ```  
   
 > [!NOTE]
->  Jeśli używasz Svcutil.exe ponownego generowania konfiguracji dla tego przykładu, należy zmodyfikować nazwę punktu końcowego w konfiguracji klienta, aby dopasować kodu klienta.  
+>  Jeśli używasz Svcutil.exe ponownego generowania konfiguracji dla tego przykładu, należy zmodyfikować nazwę punktu końcowego w konfiguracji klienta, aby dopasować kod klienta.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Upewnij się, że wykonano procedurę [jednorazowego procedurę instalacji dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Tworzenie wersji języka C#, C++ lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Aby kompilować rozwiązania w wersji języka C#, C++ lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Aby uruchomić przykładowy w konfiguracji pojedynczej lub między komputerami, postępuj zgodnie z instrukcjami w [uruchamiania przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\Transport`  
   

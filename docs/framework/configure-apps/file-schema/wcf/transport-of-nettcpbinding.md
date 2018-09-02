@@ -2,15 +2,15 @@
 title: '&lt;transport&gt; w &lt;netTcpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: 9369351e4e197f321feb4ae56939bec2a8280a64
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8c2a0de73db2ec4a1c2150fc7e62b7a3a9f086bc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752562"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474008"
 ---
 # <a name="lttransportgt-of-ltnettcpbindinggt"></a>&lt;transport&gt; w &lt;netTcpBinding&gt;
-Określa typ zabezpieczenia na poziomie komunikatu wymagania dotyczące punkt końcowy skonfigurowany [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
+Określa typ zabezpieczenia na poziomie wiadomości dotyczące punkty końcowe skonfigurowane za pomocą [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
   
  \<system.ServiceModel>  
 \<powiązania >  
@@ -40,32 +40,32 @@ Określa typ zabezpieczenia na poziomie komunikatu wymagania dotyczące punkt ko
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
- W poniższych sekcjach opisano atrybuty i elementy podrzędne, elementy nadrzędne  
+ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne  
   
 ### <a name="attributes"></a>Atrybuty  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|clientCredentialType|Opcjonalna. Określa typ poświadczenia, które będą używane podczas uwierzytelniania klienta za pomocą zabezpieczeń transportu.<br /><br /> — Wartość domyślna to `Windows`.<br />— Ten atrybut jest typu <xref:System.ServiceModel.TcpClientCredentialType>.|  
-|protectionLevel|Opcjonalna. Definiuje zabezpieczeń na poziomie transportu TCP. Podpisywanie wiadomości zmniejsza ryzyko innych firm, manipulowanie wiadomości, gdy są przesyłane. Szyfrowanie zapewnia ochronę poufności poziom danych podczas transportu.<br /><br /> Wartość domyślna to `EncryptAndSign`.|  
-|sslProtocols|Wartość flagi wyliczenia SslProtocols określająca, które SslProtocols są obsługiwane. Wartość domyślna to protokołu Tls&#124;Tls11&#124;Tls12.|  
-|policyEnforcement|To wyliczenie Określa, kiedy <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> powinny być wymuszane.<br /><br /> 1.  Nigdy nie — zasady nigdy nie są wymuszane (ochrona rozszerzona jest wyłączona).<br />2.  WhenSupported — zasady są wymuszane tylko wtedy, gdy klient obsługuje ochrony rozszerzonej.<br />3.  Zawsze — zasady zawsze są wymuszane. Klienci, którzy nie obsługują ochrony rozszerzonej będzie mogło uwierzytelnić.|  
+|clientCredentialType|Opcjonalna. Określa typ poświadczeń ma być używany podczas uwierzytelniania klientów za pomocą zabezpieczeń transportu.<br /><br /> — Wartość domyślna to `Windows`.<br />— Ten atrybut jest typu <xref:System.ServiceModel.TcpClientCredentialType>.|  
+|protectionLevel|Opcjonalna. Definiuje zabezpieczenia na poziomie warstwy transportowej TCP. Podpisywania wiadomości zmniejsza ryzyko związane z innej naruszeniu komunikat, gdy są przesyłane. Szyfrowanie zapewnia ochronę poufności poziom danych, podczas transportu.<br /><br /> Wartość domyślna to `EncryptAndSign`.|  
+|sslProtocols|Wartość flagi wyliczenia SslProtocols określająca SslProtocols, które są obsługiwane. Wartość domyślna to protokołu Tls&#124;Tls11&#124;Tls12.|  
+|policyEnforcement|To wyliczenie Określa, kiedy <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> powinny być wymuszane.<br /><br /> 1.  Nigdy nie — zasady nigdy nie są wymuszane (ochrony rozszerzonej jest wyłączone).<br />2.  WhenSupported — zasady są wymuszane tylko wtedy, gdy klient obsługuje ochrony rozszerzonej.<br />3.  Zawsze — zasady zawsze są wymuszane. Klienci, którzy nie obsługują ochrony rozszerzonej zakończy się niepowodzeniem do uwierzytelniania.|  
   
 ## <a name="clientcredentialtype-attribute"></a>właściwości ClientCredentialType o wartości atrybutu  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
 |Brak|Klient jest anonimowy. Wymaga certyfikatu usługi.|  
-|Windows|Określa uwierzytelnianie systemu Windows dla klienta przy użyciu negocjacji SP (negocjacji protokołu Kerberos).|  
-|certyfikat|Klient jest uwierzytelniany przy użyciu certyfikatu. Używa negocjacji w protokole SSL i wymaga certyfikatu dla usługi.|  
+|Windows|Określa Windows uwierzytelniania klienta przy użyciu negocjacji SP (negocjacji protokołu Kerberos).|  
+|Certyfikat|Klient jest uwierzytelniany przy użyciu certyfikatu. Ten wymaga negocjacji w protokole SSL i wymaga certyfikatu usługi.|  
   
-## <a name="protectionlevel-attribute"></a>Atrybut protectionLevel  
+## <a name="protectionlevel-attribute"></a>protectionLevel atrybutu  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
 |Brak|Brak ochrony.|  
-|Zaloguj się|Komunikaty są podpisane.|  
-|EncryptAndSign|— Liczba komunikatów są zaszyfrowana i podpisana.|  
+|Logowanie|Komunikaty są podpisane.|  
+|EncryptAndSign|— Liczba komunikatów jest zaszyfrowany i podpisany.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -77,7 +77,7 @@ Określa typ zabezpieczenia na poziomie komunikatu wymagania dotyczące punkt ko
 |[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Określa możliwości zabezpieczeń [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).|  
   
 ## <a name="remarks"></a>Uwagi  
- Należy użyć zabezpieczeń transportu, integralności i poufności komunikatu protokołu SOAP i do wzajemnego uwierzytelniania. Zaznaczenie tego trybu zabezpieczeń dla powiązania kanału stosu jest konfigurowana przy użyciu bezpiecznego transportu i wiadomości SOAP są zabezpieczone za pomocą zabezpieczeń transportu, takie jak Windows (Negotiate) lub protokołu SSL za pośrednictwem protokołu TCP.  
+ Za pomocą zabezpieczeń transportu integralności i poufności komunikatu protokołu SOAP, jak i do wzajemnego uwierzytelniania. Zaznaczenie tego trybu zabezpieczeń w powiązaniu ze stosu kanał jest skonfigurowany przy użyciu bezpiecznym transportem i komunikaty protokołu SOAP są zabezpieczone za pomocą zabezpieczeń transportu, takich jak Windows (Negotiate) lub protokołu SSL, za pośrednictwem protokołu TCP.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.TcpTransportSecurity>  
@@ -87,5 +87,5 @@ Określa typ zabezpieczenia na poziomie komunikatu wymagania dotyczące punkt ko
  [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
  [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie usług Windows Communication Foundation i klientów za pomocą powiązań](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Konfigurowanie Windows Communication Foundation i klientów za pomocą powiązań](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

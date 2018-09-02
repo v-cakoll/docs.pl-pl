@@ -8,30 +8,30 @@ ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 3ccd6e1348125f5d901e0f093d2b5483b818719f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cbfb640a068a2c1178d321480ee3a112db07b6ac
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409094"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463895"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>Obsługa automatyzacji interfejsu użytkownika dla standardowych kontrolek
 > [!NOTE]
->  Ta dokumentacja jest przeznaczony dla deweloperów .NET Framework, które chcą korzystać zarządzanej [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejsu API systemu Windows automatyzacji: automatyzacji interfejsu użytkownika](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Ten temat zawiera informacje o [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] obsługi dla standardowych formantów w aplikacjach przeznaczonych dla [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], i [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] struktury.  
+ Ten temat zawiera informacje o [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] obsługi dla standardowych kontrolek w aplikacjach przeznaczonych dla [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], i [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] struktur.  
   
 <a name="Windows_Presentation_Foundation_Controls"></a>   
-## <a name="windows-presentation-foundation-controls"></a>Windows Presentation Foundation formantów  
- Wszystkie [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] elementy kontroli, które udostępniają informacje lub pomocy technicznej do interakcji z użytkownikiem mają pełną natywną obsługę [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Nie są widoczne dla innych elementów, takich jak panele, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
+## <a name="windows-presentation-foundation-controls"></a>Formanty programu Windows Presentation Foundation  
+ Wszystkie [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] elementy kontroli, które zapewniają informacje lub pomocy technicznej do interakcji z użytkownikiem ma pełne natywną obsługę [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Nie są widoczne dla innych elementów, takich jak paneli, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
 <a name="Win32_Controls"></a>   
-## <a name="win32-controls"></a>Formanty Win32  
- Większość [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] formanty są widoczne dla [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] za pośrednictwem dostawcy po stronie klienta w UIAutomationClientsideProviders.dll. Ten zestaw jest automatycznie dodawane do użytku z aplikacjami klienckimi automatyzacji interfejsu użytkownika.  
+## <a name="win32-controls"></a>Kontrolki Win32  
+ Większość [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] formanty są narażone na [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] za pośrednictwem dostawcy po stronie klienta w UIAutomationClientsideProviders.dll. Ten zestaw jest automatycznie rejestrowane do użycia przy użyciu automatyzacji interfejsu użytkownika aplikacji klienckich.  
   
- Pełna obsługa jest udostępniany tylko dla formantów z ComCtrl32.dll w wersji 6 (dostępnych z [!INCLUDE[TLA#tla_winxp](../../../includes/tlasharptla-winxp-md.md)] i nowsze).  
+ Pełna pomoc techniczna jest dostępna tylko w przypadku kontrolek z ComCtrl32.dll w wersji 6 (udostępniono [!INCLUDE[TLA#tla_winxp](../../../includes/tlasharptla-winxp-md.md)] lub nowszy).  
   
- Obsługiwane są następujące formanty.  
+ Następujące elementy sterujące są obsługiwane.  
   
 |Nazwa klasy|Typ formantu|  
 |----------------|------------------|  
@@ -80,9 +80,9 @@ ms.locfileid: "33409094"
 |SysTreeView32|Drzewo|  
 |SysTreeView32|TreeItem|  
   
- **Uwaga** formantu RichEdit jest obsługiwana tylko dla wersji dostarczone z [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] (w wersji biblioteki RichEd20.dll 3.1 lub nowszy, a MsftEdit.dll wersji 4.1 i nowszych).  
+ **Uwaga** kontrolki RichEdit jest obsługiwana tylko w przypadku wersji są dostarczane z [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] (w wersji biblioteki RichEd20.dll 3.1 lub nowszy i MsftEdit.dll w wersji 4.1 lub nowszy).  
   
- Następujące formanty nie są obsługiwane.  
+ Następujące elementy sterujące są nieobsługiwane.  
   
 |Nazwa klasy|Typ formantu|  
 |----------------|------------------|  
@@ -90,37 +90,37 @@ ms.locfileid: "33409094"
 |SysPager|pokrętło|  
 |SysDateTimePick32|Niestandardowe|  
 |SysMonthCal32|Kalendarz|  
-|MS_WINNOTE|Etykietka narzędzia|  
-|VBBubble|Etykietka narzędzia|  
-|Pasek przewijania (jeśli jest używany jako formant autonomiczne)|Suwak|  
+|MS_WINNOTE|Etykietki narzędzi|  
+|VBBubble|Etykietki narzędzi|  
+|Pasek przewijania (jeśli jest używana jako kontrolkę autonomiczne)|Suwak|  
 |SuperGrid|Niestandardowe|  
   
 <a name="Windows_Forms_Controls"></a>   
 ## <a name="windows-forms-controls"></a>Formanty formularzy systemu Windows  
- Formanty formularzy systemu Windows są widoczne dla [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] za pośrednictwem dostawcy po stronie klienta w UIAutomationClientsideProviders.dll. Ten zestaw jest automatycznie dodawane do użytku z aplikacjami klienckimi automatyzacji interfejsu użytkownika.  
+ Kontrolek formularzy Windows Forms są narażone na [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] za pośrednictwem dostawcy po stronie klienta w UIAutomationClientsideProviders.dll. Ten zestaw jest automatycznie rejestrowane do użycia przy użyciu automatyzacji interfejsu użytkownika aplikacji klienckich.  
   
- Zazwyczaj formanty formularzy systemu Windows, które są zarządzane otoki [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] formanty standardowe są obsługiwane przez [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Obsługiwane są następujące formanty.  
+ Zazwyczaj formantów Windows Forms, które są zarządzane otoki [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] wspólnych formantów są obsługiwane przez [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Następujące elementy sterujące są obsługiwane.  
   
 |Nazwa klasy|  
 |----------------|  
 |Przycisk|  
 |CheckBox|  
-|CheckedListBox —|  
+|CheckedListBox|  
 |ColorDialog|  
 |ComboBox|  
 |FolderBrowser|  
 |FontDialog|  
 |GroupBox|  
 |HscrollBar|  
-|Listy obrazów|  
+|ImageList|  
 |Etykieta|  
 |ListBox|  
 |ListView|  
-|MainMenu — / ContextMenu|  
+|MainMenu — informacje o/ContextMenu|  
 |MonthCalendar|  
 |NotifyIcon|  
 |OpenFileDialog|  
-|PageSetupDialog —|  
+|PageSetupDialog|  
 |PrintDialog|  
 |ProgressBar|  
 |RadioButton|  
@@ -129,44 +129,44 @@ ms.locfileid: "33409094"
 |Elementu ScrollableControl|  
 |SoundPlayer|  
 |StatusBar|  
-|TabControl — / TabPage|  
+|TabControl — / TabPage —|  
 |TextBox|  
 |Czasomierz|  
 |Pasek narzędzi|  
 |ToolTip|  
 |TrackBar|  
 |TreeView|  
-|Vscrollbar —|  
+|VscrollBar|  
 |WebBrowser|  
   
- Następujące sterowniki są widoczne dla [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] tylko za pośrednictwem ich obsługę [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)]. Niektóre funkcje mogą nie być dostępne.  
+ Następujące elementy sterujące są narażone na [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] wyłącznie za pośrednictwem ich obsługę [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)]. Niektóre funkcje mogą nie być dostępne.  
   
-|Nazwa formantu|  
+|Nazwa kontrolki|  
 |------------------|  
 |BindingSource|  
 |DataGrid|  
-|Formant DataGridView|  
+|DataGridView|  
 |DataNavigator|  
 |DomainUpDown|  
 |ErrorProvider|  
 |FlowLayoutPanel|  
 |Formularz|  
 |LinkLabel|  
-|Helpprovider —|  
+|HelpProvider|  
 |MaskedTextBox|  
-|MenuStrip/ContextMenuStrip|  
+|MenuStrip — / ContextMenuStrip|  
 |NumericUpDown|  
 |Panel|  
 |PictureBox|  
-|PrintDocument —|  
+|PrintDocument|  
 |Printpreview — formant|  
-|Printpreview — okno dialogowe|  
+|Okno dialogowe printpreview —|  
 |PropertyGrid|  
 |UserControl|  
 |ToolStrip|  
 |TableLayoutPanel|  
 |SplitContainer/SplitterPanel|  
-|Podziału|  
+|Rozdzielacz|  
 |RaftingContainer|  
 |StatusStrip|  
   

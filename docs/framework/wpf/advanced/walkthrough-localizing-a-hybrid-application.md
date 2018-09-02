@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: 60e33f9f3ab767a6fd1d5489721fd2a82950155e
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 685c68967f69e8933ff3dd2cd062e0893c7e2da6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42752262"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465991"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>Wskazówki: lokalizacja aplikacji hybrydowej
 
@@ -28,7 +28,7 @@ Zadania zilustrowane w tym przewodniku obejmują:
 
 -   Przy użyciu locbaml — narzędzie do tworzenia zestawu satelickiego.
 
-Lista zadań przedstawione w niniejszym przewodniku kompletny kod znajduje się [lokalizowanie przykładowej aplikacji hybrydowych](http://go.microsoft.com/fwlink/?LinkID=160015).
+Lista zadań przedstawione w niniejszym przewodniku kompletny kod znajduje się [lokalizowanie przykładowej aplikacji hybrydowych](https://go.microsoft.com/fwlink/?LinkID=160015).
 
 Po zakończeniu masz hybrydowej zlokalizowanych aplikacji.
 
@@ -44,7 +44,7 @@ Pierwszym krokiem jest utworzenie [!INCLUDE[TLA#tla_winforms](../../../../includ
 
 ### <a name="to-create-the-host-project"></a>Aby utworzyć projekt hosta
 
-1.  Tworzenie **aplikacja WPF** projektu o nazwie `LocalizingWpfInWf`. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie projektu aplikacji Windows](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).
+1.  Tworzenie **aplikacja WPF** projektu o nazwie `LocalizingWpfInWf`.  (**Pliku** > **nowe** > **projektu** > **Visual C#** lub **języka Visual Basic**   >  **Classic Desktop** > **aplikacji WPF**).
 
 2.  Dodaj [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> element o nazwie `SimpleControl` do projektu.
 
@@ -177,5 +177,5 @@ Zlokalizowane zawartość jest przechowywana w tylko do zasobów *zestawie satel
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Lokalizowanie aplikacji](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)
-- [Wskazówki: Lokalizowanie interfejsów Windows Forms](http://msdn.microsoft.com/library/9a96220d-a19b-4de0-9f48-01e5d82679e5)
-- [Projektant WPF](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)
+- [Wskazówki: Lokalizowanie interfejsów Windows Forms](https://msdn.microsoft.com/library/9a96220d-a19b-4de0-9f48-01e5d82679e5)
+- [Projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

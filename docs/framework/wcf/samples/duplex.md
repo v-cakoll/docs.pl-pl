@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Duplex Service Contract
 ms.assetid: bc5de6b6-1a63-42a3-919a-67d21bae24e0
-ms.openlocfilehash: c132b49c3d1ff1cd72c7a02f66ad4bf6d2d65d1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54b941541ae0da4900608e61f08f4ed99c9ea472
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33506649"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43462496"
 ---
 # <a name="duplex"></a>Dupleks
-Dupleks przykładzie pokazano sposób definiowania i implementowanie kontraktu dwukierunkowego. Komunikację dupleksową występuje, gdy klient ustanawia sesję z usługą i udostępnia usługę kanału, na którym usługa można wysłać wiadomości zwrotnie do klienta. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). Kontrakt dupleksu jest zdefiniowany jako pary interfejsów — podstawowy interfejs z klienta do usługi i interfejs wywołania zwrotnego z usługi do klienta. W tym przykładzie `ICalculatorDuplex` interfejs umożliwia klientowi wykonywania operacji matematycznych, obliczania wyniku w sesji. Usługa zwraca wyniki na `ICalculatorDuplexCallback` interfejsu. Kontrakt dupleksowy wymaga elementu session, ponieważ kontekst muszą być ustalane do skorelowania zestaw komunikatów przesyłanych między klientem a usługą.  
+Dwukierunkowe przykładowych pokazano, jak definiować ani implementować kontraktu dwukierunkowego. Komunikację dupleksową występuje, gdy klient ustanawia sesję z usługą i zapewnia usługi kanału, na którym usługa może wysłać wiadomości zwrotnie do klienta. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). Kontrakt dupleksu jest zdefiniowany jako pary interfejsów — podstawowy interfejs od klienta do usługi i interfejs wywołania zwrotnego z usługi do klienta. W tym przykładzie `ICalculatorDuplex` interfejs umożliwia klientowi do wykonywania operacji matematycznych obliczania wyniku za pośrednictwem sesji. Usługa zwraca wyniki w `ICalculatorDuplexCallback` interfejsu. Kontrakt dupleksowy wymaga elementu session, ponieważ kontekst muszą być ustalane do skorelowania zestaw komunikatów przesyłanych między klientem a usługą.  
   
 > [!NOTE]
->  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
+>  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
   
- W tym przykładzie klient jest aplikacji konsoli (.exe), a usługa jest obsługiwana przez Internet Information Services (IIS). Kontrakt dupleksu jest zdefiniowane w następujący sposób:  
+ W tym przykładzie klient to aplikacja konsoli (.exe), a usługa jest hostowana przez Internetowe usługi informacyjne (IIS). Kontraktu dwukierunkowego jest zdefiniowana w następujący sposób:  
   
 ```  
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples", SessionMode=SessionMode.Required,  
@@ -45,7 +45,7 @@ public interface ICalculatorDuplexCallback
 }  
 ```  
   
- `CalculatorService` Klasa implementuje podstawową `ICalculatorDuplex` interfejsu. Używane przez usługę <xref:System.ServiceModel.InstanceContextMode.PerSession> tryb wystąpienia przechowywać wynik dla każdej sesji. Właściwość prywatna o nazwie `Callback` umożliwia dostęp do kanału wywołania zwrotnego do klienta. Usługa używa wywołania zwrotnego do wysyłania wiadomości do klienta za pośrednictwem interfejsu wywołania zwrotnego.  
+ `CalculatorService` Klasa implementuje podstawowy `ICalculatorDuplex` interfejsu. Używa usługi <xref:System.ServiceModel.InstanceContextMode.PerSession> tryb wystąpienia do obsługi wyników dla każdej sesji. Właściwość prywatna o nazwie `Callback` umożliwia dostęp do kanału wywołania zwrotnego do klienta. Usługa używa wywołania zwrotnego do wysyłania wiadomości do klienta za pośrednictwem interfejs wywołania zwrotnego.  
   
 ```  
 [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]  
@@ -82,7 +82,7 @@ public class CalculatorService : ICalculatorDuplex
 }  
 ```  
   
- Klient musi dostarczyć klasy, która implementuje interfejs wywołania zwrotnego kontrakt dupleksu do odbierania wiadomości z usługi. W przykładzie `CallbackHandler` zdefiniowana jest klasa implementacji `ICalculatorDuplexCallback` interfejsu.  
+ Klient musi podać klasę, która implementuje interfejs wywołania zwrotnego kontraktu dwukierunkowego, do odbierania wiadomości z usługi. W tym przykładzie `CallbackHandler` klasa jest zdefiniowana w celu zaimplementowania `ICalculatorDuplexCallback` interfejsu.  
   
 ```  
 public class CallbackHandler : ICalculatorDuplexCallback  
@@ -99,7 +99,7 @@ public class CallbackHandler : ICalculatorDuplexCallback
 }  
 ```  
   
- Serwer proxy generowany dla kontraktu dwukierunkowego wymaga <xref:System.ServiceModel.InstanceContext> należy wprowadzić po konstrukcji. To <xref:System.ServiceModel.InstanceContext> jest używany jako lokacji dla obiekt, który implementuje interfejs wywołania zwrotnego i obsługi wiadomości, które są wysyłane z usługi. <xref:System.ServiceModel.InstanceContext> Jest tworzony przy użyciu wystąpienia `CallbackHandler` klasy. Ten obiekt obsługi komunikatów wysyłanych z usługi do klienta w interfejsie wywołania zwrotnego.  
+ Serwer proxy, który jest generowany dla kontraktu dwukierunkowego wymaga <xref:System.ServiceModel.InstanceContext> należy podać podczas konstruowania. To <xref:System.ServiceModel.InstanceContext> jest używana jako witryna dla obiektu, który implementuje interfejs wywołania zwrotnego i obsługuje wiadomości wysyłanych na odpowiedź od usługi. <xref:System.ServiceModel.InstanceContext> Składa się z wystąpieniem `CallbackHandler` klasy. Ten obiekt obsługi komunikatów wysyłanych z usługi na kliencie, na interfejs wywołania zwrotnego.  
   
 ```  
 // Construct InstanceContext to handle messages on callback interface.  
@@ -136,7 +136,7 @@ Console.ReadLine();
 client.Close();  
 ```  
   
- Konfiguracja została zmodyfikowana ma zostać udostępnione wiązanie, która obsługuje zarówno sesji komunikacji i komunikację dupleksową. `wsDualHttpBinding` Obsługuje komunikację sesji i umożliwia komunikację dupleksową zapewniając dwa połączenia HTTP, po jednej dla każdego kierunku. W usłudze jedyną różnicą w konfiguracji jest powiązania, który jest używany. Na komputerze klienckim należy skonfigurować adres serwera można się połączyć do klienta, jak pokazano w poniższych Przykładowa konfiguracja.  
+ Konfiguracja została zmodyfikowana, aby zapewnić powiązania, który obsługuje zarówno sesji komunikacji, jak i komunikację dupleksową. `wsDualHttpBinding` Obsługuje komunikację sesji i umożliwia komunikację dupleksową, zapewniając dwa połączenia HTTP, jedno dla każdego kierunku. W usłudze jedyną różnicą w konfiguracji jest powiązanie, które jest używane. Na komputerze klienckim należy skonfigurować adres który umożliwia Podłącz do klienta, jak pokazano na poniższym Przykładowa konfiguracja serwera.  
   
 ```xml  
 <client>  
@@ -157,18 +157,18 @@ client.Close();
 </bindings>  
 ```  
   
- Po uruchomieniu próbki widzisz wiadomości, które są zwracane do klienta na interfejsie wywołania zwrotnego, który jest wysyłany z usługi. Zostanie wyświetlona poszczególnych pośrednia wynik, następuje całe równanie po zakończeniu wszystkich operacji. Naciśnij klawisz ENTER, aby zamknąć klienta.  
+ Po uruchomieniu przykładu, zostanie wyświetlone komunikaty, które są zwracane do klienta na interfejs wywołania zwrotnego, które są wysyłane z usługi. Jest wyświetlany wynik każdego pośrednich następuje całe równanie po ukończeniu wszystkich operacji. Naciśnij klawisz ENTER, aby zamknąć klienta.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Upewnij się, że wykonano procedurę [jednorazowego procedurę instalacji dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Tworzenie wersji języka C#, C++ lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Aby kompilować rozwiązania w wersji języka C#, C++ lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Aby uruchomić przykładowy w konfiguracji pojedynczej lub między komputerami, postępuj zgodnie z instrukcjami w [uruchamiania przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!IMPORTANT]
-    >  Podczas uruchamiania klienta w konfiguracji między komputerami, należy zastąpić "localhost" zarówno `address` atrybutu [punktu końcowego](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elementu i `clientBaseAddress` atrybutu [ \< Powiązanie >](../../../../docs/framework/misc/binding.md) elementu [ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) elementu o nazwie odpowiednie maszyny, jak pokazano poniżej:  
+    >  Podczas uruchamiania klienta w konfiguracji między komputerami, należy zastąpić "localhost", w obu `address` atrybutu [punktu końcowego](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elementu i `clientBaseAddress` atrybutu [ \< Powiązanie >](../../../../docs/framework/misc/binding.md) elementu [ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) element z nazwą odpowiedniej maszyny, jak pokazano w poniższym:  
   
     ```xml  
     <client>  
@@ -184,11 +184,11 @@ client.Close();
     ```  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Duplex`  
   

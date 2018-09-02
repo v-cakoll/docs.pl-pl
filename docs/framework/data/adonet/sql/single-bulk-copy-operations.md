@@ -1,58 +1,58 @@
 ---
-title: Operacje kopiowania masowego pojedynczego
+title: Pojedyncze operacje kopiowania zbiorczego
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-ms.openlocfilehash: 47f89feb90efbafb6c43bbad78f05292213a0c58
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 274a6e87b272002a567fd92605c4e690c03b6e26
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365868"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466920"
 ---
-# <a name="single-bulk-copy-operations"></a>Operacje kopiowania masowego pojedynczego
-Najprostsza metoda wykonywanie operacji kopiowania zbiorczego SQL Server jest na wykonanie jednej operacji na bazie danych. Domyślnie kopiowania masowego odbywa się jako operacja izolowanego: operacja kopiowania odbywa się w sposób obsługi nietransakcyjnego z udostępnieniem jej nie możliwości tworzenia kopii.  
+# <a name="single-bulk-copy-operations"></a>Pojedyncze operacje kopiowania zbiorczego
+Najprostszą metodą do wykonywania operacji kopiowania zbiorczego SQL Server jest na wykonanie jednej operacji w bazie danych. Domyślnie operacji kopiowania zbiorczego jest wykonywane jako operacja izolowane: operacja kopiowania odbywa się w sposób nietransakcyjnej ma możliwości, aby przerzucić go na tworzeniu kopii.  
   
 > [!NOTE]
->  Jeśli chcesz wycofać całość lub część kopiowania zbiorczego po wystąpieniu błędu, można użyć <xref:System.Data.SqlClient.SqlBulkCopy>-zarządzane transakcji lub wykonania operacji kopiowania zbiorczego w istniejącej transakcji. **SqlBulkCopy** będzie również współpracować z <xref:System.Transactions> Jeśli połączenie jest zarejestrowane (jawnie ani niejawnie) do **System.Transactions** transakcji.  
+>  Jeśli musisz wycofać całość lub część kopiowania masowego po wystąpieniu błędu, można użyć <xref:System.Data.SqlClient.SqlBulkCopy>-managed transakcji lub wykonywać operacji kopiowania zbiorczego w ramach istniejącej transakcji. **SqlBulkCopy** współdziałają z usługą <xref:System.Transactions> Jeśli połączenie jest zarejestrowany (jawnie lub niejawnie) na **System.Transactions** transakcji.  
 >   
->  Aby uzyskać więcej informacji, zobacz [transakcji i operacje kopiowania masowego](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md).  
+>  Aby uzyskać więcej informacji, zobacz [transakcja i operacje kopiowania masowego](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md).  
   
- Ogólne kroki do wykonania operacji kopiowania zbiorczego są następujące:  
+ Ogólne kroki umożliwiające wykonywanie operacji kopiowania zbiorczego są następujące:  
   
-1.  Nawiąż połączenie z serwerem źródłowym i uzyskać dane do skopiowania. Dane mogą również pochodzić z innych źródeł, jeśli będzie można pobrać z <xref:System.Data.IDataReader> lub <xref:System.Data.DataTable> obiektu.  
+1.  Połącz się na serwerze źródłowym i uzyskać dane do skopiowania. Dane mogą pochodzić również z innych źródeł, jeśli można go pobrać z <xref:System.Data.IDataReader> lub <xref:System.Data.DataTable> obiektu.  
   
-2.  Nawiąż połączenie z serwerem docelowym (chyba że chcesz **SqlBulkCopy** ustanowić połączenie dla Ciebie).  
+2.  Połączenie z serwerem docelowym (chyba że chcesz **SqlBulkCopy** ustanowić połączenie dla Ciebie).  
   
-3.  Utwórz <xref:System.Data.SqlClient.SqlBulkCopy> obiektu wszelkie wymagane właściwości.  
+3.  Utwórz <xref:System.Data.SqlClient.SqlBulkCopy> obiektu, ustawienie wszelkie wymagane właściwości.  
   
-4.  Ustaw **DestinationTableName** Właściwość wskazująca tabeli docelowej do zbiorczego operacji wstawiania.  
+4.  Ustaw **DestinationTableName** operacji wstawiania właściwości, aby wskazać, tabela docelowa dla zbiorczego.  
   
-5.  Wywoływanie jednego z **WriteToServer** metody.  
+5.  Wywołanie jednej z **WriteToServer** metody.  
   
-6.  Opcjonalnie, zaktualizuj właściwości i wywołanie **WriteToServer** ponownie w razie potrzeby.  
+6.  Opcjonalnie można zaktualizować właściwości i wywołania **WriteToServer** ponownie zgodnie z potrzebami.  
   
-7.  Wywołanie <xref:System.Data.SqlClient.SqlBulkCopy.Close%2A>, lub zawijać operacji kopiowania zbiorczego w obrębie `Using` instrukcji.  
+7.  Wywołaj <xref:System.Data.SqlClient.SqlBulkCopy.Close%2A>, lub zawijania operacje kopiowania masowego w ramach `Using` instrukcji.  
   
 > [!CAUTION]
->  Zaleca się, że typy danych kolumn źródłowa i docelowa są zgodne. Jeśli typy danych są niezgodne, **SqlBulkCopy** próbuje przekonwertować wartości każdego źródłowego na docelowy typ danych, przy użyciu reguł stosowanych przez <xref:System.Data.SqlClient.SqlParameter.Value%2A>. Konwersje może wpłynąć na wydajność, a także może spowodować nieoczekiwane błędy. Na przykład `Double` można przekonwertować na typ danych `Decimal` większość typów danych o czasie, ale nie zawsze.  
+>  Zaleca się, że są zgodne typy danych kolumn źródłowych i docelowych. Jeśli nie są zgodne z typami danych, **SqlBulkCopy** stara się przekonwertować wartość każdego źródłowego na docelowy typ danych, za pomocą reguł stosowanych przez <xref:System.Data.SqlClient.SqlParameter.Value%2A>. Konwersje może wpłynąć na wydajność, a także może spowodować nieoczekiwane błędy. Na przykład `Double` można przekonwertować na typ danych `Decimal` — typ danych większość czasu, ale nie zawsze.  
   
 ## <a name="example"></a>Przykład  
- Następującej aplikacji konsoli Pokazuje, jak załadować dane przy użyciu <xref:System.Data.SqlClient.SqlBulkCopy> klasy. W tym przykładzie <xref:System.Data.SqlClient.SqlDataReader> służy do kopiowania danych z **Production.Product** tabeli w programie SQL Server**AdventureWorks** bazy danych do tabeli podobne w tej samej bazy danych.  
+ Następująca aplikacja konsoli Pokazuje, jak załadować dane przy użyciu <xref:System.Data.SqlClient.SqlBulkCopy> klasy. W tym przykładzie <xref:System.Data.SqlClient.SqlDataReader> służy do kopiowania danych z **Production.Product** tabeli w programie SQL Server**AdventureWorks** bazy danych do tabeli podobne w tej samej bazy danych.  
   
 > [!IMPORTANT]
->  W tym przykładzie nie będzie działać, jeśli nie utworzono tabel roboczych zgodnie z opisem w [Instalatora przykład kopiowania zbiorczego](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Ten kod jest dostarczany do zaprezentowania składnia przy użyciu **SqlBulkCopy** tylko. Jeśli tabele źródłowy i docelowy znajdują się w tym samym wystąpieniu programu SQL Server, jest łatwiejsze i szybsze do używania języka Transact-SQL `INSERT … SELECT` instrukcji, aby skopiować dane.  
+>  W tym przykładzie nie będzie działać, chyba że utworzonego tabelami pracy zgodnie z opisem w [Konfiguracja przykładu kopiowania zbiorczego](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Ten kod jest dostarczany do zademonstrowania składnia przy użyciu **SqlBulkCopy** tylko. Jeśli tabele źródłowy i docelowy znajdują się w tym samym wystąpieniu programu SQL Server, jest łatwiejsze i szybsze użyj instrukcji Transact-SQL `INSERT … SELECT` instrukcję, aby skopiować dane.  
   
  [!code-csharp[DataWorks BulkCopy.Single#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks BulkCopy.Single/CS/source.cs#1)]
  [!code-vb[DataWorks BulkCopy.Single#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks BulkCopy.Single/VB/source.vb#1)]  
   
-## <a name="performing-a-bulk-copy-operation-using-transact-sql-and-the-command-class"></a>Wykonywanie operacji kopiowania zbiorczego przy użyciu języka Transact-SQL i klasy poleceń  
- Poniższy przykład przedstawia sposób użycia <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> metodę można wykonać instrukcji BULK INSERT.  
+## <a name="performing-a-bulk-copy-operation-using-transact-sql-and-the-command-class"></a>Wykonywanie operacji kopiowania zbiorczego, przy użyciu języka Transact-SQL i klasy poleceń  
+ Poniższy przykład ilustruje sposób używania <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> metody, które można wykonać instrukcji BULK INSERT.  
   
 > [!NOTE]
->  Ścieżka pliku źródła danych jest określana względem serwera. Proces serwera musi mieć dostęp do tej ścieżki w kolejności dla operacji kopiowania zbiorczego powiodło się.  
+>  Ścieżka pliku źródła danych jest określana względem serwera. Proces serwera musi mieć dostęp do tej ścieżki, aby jako warunek powodzenia operacji kopiowania zbiorczego.  
   
 ```vb  
 Using connection As SqlConnection = New SqlConnection(connectionString)  
@@ -81,4 +81,4 @@ command.ExecuteNonQuery();
   
 ## <a name="see-also"></a>Zobacz też  
  [Operacje kopiowania masowego w programie SQL Server](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

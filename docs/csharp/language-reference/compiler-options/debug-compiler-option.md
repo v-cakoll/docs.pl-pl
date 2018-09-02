@@ -8,15 +8,15 @@ helpviewer_keywords:
 - -debug compiler option [C#]
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
-ms.openlocfilehash: ab9b299579f9ab4a854ce7ab220edc87e0c66745
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c0e8909a1e642333e93cfea5dbfde2f6c33c5443
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218848"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470960"
 ---
 # <a name="-debug-c-compiler-options"></a>-debug (opcje kompilatora C#)
-**-Debug** opcji powoduje, że kompilator generuje informacje o debugowaniu i umieścić go w pliku danych wyjściowych.  
+**-Debug** opcji powoduje, że kompilator generuje informacje o debugowaniu i umieść go w pliku danych wyjściowych lub plików.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -27,20 +27,20 @@ ms.locfileid: "33218848"
   
 ## <a name="arguments"></a>Argumenty  
  `+` &#124; `-`  
- Określanie `+`, lub po prostu **-debug**, powoduje, że kompilator generuje informacje o debugowaniu i umieść go w bazie danych programu (plik PDB). Określanie `-`, która jest włączona, jeśli nie określisz **-debug**, powoduje, że żadne informacje o debugowaniu ma zostać utworzony.  
+ Określanie `+`, lub po prostu **-debug**, powoduje, że kompilator generuje informacje o debugowaniu i umieść go w bazie danych programu (plik .pdb). Określanie `-`, ponieważ jest aktywna, jeśli nie określisz **-debug**, powoduje, że żadne informacje debugowania do utworzenia.  
   
  `full` &#124; `pdbonly`  
- Określa typ informacji dotyczących debugowania generowanych przez kompilator. Pełna argumentu, który jest efektu, jeśli nie określisz **-debugowania: pdbonly**, umożliwia dołączenie debugera do działającego programu. Określenie pdbonly umożliwia debugowanie, gdy program jest uruchamiany w debugerze, ale będą wyświetlane tylko asemblera jeśli uruchomiony program jest podłączony do debugera kodu źródłowego.  
+ Określa typ informacji o debugowaniu generowanych przez kompilator. Pełne argumentu, który znajduje się w efektu, jeśli nie określisz **-debug: pdbonly**, umożliwia dołączanie debugera do uruchomionego programu. Określenie "pdbonly" pozwala kodu źródłowego, debugowanie, gdy program jest uruchomiony w debugerze, ale będą wyświetlane tylko asemblera, gdy uruchomiony program jest dołączony do debugera.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta opcja służy do tworzenia kompilacji do debugowania. Jeśli **-debug**, **-debugowania +**, lub **-debugowania: full** nie zostanie określony, nie można debugować pliku wyjściowego z programu.  
+ Użyj tej opcji, aby utworzyć kompilacji do debugowania. Jeśli **-debug**, **-debugowania +**, lub **-debug: full** nie zostanie określony, nie można debugować pliku danych wyjściowych programu.  
   
- Jeśli używasz **-debugowania: full**, należy pamiętać, że niektóre wpływa na szybkość i rozmiar JIT zoptymalizowany kod i mały wpływ na jakości kodu z **-debugowania: full**. Firma Microsoft zaleca **-debugowania: pdbonly** lub nie pliku PDB generowania wersji kodu.  
+ Jeśli używasz **-debug: full**, należy pamiętać, że istnieje pewien wpływ na szybkość i rozmiar zoptymalizowany kod JIT i mały wpływ na jakość kodu za pomocą **-debug: full**. Firma Microsoft zaleca **-debug: pdbonly** lub nie pliku PDB podczas generowania wersji kodu.  
   
 > [!NOTE]
->  Jeden różnica między **-debugowania: pdbonly** i **-debugowania: full** jest to, że z **-debugowania: full** kompilator emituje <xref:System.Diagnostics.DebuggableAttribute>, używany do Poinformuj kompilator JIT te informacje debugowania są dostępne. W związku z tym będzie wyświetlany komunikat o błędzie, jeśli kod zawiera <xref:System.Diagnostics.DebuggableAttribute> ustawiona na wartość false, jeśli używasz **-debugowania: full**.  
+>  Jedną różnicą między **-debug: pdbonly** i **— debug: full** , w przypadku **— debug: full** kompilator generuje <xref:System.Diagnostics.DebuggableAttribute>, który jest używany do informują kompilator JIT czy dostępne są informacje debugowania. W związku z tym, otrzymasz błąd, jeśli kod zawiera <xref:System.Diagnostics.DebuggableAttribute> ustawiona na wartość false, jeśli używasz **-debug: full**.  
   
- Aby uzyskać więcej informacji na temat konfigurowania wydajność debugowania aplikacji, zobacz [ułatwiając obraz do debugowania](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md).  
+ Aby uzyskać więcej informacji na temat konfigurowania wydajność debugowania aplikacji, zobacz [ułatwianie obrazu do debugowania](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md).  
   
  Aby zmienić lokalizację pliku .pdb, zobacz [- pdb (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/pdb-compiler-option.md).  
   
@@ -48,13 +48,13 @@ ms.locfileid: "33218848"
   
 1.  Otwórz projekt **właściwości** strony.  
   
-2.  Kliknij przycisk **kompilacji** strony właściwości.  
+2.  Kliknij przycisk **kompilacji** stronę właściwości.  
   
 3.  Kliknij przycisk **zaawansowane** przycisku.  
   
 4.  Modyfikowanie **informacje o debugowaniu** właściwości.  
   
- Aby uzyskać informacje dotyczące ustawiania tej opcji kompilatora programowo, zobacz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DebugSymbols%2A>.  
+ Aby uzyskać informacje na temat sposobu programowo ustawić tę opcję kompilatora, zobacz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DebugSymbols%2A>.  
   
 ## <a name="example"></a>Przykład  
  Umieść informacje o debugowaniu w pliku wyjściowym `app.pdb`:  
@@ -64,5 +64,6 @@ csc -debug -pdb:app.pdb test.cs
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

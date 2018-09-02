@@ -7,16 +7,16 @@ helpviewer_keywords:
 - -publicsign compiler option [C#]
 - publicsign compiler option [C#]
 - /publicsign compiler option [C#]
-ms.openlocfilehash: ec25f9c1f2ef943db41bcfa20c8efd1d05866acd
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: 01ce30b9ac5997f56f29dcbbfa43a27738fa5556
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472853"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474255"
 ---
 # <a name="-publicsign-c-compiler-options"></a>-publicsign (opcje kompilatora C#)
 
-Ta opcja powoduje, że kompilator zastosowanie klucza publicznego, ale faktycznie nie podpisać zestawu. **- Publicsign** również ustawia bit w zestawie środowiska uruchomieniowego informuje, że plik został podpisany faktycznie.
+Ta opcja powoduje, że kompilator zastosować klucz publiczny, ale nie faktycznego podpisywania zestawu. **- Publicsign** również ustawia bit w zestawie, który informuje środowiska uruchomieniowego, w rzeczywistości podpisania pliku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,20 +30,21 @@ Brak.
 
 ## <a name="remarks"></a>Uwagi
 
-**- Publicsign** opcja wymaga użycia [- keyfile](keyfile-compiler-option.md) lub [- keycontainer](keycontainer-compiler-option.md). **Keyfile** lub **keycontainer** opcje określić klucz publiczny.
+**- Publicsign** opcja wymaga użycia [- keyfile](keyfile-compiler-option.md) lub [- keycontainer](keycontainer-compiler-option.md). **Keyfile** lub **keycontainer** opcji Określ klucz publiczny.
 
-**- Publicsign** i **- delaysign** wykluczają się wzajemnie.
+**- Publicsign** i **- delaysign** opcje wykluczają się wzajemnie.
 
-Czasami nazywany "fałszywych znaku" lub "OSS znaku", publiczne podpisywanie zawiera klucz publiczny w zestawie danych wyjściowych i ustawia flagę "podpisem", ale faktycznie nie Podpisz zestaw z kluczem prywatnym. Jest to przydatne dla projektów typu open source, której chcesz utworzyć zestawy, które są zgodne z wydaną zestawy "podpisany całkowicie", ale nie mają dostępu do klucza prywatnego, używany do podpisywania zestawy osób. Ponieważ prawie żadnych użytkowników faktycznie należy sprawdzić, czy zestaw jest niecałkowicie podpisany, publicznie skompilowane zestawy są użyteczny w niemal każdego scenariusz, gdzie będzie używane to całkowicie podpisane.
+Czasami nazywane "fałszywych znak" lub "OSS znak", publiczne podpisywanie zawiera klucz publiczny w zestawie danych wyjściowych i ustawia flagę "podpisem", ale faktycznie nie podpisać zestaw przy użyciu klucza prywatnego. Jest to przydatne w przypadku projektów "open source", gdzie użytkownicy chcą utworzyć zestawy, które są zgodne z wydana w zestawach "niecałkowicie podpisany", ale nie mają dostępu do prywatnego klucza używanego do podpisywania zestawów. Ponieważ niemal żadnych użytkowników jest potrzebna do sprawdzenia, jeśli zestaw jest niecałkowicie podpisany, publicznie skompilowanych zestawów są niemożliwe w prawie w każdym scenariuszu, w której będzie służyć całkowicie podpisanego jeden.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
 1. Otwórz **właściwości** strony dla projektu.
-1. Modyfikowanie **opóźnienie tylko znak** właściwości.
+1. Modyfikowanie **opóźnienie logowania tylko** właściwości.
 
 ## <a name="see-also"></a>Zobacz też
- [-Delaysign — opcja kompilatora C#](delaysign-compiler-option.md)  
- [-Keyfile — opcja kompilatora C#](keyfile-compiler-option.md)  
- [-Keycontainer — opcja kompilatora C#](keycontainer-compiler-option.md)  
- [Opcje kompilatora C#](index.md)  
- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [-Delaysign — opcja kompilatora C#](delaysign-compiler-option.md)  
+- [-Keyfile — opcja kompilatora C#](keyfile-compiler-option.md)  
+- [Kompilator języka C# - keycontainer — opcja](keycontainer-compiler-option.md)  
+- [Opcje kompilatora C#](index.md)  
+- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

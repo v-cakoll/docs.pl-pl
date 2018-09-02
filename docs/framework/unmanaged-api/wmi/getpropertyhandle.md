@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 94171b0708c97eb7510e916e451ed03645d706f3
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933349"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469885"
 ---
 # <a name="getpropertyhandle-function"></a>Funkcja GetPropertyHandle
 Zwraca unikatowy uchwytu, który identyfikuje właściwość.

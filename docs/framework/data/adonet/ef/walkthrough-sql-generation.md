@@ -2,15 +2,15 @@
 title: 'Wskazówki: Generowanie kodu SQL'
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: ab08b404dc60483a39e5c6ae56d82b63932c3f3e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5551eb4088e7529c61d5c517fed6877c23ae12f2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766325"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43472075"
 ---
 # <a name="walkthrough-sql-generation"></a>Wskazówki: Generowanie kodu SQL
-W tym temacie przedstawiono, jak generowanie kodu SQL występuje w [dostawcy próbki](http://go.microsoft.com/fwlink/?LinkId=180616). Następujące zapytanie SQL jednostki korzysta z modelu, który jest dołączony do dostawcy próbki:  
+W tym temacie przedstawiono, jak odbywa się generowanie kodu SQL w [dostawcy próbki](https://go.microsoft.com/fwlink/?LinkId=180616). Następujące zapytanie SQL jednostki używa modelu, który jest uwzględniona w dostawcy próbki:  
   
 ```  
 SELECT  j1.ProductId, j1.ProductName, j1.CategoryName, j2.ShipCountry, j2.ProductId  
@@ -21,7 +21,7 @@ INNER JOIN (SELECT OD.ProductId, OD.Order.ShipCountry as ShipCountry
             ON j1.ProductId == j2.ProductId   
 ```  
   
- Kwerenda zwraca następujące drzewo dane wyjściowe polecenia są przekazywane do dostawcy:  
+ Zapytanie generuje następujące dane wyjściowe polecenia drzewa który jest przekazywane do dostawcy:  
   
 ```  
 DbQueryCommandTree  
@@ -82,7 +82,7 @@ DbQueryCommandTree
           |_Var(Join4).Join3.Extent3.ProductID  
 ```  
   
- W tym temacie opisano, jak tłumaczenie tego drzewa poleceń dane wyjściowe do następujących instrukcji SQL.  
+ W tym temacie opisano, jak tłumaczenie tego drzewa poleceń dane wyjściowe na następujące instrukcje SQL.  
   
 ```  
 SELECT   
@@ -105,54 +105,54 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
    ) AS [Join3] ON [Extent1].[ProductID] = [Join3].[ProductID]  
 ```  
   
-## <a name="first-phase-of-sql-generation-visiting-the-expression-tree"></a>Pierwszą fazę generowanie kodu SQL: odwiedzający wyrażenie drzewa  
- Na poniższym rysunku przedstawiono początkowy stan pusty obiekt odwiedzający.  W tym temacie przedstawiono wyjaśnienie wskazówki dotyczące właściwości.  
+## <a name="first-phase-of-sql-generation-visiting-the-expression-tree"></a>Pierwsza faza generowanie kodu SQL: odwiedzający drzewa wyrażeń  
+ Na poniższym rysunku przedstawiono początkowy stan pusty obiekt odwiedzający.  W tym temacie są wyświetlane tylko te właściwości, które są istotne dla wyjaśnienie wskazówki.  
   
  ![Diagram](../../../../../docs/framework/data/adonet/ef/media/430180f5-4fb9-4bc3-8589-d566512d9703.gif "430180f5-4fb9-4bc3-8589-d566512d9703")  
   
- Po odwiedzeniu węzła projektu VisitInputExpression jest wywoływana przez jego danych wejściowych (Join4), która wyzwala odwiedziny Join4 przez metodę VisitJoinExpression. Ponieważ jest to najwyżej sprzężenia, IsParentAJoin zwraca wartość false i nowych SqlSelectStatement (SelectStatement0) jest tworzony i wypychana na stosie instrukcji SELECT. Ponadto nowy zakres (scope0) została wprowadzona w tabeli symboli. Przed odwiedzenia pierwszy danych wejściowych (lewych) sprzężenia 'true' spoczywa na stosie IsParentAJoin. Tuż przed odwiedzenia Join1, czyli po lewej stronie wprowadzania Join4 stan obiektu odwiedzającego jest pokazany na rysunku dalej.  
+ Po odwiedzeniu węzła projektu VisitInputExpression jest wywoływana za pośrednictwem danych wejściowych (Join4), co powoduje wyzwolenie wizyty Join4 przez metodę VisitJoinExpression. Ponieważ jest elementem najwyższego poziomu sprzężenia, IsParentAJoin zwraca wartość false, a nowe SqlSelectStatement (SelectStatement0) zostanie utworzony i wypchnięty na stos instrukcji SELECT. Ponadto nowego zakresu (scope0) jest wprowadzana w tabeli symboli. Przed odwiedzeniu pierwsze dane wejściowe (po lewej stronie) sprzężenia 'true' są wypychane na stos IsParentAJoin. Po prawej, zanim odwiedzeniu Join1, czyli po lewej stronie dane wejściowe Join4 stan odwiedzający jest, jak pokazano na poniższej ilustracji.  
   
  ![Diagram](../../../../../docs/framework/data/adonet/ef/media/406d4f5f-6166-44ea-8e74-c5001d5d5d79.gif "406d4f5f-6166-44ea-8e74-c5001d5d5d79")  
   
- Gdy odwiedź sprzężenie metoda jest wywoływana przez Join4 IsParentAJoin ma wartość true, w związku z tym ponownie używa bieżącej instrukcji select SelectStatement0. Nowy zakres jest wprowadzona (Zakres1). Przed jego lewy element podrzędny, Extent1, odwiedzając innego true spoczywa na stosie IsParentAJoin.  
+ Gdy odwiedza sprzężenia metoda jest wywoływana za pośrednictwem Join4 IsParentAJoin ma wartość true, dlatego ponownie używa bieżącej instrukcji select SelectStatement0. Nowy zakres jest podana (Zakres1). Przed jego podrzędny po lewej stronie Extent1, odwiedzając inną wartość PRAWDA jest wypychane na stos IsParentAJoin.  
   
- Po odwiedzeniu Extent1, ponieważ IsParentAJoin zwraca wartość true, zwraca SqlBuilder, zawierający "[dbo]. [Produkty] ". Zwraca formantu do metody odwiedzający Join4. Wpis jest zdjęte ze stosu z IsParentAJoin i ProcessJoinInputResult jest wywoływana, które dołącza odwiedzający Extent1 do klauzuli From SelectStatement0 wynik. Nowy z symbolu, symbol_Extent1, dla nazwy powiązania wejściowego "Extent1" został utworzony, dodane do FromExtents SelectStatement0, a także "Jako" i symbol_Extent1 są dołączane do klauzuli from. Nowy wpis jest dodawany do AllExtentNames do "Extent1" o wartości 0. Nowy wpis zostanie dodany do bieżącego zakresu w tabeli symboli do skojarzenia z jego symbol_Extent1 symbol "Extent1". Symbol_Extent1 jest także dodawane do AllJoinExtents z SqlSelectStatement.  
+ Po odwiedzeniu Extent1, ponieważ IsParentAJoin zwraca wartość true, zwraca SqlBuilder, zawierające "[dbo]. [Products] ". Formant powraca do metody, odwiedzając Join4. Wpis zostanie zdjęte z IsParentAJoin i ProcessJoinInputResult nosi nazwę, która dołącza odwiedzający Extent1 do klauzuli From SelectStatement0 wynik. Nowe z symboli, symbol_Extent1, nazwa powiązania danych wejściowych "Extent1" jest utworzony, dodawane do FromExtents SelectStatement0, a także "Jako" i symbol_Extent1 są dołączane do klauzuli from. Nowy wpis jest dodawany do AllExtentNames dla "Extent1" o wartości 0. Nowy wpis jest dodawany do bieżącego zakresu w tabeli symboli, aby skojarzyć "Extent1" z jej symbol_Extent1 symboli. Symbol_Extent1 jest także dodawane do AllJoinExtents z SqlSelectStatement.  
   
- Przed odwiedzenia odpowiednie dane wejściowe z Join1 "LEFT OUTER JOIN" zostanie dodany do klauzuli From SelectStatement0. Ponieważ odpowiednie dane wejściowe to wyrażenie skanowania, true ponownie spoczywa na stos IsParentAJoin. Stan przed odwiedzający odpowiednie dane wejściowe, jak pokazano na rysunku dalej.  
+ Zanim odwiedzeniu prawym wejściem Join1 "LEFT OUTER JOIN" zostanie dodany do klauzuli From SelectStatement0. Ponieważ odpowiednie dane wejściowe to wyrażenie skanowania, true zostanie ponownie przypisany do stosu IsParentAJoin. Stan przed odwiedzający odpowiednie dane wejściowe, jak pokazano na poniższej ilustracji.  
   
  ![Diagram](../../../../../docs/framework/data/adonet/ef/media/ca62c31b-7ff6-4836-b209-e16166304fdc.gif "ca62c31b-7ff6-4836-b209-e16166304fdc")  
   
- Dane wejściowe są przetwarzane w taki sam sposób jak po lewej stronie dane wejściowe. Stan po odwiedzeniu odpowiednie dane wejściowe pokazano na rysunku dalej.  
+ Odpowiednie dane wejściowe są przetwarzane w taki sam sposób, jak po lewej stronie dane wejściowe. Na kolejnej ilustracji przedstawiono stanu po odwiedzeniu odpowiednie dane wejściowe.  
   
  ![Diagram](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")  
   
- Następny "false" spoczywa na stosie IsParentAJoin i Var(Extent1) warunek sprzężenia. CategoryID == Var(Extent2). CategoryID jest przetwarzany. Var(Extenent1) jest rozpoznać < symbol_Extent1 > po sprawdzeniu się w tabeli symboli. Ponieważ wystąpienie nie zostanie rozwiązany do symbolu proste, w wyniku przetworzenia Var(Extent1). CategoryID, SqlBuilder z \<symbol1 >. " Zwracany jest identyfikatorem kategorii". Podobnie po stronie porównania jest przetwarzany i wynik odwiedzający warunek sprzężenia jest dołączany do klauzuli FROM SelectStatement1, a wartość "false" jest zdjęte ze stosu ze stosu IsParentAJoin.  
+ Dalej "false" są wypychane na stos IsParentAJoin i Var(Extent1) warunek sprzężenia. CategoryID == Var(Extent2). CategoryID jest przetwarzany. Var(Extenent1) zostaje rozpoznany < symbol_Extent1 > po się się w tabeli symboli. Ponieważ wystąpienie nie zostanie rozwiązany do symbolu proste w wyniku przetworzenia Var(Extent1). CategoryID, SqlBuilder z \<symbol1 >. " Zwracany jest CategoryID". Podobnie po stronie porównania jest przetwarzany, a wynik odwiedzający warunek sprzężenia jest dołączany do klauzuli FROM SelectStatement1, a wartość "false" zostanie zdjęte ze stosu IsParentAJoin.  
   
- O tym Join1 zostały całkowicie przetworzone, a zakres jest zdjęte ze stosu z tabelą symboli.  
+ Dzięki temu Join1 całkowicie zostały przetworzone i zakresem są zdjęte ze stosu z tabelą symboli.  
   
- Zwraca sterowania do przetwarzania Join4, nadrzędny Join1. Ponieważ podrzędne ponownie użyć instrukcji Select, zakresy Join1 są zastępowane jeden symbol sprzężenia < joinSymbol_Join1 >. Także nowy wpis jest dodawany do tabeli symboli, aby skojarzyć Join1 z < joinSymbol_Join1 >.  
+ Formant powraca do przetwarzania Join4, nadrzędny Join1. Ponieważ element podrzędny ponownie użyty w instrukcji Select, zakresów Join1 są zastępowane pojedynczego symbolu Join < joinSymbol_Join1 >. Ponadto nowy wpis jest dodawany do tabeli symboli, aby skojarzyć Join1 z < joinSymbol_Join1 >.  
   
- Następny węzeł przetwarzania jest Join3, drugi podrzędnym Join4. Po wykonaniu prawy element podrzędny, "false" spoczywa na stos IsParentAJoin. Następny rysunek przedstawia stan osoby odwiedzającej jest możliwe w tym momencie.  
+ Następny węzeł przetwarzania jest Join3, drugi element podrzędny Join4. Ponieważ jest prawo podrzędnych, "false" zostanie przypisany do stosu IsParentAJoin. Następny rysunek przedstawia stanu obiektu odwiedzającego, w tym momencie.  
   
  ![Diagram](../../../../../docs/framework/data/adonet/ef/media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3-fcdd-4649-9089-24385be7e423")  
   
- Dla Join3 IsParentAJoin zwraca wartość false i należy uruchomić nowe SqlSelectStatement (SelectStatement1) i wypchnąć go na stosie. Przetwarzanie będzie kontynuowane, jak z poprzedniej poprzedniej sprzężenia, nowego zakresu spoczywa na stosie i elementy podrzędne są przetwarzane. Lewy element podrzędny jest zakres (Extent3) i prawy element podrzędny sprzężenia (Join2), którą należy uruchomić nowe SqlSelectStatement: SelectStatement2. Elementy podrzędne na Join2 są również zakresy i są agregowane do SelectStatement2.  
+ Dla Join3 IsParentAJoin zwraca wartość false i musi uruchomić nowy SqlSelectStatement (SelectStatement1) i wypchnąć je na stosie. Przetwarzanie będzie kontynuowane, jak za pomocą poprzedniego poprzedniego sprzężeń, nowego zakresu są wypychane na stosie i elementy podrzędne są przetwarzane. Po lewej stronie podrzędny jest zakres (Extent3) i odpowiednie podrzędny jest elementem sprzężenia (Join2) również potrzebuje, aby rozpocząć nowy SqlSelectStatement: SelectStatement2. Elementy podrzędne na Join2 są również zakresów i są agregowane do SelectStatement2.  
   
- Stan obiektu odwiedzającego prawa po odwiedzeniu Join2, ale przed jego przetwarzanie końcowe (ProcessJoinInputResult) jest wykonywane jest pokazywana w następny rysunek:  
+ Po odwiedzeniu Join2, ale przed jego przetwarzanie końcowe (ProcessJoinInputResult) odbywa się stan obiektu odwiedzającego po prawej stronie jest wyświetlany na poniższej ilustracji:  
   
  ![Diagram](../../../../../docs/framework/data/adonet/ef/media/7510346f-8b09-4c99-b411-40af239c3c4d.gif "7510346f-8b09-4c99-b411-40af239c3c4d")  
   
- Na poprzedniej ilustracji SelectStatement2 jest wyświetlana jako przestawne wolnego ponieważ został zdjęte ze stosu poza stosu, ale nie została jeszcze post przetworzone przez element nadrzędny. Wymaga do dodania do części od elementu nadrzędnego, ale nie jest pełną instrukcję SQL bez klauzuli SELECT. Tak w tym momencie domyślne kolumny (wszystkie kolumny tworzone przez komponenty) są dodawane do listy wyboru przez metodę AddDefaultColumns. AddDefaultColumns przechodzi przez symbole w FromExtents i dla każdego symbolu dodaje wszystkie kolumny w zakresie. Dla symbolu proste wygląda na typ symbolu do pobrania jego właściwości mają zostać dodane. Wypełnia słownik AllColumnNames z nazw kolumn. Ukończono SelectStatement2 jest dołączany do klauzuli FROM SelectStatement1.  
+ Na poprzednim rysunku SelectStatement2 zostanie wyświetlone jako wolne liczb zmiennoprzecinkowych ponieważ był zdjęte ze stosu poza stosu, ale nie została jeszcze wpis przetwarzane przez nadrzędne. Jego musi zostać dodane do FROM części nadrzędnej, ale nie jest pełną instrukcję SQL bez klauzuli SELECT. Tak w tym momencie domyślnych kolumn (wszystkie kolumny zwracane przez jego danych wejściowych) są dodawane do listy wyboru przez metodę AddDefaultColumns. AddDefaultColumns iteruje symboli w FromExtents i dla każdego symbolu dodaje wszystkie kolumny w zakresie. Dla symbolu prosty wygląda na typ symbolu do pobrania jego właściwości mają zostać dodane. Wypełnia ono słownika AllColumnNames nazwami kolumn. Ukończone SelectStatement2 jest dołączany do klauzuli FROM SelectStatement1.  
   
- Następnie jest tworzony nowy symbol sprzężenia, do reprezentowania Join2, jest oznaczony jako zagnieżdżony sprzężenia i dodane do AllJoinExtents SelectStatement1 i dodane do tabeli symboli.  Teraz warunek sprzężenia Join3, Var(Extent3). OrderID = Var(Join2). Extent4.OrderID, musi być przetwarzane. Przetwarzanie z lewej strony jest podobny do Join1 warunek sprzężenia. Jednak przetwarzanie prawo i po stronie "Var(Join2). Extent4.OrderID"jest inny, ponieważ spłaszczanie sprzężenia jest wymagana.  
+ Następnie nowy symbol sprzężenia jest tworzone do reprezentowania Join2, jest oznaczona jako zagnieżdżonego sprzężenia i dodane do AllJoinExtents SelectStatement1 i dodane do tabeli symboli.  Teraz warunek sprzężenia Join3, Var(Extent3). OrderID = Var(Join2). Extent4.OrderID, musi być przetwarzane. Przetwarzanie po lewej stronie jest podobny do warunku join Join1. Jednak przetwarzanie po prawej stronie i po stronie "Var(Join2). Extent4.OrderID"jest inny, ponieważ spłaszczanie sprzężenia jest wymagana.  
   
- Następny rysunek przedstawia stan prawa odwiedzający przed DbPropertyExpression "Var(Join2). Extent4.OrderID"jest przetwarzany.  
+ Następny rysunek przedstawia stan obiektu odwiedzającego po prawej stronie przed DbPropertyExpression "Var(Join2). Extent4.OrderID"jest przetwarzany.  
   
- Należy rozważyć sposób "Var(Join2). Odwiedzenia Extent4.OrderID". Pierwsza strona, właściwości wystąpienia "Var(Join2). Extent4 "odwiedzenia, który jest inny DbPropertyExpression i najpierw odwiedza wystąpienia"Var(Join2)". W górnym większości zakresie w tabeli symboli "Join2" jest rozpoznawany jako < joinSymbol_join2 >. W metodzie odwiedziny dla DbPropertyExpression przetwarzania "Var(Join2). Extent4 "należy zauważyć, że symbol sprzężenia został zwrócony podczas odwiedzania wystąpienie i spłaszczania jest wymagana.  
+ Należy wziąć pod uwagę sposób "Var(Join2). Odwiedzeniu Extent4.OrderID". Pierwszy, właściwość wystąpienia "Var(Join2). Extent4 "odwiedzenia, który jest inny DbPropertyExpression i najpierw odwiedza jego wystąpienie"Var(Join2)". W górnym większość zakresie w tabeli symboli "Join2" jest rozpoznawany jako < joinSymbol_join2 >. W metodzie odwiedziny dla DbPropertyExpression przetwarzania "Var(Join2). Extent4 "należy zauważyć, że symbol sprzężenia został zwrócony podczas odwiedzania wystąpienia i spłaszczanie nie jest wymagana.  
   
- Ponieważ jest zagnieżdżony sprzężenia, możemy wyszukiwania właściwości "Extent4" w słowniku NameToExtent symbolu sprzężenia, odpowiada < symbol_Extent4 > i zwraca nowy SymbolPair (< joinSymbol_join2 >, < symbol_Extent4 >). Ponieważ parę symbol jest zwracana z przetwarzanie wystąpienia "Var(Join2). Extent4.OrderID"właściwości"OrderID"jest rozwiązany z ColumnPart pary tego symbolu (< symbol_Extent4 >) z listą kolumn zakresu, który reprezentuje. Dlatego "Var(Join2). Extent4.OrderID"zostanie rozwiązany do {< joinSymbol_Join2 >". ", < symbol_OrderID >}.  
+ Ponieważ jest zagnieżdżonego sprzężenia, firma Microsoft wyszukać właściwość "Extent4" w słowniku NameToExtent symbolu sprzężenia, rozwiązaniem < symbol_Extent4 > i zwracają nowe SymbolPair (< joinSymbol_join2 >, < symbol_Extent4 >). Ponieważ pary symbol jest zwracany z przetwarzania wystąpienia "Var(Join2). Extent4.OrderID"właściwości"OrderID"jest rozwiązany z ColumnPart tej pary symbol (< symbol_Extent4 >), mającej listy kolumn o zakresie, który reprezentuje. Dlatego "Var(Join2). Extent4.OrderID"nie zostanie rozwiązany do {< joinSymbol_Join2 >". ", < symbol_OrderID >}.  
   
- Warunek sprzężenia Join4 podobnie jest przetwarzany. Formant zwraca do metody VisitInputExpression przetwarzania górnej większości projektu. Patrzeć FromExtents z SelectStatement0 zwrócone, danych wejściowych jest rozpoznawany jako sprzężenia i usuwa oryginalny zakres i zastępuje je nowy zakres symbolem tylko sprzężenia. Zaktualizowano także tabeli symboli, a następne projekcji częścią projektu jest przetwarzany. Rozpoznawanie właściwości i spłaszczanie zakresów sprzężenia jest zgodnie z wcześniejszym opisem.  
+ Warunek sprzężenia Join4 podobnie jest przetwarzany. Formant powraca do metody VisitInputExpression, który przetwarzał u góry większości projektów. Patrząc FromExtents elementu zwróconego SelectStatement0, danych wejściowych jest identyfikowany jako sprzężenia i usuwa oryginalny zakresów i zastępuje je nowy zakres symbolem po prostu sprzężenia. Zaktualizowano także tabeli symboli, a następnie jest przetwarzany projekcji częścią projektu. Rozpoznawanie właściwości i spłaszczanie zakresów sprzężenia jest zgodnie z wcześniejszym opisem.  
   
  ![Diagram](../../../../../docs/framework/data/adonet/ef/media/9456d6a9-ea2e-40ae-accc-a10e18e28b81.gif "9456d6a9-ea2e-40ae-accc-a10e18e28b81")  
   
@@ -192,12 +192,12 @@ FROM: "[dbo].[Orders]", " AS ", <symbol_Extent4>,
 " )", " AS ", <joinSymbol_Join3>, " ON ", , , <symbol_Extent1>, ".", "[ProductID]", " = ", , <joinSymbol_Join3>, ".", <symbol_ProductID>  
 ```  
   
-### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Drugi etap generowanie kodu SQL: generowanie polecenie String  
- Na drugim etapie tworzących rzeczywiste nazwy symboli i skupimy symboli reprezentujący kolumny o nazwie "OrderID", jak w przypadku tej konflikt musi zostać rozpoznane. Te zostały wyróżnione SqlSelectStatement. Należy pamiętać, że sufiksy używane na ilustracji są tylko, aby podkreślić, że są one różnych wystąpień, aby nie reprezentują wszelkie nowe nazwy, ponieważ w tej etap nazwy końcowego (być może różnymi tworzą oryginalnej nazwy) nie został jeszcze przypisany.  
+### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Drugi etap generowanie kodu SQL: generowanie ciągu polecenia  
+ Drugi etap tworzy rzeczywiste nazwy symboli, a tylko skupimy się na symbole reprezentujący kolumn o nazwach "OrderID", jak w przypadku, ten konflikt musi zostać rozpoznane. Te zostały wyróżnione SqlSelectStatement. Należy pamiętać, że sufiksy używane na ilustracji są tylko po to, aby podkreślić, że są one w różnych wystąpieniach, aby nie przedstawiają żadnych nowych nazw w tym testowanie ich końcowego nazwy (być może różnymi tworzą oryginalne nazwy) nie został jeszcze przypisany.  
   
- Symbol pierwszy znaleziony, która musi zostać zmienione jest < symbol_OrderID >. Nie przypisano jej nową nazwę jako "OrderID1", 1 jest oznaczony jako ostatniego używać sufiksu dla "OrderID" oraz symbol jest oznaczony jako nie wymagające zmiany nazwy. Następnie to pierwsze użycie < symbol_OrderID_2 > zostanie znaleziony. Jest zmieniana na używają sufiksu dostępne dalej ("OrderID2") i ponownie oznaczony jako nie wymagające zmiany nazwy, tak, aby następnym służy on nie uzyskać zmieniona. Jest to realizowane dla < symbol_OrderID_3 > zbyt.  
+ Pierwszym symbolem znaleziono, który wymaga zmiany nazwy jest < symbol_OrderID >. Nie przypisano jej nową nazwę jako "OrderID1", 1 jest oznaczony jako ostatni umożliwiający sufiks "OrderID" i symbol jest oznaczony jako nie wymagające zmiany nazwy. Następnie znajduje się pierwsze użycie < symbol_OrderID_2 >. Jest zmieniana na Użyj następnej sufiksu dostępne ("OrderID2") i ponownie oznaczenie nie musi, zmiana nazwy, tak, aby następnym razem, gdy jest używany go nie uzyskać zmieniono jego nazwę. Jest to wykonywane < symbol_OrderID_3 > zbyt.  
   
- Na koniec drugiej fazy jest generowany końcowej instrukcji SQL.  
+ Na końcu drugiej fazy generowany jest ostatnim instrukcji SQL.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Generowanie kodu SQL w dostawcy próbki](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

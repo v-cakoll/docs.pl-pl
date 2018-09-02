@@ -7,32 +7,32 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: e32c7007ca98ce2153386665b60c45ff9e90cc3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7ca7554c81b7e8b54665700869c4f7788ebc3dbb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218923"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468031"
 ---
 # <a name="await-c-reference"></a>await (odwołanie w C#)
-`await` Operator jest stosowany do zadania w można wstawić punktu zawieszenia podczas wykonywania metody do momentu ukończenia zadania Oczekiwano metody asynchronicznej. Zadanie reprezentuje pracy w toku.  
+`await` Operator jest stosowany do zadania w metodzie asynchronicznej, aby wstawić punkt zawieszenia podczas wykonywania metody, dopóki nie zakończy się oczekiwane zadanie. Zadanie reprezentuje pracę w toku.  
   
-`await` można użyć tylko w metodzie asynchronicznej zmodyfikowany przez [async](../../../csharp/language-reference/keywords/async.md) — słowo kluczowe. Taka metoda, zdefiniowany przy użyciu `async` modyfikator, zwykle zawiera co najmniej jeden `await` wyrażenia, jest określany jako *metody asynchronicznej*.  
+`await` należy używać tylko w metodzie asynchronicznej, zmodyfikowany przez [async](../../../csharp/language-reference/keywords/async.md) — słowo kluczowe. Taka metoda, zdefiniowana za pomocą `async` modyfikator i zwykle zawierająca co najmniej jeden `await` wyrażeń, jest określany jako *metody asynchronicznej*.  
   
 > [!NOTE]
->  `async` i `await` wprowadzono słów kluczowych w języku C# 5. Aby obejrzeć wprowadzenie do programowania asynchronicznego Zobacz [programowanie asynchroniczne z async i await](../../../csharp/programming-guide/concepts/async/index.md).  
+>  `async` i `await` słowa kluczowe zostały wprowadzone w języku C# 5. Wprowadzenie do programowania asynchronicznego, zobacz [Asynchronous Programming with async i await](../../../csharp/programming-guide/concepts/async/index.md).  
   
-Zadania, które `await` zastosować operatora zazwyczaj zwracane przez wywołanie do metody, która implementuje [wzorca asynchronicznego opartego na zadaniach](../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md). Obejmują one metody, które zwracają <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, i `System.Threading.Tasks.ValueType<TResult>` obiektów.  
+Zadanie, do którego `await` jest stosowany operator zazwyczaj jest zwracany przez wywołanie metody, która implementuje [wzorca asynchronicznego opartego na zadaniach](../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md). Obejmują one metody, które zwracają <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, i `System.Threading.Tasks.ValueType<TResult>` obiektów.  
 
   
- W poniższym przykładzie <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> metoda zwraca `Task<byte[]>`. Zadanie jest obietnicę w celu utworzenia tablicy bajtowej rzeczywiste po zakończeniu zadania. `await` Operator wstrzymuje wykonywanie do pracy <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> metody została ukończona. Tymczasem zwróceniem sterowania do wywołującego `GetPageSizeAsync`. Gdy zadanie kończy działanie, `await` wyrażenie na tablicę bajtów.  
+ W poniższym przykładzie <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> metoda zwraca `Task<byte[]>`. Zadanie jest obietnicą utworzenia rzeczywistej tablicy bajtowej, jeśli zadanie zostało ukończone. `await` Operator zawiesza wykonywanie aż do pracy <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> metoda zostało zakończone. W międzyczasie formant zostaje zwrócony do obiektu wywołującego `GetPageSizeAsync`. Po zakończeniu zadania wykonywania `await` wynikiem wyrażenia jest tablicą bajtów.  
 
 [!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await1.cs)]  
 
 > [!IMPORTANT]
->  Aby uzyskać pełny przykład, zobacz [wskazówki: uzyskiwanie dostępu do sieci Web za pomocą Async i Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Możesz pobrać próbki z [przykłady kodu dewelopera](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) w witrynie firmy Microsoft. Przykładem jest w projekcie AsyncWalkthrough_HttpClient.  
+>  Aby uzyskać kompletny przykład, zobacz [wskazówki: uzyskiwanie dostępu do sieci Web za pomocą Async i Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Możesz pobrać próbkę z [Developer Code Samples](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) w witrynie internetowej firmy Microsoft. Przykład znajduje się w projekcie AsyncWalkthrough_HttpClient.  
   
-Jak pokazano w poprzednim przykładzie, jeśli `await` jest stosowany do wyniku wywołania metody, która zwraca `Task<TResult>`, następnie typ `await` wyrażenie jest `TResult`. Jeśli `await` jest stosowany do wyniku wywołania metody, która zwraca `Task`, następnie typ `await` wyrażenie jest `void`. Poniższy przykład przedstawia różnicy.  
+Jak pokazano w poprzednim przykładzie, jeśli `await` jest stosowany do wyniku wywołania metody, która zwraca `Task<TResult>`, następnie typ `await` wyrażenie jest `TResult`. Jeśli `await` jest stosowany do wyniku wywołania metody, która zwraca `Task`, następnie typ `await` wyrażenie jest `void`. Poniższy przykład ilustruje tę różnicę.  
   
 ```csharp  
 // await keyword used with a method that returns a Task<TResult>.  
@@ -45,29 +45,29 @@ await AsyncMethodThatReturnsTask();
 TResult result = await AsyncMethodThatReturnsValueTaskTResult();
 ```  
   
-`await` Wyrażenia nie są blokowane w wątku, na którym jest wykonywany. Zamiast tego należy go powoduje, że kompilator Zarejestruj pozostałe metody asynchronicznej kontynuacji oczekiwano zadania. Formant zwraca do obiektu wywołującego metody asynchronicznej. Po ukończeniu zadania wywołuje kontynuacji i wykonywania wznawia metody asynchronicznej miejsca, w którym.  
+`await` Wyrażenie nie blokuje wątku, na którym jest wykonywany. Zamiast tego należy go powoduje, że kompilator pozostałą metodę asynchronicznej jako kontynuację w oczekiwane zadanie. Formant powraca do obiektu wywołującego metody asynchronicznej. Po zakończeniu zadania wywołuje jego kontynuację, a wykonywanie metody asynchronicznej zostaje wznowione tam, gdzie ją przerwaliśmy.  
   
-`await` Wyrażenie może wystąpić tylko w otaczającej jego treści metody, wyrażenia lambda lub metody anonimowej, muszą być oznaczone `async` modyfikator. Termin *await* służy jako słowo kluczowe tylko w tym kontekście. W innym miejscu jest interpretowany jako identyfikator. W ramach metody, wyrażenia lambda lub metody anonimowej `await` wyrażenia nie może wystąpić w treści funkcji synchroniczne w wyrażeniu zapytania w bloku [lock — instrukcja](../../../csharp/language-reference/keywords/lock-statement.md), lub w [unsafe](../../../csharp/language-reference/keywords/unsafe.md) kontekstu.  
+`await` Wyrażenie może wystąpić tylko w treści jego otaczającej metody, wyrażenia lambda lub metody anonimowej, muszą być oznaczone `async` modyfikator. Termin *await* służy jako słowo kluczowe tylko w tym kontekście. Gdzie indziej będzie interpretowany jako identyfikator. W ramach metody, wyrażenia lambda lub metody anonimowej `await` wyrażenia nie może wystąpić w treści funkcji synchronicznej, w wyrażeniu zapytania w bloku [lock — instrukcja](../../../csharp/language-reference/keywords/lock-statement.md), lub [unsafe](../../../csharp/language-reference/keywords/unsafe.md) kontekstu.  
   
 ## <a name="exceptions"></a>Wyjątki  
-Zwraca większości metod asynchronicznych <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601>. Właściwości zadania zwróconego zawierać informacje o jego stan i Historia, na przykład tego, czy zadanie zostało ukończone, czy metoda asynchroniczna spowodowała wyjątek lub została anulowana i jakie wynik końcowy jest. `await` Operator uzyskuje dostęp do tych właściwości przez wywołanie metody w obiekcie zwracanym przez `GetAwaiter` metody.  
+Większości metod asynchronicznych zwraca <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601>. Właściwości zwracanego zadania przenoszą informacje o jego stanie i historii, takich jak tego, czy zadanie zostało ukończone, czy metoda async spowodowała wyjątek lub została anulowana i jaki jest wynik końcowy. `await` Operator uzyskuje dostęp do tych właściwości przez wywołanie metody w obiekcie zwracanym przez `GetAwaiter` metody.  
   
-Jeśli await umożliwiające zwracanie zadań metoda asynchroniczna, która powoduje zgłoszenie wyjątku `await` operator ponownie zgłasza wyjątek.  
+Jeśli włączysz zwracającą zadanie metodę asynchroniczną, która powoduje wyjątek `await` operator ponownie zgłasza wyjątek.  
   
-Jeśli await umożliwiające zwracanie zadań metoda asynchroniczna, która została anulowana, `await` operator ponownie zgłasza wyjątek <xref:System.OperationCanceledException>.  
+Jeśli włączysz zwracającą zadanie metody asynchronicznej, która została anulowana, `await` ponownie zgłasza operator <xref:System.OperationCanceledException>.  
   
-Pojedyncze zadanie, który jest stan można odzwierciedlać wiele wyjątków. Na przykład zadanie może być wynikiem wywołania do <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Gdy await takie zadania, ponownie zgłasza operacji await tylko jeden z wyjątków. Jednak nie można przewidzieć który wyjątki jest zgłoszony.  
+Pojedynczego zadania, które jest w stanie błędnym może odzwierciedlać wiele wyjątków. Na przykład zadanie może być wynikiem wywołania <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. W przypadku takiego zadania, ponownie zgłasza operacji await, tylko jeden z wyjątków. Jednak nie można przewidzieć, który z tych wyjątków jest zgłaszany ponownie.  
   
-Przykłady obsługi błędów w metodach asynchronicznych, zobacz [try-catch](../../../csharp/language-reference/keywords/try-catch.md).  
+Aby uzyskać przykłady obsługi błędów w metodach asynchronicznych, zobacz [try-catch —](../../../csharp/language-reference/keywords/try-catch.md).  
   
 ## <a name="example"></a>Przykład  
-Poniższy przykład zwraca całkowita liczba znaków na stronach, których adresy URL są przekazywane do niego jako argumenty wiersza polecenia. Przykład wywołania `GetPageLengthsAsync` metodę, która jest oznaczony atrybutem `async` — słowo kluczowe. `GetPageLengthsAsync` Metoda z kolei używa `await` — słowo kluczowe await wywołania <xref:System.Net.Http.HttpClient.GetStringAsync%2A?displayProperty=nameWithType> metody.  
+Poniższy przykład zwraca całkowita liczba znaków w stron, których adresy URL są przekazywane do niego jako argumenty wiersza polecenia. Przykład wywołuje `GetPageLengthsAsync` metody, która jest oznaczona za pomocą `async` — słowo kluczowe. `GetPageLengthsAsync` Metoda z kolei używa `await` słowa kluczowego await wywołania <xref:System.Net.Http.HttpClient.GetStringAsync%2A?displayProperty=nameWithType> metody.  
 
 [!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await2.cs)]  
 
-Ponieważ stosowania `async` i `await` we wpisie aplikacji punkt nie jest obsługiwane, nie możemy zastosować `async` atrybutu `Main` metody ani może możemy await `GetPageLengthsAsync` wywołania metody. Firma Microsoft może upewnij się, że `Main` metoda oczekuje na zakończenie pobierając zaletą operacji asynchronicznej <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> właściwości. Dla zadań, które nie zwracają wartości, należy wywołać <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> metody. 
+Ponieważ użycie `async` i `await` w zapisie aplikacji punkt nie jest obsługiwane, nie możemy zastosować `async` atrybutu `Main` metoda ani nie może będziemy await `GetPageLengthsAsync` wywołania metody. Firma Microsoft może upewnij się, że `Main` metoda czeka na zakończenie poprzez pobranie wartości dla operacji asynchronicznej <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> właściwości. Zadania, które nie zwracają wartości, można wywołać <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> metody. 
 
 ## <a name="see-also"></a>Zobacz także  
-[Programowanie asynchroniczne z async i await](../../../csharp/programming-guide/concepts/async/index.md)   
-[Wskazówki: Uzyskiwanie dostępu do sieci Web za pomocą Async i Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
-[async](../../../csharp/language-reference/keywords/async.md)
+- [Programowanie asynchroniczne z Async i Await](../../../csharp/programming-guide/concepts/async/index.md)   
+- [Przewodnik: uzyskiwanie dostępu do sieci za pomocą Async i Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
+- [async](../../../csharp/language-reference/keywords/async.md)

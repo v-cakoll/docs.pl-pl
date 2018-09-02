@@ -1,30 +1,32 @@
 ---
 title: Explicit — słowo kluczowe (odwołanie w C#)
-ms.date: 07/20/2015
+ms.date: 08/24/2018
 f1_keywords:
 - explicit_CSharpKeyword
 - explicit
 helpviewer_keywords:
 - explicit keyword [C#]
 ms.assetid: cfb8f42a-e411-4db2-af9b-796b05644846
-ms.openlocfilehash: 66d271fdac0bad356ee0bafc1732e2f410854da1
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 3567a2c5aa549aa3141ed59c3e93e7b07975da70
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027944"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463146"
 ---
 # <a name="explicit-c-reference"></a>explicit (odwołanie w C#)
 
-`explicit` — Słowo kluczowe deklaruje typ zdefiniowany przez użytkownika operatora konwersji, które muszą być wywoływane z rzutowanie. Na przykład tego operatora konwertuje z klasy o nazwie f do klasy o nazwie c:
+`explicit` — Słowo kluczowe deklaruje operator konwersji typu zdefiniowanego przez użytkownika, który musi być wywołana z rzutowania.
+
+W poniższym przykładzie zdefiniowano operator, który konwertuje `Fahrenheit` klasy `Celsius` klasy. Operator musi być zdefiniowana wewnątrz `Fahrenheit` klasy lub `Celsius` klasy:
 
 [!code-csharp[csrefKeywordsConversion#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsConversion/CS/csrefKeywordsConversion.cs#2)]
 
-Można wywołać tego operatora konwersji następująco:
+Operator konwersji zdefiniowanej przy użyciu rzutowania, wywołuje się, jak w poniższym przykładzie pokazano:
 
 [!code-csharp[csrefKeywordsConversion#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsConversion/CS/csrefKeywordsConversion.cs#3)]
 
-Operator konwersji konwertuje typu źródłowego na typ docelowy. Typ źródłowy zawiera operator konwersji. W odróżnieniu od niejawna konwersja operatory jawnej konwersji muszą być wywoływane za pomocą rzutowanie. Jeśli operacja konwersji może spowodować wyjątków lub utratę informacji, należy oznaczyć go `explicit`. Zapobiega to dyskretnie wywoływania operacji konwersji z prawdopodobnie nieprzewidziane skutki przez kompilator.
+Operator konwersji konwertuje typu źródłowego na typ docelowy. Typ źródłowy zawiera operator konwersji. W odróżnieniu od niejawnej konwersji operatory konwersji jawnej musi wywołać poprzez rzutowanie. Jeśli operacji konwersji może spowodować, że wyjątki lub utratę informacji, należy go oznaczyć `explicit`. Zapobiega to dyskretnie wywoływanie operacji konwersji z prawdopodobnie nieprzewidziane skutki przez kompilator.
 
 Pominięcie rzutowania spowoduje błąd kompilacji CS0266.
 
@@ -38,7 +40,7 @@ W poniższym przykładzie przedstawiono `Fahrenheit` i `Celsius` klasy, z który
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie zdefiniowano strukturę, `Digit`, który reprezentuje pojedynczą cyfrą dziesiętną. Operator jest zdefiniowany dla konwersji z `byte` do `Digit`, ale ponieważ nie wszystkie bajty można przekonwertować na `Digit`, konwersja jest jawne.
+W poniższym przykładzie zdefiniowano struktury, `Digit`, który reprezentuje pojedynczą cyfrą dziesiętną. Operator jest zdefiniowany dla konwersji z `byte` do `Digit`, ale ponieważ nie wszystkie wartości bajtowe mogą być konwertowane na `Digit`, konwersja jest jawne.
 
 [!code-csharp[csrefKeywordsConversion#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsConversion/CS/csrefKeywordsConversion.cs#4)]
 
@@ -48,10 +50,10 @@ W poniższym przykładzie zdefiniowano strukturę, `Digit`, który reprezentuje 
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja języka C#](../index.md)  
-[Przewodnik programowania w języku C#](../../programming-guide/index.md)  
-[Słowa kluczowe języka C#](index.md)  
-[implicit](implicit.md)  
-[Operator (odwołanie w C#)](operator.md)  
-[Instrukcje: implementowanie zdefiniowanych przez użytkownika konwersji struktur](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
-[Tworzenie łańcucha zdefiniowane przez użytkownika Konwersje jawne w języku C#](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)  
+- [Dokumentacja języka C#](../index.md)  
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)  
+- [Słowa kluczowe języka C#](index.md)  
+- [implicit](implicit.md)  
+- [Operator (odwołanie w C#)](operator.md)  
+- [Instrukcje: implementowanie zdefiniowanych przez użytkownika konwersji struktur](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
+- [Tworzenie łańcucha zdefiniowanych przez użytkownika Konwersje jawne w języku C#](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)  

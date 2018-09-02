@@ -1,5 +1,5 @@
 ---
-title: Sterty dużego obiektu w systemie Windows
+title: Stos dużych obiektów w systemach Windows
 ms.date: 05/02/2018
 helpviewer_keywords:
 - large object heap (LOH)"
@@ -11,206 +11,206 @@ ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: abb1f72a10a4aff448dea22b5c9415111c25eaab
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 852efc14af02eec4608e133e4c75507cd881b80e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457408"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469950"
 ---
-# <a name="the-large-object-heap-on-windows-systems"></a>Sterty dużego obiektu w systemie Windows
+# <a name="the-large-object-heap-on-windows-systems"></a>Stos dużych obiektów w systemach Windows
 
-Moduł zbierający elementy bezużyteczne .NET (GC) dzieli obiektów w małych i dużych obiektów. Gdy obiekt jest duży, niektóre z jego atrybutów stają się większe znaczenie niż Jeśli obiekt jest mała. Na przykład kompaktowania — które skopiować go w innym miejscu pamięci sterty — może być kosztowne. W związku z tym moduł zbierający elementy bezużyteczne .NET umieszcza dużych obiektów na stercie dużego obiektu (LOH). W tym temacie wyjaśniono sterty dużego obiektu szczegółowo. Omówiono co kwalifikuje obiektu jako obiektu dużych, jak te duże obiekty są zbierane i nałożyć rodzaj wydajności wpływ dużych obiektów.
+Moduł zbierający elementy bezużyteczne .NET (GC) dzieli obiektów w małych i dużych obiektów. Gdy obiekt jest duży, niektóre jego atrybuty stają się większe znaczenie niż czy obiekt jest mała. Na przykład kompaktowania — które skopiować go w pamięci w stercie — może być kosztowne. W związku z tym moduł zbierający elementy bezużyteczne .NET powoduje duże obiekty sterty dużych obiektów (LOH). W tym temacie omówimy stertę dużego obiektu szczegółowo. Omówimy, co to jest uprawniony obiektu jako dużego obiektu, jak te dużych obiektów są zbierane i rodzaju skutki dużych obiektów wydajności nakładać.
 
 > [!IMPORTANT]
-> W tym temacie omówiono sterty dużego obiektu w .NET Framework i .NET Core uruchomiony tylko w systemie Windows. Nie obejmuje LOH systemem implementacje .NET na innych platformach.
+> W tym temacie omówiono stertę dużego obiektu w .NET Framework i .NET Core uruchomiony tylko w systemach Windows. Nie uwzględniono w niej LOH systemem implementacje platformy .NET na innych platformach.
 
-## <a name="how-an-object-ends-up-on-the-large-object-heap-and-how-gc-handles-them"></a>Jak obiekt kończy się na sterty dużego obiektu i jak GC je obsługuje
+## <a name="how-an-object-ends-up-on-the-large-object-heap-and-how-gc-handles-them"></a>Jak obiekt kończy się na stosie dużego obiektu i sposób obsługi ich GC
 
-Jeśli obiekt jest większa niż lub równa 85,000 bajtów, uwzględniono dużego obiektu. Ten numer został ustaleniami dostrajania wydajności. Gdy żądanie alokacji obiektu jest 85,000 lub więcej bajtów, środowisko uruchomieniowe przydziela na sterty dużego obiektu.
+Jeśli obiekt jest większy niż lub równa rozmiarze 85 000 bajtów, jest uznawane za dużego obiektu. To była określana na podstawie dostrajanie wydajności. Gdy żądanie alokacji obiektów jest co najmniej rozmiarze 85 000 bajtów, środowisko uruchomieniowe przydziela na stosie dużego obiektu.
 
-Aby zrozumieć, co to znaczy, warto zbadać niektóre podstawowe założenia dotyczące odzyskiwania pamięci platformy .NET.
+Aby zrozumieć, co to znaczy, warto sprawdzić niektóre podstawy dotyczące odzyskiwania pamięci platformy .NET.
 
-Moduł zbierający elementy bezużyteczne .NET jest pokoleniowej modułu zbierającego. Ma trzy generacje: pokolenia 0, generację 1 i generacji 2. Powodem generacje 3 jest fakt, że w dobrze Zaczekaj aplikacji, większość struktury obiektów w gen0. Na przykład w aplikacji serwera, alokacji skojarzone z każdym żądaniem powinien die po zakończeniu żądania. Żądań alokacji locie będzie przekształcić gen1 i die istnieje. Zasadniczo gen1 pełni rolę bufora między obszarów małych obiektów i długotrwałe obiektu.
+Moduł zbierający elementy bezużyteczne .NET jest pokoleniowego modułu zbierającego. Posiada trzy generacje: generacji 0, generację 1 i generacji 2. Powodem generacje 3 jest to, że, w dobrze dostosowane aplikacji, większość struktury obiektów w gen0. Na przykład w aplikacji serwera, alokacje skojarzonej z każdym żądaniem powinien zdechną po wysłaniu żądania. Żądania alokacji śledząc będzie przekształcić gen1 i zdechną istnieje. Zasadniczo gen1 pełni rolę bufora między obszarów małych obiektów i długotrwałe obiektu.
 
-Małych obiektów są zawsze przydzielana podczas generowania 0 i, w zależności od ich istnienia może funkcjonować jako generacji 1 czy generation2. Duże obiekty są zawsze przydzielana podczas generowania 2.
+Małych obiektów zawsze są przydzielane w generacji 0 i, w zależności od ich okres istnienia, może być promowane do generacji 1 lub generation2. Duże obiekty zawsze są przydzielane w generacji 2.
 
-Duże obiekty należą do generacji 2, ponieważ są one pobierane tylko podczas zbierania generacji 2. Podczas zbierania generacji jego młodszych generation(s) są także pobierane. Na przykład w przypadku odzyskiwania pamięci generacji 1 są zbierane zarówno generacji 1 i 0. A w przypadku odzyskiwania pamięci generacji 2 są zbierane całego stosu. Z tego powodu GC generacji 2 jest również nazywany *pełne GC*. Ten artykuł dotyczy generacji 2 GC zamiast pełną operacją GC, ale warunki są wymienne.
+Duże obiekty należą do generacji 2, ponieważ są one pobierane tylko podczas kolekcji generacji 2. Po zebraniu generacji, jego młodszych generation(s) również są zbierane. Na przykład w sytuacji odzyskiwania pamięci generacji 1 są zbierane zarówno generacji 1 i 0. I sytuacji odzyskiwania pamięci generacji 2 całego sterty są zbierane. Z tego powodu GC generacji 2 jest również nazywany *pełne odzyskiwanie pamięci*. Ten artykuł odnosi się do odzyskiwania pamięci generacji 2, zamiast pełną operacją GC, ale warunki są wymienne.
 
-Generacje Podaj widok logiczny stercie GC. Fizycznie obiektów na żywo w segmentach sterty zarządzanej. A *segmentu sterty zarządzanej* to fragment, pamięci, która GC rezerwuje z systemu operacyjnego przez wywołanie metody [funkcji VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) imieniu kodu zarządzanego. Podczas ładowania CLR GC przydziela dwa segmenty początkowej sterty: jeden dla małych obiektów (małe sterty obiektów, lub raportu o kondycji) i jeden dla dużych obiektów (sterty obiektów wielkich).
+Generacje zapewniają logiczne widok sterty GC. Fizycznie obiekty na żywo w zarządzanym stosie segmentach. A *segmentu w zarządzanej stercie* to fragment pamięci, która GC zastrzega sobie z systemu operacyjnego, wywołując [funkcji VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) imieniu kodu zarządzanego. Gdy środowisko CLR jest załadowany, GC przydziela dwa segmenty początkowej sterty: jeden dla małych obiektów (stos małych obiektów, lub raportu o kondycji) i jeden dla dużych obiektów (sterty obiektów wielkich).
 
-Alokacja żądań następnie są spełnione przez umieszczenie zarządzanych obiektów na te segmenty sterty zarządzanej. Jeśli obiekt jest mniejszy niż 85,000 bajtów, jest on umieszczany w segmencie dla raportu o kondycji; w przeciwnym razie jest umieszczany w segmencie LOH. Segmenty są zatwierdzone (w mniejsze fragmenty) jako więcej i więcej obiektów są przydzielone do nich.
-Dla raportu o kondycji obiekty, które pozostają aktualne po wykaz Globalny są awansowane do nowej generacji. Obiekty, które pozostają aktualne po kolekcji pokolenia 0, teraz są traktowane jako obiekty generacji 1 i tak dalej. Obiekty, które pozostają aktualne po najstarsze generowania nadal są uwzględniane w najstarsze generacji. Innymi słowy przy życiu z generacji 2 są obiekty generacji 2; i przy życiu z LOH są obiekty LOH, (które są pobierane z gen2). 
+Alokacja żądań następnie są spełnione, umieszczając zarządzane obiekty w tych segmentach sterty zarządzanej. Jeśli obiekt jest mniejszy niż rozmiarze 85 000 bajtów, zostanie ono przełączone na segmencie dla raportu o kondycji; w przeciwnym razie jest umieszczany w segmencie LOH. Segmenty są zatwierdzane (na mniejsze fragmenty) jako więcej i więcej obiektów są przydzielane do nich.
+Dla raportu o kondycji obiekty, które przeżyły wykaz Globalny są promowane do następnej generacji. Obiekty, które przeżyły bezużytecznych generacji 0, teraz są traktowane jako obiekty w generacji 1 i tak dalej. Obiekty, które przeżyły najstarsze generowania nadal są uwzględniane w najstarsze generacji. Innymi słowy przy życiu z generacji 2 są obiekty generacji 2; i pozostałości z LOH są obiektami LOH, (które są zbierane za pomocą gen2).
 
-Kod użytkownika można alokować podczas generowania 0 (małych obiektów) lub LOH (duże obiekty). Tylko GC "alokowania" obiektów podczas generowania 1 (przez podwyższania poziomu przy życiu z pokolenia 0) i 2 (przez podwyższania poziomu przy życiu z pokolenia 1 i 2).
+Kod użytkownika może alokować w generacji 0 (małych obiektów) lub LOH (duże obiekty). Tylko GC "przydzielać" obiektów w generacji 1 (przez wspieranie pozostałości z generacji 0) i 2. generacji (przez wspieranie pozostałości z generacji 1 i 2).
 
-Po wyzwoleniu wyrzucania elementów bezużytecznych GC śledzi za pośrednictwem obiektów na żywo i kompaktowanie je. Jednak ponieważ kompaktowanie jest kosztowna, GC *wachlarzy* LOH; ułatwia wolnego listy poza martwy obiektów, które mogą być ponownie używane później do spełnienia żądań alokacji dużego obiektu. Sąsiadujących ze sobą obiektów martwy są wprowadzane do jednego obiektu wolne.
+Po wyzwoleniu wyrzucania elementów bezużytecznych, GC ślady za pośrednictwem obiektów na żywo i kompaktowanie je. Ale ponieważ kompaktowanie jest kosztowne, GC *wrzucając* LOH; to sprawia, że listę bezpłatnych poza obiekty martwe, których można używać w dalszej części do spełnienia żądania alokacji dużego obiektu. Obiekty martwe sąsiadujących są wprowadzane w jeden obiekt bezpłatne.
 
-Oprogramowanie .NET core i .NET Framework (począwszy od platformy .NET Framework 4.5.1) obejmują <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode?displayProperty="fullname"> właściwość, która umożliwia użytkownikom, aby określić, że LOH powinien kompaktowanie podczas następnego pełnego GC blokowania. I w przyszłości, .NET mogą zdecydować skompaktować LOH automatycznie. Oznacza to, że jeśli przydzielić duże obiekty i chce mieć pewność, że nie przenoś powinien nadal przypniesz je.
+.NET core i .NET Framework (począwszy od programu .NET Framework 4.5.1) obejmują <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode?displayProperty=nameWithType> właściwość, która umożliwia użytkownikom, aby określić, że LOH powinien można skompaktować podczas następnego pełną operacją GC blokowania. I w przyszłości .NET może podjąć decyzję o compact LOH automatycznie. Oznacza to, jeśli przydzielić dużych obiektów i upewnić się, że nie przenoś powinny nadal przypinanych je.
 
-Rysunek 1 przedstawiono scenariusz, w którym GC formularzy generacji 1 po pierwszej generacji 0 GC gdzie `Obj1` i `Obj3` są martwy, a formularzy generacji 2 po pierwszej generacji 1 GC gdzie `Obj2` i `Obj5` jest martwy. Należy zauważyć, że to i poniższe rysunki tylko w celach ilustracyjnych; zawierają one bardzo mało obiekty lepiej widoczne, co się dzieje na stosie. W rzeczywistości wiele innych obiektów są zazwyczaj wynikiem wykazem Globalnym.
+Rysunek 1 przedstawia scenariusz, w którym GC formularzy generacji 1 po pierwszej generacji 0 GC gdzie `Obj1` i `Obj3` są martwe i formularzy generacji 2 po pierwszej generacji 1 GC gdzie `Obj2` i `Obj5` jest nieużywany. Należy zauważyć, że to i poniższych ilustracjach tylko w celach ilustracyjnych; zawierają one bardzo mało obiekty, aby lepiej zrozumieć, co się dzieje na stosie. W rzeczywistości wiele innych obiektów zazwyczaj wiążą się z wykazem Globalnym.
 
-![Rysunek 1: Operacja gen 0 GC i operacji gen 1 GC](media/loh/loh-figure-1.jpg)   
-Rysunek 1: Generacji 0 i GC generacji 1.
+![Rysunek 1: Gen 0 GC i gen 1 GC](media/loh/loh-figure-1.jpg)  
+Rysunek 1: Generacji 0 i odzyskiwania pamięci generacji 1.
 
-Rysunek 2 wskazuje, że po GC generacji 2 który był wyświetlany, który `Obj1` i `Obj2` są martwy GC stanowi ciągły wolnego miejsca, za mało pamięci, używany jest zajmowany przez `Obj1` i `Obj2`, który następnie został użyty do spełnienia żądań alokacji Aby uzyskać `Obj4`. Ilość miejsca po ostatni obiekt `Obj3`, do końca segmentu mogą służyć do spełnienia żądań alokacji.
- 
-![Rysunek 2: po operacji gen 2 GC](media/loh/loh-figure-2.jpg)  
+Rysunek 2 pokazuje, że po GC generacji 2 której pokazano, że `Obj1` i `Obj2` są serialem telewizyjnym GC formularzy ciągłych ilość wolnego miejsca na Brak pamięci używanej zajmowany przez `Obj1` i `Obj2`, który następnie został użyty do spełnienia żądania alokacji Aby uzyskać `Obj4`. Odstęp po ostatni obiekt `Obj3`do końca segmentu można również spełnić żądania alokacji.
+
+![Rysunek 2: po gen 2 GC](media/loh/loh-figure-2.jpg)  
 Rysunek 2: po GC generacji 2
 
-Jeśli nie ma wystarczająco dużo wolnego miejsca do dużego obiektu żądań alokacji, wykaz Globalny najpierw próbuje uzyskać więcej segmentów z systemu operacyjnego. W przypadku niepowodzenia wyzwala odzyskiwania pamięci generacji 2 w mamy nadzieję, że z zwolnić miejsce.
+Jeśli nie ma wystarczającej ilości wolnego miejsca, aby obsłużyć żądania alokacji dużego obiektu, GC najpierw próbuje pobrać więcej segmentów z systemu operacyjnego. W przypadku niepowodzenia wyzwala wykaz Globalny generacji 2 w nadzieję, że jest zwolnić miejsce.
 
-Podczas generacji 1 czy generacji 2 GC, moduł zbierający elementy bezużyteczne zwalnia segmentów, które ma żadnych obiektów na żywo na ich do systemu operacyjnego przez wywołanie metody [funkcja VirtualFree](https://msdn.microsoft.com/library/windows/desktop/aa366892(v=vs.85).aspx). Ilość miejsca po ostatni obiekt na żywo na końcu segmentu jest anulowane (z wyjątkiem w segmencie tymczasowych, gdy gen0/gen1 na żywo, a gdy moduł garbage collector zachować niektóre zatwierdzone, ponieważ aplikacja będzie przydziału w nim od razu). I wolnego miejsca do pozostać zatwierdzone, że są one resetowane, co oznacza system operacyjny nie musi zapisywać dane w ich do dysku.
+Podczas generacji 1 lub generacja 2 GC, moduł zbierający elementy bezużyteczne zwalnia, które mają żadne obiekty na żywo na nich do systemu operacyjnego, wywołując [funkcji VirtualFree](https://msdn.microsoft.com/library/windows/desktop/aa366892(v=vs.85).aspx). Odstęp po ostatni obiekt na żywo na końcu segmentu jest anulowane (z wyjątkiem w segmencie efemerycznym, gdzie gen0/gen1 na żywo, a gdy moduł odśmiecania pamięci przechowuje niektóre zatwierdzone, ponieważ aplikacja będzie przydzielanie w nim natychmiast). I wolnego miejsca do magazynowania pozostaną zatwierdzone, chociaż są one resetowane, co oznacza system operacyjny nie musi zapisywać dane w ich do dysku.
 
-Ponieważ LOH są zbierane podczas generowania 2 GC, LOH segment można zwolnić tylko podczas operacji GC. Rysunek 3 przedstawia scenariusz, w której moduł zbierający elementy bezużyteczne zwalnia jednego segmentu (segment 2) do systemu operacyjnego i decommits więcej miejsca na pozostałe segmenty. Jeśli musi używać anulowane miejsca na końcu segmentu do spełnienia żądań alokacji dużego obiektu, jego zatwierdza pamięć ponownie. (Opis commit/zrzeka się w dokumentacji dla [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx).
- 
-![Rysunek 3: LOH po operacji gen 2 GC](media/loh/loh-figure-3.jpg)  
+Ponieważ LOH są zbierane podczas operacje odzyskiwania pamięci generacji 2, LOH segment może być zwolniony tylko podczas odzyskiwania pamięci. Rysunek 3 przedstawia scenariusz, w której moduł zbierający elementy bezużyteczne zwalnia jednego segmentu (segment 2) do systemu operacyjnego i anuluje więcej miejsca na pozostałe segmenty. Jeśli musi używać miejsca anulowane na końcu segmentu do spełnienia żądania alokacji dużego obiektu, jej zatwierdzenia pamięć ponownie. (Objaśnienia dotyczące zatwierdzania/anulowania, zobacz dokumentację dla [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx).
+
+![Rysunek 3: LOH po gen 2 GC](media/loh/loh-figure-3.jpg)  
 Rysunek 3: LOH po GC generacji 2
 
-## <a name="when-is-a-large-object-collected"></a>Gdy są zbierane dużego obiektu
+## <a name="when-is-a-large-object-collected"></a>Gdy dużego obiektu są zbierane?
 
 Ogólnie rzecz biorąc GC występuje, gdy jedna z następujących warunków 3 następujących sytuacji:
 
 - Alokacja przekracza generacji 0 lub próg dużego obiektu.
 
-   Właściwość generacji jest wartość progową. Próg generacji jest ustawiona, gdy moduł garbage collector przydziela obiektów do niej. Po przekroczeniu progu wykaz Globalny jest wyzwalane w tej generacji. Podczas alokowania małych i dużych obiektów można używać generacji 0 i progi LOH odpowiednio. Gdy moduł garbage collector przydziela do generacji 1 i 2, zużywa ich progów. Tych progów są dopasowane dynamicznie, jak program będzie uruchamiany.
+  Próg jest właściwością generacji. Próg generacji jest ustawiona, gdy moduł odśmiecania pamięci przydziela obiekty do niego. Po przekroczeniu progu wykaz Globalny jest wyzwalana dla tej generacji. Podczas alokowania obiektów małych lub dużych wykorzystasz generacji 0 i progów LOH, odpowiednio. Gdy moduł odśmiecania pamięci przydziela w generacji 1 i 2, wykorzystuje ich progów. Tych progów dynamicznie specjalnie po uruchomieniu programu.
 
-   To jest typową sytuacją; Większość GC się tak zdarzyć z powodu alokacje na stercie zarządzanej.
+  Jest to typowy przypadek; Większość wykazów globalnych się tak zdarzyć z powodu alokacji na stosie zarządzanym.
 
 - <xref:System.GC.Collect%2A?displayProperty=nameWithType> Metoda jest wywoływana.
 
-   Jeśli bez parametrów <xref:System.GC.Collect?displayProperty=nameWithType> metoda jest wywoływana lub innego przeciążenia jest przekazywany <xref:System.GC.MaxGeneration?displayProperty=nameWithType> jako argument LOH są zbierane wraz z resztą sterty zarządzanej.
+  Jeśli bez parametrów <xref:System.GC.Collect?displayProperty=nameWithType> metoda jest wywoływana lub innego przeciążenia metody jest przekazywana <xref:System.GC.MaxGeneration?displayProperty=nameWithType> jako argument, LOH są zbierane wraz z pozostałej części zarządzanego stosu.
 
 - System jest w sytuacji braku pamięci.
 
-   Dzieje się tak, gdy moduł garbage collector otrzyma powiadomienie pamięci wysokiej z systemu operacyjnego. Jeśli moduł zbierający elementy bezużyteczne sądzi, że podczas odzyskiwania pamięci generacji 2 nie będą produktywności, wyzwala jeden.
+  Dzieje się tak, gdy moduł zbierający elementy bezużyteczne otrzyma powiadomienie dużą ilość pamięci z systemu operacyjnego. Jeśli moduł zbierający elementy bezużyteczne sądzą, że podczas odzyskiwania pamięci generacji 2 będą produktywność, wyzwala jeden.
 
 ## <a name="loh-performance-implications"></a>Wpływ na wydajność LOH
 
-Alokacje na stercie dużego obiektu wpływ na wydajność w następujący sposób.
+Alokacje sterty dużych obiektów wpłynąć na wydajność w następujący sposób.
 
 - Alokacja kosztów.
 
-   Środowisko CLR sprawia, że gwarancji czyszczeniu pamięci dla każdego nowego obiektu udostępnia. Oznacza to, że koszt alokacji dużego obiektu całkowicie jest zdominowany przez pamięci wyczyszczenie (chyba że wyzwala wykaz Globalny). Jeśli trwa cykli 2, aby wyczyścić jednego bajtu przyjmuje 170,000 cykle, aby wyczyścić najmniejszą dużego obiektu. Wyczyszczenie memmory obiektu 16MB na komputerze, 2GHz trwa około 16 ms. To jest raczej dużych kosztów.
+  Środowisko CLR sprawia, że gwarancji, że pamięci dla każdego nowego obiektu, zapewnia jest wyczyszczone. Oznacza to, że koszt alokacji dużego obiektu jest całkowicie zdominowany przez wyczyszczenie (chyba że wyzwala wykaz Globalny) pamięci. Jeśli zajmuje 2 cykle, aby wyczyścić jednobajtowego, zajmuje 170,000 cykle, aby wyczyścić najmniejszy dużego obiektu. Czyszczenie pamięci obiektu 16MB na maszynie 2GHz zajmuje około 16ms. Jest dosyć duża kosztów.
 
 - Kolekcja kosztów.
 
-   Ponieważ LOH i generacji 2 są zbierane ze sobą, po przekroczeniu progu jednej firmy, zostanie wywołany kolekcji generacji 2. Jeśli generowania wyzwolenia kolekcji 2 z powodu LOH generacji 2 nie koniecznie znacznie mniejszy po GC. Jeśli w generacji 2 nie jest dużą ilość danych, to ma minimalny wpływ. Ale jeśli generacji 2 jest duży, może spowodować problemy z wydajnością, jeśli wiele GC generacji 2 są wyzwalane. Jeśli wiele duże obiekty są przydzielane na bardzo tymczasowego i konieczne jest duża raportu o kondycji, może spędzać zbyt dużo czasu wykonywania wykazów globalnych. Ponadto koszt alokacji można naprawdę sumują Jeśli zachowasz przydziału, dzięki czemu Przejdź naprawdę dużych obiektów.
+  Ponieważ LOH i generacji 2 są zbierane ze sobą, po przekroczeniu progu pojedynczo firmy, zostanie wywołany kolekcji generacji 2. Jeśli generacja wyzwolenia kolekcji 2 z powodu LOH generacji 2 nie zawsze będzie znacznie mniejszy po GC. Jeśli w generacji 2 jest dużo danych, ma minimalny wpływ. Ale jeśli generacji 2 jest duży, może to spowodować problemy z wydajnością w przypadku wielu generacji 2 wykazów globalnych są wyzwalane. Jeśli wiele duże obiekty są przydzielane na bardzo tymczasowego i masz duży raportu o kondycji, może być wydatków zbyt dużo czasu, wykonując wykazów globalnych. Ponadto koszt alokacji jest naprawdę coraz więcej jeśli zachowasz przydzielanie i odpuszczenie bardzo dużych obiektów.
 
-- Elementy tablicy z typy referencyjne.
+- Elementy tablicy w przypadku typów referencyjnych.
 
-   Bardzo dużych obiektów na LOH są zazwyczaj tablic (jest bardzo rzadko mają naprawdę dużego obiektu wystąpienia). W przypadku elementów tablicy odwołania bogate generuje koszt, który nie jest obecny, jeśli elementy nie są bogate odwołania. Jeśli element nie zawiera żadnych odwołań, moduł zbierający elementy bezużyteczne nie musi przechodzić przez tablicy na wszystkich. Na przykład użycie tablicy do przechowywania węzłów w drzewie binarne jednym ze sposobów ją wdrożyć jest do odwoływania się do prawej i lewej węzła węzła za rzeczywiste węzłów:
+  Bardzo duże obiekty na LOH są zazwyczaj tablicami (jest to bardzo rzadko, aby wystąpienie obiektu, który jest bardzo duża). Jeśli elementy tablicy są bogate odniesienia powoduje koszt, który nie jest obecny, jeśli elementy nie są bogate odwołania. Jeśli element nie zawiera żadnych odwołań, moduł odśmiecania pamięci nie musi przechodzić przez tablicy na wszystkich. Na przykład jeśli używasz tablicy do przechowywania węzłów w drzewie binarnym, jednym ze sposobów jego wdrożenia jest do odwoływania się do lewej i prawej węzła węzła przez węzły rzeczywiste:
 
-   ```csharp
-   class Node
-   {
-      Data d;
-      Node left;
-      Node right;
-   };
+  ```csharp
+  class Node
+  {
+     Data d;
+     Node left;
+     Node right;
+  };
 
-   Node[] binary_tr = new Node [num_nodes];
-   ```
+  Node[] binary_tr = new Node [num_nodes];
+  ```
 
-   Jeśli `num_nodes` jest duży, moduł zbierający elementy bezużyteczne musi przechodzić przez co najmniej dwa odwołania dla każdego elementu. Informacje o innym podejściu ma indeks prawej i lewej węzłów magazynu:
+  Jeśli `num_nodes` jest duży, moduł zbierający elementy bezużyteczne musi przechodzić przez co najmniej dwa odwołania dla każdego elementu. Alternatywnym podejściem jest do przechowywania indeksu po prawej stronie i węzłów po lewej stronie:
 
-   ```csharp
-   class Node
-   {
-      Data d;
-      uint left_index;
-      uint right_index;
-   } ;
-   ```
+  ```csharp
+  class Node
+  {
+     Data d;
+     uint left_index;
+     uint right_index;
+  } ;
+  ```
 
-   Zamiast odwołujących się po lewej stronie węzła dane jako `left.d`, możesz odwoływać się do niego jako `binary_tr[left_index].d`. I nie trzeba przyjrzeć się wszystkie odwołania dla węzła lewy i prawy moduł garbage collector.
+  Zamiast odwołujące się po lewej stronie węzła danych jako `left.d`, odwołasz się do niego jako `binary_tr[left_index].d`. I moduł odśmiecania pamięci nie ma konieczności Przyjrzyj się wszystkie odwołania dla węzła po lewej i prawej stronie.
 
-Poza trzech czynników dwa pierwsze są zazwyczaj większe znaczenie niż trzeci. W związku z tym zaleca się przydzielenie puli dużych obiektów, które można ponownie użyć zamiast przydzielania czasowe. 
+Poza trzy czynniki pierwsze dwa są zwykle bardziej znaczące, niż trzeci. W związku z tym zaleca się przydzielanie puli dużych obiektów, które możesz ponownie użyć zamiast przydzielać czasowe.
 
 ## <a name="collecting-performance-data-for-the-loh"></a>Zbieranie danych o wydajności dla LOH
 
-Aby zebrać dane wydajności dla określonego obszaru, użytkownik powinien już zostały wykonane następujące:
+Przed można zbierać dane wydajności dotyczące określonego obszaru, użytkownik powinien już zostały wykonane następujące:
 
-1. Znaleziono dowód, że użytkownik powinien patrzeć na ten obszar.
+1. Znaleziono dowody, że patrzy powinny być tego obszaru.
 
-1. Wyczerpane innych obszarów, które znasz niczego nie objaśniające problem z wydajnością, który został wyświetlony.
+2. Wyczerpane innych obszarów, które znasz bez znajdowanie niczego objaśniające problem z wydajnością, które zostały użyte.
 
-Znajduje się we wpisie [zrozumieć przed podjęciem próby rozwiązania](https://blogs.msdn.microsoft.com/maoni/2006/09/01/understand-the-problem-before-you-try-to-find-a-solution/) uzyskać więcej informacji o podstawowe informacje dotyczące procesora CPU i pamięci.
+Zobacz w blogu [zrozumienie problemu, przed podjęciem próby znalezienia rozwiązania](https://blogs.msdn.microsoft.com/maoni/2006/09/01/understand-the-problem-before-you-try-to-find-a-solution/) więcej informacji na temat podstawowe informacje dotyczące pamięci i procesora CPU.
 
-Następujące narzędzia służy do zbierania danych dotyczących wydajności LOH:
+Aby zbierać dane dotyczące wydajności LOH, można użyć następujących narzędzi:
 
-- [Liczniki wydajności pamięci .NET CLR](#net-clr-memory-performance-counters)
+- [Liczniki wydajności pamięci środowiska .NET CLR](#net-clr-memory-performance-counters)
 
 - [Zdarzenia ETW.](#etw-events)
 
 - [Debuger](#a-debugger)
 
-### <a name="net-clr-memory-performance-counters"></a>Liczniki wydajności pamięci .NET CLR
+### <a name="net-clr-memory-performance-counters"></a>Liczniki wydajności pamięci CLR platformy .NET
 
-Te liczniki wydajności są zwykle dobry, pierwszym krokiem w badaniu problemów z wydajnością (mimo że firma Microsoft zaleca użycie [zdarzenia ETW](#etw)). Możesz skonfigurować Monitor wydajności, dodając liczniki, które mają, jak pokazano na rysunku 4. Te, które są odpowiednie dla LOH są:
+Te liczniki wydajności są zwykle dobry, pierwszym krokiem w badanie problemów z wydajnością (mimo że zaleca się, że używasz [zdarzenia ETW](#etw)). Możesz skonfigurować monitorowanie wydajności, dodając liczniki, które chcesz, jak pokazano na rysunku 4. Te, które są istotne dla LOH są:
 
-- **\# Kolekcje Gen 2**
+- **Zbieranie pokolenia 2**
 
-   Wyświetla liczbę powtórzeń generacji 2 GC miały miejsce od rozpoczęcia procesu. Licznik jest zwiększany po zakończeniu kolekcji generacji 2 (nazywanej także pełną wyrzucania elementów bezużytecznych). Ten licznik wskazuje ostatnią odczytaną wartość.
+   Przedstawia liczbę przypadków, gdy operacje odzyskiwania pamięci generacji 2 miały miejsce od momentu uruchomienia procesu. Licznik jest zwiększany na końcu kolekcji generacji 2 (nazywany także pełne wyrzucanie elementów bezużytecznych). Ten licznik wskazuje ostatnią odczytaną wartość.
 
-- **Rozmiar sterty obiektów wielkich**
+- **Duży rozmiar sterty obiektów**
 
-   Wyświetla bieżący rozmiar w bajtach, włącznie z wolnego miejsca, LOH. Ten licznik jest aktualizowany po zakończeniu operacji wyrzucania elementów bezużytecznych w każdej alokacji.
+   Wyświetla bieżący rozmiar w bajtach, włącznie z wolnego miejsca LOH. Ten licznik jest aktualizowany na końcu wyrzucania elementów bezużytecznych, nie na każdej alokacji.
 
-Jest to często stosowana metoda przyjrzeć się liczniki wydajności z Monitora wydajności (perfmon.exe). Użyj "Dodaj liczniki" można dodać licznika interesujące dla procesów, które są dla Ciebie ważne. Dane liczników wydajności można zapisać do pliku dziennika, jak pokazano na rysunku 4.
+Typowym sposobem Obejrzyj liczników wydajności to za pomocą Monitora wydajności (perfmon.exe). Użyj "Dodawanie liczników", aby dodać licznik interesujące dla procesów, które Cię interesują. Dane licznika wydajności można zapisać do pliku dziennika, jak pokazano na rysunku 4.
 
-![Rysunek 4: Dodawanie liczników wydajności.](media/loh/perfcounter.png)    
+![Rysunek 4: Dodawanie liczników wydajności.](media/loh/perfcounter.png)  
 Rysunek 4: LOH po GC generacji 2
 
-Liczniki wydajności można również można zbadać programowo. Wiele osób zebrać je jako część procesu testowania rutynowych dzięki temu. Po ich dodatkowe liczniki z wartościami, które są niezwykłe, korzystają z innych metod Aby uzyskać bardziej szczegółowe dane ułatwiające dochodzenia.
+Liczniki wydajności można również można wykonywać zapytania programowo. Wiele osób ich zbierania dzięki temu w ramach rutynowego procesu testowania. Gdy są dodatkowe liczniki wartościami, które są niezwykłe, używają innych oznacza, że aby uzyskać bardziej szczegółowe dane ułatwiające wykonywanie analiz.
 
 > [!NOTE]
-> Firma Microsoft zaleca, czy można użyć zdarzenia ETW zamiast wydajności liczników, ponieważ ETW zapewnia bardziej rozbudowane dużej ilości informacji.
+> Firma Microsoft zaleca, że przy użyciu zdarzenia ETW zamiast wydajności liczników, ponieważ ETW zapewnia znacznie bogatsze informacje.
 
 ### <a name="etw"></a>ETW
 
-Moduł zbierający elementy bezużyteczne zawiera bogaty zestaw zdarzeń ETW, aby lepiej zrozumieć czynności sterty i dlaczego. Następujących wpisach w blogu pokazują, jak zbierać i zrozumieć zdarzenia GC za pomocą funkcji ETW:
+Moduł zbierający elementy bezużyteczne zawiera bogaty zestaw zdarzeń ETW, które pomagają zrozumieć, co robi sterty i dlaczego. Następujące wpisy na blogu pokazują, jak zbierać i zrozumieć zdarzenia GC za pomocą funkcji ETW:
 
-- [Zdarzenia GC ETW - 1 ](http://blogs.msdn.com/b/maoni/archive/2014/12/22/gc-etw-events.aspx)
+- [Zdarzenia ETW odzyskiwania pamięci - 1](https://blogs.msdn.microsoft.com/maoni/2014/12/22/gc-etw-events-1/)
 
-- [Zdarzenia GC ETW - 2](http://blogs.msdn.com/b/maoni/archive/2014/12/25/gc-etw-events-2.aspx)
+- [Zdarzenia ETW odzyskiwania pamięci - 2](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-2/)
 
-- [Zdarzenia GC ETW - 3](http://blogs.msdn.com/b/maoni/archive/2014/12/25/gc-etw-events-3.aspx) 
+- [Zdarzenia ETW odzyskiwania pamięci - 3](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-3/)
 
-- [Zdarzenia GC ETW - 4](http://blogs.msdn.com/b/maoni/archive/2014/12/30/gc-etw-events-4.aspx)
+- [Zdarzenia ETW odzyskiwania pamięci - 4](https://blogs.msdn.microsoft.com/maoni/2014/12/30/gc-etw-events-4/)
 
-Aby zidentyfikować generowania nadmiernej GC 2 spowodowany tymczasowego alokacji LOH, poszukaj w kolumnie Przyczyna wyzwalacza wykazów globalnych. Prosty test tylko przydziela duże obiekty tymczasowe, można zbierać informacje dotyczące zdarzeń ETW z następującymi [narzędzia PerfView](https://www.microsoft.com/download/details.aspx?id=28567) wiersza polecenia:
+Aby zidentyfikować nadmierne generacji 2 wykazów globalnych spowodowane przez tymczasowe alokacje LOH, poszukaj w kolumnie Przyczyna wyzwolenia wykazów globalnych. Prosty test, który przydziela tylko tymczasowe dużych obiektów, można zbierać informacje dotyczące zdarzeń ETW za pomocą następujących [narzędzia PerfView](https://www.microsoft.com/download/details.aspx?id=28567) wiersza polecenia:
 
 ```console
 perfview /GCCollectOnly /AcceptEULA /nogui collect
 ```
 
-Wynik jest podobny do następującego:
- 
-![Rysunek 5: Sprawdzenie zdarzenia ETW przy użyciu narzędzia PerfView](media/loh/perfview.png)  
-Rysunek 5: Zdarzenia ETW pokazano przy użyciu narzędzia PerfView
+Wynik jest podobny do poniższego:
 
-Jak widać, wszystkich wykazów globalnych są generacji 2 GC, a ich są wszystkie wyzwalane przez AllocLarge, co oznacza, że przydzielanie dużego obiektu wyzwalane to GC. Wiemy, że te przydziały są tymczasowe ponieważ **% szybkość przetrwania LOH** kolumny mówi 1%.
+![Rysunek 5: Badanie zdarzeń ETW za pomocą narzędzia PerfView](media/loh/perfview.png)  
+Rysunek 5: Zdarzenia ETW pokazany przy użyciu narzędzia PerfView
 
-Można zbierać dodatkowe zdarzenia ETW określające, kto przydzielone te dużych obiektów. Następujący wiersz polecenia:
+Jak widać, wszystkie wykazów globalnych są operacje odzyskiwania pamięci generacji 2, a ich wszystkich wygenerowaniu przez AllocLarge, oznacza to, czy alokowanie dużego obiektu wyzwolenie tej GC. Wiemy, że te przydziały są tymczasowe ponieważ **% LOH przeżywalność** kolumny mówi 1%.
+
+Możesz zbierać dodatkowe zdarzenia ETW, określające, kto jest przydzielony te dużych obiektów. Następujące polecenie w wierszu:
 
 ```console
 perfview /GCOnly /AcceptEULA /nogui collect
 ```
 
-zbiera zdarzenia AllocationTick uruchamiane mniej więcej co 100k warto alokacji. Innymi słowy zdarzenie jest wywoływane zawsze, gdy jest przydzielany dużego obiektu. Następnie zapoznanie się z jednego z widoków alokacji sterty GC, których opisano callstacks, która przydzielona dużych obiektów:
- 
+zbiera zdarzenia AllocationTick uruchamiane mniej więcej co 100 tysięcy warte alokacji. Innymi słowy zdarzenie jest generowane każdorazowo, gdy jest przydzielany dużego obiektu. Można następnie przyjrzymy się jeden z widoków alokacji sterty GC, pokazujące stosy wywołań, który przydzielony dużych obiektów:
+
 ![Rysunek 6: Widok alokacji sterty GC](media/loh/perfview2.png)  
 Rysunek 6: Widok alokacji sterty GC
- 
-Jak widać, jest bardzo proste test, który właśnie przydziela duże obiekty z jego `Main` metody.
+
+Jak widać, jest to bardzo prosty test, który po prostu przydziela dużych obiektów z jego `Main` metody.
 
 ### <a name="a-debugger"></a>Debuger
 
-Jeśli masz zrzut pamięci jest i należy przyjrzeć się, jakie obiekty są faktycznie na LOH, można użyć [rozszerzenia debugera SoS](http://msdn2.microsoft.com/ms404370.aspx) dostarczonych przez .NET. 
+Jeśli masz wystarczy zrzutu pamięci i należy przyjrzeć się, jakie obiekty są faktycznie na LOH, możesz użyć [rozszerzenie debugowania SoS](http://msdn2.microsoft.com/ms404370.aspx) dostarczone przez platformy .NET.
 
 > [!NOTE]
-> Debugowania polecenia wymienione w tej sekcji mają zastosowanie do [debugery Windows](http://www.microsoft.com/whdc/devtools/debugging/default.mspx).
+> Debugowanie polecenia wymienione w tej sekcji mają zastosowanie do [debugery Windows](https://www.microsoft.com/whdc/devtools/debugging/default.mspx).
 
 Poniżej przedstawiono przykładowe dane wyjściowe analizowanie LOH:
 
@@ -243,17 +243,17 @@ MT   Count   TotalSize Class Name
 Total 133 objects
 ```
 
-Rozmiar sterty LOH jest (16,754,224 + 16,699,288 + 16,284,504) = 49,738,016 bajtów. Między 023e1000 adresy i 033db630 bajtów 8,008,736 są zajęte przez tablicę <xref:System.Object?displayProperty=fullName> obiekty bajtów 6,663,696 są zajęte przez tablicę <xref:System.Byte?displayProperty=nameWithType> obiektów i 2,081,792 bajtów są zajęte przez ilość wolnego miejsca.
+Rozmiar sterty LOH jest (16,754,224 + 16,699,288 + 16,284,504) = 49,738,016 bajtów. Między adresami 023e1000 i 033db630 8,008,736 bajtów są zajęte przez tablicę <xref:System.Object?displayProperty=nameWithType> obiektów, 6,663,696 bajtów są zajęte przez tablicę <xref:System.Byte?displayProperty=nameWithType> obiektów i 2,081,792 bajtów, które są zajęte przez ilość wolnego miejsca.
 
-Czasami debuger pokazuje, czy całkowity rozmiar LOH jest mniejsza niż 85,000 bajtów. Dzieje się tak, ponieważ wykonawcze używa LOH przydzielić niektóre obiekty, które są mniejsze niż dużego obiektu.
+Czasami debuger pokazuje, że całkowity rozmiar LOH jest mniejsza niż rozmiarze 85 000 bajtów. Dzieje się tak, ponieważ środowisko wykonawcze używa LOH przydzielić niektóre obiekty, które są mniejsze niż dużego obiektu.
 
-Ponieważ nie jest kompaktowanie LOH, czasami LOH jest thoought na źródło fragmentacji. Fragmentacja oznacza:
+Ponieważ LOH nie skompaktowany, czasami LOH jest thoought źródło fragmentacji. Oznacza, że fragmentacji:
 
-- Fragmentacja sterty zarządzanej, który jest wskazywany przez ilość wolnego miejsca między zarządzanych obiektów. W SoS `!dumpheap –type Free` polecenie wyświetla ilość wolnego miejsca między zarządzanych obiektów.
+- Fragmentacja zarządzanej sterty, która jest wskazywany przez ilość wolnego miejsca między obiektami zarządzanej. W SoS `!dumpheap –type Free` polecenia wyświetlana jest ilość wolnego miejsca między obiektami zarządzanej.
 
-- Fragmentacja przestrzeni adresów pamięci wirtualnej (VM), który jest pamięć oznaczony jako `MEM_FREE`. Możesz pobrać go przy użyciu różnych poleceń debugera w windbg.
+- Fragmentacja przestrzeni adresów pamięci wirtualnej (VM), czyli pamięć oznaczone jako `MEM_FREE`. Możesz pobrać go przy użyciu różnych poleceń debugera w windbg.
 
-   W poniższym przykładzie przedstawiono fragmentacji przestrzeni maszyny Wirtualnej:
+   Poniższy przykład przedstawia fragmentacji przestrzeni maszyny Wirtualnej:
 
    ```
    0:000> !address
@@ -303,18 +303,18 @@ Ponieważ nie jest kompaktowanie LOH, czasami LOH jest thoought na źródło fra
    Largest free region: Base 01432000 - Size 707ee000 (1843128 KB)
    ```
 
-Jest więcej częściej można zobaczyć fragmentacji maszyny Wirtualnej spowodowane tymczasowego duże obiekty, które wymagają modułu zbierającego elementy bezużyteczne często uzyskać nowy zarządzanych segmentów sterty z systemu operacyjnego i wersji pustych z powrotem do systemu operacyjnego.
+Jest to bardziej powszechne, aby zobaczyć fragmentacji maszyny Wirtualnej spowodowane przez tymczasowe dużych obiektów, które wymagają modułu odśmiecania pamięci, można często uzyskać nowe zarządzane segmentów sterty z systemu operacyjnego i zwolnienie pustych z powrotem do systemu operacyjnego.
 
-Aby sprawdzić, czy LOH powoduje fragmentację maszyny Wirtualnej, należy ustawić punkt przerwania na [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) i [VirtualFree](https://msdn.microsoft.com/library/windows/desktop/aa366892(v=vs.85).aspx) aby zobaczyć, kto połączeń telefonicznych z nimi. Na przykład aby zobaczyć, kto próbował Przydziel większy niż 8MBB fragmentów pamięci wirtualnej z systemu operacyjnego, można ustawić punkt przerwania następująco:
+Aby sprawdzić, czy LOH powoduje fragmentację maszyny Wirtualnej, możesz ustawić punkt przerwania na [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) i [VirtualFree](https://msdn.microsoft.com/library/windows/desktop/aa366892(v=vs.85).aspx) aby zobaczyć, kto ich wywoływania. Na przykład aby zobaczyć, kto próbował Alokacja pamięci wirtualnej fragmentów w większe niż 8MBB z systemu operacyjnego, można ustawić punkt przerwania w następujący sposób:
 
 ```console
 bp kernel32!virtualalloc "j (dwo(@esp+8)>800000) 'kb';'g'"
 ```
 
-To polecenie przechodzi do debugera i pokazuje tylko wtedy, gdy stos wywołań [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) jest wywoływana z rozmiarem alokacji większa niż 8 MB (0x800000).
+To polecenie przechodzi do debugera i przedstawia stos wywołań tylko wtedy, gdy [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) jest wywoływana z rozmiarem alokacji większe niż 8 MB (0x800000).
 
-CLR 2.0 dodano funkcję *Hoarding maszyny Wirtualnej* które może być przydatne w przypadku scenarious gdzie segmenty (w tym na duże i małe obiektu stosów) są często nabyte i wydane. Aby określić Hoarding maszyny Wirtualnej, należy określić flagę uruchamiania o nazwie `STARTUP_HOARD_GC_VM` za pomocą obsługi interfejsu API. Zamiast zwalnianie pusty segmentów do systemu operacyjnego, środowisko CLR decommits pamięci na te segmenty i umieszcza je na liście wstrzymania. (Należy pamiętać, że środowisko CLR nie tym segmentów, które są za duże). Środowisko CLR później używa tych segmentów do spełnienia żądania nowego segmentu. Przy następnym, że Twoja aplikacja powinna nowy segment, CLR korzysta z tej listy gotowości Jeśli znajdziesz taki, który jest wystarczająco duży.
+Środowisko CLR 2.0 dodano funkcję o nazwie *Hoarding maszyny Wirtualnej* , może być przydatne w przypadku scenarious gdzie segmenty (łącznie z dużymi i małymi obiekt sterty) są często nabyte i wydania. Aby określić Hoarding maszyny Wirtualnej, należy określić flagę uruchamiania o nazwie `STARTUP_HOARD_GC_VM` za pośrednictwem interfejsu API. Zamiast zwalnianie pustych segmentów do systemu operacyjnego, środowisko CLR anuluje pamięci w tych segmentach i umieszcza je na liście wstrzymania. (Zwróć uwagę, że CLR nie robi to segmentów, które są zbyt duże). Środowisko CLR używa później te segmenty do obsługi nowych żądań segmentu. Następnym razem, że Twoja aplikacja wymaga nowego segmentu, środowisko CLR używa z tej listy gotowości Jeśli znajdziesz taki, który jest wystarczająco duży.
 
-Hoarding maszyny Wirtualnej jest również przydatne w przypadku aplikacji, które mają być przechowywane na segmenty, które już nabyte, takie jak niektóre aplikacje serwera, które są dominującą aplikacje uruchomione w systemie, aby uniknąć poza wyjątkami pamięci.
+Hoarding maszyny Wirtualnej jest również przydatne w przypadku aplikacji, które mają być przechowywane segmentów, którzy już uzyskali, takich jak niektórych aplikacji serwera, które są dominujący aplikacje uruchomione w systemie, aby uniknąć poza wyjątki pamięci.
 
-Zdecydowanie zaleca się starannie przetestować aplikację podczas upewnij się, że aplikacja ma użycie pamięci stabilny za pomocą tej funkcji.
+Zdecydowanie zaleca się starannie przetestować aplikację podczas korzystania z tej funkcji w celu zapewnienia, że Twoja aplikacja ma użycie pamięci stabilny.

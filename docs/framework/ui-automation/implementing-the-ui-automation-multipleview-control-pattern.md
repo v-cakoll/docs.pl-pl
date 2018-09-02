@@ -9,38 +9,38 @@ ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 777f529b3b925a965b24cf1a4b38b9d3b9adae7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 292a1c0a57c992e847dd72a24508482cb6783121
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408382"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43471916"
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>Implementacja wzorca kontrolki MultipleView dla automatyzacji interfejsu użytkownika
 > [!NOTE]
->  Ta dokumentacja jest przeznaczony dla deweloperów .NET Framework, które chcą korzystać zarządzanej [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejsu API systemu Windows automatyzacji: automatyzacji interfejsu użytkownika](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  W tym temacie przedstawiono wskazówki i konwencje dotyczące implementowania <xref:System.Windows.Automation.Provider.IMultipleViewProvider>, wraz z informacjami dotyczącymi zdarzeń i właściwości. Łącza do dodatkowe informacje są wyświetlane na końcu tego tematu.  
   
- <xref:System.Windows.Automation.MultipleViewPattern> — Wzorzec formantu jest używana do obsługi formantów, które zapewniają i można przełączać się między wiele reprezentacje ten sam zestaw informacji formantów podrzędnych.  
+ <xref:System.Windows.Automation.MultipleViewPattern> — Wzorzec kontrolki jest używana do obsługi formantów, które zapewniają i można przełączać się między wiele reprezentacji ten sam zestaw kontrolek informacji lub podrzędnej.  
   
- Kontrolki udostępniające wiele widoków przykłady widok listy (które można wyświetlić jego zawartość jako miniatury, Kafelki, ikony lub szczegóły), [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] wykresów (kołowego, wiersz, pasek, wartość komórki z formułą) [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] dokumentów (normalny, układ sieci Web Drukowanie układu, układ do czytania, konspektu), [!INCLUDE[TLA#tla_outlook](../../../includes/tlasharptla-outlook-md.md)] kalendarza (rok, miesiąc, tydzień, dzień), a [!INCLUDE[TLA#tla_wmp](../../../includes/tlasharptla-wmp-md.md)] karnacji. Obsługiwane widoki są określane przez dewelopera kontrolek i są specyficzne dla każdego formantu.  
+ Kontrolki udostępniające wiele widoków przykłady widok listy (które można wyświetlić jego zawartość jako miniatury, Kafelki, ikony lub szczegóły), [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] wykresów (koła, wiersz, pasek, wartość komórki przy użyciu formuły) [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] dokumentów (normalny, układu strony sieci Web Drukuj układu, układu do czytania, kontur), [!INCLUDE[TLA#tla_outlook](../../../includes/tlasharptla-outlook-md.md)] kalendarza (rok, miesiąc, tydzień, dzień), a [!INCLUDE[TLA#tla_wmp](../../../includes/tlasharptla-wmp-md.md)] skórki. Obsługiwane widoki są określane przez dewelopera kontrolek i są specyficzne dla każdego formantu.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Implementacja — wskazówki i konwencje  
- Gdy implementacja wzorca kontrolki widoku wielu, należy zwrócić uwagę następujące wskazówki i konwencje:  
+## <a name="implementation-guidelines-and-conventions"></a>Wytyczne dotyczące implementacji i konwencje  
+ Jeśli implementacja wzorca kontrolki widoku wielu, należy zwrócić uwagę następujących wytycznych i konwencje:  
   
--   <xref:System.Windows.Automation.Provider.IMultipleViewProvider> powinny zostać wdrożone również na kontenerze, który zarządza bieżący widok, jeśli różni się od formant, który umożliwia bieżącego widoku. Na przykład Eksploratora Windows zawiera formant listy bieżącej zawartości folderu, gdy wyświetlanie formantu odbywa się z aplikacji Eksploratora Windows.  
+-   <xref:System.Windows.Automation.Provider.IMultipleViewProvider> również powinny być zrealizowane w kontenerze, który zarządza bieżący widok, jeśli jest inny niż formant, który zawiera bieżący widok. Na przykład Eksploratora Windows zawiera kontrolkę listy do bieżącej zawartości folderu, kiedy widoku dla kontrolki jest zarządzana z poziomu aplikacji w Eksploratorze Windows.  
   
--   Formant, który może sortować jego zawartość nie jest uważana za obsługuje wiele widoków.  
+-   Formant, który jest w stanie sortowania jego zawartość nie jest uważany za obsługuje wiele widoków.  
   
 -   Kolekcja widoków muszą być identyczne w wystąpieniach.  
   
--   Wyświetlanie nazw musi być odpowiednie do użycia w tekst na mowę, Braille'a i innych aplikacjach zrozumiałą dla użytkownika.  
+-   Wyświetlanie nazw musi być odpowiednia do stosowania w zamiany tekstu na mowę, Braille'a i inne aplikacje czytelny dla człowieka.  
   
 <a name="Required_Members_for_IMultipleViewProvider"></a>   
 ## <a name="required-members-for-imultipleviewprovider"></a>Wymagane elementy IMultipleViewProvider  
- Poniższe właściwości i metody są wymagane do wykonania IMultipleViewProvider.  
+ Poniższe właściwości i metod są wymagane do wykonania IMultipleViewProvider.  
   
 |Wymagane elementy członkowskie|Typ elementu członkowskiego|Uwagi|  
 |----------------------|-----------------|-----------|  
@@ -49,7 +49,7 @@ ms.locfileid: "33408382"
 |<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetViewName%2A>|Metoda|Brak|  
 |<xref:System.Windows.Automation.Provider.IMultipleViewProvider.SetCurrentView%2A>|Metoda|Brak|  
   
- Brak zdarzeń skojarzonych z tym — wzorzec formantu.  
+ Brak zdarzeń skojarzonych z tym — wzorzec kontrolki.  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Wyjątki  
@@ -57,7 +57,7 @@ ms.locfileid: "33408382"
   
 |Typ wyjątku|Warunek|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException>|Gdy albo <xref:System.Windows.Automation.Provider.IMultipleViewProvider.SetCurrentView%2A> lub <xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetViewName%2A> jest wywoływana z parametrem, który nie jest członkiem kolekcji obsługiwane widoki.|  
+|<xref:System.ArgumentException>|Gdy albo <xref:System.Windows.Automation.Provider.IMultipleViewProvider.SetCurrentView%2A> lub <xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetViewName%2A> jest wywoływana z parametrem, który nie jest elementem członkowskim kolekcji obsługiwane widoki.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wzorce kontrolek automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  

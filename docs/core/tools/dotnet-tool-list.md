@@ -1,15 +1,15 @@
 ---
-title: polecenie listy narzędzi DotNet - .NET Core interfejsu wiersza polecenia
-description: Polecenie listy narzędzi dotnet Wyświetla określony .NET Core globalne narzędzia z komputera.
+title: polecenia DotNet do listy narzędzie — interfejs wiersza polecenia platformy .NET Core
+description: Polecenie listy narzędzi dotnet Wyświetla określonego narzędzia globalnej podstawowe w .NET z poziomu Twojej maszyny.
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 5f4793cd37c3a8df06eb6930ad9f381ac70d4e67
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: e2bea974207d3098ed67b69ed16a72a03c44cd8b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696728"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467059"
 ---
 # <a name="dotnet-tool-list"></a>Lista narzędzi DotNet
 
@@ -17,11 +17,11 @@ ms.locfileid: "34696728"
 
 ## <a name="name"></a>Nazwa
 
-`dotnet tool list` — Wyświetla listę wszystkich [.NET Core globalne narzędzia](global-tools.md) aktualnie zainstalowany domyślny katalog na komputerze lub w określonej ścieżce.
+`dotnet tool list` — Wyświetla listę wszystkich [narzędzia globalnej platformy .NET Core](global-tools.md) aktualnie zainstalowane w domyślnym katalogu na komputerze lub w określonej ścieżce.
 
 ## <a name="synopsis"></a>Streszczenie
 
-```
+```console
 dotnet tool list <-g|--global>
 dotnet tool list <--tool-path>
 dotnet tool list <-h|--help>
@@ -29,36 +29,36 @@ dotnet tool list <-h|--help>
 
 ## <a name="description"></a>Opis
 
-`dotnet tool list` Polecenie udostępnia sposób na liście wszystkie narzędzia globalne .NET Core zainstalowane na poziomie użytkownika na komputerze (bieżący profil użytkownika) lub w określonej ścieżce. Polecenie wyświetla nazwę pakietu, wersji i polecenia narzędzie globalne. Polecenia listy albo należy określić, czy chcesz wyświetlić wszystkie narzędzia całej użytkownika przy użyciu `--global` opcji lub Określ niestandardową ścieżkę za pomocą `--tool-path` opcji.
+`dotnet tool list` Polecenie dostarcza sposób do tworzenia listy wszystkich narzędzi globalnego .NET Core zainstalowane całej użytkownika na komputerze (bieżący profil użytkownika) lub w określonej ścieżce. Polecenie wyświetla nazwę pakietu, zainstalowaną wersję i polecenia narzędzie globalne. Aby korzystać z polecenia list, masz albo określić, czy chcesz zobaczyć wszystkie narzędzia całej użytkownika przy użyciu `--global` opcji lub określić niestandardową ścieżkę, w którym używana jest `--tool-path` opcji.
 
 ## <a name="options"></a>Opcje
 
 `-g|--global`
 
-Wyświetla globalne narzędzia na poziomie użytkownika. Nie można połączyć z `--tool-path` opcji. Jeśli nie określisz tej opcji, należy określić `--tool-path` opcji.
+Wyświetla globalne narzędzia na poziomie użytkownika. Nie można połączyć z `--tool-path` opcji. Jeśli nie określisz tę opcję, należy określić `--tool-path` opcji.
 
 `-h|--help`
 
-Drukuje krótkich pomocy dla polecenia.
+Drukuje krótki pomoc dotyczącą polecenia.
 
 `--tool-path <PATH>`
 
-Określa niestandardową lokalizację gdzie można znaleźć narzędzia globalnego. ŚCIEŻKA może być bezwzględny lub względny. Nie można połączyć z `--global` opcji. Jeśli nie określisz tej opcji, należy określić `--global` opcji.
+Określa niestandardową lokalizację gdzie można znaleźć narzędzia globalnej. ŚCIEŻKA może być bezwzględny lub względny. Nie można połączyć z `--global` opcji. Jeśli nie określisz tę opcję, należy określić `--global` opcji.
 
 ## <a name="examples"></a>Przykłady
 
-Wyświetla listę wszystkich globalnych zainstalowano narzędzia użytkownika całej na tym komputerze (bieżący profil użytkownika):
+Wyświetla wszystkie zainstalowane narzędzia globalnej użytkownika całej na komputerze (bieżący profil użytkownika):
 
 `dotnet tool list -g`
 
-Listy globalne narzędzi w określonym folderze systemu Windows:
+Listy globalne narzędzia z określonego folderu Windows:
 
 `dotnet tool list --tool-path c:\global-tools`
 
-Listy globalne narzędzi z określonego folderu Linux/macOS:
+Listy globalne narzędzi z określonego folderu w systemie Linux/macOS:
 
 `dotnet tool list --tool-path ~/bin`
 
 ## <a name="see-also"></a>Zobacz także
 
-[Narzędzia globalne .NET core](global-tools.md)
+* [Narzędzia globalnej platformy .NET core](global-tools.md)

@@ -1,44 +1,44 @@
 ---
-title: Wprowadzenie do korzystania z usługi danych WCF
+title: Wprowadzenie do usługi danych WCF
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: c832fa5b-cf86-4690-be5a-a226c0e49530
-ms.openlocfilehash: 23c5ef0afb11b259c207746c1e0943cbe7c2caba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5fc37ed215ada6aa35ac8801ef33e5787ba77584
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359494"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468900"
 ---
-# <a name="getting-started-with-wcf-data-services"></a>Wprowadzenie do korzystania z usługi danych WCF
-Tematy w tej sekcji pomaga w zrozumieniu szybko [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] i sposobu użycia [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ujawnia i zużywać [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła przez wyjaśniający podstawowe technologie. Ta sekcja zawiera zarówno koncepcyjnej zawartości i [szybkiego startu](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) samouczka.  
+# <a name="getting-started-with-wcf-data-services"></a>Wprowadzenie do usługi danych WCF
+Tematy w tej sekcji pomóc w szybkim poznaniu [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] i sposobu używania [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] do prezentowania i wykorzystywania [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródeł danych, ponieważ wyjaśnia podstawowe technologie. Ta sekcja zawiera zarówno zawartości koncepcyjnej i [Szybki Start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) samouczka.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- W poniższych tematach opisano sposób tworzenia usług danych przy użyciu [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
+ W poniższych tematach opisano sposób tworzenia usługi danych przy użyciu [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
  [Udostępnianie danych jako usługi](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
- Opisuje czynności, które są wymagane do utworzenia usługi danych przy użyciu [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
+ W tym artykule opisano kroki, które są wymagane do tworzenia usługi danych przy użyciu [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
  [Uzyskiwanie dostępu do zasobów usługi danych](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)  
- Opisuje sposób pracy z [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródeł danych.  
+ W tym artykule opisano sposób pracy z [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych.  
   
  [Używanie usługi danych w aplikacji klienta](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
- Opisuje sposób pracy z [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych w aplikacji klienta .NET Framework.  
+ W tym artykule opisano sposób pracy z [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych w aplikacji klienckiej .NET Framework.  
   
  [Szybki start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
- Pokazuje, jak utworzyć i prosty dostęp [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]— na podstawie usługi udostępniającej źródło danych oparte na bazie danych Northwind.  
+ Pokazuje, jak utworzyć i korzystać z prostego [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]— na podstawie usługi, który udostępnia Kanał informacyjny oparte na bazie danych Northwind.  
   
  [Scenariusze aplikacji](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)  
- Wyróżnia podstawowy zestaw [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] scenariusze, które są obsługiwane przez [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
+ Prezentuje podstawowy zestaw [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] scenariusze, które są obsługiwane przez [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
  [Zasoby](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)  
  Zawiera łącza do [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] i [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] zasobów.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [WCF Data Services (Silverlight)](http://go.microsoft.com/fwlink/?LinkID=143149)  
+ [WCF Data Services (Silverlight)](https://go.microsoft.com/fwlink/?LinkID=143149)  
   
  [Wprowadzenie](../../../../docs/framework/data/adonet/ef/getting-started.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zestaw SDK OData](http://go.microsoft.com/fwlink/?LinkID=185248)
+ [Zestaw SDK OData](https://go.microsoft.com/fwlink/?LinkID=185248)

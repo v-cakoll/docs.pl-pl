@@ -2,56 +2,56 @@
 title: Przesłanie formularza
 ms.date: 03/30/2017
 ms.assetid: fa6f84f9-2e07-4e3c-92d0-a245308b7dff
-ms.openlocfilehash: 005aba6ab8a8fcbe4f4e4f79055e04cff059f47d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9115b9abfa7039bf409bb9bbce54e5012d05a074
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33503766"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464937"
 ---
 # <a name="form-post"></a>Przesłanie formularza
-W tym przykładzie pokazano, jak rozszerzyć WCF modelu programowania INTERFEJSU REST do obsługi nowych formatów żądania przychodzące. Przykład obejmuje również implementacja element formatujący może zdeserializować żądania post formularza HTML do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typu. Ponadto próbki używa szablonu T4, aby powrócić do strony HTML, który zapewnia formularza HTML, który użytkownicy mogą post do usługi WCF REST.  
+Niniejszy przykład pokazuje, jak rozszerzyć WCF modelu programowania interfejsu REST do obsługi nowych formatów żądania przychodzące. Przykład obejmuje również implementację element formatujący może wykonywać deserializację żądania post formularza HTML w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typu. Ponadto w przykładzie użyto szablon T4, aby powrócić do strony HTML, co zapewnia formularza HTML, który użytkownicy będą publikować z powrotem do usługi REST programu WCF.  
   
 ## <a name="demonstrates"></a>Demonstracje  
   
--   Rozszerzanie obsługa formatów żądania przychodzące.  
+-   Rozszerzanie obsługi formatów żądania przychodzące.  
   
 -   Integrowanie szablony T4.  
   
-## <a name="discussion"></a>Omówienie  
- Ten przykład zawiera dwa projekty. Jeden projekt jest biblioteki HtmlFormProcessing, która zawiera elementu formatującego żądanie niestandardowego, który może deserializować wpisów formularza HTML do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typów. Drugi projekt jest aplikacja konsolowa, która rozszerza próbki podstawowej usługi zasobów do użycia programu formatującego żądanie niestandardowe biblioteki HtmlFormProcessing.  
+## <a name="discussion"></a>Dyskusja  
+ Ten przykład obejmuje dwa projekty. Jeden projekt jest biblioteką HtmlFormProcessing, która zawiera żądanie niestandardowe elementu formatującego, który może wykonywać deserializację wpisów formularza HTML w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typów. Drugi projekt to aplikacja konsolowa która rozszerza przykładowe podstawowej usługi do zasobów do użycia elementu formatującego żądanie niestandardowe biblioteki HtmlFormProcessing.  
   
- Niestandardowy element formatujący, który może deserializować wpisów formularza HTML (HtmlFormRequestDispatchFormatter) akceptuje zarówno [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typy, które można przekonwertować ciągu używającego <xref:System.ServiceModel.Dispatcher.QueryStringConverter> i typów oznaczonych <xref:System.Runtime.Serialization.DataContractAttribute> mieć tylko elementy członkowskie, które mogą być przekonwertowany z ciągu przy użyciu QueryStringConverter.  
+ Niestandardowy element formatujący, który może wykonywać deserializację wpisów formularza HTML (HtmlFormRequestDispatchFormatter) akceptuje zarówno [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typy, które mogą być konwertowane na ciąg, w którym używana jest <xref:System.ServiceModel.Dispatcher.QueryStringConverter> i typy oznaczone <xref:System.Runtime.Serialization.DataContractAttribute> mieć tylko elementy członkowskie, które mogą być przekonwertowana z na ciąg przy użyciu QueryStringConverter.  
   
- Abstrakcyjna klasa podstawowa zawiera również projektu biblioteki HtmlFormProcessing `RequestBodyDispatchFormatter`, które mogą służyć do tworzenia innych żądanie niestandardowe elementy formatujące. Wyprowadzanie z `RequestBodyDispatchFormatter` umożliwia deweloperom skoncentrować się na logice deserializacji treści żądania, dzięki czemu klasy podstawowej do mapowania parametrów szablonu URI parametry metody wykonać operację. Również w bibliotece HtmlFormProcessing projektu jest `HtmlFormProcessingBehavior` klasy, która ilustruje sposób pochodzi od <xref:System.ServiceModel.Description.WebHttpBehavior> należy zastąpić domyślny element formatujący żądania elementu formatującego żądanie niestandardowe.  
+ Abstrakcyjna klasa bazowa zawiera także projekt biblioteki HtmlFormProcessing `RequestBodyDispatchFormatter`, który może służyć do tworzenia innych żądanie niestandardowe elementy formatujące. Wyprowadzanie z `RequestBodyDispatchFormatter` umożliwia deweloperom skoncentrowanie się na logice deserializacji treści żądania, umożliwiający klasy bazowej do mapowania parametrów szablonu URI parametry metody wykonać operację. W bibliotece HtmlFormProcessing projektu jest również `HtmlFormProcessingBehavior` klasy, która pokazuje, jak dziedziczyć <xref:System.ServiceModel.Description.WebHttpBehavior> zastąpić domyślny element formatujący żądania żądanie niestandardowe elementu formatującego.  
   
- Ten projekt aplikacji konsoli rozszerza [podstawowej usługi zasobów](../../../../docs/framework/wcf/samples/basic-resource-service.md) próbki. Przykład podstawowe usługi zasobów pokazano, jak udostępnianie zasobów w taki sposób, który używa modelu programowania INTERFEJSU REST usługi WCF. Na przykład podstawowe usługi zasobów zasobu kolekcji klienta jest uwidoczniony tak, aby klienci w kolekcji można tworzyć, pobrać, aktualizowane i usuwane. Przykład podstawowe usługi zasobów używa tylko dwa natywnie obsługiwane przychodzące żądanie formaty, XML i JSON.  
+ Ten projekt aplikacji konsoli rozszerza [podstawowej usługi do zasobu](../../../../docs/framework/wcf/samples/basic-resource-service.md) próbki. Przykład podstawowe usługi zasobów pokazuje, jak udostępnić zasób w taki sposób, który używa modelu programowania interfejsu REST usługi WCF. W tym przykładzie podstawowej usługi do zasobu zasobu kolekcji klientów jest uwidaczniany w taki sposób, że klienci w kolekcji można tworzyć, pobierane, aktualizowane i usuwane. Przykład podstawowe usługi zasobów używa tylko dwa natywnie obsługiwanych przychodzące żądanie formaty, XML i JSON.  
   
- Niestandardowy element formatujący w bibliotece HtmlFormProcessing, co pozwala użytkownikom na tworzenie klientów, wysyłając żądanie post formularza HTML za pomocą przeglądarki sieci korzysta z aplikacji konsoli w tym przykładzie Post formularza. Dodano również operację, która zwraca stronę HTML, w tym formularzu do ponownego zaksięgowania usługi. Ta strona HTML jest generowany przy użyciu wstępnie przetworzonych szablonu T4, który składa się z plikiem .TT — i plik CS wygenerowany automatycznie. Plik .TT — umożliwia deweloperom zapisu odpowiedzi w formularzu szablonu, który zawiera zmienne i kontrolowanie struktury. Aby uzyskać więcej informacji na temat T4 zobacz [generowania artefaktów przez przy użyciu szablonów tekstowych](http://go.microsoft.com/fwlink/?LinkId=178139).  
+ Korzysta z aplikacji konsoli w tym przykładzie Post formularza niestandardowego elementu formatującego w bibliotece HtmlFormProcessing umożliwia użytkownikom tworzenie klientów, wysyłając żądanie post formularza HTML w przeglądarce. Dodaje także operację, która zwraca stronę HTML, w tym formularzu wysyłany do usługi. Ta strona HTML jest generowana z użyciem wstępnie przetworzony szablon T4, który składa się z plikiem .tt i pliku .cs wygenerowany automatycznie. Plik .tt umożliwia deweloperom zapisu odpowiedzi w postaci szablonu, który zawiera zmienne i kontrolowanie struktury. Aby uzyskać więcej informacji o narzędziu T4, zobacz [generowania artefaktów, przy użyciu szablonów tekstowych](https://go.microsoft.com/fwlink/?LinkId=178139).  
   
-#### <a name="to-run-the-sample"></a>Aby uruchomić przykładowy  
+#### <a name="to-run-the-sample"></a>Aby uruchomić przykład  
   
-1.  Otwórz rozwiązanie przykładowej Post formularza. Podczas uruchamiania [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], należy uruchomić jako administrator, aby pomyślnie wykonać próbki. To zrobić, klikając prawym przyciskiem myszy [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] ikonę i wybierając polecenie "Uruchom jako Administrator" z menu kontekstowego.  
+1.  Otwórz rozwiązanie dla przykładu Post formularza. Podczas uruchamiania [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], należy uruchomić jako administrator, aby pomyślnie wykonać próbki. W tym celu kliknij prawym przyciskiem myszy [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] ikonę i wybierając pozycję "Uruchom jako Administrator", z menu kontekstowego.  
   
-2.  Naciśnij klawisze CTRL + SHIFT + B Skompiluj rozwiązanie, a następnie naciśnij klawisz CTRL + F5, aby uruchomić projekt FormPost aplikacji konsoli.  
+2.  Naciśnij klawisze CTRL + SHIFT + B, Skompiluj rozwiązanie, a następnie naciśnij klawisz CTRL + F5, aby uruchomić projekt FormPost aplikacji konsoli.  
   
-3.  W oknie konsoli zostanie wyświetlony i zawiera identyfikator URI uruchomionej usługi i identyfikator URI elementu HTML pomocy strony uruchomionej usługi.  
+3.  W oknie konsoli pojawia się i zawiera identyfikator URI uruchomioną usługę i identyfikator URI elementu HTML pomocy strony dla uruchomionej usługi.  
   
-4.  Podczas działania próbki, klient zapisuje stan bieżącego działania czy jego dodawane klienta i aktualizacji klienta, usunięcie klienta lub pobrania listy bieżącego klientów z usługi w oknie konsoli.  
+4.  Po uruchomieniu przykładu klienta zapisuje stan bieżącego działania czy poprzez dodawanie jest klientem, klient aktualizowanie, usuwanie klienta lub pobieranie listy obecni klienci korzystający z usługi w oknie konsoli.  
   
-5.  Monit następnie przejdź do identyfikatora URI w postaci klienta. Otwórz przeglądarkę i przejdź do danego identyfikatora URI. Wpisz nazwę i adres dla tego klienta i kliknij przycisk **przesyłania** przycisku.  
+5.  Następnie monit przejdź do identyfikatora URI klienta formularza. Otwórz przeglądarkę i przejdź do danego identyfikatora URI. Wpisz nazwę i adres klienta, a następnie kliknij przycisk **przesyłania** przycisku.  
   
-6.  Naciśnij dowolny klawisz okna konsoli kontynuować wykonywanie przykładowej.  
+6.  Naciśnij dowolny klawisz, okna konsoli kontynuować, działa aplikacja przykładowa.  
   
-7.  Jako przykład zakończeniu Zwróć uwagę, że klienta, które zostały utworzone za pomocą przeglądarki jest uwzględniony na liście końcowego klientów.  
+7.  Jako przykład zakończy, zwróć uwagę, że klienta, które zostały utworzone za pomocą przeglądarki znajduje się na ostatniej liście klientów.  
   
 8.  Naciśnij dowolny klawisz, aby zakończyć próbki.  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Web\FormPost`

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - regional options
 ms.assetid: c3a99596-f09a-44a5-81dd-1b89a094f1df
 ms.openlocfilehash: 38acd9056f9517e6d8b62691cdeb1a2960bec800
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42998713"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469857"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>Konwertowanie pomiędzy ciągami a innymi typami danych (Visual Basic)
 Możesz przekonwertować numeryczne, `Boolean`, lub wartość daty/godziny `String`. Można również przeprowadzić konwersję w odwrotnym kierunku — od wartości ciągu na liczbowe `Boolean`, lub `Date` — pod warunkiem zawartość ciągu mogą być interpretowane jako prawidłowa wartość docelowego typu danych. Jeśli nie jest to możliwe, wystąpi błąd czasu wykonywania.  

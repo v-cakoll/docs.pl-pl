@@ -5,44 +5,44 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: a1759434d259cdffe1dac6b19a6582bfb83784bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 207010f594959708322aed2e630935252c873cf8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492488"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466174"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>Instrukcje: Hostowanie usługi WCF w programie IIS
-W tym temacie przedstawiono podstawowe czynności wymagane do utworzenia usługi Windows Communication Foundation (WCF), który znajduje się w Internet Information Services (IIS). W tym temacie założono zapoznali się z usługami IIS i zrozumieć, jak używać narzędzia zarządzania usług IIS do tworzenia i zarządzania aplikacjami usług IIS. Aby uzyskać więcej informacji na temat usług IIS zobacz [Internetowe usługi informacyjne](http://go.microsoft.com/fwlink/?LinkId=132449). Usługi WCF pobierającej jest uruchamiany w środowisku usług IIS w pełni korzystać z funkcji usług IIS, takie jak odtwarzanie procesów, bezczynności zamykania, monitorowanie kondycji procesów i aktywacji opartej na wiadomość. Ta opcja hostingu wymaga usług IIS zostać prawidłowo skonfigurowane, ale nie wymaga się, że każdy kod hostingu można zapisywać w ramach aplikacji. Można użyć tylko z transportem HTTP hostowanie usług IIS.  
+W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia usługi Windows Communication Foundation (WCF), który znajduje się w Internet Information Services (IIS). W tym temacie przyjęto założenie, są zaznajomieni z usług IIS i dowiedzieć się, jak używać narzędzia do zarządzania usług IIS do tworzenia i obsługi aplikacji programu IIS. Aby uzyskać więcej informacji na temat usług IIS zobacz [Internetowe usługi informacyjne](https://go.microsoft.com/fwlink/?LinkId=132449). Usługi WCF, który jest uruchamiany w środowisku usług IIS wykorzystuje pełną funkcje usług IIS, takie jak odtwarzanie procesów, bezczynności zamykania, monitorowania kondycji procesu i aktywacja oparta na komunikatach. Ta opcja hostingu wymaga, aby poprawnie skonfigurować usługi IIS, ale nie wymaga się, że każdy kod hostingu zapisywane jako część aplikacji. Umożliwia hostowanie usług IIS tylko w przypadku transportu HTTP.  
   
- Aby uzyskać więcej informacji na temat usługi WCF i [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] interakcji, zobacz [usługi WCF i platformy ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md). Aby uzyskać więcej informacji na temat konfigurowania zabezpieczeń, zobacz [zabezpieczeń](../../../../docs/framework/wcf/feature-details/security.md).  
+ Aby uzyskać więcej informacji na temat usługi WCF i [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] wchodzić w interakcje, zobacz [usługi WCF i platforma ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md). Aby uzyskać więcej informacji na temat konfigurowania zabezpieczeń, zobacz [zabezpieczeń](../../../../docs/framework/wcf/feature-details/security.md).  
   
- Dla źródła kopię w tym przykładzie [IIS Hosting przy użyciu kodu wbudowanego](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md).  
+ Źródło kopię w tym przykładzie można zobaczyć [IIS hostingu przy użyciu kodu wbudowanego](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md).  
   
 ### <a name="to-create-a-service-hosted-by-iis"></a>Tworzenie usługi hostowanej przez Internetowe usługi informacyjne  
   
-1.  Upewnij się, że usługi IIS jest zainstalowana i uruchomiona na tym komputerze. Aby uzyskać więcej informacji na temat instalowania i konfigurowania usług IIS zobacz [Instalowanie i konfigurowanie usług IIS 7.0](http://go.microsoft.com/fwlink/?LinkID=132128)  
+1.  Upewnij się, czy program IIS jest zainstalowana i uruchomiona na komputerze. Aby uzyskać więcej informacji na temat instalowania i konfigurowania usług IIS zobacz [Instalowanie i konfigurowanie usług IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=132128)  
   
-2.  Utwórz nowy folder o nazwie "IISHostedCalcService" plików aplikacji, upewnij się, że [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ma dostęp do zawartości folderu i narzędzia zarządzania usług IIS umożliwia utworzenie nowej aplikacji usług IIS, która jest fizycznie zlokalizowany w tej aplikacji katalog. Podczas tworzenia aliasu katalogu aplikacji do użytku "IISHostedCalc".  
+2.  Utwórz nowy folder na potrzeby plików aplikacji o nazwie "IISHostedCalcService", upewnij się, że [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ma dostęp do zawartości folderu i użyć narzędzia do zarządzania usług IIS, aby utworzyć nową aplikację usług IIS, która fizycznie znajduje się w tej aplikacji katalog. Podczas tworzenia alias do użytku w katalogu aplikacji "IISHostedCalc".  
   
-3.  Utwórz nowy plik o nazwie "service.svc" w katalogu aplikacji. Edytowanie tego pliku przez dodanie poniższego @ServiceHost elementu.  
+3.  Utwórz nowy plik o nazwie "service.svc" w katalogu aplikacji. Edytuj ten plik, dodając następujące @ServiceHost elementu.  
   
     ```  
     <%@ServiceHost language=c# Debug="true" Service="Microsoft.ServiceModel.Samples.CalculatorService"%>  
     ```  
   
-4.  Utwórz App_Code podkatalogu w katalogu aplikacji.  
+4.  Utwórz podkatalog App_Code w katalogu aplikacji.  
   
 5.  Utwórz plik kodu o nazwie Service.cs w podkatalogu App_Code.  
   
-6.  Dodaj następujące instrukcje using do początku pliku Service.cs.  
+6.  Dodaj następujące za pomocą instrukcji na górze pliku Service.cs.  
   
     ```csharp  
     using System;  
     using System.ServiceModel;  
     ```  
   
-7.  Dodaj następujące deklaracji przestrzeni nazw przy użyciu instrukcji.  
+7.  Dodaj następującą deklarację przestrzeni nazw, gdy po użyciu instrukcji.  
   
     ```csharp  
     namespace Microsoft.ServiceModel.Samples  
@@ -50,26 +50,26 @@ W tym temacie przedstawiono podstawowe czynności wymagane do utworzenia usługi
     }  
     ```  
   
-8.  Definiowanie kontraktu usługi wewnątrz deklaracji przestrzeni nazw, jak pokazano w poniższym kodzie.  
+8.  Definiowanie kontraktu usługi, wewnątrz deklaracji przestrzeni nazw, jak pokazano w poniższym kodzie.  
   
      [!code-csharp[c_HowTo_HostInIIS#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/cs/source.cs#11)]
      [!code-vb[c_HowTo_HostInIIS#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostiniis/vb/source.vb#11)]  
   
-9. Implementowanie kontraktu usługi, po usługi definicja kontraktu, jak pokazano w poniższym kodzie.  
+9. Implementowanie kontraktu usługi, po usługę definicję kontraktu, jak pokazano w poniższym kodzie.  
   
      [!code-csharp[c_HowTo_HostInIIS#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/cs/source.cs#12)]
      [!code-vb[c_HowTo_HostInIIS#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostiniis/vb/source.vb#12)]  
   
-10. Utwórz plik o nazwie "Web.config" w katalogu aplikacji i Dodaj następujący kod konfiguracji do pliku. W czasie wykonywania infrastruktura WCF używa tych informacji do utworzenia punktu końcowego, który aplikacje klienckie mogą komunikować się z.  
+10. Utwórz plik o nazwie "Web.config" w katalogu aplikacji, a następnie dodaj następujący kod konfiguracji do pliku. W czasie wykonywania infrastruktura WCF używa tych informacji do utworzenia punktu końcowego, który aplikacje klienckie mogą się komunikować.  
   
      [!code-xml[c_HowTo_HostInIIS#100](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/common/web.config#100)]      
   
-     W tym przykładzie jawnie określa punkty końcowe w pliku konfiguracji. Jeśli nie dodawaj żadnych punktów końcowych do usługi, środowisko uruchomieniowe dodaje domyślne punkty końcowe. Aby uzyskać więcej informacji o domyślnych punktów końcowych, powiązania i zachowania, zobacz [uproszczony konfiguracji](../../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+     Ten przykład jawnie określa punkty końcowe w pliku konfiguracji. Jeśli nie dodasz żadnych punktów końcowych do usługi, środowiska uruchomieniowego dodaje domyślne punkty końcowe. Aby uzyskać więcej informacji na temat domyślnych punktów końcowych, powiązania i zachowań, zobacz [uproszczona konfiguracja](../../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
-11. Aby upewnić się, że usługa działa prawidłowo, otwórz wystąpienie programu Internet Explorer i przejdź do adresu URL usługi: `http://localhost/IISHostedCalc/Service.svc`  
+11. Aby upewnić się, że usługa jest hostowana poprawnie, otwórz wystąpienie programu Internet Explorer i przejdź do adresu URL usługi: `http://localhost/IISHostedCalc/Service.svc`  
   
 ## <a name="example"></a>Przykład  
- Poniżej znajduje się, że Kalkulator usługi hostowanej pełną listę kod dla usług IIS.  
+ Poniżej znajduje się że kalkulatora usługi hostowanej pełną listę kod dla usług IIS.  
   
  [!code-csharp[C_HowTo_HostInIIS#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/cs/source.cs#1)] 
  [!code-vb[C_HowTo_HostInIIS#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostiniis/vb/source.vb#1)] 
@@ -80,4 +80,4 @@ W tym temacie przedstawiono podstawowe czynności wymagane do utworzenia usługi
  [Usługi hostingowe](../../../../docs/framework/wcf/hosting-services.md)  
  [Usługi WCF i platforma ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)  
  [Zabezpieczenia](../../../../docs/framework/wcf/feature-details/security.md)  
- [Windows Server AppFabric funkcje hostingu](http://go.microsoft.com/fwlink/?LinkId=201276)
+ [Windows Server AppFabric funkcje hostingu](https://go.microsoft.com/fwlink/?LinkId=201276)

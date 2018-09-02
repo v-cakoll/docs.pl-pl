@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
 ms.openlocfilehash: 5f4bcf9957f91fe3ee8a62a8dc68448188df4188
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43256056"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467045"
 ---
 # <a name="classes-c-programming-guide"></a>Klasy (Przewodnik programowania w języku C#)
 A *klasy* to konstrukcja, która pozwala na tworzenie własnych typach niestandardowych przez grupowanie zmienne innych typów, metod i zdarzeń. Klasa jest podobna do planu. Definiuje dane i zachowania tego typu. Jeśli klasa nie jest zadeklarowana jako statyczna, kod klienta może utworzyć *wystąpień* go. Te wystąpienia są *obiektów* przypisane do zmiennej. Wystąpienie klasy pozostaje w pamięci, dopóki wszystkie odwołania do niego wykraczają poza zakres. W tym czasie CLR oznacza je jako kwalifikuje się do wyrzucania elementów bezużytecznych. Jeśli klasa jest zadeklarowana jako [statyczne](../../../csharp/language-reference/keywords/static.md), nie można utworzyć wystąpień i kod klienta tylko do niego dostęp za pośrednictwem samej klasy. Aby uzyskać więcej informacji, zobacz [klasy statyczne i statyczne elementy członkowskie klasy](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  

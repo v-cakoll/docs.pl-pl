@@ -10,15 +10,15 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: ca989c1cd7baa1eaeb10c65bd9ebef8e400968c3
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: d53892f9823474ea14640e352548b55432e7744b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255225"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43461066"
 ---
 # <a name="query-projections-wcf-data-services"></a>Projekcje zapytania (WCF Data Services)
-Projekcja udostępnia mechanizm w [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] zmniejszenie ilości danych w źródle danych zwróconych przez zapytanie, określając, że zwracane są tylko niektóre właściwości jednostki w odpowiedzi. Aby uzyskać więcej informacji, zobacz [OData: wybierz opcję zapytania systemu ($select)](http://go.microsoft.com/fwlink/?LinkId=186076).  
+Projekcja udostępnia mechanizm w [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] zmniejszenie ilości danych w źródle danych zwróconych przez zapytanie, określając, że zwracane są tylko niektóre właściwości jednostki w odpowiedzi. Aby uzyskać więcej informacji, zobacz [OData: wybierz opcję zapytania systemu ($select)](https://go.microsoft.com/fwlink/?LinkId=186076).  
   
  W tym temacie opisano, jak zdefiniować projekcji zapytań, jakie wymagania są dostępne dla jednostki i typu innego niż jednostka, dzięki czemu aktualizuje przewidywane wyniki, tworzenie typów przewidywane i wymieniono kilka kwestii projekcji.  
   

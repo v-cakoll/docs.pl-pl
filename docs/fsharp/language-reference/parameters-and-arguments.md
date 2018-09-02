@@ -3,11 +3,11 @@ title: Parametry i argumenty (F#)
 description: 'Więcej informacji na temat Obsługa języka F # do definiowania parametrów i przekazanie argumentów do funkcji, metody i właściwości.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 9744339110314e4e6b3c3cf8d49b1c988bc25e3c
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254012"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43471984"
 ---
 # <a name="parameters-and-arguments"></a>Parametry i argumenty
 

@@ -7,20 +7,20 @@ helpviewer_keywords:
 - browser hosting support [WPF]
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
-ms.openlocfilehash: bff2b51fbc8fec6e7cd2b24700d1c4dc38c007f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f542da55b6cde2d140e1f9f391e6b2f3d6fe172f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550023"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464950"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>Macierzysta przeglądarka WPF wsparcia API hostingu
-Hosting [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] aplikacji w przeglądarkach sieci Web umożliwiają to serwer dokumentów aktywnych (DocObject) zarejestrowanych poza hosta WPF. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] bezpośrednio można aktywować i integracja z aktywnego dokumentu. Dla hostingu XBAP i utracić dokumentów XAML w przeglądarkach Mozilla [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] zapewnia wtyczkę NPAPI, podobne Środowisko hostingu do [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] serwer dokumentów aktywnych jako [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] jest. Jednak Najprostszym sposobem praktyczne do hostowania XBAP i XAML dokumenty w innych przeglądarkach i aplikacje autonomiczne odbywa się za pośrednictwem formant przeglądarki sieci Web programu Internet Explorer. Formant przeglądarki sieci Web udostępnia złożonych Środowisko hostingu serwera aktywny dokument, ale pozwala obsługiwać do dostosowywania i rozszerzania tego środowiska i komunikują się bezpośrednio z bieżącego obiektu aktywnego dokumentu.  
+Hosting [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] aplikacji w przeglądarkach sieci Web jest zapewniana przez serwer aktywnego dokumentu (znany także jako obiekt DocObject) zarejestrowanych hosta WPF. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] bezpośrednio można aktywować i integracja z aktywnego dokumentu. Do hostowania aplikacji XBAP i utracić wprowadzone dokumenty XAML w przeglądarkach Mozilla [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] udostępnia wtyczkę NPAPI, podobnie Środowisko hostingu, do [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] serwera aktywnego dokumentu jako [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] jest. Jednak praktyczne najprościej obsługi aplikacji XBAP i XAML dokumenty w innych przeglądarkach, a aplikacje autonomiczne to formant przeglądarka sieci Web programu Internet Explorer. Formant przeglądarki sieci Web zawiera złożone środowiska hostingu serwera aktywnego dokumentu, ale umożliwia ona obsługiwać dostosowywania i rozszerzania środowiska i komunikują się bezpośrednio z bieżącego obiektu aktywnego dokumentu.  
   
- [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Serwer dokumentów aktywnych implementuje kilka wspólnych interfejsów hostingu, w tym [IOleObject](http://go.microsoft.com/fwlink/?LinkId=162049), [IOleDocument](http://go.microsoft.com/fwlink/?LinkId=162050), [IOleInPlaceActiveObject](http://go.microsoft.com/fwlink/?LinkId=162051), [IPersistMoniker](http://go.microsoft.com/fwlink/?LinkId=162045), [iolecommandtarget —](http://go.microsoft.com/fwlink/?LinkId=162047). W przypadku hostowania w formant przeglądarki sieci Web, te interfejsy mogą być zapytań z obiektu zwróconego przez [IWebBrowser2::Document](http://go.microsoft.com/fwlink/?LinkId=162048) właściwości.  
+ [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Serwer aktywnego dokumentu implementuje kilka typowych interfejsami hostingu, w tym [IOleObject](https://go.microsoft.com/fwlink/?LinkId=162049), [IOleDocument](https://go.microsoft.com/fwlink/?LinkId=162050), [IOleInPlaceActiveObject](https://go.microsoft.com/fwlink/?LinkId=162051), [IPersistMoniker](https://go.microsoft.com/fwlink/?LinkId=162045), [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047). W przypadku hostowania w kontrolce przeglądarki sieci Web, interfejsy te mogą być zapytań z obiektu zwróconego przez [IWebBrowser2::Document](https://go.microsoft.com/fwlink/?LinkId=162048) właściwości.  
   
-## <a name="iolecommandtarget"></a>Iolecommandtarget —  
- Implementacja serwer dokumentów aktywnych WPF [iolecommandtarget —](http://go.microsoft.com/fwlink/?LinkId=162047) obsługuje wiele poleceń związanych z nawigacją i specyficzne dla przeglądarki grupy standardowe polecenia OLE (z grupy poleceń pusty identyfikator GUID). Ponadto rozpoznaje polecenia niestandardowych grupę o nazwie CGID_PresentationHost. Obecnie jest tylko jedno polecenie zdefiniowane w ramach tej grupy.  
+## <a name="iolecommandtarget"></a>IOleCommandTarget  
+ Implementacja serwera aktywnego dokumentu WPF [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047) obsługuje wiele poleceń związanych z nawigacją i specyficznych dla przeglądarki standardowa OLE grupy poleceń (przy użyciu wartości null identyfikator GUID grupy poleceń). Ponadto rozpoznaje grupę poleceń niestandardowych o nazwie CGID_PresentationHost. Obecnie jest tylko jedno polecenie zdefiniowane w tej grupie.  
   
 ```  
 DEFINE_GUID(CGID_PresentationHost, 0xd0288c55, 0xd6, 0x4f5e, 0xa8, 0x51, 0x79, 0xde, 0xc5, 0x1b, 0x10, 0xec);  
@@ -29,7 +29,7 @@ enum PresentationHostCommands {
 };  
 ```  
   
- PHCMDID_TABINTO nakazuje PresentationHost, aby przełączyć fokus do pierwszego lub ostatniego elementu focusable w jego zawartości, w zależności od stanu klawisza Shift.  
+ PHCMDID_TABINTO powoduje, że PresentationHost, aby przełączać fokus do pierwszego lub ostatniego elementu focusable w jego zawartości, w zależności od stanu klawisza Shift.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [IEnumRAWINPUTDEVICE](../../../../docs/framework/wpf/app-development/ienumrawinputdevice.md)  

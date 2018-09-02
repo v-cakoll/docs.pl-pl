@@ -1,42 +1,49 @@
 ---
 title: Tabela typów całkowitych (odwołanie w C#)
-ms.date: 07/20/2015
+description: Omówienie wbudowanego języka C# typy całkowite
+ms.date: 08/20/2018
 helpviewer_keywords:
 - integral types, C#
 - Visual C#, integral types
 - types [C#], integral types
 - ranges of integral types [C#]
 ms.assetid: 62e86126-46ff-40b0-9028-e61d7558268c
-ms.openlocfilehash: d524224f15d7861328cc24b1e4f9a54fcc16ee34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ac16d185a52cdb03fcb22f57ebf7506f2fb2745
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267912"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467195"
 ---
 # <a name="integral-types-table-c-reference"></a>Tabela typów całkowitych (odwołanie w C#)
+
 W poniższej tabeli przedstawiono rozmiary i zakresy typów całkowitych, które stanowią podzbiór typów prostych.  
   
 |Typ|Zakres|Rozmiar|  
 |----------|-----------|----------|  
-|[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|-128 do 127 znaków.|8-bitową liczbę całkowitą ze znakiem|  
-|[byte](../../../csharp/language-reference/keywords/byte.md)|0 do 255.|Liczba całkowita bez znaku 8-bitowych|  
-|[char](../../../csharp/language-reference/keywords/char.md)|U + 0000 do U + ffff|Znak Unicode 16-bitowych|  
-|[short](../../../csharp/language-reference/keywords/short.md)|-32768 do 32 767.|16-bitową liczbę całkowitą ze znakiem|  
-|[ushort](../../../csharp/language-reference/keywords/ushort.md)|0 do 65 535.|Liczba całkowita bez znaku 16-bitowych|  
-|[int](../../../csharp/language-reference/keywords/int.md)|-2 147 483 2 147 483 648 do 647|32-bitowa liczba całkowita|  
-|[uint](../../../csharp/language-reference/keywords/uint.md)|4 294 967 0 Aby 295|Liczba całkowita 32-bitowa bez znaku|  
-|[long](../../../csharp/language-reference/keywords/long.md)|-9,223,372,036,854,775,808 do 9,223,372,036,854,775,807|64-bitowa liczba całkowita|  
-|[ulong](../../../csharp/language-reference/keywords/ulong.md)|0 — 18,446,744,073,709,551,615|Liczba całkowita bez znaku 64-bitowych|  
+|[sbyte](sbyte.md)|-128 do 127 znaków.|8-bitową liczbę całkowitą ze znakiem|  
+|[byte](byte.md)|od 0 do 255|Liczba całkowita bez znaku 8-bitowa|  
+|[char](char.md)|U + 0000 do U + ffff|Znak 16-bitowych Unicode|  
+|[short](short.md)|-32768 do 32767.|16-bitową liczbę całkowitą ze znakiem|  
+|[ushort](ushort.md)|0 do 65 535.|Liczba całkowita bez znaku 16-bitowych|  
+|[int](int.md)|-2 147 483 2 147 483 648 do 647|32-bitowa liczba całkowita ze znakiem|  
+|[uint](uint.md)|4 294 967 0 Aby 295|Liczba całkowita bez znaku 32-bitowy|  
+|[long](long.md)|-9,223,372,036,854,775,808 do 9,223,372,036,854,775,807|64-bitowa liczba całkowita ze znakiem|  
+|[ulong](ulong.md)|0 — 18,446,744,073,709,551,615|Liczba całkowita bez znaku 64-bitowych|  
+
+## <a name="remarks"></a>Uwagi
   
- Jeśli wartość reprezentowany przez całkowitą literału przekracza zakres `ulong`, wystąpi błąd kompilacji.  
+Jeśli wartości w postaci literału typu integer przekracza <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, błąd kompilatora [CS1021](../../misc/cs1021.md) występuje.
+
+Użyj <xref:System.Numerics.BigInteger?displayProperty=nameWithType> klasy do reprezentowania dowolnie dużą całkowita.
   
-## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
- [Tabela typów wbudowanych](../../../csharp/language-reference/keywords/built-in-types-table.md)  
- [Tabela typów zmiennoprzecinkowych](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
- [Tabela wartości domyślnych](../../../csharp/language-reference/keywords/default-values-table.md)  
- [Formatowanie tabeli wyników liczbowych](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)  
- [Tabele odwołań dla typów](../../../csharp/language-reference/keywords/reference-tables-for-types.md)
+## <a name="see-also"></a>Zobacz także
+
+- [Dokumentacja języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Słowa kluczowe języka C#](index.md)
+- [Tabele odwołań dla typów](reference-tables-for-types.md)
+- [Tabela typów zmiennoprzecinkowych](floating-point-types-table.md)
+- [Tabela wartości domyślnych](default-values-table.md)
+- [Formatowanie tabeli wyników liczbowych](formatting-numeric-results-table.md)
+- [Tabela typów wbudowanych](built-in-types-table.md)

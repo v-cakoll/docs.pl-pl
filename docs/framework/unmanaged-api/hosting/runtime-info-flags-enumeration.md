@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e544db23abf89a20bd2f7763cfdb1256ea4a326c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09bd32172bcad298eebc2921461fdc953e9c6d6e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441367"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468296"
 ---
 # <a name="runtimeinfoflags-enumeration"></a>RUNTIME_INFO_FLAGS — Wyliczenie
-Zawiera wartości, które wskazują, jakie informacje o środowisko uruchomieniowe języka wspólnego (CLR) ma zostać zwrócony.  
+Zawiera wartości, które wskazują, jakie informacje dotyczące środowisko uruchomieniowe języka wspólnego (CLR) ma zostać zwrócony.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,17 +47,17 @@ typedef enum {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|Wskazuje, czy informacji katalogowych nie powinny być dołączone.|  
-|`RUNTIME_INFO_DONT_RETURN_VERSION`|Wskazuje, że informacje o wersji nie powinny być dołączone.|  
-|`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|Wskazuje, że nie można wyświetlić okno dialogowe błędu w przypadku awarii.|  
-|`RUNTIME_INFO_IGNORE_ERROR_MODE`|Oznacza to, że efekty wywołania metody [SetErrorMode](http://go.microsoft.com/fwlink/p/?LinkId=255242) funkcji przy użyciu flagi parametr SEM_FAILCRITICALERRORS powinna zostać zastąpiona. Oznacza to, że okno dialogowe instalacji powinny być wyświetlane w przypadku awarii, a nie są pomijane.|  
-|`RUNTIME_INFO_REQUEST_AMD64`|Wskazuje żądanie informacji o wersji 64-zgodnej AMD środowiska uruchomieniowego.|  
-|`RUNTIME_INFO_REQUEST_IA64`|Wskazuje żądanie informacji o wersji IA-64-compatible środowiska wykonawczego.|  
-|`RUNTIME_INFO_REQUEST_X86`|Wskazuje żądanie informacji o x86 wersji zgodnej z funkcją środowiska uruchomieniowego.|  
-|`RUNTIME_INFO_UPGRADE_VERSION`|Wskazuje, że informacje o uaktualnianiu wersji powinny być dołączone.|  
+|`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|Wskazuje, że informacje o katalogu nie powinny być uwzględnione.|  
+|`RUNTIME_INFO_DONT_RETURN_VERSION`|Wskazuje, że informacje o wersji nie powinny być uwzględnione.|  
+|`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|Wskazuje, że nie być wyświetlane okno dialogowe błędu w przypadku awarii.|  
+|`RUNTIME_INFO_IGNORE_ERROR_MODE`|Oznacza to, że efekty wywoływania [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) funkcji przy użyciu flagi SEM_FAILCRITICALERRORS powinna zostać zastąpiona. Oznacza to, że okno dialogowe Instalacja powinna być pokazywana w przypadku awarii, a nie są pomijane.|  
+|`RUNTIME_INFO_REQUEST_AMD64`|Wskazuje żądanie dotyczące informacji na temat AMD-64-compatible wersję środowiska uruchomieniowego.|  
+|`RUNTIME_INFO_REQUEST_IA64`|Wskazuje żądanie dotyczące informacji na temat IA-64-compatible wersję środowiska uruchomieniowego.|  
+|`RUNTIME_INFO_REQUEST_X86`|Wskazuje żądanie informacji o x86 zgodną wersję środowiska uruchomieniowego.|  
+|`RUNTIME_INFO_UPGRADE_VERSION`|Wskazuje, informacje o wersji uaktualnienia należy dołączyć.|  
   
 ## <a name="remarks"></a>Uwagi  
- Następujące flagi architektura platformy, może być określony tylko jeden w czasie i nie można łączyć:  
+ Następujące flagi architektura platformy może być określony tylko jeden w danym momencie i nie można połączyć:  
   
 -   RUNTIME_INFO_REQUEST_IA64  
   
@@ -70,7 +70,7 @@ typedef enum {
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** biblioteki MSCorEE.dll  
+ **Biblioteka:** MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

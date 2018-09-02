@@ -7,45 +7,45 @@ dev_langs:
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: d291cd3d00f8d0d40e0b8543d5347e1509cb8b90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adc1bf7c51eeef715e98bb67c5f6a2e44e09b35f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498605"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466613"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Zabezpieczenia transportu z uwierzytelnianiem systemu Windows
-Poniższy scenariusz przedstawia klienta usługi Windows Communication Foundation (WCF) i usług zabezpieczonych przez zabezpieczenia systemu Windows. Aby uzyskać więcej informacji na temat programowania w języku, zobacz [porady: Zabezpieczanie usługi za pomocą poświadczeń systemu Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
+Następujący scenariusz pokazuje klienta usługi Windows Communication Foundation (WCF) i usług zabezpieczonych przez usługę Windows security. Aby uzyskać więcej informacji na temat programowania, zobacz [instrukcje: Zabezpieczanie usługi za pomocą poświadczeń Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
   
- Intranet usługi sieci Web Wyświetla informacje o zasoby ludzkie. Klient jest aplikacją formularza systemu Windows. Aplikacja jest wdrażana w domenie za pomocą kontrolera protokołu Kerberos, zabezpieczanie domeny.  
+ Intranet usługi sieci Web Wyświetla informacje o zasobów ludzkich. Klient to aplikacja formularza Windows. Aplikacja jest wdrażana w domenie za pomocą kontrolera Kerberos zabezpieczanie domeny.  
   
- ![Transport zabezpieczeń z uwierzytelnianiem systemu Windows](../../../../docs/framework/wcf/feature-details/media/securedbywindows.gif "SecuredByWindows")  
+ ![Transport security przy użyciu uwierzytelniania Windows](../../../../docs/framework/wcf/feature-details/media/securedbywindows.gif "SecuredByWindows")  
   
 |Cechy|Opis|  
 |--------------------|-----------------|  
 |Tryb zabezpieczeń|Transportu|  
 |Współdziałanie|Tylko usługi WCF|  
-|Uwierzytelnianie (serwer)<br /><br /> Uwierzytelnianie (klient)|Tak (za pomocą zintegrowanego uwierzytelniania systemu Windows)<br /><br /> Tak (za pomocą zintegrowanego uwierzytelniania systemu Windows)|  
+|Uwierzytelnianie (serwer)<br /><br /> Uwierzytelnianie (klient)|Tak (za pomocą zintegrowanego uwierzytelniania Windows)<br /><br /> Tak (za pomocą zintegrowanego uwierzytelniania Windows)|  
 |Integralność|Tak|  
 |Poufność|Tak|  
 |Transportu|NET. TCP|  
 |Powiązanie|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>Usługa  
- Następujący kod i konfiguracja są przeznaczone do uruchamiania niezależnie. Wykonaj jedną z następujących czynności:  
+ Następujący kod i konfiguracji są przeznaczone do uruchamiania niezależnie. Wykonaj jedną z następujących czynności:  
   
--   Tworzenie przy użyciu kodu z konfiguracji autonomicznej usługi.  
+-   Tworzenie autonomicznego usługi przy użyciu kodu bez konfiguracji.  
   
 -   Tworzenie usługi przy użyciu wprowadzonej konfiguracji, ale nie definiują żadnych punktów końcowych.  
   
 ### <a name="code"></a>Kod  
- Poniższy kod przedstawia sposób tworzenia punktu końcowego usługi, która używa zabezpieczenia systemu Windows.  
+ Poniższy kod przedstawia sposób tworzenia punktu końcowego usługi, która używa zabezpieczenia Windows.  
   
  [!code-csharp[C_SecurityScenarios#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#3)]
  [!code-vb[C_SecurityScenarios#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#3)]  
   
 ### <a name="configuration"></a>Konfiguracja  
- Następującej konfiguracji można zamiast kodu do konfigurowania punktu końcowego usługi:  
+ Następująca konfiguracja może służyć zamiast kodu do konfigurowania punktu końcowego usługi:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -76,23 +76,23 @@ Poniższy scenariusz przedstawia klienta usługi Windows Communication Foundatio
 ```  
   
 ## <a name="client"></a>Klient  
- Następujący kod i konfiguracja są przeznaczone do uruchamiania niezależnie. Wykonaj jedną z następujących czynności:  
+ Następujący kod i konfiguracji są przeznaczone do uruchamiania niezależnie. Wykonaj jedną z następujących czynności:  
   
--   Utwórz autonomiczny klienta przy użyciu kodu (i kod klienta).  
+-   Tworzenie klienta autonomicznego przy użyciu kodu (i kodu klienta).  
   
--   Tworzenie klienta, który nie definiuje żadnych adresy punktów końcowych. W zamian użyj Konstruktora klienta, który przyjmuje nazwę konfiguracji jako argument. Na przykład:  
+-   Tworzenie klienta, który nie definiuje żadnych adresy punktów końcowych. Zamiast tego należy użyć konstruktora klienta, który przyjmuje nazwę konfiguracji jako argument. Na przykład:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Kod  
- Poniższy kod tworzy klienta. Powiązanie jest skonfigurowany do używania tryb zabezpieczeń transportu z transportu TCP typu poświadczeń klienta do systemu Windows.  
+ Poniższy kod tworzy klienta. Powiązanie jest skonfigurowane za pomocą transportu tryb zabezpieczeń transportu TCP za pomocą typu poświadczeń klienta równa Windows.  
   
  [!code-csharp[C_SecurityScenarios#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#4)]
  [!code-vb[C_SecurityScenarios#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#4)]  
   
 ### <a name="configuration"></a>Konfiguracja  
- Następującej konfiguracji można zamiast kodu można utworzyć klienta.  
+ Następująca konfiguracja może służyć zamiast kodu do tworzenia klienta.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -122,4 +122,4 @@ Poniższy scenariusz przedstawia klienta usługi Windows Communication Foundatio
 ## <a name="see-also"></a>Zobacz też  
  [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Instrukcje: zabezpieczanie usługi za pomocą poświadczeń systemu Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)  
- [Model zabezpieczeń systemu Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

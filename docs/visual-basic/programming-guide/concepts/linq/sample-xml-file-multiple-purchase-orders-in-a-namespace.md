@@ -1,16 +1,16 @@
 ---
-title: 'Przykładowy plik XML: Wiele zakupów w Namespace3'
+title: 'Przykładowy plik XML: Wiele zamówień zakupu w Namespace3'
 ms.date: 07/20/2015
 ms.assetid: 03f754c6-89f7-4143-8456-4963044be7e5
 ms.openlocfilehash: 20d1807b58e0cf9302413cf9007c62d0fbec9c16
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645580"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465750"
 ---
-# <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a>Przykładowy plik XML: Wiele zakupów w Namespace
-Następujący plik XML jest używany w różnych przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji. Ten plik zawiera kilka zakupów. Plik XML jest w przestrzeni nazw.  
+# <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a>Przykładowy plik XML: Wiele zamówień zakupu w Namespace
+Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji. Ten plik zawiera wiele zamówień zakupu. Kod XML jest w przestrzeni nazw.  
   
 ## <a name="purchaseordersinnamespacexml"></a>PurchaseOrdersInNamespace.xml  
   

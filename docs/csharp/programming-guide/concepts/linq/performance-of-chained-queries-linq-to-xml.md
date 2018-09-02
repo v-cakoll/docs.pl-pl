@@ -1,18 +1,18 @@
 ---
-title: Wydajność kwerend łańcuchowa (LINQ do XML) (C#)
+title: Wydajność zapytań łańcuchowych (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b2f1d715-8946-4dc0-8d56-fb3d1bba54a6
-ms.openlocfilehash: dca2fa37a18209c5970172cb084151a58ea4ebc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e0b2ec0b73afe10e21c83499c1a3a52c923f591
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336368"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466933"
 ---
-# <a name="performance-of-chained-queries-linq-to-xml-c"></a>Wydajność kwerend łańcuchowa (LINQ do XML) (C#)
-Jest jedną z najważniejszych zalet LINQ (i LINQ do XML), czy łańcuchowa zapytania można wykonywać oraz pojedynczego zapytania większych i bardziej skomplikowane.  
+# <a name="performance-of-chained-queries-linq-to-xml-c"></a>Wydajność zapytań łańcuchowych (LINQ to XML) (C#)
+Jedną z najważniejszych zalet LINQ (i LINQ to XML) jest to, że zapytań łańcuchowych może wykonywać oraz pojedynczego zapytania większych i bardziej skomplikowane.  
   
- Łańcuchowa zapytanie jest kwerenda, która używa innego zapytania jako źródło. Na przykład w poniższym kodzie proste `query2` ma `query1` jako źródło:  
+ Łańcuchowe zapytań jest zapytanie, które używa innego zapytania jako źródło. Na przykład w poniższym kodzie prosty `query2` ma `query1` jako źródło:  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -40,21 +40,21 @@ foreach (var i in query2)
 4  
 ```  
   
- To zapytanie łańcuchowa zawiera ten sam profil wydajności jako iteracja listy połączonej.  
+ To zapytanie łańcuchowych zawiera ten sam profil wydajności jako iteracji przez listę połączoną.  
   
--   <xref:System.Xml.Linq.XContainer.Elements%2A> Osi jest zasadniczo ta sama wydajność co iteracja listy połączonej. <xref:System.Xml.Linq.XContainer.Elements%2A> jest implementowany jako iteratora o wykonanie odroczone. Oznacza to, że go działa niektórych dodatkowo iteracja listy połączonej, takich jak przydzielanie obiektu iteratora i rejestrowanie informacji o stanie do wykonania. Tę pracę można podzielić na dwie kategorie: pracy, którą można wykonać w czasie, o których skonfigurowano iteratora i pracy, który jest wykonywane podczas każdej iteracji. Praca Instalatora jest mały, stały ilość pracy oraz pracy wykonanej w każdej iteracji jest proporcjonalny do liczby elementów w kolekcji źródłowej.  
+-   <xref:System.Xml.Linq.XContainer.Elements%2A> Osi jest zasadniczo ta sama wydajność co iteracji przez listę połączoną. <xref:System.Xml.Linq.XContainer.Elements%2A> jest implementowany jako iterator za pomocą odroczonego wykonania. Oznacza to, że robi jakąś pracę dodatkowo do iteracji w połączonej listy, takich jak obiekt iteratora do przydzielania i śledzeniu stanu wykonywania. Tę pracę można podzielić na dwie kategorie: prac, które odbywa się w czasie, o których iterator który jest skonfigurowany i czynności, które odbywa się podczas każdej iteracji. Praca Instalatora jest mały, stały ilość pracy i Praca wykonana podczas każdej iteracji jest proporcjonalna do liczby elementów w kolekcji źródłowej.  
   
--   W `query1`, `where` klauzuli powoduje wykonanie zapytania w celu wywołania <xref:System.Linq.Enumerable.Where%2A> metody. Ta metoda również jest implementowany jako iteratora. Praca Instalatora składa się z tworzenia wystąpienia delegata, który będzie odwoływać się do wyrażenia lambda, a także normalnej konfiguracji dla iteratora. A każda iteracja delegat nazywa się do wykonywania predykatu. Praca Instalatora i pracy w każdej iteracji jest podobny do pracy wykonanej podczas iteracji osi.  
+-   W `query1`, `where` klauzuli powoduje, że zapytanie, aby wywołać <xref:System.Linq.Enumerable.Where%2A> metody. Ta metoda jest również implementowana jako iterator. Praca Instalatora składa się z tworzenia wystąpienia delegata, który będzie odwoływać się do wyrażenia lambda oraz zwykłej instalacji dla iteratora. Z każdą iteracją delegat jest wywoływana, aby wykonać predykat. Praca Instalatora i pracy wykonanej w każdej iteracji jest podobny do pracy wykonanej podczas iteracji osi.  
   
--   W `query1`, klauzula select powoduje wykonanie zapytania w celu wywołania <xref:System.Linq.Enumerable.Select%2A> metody. Ta metoda ma ten sam profil wydajności jako <xref:System.Linq.Enumerable.Where%2A> metody.  
+-   W `query1`, klauzula select powoduje, że zapytanie, aby wywołać <xref:System.Linq.Enumerable.Select%2A> metody. Ta metoda ma ten sam profil wydajności jako <xref:System.Linq.Enumerable.Where%2A> metody.  
   
--   W `query2`, oba `where` klauzuli i `select` klauzuli mieć ten sam profil wydajności, podobnie jak w `query1`.  
+-   W `query2`, zarówno `where` klauzuli i `select` klauzuli mieć ten sam profil wydajności, podobnie jak w `query1`.  
   
- Iteracja przez `query2` jest bezpośrednio proporcjonalne do liczby elementów w źródle pierwszy, innymi słowy, liniowego czas kwerendy. Odpowiedni przykład Visual Basic będzie mieć ten sam profil wydajności.  
+ Iteracja przez `query2` jest zatem bezpośrednio proporcjonalnie do liczby elementów w źródle pierwsze zapytanie, innymi słowy, liniowo. Odpowiedni przykład Visual Basic będą mieć ten sam profil wydajności.  
   
- Aby uzyskać więcej informacji dotyczących Iteratory, zobacz [yield](../../../../csharp/language-reference/keywords/yield.md).  
+ Aby uzyskać więcej informacji dotyczących iteratorów, zobacz [uzyskanie](../../../../csharp/language-reference/keywords/yield.md).  
   
- Bardziej szczegółowy samouczek dotyczący razem łańcucha zapytań, zobacz [samouczek: tworzenie łańcuchów zapytań razem](http://msdn.microsoft.com/library/c08d228a-f07a-4c98-810f-1bf0e8f2257c).  
+ Aby uzyskać bardziej szczegółowy samouczek dotyczący Łączenie łańcuchowe zapytań, zobacz [samouczek: tworzenie łańcuchów zapytań razem](https://msdn.microsoft.com/library/c08d228a-f07a-4c98-810f-1bf0e8f2257c).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wydajność (LINQ do XML) (C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)
+ [Wydajność (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)

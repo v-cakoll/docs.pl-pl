@@ -2,34 +2,34 @@
 title: Kanał dzielący na fragmenty
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: 1acb635be23b9a838abee714156d818abee6bcd5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9572ad6f88786af34252cea1f3c62d5067257b8b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508845"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470093"
 ---
 # <a name="chunking-channel"></a>Kanał dzielący na fragmenty
-Podczas wysyłania dużych wiadomości przy użyciu usługi Windows Communication Foundation (WCF), często jest pożądane, aby ograniczyć ilość pamięci użytej do zbuforowania tych wiadomości. Możliwe rozwiązanie jest strumienia treści wiadomości (przy założeniu, że większość danych znajduje się w treści). Jednak niektóre protokoły wymagają buforowanie cały komunikat. Niezawodna obsługa komunikatów i zabezpieczeń są dwa takie przykłady. Innym rozwiązaniem możliwe jest do dzielenia dużych wiadomość na mniejsze wiadomości nazywanej fragmentów, wysłać jednym fragmencie tych fragmentów w czasie i Przywróć dużych komunikatów po stronie odbierającej. Sama aplikacja może wykonać tego podziału i cofnąć podziału lub można użyć niestandardowego kanału Aby wykonać to zadanie. Segmentu przykład kanału pokazuje, jak protokołu niestandardowego lub warstwowego kanału może służyć do podziału i cofnąć podziału dowolnie dużą wiadomości.  
+Podczas wysyłania dużych komunikatów za pomocą usługi Windows Communication Foundation (WCF), często jest pożądane, aby ograniczyć ilość pamięci używana do buforowania te komunikaty. Jedno z możliwych rozwiązań jest przesyłanie strumieniowe treść wiadomości (przy założeniu, że duża część danych znajduje się w treści). Jednak niektóre protokoły wymagają buforowanie cały komunikat. Niezawodna obsługa komunikatów i zabezpieczenia są dwa takie przykłady. Inne możliwe rozwiązanie jest dzielenia dużych wiadomość na mniejsze wiadomości o nazwie fragmentów, Wyślij jednym fragmencie tych fragmentów w danym momencie i odtworzenia dużych komunikatów po stronie odbierającej. Sama aplikacja może wykonać tego segmentu i cofnąć segmentu lub użyć niestandardowy kanał to zrobić. Segmentu przykład kanału pokazuje, jak niestandardowego protokołu lub warstwowej kanału może służyć do segmentu i cofnąć segmentu arbitralnie dużych komunikatów.  
   
- Podziału powinien zawsze można zastosować tylko wtedy, gdy skonstruowane cały komunikat do wysłania. Segmentu kanału powinna być zawsze warstwie poniżej kanału zabezpieczeń i kanał niezawodnej sesji.  
+ Dzielący na fragmenty należy zawsze można zastosować tylko wtedy, gdy został skonstruowany cały komunikat do wysłania. Kanał segmentu powinien zawsze warstwowe w poniżej kanału zabezpieczeń i kanał niezawodnej sesji.  
   
 > [!NOTE]
->  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
+>  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ChunkingChannel`  
   
-## <a name="chunking-channel-assumptions-and-limitations"></a>Segmentu założenia kanału i ograniczenia  
+## <a name="chunking-channel-assumptions-and-limitations"></a>Segmentu kanału założenia i ograniczenia  
   
-### <a name="message-structure"></a>Komunikat — struktura  
- Kanał segmentu zakłada następującą strukturę komunikatu dla komunikatów do fragmentarycznego można:  
+### <a name="message-structure"></a>Struktura wiadomości  
+ Kanał segmentu zakłada następującą strukturę komunikatu dla komunikatów jest podzielony:  
   
 ```xml  
 <soap:Envelope ...>  
@@ -42,7 +42,7 @@ Podczas wysyłania dużych wiadomości przy użyciu usługi Windows Communicatio
 </soap:Envelope>  
 ```  
   
- Podczas korzystania z modelu ServiceModel, należy Zwiń operacji, mających 1 parametr wejściowy jest zgodne z tym kształtem komunikatu dla ich komunikatu wejściowego. Podobnie kontrakt operacji, które ma 1 parametr danych wyjściowych ani zwracanej wartości są zgodne z komunikatu dla komunikatów ich dane wyjściowe tego kształtu. Poniżej przedstawiono przykłady takich operacji:  
+ Korzystając z modelu ServiceModel, kontrakt operacji, które mają 1 parametr wejściowy jest zgodne z tym kształtem komunikatu dla ich komunikat wejściowy. Podobnie operacji kontraktu, które mają 1 parametru wyjściowego lub wartości zwracanej zgodne z tym kształtem komunikatu dla ich komunikatu wyjściowego. Poniżej przedstawiono przykłady takich operacji:  
   
 ```  
 [ServiceContract]  
@@ -60,15 +60,15 @@ interface ITestService
 ```  
   
 ### <a name="sessions"></a>Kategoria Sessions  
- Kanał segmentu wymaga wiadomości dostarczanych tylko raz w uporządkowanego dostarczenia komunikatów (fragmentów). Oznacza to, że źródłowy stosu kanału musi być sesyjnych. Można podać sesji transportu (na przykład transportu TCP) lub przez protokół zamykania kanał (na przykład ReliableSession kanał).  
+ Kanał segmentu wymaga wiadomości dostarczanych tylko raz w uporządkowanej dostarczania wiadomości (fragmentów). Oznacza to, że podstawowy stos kanału musi być sesji. Sesje mogą otrzymywać przez transportu (na przykład warstwy transportowej TCP) lub kanału sesji protokołu (na przykład, ReliableSession kanał).  
   
-### <a name="asynchronous-send-and-receive"></a>Asynchronicznego wysyłania i odbierania  
- Asynchronous wysyłania i odbierania metod nie są zaimplementowane w tej wersji segmentu przykład kanału.  
+### <a name="asynchronous-send-and-receive"></a>Asynchroniczne wysyłanie i odbieranie  
+ Asynchroniczne wysyłanie i odbieranie metod nie są implementowane przez tę wersję segmentu przykład kanału.  
   
 ## <a name="chunking-protocol"></a>Protokół segmentu  
- Kanał segmentu Określa protokół, który wskazuje początek i koniec serii fragmentów, a także numer sekwencyjny każdego fragmentu. Następujące komunikaty przykładzie trzy pokazują start, fragmentów i na końcu wiadomości z komentarzami, które opisują kluczowe aspekty.  
+ Kanał segmentu Określa protokół, który wskazuje początek i koniec szereg fragmenty, a także numer sekwencyjny każdego fragmentu. Następujące komunikaty trzy przykładowe pokazują, uruchamianie i fragmentów i na końcu komunikatów za pomocą komentarzy opisujących kluczowych aspektów każdej.  
   
-### <a name="start-message"></a>Komunikat uruchomienia  
+### <a name="start-message"></a>Komunikat rozpoczęcia  
   
 ```xml  
 <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing"   
@@ -114,7 +114,7 @@ the data to be chunked.
 </s:Envelope>  
 ```  
   
-### <a name="chunk-message"></a>Komunikat fragmentu  
+### <a name="chunk-message"></a>Komunikat fragmentów  
   
 ```xml  
 <s:Envelope   
@@ -156,7 +156,7 @@ kfSr2QcBlkHTvQ==
 </s:Envelope>  
 ```  
   
-### <a name="end-message"></a>Komunikat  
+### <a name="end-message"></a>Komunikat zakończenia  
   
 ```xml  
 <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing"   
@@ -198,19 +198,19 @@ as the ChunkingStart message.
 </s:Envelope>  
 ```  
   
-## <a name="chunking-channel-architecture"></a>Architektura kanału segmentu  
- Kanał segmentu jest `IDuplexSessionChannel` , na wysokim poziomie następujący architektura typowe kanału. Brak `ChunkingBindingElement` który można tworzyć `ChunkingChannelFactory` i `ChunkingChannelListener`. `ChunkingChannelFactory` Tworzy wystąpienia `ChunkingChannel` gdy otrzyma monit. `ChunkingChannelListener` Tworzy wystąpienia `ChunkingChannel` po zaakceptowaniu nowy kanał wewnętrzny. `ChunkingChannel` Jest odpowiedzialny za wysyłanie i odbieranie wiadomości.  
+## <a name="chunking-channel-architecture"></a>Architektura kanał dzielący na fragmenty  
+ Kanał segmentu jest `IDuplexSessionChannel` , na wysokim poziomie następujący architektury typowego kanału. Brak `ChunkingBindingElement` , można tworzyć `ChunkingChannelFactory` i `ChunkingChannelListener`. `ChunkingChannelFactory` Tworzy wystąpienia `ChunkingChannel` gdy otrzyma monit. `ChunkingChannelListener` Tworzy wystąpienia `ChunkingChannel` po zaakceptowaniu nowy kanał wewnętrznego. `ChunkingChannel` Jest odpowiedzialny za wysyłanie i odbieranie komunikatów.  
   
- Na następny poziom w dół `ChunkingChannel` opiera się na kilka składników do implementowania protokołu segmentu. Po stronie wysyłającej kanału używa niestandardowego `XmlDictionaryWriter` o nazwie `ChunkingWriter` wykonuje rzeczywiste podziału. `ChunkingWriter` wysyła przy użyciu kanału wewnętrzny bezpośrednio fragmentów. Przy użyciu niestandardowego `XmlDictionaryWriter` umożliwia firmie Microsoft w celu wysłania fragmentów, jak jest zapisywana duża treści oryginalnej wiadomości. Oznacza to, że firma Microsoft nie buforowania całego oryginalnej wiadomości.  
+ Na następnym poziomie, `ChunkingChannel` opiera się na kilka składników, aby zaimplementować protokół segmentu. Na stronie wysyłania kanał używa niestandardowego `XmlDictionaryWriter` o nazwie `ChunkingWriter` wykonujący rzeczywiste segmentu. `ChunkingWriter` używa wewnętrznego kanału bezpośrednio, aby wysłać fragmenty. Za pomocą niestandardowego `XmlDictionaryWriter` pozwala nam wysyłanie fragmentów podczas zapisywania dużą porcję oryginalnej wiadomości. Oznacza to, że firma Microsoft nie Buforuj całego oryginalnej wiadomości.  
   
  ![Kanał dzielący na fragmenty](../../../../docs/framework/wcf/samples/media/chunkingchannel1.gif "ChunkingChannel1")  
   
- Po stronie odbierania `ChunkingChannel` pobiera komunikaty z kanału wewnętrzny i przekazuje je do niestandardowego `XmlDictionaryReader` o nazwie `ChunkingReader`, który reconstitutes z przychodzącego fragmentów oryginalnej wiadomości. `ChunkingChannel` opakowuje to `ChunkingReader` w niestandardowej `Message` wdrożenia o nazwie `ChunkingMessage` i zwraca ten komunikat do warstwy powyżej. Ta kombinacja `ChunkingReader` i `ChunkingMessage` pozwala cofnąć bryłkach oryginalnego treść komunikatu zgodnie z są odczytywane przez warstwę powyżej zamiast buforu całej treści oryginalnej wiadomości. `ChunkingReader` ma kolejkę, gdzie buforuje przychodzące fragmentów maksymalnie można skonfigurować maksymalną liczbę buforowanych fragmentów. Po osiągnięciu tego limitu maksymalnej czytnik czeka na komunikaty, aby być opróżnione z kolejki przez warstwę powyżej (oznacza to, odczytując tylko z treści oryginalnej wiadomości) lub do momentu odbierania maksymalną osiągnięciu limitu czasu.  
+ Po stronie odbierającej `ChunkingChannel` baza danych ściąga wiadomości z kanału wewnętrzny i przekazuje je do niestandardowego `XmlDictionaryReader` o nazwie `ChunkingReader`, który reconstitutes oryginalnego komunikatu z przychodzącego fragmentów. `ChunkingChannel` to opakowuje `ChunkingReader` w niestandardowym `Message` wdrożenia o nazwie `ChunkingMessage` i zwraca ten komunikat do wyższej warstwie. Ta kombinacja `ChunkingReader` i `ChunkingMessage` pozwala nam cofnąć Podziel oryginalnego treści wiadomości, jak jest odczytywany przez warstwę powyżej, nie trzeba buforować całej treści oryginalnej wiadomości. `ChunkingReader` ma kolejki, gdzie buforuje przychodzących fragmentów maksymalnie można skonfigurować maksymalną liczbę buforowanych fragmentów. Po osiągnięciu tego limitu maksymalnej czytnik czeka na komunikaty, aby być opróżniane z kolejki przez w wyższej warstwie (oznacza to, odczytując tylko z oryginalnego treść wiadomości) lub dopóki nie otrzymywać maksymalną osiągnięciu limitu czasu.  
   
  ![Kanał dzielący na fragmenty](../../../../docs/framework/wcf/samples/media/chunkingchannel2.gif "ChunkingChannel2")  
   
-## <a name="chunking-programming-model"></a>Model programowania podziału  
- Deweloperzy usług można określić wiadomości, które mają być fragmentaryczne stosując `ChunkingBehavior` atrybutu z operacjami w ramach umowy. Udostępnia atrybut `AppliesTo` właściwość, która umożliwia deweloperowi określić, czy podziału stosuje się do komunikatu wejściowego, komunikatu wyjściowego lub obu. W poniższym przykładzie przedstawiono użycie `ChunkingBehavior` atrybutu:  
+## <a name="chunking-programming-model"></a>Model programowania dzielący na fragmenty  
+ Deweloperzy usług można określić wiadomości, które mają być podzielony przez zastosowanie `ChunkingBehavior` atrybutu do operacji w ramach umowy. Udostępnia atrybut `AppliesTo` właściwość, która umożliwia deweloperom określić, czy segmentu stosuje się do komunikatu wejściowego, komunikatu wyjściowego lub obu. W poniższym przykładzie pokazano użycie `ChunkingBehavior` atrybutu:  
   
 ```  
 [ServiceContract]  
@@ -231,99 +231,99 @@ interface ITestService
 }  
 ```  
   
- Z tego modelu programowania `ChunkingBindingElement` kompiluje listę akcji zidentyfikować komunikaty, aby być fragmentaryczne identyfikatorów URI. Akcja każdego komunikatu wychodzącego jest porównywana z tej listy, aby określić, czy fragmentaryczne też wysyłane bezpośrednio wiadomości.  
+ W tym modelu programowania `ChunkingBindingElement` kompiluje listę akcji elementy URI identyfikujące komunikaty, aby być fragmentaryczne. Akcja każdej wiadomości wychodzących jest porównywana z tej listy w celu ustalenia, czy fragmentaryczne lub wysyłane bezpośrednio wiadomość.  
   
 ## <a name="implementing-the-send-operation"></a>Implementowanie operacji wysyłania  
- Na wysokim poziomie operacji wysyłania najpierw sprawdza, czy wiadomości wychodzącej musi być fragmentaryczne i, jeśli nie, wysyła wiadomość bezpośrednio za pomocą kanału wewnętrzny.  
+ Na wysokim poziomie operacji wysyłania najpierw sprawdza, czy wychodzącej wiadomości musi być podzielony, a jeśli nie, wysyła komunikat bezpośrednio przy użyciu wewnętrznego kanału.  
   
- Jeśli wiadomość musi fragmentaryczne, Wyślij tworzy nowy `ChunkingWriter` i wywołania `WriteBodyContents` komunikatu wychodzącego przekazanie jej przez to `ChunkingWriter`. `ChunkingWriter` , A następnie jest podziału komunikatów (w tym kopiowanie oryginalne nagłówki wiadomości na komunikat uruchomienia fragmentu) i wysyła fragmentów za pomocą kanału wewnętrzny.  
+ Jeśli komunikat należy fragmentaryczne, Wyślij tworzy nową `ChunkingWriter` i wywołania `WriteBodyContents` wiadomości wychodzących przekazanie do niej to `ChunkingWriter`. `ChunkingWriter` , A następnie jest segmentu komunikatu (w tym kopiowanie oryginalne nagłówki wiadomości na komunikat fragmentów uruchomienia), a następnie wysyła fragmentów przy użyciu wewnętrznego kanału.  
   
- Kilka szczegóły warto zauważyć:  
+ Kilka szczegóły warte odnotowania:  
   
--   Wyślij pierwsze wywołania `ThrowIfDisposedOrNotOpened` zapewnienie `CommunicationState` jest otwarty.  
+-   Wyślij pierwszego wywołania `ThrowIfDisposedOrNotOpened` zapewnienie `CommunicationState` jest otwarty.  
   
--   Wysyłanie są synchronizowane, mogą być wysyłane tylko jeden wiadomości w czasie dla każdej sesji. Brak `ManualResetEvent` o nazwie `sendingDone` zresetowania po wysłaniu wiadomości podzielony. Wysłany komunikat fragmentu zakończenia tego zdarzenia jest ustawiona. Metody Send oczekuje dla tego zdarzenia, należy ustawić przed ponowną próbą wysłania wychodzących.  
+-   Wysyłanie są synchronizowane, dzięki czemu mogą być wysyłane tylko jedna wiadomość na raz dla każdej sesji. Brak `ManualResetEvent` o nazwie `sendingDone` , jest resetowany po wysłaniu fragmentaryczne wiadomości. Wysłany komunikat fragmentów zakończenia tego zdarzenia jest ustawiona. Metoda wysyłania czeka dla tego zdarzenia, należy ustawić przed ponowną próbą wysłania wychodzących wiadomości.  
   
--   Wyślij blokad `CommunicationObject.ThisLock` zapobiegające synchronizacji zmian stanu podczas wysyłania. Zobacz <xref:System.ServiceModel.Channels.CommunicationObject> dokumentację, aby uzyskać więcej informacji na temat <xref:System.ServiceModel.Channels.CommunicationObject> stanów i komputera stanu.  
+-   Wyślij blokad `CommunicationObject.ThisLock` zapobiegające synchronizacji zmian stanu podczas wysyłania. Zobacz <xref:System.ServiceModel.Channels.CommunicationObject> dokumentacji, aby uzyskać więcej informacji na temat <xref:System.ServiceModel.Channels.CommunicationObject> stanów i stan maszyny.  
   
--   Limit czasu przekazany do wysyłania jest używany jako limit czasu dla operacji wysyłania całego, która obejmuje wszystkie fragmenty wysyłanie.  
+-   Limit czasu, przekazana do wysyłania służy jako limit czasu operacji wysyłania całego, która obejmuje rozsyłanie wszystkich fragmentów.  
   
--   Niestandardowa `XmlDictionaryWriter` projektu została wybrana, aby uniknąć buforowanie całej treści oryginalnej wiadomości. Czy możemy uzyskać `XmlDictionaryReader` przy użyciu treści `message.GetReaderAtBodyContents` cały będą buforowane. Zamiast tego mamy niestandardowego `XmlDictionaryWriter` przekazywany do `message.WriteBodyContents`. Jako wiadomości wywołania WriteBase64 na składnik zapisywania, moduł zapisujący pakietów się fragmentów w komunikatach i wysyła je przy użyciu kanału wewnętrzny. Bloki WriteBase64 momentu wysłania fragmentów.  
+-   Niestandardowy `XmlDictionaryWriter` projekt został wybrany w celu uniknięcia buforowanie całej treści oryginalnej wiadomości. Gdybyśmy wybrali, aby uzyskać `XmlDictionaryReader` w treści przy użyciu `message.GetReaderAtBodyContents` całej treści będą buforowane. Zamiast tego oferujemy niestandardowego `XmlDictionaryWriter` przekazana do `message.WriteBodyContents`. Jak wiadomość wywołania WriteBase64 w edytorze, moduł zapisujący pakietów się fragmentów do wiadomości i wysyła je za pomocą wewnętrznego kanału. Bloki WriteBase64 do momentu wysłania jest fragmentów.  
   
-## <a name="implementing-the-receive-operation"></a>Implementowanie operacji odbierania  
- Na wysokim poziomie operacji odbierania najpierw sprawdza, czy komunikat przychodzący nie jest `null` i że jego działanie jest `ChunkingAction`. Jeśli nie spełnia kryteriów zarówno, zwracany jest komunikat niezmienione Receive. W przeciwnym razie Receive tworzy nowy `ChunkingReader` i nowy `ChunkingMessage` otaczający go (wywołując `GetNewChunkingMessage`). Przed powrotem przez nowych `ChunkingMessage`, Receive korzysta z puli wątków do wykonania `ReceiveChunkLoop`, które wywołuje `innerChannel.Receive` w pętli i ręce poza fragmentów do `ChunkingReader` aż do zakończenia fragmentu komunikat jest odbierany lub jest osiągnęła limit czasu odbioru.  
+## <a name="implementing-the-receive-operation"></a>Implementowanie operacji odbioru  
+ Na wysokim poziomie operacji odbierania najpierw sprawdza, czy przychodzące wiadomości nie jest `null` oraz że jej działaniem jest `ChunkingAction`. Jeśli nie spełnia kryteriów obu, zwracany jest komunikat niezmienione Receive. W przeciwnym razie Receive tworzy nową `ChunkingReader` i nowy `ChunkingMessage` otaczający go (przez wywołanie metody `GetNewChunkingMessage`). Przed zwróceniem przez nowych `ChunkingMessage`, Receive korzysta z puli wątków do wykonywania `ReceiveChunkLoop`, która wywołuje metodę `innerChannel.Receive` w pętli i zdejmowania rąk fragmentach, aby `ChunkingReader` aż do zakończenia fragmentów wiadomość zostaje odebrana lub zostanie osiągnięty limit czasu odbioru.  
   
- Kilka szczegóły warto zauważyć:  
+ Kilka szczegóły warte odnotowania:  
   
--   Jak wysyłania, odbierania połączeń pierwszy `ThrowIfDisposedOrNotOepned` zapewnienie `CommunicationState` jest otwarty.  
+-   Takie jak wysyłanie, odbieranie połączeń pierwszy `ThrowIfDisposedOrNotOepned` zapewnienie `CommunicationState` jest otwarty.  
   
--   Wyświetlany jest synchronizowane, tak że tylko jeden komunikat może zostać odebrany w czasie z sesji. Jest to szczególnie ważne, ponieważ po odebraniu komunikatu fragmentu start, wszystkie kolejne odebrane wiadomości powinny być fragmentów w ramach nowej sekwencji fragmentu do momentu otrzymania wiadomości końcowego fragmentu. Odbieranie nie może pobierać komunikaty z kanału wewnętrzny, dopóki wszystkie fragmenty należące do komunikatu obecnie cofnąć trwa fragmentaryczne są odbierane. W tym celu odbierania używa `ManualResetEvent` o nazwie `currentMessageCompleted`, która ma wartość, gdy komunikat fragmentu zakończenia jest odbierany i zresetować po odebraniu nowego komunikatu fragmentu rozpoczęcia.  
+-   Wyświetlany jest również synchronizowane, tak że tylko jeden komunikat może zostać odebrany w czasie z sesji. Jest to szczególnie ważne, ponieważ po otrzymaniu komunikatu fragmentów start wszystkie kolejne Odebrane komunikaty powinny być fragmentów w ramach tej nowej sekwencji fragmentów, do momentu zakończenia fragmentów wiadomość zostaje odebrana. Odbieranie nie ściągają komunikaty z kanału wewnętrzny, otrzymanie wszystkich fragmentów, do których należą do wiadomości, obecnie cofnąć jest podzielony. W tym celu odbierania używa `ManualResetEvent` o nazwie `currentMessageCompleted`, która ma wartość, gdy komunikat fragmentów zakończenia jest odbierany i zresetować po odebraniu nowej wiadomości fragmentów rozpoczęcia.  
   
--   W przeciwieństwie do wysyłania Receive nie zapobiega przejścia zsynchronizowanie podczas odbierania. Na przykład Zamknij można wywołać podczas odbierania i czeka, aż do ukończenia oczekującej receive oryginalnej wiadomości lub osiągnięto wartość określonego limitu czasu.  
+-   W przeciwieństwie do wysłania Receive nie uniemożliwia zsynchronizowane stanami podczas odbierania. Na przykład Zamknij można wywołać podczas odbierania i czeka, aż do ukończenia oczekujących odbieranie oryginalnego komunikatu lub określona wartość limitu czasu zostanie osiągnięty.  
   
--   Limit czasu przekazany do odbierania jest używany jako limitu czasu dla całego odbierania operacja, która obejmuje wszystkie fragmenty odbierania.  
+-   Limit czasu, przekazana do odbierania jest używany, podobnie jak limit czasu dla całego otrzymują operacji, która obejmuje dostęp do wszystkich fragmentów.  
   
--   Jeśli warstwy, który wykorzystuje komunikat zajmuje treść komunikatu z szybkością mniejszy niż liczba komunikatów przychodzących fragmentu, `ChunkingReader` buforuje tych fragmentów przychodzące do limitu określonego przez `ChunkingBindingElement.MaxBufferedChunks`. Po osiągnięciu tego limitu już fragmentów są pobierane z dolnej warstwy, aż do buforowanego fragmentu jest używany lub osiągnięto limit czasu odbioru.  
+-   Jeśli warstwy, która zużywa komunikat zużywa treść komunikatu z szybkością niższa niż stopa wiadomości przychodzących fragmentów, `ChunkingReader` buforuje te fragmenty przychodzących do limitu określonego przez `ChunkingBindingElement.MaxBufferedChunks`. Po osiągnięciu tego limitu nie ma więcej fragmentów są pobierane z niższej warstwie, aż do buforowanego fragmentów jest używany lub zostanie osiągnięty limit czasu odbioru.  
   
-## <a name="communicationobject-overrides"></a>Zastąpienia CommunicationObject  
+## <a name="communicationobject-overrides"></a>CommunicationObject zastąpień  
   
 ### <a name="onopen"></a>Zdarzenia  
- `OnOpen` wywołania `innerChannel.Open` otworzyć kanału wewnętrzny.  
+ `OnOpen` wywołania `innerChannel.Open` do otwierania kanału wewnętrznego.  
   
 ### <a name="onclose"></a>OnClose  
- `OnClose` najpierw ustawia `stopReceive` do `true` sygnalizują oczekujące `ReceiveChunkLoop` zatrzymania. Następnie czeka na `receiveStopped``ManualResetEvent`, która jest ustawiana w przypadku `ReceiveChunkLoop` zatrzymuje. Zakładając, że `ReceiveChunkLoop` zatrzymuje się przed upływem określonego limitu czasu `OnClose` wywołania `innerChannel.Close` pozostałych limitu czasu.  
+ `OnClose` najpierw ustawia `stopReceive` do `true` celu sygnalizowania, że oczekujące `ReceiveChunkLoop` zatrzymania. Następnie czeka na zatwierdzenie `receiveStopped``ManualResetEvent`, która jest ustawiona, gdy `ReceiveChunkLoop` zatrzymuje. Zakładając, że `ReceiveChunkLoop` zatrzymuje się przed upływem określonego limitu czasu, `OnClose` wywołania `innerChannel.Close` z pozostałych przekroczeniem limitu czasu.  
   
 ### <a name="onabort"></a>OnAbort  
- `OnAbort` wywołania `innerChannel.Abort` przerwania wewnętrzny kanału. Jeśli istnieje oczekujące `ReceiveChunkLoop` pobiera wyjątku z oczekujących `innerChannel.Receive` wywołania.  
+ `OnAbort` wywołania `innerChannel.Abort` przerwania wewnętrzny kanału. Jeśli istnieje oczekujące `ReceiveChunkLoop` otrzymuje wyjątku z Oczekujące `innerChannel.Receive` wywołania.  
   
 ### <a name="onfaulted"></a>OnFaulted  
- `ChunkingChannel` Nie wymaga specjalnego zachowania, gdy kanał komunikacji niezawodnej to `OnFaulted` nie zostanie zastąpiona.  
+ `ChunkingChannel` Nie wymaga specjalnego zachowania, gdy kanał komunikacji niezawodnej, więc `OnFaulted` nie zostanie zastąpione.  
   
 ## <a name="implementing-channel-factory"></a>Implementowanie fabryki kanałów  
- `ChunkingChannelFactory` Odpowiedzialną za tworzenie wystąpień `ChunkingDuplexSessionChannel` i kaskadowych zmian stanu do wewnętrzna fabryka kanałów.  
+ `ChunkingChannelFactory` Jest odpowiedzialny za tworzenie wystąpień `ChunkingDuplexSessionChannel` i kaskadowych stanów przejść do wewnętrzna fabryka kanałów.  
   
- `OnCreateChannel` używa wewnętrzna fabryka kanałów w celu utworzenia `IDuplexSessionChannel` wewnętrzny kanału. Następnie tworzy nowy `ChunkingDuplexSessionChannel` przekazanie jej przez ten kanał wewnętrzny wraz z listy można fragmentaryczne akcje wiadomości i maksymalną liczbę fragmentów do zbuforowania podczas odbierania. Listę można fragmentaryczne akcje wiadomości i maksymalną liczbę fragmentów, aby buforować są dwa parametry przekazywane do `ChunkingChannelFactory` w jego konstruktora. Sekcję `ChunkingBindingElement` w tym artykule opisano, skąd pochodzą te wartości.  
+ `OnCreateChannel` używa wewnętrzna fabryka kanałów w celu utworzenia `IDuplexSessionChannel` wewnętrzny kanału. Następnie tworzy nową `ChunkingDuplexSessionChannel` przekazanie jej w tym kanale wewnętrzny wraz z listą działań komunikat na być podzielony i maksymalną liczbę fragmentów do zbuforowania podczas odbierania. Lista wiadomości działania, aby być podzielony i maksymalną liczbę fragmentów do buforowania są dwa parametry przekazywane do `ChunkingChannelFactory` w jego konstruktorze. W sekcji na `ChunkingBindingElement` opisuje pochodzenie tych wartości.  
   
- `OnOpen`, `OnClose`, `OnAbort` i ich odpowiedniki asynchroniczne wywołanie odpowiedniej metody przejścia stanu na wewnętrzna fabryka kanałów.  
+ `OnOpen`, `OnClose`, `OnAbort` i ich odpowiedniki asynchroniczne wywoływanie odpowiednia metoda przejścia stanu na wewnętrzna fabryka kanałów.  
   
 ## <a name="implementing-channel-listener"></a>Implementowanie odbiornika kanałów  
- `ChunkingChannelListener` Jest otokę odbiornika kanałów wewnętrzny. Jej główną funkcją, oprócz delegata wywołania tego odbiornika kanału wewnętrzny jest opakowywać nowych `ChunkingDuplexSessionChannels` wokół kanały akceptowane z odbiornika kanałów wewnętrzny. Jest to wykonywane w `OnAcceptChannel` i `OnEndAcceptChannel`. Nowo utworzony `ChunkingDuplexSessionChannel` jest przekazywany wewnętrzny kanału oraz inne parametry opisane wcześniej.  
+ `ChunkingChannelListener` Tworzy otokę wokół odbiornika kanału wewnętrznego. Jego funkcję main, oprócz delegata wywołania tego odbiornika kanału wewnętrzny jest opakowanie nowe `ChunkingDuplexSessionChannels` wokół kanały akceptowana od odbiornika kanałów wewnętrznego. Jest to realizowane w `OnAcceptChannel` i `OnEndAcceptChannel`. Nowo utworzony `ChunkingDuplexSessionChannel` jest przekazywany wewnętrzny kanał wraz z innymi parametrami, które opisano wcześniej.  
   
-## <a name="implementing-binding-element-and-binding"></a>Wdrażanie elementu powiązania i powiązania  
- `ChunkingBindingElement` jest odpowiedzialny za tworzenie `ChunkingChannelFactory` i `ChunkingChannelListener`. `ChunkingBindingElement` Sprawdza, czy T w `CanBuildChannelFactory` \<T > i `CanBuildChannelListener` \<T > jest typu `IDuplexSessionChannel` (tylko kanał obsługiwane przez kanał segmentu) i inne elementy powiązania powiązanie obsługuje to Typ kanału.  
+## <a name="implementing-binding-element-and-binding"></a>Implementowanie elementu powiązania i powiązania  
+ `ChunkingBindingElement` jest odpowiedzialny za tworzenie `ChunkingChannelFactory` i `ChunkingChannelListener`. `ChunkingBindingElement` Sprawdza, czy T w `CanBuildChannelFactory` \<T > i `CanBuildChannelListener` \<T > typu `IDuplexSessionChannel` (tylko kanał obsługiwane segmentu kanał) i inne elementy powiązania powiązanie obsługuje to Typ kanału.  
   
- `BuildChannelFactory`\<T > najpierw sprawdza, czy typ kanału żądanej mogą być wbudowane, a następnie pobiera listę komunikatów akcje fragmentarycznego można. Aby uzyskać więcej informacji zobacz sekcję poniżej. Następnie tworzy nowy `ChunkingChannelFactory` przekazanie jej wewnętrzna fabryka kanałów (zwrócony z `context.BuildInnerChannelFactory<IDuplexSessionChannel>`), listy Akcje wiadomości i maksymalną liczbę fragmentów do buforowania. Maksymalna liczba fragmentów pochodzi z właściwość o nazwie `MaxBufferedChunks` udostępnianych przez `ChunkingBindingElement`.  
+ `BuildChannelFactory`\<T > najpierw sprawdza, czy typ żądanego kanału mogą być wbudowane, a następnie pobiera listę akcji komunikat na być podzielony. Aby uzyskać więcej informacji zobacz następującą sekcję. Następnie tworzy nową `ChunkingChannelFactory` przekazanie do niej wewnętrzna fabryka kanałów (postaci zwracanej przez `context.BuildInnerChannelFactory<IDuplexSessionChannel>`), lista akcji wiadomości i maksymalną liczbę fragmentów do buforowania. Maksymalna liczba fragmentów pochodzi z właściwością o nazwie `MaxBufferedChunks` udostępnianych przez `ChunkingBindingElement`.  
   
- `BuildChannelListener<T>` implementacją podobne do tworzenia `ChunkingChannelListener` i przekazanie jej przez odbiornik kanału wewnętrzny.  
+ `BuildChannelListener<T>` zawiera podobne implementację tworzenia `ChunkingChannelListener` i przekazanie do niej odbiornik kanału wewnętrznego.  
   
- Brak powiązania przykład zawarty w tym przykładzie o nazwie `TcpChunkingBinding`. To powiązanie składa się z dwóch elementów powiązania: `TcpTransportBindingElement` i `ChunkingBindingElement`. Oprócz udostępnianie `MaxBufferedChunks` właściwość powiązania także ustawia niektóre `TcpTransportBindingElement` właściwości, takie jak `MaxReceivedMessageSize` (ustawia ją na `ChunkingUtils.ChunkSize` + 100 KB bajtów dla nagłówków).  
+ Brak powiązanie przykład zawarty w tym przykładzie o nazwie `TcpChunkingBinding`. To powiązanie zawiera dwa elementy wiązania: `TcpTransportBindingElement` i `ChunkingBindingElement`. Oprócz udostępnianie `MaxBufferedChunks` właściwości powiązania ustawia również niektóre `TcpTransportBindingElement` właściwości, takie jak `MaxReceivedMessageSize` (ustawia ją na `ChunkingUtils.ChunkSize` + 100 KB bajtów dla nagłówków).  
   
- `TcpChunkingBinding` implementuje również `IBindingRuntimePreferences` i zwraca wartość true z `ReceiveSynchronously` metody wskazujący, że są wykonywane tylko synchroniczne wywołania Receive.  
+ `TcpChunkingBinding` implementuje również `IBindingRuntimePreferences` i zwraca wartość true z `ReceiveSynchronously` metoda wskazujący, że są wykonywane tylko synchroniczne wywołania Receive.  
   
-### <a name="determining-which-messages-to-chunk"></a>Określanie, które wiadomości do fragmentu  
- Kanał segmentu chunks tylko komunikaty identyfikowane za pomocą `ChunkingBehavior` atrybutu. `ChunkingBehavior` Klasa implementuje `IOperationBehavior` i jest implementowane przez wywołanie metody `AddBindingParameter` metody. W przypadku tej metody `ChunkingBehavior` sprawdza, czy wartość jego `AppliesTo` właściwości (`InMessage`, `OutMessage` lub obie) do określenia wiadomości, które powinny być fragmentaryczne. Następnie pobiera działania każdego z tych wiadomości (z kolekcji wiadomości na `OperationDescription`) i dodaje go do kolekcji ciągów, zawartych w wystąpienia `ChunkingBindingParameter`. Dodaje następnie to `ChunkingBindingParameter` w udostępnionej klasie `BindingParameterCollection`.  
+### <a name="determining-which-messages-to-chunk"></a>Określanie, które komunikaty dotyczące fragmentów  
+ Kanał segmentu chunks tylko komunikaty, które są identyfikowane za pomocą `ChunkingBehavior` atrybutu. `ChunkingBehavior` Klasy implementuje `IOperationBehavior` i jest implementowany przez wywołanie metody `AddBindingParameter` metody. W przypadku tej metody `ChunkingBehavior` sprawdza, czy wartość jego `AppliesTo` właściwości (`InMessage`, `OutMessage` i / lub) do określenia wiadomości, które powinny być fragmentaryczne. Następnie pobiera akcji każdego z tych komunikatów (z kolekcji wiadomości na `OperationDescription`) i dodaje go do kolekcji ciągów, zawartych w instancji `ChunkingBindingParameter`. Następnie dodaje to `ChunkingBindingParameter` podanego `BindingParameterCollection`.  
   
- To `BindingParameterCollection` jest przekazywany wewnątrz `BindingContext` do każdego elementu powiązania w powiązaniu podczas tworzenia elementu powiązania fabryki kanału lub odbiornika kanałów. `ChunkingBindingElement`w implementacji `BuildChannelFactory<T>` i `BuildChannelListener<T>` ściągnięcia to `ChunkingBindingParameter` z `BindingContext’`s `BindingParameterCollection`. Zbiór działań zawartych w `ChunkingBindingParameter` są następnie przekazywane do `ChunkingChannelFactory` lub `ChunkingChannelListener`, który z kolei przekazuje go do `ChunkingDuplexSessionChannel`.  
+ To `BindingParameterCollection` są przekazywane wewnątrz `BindingContext` do każdego elementu powiązania w powiązaniu w przypadku tego elementu powiązania kompilacji fabryki kanału lub odbiornika kanałów. `ChunkingBindingElement`Przez implementację `BuildChannelFactory<T>` i `BuildChannelListener<T>` tego `ChunkingBindingParameter` poza `BindingContext’`s `BindingParameterCollection`. Zbiór działań zawartych w `ChunkingBindingParameter` jest następnie przekazywany do `ChunkingChannelFactory` lub `ChunkingChannelListener`, który z kolei przekazuje go do `ChunkingDuplexSessionChannel`.  
   
-## <a name="running-the-sample"></a>Uruchomiona próbki  
+## <a name="running-the-sample"></a>Działa aplikacja przykładowa  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Zainstaluj [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 za pomocą następującego polecenia.  
+1.  Zainstaluj [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0, używając następującego polecenia.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Upewnij się, że wykonano procedurę [jednorazowego procedurę instalacji dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Postępuj zgodnie z instrukcjami w celu skompilowania rozwiązania, [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Aby uruchomić przykładowy w konfiguracji pojedynczej lub między komputerami, postępuj zgodnie z instrukcjami w [uruchamiania przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-5.  Uruchom najpierw Service.exe, uruchom Client.exe i obejrzyj oba okna konsoli dla danych wyjściowych.  
+5.  Uruchom najpierw Service.exe, a następnie uruchom Client.exe i obejrzyj oba okna konsoli danych wyjściowych.  
   
- Podczas uruchamiania próbki, oczekiwano następujących danych wyjściowych.  
+ Podczas uruchamiania przykładu, należy się następujące dane wyjściowe.  
   
  Klient:  
   

@@ -1,82 +1,82 @@
 ---
-title: Sortowania z DataView (LINQ do DataSet)
+title: Sortowanie za pomocą widoku danych (LINQ to DataSet)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
-ms.openlocfilehash: 41f6f56765e1a623f8f2bdc8f2322589125d123e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f69b64088093bbdd46239a26f16aeea50b6dee7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365907"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465567"
 ---
-# <a name="sorting-with-dataview-linq-to-dataset"></a>Sortowania z DataView (LINQ do DataSet)
-Sortowanie danych na podstawie określonych kryteriów, a następnie prezentować danych do klienta za pomocą formantu interfejsu użytkownika jest ważnym aspektem wiązania z danymi. <xref:System.Data.DataView> udostępnia kilka sposobów, aby posortować dane i zwracanie wszystkich wierszy danych uporządkowanych według określonych kryteriów porządkowania. Oprócz jego podstawie ciąg sortowania możliwości, <xref:System.Data.DataView> także pozwala na użycie [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] wyrażenia kryterium sortowania. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] wyrażenia umożliwia bardziej złożone i zaawansowane operacje sortowania niż sortowanie oparte na ciągach. W tym temacie opisano oba podejścia do sortowania za pomocą <xref:System.Data.DataView>.  
+# <a name="sorting-with-dataview-linq-to-dataset"></a>Sortowanie za pomocą widoku danych (LINQ to DataSet)
+Możliwość sortowania danych w oparciu o określone kryteria, a następnie prezentować dane do klienta za pomocą kontrolki interfejsu użytkownika jest istotnym elementem powiązanie danych. <xref:System.Data.DataView> zapewnia kilka metod sortowania danych i zwraca wiersze danych uporządkowanych według określonych kryteriów porządkowania. Oprócz jego opartego na ciągach sortowanie możliwości <xref:System.Data.DataView> również pozwala na użycie [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] wyrażeń kryterium sortowania. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] wyrażenia pozwalają znacznie bardziej złożone i zaawansowane operacje sortowania niż sortowanie oparte na ciągach. W tym temacie opisano sortowanie, za pomocą obu metod <xref:System.Data.DataView>.  
   
-## <a name="creating-dataview-from-a-query-with-sorting-information"></a>Tworzenie widoku danych z zapytania z sortowaniem informacji  
- A <xref:System.Data.DataView> można utworzyć obiektu z [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zapytania. Jeśli kwerenda zawiera <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.OrderByDescending%2A>, <xref:System.Linq.Enumerable.ThenBy%2A>, lub <xref:System.Linq.Enumerable.ThenByDescending%2A> wyrażeń w klauzuli te są używane jako podstawa sortowania danych w klauzuli <xref:System.Data.DataView>. Na przykład, jeśli zapytanie zawiera `Order By…`i `Then By…` klauzule powstałe w ten sposób <xref:System.Data.DataView> czy określanie kolejności według obu kolumn określonych danych.  
+## <a name="creating-dataview-from-a-query-with-sorting-information"></a>Tworzenie widoku danych. w wyniku zapytania za pomocą sortowanie informacji  
+ A <xref:System.Data.DataView> obiektu można tworzyć na podstawie [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zapytania. Jeśli kwerenda zawiera <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.OrderByDescending%2A>, <xref:System.Linq.Enumerable.ThenBy%2A>, lub <xref:System.Linq.Enumerable.ThenByDescending%2A> wyrażenia w klauzulach te są używane jako podstawa sortowanie danych w klauzuli <xref:System.Data.DataView>. Na przykład, jeśli zapytanie zawiera `Order By…`i `Then By…` zdań, wynikowy <xref:System.Data.DataView> będzie porządkowania danych przez obie kolumny określone.  
   
- Oparte na wyrażeniach sortowania oferuje bardziej zaawansowaną i złożone sortowania niż prostsze oparte na ciąg sortowania. Należy pamiętać, że na podstawie ciągu i oparte na wyrażeniach sortowania wzajemnie się wykluczają. Jeśli ciąg podstawie <xref:System.Data.DataView.Sort%2A> jest ustawiany po <xref:System.Data.DataView> jest tworzony w wyniku zapytania oparte na wyrażeniach filtru wywnioskować na podstawie zapytania jest wyczyszczone i nie można przywrócić.  
+ Oparte na wyrażeniach sortowania oferuje bardziej zaawansowanych i złożonych sortowania niż prostsze oparte na ciągach sortowania. Uwaga: ciąg znaków, jak i oparte na wyrażeniach sortowania są wzajemnie się wykluczają. Jeśli opartego na ciągach <xref:System.Data.DataView.Sort%2A> jest ustawiany po <xref:System.Data.DataView> jest tworzona w wyniku zapytania, oparte na wyrażeniach filtru, wywnioskowane z kwerendy jest wyczyszczone i nie może być resetowany.  
   
- Indeks <xref:System.Data.DataView> składa się zarówno w przypadku <xref:System.Data.DataView> jest tworzony i podczas sortowania i filtrowania informacji jest modyfikowany. Możesz uzyskać najlepszą wydajność, podając kryteria sortowania w [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zapytanie <xref:System.Data.DataView> jest tworzona na podstawie i nie modyfikowanie sortowania informacje, a później. Aby uzyskać więcej informacji, zobacz [wydajności DataView](../../../../docs/framework/data/adonet/dataview-performance.md).  
+ Indeks <xref:System.Data.DataView> powstała zarówno gdy <xref:System.Data.DataView> jest tworzony i gdy którykolwiek z sortowania lub filtrowania informacji jest modyfikowany. Uzyskać najlepszą wydajność, podając kryteria sortowania w [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zapytanie <xref:System.Data.DataView> został utworzony i nie modyfikowanie sortowania informacje, a później. Aby uzyskać więcej informacji, zobacz [wydajność widoku danych](../../../../docs/framework/data/adonet/dataview-performance.md).  
   
 > [!NOTE]
->  W większości przypadków wyrażenia używane do sortowania nie powinny mieć efekty uboczne i musi być deterministyczny. Ponadto wyrażenia nie może zawierać dowolną logikę, która jest zależna od zestawu Liczba wykonań, ponieważ sortowania operacje mogą być wykonywane dowolną liczbę razy.  
+>  W większości przypadków wyrażenia używane do sortowania nie powinny mieć skutki uboczne i musi być deterministyczna. Ponadto wyrażenia nie może zawierać dowolną logikę, która jest zależna od określona liczba wykonań, ponieważ operacje sortowania może być wykonywane dowolną liczbę razy.  
   
 ### <a name="example"></a>Przykład  
- W poniższym przykładzie zapytanie tabeli SalesOrderHeader i porządkuje zwrócone wiersze według dat zamówienia; Tworzy <xref:System.Data.DataView> z tej kwerendy; i wiąże <xref:System.Data.DataView> do <xref:System.Windows.Forms.BindingSource>.  
+ W poniższym przykładzie zapytania tabeli SalesOrderHeader i porządkuje zwrócone wiersze według dat zamówienia; Tworzy <xref:System.Data.DataView> z tej kwerendy; i wiąże <xref:System.Data.DataView> do <xref:System.Windows.Forms.BindingSource>.  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromQueryOrderBy](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromqueryorderby)]
  [!code-vb[DP DataView Samples#CreateLDVFromQueryOrderBy](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromqueryorderby)]  
   
 ### <a name="example"></a>Przykład  
- W poniższym przykładzie zapytanie tabeli SalesOrderHeader i porządkuje wiersza zwrócone przez suma. Tworzy <xref:System.Data.DataView> z tej kwerendy; i wiąże <xref:System.Data.DataView> do <xref:System.Windows.Forms.BindingSource>.  
+ W poniższym przykładzie zapytania tabeli SalesOrderHeader i porządkuje zwracany wiersz według sumy. Tworzy <xref:System.Data.DataView> z tej kwerendy; i wiąże <xref:System.Data.DataView> do <xref:System.Windows.Forms.BindingSource>.  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromQueryOrderBy2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromqueryorderby2)]
  [!code-vb[DP DataView Samples#CreateLDVFromQueryOrderBy2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromqueryorderby2)]  
   
 ### <a name="example"></a>Przykład  
- W poniższym przykładzie zapytanie tabeli Szczegóły zamówienia sprzedaży i porządkuje zwrócone wiersze według ilości zlecenia, a następnie według Identyfikatora zamówienia; Tworzy <xref:System.Data.DataView> z tej kwerendy; i wiąże <xref:System.Data.DataView> do <xref:System.Windows.Forms.BindingSource>.  
+ W poniższym przykładzie zapytania w tabeli Szczegóły zamówienia sprzedaży i porządkuje zwrócone wiersze według ilości zamówienia, a następnie według Identyfikatora zamówienia sprzedaży; Tworzy <xref:System.Data.DataView> z tej kwerendy; i wiąże <xref:System.Data.DataView> do <xref:System.Windows.Forms.BindingSource>.  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromQueryOrderByThenBy](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromqueryorderbythenby)]
  [!code-vb[DP DataView Samples#CreateLDVFromQueryOrderByThenBy](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromqueryorderbythenby)]  
   
-## <a name="using-the-string-based-sort-property"></a>Za pomocą właściwości sortowania oparte na ciągach  
- Ciąg sortowania funkcje związane z <xref:System.Data.DataView> nadal działa z [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Po <xref:System.Data.DataView> została utworzona na podstawie [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kwerendy, można użyć <xref:System.Data.DataView.Sort%2A> właściwość umożliwiająca ustawienie sortowania na <xref:System.Data.DataView>.  
+## <a name="using-the-string-based-sort-property"></a>Przy użyciu właściwości sortowania oparte na ciągach  
+ Oparte na ciągach sortowania funkcjonalność <xref:System.Data.DataView> nadal działa z [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Po <xref:System.Data.DataView> została utworzona na podstawie [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zapytania, można użyć <xref:System.Data.DataView.Sort%2A> właściwość można ustawić sortowanie według <xref:System.Data.DataView>.  
   
- Na podstawie ciągu i oparte na wyrażeniach sortowania funkcje wzajemnie się wykluczają. Ustawienie <xref:System.Data.DataView.Sort%2A> właściwość spowoduje wyczyszczenie oparte na wyrażeniach sortowania dziedziczone z poziomu zapytania który <xref:System.Data.DataView> został utworzony na podstawie.  
+ Oparte na ciąg i oparte na wyrażeniach sortowania funkcje wzajemnie się wykluczają. Ustawienie <xref:System.Data.DataView.Sort%2A> właściwość spowoduje wyczyszczenie oparte na wyrażeniach sortowania dziedziczone z zapytania, <xref:System.Data.DataView> został utworzony na podstawie.  
   
- Aby uzyskać więcej informacji na temat na podstawie ciągu <xref:System.Data.DataView.Sort%2A> filtrowania, zobacz [sortowanie i filtrowanie danych](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
+ Aby uzyskać więcej informacji na temat oparte na ciągach <xref:System.Data.DataView.Sort%2A> filtrowania, zobacz [sortowanie i filtrowanie danych](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
   
 ### <a name="example"></a>Przykład  
- W przykładzie poniżej tworzy <xref:System.Data.DataView> z kontaktu tabela i wiersze są sortowane według nazwiska malejąco kolejności, a następnie imię w kolejności rosnącej:  
+ W przykładzie poniżej jest tworzony <xref:System.Data.DataView> z kontaktu tabeli i wiersze są sortowane według nazwiska w malejącej zamówienia, a następnie imię w kolejności rosnącej:  
   
  [!code-csharp[DP DataView Samples#LDVStringSort](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvstringsort)]
  [!code-vb[DP DataView Samples#LDVStringSort](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvstringsort)]  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykład wysyła zapytanie do tabeli kontaktów nazwiska rozpoczynające się od litery "S".  A <xref:System.Data.DataView> jest tworzone na podstawie zapytania i powiązany <xref:System.Windows.Forms.BindingSource> obiektu.  
+ Poniższy przykład wysyła zapytanie do tabeli kontaktów nazwiska, które zaczyna się literą "S".  A <xref:System.Data.DataView> jest tworzone na podstawie tego zapytania i powiązany <xref:System.Windows.Forms.BindingSource> obiektu.  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromQueryStringSort](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromquerystringsort)]
  [!code-vb[DP DataView Samples#CreateLDVFromQueryStringSort](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromquerystringsort)]  
   
-## <a name="clearing-the-sort"></a>Wyczyszczenie sortowania  
- Kryteria sortowania na <xref:System.Data.DataView> można wyczyścić po ustawieniu, przy użyciu <xref:System.Data.DataView.Sort%2A> właściwości. Istnieją dwa sposoby, aby wyczyścić informacje sortowania w <xref:System.Data.DataView>:  
+## <a name="clearing-the-sort"></a>Czyszczenie sortowania  
+ Kryteria sortowania na <xref:System.Data.DataView> może być obsadzona po ustawieniu, za pomocą <xref:System.Data.DataView.Sort%2A> właściwości. Istnieją dwa sposoby, aby wyczyścić sortowania informacje przedstawione w <xref:System.Data.DataView>:  
   
--   Ustaw <xref:System.Data.DataView.Sort%2A> właściwości `null`.  
+-   Ustaw <xref:System.Data.DataView.Sort%2A> właściwość `null`.  
   
 -   Ustaw <xref:System.Data.DataView.Sort%2A> właściwości na pusty ciąg.  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykład tworzy <xref:System.Data.DataView> z zapytania i czyści sortowanie przez ustawienie <xref:System.Data.DataView.Sort%2A> właściwości na pusty ciąg:  
+ Poniższy przykład tworzy <xref:System.Data.DataView> w wyniku zapytania i czyści, sortowanie, ustawiając <xref:System.Data.DataView.Sort%2A> właściwości na pusty ciąg:  
   
  [!code-csharp[DP DataView Samples#LDVClearSort](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvclearsort)]
  [!code-vb[DP DataView Samples#LDVClearSort](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvclearsort)]  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykład tworzy <xref:System.Data.DataView> z tabeli Kontakt i zestawy <xref:System.Data.DataView.Sort%2A> właściwości, aby posortować według nazwisko w kolejności malejącej. Następnie wyczyścić kryteria sortowania, ustawiając <xref:System.Data.DataView.Sort%2A> właściwości `null`:  
+ Poniższy przykład tworzy <xref:System.Data.DataView> z tabeli Kontakt i zestawy <xref:System.Data.DataView.Sort%2A> właściwości, aby posortować według nazwiska w kolejności malejącej. Kryteria sortowania następnie wyczyścić, ustawiając <xref:System.Data.DataView.Sort%2A> właściwości `null`:  
   
  [!code-csharp[DP DataView Samples#LDVClearSort2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvclearsort2)]
  [!code-vb[DP DataView Samples#LDVClearSort2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvclearsort2)]  
@@ -84,4 +84,4 @@ Sortowanie danych na podstawie określonych kryteriów, a następnie prezentowa�
 ## <a name="see-also"></a>Zobacz też  
  [Powiązanie danych i LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)  
  [Filtrowanie za pomocą widoku danych.](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)  
- [Sortowanie danych](http://msdn.microsoft.com/library/6d76e2d7-b418-49b5-ac78-2bcd61169c48)
+ [Sortowanie danych](https://msdn.microsoft.com/library/6d76e2d7-b418-49b5-ac78-2bcd61169c48)

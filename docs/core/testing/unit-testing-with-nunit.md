@@ -1,22 +1,33 @@
 ---
-title: Testowanie C# .NET Core i NUnit jednostki
-description: Dowiedz się pojęcia testu jednostki w języku C# i .NET Core za pośrednictwem interaktywnego środowisko tworzenia przykładowe rozwiązanie krok po kroku przy użyciu platformy dotnet testu i NUnit.
+title: Jednostki testowania C# za pomocą NUnit i .NET Core
+description: Pojęcia dotyczące jednostek testów w języku C# i .NET Core za pomocą interaktywnych doświadczenia przykładowe rozwiązanie krok po kroku za pomocą polecenia dotnet test i NUnit.
 author: rprouse
-ms.date: 12/01/2017
-ms.openlocfilehash: 8cf9e28353dd4dad6143f0dc3f8c0a8245715ea2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 08/31/2018
+ms.openlocfilehash: 253e07c16740a39566cf37ee5742a32342c78c49
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214409"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468915"
 ---
-# <a name="unit-testing-c-with-nunit-and-net-core"></a>Testowanie C# .NET Core i NUnit jednostki
+# <a name="unit-testing-c-with-nunit-and-net-core"></a>Jednostki testowania C# za pomocą NUnit i .NET Core
 
-Ten samouczek przedstawia interaktywna tworzenia przykładowe rozwiązanie krok po kroku, aby dowiedzieć się pojęcia testowania jednostek. Jeśli chcesz wykonać czynności opisane w samouczku za pomocą wbudowanych rozwiązania, [wyświetlić lub pobrać przykładowy kod](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/) przed rozpoczęciem. Instrukcje pobrania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Ten samouczek przeprowadzi Cię przez środowisko interaktywne tworzenie przykładowe rozwiązanie krok po kroku, aby dowiedzieć się więcej pojęcia testów jednostkowych. Jeśli chcesz wykonać kroki samouczka przy użyciu wstępnie utworzone rozwiązania [wyświetlić lub pobrać przykładowy kod](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/) przed przystąpieniem do wykonywania. Aby uzyskać instrukcje pobierania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+
+## <a name="prerequisites"></a>Wymagania wstępne
+
+- [.NET core SDK 2.1 (v. 2.1.400)](https://www.microsoft.com/net/download) lub nowszy.
+- Edytor tekstu lub ulubionego edytora kodu.
 
 ## <a name="creating-the-source-project"></a>Tworzenie projektu źródłowego
 
-Umożliwia otwarcie okna powłoki. Utwórz katalog o nazwie *jednostki — testowanie — przy użyciu nunit* do przechowywania rozwiązania. Wewnątrz tego nowego katalogu Uruchom [ `dotnet new sln` ](../tools/dotnet-new.md) do utworzenia nowego pliku rozwiązania dla biblioteki klas i projektu testowego. Następnie należy utworzyć *PrimeService* katalogu. Następujące konspektu dotychczasowych przedstawia strukturę katalogów i plików:
+Otwieranie okna powłoki. Utwórz katalog o nazwie *jednostki — testowanie-przy użyciu nunit* do przechowywania rozwiązania. Wewnątrz tego nowy katalog uruchom następujące polecenie, aby utworzyć nowy plik rozwiązania dla biblioteki klas i projektu testowego:
+
+```console
+dotnet new sln
+```
+ 
+Następnie należy utworzyć *PrimeService* katalogu. Następujące konspektu przedstawia strukturę katalogów i plików do tej pory:
 
 ```
 /unit-testing-using-nunit
@@ -24,7 +35,13 @@ Umożliwia otwarcie okna powłoki. Utwórz katalog o nazwie *jednostki — testo
     /PrimeService
 ```
 
-Wprowadź *PrimeService* bieżącego katalogu i uruchom [ `dotnet new classlib` ](../tools/dotnet-new.md) do tworzenia projektu źródłowego. Zmień nazwę *Class1.cs* do *PrimeService.cs*. Aby użyć projektowanie oparte na testach (TDD), należy utworzyć niepowodzenie wykonania `PrimeService` klasy:
+Wprowadź *PrimeService* bieżącego katalogu i uruchom następujące polecenie, aby utworzyć projekt źródłowy:
+
+```console
+dotnet new classlib
+```
+
+Zmień nazwę *Class1.cs* do *PrimeService.cs*. Aby użyć Programowanie oparte na testach (TDD), należy utworzyć z implementacją niepowodzenie `PrimeService` klasy:
 
 ```csharp
 using System;
@@ -41,17 +58,13 @@ namespace Prime.Services
 }
 ```
 
-Zmień katalog z powrotem do *jednostki — testowanie — przy użyciu nunit* katalogu. Uruchom [ `dotnet sln add PrimeService/PrimeService.csproj` ](../tools/dotnet-sln.md) można dodać projektu biblioteki klas do rozwiązania.
+Zmień katalog kopii do *jednostki — testowanie-przy użyciu nunit* katalogu. Uruchom następujące polecenie, aby dodać projekt biblioteki klas do rozwiązania:
 
-## <a name="install-the-nunit-project-template"></a>Zainstaluj NUnit szablonu projektu
-
-NUnit przetestować projekt, który szablony muszą być zainstalowane przed utworzeniem projektu testowego. To tylko należy jednak wykonać jeden raz na każdym komputerze dewelopera, w których zostaną utworzone nowe projekty NUnit. Uruchom [ `dotnet new -i NUnit3.DotNetNew.Template` ](../tools/dotnet-new.md) zainstalować szablony NUnit.
-
-```
-dotnet new -i NUnit3.DotNetNew.Template
+```console
+dotnet sln add PrimeService/PrimeService.csproj
 ```
 
-### <a name="creating-the-test-project"></a>Tworzenie projektu testu
+## <a name="creating-the-test-project"></a>Tworzenie projektu testu
 
 Następnie należy utworzyć *PrimeService.Tests* katalogu. Następujące konspektu przedstawia strukturę katalogów:
 
@@ -64,25 +77,25 @@ Następnie należy utworzyć *PrimeService.Tests* katalogu. Następujące konspe
     /PrimeService.Tests
 ```
 
-Wprowadź *PrimeService.Tests* katalogu bieżącego katalogu i Utwórz nowy projekt za pomocą [ `dotnet new nunit` ](../tools/dotnet-new.md). Nowe polecenie dotnet tworzy projekt testowy używającą NUnit jako biblioteka testów. Wygenerowanego szablonu konfiguruje uruchamiający w *PrimeServiceTests.csproj* pliku:
+Wprowadź *PrimeService.Tests* katalogu bieżącego katalogu i Utwórz nowy projekt, używając następującego polecenia:
 
-```xml
-<ItemGroup>
-  <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
-  <PackageReference Include="NUnit" Version="3.9.0" />
-  <PackageReference Include="NUnit3TestAdapter" Version="3.9.0" />
-</ItemGroup>
+```console
+dotnet new nunit
 ```
 
-Projekt testowy wymaga inne pakiety do tworzenia i uruchamiania testów jednostkowych. `dotnet new` w poprzednim kroku dodać Microsoft test zestawu SDK, struktury testowej NUnit i NUnit adapter testowy. Teraz Dodaj `PrimeService` biblioteki klas jako zależność od innego projektu. Użyj [ `dotnet add reference` ](../tools/dotnet-add-reference.md) polecenia:
+[Dotnet nowe](../tools/dotnet-new.md) polecenie tworzy projekt testowy, który używa NUnit jako biblioteka testów. Wygenerowany szablon konfiguruje narzędzie test runner w *PrimeService.Tests.csproj* pliku:
 
-```
+[!code-xml[Packages](~/samples/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService.Tests.csproj#Packages)]
+
+Projekt testowy wymaga innych pakietów, aby utworzyć i uruchomić testy jednostkowe. `dotnet new` w poprzednim kroku dodane testów firmy Microsoft zestawu SDK, struktury testów NUnit i NUnit adaptera testowego. Teraz Dodaj `PrimeService` biblioteki klas jako inny zależności do projektu. Użyj [ `dotnet add reference` ](../tools/dotnet-add-reference.md) polecenia:
+
+```console
 dotnet add reference ../PrimeService/PrimeService.csproj
 ```
 
-Widoczny cały plik w [przykłady repozytorium](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService.Tests.csproj) w witrynie GitHub.
+Widać cały plik w [repozytorium przykładów](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService.Tests.csproj) w witrynie GitHub.
 
-Następujące konspektu przedstawiono układu ostatecznego rozwiązania:
+Następujące konspektu przedstawia wybrany układ ostateczne rozwiązanie:
 
 ```
 /unit-testing-using-nunit
@@ -92,14 +105,18 @@ Następujące konspektu przedstawiono układu ostatecznego rozwiązania:
         PrimeService.csproj
     /PrimeService.Tests
         Test Source Files
-        PrimeServiceTests.csproj
+        PrimeService.Tests.csproj
 ```
 
-Wykonanie [ `dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj` ](../tools/dotnet-sln.md) w *testowania — przy użyciu dotnet testu jednostkowego* katalogu.
+Wykonaj następujące polecenie w *testowania — przy użyciu dotnet-test jednostkowy* katalogu:
+
+```console
+dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj
+```
 
 ## <a name="creating-the-first-test"></a>Tworzenie pierwszego testu
 
-Podejście TDD odwołuje się do pisania niepowodzeniu jednego testu, co Przekaż, a następnie powtórzyć proces. Usuń *UnitTest1.cs* z *PrimeService.Tests* katalogu i Utwórz nowy plik C# o nazwie *PrimeService_IsPrimeShould.cs* o następującej treści:
+Podejścia TDD wymaga zapisywania niepowodzenie jednego testu, dzięki czemu przekazać, a następnie powtórzyć ten proces. W *PrimeService.Tests* katalogu, zmiana nazwy *UnitTest1.cs* plik *PrimeService_IsPrimeShould.cs* i zastąp jego całą zawartość następującym kodem:
 
 ```csharp
 using NUnit.Framework;
@@ -128,11 +145,11 @@ namespace Prime.UnitTests.Services
 }
 ```
 
-`[TestFixture]` Atrybut określa klasę, która zawiera testy jednostkowe. `[Test]` Atrybut oznacza metodę metody testowej.
+`[TestFixture]` Atrybut wskazuje klasę, która zawiera testy jednostkowe. `[Test]` Atrybut wskazuje, metoda jest metodą testową.
 
-Zapisz ten plik i wykonaj [ `dotnet test` ](../tools/dotnet-test.md) do tworzenia testów i biblioteki klas, a następnie uruchom testy. Moduł uruchamiający NUnit zawiera punkt wejścia programu do uruchomienia testów. `dotnet test` Uruchamia uruchamiający przy użyciu jednostkowy projekt testowy, który został utworzony.
+Zapisz ten plik i wykonaj [ `dotnet test` ](../tools/dotnet-test.md) do kompilacji, testów i biblioteki klas, a następnie uruchom testy. Moduł uruchamiający NUnit zawiera punkt wejścia programu, aby uruchomić testy. `dotnet test` Uruchamia narzędzie test runner, za pomocą projektu testu jednostkowego, który został utworzony.
 
-Test zakończy się niepowodzeniem. Nie utworzono jeszcze implementacji. Należy ten test jest przekazywany za pomocą pisania kodu najprostsza w `PrimeService` klasy, która działa:
+Test nie powiedzie się. Nie utworzono jeszcze wdrożenia. Wprowadź ten test, przekazać przez napisanie kodu najprostsza `PrimeService` klasę, która działa:
 
 ```csharp
 public bool IsPrime(int candidate)
@@ -145,22 +162,22 @@ public bool IsPrime(int candidate)
 }
 ```
 
-W *jednostki — testowanie — przy użyciu nunit* katalogu, uruchom `dotnet test` ponownie. `dotnet test` Polecenia uruchamiane kompilacji dla `PrimeService` projektu i następnie `PrimeService.Tests` projektu. Po utworzeniu oba projekty, jest uruchamiana ta pojedynczy test. Przekazuje ono.
+W *jednostki — testowanie-przy użyciu nunit* katalogu, uruchom `dotnet test` ponownie. `dotnet test` Polecenie uruchamia kompilację dla `PrimeService` projektu i następnie `PrimeService.Tests` projektu. Po utworzeniu obu projektów, działa ten jeden test. Przekazuje on.
 
-## <a name="adding-more-features"></a>Dodawanie więcej funkcji.
+## <a name="adding-more-features"></a>Dodawanie większej liczby funkcji
 
-Teraz, kiedy dokonano jeden test przekazać nadszedł czas na zapis więcej. Istnieje kilka innych przypadków proste dla liczb pierwszych: 0, -1. Można dodać nowe testy z `[Test]` atrybut, ale szybko staje się nużące. Istnieją inne atrybuty NUnit, które pozwalają na zapis zestaw testów podobne.  A `[TestCase]` atrybut służy do tworzenia zestaw testów, wykonanie tego samego kodu, które mają różne argumenty wejściowe. Można użyć `[TestCase]` atrybutu, aby określić wartości dla tych danych wejściowych.
+Teraz, gdy wprowadzono jeden przebieg testu, nadszedł czas na zapis więcej. Istnieje kilka innych przypadkach proste dla liczb pierwszych: 0, -1. Można dodać nowe testy za pomocą `[Test]` atrybut, ale który szybko staje się uciążliwe. Istnieją inne atrybuty NUnit, które umożliwiają pisanie zestaw testów podobne.  A `[TestCase]` atrybut jest używany do tworzenia zestaw testów, które wykonania tego samego kodu, ale mają różne argumenty wejściowe. Możesz użyć `[TestCase]` atrybutu, aby określić wartości dla tych danych wejściowych.
 
-Zamiast tworzyć nowe testy, zastosuj ten atrybut można utworzyć jeden testu opartego na danych. Dane zmiennych testu jest metodę, która sprawdza kilka wartości mniejszej niż dwa, czyli o najniższej liczbie prime:
+Zamiast tworzyć nowe testy, należy zastosować ten atrybut do utworzenia pojedynczego testu opartego na danych. Opartych na test danych to metoda, która sprawdza kilka wartości mniejszej niż dwa, czyli najniższy numer prime:
 
 [!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
-Uruchom `dotnet test`, i dwa pola spośród wymienionych testów kończyć się niepowodzeniem. Aby wszystkie karty testy, należy zmienić `if` klauzuli na początku metody:
+Uruchom `dotnet test`, i dwa pola spośród wymienionych testów kończyć się niepowodzeniem. Aby wszystkie przebieg testów, należy zmienić `if` klauzuli na początku `Main` method in Class metoda *PrimeService.cs* pliku:
 
 ```csharp
 if (candidate < 2)
 ```
 
-Nadal Iterowanie przez dodanie większej liczby testów, więcej teorii i więcej kodu w bibliotece głównego. Masz [Zakończono wersji testów](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.cs) i [zakończenia wdrożenia biblioteki](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/PrimeService/PrimeService.cs).
+Przejdź do iteracji, dodając więcej testów, więcej teorii i więcej kodu w bibliotece głównej. Masz [ukończoną wersję testy](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.cs) i [pełną implementację biblioteki](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/PrimeService/PrimeService.cs).
 
-Został utworzony małych biblioteki i zestaw testów jednostkowych dla tej biblioteki. Zostały strukturę rozwiązania, aby dodać nowe pakiety i testów jest częścią Normalny przepływ pracy. Już skoncentrowany większość czasu i uwagi na temat rozwiązywania problemów celów aplikacji.
+Gdy masz utworzoną małych biblioteki i zestaw testów jednostkowych dla tej biblioteki. Tak, aby dodawania nowych pakietów została ze strukturą rozwiązania i testów jest częścią normalnego przepływu pracy. Po skoncentrowany większość czasu i wysiłku niewiele rozwiązywania cele aplikacji.

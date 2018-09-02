@@ -15,11 +15,11 @@ ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 64b971e71019359cebc1493a410e748a1fd7b7cb
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43257347"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474106"
 ---
 # <a name="converting-times-between-time-zones"></a>Konwertowanie godzin między strefami czasowymi
 

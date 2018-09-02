@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-ms.openlocfilehash: 11c3faa85d6d0b77c4e606815aa8252188b6f67d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7b57a9572a285dfdc13afb0a520de67e231a1c0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357796"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463913"
 ---
 # <a name="updating-data-in-a-data-source"></a>Aktualizowanie danych w źródle danych
-Instrukcje SQL, które modyfikują dane (takie jak INSERT, UPDATE lub DELETE) zwraca wiersze. Podobnie wiele procedur składowanych wykonywania akcji, ale nie zwraca wiersze. Do wykonania polecenia, które niezwracanie wierszy, Utwórz **polecenia** obiektu za pomocą odpowiedniego polecenia SQL i **połączenia**, wraz ze wszystkimi wymagane **parametry**. Wykonaj polecenie z **ExecuteNonQuery** metody **polecenia** obiektu.  
+Instrukcje SQL, które modyfikują dane (takie jak INSERT, UPDATE lub DELETE) zwraca wiersze. Podobnie wiele procedur składowanych wykonaj akcję, ale nie zwracać wiersze. Do wykonywania poleceń, które nie zwrócą wierszy, należy utworzyć **polecenia** obiektu za pomocą odpowiedniego polecenia SQL i **połączenia**, wraz ze wszystkimi wymagane **parametry**. Wykonanie polecenia za pomocą **ExecuteNonQuery** metody **polecenia** obiektu.  
   
- **ExecuteNonQuery** metoda zwraca liczbę całkowitą reprezentującą liczbę wierszy instrukcji lub procedury przechowywanej, która została wykonana. Jeśli wiele instrukcji są wykonywane, wartość zwracana jest sumą zmodyfikowanych przez wszystkie instrukcje wykonywane rekordów.  
+ **ExecuteNonQuery** metoda zwraca wartość całkowitą reprezentującą liczbę wierszy objętych instrukcji lub procedury składowanej, który został wykonany. Jeśli są wykonywane wiele instrukcji, wartość zwracana jest sumą zmodyfikowanych przez wszystkie instrukcje wykonywane rekordów.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu wykonuje instrukcję do wstawienia rekordu do bazy danych przy użyciu **ExecuteNonQuery**.  
+ Poniższy kod wykonuje instrukcję INSERT, do wstawienia rekordu do bazy danych za pomocą **ExecuteNonQuery**.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -42,9 +42,9 @@ SqlCommand command = new SqlCommand(queryString, connection);
 Int32 recordsAffected = command.ExecuteNonQuery();  
 ```  
   
- Poniższy przykład kodu wykonuje procedurę składowaną utworzone przez przykładowy kod [wykonywanie operacji katalogu](../../../../docs/framework/data/adonet/performing-catalog-operations.md). Żadne wiersze są zwracane przez procedurę składowaną, więc **ExecuteNonQuery** metoda jest używana, ale procedury składowanej odbierania parametr wejściowy i zwraca parametr wyjściowy i wartości zwracanej.  
+ Poniższy kod wykonuje procedurę składowaną, utworzone przez przykładowy kod [wykonywanie operacji katalogu](../../../../docs/framework/data/adonet/performing-catalog-operations.md). Nie zwrócono żadnych wierszy przez procedurę składowaną, więc **ExecuteNonQuery** używana jest metoda, ale procedura składowana odbierania parametr wejściowy i zwraca parametr wyjściowy i wartość zwracaną.  
   
- Dla <xref:System.Data.OleDb.OleDbCommand> obiektu **ReturnValue** parametr musi zostać dodany do **parametry** kolekcji pierwszej.  
+ Dla <xref:System.Data.OleDb.OleDbCommand> obiektu **ReturnValue** parametr musi zostać dodany do **parametry** kolekcji pierwszy.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -95,4 +95,4 @@ Int32 rowCount = (Int32) command.Parameters["@RowCount"].Value;
  [Używanie poleceń do modyfikacji danych](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
  [Aktualizowanie źródeł danych za pomocą elementów DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  [Polecenia i parametry](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

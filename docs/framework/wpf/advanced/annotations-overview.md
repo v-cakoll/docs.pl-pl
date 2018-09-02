@@ -9,60 +9,60 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: 80555ad714ffe5cab6722d2d6d45fb6a6bb45609
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 690ec5f2bca7c10aba291cdde6e8bc455e7fd43a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540846"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463970"
 ---
 # <a name="annotations-overview"></a>Przegląd Adnotacje
-Uwagi dotyczące pisania lub komentarzy w dokumencie dokumentów jest takie działanie popularne, że firma Microsoft niemal stosować go dla przyznane. Te informacje i komentarze są "adnotacji" dodamy do dokumentu, aby flaga informacji lub Wyróżnij elementy do wykorzystania w późniejszym czasie. Pisanie uwagi na drukowanych dokumentów jest łatwe i popularne, aby dodać komentarz do elektronicznych dokumentów jest zazwyczaj bardzo ograniczony dostępne na wszystkich.  
+Zapisywanie notatki lub komentarze dotyczące dokumentów dokument jest takie powszechnie używane czynnością, firma Microsoft niemal Zrób to dla przyznane. Te informacje o lub komentarze są "adnotacje" dodajemy do dokumentu do informacji lub aby wyróżnić elementy do późniejszego wykorzystania. Chociaż zapisywania notatki na drukowanych dokumentów jest proste i powszechnie używane, możliwość dodawania swoje komentarze do dokumentów elektronicznych zwykle jest bardzo ograniczona, jeśli jest dostępny w wszystkich.  
   
- W tym temacie zapoznaje się kilka typowych adnotacji, w szczególności notatki i najważniejsze funkcje oraz przedstawiono sposób [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] ułatwia obsługę tych typów adnotacje w aplikacjach za pomocą dokumentu Windows Presentation Foundation (WPF) wyświetlanie formantów.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dokument wyświetlania formantów, które obsługują adnotacje obejmują <xref:System.Windows.Controls.FlowDocumentReader> i <xref:System.Windows.Controls.FlowDocumentScrollViewer>, jak również formanty pochodne <xref:System.Windows.Controls.Primitives.DocumentViewerBase> takich jak <xref:System.Windows.Controls.DocumentViewer> i <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
+ W tym temacie przeglądy kilka często spotykanych rodzajów adnotacji, w szczególności karteczki i wyróżnienia i przedstawiono sposób, w jaki [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] ułatwia tego rodzaju adnotacji w aplikacjach za pomocą dokumentu Windows Presentation Foundation (WPF) Wyświetlanie kontrolki.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Formanty wyświetlania dokumentu, które obsługuje adnotacji obejmują <xref:System.Windows.Controls.FlowDocumentReader> i <xref:System.Windows.Controls.FlowDocumentScrollViewer>, jak również formanty pochodne <xref:System.Windows.Controls.Primitives.DocumentViewerBase> takich jak <xref:System.Windows.Controls.DocumentViewer> i <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
   
   
 <a name="caf1_type_stickynotes"></a>   
 ## <a name="sticky-notes"></a>Notatki  
- Typowe notatki zawiera informacje zapisane na mała kolorowe papieru, który jest następnie "zablokował" do dokumentu. Cyfrowe notatki zapewniają podobne funkcje elektronicznych dokumentów, ale wzbogaconych obejmują wiele typów zawartości, takie jak tekst, notatki odręczne (na przykład [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)] "odręczne" pociągnięć), lub linków sieci Web.  
+ Typowej notatkę zawiera informacje zapisane w niewielkim fragmentem kolorowego papieru, następnie "zatrzymane" w dokumencie. Cyfrowych notatek zapewniają podobne funkcje dla dokumentów elektronicznych, ale z dodatkową elastyczność obejmujący wiele innych typów zawartości, takie jak tekst, ręcznie sporządzanych notatek (na przykład [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)] "pisma odręcznego" pociągnięć), lub linków sieci Web.  
   
- Na poniższej ilustracji przedstawiono przykładowe wyróżnienia, notatka tekstu i odręcznego Notatka adnotacji.  
+ Na poniższej ilustracji przedstawiono kilka przykładów, wyróżnianie, notatki tekstu i pisma odręcznego Notatka adnotacji.  
   
- ![Wyróżnij, tekst i odręcznego adnotacje notatki. ] (../../../../docs/framework/wpf/advanced/media/caf-stickynote.jpg "CAF_StickyNote")  
+ ![Wyróżnianie, tekstu i notatki sticky note adnotacji. ](../../../../docs/framework/wpf/advanced/media/caf-stickynote.jpg "CAF_StickyNote")  
   
- W poniższym przykładzie przedstawiono metodę, która umożliwia włączenie obsługi adnotacji w aplikacji.  
+ Poniższy kod przedstawia metodę, która umożliwia włączenie obsługi adnotacji w aplikacji.  
   
  [!code-csharp[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXml/CSharp/Window1.xaml.cs#docviewxmlstartannotations)]
  [!code-vb[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DocViewerAnnotationsXml/visualbasic/window1.xaml.vb#docviewxmlstartannotations)]  
   
 <a name="caf1_type_callouts"></a>   
 ## <a name="highlights"></a>Najważniejsze funkcje  
- Metody creative służą do zwrócić uwagę na elementy, gdy ich oznaczania dokumentu, takie jak podkreślenie, wyróżnianie, zakreślenie wyrazów w zdaniu lub rysowania znaków lub notacji na marginesie.  Wyróżnij adnotacje w [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] Podaj funkcji podobnych do oznaczania informacji wyświetlanych w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] wyświetlania formantów dokumentów.  
+ Osoby za pomocą metody creative narysuj uwagi na interesujące elementy podczas oznaczania ich dokumentu, takie jak podkreślenie, wyróżnianie, krążące wyrazów w zdaniu lub rysunku znaczników lub notacji na marginesie.  Wyróżnij adnotacje w [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] udostępniają podobne funkcji do oznaczania informacji wyświetlanych w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] wyświetlania formantów dokumentów.  
   
  Na poniższej ilustracji przedstawiono przykład adnotacji wyróżnienia.  
   
  ![Wyróżnianie adnotacji](../../../../docs/framework/wpf/advanced/media/caf-callouts.png "CAF_Callouts")  
   
- Użytkownicy zazwyczaj tworzyć adnotacji najpierw zaznaczając tekst lub element zainteresowań, a następnie klikając prawym przyciskiem myszy, aby wyświetlić <xref:System.Windows.Controls.ContextMenu> opcji adnotacji.  W poniższym przykładzie przedstawiono [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] służy do deklarowania <xref:System.Windows.Controls.ContextMenu> z routingiem poleceniami, które użytkownicy mogą uzyskiwać dostęp do tworzenia i zarządzania nimi adnotacji.  
+ Użytkownicy zazwyczaj tworzyć adnotacje polega na wybraniu jakiś tekst lub interesujący Cię element, a następnie kliknij prawym przyciskiem myszy, aby wyświetlić <xref:System.Windows.Controls.ContextMenu> opcji adnotacji.  W poniższym przykładzie przedstawiono [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] służy do deklarowania <xref:System.Windows.Controls.ContextMenu> za pomocą routingu poleceń, których użytkownicy mogą tworzyć i zarządzać nimi adnotacji.  
   
  [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
   
 <a name="caf1_framework_data_anchoring"></a>   
 ## <a name="data-anchoring"></a>Zakotwiczanie danych  
- [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] Wiąże adnotacje do danych przez użytkownika, a nie tylko do pozycji w widoku wyświetlania. W związku z tym jeśli widok dokumentu zmiany, na przykład gdy użytkownik przewija lub zmienia rozmiar okna, adnotacja utrzymane wybór danych, z którą jest powiązany. Na przykład poniższa ilustracja przedstawia zgłaszającego na zaznaczonego tekstu adnotacji. Gdy dokument zmiany (Przewija, zmienia rozmiar, skali lub w inny sposób przenosi), adnotacji wyróżnienia przenoszona razem z oryginalnego zaznaczenia danych.  
+ [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] Wiąże adnotacje do danych przez użytkownika, nie tylko do pozycji w widoku wyświetlania. W związku z tym jeśli widok dokumentu zmieni się, np. gdy użytkownik przewija lub zmienia rozmiar okna, adnotacja pozostaje z wybór danych, z którą jest powiązany. Na przykład poniższa ilustracja przedstawia zgłaszający na zaznaczanie tekstu adnotacji. Dokument wyświetlania zmian (Przewija, zmiany rozmiaru, skaluje lub przenoszone w inny sposób), adnotacji podświetlenie przenosi przy użyciu oryginalnego wybór danych.  
   
  ![Zakotwiczanie danych adnotacji](../../../../docs/framework/wpf/advanced/media/caf-dataanchoring.png "CAF_DataAnchoring")  
   
 <a name="matching_annotations_with_annotated_objects"></a>   
-## <a name="matching-annotations-with-annotated-objects"></a>Dopasowywanie adnotacje z adnotacjami obiektów  
- Można dopasować adnotacje z adnotacjami odpowiednich obiektów. Rozważmy na przykład aplikacja czytnika prostego dokumentu, która ma okienko komentarze. W okienku komentarzy może być pole listy, które wyświetla tekst z listy adnotacji zakotwiczonych w dokumencie. Jeśli użytkownik wybierze element w polu listy, następnie aplikacji powoduje przeniesienie do widoku akapitu w dokumencie, który jest zakotwiczona adnotacja odpowiedni obiekt.  
+## <a name="matching-annotations-with-annotated-objects"></a>Adnotacje zgodnego z adnotacjami obiektami  
+ Można dopasować adnotacje odpowiednimi obiektami adnotacjami. Rozważmy na przykład aplikacja czytnik prostego dokumentu, która ma okienku komentarze. W okienku komentarze mogą być pole listy, które wyświetla tekst z listy adnotacji, które są zakotwiczone w dokumencie. Jeśli użytkownik wybierze element w polu listy, następnie aplikacja przełącza do widoku akapit w dokumencie, który jest zakotwiczona odpowiedniego obiektu adnotacji.  
   
- W poniższym przykładzie pokazano sposób implementacji programu obsługi zdarzeń takie pola listy, która służy jako komentarza.  
+ Poniższy przykład demonstruje sposób implementacji programu obsługi zdarzeń, takie pola listy, która służy jako w okienku komentarze.  
   
  [!code-csharp[FlowDocumentAnnotatedViewer#Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/CSharp/Window1.xaml.cs#handler)]
  [!code-vb[FlowDocumentAnnotatedViewer#Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/visualbasic/window1.xaml.vb#handler)]  
   
- Inny przykładowy scenariusz obejmuje aplikacje, które umożliwiają wymianę adnotacji i notatki między czytnikami dokumentu za pośrednictwem poczty e-mail. Ta funkcja umożliwia tych aplikacji można przejść czytnik do strony, która zawiera adnotację, są wymieniane.  
+ Inny przykładowy scenariusz obejmuje aplikacje, które umożliwiają wymianę adnotacje i notatki między czytnikami dokumentu za pośrednictwem poczty e-mail. Ta funkcja umożliwia tych aplikacji, można przejść czytelnika na stronie zawierającej adnotacji, są wymieniane.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Controls.Primitives.DocumentViewerBase>  
@@ -75,4 +75,4 @@ Uwagi dotyczące pisania lub komentarzy w dokumencie dokumentów jest takie dzia
  [ContextMenu — przegląd](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
  [Przegląd poleceń](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
  [Przegląd dokumentu przepływu](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [Porady: Dodawanie polecenia do elementu menu.](http://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)
+ [Porady: Dodawanie polecenia do element MenuItem](https://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)

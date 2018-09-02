@@ -7,77 +7,77 @@ helpviewer_keywords:
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
 author: tdykstra
-ms.openlocfilehash: dd96caa03d04371d4f930bb311decd7672b342fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d9451f99b0253d0a4de6550b64fedd7fdfeda77
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396834"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464976"
 ---
 # <a name="caching-in-net-framework-applications"></a>Buforowanie w aplikacjach .NET Framework
-Buforowanie umożliwia przechowywanie danych w pamięci, aby uzyskać szybki dostęp. Dostępie do danych ponownie, aplikacje można pobrać danych z pamięci podręcznej zamiast z oryginalnego źródła. Może to poprawić wydajność i skalowalność. Ponadto buforowanie sprawia, że nie są dostępne dane, gdy źródłem danych jest tymczasowo niedostępna.  
+Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać szybki dostęp. Gdy dane są używane ponownie, aplikacje można uzyskać danych z pamięci podręcznej, zamiast pobierania z oryginalnego źródła. Może to poprawić wydajność i skalowalność. Ponadto buforowania sprawia, że dane dostępne, gdy źródłem danych jest tymczasowo niedostępna.  
   
- .NET Framework udostępnia funkcję buforowania, używanego w celu poprawy wydajności i skalowalności zarówno systemu Windows na kliencie i serwerze aplikacji, w tym programu ASP.NET.  
+ .NET Framework oferuje funkcje pamięci podręcznej, które można użyć w celu poprawy wydajności i skalowalności zarówno Windows klienta i serwera aplikacji, w tym ASP.NET.  
   
 > [!NOTE]
->  W [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] i wcześniejszych wersjach programu ASP.NET dostępne implementację w pamięci podręcznej w <xref:System.Web.Caching> przestrzeni nazw. W poprzednich wersjach [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], buforowanie była dostępna tylko w <xref:System.Web> przestrzeni nazw i w związku z tym wymagana zależność klasy ASP.NET. W .NET Framework 4 <xref:System.Runtime.Caching> przestrzeń nazw zawiera interfejsy API, które są przeznaczone dla sieci Web i innych aplikacji.  
+>  W [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] i wcześniejszych wersjach programu ASP.NET implementacji w pamięci podręcznej w <xref:System.Web.Caching> przestrzeni nazw. W poprzednich wersjach [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], pamięć podręczna była dostępna tylko w <xref:System.Web> przestrzeni nazw i dlatego wymagane zależności klas programu ASP.NET. W programie .NET Framework 4 <xref:System.Runtime.Caching> przestrzeń nazw zawiera interfejsy API, które są przeznaczone dla sieci Web, jak i innych aplikacji.  
   
 ## <a name="caching-data"></a>Buforowanie danych  
- Pamięci podręcznej informacji przy użyciu klas w <xref:System.Runtime.Caching> przestrzeni nazw. Klasy buforowania w tej przestrzeni nazw zapewniają następujące funkcje:  
+ Pamięci podręcznej informacje przy użyciu klas w <xref:System.Runtime.Caching> przestrzeni nazw. Buforowanie klasy w tej przestrzeni nazw zapewniają następujące funkcje:  
   
--   Typach abstrakcyjnych, które stanowią podstawę tworzenia implementacji niestandardowych pamięci podręcznej.  
+-   Typy abstrakcyjne, które stanowią podstawę do tworzenia implementacji niestandardowych pamięci podręcznej.  
   
--   Implementacja pamięci podręcznej konkretnego obiektu w pamięci.  
+-   Implementacja pamięci podręcznej konkretny obiekt w pamięci.  
   
- Abstrakcyjna podstawowym buforowanie klasy (<xref:System.Runtime.Caching.ObjectCache>) definiuje następujące zadania buforowania:  
+ Abstrakcyjna Podstawowa pamięć podręczna klasy (<xref:System.Runtime.Caching.ObjectCache>) definiuje następujące zadania buforowania:  
   
 -   Tworzenie i zarządzanie nimi wpisy w pamięci podręcznej.  
   
--   Określanie informacji o wygaśnięciu i wykluczenia.  
+-   Określanie informacji dotyczących wygasania i eksmisji.  
   
--   Wyzwolenie zdarzenia, które zostały zgłoszone w odpowiedzi na zmiany w wpisy w pamięci podręcznej.  
+-   Wyzwolenie zdarzenia, które są wywoływane w odpowiedzi na zmiany wpisy w pamięci podręcznej.  
   
- <xref:System.Runtime.Caching.MemoryCache> Klasa jest implementacją pamięci podręcznej w pamięci obiekt <xref:System.Runtime.Caching.ObjectCache> klasy. Można użyć <xref:System.Runtime.Caching.MemoryCache> klasy do wykonywania większości zadań buforowania.  
+ <xref:System.Runtime.Caching.MemoryCache> Klasa jest implementacją pamięci podręcznej obiektu w pamięci <xref:System.Runtime.Caching.ObjectCache> klasy. Możesz użyć <xref:System.Runtime.Caching.MemoryCache> klasy do wykonywania większości zadań buforowania.  
   
 > [!NOTE]
->  <xref:System.Runtime.Caching.MemoryCache> Klasy modelu dla obiektu pamięci podręcznej programu ASP.NET, który jest zdefiniowany w <xref:System.Web.Caching> przestrzeni nazw. W związku z tym wewnętrzna logiki buforowania podobne do logiki, które podano w starszych wersjach programu ASP.NET.  
+>  <xref:System.Runtime.Caching.MemoryCache> Klasy jest formowana obiektu pamięci podręcznej platformy ASP.NET, która jest zdefiniowana w <xref:System.Web.Caching> przestrzeni nazw. W związku z tym wewnętrznej pamięci podręcznej logikę podobną do logiki, która została podana we wcześniejszych wersjach programu ASP.NET.  
   
- Na przykład sposobu użycia do buforowania w aplikacji WPF zobacz [wskazówki: buforowania danych aplikacji w aplikacji WPF](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md).  
+ Na przykład sposobu użycia do buforowania w aplikacji WPF, zobacz [Instruktaż: buforowanie danych aplikacji w aplikacji WPF](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md).  
   
 ## <a name="caching-in-aspnet-applications"></a>Buforowanie w aplikacjach ASP.NET  
- Buforowanie klas w <xref:System.Runtime.Caching> przestrzeni nazw zapewniać funkcje do buforowania danych w programie ASP.NET.  
+ Buforowanie klas w <xref:System.Runtime.Caching> przestrzeni nazw zapewnienia funkcji buforowania danych w programie ASP.NET.  
   
 > [!NOTE]
->  Jeśli celów aplikacji [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] lub wcześniej, musisz użyć buforowania klas, które są zdefiniowane w <xref:System.Web.Caching> przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [ASP.NET buforowanie omówienie](http://msdn.microsoft.com/library/5ec28012-4972-4dc3-b3e8-9d20401fe11d).  
+>  Jeśli Twoje cele aplikacji [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] lub wcześniej, należy użyć buforowania klas, które są zdefiniowane w <xref:System.Web.Caching> przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [program ASP.NET buforowanie Przegląd](https://msdn.microsoft.com/library/5ec28012-4972-4dc3-b3e8-9d20401fe11d).  
   
 > [!NOTE]
->  Podczas opracowywania nowych aplikacji, firma Microsoft zaleca użycie <xref:System.Runtime.Caching.MemoryCache> klasy. Interfejs API, który znajduje się w <xref:System.Runtime.Caching> przestrzeni nazw przypomina interfejs API, który znajduje się w <xref:System.Web.Caching.Cache> przestrzeni nazw. W związku z tym interfejsu API jest znane, jeśli używana jest buforowanie we wcześniejszych wersjach programu ASP.NET. Na przykład sposobu użycia buforowanie w aplikacjach ASP.NET, zobacz [wskazówki: buforowania danych aplikacji w programie ASP.NET](http://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23).  
+>  Podczas tworzenia nowych aplikacji zaleca się używanie <xref:System.Runtime.Caching.MemoryCache> klasy. Interfejs API, który znajduje się w <xref:System.Runtime.Caching> przestrzeni nazw jest jak interfejs API, który znajduje się w <xref:System.Web.Caching.Cache> przestrzeni nazw. W związku z tym interfejs API będą niczym nowym, jeśli użyto pamięci podręcznej we wcześniejszych wersjach programu ASP.NET. Na przykład jak używać buforowania w aplikacjach ASP.NET, zobacz [Instruktaż: buforowanie danych aplikacji na platformie ASP.NET](https://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23).  
   
 ### <a name="output-caching"></a>Buforowanie danych wyjściowych  
- Aby ręcznie aplikacji danych z pamięci podręcznej, można użyć <xref:System.Runtime.Caching.MemoryCache> klasy w programie ASP.NET. Program ASP.NET obsługuje również buforowanie danych wyjściowych, który przechowuje w pamięci wygenerowanych danych wyjściowych stron, kontrolek i odpowiedzi HTTP. Można skonfigurować deklaratywnie buforowanie danych wyjściowych na stronie sieci Web ASP.NET lub przy użyciu ustawień w pliku Web.config. Aby uzyskać więcej informacji, zobacz [outputCache Element do buforowania (schemat ustawień programu ASP.NET)](http://msdn.microsoft.com/library/47cd2b47-316f-4dfd-bbf8-539be3066fee).  
+ Aby ręcznie aplikacji danych z pamięci podręcznej, można użyć <xref:System.Runtime.Caching.MemoryCache> klasy w programie ASP.NET. ASP.NET obsługuje również buforowania danych wyjściowych, który przechowuje w pamięci wygenerowanych danych wyjściowych strony, kontrolek i odpowiedzi HTTP. Można skonfigurować w sposób deklaratywny buforowania danych wyjściowych na stronie sieci Web platformy ASP.NET lub przy użyciu ustawień w pliku Web.config. Aby uzyskać więcej informacji, zobacz [outputCache elemencie dla buforowania (ASP.NET Settings Schema)](https://msdn.microsoft.com/library/47cd2b47-316f-4dfd-bbf8-539be3066fee).  
   
- Program ASP.NET pozwala rozszerzyć buforowania danych wyjściowych przez tworzenie niestandardowych dostawców pamięci podręcznej danych wyjściowych. Przy użyciu dostawców niestandardowych, można przechowywać zawartość z pamięci podręcznej przy użyciu innych urządzeń pamięci masowej, takich jak dyski magazynu w chmurze i aparatów rozproszonej pamięci podręcznej. Aby utworzyć dostawcy niestandardowego wyjściowej pamięci podręcznej, należy utworzyć klasę, która jest pochodną <xref:System.Web.Caching.OutputCacheProvider> klasy i skonfigurować aplikację do używania dostawcy niestandardowego wyjściowej pamięci podręcznej.  
+ ASP.NET umożliwia rozszerzanie, buforowanie danych wyjściowych przez utworzenie niestandardowych dostawców pamięci podręcznej danych wyjściowych. Za pomocą dostawców niestandardowych, można przechowywać zawartość z pamięci podręcznej przy użyciu innych urządzeń magazynujących, takich jak dyski magazynu w chmurze i aparatów rozproszonej pamięci podręcznej. Aby utworzyć dostawcy pamięci podręcznej danych wyjściowych niestandardowych, należy utworzyć klasę, która pochodzi od klasy <xref:System.Web.Caching.OutputCacheProvider> klasy i konfigurowanie aplikacji do korzystania z danych wyjściowych niestandardowego dostawcy pamięci podręcznej.  
   
-## <a name="caching-in-wcf-rest-services"></a>Buforowanie w usługach REST usługi WCF  
- .NET Framework dla usługi REST usługi WCF umożliwia zalet buforowania danych wyjściowych deklaratywne dostępnej w programie ASP.NET. Dzięki temu możesz do pamięci podręcznej odpowiedzi z operacji usługi WCF REST. Gdy użytkownik wysyła żądanie HTTP GET do usługi, która jest skonfigurowana do buforowania, ASP.NET odsyła odpowiedź buforowana, a nie wywołano metody usługi. Po wygaśnięciu pamięci podręcznej, następnym razem, użytkownik wysyła żądanie HTTP GET jest wywoływana przez metodę usługi i ponownie buforowaną odpowiedź.  
+## <a name="caching-in-wcf-rest-services"></a>Buforowanie w usługach REST programu WCF  
+ Dla usługi REST programu WCF programu .NET Framework umożliwia korzystanie z zalet buforowania danych wyjściowych deklaratywne, dostępnej w programie ASP.NET. To pozwala na buforowanie odpowiedzi z operacji usługi WCF REST. Po użytkownik wysyła żądanie HTTP GET do usługi, która jest skonfigurowana do buforowania, ASP.NET odsyła odpowiedzi z pamięci podręcznej i nie jest wywoływana metoda usługi. Po wygaśnięciu pamięci podręcznej, gdy następnym razem użytkownik wysyła żądanie HTTP GET jest wywoływana metoda usługi i odpowiedź jest zbuforowana z ponownie.  
   
- .NET Framework umożliwia także implementuje buforowanie warunkowego HTTP GET. W scenariuszach REST warunkowego żądanie HTTP GET jest często używane przez usługi do zaimplementowania inteligentne buforowanie HTTP zgodnie z opisem w [specyfikacji HTTP](http://go.microsoft.com/fwlink/?LinkId=165800). Aby uzyskać więcej informacji, zobacz [buforowanie obsługę usług HTTP sieci Web WCF](http://go.microsoft.com/fwlink/?LinkId=184598).  
+ .NET Framework umożliwia także implementuje się buforowanie warunkowego HTTP GET. W pozostałych przypadkach warunkowego żądania HTTP GET jest często używana przez usługi do zaimplementowania buforowania inteligentnego HTTP, zgodnie z opisem w [specyfikację protokołu HTTP](https://go.microsoft.com/fwlink/?LinkId=165800). Aby uzyskać więcej informacji, zobacz [buforowania pomocy technicznej dla usług HTTP sieci Web WCF](https://go.microsoft.com/fwlink/?LinkId=184598).  
   
 ## <a name="extending-caching-in-the-net-framework"></a>Rozszerzenie pamięci podręcznej w programie .NET Framework  
- Buforowanie w programie .NET Framework jest możliwość rozszerzenia. <xref:System.Runtime.Caching.ObjectCache> Klasa umożliwia tworzenie implementacji niestandardowych pamięci podręcznej. Ta klasa zawiera elementy członkowskie, które są dostępne dla wszystkich zarządzanych aplikacji, w tym formularzy systemu Windows, Windows Presentation Foundation (WPF) i Windows Communications Foundation (WCF). Można to zrobić, aby można było utworzyć klasę pamięci podręcznej, która korzysta z mechanizmu innego magazynu lub jeśli użytkownik chce szczegółową kontrolę nad operacji pamięci podręcznej.  
+ Buforowanie w .NET Framework jest możliwość rozszerzenia. <xref:System.Runtime.Caching.ObjectCache> Klasy pozwala na tworzenie implementacji niestandardowych pamięci podręcznej. Ta klasa udostępnia elementy członkowskie, które są dostępne dla wszystkich aplikacji zarządzanych, w tym Windows Forms, Windows Presentation Foundation (WPF) i usług Windows Communications Foundation (WCF). Można to zrobić, aby można było utworzyć klasę pamięci podręcznej, która używa mechanizmu innego magazynu lub jeśli chcesz, aby precyzyjną kontrolę nad operacji pamięci podręcznej.  
   
- Rozszerzenie pamięci podręcznej można można wykonaj następujące czynności:  
+ Rozszerzenie pamięci podręcznej można następujące możliwości:  
   
--   Tworzenie niestandardowej klasy, która jest pochodną <xref:System.Runtime.Caching.ObjectCache> klasy, a następnie udostępnić implementację niestandardowych pamięci podręcznej w klasie pochodnej.  
+-   Utwórz klasę niestandardową, która pochodzi od klasy <xref:System.Runtime.Caching.ObjectCache> klasy, a następnie udostępnić implementację niestandardowej pamięci podręcznej w klasie pochodnej.  
   
--   Utwórz klasę pochodną <xref:System.Runtime.Caching.MemoryCache> klasy i dostosować lub rozszerzyć klasy pochodnej. Na przykład jak to zrobić, zobacz [buforowanie danych aplikacji przy użyciu wielu obiektów pamięci podręcznej w aplikacji ASP.NET](http://blogs.msdn.com/aspnetue/archive/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application.aspx).  
+-   Utwórz klasę, która pochodzi od klasy <xref:System.Runtime.Caching.MemoryCache> klasy i Dostosuj lub Rozszerz klasy pochodnej. Na przykład jak to zrobić, zobacz [buforowanie danych aplikacji przy użyciu wiele obiektów pamięci podręcznej w aplikacji ASP.NET](https://blogs.msdn.com/aspnetue/archive/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application.aspx).  
   
--   Utwórz klasę pochodną <xref:System.Web.Caching.OutputCacheProvider> klasy i skonfigurować aplikację do używania dostawcy niestandardowego wyjściowej pamięci podręcznej.  
+-   Utwórz klasę, która pochodzi od klasy <xref:System.Web.Caching.OutputCacheProvider> klasy i konfigurowanie aplikacji do korzystania z danych wyjściowych niestandardowego dostawcy pamięci podręcznej.  
   
- Aby uzyskać więcej informacji, zobacz wpis [Extensible buforowanie danych wyjściowych z platformy ASP.NET 4 (VS 2010 i .NET 4.0 serii)](http://go.microsoft.com/fwlink/?LinkId=185772) na blogu Scott Guthrie.  
+ Aby uzyskać więcej informacji, zobacz wpis [Extensible buforowania danych wyjściowych platformy ASP.NET 4 (VS 2010 i .NET 4.0 seria)](https://go.microsoft.com/fwlink/?LinkId=185772) w blogu Scotta Guthrie.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Runtime.Caching.ObjectCache>  
  <xref:System.Runtime.Caching.MemoryCache>  
  [Przewodnik: przechowywanie w pamięci podręcznej danych aplikacji w aplikacji WPF](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)  
- [Wskazówki: Buforowania danych aplikacji w programie ASP.NET](http://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23)
+ [Wskazówki: Buforowanie danych aplikacji na platformie ASP.NET](https://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23)

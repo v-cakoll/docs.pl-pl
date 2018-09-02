@@ -4,32 +4,32 @@ ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 0ca5eee4d4a1fd0dfaabbf9160488eb2d88f3d3d
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 6da641ec5da20c80f4c1034ded8a3be7d036b5a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804134"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466494"
 ---
 # <a name="security-concerns-for-message-logging"></a>Uwagi dotyczące zabezpieczeń rejestrowania komunikatów
-W tym temacie opisano, jak możesz chronić poufne dane z ujawniany w dzienników komunikatów, a także zdarzenia generowane przez rejestrowanie komunikatów.  
+W tym temacie opisano, jak możesz chronić dane poufne przed przypadkowym w dzienników komunikatów, a także zdarzenia generowane przez rejestrowanie komunikatów.  
   
 ## <a name="security-concerns"></a>Zagadnienia dotyczące zabezpieczeń  
   
 ### <a name="logging-sensitive-information"></a>Rejestrowanie informacji poufnych  
- Windows Communication Foundation (WCF) nie modyfikuje danych w nagłówkach specyficzne dla aplikacji i treść. Usługi WCF nie śledzi również informacje osobiste w nagłówkach specyficzne dla aplikacji i danych treści.  
+ Windows Communication Foundation (WCF) nie powoduje modyfikacji wszystkie dane w specyficznych dla aplikacji, nagłówki i treść. Usługi WCF nie śledzi także informacji osobistych w nagłówkach specyficzne dla aplikacji i danych treści.  
   
- Po włączeniu rejestrowania komunikatów, informacje osobiste w nagłówkach specyficzne dla aplikacji, takich jak ciąg zapytania. i body informacje, takie jak numer karty kredytowej, może stać się widoczne w dziennikach. Narzędzia wdrażania aplikacji jest odpowiedzialny za egzekwowanie kontrolę dostępu dla plików dziennika i konfiguracji. Jeśli nie chcesz, tego rodzaju informacje są widoczne, należy wyłączyć rejestrowanie lub odfiltrować części danych, jeśli chcesz udostępnić dzienniki.  
+ Po włączeniu rejestrowania komunikatów, informacje osobiste w nagłówkach specyficzne dla aplikacji, takich jak ciąg zapytania. i body informacje, takie jak numer karty kredytowej, może stać się widoczne w dziennikach. Narzędzia do wdrażania aplikacji jest odpowiedzialny za wymuszania kontroli dostępu do plików dziennika i konfiguracji. Nie należy tego rodzaju informacje są widoczne, należy wyłączyć rejestrowanie lub odfiltrować części danych, jeśli chcesz udostępnić dzienniki.  
   
- Poniższe porady mogą ułatwić zapobiec przypadkowym ujawnieniem treści pliku dziennika:  
+ Poniższe porady mogą pomóc aby zawartość pliku dziennika przed przypadkowym ujawnieniem:  
   
--   Upewnij się, że dziennika, które pliki są chronione przez kontroli dostępu zawiera listę (ACL) hosta sieci Web i hosta samodzielnego scenariuszy.  
+-   Upewnij się, że dziennika, które pliki są chronione przez kontroli dostępu zawiera listę (ACL) zarówno w sieci Web hosta i hosta samodzielnego scenariuszy.  
   
--   Wybierz rozszerzenie pliku, który nie może być łatwo przekazywane za pomocą żądania sieci Web. Na przykład rozszerzenie pliku XML nie jest bezpiecznym wyborem. Możesz sprawdzić Przewodnik administrowania Internet Information Services (IIS), aby wyświetlić listę rozszerzeń, które mogą być przekazywane.  
+-   Wybierz rozszerzenie pliku, który nie może być łatwo przekazywane za pomocą żądania sieci Web. Na przykład rozszerzenie pliku XML nie jest bezpiecznym wyborem. Można sprawdzić w podręczniku administratora usług Internet Information Services (IIS), aby wyświetlić listę rozszerzeń, które mogą być przekazywane.  
   
--   Określ ścieżkę bezwzględną do lokalizacji pliku dziennika, które powinny być poza katalog sieci Web hosta vroot publicznego aby zapobiec uzyskiwany przez innych firm za pomocą przeglądarki sieci Web.  
+-   Określ ścieżki bezwzględnej do lokalizacji pliku dziennika, która powinna być poza katalogiem publiczny głównego katalogu wirtualnego hosta o sieci Web, aby uniemożliwić dostęp do innych firm za pomocą przeglądarki sieci Web.  
   
- Domyślnie klucze i dane osobowe lub informacje takie jak nazwa użytkownika i hasło nie jest zalogowany śladów i rejestrowane wiadomości. Administrator maszyny, jednak można użyć `enableLoggingKnownPII` atrybutu w `machineSettings` elementu w pliku Machine.config, aby umożliwić aplikacji uruchomionych na maszynie znane dane osobowe lub informacje logowania. Następująca konfiguracja pokazano, jak to zrobić:  
+ Domyślnie klucze identyfikowalne dane osobowe (PII), takie jak nazwa użytkownika i hasło nie są rejestrowane w śladach i rejestrowane komunikaty. Administrator komputera, jednak można użyć `enableLoggingKnownPII` atrybutu w `machineSettings` elementu w pliku Machine.config, aby zezwolić aplikacji na maszynie się znane identyfikowalne dane osobowe (PII). Następująca konfiguracja pokazuje, jak to zrobić:  
   
 ```xml  
 <configuration>  
@@ -39,7 +39,7 @@ W tym temacie opisano, jak możesz chronić poufne dane z ujawniany w dziennikó
 </configuration>   
 ```  
   
- Następnie można użyć narzędzia wdrażania aplikacji `logKnownPii` atrybutu w pliku App.config lub Web.config, aby włączyć dane osobowe rejestrowania w następujący sposób:  
+ Następnie można użyć narzędzia do wdrażania aplikacji `logKnownPii` atrybutu w pliku App.config lub Web.config, aby włączyć dane osobowe rejestrowanie się w następujący sposób:  
   
 ```xml  
 <system.diagnostics>  
@@ -56,12 +56,12 @@ W tym temacie opisano, jak możesz chronić poufne dane z ujawniany w dziennikó
 </system.diagnostics>  
 ```  
   
- Tylko wtedy, gdy oba ustawienia są `true` jest włączone rejestrowanie danych osobowych. Kombinacja dwa przełączniki zapewnia elastyczność do logowania znane dane osobowe dla każdej aplikacji.  
+ Tylko wtedy, gdy oba ustawienia są `true` jest włączone rejestrowanie danych osobowych. Kombinacja dwóch przełączników umożliwia elastyczne się znane też danych osobowych dla każdej aplikacji.  
   
 > [!IMPORTANT]
->  W [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] `logEntireMessage` i `logKnownPii` flagi należy również wybrać opcję `true` w pliku Web.config lub w pliku App.config, aby włączyć rejestrowanie danych osobowych, Pokaż tak jak w poniższym przykładzie `<system.serviceModel><messageLogging logEntireMessage="true" logKnownPii="true" …`.  
+>  W [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] `logEntireMessage` i `logKnownPii` również musi mieć wartość flagi `true` w pliku Web.config lub w pliku App.config, aby włączyć rejestrowanie dane osobowe, tak jak pokazano w poniższym przykładzie `<system.serviceModel><messageLogging logEntireMessage="true" logKnownPii="true" …`.  
   
- Należy zwrócić uwagę, jeśli określisz dwóch lub więcej źródeł niestandardowych w pliku konfiguracji, tylko atrybuty pierwszego źródła są odczytywane. Pozostałe są ignorowane. Oznacza to, że dla następującego pliku App.config, plik, dane osobowe nie jest zalogowany dla obu źródeł, mimo że jawnie włączono rejestrowanie danych osobowych drugie źródło.  
+ Należy pamiętać, jeśli określisz co najmniej dwóch źródeł niestandardowych w pliku konfiguracji, tylko atrybuty pierwszego źródła są odczytywane. Pozostałe są ignorowane. Oznacza to, że dla następujących App.config, plik, dane osobowe nie jest rejestrowana dla obu źródeł, mimo, że rejestrowanie danych osobowych jest jawnie włączone dla drugiego źródła.  
   
 ```xml  
 <system.diagnostics>  
@@ -86,30 +86,30 @@ W tym temacie opisano, jak możesz chronić poufne dane z ujawniany w dziennikó
 </system.diagnostics>  
 ```  
   
- Jeśli `<machineSettings enableLoggingKnownPii="Boolean"/>` istnieje element poza pliku Machine.config, system generuje <xref:System.Configuration.ConfigurationErrorsException>.  
+ Jeśli `<machineSettings enableLoggingKnownPii="Boolean"/>` element istnieje poza pliku Machine.config, system generuje <xref:System.Configuration.ConfigurationErrorsException>.  
   
- Zmiany zaczynają obowiązywać, tylko wtedy, gdy rozpoczyna się lub ponowne uruchomienie aplikacji. Zdarzenie jest rejestrowane podczas uruchamiania, gdy oba atrybuty są ustawione na `true`. Jeśli również zostanie zarejestrowane zdarzenie `logKnownPii` ustawiono `true` , ale `enableLoggingKnownPii` jest `false`.  
+ Zmiany zostaną zastosowane, tylko wtedy, gdy rozpoczyna się lub ponowne uruchomienie aplikacji. Zdarzenie jest rejestrowane podczas uruchamiania, gdy oba atrybuty są ustawione na `true`. Jeśli zdarzenie jest również rejestrowana `logKnownPii` ustawiono `true` , ale `enableLoggingKnownPii` jest `false`.  
   
- Administrator maszyny i wdrażania aplikacji należy zachować wyjątkową ostrożność, korzystając z tych dwóch parametrów. Jeśli włączono rejestrowanie danych osobowych, są rejestrowane kluczy zabezpieczeń i dane osobowe. Jeśli jest wyłączona, dane poufne i specyficzne dla aplikacji jest nadal rejestrowane w nagłówkach wiadomości i treści. Aby uzyskać bardziej szczegółowe omówienie prywatności i ochrony danych osobowych przed przypadkowym zobacz [zasady zachowania poufności użytkownika](http://go.microsoft.com/fwlink/?LinkID=94647).  
+ Administrator maszyny i wdrażania aplikacji należy zachować wyjątkową ostrożność, korzystając z tych dwóch przełączników. Jeśli włączono rejestrowanie dane osobowe, kluczy zabezpieczeń i dane osobowe są rejestrowane. Jeśli jest wyłączone, dane poufne i specyficzne dla aplikacji są nadal rejestrowane w wiadomości nagłówki i treść. Aby uzyskać bardziej szczegółowe omówienie ochrony prywatności i ochrony danych osobowych przed przypadkowym zobacz [rozwiązania prywatność użytkownika](https://go.microsoft.com/fwlink/?LinkID=94647).  
   
 > [!CAUTION]
->  Dane osobowe nie jest ukryty w wadliwe komunikaty. Takie messaged są rejestrowane jako — bez żadnych modyfikacji. Atrybuty wymienione wcześniej nie mają wpływu na tym.  
+>  Dane osobowe nie jest ukryty w źle sformułowane komunikaty. Takie messaged są rejestrowane jako — bez żadnych modyfikacji. Atrybuty wymienione wcześniej nie mają wpływu na to.  
   
-### <a name="custom-trace-listener"></a>Odbiornik śledzenia niestandardowych  
- Dodawanie odbiornika śledzenia niestandardowych na rejestrowania komunikatów źródła śledzenia jest uprawnień, które powinny być ograniczone do administratora. Wynika to z faktu złośliwego niestandardowe odbiorniki można skonfigurować do wysyłania wiadomości zdalnie, która prowadzi do ujawnienie poufnych informacji. Ponadto możesz skonfigurować niestandardowe odbiornika do wysyłania wiadomości w sieci, takich jak ze zdalną bazą danych, powinien wymuszać kontrolę dostępu do dzienników komunikatów w komputerze zdalnym.  
+### <a name="custom-trace-listener"></a>Odbiornik śledzenia niestandardowe  
+ Dodawanie odbiornika śledzenia niestandardowe dotyczące rejestrowania komunikatu źródła śledzenia jest uprawnień, które powinny być ograniczone do administratora. Jest to spowodowane złośliwego niestandardowe odbiorniki można skonfigurować do wysyłania wiadomości zdalnie, co prowadzi do ujawnienia poufnych informacji. Ponadto jeśli skonfigurujesz niestandardowe odbiornika do wysyłania wiadomości na łączu, takich jak ze zdalną bazą danych powinien wymuszać kontrolę dostępu dla dzienników komunikatów na komputerze zdalnym.  
   
 ## <a name="events-triggered-by-message-logging"></a>Zdarzenia wyzwolone przez rejestrowanie komunikatów  
  Poniższa lista zawiera wszystkie zdarzenia, które są emitowane przez rejestrowanie komunikatów.  
   
--   Komunikat logowania: to zdarzenie jest emitowany po włączeniu rejestrowania komunikatów w konfiguracji lub za pomocą usługi WMI. Zawartość zdarzenia jest "włączono rejestrowanie komunikatów. Poufne informacje mogą być rejestrowane w postaci zwykłego tekstu, nawet jeśli zostały one zaszyfrowane w trakcie przesyłania, na przykład treści wiadomości."  
+-   Komunikat logowania: to zdarzenie jest emitowane, gdy rejestrowanie komunikatów jest włączona w konfiguracji lub za pomocą usługi WMI. Zawartość zdarzenia jest "włączone rejestrowanie komunikatów. Informacje poufne może zostać zarejestrowane w postaci zwykłego tekstu, nawet jeśli zostały zaszyfrowane w sieci, na przykład, treści wiadomości."  
   
--   Komunikat wylogowanie: to zdarzenie jest emitowany wyłączenie rejestrowania komunikatów za pomocą usługi WMI. Zawartość zdarzenia jest "Komunikat rejestrowanie zostało wyłączone."  
+-   Komunikat o wylogowanie: to zdarzenie jest emitowane, jeśli rejestrowanie komunikatów jest wyłączone za pomocą usługi WMI. Zawartość zdarzenia jest "Komunikat rejestrowanie zostało wyłączone."  
   
--   Dziennik znane dane osobowe na: To zdarzenie jest emitowany, gdy jest włączone rejestrowanie znanych danych osobowych. Dzieje się tak podczas `enableLoggingKnownPii` atrybutu w `machineSettings` element w pliku Machine.config jest ustawiony na wartość `true`i `logKnownPii` atrybutu `source` element w pliku App.config lub Web.config jest ustawiony na wartość `true`.  
+-   Dziennik znane też danych osobowych na: To zdarzenie jest emitowane, gdy jest włączone rejestrowanie znane też danych osobowych. Dzieje się tak po `enableLoggingKnownPii` atrybutu w `machineSettings` element w pliku Machine.config jest ustawiony na `true`i `logKnownPii` atrybutu `source` element w pliku App.config lub Web.config jest ustawiony na `true`.  
   
--   Zaloguj się znane dane osobowe niedozwolone: to zdarzenie jest emitowany, gdy rejestrowanie znanych danych nie jest dozwolone. Dzieje się tak podczas `logKnownPii` atrybutu `source` element w pliku App.config lub Web.config jest ustawiony na wartość `true`, ale `enableLoggingKnownPii` atrybutu w `machineSettings` element w pliku Machine.config jest ustawiony na wartość `false`. Nie wyjątek.  
+-   Zaloguj się znane dane osobowe niedozwolone: to zdarzenie jest emitowane podczas rejestrowania znane dane osobowe nie jest dozwolone. Dzieje się tak po `logKnownPii` atrybutu `source` element w pliku App.config lub Web.config jest ustawiony na `true`, ale `enableLoggingKnownPii` atrybutu w `machineSettings` element w pliku Machine.config jest ustawiony na `false`. Jest zgłaszany żaden wyjątek.  
   
- Zdarzenia te można wyświetlać w narzędziu Podgląd zdarzeń, z dołączoną do systemu Windows. Aby uzyskać więcej informacji o tym, zobacz [rejestrowania zdarzeń](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
+ Zdarzenia te można wyświetlać w narzędziu Podgląd zdarzeń, które pochodzą z Windows. Aby uzyskać więcej informacji na temat tego, zobacz [rejestrowania zdarzeń](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Rejestrowanie komunikatów](../../../../docs/framework/wcf/diagnostics/message-logging.md)  

@@ -4,11 +4,11 @@ description: Dowiedz się, jak wykonać niestandardowych operacji łączenia LIN
 ms.date: 12/1/2016
 ms.assetid: 56a2a4a5-7299-497d-b3c3-23c848678911
 ms.openlocfilehash: a0e08396c006f68949357c50a28b3b0982f0dd83
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43331866"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468113"
 ---
 # <a name="perform-custom-join-operations"></a>Wykonywanie niestandardowych operacji łączenia
 

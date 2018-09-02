@@ -1,32 +1,32 @@
 ---
-title: 'Porady: tworzenie przepływów pracy'
+title: 'Porady: Tworzenie przepływu pracy'
 ms.date: 03/30/2017
 ms.assetid: 87234108-8e21-4cb3-9340-4a1a13f3f98c
-ms.openlocfilehash: 98235eac9309ecb0229281160f210079e712b755
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adaa322d4129f56abcad4fd848204ee373e907bd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513266"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43462301"
 ---
-# <a name="how-to-create-a-workflow"></a>Porady: tworzenie przepływów pracy
-Przepływy pracy można skonstruować z działań wbudowanych oraz z działań niestandardowych. Ten tematy w tym kroku sekcji przez proces tworzenia przepływu pracy, który używa zarówno wbudowane działania, takie jak <xref:System.Activities.Statements.Flowchart> działania i działań niestandardowych z poprzedniej [porady: tworzenie działania](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) tematu. Przepływ pracy modele numer guessing gier. Tylko jeden tematy w tej sekcji jest wymagany do ukończenia samouczka; należy wybierz odpowiedni styl interesującego i wykonać ten krok. Jednak użytkownik może zakończyć się we wszystkich tematach w razie potrzeby.  
+# <a name="how-to-create-a-workflow"></a>Porady: Tworzenie przepływu pracy
+Przepływy pracy można skonstruować z wbudowanych działań, a także z działań niestandardowych. Ten temat w tym kroku sekcji proces tworzenia przepływu pracy, który używa zarówno wbudowanych działań, takich jak <xref:System.Activities.Statements.Flowchart> działanie i działań niestandardowych z poprzedniego [porady: tworzenie działania](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) tematu. Przepływ pracy modeli gra odgadnięcia liczb. Tylko jeden tematy w tej sekcji jest wymagany do ukończenia tego samouczka; należy wybrać styl, który Cię interesuje i wykonaj ten krok. Jednak użytkownik może przejść wszystkie tematy w razie potrzeby.  
   
 > [!NOTE]
->  Każdego tematu w samouczku wprowadzenie zależy od poprzednich tematów. Aby ukończyć w tym temacie, najpierw musisz zakończyć [porady: tworzenie działania](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md).  
+>  Każdy temat samouczka Wprowadzenie zależy od poprzednich tematach. Aby ukończyć ten temat, najpierw musisz zakończyć [porady: tworzenie działania](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md).  
   
 > [!NOTE]
->  Aby pobrać ukończoną wersję tego samouczka, zobacz [Windows Workflow Foundation (WF45) — Samouczek wprowadzający](http://go.microsoft.com/fwlink/?LinkID=248976).  
+>  Aby pobrać pełną wersję tego samouczka, zobacz [Windows Workflow Foundation (WF45) — Samouczek wprowadzający](https://go.microsoft.com/fwlink/?LinkID=248976).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Instrukcje: Tworzenie sekwencyjnego przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-create-a-sequential-workflow.md)  
  Opisuje sposób tworzenia sekwencyjnego przepływu pracy przy użyciu <xref:System.Activities.Statements.Sequence> działania.  
   
  [Instrukcje: Tworzenie przepływu pracy schematu blokowego](../../../docs/framework/windows-workflow-foundation/how-to-create-a-flowchart-workflow.md)  
- Opisuje sposób tworzenia przepływu pracy schemat blokowy przy użyciu <xref:System.Activities.Statements.Flowchart> działania.  
+ W tym artykule opisano sposób tworzenia przepływu pracy schematu blokowego przy użyciu <xref:System.Activities.Statements.Flowchart> działania.  
   
  [Instrukcje: Tworzenie przepływu pracy automatu stanów](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)  
- Opisuje sposób tworzenia stanu komputera przepływu pracy używającego <xref:System.Activities.Statements.StateMachine> działania.  
+ Opisuje, jak utworzyć stanu komputera przepływu pracy przy użyciu <xref:System.Activities.Statements.StateMachine> działania.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Programowanie w programie Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/programming.md)

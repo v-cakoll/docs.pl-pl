@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], TemplateBinding markup extension
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
-ms.openlocfilehash: d425d17405bc8241c3fd85c77c6672265a060900
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7c076172424baab4553a277baab2faca634c1e87
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546923"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474197"
 ---
 # <a name="templatebinding-markup-extension"></a>TemplateBinding — Rozszerzenie znaczników
 Łączy wartość właściwości w szablonie formantu w taki sposób, że staje się ona wartością innej właściwości w formancie z szablonem.  
@@ -34,31 +34,31 @@ ms.locfileid: "33546923"
   
 |||  
 |-|-|  
-|`propertyName`|<xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> właściwości ustawione w składni metody ustawiającej.|  
-|`sourceProperty`|Inna właściwość zależności, który istnieje w typie szablonem, określony przez jego <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType>.<br /><br /> - lub -<br /><br /> „Spisana” nazwa właściwości definiowana przez typ inny niż docelowy typ, dla którego jest ustawiany szablon. Jest to rzeczywiście <xref:System.Windows.PropertyPath>. Zobacz [składnia PropertyPath XAML](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md).|  
+|`propertyName`|<xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> właściwości ustawiany w składni settera.|  
+|`sourceProperty`|Inna właściwość zależności istniejąca w typie są oparte na szablonach, określony przez jego <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType>.<br /><br /> - lub -<br /><br /> „Spisana” nazwa właściwości definiowana przez typ inny niż docelowy typ, dla którego jest ustawiany szablon. Jest to rzeczywiście <xref:System.Windows.PropertyPath>. Zobacz [składnia elementu PropertyPath XAML](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md).|  
   
 ## <a name="remarks"></a>Uwagi  
- A `TemplateBinding` jest zoptymalizowany formę [powiązanie](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) dla scenariuszy szablonu odpowiednikiem `Binding` skonstruowany przy `{Binding RelativeSource={RelativeSource TemplatedParent}}`. A `TemplateBinding` jest zawsze jednokierunkowe powiązanie, nawet jeśli właściwości domyślnie powiązanie dwustronne. Obie używane właściwości muszą być właściwościami zależności.  
+ A `TemplateBinding` jest zoptymalizowane formą [powiązanie](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) dla scenariuszy szablonów, analogiczne do `Binding` skonstruowany przy użyciu `{Binding RelativeSource={RelativeSource TemplatedParent}}`. Element `TemplateBinding` jest zawsze powiązaniem jednokierunkowym, nawet jeśli jego właściwości domyślnie określają powiązanie dwukierunkowe. Obie używane właściwości muszą być właściwościami zależności. Aby osiągnąć określają powiązanie dwukierunkowe oparte na szablonach nadrzędnej następującą instrukcję powiązanie zamiast tego użyj `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay, Path=MyDependencyProperty}`. 
   
- [RelativeSource](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md) jest inne rozszerzenie znaczników, która czasami jest używane w połączeniu z lub a `TemplateBinding` w celu wykonywania powiązania właściwości względne w ramach szablonu.  
+ [RelativeSource](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md) jest kolejnym rozszerzeniem znacznika, którego używa się czasami w połączeniu lub zamiast `TemplateBinding` w celu względnego powiązania właściwości w szablonie.  
   
- Opisujące szablonów kontrolki jako koncepcji nie pasuje do Aby uzyskać więcej informacji, zobacz [stylów formantu i szablony](../../../../docs/framework/wpf/controls/control-styles-and-templates.md).  
+ Opisujące szablony kontrolek jako koncepcja nie jest objęty tutaj; Aby uzyskać więcej informacji, zobacz [style i szablony kontrolek](../../../../docs/framework/wpf/controls/control-styles-and-templates.md).  
   
- Składnią atrybutu jest składnia najczęściej używana z tym rozszerzeniem znacznika. Token ciągu po `TemplateBinding` przypisany jako identyfikator ciągu <xref:System.Windows.TemplateBindingExtension.Property%2A> wartości podstawowych <xref:System.Windows.TemplateBindingExtension> rozszerzenie klasy.  
+ Składnią atrybutu jest składnia najczęściej używana z tym rozszerzeniem znacznika. Token ciągu podawany po `TemplateBinding` ciągu identyfikatora jest przypisany jako <xref:System.Windows.TemplateBindingExtension.Property%2A> wartości elementu bazowego <xref:System.Windows.TemplateBindingExtension> rozszerzenie klasy.  
   
- Można wprowadzić składnię obiektów, jednak nie pokazano jej tutaj, ponieważ nie ma praktycznego zastosowania. `TemplateBinding` jest używany do wypełniania wyrażenia wartości w obrębie metody ustawiające, przy użyciu obliczone i przy użyciu obiektu składnia elementu `TemplateBinding` do wypełnienia `<Setter.Property>` jest niepotrzebnie pełne składni elementu właściwości.  
+ Można wprowadzić składnię obiektów, jednak nie pokazano jej tutaj, ponieważ nie ma praktycznego zastosowania. `TemplateBinding` Służy do wypełnienia wartości setterami przy użyciu obliczane wyrażenia, a za pomocą składni obiektów `TemplateBinding` do wypełnienia `<Setter.Property>` składni elementu właściwości to niepotrzebne powielenie informacji.  
   
- `TemplateBinding` można również w Określa użycie atrybutu pełne <xref:System.Windows.TemplateBindingExtension.Property%2A> właściwości jako właściwość = pary wartości:  
+ `TemplateBinding` można również użycie pełnego atrybut określający <xref:System.Windows.TemplateBindingExtension.Property%2A> właściwość jako właściwość = para wartości:  
   
 ```xml  
 <object property="{TemplateBinding Property=sourceProperty}" .../>  
 ```  
   
- Szczegółowe definicje są często przydatne w rozszerzeniach zawierających więcej niż jedną konfigurowalną właściwość albo gdy niektóre właściwości są opcjonalne. Ponieważ `TemplateBinding` ma tylko jedną można ustawić właściwości, która jest wymagana, to użycie Pełne nie są typowe.  
+ Szczegółowe definicje są często przydatne w rozszerzeniach zawierających więcej niż jedną konfigurowalną właściwość albo gdy niektóre właściwości są opcjonalne. Ponieważ `TemplateBinding` ma tylko jedną konfigurowalną właściwość, która jest wymagana, użycie tych pełne nie są typowe.  
   
- W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implementacji procesora XAML, obsługę tego rozszerzenia znacznika jest definiowana za pomocą <xref:System.Windows.TemplateBindingExtension> klasy.  
+ W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implementacji procesora XAML, obsługa tego rozszerzenia znacznika jest definiowana przez <xref:System.Windows.TemplateBindingExtension> klasy.  
   
- `TemplateBinding` to rozszerzenie znacznika. Rozszerzenia znaczników są zazwyczaj implementowane w sytuacji, gdy istnieje wymóg, aby wartości atrybutów były wyprowadzane w postaci innej niż wartości literałów lub nazwy programów obsługi, a wymóg ma charakter bardziej globalny niż zwykłe umieszczenie konwerterów typów w niektórych typach lub właściwościach. Wszystkie rozszerzenia znaczników w XAML, użyj `{` i `}` znaków w ich składni atrybutu Konwencji, za pomocą którego procesora XAML rozpoznaje, że rozszerzenie znacznika musi przetworzyć atrybutu. Aby uzyskać więcej informacji, zobacz [rozszerzenia znaczników i WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ `TemplateBinding` jest rozszerzeniem znacznika. Rozszerzenia znaczników są zazwyczaj implementowane w sytuacji, gdy istnieje wymóg, aby wartości atrybutów były wyprowadzane w postaci innej niż wartości literałów lub nazwy programów obsługi, a wymóg ma charakter bardziej globalny niż zwykłe umieszczenie konwerterów typów w niektórych typach lub właściwościach. Wszystkie rozszerzenia znaczników w XAML użyj `{` i `}` znaków w składni swoich atrybutów, które jest do Konwencja, za pomocą której procesor XAML rozpoznaje, że rozszerzenie znacznika musi wykonać przetwarzanie atrybutu. Aby uzyskać więcej informacji, zobacz [rozszerzenia znacznikowania i WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Style>  

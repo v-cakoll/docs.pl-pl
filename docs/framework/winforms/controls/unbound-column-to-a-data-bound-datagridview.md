@@ -9,19 +9,19 @@ helpviewer_keywords:
 - data grids [Windows Forms], adding unbound columns
 - DataGridView control [Windows Forms], unbound data
 ms.assetid: f7bdc4d8-ba8e-421b-ad62-82d936f01372
-ms.openlocfilehash: 8ba06457371bab5b81e18a307960a833d1d54199
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 39c637fe30ed852f7d6e9fa7a1dbbfa72af9e4b4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537313"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466072"
 ---
 # <a name="how-to-add-an-unbound-column-to-a-data-bound-windows-forms-datagridview-control"></a>Porady: dodawanie niepowiązanych kolumn do powiązanego z danymi formantu DataGridView formularzy systemu Windows
-Dane wyświetlane w <xref:System.Windows.Forms.DataGridView> kontroli zwykle będą pobierane z określonego rodzaju źródła danych, ale należy wyświetlić kolumny danych, które nie pochodzą ze źródła danych. Tego rodzaju kolumny jest nazywany niepowiązanych kolumn. Niepowiązanych kolumn może mieć wiele form. Często są one używane do zapewniania dostępu do szczegółów wiersza danych.  
+Dane wyświetlane w <xref:System.Windows.Forms.DataGridView> kontroli zwykle będą pochodzić z określonego rodzaju źródła danych, ale możesz chcieć wyświetlić kolumny danych, która nie pochodzi ze źródła danych. Tego rodzaju kolumny jest nazywany niepowiązanych kolumn. Niepowiązanych kolumn może mieć wiele form. Służą one często, aby zapewnić dostęp do szczegółów wiersza danych.  
   
- Poniższy przykładowy kod przedstawia sposób tworzenia niepowiązanych kolumn z **szczegóły** przyciski, aby wyświetlić tabeli podrzędnej dotyczące określonego wiersza w tabeli nadrzędnej podczas implementowania scenariusza wzorzec/szczegół. Aby odpowiadanie na kliknięcia przycisku, zaimplementuj <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> obsługi zdarzeń, który wyświetla formularz zawierający tabelą podrzędną.  
+ Poniższy przykład kodu demonstruje sposób tworzenia niepowiązanych kolumn z **szczegóły** przycisków, aby wyświetlić tabeli podrzędnej związane z określonego wiersza w tabeli nadrzędnej, gdy implementować scenariusza wzorzec/szczegół. Aby reagować na kliknięcia przycisku, zaimplementować <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> program obsługi zdarzeń, który wyświetla formularz zawierający tabeli podrzędnej.  
   
- Brak obsługi dla tego zadania w programie Visual Studio.  Zobacz też [porady: Dodawanie i usuwanie kolumn w Windows Forms DataGridView formantu przy użyciu narzędzia Projektant](http://msdn.microsoft.com/library/dyyesckz\(v=vs.110\))  
+ Są obsługiwane dla tego zadania w programie Visual Studio.  Zobacz też [porady: Dodawanie i usuwanie kolumn w Windows Forms DataGridView kontroli przy użyciu narzędzia Projektant](https://msdn.microsoft.com/library/dyyesckz\(v=vs.110\))  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#010](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#010)]

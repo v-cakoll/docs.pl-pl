@@ -2,17 +2,17 @@
 title: Wnioskowanie relacji
 ms.date: 03/30/2017
 ms.assetid: 8fa86a9d-6545-4a9d-b1f5-58d9742179c7
-ms.openlocfilehash: 9833966fa5a16bef70a6ae2b9ca618fde0e05fbb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7dc3fb0c6098d636e640aaf52b72a404c1486492
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759039"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470817"
 ---
 # <a name="inferring-relationships"></a>Wnioskowanie relacji
-Jeśli element, który jest wywnioskowany jako tabela ma element podrzędny, która jest również wykryta jako tabelę, <xref:System.Data.DataRelation> zostanie utworzona między dwiema tabelami. Nową kolumnę o nazwie **ParentTableName_Id** zostaną dodane do tabeli utworzony dla elementu nadrzędnego oraz tabela utworzona dla elementu podrzędnego. **ColumnMapping** zostanie ustawiona właściwość tej kolumny tożsamości do **MappingType.Hidden**. Kolumna będzie zwiększanie automatycznie klucz podstawowy dla tabeli nadrzędnej i będzie służyć do **DataRelation** między dwiema tabelami. Typ danych kolumny tożsamości dodano będzie **System.Int32**, w odróżnieniu od typu danych wszystkie inne wnioskowany kolumny, która jest **System.String**. A <xref:System.Data.ForeignKeyConstraint> z **DeleteRule** = **Cascade** zostanie utworzony również w tabelach nadrzędne i podrzędne za pomocą nowej kolumny.  
+Jeśli element, który jest wnioskowany jako tabela ma element podrzędny, która została wywnioskowana, także jako tabelę, <xref:System.Data.DataRelation> zostaną utworzone między dwiema tabelami. Nową kolumnę o nazwie **ParentTableName_Id** zostaną dodane do tabeli, który został utworzony dla elementu nadrzędnego i tabelę utworzoną dla elementu podrzędnego. **ColumnMapping** właściwość ta kolumna identity jest równa **MappingType.Hidden**. Kolumna będzie zwiększenie automatycznie klucz podstawowy dla tabeli nadrzędnej i będą używane dla **DataRelation** między dwiema tabelami. Typ danych w kolumnie tożsamości dodano będzie **System.Int32**, inaczej niż w przypadku wszystkich pozostałych kolumn wywnioskowane na typ danych, który jest **System.String**. A <xref:System.Data.ForeignKeyConstraint> z **DeleteRule** = **Cascade** zostanie również utworzony przy użyciu nowej kolumny w tabelach nadrzędne i podrzędne.  
   
- Rozważmy na przykład następujący kod XML:  
+ Na przykład rozważmy następujący kod XML:  
   
 ```xml  
 <DocumentElement>  
@@ -23,15 +23,15 @@ Jeśli element, który jest wywnioskowany jako tabela ma element podrzędny, kt�
 </DocumentElement>  
 ```  
   
- Proces wnioskowania spowoduje utworzenie dwóch tabel: **Element1** i **ChildElement1**.  
+ Procesu wnioskowania dadzą dwie tabele: **Element1** i **ChildElement1**.  
   
- **Element1** tabela będzie mieć dwie kolumny: **Element1_Id** i **ChildElement2**. **ColumnMapping** właściwość **Element1_Id** kolumny zostanie ustawiona do **MappingType.Hidden**. **ColumnMapping** właściwość **ChildElement2** kolumny zostanie ustawiona do **MappingType.Element**. **Element1_Id** kolumny zostanie ustawione jako klucz podstawowy **Element1** tabeli.  
+ **Element1** tabela będzie zawierać dwie kolumny: **Element1_Id** i **ChildElement2**. **ColumnMapping** właściwość **Element1_Id** kolumna zostanie ustawiona **MappingType.Hidden**. **ColumnMapping** właściwość **ChildElement2** kolumna zostanie ustawiona **MappingType.Element**. **Element1_Id** kolumny zostanie ustawiony jako klucz podstawowy **Element1** tabeli.  
   
- **ChildElement1** tabela będzie miała trzy kolumny: **attr1**, **attr2** i **Element1_Id**. **ColumnMapping** właściwość **attr1** i **attr2** kolumn zostanie ustawiona do **MappingType.Attribute**. **ColumnMapping** właściwość **Element1_Id** kolumny zostanie ustawiona do **MappingType.Hidden**.  
+ **ChildElement1** tabela ma trzy kolumny: **attr1**, **attr2** i **Element1_Id**. **ColumnMapping** właściwość **attr1** i **attr2** kolumny zostaną ustawione **MappingType.Attribute**. **ColumnMapping** właściwość **Element1_Id** kolumna zostanie ustawiona **MappingType.Hidden**.  
   
  A **DataRelation** i **ForeignKeyConstraint** zostanie utworzona z użyciem **Element1_Id** kolumny z obu tabel.  
   
- **Zestaw danych:** DocumentElement  
+ **Zestaw danych:** elementu DocumentElement  
   
  **Tabela:** Element1  
   
@@ -45,7 +45,7 @@ Jeśli element, który jest wywnioskowany jako tabela ma element podrzędny, kt�
 |-----------|-----------|------------------|  
 |Wartość1|Wartość2|0|  
   
- **DataRelation:** Element1_ChildElement1  
+ **DataRelation —:** Element1_ChildElement1  
   
  **ParentTable:** Element1  
   
@@ -55,7 +55,7 @@ Jeśli element, który jest wywnioskowany jako tabela ma element podrzędny, kt�
   
  **ChildColumn:** Element1_Id  
   
- **Zagnieżdżone:** wartość True  
+ **Zagnieżdżone:** True  
   
  **ForeignKeyConstraint:** Element1_ChildElement1  
   
@@ -76,4 +76,4 @@ Jeśli element, który jest wywnioskowany jako tabela ma element podrzędny, kt�
  [Zagnieżdżanie elementów DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
  [Używanie języka XML w elemencie DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

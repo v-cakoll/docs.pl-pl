@@ -4,43 +4,45 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - contravariance, in keyword [C#]
 - in keyword [C#]
-ms.openlocfilehash: 003ce26fe9ba315eefc748a406754026231004b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e515329c060bd9fc11e4415b8e77520cf68cad9a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267007"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468963"
 ---
 # <a name="in-generic-modifier-c-reference"></a>in (modyfikator ogólny) (odwołanie w C#)
 
-Parametry typu ogólnego `in` — słowo kluczowe Określa, że parametr typu jest kontrawariantny. Można użyć `in` — słowo kluczowe w interfejsach i delegatów.  
-  
- Kontrawariancja pozwala na użycie typu mniej pochodnego od określonej przez parametr ogólny. Dzięki temu niejawna konwersja klas implementujących interfejsów typu variant i niejawna konwersja typów delegatów. Kowariancja i kontrawariancja w ogólnych parametrów typu są obsługiwane dla typów odwołań, ale nie są obsługiwane dla typów wartości.  
-  
- Typem może być deklarowana kontrawariantnego w ogólnym interfejsem ani obiektem delegowanym tylko wtedy, gdy definiuje typ parametrów metody, a nie typ zwracany metody. `In`, `ref`, i `out` parametry muszą być niezmienna, co oznacza ich nie należą do żadnej kowariantnego lub kontrawariantnego.
-  
- Interfejs, który ma parametr typu kontrawariantnego umożliwia jego metody akceptować argumenty mniej typów pochodnych niż określony przez parametr typu interfejsu. Na przykład w <xref:System.Collections.Generic.IComparer%601> interfejsu, jest typu T kontrawariantny, można przypisać obiektu `IComparer<Person>` typu do obiektu `IComparer<Employee>` typu bez użycia żadnych metod konwersji specjalne `Employee` dziedziczy `Person`.  
-  
- Delegat kontrawariantnego można przypisać inną delegata tego samego typu, ale mniej pochodnego parametr typu ogólnego.  
-  
- Aby uzyskać więcej informacji, zobacz [Kowariancja i Kontrawariancja](../../programming-guide/concepts/covariance-contravariance/index.md).  
-  
-## <a name="contravariant-generic-interface"></a>Interfejs ogólny kontrawariantnego   
+Dla parametrów typu genetycznego `in` — słowo kluczowe Określa, że parametr typu jest kontrawariantny. Możesz użyć `in` — słowo kluczowe w interfejsach ogólnych i delegatach.
 
- Poniższy przykład pokazuje, jak można zadeklarować, rozszerzać i implementować interfejs generyczny kontrawariantnego. Pokazuje też, jak skorzystać z niejawnej konwersji dla klas, które implementują ten interfejs.  
-  
- [!code-csharp[csVarianceKeywords#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/in-generic-modifier_1.cs)]  
-  
-## <a name="contravariant-generic-delegate"></a>Delegat ogólny kontrawariantnego  
+Kontrawariancja umożliwia używania typu mniej pochodnego niż określona przez parametr ogólny. Umożliwia to niejawna konwersja klasy, które implementują interfejsów typu variant i niejawnej konwersji typów obiektów delegowanych. Kowariancji i kontrawariancji w parametrach typu ogólnego są obsługiwane dla typów odwołań, ale nie są obsługiwane dla typów wartości.
 
- Poniższy przykład pokazuje, jak zadeklarować, wystąpienia i wywoływać kontrawariantnego Delegat ogólny. Pokazuje też, jak można niejawnie przekonwertować typu delegata.  
-  
- [!code-csharp[csVarianceKeywords#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/in-generic-modifier_2.cs)]  
-  
-## <a name="c-language-specification"></a>Specyfikacja języka C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>Zobacz też  
- [out](../../../csharp/language-reference/keywords/out-generic-modifier.md)  
- [Kowariancja i kontrawariancja](../../programming-guide/concepts/covariance-contravariance/index.md)  
- [Modyfikatory](../../../csharp/language-reference/keywords/modifiers.md)  
+Typ może być zadeklarowana kontrawariantnego w ogólny interfejs lub delegat tylko wtedy, gdy definiuje typ parametrów metody, a nie typ zwracany metody. `In`, `ref`, i `out` parametry muszą być niezmiennej, co oznacza, są one ani kowariantny lub kontrawariantny.
+
+Interfejs, który ma kontrawariantnego parametru typu umożliwia jego metod przyjmowały argumenty mniej pochodne typy niż określony przez parametr typu interfejsu. Na przykład w <xref:System.Collections.Generic.IComparer%601> interfejsu typu T jest kontrawariantny, można przypisać obiektu `IComparer<Person>` typ obiektu `IComparer<Employee>` typu bez przy użyciu dowolnej metody konwersji specjalne, jeśli `Employee` dziedziczy `Person`.
+
+Kontrawariantnego delegata można przypisać inną delegata tego samego typu, ale mniej pochodnego parametr typu ogólnego.
+
+Aby uzyskać więcej informacji, zobacz [kowariancji i kontrawariancji](../../programming-guide/concepts/covariance-contravariance/index.md).
+
+## <a name="contravariant-generic-interface"></a>Kontrawariantnego interfejs ogólny
+
+Poniższy przykład pokazuje, jak deklarować, rozszerzanie i implementować interfejs ogólny kontrawariantny. Pokazuje również, jak można użyć niejawna konwersja dla klas, które implementują ten interfejs.
+
+[!code-csharp[csVarianceKeywords#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csvariancekeywords/cs/program.cs#1)]
+
+## <a name="contravariant-generic-delegate"></a>Delegat ogólny kontrawariantnego
+
+Poniższy przykład pokazuje, jak deklarować, Utwórz wystąpienie i wywołania to delegat generyczny kontrawariantny. Pokazuje również, jak można niejawnie przekonwertować typu delegata.
+
+[!code-csharp[csVarianceKeywords#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csvariancekeywords/cs/program.cs#2)]
+
+## <a name="c-language-specification"></a>specyfikacja języka C#
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a>Zobacz także
+
+- [out](out-generic-modifier.md)  
+- [Kowariancja i kontrawariancja](../../programming-guide/concepts/covariance-contravariance/index.md)  
+- [Modyfikatory](modifiers.md)  

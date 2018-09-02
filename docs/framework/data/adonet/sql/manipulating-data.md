@@ -1,28 +1,28 @@
 ---
-title: Manipulowania danymi
+title: Manipulowanie danymi
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-ms.openlocfilehash: 57d7342ab88bcafbb8bcd1d288254b5e81846975
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d5de5ed3f557842fb28a3cf92b1923a709195d2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363117"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466300"
 ---
-# <a name="manipulating-data"></a>Manipulowania danymi
-Przed wprowadzeniem z wielu aktywnych zestawów wyników (MARS) deweloperzy było użycie wielu połączeń lub kursory po stronie serwera do rozwiązania niektórych scenariuszy. Gdy wiele połączeń były używane w sytuacji transakcyjnych, powiązany połączeń (z **sp_getbindtoken** i **procedury sp_bindsession**) były wymagane. W następujących scenariuszach przedstawiono sposób użycia połączenia z włączoną obsługą MARS zamiast wielu połączeń.  
+# <a name="manipulating-data"></a>Manipulowanie danymi
+Przed wprowadzeniem z wielu aktywnych zestawów wyników (MARS) deweloperów było użyć wielu połączeń lub kursory po stronie serwera do rozwiązywania niektórych scenariuszy. W przypadku wielu połączeń były używane w sytuacji, transakcyjnego, powiązane połączenia (przy użyciu **sp_getbindtoken** i **procedury sp_bindsession**) były wymagane. W poniższych scenariuszach pokazano sposób używania połączenia z obsługą usług MARS zamiast wielu połączeń.  
   
-## <a name="using-multiple-commands-with-mars"></a>Korzystanie z wielu poleceń z MARS  
- Następującej aplikacji konsoli Pokazuje, jak korzystać z dwóch <xref:System.Data.SqlClient.SqlDataReader> obiektów przy użyciu dwóch <xref:System.Data.SqlClient.SqlCommand> obiektów i jeden <xref:System.Data.SqlClient.SqlConnection> obiektu z włączoną MARS.  
+## <a name="using-multiple-commands-with-mars"></a>Korzystanie z wielu poleceń za pomocą usług MARS  
+ Następująca aplikacja konsoli Pokazuje, jak za pomocą dwóch <xref:System.Data.SqlClient.SqlDataReader> obiektów przy użyciu dwóch <xref:System.Data.SqlClient.SqlCommand> obiektów i jeden <xref:System.Data.SqlClient.SqlConnection> obiektu z włączoną MARS.  
   
 ### <a name="example"></a>Przykład  
- Przykład otwiera pojedynczego połączenia **AdventureWorks** bazy danych. Przy użyciu <xref:System.Data.SqlClient.SqlCommand> obiektu, <xref:System.Data.SqlClient.SqlDataReader> jest tworzony. Jak czytnik jest używany, a drugie <xref:System.Data.SqlClient.SqlDataReader> jest otwarty przy użyciu danych z pierwszego <xref:System.Data.SqlClient.SqlDataReader> jako dane wejściowe do klauzuli WHERE dla drugiego czytnika.  
+ Przykład otwiera jedno połączenie **AdventureWorks** bazy danych. Za pomocą <xref:System.Data.SqlClient.SqlCommand> obiektu <xref:System.Data.SqlClient.SqlDataReader> zostanie utworzony. W przypadku użycia czytelnika na sekundę <xref:System.Data.SqlClient.SqlDataReader> zostanie otwarty przy użyciu danych z pierwszym <xref:System.Data.SqlClient.SqlDataReader> jako dane wejściowe do klauzuli WHERE, drugi czytnika.  
   
 > [!NOTE]
->  W poniższym przykładzie użyto przykładowej **AdventureWorks** bazy danych programu SQL Server. W przykładowym kodzie w podanym ciągu połączenia przyjęto założenie, że baza danych jest zainstalowany i dostępny na komputerze lokalnym. Zmodyfikuj parametry połączenia w razie potrzeby dla danego środowiska.  
+>  W poniższym przykładzie użyto przykładu **AdventureWorks** bazy danych z programem SQL Server. W przykładowym kodzie w podanym ciągu połączenia przyjęto założenie, że baza danych jest zainstalowany i dostępny na komputerze lokalnym. Modyfikowanie parametrów połączenia, zgodnie z potrzebami w danym środowisku.  
   
 ```vb  
 Option Strict On  
@@ -163,14 +163,14 @@ static void Main()
 }  
 ```  
   
-## <a name="reading-and-updating-data-with-mars"></a>Odczytywanie i aktualizowanie danych za pomocą MARS  
- MARS umożliwia połączenie ma być używany dla obu operacje odczytu dla operacji i danych manipulacji języka z więcej niż jednym oczekującą operację. Ta funkcja eliminuje potrzebę stosowania aplikacji biznesowych w radzeniu sobie z błędami zajęty połączenia. Ponadto MARS można zastąpić użytkownika kursorów po stronie serwera, które zazwyczaj zużywać więcej zasobów. Na koniec, ponieważ wiele operacji może działać w ramach pojedynczego połączenia, mogą współużytkować tego samego kontekstu transakcji, eliminuje konieczność użycia **sp_getbindtoken** i **procedury sp_bindsession** przechowywana w systemie procedury.  
+## <a name="reading-and-updating-data-with-mars"></a>Odczytywanie i aktualizowanie danych za pomocą usług MARS  
+ MARS umożliwia połączenie ma być używany dla oba rodzaje operacji i danych manipulacji języka (DML) operacji odczytu z więcej niż jednym oczekującą operację. Ta funkcja eliminuje potrzebę stosowania aplikacji do czynienia z błędami zajęty połączenia. Ponadto MARS można zastąpić użytkownika kursorów po stronie serwera, które zazwyczaj zużywać więcej zasobów. Na koniec, ponieważ wiele operacji może działać na pojedynczego połączenia, mogą współużytkować ten sam kontekst transakcji, eliminując konieczność stosowania **sp_getbindtoken** i **procedury sp_bindsession** składowanych w systemie procedury.  
   
 ### <a name="example"></a>Przykład  
- Następującej aplikacji konsoli Pokazuje, jak korzystać z dwóch <xref:System.Data.SqlClient.SqlDataReader> obiektów, z których trzy <xref:System.Data.SqlClient.SqlCommand> obiektów i jeden <xref:System.Data.SqlClient.SqlConnection> obiektu z włączoną MARS. Pierwszy obiekt polecenie pobiera listę dostawców, których zdolności kredytowej wynosi 5. Drugi obiekt polecenia używa dostawcy podany identyfikator z <xref:System.Data.SqlClient.SqlDataReader> załadować drugi <xref:System.Data.SqlClient.SqlDataReader> z wszystkich produktów dla określonego dostawcy. Każdy rekord produktu odwiedzenia przez drugą <xref:System.Data.SqlClient.SqlDataReader>. Obliczeń do określenia, jakie nowe **OnOrderQty** powinien być. Trzeci obiektu command jest następnie używany do aktualizacji **ProductVendor** tabeli przy użyciu nowej wartości. Całego procesu odbywa się w ramach jednej transakcji jest przywracana na końcu.  
+ Następująca aplikacja konsoli Pokazuje, jak za pomocą dwóch <xref:System.Data.SqlClient.SqlDataReader> obiektów, z których trzy są <xref:System.Data.SqlClient.SqlCommand> obiektów i jeden <xref:System.Data.SqlClient.SqlConnection> obiektu z włączoną MARS. Pierwszy obiekt polecenie pobiera listę dostawców, którego poziom kredytu wynosi 5. Drugi obiekt polecenia używa dostawcy podany identyfikator z <xref:System.Data.SqlClient.SqlDataReader> do załadowania drugiego <xref:System.Data.SqlClient.SqlDataReader> wszystkie produkty określonego dostawcy. Każdy rekord produktu jest kontrolowane przez drugi <xref:System.Data.SqlClient.SqlDataReader>. Obliczenie jest przeprowadzana w celu ustalenia, jakie nowe **OnOrderQty** powinien być. Trzeci obiekt polecenia jest następnie używany do aktualizacji **ProductVendor** tabeli z nową wartością. Całego procesu odbywa się w ramach jednej transakcji jest przywracana na końcu.  
   
 > [!NOTE]
->  W poniższym przykładzie użyto przykładowej **AdventureWorks** bazy danych programu SQL Server. W przykładowym kodzie w podanym ciągu połączenia przyjęto założenie, że baza danych jest zainstalowany i dostępny na komputerze lokalnym. Zmodyfikuj parametry połączenia w razie potrzeby dla danego środowiska.  
+>  W poniższym przykładzie użyto przykładu **AdventureWorks** bazy danych z programem SQL Server. W przykładowym kodzie w podanym ciągu połączenia przyjęto założenie, że baza danych jest zainstalowany i dostępny na komputerze lokalnym. Modyfikowanie parametrów połączenia, zgodnie z potrzebami w danym środowisku.  
   
 ```vb  
 Option Strict On  
@@ -404,4 +404,4 @@ private static string GetConnectionString()
   
 ## <a name="see-also"></a>Zobacz też  
  [Wiele aktywnych zestawów wyników (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

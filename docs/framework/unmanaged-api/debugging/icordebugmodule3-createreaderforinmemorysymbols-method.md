@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 76f7b53f800bc8c5c23f49a0781287a38bf8c959
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 342739f6c71e9c576e557433dc6abd0adbf38c8c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421519"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468355"
 ---
 # <a name="icordebugmodule3createreaderforinmemorysymbols-method"></a>ICorDebugModule3::CreateReaderForInMemorySymbols — Metoda
-Tworzy czytnika symboli debugowania dla modułu dynamicznego.  
+Tworzy czytnik symbolu debugowania dla modułu dynamicznego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,14 +37,14 @@ HRESULT CreateReaderForInMemorySymbols (
   
 #### <a name="parameters"></a>Parametry  
  Parametr riid  
- [in] Uzyskanie identyfikatora IID interfejsu COM do zwrócenia. Zazwyczaj jest to [ISymUnmanagedReader — interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md).  
+ [in] IID interfejsu COM do zwrócenia. Zazwyczaj jest to [isymunmanagedreader — interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md).  
   
  ppObj  
- [out] Wskaźnik na wskaźnik do interfejsu zwrócony.  
+ [out] Wskaźnik do wskaźnika do interfejsu zwrócone.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK  
- Pomyślnie utworzono czytnika.  
+ Pomyślnie utworzono czytelnika.  
   
  CORDBG_E_MODULE_LOADED_FROM_DISK  
  Moduł nie jest modułem w pamięci lub dynamicznych.  
@@ -52,15 +52,15 @@ HRESULT CreateReaderForInMemorySymbols (
  CORDBG_E_SYMBOLS_NOT_AVAILABLE  
  Symbole nie zostały dostarczone przez aplikację lub nie są jeszcze dostępne.  
   
- E_FAIL (lub inne kody powrotu E_)  
+ E_FAIL (lub inne kody powrotne e_)  
  Nie można utworzyć czytnika.  
   
 ## <a name="remarks"></a>Uwagi  
- Tej metody można też używane do tworzenia obiektu czytnika symboli dla modułów w pamięci (z systemem innym niż dynamiczny), ale tylko po najpierw są dostępne symbole (wskazywanym przez [UpdateModuleSymbols — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-updatemodulesymbols-method.md) wywołanie zwrotne).  
+ Ta metoda może być również używane do tworzenia obiektu czytnika symboli dla modułów w pamięci (bez dynamiczny), ale tylko wtedy po pierwszych stają się dostępne (wskazywanym przez [updatemodulesymbols — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-updatemodulesymbols-method.md) wywołania zwrotnego).  
   
- Ta metoda zwraca nowe wystąpienie czytnika za każdym razem, gdy jest ona wywoływana (takich jak [CComPtrBase::CoCreateInstance](http://msdn.microsoft.com/library/c0965041-6cb6-40c5-b272-2b99f02668a6)). W związku z tym debuger powinien Zbuforuj wynik i zażądać nowego wystąpienia tylko wtedy, gdy mógł ulec zmianie danych (to znaczy gdy [LoadClass — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) odebraniu wywołania zwrotnego).  
+ Ta metoda zwraca nowe wystąpienie czytnika za każdym razem, gdy jest on nazywany (takich jak [CComPtrBase::CoCreateInstance](https://msdn.microsoft.com/library/c0965041-6cb6-40c5-b272-2b99f02668a6)). W związku z tym, debuger powinien Zbuforuj wynik i zażądać nowego wystąpienia, tylko wtedy, gdy dane mogły ulec zmianie (to znaczy, gdy [loadClass — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) odebraniu wywołania zwrotnego).  
   
- Dynamiczne moduły nie ma żadnych symboli, które są dostępne do momentu załadowania pierwszego typu (wskazywanego przez [LoadClass — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) wywołanie zwrotne).  
+ Moduły dynamiczne nie masz wszystkie symbole, które są dostępne, dopóki nie został załadowany pierwszy typ (wskazane przez [loadClass — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) wywołania zwrotnego).  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

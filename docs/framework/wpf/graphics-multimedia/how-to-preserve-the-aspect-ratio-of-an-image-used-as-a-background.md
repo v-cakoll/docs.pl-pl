@@ -6,38 +6,38 @@ helpviewer_keywords:
 - brushes [WPF], preserving aspect ratios of background images
 - background images [WPF], preserving aspect ratios
 ms.assetid: 28c39478-13d7-4011-80a3-8b9cc3e54478
-ms.openlocfilehash: 906033b43ba657acc873f12a00000189db6796ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8cf0a3804172b90af33318299d60aa6c7eaa53f0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562719"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464989"
 ---
 # <a name="how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background"></a>Jak zachować format obrazu użytego jako tło
-Ten przykład przedstawia sposób użycia <xref:System.Windows.Media.TileBrush.Stretch%2A> właściwość <xref:System.Windows.Media.ImageBrush> w celu zachowania proporcji obrazu.  
+W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.TileBrush.Stretch%2A> właściwość <xref:System.Windows.Media.ImageBrush> Aby zachować współczynnik proporcji obrazu.  
   
- Domyślnie, gdy używasz <xref:System.Windows.Media.ImageBrush> namalować obszar jego zawartość zostanie rozciągnięty w celu wypełnia całkowicie obszaru wyjściowego. Jeśli do obszaru wyjściowego i obrazu różnych współczynników proporcji, obraz jest zniekształcony przez ten rozciąganie.  
+ Domyślnie, gdy używasz <xref:System.Windows.Media.ImageBrush> można malować obszar, jego zawartość zostanie rozciągnięty w celu całkowitego wypełnienia obszaru wyjściowego. Jeśli obszar danych wyjściowych i obraz, który ma różnych współczynnikach proporcji, obraz, który jest zniekształcony to rozciągając.  
   
  Aby <xref:System.Windows.Media.ImageBrush> współczynnik proporcji jego obrazu, ustaw <xref:System.Windows.Media.TileBrush.Stretch%2A> właściwości <xref:System.Windows.Media.Stretch.Uniform> lub <xref:System.Windows.Media.Stretch.UniformToFill>.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto dwóch <xref:System.Windows.Media.ImageBrush> obiektów namalować dwóch prostokątów. Każdy prostokąt jest 300 pikseli 150 i każdy z nich zawiera obraz pikseli 300 przez 300. <xref:System.Windows.Media.TileBrush.Stretch%2A> Ma ustawioną właściwość pędzla pierwszy <xref:System.Windows.Media.Stretch.Uniform>i <xref:System.Windows.Media.TileBrush.Stretch%2A> ma ustawioną właściwość pędzla drugi <xref:System.Windows.Media.Stretch.UniformToFill>.  
+ W poniższym przykładzie użyto dwóch <xref:System.Windows.Media.ImageBrush> obiekty do malowania dwoma prostokątami. Każdego prostokąta wynosi 300 x 150 pikseli i każdy z nich zawiera obraz 300 przez 300 pikseli. <xref:System.Windows.Media.TileBrush.Stretch%2A> Pędzla pierwszy zostaje ustalona <xref:System.Windows.Media.Stretch.Uniform>i <xref:System.Windows.Media.TileBrush.Stretch%2A> drugi pędzla zostaje ustalona <xref:System.Windows.Media.Stretch.UniformToFill>.  
   
  [!code-csharp[UsingImageBrush_snip#ImageBrushStretchModesExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/StretchModes.cs#imagebrushstretchmodesexamplewholepage)]  
   
  Na poniższej ilustracji przedstawiono dane wyjściowe pierwszy pędzla, który ma <xref:System.Windows.Media.TileBrush.Stretch%2A> ustawienie <xref:System.Windows.Media.Stretch.Uniform>.  
   
- ![ImageBrush z Uniform rozciąganie](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-imagebrushuniformstretch.jpg "graphicsmm_ImageBrushUniformStretch")  
+ ![ImageBrush za pomocą jednolitego rozciąganie](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-imagebrushuniformstretch.jpg "graphicsmm_ImageBrushUniformStretch")  
   
- Na następnej ilustracji przedstawiono dane wyjściowe drugi pędzla, który ma <xref:System.Windows.Media.TileBrush.Stretch%2A> ustawienie <xref:System.Windows.Media.Stretch.UniformToFill>.  
+ Następna ilustracja przedstawia dane wyjściowe drugi pędzla, który ma <xref:System.Windows.Media.TileBrush.Stretch%2A> ustawienie <xref:System.Windows.Media.Stretch.UniformToFill>.  
   
- ![Obiekt ImageBrush z rozciągania typu UniformToFill](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-imagebrushuniformtofillstretch.jpg "graphicsmm_ImageBrushUniformToFillStretch")  
+ ![ImageBrush z rozciągania typu UniformToFill](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-imagebrushuniformtofillstretch.jpg "graphicsmm_ImageBrushUniformToFillStretch")  
   
- Należy pamiętać, że <xref:System.Windows.Media.TileBrush.Stretch%2A> właściwości zachowuje się tak samo dla siebie <xref:System.Windows.Media.TileBrush> obiekty, oznacza to, aby uzyskać <xref:System.Windows.Media.DrawingBrush> i <xref:System.Windows.Media.VisualBrush>. Aby uzyskać więcej informacji na temat <xref:System.Windows.Media.ImageBrush> i innych <xref:System.Windows.Media.TileBrush> obiekty, zobacz [malowanie obrazów, rysunki i elementy wizualne](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
+ Należy pamiętać, że <xref:System.Windows.Media.TileBrush.Stretch%2A> właściwość zachowuje się tak samo dla siebie <xref:System.Windows.Media.TileBrush> obiekty, oznacza to, aby uzyskać <xref:System.Windows.Media.DrawingBrush> i <xref:System.Windows.Media.VisualBrush>. Aby uzyskać więcej informacji na temat <xref:System.Windows.Media.ImageBrush> , a druga <xref:System.Windows.Media.TileBrush> obiekty, zobacz [malowanie obrazami, rysowaniem i Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
   
- Należy zauważyć, że, mimo że <xref:System.Windows.Media.TileBrush.Stretch%2A> właściwości pojawia się, aby określić sposób <xref:System.Windows.Media.TileBrush> zawartość zostanie rozciągnięty w celu dopasowania jej obszaru danych wyjściowych, faktycznie określa sposób <xref:System.Windows.Media.TileBrush> zawartości odcinkach do wypełnienia jej podstawowy Kafelek. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Media.TileBrush>.  
+ Należy zauważyć, że, mimo że <xref:System.Windows.Media.TileBrush.Stretch%2A> właściwość pojawia się, aby określić sposób, w jaki <xref:System.Windows.Media.TileBrush> zawartość zostanie rozciągnięty w celu dopasowania jej obszaru danych wyjściowych, faktycznie określa sposób, w jaki <xref:System.Windows.Media.TileBrush> zawartości odcinkach w celu wypełnienia jego podstawowy Kafelek. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Media.TileBrush>.  
   
- Ten przykładowy kod jest częścią większego przykładu udostępnionego dla <xref:System.Windows.Media.ImageBrush> klasy. Pełny przykład, zobacz [próbki ImageBrush](http://go.microsoft.com/fwlink/?LinkID=160005).  
+ Ten przykład kodu jest częścią większego przykładu, który jest udostępniany dla <xref:System.Windows.Media.ImageBrush> klasy. Aby uzyskać pełny przykład, zobacz [przykładowe ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Media.TileBrush>  

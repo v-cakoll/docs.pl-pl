@@ -2,12 +2,12 @@
 title: '&lt;message&gt; w &lt;ws2007HttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9ffd8db6-84a8-4b38-a9fe-2cb1a87a1c97
-ms.openlocfilehash: 39d5ce66537fd6c94895205ccc855d7fb631284e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8f448f40dbbf5fabbbd833cb9366c3911045f95
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363194"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470028"
 ---
 # <a name="ltmessagegt-of-ltws2007httpbindinggt"></a>&lt;message&gt; w &lt;ws2007HttpBinding&gt;
 Definiuje ustawienia zabezpieczeń na poziomie komunikatu z [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) elementu.  
@@ -46,41 +46,41 @@ Definiuje ustawienia zabezpieczeń na poziomie komunikatu z [ \<ws2007HttpBindin
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`algorithmSuite`|Ustawia komunikat algorytmów szyfrowania i zawijania klucza. Algorytmy i klucza rozmiary są określane przez <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> klasy. Algorytmy te są mapowane na te określone w specyfikacji języka zasad zabezpieczeń (WS-SecurityPolicy).<br /><br /> Wartość domyślna to Basic256.|  
-|`clientCredentialType`|Opcjonalna. Określa typ poświadczenia, który będzie używany podczas uwierzytelniania klienta przy użyciu trybu zabezpieczeń `Message` lub `TransportWithMessageCredentials`. Zobacz wartości wyliczenia w poniższej tabeli. Wartość domyślna to Windows.<br /><br /> Ten atrybut jest typu <xref:System.ServiceModel.MessageCredentialType>.|  
-|`establishSecurityContext`|Wartość, która określa, czy kanał zabezpieczeń ustanawia bezpiecznej sesji. Bezpieczna sesja ustanawia token kontekstu zabezpieczeń (SCT) przed rozpoczęciem wymiany komunikatów aplikacji. Po nawiązaniu SCT kanału zabezpieczeń oferuje <xref:System.ServiceModel.Channels.ISession> interfejs do górnej kanałów. Aby uzyskać więcej informacji o korzystaniu z bezpiecznej sesji, zobacz [porady: tworzenie bezpiecznej sesji](../../../../../docs/framework/wcf/feature-details/how-to-create-a-secure-session.md).<br /><br /> Wartość domyślna to `true`.|  
-|`negotiateServiceCredential`|Opcjonalna. Wartość, która określa, czy poświadczenia usługi jest udostępniane po stronie klienta poza pasmem lub są uzyskiwane z usługi do klienta w procesie negocjacji. Takie negocjacji jest macierzystych do programu exchange zwykle wiadomości.<br /><br /> Jeśli `clientCredentialType` atrybut ma wartość None, nazwa użytkownika lub certyfikatu, ustawienie tego atrybutu na `false` oznacza to, że certyfikat usługi jest dostępny na kliencie poza pasmem klienta należy określić certyfikat usługi (za pomocą [ \<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) w [ \<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) zachowania usługi. Ten tryb jest współpraca z implementacji protokołu WS-Trust i WS-SecureConversation stosy protokołu SOAP.<br /><br /> Jeśli `ClientCredentialType` atrybut ma ustawioną `Windows`, ustawienie tego atrybutu na `false` określa uwierzytelniania opartego na protokołu Kerberos. Oznacza to, że klient i usługa muszą być częścią tej samej domeny protokołu Kerberos. Ten tryb jest współpraca z wdrożenia profilu token protokołu Kerberos (zgodnie z definicją w OASIS TC programu WSS) oraz protokołu WS-Trust i WS-SecureConversation stosy protokołu SOAP.<br /><br /> Jeśli ten atrybut jest `true`, powoduje negocjacji protokołu SOAP .NET, który tuneli <xref:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes.Spnego%2A> exchange za pośrednictwem wiadomości SOAP.<br /><br /> Wartość domyślna to `true`.|  
+|`algorithmSuite`|Ustawia komunikat algorytmów szyfrowania i zawijania klucza. Te algorytmy i rozmiary kluczy są określane przez <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> klasy. Te algorytmy są mapowane na te określone w specyfikacji języka zasad zabezpieczenia (WS-SecurityPolicy).<br /><br /> Wartość domyślna to Basic256.|  
+|`clientCredentialType`|Opcjonalna. Określa typ poświadczenia do użycia podczas przeprowadzania uwierzytelniania klienta przy użyciu trybu zabezpieczeń `Message` lub `TransportWithMessageCredentials`. Zobacz wartości wyliczenia w poniższej tabeli. Wartość domyślna to Windows.<br /><br /> Ten atrybut jest typu <xref:System.ServiceModel.MessageCredentialType>.|  
+|`establishSecurityContext`|Wartość, która określa, czy kanał zabezpieczeń ustanawia bezpiecznej sesji. Bezpiecznej sesji ustanawia tokenu kontekstu zabezpieczeń (SCT) przed rozpoczęciem wymiany komunikatów aplikacji. Po ustanowieniu SCT kanału zabezpieczeń oferuje <xref:System.ServiceModel.Channels.ISession> interfejsu do górnej kanałów. Aby uzyskać więcej informacji na temat przy użyciu bezpiecznej sesji zobacz [porady: tworzenie bezpiecznej sesji](../../../../../docs/framework/wcf/feature-details/how-to-create-a-secure-session.md).<br /><br /> Wartość domyślna to `true`.|  
+|`negotiateServiceCredential`|Opcjonalna. Wartość, która określa, czy poświadczenia usługi jest zainicjowana klientem poza pasmem lub uzyskany z usługi do klienta w procesie negocjacji. Takie negocjacji jest wstępnym i niezbędnym warunkiem do programu exchange zwykle wiadomości.<br /><br /> Jeśli `clientCredentialType` atrybutu jest równa None, nazwa użytkownika lub certyfikatu, ustawienie tego atrybutu na `false` oznacza, że certyfikat usługi jest dostępny po stronie klienta poza pasmem i czy klienta należy określić certyfikat usługi (za pomocą [ \<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) w [ \<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) usługi zachowanie. Ten tryb jest współpracujący z stosów protokołu SOAP, które implementują WS-Trust i WS-SecureConversation.<br /><br /> Jeśli `ClientCredentialType` ma ustawioną wartość atrybutu `Windows`, ustawienie tego atrybutu na `false` Określa uwierzytelnianie oparte na protokołu Kerberos. Oznacza to, że klient i usługa musi należeć do tej samej domeny protokołu Kerberos. Ten tryb jest współpracujący z stosów protokołu SOAP, które implementują profilu tokenu protokołu Kerberos (zgodnie z definicją w OASIS WSS TC) oraz WS-Trust i WS-SecureConversation.<br /><br /> Jeśli ten atrybut jest `true`, sprawia, że negocjacji protokołu SOAP .NET, która tuneli <xref:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes.Spnego%2A> exchange za pośrednictwem protokołu SOAP wiadomości.<br /><br /> Wartość domyślna to `true`.|  
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite Attribute  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
 |Basic128|Użyj szyfrowania Aes128, Sha1 dla skrót wiadomości i Rsa-oaep-mgf1p dla zawijania klucza.|  
-|Basic192|Użyj szyfrowania Aes192, Sha1 dla skrót wiadomości, Rsa oaep mgf1p dla zawijania klucza.|  
-|Basic256|Użyj szyfrowania Aes256, Sha1 dla skrót wiadomości, Rsa oaep mgf1p dla zawijania klucza.|  
-|Basic256Rsa15|Aes256 używany do szyfrowania wiadomości, Sha1 dla skrót wiadomości i Rsa15 dla zawijania klucza.|  
-|Basic192Rsa15|Aes192 używany do szyfrowania wiadomości, Sha1 dla skrót wiadomości i Rsa15 dla zawijania klucza.|  
-|TripleDes|Użyj szyfrowania TripleDes, Sha1 dla skrót wiadomości, Rsa oaep mgf1p dla zawijania klucza.|  
-|Basic128Rsa15|Aes128 używany do szyfrowania wiadomości, Sha1 dla skrót wiadomości i Rsa15 dla zawijania klucza.|  
+|Basic192|Należy używać szyfrowania Aes192, Sha1 dla skrót wiadomości, Rsa oaep mgf1p dla zawijania klucza.|  
+|Basic256|Użyj szyfrowania Aes256 Sha1 dla skrót wiadomości, Rsa oaep mgf1p dla zawijania klucza.|  
+|Basic256Rsa15|Użyj Aes256 do szyfrowania wiadomości, algorytm Sha1 dla skrót wiadomości i Rsa15 dla zawijania klucza.|  
+|Basic192Rsa15|Użyj Aes192 do szyfrowania wiadomości, algorytm Sha1 dla skrót wiadomości i Rsa15 dla zawijania klucza.|  
+|TripleDes|Należy używać szyfrowania TripleDes, Sha1 dla skrót wiadomości, Rsa oaep mgf1p dla zawijania klucza.|  
+|Basic128Rsa15|Użyj Aes128 do szyfrowania wiadomości, algorytm Sha1 dla skrót wiadomości i Rsa15 dla zawijania klucza.|  
 |TripleDesRsa15|Użyj szyfrowania TripleDes, Sha1 dla skrót wiadomości i Rsa15 dla zawijania klucza.|  
-|Basic128Sha256|Aes256 używany do szyfrowania wiadomości, Sha256 dla skrót wiadomości i Rsa oaep mgf1p dla zawijania klucza.|  
-|Basic192Sha256|Aes192 używany do szyfrowania wiadomości, Sha256 dla skrót wiadomości i Rsa oaep mgf1p dla zawijania klucza.|  
-|Basic256Sha256|Aes256 używany do szyfrowania wiadomości, Sha256 dla skrót wiadomości i Rsa oaep mgf1p dla zawijania klucza.|  
-|TripleDesSha256|TripleDes używany do szyfrowania wiadomości, Sha256 dla skrót wiadomości i Rsa oaep mgf1p dla zawijania klucza.|  
-|Basic128Sha256Rsa15|Aes128 używany do szyfrowania wiadomości, Sha256 dla skrót wiadomości i Rsa15 dla zawijania klucza.|  
-|Basic192Sha256Rsa15|Aes192 używany do szyfrowania wiadomości, Sha256 dla skrót wiadomości i Rsa15 dla zawijania klucza.|  
-|Basic256Sha256Rsa15|Aes256 używany do szyfrowania wiadomości, Sha256 dla skrót wiadomości i Rsa15 dla zawijania klucza.|  
-|TripleDesSha256Rsa15|TripleDes używany do szyfrowania wiadomości, Sha256 dla skrót wiadomości i Rsa15 dla zawijania klucza.|  
+|Basic128Sha256|Użyj Aes256 do szyfrowania wiadomości, Sha256 dla skrót wiadomości i Rsa oaep mgf1p dla zawijania klucza.|  
+|Basic192Sha256|Użyj Aes192 do szyfrowania wiadomości, Sha256 dla skrót wiadomości i Rsa oaep mgf1p dla zawijania klucza.|  
+|Basic256Sha256|Użyj Aes256 do szyfrowania wiadomości, Sha256 dla skrót wiadomości i Rsa oaep mgf1p dla zawijania klucza.|  
+|TripleDesSha256|TripleDes na użytek szyfrowania wiadomości, Sha256 dla skrót wiadomości i Rsa oaep mgf1p dla zawijania klucza.|  
+|Basic128Sha256Rsa15|Użyj Aes128 do szyfrowania wiadomości, Sha256 dla skrót wiadomości i Rsa15 dla zawijania klucza.|  
+|Basic192Sha256Rsa15|Użyj Aes192 do szyfrowania wiadomości, Sha256 dla skrót wiadomości i Rsa15 dla zawijania klucza.|  
+|Basic256Sha256Rsa15|Użyj Aes256 do szyfrowania wiadomości, Sha256 dla skrót wiadomości i Rsa15 dla zawijania klucza.|  
+|TripleDesSha256Rsa15|TripleDes na użytek szyfrowania wiadomości, Sha256 dla skrót wiadomości i Rsa15 dla zawijania klucza.|  
   
 ## <a name="clientcredentialtype-attribute"></a>właściwości ClientCredentialType o wartości atrybutu  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|`None`|Dzięki usłudze na współdziałanie z anonimowego klientów. W usłudze oznacza to, że usługa nie wymaga żadnych poświadczeń klienta. Na komputerze klienckim oznacza to, klient nie ma żadnych poświadczeń klienta.|  
-|`Certificate`|Umożliwia usłudze wymagają który uwierzytelnienia klienta za pomocą certyfikatu. Jeśli `message` używany jest tryb zabezpieczeń i `negotiateServiceCredential` atrybut ma ustawioną `false`, klient musi zostać zainicjowana obsługa certyfikatu usługi.|  
-|`IssuedToken`|Określa niestandardowy token, zwykle wydany przez zabezpieczenia tokenu usługi (STS).|  
-|`UserName`|Umożliwia usłudze wymagają który uwierzytelnienia klienta za pomocą `UserName` poświadczeń. Usługi WCF nie obsługuje wysyłanie skrótu hasła lub wyprowadzanie kluczy przy użyciu hasła i te klucze dla zabezpieczenia wiadomości. Tak, WCF wymusza, czy transport jest zabezpieczone przy użyciu `UserName` poświadczeń. W tym trybie poświadczenia powoduje wymianę interoperacyjne lub -interoperacyjne negocjacji, na podstawie `negotiateServiceCredential` atrybutu.|  
-|`Windows`|Umożliwia wymianę SOAP się pod uwierzytelnionego kontekście `Windows` poświadczeń. Jeśli `negotiateServiceCredential` atrybut ma ustawioną `true`, to albo przeprowadza negocjowanie interfejsu SSPI protokołu Kerberos (interoperacyjne standard).|  
+|`None`|Dzięki usłudze na współdziałanie z anonimowych klientów. W usłudze oznacza to, że usługa nie wymaga żadnych poświadczeń klienta. Na komputerze klienckim oznacza to, że klient nie zawiera żadnych poświadczeń klienta.|  
+|`Certificate`|Umożliwia usłudze wymagają który uwierzytelnienia klienta za pomocą certyfikatu. Jeśli `message` używany jest tryb zabezpieczeń i `negotiateServiceCredential` ma ustawioną wartość atrybutu `false`, klient musi być obsługiwana za pomocą certyfikatu usługi.|  
+|`IssuedToken`|Określa niestandardowy token, zwykle wydany przez Usługa tokenu zabezpieczającego (STS).|  
+|`UserName`|Umożliwia usłudze wymagają który uwierzytelnienia klienta za pomocą `UserName` poświadczeń. Usługi WCF nie obsługuje wysyłanie skrótu hasła lub wyprowadzanie kluczy przy użyciu hasła i rozpoczęcie używania te klucze dla zabezpieczenia wiadomości. W efekcie WCF wymusza, czy transport jest zabezpieczony, korzystając z `UserName` poświadczeń. W tym trybie poświadczeń skutkuje międzyoperacyjnych programu exchange lub negocjacji międzyoperacyjnych, na podstawie `negotiateServiceCredential` atrybutu.|  
+|`Windows`|Umożliwia wymianę SOAP się pod uwierzytelnionego kontekście `Windows` poświadczeń. Jeśli `negotiateServiceCredential` ma ustawioną wartość atrybutu `true`, to albo wykonuje negocjacji interfejsu SSPI protokołu Kerberos (standard interoperacyjne).|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -99,5 +99,5 @@ Definiuje ustawienia zabezpieczeń na poziomie komunikatu z [ \<ws2007HttpBindin
  [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
  [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie usług Windows Communication Foundation i klientów za pomocą powiązań](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Konfigurowanie Windows Communication Foundation i klientów za pomocą powiązań](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

@@ -2,18 +2,18 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: f12049ba1230b052f61994bd0c2db496a0da4aae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02d151ee322cb2793df6f31e5e4b72dfb1027aec
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33506215"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43462353"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
-W tym przykładzie pokazano, jak można dostosować procesy serializacji i deserializacji za pomocą <xref:System.Runtime.Serialization.DataContractResolver> klasy. W tym przykładzie przedstawiono sposób dynamicznego dodawania znane typy podczas serializacji i deserializacji.  
+Niniejszy przykład pokazuje, jak można dostosować procesy serializacji i deserializacji za pomocą <xref:System.Runtime.Serialization.DataContractResolver> klasy. W tym przykładzie pokazano, jak dynamicznie dodać znanych typów podczas serializacji i deserializacji.  
   
-## <a name="sample-details"></a>Szczegóły próbki  
- W tym przykładzie składa się z czterech projektów. Jeden z nich odnosi się do usługi ma być obsługiwana przez usługi IIS, który definiuje następujące kontraktu usługi.  
+## <a name="sample-details"></a>Przykład szczegółów  
+ W tym przykładzie składa się z czterema projektami. Jeden z nich odnosi się do usługi hostowane przez usługi IIS, który definiuje następujące kontraktu usługi.  
   
 ```  
 // Definition of a service contract.  
@@ -38,7 +38,7 @@ public interface IDataContractCalculator
 }  
 ```  
   
- Kontrakt usługi jest zaimplementowana, jak pokazano w poniższym przykładzie.  
+ Kontrakt usługi jest wdrażany, jak pokazano w poniższym przykładzie.  
   
 ```  
 // Service class that implements the service contract.  
@@ -84,7 +84,7 @@ public interface IDataContractCalculator
 }  
 ```  
   
- Inny projekt odnosi się do klienta, który komunikuje się z serwerem, a następnie wywołuje metody, które ujawnia on. W poniższym przykładzie przedstawiono definicję klienta.  
+ Inny projekt odnosi się do klienta, który komunikuje się z serwerem i wywołuje metody, które udostępnia. Definicja klienta jest wyświetlany w poniższym przykładzie.  
   
 ```  
  // Client implementation code.  
@@ -187,9 +187,9 @@ public interface IDataContractCalculator
 }  
 ```  
   
- Definicja kontraktu usługi jest oznaczony atrybutem `KnownAssembly` atrybutu. Ten atrybut zawiera nazwę biblioteki typów, które stają się znane w czasie wykonywania zarówno przez usługę i klienta.  
+ Definicja kontraktu usługi jest oznaczona za pomocą `KnownAssembly` atrybutu. Ten atrybut zawiera nazwę biblioteki typów, które stają się znane w czasie wykonywania przez usługę i klienta.  
   
- `KnownAssembly` Atrybutu implementuje `IContractBehavior` Aby zdefiniować `DataContractSerializer` z `DataContractResolver` zdefiniowane dla każdej operacji zachowania. `DataContractResolver` Odzwierciedla za pośrednictwem zestawu po utworzeniu i tworzy słownik z mapowania między typami i nazwy, który będzie używany podczas serializacji i deserializacji różnych typów. W ten sposób `ResolveType` i `ResolveName` typy musisz sprawdzić danych wymaganych w słowniku.  
+ `KnownAssembly` Atrybutu implementuje `IContractBehavior` celu zdefiniowania `DataContractSerializer` z `DataContractResolver` zdefiniowane dla wszystkich zachowań operacji. `DataContractResolver` Odzwierciedla za pośrednictwem zestawu, gdy zostanie utworzona i tworzy słownik za pomocą mapowania między typami i nazw, który będzie używany podczas serializacji i deserializacji różnych typów. W ten sposób `ResolveType` i `ResolveName` typy należy wyszukać dane wymagane w słowniku.  
   
  `DataContractResolver` Zdefiniowane w tym przykładzie przedstawiono w poniższym przykładzie.  
   
@@ -275,7 +275,7 @@ public class MyDataContractResolver : DataContractResolver
    }  
 ```  
   
- Biblioteki typów używanych w tym przykładzie przedstawiono w poniższym przykładzie.  
+ Biblioteka typów używanych w tym przykładzie przedstawiono w poniższym przykładzie.  
   
 ```  
  [DataContract]  
@@ -322,7 +322,7 @@ public class ComplexNumberWithMagnitude : ComplexNumber
   
  Należy pamiętać, że `ComplexNumber` nie trzeba znać statycznie `ComplexNumberWithMagnitude` typu, ponieważ jego staje się znane w czasie wykonywania.  
   
- Gdy próbki jest skompilowany i wykonać, jest to oczekiwane dane wyjściowe uzyskane w kliencie:  
+ Gdy próbki są kompilowane i wykonywany, jest to oczekiwane dane wyjściowe, uzyskane w kliencie programu:  
   
 ```  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
@@ -344,30 +344,30 @@ Lists combined:
 4 + 4i  
 ```  
   
-#### <a name="to-set-up-run-and-build-the-sample"></a>Aby skonfigurować, uruchomić i tworzyć przykładowy kod  
+#### <a name="to-set-up-run-and-build-the-sample"></a>Aby skonfigurować, uruchomić i skompilować przykład  
   
 1.  Kliknij prawym przyciskiem myszy rozwiązanie **KnownAssemblyAttribute** i wybierz **właściwości**.  
   
-2.  W **wspólne właściwości**, wybierz pozycję **projekt startowy**, a następnie kliknij przycisk **wiele projektów startowych**.  
+2.  W **wspólne właściwości**, wybierz opcję **projekt startowy**, a następnie kliknij przycisk **wiele projektów startowych**.  
   
 3.  Dodaj **Start** akcji **usługi** i **klienta** projektów.  
   
 4.  Kliknij przycisk **OK**i naciśnij klawisz **F5** do uruchomienia przykładu.  
   
-5.  Jeśli aplikacja nie pracuje poprawnie, wykonaj następujące kroki, aby upewnić się, że środowiska nie został prawidłowo skonfigurowany:  
+5.  Jeśli aplikacja nie działa prawidłowo, wykonaj następujące kroki, aby upewnić się, że środowisko zostało prawidłowo skonfigurowane:  
   
-6.  Upewnij się, że wykonano procedurę [jednorazowego ustawić się procedury dla przykładów Windows Communication Foundation](http://go.microsoft.com/fwlink/?LinkId=150774).  
+6.  Upewnij się, że wykonano [jednorazowe Ustaw się procedury dla przykładów Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150774).  
   
-7.  Postępuj zgodnie z instrukcjami w celu skompilowania rozwiązania, [tworzenia Windows Communication Foundation — przykład](http://go.microsoft.com/fwlink/?LinkId=150775).  
+7.  Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [Windows Communication Foundation — przykład tworzenia](https://go.microsoft.com/fwlink/?LinkId=150775).  
   
-8.  Aby uruchomić przykładowy w konfiguracji pojedynczej lub między komputerami, postępuj zgodnie z instrukcjami w [uruchamiania przykładów Windows Communication Foundation](http://go.microsoft.com/fwlink/?LinkId=150776).  
+8.  Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150776).  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownAssemblyAttribute`  
   

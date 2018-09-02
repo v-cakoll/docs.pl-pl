@@ -1,54 +1,54 @@
 ---
-title: Za pomocą działania Interop w przepływie pracy .NET Framework 4
+title: Używanie działania Interop w przepływie pracy programu .NET Framework 4
 ms.date: 03/30/2017
 ms.assetid: 9bb747f0-eb33-4f70-84cd-317382372dcd
-ms.openlocfilehash: 64e8aef01aefa23dc98b42ab835de097d6c222df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02eeaf5bb7ff484ba5982197fc395e247cd5a87f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520230"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466728"
 ---
-# <a name="using-the-interop-activity-in-a-net-framework-4-workflow"></a>Za pomocą działania Interop w przepływie pracy .NET Framework 4
-Działania utworzone przy użyciu [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] lub [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] mogą być używane w [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] przepływu pracy przy użyciu <xref:System.Activities.Statements.Interop> działania. Ten temat zawiera omówienie sposobu użycia <xref:System.Activities.Statements.Interop> działania.  
+# <a name="using-the-interop-activity-in-a-net-framework-4-workflow"></a>Używanie działania Interop w przepływie pracy programu .NET Framework 4
+Działania utworzone za pomocą [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] lub [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] mogą być używane w [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] przepływu pracy przy użyciu <xref:System.Activities.Statements.Interop> działania. Ten temat zawiera omówienie sposobu użycia <xref:System.Activities.Statements.Interop> działania.  
   
 > [!NOTE]
->  <xref:System.Activities.Statements.Interop> Przybornika projektanta przepływów pracy nie ma działania, chyba że ma projektu przepływu pracy jego **platformy docelowej** ustawienie **.Net Framework 4** lub nowszym.  
+>  <xref:System.Activities.Statements.Interop> w przyborniku projektanta przepływu pracy nie ma działania, chyba że projekt przepływu pracy ma jego **platformę docelową** ustawienie **.Net Framework 4** lub nowszej.  
   
-## <a name="using-the-interop-activity-in-net-framework-45-workflows"></a>Za pomocą działania Interop w przepływach pracy programu .NET Framework 4.5  
- W tym temacie [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] utworzeniu biblioteki działania, który zawiera `DiscountCalculator` działania. `DiscountCalculator` Jest obliczana na podstawie kwoty zakupu rabat i składa się z <xref:System.Workflow.Activities.SequenceActivity> zawierający <xref:System.Workflow.Activities.PolicyActivity>.  
+## <a name="using-the-interop-activity-in-net-framework-45-workflows"></a>Używanie działania Interop w przepływach pracy programu .NET Framework 4.5  
+ W tym temacie [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] utworzeniu biblioteki działania, który zawiera `DiscountCalculator` działania. `DiscountCalculator` Oblicza rabat na wersję na podstawie kwoty zakupu i składa się z <xref:System.Workflow.Activities.SequenceActivity> zawierający <xref:System.Workflow.Activities.PolicyActivity>.  
   
 > [!NOTE]
->  [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] Używa działanie utworzone w tym temacie <xref:System.Workflow.Activities.PolicyActivity> wdrożyć logikę działania. Nie jest wymagane do używania niestandardowej [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] działania lub <xref:System.Activities.Statements.Interop> działania, aby można było używać reguł w [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] przepływu pracy. Na przykład przy użyciu reguł w [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] przepływu pracy bez użycia <xref:System.Activities.Statements.Interop> działania, zobacz [działania zasad w programie .NET Framework 4.5](../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md) próbki.  
+>  [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] Działanie utworzone w tym temacie używa <xref:System.Workflow.Activities.PolicyActivity> Aby zaimplementować logikę działania. Nie jest wymagane do użycia niestandardowej [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] działania lub <xref:System.Activities.Statements.Interop> działania, aby można było używać reguł w [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] przepływu pracy. Na przykład za pomocą reguł w [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] przepływu pracy bez użycia <xref:System.Activities.Statements.Interop> działania, zobacz [działanie zasad w programie .NET Framework 4.5](../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md) próbki.  
   
 #### <a name="to-create-the-net-framework-35-activity-library-project"></a>Aby utworzyć projekt biblioteki działań programu .NET Framework 3.5  
   
-1.  Otwórz [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] i wybierz **nowy** , a następnie **projektu...** z **pliku** menu.  
+1.  Otwórz [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] i wybierz **New** i następnie **projektu...** z **pliku** menu.  
   
-2.  Rozwiń węzeł **inne typy projektów** w węźle **zainstalowane szablony** okienka, a następnie wybierz **rozwiązań programu Visual Studio**.  
+2.  Rozwiń **inne typy projektów** w węźle **zainstalowane szablony** okienka, a następnie wybierz **Visual Studio Solutions**.  
   
-3.  Wybierz **puste rozwiązanie** z **rozwiązań programu Visual Studio** listy. Typ `PolicyInteropDemo` w **nazwa** polu i kliknij przycisk **OK**.  
+3.  Wybierz **puste rozwiązanie** z **Visual Studio Solutions** listy. Typ `PolicyInteropDemo` w **nazwa** pole, a następnie kliknij przycisk **OK**.  
   
-4.  Kliknij prawym przyciskiem myszy **PolicyInteropDemo** w **Eksploratora rozwiązań** i wybierz **Dodaj** , a następnie **nowy projekt...** .  
+4.  Kliknij prawym przyciskiem myszy **PolicyInteropDemo** w **Eksploratora rozwiązań** i wybierz **Dodaj** i następnie **nowy projekt...** .  
   
     > [!TIP]
-    >  Jeśli **Eksploratora rozwiązań** okno nie jest widoczny, wybierz pozycję **Eksploratora rozwiązań** z **widoku** menu.  
+    >  Jeśli **Eksploratora rozwiązań** okno nie jest widoczny, wybierz opcję **Eksploratora rozwiązań** z **widoku** menu.  
   
-5.  W **zainstalowane szablony** listy, wybierz **Visual C#** , a następnie **przepływu pracy**. Wybierz **.NET Framework 3.5** z listy rozwijanej wersji .NET Framework, a następnie wybierz **biblioteki działań przepływów pracy** z **szablony** listy.  
+5.  W **zainstalowane szablony** listy wybierz **Visual C#** i następnie **przepływu pracy**. Wybierz **.NET Framework 3.5** z listy rozwijanej wersji .NET Framework, a następnie wybierz **biblioteki działania przepływu pracy** z **szablony** listy.  
   
-6.  Typ `PolicyActivityLibrary` w **nazwa** polu i kliknij przycisk **OK**.  
+6.  Typ `PolicyActivityLibrary` w **nazwa** pole, a następnie kliknij przycisk **OK**.  
   
-7.  Kliknij prawym przyciskiem myszy **Activity1.cs** w **Eksploratora rozwiązań** i wybierz **usunąć**. Kliknij przycisk **OK** o potwierdzenie.  
+7.  Kliknij prawym przyciskiem myszy **Activity1.cs** w **Eksploratora rozwiązań** i wybierz **Usuń**. Kliknij przycisk **OK** o potwierdzenie.  
   
 #### <a name="to-create-the-discountcalculator-activity"></a>Aby utworzyć działanie DiscountCalculator  
   
-1.  Kliknij prawym przyciskiem myszy **PolicyActivityLibrary** w **Eksploratora rozwiązań** i wybierz **Dodaj** , a następnie **działanie...** .  
+1.  Kliknij prawym przyciskiem myszy **PolicyActivityLibrary** w **Eksploratora rozwiązań** i wybierz **Dodaj** i następnie **działanie...** .  
   
-2.  Wybierz **działania (z separacją kodu)** z **Visual C# elementów** listy. Typ `DiscountCalculator` w **nazwa** polu i kliknij przycisk **OK**.  
+2.  Wybierz **działanie (z separacją kodu)** z **elementy Visual C#** listy. Typ `DiscountCalculator` w **nazwa** pole, a następnie kliknij przycisk **OK**.  
   
-3.  Kliknij prawym przyciskiem myszy **DiscountCalculator.xoml** w **Eksploratora rozwiązań** i wybierz **kod widoku**.  
+3.  Kliknij prawym przyciskiem myszy **DiscountCalculator.xoml** w **Eksploratora rozwiązań** i wybierz **Wyświetl kod**.  
   
-4.  Dodaj następujące trzy właściwości `DiscountCalculator` klasy.  
+4.  Dodaj następujące trzy właściwości, aby `DiscountCalculator` klasy.  
   
     ```csharp  
     public partial class DiscountCalculator : SequenceActivity  
@@ -59,33 +59,33 @@ Działania utworzone przy użyciu [!INCLUDE[vstecwinfx](../../../includes/vstecw
     }  
     ```  
   
-5.  Kliknij prawym przyciskiem myszy **DiscountCalculator.xoml** w **Eksploratora rozwiązań** i wybierz **Widok projektanta**.  
+5.  Kliknij prawym przyciskiem myszy **DiscountCalculator.xoml** w **Eksploratora rozwiązań** i wybierz **Projektant widoków**.  
   
-6.  Przeciągnij **zasad** działania z **Windows Workflow 3.0** sekcji **przybornika** i upuść je w **DiscountCalculator** działania .  
+6.  Przeciągnij **zasad** działanie z **Windows Workflow 3.0** części **przybornika** i upuść je **DiscountCalculator** działania .  
   
     > [!TIP]
-    >  Jeśli **przybornika** okno nie jest widoczny, wybierz pozycję **przybornika** z **widoku** menu.  
+    >  Jeśli **przybornika** okno nie jest widoczny, wybierz opcję **przybornika** z **widoku** menu.  
   
 #### <a name="to-configure-the-rules"></a>Aby skonfigurować reguły  
   
-1.  Kliknij nowo dodany **zasad** działania, aby wybrać, jeśli nie została jeszcze wybrana.  
+1.  Kliknij nowo dodany **zasad** działanie, aby ją zaznaczyć, jeśli nie została jeszcze wybrana.  
   
-2.  Kliknij przycisk **RuleSetReference** właściwości w **właściwości** okno, aby go zaznaczyć, a następnie kliknij przycisk wielokropka z prawej strony właściwości.  
+2.  Kliknij przycisk **RuleSetReference** właściwość **właściwości** okna, aby go zaznaczyć, a następnie kliknij przycisk wielokropka z prawej strony właściwości.  
   
     > [!TIP]
-    >  Jeśli **właściwości** okna nie jest widoczne, wybierz **okna właściwości** z **widoku** menu.  
+    >  Jeśli **właściwości** okno nie jest widoczne, wybierz **okno właściwości** z **widoku** menu.  
   
-3.  Wybierz **kliknij nowy...** .  
+3.  Wybierz **kliknij pozycję Nowy...** .  
   
 4.  Kliknij przycisk **Dodaj regułę**.  
   
-5.  Wpisz następujące wyrażenie w **warunku** pole.  
+5.  Wpisz następujące wyrażenie do **warunek** pole.  
   
     ```  
     this.Subtotal >= 50 && this.Subtotal < 100  
     ```  
   
-6.  Wpisz następujące wyrażenie w **następnie akcje** pole.  
+6.  Wpisz następujące wyrażenie do **następnie akcje** pole.  
   
     ```  
     this.DiscountPercent = 0.075  
@@ -93,13 +93,13 @@ Działania utworzone przy użyciu [!INCLUDE[vstecwinfx](../../../includes/vstecw
   
 7.  Kliknij przycisk **Dodaj regułę**.  
   
-8.  Wpisz następujące wyrażenie w **warunku** pole.  
+8.  Wpisz następujące wyrażenie do **warunek** pole.  
   
     ```  
     this.Subtotal >= 100  
     ```  
   
-9. Wpisz następujące wyrażenie w **następnie akcje** pole.  
+9. Wpisz następujące wyrażenie do **następnie akcje** pole.  
   
     ```  
     this.DiscountPercent = 0.15  
@@ -107,29 +107,29 @@ Działania utworzone przy użyciu [!INCLUDE[vstecwinfx](../../../includes/vstecw
   
 10. Kliknij przycisk **Dodaj regułę**.  
   
-11. Wpisz następujące wyrażenie w **warunku** pole.  
+11. Wpisz następujące wyrażenie do **warunek** pole.  
   
     ```  
     this.DiscountPercent > 0  
     ```  
   
-12. Wpisz następujące wyrażenie w **następnie akcje** pole.  
+12. Wpisz następujące wyrażenie do **następnie akcje** pole.  
   
     ```  
     this.Total = this.Subtotal - this.Subtotal * this.DiscountPercent  
     ```  
   
-13. Wpisz następujące wyrażenie w **Else akcje** pole.  
+13. Wpisz następujące wyrażenie do **inne akcje** pole.  
   
     ```  
     this.Total = this.Subtotal  
     ```  
   
-14. Kliknij przycisk **OK** zamknąć **Edytor ustawić reguły** okno dialogowe.  
+14. Kliknij przycisk **OK** zamknąć **Edytor zestawu reguł** okno dialogowe.  
   
-15. Upewnij się, że nowo utworzonego <xref:System.Workflow.Activities.Rules.RuleSet> wybrano **nazwa** listy, a następnie kliknij przycisk **OK**.  
+15. Upewnij się, że nowo utworzony <xref:System.Workflow.Activities.Rules.RuleSet> wybrano **nazwa** listy, a następnie kliknij przycisk **OK**.  
   
-16. Naciśnij klawisze CTRL + SHIFT + B w celu skompilowania rozwiązania.  
+16. Naciśnij klawisze CTRL + SHIFT + B, aby skompilować rozwiązanie.  
   
  Dodane do reguły `DiscountCalculator` działania w tej procedurze przedstawiono w poniższym przykładzie kodu.  
   
@@ -145,49 +145,49 @@ Rule3: IF this.DiscountPercent > 0
        ELSE this.Total = this.Subtotal  
 ```  
   
- Podczas <xref:System.Workflow.Activities.PolicyActivity> wykonuje te trzy zasady oceny i zmodyfikuj `Subtotal`, `DiscountPercent`, i `Total` wartości właściwości `DiscountCalculator` do obliczania rabatu odpowiednie działania.  
+ Gdy <xref:System.Workflow.Activities.PolicyActivity> wykonuje te trzy zasady oceny i modyfikować `Subtotal`, `DiscountPercent`, i `Total` wartości właściwości `DiscountCalculator` działanie, aby obliczyć żądaną rabat.  
   
-## <a name="using-the-discountcalculator-activity-with-the-interop-activity"></a>Używanie działania DiscountCalculator z działania Interop  
- Aby użyć `DiscountCalculator` działania wewnątrz [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] przepływu pracy, <xref:System.Activities.Statements.Interop> to działanie służy. W tej sekcji dwa przepływy pracy są tworzone, jeden przy użyciu kodu i jeden za pomocą projektanta przepływów pracy, które pokazują, jak używać <xref:System.Activities.Statements.Interop> działania `DiscountCalculator` działania. Ta sama aplikacja hosta jest używana dla obu przepływów pracy.  
+## <a name="using-the-discountcalculator-activity-with-the-interop-activity"></a>Przy użyciu działania DiscountCalculator przy użyciu działań Interop  
+ Aby użyć `DiscountCalculator` działania wewnątrz [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] przepływu pracy, <xref:System.Activities.Statements.Interop> to działanie służy. W tej sekcji dwa przepływy pracy są tworzone, jeden przy użyciu kodu i ją przy użyciu projektanta przepływów pracy, które przedstawiają, jak używać <xref:System.Activities.Statements.Interop> działanie przy użyciu `DiscountCalculator` działania. Ta sama aplikacja hosta jest używana w przypadku obu przepływów pracy.  
   
 #### <a name="to-create-the-host-application"></a>Aby utworzyć aplikację hosta  
   
 1.  Kliknij prawym przyciskiem myszy **PolicyInteropDemo** w **Eksploratora rozwiązań** i wybierz **Dodaj**, a następnie **nowy projekt...** .  
   
-2.  Upewnij się, że **.NET Framework 4.5** jest zaznaczona na liście rozwijanej wersji .NET Framework, a następnie wybierz **Aplikacja konsoli przepływu pracy** z **Visual C# elementów** listy.  
+2.  Upewnij się, że **.NET Framework 4.5** jest zaznaczony na liście rozwijanej wersji .NET Framework, a następnie wybierz pozycję **Aplikacja konsoli przepływu pracy** z **elementy Visual C#** listy.  
   
-3.  Typ `PolicyInteropHost` do **nazwa** polu i kliknij przycisk **OK**.  
+3.  Typ `PolicyInteropHost` do **nazwa** pole, a następnie kliknij przycisk **OK**.  
   
 4.  Kliknij prawym przyciskiem myszy **PolicyInteropHost** w **Eksploratora rozwiązań** i wybierz **właściwości**.  
   
-5.  W **platformy docelowej** listy rozwijanej liście, wybór z **.NET Framework 4 Client Profile** do **.NET Framework 4.5**. Kliknij przycisk **tak** o potwierdzenie.  
+5.  W **platformę docelową** listy rozwijanej listy, zmień zaznaczoną wartość z **.NET Framework 4 Client Profile** do **.NET Framework 4.5**. Kliknij przycisk **tak** o potwierdzenie.  
   
-6.  Kliknij prawym przyciskiem myszy **PolicyInteropHost** w **Eksploratora rozwiązań** i wybierz **Dodawanie odwołania...** .  
+6.  Kliknij prawym przyciskiem myszy **PolicyInteropHost** w **Eksploratora rozwiązań** i wybierz **Dodaj odwołanie...** .  
   
-7.  Wybierz **PolicyActivityLibrary** z **projekty** i kliknij polecenie **OK**.  
+7.  Wybierz **PolicyActivityLibrary** z **projektów** kartę, a następnie kliknij przycisk **OK**.  
   
-8.  Kliknij prawym przyciskiem myszy **PolicyInteropHost** w **Eksploratora rozwiązań** i wybierz **Dodawanie odwołania...** .  
+8.  Kliknij prawym przyciskiem myszy **PolicyInteropHost** w **Eksploratora rozwiązań** i wybierz **Dodaj odwołanie...** .  
   
-9. Wybierz **System.Workflow.Activities**, **System.Workflow.ComponentModel**, a następnie **System.Workflow.Runtime** z **.NET**i kliknij polecenie **OK**.  
+9. Wybierz **System.Workflow.Activities**, **System.Workflow.ComponentModel**, a następnie **System.Workflow.Runtime** z **.NET**kartę, a następnie kliknij przycisk **OK**.  
   
 10. Kliknij prawym przyciskiem myszy **PolicyInteropHost** w **Eksploratora rozwiązań** i wybierz **Ustaw jako projekt startowy**.  
   
-11. Naciśnij klawisze CTRL + SHIFT + B w celu skompilowania rozwiązania.  
+11. Naciśnij klawisze CTRL + SHIFT + B, aby skompilować rozwiązanie.  
   
-### <a name="using-the-interop-activity-in-code"></a>Za pomocą działania Interop w kodzie  
- W tym przykładzie definicji przepływu pracy jest tworzony przy użyciu kodu, który zawiera <xref:System.Activities.Statements.Interop> działania i `DiscountCalculator` działania. Ten przepływ pracy jest wywoływana przy użyciu <xref:System.Activities.WorkflowInvoker> i wyniki oceny reguły są zapisywane w konsoli przy użyciu <xref:System.Activities.Statements.WriteLine> działania.  
+### <a name="using-the-interop-activity-in-code"></a>Używanie działania Interop w kodzie  
+ W tym przykładzie tworzona jest definicja przepływu pracy, przy użyciu kodu, który zawiera <xref:System.Activities.Statements.Interop> działania i `DiscountCalculator` działania. Ten przepływ pracy jest wywoływany przy użyciu <xref:System.Activities.WorkflowInvoker> i wyniki oceny reguły są zapisywane przy użyciu konsoli <xref:System.Activities.Statements.WriteLine> działania.  
   
 ##### <a name="to-use-the-interop-activity-in-code"></a>Aby użyć działania Interop w kodzie  
   
-1.  Kliknij prawym przyciskiem myszy **Program.cs** w **Eksploratora rozwiązań** i wybierz **kod widoku**.  
+1.  Kliknij prawym przyciskiem myszy **Program.cs** w **Eksploratora rozwiązań** i wybierz **Wyświetl kod**.  
   
-2.  Dodaj następujące `using` instrukcji w górnej części pliku.  
+2.  Dodaj następujący kod `using` instrukcji w górnej części pliku.  
   
     ```csharp  
     using PolicyActivityLibrary;  
     ```  
   
-3.  Usuń zawartość `Main` metodę i Zastąp następujący kod.  
+3.  Usuń zawartość `Main` metodę i Zastąp następującym kodem.  
   
     ```csharp  
     static void Main(string[] args)  
@@ -196,7 +196,7 @@ Rule3: IF this.DiscountPercent > 0
     }  
     ```  
   
-4.  Utworzenie nowej metody w `Program` klasy o nazwie `CalculateDiscountUsingCodeWorkflow` zawierający następujący kod.  
+4.  Utworzenie nowej metody w `Program` klasę o nazwie `CalculateDiscountUsingCodeWorkflow` zawierający poniższy kod.  
   
     ```csharp  
     static void CalculateDiscountUsingCodeWorkflow()  
@@ -246,9 +246,9 @@ Rule3: IF this.DiscountPercent > 0
     ```  
   
     > [!NOTE]
-    >  `Subtotal`, `DiscountPercent`, I `Total` właściwości `DiscountCalculator` działania są udostępniane jako argumenty <xref:System.Activities.Statements.Interop> działania i zmienne powiązane z lokalnego przepływu pracy w <xref:System.Activities.Statements.Interop> działania <xref:System.Activities.Statements.Interop.ActivityProperties%2A> Kolekcja. `Subtotal` zostanie dodany jako <xref:System.Activities.ArgumentDirection.In> argument ponieważ `Subtotal` dane przepływają w <xref:System.Activities.Statements.Interop> działania, i `DiscountPercent` i `Total` są dodawane jako <xref:System.Activities.ArgumentDirection.Out> argumenty ponieważ ich dane przepływają poza <xref:System.Activities.Statements.Interop> działania. Należy pamiętać, że dwa <xref:System.Activities.ArgumentDirection.Out> argumenty są dodawane z nazwami `DiscountPercentOut` i `TotalOut` aby wskazać, że reprezentują <xref:System.Activities.ArgumentDirection.Out> argumentów. `DiscountCalculator` Typ jest określony jako <xref:System.Activities.Statements.Interop> działania <xref:System.Activities.Statements.Interop.ActivityType%2A>.  
+    >  `Subtotal`, `DiscountPercent`, I `Total` właściwości `DiscountCalculator` działania są udostępniane jako argumenty <xref:System.Activities.Statements.Interop> działania i przepływu pracy jest powiązana z lokalnych zmiennych w <xref:System.Activities.Statements.Interop> działania <xref:System.Activities.Statements.Interop.ActivityProperties%2A> Kolekcja. `Subtotal` jest dodawany jako <xref:System.Activities.ArgumentDirection.In> argument ponieważ `Subtotal` dane są przesyłane <xref:System.Activities.Statements.Interop> działania i `DiscountPercent` i `Total` są dodawane jako <xref:System.Activities.ArgumentDirection.Out> argumentów, ponieważ ich dane przepływają z <xref:System.Activities.Statements.Interop> działania. Należy pamiętać, że dwa <xref:System.Activities.ArgumentDirection.Out> argumenty są dodawane przy użyciu nazw `DiscountPercentOut` i `TotalOut` do wskazania, że reprezentują <xref:System.Activities.ArgumentDirection.Out> argumentów. `DiscountCalculator` Typ jest określony jako <xref:System.Activities.Statements.Interop> działania <xref:System.Activities.Statements.Interop.ActivityType%2A>.  
   
-5.  Naciśnij klawisze CTRL + F5, aby skompilować i uruchomić aplikację. Zastąp różnych wartości `Subtotal` wartość przetestować poziomy różnych rabat pochodzącymi `DiscountCalculator` działania.  
+5.  Naciśnij klawisze CTRL + F5, aby skompilować i uruchomić aplikację. Zastąp różne wartości `Subtotal` wartość do przetestowania poziomy różnych rabatów, dostarczone przez `DiscountCalculator` działania.  
   
     ```csharp  
     Variable<double> Subtotal = new Variable<double>  
@@ -258,65 +258,65 @@ Rule3: IF this.DiscountPercent > 0
     };  
     ```  
   
-### <a name="using-the-interop-activity-in-the-workflow-designer"></a>Za pomocą działania Interop w Projektancie przepływów pracy  
- W tym przykładzie przepływ pracy jest tworzony przy użyciu projektanta przepływów pracy. Ten przepływ pracy ma te same funkcje co w poprzednim przykładzie, z wyjątkiem niż zamiast <xref:System.Activities.Statements.WriteLine> działanie, aby wyświetlić rabatu aplikacji hosta pobiera i wyświetla informacje o rabat po zakończeniu przepływu pracy. Ponadto zamiast za pomocą zmiennych lokalnych przepływu pracy zawierają dane, argumenty są tworzone w Projektancie przepływów pracy i wartości są przekazywane w z hosta po wywołaniu przepływ pracy.  
+### <a name="using-the-interop-activity-in-the-workflow-designer"></a>Używanie działania Interop w Projektancie przepływu pracy  
+ W tym przykładzie przepływ pracy jest tworzony za pomocą projektanta przepływów pracy. Ten przepływ pracy ma taką samą funkcjonalność jak w poprzednim przykładzie, z wyjątkiem niż zamiast <xref:System.Activities.Statements.WriteLine> działanie, aby wyświetlić ten rabat aplikacji hosta pobiera i wyświetla informacje o rabat, po zakończeniu przepływu pracy. Ponadto zamiast używania zmiennych lokalnych przepływu pracy, aby zawierać dane, argumenty są tworzone w Projektancie przepływów pracy i wartości są przekazywane w z hosta, gdy przepływ pracy zostanie wywołany.  
   
-##### <a name="to-host-the-policyactivity-using-a-workflow-designer-created-workflow"></a>Do obsługi działania PolicyActivity za pomocą przepływu pracy utworzone w Projektancie przepływów pracy  
+##### <a name="to-host-the-policyactivity-using-a-workflow-designer-created-workflow"></a>Do hostowania działania PolicyActivity za pomocą przepływu pracy utworzone w Projektancie przepływu pracy  
   
-1.  Kliknij prawym przyciskiem myszy **Workflow1.xaml** w **Eksploratora rozwiązań** i wybierz **usunąć**. Kliknij przycisk **OK** o potwierdzenie.  
+1.  Kliknij prawym przyciskiem myszy **Workflow1.xaml** w **Eksploratora rozwiązań** i wybierz **Usuń**. Kliknij przycisk **OK** o potwierdzenie.  
   
 2.  Kliknij prawym przyciskiem myszy **PolicyInteropHost** w **Eksploratora rozwiązań** i wybierz **Dodaj**, **nowy element...** .  
   
-3.  Rozwiń węzeł **Visual C# elementów** a następnie wybierz węzeł **przepływu pracy**. Wybierz **działania** z **Visual C# elementów** listy.  
+3.  Rozwiń **elementy Visual C#** a następnie wybierz węzeł **przepływu pracy**. Wybierz **działania** z **elementy Visual C#** listy.  
   
-4.  Typ `DiscountWorkflow` do **nazwa** polu i kliknij przycisk **Dodaj**.  
+4.  Typ `DiscountWorkflow` do **nazwa** pole, a następnie kliknij przycisk **Dodaj**.  
   
-5.  Kliknij przycisk **argumenty** przycisk na dole po lewej stronie projektanta przepływów pracy, aby wyświetlić **argumenty** okienka.  
+5.  Kliknij przycisk **argumenty** przycisku w lewej dolnej części projektanta przepływów pracy, aby wyświetlić **argumenty** okienka.  
   
 6.  Kliknij przycisk **utworzenia argumentu**.  
   
-7.  Typ `Subtotal` do **nazwa** wybierz opcję **w** z **kierunek** listy rozwijanej, wybierz pozycję **podwójne** z **Typ argumentu** listy rozwijanej, a następnie naciśnij klawisz ENTER, aby zapisać argument.  
+7.  Typ `Subtotal` do **nazwa** wybierz opcję **w** z **kierunek** listę rozwijaną, wybierz opcję **Double** z **Typ argumentu** listy rozwijanej, a następnie naciśnij klawisz ENTER, aby zapisać argumentu.  
   
     > [!NOTE]
-    >  Jeśli **podwójne** nie znajduje się w **typ argumentu** listy rozwijanej wybierz **Przeglądaj w poszukiwaniu typów...** , typ `System.Double` w **nazwy typu** i kliknij **OK**.  
+    >  Jeśli **Double** nie znajduje się w **typ argumentu** listy rozwijanej wybierz **vyhledat typy...** , typ `System.Double` w **nazwy typu** polu, a następnie kliknij przycisk **OK**.  
   
 8.  Kliknij przycisk **utworzenia argumentu**.  
   
-9. Typ `DiscountPercent` do **nazwa** wybierz opcję **limit** z **kierunek** listy rozwijanej, wybierz pozycję **podwójne** z **Typ argumentu** listy rozwijanej, a następnie naciśnij klawisz ENTER, aby zapisać argument.  
+9. Typ `DiscountPercent` do **nazwa** wybierz opcję **się** z **kierunek** listę rozwijaną, wybierz opcję **Double** z **Typ argumentu** listy rozwijanej, a następnie naciśnij klawisz ENTER, aby zapisać argumentu.  
   
 10. Kliknij przycisk **utworzenia argumentu**.  
   
-11. Typ `Total` do **nazwa** wybierz opcję **limit** z **kierunek** listy rozwijanej, wybierz pozycję **podwójne** z **Typ argumentu** listy rozwijanej, a następnie naciśnij klawisz ENTER, aby zapisać argument.  
+11. Typ `Total` do **nazwa** wybierz opcję **się** z **kierunek** listę rozwijaną, wybierz opcję **Double** z **Typ argumentu** listy rozwijanej, a następnie naciśnij klawisz ENTER, aby zapisać argumentu.  
   
-12. Kliknij przycisk **argumenty** przycisk na dole po lewej stronie projektanta przepływów pracy, aby zamknąć **argumenty** okienka.  
+12. Kliknij przycisk **argumenty** przycisku w lewej dolnej części projektanta przepływów pracy, aby zamknąć **argumenty** okienka.  
   
-13. Przeciągnij **sekwencji** działania z **przepływ sterowania** sekcji **przybornika** i upuść ją na powierzchnię projektanta przepływów pracy.  
+13. Przeciągnij **sekwencji** działanie z **przepływ sterowania** części **przybornika** i upuść go na powierzchnię projektanta przepływu pracy.  
   
-14. Przeciągnij **międzyoperacyjności** działania z **migracji** sekcji **przybornika** i upuść je w **sekwencji** działania.  
+14. Przeciągnij **międzyoperacyjności** działanie z **migracji** części **przybornika** i upuść je **sekwencji** działania.  
   
-15. Kliknij przycisk **międzyoperacyjności** działania na **kliknij, aby przeglądać...** Etykieta, wpisz **DiscountCalculator** w **nazwy typu** i kliknij **OK**.  
+15. Kliknij przycisk **międzyoperacyjności** działanie **kliknij, aby przeglądać...** etykiety, wpisz **DiscountCalculator** w **nazwy typu** polu, a następnie kliknij przycisk **OK**.  
   
     > [!NOTE]
-    >  Gdy <xref:System.Activities.Statements.Interop> działania zostanie dodany do przepływu pracy i `DiscountCalculator` typ jest określony jako jego <xref:System.Activities.Statements.Interop.ActivityType%2A>, <xref:System.Activities.Statements.Interop> działania udostępnia trzy <xref:System.Activities.ArgumentDirection.In> argumentów i trzy <xref:System.Activities.ArgumentDirection.Out> argumenty, które reprezentują trzy publicznego właściwości `DiscountCalculator` działania. <xref:System.Activities.ArgumentDirection.In> Argumenty mają taką samą nazwę jak trzy właściwości publiczne i trzech <xref:System.Activities.ArgumentDirection.Out> argumenty mają takie same nazwy z **limit** dołączonym do nazwy właściwości. W poniższych krokach argumenty przepływu pracy utworzone w poprzednich krokach jest powiązana z <xref:System.Activities.Statements.Interop> argumentów działania.  
+    >  Gdy <xref:System.Activities.Statements.Interop> dodaniu działania do przepływu pracy i `DiscountCalculator` typ jest określony jako jego <xref:System.Activities.Statements.Interop.ActivityType%2A>, <xref:System.Activities.Statements.Interop> działalność opisuje trzy <xref:System.Activities.ArgumentDirection.In> argumentów i trzy <xref:System.Activities.ArgumentDirection.Out> argumenty, które reprezentują trzy publiczny właściwości `DiscountCalculator` działania. <xref:System.Activities.ArgumentDirection.In> Argumenty mają taką samą nazwę jak trzy właściwości publiczne i trzy <xref:System.Activities.ArgumentDirection.Out> argumenty mają takie same nazwy z **się** dołączana do nazwy właściwości. W poniższych krokach argumenty przepływu pracy, utworzony w poprzednich krokach jest powiązana z <xref:System.Activities.Statements.Interop> argumentów tego działania.  
   
-16. Typ `DiscountPercent` do **wprowadź wyrażenia języka VB.** pole z prawej strony **DiscountPercentOut** właściwości i naciśnij klawisz TAB.  
+16. Typ `DiscountPercent` do **wprowadź wyrażenie VB** pole po prawej stronie **DiscountPercentOut** właściwość i naciśnij klawisz TAB.  
   
-17. Typ `Subtotal` do **wprowadź wyrażenia języka VB.** pole z prawej strony **Suma częściowa** właściwości i naciśnij klawisz TAB.  
+17. Typ `Subtotal` do **wprowadź wyrażenie VB** pole po prawej stronie **Suma częściowa** właściwość i naciśnij klawisz TAB.  
   
-18. Typ `Total` do **wprowadź wyrażenia języka VB.** pole z prawej strony **TotalOut** właściwości i naciśnij klawisz TAB.  
+18. Typ `Total` do **wprowadź wyrażenie VB** pole po prawej stronie **TotalOut** właściwość i naciśnij klawisz TAB.  
   
-19. Kliknij prawym przyciskiem myszy **Program.cs** w **Eksploratora rozwiązań** i wybierz **kod widoku**.  
+19. Kliknij prawym przyciskiem myszy **Program.cs** w **Eksploratora rozwiązań** i wybierz **Wyświetl kod**.  
   
-20. Dodaj następujące `using` instrukcji w górnej części pliku.  
+20. Dodaj następujący kod `using` instrukcji w górnej części pliku.  
   
     ```csharp  
     using System.Collections.Generic;  
     ```  
   
-21. Komentarz wywołanie `CalculateDiscountInCode` metoda `Main` — metoda i Dodaj następujący kod.  
+21. Komentarz wywołanie `CalculateDiscountInCode` method in Class metoda `Main` metody i Dodaj następujący kod.  
   
     > [!NOTE]
-    >  Jeśli nie wykonaniu poprzedniej procedury i domyślnie `Main` kodu, Zastąp zawartość `Main` z następującym kodem.  
+    >  Jeśli użytkownik nie korzystał z poprzedniej procedury oraz domyślnych `Main` kod, Zastąp zawartość `Main` następującym kodem.  
   
     ```csharp  
     static void Main(string[] args)  
@@ -326,7 +326,7 @@ Rule3: IF this.DiscountPercent > 0
     }  
     ```  
   
-22. Utworzenie nowej metody w `Program` klasy o nazwie `CalculateDiscountUsingDesignerWorkflow` zawierający następujący kod.  
+22. Utworzenie nowej metody w `Program` klasę o nazwie `CalculateDiscountUsingDesignerWorkflow` zawierający poniższy kod.  
   
     ```csharp  
     static void CalculateDiscountUsingDesignerWorkflow()  
@@ -348,22 +348,22 @@ Rule3: IF this.DiscountPercent > 0
     }  
     ```  
   
-23. Naciśnij klawisze CTRL + F5, aby skompilować i uruchomić aplikację. Aby określić inną `Subtotal` ilość, zmień wartość `SubtotalValue` w poniższym kodzie.  
+23. Naciśnij klawisze CTRL + F5, aby skompilować i uruchomić aplikację. Aby określić inną `Subtotal` amount, zmień wartość właściwości `SubtotalValue` w poniższym kodzie.  
   
     ```csharp  
     double SubtotalValue = 125.99; // Change this value.  
     ```  
   
-## <a name="rules-features-overview"></a>Przegląd funkcji reguły  
- [!INCLUDE[wf1](../../../includes/wf1-md.md)] Aparatu reguł zapewnia obsługę przetwarzania reguły w sposób oparte na priorytetach obsługę do przodu łańcucha. Reguły może przyjąć pojedynczy element lub elementy w kolekcji. Omówienie zasad i informacji na temat reguł określonych funkcji można znaleźć w poniższej tabeli.  
+## <a name="rules-features-overview"></a>Omówienie funkcji reguły  
+ [!INCLUDE[wf1](../../../includes/wf1-md.md)] Aparatu reguł umożliwia przetwarzanie reguł w sposób oparte na priorytetach obsługę do przodu łańcucha. Zasady mogą być obliczane dla pojedynczego elementu lub elementów w kolekcji. Omówienie zasad i informacji na temat funkcji określone zasady można znaleźć w poniższej tabeli.  
   
 |Funkcja reguł|Dokumentacja|  
 |-------------------|-------------------|  
-|Przegląd zasad|[Wprowadzenie do aparatu reguł systemu Windows Workflow Foundation](http://go.microsoft.com/fwlink/?LinkID=152836)|  
-|Zestaw reguł|[Używanie zestawów reguł w przepływach pracy](http://go.microsoft.com/fwlink/?LinkId=178516) i <xref:System.Workflow.Activities.Rules.RuleSet>|  
-|Ocena zasad|[Zasady oceny w zestawy reguł](http://go.microsoft.com/fwlink/?LinkId=178517)|  
-|Reguły łańcucha|[Przekazuj łańcucha kontroli](http://go.microsoft.com/fwlink/?LinkId=178518) i [do przodu łańcucha zasad](http://go.microsoft.com/fwlink/?LinkId=178519)|  
-|Przetwarzanie kolekcje reguł|[Przetwarzanie kolekcje reguł](http://go.microsoft.com/fwlink/?LinkId=178520)|  
-|Za pomocą działania PolicyActivity|[Za pomocą działania działania PolicyActivity](http://go.microsoft.com/fwlink/?LinkId=178521) i <xref:System.Workflow.Activities.PolicyActivity>|  
+|Omówienie reguł|[Wprowadzenie do aparatu reguł programu Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkID=152836)|  
+|Zestaw reguł|[Używanie zestawów reguł w przepływach pracy](https://go.microsoft.com/fwlink/?LinkId=178516) i <xref:System.Workflow.Activities.Rules.RuleSet>|  
+|Ocena zasad|[Obliczanie reguł w zestawy reguł](https://go.microsoft.com/fwlink/?LinkId=178517)|  
+|Zasady łańcucha|[Do przodu łańcucha kontroli](https://go.microsoft.com/fwlink/?LinkId=178518) i [do przodu łańcucha reguł](https://go.microsoft.com/fwlink/?LinkId=178519)|  
+|Przetwarzanie kolekcje reguł|[Przetwarzanie kolekcje reguł](https://go.microsoft.com/fwlink/?LinkId=178520)|  
+|Za pomocą działania PolicyActivity|[Przy użyciu działania działania PolicyActivity](https://go.microsoft.com/fwlink/?LinkId=178521) i <xref:System.Workflow.Activities.PolicyActivity>|  
   
- Przepływy pracy utworzone w [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] nie korzystać ze wszystkich funkcji zasad udostępnionych przez [!INCLUDE[wf1](../../../includes/wf1-md.md)], takie jak warunki deklaratywne działania i warunkowego działań, takich jak <xref:System.Workflow.Activities.ConditionedActivityGroup> i <xref:System.Workflow.Activities.ReplicatorActivity>. Jeśli jest to wymagane, ta funkcja jest dostępna dla przepływów pracy utworzony za pomocą [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] i [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Aby uzyskać więcej informacji, zobacz [wskazówki dotyczące migracji](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).
+ Przepływy pracy utworzone w [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] nie należy używać wszystkich reguł funkcji oferowanych przez [!INCLUDE[wf1](../../../includes/wf1-md.md)], takich jak warunki deklaratywne działania i warunkowego działań, takich jak <xref:System.Workflow.Activities.ConditionedActivityGroup> i <xref:System.Workflow.Activities.ReplicatorActivity>. Jeśli jest to wymagane, ta funkcja jest dostępna dla przepływów pracy utworzony za pomocą [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] i [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Aby uzyskać więcej informacji, zobacz [wskazówek dotyczących migracji](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).

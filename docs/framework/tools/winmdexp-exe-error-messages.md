@@ -159,20 +159,20 @@ helpviewer_keywords:
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0172f3895a0a1f444548bfbca877164815adc94a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f051af9284ddbf583e5454f7bdc106a061489d3c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407043"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465502"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe — komunikaty o błędach
-Wywołania procesu kompilacji [Winmdexp.exe (Narzędzie systemu Windows Runtime metadanych wyeksportować)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) korzystając  **[!INCLUDE[wrt](../../../includes/wrt-md.md)] składnika** szablonu w [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], więc komunikaty o błędach Winmdexp.exe są **Listy błędów**. Winmdexp.exe działa w module, który jest skompilowana przy użyciu `/target:winmdobj` opcji. Ponieważ wymaga ona modułu skompilowanego jako dane wejściowe, jego komunikaty o błędach nie są wyświetlane, chyba że kompilacja zakończy się pomyślnie.  
+Wywołania procesu kompilacji [Winmdexp.exe (Windows Runtime narzędzie do eksportu metadanych)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) zastosowania  **[!INCLUDE[wrt](../../../includes/wrt-md.md)] składnika** szablonu w [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], dzięki czemu komunikaty o błędach Winmdexp.exe są wyświetlane w **Lista błędów**. Winmdexp.exe działa w module, który jest kompilowany za pomocą `/target:winmdobj` opcji. Ponieważ wymaga, aby moduł skompilowany jako dane wejściowe, jego komunikaty o błędach nie są wyświetlane, chyba że kompilacja zakończy się pomyślnie.  
   
- Komunikaty o błędach są przeznaczone do zawierają informacje, które należy spełnić warunki błędu, które zgłaszają. Jednak niektóre problemy wymagać większej ilości danych niż mieści się w komunikacie. Dodatkowe informacje można znaleźć [warunki błędów składnika środowiska wykonawczego systemu Windows zdiagnozowaniu](http://go.microsoft.com/fwlink/p/?LinkId=251127) w Centrum deweloperów systemu Windows.  
+ Komunikaty o błędach są przeznaczone do zawierają wszystkie informacje, które należy spełnić warunki błędów, które zgłaszają. Jednak niektóre problemy, wymaga więcej informacji, niż mieści się w komunikacie. Można znaleźć dodatkowe informacje w [warunki błędu składnika diagnozowanie środowiska uruchomieniowego Windows](https://go.microsoft.com/fwlink/p/?LinkId=251127) w Centrum deweloperów Windows.  
   
- Jeśli ten błąd nie została szczegółowo opisana w tym artykule i uważasz, że komunikat nie zawiera wystarczających informacji, aby rozwiązać ten problem, użyj link opinii w tym artykule i zawierać komunikat o błędzie. Alternatywnie można pliku błędu pod adresem [witryny sieci Web Microsoft Connect](http://go.microsoft.com/fwlink/p/?LinkId=251130). Można także wyszukać więcej informacji [Forums Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=251129).  
+ Jeśli w tym artykule nie omówiono błędu i uważasz, że komunikat nie zawiera wystarczających informacji, aby rozwiązać ten problem, użyj łącza opinii, w tym artykule i Uwzględnij komunikat o błędzie. Alternatywnie możesz zgłosić usterkę w [witryny sieci Web Microsoft Connect](https://go.microsoft.com/fwlink/p/?LinkId=251130). Można także wyszukać więcej informacji [Forums firmy Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=251129).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Winmdexp.exe (narzędzie eksportowania metadanych środowiska uruchomieniowego systemu Windows)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)  
- [Diagnozowanie błędów składnika środowiska wykonawczego systemu Windows](http://go.microsoft.com/fwlink/p/?LinkId=251127)
+ [Diagnozowanie błędów składników Windows Runtime](https://go.microsoft.com/fwlink/p/?LinkId=251127)

@@ -4,41 +4,41 @@ ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51a0538670a834435aff8d2b6c81b78450fe47f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac5d80664bbca8cf950eb2e6f37badc485c398d2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396763"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474080"
 ---
 # <a name="runtime-directive-policy-settings"></a>Ustawienia zasad dyrektyw środowiska uruchomieniowego
 > [!NOTE]
->  W tym temacie odnosi się do .NET Native Developer Preview, która jest wersja wstępna oprogramowania. Możesz pobrać podglądu [witryny sieci Web Microsoft Connect](http://go.microsoft.com/fwlink/?LinkId=394611) (wymaga rejestracji).  
+>  W tym temacie odnosi się do platformy .NET Native Developer Preview, czyli wstępnej wersji oprogramowania. Możesz pobrać podglądu [witryny sieci Web Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (wymaga rejestracji).  
   
- Ustawienia zasad dyrektyw środowiska uruchomieniowego dla platformy .NET Native ustalić dostępność metadanych typy i elementy członkowskie typu w czasie wykonywania. Bez potrzeby metadanych operacje, które opierają się na odbicia serializacji i deserializacji i przekazywanie typów .NET Framework do modelu COM lub środowiska uruchomieniowego systemu Windows można zakończyć się niepowodzeniem i zgłosić wyjątek. Najbardziej typowe wyjątki są [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) i (w przypadku interop) [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md).  
+ Ustawienia zasad dyrektyw środowiska uruchomieniowego dla platformy .NET Native ustalić dostępności metadanych dla typów i elementów członkowskich typu w czasie wykonywania. Bez potrzeby metadanych operacje, które zależą od odbicia, serializacji i deserializacji lub szeregowanie typów środowiska .NET Framework do modelu COM lub środowiska wykonawczego Windows może zakończyć się niepowodzeniem i zgłosić wyjątek. Najbardziej powszechne wyjątki są [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) i (w przypadku współdziałania) [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md).  
   
- Środowisko uruchomieniowe ustawienia zasad są kontrolowane przez dyrektyw środowiska uruchomieniowego (. rd.xml) pliku. Każdy dyrektyw środowiska uruchomieniowego definiuje zasady dla elementu określonego programu, takich jak zestaw ( [ \<zestawu >](../../../docs/framework/net-native/assembly-element-net-native.md) element), typ ( [ \<typu >](../../../docs/framework/net-native/type-element-net-native.md) element), lub metody ( [ \<metody >](../../../docs/framework/net-native/method-element-net-native.md) elementu). Dyrektywa zawiera jeden lub więcej atrybutów definiujących odbicia typów zasad, serializacji typów zasad i typy międzyoperacyjne zasad omówiona w następnej sekcji. Wartość atrybutu definiują ustawienia zasad.  
+ Środowisko uruchomieniowe ustawienia zasad są kontrolowane przez dyrektywy środowiska uruchomieniowego (. rd.xml) pliku. Każdy dyrektyw środowiska uruchomieniowego definiuje zasady dla elementu określonego programu, taką jak zestaw ( [ \<zestawu >](../../../docs/framework/net-native/assembly-element-net-native.md) element), typu ( [ \<typ >](../../../docs/framework/net-native/type-element-net-native.md) element), lub metody ( [ \<metody >](../../../docs/framework/net-native/method-element-net-native.md) elementu). Dyrektywa zawiera jeden lub więcej atrybutów, które definiują typy zasad odbicia, serializacji typów zasad i typów międzyoperacyjnych zasad omówiona w następnej sekcji. Wartość atrybutu definiują ustawienia zasad.  
   
 ## <a name="policy-types"></a>Typy zasad  
- Pliki rozpoznaje trzy kategorie typów zasad dyrektyw środowiska uruchomieniowego: odbicia, serializacji i interop.  
+ Dyrektywy środowiska uruchomieniowego pliki rozpoznaje trzy kategorie typów zasad: odbicia, serializacja i współdziałania.  
   
--   Typy zasad odbicia określają, które metadane są udostępniane w czasie wykonywania w celu odbicia:  
+-   Typy zasad odbicia ustalić metadanych, który ma zostać udostępnione w czasie wykonywania odbicia:  
   
-    -   `Activate` Służy do sterowania dostępem środowiska uruchomieniowego konstruktorów, aby włączyć aktywacji wystąpień.  
+    -   `Activate` kontroluje dostęp do środowiska uruchomieniowego do konstruktorów, aby włączyć aktywacji wystąpień.  
   
-    -   `Browse` Formanty wykonywania zapytania dotyczącego informacji o programie elementów.  
+    -   `Browse` wykonanie zapytania dotyczącego informacji o kontroli programu elementów.  
   
-    -   `Dynamic` Formanty środowiska uruchomieniowego dostęp do wszystkich typów i członków, aby włączyć dynamiczne programowania.  
+    -   `Dynamic` dostęp do środowiska uruchomieniowego kontroli do wszystkich typów i członków, aby włączyć dynamiczne programowania.  
   
-     W poniższej tabeli wymieniono odbicia typów zasad i elementów programu, które mogą być używane.  
+     Poniższa tabela zawiera listę typów zasad odbicia i elementy programu, z którymi mogą być używane.  
   
-    |Element|Aktywuj|Przeglądaj|dynamiczne|  
+    |Element|Aktywuj|Przeglądaj|Dynamiczne|  
     |-------------|--------------|------------|-------------|  
     |[\<Aplikacji >](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|  
-    |[\<zestaw >](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
+    |[\<Zestaw >](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
     |[\<AttributeImplies >](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|  
     |[\<Zdarzenie >](../../../docs/framework/net-native/event-element-net-native.md)||✓|✓|  
-    |[\<Pole >](../../../docs/framework/net-native/field-element-net-native.md)||✓|✓|  
+    |[\<pole >](../../../docs/framework/net-native/field-element-net-native.md)||✓|✓|  
     |[\<GenericParameter >](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|  
     |[\<ImpliesType >](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|  
     |[\<Metoda >](../../../docs/framework/net-native/method-element-net-native.md)||✓|✓|  
@@ -46,30 +46,30 @@ ms.locfileid: "33396763"
     |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|  
     |[\<Parametr >](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|  
     |[\<Właściwość >](../../../docs/framework/net-native/property-element-net-native.md)||✓|✓|  
-    |[\<Subtypes >](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|  
+    |[\<Podtypy >](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|  
     |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|  
     |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|  
     |[\<TypeParameter >](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|  
   
--   Typy zasad serializacji określają, które metadane są udostępniane w czasie wykonywania do serializacji i deserializacji:  
+-   Serializacja typów zasad ustalić metadanych, który ma zostać udostępnione w czasie wykonywania do serializacji i deserializacji:  
   
-    -   `Serialize` Służy do sterowania dostępem środowiska uruchomieniowego konstruktorów, pól i właściwości, aby umożliwić wystąpień typów można było serializować przez biblioteki innych firm, takich jak serializator Newtonsoft JSON.  
+    -   `Serialize` kontroluje dostęp do środowiska uruchomieniowego do konstruktorów, pola i właściwości, aby umożliwić wystąpień typu przez bibliotek innych firm, takich jak serializator Newtonsoft JSON.  
   
-    -   `DataContractSerializer` Służy do sterowania dostępem środowiska uruchomieniowego konstruktorów, pól i właściwości, aby umożliwić wystąpień typów przez <xref:System.Runtime.Serialization.DataContractSerializer> klasy.  
+    -   `DataContractSerializer` kontroluje dostęp do środowiska uruchomieniowego do konstruktorów, pola i właściwości, aby umożliwić wystąpień typu przez <xref:System.Runtime.Serialization.DataContractSerializer> klasy.  
   
-    -   `DataContractJsonSerializer` Służy do sterowania dostępem środowiska uruchomieniowego konstruktorów, pól i właściwości, aby umożliwić wystąpień typów przez <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> klasy.  
+    -   `DataContractJsonSerializer` kontroluje dostęp do środowiska uruchomieniowego do konstruktorów, pola i właściwości, aby umożliwić wystąpień typu przez <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> klasy.  
   
-    -   `XmlSerializer` Służy do sterowania dostępem środowiska uruchomieniowego konstruktorów, pól i właściwości, aby umożliwić wystąpień typów przez <xref:System.Xml.Serialization.XmlSerializer> klasy.  
+    -   `XmlSerializer` kontroluje dostęp do środowiska uruchomieniowego do konstruktorów, pola i właściwości, aby umożliwić wystąpień typu przez <xref:System.Xml.Serialization.XmlSerializer> klasy.  
   
-     W poniższej tabeli wymieniono serializacji typów zasad i elementów programu, które mogą być używane.  
+     W poniższej tabeli wymieniono serializacji typów zasad i elementy programu, z którymi mogą być używane.  
   
-    |Element|serializacji|DataContractSerializer|Klasa DataContractJsonSerializer|Element XmlSerializer|  
+    |Element|Serializacji|DataContractSerializer|Klasa DataContractJsonSerializer|Element XmlSerializer|  
     |-------------|---------------|----------------------------|--------------------------------|-------------------|  
     |[\<Aplikacji >](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<zestaw >](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<Zestaw >](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|✓|  
     |[\<AttributeImplies >](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|✓|  
     |[\<Zdarzenie >](../../../docs/framework/net-native/event-element-net-native.md)|||||  
-    |[\<Pole >](../../../docs/framework/net-native/field-element-net-native.md)|✓||||  
+    |[\<pole >](../../../docs/framework/net-native/field-element-net-native.md)|✓||||  
     |[\<GenericParameter >](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|✓|  
     |[\<ImpliesType >](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|✓|  
     |[\<Metoda >](../../../docs/framework/net-native/method-element-net-native.md)|||||  
@@ -77,28 +77,28 @@ ms.locfileid: "33396763"
     |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|✓|  
     |[\<Parametr >](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|✓|  
     |[\<Właściwość >](../../../docs/framework/net-native/property-element-net-native.md)|✓||||  
-    |[\<Subtypes >](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<Podtypy >](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|✓|  
     |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|✓|  
     |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|✓|  
     |[\<TypeParameter >](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|✓|  
   
--   Typy międzyoperacyjne zasad należy ustalić metadanych, które ma zostać udostępnione w czasie wykonywania do przekazania typy odwołań, typy wartości i wskaźniki funkcji COM i środowiska wykonawczego systemu Windows:  
+-   Typy międzyoperacyjne zasad ustalić metadanych, który ma zostać udostępnione w czasie wykonywania do przekazania do modelu COM i środowiska wykonawczego Windows typy odwołań, typy wartości i wskaźników do funkcji:  
   
-    -   `MarshalObject` Steruje natywnym, organizowanie COM i środowiska wykonawczego systemu Windows dla typów odwołań.  
+    -   `MarshalObject` kontrolki natywne skierowanie do modelu COM i środowiska wykonawczego Windows, dla typów odwołań.  
   
-    -   `MarshalDelegate` Steruje natywnym, przekazywanie typów delegatów jako wskaźników funkcji.  
+    -   `MarshalDelegate` kontroluje kierowanie natywne typy delegatów jako wskaźniki funkcji.  
   
-    -   `MarshalStructure` Steruje natywnym, organizowanie COM i środowiska wykonawczego systemu Windows dla typów wartości.  
+    -   `MarshalStructure` kontrolki natywne skierowanie do modelu COM i środowiska wykonawczego Windows, dla typów wartości.  
   
-     W poniższej tabeli wymieniono typy międzyoperacyjne zasad i elementów programu, które mogą być używane.  
+     Poniższa tabela zawiera listę typów międzyoperacyjnych zasad i elementy programu, z którymi mogą być używane.  
   
     |Element|MarshalObject|MarshalDelegate|MarshalStructure|  
     |-------------|-------------------|---------------------|----------------------|  
     |[\<Aplikacji >](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|  
-    |[\<zestaw >](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
+    |[\<Zestaw >](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
     |[\<AttributeImplies >](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|  
     |[\<Zdarzenie >](../../../docs/framework/net-native/event-element-net-native.md)||||  
-    |[\<Pole >](../../../docs/framework/net-native/field-element-net-native.md)||||  
+    |[\<pole >](../../../docs/framework/net-native/field-element-net-native.md)||||  
     |[\<GenericParameter >](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|  
     |[\<ImpliesType >](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|  
     |[\<Metoda >](../../../docs/framework/net-native/method-element-net-native.md)||||  
@@ -106,26 +106,26 @@ ms.locfileid: "33396763"
     |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|  
     |[\<Parametr >](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|  
     |[\<Właściwość >](../../../docs/framework/net-native/property-element-net-native.md)||||  
-    |[\<Subtypes >](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|  
+    |[\<Podtypy >](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|  
     |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|  
     |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|  
     |[\<TypeParameter >](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|  
   
 ## <a name="policy-settings"></a>Ustawienia zasad  
- Każdego typu zasad może należeć do jednej z wartości wymienionych w poniższej tabeli. Należy zauważyć, że elementy, które reprezentują elementy członkowskie typu obsługuje inny zestaw ustawień zasad niż inne elementy.  
+ Każdy typ zasad można ustawić na jedną z wartości wymienionych w poniższej tabeli. Należy pamiętać, że elementy, które reprezentują elementy członkowskie typu obsługuje inny zbiór ustawień zasad niż inne elementy.  
   
 |Ustawienie zasad|Opis|`Assembly`, `Namespace`, `Type`, i `TypeInstantiation` elementów|`Event`, `Field`, `Method`, `MethodInstantiation`, i `Property` elementów|  
 |--------------------|-----------------|-----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
-|`All`|Włącza zasady dla wszystkich typów i elementów członkowskich, które nie będą usuwane łańcucha narzędzi dla platformy .NET Native.|✓||  
-|`Auto`|Określa, że zasada domyślna ma być używany dla tego typu zasad dla tego elementu programu. To jest identyczny z pominięciem zasad dla tego typu zasad. `Auto` zwykle służy do wskazywania, czy zasady są dziedziczone z elementu nadrzędnego.|✓|✓|  
-|`Excluded`|Określa, czy zasady są wyłączone dla elementu określonego programu. Na przykład dyrektyw środowiska uruchomieniowego:<br /><br /> `<Type Name="BusinessClasses.Person" Browse="Excluded" Dynamic="Excluded" />`<br /><br /> Określa, że metadane dla `BusinessClasses.Person` klasy nie jest dostępna, albo do przeglądania lub do dynamicznie utworzyć wystąpienia i modyfikowania `Person` obiektów.|✓|✓|  
+|`All`|Włącza zasady dla wszystkich typów i elementów członkowskich, które nie powoduje usunięcia łańcucha narzędzi .NET Native.|✓||  
+|`Auto`|Określa, że domyślne zasady powinny być używane dla tego typu zasad dla tego elementu programu. Jest to taka sama jak pomijanie zasad dla tego typu zasad. `Auto` Zazwyczaj służy do wskazywania, czy zasady są dziedziczone z elementu nadrzędnego.|✓|✓|  
+|`Excluded`|Określa, że zasady są wyłączone dla elementu określonego programu. Na przykład dyrektyw środowiska uruchomieniowego:<br /><br /> `<Type Name="BusinessClasses.Person" Browse="Excluded" Dynamic="Excluded" />`<br /><br /> Określa, że metadane dla `BusinessClasses.Person` klasy nie jest dostępna, albo do przeglądania lub do dynamicznego utworzenia wystąpienia i zmodyfikować `Person` obiektów.|✓|✓|  
 |`Included`|Włącza zasadę, jeśli metadane dla typu nadrzędnego jest dostępna.||✓|  
-|`Public`|Włącza zasady dla typy publiczne lub elementy członkowskie, chyba że łańcucha narzędzi Określa typ lub element członkowski nie jest konieczne i w związku z tym spowoduje usunięcie jej. To ustawienie różni się od `Required Public`, co zapewnia, że metadane typy publiczne i elementów członkowskich są zawsze dostępne, nawet jeśli łańcucha narzędzi Określa, że nie jest konieczne.|✓||  
-|`PublicAndInternal`|Włącza zasady dla publicznych i wewnętrznych typów albo elementów członkowskich, chyba że łańcucha narzędzi Określa typ lub element członkowski nie jest konieczne i w związku z tym spowoduje usunięcie jej. To ustawienie różni się od `Required PublicAndInternal`, co zapewnia, że metadane dla publicznych i wewnętrznych typów i członków jest zawsze dostępny nawet wtedy, gdy łańcucha narzędzi Określa, że nie jest konieczne.|✓||  
-|`Required`|Określa, że jest włączona dla elementu członkowskiego i metadane będą dostępne, nawet jeśli element członkowski wydaje się być używane.||✓|  
-|`Required Public`|Włącza zasady dla typy publiczne lub elementy członkowskie i zapewnia, że metadane typy publiczne i elementów członkowskich są zawsze dostępne. To ustawienie różni się od `Public`, co czyni metadanych dla publicznych typów i członków dostępne tylko wtedy, gdy łańcucha narzędzi Określa, że jest to konieczne.|✓||  
-|`Required PublicAndInternal`|Włącza zasady dla publicznych i wewnętrznych typów albo elementów członkowskich i zapewnia, że metadane publicznych oraz wewnętrznych typy i składniki są zawsze dostępne. To ustawienie różni się od `PublicAndInternal`, co czyni metadanych dla publicznych i wewnętrznych typów i członków dostępne tylko wtedy, gdy łańcucha narzędzi Określa, że jest to konieczne.|✓||  
-|`Required All`|Wymaga łańcucha narzędzi, aby zachować wszystkie elementy członkowskie i typy czy są używane i umożliwia zasad dla nich.|✓||  
+|`Public`|Włącza zasady dla publiczne typy lub członków, chyba że łańcucha narzędzi Określa typ lub element członkowski nie jest konieczne i w związku z tym powoduje jej usunięcie. To ustawienie różni się od `Required Public`, dzięki któremu tych metadanych dla typów publicznych i elementów członkowskich są zawsze dostępne nawet wtedy, gdy łańcucha narzędzi Określa, że nie jest konieczne.|✓||  
+|`PublicAndInternal`|Włącza zasady dla typów publicznych i wewnętrznych lub elementów członkowskich, chyba że łańcucha narzędzi Określa typ lub element członkowski nie jest konieczne i w związku z tym powoduje jej usunięcie. To ustawienie różni się od `Required PublicAndInternal`, dzięki któremu tych metadanych do publicznych i wewnętrznych typów i elementów członkowskich są zawsze dostępne nawet wtedy, gdy łańcucha narzędzi Określa, że nie jest konieczne.|✓||  
+|`Required`|Określa, że jest włączona dla elementu członkowskiego, a metadane będą dostępne, nawet wtedy, gdy element członkowski, który pojawia się do użycia.||✓|  
+|`Required Public`|Włącza zasady dla publiczne typy lub elementy członkowskie i zapewnia tych metadanych dla typów publicznych i elementy członkowskie są zawsze dostępne. To ustawienie różni się od `Public`, co sprawia, że metadane dotyczące typów publicznych i elementy członkowskie dostępne tylko wtedy, gdy łańcucha narzędzi Określa, że jest to konieczne.|✓||  
+|`Required PublicAndInternal`|Umożliwia zasady dla publicznych i wewnętrznych typów ani elementów członkowskich i zapewnia tych metadanych dla publicznych i wewnętrznych typów i elementów członkowskich jest zawsze dostępna. To ustawienie różni się od `PublicAndInternal`, co sprawia, że metadane dotyczące typów publicznych i wewnętrznych i członków dostępne tylko wtedy, gdy łańcucha narzędzi Określa, że jest to konieczne.|✓||  
+|`Required All`|Wymaga łańcucha narzędzi, aby zachować wszystkie typy i elementy Członkowskie określa, czy są używane i zasad umożliwia ich.|✓||  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  

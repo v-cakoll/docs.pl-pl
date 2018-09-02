@@ -9,34 +9,35 @@ helpviewer_keywords:
 - unchecked statement [C#]
 - statements [C#], checked and unchecked
 ms.assetid: a84bc877-2c7f-4396-8735-1ce97c42f35e
-ms.openlocfilehash: f8e292a67fab49b5fc3616e438d063eca2617274
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 04f603905690497bcd4249f73c7296be2c269a60
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34234376"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468814"
 ---
 # <a name="checked-and-unchecked-c-reference"></a>checked i unchecked (odwołanie w C#)
-C# instrukcje mogą wykonywać w kontekście zaznaczać lub usuwać zaznaczenia. W kontekście zaznaczone przepełnienia arytmetycznego zgłasza wyjątek. W kontekście niezaznaczone przepełnienia arytmetycznego jest ignorowana, a wynik został obcięty odrzucając wszystkie najbardziej znaczących bitów, które nie mieszczą się w typie docelowym.  
+Instrukcje języka C# można wykonać w kontekście zaznaczony lub niezaznaczony. W kontekście sprawdzanym przepełnienie arytmetyczne zgłasza wyjątek. W kontekście niesprawdzanym przepełnienie arytmetyczne jest ignorowana, a wynik został obcięty przez odrzucenie wszelkich najbardziej znaczących bitów, które nie mieszczą się w typie docelowym.  
   
 -   [zaznaczone](checked.md) kontekstu Określ zaznaczone.  
   
--   [Zaznaczenie opcji](unchecked.md) Określ niezaznaczone kontekstu.  
+-   [unchecked](unchecked.md) kontekście niesprawdzanym Określ.  
   
- Sprawdzanie przepełnienia dotyczy następujące operacje:  
+ Następujące operacje dotyczy sprawdzanie przepełnienia:  
   
--   Za pomocą następujących operatorów wstępnie zdefiniowane na typy całkowite wyrażenia:  
+-   Za pomocą następujących operatorów wstępnie zdefiniowane na typach całkowitoliczbowych wyrażenia:  
   
-     `++`, `--`, jednoargumentowy `-`, `+`, `-`, `*`, `/`  
+     `++`, `--`, jednoargumentowe `-`, `+`, `-`, `*`, `/`  
   
--   Jawne konwersje liczbowe między typów całkowitych lub z `float` lub `double` na typ całkowity.  
+-   Jawnych konwersji liczbowych między typami całkowitymi lub z `float` lub `double` na typ całkowitoliczbowy.  
   
- Jeśli żadna `checked` ani `unchecked` określono domyślny kontekst dla wyrażenia niestałego (wyrażeń, które są oceniane w czasie wykonywania) jest zdefiniowany przez wartość [-zaznaczone](../compiler-options/checked-compiler-option.md) — opcja kompilatora. Domyślnie jest nie ustawiono wartość tej opcji i operacje arytmetyczne są wykonywane w kontekście niezaznaczone.
+ Jeśli żadna `checked` ani `unchecked` określono domyślny kontekst dla wyrażenia stałą (wyrażeń, które są oceniane w czasie wykonywania) jest definiowany przez wartość [-zaznaczone](../compiler-options/checked-compiler-option.md) — opcja kompilatora. Domyślnie ustawiono wartość tej opcji, a operacje arytmetyczne są wykonywane w kontekście niesprawdzanym.
  
- Dla wyrażenia stałe (wyrażeń, które może przyjąć pełni w czasie kompilacji) domyślny kontekst jest zawsze zaznaczone. Jeśli wyrażenie stałe jest jawnie umieszczona w kontekście niezaznaczone, przepełnienia, jakie występują podczas obliczania kompilacji wyrażenia spowodować błędy kompilacji.
+ Domyślny kontekst zawsze jest sprawdzane dla wyrażeń stałych (wyrażenia, które mogą być w pełni obliczane w czasie kompilacji). O ile nie jest wyrażeniem stałym jawnie znajduje się w kontekście niesprawdzanym, przepełnienia, które występują podczas obliczania kompilacji wyrażenia spowodować błędy kompilacji.
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../index.md)  
- [Przewodnik programowania w języku C#](../../programming-guide/index.md)  
- [Słowa kluczowe języka C#](index.md)  
- [Słowa kluczowe instrukcji](statement-keywords.md)
+
+- [Dokumentacja języka C#](../index.md)  
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)  
+- [Słowa kluczowe języka C#](index.md)  
+- [Słowa kluczowe instrukcji](statement-keywords.md)

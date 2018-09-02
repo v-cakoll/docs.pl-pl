@@ -9,63 +9,63 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 84bd96f27e8276546bef0dd9994163ccd843ac20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8c27bdb75ef9950d0b2b32f742b38e141cf4981b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393312"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43472049"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Porady: pobieranie danych o postępie z Instalatora .NET Framework 4.5
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Jest pakiet redystrybucyjny środowiska wykonawczego. W przypadku tworzenia aplikacji dla tej wersji programu .NET Framework, można dołączyć (łańcucha) [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalator w ramach wymagań wstępnych instalacji aplikacji. Do prezentowania dostosowane lub ujednoliconego konfiguracji systemu, można uruchomić w trybie dyskretnym [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] instalacji i śledzić postęp podczas pokazywania postępu instalacji aplikacji. Aby włączyć śledzenie dyskretnej [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalatora (mogą być obserwowane) definiuje protokół za pomocą mapowanych na pamięć segment rozwiązanie we/wy (MMIO) do komunikacji z ustawień (obserwatora lub moduł łańcucha). Protokół ten definiuje sposób moduł łańcucha uzyskać informacje o postępie, uzyskiwać szczegółowe wyniki, odpowiada na komunikaty i anulować [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalatora.  
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Jest redystrybucyjnego środowiska uruchomieniowego. W przypadku tworzenia aplikacji dla tej wersji programu .NET Framework, można dołączyć (łańcuch) [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalator w ramach wymagań wstępnych instalacji aplikacji. Obecne środowisko dostosowany lub ujednoliconego Instalatora, może chcesz uruchomić w trybie dyskretnym [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] instalacji i śledzić postęp podczas wyświetlania postępu instalacji aplikacji. Aby włączyć śledzenie dyskretnej [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalatora (mogą być odtwarzane) definiuje protokół, za pomocą mapowanych na pamięć segment operacji We/Wy (rozwiązanie MMIO) do komunikowania się z ustawień (obserwatora lub chainer). Protokół ten definiuje sposób chainer uzyskać informacje o postępie, Uzyskaj szczegółowe wyniki, odpowiadanie na wiadomości i anulować [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalatora.  
   
--   **Wywołanie** .  Aby wywołać [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalatora i odbierać informacje o postępie z sekcji Rozwiązanie MMIO, program Instalator musi wykonać następujące czynności:  
+-   **Wywołania** .  Aby wywołać [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] instalacji i otrzymywać informacje o postępie w sekcji Rozwiązanie MMIO, program instalacyjny, należy wykonać następujące czynności:  
   
-    1.  Wywołanie [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]pakietu redystrybucyjnego programu:  
+    1.  Wywołaj [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]pakiet redystrybucyjny programu:  
   
         ```  
         dotNetFx45_Full_x86_x64.exe /q /norestart /pipe section-name  
         ```  
   
-         gdzie *nazwę sekcji* jest dowolną nazwę, które ma być używany do identyfikowania Twojej aplikacji. Instalator .NET framework odczytuje i zapisuje w sekcji Rozwiązanie MMIO asynchronicznie, dlatego może być bardzo łatwe w użyciu zdarzeń i komunikatów w tym czasie. W tym przykładzie proces Instalator .NET Framework został utworzony przez konstruktora że oba przydziela sekcji Rozwiązanie MMIO (`TheSectionName`) i definiuje zdarzenia (`TheEventName`):  
+         gdzie *nazwa sekcji* jest dowolną nazwę, którego chcesz użyć do identyfikacji danej aplikacji. Instalator .NET framework wykonującej Odczyt i zapis w sekcji Rozwiązanie MMIO asynchronicznie, dzięki czemu użytkownik może okazać się przydatna do użycia w tym czasie zdarzenia i komunikaty. W tym przykładzie proces instalacji programu .NET Framework jest tworzony przez konstruktora, przydziela zarówno w sekcji Rozwiązanie MMIO (`TheSectionName`) i definiuje zdarzenia (`TheEventName`):  
   
         ```  
         Server():ChainerSample::MmioChainer(L"TheSectionName", L"TheEventName")  
         ```  
   
-         Zamień tych nazw z nazwami, które są unikatowe dla programu Instalatora.  
+         Zamień tych nazw z nazwami, które są unikatowe dla programu instalacyjnego.  
   
-    2.  Przeczytaj rozwiązanie MMIO sekcji. W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], są jednoczesnych operacji pobierania i instalacji: jedną część programu .NET Framework może być instalowany podczas pobierania innej części. W związku z tym postępu są wysyłane z powrotem (który zapisany) w sekcji Rozwiązanie MMIO jako dwóch liczb (`m_downloadSoFar` i `m_installSoFar`) który zwiększyć z zakresu od 0 do 255. Gdy 255 są zapisywane i zamyka .NET Framework, instalacja jest zakończona.  
+    2.  Przeczytaj, w sekcji Rozwiązanie MMIO. W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], operacji pobierania i instalacji jest jednoczesne: jednej części programu .NET Framework może być instalowany podczas pobierania innej części. W rezultacie postępu są wysyłane z powrotem (zapisywanych) w sekcji Rozwiązanie MMIO jako dwóch liczb (`m_downloadSoFar` i `m_installSoFar`), zwiększyć z zakresu od 0 do 255. Po zapisaniu 255 i umożliwia zamknięcie systemu .NET Framework, instalacja została zakończona.  
   
--   **Kody zakończenia**. Następujące kody zakończenia z polecenia do wywołania [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] pakietu redystrybucyjnego programu wskazują, czy Instalator zakończyło się pomyślnie lub nie powiodło się:  
+-   **Kody zakończenia**. Następujące kody zakończenia z polecenia do wywołania [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] program do dystrybucji wskazuje, czy Instalator ma zakończonych powodzeniem lub niepowodzeniem:  
   
     -   0 — instalacja została ukończona pomyślnie.  
   
-    -   3010 — instalacja zakończyła się pomyślnie; wymagane jest ponowne uruchomienie systemu.  
+    -   3010 — instalacja została ukończona pomyślnie; wymagane jest ponowne uruchomienie systemu.  
   
-    -   1602 — Instalator zostało anulowane.  
+    -   1602 — Instalatora zostało anulowane.  
   
-    -   Wszystkie pozostałe kody — Instalator napotkał błędy; Przejrzyj pliki dziennika utworzone w % temp %, aby uzyskać szczegółowe informacje.  
+    -   Wszystkie pozostałe kody — Instalator napotkał błędy; Sprawdź pliki dziennika utworzone w % temp %, aby uzyskać szczegółowe informacje.  
   
--   **Anulowanie instalacji**. W dowolnej chwili można anulować instalacji przy użyciu `Abort` metodę, aby ustawić `m_downloadAbort` i `m_ installAbort` flagi w sekcji Rozwiązanie MMIO.  
+-   **Trwa anulowanie instalacji**. Ustawienia można anulować w dowolnym momencie za pomocą `Abort` metodę, aby ustawić `m_downloadAbort` i `m_ installAbort` flagi w sekcji Rozwiązanie MMIO.  
   
-## <a name="chainer-sample"></a>Przykładowy moduł łańcucha  
- Przykładowy moduł łańcucha dyskretnie uruchamia i śledzi [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalatora podczas pokazywania postępu. Ten przykład jest podobny do przykładu moduł łańcucha dostępnego dla programu .NET Framework 4. Jednak Ponadto go uniknąć ponownego uruchomienia systemu przez przetwarzanie komunikat zamknięcia aplikacji .NET Framework 4. Informacje dla tego pola wiadomości, zobacz [zmniejszenie uruchamia ponownie podczas .NET Framework 4.5 instalacji systemów](../../../docs/framework/deployment/reducing-system-restarts.md). Można użyć tego przykładu z Instalatora .NET Framework 4; w tym scenariuszu komunikat po prostu nie są wysyłane.  
+## <a name="chainer-sample"></a>Przykładowe chainer  
+ Przykładowe Chainer dyskretnie uruchamia i śledzi [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalatora podczas wyświetlania postępu. Ten przykład jest podobny do przykładu Chainer dostępnego dla programu .NET Framework 4. Jednak dodatkowo go można uniknąć ponownych uruchomień systemu przez przetwarzanie okno komunikatu do zamykania aplikacji .NET Framework 4. Aby dowiedzieć się, to okno komunikatu, zobacz [zmniejszenie uruchamia ponownie podczas .NET Framework 4.5 instalacji systemów](../../../docs/framework/deployment/reducing-system-restarts.md). Możesz użyć tego przykładu z Instalatorem .NET Framework 4; w tym scenariuszu komunikat po prostu nie są wysyłane.  
   
 > [!WARNING]
->  Przykład musi działać jako administrator.  
+>  Należy uruchomić przykład jako administrator.  
   
- Możesz pobrać kompletne rozwiązanie Visual Studio dla [.NET Framework 4.5 moduł łańcucha próbki](http://go.microsoft.com/fwlink/?LinkId=231345) z galerii przykładów MSDN.  
+ Możesz pobrać kompletne rozwiązanie programu Visual Studio dla [przykład Chainer programu .NET Framework 4.5](https://go.microsoft.com/fwlink/?LinkId=231345) z galerii przykładów MSDN.  
   
- W poniższych sekcjach opisano istotne pliki w tym przykładzie: MMIOChainer.h, ChainingdotNet4.cpp i IProgressObserver.h.  
+ W poniższych sekcjach opisano istotne pliki w tym przykładzie: MMIOChainer.h ChainingdotNet4.cpp i IProgressObserver.h.  
   
 #### <a name="mmiochainerh"></a>MMIOChainer.h  
   
--   Plik MMIOChainer.h (zobacz [uzupełnianie kodu](http://go.microsoft.com/fwlink/?LinkId=231369)) zawiera definicji danych struktury i klasy podstawowej, z którego powinien pochodzić klasy moduł łańcucha. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Rozszerza rozwiązanie MMIO struktury danych do obsługi danych który [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalatorowi. Zmiany w strukturze rozwiązanie MMIO są zapewniającej, dzięki użyciu modułu łańcucha .NET Framework 4 można pracować z Instalatora .NET Framework 4.5 bez konieczności ponownej kompilacji. Jednak ten scenariusz nie obsługuje funkcji zmniejszenia ponownego uruchomienia systemu.  
+-   Plik MMIOChainer.h (zobacz [uzupełnianie kodu](https://go.microsoft.com/fwlink/?LinkId=231369)) zawiera definicję struktury danych i klasa bazowa, z której powinna pochodzić klasy chainer. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Rozszerza rozwiązanie MMIO struktury danych do obsługi danych, [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalatorowi. Zmian w strukturze rozwiązanie MMIO są zgodne wstecz, aby chainer .NET Framework 4 można pracować z Instalatora .NET Framework 4.5, bez konieczności ponownej kompilacji. Jednak ten scenariusz nie obsługuje tę funkcję w celi zmniejszenia ponownego uruchomienia systemu.  
   
-     Pole wersji udostępnia sposób identyfikacji zmian w formacie struktury i komunikatu.  Instalator .NET Framework Określa wersję interfejsu moduł łańcucha wywołując `VirtualQuery` funkcji do określenia rozmiaru mapowania pliku.  Jeśli rozmiar jest wystarczająco duży, aby zmieścił się w polu wersji, Instalator .NET Framework używa określonej wartości. Jeśli mapowanie pliku jest zbyt mały, aby pomieścił pole wersji, która jest w przypadku programu .NET Framework 4, proces instalacji zakłada wersji 0 (4). Jeśli moduł łańcucha nie obsługuje wersji komunikat, który chce wysłać Instalator .NET Framework, Instalator .NET Framework zakłada Ignoruj odpowiedzi.  
+     Pole wersji zapewnia sposób identyfikacji poprawki do formatu struktury i komunikatu.  Instalator .NET Framework Określa wersję interfejsu chainer przez wywołanie metody `VirtualQuery` funkcję, aby określić rozmiar mapowania pliku.  Jeśli rozmiar jest wystarczająco duża, aby uwzględnić pole wersji, Instalatora .NET Framework używa określonej wartości. W przypadku mapowania pliku jest zbyt mała, aby zawierać pole wersji, która jest w przypadku programu .NET Framework 4, proces instalacji zakłada wersja 0 (4). W przypadku chainer nie obsługuje wersji komunikat, który chce wysłać Instalatora .NET Framework, .NET Framework setup zakłada odpowiedź Ignoruj.  
   
-     Struktura danych rozwiązanie MMIO jest zdefiniowane w następujący sposób:  
+     Rozwiązanie MMIO struktura danych zostaje zdefiniowana w następujący sposób:  
   
     ```cpp  
     // MMIO data structure for interprocess communication  
@@ -94,11 +94,11 @@ ms.locfileid: "33393312"
         };  
     ```  
   
--   `MmioDataStructure` Struktury danych nie powinna być używana bezpośrednio; użyj `MmioChainer` zamiast klasy do zaimplementowania programu moduł łańcucha. Pochodzić od `MmioChainer` klasy łańcucha [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] do dystrybucji.  
+-   `MmioDataStructure` Strukturę danych nie powinny być używane bezpośrednio; użyj `MmioChainer` zamiast klasy do zaimplementowania swoje chainer. Pochodzi od `MmioChainer` klasa do tworzenia łańcucha [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] do dystrybucji.  
   
 #### <a name="iprogressobserverh"></a>IProgressObserver.h  
   
--   Plik IProgressObserver.h implementuje obserwatora postępu ([, zobacz pełny kod](http://go.microsoft.com/fwlink/?LinkId=231370)). Obserwator pobiera powiadomienie postępu pobierania i instalacji (określony jako niepodpisany `char`, 0 – 255, wskazującą 1 100% pełną). Obserwator jest również powiadomienie, gdy chainee wysyła komunikat i obserwatora należy wysłać odpowiedzi.  
+-   Plik IProgressObserver.h implementuje obserwatora postępu ([Zobacz kompletny kod](https://go.microsoft.com/fwlink/?LinkId=231370)). Obserwator pobiera powiadomienia o postępu pobierania i instalacji (określony jako typ unsigned `char`, 0-255, wskazującą, 1 – 100% ukończone). Obserwator jest również otrzymywać chainee wysyła komunikat, gdy obserwatora ma wysyłać odpowiedzi.  
   
     ```cpp  
         class IProgressObserver  
@@ -112,7 +112,7 @@ ms.locfileid: "33393312"
   
 #### <a name="chainingdotnet45cpp"></a>ChainingdotNet4.5.cpp  
   
--   [ChainingdotNet4.5.cpp](http://go.microsoft.com/fwlink/?LinkId=231368) pliku implementuje `Server` klasy, która jest pochodną `MmioChainer` klasy i zastępuje odpowiedniej metody, aby wyświetlić informacje o postępie. MmioChainer tworzy sekcję o nazwie określonej sekcji i inicjuje moduł łańcucha o nazwie określone zdarzenie. Nazwa zdarzenia są zapisywane w strukturze zmapowanych danych. Nazwy sekcji i zdarzenia powinien zapewnić unikatowy. `Server` Klasy w poniższym kodzie uruchamia określony Instalatora, monitoruje postęp i zwraca kod zakończenia.  
+-   [ChainingdotNet4.5.cpp](https://go.microsoft.com/fwlink/?LinkId=231368) pliku implementuje `Server` klasy, która jest pochodną `MmioChainer` klasy i zastępuje odpowiedniej metody, aby wyświetlić informacje o postępie. MmioChainer tworzy sekcję o nazwie określonej sekcji i inicjuje chainer o nazwie określonego zdarzenia. Nazwa zdarzenia są zapisywane w strukturze zmapowanych danych. Nazwy sekcji i zdarzeń należy upewnić się unikatowy. `Server` Klasy poniższy kod uruchamia program instalacyjny określonego monitoruje postęp i zwraca kod zakończenia.  
   
     ```cpp  
     class Server : public ChainerSample::MmioChainer, public ChainerSample::IProgressObserver  
@@ -149,7 +149,7 @@ ms.locfileid: "33393312"
     }  
     ```  
   
--   Przed uruchomieniem instalacji, moduł łańcucha sprawdza, czy [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] jest już zainstalowana przez wywołanie metody `IsNetFx4Present`:  
+-   Przed uruchomieniem instalacji, chainer sprawdza, czy [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] jest już zainstalowany przez wywołanie metody `IsNetFx4Present`:  
   
     ```cpp  
     ///  Checks for presence of the .NET Framework 4.  
@@ -202,7 +202,7 @@ ms.locfileid: "33393312"
     }  
     ```  
   
--   Można zmienić ścieżkę do pliku wykonywalnego (Setup.exe w przykładzie) w `Launch` metodę, aby wskazać jej poprawnej lokalizacji lub Dostosuj kod, aby określić lokalizację. `MmioChainer` Udostępnia klasę podstawową blokujący `Run()` metodę, która wywołuje klasy pochodnej.  
+-   Ścieżka pliku wykonywalnego (Setup.exe w przykładzie) można zmienić w `Launch` metoda wskaż jego prawidłową lokalizację lub dostosować program code w celu określenia lokalizacji. `MmioChainer` Udostępnia klasę bazową, blokuje `Run()` metodę, która wywołuje klasy pochodnej.  
   
     ```cpp  
     bool Launch(const CString& args)  
@@ -230,7 +230,7 @@ ms.locfileid: "33393312"
     }  
     ```  
   
--   `Send` Metody przechwytuje i przetwarza wiadomości.  W tej wersji programu .NET Framework tylko komunikatów obsługiwanych jest komunikat zamknięcia aplikacji.  
+-   `Send` Metoda przechwytuje i przetwarza komunikaty.  W tej wersji programu .NET Framework, tylko obsługiwane komunikat jest zamykanie aplikacji.  
   
     ```cpp  
             // SendMessage  
@@ -293,7 +293,7 @@ ms.locfileid: "33393312"
        }  
     ```  
   
--   HRESULT jest przekazywana do `Finished` metody.  
+-   HRESULT jest przekazywany do `Finished` metody.  
   
     ```cpp  
     virtual void Finished(HRESULT hr)  
@@ -305,9 +305,9 @@ ms.locfileid: "33393312"
     ```  
   
     > [!IMPORTANT]
-    >  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Pakietu redystrybucyjnego zwykle zapisuje komunikaty o postępie wielu i jednego komunikatu informującego zakończenia (po stronie moduł łańcucha). Odczytuje również asynchronicznie, wyszukiwanie `Abort` rekordów. Po otrzymaniu `Abort` rekordów, jego anuluje instalację i zapisuje Zakończono rekord z E_ABORT jako jego danych po instalacji zostało przerwane i operacje instalacji mają została wycofana.  
+    >  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Pakiet redystrybucyjny zwykle zapisuje komunikaty o postępie wielu i jednego komunikat, który wskazuje ukończenie (po stronie chainer). Odczytuje również asynchronicznie, wyszukiwanie `Abort` rekordów. Jeśli odbierze `Abort` rekordu, go anuluje instalację i zapisuje Zakończono rekord z E_ABORT jako jego dane po instalacji zostało przerwane i operacje instalacji ma została wycofana.  
   
- Typowy serwer tworzy losowe rozwiązanie MMIO nazwę pliku, tworzy plik (jak pokazano w poprzednim przykładzie kodu `Server::CreateSection`) i uruchamia pakiet redystrybucyjny programu przy użyciu `CreateProcess` — metoda i przekazywanie potoku nazw z `-pipe someFileSectionName` opcji. Serwer powinien implementować `OnProgress`, `Send`, i `Finished` metody z kodu specyficzne dla interfejsu użytkownika aplikacji.  
+ Typowy serwer tworzy losowe rozwiązanie MMIO nazwę pliku, tworzy plik (jak pokazano w poprzednim przykładzie kodu na `Server::CreateSection`) i uruchamia pakiet redystrybucyjny programu za pomocą `CreateProcess` nazw przy użyciu metody i przekazywania potoku `-pipe someFileSectionName` opcji. Serwer powinien implementować `OnProgress`, `Send`, i `Finished` metody z kodu specyficznego dla interfejsu użytkownika aplikacji.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik wdrażania dla deweloperów](../../../docs/framework/deployment/deployment-guide-for-developers.md)  

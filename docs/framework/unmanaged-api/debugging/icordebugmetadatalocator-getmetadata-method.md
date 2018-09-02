@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8c7042f7eee1ccd03d04cc20c5a0db83d986b0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1149a3c3589cec0e952088a772ca036028c58ff5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421921"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470830"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>ICorDebugMetaDataLocator::GetMetaData — Metoda
-Pyta debugera do zwrócenia pełną ścieżkę do modułu, którego metadanych wymaganego do ukończenia operacji żądanej przez debuger.  
+Pyta, czy debugera, aby przywrócić pełną ścieżkę do modułu, którego metadanych jest potrzebne do ukończenia operacja, którą żądany debuger.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,37 +43,37 @@ HRESULT GetMetaData(
   
 #### <a name="parameters"></a>Parametry  
  `wszImagePath`  
- [in] Ciąg zerem, który reprezentuje pełną ścieżkę do pliku. Jeśli pełna ścieżka nie jest dostępna, nazwę i rozszerzenie pliku (*filename*. *rozszerzenie*).  
+ [in] Ciąg zakończony znakiem null, który reprezentuje pełną ścieżkę do pliku. Jeśli pełna ścieżka nie jest dostępna, nazwę i rozszerzenie nazwy pliku (*filename*. *rozszerzenie*).  
   
  `dwImageTimeStamp`  
- [in] Sygnatura czasowa z nagłówków pliku PE obrazu. Ten parametr potencjalnie może służyć do serwera symboli ([SymSrv](http://msdn.microsoft.com/library/cc266470.aspx)) wyszukiwania.  
+ [in] Sygnatura czasowa z nagłówków pliku PE obrazu. Ten parametr potencjalnie może służyć do serwera symboli ([SymSrv](https://msdn.microsoft.com/library/cc266470.aspx)) wyszukiwania.  
   
  `dwImageSize`  
  [in] Rozmiar obrazu z nagłówków pliku PE. Ten parametr potencjalnie może służyć do wyszukiwania SymSrv.  
   
  `cchPathBuffer`  
- [in] Liczba znaków `wszPathBuffer`.  
+ [in] Znak liczby w `wszPathBuffer`.  
   
  `pcchPathBuffer`  
- [out] Liczba `WCHAR`s zapisane `wszPathBuffer`.  
+ [out] Liczba `WCHAR`s zapisywane `wszPathBuffer`.  
   
  Jeśli metoda zwraca E_NOT_SUFFICIENT_BUFFER, zawiera liczbę `WCHAR`s niezbędne do przechowywania ścieżki.  
   
  `wszPathBuffer`  
- [out] Wskaźnik do buforu, w której debuger skopiuje pełną ścieżkę pliku, który zawiera żądanych metadanych.  
+ [out] Wskaźnik do buforu, do którego debuger będzie skopiować pełną ścieżkę pliku, który zawiera żądane metadanych.  
   
- `ofReadOnly` Flaga z [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) wyliczenie jest używane do żądania dostępu tylko do odczytu do metadanych w tym pliku.  
+ `ofReadOnly` Flaga z [coropenflags —](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) wyliczenie jest używane, aby zażądać dostępu tylko do odczytu do metadanych, w tym pliku.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca następujące określonych wyników HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody. Wszystkich innych wyników HRESULT awarii wskazują, że plik nie jest pobieranie.  
+ Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody. Wszystkie inne wartości HRESULT błędu wskazują, że plik nie jest możliwe do pobierania.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|Metoda została ukończona pomyślnie. `wszPathBuffer` zawiera pełną ścieżkę do pliku i jest zerem.|  
-|E_NOT_SUFFICIENT_BUFFER|Bieżący rozmiar `wszPathBuffer` nie jest wystarczająca do przechowywania pełną ścieżkę. W takim przypadku `pcchPathBuffer` zawiera wymagana liczba `WCHAR`s, w tym znak końcowy null i `GetMetaData` jest wywoływana po raz drugi z rozmiarem buforu żądanej.|  
+|S_OK|Metoda została ukończona pomyślnie. `wszPathBuffer` zawiera pełną ścieżkę do pliku i jest zakończony znakiem null.|  
+|E_NOT_SUFFICIENT_BUFFER|Bieżący rozmiar `wszPathBuffer` nie jest wystarczająca do przechowywania pełnej ścieżki. W tym przypadku `pcchPathBuffer` zawiera wymagana liczba `WCHAR`s, łącznie z końcowym znakiem zerowym, i `GetMetaData` jest wywoływana po raz drugi z rozmiarem buforu żądanej.|  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli `wszImagePath` zawiera pełną ścieżkę dla modułu zrzutu Określa ścieżkę z komputera, na którym zrzut został zebrany. Plik nie istnieje w tej lokalizacji lub niepoprawny plik o tej samej nazwie może być przechowywany w ścieżce.  
+ Jeśli `wszImagePath` zawiera pełną ścieżkę dla modułu zrzutu, określa ścieżkę z komputera, w której pobrano zrzut. Plik nie istnieje w tej lokalizacji lub niepoprawny plik o takiej samej nazwie, mogą być przechowywane w ścieżce.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

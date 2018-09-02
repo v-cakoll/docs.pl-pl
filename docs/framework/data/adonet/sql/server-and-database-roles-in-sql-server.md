@@ -2,12 +2,12 @@
 title: Serwer i role bazy danych w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: 196ca0791f42414b9da8dff32eb8285045fd7e63
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 5fd706d886ea050eb578d5f889d55055665c3a44
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925468"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403147"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Serwer i role bazy danych w programie SQL Server
 Wszystkie wersje programu SQL Server przy użyciu opartej na rolach zabezpieczeń, dzięki czemu można przypisać uprawnienia do roli lub grupy użytkowników, a nie do poszczególnych użytkowników. Stałej i ról stałej bazy danych mają stały zestaw uprawnień przypisanych do nich.  
@@ -27,8 +27,8 @@ Wszystkie wersje programu SQL Server przy użyciu opartej na rolach zabezpiecze�
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Server-Level Roles](/sql/relational-databases/security/authentication-access/server-level-roles) i [uprawnienia ról stałej](http://msdn.microsoft.com/library/ms175892.aspx) w SQL Server — książki Online|W tym artykule opisano stałej ról i uprawnień skojarzonych z nimi w programie SQL Server.|  
-|[Database-Level Roles](/sql/relational-databases/security/authentication-access/database-level-roles) i [uprawnienia ról stałej bazy danych](http://msdn.microsoft.com/library/ms189612.aspx) w SQL Server — książki Online|Opis ról stałej bazy danych i uprawnień skojarzonych z nimi|  
+|[Server-Level Roles](/sql/relational-databases/security/authentication-access/server-level-roles) i [uprawnienia ról stałej](https://msdn.microsoft.com/library/ms175892.aspx) w SQL Server — książki Online|W tym artykule opisano stałej ról i uprawnień skojarzonych z nimi w programie SQL Server.|  
+|[Database-Level Roles](/sql/relational-databases/security/authentication-access/database-level-roles) i [uprawnienia ról stałej bazy danych](https://msdn.microsoft.com/library/ms189612.aspx) w SQL Server — książki Online|Opis ról stałej bazy danych i uprawnień skojarzonych z nimi|  
   
 ## <a name="database-roles-and-users"></a>Role bazy danych i użytkowników  
  Nazwy logowania muszą być zamapowane do kont użytkowników bazy danych w celu pracy z obiektami bazy danych. Bazy danych można następnie można dodać użytkowników do ról bazy danych, dziedziczenie żadnych zestawów uprawnień skojarzonych z tymi rolami. Mogą być przyznawane wszystkie uprawnienia.  
@@ -58,7 +58,7 @@ Wszystkie wersje programu SQL Server przy użyciu opartej na rolach zabezpiecze�
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Tożsamości i kontroli dostępu](http://msdn.microsoft.com/library/bb510418.aspx) w SQL Server — książki Online|Zawiera łącza do tematów opisujących podmiotów zabezpieczeń, ról, poświadczenia, obiektów zabezpieczanych i uprawnienia.|  
+|[Tożsamości i kontroli dostępu](https://msdn.microsoft.com/library/bb510418.aspx) w SQL Server — książki Online|Zawiera łącza do tematów opisujących podmiotów zabezpieczeń, ról, poświadczenia, obiektów zabezpieczanych i uprawnienia.|  
 |[Jednostki](/sql/relational-databases/security/authentication-access/principals-database-engine) w SQL Server — książki Online|W tym artykule opisano podmiotów zabezpieczeń i zawiera łącza do tematów, które opisują role serwera i bazy danych.|  
   
 ## <a name="see-also"></a>Zobacz też  
@@ -67,4 +67,4 @@ Wszystkie wersje programu SQL Server przy użyciu opartej na rolach zabezpiecze�
  [Uwierzytelnianie w programie SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
  [Własność i oddzielenie schematu użytkownika w programie SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
  [Autoryzacja i uprawnienia w programie SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

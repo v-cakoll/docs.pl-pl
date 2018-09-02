@@ -7,65 +7,65 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-ms.openlocfilehash: 86901f357c43dc7c0c1402bf313e674603eaccbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d681cd15fa3daa3698edc5e0ad3d3c2669c1dfdf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566772"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403096"
 ---
 # <a name="path-markup-syntax"></a>Składni znacznikowania ścieżki
-Ścieżki zostały omówione w [kształtów i podstawowe rysunek w omówieniu WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) i [omówienie geometrii](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), jednak w tym temacie opisano szczegółowo wydajny i złożone mini języka można określić ścieżkę wykorzystuje więcej compactly mają geometrię [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
+Ścieżki są omówione w [kształty i podstawowe Rysowanie w WPF — Przegląd](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) i [Przegląd Geometria](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), jednak w tym temacie opisano szczegółowo zaawansowanych i złożonych mini języka można użyć do określenia ścieżki Więcej bardziej kompaktowy przy użyciu geometrii [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
- Aby zrozumieć, w tym temacie, należy się zapoznać z podstawowymi funkcjami programu <xref:System.Windows.Media.Geometry> obiektów. Aby uzyskać więcej informacji, zobacz [omówienie geometrii](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).  
+ Aby zrozumieć, w tym temacie, należy się zapoznać z podstawowymi funkcjami programu <xref:System.Windows.Media.Geometry> obiektów. Aby uzyskać więcej informacji, zobacz [Przegląd Geometria](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).  
   
 <a name="abouthisdocument"></a>   
-## <a name="streamgeometry-and-pathfigurecollection-mini-languages"></a>StreamGeometry i PathFigureCollection Mini języków  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oferuje dwie klasy zapewniające mini języków dla opisu geometrycznych ścieżki: <xref:System.Windows.Media.StreamGeometry> i <xref:System.Windows.Media.PathFigureCollection>.  
+## <a name="streamgeometry-and-pathfigurecollection-mini-languages"></a>Streamgeometry — i PathFigureCollection Mini języków  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawiera dwie klasy, które zapewniają mini języków do opisywania względem ścieżek geometrycznych: <xref:System.Windows.Media.StreamGeometry> i <xref:System.Windows.Media.PathFigureCollection>.  
   
--   Możesz użyć <xref:System.Windows.Media.StreamGeometry> mini języka podczas ustawiania właściwości typu <xref:System.Windows.Media.Geometry>, takich jak <xref:System.Windows.UIElement.Clip%2A> właściwość <xref:System.Windows.UIElement> lub <xref:System.Windows.Shapes.Path.Data%2A> właściwość <xref:System.Windows.Shapes.Path> elementu. W poniższym przykładzie użyto Składnia atrybutu, aby utworzyć <xref:System.Windows.Media.StreamGeometry>.  
+-   Możesz użyć <xref:System.Windows.Media.StreamGeometry> mini języka podczas ustawiania właściwości typu <xref:System.Windows.Media.Geometry>, takich jak <xref:System.Windows.UIElement.Clip%2A> właściwość <xref:System.Windows.UIElement> lub <xref:System.Windows.Shapes.Path.Data%2A> właściwość <xref:System.Windows.Shapes.Path> elementu. W poniższym przykładzie użyto składni atrybutów, aby utworzyć <xref:System.Windows.Media.StreamGeometry>.  
   
      [!code-xaml[GeometrySample_snip_XAML#GraphicsMMStreamGeometryAttributeSyntaxInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmstreamgeometryattributesyntaxinline)]  
   
--   Możesz użyć <xref:System.Windows.Media.PathFigureCollection> mini języka podczas ustawiania <xref:System.Windows.Media.PathGeometry.Figures%2A> właściwość <xref:System.Windows.Media.PathGeometry>. W poniższym przykładzie użyto Składnia atrybutu, aby utworzyć <xref:System.Windows.Media.PathFigureCollection> dla <xref:System.Windows.Media.PathGeometry>.  
+-   Możesz użyć <xref:System.Windows.Media.PathFigureCollection> mini języka podczas ustawiania <xref:System.Windows.Media.PathGeometry.Figures%2A> właściwość <xref:System.Windows.Media.PathGeometry>. W poniższym przykładzie użyto składni atrybutów, aby utworzyć <xref:System.Windows.Media.PathFigureCollection> dla <xref:System.Windows.Media.PathGeometry>.  
   
      [!code-xaml[GeometrySample_snip_XAML#GraphicsMMPathFigureCollectionAttributeSyntaxInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmpathfigurecollectionattributesyntaxinline)]  
   
- Jak widać w poprzednich przykładach, dwóch języków mini są bardzo podobne. Zawsze jest możliwe użycie <xref:System.Windows.Media.PathGeometry> w każdej sytuacji, w których można użyć <xref:System.Windows.Media.StreamGeometry>; tak które z nich należy używać? Użyj <xref:System.Windows.Media.StreamGeometry> nie można zmodyfikować po utworzeniu; ścieżka użyj <xref:System.Windows.Media.PathGeometry> Jeśli trzeba zmodyfikować tę ścieżkę.  
+ Jak widać w poprzednich przykładach, te dwa języki mini są bardzo podobne. Zawsze jest możliwe użycie <xref:System.Windows.Media.PathGeometry> w każdej sytuacji, w których można użyć <xref:System.Windows.Media.StreamGeometry>; dlatego który z nich należy używać? Użyj <xref:System.Windows.Media.StreamGeometry> nie konieczność zmodyfikowania tej ścieżki po utworzeniu; użyj <xref:System.Windows.Media.PathGeometry> Jeśli trzeba zmodyfikować tę ścieżkę.  
   
- Aby uzyskać więcej informacji o różnicach między <xref:System.Windows.Media.PathGeometry> i <xref:System.Windows.Media.StreamGeometry> obiekty, zobacz [omówienie geometrii](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).  
+ Aby uzyskać więcej informacji na temat różnic między <xref:System.Windows.Media.PathGeometry> i <xref:System.Windows.Media.StreamGeometry> obiekty, zobacz [Przegląd Geometria](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).  
   
-### <a name="a-note-about-white-space"></a>Uwagi dotyczące biały znak  
- Jednak jednego miejsca jest wyświetlany w kolejnych sekcjach składni, ale wiele spacje są również dopuszczalne wszędzie tam, gdzie jest wyświetlany jednego miejsca.  
+### <a name="a-note-about-white-space"></a>Uwaga dotycząca biały znak  
+ Celu skrócenia programu pojedyncza spacja jest wyświetlany w kolejnych sekcjach składni, ale wiele spacji także są dopuszczalne, wszędzie tam, gdzie jest wyświetlana pojedyncza spacja.  
   
- Dwóch liczb faktycznie nie muszą być oddzielone przecinkiem lub odstępem, ale to tylko możliwe, gdy wynikowy ciąg jest jednoznaczne. Na przykład `2..3` jest rzeczywiście dwóch liczb: "2". I ". 3". Podobnie `2-3` "2" i "-3". Spacje nie są wymagane przed lub po poleceniach, albo.  
+ Dwie liczby faktycznie nie muszą być rozdzielone przecinkami lub spacjami, ale to tylko możliwe, gdy wynikowy ciąg jest jednoznaczna. Na przykład `2..3` jest faktycznie dwóch liczb: "2". A ". 3". Podobnie `2-3` "2" i "-3". Miejsca do magazynowania nie jest wymagane przed lub po poleceniach, albo.  
   
 ### <a name="syntax"></a>Składnia  
- [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Składni użycia dla atrybutu <xref:System.Windows.Media.StreamGeometry> składa się z opcjonalną <xref:System.Windows.Media.FillRule> wartość i przynajmniej jedna rysunek opisy.  
+ [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Składni dla atrybutu <xref:System.Windows.Media.StreamGeometry> składa się z opcjonalną <xref:System.Windows.Media.FillRule> wartość i co najmniej jednym rysunek opisy.  
   
-|Użycie atrybutu StreamGeometry XAML|  
+|Użycie atrybutu XAML StreamGeometry|  
 |-----------------------------------------|  
-|`<` *obiekt* *właściwości* `="`[ `fillRule`] `figureDescription`[ `figureDescription`] * `" ... />`|  
+|`<` *obiekt* *właściwość* `="`[ `fillRule`] `figureDescription`[ `figureDescription`] * `" ... />`|  
   
- [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Składni użycia dla atrybutu <xref:System.Windows.Media.PathFigureCollection> składa się z co najmniej jeden opisy rysunku.  
+ [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Składni dla atrybutu <xref:System.Windows.Media.PathFigureCollection> składa się z co najmniej jeden opisy rysunku.  
   
 |Użycie atrybutu PathFigureCollection XAML|  
 |-----------------------------------------------|  
-|`<` *obiekt* *właściwości* `="` `figureDescription`[ `figureDescription`] * `" ... />`|  
+|`<` *obiekt* *właściwość* `="` `figureDescription`[ `figureDescription`] * `" ... />`|  
   
 |Termin|Opis|  
 |----------|-----------------|  
-|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Określa, czy <xref:System.Windows.Media.StreamGeometry> używa <xref:System.Windows.Media.FillRule.EvenOdd> lub <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0` Określa <xref:System.Windows.Media.FillRule.EvenOdd> reguły wypełniania.<br />-   `F1` Określa <xref:System.Windows.Media.FillRule.Nonzero> reguły wypełniania.<br /><br /> W przypadku pominięcia tego polecenia, podrzędną stosowanie domyślnego zachowania, czyli <xref:System.Windows.Media.FillRule.EvenOdd>. Jeśli określisz tego polecenia, należy go najpierw umieścić.|  
-|*figureDescription*|Ilustracja składa się z polecenia move, Rysuj poleceń i opcjonalnie polecenie Zamknij.<br /><br /> `moveCommand` `drawCommands`  `[` `closeCommand` `]`|  
-|*moveCommand*|Polecenie move, która określa punkt początkowy liczby. Zobacz [polecenie Przenieś](#themovecommand) sekcji.|  
-|*drawCommands*|Co najmniej jednego polecenia rysowania opisujące zawartość rysunku. Zobacz [rysowania polecenia](#drawcommands) sekcji.|  
-|*closeCommand*|Opcjonalne Zamknij polecenie zamyka rysunku. Zobacz [polecenie Zamknij](#closecommand) sekcji.|  
+|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Określa, czy <xref:System.Windows.Media.StreamGeometry> używa <xref:System.Windows.Media.FillRule.EvenOdd> lub <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0` Określa <xref:System.Windows.Media.FillRule.EvenOdd> reguły wypełniania.<br />-   `F1` Określa <xref:System.Windows.Media.FillRule.Nonzero> reguły wypełniania.<br /><br /> Jeżeli pominięto tego polecenia, ścieżka podrzędna używa zachowanie domyślne, czyli <xref:System.Windows.Media.FillRule.EvenOdd>. Jeśli określisz tego polecenia, należy go najpierw umieścić.|  
+|*figureDescription*|Rysunek, składające się z poleceniem przenoszenia narysuj poleceń i opcjonalnie polecenie Zamknij.<br /><br /> `moveCommand` `drawCommands`  `[` `closeCommand` `]`|  
+|*moveCommand*|Polecenie przenoszenia, która określa punkt początkowy liczby. Zobacz [polecenie Przenieś](#themovecommand) sekcji.|  
+|*drawCommands*|Co najmniej jeden polecenia rysowania, które opisują rysunek zawartość. Zobacz [polecenia rysowania](#drawcommands) sekcji.|  
+|*closeCommand*|Zamknij polecenie opcjonalne który zamyka rysunku. Zobacz [polecenia Zamknij](#closecommand) sekcji.|  
   
 <a name="themovecommand"></a>   
-## <a name="move-command"></a>Polecenie MOVE  
- Określa punkt początkowy nowej wartości.  
+## <a name="move-command"></a>Polecenia MOVE  
+ Określa punkt początkowy nowe wartości.  
   
 |Składnia|  
 |------------|  
@@ -73,18 +73,18 @@ ms.locfileid: "33566772"
   
 |Termin|Opis|  
 |----------|-----------------|  
-|*startPoint*|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Punkt początkowy nowej wartości.|  
+|*startPoint*|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Punkt początkowy nowe wartości.|  
   
- Wielkie litery `M` oznacza to, że `startPoint` jest wartość bezwzględna; jedną małą literę `m` oznacza to, że `startPoint` jest przesunięcie do poprzedniego punktu lub (0,0), jeśli żaden nie istnieje. Jeśli wiele punktów jest wyświetlany po polecenia move, rysowana linia punktów chociaż określonego wiersza polecenia.  
+ Wielkie litery `M` wskazuje, że `startPoint` jest wartością bezwzględną; małymi literami `m` wskazuje, że `startPoint` to przesunięcie do wcześniejszego punktu lub (0,0), jeśli żaden nie istnieje. Po wyświetleniu listy wiele punktów po poleceniu przenoszenia, linia jest rysowana do tych punktów, chociaż określony wiersz polecenia.  
   
 <a name="drawcommands"></a>   
 ## <a name="draw-commands"></a>Polecenia rysowania  
- Polecenie rysowania może składać się z kilku poleceń kształtu. Dostępne są następujące polecenia kształtu: wiersza, linia pozioma linii pionowej, sześcienny krzywej Beziera, kwadratową krzywej Beziera, smooth sześcienny krzywej Beziera, smooth kwadratową krzywej Beziera i łuku.  
+ Polecenie rysowania może obejmować kilka poleceń kształtu. Dostępne są następujące polecenia kształtu: wiersza, linii poziomej, linii pionowej, krzywą Beziera trzeciego stopnia, krzywą Beziera drugiego stopnia, smooth krzywą Beziera trzeciego stopnia, smooth krzywą Beziera drugiego stopnia i łuk eliptyczny.  
   
- Wprowadź każde polecenie za pomocą wielką lub małą literą: wielkie litery oznaczenia wartości bezwzględne i małe litery oznaczają względne wartości: punktów kontrolnych dla tego segmentu są względem punktu końcowego w poprzednim przykładzie. Wprowadzając sekwencyjnie więcej niż jednego polecenia tego samego typu, można pominąć zduplikowane polecenie wpisu; na przykład `L 100,200 300,400` jest odpowiednikiem `L 100,200 L 300,400`. W poniższej tabeli opisano **Przenieś** i **rysowania** poleceń.  
+ Wprowadź każde polecenie przy użyciu wielką lub małą literą: wielkie litery oznaczają wartości bezwzględne i małe litery oznaczają względne wartości: punkty kontrolne dla tego segmentu są względne wobec punktu końcowego w poprzednim przykładzie. Wprowadzając sekwencyjnie więcej niż jednego polecenia tego samego typu, można pominąć zduplikowane polecenie zgłoszenia; na przykład `L 100,200 300,400` jest odpowiednikiem `L 100,200 L 300,400`. W poniższej tabeli opisano **przenieść** i **Rysowanie** poleceń.  
   
 ### <a name="line-command"></a>Wiersz polecenia  
- Tworzy prostą pomiędzy bieżącym punktem a określonym punktu końcowego. `l 20 30` i `L 20,30` przedstawiono przykładowe prawidłowe **wiersza** poleceń.  
+ Tworzy prostą pomiędzy bieżącym punktem a określonym punktem końcowym. `l 20 30` i `L 20,30` są prawidłowe przykłady **wiersza** poleceń.  
   
 |Składnia|  
 |------------|  
@@ -94,10 +94,10 @@ ms.locfileid: "33566772"
 |----------|-----------------|  
 |*endPoint*|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Punkt końcowy linii.|  
 
-Wielkie litery `L` oznacza to, że `endPoint` jest wartość bezwzględna; jedną małą literę `l` oznacza to, że `endPoint` jest przesunięcie do poprzedniego punktu lub (0,0), jeśli żaden nie istnieje.
+Wielkie litery `L` wskazuje, że `endPoint` jest wartością bezwzględną; małymi literami `l` wskazuje, że `endPoint` to przesunięcie do wcześniejszego punktu lub (0,0), jeśli żaden nie istnieje.
 
 ### <a name="horizontal-line-command"></a>Polecenie Linia pozioma  
- Tworzy linia pozioma pomiędzy bieżącym punktem a określonym współrzędną x. `H 90` jest to przykład polecenia prawidłowy linii poziomej.
+ Tworzy linii poziomej pomiędzy bieżącym punktem a określonym współrzędną x. `H 90` znajduje się przykład polecenia prawidłowy linii poziomej.
 
   
 |Składnia|  
@@ -108,10 +108,10 @@ Wielkie litery `L` oznacza to, że `endPoint` jest wartość bezwzględna; jedn�
 |----------|-----------------|  
 |*x*|<xref:System.Double?displayProperty=nameWithType><br /><br /> Współrzędna x punktu końcowego linii.|  
   
-Wielkie litery `H` oznacza to, że `x` jest wartość bezwzględna; jedną małą literę `h` oznacza to, że `x` jest przesunięcie do poprzedniego punktu lub (0,0), jeśli żaden nie istnieje.
+Wielkie litery `H` wskazuje, że `x` jest wartością bezwzględną; małymi literami `h` wskazuje, że `x` to przesunięcie do wcześniejszego punktu lub (0,0), jeśli żaden nie istnieje.
   
-### <a name="vertical-line-command"></a>Pionowym wierszem polecenia  
- Tworzy linią pionową pomiędzy bieżącym punktem a określonym współrzędną y. `v 90` jest to przykład prawidłowy pionowym wierszem polecenia.
+### <a name="vertical-line-command"></a>Polecenie linii pionowej  
+ Tworzy linię pionowy pomiędzy bieżącym punktem a określonym współrzędną y. `v 90` znajduje się przykład polecenia prawidłowy pionowym wierszem.
 
   
 |Składnia|  
@@ -122,10 +122,10 @@ Wielkie litery `H` oznacza to, że `x` jest wartość bezwzględna; jedną mał�
 |----------|-----------------|  
 |*y*|<xref:System.Double?displayProperty=nameWithType><br /><br /> Współrzędna y punktu końcowego linii.|  
 
-Wielkie litery `V` oznacza to, że `y` jest wartość bezwzględna; jedną małą literę `v` oznacza to, że `y` jest przesunięcie do poprzedniego punktu lub (0,0), jeśli żaden nie istnieje.  
+Wielkie litery `V` wskazuje, że `y` jest wartością bezwzględną; małymi literami `v` wskazuje, że `y` to przesunięcie do wcześniejszego punktu lub (0,0), jeśli żaden nie istnieje.  
     
-### <a name="cubic-bezier-curve-command"></a>Polecenie sześcienny krzywej Beziera  
- Tworzy sześcienny krzywej Beziera pomiędzy bieżącym punktem a określonym punktu końcowego za pomocą dwóch punktów kontrolnych określonych (`controlPoint`1 i `controlPoint`2). `C 100,200 200,400 300,200` jest to przykład polecenia krzywej prawidłowe.  
+### <a name="cubic-bezier-curve-command"></a>Polecenie krzywą Beziera trzeciego stopnia  
+ Tworzy krzywą Beziera trzeciego stopnia pomiędzy bieżącym punktem a określonym punktem końcowym przy użyciu dwóch punktów określoną kontrolkę (`controlPoint`1 i `controlPoint`2). `C 100,200 200,400 300,200` znajduje się przykład polecenia prawidłowy krzywej.  
   
 |Składnia|  
 |------------|  
@@ -135,10 +135,10 @@ Wielkie litery `V` oznacza to, że `y` jest wartość bezwzględna; jedną mał�
 |----------|-----------------|  
 |`controlPoint`1|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Pierwszy punkt kontrolny krzywej, która określa początkowy tangens krzywej.|  
 |`controlPoint`2|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Drugi punkt kontrolny krzywej, która określa końcowy tangens krzywej.|  
-|`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Punkt jest narysowanie krzywej.|  
+|`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Punkt na jest rysowana krzywej.|  
   
-### <a name="quadratic-bezier-curve-command"></a>Polecenie kwadratową krzywej Beziera  
- Tworzy kwadratową krzywej Beziera pomiędzy bieżącym punktem a określonym punktu końcowego za pomocą punkt kontrolny określony (`controlPoint`). `q 100,200 300,200` jest to przykład prawidłowe polecenie kwadratową krzywej Beziera.  
+### <a name="quadratic-bezier-curve-command"></a>Polecenie krzywą Beziera drugiego stopnia  
+ Tworzy krzywą Beziera drugiego stopnia pomiędzy bieżącym punktem a określonym punktem końcowym przy użyciu punktu określonego formantu (`controlPoint`). `q 100,200 300,200` znajduje się przykład prawidłowe polecenie krzywej Beziera drugiego stopnia.  
   
 |Składnia|  
 |------------|  
@@ -146,11 +146,11 @@ Wielkie litery `V` oznacza to, że `y` jest wartość bezwzględna; jedną mał�
   
 |Termin|Opis|  
 |----------|-----------------|  
-|`controlPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Punkt kontrolny krzywej, która określa początkową i końcową stycznych krzywej.|  
-|`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Punkt jest narysowanie krzywej.|  
+|`controlPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Punkt kontrolny krzywej, który określa początkowy i końcowy styczne krzywej.|  
+|`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Punkt na jest rysowana krzywej.|  
   
-### <a name="smooth-cubic-bezier-curve-command"></a>Smooth sześcienny krzywej Beziera polecenia  
- Tworzy sześcienny krzywej Beziera pomiędzy bieżącym punktem a określonym punktu końcowego. Pierwszy punkt kontrolny zakłada się, że odbicia drugiego punktu kontrolnego poprzedniego polecenia względem bieżącego punktu. Jeśli nie ma żadnego poprzedniego polecenia lub poprzednie polecenie nie sześcienny polecenia krzywej Beziera lub smooth polecenia sześcienny krzywej Beziera, przyjęto założenie, że pierwszy punkt kontrolny jest zbieżna z bieżącego punktu. Drugiego punktu, punkt kontrolny na koniec krzywej, jest określona przez `controlPoint`2. Na przykład `S 100,200 200,300` jest prawidłowe smooth sześcienny Beziera krzywej polecenie.  
+### <a name="smooth-cubic-bezier-curve-command"></a>Zestaw Smooth krzywą Beziera trzeciego stopnia polecenia  
+ Tworzy krzywą Beziera trzeciego stopnia pomiędzy bieżącym punktem a określonym punktem końcowym. Pierwszy punkt kontrolny zakłada się, że odbicie drugi punkt kontrolny poprzedniego polecenia względem bieżącego punktu. Jeśli nie ma żadnego poprzedniego polecenia lub poprzednie polecenie nie jest poleceniem krzywej Beziera trzeciego stopnia lub smooth polecenia krzywej Beziera trzeciego stopnia, zakłada się, że pierwszy punkt kontrolny jest zbieżna z bieżącym punkcie. Drugi formant punktu, punkt kontrolny dla elementu end krzywej, jest określony przez `controlPoint`2. Na przykład `S 100,200 200,300` jest prawidłowym smooth trzeciego stopnia Beziera krzywej poleceniem.  
   
 |Składnia|  
 |------------|  
@@ -158,11 +158,11 @@ Wielkie litery `V` oznacza to, że `y` jest wartość bezwzględna; jedną mał�
   
 |Termin|Opis|  
 |----------|-----------------|  
-|`controlPoint`2|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Punkt kontrolny krzywej, który określa końcowy tangens krzywej.|  
-|`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Punkt jest narysowanie krzywej.|  
+|`controlPoint`2|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Punkt kontrolny krzywej, określający końcowy tangens krzywej.|  
+|`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Punkt na jest rysowana krzywej.|  
   
-### <a name="smooth-quadratic-bezier-curve-command"></a>Smooth kwadratową krzywej Beziera polecenia  
- Tworzy kwadratową krzywej Beziera pomiędzy bieżącym punktem a określonym punktu końcowego. Punkt kontrolny zakłada się, że odbicie punkt kontrolny poprzedniego polecenia względem bieżącego punktu. Jeśli nie ma żadnego poprzedniego polecenia lub poprzednie polecenie nie kwadratową polecenia krzywej Beziera lub smooth polecenia kwadratową krzywej Beziera, punkt kontrolny jest zbieżna z bieżącego punktu.  
+### <a name="smooth-quadratic-bezier-curve-command"></a>Zestaw Smooth krzywą Beziera drugiego stopnia polecenia  
+ Tworzy krzywą Beziera drugiego stopnia pomiędzy bieżącym punktem a określonym punktem końcowym. Punkt kontrolny zakłada się, że odbicie punkt kontrolny poprzedniego polecenia względem bieżącego punktu. Jeśli nie ma żadnego poprzedniego polecenia lub poprzednie polecenie nie jest poleceniem krzywej Beziera drugiego stopnia lub smooth polecenia krzywej Beziera drugiego stopnia, punkt kontrolny jest zbieżna z bieżącym punkcie.  
   
 |Składnia|  
 |------------|  
@@ -170,11 +170,11 @@ Wielkie litery `V` oznacza to, że `y` jest wartość bezwzględna; jedną mał�
   
 |Termin|Opis|  
 |----------|-----------------|  
-|`controlPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Punkt kontrolny krzywej, która określa początkowy i stycznej krzywej.|  
-|`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Punkt jest narysowanie krzywej.|  
+|`controlPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Punkt kontrolny krzywej, który określa początkowy i stycznej krzywej.|  
+|`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Punkt na jest rysowana krzywej.|  
   
-### <a name="elliptical-arc-command"></a>Polecenie łuku  
- Tworzy łuku pomiędzy bieżącym punktem a określonym punktu końcowego.  
+### <a name="elliptical-arc-command"></a>Polecenie łuk eliptyczny  
+ Tworzy łuk eliptyczny pomiędzy bieżącym punktem a określonym punktem końcowym.  
   
 |Składnia|  
 |------------|  
@@ -182,15 +182,15 @@ Wielkie litery `V` oznacza to, że `y` jest wartość bezwzględna; jedną mał�
   
 |Termin|Opis|  
 |----------|-----------------|  
-|`size`|<xref:System.Windows.Size?displayProperty=nameWithType><br /><br /> X - i y promień łuku.|  
-|`rotationAngle`|<xref:System.Double?displayProperty=nameWithType><br /><br /> Obrót elipsy w stopniach.|  
-|`isLargeArcFlag`|Ustaw wartość 1, jeśli kąt łuk powinny być 180 stopni lub większym; w przeciwnym razie wartość równa 0.|  
-|`sweepDirectionFlag`|Ustaw wartość 1, jeśli łuku w kierunku dodatnie kąta; w przeciwnym razie wartość równa 0.|  
-|`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Punkt jest narysowanie łuk.|  
+|`size`|<xref:System.Windows.Size?displayProperty=nameWithType><br /><br /> X - i -promień y łuku.|  
+|`rotationAngle`|<xref:System.Double?displayProperty=nameWithType><br /><br /> Obrót elipsy, w stopniach.|  
+|`isLargeArcFlag`|Ustawiona na 1, jeśli kąt łuk powinien być 180 stopni lub większym; w przeciwnym wypadku ustaw na wartość 0.|  
+|`sweepDirectionFlag`|Ustawiona na 1, jeśli łuku w kierunku Kąt dodatni; w przeciwnym wypadku ustaw na wartość 0.|  
+|`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Punkt, do którego łuku.|  
   
 <a name="closecommand"></a>   
 ## <a name="the-close-command"></a>Polecenie Zamknij  
- Kończy bieżący rysunek i tworzy linię, które umożliwia połączenie punktu bieżący punkt początkowy liczby. To polecenie tworzy sprzężeniu wiersza (róg) między ostatni segment i pierwszy segment rysunku.  
+ Kończy bieżący rysunek i tworzy linię łączący bieżący punkt początkowy punkt rysunku. To polecenie umożliwia utworzenie wiersza — sprzężenie (róg) ostatni segment i pierwszy segment rysunku.  
   
 |Składnia|  
 |------------|  
@@ -198,7 +198,7 @@ Wielkie litery `V` oznacza to, że `y` jest wartość bezwzględna; jedną mał�
 
 <a name="pointsyntax"></a>   
 ## <a name="point-syntax"></a>Składnia punktu  
- W tym artykule opisano współrzędne x i y punktu gdzie (0,0) jest w lewym górnym rogu.
+ W tym artykule opisano współrzędnych x i y punktu gdzie (0,0) jest w lewym górnym rogu.
   
 |Składnia|  
 |------------|  
@@ -210,19 +210,19 @@ Wielkie litery `V` oznacza to, że `y` jest wartość bezwzględna; jedną mał�
 |`y`|<xref:System.Double?displayProperty=nameWithType><br /><br /> Współrzędna y punktu.|  
   
 <a name="specialvalues"></a>   
-## <a name="special-values"></a>Specjalne wartości  
- Zamiast standardowego wartość liczbową umożliwia także następujące wartości specjalnych. Te wartości jest rozróżniana wielkość liter.  
+## <a name="special-values"></a>Specjalnych wartości  
+ Zamiast wartość liczbową standardowa umożliwia także następujące specjalnych wartości. Te wartości jest rozróżniana wielkość liter.  
   
- Infinity  
+ infinity  
  Reprezentuje <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>.  
   
- — Infinity  
+ -Nieskończoność.  
  Reprezentuje <xref:System.Double.NegativeInfinity?displayProperty=nameWithType>.  
   
  NaN  
  Reprezentuje <xref:System.Double.NaN?displayProperty=nameWithType>.  
   
- Można także użyć notacji naukowej. Na przykład `+1.e17` jest prawidłową wartością.  
+ Można także użyć notacji wykładniczej. Na przykład `+1.e17` jest prawidłową wartością.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Shapes.Path>  

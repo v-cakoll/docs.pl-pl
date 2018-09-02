@@ -7,17 +7,17 @@ dev_langs:
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 185edce5bd8a4772545ec966a6b3f74b204aa2b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34f6078baba86868fa03f37873731c39e73ac81f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494784"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401879"
 ---
 # <a name="message-security-with-a-windows-client"></a>Zabezpieczanie komunikatów za pomocą klienta systemu Windows
-W tym scenariuszu pokazano klienta usługi Windows Communication Foundation (WCF) i serwera zabezpieczone przez tryb zabezpieczeń wiadomości. Klient i usługa są uwierzytelniane przy użyciu poświadczeń systemu Windows.  
+W tym scenariuszu pokazano klienta usługi Windows Communication Foundation (WCF) i serwer zabezpieczony przez trybu zabezpieczenia wiadomości. Klient i usługa są uwierzytelniane przy użyciu poświadczeń Windows.  
   
- ![Zabezpieczenia za pomocą klienta systemu Windows wiadomości](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
+ ![Zabezpieczenia za pomocą klienta Windows wiadomości](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
   
 |Cechy|Opis|  
 |--------------------|-----------------|  
@@ -25,26 +25,26 @@ W tym scenariuszu pokazano klienta usługi Windows Communication Foundation (WCF
 |Współdziałanie|Tylko usługi WCF|  
 |Uwierzytelnianie (serwer)|Wzajemne uwierzytelnianie serwera i klienta|  
 |Uwierzytelnianie (klient)|Wzajemne uwierzytelnianie serwera i klienta|  
-|Integralność|Tak, przy użyciu kontekstu zabezpieczeń udostępnionego|  
-|Poufność|Tak, przy użyciu kontekstu zabezpieczeń udostępnionego|  
+|Integralność|Tak, za pomocą kontekstu zabezpieczeń udostępnionego|  
+|Poufność|Tak, za pomocą kontekstu zabezpieczeń udostępnionego|  
 |Transportu|NET. TCP|  
 |Powiązanie|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>Usługa  
- Następujący kod i konfiguracja są przeznaczone do uruchamiania niezależnie. Wykonaj jedną z następujących czynności:  
+ Następujący kod i konfiguracji są przeznaczone do uruchamiania niezależnie. Wykonaj jedną z następujących czynności:  
   
--   Tworzenie przy użyciu kodu z konfiguracji autonomicznej usługi.  
+-   Tworzenie autonomicznego usługi przy użyciu kodu bez konfiguracji.  
   
 -   Tworzenie usługi przy użyciu wprowadzonej konfiguracji, ale nie definiują żadnych punktów końcowych.  
   
 ### <a name="code"></a>Kod  
- Poniższy kod przedstawia sposób tworzenia punktu końcowego usługi, korzystającą z zabezpieczeń wiadomości w celu ustanowienia bezpiecznego kontekstu komputera z systemem Windows.  
+ Poniższy kod przedstawia sposób tworzenia punktu końcowego usługi, który używa zabezpieczenia komunikatów w celu ustanowienia bezpiecznej kontekstu z maszyną Windows.  
   
  [!code-csharp[C_SecurityScenarios#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#11)]
  [!code-vb[C_SecurityScenarios#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#11)]  
   
 ### <a name="configuration"></a>Konfiguracja  
- Następującej konfiguracji można zamiast kodu — Konfiguracja usługi:  
+ Następująca konfiguracja może służyć zamiast kodu do skonfigurowania usługi:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -75,17 +75,17 @@ W tym scenariuszu pokazano klienta usługi Windows Communication Foundation (WCF
 ```  
   
 ## <a name="client"></a>Klient  
- Następujący kod i konfiguracja są przeznaczone do uruchamiania niezależnie. Wykonaj jedną z następujących czynności:  
+ Następujący kod i konfiguracji są przeznaczone do uruchamiania niezależnie. Wykonaj jedną z następujących czynności:  
   
--   Utwórz autonomiczny klienta przy użyciu kodu (i kod klienta).  
+-   Tworzenie klienta autonomicznego przy użyciu kodu (i kodu klienta).  
   
--   Tworzenie klienta, który nie definiuje żadnych adresy punktów końcowych. W zamian użyj Konstruktora klienta, który przyjmuje nazwę konfiguracji jako argument. Na przykład:  
+-   Tworzenie klienta, który nie definiuje żadnych adresy punktów końcowych. Zamiast tego należy użyć konstruktora klienta, który przyjmuje nazwę konfiguracji jako argument. Na przykład:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Kod  
- Poniższy kod tworzy klienta. Powiązanie jest komunikat trybu zabezpieczeń i ma ustawioną wartość typu poświadczeń klienta `Windows`.  
+ Poniższy kod tworzy klienta. Powiązanie jest komunikat tryb zabezpieczeń, oraz typu poświadczeń klienta jest ustawiona na `Windows`.  
   
  [!code-csharp[C_SecurityScenarios#18](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#18)]
  [!code-vb[C_SecurityScenarios#18](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#18)]  
@@ -120,4 +120,4 @@ W tym scenariuszu pokazano klienta usługi Windows Communication Foundation (WCF
   
 ## <a name="see-also"></a>Zobacz też  
  [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Model zabezpieczeń systemu Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

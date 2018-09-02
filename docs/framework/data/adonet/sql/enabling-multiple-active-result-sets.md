@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: ab866356e979ec6c041d12620cfb6abfc8928668
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 073cd3a57f254f639fac44900ff6bf022e1fb165
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364882"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408402"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Włączanie wielu aktywnych zestawów wyników
-Wiele aktywnych zestawów wyników (MARS) to funkcja, która współdziała z programem SQL Server, aby umożliwić wykonywanie wielu instancji na jedno połączenie. Po włączeniu MARS do użytku z programem SQL Server każdego obiektu polecenia używane dodaje sesji połączenia.  
+Wiele aktywnych zestawów wyników (MARS) jest funkcją, która współdziała z programem SQL Server, aby umożliwić wykonywanie wielu instancji na pojedyncze połączenie. Po włączeniu MARS do użytku z programem SQL Server każdego obiektu polecenia używane dodaje sesji połączenia.  
   
 > [!NOTE]
->  Jednej sesji MARS otwiera jedno połączenie logiczne dla MARS do użycia, a następnie jedno połączenie logiczne dla każdego aktywnego polecenia.  
+>  Jednej sesji MARS otwiera jedno połączenie logiczne dla MARS do użycia i następnie jedno połączenie logiczne dla każdego aktywnego polecenia.  
   
-## <a name="enabling-and-disabling-mars-in-the-connection-string"></a>Włączanie i wyłączanie MARS w parametrach połączenia  
+## <a name="enabling-and-disabling-mars-in-the-connection-string"></a>Włączanie i wyłączanie usług MARS w parametrach połączenia  
   
 > [!NOTE]
->  Użyj następujących ciągów połączenia przykładu **AdventureWorks** bazy danych programu SQL Server. Podane parametry połączenia założono, że baza danych jest zainstalowana na serwerze o nazwie MSSQL1. Zmodyfikuj parametry połączenia w razie potrzeby dla danego środowiska.  
+>  Następujące parametry połączenia, skorzystaj z przykładu **AdventureWorks** bazy danych z programem SQL Server. Parametry połączenia, pod warunkiem przyjęto założenie, że baza danych jest zainstalowana na serwerze o nazwie MSSQL1. Modyfikowanie parametrów połączenia, zgodnie z potrzebami w danym środowisku.  
   
- Funkcja MARS jest domyślnie wyłączone. Można ją włączyć przez dodanie "MultipleActiveResultSets = True" pary — słowo kluczowe parametrów połączenia. "Wartość prawda" jest jedyną poprawną wartością dla włączania elementu MARS. W poniższym przykładzie pokazano sposób nawiązywania połączenia z wystąpieniem programu SQL Server i określić, że powinno być włączone MARS.  
+ Funkcja MARS jest domyślnie wyłączone. Można ją włączyć, dodając "MultipleActiveResultSets = True" parę — słowo kluczowe parametrów połączenia. "True" jest jedyną prawidłową wartością włączania MARS. Poniższy przykład pokazuje, jak połączyć się z wystąpieniem programu SQL Server i jak określić, że powinno być włączone MARS.  
   
 ```vb  
 Dim connectionString As String = "Data Source=MSSQL1;" & _  
@@ -37,7 +37,7 @@ string connectionString = "Data Source=MSSQL1;" +
     "MultipleActiveResultSets=True";  
 ```  
   
- Można wyłączyć MARS, dodając "MultipleActiveResultSets = False" pary — słowo kluczowe parametrów połączenia. "Fałsz" jest jedyną poprawną wartością dla wyłączenie MARS. Następujący ciąg połączenia pokazano, jak wyłączyć MARS.  
+ Można wyłączyć MARS, dodając "MultipleActiveResultSets = False" parę — słowo kluczowe parametrów połączenia. "Fałsz" jest jedyną prawidłową wartością dla wyłączenie MARS. Następujące parametry połączenia pokazuje, jak wyłączyć MARS.  
   
 ```vb  
 Dim connectionString As String = "Data Source=MSSQL1;" & _  
@@ -51,31 +51,31 @@ string connectionString = "Data Source=MSSQL1;" +
     "MultipleActiveResultSets=False";  
 ```  
   
-## <a name="special-considerations-when-using-mars"></a>Szczególne zagadnienia dotyczące używania MARS  
- Ogólnie rzecz biorąc istniejące aplikacje nie będą modyfikacji połączenie włączone MARS. Jednak jeśli chcesz używać funkcji MARS w aplikacji, zapoznaj się następujące uwagi.  
+## <a name="special-considerations-when-using-mars"></a>Specjalne uwagi dotyczące korzystania z usług MARS  
+ Ogólnie rzecz biorąc istniejące aplikacje nie powinni modyfikacji przy użyciu połączenia z obsługą usług MARS. Jednak jeśli chcesz korzystać z funkcji usług MARS w swoich aplikacjach, należy zrozumieć następujące uwagi.  
   
-### <a name="statement-interleaving"></a>Naprzemiennego wykonywania instrukcji  
- Operacje MARS synchronicznie wykonania na serwerze. Instrukcja naprzemiennego wykonywania instrukcji SELECT i BULK INSERT jest dozwolone. Jednak język edycji danych (DML) i instrukcje (DDL) języka definicji danych wykonać automatycznie. Wszystkie instrukcje próby wykonania podczas wykonywania wsadowego atomic są zablokowane. Wykonywanie równoległe na serwerze nie jest funkcją MARS.  
+### <a name="statement-interleaving"></a>Instrukcji z przeplotem  
+ Operacje MARS były uruchamiane synchronicznie na serwerze. Instrukcji z przeplotem instrukcji SELECT i BULK INSERT jest dozwolone. Jednak język edycji danych (DML) oraz instrukcje (DDL) języka definicji danych wykonywane atomowo. Instrukcje, wszelkie próby wykonania operacji podczas wykonywania partii atomic są blokowane. Wykonywanie równoległe na serwerze nie jest funkcją MARS.  
   
- Jeśli dwie partie są przedstawiane w ramach połączenia MARS, jeden z nich zawierający instrukcję SELECT innych zawierająca instrukcję DML DML można rozpocząć wykonywania w ramach wykonywania instrukcji SELECT. Jednak do ukończenia należy uruchomić instrukcji DML, przed instrukcją SELECT może postęp. Jeśli zarówno instrukcje działają w ramach jednej transakcji, zmiany wprowadzone przez instrukcję DML, po uruchomieniu wykonywania instrukcji SELECT nie są widoczne dla operacji odczytu.  
+ Jeśli dwie partie są przesyłane w ramach połączenia MARS, jeden z nich zawierający instrukcję SELECT innych instrukcji DML, zawierającej DML można rozpocząć wykonywania w obrębie wykonywania instrukcji SELECT. Jednak do zakończenia należy uruchomić instrukcji DML, zanim można robić postępów w instrukcji SELECT. Jeśli obie instrukcje są uruchomione w ramach tej samej transakcji, wszelkie zmiany wprowadzone przez instrukcję DML, po uruchomieniu wykonania instrukcji SELECT nie są widoczne dla operacji odczytu.  
   
- Instrukcję WAITFOR wewnątrz instrukcji SELECT nie yield transakcji, gdy oczekuje, oznacza to, aż do pierwszego wiersza jest generowany. Oznacza to, że nie inne instancje może zostać uruchomiony w ramach tego samego połączenia, gdy oczekuje instrukcji WAITFOR.  
+ Instrukcję WAITFOR wewnątrz instrukcji SELECT nie przekazuje transakcji, gdy trwa oczekiwanie, oznacza to, aż pierwszy wiersz jest generowany. Oznacza to, że nie inne instancje można wykonać w ramach tego samego połączenia, gdy instrukcja WAITFOR oczekuje.  
   
 ### <a name="mars-session-cache"></a>Pamięci podręcznej sesji MARS  
- Po otwarciu połączenia z włączoną MARS, tworzona jest logiczną sesji, która dodaje dodatkowe obciążenie. Aby zminimalizować koszty i zwiększyć wydajność, **SqlClient** buforuje sesji MARS w ciągu połączenia. Pamięć podręczna zawiera maksymalnie 10 sesji MARS. Ta wartość nie jest regulowany użytkownika. Po osiągnięciu limitu czasu sesji zostanie utworzona nowa sesja — nie zostanie wygenerowany błąd. Pamięci podręcznej i zawarte w niej sesji są na połączenie. nie są współdzielone przez połączenia. Po zwolnieniu sesji, chyba że osiągnęła górny limit puli jest zwracana do puli. Jeśli w puli pamięci podręcznej jest pełna, sesja jest zamknięta. Sesji MARS nie wygasa. Obecny one tylko są czyszczone po usunięciu obiektu połączenia. Pamięci podręcznej sesji MARS nie jest załadowane. Jest on załadowany jako aplikacji wymaga więcej sesji.  
+ Gdy połączenie jest otwarte z włączoną MARS, tworzona jest sesji logicznej, która dodaje dodatkowe obciążenie. Aby zminimalizować koszty i zwiększyć wydajność, **SqlClient** zapisuje w pamięci podręcznej sesji MARS w ramach połączenia. Pamięć podręczna zawiera maksymalnie 10 MARS sesji. Ta wartość nie jest użytkownikiem zmieniane. W przypadku osiągnięcia limitu czasu sesji zostanie utworzona nowa sesja — nie zostanie wygenerowany błąd. Pamięci podręcznej i sesje zawarte w nim znajdują się na połączenie. nie są współdzielone przez połączenia. Sesja jest zwalniana, są zwracane do puli, o ile nie osiągnęła górny limit puli. Jeśli w puli pamięci podręcznej jest pełna, sesja jest zamknięta. Sesje usług MARS nie wygasa. Obecny one tylko są czyszczone po usunięciu obiektu połączenia. Pamięci podręcznej sesji MARS jest nie jest załadowany. Jest on ładowany jako aplikacja wymaga więcej sesji.  
   
 ### <a name="thread-safety"></a>Bezpieczeństwo wątków  
  Operacje MARS nie są wątkowo.  
   
 ### <a name="connection-pooling"></a>Pula połączeń  
- Włączone MARS połączeń są grupowane w pulach podobnie jak inne połączenie. Jeśli aplikacja otwiera dwa połączenia, jeden z MARS włączone i jeden z MARS wyłączone, dwa połączenia są w osobnych pulach. Aby uzyskać więcej informacji, zobacz [programu SQL Server połączenia buforowanie (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
+ Włączone MARS połączeń są grupowane w pulach podobnie jak inne połączenia. Jeśli aplikacja zostanie otwarta dwóch połączeń: jedna z MARS włączone, a druga MARS wyłączone dwa połączenia znajdują się w oddzielnych pul. Aby uzyskać więcej informacji, zobacz [programu SQL Server połączenia puli (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
   
-### <a name="sql-server-batch-execution-environment"></a>Środowiska wykonania programu SQL Server partii  
- Po otwarciu połączenia jest zdefiniowana domyślnego środowiska. To środowisko jest następnie skopiowana do logicznego sesji MARS.  
+### <a name="sql-server-batch-execution-environment"></a>Środowisko wykonywania wsadowego serwera SQL  
+ Po otwarciu połączenia jest zdefiniowana środowiska domyślnego. To środowisko jest następnie kopiowana do sesji logicznej MARS.  
   
- Środowiska wykonawczego wsadowego obejmuje następujące składniki:  
+ Środowisko wykonawcze usługi batch obejmuje następujące składniki:  
   
--   Ustawianie opcji (na przykład ANSI_NULLS, DATE_FORMAT, języka, wartość parametru TEXTSIZE)  
+-   Ustawianie opcji (na przykład ANSI_NULLS DATE_FORMAT, języka, wartość parametru TEXTSIZE)  
   
 -   Kontekst zabezpieczeń (rola użytkownika/aplikacji)  
   
@@ -85,12 +85,12 @@ string connectionString = "Data Source=MSSQL1;" +
   
 -   Tabele tymczasowe najwyższego poziomu  
   
- Z MARS środowiska wykonawczego domyślny jest skojarzona z połączeniem. Co nowego zadania wsadowego, który rozpoczyna wykonywanie w ramach danego połączenia wysyłana kopia domyślnego środowiska. Zawsze, gdy kod jest wykonywane w ramach danej partii, wszystkie zmiany wprowadzone do środowiska dostosowanych do określonego zadania wsadowego. Po zakończeniu wykonywania, wykonanie ustawienia są kopiowane do domyślnego środowiska. W przypadku pojedynczej partii wystawiania kilka poleceń do wykonania po kolei w tej samej transakcji semantyki są takie same jak te udostępniane przez połączeń obejmujących starszych klientów lub serwerów.  
+ Za pomocą usług MARS domyślne środowisko wykonywania jest skojarzona z połączeniem. Co nową partię, który rozpoczyna wykonywanie w ramach danego połączenia otrzymuje kopię środowiska domyślnego. Zawsze, gdy kod jest wykonywany w danej partii, wszystkie zmiany wprowadzone w środowisku są ograniczone do określonej usługi batch. Po zakończeniu wykonywania, ustawienia wykonywania są kopiowane do środowiska domyślnego. W przypadku jednej partii wystawianie kilka poleceń do wykonania po kolei w ramach tej samej transakcji semantyka są takie same, jak udostępniany przez połączeń obejmujących starszych klientów lub serwerów.  
   
 ### <a name="parallel-execution"></a>Wykonywanie równoległe  
- MARS nie jest przeznaczony do usunięcia wszystkich wymagań dotyczących wiele połączeń w aplikacji. Jeśli aplikacja wymaga true równoległe wykonywanie polecenia na serwerze, należy używać wielu połączeń.  
+ MARS nie jest przeznaczony do usunięcia wszystkich wymagań dla wielu połączeń w aplikacji. Jeśli aplikacja musi prawdziwe równoległe wykonywanie poleceń na serwerze, należy użyć wielu połączeń.  
   
- Na przykład rozważmy następujący scenariusz. Dwa obiekty polecenia są tworzone, jeden dla przetwarzania zestawu wyników i drugi dla aktualizowania danych. mają wspólnego połączenia za pośrednictwem MARS. W tym scenariuszu `Transaction`.`Commit` kończy się niepowodzeniem przy aktualizacji do momentu odczytania wszystkich wyników na pierwszy obiekt polecenia reaguje następujący wyjątek:  
+ Na przykład rozważmy następujący scenariusz. Polecenie tworzone są dwa obiekty, jeden dla przetwarzania zestawu wyników i inny wpis dla aktualizacji danych. współużytkują one typowe połączenia przez MARS. W tym scenariuszu `Transaction`.`Commit` kończy się niepowodzeniem po aktualizacji do momentu odczytania wszystkich wyników na pierwszy obiekt polecenia reaguje następujący wyjątek:  
   
  Komunikat o błędzie: Kontekst transakcji jest używany przez inną sesję.  
   
@@ -102,15 +102,15 @@ string connectionString = "Data Source=MSSQL1;" +
   
  Dostępne są trzy opcje do obsługi tego scenariusza:  
   
-1.  Uruchom transakcji po utworzeniu czytnik, dzięki czemu nie jest częścią transakcji. Każda aktualizacja staje się własną transakcji.  
+1.  Uruchomić transakcję po utworzeniu czytnika, tak aby nie jest częścią transakcji. Każda aktualizacja staje się własną transakcji.  
   
-2.  Zatwierdź wszystkie wykonywane po czytnik jest zamknięty. To może potencjalnie znaczny pakietu aktualizacji.  
+2.  Zatwierdź całą pracę po czytnik jest zamykany. To może potencjalnie znaczny partii aktualizacji.  
   
 3.  Nie używaj MARS; Zamiast tego użyć osobnego połączenia dla każdego obiektu polecenia, podobnie jak przed MARS.  
   
 ### <a name="detecting-mars-support"></a>Wykrywanie MARS pomocy technicznej  
- Aplikację można sprawdzić MARS obsługuje odczytując `SqlConnection.ServerVersion` wartość. Główny numer powinna być 9 dla programu SQL Server 2005 i 10 dla programu SQL Server 2008.  
+ Aplikację można sprawdzić MARS pomocy technicznej, czytając `SqlConnection.ServerVersion` wartość. Numer główny powinna być 9 dla programu SQL Server 2005 i 10 programu SQL Server 2008.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wiele aktywnych zestawów wyników (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

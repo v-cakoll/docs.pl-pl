@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a489e05435ce160c65e936f448688d69b3a965f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ca958f8472d7f7e1a44ad4ab237f582f92713c3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435264"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402741"
 ---
 # <a name="iclrstrongnamegethashfromblob-method"></a>ICLRStrongName::GetHashFromBlob — Metoda
 Pobiera skrót zestawu pod adresem określonym pamięci, przy użyciu określonego algorytmu skrótu.  
@@ -42,32 +42,32 @@ HRESULT GetHashFromBlob (
   
 #### <a name="parameters"></a>Parametry  
  `pbBlob`  
- [in] Wskaźnik do adresu blok pamięci, aby być mieszany.  
+ [in] Wskaźnik na adres bloku pamięci, aby zostać obliczona wartość skrótu.  
   
  `cchBlob`  
- [in] Długość, w bajtach bloku pamięci.  
+ [in] Długość w bajtach, bloku pamięci.  
   
  `piHashAlg`  
- [w, out] Stała, który określa algorytm wyznaczania wartości skrótu. Użyj wartości zero dla domyślnego algorytmu.  
+ [out w] Stała, który określa algorytm wyznaczania wartości skrótu. Użyj wartości zero dla domyślny algorytm.  
   
  `pbHash`  
- [out] Bufor zwrócony wyznaczania wartości skrótu.  
+ [out] Bufor zwrócone wyznaczania wartości skrótu.  
   
  `cchHash`  
- [in] Maksymalny rozmiar żądanej z `pbHash`.  
+ [in] Żądany maksymalny rozmiar `pbHash`.  
   
  `pchHash`  
- [out] Rozmiar w bajtach, zwracana `pbHash`.  
+ [out] Rozmiar w bajtach zwracanego `pbHash`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `S_OK` Jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość HRESULT, która wskazuje niepowodzenie (zobacz [wspólne wartości HRESULT](http://go.microsoft.com/fwlink/?LinkId=213878) lista).  
+ `S_OK` Jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT, która wskazuje błąd (zobacz [typowe wartości HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) dla listy).  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MetaHost.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

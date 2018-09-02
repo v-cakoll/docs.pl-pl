@@ -1,31 +1,31 @@
 ---
-title: 'Porady: kontrolowanie prefiksy Namespace (C#) (LINQ do XML)'
+title: 'Porady: kontrolowanie prefiksów Namespace (C#) (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 64de5186-b81a-4ddd-8327-8693df59a01b
 ms.openlocfilehash: af864139d56bd3ebb22cca6369b82539b9d007da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327756"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417374"
 ---
-# <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>Porady: kontrolowanie prefiksy Namespace (C#) (LINQ do XML)
-W tym temacie opisano, jak podczas serializowania drzewo XML można kontrolować prefiksy przestrzeni nazw.  
+# <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>Porady: kontrolowanie prefiksów Namespace (C#) (LINQ to XML)
+W tym temacie opisano, jak kontrolować prefiksy przestrzeni nazw podczas serializacji drzewa XML.  
   
- W wielu sytuacjach nie jest potrzebne do sterowania prefiksy przestrzeni nazw.  
+ W wielu sytuacjach nie jest konieczne kontrolowanie prefiksów przestrzeni nazw.  
   
- Jednak niektóre narzędzia do programowania XML wymagają określonego formantu prefiksy przestrzeni nazw. Na przykład użytkownik może być manipulowanie arkusz stylów XSLT lub dokumentu XAML, który zawiera osadzony wyrażenia XPath, które odwołują się do określonego obszaru nazw prefiksów; w tym przypadku jest ważne, że dokument być serializowany z tych prefiksów.  
+ Jednak niektórych narzędzi do programowania XML Wymagaj sterowania prefiksy przestrzeni nazw. Na przykład użytkownik może być manipulowanie arkusz stylów XSLT lub dokumentu XAML, który zawiera osadzone wyrażenia XPath, które odwołują się do prefiksy przestrzeni nazw określonych; w tym przypadku jest ważne, że dokument można było serializować ją przy tych prefiksów.  
   
- Jest to najbardziej typowe przyczyny kontrolowanie prefiksy przestrzeni nazw.  
+ Jest to najbardziej typowe przyczyny kontrolowanie prefiksów przestrzeni nazw.  
   
- Kontrolowanie prefiksy przestrzeni nazw innej typową przyczyną jest użytkownicy mają ręcznie edytować dokument XML, czy chcesz utworzyć prefiksy przestrzeni nazw, które są wygodne dla użytkownika na typ. Na przykład użytkownik może generować dokumentu XSD. Konwencje dla schematów sugerują, użyj jednej `xs` lub `xsd` jako prefiksu dla przestrzeni nazw schematu.  
+ Inny typową przyczyną kontrolowanie prefiksów przestrzeni nazw jest, że użytkownicy mają ręcznie edytować dokumentu XML, a chcesz utworzyć prefiksy przestrzeni nazw, które są w dogodnym dla użytkownika o wpisanie. Na przykład użytkownik może generować dokumentu XSD. Konwencje dotyczące schematów sugerują, użyj jednej `xs` lub `xsd` jako prefiksu dla przestrzeni nazw schematu.  
   
- Aby kontrolować prefiksy przestrzeni nazw, należy wstawić atrybutów, które zadeklarować przestrzeni nazw. Deklarowanie przestrzeni nazw z prefiksów, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] podejmie próbę honorować prefiksy przestrzeni nazw podczas serializacji.  
+ Aby kontrolować prefiksy przestrzeni nazw, należy wstawić atrybuty, które deklarują przestrzeni nazw. W przypadku przestrzeni nazw z specyficzne prefiksy [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] podejmie próbę uznaje prefiksy przestrzeni nazw podczas serializacji.  
   
- Aby utworzyć atrybutu, który deklaruje przestrzeni nazw z prefiksem, należy utworzyć gdzie przestrzeni nazw nazwa atrybutu jest atrybut <xref:System.Xml.Linq.XNamespace.Xmlns%2A>, a nazwa atrybutu to prefiks przestrzeni nazw. Wartość atrybutu jest identyfikatorem URI przestrzeni nazw.  
+ Aby utworzyć atrybut, który deklaruje przestrzeni nazw z prefiksem, Utwórz atrybut w przypadku przestrzeni nazw nazwa atrybutu <xref:System.Xml.Linq.XNamespace.Xmlns%2A>, a nazwą atrybutu jest prefiks przestrzeni nazw. Wartość atrybutu jest identyfikatorem URI przestrzeni nazw.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie deklaruje dwie przestrzenie nazw. Określa, że `http://www.adventure-works.com` przestrzeń nazw ma prefiks `aw`oraz że `www.fourthcoffee.com` przestrzeń nazw ma prefiks `fc`.  
+ Ten przykład deklaruje dwie przestrzeni nazw. Określa, że `http://www.adventure-works.com` przestrzeń nazw ma prefiks `aw`oraz że `www.fourthcoffee.com` przestrzeń nazw ma prefiks `fc`.  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -55,4 +55,4 @@ Console.WriteLine(root);
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Praca z przestrzeni nazw XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+ [Praca z przestrzeniami nazw XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)

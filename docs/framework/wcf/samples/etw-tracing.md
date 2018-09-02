@@ -2,22 +2,22 @@
 title: Śledzenie za pomocą funkcji ETW
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: 4aa836650663a2918b51d5f9df95b55f410b8ded
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e4dd141bd5f6a9d137b2fe981b3b412ec0c81e2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33506045"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407170"
 ---
 # <a name="etw-tracing"></a>Śledzenie za pomocą funkcji ETW
-W tym przykładzie pokazano, jak wdrożyć śledzenia End-to-End (E2E) przy użyciu zdarzenia śledzenia dla systemu Windows (ETW) i `ETWTraceListener` dostarczanym z tego przykładu. Próbki jest oparta na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) i obejmuje śledzenia zdarzeń systemu Windows.  
+Ten przykład demonstruje sposób implementacji śledzenia End-to-End (E2E) przy użyciu śledzenie zdarzeń dla Windows (ETW) i `ETWTraceListener` która jest dostarczana z tego przykładu. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) oraz śledzenie.  
   
 > [!NOTE]
->  Procedury i kompilacji instrukcje dotyczące konfiguracji dla tego przykładu znajdują się na końcu tego tematu.  
+>  Procedury i kompilacja instrukcje dotyczące konfiguracji dla tego przykładu znajdują się na końcu tego tematu.  
   
- W tym przykładzie przyjęto założenie, że czytelnik zna [śledzenie i rejestrowanie komunikatów](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  
+ W tym przykładzie przyjęto założenie, że czytelnik zna [śledzenia i rejestrowania komunikatów](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  
   
- Każde źródło śledzenia w <xref:System.Diagnostics> śledzenie model może mieć wiele obiektów nasłuchujących śledzenia, które określają, jak i gdzie dane są śledzone. Typ odbiornika definiuje format, w którym rejestrowane są dane śledzenia. Poniższy przykładowy kod przedstawia sposób Dodaj do konfiguracji odbiornika.  
+ Każde źródło śledzenia w <xref:System.Diagnostics> śledzenia model może mieć wiele obiektów nasłuchujących śledzenia, które określają, gdzie i w jaki sposób dane są śledzone. Typ odbiornika definiuje format, w którym dane śledzenia są rejestrowane. Poniższy przykład kodu pokazuje, jak dodać odbiornika do konfiguracji.  
   
 ```xml  
 <system.diagnostics>  
@@ -47,12 +47,12 @@ W tym przykładzie pokazano, jak wdrożyć śledzenia End-to-End (E2E) przy uży
 </system.diagnostics>  
 ```  
   
- Przed użyciem tego odbiornika, można uruchomić sesję śledzenia funkcji ETW. Za pomocą Logman.exe lub Tracelog.exe można uruchomić tej sesji. Plik SetupETW.bat jest uwzględniona w tym przykładzie, dzięki czemu możesz skonfigurować sesję śledzenia funkcji ETW wraz z plikiem CleanupETW.bat zamykania sesji i uzupełniania w pliku dziennika.  
+ Przed rozpoczęciem korzystania z tego odbiornika można uruchomić sesji śledzenia zdarzeń systemu Windows. Za pomocą Logman.exe lub Tracelog.exe można uruchomić tej sesji. Plik SetupETW.bat jest dołączone do tego przykładu tak, aby skonfigurować sesję śledzenia funkcji ETW, wraz z plikiem CleanupETW.bat zamykania sesji i uzupełniania pliku dziennika.  
   
 > [!NOTE]
->  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu. Aby uzyskać więcej informacji na temat tych narzędzi zobacz [http://go.microsoft.com/fwlink/?LinkId=56580](http://go.microsoft.com/fwlink/?LinkId=56580)  
+>  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu. Aby uzyskać więcej informacji o tych narzędziach zobacz [https://go.microsoft.com/fwlink/?LinkId=56580](https://go.microsoft.com/fwlink/?LinkId=56580)  
   
- Używając ETWTraceListener, dane śledzenia są rejestrowane w plikach binarnych ETL. Z włączonym śledzeniem ServiceModel jest włączona, wszystkie ślady generowane są wyświetlane w tym samym pliku. Użyj [narzędzia podglądu śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) dotyczące wyświetlania plików dziennika ETL i .svclog. Podgląd komunikatów o tworzy widok end-to-end systemu, dzięki któremu można wyśledzić komunikatu od źródła do miejsca docelowego i punktem zużycia.  
+ Korzystając z ETWTraceListener, ślady są rejestrowane w plikach binarnych ETL. Z włączonym śledzeniem elementu ServiceModel jest włączone, wszystkie ślady wygenerowanego pojawiają się w tym samym pliku. Użyj [narzędzie śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) dotyczące wyświetlania plików dziennika ETL i .svclog. Podgląd tworzy widok end-to-end, co system, który pozwala na śledzenie komunikatów ze źródła do miejsca docelowego i punktem zużycia.  
   
  Odbiornik śledzenia zdarzeń systemu Windows obsługuje logowanie cykliczne. Aby włączyć tę funkcję, przejdź do **Start**, **Uruchom** i typ `cmd` można uruchomić konsoli poleceń. W poniższym poleceniu zastąp `<logfilename>` parametr o nazwie pliku dziennika.  
   
@@ -60,7 +60,7 @@ W tym przykładzie pokazano, jak wdrożyć śledzenia End-to-End (E2E) przy uży
 logman create trace Wcf -o <logfilename> -p "{411a0819-c24b-428c-83e2-26b41091702e}" -f bincirc -max 1000  
 ```  
   
- `-f` i `-max` przełączniki są opcjonalne. Określa format binarny cykliczne i dziennika maksymalny rozmiar 1000MB odpowiednio. `-p` Przełącznik jest używany do określenia dostawcy śledzenia. W naszym przykładzie `"{411a0819-c24b-428c-83e2-26b41091702e}"` oznacza identyfikator GUID "Dostawcy próbki ETW XML".  
+ `-f` i `-max` przełączniki są opcjonalne. Odpowiednio określają format binarny cykliczne i maksymalny rozmiar dziennika z 1000MB. `-p` Przełącznik jest używany do określenia dostawcy śledzenia. W naszym przykładzie `"{411a0819-c24b-428c-83e2-26b41091702e}"` oznacza identyfikator GUID "Dostawcy próbki ETW XML".  
   
  Aby rozpocząć sesję, wpisz następujące polecenie.  
   
@@ -68,43 +68,43 @@ logman create trace Wcf -o <logfilename> -p "{411a0819-c24b-428c-83e2-26b4109170
 Logman start Wcf  
 ```  
   
- Po zakończeniu rejestrowania, można zatrzymać sesji przy użyciu następującego polecenia.  
+ Po zakończeniu rejestrowania można zatrzymać sesji za pomocą następującego polecenia.  
   
 ```  
 Logman stop Wcf  
 ```  
   
- Ten proces generuje dzienniki cyklicznych binarne, przetwarzające z narzędziem wyboru, w tym [narzędzia podglądu śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) lub Tracerpt.  
+ Ten proces generuje dzienniki cykliczne binarne, przetwarzających z narzędziem wyboru, w tym [narzędzie śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) lub Tracerpt.  
   
- Można również przejrzeć [śledzenie cykliczne](../../../../docs/framework/wcf/samples/circular-tracing.md) przykładowa uzyskać więcej informacji o alternatywnych odbiornika przeprowadzić logowanie cykliczne.  
+ Możesz również przejrzeć [śledzenie cykliczne](../../../../docs/framework/wcf/samples/circular-tracing.md) przykładowe więcej informacji na temat odbiornik alternatywne do wykonywania logowanie cykliczne.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Pamiętaj, że wykonano procedurę [jednorazowego procedurę instalacji dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Pamiętaj, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Postępuj zgodnie z instrukcjami w celu skompilowania rozwiązania, [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
     > [!NOTE]
-    >  Aby używać poleceń RegisterProvider.bat, SetupETW.bat i CleanupETW.bat, należy uruchomić przy użyciu konta administratora lokalnego. Jeśli używasz [!INCLUDE[wv](../../../../includes/wv-md.md)] lub później, należy także uruchomić wiersz polecenia z podwyższonym poziomem uprawnień. Aby to zrobić, kliknij prawym przyciskiem myszy ikonę wiersz polecenia, a następnie kliknij przycisk **Uruchom jako administrator**.  
+    >  Aby użyć polecenia RegisterProvider.bat, SetupETW.bat i CleanupETW.bat, należy uruchomić przy użyciu konta administratora lokalnego. Jeśli używasz [!INCLUDE[wv](../../../../includes/wv-md.md)] lub nowszej, należy także uruchomić wiersz polecenia z podwyższonym poziomem uprawnień. Aby to zrobić, kliknij prawym przyciskiem myszy ikonę wiersza polecenia, a następnie kliknij przycisk **Uruchom jako administrator**.  
   
-3.  Przed uruchomieniem próbki, należy uruchomić RegisterProvider.bat na kliencie i serwerze. Wynikowy plik ETWTracingSampleLog.etl to konfiguruje do generowania danych śledzenia, które mogą być odczytywane przez Podgląd śledzenia usługi. Ten plik znajduje się w folderze C:\logs. Jeśli ten folder nie istnieje, należy utworzyć lub są generowane nie dane śledzenia. Następnie uruchom SetupETW.bat na komputery klienckie i serwery, aby rozpocząć sesję śledzenia funkcji ETW. Plik SetupETW.bat znajduje się w folderze CS\Client.  
+3.  Przed uruchomieniem przykładu, należy uruchomić RegisterProvider.bat na kliencie i serwerze. Spowoduje to utworzenie wynikowy plik ETWTracingSampleLog.etl do generowania danych śledzenia, które mogą być odczytywane przez przeglądarki danych śledzenia usługi. Ten plik można znaleźć w folderze C:\logs. Jeśli ten folder nie istnieje, musi ona zostać utworzona, lub są generowane nie dane śledzenia. Następnie uruchom SetupETW.bat na komputerach klienta i serwera, aby rozpocząć sesję śledzenia funkcji ETW. Plik SetupETW.bat znajdują się w folderze CS\Client.  
   
-4.  Aby uruchomić przykładowy w konfiguracji pojedynczej lub między komputerami, postępuj zgodnie z instrukcjami w [uruchamiania przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-5.  Po zakończeniu próbki, należy uruchomić CleanupETW.bat, aby zakończyć tworzenie pliku ETWTracingSampleLog.etl.  
+5.  Po ukończeniu próbki, należy uruchomić CleanupETW.bat, aby zakończyć tworzenie pliku ETWTracingSampleLog.etl.  
   
-6.  Otwórz plik ETWTracingSampleLog.etl od w podglądzie śledzenia usługi. Pojawi się monit można zapisać pliku binarnego sformatowane jako plik .svclog.  
+6.  Otwórz plik ETWTracingSampleLog.etl z w ramach przeglądarki danych śledzenia usługi. Zostanie wyświetlony monit Zapisz plik binarny sformatowane jako plik .svclog.  
   
-7.  Otworzyć plik .svclog nowo utworzonego w ramach podglądu śledzenia usługi, aby wyświetlić dane śledzenia zdarzeń systemu Windows i ServiceModel.  
+7.  Otwórz plik .svclog nowo utworzony z w ramach przeglądarki danych śledzenia usługi do wyświetlania śladów funkcji ETW i ServiceModel.  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\AnalyticTrace`  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przykłady monitorowania AppFabric](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [Przykłady monitorowania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

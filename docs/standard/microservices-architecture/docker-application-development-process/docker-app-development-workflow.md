@@ -1,69 +1,69 @@
 ---
-title: Przepływ pracy tworzenia aplikacji Docker
-description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Przepływ pracy tworzenia aplikacji Docker
+title: Przepływ pracy tworzenia oprogramowania dla aplikacji platformy Docker
+description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Przepływ pracy tworzenia oprogramowania dla aplikacji platformy Docker
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: 0627a61e910b1d278fd2e604dd8de7021fdb0fed
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: b7115530c44321dc2a10be3996c14429591b611f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106220"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401983"
 ---
-# <a name="development-workflow-for-docker-apps"></a>Przepływ pracy tworzenia aplikacji Docker
+# <a name="development-workflow-for-docker-apps"></a>Przepływ pracy tworzenia oprogramowania dla aplikacji platformy Docker
 
-Cykl życia programowania aplikacji rozpoczyna się od wszystkich deweloperów maszyny, gdzie dewelopera kodów aplikacji przy użyciu preferowanego języka i sprawdza ją lokalnie. Niezależnie od tego, które języka, framework i platformy wybierze dewelopera, w tym przepływie pracy dewelopera jest zawsze tworzenie i testowanie kontenery Docker, ale w ten sposób lokalnie.
+Cykl życia projektowania aplikacji rozpoczyna się każdy Deweloper maszyny, których Deweloper kody aplikacji przy użyciu preferowanego języka i sprawdza ją lokalnie. Niezależnie od tego, które języków i platformy, deweloper zdecyduje, w tym przepływie pracy dewelopera jest zawsze opracowywania i testowania kontenerów platformy Docker, ale sposób lokalnie.
 
-Każdego kontenera (wystąpienia obrazu Docker) obejmuje następujące składniki:
+Każdy kontener (wystąpienia obrazu platformy Docker) obejmuje następujące składniki:
 
 -   Wybór systemu operacyjnego (na przykład dystrybucji systemu Linux, Windows Nano Server lub Windows Server Core).
 
--   Pliki dodane przez dewelopera (pliki binarne aplikacji itp.).
+-   Pliki dodawane przez dewelopera (pliki binarne aplikacji itp.).
 
 -   Informacje o konfiguracji (ustawienia środowiska i zależności).
 
-## <a name="workflow-for-developing-docker-container-based-applications"></a>Przepływ pracy umożliwiający projektowanie aplikacji na podstawie kontenera Docker
+## <a name="workflow-for-developing-docker-container-based-applications"></a>Przepływ pracy na potrzeby tworzenia aplikacji opartych na kontenerach platformy Docker
 
-W tej sekcji opisano *pętli wewnętrzny* przepływ pracy rozwoju aplikacji na podstawie kontenera Docker. Wewnętrzny pętli przepływu pracy oznacza, że jest nie biorąc pod uwagę szerszych DevOps przepływu pracy i po prostu koncentruje się na programowanie pracować na komputerze dewelopera. Początkowe kroki, aby skonfigurować środowisko nie są uwzględnione, ponieważ te są wykonywane tylko raz.
+W tej sekcji opisano *pętli wewnętrzny* przepływ pracy tworzenia oprogramowania dla aplikacji opartych na kontenerach platformy Docker. Przepływ pracy wewnętrznej pętli oznacza, że to nie biorąc pod uwagę szersze przepływ pracy DevOps i po prostu koncentruje się na rozwoju pracy na komputerze dewelopera. Początkowe kroki konfigurowania środowiska nie są dołączane, ponieważ te są wykonywane tylko raz.
 
-Aplikacja składa się z własnych usług oraz dodatkowych bibliotek (zależności). Poniżej przedstawiono podstawowe kroki, które zwykle wykonać podczas kompilowania aplikacji Docker, zgodnie z opisami w rysunek 5-1.
+Aplikacja składa się z własnych usług, a także dodatkowe biblioteki (zależności). Poniżej przedstawiono podstawowe kroki, które zwykle wykonać podczas kompilowania aplikacji platformy Docker, jak pokazano w rysunek 5-1.
 
 ![](./media/image1.png)
 
-**Rysunek 5-1.** Krok przepływu pracy umożliwiający projektowanie aplikacji konteneryzowanych Docker
+**Rysunek 5-1.** Instrukcje krok po kroku przepływu pracy do tworzenia aplikacji kontenerowych nimi platformy Docker
 
-W tym przewodniku szczegółowo całego tego procesu i każdy krok głównych tłumaczy koncentrujących się na środowiska Visual Studio.
+W tym przewodniku opisano szczegółowo całego tego procesu i na każdym kroku głównych zostało wyjaśnione, skupiając się na środowisko Visual Studio.
 
-Korzystając z podejście do tworzenia edytora/interfejsu wiersza polecenia (na przykład Visual Studio Code oraz interfejsu wiersza polecenia Docker na macOS lub Windows), musisz wiedzieć każdy krok zazwyczaj bardziej szczegółowo niż Jeśli używasz programu Visual Studio. Aby uzyskać więcej informacji na temat pracy w środowisku interfejsu wiersza polecenia można znaleźć Książka elektroniczna [cyklem życia aplikacji Docker konteneryzowanych Platforms firmy Microsoft i narzędzia](http://aka.ms/dockerlifecycleebook/).
+Korzystając z podejście do tworzenia edytora/CLI (na przykład programu Visual Studio Code oraz interfejsu wiersza polecenia platformy Docker w systemie macOS lub Windows), musisz wiedzieć każdego kroku, zazwyczaj bardziej szczegółowo niż Jeśli używasz programu Visual Studio. Aby uzyskać więcej informacji na temat pracy w środowisku interfejsu wiersza polecenia można znaleźć książki elektronicznej [cykl życia aplikacji kontenerowych nimi platformy Docker z Platforms i narzędzi Microsoft](https://aka.ms/dockerlifecycleebook/).
 
-Jeśli używasz programu Visual Studio 2015 lub Visual Studio 2017 wiele z tych kroków obsługi dla Ciebie, co znacznie zwiększa wydajność pracy. Jest to szczególnie istotne podczas przy użyciu programu Visual Studio 2017 i przeznaczonych dla wielu kontenera aplikacji. Na przykład tylko jednym kliknięciem, Visual Studio dodaje plik Dockerfile i docker-compose.yml pliku swoje projekty z konfiguracją aplikacji. Po uruchomieniu aplikacji w programie Visual Studio tworzy obraz Docker i uruchamia aplikację usługi kontenera bezpośrednio w Docker; Umożliwia ona nawet debugowanie jednocześnie kilka kontenerów. Te funkcje będą zwiększania szybkości rozwoju.
+Jeśli używasz programu Visual Studio 2015 lub Visual Studio 2017, wiele z tych kroków są obsługiwane dla Ciebie, co znacznie zwiększa wydajność pracy. Jest to szczególnie istotne w przypadku, gdy są przy użyciu programu Visual Studio 2017 i ustawianie elementów docelowych wielokontenerowych aplikacji. Na przykład tylko jednym kliknięciem, Visual Studio dodaje plik Dockerfile i docker-compose.yml do swoich projektów za pomocą konfiguracji dla aplikacji. Po uruchomieniu aplikacji w programie Visual Studio tworzy obraz platformy Docker i uruchamia aplikację obsługującą wiele kontenerów bezpośrednio na platformie Docker; Umożliwia ona nawet jednocześnie debugowanie kilka kontenerów. Te funkcje będą zwiększyć szybkość rozwoju.
 
-Jednakże wyłącznie z powodu Visual Studio sprawia, że te kroki są automatyczne oznacza, że nie trzeba znać, co się dzieje na dole z Docker. W związku z tym w wytycznych, który jest zgodny, możemy szczegóły każdego kroku.
+Po prostu, ponieważ program Visual Studio sprawia, że te kroki są automatyczne nie oznacza to jednak, że nie trzeba znać, co się dzieje na dole z platformą Docker. W związku z tym w wskazówki, będziemy szczegółowo opisano każdego kroku.
 
 ![](./media/image2.png)
 
-## <a name="step-1-start-coding-and-create-your-initial-application-or-service-baseline"></a>Krok 1. Rozpoczęcie kodowania i Utwórz początkową aplikacji lub usługi linii bazowej
+## <a name="step-1-start-coding-and-create-your-initial-application-or-service-baseline"></a>Krok 1. Rozpocznij kodowanie i tworzenie początkowej aplikacja lub usługa linii bazowej
 
-Opracowanie aplikacji Docker jest podobny do sposobu opracowywania aplikacji bez rozwiązania Docker. Różnica polega na tym że podczas projektowania dla Docker, wdrażanie i testowanie aplikacji lub usługi działające w kontenerach Docker w środowisku lokalnym. Kontener może być kontenerem Linux lub kontenera systemu Windows.
+Tworzenie aplikacji platformy Docker to podobnie, jak opracować aplikację bez platformy Docker. Różnica jest, że podczas tworzenia dla platformy Docker, są wdrażanie i testowanie aplikacji lub usług działających w kontenerach platformy Docker w środowisku lokalnym. Kontener może być kontenera systemu Linux lub kontenerów Windows.
 
 ### <a name="set-up-your-local-environment-with-visual-studio"></a>Konfigurowanie środowiska lokalnego z programem Visual Studio
 
-Aby rozpocząć, upewnij się, że [Docker Community Edition (CE)](https://www.docker.com/community-edition) dla systemu Windows zainstalowane zgodnie z objaśnieniem w poniższych instrukcji:
+Aby rozpocząć, upewnij się, że masz [Docker Community Edition (CE)](https://www.docker.com/community-edition) dla Windows zainstalowany zgodnie z opisem w poniższych instrukcjach:
 
-[Rozpoczynanie pracy z rozwiązaniem Docker CE dla systemu Windows](https://docs.docker.com/docker-for-windows/)
+[Wprowadzenie do platformy Docker CE dla Windows](https://docs.docker.com/docker-for-windows/)
 
-Ponadto należy Visual Studio 2017 r zainstalowane. To jest preferowana przez Visual Studio 2015 z programu Visual Studio Tools dla platformy Docker dodatku, ponieważ Visual Studio 2017 zawiera bardziej zaawansowane obsługę Docker, takich jak obsługa debugowanie kontenerów. Visual Studio 2017 obejmuje narzędzi dla platformy Docker w przypadku wybrania **.NET Core i Docker** obciążenie podczas instalacji, jak pokazano na rysunku 5-2.
+Ponadto konieczne będzie programu Visual Studio 2017. Jest to preferowany za pośrednictwem programu Visual Studio 2015 za pomocą Visual Studio Tools for Docker dodatku, ponieważ Visual Studio 2017 ma bardziej zaawansowane funkcje obsługi programu Docker, takich jak obsługa debugowania kontenerów. Visual Studio 2017 zawiera narzędzia do platformy Docker, w przypadku wybrania **.NET Core i Docker** obciążenie podczas instalacji, jak pokazano w rysunek 5-2.
 
 ![](./media/image3.png)
 
-**Rysunek 5-2**. Wybieranie **.NET Core i Docker** obciążenie podczas instalacji programu Visual Studio 2017 r.
+**Rysunek 5-2**. Wybieranie **.NET Core i Docker** obciążenie podczas instalacji programu Visual Studio 2017
 
-Możesz uruchomić kodowania aplikację w zwykły .NET (zwykle w .NET Core, jeśli planujesz używanie kontenerów), nawet przed włączeniem Docker w aplikacji i wdrażanie i testowanie w Docker. Jednak zaleca się uruchamiania pracuje Docker tak szybko, jak to możliwe, który będzie stanowić rzeczywistego środowiska, ponieważ wszelkie problemy, które mogą być wykrywane tak szybko, jak to możliwe. To zaleca się ponieważ Visual Studio ułatwia więc pracować z Docker że prawie uważa przezroczysty — najlepszy przykład podczas debugowania aplikacji kontenera wielu z programu Visual Studio.
+Możesz rozpocząć kodowanie swoją aplikację w zwykły .NET (zwykle w .NET Core, jeśli planowane jest korzystanie z kontenerów), nawet przed włączeniem platformy Docker w aplikacji i wdrażanie i testowanie na platformie Docker. Jednak zaleca się uruchamiania nad platformy Docker tak szybko, jak to możliwe, ponieważ się rzeczywistego środowiska i wszelkie problemy, które mogą być wykrywane tak szybko, jak to możliwe. To zaleca się, ponieważ dzięki programowi Visual Studio tak łatwe do pracy z rozwiązaniem Docker, że niemal pozornie przezroczyste — najlepszy przykład podczas debugowania aplikacji obsługującej wiele kontenerów za pomocą programu Visual Studio.
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Rozpoczynanie pracy z rozwiązaniem Docker CE dla systemu Windows**
+-   **Wprowadzenie do platformy Docker CE dla Windows**
     [*https://docs.docker.com/docker-for-windows/*](https://docs.docker.com/docker-for-windows/)
 
 -   **Visual Studio 2017**
@@ -71,35 +71,35 @@ Możesz uruchomić kodowania aplikację w zwykły .NET (zwykle w .NET Core, jeś
 
 ![](./media/image4.png)
 
-## <a name="step-2-create-a-dockerfile-related-to-an-existing-net-base-image"></a>Krok 2. Utwórz plik Dockerfile związane z istniejącego obrazu podstawowego .NET
+## <a name="step-2-create-a-dockerfile-related-to-an-existing-net-base-image"></a>Krok 2. Tworzenie pliku Dockerfile związane z istniejącego obrazu podstawowego platformy .NET
 
-Plik Dockerfile wymagane dla każdego niestandardowego obrazu, który chcesz utworzyć; należy również plik Dockerfile dla każdego kontenera do wdrożenia, czy wdrożyć automatycznie z programu Visual Studio lub ręcznie przy użyciu interfejsu wiersza polecenia Docker (Uruchom docker i docker-tworzą poleceń). Jeśli aplikacja zawiera pojedynczą usługę niestandardowe, należy pojedynczy plik Dockerfile. Jeśli aplikacja zawiera wiele usług (jak architektura mikrousług), należy jeden plik Dockerfile dla każdej usługi.
+Potrzebujesz pliku Dockerfile dla niestandardowego obrazu, z którą chcesz skompilować; należy również plik Dockerfile dla każdego kontenera do wdrożenia, czy wdrożyć automatycznie z programu Visual Studio lub ręcznie przy użyciu interfejsu wiersza polecenia platformy Docker (docker, uruchom i docker-compose poleceń). Jeśli aplikacja zawiera pojedynczą usługę niestandardowych, konieczne będzie pojedynczego pliku Dockerfile. Jeśli aplikacja zawiera wiele usług (tak jak w architekturze mikrousług), należy jeden plik Dockerfile dla każdej usługi.
 
-Plik Dockerfile znajduje się w folderze głównym aplikacji lub usługi. Zawiera polecenia określające sposób ustawiania i uruchamiania aplikacji lub usługi w kontenerze Docker. Można ręcznie utworzyć plik Dockerfile w kodzie i dodaj go do projektu oraz zależności platformy .NET.
+Plik Dockerfile znajduje się w folderze głównym aplikacji lub usługi. Zawiera polecenia, określające sposób konfigurowania i uruchamiania aplikacji lub usługi w kontenerze platformy Docker. Można ręcznie utworzyć plik Dockerfile w kodzie i dodać go do projektu, wraz z zależności .NET.
 
-Visual Studio i jej narzędzi dla platformy Docker to zadanie wymaga tylko kilka razy kliknąć myszą. Po utworzeniu nowego projektu w Visual Studio 2017 jest opcja o nazwie **Obsługa Włączanie kontenerów (Docker)**, jak pokazano na rysunku 5-3.
+Korzystając z programu Visual Studio i jego narzędzi platformy Docker to zadanie wymaga tylko kilku kliknięć myszą. Po utworzeniu nowego projektu w programie Visual Studio 2017 jest dostępna opcja o nazwie **Obsługa Włączanie kontenerów (Docker)**, jak pokazano w rysunek 5-3.
 
 ![](./media/image5.png)
 
-**Rysunek 5-3**. Włączanie obsługi platformy Docker, podczas tworzenia nowego projektu w programie Visual Studio 2017 r.
+**Rysunek 5-3**. Włączanie obsługi platformy Docker, podczas tworzenia nowego projektu w programie Visual Studio 2017
 
-Można również włączyć obsługę Docker na nowy lub istniejący projekt prawym przyciskiem myszy plik projektu w programie Visual Studio i wybierając opcję **Docker Dodaj projekt obsługuje**, jak pokazano na rysunku 5-4.
+Można również włączyć obsługę platformy Docker w ramach nowego lub istniejącego projektu, kliknij prawym przyciskiem myszy plik projektu w programie Visual Studio i wybierając opcję **Docker Dodaj projekt obsługuje**, jak pokazano na rysunku 5-4.
 
 ![](./media/image6.png)
 
-**Rysunek 5-4**. Włączanie obsługi platformy Docker w istniejącego projektu programu Visual Studio 2017 r.
+**Rysunek 5-4**. Włączanie obsługi platformy Docker w istniejącym projekcie programu Visual Studio 2017
 
-Ta akcja na projekt (np. aplikacji sieci Web ASP.NET lub usługi sieci Web interfejsu API) dodaje plik Dockerfile do projektu z odpowiednią konfiguracją. Dodaje plik docker-compose.yml dla całego rozwiązania. W poniższych sekcjach opisano informacje, który jest przesyłany do każdego z tych plików. Visual Studio można nie tę pracę za Ciebie, ale warto poznać, co prowadzi do plik Dockerfile.
+Ta akcja w projekcie (np. aplikacji sieci Web platformy ASP.NET lub usługi interfejsu API sieci Web) dodaje plik Dockerfile do projektu za pomocą wymaganej konfiguracji. Dodaje także plik docker-compose.yml dla całego rozwiązania. W poniższych sekcjach opisano informacje, które przechodzi do każdego z tych plików. Program Visual Studio można wykonać to zadanie dla Ciebie, ale warto zrozumieć, co jest umieszczane w pliku Dockerfile.
 
-### <a name="option-a-creating-a-project-using-an-existing-official-net-docker-image"></a>Opcja A: tworzenia projektu przy użyciu istniejącego obrazu oficjalnego .NET Docker
+### <a name="option-a-creating-a-project-using-an-existing-official-net-docker-image"></a>Opcja A: Tworzenie projektu przy użyciu istniejących oficjalnego obrazu Docker w programie .NET
 
-Zazwyczaj Tworzenie niestandardowego obrazu z kontenera na podstawowy obraz można uzyskać z oficjalnego repozytorium pod adresem [Centrum Docker](https://hub.docker.com/) rejestru. To dokładnie co się stanie w tle po włączeniu obsługi Docker w programie Visual Studio. Twoje plik Dockerfile użyje istniejącego obrazu aspnetcore.
+Zazwyczaj Tworzenie niestandardowego obrazu kontenera na podstawie obrazu podstawowego można uzyskać z oficjalnego repozytorium na [usługi Docker Hub](https://hub.docker.com/) rejestru. To jest dokładnie co się dzieje w tle po włączeniu obsługi platformy Docker w programie Visual Studio. Z pliku Dockerfile użyje istniejący obraz aspnetcore.
 
-Wcześniej wyjaśniono firma Microsoft, które obrazy usługi Docker i repozytoriów, można użyć, w zależności od framework i wybrano systemu operacyjnego. Na przykład, jeśli chcesz używać platformy ASP.NET Core (Linux lub Windows), obrazu do użycia firma microsoft / aspnetcore:2.0. W związku z tym wystarczy określić podstawową obrazów Docker będzie używany przez Twoje kontenera. Można to zrobić przez dodanie firmy microsoft / aspnetcore:2.0 do Twojej plik Dockerfile. To zostanie automatycznie wykonane przez program Visual Studio, ale gdyby zaktualizuj wersję, zaktualizuj tę wartość.
+Wcześniej opisano firma Microsoft, które obrazów platformy Docker i repozytoriów, można użyć w zależności od framework i systemu operacyjnego zostały wybrane. Na przykład, jeśli chcesz użyć programu ASP.NET Core (Linux lub Windows), obrazu do wykorzystania jest microsoft / aspnetcore:2.0. W związku z tym wystarczy określić, jakie podstawowego obrazu platformy Docker, który będzie używany dla kontenera. Można to zrobić, dodając firmy microsoft / aspnetcore:2.0 do Twojego pliku Dockerfile. To zostanie przeprowadzona przez program Visual Studio, ale w przypadku zaktualizowania wersji zaktualizuj tę wartość.
 
-Użycie oficjalnego repozytorium obrazów .NET z Centrum Docker z numerem wersji gwarantuje, że te same funkcje języka są dostępne na wszystkich komputerach (w tym programowania, testowania i produkcji).
+Oficjalna repozytorium obrazów platformy .NET z usługi Docker Hub przy użyciu numeru wersji zapewnia, że te same funkcje języka są dostępne na wszystkich komputerach (w tym programowanie, testowanie i produkcja).
 
-W poniższym przykładzie przedstawiono przykładowy plik Dockerfile kontenera platformy ASP.NET Core.
+Poniższy kod przedstawia przykładowy plik Dockerfile dla kontenera platformy ASP.NET Core.
 
 ```Dockerfile
 FROM microsoft/aspnetcore:2.0
@@ -115,23 +115,23 @@ COPY ${source:-obj/Docker/publish} .
 ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 ```
 
-W takim przypadku kontenera jest oparty na wersji 2.0 oficjalnego obrazu platformy ASP.NET Core Docker (wielu arch dla systemów Linux i Windows). Jest to ustawienie `FROM microsoft/aspnetcore:2.0`. (Dodatkowe szczegóły dotyczące tego obrazu podstawowego, zobacz [platformy ASP.NET Core Docker obrazu](https://hub.docker.com/r/microsoft/aspnetcore/) strony i [.NET Core Docker obrazu](https://hub.docker.com/r/microsoft/dotnet/) strony.) W plik Dockerfile należy także poinstruować Docker nasłuchiwanie na porcie TCP, które będą używane w czasie wykonywania (w tym przypadku portu 80, zgodnie z konfiguracją z ustawieniem UWIDACZNIANIE).
+W tym przypadku kontener zależy od wersji 2.0 oficjalny obraz platformy Docker programu ASP.NET Core (wielu arch dla systemów Linux i Windows). Jest to ustawienie `FROM microsoft/aspnetcore:2.0`. (Aby uzyskać więcej informacji na temat tego obrazu podstawowego, zobacz [obrazu platformy Docker programu ASP.NET Core](https://hub.docker.com/r/microsoft/aspnetcore/) strony i [obrazu platformy Docker programu .NET Core](https://hub.docker.com/r/microsoft/dotnet/) strony.) W pliku Dockerfile trzeba będzie również poinstruować platformy Docker do nasłuchiwania na porcie TCP, używane w czasie wykonywania (w tym przypadku port 80, zgodnie z konfiguracją z ustawieniem UDOSTĘPNIAJĄ).
 
-Można określić dodatkowe ustawienia konfiguracji w plik Dockerfile, w zależności od języka i framework, którego używasz. Na przykład wiersz punktu wejścia z \["dotnet", "MySingleContainerWebApp.dll"\] informuje Docker na uruchamianie aplikacji .NET Core. Jeśli korzystasz z zestawu SDK i .NET Core interfejsu wiersza polecenia (dotnet interfejsu wiersza polecenia) aby skompilować i uruchomić aplikację .NET, to ustawienie będzie się różnić. Mierzenie jest, że wiersza punktu wejścia i inne ustawienia zostaną inne w zależności od języka i platformy wybrane dla aplikacji.
+Można określić dodatkowe ustawienia konfiguracji w pliku Dockerfile, w zależności od języka i struktury, którego używasz. Na przykład wiersz punktu wejścia z \["dotnet", "MySingleContainerWebApp.dll"\] platformy docker, aby uruchomić aplikację .NET Core. Jeśli używasz zestawu SDK i .NET Core interfejsu wiersza polecenia (interfejsu wiersza polecenia platformy dotnet) aby skompilować i uruchomić aplikację .NET, to ustawienie będzie inny. Mierzenie to, że wiersz punktu wejścia i inne ustawienia będą różnić w zależności od języka i platformy, wybrany dla aplikacji.
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Tworzenie aplikacji programu .NET Core obrazy usługi Docker**
+-   **Tworzenie obrazów platformy Docker dla aplikacji .NET Core**
     [*https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images*](../../../core/docker/building-net-docker-images.md)
 
--   **Utwórz własny obraz**. W oficjalnej dokumentacji Docker.
+-   **Tworzenie własnego obrazu**. W oficjalnej dokumentacji platformy Docker.
     [*https://docs.docker.com/engine/tutorials/dockerimages/*](https://docs.docker.com/engine/tutorials/dockerimages/)
 
-### <a name="using-multi-arch-image-repositories"></a>Przy użyciu repozytoria wielu architektury obrazu
+### <a name="using-multi-arch-image-repositories"></a>Przy użyciu repozytoriów wielu architektury obrazu
 
-Pojedynczy repozytorium może zawierać wariantów platform, takich jak obraz systemu Linux i obrazu systemu Windows. Ta funkcja umożliwia dostawcom, takich jak Microsoft (obraz podstawowy kreatory) tworzyć jednego repozytorium, aby pokrywał się wiele platform (która jest systemu Linux i Windows). Na przykład [microsoft/dotnet](https://hub.docker.com/r/microsoft/aspnetcore/) repozytorium, które są dostępne w rejestrze Centrum Docker zapewnia obsługę systemu Linux i Windows Nano Server przy użyciu tej samej nazwie repozytorium.
+Jednym repozytorium może zawierać warianty platformy, takich jak obraz systemu Linux i Windows obraz. Ta funkcja umożliwia dostawców, takich jak Microsoft (obraz podstawowy dla twórców) do utworzenia pojedynczego repozytorium na pokrycie wiele platform (dotyczy to systemów Linux i Windows). Na przykład [microsoft/dotnet](https://hub.docker.com/r/microsoft/aspnetcore/) repozytorium, które są dostępne w rejestrze usługi Docker Hub zapewnia obsługę dla systemów Linux i Windows Nano Server przy użyciu tej samej nazwy repozytorium.
 
-Jeśli określisz tag, przeznaczonych dla platformy, która jest jawne, takich jak w następujących przypadkach:
+Jeśli określony tag, przeznaczonych dla platformy, która jest jawne, takich jak w następujących przypadkach:
 
 -   **microsoft/aspnetcore:2.0.0-jessie**
 
@@ -141,64 +141,64 @@ Jeśli określisz tag, przeznaczonych dla platformy, która jest jawne, takich j
 
         .NET Core 2.0 runtime-only on Windows Nano Server
 
-Ale i jest nowy od połowy 2017, jeśli określisz tej samej nazwie obrazu, nawet z tym samym tagiem, nowych obrazów wielu architektury (na przykład aspnetcore obrazu, który obsługuje wielu arch) będą używać wersji systemu Linux lub Windows, w zależności od platformy Docker systemu operacyjnego hosta wdrażasz , jak pokazano w poniższym przykładzie:
+Jednak i to jest nowy od połowy 2017 r. w przypadku określenia taką samą nazwę obrazu, nawet w przypadku tego samego tagu, nowe obrazy wielu architektury (na przykład obraz aspnetcore, która obsługuje wiele arch) będą używać wersji systemu Linux lub Windows, w zależności od hosta platformy Docker systemu operacyjnego, który jest wdrażany , jak pokazano w poniższym przykładzie:
 
 -   **microsoft/aspnetcore:2.0**
 
         Multi-arch: .NET Core 2.0 runtime-only on Linux or Windows Nano Server depending on the Docker host OS
 
-Dzięki temu podczas pobierania obrazu z hostem z systemem Windows, do jego wariant systemu Windows będzie pobierać i ściąganie taką samą nazwę obrazu z hosta systemu Linux będzie pobierać wariant systemu Linux.
+Dzięki temu podczas ściągnąć obraz z hosta Windows go każda będzie ściągać wariant Windows i ściągania taką samą nazwę obrazu na hoście z systemem Linux każda będzie ściągać wariantów systemu Linux.
 
 ### <a name="option-b-creating-your-base-image-from-scratch"></a>Opcja B: tworzenia obrazu podstawowego od podstaw
 
-Można utworzyć własny obraz podstawowy Docker od podstaw. W tym scenariuszu nie jest zalecane dla kogoś, kto jest począwszy Docker, ale jeśli chcesz ustawić określone bity obrazu podstawowego, możesz to zrobić.
+Można utworzyć własny obraz podstawowy platformy Docker, od podstaw. W tym scenariuszu nie jest zalecane w przypadku osobą, która jest uruchamiana przy użyciu rozwiązania Docker, ale jeśli chcesz ustawić bity określonego obrazu podstawowego, możesz to zrobić.
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Wiele architektury .NET Core obrazów**.
+-   **Wielu architektury obrazów platformy .NET Core**.
 https://github.com/dotnet/announcements/issues/14 
--   **Tworzenie obrazu podstawowego**. Oficjalna dokumentacja Docker.
+-   **Tworzenie obrazu podstawowego**. Oficjalna dokumentacja platformy Docker.
     [*https://docs.docker.com/engine/userguide/eng-image/baseimages/*](https://docs.docker.com/engine/userguide/eng-image/baseimages/)
 
 ![](./media/image7.png)
 
-## <a name="step-3-create-your-custom-docker-images-and-embed-your-application-or-service-in-them"></a>Krok 3. Utwórz niestandardowe obrazy usługi Docker i osadzić w nich usługi lub aplikacji
+## <a name="step-3-create-your-custom-docker-images-and-embed-your-application-or-service-in-them"></a>Krok 3. Tworzenie niestandardowych obrazów platformy Docker i osadzanie aplikacji lub usługi w nich
 
-Dla każdej usługi w aplikacji należy utworzyć obraz pokrewne. Jeśli aplikacja składa się z jednej usługi lub aplikacji sieci web, wystarczy jeden obraz.
+Dla każdej usługi w aplikacji należy utworzyć obraz powiązane. Jeśli aplikacja składa się z jednej usługi lub aplikacji sieci web, wystarczy pojedynczego obrazu.
 
-Należy pamiętać, że obrazy usługi Docker są tworzone automatycznie dla Ciebie w programie Visual Studio. Poniższe kroki są tylko potrzebne do edytora/CLI przepływu pracy i wyjaśniono dla jasności informacji na temat efektów poniżej.
+Należy pamiętać, że obrazy platformy Docker są tworzone automatycznie dla Ciebie w programie Visual Studio. Poniższe kroki są tylko potrzebne dla przepływu pracy edytorze/interfejsu wiersza polecenia i wyjaśnione w celu uściślenia, o co się stanie, poniżej.
 
-Deweloper, musisz opracowanie i przetestowanie lokalnie, dopóki wypychanych ukończone funkcji lub zmień system kontroli źródła (na przykład, aby GitHub). Oznacza to, że trzeba tworzyć obrazy Docker i wdrażanie kontenerów do rozwiązania Docker hosta lokalnego (Windows lub Linux VM) i uruchom, testowanie i debugowanie względem tych kontenerach lokalnego.
+Jako deweloper musisz opracowywać i testować lokalnie, przed wypchnięciem ukończonych funkcji lub zmień wartość na system kontroli źródła (na przykład w usłudze GitHub). Oznacza to, że trzeba tworzenie obrazów platformy Docker i wdrażanie kontenerów do lokalnego hosta platformy Docker (Windows lub maszyny Wirtualnej systemu Linux) i uruchamianie, testowanie i debugowanie względem tych kontenerów lokalnego.
 
-Aby utworzyć obraz niestandardowy w środowisku lokalnym przy użyciu interfejsu wiersza polecenia Docker i Twoje plik Dockerfile, służy polecenie docker kompilacji, tak jak rysunek 5-5.
+Aby utworzyć niestandardowy obraz w środowisku lokalnym przy użyciu interfejsu wiersza polecenia platformy Docker i z pliku Dockerfile, można użyć polecenia kompilacji platformy docker, tak jak rysunek 5-5.
 
 ![](./media/image8.png)
 
-**Rysunek 5-5**. Tworzenie niestandardowego obrazu Docker
+**Rysunek 5-5**. Tworzenie niestandardowego obrazu platformy Docker
 
-Opcjonalnie zamiast bezpośredniego uruchamiania kompilacji docker z folderu projektu, najpierw mogą generować folderem można wdrożyć za pomocą wymaganych bibliotek .NET i pliki binarne, uruchamiając dotnet opublikować, a następnie użyj polecenia docker kompilacji.
+Opcjonalnie zamiast bezpośredniego uruchamiania kompilacji platformy docker z folderu projektu, możesz najpierw wygenerować folderem do wdrożenia przy użyciu wymaganych bibliotek .NET i pliki binarne, uruchamiając polecenia dotnet publikowania, a następnie użyj polecenia kompilacji platformy docker.
 
-Spowoduje to utworzenie obrazu Docker o nazwie cesardl/netcore-webapi mikrousługi-docker: pierwszy. W takim przypadku: najpierw jest znacznik reprezentujący określonej wersji. Można Powtórz ten krok dla każdego niestandardowego obrazu potrzebnych do tworzenia aplikacji składa Docker.
+Spowoduje to utworzenie obrazu platformy Docker przy użyciu nazwy cesardl/netcore-webapi mikrousługi — docker: pierwszy. W tym przypadku: pierwszy to znacznik reprezentujący określonej wersji. Za Powtórz ten krok dla każdego obrazu niestandardowego, potrzebne do tworzenia aplikacji platformy Docker złożone.
 
-Jeśli aplikacja składa się z wielu kontenerów (to znaczy jest aplikacji kontenera wielu), można również użyć rozwiązania docker compose w górę — polecenie kompilacji do kompilacji wszystkich powiązanych obrazy za pomocą jednego polecenia przy użyciu metadanych w pokrewny pliki docker-compose.yml.
+Jeśli aplikacja składa się z wielu kontenerów (czyli jest aplikację obsługującą wiele kontenerów), można również użyć narzędzia docker compose się — polecenie kompilacji, aby skompilować wszystkie obrazy powiązane z jednym poleceniem, posługując się metadanymi ujawnione w powiązane pliki docker-compose.yml.
 
-Można znaleźć istniejących obrazów w lokalnym repozytorium przy użyciu rozwiązania docker polecenia obrazów, jak pokazano w rysunek 5 – 6.
+Można znaleźć istniejących obrazów w repozytorium lokalnym za pomocą platformy docker polecenie obrazów, jak pokazano w rysunek 5 – 6.
 
 ![](./media/image9.png)
 
-**Rysunek 5-6.** Wyświetlanie istniejących obrazów za pomocą polecenia docker obrazów
+**Rysunek 5 – 6.** Wyświetlanie istniejących obrazów za pomocą polecenia obrazów platformy docker
 
-### <a name="creating-docker-images-with-visual-studio"></a>Tworzenie obrazów Docker z programem Visual Studio
+### <a name="creating-docker-images-with-visual-studio"></a>Tworzenie obrazów platformy Docker za pomocą programu Visual Studio
 
-Używając programu Visual Studio do tworzenia projektu z obsługą Docker, nie jawnie utworzysz obrazu. Zamiast tego obrazu jest tworzony automatycznie podczas naciśnij klawisz F5 i uruchom dockerized aplikacji lub usługi. Ten krok jest automatycznie w programie Visual Studio i nie będzie on być widoczny, ale należy pamiętać, że wiesz, co się dzieje na dole.
+Gdy używasz programu Visual Studio, aby utworzyć projekt z obsługą platformy Docker, możesz nie jawnie utworzyć obrazu. Zamiast tego obrazu jest tworzony automatycznie, podczas naciśnij klawisz F5, a Uruchom dockerized aplikacji lub usługi. Ten krok jest automatycznie w programie Visual Studio i nie będzie mógł przeglądać praca, ale jest ważne, że wiesz, co się dzieje na dole.
 
 ![](./media/image10.png)
 
-## <a name="step-4-define-your-services-in-docker-composeyml-when-building-a-multi-container-docker-application"></a>Krok 4. Zdefiniuj usług w rozwiązaniu docker-compose.yml podczas kompilowania aplikacji usługi kontenera Docker
+## <a name="step-4-define-your-services-in-docker-composeyml-when-building-a-multi-container-docker-application"></a>Krok 4. Zdefiniuj swoje usługi w docker-compose.yml, podczas kompilowania aplikacji platformy Docker z wieloma kontenerami
 
-[Docker-compose.yml](https://docs.docker.com/compose/compose-file/) pliku pozwala zdefiniować zestaw usług wdrażanych jako aplikacja składa z poleceń wdrażania.
+[Docker-compose.yml](https://docs.docker.com/compose/compose-file/) pliku pozwala zdefiniować zestaw powiązanych usług, który można wdrożyć jako złożone aplikacji za pomocą poleceń wdrażania.
 
-Aby użyć plik docker-compose.yml, należy utworzyć plik w sieci głównego lub głównego folderu rozwiązania z zawartością, podobnie jak w poniższym przykładzie:
+Aby użyć pliku docker-compose.yml, musisz utworzyć głównego pliku lub folderu głównego rozwiązania z zawartością, podobnie jak w poniższym przykładzie:
 
 ```yml
 version: '3'
@@ -246,49 +246,49 @@ services:
 
 ```
 
-Należy pamiętać, że ten plik docker-compose.yml wersji uproszczonym i scalone. Zawiera dane konfiguracji statycznych dla każdego kontenera (na przykład Nazwa niestandardowego obrazu), zawsze ma to zastosowanie, oraz informacje o konfiguracji, który może być zależna od środowiska wdrażania, takie jak parametry połączenia. W kolejnych sekcjach dowiesz się, jak można podzielić konfiguracji docker-compose.yml w wielu rozwiązania docker compose plików i Zastąp wartości w zależności od typu środowiska i wykonywanie (debugowanie czy wydanie).
+Należy pamiętać, że ten plik docker-compose.yml wersji uproszczony i scalone. Zawiera on statyczne dane konfiguracji dla każdego kontenera (na przykład nazwa obrazu niestandardowego), która zawsze ma to zastosowanie, a także informacje o konfiguracji, które mogą być zależne od środowiska wdrażania, takie jak parametry połączenia. W kolejnych sekcjach dowiesz się, jak można podzielić na wiele konfiguracji platformy docker-compose.yml docker-compose plików i zastąpienie wartości w zależności od typu środowiska i wykonywanie (debugowanie lub wydanie).
 
-Przykładowy plik docker-compose.yml definiuje pięć usługi: Usługa webmvc (aplikacja sieci web), dwa mikrousług (catalog.api i ordering.api) i jednego danych źródła kontenera, sql.data, oparte na serwerze SQL dla systemu Linux uruchomiony jako kontener. Każda usługa jest wdrażana jako kontener, więc obrazu Docker jest wymagane dla każdego.
+Przykład pliku docker-compose.yml definiuje czterema usługami: webmvc usługi (aplikacja sieci web), dwa mikrousługi (catalog.api i ordering.api) i jeden źródłowy kontener danych, sql.data, oparte na programie SQL Server dla uruchomionego jako kontener systemu Linux. Każda usługa jest wdrażana jako kontener, dzięki czemu obraz platformy Docker jest wymagana dla każdego.
 
-Plik docker-compose.yml określa nie tylko kontenery, które są używane, ale ich indywidualnie konfiguracji. Na przykład webmvc kontenera definicję w pliku .yml:
+Plik docker-compose.yml określa nie tylko jakie kontenery są używane, ale ich indywidualnie konfiguracji. Na przykład webmvc definicja kontenera w plik yml:
 
--   Używa wbudowanych eshop / sieci web: r obrazu. Jednak można również skonfigurować obraz, który ma zostać utworzony jako część rozwiązania docker compose wykonywania z dodatkową konfigurację oparte na kompilację: sekcji w pliku docker-compose.
+-   Używa wstępnie skompilowanych eshop / sieci web: latest obrazu. Jednakże można także skonfigurować obraz, który ma zostać utworzony jako część narzędzia docker compose wykonywania bez dodatkowej konfiguracji oparte na kompilację: sekcji w pliku docker-compose.
 
--   Inicjuje dwie zmienne środowiskowe (adres URL katalogu i OrderingUrl).
+-   Inicjuje dwóch zmiennych środowiskowych (adres URL katalogu i OrderingUrl).
 
--   Przekazuje dostępnego portu 80 kontenera do portu zewnętrznego 80 na komputerze hosta.
+-   Przekazuje narażonych port 80 w kontenerze na zewnętrzny port 80 na maszynie hosta.
 
--   Łączy aplikacji sieci web z katalogu i kolejność usługi o zależy od\_na ustawienie. Powoduje to, że usługa poczekać, aż te usługi są uruchomione.
+-   Linki w aplikacji sieci web do wykazu i kolejność usłudze zależy od\_ustawienia. Powoduje to, że usługa poczekaj, aż te usługi są uruchomione.
 
-Firma Microsoft będzie ponownie plik docker-compose.yml w dalszej części, gdy firma Microsoft opisano sposobu wdrażania wielu kontenera aplikacji i mikrousług.
+Firma Microsoft będzie ponownie plik docker-compose.yml w dalszej części tego tematu, gdy opisujemy sposób implementacji aplikacji obsługującej wiele kontenerów i mikrousług.
 
-### <a name="working-with-docker-composeyml-in-visual-studio-2017"></a>Praca z docker-compose.yml w programie Visual Studio 2017 r.
+### <a name="working-with-docker-composeyml-in-visual-studio-2017"></a>Praca z docker-compose.yml w programie Visual Studio 2017
 
-Po dodaniu obsługi rozwiązania Docker do projektu usługi w rozwiązaniu Visual Studio, jak pokazano w rysunek 5-7, Visual Studio dodaje plik Dockerfile do projektu i dodaje sekcji usługi (projekt) w rozwiązaniu docker-compose.yml plików. To łatwy sposób redagowania rozwiązania wielu kontenera. Można następnie otwórz plik docker-compose.yml i zaktualizować je z dodatkowych funkcji.
+Po dodaniu obsługę rozwiązań platformy Docker do projektu usługi w rozwiązaniu Visual Studio, jak pokazano w rysunek 5 – 7, program Visual Studio dodaje plik Dockerfile do projektu, a następnie dodaje sekcję service (projekt) w Twoim rozwiązaniu przy użyciu plików docker-compose.yml. To prosty sposób rozpocząć tworzenie rozwiązania wielu kontenerów. Następnie można otworzyć pliki docker-compose.yml i zaktualizować je z dodatkowymi funkcjami.
 
 ![](./media/image6.png)
 
-**Rysunek 5-7**. Dodawanie obsługi Docker w Visual Studio 2017, klikając prawym przyciskiem myszy projekt platformy ASP.NET Core
+**Rysunek 5 – 7**. Dodanie obsługi platformy Docker w programie Visual Studio 2017, klikając prawym przyciskiem myszy projekt ASP.NET Core
 
-Dodawanie obsługi Docker w programie Visual Studio nie tylko dodaje plik Dockerfile do projektu, ale dodaje informacje o konfiguracji do kilku plików globalne docker-compose.yml ustawionych na poziomie rozwiązania.
+Dodawanie obsługi platformy Docker w programie Visual Studio nie tylko dodaje plik Dockerfile do projektu, ale dodaje informacje o konfiguracji na kilka plików docker-compose.yml globalne, które są ustawione na poziomie rozwiązania.
 
-Po dodaniu obsługi Docker do rozwiązania w programie Visual Studio widoczne będzie także nowy węzeł (w pliku projektu docker compose.dcproj) w Eksploratorze rozwiązań, zawierający pliki dodane docker-compose.yml, jak pokazano na rysunku 5-8.
+Po dodaniu obsługi programu Docker do rozwiązania w programie Visual Studio, pojawi się także nowy węzeł (w pliku projektu platformy docker compose.dcproj) w Eksploratorze rozwiązań, który zawiera pliki docker-compose.yml dodano, jak pokazano w rysunek 5 – 8.
 
 ![](./media/image11.PNG)
 
-**Rysunek 5 – 8**. **Rozwiązania docker compose** węzła drzewa dodane w Eksploratorze rozwiązań 2017 r w usłudze Visual Studio
+**Rysunek 5 – 8**. **Narzędzia docker compose** węzła drzewa dodane w Eksploratorze rozwiązań 2017 r. w usłudze Visual Studio
 
-Można wdrożyć aplikacji usługi kontenera przy użyciu pliku pojedynczego docker-compose.yml przy użyciu rozwiązania docker compose zapasowej polecenia. Jednak program Visual Studio dodaje grupę z nich, można zastąpić wartości w zależności od środowiska (Programowanie i produkcja) i wykonywania typu (wersja i debugowania). W kolejnych sekcjach opisano tej możliwości.
+Można wdrożyć aplikację obsługującą wiele kontenerów za pomocą pliku docker-compose.yml pojedynczego przy użyciu narzędzia docker compose się polecenia. Jednak programu Visual Studio dodaje grupę z nich, dzięki czemu można zastąpić wartości w zależności od środowiska (rozwoju i produkcji) i wykonywania typu (wersja w stosunku do debugowania). Ta funkcja zostaną wyjaśnione w kolejnych sekcjach.
 
 ![](./media/image12.png)
 
-## <a name="step-5-build-and-run-your-docker-application"></a>Krok 5. Tworzenie i uruchamianie aplikacji platformy Docker
+## <a name="step-5-build-and-run-your-docker-application"></a>Krok 5. Kompilowanie i uruchamianie aplikacji platformy Docker
 
-Jeśli aplikacja ma tylko jeden kontener, można uruchomić go przez wdrożenie jej do hosta Docker (maszyny Wirtualnej lub serwerów fizycznych). Jednak jeśli aplikacja zawiera wielu usług, możesz go wdrożyć jako składa aplikacji, za pomocą jednego polecenia interfejsu wiersza polecenia (docker składać się), lub z programem Visual Studio, która będzie używać tego polecenia w obszarze obejmuje. Przyjrzyjmy się różne opcje.
+Jeśli aplikacja ma tylko jeden kontener, możesz uruchomić go przez wdrożenie jej do hosta platformy Docker (maszyny Wirtualnej lub serwera fizycznego). Jednak jeśli aplikacja zawiera wiele usług, możesz go wdrożyć jako złożone aplikacji, za pomocą jednego polecenia interfejsu wiersza polecenia (docker-compose się), lub za pomocą programu Visual Studio, które korzystają z tego polecenia w sposób niewidoczny. Przyjrzyjmy się różne opcje.
 
-### <a name="option-a-running-a-single-container-with-docker-cli"></a>Opcja A: uruchomiony jeden kontener z interfejsu wiersza polecenia Docker
+### <a name="option-a-running-a-single-container-with-docker-cli"></a>Opcja A: uruchomiony kontener jednego z interfejsem wiersza polecenia platformy Docker
 
-Kontener Docker przy użyciu rozwiązania docker, uruchom polecenie, tak jak rysunek 5 – 9, można uruchomić:
+Można uruchomić kontener platformy Docker za pomocą platformy docker, uruchom polecenie, tak jak rysunek 5-9:
 
 ```console
   docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
@@ -296,108 +296,108 @@ Kontener Docker przy użyciu rozwiązania docker, uruchom polecenie, tak jak rys
 
 ![](./media/image13.png)
 
-**Rysunek 5 – 9**. Uruchomione w kontenerze Docker przy użyciu rozwiązania docker, uruchom polecenie
+**Rysunek 5-9**. Uruchamianie kontenera platformy Docker za pomocą platformy docker, uruchom polecenie
 
-W takim przypadku polecenie wiąże wewnętrzny port 5000 kontenera do portu 80 komputerze hosta. Oznacza to, że host jest nasłuchiwanie na porcie 80 i przekazywania ich do portu 5000 w kontenerze.
+W takim przypadku polecenie wiąże wewnętrznego portu 5000 kontenera do portu 80 maszyny hosta. Oznacza to, że host jest nasłuchuje na porcie 80 i przekazywania do portu 5000 kontenera.
 
-### <a name="option-b-running-a-multi-container-application"></a>Opcja B: uruchamiania wielu kontenera aplikacji
+### <a name="option-b-running-a-multi-container-application"></a>Opcja B: uruchamianie aplikacji z wieloma kontenerami
 
-W większości przypadków przedsiębiorstwa aplikacji Docker będzie składać się z wieloma usługami, co oznacza, że należy uruchomić aplikacji kontenera usługi, jak pokazano na rysunku 5-10.
+W większości przypadków enterprise aplikację platformy Docker będzie składać się z wielu usług, co oznacza, że należy uruchomić aplikację obsługującą wiele kontenerów, jak pokazano na rysunku 5-10.
 
 ![](./media/image14.png)
 
-**Rysunek 5 – 10**. Maszyna wirtualna o wdrożone kontenery Docker
+**Rysunek 5 – 10**. Maszyny Wirtualnej przy użyciu kontenerów Docker wdrożonych
 
-#### <a name="running-a-multi-container-application-with-the-docker-cli"></a>Aplikacja usługi kontenera uruchamiana za pomocą interfejsu wiersza polecenia Docker
+#### <a name="running-a-multi-container-application-with-the-docker-cli"></a>Uruchamianie aplikacji z wieloma kontenerami za pomocą interfejsu wiersza polecenia platformy Docker
 
-Aby uruchomić aplikacji usługi kontenera przy użyciu interfejsu wiersza polecenia Docker, należy uruchomić docker-tworzą zapasowej polecenia. Tego polecenia używa docker-compose.yml pliku masz na poziomie rozwiązania, aby wdrożyć aplikację usługi kontenera. Rysunek 5-11 pokazuje wyniki podczas uruchamiania polecenia w katalogu głównym projektu, który zawiera plik docker-compose.yml.
+Aby uruchomić aplikację obsługującą wiele kontenerów za pomocą interfejsu wiersza polecenia platformy Docker, możesz uruchomić platformy docker-compose się polecenia. Tego polecenia używa docker-compose.yml pliku masz na poziomie rozwiązania, aby wdrożyć aplikację obsługującą wiele kontenerów. Rysunek 5 – 11 przedstawia wyniki przy uruchamianiu polecenia z katalogu głównego projektu, który zawiera plik docker-compose.yml.
 
 ![](./media/image15.png)
 
-**Rysunek 5-11**. Przykład wyników podczas uruchamiania rozwiązania docker compose zapasowej polecenia
+**Rysunek 5 – 11**. Przykład powoduje podczas uruchamiania narzędzia docker compose się polecenia
 
-Po docker-tworzą zapasowej uruchamia polecenia, aplikacji i jej powiązane kontenery są wdrażane na hoście Docker, zgodnie z opisami w reprezentacji maszyny Wirtualnej w rysunek 5 – 10.
+Po platformy docker-compose się polecenia uruchomienia, aplikacji i jej powiązane kontenery są wdrażane w sieci hosta platformy Docker, zgodnie z opisami w reprezentacji maszyn wirtualnych na rysunku 5-10.
 
-#### <a name="running-and-debugging-a-multi-container-application-with-visual-studio"></a>Uruchomiona i debugowanie aplikacji kontenera wielu z programem Visual Studio 
+#### <a name="running-and-debugging-a-multi-container-application-with-visual-studio"></a>Uruchamianie i debugowanie aplikacji z wieloma kontenerami za pomocą programu Visual Studio 
 
-Nie można pobrać prostsze uruchamiania aplikacji usługi kontenera przy użyciu programu Visual Studio 2017 r. Nie można jedynie uruchomić aplikacji kontenera usługi, ale można debugować jego kontenerów bezpośrednio z programu Visual Studio przez ustawienie regularne punktów przerwania.
+Uruchamianie aplikacji z wieloma kontenerami za pomocą programu Visual Studio 2017 nie można pobrać prostsze. Nie można tylko uruchamiać aplikację obsługującą wiele kontenerów, ale będą mogli debugować jego kontenerów bezpośrednio z programu Visual Studio, ustawiając regularne punkty przerwania.
 
-Jak wspomniano wcześniej, podczas każdego dodawania obsługi rozwiązania Docker do projektu w ramach rozwiązania, projektu jest skonfigurowany w pliku globalnego (poziom rozwiązania) docker-compose.yml, który można uruchomić ani debugować jednocześnie całego rozwiązania. Visual Studio będzie uruchomić jeden kontener dla każdego projektu, który ma włączoną obsługą rozwiązania Docker i wykonania wszystkich czynności wewnętrzny (dotnet opublikować, kompilacji docker itp.).
+Jak wspomniano wcześniej, podczas dodawania każdego kolejnego obsługę rozwiązań platformy Docker do projektu w ramach rozwiązania, projektu jest skonfigurowany w pliku globalnego docker-compose.yml (poziomie rozwiązania), który umożliwia uruchamiania lub debugowania całego rozwiązania tylko raz. Program Visual Studio uruchomi jeden kontener dla każdego projektu, który ma włączoną obsługę rozwiązań platformy Docker i wykonaj wszystkie kroki wewnętrznego dla Ciebie (dotnet publikowania, docker kompilacji itd.).
 
-Należy koniecznie zwrócić uwagę, jak pokazano na rysunku 5-12, w programie Visual Studio 2017 rzeczy jest dodatkowe **Docker** polecenia dla akcji klucza F5. Ta opcja pozwala uruchomić ani debugować aplikacji kontenera aplikacji przez uruchomienie wszystkich kontenerów, które są zdefiniowane w plikach docker-compose.yml na poziomie rozwiązania. Możliwość debugowania kontenera wielu rozwiązań oznacza, że można ustawić kilka punktów przerwania, każdy punkt przerwania w innym projekcie (kontener), a podczas debugowania w programie Visual Studio zostanie zatrzymane w punktów przerwania zdefiniowany w różnych projektów i uruchomiona na różnych kontenerów.
+Istotną kwestią jest, jak pokazano na rysunku 5-12, w programie Visual Studio 2017 dodatkowego **Docker** polecenie, aby uzyskać kluczowe działania F5. Ta opcja pozwala uruchomić lub debugować aplikację obsługującą wiele kontenerów przez uruchomienie wszystkich kontenerów, które są zdefiniowane w plikach docker-compose.yml na poziomie rozwiązania. Możliwość debugowania rozwiązań do obsługi wielu kontenerów oznacza, że można ustawić kilka punktów przerwania, w każdym punkcie przerwania, które znajdują się w innym projekcie (kontenera), a podczas debugowania w programie Visual Studio przestanie w punktach przerwania, zdefiniowane w różnych projektach i uruchomiona na różnych kontenerów.
 
 ![](./media/image16.png)
 
-**Rysunek 5 – 12**. Uruchamianie aplikacji usługi kontenera w Visual Studio 2017 r.
+**Rysunek 5 – 12**. Uruchamianie aplikacji obsługującej wiele kontenerów w programie Visual Studio 2017
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Wdrażanie kontenera ASP.NET z hostem zdalnym Docker**
+-   **Wdrażanie kontenera platformy ASP.NET ha zdalnym hoście platformy Docker**
     [*https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker*](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
 
-### <a name="a-note-about-testing-and-deploying-with-orchestrators"></a>Uwagi dotyczące testowania i wdrażania z orchestrators
+### <a name="a-note-about-testing-and-deploying-with-orchestrators"></a>Uwaga dotycząca testowanie i wdrażanie przy użyciu koordynatorów
 
-Rozwiązania docker compose w górę i docker uruchomienie polecenia (lub systemem i debugowanie kontenerów w programie Visual Studio) są odpowiednie do testowania kontenery w środowisku projektowania. Jednak nie powinni używać tej metody, jeśli ma być przeznaczona dla klastrów Docker i orchestrators, takich jak Docker Swarm, Mesosphere DC/OS lub Kubernetes. Jeśli używasz klastra, takie jak [Docker Swarm tryb](https://docs.docker.com/engine/swarm/) (dostępne w CE Docker dla systemu Windows i Mac od wersji 1.12), należy wdrożyć i przetestować przy użyciu dodatkowych poleceń, takich jak [tworzenia usługi docker](https://docs.docker.com/engine/reference/commandline/service_create/) dla pojedynczy usługi. Jeśli wdrażana jest aplikacja składa się z kilku kontenery, użyj [rozwiązania docker compose pakietu](https://docs.docker.com/compose/reference/bundle/) i [docker wdrażanie myBundleFile](https://docs.docker.com/engine/reference/commandline/deploy/) do wdrożenia aplikacji złożony jako *stosu*. Aby uzyskać więcej informacji, zobacz w blogu [wprowadzenie eksperymentalne rozproszonych aplikacji pakiety](https://blog.docker.com/2016/06/docker-app-bundle/) w dokumentacji programu Docker. w witrynie Docker.
+Narzędzia docker compose się i platformy docker, Uruchom polecenia (lub uruchamianie i debugowanie kontenerów w programie Visual Studio) są odpowiednie do testowania kontenerów w środowisku programistycznym. Ale nie powinni używać tej metody, jeśli są przeznaczone dla klastrów platformy Docker i koordynatorów, takich jak Docker Swarm, Mesosphere DC/OS lub Kubernetes. Jeśli używasz klastra, takie jak [trybu Docker Swarm](https://docs.docker.com/engine/swarm/) (dostępne w Docker CE dla Windows i Mac od wersji 1.12), należy wdrożyć i przetestować przy użyciu dodatkowych poleceń, takich jak [tworzenia usługi docker](https://docs.docker.com/engine/reference/commandline/service_create/) dla jednej usługi. Jeśli wdrażasz aplikację składa się z kilku kontenerów, możesz użyć [pakietu Narzędzia docker compose](https://docs.docker.com/compose/reference/bundle/) i [myBundleFile wdrażana w rozwiązaniu docker](https://docs.docker.com/engine/reference/commandline/deploy/) wdrożyć złożone aplikację jako *stosu*. Aby uzyskać więcej informacji, zobacz wpis w blogu [Przedstawiamy eksperymentalne rozproszonych aplikacji pakiety](https://blog.docker.com/2016/06/docker-app-bundle/) w dokumentacji platformy Docker. w witrynie platformy Docker.
 
-Aby uzyskać [DC/OS](https://mesosphere.com/blog/2015/09/02/dcos-cli-command-line-tool-datacenter/) i [Kubernetes](http://kubernetes.io/docs/user-guide/deployments/) użyje inne wdrożenie poleceń i skryptów oraz.
+Dla [DC/OS](https://mesosphere.com/blog/2015/09/02/dcos-cli-command-line-tool-datacenter/) i [Kubernetes](http://kubernetes.io/docs/user-guide/deployments/) użyje wdrożenia różnych poleceń i skryptów w także.
 
 ![](./media/image17.png)
 
-## <a name="step-6-test-your-docker-application-using-your-local-docker-host"></a>Krok 6. Testowanie aplikacji Docker za pomocą lokalnego hosta Docker
+## <a name="step-6-test-your-docker-application-using-your-local-docker-host"></a>Krok 6. Testowanie aplikacji platformy Docker za pomocą lokalnego hosta platformy Docker
 
-Ten krok będą się różnić w zależności od czynności aplikacji. W prostą aplikację .NET Core w sieci Web, który jest wdrożony jako jeden kontener lub usługi uzyskać dostęp do usługi przez otwarcie przeglądarki na hoście Docker i przechodząc do tej lokacji, jak pokazano w rysunek 5-13. (Jeśli konfiguracji w plik Dockerfile mapuje kontenera do portu na hoście, który jest inny niż 80, m.in. port hosta w adresie URL).
+W tym kroku różnią się w zależności od tego, co robi aplikacji. W prostej aplikacji sieci Web platformy .NET Core, który jest wdrażany jako jeden kontener lub usługi uzyskać dostęp do usługi przez otwarcie przeglądarki na hoście platformy Docker i przechodząc do tej lokacji, jak pokazano w rysunek 5-13. (Jeśli konfiguracji w pliku Dockerfile kontenera jest mapowany na port na hoście, który jest inna niż 80, obejmuje port hosta w adresie URL).
 
 ![](./media/image18.png)
 
-**Rysunek 5-13**. Przykład testowania aplikacji Docker lokalnie za pomocą localhost
+**Rysunek 5-13**. Przykład testowanie aplikacji platformy Docker lokalnie przy użyciu localhost
 
-Jeśli nie wskazuje localhost Docker adres IP hosta (domyślnie, gdy przy użyciu rozwiązania Docker CE, powinien), aby poruszać się z usługą, użyj adresu IP karty sieciowej tego komputera.
+Adres IP hosta w przypadku platformy Docker nie wskazuje localhost (domyślnie, gdy za pomocą platformy Docker CE, powinien), aby przejść do usługi, użyj adresu IP karty sieciowej komputera.
 
-Należy pamiętać, że na przykład kontenerem omawiana tego adresu URL w przeglądarce korzysta z portu 80. Jednak wewnętrznie żądania nastąpi przekierowanie do portu 5000, ponieważ który był jak została wdrożona z docker, uruchom polecenie, zgodnie z objaśnieniem w poprzednim kroku.
+Należy pamiętać, że ten adres URL w przeglądarce korzysta z portu 80 na przykład kontenerem omawiana. Jednak wewnętrznie żądania nastąpi przekierowanie do portu 5000, ponieważ było jak miała być wdrożona przy użyciu rozwiązania docker, uruchom polecenie, zgodnie z opisem w poprzednim kroku.
 
-Może także przetestować aplikacji przy użyciu programu curl z terminalu, jak pokazano w rysunek 5-14. W przypadku instalacji Docker w systemie Windows Docker IP hosta są zawsze domyślnie 10.0.75.1 Oprócz rzeczywisty adres IP komputera.
+Możesz również przetestować aplikację przy użyciu programu curl w terminalu, jak pokazano w rysunek 5-14. W przypadku instalacji platformy Docker na Windows domyślny adres IP hosta platformy Docker jest zawsze 10.0.75.1 Oprócz rzeczywistego adresu IP tego komputera.
 
 ![](./media/image19.png)
 
-**Rysunek 5-14**. Przykład testowania aplikacji Docker lokalnie przy użyciu programu curl
+**Rysunek 5-14**. Przykład testowanie aplikacji platformy Docker lokalnie przy użyciu programu curl
 
-### <a name="testing-and-debugging-containers-with-visual-studio-2017"></a>Testowanie i debugowanie kontenerów wyposażonych w Visual Studio 2017 r.
+### <a name="testing-and-debugging-containers-with-visual-studio-2017"></a>Testowanie i debugowanie kontenerów przy użyciu programu Visual Studio 2017
 
-Podczas uruchamiania i debugowanie kontenerów wyposażonych w Visual Studio 2017 r, można debugować aplikacji .NET w podobny sposób jak w przypadku braku kontenerów.
+Gdy uruchamianie i debugowanie kontenerów za pomocą programu Visual Studio 2017, tak jak w przypadku braku pojemników można debugować aplikację platformy .NET w taki sam sposób.
 
 ### <a name="testing-and-debugging-without-visual-studio"></a>Testowanie i debugowanie bez programu Visual Studio
 
-Jeśli tworzysz podejście Edytor/CLI trudniej jest debugowanie kontenerów i można debugować generując śladów.
+Jeśli tworzysz przy użyciu podejścia edytora/CLI debugowanie kontenerów jest trudniejsze, i chcesz debugować, generując ślady.
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Debugowanie aplikacji w kontenerze Docker lokalnego**
+-   **Debugowanie aplikacji w lokalnym kontenerze Docker**
     [*https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh*](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
 
--   **Steve Lasker. Tworzenie, debugowanie, wdrażanie aplikacji platformy ASP.NET Core przy użyciu rozwiązania Docker.** Wideo.
+-   **Steve Lasker. Kompilowanie, debugowanie, wdrażanie aplikacji platformy ASP.NET Core przy użyciu platformy Docker.** Film wideo.
     [*https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115*](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115)
 
-## <a name="simplified-workflow-when-developing-containers-with-visual-studio"></a>Uproszczony przepływu pracy podczas opracowywania kontenery z programem Visual Studio
+## <a name="simplified-workflow-when-developing-containers-with-visual-studio"></a>Uproszczone przepływu pracy podczas tworzenia kontenerów przy użyciu programu Visual Studio
 
-W rezultacie przepływu pracy przy użyciu programu Visual Studio jest znacznie prostsze niż w przypadku użycia metody Edytor/interfejsu wiersza polecenia. Większość czynności wymagane przez Docker powiązane plik Dockerfile i docker-compose.yml pliki są ukryte lub uproszczony przez program Visual Studio, jak pokazano w rysunek 5 – 15.
+Skutecznie przepływ pracy przy użyciu programu Visual Studio jest znacznie prostsze niż w przypadku użycia podejście edytora/interfejsu wiersza polecenia. Większość czynności wymagane przez platformę Docker związane z pliku Dockerfile i pliki docker-compose.yml są ukryte lub uproszczone przez program Visual Studio, jak pokazano w rysunek 5 – 15.
 
 ![](./media/image20.png)
 
-**Rysunek 5 – 15**. Uproszczony przepływu pracy podczas opracowywania w programie Visual Studio
+**Rysunek 5 – 15**. Uproszczone przepływu pracy podczas tworzenia w programie Visual Studio
 
-Ponadto należy wykonać krok 2 (Obsługa Docker dodawanie do projektów) tylko raz. W związku z tym przepływu pracy jest podobna do zadań programowania zwykle, gdy dla innych Programowanie przy użyciu platformy .NET. Musisz wiedzieć, co dzieje się w obszarze obejmuje (procesu tworzenia obrazu, jakie obrazy podstawowe używasz, wdrożenia kontenerów, itp.) i czasami się, że należy również edytować plik Dockerfile lub docker-compose.yml plik, aby dostosować zachowania. Jednak znacznie upraszcza większość zadań za pomocą programu Visual Studio, co możesz znacznie większą wydajność.
+Ponadto należy wykonać tylko raz w kroku 2 (Dodawanie obsługę platformy Docker do swoich projektów). W związku z tym przepływ pracy jest podobne do zadań rozwoju zwykle, gdy przy użyciu platformy .NET do tworzenia innych aplikacji. Musisz wiedzieć, co się dzieje dzieje się w tle (procesu tworzenia obrazu, jakie obrazy podstawowe, którego używasz, wdrażanie kontenerów, itp.) i czasami również należy edytować plik Dockerfile lub docker-compose.yml dostosowywania zachowania. Jednak większość pracy jest znacznie uproszczone przy użyciu programu Visual Studio, co możesz o wiele bardziej produktywne.
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Steve Lasker. .NET — rozwój docker z programu Visual Studio 2017 r.**
+-   **Steve Lasker. Programowanie na platformie .NET platformy docker przy użyciu programu Visual Studio 2017**
     [*https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111*](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111)
 
--   **Jeffrey T. Fritz. Umieść aplikacji .NET Core w kontenerze o nowe narzędzia Docker dla programu Visual Studio**
+-   **Jeffrey T. Fritz. Umieszczanie aplikacji platformy .NET Core w kontenerze za pomocą nowych narzędzi platformy Docker dla programu Visual Studio**
     [*https://blogs.msdn.microsoft.com/webdev/2016/11/16/new-docker-tools-for-visual-studio/*](https://blogs.msdn.microsoft.com/webdev/2016/11/16/new-docker-tools-for-visual-studio/)
 
-## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>Za pomocą poleceń programu PowerShell w plik Dockerfile skonfigurować kontenery systemu Windows 
+## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>Używanie poleceń programu PowerShell w pliku Dockerfile do konfigurowania kontenerów Windows 
 
-[Kontenery systemu Windows](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview) umożliwiają konwertowanie istniejących aplikacji systemu Windows na obrazy usługi Docker i wdrażać je z tego samego narzędzia jako rest ekosystemu Docker. Aby użyć kontenery systemu Windows, należy uruchomić polecenia programu PowerShell w plik Dockerfile, jak pokazano w poniższym przykładzie:
+[Kontenery Windows](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview) umożliwiają konwertowanie istniejących aplikacji Windows obrazów platformy Docker i wdrożyć je przy użyciu tych samych narzędzi, jak w pozostałych ekosystemie Docker. Aby użyć kontenery Windows, możesz uruchomić poleceń programu PowerShell w pliku Dockerfile, jak pokazano w poniższym przykładzie:
 
 ```Dockerfile
 FROM microsoft/windowsservercore
@@ -409,7 +409,7 @@ RUN powershell -Command Add-WindowsFeature Web-Server
 CMD [ "ping", "localhost", "-t" ]
 ```
 
-W takim przypadku wiemy przy użyciu podstawowy obraz systemu Windows Server Core (ustawienie FROM) i instalacji usług IIS za pomocą polecenia programu PowerShell (ustawienie URUCHAMIANIA). W podobny sposób poleceń programu PowerShell można użyć również do skonfigurowania dodatkowych składników, takich jak ASP.NET 4.x, .NET 4.6 lub innego oprogramowania systemu Windows. Na przykład następujące polecenie w plik Dockerfile konfiguruje ASP.NET 4.5:
+W tym przypadku jesteśmy przy użyciu obrazu podstawowego systemu Windows Server Core (ustawienie FROM) i instalowanie usług IIS za pomocą polecenia programu PowerShell (Ustawienie Uruchom). W podobny sposób można również użyć poleceń programu PowerShell do skonfigurowania dodatkowych składników, takich jak ASP.NET 4.x, .NET 4.6 lub innego oprogramowania Windows. Na przykład następujące polecenie w pliku Dockerfile konfiguruje ASP.NET 4.5:
 
 ```Dockerfile
 RUN powershell add-windowsfeature web-asp-net45
@@ -417,7 +417,7 @@ RUN powershell add-windowsfeature web-asp-net45
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **aspnet-docker/Dockerfile.** Przykład polecenia programu Powershell do uruchamiania z dockerfiles dołączenie funkcji systemu Windows.
+-   **aspnet-docker/Dockerfile.** Przykładowe polecenia programu Powershell do uruchamiania z plików dockerfile w celu uwzględnienia funkcji Windows.
     [*https://github.com/Microsoft/aspnet-docker/blob/master/4.6.2/Dockerfile*](https://github.com/Microsoft/aspnet-docker/blob/master/4.6.2/Dockerfile)
 
 >[!div class="step-by-step"]

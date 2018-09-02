@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ++ operator [C#]
 ms.assetid: e9dec353-070b-44fb-98ed-eb8fdf753feb
 ms.openlocfilehash: a52f614ce1bbfb8e9d9be686b277c1e69f6f9d35
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254285"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399313"
 ---
 # <a name="-operator-c-reference"></a>++ — Operator (odwołanie w C#)
 Operator inkrementacji (`++`) zwiększa wartość argumentu operacji o 1. Operator inkrementacji może występować przed argumentem operacji lub po nim: `++variable` i `variable++`.  

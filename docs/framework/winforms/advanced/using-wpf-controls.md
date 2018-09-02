@@ -5,52 +5,52 @@ helpviewer_keywords:
 - Windows Forms Designer [Windows Forms], interoperability with WPF
 - interoperability [WPF]
 ms.assetid: 03c85dce-26ad-44cd-bc1d-8e0cb56de096
-ms.openlocfilehash: 8dcf79d449a8f8443774b133904e819dfd925288
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 30b84f05898f823227415c410dc7ba5f89d58664
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526607"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406329"
 ---
 # <a name="using-wpf-controls"></a>Korzystanie z formantów WPF
-Formanty Windows Presentation Foundation (WPF) służy w aplikacjach opartych na formularzach systemu Windows. Chociaż te dwie technologie inny widok, ich współdziałać sprawnie.  
+W aplikacjach opartych na formularzach Windows, można użyć kontrolek Windows Presentation Foundation (WPF). Mimo że są to dwie technologie inny widok, mogą współdziałać sprawnie.  
   
- Projektant formularzy systemu Windows udostępnia środowisko wizualnego projektu do hostowania kontrolki Windows Presentation Foundation. Formant WPF jest hostowana przez specjalne formantu formularzy systemu Windows o nazwie <xref:System.Windows.Forms.Integration.ElementHost>. Ten formant umożliwia kontrolce WPF do udziału w układu formularza i odbierać komunikaty klawiatury i myszy. W czasie projektowania, można rozmieścić <xref:System.Windows.Forms.Integration.ElementHost> sterować tak samo jak dowolnej kontrolki formularza systemu Windows.  
+ Windows Forms Designer udostępnia środowisko projektowania wizualnego do hostowania kontrolki Windows Presentation Foundation. Kontrolki WPF jest hostowana przez kontrolkę Windows Forms specjalne, o nazwie <xref:System.Windows.Forms.Integration.ElementHost>. Ten formant umożliwia formantu WPF do wzięcia udziału w układzie formularza i odbierać komunikaty klawiatury i myszy. W czasie projektowania, można rozmieścić <xref:System.Windows.Forms.Integration.ElementHost> sterować tak samo jak dowolnej kontrolki Windows Forms.  
   
- Formanty formularzy systemu Windows umożliwia także w aplikacjach opartych na WPF. Aby uzyskać więcej informacji, zobacz [projektanta WPF](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26).  
+ Umożliwia także kontrolek formularzy Windows Forms w swoich aplikacjach opartego na podsystemie WPF. Aby uzyskać więcej informacji, zobacz [projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Instrukcje: kopiowanie i wklejanie kontrolki ElementHost w czasie projektowania](../../../../docs/framework/winforms/advanced/how-to-copy-and-paste-an-elementhost-control-at-design-time.md)  
- Przedstawia sposób kopiowania formantu Windows Presentation Foundation na formularzu systemu Windows.  
+ Pokazuje, jak kopiowanie kontrolki Windows Presentation Foundation w formularzu Windows.  
   
  [Przewodnik: rozmieszczanie zawartości WPF na formularzach Windows Forms w czasie projektowania](../../../../docs/framework/winforms/advanced/walkthrough-arranging-wpf-content-on-windows-forms-at-design-time.md)  
- Przedstawia sposób korzystania z funkcji układ formularzy systemu Windows, takich jak Zakotwiczanie i linie przyciągania, ułożyć kontrolki Windows Presentation Foundation.  
+ Pokazuje, jak korzystać z funkcji układu formularzy Windows, takich jak Zakotwiczanie i linii przyciągania, aby rozmieścić formanty Windows Presentation Foundation.  
   
  [Przewodnik: zmienianie właściwości hostowanego elementu WPF w czasie projektowania](../../../../docs/framework/winforms/advanced/walkthrough-changing-properties-of-a-hosted-wpf-element-at-design-time.md)  
- Przedstawiono przepływ pracy między Projektant formularzy systemu Windows i [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] zmiany właściwości formantów WPF.  
+ Przedstawia przepływ pracy między Windows Forms Designer i [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] zmiany właściwości kontrolek WPF.  
   
  [Przewodnik: tworzenie nowej zawartości WPF na formularzach Windows Forms w czasie projektowania](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)  
- Przedstawia sposób tworzenia kontrolki Windows Presentation Foundation, do użycia w aplikacjach opartych na formularzach systemu Windows.  
+ Pokazuje, jak utworzyć formant programu Windows Presentation Foundation, do użytku w aplikacjach opartych na formularzach Windows.  
   
  [Przewodnik: kopiowanie i wklejanie kontrolki ElementHost w oddzielnych formularzach Windows Forms](../../../../docs/framework/winforms/advanced/copy--paste-an-elementhost-control-into-forms.md)  
- Przedstawia sposób kopiowania kontrolki Windows Presentation Foundation z jednego formularza systemu Windows na inny.  
+ Pokazuje, jak kopiowanie kontrolki Windows Presentation Foundation z jednego formularza Windows na inny.  
   
  [Przewodnik: przypisywanie zawartości WPF na formularzach Windows Forms w czasie projektowania](../../../../docs/framework/winforms/advanced/walkthrough-assigning-wpf-content-on-windows-forms-at-design-time.md)  
- Pokazuje, jak wybrać typy formantów systemu Windows Presentation Foundation, które mają być wyświetlane w formularzu.  
+ Pokazuje sposób wybierania typów formantów Windows Presentation Foundation, które mają być wyświetlane w formularzu.  
   
  [Przewodnik: nadawanie stylu zawartości WPF](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md)  
- Przedstawiono przepływ pracy między Projektant formularzy systemu Windows i [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] stosowania stylów do kontrolki Windows Presentation Foundation.  
+ Przedstawia przepływ pracy między Windows Forms Designer i [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] dla stosowanie stylów do kontrolek Windows Presentation Foundation.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.Integration.ElementHost>  
- W tym artykule opisano klasy, która służy do kontrolki Windows Presentation Foundation hosta w aplikacjach opartych na formularzach systemu Windows.  
+ W tym artykule opisano klasy, które służy do kontrolek Windows Presentation Foundation hosta w swoich aplikacjach opartych na formularzach Windows.  
   
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- W tym artykule opisano klasy, która służy do hosta formanty formularzy systemu Windows w aplikacji opartej na systemie Windows Presentation Foundation.  
+ W tym artykule opisano klasy, które służy do kontrolek Windows Forms hosta w aplikacji opartej na systemie Windows Presentation Foundation.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Migracja i współdziałanie](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
- Opisuje współdziałanie między technologii Windows Presentation Foundation i formularze systemu Windows.  
+ W tym artykule opisano współdziałanie technologii Windows Presentation Foundation i Windows Forms.  
   
- [Projektant WPF](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
- Opisuje sposób projektowania kontrolki Windows Presentation Foundation w programie Visual Studio.
+ [Projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)  
+ Opisuje sposób projektowania formanty Windows Presentation Foundation w programie Visual Studio.

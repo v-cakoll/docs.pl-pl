@@ -12,20 +12,20 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 - MDI forms [Windows Forms], creating
 ms.assetid: d198ef8e-f7c4-4b3f-a7f5-ce858cb90cec
-ms.openlocfilehash: 1f7da5bfea9a9864f11a32a589798dfd8a7844a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f2d4b92ffd37a5d9ce1552fa590357ec55cc6df5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530459"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406342"
 ---
 # <a name="how-to-create-an-mdi-form-with-toolstrippanel-controls"></a>Porady: tworzenie formularza MDI za pomocą formantów ToolStripPanel
-Można utworzyć wiele formularza interfejsu (MDI) dokumentu, który ma <xref:System.Windows.Forms.ToolStrip> formanty framing go ze wszystkich czterech stron.  
+Można utworzyć wiele formularz interfejsu (MDI) dokumentu, który ma <xref:System.Windows.Forms.ToolStrip> formantów ramek go na wszystkich czterech stron.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu pokazuje sposób użycia zadokowanych <xref:System.Windows.Forms.ToolStripPanel> formantów ramkę okna MDI z czterema <xref:System.Windows.Forms.ToolStrip> kontrolki.  
+ Poniższy przykład kodu demonstruje sposób używania zadokowany <xref:System.Windows.Forms.ToolStripPanel> kontrolki do ramki okna MDI z czterema <xref:System.Windows.Forms.ToolStrip> kontrolki.  
   
- W tym przykładzie <xref:System.Windows.Forms.ToolStripPanel.Join%2A> dołącza metody <xref:System.Windows.Forms.ToolStrip> kontrolki do odpowiednich <xref:System.Windows.Forms.ToolStripPanel> kontrolki.  
+ W tym przykładzie <xref:System.Windows.Forms.ToolStripPanel.Join%2A> metoda dołącza <xref:System.Windows.Forms.ToolStrip> kontrolki do odpowiednich <xref:System.Windows.Forms.ToolStripPanel> kontrolki.  
   
  [!code-csharp[System.Windows.Forms.ToolStrip.Misc#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#1)]
  [!code-vb[System.Windows.Forms.ToolStrip.Misc#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#1)]  
@@ -35,9 +35,9 @@ Można utworzyć wiele formularza interfejsu (MDI) dokumentu, który ma <xref:Sy
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Odwołania do zestawów System.Drawing i System.Windows.Forms.  
+-   Odwołania do zestawów System.Drawing i pozycję System.Windows.Forms.  
   
- Uzyskać informacje o kompilowaniu w tym przykładzie z wiersza polecenia dla programu Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [kompilowania z wiersza polecenia csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć w tym przykładzie w programie Visual Studio przez wklejenie kodu do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows formularze kodu przykład za pomocą programu Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows Forms kodu przykładzie przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.ToolStrip>  

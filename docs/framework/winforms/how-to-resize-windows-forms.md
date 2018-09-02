@@ -9,21 +9,21 @@ helpviewer_keywords:
 - resizing Windows Forms
 - Windows Forms, resizing
 ms.assetid: 5d9dd47e-e68c-48c9-a0a3-a9ff34ba009d
-ms.openlocfilehash: 0fdd04b444deed0645e823bdac3cfc8f10d0386a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40a2ff3dcde9d0fbbc9a7e6c67430eb8313614e4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540387"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408950"
 ---
 # <a name="how-to-resize-windows-forms"></a>Porady: zmienianie rozmiarów formularzy systemu Windows
-Można określić rozmiar formularza systemu Windows na kilka sposobów. Można zmienić wysokość i szerokość formularza programowo, ustawiając nową wartość dla <xref:System.Windows.Forms.Form.Size%2A> właściwości, lub Dostosuj <xref:System.Windows.Forms.Control.Height%2A> lub <xref:System.Windows.Forms.Control.Width%2A> właściwości pojedynczo. Jeśli używasz programu Visual Studio, można zmienić rozmiar przy użyciu narzędzia Projektant formularzy systemu Windows. Zobacz też [porady: Zmienianie rozmiaru Windows Forms przy użyciu narzędzia Projektant](http://msdn.microsoft.com/library/37k2zkwx\(v=vs.110\)).  
+Rozmiar formularza Windows można określić na kilka sposobów. Można zmienić wysokość i szerokość formularza programowo, ustawiając nową wartość dla <xref:System.Windows.Forms.Form.Size%2A> właściwości lub dostosować <xref:System.Windows.Forms.Control.Height%2A> lub <xref:System.Windows.Forms.Control.Width%2A> właściwości indywidualnie. Jeśli używasz programu Visual Studio, możesz zmienić rozmiar przy użyciu programu Windows Forms Designer. Zobacz też [porady: zmiana rozmiaru Windows Forms przy użyciu projektanta](https://msdn.microsoft.com/library/37k2zkwx\(v=vs.110\)).  
   
 ### <a name="to-resize-a-form-programmatically"></a>Aby programowo zmienić rozmiar formularza  
   
--   Zdefiniuj rozmiar formularza w czasie wykonywania, ustawiając <xref:System.Windows.Forms.Form.Size%2A> właściwości formularza.  
+-   Określ rozmiar formularza w czasie wykonywania, ustawiając <xref:System.Windows.Forms.Form.Size%2A> właściwości formularza.  
   
-     Poniższy przykład kodu pokazuje rozmiar formularza ustawiona na 100 x 100 pikseli.  
+     Poniższy przykład kodu pokazuje rozmiar formularza, równa 100 x 100 pikseli.  
   
     ```vb  
     Form1.Size = New System.Drawing.Size(100, 100)  
@@ -37,11 +37,11 @@ Można określić rozmiar formularza systemu Windows na kilka sposobów. Można 
     Form1->Size = System::Drawing::Size(100, 100);  
     ```  
   
-### <a name="to-change-form-width-and-height-programmatically"></a>Aby zmienić programowo formularza szerokości i wysokości.  
+### <a name="to-change-form-width-and-height-programmatically"></a>Aby programowo zmienić wysokość i szerokość formularza  
   
 -   Po <xref:System.Windows.Forms.Form.Size%2A> jest zdefiniowany, zmienić za pomocą formularza wysokość lub szerokość <xref:System.Windows.Forms.Control.Width%2A> lub <xref:System.Windows.Forms.Control.Height%2A> właściwości.  
   
-     Poniższy przykład kodu pokazuje szerokość formularza ustawioną 300 pikseli od lewej krawędzi formularza, natomiast wysokość pozostaje stała.  
+     Poniższy przykład kodu pokazuje szerokość formularza, wartość 300 pikseli od lewej krawędzi formularza, natomiast wysokość pozostają stałe.  
   
     ```vb  
     Form1.Width = 300  
@@ -57,9 +57,9 @@ Można określić rozmiar formularza systemu Windows na kilka sposobów. Można 
   
      —lub—  
   
-     Zmień <xref:System.Drawing.Size.Width%2A> lub <xref:System.Drawing.Size.Height%2A> przez ustawienie <xref:System.Windows.Forms.Form.Size%2A> właściwości.  
+     Zmiana <xref:System.Drawing.Size.Width%2A> lub <xref:System.Drawing.Size.Height%2A> , ustawiając <xref:System.Windows.Forms.Form.Size%2A> właściwości.  
   
-     Jednakże, jak pokazano w poniższym przykładzie kodu, ta metoda jest bardziej skomplikowane niż ustawienie tylko <xref:System.Windows.Forms.Control.Width%2A> lub <xref:System.Windows.Forms.Control.Height%2A> właściwości.  
+     Jednakże, jak pokazano w poniższym przykładzie kodu, to podejście jest bardziej skomplikowane niż ustawienie tylko <xref:System.Windows.Forms.Control.Width%2A> lub <xref:System.Windows.Forms.Control.Height%2A> właściwości.  
   
     ```vb  
     Form1.Size = New Size(300, Form1.Size.Height)  
@@ -73,11 +73,11 @@ Można określić rozmiar formularza systemu Windows na kilka sposobów. Można 
     Form1->Size = System::Drawing::Size(300, Form1->Size.Height);  
     ```  
   
-### <a name="to-change-form-size-by-increments-programmatically"></a>Aby zmienić rozmiar formularza krokami programowo  
+### <a name="to-change-form-size-by-increments-programmatically"></a>Aby zmienić rozmiar formularza krokami programowe  
   
 -   Aby zwiększyć rozmiar formularza, ustaw <xref:System.Drawing.Size.Width%2A> i <xref:System.Drawing.Size.Height%2A> właściwości.  
   
-     Poniższy przykład kodu pokazuje szerokość formularza ustawiona na większą niż bieżące ustawienie 200 pikseli.  
+     Poniższy przykład kodu pokazuje szerokość formularza ustawiona na 200 pikseli szerszy niż bieżące ustawienie.  
   
     ```vb  
     Form1.Width += 200  
@@ -92,7 +92,7 @@ Można określić rozmiar formularza systemu Windows na kilka sposobów. Można 
     ```  
   
     > [!CAUTION]
-    >  Zawsze używaj <xref:System.Drawing.Size.Height%2A> lub <xref:System.Drawing.Size.Width%2A> zmienić wymiaru formularza, chyba że ustawiasz szerokość i wysokość wymiarów w tym samym czasie, ustawiając dla właściwości <xref:System.Windows.Forms.Form.Size%2A> właściwości na nowy <xref:System.Drawing.Size> struktury. <xref:System.Windows.Forms.Form.Size%2A> Zwraca <xref:System.Drawing.Size> struktury, która jest typem wartości. Nie można przypisać nową wartość dla właściwości typu wartości. W związku z tym Poniższy przykładowy kod nie zostanie skompilowany.  
+    >  Zawsze używaj <xref:System.Drawing.Size.Height%2A> lub <xref:System.Drawing.Size.Width%2A> właściwości do zmiany wymiar formularza, chyba że ustawiasz szerokość i wysokość wymiarów w tym samym czasie, ustawiając <xref:System.Windows.Forms.Form.Size%2A> nową właściwość <xref:System.Drawing.Size> struktury. <xref:System.Windows.Forms.Form.Size%2A> Właściwość zwraca <xref:System.Drawing.Size> struktury, która jest typem wartości. Nowa wartość nie można przypisać do właściwości typu wartości. W związku z tym nie zostanie skompilowany w poniższym przykładzie kodu.  
   
     ```vb  
     ' NOTE: CODE WILL NOT COMPILE  

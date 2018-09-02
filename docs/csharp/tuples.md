@@ -1,133 +1,133 @@
 ---
-title: Typy krotki — przewodnik C#
-description: Dowiedz się więcej o typy nazwane i nienazwane spójnej kolekcji w języku C#
+title: Typy krotki — Przewodnik po języku C#
+description: Dowiedz się więcej o krotki nazwane i nienazwane typy w języku C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 6c3b6edb0481b8c2e4d92989b605f657aac607fa
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: b0c838791e640c9813005b8a32d009153a794c14
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208389"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404317"
 ---
-# <a name="c-tuple-types"></a>Typy krotki C# #
+# <a name="c-tuple-types"></a>Typy krotek języka C# #
 
-C# krotek są typy zdefiniowane przez użytkownika przy użyciu składni lightweight. Zalety obejmują składni prostszy, reguły konwersji na podstawie numeru (nazywane Kardynalność) i typy elementów i spójne zasady kopii, testy równości i przypisania. Jako zależnościami krotek nie obsługują niektórych zorientowane obiektowo idioms, skojarzone z dziedziczenia. Przegląd w sekcji można uzyskać [krotek, co jest nowego w języku C# w wersji 7.0](whats-new/csharp-7.md#tuples) artykułu.
+C# kolekcje są typy definiujące przy użyciu składni lekkiej. Zalety obejmują prostsze składni reguł podczas konwersji na podstawie liczby (nazywane kardynalności) i typy elementów i spójne zasady kopii, testy równości i przydziałów. Jako to z kompromisem krotek nie obsługują niektórych idiomy zorientowane obiektowo, skojarzone z dziedziczenia. Możesz uzyskać omówienie w sekcji na [krotek, co jest nowego w języku C# 7.0](whats-new/csharp-7.md#tuples) artykułu.
 
-W tym artykule dowiesz się języka zasady spójne kolekcje w C# w wersji 7.0 i nowszych wersjach, różne sposoby stosowania ich i początkowej wskazówki na temat pracy z spójnych kolekcji.
+W tym artykule dowiesz się, zasady języka krotkami w języku C# 7.0 i nowsze wersje, różne sposoby stosowania je i wstępną wskazówki na temat pracy z krotek.
 
 > [!NOTE]
 > Nowe funkcje krotek wymagają <xref:System.ValueTuple> typów.
-> Należy dodać pakiet NuGet [ `System.ValueTuple` ](https://www.nuget.org/packages/System.ValueTuple/) aby można było używać go na platformach, które nie uwzględniają typów.
+> Należy dodać pakiet NuGet [ `System.ValueTuple` ](https://www.nuget.org/packages/System.ValueTuple/) aby można było używać go na platformach, które nie zawierają typy.
 >
-> Efekt jest podobny do innych funkcji języka, które zależą od typów dostarczane w ramach. Przykłady obejmują `async` i `await` polegania na `INotifyCompletion` interfejsu i LINQ polegania na `IEnumerable<T>`. Jednak mechanizm dostarczania zmienia się zgodnie z .NET staje się coraz więcej niezależnie od platformy. .NET Framework nie mogą zawsze dostarczany na tym samym okresach jako kompilatora języka. Gdy nowe funkcje językowe bazuje na nowe typy, te typy będą dostępne jako pakietów NuGet podczas wysłać funkcje języka. Jak te nowe typy dodane do standardowego interfejsu API programu .NET i dostarczane w ramach struktury, wymaganie pakietu NuGet zostaną usunięte.
+> Jest to podobne do innych funkcji języka, które zależą od typów dostarczonych w ramach. Przykłady obejmują `async` i `await` opierając się na `INotifyCompletion` interfejsu i LINQ, opierając się na `IEnumerable<T>`. Jednak mechanizm dostarczania jest zmieniają się wraz z .NET staje się coraz więcej platform niezależne. .NET Framework mogą zawsze są dostarczane na ten sam cykl, jak kompilator języka. Jeśli nowe funkcje języka, zależą od nowych typów, te typy są dostępne jako pakiety NuGet podczas dostarczania funkcji języka. Ponieważ te nowe typy są dodawane do standardowego interfejsu API platformy .NET i dostarczane jako część ram, wymaganie pakietu NuGet zostaną usunięte.
 
-Zacznijmy od przyczyny dodawania nowych obsługi spójnej kolekcji. Metody zwracają pojedynczego obiektu. Krotki umożliwiają łatwiejsze pakietu wielu wartości w tym pojedynczego obiektu.
+Zacznijmy od przyczyny, dla których do dodawania nowych obsługi spójnej kolekcji. Metody zwracają jeden obiekt. Spójne kolekcje umożliwiają łatwiejsze pakowanie wielu wartości w tym pojedynczego obiektu.
 
-.NET Framework ma już ogólnego `Tuple` klasy. Te klasy, jednak ma dwa główne ograniczenia. Dla jednego `Tuple` ich właściwości o nazwie klasy `Item1`, `Item2`i tak dalej. Te nazwy przenoszenia żadne informacje semantyczne. Korzystanie z tych `Tuple` typów nie obsługuje komunikacji znaczenie poszczególnych właściwości. Nowe funkcje językowe umożliwiają deklarowanie i użycie semantycznie łatwy do rozpoznania nazwy elementów w spójnej kolekcji.
+.NET Framework jest już ogólny `Tuple` klasy. Te klasy, ma dwa główne ograniczenia. Dla jednego `Tuple` klasy o nazwie ich właściwości `Item1`, `Item2`i tak dalej. Te nazwy objęte żadne informacje semantyczne. Korzystanie z tych `Tuple` typów nie obsługuje komunikacji znaczenie każdej właściwości. Nowe funkcje języka umożliwiają deklarowanie i użycie semantycznie znaczące nazwy elementów w krotce.
 
-`Tuple` Klasy powodować więcej problemów z wydajnością, ponieważ są one typy referencyjne. Przy użyciu jednej z `Tuple` typy oznacza Alokacja obiektów. W ścieżkach dynamicznej alokacji wiele małych obiektów może mieć zauważalnego wpływu na wydajność aplikacji. W związku z tym obsługi języka krotek wykorzystuje nowe `ValueTuple` struktury.
+`Tuple` Klasy spowodować więcej problemów z wydajnością, ponieważ są to typy odwołań. Przy użyciu jednej z `Tuple` typy oznacza, że alokacja obiektów. W warstwie gorąca ścieżkach przydzielanie wielu małych obiektów może mieć zauważalnego wpływu na wydajność aplikacji. W związku z tym, obsługa języków w krotek korzysta z nowym `ValueTuple` struktury.
 
-Aby uniknąć tych braki, można utworzyć `class` lub `struct` do przenoszenia wielu elementów. Niestety jest więcej pracy, a jest ukrywany z celem projektu. Tworzenie `struct` lub `class` oznacza definiowania typu z danych i zachowania. Wiele razy po prostu chcesz przechowywać wiele wartości w jeden obiekt.
+Aby uniknąć tych braki, można utworzyć `class` lub `struct` do wykonania wielu elementów. Niestety to więcej pracy i następuje ukrycie zgodną z planem projektu. Tworzenie `struct` lub `class` oznacza definiowania typu przy użyciu danych i zachowania. Wiele razy po prostu chcesz przechowywać wiele wartości w pojedynczy obiekt.
 
-Funkcje języka i `ValueTuple` struktury ogólne wymuszać reguły, że nie można dodać żadnych zachowanie (metody) do tych typów spójnej kolekcji.
-Wszystkie `ValueTuple` typy są *modyfikowalną struktury*. Każdy członek pola jest publicznym polem. Dzięki temu ich bardzo uproszczonego. Jednakże oznacza to, że nie należy używać krotek których immutability jest ważna.
+Funkcje języka i `ValueTuple` struktury ogólne wymusić regułę, że nie można dodać każde zachowanie (metod) aby te typy krotek.
+Wszystkie `ValueTuple` typy są *mutable struktury*. Każde pole elementu członkowskiego jest polem publiczne. Dzięki temu ich bardzo uproszczone. Jednak oznacza to, że nie należy używać krotek których niezmienności jest ważna.
 
-Spójne kolekcje są obie kontenerów danych prostszy i bardziej elastyczne niż `class` i `struct` typów. Przyjrzyjmy się różnic.
+Kolekcje są oba kontenery danych prostszy i bardziej elastyczne niż `class` i `struct` typów. Przyjrzyjmy się różnic.
 
-## <a name="named-and-unnamed-tuples"></a>Krotki nazwane i nienazwane
+## <a name="named-and-unnamed-tuples"></a>Nazwane i nienazwane krotki
 
-`ValueTuple` Struktura zawiera pola o nazwie `Item1`, `Item2`, `Item3`i tak dalej, podobnie jak właściwości zdefiniowane w istniejących `Tuple` typów.
-Te nazwy są tylko nazwy można użyć dla *nienazwane krotek*. Gdy wszystkie nazwy pól alternatywnych do krotki nie zostanie określona, zostanie utworzona krotka bez nazwy:
+`ValueTuple` Struktura zawiera pola o nazwie `Item1`, `Item2`, `Item3`i tak dalej podobne do właściwości zdefiniowane w istniejącym `Tuple` typów.
+Te nazwy są tylko nazwy służy do *nienazwane krotek*. Wszystkie nazwy alternatywne pól do krotki nie zostanie określona, utworzono krotka bez nazwy:
 
 [!code-csharp[UnnamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#01_UnNamedTuple "Unnamed tuple")]
 
-Spójna kolekcja znajdująca się w poprzednim przykładzie została zainicjowana przy użyciu stałe literałów i nie będą mieć nazwy elementów utworzone przy użyciu *krotki pole Nazwa projekcje* w języku C# 7.1.
+Spójna kolekcja znajdująca się w poprzednim przykładzie została zainicjowana przy użyciu stałych literału i nie będzie nazwy elementów utworzonych za pomocą *projekcje nazwę pola krotki* w języku C# 7.1.
 
-Podczas inicjowania krotka można jednak użyć nowe funkcje językowe, które zapewniają lepszą nazwy do każdego pola. Dzięki temu tworzy *o nazwie krotki*.
-Nazwane krotek jeszcze elementy o nazwie `Item1`, `Item2`, `Item3` i tak dalej.
-Ale ma także synonimy dla każdego z tych elementów, które mają być nazwane.
-Określanie nazw dla każdego elementu do tworzenia nazwanego spójnej kolekcji. Jednym ze sposobów jest do określenia nazwy w ramach inicjalizacji spójnej kolekcji:
+Jednak podczas inicjowania krotki można użyć nowych funkcji języków, które zapewniają lepszą nazwy do każdego pola. Spowoduje to utworzenie *o nazwie krotki*.
+Nazwane krotek nadal mieć elementy o nazwie `Item1`, `Item2`, `Item3` i tak dalej.
+Jednak mają one również synonimy dla każdej z tych elementów, które mają nazwane.
+Możesz utworzyć nazwanego spójnej kolekcji przez określenie nazwy dla każdego elementu. Jednym ze sposobów jest określane są nazwy w ramach inicjowania spójnej kolekcji:
 
 [!code-csharp[NamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#02_NamedTuple "Named tuple")]
 
-Te synonimy są obsługiwane przez kompilator i język tak, aby można było używać o nazwie krotek efektywnie. IDEs i Redaktorzy mogą odczytywać te nazwy semantycznych przy użyciu interfejsów API Roslyn. Za pomocą tych nazw semantyczne w dowolnym miejscu tego samego zestawu można odwoływać się elementy o nazwie spójnej kolekcji. Kompilator zastępuje nazwy zdefiniowany przez użytkownika z `Item*` odpowiedniki podczas generowania skompilowanych danych wyjściowych. Skompilowany Microsoft pośredniego Language (MSIL) nie zawiera nazwy został przyznany tych elementów.
+Dodawanie tych synonimów są obsługiwane przez kompilator i język tak, aby można było używać o nazwie krotek skutecznie. Środowiska IDE i edytorów mogą odczytywać te nazwy semantycznych przy użyciu interfejsów API Roslyn. Elementy o nazwie krotki można się odwoływać przy użyciu tych nazw semantyczne w dowolnym miejscu tego samego zestawu. Kompilator zamienia nazwy zdefiniowany przez użytkownika za pomocą `Item*` odpowiedniki podczas generowania skompilowanych danych wyjściowych. Skompilowany Microsoft Intermediate Language (MSIL) nie zawiera nazwy, został przez Ciebie udzielony tych elementów.
 
-Począwszy od 7.1 C#, nazw pól dla krotka mogą być dostarczane z zmienne używaną do inicjalizacji spójnej kolekcji. Jest to określane jako  **[inicjatory projekcji krotki](#tuple-projection-initializers)**. Poniższy kod tworzy spójną kolekcję o nazwie `accumulation` z elementami `count` (liczba całkowita), i `sum` (wartość o podwójnej precyzji).
+Począwszy od języka C# 7.1 nazw pól dla krotki mogą być udostępniane ze zmiennych, używane do zainicjowania spójnej kolekcji. Jest to określane jako  **[krotki rzutowanie inicjatorach](#tuple-projection-initializers)**. Poniższy kod tworzy spójną kolekcję o nazwie `accumulation` z elementami `count` (liczba całkowita), a `sum` (wartość o podwójnej precyzji).
 
 [!code-csharp[ProjectedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectedTupleNames "Named tuple")]
 
-Kompilator muszą komunikować się tych nazw utworzone krotek, do którego są zwracane z publicznej metody lub właściwości. W takich przypadkach dodaje kompilator <xref:System.Runtime.CompilerServices.TupleElementNamesAttribute> atrybutu w metodzie. Ten atrybut zawiera <xref:System.Runtime.CompilerServices.TupleElementNamesAttribute.TransformNames> listę właściwości, która zawiera nazwy do poszczególnych elementów w spójnej kolekcji.
+Kompilator musi komunikować się tymi nazwami utworzonych dla krotek, które są zwracane z właściwości lub metody publiczne. W takich przypadkach kompilator sam doda <xref:System.Runtime.CompilerServices.TupleElementNamesAttribute> atrybutu w metodzie. Ten atrybut zawiera <xref:System.Runtime.CompilerServices.TupleElementNamesAttribute.TransformNames> listy właściwości, która zawiera nazwy do poszczególnych elementów w spójnej kolekcji.
 
 > [!NOTE]
-> Narzędzia deweloperskie, takiego jak Visual Studio również odczytać metadane i podaj IntelliSense i innych funkcji przy użyciu nazwy pól metadanych.
+> Narzędziami programistycznymi, takimi jak Visual Studio również odczytywać metadane i funkcji IntelliSense i inne funkcje za pomocą nazwy pól metadanych.
 
-Ważne jest, aby zrozumieć bazowy podstawowe informacje na temat nowych krotek i `ValueTuple` typu, aby zrozumieć zasady przypisywania o nazwie krotek ze sobą.
+Należy zrozumieć podstawowe podstawowe informacje na temat nowych krotek i `ValueTuple` typu, aby zrozumieć zasady przypisywania o nazwie krotek do siebie nawzajem.
 
-## <a name="tuple-projection-initializers"></a>Inicjatory projekcji spójnej kolekcji
+## <a name="tuple-projection-initializers"></a>Inicjatory projekcji krotki
 
-Ogólnie rzecz biorąc inicjatory projekcji krotki pracy przy użyciu nazwy zmiennej lub pola z prawej stronie instrukcji inicjowania spójnej kolekcji.
-Jeśli jawna nazwa została podana, który ma pierwszeństwo przed dowolną nazwę planowane. Na przykład w inicjatorze następujące elementy są `explicitFieldOne` i `explicitFieldTwo`, a nie `localVariableOne` i `localVariableTwo`:
+Ogólnie rzecz biorąc krotki rzutowanie inicjatorach pracować przy użyciu nazwy zmiennej lub pola z po prawej stronie instrukcji inicjowania spójnej kolekcji.
+Jeśli jawna nazwa zostanie podany, który ma pierwszeństwo przed dowolną nazwę przewidywany. Na przykład w inicjatorze następujące elementy są `explicitFieldOne` i `explicitFieldTwo`, a nie `localVariableOne` i `localVariableTwo`:
 
 [!code-csharp[ExplicitNamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionExample_Explicit "Explicitly named tuple")]
 
-Dla dowolnego pola, w których nie podano nazwy jawne odpowiednie nazwy niejawne jest zaprojektowana. Nie jest wymagane zapewnienie semantycznego nazwy jawnie lub niejawnie. Nazwy pól ma następujące inicjatora `Item1`, którego wartość jest `42` i `StringContent`, którego wartość wynosi "Odpowiedź wszystko":
+Dla dowolnego pola, w którym jawna nazwa nie zostanie podany przewidywany jest zastosowanie nazwy niejawne. Nie ma jawnie lub niejawnie, zapewnienie semantycznego nazwy. Następujący inicjator ma nazw pól `Item1`, którego wartością jest `42` i `stringContent`, którego wartość to "Odpowiedź do wszystkich":
 
 [!code-csharp[MixedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#MixedTuple "mixed tuple")]
 
-Istnieją dwa warunki gdzie candidate nazwy pól nie są rzutowany na pole spójnej kolekcji:
+Istnieją dwa warunki gdzie Release candidate nazwy pól nie są pokazane na pole spójnej kolekcji:
 
-1. Gdy nazwa candidate jest nazwą zastrzeżone spójnej kolekcji. Przykłady obejmują `Item3`, `ToString`. lub `Rest`.
-1. Gdy nazwa candidate jest duplikatem inną nazwę pola krotki jawnych ani niejawnych.
+1. Gdy nazwa Release candidate jest nazwą zarezerwowanych spójnej kolekcji. Przykłady obejmują `Item3`, `ToString`. lub `Rest`.
+1. Gdy nazwa Release candidate jest duplikatem innej nazwy pola krotki jawnych lub niejawnych.
 
-Te warunki uniknąć niejednoznaczności. Te nazwy spowodowałoby niejednoznaczności, jeśli zostały one używane jako nazwy pola dla pola w spójnej kolekcji. Żadna z tych warunków powodować błędy kompilacji. Zamiast tego elementów bez nazwy planowanego nie masz nazwy semantycznego zaprojektowana dla nich.  W poniższych przykładach pokazano następujące warunki:
+Te warunki uniknąć niejednoznaczności. Te nazwy mogłoby spowodować niejednoznaczność, gdyby były one używane jako nazwy pól dla pola w spójnej kolekcji. Żadna z tych warunków nie powodują błędy czasu kompilacji. Zamiast tego elementy bez nazwy przewidywany nie ma nazwy semantycznego przewidywany dla nich.  W poniższych przykładach pokazano następujące warunki:
 
 [!code-csharp[Ambiguity](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionAmbiguities "tuples where projections are not performed")]
 
-Ponieważ wyniesie istotne zmiany dla kod napisany za pomocą języka C# 7.0, gdy projekcje nazwę pola krotki nie były dostępne tych sytuacji nie powodują błędy kompilatora.
+Tych sytuacji nie powodują błędy kompilatora, ponieważ byłoby istotną zmianę kod napisany w języku C# 7.0 podczas projekcji nazwę pola krotki nie były dostępne.
 
-## <a name="equality-and-tuples"></a>Równość i spójnych kolekcji
+## <a name="equality-and-tuples"></a>Równości i krotki
 
-Począwszy od 7.3 C#, krotki typy obsługi `==` i `!=` operatorów. Operatory te działają porównując każdy element członkowski argument po lewej stronie do każdego elementu członkowskiego prawy argument w kolejności. Zwarcie to porównania. `==` Operator zatrzymuje oceny członków, jak tylko jedna para nie jest równy. `!=` Operator zatrzymuje oceny członków, jak tylko jedna para jest taki sam. Poniższy kod przykłady użycia `==`, ale dotyczą wszystkich reguł porównanie `!=`. Poniższy przykład kodu pokazuje porównania równości dla dwóch par liczb całkowitych:
+Począwszy od języka C# 7.3 krotki typy obsługi `==` i `!=` operatorów. Te operatory działają przez porównanie każdy element członkowski argument po lewej stronie do każdego członka prawy argument w kolejności. Zwarcie tych porównań. `==` Operator zatrzymuje oceny członków, jak tylko jedną parę nie jest równa. `!=` Operator zatrzymuje oceny członków, jak tylko jedna para jest taki sam. Poniższy kod przykłady użycia `==`, ale dotyczą wszystkich reguł porównania `!=`. Poniższy przykład kodu pokazuje porównania dla dwóch par liczb całkowitych:
 
 [!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 
-Istnieje kilka reguł, które należy wygodniejsze testy równości spójnej kolekcji. Wykonuje równości krotki [unosiło konwersje](/dotnet/csharp/language-reference/language-specification/conversions#lifted-conversion-operators) Jeśli jeden z krotki jest nullable spójnej kolekcji, jak pokazano w poniższym kodzie:
+Istnieje kilka reguł, które testy równość krotki bardziej wygodne. Równość krotki wykonuje [zniesione konwersje](language-reference/language-specification/index.md) jedna z krotek czy krotki dopuszczającego wartość null, jak pokazano w poniższym kodzie:
 
 
 [!code-csharp[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]
 
-Równość krotki wykonuje także niejawne konwersje na każdym elemencie członkowskim obu spójnych kolekcji. Obejmują one podniesionym konwersje, rozszerzanie konwersje lub inne niejawne konwersje. W poniższych przykładach pokazano, że krotka 2 całkowitą można porównać długi Tuple 2 z powodu niejawna konwersja z liczby całkowitej w celu znaków:
+Równość krotki również wykonuje konwersje niejawne w każdym członku zarówno krotek. Obejmują one podniesionym konwersji, rozszerzające konwersje lub inne niejawne konwersje. Poniższe przykłady pokazują, czy liczba całkowita 2-krotka można porównać do długie 2-krotka z powodu niejawna konwersja liczbę całkowitą długie:
 
 [!code-csharp[SnippetMemberConversions](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberConversions "converting tuples for equality tests")]
 
-Nazwy elementów członkowskich krotki nie bierz udziału w testach pod kątem równości. Jednak jeśli jeden z argumentów jest krotka literału z nazwami jawne, kompilator generuje ostrzeżenie CS8383, jeśli nazwy, które nie są zgodne z nazwy drugiego operandu.
-W przypadku, gdy obydwa argumenty operacji są literały spójnej kolekcji ostrzeżenie jest na prawy operand jak pokazano w poniższym przykładzie:
+Nazwy elementów członkowskich krotki nie biorą udziału w testach dla równości. Jednakże jeśli jeden z argumentów jest literałem jawne nazwy krotki, kompilator generuje ostrzeżenie CS8383, jeśli te nazwy są niezgodne nazwy to drugi operand.
+W przypadku, gdy oba operandy są literałach krotek to ostrzeżenie jest na prawy operand jak pokazano w poniższym przykładzie:
 
 [!code-csharp[MemberNames](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberNames "Tuple member names do not participate in equality tests")]
 
-Na koniec krotek mogą zawierać zagnieżdżonych spójnych kolekcji. Równość krotki porównuje "kształtu" Każdy argument za pośrednictwem zagnieżdżonych krotek jako pokazano w poniższym przykładzie:
+Na koniec krotek mogą zawierać zagnieżdżonych krotek. Równość krotki porównuje "kształt" Każdy argument przy użyciu zagnieżdżonych krotek, co pokazano w poniższym przykładzie:
 
 [!code-csharp[NestedTuples](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
 
-## <a name="assignment-and-tuples"></a>Przypisanie i spójnych kolekcji
+## <a name="assignment-and-tuples"></a>Przypisanie i krotki
 
-Język obsługuje przypisania między typami spójnej kolekcji, które mają taką samą liczbę elementów, w której każdy element po prawej stronie można niejawnie przekonwertowana na jego odpowiadającego mu elementu po lewej stronie. Inne konwersje nie są uznawane za przydziałów. Oto typy przydziałów, które mogą między typami spójnej kolekcji.
+Język obsługuje przypisanie między typy krotek, które mają taką samą liczbę elementów, gdzie każdy element po prawej stronie mogą być niejawnie konwertowane do odpowiadającego mu elementu po lewej stronie. Inne konwersje nie są uwzględniane przydziałów. Przyjrzyjmy się rodzaje przypisania, które są dozwolone między typami spójnej kolekcji.
 
-Należy wziąć pod uwagę następujące zmienne używane w poniższych przykładach:
+Należy wziąć pod uwagę te zmienne używane w następujących przykładach:
 
 [!code-csharp[VariableCreation](../../samples/snippets/csharp/tuples/tuples/program.cs#03_VariableCreation "Variable creation")]
 
-Pierwsze dwie zmienne `unnamed` i `anonymous` nie mają semantycznego nazw określonych elementów. Nazwy pól są `Item1` i `Item2`.
-Ostatnie dwie zmienne `named` i `differentName` semantycznego nazwach podanych elementów. Te dwie spójne kolekcje mają różne nazwy dla elementów.
+Pierwsze dwie zmienne `unnamed` i `anonymous` nie zawiera semantyczną nazw określone elementy. Nazwy pól są `Item1` i `Item2`.
+Ostatnie dwie zmienne `named` i `differentName` semantycznego nazwach podanych elementów. Te dwie spójne kolekcje mają różne nazwy elementów.
 
-Wszystkie cztery te krotki mają taką samą liczbę elementów (określanych jako "Kardynalność") i typy te elementy są identyczne. W związku z tym wszystkie te przydziały działają:
+Wszystkie cztery krotek, te mają taką samą liczbę elementów (nazywane "Kardynalność") i typy te elementy są identyczne. W związku z tym wszystkie te przydziały pracy:
 
 [!code-csharp[VariableAssignment](../../samples/snippets/csharp/tuples/tuples/program.cs#04_VariableAssignment "Variable assignment")]
 
-Należy zauważyć, że nazwy krotki nie są przypisane. Wartości elementów są przypisywane kolejności elementów w spójnej kolekcji.
+Należy zauważyć, że nazwy kolekcje nie są przypisane. Wartości elementów są przypisywane w kolejności elementów w spójnej kolekcji.
 
-Spójne kolekcje różnych typów lub numerów elementów nie są można przypisać:
+Krotki o różnych typach lub liczby elementów, nie są możliwe do przypisania:
 
 ```csharp
 // Does not compile.
@@ -136,42 +136,42 @@ var differentShape = (1, 2, 3);
 named = differentShape;
 ```
 
-## <a name="tuples-as-method-return-values"></a>Wartości zwracane krotek jako — metoda
+## <a name="tuples-as-method-return-values"></a>Krotki jako wartości zwracane metody
 
-Jest jednym z najbardziej typowych zastosowań krotek jako wartość zwracaną metody. Przejdźmy przykładem. Oblicza odchylenie standardowe dla sekwencji liczb tej metody należy wziąć pod uwagę:
+Jednym z najbardziej typowych zastosowań krotek jest jako wartość zwracaną metody. Przejdźmy przykładem. Należy wziąć pod uwagę tej metody, które oblicza odchylenie standardowe w sekwencji liczb:
 
 [!code-csharp[StandardDeviation](../../samples/snippets/csharp/tuples/tuples/statistics.cs#05_StandardDeviation "Compute Standard Deviation")]
 
 > [!NOTE]
-> Poniższe przykłady obliczeniowe odchylenie standardowe Niepoprawione próbki.
-> Wzór odchylenia standardowego poprawione próbki będzie rozmieszczona sumę kwadratów różnic od średniej przez (N-1) zamiast N, `Average` jest — metoda rozszerzenia. Aby uzyskać więcej informacji na temat różnic między te formuły odchylenie standardowe, zapoznaj się tekst statystyk.
+> Te przykłady obliczeń odchylenie standardowe Niepoprawione próbki.
+> Wzór odchylenia standardowego poprawione próbki podzieleniu suma kwadratów różnic od średniej przez (n-1) zamiast N, jako `Average` metody rozszerzenia. Zapoznaj się tekst statystyki, aby uzyskać więcej informacji na temat różnic między te formuły odchylenie standardowe.
 
-Poprzedni kod następuje Podręcznikowy formułę odchylenie standardowe. Generuje prawidłowa odpowiedź, ale jest nieefektywne implementację. Ta metoda wylicza kolejność dwa razy: raz, aby utworzyć średnią i raz, aby utworzyć średnią kwadratu różnicy średniej.
-(Pamiętaj, że zapytań LINQ są oceniane w trybie opóźnienia, tak obliczania różnic ze średniej i średnią różnic sprawia, że tylko jedno wyliczenie).
+Powyższy kod poniżej Podręcznikowy formułę odchylenia standardowego. Tworzy poprawną odpowiedź, ale jest nieefektywną implementację. Ta metoda wylicza kolejność dwa razy: jeden raz, aby wygenerować średnią i jeden raz, aby wygenerować średnia kwadratu różnicy średniej.
+(Pamiętaj, że zapytania LINQ są obliczane z opóźnieniem, więc obliczania różnic od wartości średniej oraz średnią różnic sprawia, że tylko jedno wyliczenie).
 
-Brak alternatywnych formuła, której oblicza odchylenie standardowe za pomocą tylko jedno wyliczenie sekwencji.  Te obliczenia tworzy dwie wartości, zgodnie z jego wylicza sekwencji: Suma wszystkich elementów w sekwencji i sumę każdej wartości kwadrat:
+Istnieje alternatywny formuły, które oblicza odchylenie standardowe przy użyciu funkcji wyliczania tylko jednej sekwencji.  To obliczenie tworzy dwie wartości, jak wylicza kolejność: Suma wszystkich elementów w sekwencji, a sumę każdej wartości kwadrat:
 
 [!code-csharp[SumOfSquaresFormula](../../samples/snippets/csharp/tuples/tuples/statistics.cs#06_SumOfSquaresFormula "Compute Standard Deviation using the sum of squares")]
 
-Ta wersja wylicza kolejność dokładnie raz. Ale nie jest do ponownego użycia kodu. Jak można kontynuować pracę, przekonasz się, że wiele różnych obliczenia statystyczne używać liczba elementów w sekwencji, sum sekwencji i suma kwadratów sekwencji. Załóżmy Refaktoryzuj tę metodę i napisanie metody narzędzia, która tworzy wszystkie trzy tych wartości. Wszystkie trzy wartości mogą być zwracane w postaci spójnej kolekcji.
+Ta wersja wylicza sekwencji dokładnie jeden raz. Ale nie jest do ponownego wykorzystania kodu. Jak możesz kontynuować pracę, przekonasz się, że wiele różnych obliczeń statystycznych używają liczba elementów w sekwencji, sumę sekwencji i suma kwadratów sekwencji. Przejdźmy Refaktoryzuj tę metodę i napisanie metody narzędzia, która tworzy wszystkie trzy tych wartości. Wszystkie trzy wartości mogą być zwracane jako krotki.
 
-Teraz zaktualizuj tę metodę, aby trzy wartości obliczonych podczas wyliczania są przechowywane w spójnej kolekcji. Tworzącą tej wersji:
+Zaktualizujmy tej metody, więc trzy wartości obliczonych podczas wyliczania są przechowywane w spójnej kolekcji. Który tworzy tę wersję:
 
 [!code-csharp[TupleVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#07_TupleVersion "Refactor to use tuples")]
 
-Obsługa Refactoring programu Visual Studio ułatwia wyodrębnić funkcja statystyki podstawowe do metody prywatnej. Który umożliwia `private static` metodę, która zwraca typ krotki z trzech wartości `Sum`, `SumOfSquares`, i `Count`:
+Pomoc techniczna dla programu Visual Studio Refactoring ułatwia wyodrębnić funkcja statystyki podstawowe do metody prywatnej. Zapewnia to `private static` metodę, która zwraca typ krotki z trzech wartości `Sum`, `SumOfSquares`, i `Count`:
 
 [!code-csharp[TupleMethodVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#08_TupleMethodVersion "After extracting utility method")]
  
-Język umożliwia kilka więcej opcji, których można użyć, jeśli chcesz wprowadzić kilka zmian szybkie ręcznie. Najpierw należy użyć `var` deklaracji zainicjować wynik krotki `ComputeSumAndSumOfSquares` wywołania metody. Można również utworzyć trzy zmienne dyskretnego wewnątrz `ComputeSumAndSumOfSquares` metody. Wersja ostateczna pokazano w poniższym kodzie:
+Język umożliwia kilka więcej opcji, których można użyć, jeśli chcesz ręcznie wprowadzić kilka szybka edycja. Najpierw należy użyć `var` deklaracji zainicjować krotki wynikiem `ComputeSumAndSumOfSquares` wywołania metody. Możesz również utworzyć trzy zmienne dyskretnego wewnątrz `ComputeSumAndSumOfSquares` metody. Ostateczna wersja pokazano w poniższym kodzie:
 
 [!code-csharp[CleanedTupleVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#09_CleanedTupleVersion "After final cleanup")]
 
-Tej wersji ostatecznej może służyć do dowolnej metody, która wymaga wartości te trzy lub dowolny podzbiór.
+Tej wersji ostatecznej może służyć do dowolnej metody, która potrzebuje tych trzech wartości lub dowolny podzbiór.
 
-Język obsługuje inne opcje zarządzania nazwy elementów w tych metod zwracających spójnej kolekcji.
+Język obsługuje inne opcje zarządzania nazwy elementów w tych metodach zwracanie spójnej kolekcji.
 
-Można usunąć nazwy pól z deklaracji zwracanej wartości i zwraca krotka bez nazwy:
+Można usunąć nazwy pól z deklaracji zwracana wartość i zwrócić krotka bez nazwy:
 
 ```csharp
 private static (double, double, int) ComputeSumAndSumOfSquares(IEnumerable<double> sequence)
@@ -191,46 +191,46 @@ private static (double, double, int) ComputeSumAndSumOfSquares(IEnumerable<doubl
 }
 ```
 
-Pola to krotki są nazywane `Item1`, `Item2`, i `Item3`.
-Zaleca się podanie semantycznego nazw elementów krotek zwrócony z metody.
+Pola tego krotki są nazywane `Item1`, `Item2`, i `Item3`.
+Zalecane jest, aby podać semantycznego nazwy elementów krotek zwrócony z metody.
 
-Inny idiom, gdzie mogą być przydatne krotek jest podczas tworzenia zapytań LINQ. Wynik końcowy planowanego często zawiera niektóre, ale nie wszystkie właściwości wybrane obiekty.
+Idiom innego, gdzie krotek może być przydatne jest podczas tworzenia zapytania LINQ. Przewidywany wynik końcowy często zawiera niektóre, ale nie wszystkie właściwości obiekty są wybrane.
 
-Wyniki zapytania będą tradycyjnie projektu w sekwencji obiektów, które były typu anonimowego. Wiele ograniczeń, które przedstawione głównie, ponieważ typy anonimowe można nie znajdują się nazwy w zwracany typ metody. Przy użyciu alternatywnych `object` lub `dynamic` jako typ wyniku pochodzi z kosztami znaczących wydajności.
+Wyniki zapytania będą tradycyjnie projektu sekwencję obiektów, które były typu anonimowego. Wiele ograniczeń, przedstawione przede wszystkim, ponieważ typy anonimowe można nie zostaną w wygodny sposób mieć nazwy w typie zwracanym dla metody. Za pomocą rozwiązania alternatywne `object` lub `dynamic` jako typ wyniku pochodzi z kosztami istotnie poprawiającą wydajność.
 
-Zwracanie sekwencji krotki typu jest łatwe i nazwy i typy elementów są dostępne w czasie kompilacji i za pomocą narzędzia IDE.
-Rozważmy na przykład aplikację zadań do wykonania. Można zdefiniować klasę podobny do następującego do reprezentowania pojedynczy wpis na liście ToDo:
+Zwraca sekwencję krotki typu jest łatwe i nazwy i typy elementów są dostępne w czasie kompilacji, jak i za pomocą narzędzi IDE.
+Na przykład należy wziąć pod uwagę aplikację zadań do wykonania. Można zdefiniować klasę podobne do następujących czynności, aby reprezentować pojedynczy wpis na liście zadań do wykonania:
 
 [!code-csharp[ToDoItem](../../samples/snippets/csharp/tuples/tuples/projectionsample.cs#14_ToDoItem "To Do Item")]
 
-Twojej aplikacji dla urządzeń przenośnych może obsługiwać compact formę bieżącego zadań do wykonania, która wyświetla tylko tytuł. Czy kwerendy LINQ spowodowałoby projekcji który obejmuje tylko identyfikator i tytuł. Metoda, która zwraca sekwencję krotek wyraża również tego projektu:
+Twoje aplikacje mobilne mogą obsługiwać compact formularza bieżących elementów zadań do wykonania, która wyświetla tylko tytuł. Czy zapytania LINQ czyniłyby projekcji, zawiera tylko identyfikator i tytuł. Metody, która zwraca sekwencję krotek wyraża projektu oraz:
 
 [!code-csharp[QueryReturningTuple](../../samples/snippets/csharp/tuples/tuples/projectionsample.cs#15_QueryReturningTuple "Query returning a tuple")]
 
 > [!NOTE]
-> W języku C# 7.1 projekcje krotki umożliwiają tworzenie nazwanego krotek za pomocą elementów, w sposób podobny do właściwości nazw typów anonimowych. W powyższym kodzie `select` instrukcja w projekcji zapytań tworzy spójnej kolekcji, który ma elementy `ID` i `Title`.
+> W języku C# 7.1 projekcje krotki umożliwiają tworzenie nazwanego krotek, za pomocą elementów, w sposób podobny do nazw właściwości typów anonimowych. W powyższym kodzie `select` instrukcji w projekcji zapytań tworzy spójną kolekcją, która ma elementy `ID` i `Title`.
 
-Spójna kolekcja znajdująca się o nazwie może być częścią podpisu. Umożliwia kompilatorowi i narzędzia IDE zapewniają statyczne sprawdzania, czy używasz wynik poprawnie. Spójnej kolekcji o nazwie również przenosi informacje statycznego typu, a więc nie trzeba używać kosztowne czas wykonywania funkcji, takich jak odbicia lub dynamiczne powiązanie do pracy z wyników.
+Krotki o nazwie może być częścią podpisu. Dzięki temu kompilator i narzędzia IDE zapewniają statyczne, sprawdzanie, czy używasz wynik poprawnie. Nazwane krotki również przenosi informacje typu statycznego, więc nie ma potrzeby używania czas wykonywania kosztownych funkcji, takich jak odbicie lub dynamiczne powiązanie do pracy z wynikami.
 
-## <a name="deconstruction"></a>Deconstruction
+## <a name="deconstruction"></a>Dekonstrukcja
 
-Można rozpakować wszystkie elementy w krotce przez *deconstructing* zwróconych przez metodę spójnej kolekcji. Istnieją trzy różne sposoby deconstructing spójnych kolekcji.  Po pierwsze można jawnie deklarować typu każdego pola w nawiasy, aby utworzyć zmienne discrete dla poszczególnych elementów w spójnej kolekcji:
+Można rozpakować wszystkie elementy w krotce przez *dekonstrukcja* krotki zwracane przez metodę. Istnieją trzy różne sposoby dekonstrukcja krotek.  Po pierwsze można jawnie zadeklarować typ każdego pola, wewnątrz nawiasów, aby utworzyć zmienne dyskretnego dla poszczególnych elementów w spójnej kolekcji:
 
 [!code-csharp[Deconstruct](../../samples/snippets/csharp/tuples/tuples/statistics.cs#10_Deconstruct "Deconstruct")]
 
-Niejawnie wpisane zmienne dla każdego pola w krotce może deklarować także za pomocą `var` — słowo kluczowe poza nawiasy:
+Niejawnie wpisane zmienne dla każdego pola w krotce można również zadeklarować za pomocą `var` — słowo kluczowe poza nawiasy:
 
 [!code-csharp[DeconstructToVar](../../samples/snippets/csharp/tuples/tuples/statistics.cs#11_DeconstructToVar "Deconstruct to Var")]
 
-Jest również używać `var` — słowo kluczowe z dowolnego lub wszystkich deklaracji zmiennych wewnątrz nawiasów. 
+Jest również użycie `var` — słowo kluczowe z dowolnego lub wszystkich deklaracji zmiennych wewnątrz nawiasów. 
 
 ```csharp
 (double sum, var sumOfSquares, var count) = ComputeSumAndSumOfSquares(sequence);
 ```
 
-Nie można użyć określonego typu przed nawiasem, nawet w przypadku każdego pola w spójnej kolekcji ma tego samego typu.
+Nie można użyć określonego typu przed nawiasem, nawet wtedy, gdy każde pole w spójnej kolekcji ma tego samego typu.
 
-Można deconstruct spójnych kolekcji zawierający istniejących deklaracji również:
+Można dekonstruować krotki z istniejącej deklaracji także:
 
 ```csharp
 public class Point
@@ -243,35 +243,35 @@ public class Point
 ```
 
 > [!WARNING]
->  Nie można mieszać istniejących deklaracji z deklaracjami wewnątrz nawiasów. Na przykład następujące jest niedozwolone: `(var x, y) = MyMethod();`. To powoduje błąd CS8184, ponieważ *x* jest zadeklarowana wewnątrz nawiasów i *y* wcześniej jest zadeklarowany w innych miejscach.
+>  Nie można łączyć istniejące deklaracje za pomocą deklaracji wewnątrz nawiasów. Na przykład następujące jest niedozwolone: `(var x, y) = MyMethod();`. Powoduje to błąd CS8184, ponieważ *x* jest zadeklarowana wewnątrz nawiasów i *y* wcześniej zadeklarowano gdzie indziej.
 
-### <a name="deconstructing-user-defined-types"></a>Deconstructing typy danych zdefiniowane przez użytkownika
+### <a name="deconstructing-user-defined-types"></a>Dekonstrukcja typy zdefiniowane przez użytkownika
 
-Dowolny typ krotki można deconstructed, jak pokazano powyżej. Jest również łatwo włączyć deconstruction na dowolnym typie zdefiniowane przez użytkownika (klasy, struktury lub nawet interfejsów).
+Może zostać zdekonstruowana dowolnego typu krotki, jak pokazano powyżej. Jest również łatwo włączyć dekonstrukcja z każdym typem zdefiniowanych przez użytkownika (klasy, struktury lub nawet interfejsów).
 
-Autor typ można określić jedną lub więcej `Deconstruct` metod, które przypisać wartości do dowolnej liczby `out` zmienne reprezentującego elementy danych, które tworzą typu. Na przykład następująca `Person` definiuje typ `Deconstruct` metodę, która deconstructs obiektu osoby do elementów reprezentujących imię i nazwisko:
+Autor typu można zdefiniować co najmniej jeden `Deconstruct` metod, które przypisać wartości do dowolnej liczby `out` zmienne reprezentujących elementy danych, które tworzą typu. Na przykład następująca `Person` typ definiuje `Deconstruct` metodę, która deconstructs osoby do elementów reprezentujących imię i nazwisko:
 
 [!code-csharp[TypeWithDeconstructMethod](../../samples/snippets/csharp/tuples/tuples/person.cs#12_TypeWithDeconstructMethod "Type with a deconstruct method")]
 
-Metoda deconstruct umożliwia przypisanie z `Person` na dwa ciągi, reprezentujący `FirstName` i `LastName` właściwości:
+Metoda dekonstrukcji umożliwia przypisanie z `Person` na dwa ciągi znaków reprezentujące `FirstName` i `LastName` właściwości:
 
 [!code-csharp[Deconstruct Type](../../samples/snippets/csharp/tuples/tuples/program.cs#12A_DeconstructType "Deconstruct a class type")]
 
-Można włączyć deconstruction nawet w przypadku typów, które autorów.
-`Deconstruct` Metoda może być — metoda rozszerzenia rozpakowuje danych dostępnych elementów członkowskich obiektu. Poniżej przedstawiono przykład `Student` Typ pochodny `Person` typ i metodę rozszerzenia, które deconstructs `Student` do trzech zmiennych, reprezentujący `FirstName`, `LastName`i `GPA`:
+Można włączyć dekonstrukcja nawet w przypadku typów, które autorów.
+`Deconstruct` Metoda może być metodą rozszerzenia, którą rozpakowywana członków dostępnych danych obiektu. Poniżej przedstawiono przykład `Student` typu pochodną `Person` typu i metodę rozszerzenia, które deconstructs `Student` do trzech zmiennych, reprezentujący `FirstName`, `LastName`i `GPA`:
 
 [!code-csharp[ExtensionDeconstructMethod](../../samples/snippets/csharp/tuples/tuples/person.cs#13_ExtensionDeconstructMethod "Type with a deconstruct extension method")]
 
-A `Student` ma teraz dostępne dwa `Deconstruct` metody: zadeklarować metody rozszerzenia dla `Student` typy i członek `Person` typu. Zarówno znajdują się w zakresie oraz umożliwia `Student` do można deconstructed do zmiennych dwóch lub trzech.
-Jeśli student można przypisać do trzech zmiennych, imię, ostatni nazwę i GPA są wszystkie zwracane. Jeśli student przydzielić dwie zmienne, zwracane są tylko imię i nazwisko.
+A `Student` ma teraz dostępne dwie `Deconstruct` metody: metoda rozszerzenia zadeklarowany dla `Student` typów i członek `Person` typu. Znajdują się zarówno w zakresie i który umożliwia `Student` można zostać zdekonstruowana do dwóch zmiennych lub trzy.
+Jeśli student można przypisać do trzech zmiennych, imienia, ostatni nazwę i GPA wszystkie zwracane są. Jeśli przypiszesz student dwie zmienne, zwracane są tylko imię i nazwisko.
 
 [!code-csharp[Deconstruct extension method](../../samples/snippets/csharp/tuples/tuples/program.cs#13A_DeconstructExtension "Deconstruct a class type using an extension method")]
 
-Należy zachować ostrożność, definiowania wielu `Deconstruct` metody w klasie lub hierarchia klas. Wiele `Deconstruct` metod, które mają taką samą liczbę `out` parametry szybko może powodować niejednoznaczności. Obiekty wywołujące nie można łatwo wywołać żądaną `Deconstruct` metody.
+Należy zachować ostrożność, Definiowanie wielu `Deconstruct` metody w klasie lub hierarchii klas. Wiele `Deconstruct` metody, które mają taką samą liczbę `out` parametry szybko mogą powodować niejednoznaczności. Obiekty wywołujące nie można łatwo wywołać żądaną `Deconstruct` metody.
 
-W tym przykładzie jest minimalnym możliwości niejednoznaczne wywołanie ponieważ `Deconstruct` metodę `Person` ma dwa produkt wyjściowy parametry i `Deconstruct` metoda `Student` ma trzy.
+W tym przykładzie ma minimalne możliwości niejednoznaczne wywołanie ponieważ `Deconstruct` metodę `Person` ma dwa produkt wyjściowy parametrów, a `Deconstruct` metodę `Student` ma trzy.
 
-Operatory deconstruction nie uczestniczą w testowanie równości. Poniższy przykład generuje błąd kompilatora CS0019:
+Operatory dekonstrukcja nie biorą udziału w testowaniu równości. Poniższy przykład generuje błąd kompilatora CS0019:
 
 ```csharp
 Person p = new Person("Althea", "Goodwin");
@@ -279,8 +279,8 @@ if (("Althea", "Goodwin") == p)
     Console.WriteLine(p);
 ```
 
-`Deconstruct` Metoda można przekonwertować `Person` obiektu `p` spójnych kolekcji zawierający dwa ciągi, ale nie jest stosowana w kontekście testy równości.
+`Deconstruct` Metoda można przekonwertować `Person` obiektu `p` do spójnych kolekcji zawierający dwa ciągi, ale nie ma zastosowania w kontekście testy równości.
 
 ## <a name="conclusion"></a>Wniosek 
 
-Nowa funkcja języka i biblioteki obsługi o nazwie krotek ułatwia do pracy z projektami używające struktury danych, przechowywać wiele elementów, które nie określają zachowanie, jak klasy i struktury. Jest łatwy i zwięzłe używany spójnych kolekcji dla tych typów. Pobierz wszystkie zalety kontrola typów statycznych, bez konieczności tworzenia typów przy użyciu na pełniejsze `class` lub `struct` składni. Mimo tego, że są one najbardziej przydatny w przypadku metody narzędziowe, które są `private`, lub `internal`. Tworzenie typów zdefiniowanych przez użytkownika, albo `class` lub `struct` typy gdy publicznej metody zwróci wartość, która ma wiele elementów.
+Nowy język i biblioteki obsługę krotek nazwane sprawia, że znacznie łatwiej jest pracować z projektami używające struktur danych, które przechowują wiele elementów, ale nie definiują zachowania, tak jak klas i struktur. Jest to łatwa i zwięzła, aby używać spójnych kolekcji dla tych typów. Możesz korzystać ze wszystkich zalet sprawdzania typu statycznego, bez konieczności tworzenia typów przy użyciu bardziej szczegółowy `class` lub `struct` składni. Mimo to najbardziej przydatny w przypadku metod narzędzie, które są `private`, lub `internal`. Tworzenie typów zdefiniowanych przez użytkownika, albo `class` lub `struct` typów podczas publicznej metody zwracają wartość, która ma wiele elementów.

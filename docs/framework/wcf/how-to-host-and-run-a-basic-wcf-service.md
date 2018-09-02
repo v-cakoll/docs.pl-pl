@@ -8,17 +8,17 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: f1c56ed83fa214cf781a833e05642635ac24b0c5
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: e2bf16bd07c7ac9d918a4ae95d7f4aa185d436ec
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753503"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404674"
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Instrukcje: Hostowanie i uruchamianie podstawowej usługi Windows Communication Foundation
-Jest to trzeci sześciu zadania wymagane do utworzenia aplikacji Windows Communication Foundation (WCF). Omówienie sześciu wszystkich zadań, zobacz [Wprowadzenie — samouczek](../../../docs/framework/wcf/getting-started-tutorial.md) tematu.  
+Jest to trzecia sześciu zadań podrzędnych, wymagane do utworzenia aplikacji Windows Communication Foundation (WCF). Omówienie wszystkich sześciu zadań, zobacz [Samouczek wprowadzający](../../../docs/framework/wcf/getting-started-tutorial.md) tematu.  
   
- W tym temacie opisano, jak udostępniać usługi Windows Communication Foundation (WCF) w aplikacji konsoli. Ta procedura obejmuje następujące kroki:  
+ W tym temacie opisano, jak hostować usługi Windows Communication Foundation (WCF) w aplikacji konsoli. Ta procedura obejmuje następujące kroki:  
   
 -   Utwórz projekt aplikacji konsoli do obsługi usługi.  
   
@@ -28,19 +28,19 @@ Jest to trzeci sześciu zadania wymagane do utworzenia aplikacji Windows Communi
   
 -   Otworzyć hosta usługi.  
   
- Pełna lista kod napisany w tym zadaniu podano w przykładzie poniżej procedury.  
+ Pełną listę kod napisany w ramach tego zadania jest dostępna w przykładzie zamieszczonym po procedurze.  
   
 ## <a name="to-create-a-new-console-application-to-host-the-service"></a>Aby utworzyć nową aplikację konsoli do obsługi usługi  
   
-1.  Utwórz nowy projekt aplikacji konsoli, klikając prawym przyciskiem myszy na wprowadzenie rozwiązanie, jeśli zostanie wybrana, **Dodaj**, **nowy projekt**. W **Dodawanie nowego projektu** dialog w lewej strony okna dialogowego wyboru **Windows** w obszarze **C#** lub **VB**. W górnej części okna dialogowego wybierz **aplikacji konsoli**. Nazwa projektu GettingStartedHost.  
+1.  Utwórz nowy projekt aplikacji konsoli, klikając prawym przyciskiem myszy na wprowadzenie do rozwiązania, wybierając, **Dodaj**, **nowy projekt**. W **Dodaj nowy projekt** dialog w lewej części okna dialogowego wyboru **Windows** w obszarze **C#** lub **VB**. W górnej części okna dialogowego wybierz **aplikację Konsolową**. Nazwij projekt GettingStartedHost.  
   
-2.  Ustaw docelową platformę projektu GettingStartedHost .NET Framework 4.5, klikając prawym przyciskiem myszy **GettingStartedHost** w Eksploratorze rozwiązań i wybierając **właściwości**. W polu listy rozwijanej etykietą **platformy docelowej** wybierz **.NET Framework 4.5**. Ustawienie platformy docelowej dla projektu VB różni się nieco, w oknie dialogowym właściwości projektu GettingStartedHost, kliknij przycisk **skompilować** po lewej stronie ekranu, a następnie kliknij pozycję **zaawansowane kompilacji Opcje** przycisk w lewym dolnym rogu okna dialogowego. Następnie wybierz **.NET Framework 4.5** w polu listy rozwijanej etykietą **platformy docelowej**.  
+2.  Ustaw docelową platformę projektu GettingStartedHost .NET Framework 4.5, klikając prawym przyciskiem myszy **GettingStartedHost** w Eksploratorze rozwiązań i wybierając polecenie **właściwości**. W polu listy rozwijanej etykietą **platformę docelową** wybierz **.NET Framework 4.5**. Platformę docelową dla projektu VB jest nieco inne w oknie dialogowym właściwości projektu GettingStartedHost kliknij opcję **skompilować** karcie po lewej stronie ekranu, a następnie kliknij przycisk **zaawansowane kompilacji Opcje** przycisk w lewym dolnym rogu okna dialogowego. Następnie wybierz pozycję **.NET Framework 4.5** w polu listy rozwijanej etykietą **platformę docelową**.  
   
      Platforma docelowa spowoduje, że ustawienie [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] ponowne załadowanie rozwiązania, naciśnij klawisz **OK** po wyświetleniu monitu.  
   
-3.  Dodaj odwołanie do projektu GettingStartedLib do projektu GettingStartedHost, klikając prawym przyciskiem myszy **odwołania** GettingStartedHost projekt w Eksploratorze rozwiązań i wybierz folder **Dodaj odwołanie** . W **Dodaj odwołanie** okno dialogowe, wybierz opcję **rozwiązania** po lewej stronie okna dialogowego i wybierz GettingStartedLib w w górnej części okna dialogowego i kliknij przycisk **Dodaj**. Dzięki temu typów zdefiniowanych w GettingStartedLib dostępne do projektu GettingStartedHost.  
+3.  Dodaj odwołanie do projektu GettingStartedLib do projektu GettingStartedHost przez kliknięcie prawym przyciskiem myszy **odwołania** folderu w projekcie GettingStartedHost w Eksploratorze rozwiązań i wybierz pozycję **Dodaj odwołanie** . W **Dodaj odwołanie** okno dialogowe, wybierz opcję **rozwiązania** w lewej części okna dialogowego i wybierz GettingStartedLib w sekcji Centrum okno dialogowe i kliknij przycisk **Dodaj**. To sprawia, że typy zdefiniowane w GettingStartedLib GettingStartedHost projektowi.  
   
-4.  Dodaj odwołanie do System.ServiceModel do projektu GettingStartedHost, klikając prawym przyciskiem myszy **odwołania** GettingStartedHost projekt w Eksploratorze rozwiązań i wybierz folder **Dodaj** Odwołanie. W **Dodaj odwołanie** oknie dialogowym wybierz pozycję **Framework** po lewej stronie okna dialogowego. W polu tekstowym wyszukiwania zestawów, wpisz w `System.ServiceModel`. W górnej części okna dialogowego wybierz **System.ServiceModel**, kliknij przycisk **Dodaj** przycisk **Zamknij** przycisku. Zapisz rozwiązania przez kliknięcie przycisku Zapisz wszystko pod menu głównego.  
+4.  Dodaj odwołanie do System.ServiceModel do projektu GettingStartedHost, klikając prawym przyciskiem myszy **odwołania** folderu w projekcie GettingStartedHost w Eksploratorze rozwiązań i wybierz pozycję **Dodaj** Odwołanie. W **Dodaj odwołanie** okna dialogowego wybierz **Framework** po lewej stronie okna dialogowego. W polu tekstowym wyszukiwania zestawów, wpisz `System.ServiceModel`. W górnej części okna dialogowego wybierz **System.ServiceModel**, kliknij przycisk **Dodaj** przycisk, a następnie kliknij przycisk **Zamknij** przycisku. Zapisz rozwiązania, klikając przycisk Zapisz wszystko pod menu głównego.  
   
 ### <a name="to-host-the-service"></a>Do obsługi usługi  
   
@@ -147,29 +147,35 @@ Jest to trzeci sześciu zadania wymagane do utworzenia aplikacji Windows Communi
     End Module  
     ```  
   
-    1.  Krok 1 — tworzy wystąpienie klasy identyfikatora Uri, aby pomieścić adres podstawowy usługi. Usługi są identyfikowane przez adres URL, który zawiera adres podstawowy i opcjonalnie identyfikatora URI. Adres podstawowy jest sformatowany w następujący sposób: [transportu] :// [nazwa komputera lub domeny] [: opcjonalny # portu] / [Opcjonalny identyfikator URI segmentu] adres podstawowy usługi Kalkulator używa transportu HTTP, localhost, port 8000 i identyfikator URI segmentu "GettingStarted"  
+    1.  Krok 1 — tworzy wystąpienie klasy Uri do przechowywania adres podstawowy usługi. Usługi są identyfikowane przez adres URL, który zawiera adres podstawowy i opcjonalnie identyfikatora URI. Adres podstawowy jest sformatowany w następujący sposób: [transportu] :// [nazwa komputera lub domeny] [: opcjonalne # portu] / [opcjonalne segmentem identyfikatora URI] adres podstawowy usługi Kalkulator używa protokołu HTTP, localhost, port 8000 i identyfikator URI segmentu "GettingStarted"  
   
-    2.  Krok 2 — tworzy wystąpienie <xref:System.ServiceModel.ServiceHost> klasy do obsługi usługi. Konstruktor przyjmuje dwa parametry typu klasy, która implementuje kontraktu usługi, a adres podstawowy usługi.  
+    2.  Krok 2 — tworzy wystąpienie <xref:System.ServiceModel.ServiceHost> klasy do obsługi usługi. Konstruktor przyjmuje dwa parametry typu klasy, który implementuje ten kontrakt usługi i podstawowego adresu usługi.  
   
-    3.  Krok 3 — tworzy <xref:System.ServiceModel.Description.ServiceEndpoint> wystąpienia. Punkt końcowy usługi składa się z adresu, powiązania i kontrakt usługi. <xref:System.ServiceModel.Description.ServiceEndpoint> Konstruktor ma w związku z tym typem interfejsu kontraktu usługi, powiązanie i adres. Kontrakt usługi jest `ICalculator`, co zdefiniowany i implementować typ usługi. Powiązanie używane w tym przykładzie jest <xref:System.ServiceModel.WSHttpBinding> czyli wbudowane powiązania, które jest używane do łączenia z punktów końcowych, które odpowiadają WS-* specyfikacji. Aby uzyskać więcej informacji na temat wiązania WCF, zobacz [omówienie powiązań WCF](../../../docs/framework/wcf/bindings-overview.md). Ten adres jest dołączany do adres podstawowy do identyfikowania punktu końcowego. Adres podany w ten kod jest "CalculatorService", dlatego pełny adres punktu końcowego jest `"http://localhost:8000/GettingStarted/CalculatorService"` Dodawanie punktu końcowego usługi jest opcjonalne, korzystając z programu .NET Framework 4.0 lub nowszy. W tych wersjach Jeśli punkty końcowe nie są dodawane w konfiguracji, lub kod WCF dodaje jeden domyślny punkt końcowy dla każdej kombinacji adresu podstawowego i kontraktu zaimplementowanych przez usługę. Aby uzyskać więcej informacji na temat domyślne punkty końcowe zobacz [Określanie adresu punktu końcowego](../../../docs/framework/wcf/specifying-an-endpoint-address.md). Aby uzyskać więcej informacji na temat domyślne punkty końcowe, powiązania i zachowania, zobacz [uproszczony konfiguracji](../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+    3.  Krok 3 — tworzy <xref:System.ServiceModel.Description.ServiceEndpoint> wystąpienia. Punkt końcowy usługi składa się z adresu, powiązanie i kontraktu usługi. <xref:System.ServiceModel.Description.ServiceEndpoint> Konstruktor przyjmuje w związku z tym typem interfejsu kontraktu usługi, powiązanie i adres. Umowa serwisowa jest `ICalculator`, zdefiniowane przez użytkownika, która implementuje typu usługi. Wiązanie używane w tym przykładzie jest <xref:System.ServiceModel.WSHttpBinding> czyli wbudowane powiązania, które służy do nawiązywania połączenia z punktami końcowymi, które odpowiadają WS-* specyfikacji. Aby uzyskać więcej informacji na temat wiązania WCF, zobacz [omówienie powiązań WCF](../../../docs/framework/wcf/bindings-overview.md). Adres jest dołączany do podstawowego adresu do identyfikowania punktu końcowego. Adres podany w tym kodzie jest "CalculatorService", dlatego jest w pełni kwalifikowany adres punktu końcowego `"http://localhost:8000/GettingStarted/CalculatorService"`.  
   
         > [!IMPORTANT]
-        >  Dodawanie punktu końcowego usługi jest opcjonalne, korzystając z programu .NET Framework 4 lub nowszej. W tych wersjach Jeśli punkty końcowe nie są dodawane w konfiguracji, lub kod WCF dodaje jeden domyślny punkt końcowy dla każdej kombinacji adresu podstawowego i kontraktu zaimplementowanych przez usługę. Aby uzyskać więcej informacji na temat domyślne punkty końcowe zobacz [Określanie adresu punktu końcowego](../../../docs/framework/wcf/specifying-an-endpoint-address.md). Aby uzyskać więcej informacji na temat domyślne punkty końcowe, powiązania i zachowania, zobacz [uproszczony konfiguracji](../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+        >  Dodawanie punktu końcowego usługi jest opcjonalny podczas korzystania z programu .NET Framework 4 lub nowszej. W tych wersjach Jeśli punkty końcowe nie są dodawane w kodzie lub konfiguracji usługi WCF dodaje jeden domyślny punkt końcowy dla każdej kombinacji adresu podstawowego i kontrakt implementowane przez usługę. Aby uzyskać więcej informacji na temat domyślne punkty końcowe zobacz [Określanie adresu punktu końcowego](../../../docs/framework/wcf/specifying-an-endpoint-address.md). Aby uzyskać więcej informacji na temat domyślnych punktów końcowych, powiązania i zachowań, zobacz [uproszczona konfiguracja](../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
-    4.  Krok 4 — Włączanie wymiany metadanych. Klienci będą używać wymiany metadanych do generowania serwerów proxy, które będą używane do wywołania operacji usługi. Umożliwia tworzenie wymiany metadanych <xref:System.ServiceModel.Description.ServiceMetadataBehavior> wystąpienia, ustaw go w <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> właściwości `true`i Dodaj zachowanie w <!--zz <xref:System.ServiceModel.ServiceHost.Behaviors%2A>  --> `System.ServiceModel.ServiceHost.Behaviors%2A` Kolekcja <xref:System.ServiceModel.ServiceHost> wystąpienia.  
+    4.  Krok 4 — Włączanie wymiany metadanych. Klienci będą używać wymiany metadanych do Generowanie serwerów proxy, które będą używane do wywoływania operacji usługi. Umożliwia tworzenie wymiany metadanych <xref:System.ServiceModel.Description.ServiceMetadataBehavior> wystąpienia, należy ustawić go w <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> właściwości `true`i dodać zachowanie, aby <!--zz <xref:System.ServiceModel.ServiceHost.Behaviors%2A>  --> `System.ServiceModel.ServiceHost.Behaviors%2A` zbiór <xref:System.ServiceModel.ServiceHost> wystąpienia.  
   
-    5.  Krok 5 — Otwórz <xref:System.ServiceModel.ServiceHost> nasłuchiwanie dla komunikatów przychodzących. Wprowadź powiadomienia kod czeka na użytkownikowi trafień. Jeśli nie zrobisz, aplikacja zostanie natychmiast zamknięta i usługa zostanie zamknięta. Również ogłoszeniu bloku try/catch. Po <xref:System.ServiceModel.ServiceHost> został uruchomiony, inny kod znajduje się w bloku try/catch. Aby uzyskać więcej informacji na temat bezpiecznego przechwytywanie wyjątków zgłaszanych przez <xref:System.ServiceModel.ServiceHost>, zobacz [unikanie problemów z instrukcją Using](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)  
+    5.  Krok 5 — Open <xref:System.ServiceModel.ServiceHost> do nasłuchiwania pod kątem przychodzących wiadomości. Zauważ, że kod oczekuje na użytkownika trafić wprowadzić. Jeśli nie tego zrobić, aplikacja zostanie natychmiast zamknięta i usługa zostanie zamknięta. Zwróć również uwagę bloku try/catch używane. Po <xref:System.ServiceModel.ServiceHost> został uruchomiony, inny kod znajduje się w bloku try/catch. Aby uzyskać więcej informacji na temat bezpiecznego przechwytywanie wyjątków zgłaszanych przez <xref:System.ServiceModel.ServiceHost>, zobacz [unikanie problemów z instrukcją Using](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)  
   
+> [!IMPORTANT]
+> Edytowanie pliku App.config w GettingStartedLib w celu odzwierciedlenia zmian w kodzie: 
+> 1. Zmień wiersz 14 `<service name="GettingStartedLib.CalculatorService">`
+> 2. Zmień wiersz 17 `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`
+> 3. Zmień wiersz 22 `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.ICalculator">`
+        
 ### <a name="to-verify-the-service-is-working"></a>Aby sprawdzić, czy usługa działa  
   
-1.  Uruchom aplikację konsolową GettingStartedHost z wewnątrz [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]. Podczas uruchamiania [!INCLUDE[wv](../../../includes/wv-md.md)] i nowszych systemów operacyjnych, usługi musi być uruchomiony z uprawnieniami administratora. Ponieważ program Visual Studio zostało uruchomione z uprawnieniami administratora, GettingStartedHost jest również uruchamiane z uprawnieniami administratora. Można również uruchomić wiersz polecenia uruchomiony z uprawnieniami administratora i uruchom service.exe znajdujące się w nim.  
+1.  Uruchom aplikację konsolową GettingStartedHost z wewnątrz [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]. Podczas uruchamiania na [!INCLUDE[wv](../../../includes/wv-md.md)] i nowszych systemów operacyjnych, usługa musi być uruchomiony z uprawnieniami administratora. Ponieważ program Visual Studio zostało uruchomione z uprawnieniami administratora, GettingStartedHost również jest uruchamiane z uprawnieniami administratora. Można również rozpocząć nowy wiersz polecenia, w których jest on uruchomiony z uprawnieniami administratora i uruchom service.exe znajdujący się w nim.  
   
-2.  Otwórz program Internet Explorer i przejdź do debugowania usługi strony na `http://localhost:8000/GettingStarted/CalculatorService`.  
+2.  Otwórz program Internet Explorer i przejdź do usługi debugowania strony na `http://localhost:8000/GettingStarted/CalculatorService`.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład zawiera kontrakt usługi i implementację z poprzednich kroków samouczka i hostuje usługę w aplikacji konsoli.  
   
- Aby skompilować to z wiersza polecenia kompilatora, kompilowanie IService1.cs i Service1.cs do biblioteki klasy odwołujące się do `System.ServiceModel.dll`. I skompiluj plik Program.cs aplikacji konsoli.  
+ Aby skompilować to za pomocą kompilatora wiersza polecenia, skompilować IService1.cs i Service1.cs do biblioteki klas odwołuje się do `System.ServiceModel.dll`. I skompiluj plik Program.cs aplikacji konsoli.  
   
 ```csharp
 // IService1.cs  
@@ -416,9 +422,9 @@ End Module
 ```  
   
 > [!NOTE]
->  Usługi, takie jak ta wymaga uprawnienia do rejestrowania adresów HTTP na komputerze w celu nasłuchiwania. To uprawnienie mają kont administratorów, ale konta bez uprawnień administratora musi mieć uprawnienie dla przestrzeni nazw protokołu HTTP. Aby uzyskać więcej informacji o sposobie konfiguracji rezerwacji przestrzeni nazw, zobacz [Konfigurowanie protokołów HTTP i HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md). Podczas uruchamiania programu Visual Studio, service.exe musi zostać uruchomione z uprawnieniami administratora.  
+>  Usługi, takie jak tego wymaga uprawnienia do rejestrowania adresy HTTP na komputerze w celu nasłuchiwania. Administrator konta mają to uprawnienie, ale konta bez uprawnień administratora musi mieć uprawnienie dla przestrzeni nazw protokołu HTTP. Aby uzyskać więcej informacji o sposobie konfigurowania rezerwacji przestrzeni nazw, zobacz [Konfigurowanie protokołów HTTP i HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md). Podczas uruchamiania w programie Visual Studio, service.exe muszą być uruchomione z uprawnieniami administratora.  
   
- Obecnie usługa jest uruchomiona. Przejdź do [porady: Tworzenie klienta](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Aby uzyskać informacje dotyczące rozwiązywania problemów, zobacz [Rozwiązywanie problemów z Samouczek wprowadzający](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).  
+ Teraz usługa jest uruchomiona. Przejdź do [porady: Tworzenie klienta](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Aby uzyskać informacje dotyczące rozwiązywania problemów, zobacz [Rozwiązywanie problemów z samouczka Wprowadzenie](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzenie](../../../docs/framework/wcf/samples/getting-started-sample.md)  

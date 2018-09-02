@@ -1,26 +1,26 @@
 ---
-title: Instalator przykład kopiowania zbiorczego
+title: Konfiguracja przykładu kopiowania zbiorczego
 ms.date: 03/30/2017
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
-ms.openlocfilehash: cb4e92529c8e68bd7e47e5943f7e79dcc97603e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 71daf489fdf5e7e12594e798bc3ac01b1c76b027
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362442"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402379"
 ---
-# <a name="bulk-copy-example-setup"></a>Instalator przykład kopiowania zbiorczego
-<xref:System.Data.SqlClient.SqlBulkCopy> Klasa może być używana do zapisu danych tylko do tabel programu SQL Server. Przykłady kodu przedstawiono w tym temacie użyć przykładowej bazy danych programu SQL Server **AdventureWorks**. Aby uniknąć, zmieniając istniejące tabele przykłady kodu zapisu danych do tabel, które należy najpierw utworzyć.  
+# <a name="bulk-copy-example-setup"></a>Konfiguracja przykładu kopiowania zbiorczego
+<xref:System.Data.SqlClient.SqlBulkCopy> Klasa może być używana w celu zapisania danych tylko do tabel programu SQL Server. Przykłady kodu, przedstawione w tym temacie Użyj przykładowej bazy danych programu SQL Server **AdventureWorks**. Aby uniknąć, zmieniając istniejące tabele przykłady kodu zapisu danych do tabel, które należy najpierw utworzyć.  
   
- **BulkCopyDemoMatchingColumns** i **BulkCopyDemoDifferentColumns** tabele są zarówno na podstawie **AdventureWorks** **Production.Products**  tabeli. W przykładach kodu, korzystających z tych tabel, dane są dodawane z **Production.Products** tabeli do jednej z tych tabel próbki. **BulkCopyDemoDifferentColumns** tabela jest używana, gdy przykładową sposób mapowania kolumn z źródła danych do tabeli docelowej; **BulkCopyDemoMatchingColumns** służy do większości innych próbek.  
+ **BulkCopyDemoMatchingColumns** i **BulkCopyDemoDifferentColumns** tabele bazują na **AdventureWorks** **Production.Products**  tabeli. W przykładach kodu, które używają tych tabel, dane są dodawane od **Production.Products** tabeli do jednej z tych tabel próbki. **BulkCopyDemoDifferentColumns** tabela jest używana, gdy w przykładzie pokazano, jak mapować kolumny z danych źródłowych do tabeli docelowej; **BulkCopyDemoMatchingColumns** jest używany dla większości innych przykładów.  
   
- Kilka przykładów kodu pokazują, jak używać jednej <xref:System.Data.SqlClient.SqlBulkCopy> klasa umożliwiająca zapisanie z wieloma tabelami. Dla tych przykładów **BulkCopyDemoOrderHeader** i **BulkCopyDemoOrderDetail** tabele są używane jako tabel docelowych. Te tabele są oparte na **Sales.SalesOrderHeader** i **Sales.SalesOrderDetail** tabelach **AdventureWorks**.  
+ Kilka przykładów kodu pokazują, jak za jego pomocą <xref:System.Data.SqlClient.SqlBulkCopy> klasę umożliwiającą zapisanie z wieloma tabelami. Dla tych przykładów **BulkCopyDemoOrderHeader** i **BulkCopyDemoOrderDetail** tabele są używane jako tabel docelowych. Te tabele są oparte na **Sales.SalesOrderHeader** i **Sales.SalesOrderDetail** tabelach **AdventureWorks**.  
   
 > [!NOTE]
->  **SqlBulkCopy** podano przykłady kodu, aby zademonstrować przy użyciu składni **SqlBulkCopy** tylko. Jeśli tabele źródłowy i docelowy znajdują się w tym samym wystąpieniu programu SQL Server, jest łatwiejsze i szybsze do używania języka Transact-SQL `INSERT … SELECT` instrukcji, aby skopiować dane.  
+>  **SqlBulkCopy** podano przykłady kodu, aby zademonstrować przy użyciu składni **SqlBulkCopy** tylko. Jeśli tabele źródłowy i docelowy znajdują się w tym samym wystąpieniu programu SQL Server, jest łatwiejsze i szybsze użyj instrukcji Transact-SQL `INSERT … SELECT` instrukcję, aby skopiować dane.  
   
 ## <a name="table-setup"></a>Ustawienia tabeli  
- Aby utworzyć tabele niezbędne dla przykładów kodu, by działała poprawnie, należy uruchomić następujące instrukcje języka Transact-SQL w bazie danych programu SQL Server.  
+ Aby utworzyć tabele wymagane w przypadku przykładów kodu, by działała poprawnie, należy uruchomić następujące instrukcje języka Transact-SQL w bazie danych programu SQL Server.  
   
 ```  
 USE AdventureWorks  
@@ -83,4 +83,4 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderDetail]([SalesOrderID] [int] NOT NULL,
   
 ## <a name="see-also"></a>Zobacz też  
  [Operacje kopiowania masowego w programie SQL Server](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

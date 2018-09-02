@@ -1,16 +1,16 @@
 ---
-title: '&lt;Tożsamości&gt;'
+title: '&lt;Tożsamość&gt;'
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: 1fc47b9595f409cf375dc75f2bf43e83f58491df
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: c77f60badd80973f0eeb36f6195b1d4b7617c386
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071295"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404273"
 ---
-# <a name="ltidentitygt"></a>&lt;Tożsamości&gt;
-Element tożsamości pozwala deweloperowi klienta określić w czasie projektu oczekiwaną tożsamość usługi. W procesie uzgadniania między klientem a usługą infrastruktury usług Windows Communication Foundation (WCF) sprawdzi, czy tożsamość pasuje do oczekiwanej usługi wartości tego elementu i w związku z tym mogą być uwierzytelniane. Aby uzyskać więcej informacji, zobacz [uwierzytelnianie i tożsamość usługi](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+# <a name="ltidentitygt"></a>&lt;Tożsamość&gt;
+Element tożsamości pozwala deweloperowi klienta określić w czasie projektu oczekiwaną tożsamość usługi. W procesu uzgadniania między klientem a usługą infrastruktury usług Windows Communication Foundation (WCF) gwarantuje, że tożsamość pasuje do oczekiwanej usługi wartości tego elementu i dlatego może zostać uwierzytelniony. Aby uzyskać więcej informacji, zobacz [uwierzytelnianie i tożsamość usług](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
  \<system.ServiceModel>  
 \<Klient >  
@@ -43,23 +43,23 @@ Element tożsamości pozwala deweloperowi klienta określić w czasie projektu o
   
 |Element|Opis|  
 |-------------|-----------------|  
-|certificate|Określa ustawienia certyfikatu X.509. Ten element jest typu <xref:System.ServiceModel.Configuration.CertificateElement>. Zawiera ona atrybut `encodedValue` oznacza to ciąg, który określa wartość kodowane przez ten certyfikat.|  
+|certificate|Określa ustawienia certyfikatu X.509. Ten element jest typu <xref:System.ServiceModel.Configuration.CertificateElement>. Zawiera ona atrybut `encodedValue` oznacza to ciąg, który określa wartość zakodowany przez ten certyfikat.|  
 |certificateReference|Określa ustawienia dla walidacji certyfikatu X.509. Ten element jest typu <xref:System.ServiceModel.Configuration.CertificateReferenceElement>.|  
 |dns|Określa certyfikat X.509 używany do uwierzytelniania usługi DNS. Ten element zawiera atrybut `value` jest ciągiem i zawiera rzeczywistej tożsamości.|  
-|rsa|Określa wartość pola RSA certyfikat X.509 używany do uwierzytelniania usługi na kliencie. Ten element zawiera atrybut `value` jest ciągiem i zawiera rzeczywistej tożsamości|  
-|servicePrincipalName|Określa tożsamość głównej nazwy (usługi SPN) serwera, który jest nazwa główna używana przez klienta do unikatowej identyfikacji wystąpienia usługi. Ten element zawiera atrybut `value` jest ciągiem i zawiera rzeczywistą nazwą podmiotu zabezpieczeń. Ten element jest typu <xref:System.ServiceModel.Configuration.ServicePrincipalNameElement>.|  
-|userPrincipalName|Określa tożsamość głównej nazwy (UPN) użytkownika, który jest typem nazwa logowania użytkownika w sieci. Główna nazwa użytkownika zawiera nazwę obiektu użytkownika używane w usłudze Active Directory, a następnie na symbolu (\@) i następnie zazwyczaj domeny nadrzędnej systemu nazw domen. Na przykład Jan w drzewie domeny Fabrikam.com może być nazwa główna użytkownika [ jeff@fabrikam.com ](mailto:jeffsmith@fabrikam.com).  Ten element zawiera atrybut `value` jest ciągiem i zawiera rzeczywistą nazwą podmiotu zabezpieczeń. Ten element jest typu <xref:System.ServiceModel.Configuration.UserPrincipalNameElement>.|  
+|rsa|Określa wartość pola RSA certyfikat X.509 używany do uwierzytelniania usługi do klienta. Ten element zawiera atrybut `value` jest ciągiem i zawiera rzeczywistej tożsamości|  
+|servicePrincipalName|Określa tożsamość główna nazwa (usługi SPN) serwera, jest to nazwa podmiotu zabezpieczeń używany przez klienta do jednoznacznego identyfikowania wystąpienia usługi. Ten element zawiera atrybut `value` jest ciągiem i zawiera rzeczywistą nazwę podmiotu zabezpieczeń. Ten element jest typu <xref:System.ServiceModel.Configuration.ServicePrincipalNameElement>.|  
+|userPrincipalName|Określa tożsamość głównej nazwy (UPN) użytkownika, który jest typem nazwa logowania użytkownika w sieci. Główna nazwa użytkownika, który składa się z nazwą obiektu użytkownika, które są używane w usłudze Active Directory, a następnie na symbol (\@) i następnie zazwyczaj domeny nadrzędnej systemu nazw domen. Na przykład, Niewykluczone, główna nazwa użytkownika Jeff w drzewie domeny Fabrikam.com [ jeff@fabrikam.com ](mailto:jeffsmith@fabrikam.com).  Ten element zawiera atrybut `value` jest ciągiem i zawiera rzeczywistą nazwę podmiotu zabezpieczeń. Ten element jest typu <xref:System.ServiceModel.Configuration.UserPrincipalNameElement>.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<niestandardowe >](../../../../../docs/framework/configure-apps/file-schema/wcf/custom.md)|Określa program rozpoznawania nazw dla netPeerTcpBinding równorzędnej niestandardowej.|  
-|[\<punkt końcowy >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)|Umożliwia skonfigurowanie różnych typów punktów końcowych.|  
-|[\<Wystawca >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|Określa zabezpieczeń tokenu usługi (STS) dla usługi federacyjnej.|  
-|[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|Określa punktu końcowego metadanych dla zabezpieczeń tokenu usługi (STS) usługi federacyjnej.|  
-|[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Definiuje parametry dla wystawionego tokenu do niestandardowego powiązania.|  
-|[\<localIssuer >](../../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md)|Określa lokalne zabezpieczenia tokenu usługi (STS).|  
+|[\<niestandardowe >](../../../../../docs/framework/configure-apps/file-schema/wcf/custom.md)|Określa niestandardowe elementu równorzędnego programu rozpoznawania nazw dla netPeerTcpBinding.|  
+|[\<punkt końcowy >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)|Służy do konfigurowania różnych typów punktów końcowych.|  
+|[\<Wystawca >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|Określa Usługa tokenu zabezpieczającego (STS) dla usługi federacyjnej.|  
+|[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|Określa punkt końcowy metadanych dla Usługa tokenu zabezpieczającego (STS) z usługi federacyjnej.|  
+|[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Definiuje parametry dla wystawiony token do niestandardowego powiązania.|  
+|[\<localIssuer >](../../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md)|Określa lokalnym usługa tokenu zabezpieczającego (STS).|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Configuration.IdentityElement>  

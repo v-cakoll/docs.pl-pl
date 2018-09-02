@@ -12,20 +12,20 @@ ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 2190e404479a940e638d6ee8b9fd7135d8fc0109
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c479bc423ba17e527926bbf9c7dae6ffd8845d1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399581"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400316"
 ---
 # <a name="ui-automation-events-overview"></a>Przegląd zdarzeń automatyzacji interfejsu użytkownika
 > [!NOTE]
->  Ta dokumentacja jest przeznaczony dla deweloperów .NET Framework, które chcą korzystać zarządzanej [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejsu API systemu Windows automatyzacji: automatyzacji interfejsu użytkownika](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] powiadomienie o zdarzeniu jest kluczowym elementem technologiami ułatwień dostępu, takich jak czytniki i powiększające. Te zdarzenia śledzenia klientów automatyzacji interfejsu użytkownika, zgłaszanych przez dostawców automatyzacji interfejsu użytkownika, gdy wydarzy się coś w [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] i użyć tych informacji w celu powiadomienia użytkowników końcowych.  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] powiadomienie o zdarzeniu jest kluczowym elementem obsługę technologii ułatwień dostępu, takich jak czytniki zawartości ekranu i powiększające. Te śledzenie zdarzeń klientów automatyzacji interfejsu użytkownika, które są wywoływane przez dostawców automatyzacji interfejsu użytkownika, gdy coś się dzieje w [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] i skorzystaj z informacji w celu powiadomienia użytkowników końcowych.  
   
- Zwiększona wydajność zezwalając dostawcy aplikacjom wywoływanie zdarzeń selektywnie, w zależności od tego, czy wszyscy klienci subskrybowanych z tymi zdarzeniami lub wcale, jeśli klienci nie nasłuchują żadnych zdarzeń.  
+ Zwiększona wydajność, umożliwiając aplikacjom wywoływanie zdarzeń selektywnie, w zależności od tego, czy wszyscy klienci mają subskrypcję tych zdarzeń lub wcale, jeśli klienci nie nasłuchują na wszelkie zdarzenia dostawcy.  
   
 <a name="Types_of_Events"></a>   
 ## <a name="types-of-events"></a>Typy zdarzeń  
@@ -33,14 +33,14 @@ ms.locfileid: "33399581"
   
 |Zdarzenie|Opis|  
 |-----------|-----------------|  
-|Zmiana właściwości|Wywoływane, gdy właściwość [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] elementu lub formant zmiany wzorca. Na przykład, jeśli klient wymaga do monitorowania aplikacji kontrolkę pola wyboru, umożliwia rejestrację do nasłuchiwania na zdarzenie zmiany właściwości <xref:System.Windows.Automation.TogglePattern.TogglePatternInformation.ToggleState%2A> właściwości. Kontrolka pola wyboru jest zaznaczone lub zaznaczenie opcji, dostawca zgłasza zdarzenie, a klient może działać w razie potrzeby.|  
-|Akcja elementu|Wywoływane, gdy zmiana [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] wyniki od użytkownika końcowego lub programowe działania, np. po kliknięciu przycisku lub wywoływane za pośrednictwem <xref:System.Windows.Automation.InvokePattern>.|  
-|Zmiana struktury|Wywoływane, gdy struktura [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa zmiany. Struktura zostanie zmieniona, gdy nowy [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] elementy stają się widoczne, ukryty lub usuniętych na pulpicie.|  
-|Globalne zmiany pulpitu|Wywoływane, gdy globalne przydatne do klienta są wykonywane działania, np. gdy fokus zostanie przeniesiony z jednego elementu na inny lub po zamknięciu okna.|  
+|Zmiana właściwości|Wywoływane, gdy właściwość [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] element lub kontrolka zmiany wzorca. Na przykład, jeśli klient potrzebuje do monitorowania aplikacji, kontrolka pola wyboru, umożliwia rejestrację dla zdarzenia zmiany właściwości nasłuchiwała <xref:System.Windows.Automation.TogglePattern.TogglePatternInformation.ToggleState%2A> właściwości. Gdy formant pola wyboru jest zaznaczony lub niezaznaczony, dostawca wywołuje zdarzenie, a klient może działać w razie potrzeby.|  
+|Akcja elementu|Wywoływane, gdy zmiana [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] wyniki od użytkownika końcowego lub programowy działania, na przykład, gdy kliknięto przycisk lub wywoływane za pośrednictwem <xref:System.Windows.Automation.InvokePattern>.|  
+|Zmiana struktury|Wywołane, gdy struktura [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa zmiany. Struktura zmienia się, gdy jest to nowy [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] elementy stają się widoczne, ukryte lub usunięto na pulpicie.|  
+|Globalne zmiany pulpitu|Wywoływane, gdy globalne zainteresowania klienta są wykonywane działania, np. gdy fokus zostanie przeniesiony z jednego elementu do innego lub po zamknięciu okna.|  
   
- Niektóre zdarzenia nie musi oznaczać, że stan interfejsu użytkownika nie została zmieniona. Na przykład, jeśli użytkownik karty do pole wprowadzania tekstu, a następnie klika przycisk przycisk, aby zaktualizować pola `TextChangedEvent` jest uruchamiany nawet wtedy, gdy użytkownik nie zmienił faktycznie tekst. Podczas przetwarzania zdarzenia, może być konieczne dla aplikacji klienckiej sprawdzić, czy wszystko rzeczywiste zmiany przed wykonaniem akcji.  
+ Niektóre zdarzenia nie musi oznaczać, że stan interfejsu użytkownika nie została zmieniona. Na przykład, jeśli użytkownik karty na pole wprowadzania tekstu, a następnie kliknie przycisk, aby zaktualizować pole `TextChangedEvent` jest wywoływane, nawet wtedy, gdy użytkownik faktycznie nie zmienił tekst. Podczas przetwarzania zdarzeń, może być konieczne do aplikacji klienckiej sprawdzić, czy wszystkie rzeczywiste zmiany przed podjęciem działań.  
   
- Następujące zdarzenia może zostać zgłoszone, nawet wtedy, gdy stan interfejsu użytkownika nie została zmieniona.  
+ Następujące zdarzenia może być uruchamiany nawet wtedy, gdy stan interfejsu użytkownika nie został zmieniony.  
   
 -   `AutomationPropertyChangedEvent` (w zależności od właściwości, które uległy zmianie)  
   
@@ -52,9 +52,9 @@ ms.locfileid: "33399581"
   
 <a name="UI_Automation_Event_Identifiers"></a>   
 ## <a name="ui-automation-event-identifiers"></a>Identyfikatory zdarzeń automatyzacji interfejsu użytkownika  
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] zdarzenia są identyfikowane za pomocą <xref:System.Windows.Automation.AutomationEvent> obiektów. <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> Właściwość zawiera wartość, która unikatowo identyfikuje rodzaj zdarzenia.  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] zdarzenia są identyfikowane za pomocą <xref:System.Windows.Automation.AutomationEvent> obiektów. <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> Właściwość zawiera wartość, która jednoznacznie identyfikuje typ zdarzenia.  
   
- Możliwe wartości <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> są podane w poniższej tabeli, wraz z typ użyty dla argumentów zdarzenia. Należy pamiętać, że identyfikatory używane przez klientów i dostawców, są tak samo o nazwie pola z różnych klas.  
+ Możliwe wartości parametru <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> są podane w poniższej tabeli, oraz typ używany dla argumentów zdarzeń. Należy pamiętać, że identyfikatory używane przez klientów i dostawców są identyczne nazwy pól z różnych klas.  
   
 |Identyfikator klienta|Identyfikator dostawcy|Typ argumentów zdarzenia|  
 |-----------------------|-------------------------|--------------------------|  
@@ -67,20 +67,20 @@ ms.locfileid: "33399581"
   
 <a name="UI_Automation_Event_Arguments"></a>   
 ## <a name="ui-automation-event-arguments"></a>Argumenty zdarzeń automatyzacji interfejsu użytkownika  
- Następujące klasy hermetyzować argumentów zdarzenia.  
+ Następujące klasy hermetyzować argumenty zdarzeń.  
   
 |Class|Opis|  
 |-----------|-----------------|  
 |<xref:System.Windows.Automation.AsyncContentLoadedEventArgs>|Zawiera informacje o asynchroniczne ładowanie zawartości, łącznie z wartością procentową ładowanie ukończone.|  
-|<xref:System.Windows.Automation.AutomationEventArgs>|Zawiera informacje dotyczące zdarzenia prostego, która wymaga żadnych dodatkowych danych.|  
-|<xref:System.Windows.Automation.AutomationFocusChangedEventArgs>|Zawiera informacje o zmianie w fokus wprowadzania z jednego elementu na inny. Zdarzenia tego typu są wywoływane przez [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] systemu, a nie przez dostawców.|  
-|<xref:System.Windows.Automation.AutomationPropertyChangedEventArgs>|Zawiera informacje dotyczące zmiany wartości właściwości elementu lub formant wzorca.|  
-|<xref:System.Windows.Automation.StructureChangedEventArgs>|Zawiera informacje o zmianie w [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa.|  
+|<xref:System.Windows.Automation.AutomationEventArgs>|Zawiera informacje o prostego zdarzenia, które wymaga żadnych dodatkowych danych.|  
+|<xref:System.Windows.Automation.AutomationFocusChangedEventArgs>|Zawiera informacje o zmianie fokusu wprowadzania z jednego elementu na inny. Zdarzenia tego typu są inicjowane przez [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] systemu, a nie przez dostawców.|  
+|<xref:System.Windows.Automation.AutomationPropertyChangedEventArgs>|Zawiera informacje o zmianie wartości właściwości wzorca element lub kontrolka.|  
+|<xref:System.Windows.Automation.StructureChangedEventArgs>|Zawiera informacje o zmianie [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa.|  
 |<xref:System.Windows.Automation.WindowClosedEventArgs>|Zawiera informacje o zamknięcia okna.|  
   
- Zawiera wszystkie klasy argument zdarzenia <xref:System.Windows.Automation.AutomationEventArgs.EventId%2A> elementu członkowskiego. Ten identyfikator jest hermetyzowany w <xref:System.Windows.Automation.AutomationEvent>.  
+ Zawierają wszystkie klasy argumentu zdarzenia <xref:System.Windows.Automation.AutomationEventArgs.EventId%2A> elementu członkowskiego. Ten identyfikator jest hermetyzowany w <xref:System.Windows.Automation.AutomationEvent>.  
   
- <xref:System.Windows.Automation.AutomationEvent> Obiekty używane do identyfikowania zdarzenia są uzyskiwane przez dostawców w polach <xref:System.Windows.Automation.AutomationElementIdentifiers> i kontrolowania takich jak wzorzec identyfikator klasy <xref:System.Windows.Automation.DockPatternIdentifiers>. Odpowiednik pola są uzyskiwane przez aplikacje klienckie w polach <xref:System.Windows.Automation.AutomationElement> i kontrolować wzorzec klas takich jak <xref:System.Windows.Automation.DockPattern>.  
+ <xref:System.Windows.Automation.AutomationEvent> Obiekty używane do identyfikowania zdarzenia są uzyskiwane przez dostawców z pól w <xref:System.Windows.Automation.AutomationElementIdentifiers> i kontrolować wzorzec identyfikatora klasy takie jak <xref:System.Windows.Automation.DockPatternIdentifiers>. Równoważne pola są uzyskiwane przez aplikacje klienckie z pól w <xref:System.Windows.Automation.AutomationElement> i kontrolować klasy wzorca, takich jak <xref:System.Windows.Automation.DockPattern>.  
   
  Aby uzyskać listę identyfikatorów zdarzeń, zobacz [zdarzeń automatyzacji interfejsu użytkownika dla klientów](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md).  
   

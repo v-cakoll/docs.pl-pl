@@ -5,33 +5,33 @@ helpviewer_keywords:
 - examples [C#], COM classes
 - COM, exposing Visual C# objects to
 ms.assetid: 6504dea9-ad1c-4993-a794-830fec5270af
-ms.openlocfilehash: 2dd1092d9c1f6bb7482c306339a3d7f6684940eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f8f4a9ebaf41a0787e17685a60d3e847f2aca0c2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322278"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415465"
 ---
 # <a name="example-com-class-c-programming-guide"></a>Klasa COM — Przykład (Przewodnik programowania w języku C#)
-Oto przykład klasy, która może narazić jako obiekt COM. Po ten kod został umieszczony w pliku .cs i dodane do projektu, ustawić **Zarejestruj dla międzyoperacyjności z modelem COM** właściwości **True**. Aby uzyskać więcej informacji, zobacz [NIB: jak: zarejestrować składnika COM Interop](http://msdn.microsoft.com/library/4de7d474-56e8-4027-994d-d47ca4725c5e).  
+Oto przykład klasy, który może narazić jako obiekt COM. Po ten kod został umieszczony w pliku CS i dodane do projektu, ustawić **Zarejestruj dla współdziałania COM** właściwości **True**. Aby uzyskać więcej informacji, zobacz [jak: Zarejestruj składnik COM Interop](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w29wacsy(v=vs.100)).
   
- Udostępnianie obiektów Visual C# dla modelu COM wymaga deklarowanie interfejsu klasy, interfejsu zdarzenia w razie potrzeby i samej klasy. Elementy członkowskie klasy, wykonaj te reguły mają być widoczne dla modelu COM:  
+ Udostępnianie obiektów Visual C# dla modelu COM wymaga zadeklarowania interfejsu klasy, interfejsu zdarzenia w razie potrzeby i samej klasy. Elementy członkowskie klasy muszą wykonać następujące czynności, które mają być widoczne dla modelu COM:  
   
 -   Klasy muszą być publiczne.  
   
--   Właściwości, metod i zdarzeń muszą być publiczne.  
+-   Właściwości, metody i zdarzenia muszą być publiczne.  
   
--   Właściwości i metody, musi zostać zadeklarowany w interfejsie klasa.  
+-   Właściwości i metody musi być zadeklarowana w klasie interfejs.  
   
--   Zdarzenia musi zostać zadeklarowany w zdarzeniu interfejsu.  
+-   Zdarzenia musi być zadeklarowany w zdarzeniu interfejsu.  
   
- Inne publiczne elementy członkowskie w klasie, które nie są zadeklarowane w tych interfejsów nie będą widoczne dla modelu COM, ale będą one widoczne dla innych obiektów .NET Framework.  
+ Inne publiczne elementy członkowskie klasy, które nie są zadeklarowane za pomocą tych interfejsów nie będą widoczne dla modelu COM, ale będą one widoczne dla innych obiektów .NET Framework.  
   
- Do udostępnienia właściwości i metody dla modelu COM, należy zadeklarować je w interfejsie klasa i oznacz je za pomocą `DispId` atrybutu i ich wdrażania w klasie. Kolejność, w jakiej elementy członkowskie są zadeklarowane w interfejsie jest kolejność używaną dla COM vtable.  
+ Aby udostępnić właściwości i metody dla modelu COM, należy je zadeklarować interfejsu klasy i oznacz je za pomocą `DispId` atrybutu i ich wdrażania w klasie. Kolejność, w której elementy członkowskie są zadeklarowane w interfejsie polega na kolejności, używany dla modelu COM vtable.  
   
- Do udostępnienia zdarzenia z klasy, należy zadeklarować je dla interfejsu zdarzenia i oznacz je za pomocą `DispId` atrybutu. Klasa nie powinny implementować ten interfejs.  
+ Aby udostępnić zdarzenia z klasy, należy zadeklarować je w interfejsie zdarzeń i oznacz je za pomocą `DispId` atrybutu. Klasy nie powinny implementować ten interfejs.  
   
- Klasa implementuje interfejs klasy; można zaimplementować więcej niż jeden interfejs, ale implementacja pierwszy będzie domyślnego interfejsu klasy. Implementuje metody i właściwości ujawniony dla modelu COM w tym miejscu. One musi być oznaczona jako publiczna i musi być zgodna z deklaracjami w interfejsie klasa. Ponadto należy zadeklarować zdarzenia wygenerowane przez klasę w tym miejscu. One musi być oznaczona jako publiczna i musi być zgodna z deklaracji zdarzenia interfejsu.  
+ Klasa implementuje interfejs klasy; implementuje on więcej niż jeden interfejs, ale pierwszego wdrożenia będzie domyślny interfejs klasy. Implementuje metody i właściwości uwidaczniany w modelu COM w tym miejscu. One musi być oznaczona jako publiczna i musi być zgodna z deklaracji interfejsu klasy. Ponadto należy zadeklarować zdarzenia wygenerowane przez klasę, w tym miejscu. One musi być oznaczona jako publiczna i musi być zgodna z deklaracji zdarzenia interfejsu.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csProgGuideInterop#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/example-com-class_1.cs)]  

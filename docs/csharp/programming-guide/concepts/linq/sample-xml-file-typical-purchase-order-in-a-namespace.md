@@ -1,16 +1,16 @@
 ---
-title: 'Przykładowy plik XML: Typowe zamówienie w Namespace1'
+title: 'Przykładowy plik XML: Typowe zamówienie zakupu w {1 & gt'
 ms.date: 07/20/2015
 ms.assetid: 84dc3339-ea32-4ccc-9af6-ab38ddfecced
 ms.openlocfilehash: 0adee32a3ee4d2347bd2e0a84024fe478346987a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337564"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404233"
 ---
-# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a>Przykładowy plik XML: Typowe zamówienie w Namespace
-Następujący plik XML jest używany w różnych przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji. Ten plik jest typowy zakupu. Plik XML jest w przestrzeni nazw.  
+# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a>Przykładowy plik XML: Typowe zamówienie zakupu w Namespace
+Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji. Ten plik ma typowe zamówienie zakupu. Kod XML jest w przestrzeni nazw.  
   
 ## <a name="purchaseorderinnamespacexml"></a>PurchaseOrderInNamespace.xml  
   

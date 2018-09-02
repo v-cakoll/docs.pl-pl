@@ -8,55 +8,55 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 8f2d962f40f2b56b1d1dda68129f477e4277ae1d
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: c2948cf76f7763eae51689973346965bc6c720a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728355"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404219"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Operacje synchroniczne i asynchroniczne
-W tym temacie omówiono Implementowanie i wywoływanie operacji usługi asynchronicznego.  
+W tym temacie omówiono wdrażanie i wywoływanie operacji usługi asynchronicznego.  
   
- Wiele aplikacji asynchroniczne wywoływanie metody, ponieważ umożliwia to aplikacji kontynuować pracy przydatne podczas wywołania metody. Usługi Windows Communication Foundation (WCF) i klienci mogą uczestniczyć w wywołania operacji asynchronicznej na dwóch różnych poziomach aplikacji, zapewniających nawet większą elastyczność i możliwość zmaksymalizować przepustowość zrównoważone interakcyjności aplikacji WCF .  
+ Wiele aplikacji asynchroniczne wywoływanie metod, ponieważ umożliwia aplikacji do kontynuowania wykonywania użytecznej pracy podczas wykonywania wywołania metody. Usług Windows Communication Foundation (WCF) i klientów, które mogą uczestniczyć w operacji asynchronicznej wywołań na dwóch różnych poziomach aplikacji, zapewniający jeszcze większą elastyczność w celu zmaksymalizowania wydajności zrównoważone interakcję aplikacji WCF .  
   
-## <a name="types-of-asynchronous-operations"></a>Typy operacji asynchronicznych  
- Wszystkie usługi umów w programie WCF, bez względu na typy parametrów i wartości zwracane, umożliwia określenie konkretnego wymiany komunikatów między klientem a usługą WCF atrybutów. WCF automatycznie kieruje komunikaty przychodzące i wychodzące do operacji odpowiednią usługę lub uruchamianie kodu klienta.  
+## <a name="types-of-asynchronous-operations"></a>Rodzaje operacji asynchronicznych  
+ Wszystkie usługi kontraktów w programie WCF, bez względu na to typy parametrów i wartości zwracane, użyj atrybutów usługi WCF do określenia wymiany komunikatów określonej między klientem a usługą. Usługi WCF automatycznie kieruje komunikaty przychodzące i wychodzące operacji odpowiednie usługi lub uruchamianie kodu klienta.  
   
- Klient ma tylko kontraktu usługi, która określa wymiany komunikatów dla określonej operacji. Klienci zaoferować dewelopera dowolnego modelu programowania, które decydują, tak długo, jak zaobserwowano podstawowej wymiany komunikatów. Tak zbyt, usługi zaimplementować operacji w jakikolwiek sposób tak długo, jak zaobserwowano wzorzec określonego komunikatu.  
+ Klient ma tylko kontraktu usługi, który określa wymiany komunikatów dla określonej operacji. Klienci mogą zaoferować łączność dewelopera model programowania, które postanowili, tak długo, jak zostanie wykryty bazowego wymiany komunikatów. Dlatego, można usług implementowania operacji w jakikolwiek sposób, tak długo, jak zostanie wykryty wzorzec określony komunikat.  
   
- Niezależność kontraktu usługi z implementacji usługi lub klienta umożliwia następujące rodzaje operacji asynchronicznych w aplikacjach WCF:  
+ Niezależność od implementacji usługi lub klienta kontraktu usługi umożliwia następujące rodzaje operacji asynchronicznych w aplikacjach usługi WCF:  
   
--   Klienci mogą wywoływać operacje żądania/odpowiedzi asynchronicznie za pomocą exchange komunikatu synchronicznego.  
+-   Klientów można wywołać operacji żądania/odpowiedzi asynchronicznie za pomocą wymiany synchronicznego komunikatu.  
   
--   Usługi można zaimplementować operacji żądania/odpowiedzi, asynchronicznie za pomocą exchange komunikatu synchronicznego.  
+-   Usługi można zaimplementować operację żądania/odpowiedzi asynchronicznie przy użyciu synchronicznej wiadomości programu exchange.  
   
--   Wymiany komunikatów może być jednokierunkowe, niezależnie od implementacji klienta lub usługi.  
+-   Wymianę komunikatów może być jednokierunkowych, niezależnie od implementacji klienta lub usługi.  
   
-### <a name="suggested-asynchronous-scenarios"></a>Sugerowana scenariusze asynchroniczne  
- Asynchroniczne metody należy użyć w implementacji operacji usługi, jeśli operacja implementacji usługi nawiązuje połączenie blokujące, takie jak podczas pracy we/wy. Podczas pracy w celu wykonania operacji asynchronicznej, spróbuj wywołanie operacji asynchronicznych i metody umożliwiające rozszerzenie ścieżki wywołania asynchronicznego, o ile to możliwe. Na przykład wywołać `BeginOperationTwo()` z poziomu `BeginOperationOne()`.  
+### <a name="suggested-asynchronous-scenarios"></a>Scenariusze asynchroniczne z sugerowanych  
+ Asynchroniczne metody należy użyć w implementacji operacji usługi, jeśli operacja implementacji usługi sprawia, że wywołania blokowania, takich jak praca operacji We/Wy. Podczas pracy w celu wykonania operacji asynchronicznej, spróbuj wywołać operacji asynchronicznych i metody, aby rozszerzyć ścieżki wywołania asynchronicznego, o ile to możliwe. Na przykład wywołać `BeginOperationTwo()` z poziomu `BeginOperationOne()`.  
   
--   Przy użyciu asynchronicznej metody na kliencie lub aplikacja wywołująca w następujących przypadkach:  
+-   Użyj podejścia asynchroniczne w kliencie lub aplikacja wywołująca w następujących przypadkach:  
   
--   Jeśli są wywoływanie operacji aplikacji warstwy środkowej. (Aby uzyskać więcej informacji na temat takich scenariuszy, zobacz [aplikacje klienckie warstwy środkowej](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).)  
+-   Jeśli są wywoływanie operacji z aplikacji średniego poziomu. (Aby uzyskać więcej informacji na temat takich scenariuszy, zobacz [aplikacje klienckie warstwy środkowej](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).)  
   
--   Jeśli są wywoływania operacji strony ASP.NET, użyj stron asynchronicznego.  
+-   Jeśli są wywoływanie operacji w obrębie strony ASP.NET, należy użyć strony asynchronicznego.  
   
--   Jeśli są wywoływanie operacji z poziomu dowolnej aplikacji, która jest pojedynczym wątku, takie jak formularze systemu Windows lub Windows Presentation Foundation (WPF). Korzystając z oparty na zdarzeniach asynchroniczne wywołanie modelu, zdarzenie wynik jest wywoływane w wątku interfejsu użytkownika, dodawanie czas odpowiedzi aplikacji bez konieczności się obsługiwać wiele wątków.  
+-   Jeśli są wywoływanie operacji z dowolnej aplikacji, która ma jeden wątków, takich jak Windows Forms lub Windows Presentation Foundation (WPF). Korzystając z opartego na zdarzeniach asynchronicznych wywoływania modelu, zdarzenie wynik jest wywoływane w wątku interfejsu użytkownika, dodając czas odpowiedzi do aplikacji bez konieczności obsługi wielu wątków, samodzielnie.  
   
--   Ogólnie rzecz biorąc Jeśli masz wybór między wywołania synchroniczne i asynchroniczne, wybierz wywołania asynchronicznego.  
+-   Ogólnie rzecz biorąc należy dokonać wyboru między wywołania synchroniczne i asynchroniczne, jeśli wywołania asynchronicznego.  
   
 ### <a name="implementing-an-asynchronous-service-operation"></a>Wdrażanie asynchronicznej operacji usługi  
- Operacje asynchroniczne może być zaimplementowany przez przy użyciu jednej z trzech następujących metod:  
+ Operacje asynchroniczne można zaimplementować przy użyciu jednej z trzech poniższych metod:  
   
-1.  Asynchroniczny wzorzec oparty na zadaniach  
+1.  Wzorca asynchronicznego opartego na zadaniach  
   
 2.  Asynchroniczny wzorzec oparty na zdarzeniach  
   
-3.  Asynchroniczny wzorzec IAsyncResult  
+3.  Wzorzec asynchroniczny IAsyncResult  
   
-#### <a name="task-based-asynchronous-pattern"></a>Wzorzec asynchroniczny oparty na zadaniach  
- Asynchroniczny wzorzec oparty na zadaniach jest preferowany sposób implementowania operacji asynchronicznych, ponieważ jest najprostsza i większość bezpośrednio do przodu. Aby użyć tej metody po prostu implementuje operację usługi i określić zwracanego typu zadania\<T >, gdzie T jest typem zwracanym przez operacji logicznej. Na przykład:  
+#### <a name="task-based-asynchronous-pattern"></a>Wzorzec asynchroniczny oparty na zadanie  
+ Wzorca asynchronicznego opartego na zadaniach jest preferowany sposób implementowania asynchronicznych operacji, ponieważ jest najłatwiejszym i najbardziej bardzo proste. Aby użyć tej metody po prostu implementuje operację usługi i określ typu zwracanego zadania\<T >, gdzie T jest typem zwracanym przez operacji logicznej. Na przykład:  
   
 ```csharp  
 public class SampleService:ISampleService   
@@ -73,15 +73,15 @@ public class SampleService:ISampleService
 }  
 ```  
   
- Operacja SampleMethodTaskAsync zwraca zadanie\<ciągu >, ponieważ operacja logiczna zwraca wartość typu ciąg. Aby uzyskać więcej informacji na temat wzorca asynchronicznego opartego na zadaniach, zobacz [wzorca asynchronicznego The Task-Based](http://go.microsoft.com/fwlink/?LinkId=232504).  
+ Operacja SampleMethodTaskAsync zwraca zadanie\<ciągu > ponieważ operacja logiczna zwraca wartość typu ciąg. Aby uzyskać więcej informacji na temat wzorca asynchronicznego opartego na zadaniach, zobacz [wzorca asynchronicznego The Task-Based](https://go.microsoft.com/fwlink/?LinkId=232504).  
   
 > [!WARNING]
->  Podczas korzystania z wzorca asynchronicznego opartego na zadaniach, T:System.AggregateException może zostać zgłoszony, jeśli wystąpi wyjątek podczas oczekiwania na zakończenie operacji. Ten wyjątek może wystąpić na kliencie lub usług  
+>  Korzystając z wzorca asynchronicznego opartego na zadaniach, T:System.AggregateException mogą być generowane, jeśli wystąpi wyjątek podczas oczekiwania na zakończenie operacji. Ten wyjątek może wystąpić na kliencie lub usług  
   
 #### <a name="event-based-asynchronous-pattern"></a>Wzorzec asynchroniczny oparty na zdarzeniach  
- Obsługującego wzorzec asynchroniczny oparty na zdarzeniach usługi ma co najmniej jedną operację o nazwie MethodNameAsync. Te metody mogą duplikatów synchroniczne wersje, które do tej samej operacji w bieżącym wątku. Klasa może być również zdarzeń MethodNameCompleted i może mieć MethodNameAsyncCancel (lub po prostu CancelAsync) metody. Klient chcą wywołaj operację określi program obsługi zdarzeń ma być wywoływana po zakończeniu operacji  
+ Obsługującego wzorzec asynchroniczny oparty na zdarzeniach usługi ma co najmniej jednej operacji o nazwie MethodNameAsync. Te metody mogą dublować synchroniczne wersjach, które do tej samej operacji w bieżącym wątku. Klasa może mieć również zdarzenia MethodNameCompleted i może mieć MethodNameAsyncCancel (lub po prostu CancelAsync) metody. Klient dążące do wywołania operacji będą definiować program obsługi zdarzeń ma być wywoływana po zakończeniu tej operacji  
   
- Poniższy fragment kodu ilustruje sposób zadeklarować operacji asynchronicznych za pomocą wzorca asynchronicznego opartego na zdarzeniach.  
+ Poniższy fragment kodu ilustruje sposób deklarowania operacji asynchronicznych z użyciem wzorca asynchronicznego opartego na zdarzeniach.  
   
 ```csharp  
 public class AsyncExample  
@@ -107,18 +107,18 @@ public class AsyncExample
 }  
 ```  
   
- Aby uzyskać więcej informacji na temat wzorca asynchronicznego opartego na zdarzeniach, zobacz [wzorca asynchronicznego The Event-Based](http://go.microsoft.com/fwlink/?LinkId=232515).  
+ Aby uzyskać więcej informacji na temat wzorca asynchronicznego opartego na zdarzeniach zobacz [wzorca asynchronicznego The Event-Based](https://go.microsoft.com/fwlink/?LinkId=232515).  
   
-#### <a name="iasyncresult-asynchronous-pattern"></a>Wzorzec projektowy IAsyncResult  
- Operacja usługi może być wdrożonych w sposób asynchroniczny przy użyciu [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] programowania wzorca asynchronicznego i oznaczenie `<Begin>` metody z <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> ustawioną właściwość `true`. W takim przypadku operacja asynchroniczna jest widoczna w metadanych, w tym samym formularzu jako operacja synchroniczna: jest uwidaczniany jako jedna operacja z komunikatu żądania i komunikat odpowiedzi skorelowane. Modele programowania klient następnie mają wybór. Reprezentują tego wzorca jako operacja synchroniczna lub asynchroniczne jedna tak długo, jak długo po wywołaniu usługi wymiany komunikatów żądań i odpowiedzi ma miejsce.  
+#### <a name="iasyncresult-asynchronous-pattern"></a>Wzorzec asynchroniczny IAsyncResult  
+ Operacja usługi może być implementowany w sposób asynchroniczny za pomocą [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] asynchronicznego programowania wzorca i oznaczanie `<Begin>` metody z <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> właściwością `true`. W takim przypadku operacja asynchroniczna jest widoczna w metadanych, w tym samym formularzu jako operacja synchroniczna: jest ona uwidoczniona jako jedną operację przy użyciu komunikatu żądania i komunikat odpowiedzi skorelowane. Modele programowania klient następnie dokonać wyboru. Mogą one reprezentować tego wzorca jako operacji synchronicznych lub asynchronicznych, co tak długo, jak podczas wywoływania usługi wymianę komunikatów żądań i odpowiedzi ma miejsce.  
   
- Ogólnie rzecz biorąc z asynchronicznego charakter systemów, możesz nie powinna przyjmować zależności na wątki.  Najbardziej niezawodnym sposobem przekazywanie danych do różnych etapów przetwarzania wysyłania operacji jest używanie rozszerzeń.  
+ Ogólnie rzecz biorąc za pomocą asynchronicznego charakter tych systemów, możesz nie powinna przyjmować zależności na wątki.  Najbardziej niezawodnym sposobem przekazywanie danych do różnych etapów przetwarzania wysyłania operacji jest korzystanie z rozszerzeń.  
   
- Na przykład zobacz [porady: Implementowanie asynchronicznej operacji usługi](../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md).  
+ Aby uzyskać przykład, zobacz [porady: Wdrażanie asynchronicznej operacji usługi](../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md).  
   
- Aby zdefiniować operacja kontraktu `X` asynchronicznie wykonywane niezależnie od tego, jak jest to aplikacja klienta:  
+ Aby zdefiniować operacji kontraktu `X` asynchronicznie wykonywane niezależnie od tego, jak jest to aplikacja kliencka:  
   
--   Zdefiniuj dwie metody przy użyciu wzorca `BeginOperation` i `EndOperation`.  
+-   Zdefiniowanie dwóch metod przy użyciu wzorca `BeginOperation` i `EndOperation`.  
   
 -   `BeginOperation` Metoda zawiera `in` i `ref` parametrów operacji i zwraca <xref:System.IAsyncResult> typu.  
   
@@ -155,42 +155,42 @@ Function EndDoWork(ByRef inout As String, ByRef outonly As String, ByVal result 
 ```  
   
 > [!NOTE]
->  <xref:System.ServiceModel.OperationContractAttribute> Atrybut jest stosowany tylko do `BeginDoWork` metody. Wynikowa kontraktu ma jedną operację WSDL o nazwie `DoWork`.  
+>  <xref:System.ServiceModel.OperationContractAttribute> Atrybut jest stosowany tylko do `BeginDoWork` metody. Kontrakt wynikowy ma jedną operację WSDL o nazwie `DoWork`.  
   
-### <a name="client-side-asynchronous-invocations"></a>Asynchroniczne wywołania po stronie klienta  
- Aplikacja klienta WCF można użyć dowolnego z trzy modele wywołanie asynchroniczne opisanych powyżej  
+### <a name="client-side-asynchronous-invocations"></a>Wywołania asynchroniczne po stronie klienta  
+ Aplikacja klienta WCF można użyć dowolnego z trzy modele wywołania asynchronicznego opisanych powyżej  
   
- Gdy używany jest model oparty na zadaniach, po prostu wywołaj operację przy użyciu — słowo kluczowe await, jak pokazano w poniższy fragment kodu.  
+ Korzystając z modelu opartego na zadaniach, wystarczy wywołać operację, używając słowa kluczowego await, jak pokazano w poniższym fragmencie kodu.  
   
 ```  
 await simpleServiceClient.SampleMethodTaskAsync("hello, world");  
 ```  
   
- Za pomocą wzorca asynchronicznego opartego na zdarzeniach wymaga tylko dodanie przez program obsługi zdarzeń, aby otrzymać powiadomienie o odpowiedź--i wynikowy zdarzenie jest wywoływane w wątku interfejsu użytkownika automatycznie. Aby użyć tej metody, należy określić zarówno **/async** i **/tcv:Version35** polecenie Opcje z [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), jak w poniższym przykład.  
+ Za pomocą wzorca asynchronicznego opartego na zdarzeniach wymaga tylko dodanie, którego program obsługi zdarzeń, aby otrzymać powiadomienie w odpowiedzi — i wynikowy zdarzenie jest wywoływane w wątku interfejsu użytkownika automatycznie. Aby użyć tej metody, należy określić zarówno **/async** i **/tcv:Version35** opcji za pomocą polecenia [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), jak w następujących przykład.  
   
 ```  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Version35  
 ```  
   
- Po zakończeniu Svcutil.exe wygeneruje klasy klienta WCF z infrastrukturą zdarzeń, który umożliwia wywołanie aplikacji do wdrożenia i przypisać program obsługi zdarzeń do odbierania odpowiedzi i podejmij odpowiednie działanie. Pełny przykład, zobacz [porady: wywołania operacji usługi asynchronicznie](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
+ Po zakończeniu tej operacji Svcutil.exe wygeneruje klasy klienta WCF, za pomocą infrastruktury zdarzeń, który umożliwia aplikacji wywołującej zaimplementować i przypisać program obsługi zdarzeń, odebranie odpowiedzi i podejmij odpowiednie działanie. Aby uzyskać kompletny przykład, zobacz [porady: wywoływanie operacji usługi asynchronicznie](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
- Oparty na zdarzeniach modelu asynchroniczne, jednak jest dostępna tylko w [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)]. Ponadto nie jest obsługiwane nawet w [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] utworzenia kanału klienta WCF za pomocą <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Z obiektami kanału klienta WCF, należy użyć <xref:System.IAsyncResult?displayProperty=nameWithType> obiektów do asynchronicznego wywołania operacji. Aby użyć tej metody, podaj **/async** polecenia opcji [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), jak w poniższym przykładzie.  
+ Oparte na zdarzeniach modelu asynchronicznego, jednak jest dostępna tylko w [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)]. Ponadto nie jest obsługiwana nawet w [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] po utworzeniu kanału klienta programu WCF za pomocą <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Za pomocą obiektów kanału klienta WCF, należy użyć <xref:System.IAsyncResult?displayProperty=nameWithType> obiektów do wywołania operacji asynchronicznie. Aby użyć tej metody, należy określić **/async** opcja za pomocą polecenia [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), jak w poniższym przykładzie.  
   
 ```  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async   
 ```  
   
- Spowoduje to wygenerowanie kontraktu usługi, w której każda operacja ma formę `<Begin>` metody z <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> ustawioną właściwość `true` i odpowiadające mu `<End>` — metoda. Aby uzyskać pełny przykład za pomocą <xref:System.ServiceModel.ChannelFactory%601>, zobacz [jak: wywołanie operacji asynchronicznie przy użyciu fabryki kanałów](../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md).  
+ Spowoduje to wygenerowanie kontraktu usługi, w którym każda operacja ma formę `<Begin>` metody z <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> właściwością `true` i odpowiadający mu `<End>` metody. Aby uzyskać kompletny przykład za pomocą <xref:System.ServiceModel.ChannelFactory%601>, zobacz [jak: wywołanie operacji asynchronicznie za pomocą fabryki kanałów](../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md).  
   
- W obu przypadkach aplikacji można wywołać operacji asynchronicznie, nawet wtedy, gdy usługa jest wdrażana synchronicznie, w taki sam sposób, że aplikacja może użyć tego samego wzorca do asynchronicznego wywołania lokalnego metoda synchroniczna. Implementowania operacji nie jest znacząca klientowi; Po odebraniu wiadomości odpowiedzi, jego zawartość jest wysyłane do klienta asynchroniczne <`End`> Metoda i klient pobiera informacje.  
+ W obu przypadkach aplikacje mogą wywołać operację asynchronicznie, nawet wtedy, gdy usługa jest wdrażana synchronicznie, w taki sam sposób, który aplikacja może użyć tego samego wzorca do wywołania asynchronicznego lokalnego metoda synchroniczna. Jak zaimplementowano operacji nie jest istotny dla klienta; Po odebraniu komunikatu odpowiedzi jego zawartość jest wysyłane do klienta asynchronicznego <`End`> Metoda i klient pobiera informacje.  
   
-### <a name="one-way-message-exchange-patterns"></a>Komunikat jednokierunkowy wzorce programu Exchange  
- Asynchroniczne wymiany komunikatów można też utworzyć, w których operacji jednokierunkowych (operacje, dla którego <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> jest `true` mieć żadnej odpowiedzi skorelowane) mogą być wysyłane przez klienta lub usługę, niezależnie od drugiego w żadnym kierunku Strona. (Używa dupleksu wymiany komunikatów o jednokierunkowe komunikaty.) W takim przypadku kontrakt usługi Określa komunikat jednokierunkowy programu exchange, które można wdrożyć obok jako wywołania asynchroniczne lub implementacje lub nie, zależnie od potrzeb. Ogólnie rzecz biorąc gdy kontrakt jest wymiany jednokierunkowe komunikaty, implementacje przede wszystkim można asynchronicznego, ponieważ po wysłaniu komunikatu aplikacji bez oczekiwania na odpowiedź i można kontynuować wykonywania innych zadań.  
+### <a name="one-way-message-exchange-patterns"></a>Komunikat jednokierunkowy Exchange wzorców  
+ Można też utworzyć wymiany komunikatów asynchronicznych, w jakie operacje jednokierunkowe (operacji, dla którego <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> jest `true` nie skorelowany odpowiedź) mogą być wysyłane przez klienta lub usługę niezależnie w dowolnym kierunku Strona. (To za pomocą wymiany komunikatów dwukierunkowego jednokierunkowe komunikaty.) W tym przypadku kontrakt usługi Określa komunikat jednokierunkowy programu exchange, który po obu stronach można zaimplementować jako wywołania asynchronicznego lub implementacji lub nie, zgodnie z potrzebami. Ogólnie rzecz biorąc gdy kontrakt jest wymiany jednokierunkowe komunikaty, implementacje stopniu można asynchronicznego ponieważ po wysłaniu komunikatu aplikacji nie czeka na odpowiedź i można kontynuować inne prace.  
   
-### <a name="event-based-asynchronous-clients-and-message-contracts"></a>Oparty na zdarzeniach asynchroniczne klientów i kontrakty komunikatów  
- Wskazówek dotyczących modelu asynchroniczny oparty na zdarzeniach stanu, że jeśli zostanie zwrócony więcej niż jedną wartość, jedna wartość jest zwracana jako `Result` właściwości, a inne są zwracane jako właściwości na <xref:System.EventArgs> obiektu. Jeden wynik tego jest to, że jeśli klient importuje metadanych za pomocą opcji polecenia asynchroniczny oparty na zdarzeniach i operacji zwraca więcej niż jedną wartość, domyślna <xref:System.EventArgs> obiektu zwraca jedną wartość jako `Result` właściwość i pozostałej właściwości <xref:System.EventArgs> obiektu.  
+### <a name="event-based-asynchronous-clients-and-message-contracts"></a>Oparte na zdarzeniach asynchronicznych klientów i kontrakty komunikatów  
+ Dotyczących projektowania opartego na zdarzeniach modelu asynchronicznego stanu, że jeśli zwracana jest więcej niż jedną wartość, jedną wartość jest zwracana jako `Result` właściwości i inne są zwracane jako właściwości na <xref:System.EventArgs> obiektu. Jeden wynik tego jest to, że jeśli klient importuje metadane przy użyciu opcji oparte na zdarzeniach asynchronicznych polecenia, a operacja zwraca więcej niż jedną wartość, wartość domyślna <xref:System.EventArgs> zwraca jedną wartość jako `Result` właściwość i pozostałej właściwości <xref:System.EventArgs> obiektu.  
   
- Jeśli chcesz otrzymywać obiekt komunikatu jako `Result` właściwości i mieć zwracanych wartości jako właściwości tego obiektu, użyj **/messageContract** — opcja polecenia. Spowoduje to wygenerowanie podpisie, który zwraca komunikat odpowiedzi jako `Result` właściwość <xref:System.EventArgs> obiektu. Wszystkie wewnętrzny zwracanych wartości są następnie właściwości obiektu komunikatu odpowiedzi.  
+ Jeśli chcesz otrzymywać obiekt komunikatu jako `Result` właściwości i mają zwracanych wartości, jak używać właściwości dla tego obiektu **/messageContract** opcja polecenia. Spowoduje to wygenerowanie sygnaturę, która zwraca komunikat odpowiedzi jako `Result` właściwość <xref:System.EventArgs> obiektu. Wszystkie wewnętrzne wartości zwracane są następnie właściwości obiektu komunikat odpowiedzi.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>  

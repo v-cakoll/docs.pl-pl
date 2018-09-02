@@ -6,12 +6,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: e2e63953e130dc83ce83bcdd2f8e9a2ffc7fe5f3
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: d478370edcd0ec4772a8ad3706d08a4e85e43f06
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43000131"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405130"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Metody rozszerzeń (Przewodnik programowania w języku C#)
 Metody rozszerzenia umożliwiają „dodawanie” metod do istniejących typów bez konieczności tworzenia nowego typu pochodnego, ponownej kompilacji lub modyfikowania oryginalnego typu w inny sposób. Metody rozszerzenia stanowią specjalny rodzaj metod statycznych, ale są wywoływane tak, jakby były metodami wystąpień w typie rozszerzonym. Dla kodu klienta napisanego w języku C#, F # i Visual Basic nie istnieje żadna widoczna różnica między wywołaniem metody rozszerzenia i metod, które faktycznie są zdefiniowane w typie.  
@@ -83,9 +83,9 @@ using System.Linq;
   
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Równoległe przykłady programowania (zawierają wiele przykładów metod rozszerzenia)](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
+ [Równoległe przykłady programowania (zawierają wiele przykładów metod rozszerzenia)](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
  [Wyrażenia lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
- [Standardowe operatory zapytań — przegląd](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
+ [Standardowe operatory zapytań — przegląd](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
  [Reguły konwersji dla wystąpienia parametrów i ich wpływ](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/conversion-rules-for-instance-parameters-and-their-impact)  
  [Międzyoperacyjność metod rozszerzających między językami](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/extension-methods-interoperability-between-languages)  
  [Metody rozszerzające i przenoszeni delegaci](https://blogs.msdn.microsoft.com/sreekarc/2007/05/01/extension-methods-and-curried-delegates)  

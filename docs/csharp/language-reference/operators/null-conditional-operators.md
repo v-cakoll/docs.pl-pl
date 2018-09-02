@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
 ms.assetid: 9c7b2c8f-a785-44ca-836c-407bfb6d27f5
-ms.openlocfilehash: 28cf2633d74f047a751ffdad11f1e1db8328cd6f
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: f00d5e489931d9c1172a21ee5f0d3e3d0a6f4a4e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457803"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43409001"
 ---
 # <a name="-and--null-conditional-operators-c-and-visual-basic"></a>?. Operatory warunkowe null ?. oraz ? [] (C# i Visual Basic)
 Testuje, czy wartość lewego argumentu operacji to „null”, zanim przeprowadzi operację dostępu do elementu (`?.`) lub indeksowania (`?[]`). Zwraca `null`, jeśli wartość lewego argumentu operacji to `null`. 
@@ -77,10 +77,11 @@ PropertyChanged?.Invoke(…)
 ## <a name="language-specifications"></a>Specyfikacje języka  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
- Aby uzyskać więcej informacji, zobacz [dokumentacja języka Visual Basic](../../../visual-basic/language-reference/index.md).  
+ Aby uzyskać więcej informacji, zobacz [odwołanie językowe Visual Basic](../../../visual-basic/language-reference/index.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [?? (operator łączenie null)](null-coalescing-operator.md)  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Przewodnik programowania w języku Visual Basic](../../../visual-basic/programming-guide/index.md)
+## <a name="see-also"></a>Zobacz też
+
+- [?? (z operatorem łączenia wartości null)](null-coalescing-operator.md)  
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Przewodnik programowania w języku Visual Basic](../../../visual-basic/programming-guide/index.md)

@@ -6,50 +6,50 @@ helpviewer_keywords:
 - controls [Windows Forms], properties
 - properties [Windows Forms]
 ms.assetid: 2785279b-fb57-4937-8f6b-2050e475db6f
-ms.openlocfilehash: aa7d8be158f4e0a7b2b95bf02cb0d1e173041f59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 37db3f16a17acc7f3a6e594bd284ba368801e70a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538132"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419067"
 ---
 # <a name="properties-in-windows-forms-controls"></a>Właściwości formantów formularzy systemu Windows
-Formant formularzy systemu Windows dziedziczy wiele formularza właściwości klasy podstawowej <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Te właściwości obejmują takie jak <xref:System.Windows.Forms.Control.Font%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Bounds%2A>, <xref:System.Windows.Forms.Control.ClientRectangle%2A>, <xref:System.Windows.Forms.Control.DisplayRectangle%2A>, <xref:System.Windows.Forms.Control.Enabled%2A>, <xref:System.Windows.Forms.Control.Focused%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, <xref:System.Windows.Forms.Control.Visible%2A>, <xref:System.Windows.Forms.Control.AutoSize%2A>i wiele innych. Aby uzyskać szczegółowe informacje o właściwości dziedziczone, zobacz <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
+Formant programu Windows Forms dziedziczy wiele formularza właściwości klasy bazowej <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Obejmują one właściwości takich jak <xref:System.Windows.Forms.Control.Font%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Bounds%2A>, <xref:System.Windows.Forms.Control.ClientRectangle%2A>, <xref:System.Windows.Forms.Control.DisplayRectangle%2A>, <xref:System.Windows.Forms.Control.Enabled%2A>, <xref:System.Windows.Forms.Control.Focused%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, <xref:System.Windows.Forms.Control.Visible%2A>, <xref:System.Windows.Forms.Control.AutoSize%2A>i wiele innych. Aby uzyskać szczegółowe informacje o właściwości dziedziczonych, zobacz <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
   
- Można zastąpić właściwości dziedziczone formantu oraz jak definiowania nowych właściwości.  
+ Można zastąpić właściwości dziedziczonych w kontrolce i jak definiowania nowych właściwości.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Definiowanie właściwości](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)  
- Pokazuje, jak implementować właściwość dla kontrolek niestandardowych lub składnik oraz sposób integracji właściwość w środowisku projektowania.  
+ Pokazuje, jak implementować właściwość kontrolkę niestandardową lub składnika i pokazuje, jak zintegrować właściwość środowisko projektowania.  
   
  [Definiowanie wartości domyślnych za pomocą metod ShouldSerialize i Reset](../../../../docs/framework/winforms/controls/defining-default-values-with-the-shouldserialize-and-reset-methods.md)  
- Pokazuje, jak można definiować wartości właściwości domyślnej dla składnika lub kontrolki niestandardowej.  
+ Pokazuje jak zdefiniować domyślne wartości właściwości dla składnika lub kontrolki niestandardowej.  
   
  [Zdarzenia zmiany właściwości](../../../../docs/framework/winforms/controls/property-changed-events.md)  
- Opisuje sposób włączenia powiadomień zmiany właściwości, gdy wartość właściwości zostanie zmieniona.  
+ W tym artykule opisano, jak włączyć powiadomienia o zmianie właściwości po zmianie wartości właściwości.  
   
  [Instrukcje: udostępnianie właściwości kontrolek składowych](../../../../docs/framework/winforms/controls/how-to-expose-properties-of-constituent-controls.md)  
- Pokazuje, jak do udostępnienia właściwości formantów składowych w złożonych kontrolek niestandardowych.  
+ Pokazuje, jak udostępnianie właściwości formantów składowych w złożonego formantu niestandardowego.  
   
  [Implementacja metody w kontrolkach niestandardowych](../../../../docs/framework/winforms/controls/method-implementation-in-custom-controls.md)  
- Zawiera opis sposobu implementacji metod w niestandardowych kontrolek i składników.  
+ Opisuje sposób implementacji metody w kontrolkach niestandardowych i składników.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.UserControl>  
- Dokumenty klasę podstawową dla implementacji formanty złożone.  
+ Dokumenty klasę bazową dla implementacji formanty złożone.  
   
  <xref:System.ComponentModel.TypeConverterAttribute>  
  Dokumenty atrybut, który określa <xref:System.ComponentModel.TypeConverter> do użycia w przypadku typu właściwości niestandardowej.  
   
  <xref:System.ComponentModel.EditorAttribute>  
- Dokumenty atrybut, który określa <xref:System.Drawing.Design.UITypeEditor> dla właściwości niestandardowej.  
+ Dokumenty atrybut, który określa <xref:System.Drawing.Design.UITypeEditor> do użycia dla właściwości niestandardowej.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Atrybuty w kontrolkach formularzy Windows Forms](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
- Zawiera opis atrybutów, które można zastosować do właściwości lub innych elementach członkowskich niestandardowe formanty i składniki.  
+ W tym artykule opisano atrybuty, które można zastosować do właściwości lub innym członkom swojej niestandardowych kontrolek i składników.  
   
- [Atrybuty czasu projektowania dla składników](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)  
- Wyświetla listę atrybutów metadanych do zastosowania do składników i formantów, dzięki czemu są wyświetlane poprawnie w czasie projektowania w wizualnych projektantów.  
+ [Atrybuty czasu projektowania dla składników](https://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)  
+ Wyświetla listę atrybutów metadanych, które mają zastosowanie do składników i formantów, aby były wyświetlane poprawnie w czasie projektowania w projektantów wizualnych.  
   
- [Rozszerzenie obsługi w czasie projektowania](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
- Zawiera opis sposobu implementacji klasy, takie jak edytory i projektantów, które zapewniają obsługę w czasie projektowania.
+ [Rozszerzenie obsługi w czasie projektowania](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ Opisuje sposób implementacji klas, takich jak edytorach i projektantach, które zapewniają obsługę projektowania.

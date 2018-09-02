@@ -1,5 +1,5 @@
 ---
-title: Sieci programowania — tematy porad
+title: Tematy porad programowanie dla sieci
 ms.date: 03/30/2017
 helpviewer_keywords:
 - network resources
@@ -10,15 +10,15 @@ ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: ed8de7c4271483a878ee422aac188adbf4700985
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 703d3c2260f46f46e85831f809386d5a3af647a4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395359"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406537"
 ---
-# <a name="network-programming-how-to-topics"></a>Sieci programowania — tematy porad
-Poniższa lista zawiera łącza do tematy instruktażowe znajdującego się w dokumentacji koncepcyjnej programowania sieci.  
+# <a name="network-programming-how-to-topics"></a>Tematy porad programowanie dla sieci
+Poniższa lista zawiera łącza do tematów instrukcje w dokumentacji koncepcyjnej programowanie dla sieci.  
   
  **Żądanie danych:**  
   
@@ -30,7 +30,7 @@ Poniższa lista zawiera łącza do tematy instruktażowe znajdującego się w do
   
 -   [Instrukcje: pobieranie elementu WebResponse specyficznego dla protokołu, który odpowiada elementowi WebRequest](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)  
   
- **Protokoły podłączany i aplikacji:**  
+ **Protokołów podłączanych i aplikacji:**  
   
 -   [Instrukcje: rejestrowanie protokołu niestandardowego przy użyciu elementu WebRequest](../../../docs/framework/network-programming/how-to-register-a-custom-protocol-using-webrequest.md)  
   
@@ -66,7 +66,7 @@ Poniższa lista zawiera łącza do tematy instruktażowe znajdującego się w do
   
 -   [Instrukcje: ustawianie zasad pamięci podręcznej dla żądania](../../../docs/framework/network-programming/how-to-set-cache-policy-for-a-request.md)  
   
- **Korzystanie z serwerów proxy usługi typu:**  
+ **Korzystanie z serwerów proxy:**  
   
 -   [Instrukcje: włączanie korzystania z serwera proxy do komunikacji z Internetem przez element WebRequest](../../../docs/framework/network-programming/how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
   
@@ -83,4 +83,4 @@ Poniższa lista zawiera łącza do tematy instruktażowe znajdującego się w do
 ## <a name="see-also"></a>Zobacz też  
  [Programowanie dla sieci w programie .NET Framework](../../../docs/framework/network-programming/index.md)  
  [Przykłady programowania sieciowego](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Przykłady sieci dla platformy .NET w galerii kodu MSDN](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+ [Przykłady kodu usług sieciowych dla platformy .NET w galerii kodu MSDN](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

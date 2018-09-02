@@ -8,15 +8,15 @@ helpviewer_keywords:
 - -checked compiler option [C#]
 - /checked compiler option [C#]
 ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
-ms.openlocfilehash: 4ed8467b0e1923aedf38edfd4a25414cbcb88b7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf6fa0e87654d0f9d61f34ea9b29ad80921a5720
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218315"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401709"
 ---
 # <a name="-checked-c-compiler-options"></a>-zaznaczone (opcje kompilatora C#)
-**-Zaznaczone** opcja określa, czy instrukcji arytmetyczne liczba całkowita, których wynikiem jest wartość, która jest poza zakresem typu danych, a nie jest w zakresie [zaznaczone](../../../csharp/language-reference/keywords/checked.md) lub [ Zaznaczenie opcji](../../../csharp/language-reference/keywords/unchecked.md) — słowo kluczowe, powoduje, że wyjątek czasu wykonywania.  
+**-Zaznaczone** opcja określa, czy instrukcję arytmetyczne liczba całkowita, która wynikiem jest wartość, która jest poza zakresem typu danych, a nie jest w zakresie [zaznaczone](../../../csharp/language-reference/keywords/checked.md) lub [ unchecked](../../../csharp/language-reference/keywords/unchecked.md) — słowo kluczowe, powoduje wyjątek czasu wykonywania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -27,15 +27,17 @@ ms.locfileid: "33218315"
 ## <a name="remarks"></a>Uwagi  
  Instrukcję arytmetyczne liczba całkowita, która znajduje się w zakresie `checked` lub `unchecked` — słowo kluczowe nie podlega efekt **-zaznaczone** opcji.  
   
- Jeśli instrukcja arytmetyczne liczba całkowita, która nie znajduje się w zakresie `checked` lub `unchecked` — słowo kluczowe wynikiem jest wartość spoza zakresu typu danych i **-checked +** (**-zaznaczone**) jest używany w Kompilacja, że instrukcja powoduje wyjątek w czasie wykonywania. Jeśli **- zaznaczone -** jest używany w kompilacji, instrukcji nie powoduje wyjątek w czasie wykonywania.  
+ Jeśli instrukcję arytmetyczne liczba całkowita, która nie znajduje się w zakresie `checked` lub `unchecked` — słowo kluczowe wyniki w wartość spoza zakresu typu danych, i **-checked +** (lub **-zaznaczone**) jest używany w Kompilacja, że instrukcja powoduje wyjątek w czasie wykonywania. Jeśli **- zaznaczone -** jest używany w kompilacji, instrukcji nie powoduje wyjątek w czasie wykonywania.  
   
- Wartość domyślna dla tej opcji to **- zaznaczone -**. Jeden scenariusz użycia **- zaznaczone -** Trwa tworzenie dużych aplikacji. Niekiedy automatycznego narzędzia są używane do tworzenia takich aplikacji, a takie narzędzie może automatycznie ustawiony **-zaznaczone** do +. Domyślny globalny tego narzędzia można zastąpić, określając **- zaznaczone -**.  
-  
+ Wartość domyślna tej opcji to **- zaznaczone -**; sprawdzanie przepełnienia jest wyłączona.
+ 
+ Czasami zautomatyzowanych narzędzi, które są używane do budowania dużych aplikacji ustawione — sprawdzany w celu +. Jeden scenariusz użycia, - zaznaczone — jest zastąpienie domyślnie globalne dla tego narzędzia, określając - zaznaczone —.
+ 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
   
-1.  Otwórz projekt **właściwości** strony. Aby uzyskać więcej informacji, zobacz [strona kompilacji, Projektant projektu (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
+1.  Otwórz projekt **właściwości** strony. Aby uzyskać więcej informacji, zobacz [Stroka kompilacji, Projektant projektu (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
-2.  Kliknij przycisk **kompilacji** strony właściwości.  
+2.  Kliknij przycisk **kompilacji** stronę właściwości.  
   
 3.  Kliknij przycisk **zaawansowane** przycisku.  
   
@@ -44,12 +46,13 @@ ms.locfileid: "33218315"
  Aby uzyskać dostęp do tej opcji kompilatora programowo, zobacz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>.  
   
 ## <a name="example"></a>Przykład  
- Następujące polecenie kompiluje `t2.cs`. Korzystanie z `-checked` w poleceniu Określa, że każda instrukcja arytmetyczne całkowitą w pliku nie jest w zakresie `checked` lub `unchecked` — słowo kluczowe i którego wynikiem jest wartość, która jest poza zakresem typu danych powoduje zgłoszenie wyjątku przy uruchomieniu czas.  
+ Następujące polecenie kompiluje `t2.cs`. Korzystanie z `-checked` w poleceniu Określa, że każda liczba całkowita instrukcja arytmetyczne w pliku, nie jest w zakresie `checked` lub `unchecked` — słowo kluczowe i którego wynikiem jest wartość, która znajduje się poza zakresem typu danych, powoduje wyjątek przy uruchomieniu czas.  
   
 ```console  
 csc t2.cs -checked  
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)  
+
+- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)  

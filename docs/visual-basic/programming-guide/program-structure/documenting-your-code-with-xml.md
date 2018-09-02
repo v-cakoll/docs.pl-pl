@@ -6,39 +6,39 @@ helpviewer_keywords:
 - XML comments, Visual Basic
 - Visual Basic code, documenting with XML
 ms.assetid: a0d35dc7-c5f9-4d74-92ff-a1c6f28d5235
-ms.openlocfilehash: fa642adcfea9e80b41b5fc148df2b95b8fa44d88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b99c37f30d595e114bb4625a2881a9f0b463f5e6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650504"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405182"
 ---
 # <a name="documenting-your-code-with-xml-visual-basic"></a>Dokumentowanie kodu za pomocą XML (Visual Basic)
-W języku Visual Basic można udokumentować kod za pomocą XML  
+W języku Visual Basic można udokumentować kod za pomocą języka XML  
   
 ## <a name="xml-documentation-comments"></a>Komentarze dokumentacji XML  
- Visual Basic zapewnia prosty sposób na automatyczne tworzenie dokumentacji XML dla projektów. Można automatycznie generować szkielet XML dla typów i członków, a następnie podaj podsumowania, dokumentacja opisową dla każdego parametru i inne uwagi. W przypadku odpowiedniej konfiguracji dokumentacji XML jest automatycznie wysyłanego do pliku XML z taką samą nazwę jak projektu i rozszerzenie .xml. Aby uzyskać więcej informacji, zobacz [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
+ Zapewnia prosty sposób automatycznego tworzenia dokumentacji XML dla projektów w Visual Basic. Automatycznie Generuj szkielet XML dla typów i elementów członkowskich i następnie podaj podsumowania, dokumentacja opisową dla każdego parametru i inne uwagi. W przypadku odpowiedniej konfiguracji dokumentacji XML są automatycznie emitowane do pliku XML z taką samą nazwę jak projekt i rozszerzenie .xml. Aby uzyskać więcej informacji, zobacz [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
- Plik XML można używane lub w przeciwnym razie manipulować w formacie XML. Ten plik znajduje się w tym samym katalogu co plik .exe lub .dll danych wyjściowych projektu.  
+ Plik XML można używane lub w przeciwnym razie modyfikowane jako XML. Ten plik znajduje się w tym samym katalogu co plik .exe lub .dll danych wyjściowych projektu.  
   
- Plik dokumentacji XML, który rozpoczyna się od `'''`. Przetwarzanie komentarze ma pewne ograniczenia:  
+ Dokumentacja XML, który rozpoczyna się od `'''`. Przetwarzanie te komentarze mają pewne ograniczenia:  
   
--   Dokumentację musi być poprawnie sformułowanym XML. Jeśli plik XML nie jest poprawnie sformułowany, generowania ostrzeżeń i pliku dokumentacji zawiera komentarz informujący o tym, że wystąpił błąd podczas.  
+-   Dokumentacja musi być poprawnie sformułowany XML. Jeśli plik XML nie jest poprawnie sformułowany, generowane jest ostrzeżenie, a plik dokumentacji zawiera komentarz informujący o tym, że wystąpił błąd podczas.  
   
--   Deweloperzy mogą tworzyć własne zestawu tagów. Brak zalecanych zbiór znaczników (zobacz "Sekcje pokrewne" w tym temacie). Niektóre zalecane znaczniki mają specjalne znaczenie:  
+-   Deweloperzy są bezpłatne tworzenie własnych zestawów tagów. Jest zalecany zestaw znaczników (patrz "Sekcje pokrewne" w tym temacie). Niektóre zalecane tagi mają specjalne znaczenie:  
   
-    -   \<Param > tag jest używany do opisywania parametrów. Jeśli używana, kompilator sprawdza, czy parametr istnieje i że wszystkie parametry są opisane w dokumentacji. Jeśli weryfikacja zakończy się niepowodzeniem, kompilator generuje ostrzeżenie.  
+    -   \<Param > tag jest używany do opisania parametrów. Jeśli używane, kompilator sprawdzi, czy parametr istnieje i czy wszystkie parametry są opisane w dokumentacji. Jeśli weryfikacja zakończy się niepowodzeniem, kompilator generuje ostrzeżenie.  
   
-    -   `cref` Atrybut może zostać dołączony do żadnych znacznik w celu zapewnienia odwołania do elementu kodu. Kompilator sprawdza, czy istnieje tego elementu kodu. Jeśli weryfikacja zakończy się niepowodzeniem, kompilator generuje ostrzeżenie. Kompilator również szanuje żadnego `Imports` instrukcje podczas wyszukiwania dla typu opisanego w `cref` atrybutu.  
+    -   `cref` Atrybutu mogą być dołączane do każdego znacznika, aby zapewnić odwołanie do elementu kodu. Kompilator sprawdza, czy ten element kodu istnieje. Jeśli weryfikacja zakończy się niepowodzeniem, kompilator generuje ostrzeżenie. Kompilator również stosuje się do dowolnej `Imports` instrukcji podczas wyszukiwania dla typu z opisem w temacie `cref` atrybutu.  
   
-    -   \<Podsumowania > tag jest używany przez funkcję IntelliSense w Visual Studio Aby wyświetlić dodatkowe informacje na temat typu lub elementu członkowskiego.  
+    -   \<Podsumowania > tag jest używany przez funkcję IntelliSense w programie Visual Studio, aby wyświetlić dodatkowe informacje na temat typu lub elementu członkowskiego.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- Aby uzyskać więcej informacji na temat tworzenia pliku XML z komentarzy do dokumentacji zobacz następujące tematy:  
+ Aby uzyskać szczegółowe informacje na temat tworzenia pliku XML z komentarzami dokumentacji zobacz następujące tematy:  
   
 -   [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)  
   
--   [Tagi komentarza XML](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)  
+-   [Tagi komentarza XML](../../../visual-basic/language-reference/xmldoc/index.md)  
   
 -   [Przetwarzanie pliku XML](../../../visual-basic/programming-guide/program-structure/processing-the-xml-file.md)  
   

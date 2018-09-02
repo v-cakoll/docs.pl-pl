@@ -7,31 +7,31 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], controls
 - Windows Forms controls, labels
 ms.assetid: 6eaf868c-819f-4131-8f59-048e20c286f7
-ms.openlocfilehash: 0b75a4f59cdba4ff732a92996086b77bc65cf46c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5504095814cdfc04699bf24b9b96191e94b22c3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535518"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43409023"
 ---
 # <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a>Etykietowanie pojedynczych formantów formularzy systemu Windows i określanie skrótów dla nich
-Formanty dodane do formularzy systemu Windows mają właściwości i metod, które są używane do dalszego specialize użytkownika wystąpić. Dostosowywanie interfejsu użytkownika do potrzeb użytkownika jest bardzo ważne dla dobrze zaprojektowanego aplikacji systemu Windows.  
+Dodano do formularzy Windows Forms kontrolki mają właściwości i metod, które są używane do dalszego specialize użytkownika środowiska. Dostosowywanie interfejsu użytkownika do potrzeb użytkownika jest niezwykle ważna we dobrze zaprojektowanego aplikacji Windows.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Instrukcje: ustawianie tekstu wyświetlanego przez kontrolkę Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
- Zawiera opis sposobu przypisywania etykietę tekstową do formantu.  
+ W tym artykule opisano, jak przypisać etykietę tekstową do formantu.  
   
  [Instrukcje: ustawianie obrazu wyświetlanego przez kontrolkę Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md)  
- Opisano sposób konfigurowania kontrolkę do wyświetlania obrazów.  
+ Wyjaśnia, jak skonfigurować kontrolkę do wyświetlania obrazów.  
   
  [Instrukcje: tworzenie klawiszy dostępu dla kontrolek formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)  
- Zawiera informacje na temat tworzenia wstępnie zdefiniowanych skrótów klawiaturowych.  
+ Zawiera informacje na temat tworzenia wstępnie zdefiniowane skróty klawiaturowe.  
   
  [Podawanie informacji o ułatwieniach dostępu dotyczących kontrolek w formularzu systemu Windows](../../../../docs/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form.md)  
- Udostępnia informacje na temat włączania formantów do pracy z ułatwieniami.  
+ Zawiera informacje na temat włączania kontrolek do pracy z ułatwieniami.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Kontrolki formularzy Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
- Łącza do innych podstawowych zadań można zrobić za pomocą formantów.  
+ Zawiera łącza do innych podstawowych rzeczy, które można zrobić za pomocą kontrolek.  
   
- Zobacz też [jak: utworzyć dostępu do kluczy dla systemu Windows formularzy formantów przy użyciu narzędzia Projektant](http://msdn.microsoft.com/library/ms233673\(v=vs.110\)), [porady: ustawić tekst wyświetlany za pomocą formantu formularzy systemu Windows projektanta](http://msdn.microsoft.com/library/ms233665\(v=vs.110\)), [porady: Ustawianie obrazu Wyświetlany przez formant przy użyciu narzędzia Projektant formularzy systemu Windows](http://msdn.microsoft.com/library/ms233656\(v=vs.110\)).
+ Zobacz też [jak: tworzenie dostępu do kluczy dla Windows formularzy kontrolki za pomocą projektanta](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [jak: Ustaw tekst wyświetlany za pomocą kontrolki formularzy Windows projektanta](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [porady: Ustawianie obrazu Wyświetlane przez Windows Forms przy użyciu narzędzia Projektant](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).

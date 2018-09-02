@@ -9,62 +9,62 @@ ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: f593fb09e8c1056c28d351bfdf0218a0161fd9e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b8150be1c71d256243385ca201acdd96daad3880
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403809"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408524"
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>Implementacja wzorca kontrolki ExpandCollapse dla automatyzacji interfejsu użytkownika
 > [!NOTE]
->  Ta dokumentacja jest przeznaczony dla deweloperów .NET Framework, które chcą korzystać zarządzanej [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejsu API systemu Windows automatyzacji: automatyzacji interfejsu użytkownika](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- W tym temacie przedstawiono wskazówki i konwencje dotyczące implementowania <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>, wraz z informacjami dotyczącymi właściwości, metod i zdarzeń. Łącza do dodatkowe informacje są wyświetlane na końcu przeglądu.  
+ W tym temacie przedstawiono wskazówki i konwencje dotyczące implementowania <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>, wraz z informacjami dotyczącymi właściwości, metody i zdarzenia. Łącza do dodatkowe informacje są wyświetlane na końcu przeglądu.  
   
- <xref:System.Windows.Automation.ExpandCollapsePattern> — Wzorzec formantu jest używana do obsługi formantów, które wizualnie Rozwiń, aby wyświetlić więcej zawartości i zwijanie ukrycia zawartości. Przykłady formantów, które implementują wzorzec tego formantu można znaleźć [formantu wzorzec mapowania dla klientów automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ <xref:System.Windows.Automation.ExpandCollapsePattern> — Wzorzec kontrolki jest używana do obsługi formantów, które wizualnie rozwinąć w celu wyświetlenia większej ilości zawartości i zwinąć i ukryć zawartości. Przykłady formantów, które implementują wzorzec tej kontrolki, zobacz [kontroli wzorzec mapowania dla klientów automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Implementacja — wskazówki i konwencje  
- Podczas implementowania ExpandCollapse — wzorzec kontrolki, należy zwrócić uwagę następujące wskazówki i konwencje:  
+## <a name="implementation-guidelines-and-conventions"></a>Wytyczne dotyczące implementacji i konwencje  
+ Jeśli implementacja wzorca kontrolki expandcollapse dla, należy zwrócić uwagę następujących wytycznych i konwencje:  
   
--   Formanty agregacji — skompilowanej za pomocą obiektów podrzędnych, co stanowi interfejsu użytkownika dla funkcji Rozwiń/Zwiń — musi obsługiwać <xref:System.Windows.Automation.ExpandCollapsePattern> kontrolować wzorzec ich elementy podrzędne nie. Na przykład wbudowana w kombinację pola listy, przycisk i formantów edycji kontrolki pola kombi, ale jest tylko pola kombi nadrzędnego, który musi obsługiwać <xref:System.Windows.Automation.ExpandCollapsePattern>.  
+-   Agreguj kontrolek — utworzonych za pomocą obiektów podrzędnych, które będą dostarczać interfejs użytkownika przy użyciu funkcji Rozwiń/Zwiń — musi obsługiwać <xref:System.Windows.Automation.ExpandCollapsePattern> kontrolować wzorzec ich elementów podrzędnych nie. Na przykład kontrolka pola kombi został utworzony za pomocą kombinacji pola listy, przycisk i kontrolkach edycji wzbogaconej, ale jest tylko pola kombi nadrzędny, musi obsługiwać <xref:System.Windows.Automation.ExpandCollapsePattern>.  
   
     > [!NOTE]
-    >  Wyjątkiem jest formant menu, która jest agregacją pojedyncze obiekty MenuItem. Obiekty MenuItem może obsługiwać <xref:System.Windows.Automation.ExpandCollapsePattern> — wzorzec formantu, ale nadrzędnego Menu sterowania nie. Podobne wyjątek dotyczy formantów drzewa i element drzewa.  
+    >  Wyjątek stanowi formant menu, która będzie agregacją poszczególnych obiektów MenuItem. Może obsługiwać obiekty MenuItem <xref:System.Windows.Automation.ExpandCollapsePattern> — wzorzec kontrolki, ale nadrzędnego Menu kontroli nie. Podobne wyjątek ma zastosowanie do kontrolki drzewa i element drzewa.  
   
--   Gdy <xref:System.Windows.Automation.ExpandCollapseState> formantu ma ustawioną wartość <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>, wszelkie <xref:System.Windows.Automation.ExpandCollapsePattern> funkcje są obecnie nieaktywne formantu i jest tylko informacje można uzyskać za pomocą tego wzorca formantu <xref:System.Windows.Automation.ExpandCollapseState>. Jeśli później zostaną dodane wszystkie jego obiekty podrzędne, <xref:System.Windows.Automation.ExpandCollapseState> zmiany i <xref:System.Windows.Automation.ExpandCollapsePattern> funkcji jest aktywny.  
+-   Gdy <xref:System.Windows.Automation.ExpandCollapseState> kontrolki jest ustawiony na wartość <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>, wszelkie <xref:System.Windows.Automation.ExpandCollapsePattern> funkcje są obecnie nieaktywne dla formantu i tylko informacje, które można uzyskać za pomocą tego wzorca kontrolki <xref:System.Windows.Automation.ExpandCollapseState>. Jeśli wszystkie jego obiekty podrzędne zostaną dodane, <xref:System.Windows.Automation.ExpandCollapseState> zmiany i <xref:System.Windows.Automation.ExpandCollapsePattern> funkcja jest aktywowana.  
   
--   <xref:System.Windows.Automation.ExpandCollapseState> odwołuje się do widoczność obiektów natychmiastowego podrzędnych. nie odwołuje się do widoczność wszystkie obiekty zależne.  
+-   <xref:System.Windows.Automation.ExpandCollapseState> odwołuje się do widoczność obiektów bezpośrednie podrzędne. nie odwołuje się do widoczność wszystkie obiekty zależne.  
   
--   Rozwiń węzeł, a funkcja zwijania jest specyficzne dla formantu. Poniżej przedstawiono przykłady tego zachowania.  
+-   Rozwiń i Zwiń funkcje są specyficzne dla formantu. Poniżej przedstawiono przykłady to zachowanie.  
   
-    -   Menu osobiste Office może być MenuItem trzy stanowy (<xref:System.Windows.Automation.ExpandCollapseState.Expanded>, <xref:System.Windows.Automation.ExpandCollapseState.Collapsed> i <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>) gdy formant określa stan przyjęcie, kiedy <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> lub <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> jest wywoływana.  
+    -   Osobiste Menu pakietu Office może być MenuItem-stanowy (<xref:System.Windows.Automation.ExpandCollapseState.Expanded>, <xref:System.Windows.Automation.ExpandCollapseState.Collapsed> i <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>) gdzie kontrolka Określa stan do przyjęcia, kiedy <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> lub <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> jest wywoływana.  
   
-    -   Wywoływanie <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> na TreeItem może wyświetlać wszystkie elementy podrzędne lub tylko bezpośrednie elementy podrzędne.  
+    -   Wywoływanie <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> na TreeItem mogą być wyświetlane wszystkie obiekty podrzędne lub tylko bezpośrednie elementy podrzędne.  
   
-    -   Jeśli wywołanie <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> lub <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> w formancie przechowuje informacje o stanie jego elementy podrzędne zdarzenia zmiany widoczność mają być wysyłane, nie zdarzenia zmiany stanu Jeśli formant nadrzędny nie przechowuje stanu jego elementy podrzędne, jeśli zwinięte, może formantu zniszczyć wszystkie elementy podrzędne, które nie są już widoczne i wywołaj zdarzenie niszczone; lub może go zmienić <xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A> dla każdego obiektu podrzędnego i zgłoś zdarzenie zmiany widoczności.  
+    -   Jeśli wywołanie <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> lub <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> na kontrolce przechowuje informacje o stanie jego elementy potomne, zdarzenia zmiany widoczność powinny być przesyłane nie zdarzenia zmiany stanu, jeśli formant nadrzędny nie przechowuje stanu jego elementy podrzędne, jeśli zwinięte, formant może zniszczyć wszystkie elementy podrzędne, które nie są już widoczne i zgłoś zdarzenie niszczone; lub mogą ulec zmianie <xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A> dla każdego obiektu podrzędnego i zgłoś zdarzenie zmiany widoczność.  
   
--   Aby zagwarantować nawigacji, jest pożądane dla obiekt w [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa (z odpowiednią widoczność stanu), niezależnie od jego obiektów nadrzędnych <xref:System.Windows.Automation.ExpandCollapseState>. Jeśli elementy podrzędne są generowane na żądanie, mogą występować jedynie w [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa po będzie wyświetlany dla czasu lub najpierw tylko, gdy są one widoczne.  
+-   Aby zagwarantować nawigacji, jest pożądane dla obiektu w [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa (ze stanem odpowiednich widoczności), niezależnie od jego elementów nadrzędnych <xref:System.Windows.Automation.ExpandCollapseState>. Jeśli elementy podrzędne są generowane na żądanie, mogą występować jedynie w [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa po są wyświetlane najpierw czas lub tylko wtedy, gdy są one widoczne.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iexpandcollapseprovider"></a>Wymagane elementy IExpandCollapseProvider  
- Poniższe właściwości i metody są wymagane do wykonania <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>.  
+ Poniższe właściwości i metod wymaganych do implementowania <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>.  
   
 |Wymagane elementy członkowskie|Typ elementu członkowskiego|Uwagi|  
 |----------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|Właściwość|Brak|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|Metoda|Brak|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|Metoda|Brak|  
-|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|Zdarzenie|Ten formant nie ma żadnych skojarzonych zdarzeń; Użyj tego Delegat ogólny.|  
+|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|Zdarzenie|Ta kontrolka nie ma żadnych skojarzonych zdarzeń; Użyj ten delegat ogólny.|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Wyjątki  
- Dostawców należy zgłosić następujące wyjątki.  
+ Dostawcy należy zgłaszać następujące wyjątki.  
   
 |Typ wyjątku|Warunek|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|Albo <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> lub <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> jest wywoływane, gdy <xref:System.Windows.Automation.ExpandCollapseState>  =  <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>.|  
+|<xref:System.InvalidOperationException>|Albo <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> lub <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> jest wywoływana, gdy <xref:System.Windows.Automation.ExpandCollapseState>  =  <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wzorce kontrolek automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  

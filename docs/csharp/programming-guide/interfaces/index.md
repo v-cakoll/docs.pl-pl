@@ -5,66 +5,66 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 6ef872876e800674a58b440e0e4001b86b0f8244
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b6cdffdaab508d898e7caa8c93ac0f7b1365d01
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337590"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408883"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfejsy (Przewodnik programowania w języku C#)
-Interfejs zawiera definicje dla grupy powiązane funkcje który [klasy](../../../csharp/language-reference/keywords/class.md) lub [struktury](../../../csharp/language-reference/keywords/struct.md) można zaimplementować.  
+Interfejs zawiera definicje dla grupy powiązane funkcje, [klasy](../../../csharp/language-reference/keywords/class.md) lub [struktury](../../../csharp/language-reference/keywords/struct.md) można zaimplementować.  
   
- Za pomocą interfejsów, na przykład można dołączyć zachowanie z wielu źródeł w klasie. Czy funkcja jest ważne w języku C#, ponieważ język nie obsługuje wielu dziedziczenia klas. Ponadto należy użyć interfejsu, jeśli chcesz symulować dziedziczenia struktur, ponieważ ich faktycznie nie może dziedziczyć z innego struktury lub klasy.  
+ Korzystając z interfejsów, można na przykład zawierać zachowanie z wielu źródeł w klasie. Czy funkcja jest ważna w języku C#, ponieważ język nie obsługują wielokrotnego dziedziczenia klas. Ponadto należy użyć interfejsu, jeśli chcesz symulować dziedziczenia dla struktur, ponieważ są faktycznie nie może dziedziczyć z innej struktury lub klasy.  
   
- Możesz definiować za pomocą interfejsu [interfejsu](../../../csharp/language-reference/keywords/interface.md) — słowo kluczowe, jak przedstawiono na poniższym przykładzie.  
+ Zdefiniuj interfejs, za pomocą [interfejsu](../../../csharp/language-reference/keywords/interface.md) — słowo kluczowe, co ilustruje poniższy przykład.  
   
  [!code-csharp[csProgGuideInheritance#47](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interfaces_1.cs)]  
   
- Klasy lub struktury, która implementuje <xref:System.IEquatable%601> interfejs musi zawierać definicję <xref:System.IEquatable%601.Equals%2A> metodę, która odpowiada podpisie, który określa interfejs. W związku z tym można liczyć na klasę, która implementuje `IEquatable<T>` zawiera `Equals` metody, z którym wystąpienia klasy można określić, czy jest taki sam, jak inne wystąpienie tego samego rodzaju.  
+ Wszystkie klasy lub struktury, która implementuje <xref:System.IEquatable%601> interfejs musi zawierać definicję <xref:System.IEquatable%601.Equals%2A> metodę, która pasuje do podpisu, który określa interfejs. Dlatego możesz liczyć na klasę, która implementuje `IEquatable<T>` zawierać `Equals` metoda, za pomocą którego wystąpienia klasy można określić, czy jest równy do innego wystąpienia tej samej klasy.  
   
- Definicja `IEquatable<T>` nie dostarcza implementację `Equals`. Interfejs definiuje tylko sygnaturę. W ten sposób interfejs w języku C# jest podobny do klasy abstrakcyjnej, w którym abstrakcyjne są wszystkie metody. Jednak klasie lub strukturze można zaimplementować wiele interfejsów, ale klasa może dziedziczyć tylko jedną klasę, abstrakcyjny lub nie. W związku z tym za pomocą interfejsów, mogą obejmować zachowanie z wielu źródeł w klasie.  
+ Definicja `IEquatable<T>` nie dostarcza implementację `Equals`. Interfejs definiuje tylko podpisu. W ten sposób interfejs w języku C# jest podobny do klasy abstrakcyjnej, w którym wszystkie metody są abstrakcyjne. Jednak klasy lub struktury, można zaimplementować wiele interfejsów, ale klasa może odziedziczyć tylko jedną klasę abstrakcyjną, czy nie. W związku z tym korzystając z interfejsów, można dołączyć zachowanie z wielu źródeł w klasie.  
   
- Aby uzyskać więcej informacji na temat klas abstrakcyjnych, zobacz [abstrakcyjne i zapieczętowane klasy oraz członkowie klas](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
+ Aby uzyskać więcej informacji na temat klasy abstrakcyjne, zobacz [abstrakcyjnych i zapieczętowanych klas i składowych klasy](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
- Interfejsy może zawierać metod, właściwości, zdarzenia, indeksatorów lub dowolnej kombinacji tych typów cztery elementu członkowskiego. Łącza do przykłady, zobacz [sekcje pokrewne](../../../csharp/programming-guide/interfaces/index.md#BKMK_RelatedSections). Interfejs nie może zawierać stałe, pola, operatory, konstruktory wystąpień, finalizatory lub typów. Elementy członkowskie interfejsu są automatycznie publiczne i nie mogą zawierać żadnych modyfikatorów dostępu. Elementy członkowskie nie mogą być również [statycznych](../../../csharp/language-reference/keywords/static.md).  
+ Interfejsy może zawierać metody, właściwości, zdarzenia, indeksatorów lub dowolnej kombinacji tych typów cztery elementu członkowskiego. Aby uzyskać linki do przykładów, zobacz [sekcje pokrewne](../../../csharp/programming-guide/interfaces/index.md#BKMK_RelatedSections). Interfejs nie może zawierać stałe, pola, operatory, konstruktory wystąpień, finalizatory lub typów. Elementy członkowskie interfejsu są automatycznie publiczne, a nie mogą zawierać żadnych modyfikatory dostępu. Elementy członkowskie nie może być również [statyczne](../../../csharp/language-reference/keywords/static.md).  
   
- Aby zaimplementować elementu członkowskiego interfejsu, odpowiedni element członkowski klasy implementującej musi być publiczne, niestatycznej i ma taką samą nazwę i sygnaturę jako elementu członkowskiego interfejsu.  
+ Aby implementować składowej interfejsu, odpowiedniego elementu członkowskiego klasy implementującej musi być publiczna, niestatycznej i mają taką samą nazwę i podpis, jak składowej interfejsu.  
   
- Po klasie lub strukturze implementuje interfejs, klasy lub struktury musi zapewniać implementację dla wszystkich elementów członkowskich, które definiuje interfejs. Sam interfejs zapewnia nie funkcji klasie lub strukturze może dziedziczyć w taki sposób, może dziedziczyć funkcje klasy podstawowej. Jednak jeśli klasą podstawową implementuje interfejs, dowolnej klasy pochodzącej od klasy podstawowej dziedziczy tę implementację.  
+ Gdy klasa lub struktura implementuje interfejs, klasy lub struktury musi zapewniać implementację dla wszystkich elementów członkowskich, które definiuje interfejs. Sam interfejs zapewnia żadnych funkcji, która klasa lub struktura może dziedziczyć w taki sposób, może dziedziczyć klasy podstawowej funkcjonalności. Jednak jeśli klasa bazowa implementuje interfejs, każdej klasy, która jest pochodną klasy bazowej dziedziczy tę implementację.  
   
- Poniższy przykład przedstawia implementację interfejsu IEquatable < T\> interfejsu. Klasy implementującej `Car`, musi zapewniać implementację elementu <xref:System.IEquatable%601.Equals%2A> metody.  
+ W poniższym przykładzie pokazano implementację IEquatable < T\> interfejsu. Klasy implementującej `Car`, należy podać implementacja <xref:System.IEquatable%601.Equals%2A> metody.  
   
  [!code-csharp[csProgGuideInheritance#48](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interfaces_2.cs)]  
   
- Właściwości i indeksatorów w klasie można zdefiniować dodatkowe metody dostępu właściwości lub indeksatora, który jest zdefiniowany w interfejsie. Na przykład interfejs może zadeklarować właściwość, która ma [uzyskać](../../../csharp/language-reference/keywords/get.md) metody dostępu. Klasa, która implementuje interfejs można zadeklarować tej właściwości zarówno `get` i [ustawić](../../../csharp/language-reference/keywords/set.md) metody dostępu. Jednak jeśli właściwość lub indeksator używa jawnej implementacji, metody dostępu muszą być zgodne. Aby uzyskać więcej informacji na temat jawną implementację, zobacz [jawnej implementacji interfejsu](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md) i [właściwości interfejsu](../../../csharp/programming-guide/classes-and-structs/interface-properties.md).  
+ Właściwości i indeksatorów w klasie, można zdefiniować dodatkowe metody dostępu właściwości lub indeksatora, który jest zdefiniowany w interfejsie. Na przykład interfejs może zadeklarować właściwości, która ma [uzyskać](../../../csharp/language-reference/keywords/get.md) metody dostępu. Klasa, która implementuje interfejs można zadeklarować tej właściwości przy użyciu zarówno `get` i [ustaw](../../../csharp/language-reference/keywords/set.md) metody dostępu. Jednakże jeśli właściwość lub indeksator używa jawnych implementacji, metod dostępu muszą być zgodne. Aby uzyskać więcej informacji dotyczących jawnych implementacji, zobacz [jawnej implementacji interfejsu](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md) i [właściwości interfejsu](../../../csharp/programming-guide/classes-and-structs/interface-properties.md).  
   
- Interfejsy mogą zawierać inne interfejsy. Klasa może zawierać interfejsu wiele razy przy użyciu klas podstawowych, które dziedziczy lub za pośrednictwem interfejsów, które implementują inne interfejsy. Jednak klasy może zapewniać implementację interfejsu tylko jeden czasu i tylko wtedy, jeśli klasa deklaruje interfejsu w definicji klasy (`class ClassName : InterfaceName`). Jeśli interfejs jest dziedziczone, ponieważ dziedziczone klasy podstawowej, która implementuje interfejs, klasa podstawowa zawiera implementacji członków interfejsu. Klasa pochodna można jednak reimplement elementy członkowskie interfejsu zamiast dziedziczone implementacji.  
+ Interfejsy mogą zawierać inne interfejsy. Klasa może zawierać interfejs wielokrotnie za pośrednictwem klasy bazowej, która dziedziczy lub interfejsów, które implementują inne interfejsy. Klasa może jednak zapewniać implementację interfejsu tylko jedna godzina i tylko jeśli klasa deklaruje interfejsu w ramach definicji klasy (`class ClassName : InterfaceName`). Jeśli interfejs jest dziedziczone, ponieważ dziedziczone klasy bazowej, która implementuje interfejs, klasa bazowa zawiera implementację składowych interfejsu. Klasa pochodna może jednak ponownie składowych interfejsu zamiast dziedziczona implementacja.  
   
- Klasa podstawowa również mogą implementować członków interfejsu przy użyciu wirtualnych elementów członkowskich. W takim przypadku Klasa pochodna zmienić zachowanie interfejsu przez zastąpienie wirtualne elementy członkowskie. Aby uzyskać więcej informacji o wirtualnych elementów członkowskich, zobacz [polimorfizm](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
+ Klasa bazowa również wdrożyć składowych interfejsu przy użyciu wirtualnych elementów członkowskich. W takim przypadku Klasa pochodna można zmienić zachowania interfejsu zastępowanie wirtualnych elementów członkowskich. Aby uzyskać więcej informacji na temat wirtualnych elementów członkowskich, zobacz [polimorfizm](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
   
 ## <a name="interfaces-summary"></a>Podsumowanie interfejsów  
  Interfejs ma następujące właściwości:  
   
--   Interfejs przypomina abstrakcyjną klasę podstawową. Klasy lub struktury, która implementuje interfejs musi implementować wszyscy jej członkowie.  
+-   Interfejs przypomina abstrakcyjną klasę bazową. Wszystkie klasy lub struktury, która implementuje interfejs musi implementować wszystkich jej członków.  
   
--   Nie można bezpośrednio utworzyć wystąpienia interfejsu. Jej elementów członkowskich są implementowane przez klasy lub struktury, która implementuje interfejs.  
+-   Nie można bezpośrednio utworzyć wystąpienia interfejsu. Jego członkowie są implementowane przez klasy lub struktury, która implementuje interfejs.  
   
--   Interfejsy mogą zawierać zdarzenia, indeksatorów, metod i właściwości.  
+-   Interfejsy mogą zawierać zdarzenia, indeksatory, metod i właściwości.  
   
 -   Interfejsy zawierać żadnej implementacji metody.  
   
--   Wiele interfejsów można zaimplementować w klasie lub strukturze. Klasy mogą dziedziczyć klasa podstawowa i także implementować jeden lub więcej interfejsów.  
+-   Klasa lub struktura może zaimplementować wiele interfejsów. Klasy mogą dziedziczyć z klasy bazowej i także implementować jeden lub więcej interfejsów.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Implementacja interfejsu jawnego](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)  
- Wyjaśnia sposób tworzenia elementu członkowskiego klasy, które są specyficzne dla interfejsu.  
+ Wyjaśnia, jak utworzyć element członkowski klasy, które są specyficzne dla interfejsu.  
   
  [Instrukcje: jawne implementowanie elementów interfejsu](../../../csharp/programming-guide/interfaces/how-to-explicitly-implement-interface-members.md)  
- Przykład sposobu jawne Implementowanie elementów interfejsów.  
+ Zawiera przykład sposobu jawne Implementowanie elementów interfejsów.  
   
  [Instrukcje: jawne implementowanie elementów dwóch interfejsów](../../../csharp/programming-guide/interfaces/how-to-explicitly-implement-members-of-two-interfaces.md)  
- Przykład sposobu jawne Implementowanie elementów interfejsów z dziedziczenia.  
+ Zawiera przykład sposobu jawne Implementowanie elementów współpracuje z dziedziczenia.  
   
 ##  <a name="BKMK_RelatedSections"></a> Sekcje pokrewne  
   
@@ -91,7 +91,7 @@ Interfejs zawiera definicje dla grupy powiązane funkcje który [klasy](../../..
 -   [Indeksatory](../../../csharp/programming-guide/indexers/index.md)  
   
 ## <a name="featured-book-chapter"></a>Polecany rozdział książki  
- [Interfejsy](http://msdn.microsoft.com/library/orm-9780596521066-01-13.aspx) w [Learning C# 3.0: wzorca podstawy języka C# 3.0](http://msdn.microsoft.com/library/orm-9780596521066-01.aspx)  
+ [Interfejsy](https://msdn.microsoft.com/library/orm-9780596521066-01-13.aspx) w [Nauka języka C# 3.0: Opanuj podstawy języka C# 3.0](https://msdn.microsoft.com/library/orm-9780596521066-01.aspx)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  

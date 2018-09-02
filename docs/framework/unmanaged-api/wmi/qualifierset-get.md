@@ -1,6 +1,6 @@
 ---
 title: Funkcja QualifierSet_Get (niezarządzany wykaz interfejsów API)
-description: Funkcja QualifierSet_Get pobiera nazwanego kwalifikatora.
+description: Funkcja QualifierSet_Get pobiera nazwany kwalifikator.
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_Get
@@ -16,14 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f1bc57ab45a0452d9e3a50f0ab2de786ad73204a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e8c10a680f1caffd583097b16c046729fe10b140
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415397"
 ---
-# <a name="qualifiersetget-function"></a>Funkcja QualifierSet_Get
-Pobiera określony nazwany kwalifikatora.  
+# <a name="qualifiersetget-function"></a>QualifierSet_Get — funkcja
+Pobiera określonego nazwanego kwalifikator.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -43,26 +44,26 @@ HRESULT QualifierSet_Get (
 ## <a name="parameters"></a>Parametry
 
 `vFunc`   
-[in] Ten parametr nie jest używana.
+[in] Ten parametr jest nieużywany.
 
 `ptr`   
-[in] Wskaźnik do [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) wystąpienia.
+[in] Wskaźnik do [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) wystąpienia.
 
 `wszName`   
 [in] Nazwa kwalifikatora, którego wartość jest wymagane.
 
 `lFlags`   
-[in] Zastrzeżone. Ten parametr musi wynosić 0.
+[in] Zastrzeżone. Ten parametr musi być 0.
 
 `pVal`   
-[out] Gdy to się powiedzie, niepoprawny typ i wartość kwalifikatora. W przypadku niepowodzenia funkcji `VARIANT` wskazywana przez `pVal` nie jest modyfikowany. Jeśli ten parametr ma `null`, parametr będzie ignorowany.
+[out] Jeśli operacja się powiedzie, poprawny typ i wartość kwalifikatora. Jeśli funkcja zawiedzie, `VARIANT` wskazywany przez `pVal` nie jest modyfikowany. Jeśli ten parametr jest `null`, parametr jest ignorowany.
 
 `plFlavor`   
-[out] Wskaźnik do DŁUGI odbierająca bitów podtyp kwalifikator dla żądanego kwalifikatora. Jeśli informacje o wersji nie jest wymagana, ten parametr może być `null`. 
+[out] Wskaźnik na wartość typu LONG, odbierająca bitów wersja kwalifikatora dla żądanego kwalifikatora. Jeśli informacje o wersji nie jest wymagana, ten parametr może być `null`. 
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.h* pliku nagłówka, lub należy je zdefiniować jako stałe w kodzie:
+Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
@@ -72,7 +73,7 @@ Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.
   
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zawijana wywołanie [IWbemQualifierSet::Get](https://msdn.microsoft.com/library/aa391867(v=vs.85).aspx) metody.
+Ta funkcja zawija wywołanie do [IWbemQualifierSet::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get) metody.
 
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -82,4 +83,4 @@ Ta funkcja jest zawijana wywołanie [IWbemQualifierSet::Get](https://msdn.micros
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
-[Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)
+[Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

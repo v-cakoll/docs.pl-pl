@@ -1,21 +1,21 @@
 ---
-title: Stosowanie przekształcenia XSLT do zestawu danych
+title: Stosowanie transformacji XSLT do zestawu danych
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-ms.openlocfilehash: 05894431f819b968877a4a971027850efe37126a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: abcb3231aa92bd62edefc7f7341da5fcb3321e4b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756556"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405751"
 ---
-# <a name="applying-an-xslt-transform-to-a-dataset"></a>Stosowanie przekształcenia XSLT do zestawu danych
-**WriteXml** metody <xref:System.Data.DataSet> umożliwia zapisanie zawartości **zestawu danych** danych XML. Typowe zadania jest Przekształć tego XML do innego formatu używanie transformacji XSL (XSLT). Jednak synchronizacja **DataSet** z <xref:System.Xml.XmlDataDocument> umożliwia zastosowanie arkusz stylów XSLT do zawartości **zestawu danych** bez konieczności najpierw zapisać zawartość  **Zestaw danych** jako danych XML przy użyciu **WriteXml**.  
+# <a name="applying-an-xslt-transform-to-a-dataset"></a>Stosowanie transformacji XSLT do zestawu danych
+**WriteXml** metody <xref:System.Data.DataSet> umożliwia zapisanie zawartości **DataSet** jako danych XML. Często wykonywanym zadaniem jest następnie Przekształć element XML, że na inny format za pomocą przekształcenia XSL (XSLT). Jednak synchronizowanie **zestawu danych** z <xref:System.Xml.XmlDataDocument> umożliwia zastosowanie arkusz stylów XSLT do zawartości **DataSet** bez konieczności pisania najpierw zawartość  **Zestaw danych** jako danych XML przy użyciu **WriteXml**.  
   
- W poniższym przykładzie **DataSet** z tabele i relacje synchronizuje **DataSet** z **dokumentu XmlDataDocument**i zapisuje część  **Zestaw danych** jako kodu HTML plików przy użyciu arkusz stylów XSLT. Poniżej przedstawiono zawartość arkusza stylów XSLT.  
+ W poniższym przykładzie **zestawu danych** tabele i relacje, synchronizuje **DataSet** z **XmlDataDocument**i zapisuje część  **Zestaw danych** jako kodu HTML, plików, przy użyciu arkusz stylów XSLT. Poniżej przedstawiono zawartość arkusza stylów XSLT.  
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">  
@@ -59,7 +59,7 @@ ms.locfileid: "32756556"
  Poniższy kod wypełnienia **DataSet** i stosuje arkusz stylów XSLT.  
   
 > [!NOTE]
->  Jeśli chcesz zastosować arkusz stylów XSLT do **DataSet** zawiera relacje, uzyskać najlepszą wydajność, gdy ustawisz **zagnieżdżone** właściwość <xref:System.Data.DataRelation> do **true**dla każdego zagnieżdżone relacji. Dzięki temu można używać arkuszy stylów XSLT wdrożenie przetwarzanie góra dół fizycznych nawigacji hierarchii i przekształcania danych, a nie za pomocą wydajności intensywnie XPath lokalizacji osi (na przykład równorzędny poprzedzających i następujących element równorzędny w stylu Arkusz testu wyrażenia węzła) do nawigacji go. Aby uzyskać więcej informacji o relacjach zagnieżdżonych, zobacz [zagnieżdżania DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
+>  Jeśli chcesz zastosować arkusz stylów XSLT do **DataSet** zawierającą relacji, osiągnąć najlepszą wydajność, jeśli ustawisz **zagnieżdżone** właściwość <xref:System.Data.DataRelation> do **true**dla każdego zagnieżdżone relacji. Dzięki temu można używać arkuszy stylów XSLT Implementowanie przetworzenia góra dół fizycznych można nawigować po hierarchii i przekształcać dane, w przeciwieństwie do używania intensywnie XPath lokalizacji osi (na przykład poprzedni element równorzędny i następujący element równorzędny w stylu Arkusz test wyrażenia węzła) aby nawigować po nim. Aby uzyskać więcej informacji dotyczących zagnieżdżonych relacji, zobacz [zagnieżdżanie elementów DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -125,4 +125,4 @@ writer.Close();
   
 ## <a name="see-also"></a>Zobacz też  
  [Synchronizacja elementów DataSet i XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

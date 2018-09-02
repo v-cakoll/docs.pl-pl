@@ -16,68 +16,68 @@ helpviewer_keywords:
 - execution [Visual Basic], stopping
 ms.assetid: 07018828-2d49-4cf5-a44b-19fb15d9efea
 ms.openlocfilehash: aac30a8b0272ae6c141138a91585953237ab8098
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650644"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403545"
 ---
 # <a name="walkthrough-defining-classes-visual-basic"></a>Wskazówki: definiowanie klas (Visual Basic)
 
-W tym przewodniku pokazano, jak zdefiniować klasy, które następnie służy do tworzenia obiektów. Ponadto przedstawiono sposób dodawania właściwości i metod do nowej klasy, a demonstruje sposób inicjowania obiektu.  
+W tym instruktażu przedstawiono sposób definiowania klas, które można następnie wykorzystać do tworzenia obiektów. Ponadto dowiesz się, jak dodać właściwości i metod do nowej klasy i pokazuje, jak można zainicjować obiektu.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="to-define-a-class"></a>Aby zdefiniować klasę
   
-1.  Tworzenie projektu, klikając **nowy projekt** na **pliku** menu. **Nowy projekt** zostanie wyświetlone okno dialogowe.  
+1.  Utwórz projekt, klikając **nowy projekt** na **pliku** menu. **Nowy projekt** pojawi się okno dialogowe.  
   
-2.  Wybierz aplikację systemu Windows na liście szablony projektu Visual Basic, aby wyświetlić nowy projekt.  
+2.  Wybierz aplikację Windows z listy szablonów projektu języka Visual Basic, aby wyświetlić nowy projekt.  
   
-3.  Dodaj nową klasę w projekcie, klikając **Dodaj klasę** na **projektu** menu. **Dodaj nowy element** zostanie wyświetlone okno dialogowe.  
+3.  Dodaj nową klasę do projektu, klikając pozycję **Dodaj klasę** na **projektu** menu. **Dodaj nowy element** pojawi się okno dialogowe.  
   
 4.  Wybierz **klasy** szablonu.  
   
-5.  Nazwa nowej klasy `UserNameInfo.vb`, a następnie kliknij przycisk **Dodaj** do wyświetlenia kodu dla nowej klasy.  
+5.  Nadaj nowej klasie `UserNameInfo.vb`, a następnie kliknij przycisk **Dodaj** Aby wyświetlić kod dla nowej klasy.  
   
      [!code-vb[VbVbalrOOP#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#5)]
   
     > [!NOTE]
-    >  Korzystając z języka Visual Basic **edytora kodu** Aby dodać klasę do uruchamiania formularza, wpisując `Class` — słowo kluczowe następuje nazwa nowej klasy. **Edytora kodu** zawiera odpowiednią `End Class` instrukcji dla Ciebie.  
+    >  Visual Basic można użyć **Edytor kodu** Aby dodać klasę do formularza uruchamiania, wpisując `Class` następuje nazwa nowej klasy, słowo kluczowe. **Edytor kodu** zapewnia odpowiedni `End Class` instrukcji dla Ciebie.  
   
-6.  Zdefiniuj pole prywatne dla klasy przez dodanie poniższego kodu między `Class` i `End Class` instrukcji:  
+6.  Zdefiniuj prywatnego pola do klasy, dodając następujący kod między `Class` i `End Class` instrukcji:  
   
      [!code-vb[VbVbalrOOP#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#7)]
   
-     Deklarowanie pole jako `Private` oznacza może być używany tylko w klasie. Można udostępnić pola z poza klasą za pomocą modyfikatorów dostępu, takich jak `Public` które zapewniają więcej dostęp. Aby uzyskać więcej informacji, zobacz temat [Poziomy dostępu w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+     Deklarowanie pola jako `Private` oznacza może być używany tylko w klasie. Możesz udostępnić pola z poza klasy za pomocą modyfikatorów dostępu, takich jak `Public` dostarczające większy dostęp. Aby uzyskać więcej informacji, zobacz temat [Poziomy dostępu w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
-7.  Definiuje właściwości dla klasy przez dodanie poniższego kodu:  
+7.  Zdefiniuj właściwość klasy, dodając następujący kod:  
   
      [!code-vb[VbVbalrOOP#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#8)]
   
-8.  Zdefiniuj metodę w klasie przez dodanie poniższego kodu:  
+8.  Zdefiniuj metodę dla klasy, dodając następujący kod:  
   
      [!code-vb[VbVbalrOOP#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#9)]
   
-9. Zdefiniuj sparametryzowanym konstruktorze dla nowej klasy, dodając procedurę o nazwie `Sub New`:  
+9. Zdefiniuj sparametryzowania konstruktora dla nowej klasy, dodając procedurę o nazwie `Sub New`:  
   
      [!code-vb[VbVbalrOOP#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#10)]
   
-     `Sub New` Konstruktor jest wywoływana automatycznie po utworzeniu obiektu, w oparciu o tę klasę. Ten konstruktor ustawia wartość pola, zawierające nazwę użytkownika.  
+     `Sub New` Konstruktor jest wywoływana automatycznie, gdy tworzony jest obiekt na podstawie tej klasy. Ten konstruktor określa wartości pola, który zawiera nazwę użytkownika.  
   
-## <a name="to-create-a-button-to-test-the-class"></a>Aby utworzyć przycisk, aby przetestować klasy
+## <a name="to-create-a-button-to-test-the-class"></a>Aby utworzyć przycisk do przetestowania klasy
   
-1.  Zmień formularz startowy do trybu projektowania, klikając prawym przyciskiem myszy jego nazwę w **Eksploratora rozwiązań** , a następnie klikając polecenie **Widok projektanta**. Domyślnie formularz startowy projektów aplikacji systemu Windows nosi nazwę Form1.vb. Następnie zostanie wyświetlony formularz główny.  
+1.  Zmień formularz początkowy do trybu projektowania, klikając prawym przyciskiem myszy jej nazwę w **Eksploratora rozwiązań** , a następnie klikając polecenie **Projektant widoków**. Domyślnie formularz początkowy dla projektów aplikacji Windows nazwie Form1.vb. Następnie zostanie wyświetlony formularz główny.  
   
-2.  Dodawanie przycisku do formularza głównego, a następnie kliknij dwukrotnie, aby wyświetlić kod `Button1_Click` obsługi zdarzeń. Dodaj następujący kod, aby wywołać procedurę testu:  
+2.  Dodawanie przycisku do formularza głównego i go dwukrotnie, aby wyświetlić kod `Button1_Click` programu obsługi zdarzeń. Dodaj następujący kod, aby wywołać procedurę testu:  
   
      [!code-vb[VbVbalrOOP#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#12)]
   
-## <a name="to-run-your-application"></a>Do uruchamiania aplikacji
+## <a name="to-run-your-application"></a>Aby uruchomić aplikację
   
-1.  Uruchom aplikację, naciskając klawisz F5. Kliknij przycisk w formularzu do wywołania tej procedury testu. Wyświetla komunikat informujący, że w oryginalnej `UserName` jest "MOORE, DOMINIKA", ponieważ wywołana procedura `Capitalize` metody obiektu.  
+1.  Uruchom aplikację, naciskając klawisz F5. Kliknij przycisk na formularzu, aby wywołać procedurę testu. Wyświetla komunikat informujący, że oryginalna `UserName` jest "MOORE, DOMINIKA", ponieważ wywołana procedura `Capitalize` metody obiektu.  
   
-2.  Kliknij przycisk **OK** aby zamknąć okno komunikatu. `Button1 Click` Procedury zmienia wartość `UserName` właściwości i wyświetla komunikat informujący, że nowa wartość `UserName` jest "Worden, Jan".  
+2.  Kliknij przycisk **OK** aby odrzucić okno komunikatu. `Button1 Click` Procedury zmienia wartość `UserName` właściwości i wyświetla komunikat informujący, że nowa wartość `UserName` jest "Worden, Jan".  
   
 ## <a name="see-also"></a>Zobacz także
 

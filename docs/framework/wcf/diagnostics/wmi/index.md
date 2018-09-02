@@ -2,12 +2,12 @@
 title: Używanie Instrumentacji zarządzania Windows na potrzeby diagnostyki
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: b1ebb6b438df6d7efb5342a82e42220a58ea5cbd
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: b7c898f1af91f639939e5480687b5967bf57d246
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42908149"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406923"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Używanie Instrumentacji zarządzania Windows na potrzeby diagnostyki
 Windows Communication Foundation (WCF) uwidacznia dane inspekcji usługi w czasie wykonywania za pośrednictwem dostawcy Instrumentacji zarządzania Windows (WMI) WCF.  
@@ -30,7 +30,7 @@ Windows Communication Foundation (WCF) uwidacznia dane inspekcji usługi w czasi
  Ten wpis konfiguracji udostępnia interfejs usługi WMI. Aplikacje do zarządzania można teraz nawiązać połączenie za pośrednictwem tego interfejsu i uzyskać dostęp z Instrumentacją zarządzania aplikacji.  
   
 ## <a name="accessing-wmi-data"></a>Uzyskiwanie dostępu do danych usługi WMI  
- Dane usługi WMI są dostępne na wiele różnych sposobów. Firma Microsoft udostępnia interfejsy API usługi WMI dla skryptów, aplikacji Visual Basic, aplikacji w języku C++ i [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Aby uzyskać więcej informacji, zobacz [przy użyciu usługi WMI](http://go.microsoft.com/fwlink/?LinkId=95183).  
+ Dane usługi WMI są dostępne na wiele różnych sposobów. Firma Microsoft udostępnia interfejsy API usługi WMI dla skryptów, aplikacji Visual Basic, aplikacji w języku C++ i [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Aby uzyskać więcej informacji, zobacz [przy użyciu usługi WMI](https://go.microsoft.com/fwlink/?LinkId=95183).  
   
 > [!CAUTION]
 >  Jeśli używasz programu .NET Framework, pod warunkiem metody do programowego dostępu do danych usługi WMI, należy pamiętać, że tych metod może zgłaszają wyjątki, gdy połączenie zostanie nawiązane. Połączenie nie zostanie nawiązane podczas konstruowania <xref:System.Management.ManagementObject> wystąpienia, ale pierwszego żądania obejmujące rzeczywiste dane programu exchange. Dlatego należy używać `try..catch` bloku catch możliwych wyjątków.  
@@ -147,13 +147,13 @@ Windows Communication Foundation (WCF) uwidacznia dane inspekcji usługi w czasi
 Whoami /user  
 ```  
   
- Zapewnia to identyfikator SID bieżącego użytkownika, ale ta metoda nie może służyć do pobrania identyfikatora SID dla dowolnego użytkownika. Inną metodą do pobrania identyfikatora SID jest użycie [getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467) narzędzia z [Windows 2000 Resource Kit Tools do wykonywania zadań administracyjnych](http://go.microsoft.com/fwlink/?LinkId=178660). To narzędzie porównuje identyfikator SID dwóch użytkowników (lokalnego lub domeny), a po stronie efekt drukuje dwa identyfikatory SID w wierszu polecenia. Aby uzyskać więcej informacji, zobacz [dobrze znane identyfikatory SID](http://go.microsoft.com/fwlink/?LinkId=186468).  
+ Zapewnia to identyfikator SID bieżącego użytkownika, ale ta metoda nie może służyć do pobrania identyfikatora SID dla dowolnego użytkownika. Inną metodą do pobrania identyfikatora SID jest użycie [getsid.exe](https://go.microsoft.com/fwlink/?LinkId=186467) narzędzia z [Windows 2000 Resource Kit Tools do wykonywania zadań administracyjnych](https://go.microsoft.com/fwlink/?LinkId=178660). To narzędzie porównuje identyfikator SID dwóch użytkowników (lokalnego lub domeny), a po stronie efekt drukuje dwa identyfikatory SID w wierszu polecenia. Aby uzyskać więcej informacji, zobacz [dobrze znane identyfikatory SID](https://go.microsoft.com/fwlink/?LinkId=186468).  
   
 ## <a name="accessing-remote-wmi-object-instances"></a>Uzyskiwanie dostępu do wystąpienia obiektu zdalną usługę WMI  
  Jeśli potrzebujesz dostępu do wystąpień usługi WCF WMI na komputerze zdalnym, należy włączyć prywatność pakietów w menu Narzędzia, których używasz do dostępu. W poniższej sekcji opisano sposób osiągnięcia je przy użyciu usługi WMI CIM Studio, Tester oprzyrządowania Instrumentacji zarządzania Windows, jak również zestaw .NET SDK 2.0.  
   
 ### <a name="wmi-cim-studio"></a>WMI CIM Studio  
- Jeśli zainstalowano [narzędzia administracyjne WMI](http://go.microsoft.com/fwlink/?LinkId=95185), można użyć WMI CIM Studio do wystąpień WMI dostępu. Narzędzia znajdują się w następującym folderze  
+ Jeśli zainstalowano [narzędzia administracyjne WMI](https://go.microsoft.com/fwlink/?LinkId=95185), można użyć WMI CIM Studio do wystąpień WMI dostępu. Narzędzia znajdują się w następującym folderze  
   
  **Narzędzia Files\WMI %Windir%\Program\\**  
   

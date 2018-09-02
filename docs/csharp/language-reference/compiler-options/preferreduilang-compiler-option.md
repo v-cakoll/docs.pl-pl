@@ -8,15 +8,15 @@ helpviewer_keywords:
 - /preferreduilang compiler option [C#]
 - -preferreduilang compiler option [C#]
 ms.assetid: 68b2462f-6778-48d7-8052-62805fe8e02c
-ms.openlocfilehash: 21a3baceb8a46723de1c633e415af0660bb41840
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a1fbbb8415e5e3405f039489aa071b0624065a9d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33211754"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405894"
 ---
 # <a name="-preferreduilang-c-compiler-options"></a>-preferreduilang (opcje kompilatora C#)
-Za pomocą `-preferreduilang` — opcja kompilatora, można określić język, w którym kompilator języka C# Wyświetla dane wyjściowe, takie jak komunikaty o błędach.  
+Za pomocą `-preferreduilang` — opcja kompilatora, można określić język, w którym kompilator języka C#, wyświetla dane wyjściowe, takie jak komunikaty o błędach.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,10 +26,10 @@ Za pomocą `-preferreduilang` — opcja kompilatora, można określić język, w
   
 ## <a name="arguments"></a>Argumenty  
  `language`  
- [Nazwy języka](https://msdn.microsoft.com/library/windows/desktop/dd318696(v=vs.85).aspx) język do użycia dla danych wyjściowych kompilatora.  
+ [Nazwa języka](/windows/desktop/Intl/language-names) języka do użycia dla danych wyjściowych kompilatora.  
   
 ## <a name="remarks"></a>Uwagi  
- Można użyć `-preferreduilang` opcję kompilatora, aby określić język, który ma komunikaty o błędach i innych wiersza polecenia dane wyjściowe kompilatora C#. Jeśli nie zainstalowano pakiet językowy dla języka, zamiast niego jest używana z ustawieniem języka systemu operacyjnego i nie będzie zgłaszany błąd.  
+ Możesz użyć `-preferreduilang` opcję kompilatora, aby określić język, który chcesz, aby kompilator języka C# do użycia dla komunikatów o błędach i inne dane wyjściowe wiersza polecenia. Jeśli nie zainstalowano pakiet językowy dla języka, ustawień języka systemu operacyjnego jest używana zamiast tego, a nie będzie zgłaszany błąd.  
   
 ```csharp  
 csc.exe -preferreduilang:ja-JP  
@@ -37,5 +37,6 @@ csc.exe -preferreduilang:ja-JP
   
 ## <a name="requirements"></a>Wymagania  
   
-## <a name="see-also"></a>Zobacz też  
- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)

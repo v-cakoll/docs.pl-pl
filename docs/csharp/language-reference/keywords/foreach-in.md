@@ -1,5 +1,5 @@
 ---
-title: foreach, in (odwołanie w C#)
+title: Instrukcja foreach języka C#
 ms.date: 06/29/2018
 f1_keywords:
 - foreach
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: a6397cdc9d1e36423a14158a57ca2c1b3fe9df17
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: d84c68eb102d55b31ba20a6b6b5c01b96963924d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874965"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405853"
 ---
-# <a name="foreach-in-c-reference"></a>foreach, in (odwołanie w C#)
+# <a name="foreach-in-c-reference"></a>Instrukcja foreach w (odwołanie w C#)
 
 `foreach` Instrukcji wykonuje instrukcję lub blok instrukcji dla każdego elementu w określonym wystąpieniu typu, który implementuje <xref:System.Collections.IEnumerable?displayProperty=nameWithType> lub <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> interfejsu. `foreach` Instrukcja nie jest ograniczone do tych typów i mogą być stosowane do wystąpienia dowolnego typu, który spełnia następujące warunki:
 
@@ -47,10 +47,10 @@ Począwszy od C# 7.3, jeśli moduł wyliczający `Current` właściwość zwraca
 
 ## <a name="see-also"></a>Zobacz także
 
-[Instrukcja foreach (specyfikacja języka C#)](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement)  
-[Używanie instrukcji foreach z tablicami](../../programming-guide/arrays/using-foreach-with-arrays.md)  
-[for](for.md)  
-[Instrukcje iteracji](iteration-statements.md)  
-[Słowa kluczowe języka C#](index.md)  
-[Dokumentacja języka C#](../index.md)  
-[Przewodnik programowania w języku C#](../../programming-guide/index.md)  
+- [Instrukcja foreach (specyfikacja języka C#)](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement)
+- [Używanie instrukcji foreach z tablicami](../../programming-guide/arrays/using-foreach-with-arrays.md)
+- [for](for.md)
+- [Instrukcje iteracji](iteration-statements.md)
+- [Słowa kluczowe języka C#](index.md)
+- [Dokumentacja języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)

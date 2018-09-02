@@ -2,21 +2,21 @@
 title: LINQ do DataSet
 ms.date: 03/30/2017
 ms.assetid: 743e3755-3ecb-45a2-8d9b-9ed41f0dcf17
-ms.openlocfilehash: 8a16e3fe0cea04813be50a83f906170199e78e3e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5e1644af7e07ad3395a30e56df52b7f85cefa77c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764856"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418843"
 ---
 # <a name="linq-to-dataset"></a>LINQ do DataSet
-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] umożliwia łatwiejsze i szybsze zapytania za pośrednictwem danych w pamięci podręcznej <xref:System.Data.DataSet> obiektu. W szczególności [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] upraszcza zapytań umożliwia deweloperom pisać zapytania od języka programowania, a nie przy użyciu języka osobne zapytania. Jest to szczególnie przydatne dla deweloperów programu Visual Studio, którzy mogą teraz wykorzystać sprawdzanie składni kompilacji, wpisując statycznego i dostarczane przez program Visual Studio w zapytaniach ich obsługę funkcji IntelliSense.  
+[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] umożliwia łatwiejsze i szybsze zapytania przez dane buforowane w <xref:System.Data.DataSet> obiektu. W szczególności [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] upraszcza zapytań, dzięki czemu deweloperzy mogą pisać zapytania w języku programowania, a nie przy użyciu języka oddzielnego zapytania. Jest to szczególnie przydatne dla deweloperów programu Visual Studio, którzy mogą korzystać ze sprawdzania składni w czasie kompilacji, wpisując statycznych i IntelliSense pomoc techniczna jest świadczona przez program Visual Studio w zapytaniach.  
   
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] może również służyć do zapytanie dotyczące danych, które zostały skonsolidowane z jednego lub więcej źródeł danych. Dzięki temu wiele scenariuszy, które wymagają elastyczność jak dane są reprezentowane i obsługi, takie jak wykonywanie kwerend lokalnie zagregowanych danych i warstwy środkowej buforowanie w aplikacjach sieci Web. W szczególności ogólnego raportowania, analizy i aplikacji analizy biznesowej wymagają tej metody manipulacji.  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] może również służyć do wykonywania zapytań względem danych, który został dołączony z co najmniej jedno źródło danych. Dzięki temu wiele scenariuszy, które wymagają elastyczność w sposób dane są reprezentowane i obsługiwane, takich jak zapytania lokalnie zagregowanych danych i warstwy środkowej buforowanie w aplikacjach sieci Web. W szczególności ogólne raportowanie, analiza i aplikacji analizy biznesowej wymagają tej metody do manipulowania.  
   
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Funkcji jest uwidaczniana, przede wszystkim za pośrednictwem metody rozszerzenia w <xref:System.Data.DataRowExtensions> i <xref:System.Data.DataTableExtensions> klasy. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] oparty na i wykorzystuje istniejące [!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)] architektury, a nie jako zamiennik [!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)] w kodzie aplikacji. Istniejący kod ADO.NET 2.0 będą nadal działać w [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] aplikacji. Relacja z [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] do [!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)] i magazynu danych przedstawiono na poniższym diagramie.  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Funkcja jest widoczna przede wszystkim za pośrednictwem metody rozszerzające w <xref:System.Data.DataRowExtensions> i <xref:System.Data.DataTableExtensions> klasy. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] opiera się na i wykorzystuje istniejące [!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)] architektury, a nie jako zamiennik [!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)] w kodzie aplikacji. Istniejący kod ADO.NET w wersji 2.0 będzie w dalszym ciągu działać w [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] aplikacji. Relacje [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] do [!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)] i magazyn danych zilustrowano na poniższym diagramie.  
   
- ![LINQ do DataSet jest oparta na dostawcy ADO.NET](../../../../docs/framework/data/adonet/media/linqtodataset.gif "LINQtoDataSet")  
+ ![LINQ do zestawu danych zależy od dostawcy ADO.NET](../../../../docs/framework/data/adonet/media/linqtodataset.gif "LINQtoDataSet")  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Wprowadzenie](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)  
@@ -31,6 +31,6 @@ ms.locfileid: "32764856"
  <xref:System.Data.DataRowComparer>  
   
 ## <a name="see-also"></a>Zobacz też  
- [LINQ (zapytania o języku zintegrowanym)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
  [LINQ i ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
  [ADO.NET](../../../../docs/framework/data/adonet/index.md)

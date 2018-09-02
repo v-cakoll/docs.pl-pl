@@ -1,34 +1,34 @@
 ---
-title: Wykonywanie SqlCommand SqlNotificationRequest
+title: Wykonywanie polecenia SqlCommand za pomocą SqlNotificationRequest
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1776f48f-9bea-41f6-83a4-c990c7a2c991
-ms.openlocfilehash: 2f705df810e7f3653589ca776a69bbe592458833
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83450e6ace33e89ddd263a1514f74f4d4e231cf7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365556"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405806"
 ---
-# <a name="sqlcommand-execution-with-a-sqlnotificationrequest"></a>Wykonywanie SqlCommand SqlNotificationRequest
-A <xref:System.Data.SqlClient.SqlCommand> można skonfigurować, aby wygenerować powiadomienie o zmianie danych po zostaną pobrane z serwera i zestawu wyników będzie inny, jeśli zostały ponownie wykonać zapytanie. Jest to przydatne w scenariuszach, w której chcesz użyć niestandardowych powiadomień kolejek na serwerze lub nie chcesz zachować obiektów na żywo.  
+# <a name="sqlcommand-execution-with-a-sqlnotificationrequest"></a>Wykonywanie polecenia SqlCommand za pomocą SqlNotificationRequest
+Element <xref:System.Data.SqlClient.SqlCommand> można skonfigurować, aby wygenerować powiadomienie po zmianie danych, gdy zostaną pobrane z serwera i zestawu wyników będzie inna w przypadku zapytania były wykonywane ponownie. Jest to przydatne w scenariuszach, w której chcesz używać kolejek niestandardowe powiadomienie, na serwerze lub nie chcesz zachować obiektów na żywo.  
   
 ## <a name="creating-the-notification-request"></a>Tworzenie żądania powiadomienia  
- Można użyć <xref:System.Data.Sql.SqlNotificationRequest> obiektu do utworzenia żądania powiadomienia przez to powiązanie `SqlCommand` obiektu. Po utworzeniu żądania nie są już potrzebne `SqlNotificationRequest` obiektu. Można zapytania do kolejki w celu powiadomienia i reagowania. Powiadomienia może wystąpić, nawet jeśli aplikacja jest zamknięta i uruchomiony ponownie.  
+ Możesz użyć <xref:System.Data.Sql.SqlNotificationRequest> obiektu do utworzenia żądania powiadomienia, tworząc powiązanie do `SqlCommand` obiektu. Po utworzeniu żądania nie są już potrzebne `SqlNotificationRequest` obiektu. Można wykonywać zapytania kolejki w celu powiadomienia i odpowiednio reagować. Powiadomienia może wystąpić, nawet jeśli aplikacja jest zamknięta i uruchomiony ponownie.  
   
- Po wykonaniu polecenia skojarzone powiadomienia zmiany wprowadzone w wyniku oryginalnego ustawić wyzwalacz wysyłanie wiadomości do kolejki programu SQL Server, który został skonfigurowany w żądaniu powiadomienia.  
+ Po wykonaniu polecenia z powiadomieniem skojarzone zmiany wprowadzone w wyniku oryginalnego zestawu wyzwalacza wysyłania komunikatu do kolejki programu SQL Server, który został skonfigurowany w żądaniu powiadomienia.  
   
- Sposób sondowania kolejki programu SQL Server i interpretować wiadomość jest specyficzne dla aplikacji. Aplikacja jest odpowiedzialny za sondowania kolejki i reagowania na podstawie zawartości wiadomości.  
+ Jak wykonać sondowanie kolejki programu SQL Server i interpretować komunikat jest specyficzne dla aplikacji. Aplikacja jest odpowiedzialna za sondowania kolejki i reagowanie na podstawie zawartości komunikatu.  
   
 > [!NOTE]
->  Korzystając z programu SQL Server żądania powiadomień o <xref:System.Data.SqlClient.SqlDependency>, utworzyć własną nazwę kolejki, zamiast domyślnej nazwy usługi.  
+>  Korzystając z programu SQL Server notification żądań z <xref:System.Data.SqlClient.SqlDependency>, Utwórz własną nazwę kolejki, a nie przy użyciu nazwy usługi domyślnego.  
   
- Istnieją żadne nowe elementy zabezpieczeń po stronie klienta dla <xref:System.Data.Sql.SqlNotificationRequest>. To przede wszystkim funkcję serwera, a serwer został utworzony specjalne uprawnienia, które użytkownicy muszą mieć żądania powiadomienie.  
+ Nie ma elementów nowych zabezpieczeń po stronie klienta dla <xref:System.Data.Sql.SqlNotificationRequest>. Jest to głównie funkcji serwera, a serwer został utworzony specjalne uprawnienia, które użytkownicy muszą mieć żądania powiadomienia.  
   
 ### <a name="example"></a>Przykład  
- Poniższy fragment kodu przedstawia sposób tworzenia <xref:System.Data.Sql.SqlNotificationRequest> i skojarz ją z <xref:System.Data.SqlClient.SqlCommand>.  
+ Poniższy fragment kodu przedstawia sposób tworzenia <xref:System.Data.Sql.SqlNotificationRequest> i powiąż ją z <xref:System.Data.SqlClient.SqlCommand>.  
   
 ```vb  
 ' Assume connection is an open SqlConnection.  
@@ -72,4 +72,4 @@ command.ExecuteReader();
   
 ## <a name="see-also"></a>Zobacz też  
  [Powiadomienia zapytań w programie SQL Server](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

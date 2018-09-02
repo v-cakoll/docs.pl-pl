@@ -2,15 +2,15 @@
 title: '&lt;transport&gt; w &lt;netPeerTcpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: c44d86d2-1160-44d7-9c7a-297b12eccc7f
-ms.openlocfilehash: c94336413424542f6fc6c0ef5b400b10ae715cd8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2b89ae090d24ff6aad1aae1b39a0a18961bd2537
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750703"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405667"
 ---
 # <a name="lttransportgt-of-ltnetpeertcpbindinggt"></a>&lt;transport&gt; w &lt;netPeerTcpBinding&gt;
-Określa ustawienia zabezpieczeń na poziomie transportu, korzystając z [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).  
+Określa ustawienia zabezpieczenia na poziomie transportu, korzystając z [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).  
   
  \<system.ServiceModel>  
 \<powiązania >  
@@ -32,20 +32,20 @@ Określa ustawienia zabezpieczeń na poziomie transportu, korzystając z [ \<net
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
- W poniższych sekcjach opisano atrybuty i elementy podrzędne, elementy nadrzędne  
+ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne  
   
 ### <a name="attributes"></a>Atrybuty  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|credentialType|Opcjonalna. Określa poświadczenia używane do weryfikowania wiadomości wysyłane z transportu elementów równorzędnych. Ten atrybut jest typu <xref:System.ServiceModel.PeerTransportCredentialType>.|  
+|credentialType|Opcjonalna. Określa typ poświadczenia używane do weryfikowania komunikaty wysyłane za pomocą transportu elementu równorzędnego. Ten atrybut jest typu <xref:System.ServiceModel.PeerTransportCredentialType>.|  
   
 ## <a name="credentialtype-attribute"></a>credentialType atrybutu  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|certyfikat|Uwierzytelnianie kanał transportowy peer wymaga X509 certyfikatu.|  
-|Hasło|Uwierzytelnianie kanał transportowy peer wymaga poprawne hasło.|  
+|Certyfikat|Uwierzytelnianie transportu kanał elementu równorzędnego wymaga X509 certyfikatu.|  
+|Hasło|Uwierzytelnianie transportu kanał elementu równorzędnego wymaga prawidłowego hasła.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -64,5 +64,5 @@ Określa ustawienia zabezpieczeń na poziomie transportu, korzystając z [ \<net
  [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
  [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie usług Windows Communication Foundation i klientów za pomocą powiązań](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Konfigurowanie Windows Communication Foundation i klientów za pomocą powiązań](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

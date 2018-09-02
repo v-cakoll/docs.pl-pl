@@ -2,27 +2,27 @@
 title: Programowanie zorientowane obiektowo (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 0dee6edf966e8e2a3e430e60f1c3d51354d08bf3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a6194cb93b10d5b9f5d25fc42cff6c071627d411
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340596"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415491"
 ---
 # <a name="object-oriented-programming-c"></a>Programowanie zorientowane obiektowo (C#)
-C# zapewnia pełną obsługę programowanie zorientowane obiektowo, łącznie z hermetyzacji, dziedziczenia i polimorfizm.  
+C# zapewnia pełną obsługę programowanie zorientowane obiektowo, łącznie z hermetyzacji, dziedziczenia i polimorfizmu.  
   
- *Hermetyzacja* oznacza, że grupy powiązane właściwości, metod i inne elementy członkowskie są traktowane jako pojedyncza jednostka lub obiekt.  
+ *Hermetyzacja* oznacza, że grupa powiązanych właściwości, metod i inne elementy członkowskie są traktowane jako pojedyncza jednostka lub obiekt.  
   
- *Dziedziczenie* opisuje może tworzyć nowe klasy oparte na istniejącej klasy.  
+ *Dziedziczenie* opisuje zdolność do tworzenia nowych klas w oparciu o istniejącą klasą.  
   
- *Polimorfizm* oznacza, że może mieć wielu klas, które mogą być używane zamiennie, mimo że każda klasa implementuje te same właściwości lub metody na różne sposoby.  
+ *Polimorfizm* oznacza, że może mieć wiele klas, które mogą być używane zamiennie, mimo że każda klasa implementuje te same właściwości lub metody w różny sposób.  
   
- W tej sekcji opisano następujące kwestie:  
+ W tej sekcji opisano następujące pojęcia:  
   
 -   [Klasy i obiekty](#Classes)  
   
-    -   [Członkowie klasy](#Members)  
+    -   [Elementy członkowskie klasy](#Members)  
   
          [Właściwości i pola](#Properties)  
   
@@ -38,9 +38,9 @@ C# zapewnia pełną obsługę programowanie zorientowane obiektowo, łącznie z 
   
     -   [Modyfikatory dostępu i poziomy dostępu](#AccessModifiers)  
   
-    -   [Utworzenie wystąpienia klasy](#InstantiatingClasses)  
+    -   [Tworzenie wystąpienia klasy](#InstantiatingClasses)  
   
-    -   [Klasy statyczne i elementów członkowskich](#Static)  
+    -   [Klasy statyczne i członkowie](#Static)  
   
     -   [Typy anonimowe](#AnonymousTypes)  
   
@@ -55,9 +55,9 @@ C# zapewnia pełną obsługę programowanie zorientowane obiektowo, łącznie z 
 -   [Delegaci](#Delegates)  
   
 ##  <a name="Classes"></a> Klasy i obiekty  
- Warunki *klasy* i *obiektu* są czasami używane zamiennie, ale w rzeczywistości opisano klasy *typu* obiektów, gdy obiekty są użyteczne  *wystąpienia* klas. Dlatego utworzenie obiektu jest nazywany *wystąpienia*. Przy użyciu odpowiednio planu, klasa to umożliwi, a obiekt jest budynku z tego planu.  
+ Warunki *klasy* i *obiektu* są czasami stosowane zamiennie, jednak w rzeczywistości klasy opisują *typu* obiektów, podczas gdy obiekty to użytkowe  *wystąpienia* klas. Więc, akt tworzenia obiektu jest nazywany *wystąpienia*. Korzystając z analogii planu, klasa to plan, a obiekt to budynek utworzony z tego planu.  
   
- Aby zdefiniować klasy:  
+ Aby zdefiniować klasę:  
   
 ```csharp  
 class SampleClass  
@@ -65,7 +65,7 @@ class SampleClass
 }  
 ```  
   
- C# są także światła wersja klasy o nazwie *struktury* są przydatne, gdy trzeba utworzyć dużą tablicę obiektów i chcesz używać zbyt dużej ilości pamięci do tego.  
+ C# oferuje także uproszczonej wersji klasy o nazwie *struktury* są przydatne, gdy trzeba utworzyć duże tablice obiektów i czy chcesz zużyć do tego zbyt dużej ilości pamięci.  
   
  Aby zdefiniować strukturę:  
   
@@ -81,13 +81,13 @@ struct SampleStruct
   
 -   [struct](../../../csharp/language-reference/keywords/struct.md)  
   
-###  <a name="Members"></a> Członkowie klasy  
- Każda klasa może mieć różne *klasy elementów członkowskich* zawierające właściwości, które opisują dane klasy, metody definiujące zachowanie klasy i zdarzenia, które zapewniają komunikację między różnych klas i obiektów.  
+###  <a name="Members"></a> Elementy członkowskie klasy  
+ Każda klasa może mieć różne *elementy członkowskie klasy* którzy zawierają właściwości, które opisują dane klasy, metody, które definiują zachowanie klasy i wydarzenia, które zapewniają komunikację między różnych klasami i obiektami.  
   
 ####  <a name="Properties"></a> Właściwości i pola  
- Pola i właściwości reprezentują informacje, która zawiera obiekt. Pola są podobne do zmiennych, ponieważ może być odczytany lub ustawić bezpośrednio.  
+ Pola i właściwości reprezentują informacje zawarte w obiekcie. Pola przypominają zmienne, ponieważ można je odczytać lub ustawić bezpośrednio.  
   
- Aby zdefiniować pola:  
+ Aby zdefiniować pole:  
   
 ```csharp  
 class SampleClass  
@@ -96,11 +96,11 @@ class SampleClass
 }  
 ```  
   
- Właściwości mają get i ustaw procedur, które zapewniają większą kontrolę w sposób ustawiona lub zwrócona wartości.  
+ Właściwości mają get i ustawić procedur, które zapewniają większą kontrolę nad jak ustawiania lub zwracania wartości.  
   
- C# służy do utworzenia prywatnej pola do przechowywania wartości właściwości lub użyj tak zwane właściwości zaimplementowane automatycznie utworzyć w tym polu automatycznie w tle, które zapewniają podstawowa logika procedury właściwości.  
+ C# pozwala na tworzenie prywatnego pola do przechowywania wartości właściwości lub użyć tzw automatycznie implementowanych właściwości, które tworzą to pole automatycznie w tle i ustanowiają podstawowe logiki dla procedur właściwość.  
   
- Aby zdefiniować właściwości zaimplementowane automatycznie:  
+ Aby zdefiniować automatycznie implementowanej właściwości:  
   
 ```csharp  
 class SampleClass  
@@ -109,7 +109,7 @@ class SampleClass
 }  
 ```  
   
- Jeśli musisz wykonać pewne dodatkowe operacje odczytu i zapisu wartości właściwości, zdefiniuj pole do przechowywania wartości właściwości i podaj podstawowa logika do przechowywania i pobierania jej:  
+ Jeśli musisz wykonać kilka dodatkowych operacji odczytu i zapisu wartości właściwości, zdefiniuj pole do przechowywania wartości właściwości i Zaoferuj podstawową logikę do przechowywania i pobierania:  
   
 ```csharp  
 class SampleClass  
@@ -125,7 +125,7 @@ class SampleClass
 }  
 ```  
   
- Większość właściwości mają metody lub procedury zarówno Ustawianie i pobieranie wartości właściwości. Można jednak utworzyć właściwości tylko do odczytu lub w trybie tylko do zapisu, aby uniemożliwić ich modyfikacji lub odczytu. W języku C#, można pominąć `get` lub `set` metody property. Jednak automatycznie implementowane właściwości nie może być tylko do odczytu lub w trybie tylko do zapisu.  
+ Większość właściwości posiada metody lub procedury do ustawiania i pobierania wartości właściwości. Można jednak utworzyć właściwości tylko do odczytu lub tylko do zapisu, aby uniemożliwić ich modyfikację lub odczytanie. W języku C# można pominąć `get` lub `set` metody właściwości. Jednak automatycznie implementowanych właściwości nie może być tylko do odczytu lub tylko do zapisu.  
   
  Aby uzyskać więcej informacji, zobacz:  
   
@@ -134,9 +134,9 @@ class SampleClass
 -   [set](../../../csharp/language-reference/keywords/set.md)  
   
 ####  <a name="Methods"></a> Metody  
- A *metody* to operacja, którą można wykonać obiektu.  
+ A *metoda* to działanie, którą obiekt może wykonywać.  
   
- Aby zdefiniować metody klasy:  
+ Aby zdefiniować metodę klasy:  
   
 ```csharp  
 class SampleClass  
@@ -148,16 +148,16 @@ class SampleClass
 }  
 ```  
   
- Klasa może mieć wielu implementacji lub *przeciążenia*, metody różne liczby parametrów ani typów parametrów.  
+ Klasa może mieć kilka implementacji lub *przeciążenia*, z tej samej metody, które różnią się liczbą typów parametru lub parametrów.  
   
- Aby można było przeciążyć metodę:  
+ Aby przeciążyć metodę  
   
 ```csharp  
 public int sampleMethod(string sampleParam) {};  
 public int sampleMethod(int sampleParam) {}  
 ```  
   
- W większości przypadków należy zadeklarować metody w ramach definicji klasy. Jednak C# obsługuje również *metody rozszerzenia* umożliwiające dodawanie metody do istniejącej klasy poza rzeczywiste definicji klasy.  
+ W większości przypadków użytkownik deklaruje metodę w ramach definicji klasy. Jednakże, C# obsługuje również *metody rozszerzenia* umożliwiającą dodawanie metod do istniejącej klasy poza rzeczywistą definicją klasy.  
   
  Aby uzyskać więcej informacji, zobacz:  
   
@@ -166,9 +166,9 @@ public int sampleMethod(int sampleParam) {}
 -   [Metody rozszerzeń](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
   
 ####  <a name="Constructors"></a> Konstruktory  
- Konstruktory są metody klasy, które są wykonywane automatycznie, gdy utworzono obiekt danego typu. Konstruktory zainicjować zazwyczaj elementy członkowskie danych nowego obiektu. Konstruktor można uruchomić tylko raz, podczas tworzenia klasy. Ponadto w Konstruktorze kod zawsze uruchamiany przed innymi kod w klasie. Jednak w taki sam sposób jak w przypadku innych metod, można utworzyć wielu przeciążeń konstruktora.  
+ Konstruktory są metodami klasy, które są wykonywane automatycznie po utworzeniu obiektu danego typu. Konstruktory zwykle inicjują członków danych nowego obiektu. Konstruktor można uruchomić tylko raz, po utworzeniu klasy. Ponadto kod w Konstruktorze zawsze jest uruchamiany przed innymi kodami w klasie. Można jednak utworzyć wiele przeciążeń konstruktora w taki sam sposób jak w przypadku każdej innej metody.  
   
- Aby zdefiniować konstruktora dla klasy:  
+ Aby zdefiniować Konstruktor dla klasy:  
   
 ```csharp  
 public class SampleClass  
@@ -185,21 +185,21 @@ public class SampleClass
  [Konstruktory](../../../csharp/programming-guide/classes-and-structs/constructors.md).  
   
 ####  <a name="Finalizers"></a> Finalizatory  
- Finalizatory są używane do destruct wystąpień klas. W programie .NET Framework moduł zbierający elementy bezużyteczne automatycznie zarządza alokacji i wersji pamięci dla zarządzanych obiektów w aplikacji. Jednakże nadal może być konieczne finalizatorów, aby oczyścić wszelkie niezarządzane zasoby, tworzonych przez aplikację. Może istnieć tylko jedna finalizatory klasy.  
+ Finalizatory są używane do niszczenia wystąpień klas. W .NET Framework moduł odśmiecania pamięci automatycznie zarządza alokacją i zwolnieniem pamięci dla obiektów zarządzanych w Twojej aplikacji. Jednakże nadal może być konieczne finalizatorów, aby wyczyścić zasoby niezarządzane, tworzonych przez aplikację. Może istnieć tylko jeden finalizatory klasy.  
   
- Aby uzyskać więcej informacji na temat finalizatory i wyrzucanie elementów bezużytecznych w programie .NET Framework, zobacz [wyrzucanie elementów bezużytecznych](../../../standard/garbage-collection/index.md).  
+ Aby uzyskać więcej informacji na temat finalizatory i wyrzucania elementów bezużytecznych w .NET Framework, zobacz [wyrzucania elementów bezużytecznych](../../../standard/garbage-collection/index.md).  
   
 ####  <a name="Events"></a> Zdarzenia  
- Zdarzenia włączyć klasę lub obiekt, aby powiadomić innych grup lub obiektów, kiedy coś odsetek występuje. Klasa, która wysyła (lub zgłasza) zdarzenia jest nazywany *wydawcy* i klasy, które odbierać (lub dojścia) zdarzenia są nazywane *subskrybentów*. Aby uzyskać więcej informacji o zdarzeniach, sposób ich pojawienia się i obsługi, zobacz [zdarzenia](../../../standard/events/index.md).  
+ Zdarzenie pozwala klasie lub obiektowi powiadomić inne klasy lub obiektów, kiedy stanie się coś istotnego. Nosi nazwę klasy, która wysyła (lub generuje) zdarzenie *wydawcy* i klasy, otrzymywać (lub uchwyt) zdarzenia, które są nazywane *subskrybentów*. Aby uzyskać więcej informacji na temat zdarzeń, jak ich wywoływania i obsługi, zobacz [zdarzenia](../../../standard/events/index.md).  
   
 -   Aby zadeklarować zdarzenia w klasie, użyj [zdarzeń](../../../csharp/language-reference/keywords/event.md) — słowo kluczowe.  
   
--   Aby zgłosić zdarzenie, wywołania delegata zdarzenia.  
+-   Aby wywołać zdarzenie, wywołaj delegat wydarzenia.  
   
--   Aby subskrybować zdarzenia, użyj `+=` operatora; Aby anulować subskrypcję zdarzenia, użyj `-=` operatora.  
+-   Aby subskrybować zdarzenie, użyj `+=` operatora; Aby anulować subskrypcję zdarzenia, użyj `-=` operatora.  
   
 ####  <a name="NestedClasses"></a> Klasy zagnieżdżone  
- Nosi nazwę klasy zdefiniowanej w klasie innej *zagnieżdżonych*. Domyślnie zagnieżdżona klasa jest prywatne.  
+ Nosi nazwę klasy zdefiniowanej w ramach innej klasy *zagnieżdżonych*. Domyślnie zagnieżdżona klasa jest prywatna.  
   
 ```csharp  
 class Container  
@@ -211,36 +211,36 @@ class Container
 }  
 ```  
   
- Można utworzyć wystąpienia klasy zagnieżdżonej, należy użyć nazwy klasy kontenera znak kropki (.) i po niej nazwę klasy zagnieżdżonej:  
+ Aby utworzyć wystąpienie klasy zagnieżdżonej, należy użyć nazwy klasy kontenera, następuje kropki (.), a następnie według nazwy zagnieżdżonej klasy:  
   
 ```csharp  
 Container.Nested nestedInstance = new Container.Nested()  
 ```  
   
 ###  <a name="AccessModifiers"></a> Modyfikatory dostępu i poziomy dostępu  
- Wszystkie klasy i elementów członkowskich klasy można określić poziom dostępu zapewniają do innych klas przy użyciu *modyfikatorów dostępu*.  
+ Wszystkie klasy i składowych klasy, można określić poziom dostępu, jaki stanowią dla innych klas przy użyciu *modyfikatorach dostępu*.  
   
- Dostępne są następujące modyfikatorów dostępu:  
+ Dostępne są następujące modyfikatory dostępu:  
   
 |Modyfikator C#|Definicja|  
 |------------------|----------------|  
-|[public](../../../csharp/language-reference/keywords/public.md)|Typ lub element członkowski jest możliwy przez inny kod, w tym samym zestawie lub innego zestawu, który odwołuje się on.|  
-|[private](../../../csharp/language-reference/keywords/private.md)|Typ lub element członkowski, jest możliwy tylko przez kod w tej samej klasy.|  
-|[protected](../../../csharp/language-reference/keywords/protected.md)|Typ lub element członkowski, jest możliwy tylko przez kod w tej samej klasy lub w klasie pochodnej.|  
-|[internal](../../../csharp/language-reference/keywords/internal.md)|Typ lub element członkowski jest możliwy przez dowolny kod w tym samym zestawie, ale nie z innego zestawu.|  
-|[protected internal](../../../csharp/language-reference/keywords/protected-internal.md)|Typ lub element członkowski jest dostępna przez dowolny kod w tym samym zestawie lub dowolnej klasy pochodnej w innym zestawie.|  
-|[private protected](../../../csharp/language-reference/keywords/private-protected.md)|Typ lub element członkowski jest możliwy przez kod w tej samej klasy lub w klasie pochodnej w zestawie klasy podstawowej.|  
+|[public](../../../csharp/language-reference/keywords/public.md)|Typ lub element członkowski może zostać oceniony przez inny kod, w tym samym zestawie lub w innym zestawie, który odwołuje się do niej.|  
+|[private](../../../csharp/language-reference/keywords/private.md)|Tylko możliwy typu lub elementu członkowskiego przez kod z tej samej klasy.|  
+|[protected](../../../csharp/language-reference/keywords/protected.md)|Tylko możliwy typu lub elementu członkowskiego przez kod z tej samej klasy lub w klasie pochodnej.|  
+|[internal](../../../csharp/language-reference/keywords/internal.md)|Typ lub element członkowski może zostać oceniony przez każdy kod z tego samego zestawu, ale nie z innego zestawu.|  
+|[protected internal](../../../csharp/language-reference/keywords/protected-internal.md)|Typ lub element członkowski jest możliwy przez każdy kod z tego samego zestawu lub każdą pochodną klasę w innym zestawie.|  
+|[private protected](../../../csharp/language-reference/keywords/private-protected.md)|Typ lub element członkowski możliwy przez kod z tej samej klasy lub w klasie pochodnej w zestawie klasy bazowej.|  
   
- Aby uzyskać więcej informacji, zobacz [modyfikatory dostępu](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ Aby uzyskać więcej informacji, zobacz [Modyfikatory dostępu](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).   
   
-###  <a name="InstantiatingClasses"></a> Utworzenie wystąpienia klasy  
- Do utworzenia obiektu, należy utworzyć wystąpienia klasy lub utworzyć wystąpienia klasy.  
+###  <a name="InstantiatingClasses"></a> Tworzenie wystąpienia klasy  
+ Aby utworzyć obiekt, należy utworzyć wystąpienia klasy lub utworzyć wystąpienie klasy.  
   
 ```csharp  
 SampleClass sampleObject = new SampleClass();  
 ```  
   
- Po utworzenie wystąpienia klasy, można przypisać wartości do właściwości i pola wystąpienia i wywołania metody klasy.  
+ Po utworzeniu wystąpienia klasy, można przypisać wartości do pól i właściwości instancji i wywołania metod klasy.  
   
 ```csharp  
 // Set a property value.  
@@ -249,7 +249,7 @@ sampleObject.sampleProperty = "Sample String";
 sampleObject.sampleMethod();  
 ```  
   
- Aby przypisać wartości do właściwości podczas procesu tworzenia wystąpienia klasy, należy użyć inicjatory obiektów:  
+ Aby przypisać wartości do właściwości w procesie tworzenia wystąpienia klasy, użyj inicjalizatorów obiektów:  
   
 ```csharp  
 // Set a property value.  
@@ -263,10 +263,10 @@ SampleClass sampleObject = new SampleClass
   
 -   [Inicjatory obiektów i kolekcji](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
   
-###  <a name="Static"></a> Klasy statyczne i elementów członkowskich  
- Statyczny element członkowski klasy jest właściwość, procedura lub pola, które jest współużytkowana przez wszystkie wystąpienia klasy.  
+###  <a name="Static"></a> Klasy statyczne i członkowie  
+ Statycznej składowej klasy jest właściwość, procedura lub pole, który jest współużytkowany przez wszystkie wystąpienia klasy.  
   
- Do definiowania statycznego elementu członkowskiego:  
+ Aby zdefiniować statyczny element członkowski:  
   
 ```csharp  
 static class SampleClass  
@@ -275,20 +275,20 @@ static class SampleClass
 }  
 ```  
   
- Aby uzyskać dostęp do statycznego elementu członkowskiego, należy użyć nazwy klasy bez tworzenia obiektu tej klasy:  
+ Aby uzyskać dostęp do statycznej składowej, należy użyć nazwy klasy bez tworzenia obiektu tej klasy:  
   
 ```csharp  
 Console.WriteLine(SampleClass.SampleString);  
 ```  
   
- Klasy statyczne w języku C# mieć tylko statyczne elementy członkowskie i nie można utworzyć wystąpienia. Statyczne elementy członkowskie także nie może uzyskać dostępu właściwości niestatycznego pola lub metody  
+ Klasy statyczne w języku C# mają tylko statyczne elementy członkowskie i nie można utworzyć wystąpienia. Statyczne elementy członkowskie także nie może uzyskać dostępu niestatycznej właściwości, pól ani metod  
   
- Aby uzyskać więcej informacji, zobacz: [statycznych](../../../csharp/language-reference/keywords/static.md).  
+ Aby uzyskać więcej informacji, zobacz: [statyczne](../../../csharp/language-reference/keywords/static.md).  
   
 ###  <a name="AnonymousTypes"></a> Typy anonimowe  
- Typy anonimowe umożliwiają tworzenie obiektów bez pisania definicji klasy dla typu danych. Zamiast tego kompilator generuje klasę dla Ciebie. Klasa nie ma używać nazwy i zawiera właściwości, które określisz w odwołaniu do obiektu.  
+ Typy anonimowe umożliwiają tworzenie obiektów bez konieczności pisania definicji klasy dla typu danych. Zamiast tego kompilator generuje klasę dla Ciebie. Klasa nie ma użytecznych nazw i zawiera właściwości, które określisz w odwołaniu do obiektu.  
   
- Można utworzyć wystąpienia typu anonimowego:  
+ Aby utworzyć wystąpienie typu anonimowego:  
   
 ```csharp  
 // sampleObject is an instance of a simple anonymous type.  
@@ -299,26 +299,26 @@ var sampleObject =
  Aby uzyskać więcej informacji, zobacz: [typy anonimowe](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
 ##  <a name="Inheritance"></a> Dziedziczenie  
- Dziedziczenie umożliwia utworzenie nowej klasy, która ponownie używa rozszerza i modyfikuje zachowanie, który jest zdefiniowany w innej klasy. Klasa, której członkami są dziedziczone jest nazywana *klasa podstawowa*, i nosi nazwę klasy, która dziedziczy tych członków *klasy*. Jednak wszystkie klasy w języku C# niejawnie dziedziczyć <xref:System.Object> klasy, która obsługuje hierarchii klas .NET i udostępnia usługi niskiego poziomu dla wszystkich klas.  
+ Dziedziczenie umożliwia utworzenie nowej klasy, która używa, rozszerza i modyfikuje zachowanie, która jest zdefiniowana w innej klasy. Nosi nazwę klasy, której członkowie są dziedziczeni *klasy bazowej*, a klasa, która dziedziczy tych członków, jest nazywana *klasy pochodnej*. Jednakże wszystkie klasy w języku C# niejawnie dziedziczą z <xref:System.Object> klasy, która obsługuje hierarchię klas .NET i zapewnia niskopoziomowe usługi dla wszystkich klas.  
   
 > [!NOTE]
->  C# nie obsługuje wielu dziedziczenia. Oznacza to można określić tylko jedną klasę podstawową dla klasy pochodnej.  
+>  C# nie obsługują wielokrotnego dziedziczenia. Oznacza to, że można określić tylko jedną klasę bazową dla klasy pochodnej.  
   
- Dziedziczenie z klasy podstawowej:  
+ Dziedziczenie z klasy bazowej:  
   
 ```csharp  
-class DerivedClass:BaseClass{}  
+class DerivedClass:BaseClass {}  
 ```  
   
- Domyślnie wszystkie klasy mogą być dziedziczone. Jednak można określić, czy nie mogą być używane jako klasę podstawową klasy lub utworzyć klasę, która może służyć jako klasę podstawową tylko.  
+ Domyślnie wszystkie klasy mogą być dziedziczone. Można jednak określić klasy nie może być używany jako klasa bazowa, czy utworzyć klasę, która może służyć jako klasę bazową tylko.  
   
- Aby określić, że klasa nie można użyć jako klasy podstawowej:  
+ Aby określić, że klasa nie można użyć jako klasa bazowa:  
   
 ```csharp  
 public sealed class A { }  
 ```  
   
- Aby określić, że klasa może służyć jako klasę podstawową tylko i nie można utworzyć wystąpienia:  
+ Aby określić, że klasa może służyć jako klasę bazową tylko i nie można utworzyć wystąpienia:  
   
 ```csharp  
 public abstract class B { }  
@@ -331,21 +331,21 @@ public abstract class B { }
 -   [abstract](../../../csharp/language-reference/keywords/abstract.md)  
   
 ###  <a name="Overriding"></a> Zastępowanie elementów członkowskich  
- Domyślnie Klasa pochodna dziedziczy wszystkie elementy członkowskie ze swojej klasy podstawowej. Aby zmienić zachowanie dziedziczony element członkowski, należy go zastąpić. Oznacza to można zdefiniować nowej implementacji metody, właściwości lub zdarzenia w klasie pochodnej.  
+ Domyślnie Klasa pochodna dziedziczy wszystkie elementy członkowskie w swojej klasie podstawowej. Jeśli chcesz zmienić zachowanie dziedziczonego elementu członkowskiego, należy go zastąpić. Oznacza to można zdefiniować nową metodę implementacji metody, właściwości lub zdarzenia w klasie pochodnej.  
   
- Następujących modyfikatorów są używane do kontrolowania sposobu przesłonięcia właściwości i metody:  
+ Następujące Modyfikatory są używane do kontrolowania, jak zastąpić właściwości i metod:  
   
 |Modyfikator C#|Definicja|  
 |------------------|----------------|  
-|[virtual](../../../csharp/language-reference/keywords/virtual.md)|Umożliwia elementu członkowskiego klasy do zastąpienia w klasie pochodnej.|  
-|[override](../../../csharp/language-reference/keywords/override.md)|Zastępuje członka wirtualnego (możliwym do zastąpienia) zdefiniowana w klasie podstawowej.|  
-|[abstract](../../../csharp/language-reference/keywords/abstract.md)|Wymaga, aby element członkowski klasy do zastąpienia w klasie pochodnej.|  
-|[new, modyfikator](../../../csharp/language-reference/keywords/new-modifier.md)|Ukrywa element członkowski dziedziczona z klasy podstawowej|  
+|[virtual](../../../csharp/language-reference/keywords/virtual.md)|Zezwala na element członkowski klasy został nadpisany w klasie pochodnej.|  
+|[override](../../../csharp/language-reference/keywords/override.md)|Zastępuje wirtualny element członkowski (przesłanialny) zdefiniowany w klasie bazowej.|  
+|[abstract](../../../csharp/language-reference/keywords/abstract.md)|Wymaga, aby element członkowski klasy został nadpisany w klasie pochodnej.|  
+|[new, modyfikator](../../../csharp/language-reference/keywords/new-modifier.md)|Ukrywa członka dziedziczonego z klasy bazowej|  
   
 ##  <a name="Interfaces"></a> Interfejsy  
- Interfejsy, takich jak klasy, zdefiniuj zbiór właściwości, metod i zdarzeń. Jednak w przeciwieństwie do klasy, interfejsy nie dostarcza implementacji. Są implementowane przez klasy i zdefiniowane jako osobne jednostki z klas. Interfejs reprezentuje kontraktu, w tym klasy, która implementuje interfejs musi implementować każdego aspektu ten interfejs, dokładnie tak, jak jest zdefiniowany.  
+ Interfejsy, takie jak klasy, definiują zestaw właściwości, metod i zdarzeń. Jednak w przeciwieństwie do klasy, interfejsy nie zapewniają implementacji. One są implementowane przez klasy i definiowane jako osobne jednostki od klas. Interfejs reprezentuje kontrakt, w tym, że klasa implementująca interfejs musi implementować każdy aspekt tego interfejsu, dokładnie tak, jak jest zdefiniowany.  
   
- Aby zdefiniować interfejsu:  
+ Aby zdefiniować interfejs:  
   
 ```csharp  
 interface ISampleInterface  
@@ -373,9 +373,9 @@ class SampleClass : ISampleInterface
  [interface](../../../csharp/language-reference/keywords/interface.md)  
   
 ##  <a name="Generics"></a> Typy ogólne  
- Klasy, struktury, interfejsy i metody w programie .NET Framework mogą zawierać *parametry typu* definiującą typów obiektów, które mogą przechowywać lub użyć. Najbardziej typowym przykładem typów ogólnych jest kolekcją, w którym można określić typ obiektów, które mają być przechowywane w kolekcji.  
+ Klasy, struktury, interfejsy i metody W.NET Framework mogą zawierać *parametry typu* który definiują typy obiektów, które można przechowywać lub używać. Najbardziej typowym przykładem typów ogólnych jest kolekcja, której można określić typ obiektów, które mają być przechowywane w kolekcji.  
   
- Aby zdefiniować klasy ogólnej:  
+ Aby zdefiniować klasę ogólną:  
   
 ```csharp  
 public class SampleGeneric<T>   
@@ -384,7 +384,7 @@ public class SampleGeneric<T>
 }  
 ```  
   
- Można utworzyć wystąpienia klasy generycznej:  
+ Aby utworzyć wystąpienie klasy ogólnej:  
   
 ```csharp  
 SampleGeneric<string> sampleObject = new SampleGeneric<string>();  
@@ -397,19 +397,19 @@ sampleObject.Field = "Sample string";
   
 -   [Typy ogólne](../../../csharp/programming-guide/generics/index.md)  
   
-##  <a name="Delegates"></a> Obiekty delegowane  
- A *delegować* jest typ, który określa podpis metody i można udostępnić odwołanie do dowolnej metody zgodnego podpisu. Można wywołać (lub wywołać) metoda za pośrednictwem pełnomocnika. Delegaty służą do przekazywania metod jako argumentów do innych metod.  
+##  <a name="Delegates"></a> Delegaty  
+ A *delegować* to typ, który definiuje podpis metody i można podać odwołanie do dowolnej metody mającą zgodny podpis. Można wywołać (lub wywołać) metodę przez delegat. Delegaty służą do przekazywania metod jako argumentów do innych metod.  
   
 > [!NOTE]
->  Programy obsługi zdarzeń to po prostu metody, które są wywoływane za pośrednictwem delegatów. Aby uzyskać więcej informacji o używaniu delegatów w obsłudze zdarzeń, zobacz [zdarzenia](../../../standard/events/index.md).  
+>  Programy obsługi zdarzeń to po prostu metody, które są wywoływane za pośrednictwem delegatów. Aby uzyskać więcej informacji dotyczących używania delegatów w obsłudze zdarzeń, zobacz [zdarzenia](../../../standard/events/index.md).  
   
- Do utworzenia delegata:  
+ Aby utworzyć delegat:  
   
 ```csharp  
 public delegate void SampleDelegate(string str);  
 ```  
   
- Aby utworzyć odwołanie do metody, która odpowiada podpisu określony na podstawie delegata:  
+ Aby utworzyć odwołanie do metody, która pasuje do oznaczenia określonego przez delegat:  
   
 ```csharp  
 class SampleClass  

@@ -2,15 +2,15 @@
 title: '&lt;behaviorExtensions&gt;'
 ms.date: 03/30/2017
 ms.assetid: 59f2791a-c78f-40d7-aa80-0d9cd10135d9
-ms.openlocfilehash: bb59ceeb478d0324fddc98a206a00dbd170b5ac9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d025497956715913923e839cb6c482f44f96babb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749585"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415795"
 ---
 # <a name="ltbehaviorextensionsgt"></a>&lt;behaviorExtensions&gt;
-Dzięki rozszerzeniom zachowania użytkownika do tworzenia elementów zachowanie zdefiniowane przez użytkownika. Te elementy można używać razem standardowe elementy zachowanie Windows Communication Foundation (WCF). `behaviorExtensions` Sekcja definiuje element w taki sposób, że mogą być używane w konfiguracji. Oto przykład rozszerzenia typowe zachowanie.  
+Rozszerzenia zachowania umożliwiają użytkownikowi utworzenie elementów zachowania zdefiniowanych przez użytkownika. Te elementy mogą być używane razem standardowych elementów zachowanie usługi Windows Communication Foundation (WCF). `behaviorExtensions` Sekcji definiuje element w taki sposób, że mogą być używane w konfiguracji. Oto przykład rozszerzenia typowe zachowanie.  
   
 ```xml  
 <system.serviceModel>  
@@ -23,7 +23,7 @@ Dzięki rozszerzeniom zachowania użytkownika do tworzenia elementów zachowanie
 </system.serviceModel>  
 ```  
   
- Aby dodać możliwości konfiguracji do elementu, należy zapisać i zarejestrować element konfiguracji. Aby uzyskać więcej informacji o tym, zobacz <xref:System.Configuration> dokumentacji.  
+ Aby dodać możliwości konfiguracji do elementu, musisz napisać i zarejestrować element konfiguracji. Aby uzyskać więcej informacji na temat tego, zobacz <xref:System.Configuration> dokumentacji.  
   
  Po zdefiniowaniu elementu i jego typ Konfiguracja rozszerzenia może służyć, jak pokazano w poniższym przykładzie.  
   
@@ -38,13 +38,13 @@ Dzięki rozszerzeniom zachowania użytkownika do tworzenia elementów zachowanie
 ```  
   
 ## <a name="security"></a>Zabezpieczenia  
- Zalecane jest użycie zestawu w pełni kwalifikowanej nazwy podczas rejestrowania typów w `machine.config` i `app.config` plików. Jeśli typ nie jest unikatowo zdefiniowane, moduł ładujący typ CLR wyszukuje go w następujących lokalizacjach w podanej kolejności:  
+ Zdecydowanie zaleca się, użyj w pełni kwalifikowane nazwy zestawów, zapisując typów w `machine.config` i `app.config` plików. Jeśli typ nie jest jednoznacznie zdefiniowany, modułu ładującego typu CLR szuka go w następujących lokalizacjach w określonej kolejności:  
   
- Jeśli zestawu typu jest znany, moduł ładujący wyszukuje plik konfiguracji przekierowania lokalizacjach, GAC, bieżącego zestawu przy użyciu informacji o konfiguracji i podstawowego katalogu aplikacji. Jeśli zestaw jest nieznany, moduł ładujący wyszukuje bieżącego zestawu, mscorlib i lokalizację zwrócony przez `TypeResolve` obsługi zdarzeń. Ta kolejność wyszukiwania CLR może być modyfikowany z punkty zaczepienia, takich jak mechanizm przekazywania typu i zdarzenia AppDomain.TypeResolve.  
+ Jeśli zestaw tego typu jest znany, moduł ładujący przeszukuje plik konfiguracji przekierowania lokalizacje, pamięci podręcznej GAC, bieżący zestaw przy użyciu informacji o konfiguracji i katalog podstawowy aplikacji. Jeśli zestaw jest nieznany, moduł ładujący przeszukuje bieżącego zestawu mscorlib i lokalizacji, zwracane przez `TypeResolve` programu obsługi zdarzeń. CLR kolejności wyszukiwania mogą być modyfikowane przy użyciu punktów zaczepienia, takie jak mechanizm przekazywania dalej typów i zdarzenia AppDomain.TypeResolve.  
   
- Osoba atakująca może wykorzystać CLR kolejność wyszukiwania i wykonywać nieautoryzowanego kodu. Przy użyciu w pełni kwalifikowane nazwy (silne) unikatowo identyfikuje typ i jeszcze bardziej podkreśla zabezpieczenia systemu.  
+ Osoba atakująca może wykorzystać kolejność wyszukiwania CLR i wykonywać nieautoryzowanego kodu. Przy użyciu w pełni kwalifikowane nazwy (silną) unikatowo identyfikuje typ i jeszcze bardziej podkreśla zabezpieczenia systemu.  
   
- Aby uzyskać więcej informacji, zobacz [jak zestawy środowiska wykonawczego lokalizuje](http://go.microsoft.com/fwlink/?LinkId=95336) i <xref:System.AppDomain.TypeResolve>.  
+ Aby uzyskać więcej informacji, zobacz [jak środowisko uruchomieniowe lokalizuje zestawy](https://go.microsoft.com/fwlink/?LinkId=95336) i <xref:System.AppDomain.TypeResolve>.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>  

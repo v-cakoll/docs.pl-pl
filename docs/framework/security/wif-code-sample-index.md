@@ -1,34 +1,34 @@
 ---
-title: Indeks przykładów kodu WIF
+title: Indeks przykładów kodu programu WIF
 ms.date: 03/30/2017
 ms.assetid: 6711f01a-4743-43ce-95ab-5e2302a363ea
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: c369be1dd9cdc529b180bc798c0e3b0291bc382a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc626e139cb29d3827a289acd24b7ea842a1af01
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405606"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404087"
 ---
-# <a name="wif-code-sample-index"></a>Indeks przykładów kodu WIF
+# <a name="wif-code-sample-index"></a>Indeks przykładów kodu programu WIF
 Poniżej przedstawiono przykłady kodu dla systemu Windows Identity Foundation 4.5:  
   
--   [ClaimsAwareWebApp](http://go.microsoft.com/fwlink/?LinkID=248405) — w tym przykładzie przedstawiono podstawowe wykorzystanie externalization uwierzytelniania (w celu lokalnego testu usługi tokenu zabezpieczającego z tożsamości i dostępu do narzędzi dla programu Visual Studio 11) w klasycznej aplikacji platformy ASP.NET (w przeciwieństwie do witryny sieci web).  
+-   [ClaimsAwareWebApp](https://go.microsoft.com/fwlink/?LinkID=248405) — w tym przykładzie pokazano podstawowe zastosowanie systemu o eksternalizację uwierzytelniania (do lokalnego testu usługi tokenu zabezpieczającego z narzędzie tożsamości i dostępu dla programu Visual Studio 11) klasycznych aplikacji programu ASP.NET (w przeciwieństwie do witryny sieci web).  
   
--   [ClaimsAwareWebService](http://go.microsoft.com/fwlink/?LinkID=248406) — w tym przykładzie przedstawiono podstawowe wykorzystanie externalization uwierzytelniania w klasycznym usługi WCF.  
+-   [ClaimsAwareWebService](https://go.microsoft.com/fwlink/?LinkID=248406) — w tym przykładzie pokazuje podstawowe użycie systemu o eksternalizację uwierzytelniania, klasyczne usługi WCF.  
   
--   [ClaimsAwareMvcApplication](http://go.microsoft.com/fwlink/?LinkID=248407) — w tym przykładzie pokazano, jak zintegrować WIF z MVC, łącznie z systemem innym niż zbiorcze ochrony i kod, który będzie honorować uwierzytelnianie formularzy przekierowuje poza kontrolera logowania.  
+-   [ClaimsAwareMvcApplication](https://go.microsoft.com/fwlink/?LinkID=248407) — w tym przykładzie pokazano, jak zintegrować program WIF przy użyciu wzorca MVC, w tym ochronę niż zbiorcze i kod, który honoruje uwierzytelniania formularzy przekierowuje poza kontrolera logowania.  
   
--   [ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) -przykładzie pokazano pamięci podręcznej sesji gotowy farmy (w przeciwieństwie do tokenreplycache) tak, aby można było używać sesji przez odwołanie, zamiast wymiana dużych plików cookie. Ilustruje też prostszy sposób ochrony plików cookie w farmie.  
+-   [ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408) — w tym przykładzie przedstawiono pamięci podręcznej sesji gotowe farmy (w przeciwieństwie do tokenreplycache) tak, aby można było używać sesje według odwołania, zamiast wymieniać dużych plików cookie. Ilustruje też łatwiejszy sposób zabezpieczania plików cookie w farmie.  
   
--   [ClaimsAwareFormsAuthentication](http://go.microsoft.com/fwlink/?LinkID=248409) -bardzo proste przykładzie pokazano, w programie .NET 4.5 uzyskanie oświadczeń w Twojej podmiotów zabezpieczeń, niezależnie od tego, jak uwierzytelniać użytkowników.  
+-   [ClaimsAwareFormsAuthentication](https://go.microsoft.com/fwlink/?LinkID=248409) — bardzo prostej w przykładzie pokazano, że w .NET 4.5 uzyskasz oświadczeń w swojej jednostki, niezależnie od tego, jak uwierzytelniać użytkowników.  
   
--   [ClaimsBasedAuthorization](http://go.microsoft.com/fwlink/?LinkID=248410)— to przykłady przedstawia sposób użycia klasy CLaimsAuthorizationManager i ClaimsAuthorizationModule do stosowania zasad autoryzacji.  
+-   [ClaimsBasedAuthorization](https://go.microsoft.com/fwlink/?LinkID=248410)— to przykłady przedstawiono sposób użycia klasy składnika CLaimsAuthorizationManager i ClaimsAuthorizationModule do stosowania zasad autoryzacji.  
   
--   [FederationMetadata](http://go.microsoft.com/fwlink/?LinkID=248411) — przykładzie pokazano zarówno dynamiczne generowanie kodu (na niestandardowe STS) i dynamiczna zużycie (aplikację jednostki uzależnionej) dokumentów metadanych.  
+-   [Funkcji](https://go.microsoft.com/fwlink/?LinkID=248411) — w tym przykładzie pokazano, zarówno dynamiczne generowanie (na niestandardowej usługi STS), jak i dynamiczne zużycie (w aplikacji jednostki uzależnionej) dokumentów metadanych.  
   
--   [CustomToken](http://go.microsoft.com/fwlink/?LinkID=248412) — w tym przykładzie pokazano, jak zbudować niestandardowego typu tokenu Simple Web Token (SWT).  
+-   [CustomToken](https://go.microsoft.com/fwlink/?LinkID=248412) — w tym przykładzie pokazano, jak utworzyć niestandardowy typ tokenu Simple Web Token (SWT).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Windows Identity Foundation](../../../docs/framework/security/index.md)

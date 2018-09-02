@@ -14,17 +14,17 @@ ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 77eb199e5e8bbfb0874f8189a8daa2904b31d48e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3c9550bf9d3483a8d2961e6137138bfb11f71bca
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395963"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404330"
 ---
 # <a name="how-to-configure-network-tracing"></a>Porady: Konfigurowanie śledzenia sieci
-Plik konfiguracyjny aplikacji lub komputera zawiera ustawienia, które określają format i zawartość danych ze śledzenia sieci. Przed rozpoczęciem procedury należy się upewnić, że śledzenie jest włączone. Aby uzyskać informacje na temat włączania śledzenia, zobacz [umożliwiające śledzenie sieci](../../../docs/framework/network-programming/enabling-network-tracing.md).  
+Plik konfiguracyjny aplikacji lub komputera zawiera ustawienia, które określają format i zawartość danych ze śledzenia sieci. Przed rozpoczęciem procedury należy się upewnić, że śledzenie jest włączone. Aby uzyskać informacje na temat włączania śledzenia, zobacz [Enabling Network Tracing](../../../docs/framework/network-programming/enabling-network-tracing.md).  
   
- Plik konfiguracji komputera — machine.config — znajduje się w folderze %Windir%\Microsoft.NET\Framework w katalogu, w którym zainstalowano system Windows. Plik jest dostępny oddzielny machine.config w folderach w obszarze %Windir%\Microsoft.NET\Framework dla każdej wersji platformy .NET zainstalowany na komputerze (na przykład C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config lub C:\Windows\ Microsoft.NET\Framework64\v4.0.30319\Config\machine.config.).  
+ Plik konfiguracji komputera — machine.config — znajduje się w folderze %Windir%\Microsoft.NET\Framework w katalogu, w którym zainstalowano system Windows. Istnieje osobny plik machine.config w folderach w ramach %Windir%\Microsoft.NET\Framework dla każdej wersji programu .NET Framework zainstalowanej na komputerze (na przykład C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config lub C:\Windows\ Microsoft.NET\Framework64\v4.0.30319\Config\machine.config.).  
   
  Ustawienia te można również wprowadzić w pliku konfiguracyjnym aplikacji. Ma on priorytet nad plikiem konfiguracyjnym komputera.  
   
@@ -80,12 +80,12 @@ Plik konfiguracyjny aplikacji lub komputera zawiera ustawienia, które określaj
     </configuration>  
     ```  
   
- Po dodaniu nazwę `<switches>` bloku, dane wyjściowe śledzenia zawiera informacje z niektórych metod, powiązane z nazwą. W tabeli poniżej opisano dane wyjściowe.  
+ Po dodaniu nazwy do `<switches>` bloku, dane wyjściowe śledzenia zawierały informacje z niektórych metod związanych z nazwą. W tabeli poniżej opisano dane wyjściowe.  
   
 |Nazwa|Skąd dane wyjściowe|  
 |----------|-----------------|  
 |`System.Net.Sockets`|Niektóre metody publiczne <xref:System.Net.Sockets.Socket>, <xref:System.Net.Sockets.TcpListener>, <xref:System.Net.Sockets.TcpClient>, i <xref:System.Net.Dns> klas|  
-|`System.Net`|Niektóre metody publiczne <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpWebResponse>, <xref:System.Net.FtpWebRequest>, i <xref:System.Net.FtpWebResponse> klasy i SSL debugowania informacji (nieprawidłowe certyfikaty, Brak listy wystawców i błędy certyfikatu klienta.)|  
+|`System.Net`|Niektóre metody publiczne <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpWebResponse>, <xref:System.Net.FtpWebRequest>, i <xref:System.Net.FtpWebResponse> klasy i protokołu SSL, debugowanie informacji (nieważne certyfikaty, brakujące listy wystawców i błędy certyfikatów klientów.)|  
 |`System.Net.HttpListener`|Niektóre metody publiczne <xref:System.Net.HttpListener>, <xref:System.Net.HttpListenerRequest>, i <xref:System.Net.HttpListenerResponse> klasy.|  
 |`System.Net.Cache`|Niektóre metody prywatne i wewnętrzne w `System.Net.Cache`.|  
 |`System.Net.Http`|Niektóre metody publiczne <xref:System.Net.Http.HttpClient>, <xref:System.Net.Http.DelegatingHandler>, <xref:System.Net.Http.HttpClientHandler>, <xref:System.Net.Http.HttpMessageHandler>, <xref:System.Net.Http.MessageProcessingHandler>, i <xref:System.Net.Http.WebRequestHandler> klasy.|  
@@ -95,12 +95,12 @@ Plik konfiguracyjny aplikacji lub komputera zawiera ustawienia, które określaj
   
 |Nazwa atrybutu|Wartość atrybutu|  
 |--------------------|---------------------|  
-|`Value`|Wymagane <xref:System.String> atrybutu. Ustawia poziom szczegółowości danych wyjściowych. Wartości uzasadnionych `Critical`, `Error`, `Verbose`, `Warning`, i `Information`.<br /><br /> Ten atrybut musi być ustawiony na \<Dodaj nazwę > elementu \<przełączniki > element, jak pokazano w przykładzie. Jest zwracany wyjątek, jeśli ten atrybut zostanie ustawiony na \<źródło > elementu.|  
-|`maxdatasize`|Opcjonalne <xref:System.Int32> atrybutu. Ustawia maksymalną liczbę bajtów danych sieciowych w każdym zapisie ze śledzenia linii. Wartość domyślna to 1024.<br /><br /> Ten atrybut musi być ustawiony na \<źródło > element, jak pokazano w przykładzie. Jest zwracany wyjątek, jeśli ten atrybut zostanie ustawiony na elemencie w obszarze \<przełączniki > elementu.|  
-|`Tracemode`|Opcjonalne <xref:System.String> atrybutu. Ustaw `includehex` pokazanie śladów protokołu w formacie szesnastkowym i tekst. Ustaw `protocolonly` do wyświetlenia tylko tekst. Wartość domyślna to `includehex`.<br /><br /> Ten atrybut musi być ustawiony na \<przełączniki > element, jak pokazano w przykładzie. Jest zwracany wyjątek, jeśli ten atrybut zostanie ustawiony na elemencie w obszarze \<źródło > elementu.|  
+|`Value`|Wymagane <xref:System.String> atrybutu. Ustawia poziom szczegółowości danych wyjściowych. Dozwolone wartości to `Critical`, `Error`, `Verbose`, `Warning`, i `Information`.<br /><br /> Ten atrybut musi być ustawiony na \<Dodaj nazwę > element \<przełączników > elementu, jak pokazano w przykładzie. Wyjątek jest generowany, jeśli ten atrybut jest ustawiony na \<źródło > element.|  
+|`maxdatasize`|Opcjonalnie <xref:System.Int32> atrybutu. Ustawia maksymalną liczbę bajtów danych sieciowych w każdym zapisie ze śledzenia linii. Wartość domyślna to 1024.<br /><br /> Ten atrybut musi być ustawiony na \<źródło > elementu, jak pokazano w przykładzie. Wyjątek jest generowany, jeśli ten atrybut jest ustawiony na elemencie należącym do elementu \<przełączników > element.|  
+|`Tracemode`|Opcjonalnie <xref:System.String> atrybutu. Ustaw `includehex` Aby wyświetlić ślady protokołu w formacie szesnastkowym i tekstowym. Ustaw `protocolonly` wyświetlanie tylko tekstu. Wartość domyślna to `includehex`.<br /><br /> Ten atrybut musi być ustawiony na \<przełączników > elementu, jak pokazano w przykładzie. Wyjątek jest generowany, jeśli ten atrybut jest ustawiony na elemencie należącym do elementu \<źródło > element.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Interpretowanie śledzenia sieci](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
  [Śledzenie sieci w programie .NET Framework](../../../docs/framework/network-programming/network-tracing.md)  
  [Włączanie śledzenia sieci](../../../docs/framework/network-programming/enabling-network-tracing.md)  
- [Wprowadzenie do Instrumentacji i śledzenie](http://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
+ [Wprowadzenie do Instrumentacji i śledzenia](https://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)

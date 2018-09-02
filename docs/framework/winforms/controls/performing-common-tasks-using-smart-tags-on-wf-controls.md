@@ -6,68 +6,68 @@ helpviewer_keywords:
 - smart tags
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
-ms.openlocfilehash: a558f6d274f260fc91fd140e9dae2c740b1ae00d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d1c69d2e9e89e0a4fed767216e8743a0ac9ac81d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537947"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407823"
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>Wskazówki: przeprowadzanie typowych zadań z tagami inteligentnymi na kontrolkach formularzy systemu Windows
-Podczas przygotowywania formularzy i formantów w aplikacji formularzy systemu Windows, istnieje wiele zadań, które będą wykonywane wielokrotnie. Oto niektóre z najczęściej wykonywanych zadań, które wystąpią:  
+Podczas przygotowywania formularzy i kontrolek dla aplikacji Windows Forms, istnieje wiele zadań, które należy wykonać wielokrotnie. Oto niektóre z często wykonywanych zadań, które można napotkać:  
   
 -   Dodawanie lub usuwanie karty na <xref:System.Windows.Forms.TabControl>.  
   
 -   Dokowanie formantu do elementu nadrzędnego.  
   
--   Zmiana orientacji <xref:System.Windows.Forms.SplitContainer> formantu.  
+-   Zmiana orientacji <xref:System.Windows.Forms.SplitContainer> kontroli.  
   
- Aby przyspieszyć programowanie, wielu formantów oferują tagi inteligentne, które są menu kontekstowe, które umożliwiają wykonywanie typowych zadań, takich jak te w jednym gestu w czasie projektowania. Zadania te są nazywane *zleceń tagów inteligentnych*.  
+ Aby przyspieszyć rozwój, wiele kontrolek oferują tagów inteligentnych, które są menu kontekstowe, które pozwalają wykonywać typowe zadania, takie jak te przy użyciu pojedynczego gestu w czasie projektowania. Zadania te są nazywane *zleceń tagów inteligentnych*.  
   
- Tagi inteligentne być dołączony do wystąpienia formantu przez jego okres istnienia w Projektancie i są zawsze dostępne.  
+ Tagi inteligentne pozostać dołączony do wystąpienia formantu przez cały okres ich istnienia w Projektancie i są zawsze dostępne.  
   
- Zadania przedstawione w tym przewodniku obejmują:  
+ Zadania zilustrowane w tym przewodniku obejmują:  
   
--   Tworzenie projektu formularzy systemu Windows  
+-   Tworzenie projektu Windows Forms  
   
--   Z tagami inteligentnymi  
+-   Za pomocą tagów inteligentnych  
   
 -   Włączanie i wyłączanie tagi inteligentne  
   
- Gdy skończysz, konieczne będzie zrozumienia rolę odgrywaną przez te funkcje ważne układu.  
+ Gdy skończysz, masz zrozumienia rolę odgrywaną przez te funkcje ważne układu.  
   
 > [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="creating-the-project"></a>Tworzenie projektu  
- Pierwszym krokiem jest utworzenie projektu i konfigurowanie formularza.  
+ Pierwszym krokiem jest tworzenie projektu i konfigurowanie formularza.  
   
 #### <a name="to-create-the-project"></a>Aby utworzyć projekt  
   
-1.  Utwórz projekt aplikacji systemu Windows o nazwie "SmartTagsExample". Aby uzyskać więcej informacji, zobacz [porady: Tworzenie projektu aplikacji Windows](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+1.  Utwórz projekt aplikacji systemu Windows o nazwie "SmartTagsExample" (**pliku** > **New** > **projektu**  >   **Visual C#** lub **języka Visual Basic** > **Classic Desktop** > **Windows Forms aplikacji**).  
   
-2.  Wybierz formularza w **Projektant formularzy systemu Windows**.  
+2.  Wybierz formularz w **Windows Forms Designer**.  
   
-## <a name="using-smart-tags"></a>Z tagami inteligentnymi  
- Tagi inteligentne są zawsze dostępne w czasie projektowania w formantach, które oferują je.  
+## <a name="using-smart-tags"></a>Za pomocą tagów inteligentnych  
+ Tagi inteligentne są zawsze dostępne w czasie projektowania dla formantów, które oferują je.  
   
-#### <a name="to-use-smart-tags"></a>Aby użyć tagi inteligentne  
+#### <a name="to-use-smart-tags"></a>Tagi inteligentne  
   
-1.  Przeciągnij <xref:System.Windows.Forms.TabControl> z **przybornika** na formularzu. Należy zwrócić uwagę symbolu tagów inteligentnych (![symbol tagu inteligentnego](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) wyświetlany na stronie z <xref:System.Windows.Forms.TabControl>.  
+1.  Przeciągnij <xref:System.Windows.Forms.TabControl> z **przybornika** do formularza. Należy pamiętać glif tagów inteligentnych (![symbol tagu inteligentnego](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) wyświetlany na stronie z <xref:System.Windows.Forms.TabControl>.  
   
-2.  Kliknij symbol tagów inteligentnych. Wybierz z menu skrótów wyświetlane obok symbolu **Dodaj kartę** elementu. Sprawdź, czy nowa strona karty została dodana do <xref:System.Windows.Forms.TabControl>.  
+2.  Kliknij symbol tagu inteligentnych. W menu skrótów, która pojawia się obok glif, wybierz **Dodaj zakładkę** elementu. Sprawdź, czy nowa strona karty zostanie dodany do <xref:System.Windows.Forms.TabControl>.  
   
-3.  Przeciągnij <xref:System.Windows.Forms.TableLayoutPanel> kontrolować z **przybornika** na formularzu.  
+3.  Przeciągnij <xref:System.Windows.Forms.TableLayoutPanel> z kontrolować **przybornika** do formularza.  
   
-4.  Kliknij symbol tagów inteligentnych. Wybierz z menu skrótów wyświetlane obok symbolu **Dodaj kolumnę** elementu. Sprawdź, czy nowa kolumna została dodana do <xref:System.Windows.Forms.TableLayoutPanel> formantu.  
+4.  Kliknij symbol tagu inteligentnych. W menu skrótów, która pojawia się obok glif, wybierz **Dodaj kolumnę** elementu. Sprawdź, czy nowa kolumna zostanie dodana do <xref:System.Windows.Forms.TableLayoutPanel> kontroli.  
   
-5.  Przeciągnij <xref:System.Windows.Forms.SplitContainer> kontrolować z **przybornika** na formularzu.  
+5.  Przeciągnij <xref:System.Windows.Forms.SplitContainer> z kontrolować **przybornika** do formularza.  
   
-6.  Kliknij symbol tagów inteligentnych. Wybierz z menu skrótów wyświetlane obok symbolu **orientacji poziomej rozdzielacza** elementu. Że <xref:System.Windows.Forms.SplitContainer> pasek podziału formantu jest teraz orientacji poziomej.  
+6.  Kliknij symbol tagu inteligentnych. W menu skrótów, która pojawia się obok glif, wybierz **orientacji poziomej rozdzielacza** elementu. Zauważ, że <xref:System.Windows.Forms.SplitContainer> pasek podziału kontrolki jest teraz orientacji poziomej.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.TextBox>  
  <xref:System.Windows.Forms.TabControl>  
  <xref:System.Windows.Forms.SplitContainer>  
  <xref:System.ComponentModel.Design.DesignerActionList>  
- [Wskazówki: Dodawanie tagów inteligentnych do składnika formularzy systemu Windows](http://msdn.microsoft.com/library/a6814169-fa7d-4527-808c-637ca5c95f63)
+ [Wskazówki: Dodawanie tagów inteligentnych do składnika Windows Forms](https://msdn.microsoft.com/library/a6814169-fa7d-4527-808c-637ca5c95f63)

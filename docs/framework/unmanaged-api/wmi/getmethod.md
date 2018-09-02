@@ -1,6 +1,6 @@
 ---
-title: GetMethod — funkcja (niezarządzany wykaz interfejsów API)
-description: Funkcja GetMethod pobiera informacje dotyczące metody.
+title: Funkcja GetMethod (niezarządzany wykaz interfejsów API)
+description: Funkcja getmethod — pobiera informacje dotyczące metody.
 ms.date: 11/06/2017
 api_name:
 - GetMethod
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65b8cb74a028892a3494e818f2b523f75e8766a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a913de0ff20fba51295fd8282b58e3953be9bba2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460450"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405076"
 ---
-# <a name="getmethod-function"></a>GetMethod — funkcja
+# <a name="getmethod-function"></a>Funkcja GetMethod
 Pobiera informacje o określonej metody.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -44,40 +44,40 @@ HRESULT GetMethod (
 ## <a name="parameters"></a>Parametry
 
 `vFunc`  
-[in] Ten parametr nie jest używana.
+[in] Ten parametr jest nieużywany.
 
 `ptr`  
-[in] Wskaźnik do [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) wystąpienia.
+[in] Wskaźnik do [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienia.
 
 `wszName`  
-[in] Nazwa metody. Ten parametr nie może być `null` i musi wskazywać prawidłowy `LPCWSTR`.
+[in] Nazwa metody. Ten parametr nie może być `null` i musi się odnosić do prawidłowego `LPCWSTR`.
 
 `lFlags`  
-[in] Zastrzeżone. Ten parametr musi wynosić 0.
+[in] Zastrzeżone. Ten parametr musi być 0.
 
 `ppInSignature`   
-[out] Wskaźnik do adresu [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) wystąpienie, które opisano w paramteers do metody. Ten parametr jest ignorowana, jeśli jest ustawiona na `null`. 
+[out] Wskaźnik na adres [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienie, które opisano w paramteers do metody. Ten parametr jest ignorowany, jeśli jest równa `null`. 
 
 `ppOutSignature`  
-[out] Wskaźnik do adresu [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) wystąpienie, które opisano parametry wyjściowe metody. Ten parametr jest ignorowana, jeśli jest ustawiona na `null`. 
+[out] Wskaźnik na adres [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienie, które opisuje poza parametrów do metody. Ten parametr jest ignorowany, jeśli jest równa `null`. 
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.h* pliku nagłówka, lub należy je zdefiniować jako stałe w kodzie:
+Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Nie znaleziono określonej właściwości. |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Za mało pamięci jest dostępna do wykonania operacji. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Nie ma wystarczającej ilości pamięci jest dostępny do ukończenia tej operacji. |
 |`WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
   
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zawijana wywołanie [IWbemClassObject::GetMethod](https://msdn.microsoft.com/library/aa391443(v=vs.85).aspx) metody.
+Ta funkcja zawija wywołanie do [IWbemClassObject::GetMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod) metody.
 
-Zarządzanie systemem Windows można ustawić [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) wskaźnik do `null` Jeśli metoda nie ma w parametrów.
+Windows Management można ustawić [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wskaźnik do `null` Jeśli metoda nie ma w parametrów.
 
-W `ppInSignature` i `ppOutSignature` opisano parametry, wejściowe i wyjściowe odpowiednio właściwości w `IWbemClassObject` wystąpienia klasy systemu [_Parameters](https://msdn.microsoft.com/library/aa394667(v=vs.85).aspx). Właściwości w `ppInsignature` są nazywane **Param *** n*, gdzie *n* to pozycja parametru w podpisie metody (takie jak `Param1`, `Param2`itp.). Właściwości w `ppOutSignature` są również nazywane **Param *** n*, i nosi nazwę wartości zwracanej **ReturnValue**. Aby uzyskać więcej informacji i przykład zobacz [metody IWbemClassObject::GetMethod](https://msdn.microsoft.com/library/aa391443(v=vs.85).aspx).
+W `ppInSignature` i `ppOutSignature` opisano parametry, wejściowe i wyjściowe odpowiednio właściwości w `IWbemClassObject` wystąpienia klasy systemu [_Parameters](/windows/desktop/WmiSdk/--parameters). Właściwości w `ppInsignature` noszą **Param *** n*, gdzie *n* to pozycja parametru w podpisie metody (takie jak `Param1`, `Param2`itp.). Właściwości w `ppOutSignature` są również nazywane **Param *** n*, i wartość zwracaną nosi nazwę **ReturnValue**. Aby uzyskać więcej informacji i obejrzeć przykład, zobacz [metoda IWbemClassObject::GetMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod).
 
 ## <a name="requirements"></a>Wymagania  
 **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -87,4 +87,4 @@ W `ppInSignature` i `ppOutSignature` opisano parametry, wejściowe i wyjściowe 
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
-[Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)
+[Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

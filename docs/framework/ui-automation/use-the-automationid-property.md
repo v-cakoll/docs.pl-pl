@@ -12,52 +12,52 @@ ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: bd5985dd531b13ca91efd9c0aa7987ff6a57e56a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84aa8dd866d5870d8cd4e6c8c4951fa1e49a4052
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401043"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400269"
 ---
 # <a name="use-the-automationid-property"></a>Użyj właściwości AutomationID
 > [!NOTE]
->  Ta dokumentacja jest przeznaczony dla deweloperów .NET Framework, które chcą korzystać zarządzanej [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejsu API systemu Windows automatyzacji: automatyzacji interfejsu użytkownika](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Ten temat zawiera scenariusze i przykładowy kod, które pokazują, jak i kiedy <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> może służyć do zlokalizowania w elemencie [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa.  
+ Ten temat zawiera scenariusze i przykładowy kod, aby pokazać, jak i kiedy <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> może służyć do zlokalizowania elementu z [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa.  
   
- <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> Unikatowy identyfikator elementu automatyzacji interfejsu użytkownika z jego elementów równorzędnych. Aby uzyskać więcej informacji na identyfikatorach właściwości związane z kontroli identyfikacji, zobacz [Przegląd właściwości automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
+ <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> jednoznacznie identyfikuje element automatyzacji interfejsu użytkownika z jego elementów równorzędnych. Aby uzyskać więcej informacji na temat identyfikatorów właściwości związane z kontrolować identyfikacji, zobacz [Przegląd właściwości automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> nie gwarantuje unikatową tożsamość w drzewie; potrzebuje zazwyczaj kontenera i informacje o zakresie użyteczne. Na przykład aplikacja może zawierać formant menu z wieloma elementami menu najwyższego poziomu, które z kolei ma wiele elementów menu podrzędnego. Te elementy menu dodatkowej mogą zostać zidentyfikowane na podstawie ogólnego schemat, takiego jak "Item1", "Elementu 2" i tak dalej, dzięki czemu zduplikowane identyfikatory elementów podrzędnych dla elementów menu najwyższego poziomu.  
+>  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> nie gwarantuje unikatową tożsamość w drzewie; Zazwyczaj potrzebuje kontenera i informacje o zakresie były przydatne. Na przykład aplikacja może zawierać formant menu z wieloma elementami menu najwyższego poziomu, które z kolei ma wiele elementów menu podrzędne. Te elementy menu dodatkowej mogą być określane przez ogólny schemat, takiego jak item1 "—", "Element 2" i tak dalej, umożliwiając zduplikowanych identyfikatorów dla dzieci różnych elementów menu górnego poziomu.  
   
 ## <a name="scenarios"></a>Scenariusze  
- Trzy podstawowe scenariusze aplikacji klienta automatyzacji interfejsu użytkownika zostały określone, które wymagają użycia <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> do osiągnięcia dokładne i spójne wyniki podczas wyszukiwania elementów.  
+ Trzy podstawowe scenariusze aplikacji klienta automatyzacji interfejsu użytkownika zostały określone, które korzystają z <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> Aby uzyskać dokładne i spójne wyniki, podczas wyszukiwania elementów.  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> jest obsługiwana przez wszystkie elementy automatyzacji interfejsu użytkownika w widoku kontrolki z wyjątkiem najwyższego poziomu aplikacji systemu windows, elementach automatyzacji interfejsu użytkownika pochodzące z [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] formantów, które nie mają Identyfikatora lub x: Uid i elementów automatyzacji interfejsu użytkownika pochodzące z [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] formantów, które nie ma identyfikatora formantu.  
+>  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> jest obsługiwany przez wszystkie elementy automatyzacji interfejsu użytkownika w widoku kontrolki, z wyjątkiem okien najwyższego poziomu aplikacji, po elementach automatyzacji interfejsu użytkownika pochodną [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] formantów, które nie mają Identyfikatora lub x: Uid i pochodną po elementach automatyzacji interfejsu użytkownika [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] formantów, które nie masz identyfikator kontrolki.  
   
-#### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>Użyj AutomationID unikatowy i wykrywalny można znaleźć określonego elementu w drzewie automatyzacji interfejsu użytkownika  
+#### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>Należy użyć AutomationID unikatowe i wykrywalny, aby zlokalizować określonego elementu drzewa automatyzacji interfejsu użytkownika  
   
--   Za pomocą narzędzia, takie jak [!INCLUDE[TLA#tla_uispy](../../../includes/tlasharptla-uispy-md.md)] do raportu <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> z [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] element zainteresowań. Ta wartość może następnie można kopiować i wklejać do aplikacji klienckiej, takich jak skrypt testu dla testów automatycznych kolejne. Takie podejście zmniejsza i upraszcza niezbędne do identyfikowania i Znajdź element w czasie wykonywania kodu.  
+-   Użyj narzędzia takiego jak [!INCLUDE[TLA#tla_uispy](../../../includes/tlasharptla-uispy-md.md)] do raportu <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> z [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] element zainteresowania. Ta wartość może następnie skopiowane i wklejone do aplikacji klienckiej, takich jak skrypt testu dla kolejnych testów automatycznych. Takie podejście zmniejsza i upraszcza kod wymagany do identyfikowania i lokalizowania elementu w czasie wykonywania.  
   
 > [!CAUTION]
->  Ogólnie rzecz biorąc, należy uzyskać tylko bezpośrednimi elementami podrzędnymi <xref:System.Windows.Automation.AutomationElement.RootElement%2A>. Wyszukiwanie elementów podrzędnych może wykonać iterację setki lub nawet tysiące elementów, co prawdopodobnie przepełnienia stosu. Jeśli próbujesz uzyskać określonego elementu na niższym poziomie, należy rozpocząć wyszukiwanie z okna aplikacji lub kontener na niższym poziomie.  
+>  Ogólnie rzecz biorąc, należy spróbować uzyskać tylko bezpośrednie elementy podrzędne <xref:System.Windows.Automation.AutomationElement.RootElement%2A>. Wyszukaj elementy podrzędne mogą wykonać iterację setek lub nawet tysięcy elementów, które prawdopodobnie spowodowało przepełnienie stosu. Jeśli próbujesz uzyskać określony element na niższym poziomie, należy rozpocząć wyszukiwanie z okna aplikacji lub kontenerów na niższym poziomie.  
   
  [!code-csharp[UIAAutomationID_snip#100](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#100)]
  [!code-vb[UIAAutomationID_snip#100](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#100)]  
   
-#### <a name="use-a-persistent-path-to-return-to-a-previously-identified-automationelement"></a>Użyj ścieżki trwałe aby powrócić do poprzednio zidentyfikowanych Obiekt AutomationElement  
+#### <a name="use-a-persistent-path-to-return-to-a-previously-identified-automationelement"></a>Użyj ścieżki trwały, aby powrócić do wcześniej zidentyfikowane obiektu AutomationElement  
   
--   Aplikacje klienckie ze prosty test skryptów niezawodny rekordu i narzędzia odtwarzania mogą wymagać dostępu do elementów, które są nie obecnie wystąpienia, takich jak plik Otwórz okno dialogowe, lub elementu menu i dlatego nie istnieją w drzewie automatyzacji interfejsu użytkownika. Te elementy można wdrożyć tylko odtwarzanie, lub "Odtwarzanie", określonej sekwencji [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] akcje za pośrednictwem [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] właściwości, takie jak AutomationID, wzorców formantu i odbiorników zdarzeń. Zobacz [testu z przykładowym skrypcie Generator](http://msdn.microsoft.com/library/028467fd-2980-4691-9522-0131dcef23a0) na przykład, który używa [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] generowania skryptów testu oparte na interakcję użytkownika z [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].  
+-   Aplikacje klienckie, ze skryptów prosty test niezawodne rejestrowanie i narzędzia odtwarzania może wymagać dostępu do elementów, które się nie aktualnie wystąpienia, takie jak plik Otwórz okno dialogowe lub elementu menu i dlatego nie istnieją w drzewa automatyzacji interfejsu użytkownika. Te elementy można wdrożyć tylko przez odtwarzanie, lub "odtwarzania", sekwencji określonych [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] akcje za pośrednictwem [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] właściwości, takie jak AutomationID, wzorców kontrolek i detektory zdarzenia. Zobacz [Test przykładowy Generator skrypt](https://msdn.microsoft.com/library/028467fd-2980-4691-9522-0131dcef23a0) przykład, który używa [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] można wygenerować skryptów testowych oparte na interakcję użytkownika z [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].  
   
  [!code-csharp[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#uiaworkerthread)]
  [!code-vb[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#uiaworkerthread)]  
 [!code-csharp[UIAAutomationID_snip#Playback](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#playback)]
 [!code-vb[UIAAutomationID_snip#Playback](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#playback)]  
   
-#### <a name="use-a-relative-path-to-return-to-a-previously-identified-automationelement"></a>Użyj ścieżki względnej, aby powrócić do poprzednio zidentyfikowanych Obiekt AutomationElement  
+#### <a name="use-a-relative-path-to-return-to-a-previously-identified-automationelement"></a>Użyj ścieżki względnej, aby powrócić do wcześniej zidentyfikowane obiektu AutomationElement  
   
--   W pewnych okolicznościach ponieważ AutomationID tylko gwarantuje to unikatowa wśród elementów równorzędnych, wiele elementów w drzewie automatyzacji interfejsu użytkownika może mieć wartości właściwości AutomationID identyczne. W takich sytuacjach elementy mogą być identyfikowane oparte na element nadrzędny i, jeśli to konieczne, nadrzędny. Na przykład deweloper może zapewnić paska menu wielu pozycji menu każdego z wielu podrzędnych elementów menu, której elementy podrzędne są oznaczone symbolem sekwencyjnych AutomationID na przykład "Item1", "Item2" i tak dalej. Każdy element menu może następnie unikatowo identyfikowana przez jego AutomationID wraz z AutomationID nadrzędnego i, jeśli to konieczne, jego nadrzędny.  
+-   W pewnych okolicznościach ponieważ AutomationID tylko musi być unikatowa wśród elementów równorzędnych, wiele elementy drzewa automatyzacji interfejsu użytkownika mogą mieć identycznych wartości właściwości AutomationID. W takich sytuacjach elementy można unikatowo zidentyfikować oparte na element nadrzędny i, jeśli to konieczne, nadrzędnych. Na przykład deweloperzy mogą korzystać pasek menu z wieloma elementami menu każdego z wiele podrzędnych elementów menu, w którym elementy podrzędne są identyfikowane przez sekwencyjnego AutomationID firmy takie jak "Item1 —", "Item2 —" i tak dalej. Każdy element menu może następnie jednoznacznie zidentyfikować przez jego AutomationID wraz z AutomationID jego elementu nadrzędnego i, jeśli to konieczne, jej nadrzędnych.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>  

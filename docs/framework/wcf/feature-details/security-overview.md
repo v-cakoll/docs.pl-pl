@@ -7,97 +7,97 @@ helpviewer_keywords:
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 6aff25547f02458d894de7235ecfb2f704d8664a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f5f991296aa00bcc49c6672113fd1c25afac3c53
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33505684"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402870"
 ---
 # <a name="security-overview"></a>Przegląd zabezpieczeń
-Windows Communication Foundation (WCF) jest SOAP oparta na komunikatach rozproszonej programowania platformy i zabezpieczanie komunikatów między klientami i usługami jest niezbędne do ochrony danych. Usługi WCF zapewnia platformę elastyczne i interoperacyjne wymiany zabezpieczonych wiadomości na podstawie zarówno istniejącej infrastruktury zabezpieczeń i standardów zabezpieczeń rozpoznanym wiadomości protokołu SOAP.  
+Windows Communication Foundation (WCF) jest SOAP oparta na komunikatach rozproszonej platformy programowania i zabezpieczanie komunikatów między klientami i usługami jest podstawą ochrony danych. Usługi WCF zapewnia platformę wszechstronne i interoperacyjne wymiany zabezpieczonych wiadomości na podstawie istniejącej infrastruktury zabezpieczeń i standardy zabezpieczeń rozpoznawanym komunikaty protokołu SOAP.  
   
 > [!NOTE]
->  Aby uzyskać kompletny przewodnik zabezpieczeń programu WCF, zobacz [wskazówki dotyczące zabezpieczeń WCF](http://go.microsoft.com/fwlink/?LinkID=158912).  
+>  Aby uzyskać kompletny przewodnik po zabezpieczeniach WCF, zobacz [wskazówki dotyczące zabezpieczeń programu WCF](https://go.microsoft.com/fwlink/?LinkID=158912).  
   
- Pojęcia używa usługi WCF, które są znane, jeśli utworzono bezpieczny, rozproszonych aplikacji z istniejących technologii, takich jak HTTPS, Windows zintegrowanych zabezpieczeń, lub nazwy użytkownika i hasła w celu uwierzytelniania użytkowników. Usługi WCF nie tylko integruje się z istniejącą infrastrukturą zabezpieczeń, ale rozszerzają zabezpieczeń rozproszonych poza domeny tylko do systemu Windows przy użyciu bezpiecznych wiadomości protokołu SOAP. Należy rozważyć WCF implementację istniejące mechanizmy zabezpieczeń z głównych zaletą używania SOAP jako protokół oprócz istniejących protokołów. Na przykład poświadczenia, które identyfikują klienta lub usługi, takie jak nazwa użytkownika i hasło lub certyfikatów X.509 ma interoperacyjne profilów opartych na języku XML protokołu SOAP. Przy użyciu tych profilów, komunikaty są wymieniane bezpiecznego, korzystając z otwartych specyfikacji, takich jak podpisy cyfrowe XML i szyfrowanie XML. Lista specyfikacji, zobacz [sieci Web usług protokoły obsługiwane przez wiązania współdziałania System-Provided](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md).  
+ Pojęcia używa WCF, które są znane, jeśli skompilowałeś bezpieczne, rozproszone aplikacje z istniejącymi technologiami, taki jak HTTPS, Windows zintegrowane zabezpieczenia, lub nazwy użytkownika i hasła do uwierzytelniania użytkowników. Usługi WCF nie tylko integruje się z istniejącymi infrastrukturami zabezpieczeń, ale rozszerzają rozproszone zabezpieczeń poza domeny tylko do Windows przy użyciu zabezpieczonych wiadomości protokołu SOAP. Należy rozważyć implementację istniejących mechanizmów zabezpieczeń z głównych zalet przy użyciu protokołu SOAP, jako protokół oprócz istniejącej protokołów WCF. Na przykład poświadczenia, które identyfikują klienta lub usługi, takie jak nazwa użytkownika i hasło lub certyfikatów X.509 mieć interoperacyjne profilów opartych na języku XML protokołu SOAP. Korzystając z tych profilów, komunikaty są wymieniane bezpieczne, wykorzystując specyfikacji open, takich jak XML podpisów cyfrowych i szyfrowania XML. Aby uzyskać listę specyfikacje, zobacz [Web Services protokoły obsługiwane przez wiązania współdziałania System-Provided](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md).  
   
- Równoległe innego jest składnik modelu COM (Object) na platformie systemu Windows, która umożliwia bezpieczne, rozproszonych aplikacji. COM ma mechanizm kompleksowe zabezpieczeń, zgodnie z którymi mogą przepływać kontekstu zabezpieczeń między składnikami; Ten mechanizm wymusza integralności, poufność i uwierzytelnianie. Jednak COM nie obsługuje wielu platform, bezpiecznej wymiany komunikatów, takie jak WCF jest. Za pomocą usługi WCF, mogą tworzyć usług i klientów, którzy span z domen systemu Windows przez Internet. Współdziałanie wiadomości WCF są niezbędne do tworzenia dynamicznych, usługi biznesowe driven, ułatwiające po wzięciu pod bezpieczeństwa informacji użytkownika.  
+ Równoległe innego jest Component Object Model (COM) na platformie Windows, która umożliwia bezpieczne, rozproszonych aplikacji. COM ma mechanizm kompleksowych funkcji zabezpieczeń, zgodnie z którą mogą przepływać kontekstu zabezpieczeń między składnikami; Ten mechanizm wymusza integralności, poufności i uwierzytelniania. Jednak COM nie obsługuje dla wielu platform, bezpiecznej wymiany komunikatów, takie jak WCF jest. Przy użyciu usługi WCF, możesz tworzyć usług i klientów, które rozciągają się w domenach Windows przez Internet. Międzyoperacyjne komunikatów WCF są niezbędne do tworzenia dynamicznych, oparte na firm usług po wzięciu pod bezpieczeństwa informacji użytkownika.  
   
-## <a name="windows-communication-foundation-security-benefits"></a>Windows Communication Foundation zabezpieczeń korzyści  
- Usługi WCF jest rozproszonej platformy programowania oparte na wiadomości SOAP. Za pomocą usługi WCF, można utworzyć aplikacje tej funkcji jako usług i klientów usługi, tworzenia i przetwarzania komunikatów z nieograniczoną liczbę innych usług i klientów. W takich aplikacji rozproszonej wiadomości mogą przepływać z węzła do węzła, za pośrednictwem zapór do Internetu i za pośrednictwem pośredników SOAP wiele. Powstaje różnych zagrożeń bezpieczeństwa komunikatu. Poniższe przykłady przedstawiają niektóre typowe zagrożenia, które WCF zabezpieczeń mogą pomóc ograniczyć przypadki podczas wymiany wiadomości między jednostkami:  
+## <a name="windows-communication-foundation-security-benefits"></a>Windows Communication Foundation zabezpieczeń zapewnianych  
+ Usługi WCF jest to rozproszona platforma programowania oparte na komunikaty protokołu SOAP. Przy użyciu usługi WCF, można utworzyć aplikacje tej funkcji jako usługi oraz obsługi klientów, tworzenia i przetwarzania komunikatów z nieograniczonej liczby innych usług i klientów. W takich aplikacji rozproszonej wiadomości może przepływać z węzła do węzła, za pośrednictwem zapory do Internetu oraz liczne pośredników SOAP. Wprowadza szereg zagrożenia bezpieczeństwa komunikatu. W poniższych przykładach pokazano niektóre typowe zagrożenia, które zabezpieczeń programu WCF można ograniczyć podczas wymiany komunikatów między obiektami:  
   
--   Obserwacji ruchu sieciowego w celu uzyskania informacji poufnych. Na przykład w scenariuszu banku online, klient żąda transferu funduszy z jednego konta do innego. Złośliwy użytkownik przechwytuje wiadomości i o numer konta i hasło, później przeprowadza transferu funduszy z zagrożone konto.  
+-   Obserwowanie ruchu sieciowego w celu uzyskania informacji poufnych. Na przykład w scenariuszu bankowość online, klient zażąda transferu środków z jednego konta na inny. Złośliwy użytkownik przechwytuje wiadomości, a później numer konta i hasła, wykonuje transferu środków z konta którego bezpieczeństwo zostało naruszone.  
   
--   Jednostki nieautoryzowanymi działający jako usługi bez pogłębianie wiedzy na temat klienta. W tym scenariuszu złośliwy użytkownik (nieautoryzowanych) działa jako usługa online i przechwytuje wiadomości z klienta do uzyskania informacji poufnych. Następnie nieautoryzowanego używa kradzieży danych do transferowania funduszy z konta, którego bezpieczeństwo zostało naruszone. Takiego ataku jest również znany *ataku phishing*.  
+-   Jednostki wydawaniem pełniący funkcję usług bez świadomości klienta. W tym scenariuszu złośliwy użytkownik (nieautoryzowany) działa jako usługa online i przechwytuje wiadomości od klienta do uzyskania informacji poufnych. Następnie nieautoryzowany używa kradzieży danych do transferu środków z konta którego bezpieczeństwo zostało naruszone. Ten rodzaj ataku jest również znane *ataku*.  
   
--   Zmiana komunikaty, aby uzyskać różne wyniki niż obiekt wywołujący przeznaczone. Na przykład zmieniając numer konta, do której dokonywane jest depozytu umożliwia funduszy przejść do kont nieautoryzowanych.  
+-   Zmiana komunikaty, aby uzyskać różne wyniki niż obiekt wywołujący przeznaczone. Na przykład zmieniając numer konta, do którego ma zostać depozytu umożliwia środków przejść do nieautoryzowanego konta.  
   
--   Odtworzenie hakerom, w których haker niedogodności odtwarzaniem takiej samej kolejności zakupu. Na przykład księgarni odbiera setki zleceń i wysyła do klienta, który nie ma ich uporządkowane podręcznikach.  
+-   Odtworzenie haker, w których haker uciążliwy powoduje ponowne uruchomienie tego samego zamówienia zakupu. Na przykład księgarni online odbiera setki zamówień i wysyła książki do klienta, który nie ma ich uporządkowane.  
   
--   Niezdolność usługi do uwierzytelniania klienta. W takim przypadku usługa nie może zapewnić osobą wykonanie transakcji.  
+-   Niezdolność usługi do uwierzytelniania klienta. W tym przypadku usługa nie dają pewność, że odpowiednie osoby wykonywane transakcji.  
   
- Podsumowując transfer zabezpieczeń zawiera następujące warunki:  
+ Podsumowując bezpieczeństwie transferu zapewnia następujące gwarancje:  
   
 -   Usługa uwierzytelniania punktu końcowego (respondenta).  
   
--   Uwierzytelnienia (inicjatora) podmiotu zabezpieczeń klienta.  
+-   Uwierzytelnianie jednostki (Inicjator) klienta.  
   
 -   Integralność wiadomości.  
   
--   Poufność wiadomości.  
+-   Poufność komunikatów.  
   
--   Wykrywania powtarzania.  
+-   Wykrywanie powtarzania.  
   
-### <a name="integration-with-existing-security-infrastructures"></a>Integracja z istniejącą infrastrukturą zabezpieczeń  
- Często wdrożenia usługi sieci Web mają istniejących rozwiązań zabezpieczeń w miejscu, na przykład protokołu Secure Sockets Layer (SSL) lub protokołu Kerberos. Niektóre korzystać z infrastruktury zabezpieczeń, która została już wdrożona, takich jak domen systemu Windows przy użyciu usługi Active Directory. Często jest niezbędne do integracji z tych technologii istniejących podczas obliczania i przyjęcie te nowsze.  
+### <a name="integration-with-existing-security-infrastructures"></a>Integracja z istniejącymi infrastrukturami zabezpieczeń  
+ Często wdrożeń usług internetowych dysponować istniejących rozwiązań zabezpieczeń, na przykład protokołu Secure Sockets Layer (SSL) lub protokołu Kerberos. Niektóre z zalet infrastruktura zabezpieczeń, która została już wdrożona, takich jak Windows domen usługi Active Directory. Często zachodzi zintegrować z istniejącymi technologiami, te podczas oceniania i przyjęcie nowszej z nich.  
   
- Zabezpieczenia WCF integruje się z istniejącymi zabezpieczeń transportu i wykorzystanie istniejącej infrastruktury dla nowszej modeli zabezpieczeń transfer oparte na zabezpieczenia wiadomości protokołu SOAP.  
+ Zabezpieczenia WCF integruje się z istniejącymi zabezpieczeń transportu i mogą korzystać z istniejącej infrastruktury dla nowszej transferu zabezpieczeń modeli w oparciu o zabezpieczeniach wiadomości SOAP.  
   
 ### <a name="integration-with-existing-authentication-models"></a>Integracja z istniejącymi uwierzytelniania  
- Ważnym elementem modelu zabezpieczeń wszystkie komunikacji jest możliwość identyfikację i uwierzytelnienie jednostki w komunikacie. Te jednostki w komunikacie Użyj "tożsamości cyfrowych" lub poświadczeń uwierzytelnienia komunikacji elementów równorzędnych. Jak ewoluował komunikacji rozproszonej platformy, zostało wdrożonych różnych poświadczeń uwierzytelniania i modele dotyczące zabezpieczeń. Na przykład w Internecie, użycie nazwy użytkownika i hasło, aby zidentyfikować użytkowników jest wspólnej. W sieci intranet Użyj kontrolera domeny Kerberos, aby utworzyć kopię zapasową usługi uwierzytelniania użytkowników i staje się coraz powszechne. W pewnych sytuacjach takich jak między dwoma partnerami biznesowymi, certyfikaty może być używany do wzajemnego uwierzytelniania partnerów.  
+ Ważnym elementem każdego modelu zabezpieczeń komunikacji jest możliwość identyfikowania i uwierzytelniania jednostki w komunikacie. Tych jednostek w ramach komunikacji umożliwia "cyfrowego tożsamości" lub poświadczenia, uwierzytelniają się przy użyciu komunikujące się elementów równorzędnych. Jak ewoluował komunikacji rozproszonych platform, zostały zaimplementowane różnych poświadczeń uwierzytelniania i modeli powiązanych zabezpieczeń. Na przykład w Internecie, typowe jest użycie nazwy użytkownika i hasło do identyfikowania użytkowników. W sieci intranet Użyj protokołu Kerberos kontrolera domeny, aby utworzyć kopię zapasową usługi uwierzytelniania użytkowników i staje się wspólnej. W niektórych scenariuszach takich jak między dwoma partnerami biznesowymi, certyfikaty mogą służyć do wzajemnego uwierzytelniania, partnerów.  
   
- W związku z tym w świecie usługi sieci Web, gdzie tej samej usługi mogą być ujawniane także dotyczące partnerami zewnętrznymi wewnętrznych klientów firmy lub klientów internetowych, ważne jest, że infrastruktura przewiduje integracji z tych zabezpieczeń istniejących modele uwierzytelniania. Zabezpieczenia WCF obsługuje wiele typów poświadczeń (modele uwierzytelniania) w tym:  
+ W związku z tym na całym świecie usług sieci Web, gdzie tej samej usługi mogą być ujawniane także co partnerom zewnętrznym wewnętrznych klientów firmowych lub klientów internetowych, ważne jest, że infrastruktura przewiduje integrację z tych istniejących zabezpieczeń modele uwierzytelniania. Zabezpieczenia WCF obsługuje wiele typów poświadczeń (modele uwierzytelniania) w tym:  
   
 -   Anonimowy obiekt wywołujący.  
   
--   Poświadczenie klienta nazwy użytkownika.  
+-   Poświadczenia klienta nazwy użytkownika.  
   
 -   Certyfikat poświadczeń klienta.  
   
--   Systemu Windows (protokołu Kerberos i LanMan NT [NTLM]).  
+-   Windows (protokół Kerberos i LanMan NT [NTLM]).  
   
 ### <a name="standards-and-interoperability"></a>Standardy i współdziałanie  
- W świecie przy dużych wdrożeniach istniejących jednolitości jest rzadko. Platformach obliczeniowych/komunikacji rozproszonej muszą współpracować z technologii, które oferują różnych dostawców. Podobnie zabezpieczeń należy również interoperacyjne.  
+ W świecie przy użyciu istniejących wdrożeń w dużych zasady jednolitości jest rzadkie. Platformy obliczeniowej/komunikacji rozproszonej muszą współpracować przy użyciu technologii, oferowanych przez różnych dostawców. Podobnie zabezpieczeń, musi być międzyoperacyjnych.  
   
- Aby włączyć współdziałanie zabezpieczeń systemów, przedsiębiorstwa działające w branży usług sieci Web utworzone przez użytkownika różnych standardów. W szczególności dotyczących zabezpieczeń, kilka istotnych standardów zostały proponowane: WS-Security: zabezpieczenia komunikatów SOAP (zaakceptowane przez jednostkę standardów języka OASIS i znanego wcześniej jako WS-Security), WS-Trust, WS-SecureConversation i WS-SecurityPolicy.  
+ Aby włączyć systemów zabezpieczeń międzyoperacyjnych, przedsiębiorstwa działające w branży usług sieci Web zostały zredagowane różnych standardów. W szczególności dotyczące zabezpieczeń, zostały zaproponowane kilka standardów istotne: WS-Security: zabezpieczenia wiadomości SOAP (zaakceptowane przez organizację OASIS treść standardów i znana wcześniej jako usługi WS-Security), WS-Trust, WS-SecureConversation i WS-SecurityPolicy.  
   
- Usługi WCF obsługuje szerokiej gamy scenariuszy współdziałania. <xref:System.ServiceModel.BasicHttpBinding> Klasy jest przeznaczona na podstawowych zabezpieczeń profilu (podstawowego dostawcy) i <xref:System.ServiceModel.WSHttpBinding> najnowszych standardów zabezpieczeń, takich jak WS-Security 1.1 i WS-SecureConversation celem klasy. Przez przestrzegać tych standardów, zabezpieczenia WCF współdziałanie i integracja z usługami sieci Web, obsługiwanych systemów operacyjnych i platform innych niż Microsoft Windows.  
+ Usługi WCF obsługuje szeroką gamę scenariuszach współpracy. <xref:System.ServiceModel.BasicHttpBinding> Klasa jest przeznaczona na podstawowe profil zabezpieczeń (BSP) i <xref:System.ServiceModel.WSHttpBinding> klasa jest przeznaczona dla najnowszych standardów zabezpieczeń, takich jak usługi WS-Security 1.1 i WS-SecureConversation. Dzięki przestrzeganiu tych standardów, zabezpieczeniach WCF można współpracować i integracja z usługami sieci Web, obsługiwanych systemów operacyjnych i platform innych niż Microsoft Windows.  
   
-## <a name="wcf-security-functional-areas"></a>Obszarów funkcjonalnych zabezpieczeń WCF  
- Zabezpieczenia WCF jest podzielone na trzy obszarów funkcjonalnych: transfer zabezpieczeń, kontroli dostępu i inspekcji. Krótko w poniższych sekcjach omówiono konfigurowanie tych obszarów i udostępniają linki, aby uzyskać więcej informacji.  
+## <a name="wcf-security-functional-areas"></a>Obszarów funkcjonalnych zabezpieczeń programu WCF  
+ Zabezpieczenia WCF dzieli się na trzy obszary funkcjonalne: transfer zabezpieczeń, kontroli dostępu i inspekcji. W poniższych sekcjach krótko omówiono tych obszarów i zawierają łącza, aby uzyskać więcej informacji.  
   
-### <a name="transfer-security"></a>Transfer zabezpieczeń  
- Transfer zabezpieczeń obejmuje trzech głównych funkcji zabezpieczeń: integralności, poufność i uwierzytelnianie. *Integralność* jest możliwość wykrywania, czy wiadomość została naruszona. *Poufność* jest możliwość przechowywania wiadomości niemożliwe do odczytania przez nikt inny oprócz adresata; jest to osiągane przez kryptografii. *Uwierzytelnianie* jest możliwość weryfikowania tożsamości. Te trzy funkcje ułatwiają ze sobą, upewnij się, że wiadomości bezpiecznie dostarczone z jednego miejsca do innego.  
+### <a name="transfer-security"></a>Przeniesienie zabezpieczeń  
+ Przeniesienie zabezpieczeń obejmuje trzech głównych funkcji zabezpieczeń: integralności, poufności i uwierzytelniania. *Integralność* jest możliwość wykrywania, czy wiadomość została naruszona. *Poufność* jest możliwość przechowywania wiadomości nie można go odczytać przez nikogo innego niż zamierzony recipient; jest to realizowane poprzez kryptografii. *Uwierzytelnianie* jest możliwość weryfikowania tożsamości. Razem te trzy funkcje ułatwiają upewnij się, że bezpieczne nadejścia z jednego miejsca do drugiego.  
   
-#### <a name="transport-and-message-security-modes"></a>Tryby zabezpieczeń komunikatu i transportu  
- Dwa główne mechanizmy są używane do implementowania transfer zabezpieczeń w programie WCF: *transportu* trybu zabezpieczeń i *komunikat* tryb zabezpieczeń.  
+#### <a name="transport-and-message-security-modes"></a>Transport i tryby zabezpieczeń komunikatów  
+ Dwa główne mechanizmy są używane do implementowania bezpieczeństwie transferu programu WCF: *transportu* trybu zabezpieczeń i *komunikat* tryb zabezpieczeń.  
   
--   *Tryb zabezpieczeń Transport* wykorzystuje protokół poziomu transportu, taki jak HTTPS, umożliwia transfer zabezpieczeń. Zaletą powszechnie przyjęta, dostępna na wielu platformach i mniejsze wymagania złożonych jest trybu transportu. Ma jednak wadą Zabezpieczanie komunikatów tylko z point-to-point.  
+-   *Tryb zabezpieczeń Transport* korzysta protokół poziomu transportu, taki jak HTTPS, aby osiągnąć bezpieczeństwie transferu. Tryb transportu zaletą jest szeroko stosowanych, dostępna na wielu platformach i mniejsze wymagania złożonego. Ma jednak wadą Zabezpieczanie komunikatów tylko z typu punkt-punkt.  
   
--   *Tryb zabezpieczeń wiadomości*, inne strony, używa WS-Security (i inne specyfikacje) do zaimplementowania transfer zabezpieczeń. Ponieważ zabezpieczenia wiadomości są stosowane bezpośrednio do komunikatów SOAP i znajduje się wewnątrz koperty protokołu SOAP, oraz dane aplikacji ma prowadzoną zabezpieczeń na trasie niezależne od protokołu extensible więcej i zapewnienie transportu (w przeciwieństwie do point-to-point); ma ona wadą jest kilka razy mniejsza niż tryb zabezpieczeń transport, ponieważ ma ona radzenia sobie z natury XML wiadomości SOAP.  
+-   *Tryb zabezpieczeń wiadomości*, a na drugiej strony, używa WS-Security (i inne specyfikacje) Aby zaimplementować zabezpieczenia transferu. Ponieważ zabezpieczeń wiadomości jest stosowane bezpośrednio do komunikaty protokołu SOAP i znajduje się wewnątrz koperty protokołu SOAP, wraz z danymi aplikacji ma prowadzoną zabezpieczeń transportu niezależne od protokołu, bardziej rozszerzalny i zapewnianie end-to-end (w przeciwieństwie do point-to-point); ma ona wadą jest kilka razy wolniej niż tryb zabezpieczeń transport, ponieważ ma ona do czynienia z charakterem XML protokołu SOAP wiadomości.  
   
- Aby uzyskać więcej informacji na temat tych różnic, zobacz [zabezpieczanie usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).  
+ Aby uzyskać więcej informacji dotyczących tych różnic, zobacz [zabezpieczania usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).  
   
- Trzeci trybu zabezpieczeń używa oba tryby poprzedniej i oferuje zalety obu. Ten tryb jest nazywany `TransportWithMessageCredential`. W tym trybie Zabezpieczenia wiadomości jest używany do uwierzytelniania klienta i zabezpieczeń transportu jest używany do uwierzytelniania serwera i zagwarantować poufność komunikatów i integralność. Dzięki temu `TransportWithMessageCredential` trybu zabezpieczeń jest niemal tak szybko, jak tryb zabezpieczeń transport i udostępnia rozszerzalności uwierzytelniania klienta w taki sam sposób jak zabezpieczenia wiadomości. Jednak w przeciwieństwie do trybu zabezpieczenia wiadomości, nie zapewnia ona pełną zabezpieczeń na trasie.  
+ Trzeci tryb zabezpieczeń używa oba tryby poprzedniej i oferuje zalety obu tych elementów. Ten tryb jest nazywany `TransportWithMessageCredential`. W tym trybie Zabezpieczenia wiadomości jest używany do uwierzytelniania klienta i zabezpieczeń transportu jest używany do uwierzytelniania serwera i zapewnić poufność komunikatów i integralność. Dzięki tym `TransportWithMessageCredential` trybu zabezpieczeń jest prawie tak szybko, jak tryb zabezpieczeń transport i zapewnia rozszerzalność uwierzytelniania klienta w taki sam sposób, jak zabezpieczenia wiadomości. Jednak w przeciwieństwie do trybu zabezpieczenia wiadomości, zapewnia ona pełnymi zabezpieczeniami end-to-end.  
   
 ### <a name="access-control"></a>Kontrola dostępu  
- *Kontrola dostępu* jest także znana jako autoryzacji. *Autoryzacji* umożliwia użytkownikom różnych mają różne uprawnienia do wyświetlania danych. Na przykład, ponieważ pliki zasobów ludzkich firmy zawierają dane poufne pracownika, tylko menedżerowie mogą wyświetlać dane pracownika. Ponadto menedżerowie mogą wyświetlać tylko dane dla swoich bezpośrednich podwładnych. W takim przypadku kontroli dostępu jest oparty na zarówno roli ("menedżerem"), a także określonych tożsamości menedżera (Aby zapobiec jednego menedżera z spojrzenie na pracownikach innego menedżera).  
+ *Kontrola dostępu* jest także znana jako autoryzacji. *Autoryzacja* umożliwia różnych użytkowników może mieć różne uprawnienia do wyświetlania danych. Na przykład ponieważ pliki zarządzania zasobami ludzkimi firmy zawierają dane poufne pracowników, tylko menedżerowie mogą wyświetlać dane pracowników. Ponadto menedżerowie mogą wyświetlać tylko dane dla swoich raportów bezpośrednio. W tym przypadku kontroli dostępu zależy zarówno roli ("menedżerem"), jak i określone tożsamość menedżera (Aby zapobiec jednego z kierowników sprawę patrząc na innego menedżera rekordy pracowników).  
   
- W programie WCF, funkcje kontroli dostępu są realizowane za pośrednictwem integracji z środowisko uruchomieniowe języka wspólnego (CLR) <xref:System.Security.Permissions.PrincipalPermissionAttribute> i za pomocą zestawu interfejsów API, znany jako *modelu tożsamości*. Aby uzyskać szczegółowe informacje o kontroli dostępu i autoryzacja oparte na oświadczeniach, zobacz [rozszerzanie zabezpieczeń](../../../../docs/framework/wcf/extending/extending-security.md).  
+ W programie WCF, funkcje kontroli dostępu są dostępne za pośrednictwem integracja plików wykonywalnych języka wspólnego (CLR) <xref:System.Security.Permissions.PrincipalPermissionAttribute> i za pomocą zestawu interfejsów API, znane jako *modelu tożsamości*. Aby uzyskać szczegółowe informacje o kontroli dostępu i autoryzacja oparta na oświadczeniach, zobacz [rozszerzanie zabezpieczeń](../../../../docs/framework/wcf/extending/extending-security.md).  
   
 ### <a name="auditing"></a>Inspekcja  
- *Inspekcja* jest rejestrowanie zdarzeń zabezpieczeń w dzienniku zdarzeń systemu Windows. Może rejestrować zdarzeń związanych z zabezpieczeniami, takich jak błędy uwierzytelniania (czy sukcesów). Aby uzyskać więcej informacji, zobacz [inspekcji](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Dla programowania uzyskać więcej informacji, zobacz [porady: zdarzenia inspekcji zabezpieczeń](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
+ *Inspekcja* jest rejestrowanie zdarzeń związanych z zabezpieczeniami w dzienniku zdarzeń Windows. Umożliwia rejestrowanie zdarzeń związanych z zabezpieczeniami, takie jak błędy uwierzytelniania (lub sukcesów). Aby uzyskać więcej informacji, zobacz [inspekcji](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Programowania szczegółowe informacje, zobacz [instrukcje: inspekcja zdarzeń zabezpieczeń](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
@@ -114,4 +114,4 @@ Windows Communication Foundation (WCF) jest SOAP oparta na komunikatach rozprosz
  [Powiązania dostarczane przez system](../../../../docs/framework/wcf/system-provided-bindings.md)  
  [Przegląd tworzenia punktów końcowych](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
  [Rozszerzanie zabezpieczeń](../../../../docs/framework/wcf/extending/extending-security.md)  
- [Model zabezpieczeń systemu Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

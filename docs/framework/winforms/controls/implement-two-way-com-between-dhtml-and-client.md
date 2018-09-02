@@ -14,55 +14,55 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], communication between DHTML and client application
 - DHTML [Windows Forms], embedding in Windows Forms
 ms.assetid: 55353a32-b09e-4479-a521-ff3a5ff9a708
-ms.openlocfilehash: 90f4f4500514e2e3d7a231861c0cf4b3d453a4c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 10b6bb3f55c8acd62101a48ea53b42e331e4210f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540621"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405385"
 ---
 # <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>Porady: implementowanie dwukierunkowej komunikacji między kodem DHTML i kodem aplikacji klienta
-Można użyć <xref:System.Windows.Forms.WebBrowser> formantu, aby dodać istniejące dynamiczny kod aplikacji sieci Web HTML (DHTML) aplikacjom klienckim formularzy systemu Windows. Jest to przydatne, gdy zainwestowały czasu znaczących programowania do tworzenia opartych na DHTML — formanty i chcesz korzystać z funkcji interfejsu użytkownika sformatowanego formularzy systemu Windows bez konieczności ponownego zapisania istniejącego kodu.  
+Możesz użyć <xref:System.Windows.Forms.WebBrowser> formantu, aby dodać istniejący dynamiczny kod aplikacji sieci Web HTML (DHTML) do aplikacji klienta Windows Forms. Jest to przydatne, gdy zainwestowali czas opracowywania znaczące w tworzeniu kontrolek na podstawie DHTML i chcesz korzystać z zalet użytkownikowi możliwości interfejsu Windows Forms bez konieczności ponownego zapisania istniejącego kodu.  
   
- <xref:System.Windows.Forms.WebBrowser> Kontrola umożliwia Implementowanie dwukierunkowej komunikacji między kod klienta aplikacji i skryptów kodu strony sieci Web za pomocą <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> i <xref:System.Windows.Forms.WebBrowser.Document%2A> właściwości. Ponadto można skonfigurować <xref:System.Windows.Forms.WebBrowser> , aby formantów sieci Web programu blend bezproblemowo z innych kontrolek w formularzu aplikacji, ukrywanie ich realizacji DHTML. Na bezproblemowo blend formantów, formatu strony wyświetlany tak, aby jego kolor tła i styl wizualny zgodne pozostałej części formularza i użyj <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>, <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A>, i <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> właściwości, aby wyłączyć funkcje standardowej przeglądarki.  
+ <xref:System.Windows.Forms.WebBrowser> Kontrola umożliwia Implementowanie dwukierunkowej komunikacji między kodu aplikacji klienckich i skryptów kodu strony sieci Web za pomocą <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> i <xref:System.Windows.Forms.WebBrowser.Document%2A> właściwości. Ponadto można skonfigurować <xref:System.Windows.Forms.WebBrowser> kontrolki formantów sieci Web programu blend bezproblemowo z innymi formantami na formularzu aplikacji ukrywanie ich implementacji DHTML. Aby dopasować bezproblemowo formanty, formatowanie stronę wyświetlaną, aby jej kolor tła i stylu wizualnego dopasowania pozostałej części formularza i używać <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>, <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A>, i <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> właściwości, aby wyłączyć funkcje standardową przeglądarką.  
   
-### <a name="to-embed-dhtml-in-your-windows-forms-application"></a>Aby osadzić w aplikacji Windows Forms DHTML  
+### <a name="to-embed-dhtml-in-your-windows-forms-application"></a>Aby osadzić DHTML w aplikacji Windows Forms  
   
-1.  Ustaw <xref:System.Windows.Forms.WebBrowser> formantu <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> właściwości `false` zapobiegające <xref:System.Windows.Forms.WebBrowser> kontroli otwieranie plików na go.  
+1.  Ustaw <xref:System.Windows.Forms.WebBrowser> kontrolki <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> właściwości `false` aby zapobiec <xref:System.Windows.Forms.WebBrowser> kontroli otwieranie plików upuszczone na go.  
   
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#1)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#1)]  
   
-2.  Ustawianie formantu <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A> właściwości `false` zapobiegające <xref:System.Windows.Forms.WebBrowser> kontroli wyświetlanie menu skrótów po kliknięciu go.  
+2.  Ustaw dla formantu <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A> właściwości `false` zapobiegające <xref:System.Windows.Forms.WebBrowser> kontroli wyświetlanie jego menu skrótów, gdy użytkownik kliknie prawym przyciskiem myszy go.  
   
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#2)]  
   
-3.  Ustawianie formantu <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> właściwości `false` zapobiegające <xref:System.Windows.Forms.WebBrowser> formantu z odpowiada klawiszy skrótu.  
+3.  Ustaw dla formantu <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> właściwości `false` zapobiegające <xref:System.Windows.Forms.WebBrowser> kontroli ją klawiszy skrótów.  
   
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#3)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#3)]  
   
-4.  Ustaw <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> właściwości w Konstruktorze formularza lub <xref:System.Windows.Forms.Form.Load> obsługi zdarzeń.  
+4.  Ustaw <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> właściwość w Konstruktorze formularza lub <xref:System.Windows.Forms.Form.Load> programu obsługi zdarzeń.  
   
-     W poniższym kodzie użyto samej klasy formularza dla obiekt skryptów.  
+     W poniższym kodzie użyto samej klasy formularza dla skryptów obiektu.  
   
     > [!NOTE]
-    >  Składnik modelu COM (Object) musi mieć możliwość dostępu do obiektu skryptów. Aby formularz był widoczny dla modelu COM, należy dodać <xref:System.Runtime.InteropServices.ComVisibleAttribute> atrybutu do własnej klasy formularza.  
+    >  Component Object Model (COM) musi mieć możliwość dostępu do obiektu skryptów. Aby formularz był widoczny dla modelu COM, należy dodać <xref:System.Runtime.InteropServices.ComVisibleAttribute> atrybutów do klasy formularza.  
   
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#4)]  
   
-5.  Implementuje publicznej właściwości i metody w kodzie aplikacji, który będzie używany przez kod skryptu.  
+5.  Implementuje właściwości publiczne lub metody w kodzie aplikacji, która będzie używana w kodzie skryptu.  
   
-     Na przykład jeśli używasz klasy formularza dla obiekt skryptów, Dodaj następujący kod do klasy formularza.  
+     Na przykład jeśli używasz klasy formularza dla skryptów obiektu, Dodaj następujący kod do klasy formularza.  
   
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#5)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#5)]  
   
-6.  Użyj `window.external` obiektu w kodzie skryptu dostęp do publicznej właściwości i metod określonego obiektu.  
+6.  Użyj `window.external` obiektu w kodzie skryptu do publicznej właściwości i metody określonego obiektu.  
   
-     Poniższy kod HTML pokazano, jak wywołać metody dla obiekt skryptów w kliknij przycisk. Skopiuj ten kod do elementu BODY dokumentu HTML, które zostały załadowane, za pomocą formantu <xref:System.Windows.Forms.WebBrowser.Navigate%2A> metody lub przypisać formantu <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> właściwości.  
+     Poniższy kod HTML przedstawia sposób wywołania metody wobec obiektu skryptów od kliknięcia przycisku. Skopiuj ten kod do elementu BODY dokumentu HTML, który należy załadować przy użyciu formantu <xref:System.Windows.Forms.WebBrowser.Navigate%2A> metody lub przypisać formantu <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> właściwości.  
   
     ```  
     <button onclick="window.external.Test('called from script code')">  
@@ -70,9 +70,9 @@ Można użyć <xref:System.Windows.Forms.WebBrowser> formantu, aby dodać istnie
     </button>  
     ```  
   
-7.  Implementowanie funkcji w kodzie skryptu, który będzie używany przez kod aplikacji.  
+7.  Implementowanie funkcji w kodzie skryptu, który będzie używany w kodzie aplikacji.  
   
-     Następujący element HTML skryptu zawiera funkcję przykład. Skopiuj ten kod do elementu HEAD dokumentu HTML, które zostały załadowane, za pomocą formantu <xref:System.Windows.Forms.WebBrowser.Navigate%2A> metody lub przypisać formantu <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> właściwości.  
+     Następujący element HTML skrypt zawiera przykład funkcja. Skopiuj ten kod w element główny dokumentu HTML, który należy załadować przy użyciu formantu <xref:System.Windows.Forms.WebBrowser.Navigate%2A> metody lub przypisać formantu <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> właściwości.  
   
     ```  
     <script>  
@@ -84,18 +84,18 @@ Można użyć <xref:System.Windows.Forms.WebBrowser> formantu, aby dodać istnie
   
 8.  Użyj <xref:System.Windows.Forms.WebBrowser.Document%2A> właściwości dostępu do kodu skryptu w kodzie aplikacji klienta.  
   
-     Na przykład, Dodaj następujący kod do przycisku <xref:System.Windows.Forms.Control.Click> obsługi zdarzeń.  
+     Na przykład, Dodaj następujący kod do przycisku <xref:System.Windows.Forms.Control.Click> programu obsługi zdarzeń.  
   
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#8](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#8)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#8](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#8)]  
   
-9. Po zakończeniu debugowania programu DHTML Ustawianie formantu <xref:System.Windows.Forms.WebBrowser.ScriptErrorsSuppressed%2A> właściwości `true` zapobiegające <xref:System.Windows.Forms.WebBrowser> kontroli przy wyświetlaniu komunikatów o błędach dla problemów kodu skryptu.  
+9. Po zakończeniu debugowania usługi DHTML ustawić <xref:System.Windows.Forms.WebBrowser.ScriptErrorsSuppressed%2A> właściwości `true` zapobiegające <xref:System.Windows.Forms.WebBrowser> kontroli wyświetlanie komunikatów o błędach dla problemów kodu skryptu.  
   
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#9](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#9)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#9](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#9)]  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie kompletny kod zawiera aplikacji demonstracyjnej, która służy do zrozumienia tej funkcji. Kod HTML jest ładowany do <xref:System.Windows.Forms.WebBrowser> kontrolować za pośrednictwem <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> właściwości zamiast ładowana z pliku HTML.  
+ Poniższy przykład kompletny kod zapewnia aplikacji demonstracyjnych, która umożliwia zrozumienie tej funkcji. Kod HTML jest ładowany do <xref:System.Windows.Forms.WebBrowser> kontrolować za pośrednictwem <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> właściwości zamiast ładowana z pliku HTML.  
   
  [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#0](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#0)]
  [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#0](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#0)]  
@@ -103,9 +103,9 @@ Można użyć <xref:System.Windows.Forms.WebBrowser> formantu, aby dodać istnie
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten kod wymaga:  
   
--   Odwołania do zestawów systemu i System.Windows.Forms.  
+-   Odwołania do zestawów System i przestrzeń nazw System.Windows.Forms.  
   
- Uzyskać informacje o kompilowaniu w tym przykładzie z wiersza polecenia dla programu Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [kompilowania z wiersza polecenia csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć w tym przykładzie w programie Visual Studio przez wklejenie kodu do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows formularze kodu przykład za pomocą programu Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows Forms kodu przykładzie przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.WebBrowser>  

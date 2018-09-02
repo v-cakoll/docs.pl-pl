@@ -2,18 +2,18 @@
 title: Używanie wielu schematów uwierzytelniania z programem WCF
 ms.date: 03/30/2017
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
-ms.openlocfilehash: 140211f10f7cdc88a3df8eb8ea1c30df73b0c4c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cdf40d6c0ca25a21cbdac07abab04d2bc144bf69
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498449"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408976"
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>Używanie wielu schematów uwierzytelniania z programem WCF
-WCF można teraz określić wielu schematów uwierzytelniania w jednym punkcie końcowym. Ponadto usługi sieci web hostowanej może dziedziczyć ustawień uwierzytelniania bezpośrednio za pomocą programu IIS. Hostowanie Samoobsługowe usługi można określić rodzaju uwierzytelniania schematy może służyć. Aby uzyskać więcej informacji na temat ustawiania ustawienia uwierzytelniania w usługach IIS, zobacz [uwierzytelniania usług IIS](http://go.microsoft.com/fwlink/?LinkId=232458)  
+Usługi WCF umożliwia teraz określenie wielu schematów uwierzytelniania w jednym punkcie końcowym. Ponadto usługi sieci web hostowanych może dziedziczyć ustawień uwierzytelniania bezpośrednio za pomocą programu IIS. Samodzielnie hostowanej usługi można określić rodzaju uwierzytelniania może służyć schematów. Aby uzyskać więcej informacji na temat ustawiania ustawienia uwierzytelniania w usługach IIS, zobacz [uwierzytelnianie usług IIS](https://go.microsoft.com/fwlink/?LinkId=232458)  
   
 ## <a name="iis-hosted-services"></a>Usług hostowanych przez usługi IIS  
- W przypadku usług hostowanych przez usługi IIS należy ustawić schematy uwierzytelniania, który ma zostać użyty w usługach IIS. Następnie w pliku web.config z usługą, w konfiguracji powiązania Określ typu poświadczeń klienta jako "InheritedFromHost" jak pokazano w następujący fragment kodu XML:  
+ W przypadku usług hostowanych przez usługi IIS należy ustawić schematy uwierzytelniania, które mają być używane w usługach IIS. Następnie w pliku web.config usługi w konfiguracji powiązania Określ typ clientCredential jako "InheritedFromHost" jak pokazano w poniższym fragmencie kodu XML:  
   
 ```xml  
 <bindings>  
@@ -27,7 +27,7 @@ WCF można teraz określić wielu schematów uwierzytelniania w jednym punkcie k
     </bindings>  
 ```  
   
- Można określić, że mają podzbiór schematy uwierzytelniania do użycia z usługą przy użyciu ServiceAuthenticationBehavior lub \<serviceAuthenticationManager > elementu. Podczas konfigurowania to w kodzie Użyj ServiceAuthenticationBehavior, jak pokazano w poniższy fragment kodu.  
+ Można określić tylko mają podzbiór schematów uwierzytelniania do użycia z usługą za pomocą ServiceAuthenticationBehavior lub \<serviceAuthenticationManager > element. Podczas konfigurowania to w kodzie należy użyć ServiceAuthenticationBehavior, jak pokazano w poniższym fragmencie kodu.  
   
 ```csharp  
 // ...  
@@ -47,7 +47,7 @@ else
 // ...  
 ```  
   
- Podczas konfigurowania w pliku konfiguracji, użyj \<serviceAuthenticationManager > element, jak pokazano w następujący fragment kodu XML.  
+ Podczas konfigurowania to w pliku konfiguracji, użyj \<serviceAuthenticationManager > elementu, jak pokazano w poniższym fragmencie kodu XML.  
   
 ```xml  
 <behaviors>  
@@ -60,10 +60,10 @@ else
     </behaviors>  
 ```  
   
- Daje to pewność, że tylko podzestaw schematy uwierzytelniania przedstawione w tym miejscu będą uznawane za stosowania dla punktu końcowego usługi, w zależności od wybranej usług IIS. Oznacza to, które można wykluczyć dewelopera powiedzieć uwierzytelnianie podstawowe z listy, pomijając go z listy serviceAuthenticationManager i nawet, jeśli jest włączone w usługach IIS, nie zostanie zastosowana na punkt końcowy usługi  
+ Pozwoli to zagwarantować, że tylko podzbiór schematy uwierzytelniania, wymienione w tym miejscu będą uznawane za do stosowania w punkcie końcowym usługi, w zależności od tego, co jest wybrane w usługach IIS. Oznacza to, że deweloper można wykluczyć powiedz uwierzytelnianie podstawowe z listy, pomijając go z listy serviceAuthenticationManager, a nawet, jeśli jest włączone w usługach IIS, nie zostanie zastosowana na punkt końcowy usługi  
   
-## <a name="self-hosted-services"></a>Hostowanie Samoobsługowe usług  
- Samodzielnie hostowane usługi są skonfigurowane nieco inaczej, ponieważ nie istnieje żadne usług IIS, aby odziedziczyć ustawienia z. W tym miejscu użyć \<serviceAuthenticationManager > elementu lub ServiceAuthenticationBehavior, aby określić ustawienia uwierzytelniania, które będą dziedziczone. W kodzie wygląda następująco:  
+## <a name="self-hosted-services"></a>Usługi samodzielnie hostowane  
+ Samodzielnie hostowanej usługi są konfigurowane nieco inaczej, ponieważ nie istnieje żadne usługi IIS mają dziedziczyć ustawienia z. W tym miejscu możesz użyć \<serviceAuthenticationManager > element lub ServiceAuthenticationBehavior do określania ustawień uwierzytelniania, które będą dziedziczone. W kodzie wygląda następująco:  
   
 ```csharp  
 // ...  
@@ -83,7 +83,7 @@ else
 // ...  
 ```  
   
- W konfiguracji wygląda następująco:  
+ W pliku konfiguracyjnym wygląda następująco:  
   
 ```xml  
 <behaviors>  
@@ -96,7 +96,7 @@ else
     </behaviors>  
 ```  
   
- A następnie można określić InheritFromHost w ustawieniach powiązanie, jak pokazano w następujący fragment kodu XML.  
+ A następnie można określić InheritFromHost w ustawieniach powiązania, jak pokazano w poniższym fragmencie kodu XML.  
   
 ```xml  
 <bindings>  
@@ -110,7 +110,7 @@ else
     </bindings>  
 ```  
   
- Alternatywnie możesz określić schematy uwierzytelniania niestandardowego powiązania, ustawiając schematy uwierzytelniania HTTP transportu element powiązania, jak pokazano w poniższy fragment konfiguracji.  
+ Alternatywnie można określić schematów uwierzytelniania w niestandardowym powiązaniu, ustawiając schematów uwierzytelniania na HTTP transportu elementu powiązania, jak pokazano w poniższym fragmencie kodu konfiguracji.  
   
 ```xml  
 <binding name="multipleBinding">  

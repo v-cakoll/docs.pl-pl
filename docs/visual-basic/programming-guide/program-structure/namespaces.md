@@ -16,12 +16,12 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: c1302bf4b424c7c03fb6c2d8132b086c4d30fd87
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 11fe6956ae2e61d6d715f1d5814e20c4a4d00292
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934456"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402984"
 ---
 # <a name="namespaces-in-visual-basic"></a>Przestrzenie nazw w Visual Basic
 Przestrzenie nazw organizują obiekty zdefiniowane w zestawie. Zespoły mogą zawierać wiele przestrzeni nazw, który z kolei może zawierać innych przestrzeniach nazw. Przestrzenie nazw uniknąć niejednoznaczności i uprościć odwołania, korzystając z dużych grup obiektów, takich jak biblioteki klas.  
@@ -123,7 +123,7 @@ End Namespace
  <xref:System.Windows.Forms.ListBox>  
  <xref:System.Windows.Forms?displayProperty=nameWithType>  
  [Zestawy i globalna pamięć podręczna zestawów](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Instrukcje: tworzenie i korzystanie z zestawów przy użyciu wiersza polecenia](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)  
+ [Instrukcje: tworzenie i korzystanie z zestawów przy użyciu wiersza polecenia](https://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)  
  [Referencje i instrukcja Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)  
  [Imports, instrukcja (przestrzeń nazw i typ .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
  [Pisanie kodu dla rozwiązań pakietu Office](https://msdn.microsoft.com/library/bb608596)

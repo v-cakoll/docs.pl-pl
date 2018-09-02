@@ -19,33 +19,33 @@ helpviewer_keywords:
 - page header
 - printing [Windows Forms], headers and footers
 ms.assetid: 1c7ccb02-ac62-4fc8-8e4f-c67b01a86802
-ms.openlocfilehash: 467b93043851b512427ab93d2c8a8f8030e057ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8caa984799d7f8f5a8f4b017e8c40eeb44d8b6c4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536856"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404786"
 ---
 # <a name="pagesetupdialog-component-windows-forms"></a>PageSetupDialog — Składnik (Formularze systemu Windows)
-Formularze systemu Windows <xref:System.Windows.Forms.PageSetupDialog> składnik jest wstępnie skonfigurowana okno dialogowe służy do określania szczegóły strony do wydruku w aplikacjach opartych na systemie Windows. Użyj go w aplikacji systemu Windows jako prostym rozwiązaniem dla użytkowników, aby ustawić preferencje strony zamiast własne okno dialogowe Konfigurowanie. Można umożliwić użytkownikom ustawić obramowania i dostosowania margines, nagłówki i stopki i pionowa a orientacji poziomej. Polegając na standardowe okno dialogowe systemu Windows, możesz utworzyć aplikacje, których podstawowych funkcji jest znane użytkowników.  
+Formularze Windows <xref:System.Windows.Forms.PageSetupDialog> składnik to wstępnie skonfigurowane okno dialogowe umożliwia określanie szczegółów strony do drukowania w aplikacji systemu Windows. Użycie go w aplikacji opartych na Windows jako proste rozwiązanie dla użytkowników, aby ustawić preferencje strony audytów Konfigurowanie własnego okno dialogowe. Możesz umożliwić użytkownikom ustawić obramowanie i korekty margines, nagłówki i stopki i pionowym, a orientacji poziomej. Opierając się na standardowych okien dialogowych Windows, możesz tworzyć aplikacje, w których podstawowych funkcji jest natychmiast dobrze znanym użytkownikom.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [PageSetupDialog, składnik — omówienie](../../../../docs/framework/winforms/controls/pagesetupdialog-component-overview-windows-forms.md)  
- Ogólne pojęcia związane z <xref:System.Windows.Forms.PageSetupDialog> składników, które służy do wyświetlania wstępnie skonfigurowane okno dialogowe, które użytkownicy mogą używać do modyfikowania ustawień strony.  
+ Ogólne pojęcia związane z <xref:System.Windows.Forms.PageSetupDialog> składnik, który można użyć, aby wyświetlić okno dialogowe wstępnie skonfigurowane, którego użytkownicy mogą modyfikować ustawień strony.  
   
  [Instrukcje: określanie właściwości strony za pomocą składnika PageSetupDialog](../../../../docs/framework/winforms/controls/how-to-determine-page-properties-using-the-pagesetupdialog-component.md)  
- Wyjaśniono, jak ustawić właściwości strony za pomocą wystąpienia <xref:System.Windows.Forms.PageSetupDialog> składnika w czasie wykonywania.  
+ Wyjaśnia, jak ustawić właściwości strony za pomocą wystąpienia <xref:System.Windows.Forms.PageSetupDialog> składnika w czasie wykonywania.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.PageSetupDialog>  
- Zawiera informacje o klasie i jej elementów członkowskich.  
+ Zawiera dodatkowe informacje na temat klasy i jej elementów członkowskich.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Zawiera listę wszystkich formanty formularzy systemu Windows, linki do informacji na temat ich użycia.  
+ Zawiera listę wszystkich kontrolek Windows Forms, wraz z łączami do informacji na temat ich używania.  
   
  [Kontrolki i składniki okien dialogowych](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
- Opisuje zestaw kontrolek i składników, które pozwalają użytkownikom do wykonywania standardowych interakcji z aplikacji lub systemu.  
+ W tym artykule opisano zestaw kontrolek i składników, które umożliwiają użytkownikom do wykonywania standardowych interakcji z aplikacji lub systemu.  
   
- [Okna dialogowe stanowi podstawowy kod dla systemu Windows](http://go.microsoft.com/fwlink/?LinkID=102575)  
- Omówiono formantów okna dialogowego formularzy systemu Windows i składników oraz kod niezbędnych do wykonywania swoich podstawowych funkcji. (Artykułu technicznego na bibliotece MSDN Online)
+ [Podstawowy kod służący do Windows Forms okien dialogowych](https://go.microsoft.com/fwlink/?LinkID=102575)  
+ W tym artykule omówiono formantów okna dialogowego Windows Forms i składniki i kod wymagany do wykonywania swoich podstawowych funkcji. (Artykułu technicznego na bibliotece MSDN Online)

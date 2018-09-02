@@ -1,6 +1,6 @@
 ---
 title: Funkcja QualifierSet_Next (niezarządzany wykaz interfejsów API)
-description: Funkcja QualifierSet_Next pobiera kwalifikator dalej w wyliczeniu.
+description: Funkcja QualifierSet_Next pobiera następny kwalifikatora w wyliczeniu.
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_Next
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a8232691c697c51b5a480a68c6d952f294a63460
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 938044a4e932139eb8a4d0a5d2f998cbc6f193cb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460230"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405530"
 ---
-# <a name="qualifiersetnext-function"></a>Funkcja QualifierSet_Next
-Pobiera kwalifikator dalej w wyliczeniu, który uruchomił się wywołaniem do [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) funkcji.   
+# <a name="qualifiersetnext-function"></a>QualifierSet_Next — funkcja
+Pobiera następny kwalifikatora w wyliczeniu, który uruchamiany przy użyciu wywołania do [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) funkcji.   
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -44,42 +44,42 @@ HRESULT QualifierSet_Next (
 ## <a name="parameters"></a>Parametry
 
 `vFunc`   
-[in] Ten parametr nie jest używana.
+[in] Ten parametr jest nieużywany.
 
 `ptr`   
-[in] Wskaźnik do [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) wystąpienia.
+[in] Wskaźnik do [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) wystąpienia.
 
 `lFlags`   
-[in] Zastrzeżone. Ten parametr musi wynosić 0.
+[in] Zastrzeżone. Ten parametr musi być 0.
 
 `pstrName`   
-[out] Nazwa kwalifikatora. Jeśli `null`, ten parametr jest ignorowana, a w przeciwnym razie `pstrName` nie powinny wskazywać na prawidłową `BSTR` lub występuje przeciek pamięci. Jeśli nie jest wartość null, funkcja zawsze przydziela nowy `BSTR` po zwraca `WBEM_S_NO_ERROR`.
+[out] Nazwa kwalifikatora. Jeśli `null`, ten parametr jest ignorowane; w przeciwnym razie `pstrName` nie powinien wskazywać do prawidłowego `BSTR` lub występuje przeciek pamięci. Jeśli nie ma wartości null, funkcja zawsze przydziela nową `BSTR` zwróceniem `WBEM_S_NO_ERROR`.
 
 `pVal`   
-[out] Gdy to się powiedzie, wartość kwalifikator. W przypadku niepowodzenia funkcji `VARIANT` wskazywana przez `pVal` nie jest modyfikowany. Jeśli ten parametr ma `null`, parametr będzie ignorowany.
+[out] Jeśli operacja się powiedzie, wartość kwalifikatora. Jeśli funkcja zawiedzie, `VARIANT` wskazywany przez `pVal` nie jest modyfikowany. Jeśli ten parametr jest `null`, parametr jest ignorowany.
 
 `plFlavor`   
-[out] Wskaźnik do LONG, który odbiera podtyp kwalifikator. Jeśli informacje o wersji nie jest wymagana, ten parametr może być `null`. 
+[out] Wskaźnik na wartość typu LONG, który odbiera wersja kwalifikatora. Jeśli informacje o wersji nie jest wymagana, ten parametr może być `null`. 
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.h* pliku nagłówka, lub należy je zdefiniować jako stałe w kodzie:
+Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametr jest nieprawidłowy. |
 |`WBEM_E_UNEXPECTED` | 0x8004101d | Obiekt wywołujący nie wywołał [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md). |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Można rozpocząć nowego wyliczenia jest za mało pamięci. |
-| `WBEM_S_NO_MORE_DATA` | 0x40005 | Nie więcej kwalifikatory są pozostawiane w wyliczeniu. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Nie ma wystarczającej ilości pamięci jest dostępny rozpocząć nowe wyliczenie. |
+| `WBEM_S_NO_MORE_DATA` | 0x40005 | Nie więcej kwalifikatorów są pozostawiane w wyliczeniu. |
 |`WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
   
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zawijana wywołanie [IWbemQualifierSet::Next](https://msdn.microsoft.com/library/aa391870(v=vs.85).aspx) metody.
+Ta funkcja zawija wywołanie do [IWbemQualifierSet::Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-next) metody.
 
-Należy wywołać `QualifierSet_Next` funkcja wielokrotnie wyliczyć wszystkie kwalifikatory do zwrot funkcji `WBEM_S_NO_MORE_DATA`. Zakończenie wczesne wyliczenia, wywołaj [QualifierSet_EndEnumeration](qualifierset-endenumeration.md) funkcji.
+Należy wywołać `QualifierSet_Next` funkcja wielokrotnie wyliczyć wszystkie kwalifikatory aż zwrot funkcji `WBEM_S_NO_MORE_DATA`. Aby zakończyć wyliczenia wcześnie, należy wywołać [QualifierSet_EndEnumeration](qualifierset-endenumeration.md) funkcji.
 
-Kolejność kwalifikatory zwrócony podczas wykonywania wyliczenia jest niezdefiniowana.
+Kolejność kwalifikatory zwrócony podczas wyliczania jest niezdefiniowane.
 
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -89,4 +89,4 @@ Kolejność kwalifikatory zwrócony podczas wykonywania wyliczenia jest niezdefi
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
-[Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)
+[Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

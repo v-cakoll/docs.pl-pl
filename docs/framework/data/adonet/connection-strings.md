@@ -2,41 +2,41 @@
 title: Parametry połączenia w ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 03d768430139fa1078f39b470403abcf75dd83a8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b4e057cab4c562fc51893631c35d66409e1c3731
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757219"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399872"
 ---
 # <a name="connection-strings-in-adonet"></a>Parametry połączenia w ADO.NET
-.NET Framework 2.0 wprowadzono nowe funkcje do pracy z parametrów połączenia, w tym wprowadzenia nowych słów kluczowych do klasy konstruktora ciąg połączenia, które ułatwiają tworzenie prawidłowe połączenie ciągów w czasie wykonywania.  
+.NET Framework 2.0 wprowadzono nowe możliwości do pracy z parametrów połączenia, łącznie z wprowadzeniem nowych słów kluczowych do klasy konstruktora parametrów połączenia, które ułatwiają tworzenie ciągów prawidłowego połączenia w czasie wykonywania.  
   
- Parametry połączenia zawierają informacje inicjowania jest przekazywana jako parametr z dostawcy danych do źródła danych. Składnia jest zależna od dostawcy danych, a podczas próby otwarcia połączenia jest przeanalizować parametrów połączenia. Błędy składniowe wygenerować wyjątek czasu wykonywania, ale inne błędy występują tylko wtedy, gdy źródło danych otrzymuje informacje o połączeniu. Po sprawdzeniu poprawności źródła danych dotyczy opcje określone w parametrach połączenia i otwarcie połączenia.  
+ Parametry połączenia zawierają informacje inicjowania, który jest przekazywany jako parametr od dostawcy danych do źródła danych. Składnia jest zależna od dostawcy danych, a ciąg połączenia jest analizowany podczas próby otwarcia połączenia. Błędy składniowe generowania wyjątków czasu wykonywania, ale inne błędy występują tylko wtedy, gdy źródło danych otrzymuje informacje o połączeniu. Po zweryfikowaniu źródła danych dotyczy opcje określone w parametrach połączenia i otwarcie połączenia.  
   
- Format ciągu połączenia jest rozdzielaną średnikami listę par klucz/wartość parametru:  
+ Format ciągu połączenia jest rozdzielaną średnikami listę par klucz/wartość do parametru:  
   
  `keyword1=value; keyword2=value;`  
   
- Słowa kluczowe nie jest uwzględniana wielkość liter i spacji między pary klucz wartość są ignorowane. Jednak wartości może być uwzględniana wielkość liter, w zależności od źródła danych. Wszelkie wartości zawierające średnika, pojedynczy cudzysłów lub podwójny cudzysłów musi być ujęta w znaki podwójnego cudzysłowu.  
+ Słowa kluczowe nie jest uwzględniana wielkość liter i spacje między pary klucz/wartość są ignorowane. Jednakże wartości mogą być uwzględniana wielkość liter, w zależności od źródła danych. Wszelkie wartości zawierające je średnikiem, znaki cudzysłowu pojedynczego lub podwójnego cudzysłowu muszą być ujęte w podwójny cudzysłów.  
   
- Składnia ciągu połączenia prawidłowy zależy od dostawcy i powstał całościowo wcześniejszych interfejsy API, takich jak ODBC. .NET Framework Data Provider for SQL Server (SqlClient) zawiera wiele elementów z starsze składnię i jest zazwyczaj bardziej elastyczne z typowych składnia ciągu połączenia. Są często jednakowo prawidłowe synonimy dla elementów składnia ciągu połączenia, ale niektóre składni i błędów pisowni mogą powodować problemy. Na przykład "`Integrated Security=true`" jest nieprawidłowa, podczas gdy "`IntegratedSecurity=true`" powoduje, że wystąpił błąd. Ponadto parametry połączenia zbudowane w czasie wykonywania na podstawie danych wejściowych użytkownika niezweryfikowanych może prowadzić do ataków iniekcji ciągu, zagrażające zabezpieczeń w źródle danych.  
+ Składnia ciągu prawidłowe połączenie jest zależna od dostawcy i został przekształcony w ciągu lat, za pomocą starszych interfejsów API, takich jak ODBC. .NET Framework Data Provider for SQL Server (SqlClient) zawiera wiele elementów z starsza składnia i jest zazwyczaj bardziej elastyczne, przy użyciu typowej składni ciągu połączenia. Są często równie prawidłowe synonimy dla elementów składnia ciągu połączenia, ale niektóre składni oraz błędy pisowni może powodować problemy. Na przykład "`Integrated Security=true`" jest prawidłowy, natomiast "`IntegratedSecurity=true`" powoduje wystąpienie błędu. Ponadto parametry połączenia, tworzony w czasie wykonywania z danych wejściowych użytkownika niezweryfikowanych mogą powodować atakami polegającymi na iniekcji ciągu, bezpiecznemu zabezpieczeń w źródle danych.  
   
- Aby rozwiązać te problemy, ADO.NET 2.0 wprowadzono nowe konstruktorów ciągu połączenia dla każdego dostawcy danych .NET Framework. Słowa kluczowe są widoczne jako właściwości włączenie składnia ciągu połączenia do sprawdzenia poprawności przed przesłaniem do źródła danych.  
+ Aby rozwiązać te problemy, ADO.NET w wersji 2.0 wprowadzono nowe Konstruktorzy parametrów połączeń dla każdego dostawcy danych .NET Framework. Słowa kluczowe są widoczne jako właściwości, umożliwiając składnia ciągu połączenia zostać uwierzytelnionym przed przesłaniem do źródła danych.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Konstruktorzy parametrów połączeń](../../../../docs/framework/data/adonet/connection-string-builders.md)  
- Pokazuje, jak używać `ConnectionStringBuilder` klasy, aby utworzyć prawidłowe połączenie ciągi w czasie wykonywania.  
+ Pokazuje sposób użycia `ConnectionStringBuilder` klas do utworzenia prawidłowego połączenia ciągów w czasie wykonywania.  
   
  [Parametry połączenia i pliki konfiguracji](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)  
- Przedstawiono sposób przechowywania i pobierania parametrów połączenia w plikach konfiguracji.  
+ Pokazuje, jak przechowywać i pobierać parametry połączenia w plikach konfiguracji.  
   
  [Składnia parametrów połączenia](../../../../docs/framework/data/adonet/connection-string-syntax.md)  
- Opisuje sposób konfigurowania parametrów połączeń specyficznych dla dostawcy dla `SqlClient`, `OracleClient`, `OleDb`, i `Odbc`.  
+ W tym artykule opisano jak skonfigurować parametry połączenia specyficzne dla dostawcy na potrzeby `SqlClient`, `OracleClient`, `OleDb`, i `Odbc`.  
   
  [Ochrona informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- Prezentuje techniki chroniące informacje używane do połączenia ze źródłem danych.  
+ Pokazuje technik ochrony informacje używane do połączenia ze źródłem danych.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Nawiązywanie połączenia ze źródłem danych](/cpp/data/odbc/connecting-to-a-data-source)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

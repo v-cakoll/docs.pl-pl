@@ -2,15 +2,15 @@
 title: '&lt;transport&gt; w &lt;netNamedPipeBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: d9eff52d-4bde-4586-b56a-b0ec24611f8d
-ms.openlocfilehash: 9116532c8b4aae2f7539706b97d564444195c79d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0006be71ee67d5f274d8af8087f2d111cddb12b2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753147"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407258"
 ---
 # <a name="lttransportgt-of-ltnetnamedpipebindinggt"></a>&lt;transport&gt; w &lt;netNamedPipeBinding&gt;
-Definiuje ustawienia zabezpieczeń transportu nazwanego potoku.  
+Określa ustawienia zabezpieczenia transportu nazwanego potoku.  
   
  \<system.ServiceModel>  
 \<powiązania >  
@@ -38,7 +38,7 @@ Definiuje ustawienia zabezpieczeń transportu nazwanego potoku.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|protectionLevel|Określa poziom ochrony nazwanego potoku. Podpisywanie wiadomości zmniejsza ryzyko innych firm, manipulowanie wiadomości, gdy są przesyłane. Szyfrowanie zapewnia ochronę poufności poziom danych podczas transportu. Prawidłowe wartości są następujące:<br /><br /> -Brak: Brak ochrony.<br />-Znak: Komunikaty są podpisane.<br />-EncryptAndSign: Komunikaty są zaszyfrowana i podpisana.<br /><br /> Wartość domyślna to EncryptAndSign.|  
+|protectionLevel|Definiuje poziom ochrony nazwanego potoku. Podpisywania wiadomości zmniejsza ryzyko związane z innej naruszeniu komunikat, gdy są przesyłane. Szyfrowanie zapewnia ochronę poufności poziom danych, podczas transportu. Prawidłowe wartości są następujące:<br /><br /> -Brak: Brak ochrony.<br />— Logowanie: Komunikaty są podpisane.<br />-EncryptAndSign: Komunikaty są szyfrowane i podpisany.<br /><br /> Wartość domyślna to EncryptAndSign.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -57,5 +57,5 @@ Definiuje ustawienia zabezpieczeń transportu nazwanego potoku.
  [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
  [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie usług Windows Communication Foundation i klientów za pomocą powiązań](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Konfigurowanie Windows Communication Foundation i klientów za pomocą powiązań](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

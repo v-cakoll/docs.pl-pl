@@ -1,27 +1,27 @@
 ---
-title: Numeryczne i operatory porównania
+title: Liczbowe i operatory porównania
 ms.date: 03/30/2017
 ms.assetid: 25b4a26a-06f2-4f80-87a9-76705ed46197
-ms.openlocfilehash: a1ce13225d72b4286982434d52998a1913814abb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7a455730860e2b11a5ceff5a70934502b312e19
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352184"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401918"
 ---
-# <a name="numeric-and-comparison-operators"></a>Numeryczne i operatory porównania
-Operatory arytmetyczne i porównanie działać zgodnie z oczekiwaniami w środowisko uruchomieniowe języka wspólnego (CLR) z wyjątkiem w następujący sposób:  
+# <a name="numeric-and-comparison-operators"></a>Liczbowe i operatory porównania
+Operatory arytmetyczne i porównanie działają w oczekiwany sposób w środowisko uruchomieniowe języka wspólnego (CLR) z wyjątkiem sytuacji, w następujący sposób:  
   
--   Na liczby zmiennoprzecinkowe SQL nie obsługuje operator modulo.  
+-   SQL nie obsługuje operator modulo na liczby zmiennoprzecinkowe.  
   
--   SQL nie obsługuje arytmetyczne niezaznaczone.  
+-   SQL nie obsługuje arytmetyki niezaznaczone.  
   
--   Operatory inkrementacji i dekrementacji powodować efekty uboczne, podczas ich używać w wyrażeniach, które nie mogą być replikowane w języku SQL i w związku z tym nie obsługują.  
+-   Operatory inkrementacji i dekrementacji spowodować efekty uboczne, gdy będziesz ich używać w wyrażeniach, które nie mogą być replikowane w języku SQL i w związku z tym, nie obsługują.  
   
 ## <a name="supported-operators"></a>Operatory obsługiwane  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obsługuje następujące operatory.  
   
--   Operatory arytmetyczne podstawowe:  
+-   Podstawowe operatory arytmetyczne:  
   
     -   `+`  
   
@@ -31,7 +31,7 @@ Operatory arytmetyczne i porównanie działać zgodnie z oczekiwaniami w środow
   
     -   `/`  
   
-    -   Dzielenie liczby całkowitej Visual Basic (`\`)  
+    -   Dzielenie liczby całkowitej w języku Visual Basic (`\`)  
   
     -   `%` (Visual Basic `Mod`)  
   
@@ -39,7 +39,7 @@ Operatory arytmetyczne i porównanie działać zgodnie z oczekiwaniami w środow
   
     -   `>>`  
   
-    -   `-` (jednoargumentowy negacji)  
+    -   `-` (negacja Jednoargumentowa)  
   
 -   Operatory porównania podstawowe:  
   
@@ -59,5 +59,5 @@ Operatory arytmetyczne i porównanie działać zgodnie z oczekiwaniami w środow
   
 ## <a name="see-also"></a>Zobacz też  
  [Typy danych i funkcje](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
- [Operatory języka C#](http://msdn.microsoft.com/library/0301e31f-22ad-49af-ac3c-d5eae7f0ac43)  
+ [Operatory języka C#](https://msdn.microsoft.com/library/0301e31f-22ad-49af-ac3c-d5eae7f0ac43)  
  [Operatory](../../../../../visual-basic/language-reference/operators/index.md)

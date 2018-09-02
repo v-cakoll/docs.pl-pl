@@ -7,44 +7,44 @@ helpviewer_keywords:
 - list items [Windows Forms], Windows Forms controls that display
 - TreeView control [Windows Forms]
 ms.assetid: 879438b4-4eac-45c6-b345-0229c9b21ab0
-ms.openlocfilehash: ee6c5583718f871c96929d659fe4a681528b27ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b4db06eedc0ada7c34f3ba6f6c80b783866bed2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538239"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404160"
 ---
 # <a name="treeview-control-windows-forms"></a>TreeView — Kontrolka (Formularze systemu Windows)
-Formularze systemu Windows `TreeView` kontrolka Wyświetla hierarchię węzłów, tak jak w sposób pliki i foldery są wyświetlane w okienku po lewej stronie Eksploratora Windows funkcji w systemach operacyjnych Windows.  
+Formularze Windows `TreeView` kontrolka Wyświetla hierarchię węzłów, takie jak sposób pliki i foldery są wyświetlane w okienku po lewej stronie funkcji Eksploratora Windows w systemach operacyjnych Windows.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [TreeView, kontrolka — omówienie](../../../../docs/framework/winforms/controls/treeview-control-overview-windows-forms.md)  
- Wyjaśniono, co to jest formant i jego najważniejszych funkcjach i właściwości.  
+ Wyjaśnia, co to jest formant i jego kluczowych funkcji i właściwości.  
   
  [Instrukcje: dodawanie i usuwanie węzłów za pomocą kontrolki TreeView formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)  
  Zawiera instrukcje dotyczące dodawania i usuwania węzłów z widoku drzewa.  
   
  [Instrukcje: dodawanie niestandardowych informacji do kontrolki TreeView lub ListView (Windows Forms)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)  
- Zawiera instrukcje dotyczące tworzenia klasy pochodnej elementu w widoku listy lub węzła w widoku drzewa Dodawanie pola, metody lub konstruktorów, które są potrzebne.  
+ Zawiera instrukcje dotyczące elementu pochodnego dla elementu w widoku listy lub węzła w widoku drzewa, aby dodać wszystkie pola, metody lub konstruktory, które są potrzebne.  
   
  [Instrukcje: określanie, który węzeł TreeView został kliknięty](../../../../docs/framework/winforms/controls/how-to-determine-which-treeview-node-was-clicked-windows-forms.md)  
- Zawiera instrukcje określające, który węzeł w widoku drzewa został kliknięty, więc odpowiednio odpowiedź aplikacji.  
+ Zawiera instrukcje dotyczące określania, który węzeł w widoku drzewa został kliknięty, aplikacja może reagować odpowiednio.  
   
  [Instrukcje: iterowanie po wszystkich węzłach kontrolki TreeView formularzy Windows Forms](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)  
- Zawiera instrukcje dotyczące badanie każdego węzła w widoku drzewa.  
+ Zawiera instrukcje dotyczące badania każdy węzeł w widoku drzewa.  
   
  [Instrukcje: ustawienie ikon dla kontrolki TreeView formularzy Windows Forms](how-to-set-icons-for-the-windows-forms-treeview-control.md)  
  Zawiera instrukcje dotyczące wyświetlania ikon dla węzłów w widoku drzewa.  
   
  [Instrukcje: dołączanie menu ShortCut do węzła TreeView](../../../../docs/framework/winforms/controls/how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
  Pokazuje, jak dodać shortcut menu do węzła widoku drzewa.  
-  
- Zobacz też [porady: Dodawanie i usuwanie węzłów za pomocą systemu Windows Forms TreeView formantu przy użyciu narzędzia Projektant](http://msdn.microsoft.com/library/ms233651\(v=vs.110\)), [porady: dołączanie Menu skrótów do TreeNode przy użyciu narzędzia Projektant](http://msdn.microsoft.com/library/ms171708\(v=vs.110\)).  
+
+Zobacz też [jak: dodawania i usuwania węzłów z Windows Forms TreeView kontroli przy użyciu narzędzia Projektant](add-and-remove-nodes-with-wf-treeview-control-using-the-designer.md), i [porady: dołączanie Menu skrótów do TreeNode przy użyciu narzędzia Projektant](how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer.md).  
   
 ## <a name="reference"></a>Tematy pomocy  
- <xref:System.Windows.Forms.TreeView> Klasy  
- Ta klasa opisuje i zawiera łącza do wszystkich jej członków.  
+ <xref:System.Windows.Forms.TreeView> Klasa  
+ Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Zawiera listę wszystkich formanty formularzy systemu Windows, linki do informacji na temat ich użycia.
+ Zawiera listę wszystkich kontrolek Windows Forms, wraz z łączami do informacji na temat ich używania.

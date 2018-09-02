@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 79749f5e593fbf4ea282cc5c8000be88098b702f
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: f416ae8252d9991905da7eeaf4ce6398ff0e7461
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874598"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406499"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Połączenie z serwerem SQL buforowanie (ADO.NET)
 Nawiązywanie połączenia z serwerem bazy danych zazwyczaj składa się z kilku kroków czasochłonne. Kanał fizycznych, takich jak gniazda lub nazwany potok należy ustalić, musi nastąpić uzgadnianie początkową z serwerem, informacje o parametrach połączenia musi zostać przeanalizowany, połączenie musi zostać uwierzytelniony przez serwer, należy uruchomić testy dla rejestrowanie w Bieżąca transakcja i tak dalej.  
@@ -124,7 +124,7 @@ using (SqlConnection connection = new SqlConnection(
 ```  
   
 ## <a name="application-roles-and-connection-pooling"></a>Role aplikacji i pule połączeń  
- Po programu SQL Server został aktywowany roli aplikacji, wywołując `sp_setapprole` systemowej procedury składowanej, nie można zresetować w kontekście zabezpieczeń tego połączenia. Jednak jeśli włączone jest buforowanie, połączenie jest zwracany do puli i występuje błąd podczas połączenia z puli zostanie ponownie użyty. Aby uzyskać więcej informacji, zobacz artykuł bazy wiedzy, "[błędów roli aplikacji SQL z puli zasobów OLE DB](http://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)."  
+ Po programu SQL Server został aktywowany roli aplikacji, wywołując `sp_setapprole` systemowej procedury składowanej, nie można zresetować w kontekście zabezpieczeń tego połączenia. Jednak jeśli włączone jest buforowanie, połączenie jest zwracany do puli i występuje błąd podczas połączenia z puli zostanie ponownie użyty. Aby uzyskać więcej informacji, zobacz artykuł bazy wiedzy, "[błędów roli aplikacji SQL z puli zasobów OLE DB](https://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)."  
   
 ### <a name="application-role-alternatives"></a>Alternatywy ról aplikacji  
  Zaleca się, że możesz korzystać z mechanizmami zabezpieczeń, które można użyć zamiast ról aplikacji. Aby uzyskać więcej informacji, zobacz [tworzenie ról aplikacji w programie SQL Server](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md).  
@@ -133,4 +133,4 @@ using (SqlConnection connection = new SqlConnection(
  [Pula połączeń](../../../../docs/framework/data/adonet/connection-pooling.md)  
  [SQL Server i ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
  [Liczniki wydajności](../../../../docs/framework/data/adonet/performance-counters.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

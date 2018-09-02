@@ -1,64 +1,64 @@
 ---
-title: Suwerenności danych na mikrousługi
-description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Suwerenności danych na mikrousługi
+title: Suwerenność danych przypadająca na mikrousługę
+description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Suwerenność danych przypadająca na mikrousługę
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 1d66f5d40234e689685b1b8c36367cc9dc2fc7c6
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 6a3fc0e86de673fea5f8e81c14c6456a2256aaa6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106869"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408550"
 ---
-# <a name="data-sovereignty-per-microservice"></a>Suwerenności danych na mikrousługi
+# <a name="data-sovereignty-per-microservice"></a>Suwerenność danych przypadająca na mikrousługę
 
-Ważne reguły dla architektury mikrousług jest, czy każdy mikrousługi musi być właścicielem jego danych domeny i logiki. Tak samo, jak Pełna aplikacji jest właścicielem jego logikę i dane, więc musi każdego mikrousługi właścicielem jego logikę i dane w ramach autonomicznej cykl życia, niezależnie od wdrożenia na mikrousługi.
+Regułę ważne dla architektury mikrousług jest to, że każda mikrousługa musi być właścicielem swoich danych domeny i logiki. Tak samo, jak Pełna aplikacja jest właścicielem jego logikę i dane, więc należy poszczególne mikrousługi właścicielem jego logikę i dane w ramach autonomicznego cykl życia, niezależnie od wdrożenia na mikrousługach.
 
-Oznacza to, że model koncepcyjny domeny będą się różnić między podsystemami lub mikrousług. Należy wziąć pod uwagę aplikacje dla przedsiębiorstw, gdzie relacji Zarządzanie Klientami aplikacji klienta, transakcyjne zakupu podsystemów i podsystemy Obsługa klienta każde wywołanie na atrybuty obiektu unikatowy klienta i dane, a każdy wykorzystuje inny Ograniczone kontekstu (BC).
+Oznacza to, że model koncepcyjny domeny będą się różnić między podsystemów lub mikrousług. Należy wziąć pod uwagę aplikacje dla przedsiębiorstw, gdzie relacji zarządzania (CRM) aplikacji klientów, transakcji zakupu podsystemów i podsystemów pomocy technicznej klienta każdego wywołania w atrybutów jednostki unikatowy klienta i dane, a każda używającego innego Ograniczony kontekst (BC).
 
-Ta zasada jest podobna [projektowanie oparte na domenie (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design), gdzie każdego [ograniczone kontekstu](https://martinfowler.com/bliki/BoundedContext.html) lub podsystemu autonomicznego lub usługi musi być właścicielem jego model domeny (danych oraz logiki i zachowanie). Każdy kontekst ograniczone DDD są powiązane z jedną mikrousługi business (co najmniej jednej usługi). (Możemy rozwiń w tym punkcie o wzorcu ograniczone kontekstu w następnej sekcji.)
+Ta zasada jest podobna we [projektowania opartego na domenach (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design), gdzie każdy [ograniczony kontekst](https://martinfowler.com/bliki/BoundedContext.html) lub autonomiczne podsystemu bądź usługi, musi być właścicielem swój model domeny (danych oraz zachowanie i logikę). W każdym kontekście ograniczonych DDD skorelowany jeden mikrousług business (jednej lub kilku usług). (Możemy rozwinąć w tym punkcie o wzorcu ograniczony kontekst, w następnej sekcji.)
 
-Z drugiej strony podejście tradycyjnych (dane wbudowanymi) używany w wielu aplikacjach ma kilka baz danych lub jeden scentralizowanej bazie danych. Często jest znormalizowane bazy danych SQL, używany dla całej aplikacji i wszystkich jego podsystemów wewnętrznych, jak pokazano w rysunek 4-7.
+Z drugiej strony podejście tradycyjnych (dane monolityczną) używane w wielu aplikacjach jest tylko kilka baz danych lub jednym scentralizowanej bazie danych. Często jest znormalizowana bazę danych SQL używaną dla całej aplikacji i wszystkich jego podsystemów wewnętrznego, jak pokazano w rysunek 4 – 7.
 
 ![](./media/image7.png)
 
-**Rysunek 4-7**. Porównanie suwerenności danych: wbudowanymi bazy danych i mikrousług
+**Rysunek 4 – 7**. Porównanie niezależność danych: monolityczne bazy danych w porównaniu z mikrousług
 
-Podejście scentralizowanej bazie danych początkowo wygląda prostszy i wydaje się, aby umożliwić ponowne użycie jednostek w różne podsystemy do wszystkich spójne. Ale rzeczywistego jest na końcu dużych tabel, obsługujących wiele różne podsystemy zawierające atrybuty i kolumny, które nie są wymagane w większości przypadków. Przypomina to próby Użyj tej samej fizycznej mapy piesze krótkich ślad, biorąc podróży samochodu long dnia i uczenia geograficznych.
+To podejście w scentralizowanej bazie danych początkowo wygląda prostsze i wydaje się umożliwiają wielokrotne użycie jednostek w różne podsystemy, aby wszystko, co jest zgodne. Ale w rzeczywistości jest za duży tabel obsługujących wiele różnych podsystemów i która zawiera atrybuty i kolumn, które nie są wymagane w większości przypadków. Przypomina to próba użycia tej samej fizycznej mapy górach dziennik krótki, biorąc podróży samochodu dzień długi i uczenia lokalizacji geograficznej.
 
-Wbudowanymi aplikacji zwykle pojedynczego relacyjna baza danych ma dwa istotne zalety: [transakcje ACID](https://en.wikipedia.org/wiki/ACID) i języka SQL, zarówno pracy we wszystkich tabelach i dane związane z aplikacji. Takie podejście umożliwia łatwe Napisz zapytanie, które łączy dane z wielu tabel.
+Monolitycznych z zwykle jednej relacyjnej bazie danych ma dwie ważne korzyści: [transakcje ACID](https://en.wikipedia.org/wiki/ACID) i języka SQL, zarówno roboczych we wszystkich tabelach i dane związane z aplikacją. Takie podejście umożliwia łatwe Napisz zapytanie, które łączy dane z wielu tabel.
 
-Jednak dostęp do danych staje się bardziej złożonej, w przypadku przenoszenia do architektury mikrousług. Jednak nawet wtedy, gdy transakcje ACID można lub powinny być używane w ramach mikrousługi lub ograniczonych kontekstu, danych należących do każdego mikrousługi jest oznaczony jako prywatny tego mikrousługi i można uzyskać tylko za pośrednictwem jej interfejsu API mikrousługi. Zawieranie danych gwarantuje, że mikrousług są luźno powiązane i mogą rozwijać, niezależnie od siebie. Jeśli wiele usług zostały dostęp do tych samych danych, aktualizacje schematu wymagają skoordynowanego aktualizacji do wszystkich usług. Spowoduje to przerwanie Autonomia cyklu życia mikrousługi. Ale struktur danych rozproszonych oznacza, że nie można wprowadzić pojedynczej transakcji ACID między mikrousług. Z kolei oznacza to, że należy użyć spójność ostateczna, gdy proces biznesowy obejmuje wiele mikrousług. To jest trudniejsze do zaimplementowania niż proste sprzężenia SQL; Podobnie wielu innych funkcji relacyjnej bazy danych nie są dostępne w wielu mikrousług.
+Jednak dostęp do danych staje się bardziej złożone, po przeniesieniu do architektury mikrousług. Ale nawet wtedy, gdy transakcje ACID można lub powinny być używane w ramach ograniczonego kontekstu lub mikrousług, dane należące do poszczególnych mikrousług są prywatne tego mikrousług i może zostać oceniony jedynie za pośrednictwem jego interfejsu API mikrousług. Zawieranie danych gwarantuje, że mikrousługi są luźno powiązane i może się rozwijać, niezależnie od siebie nawzajem. Jeśli wiele usług zostały dostęp do tych samych danych, aktualizacje schematów wymaga przeprowadzenia skoordynowanych aktualizacji do wszystkich usług. Spowoduje to przerwanie Autonomia cyklu życia mikrousług. Ale struktur danych rozproszonych oznacza, że nie możesz wprowadzać pojedynczej transakcji ACID między mikrousług. Z kolei oznacza to, że podczas procesu biznesowego obejmuje wiele mikrousług, należy użyć spójności ostatecznej. Jest to znacznie trudniejsze do zaimplementowania niż proste sprzężeń SQL; Podobnie wiele innych funkcji relacyjnej bazy danych nie są dostępne w wielu mikrousługach.
 
-Kontynuowanie nawet, różnych mikrousług często używają różnych *rodzajów* baz danych. Nowoczesne aplikacje sklepu i procesu różnych rodzajów danych oraz relacyjnej bazy danych nie zawsze jest najlepszym rozwiązaniem. Dla niektórych zastosowań, bazą danych NoSQL, takie jak usługa Azure DocumentDB lub baza danych MongoDB może mieć wygodniejsze modelu danych i oferuje lepszą wydajność i skalowalność niż baza danych SQL, takich jak SQL Server lub baza danych SQL Azure. W pozostałych przypadkach relacyjnej bazy danych nadal jest najlepszym rozwiązaniem. W związku z tym aplikacji opartych na mikrousług często używają kombinację bazy danych SQL i NoSQL, który jest czasami nazywany [polyglot trwałości](https://martinfowler.com/bliki/PolyglotPersistence.html) podejście.
+Kontynuowanie nawet, różne mikrousługi często używają różnych *rodzajów* baz danych. Nowoczesne aplikacje sklepu i proces różnych rodzajów danych oraz relacyjnej bazy danych nie zawsze jest najlepszym wyborem. W przypadku niektórych przypadków użycia, obejmujące wygodniejszy modelu danych oraz oferuje lepszą wydajność i skalowalność niż bazy danych SQL, takich jak program SQL Server lub usługi Azure SQL Database z bazy danych NoSQL, takie jak usługi Azure DocumentDB, jak i bazy danych MongoDB. W innych przypadkach relacyjnej bazy danych jest nadal jest najlepszym rozwiązaniem. W związku z tym, aplikacje oparte na mikrousługach często używają kombinacji bazy danych SQL i NoSQL, która jest czasem nazywany [ubocznym](https://martinfowler.com/bliki/PolyglotPersistence.html) podejście.
 
-Podzielone na partycje, trwałe polyglot architektury do przechowywania danych ma wiele korzyści. Obejmują one luźno powiązanych usług i lepszą wydajność, skalowalność, kosztów i możliwości zarządzania. Jednak go mogą stać się pewne wyzwania zarządzania danych rozproszonych, ponieważ Wyjaśnijmy w "[identyfikujące model domeny granice](#identifying-domain-model-boundaries-for-each-microservice)" dalej w tym rozdziale.
+Partycjonowane trwałego polyglot architektura do przechowywania danych ma wiele zalet. Obejmują one luźno powiązanych usług i lepszą wydajność, skalowalność, kosztów i możliwości zarządzania. Jednak może to wprowadzić niektóre wyzwania, zarządzania danych rozproszonych, jak firma Microsoft będzie zawierał wyjaśnienie w "[identyfikowanie ograniczeń modelu domeny](#identifying-domain-model-boundaries-for-each-microservice)" później w tym rozdziale.
 
-## <a name="the-relationship-between-microservices-and-the-bounded-context-pattern"></a>Relacja między mikrousług i wzorzec ograniczone kontekstu
+## <a name="the-relationship-between-microservices-and-the-bounded-context-pattern"></a>Relacja między mikrousług i wzorzec ograniczony kontekst
 
-Pojęcie mikrousługi pochodną [wzorzec kontekstu ograniczone (BC)](https://martinfowler.com/bliki/BoundedContext.html) w [projektowanie oparte na domenie (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design). DDD dotyczy dużych modeli przez podzielenie ich na wielu usług łączności biznesowej, a w rezultacie jawne o ich granic. Każdy BC musi mieć własne modelu i bazy danych. Podobnie każda mikrousługi właścicielem jego danych powiązanych. Ponadto każdy BC zwykle ma własną [powszechny języka](https://martinfowler.com/bliki/UbiquitousLanguage.html) ułatwiające komunikację między programistami i ekspertów domeny.
+Pojęcie mikrousług jest pochodną [wzorzec ograniczony kontekst (BC)](https://martinfowler.com/bliki/BoundedContext.html) w [projektowania opartego na domenach (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design). DDD dotyczy dużych modeli przez podzielenie ich na wielu usług łączności biznesowej i są wyraźnie ich granice. Każdy BC musi mieć swój własny model i bazy danych. Podobnie każda mikrousługa jest właścicielem jej powiązane dane. Ponadto każdy BC zazwyczaj ma swój własny [wszechobecne języka](https://martinfowler.com/bliki/UbiquitousLanguage.html) ułatwiających komunikację między programistami i ekspertów z konkretnych dziedzin.
 
-Te warunki (głównie domeny jednostek) w języku uniwersalnych może mieć różne nazwy elementu w różnych kontekstach ograniczone, nawet wtedy, gdy różne domeny jednostek udział tej samej tożsamości (to znaczy Unikatowy identyfikator, który jest używany do odczytu jednostki z magazynu). Na przykład w kontekście ograniczony profil użytkownika, jednostką domeny użytkownika może udostępniać tożsamości jednostką domeny nabywców w kontekście porządkowania ograniczone.
+Te warunki (głównie domeny jednostek) w języku uniwersalnych może mieć różne nazwy w różnych kontekstach ograniczonych, jednostki nawet wtedy, gdy różne domeny udostępnianie tej samej tożsamości (czyli unikatowy identyfikator, który jest używany do odczytu jednostki z magazynu). Na przykład w kontekstach ograniczonych profilu użytkownika, jednostka domeny użytkownika może udostępniać tożsamości jednostka domeny kupujący w kontekście szeregowania ograniczone.
 
-Mikrousługi w związku z tym przypomina kontekst ograniczone, ale również określa, że jest rozproszonego usługi. Jest ona wbudowana procesów odrębnych dla każdego z ograniczonym kontekstu i protokoły rozproszonego wspomniano wcześniej, takich jak HTTP/HTTPS, Websocket, należy użyć lub [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol). Wzorzec ograniczone kontekstu, jednak nie określa czy kontekst ograniczone są usługami rozproszonymi, lub jeśli jest to po prostu granicę logiczne (na przykład ogólny podsystemu) aplikacji wbudowanymi wdrożenia.
+Mikrousługi w związku z tym przypomina ograniczony kontekst, ale również określi, czy jest to usługa rozproszonej. Stworzona w oddzielnym procesie dla każdego kontekstu ograniczonego i musi używać protokoły rozproszonego zanotowanej wcześniej, takich jak HTTP/HTTPS, funkcja WebSockets, lub [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol). Wzorzec ograniczony kontekst, jednak nie określa czy kontekstu ograniczonego są usługami rozproszonymi lub jeśli jest po prostu logiczną granic (na przykład ogólny podsystemu) w aplikacji monolitycznej wdrożenia.
 
-Jest ważne wyróżnić, że definiowanie usługi dla każdego z ograniczonym kontekstu jest dobrym miejscem do rozpoczęcia. Ale nie trzeba ograniczyć projektu do niego. Czasami należy projektować kontekst ograniczone lub business mikrousługi składa się z kilku usług fizycznych. Ale ostatecznie oba wzorce — ograniczone kontekstu i mikrousługi — są ściśle powiązane.
+Jest ważne podkreślić, że zdefiniowanie usługi dla każdego kontekstu ograniczonego jest dobrym miejscem do rozpoczęcia. Ale nie masz projektu do niego ograniczenie. Czasami należy projektować ograniczonego kontekstu lub firm mikrousług składa się z kilku usług fizycznych. Ale ostatecznie obu wzorców — mikrousług i kontekstu ograniczonego — są ściśle powiązane.
 
-DDD korzyści z mikrousług pobierając rzeczywistych granic w formie mikrousług rozproszonych. Ale pomysły, takie jak udostępnianie nie modelu między mikrousług co również ma w kontekście ograniczone.
+DDD korzyści płynące z mikrousług uzyskując rzeczywistych granic w formie rozproszonych mikrousług. Ale pomysły, takie jak udostępnianie nie modelu między mikrousługami co chcecie również w kontekście ograniczone.
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Krzysztof Richardson. Wzorzec: Bazy danych usługi**
+-   **Chris Leonard. Wzorzec: Usługa bazy danych**
     [*https://microservices.io/patterns/data/database-per-service.html*](https://microservices.io/patterns/data/database-per-service.html)
 
--   **Pole Fowler. BoundedContext**
+-   **Martina Fowlera. BoundedContext**
     [*https://martinfowler.com/bliki/BoundedContext.html*](https://martinfowler.com/bliki/BoundedContext.html)
 
--   **Pole Fowler. PolyglotPersistence**
+-   **Martina Fowlera. PolyglotPersistence**
     [*https://martinfowler.com/bliki/PolyglotPersistence.html*](https://martinfowler.com/bliki/PolyglotPersistence.html)
 
--   **Alberto Brandolini. Strategiczne domeny na projekt z mapowaniem kontekstu**
+-   **Alberto Brandolini. Strategiczne projektowania, które za pomocą kontekstu mapowania opartego na domenach**
     [*https://www.infoq.com/articles/ddd-contextmapping*](https://www.infoq.com/articles/ddd-contextmapping)
 
 

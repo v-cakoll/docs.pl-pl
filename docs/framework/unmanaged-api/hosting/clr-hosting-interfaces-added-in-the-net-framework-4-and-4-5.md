@@ -8,58 +8,58 @@ helpviewer_keywords:
 ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 982f5780a40dd8cbce02ec33f7e6f77589cd3717
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e9086502968fb9046237e77b76b4038a9f32f4ef
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435799"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407406"
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>Interfejsy hostingu środowiska CLR dodane w programie .NET Framework 4 i 4.5
-W tej sekcji opisano interfejsów, które niezarządzanych hostów można użyć do integracji środowisko uruchomieniowe języka wspólnego (CLR) w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)], [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]i nowszych wersjach w swoich aplikacjach. Te interfejsy podania metod dla hosta, skonfigurować i załadować środowiska uruchomieniowego do procesu.  
+W tej sekcji opisano niezarządzane interfejsy hostów można użyć do integracji środowisko uruchomieniowe języka wspólnego (CLR) w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)], [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]i nowsze wersje w swoich aplikacjach. Te interfejsy dostarczać metody do hosta skonfigurować i załadowania środowiska uruchomieniowego do procesu.  
   
- Począwszy od [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], wszystkie hostingu interfejsów mają następującą charakterystykę:  
+ Począwszy od [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], hostingu wszystkie interfejsy mają następującą charakterystykę:  
   
--   Używają Zarządzanie okresem istnienia (`AddRef` i `Release`), encapsulation (niejawne kontekst) i `QueryInterface` z modelu COM.  
+-   Używają Zarządzanie okresem istnienia (`AddRef` i `Release`), hermetyzacji (niejawne context) i `QueryInterface` z modelu COM.  
   
--   Brak nie używaj typów COM takich jak `BSTR`, `SAFEARRAY`, lub `VARIANT`.  
+-   Istnieje nie należy używać typów modelu COM takich jak `BSTR`, `SAFEARRAY`, lub `VARIANT`.  
   
--   Nie ma żadnych modeli apartamentu, agregacji lub rejestru aktywacji używanego [funkcji CoCreateInstance](http://go.microsoft.com/fwlink/?LinkId=142894).  
+-   Nie ma żadnych modeli typu apartment, agregacji ani rejestru aktywacji używanego przez [funkcja CoCreateInstance](https://go.microsoft.com/fwlink/?LinkId=142894).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [ICLRAppDomainResourceMonitor, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
- Udostępnia metody, które sprawdzić pamięci i Procesora CPU domeny aplikacji.  
+ Udostępnia metody, które Sprawdź domenę aplikacji pamięci i Procesora CPU.  
   
  [ICLRDomainManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-interface.md)  
- Umożliwia hosta określić Menedżer domeny aplikacji, który będzie używany do inicjowania domyślnej domeny aplikacji i określić właściwości inicjowania.  
+ Umożliwia hosta określić Menedżer domeny aplikacji, która będzie służyć do zainicjowania domyślnej domeny aplikacji i określić właściwości inicjowania.  
   
  [ICLRGCManager2, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-interface.md)  
- Udostępnia [SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md) metodę, która umożliwia hosta można skonfigurować rozmiar segmentu kolekcji pamięci i maksymalny rozmiar pamięci systemu kolekcji pokolenia 0 na wartości większej niż `DWORD`.  
+ Udostępnia [setgcstartuplimitsex —](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md) metody, która umożliwia hosta można skonfigurować rozmiaru segmentu kolekcji wyrzucania elementów i maksymalny rozmiar pamięci systemu kolekcji generacji 0 na wartości większej niż `DWORD`.  
   
  [ICLRMetaHost, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  
- Udostępnia metody, które zwraca określonej wersji środowiska CLR, wyświetlić listę wszystkich zainstalowanych CLRs listy wszystkich środowisk uruchomieniowych w procesie, zwracać interfejs aktywacji i odnajdywanie wersji środowiska CLR, używana do kompilowania zestawu.  
+ Zawiera metody, które zwracają określonej wersji środowiska CLR, listę wszystkich zainstalowanych CLRs, listy wszystkie środowiska uruchomieniowe w trakcie, zwracają interfejs aktywacji i odnajdź wersję środowiska CLR używana do kompilowania zestawu.  
   
  [ICLRMetaHostPolicy, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)  
- Udostępnia [GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) metodę, która zapewnia interfejs CLR na podstawie kryteriów zasad, zestaw zarządzany, wersji i pliku konfiguracji.  
+ Udostępnia [getrequestedruntime —](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) metodę, która udostępnia interfejs CLR na podstawie kryteriów zasad, zestaw zarządzany, wersji i pliku konfiguracji.  
   
  [ICLRRuntimeInfo, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- Udostępnia metody, które zwracają informacje dotyczące określonego środowiska uruchomieniowego, łącznie z wersji, katalogu i stanie obciążenia.  
+ Udostępnia metody, które zwracają informacje dotyczące określonego środowiska uruchomieniowego, w tym wersja, katalog i stan obciążenia.  
   
  [ICLRStrongName, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)  
- Podpisywanie zestawów o silnych nazwach zapewnia podstawowe statyczne funkcje globalne. Wszystkie [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md) metody zwracają standardowe COM wyników HRESULT.  
+ Zawiera podstawowe statyczne funkcje globalne do podpisywania zestawów o silnych nazwach. Wszystkie [iclrstrongname —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md) metody zwracają standardowa COM wartości HRESULT.  
   
  [ICLRStrongName2, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname2-interface.md)  
  Zapewnia możliwość tworzenia silnych nazw za pomocą grupy SHA-2 algorytmów wyznaczania wartości skrótu Secure (SHA-256, SHA-384 i SHA-512).  
   
  [ICLRTask2, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-interface.md)  
- Zawiera wszystkie funkcje [ICLRTask — interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md); ponadto udostępnia metody umożliwiające przerwanie wątku opóźnionych w bieżącym wątku.  
+ Oferuje wszystkie funkcje [iclrtask — interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md); ponadto udostępnia metody, które umożliwiają wątku przerywa opóźnionych w bieżącym wątku.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Przestarzałe klasy coclass i interfejsy hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-interfaces-and-coclasses.md)  
- Opisuje interfejsy hostingu wersjach systemu .NET Framework 1.0 i 1.1.  
+ W tym artykule opisano interfejsami hostingu, wyposażone w wersjach programu .NET Framework 1.0 i 1.1.  
   
  [Interfejsy hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)  
- Opisuje interfejsy hostingu wersjach systemu .NET Framework 2.0, 3.0 i 3.5.  
+ W tym artykule opisano interfejsami hostingu, wyposażone w .NET Framework w wersji 2.0, 3.0 i 3.5.  
   
  [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)  
- Wprowadzono w programie .NET Framework — hosting.
+ Wprowadza hosting w .NET Framework.

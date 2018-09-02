@@ -1,42 +1,42 @@
 ---
-title: 'Porady: zarejestrować i skonfigurować krótkiej nazwy'
+title: 'Porady: rejestrowanie i konfigurowanie monikera usługi'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: 1d245327c1e7d53de9a88c93ff0399d8e231a1df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd3b6bbb47dfd72bf70091c9ca4d6fc5e228d950
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493324"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406940"
 ---
-# <a name="how-to-register-and-configure-a-service-moniker"></a>Porady: zarejestrować i skonfigurować krótkiej nazwy
-Przed użyciem moniker usługi Windows Communication Foundation (WCF) w aplikacji modelu COM z typu kontraktu, musisz zarejestrować wymagane typy oparte na atrybutach w modelu COM i skonfigurować aplikacji modelu COM i krótka nazwa wymaganego powiązania Konfiguracja.  
+# <a name="how-to-register-and-configure-a-service-moniker"></a>Porady: rejestrowanie i konfigurowanie monikera usługi
+Przed użyciem monikera programu Windows Communication Foundation (WCF) w ramach aplikacji modelu COM z kontrolą typów kontraktu, musisz zarejestrować wymaganych typów opartego na atrybutach z modelem COM i konfigurowanie aplikacji modelu COM i moniker z powiązaniem wymagane Konfiguracja.  
   
-### <a name="to-register-the-required-attributed-types-with-com"></a>Aby zarejestrować wymagane typy oparte na atrybutach w modelu COM  
+### <a name="to-register-the-required-attributed-types-with-com"></a>Aby zarejestrować wymaganych typów opartego na atrybutach z modelem COM  
   
-1.  Użyj [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) narzędzia do pobierania metadanych kontraktu usługi WCF. Spowoduje to wygenerowanie kodu źródłowego dla zestawu klienta WCF i pliku konfiguracji aplikacji klienta.  
+1.  Użyj [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) narzędzia do pobierania metadanych kontraktu usługi WCF. Spowoduje to wygenerowanie kodu źródłowego dla zestawu klienta WCF i pliku konfiguracji aplikacji klienta.  
   
-2.  Upewnij się, że typy w zestawie są oznaczone jako `ComVisible`. Aby to zrobić, Dodaj następujący atrybut w pliku AssemblyInfo.cs w projektu programu Visual Studio.  
+2.  Upewnij się, że typy w zestawie są oznaczone jako `ComVisible`. Aby to zrobić, Dodaj następujący atrybut w pliku AssemblyInfo.cs w projekcie programu Visual Studio.  
   
     ```  
     [assembly: ComVisible(true)]  
     ```  
   
-3.  Kompiluj zarządzanego klienta WCF jako zestawu o silnej nazwie. Wymaga podpisywania za pomocą klucza kryptograficznego. Aby uzyskać więcej informacji, zobacz [podpisywanie zestawu o silnej nazwie](http://go.microsoft.com/fwlink/?LinkId=94874) w Podręczniku dewelopera programu .NET.  
+3.  Skompiluj zarządzanego klienta programu WCF jako zestawu o silnej nazwie. Ta migracja wymaga logowania przy użyciu pary kluczy kryptograficznych. Aby uzyskać więcej informacji, zobacz [podpisywanie zestawu za pomocą silnej nazwy](https://go.microsoft.com/fwlink/?LinkId=94874) w Podręczniku dewelopera programu .NET.  
   
-4.  Użyj narzędzia do rejestrowania zestawów (Regasm.exe) z `/tlb` możliwość zarejestrowania typów w zestawie z modelu COM.  
+4.  Narzędzie rejestracji zestawów (Regasm.exe), za pomocą `/tlb` opcję, aby można było zarejestrować typy w zestawie przy użyciu modelu COM.  
   
-5.  Narzędzie Global Assembly Cache (Gacutil.exe) można dodać zestawu do globalnej pamięci podręcznej zestawów.  
+5.  Aby dodać zestaw do globalnej pamięci podręcznej, należy użyć narzędzia Globalna pamięć podręczna zestawów (Gacutil.exe).  
   
     > [!NOTE]
-    >  Podpisywanie zestawu i dodanie go do globalnej pamięci podręcznej zestawów są opcjonalne kroki, ale ich uprościć proces ładowania zestawu we właściwej lokalizacji w czasie wykonywania.  
+    >  Podpisywanie zestawu i dodanie go do globalnej pamięci podręcznej zestawów są opcjonalne kroki, ale upraszczają proces ładowania zestawu we właściwej lokalizacji, w czasie wykonywania.  
   
-### <a name="to-configure-the-com-application-and-the-moniker-with-the-required-binding-configuration"></a>Aby skonfigurować za pomocą konfiguracji powiązania wymaganych aplikacji modelu COM i krótka nazwa  
+### <a name="to-configure-the-com-application-and-the-moniker-with-the-required-binding-configuration"></a>Aby skonfigurować aplikacji modelu COM i moniker przy użyciu konfiguracji powiązania wymagane  
   
--   Umieść definicje powiązania (generowane przez [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) w pliku konfiguracyjnym aplikacji wygenerowanego klienta) w pliku konfiguracyjnym aplikacji klienta. Na przykład dla programu Visual Basic 6.0 pliku wykonywalnego o nazwie CallCenterClient.exe, Konfiguracja powinna zostać umieszczona w pliku o nazwie CallCenterConfig.exe.config w tym samym katalogu co plik wykonywalny. Aplikacja kliencka można teraz używać krótkiej nazwy. Należy pamiętać, że konfiguracja powiązania nie jest wymagane, jeśli przy użyciu jednej ze standardowych powiązanie typów dostarczanych przez usługę WCF.  
+-   Umieść definicji powiązania (generowany przez [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) w pliku konfiguracyjnym aplikacji wygenerowanego klienta) w pliku konfiguracyjnym aplikacji klienckiej. Na przykład Visual Basic 6.0 pliku wykonywalnego o nazwie CallCenterClient.exe, konfiguracji powinny być umieszczane w pliku o nazwie CallCenterConfig.exe.config w tym samym katalogu co plik wykonywalny. Aplikacja kliencka można teraz używać krótkiej nazwy. Pamiętaj, że konfiguracja powiązania nie jest wymagane, jeśli przy użyciu jednej ze standardowych powiązań typów dostarczonych przez architekturę WCF.  
   
      Następujący typ jest zarejestrowany.  
   
@@ -55,7 +55,7 @@ Przed użyciem moniker usługi Windows Communication Foundation (WCF) w aplikacj
     }  
     ```  
   
-     Aplikacja jest uwidaczniany za pomocą `wsHttpBinding` powiązania. Dla danego typu i konfiguracji aplikacji są używane następujące ciągi przykład krótkiej nazwy.  
+     Aplikacja jest udostępniana przy użyciu `wsHttpBinding` powiązania. Dla danego typu i konfiguracji aplikacji są używane następujące ciągi moniker przykładu.  
   
     ```  
     service4:address=http://localhost/MathService, binding=wsHttpBinding, bindingConfiguration=Binding1  
@@ -67,7 +67,7 @@ Przed użyciem moniker usługi Windows Communication Foundation (WCF) w aplikacj
     service4:address=http://localhost/MathService, binding=wsHttpBinding, bindingConfiguration=Binding1, contract={36ADAD5A-A944-4d5c-9B7C-967E4F00A090}  
     ```  
   
-     Możesz użyć dowolnej z tych ciągów krótkiej nazwy z aplikacji Visual Basic 6.0, po dodaniu odwołanie do zestawu, który zawiera `IMathService` typy, jak pokazano w poniższym kodzie próbki.  
+     Można użyć dowolnego z tych ciągów krótkiej nazwy z aplikacji Visual Basic 6.0, po dodaniu odwołania do zestawu, który zawiera `IMathService` typów, jak pokazano w poniższym przykładowym kodzie.  
   
     ```  
     Dim MathProxy As IMathService  
@@ -81,21 +81,21 @@ Przed użyciem moniker usługi Windows Communication Foundation (WCF) w aplikacj
     result = MathProxy.Add(3, 5)  
     ```  
   
-     W tym przykładzie definicji konfiguracji powiązania `Binding1` są przechowywane w pliku konfiguracji nazwanych odpowiednio do aplikacji klienckiej, takich jak vb6appname.exe.config.  
+     W tym przykładzie definicji dla konfiguracji powiązania `Binding1` są przechowywane w pliku konfiguracji odpowiednio nazwanych w aplikacji klienckiej, takich jak vb6appname.exe.config.  
   
     > [!NOTE]
-    >  Można użyć podobny kod w C#, C++ lub innych aplikacji języka .NET.  
+    >  Możesz użyć podobny kod w języku C#, C++ lub inna aplikacja języka .NET.  
   
     > [!NOTE]
-    >  : Jeśli krótka nazwa jest nieprawidłowo sformułowany lub usługa jest niedostępna, wywołanie `GetObject` błędu "Nieprawidłowa składnia". Jeśli zostanie wyświetlony ten błąd, upewnij się, krótkiej nazwy, którego używasz, jest poprawny i usługa jest dostępna.  
+    >  : Jeśli moniker jest źle sformułowany lub jeśli usługa jest niedostępna, wywołanie `GetObject` zwraca błąd "Nieprawidłowa składnia". Jeśli zostanie wyświetlony ten błąd, upewnij się, moniker elementu, którego używasz jest poprawna i ta usługa jest dostępna.  
   
-     Chociaż ten temat koncentruje się na korzystanie z kodu VB 6.0 moniker usługi, możesz użyć krótkiej nazwy z innych języków. Gdy przy użyciu krótkiej nazwy z C++ kod Svcutil.exe wygenerowany zestawu należy zaimportować z "no_namespace — named_guids — raw_interfaces_only —", jak pokazano w poniższym kodzie.  
+     Chociaż ten temat koncentruje się na temat korzystania z kodu VB 6.0 monikera programu, można użyć krótkiej nazwy z innych języków. Gdy używanie monikera z C++ code Svcutil.exe generowane zestawu należy zaimportować za pomocą "no_namespace named_guids — raw_interfaces_only —", jak pokazano w poniższym kodzie.  
   
     ```  
     #import "ComTestProxy.tlb" no_namespace named_guids  
     ```  
   
-     Modyfikuje definicje interfejsu importowane, tak, aby zwrócić wszystkie metody `HResult`. Wszelkie inne wartości są konwertowane na parametrów wyjściowych. Ogólny wykonywanie metod jest taka sama. Dzięki temu można ustalić przyczynę Wystąpił wyjątek podczas wywoływania metody na serwerze proxy. Ta funkcja jest dostępna tylko z kodu C++.  
+     Modyfikuje definicje interfejsu importowanych, tak, aby zwrócić wszystkie metody `HResult`. Zwracane wartości są konwertowane na parametrów out. Ogólny wykonywanie metody pozostaje taka sama. Dzięki temu można ustalić przyczynę Wystąpił wyjątek podczas wywoływania metody na serwerze proxy. Ta funkcja jest dostępna tylko w kodzie języka C++.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Narzędzie do obsługi metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

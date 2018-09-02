@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2765d7bf98c8e22e0bf495ac91ab1c15327bae42
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 372ffd7e17f60b8045cd5f89d52456c5f9655de1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42907982"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408165"
 ---
 # <a name="parallel-programming-in-net"></a>Programowanie równoległe w .NET
 
@@ -29,7 +29,7 @@ Wiele komputerów osobistych i stacji roboczych ma wiele rdzeni procesora CPU, k
 |[Struktury danych dla programowania równoległego](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)|Zawiera łącza do dokumentacji dla kolekcji klas o bezpiecznych wątkowo, lekkich typów synchronizacji i typów d inicjowania z opóźnieniem.|
 |[Równoległe narzędzia diagnostyczne](../../../docs/standard/parallel-programming/parallel-diagnostic-tools.md)|Oferuje łącza do dokumentacji okien debugera programu Visual Studio do zadań i stosów przetwarzania równoległego oraz [Concurrency Visualizer](/visualstudio/profiling/concurrency-visualizer).|
 |[Niestandardowe partycjonery dla PLINQ i TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)|W tym artykule opisano, jak działają moduły partycjonowania i jak konfigurować domyślne moduły partycjonowania lub tworzyć nowe.|
-|[Planiści zadań](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)|Opisano, jak działa harmonogram zadań i jak można konfigurować domyślny harmonogram.|
+|[Planiści zadań](https://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)|Opisano, jak działa harmonogram zadań i jak można konfigurować domyślny harmonogram.|
 |[Wyrażenia Lambda w PLINQ i TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)|Zawiera krótki przegląd wyrażeń lambda w języku C# i Visual Basic i przedstawia, jak są używane w PLINQ i w bibliotece zadań równoległych.|
 |[Dalsze informacje](../../../docs/standard/parallel-programming/for-further-reading-parallel-programming.md)|Zawiera łącza do dodatkowych informacji i przykładowych zasobów do programowania równoległego w .NET.|
 

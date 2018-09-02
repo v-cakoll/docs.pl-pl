@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: a2815c7c63e9ba9615904028081956b138b1befa
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: cc81e7ad45c308f5ecf476641dfd65fe47b36098
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925481"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404570"
 ---
 # <a name="endpoint-addresses"></a>Adresy punktów końcowych
 Każdy punkt końcowy ma adres skojarzony z nim, który jest używany, aby zlokalizować i zidentyfikować punkt końcowy. Ten adres składa się przede wszystkim z zasobów identyfikator URI (Uniform), który określa położenie punktu końcowego. Adres punktu końcowego jest reprezentowana w modelu programowania Windows Communication Foundation (WCF) przez <xref:System.ServiceModel.EndpointAddress> klasy, która zawiera opcjonalny <xref:System.ServiceModel.EndpointAddress.Identity%2A> właściwość, która umożliwia uwierzytelnianie punktu końcowego przez inne punkty końcowe, wymiany wiadomości z nim i zestaw opcjonalne <xref:System.ServiceModel.EndpointAddress.Headers%2A> właściwości, które definiują innych nagłówków protokołu SOAP, wymagane w celu dotarcia do usługi. Opcjonalne nagłówki zapewnić dodatkowe i bardziej szczegółowe informacje dotyczące adresowania do identyfikacji lub interakcji z punktu końcowego usługi. Adres punktu końcowego jest reprezentowany w sieci jako odwołanie WS-Addressing punktu końcowego (EPR).  
@@ -119,7 +119,7 @@ Każdy punkt końcowy ma adres skojarzony z nim, który jest używany, aby zloka
   
 -   W kodzie, należy utworzyć niestandardowy adres nagłówki przy użyciu <xref:System.ServiceModel.Channels.AddressHeader> klasy, a następnie używany do budowy <xref:System.ServiceModel.EndpointAddress>.  
   
--   W konfiguracji niestandardowej [ \<nagłówki >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) są określane jako elementy podrzędne [ \<punktu końcowego >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elementu.  
+-   W konfiguracji niestandardowej [ \<nagłówki >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) są określane jako elementy podrzędne [ \<punktu końcowego >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elementu.  
   
  Konfiguracja jest zazwyczaj kod, jako umożliwia zmienianie nagłówków po wdrożeniu.  
   
@@ -130,7 +130,7 @@ Każdy punkt końcowy ma adres skojarzony z nim, który jest używany, aby zloka
   
 -   W kodzie, należy określić niestandardowe adresu nasłuchiwania, dodając <xref:System.ServiceModel.Description.ClientViaBehavior> klasy kolekcji zachowanie punktu końcowego.  
   
--   W konfiguracji, należy określić niestandardowe adresu nasłuchiwania z `ListenUri` atrybut usługi [ \<punktu końcowego >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elementu.  
+-   W konfiguracji, należy określić niestandardowe adresu nasłuchiwania z `ListenUri` atrybut usługi [ \<punktu końcowego >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elementu.  
   
 ### <a name="custom-soap-address-filter"></a>Filtr adresów niestandardowego protokołu SOAP  
  <xref:System.ServiceModel.EndpointAddress.Uri%2A> Jest używany w połączeniu ze wszystkimi <xref:System.ServiceModel.EndpointAddress.Headers%2A> właściwości, aby zdefiniować punkt końcowy protokołu SOAP adres filtru (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>). Domyślnie ten filtr sprawdza, czy wiadomości przychodzące ma `To` nagłówka wiadomości, odpowiadającą punktowi przez identyfikator URI i czy wszystkie nagłówki wymaganego punktu końcowego w wiadomości.  

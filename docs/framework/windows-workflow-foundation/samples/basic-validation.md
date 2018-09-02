@@ -3,11 +3,11 @@ title: Podstawowe sprawdzanie poprawności
 ms.date: 03/30/2017
 ms.assetid: ba1343cc-aaab-4ade-b0c0-1dd5063bf4ad
 ms.openlocfilehash: 74d99e2d426e9ea5701fad80418fdf019112cc9e
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43332736"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408332"
 ---
 # <a name="basic-validation"></a>Podstawowe sprawdzanie poprawności
 W tym przykładzie składa się z działań `CreateProduct`, która sprawdza, czy jego `Cost` argument jest mniejszy niż lub równa jego `Price` argumentu.  

@@ -4,30 +4,30 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - AJAX integration and JSON support [WCF]
 ms.assetid: 3851a8fc-d861-4ac1-873c-96af0343d3a7
-ms.openlocfilehash: 0b392044db3fbc926bf77ac305ece294880216d9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bcf1cab9386d9d9503af6258c1bb39f8744c073b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488832"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407907"
 ---
 # <a name="ajax-integration-and-json-support"></a>Obsługa integracji AJAX i notacji JSON
-Usługi WCF do udostępnienia operacji klientom AJAX Zezwalaj na obsługę Windows Communication Foundation (WCF) ASP.NET asynchronicznego JavaScript i XML (AJAX) i format danych JavaScript Object Notation (JSON). Klienci AJAX są stron sieci Web wykonywanie kodu JavaScript i uzyskiwania dostępu do tych usług WCF za pomocą żądania HTTP. Tematy w tej sekcji zawierają informacje dotyczące tej obsługi i wdrożenie go.  
+Windows Communication Foundation (WCF) obsługuje ASP.NET asynchronicznego języki JavaScript i XML (technologia AJAX) i formatu JavaScript Object Notation (JSON) w danych umożliwiają usługi WCF do udostępnienia operacje klientom AJAX. Klienci AJAX są stron sieci Web, wykonywanie kodu JavaScript i uzyskiwania dostępu do tych usług WCF za pomocą żądania HTTP. Tematy w tej sekcji zawierają informacje dotyczące tej pomocy technicznej i sposobie jego implementowania.  
   
- Więcej informacji na temat środowiska ASP.NET AJAX i jego integracji z programem ASP.NET 2.0, zobacz [ASP.NET AJAX omówienie](http://go.microsoft.com/fwlink/?LinkId=96725).  
+ Aby dowiedzieć się więcej o technologii ASP.NET AJAX i integracji z programem ASP.NET 2.0, zobacz [omówienie technologii AJAX programu ASP.NET](https://go.microsoft.com/fwlink/?LinkId=96725).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Tworzenie usług WCF w technologii AJAX na platformie ASP.NET](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  
- W tym artykule opisano, jak usługa WCF można widoczne dla klientów AJAX, dodając odpowiednie punktu końcowego AJAX albo za pomocą konfiguracji lub za pomocą fabryki hostów usług, dostosowane do generowania hosta usługi, która automatycznie konfiguruje punktu końcowego AJAX.  
+ W tym artykule opisano, jak usługi WCF mogą łączyć się z klientami AJAX przez dodanie odpowiednich punktów końcowych AJAX, albo za pośrednictwem konfiguracji lub przy użyciu usługi fabryka hostów, dostosowane do generowania hosta usługi, która automatycznie konfiguruje punktu końcowego AJAX.  
   
  [Tworzenie usług AJAX WCF bez platformy ASP.NET](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md)  
- Opisuje sposób tworzenia usługi WCF bez użycia platformy ASP.NET.  
+ W tym artykule opisano sposób tworzenia usługi WCF bez za pomocą programu ASP.NET.  
   
  [Obsługa formatu JSON i innych formatów transferowania danych](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)  
- W tym artykule opisano obsługę formatu JSON, zwykle (zamiast XML) używany do obsługi wiadomości z usługami ASP.NET AJAX.  
+ W tym artykule opisano obsługi formatu JSON, zwykle używane (zamiast XML) do obsługi komunikatów z usługami ASP.NET AJAX.  
   
  [Instrukcje: migrowanie usług internetowych obsługujących technologię AJAX i opartych na platformie ASP.NET do programu WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)  
- Opisano sposób migracji usługi sieci Web ASP.NET włączoną obsługą technologii AJAX do usługi sieci WCF Web.  
+ W tym artykule opisano, jak przeprowadzić migrację usługi sieci Web platformy ASP.NET z obsługą technologii AJAX do usługi sieci WCF Web.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>  

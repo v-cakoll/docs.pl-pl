@@ -8,18 +8,18 @@ ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: b3fe06a0cd07979a14f2029ac3ece590496ecf74
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07208b833607108ab78933cb1f65fa8a782ac88d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409319"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420325"
 ---
 # <a name="ui-automation-properties-overview"></a>Przegląd właściwości automatyzacji interfejsu użytkownika
 > [!NOTE]
->  Ta dokumentacja jest przeznaczony dla deweloperów .NET Framework, które chcą korzystać zarządzanej [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejsu API systemu Windows automatyzacji: automatyzacji interfejsu użytkownika](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Dostawcy automatyzacji interfejsu użytkownika udostępniają właściwości na [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] elementów. Te właściwości umożliwić aplikacjom klienckim automatyzacji interfejsu użytkownika informacji o części [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)], szczególnie kontrolki, w tym danych statycznych i dynamicznych.  
+ Dostawcy automatyzacji interfejsu użytkownika udostępnianie właściwości na [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] elementów. Właściwości te umożliwiają aplikacjom klienta automatyzacji interfejsu użytkownika do odnajdywania informacji na temat rodzajów [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)], szczególnie kontroluje obiekt, włącznie z danymi statyczne i dynamiczne.  
   
  W tej sekcji przedstawiono ogólne omówienie [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] właściwości. Więcej informacji znajduje się w następujących tematach:  
   
@@ -29,39 +29,39 @@ ms.locfileid: "33409319"
   
 <a name="Property_Identifiers"></a>   
 ## <a name="property-identifiers"></a>Identyfikatory właściwości  
- Dla każdej właściwości jest identyfikowany przez numer i nazwę. Nazwy właściwości są używane tylko w przypadku debugowania i diagnostyki. Dostawcy używają numeryczne [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] do identyfikowania przychodzące żądania właściwości. Aplikacje klienckie, jednak używać tylko <xref:System.Windows.Automation.AutomationProperty>, który hermetyzuje numeru i nazwy, aby zidentyfikować właściwości chcesz pobrać.  
+ Dla każdej właściwości jest identyfikowany przez numer i nazwę. Nazwy właściwości są używane tylko w przypadku debugowania i diagnostyki. Dostawcy używają numeryczne [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] do identyfikowania żądań przychodzących właściwości. Aplikacje klienckie, jednak używać tylko <xref:System.Windows.Automation.AutomationProperty>, która hermetyzuje numeru i nazwy, aby zidentyfikować właściwości chcesz pobrać.  
   
- <xref:System.Windows.Automation.AutomationProperty> obiekty reprezentujące określonej właściwości są dostępne jako pola w różnych klas. Ze względów bezpieczeństwa dostawców automatyzacji interfejsu użytkownika, należy uzyskać te obiekty z osobny zestaw klas, które są zawarte w Uiautomationtypes.dll.  
+ <xref:System.Windows.Automation.AutomationProperty> obiektów reprezentujących szczególne właściwości są dostępne jako pola w różnych klas. Ze względów bezpieczeństwa dostawcy automatyzacji interfejsu użytkownika, należy uzyskać te obiekty z oddzielny zestaw klas, które są zawarte w Uiautomationtypes.dll.  
   
  Poniższa tabela kategoryzuje właściwości według klasy, które zawierają <xref:System.Windows.Automation.AutomationProperty> [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)].  
   
-|Typy właściwości|Klienci uzyskują identyfikatory z|Identyfikatory z pobrać dostawców|  
+|Typy właściwości|Identyfikatory z pobierania przez klientów|Dostawców pobrać identyfikatorów z|  
 |-------------------------|--------------------------|----------------------------|  
-|Właściwości wspólne dla wszystkich elementów (zobacz poniższy tabele)|<xref:System.Windows.Automation.AutomationElement>|<xref:System.Windows.Automation.AutomationElementIdentifiers>|  
-|Pozycja okna dokującego.|<xref:System.Windows.Automation.DockPattern>|<xref:System.Windows.Automation.DockPatternIdentifiers>|  
-|Stan elementu, który można zwijać i rozwijać|<xref:System.Windows.Automation.ExpandCollapsePattern>|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers>|  
+|Właściwości wspólne dla wszystkich elementów (zobacz poniższy tabel)|<xref:System.Windows.Automation.AutomationElement>|<xref:System.Windows.Automation.AutomationElementIdentifiers>|  
+|Położenie okna dokującego.|<xref:System.Windows.Automation.DockPattern>|<xref:System.Windows.Automation.DockPatternIdentifiers>|  
+|Stan elementu, który można rozwijać i zwijać|<xref:System.Windows.Automation.ExpandCollapsePattern>|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers>|  
 |Właściwości elementu w siatce|<xref:System.Windows.Automation.GridItemPattern>|<xref:System.Windows.Automation.GridItemPatternIdentifiers>|  
 |Właściwości siatki|<xref:System.Windows.Automation.GridPattern>|<xref:System.Windows.Automation.GridPatternIdentifiers>|  
 |Wyświetl bieżące i obsługiwane elementu, który ma wiele widoków|<xref:System.Windows.Automation.MultipleViewPattern>|<xref:System.Windows.Automation.MultipleViewPatternIdentifiers>|  
 |Właściwości elementu, który przechodzi przez zakres wartości, takich jak suwaka|<xref:System.Windows.Automation.RangeValuePattern>|<xref:System.Windows.Automation.RangeValuePatternIdentifiers>|  
-|Właściwości przewijania okna|<xref:System.Windows.Automation.ScrollPattern>|<xref:System.Windows.Automation.ScrollPatternIdentifiers>|  
-|Stan i kontener elementu, który można wybrać, jak listy|<xref:System.Windows.Automation.SelectionItemPattern>|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers>|  
-|Właściwości formantu, który zawiera elementy zaznaczenia|<xref:System.Windows.Automation.SelectionPattern>|<xref:System.Windows.Automation.SelectionPatternIdentifiers>|  
-|Nagłówki wierszy i kolumn elementu w tabeli|<xref:System.Windows.Automation.TableItemPattern>|<xref:System.Windows.Automation.TableItemPatternIdentifiers>|  
-|Nagłówki kolumn i wierszy i orientację tabeli|<xref:System.Windows.Automation.TablePattern>|<xref:System.Windows.Automation.TablePatternIdentifiers>|  
-|Stan formantu przełącznika|<xref:System.Windows.Automation.TogglePattern>|<xref:System.Windows.Automation.TogglePatternIdentifiers>|  
-|Możliwości element, który można przenosić, obracać lub zmiany rozmiaru|<xref:System.Windows.Automation.TransformPattern>|<xref:System.Windows.Automation.TransformPatternIdentifiers>|  
-|Element, który ma wartość możliwości wartość i odczytu/zapisu|<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.ValuePatternIdentifiers>|  
+|Właściwości okna przewijania|<xref:System.Windows.Automation.ScrollPattern>|<xref:System.Windows.Automation.ScrollPatternIdentifiers>|  
+|Stan i kontener elementu, który można wybrać, jak w list|<xref:System.Windows.Automation.SelectionItemPattern>|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers>|  
+|Właściwości kontrolki, która zawiera elementy zaznaczenia|<xref:System.Windows.Automation.SelectionPattern>|<xref:System.Windows.Automation.SelectionPatternIdentifiers>|  
+|Nagłówki kolumn i wierszy elementu w tabeli|<xref:System.Windows.Automation.TableItemPattern>|<xref:System.Windows.Automation.TableItemPatternIdentifiers>|  
+|Nagłówki kolumn i wierszy i orientację w tabeli.|<xref:System.Windows.Automation.TablePattern>|<xref:System.Windows.Automation.TablePatternIdentifiers>|  
+|Stan formantu przełączania|<xref:System.Windows.Automation.TogglePattern>|<xref:System.Windows.Automation.TogglePatternIdentifiers>|  
+|Możliwości element, który można przenieść, obracać lub zmiany rozmiaru|<xref:System.Windows.Automation.TransformPattern>|<xref:System.Windows.Automation.TransformPatternIdentifiers>|  
+|Możliwości odczytu/zapisu i wartość elementu, który ma wartość|<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.ValuePatternIdentifiers>|  
 |Możliwości i stan okna|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.WindowPatternIdentifiers>|  
   
 <a name="Properties_by_Category"></a>   
 ## <a name="properties-by-category"></a>Właściwości według kategorii  
- Poniższe tabele kategoryzowanie właściwości którego [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] znajdują się w <xref:System.Windows.Automation.AutomationElement> i <xref:System.Windows.Automation.AutomationElementIdentifiers>. Te właściwości są wspólne dla wszystkich kontrolek. Wszystkie z wyjątkiem kilku z nich mogą zostać statycznego okresu istnienia aplikacji dostawcy; właściwości najbardziej dynamiczne są skojarzone z wzorców formantu.  
+ Poniższe tabele kategoryzowanie właściwości którego [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] znajdują się w <xref:System.Windows.Automation.AutomationElement> i <xref:System.Windows.Automation.AutomationElementIdentifiers>. Te właściwości są wspólne dla wszystkich kontrolek. Wszystkie z wyjątkiem kilku z nich mogą zostać statycznych w okresie istnienia aplikacji dostawcy; właściwości dynamiczne najczęściej są skojarzone z wzorców kontrolek.  
   
- **Dostępu do właściwości** kolumna zawiera inne metody dostępu dla każdej właściwości w uzupełnieniu do <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> i <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>. Aby uzyskać więcej informacji na temat pobierania właściwości w aplikacji klienta, zobacz [właściwości automatyzacji interfejsu użytkownika dla klientów](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
+ **Dostęp do właściwości** kolumna zawiera inne metody dostępu dla każdej właściwości w uzupełnieniu do <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> i <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>. Aby uzyskać więcej informacji na temat pobierania właściwości w aplikacji klienckiej, zobacz [właściwości automatyzacji interfejsu użytkownika dla klientów](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
   
 > [!NOTE]
->  Aby uzyskać szczegółowe informacje o każdej właściwości, kliknij link w **dostępu do właściwości** kolumny.  
+>  Aby uzyskać szczegółowe informacje o każdej właściwości, kliknij link w **dostęp do właściwości** kolumny.  
   
 ### <a name="display-characteristics"></a>Wyświetl właściwości  
   
@@ -140,7 +140,7 @@ ms.locfileid: "33409319"
   
 <a name="Localization"></a>   
 ## <a name="localization"></a>Lokalizacja  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dostawcy powinni przedstawić następujących właściwości w języku systemu operacyjnego:  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dostawcy powinni przedstawić potwierdzenie odpowiedniego następujące właściwości w języku systemu operacyjnego:  
   
 -   <xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>  
   
@@ -154,13 +154,13 @@ ms.locfileid: "33409319"
   
 <a name="Properties_and_Events"></a>   
 ## <a name="properties-and-events"></a>Właściwości i zdarzenia  
- Ściśle związany się przy użyciu właściwości w [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] to pojęcia zdarzenia zmiany właściwości. Dla właściwości dynamicznych aplikacja kliencka musi mieć możliwość wiedzieć, że wartość właściwości została zmieniona, tak, aby go zaktualizować pamięci podręcznej informacji lub reagowania na nowe informacje w inny sposób.  
+ Ściśle powiązane za pomocą właściwości w [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] pojęcie zdarzenia zmiany właściwości. Dla właściwości dynamicznych aplikacja kliencka musi jakoś dowiedzieć się, że wartość właściwości została zmieniona, tak, aby go zaktualizować pamięci podręcznej informacji lub reagowanie na nowe informacje w inny sposób.  
   
- Dostawców wywoływanie zdarzeń, gdy coś [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] zmiany. Na przykład jeśli pole wyboru jest zaznaczone lub wyczyszczone, zdarzenie zmiany właściwości jest wywoływane przez implementację dostawcy wzorca przełącznika. Dostawców może wywoływać zdarzenia selektywnie, w zależności od tego, czy wszyscy klienci są nasłuchiwanie zdarzeń lub nasłuchiwania dla określonych zdarzeń.  
+ Dostawców wywoływać zdarzenia, gdy element [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] zmiany. Na przykład jeśli pole wyboru lub odznaczane, to zdarzenie zmiany właściwości jest wywoływane przez implementację dostawcy wzorca przełącznika. Dostawców może wywoływać zdarzenia selektywnie, w zależności od tego, czy wszyscy klienci są nasłuchiwanie zdarzeń lub nasłuchiwania dla określonych zdarzeń.  
   
- Nie wszystkie zmiany właściwości wywoływanie zdarzeń; to jest całkowicie zależy implementacja dostawcy automatyzacji interfejsu użytkownika dla elementu. Na przykład proxy standardowych dostawców dla pola listy nie wygenerował zdarzenie po <xref:System.Windows.Automation.SelectionPattern.SelectionProperty> zmiany. W takim przypadku aplikacji zamiast musi nasłuchiwać <xref:System.Windows.Automation.SelectionItemPattern.ElementSelectedEvent>.  
+ Nie wszystkie zmiany właściwości wywoływanie zdarzeń; która zależy od całkowicie implementacja dostawcy automatyzacji interfejsu użytkownika dla elementu. Na przykład dostawców standardowy serwer proxy dla pól listy nieznakowe inicjują zdarzenia podczas <xref:System.Windows.Automation.SelectionPattern.SelectionProperty> zmiany. W takim przypadku aplikacji zamiast musi nasłuchiwać <xref:System.Windows.Automation.SelectionItemPattern.ElementSelectedEvent>.  
   
- Klienci nasłuchiwania zdarzeń Subskrybuj je. Subskrybowanie zdarzeń oznacza tworzenia metody delegata, jaką może obsłużyć zdarzenia, a następnie przekazywanie metody [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] wraz z określonych zdarzeń, które zostaną omówione w jednej z tych metod. Dla zdarzenia zmiany właściwości w szczególności, klienci muszą implementować <xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>.  
+ Klienci nasłuchiwać zdarzeń, subskrybując je. Subskrybowanie zdarzeń oznacza, że tworzenie metod delegatów, które może obsłużyć zdarzenia, a następnie przekazywanie metody służące do [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] wraz z określonych zdarzeń, które zostanie omówione w tych metodach. Dla zdarzenia zmiany właściwości w szczególności, klienci muszą implementować <xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Buforowanie w klientach automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  

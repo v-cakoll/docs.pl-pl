@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - fixed keyword [C#]
 ms.openlocfilehash: 021fc3bd63922394bd70495bd4335b068fc51cdd
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255271"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406238"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed — Instrukcja (odwołanie w C#)
 

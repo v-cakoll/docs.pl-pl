@@ -3,11 +3,11 @@ title: Sortowanie danych (C#)
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
 ms.openlocfilehash: 90ff7d52e6832935fe16e081e904acae3a24669a
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245439"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402032"
 ---
 # <a name="sorting-data-c"></a>Sortowanie danych (C#)
 Operacja sortowania Porządkuje elementy które sekwencji, w oparciu o jeden lub więcej atrybutów. Kryterium sortowania sortuje podstawowe elementy. Określając drugie kryterium sortowania, możesz sortować elementów w każdej grupie podstawowej sortowania.  

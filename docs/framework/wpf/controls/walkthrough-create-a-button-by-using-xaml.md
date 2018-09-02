@@ -5,11 +5,11 @@ helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
 ms.openlocfilehash: 96d54efbabbd95a24f1fb7118305ddbff4dfd110
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935409"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415827"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Wskazówki: Tworzenie przycisku przy użyciu XAML
 Celem tego przewodnika jest Dowiedz się, jak utworzyć przycisk animowany do użycia w aplikacji Windows Presentation Foundation (WPF). W tym przewodniku używa szablonu i style w celu utworzenia zasobu dostosowany przycisk, który umożliwia oddzielenie logiki przycisk od deklaracji przycisku i ponowne użycie kodu. W tym przewodniku są zapisywane w całości w [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -361,7 +361,7 @@ Celem tego przewodnika jest Dowiedz się, jak utworzyć przycisk animowany do u�
   
      Naciśnij klawisz F5, aby uruchomić aplikację, a następnie kliknij jeden z przycisków. Zwróć uwagę, przycisk pozostaje wyróżniony, po kliknięciu ponieważ wciąż jest ustawiony fokus. Po kliknięciu przycisku inny przycisk Nowy przycisk uzyska fokus, gdy ostatnie traci go.  
   
-4.  **Dodawanie animacji do** <xref:System.Windows.UIElement.MouseEnter> **i** <xref:System.Windows.UIElement.MouseLeave> **:** następnie dodamy niektórych animacji wyzwalacze.   Dodaj następujący kod, dowolne miejsce wewnątrz elementu `ControlTemplate.Triggers` bloku.  
+4.  **Dodawanie animacji do** <xref:System.Windows.UIElement.MouseEnter> **i** <xref:System.Windows.UIElement.MouseLeave> **:** następnie dodamy niektórych animacji wyzwalacze. Dodaj następujący kod, dowolne miejsce wewnątrz elementu `ControlTemplate.Triggers` bloku.  
   
     ```  
     <!-- Animations that start when mouse enters and leaves button. -->  

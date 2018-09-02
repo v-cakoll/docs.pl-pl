@@ -1,5 +1,5 @@
 ---
-title: Hosting usług danych (usługi danych WCF)
+title: Hosting usługi danych (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,71 +8,73 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-ms.openlocfilehash: d3adf45e0876ae63b111a53461eee9aeee519b5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 89f9cc572a6613efba19a93c8d5e441c46a660ac
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362853"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401112"
 ---
-# <a name="hosting-the-data-service-wcf-data-services"></a>Hosting usług danych (usługi danych WCF)
-Za pomocą [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], można utworzyć usługi, która opisuje dane jako [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych. Ta usługa danych jest zdefiniowany jako klasa, która dziedziczy <xref:System.Data.Services.DataService%601>. Ta klasa udostępnia funkcje wymagane do przetwarzania komunikatów żądań, przeprowadzania aktualizacji w źródle danych oraz do generowania wiadomości odpowiedzi, co jest wymagane przez [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Jednak usługa danych nie można powiązać i nasłuchiwania gniazda sieci dla przychodzących żądań HTTP. Dla tej funkcji wymagane usługi danych zależy od składnika hostingu.  
-  
- Hosta usługi danych wykonuje następujące zadania w imieniu usług danych:  
-  
--   Nasłuchuje żądań i kieruje te żądania do usługi danych.  
-  
--   Tworzy wystąpienie usługi danych dla każdego żądania.  
-  
--   Żądania przez usługę danych procesów żądania przychodzącego.  
-  
--   Wysyła odpowiedź w imieniu usług danych.  
-  
- Aby uprościć hosting usług danych, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] został zaprojektowany do integrowania z usługi Windows Communication Foundation (WCF). Usługi danych udostępnia domyślną implementację WCF, która służy jako hosta usługi danych w [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji. W związku z tym można hosta usługi danych w jednym z następujących sposobów:  
-  
--   W [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji.  
-  
--   W zarządzanej aplikacji obsługującej usługi hostowania samoobsługowego WCF.  
-  
--   W niektórych innych niestandardowych hosta usługi danych.  
-  
-## <a name="hosting-a-data-service-in-an-aspnet-application"></a>Hosting w aplikacji ASP.NET usługi danych  
- Jeśli używasz **Dodaj nowy element** okna dialogowego w programie Visual Studio, aby zdefiniować usługę danych w aplikacji ASP.NET, narzędzie wygeneruje dwa nowe pliki w projekcie. Pierwszy plik ma `.svc` rozszerzenia i powoduje, że środowisko uruchomieniowe WCF sposobu utworzenia wystąpienia usługi danych. Poniżej przedstawiono przykład tego pliku w usłudze danych Northwind próbki utworzone po zakończeniu [szybkiego startu](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md):  
-  
-```  
-<%@ ServiceHost Language="C#"   
-    Factory="System.Data.Services.DataServiceHostFactory,   
-            System.Data.Services, Version=4.0.0.0,   
-            Culture=neutral, PublicKeyToken=b77a5c561934e089"   
-    Service="NorthwindService.Northwind" %>   
-```  
-  
- Ta dyrektywa określa, że aplikacją w celu utworzenia hosta usługi danych o podanej nazwie klasy usługi za pomocą <xref:System.Data.Services.DataServiceHostFactory> klasy.  
-  
- Na stronie CodeBehind `.svc` plik zawiera klasę, która jest implementacją usługi data, zdefiniowanego w następujący sposób dla usługi danych Northwind próbki:  
-  
+# <a name="hosting-the-data-service-wcf-data-services"></a>Hosting usługi danych (WCF Data Services)
+Korzystając z usług danych WCF, można utworzyć usługę, która udostępnia dane jako [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych. Ta usługa danych jest zdefiniowany jako klasę, która dziedziczy z <xref:System.Data.Services.DataService%601>. Ta klasa udostępnia funkcje wymagane do przetwarzania komunikatów żądań, przeprowadzania aktualizacji względem źródła danych i generowanie wiadomości odpowiedzi, zgodnie z wymaganiami protokołu OData. Jednak usługa danych nie można powiązać i nasłuchiwanie przychodzących żądań HTTP na gnieździe sieci. Dla tej funkcji wymagane usługi danych opiera się na składniku hostingowych.
+
+ Host usługi danych wykonuje następujące zadania w imieniu usługi danych:
+
+-   Nasłuchuje żądań i kieruje żądania do usługi danych.
+
+-   Tworzy wystąpienie usługi danych dla każdego żądania.
+
+-   Czy usługa danych przetwarzać żądania przychodzącego żądania.
+
+-   Wysyła odpowiedź w imieniu usługi danych.
+
+ Aby uprościć hostująca usługę danych, usługi danych WCF został zaprojektowany do integrowania za pomocą programu Windows Communication Foundation (WCF). Usługi danych udostępnia domyślną implementację WCF, która służy jako hosta usługi danych w [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji. W związku z tym można hostować usługi danych w jednym z następujących sposobów:
+
+-   W [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji.
+
+-   W aplikacji zarządzanej, który obsługuje samodzielnie hostowanej usługi WCF.
+
+-   W niektórych innych niestandardowych danych hosta usługi.
+
+## <a name="hosting-a-data-service-in-an-aspnet-application"></a>Hosting usługi danych w aplikacji ASP.NET
+
+Kiedy używasz **Dodaj nowy element** okna dialogowego w programie Visual Studio 2015 do definiowania usługi danych w aplikacji ASP.NET, narzędzie generuje dwa nowe pliki w projekcie. Pierwszy plik ma `.svc` rozszerzenia i powoduje, że środowisko wykonawcze programu WCF sposobu tworzenia wystąpienia usługi danych. Oto przykład tego pliku do usługi danych Northwind przykładowe utworzone po zakończeniu [Szybki Start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md):
+
+```
+<%@ ServiceHost Language="C#"
+    Factory="System.Data.Services.DataServiceHostFactory,
+            System.Data.Services, Version=4.0.0.0,
+            Culture=neutral, PublicKeyToken=b77a5c561934e089"
+    Service="NorthwindService.Northwind" %>
+```
+
+ Oznacza ona aplikacji do utworzenia hosta usługi dla klasy usługi danych o podanej nazwie za pomocą <xref:System.Data.Services.DataServiceHostFactory> klasy.
+
+ Strona związanym z kodem `.svc` plik zawiera klasę, która jest implementacją usługi danych, która jest zdefiniowana w następujący sposób usługi Northwind przykładowe dane:
+
  [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart service/cs/northwind.svc.cs#servicedefinition)]
- [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart service/vb/northwind.svc.vb#servicedefinition)]  
-  
- Ponieważ usługa danych zachowuje się jak usługi WCF, Usługa danych integruje się z [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] i jest zgodna z modelem programowania sieci Web WCF. Aby uzyskać więcej informacji, zobacz [usługi WCF i platformy ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md) i [modelu programowania protokołu HTTP sieci Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).  
-  
-## <a name="self-hosted-wcf-services"></a>Usług hostowania samoobsługowego WCF  
- Ponieważ zawiera implementacji programu WCF [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obsługuje hostingu samodzielnego usługi danych jako usługa WCF. Usługa może być własnym hostowanej w żadnym [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aplikacji, takich jak aplikacji konsoli. <xref:System.Data.Services.DataServiceHost> Klasy, która dziedziczy <xref:System.ServiceModel.Web.WebServiceHost>, jest używany do utworzenia wystąpienia usługi data pod określonym adresem.  
-  
- Hostingu samodzielnego może służyć do projektowania i testowania, ponieważ jego ułatwia wdrażanie i rozwiązywanie problemów z usługi. Jednak tego rodzaju hosting nie zapewnia zaawansowane funkcje obsługi i zarządzania oferowane przez [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] lub przez Internet Information Services (IIS). Aby uzyskać więcej informacji, zobacz [Hosting w zarządzanej aplikacji](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md).  
-  
-## <a name="defining-a-custom-data-service-host"></a>Definiowanie hosta usługi danych niestandardowych  
- W przypadkach, w którym implementacja hosta programu WCF jest zbyt restrykcyjna również możliwość definiowania niestandardowych hosta usługi danych. Każda klasa implementująca <xref:System.Data.Services.IDataServiceHost> interfejs może służyć jako hosta usługi danych. Niestandardowy host musi implementować <xref:System.Data.Services.IDataServiceHost> interfejsu i mieć możliwość obsługi podstawowych obowiązków hosta usługi danych:  
-  
--   Ścieżka katalogu głównego usługi udostępnić usługę danych.  
-  
--   Przetworzyć informacji nagłówki żądań i odpowiedzi do odpowiedniego <xref:System.Data.Services.IDataServiceHost> implementacja elementu członkowskiego.  
-  
--   Obsługa wyjątków zgłaszanych przez usługę danych.  
-  
--   Sprawdź poprawność parametrów w ciągu zapytania.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Definiowanie usług danych WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
- [Udostępnianie danych jako usługi](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
- [Konfigurowanie usługi danych](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)
+ [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart service/vb/northwind.svc.vb#servicedefinition)]
+
+ Ponieważ usługa danych zachowuje się jak usługi WCF, Usługa danych integruje się z [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] i korzysta z modelu programowania w sieci Web WCF. Aby uzyskać więcej informacji, zobacz [usługi WCF i platforma ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md) i [modelu programowania protokołu HTTP sieci Web programu WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).
+
+## <a name="self-hosted-wcf-services"></a>Usług hostowania samoobsługowego WCF
+ Ponieważ zawiera implementację usługi WCF, usług danych WCF obsługuje własnym hostująca usługę danych jako usługa WCF. Usługa może być samodzielnie hostowane w dowolnym [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aplikacji, takie jak aplikacja konsoli. <xref:System.Data.Services.DataServiceHost> Klasy, która dziedziczy po elemencie <xref:System.ServiceModel.Web.WebServiceHost>, jest używany do utworzenia wystąpienia usługi danych pod określonym adresem.
+
+ Hostingu samodzielnego może służyć do tworzenia i testowania, ponieważ jego ułatwia wdrażanie i rozwiązywanie problemów z usługi. Jednak tego rodzaju hostingu nie zapewnia zaawansowane zarządzanie i hostowanie funkcji oferowanych przez [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] lub Internet Information Services (IIS). Aby uzyskać więcej informacji, zobacz [hostowanie w aplikacji Managed](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md).
+
+## <a name="defining-a-custom-data-service-host"></a>Definiowanie hosta usługi danych niestandardowych
+ W przypadkach, w których implementacja hosta usługi WCF jest zbyt restrykcyjne można również zdefiniować niestandardowy host usługi danych. Każda klasa implementująca <xref:System.Data.Services.IDataServiceHost> interfejs może służyć jako hosta sieci usługi danych. Niestandardowy host musi implementować <xref:System.Data.Services.IDataServiceHost> interfejs i obsługiwać następujące obowiązki podstawowe dane hosta usługi:
+
+-   Usługi danych należy udostępnić ścieżkę katalogu głównego usługi.
+
+-   Przetwarzania żądań i odpowiedzi informacji nagłówki do odpowiedniego <xref:System.Data.Services.IDataServiceHost> implementacji elementu członkowskiego.
+
+-   Obsługa wyjątków zgłaszanych przez usługę danych.
+
+-   Sprawdza poprawność parametrów ciągu zapytania.
+
+## <a name="see-also"></a>Zobacz też
+
+- [Definiowanie usług danych WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [Udostępnianie danych jako usługi](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)
+- [Konfigurowanie usługi danych](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)

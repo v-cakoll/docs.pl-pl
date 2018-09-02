@@ -1,23 +1,23 @@
 ---
-title: Obsługuje nie można przechwytywać zdarzenia obiektu, ponieważ obiekt wysyła już zdarzenia do maksymalnej liczby odbiorcy zdarzeń
+title: Nie można przechwytywać zdarzenia obiektu, ponieważ obiekt wysyła już zdarzenia maksymalną liczbę odbiorników zdarzeń obsługuje ona
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID96
 ms.assetid: e40b19a2-8100-43ff-a1a4-0ddee3cc7f9a
-ms.openlocfilehash: 441eb20a93fdd998dd08a4763cb9cff311f1287a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 46e8b41567820df24c5206a2acd8ac661faeed28
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642798"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405612"
 ---
-# <a name="unable-to-sink-events-of-object-because-the-object-is-already-firing-events-to-the-maximum-number-of-event-receivers-it-supports"></a>Obsługuje nie można przechwytywać zdarzenia obiektu, ponieważ obiekt wysyła już zdarzenia do maksymalnej liczby odbiorcy zdarzeń
-Przekroczono maksymalną liczbę odbiorników obsługiwane przez obiekt.  
+# <a name="unable-to-sink-events-of-object-because-the-object-is-already-firing-events-to-the-maximum-number-of-event-receivers-it-supports"></a>Nie można przechwytywać zdarzenia obiektu, ponieważ obiekt wysyła już zdarzenia maksymalną liczbę odbiorników zdarzeń obsługuje ona
+Przekroczono maksymalną liczbę odbiorników zdarzeń obsługiwane przez obiekt.  
   
-### <a name="to-correct-the-error"></a>Aby poprawić błąd  
+### <a name="to-correct-the-error"></a>Aby poprawić ten błąd  
   
--   Zmniejsz liczbę odbiorników.  
+-   Zmniejsz liczbę odbiorców zdarzeń.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Porady: wywoływanie zdarzeń obsługiwane przez zbiornika COM](http://msdn.microsoft.com/library/7c9944b2-e951-4c3e-a0a1-59b2ae37d7fd)  
+ [Porady: wywoływanie zdarzeń obsługiwanych przez obiekty Sink modelu COM](https://msdn.microsoft.com/library/7c9944b2-e951-4c3e-a0a1-59b2ae37d7fd)  
  [Przewodnik: obsługa zdarzeń](../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)

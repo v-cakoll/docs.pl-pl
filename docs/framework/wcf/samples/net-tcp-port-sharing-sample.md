@@ -2,39 +2,39 @@
 title: Przykład współużytkowania portów Net.TCP
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-ms.openlocfilehash: cfd87868a5ecc557ccca1003f54f3a896b2f9fcc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: db4cd5be73e3c170f2feaa1e76f275eb7d9cd226
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33506470"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407839"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Przykład współużytkowania portów Net.TCP
-Protokół TCP/IP używa 16-bitową liczbę zwanej portem do rozróżniania połączeń z wieloma aplikacjami sieciowymi uruchomiona na tym samym komputerze. Jeśli aplikacja nasłuchuje na porcie, cały ruch TCP dla tego portu przechodzi do tej aplikacji. Inne aplikacje nie może nasłuchiwać na tym porcie w tym samym czasie.  
+Protokół TCP/IP używa 16-bitową liczbę o nazwie portu do rozróżniania połączeń z wieloma aplikacjami sieciowymi uruchomione na tym samym komputerze. Jeśli aplikacja nasłuchuje na porcie, cały ruch TCP dla tego portu przechodzi do tej aplikacji. Inne aplikacje nie może nasłuchiwać na tym porcie w tym samym czasie.  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\PortSharing`  
   
- Wiele protokołów ma standard lub domyślny numer portu, które korzystają z. Na przykład protokołu HTTP zazwyczaj używa portu TCP 80. Internet Information Services (IIS) ma odbiornika Udostępnianie portów między wiele aplikacji HTTP. Usługi IIS nasłuchuje na porcie bezpośrednio i przekazuje dalej wiadomości do odpowiedniej aplikacji na podstawie informacji w strumieniu wiadomości. Dzięki temu wiele aplikacji HTTP użyć tego samego numeru portu bez konieczności konkurować zarezerwować portu do odbierania wiadomości.  
+ Wiele protokołów mają standard lub domyślnego numeru portu, który używają. Na przykład protokołu HTTP zazwyczaj używa portu TCP 80. Internet Information Services (IIS) ma odbiornika do udostępniania portów między wieloma aplikacjami HTTP. Usługi IIS nasłuchuje na porcie bezpośrednio i przekazuje komunikaty do odpowiedniej aplikacji w oparciu o informacje wewnątrz strumienia komunikatów. Dzięki temu wiele aplikacji HTTP używać tego samego numeru portu bez konieczności konkurować zarezerwować portu do odbierania wiadomości.  
   
- Udostępnianie portów NetTcp jest funkcja Windows Communication Foundation (WCF), która umożliwia podobnie wiele aplikacji sieci może współużytkować jeden port. Usługa udostępniania portów NetTcp akceptuje połączenia za pomocą protokołu net.tcp i przekazuje dalej wiadomości na podstawie ich adresu docelowego.  
+ Udostępnianie portów NetTcp jest funkcją Windows Communication Foundation (WCF), która podobnie umożliwia wielu aplikacjom sieci współużytkować jeden port. Usługi udostępniania portów NetTcp akceptuje połączenia przy użyciu protokołu net.tcp i przekazuje komunikaty na podstawie ich adresu docelowego.  
   
- Nie włączono usługi udostępniania portów NetTcp domyślnie. Przed uruchomieniem tego przykładu, musisz ręcznie włączyć usługę. Aby uzyskać więcej informacji, zobacz [porady: Włączanie usługi udostępniania portów Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md). Jeśli usługa zostanie wyłączona, jest wyjątek po uruchomieniu aplikacji serwera.  
+ Nie włączono usługi udostępniania portów NetTcp domyślnie. Przed uruchomieniem tego przykładu, należy ręcznie włączyć tę usługę. Aby uzyskać więcej informacji, zobacz [porady: Włączanie usługi udostępniania portów Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md). Jeśli usługa jest wyłączona, wyjątek jest generowany po uruchomieniu aplikacji serwera.  
   
 ```  
 Unhandled Exception: System.ServiceModel.CommunicationException: The TransportManager failed to listen on the supplied URI using the NetTcpPortSharing service: failed to start the service because it is disabled. An administrator can enable it by running 'sc.exe config NetTcpPortSharing start= demand'.. ---> System.InvalidOperationException: Cannot start service NetTcpPortSharing on computer '.'. ---> System.ComponentModel.Win32Exception: The service cannot be started, either because it is disabled or because it has no enabled devices associated with it  
 ```  
   
- Udostępnianie portów jest włączona na serwerze <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> właściwość <xref:System.ServiceModel.NetTcpBinding> powiązanie lub <xref:System.ServiceModel.Channels.TcpTransportBindingElement> elementu powiązania. Klient nie trzeba wiedzieć, jak udostępnianie portów został skonfigurowany do używania go na serwerze.  
+ Udostępnianie portów jest włączona na serwerze <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> właściwość <xref:System.ServiceModel.NetTcpBinding> powiązania lub <xref:System.ServiceModel.Channels.TcpTransportBindingElement> element powiązania. Klient nie musi wiedzieć, jak udostępnianie portów został skonfigurowany z niego korzystać na serwerze.  
   
 ## <a name="enabling-port-sharing"></a>Włączenie udostępniania portów  
- Poniższy kod ilustruje, włączanie Udostępnianie portów na serwerze. Rozpoczyna wystąpienia `ICalculator` usługi na stały port o losowy ścieżka identyfikatora URI. Mimo że dwie usługi mogą współużytkować tego samego portu, ich ogólną adresy punktów końcowych nadal musi być unikatowa, aby Usługa udostępniania portów NetTcp rozesłać komunikaty do odpowiedniej aplikacji.  
+ Poniższy kod ilustruje włączanie udostępniania portów na serwerze. Uruchamia wystąpienie `ICalculator` usługi na stały port za pomocą losowych ścieżka identyfikatora URI. Mimo że dwie usługi mogą udostępniać tego samego portu, ich ogólną adresy punktów końcowych nadal muszą być unikatowe, aby usługi udostępniania portów NetTcp komunikaty można kierować do do właściwej aplikacji.  
 
 ```csharp
 // Configure a binding with TCP port sharing enabled  
@@ -50,14 +50,14 @@ host.AddServiceEndpoint(typeof(ICalculator), binding, address);
 host.Open();  
 ```
 
- Udostępnianie portów jest włączona, umożliwia uruchamianie usługi wiele razy bez konfliktu przez numer portu. Jeśli zmienisz kod, aby wyłączyć udostępnianie portów uruchamiania dwie kopie wyników usługi w drugim Niepowodzenie z <xref:System.ServiceModel.AddressAlreadyInUseException>.  
+ Udostępnianie portów jest włączona, umożliwia uruchamianie usługi wiele razy bez konfliktu przez numer portu. Jeśli zmienisz kod, aby wyłączyć udostępnianie portów, uruchamianie dwie kopie wyników usługi w drugim zwracając <xref:System.ServiceModel.AddressAlreadyInUseException>.  
   
 ```  
 Unhandled Exception: System.ServiceModel.AddressAlreadyInUseException: There is already a listener on IP endpoint 0.0.0.0:9000.  Make sure that you are not trying to use this endpoint multiple times in your application and that there are no other applications listening on this endpoint. ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted  
 ```  
   
-## <a name="running-the-sample"></a>Uruchomiona próbki  
- Klient testowy służy do sprawdzania, czy komunikaty są poprawnie kierowane do usługi udostępniania portów.  
+## <a name="running-the-sample"></a>Działa aplikacja przykładowa  
+ Klient testowy służy do sprawdzenia, że komunikaty są poprawnie kierowane do usługi udostępniania portów.  
 
 ```csharp
 class client  
@@ -103,7 +103,7 @@ class client
 }  
 ```
 
- Każde wystąpienie usługi drukowania jego unikatowy numer oraz adres. Na przykład może zostać wyświetlony następujący tekst po uruchomieniu service.exe.  
+ Każde wystąpienie usługi drukowania jego unikatowy numer i adres. Na przykład następujący tekst może zostać wyświetlony po uruchomieniu service.exe.  
   
 ```  
 Service #4381 listening on net.tcp://localhost:9000/calculator/4381.  
@@ -122,22 +122,22 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
- W tym przykładzie można uruchomić w konfiguracji między komputerami, zmieniając wygenerowany adres używany przez klienta. W Client.cs Zmień ciąg formatu adresu punktu końcowego do dopasowania nowy adres z usługą. Zamień wszystkie odwołania do "localhost" adres IP serwera. Po wprowadzeniu tej zmiany, należy ponownie skompilować próbki.  
+ W tym przykładzie można uruchomić w konfiguracji między komputerami, zmieniając wygenerowany adres, używanego przez klienta. W Client.cs Zmień ciąg formatu adresu punktu końcowego do dopasowania nowy adres usługi. Zastąp wszystkie odwołania do "localhost" adres IP komputera serwera. Po wprowadzeniu tej zmiany, należy ponownie skompilować przykład.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Zainstaluj [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 za pomocą następującego polecenia.  
+1.  Zainstaluj [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0, używając następującego polecenia.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Upewnij się, że wykonano procedurę [jednorazowego procedurę instalacji dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 3.  Włącz NetTcp usługi udostępniania portów jak opisano wcześniej w sekcji wprowadzenie.  
   
-4.  Tworzenie wersji języka C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+4.  Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-5.  Aby uruchomić przykładowy w konfiguracji pojedynczej lub między komputerami, postępuj zgodnie z instrukcjami w [uruchamiania przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Szczegółowe informacje dotyczące uruchamiania tego przykładu znajdują się wcześniej w działaniu sekcji przykładowe.  
+5.  Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Szczegółowe informacje dotyczące uruchomieniem tego przykładu znajdują się wcześniej uruchomione sekcji przykład.  
   
 ## <a name="see-also"></a>Zobacz też

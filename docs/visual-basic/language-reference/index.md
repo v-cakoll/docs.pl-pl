@@ -10,80 +10,80 @@ helpviewer_keywords:
 - language reference, Visual Basic
 - Visual Basic, language reference
 ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
-ms.openlocfilehash: a3353122d6b2cd44f0de12ef8799d71bddab6160
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c0372e0176ea54a975e787631ba2849f79e5493
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602636"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402230"
 ---
-# <a name="visual-basic-language-reference"></a><span data-ttu-id="c0a86-102">Odwołanie językowe Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c0a86-102">Visual Basic Language Reference</span></span>
-<span data-ttu-id="c0a86-103">Ta sekcja zawiera informacje dotyczące różnych aspektów języka Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="c0a86-103">This section provides reference information for various aspects of the Visual Basic language.</span></span>  
+# <a name="visual-basic-language-reference"></a><span data-ttu-id="a65a2-102">Odwołanie językowe Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a65a2-102">Visual Basic Language Reference</span></span>
+<span data-ttu-id="a65a2-103">Ta sekcja zawiera informacje dotyczące różnych aspektów języka Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="a65a2-103">This section provides reference information for various aspects of the Visual Basic language.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c0a86-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="c0a86-104">In This Section</span></span>  
- [<span data-ttu-id="c0a86-105">Konwencje związane z typografią i kodami</span><span class="sxs-lookup"><span data-stu-id="c0a86-105">Typographic and Code Conventions</span></span>](../../visual-basic/language-reference/typographic-and-code-conventions.md)  
- <span data-ttu-id="c0a86-106">Przedstawiono sposób słowa kluczowe, symbole zastępcze i inne elementy języka sformatowanych w dokumentacji programu Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="c0a86-106">Summarizes the way that keywords, placeholders, and other elements of the language are formatted in the Visual Basic documentation.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="a65a2-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="a65a2-104">In This Section</span></span>  
+ [<span data-ttu-id="a65a2-105">Konwencje związane z typografią i kodami</span><span class="sxs-lookup"><span data-stu-id="a65a2-105">Typographic and Code Conventions</span></span>](../../visual-basic/language-reference/typographic-and-code-conventions.md)  
+ <span data-ttu-id="a65a2-106">Zawiera podsumowanie sposobu są sformatowane słów kluczowych, symboli zastępczych i inne elementy języka w dokumentacji języka Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="a65a2-106">Summarizes the way that keywords, placeholders, and other elements of the language are formatted in the Visual Basic documentation.</span></span>  
   
- [<span data-ttu-id="c0a86-107">Elementy członkowskie biblioteki środowiska uruchomieniowego Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c0a86-107">Visual Basic Runtime Library Members</span></span>](../../visual-basic/language-reference/runtime-library-members.md)  
- <span data-ttu-id="c0a86-108">Wyświetla listę klas i modułów <xref:Microsoft.VisualBasic?displayProperty=nameWithType> przestrzeni nazw, wraz z łączami do ich funkcje elementów członkowskich, metody, właściwości, stałe i wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="c0a86-108">Lists the classes and modules of the <xref:Microsoft.VisualBasic?displayProperty=nameWithType> namespace, with links to their member functions, methods, properties, constants, and enumerations.</span></span>  
+ [<span data-ttu-id="a65a2-107">Elementy członkowskie biblioteki środowiska uruchomieniowego Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a65a2-107">Visual Basic Runtime Library Members</span></span>](../../visual-basic/language-reference/runtime-library-members.md)  
+ <span data-ttu-id="a65a2-108">Wyświetla listę klas i modułów <xref:Microsoft.VisualBasic?displayProperty=nameWithType> przestrzeni nazw, wraz z łączami do swoich elementów członkowskich, metody, właściwości, stałe i wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="a65a2-108">Lists the classes and modules of the <xref:Microsoft.VisualBasic?displayProperty=nameWithType> namespace, with links to their member functions, methods, properties, constants, and enumerations.</span></span>  
   
- [<span data-ttu-id="c0a86-109">Słowa kluczowe</span><span class="sxs-lookup"><span data-stu-id="c0a86-109">Keywords</span></span>](../../visual-basic/language-reference/keywords/index.md)  
- <span data-ttu-id="c0a86-110">Zawiera listę wszystkich słowa kluczowe Visual Basic oraz zawiera łącza do dodatkowych informacji.</span><span class="sxs-lookup"><span data-stu-id="c0a86-110">Lists all Visual Basic keywords and provides links to more information.</span></span>  
+ [<span data-ttu-id="a65a2-109">Słowa kluczowe</span><span class="sxs-lookup"><span data-stu-id="a65a2-109">Keywords</span></span>](../../visual-basic/language-reference/keywords/index.md)  
+ <span data-ttu-id="a65a2-110">Wyświetla wszystkie słowa kluczowe Visual Basic i zawiera łącza do dodatkowych informacji.</span><span class="sxs-lookup"><span data-stu-id="a65a2-110">Lists all Visual Basic keywords and provides links to more information.</span></span>  
   
- [<span data-ttu-id="c0a86-111">Atrybuty (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c0a86-111">Attributes (Visual Basic)</span></span>](../../visual-basic/language-reference/attributes.md)  
- <span data-ttu-id="c0a86-112">Dokumenty dostępne w języku Visual Basic atrybutów.</span><span class="sxs-lookup"><span data-stu-id="c0a86-112">Documents the attributes available in Visual Basic.</span></span>  
+ [<span data-ttu-id="a65a2-111">Atrybuty (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a65a2-111">Attributes (Visual Basic)</span></span>](../../visual-basic/language-reference/attributes.md)  
+ <span data-ttu-id="a65a2-112">Dokumenty, atrybuty, które są dostępne w języku Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="a65a2-112">Documents the attributes available in Visual Basic.</span></span>  
   
- [<span data-ttu-id="c0a86-113">Stałe i wyliczenia</span><span class="sxs-lookup"><span data-stu-id="c0a86-113">Constants and Enumerations</span></span>](../../visual-basic/language-reference/constants-and-enumerations.md)  
- <span data-ttu-id="c0a86-114">Dokumenty, stałe i wyliczenia dostępna w języku Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="c0a86-114">Documents the constants and enumerations available in Visual Basic.</span></span>  
+ [<span data-ttu-id="a65a2-113">Stałe i wyliczenia</span><span class="sxs-lookup"><span data-stu-id="a65a2-113">Constants and Enumerations</span></span>](../../visual-basic/language-reference/constants-and-enumerations.md)  
+ <span data-ttu-id="a65a2-114">Dokumenty, stałe i wyliczenia, dostępna w języku Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="a65a2-114">Documents the constants and enumerations available in Visual Basic.</span></span>  
   
- [<span data-ttu-id="c0a86-115">Typy danych</span><span class="sxs-lookup"><span data-stu-id="c0a86-115">Data Types</span></span>](../../visual-basic/language-reference/data-types/data-type-summary.md)  
- <span data-ttu-id="c0a86-116">Dokumenty typów danych dostępnych w języku Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="c0a86-116">Documents the data types available in Visual Basic.</span></span>  
+ [<span data-ttu-id="a65a2-115">Typy danych</span><span class="sxs-lookup"><span data-stu-id="a65a2-115">Data Types</span></span>](../../visual-basic/language-reference/data-types/index.md)  
+ <span data-ttu-id="a65a2-116">Dokumenty typów danych dostępnych w języku Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="a65a2-116">Documents the data types available in Visual Basic.</span></span>  
   
- [<span data-ttu-id="c0a86-117">Dyrektywy</span><span class="sxs-lookup"><span data-stu-id="c0a86-117">Directives</span></span>](../../visual-basic/language-reference/directives/directives.md)  
- <span data-ttu-id="c0a86-118">Dokumenty dostępne w języku Visual Basic dyrektywy kompilatora.</span><span class="sxs-lookup"><span data-stu-id="c0a86-118">Documents the compiler directives available in Visual Basic.</span></span>  
+ [<span data-ttu-id="a65a2-117">Dyrektywy</span><span class="sxs-lookup"><span data-stu-id="a65a2-117">Directives</span></span>](../../visual-basic/language-reference/directives/index.md)  
+ <span data-ttu-id="a65a2-118">Dokumenty dostępne w języku Visual Basic dyrektywy kompilatora.</span><span class="sxs-lookup"><span data-stu-id="a65a2-118">Documents the compiler directives available in Visual Basic.</span></span>  
   
- [<span data-ttu-id="c0a86-119">Funkcje</span><span class="sxs-lookup"><span data-stu-id="c0a86-119">Functions</span></span>](../../visual-basic/language-reference/functions/index.md)  
- <span data-ttu-id="c0a86-120">Dokumenty dostępne w języku Visual Basic funkcje czasu wykonywania.</span><span class="sxs-lookup"><span data-stu-id="c0a86-120">Documents the run-time functions available in Visual Basic.</span></span>  
+ [<span data-ttu-id="a65a2-119">Funkcje</span><span class="sxs-lookup"><span data-stu-id="a65a2-119">Functions</span></span>](../../visual-basic/language-reference/functions/index.md)  
+ <span data-ttu-id="a65a2-120">Dokumenty dostępne w języku Visual Basic funkcje środowiska wykonawczego.</span><span class="sxs-lookup"><span data-stu-id="a65a2-120">Documents the run-time functions available in Visual Basic.</span></span>  
   
- [<span data-ttu-id="c0a86-121">Modyfikatory</span><span class="sxs-lookup"><span data-stu-id="c0a86-121">Modifiers</span></span>](../../visual-basic/language-reference/modifiers/index.md)  
- <span data-ttu-id="c0a86-122">Zawiera listę modyfikatorów środowiska wykonawczego Visual Basic oraz zawiera łącza do dodatkowych informacji.</span><span class="sxs-lookup"><span data-stu-id="c0a86-122">Lists the Visual Basic run-time modifiers and provides links to more information.</span></span>  
+ [<span data-ttu-id="a65a2-121">Modyfikatory</span><span class="sxs-lookup"><span data-stu-id="a65a2-121">Modifiers</span></span>](../../visual-basic/language-reference/modifiers/index.md)  
+ <span data-ttu-id="a65a2-122">Wyświetla listę Modyfikatory środowiska wykonawczego języka Visual Basic i zawiera łącza do dodatkowych informacji.</span><span class="sxs-lookup"><span data-stu-id="a65a2-122">Lists the Visual Basic run-time modifiers and provides links to more information.</span></span>  
   
- [<span data-ttu-id="c0a86-123">Moduły</span><span class="sxs-lookup"><span data-stu-id="c0a86-123">Modules</span></span>](../../visual-basic/language-reference/modules.md)  
- <span data-ttu-id="c0a86-124">Dokumenty dostępne w Visual Basic i ich elementy członkowskie modułów.</span><span class="sxs-lookup"><span data-stu-id="c0a86-124">Documents the modules available in Visual Basic and their members.</span></span>  
+ [<span data-ttu-id="a65a2-123">Moduły</span><span class="sxs-lookup"><span data-stu-id="a65a2-123">Modules</span></span>](../../visual-basic/language-reference/modules.md)  
+ <span data-ttu-id="a65a2-124">Dokumenty, moduły, które są dostępne w Visual Basic i ich elementów członkowskich.</span><span class="sxs-lookup"><span data-stu-id="a65a2-124">Documents the modules available in Visual Basic and their members.</span></span>  
   
- [<span data-ttu-id="c0a86-125">Nothing</span><span class="sxs-lookup"><span data-stu-id="c0a86-125">Nothing</span></span>](../../visual-basic/language-reference/nothing.md)  
- <span data-ttu-id="c0a86-126">W tym artykule opisano, wartością domyślną każdego typu danych.</span><span class="sxs-lookup"><span data-stu-id="c0a86-126">Describes the default value of any data type.</span></span>  
+ [<span data-ttu-id="a65a2-125">Nothing</span><span class="sxs-lookup"><span data-stu-id="a65a2-125">Nothing</span></span>](../../visual-basic/language-reference/nothing.md)  
+ <span data-ttu-id="a65a2-126">W tym artykule opisano, wartością domyślną każdego typu danych.</span><span class="sxs-lookup"><span data-stu-id="a65a2-126">Describes the default value of any data type.</span></span>  
   
- [<span data-ttu-id="c0a86-127">Obiekty</span><span class="sxs-lookup"><span data-stu-id="c0a86-127">Objects</span></span>](../../visual-basic/language-reference/objects/index.md)  
- <span data-ttu-id="c0a86-128">Dokumenty dostępne w Visual Basic i ich elementy członkowskie obiektów.</span><span class="sxs-lookup"><span data-stu-id="c0a86-128">Documents the objects available in Visual Basic and their members.</span></span>  
+ [<span data-ttu-id="a65a2-127">Obiekty</span><span class="sxs-lookup"><span data-stu-id="a65a2-127">Objects</span></span>](../../visual-basic/language-reference/objects/index.md)  
+ <span data-ttu-id="a65a2-128">Dokumenty dostępne w Visual Basic i ich elementy członkowskie obiektów.</span><span class="sxs-lookup"><span data-stu-id="a65a2-128">Documents the objects available in Visual Basic and their members.</span></span>  
   
- [<span data-ttu-id="c0a86-129">Operatory</span><span class="sxs-lookup"><span data-stu-id="c0a86-129">Operators</span></span>](../../visual-basic/language-reference/operators/index.md)  
- <span data-ttu-id="c0a86-130">Dokumentów dostępnych w języku Visual Basic operatorów.</span><span class="sxs-lookup"><span data-stu-id="c0a86-130">Documents the operators available in Visual Basic.</span></span>  
+ [<span data-ttu-id="a65a2-129">Operatory</span><span class="sxs-lookup"><span data-stu-id="a65a2-129">Operators</span></span>](../../visual-basic/language-reference/operators/index.md)  
+ <span data-ttu-id="a65a2-130">Dokumenty, operatory, które są dostępne w języku Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="a65a2-130">Documents the operators available in Visual Basic.</span></span>  
   
- [<span data-ttu-id="c0a86-131">Właściwości</span><span class="sxs-lookup"><span data-stu-id="c0a86-131">Properties</span></span>](../../visual-basic/language-reference/properties.md)  
- <span data-ttu-id="c0a86-132">Dokumenty właściwości dostępne w języku Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="c0a86-132">Documents the properties available in Visual Basic.</span></span>  
+ [<span data-ttu-id="a65a2-131">Właściwości</span><span class="sxs-lookup"><span data-stu-id="a65a2-131">Properties</span></span>](../../visual-basic/language-reference/properties.md)  
+ <span data-ttu-id="a65a2-132">Dokumenty właściwości dostępnych w języku Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="a65a2-132">Documents the properties available in Visual Basic.</span></span>  
   
- [<span data-ttu-id="c0a86-133">Zapytania</span><span class="sxs-lookup"><span data-stu-id="c0a86-133">Queries</span></span>](../../visual-basic/language-reference/queries/queries.md)  
- <span data-ttu-id="c0a86-134">Zawiera informacje o używaniu [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] wyrażeń w kodzie.</span><span class="sxs-lookup"><span data-stu-id="c0a86-134">Provides reference information about using [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressions in your code.</span></span>  
+ [<span data-ttu-id="a65a2-133">Zapytania</span><span class="sxs-lookup"><span data-stu-id="a65a2-133">Queries</span></span>](../../visual-basic/language-reference/queries/index.md)  
+ <span data-ttu-id="a65a2-134">Zawiera informacje o używaniu [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] wyrażeń w kodzie.</span><span class="sxs-lookup"><span data-stu-id="a65a2-134">Provides reference information about using [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressions in your code.</span></span>  
   
- [<span data-ttu-id="c0a86-135">Instrukcje</span><span class="sxs-lookup"><span data-stu-id="c0a86-135">Statements</span></span>](../../visual-basic/language-reference/statements/index.md)  
- <span data-ttu-id="c0a86-136">Dokumenty dostępne w języku Visual Basic instrukcje deklaracji i plik wykonywalny.</span><span class="sxs-lookup"><span data-stu-id="c0a86-136">Documents the declaration and executable statements available in Visual Basic.</span></span>  
+ [<span data-ttu-id="a65a2-135">Instrukcje</span><span class="sxs-lookup"><span data-stu-id="a65a2-135">Statements</span></span>](../../visual-basic/language-reference/statements/index.md)  
+ <span data-ttu-id="a65a2-136">Dokumenty instrukcji deklaracji i plik wykonywalny, które muszą być dostępne w języku Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="a65a2-136">Documents the declaration and executable statements available in Visual Basic.</span></span>  
   
- [<span data-ttu-id="c0a86-137">Tagi komentarza XML</span><span class="sxs-lookup"><span data-stu-id="c0a86-137">XML Comment Tags</span></span>](../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)  
- <span data-ttu-id="c0a86-138">W tym artykule opisano komentarzy dokumentacji, dla których IntelliSense znajduje się w edytorze kodu języka Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="c0a86-138">Describes the documentation comments for which IntelliSense is provided in the Visual Basic Code Editor.</span></span>  
+ [<span data-ttu-id="a65a2-137">Tagi komentarza XML</span><span class="sxs-lookup"><span data-stu-id="a65a2-137">XML Comment Tags</span></span>](../../visual-basic/language-reference/xmldoc/index.md)  
+ <span data-ttu-id="a65a2-138">W tym artykule opisano komentarzy dokumentacji, dla których jest dostępna w edytorze kodu języka Visual Basic funkcja IntelliSense.</span><span class="sxs-lookup"><span data-stu-id="a65a2-138">Describes the documentation comments for which IntelliSense is provided in the Visual Basic Code Editor.</span></span>  
   
- [<span data-ttu-id="c0a86-139">Właściwości osi XML</span><span class="sxs-lookup"><span data-stu-id="c0a86-139">XML Axis Properties</span></span>](../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
- <span data-ttu-id="c0a86-140">Zawiera linki do informacji dotyczących dostępu bezpośrednio w kodzie XML za pomocą właściwości osi XML.</span><span class="sxs-lookup"><span data-stu-id="c0a86-140">Provides links to information about using XML axis properties to access XML directly in your code.</span></span>  
+ [<span data-ttu-id="a65a2-139">Właściwości osi XML</span><span class="sxs-lookup"><span data-stu-id="a65a2-139">XML Axis Properties</span></span>](../../visual-basic/language-reference/xml-axis/index.md)  
+ <span data-ttu-id="a65a2-140">Zawiera łącza do informacji o korzystaniu z właściwości osi XML uzyskiwanie dostępu do XML bezpośrednio w kodzie.</span><span class="sxs-lookup"><span data-stu-id="a65a2-140">Provides links to information about using XML axis properties to access XML directly in your code.</span></span>  
   
- [<span data-ttu-id="c0a86-141">Literały XML</span><span class="sxs-lookup"><span data-stu-id="c0a86-141">XML Literals</span></span>](../../visual-basic/language-reference/xml-literals/index.md)  
- <span data-ttu-id="c0a86-142">Zawiera linki do informacji o użyciu literałów XML, aby dołączyć do nich bezpośrednio w kodzie XML.</span><span class="sxs-lookup"><span data-stu-id="c0a86-142">Provides links to information about using XML literals to incorporate XML directly in your code.</span></span>  
+ [<span data-ttu-id="a65a2-141">Literały XML</span><span class="sxs-lookup"><span data-stu-id="a65a2-141">XML Literals</span></span>](../../visual-basic/language-reference/xml-literals/index.md)  
+ <span data-ttu-id="a65a2-142">Zawiera łącza do informacji o użyciu literałów XML włączenie XML bezpośrednio w kodzie.</span><span class="sxs-lookup"><span data-stu-id="a65a2-142">Provides links to information about using XML literals to incorporate XML directly in your code.</span></span>  
   
- [<span data-ttu-id="c0a86-143">Komunikaty o błędach</span><span class="sxs-lookup"><span data-stu-id="c0a86-143">Error Messages</span></span>](../../visual-basic/language-reference/error-messages/index.md)  
- <span data-ttu-id="c0a86-144">Zawiera listę komunikaty kompilatora i środowiska wykonawczego Visual Basic i pomoc na temat sposobu ich obsługę.</span><span class="sxs-lookup"><span data-stu-id="c0a86-144">Provides a listing of Visual Basic compiler and run-time error messages and help on how to handle them.</span></span>  
+ [<span data-ttu-id="a65a2-143">Komunikaty o błędach</span><span class="sxs-lookup"><span data-stu-id="a65a2-143">Error Messages</span></span>](../../visual-basic/language-reference/error-messages/index.md)  
+ <span data-ttu-id="a65a2-144">Zawiera listę komunikatów błąd kompilatora i środowiska wykonawczego języka Visual Basic oraz pomoc je obsłużyć.</span><span class="sxs-lookup"><span data-stu-id="a65a2-144">Provides a listing of Visual Basic compiler and run-time error messages and help on how to handle them.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="c0a86-145">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="c0a86-145">Related Sections</span></span>  
- [<span data-ttu-id="c0a86-146">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c0a86-146">Visual Basic</span></span>](../../visual-basic/index.md)  
- <span data-ttu-id="c0a86-147">Zapewnia kompleksowe pomocy na wszystkich obszarów języka Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="c0a86-147">Provides comprehensive help on all areas of the Visual Basic language.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="a65a2-145">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="a65a2-145">Related Sections</span></span>  
+ [<span data-ttu-id="a65a2-146">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a65a2-146">Visual Basic</span></span>](../../visual-basic/index.md)  
+ <span data-ttu-id="a65a2-147">Zapewnia kompleksową pomoc na wszystkich obszarów narzędzia języka Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="a65a2-147">Provides comprehensive help on all areas of the Visual Basic language.</span></span>  
   
- [<span data-ttu-id="c0a86-148">Kompilator w wierszu polecenia programu Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c0a86-148">Visual Basic Command-Line Compiler</span></span>](../../visual-basic/reference/command-line-compiler/index.md)  
- <span data-ttu-id="c0a86-149">Informacje dotyczące używania kompilatora wiersza polecenia zamiast kompilowanie programów w programie Visual Studio zintegrowane środowisko programistyczne (IDE).</span><span class="sxs-lookup"><span data-stu-id="c0a86-149">Describes how to use the command-line compiler as an alternative to compiling programs from within the Visual Studio integrated development environment (IDE).</span></span>
+ [<span data-ttu-id="a65a2-148">Kompilator wiersza polecenia programu Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a65a2-148">Visual Basic Command-Line Compiler</span></span>](../../visual-basic/reference/command-line-compiler/index.md)  
+ <span data-ttu-id="a65a2-149">Opisuje sposób używania kompilatora wiersza polecenia, co jest alternatywą do kompilowania programów z w ramach programu Visual Studio zintegrowane środowisko programistyczne (IDE).</span><span class="sxs-lookup"><span data-stu-id="a65a2-149">Describes how to use the command-line compiler as an alternative to compiling programs from within the Visual Studio integrated development environment (IDE).</span></span>

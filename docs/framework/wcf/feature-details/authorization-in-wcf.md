@@ -5,36 +5,36 @@ helpviewer_keywords:
 - authorization [WCF]
 - security [WCF], authorization
 ms.assetid: 8ea0b552-af65-45b0-a157-c6c111b8ce5e
-ms.openlocfilehash: c6bf779c7baeea1f9a253ad0bde966cea67b57aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e7632dda1a1bd2b60b71c385ad58c23e4207534
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488575"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408319"
 ---
-# <a name="authorization-in-wcf"></a><span data-ttu-id="095bd-102">Autoryzacja w programie WCF</span><span class="sxs-lookup"><span data-stu-id="095bd-102">Authorization in WCF</span></span>
-<span data-ttu-id="095bd-103">Autoryzacja jest proces kontroli dostępu i uprawnienia do zasobów, takich jak usługi lub plików.</span><span class="sxs-lookup"><span data-stu-id="095bd-103">Authorization is the process of controlling access and rights to resources, such as services or files.</span></span> <span data-ttu-id="095bd-104">Tematy w tej sekcji opisano sposób wykonania tego zadania podstawowych w systemie Windows Communication Foundation (WCF) na różne sposoby.</span><span class="sxs-lookup"><span data-stu-id="095bd-104">The topics in this section show you how to perform this basic task in Windows Communication Foundation (WCF) in a variety of ways.</span></span>  
+# <a name="authorization-in-wcf"></a><span data-ttu-id="27123-102">Autoryzacja w programie WCF</span><span class="sxs-lookup"><span data-stu-id="27123-102">Authorization in WCF</span></span>
+<span data-ttu-id="27123-103">Autoryzacja to proces nadzoru nad dostępu i uprawnień do zasobów, takich jak usługi lub plików.</span><span class="sxs-lookup"><span data-stu-id="27123-103">Authorization is the process of controlling access and rights to resources, such as services or files.</span></span> <span data-ttu-id="27123-104">Tematy w tej sekcji pokazano, jak wykonać to zadanie podstawowe w Windows Communication Foundation (WCF) na różne sposoby.</span><span class="sxs-lookup"><span data-stu-id="27123-104">The topics in this section show you how to perform this basic task in Windows Communication Foundation (WCF) in a variety of ways.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="095bd-105">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="095bd-105">In This Section</span></span>  
- [<span data-ttu-id="095bd-106">Mechanizmy kontroli dostępu</span><span class="sxs-lookup"><span data-stu-id="095bd-106">Access Control Mechanisms</span></span>](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
- <span data-ttu-id="095bd-107">Zawiera krótki konspektu mechanizmów autoryzacji WCF i sugerowane zastosowań.</span><span class="sxs-lookup"><span data-stu-id="095bd-107">Provides a brief outline of the authorization mechanisms in WCF, and suggested uses.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="27123-105">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="27123-105">In This Section</span></span>  
+ [<span data-ttu-id="27123-106">Mechanizmy kontroli dostępu</span><span class="sxs-lookup"><span data-stu-id="27123-106">Access Control Mechanisms</span></span>](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
+ <span data-ttu-id="27123-107">Zawiera krótki zarys mechanizmów autoryzacji usługi WCF i sugerowane używa.</span><span class="sxs-lookup"><span data-stu-id="27123-107">Provides a brief outline of the authorization mechanisms in WCF, and suggested uses.</span></span>  
   
- [<span data-ttu-id="095bd-108">Instrukcje: ograniczanie dostępu przy użyciu klasy PrincipalPermissionAttribute</span><span class="sxs-lookup"><span data-stu-id="095bd-108">How to: Restrict Access with the PrincipalPermissionAttribute Class</span></span>](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
- <span data-ttu-id="095bd-109">Przedstawia proces ograniczania dostępu do usługi za pomocą <xref:System.Security.Permissions.PrincipalPermissionAttribute>.</span><span class="sxs-lookup"><span data-stu-id="095bd-109">Shows the process of restricting access to a service with the <xref:System.Security.Permissions.PrincipalPermissionAttribute>.</span></span>  
+ [<span data-ttu-id="27123-108">Instrukcje: ograniczanie dostępu przy użyciu klasy PrincipalPermissionAttribute</span><span class="sxs-lookup"><span data-stu-id="27123-108">How to: Restrict Access with the PrincipalPermissionAttribute Class</span></span>](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
+ <span data-ttu-id="27123-109">Przedstawia proces ograniczanie dostępu do usługi za pomocą <xref:System.Security.Permissions.PrincipalPermissionAttribute>.</span><span class="sxs-lookup"><span data-stu-id="27123-109">Shows the process of restricting access to a service with the <xref:System.Security.Permissions.PrincipalPermissionAttribute>.</span></span>  
   
- [<span data-ttu-id="095bd-110">Instrukcje: używanie dostawcy ról ASP.NET razem z usługą</span><span class="sxs-lookup"><span data-stu-id="095bd-110">How to: Use the ASP.NET Role Provider with a Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
- <span data-ttu-id="095bd-111">Przeprowadzi Cię przez konfigurację usługi do korzystania z funkcji dostawcy roli programu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].</span><span class="sxs-lookup"><span data-stu-id="095bd-111">Walks through the configuration of a service to enable it to use the role provider feature of [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].</span></span>  
+ [<span data-ttu-id="27123-110">Instrukcje: używanie dostawcy ról ASP.NET razem z usługą</span><span class="sxs-lookup"><span data-stu-id="27123-110">How to: Use the ASP.NET Role Provider with a Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
+ <span data-ttu-id="27123-111">Omawia konfigurację usługi, aby włączyć go do użycia funkcję dostawcy roli [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].</span><span class="sxs-lookup"><span data-stu-id="27123-111">Walks through the configuration of a service to enable it to use the role provider feature of [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].</span></span>  
   
- [<span data-ttu-id="095bd-112">Instrukcje: używanie dostawcy roli menedżera autoryzacji platformy ASP.NET za pomocą usługi</span><span class="sxs-lookup"><span data-stu-id="095bd-112">How to: Use the ASP.NET Authorization Manager Role Provider with a Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]<span data-ttu-id="095bd-113"> można użyć Menedżera autoryzacji do zarządzania autoryzacji dla witryny sieci Web.</span><span class="sxs-lookup"><span data-stu-id="095bd-113"> can use the Authorization Manager to manage authorization for a Web site.</span></span> <span data-ttu-id="095bd-114">Podobnie można wykorzystać WCF [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]kombinacja /Authorization Menedżera autoryzacji klientów.</span><span class="sxs-lookup"><span data-stu-id="095bd-114">WCF can similarly leverage the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]/Authorization Manager combination for authorization of clients.</span></span>  
+ [<span data-ttu-id="27123-112">Instrukcje: używanie dostawcy roli menedżera autoryzacji platformy ASP.NET za pomocą usługi</span><span class="sxs-lookup"><span data-stu-id="27123-112">How to: Use the ASP.NET Authorization Manager Role Provider with a Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
+ [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]<span data-ttu-id="27123-113"> można użyć Menedżera autoryzacji do zarządzania autoryzacji dla witryny sieci Web.</span><span class="sxs-lookup"><span data-stu-id="27123-113"> can use the Authorization Manager to manage authorization for a Web site.</span></span> <span data-ttu-id="27123-114">Podobnie można korzystać z usługi WCF [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]kombinacja /Authorization Menedżera autoryzacji klientów.</span><span class="sxs-lookup"><span data-stu-id="27123-114">WCF can similarly leverage the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]/Authorization Manager combination for authorization of clients.</span></span>  
   
- [<span data-ttu-id="095bd-115">Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości</span><span class="sxs-lookup"><span data-stu-id="095bd-115">Managing Claims and Authorization with the Identity Model</span></span>](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
- <span data-ttu-id="095bd-116">Przedstawiono podstawowe do autoryzacji opartej na oświadczeniach za pomocą modelu tożsamości infrastruktury.</span><span class="sxs-lookup"><span data-stu-id="095bd-116">Explains the basics of using the Identity Model infrastructure for claims-based authorization.</span></span>  
+ [<span data-ttu-id="27123-115">Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości</span><span class="sxs-lookup"><span data-stu-id="27123-115">Managing Claims and Authorization with the Identity Model</span></span>](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
+ <span data-ttu-id="27123-116">Objaśnia podstawy przy użyciu infrastruktury modelu tożsamości do autoryzacji opartej na oświadczeniach.</span><span class="sxs-lookup"><span data-stu-id="27123-116">Explains the basics of using the Identity Model infrastructure for claims-based authorization.</span></span>  
   
- [<span data-ttu-id="095bd-117">Delegowanie i personifikacja</span><span class="sxs-lookup"><span data-stu-id="095bd-117">Delegation and Impersonation</span></span>](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
- <span data-ttu-id="095bd-118">Objaśniono różnicę między delegowanie i personifikacja.</span><span class="sxs-lookup"><span data-stu-id="095bd-118">Explains the difference between delegation and impersonation.</span></span>  
+ [<span data-ttu-id="27123-117">Delegowanie i personifikacja</span><span class="sxs-lookup"><span data-stu-id="27123-117">Delegation and Impersonation</span></span>](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
+ <span data-ttu-id="27123-118">Wyjaśnia różnicę pomiędzy delegowanie i personifikacja.</span><span class="sxs-lookup"><span data-stu-id="27123-118">Explains the difference between delegation and impersonation.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="095bd-119">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="095bd-119">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="27123-119">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="27123-119">Reference</span></span>  
  <xref:System.ServiceModel.Security>  
   
  <xref:System.ServiceModel.Description.PrincipalPermissionMode>  
@@ -43,9 +43,9 @@ ms.locfileid: "33488575"
   
  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
   
-## <a name="related-sections"></a><span data-ttu-id="095bd-120">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="095bd-120">Related Sections</span></span>  
- [<span data-ttu-id="095bd-121">Uwierzytelnianie</span><span class="sxs-lookup"><span data-stu-id="095bd-121">Authentication</span></span>](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
+## <a name="related-sections"></a><span data-ttu-id="27123-120">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="27123-120">Related Sections</span></span>  
+ [<span data-ttu-id="27123-121">Uwierzytelnianie</span><span class="sxs-lookup"><span data-stu-id="27123-121">Authentication</span></span>](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
   
-## <a name="see-also"></a><span data-ttu-id="095bd-122">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="095bd-122">See Also</span></span>  
- [<span data-ttu-id="095bd-123">Przegląd zabezpieczeń</span><span class="sxs-lookup"><span data-stu-id="095bd-123">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [<span data-ttu-id="095bd-124">Model zabezpieczeń systemu Windows Server AppFabric</span><span class="sxs-lookup"><span data-stu-id="095bd-124">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="27123-122">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="27123-122">See Also</span></span>  
+ [<span data-ttu-id="27123-123">Przegląd zabezpieczeń</span><span class="sxs-lookup"><span data-stu-id="27123-123">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="27123-124">Model zabezpieczeń dla systemu Windows Server AppFabric</span><span class="sxs-lookup"><span data-stu-id="27123-124">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

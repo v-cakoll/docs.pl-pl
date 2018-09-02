@@ -1,18 +1,18 @@
 ---
-title: Parametry REF CURSOR w OracleDataReader
+title: Parametry kursora REF CURSOR w OracleDataReader
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 801dff0f-2508-45aa-9416-f45d6887740c
-ms.openlocfilehash: c01b2b7f17f497d192d4db1ccd63b0a6bad26bf5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3a2c8949537c749ba30b116a0dc8131336de6092
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359196"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399972"
 ---
-# <a name="ref-cursor-parameters-in-an-oracledatareader"></a><span data-ttu-id="7dce7-102">Parametry REF CURSOR w OracleDataReader</span><span class="sxs-lookup"><span data-stu-id="7dce7-102">REF CURSOR Parameters in an OracleDataReader</span></span>
-<span data-ttu-id="7dce7-103">W tym przykładzie Microsoft Visual Basic wykonuje procedury składowane PL/SQL, która zwraca parametr REF CURSOR i odczytuje wartość jako <xref:System.Data.OracleClient.OracleDataReader>.</span><span class="sxs-lookup"><span data-stu-id="7dce7-103">This Microsoft Visual Basic example executes a PL/SQL stored procedure that returns a REF CURSOR parameter, and reads the value as an <xref:System.Data.OracleClient.OracleDataReader>.</span></span>  
+# <a name="ref-cursor-parameters-in-an-oracledatareader"></a><span data-ttu-id="1dd06-102">Parametry kursora REF CURSOR w OracleDataReader</span><span class="sxs-lookup"><span data-stu-id="1dd06-102">REF CURSOR Parameters in an OracleDataReader</span></span>
+<span data-ttu-id="1dd06-103">W tym przykładzie języka Visual Basic wykonuje procedury przechowywane PL/SQL, która zwraca parametr REF CURSOR i odczytuje wartość jako <xref:System.Data.OracleClient.OracleDataReader>.</span><span class="sxs-lookup"><span data-stu-id="1dd06-103">This Microsoft Visual Basic example executes a PL/SQL stored procedure that returns a REF CURSOR parameter, and reads the value as an <xref:System.Data.OracleClient.OracleDataReader>.</span></span>  
   
 ```vb  
 Private Sub Button1_Click(ByVal sender As Object, _  
@@ -43,6 +43,6 @@ Private Sub Button1_Click(ByVal sender As Object, _
 End Sub  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7dce7-104">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="7dce7-104">See Also</span></span>  
- [<span data-ttu-id="7dce7-105">Oracle REF CURSOR</span><span class="sxs-lookup"><span data-stu-id="7dce7-105">Oracle REF CURSORs</span></span>](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
- [<span data-ttu-id="7dce7-106">ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów</span><span class="sxs-lookup"><span data-stu-id="7dce7-106">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="1dd06-104">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="1dd06-104">See Also</span></span>  
+ [<span data-ttu-id="1dd06-105">Oracle REF CURSOR</span><span class="sxs-lookup"><span data-stu-id="1dd06-105">Oracle REF CURSORs</span></span>](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
+ [<span data-ttu-id="1dd06-106">ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych</span><span class="sxs-lookup"><span data-stu-id="1dd06-106">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -13,7 +13,6 @@
 ### [Używanie operatorów konwersji](using-conversion-operators.md)
 ### [Instrukcje: implementowanie zdefiniowanych przez użytkownika konwersji struktur](how-to-implement-user-defined-conversions-between-structs.md)
 ## [Wyrażenia wartości domyślnych](default-value-expressions.md)
-## [Instrukcje: użycie przeładowania operatora do utworzenia złożonej klasy liczbowej](how-to-use-operator-overloading-to-create-a-complex-number-class.md)
 ## [Porównywanie równości](equality-comparisons.md)
 ### [Instrukcje: definiowanie równości wartości dla typu](how-to-define-value-equality-for-a-type.md)
 ### [Instrukcje: testowanie równości odwołań (tożsamości)](how-to-test-for-reference-equality-identity.md)

@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d7b12004efce76f9ac591f18fd0f4e06fdd7fd0
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: dd0fef0e8a2c4b94cd5dd7beb140e669c52a07a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934954"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416963"
 ---
 # <a name="profiling-overview"></a>Omówienie profilowania
 <a name="top"></a> Program profilujący to narzędzie, które monitoruje wykonanie innej aplikacji. Typowe profiler środowiska uruchomieniowego (języka wspólnego CLR) języka jest biblioteki dołączanej dynamicznie (DLL), która składa się z funkcji, które odbierają wiadomości ze i wysyłanie komunikatów do środowiska CLR przy użyciu profilowania interfejsu API. Program profilujący DLL jest ładowany przez środowisko CLR w czasie wykonywania.  
@@ -209,7 +209,7 @@ Profilowanie architektury
 ### <a name="stack-snapshot"></a>Migawka stosu  
  Migawka stosu jest śladem stosu wątku na moment w czasie. Profilowania API obsługuje śledzenie zarządzanej funkcji na stosie, ale pozostawia śledzenia funkcji niezarządzanych do własnego profiler walker stosu.  
   
- Aby uzyskać więcej informacji na temat sposobu programowania programu profilującego do przejścia przez stosy zarządzane, zobacz [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) metody, w tym zestawie dokumentacji i [Profiler stosu zalet w programie .NET Framework 2.0: Podstawy i](http://go.microsoft.com/fwlink/?LinkId=73638).
+ Aby uzyskać więcej informacji na temat sposobu programowania programu profilującego do przejścia przez stosy zarządzane, zobacz [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) metody, w tym zestawie dokumentacji i [Profiler stosu zalet w programie .NET Framework 2.0: Podstawy i](https://go.microsoft.com/fwlink/?LinkId=73638).
   
 ### <a name="shadow-stack"></a>Stos cieni  
  Przy użyciu metody migawki zbyt często można szybko utworzyć problemu z wydajnością. Jeśli chcesz śledzić stos często Twój program profilujący w zamian powinien skompilować cień stosu za pomocą [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md), i [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) wywołań zwrotnych wyjątków. Stos cienia jest zawsze aktualny i szybko może być kopiowany do magazynu, ilekroć migawka stosu jest potrzebna.  

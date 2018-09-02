@@ -2,12 +2,12 @@
 title: '&lt;webSocketSettings&gt;'
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: 84aee31b6c15beb32732f89eae7c3d176f57971d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e5f34dca83c8d3d08d27fb72bee5af2a89ac6b9f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754840"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416431"
 ---
 # <a name="ltwebsocketsettingsgt"></a>&lt;webSocketSettings&gt;
 Element konfiguracji, służy do określania ustawień gniazda sieci Web.  
@@ -42,11 +42,11 @@ Element konfiguracji, służy do określania ustawień gniazda sieci Web.
 |---------------|-----------------|  
 |createNotificationOnConnection|Określa, czy powiadomienie jest wysyłane po nawiązaniu połączenia.|  
 |disablePayloadMasking|Określa, czy maskowania gniazda sieci Web jest wyłączona.|  
-|keepAliveInterval|Określa interwał keep alive.|  
-|maxPendingConnections|Określa maksymalną liczbę połączeń oczekujących na wysyłania w usłudze.|  
-|receiveBufferSize|Określa rozmiar buforu odbioru.|  
-|sendBufferSize|Określa rozmiar buforów wysyłania.|  
-|subProtocol|Określa podprotokołu gniazda sieci Web.|  
+|keepAliveInterval|Określa interwał utrzymywania aktywności Zachowaj.|  
+|maxPendingConnections|Określa maksymalną liczbę połączeń, oczekiwanie na wysłanie w usłudze.|  
+|receiveBufferSize|Określa rozmiar buforów odbioru.|  
+|sendBufferSize|Określa rozmiar buforu wysyłania.|  
+|subProtocol|Określa podprotokół gniazda sieci Web.|  
 |transportUsage|Określa, kiedy należy używać gniazda sieci Web.|  
   
 ## <a name="transportusage-attribute"></a>transportUsage atrybutu  
@@ -54,8 +54,8 @@ Element konfiguracji, służy do określania ustawień gniazda sieci Web.
 |Wartość|Opis|  
 |-----------|-----------------|  
 |WhenDuplex|Gdy kontrakt jest dupleksowy, należy użyć protokołu gniazda sieci Web.|  
-|Zawsze|Zawsze używaj protokołu gniazda sieci Web, niezależnie od tego kontraktu.|  
-|Nigdy nie|Nigdy nie używaj protokołu gniazda sieci Web.|  
+|zawsze|Zawsze używaj protokołu gniazda sieci Web, niezależnie od tego kontraktu.|  
+|nigdy nie|Nigdy nie używaj protokołu Websocket.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -67,7 +67,7 @@ Element konfiguracji, służy do określania ustawień gniazda sieci Web.
 |\<netHttpBinding >|Określa elementu NetHttpBinding|  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia użycie \<webSocketSettings > elementu.  
+ Poniższy przykład pokazuje, jak używać \<webSocketSettings > element.  
   
 ```xml  
 <netHttpBinding>  
@@ -92,5 +92,5 @@ Element konfiguracji, służy do określania ustawień gniazda sieci Web.
  <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
  [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
  [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie usług Windows Communication Foundation i klientów za pomocą powiązań](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Konfigurowanie Windows Communication Foundation i klientów za pomocą powiązań](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

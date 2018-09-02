@@ -7,25 +7,25 @@ ms.assetid: 5b89d3fb-3c9a-49e2-af1f-c34c020c68ac
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: db2c42dab15b4282c5474c50f970ffe47a101215
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 68c69de839ccbd51de9f0bfa74be018f877f7731
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393455"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416874"
 ---
 # <a name="httplistener"></a>HttpListener
-<xref:System.Net.HttpListener> Klasa udostępnia programowo kontrolowane odbiornika protokołu HTTP. Odbiornik jest aktywne przez czas ich istnienia <xref:System.Net.HttpListener> obiektu i działa w aplikacji.  
+<xref:System.Net.HttpListener> Klasa udostępnia programowo kontrolowanego odbiornika protokołu HTTP. Odbiornik jest aktywna przez okres istnienia <xref:System.Net.HttpListener> obiektu i jest uruchamiana w ramach aplikacji.  
   
 ## <a name="httpsys"></a>PROTOKÓŁ HTTP. SYS  
- <xref:System.Net.HttpListener> Klasy jest oparty na HTTP.sys, który jest odbiornik trybu jądra, który obsługuje cały ruch HTTP dla systemu Windows. Składnik HTTP.sys zapewnia zarządzanie połączeniami, przepustowości i rejestrowanie serwera sieci Web. Użyj `HttpCfg.exe` narzędzia, aby dodać certyfikaty SSL. Aby uzyskać więcej informacji, zobacz dokumentację na [HttpCfg.exe](http://go.microsoft.com/fwlink/?LinkID=178284) narzędzie w [serwera](http://go.microsoft.com/fwlink/?LinkID=178285) dokumentacji.  
+ <xref:System.Net.HttpListener> Klasy są wbudowane HTTP.sys, czyli odbiornik trybu jądra, który obsługuje cały ruch HTTP dla Windows. Sterownik HTTP.sys zapewnia zarządzanie połączeniami, ograniczenie przepustowości i rejestrowanie serwera sieci Web. Użyj `HttpCfg.exe` narzędzie, aby dodać certyfikaty SSL. Aby uzyskać więcej informacji, zobacz dokumentację na [HttpCfg.exe](https://go.microsoft.com/fwlink/?LinkID=178284) narzędzia w [serwera](https://go.microsoft.com/fwlink/?LinkID=178285) dokumentacji.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Net.HttpListener>  
  <xref:System.Net.HttpWebRequest>  
  <xref:System.Net.HttpWebResponse>  
- [Serwer HTTP](http://go.microsoft.com/fwlink/?LinkID=178285)  
- [Ulepszenia zabezpieczeń programu Internet Information](http://go.microsoft.com/fwlink/?LinkID=178286)  
- [Przykład aplikacji hosta HttpListener ASPX](http://go.microsoft.com/fwlink/?LinkID=179560)  
- [Przykładowe technologii HttpListener](http://go.microsoft.com/fwlink/?LinkID=179558)  
+ [Serwer HTTP](https://go.microsoft.com/fwlink/?LinkID=178285)  
+ [Usprawnienia zabezpieczeń w IIS](https://go.microsoft.com/fwlink/?LinkID=178286)  
+ [Przykład aplikacji hosta HttpListener ASPX](https://go.microsoft.com/fwlink/?LinkID=179560)  
+ [Przykład technologii HttpListener](https://go.microsoft.com/fwlink/?LinkID=179558)  
  [Przykłady programowania sieciowego](../../../docs/framework/network-programming/network-programming-samples.md)

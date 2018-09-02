@@ -2,35 +2,35 @@
 title: Dostawca tokenów SAML
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 519bde6b2849328efdeb2f295bde4749fbb652ca
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 509469404e2c3866c26b5e1817a819519203c175
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808783"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418042"
 ---
 # <a name="saml-token-provider"></a>Dostawca tokenów SAML
-W tym przykładzie pokazano, jak implementacja klienta niestandardowego dostawcy tokenu SAML. Dostawca tokenu w systemie Windows Communication Foundation (WCF) służy do podawania poświadczeń w celu zabezpieczenia infrastruktury. Dostawca tokenu ogólnie sprawdza obiektu docelowego i problemów odpowiednie poświadczenia, aby infrastruktura zabezpieczeń można zabezpieczyć komunikatu. Usługi WCF jest dostarczany z domyślnego dostawcy tokenu Menedżera poświadczeń. Usługi WCF jest także dostarczany z [!INCLUDE[infocard](../../../../includes/infocard-md.md)] dostawcy tokenu. Tokenów niestandardowi są przydatne w następujących przypadkach:  
+Ten przykład demonstruje sposób implementacji niestandardowego klienta Dostawca tokenów SAML. Dostawca tokenu w Windows Communication Foundation (WCF) jest używany dla podanie poświadczeń w celu infrastruktura zabezpieczeń. Dostawcy tokenu, który sprawdza ogólnie rzecz biorąc, element docelowy i problemy odpowiednie poświadczenia, aby infrastruktura zabezpieczeń można zabezpieczyć wiadomości. Usługi WCF jest dostarczany z domyślny dostawca tokenu Menedżera poświadczeń. Usługi WCF jest również dostarczany z [!INCLUDE[infocard](../../../../includes/infocard-md.md)] dostawcy tokenu. Niestandardowego dostawcy tokenów są przydatne w następujących przypadkach:  
   
--   Jeśli masz Magazyn poświadczeń, które tych dostawców tokenu nie może pracować z.  
+-   Jeśli masz Magazyn poświadczeń, który te dostawcy tokenów nie może działać z.  
   
--   Jeśli chcesz udostępnić własny niestandardowy mechanizm do przekształcania poświadczenia z punktu, gdy użytkownik podaje szczegóły, aby podczas framework klienta WCF używa poświadczeń.  
+-   Jeśli chcesz udostępnić własny niestandardowy mechanizm przekształcania poświadczenia z punktu, gdy użytkownik udostępnia szczegółowe informacje, na kiedy struktura klienta WCF przy użyciu poświadczeń.  
   
 -   Jeśli tworzysz niestandardowy token.  
   
- Ten przykład przedstawia sposób tworzenia niestandardowego dostawcę tokenów, który umożliwia tokenu SAML uzyskany poza framework klienta WCF do użycia.  
+ Niniejszy przykład pokazuje sposób tworzenia niestandardowego dostawcę tokenów, który umożliwia tokenu SAML uzyskany z poza szablonem klienta WCF, który ma być używany.  
   
- Krótko mówiąc, w tym przykładzie przedstawiono poniżej:  
+ Aby podsumować, w przykładzie pokazano poniżej:  
   
--   Jak można skonfigurować klienta z niestandardowego dostawcy tokenu.  
+-   Jak można skonfigurować klienta przy użyciu niestandardowego dostawcy tokenów.  
   
--   Jak tokenu SAML mogą być przekazywane do poświadczeń klienta.  
+-   Jak tokenu SAML mogą być przekazywane poświadczenia niestandardowego klienta.  
   
--   Jak struktura klienta WCF zapewnia tokenu SAML.  
+-   Jak struktura klienta programu WCF zapewnia SAML token.  
   
--   Jak serwer jest uwierzytelniany przez klienta przy użyciu certyfikat X.509.  
+-   Jak serwer jest uwierzytelniany przez klienta za pomocą certyfikatu X.509 serwera.  
   
- Usługa udostępnia dwa punkty końcowe komunikacji z usługą zdefiniowane przy użyciu pliku konfiguracji App.config. Każdy punkt końcowy składa się z adresu, powiązania i kontrakt. Powiązanie jest skonfigurowane z normą `wsFederationHttpBinding`, zabezpieczenia komunikatów, który używa. Jeden punkt końcowy oczekuje klienta do uwierzytelniania za pomocą tokenu SAML, który używa symetrycznego klucza poświadczającego, podczas gdy druga oczekuje klienta do uwierzytelniania za pomocą tokenu SAML, który używa klucza potwierdzającego asymetrycznego. Usługa konfiguruje również certyfikat usługi przy użyciu `serviceCredentials` zachowanie. `serviceCredentials` Zachowanie umożliwia konfigurowanie certyfikatu usługi. Certyfikat usługi jest używany przez klienta do uwierzytelniania usługi i zapewnienia ochrony wiadomości. Następująca konfiguracja odwołuje się do certyfikatu "localhost" instalowane podczas instalacji próbki zgodnie z opisem w instrukcjach instalacji na końcu tego tematu. `serviceCredentials` Zachowanie umożliwia również konfigurowanie certyfikatów, które są zaufane do podpisywania tokenów SAML. Następująca konfiguracja odwołuje się do certyfikatu "Alicja" instalowane w ramach przykładu.  
+ Usługa udostępnia dwa punkty końcowe dla komunikacji z usługą zdefiniowane przy użyciu pliku konfiguracji App.config. Każdy punkt końcowy składa się z adresu, powiązanie i kontrakt. Powiązanie jest skonfigurowane przy użyciu standardowego `wsFederationHttpBinding`, która używa zabezpieczenia komunikatów. Jeden punkt końcowy oczekuje klienta do uwierzytelniania za pomocą tokenu SAML, które używa klucza symetrycznego dowód, podczas gdy druga oczekuje klienta do uwierzytelniania przy użyciu tokenu SAML, która używa klucza asymetrycznego dowód. Usługa konfiguruje również certyfikat usługi przy użyciu `serviceCredentials` zachowanie. `serviceCredentials` Zachowanie umożliwia skonfigurowanie certyfikatu usługi. Certyfikat usługi jest używany przez klienta do uwierzytelniania usługi, a także zapewnienia ochrony wiadomości. Następująca konfiguracja odwołuje się do certyfikatu "localhost" zainstalowany podczas instalacji przykładowej zgodnie z opisem w instrukcje instalacji, na końcu tego tematu. `serviceCredentials` Zachowanie umożliwia również konfigurowanie certyfikatów, które są zaufane, aby zarejestrować tokeny SAML. Następująca konfiguracja odwołuje się do certyfikatu "Alicja" instalowane w ramach przykładu.  
   
 ```xml  
 <system.serviceModel>  
@@ -111,13 +111,13 @@ W tym przykładzie pokazano, jak implementacja klienta niestandardowego dostawcy
 </system.serviceModel>  
 ```  
   
- Poniższe kroki pokazują, jak utworzyć niestandardowego dostawcę tokenu SAML i zintegrować ją z programem WCF: Struktura zabezpieczeń:  
+ Poniższe kroki pokazują jak utworzyć niestandardowy Dostawca tokenów SAML i zintegrować ją z usługą WCF: struktury zabezpieczeń:  
   
-1.  Pisanie niestandardowych dostawcy tokenu SAML.  
+1.  Napisać niestandardowy Dostawca tokenów SAML.  
   
-     Przykład implementuje niestandardowego dostawcę tokenów SAML, który zwraca token zabezpieczający oparte na potwierdzenia języka SAML, dostarczonego w czasie tworzenia.  
+     Przykład implementuje niestandardowy Dostawca tokenów SAML, która zwraca token zabezpieczający, w oparciu o potwierdzenie SAML, który znajduje się w czasie tworzenia.  
   
-     Aby wykonać to zadanie, niestandardowego dostawcy tokenu jest pochodną <xref:System.IdentityModel.Selectors.SecurityTokenProvider> klasy i zastąpień <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> metody. Ta metoda tworzy i zwraca nowy `SecurityToken`.  
+     Aby wykonać to zadanie, niestandardowego dostawcy tokenów jest tworzony na podstawie <xref:System.IdentityModel.Selectors.SecurityTokenProvider> klasy i zastąpień <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> metody. Ta metoda tworzy i zwraca nowy `SecurityToken`.  
   
     ```  
     protected override SecurityToken GetTokenCore(TimeSpan timeout)  
@@ -156,9 +156,9 @@ W tym przykładzie pokazano, jak implementacja klienta niestandardowego dostawcy
     }  
     ```  
   
-2.  Zapis Menedżer tokenów zabezpieczających niestandardowych.  
+2.  Napisz Menedżer tokenów zabezpieczeń niestandardowych.  
   
-     <xref:System.IdentityModel.Selectors.SecurityTokenManager> Klasa jest używana do tworzenia <xref:System.IdentityModel.Selectors.SecurityTokenProvider> określonych <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> przekazanego do niej w `CreateSecurityTokenProvider` metody. Menedżer tokenów zabezpieczających jest również używane do utworzenia wystawcy uwierzytelnienia tokenu i Serializator tokenu, ale te nie są objęte w tym przykładzie. W tej przykładowej zabezpieczeń niestandardowych dziedziczy Menedżer tokenów <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> klasy i zastąpień `CreateSecurityTokenProvider` żądanej metody do zwracania niestandardowego dostawcy tokenu SAML podczas przekazany wymagania tokenu wskazują, że tokenu SAML. Jeśli klasa poświadczeń klienta nie (zobacz krok 3) określił potwierdzenia, Menedżer tokenów zabezpieczających tworzy odpowiednie wystąpienie.  
+     <xref:System.IdentityModel.Selectors.SecurityTokenManager> Klasa jest używana do tworzenia <xref:System.IdentityModel.Selectors.SecurityTokenProvider> dla konkretnego <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> przekazanego do niej w `CreateSecurityTokenProvider` metody. Menedżer tokenów zabezpieczeń jest również używany do tworzenia wystawcy uwierzytelnienia tokenu i Serializator tokenów, ale te nie są objęte tego przykładu. W tym przykładowe niestandardowe zabezpieczeń, Menedżer tokenów dziedziczy <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> klasy i zastąpień `CreateSecurityTokenProvider` żądana jest metoda do zwrócenia niestandardowego dostawcy tokenów SAML przy przekazany wymagania tokenu wskazują, że SAML token. Jeśli klasa poświadczeń klienta nie (zobacz krok 3) określił potwierdzenie, Menedżer tokenów zabezpieczeń tworzy odpowiednie wystąpienie.  
   
     ```  
     public class SamlSecurityTokenManager :  
@@ -230,7 +230,7 @@ W tym przykładzie pokazano, jak implementacja klienta niestandardowego dostawcy
   
 3.  Wpisz poświadczenia niestandardowego klienta.  
   
-     Klasa poświadczeń klienta jest używana do reprezentowania poświadczenia, które są skonfigurowane dla serwera proxy klienta i tworzy Menedżer tokenów, który jest używany do uzyskania wystawcy uwierzytelnienia tokenu, dostawcy tokenów i Serializator tokenu zabezpieczeń.  
+     Klasa poświadczeń klienta jest używany do reprezentowania poświadczenia, które są skonfigurowane dla serwera proxy klienta i tworzy zabezpieczeń Menedżer tokenów, który jest używany do uzyskiwania wystawców uwierzytelnienia tokenu, dostawcy tokenów i tokenów serializatora.  
   
     ```  
     public class SamlClientCredentials : ClientCredentials  
@@ -271,9 +271,9 @@ W tym przykładzie pokazano, jak implementacja klienta niestandardowego dostawcy
     }  
     ```  
   
-4.  Skonfigurować klienta do używania poświadczeń klienta.  
+4.  Konfigurowanie klienta do używania poświadczeń klienta.  
   
-     Próbka usuwa domyślną klasę poświadczeń klienta i udostępnia nową klasę poświadczeń klienta, klient może używać poświadczeń klienta.  
+     Przykład usuwa domyślną klasę poświadczeń klienta i dostarcza nową klasę poświadczeń klienta, dzięki czemu klient może używać poświadczeń klienta.  
   
     ```  
     // Create new credentials class  
@@ -296,18 +296,18 @@ W tym przykładzie pokazano, jak implementacja klienta niestandardowego dostawcy
     client.ChannelFactory.Endpoint.Behaviors.Add(samlCC);  
     ```  
   
- W usłudze oświadczeń skojarzone z funkcją wywołującą są wyświetlane. Po uruchomieniu próbki operację żądania i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.  
+ W usłudze są wyświetlane oświadczenia skojarzone z funkcją wywołującą. Po uruchomieniu przykładu, operacja żądań i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.  
   
 ## <a name="setup-batch-file"></a>Instalacyjny plik wsadowy  
- Plik wsadowy pliku Setup.bat uwzględnionych w tym przykładzie pozwala na skonfigurowanie serwera z odpowiedni certyfikat do uruchomienia siebie aplikację, która wymaga zabezpieczeń na podstawie certyfikatu serwera. Ten plik wsadowy muszą zostać zmodyfikowane, aby pracować na komputerach lub do pracy w przypadku z systemem innym niż obsługiwany.  
+ Plik wsadowy Setup.bat jest dołączone do tego przykładu umożliwia skonfigurowanie serwera z odpowiedni certyfikat, aby uruchomić samodzielnie hostowanej aplikacji, która wymaga zabezpieczeń na podstawie certyfikatu serwera. Ten plik wsadowy muszą zostać zmodyfikowane, działają na różnych komputerach lub działać w przypadku innych obsługiwanych.  
   
- Poniżej zawiera krótki przegląd różnych sekcji pliki wsadowe tak, aby można modyfikować w prawidłowej konfiguracji.  
+ Poniżej zawiera krótkie omówienie różne sekcje w plikach wsadowych, dzięki czemu można modyfikować do uruchomienia w odpowiedniej konfiguracji.  
   
 -   Tworzenie certyfikatu serwera:  
   
-     Następujące wiersze z pliku wsadowego pliku Setup.bat utworzenie certyfikatu serwera do użycia. `%SERVER_NAME%` Zmiennej określa nazwę serwera. Zmień tę wartość, aby określić nazwę serwera. Wartość domyślna w tym pliku wsadowego to localhost.  
+     Następujące wiersze z pliku wsadowego Setup.bat jest utworzenie certyfikatu serwera, który ma być używany. `%SERVER_NAME%` Zmienna Określa nazwę serwera. Zmieniać tej zmiennej do określenia nazwy serwera. Wartość domyślna, w tym pliku wsadowego to localhost.  
   
-     Certyfikat jest przechowywany w magazynie LocalMachine lokalizacji w mojej (osobiste).  
+     Certyfikat jest przechowywany w magazynie użytkownika (osobistych), znajdujące się w lokalizacji magazynu LocalMachine.  
   
     ```  
     echo ************  
@@ -321,17 +321,17 @@ W tym przykładzie pokazano, jak implementacja klienta niestandardowego dostawcy
   
 -   Instalowanie certyfikatu serwera do magazynu zaufanych certyfikatów klienta:  
   
-     Następujące wiersze w pliku Setup.bat kopii pliku wsadowego certyfikatu serwera do klienta zaufanych osób magazynu. Ten krok jest wymagany, ponieważ certyfikaty generowane przez Makecert.exe nie są jawnie ufa systemu klienta. Jeśli masz już znajdującym się w klienta zaufanego certyfikatu głównego certyfikatu — na przykład certyfikat wystawiony przez Microsoft — ten krok zapełnianie magazynu certyfikatów klienta przy użyciu certyfikatu serwera nie jest wymagane.  
+     Przechowywać następujące wiersze w Setup.bat jest kopia pliku wsadowego certyfikatu serwera do klienta zaufanych osób. Ten krok jest wymagany, ponieważ generowaną przez Makecert.exe certyfikaty nie są niejawnie zaufany przez system klienta. Jeśli masz już certyfikat, który jest ścieżką w klienta zaufanego certyfikatu głównego — na przykład certyfikat wystawiony przez Microsoft — w tym kroku zapełnianie magazynu certyfikatów klienta z certyfikatu serwera nie jest wymagane.  
   
     ```  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r LocalMachine -s TrustedPeople  
     ```  
   
--   Tworzenie wystawcy certyfikatu.  
+-   Tworzenie certyfikatu wystawcy.  
   
-     Następujące wiersze z pliku wsadowego pliku Setup.bat utworzyć wystawcy certyfikatu do użycia. `%USER_NAME%` Zmiennej Nazwa wystawcy. Zmień tę wartość, aby określić nazwę wystawcy. Wartością domyślną w tym pliku wsadowego jest Alicji.  
+     Następujące wiersze z pliku wsadowego Setup.bat Utwórz certyfikat wystawca ma być używany. `%USER_NAME%` Zmiennej określa nazwę wystawcy. Zmień tę wartość, aby określić nazwę wystawcy. Wartość domyślna, w tym pliku wsadowego to Alicji.  
   
-     Certyfikat jest przechowywany w magazynie, w My znajdujące się w lokalizacji magazynie CurrentUser.  
+     Certyfikat jest przechowywany w magazynie użytkownika znajdujące się w lokalizacji magazynu CurrentUser.  
   
     ```  
     echo ************  
@@ -343,60 +343,60 @@ W tym przykładzie pokazano, jak implementacja klienta niestandardowego dostawcy
     makecert.exe -sr CurrentUser -ss My -a sha1 -n CN=%USER_NAME% -sky exchange -pe  
     ```  
   
--   Instalowanie wystawcy certyfikatu do magazynu zaufanych certyfikatów serwera.  
+-   Instalowanie certyfikatu wystawcy do magazynu zaufanych certyfikatów serwera.  
   
-     Następujące wiersze w pliku Setup.bat kopii pliku wsadowego certyfikatu serwera do klienta zaufanych osób magazynu. Ten krok jest wymagany, ponieważ certyfikaty generowane przez Makecert.exe nie są jawnie ufa systemu klienta. Jeśli masz już znajdującym się w klienta zaufanego certyfikatu głównego certyfikatu — na przykład certyfikat wystawiony przez Microsoft — ten krok zapełnianie magazynu certyfikatów na serwerze przy użyciu certyfikatu wystawcy nie jest wymagane.  
+     Przechowywać następujące wiersze w Setup.bat jest kopia pliku wsadowego certyfikatu serwera do klienta zaufanych osób. Ten krok jest wymagany, ponieważ generowaną przez Makecert.exe certyfikaty nie są niejawnie zaufany przez system klienta. Jeśli masz już certyfikat, który jest ścieżką w klienta zaufanego certyfikatu głównego — na przykład certyfikat wystawiony przez Microsoft — w tym kroku zapełnianie magazynu certyfikatów serwera za pomocą certyfikatu wystawcy nie jest wymagane.  
   
     ```  
     certmgr.exe -add -r CurrentUser -s My -c -n %USER_NAME% -r LocalMachine -s TrustedPeople  
     ```  
   
-#### <a name="to-set-up-and-build-the-sample"></a>Aby skonfigurować i tworzyć przykładowy kod  
+#### <a name="to-set-up-and-build-the-sample"></a>Aby skonfigurować i skompilować przykład  
   
-1.  Upewnij się, że wykonano procedurę [jednorazowego procedurę instalacji dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Postępuj zgodnie z instrukcjami w celu skompilowania rozwiązania, [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 > [!NOTE]
->  Jeśli używasz Svcutil.exe ponownego generowania konfiguracji dla tego przykładu, należy zmodyfikować nazwę punktu końcowego w konfiguracji klienta, aby dopasować kodu klienta.  
+>  Jeśli używasz Svcutil.exe ponownego generowania konfiguracji dla tego przykładu, należy zmodyfikować nazwę punktu końcowego w konfiguracji klienta, aby dopasować kod klienta.  
   
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Aby uruchomić przykład na tym samym komputerze  
   
-1.  Uruchom z folderu instalacji próbki wewnątrz pliku Setup.bat [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] wiersza polecenia uruchomione z uprawnieniami administratora. Spowoduje to zainstalowanie wszystkich certyfikatów, które są wymagane do uruchomienia przykładu.  
+1.  Uruchom Setup.bat z folderu instalacji przykładowej wewnątrz [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] wierszu polecenia Uruchom z uprawnieniami administratora. Spowoduje to zainstalowanie wszystkich certyfikatów, które są wymagane do uruchomienia przykładu.  
   
     > [!NOTE]
-    >  Plik wsadowy pliku Setup.bat jest przeznaczony do uruchamiania z [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] wiersza polecenia. Wartość zmiennej środowiskowej PATH w [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] wskazuje katalog zawierający pliki wykonywalne wymagane przez pliku Setup.bat skryptu wiersza polecenia.  
+    >  Plik wsadowy Setup.bat jest przeznaczony do uruchamiania z [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] wiersza polecenia. Ustawić zmiennej środowiskowej PATH, w ramach [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] polecenia wskazuje katalog, który zawiera pliki wykonywalne wymagane przez skrypt Setup.bat jest.  
   
 2.  Uruchom Service.exe z service\bin.  
   
-3.  Uruchom Client.exe z \client\bin. Aktywność klienta jest wyświetlany w aplikacji konsoli klienta.  
+3.  Uruchom Client.exe z \client\bin. Aktywność klienta jest wyświetlany w aplikacji konsolowej klienta.  
   
-4.  Jeśli klient i usługa nie będą mogli komunikować się, zobacz [Rozwiązywanie problemów z porady](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
-#### <a name="to-run-the-sample-across-computers"></a>Aby uruchomić przykład na komputerach  
+#### <a name="to-run-the-sample-across-computers"></a>Do uruchomienia przykładu na komputerach  
   
-1.  Utwórz katalog na komputerze usługi dla usługi danych binarnych.  
+1.  Utwórz katalog na komputerze usługi, aby pliki binarne usługi.  
   
-2.  Skopiuj pliki programu usługi do katalogu usługi na komputerze usługi. Także skopiować pliki pliku Setup.bat i Cleanup.bat na komputerze usługi.  
+2.  Skopiuj pliki programu usługi do katalogu usługi na komputerze usługi. Także skopiować pliki Setup.bat i Cleanup.bat na komputerze usługi.  
   
-3.  Musi mieć certyfikat serwera z nazwą podmiotu, który zawiera w pełni kwalifikowaną nazwą domeny komputera. Plik Service.exe.config trzeba zaktualizować do uwzględnienia tej nowej nazwy certyfikatu. Można utworzyć certyfikatu serwera, modyfikując plik wsadowy pliku Setup.bat. Należy pamiętać, że plik pliku setup.bat należy uruchomić w oknie wiersza polecenia programu Visual Studio z uprawnieniami administratora. Należy ustawić `%SERVER_NAME%` zmienną do hosta w pełni kwalifikowaną nazwę komputera, na którym jest używany do obsługi usługi.  
+3.  Musi mieć certyfikat serwera o nazwie podmiotu, który zawiera w pełni kwalifikowana nazwa domeny komputera. Plik Service.exe.config należy zaktualizować w celu odzwierciedlenia tej nowej nazwy certyfikatu. Można utworzyć certyfikatu serwera, modyfikując plik wsadowy Setup.bat. Należy pamiętać, że plik Setup.bat jest musi zostać uruchomiony w oknie wiersza polecenia programu Visual Studio otwartych z uprawnieniami administratora. Należy ustawić `%SERVER_NAME%` zmiennej do w pełni kwalifikowany host nazwę komputera, na którym jest używana do obsługi usługi.  
   
 4.  Skopiuj certyfikat serwera w magazynie CurrentUser TrustedPeople klienta. Ten krok nie jest konieczne, gdy certyfikat serwera jest wystawiony przez klienta zaufanego wystawcy.  
   
-5.  W pliku Service.exe.config na komputerze usługi Zmień wartość adres podstawowy, aby określić nazwę komputera w pełni kwalifikowaną zamiast localhost.  
+5.  W pliku Service.exe.config na komputerze usługi Zmień wartość z adresu podstawowego, aby określić nazwę komputera w pełni kwalifikowaną, zamiast nazwy localhost.  
   
-6.  Na komputerze, usługi uruchom Service.exe z wiersza polecenia.  
+6.  Na komputerze usługi Service.exe należy uruchomić z wiersza polecenia.  
   
-7.  Skopiuj pliki programu klienta z folderu \client\bin\ w folderze danego języka na komputerze klienckim.  
+7.  Skopiuj pliki programu klienta z folderu \client\bin\ w folderze specyficzny dla języka na komputerze klienckim.  
   
-8.  W pliku Client.exe.config na komputerze klienckim Zmień wartość adresu punktu końcowego, aby dopasować nowego adresu usługi.  
+8.  W pliku Client.exe.config na komputerze klienckim należy zmienić wartość adresu punktu końcowego, aby dopasować nowy adres usługi.  
   
-9. Na komputerze klienckim, otwórz `Client.exe` z poziomu okna wiersza polecenia.  
+9. Na komputerze klienckim, należy uruchomić `Client.exe` z okna wiersza polecenia.  
   
-10. Jeśli klient i usługa nie będą mogli komunikować się, zobacz [Rozwiązywanie problemów z porady](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
-#### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić po próbki  
+#### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić zasoby po próbki  
   
-1.  Uruchamianie Cleanup.bat w folderze Przykłady po ukończeniu działania próbki.  
+1.  Uruchom Cleanup.bat w folderze samples, po zakończeniu działa aplikacja przykładowa.  
   
 ## <a name="see-also"></a>Zobacz też

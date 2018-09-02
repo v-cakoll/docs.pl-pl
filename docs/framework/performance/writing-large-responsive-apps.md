@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: bf5604472331f336c427ded36fc1666f16310ea2
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 4c90e914273de9f9121a979accdb4798b31e05cb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254356"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418968"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Pisanie dużych i sprawnie działających aplikacji platformy .NET Framework
 Ten artykuł zawiera wskazówki dotyczące poprawy wydajności dużych aplikacji .NET Framework lub aplikacje, które przetwarzają dużą ilość danych, takie jak pliki lub bazy danych. Te wskazówki pochodzą ponowne napisanie kompilatory C# i Visual Basic w kodzie zarządzanym, a w tym artykule przedstawiono kilka przykładów rzeczywistych z kompilatorem C#.  
@@ -38,7 +38,7 @@ Ten artykuł zawiera wskazówki dotyczące poprawy wydajności dużych aplikacji
  Należy ustawić środowiska lub scenariuszy celami wydajności dla klientów w aplikacji i pisania testów do pomiaru wydajności.  Badanie niepowodzenie testów, stosując metodę wykładniczej: aby ułatwiają, hipotezę, co może być problem, użyj profilów i testowanie Twojej hipotezę z eksperymentu lub zmiany kodu.  Wraz z upływem czasu z regularnych testowania, należy ustanowić pomiarów wydajności bazowego, dzięki czemu można izolować zmiany, które powodują regresji wydajności.  Zbliża się wydajność pracy, w sposób rygorystyczne, będzie uniknąć marnowania czasu za pomocą aktualizacji kodu, które nie są potrzebne.  
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>Fakt 3: Dobre narzędzia sprawiają, że wszystkie różnicy  
- Dobre narzędzia pozwalają szybko przejść do szczegółów największych problemów z wydajnością (procesor CPU, pamięć lub dysk) i pomoc, możesz znaleźć kod, który powoduje, że te wąskich gardeł.  Microsoft dostarczany szeroką gamą narzędzi wydajności, takich jak [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling), [narzędzie do analizy Windows Phone](http://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f), i [narzędzia PerfView](http://www.microsoft.com/download/details.aspx?id=28567).  
+ Dobre narzędzia pozwalają szybko przejść do szczegółów największych problemów z wydajnością (procesor CPU, pamięć lub dysk) i pomoc, możesz znaleźć kod, który powoduje, że te wąskich gardeł.  Microsoft dostarczany szeroką gamą narzędzi wydajności, takich jak [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling), [narzędzie do analizy Windows Phone](https://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f), i [narzędzia PerfView](https://www.microsoft.com/download/details.aspx?id=28567).  
   
  Narzędzia PerfView jest bezpłatne i niezwykle wydajne narzędzia, która pozwala skupić się na szczegółowe zagadnienia, takie jak We/Wy dysku, zdarzenia odzyskiwania pamięci i pamięci.  Można przechwycić związane z wydajnością [Event Tracing for Windows](../../../docs/framework/wcf/samples/etw-tracing.md) zdarzeń (ETW) i widok prosty sposób na aplikację, na proces, na stosie i na informacje o wątku.  Narzędzia PerfView pokazuje, ile i jakiego rodzaju pamięci są przydzielane aplikację, i które funkcji lub wywołanie stosów Współtworzenie ile alokacji pamięci. Aby uzyskać więcej informacji, zobacz zaawansowane tematy pomocy, pokazy i filmy wideo, włączone za pomocą narzędzia (takie jak [samouczki narzędzia PerfView](http://channel9.msdn.com/Series/PerfView-Tutorial) w witrynie Channel 9).  
   
@@ -281,7 +281,7 @@ Language-Integrated Query (LINQ), w połączeniu z wyrażenia lambda jest przyk�
   
  **Przykład 5: Wyrażenia lambda, lista\<T >, a IEnumerable\<T >**  
   
- W tym przykładzie użyto [LINQ i funkcjonalności stylu kodu](http://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx) można znaleźć symbolu w modelu kompilatora podany ciąg nazwy:  
+ W tym przykładzie użyto [LINQ i funkcjonalności stylu kodu](https://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx) można znaleźć symbolu w modelu kompilatora podany ciąg nazwy:  
   
 ```csharp  
 class Symbol {  
@@ -305,7 +305,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- W pierwszym wierszu [wyrażenia lambda](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [zamyka za pośrednictwem](http://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) zmienna lokalna `name`.  Oznacza to, że oprócz przydzielanie obiektu dla [delegować](~/docs/csharp/language-reference/keywords/delegate.md) , `predicate` przechowuje, kod przydziela klasy statycznej, aby pomieścić środowisko, które przechwytuje wartość `name`.  Kompilator generuje kod, jak pokazano poniżej:  
+ W pierwszym wierszu [wyrażenia lambda](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [zamyka za pośrednictwem](https://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) zmienna lokalna `name`.  Oznacza to, że oprócz przydzielanie obiektu dla [delegować](~/docs/csharp/language-reference/keywords/delegate.md) , `predicate` przechowuje, kod przydziela klasy statycznej, aby pomieścić środowisko, które przechwytuje wartość `name`.  Kompilator generuje kod, jak pokazano poniżej:  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -362,7 +362,7 @@ public Symbol FindMatchingSymbol(string name)
  Ten kod nie korzysta z metod rozszerzeń LINQ, wyrażenia lambda lub moduły wyliczające i wiąże się nie alokacji.  Istnieją nie alokacji, ponieważ kompilator może być wyświetlana `symbols` kolekcja jest <xref:System.Collections.Generic.List%601> i może powiązać wynikowy modułu wyliczającego (struktury) do zmiennej lokalnej przy użyciu właściwego typu, aby uniknąć pakowania.  Oryginalna wersja tej funkcji został świetny przykład wszechstronnym możliwościom języka C# i efektywność programu .NET Framework.  Ta wersja nowe i bardziej wydajne zachowuje tych klas bez dodawania żadnych złożonego kodu do konserwowania.  
   
 ### <a name="async-method-caching"></a>Buforowanie metody asynchronicznej  
- W kolejnym przykładzie pokazano powszechny problem podczas próby użycia pamięci podręcznej powoduje [async](http://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7) metody.  
+ W kolejnym przykładzie pokazano powszechny problem podczas próby użycia pamięci podręcznej powoduje [async](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7) metody.  
   
  **Przykład 6: buforowanie w metodach asynchronicznych**  
   
@@ -465,9 +465,9 @@ class Compilation { /*...*/
  [Film wideo: prezentacja części tego tematu](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
  [Profilowanie wydajności — przewodnik dla początkujących](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
  [Wydajność](../../../docs/framework/performance/index.md)  
- [Wskazówki dotyczące wydajności .NET](http://msdn.microsoft.com/library/ms973839.aspx)  
- [Narzędzie do analizy wydajności Windows Phone](http://msdn.microsoft.com/magazine/hh781024.aspx)  
- [Znajdź wąskie gardła za pomocą programu Visual Studio Profiler](http://msdn.microsoft.com/magazine/cc337887.aspx)  
+ [Wskazówki dotyczące wydajności .NET](https://msdn.microsoft.com/library/ms973839.aspx)  
+ [Narzędzie do analizy wydajności Windows Phone](https://msdn.microsoft.com/magazine/hh781024.aspx)  
+ [Znajdź wąskie gardła za pomocą programu Visual Studio Profiler](https://msdn.microsoft.com/magazine/cc337887.aspx)  
  [Channel 9 samouczki narzędzia PerfView](http://channel9.msdn.com/Series/PerfView-Tutorial)  
- [Porady dotyczące wydajności wysokiego poziomu](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
+ [Porady dotyczące wydajności wysokiego poziomu](https://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
  [repozytorium DotNet/roslyn w witrynie GitHub](https://github.com/dotnet/roslyn)

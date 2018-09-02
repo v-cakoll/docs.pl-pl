@@ -6,15 +6,15 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], bindings
 - bindings [WCF]
 ms.assetid: 83639133-89f7-43f0-b4ef-8d9e57c08d25
-ms.openlocfilehash: edbcba1cda914d58dee7a11fcb3309254a52a66c
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 1930826cf51d67ceb789e20920ca42f04d1adc1b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198146"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416745"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Powiązania WCF (Windows Communication Foundation)
-Windows Communication Foundation (WCF) oddziela, jak oprogramowania dla aplikacji został napisany, uwzględniając jak ją komunikuje się z innym oprogramowaniem. Powiązania są używane do określenia transportu, kodowanie i szczegóły protokołu wymagane dla klientów i usług komunikować się ze sobą. WCF używa powiązania do generowania podstawowej reprezentacji przewodowy punktu końcowego, więc większość Szczegóły powiązania uzgadnia przez strony komunikujące się. Najprostszym sposobem osiągnięcia tego jest dla klientów usługi użyto tych samych powiązanie punktu końcowego dla zastosowań usługi. Aby uzyskać więcej informacji na temat jak to zrobić, zobacz [za pomocą wiązania, aby skonfigurować Windows Communication Foundation i klientów](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb).  
+Windows Communication Foundation (WCF) oddziela, jak oprogramowania dla aplikacji został napisany, uwzględniając jak ją komunikuje się z innym oprogramowaniem. Powiązania są używane do określenia transportu, kodowanie i szczegóły protokołu wymagane dla klientów i usług komunikować się ze sobą. WCF używa powiązania do generowania podstawowej reprezentacji przewodowy punktu końcowego, więc większość Szczegóły powiązania uzgadnia przez strony komunikujące się. Najprostszym sposobem osiągnięcia tego jest dla klientów usługi użyto tych samych powiązanie punktu końcowego dla zastosowań usługi. Aby uzyskać więcej informacji na temat jak to zrobić, zobacz [za pomocą wiązania, aby skonfigurować Windows Communication Foundation i klientów](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb).  
   
  Powiązanie składa się z kolekcji elementów wiązania. Każdy element w tym artykule opisano niektóre aspekty jak punkt końcowy komunikuje się z klientami. Powiązanie musi zawierać co najmniej jeden element powiązania transportu, co najmniej jeden Kodowanie komunikatu element powiązania (który zawiera element powiązania transportu domyślnie) i dowolna liczba innych protokołu elementy powiązania. Proces, który tworzy środowisko uruchomieniowe poza ten opis umożliwia każdy element powiązania współtworzyć kod do tego środowiska uruchomieniowego.  
   
@@ -26,7 +26,7 @@ Windows Communication Foundation (WCF) oddziela, jak oprogramowania dla aplikacj
  [Konfigurowanie powiązań dostarczanych przez system](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  W tym artykule opisano sposób użycia i modyfikować powiązania, udostępnianych przez usługi WCF na potrzeby typowych scenariuszy.  
   
- [Konfigurowanie Windows Communication Foundation i klientów za pomocą powiązań](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Konfigurowanie Windows Communication Foundation i klientów za pomocą powiązań](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  W tym artykule opisano sposób definiowania powiązania Windows Communication Foundation (WCF) dla usług i klientów obowiązkowo w kodzie i deklaratywne przy użyciu konfiguracji.  
   
  [Powiązania niestandardowe](../../../../docs/framework/wcf/extending/custom-bindings.md)  

@@ -1,23 +1,23 @@
 ---
-title: Generowanie kodu SQL modyfikacji
+title: Modyfikowanie generowania kodu SQL
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: 1d24775a7a50da1008a5097e1a2caf4e72c946e2
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 8e0568e32094b6cc27137409f3d908928d82cebb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071955"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417250"
 ---
-# <a name="modification-sql-generation"></a>Generowanie kodu SQL modyfikacji
-W tej sekcji omówiono sposób rozwijać modyfikacji modułu generowania SQL dla użytkownika (SQL:1999-danych zgodnej ze standardem) dostawcy. Ten moduł jest odpowiedzialny za tłumaczenia poziomu drzewa poleceń modyfikacji w odpowiedniej instrukcji SQL INSERT, UPDATE lub DELETE.  
+# <a name="modification-sql-generation"></a>Modyfikowanie generowania kodu SQL
+W tej sekcji opisano kroki umożliwiające tworzenie modyfikacji modułu generowania SQL dla usługi (SQL:1999-danych zgodnej ze standardem) dostawcy. Ten moduł jest odpowiedzialny za tłumaczenie drzewo poleceń modyfikacji w odpowiedniej instrukcji SQL INSERT, UPDATE lub DELETE.  
   
- Informacje o generowanie kodu SQL dla instrukcji "select", zobacz [generowanie kodu SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md).  
+ Aby dowiedzieć się, generowanie kodu SQL do instrukcji "select", zobacz [generowanie kodu SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md).  
   
-## <a name="overview-of-modification-command-trees"></a>Przegląd drzewa polecenia modyfikacji  
- Moduł generowania SQL modyfikacji generuje oparte na danym DbModificationCommandTree wejściowych instrukcji SQL modyfikacji specyficzny dla bazy danych.  
+## <a name="overview-of-modification-command-trees"></a>Omówienie modyfikowanie drzew poleceń  
+ Moduł generowania SQL modyfikacji generuje instrukcje SQL modyfikacji określonej bazy danych oparte na danym DbModificationCommandTree danych wejściowych.  
   
- DbModificationCommandTree jest reprezentacji modelu obiektu modyfikacji operacji DML (insert, update lub operację usuwania), dziedziczenie z DbCommandTree. Istnieją trzy implementacje DbModificationCommandTree:  
+ DbModificationCommandTree jest reprezentacja modelu obiektu modyfikacji operacji DML (wstawiania, aktualizacji lub operacja usuwania), dziedziczenie z DbCommandTree. Istnieją trzy implementacje DbModificationCommandTree:  
   
 -   DbInsertCommandTree  
   
@@ -25,15 +25,15 @@ W tej sekcji omówiono sposób rozwijać modyfikacji modułu generowania SQL dla
   
 -   DbDeleteCommandTree  
   
- DbModificationCommandTree i ich implementacji, które są tworzone przez [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] zawsze reprezentują operacji pojedynczy wiersz. W tej sekcji opisano typy z ich ograniczenia w programie .NET Framework w wersji 3.5.  
+ DbModificationCommandTree i ich implementacji, które są produkowane przez [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] zawsze reprezentują operację pojedynczy wiersz. W tej sekcji opisano te typy z ich ograniczenia w .NET Framework w wersji 3.5.  
   
  ![Diagram](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
   
- DbModificationCommandTree ma właściwość Target, który reprezentuje element docelowy dla operacji modyfikacji. Element docelowy wyrażenie właściwość, która definiuje zestaw wejściowy jest zawsze DbScanExpression.  DbScanExpression może reprezentować tabelę lub widok lub zestaw danych zdefiniowane za pomocą kwerendy właściwości metadanych "Definiowanie zapytania" z elementem docelowym jest inne niż null.  
+ DbModificationCommandTree ma właściwość docelowa, która reprezentuje element docelowy dla operacja modyfikacji. Właściwości wyrażenia obiektu docelowego, który definiuje zestaw danych wejściowych jest zawsze DbScanExpression.  DbScanExpression może reprezentować tabelę lub widok lub zestaw danych zdefiniowanych za pomocą zapytania, jeśli właściwość metadanych "Definiowanie zapytania" jego element docelowy jest inna niż null.  
   
- DbScanExpression, który reprezentuje zapytanie tylko mogą osiągnąć dostawcę jako miejsce docelowe modyfikacji, jeśli zestaw został zdefiniowany przy użyciu definiującego zapytania w modelu, lecz żadna funkcja nie został podany dla odpowiednich operacji modyfikacji. Dostawcy nie może mieć możliwość obsługuje scenariusza (SqlClient, na przykład nie).  
+ DbScanExpression, który reprezentuje zapytanie, tylko mogą osiągnąć dostawcę jako obiekt docelowy modyfikacji, jeśli zestaw został zdefiniowany przy użyciu Definiowanie zapytania w modelu, ale żadna funkcja nie podano odpowiednia operacja modyfikacji. Dostawców może nie móc obsługuje scenariusza (Klient SQL, na przykład, nie ma).  
   
- DbInsertCommandTree reprezentuje pojedynczy wiersz operacji wstawiania, wyrażony jako drzewo poleceń.  
+ DbInsertCommandTree reprezentuje pojedynczy wiersz operacji wstawiania, wyrażone jako drzewo poleceń.  
   
 ```  
 public sealed class DbInsertCommandTree : DbModificationCommandTree {  
@@ -42,69 +42,69 @@ public sealed class DbInsertCommandTree : DbModificationCommandTree {
 }  
 ```  
   
- DbUpdateCommandTree reprezentuje operację aktualizacji pojedynczy wiersz wyrażonej w postaci drzewa poleceń.  
+ DbUpdateCommandTree reprezentuje operację aktualizacji pojedynczy wiersz tabeli przedstawiony jako drzewie poleceń.  
   
- DbDeleteCommandTree reprezentuje operację usuwania pojedynczy wiersz wyrażonej w postaci drzewa poleceń.  
+ DbDeleteCommandTree reprezentuje operację usuwania pojedynczy wiersz przedstawiony jako drzewie poleceń.  
   
-### <a name="restrictions-on-modification-command-tree-properties"></a>Ograniczenia dotyczące właściwości drzewa polecenia modyfikacji  
- Następujące informacje i ograniczenia mają zastosowanie do modyfikacji właściwości drzewa poleceń.  
+### <a name="restrictions-on-modification-command-tree-properties"></a>Ograniczenia dotyczące właściwości drzewa poleceń modyfikacji  
+ Poniższe informacje, a ograniczenia dotyczą właściwości drzewa poleceń modyfikacji.  
   
 #### <a name="returning-in-dbinsertcommandtree-and-dbupdatecommandtree"></a>Zwracanie DbInsertCommandTree i DbUpdateCommandTree  
- Gdy inną niż null, zwrócenie wskazuje, że polecenie zwraca czytnika. W przeciwnym razie polecenie powinien zwrócić wartość skalarną wskazującą liczbę uwzględnionych wierszy (wstawiane lub aktualizowane).  
+ W przypadku innych niż null, zwrócenie oznacza, że polecenie jest zwracane czytnika. W przeciwnym razie polecenie powinna zwrócić wartość skalarną, wskazującą liczbę uwzględnionych wierszy (wstawionych lub zaktualizowanych).  
   
- Zwrócenie wartości określa projekcji wyników do zwrócenia na podstawie wstawionych lub zaktualizowanych wiersza. Można tylko DbNewInstanceExpression wiersz dla każdego z jego argumentów przekraczającego DbPropertyExpression DbVariableReferenceExpression, reprezentujący odwołanie do obiektu docelowego DbModificationCommandTree odpowiedniego typu. Właściwości reprezentowanej przez DbPropertyExpressions używane we właściwości zwrócenie są zawsze magazynu wygenerowany lub obliczanej wartości. W DbInsertCommandTree zwrócenie nie jest zerowa, gdy co najmniej jedną właściwość tabeli, w której umieszczony jest wiersz jest określony jako magazynu wygenerowany lub obliczonych (oznaczone jako StoreGeneratedPattern.Identity lub StoreGeneratedPattern.Computed w pliku ssdl). W DbUpdateCommandTrees, zwrócenie nie ma wartości null podczas co najmniej jedną właściwość tabeli, w którym jest aktualizowana wiersz jest określony jako magazynu obliczana (oznaczone jako StoreGeneratedPattern.Computed w pliku ssdl).  
+ Wartość zwrócenie określa projekcji wyników do zwrócenia na podstawie wstawiono lub zaktualizowano wierszy. Można tylko obiekt DbNewInstanceExpression wiersz, z każdą z jej argumentów przekraczającego DbPropertyExpression DbVariableReferenceExpression, reprezentująca odwołanie do lokalizacji docelowej DbModificationCommandTree odpowiedniego typu. Właściwości reprezentowanej przez DbPropertyExpressions użyta we właściwości zwrócenie są zawsze magazynu wygenerowany lub obliczonych wartości. W DbInsertCommandTree zwrócenie nie ma wartość null, jeśli nie określono co najmniej jedną właściwość tabeli, w której jest umieszczony wiersza jako magazyn wygenerowanych lub obliczona (oznaczone jako StoreGeneratedPattern.Identity lub StoreGeneratedPattern.Computed w ssdl). W DbUpdateCommandTrees, zwrócenie nie ma wartości null podczas co najmniej jedną właściwość tabeli, w którym wiersz jest aktualizowany jest określony jako magazyn obliczane (oznaczone jako StoreGeneratedPattern.Computed w ssdl).  
   
 #### <a name="setclauses-in-dbinsertcommandtree-and-dbupdatecommandtree"></a>SetClauses DbInsertCommandTree i DbUpdateCommandTree  
- SetClauses Określa listę insert lub update Ustaw klauzule, które definiują operacji insert lub update.  
+ SetClauses Określa listę Wstaw lub aktualizacja zestawu klauzul, które definiują operacji wstawiania lub aktualizacji.  
   
 ```  
 The elements of the list are specified as type DbModificationClause, which specifies a single clause in an insert or update modification operation. DbSetClause inherits from DbModificationClause and specifies the clause in a modification operation that sets the value of a property. Beginning in version 3.5 of the .NET Framework, all elements in SetClauses are of type SetClause.   
 ```  
   
- Właściwość określa właściwości, które powinny być zaktualizowane. Jest zawsze DbPropertyExpression nad DbVariableReferenceExpression, co stanowi odwołanie do obiektu docelowego odpowiedniego DbModificationCommandTree.  
+ Właściwość określa właściwość, do której powinien zostać zaktualizowany. Zawsze jest DbPropertyExpression za pośrednictwem DbVariableReferenceExpression, który reprezentuje odwołanie do lokalizacji docelowej odpowiednie DbModificationCommandTree.  
   
- Określa nową wartość, z którym można zaktualizować właściwości. Jest ona typu DbConstantExpression lub DbNullExpression.  
+ Określa nową wartość za pomocą którego można zaktualizować właściwości. Jest ona typu DbConstantExpression lub DbNullExpression.  
   
 #### <a name="predicate-in-dbupdatecommandtree-and-dbdeletecommandtree"></a>Predykatu w DbUpdateCommandTree i DbDeleteCommandTree  
- Predykat określa predykatu używane do określenia, które elementy członkowskie kolekcji docelowej powinien można zaktualizować lub usunąć. Drzewo wyrażenia zbudowany z następujących podzbiór DbExpressions jest:  
+ Predykat określa predykat, używany do określenia, które elementy członkowskie kolekcji docelowej, należy można zaktualizować lub usunąć. Drzewo wyrażenia utworzone następujące podzbioru DbExpressions konieczne jest:  
   
--   Obiekt DbComparisonExpression rodzaju równa prawy element podrzędny jest DbPropertyExression jako ograniczeniami poniżej i lewy element podrzędny obiektu DbConstantExpression.  
+-   Jest równe DbComparisonExpression rodzaju z prawo elementu podrzędnego jest DbPropertyExression jako ograniczeniami poniżej, a po lewej stronie podrzędnych obiektem DbConstantExpression.  
   
 -   DbConstantExpression  
   
--   Obiektu DbIsNullExpression za pośrednictwem, czy DbPropertyExpresison jako ograniczeniami poniżej  
+-   DbIsNullExpression za pośrednictwem, czy DbPropertyExpresison jako ograniczeniami poniżej  
   
--   DbPropertyExpression za pośrednictwem DbVariableReferenceExpression, reprezentujący odwołanie do obiektu docelowego odpowiedniego DbModificationCommandTree.  
+-   DbPropertyExpression za pośrednictwem DbVariableReferenceExpression, reprezentująca odwołanie do lokalizacji docelowej odpowiednie DbModificationCommandTree.  
   
 -   DbAndExpression  
   
 -   Obiekt DbNotExpression  
   
--   Obiekt DbOrExpression  
+-   DbOrExpression  
   
-## <a name="modification-sql-generation-in-the-sample-provider"></a>Generowanie kodu SQL modyfikacji w dostawcy próbki  
- [Entity Framework próbki dostawcy](http://go.microsoft.com/fwlink/?LinkId=180616) przedstawiono składniki dostawcy danych ADO.NET, która obsługuje [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Bazę danych programu SQL Server 2005, a jest zaimplementowany jako otoka u góry System.Data.SqlClient dostawca danych programu ADO.NET 2.0.  
+## <a name="modification-sql-generation-in-the-sample-provider"></a>Modyfikowanie generowania kodu SQL w dostawcy próbki  
+ [Dostawcy programu Entity Framework przykładowe](https://go.microsoft.com/fwlink/?LinkId=180616) przedstawiono składniki dostawcy danych ADO.NET, który obsługuje [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Jest przeznaczony dla bazy danych programu SQL Server 2005, a jest implementowany jako otoki na podstawie System.Data.SqlClient dostawca danych programu ADO.NET w wersji 2.0.  
   
- Moduł generowania SQL modyfikacji dostawcy próbki (znajdujący się w pliku SQL Generation\DmlSqlGenerator.cs) ma wejściowych DbModificationCommandTree i tworzy jednej modyfikacji instrukcji SQL, prawdopodobnie zostały wykonane przez instrukcję select do zwrócenia Czytnik, jeśli określony przez DbModificationCommandTree. Należy pamiętać, kształt polecenia wygenerowany dotyczy docelowej bazy danych programu SQL Server.  
+ Moduł generowania SQL modyfikacji dostawcy próbki (znajdujący się w pliku SQL Generation\DmlSqlGenerator.cs) przyjmuje DbModificationCommandTree danych wejściowych i generuje pojedynczy modyfikacji instrukcji SQL, prawdopodobnie następuje instrukcję select do zwrócenia Czytnik, jeśli określony przez DbModificationCommandTree. Należy pamiętać, że kształt polecenia wygenerowany ma wpływ docelowej bazy danych programu SQL Server.  
   
-### <a name="helper-classes-expressiontranslator"></a>Klasy pomocy: ExpressionTranslator  
- ExpressionTranslator służy jako translatora lekkie wspólne dla wszystkich właściwości drzewa polecenia modyfikacji typu DbExpression. Obsługuje tłumaczenia tylko typy wyrażenie, do których są ograniczone właściwości modyfikacji drzewa poleceń, a wbudowana w określonym ograniczenia pamiętać.  
+### <a name="helper-classes-expressiontranslator"></a>Klasy pomocnika: ExpressionTranslator  
+ ExpressionTranslator służy jako translator uproszczone wspólne dla wszystkich właściwości drzewa polecenia modyfikacji typu DbExpression. Go obsługuje translację tylko typy wyrażenia, do których są one ograniczone właściwości drzewo poleceń modyfikacji i został utworzony za pomocą określonego ograniczenia należy pamiętać.  
   
- Następujące informacje w tym artykule omówiono odwiedzający typy określonego wyrażenia (pominięto węzłów o prostej tłumaczenia).  
+ Poniższe informacje omawiają, odwiedzając typy określonego wyrażenia (pominięto węzłów za pomocą uproszczonych tłumaczenia).  
   
-### <a name="dbcomparisonexpression"></a>Obiekt DbComparisonExpression  
- Gdy ExpressionTranslator jest tworzony z preserveMemberValues = true, i po stała po prawej stronie jest obiektem DbConstantExpression (zamiast DbNullExpression), z którego kojarzy lewy operand (DbPropertyExpressions) DbConstantExpression. Która jest używana, gdy zwracany instrukcji Select ma zostać wygenerowany do identyfikowania wierszu.  
+### <a name="dbcomparisonexpression"></a>DbComparisonExpression  
+ Gdy jest konstruowany ExpressionTranslator preserveMemberValues = true, i gdy stała się po prawej stronie jest obiektem DbConstantExpression (zamiast DbNullExpression), korzystając z niego kojarzy lewy operand (DbPropertyExpressions) DbConstantExpression. Który jest używany, jeśli return instrukcji Select musi zostać wygenerowane do identyfikowania odpowiednim wierszu.  
   
 ### <a name="dbconstantexpression"></a>DbConstantExpression  
- Dla każdej odwiedzony stałej tworzony jest parametrem.  
+ Dla każdej odwiedzane stałej parametr zostanie utworzony.  
   
 ### <a name="dbpropertyexpression"></a>DbPropertyExpression  
- Biorąc pod uwagę, że wystąpienie DbPropertyExpression zawsze reprezentuje tabeli wejściowej, chyba że Generowanie utworzył alias (którą wykonujemy w scenariuszach aktualizacji, gdy jest używana zmienna tabeli), Brak aliasu nie trzeba określać dla danych wejściowych; Tłumaczenie domyślnie nazwę właściwości.  
+ Biorąc pod uwagę, że wystąpienie DbPropertyExpression zawsze reprezentuje tabeli wejściowej, chyba że Generowanie utworzył alias (tylko wykonywane w scenariuszach aktualizacji, gdy jest używana zmienna tabeli), Brak aliasu musi być określona dla danych wejściowych; tłumaczenie jest wartością domyślną nazwę właściwości.  
   
 ## <a name="generating-an-insert-sql-command"></a>Generowanie polecenia SQL Insert  
- Dla danego DbInsertCommandTree w dostawcy próbki polecenia insert wygenerowanego następuje jeden z poniższych szablonów Wstaw dwa.  
+ Dla danego DbInsertCommandTree w dostawcy próbki polecenia insert wygenerowanego następuje jeden z szablonów Wstaw dwa poniższe.  
   
- Pierwszy szablon ma polecenia można wykonać polecenia wstawienia podane wartości na liście SetClauses i instrukcję SELECT do zwrócenia właściwości określony we właściwości zwrócenie wstawionego wiersza, jeśli właściwość zwrócenie nie był zerowy. Element predykatu "\@ @ROWCOUNT > 0" ma wartość true, jeśli został wstawiony wiersz. Element predykatu "keyMemberI = keyValueI &#124; scope_identity()" przyjmuje kształtu "keyMemberI = scope_identity()" tylko wtedy, gdy keyMemeberI jest kluczem generowanych przez Magazyn, ponieważ scope_identity() Zwraca ostatnią wartość tożsamości wstawione do (tożsamości) Kolumna wygenerowana przez Magazyn).  
+ Pierwszego szablonu zawiera polecenie, aby wykonać polecenia wstawienia, biorąc pod uwagę wartości na liście SetClauses i instrukcji SELECT w celu wróć do właściwości określony we właściwości zwrócenie wstawionego wiersza, jeśli właściwość zwrócenie nie miał wartość null. Element predykatu "\@ @ROWCOUNT > 0" ma wartość true, jeśli został wstawiony wiersz. Element predykatu "keyMemberI = keyValueI &#124; scope_identity()" przyjmie kształt "keyMemberI = scope_identity()" tylko wtedy, gdy keyMemeberI jest kluczem generowane przez Magazyn, ponieważ scope_identity() Zwraca ostatnią wartość tożsamości wstawiony (tożsamości) Kolumna, generowane przez Magazyn).  
   
 ```  
 -- first insert Template  
@@ -116,7 +116,7 @@ VALUES (setClauseValue0, .. setClauseValueN) |  DEFAULT VALUES
  WHERE @@ROWCOUNT > 0 AND keyMember0 = keyValue0 AND .. keyMemberI =  keyValueI | scope_identity()  .. AND  keyMemberN = keyValueN]  
 ```  
   
- Drugi szablon jest niezbędny w przypadku insert określa wstawiania wiersza, w którym klucz podstawowy jest generowanych przez Magazyn, ale nie jest typu integer i w związku z tym nie można używać z scope_identity()). Również służy, jeśli jest generowanych przez Magazyn klucza złożonego.  
+ Drugi szablon jest potrzebny, jeśli insert określa wstawienie wiersza, w którym klucz podstawowy jest generowane przez Magazyn, ale nie jest typu całkowitego i w związku z tym nie można używać z scope_identity()). Służy również w przypadku klucza złożonego generowane przez Magazyn.  
   
 ```  
 -- second insert template  
@@ -132,7 +132,7 @@ JOIN <target> AS t ON g.KeyMember0 = t.KeyMember0 AND … g.KeyMemberN = t.KeyMe
  WHERE @@ROWCOUNT > 0  
 ```  
   
- Oto przykład, w którym korzysta z modelu, który jest dołączony do dostawcy próbki. Generuje on polecenia insert z DbInsertCommandTree.  
+ Oto przykład, który korzysta z modelu, który jest dołączony do dostawcy próbki. Generuje on polecenia insert z DbInsertCommandTree.  
   
  Poniższy kod wstawia kategorii:  
   
@@ -175,7 +175,7 @@ DbInsertCommandTree
       |_Var(target).CategoryID  
 ```  
   
- Polecenie magazynu tworzącego dostawcy próbki jest następującą instrukcję SQL:  
+ Polecenie magazynu, który produkuje dostawcy próbki jest następującą instrukcję SQL:  
   
 ```  
 insert [dbo].[Categories]([CategoryName], [Description], [Picture])  
@@ -186,7 +186,7 @@ where @@ROWCOUNT > 0 and [CategoryID] = scope_identity()
 ```  
   
 ## <a name="generating-an-update-sql-command"></a>Generowanie polecenia SQL Update  
- Dla danego DbUpdateCommandTree polecenia update wygenerowanego opiera się na następującego szablonu:  
+ Dla danego DbUpdateCommandTree polecenia update wygenerowanego opiera się na następujący szablon:  
   
 ```  
 -- UPDATE Template   
@@ -199,13 +199,13 @@ WHERE <predicate>
  WHERE @@ROWCOUNT > 0 AND keyMember0 = keyValue0 AND .. keyMemberI =  keyValueI | scope_identity()  .. AND  keyMemberN = keyValueN]  
 ```  
   
- W klauzuli set ma klauzuli set fałszywych ("@i = 0") tylko, jeśli nie określono żadnych klauzul zestawu. To, aby upewnić się, że wszelkie magazynu obliczona kolumn są przeliczane.  
+ Klauzula set ma klauzula set sztuczne ("@i = 0") tylko, jeśli nie określono żadnych klauzul zestawu. To, aby upewnić się, że dowolny magazyn obliczanej kolumny są obliczane ponownie.  
   
- Tylko wtedy, gdy właściwość zwrócenie nie jest zerowa, instrukcję select jest generowany do zwrócenia właściwości określony we właściwości zwrócenie.  
+ Tylko wtedy, gdy właściwość zwrócenie nie ma wartość null, instrukcji select jest generowany w celu wróć do właściwości określony we właściwości zwrócenie.  
   
- W poniższym przykładzie użyto modelu, który jest dołączony do dostawcy próbki można wygenerować polecenia Aktualizuj.  
+ W poniższym przykładzie użyto modelu, który jest uwzględniona w dostawcy próbki, można wygenerować polecenia update.  
   
- Poniższy kod użytkownika aktualizacji kategorii:  
+ Poniższy kod użytkownika aktualizacje kategorii:  
   
 ```  
 using (NorthwindEntities northwindContext = new NorthwindEntities()) {  
@@ -215,7 +215,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 }  
 ```  
   
- Ten kod użytkownika tworzy następujące drzewo poleceń jest przekazywane do dostawcy:  
+ Ten kod użytkownika generuje następujące drzewo poleceń jest przekazywane do dostawcy:  
   
 ```  
 DbUpdateCommandTree  
@@ -236,7 +236,7 @@ DbUpdateCommandTree
 |_Returning   
 ```  
   
- Dostawca przykładowe tworzy następujące polecenie magazynu:  
+ Dostawcy próbki generuje następujące polecenie magazynu:  
   
 ```  
 update [dbo].[Categories]  
@@ -244,8 +244,8 @@ set [CategoryName] = @p0
 where ([CategoryID] = @p1)   
 ```  
   
-### <a name="generating-a-delete-sql-command"></a>Generowanie polecenia SQL Delete  
- Dla danego DbDeleteCommandTree generowane polecenia DELETE jest oparty na szablonie następujące:  
+### <a name="generating-a-delete-sql-command"></a>Generowanie za pomocą polecenia SQL Delete  
+ Dla danego DbDeleteCommandTree wygenerowany polecenie Usuń opiera się na następujący szablon:  
   
 ```  
 -- DELETE Template   
@@ -253,7 +253,7 @@ DELETE <target>
 WHERE <predicate>  
 ```  
   
- W poniższym przykładzie użyto modelu, który jest dołączony do dostawcy próbki można wygenerować polecenia delete.  
+ W poniższym przykładzie użyto modelu, który jest uwzględniona w dostawcy próbki, można wygenerować polecenia delete.  
   
  Poniższy kod użytkownika usuwa kategorii:  
   
@@ -279,7 +279,7 @@ DbDeleteCommandTree
     |_10  
 ```  
   
- Polecenie magazynu jest generowany przez dostawcę próbki:  
+ Następujące polecenie magazynu jest generowany przez dostawcę próbki:  
   
 ```  
 delete [dbo].[Categories]  

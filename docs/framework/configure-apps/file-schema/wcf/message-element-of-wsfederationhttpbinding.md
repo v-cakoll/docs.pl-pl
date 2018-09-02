@@ -2,12 +2,12 @@
 title: '&lt;message&gt; w &lt;wsFederationHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
-ms.openlocfilehash: 24d7370eaadba08d449b886a09cb9903ca0a64c2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 820ee7015a51ecc5510889516faef20292cfbc07
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751106"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416597"
 ---
 # <a name="ltmessagegt-element-of-ltwsfederationhttpbindinggt"></a>&lt;message&gt; w &lt;wsFederationHttpBinding&gt;
 Określa ustawienia zabezpieczenia na poziomie komunikatu [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
@@ -87,38 +87,38 @@ Określa ustawienia zabezpieczenia na poziomie komunikatu [ \<wsFederationHttpBi
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|algorithmSuite|Ustawia komunikat algorytmów szyfrowania i zawijania klucza. Poniższa tabela "algorithmSuite atrybutu" prawidłowe wartości tego atrybutu. Wartość domyślna to `Basic256`.<br /><br /> Ten atrybut jest typu <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Algorytmy te są mapowane na te określone w specyfikacji języka zasad zabezpieczeń (WS-SecurityPolicy).|  
+|algorithmSuite|Ustawia komunikat algorytmów szyfrowania i zawijania klucza. Zobacz tabelę "algorithmSuite atrybutu" prawidłowych wartości tego atrybutu. Wartość domyślna to `Basic256`.<br /><br /> Ten atrybut jest typu <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Te algorytmy są mapowane na te określone w specyfikacji języka zasad zabezpieczenia (WS-SecurityPolicy).|  
 |issuedKeyType|Określa typ klucza zostanie wysłane. Prawidłowe wartości są następujące:<br /><br /> -SymmetricKey<br />-PublicKey<br /><br /> Wartość domyślna to `SymmetricKey`. Ten atrybut jest typu <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
 |issuedTokenType|Ciąg, który zawiera identyfikator URI, który określa typ token został wystawiony. Wartość domyślna to `null`.|  
-|negotiateServiceCredential|Wartość logiczna określająca, czy poświadczenie usługi powinny być wymieniane w ramach negocjacji lub jest niedostępny poza pasmem. Wartość domyślna to `true`, co oznacza, że negocjowane jest poświadczenie usługi.|  
+|negotiateServiceCredential|Wartość logiczna, która określa, czy poświadczenia usługi powinny być wymieniane w ramach negocjacji znajduje się poza pasmem. Wartość domyślna to `true`, co oznacza, że poświadczenie usługi jest negocjowane.|  
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite Attribute  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
 |Basic128|Użyj szyfrowania Basic128, Sha1 dla skrót wiadomości i Rsa-oaep-mgf1p dla zawijania klucza.|  
-|Basic192|Użyj szyfrowania Basic192, Sha1 dla skrót wiadomości, Rsa oaep mgf1p dla zawijania klucza.|  
-|Basic256|Użyj szyfrowania Basic256, Sha1 dla skrót wiadomości, Rsa oaep mgf1p dla zawijania klucza.|  
-|Basic256Rsa15|Basic256 używany do szyfrowania wiadomości, Sha1 dla skrót wiadomości i Rsa15 dla zawijania klucza.|  
-|Basic192Rsa15|Basic192 używany do szyfrowania wiadomości, Sha1 dla skrót wiadomości i Rsa15 dla zawijania klucza.|  
-|TripleDes|Użyj szyfrowania TripleDes, Sha1 dla skrót wiadomości, Rsa oaep mgf1p dla zawijania klucza.|  
-|Basic128Rsa15|Basic128 używany do szyfrowania wiadomości, Sha1 dla skrót wiadomości i Rsa15 dla zawijania klucza.|  
+|Basic192|Należy używać szyfrowania Basic192, Sha1 dla skrót wiadomości, Rsa oaep mgf1p dla zawijania klucza.|  
+|Basic256|Należy używać szyfrowania Basic256, Sha1 dla skrót wiadomości, Rsa oaep mgf1p dla zawijania klucza.|  
+|Basic256Rsa15|Użyj Basic256 do szyfrowania wiadomości, algorytm Sha1 dla skrót wiadomości i Rsa15 dla zawijania klucza.|  
+|Basic192Rsa15|Użyj Basic192 do szyfrowania wiadomości, algorytm Sha1 dla skrót wiadomości i Rsa15 dla zawijania klucza.|  
+|TripleDes|Należy używać szyfrowania TripleDes, Sha1 dla skrót wiadomości, Rsa oaep mgf1p dla zawijania klucza.|  
+|Basic128Rsa15|Użyj Basic128 do szyfrowania wiadomości, algorytm Sha1 dla skrót wiadomości i Rsa15 dla zawijania klucza.|  
 |TripleDesRsa15|Użyj szyfrowania TripleDes, Sha1 dla skrót wiadomości i Rsa15 dla zawijania klucza.|  
-|Basic128Sha256|Basic128 używany do szyfrowania wiadomości, Sha256 dla skrót wiadomości i Rsa oaep mgf1p dla zawijania klucza.|  
-|Basic192Sha256|Basic192 używany do szyfrowania wiadomości, Sha256 dla skrót wiadomości i Rsa oaep mgf1p dla zawijania klucza.|  
-|Basic256Sha256|Basic256 używany do szyfrowania wiadomości, Sha256 dla skrót wiadomości i Rsa oaep mgf1p dla zawijania klucza.|  
-|TripleDesSha256|TripleDes używany do szyfrowania wiadomości, Sha256 dla skrót wiadomości i Rsa oaep mgf1p dla zawijania klucza.|  
-|Basic128Sha256Rsa15|Basic128 używany do szyfrowania wiadomości, Sha256 dla skrót wiadomości i Rsa15 dla zawijania klucza.|  
-|Basic192Sha256Rsa15|Aes192 używany do szyfrowania wiadomości, Sha256 dla skrót wiadomości i Rsa15 dla zawijania klucza.|  
-|Basic256Sha256Rsa15|Basic256 używany do szyfrowania wiadomości, Sha256 dla skrót wiadomości i Rsa15 dla zawijania klucza.|  
-|TripleDesSha256Rsa15|TripleDes używany do szyfrowania wiadomości, Sha256 dla skrót wiadomości i Rsa15 dla zawijania klucza.|  
+|Basic128Sha256|Użyj Basic128 do szyfrowania wiadomości, Sha256 dla skrót wiadomości i Rsa oaep mgf1p dla zawijania klucza.|  
+|Basic192Sha256|Użyj Basic192 do szyfrowania wiadomości, Sha256 dla skrót wiadomości i Rsa oaep mgf1p dla zawijania klucza.|  
+|Basic256Sha256|Użyj Basic256 do szyfrowania wiadomości, Sha256 dla skrót wiadomości i Rsa oaep mgf1p dla zawijania klucza.|  
+|TripleDesSha256|TripleDes na użytek szyfrowania wiadomości, Sha256 dla skrót wiadomości i Rsa oaep mgf1p dla zawijania klucza.|  
+|Basic128Sha256Rsa15|Użyj Basic128 do szyfrowania wiadomości, Sha256 dla skrót wiadomości i Rsa15 dla zawijania klucza.|  
+|Basic192Sha256Rsa15|Użyj Aes192 do szyfrowania wiadomości, Sha256 dla skrót wiadomości i Rsa15 dla zawijania klucza.|  
+|Basic256Sha256Rsa15|Użyj Basic256 do szyfrowania wiadomości, Sha256 dla skrót wiadomości i Rsa15 dla zawijania klucza.|  
+|TripleDesSha256Rsa15|TripleDes na użytek szyfrowania wiadomości, Sha256 dla skrót wiadomości i Rsa15 dla zawijania klucza.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
 |[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Określa kolekcję typów oświadczeń dla tego powiązania. Każdy element jest typu <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
-|issuer|Określa punktu końcowego, który wystawia token zabezpieczający. Ten element jest typu <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.|  
+|issuer|Określa punkt końcowy, który wystawia token zabezpieczający. Ten element jest typu <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.|  
 |issuerMetadata|Określa adres punktu końcowego wystawcy.|  
 |[\<tokenRequestParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|Kolekcja parametrów żądania tokenu. Każdy parametr jest elementem XML.|  
   
@@ -135,5 +135,5 @@ Określa ustawienia zabezpieczenia na poziomie komunikatu [ \<wsFederationHttpBi
  `System.ServiceModel.Configuration.FederatedMessageSecurityElement` [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
  [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie usług Windows Communication Foundation i klientów za pomocą powiązań](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Konfigurowanie Windows Communication Foundation i klientów za pomocą powiązań](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

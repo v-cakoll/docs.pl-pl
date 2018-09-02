@@ -2,51 +2,51 @@
 title: Obsługa wsadowa w ramach transakcji
 ms.date: 03/30/2017
 ms.assetid: ecd328ed-332e-479c-a894-489609bcddd2
-ms.openlocfilehash: 7df65b8f3f149deac841010e392f3919b24506b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: abada9aaf5fac8f05599467f385e708e1898832f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508881"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416651"
 ---
 # <a name="transacted-batching"></a>Obsługa wsadowa w ramach transakcji
-W tym przykładzie pokazano, jak partii odczyty transakcyjne przy użyciu usługi kolejkowania komunikatów (MSMQ). Wsadowe transakcyjne jest funkcja optymalizacji wydajności dla odczytów transakcyjnych w kolejce komunikacji.  
+Niniejszy przykład pokazuje jak dzielić na partie transakcyjne operacje odczytu za pomocą usługi kolejkowania komunikatów (MSMQ). Transakcyjne przetwarzania wsadowego jest funkcja optymalizacji wydajności dla odczytów transakcyjne w komunikacie w kolejce.  
   
 > [!NOTE]
->  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
+>  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
   
- W kolejce komunikacji klient komunikuje się z usługą przy użyciu kolejki. Mówiąc ściślej klient wysyła wiadomości do kolejki. Usługa odbiera komunikaty z kolejki. Usługi i klienta w związku z tym ma być uruchomiona, w tym samym czasie do komunikowania się przy użyciu kolejki.  
+ W komunikacie w kolejce klient komunikuje się z usługą przy użyciu kolejki. Mówiąc ściślej klient wysyła komunikaty do kolejki. Usługa odbiera komunikaty z kolejki. Usługi i klienta w związku z tym, nie musi być uruchomiona w tym samym czasie do komunikowania się za pomocą kolejki.  
   
- W tym przykładzie przedstawiono transakcyjnego przetwarzania wsadowego. Transakcyjnego przetwarzania wsadowego jest to zachowanie, która umożliwia korzystanie z jednej transakcji podczas odczytywania wiele wiadomości w kolejce i przetwarzanie ich.  
+ Niniejszy przykład pokazuje transakcyjnego przetwarzania wsadowego. Transakcyjnego przetwarzania wsadowego jest zachowanie, które umożliwia korzystanie z pojedynczą transakcję, podczas odczytywania wiele komunikatów w kolejce i ich przetworzeniu.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Upewnij się, że wykonano procedurę [jednorazowego procedurę instalacji dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Jeśli usługa jest uruchamiana pierwszy, sprawdza, upewnij się, że kolejka jest obecny. Jeśli kolejka nie jest obecny, będzie utworzyć usługę. Można uruchomić usługi, aby najpierw utworzyć kolejkę, lub można go utworzyć za pomocą Menedżera kolejki usługi MSMQ. Wykonaj następujące kroki, aby utworzyć kolejkę w systemie Windows 2008.  
+2.  Jeśli usługa jest uruchamiana pierwszy, będzie sprawdzał, aby upewnić się, że kolejka jest obecny. Jeśli kolejka nie jest obecny, będzie utworzyć usługę. Można uruchomić usługi, aby najpierw utworzyć kolejkę, lub możesz je utworzyć za pomocą Menedżera kolejki usługi MSMQ. Wykonaj następujące kroki, aby utworzyć kolejkę w programie Windows 2008.  
   
     1.  Otwórz Menedżera serwera w [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
-    2.  Rozwiń węzeł **funkcje** kartę.  
+    2.  Rozwiń **funkcji** kartę.  
   
-    3.  Kliknij prawym przyciskiem myszy **kolejki wiadomości prywatne**i wybierz **nowy**, **kolejki prywatnej**.  
+    3.  Kliknij prawym przyciskiem myszy **prywatnej kolejki komunikatów**i wybierz **New**, **kolejki prywatnej**.  
   
     4.  Sprawdź **transakcyjna** pole.  
   
     5.  Wprowadź `ServiceModelSamplesTransacted` jako nazwę nowej kolejki.  
   
     > [!NOTE]
-    >  W tym przykładzie klient wysyła setki wiadomości jako część partii. Jest zjawiskiem aplikacji usługi do trochę potrwać zostać przetworzone.  
+    >  W tym przykładzie klient wysyła setki komunikatów w ramach usługi batch. Jest to normalny aplikacji usługi w celu zająć trochę czasu, można je przetworzyć.  
   
-3.  Tworzenie wersji języka C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Aby uruchomić przykładowy w konfiguracji pojedynczej lub między komputerami, postępuj zgodnie z instrukcjami w [uruchamiania przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>Aby uruchomić na komputerze, na przykład dołączona do grupy roboczej lub bez integracji z usługą active directory  
+### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>Do uruchomienia przykładu na komputer przyłączony do grupy roboczej lub bez integracji usługi active directory  
   
-1.  Domyślnie z <xref:System.ServiceModel.NetMsmqBinding>, zabezpieczeń transportu jest włączona. Istnieją dwa odpowiednie właściwości dla zabezpieczeń transportu MSMQ, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> i <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` domyślnie tryb uwierzytelniania jest ustawiony na `Windows` i poziom ochrony jest ustawiony na `Sign`. Dla usługi MSMQ w celu zapewnienia uwierzytelniania oraz podpisywania funkcji musi być częścią domeny, a opcja integracji usługi active directory dla usługi MSMQ musi być zainstalowany. Jeśli w tym przykładzie jest uruchomiony na komputerze, który nie spełnia te kryteria, wystąpi błąd.  
+1.  Domyślnie <xref:System.ServiceModel.NetMsmqBinding>, zabezpieczenia transportu jest włączona. Istnieją dwie właściwości istotnych dla zabezpieczeń transportu usługi MSMQ, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> i <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` domyślny tryb uwierzytelniania jest ustawiony na `Windows` i poziom ochrony jest ustawiony na `Sign`. Dla usługi MSMQ zapewniać uwierzytelnianie i podpisywania funkcji musi być częścią domeny i musi być zainstalowany opcji integracji usługi active directory dla usługi MSMQ. Jeśli w tym przykładzie jest uruchomiony na komputerze, który nie spełnia tych kryteriów otrzymasz komunikat o błędzie.  
   
-2.  Jeśli komputer nie jest częścią domeny lub nie ma zainstalowanych integracji usługi active directory, należy wyłączyć zabezpieczeń transportu przez ustawienie poziomu uwierzytelniania w trybie i ochrony `None` jak pokazano w poniższych Przykładowa konfiguracja:  
+2.  Jeśli komputer nie jest częścią domeny lub nie ma zainstalowaną integracją usługi active directory, należy wyłączyć zabezpieczenia transportu, ustawienie poziomu uwierzytelniania w trybie i ochrony `None` jak pokazano w poniższym Przykładowa konfiguracja:  
   
     ```xml  
     <system.serviceModel>  
@@ -96,41 +96,41 @@ W tym przykładzie pokazano, jak partii odczyty transakcyjne przy użyciu usług
     </system.serviceModel>  
     ```  
   
-3.  Sprawdź, czy zmian konfiguracji na serwerze i kliencie, przed uruchomieniem próbki.  
+3.  Upewnij się, zmień konfigurację serwera i klienta, przed uruchomieniem przykładu.  
   
     > [!NOTE]
-    >  Ustawienie `security``mode` do `None` jest odpowiednikiem ustawienia <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>, i `Message` zabezpieczeń do `None`.  
+    >  Ustawienie `security``mode` do `None` jest odpowiednikiem ustawienia <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>, i `Message` security `None`.  
   
-4.  Aby uruchomić bazy danych na komputerze zdalnym, Zmień parametry połączenia, aby wskazywały na komputerze, na którym znajdują się bazy danych.  
+4.  Aby uruchomić bazy danych na komputerze zdalnym, należy zmienić parametry połączenia, aby wskazywała na komputerze, na którym znajduje się baza danych.  
   
 ## <a name="requirements"></a>Wymagania  
- Aby uruchomić ten przykład, muszą zostać zainstalowane usługi MSMQ i bazy danych SQL lub programu SQL Express jest wymagany.  
+ Aby uruchomić ten przykład, należy zainstalować usługi MSMQ i bazy danych SQL lub programu SQL Express jest wymagana.  
   
 ## <a name="demonstrates"></a>Demonstracje  
- W przykładzie pokazano transakcyjnego łączenia we wsady zachowanie. Transakcyjnego przetwarzania wsadowego jest funkcja optymalizacji wydajności dostarczane z usługi MSMQ w kolejce transportu.  
+ W przykładzie pokazano transakcyjnych zachowanie przetwarzania wsadowego. Przetwarzanie wsadowe transakcyjne jest funkcja optymalizacji wydajności, wyposażone w usłudze MSMQ w kolejce transportu.  
   
- Jeśli transakcje są używane do wysyłania i odbierania wiadomości są faktycznie 2 oddzielne transakcji. Gdy klient wysyła komunikaty w zakresie transakcji, transakcja jest lokalne klient i klient menedżera kolejek. Gdy usługa odbiera komunikaty w zakresie transakcji, transakcja jest lokalnego do usługi i odbierającego menedżera kolejek. Jest bardzo ważne, aby należy pamiętać, że klient i usługa nie uczestniczą w tej samej transakcji; zamiast używają różnych transakcji podczas wykonywania ich działania (takie jak wysyłanie i odbieranie) z kolejką.  
+ Gdy transakcji są używane do wysyłania i odbierania komunikatów, które są rzeczywiście 2 oddzielne transakcji. Gdy klient wysyła komunikaty w zakresie transakcji, transakcja jest lokalny dla klienta i Menedżer kolejki klienta. Gdy usługa odbiera komunikaty w zakresie transakcji, transakcja jest lokalnego do usługi i odbieranie Menedżer kolejki. Jest bardzo ważne, należy pamiętać, że klient i usługa nie uczestniczą w tej samej transakcji; zamiast używają różnych transakcji podczas ich działania (takie jak wysyłanie i odbieranie) z kolejką.  
   
- W przykładzie używamy pojedynczej transakcji do wykonania wielu operacji usługi. To jest używany tylko jako funkcja optymalizacji wydajności i nie ma wpływu na semantykę aplikacji. Próbki jest oparta na [nietransakcyjnego powiązanie MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).  
+ W przykładzie służy do wykonywania wielu operacji usługi pojedynczej transakcji. To jest używana tylko jako funkcja optymalizacji wydajności i nie ma wpływu na semantykę aplikacji. Przykład jest oparty na [dokonana transakcja powiązania usługi MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).  
   
 ## <a name="comments"></a>Komentarze  
- W tym przykładzie klient wysyła komunikaty zbiorczo do usługi z zakresu transakcji. Aby wyświetlić optymalizacji wydajności, możemy wysyłać dużej liczby wiadomości. w takim przypadku maksymalnie 2500 wiadomości.  
+ W tym przykładzie klient wysyła komunikaty zbiorczo do usługi z zakresu transakcji. Aby wyświetlić optymalizacji wydajności, wyślemy dużej liczby wiadomości. w tym przypadku maksymalnie 2500 wiadomości.  
   
- Komunikaty wysłane do kolejki następnie są odbierane przez usługę w zakresie transakcji, określonym przez usługę. Bez partii, powoduje to 2500 transakcji dla każdego wywołania operacji usługi. Ma to wpływ na wydajność systemu. Ponieważ obejmuje dwa menedżerowie zasobów - kolejki usługi MSMQ i `Orders` bazy danych — każdego tych transakcji jest transakcji usługi DTC. Zoptymalizowana to przy użyciu znacznie mniejszą liczbę transakcji przez zapewnienie im to zrobić partii komunikatów i wywołania operacji usługi w ramach jednej transakcji.  
+ Komunikaty wysyłane do kolejki następnie są odbierane przez usługę w zakresie transakcji, zdefiniowane przez usługę. Bez dzielenia na partie, powoduje to 2500 transakcji dla każdego wywołania operacji usługi. Ma to wpływ na wydajność systemu. Ponieważ dwie menedżerów zasobów są zaangażowani — Kolejka usługi MSMQ i `Orders` bazy danych — każdej takiej transakcji jest transakcji usługi DTC. Możemy to zoptymalizować za pomocą znacznie mniejszej liczby transakcji, zapewniając, że partię komunikatów i wywołania operacji usługi odbywa się w jednej transakcji.  
   
- Możemy użyć funkcji łączenia we wsady przez:  
+ Firma Microsoft funkcja przetwarzania wsadowego przez:  
   
--   Określanie transakcyjnego łączenia we wsady zachowanie w konfiguracji.  
+-   Określanie zachowania łączenia we wsady transakcyjne w konfiguracji.  
   
--   Określanie rozmiar partii pod względem liczby wiadomości odczytywane przy użyciu pojedynczej transakcji.  
+-   Określanie rozmiar partii pod względem liczby wiadomości, które mają być odczytywany za pomocą jednej transakcji.  
   
--   Określająca maksymalną liczbę równoczesnych partie do uruchomienia.  
+-   Określająca maksymalną liczbę równoczesnych partii zadań do uruchomienia.  
   
- W tym przykładzie zostanie przedstawiony wydajność dzięki zmniejszeniu liczby transakcji przez zapewnienie, że 100 operacje usług są wywoływane w ramach jednej transakcji przed zatwierdzeniem transakcji.  
+ W tym przykładzie przedstawiono zwiększenie wydajności dzięki zmniejszeniu liczby transakcji, zapewniając, że 100 operacji usługi są wywoływane w ramach jednej transakcji przed zatwierdzeniem transakcji.  
   
- Zachowanie usługi definiuje zachowanie operacji z `TransactionScopeRequired` ustawioną `true`. Dzięki temu, że tego samego zakresu transakcji, który służy do pobierania wiadomości z kolejki jest używana przez Menedżera zasobów, wszystkie dostępne metody. W tym przykładzie używamy podstawowej bazy danych do przechowywania informacji o zamówienia zakupu, które zostały zawarte w wiadomości. Zakresu transakcji gwarantuje również, że jeśli metoda zgłosi wyjątek, wiadomość jest zwracana do kolejki. Bez ustawienia zachowania tej operacji, kolejkowanym kanale tworzy transakcji, aby odczytać wiadomość z kolejki i zatwierdza ją automatycznie, zanim wywoływane jest tak, aby w przypadku niepowodzenia operacji wiadomości utraconych. Najbardziej typowym scenariuszem jest dla operacji usługi zarejestrować się w transakcji, który jest używany do odczytu komunikatu z kolejki, jak pokazano w poniższym kodzie.  
+ Zachowanie usługi definiuje zachowanie operacji za pomocą `TransactionScopeRequired` równa `true`. Gwarantuje to, że ten sam zakres transakcji, który służy do pobierania komunikatu z kolejki jest używany przez wszystkie menedżerów zasobów uzyskiwał dostęp do metody. W tym przykładzie używamy podstawowej bazy danych do przechowywania informacji o zamówienia zakupu, które zostały zawarte w komunikacie. Zakres transakcji gwarantuje również, że jeśli metoda zgłasza wyjątek, zwracany jest komunikat do kolejki. Bez ustawienia tego zachowania operacji, kanał umieszczonych w kolejce tworzy transakcji, aby odczytać wiadomość z kolejki i zatwierdzeń go automatycznie, zanim wywoływane jest tak, aby w przypadku niepowodzenia operacji, komunikat zostanie utracony. Najbardziej typowym scenariuszem jest dla operacji usługi można zarejestrować w transakcji, która służy do odczytywania komunikatów z kolejki, jak pokazano w poniższym kodzie.  
   
- Należy pamiętać, że `ReleaseServiceInstanceOnTransactionComplete` ma ustawioną wartość `false`. Jest to ważne potrzeby przetwarzania wsadowego. Właściwość `ReleaseServiceInstanceOnTransactionComplete` na `ServiceBehaviorAttribute` wskazuje, co należy zrobić po zakończeniu transakcji wystąpienia usługi. Domyślnie wystąpienie usługi jest publikowany po zakończeniu transakcji. Aspekt core do przetwarzania wsadowego jest wykorzystanie pojedynczej transakcji do odczytywania i wysyłania wielu wiadomości w kolejce. W związku z tym wydanie wystąpienia usługi kończy się wykonanie transakcji przedwcześnie Negacja bardzo stosowania przetwarzania wsadowego. Jeśli ta właściwość jest ustawiona na `true` i transakcyjnego łączenia we wsady zachowanie jest dodawany do punktu końcowego, przetwarzanie wsadowe zachowanie weryfikacji zgłasza wyjątek.  
+ Należy pamiętać, że `ReleaseServiceInstanceOnTransactionComplete` ustawiono `false`. Jest to ważne wymagania dotyczące dzielenia na partie. Właściwość `ReleaseServiceInstanceOnTransactionComplete` na `ServiceBehaviorAttribute` wskazuje, co należy zrobić z wystąpieniem usługi po zakończeniu transakcji. Domyślnie wystąpienie usługi jest zwalniany, po zakończeniu transakcji. Aspekt core do dzielenia na partie polega na użyciu pojedynczą transakcję do odczytywania i wysyła wiele komunikatów w kolejce. W związku z tym przy zwalnianiu wystąpienie usługi będą istnieć realizowanie transakcji przedwcześnie Negacja bardzo korzystanie z dzielenia na partie. Jeśli ta właściwość jest ustawiona `true` i transakcyjnych zachowanie łączenia we wsady jest dodawany do punktu końcowego przetwarzania wsadowego zachowanie walidacji zgłasza wyjątek.  
 
 ```csharp
 // Service class that implements the service contract.  
@@ -151,7 +151,7 @@ public class OrderProcessorService : IOrderProcessor
 }  
 ```
 
- `Orders` Klasa hermetyzuje przetwarzania zamówienia. W przykładzie aktualizuje bazę danych z informacji o zamówieniu zakupu.  
+ `Orders` Klasa hermetyzuje przetwarzania zamówienia. W tym przykładzie powoduje zaktualizowanie bazy danych przy użyciu informacji o zamówieniu zakupu.  
 
 ```csharp
 // Order Processing Logic  
@@ -225,7 +225,7 @@ public class Orders
 }  
 ```
 
- Przetwarzanie wsadowe zachowania i jego konfiguracja są określone w konfiguracji aplikacji usługi.  
+ Zachowanie przetwarzania wsadowego i jego konfiguracji są określone w konfiguracji aplikacji usługi.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -272,15 +272,15 @@ public class Orders
 ```  
   
 > [!NOTE]
->  Rozmiar partii to wskazówkę systemu. Na przykład jeśli określisz rozmiar partii, 20, następnie 20 komunikatów będą odczytywane i wysłane przy użyciu pojedynczej transakcji i następnie transakcja została przekazana. Istnieją przypadki, w którym może zatwierdzić transakcji partii przed osiągnięciem rozmiar partii.  
+>  Rozmiar partii jest to wskazówka do systemu. Na przykład jeśli określisz rozmiar partii, 20, następnie 20 wiadomości zostaną wczytane i wysyłane przy użyciu pojedynczej transakcji i następnie transakcja została zatwierdzona. Jednak istnieją przypadki, gdzie może zatwierdzić transakcji partii przed osiągnięciem rozmiar partii.  
 >   
->  Skojarzone z każdej transakcji jest limit czasu, która rozpoczyna się zaznaczenie po utworzeniu transakcji. Transakcja została przerwana, po upływie tego czasu. Istnieje możliwość tego limitu czasu wygaśnięcia nawet przed osiągnięciem rozmiaru partii. Aby uniknąć ponownego pracy partii z powodu przerwania, `TransactedBatchingBehavior` sprawdza, ile czasu pozostało w transakcji. Jeśli wykorzystane 80% czasu transakcji transakcja została przekazana.  
+>  Skojarzone z każdej transakcji jest limit czasu, który rozpoczyna się, jak należy po utworzeniu transakcji. Po upływie tego czasu transakcja została przerwana. Istnieje możliwość dla tego limitu czasu wygaśnięcia, nawet w przypadku, zanim osiągnie rozmiar partii. Aby uniknąć ponownego pracy usługi batch z powodu przerwania, `TransactedBatchingBehavior` sprawdza, ile czasu pozostało w transakcji. Jeśli wyczerpaniu 80% czasu transakcji, transakcja została zatwierdzona.  
 >   
->  Jeśli nie ma żadnych więcej wiadomości w kolejce, a następnie zamiast oczekiwania na realizację rozmiar partii <xref:System.ServiceModel.Description.TransactedBatchingBehavior> zatwierdza transakcji.  
+>  W przypadku dalszych komunikatów w kolejce, a następnie zamiast oczekiwania na realizację rozmiar partii <xref:System.ServiceModel.Description.TransactedBatchingBehavior> zatwierdzeń transakcji.  
 >   
->  Wybór rozmiar partii jest zależny od aplikacji. Jeśli rozmiar partii jest za mały, nie może pobrać żądaną wydajność. Z drugiej strony, jeśli rozmiar partii jest zbyt duży, może pogarszać wydajność. Na przykład transakcji można już na żywo i przytrzymaj blokady bazy danych lub transakcji może stać się martwych zablokowana, które mogłyby powodować partii pobrać wycofana i wykonaj ponownie pracy.  
+>  Wybór rozmiaru partii jest zależny od aplikacji. Jeśli rozmiar partii jest zbyt mała, może nie pobrać żądaną wydajność. Z drugiej strony Jeśli rozmiar partii jest zbyt duży, może pogarszać wydajność. Na przykład transakcji można już na żywo i przytrzymaj blokady w bazie danych lub transakcji może stać się dead zablokowane, która może spowodować, że usługi batch, Pobierz wycofana i wykonaj ponownie pracy.  
   
- Klient tworzy zakresu transakcji. Komunikacja z kolejki odbywa się w zakresie transakcji, co powoduje traktowane jako Atomowej jednostki, w którym wszystkie komunikaty są wysyłane do kolejki lub brak komunikaty są wysyłane do kolejki. Transakcja zostaje zatwierdzona przez wywołanie metody <xref:System.Transactions.TransactionScope.Complete%2A> w zakresie transakcji.  
+ Klient tworzy zakres transakcji. Komunikacja z kolejką odbywa się w zakresie transakcji, co powoduje powinien być traktowany jako pojedynczej Atomowej jednostki, w którym wszystkie komunikaty są wysyłane do kolejki lub żadne komunikaty są wysyłane do kolejki. Transakcja została zatwierdzona przez wywołanie metody <xref:System.Transactions.TransactionScope.Complete%2A> w zakresie transakcji.  
 
 ```csharp
 //Client implementation code.  
@@ -331,7 +331,7 @@ class Client
 }  
 ```
 
- Po uruchomieniu próbki działania klienta i usługi są wyświetlane w oknach konsoli usługi i klienta. Można wyświetlić wiadomości receive usługi z klienta. Naciśnij klawisz ENTER w każdym okna konsoli można zamknąć usługę i klienta. Należy zauważyć, że usługi kolejkowania wiadomości jest w użyciu, klient i usługa nie być uruchomiona w tym samym czasie. Możesz z klientem, zamknij go, a następnie uruchom usługi i nadal otrzymuje jej wiadomości. Widać stopniowego dane wyjściowe jako odczytana w partii i przetwarzania komunikatów.  
+ Po uruchomieniu przykładu, działania klienta i usługi są wyświetlane w oknach konsoli usługi i klienta. Możesz zobaczyć komunikaty odbierania usługi z klienta. Naciśnij klawisz ENTER każdego okna konsoli, aby zamknąć usługę i klienta. Należy zauważyć, że ponieważ kolejkowania wiadomości jest używany, klient i usługa musi być uruchomiona w tym samym czasie. Można uruchomić klienta, zamknij go, a następnie uruchom usługi i wciąż otrzymuje jego wiadomości. Można wyświetlić stopniowe danych wyjściowych, jak komunikaty są odczytywane w zadaniu wsadowym i przetwarzane.  
   
 ```  
 The service is ready.  
@@ -366,11 +366,11 @@ Processing Purchase Order: ea94486b-7c86-4309-a42d-2f06c00656cd
 ```  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Batching`  
   

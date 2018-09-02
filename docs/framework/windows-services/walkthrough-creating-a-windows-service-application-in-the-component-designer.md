@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
 manager: douge
-ms.openlocfilehash: 73f61ee3358edf50c11ae10ee53650c66b1c1400
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 6d70db7139d82b6e219e2c417282333f950ef402
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925805"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417864"
 ---
 # <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a>Wskazówki: tworzenie aplikacji usługowej systemu Windows w Projektancie składników
 W tym artykule pokazano, jak utworzyć prostą aplikację Windows Service w programie Visual Studio, która wypisuje komunikaty w dzienniku zdarzeń. Poniżej przedstawiono podstawowe kroki, które należy wykonać w celu tworzenia i używania usługi:  
@@ -477,7 +477,7 @@ Ten kod modyfikuje **ImagePath** klucz rejestru zwykle zawiera pełną ścieżk�
      Jeśli usługa zostanie pomyślnie odinstalowana, narzędzie installutil.exe zakomunikuje jej usunięcie. Aby uzyskać więcej informacji, zobacz [porady: Instalowanie i odinstalowywanie usług](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
   
 ## <a name="next-steps"></a>Następne kroki  
- Można utworzyć program instalacyjny autonomicznego, który inne można użyć do zainstalowania usługi Windows, ale wymaga dodatkowych kroków. Funkcja ClickOnce nie obsługuje usług systemu Windows, dlatego nie można używać Kreatora publikacji. Można używać pełnego wydania narzędzia InstallShield, którego nie dostarcza firma Microsoft. Aby uzyskać więcej informacji o narzędziu InstallShield, zobacz [InstallShield Limited Edition](/visualstudio/deployment/installshield-limited-edition). Można również użyć [zestaw narzędzi XML Instalatora Windows](http://go.microsoft.com/fwlink/?LinkId=249067) możliwość utworzenia Instalatora usługi Windows.  
+ Można utworzyć program instalacyjny autonomicznego, który inne można użyć do zainstalowania usługi Windows, ale wymaga dodatkowych kroków. Funkcja ClickOnce nie obsługuje usług systemu Windows, dlatego nie można używać Kreatora publikacji. Można używać pełnego wydania narzędzia InstallShield, którego nie dostarcza firma Microsoft. Aby uzyskać więcej informacji o narzędziu InstallShield, zobacz [InstallShield Limited Edition](/visualstudio/deployment/installshield-limited-edition). Można również użyć [zestaw narzędzi XML Instalatora Windows](https://go.microsoft.com/fwlink/?LinkId=249067) możliwość utworzenia Instalatora usługi Windows.  
   
  Może zbadać użycie <xref:System.ServiceProcess.ServiceController> składnik, który umożliwia wysyłanie poleceń do zainstalowanej usługi.  
   
@@ -487,4 +487,4 @@ Ten kod modyfikuje **ImagePath** klucz rejestru zwykle zawiera pełną ścieżk�
  [Aplikacje usług systemu Windows](../../../docs/framework/windows-services/index.md)  
  [Wprowadzenie do aplikacji usług systemu Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
  [Instrukcje: debugowanie aplikacji usług systemu Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
- [Usługi (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)
+ [Usługi (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)

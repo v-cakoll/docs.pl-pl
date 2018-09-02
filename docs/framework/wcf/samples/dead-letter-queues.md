@@ -2,43 +2,43 @@
 title: Kolejki utraconych komunikatów
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 9f92aeb02d997820fa2955419a3cdcf1c4369b45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4f30e9486c8798e3610e13e6abe1c2612c70b69f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507984"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417136"
 ---
 # <a name="dead-letter-queues"></a>Kolejki utraconych komunikatów
-W tym przykładzie przedstawiono sposób obsługi i przetwarzania komunikatów, które nie powiodły dostarczania. Jest on oparty na [nietransakcyjnego powiązanie MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) próbki. W przykładzie użyto `netMsmqBinding` powiązania. Usługa jest aplikacji konsoli siebie umożliwia obserwowanie usługi odbieranie wiadomości w kolejce.  
+W tym przykładzie pokazano, jak obsługiwać i przetwarzać komunikaty, które dostarczania nie powiodło się. Jest on oparty na [dokonana transakcja powiązania usługi MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) próbki. W tym przykładzie użyto `netMsmqBinding` powiązania. Usługa jest aplikacji konsoli Self-Hosted umożliwia obserwowanie usługi odbieranie wiadomości w kolejce.  
   
 > [!NOTE]
->  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
+>  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
   
 > [!NOTE]
->  W tym przykładzie pokazano każdej aplikacji kolejki utraconych wiadomości, która jest dostępna tylko na [!INCLUDE[wv](../../../../includes/wv-md.md)]. Przykład można zmodyfikować, aby użyć kolejki systemowe domyślny dla usługi MSMQ 3.0 na [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+>  W tym przykładzie przedstawiono kolejkę z utraconymi każdej aplikacji, która jest dostępna tylko na [!INCLUDE[wv](../../../../includes/wv-md.md)]. Przykład można zmodyfikować, aby użyć domyślnej kolejki systemowe dla usługi MSMQ 3.0 na [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
- W kolejce komunikacji klient komunikuje się z usługą przy użyciu kolejki. Mówiąc ściślej klient wysyła wiadomości do kolejki. Usługa odbiera komunikaty z kolejki. Usługi i klienta w związku z tym ma być uruchomiona, w tym samym czasie do komunikowania się przy użyciu kolejki.  
+ W komunikacie w kolejce klient komunikuje się z usługą przy użyciu kolejki. Mówiąc ściślej klient wysyła komunikaty do kolejki. Usługa odbiera komunikaty z kolejki. Usługi i klienta w związku z tym, nie musi być uruchomiona w tym samym czasie do komunikowania się za pomocą kolejki.  
   
- Ponieważ komunikacja umieszczonych w kolejce może wymagać pewnego spoczynku, można skojarzyć wartość czasu wygaśnięcia wiadomości, aby upewnić się, że komunikat nie pobrać dostarczany do aplikacji, jeśli stała się późniejsza niż godzina. Istnieją przypadki, gdzie aplikacja musi mieć świadomość, czy wiadomości nie powiodło się dostarczania. We wszystkich przypadkach takich jak wygasł czas wygaśnięcia wiadomości lub wiadomości nie powiodło się dostarczania, wiadomość zostanie umieszczona w kolejce wiadomości utraconych. Aplikacja wysyłająca można odczytywać wiadomości w kolejce wiadomości utraconych i podjęcia działań naprawczych, które należeć do zakresu od żadnej akcji na usunięciu przyczyny dostawy nie powiodło się i ponowne wysyłanie wiadomości.  
+ Ponieważ komunikacja umieszczonych w kolejce może obejmować określoną ilość spoczynku, można skojarzyć wartości czasu wygaśnięcia na komunikat, aby zapewnić, że komunikat nie uzyskać dostarczane do aplikacji, gdy stała się późniejsza niż godzina. Istnieją przypadki, gdzie aplikacja należy poinformować, czy komunikat zakończyło się niepowodzeniem dostarczania. We wszystkich przypadkach takich jak time-to-live w komunikacie wygasła lub komunikat dostarczania nie powiodło się, komunikat jest umieszczany w kolejce utraconych wiadomości. Aplikacji wysyłającej można odczytywać wiadomości z kolejki utraconych wiadomości i podejmuj akcje naprawcze, z zakresu od żadnych działań do poprawiania przyczyn dostawy nie powiodło się i ponowne wysyłanie wiadomości.  
   
- Kolejki utraconych wiadomości w `NetMsmqBinding` powiązania jest wyrażona w następujących właściwości:  
+ Kolejki utraconych wiadomości w `NetMsmqBinding` wiązanie danych jest wyrażona w następujących właściwościach:  
   
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> Właściwość do wyrażenia typu kolejki utraconych wiadomości wymagane przez klienta. To wyliczenie ma następujące wartości:  
+-   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> Właściwość wyrażenia rodzaju kolejki utraconych wiadomości wymagane przez klienta. To wyliczenie ma następujące wartości:  
   
--   `None`: Brak kolejki utraconych wiadomości jest wymagana przez klienta.  
+-   `None`: Brak kolejki utraconych wiadomości jest wymagane przez klienta.  
   
--   `System`System kolejki utraconych wiadomości jest używany do przechowywania utracone wiadomości. System kolejki utraconych wiadomości jest współużytkowana przez wszystkie aplikacje uruchomione na komputerze.  
+-   `System`Kolejki utraconych wiadomości system służy do przechowywania utracone wiadomości. Kolejka utraconych wiadomości systemu jest współużytkowana przez wszystkie aplikacje uruchomione na komputerze.  
   
--   `Custom`Niestandardowej kolejki utraconych wiadomości określona za pomocą <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> właściwość jest używana do przechowywania komunikatów martwy. Ta funkcja jest dostępna tylko w [!INCLUDE[wv](../../../../includes/wv-md.md)]. Służy to, gdy aplikacja musi używać kolejki utraconych wiadomości zamiast Udostępnianie innych aplikacji uruchomionych na tym samym komputerze.  
+-   `Custom`Niestandardowe kolejki utraconych wiadomości, które są określone za pomocą <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> właściwość jest używana do przechowywania utracone wiadomości. Ta funkcja jest dostępna tylko w [!INCLUDE[wv](../../../../includes/wv-md.md)]. Służy to, gdy aplikacja musi używać własnej kolejki utraconych wiadomości zamiast udostępnianie innym aplikacjom działającym na tym samym komputerze.  
   
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> Właściwość express określonej kolejki do użycia jako kolejki utraconych wiadomości. To jest dostępna tylko w [!INCLUDE[wv](../../../../includes/wv-md.md)].  
+-   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> Właściwość do określonej kolejki do użycia jako kolejki utraconych wiadomości express. Ta opcja jest dostępna tylko w [!INCLUDE[wv](../../../../includes/wv-md.md)].  
   
- W tym przykładzie klient wysyła komunikaty zbiorczo do usługi z zakresu transakcji i określa arbitralnie niska wartość "time-to-live" dla tych wiadomości (około 2 sekundy). Klient określa również niestandardowej kolejki utraconych wiadomości do użycia można umieścić w kolejce wiadomości, które wygasły.  
+ W tym przykładzie klient wysyła komunikaty zbiorczo do usługi z zakresu transakcji i określa arbitralnie niska wartość "time-to-live" dla tych wiadomości (około 2 sekund). Klient określa również niestandardowych kolejki utraconych wiadomości do użycia można umieścić w kolejce komunikatów, które wygasły.  
   
- Aplikacja kliencka może odczytywać wiadomości w kolejce wiadomości utraconych i albo ponownych prób wysyłania wiadomości lub Popraw błąd, który spowodował oryginalnej wiadomości, które można umieścić w kolejce wiadomości utraconych i wysłać wiadomość. W przykładzie klient jest wyświetlany komunikat o błędzie.  
+ Aplikacja kliencka może odczytywać wiadomości z kolejki utraconych wiadomości i albo ponownych prób wysyłania komunikatu lub naprawić błąd, który spowodował oryginalna wiadomość ma zostać umieszczone w kolejce utraconych wiadomości, a następnie wysłać wiadomość. W tym przykładzie klient jest wyświetlany komunikat o błędzie.  
   
- Kontrakt usługi jest `IOrderProcessor`, jak pokazano w poniższym kodzie próbki.  
+ Umowa serwisowa jest `IOrderProcessor`, jak pokazano w poniższym przykładowym kodzie.  
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -49,9 +49,9 @@ public interface IOrderProcessor
 }  
 ```
 
- Kod usługi w próbce jest [nietransakcyjnego powiązanie MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).  
+ Kod usługi, w przykładzie jest [dokonana transakcja powiązania usługi MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).  
   
- Komunikacja z usługą odbywa się w zakresie transakcji. Usługa odczytuje wiadomości z kolejki, wykonuje operację, a następnie wyświetli wyniki operacji. Aplikacja tworzy również kolejka utraconych wiadomości utraconych.  
+ Komunikacja z usługą odbywa się w zakresie transakcji. Usługa odczytuje komunikaty z kolejki, wykonuje operację, a następnie wyświetla wyniki operacji. Aplikacja tworzy również kolejka utraconych wiadomości utraconych wiadomości.  
 
 ```csharp
 //The service contract is defined in generatedClient.cs, generated from the service by the svcutil tool.  
@@ -108,12 +108,12 @@ class Client
 }  
 ```
 
- Konfiguracja klienta określa krótki czas trwania komunikatu w celu dotarcia do usługi. Jeśli wiadomość nie może być przesyłany w czasie trwania określone, komunikat wygasa, a zostanie przeniesiona do kolejki utraconych wiadomości.  
+ Konfiguracja klienta określa krótki czas trwania komunikatu w celu dotarcia do usługi. Jeśli komunikat nie mogą być przekazywane w trakcie trwania określone, komunikat wygaśnie i zostanie przeniesiona do kolejki utraconych wiadomości.  
   
 > [!NOTE]
->  Istnieje możliwość dla klienta na dostarczenie wiadomości do kolejki usługi w określonym czasie. Aby upewnić się, zobacz usługi utraconych w akcji, należy uruchomić przed uruchomieniem usługi klienta. Komunikat upłynie limit czasu i jest dostarczany z usługą utraconych wiadomości.  
+>  Istnieje możliwość dla klienta w celu dostarczenia komunikatu do kolejki usługi w określonym czasie. Aby wyświetlić usługę wiadomości utraconych w akcji, należy uruchomić przed uruchomieniem usługi klienta. Komunikat upłynie limit czasu i jest dostarczana z usługą utraconych wiadomości.  
   
- Aplikacja musi definiować kolejki, które ma być używana jako kolejki utraconych wiadomości. Jeśli kolejka nie jest określony, domyślne systemowe transakcyjnej kolejki utraconych wiadomości jest używany utracone wiadomości w kolejce. W tym przykładzie aplikacja kliencka Określa kolejkę z utraconymi komunikatami własnej aplikacji.  
+ Aplikacja musi definiować której kolejki do użycia jako swojej kolejki utraconych wiadomości. Jeśli kolejka nie zostanie określony, domyślna systemowe transakcyjnej kolejki utraconych wiadomości jest używany do kolejki martwych wiadomości. W tym przykładzie aplikacja kliencka określa własnej kolejki utraconych wiadomości dla aplikacji.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -146,12 +146,12 @@ class Client
 </configuration>  
 ```  
   
- Usługa wiadomości utraconych odczytuje wiadomości z kolejki utraconych wiadomości. Implementuje usługi wiadomości utraconych `IOrderProcessor` kontraktu. Jej implementacja nie jest jednak proces zleceń. Usługa utraconych wiadomości jest usługa klienta i nie ma możliwości przetwarzania zamówienia.  
+ Usługa wiadomości utraconych odczytuje komunikaty z kolejki utraconych wiadomości. Implementuje usługi wiadomości utraconych `IOrderProcessor` kontraktu. Jego implementacja nie jest jednak aby przetwarzać zamówienia. Usługa utraconych wiadomości usługi klienta i nie ma możliwości przetwarzania zamówień.  
   
 > [!NOTE]
->  Kolejki utraconych wiadomości jest kolejką klienta i jest lokalny do menedżera kolejki klienta.  
+>  Kolejki utraconych wiadomości jest kolejką klienta i lokalny Menedżer kolejki klienta.  
   
- Sprawdza implementacji usługi utraconych komunikatów z powodu dostarczania i środki naprawcze przyjmuje wiadomości nie powiodło się. Przyczynę niepowodzenia wiadomości są przechwytywane w dwóch wyliczenia <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryFailure%2A> i <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryStatus%2A>. Możesz pobrać <xref:System.ServiceModel.Channels.MsmqMessageProperty> z <xref:System.ServiceModel.OperationContext> jak pokazano w poniższym kodzie próbki:  
+ Sprawdza implementacji usługi wiadomości utraconych z powodu komunikatu nie powiodła się, dostarczanie i środki naprawcze przyjmuje. Przyczyną niepowodzenia wiadomości są przechwytywane w dwóch wyliczenia <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryFailure%2A> i <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryStatus%2A>. Możesz pobrać <xref:System.ServiceModel.Channels.MsmqMessageProperty> z <xref:System.ServiceModel.OperationContext> jak pokazano w poniższym przykładowym kodzie:  
 
 ```csharp
 public void SubmitPurchaseOrder(PurchaseOrder po)  
@@ -169,9 +169,9 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
 }
 ```
 
- Wiadomości w kolejce wiadomości utraconych są komunikaty adresowane do usługi, który przetwarza wiadomości. W związku z tym gdy usługa wiadomości utraconych odczytuje wiadomości z kolejki, warstwie kanału Windows Communication Foundation (WCF) znajduje niezgodność w punktach końcowych i nie wysyła wiadomość. W takim przypadku wiadomość jest skierowana do kolejność przetwarzania usługi, ale jest odbierane przez usługę utraconych wiadomości. Komunikat, która jest skierowana do innego punktu końcowego, filtr adresów, aby dopasować dowolnego adresu jest określona w `ServiceBehavior`. Jest to wymagane do pomyślnie przetwarzać komunikatów, które są odczytywane z kolejki utraconych wiadomości.  
+ Wiadomości w kolejce wiadomości utraconych to komunikaty, które są kierowane do usługi, która przetwarza wiadomości. W związku z tym gdy usługa wiadomości utraconych odczytuje komunikaty z kolejki, warstwy kanału usługi Windows Communication Foundation (WCF) umożliwia znalezienie niezgodność punktów końcowych i nie wysyła komunikat. W takich przypadkach komunikat jest skierowana do Usługa przetwarzania zamówień, ale są odbierane przez usługę utraconych wiadomości. Aby otrzymywać wiadomość, która jest skierowana do innego punktu końcowego, filtr adresów, aby dopasować dowolny adres jest określony w `ServiceBehavior`. Jest to wymagane, aby pomyślnie przetwarzania komunikatów, które są odczytywane z kolejki utraconych wiadomości.  
   
- W tym przykładzie Usługa utraconych wiadomości ponownie wysyła komunikat Jeśli przyczyną błędu jest to, że komunikat został przekroczony. Z innych powodów wyświetla błąd dostarczania, jak pokazano w poniższym kodzie próbki:  
+ W tym przykładzie Usługa utraconych wiadomości umożliwia ponowne wysłanie wiadomości Jeśli przyczyna niepowodzenia jest fakt, że komunikat upłynął limit czasu. Z innych przyczyn wyświetla błąd dostarczania, jak pokazano w poniższym przykładowym kodzie:  
 
 ```csharp
 // Service class that implements the service contract.  
@@ -228,7 +228,7 @@ public class PurchaseOrderDLQService : IOrderProcessor
 }   
 ```
 
- Poniższy przykład przedstawia konfigurację dla wiadomości utraconych:  
+ Poniższy przykład przedstawia konfigurację dla wiadomości utraconych wiadomości:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -265,10 +265,10 @@ public class PurchaseOrderDLQService : IOrderProcessor
 </configuration>  
 ```  
   
- W uruchomienia przykładu, istnieją 3 pliki wykonywalne uruchomić, aby zobaczyć, jak działa kolejki utraconych wiadomości dla każdej aplikacji; Klient usługi i usługa utraconych wiadomości, która odczytuje z kolejki utraconych wiadomości dla każdej aplikacji i ponownie wysyła komunikat do usługi. Wszystkie są aplikacji konsoli, przy czym dane wyjściowe w oknach konsoli.  
+ W działa aplikacja przykładowa, istnieją 3 pliki wykonywalne uruchomić, aby zobaczyć, jak działa kolejki utraconych wiadomości dla każdej aplikacji; Klient usługi i usługi utraconych wiadomości, odczytuje z kolejki utraconych wiadomości dla każdej aplikacji, która umożliwia ponowne wysłanie wiadomości w usłudze. Wszystkie są aplikacje konsoli z danych wyjściowych okna konsoli.  
   
 > [!NOTE]
->  Ponieważ usługi kolejkowania wiadomości jest używany, klient i usługa ma być uruchomiona w tym samym czasie. Możesz z klientem, zamknij go, a następnie uruchom usługi i nadal otrzymuje jej wiadomości. Należy uruchomić usługę i zamknąć, dzięki czemu można utworzyć kolejki.  
+>  Ponieważ usługi kolejkowania wiadomości jest używany, klient i usługa ma być uruchomiona w tym samym czasie. Można uruchomić klienta, zamknij go, a następnie uruchom usługi i wciąż otrzymuje jego wiadomości. Należy uruchomić usługę i zamknij go, tak że można utworzyć kolejki.  
   
  Podczas uruchamiania klienta, klient jest wyświetlany komunikat:  
   
@@ -276,9 +276,9 @@ public class PurchaseOrderDLQService : IOrderProcessor
 Press <ENTER> to terminate client.  
 ```  
   
- Klient próbował wysłać wiadomość, ale z limitem czasu krótkich, wiadomość wygasła i jest obecnie w kolejce kolejki utraconych wiadomości dla każdej aplikacji.  
+ Klient próbował wysłać wiadomość, ale z krótki limit czasu, wiadomość wygasł i jest obecnie w kolejce kolejki utraconych wiadomości dla każdej aplikacji.  
   
- Następnie należy uruchomić usługę utraconych wiadomości, która odczytuje komunikat i wyświetla kod błędu i ponownie wysyła komunikat do usługi.  
+ Następnie uruchom usługę utraconych wiadomości, która odczytuje komunikat i wyświetla kod błędu: umożliwia ponowne wysłanie wiadomości do usługi.  
   
 ```  
 The dead letter service is ready.  
@@ -293,7 +293,7 @@ Trying to resend the message
 Purchase order resent  
 ```  
   
- Usługa uruchamia odczytuje komunikat wysłane ponownie i przetwarza je.  
+ Uruchamiania i następnie odczytuje komunikat wysłane ponownie i przetwarza je.  
   
 ```  
 The service is ready.  
@@ -308,29 +308,29 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
         Order status: Pending  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Upewnij się, że wykonano procedurę [jednorazowego procedurę instalacji dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Jeśli usługa jest uruchamiana pierwszy, sprawdza, upewnij się, że kolejka jest obecny. Jeśli kolejka nie jest obecny, będzie utworzyć usługę. Można uruchomić usługi, aby najpierw utworzyć kolejkę, lub można go utworzyć za pomocą Menedżera kolejki usługi MSMQ. Wykonaj następujące kroki, aby utworzyć kolejkę w systemie Windows 2008.  
+2.  Jeśli usługa jest uruchamiana pierwszy, będzie sprawdzał, aby upewnić się, że kolejka jest obecny. Jeśli kolejka nie jest obecny, będzie utworzyć usługę. Można uruchomić usługi, aby najpierw utworzyć kolejkę, lub możesz je utworzyć za pomocą Menedżera kolejki usługi MSMQ. Wykonaj następujące kroki, aby utworzyć kolejkę w programie Windows 2008.  
   
     1.  Otwórz Menedżera serwera w [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
-    2.  Rozwiń węzeł **funkcje** kartę.  
+    2.  Rozwiń **funkcji** kartę.  
   
-    3.  Kliknij prawym przyciskiem myszy **kolejki wiadomości prywatne**i wybierz **nowy**, **kolejki prywatnej**.  
+    3.  Kliknij prawym przyciskiem myszy **prywatnej kolejki komunikatów**i wybierz **New**, **kolejki prywatnej**.  
   
     4.  Sprawdź **transakcyjna** pole.  
   
     5.  Wprowadź `ServiceModelSamplesTransacted` jako nazwę nowej kolejki.  
   
-3.  Tworzenie wersji języka C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Do uruchamiania próbki w kolejce zmiany konfiguracji jednego lub między komputerami nazwy, zastępując localhost pełną nazwę komputera i postępuj zgodnie z instrukcjami [uruchamiania przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Do uruchomienia przykładu w kolejce zmiany konfiguracji komputera jednego lub wielu nazw odpowiednio zastępowanie localhost z pełną nazwę komputera i postępuj zgodnie z instrukcjami w [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Aby uruchomić na komputerze, na przykład przyłączony do grupy roboczej  
+### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Do uruchomienia przykładu na komputer przyłączony do grupy roboczej  
   
-1.  Jeśli komputer nie jest częścią domeny, należy wyłączyć zabezpieczeń transportu przez ustawienie poziomu uwierzytelniania w trybie i ochrony `None` jak pokazano w poniższych Przykładowa konfiguracja:  
+1.  Jeśli komputer nie jest częścią domeny, należy wyłączyć zabezpieczenia transportu, ustawienie poziomu uwierzytelniania w trybie i ochrony `None` jak pokazano w poniższym Przykładowa konfiguracja:  
   
     ```xml  
     <bindings>  
@@ -342,22 +342,22 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
     </bindings>  
     ```  
   
-     Upewnij się punkt końcowy jest skojarzony z powiązaniem przez ustawienie punktu końcowego `bindingConfiguration` atrybutu.  
+     Upewnij się, punkt końcowy jest skojarzony z powiązaniem przez ustawienie punktu końcowego `bindingConfiguration` atrybutu.  
   
-2.  Upewnij się, zmiany konfiguracji na DeadLetterService, serwera i klienta, przed uruchomieniem próbki.  
+2.  Upewnij się, zmień konfigurację na DeadLetterService, serwera i klienta, przed uruchomieniem przykładu.  
   
     > [!NOTE]
-    >  Ustawienie `security mode` do `None` jest odpowiednikiem ustawienia `MsmqAuthenticationMode`, `MsmqProtectionLevel` i `Message` zabezpieczeń do `None`.  
+    >  Ustawienie `security mode` do `None` jest odpowiednikiem ustawienia `MsmqAuthenticationMode`, `MsmqProtectionLevel` i `Message` security `None`.  
   
 ## <a name="comments"></a>Komentarze  
- Domyślnie z `netMsmqBinding` powiązania transportu, zabezpieczeń jest włączone. Dwie właściwości `MsmqAuthenticationMode` i `MsmqProtectionLevel`, wspólnie określić typ zabezpieczeń transportu. Domyślny tryb uwierzytelniania jest ustawiony na `Windows` i poziom ochrony jest ustawiony na `Sign`. MSMQ zapewnić uwierzytelnianie i funkcji podpisywania musi być częścią domeny. Jeśli w tym przykładzie zostanie uruchomiony na komputerze, który nie jest częścią domeny, zostanie wyświetlony następujący błąd: "Komunikat użytkownika wewnętrzny certyfikat usługi kolejkowania wiadomości nie istnieje".  
+ Domyślnie `netMsmqBinding` powiązania transportu, zabezpieczeń jest włączone. Dwie właściwości `MsmqAuthenticationMode` i `MsmqProtectionLevel`, wspólnie określić typ zabezpieczeń transportu. Domyślny tryb uwierzytelniania jest ustawiony na `Windows` i poziom ochrony jest ustawiony na `Sign`. Dla usługi MSMQ zapewniać uwierzytelnianie i funkcji podpisywania należy do domeny. Po uruchomieniu tego przykładu na komputerze, który nie jest częścią domeny, zostanie wyświetlony następujący błąd: "Wiadomość użytkownika wewnętrzny certyfikat usługi kolejkowania nie istnieje".  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  
   

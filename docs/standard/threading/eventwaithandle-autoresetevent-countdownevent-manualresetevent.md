@@ -9,34 +9,34 @@ helpviewer_keywords:
 ms.assetid: cd94fc34-ac15-427f-b723-a1240a4fab7d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 543853f581436a5fb7e5c897012b99bef20dc289
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f818ecf52ae1179d6d32d0b76cea3cc2a8f36ea8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582949"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416415"
 ---
 # <a name="eventwaithandle-autoresetevent-countdownevent-manualresetevent"></a>EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent
-Uchwyty oczekiwania na zdarzenie Zezwalaj wątków, aby zsynchronizować działań przez siebie sygnalizowania i Oczekiwanie na sygnały siebie nawzajem. Te zdarzenia synchronizacji są oparte na uchwyty oczekiwania Win32 i można podzielić na dwa typy: te, które automatycznie resetować podczas sygnalizowane oraz te, które są resetowane ręcznie.  
+Uchwyty oczekiwania na zdarzenie umożliwiają wątków, aby zsynchronizować działań przez siebie Sygnalizowanie i Oczekiwanie na siebie nawzajem sygnałów. Te zdarzenia synchronizacji są oparte na Win32 uchwytami oczekiwania i można podzielić na dwa typy: te, które automatycznie resetować podczas sygnalizowane, które zostaną przywrócone ręcznie.  
   
- Uchwyty oczekiwania na zdarzenie są przydatne w wielu z tych samych operacji synchronizacji jako <xref:System.Threading.Monitor> klasy. Uchwyty oczekiwania na zdarzenie są często łatwe w użyciu niż <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType> i <xref:System.Threading.Monitor.Pulse%2A?displayProperty=nameWithType> metod i ich oferują lepszą kontrolę nad sygnalizowania. Uchwyty oczekiwania na zdarzenie o nazwie można również zsynchronizować działań w domenach aplikacji i procesów, monitory są lokalne dla domeny aplikacji.  
+ Uchwyty oczekiwania na zdarzenie są przydatne w wielu z tych samych scenariuszy synchronizacji co <xref:System.Threading.Monitor> klasy. Uchwyty oczekiwania na zdarzenie często są łatwiejsze w obsłudze niż <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType> i <xref:System.Threading.Monitor.Pulse%2A?displayProperty=nameWithType> metody i oferują większą kontrolę nad sygnalizowanie. Uchwyty oczekiwania na zdarzenie o nazwie można również do synchronizowania działań w domenach aplikacji i procesów, podczas gdy monitory są lokalne w domenie aplikacji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [EventWaitHandle](../../../docs/standard/threading/eventwaithandle.md)  
- <xref:System.Threading.EventWaitHandle> Klasa może reprezentować albo automatyczne lub ręczne Resetowanie zdarzenia i albo lokalnego lub o nazwie zdarzeń systemowych.  
+ <xref:System.Threading.EventWaitHandle> Klasa może reprezentować albo automatyczne lub ręczne Resetowanie zdarzenia i albo lokalne lub o nazwie zdarzenia systemowe.  
   
  [AutoResetEvent](../../../docs/standard/threading/autoresetevent.md)  
- <xref:System.Threading.AutoResetEvent> Pochodną klasy <xref:System.Threading.EventWaitHandle> i reprezentuje lokalnym zdarzeniem, które automatycznie resetuje.  
+ <xref:System.Threading.AutoResetEvent> Klasa pochodzi od <xref:System.Threading.EventWaitHandle> i reprezentuje zdarzenie lokalnego, który przywraca automatycznie.  
   
  [ManualResetEvent i ManualResetEventSlim](../../../docs/standard/threading/manualresetevent-and-manualreseteventslim.md)  
- <xref:System.Threading.ManualResetEvent> Pochodną klasy <xref:System.Threading.EventWaitHandle> i reprezentuje lokalnym zdarzeniem, które musi zostać zresetowany ręcznie. <xref:System.Threading.ManualResetEventSlim> Klasa jest niewielka, szybsze wersji, która może służyć do zdarzeń w tym samym procesie.  
+ <xref:System.Threading.ManualResetEvent> Klasa pochodzi od <xref:System.Threading.EventWaitHandle> i reprezentuje lokalne zdarzenia, które muszą zostać zresetowane ręcznie. <xref:System.Threading.ManualResetEventSlim> Klasa jest uproszczone, szybciej wersji, który może służyć do zdarzenia w obrębie tego samego procesu.  
   
  [CountdownEvent](../../../docs/standard/threading/countdownevent.md)  
- <xref:System.Threading.CountdownEvent> Klasa umożliwia uproszczonej Implementowanie wzorców równoległości rozwidlenia/sprzężenia w kodzie używa uchwyty oczekiwania.  
+ <xref:System.Threading.CountdownEvent> Klasa oferuje uproszczony sposób na implementowanie wzorców równoległości rozwidlenia/scalania w kodzie używa uchwyty oczekiwania.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Uchwyty oczekiwania](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
- <xref:System.Threading.WaitHandle> Klasa jest klasą bazową dla <xref:System.Threading.EventWaitHandle>, <xref:System.Threading.Semaphore>, i <xref:System.Threading.Mutex> klasy. Zawiera metody statyczne takie jak <xref:System.Threading.WaitHandle.SignalAndWait%2A> i <xref:System.Threading.WaitHandle.WaitAll%2A> są przydatne podczas pracy ze wszystkimi typami uchwyty oczekiwania.  
+ [Uchwyty oczekiwania](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
+ <xref:System.Threading.WaitHandle> Klasa jest klasą bazową dla <xref:System.Threading.EventWaitHandle>, <xref:System.Threading.Semaphore>, i <xref:System.Threading.Mutex> klasy. Zawiera metody statyczne takie jak <xref:System.Threading.WaitHandle.SignalAndWait%2A> i <xref:System.Threading.WaitHandle.WaitAll%2A> są przydatne podczas pracy ze wszystkimi typami dojść oczekiwania.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Threading.EventWaitHandle>  

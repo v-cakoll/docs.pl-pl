@@ -1,57 +1,57 @@
 ---
-title: Generowanie poleceń CommandBuilders
+title: Generowanie poleceń za pomocą CommandBuilders
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
-ms.openlocfilehash: 752cccc9e10dd3056817945d1f9f5f3cf7d84227
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e1071261f45c56655f8e6fb5fec6fccb08fd13c6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766286"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415766"
 ---
-# <a name="generating-commands-with-commandbuilders"></a>Generowanie poleceń CommandBuilders
-Gdy `SelectCommand` właściwość dynamicznie jest określona w czasie wykonywania, takie jak przy użyciu narzędzia kwerendy pobierającej tekstową polecenia od użytkownika, nie można określić odpowiednie `InsertCommand`, `UpdateCommand`, lub `DeleteCommand` w czasie projektowania. Jeśli Twoje <xref:System.Data.DataTable> mapuje lub jest generowany z jednej bazy danych, możesz korzystać z <xref:System.Data.Common.DbCommandBuilder> obiektu w celu automatycznego generowania `DeleteCommand`, `InsertCommand`, i `UpdateCommand` z <xref:System.Data.Common.DbDataAdapter>.  
+# <a name="generating-commands-with-commandbuilders"></a>Generowanie poleceń za pomocą CommandBuilders
+Gdy `SelectCommand` w czasie wykonywania, dynamicznie określono właściwości, takie jak przy użyciu narzędzia kwerendy, wykorzystującej tekstową polecenia od użytkownika, nie można określić odpowiednią `InsertCommand`, `UpdateCommand`, lub `DeleteCommand` w czasie projektowania. Jeśli Twoje <xref:System.Data.DataTable> mapuje lub jest generowana z tabeli pojedynczej bazy danych, możesz korzystać z zalet <xref:System.Data.Common.DbCommandBuilder> obiektu w celu automatycznego generowania `DeleteCommand`, `InsertCommand`, i `UpdateCommand` z <xref:System.Data.Common.DbDataAdapter>.  
   
- Jako minimalne wymaganie, należy ustawić `SelectCommand` właściwości, aby polecenie automatycznego generowania do pracy. Schemat tabeli pobierane przez `SelectCommand` właściwość określa składnię automatycznie generowanych instrukcje INSERT, UPDATE i DELETE.  
+ Jako minimalne wymaganie, należy ustawić `SelectCommand` właściwości w kolejności do generowania automatycznego polecenia do pracy. Schemat tabeli pobierane przez `SelectCommand` właściwość określa składnię automatycznie generowanych instrukcji INSERT, UPDATE i DELETE.  
   
- <xref:System.Data.Common.DbCommandBuilder> Musi być wykonywany `SelectCommand` celu powrotu metadane wymagane do utworzenia polecenia INSERT, UPDATE i usunąć SQL. W związku z tym niezbędne jest dodatkowe podróży do źródła danych, a to może zmniejszyć wydajność. Aby osiągnąć optymalną wydajność, ustaw jawnie poleceniach zamiast <xref:System.Data.Common.DbCommandBuilder>.  
+ <xref:System.Data.Common.DbCommandBuilder> Muszą być wykonywane `SelectCommand` celu zwrócenia niezbędnych do tworzenia poleceń INSERT, UPDATE i Usuń SQL metadanych. W rezultacie niezbędne jest dodatkowe podróży do źródła danych, a to może zmniejszyć wydajność. Aby osiągnąć optymalną wydajność, jawnie określić poleceń, a nie przy użyciu <xref:System.Data.Common.DbCommandBuilder>.  
   
- `SelectCommand` Musi także zwracać co najmniej jeden klucz podstawowy lub unikatowy kolumny. Jeśli nie są obecne, `InvalidOperation` wygenerowany wyjątek i nie są generowane polecenia.  
+ `SelectCommand` Musi także zwracać co najmniej jeden klucz podstawowy lub unikatowy kolumny. Jeśli żaden nie jest obecny, `InvalidOperation` wygenerowany wyjątek, a polecenia nie są generowane.  
   
- Jeśli są skojarzone z `DataAdapter`, <xref:System.Data.Common.DbCommandBuilder> automatycznie generuje `InsertCommand`, `UpdateCommand`, i `DeleteCommand` właściwości `DataAdapter` jeśli są puste odwołania. Jeśli `Command` już istnieje dla właściwości istniejącej `Command` jest używany.  
+ Jeśli są skojarzone z `DataAdapter`, <xref:System.Data.Common.DbCommandBuilder> automatycznie generuje `InsertCommand`, `UpdateCommand`, i `DeleteCommand` właściwości `DataAdapter` przypadku odwołania o wartości null. Jeśli `Command` już istnieje dla właściwości istniejącego `Command` jest używany.  
   
- Widoki bazy danych, które są tworzone przez łączenie co najmniej dwie tabele nie są uznawane za tabelę pojedynczej bazy danych. W tym wystąpieniu nie można użyć <xref:System.Data.Common.DbCommandBuilder> mają być automatycznie generowane polecenia; należy jawnie określić poleceniach. Informacje o ustawianiu jawnie poleceń, aby rozpoznać aktualizacje `DataSet` do źródła danych, zobacz [aktualizowanie źródła danych z obiektów DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  
+ Widoki bazy danych, które są tworzone przez łączenie dwóch lub więcej tabel nie są uwzględniane tabeli pojedynczej bazy danych. W tym wystąpieniu nie można użyć <xref:System.Data.Common.DbCommandBuilder> można automatycznie wygenerować polecenia; należy jawnie określić poleceń. Informacje o ustawianiu jawnie polecenia, aby rozwiązać aktualizacje `DataSet` do źródła danych, zobacz [aktualizowanie źródeł danych za pomocą elementów DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  
   
- Możesz chcieć mapowania parametrów wyjściowych zaktualizowany wiersz `DataSet`. Typowe zadania może być odczytywania wartości pola automatycznie wygenerowaną tożsamość lub czasu sygnatury ze źródła danych. <xref:System.Data.Common.DbCommandBuilder> Nie będzie mapował parametry wyjściowe do kolumn w zaktualizowany wiersz domyślnie. W tym wystąpieniu należy jawnie określić polecenia. Przykład mapowania pól automatycznie generowanych identity kolumny wstawionego wiersza, zobacz [pobierania tożsamości lub wartości automatycznie numerowane](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md).  
+ Możesz chcieć mapowania parametrów wyjściowych zaktualizowany wiersz `DataSet`. Typowe zadania może być pobranie wartości pól identity automatycznie generowanych lub czasu sygnatury ze źródła danych. <xref:System.Data.Common.DbCommandBuilder> Nie będzie mapował parametry wyjściowe do kolumn w zaktualizowany wiersz domyślnie. W tym wystąpieniu należy jawnie określić polecenia. Aby uzyskać przykład mapowania pól automatycznie generowanych identity kolumny wstawionego wiersza, zobacz [pobieranie tożsamości lub wartości automatycznych numerów](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md).  
   
-## <a name="rules-for-automatically-generated-commands"></a>Zasady są generowane automatycznie poleceń  
- W poniższej tabeli przedstawiono zasady dla jak automatycznie generowane polecenia są wygenerowanych.  
+## <a name="rules-for-automatically-generated-commands"></a>Zasady generowane automatycznie poleceń  
+ W poniższej tabeli przedstawiono reguły dla jak automatycznie generowane że polecenia są generowane.  
   
 |Polecenie|Reguła|  
 |-------------|----------|  
-|`InsertCommand`|Wstawia wiersz w źródle danych dla wszystkich wierszy w tabeli o <xref:System.Data.DataRow.RowState%2A> z <xref:System.Data.DataRowState.Added>. Wstawia wartości dla wszystkich kolumn, które są aktualizowalne (ale nie kolumny tożsamości, wyrażenia lub sygnatury czasowe).|  
-|`UpdateCommand`|Aktualizuje wierszy w źródle danych dla wszystkich wierszy w tabeli o `RowState` z <xref:System.Data.DataRowState.Modified>. Aktualizuje wartości wszystkich kolumn z wyjątkiem kolumny, które nie są aktualizowalne, takich jak tożsamości lub wyrażenia. Aktualizuje wszystkie wiersze, gdzie wartości w kolumnie w źródle danych pasuje do wartości kolumny klucza podstawowego wiersza, a pozostałe kolumny w źródle danych takie same jak oryginalne wartości wiersza. Aby uzyskać więcej informacji zobacz "Optymistycznej współbieżności modelu dla aktualizacji i usuwania" w dalszej części tego tematu.|  
-|`DeleteCommand`|Usuwa wierszy w źródle danych dla wszystkich wierszy w tabeli o `RowState` z <xref:System.Data.DataRowState.Deleted>. Usuwa wszystkie wiersze, gdzie wartości kolumny pasują do wartości kolumny klucza podstawowego, wiersza, a pozostałe kolumny w źródle danych takie same jak oryginalne wartości wiersza. Aby uzyskać więcej informacji zobacz "Optymistycznej współbieżności modelu dla aktualizacji i usuwania" w dalszej części tego tematu.|  
+|`InsertCommand`|Wstawia wiersz w źródle danych we wszystkich wierszach w tabeli z <xref:System.Data.DataRow.RowState%2A> z <xref:System.Data.DataRowState.Added>. Wstawia wartości dla wszystkich kolumn, które są aktualizowalne (ale nie kolumny tożsamości, wyrażenia lub sygnatur czasowych).|  
+|`UpdateCommand`|Aktualizuje wierszy w źródle danych we wszystkich wierszach w tabeli z `RowState` z <xref:System.Data.DataRowState.Modified>. Aktualizuje wartości wszystkie kolumny z wyjątkiem kolumn, które nie są aktualizowalne, takich jak tożsamości lub wyrażenia. Aktualizuje wszystkie wiersze, gdzie wartości kolumn w źródle danych pasuje do wartości kolumny klucza podstawowego, wiersza, a pozostałe kolumny w źródle danych pasują do siebie oryginalnych wartości wiersza. Aby uzyskać więcej informacji zobacz "Optymistycznej współbieżności modelu dla aktualizacji i usuwania" w dalszej części tego tematu.|  
+|`DeleteCommand`|Usuwa wiersze w źródle danych we wszystkich wierszach w tabeli z `RowState` z <xref:System.Data.DataRowState.Deleted>. Powoduje usunięcie wszystkich wierszy, gdzie wartości kolumny pasują do wartości kolumny klucza podstawowego, wiersza, a pozostałe kolumny w źródle danych pasują do siebie oryginalnych wartości wiersza. Aby uzyskać więcej informacji zobacz "Optymistycznej współbieżności modelu dla aktualizacji i usuwania" w dalszej części tego tematu.|  
   
 ## <a name="optimistic-concurrency-model-for-updates-and-deletes"></a>Model optymistycznej współbieżności dla aktualizacji i usunięć  
- Logika generowania poleceń automatycznie dla instrukcji UPDATE i DELETE jest oparta na *optymistycznej współbieżności*— to znaczy rekordy nie są zablokowane do edycji i może być modyfikowany przez innych użytkowników lub procesów w dowolnym momencie. Ponieważ może rekord został zmodyfikowany po został zwrócony z instrukcją SELECT, ale przed wystawieniem instrukcji UPDATE lub DELETE automatycznie generowanego instrukcji UPDATE lub DELETE zawiera klauzulę WHERE, określając, czy wiersz jest aktualizowana tylko, jeśli go zawiera wszystkie pierwotne wartości i nie zostały usunięte ze źródła danych. Można to zrobić, aby uniknąć zastępowania nowych danych. Gdzie aktualizację automatycznie generowanych podejmuje próbę zaktualizowania wiersza, który został usunięty lub nie zawiera oryginalnej wartości znajdujących się w <xref:System.Data.DataSet>, polecenie nie ma wpływu na rekordy, a <xref:System.Data.DBConcurrencyException> jest generowany.  
+ Generowanie poleceń automatycznie dla instrukcji UPDATE i DELETE logikę opiera się na *optymistycznej współbieżności*— czyli rekordów nie są zablokowane do edycji i może być modyfikowana przez innych użytkowników lub procesów w dowolnym momencie. Ponieważ może rekord został zmodyfikowany po został zwrócony z instrukcji SELECT, ale przed wystawieniem instrukcji UPDATE lub DELETE automatycznie wygenerowana instrukcja UPDATE lub DELETE zawiera klauzulę WHERE, określając, że wiersza są aktualizowane tylko, jeśli go zawiera wszystkie pierwotne wartości i nie został usunięty ze źródła danych. Odbywa się, aby uniknąć zastąpienia nowych danych. Gdzie aktualizację automatycznie generowanych próbuje zaktualizować wiersza, który został usunięty lub nie zawiera oryginalnej wartości znajdujących się w <xref:System.Data.DataSet>, polecenie nie ma wpływu na wszystkie rekordy i <xref:System.Data.DBConcurrencyException> zgłaszany.  
   
- Jeśli chcesz, UPDATE lub DELETE, aby ukończyć niezależnie od oryginalnych wartości, musisz jawnie ustawić `UpdateCommand` dla `DataAdapter` i nie zależą od polecenia automatycznego generowania.  
+ Jeśli chcesz, UPDATE lub DELETE, aby ukończyć niezależnie od oryginalnych wartości, musisz jawnie ustawić `UpdateCommand` dla `DataAdapter` i nie zależą od generacji automatycznej polecenia.  
   
-## <a name="limitations-of-automatic-command-generation-logic"></a>Ograniczenia polecenia automatycznego generowania logiki  
- Następujące ograniczenia mają zastosowanie do polecenia automatycznego generowania.  
+## <a name="limitations-of-automatic-command-generation-logic"></a>Ograniczenia polecenia automatyczne generowanie logiki  
+ Poniższe ograniczenia mają zastosowanie do automatycznego polecenia generacji.  
   
 ### <a name="unrelated-tables-only"></a>Tylko niepowiązane tabele  
- Generacji polecenie automatyczne logiki generuje WSTAWIANIA, AKTUALIZOWANIA lub usuwania instrukcje dla autonomicznego tabel bez uwzględnienia żadnych relacji z innymi tabelami w źródle danych. W związku z tym można napotkać błąd podczas wywoływania metody `Update` można przesłać zmian dla kolumny, która uczestniczy w ograniczenie klucza obcego w bazie danych. Aby uniknąć tego wyjątku, nie należy używać <xref:System.Data.Common.DbCommandBuilder> dla aktualizowanie kolumn objętego ograniczenie klucza obcego; zamiast tego należy jawnie określić instrukcje używany do wykonania tej operacji.  
+ Generowanie polecenia automatycznego logika generuje INSERT, AKTUALIZOWANIA lub usuwania instrukcji dla autonomicznych tabel nie biorąc pod uwagę wszystkie relacje z innymi tabelami w źródle danych. W rezultacie mogą wystąpić błąd podczas wywoływania `Update` na przesyłanie zmian do kolumn, które uczestniczą w ograniczenie klucza obcego w bazie danych. Aby uniknąć tego wyjątku, nie należy używać <xref:System.Data.Common.DbCommandBuilder> aktualizowania kolumn uczestniczących w ograniczenie klucza obcego; zamiast tego należy jawnie określić instrukcji używany do wykonania tej operacji.  
   
-### <a name="table-and-column-names"></a>Tabela i nazwy kolumn  
- Polecenie automatyczne generowanie logiki może się niepowodzeniem, jeśli nazwy kolumny lub tabeli zawierać żadnych znaków specjalnych, takich jak spacje, kropki, znaki cudzysłowu lub innych znaków innych niż alfanumeryczne, nawet jeśli rozdzielany nawiasami kwadratowymi. W zależności od dostawcy Ustawianie parametrów QuotePrefix i QuoteSuffix mogą zezwolić logika generowania procesu spacje, ale nie mogą opuścić znaki specjalne. W pełni kwalifikowana nazwy tabeli w formie *catalog.schema.table* są obsługiwane.  
+### <a name="table-and-column-names"></a>Nazw kolumn i tabel  
+ Polecenie automatyczne generowanie logiki może zakończyć się niepowodzeniem, jeśli nazwy kolumn lub tabel zawierać żadnych znaków specjalnych, takich jak spacji, kropki, znaki cudzysłowu ani innych znaków innych niż alfanumeryczne nawet wtedy, gdy rozdzielany nawiasami kwadratowymi. W zależności od dostawcy Ustawianie parametrów QuotePrefix i QuoteSuffix może umożliwić logikę generowania procesu miejsca do magazynowania, ale nie można wyeliminować, znaki specjalne. W pełni kwalifikowane nazwy tabeli w formie *catalog.schema.table* są obsługiwane.  
   
-## <a name="using-the-commandbuilder-to-automatically-generate-an-sql-statement"></a>Przy użyciu CommandBuilder można automatycznie wygenerować instrukcji SQL  
- Można automatycznie wygenerować instrukcji SQL dla `DataAdapter`, najpierw ustaw `SelectCommand` właściwość `DataAdapter`, następnie utwórz `CommandBuilder` obiekt, a następnie określ jako argument `DataAdapter` dla którego `CommandBuilder` automatycznie Generuj instrukcje SQL.  
+## <a name="using-the-commandbuilder-to-automatically-generate-an-sql-statement"></a>Za pomocą CommandBuilder, aby automatycznie wygenerować instrukcji SQL  
+ Aby automatycznie wygenerować instrukcji SQL dla `DataAdapter`, najpierw ustawić `SelectCommand` właściwość `DataAdapter`, następnie utwórz `CommandBuilder` obiektu i określona jako argument `DataAdapter` dla którego `CommandBuilder` automatycznie Generuj instrukcje SQL.  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection object   
@@ -73,20 +73,20 @@ builder.QuotePrefix = "[";
 builder.QuoteSuffix = "]";  
 ```  
   
-## <a name="modifying-the-selectcommand"></a>Modyfikowanie właściwości polecenia SelectCommand  
- Jeśli zmodyfikujesz `CommandText` z `SelectCommand` po polecenia INSERT, UPDATE lub DELETE zostały wygenerowane automatycznie, może wystąpić wyjątek. Jeśli zmodyfikowanych `SelectCommand.CommandText` zawiera informacje o schemacie, która jest niespójna z `SelectCommand.CommandText` używane podczas wstawiania, aktualizowania lub usuwania polecenia zostały automatycznie wygenerowaną, przyszłych wywołaniach `DataAdapter.Update` metody może próbować uzyskują dostęp do kolumn który istnieje już w bieżącej tabeli odwołuje się `SelectCommand`, i zostanie wygenerowany wyjątek.  
+## <a name="modifying-the-selectcommand"></a>Modyfikowanie polecenia SelectCommand  
+ Jeśli zmodyfikujesz `CommandText` z `SelectCommand` po polecenia INSERT, UPDATE lub DELETE zostały wygenerowane automatycznie, może wystąpić wyjątek. Jeśli zmodyfikowanego `SelectCommand.CommandText` zawiera informacje o schemacie, która jest niezgodna z `SelectCommand.CommandText` używane podczas wstawiania, aktualizowania lub usuwania polecenia zostały automatycznie generowanych, przyszłe wywołania `DataAdapter.Update` metoda może podejmować prób dostępu do kolumny, istnieje już w bieżącej tabeli odwołuje się `SelectCommand`, i zostanie zgłoszony wyjątek.  
   
- Można odświeżyć informacji o schemacie, używany przez `CommandBuilder` mają być automatycznie generowane polecenia przez wywołanie metody `RefreshSchema` metody `CommandBuilder`.  
+ Możesz odświeżyć informacje o schemacie, używane przez `CommandBuilder` do automatycznego generowania poleceń, wywołując `RefreshSchema` metody `CommandBuilder`.  
   
- Jeśli chcesz dowiedzieć się, jakie polecenia została wygenerowana automatycznie, można uzyskać odwołania do automatycznie generowanego poleceń za pomocą `GetInsertCommand`, `GetUpdateCommand`, i `GetDeleteCommand` metody `CommandBuilder` obiektu i sprawdzanie `CommandText`właściwości skojarzone polecenie.  
+ Jeśli chcesz wiedzieć, jakie polecenia został wygenerowany automatycznie, można uzyskać odwołanie do automatycznie generowanego poleceń przy użyciu `GetInsertCommand`, `GetUpdateCommand`, i `GetDeleteCommand` metody `CommandBuilder` obiektu i sprawdzanie `CommandText`właściwość skojarzone polecenie.  
   
- Poniższy przykład kodu zapisuje do konsoli polecenia update, który został wygenerowany automatycznie.  
+ Poniższy przykład kodu zapisuje do konsoli polecenia update, wygenerowana automatycznie.  
   
 ```  
 Console.WriteLine(builder.GetUpdateCommand().CommandText)  
 ```  
   
- Poniższy przykład tworzy ponownie `Customers` w tabeli `custDS` zestawu danych. **RefreshSchema** metoda jest wywoływana, aby odświeżyć automatycznie generowane polecenia o nowe informacje kolumny.  
+ Poniższy przykład tworzy ponownie `Customers` tabelę `custDS` zestawu danych. **RefreshSchema** metoda jest wywoływana, aby odświeżyć automatycznie generowanych poleceń z tym nowych informacji o kolumnie.  
   
 ```vb  
 ' Assumes an open SqlConnection and SqlDataAdapter inside of a Using block.  
@@ -112,4 +112,4 @@ adapter.Fill(custDS, "Customers");
  [Polecenia i parametry](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [Wykonywanie polecenia](../../../../docs/framework/data/adonet/executing-a-command.md)  
  [DbConnection, DbCommand i DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

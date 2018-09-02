@@ -5,38 +5,38 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
-ms.openlocfilehash: c62f934561fa4a6c352ff84b8c1201461c42de39
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 040ecd8a2ce223f89601de735b77ccc81638c7af
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357260"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417085"
 ---
 # <a name="schema-restrictions"></a>Ograniczenia schematu
-Drugi parametr opcjonalny **GetSchema** metoda jest zwracane ograniczenia, które są używane w celu ograniczenia ilości informacji o schemacie, a jest przekazywana do **GetSchema** metodę jako tablica ciągów . Pozycja w tablicy określa wartości, które mogą upłynąć, a jest to równoważne numer ograniczeń.  
+Drugi parametr opcjonalny **GetSchema** metodą jest zwracane ograniczenia, które są używane do ograniczenia ilości informacji o schemacie, a zostanie on przekazany do **GetSchema** metodę jako tablica ciągów . Pozycja w tablicy określa wartości, które można przekazać, a jest równa liczbie ograniczania.  
   
- Na przykład w poniższej tabeli opisano ograniczenia obsługiwane przez kolekcji schematów "Tabele" za pomocą dostawcy .NET Framework Data Provider for SQL Server. Dodatkowe ograniczenia dotyczące kolekcji schematu programu SQL Server są wymienione na końcu tego tematu.  
+ Na przykład w poniższej tabeli opisano ograniczenia dotyczące obsługiwanych przez kolekcji schematów "Tabele" przy użyciu .NET Framework Data Provider for SQL Server. Dodatkowe ograniczenia dotyczące kolekcje schematów programu SQL Server są wymienione na końcu tego tematu.  
   
-|Nazwa ograniczenia|Nazwa parametru|Ograniczenie domyślne|Liczba ograniczeń|  
+|Nazwa ograniczenia|Nazwa parametru|Ograniczenia domyślne|Liczba ograniczeń|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Katalogu|@Catalog|TABLE_CATALOG|1|  
+|Wykaz|@Catalog|TABLE_CATALOG|1|  
 |Właściciel|@Owner|TABLE_SCHEMA|2|  
 |tabela|@Name|TABLE_NAME|3|  
 |Typem|@TableType|TABLE_TYPE|4|  
   
 ## <a name="specifying-restriction-values"></a>Określanie wartości ograniczeń  
- Do korzystania z jednego z ograniczeń kolekcji schematów "Tabele", po prostu utworzyć tablicy ciągów z czterech elementów, a następnie umieść wartość w elemencie, który jest zgodna z liczbą ograniczeń. Na przykład, aby ograniczyć tabele zwrócony przez **GetSchema** metody tylko tych tabel w schemacie "Sprzedaż" ustawienie drugiego elementu tablicy, tak aby "Sprzedaż" przed przekazaniem go do **GetSchema** metody.  
+ Aby użyć jednego z ograniczeń kolekcji schematów "Tabele", po prostu utworzyć tablicę ciągów z czterema elementami, a następnie umieść wartość w elemencie który odpowiada liczbie ograniczania. Na przykład, aby ograniczyć tabele zwracane przez **GetSchema** metody tylko do tabel schematu "Sprzedaż", ustaw drugiego elementu tablicy, aby "Sprzedaż" przed przekazaniem go do **GetSchema** metody.  
   
 > [!NOTE]
->  Kolekcje ograniczenia dla `SqlClient` i `OracleClient` dodatkowych `ParameterName` kolumny. Ograniczenie domyślna kolumna jest nadal istnieje dla zapewnienia zgodności, ale obecnie jest ignorowana. Zapytania sparametryzowane zamiast zastępowania ciągów należy ograniczyć ryzyko ataku polegającego na iniekcji SQL podczas określania wartości ograniczeń.  
+>  Kolekcje ograniczenia dla `SqlClient` i `OracleClient` dodatkową `ParameterName` kolumny. Ograniczenie domyślną kolumnę jest nadal dostępna dla wstecznej zgodności, ale obecnie jest ignorowana. Aby zminimalizować ryzyko ataku polegającego na iniekcji SQL podczas określania wartości ograniczenia należy używać zamiast zastępowania ciągów zapytań sparametryzowanych.  
   
 > [!NOTE]
->  Liczba elementów w tablicy musi być mniejsza niż liczba obsługiwana w przypadku kolekcji określony schemat else ograniczeń <xref:System.ArgumentException> zostanie wygenerowany. Może być krótsza niż maksymalna liczba ograniczenia. Brak ograniczeń są rozpatrywane null (bez ograniczeń).  
+>  Liczba elementów w tablicy musi być mniejsza niż liczba ograniczeń obsługiwane w przypadku kolekcji określony schemat else <xref:System.ArgumentException> zostanie zgłoszony. Może być mniejsza niż maksymalna liczba ograniczeń. Brak ograniczeń są uznawane za wartość null (nieograniczony).  
   
- Można zbadać zarządzanego dostawcy .NET Framework, można ustalić listy ograniczeń obsługiwanych przez wywołanie metody **GetSchema** metodę o nazwie kolekcji ograniczeń schematu, czyli "Ograniczenia". Spowoduje to zwrócenie <xref:System.Data.DataTable> listę nazwy kolekcji, nazwy ograniczenia wartości domyślne ograniczenia i ograniczenie liczby.  
+ Można tworzyć zapytania zarządzanego dostawcy .NET Framework, aby określić listę ograniczeń obsługiwanych przez wywołanie metody **GetSchema** metodę o nazwie kolekcji schematów ograniczeniom, czyli "Ograniczenia". Spowoduje to zwrócenie <xref:System.Data.DataTable> listę nazw kolekcji, nazwy ograniczeń, wartości domyślne ograniczenia i ograniczenie liczby.  
   
 ### <a name="example"></a>Przykład  
- W poniższych przykładach pokazano, jak używać <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> metody dostawcy danych programu .NET Framework dla programu SQL Server <xref:System.Data.SqlClient.SqlConnection> klasy można pobrać informacji schematu o wszystkie tabele zawarte w **AdventureWorks**przykładowe bazy danych i ograniczyć informacje zwracane tylko tych tabel w schemacie "Sprzedaż":  
+ W poniższych przykładach pokazano sposób użycia <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> metody .NET Framework Data Provider for SQL Server <xref:System.Data.SqlClient.SqlConnection> klasy do pobrania informacji o schemacie o wszystkich tabelach zawartych w **AdventureWorks**przykładowe bazy danych i ograniczyć informacje zwrócone do tylko tych tabel w schemacie "terminy sprzedaż":  
   
 ```vb  
 Imports System.Data.SqlClient  
@@ -130,88 +130,88 @@ class Program
 }  
 ```  
   
-## <a name="sql-server-schema-restrictions"></a>Ograniczenia schematu serwera SQL  
- W poniższej tabeli wymieniono ograniczenia dotyczące kolekcji schematu programu SQL Server.  
+## <a name="sql-server-schema-restrictions"></a>Ograniczenia schematu programu SQL Server  
+ W poniższej tabeli wymieniono ograniczenia dotyczące kolekcje schematów programu SQL Server.  
   
 ### <a name="users"></a>Użytkownicy  
   
-|Nazwa ograniczenia|Nazwa parametru|Ograniczenie domyślne|Liczba ograniczeń|  
+|Nazwa ograniczenia|Nazwa parametru|Ograniczenia domyślne|Liczba ograniczeń|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Nazwa_użytkownika|@Name|nazwa|1|  
   
 ### <a name="databases"></a>Bazy danych  
   
-|Nazwa ograniczenia|Nazwa parametru|Ograniczenie domyślne|Liczba ograniczeń|  
+|Nazwa ograniczenia|Nazwa parametru|Ograniczenia domyślne|Liczba ograniczeń|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Nazwa|@Name|Nazwa|1|  
   
 ### <a name="tables"></a>Tabele  
   
-|Nazwa ograniczenia|Nazwa parametru|Ograniczenie domyślne|Liczba ograniczeń|  
+|Nazwa ograniczenia|Nazwa parametru|Ograniczenia domyślne|Liczba ograniczeń|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Katalogu|@Catalog|TABLE_CATALOG|1|  
+|Wykaz|@Catalog|TABLE_CATALOG|1|  
 |Właściciel|@Owner|TABLE_SCHEMA|2|  
 |tabela|@Name|TABLE_NAME|3|  
 |Typem|@TableType|TABLE_TYPE|4|  
   
 ### <a name="columns"></a>Kolumny  
   
-|Nazwa ograniczenia|Nazwa parametru|Ograniczenie domyślne|Liczba ograniczeń|  
+|Nazwa ograniczenia|Nazwa parametru|Ograniczenia domyślne|Liczba ograniczeń|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Katalogu|@Catalog|TABLE_CATALOG|1|  
+|Wykaz|@Catalog|TABLE_CATALOG|1|  
 |Właściciel|@Owner|TABLE_SCHEMA|2|  
 |tabela|@Table|TABLE_NAME|3|  
 |Kolumny|@Column|COLUMN_NAME|4|  
   
 ### <a name="structuredtypemembers"></a>StructuredTypeMembers  
   
-|Nazwa ograniczenia|Nazwa parametru|Ograniczenie domyślne|Liczba ograniczeń|  
+|Nazwa ograniczenia|Nazwa parametru|Ograniczenia domyślne|Liczba ograniczeń|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Katalogu|@Catalog|TABLE_CATALOG|1|  
+|Wykaz|@Catalog|TABLE_CATALOG|1|  
 |Właściciel|@Owner|TABLE_SCHEMA|2|  
 |tabela|@Table|TABLE_NAME|3|  
 |Kolumny|@Column|COLUMN_NAME|4|  
   
 ### <a name="views"></a>Widoki  
   
-|Nazwa ograniczenia|Nazwa parametru|Ograniczenie domyślne|Liczba ograniczeń|  
+|Nazwa ograniczenia|Nazwa parametru|Ograniczenia domyślne|Liczba ograniczeń|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Katalogu|@Catalog|TABLE_CATALOG|1|  
+|Wykaz|@Catalog|TABLE_CATALOG|1|  
 |Właściciel|@Owner|TABLE_SCHEMA|2|  
 |tabela|@Table|TABLE_NAME|3|  
   
 ### <a name="viewcolumns"></a>ViewColumns  
   
-|Nazwa ograniczenia|Nazwa parametru|Ograniczenie domyślne|Liczba ograniczeń|  
+|Nazwa ograniczenia|Nazwa parametru|Ograniczenia domyślne|Liczba ograniczeń|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Katalogu|@Catalog|VIEW_CATALOG|1|  
+|Wykaz|@Catalog|VIEW_CATALOG|1|  
 |Właściciel|@Owner|VIEW_SCHEMA|2|  
 |tabela|@Table|VIEW_NAME|3|  
 |Kolumny|@Column|COLUMN_NAME|4|  
   
 ### <a name="procedureparameters"></a>ProcedureParameters  
   
-|Nazwa ograniczenia|Nazwa parametru|Ograniczenie domyślne|Liczba ograniczeń|  
+|Nazwa ograniczenia|Nazwa parametru|Ograniczenia domyślne|Liczba ograniczeń|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Katalogu|@Catalog|SPECIFIC_CATALOG|1|  
+|Wykaz|@Catalog|SPECIFIC_CATALOG|1|  
 |Właściciel|@Owner|SPECIFIC_SCHEMA|2|  
 |Nazwa|@Name|SPECIFIC_NAME|3|  
-|Parametr|@Parameter|NAZWA_PARAMETRU|4|  
+|Parametr|@Parameter|PARAMETER_NAME|4|  
   
 ### <a name="procedures"></a>Procedury  
   
-|Nazwa ograniczenia|Nazwa parametru|Ograniczenie domyślne|Liczba ograniczeń|  
+|Nazwa ograniczenia|Nazwa parametru|Ograniczenia domyślne|Liczba ograniczeń|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Katalogu|@Catalog|SPECIFIC_CATALOG|1|  
+|Wykaz|@Catalog|SPECIFIC_CATALOG|1|  
 |Właściciel|@Owner|SPECIFIC_SCHEMA|2|  
 |Nazwa|@Name|SPECIFIC_NAME|3|  
 |Typ|@Type|ROUTINE_TYPE|4|  
   
 ### <a name="indexcolumns"></a>IndexColumns  
   
-|Nazwa ograniczenia|Nazwa parametru|Ograniczenie domyślne|Liczba ograniczeń|  
+|Nazwa ograniczenia|Nazwa parametru|Ograniczenia domyślne|Liczba ograniczeń|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Katalogu|@Catalog|db_name()|1|  
+|Wykaz|@Catalog|db_name()|1|  
 |Właściciel|@Owner|user_name()|2|  
 |tabela|@Table|o.name|3|  
 |ConstraintName|@ConstraintName|x.name|4|  
@@ -219,47 +219,47 @@ class Program
   
 ### <a name="indexes"></a>Indeksy  
   
-|Nazwa ograniczenia|Nazwa parametru|Ograniczenie domyślne|Liczba ograniczeń|  
+|Nazwa ograniczenia|Nazwa parametru|Ograniczenia domyślne|Liczba ograniczeń|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Katalogu|@Catalog|db_name()|1|  
+|Wykaz|@Catalog|db_name()|1|  
 |Właściciel|@Owner|user_name()|2|  
 |tabela|@Table|o.name|3|  
   
 ### <a name="userdefinedtypes"></a>UserDefinedTypes  
   
-|Nazwa ograniczenia|Nazwa parametru|Ograniczenie domyślne|Liczba ograniczeń|  
+|Nazwa ograniczenia|Nazwa parametru|Ograniczenia domyślne|Liczba ograniczeń|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|nazwa_zestawu|@AssemblyName|assemblies.name|1|  
+|assembly_name|@AssemblyName|assemblies.name|1|  
 |udt_name|@UDTName|types.assembly_class|2|  
   
 ### <a name="foreignkeys"></a>ForeignKeys  
   
-|Nazwa ograniczenia|Nazwa parametru|Ograniczenie domyślne|Liczba ograniczeń|  
+|Nazwa ograniczenia|Nazwa parametru|Ograniczenia domyślne|Liczba ograniczeń|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Katalogu|@Catalog|CONSTRAINT_CATALOG|1|  
+|Wykaz|@Catalog|CONSTRAINT_CATALOG|1|  
 |Właściciel|@Owner|CONSTRAINT_SCHEMA|2|  
 |tabela|@Table|TABLE_NAME|3|  
 |Nazwa|@Name|CONSTRAINT_NAME|4|  
   
 ## <a name="sql-server-2008-schema-restrictions"></a>Ograniczenia schematu programu SQL Server 2008  
- W poniższej tabeli wymieniono ograniczenia dotyczące kolekcji schematu programu SQL Server 2008. Ograniczenia te są prawidłowe, począwszy od wersji 3.5 z dodatkiem SP1, .NET Framework i programu SQL Server 2008. Nie są obsługiwane we wcześniejszych wersjach programu .NET Framework i programu SQL Server.  
+ W poniższej tabeli wymieniono ograniczenia dotyczące kolekcje schematów programu SQL Server 2008. Te ograniczenia są prawidłowe, począwszy od wersji 3.5 z dodatkiem SP1, .NET Framework i programu SQL Server 2008. Nie są obsługiwane we wcześniejszych wersjach programu .NET Framework i programu SQL Server.  
   
 ### <a name="columnsetcolumns"></a>ColumnSetColumns  
   
-|Nazwa ograniczenia|Nazwa parametru|Ograniczenie domyślne|Liczba ograniczeń|  
+|Nazwa ograniczenia|Nazwa parametru|Ograniczenia domyślne|Liczba ograniczeń|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Katalogu|@Catalog|TABLE_CATALOG|1|  
+|Wykaz|@Catalog|TABLE_CATALOG|1|  
 |Właściciel|@Owner|TABLE_SCHEMA|2|  
 |tabela|@Table|TABLE_NAME|3|  
   
 ### <a name="allcolumns"></a>AllColumns  
   
-|Nazwa ograniczenia|Nazwa parametru|Ograniczenie domyślne|Liczba ograniczeń|  
+|Nazwa ograniczenia|Nazwa parametru|Ograniczenia domyślne|Liczba ograniczeń|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Katalogu|@Catalog|TABLE_CATALOG|1|  
+|Wykaz|@Catalog|TABLE_CATALOG|1|  
 |Właściciel|@Owner|TABLE_SCHEMA|2|  
 |tabela|@Table|TABLE_NAME|3|  
 |Kolumny|@Column|COLUMN_NAME|4|  
   
 ## <a name="see-also"></a>Zobacz też  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,15 +2,15 @@
 title: 'Instrukcje: Tworzenie usługi WCF komunikującej się przez protokół WebSockets'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: 197db0b81565b93c753ad3ecfb716e4d07ea1d0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9b3ae8d8dcac7844e241fa668e1199669d216e6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493780"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416030"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Instrukcje: Tworzenie usługi WCF komunikującej się przez protokół WebSockets
-Usługi WCF i klienci mogą używać <xref:System.ServiceModel.NetHttpBinding> powiązania do komunikacji za pośrednictwem protokołu WebSockets.  Protokół WebSockets będą używane podczas <xref:System.ServiceModel.NetHttpBinding> określa kontrakt usługi definiuje kontrakt wywołania zwrotnego. W tym temacie opisano sposób wdrażania usługi WCF i klienta, który używa <xref:System.ServiceModel.NetHttpBinding> do komunikacji za pośrednictwem protokołu WebSockets.  
+Usługi WCF i klienci mogą używać <xref:System.ServiceModel.NetHttpBinding> powiązania do komunikowania się przez protokół WebSockets.  WebSockets będą używane podczas <xref:System.ServiceModel.NetHttpBinding> określa kontrakt usługi definiuje kontrakt wywołania zwrotnego. W tym temacie opisano, jak wdrożyć usługę WCF i klienta, który używa <xref:System.ServiceModel.NetHttpBinding> do komunikowania się przez protokół WebSockets.  
   
 ### <a name="define-the-service"></a>Zdefiniuj usługę  
   
@@ -25,9 +25,9 @@ Usługi WCF i klienci mogą używać <xref:System.ServiceModel.NetHttpBinding> p
         }  
     ```  
   
-     Ten kontrakt będzie zaimplementowana przez aplikację klienta, aby umożliwić usłudze do wysyłania wiadomości do klienta.  
+     Niniejszej Umowy będą realizowane przez aplikację klienta, aby umożliwić usłudze wysyłać komunikaty do klienta.  
   
-2.  Definiowanie kontraktu usługi i określ `IStockQuoteCallback` interfejsu kontraktu wywołania zwrotnego.  
+2.  Definiowanie kontraktu usługi i określ `IStockQuoteCallback` interfejs jako kontrakt wywołania zwrotnego.  
   
     ```csharp  
     [ServiceContract(CallbackContract = typeof(IStockQuoteCallback))]  
@@ -59,9 +59,9 @@ Usługi WCF i klienci mogą używać <xref:System.ServiceModel.NetHttpBinding> p
         }  
     ```  
   
-     Operacja usługi `StartSendingQuotes` jest zaimplementowany jako wywołanie asynchroniczne. Możemy pobrać za pomocą kanału zwrotnego `OperationContext` i jeśli kanał jest otwarty, wykonujemy asynchroniczne wywołanie w kanale wywołania zwrotnego.  
+     Operacja usługi `StartSendingQuotes` jest implementowany jako wywołania asynchronicznego. Możemy pobrać za pomocą kanału zwrotnego `OperationContext` i jeśli kanał jest otwarty, udostępnimy asynchronicznego wywołania w kanale wywołania zwrotnego.  
   
-4.  Skonfiguruj usługę  
+4.  Konfigurowanie usługi  
   
     ```xml  
     <configuration>  
@@ -90,11 +90,11 @@ Usługi WCF i klienci mogą używać <xref:System.ServiceModel.NetHttpBinding> p
     </configuration>  
     ```  
   
-     Plik konfiguracji usługi zależy od usługi WCF w domyślnych punktów końcowych. `<protocolMapping>` Sekcji służy do określania, który `NetHttpBinding` ma być używane jako domyślne punkty końcowe utworzone.  
+     Plik konfiguracji usługi opiera się na punktami końcowymi programu WCF na domyślne. `<protocolMapping>` Sekcja jest używana do określenia, że `NetHttpBinding` powinny być używane domyślne punkty końcowe utworzone.  
   
 ### <a name="define-the-client"></a>Zdefiniuj klienta  
   
-1.  Implementowanie kontraktu wywołania zwrotnego.  
+1.  Zaimplementować kontrakt wywołania zwrotnego.  
   
     ```csharp  
     private class CallbackHandler : StockQuoteServiceReference.IStockQuoteServiceCallback  
@@ -106,9 +106,9 @@ Usługi WCF i klienci mogą używać <xref:System.ServiceModel.NetHttpBinding> p
             }  
     ```  
   
-     Operacja kontraktu wywołania zwrotnego jest implementowany jako metody asynchronicznej.  
+     Operacja kontrakt wywołania zwrotnego jest implementowany jako metody asynchronicznej.  
   
-    1.  Implementuje kodu klienta.  
+    1.  Zaimplementuj kod klienta.  
   
         ```csharp  
         class Program  
@@ -131,7 +131,7 @@ Usługi WCF i klienci mogą używać <xref:System.ServiceModel.NetHttpBinding> p
         }  
         ```  
   
-         Obiekt CallbackHandler jest powtarzany w tym miejscu z myślą o przejrzystości. Aplikacja kliencka tworzy nowy obiekt InstanceContext i określa implementacji interfejsu wywołania zwrotnego. Następnie tworzy wystąpienie klasy serwera proxy, wysyłanie odwołania do nowo utworzony obiekt InstanceContext. Kiedy klient wywołuje usługę, usługa wywoła klienta przy użyciu z określonym kontraktem wywołania zwrotnego.  
+         Obiekt CallbackHandler jest powtarzany tutaj dla przejrzystości. Aplikacja kliencka tworzy nowy obiekt InstanceContext i określa implementację interfejs wywołania zwrotnego. Następnie tworzy wystąpienie klasy serwera proxy, wysyłanie odwołaniem do nowo utworzony obiekt InstanceContext. Gdy klient wywołuje usługę, usługa będzie wywoływać klienta przy użyciu określonych kontrakt wywołania zwrotnego.  
   
     2.  Konfigurowanie klienta  
   
@@ -158,10 +158,10 @@ Usługi WCF i klienci mogą używać <xref:System.ServiceModel.NetHttpBinding> p
         </configuration>  
         ```  
   
-         Nie ma specjalnych, należy wykonać w konfiguracji klienta, należy po prostu określić, używając punktu końcowego po stronie klienta `NetHttpBinding`.  
+         Nic specjalnego nie należy wykonać w konfiguracji klienta, wystarczy tylko określić klienta po stronie punktu końcowego za pomocą `NetHttpBinding`.  
   
 ## <a name="example"></a>Przykład  
- Poniżej znajduje się pełny kod używany w tym temacie.  
+ Oto kompletny kod używany w tym temacie.  
   
 ```csharp  
 // IStockQuoteService.cs  
@@ -228,7 +228,7 @@ namespace Server
   
 <!--  
   For more information on how to configure your ASP.NET application, please visit  
-  http://go.microsoft.com/fwlink/?LinkId=169433  
+  https://go.microsoft.com/fwlink/?LinkId=169433  
   -->  
   
 <configuration>  

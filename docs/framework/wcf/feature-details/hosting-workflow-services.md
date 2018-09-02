@@ -2,15 +2,15 @@
 title: Hostowanie usług przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: b42dd42b9697d87d7721fc5edc2dfde01f1d37c2
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: f75b8cc4cde0372b995c39a5da3ae4b71590743e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932836"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416368"
 ---
 # <a name="hosting-workflow-services"></a>Hostowanie usług przepływu pracy
-Usługi przepływu pracy musi być hostowany na jego odpowiadanie na wiadomości przychodzące. Usługi przepływu pracy korzystają z infrastruktury obsługi komunikatów usługi WCF i w związku z tym znajdują się w podobny sposób. Podobnie jak usługi WCF usług przepływu pracy mogą być hostowane w dowolnej aplikacji zarządzanych, w ramach usługi Internet Information Services (IIS) lub w obszarze Windows Process Activation usług (WAS). Ponadto usługi przepływu pracy mogą być hostowane w ramach systemu Windows Server AppFabric. Aby uzyskać więcej informacji na temat systemu Windows Server AppFabric zobacz [dokumentacji systemu Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=193037), [funkcje hostingu programu AppFabric](http://go.microsoft.com/fwlink/?LinkId=196494), i [pojęcia hostingu AppFabric](http://go.microsoft.com/fwlink/?LinkId=196495). Aby uzyskać więcej informacji na temat różnych sposobów hosta usługi WCF usług zobacz [usług obsługującego](../../../../docs/framework/wcf/hosting-services.md).
+Usługi przepływu pracy musi być hostowany na jego odpowiadanie na wiadomości przychodzące. Usługi przepływu pracy korzystają z infrastruktury obsługi komunikatów usługi WCF i w związku z tym znajdują się w podobny sposób. Podobnie jak usługi WCF usług przepływu pracy mogą być hostowane w dowolnej aplikacji zarządzanych, w ramach usługi Internet Information Services (IIS) lub w obszarze Windows Process Activation usług (WAS). Ponadto usługi przepływu pracy mogą być hostowane w ramach systemu Windows Server AppFabric. Aby uzyskać więcej informacji na temat systemu Windows Server AppFabric zobacz [dokumentacji systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=193037), [funkcje hostingu programu AppFabric](https://go.microsoft.com/fwlink/?LinkId=196494), i [pojęcia hostingu AppFabric](https://go.microsoft.com/fwlink/?LinkId=196495). Aby uzyskać więcej informacji na temat różnych sposobów hosta usługi WCF usług zobacz [usług obsługującego](../../../../docs/framework/wcf/hosting-services.md).
 
 ## <a name="hosting-in-a-managed-application"></a>Hosting w aplikacji zarządzanej
  Hostowanie usługi przepływu pracy w zarządzanej aplikacji, należy użyć <xref:System.ServiceModel.Activities.WorkflowServiceHost> klasy. <xref:System.ServiceModel.Activities.WorkflowServiceHost> Konstruktor pozwala na określenie pojedyncze wystąpienie usługi przepływu pracy, definicji usługi przepływu pracy lub działaniem używającym wiadomości działania przepływu pracy. Wywoływanie <<!--zz xref:System.ServiceModel.Activities.WorkflowServiceHost.Open%2A--> `System.ServiceModel.Activities.WorkflowServiceHost.Open`> powoduje, że Usługa rozpoczyna nasłuchiwanie przychodzących wiadomości.
@@ -51,7 +51,7 @@ Usługi przepływu pracy musi być hostowany na jego odpowiadanie na wiadomości
  Odwołania do działania niestandardowe muszą zostać dodane do <`Assemblies`> sekcji <`System.Web.Compilation`> dzięki czemu są one ładowany do domeny aplikacji i Deserializator XAML jest w stanie zlokalizować typów. Te ustawienia mogą się na poziomie aplikacji lub w katalogu głównym pliku Web.config, jeśli stosowane do wszystkich aplikacji na maszynie.
 
 ## <a name="deployment"></a>wdrażania
- Narzędzie Web Deployment został utworzony w celu ułatwienia zadania wdrażania. To narzędzie pozwala na migrowanie aplikacji między usługami IIS 6.0 i IIS 7.0, synchronizowanie farm serwerów i pakietów oraz archiwizowanie i wdrażanie aplikacji sieci Web. Aby uzyskać więcej informacji, zobacz [narzędzia wdrażania MS](http://go.microsoft.com/fwlink/?LinkId=178690).
+ Narzędzie Web Deployment został utworzony w celu ułatwienia zadania wdrażania. To narzędzie pozwala na migrowanie aplikacji między usługami IIS 6.0 i IIS 7.0, synchronizowanie farm serwerów i pakietów oraz archiwizowanie i wdrażanie aplikacji sieci Web. Aby uzyskać więcej informacji, zobacz [narzędzia wdrażania MS](https://go.microsoft.com/fwlink/?LinkId=178690).
 
 ## <a name="see-also"></a>Zobacz też
 

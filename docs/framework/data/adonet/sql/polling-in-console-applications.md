@@ -1,24 +1,24 @@
 ---
-title: Sondowanie w aplikacji konsoli
+title: Sondowanie aplikacji konsoli
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-ms.openlocfilehash: 4fc9a787aa03af311ed219f0831a4d0e41544be8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b0d298e1959ff2fdcd46a9f218eb980671407be
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363396"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416711"
 ---
-# <a name="polling-in-console-applications"></a>Sondowanie w aplikacji konsoli
-Operacje asynchroniczne w ADO.NET pozwalają na inicjowanie operacji czasochłonne bazy danych w jednym wątku podczas wykonywania innych zadań w innym wątku. W większości przypadków jednak należy ostatecznie osiągną punktu, w którym aplikacja nie należy kontynuować przed zakończeniem operacji bazy danych. W takich przypadkach warto sondowania operację asynchroniczną, aby określić, czy operacja została ukończona, czy nie.  
+# <a name="polling-in-console-applications"></a>Sondowanie aplikacji konsoli
+Operacje asynchroniczne w ADO.NET umożliwiają Inicjowanie operacji czasochłonne bazy danych w jednym wątku podczas wykonywania innych zadań w innym wątku. W większości przypadków jednak możesz ostatecznie osiągnie punkt, w których aplikacja nie powinna nadal aż do zakończenia operacji bazy danych. W takich przypadkach warto wykonać sondowanie operacji asynchronicznej, aby ustalić, czy operacja została ukończona, czy nie.  
   
- Można użyć <xref:System.IAsyncResult.IsCompleted%2A> właściwości, aby sprawdzić, czy operacja została ukończona.  
+ Możesz użyć <xref:System.IAsyncResult.IsCompleted%2A> właściwości, aby dowiedzieć się, czy operacja zostanie ukończona.  
   
 ## <a name="example"></a>Przykład  
- Następującej aplikacji konsoli aktualizacji danych w ramach **AdventureWorks** przykładowej bazy danych, podczas pracy asynchronicznie. Aby emulować długotrwały proces, w tym przykładzie wstawia instrukcję WAITFOR tekst polecenia. Zwykle czy nie próbujesz wprowadzić poleceniach działać wolniej, ale w ten sposób w takim przypadku ułatwia pokazują zachowanie asynchronicznego.  
+ Następująca aplikacja konsoli aktualizuje dane w ramach **AdventureWorks** przykładowej bazy danych, wykonując pracę asynchronicznie. Aby emulować procesów długotrwałych, w tym przykładzie wstawia tekst polecenia instrukcję WAITFOR. Zwykle nie próbowała Twojego polecenia działają wolniej, ale to w tym przypadku ułatwia pokazują zachowanie asynchroniczne.  
   
 ```vb  
 Imports System  
@@ -192,4 +192,4 @@ class Class1
   
 ## <a name="see-also"></a>Zobacz też  
  [Operacje asynchroniczne](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

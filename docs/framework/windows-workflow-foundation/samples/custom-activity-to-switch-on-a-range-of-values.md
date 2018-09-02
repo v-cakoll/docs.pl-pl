@@ -1,21 +1,21 @@
 ---
-title: Działań niestandardowych do przełącznika na zakres wartości
+title: Działanie niestandardowe do przełączania na zakres wartości
 ms.date: 03/30/2017
 ms.assetid: 441e0a17-421f-430c-ba97-59e4cc6c88e3
-ms.openlocfilehash: 785db08ffaf4ca6fe27d6418878c0bbf4ada44fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfaf4318b1557a9fc217de8254e164243ea54569
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517072"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417980"
 ---
-# <a name="custom-activity-to-switch-on-a-range-of-values"></a>Działań niestandardowych do przełącznika na zakres wartości
-Ten przykład przedstawia sposób tworzenia działań niestandardowych, rozszerzający stosowania <xref:System.Activities.Statements.Switch%601>. Konwencjonalne <xref:System.Activities.Statements.Switch%601> instrukcji umożliwia przełączanie oparte na pojedynczej wartości. Istnieją jednak biznesowych, które scenariuszy, w którym działanie, musisz przełączyć ustalane na podstawie zakresu wartości. Na przykład działanie może wykonać jedno działanie, gdy jest przełączany na wartość od 1 do 5, innej akcji, gdy wartość jest od 6 do 10 i domyślnego działania dla wszystkich innych wartości. To niestandardowe działanie umożliwia dokładnie tego scenariusza.  
+# <a name="custom-activity-to-switch-on-a-range-of-values"></a>Działanie niestandardowe do przełączania na zakres wartości
+W tym przykładzie pokazano, jak utworzyć niestandardowe działanie, która rozszerza użytkowania <xref:System.Activities.Statements.Switch%601>. Konwencjonalne <xref:System.Activities.Statements.Switch%601> instrukcji umożliwia przełączanie oparte na pojedynczej wartości. Istnieją jednak biznesowych, które scenariusze, w którym działanie, musisz przełączyć na podstawie zakresu wartości. Na przykład działanie może być wykonywany jedną akcję, gdy przełączany na wartość od 1 do 5, innej akcji, gdy wartość jest równa od 6 do 10 i domyślna akcja dla wszystkich pozostałych wartości. To niestandardowe działanie umożliwia dokładnie tego scenariusza.  
   
 ## <a name="the-switchrange-activity"></a>Działanie SwitchRange  
- `SwitchRange` Działania planuje działaniem podrzędnym, gdy wartość wyniku jej wyrażenia znajduje się w zakresie jednej z jego `Cases`.  
+ `SwitchRange` Działania planuje działania podrzędnego, gdy wartość wyniku jej wyrażenia jest uwzględnione w zakresie jednej z jego `Cases`.  
   
- Następujący przykładowy kod to niestandardowe działanie, które przełączniki ustalane na podstawie zakresu wartości.  
+ Poniższy przykład kodu jest niestandardowe działanie, które przełączniki na podstawie zakresu wartości.  
   
 ```csharp  
 public sealed class SwitchRange<T> : NativeActivity where T : IComparable  
@@ -33,12 +33,12 @@ public sealed class SwitchRange<T> : NativeActivity where T : IComparable
   
 |Właściwość|Opis|  
 |-|-|  
-|Wyrażenie|Jest to wyrażenie, które ma zostać obliczone i porównywana zakresów na liście przypadków. Wynikiem wyrażenia jest typu T.|  
-|Przypadków|Każdej sprawy składa się z zakresu (od a do) i działania (jednostka). Wyrażenie jest obliczane i porównywana zakresów. Jeśli wynikiem wyrażenia jest spoza zakresu przypadków, odpowiadające mu działanie jest wykonywana.|  
-|Domyślny|Działanie, które jest wykonywane, gdy w żadnym przypadku nie odpowiada. Jeśli wartość `null`, nie podjęto żadnej akcji.|  
+|Wyrażenie|To wyrażenie, które ma zostać obliczone i porównywana zakresów na liście przypadków. Wynikiem wyrażenia jest typu T.|  
+|Przypadków|Każdy przypadek składa się z zakresu (od a do) i działania (treść). Wyrażenie jest obliczane i porównywana z zakresów. Jeśli wynikiem wyrażenia jest w zakresie przypadkach, odpowiadające mu działanie jest wykonywana.|  
+|Domyślny|Działanie, które jest wykonywany, gdy żaden przypadek nie jest dopasowany. Po ustawieniu `null`, nie podjęto żadnej akcji.|  
   
 ## <a name="caserange-class"></a>Klasa CaseRange  
- `CaseRange` Klasa reprezentuje zakresem w ramach `SwitchRange` działania. Każde wystąpienie `CaseRange` zawiera zakres (składający się z `From` i `To`) i `Body` działanie, które jest zaplanowane, jeśli wyrażenie w `SwitchRange` jest obliczane w zakresie.  
+ `CaseRange` Klasa reprezentuje zakres, w ramach `SwitchRange` działania. Każde wystąpienie `CaseRange` zawiera zakres (składające się z `From` i `To`) i `Body` działania, które jest zaplanowane, jeśli wyrażenie w `SwitchRange` jest szacowana w ramach zakresu.  
   
  Poniższy przykład kodu jest definicja `CaseRange` klasy.  
   
@@ -54,10 +54,10 @@ public class CaseRange<T> where T : IComparable
 ```  
   
 > [!NOTE]
->  Zarówno `SwitchRange` i `CaseRange` klasy, które są zdefiniowane w próbce są klas ogólnych, które mogą pracować z dowolnego typu, który implementuje `IComparable`, takiej jak <xref:System.Activities.Statements.Switch%601> klasy.  
+>  Zarówno `SwitchRange` i `CaseRange` klasy, które są zdefiniowane w przykładzie są klas ogólnych, które można pracować z dowolnego typu, który implementuje `IComparable`, takiej jak <xref:System.Activities.Statements.Switch%601> klasy.  
   
 ## <a name="sample-usage"></a>Przykładowe zastosowanie  
- Poniższy przykład kodu pokazuje sposób użycia `SwitchRange` działania.  
+ Poniższy przykład kodu demonstruje sposób używania `SwitchRange` działania.  
   
 ```csharp  
 Activity SwitchRange = new SwitchRange<int>  
@@ -90,17 +90,17 @@ Activity SwitchRange = new SwitchRange<int>
   
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
   
-1.  Przy użyciu [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], otwórz plik rozwiązania SwitchRange.sln.  
+1.  Za pomocą [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], otwórz plik rozwiązania SwitchRange.sln.  
   
-2.  Aby tworzyć rozwiązania, naciśnij kombinację klawiszy CTRL + SHIFT + B.  
+2.  Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.  
   
-3.  Aby uruchomić rozwiązanie, naciśnij klawisze CTRL + F5.  
+3.  Aby uruchomić rozwiązanie, naciśnij kombinację klawiszy CTRL + F5.  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\SwitchRange`

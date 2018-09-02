@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 051c2be00ca18799eeb2f5253a9b236bbcf82d21
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: cdc3e42adcb2c7eae52aab0b14d0f9c6a822eeea
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43256565"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417715"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Podstawy dotyczące aplikacji Windows Forms (Visual Basic)
 Ważną częścią programu Visual Basic jest możliwość tworzenia aplikacji Windows Forms, które działają lokalnie na komputerach użytkowników. Visual Studio umożliwia tworzenie aplikacji i interfejsu użytkownika przy użyciu Windows Forms. Aplikacja Windows Forms jest oparta na klasy z <xref:System.Windows.Forms> przestrzeni nazw.  
@@ -46,7 +46,7 @@ Ważną częścią programu Visual Basic jest możliwość tworzenia aplikacji W
   
 |Zadanie|Zobacz|  
 |--------|---------|  
-|Tworzenie nowej aplikacji Windows Forms przy użyciu programu Visual Studio|[Wskazówki: Tworzenie formularza Windows prosty](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|Tworzenie nowej aplikacji Windows Forms przy użyciu programu Visual Studio|[Wskazówki: Tworzenie formularza Windows prosty](https://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
 |Użyj kontrolek na formularzach|[Instrukcje: dodawanie kontrolek do formularzy Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
 |Tworzenia grafiki przy użyciu <xref:System.Drawing>|[Wprowadzenie do programowania grafiki](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |Tworzenie niestandardowych formantów|[Instrukcje: dziedziczenie z klasy UserControl](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  

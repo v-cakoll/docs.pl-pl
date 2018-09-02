@@ -13,55 +13,55 @@ helpviewer_keywords:
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
 manager: douge
-ms.openlocfilehash: 0d42a37b2e84c310569666771ded38e5feca3608
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9d8e84280b5821f8d8df36694198bd85fb8470d4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513142"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416911"
 ---
 # <a name="how-to-install-and-uninstall-services"></a>Porady: instalowanie i odinstalowywanie usług
-Jeśli projektujesz usługi systemu Windows przy użyciu programu .NET Framework, można zainstalować za pomocą narzędzia wiersza polecenia o nazwie InstallUtil.exe szybko aplikacji usługi. Jeśli jesteś deweloperem kto chce wersji usługi systemu Windows, czy użytkownicy mogą instalować i odinstalowywać możesz użyć InstallShield. Zobacz [wdrożenia Instalatora Windows](http://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0).  
+Jeśli opracowujesz usługi Windows za pomocą programu .NET Framework, można szybko zainstalować aplikacji usługi za pomocą narzędzia wiersza polecenia o nazwie InstallUtil.exe. Jeśli jesteś deweloperem kto chce wersji usług Windows, czy użytkownicy mogą zainstalować i możesz odinstalować należy używać programu InstallShield. Zobacz [wdrożenia Instalatora Windows](https://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0).  
   
 > [!WARNING]
->  Jeśli chcesz odinstalować usługi z komputera, nie należy wykonać czynności opisane w tym artykule. Zamiast tego należy sprawdzić, które pakiety programu lub oprogramowanie instalowane usługi, a następnie wybierz **Dodaj lub usuń programy** w Panelu sterowania, aby odinstalować ten program. Należy pamiętać, że wiele usług są integralną częścią systemu Windows; Jeśli je usuniesz, może spowodować niestabilność systemu.  
+>  Jeśli chcesz odinstalować usługę z komputera, nie wykonaj kroki opisane w tym artykule. Zamiast tego należy sprawdzić, które pakiety programu lub oprogramowania zainstalowane usługi, a następnie wybierz **Dodaj/Usuń programy** w Panelu sterowania, aby odinstalować ten program. Należy pamiętać, że wiele usług są integralną częścią Windows; Jeśli je usuniesz, może spowodować niestabilność systemu.  
   
- Aby skorzystać z instrukcji w tym artykule, należy najpierw dodać Instalatora usługi z usługą systemu Windows. Zobacz [wskazówki: tworzenie okien aplikacji w Projektancie składników usługi](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md).  
+ Aby skorzystać z instrukcji w tym artykule, należy najpierw dodać Instalatora usługi do usługi Windows. Zobacz [wskazówki: tworzenie Windows usługi aplikacji w Projektancie składników](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md).  
   
- Projekty usługi systemu Windows nie można uruchomić bezpośrednio ze środowiska projektowego Visual Studio, naciskając klawisz F5. To dlatego musi być zainstalowana usługa w projekcie, można było uruchomić projekt.  
+ Projekty usługi Windows nie można uruchomić bezpośrednio ze środowiska projektowego programu Visual Studio, naciskając klawisz F5. Jest to spowodowane musi być zainstalowana usługa w projekcie, aby można było uruchomić projekt.  
   
 > [!TIP]
->  Możesz uruchomić **Eksploratora serwera** i sprawdź, czy usługa została zainstalowana lub odinstalowana. Aby uzyskać więcej informacji, zobacz porady: dostęp i zainicjować Eksploratora bazy danych Eksploratora serwera.  
+>  Możesz uruchomić **Eksploratora serwera** i sprawdź, czy usługi zostały zainstalowane lub odinstalowane. Aby uzyskać więcej informacji, zobacz jak: dostępu oraz inicjowanie Eksploratora bazy danych Eksploratora serwera.  
   
-### <a name="to-install-your-service-manually"></a>Aby ręcznie zainstalować usługi  
+### <a name="to-install-your-service-manually"></a>Aby ręcznie zainstalować usługę  
   
-1.  W systemie Windows **Start** menu lub **Start** ekranu, wybierz **programu Visual Studio** , **programu Visual Studio Tools**, **Developer Wiersz polecenia**.  
+1.  Na Windows **Start** menu lub **Start** ekranu, wybierz **programu Visual Studio** , **Visual Studio Tools**, **dla deweloperów Wiersz polecenia**.  
   
-     Zostanie wyświetlony wiersz polecenia programu Visual Studio.  
+     Pojawi się wiersz polecenia programu Visual Studio.  
   
-2.  Uzyskanie dostępu do katalogu, w którym znajduje się plik wykonywalny skompilowanych projektu.  
+2.  Dostęp do katalogu, w którym znajduje się plik wykonywalny projektu.  
   
-3.  Uruchom InstallUtil.exe z wiersza polecenia z pliku wykonywalnego projektu jako parametr:  
+3.  Uruchom InstallUtil.exe z wiersza polecenia przy użyciu pliku wykonywalnego projektu jako parametr:  
   
     ```  
     installutil <yourproject>.exe  
     ```  
   
-     Jeśli używasz wiersza polecenia programu Visual Studio InstallUtil.exe powinna znajdować się na ścieżce systemowej. Jeśli nie, dodaj go do ścieżki lub użyj w pełni kwalifikowana, aby go wywołać. To narzędzie jest zainstalowany w środowisku .NET Framework, a jego ścieżka jest `%WINDIR%\Microsoft.NET\Framework[64]\<framework_version>`. Na przykład w przypadku 32-bitowej wersji programu .NET Framework 4 lub 4.5. *, jeśli katalog instalacyjny systemu Windows jest C:\Windows, ścieżka jest `C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe`. W 64-bitowej wersji programu .NET Framework 4 lub 4.5. \*, domyślna ścieżka to `C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe`.  
+     Jeśli używasz programu Visual Studio wiersza polecenia InstallUtil.exe powinien być w ścieżce systemowej. Jeśli nie, dodaj go do ścieżki lub wywoływać go za pomocą w pełni kwalifikowanej ścieżki. To narzędzie jest instalowane z .NET Framework i jego ścieżka jest `%WINDIR%\Microsoft.NET\Framework[64]\<framework_version>`. Na przykład w przypadku 32-bitowej wersji programu .NET Framework 4 lub 4.5. *, jeśli katalogu instalacji Windows C:\Windows, ścieżka jest `C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe`. Dla 64-bitowej wersji programu .NET Framework 4 lub 4.5. \*, domyślna ścieżka to `C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe`.  
   
-### <a name="to-uninstall-your-service-manually"></a>Aby ręcznie odinstalować usługi  
+### <a name="to-uninstall-your-service-manually"></a>Aby ręcznie odinstalować usługę  
   
-1.  W systemie Windows **Start** menu lub **Start** ekranu, wybierz **programu Visual Studio**, **programu Visual Studio Tools**, **Developer Wiersz polecenia**.  
+1.  Na Windows **Start** menu lub **Start** ekranu, wybierz **programu Visual Studio**, **Visual Studio Tools**, **dla deweloperów Wiersz polecenia**.  
   
-     Zostanie wyświetlony wiersz polecenia programu Visual Studio.  
+     Pojawi się wiersz polecenia programu Visual Studio.  
   
-2.  Uruchom InstallUtil.exe z wiersza polecenia z danych wyjściowych projektu jako parametr:  
+2.  Uruchom InstallUtil.exe w wierszu polecenia z danymi wyjściowymi projektu jako parametr:  
   
     ```  
     installutil /u <yourproject>.exe  
     ```  
   
-3.  Czasami po usunięciu pliku wykonywalnego usługi usługa może nadal być znajdujący się w rejestrze. W takim przypadku polecenie [sc delete](http://technet.microsoft.com/library/cc742045.aspx) Aby usunąć wpis dla usługi z rejestru.  
+3.  Czasami po usunięciu pliku wykonywalnego dla usługi usługi może nadal istnieć w rejestrze. W takim przypadku należy użyć polecenia [sc delete](https://technet.microsoft.com/library/cc742045.aspx) można usunąć wpisu usługi z rejestru.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzenie do aplikacji usług systemu Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  

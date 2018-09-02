@@ -1,64 +1,64 @@
 ---
-title: Rozpoczynanie wielu zadań asynchronicznych i przetwarzanie ich w chwili zakończenia (C#)
+title: Rozpoczynanie wielu zadań asynchronicznych i przetwarzanie ich, po ich zakończeniu (C#)
 ms.date: 07/20/2015
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: 29dc629abae13bb7ba3a9b0cb87300e6d1cbe2d9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d59b65e456c528c63c79c97f6c75c328066be631
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333726"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416401"
 ---
-# <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>Rozpoczynanie wielu zadań asynchronicznych i przetwarzanie ich w chwili zakończenia (C#)
-Przy użyciu <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>, można uruchomić wielu zadań jednocześnie i je jeden po drugim Przetwarzaj one jest ukończona, a nie ich przetworzyć w kolejności, w którym jest uruchomiona.  
+# <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>Rozpoczynanie wielu zadań asynchronicznych i przetwarzanie ich, po ich zakończeniu (C#)
+Za pomocą <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>, można uruchomić wiele zadań w tym samym czasie i przetwarzać je jedno po ich zakończeniu, zamiast przetwarzać je w kolejności, w którym są uruchamiane.  
   
- W poniższym przykładzie użyto zapytania, aby utworzyć kolekcję zadań. Każde zadanie pobiera zawartość z określonej witryny sieci Web. W każdej iteracji chwilę pętli, oczekiwano wywołania `WhenAny` zwraca zadanie w kolekcji zadań najpierw zakończy jej pobierania. To zadanie jest usunięty z kolekcji i przetwarzane. Pętla jest powtarzany do momentu Kolekcja nie zawiera więcej zadań.  
+ W poniższym przykładzie użyto zapytania, aby utworzyć kolekcję zadań. Każde zadanie powoduje pobieranie zawartości określonej witryny sieci Web. W każdej iteracji while oczekiwane wywołanie do pętli `WhenAny` zwraca zadanie w kolekcji zadań, którego pobieranie najpierw się zakończy. To zadanie jest usuwane z kolekcji i przetwarzane. Pętla powtarza, dopóki Kolekcja nie zawiera więcej zadań.  
   
 > [!NOTE]
->  Uruchamianie przykładów, musi mieć program Visual Studio 2012 lub nowszej i .NET Framework 4.5 lub nowszej zainstalowany na tym komputerze.  
+>  Aby uruchomić przykłady, konieczne jest posiadanie programu Visual Studio 2012 lub nowszego oraz programu .NET Framework 4.5 lub nowszej zainstalowany na tym komputerze.  
   
 ## <a name="downloading-the-example"></a>Pobieranie przykładu  
- Możesz pobrać pełną projekt Windows Presentation Foundation (WPF) z [próbki Async: poprawnie dostrajanie Twoja aplikacja](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) , a następnie wykonaj następujące kroki.  
+ Można pobrać pełny projekt Windows Presentation Foundation (WPF) z [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) a następnie wykonaj poniższe kroki.  
   
-1.  Dekompresja pobranego pliku, a następnie uruchom program Visual Studio.  
+1.  Dekompresuje plik który został pobrany, a następnie uruchom program Visual Studio.  
   
-2.  Na pasku menu wybierz **pliku**, **Otwórz**, **projektu/rozwiązania**.  
+2.  Na pasku menu wybierz **pliku**, **Otwórz**, **projekt/rozwiązanie**.  
   
-3.  W **Otwórz projekt** okno dialogowe, otwórz folder, który zawiera przykładowy kod, który można zdekompresować, a następnie otwórz plik rozwiązania (sln) dla AsyncFineTuningCS.  
+3.  W **Otwórz projekt** okno dialogowe, otwórz folder, który zawiera przykładowy kod, który został zdekompresowany, a następnie otwórz plik rozwiązania (.sln) dla AsyncFineTuningCS.  
   
-4.  W **Eksploratora rozwiązań**, otwórz menu skrótów **ProcessTasksAsTheyFinish** projektu, a następnie wybierz pozycję **Ustaw jako projekt startowy**.  
+4.  W **Eksploratora rozwiązań**, otwórz menu skrótów dla **ProcessTasksAsTheyFinish** projektu, a następnie wybierz **Ustaw jako projekt startowy**.  
   
 5.  Wybierz klawisz F5, aby uruchomić projekt.  
   
-     Wybierz klucze Ctrl + F5, aby uruchomić projekt bez debugowania go.  
+     Wybierz klawisze Ctrl + F5, aby uruchomić projekt bez debugowania go.  
   
-6.  Uruchom projekt kilka razy, aby sprawdzić, czy pobrane długości nie zawsze są wyświetlane w tej samej kolejności.  
+6.  Uruchom projekt kilka razy, aby sprawdzić, czy pobrane długości nie pojawiają się zawsze w tej samej kolejności.  
   
- Jeśli nie chcesz pobrać projekt, można przejrzeć plik MainWindow.xaml.cs na końcu tego tematu.  
+ Jeśli nie chcesz wczytać projekt, można przejrzeć plik MainWindow.xaml.cs na końcu tego tematu.  
   
-## <a name="building-the-example"></a>Tworzenie w przykładzie  
- W tym przykładzie dodaje kod, który został napisany w [anulowanie pozostałych zadań asynchronicznych po jednym jest kompletna (C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)[anulowanie pozostałych zadań asynchronicznych po jednym jest kompletna](http://msdn.microsoft.com/library/8e800b58-235a-44b7-a02c-fa4375591d76) i używa tego samego interfejsu użytkownika.  
+## <a name="building-the-example"></a>Budowanie przykładu  
+ Ten przykład dodaje do kodu utworzonego w [anulowanie pozostałych zadań asynchronicznych po jednym jest pełny (C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)[anulowanie pozostałych zadań asynchronicznych po jednym jest kompletna](https://msdn.microsoft.com/library/8e800b58-235a-44b7-a02c-fa4375591d76) i używa tego samego interfejsu użytkownika.  
   
- Do tworzenia przykładzie samodzielnie krok po kroku, postępuj zgodnie z instrukcjami w sekcji "Pobieranie Example", ale wybierz **CancelAfterOneTask** jako **projekt startowy**. Dodaj zmiany w tym temacie umożliwiają `AccessTheWebAsync` metody w tym projekcie. Zmiany są oznaczone gwiazdki.  
+ Aby zbudować przykład samodzielnie, krok po kroku, postępuj zgodnie z instrukcjami w sekcji "Pobieranie przykładu", ale wybierając **CancelAfterOneTask** jako **projekt startowy**. Dodaj zmiany w tym temacie, aby `AccessTheWebAsync` metody, w tym projekcie. Zmiany są oznaczone gwiazdkami.  
   
- **CancelAfterOneTask** Projekt już zawiera zapytanie, które po wykonaniu tworzy kolekcję zadań. Każde wywołanie `ProcessURLAsync` w poniższym kodzie zwraca <xref:System.Threading.Tasks.Task%601> gdzie `TResult` jest liczbą całkowitą.  
+ **CancelAfterOneTask** projekt zawiera już zapytanie, którego wykonanie powoduje utworzenie kolekcji zadań. Każde wywołanie `ProcessURLAsync` w poniższym kodzie zwraca <xref:System.Threading.Tasks.Task%601> gdzie `TResult` jest liczbą całkowitą.  
   
 ```csharp  
 IEnumerable<Task<int>> downloadTasksQuery =  
     from url in urlList select ProcessURL(url, client, ct);  
 ```  
   
- W pliku MainWindow.xaml.cs projektu, wprowadź następujące zmiany do `AccessTheWebAsync` metody.  
+ W pliku MainWindow.xaml.cs w projekcie dokonaj następujących zmian do `AccessTheWebAsync` metody.  
   
--   Wykonanie kwerendy, stosując <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> zamiast <xref:System.Linq.Enumerable.ToArray%2A>.  
+-   Wykonanie zapytania przez zastosowanie <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> zamiast <xref:System.Linq.Enumerable.ToArray%2A>.  
   
     ```csharp  
     List<Task<int>> downloadTasks = downloadTasksQuery.ToList();  
     ```  
   
--   Dodaj chwilę pętli, które wykonuje następujące czynności dla każdego zadania w kolekcji.  
+-   Dodaj chwilę pętli, która wykonuje następujące czynności dla każdego zadania w kolekcji.  
   
-    1.  Oczekujące na wywołanie `WhenAny` do identyfikowania pierwszego zadania w kolekcji, aby zakończyć jej pobierania.  
+    1.  Czeka aby wywołanie `WhenAny` do zidentyfikowało pierwsze zadanie w kolekcji, aby zakończyć jego pobranie.  
   
         ```csharp  
         Task<int> firstFinishedTask = await Task.WhenAny(downloadTasks);  
@@ -70,24 +70,24 @@ IEnumerable<Task<int>> downloadTasksQuery =
         downloadTasks.Remove(firstFinishedTask);  
         ```  
   
-    3.  Oczekujące na `firstFinishedTask`, który jest zwracany przez wywołanie do `ProcessURLAsync`. `firstFinishedTask` Zmienna jest <xref:System.Threading.Tasks.Task%601> gdzie `TReturn` jest liczbą całkowitą. Zadanie zostało już ukończone, ale należy poczekać na można pobrać długości pobrany witryny sieci Web, jak przedstawiono na poniższym przykładzie.  
+    3.  Czeka na `firstFinishedTask`, który jest zwracany przez wywołanie `ProcessURLAsync`. `firstFinishedTask` Zmienna jest <xref:System.Threading.Tasks.Task%601> gdzie `TReturn` jest liczbą całkowitą. Zadanie zostało już ukończone, ale czeka na pobranie długości pobranej witryny sieci Web, co ilustruje poniższy przykład.  
   
         ```csharp  
         int length = await firstFinishedTask;  
         resultsTextBox.Text += String.Format("\r\nLength of the download:  {0}", length);  
         ```  
   
- Aby sprawdzić, czy pobrane długości nie zawsze są wyświetlane w tej samej kolejności należy uruchomić kilka razy projektu.  
+ Należy uruchomić projekt kilka razy, aby sprawdzić, czy pobrane długości nie pojawiają się zawsze w tej samej kolejności.  
   
 > [!CAUTION]
->  Można użyć `WhenAny` w pętli, zgodnie z opisem w tym przykładzie, aby rozwiązać problemy z działaniem niewielkiej liczby zadań. Jednak inne podejścia są bardziej wydajne, jeśli masz dużą liczbę zadań w celu przetworzenia. Aby uzyskać dodatkowe informacje i przykłady, zobacz [przetwarzania zadań w chwili zakończenia](https://blogs.msdn.microsoft.com/pfxteam/2012/08/02/processing-tasks-as-they-complete/).  
+>  Możesz użyć `WhenAny` w pętli, jak opisano w przykładzie, aby rozwiązać problemy związane z małą liczbą zadań. Jednak inne podejścia są bardziej wydajne, jeśli masz dużą liczbę zadań w celu przetworzenia. Aby uzyskać więcej informacji i przykładów, zobacz [zadania przetwarzania po ich zakończeniu](https://blogs.msdn.microsoft.com/pfxteam/2012/08/02/processing-tasks-as-they-complete/).  
   
 ## <a name="complete-example"></a>Kompletny przykład  
- Następujący kod jest pełny tekst pliku MainWindow.xaml.cs dla przykładu. Gwiazdki Oznacz elementy, które zostały dodane w tym przykładzie.  
+ Poniższy kod jest pełnym tekstem pliku MainWindow.xaml.cs dla przykładu. Gwiazdki oznaczają elementy, które zostały dodane w tym przykładzie.  
   
- Zwróć uwagę, że musisz dodać odwołanie do <xref:System.Net.Http>.  
+ Należy zauważyć, że musisz dodać odwołanie do <xref:System.Net.Http>.  
   
- Można pobrać projektu z [próbki Async: poprawnie dostrajanie Twoja aplikacja](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
+ Można ściągnąć projekt z [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
   
 ```csharp  
 using System;  
@@ -229,4 +229,4 @@ namespace ProcessTasksAsTheyFinish
  <xref:System.Threading.Tasks.Task.WhenAny%2A>  
  [Dostrajanie aplikacji Async (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
  [Programowanie asynchroniczne z async i await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
- [Próbka asynchronicznych: Dostrajanie aplikacji dokładnej](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+ [Próbka asynchroniczna: Dostrajanie aplikacji](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

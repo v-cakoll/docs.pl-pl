@@ -2,12 +2,12 @@
 title: 'Wprowadzenie do F # w programie Visual Studio'
 description: 'Dowiedz się, jak używać języka F # za pomocą programu Visual Studio.'
 ms.date: 07/03/2018
-ms.openlocfilehash: a4a12a322d7e5144f2d720541f6ef65ca12737dd
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 3dac8466501338873aeb308ceac9274a7934a8a9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874718"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415737"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Wprowadzenie do F # w programie Visual Studio
 
@@ -47,7 +47,7 @@ Znajduje się w tej funkcji, które nazywamy `square` funkcji z argumentem `12`.
 
 ## <a name="running-your-code"></a>Uruchamianie kodu
 
-Można uruchomić kod i wyświetlić wyniki, naciskając klawisz **kombinację klawiszy ctrl-f5**.  To spowoduje Uruchom program bez debugowania i pozwala wyświetlić wyniki.  Alternatywnie można wybrać **debugowania** menu najwyższego poziomu elementu w programie Visual Studio i wybierz polecenie **Rozpocznij bez debugowania**.
+Można uruchomić kod i wyświetlić wyniki, naciskając klawisz **Ctrl**+**F5**.  To uruchamia program bez debugowania i pozwala wyświetlić wyniki.  Alternatywnie można wybrać **debugowania** menu najwyższego poziomu elementu w programie Visual Studio i wybierz polecenie **Rozpocznij bez debugowania**.
 
 Powinien zostać wyświetlony wypisywane w oknie konsoli programu Visual Studio pojawiające się następujące czynności:
 
@@ -62,4 +62,8 @@ Gratulacje!  Utworzeniu pierwszego projektu F # w programie Visual Studio, napis
 Jeśli jeszcze nie, zapoznaj się z [samouczek programu F #](../tour.md), które obejmują niektóre z podstawowych funkcji języka F #.  Spowoduje przedstawienie niektórych funkcji języka F # i udostępnić przykłady kodu wystarczającą, które można skopiować do programu Visual Studio i uruchamiać.  Dostępne są także kilka wspaniałych zasobów zewnętrznych, można użyć, pokazywane w [Podręcznik języka F #](../index.md).
 
 ## <a name="see-also"></a>Zobacz także
- [Przewodnik po F #](../tour.md) [dokumentacja języka F #](../language-reference/index.md) [wnioskowanie o typie](../language-reference/type-inference.md) [odwołanie do symbolu i operatora](../language-reference/symbol-and-operator-reference/index.md)
+
+- [Przewodnik po F#](../tour.md)
+- [Dokumentacja języka F #](../language-reference/index.md)
+- [Wnioskowanie o typie](../language-reference/type-inference.md)
+- [Odwołanie do symbolu i operatora](../language-reference/symbol-and-operator-reference/index.md)

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - recurse compiler option [C#]
 - -recurse compiler option [C#]
 ms.assetid: 4e8212e5-04e3-45b1-8a42-41bc50e683b0
-ms.openlocfilehash: 7d18fb2b1710e074653e054d003be762d947d1be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1fc5591cb73164e15384eb4407a6e61e903eedbb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214592"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398780"
 ---
 # <a name="-recurse-c-compiler-options"></a>-recurse (opcje kompilatora C#)
-Recurse — opcja umożliwia skompilować plików kodu źródłowego we wszystkich katalogach podrzędnych albo określonego katalogu (dir) lub w katalogu projektu.  
+Recurse — opcja pozwala na kompilowanie plików kodu źródłowego we wszystkich katalogach podrzędnych albo określonego katalogu (dir) lub w katalogu projektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,15 +26,15 @@ Recurse — opcja umożliwia skompilować plików kodu źródłowego we wszystki
   
 ## <a name="arguments"></a>Argumenty  
  `dir` (opcjonalnie)  
- Katalog, w którym ma rozpocząć wyszukiwanie. Jeśli nie zostanie określony, wyszukiwanie rozpoczyna się w katalogu projektu.  
+ Katalog, w którym chcesz rozpocząć wyszukiwanie. Jeśli nie zostanie określony, wyszukiwanie rozpoczyna się w katalogu projektu.  
   
  `file`  
  Pliki do wyszukania. Symbole wieloznaczne są dozwolone.  
   
 ## <a name="remarks"></a>Uwagi  
- **-Recurse** opcja umożliwia skompilować plików kodu źródłowego we wszystkich katalogach podrzędnych określonego katalogu (`dir`) lub w katalogu projektu.  
+ **-Recurse** opcja pozwala na kompilowanie plików kodu źródłowego we wszystkich katalogach podrzędnych określonego katalogu (`dir`) lub w katalogu projektu.  
   
- Symbole wieloznaczne w nazwie pliku służy do Kompiluj wszystkie zgodne pliki w katalogu projektu bez użycia **-recurse**.  
+ Można używać symboli wieloznacznych w nazwach plików do kompilacji wszystkie odpowiednie pliki w katalogu projektu bez użycia **-recurse**.  
   
  Ta opcja kompilatora jest niedostępna w programie Visual Studio i nie można zmienić programowo.  
   
@@ -45,12 +45,13 @@ Recurse — opcja umożliwia skompilować plików kodu źródłowego we wszystki
 csc *.cs  
 ```  
   
- Kompiluje wszystkie pliki C# w katalogu dir1\dir2 i wszystkie jego katalogów i generuje dir2.dll:  
+ Kompiluje, wszystkie pliki C# w katalogu dir1\dir2 i katalogi poniżej i generuje dir2.dll:  
   
 ```console  
 csc -target:library -out:dir2.dll -recurse:dir1\dir2\*.cs  
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

@@ -14,43 +14,43 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 9b7bc5ae-051c-4904-9720-18f6667388bd
-ms.openlocfilehash: 616aa5495ec5ec5d3db6f816a96c34b3ac9f3fed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2396516a0e6c9aeb9b2d64a0bf6e3974d64a5cc5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536572"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397639"
 ---
 # <a name="how-to-download-a-file-in-the-background"></a>Porady: pobieranie pliku w tle
-Pobieranie pliku jest typowych zadań i często jest przydatne do przeprowadzenia tej operacji potencjalnie czasochłonne w oddzielnym wątku. Użyj <xref:System.ComponentModel.BackgroundWorker> składnika, aby wykonać to zadanie wymaga bardzo mało kodu.  
+Pobieranie pliku jest typowym zadaniem i jest często przydatne do wykonania tej operacji potencjalnie czasochłonne w oddzielnym wątku. Użyj <xref:System.ComponentModel.BackgroundWorker> składnika, aby wykonać to zadanie za pomocą bardzo niewielkiej ilości kodu.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu pokazuje sposób użycia <xref:System.ComponentModel.BackgroundWorker> składnika można załadować pliku XML z adresu URL. Po kliknięciu przez użytkownika **Pobierz** przycisku <xref:System.Windows.Forms.Control.Click> wywołań obsługi zdarzeń <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> metody <xref:System.ComponentModel.BackgroundWorker> składnik, aby uruchomić operację pobierania. Przycisk jest wyłączone na czas trwania pobierania, a następnie włączona po ukończeniu pobierania. A <xref:System.Windows.Forms.MessageBox> Wyświetla zawartość pliku.  
+ Poniższy przykład kodu demonstruje sposób używania <xref:System.ComponentModel.BackgroundWorker> składnika można załadować pliku XML z adresu URL. Kiedy użytkownik kliknie **Pobierz** przycisku <xref:System.Windows.Forms.Control.Click> wywołań obsługi zdarzeń <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> metody <xref:System.ComponentModel.BackgroundWorker> składnika, aby uruchomić operację pobierania. Ten przycisk jest wyłączone na czas trwania pobierania i włączone po zakończeniu pobierania. A <xref:System.Windows.Forms.MessageBox> Wyświetla zawartość pliku.  
   
  [!code-csharp[System.ComponentModel.BackgroundWorker.IsBusy#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/CS/Form1.cs#1)]
  [!code-vb[System.ComponentModel.BackgroundWorker.IsBusy#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/VB/Form1.vb#1)]  
   
- **Trwa pobieranie pliku**  
+ **Pobieranie pliku**  
   
- Plik jest pobierany na <xref:System.ComponentModel.BackgroundWorker> wątku roboczego składnika, w którym jest uruchomiona <xref:System.ComponentModel.BackgroundWorker.DoWork> obsługi zdarzeń. Ten wątek rozpoczyna się, gdy kod wywołuje <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> metody.  
+ Plik jest pobierany na <xref:System.ComponentModel.BackgroundWorker> wątku roboczego składnika, który jest uruchamiany <xref:System.ComponentModel.BackgroundWorker.DoWork> programu obsługi zdarzeń. Ten wątek rozpoczyna się, gdy kod wywołuje <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> metody.  
   
  [!code-csharp[System.ComponentModel.BackgroundWorker.IsBusy#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/CS/Form1.cs#3)]
  [!code-vb[System.ComponentModel.BackgroundWorker.IsBusy#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/VB/Form1.vb#3)]  
   
- **Oczekiwanie na BackgroundWorker do zakończenia**  
+ **BackgroundWorker zakończyć oczekiwanie**  
   
- `downloadButton_Click` Obsługi zdarzeń pokazuje, jak oczekiwania <xref:System.ComponentModel.BackgroundWorker> składnika na zakończenie swojego zadania asynchronicznego.  
+ `downloadButton_Click` Programu obsługi zdarzeń pokazuje, jak czekać na <xref:System.ComponentModel.BackgroundWorker> składnika, aby zakończyć jego zadanie asynchroniczne.  
   
- Jeśli tylko aplikacja ma odpowiadanie na zdarzenia i nie chcesz wykonać pracę w głównym wątku podczas oczekiwania na zakończenie wątku tła, po prostu Wyjdź. program obsługi.  
+ Jeśli tylko aplikacja ma reagować na zdarzenia, a nie chcesz wykonać pracę w wątku głównym, podczas oczekiwania na ukończenie wątku tła, po prostu zamknąć program obsługi.  
   
- Jeśli chcesz kontynuować pracę w głównym wątku, użyj <xref:System.ComponentModel.BackgroundWorker.IsBusy%2A> umożliwia określenie, czy <xref:System.ComponentModel.BackgroundWorker> wątku jest nadal uruchomiona. W tym przykładzie paska postępu jest aktualizowany podczas przetwarzania pobierania. Pamiętaj wywołać <xref:System.Windows.Forms.Application.DoEvents%2A?displayProperty=nameWithType> Metoda aktualizowania reakcji interfejsu użytkownika.  
+ Jeśli chcesz to kontynuować pracę w wątku głównym, użyj <xref:System.ComponentModel.BackgroundWorker.IsBusy%2A> właściwości, aby określić, czy <xref:System.ComponentModel.BackgroundWorker> wątek jest nadal uruchomiona. W tym przykładzie paska postępu jest aktualizowana podczas przetwarzania pliki do pobrania. Pamiętaj wywołać <xref:System.Windows.Forms.Application.DoEvents%2A?displayProperty=nameWithType> metodę, aby zachować dynamicznego interfejsu użytkownika.  
   
  [!code-csharp[System.ComponentModel.BackgroundWorker.IsBusy#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/CS/Form1.cs#2)]
  [!code-vb[System.ComponentModel.BackgroundWorker.IsBusy#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/VB/Form1.vb#2)]  
   
  **Wyświetlanie wyników**  
   
- `backgroundWorker1_RunWorkerCompleted` Dojścia metody <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> zdarzeń i jest wywoływana po wykonaniu operacji w tle. Ta metoda sprawdza najpierw <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> właściwości. Jeśli <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> jest `null`, a następnie ta metoda Wyświetla zawartość pliku. Następnie włącza przycisk pobierania, który został wyłączony w momencie rozpoczęcia pobierania, oraz resetuje pasek postępu.  
+ `backgroundWorker1_RunWorkerCompleted` Metodę uchwytów <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> zdarzenie i jest wywoływana po zakończeniu operacji w tle. Metoda ta najpierw sprawdza <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> właściwości. Jeśli <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> jest `null`, wówczas ta metoda Wy Wyświetla zawartość pliku. Umożliwia ona następnie przycisk pobierania, który został wyłączony w momencie rozpoczęcia pobierania, i resetuje pasek postępu.  
   
  [!code-csharp[System.ComponentModel.BackgroundWorker.IsBusy#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/CS/Form1.cs#4)]
  [!code-vb[System.ComponentModel.BackgroundWorker.IsBusy#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/VB/Form1.vb#4)]  
@@ -58,12 +58,12 @@ Pobieranie pliku jest typowych zadań i często jest przydatne do przeprowadzeni
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Odwołania do zestawów System.Xml, System.Drawing i System.Windows.Forms.  
+-   Odwołania do zestawów System.Xml, System.Drawing i przestrzeń nazw System.Windows.Forms.  
   
- Uzyskać informacje o kompilowaniu w tym przykładzie z wiersza polecenia dla programu visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [kompilowania z wiersza polecenia csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć w tym przykładzie w programie Visual Studio przez wklejenie kodu do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows formularze kodu przykład za pomocą programu Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Aby uzyskać informacje o tworzeniu tego przykładu z wiersza polecenia dla programu visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows Forms kodu przykładzie przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
- Zawsze sprawdzaj <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> właściwości w Twojej <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> obsługi zdarzeń przed podjęciem próby uzyskania dostępu <xref:System.ComponentModel.RunWorkerCompletedEventArgs.Result%2A?displayProperty=nameWithType> właściwości lub inny obiekt, który może mieć wpływ <xref:System.ComponentModel.BackgroundWorker.DoWork> obsługi zdarzeń.  
+ Zawsze sprawdzaj <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> właściwości w swojej <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> programu obsługi zdarzeń przed podjęciem próby uzyskania dostępu <xref:System.ComponentModel.RunWorkerCompletedEventArgs.Result%2A?displayProperty=nameWithType> właściwości lub inny obiekt, który może mieć wpływ <xref:System.ComponentModel.BackgroundWorker.DoWork> programu obsługi zdarzeń.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ComponentModel.BackgroundWorker>  

@@ -1,64 +1,64 @@
 ---
-title: Transakcja i operacje kopiowania masowego
+title: Transakcja i operacje kopiowania zbiorczego
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f6f0cbc9-f7bf-4d6e-875f-ad1ba0b4aa62
-ms.openlocfilehash: 9b485ac3f12587256a56fdfa44cf8b9c8b41a6bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 24657f541daf5bb098f8db3b59a3241ecf832d39
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365345"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398868"
 ---
-# <a name="transaction-and-bulk-copy-operations"></a>Transakcja i operacje kopiowania masowego
-Jako operacje izolowanej lub w ramach wielu transakcji krok można wykonać operacji kopiowania zbiorczego. Ta opcja ostatnie umożliwia wykonać więcej niż jedną operację kopiowania zbiorczego w ramach jednej transakcji, a także wykonywać innych operacji bazy danych (na przykład wstawienia, aktualizacje i usunięcia), przy zachowaniu możliwości przekazać ani wycofać cała transakcja.  
+# <a name="transaction-and-bulk-copy-operations"></a>Transakcja i operacje kopiowania zbiorczego
+Jako operacje izolowanej lub w ramach wielu transakcji krok można wykonać operacji kopiowania zbiorczego. Tę opcję, ostatnie pozwala wykonać kilka operacji kopiowania zbiorczego w ramach tej samej transakcji, a także wykonywać inne operacje bazy danych (na przykład wstawiania, aktualizacji i usuwania) przy zachowaniu możliwości Zatwierdź lub Wycofaj całą transakcję.  
   
- Domyślnie jest wykonywane kopiowania masowego izolowanego operacji. Występuje kopiowania masowego w sposób obsługi nietransakcyjnego z ma wtedy możliwości wycofanie go. Jeśli trzeba przywrócić całość lub część kopiowania zbiorczego po wystąpieniu błędu, możesz użyć <xref:System.Data.SqlClient.SqlBulkCopy>-zarządzane transakcji, wykonać kopiowania masowego w istniejącej transakcji lub być zarejestrowany w **System.Transactions** <xref:System.Transactions.Transaction>.  
+ Domyślnie operacji kopiowania zbiorczego odbywa się jako operacja izolowanym. Operacji kopiowania zbiorczego występuje w sposób nietransakcyjnej z nie możliwości jego wycofania. Jeśli musisz wycofać całość lub część kopiowania masowego po wystąpieniu błędu, możesz użyć <xref:System.Data.SqlClient.SqlBulkCopy>-managed transakcji, wykonywać operacji kopiowania zbiorczego w ramach istniejącej transakcji lub być zarejestrowany w **System.Transactions** <xref:System.Transactions.Transaction>.  
   
 ## <a name="performing-a-non-transacted-bulk-copy-operation"></a>Wykonywanie operacji kopiowania zbiorczego nietransakcyjnej  
- Następującej aplikacji konsoli Pokazuje, co się dzieje podczas operacji kopiowania zbiorczego nietransakcyjnej napotka błąd tym za pomocą operacji.  
+ Następująca aplikacja konsoli Pokazuje, co się stanie, gdy operacja kopiowania zbiorczego nietransakcyjnej napotka błąd zatrzymuje za pośrednictwem operacji.  
   
- W tym przykładzie tabeli źródłowej, jak i tabela docelowa obejmują `Identity` kolumny o nazwie **ProductID**. Kod najpierw przygotowuje tabeli docelowej, usuwając wszystkie wiersze, a następnie wstawianie pojedynczy wiersz którego **ProductID** istnieje w tabeli źródłowej. Domyślnie nową wartość dla `Identity` wygenerowaniu kolumny w tabeli docelowej dla każdego wiersza dodane. W tym przykładzie ustawiono opcję po otwarciu połączenia wymusza proces ładowania zbiorczego do użycia `Identity` zamiast wartości z tabeli źródłowej.  
+ W tym przykładzie tabeli źródłowej, jak i tabela docelowa zawiera `Identity` kolumnę o nazwie **ProductID**. Kod najpierw przygotowuje tabelę docelową, usuwając wszystkie wiersze, a następnie wstawianie pojedynczego wiersza, którego **ProductID** istnieje w tabeli źródłowej. Domyślnie nową wartość dla `Identity` kolumny jest generowany w tabeli docelowej dla każdego wiersza dodane. W tym przykładzie opcja jest ustawiona, gdy połączenie jest otwarte, która wymusza proces ładowania zbiorczego, używać `Identity` zamiast wartości z tabeli źródłowej.  
   
- Operacja kopiowania zbiorczego jest wykonywane z <xref:System.Data.SqlClient.SqlBulkCopy.BatchSize%2A> właściwości ustawiony na 10. Podczas operacji napotkał nieprawidłowy wiersz, jest zgłaszany wyjątek. W tym przykładzie pierwsze kopiowania masowego jest nietransakcyjnej. Wszystkie instancje skopiowany do punktu błędu są zatwierdzone; wsadowe zawierające zduplikowany klucz zostanie wycofana i kopiowania masowego jest zatrzymany przed przetworzeniem innych partie.  
+ Operacji kopiowania zbiorczego jest wykonywane przy użyciu <xref:System.Data.SqlClient.SqlBulkCopy.BatchSize%2A> właściwość jest ustawiona na 10. Gdy operacja napotka nieprawidłowy wiersz, jest zgłaszany wyjątek. W tym przykładzie pierwsze operacji kopiowania zbiorczego jest nietransakcyjnej. Wszystkie instancje skopiowane aż do momentu wystąpienia błędu są zatwierdzone; zadanie wsadowe zawierające zduplikowany klucz zostanie wycofana i operacji kopiowania zbiorczego zostało zatrzymane przed przetworzeniem pozostałe partie.  
   
 > [!NOTE]
->  W tym przykładzie nie będzie działać, jeśli nie utworzono tabel roboczych zgodnie z opisem w [Instalatora przykład kopiowania zbiorczego](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Ten kod jest dostarczany do zaprezentowania składnia przy użyciu **SqlBulkCopy** tylko. Jeśli tabele źródłowy i docelowy znajdują się w tym samym wystąpieniu programu SQL Server, jest łatwiejsze i szybsze użyj [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` instrukcji, aby skopiować dane.  
+>  W tym przykładzie nie będzie działać, chyba że utworzonego tabelami pracy zgodnie z opisem w [Konfiguracja przykładu kopiowania zbiorczego](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Ten kod jest dostarczany do zademonstrowania składnia przy użyciu **SqlBulkCopy** tylko. Jeśli tabele źródłowy i docelowy znajdują się w tym samym wystąpieniu programu SQL Server, jest łatwiejsze i szybsze do użycia [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` instrukcję, aby skopiować dane.  
   
  [!code-csharp[DataWorks SqlBulkCopy.DefaultTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.DefaultTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.DefaultTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.DefaultTransaction/VB/source.vb#1)]  
   
-## <a name="performing-a-dedicated-bulk-copy-operation-in-a-transaction"></a>Wykonywanie operacji kopiowania zbiorczego dedykowanych w transakcji  
- Domyślnie kopiowania masowego jest jego własnej transakcji. Do wykonania operacji kopiowania zbiorczego dedykowanych, należy utworzyć nowe wystąpienie klasy <xref:System.Data.SqlClient.SqlBulkCopy> z parametrów połączenia, lub użyj istniejącego <xref:System.Data.SqlClient.SqlConnection> obiektu bez aktywnej transakcji. W każdym scenariuszu operacja kopiowania zbiorczego tworzy i następnie zatwierdza lub wycofuje transakcję.  
+## <a name="performing-a-dedicated-bulk-copy-operation-in-a-transaction"></a>Wykonywanie operacji kopiowania zbiorczego dedykowanych w ramach transakcji  
+ Domyślnie operacji kopiowania zbiorczego jest swój własny transakcji. Do wykonania operacji kopiowania zbiorczego dedykowane, należy utworzyć nowe wystąpienie klasy <xref:System.Data.SqlClient.SqlBulkCopy> przy użyciu parametrów połączenia lub użyj istniejącego <xref:System.Data.SqlClient.SqlConnection> obiektu braku aktywnej transakcji. W każdym scenariuszu operacji kopiowania zbiorczego tworzy i następnie zatwierdza lub powoduje wycofanie transakcji.  
   
- Można jawnie określić <xref:System.Data.SqlClient.SqlBulkCopyOptions.UseInternalTransaction> opcji <xref:System.Data.SqlClient.SqlBulkCopy> konstruktora klasy jawnie powoduje kopiowania masowego do wykonania w jego własnej transakcji powoduje poszczególnych partii kopiowania masowego do wykonania w osobnej transakcji.  
+ Możesz jawnie określić <xref:System.Data.SqlClient.SqlBulkCopyOptions.UseInternalTransaction> opcji <xref:System.Data.SqlClient.SqlBulkCopy> konstruktora klasy, aby jawnie wywołać operacji kopiowania zbiorczego, można wykonać w jego własnej transakcji, powodując każdej partii operacji kopiowania zbiorczego można wykonać w osobnej transakcji.  
   
 > [!NOTE]
->  Ponieważ różnych instancji są wykonywane w innej transakcji, jeśli wystąpi błąd podczas operacji kopiowania zbiorczego, wszystkie wiersze w bieżącej partii zostanie wycofana, ale wiersze z poprzedniej partii pozostaną w bazie danych.  
+>  Ponieważ różnych partii są wykonywane w innej transakcji, jeśli wystąpi błąd podczas operacji kopiowania zbiorczego, wszystkie wiersze w bieżącej partii zostanie wycofana, ale wiersze z poprzednich partii pozostaną w bazie danych.  
   
- Następującej aplikacji konsoli przypomina poprzedni przykład, z jednym wyjątkiem: W tym przykładzie kopiowania masowego zarządza własną transakcji. Wszystkie instancje skopiowany do punktu błędu są zatwierdzone; wsadowe zawierające zduplikowany klucz zostanie wycofana i kopiowania masowego jest zatrzymany przed przetworzeniem innych partie.  
+ Następująca aplikacja konsoli jest podobny do poprzedniego przykładu, z jednym wyjątkiem: W tym przykładzie operacji kopiowania zbiorczego zarządza własną transakcji. Wszystkie instancje skopiowane aż do momentu wystąpienia błędu są zatwierdzone; zadanie wsadowe zawierające zduplikowany klucz zostanie wycofana i operacji kopiowania zbiorczego zostało zatrzymane przed przetworzeniem pozostałe partie.  
   
 > [!IMPORTANT]
->  W tym przykładzie nie będzie działać, jeśli nie utworzono tabel roboczych zgodnie z opisem w [Instalatora przykład kopiowania zbiorczego](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Ten kod jest dostarczany do zaprezentowania składnia przy użyciu **SqlBulkCopy** tylko. Jeśli tabele źródłowy i docelowy znajdują się w tym samym wystąpieniu programu SQL Server, jest łatwiejsze i szybsze użyj [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` instrukcji, aby skopiować dane.  
+>  W tym przykładzie nie będzie działać, chyba że utworzonego tabelami pracy zgodnie z opisem w [Konfiguracja przykładu kopiowania zbiorczego](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Ten kod jest dostarczany do zademonstrowania składnia przy użyciu **SqlBulkCopy** tylko. Jeśli tabele źródłowy i docelowy znajdują się w tym samym wystąpieniu programu SQL Server, jest łatwiejsze i szybsze do użycia [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` instrukcję, aby skopiować dane.  
   
  [!code-csharp[DataWorks SqlBulkCopy.InternalTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.InternalTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.InternalTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.InternalTransaction/VB/source.vb#1)]  
   
-## <a name="using-existing-transactions"></a>Przy użyciu istniejącej transakcji  
- Można określić istniejącą <xref:System.Data.SqlClient.SqlTransaction> obiektu jako parametru w <xref:System.Data.SqlClient.SqlBulkCopy> konstruktora. W takim przypadku kopiowania masowego jest wykonywane w istniejącej transakcji i nie wprowadzania zmian w stan transakcji (to znaczy go nie jest zatwierdzone ani przerwane). Umożliwia to aplikacji do uwzględnienia operacji kopiowania zbiorczego w transakcji z innymi operacjami bazy danych. Jednak jeśli nie określisz <xref:System.Data.SqlClient.SqlTransaction> obiektu i przekazać pustej referencji i połączenie ma aktywnych transakcji, jest zgłaszany wyjątek.  
+## <a name="using-existing-transactions"></a>Przy użyciu istniejących transakcji  
+ Można określić istniejący <xref:System.Data.SqlClient.SqlTransaction> obiekt jako parametr w <xref:System.Data.SqlClient.SqlBulkCopy> konstruktora. W takiej sytuacji operacji kopiowania zbiorczego odbywa się w istniejącej transakcji i wprowadzania nie zmian w stan transakcji (oznacza to, go nie jest zatwierdzone ani przerwane). Umożliwia to aplikacji, które mają zostać objęte operacji kopiowania zbiorczego transakcji z innymi operacjami bazy danych. Jednakże jeśli nie określisz <xref:System.Data.SqlClient.SqlTransaction> obiektu i przekazać odwołanie o wartości null, a połączenie ma aktywnej transakcji, zgłaszany jest wyjątek.  
   
- Jeśli trzeba przywrócić cały zbiorczego operacji kopiowania ponieważ wystąpi błąd lub jeśli kopiowania zbiorczego powinien zostać wykonany jako część większego procesu, który można wycofać, możesz podać <xref:System.Data.SqlClient.SqlTransaction> do obiektu <xref:System.Data.SqlClient.SqlBulkCopy> konstruktora.  
+ Jeśli musisz wycofać cała zbiorcza skopiować operacji, ponieważ wystąpi błąd lub jeśli kopiowania masowego powinien zostać wykonany jako część większego procesu, który można wycofać, można podać <xref:System.Data.SqlClient.SqlTransaction> obiekt <xref:System.Data.SqlClient.SqlBulkCopy> konstruktora.  
   
- Następującej aplikacji konsoli jest podobny jak w pierwszym przykładzie (nietransakcyjnej) z jednym wyjątkiem: w tym przykładzie kopiowania masowego znajduje się w większych transakcji zewnętrznej. Gdy wystąpi błąd naruszenia dotyczącego klucza podstawowego, cała transakcja zostanie wycofana i żadne wiersze są dodawane do tabeli docelowej.  
+ Następująca aplikacja konsoli jest podobne do pierwszego (nietransakcyjnej), z jednym wyjątkiem: w tym przykładzie operacji kopiowania zbiorczego znajduje się w ramach transakcji większych i zewnętrznych. Gdy wystąpi błąd naruszenia klucza podstawowego, cała transakcja zostanie wycofana, a żadne wiersze są dodawane do tabeli docelowej.  
   
 > [!IMPORTANT]
->  W tym przykładzie nie będzie działać, jeśli nie utworzono tabel roboczych zgodnie z opisem w [Instalatora przykład kopiowania zbiorczego](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Ten kod jest dostarczany do zaprezentowania składnia przy użyciu **SqlBulkCopy** tylko. Jeśli tabele źródłowy i docelowy znajdują się w tym samym wystąpieniu programu SQL Server, jest łatwiejsze i szybsze użyj [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` instrukcji, aby skopiować dane.  
+>  W tym przykładzie nie będzie działać, chyba że utworzonego tabelami pracy zgodnie z opisem w [Konfiguracja przykładu kopiowania zbiorczego](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Ten kod jest dostarczany do zademonstrowania składnia przy użyciu **SqlBulkCopy** tylko. Jeśli tabele źródłowy i docelowy znajdują się w tym samym wystąpieniu programu SQL Server, jest łatwiejsze i szybsze do użycia [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` instrukcję, aby skopiować dane.  
   
  [!code-csharp[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [Operacje kopiowania masowego w programie SQL Server](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

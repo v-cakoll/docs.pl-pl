@@ -4,62 +4,62 @@ ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b010307baa8634a4bb62310318d1d718a2525d4a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2603c29fe9108a32f3c3ba86a5aba9fae5042b17
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397744"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399767"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>Dokonywanie pomiaru poprawy szybkości uruchomienia za pomocą architektury .NET Native
-[!INCLUDE[net_native](../../../includes/net-native-md.md)] znacznie poprawia czas uruchamiania aplikacji. To ulepszenie jest szczególnie widoczny na urządzeniach przenośnych, zasilany z niskim oraz złożone aplikacje. Ten temat ułatwia szybkie wprowadzenie do podstawowych Instrumentacja pomiarze temu usprawnieniu uruchamiania.  
+[!INCLUDE[net_native](../../../includes/net-native-md.md)] znacznie poprawia czas uruchamiania aplikacji. To ulepszenie jest szczególnie widoczny na urządzeniach przenośnych, niskim poziomie zasilania i złożonych aplikacji. Ten temat ułatwia rozpoczęcie pracy z Instrumentacją podstawowe, potrzebne do mierzenia to ulepszenie uruchamiania.  
   
- W celu ułatwienia kontroli wydajności, .NET Framework i systemu Windows używają framework zdarzenia o nazwie zdarzenia śledzenia dla systemu Windows (ETW) umożliwiający aplikację, aby powiadomić narzędzi w przypadku wystąpienia zdarzeń. Narzędzie narzędzia PerfView można następnie użyć do łatwego wyświetlania i analizowania zdarzeń funkcji ETW. W tym temacie opisano sposób:  
+ .NET Framework i Windows w celu ułatwienia badania wydajności, użyj platforma zdarzeń o nazwie śledzenie zdarzeń dla Windows (ETW), który umożliwia aplikacji powiadomić narzędzia w przypadku wystąpienia zdarzeń. Następnie służy narzędzie narzędzia PerfView łatwo przeglądać i analizować zdarzeń ETW. W tym temacie opisano sposób:  
   
--   Użyj <xref:System.Diagnostics.Tracing.EventSource> klasy do wysyłania zdarzeń.  
+-   Użyj <xref:System.Diagnostics.Tracing.EventSource> klasy, aby emitować zdarzenia.  
   
--   Przy użyciu narzędzia PerfView zbierania tych zdarzeń.  
+-   Korzystanie z programu PerfView do zbierania tych zdarzeń.  
   
--   Aby wyświetlić te zdarzenia przy użyciu narzędzia PerfView.  
+-   Korzystanie z programu PerfView do wyświetlania tych zdarzeń.  
   
-## <a name="using-eventsource-to-emit-events"></a>Emituj zdarzeń przy użyciu źródła zdarzeń  
- <xref:System.Diagnostics.Tracing.EventSource> udostępnia klasę podstawową, z których można utworzyć dostawcy zdarzeń niestandardowych. Ogólnie rzecz biorąc, Utwórz podklasę <xref:System.Diagnostics.Tracing.EventSource> i zastępowania `Write*` metod z metody zdarzeń. Wzorzec singleton zazwyczaj jest używane dla każdego <xref:System.Diagnostics.Tracing.EventSource>.  
+## <a name="using-eventsource-to-emit-events"></a>Przy użyciu źródła zdarzeń, aby emitować zdarzenia  
+ <xref:System.Diagnostics.Tracing.EventSource> udostępnia klasę bazową, z którego ma zostać Tworzenie zdarzenia niestandardowego dostawcy. Ogólnie rzecz biorąc, Utwórz podklasę <xref:System.Diagnostics.Tracing.EventSource> i zawijania `Write*` metody przy użyciu metody zdarzeń. Zwykle używane jest wzorzec singleton dla każdego <xref:System.Diagnostics.Tracing.EventSource>.  
   
- Na przykład w poniższym przykładzie klasa może służyć do mierzenia dwóch charakterystyki wydajności:  
+ Na przykład klasa w poniższym przykładzie może służyć do mierzenia dwóch charakterystyki wydajności:  
   
--   Czas `App` konstruktora klasy została wywołana.  
+-   Czas do `App` wywołano konstruktora klasy.  
   
--   Czas `MainPage` konstruktor został wywołany.  
+-   Czas do `MainPage` Konstruktor została wywołana.  
   
  [!code-csharp[ProjectN_ETW#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_etw/cs/etw1.cs#1)]  
   
- Istnieje kilka możliwości do Zwróć uwagę, w tym miejscu. Po pierwsze, pojedynczą jest tworzony w `AppEventSource.Log`. To wystąpienie będzie służyć do rejestrowania wszystkich. Po drugie, każda metoda zdarzeń ma <xref:System.Diagnostics.Tracing.EventAttribute>. Dzięki temu narzędzi skojarzyć indeks <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> metody za pomocą metody, która została wywołana w `AppEventSource`.  
+ Istnieje kilka kwestii, które należy zwrócić uwagę, w tym miejscu. Po pierwsze, pojedynczego jest tworzony w `AppEventSource.Log`. To wystąpienie będzie służyć do rejestrowania wszystkich. Po drugie, każda metoda zdarzeń ma <xref:System.Diagnostics.Tracing.EventAttribute>. Dzięki temu narzędzia skojarzyć indeks <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> metody za pomocą metody, która została wywołana na `AppEventSource`.  
   
- Należy zauważyć, że te zdarzenia wyłącznie informacyjny. Większość kodu aplikacji zostanie uruchomiony po tych zdarzeń. Zapoznaj się zdarzenia w kodzie odpowiadają interakcji użytkownika, te miary i zwiększyć tych wzorców. Ponadto zdarzenia się zalogowanie się tylko jedno wystąpienie. Często warto mieć skojarzone uruchomienia i Zatrzymaj zdarzenia dla każdej operacji. Rozpatrując uruchamiania aplikacji, zdarzenie rozpoczęcia jest zazwyczaj zdarzeń "Proces/Start", który emituje systemu operacyjnego.  
+ Należy pamiętać, że te zdarzenia są wyłącznie informacyjny. Większość kodu aplikacji zostanie wykonany po tych zdarzeń. Należy zrozumieć, które zdarzenia w kodzie odpowiadają na interakcję użytkownika, tych miar i ulepszyć te testy porównawcze. Ponadto się w dzienniku tylko jedno wystąpienie na czas. Często warto mieć skojarzone start i Zatrzymaj zdarzenia dla każdej operacji. Zdarzenie rozpoczęcia, badając uruchamiania aplikacji jest ogólnie zdarzeń "Początek/procesu", który emituje systemu operacyjnego.  
   
- Na przykład załóżmy, że tworzysz czytnik danych RSS. Kilka interesujące lokalizacje, aby rejestrować zdarzenia są:  
+ Na przykład załóżmy, że tworzysz czytnik danych RSS. Kilka interesujących lokalizacje, aby rejestrować zdarzenia są:  
   
--   Jeśli strona główna najpierw jest renderowany.  
+-   Gdy główna strona najpierw jest renderowany.  
   
--   Gdy starych wątków RSS są rozszeregować z magazynu lokalnego.  
+-   Gdy starej historii RSS są deserializacji z magazynu lokalnego.  
   
--   Aplikacja rozpoczęcia synchronizacji nowych scenariuszy.  
+-   Aplikacja rozpoczęcia synchronizowania nowe historie.  
   
--   Gdy aplikacji zostało zakończone, synchronizowania nowych scenariuszy.  
+-   Gdy aplikacji zostało zakończone, synchronizowanie nowe historie.  
   
- Instrumentacji aplikacji jest prosty: po prostu Wywołaj metodę odpowiednią w klasie pochodnej. Przy użyciu `AppEventSource` z poprzedniego przykładu mogą dodawać app w następujący sposób:  
+ Instrumentacja aplikacji jest bardzo proste: wystarczy wywołanie odpowiedniej metody w klasie pochodnej. Za pomocą `AppEventSource` z poprzedniego przykładu, możliwe jest instrumentowanie aplikacji w następujący sposób:  
   
  [!code-csharp[ProjectN_ETW#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_etw/cs/etw2.cs#2)]  
   
- Gdy aplikacja jest instrumentowany, wszystko jest gotowe do zbierania zdarzeń.  
+ Podczas instrumentacji aplikacji, możesz przystąpić do zbierania zdarzeń.  
   
-## <a name="gathering-events-with-perfview"></a>Zbieranie zdarzeń z narzędzia PerfView  
- Narzędzia PerfView używa zdarzenia ETW pomaga szerokiej gamy badania wydajności aplikacji. Obejmuje on też konfiguracji graficznego interfejsu użytkownika, który pozwala włączyć rejestrowanie dla różnych typów zdarzeń lub wyłączyć. Narzędzia PerfView to bezpłatne narzędzie i może zostać pobrany z [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=28567). Aby uzyskać więcej informacji, obserwuj [filmów instruktażowych narzędzia PerfView](http://channel9.msdn.com/Series/PerfView-Tutorial).  
+## <a name="gathering-events-with-perfview"></a>Zbieranie zdarzeń za pomocą narzędzia PerfView  
+ Narzędzia PerfView używa zdarzenia ETW, aby poddawać wszelkiego rodzaju badania wydajności aplikacji. Zawiera on również konfiguracji graficznego interfejsu użytkownika, który pozwala włączyć rejestrowanie dla różnych typów zdarzeń lub wyłączyć. Narzędzia PerfView to bezpłatne narzędzie i można je pobrać z [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=28567). Aby uzyskać więcej informacji, obejrzyj [filmom instruktażowym narzędzia PerfView](http://channel9.msdn.com/Series/PerfView-Tutorial).  
   
 > [!NOTE]
->  Nie można użyć narzędzia PerfView służąca do gromadzenia zdarzeń w systemach ARM. Aby zbierać zdarzenia w systemach ARM, użyj rejestrowania wydajności systemu Windows (WPR). Aby uzyskać więcej informacji, zobacz [Morrison zaliczko wpis w blogu](http://blogs.msdn.com/b/vancem/archive/2012/12/19/collecting-etw-perfview-data-on-an-windows-rt-winrt-arm-surface-device.aspx).  
+>  Narzędzia PerfView nie może służyć do zbierania zdarzeń w systemach ARM. Służąca do gromadzenia zdarzeń w systemach ARM, należy użyć Rejestratora wydajności Windows (WPR). Aby uzyskać więcej informacji, zobacz [wpis w blogu Morrison zaliczko](https://blogs.msdn.com/b/vancem/archive/2012/12/19/collecting-etw-perfview-data-on-an-windows-rt-winrt-arm-surface-device.aspx).  
   
- Można także wywoływać narzędzia PerfView z wiersza polecenia. Aby rejestrować tylko zdarzenia z dostawcą, Otwórz okno wiersza polecenia, a następnie wprowadź polecenie:  
+ Narzędzia PerfView można również wywołać z wiersza polecenia. Aby zalogować się za pośrednictwem swojego usługodawcy tylko zdarzenia, Otwórz okno wiersza polecenia i wpisz polecenie:  
   
 ```  
 perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFile   
@@ -68,34 +68,34 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
  gdzie:  
   
  `-KernelEvents:Process`  
- Wskazuje, że chcesz wiedzieć, kiedy rozpoczyna się proces i zatrzymuje. Należy zdarzeń procesu/Start dla aplikacji, więc można odejmować w pozostałych godzinach zdarzeń.  
+ Wskazuje, że chcesz wiedzieć, kiedy proces uruchamia i zatrzymuje. Należy zdarzeń uruchomienia procesu/aplikacji, dzięki czemu można odejmować w pozostałym czasie zdarzenia.  
   
  `-OnlyProviders:*MyCompany-MyApp`  
- Wyłącza innych dostawców, które narzędzia PerfView włącza domyślnie i włącza dostawcy moja_aplikacja Moja firma.  (Gwiazdka oznacza, że jest <xref:System.Diagnostics.Tracing.EventSource>.)  
+ Wyłącza innych dostawców, które narzędzia PerfView włącza domyślnie i włącza funkcję dostawcy Moja firma MyApp.  (Gwiazdka wskazuje, że jest <xref:System.Diagnostics.Tracing.EventSource>.)  
   
  `collect outputFile`  
- Wskazuje, czy chcesz uruchomić kolekcji i zapisać dane do outputFile.etl.zip.  
+ Wskazuje, czy ma być Rozpocznij zbieranie danych i zapisz ją do outputFile.etl.zip.  
   
- Uruchamianie aplikacji po uruchomieniu narzędzia PerfView. Istnieje kilka sposobów pamiętać podczas uruchamiania aplikacji:  
+ Uruchom aplikację po uruchomieniu narzędzia PerfView. Istnieje kilka kwestii, które należy pamiętać podczas uruchamiania aplikacji:  
   
--   Użyj kompilacji wydania nie kompilację debugowania. Kompilacje debugowania często zawierają sprawdzanie błędów dodatkowe i kod, który może spowodować aplikację, aby działać wolniej niż oczekiwano obsługi błędów.  
+-   Użyj kompilacji wydania nie kompilacji debugowania. Kompilacje debugowania często zawierają Sprawdzanie dodatkowych błędów i kod, który może spowodować, że aplikacja ma działać wolniej niż oczekiwano obsługi błędów.  
   
--   Z tą aplikacją debugerze wpływa na wydajność aplikacji.  
+-   Z tą aplikacją w załączonym debuggerze, ma wpływ na wydajność aplikacji.  
   
--   System Windows używa wielu strategii buforowania aby przyspieszyć czasy uruchamiania aplikacji. Jeśli aplikacja jest obecnie w pamięci podręcznej w pamięci i nie musi być załadowany z dysku, zostanie ona rozpoczęta szybciej. Do zapewnienia spójności, uruchom i zamknij aplikację kilka razy przed jego pomiaru.  
+-   Windows używa wielu strategii buforowania, aby przyspieszyć czas uruchamiania aplikacji. Jeśli Twoja aplikacja jest aktualnie w pamięci podręcznej w pamięci i nie musi być załadowany z dysku, zostanie uruchomiony szybciej. W celu zapewnienia spójności, uruchom i zamknij aplikację kilka razy przed pomiaru.  
   
- Po uruchomieniu aplikacji tak, aby narzędzia PerfView może zbierać emitowany zdarzenia, wybierz **zatrzymania zbierania** przycisku. Ogólnie rzecz biorąc należy zatrzymać zbieranie przed zamknięciem aplikacji, więc nie możesz uzyskać nadmiarowe zdarzenia. Jednak jeśli notuje wydajności zamykania lub zawieszenie, należy kontynuować kolekcji.  
+ Po uruchomieniu aplikacji tak, aby narzędzia PerfView może zbierać zdarzenia emitowany, wybierz **Zatrzymaj Kolekcjonowanie** przycisku. Ogólnie rzecz biorąc należy zatrzymać zbieranie przed zamknięciem aplikacji, dzięki czemu nie uzyskać nadmiarowe zdarzenia. Jednak notuje zamykania lub zawieszenie wydajności, należy kontynuować kolekcji.  
   
-## <a name="displaying-the-events"></a>Wyświetlanie zdarzenia  
- Aby wyświetlić zdarzenia, które zostały już zebrane, przy użyciu narzędzia PerfView Otwórz etl lub. etl.zip pliku utworzonego i wybierz polecenie **zdarzenia**. ETW będzie zostały zebrane informacje o większą liczbę zdarzeń, w tym zdarzenia z innymi procesami. Aby skoncentrować się badania, wykonaj następujące pola tekstowe w widoku zdarzeń:  
+## <a name="displaying-the-events"></a>Wyświetlanie zdarzeń  
+ Aby wyświetlić zdarzenia, które zostały już zebrane, użyj narzędzia PerfView, aby otworzyć etl lub. etl.zip utworzonego pliku i wybierz polecenie **zdarzenia**. ETW zostanie zostały zebrane informacje o dużej liczby zdarzeń, w tym zdarzenia z innych procesów. Aby skoncentrować się badania, wykonaj następujące pola tekstowe w widoku zdarzeń:  
   
--   W **filtru procesu** Określ nazwę aplikacji (bez ".exe").  
+-   W **filtra procesu** należy określić nazwę aplikacji (bez ".exe").  
   
--   W **filtr typy zdarzeń** określ `Process/Start | MyCompany-MyApp`. Filtr zdarzeń to ustawienie z moja_aplikacja Moja firma i zdarzenia systemu Windows początek jądra/procesu.  
+-   W **filtr typy zdarzeń** określ `Process/Start | MyCompany-MyApp`. To ustawienie filtrowania dla zdarzeń z Moja firma MyApp i zdarzeń Windows uruchomienia jądra/procesu.  
   
- Wybierz wszystkie zdarzenia wyświetlane w okienku po lewej stronie (Ctrl-A) i wybierz polecenie **Enter** klucza. Teraz można wyświetlić sygnatury czasowe z każdego zdarzenia. Te sygnatury czasowe są względem początku śledzenia, więc odjąć czasowej każdego zdarzenia od godziny rozpoczęcia procesu, aby określić czas, który upłynął od momentu uruchomienia. Jeśli używasz Ctrl + kliknięcie, aby wybrać dwa znaczniki czasu zobaczysz różnica między nimi wyświetlany w pasku stanu w dolnej części strony. Dzięki temu można łatwo sprawdzić czas, który upłynął od dwóch zdarzeń wyświetlania (w tym procesu start). Można otworzyć menu skrótów dla widoku i wybierz z liczbą przydatne opcje, takie jak eksportowania plików CSV lub otwierania Microsoft Excel, aby zapisać lub przetwarzania danych.  
+ Wybierz wszystkie zdarzenia wymienione w okienku po lewej stronie (Ctrl-A) i wybierz polecenie **Enter** klucza. Teraz można wyświetlić sygnatury czasowe z każdego zdarzenia. Tych sygnatury czasowe są względem początku śledzenia, więc należy odjąć czasu każdego zdarzenia od czasu rozpoczęcia do identyfikowania czas, jaki upłynął od uruchomienia procesu. Jeśli używasz Ctrl + kliknięcie zaznacz dwa sygnatury czasowe, zobaczysz różnią się one być wyświetlane na pasku stanu u dołu strony. Dzięki temu można łatwo sprawdzić czas między dwoma zdarzeń wyświetlania (w tym uruchomienie procesu). Można otworzyć menu skrótów dla widoku i wybierz z szereg użyteczne opcje, takie jak eksportowania do plików CSV lub otwierania Microsoft Excel, aby zapisać lub przetwarzania danych.  
   
- Powtarzając procedurę dla oryginalnej aplikacji i wersji zostały utworzone przy użyciu [!INCLUDE[net_native](../../../includes/net-native-md.md)] narzędzia łańcucha, możesz porównać różnica w wydajności.   [!INCLUDE[net_native](../../../includes/net-native-md.md)] aplikacje zazwyczaj start szybciej niż z systemem innym niż[!INCLUDE[net_native](../../../includes/net-native-md.md)] aplikacji. Jeśli interesuje Cię tu przeszukuje głębiej, narzędzia PerfView można zidentyfikować także fragmenty kodu, które są tworzone najwięcej czasu. Aby uzyskać więcej informacji, obserwuj [samouczki narzędzia PerfView](http://channel9.msdn.com/Series/PerfView-Tutorial) lub odczytać [wpis w blogu Morrison zaliczko](http://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx).  
+ Powtarzając procedurę dla oryginalnej aplikacji i wersji skompilowanych przy użyciu [!INCLUDE[net_native](../../../includes/net-native-md.md)] narzędzia łańcucha, można porównać różnice w wydajności.   [!INCLUDE[net_native](../../../includes/net-native-md.md)] aplikacje zazwyczaj początek szybciej niż non -[!INCLUDE[net_native](../../../includes/net-native-md.md)] aplikacji. Jeśli interesuje Cię możesz głębiej, narzędzia PerfView można zidentyfikować także fragmenty kodu, które mają najwięcej czasu. Aby uzyskać więcej informacji, obejrzyj [samouczki narzędzia PerfView](http://channel9.msdn.com/Series/PerfView-Tutorial) lub przeczytaj [wpis w blogu Morrison zaliczko](https://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Diagnostics.Tracing.EventSource>

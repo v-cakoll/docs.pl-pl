@@ -2,144 +2,144 @@
 title: Protokoły transakcji
 ms.date: 03/30/2017
 ms.assetid: 2820b0ec-2f32-430c-b299-1f0e95e1f2dc
-ms.openlocfilehash: 8841a9cf414ae94da7e63bd7312a3c541ab6de1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e4f464d88a63a0aad17982d0329971de4fc5a07
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508445"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398823"
 ---
 # <a name="transaction-protocols"></a>Protokoły transakcji
-Windows Communication Foundation (WCF) implementuje usługi WS-Atomic Transaction i koordynacji WS protokoły.  
+Windows Communication Foundation (WCF) implementuje usługi WS-Atomic Transaction i WS-koordynacji protokoły.  
   
 |Specyfikacja/dokumentu|Wersja|Łącze|  
 |-----------------------------|-------------|----------|  
-|WS-Coordination|1.0<br /><br /> 1.1|[http://go.microsoft.com/fwlink/?LinkId=96104](http://go.microsoft.com/fwlink/?LinkId=96104)<br /><br /> [http://go.microsoft.com/fwlink/?LinkId=96079](http://go.microsoft.com/fwlink/?LinkId=96079)|  
-|WS-AtomicTransaction|1.0<br /><br /> 1.1|[http://go.microsoft.com/fwlink/?LinkId=96080](http://go.microsoft.com/fwlink/?LinkId=96080)<br /><br /> http://go.microsoft.com/fwlink/?LinkId=96081|  
+|WS-Coordination|1.0<br /><br /> 1.1|[https://go.microsoft.com/fwlink/?LinkId=96104](https://go.microsoft.com/fwlink/?LinkId=96104)<br /><br /> [https://go.microsoft.com/fwlink/?LinkId=96079](https://go.microsoft.com/fwlink/?LinkId=96079)|  
+|WS-AtomicTransaction|1.0<br /><br /> 1.1|[https://go.microsoft.com/fwlink/?LinkId=96080](https://go.microsoft.com/fwlink/?LinkId=96080)<br /><br /> https://go.microsoft.com/fwlink/?LinkId=96081|  
   
- Współdziałanie z tymi specyfikacjami protokołu jest wymagany na dwa poziomy: między aplikacjami i między menedżerowie transakcji (zobacz poniższą ilustrację). Specyfikacje opisano szczegółowo formaty wiadomości i wiadomości programu exchange na obu poziomach współdziałania. Niektóre bezpieczeństwa, niezawodności i kodowania dla aplikacji do aplikacji programu exchange mają zastosowanie tak samo, jak dla programu exchange regularne aplikacji. Pomyślne współdziałanie menedżerowie transakcji wymaga jednak umowy dla określonego powiązania, ponieważ zwykle nie jest skonfigurowany przez użytkownika.  
+ Współdziałanie w specyfikacji protokołu jest wymagany na dwóch poziomach: między aplikacjami i między menedżerowie transakcji (patrz poniższy rysunek). Specyfikacje opisano szczegółowo formaty wiadomości i wiadomości programu exchange na obu poziomach współdziałania. Niektóre bezpieczeństwa, niezawodności i kodowania dla aplikacji do aplikacji programu exchange mają zastosowanie jak w przypadku regularnego aplikacji programu exchange. Pomyślne współdziałanie menedżerowie transakcji wymaga jednak umowy w określonym powiązaniu, ponieważ zwykle nie jest skonfigurowany przez użytkownika.  
   
- W tym temacie opisuje kompozycji specyfikacji WS-Atomic Transaction (WS-AT) z zabezpieczeniami oraz bezpiecznego powiązania, używany do komunikacji między menedżerami transakcji. Podejście opisane w niniejszym dokumencie zostały pomyślnie przetestowane z innych implementacji protokołu WS-AT i koordynacji WS tym IBM, IONA Sun Microsystems i inne.  
+ W tym temacie opisuje kompozycję specyfikacji WS-Atomic Transaction (WS-AT) z zabezpieczeniami oraz bezpiecznego powiązania, używany do komunikacji między menedżerowie transakcji. Podejście opisane w niniejszym dokumencie zostały pomyślnie przetestowane z innymi implementacjami WS-AT i WS-koordynacji m.in. IBM IONA, Sun Microsystems i inne.  
   
- Na poniższym rysunku przedstawiono współdziałanie między dwa menedżerowie transakcji transakcji Menedżera 1 i 2 Menedżera transakcji, a dwie aplikacje aplikacji 1 i 2 aplikacji.  
+ Na poniższym rysunku przedstawiono współdziałanie między dwa menedżerowie transakcji transakcji Menedżera 1 i 2 Menedżera transakcji, a dwie aplikacje, aplikacja 1 i 2 w aplikacji.  
   
  ![Protokoły transakcji](../../../../docs/framework/wcf/feature-details/media/transactionmanagers.gif "TransactionManagers")  
   
- Należy wziąć pod uwagę typowy scenariusz WS-koordynacji/protokołu WS-AT z jednego inicjatora (I) i jednego uczestnika (P). Inicjator i uczestnika ma menedżerowie transakcji (ITM i PTM, odpowiednio). Dwufazowe nazywa się 2PC w tym temacie.  
+ Należy rozważyć typowy scenariusz protokołu WS-koordynacji/WS-Atomic Transaction za pomocą jednego inicjatora (I) i jednego uczestnika (P). Inicjator i uczestnika, który ma menedżerowie transakcji (ITM i PTM, odpowiednio). Dwufazowego, jest nazywana 2PC, w tym temacie.  
   
 |||  
 |-|-|  
-|1. CreateCoordinationContext|12. Odpowiedzi na komunikat aplikacji|  
-|2. CreateCoordinationContextResponse|13. Zatwierdź (zakończenia)|  
-|3. Rejestr (zakończenia)|14. Przygotowanie (2PC)|  
-|4. RegisterResponse|15. Przygotowanie (2PC)|  
-|5. Komunikat aplikacji|16. Przygotowane (2PC)|  
-|6. CreateCoordinationContext z kontekstem|17. Przygotowane (2PC)|  
-|7. Rejestr (niezawodny)|18. Zatwierdzone (zakończenia)|  
-|8. RegisterResponse|19. Zatwierdź (2PC)|  
-|9. CreateCoordinationContextResponse|20. Zatwierdź (2PC)|  
-|10. Rejestr (niezawodny)|21. Zatwierdzone (2PC)|  
+|1. CreateCoordinationContext|12. Odpowiedź komunikatu aplikacji|  
+|2. CreateCoordinationContextResponse|13. Zatwierdź (zakończenie)|  
+|3. Rejestr (zakończenie)|14. Przygotowywanie (2PC)|  
+|4. RegisterResponse|15. Przygotowywanie (2PC)|  
+|5. Komunikatu aplikacji|16. Przygotowany (2PC)|  
+|6. CreateCoordinationContext z kontekstem|17. Przygotowany (2PC)|  
+|7. Rejestr (trwałość)|18. Zatwierdzone (zakończenie)|  
+|8. RegisterResponse|19. Zatwierdzania (2PC)|  
+|9. CreateCoordinationContextResponse|20. Zatwierdzania (2PC)|  
+|10. Rejestr (trwałość)|21. Zatwierdzone (2PC)|  
 |11. RegisterResponse|22. Zatwierdzone (2PC)|  
   
- Ten dokument opisuje kompozycji specyfikacji WS-AtomicTransaction z zabezpieczeniami oraz bezpiecznego powiązania, używany do komunikacji między menedżerami transakcji. Podejście opisane w tym dokumencie zostały pomyślnie przetestowane z innych implementacji protokołu WS-AT i koordynacji WS.  
+ Ten dokument opisuje kompozycję specyfikacji WS-AtomicTransaction z zabezpieczeniami oraz bezpiecznego powiązania, używany do komunikacji między menedżerowie transakcji. Podejście opisane w tym dokumencie został przetestowany z innymi implementacjami WS-AT i WS-koordynacji.  
   
- Ilustracja i tabela przedstawiono cztery rodzaje komunikaty z punktu widzenia zabezpieczeń:  
+ Ilustracja i tabela przedstawiają cztery klasy wiadomości z punktu widzenia zabezpieczeń:  
   
--   Aktywacja wiadomości (CreateCoordinationContext i CreateCoordinationContextResponse).  
+-   Aktywacja wiadomości (CreateCoordinationContext CreateCoordinationContextResponse).  
   
--   Rejestracja wiadomości (rejestr i RegisterResponse)  
+-   Rejestracja wiadomości (Zarejestruj się i RegisterResponse)  
   
--   Komunikaty protokołu (przygotowanie, wycofanie, zatwierdzania, przerwane i tak dalej).  
+-   Komunikaty protokołu (przygotowywanie, wycofywanie, zatwierdzania, Aborted i tak dalej).  
   
--   Komunikatów aplikacji.  
+-   Komunikaty aplikacji.  
   
- Pierwszy klas trzy wiadomości są traktowane jako wiadomości Menedżera transakcji i ich konfiguracja powiązania jest opisany w "Wymianie wiadomości aplikacji" w dalszej części tego tematu. Czwarty klasę wiadomości jest komunikatów aplikacji i jest opisana w sekcji "Komunikat przykłady" w dalszej części tego tematu. W tej sekcji opisano powiązania protokołu używane dla każdego z tych klas przez usługę WCF.  
+ Pierwszej klasy trzy wiadomości są traktowane jako komunikaty Menedżera transakcji, a ich konfiguracja powiązania jest opisana w "Aplikacji wiadomości programu Exchange" w dalszej części tego tematu. Czwarty klasę wiadomości jest komunikatów aplikacji i zostało opisane w sekcji "Przykłady komunikatu" w dalszej części tego tematu. W tej sekcji opisano powiązania protokołu używany dla każdej z tych klas przez usługę WCF.  
   
- Następujące obszary nazw XML i prefiksy skojarzone są używane w tym dokumencie.  
+ Następujące obszary nazw XML i skojarzone prefiksy są używane w tym dokumencie.  
   
 |Prefiks|Wersja|Identyfikator URI Namespace|  
 |------------|-------------|-------------------|  
-|s11||[http://go.microsoft.com/fwlink/?LinkId=96014](http://go.microsoft.com/fwlink/?LinkId=96014)|  
-|wsa|Wstępnie 1.0<br /><br /> 1.0|http://www.w3.org/2004/08/addressing<br /><br /> [http://go.microsoft.com/fwlink/?LinkId=96022](http://go.microsoft.com/fwlink/?LinkId=96022)|  
-|wscoor|1.0<br /><br /> 1.1|[http://go.microsoft.com/fwlink/?LinkId=96078](http://go.microsoft.com/fwlink/?LinkId=96078)<br /><br /> [http://go.microsoft.com/fwlink/?LinkId=96079](http://go.microsoft.com/fwlink/?LinkId=96079)|  
-|WSAT|1.0<br /><br /> 1.1|[http://go.microsoft.com/fwlink/?LinkId=96080](http://go.microsoft.com/fwlink/?LinkId=96080)<br /><br /> [http://go.microsoft.com/fwlink/?LinkId=96081](http://go.microsoft.com/fwlink/?LinkId=96081)|  
-|t|1.3 wstępnie<br /><br /> 1.3|[http://go.microsoft.com/fwlink/?LinkId=96082](http://go.microsoft.com/fwlink/?LinkId=96082)<br /><br /> [http://go.microsoft.com/fwlink/?LinkId=96100](http://go.microsoft.com/fwlink/?LinkId=96100)|  
-|o||[http://go.microsoft.com/fwlink/?LinkId=96101](http://go.microsoft.com/fwlink/?LinkId=96101)|  
-|XSD||[http://go.microsoft.com/fwlink/?LinkId=96102](http://go.microsoft.com/fwlink/?LinkId=96102)|  
+|s11||[https://go.microsoft.com/fwlink/?LinkId=96014](https://go.microsoft.com/fwlink/?LinkId=96014)|  
+|Aplikacja wsa|Wstępnie 1.0<br /><br /> 1.0|http://www.w3.org/2004/08/addressing<br /><br /> [https://go.microsoft.com/fwlink/?LinkId=96022](https://go.microsoft.com/fwlink/?LinkId=96022)|  
+|wscoor|1.0<br /><br /> 1.1|[https://go.microsoft.com/fwlink/?LinkId=96078](https://go.microsoft.com/fwlink/?LinkId=96078)<br /><br /> [https://go.microsoft.com/fwlink/?LinkId=96079](https://go.microsoft.com/fwlink/?LinkId=96079)|  
+|WSAT|1.0<br /><br /> 1.1|[https://go.microsoft.com/fwlink/?LinkId=96080](https://go.microsoft.com/fwlink/?LinkId=96080)<br /><br /> [https://go.microsoft.com/fwlink/?LinkId=96081](https://go.microsoft.com/fwlink/?LinkId=96081)|  
+|t|Pre 1.3<br /><br /> 1.3|[https://go.microsoft.com/fwlink/?LinkId=96082](https://go.microsoft.com/fwlink/?LinkId=96082)<br /><br /> [https://go.microsoft.com/fwlink/?LinkId=96100](https://go.microsoft.com/fwlink/?LinkId=96100)|  
+|o||[https://go.microsoft.com/fwlink/?LinkId=96101](https://go.microsoft.com/fwlink/?LinkId=96101)|  
+|XSD||[https://go.microsoft.com/fwlink/?LinkId=96102](https://go.microsoft.com/fwlink/?LinkId=96102)|  
   
 ## <a name="transaction-manager-bindings"></a>Menedżer transakcji powiązania  
- R1001: Udział w transakcji usługi WS-AT 1.0 menedżerowie transakcji należy użyć protokołu SOAP 1.1 i WS-Addressing 2004/08 dla protokołu WS-AT i wymiany wiadomości WS-koordynacji.  
+ R1001: Menedżerowie transakcji udział w transakcji WS-AT 1.0 należy użyć protokołu SOAP 1.1 i WS-Addressing 2004/08 dla protokołu WS-Atomic Transaction i wymiany wiadomości WS-koordynacji.  
   
- R1002: Udział w transakcji usługi WS-AT 1.1 menedżerowie transakcji należy użyć protokołu SOAP 1.1 i WS-Addressing 2005/08 dla protokołu WS-AT i wymiany wiadomości WS-koordynacji.  
+ R1002: Menedżerowie transakcji udział w transakcji WS-AT 1.1, należy użyć protokołu SOAP 1.1 i WS-Addressing 2005/08, dla protokołu WS-Atomic Transaction i wymiany wiadomości WS-koordynacji.  
   
- Komunikaty aplikacji nie są ograniczone do tych powiązań i opisano później.  
+ Komunikaty aplikacji nie są ograniczone do tych powiązań i są opisane w dalszej części.  
   
-### <a name="transaction-manager-https-binding"></a>Powiązanie HTTPS Menedżera transakcji  
- Powiązanie HTTPS Menedżera transakcji korzysta wyłącznie z zabezpieczeń transportu, aby osiągnąć zabezpieczeń i ustanowienia relacji zaufania między każda para odbiornika nadawcy w drzewie transakcji.  
+### <a name="transaction-manager-https-binding"></a>Menedżer transakcji HTTPS powiązania  
+ Powiązanie HTTPS Menedżera transakcji opiera się wyłącznie na zabezpieczenia transportu do osiągnięcia zabezpieczeń i ustanowienia relacji zaufania między sąsiednimi odbiorcy nadawcy w drzewie transakcji.  
   
-#### <a name="https-transport-configuration"></a>Konfiguracja HTTPS transportu  
- Certyfikaty X.509 są używane do ustalenia tożsamości menedżera transakcji. Wymagane jest uwierzytelnienie klienta i serwera, a klient/serwer autoryzacji pozostaje szczegółów implementacji:  
+#### <a name="https-transport-configuration"></a>Konfiguracja transportu HTTPS  
+ Certyfikaty X.509 są używane do ustalenia tożsamości menedżera transakcji. Wymagane jest uwierzytelnienie klienta/serwera i klienta/serwera autoryzacji zostanie pozostawiony jako szczegół implementacji:  
   
--   R1111: Certyfikatów X.509 przedstawianych przez sieć musi mieć nazwę podmiotu, która jest zgodna z w pełni kwalifikowaną nazwę (FQDN) komputera źródłowego.  
+-   R1111: Certyfikaty X.509 przedstawione przez sieć musi mieć nazwę podmiotu, który pasuje do w pełni kwalifikowana nazwa domeny (FQDN) komputera źródłowego.  
   
--   B1112: DNS musi być funkcjonalności każda para odbiornika nadawcy w systemie kontroli nazwa podmiotu X.509 powiodło się.  
+-   B1112: DNS musi działać każda para odbiorcy nadawcy w systemie kontroli nazwy podmiotu X.509 zakończyło się sukcesem.  
   
-#### <a name="activation-and-registration-binding-configuration"></a>Aktywacja i rejestracja powiązania konfiguracji  
- Usługi WCF wymaga dwukierunkowego powiązania żądania/odpowiedzi z korelacją za pośrednictwem protokołu HTTPS. (Aby uzyskać więcej informacji na temat korelacji i opisy wzorców wymiany wiadomości żądania/odpowiedzi, zobacz WS-Atomic Transaction, sekcja 8).  
+#### <a name="activation-and-registration-binding-configuration"></a>Aktywacja i powiązań konfiguracji rejestracji  
+ Usługi WCF wymaga dwukierunkowego powiązania żądanie/nietypizowana odpowiedź z korelacją za pośrednictwem protokołu HTTPS. (Aby uzyskać więcej informacji na temat korelacji i opisy wzorców żądanie/nietypizowana odpowiedź wiadomości programu exchange, zobacz WS-Atomic Transaction, sekcja 8).  
   
 #### <a name="2pc-protocol-binding-configuration"></a>Konfiguracja powiązania protokołu 2PC  
- Usługi WCF obsługuje komunikaty jednokierunkowe (datagram) za pośrednictwem protokołu HTTPS. Szczegóły implementacji pozostaje korelacji między wiadomości.  
+ Usługi WCF obsługuje wiadomości jednokierunkowe (datagram) przy użyciu protokołu HTTPS. Korelacja między wiadomości zostanie pozostawiony jako szczegółowo opisuje implementacja.  
   
  B1131: Implementacje musi obsługiwać `wsa:ReferenceParameters` zgodnie z opisem w WS-Addressing do osiągnięcia korelacji wiadomości 2PC firmy WCF.  
   
-### <a name="transaction-manager-mixed-security-binding"></a>Menedżer transakcji mieszanym powiązania zabezpieczeń  
- Jest to alternatywny (tryb mieszany) powiązanie zabezpieczenia transportu używa połączeniu z modelem koordynacji WS wystawionego tokenu na potrzeby określania tożsamości. Aktywacji i rejestracji są tylko elementy, które różnią się między dwa powiązania.  
+### <a name="transaction-manager-mixed-security-binding"></a>Menedżer transakcji mieszane powiązanie zabezpieczeń  
+ Jest to alternatywny (tryb mieszany) powiązanie zabezpieczenia transportu używana w połączeniu z modelem usługi WS-koordynacji wystawionego tokenu potrzeby określania tożsamości. Aktywacja i rejestracja są tylko elementy, które różnią się między dwa powiązania.  
   
-#### <a name="https-transport-configuration"></a>Konfiguracja HTTPS transportu  
- Certyfikaty X.509 są używane do ustalenia tożsamości menedżera transakcji. Wymagane jest uwierzytelnienie klienta i serwera, a klient/serwer autoryzacji pozostaje szczegóły implementacji.  
+#### <a name="https-transport-configuration"></a>Konfiguracja transportu HTTPS  
+ Certyfikaty X.509 są używane do ustalenia tożsamości menedżera transakcji. Wymagane jest uwierzytelnienie klienta/serwera i klienta/serwera autoryzacji zostanie pozostawiony jako szczegółowo opisuje implementacja.  
   
-#### <a name="activation-message-binding-configuration"></a>Konfiguracja powiązania komunikat aktywacji  
- Aktywacja komunikaty zwykle nie uczestniczą w współdziałanie ponieważ zwykle występują między aplikacją a jego lokalnego Menedżera transakcji.  
+#### <a name="activation-message-binding-configuration"></a>Konfiguracja powiązania komunikatów aktywacji  
+ Komunikaty o aktywacji zwykle nie uczestniczą w współdziałanie ponieważ występują najczęściej między aplikacją a swój lokalny Menedżer transakcji.  
   
- B1221: WCF używa dwukierunkowego powiązania HTTPS (opisanego w [protokoły obsługi komunikatów](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) dla wiadomości aktywacji. Skorelowane żądanie i odpowiedź przy użyciu protokołu WS-Addressing 2004/08 WS-AT 1.0 i WS-Addressing 2005/08 1.1 WS-AT.  
+ B1221: WCF używa dwukierunkowego powiązania HTTPS (opisanego w [protokoły obsługi komunikatów](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) dla wiadomości aktywacji. Skorelowane żądanie i odpowiedź przy użyciu usługi WS-Addressing 2004/08 WS-AT 1.0 i WS-Addressing 2005/08 WS-AT 1.1.  
   
- Specyfikacja WS-Atomic Transaction, 8 sekcji opisano dalsze szczegóły dotyczące korelacji i wzorce wymiany wiadomości.  
+ Specyfikacja WS-Atomic Transaction, sekcja 8 opisano dalsze szczegółowe informacje dotyczące korelacji i wzorców wymiany komunikatów.  
   
--   R1222: odebrane `CreateCoordinationContext`, należy wygenerować koordynator `SecurityContextToken` z skojarzony klucz tajny `STx`. Token ten jest zwracany wewnątrz `t:IssuedTokens` nagłówka następującej specyfikacji WS-Trust.  
+-   R1222: odebrane `CreateCoordinationContext`, należy wygenerować koordynator `SecurityContextToken` z skojarzony klucz tajny `STx`. Ten token jest zwracany w `t:IssuedTokens` nagłówka następujące specyfikację WS-Trust.  
   
--   R1223: W przypadku aktywacji w ramach istniejącego kontekstu koordynacji `t:IssuedTokens` nagłówek o `SecurityContextToken` skojarzony z istniejącym kontekstu musi przepływać na `CreateCoordinationContext` wiadomości.  
+-   R1223: Jeśli aktywacja odbywa się w ramach istniejącego kontekstu koordynacji, `t:IssuedTokens` nagłówek o `SecurityContextToken` skojarzony z istniejącym kontekście musi przepływać ze `CreateCoordinationContext` wiadomości.  
   
- Nowy `t:IssuedTokens` nagłówka ma być generowany dla dołączania do wychodzącej `wscoor:CreateCoordinationContextResponse` wiadomości.  
+ Nowy `t:IssuedTokens` musi zostać wygenerowany nagłówek do dołączania do wychodzącej `wscoor:CreateCoordinationContextResponse` wiadomości.  
   
-#### <a name="registration-message-binding-configuration"></a>Konfiguracja powiązania komunikatu rejestracji  
- B1231: WCF używa dwukierunkowego powiązania HTTPS (opisany w [protokoły obsługi komunikatów](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)). Skorelowane żądanie i odpowiedź przy użyciu protokołu WS-Addressing 2004/08 WS-AT 1.0 i WS-Addressing 2005/08 1.1 WS-AT.  
+#### <a name="registration-message-binding-configuration"></a>Konfiguracja powiązania komunikat rejestracji  
+ B1231: WCF używa dwukierunkowego powiązania HTTPS (opisanego w [protokoły obsługi komunikatów](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)). Skorelowane żądanie i odpowiedź przy użyciu usługi WS-Addressing 2004/08 WS-AT 1.0 i WS-Addressing 2005/08 WS-AT 1.1.  
   
- WS-AtomicTransaction, 8 sekcji, w tym artykule opisano dodatkowe szczegóły dotyczące korelacji i opisy wzorców wymiany wiadomości.  
+ WS-AtomicTransaction, 8 sekcji, w tym artykule opisano dalsze szczegółowe informacje o korelacji i opisy wzorców wiadomości programu exchange.  
   
- R1232: Wychodzące `wscoor:Register` komunikaty muszą używać `IssuedTokenOverTransport` tryb uwierzytelniania opisanego w [protokołów zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-protocols.md).  
+ R1232: Wychodzące `wscoor:Register` wiadomości należy użyć `IssuedTokenOverTransport` tryb uwierzytelniania opisanego w [protokołów zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-protocols.md).  
   
- `wsse:Timestamp` Elementu muszą być podpisane przy użyciu `SecurityContextToken``STx` wystawione. Podpis jest potwierdzenie posiadania token skojarzony z określonej transakcji i jest używany do uwierzytelniania uczestnika rejestracji w transakcji. RegistrationResponse wiadomości jest ponownie przy użyciu protokołu HTTPS.  
+ `wsse:Timestamp` Element musi być podpisany przy użyciu `SecurityContextToken``STx` wydane. Ta sygnatura jest dowód przesyłany tokenu skojarzone z danej transakcji i jest używany do uwierzytelniania uczestnik rejestrowanie w transakcji. RegistrationResponse wiadomości jest ponownie przy użyciu protokołu HTTPS.  
   
 #### <a name="2pc-protocol-binding-configuration"></a>Konfiguracja powiązania protokołu 2PC  
- Usługi WCF obsługuje komunikaty jednokierunkowe (datagram) za pośrednictwem protokołu HTTPS. Szczegóły implementacji pozostaje korelacji między wiadomości.  
+ Usługi WCF obsługuje wiadomości jednokierunkowe (datagram) przy użyciu protokołu HTTPS. Korelacja między wiadomości zostanie pozostawiony jako szczegółowo opisuje implementacja.  
   
  B1241: Implementacje musi obsługiwać `wsa:ReferenceParameters` zgodnie z opisem w WS-Addressing do osiągnięcia korelacji wiadomości 2PC firmy WCF.  
   
-## <a name="application-message-exchange"></a>Komunikat aplikacji programu Exchange  
- Aplikacje mogą użyć dowolnego określonego powiązania dla komunikatów aplikacji do aplikacji, tak długo, jak powiązania spełnia następujące wymagania dotyczące zabezpieczeń:  
+## <a name="application-message-exchange"></a>Wymiana komunikatów w aplikacji  
+ Aplikacje są bezpłatne korzystanie z dowolnego określonego powiązania dla wiadomości w aplikacji do aplikacji, tak długo, jak wiązanie spełnia następujące wymagania dotyczące zabezpieczeń:  
   
--   R2001: Komunikatów aplikacji do aplikacji musi przepływać `t:IssuedTokens` nagłówka wraz z programem `CoordinationContext` w nagłówku wiadomości.  
+-   R2001: Komunikatów aplikacji do aplikacji musi przepływać `t:IssuedTokens` nagłówka wraz z `CoordinationContext` w nagłówku komunikatu.  
   
--   R2002: Integralności i poufności `t:IssuedToken` należy podać.  
+-   R2002: Integralności i poufności `t:IssuedToken` musi zostać podana.  
   
- `CoordinationContext` Nagłówek zawiera `wscoor:Identifier`. Podczas definicji `xsd:AnyURI` zezwala na korzystanie z względne i bezwzględny identyfikator URI usługi WCF obsługuje tylko `wscoor:Identifiers`, które są bezwzględny identyfikator URI.  
+ `CoordinationContext` Nagłówek zawiera `wscoor:Identifier`. Podczas gdy definicja `xsd:AnyURI` umożliwia korzystanie z identyfikatorów URI względne i bezwzględne WCF obsługuje tylko `wscoor:Identifiers`, które są bezwzględne identyfikatorów URI.  
   
- B2003: Jeśli `wscoor:Identifier` z `wscoor:CoordinationContext` jest względnym identyfikatorem URI, błędów, które zostaną zwrócone z transakcyjnych usług WCF.  
+ B2003: Jeśli `wscoor:Identifier` z `wscoor:CoordinationContext` jest względny identyfikator URI, błędy, które zostaną zwrócone z transakcji usługi WCF.  
   
-## <a name="message-examples"></a>Przykłady wiadomości  
+## <a name="message-examples"></a>Przykłady komunikatów  
   
-### <a name="createcoordinationcontext-requestresponse-messages"></a>Komunikaty CreateCoordinationContext żądania/odpowiedzi  
- Następujące komunikaty wykonaj wzorzec żądań i odpowiedzi.  
+### <a name="createcoordinationcontext-requestresponse-messages"></a>Komunikatów żądań/odpowiedzi CreateCoordinationContext  
+ Następujące komunikaty wykonaj wzorzec żądań/odpowiedzi.  
   
 #### <a name="createcoordinationcontext-with-wscoor-10"></a>CreateCoordinationContext z WSCoor 1.0  
   
@@ -275,7 +275,7 @@ Windows Communication Foundation (WCF) implementuje usługi WS-Atomic Transactio
 </s:Envelope>  
 ```  
   
-#### <a name="createcoordinationcontextresponse-with-trust-13-and-wscoor-11"></a>CreateCoordinationContextResponse zaufania 1.3 i WSCoor 1.1  
+#### <a name="createcoordinationcontextresponse-with-trust-13-and-wscoor-11"></a>CreateCoordinationContextResponse Trust 1.3 i WSCoor 1.1  
   
 ```xml  
 <s:Envelope>  
@@ -352,9 +352,9 @@ xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
 ```  
   
 ### <a name="registration-messages"></a>Rejestracja wiadomości  
- Następujące komunikaty są komunikaty rejestracji.  
+ Następujące komunikaty są komunikatów rejestracji.  
   
-#### <a name="register-with-wscoor-10"></a>Zarejestruj WSCoor 1.0  
+#### <a name="register-with-wscoor-10"></a>Zarejestrowanie WSCoor 1.0  
   
 ```xml  
 <s:Envelope>  
@@ -415,7 +415,7 @@ xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
 </s:Envelope>  
 ```  
   
-#### <a name="register-with-wscoor-11"></a>Zarejestruj WSCoor 1.1  
+#### <a name="register-with-wscoor-11"></a>Zarejestrowanie WSCoor 1.1  
   
 ```xml  
 <s:Envelope>  
@@ -474,7 +474,7 @@ Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
 </s:Envelope>  
 ```  
   
-#### <a name="register-response-with-wscoor-10"></a>Zarejestruj odpowiedzi WSCoor 1.0  
+#### <a name="register-response-with-wscoor-10"></a>Zarejestrowanie odpowiedzi WSCoor 1.0  
   
 ```xml  
 <s:Envelope>  
@@ -510,7 +510,7 @@ Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
 </s:Envelope>  
 ```  
   
-#### <a name="register-response-with-wscoor-11"></a>Zarejestruj odpowiedzi WSCoor 1.1  
+#### <a name="register-response-with-wscoor-11"></a>Zarejestrowanie odpowiedzi WSCoor 1.1  
   
 ```xml  
 <s:Envelope>  
@@ -541,8 +541,8 @@ xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-u
 </s:Envelope>  
 ```  
   
-### <a name="two-phase-commit-protocol-messages"></a>Dwa komunikaty protokołu zatwierdzania fazy  
- Następujący komunikat odnosi się do protokołu dwufazowego (2PC).  
+### <a name="two-phase-commit-protocol-messages"></a>Dwóch faza zatwierdzania protokołu komunikatów  
+ Następujący komunikat o odnosi się do Protokół dwufazowego (2PC).  
   
 #### <a name="commit-with-wsat-10"></a>Zatwierdź z WSAT 1.0  
   
@@ -590,10 +590,10 @@ xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-u
 </s:Envelope>  
 ```  
   
-### <a name="application-messages"></a>Komunikatów aplikacji  
+### <a name="application-messages"></a>Komunikaty aplikacji  
  Następujące komunikaty są komunikatów aplikacji.  
   
-#### <a name="application-message-request"></a>Komunikat żądania aplikacji  
+#### <a name="application-message-request"></a>Żądanie komunikatu aplikacji  
   
 ```xml  
 <s:Envelope>  

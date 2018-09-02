@@ -2,75 +2,75 @@
 title: Tworzenie klasy GamePiece
 ms.date: 03/30/2017
 ms.assetid: 37a27a86-ac1c-47be-b477-cb4b819459d3
-ms.openlocfilehash: 0939da6eca579bd030bfe18b24d8364fbcc4fc82
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: eb73918cc03e2621d39a98158d40a839dbc69d80
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744515"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395398"
 ---
 # <a name="creating-the-gamepiece-class"></a>Tworzenie klasy GamePiece
-**GamePiece** klasa hermetyzuje wszystkie funkcje, które są wymagane do załadowania obrazu gier element XNA firmy Microsoft, śledzenie stanu myszy w odniesieniu do gier fragment, przechwytywanie myszy, podaj manipulacji i bezwładności przetwarzania, a zapewnienia możliwości podskakujące, gdy element gier osiągnie limitu portu widoku.  
+**GamePiece** klasa hermetyzuje wszystkie funkcje, które są wymagane do załadowania obrazu w element gry XNA firmy Microsoft, śledzić stan myszy w odniesieniu do gier fragment, przechwytywanie myszy, podaj manipulacji i bezwładności przetwarzania, i oferowanie możliwości odbijania, gdy element gier osiągnie limity porcie widoku.  
   
 ## <a name="private-members"></a>Prywatne elementy członkowskie  
- W górnej części **GamePiece** klasy, kilka prywatne elementy członkowskie są zadeklarowane.  
+ W górnej części **GamePiece** klasy są deklarowane w wielu prywatnych elementów członkowskich.  
   
  [!code-csharp[ManipulationXNA#_GamePiece_PrivateMembers](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_privatemembers)]  
   
 ## <a name="public-properties"></a>Właściwości publiczne  
- Trzy następujące prywatne elementy członkowskie są udostępniane za pośrednictwem właściwości publiczne. **Skali** i **PieceColor** właściwości umożliwić aplikacji określają odpowiednio skali i kolor element. **Granice** właściwości jest narażony na Włącz jeden element na potrzeby renderowania, takich jak po jednej powinien nakładki innego granice innego. Poniższy kod przedstawia deklaracji właściwości publiczne.  
+ Trzy następujące prywatne składowe są udostępniane za pośrednictwem właściwości publiczne. **Skalowania** i **PieceColor** właściwości umożliwiają aplikacji określić skalę i kolor fragment, odpowiednio. **Granice** właściwość jest uwidaczniana umożliwiające jeden fragment na potrzeby renderowania, takie jak kiedy jeden fragment powinien nakładki innego granice innego. Poniższy kod przedstawia deklarację właściwości publiczne.  
   
  [!code-csharp[ManipulationXNA#_GamePiece_PublicProperties](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_publicproperties)]  
   
 ## <a name="class-constructor"></a>Konstruktor klasy  
  Konstruktor **GamePiece** klasy przyjmuje następujące parametry:  
   
--   A [SpriteBatch](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.aspx) typu. Odwołania przekazywane w tym miejscu jest przypisany do prywatnego elementu członkowskiego `spriteBatch`i jest używana do dostępu [SpriteBatch.Draw](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.draw.aspx) metodą podczas gry element renderowany. Ponadto [GraphicsDevice](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.graphicsdevice.aspx) właściwość jest używana do tworzenia [tekstury](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.texture.aspx) obiekt skojarzony z wystąpieniem gier oraz w celu uzyskania rozmiar portu widoku w celu wykrycia, gdy element gier napotka granice okna tak, aby element można Odbijanie.  
+-   A [SpriteBatch](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.aspx) typu. Odwołania przekazywane w tym miejscu jest przypisany do prywatnego członka `spriteBatch`i jest używana do dostępu [SpriteBatch.Draw](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.draw.aspx) metody, gdy gra element renderowany. Ponadto [GraphicsDevice](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.graphicsdevice.aspx) właściwość jest używana do tworzenia [tekstury](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.texture.aspx) obiekt skojarzony z fragmentem gier oraz w celu uzyskania rozmiar porcie widoku w celu wykrycia, gdy napotka element gier granica okna tak, że fragment można Odbijanie.  
   
--   Ciąg określający nazwę pliku obrazu do użycia do nich gier.  
+-   Ciąg, który określa nazwę pliku obrazu do użycia dla gier fragmentu.  
   
- Tworzy konstruktora <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D> obiektu i <xref:System.Windows.Input.Manipulations.InertiaProcessor2D> obiektu i ustanawia programy obsługi zdarzeń dla zdarzenia ich.  
+ Tworzy konstruktora <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D> obiektu i <xref:System.Windows.Input.Manipulations.InertiaProcessor2D> obiektu i ustanawia procedury obsługi zdarzeń dla ich zdarzeń.  
   
  Poniższy kod przedstawia Konstruktor **GamePiece** klasy.  
   
  [!code-csharp[ManipulationXNA#_GamePiece_Constructor](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_constructor)]  
   
 ## <a name="capturing-mouse-input"></a>Interakcja z myszą  
- **UpdateFromMouse** metoda jest odpowiedzialna za wykrywanie po naciśnięciu przycisku myszy, gdy wskaźnik myszy znajduje się w granicach element gier i wykrywania, kiedy zwolniono przycisk myszy.  
+ **UpdateFromMouse** metoda jest odpowiedzialna za wykrywanie po naciśnięciu przycisku myszy, gdy wskaźnik myszy znajduje się w granicach fragment gier i wykrywania po zwolnieniu przycisku myszy.  
   
- Po naciśnięciu lewego przycisku myszy (gdy wskaźnik myszy znajduje się wewnątrz granic element), ta metoda ustawia flagę wskazują, że ten element gier zostały przechwycone myszy i rozpoczyna przetwarzanie manipulowanie.  
+ Po naciśnięciu lewego przycisku myszy (gdy wskaźnik myszy znajduje się wewnątrz granic fragment), ta metoda Ustawia flagi, aby wskazać, że ten element gry został przechwycony myszy i rozpoczyna przetwarzanie manipulowania.  
   
- Manipulowanie przetwarzania jest uruchomiona, tworząc tablicę <xref:System.Windows.Input.Manipulations.Manipulator2D> obiektów i przekazywanie ich do <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D> obiektu. Powoduje to, że procesor manipulowania do oceny manipulatory (w tym przypadku manipulatora pojedynczego) i wywoływanie zdarzeń manipulowanie.  
+ Manipulowanie przetwarzania jest uruchomiona, tworząc tablicę <xref:System.Windows.Input.Manipulations.Manipulator2D> obiektów i przekazywania ich do <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D> obiektu. To powoduje, że procesor manipulowania do oceny manipulatory (w tym przypadku manipulator pojedynczego), a także podnieść do manipulowania zdarzenia.  
   
- Ponadto punkt, w którym występuje przeciąganie zostało zapisane. Służy to później, podczas <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> zdarzenie, aby dopasować tłumaczenia zmian wartości tak, aby element gier obraca się w wierszu za punkt przeciągania.  
+ Ponadto punktu, w którym występuje przeciągania zostanie zapisany. Jest on używany później podczas <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> zdarzenie, aby dopasować tłumaczenia zmian wartości tak, aby element gier obraca się w wierszu za przeciągnij punkt.  
   
- Ponadto ta metoda zwraca stan przechwytywanie myszy. Dzięki temu [GamePieceCollection](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md) obiektu do zarządzania przechwytywania, gdy istnieje wiele figur.  
+ Ponadto ta metoda zwraca stan przechwytywanie myszy. Dzięki temu [GamePieceCollection](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md) obiektów do zarządzania przechwytywania w przypadku wielu figur.  
   
  Poniższy kod przedstawia **UpdateFromMouse** metody.  
   
  [!code-csharp[ManipulationXNA#_GamePiece_UpdateFromMouse](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_updatefrommouse)]  
   
 ## <a name="processing-manipulations"></a>Operacje przetwarzania  
- Po rozpoczęciu manipulowania <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started> zdarzenia. Zatrzymuje program obsługi dla tego zdarzenia bezwładności przetwarzania, jeśli występuje i ustawia *processInertia* flaga `false`.  
+ Po rozpoczęciu manipulowania <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started> zdarzenie jest wywoływane. Program obsługi dla tego zdarzenia zatrzymuje bezwładności przetwarzanie danych, jeśli występuje i ustawia *processInertia* flaga `false`.  
   
  [!code-csharp[ManipulationXNA#_GamePiece_OnManipulationStarted](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_onmanipulationstarted)]  
   
- Jako wartości skojarzone z zmiany manipulowania <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> zdarzenia. Program obsługi dla tego zdarzenia używa wartości delta zdarzeń przekazanych argumentów wprowadzać zmiany do wartości pozycji i obrotu gier fragmentu.  
+ Jako wartości skojarzone z zmiany manipulowania <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> zdarzenie jest wywoływane. Program obsługi dla tego zdarzenia używa wartości różnicy w zdarzeniu przekazywana argumentom do wprowadzania zmian w pozycji i obrót wartości element gier.  
   
  [!code-csharp[ManipulationXNA#_GamePiece_OnManipulationDelta](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_onmanipulationdelta)]  
   
- Po usunięciu wszystkich manipulatory (w tym przypadku manipulatora pojedynczego), które są skojarzone z manipulowania procesora manipulowania zgłasza <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Completed> zdarzeń. Program obsługi dla tego zdarzenia rozpoczyna się bezwładności przetwarzania ustawiając początkowej prędkości procesora bezwładności zgłaszanych przez argumenty zdarzenia i ustawia *processInertia* flaga `true`.  
+ Po usunięciu wszystkich manipulatory (w tym przypadku manipulator pojedynczego), które są skojarzone z manipulowania procesora manipulowania zgłasza <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Completed> zdarzeń. Program obsługi dla tego zdarzenia rozpoczyna się bezwładności przetwarzania przez ustawienie początkowego ilościach procesora bezwładności zgłaszanych przez argumenty zdarzenia i ustawia *processInertia* flaga `true`.  
   
  [!code-csharp[ManipulationXNA#_GamePiece_OnManipulationCompleted](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_onmanipulationcompleted)]  
   
 ## <a name="processing-inertia"></a>Przetwarzanie bezwładności  
- Jak przetwarzanie bezwładności extrapolates nowe wartości prędkości kątowego i liniowych, współrzędne (tłumaczenie) i obracanie <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> zdarzenia. Program obsługi dla tego zdarzenia używa wartości delta zdarzeń przekazanych argumentów można zmodyfikować pozycji i obrotu element gier.  
+ Jak przetwarzanie bezwładności extrapolates nowe wartości dla platformy angular liniowego i liniowa w ilościach, współrzędne (tłumaczenia) i obrót, <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> zdarzenie jest wywoływane. Program obsługi dla tego zdarzenia używa wartości różnicy w zdarzeniu przekazywana argumentom do modyfikowania położenie i obrót fragment gier.  
   
- Jeśli nowe współrzędne spowodować element gier, przenoszenie poza granice portu widoku, prędkość przetwarzania bezwładności została odwrócona. Powoduje to gier element Odbijanie poza granic portu widoku, który napotkał go.  
+ Jeśli nowe współrzędne spowodują pojawienie się element gier, przenoszenie poza granice portu widoku, szybkość przetwarzania bezwładności została odwrócona. Powoduje to gier fragment do rozbijać granic portu widoku, który napotkał.  
   
- Nie można zmienić właściwości <xref:System.Windows.Input.Manipulations.InertiaProcessor2D> obiekt uruchomionej ekstrapolacji. W związku z tym podczas wycofywania prędkość X i Y, program obsługi zdarzeń najpierw zatrzymuje bezwładności przez wywołanie metody <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Complete%2A> metody. Następnie przypisuje nowe wartości początkowej prędkość jako bieżące wartości prędkość (dostosowana do zachowania Gąbka) i ustawia *processInertia* flaga `true`.  
+ Nie można zmienić właściwości <xref:System.Windows.Input.Manipulations.InertiaProcessor2D> obiektu, gdy jest on uruchomiony ekstrapolację. W związku z tym, podczas wycofywania prędkości X lub Y programu obsługi zdarzeń najpierw zatrzymuje bezwładności przez wywołanie metody <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Complete%2A> metody. Następnie przypisuje nowe wartości prędkości początkowej jako bieżące wartości prędkości (dostosowana do zachowania sponge) i ustawia *processInertia* flaga `true`.  
   
- Poniższy kod przedstawia programu obsługi zdarzeń dla <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> zdarzeń.  
+ W poniższym kodzie pokazano program obsługi zdarzeń dla <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> zdarzeń.  
   
  [!code-csharp[ManipulationXNA#_GamePiece_OnInertiaDelta](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_oninertiadelta)]  
   
@@ -78,22 +78,22 @@ ms.locfileid: "32744515"
   
  [!code-csharp[ManipulationXNA#_GamePiece_OnInertiaCompleted](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_oninertiacompleted)]  
   
- Brak logiki przedstawione wykonanej do tej pory faktycznie powoduje, że ekstrapolacji bezwładności występuje. Jest to realizowane w **ProcessInertia** metody. Ta metoda, która jest wywoływana wielokrotnie z pętli gier aktualizacji ( [Game.Update](http://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) — metoda) sprawdza, czy *processInertia* flaga jest ustawiona na `true`, a jeśli tak jest, wywołuje <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Process%2A> Metoda. Wywołanie tej metody ekstrapolacji powoduje, że występuje i zgłasza <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> zdarzeń.  
+ Brak logiki prezentowane do tej pory faktycznie powoduje, że ekstrapolacji bezwładności wystąpić. Jest to realizowane w **ProcessInertia** metody. Ta metoda, która jest wywoływana wielokrotnie z pętli gry aktualizacji ( [Game.Update](https://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) metoda) sprawdza, czy *processInertia* flaga jest ustawiona na `true`i jeśli tak jest, wywołuje metodę <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Process%2A> Metoda. Wywołanie tej metody ekstrapolacji powoduje, że występuje i zgłasza <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> zdarzeń.  
   
  [!code-csharp[ManipulationXNA#_GamePiece_ProcessInertia](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_processinertia)]  
   
- Element gier nie są odtwarzane faktycznie dopóki nosi nazwę jednego z przeciążeń metody rysowania. Pierwszy przeciążenie tej metody jest wywoływany cyklicznie pętlę gier rysowania ( [Game.Draw](http://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx) metody). Powoduje to gier element z bieżącego położenia, obracanie i skale.  
+ Gry element nie jest faktycznie renderowane aż nosi nazwę jednego z przeciążeń metody rysowania. Pierwsze przeciążenie tej metody jest wywoływany wielokrotnie z pętli remis ( [Game.Draw](https://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx) metody). Renderuje to gier element z bieżącego położenia, obrotu i skalowania czynników.  
   
  [!code-csharp[ManipulationXNA#_GamePiece_Draw](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_draw)]  
   
 ## <a name="additional-properties"></a>Dodatkowe właściwości  
  Trzy właściwości prywatne są używane przez **GamePiece** klasy.  
   
-1.  **Sygnatura czasowa** — pobiera wartość sygnatury czasowej do użycia przez procesory manipulacji i bezwładności.  
+1.  **Sygnatura czasowa** — pobiera wartość znacznika czasu, który będzie używany przez procesory manipulacji i bezwładności.  
   
-2.  **X** — pobiera lub ustawia współrzędną X element gier. Podczas ustawiania, można dostosować granic używane do testowania trafień i lokalizację pivot procesora manipulowanie.  
+2.  **X** — pobiera lub ustawia współrzędną X fragment gier. Podczas ustawiania, dopasowuje granic używane do testowania trafień i lokalizację pivot procesora manipulacji.  
   
-3.  **Y** — pobiera lub ustawia współrzędną Y element gier. Podczas ustawiania, można dostosować granic używane do testowania trafień i lokalizację pivot procesora manipulowanie.  
+3.  **Y** — pobiera lub ustawia współrzędną Y fragment gier. Podczas ustawiania, dopasowuje granic używane do testowania trafień i lokalizację pivot procesora manipulacji.  
   
  [!code-csharp[ManipulationXNA#_GamePiece_PrivateProperties](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_privateproperties)]  
   

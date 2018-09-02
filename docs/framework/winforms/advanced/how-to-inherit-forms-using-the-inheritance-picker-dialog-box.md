@@ -6,55 +6,55 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 49c24b12616834ecc532a5568c0971e3dd75cfd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5bcd29531858f9cf014042db7ee447cecfdd89b1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527764"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399793"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Porady: dziedziczenie formularzy korzystających z okna dialogowego selektora dziedziczenia
-Najprostszym sposobem dziedziczą formularza lub innego obiektu jest użycie **selektora dziedziczenia** okno dialogowe. Dzięki temu można korzystać z interfejsów kodu lub użytkownika (UI), zostały już utworzone w innych rozwiązań.  
+Najprostszym sposobem dziedziczą formularza lub inny obiekt jest użycie **selektor dziedziczenia** okno dialogowe. Dzięki niemu można korzystać z zalet interfejsów kodu lub użytkownika (UI), utworzono już w innych rozwiązaniach.  
   
 > [!NOTE]
->  Aby dziedziczyć z formularza z **selektora dziedziczenia** okno dialogowe projekt zawierający formularz musi są wbudowane w pliku wykonywalnego lub DLL. Aby utworzyć projekt, wybierz **Kompiluj rozwiązanie** z **kompilacji** menu.  
+>  Aby dziedziczyć z formularza z **selektor dziedziczenia** okno dialogowe do projektu zawierającego ten formularz musi zostały skompilowane do pliku wykonywalnego lub biblioteki DLL. Aby skompilować projekt, wybierz opcję **Kompiluj rozwiązanie** z **kompilacji** menu.  
 >   
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-### <a name="to-create-a-windows-form-inherited-from-an-existing-form-by-using-the-inheritance-picker"></a>Do tworzenia formularzy systemu Windows dziedziczone z istniejącego formularza za pomocą selektora dziedziczenia  
+### <a name="to-create-a-windows-form-inherited-from-an-existing-form-by-using-the-inheritance-picker"></a>Aby utworzyć formularz Windows dziedziczone z istniejącego formularza za pomocą selektora dziedziczenia  
   
-1.  Z **projektu** menu, wybierz **dodać formularza systemu Windows**.  
+1.  Z **projektu** menu, wybierz **Dodaj formularz Windows**.  
   
      **Dodaj nowy element** zostanie otwarte okno dialogowe.  
   
-2.  Wybierz **dziedziczone formularza** szablonu i nazywa je w **nazwa** pole. Kliknij przycisk **Dodaj** przycisk, aby kontynuować.  
+2.  Wybierz **dziedziczone formularza** szablonu i nadaj mu w **nazwa** pole. Kliknij przycisk **Dodaj** przycisk, aby kontynuować.  
   
-     **Selektora dziedziczenia** zostanie otwarte okno dialogowe. Jeśli bieżący projekt zawiera formularze, zostaną one wyświetlone w **selektora dziedziczenia** okno dialogowe.  
+     **Selektor dziedziczenia** zostanie otwarte okno dialogowe. Jeśli bieżący projekt zawiera już formularzy, zostaną one wyświetlone w **selektor dziedziczenia** okno dialogowe.  
   
 3.  Dziedziczenie z formularza w innym zestawie, kliknij przycisk **Przeglądaj** przycisku.  
   
-4.  W ramach **wybierz plik, który zawiera składnik do dziedziczenia** okno dialogowe pola, przejdź do projektu zawierającego formularza lub chcesz modułu.  
+4.  W ramach **wybierz plik, który zawiera składnik do dziedziczenia** okno dialogowe, przejdź do projektu zawierającego formularz lub moduł wygodną pracę.  
   
-5.  Kliknij nazwę pliku .exe lub dll, aby go zaznaczyć, a następnie kliknij przycisk **Otwórz** przycisku.  
+5.  Kliknij nazwę pliku .exe lub .dll, aby go zaznaczyć, a następnie kliknij przycisk **Otwórz** przycisku.  
   
-     Nastąpi powrót do **selektora dziedziczenia** okno dialogowe, gdy składnik zostanie wyświetlony, wraz z projektu, w którym znajduje się.  
+     Nastąpi powrót do **selektor dziedziczenia** okno dialogowe, w którym składnik znajduje się teraz, wraz z projektu, w którym znajduje się.  
   
 6.  Wybierz składnik.  
   
-     W **Eksploratora rozwiązań**, składnik zostanie dodany do projektu. Jeśli ma ona interfejsu użytkownika, kontrolek, które są częścią dziedziczone formularza będą oznaczone znakiem symbolu (![VisualBasicInheritanceSymbol — zrzut ekranu](../../../../docs/framework/winforms/advanced/media/vbinheritanceglyph.gif "vbInheritanceGlyph")), i po wybraniu ma obramowanie wskazujący poziom zabezpieczeń, między formantem w formularzu podklasy. W poniższej tabeli wymieniono zachowania, które odpowiadają różnych poziomów ochrony.  
+     W **Eksploratora rozwiązań**, składnik zostanie dodany do projektu. Ma interfejs użytkownika, kontrolek, które są częścią odziedziczony formularz będą oznaczone znakiem glif (![VisualBasicInheritanceSymbol — zrzut ekranu](../../../../docs/framework/winforms/advanced/media/vbinheritanceglyph.gif "vbInheritanceGlyph")), i po wybraniu wskazujący obramowania poziom zabezpieczeń, które kontrolkę w formularzu podklasy. W poniższej tabeli wymieniono zachowań, które odnoszą się do różnych poziomów ochrony.  
   
-    |Poziom kontroli zabezpieczeń|Interakcja dostępne za pośrednictwem projektanta i edytora kodu z formularzem dziedziczone|  
+    |Poziom kontroli zabezpieczeń|Dostępne interakcji za pomocą projektanta i edytora kodu za pomocą formularza dziedziczone|  
     |-------------------------------|--------------------------------------------------------------------------------|  
-    |Public|Standardowa obramowanie z uchwytów: formant może o rozmiarze i przenieść. Kontrolka jest możliwy wewnętrznie przez klasę, która deklaruje on i zewnętrznie innych klas.|  
-    |Protected|Standardowa obramowanie z uchwytów: formant może o rozmiarze i przenieść. Możliwy jest wewnętrznie przez klasę, która deklaruje on i każdej klasy, która dziedziczy z klasy nadrzędnej, ale nie są dostępne dla klasy zewnętrznych.|  
-    |Chronionych wewnętrznych (chronionych Friend w języku Visual Basic)|Standardowa obramowanie z uchwytów: formant może o rozmiarze i przenieść. Możliwy jest wewnętrznie przez klasę, która deklaruje on, każda klasa, która dziedziczy z klasy nadrzędnej oraz o innych elementach członkowskich zestawu, który go zawiera.|  
-    |Wewnętrzny (Friend w języku Visual Basic)|Standardowa obramowanie z dojść zmiany rozmiaru, pokazywane w formularzu właściwości widoczne w **właściwości** okna. Jednak wszystkie aspekty formantu zostanie uwzględniony tylko do odczytu. Nie można przenieść lub rozmiar formantu ani zmienić jego właściwości. Jeśli formant jest kontenerem dla innych formantów, takich jak pole grupy, nie można dodać nowe formanty i nie można usunąć istniejących formantów, nawet jeśli te rozwiązania, zostały publicznego. Formant jest dostępny tylko w innych elementach członkowskich zestawu, który go zawiera.|  
-    |Private|Standardowa obramowanie z dojść zmiany rozmiaru, pokazywane w formularzu właściwości widoczne w **właściwości** okna. Jednak wszystkie aspekty formantu zostanie uwzględniony tylko do odczytu. Nie można przenieść lub rozmiar formantu ani zmienić jego właściwości. Jeśli formant jest kontenerem dla innych formantów, takich jak pole grupy, nie można dodać nowe formanty i nie można usunąć istniejących formantów, nawet jeśli te rozwiązania, zostały publicznego. Kontrolka jest dostępny tylko przez klasę, która deklaruje go.|  
+    |Public|Standardowa obramowanie z uchwytami zmiany rozmiaru: może być o rozmiarze i przenieść kontroli. Formant może zostać oceniony wewnętrznie przez klasę, która deklaruje ją i zewnętrznie innych klas.|  
+    |Protected|Standardowa obramowanie z uchwytami zmiany rozmiaru: może być o rozmiarze i przenieść kontroli. Możliwy wewnętrznie przez klasę, która deklaruje ją i każdej klasy, która dziedziczy z klasy nadrzędnej, ale nie są dostępne przez zewnętrzne klasy.|  
+    |Chronionych wewnętrznych (chronionych Friend w języku Visual Basic)|Standardowa obramowanie z uchwytami zmiany rozmiaru: może być o rozmiarze i przenieść kontroli. Może zostać oceniony wewnętrznie przez klasę, która deklaruje ją, dowolnej klasy dziedziczącej z klasy nadrzędnej i inni członkowie zestawu, który go zawiera.|  
+    |Wewnętrzny (Friend w języku Visual Basic)|Standardowa obramowanie z nie uchwyty zmiany rozmiaru, wyświetlane w formularzu właściwości widocznych w **właściwości** okna. Jednak wszystkie aspekty kontrolki będą uznawane za tylko do odczytu. Nie można przenieść lub rozmiar kontrolki lub zmienić jego właściwości. Jeśli kontrolka jest kontenerem inne formanty, takie jak pola grupy nie można dodać nowych kontrolek i nie można usunąć istniejące kontrolki, nawet jeśli te kontrolki były publiczne. Formant może zostać oceniony jedynie przez innych członków zestawu, który go zawiera.|  
+    |Private|Standardowa obramowanie z nie uchwyty zmiany rozmiaru, wyświetlane w formularzu właściwości widocznych w **właściwości** okna. Jednak wszystkie aspekty kontrolki będą uznawane za tylko do odczytu. Nie można przenieść lub rozmiar kontrolki lub zmienić jego właściwości. Jeśli kontrolka jest kontenerem inne formanty, takie jak pola grupy nie można dodać nowych kontrolek i nie można usunąć istniejące kontrolki, nawet jeśli te kontrolki były publiczne. Formant może zostać oceniony jedynie przez klasę, która deklaruje ją.|  
   
      Aby uzyskać informacje o tym, jak zmienić wygląd formularza podstawowego, zobacz [efekty modyfikowania wyglądu formularza podstawowego](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md).  
   
     > [!NOTE]
-    >  Połączenie dziedziczone formanty i składniki ze standardowych kontrolek i składników w formularzach systemu Windows, mogą wystąpić powoduje konflikt z kolejność z. Problem można rozwiązać, zmieniając kolejność, które jest realizowane przez kliknięcie w **Format** menu i wskazujący **kolejności**, a następnie klikając pozycję **Przesuń na wierzch** lub  **Wyślij do tyłu**. Aby uzyskać więcej informacji o porządek formantów, zobacz [porady: warstwa obiektów na formularzach systemu Windows](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).  
+    >  Łącząc dziedziczone kontrolek i składników za pomocą standardowych kontrolek i składników na formularzach Windows Forms, może wystąpić powoduje konflikt z kolejności z. Problem można rozwiązać, zmieniając porządku osi z, które jest realizowane przez kliknięcie w **Format** menu, wskazać polecenie **kolejności**, a następnie klikając polecenie **Przesuń na wierzch** lub  **Przesuń na spód**. Aby uzyskać więcej informacji na temat kolejności z formantów, zobacz [jak: warstwy obiektów na formularzach Windows Forms](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Inherits, instrukcja](~/docs/visual-basic/language-reference/statements/inherits-statement.md)  

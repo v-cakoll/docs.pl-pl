@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 572afc5eb9ec3cf52199e5ad74406c876485461c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d60e1e503cd48b9b9e2ed91a6bfea000aeeea2af
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434093"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399219"
 ---
 # <a name="iclrstrongnamestrongnamekeyinstall-method"></a>ICLRStrongName::StrongNameKeyInstall — Metoda
-Importuje pary kluczy publicznych/prywatnych do kontenera.  
+Importuje pary kluczy publiczny/prywatny w kontenerze.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,7 +39,7 @@ HRESULT StrongNameKeyInstall (
   
 #### <a name="parameters"></a>Parametry  
  `wszKeyContainer`  
- [in] Nazwa kontenera kluczy. `wszKeyContainer` musi być niepustym ciągiem.  
+ [in] Nazwa kontenera kluczy. `wszKeyContainer` musi być ciągiem niepustym.  
   
  `pbKeyBlob`  
  [in] Binarny pary kluczy.  
@@ -48,17 +48,17 @@ HRESULT StrongNameKeyInstall (
  [in] Rozmiar w bajtach z `pbKeyBlob`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `S_OK` Jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość HRESULT, która wskazuje niepowodzenie (zobacz [wspólne wartości HRESULT](http://go.microsoft.com/fwlink/?LinkId=213878) lista).  
+ `S_OK` Jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT, która wskazuje błąd (zobacz [typowe wartości HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) dla listy).  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj [ICLRStrongName::StrongNameKeyDelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md) metody można usunąć kontenera klucza.  
+ Użyj [iclrstrongname::strongnamekeydelete —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md) metodę, aby usunąć kontener kluczy.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MetaHost.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

@@ -1,45 +1,45 @@
 ---
-title: Obsługa zdarzeń element DataAdapter
+title: Obsługa zdarzeń elementu DataAdapter
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-ms.openlocfilehash: f2b07b8d42069fa98ba51dea75f9695e7adce0b0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7013f855fb54f6c67c569ccabda91727359d22b2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759156"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398763"
 ---
-# <a name="handling-dataadapter-events"></a>Obsługa zdarzeń element DataAdapter
-ADO.NET <xref:System.Data.Common.DataAdapter> udostępnia trzy zdarzenia, które służą do reagowania na zmiany wprowadzone w danych w źródle danych. W poniższej tabeli przedstawiono `DataAdapter` zdarzenia.  
+# <a name="handling-dataadapter-events"></a>Obsługa zdarzeń elementu DataAdapter
+ADO.NET <xref:System.Data.Common.DataAdapter> udostępnia trzy zdarzenia, które umożliwiają reagowanie na zmiany wprowadzone w danych w źródle danych. W poniższej tabeli przedstawiono `DataAdapter` zdarzenia.  
   
 |Zdarzenie|Opis|  
 |-----------|-----------------|  
-|`RowUpdating`|Operacja AKTUALIZOWANIA, WSTAWIANIA lub usuwania wiersza (przez wywołanie do jednego z `Update` metody) ma rozpocząć.|  
-|`RowUpdated`|Operacja AKTUALIZOWANIA, WSTAWIANIA lub usuwania w wierszu (przez wywołanie do jednego z `Update` metody) została ukończona.|  
+|`RowUpdating`|W wierszu operacji UPDATE, INSERT czy DELETE (przez wywołanie jednej z `Update` metody) jest gotowy do rozpoczęcia.|  
+|`RowUpdated`|W wierszu operacji UPDATE, INSERT czy DELETE (przez wywołanie jednej z `Update` metody) zostało ukończone.|  
 |`FillError`|Wystąpił błąd podczas `Fill` operacji.|  
   
-## <a name="rowupdating-and-rowupdated"></a>RowUpdating i RowUpdated  
- `RowUpdating` jest wywoływane przed wykonaniem dowolnej aktualizacji na wiersz z <xref:System.Data.DataSet> został przetworzony w źródle danych. `RowUpdated` jest wywoływane po aktualizacji jedną na wiersz z `DataSet` został przetworzony w źródle danych. W związku z tym można użyć `RowUpdating` do modyfikowania zachowania aktualizacji przed zdarza się, w celu zapewnienia obsługi dodatkowych, gdy nastąpi aktualizacja, aby zachować odwołanie do zaktualizowany wiersz, aby anulować harmonogram i bieżącej aktualizacji dla partii przetwarzanie do przetworzenia później , i tak dalej. `RowUpdated` jest przydatne w przypadku odpowiedzi na błędy i wyjątków występujących podczas aktualizacji. Można dodać informacje o błędzie do `DataSet`, a także Logika ponawiania próby i tak dalej.  
+## <a name="rowupdating-and-rowupdated"></a>— RowUpdating i RowUpdated  
+ `RowUpdating` jest wywoływane przed wykonaniem dowolnej aktualizacji na wiersz z <xref:System.Data.DataSet> został przetworzony w źródle danych. `RowUpdated` jest wywoływane po dowolnej aktualizacji do wiersza z `DataSet` został przetworzony w źródle danych. W rezultacie, możesz użyć `RowUpdating` Aby zmodyfikować zachowanie aktualizacji przed zdarza się, aby zapewnić obsługę dodatkowych, gdy aktualizacja zostanie przeprowadzona, do przechowywania odwołań do zaktualizowany wiersz, aby anulować bieżącej aktualizacji i harmonogramu, jego partii przetwarzania do przetworzenia później , i tak dalej. `RowUpdated` przydaje się w odpowiedzi na błędy i wyjątki, które występują podczas aktualizacji. Można dodać informacji o błędzie do `DataSet`, a także Logika ponawiania próby i tak dalej.  
   
- <xref:System.Data.Common.RowUpdatingEventArgs> i <xref:System.Data.Common.RowUpdatedEventArgs> argumentów przekazanych do `RowUpdating` i `RowUpdated` zdarzenia są następujące: `Command` właściwość, która odwołuje się do `Command` obiekt używany do przeprowadzenia aktualizacji; `Row` Właściwość, która odwołuje się do `DataRow` obiekt zawierający zaktualizowane informacje; `StatementType` właściwości, dla jakiego rodzaju aktualizacji jest wykonywane; `TableMapping`, jeśli ma to zastosowanie; i `Status` operacji.  
+ <xref:System.Data.Common.RowUpdatingEventArgs> i <xref:System.Data.Common.RowUpdatedEventArgs> argumenty przekazywane do `RowUpdating` i `RowUpdated` zdarzenia obejmują następujące elementy: `Command` właściwość, która odwołuje się do `Command` obiekt używany do wykonywania aktualizacji; `Row` Właściwość, która odwołuje się do `DataRow` obiekt, który zawiera zaktualizowane informacje; `StatementType` właściwości, dla jakiego rodzaju aktualizacji jest wykonywana; `TableMapping`, jeśli ma to zastosowanie; i `Status` operacji.  
   
- Można użyć `Status` właściwości w celu określenia, jeśli wystąpił błąd podczas operacji, a jeśli potrzebne, kontrolowanie akcji względem bieżących i wynikowy wierszy. Po wystąpieniu zdarzenia, `Status` właściwości jest równa albo `Continue` lub `ErrorsOccurred`. W poniższej tabeli przedstawiono wartości, które można ustawić `Status` właściwości w celu kontrolowania późniejsze akcje podczas aktualizacji.  
+ Możesz użyć `Status` właściwość, aby ustalić, czy wystąpił błąd podczas operacji i, jeśli pożądane, aby kontrolować działania względem wierszy bieżące i planowane wynikowy. Po wystąpieniu zdarzenia, `Status` właściwości jest równa albo `Continue` lub `ErrorsOccurred`. W poniższej tabeli przedstawiono wartości, do których można ustawić `Status` właściwości w celu kontrolowania kolejnych akcjach podczas aktualizacji.  
   
 |Stan|Opis|  
 |------------|-----------------|  
 |`Continue`|Kontynuowanie operacji aktualizacji.|  
-|`ErrorsOccurred`|Przerwij operacji aktualizowania i Zgłoś wyjątek.|  
+|`ErrorsOccurred`|Przerwij operację aktualizacji i zgłosić wyjątek.|  
 |`SkipCurrentRow`|Ignoruj bieżący wiersz i kontynuowania operacji aktualizacji.|  
-|`SkipAllRemainingRows`|Przerwanie operacji aktualizacji, ale zgłosiła wyjątek.|  
+|`SkipAllRemainingRows`|Przerwij operację aktualizacji, ale nie zgłasza wyjątku.|  
   
- Ustawienie `Status` właściwości `ErrorsOccurred` powoduje zgłoszenie wyjątku zostanie wygenerowany. Można kontrolować, które wyjątku przez ustawienie `Errors` właściwości żądaną wyjątek. Przy użyciu jednej z wartości dla `Status` uniemożliwia został zgłoszony wyjątek.  
+ Ustawienie `Status` właściwość `ErrorsOccurred` powoduje zgłoszenie wyjątku. Można kontrolować, które wyjątek jest generowany przez ustawienie `Errors` właściwość do żądanej wyjątku. Przy użyciu jednej z innych wartości `Status` zapobiega jest zgłaszany wyjątek.  
   
- Można również użyć `ContinueUpdateOnError` właściwości do obsługi błędów dla Zaktualizowano wierszy. Jeśli `DataAdapter.ContinueUpdateOnError` jest `true`, gdy aktualizacja powoduje wiersza wyjątek tekst wyjątku jest umieszczany w `RowError` informacji określonego wiersza i przetwarzanie będzie kontynuowane bez generowania wyjątku. Dzięki temu można odpowiadać na błędy podczas `Update` zakończeniu contrast do `RowUpdated` zdarzeń, dzięki czemu można odpowiadać na błędy, jeśli wystąpi błąd.  
+ Można również użyć `ContinueUpdateOnError` właściwości do obsługi błędów, aby uzyskać zaktualizowane wiersze. Jeśli `DataAdapter.ContinueUpdateOnError` jest `true`, gdy aktualizacja wiersza powoduje wyjątek, tekst wyjątku jest umieszczana w `RowError` informacji określonego wiersza i przetwarzanie będzie kontynuowane bez zgłoszenia wyjątku. Dzięki temu można reagować na błędy podczas `Update` zostało zakończone, w przeciwieństwie do `RowUpdated` zdarzenie, które pozwala odpowiedzieć na błędy po napotkaniu błędu.  
   
- Poniższy przykładowy kod przedstawia sposób zarówno Dodawanie i usuwanie programów obsługi zdarzeń. `RowUpdating` Program obsługi zdarzeń zapisuje dziennik wszystkich usuniętych rekordów z sygnatury czasowej. `RowUpdated` Obsługi zdarzeń dodaje informacje o błędzie do `RowError` właściwości wiersza w `DataSet`pomija wyjątek i kontynuuje przetwarzanie (dublowania zachowanie `ContinueUpdateOnError`  =  `true`).  
+ Poniższy przykład kodu pokazuje, jak dodawanie i usuwanie programów obsługi zdarzeń. `RowUpdating` Program obsługi zdarzeń zapisuje dziennik wszystkich usuniętych rekordów z sygnatury czasowej. `RowUpdated` Programu obsługi zdarzeń dodaje informacje o błędzie do `RowError` właściwości wiersza w `DataSet`, pomija wyjątek i kontynuuje przetwarzanie (dublowanie zachowanie `ContinueUpdateOnError`  =  `true`).  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection object.  
@@ -125,20 +125,20 @@ protected static void OnRowUpdated(
 ```  
   
 ## <a name="fillerror"></a>FillError  
- `DataAdapter` Problemów `FillError` zdarzenie, gdy wystąpi błąd podczas `Fill` operacji. Tego typu błędu często występuje, gdy nie można przekonwertować danych w wierszu dodawany do typu .NET Framework bez utratę dokładności.  
+ `DataAdapter` Problemów `FillError` zdarzenie, gdy wystąpi błąd w czasie `Fill` operacji. Błędy tego typu występuje najczęściej w przypadku, gdy nie można przekonwertować danych w wierszu dodawany typ .NET Framework bez pewną utratą dokładności.  
   
- W przypadku wystąpienia błędu podczas `Fill` operacji, bieżący wiersz nie została dodana do `DataTable`. `FillError` Zdarzeń umożliwia Usuń przyczynę błędu, a następnie dodaj wiersz, lub zignorować wykluczonych wiersza i kontynuować `Fill` operacji.  
+ Jeśli wystąpi błąd podczas `Fill` operacji, bieżący wiersz nie został dodany do `DataTable`. `FillError` Zdarzenie pozwala naprawić błąd i Dodaj wiersz lub wykluczone wiersz zignorować i kontynuować `Fill` operacji.  
   
- `FillErrorEventArgs` Przekazany do `FillError` zdarzeń może zawierać kilka właściwości, które pozwalają odpowiedzieć i rozwiąż problemy. W poniższej tabeli przedstawiono właściwości `FillErrorEventArgs` obiektu.  
+ `FillErrorEventArgs` Przekazany do `FillError` zdarzeń może zawierać kilka właściwości, które umożliwiają reagowanie na i naprawić błędy. W poniższej tabeli przedstawiono właściwości `FillErrorEventArgs` obiektu.  
   
 |Właściwość|Opis|  
 |--------------|-----------------|  
 |`Errors`|`Exception` Który wystąpił.|  
-|`DataTable`|`DataTable` Obiekt wypełniany w momencie wystąpienia błędu.|  
-|`Values`|Tablica obiektów zawierająca wartości wiersza dodawane w momencie wystąpienia błędu. Liczba porządkowa odwołuje się do elementu `Values` tablicy odpowiadają odwołań liczby porządkowej kolumny wiersza dodawany. Na przykład `Values[0]` jest wartość, która została dodawany jako pierwszej kolumny wiersza.|  
-|`Continue`|Można wybrać, czy mają zostać zgłoszony wyjątek. Ustawienie `Continue` właściwości `false` spowoduje zatrzymanie bieżącej `Fill` operacji i wyjątek zostanie zgłoszony. Ustawienie `Continue` do `true` nadal `Fill` operacji pomimo błędu.|  
+|`DataTable`|`DataTable` Object wypełniany w momencie wystąpienia błędu.|  
+|`Values`|Tablica obiektów zawierająca wartości wiersza dodawane w momencie wystąpienia błędu. Numer porządkowy odwołania `Values` tablicy odpowiada porządkowe odwołania kolumny wiersza dodawany. Na przykład `Values[0]` jest wartością, która została dodawany jako pierwszej kolumny wiersza.|  
+|`Continue`|Pozwala określić, czy nie zgłasza wyjątku. Ustawienie `Continue` właściwości `false` zostanie zatrzymany bieżącego `Fill` operacji, a wyjątek zostanie zgłoszony. Ustawienie `Continue` do `true` nadal `Fill` operację pomimo błędów.|  
   
- Poniższy przykładowy kod dodaje program obsługi zdarzeń dla `FillError` zdarzenie `DataAdapter`. W `FillError` kodu zdarzenia przykładzie określa, czy jest potencjalnie utrata dokładności, zapewniając możliwość udzielenia odpowiedzi na wyjątek.  
+ Poniższy przykład kodu dodaje program obsługi zdarzeń dla `FillError` zdarzenia `DataAdapter`. W `FillError` kod zdarzenia przykład określa, czy jest ryzyko utraty dokładności, zapewniając możliwość udzielenia odpowiedzi na wyjątek.  
   
 ```vb  
 AddHandler adapter.FillError, New FillErrorEventHandler( _  
@@ -191,4 +191,4 @@ protected static void FillError(object sender, FillErrorEventArgs args)
  [Obsługa zdarzeń elementu DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)  
  [Obsługa zdarzeń elementu DataTable](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
  [Zdarzenia](../../../../docs/standard/events/index.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

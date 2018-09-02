@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8b1f9070-d032-48c7-b030-bd8fbb2ca59a
-ms.openlocfilehash: 6f3f332d4b9bd0be9934c7bf7722e8ff71c4eb2f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cf798ac88ba83e890086cec7424c8c363980718f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767196"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399040"
 ---
 # <a name="row-error-information"></a>Informacje o błędzie wiersza
-Aby uniknąć konieczności odpowiadanie na wiersz błędy podczas edycji wartości <xref:System.Data.DataTable>, można dodać informacje o błędzie do wiersza do późniejszego użycia. <xref:System.Data.DataRow> Zawiera obiekt <xref:System.Data.DataRow.RowError%2A> właściwości w każdym wierszu do tego celu. Dodawanie danych do **RowError** właściwość **DataRow** ustawia <xref:System.Data.DataRow.HasErrors%2A> właściwość **DataRow** do **true**. Jeśli **DataRow** jest częścią **DataTable**, i **DataRow.HasErrors** jest **true**, **DataTable.HasErrors** właściwość jest również **true**. Dotyczy to również do **DataSet** do której **DataTable** należy. Testowanie pod kątem błędów, można sprawdzić **HasErrors** właściwości w celu określenia, czy informacje o błędzie został dodany do wszystkich wierszy. Jeśli **HasErrors** jest **true**, można użyć <xref:System.Data.DataTable.GetErrors%2A> metody **DataTable** aby wrócić i sprawdź, czy tylko wiersze z błędami, jak pokazano w poniższym przykładzie.  
+Aby uniknąć konieczności reagować na błędy wierszy podczas edycji wartości <xref:System.Data.DataTable>, można dodać informacje o błędzie do wiersza w celu późniejszego użycia. <xref:System.Data.DataRow> Obiektu <xref:System.Data.DataRow.RowError%2A> właściwość w każdym wierszu, w tym celu. Dodawanie danych do **RowError** właściwość **DataRow** ustawia <xref:System.Data.DataRow.HasErrors%2A> właściwość **DataRow** do **true**. Jeśli **DataRow** jest częścią **DataTable**, i **DataRow.HasErrors** jest **true**, **DataTable.HasErrors** właściwość jest również **true**. Dotyczy to także do **DataSet** do której **DataTable** należy. Testowanie pod kątem błędów, można sprawdzić **HasErrors** właściwości w celu określenia, jeśli dodano informacje o błędzie do wszystkich wierszy. Jeśli **HasErrors** jest **true**, możesz użyć <xref:System.Data.DataTable.GetErrors%2A> metody **DataTable** powrócić do zbadania tylko wiersze z błędami, jak pokazano w poniższym przykładzie.  
   
 ```vb  
 Dim workTable As DataTable = New DataTable("Customers")  
@@ -82,4 +82,4 @@ protected static void OnRowChanged(
  <xref:System.Data.DataRow>  
  <xref:System.Data.DataTable>  
  [Operowanie danymi w elemencie DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

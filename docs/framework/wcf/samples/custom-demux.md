@@ -2,19 +2,19 @@
 title: Niestandardowe demultipleksowanie
 ms.date: 03/30/2017
 ms.assetid: fc54065c-518e-4146-b24a-0fe00038bfa7
-ms.openlocfilehash: e88672f152b87740feef1345b3eac213916a1527
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 1542743a6e1658bad162d7ee9ca73e6b9b0444e2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805567"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395664"
 ---
 # <a name="custom-demux"></a>Niestandardowe demultipleksowanie
-W tym przykładzie pokazano, jak nagłówki wiadomości usługi MSMQ mogą być mapowane na operacje innej usługi, aby używające usług Windows Communication Foundation (WCF) <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> nie są ograniczone do przy użyciu jednej operacji usługi, jak pokazano w [ Komunikatów usługi kolejkowania wiadomości do systemu Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) i [Windows Communication Foundation, do usługi kolejkowania komunikatów](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) próbek.  
+Niniejszy przykład pokazuje, jak nagłówków wiadomości usługi MSMQ mogą być mapowane na operacje innej usługi, aby Windows Communication Foundation (WCF) usługi używające <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> nie są ograniczone do przy użyciu jednej operacji usługi, jak pokazano w [ Wiadomości usługi MSMQ programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) i [Windows Communication Foundation do usługi kolejkowania komunikatów](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) przykładów.  
   
- Usługi w tym przykładzie jest aplikacji konsoli siebie umożliwiają przyjrzeć się, że usługa, która odbiera wiadomości w kolejce.  
+ Usługi w tym przykładzie to aplikacja konsoli Self-Hosted umożliwiające zaobserwować, że usługa, która odbiera wiadomości w kolejce.  
   
- Kontrakt usługi jest `IOrderProcessor`i definiuje usługę jednokierunkowe, które są odpowiednie do użycia w przypadku kolejek.  
+ Umowa serwisowa jest `IOrderProcessor`i umożliwia zdefiniowanie usługi jednokierunkowej, który jest odpowiedni do użytku z kolejki.  
 
 ```csharp
 [ServiceContract]  
@@ -30,7 +30,7 @@ public interface IOrderProcessor
 }  
 ```
 
- Wiadomości MSMQ nie ma nagłówka Action. Nie jest możliwe do mapowania różnych wiadomości usługi MSMQ kontrakty operacji automatycznie. W związku z tym może istnieć tylko jeden kontrakt operacji. Aby obejść to ograniczenie implementuje usługi <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> metody <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> interfejsu. <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> — Metoda włącza usługę zamapować określony nagłówek komunikatu z operacją określonej usługi. W tym przykładzie nagłówek Etykieta wiadomości jest mapowany do operacji usługi. `Name` Parametr kontrakt operacji określa operacji usługi, które muszą być wysyłane etykiety podanym komunikatem. Na przykład jeśli nagłówek Etykieta wiadomości zawiera "SubmitPurchaseOrder", "SubmitPurchaseOrder" usługi wywołaniu operacji.  
+ Wiadomości usługi MSMQ nie ma nagłówek akcji. Nie jest możliwe do mapowania różnych wiadomości usługi MSMQ kontrakty operacji automatycznie. W związku z tym może istnieć tylko jedno operacji kontraktu. To ograniczenie implementuje usługi <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> metody <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> interfejsu. <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> Metoda umożliwia usłudze mapy dany nagłówek komunikatu do operacji określonej usługi. W tym przykładzie nagłówek Etykieta wiadomości jest mapowany do operacji usługi. `Name` Parametr kontrakt operacji określa operacji usługi, które muszą być wysyłane etykiety podanym komunikatem. Na przykład jeśli nagłówek Etykieta wiadomości zawiera "SubmitPurchaseOrder", "SubmitPurchaseOrder" Operacja usługi zostanie wywołana.  
 
 ```csharp
 public class OperationSelector : IDispatchOperationSelector  
@@ -43,7 +43,7 @@ public class OperationSelector : IDispatchOperationSelector
 }  
 ```
 
- Usługa musi implementować <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%28System.ServiceModel.Description.ContractDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%2CSystem.ServiceModel.Dispatcher.DispatchRuntime%29> metody <xref:System.ServiceModel.Description.IContractBehavior> interfejsu, jak pokazano w poniższym kodzie próbki. Dotyczy to niestandardowa `OperationSelector` do środowiska uruchomieniowego wysyłania framework usługi.  
+ Usługa musi implementować <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%28System.ServiceModel.Description.ContractDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%2CSystem.ServiceModel.Dispatcher.DispatchRuntime%29> metody <xref:System.ServiceModel.Description.IContractBehavior> interfejsu, jak pokazano w poniższym przykładowym kodzie. Dotyczy to niestandardowa `OperationSelector` do środowiska uruchomieniowego usługi framework wysyłania.  
 
 ```csharp
 void IContractBehavior.ApplyDispatchBehavior(ContractDescription description, ServiceEndpoint endpoint, DispatchRuntime dispatch)  
@@ -52,7 +52,7 @@ void IContractBehavior.ApplyDispatchBehavior(ContractDescription description, Se
 }  
 ```
 
- Wiadomość musi przechodzić przez dyspozytora <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> przed przejściem do parametr OperationSelector. Domyślnie komunikat zostanie odrzucony, jeżeli nie można odnaleźć swoje działania na żadną umową zaimplementowanych przez usługę. Aby uniknąć tego wyboru, wdrożymy <xref:System.ServiceModel.Description.IEndpointBehavior> o nazwie `MatchAllFilterBehavior`, dzięki czemu wszystkie wiadomości do przekazywania `ContractFilter` przez zastosowanie <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> w następujący sposób.  
+ Wiadomość musi przechodzić przez dyspozytora <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> przed przejściem do parametr OperationSelector. Domyślnie wiadomość zostanie odrzucone, jeśli nie można odnaleźć swoje działania na żadną umową implementowane przez usługę. Aby uniknąć tego wyboru, firma Microsoft zaimplementowania <xref:System.ServiceModel.Description.IEndpointBehavior> o nazwie `MatchAllFilterBehavior`, dzięki czemu każdy komunikat do przekazywania `ContractFilter` , stosując <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> w następujący sposób.  
 
 ```csharp
 public void ApplyDispatchBehavior(ServiceEndpoint serviceEndpoint, EndpointDispatcher endpointDispatcher)  
@@ -61,7 +61,7 @@ public void ApplyDispatchBehavior(ServiceEndpoint serviceEndpoint, EndpointDispa
 }  
 ```
   
- Po odebraniu komunikatu przez usługę wywoływane jest operacja odpowiednią usługę, korzystając z informacji podanych w nagłówku etykiety. Deserializacji treści komunikatu do `PurchaseOrder` obiektów, jak pokazano w poniższym kodzie próbki.  
+ Gdy wiadomość zostaje odebrana przez usługę, wywoływane jest operacja odpowiednią usługę, korzystając z informacji podanych w nagłówku etykiety. Treść komunikatu jest przeprowadzona deserializacja `PurchaseOrder` obiektu, jak pokazano w poniższym przykładowym kodzie.  
 
 ```csharp
 [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
@@ -74,7 +74,7 @@ public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)
 }  
 ```
 
- Usługa jest samodzielnie hostowana. Przy użyciu usługi MSMQ, kolejki, która jest używana musi zostać utworzona z wyprzedzeniem. Można to zrobić ręcznie lub za pomocą kodu. W tym przykładzie Usługa zawiera kod, aby sprawdzić obecność kolejki i tworzy go, jeśli kolejka nie istnieje. Nazwa kolejki jest do odczytu z pliku konfiguracji.  
+ Usługa jest samodzielnie hostowana. Korzystając z usługi MSMQ, kolejki, która jest używana musi zostać utworzona wcześniej. Można to zrobić ręcznie lub za pomocą kodu. W tym przykładzie Usługa zawiera kod, aby sprawdzić, czy istnienie kolejki i utworzy go, jeśli kolejka nie istnieje. Nazwa kolejki jest do odczytu z pliku konfiguracji.  
 
 ```csharp
 public static void Main()  
@@ -109,7 +109,7 @@ public static void Main()
  Nazwa kolejki usługi MSMQ jest określona w sekcji appSettings pliku konfiguracji.  
   
 > [!NOTE]
->  Nazwa kolejki używa pojedynczego znaku kropki (.) dla komputera lokalnego i separatory ukośnika w jego ścieżki. Adres punktu końcowego WCF określa schematu postać msmq.formatname i korzysta z hosta lokalnego na komputerze lokalnym. Poniżej schemat jest adresem kolejki poprawnie sformatowana zgodnie z nazwy formatu MSMQ adresowania wytyczne.  
+>  Nazwa kolejki używa pojedynczego znaku kropki (.) dla komputera lokalnego i separatory ukośnik odwrotny w ścieżce. Adres punktu końcowego WCF Określa schemat msmq.formatname i używane host_lokalny na komputerze lokalnym. Poniżej schemat jest adresem prawidłowo sformatowaną kolejki według nazwy formatu MSMQ adresowania wytycznych.  
   
 ```xml  
 <appSettings>  
@@ -119,11 +119,11 @@ public static void Main()
 ```  
   
 > [!NOTE]
->  W tym przykładzie wymaga zainstalowania [usługi kolejkowania komunikatów](http://go.microsoft.com/fwlink/?LinkId=95143).  
+>  Ten przykładowy skrypt wymaga instalacji [usługi kolejkowania komunikatów](https://go.microsoft.com/fwlink/?LinkId=95143).  
   
  Uruchom usługę i uruchom klienta.  
   
- Następujące dane wyjściowe jest widoczna na kliencie.  
+ Następujące dane wyjściowe pojawia się na komputerze klienckim.  
   
 ```  
 Placed the order:Purchase Order: 28fc457a-1a56-4fe0-9dde-156965c21ed6  
@@ -137,7 +137,7 @@ Canceled the Order: 28fc457a-1a56-4fe0-9dde-156965c21ed6
 Press <ENTER> to terminate client.  
 ```  
   
- Następujące dane wyjściowe muszą być widoczne w usłudze.  
+ Następujące dane wyjściowe muszą być widoczne w usługę.  
   
 ```  
 The service is ready.  
@@ -152,47 +152,47 @@ Processing Purchase Order: 28fc457a-1a56-4fe0-9dde-156965c21ed6
 Purchase Order 28fc457a-1a56-4fe0-9dde-156965c21ed6 is canceled  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Upewnij się, że wykonano procedurę [jednorazowego procedurę instalacji dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Jeśli usługa jest uruchamiana pierwszy, sprawdza, upewnij się, że kolejka jest obecny. Jeśli kolejka nie jest obecny, będzie utworzyć usługę. Można uruchomić usługi, aby najpierw utworzyć kolejkę, lub można go utworzyć za pomocą Menedżera kolejki usługi MSMQ. Wykonaj następujące kroki, aby utworzyć kolejkę w systemie Windows 2008.  
+2.  Jeśli usługa jest uruchamiana pierwszy, będzie sprawdzał, aby upewnić się, że kolejka jest obecny. Jeśli kolejka nie jest obecny, będzie utworzyć usługę. Można uruchomić usługi, aby najpierw utworzyć kolejkę, lub możesz je utworzyć za pomocą Menedżera kolejki usługi MSMQ. Wykonaj następujące kroki, aby utworzyć kolejkę w programie Windows 2008.  
   
     1.  Otwórz Menedżera serwera w [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
-    2.  Rozwiń węzeł **funkcje** kartę.  
+    2.  Rozwiń **funkcji** kartę.  
   
-    3.  Kliknij prawym przyciskiem myszy **kolejki wiadomości prywatne**i wybierz **nowy**, **kolejki prywatnej**.  
+    3.  Kliknij prawym przyciskiem myszy **prywatnej kolejki komunikatów**i wybierz **New**, **kolejki prywatnej**.  
   
     4.  Sprawdź **transakcyjna** pole.  
   
     5.  Wprowadź `ServiceModelSamplesTransacted` jako nazwę nowej kolejki.  
   
-3.  Tworzenie wersji języka C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Aby uruchomić przykładowy w konfiguracji pojedynczej lub między komputerami, postępuj zgodnie z instrukcjami w [uruchamiania przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-### <a name="to-run-the-sample-across-computers"></a>Aby uruchomić przykład na komputerach  
+### <a name="to-run-the-sample-across-computers"></a>Do uruchomienia przykładu na komputerach  
   
-1.  Skopiuj pliki programu usługi z folderu \service\bin\ w folderze danego języka na komputerze usługi.  
+1.  Skopiuj pliki programu usługi z folderu \service\bin\ w folderze specyficzny dla języka na komputerze usługi.  
   
-2.  Skopiuj pliki programu klienta z folderu \client\bin\ w folderze danego języka na komputerze klienckim.  
+2.  Skopiuj pliki programu klienta z folderu \client\bin\ w folderze specyficzny dla języka na komputerze klienckim.  
   
 3.  W pliku Client.exe.config zmienić orderQueueName do określenia nazwy komputera usługi zamiast ".".  
   
-4.  Na komputerze, usługi uruchom Service.exe z wiersza polecenia.  
+4.  Na komputerze usługi Service.exe należy uruchomić z wiersza polecenia.  
   
-5.  Na komputerze klienckim należy uruchomić Client.exe z wiersza polecenia.  
+5.  Na komputerze klienckim należy uruchomić Client.exe z poziomu wiersza polecenia.  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\CustomDemux`  
   
 ## <a name="see-also"></a>Zobacz też  
  [Tworzenie kolejek w programie WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [Usługi kolejkowania komunikatów](http://go.microsoft.com/fwlink/?LinkId=95143)
+ [Usługa kolejkowania komunikatów](https://go.microsoft.com/fwlink/?LinkId=95143)

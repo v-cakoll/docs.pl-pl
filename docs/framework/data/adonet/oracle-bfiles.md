@@ -1,37 +1,37 @@
 ---
-title: Oracle BFILEs
+title: Oracle bFile
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
-ms.openlocfilehash: bb0a7dad2b7919130097ddd689739b8d17557ea1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 683b4a9be826e1d0d4ee354fada10168d833e3d7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758415"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398793"
 ---
-# <a name="oracle-bfiles"></a>Oracle BFILEs
-.NET Framework Data Provider for Oracle obejmuje <xref:System.Data.OracleClient.OracleBFile> klasy, która jest używana do pracy z bazą danych Oracle <xref:System.Data.OracleClient.OracleType.BFile> — typ danych.  
+# <a name="oracle-bfiles"></a>Oracle bFile
+.NET Framework Data Provider for Oracle obejmuje <xref:System.Data.OracleClient.OracleBFile> klasę, która zostanie użyta do pracy z bazą danych Oracle <xref:System.Data.OracleClient.OracleType.BFile> typu danych.  
   
- Oracle **BPLIK** ma typ danych Oracle **LOB** typ danych, który zawiera odwołanie do danych binarnych o maksymalnym rozmiarze 4 gigabajty. Oracle **BPLIK** różni się od innych Oracle **LOB** typy danych, ponieważ jego dane są przechowywane w pliku fizycznego w systemie operacyjnym, a nie na serwerze. Należy pamiętać, że **BPLIK** — typ danych zapewnia dostęp do danych tylko do odczytu.  
+ Oracle **BPLIK** ma typ danych Oracle **LOB** typ danych, który zawiera odwołanie do danych binarnych o maksymalnym rozmiarze 4 gigabajty. Oracle **BPLIK** różni się od innych Oracle **LOB** typy danych, w tym jego dane są przechowywane w pliku fizycznego w systemie operacyjnym, a nie na serwerze. Należy pamiętać, że **BPLIK** — typ danych zapewnia dostęp do danych tylko do odczytu.  
   
- Inne właściwości **BPLIK** typ danych, który odróżniający go od **LOB** jego są — typ danych:  
+ Pozostałe właściwości **BPLIK** typu danych, które odróżnia go od **LOB** typ danych to że:  
   
--   Zawiera dane bez struktury.  
+-   Zawiera dane bez określonej struktury.  
   
--   Obsługuje podziału po stronie serwera.  
+-   Obsługuje segmentu po stronie serwera.  
   
--   Używa odwoływać się do kopiowania semantyki. Na przykład, jeśli operacja kopiowania na **BPLIK**, tylko **BPLIK** jest kopiowany Lokalizator (która jest odwołanie do pliku). Dane w pliku nie zostaną skopiowane.  
+-   Zastosowań odwoływać się do kopiowania semantyki. Na przykład, jeśli operacja kopiowania na **BPLIK**, tylko **BPLIK** Lokalizator (jest to odwołanie do pliku) są kopiowane. Dane w pliku nie jest kopiowany.  
   
- **BPLIK** typ danych powinien być używany dla odwołania do obiektów LOB, które są duże, dlatego nie praktyczne mają być przechowywane w bazie danych. Uczestniczy większe obciążenie klienta, serwera i komunikację, korzystając z **BPLIK** — typ danych w porównaniu z **LOB** — typ danych. Bardziej wydajny dostęp do **BPLIK** Jeśli należy uzyskać niewielką ilość danych. Jest bardziej wydajne dostępu obiektów LOB rezydentne bazy danych, gdy trzeba uzyskać całego obiektu.  
+ **BPLIK** typu danych, należy użyć do odwoływania się do obiektów LOB, które są duże i dlatego nie jest to praktyczne do przechowywania w bazie danych. Większe koszty komunikacji, serwerów i klientów jest zaangażowana w przypadku korzystania z **BPLIK** typu danych w porównaniu z **LOB** typu danych. Jest bardziej wydajne, aby uzyskać dostęp do **BPLIK** Jeśli potrzebujesz uzyskać niewielką ilość danych. Jest bardziej efektywne i uzyskać dostęp do obiektów LOB rezydentne bazy danych, gdy trzeba uzyskać cały obiekt.  
   
- Każdy z systemem innym niż NULL **OracleBFile** obiekt jest skojarzony z dwoma obiektami, które określają lokalizację pliku fizycznego:  
+ Każda inna niż NULL **OracleBFile** obiekt jest skojarzony z dwiema jednostkami, które określają lokalizację podstawowy plik fizyczny:  
   
-1.  Obiekt Oracle katalogu, który jest alias bazy danych dla katalogu w systemie plików, a  
+1.  Obiekt bazy danych Oracle katalogu, który jest alias bazy dla katalogu w systemie plików, a  
   
-2.  Nazwa pliku źródłowego pliku fizycznego znajduje się w katalogu skojarzone z obiektu katalogu.  
+2.  Nazwa pliku bazowego fizycznym pliku, który znajduje się w katalogu, który został skojarzony z obiektem katalogu.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie C# pokazano, jak utworzyć **BPLIK** w oprogramowaniu Oracle tabeli, a następnie pobrać go w formie **OracleBFile** obiektu. W przykładzie pokazano, za pomocą <xref:System.Data.OracleClient.OracleDataReader> obiektu i **OracleBFile** **wyszukiwania** i **odczytu** metody. Należy pamiętać, aby można było korzystać z tej próbki, należy najpierw utworzyć katalog o nazwie "c:\\\bfiles" i plik o nazwie "MyFile.jpg" na serwerze programu Oracle.  
+ W poniższym przykładzie C# pokazano, jak utworzyć **BPLIK** Oracle tabeli, a następnie pobrać jednego w formie **OracleBFile** obiektu. W przykładzie pokazano, za pomocą <xref:System.Data.OracleClient.OracleDataReader> obiektu i **OracleBFile** **Seek** i **odczytu** metody. Należy pamiętać, aby można było korzystać z tej próbki, należy najpierw utworzyć katalog o nazwie "c:\\\bfiles" oraz plik o nazwie "MyFile.jpg" na serwerze bazy danych Oracle.  
   
 ```csharp  
 using System;  
@@ -88,4 +88,4 @@ public class Sample
   
 ## <a name="see-also"></a>Zobacz też  
  [Oracle i ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

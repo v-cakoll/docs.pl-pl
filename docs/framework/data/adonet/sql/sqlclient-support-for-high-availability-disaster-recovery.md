@@ -1,31 +1,31 @@
 ---
-title: Obsługa SqlClient wysokiej dostępności, odzyskiwania po awarii
+title: Obsługa SqlClient dla wysokiej dostępności, odzyskiwania po awarii
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 001b99d7a7ec7dd7e483887ceeb0b2563a46da0a
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 258922a1541c4594ce2b4673d4d68c279087aef2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948527"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395858"
 ---
-# <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Obsługa SqlClient wysokiej dostępności, odzyskiwania po awarii
-W tym temacie omówiono SqlClient pomocy technicznej (dodany w [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) wysokiej dostępności, odzyskiwania po awarii — zawsze włączonych grup dostępności.  Funkcja zawsze włączonych grup dostępności zostało dodane do programu SQL Server 2012. Aby uzyskać więcej informacji na temat zawsze włączonych grup dostępności zobacz dokumentację SQL Server — książki Online.  
+# <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Obsługa SqlClient dla wysokiej dostępności, odzyskiwania po awarii
+W tym temacie omówiono Obsługa SqlClient (dodano w [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) o wysokiej dostępności, odzyskiwania po awarii — zawsze włączonych grup dostępności.  Funkcja zawsze włączonych grup dostępności zostało dodane do programu SQL Server 2012. Aby uzyskać więcej informacji na temat zawsze włączonych grup dostępności zobacz dokumentację SQL Server — książki Online.  
   
- Możesz teraz określić odbiornika grupy dostępności programu (wysokiej dostępności, odzyskiwania po awarii) grupy dostępności (grupy dostępności) lub SQL Server 2012 wystąpienia klastra trybu Failover we właściwości połączenia. Jeśli aplikacja SqlClient jest podłączony do bazy danych programu AlwaysOn awaryjnie, oryginalne połączenie zostanie przerwane i aplikacji, należy otworzyć nowe połączenie, aby kontynuować pracę po przejściu w tryb failover.  
+ Teraz możesz określić dla odbiornika grupy dostępności (wysokiej dostępności, odzyskiwania po awarii) grupy dostępności (grupy dostępności) lub SQL Server 2012 wystąpienia klastra trybu Failover we właściwości połączenia. Jeśli aplikacja SqlClient jest połączona z bazą danych AlwaysOn w trybie Failover, oryginalne połączenie zostało przerwane i aplikacji, należy otworzyć nowe połączenie do kontynuowania pracy po przełączeniu w tryb failover.  
   
- Jeśli nie są łączone z odbiornika grupy dostępności lub wystąpienie klastra pracy awaryjnej programu SQL Server 2012, a wiele adresów IP skojarzonych z nazwą hosta, SqlClient iteracji sekwencyjnie przez wszystkie adresy IP skojarzone z wpisu DNS. To może zająć dużo czasu, jeśli pierwszy adres IP zwrócony przez serwer DNS nie jest powiązany z dowolnej karty interfejsu sieciowego (NIC). Podczas nawiązywania połączenia odbiornika grupy dostępności lub wystąpienie klastra pracy awaryjnej programu SQL Server 2012, SqlClient podejmuje próbę nawiązania połączenia dla wszystkich adresów IP równolegle i jeśli próba połączenia zakończy się powodzeniem, sterownik spowoduje odrzucenie wszelkie oczekujące połączenia prób.  
+ Jeśli łączysz nie odbiornika grupy dostępności lub wystąpienia klastra trybu Failover programu SQL Server 2012 i wieloma adresami IP są skojarzone z nazwą hosta, SqlClient iteracji sekwencyjnie przez wszystkie adresy IP skojarzone z wpisem DNS. To może zająć dużo czasu, jeśli pierwszy adres IP zwrócony przez serwer DNS nie jest powiązany z dowolnej karty interfejsu sieciowego (NIC). Podczas nawiązywania połączenia z odbiornikiem grupy dostępności lub wystąpienia klastra trybu Failover programu SQL Server 2012, Klient SQL próbuje nawiązać połączenia z adresami IP wszystkich równolegle i jeśli próba połączenia zakończy się powodzeniem, sterownik zostanie odrzucić wszystkie oczekujące połączenie próby.  
   
 > [!NOTE]
->  Zwiększenie limitu czasu połączenia i wykonania logiki ponawiania próby połączenia zwiększy prawdopodobieństwo, że aplikacja będzie łączyć się z grupy dostępności. Ponadto ponieważ połączenie może zakończyć się niepowodzeniem z powodu pracy awaryjnej, należy zaimplementować logiki ponawiania próby połączenia, ponawianie próby połączenia nie powiodło się, dopóki ponownie nawiązuje połączenie.  
+>  Zwiększenie limitu czasu połączenia i implementowanie logikę ponawiania próby połączenia zwiększy prawdopodobieństwo, że aplikacja połączy się z grupy dostępności. Ponadto ponieważ połączenia może zakończyć się niepowodzeniem z powodu przejścia w tryb failover, należy zaimplementować logikę ponawiania prób połączenia, ponawianie próby połączenia zakończone niepowodzeniem dopóki ponownie nawiązuje połączenie.  
   
- Następujące właściwości połączenia zostały dodane do SqlClient w [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]:  
+ Następujące właściwości zostały dodane do SqlClient w [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]:  
   
 -   `ApplicationIntent`  
   
 -   `MultiSubnetFailover`  
   
- Te słowa kluczowe parametrów połączenia z można modyfikować programowo:  
+ Programowe można zmodyfikować te słowa kluczowe parametrów połączenia przy użyciu:  
   
 1.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
   
@@ -35,67 +35,67 @@ W tym temacie omówiono SqlClient pomocy technicznej (dodany w [!INCLUDE[net_v45
 >  Ustawienie `MultiSubnetFailover` do `true` nie jest wymagane w przypadku [!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)] lub nowszy.
   
 ## <a name="connecting-with-multisubnetfailover"></a>Łączenie z MultiSubnetFailover  
- Określ zawsze `MultiSubnetFailover=True` podczas nawiązywania połączenia odbiornika grupy dostępności programu SQL Server 2012 lub wystąpienie klastra pracy awaryjnej programu SQL Server 2012. `MultiSubnetFailover` Umożliwia przyspieszyć tryb failover dla wszystkich grup dostępności i wystąpienie klastra pracy awaryjnej programu SQL Server 2012 i będzie znacznie ograniczyć czas pracy awaryjnej dla pojedynczych i wielu podsieci topologie AlwaysOn. Podczas pracy awaryjnej wielu podsieci klient podejmie próbę połączenia równolegle. Podczas pracy awaryjnej podsieci agresywnie ponowi próbę połączenia TCP.  
+ Zawsze określać `MultiSubnetFailover=True` podczas nawiązywania połączenia z odbiornikiem grupy dostępności programu SQL Server 2012 lub wystąpienia klastra trybu Failover programu SQL Server 2012. `MultiSubnetFailover` Umożliwia szybsze trybu failover dla wszystkich grup dostępności i wystąpienia klastra trybu Failover programu SQL Server 2012 i będzie znacznie skrócić czas pracy awaryjnej dla topologii AlwaysOn pojedynczych i wielu podsieci. Podczas pracy awaryjnej wiele podsieci klient podejmie próbę połączenia równolegle. Podczas pracy awaryjnej podsieci agresywnie ponowi próbę połączenia TCP.  
   
- `MultiSubnetFailover` Właściwości połączenia wskazuje, że aplikacja jest wdrażany w grupie dostępności lub wystąpienie klastra pracy awaryjnej programu SQL Server 2012 i SqlClient podejmie próbę połączenia z bazą danych w wystąpieniu serwera SQL głównej próbując Połącz z adresami IP. Gdy `MultiSubnetFailover=True` jest określony dla połączenia, klient ponawia próby połączenia TCP szybciej niż przy użyciu protokołu TCP retransmisji systemu operacyjnego domyślne. Umożliwia szybsze ponowne nawiązanie połączenia po trybu failover grupy dostępności funkcji AlwaysOn lub zawsze włączone wystąpienia klastra trybu Failover i dotyczy zarówno subnet jednym i wielu grup dostępności i wystąpienia klastra trybu Failover.  
+ `MultiSubnetFailover` Właściwości połączenia oznacza, że aplikacja jest wdrażana w grupie dostępności lub wystąpienia klastra trybu Failover programu SQL Server 2012 i SqlClient podejmie próbę połączenia z bazą danych na podstawowe wystąpienie programu SQL Server, podejmując próbę Połącz z adresami IP. Gdy `MultiSubnetFailover=True` jest określona dla połączeń klienta ponawia próby połączeń TCP szybciej niż interwały retransmisji TCP domyślny system operacyjny. Umożliwia to szybsze ponownego łączenia po włączeniu trybu failover grupy dostępności AlwaysOn lub wystąpienia klastra trybu Failover funkcji AlwaysOn oraz dotyczy zarówno subnet jednym i wielu grup dostępności i wystąpienia klastra trybu Failover.  
   
- Aby uzyskać więcej informacji na temat słowa kluczowe parametrów połączenia w SqlClient zobacz <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
+ Aby uzyskać więcej informacji na temat słów kluczowych z parametrów połączenia w SqlClient zobacz <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
- Określanie `MultiSubnetFailover=True` podczas nawiązywania połączenia z coś innego niż odbiornika grupy dostępności lub wystąpienie klastra pracy awaryjnej programu SQL Server 2012 może spowodować negatywny wpływ na wydajność, a nie jest obsługiwana.  
+ Określanie `MultiSubnetFailover=True` podczas nawiązywania połączenia z coś innego niż odbiornika grupy dostępności lub wystąpienia klastra trybu Failover programu SQL Server 2012 może spowodować negatywny wpływ na wydajność, a nie jest obsługiwane.  
   
- Do łączenia się z serwerem w grupie dostępności lub wystąpienie klastra pracy awaryjnej programu SQL Server 2012, należy użyć następujących wytycznych:  
+ Aby połączyć się z serwerem w grupie dostępności lub wystąpienia klastra trybu Failover programu SQL Server 2012, użyj następujących wytycznych:  
   
--   Użyj `MultiSubnetFailover` właściwości połączenia podczas łączenia się z jednej podsieci lub wielu podsieci; poprawi wydajność ich obu.  
+-   Użyj `MultiSubnetFailover` właściwości połączenia podczas nawiązywania połączenia z jednej podsieci lub wiele podsieci; poprawi wydajność ich obu.  
   
--   Aby połączyć się z grupy dostępności, określ odbiornika grupy dostępności grupy dostępności jako serwer w ciągu połączenia.  
+-   Aby połączyć z grupy dostępności, należy określić odbiornika grupy dostępności grupy dostępności jako serwera w ciągu połączenia.  
   
--   Łączenie z serwerem SQL wystąpienia skonfigurowano więcej niż 64 adresy IP spowoduje błąd połączenia.  
+-   Łączenie z serwerem SQL skojarzone z więcej niż 64 adresami IP wystąpienia spowoduje, że błąd połączenia.  
   
--   Zachowanie aplikacji, która używa `MultiSubnetFailover` właściwość connection nie ma wpływu na podstawie typu uwierzytelniania: uwierzytelnianie programu SQL Server, uwierzytelnianie Kerberos lub uwierzytelnianie systemu Windows.  
+-   Zachowanie aplikacji, która używa `MultiSubnetFailover` właściwości połączenia nie ma wpływu na podstawie typu uwierzytelniania: uwierzytelnianie programu SQL Server, uwierzytelnianie Kerberos lub uwierzytelniania Windows.  
   
--   Zwiększ wartość `Connect Timeout` przyjmować czas pracy awaryjnej i zmniejsza aplikacji połączenia ponownych prób.  
+-   Zwiększ wartość `Connect Timeout` do uwzględnienia czasu pracy awaryjnej i zmniejszyć próby połączenia w aplikacji.  
   
 -   Transakcje rozproszone nie są obsługiwane.  
   
- Jeśli routingu tylko do odczytu nie jest włączone, połączenie z lokalizacją replika pomocnicza nie powiedzie się w następujących sytuacjach:  
+ Jeśli routing tylko do odczytu nie jest włączone, nawiązywania połączenia z lokalizacji pomocniczej repliki zakończy się niepowodzeniem w następujących sytuacjach:  
   
-1.  Jeśli lokalizacji replika pomocnicza nie jest skonfigurowany do akceptowania połączeń.  
+1.  Jeśli lokalizacja replika pomocnicza nie jest skonfigurowany do akceptowania połączeń.  
   
-2.  Jeśli aplikacja używa `ApplicationIntent=ReadWrite` (opisanych poniżej) i lokalizacja replika pomocnicza jest skonfigurowana dla dostępu tylko do odczytu.  
+2.  Jeśli aplikacja używa `ApplicationIntent=ReadWrite` (omówionych poniżej) oraz lokalizacji replika pomocnicza jest skonfigurowana dla dostępu tylko do odczytu.  
   
- <xref:System.Data.SqlClient.SqlDependency> nie jest obsługiwane w trybie tylko do odczytu replikach pomocniczych.  
+ <xref:System.Data.SqlClient.SqlDependency> nie jest obsługiwana w trybie tylko do odczytu replikach pomocniczych.  
   
- Połączenia zakończy się niepowodzeniem, jeśli replika podstawowa jest skonfigurowany do odrzucania obciążeń tylko do odczytu i parametry połączenia zawierają `ApplicationIntent=ReadOnly`.  
+ Połączenie zakończy się niepowodzeniem, jeśli replika podstawowa jest skonfigurowany do odrzucania obciążeń tylko do odczytu i parametry połączenia zawierają `ApplicationIntent=ReadOnly`.  
   
-## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>Uaktualnianie do użycia wielu podsieci klastrów z dublowania bazy danych  
- Błąd połączenia (<xref:System.ArgumentException>) zostanie przeprowadzona, jeśli `MultiSubnetFailover` i `Failover Partner` słowa kluczowe połączenia znajdują się w ciągu połączenia, lub jeśli `MultiSubnetFailover=True` i protokołu innego niż TCP jest używany. Wystąpił błąd (<xref:System.Data.SqlClient.SqlException>) również wystąpić, jeśli `MultiSubnetFailover` jest używany i SQL Server zwraca odpowiedź partnera pracy awaryjnej wskazujący, że jest częścią pary dublowania bazy danych.  
+## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>Uaktualnianie do użycia wielu podsieci klastrów funkcji dublowania baz danych  
+ Błąd połączenia (<xref:System.ArgumentException>) wystąpi `MultiSubnetFailover` i `Failover Partner` połączenia słowa kluczowe są obecne w parametrach połączenia lub jeśli `MultiSubnetFailover=True` i protokołu innego niż TCP jest używany. Błąd (<xref:System.Data.SqlClient.SqlException>) również wystąpić, jeśli `MultiSubnetFailover` jest używany i programu SQL Server zwraca odpowiedź partnera pracy awaryjnej wskazujący, że jest częścią pary dublowania bazy danych.  
   
- W przypadku uaktualniania aplikacji SqlClient który aktualnie używa funkcji dublowania baz danych na potrzeby scenariusza wielu podsieci, należy usunąć `Failover Partner` właściwości połączenia i zastąpić go ciągiem `MultiSubnetFailover` ustawioną `True` i zastąp nazwę serwera w Parametry połączenia z odbiornika grupy dostępności. Jeśli parametry połączenia używane `Failover Partner` i `MultiSubnetFailover=True`, sterownik zostanie wygenerowany błąd. Jednak jeśli parametry połączenia używane `Failover Partner` i `MultiSubnetFailover=False` (lub `ApplicationIntent=ReadWrite`), aplikacja będzie używać funkcji dublowania baz danych.  
+ Jeśli zaktualizujesz aplikację SqlClient obecnie używa funkcji dublowania baz danych w scenariuszu wiele podsieci, należy usunąć `Failover Partner` właściwości połączenia i zastąp go wartością `MultiSubnetFailover` równa `True` i zastąp nazwę serwera w Parametry połączenia przy użyciu odbiornika grupy dostępności. Jeśli korzysta z parametrów połączenia `Failover Partner` i `MultiSubnetFailover=True`, sterownik spowoduje wygenerowanie błędu. Jednakże jeśli używa parametrów połączenia `Failover Partner` i `MultiSubnetFailover=False` (lub `ApplicationIntent=ReadWrite`), aplikacja będzie używać funkcji dublowania baz danych.  
   
- Sterownik zwróci błąd, jeśli funkcja dublowania bazy danych jest używany w podstawowej bazy danych w grupy dostępności, a `MultiSubnetFailover=True` jest używany w parametrach połączenia, w którym łączy się z podstawowej bazy danych zamiast do odbiornika grupy dostępności.  
+ Sterownik zwróci błąd, jeśli funkcja dublowania bazy danych jest używana na podstawowej bazy danych w grupy dostępności, a `MultiSubnetFailover=True` jest używany w parametrach połączenia, który nawiązuje połączenie z podstawowej bazy danych zamiast na odbiornik grupy dostępności.  
   
 ## <a name="specifying-application-intent"></a>Określanie przeznaczenia aplikacji  
- Gdy `ApplicationIntent=ReadOnly`, klient żąda odczytu obciążenie podczas łączenia się z bazą danych z włączoną funkcją AlwaysOn. Serwer będzie wymuszać zamiar w czasie połączenia i podczas użycie instrukcji bazy danych, ale tylko do zawsze włączone bazy danych.  
+ Gdy `ApplicationIntent=ReadOnly`, klient żąda obciążenia odczytu podczas nawiązywania połączenia z bazą danych z włączoną funkcją AlwaysOn. Serwer będzie wymuszać zamiar w trakcie połączenia i podczas instrukcja USE bazy danych, ale tylko do zawsze włączone bazy danych.  
   
- `ApplicationIntent` — Słowo kluczowe nie działa z bazami danych starszy, tylko do odczytu.  
+ `ApplicationIntent` — Słowo kluczowe nie działa dla starszej wersji, tylko do odczytu bazy danych.  
   
- Bazy danych można Zezwalaj lub nie zezwalaj odczytu obciążenie w docelowej bazie danych AlwaysOn. (Jest to zrobić za pomocą `ALLOW_CONNECTIONS` klauzuli `PRIMARY_ROLE` i `SECONDARY_ROLE` [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrukcji.)  
+ Bazę danych można zezwolić lub nie zezwalaj na obciążeniami odczytu w docelowej bazie danych zawsze włączonych. (Jest to zrobić za pomocą `ALLOW_CONNECTIONS` klauzuli `PRIMARY_ROLE` i `SECONDARY_ROLE` [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrukcji.)  
   
- `ApplicationIntent` Słowo kluczowe jest używane, aby włączyć routing tylko do odczytu.  
+ `ApplicationIntent` Słowo kluczowe jest używane, aby umożliwić routing tylko do odczytu.  
   
-## <a name="read-only-routing"></a>Tylko do odczytu routingu  
- Tylko do odczytu routing jest funkcją, która może zapewnić dostępność odczytu tylko repliki bazy danych. Aby włączyć routing tylko do odczytu:  
+## <a name="read-only-routing"></a>Routing tylko do odczytu  
+ Routing tylko do odczytu jest funkcją, która może zapewnić dostępność odczytu jedyną repliką bazy danych. Aby włączyć routing tylko do odczytu:  
   
-1.  Należy nawiązać odbiornik grupy dostępności zawsze włączonej grupy dostępności.  
+1.  Musisz połączyć się odbiornik grupy dostępności zawsze włączonej grupy dostępności.  
   
-2.  `ApplicationIntent` Słowo kluczowe parametrów połączenia musi mieć ustawioną `ReadOnly`.  
+2.  `ApplicationIntent` Słowo kluczowe parametrów połączenia musi być równa `ReadOnly`.  
   
-3.  Grupa dostępności musi być skonfigurowany przez administratora bazy danych, aby włączyć routing tylko do odczytu.  
+3.  Grupa dostępności musi być skonfigurowany przez administratora bazy danych, aby umożliwić routing tylko do odczytu.  
   
- Istnieje możliwość, że wiele połączeń przy użyciu routingu tylko do odczytu nie wszystkie będą łączyć się sam repliki tylko do odczytu. Zmiany w synchronizacji bazy danych lub zmiany w konfiguracji routingu serwera może spowodować połączeń klientów z innej repliki tylko do odczytu. Aby upewnić się, że wszystkie żądania tylko do odczytu połączyć się z tej samej repliki tylko do odczytu, nie przekazuj odbiornika grupy dostępności, aby `Data Source` słowo kluczowe parametrów połączenia. Zamiast tego należy określić nazwę wystąpienia tylko do odczytu.  
+ Istnieje możliwość, że wiele połączeń przy użyciu routingu tylko do odczytu nie wszystkie będą łączyć z tej samej repliki tylko do odczytu. Zmiany w synchronizacji bazy danych lub zmiany w konfiguracji routingu serwera może powodować połączeń klientów z różnych replik tylko do odczytu. Aby upewnić się, że wszystkie żądania tylko do odczytu połączyć się z tym samym repliki tylko do odczytu, nie przekazuj odbiornik grupy dostępności do `Data Source` słowo kluczowe parametrów połączenia. Zamiast tego należy określić nazwę wystąpienia tylko do odczytu.  
   
- Tylko do odczytu routingu może trwać dłużej niż łączenie z serwera podstawowego, ponieważ odczytu tylko routing pierwszy raz łączy się serwerem podstawowym, a następnie szuka najlepiej dostępne dodatkowego do odczytu. W związku z tym należy zwiększyć limit czasu użytkownika logowania.  
+ Routing tylko do odczytu może trwać dłużej niż łączenie do podstawowej, ponieważ odczytu tylko routing najpierw łączy się podstawowym, a następnie szuka najlepsze dostępne pomocniczego do odczytu. W związku z tym należy zwiększyć swoje limit czasu logowania.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje Serwera SQL i ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -9,45 +9,45 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: c3cede1eb90b963f4c0b567a8df48925bca9b02d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0595bcbd3dcae7977c8734b7d3858df2412c962
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494832"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395309"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Instrukcje: Konfigurowanie portu z certyfikatem SSL
-Podczas tworzenia własnym hostowanej usługi Windows Communication Foundation (WCF) z <xref:System.ServiceModel.WSHttpBinding> zabezpieczenia transportu używa klasy, należy również skonfigurować port za pomocą certyfikatu X.509. Jeśli nie utworzysz samodzielnie hostowana usługa, może obsługiwać usługi na Internet Information Services (IIS). Aby uzyskać więcej informacji, zobacz [zabezpieczeń transportu HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+Podczas tworzenia własnego usługi Windows Communication Foundation (WCF) z <xref:System.ServiceModel.WSHttpBinding> zabezpieczenia transportu używa klasy, należy również skonfigurować port, za pomocą certyfikatu X.509. Jeśli nie tworzysz własne usługi, możesz hostować usługi w Internet Information Services (IIS). Aby uzyskać więcej informacji, zobacz [zabezpieczenia transportu HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
- Aby skonfigurować port, narzędzia, których używasz zależy od systemu operacyjnego, który działa na tym komputerze.  
+ Aby skonfigurować port, użyte narzędzie zależy od systemu operacyjnego, który jest uruchomiony na Twoim komputerze.  
   
- Jeśli używasz [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] lub [!INCLUDE[wxp](../../../../includes/wxp-md.md)], użyj narzędzia HttpCfg.exe. Z [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] to narzędzie jest zainstalowany. Z [!INCLUDE[wxp](../../../../includes/wxp-md.md)], możesz pobrać narzędzia z [narzędzia obsługi systemu Windows XP Service Pack 2](http://go.microsoft.com/fwlink/?LinkId=88606). Aby uzyskać więcej informacji, zobacz [omówienie tak](http://go.microsoft.com/fwlink/?LinkId=88605). [Dokumentacji narzędzia obsługi systemu Windows](http://go.microsoft.com/fwlink/?LinkId=94840) opisano składnię narzędzia Httpcfg.exe.  
+ Jeśli używasz [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] lub [!INCLUDE[wxp](../../../../includes/wxp-md.md)], użyj narzędzia HttpCfg.exe. Za pomocą [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] to narzędzie jest instalowane. Za pomocą [!INCLUDE[wxp](../../../../includes/wxp-md.md)], możesz pobrać narzędzia z [narzędzia obsługi systemu Windows XP Service Pack 2](https://go.microsoft.com/fwlink/?LinkId=88606). Aby uzyskać więcej informacji, zobacz [Przegląd tak](https://go.microsoft.com/fwlink/?LinkId=88605). [Dokumentację Windows Support Tools](https://go.microsoft.com/fwlink/?LinkId=94840) opisano składnię narzędzia Httpcfg.exe.  
   
  Jeśli używasz [!INCLUDE[wv](../../../../includes/wv-md.md)], użyj narzędzia Netsh.exe, która jest już zainstalowana.  
   
  W tym temacie opisano sposób wykonania kilku procedur:  
   
--   Określanie konfiguracji portu bieżącego komputera.  
+-   Określanie konfiguracji portu z bieżącego komputera.  
   
--   Pobieranie odcisku palca certyfikatu (niezbędne do dwóch poniższych procedur).  
+-   Pobieranie odcisku palca certyfikatu (wymagane dla dwóch poniższych procedur).  
   
--   Powiązania certyfikatu SSL do konfiguracji portów.  
+-   Powiązanie certyfikatu SSL z konfiguracji portów.  
   
--   Powiązania certyfikatu SSL do konfiguracji portów i pomocnicze certyfikaty klienta.  
+-   Powiązanie certyfikatu SSL z konfiguracji portów i obsługi certyfikatów klienta.  
   
--   Usunięcie certyfikatu SSL z numeru portu.  
+-   Usuwanie certyfikatu SSL z numeru portu.  
   
- Należy pamiętać, że zmodyfikowanie certyfikaty przechowywane na komputerze wymaga uprawnień administracyjnych.  
+ Należy pamiętać, że modyfikowanie certyfikaty przechowywane na komputerze wymaga uprawnień administracyjnych.  
   
-### <a name="to-determine-how-ports-are-configured"></a>Aby określić, jak skonfigurować porty  
+### <a name="to-determine-how-ports-are-configured"></a>Aby określić, jak porty są skonfigurowane.  
   
-1.  W [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] lub [!INCLUDE[wxp](../../../../includes/wxp-md.md)], użyj narzędzia HttpCfg.exe, aby wyświetlić bieżącą konfigurację portu, przy użyciu **zapytania** i **ssl** zmienia, jak pokazano w poniższym przykładzie.  
+1.  W [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] lub [!INCLUDE[wxp](../../../../includes/wxp-md.md)], użyj narzędzia HttpCfg.exe do wyświetlenia bieżącej konfiguracji portów przy użyciu **zapytania** i **ssl** przełączy się, jak pokazano w poniższym przykładzie.  
   
     ```  
     httpcfg query ssl  
     ```  
   
-2.  W [!INCLUDE[wv](../../../../includes/wv-md.md)], użyj narzędzia Netsh.exe Aby wyświetlić bieżącą konfigurację portów, jak pokazano w poniższym przykładzie.  
+2.  W [!INCLUDE[wv](../../../../includes/wv-md.md)], należy użyć narzędzia Netsh.exe do wyświetlenia bieżącej konfiguracji portów, jak pokazano w poniższym przykładzie.  
   
     ```  
     netsh http show sslcert  
@@ -55,23 +55,23 @@ Podczas tworzenia własnym hostowanej usługi Windows Communication Foundation (
   
 ### <a name="to-get-a-certificates-thumbprint"></a>Aby uzyskać odcisk palca certyfikatu  
   
-1.  Użyj przystawki certyfikatów konsoli MMC można znaleźć certyfikatu X.509, który ma zamierzony cel uwierzytelniania klienta. Aby uzyskać więcej informacji, zobacz [porady: wyświetlanie certyfikatów w przystawce MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+1.  Użyj przystawki MMC certyfikatów, aby znaleźć certyfikat X.509, który ma zamierzony cel Uwierzytelnianie klienta. Aby uzyskać więcej informacji, zobacz [porady: wyświetlanie certyfikatów za pomocą przystawki programu MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 2.  Dostęp do odcisk palca certyfikatu. Aby uzyskać więcej informacji, zobacz [porady: Pobieranie odcisku palca certyfikatu](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
-3.  Skopiuj odcisk palca certyfikatu do edytora tekstu, takiego jak Notatnik.  
+3.  Skopiuj odcisk palca certyfikatu do edytora tekstów, takiego jak Notatnik.  
   
-4.  Usuń wszystkie spacje między znaków szesnastkowych. Co w tym celu należy korzystać z funkcji znajdowania i zamieniania edytora tekstowego i Zastąp każdego miejsca znak null.  
+4.  Usuń wszystkie spacje między znaków szesnastkowych. Jednym ze sposobów osiągnięcia tego jest korzystać z funkcji znajdowania i zamieniania w edytorze tekstów i Zastąp każdą spację znakiem null.  
   
-### <a name="to-bind-an-ssl-certificate-to-a-port-number"></a>Aby powiązać certyfikatu SSL z numeru portu  
+### <a name="to-bind-an-ssl-certificate-to-a-port-number"></a>Aby powiązać certyfikatu SSL do numeru portu  
   
-1.  W [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] lub [!INCLUDE[wxp](../../../../includes/wxp-md.md)], użyj narzędzia HttpCfg.exe w trybie "set" w magazynie Secure Sockets Layer (SSL), aby powiązać certyfikat z numeru portu. Narzędzie używana odcisk palca certyfikatu, jak pokazano w poniższym przykładzie.  
+1.  W [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] lub [!INCLUDE[wxp](../../../../includes/wxp-md.md)], użyj narzędzia HttpCfg.exe w trybie "set" w sklepie Secure Sockets Layer (SSL), aby powiązać certyfikat numeru portu. Narzędzie używana odcisk palca certyfikatu, jak pokazano w poniższym przykładzie.  
   
     ```  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
     ```  
   
-    -   **-I** przełącznik ma składnię `IP`:`port` i powoduje, że narzędzie, aby ustawić certyfikat z portem 8012 komputera. Opcjonalnie cztery zera, które Poprzedź numer można również zastąpić rzeczywisty adres IP komputera.  
+    -   **-I** przełącznik ma składnię `IP`:`port` i powoduje, że narzędzie, aby ustawić certyfikat z portem 8012 komputera. Opcjonalnie cztery zera, które poprzedzają numer można również zastąpić rzeczywistego adresu IP komputera.  
   
     -   **-H** przełącznik określa odcisk palca certyfikatu.  
   
@@ -81,23 +81,23 @@ Podczas tworzenia własnym hostowanej usługi Windows Communication Foundation (
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF}   
     ```  
   
-    -   **Skrót certyfikatu** parametr określa odcisk palca certyfikatu.  
+    -   **Certhash** parametr określa odcisk palca certyfikatu.  
   
     -   **Ipport** parametr określa adres IP i port, a funkcje podobnie jak **-i** przełącznika narzędzia Httpcfg.exe opisem.  
   
-    -   **Appid** parametru jest identyfikatorem GUID, który może służyć do identyfikowania będący właścicielem aplikacji.  
+    -   **Appid** parametru jest identyfikatorem GUID, który może służyć do identyfikowania będąca właścicielem aplikacji.  
   
-### <a name="to-bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>Aby powiązać certyfikatu SSL z numeru portu i obsługują certyfikaty klientów  
+### <a name="to-bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>Powiąż certyfikat SSL na numer portu i obsługują certyfikaty klientów  
   
-1.  W [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] lub [!INCLUDE[wxp](../../../../includes/wxp-md.md)], do obsługi klientów, którzy uwierzytelniania za pomocą certyfikatów X.509 w przypadku warstwy transportu, wykonaj poprzednią procedurę, ale przekazać dodatkowy parametr wiersza polecenia do HttpCfg.exe, jak pokazano w poniższym przykładzie.  
+1.  W [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] lub [!INCLUDE[wxp](../../../../includes/wxp-md.md)], które obsługują klientów, którzy uwierzytelniania za pomocą certyfikatów X.509 w warstwie transportowej, wykonaj poprzednią procedurę, ale należy przekazać dodatkowy parametr wiersza polecenia do HttpCfg.exe, jak pokazano w poniższym przykładzie.  
   
     ```  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6 -f 2  
     ```  
   
-     **-F** przełącznik ma składnię `n` gdzie n jest liczbą z zakresu od 1 do 7. Wartość 2, jak pokazano w poprzednim przykładzie, włącza certyfikaty klienta w przypadku warstwy transportu. Wartość 3 umożliwia certyfikaty klienta i mapuje te certyfikaty, konto systemu Windows. Zapoznaj się z pomocą HttpCfg.exe zachowania innych wartości.  
+     **-F** przełącznik ma składnię `n` gdzie n to liczba od 1 do 7. Wartość 2, jak pokazano w powyższym przykładzie umożliwia certyfikaty klienta w warstwie transportowej. Wartość 3 umożliwia certyfikaty klienta i mapuje te certyfikaty do konta Windows. Zapoznaj się z pomocą HttpCfg.exe zachowania inne wartości.  
   
-2.  W [!INCLUDE[wv](../../../../includes/wv-md.md)], do obsługi klientów, którzy uwierzytelniania za pomocą certyfikatów X.509 w przypadku warstwy transportu, wykonaj poprzednią procedurę, ale z parametrem dodatkowe, jak pokazano w poniższym przykładzie.  
+2.  W [!INCLUDE[wv](../../../../includes/wv-md.md)], dla klientów pomocy technicznej, którzy uwierzytelniać za pomocą certyfikatów X.509 w warstwie transportowej, wykonaj poprzednią procedurę, ale o dodatkowy parametr, jak pokazano w poniższym przykładzie.  
   
     ```  
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF} clientcertnegotiation=enable  
@@ -105,13 +105,13 @@ Podczas tworzenia własnym hostowanej usługi Windows Communication Foundation (
   
 ### <a name="to-delete-an-ssl-certificate-from-a-port-number"></a>Aby usunąć certyfikat SSL z numeru portu  
   
-1.  Użyj narzędzia HttpCfg.exe lub Netsh.exe zawiera portów i odciski palców wszystkie powiązania na komputerze. Aby wydrukować dane na dysku, użyj znaku przekierowania ">", jak pokazano w poniższym przykładzie.  
+1.  Użyj narzędzia HttpCfg.exe lub Netsh.exe, aby zobaczyć porty i odciski palca wszystkie powiązania na komputerze. Aby wydrukować dane na dysku, użyj znaku przekierowania ">", jak pokazano w poniższym przykładzie.  
   
     ```  
     httpcfg query ssl>myMachinePorts.txt  
     ```  
   
-2.  W [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] lub [!INCLUDE[wxp](../../../../includes/wxp-md.md)], użyj narzędzia HttpCfg.exe z **usunąć** i **ssl** słów kluczowych. Użyj **-i** przełącznika `IP`:`port` numer i **-h** przełącznika do określania odcisku palca.  
+2.  W [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] lub [!INCLUDE[wxp](../../../../includes/wxp-md.md)], użyj narzędzia HttpCfg.exe z **Usuń** i **ssl** słów kluczowych. Użyj **-i** przełącznika `IP`:`port` cyfrą i **-h** Przełącz się do określania odcisku palca.  
   
     ```  
     httpcfg delete ssl -i 0.0.0.0:8005 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
@@ -124,7 +124,7 @@ Podczas tworzenia własnym hostowanej usługi Windows Communication Foundation (
     ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przedstawia sposób tworzenia hostowanie Samoobsługowe przy użyciu <xref:System.ServiceModel.WSHttpBinding> klasy ustawienia zabezpieczeń transportu. Podczas tworzenia aplikacji, należy określić numer portu w adresie.  
+ Poniższy kod pokazuje, jak utworzyć samodzielnie hostowanej usługi za pomocą <xref:System.ServiceModel.WSHttpBinding> klasy ustawienie zabezpieczeń transportu. Podczas tworzenia aplikacji, należy określić numer portu w adresie.  
   
  [!code-csharp[c_WsHttpService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wshttpservice/cs/source.cs#3)]
  [!code-vb[c_WsHttpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#3)]  

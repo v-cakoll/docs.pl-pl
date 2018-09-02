@@ -8,24 +8,24 @@ helpviewer_keywords:
 - ListView control [Windows Forms], about ListView control
 - list views
 ms.assetid: c9ef56c1-3bb1-4101-9f4e-e95e720f2756
-ms.openlocfilehash: f92b5f5ae40287c95da10ef96aad0fa764fa00e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ab2d0d9456f64f215ddbc0003833db1858f0ce1a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540676"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395107"
 ---
 # <a name="listview-control-overview-windows-forms"></a>ListView — Informacje o formancie [Formularze systemu Windows]
-Formularze systemu Windows <xref:System.Windows.Forms.ListView> formantu zostanie wyświetlona lista elementy z ikonami. Widok listy służy do tworzenia interfejsu użytkownika, takie jak okienku po prawej stronie Eksploratora Windows. Kontrolka ma cztery trybów wyświetlania: widoku LargeIcon, SmallIcon, listy i szczegółów.  
+Formularze Windows <xref:System.Windows.Forms.ListView> kontrolka Wyświetla listę elementów z ikonami. Widok listy służy do tworzenia interfejsu użytkownika, takich jak okienku po prawej stronie Eksploratora Windows. Kontrolka ma cztery trybów wyświetlania: LargeIcon, SmallIcon, listy i szczegółów.  
   
 ## <a name="what-you-can-do-with-the-listview-control"></a>Co można zrobić za pomocą formantu ListView  
   
 > [!NOTE]
->  Tryb dodatkowe widoku, kafelków, jest dostępna tylko w systemach Windows XP i systemu operacyjnego Windows Server 2003. Aby uzyskać więcej informacji, zobacz [porady: Włączanie widoku Tile w formancie ListView formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-enable-tile-view-in-a-windows-forms-listview-control.md).  
+>  Tryb wyświetlania dodatkowych, Kafelek, jest dostępna tylko w systemach Windows i systemu operacyjnego Windows Server 2003. Aby uzyskać więcej informacji, zobacz [porady: Włączanie widoku Tile w formancie ListView formularzy Windows](../../../../docs/framework/winforms/controls/how-to-enable-tile-view-in-a-windows-forms-listview-control.md).  
   
- W trybie LargeIcon Wyświetla duże ikony obok tekstu elementu. elementy są wyświetlane w wielu kolumnach, jeśli formant jest wystarczająco duża. W trybie SmallIcon jest taki sam, z wyjątkiem tego, że wyświetla małych ikon. Tryb listy zawiera małe ikony, ale jest zawsze w jednej kolumnie. Tryb szczegółów wyświetla elementy w wielu kolumnach. Aby uzyskać więcej informacji, zobacz [porady: Dodawanie kolumn do formantu ListView formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md). Tryb widoku jest określany przez <xref:System.Windows.Forms.ListView.View%2A> właściwości. Wszystkie tryby widoku można wyświetlić obrazy z listy obrazów. Aby uzyskać więcej informacji, zobacz [porady: wyświetlanie ikon dla formantu ListView formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md).  
+ Wyświetlanie dużych ikon obok tekstu elementu; w trybie LargeIcon elementy są wyświetlane w wielu kolumnach, gdy kontrolka jest wystarczająco duży. Tryb SmallIcon jest taki sam, z tą różnicą, że wyświetla małych ikon. Tryb listy wyświetla małe ikony, ale jest zawsze w jednej kolumnie. Tryb szczegółów wyświetla elementy w wielu kolumnach. Aby uzyskać więcej informacji, zobacz [porady: Dodawanie kolumn do formantu ListView formularzy Windows](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md). Tryb widoku jest określany przez <xref:System.Windows.Forms.ListView.View%2A> właściwości. Wszystkie tryby widoku można wyświetlić obrazy z listy obrazów. Aby uzyskać więcej informacji, zobacz [porady: wyświetlanie ikon dla kontrolki ListView formularzy Windows](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md).  
   
- W poniższej tabeli wymieniono niektóre <xref:System.Windows.Forms.ListView> elementów członkowskich i widoki są ważne w.  
+ W poniższej tabeli wymieniono niektóre <xref:System.Windows.Forms.ListView> elementów członkowskich i widoki są prawidłowe w.  
   
 |Element członkowski ListView|Widok|  
 |---------------------|----------|  
@@ -41,11 +41,11 @@ Formularze systemu Windows <xref:System.Windows.Forms.ListView> formantu zostani
 |<xref:System.Windows.Forms.ListView.HeaderStyle%2A> Właściwość|<xref:System.Windows.Forms.View.Details>.|  
 |<xref:System.Windows.Forms.ListView.InsertionMark%2A> Właściwość|<xref:System.Windows.Forms.View.LargeIcon>, <xref:System.Windows.Forms.View.SmallIcon>, lub <xref:System.Windows.Forms.View.Tile>|  
   
- Właściwość klucza <xref:System.Windows.Forms.ListView> formant jest <xref:System.Windows.Forms.ListView.Items%2A>, który zawiera elementy wyświetlany przez formant. <xref:System.Windows.Forms.ListView.SelectedItems%2A> Właściwość zawiera kolekcję elementów aktualnie zaznaczony w formancie. Użytkownik może wybrać wiele elementów, na przykład w celu przeciągnij i upuść kilka elementów jednocześnie do innego formantu, jeśli <xref:System.Windows.Forms.ListView.MultiSelect%2A> właściwość jest ustawiona na `true`. <xref:System.Windows.Forms.ListView> Formant może wyświetlać pola wyboru obok elementów, jeśli <xref:System.Windows.Forms.ListView.CheckBoxes%2A> właściwość jest ustawiona na `true`.  
+ Właściwość klucza <xref:System.Windows.Forms.ListView> formant jest <xref:System.Windows.Forms.ListView.Items%2A>, który zawiera elementy wyświetlany przez kontrolkę. <xref:System.Windows.Forms.ListView.SelectedItems%2A> Właściwość zawiera kolekcję elementów aktualnie wybrana w kontrolce. Użytkownik może wybrać wiele elementów, na przykład ich przeciąganie i upuszczanie kilka elementów w czasie innej kontrolce, jeśli <xref:System.Windows.Forms.ListView.MultiSelect%2A> właściwość jest ustawiona na `true`. <xref:System.Windows.Forms.ListView> Formant może wyświetlić pola wyboru obok elementów, jeśli <xref:System.Windows.Forms.ListView.CheckBoxes%2A> właściwość jest ustawiona na `true`.  
   
- <xref:System.Windows.Forms.ListView.Activation%2A> Właściwość określa typ akcji użytkownika należy wykonać, aby uaktywnić element na liście: dostępne są następujące opcje <xref:System.Windows.Forms.ItemActivation.Standard>, <xref:System.Windows.Forms.ItemActivation.OneClick>, i <xref:System.Windows.Forms.ItemActivation.TwoClick>. <xref:System.Windows.Forms.ItemActivation.OneClick> Aktywacja wymaga jednego kliknięcia, aby aktywować elementu. <xref:System.Windows.Forms.ItemActivation.TwoClick> Aktywacja wymaga od użytkownika kliknij dwukrotnie, aby uaktywnić element; jednym kliknięciem zmienia kolor tekstu elementu. <xref:System.Windows.Forms.ItemActivation.Standard> Aktywacja wymaga od użytkownika kliknij dwukrotnie, aby aktywować elementu, ale element nie zmienia wygląd.  
+ <xref:System.Windows.Forms.ListView.Activation%2A> Właściwość określa, jakiego rodzaju akcji użytkownik musi wykonać, aby uaktywnić element na liście: opcje są <xref:System.Windows.Forms.ItemActivation.Standard>, <xref:System.Windows.Forms.ItemActivation.OneClick>, i <xref:System.Windows.Forms.ItemActivation.TwoClick>. <xref:System.Windows.Forms.ItemActivation.OneClick> Aktywacja wymaga jednego kliknięcia, aby aktywować elementu. <xref:System.Windows.Forms.ItemActivation.TwoClick> Aktywacja wymaga od użytkownika, kliknij dwukrotnie, aby aktywować elementu; jednym kliknięciem zmienia kolor tekstu elementu. <xref:System.Windows.Forms.ItemActivation.Standard> Aktywacja wymaga od użytkownika, kliknij dwukrotnie, aby uaktywnić element, ale element nie zmienia się wygląd.  
   
- <xref:System.Windows.Forms.ListView> Formantu obsługuje również style wizualne i inne funkcje, które są dostępne na platformie Windows XP, w tym grupowania, widoku tile i znaczniki wstawiania. Aby uzyskać więcej informacji, zobacz [funkcji systemu Windows XP i formantów formularzy systemu Windows](http://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0).  
+ <xref:System.Windows.Forms.ListView> Kontroli obsługuje również stylów wizualnych i inne funkcje, które są dostępne na platformie Windows XP, w tym grupowania, widoku kafelków i wstawiania znaczników. Aby uzyskać więcej informacji, zobacz [funkcje systemu Windows XP i kontrolki formularzy Windows](https://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.ListView>  

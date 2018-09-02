@@ -9,22 +9,22 @@ helpviewer_keywords:
 - menu items [Windows Forms], standard
 - ToolStrip control [Windows Forms]
 ms.assetid: 75db9126-e70c-4e81-921d-b83c0a4a9f50
-ms.openlocfilehash: b118392d089bf28edee1496e0e11ed24d263202a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf43d27ed728d11b5cde5b9250cfc4614077ed94
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533335"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395712"
 ---
 # <a name="how-to-provide-standard-menu-items-to-a-form"></a>Porady: zapewnianie elementów menu standardowego dla formularza
-Można zapewnić standardowe menu formularzy z <xref:System.Windows.Forms.MenuStrip> formantu.  
+Możesz podać standardowe menu formularzy przy użyciu <xref:System.Windows.Forms.MenuStrip> kontroli.  
   
- Brak kompleksową obsługę tej funkcji w programie Visual Studio.  
+ Brak zaawansowaną obsługę dla tej funkcji w programie Visual Studio.  
   
- Zobacz też [wskazówki: zapewnianie standardowe elementy Menu do formularza](http://msdn.microsoft.com/library/ms233662\(v=vs.110\)).  
+ Zobacz też [wskazówki: zapewnianie standardowych elementów Menu do formularza](walkthrough-providing-standard-menu-items-to-a-form.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu pokazuje sposób użycia <xref:System.Windows.Forms.MenuStrip> formantami formularza z menu standardowego. Wybór elementu menu są wyświetlane w <xref:System.Windows.Forms.StatusStrip> formantu.  
+ Poniższy przykład kodu demonstruje sposób używania <xref:System.Windows.Forms.MenuStrip> formantu, aby utworzyć formularz przy użyciu standardowego menu. Opcje elementu menu są wyświetlane w <xref:System.Windows.Forms.StatusStrip> kontroli.  
   
  [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#1)]  
@@ -32,9 +32,9 @@ Można zapewnić standardowe menu formularzy z <xref:System.Windows.Forms.MenuSt
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Odwołania do zestawów systemu, System.Drawing i System.Windows.Forms.  
+-   Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.  
   
- Uzyskać informacje o kompilowaniu w tym przykładzie z wiersza polecenia dla programu Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [kompilowania z wiersza polecenia csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć w tym przykładzie w programie Visual Studio przez wklejenie kodu do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows formularze kodu przykład za pomocą programu Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows Forms kodu przykładzie przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.MenuStrip>  

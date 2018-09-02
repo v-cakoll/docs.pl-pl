@@ -1,78 +1,78 @@
 ---
-title: Kolejność przetwarzania za pomocą zasad
+title: Przetwarzanie kolejności za pomocą zasad
 ms.date: 03/30/2017
 ms.assetid: 66833724-dc36-4fad-86b0-59ffeaa3ba6a
-ms.openlocfilehash: 15e274a7a513a3208e3a54575dc354310743b731
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b927d8e7090f96b22c0510f9651070ab999c91be
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519421"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398373"
 ---
-# <a name="order-processing-with-policy"></a>Kolejność przetwarzania za pomocą zasad
-Przykładowe kolejność przetwarzania zasad przedstawiono niektóre najważniejsze funkcje wprowadzone w systemie [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Windows Workflow Foundation (WF). Nowy aparat reguł WF są następujące funkcje:  
+# <a name="order-processing-with-policy"></a>Przetwarzanie kolejności za pomocą zasad
+W przykładzie kolejność przetwarzania zasad pokazano niektóre z kluczowych funkcji wprowadzonych w [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Windows Workflow Foundation (WF). Nowy aparat reguł WF są następujące funkcje:  
   
--   Obsługa dotyczące przeciążania operatorów.  
+-   Obsługa przeciążenia operatora.  
   
 -   Obsługa `new` operatora, dzięki czemu użytkownicy mogą tworzyć nowe obiekty i tablice z reguł WF.  
   
--   Obsługa metody rozszerzenia, aby interfejs w wywoływanie metod rozszerzeń z reguł WF użytkownika zgodny z styl kodowania C#.  
+-   Pomoc techniczna dla metody rozszerzenia ułatwić podczas wywoływania metody rozszerzenia reguł WF zgodny z kodowania stylów języka C#.  
   
 > [!NOTE]
 >  W tym przykładzie wymaga, aby [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] jest zainstalowany, aby skompilować i uruchomić. [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] jest wymagany do otwierania plików projektu i rozwiązania.  
   
- W przykładzie pokazano `OrderProcessingPolicy` projektu w jest wprowadzana zamówienie klienta, składający się z Lista numerowana dostępne elementy i kod pocztowy. Kolejność jest przetworzone pomyślnie, jeśli obie pozycje są prawidłowe; w przeciwnym razie zasady tworzy obiekty błąd, wykorzystując przeciążone `+` operatora, a także metodę rozszerzenie wstępnie zdefiniowanych informują użytkownika o błędach.  
+ W przykładzie pokazano `OrderProcessingPolicy` projektu w jest wprowadzana zamówienia klienta, który składa się z listy numerowanej dostępne elementy i kod pocztowy,. Kolejność jest przetwarzany pomyślnie, jeśli obie wpisy są poprawne; w przeciwnym razie zasady tworzy obiekty błąd, wykorzystując przeciążony `+` operatora i metoda wstępnie zdefiniowanych rozszerzeń informować użytkownika błędy.  
   
 > [!NOTE]
->  Aby uzyskać więcej informacji na temat metody rozszerzenia, zobacz [C# w wersji 3.0 specyfikacji](http://go.microsoft.com/fwlink/?LinkId=95402).  
+>  Aby uzyskać więcej informacji dotyczących metod rozszerzających, zobacz [C# w wersji 3.0 specyfikacji](https://go.microsoft.com/fwlink/?LinkId=95402).  
   
- Próbka składa się z następujących projektów:  
+ Przykład składa się z następujących projektów:  
   
 -   `OrderErrorLibrary`  
   
-     `OrderErrorLibrary` Jest biblioteki klas, który definiuje `OrderError` i `OrderErrorCollection` klasy. `OrderError` Jest tworzone wystąpienie, gdy wprowadzono nieprawidłowe dane wejściowe. Biblioteka zawiera także metodę rozszerzenia o `OrderErrorCollection` klasy, która wyświetla `ErrorText` właściwości na wszystkich `OrderError` obiekty w `OrderErrorCollection`.  
+     `OrderErrorLibrary` Jest bibliotekę klas, który definiuje `OrderError` i `OrderErrorCollection` klasy. `OrderError` Tworzone jest wystąpienie, gdy wprowadzono nieprawidłowe dane wejściowe. Biblioteka zawiera także metodę rozszerzającą o `OrderErrorCollection` klasę, która generuje `ErrorText` właściwości na wszystkich `OrderError` obiekty w `OrderErrorCollection`.  
   
 -   `OrderProcessingPolicy`  
   
-     `OrderProcessingPolicy` Projekt jest aplikacją konsoli WF, która definiuje jedną `PolicyFromFile` działania. Działanie ma następujące reguły:  
+     `OrderProcessingPolicy` Projekt to aplikacja konsoli WF, która definiuje pojedyncze `PolicyFromFile` działania. Działanie ma następujące reguły:  
   
     -   `invalidItemNum`  
   
-         Ta reguła sprawdza, czy liczba elementów od 1 do 6 włącznie. Jeśli numer jest prawidłowego zakresu, reguła nie zadziała (inne niż drukowanie do konsoli). Jeśli numer nie jest od 1 do 6, `invalidItemNum` zasada wykonuje następujące czynności:  
+         Ta reguła sprawdza numer od 1 do 6 (włącznie). Jeśli numer jest prawidłowego zakresu, reguła nie działa (inne niż drukowanie do konsoli). Jeśli liczba elementów nie jest od 1 do 6, `invalidItemNum` reguły wykonuje następujące czynności:  
   
-        1.  Tworzy nowy `OrderError` obiektu, przekazanie jej numer wprowadzony i ustawia `ErrorText` i `CustomerName` właściwości obiektu.  
+        1.  Tworzy nową `OrderError` obiekt przekazywanie jej przez numer wprowadzony i ustawia `ErrorText` i `CustomerName` właściwości w obiekcie.  
   
         2.  Tworzy `invalidItemNumErrorCollection` obiektu.  
   
-        3.  Dodaje nowy `OrderError` wystąpienie do `invalidItemNumErrorCollection`.  
+        3.  Dodaje nowo utworzony `OrderError` wystąpienia do `invalidItemNumErrorCollection`.  
   
-         Oznacza to obsługę `new` operatora, z którym można utworzyć wystąpienia obiektów wewnątrz reguły.  
+         W tym przykładzie pokazano obsługę `new` operatora, za pomocą którego można utworzyć wystąpienie obiektów wewnątrz reguły.  
   
     -   `invalidZip`  
   
-         Ta reguła sprawdza, kod pocztowy zawiera 5 cyfr czy znajduje się w zakresie 99998 do 600. Jeśli kod pocztowy jest prawidłowego zakresu, reguła nie zadziała (inne niż drukowanie do konsoli). Jeśli długość kodu pocztowego jest mniejsza niż 5 lub kod pocztowy nie jest między 00600 i 99998, `invalidZip` zasada wykonuje następujące czynności:  
+         Ta reguła sprawdza, czy kod pocztowy z 5 cyfr, a znajduje się w zakresie 600, 99998. Jeśli kod pocztowy jest prawidłowego zakresu, reguła nie działa (inne niż drukowanie do konsoli). Jeśli długość kod pocztowy jest mniejsza niż 5 lub kod pocztowy nie jest między 00600 i 99998, `invalidZip` reguły wykonuje następujące czynności:  
   
-        1.  Tworzy `OrderError` obiektu, przekazanie jej wprowadzony, kod pocztowy i ustawia `ErrorText` i `CustomerName` właściwości obiektu.  
+        1.  Tworzy `OrderError` obiektu, podając mu kod pocztowy wprowadzona i ustawia `ErrorText` i `CustomerName` właściwości w obiekcie.  
   
         2.  Tworzy `invalidZipCodeErrorCollection` obiektu.  
   
-        3.  Dodaje nowy `OrderError` wystąpienie do nowo utworzonego `invalidZipCodeErrorCollection`.  
+        3.  Dodaje nowo utworzony `OrderError` wystąpienie do nowo utworzony `invalidZipCodeErrorCollection`.  
   
-         Ta zasada ponownie przedstawiono obsługę `new` operatora, który służy do tworzenia wystąpienia obiektów wewnątrz reguły.  
+         Ta zasada ponownie Pokazuje obsługę `new` operatora, który służy do tworzenia wystąpień obiektów wewnątrz reguły.  
   
     -   `displayErrors`  
   
-         Ta reguła sprawdza, czy wystąpiły błędy dodane przez poprzednie dwie reguły w dwóch `OrderErrorCollection` obiektów `invalidItemNumErrorCollection` i `invalidIZipCodeErrorCollection`. Jeśli wystąpiły błędy (albo `invalidItemNumErrorCollection` lub `invalidZipCodeErrorCollection` nie jest `null`), reguła wykonuje następujące czynności:  
+         Ta reguła sprawdza, czy wystąpiły błędy dodane przez poprzednie dwie reguły na obu `OrderErrorCollection` obiektów `invalidItemNumErrorCollection` i `invalidIZipCodeErrorCollection`. Jeśli wystąpiły błędy (albo `invalidItemNumErrorCollection` lub `invalidZipCodeErrorCollection` nie `null`), reguła wykonuje następujące czynności:  
   
-        1.  Wywołuje przeciążone `+` operatora, aby skopiować zawartość `invalidItemNumErrorCollection` i `invalidZipCodeErrorCollection` do `invalidOrdersCollection``OrderErrorCollection` wystąpienia.  
+        1.  Wywołania przeciążonych `+` operatora, aby skopiować zawartość `invalidItemNumErrorCollection` i `invalidZipCodeErrorCollection` do `invalidOrdersCollection``OrderErrorCollection` wystąpienia.  
   
-        2.  Wywołania `PrintOrderErrors` — metoda rozszerzenia na `invalidOrdersCollection` i wyprowadza `ErrorText` właściwości na wszystkich `orderError` obiekty w `invalidOrdersCollection`.  
+        2.  Wywołania `PrintOrderErrors` metody rozszerzenia `invalidOrdersCollection` i generuje `ErrorText` właściwości na wszystkich `orderError` obiekty w `invalidOrdersCollection`.  
   
- Przeciążony operator `+` na `OrderErrorCollection` jest zdefiniowany w `OrderErrorCollection` klasy w `OrderErrorLibrary` projektu. Trwa dwa `OrderErrorCollection` obiekty i łączy je do jednej `OrderErrorCollection` obiektu.  
+ Przeciążony operator `+` na `OrderErrorCollection` jest zdefiniowany w `OrderErrorCollection` klasy w `OrderErrorLibrary` projektu. Trwa dwa `OrderErrorCollection` obiektów i łączy je w jedną `OrderErrorCollection` obiektu.  
   
- `PrintOrderErrors` — Metoda rozszerzenia jest też definiowany w `OrderErrorLibrary` projektu. Metody rozszerzenia są nowe C# funkcję, która umożliwia programistom dodawanie nowych metod do publicznego kontraktu istniejącego typu CLR, bez konieczności pochodną klasy lub skompiluj ponownie oryginalnego typu.  
+ `PrintOrderErrors` — Metoda rozszerzenia jest także zdefiniowana w `OrderErrorLibrary` projektu. Metody rozszerzające są nową C# funkcję, która umożliwia deweloperom Dodawanie nowych metod publicznych umowy istniejącego typu CLR, bez konieczności dziedziczyć po nim klasę lub ponownie skompilować oryginalnego typu.  
   
- Po uruchomieniu próbki monit wprowadź nazwę, numer elementu zakupu i kod pocztowy. Te informacje jest następnie weryfikowany przez reguły zdefiniowane w działaniu zasad. Oto przykładowe dane wyjściowe z programu.  
+ Po uruchomieniu przykładu wyświetleniu monitu wprowadź nazwę, numer pozycji do zakupu i kod pocztowy. Informacja ta jest następnie weryfikowany przez od reguł zdefiniowanych w działanie zasad. Poniżej przedstawiono przykładowe dane wyjściowe z programu.  
   
 ```  
 Please enter your name: John  
@@ -125,21 +125,21 @@ Workflow Completed
 Another Order? (Y/N): n  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
 1.  Otwórz plik projektu OrderProcessingPolicy.sln w [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-2.  Istnieją dwa różne projekty w rozwiązaniu: `OrderErrorLibrary` i `OrderProcessingPolicy`. `OrderProcessingPolicy` Projekt używa klasy i metody zdefiniowane w `OrderErrorLibrary`.  
+2.  Istnieją dwa różne projekty w rozwiązaniu: `OrderErrorLibrary` i `OrderProcessingPolicy`. `OrderProcessingPolicy` Projekt korzysta z klasy i metody zdefiniowane w `OrderErrorLibrary`.  
   
-3.  Tworzenie wszystkich projektów.  
+3.  Kompiluj wszystkie projekty.  
   
 4.  Kliknij przycisk **Uruchom**.  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne):  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne):  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu:  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu:  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\Policy\OrderProcessingPolicy`

@@ -8,62 +8,62 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: bb11ece91c1dc8ac27b67e4175c24e480da15812
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25c0b34bd33bee626df14c8dbedce0b82e895b58
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547592"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398270"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>Jak za pomocą programowania drukować pliki XPS
-Można użyć jednego przeciążenia <xref:System.Printing.PrintQueue.AddJob%2A> metody do drukowania [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] pliki bez otwierania <xref:System.Windows.Controls.PrintDialog> lub zasadniczo żadnych [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] w ogóle.  
+Możesz użyć jednego przeciążenia <xref:System.Printing.PrintQueue.AddJob%2A> metodę, aby wydrukować [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] plików bez otwierania <xref:System.Windows.Controls.PrintDialog> lub w zasadzie dowolnego [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] na wszystkich.  
   
- Pozwala również na drukowanie [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] plików za pomocą wielu <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> i <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> metody <xref:System.Windows.Xps.XpsDocumentWriter>. Aby uzyskać więcej informacji o tym [drukowanie dokumentów XPS](https://msdn.microsoft.com/library/849555c8-0c4e-48c0-86bc-a5494c69b36c(v=vs.90)).  
+ Możesz również wydrukować [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] plików przy użyciu wielu <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> i <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> metody <xref:System.Windows.Xps.XpsDocumentWriter>. Aby uzyskać więcej informacji na ten temat [drukowanie dokumentu XPS](https://msdn.microsoft.com/library/849555c8-0c4e-48c0-86bc-a5494c69b36c(v=vs.90)).  
   
- Innym sposobem drukowanie [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] jest użycie <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A> lub <xref:System.Windows.Controls.PrintDialog.PrintVisual%2A> metody <xref:System.Windows.Controls.PrintDialog> formantu. Zobacz [Wywołaj okno dialogowe drukowania](how-to-invoke-a-print-dialog.md).  
+ Innym sposobem drukowanie [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] jest użycie <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A> lub <xref:System.Windows.Controls.PrintDialog.PrintVisual%2A> metody <xref:System.Windows.Controls.PrintDialog> kontroli. Zobacz [Wywołaj okno dialogowe drukowania](how-to-invoke-a-print-dialog.md).  
   
 ## <a name="example"></a>Przykład  
- Za pomocą parametru trzech głównych kroków <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> metody są następujące. Poniższy przykład przedstawia szczegóły.  
+ Główne kroki, aby za pomocą parametru trzech <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> metody są następujące. W poniższym przykładzie zwraca szczegółowe informacje.  
   
-1.  Ustal, czy drukarka jest XPSDrv. (Zobacz [Omówienie drukowania](printing-overview.md) więcej informacji o XPSDrv.)  
+1.  Określ, czy drukarka występuje XPSDrv drukarki. (Zobacz [Omówienie drukowania](printing-overview.md) więcej informacji na temat XPSDrv.)  
   
-2.  Jeśli drukarka nie jest XPSDrv drukarki, ustawić apartamencie wątku pojedynczego wątku.  
+2.  Jeśli drukarka jest drukarki XPSDrv, ustawić komórka wątku pojedynczego wątku.  
   
-3.  Utwórz wystąpienie serwera wydruku i obiekt kolejki wydruku.  
+3.  Utwórz wystąpienie serwera wydruku, a obiekt kolejki wydruku.  
   
 4.  Wywołaj metodę, określając nazwę zadania, plików, które mają być drukowane i <xref:System.Boolean> flaga oznaczająca, czy drukarka jest XPSDrv.  
   
- W poniższym przykładzie pokazano, jak partii drukowania wszystkich [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] pliki w katalogu. Mimo że aplikacja wyświetli monit o określ katalog, parametr trzech <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> metoda nie wymaga [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Można w dowolnej ścieżce kodu, gdzie masz [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] nazwa pliku i ścieżki, które można przekazać do niego.  
+ W poniższym przykładzie pokazano, jak dzielić na partie Drukuj wszystkie [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] plików w katalogu. Mimo że aplikacja monituje użytkownika o określ katalog, parametr trzech <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> metoda nie wymaga [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Może służyć w dowolnej ścieżce kodu których masz [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] nazwa pliku i ścieżkę, którą można przekazać do niego.  
   
- Parametr trzech <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> przeciążenia z <xref:System.Printing.PrintQueue.AddJob%2A> muszą działać w apartamencie wątku pojedynczego zawsze, gdy <xref:System.Boolean> jest parametr `false`, który musi być, gdy jest używany z systemem innym niż XPSDrv drukarki. Jednakże domyślny stan apartamentu dla [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] jest wiele wątków. To ustawienie domyślne musi być wycofana, ponieważ w przykładzie założono drukarki z systemem innym niż XPSDrv.  
+ Parametr trzech <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> przeciążenia <xref:System.Printing.PrintQueue.AddJob%2A> musi działać w komórka wątku pojedynczego zawsze wtedy, gdy <xref:System.Boolean> parametr jest `false`, który musi być, gdy jest używany bez XPSDrv drukarki. Jednakże domyślny stan apartamentu dla [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] jest wiele wątków. To ustawienie domyślne muszą zostać wycofane, ponieważ w przykładzie założono drukarek innych XPSDrv.  
   
- Istnieją dwa sposoby, aby zmienić domyślny. Jednym ze sposobów jest po prostu Dodaj <xref:System.STAThreadAttribute> (to znaczy "`[System.STAThreadAttribute()]`") powyżej pierwszy wiersz aplikacji `Main` — metoda (zazwyczaj "`static void Main(string[] args)`"). Jednak wiele aplikacji wymaga, aby `Main` metody mają stan wielowątkowej, dlatego druga metoda: Umieść wywołanie <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> w oddzielnym wątku, w których stanu apartamentu ma ustawioną wartość <xref:System.Threading.ApartmentState.STA> z <xref:System.Threading.Thread.SetApartmentState%2A>. W poniższym przykładzie użyto ta technika drugiego.  
+ Istnieją dwa sposoby, aby zmienić domyślny. Jednym ze sposobów jest po prostu Dodaj <xref:System.STAThreadAttribute> (czyli "`[System.STAThreadAttribute()]`") tuż nad pierwszy wiersz aplikacji `Main` — metoda (zazwyczaj "`static void Main(string[] args)`"). Jednak wiele aplikacji wymaga `Main` metody mają stan wielowątkowej, więc ma druga metoda: wstrzymanie wywołanie <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> w oddzielnym wątku, w których stan apartamentu jest równa <xref:System.Threading.ApartmentState.STA> z <xref:System.Threading.Thread.SetApartmentState%2A>. W poniższym przykładzie użyto tej techniki drugiego.  
   
- W związku z tym przykład rozpoczyna się przez utworzenie wystąpienia <xref:System.Threading.Thread> obiekt i przekazanie jej **PrintXPS** metodę jako <xref:System.Threading.ThreadStart> parametru. ( **PrintXPS** metoda jest zdefiniowana później w przykładzie.) Następny wątek ustawiono komórka wątku pojedynczego. Tylko kod pozostałych `Main` metoda uruchamia nowego wątku.  
+ W związku z tym przykład rozpoczyna się przez utworzenie wystąpienia <xref:System.Threading.Thread> obiektu i przekazanie do niej **PrintXPS** metodę jako <xref:System.Threading.ThreadStart> parametru. ( **PrintXPS** metoda jest zdefiniowana w tym przykładzie w dalszej części.) Następnie wątek jest równa komórka wątku pojedynczego. Kod tylko pozostałe `Main` metoda uruchamia nowy wątek.  
   
- Rodzaje przykładu znajduje się w `static` **BatchXPSPrinter.PrintXPS** metody. Po utworzeniu serwera wydruku i kolejki, metoda wyświetla monit o nadrzędnym katalogu [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] plików. Po sprawdzenie istnienia katalogu i w obecności \*XPS pliki w nim, metoda dodaje każdy z tych plików do kolejki wydruku. W przykładzie założono, że drukarka jest z systemem innym niż XPSDrv, dlatego firma Microsoft przekazywane `false` do ostatniego parametru metody <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> metody. Z tego powodu będzie sprawdzać poprawność metody [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] znacznika w pliku przed próbuje przekonwertować go do języka opisu strony drukarki. W przypadku niepowodzenia weryfikacji, jest zwracany wyjątek. Przykładowy kod będzie catch wyjątku, powiadomienie użytkownika o nim i przejdź do następnego przetwarzania [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] pliku.  
+ Rodzaje przykładu znajduje się w `static` **BatchXPSPrinter.PrintXPS** metody. Po utworzeniu serwera wydruku i kolejki, metoda monituje użytkownika o katalogu zawierającego [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] plików. Po upewnieniu się, istnienie katalogu i obecności \*XPS, pliki w nim, metoda dodaje każdego takiego pliku do kolejki wydruku. W przykładzie założono, że drukarka jest bez XPSDrv, dzięki czemu możemy kończy się sukcesem `false` do ostatniego parametru <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> metody. Z tego powodu metody zostanie przeprowadzona Weryfikacja [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] znaczników w pliku, zanim spróbuje przekonwertować języka opisu strony drukarki. Jeśli sprawdzanie poprawności nie powiedzie się, jest zgłaszany wyjątek. Przykładowy kod będzie przechwycić wyjątek, Powiadom użytkownika o nim i przejdź do następnego przetwarzania [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] pliku.  
   
  [!code-csharp[BatchPrintXPSFiles#BatchPrintXPSFiles](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BatchPrintXPSFiles/CSharp/Program.cs#batchprintxpsfiles)]
  [!code-vb[BatchPrintXPSFiles#BatchPrintXPSFiles](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BatchPrintXPSFiles/visualbasic/program.vb#batchprintxpsfiles)]  
   
- Jeśli używasz XPSDrv drukarki, a następnie można ustawić ostatni parametr `true`. W takim przypadku od [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] jest języka opisu strony drukarki, metoda wyśle plik do drukarki bez jej skuteczność lub konwertowana na inny język opisu strony. Aby dowiedzieć się w czasie projektowania, czy będzie używana aplikacja XPSDrv drukarki, można zmodyfikować aplikacji, aby go przeczytać <xref:System.Printing.PrintQueue.IsXpsDevice%2A> właściwości i gałęzi zgodnie z ich znalezienia.  
+ Jeśli używasz XPSDrv drukarki, a następnie można ustawić ostatni parametr `true`. W takim przypadku od [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] jest język opisu strony drukarki, metoda wyśle plik do drukarki, bez sprawdzania poprawności jej lub podczas konwertowania go do innego języka opisu strony. Jeśli wiadomo w czasie projektowania tego, czy aplikacja będzie korzystać z drukarek XPSDrv, można zmodyfikować aplikację, aby odczytywać <xref:System.Printing.PrintQueue.IsXpsDevice%2A> właściwości i gałąź, zgodnie z tego, co znajduje.  
   
- Ponieważ początkowo będzie kilka drukarek XPSDrv dostępna natychmiast po wydaniu [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] i Microsoft .NET Framework może być konieczne ukryć drukarki z systemem innym niż XPSDrv jako XPSDrv drukarki. Aby to zrobić, należy dodać do listy plików w następującym kluczu rejestru komputera z uruchomionym aplikacji Pipelineconfig.xml:  
+ Ponieważ początkowo będą kilka drukarek XPSDrv dostępne natychmiast po wydaniu [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] i Microsoft .NET Framework, może być konieczne zamaskowania bez XPSDrv drukarki jako drukarki XPSDrv. Aby to zrobić, należy dodać do listy plików w następującym kluczu rejestru komputera z uruchomioną aplikację Pipelineconfig.xml:  
   
  HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3\\*\<PseudoXPSPrinter >* \DependentFiles  
   
- gdzie  *\<PseudoXPSPrinter >* jest wszystkie kolejki wydruku. Następnie należy ponownie uruchomić komputer.  
+ gdzie  *\<PseudoXPSPrinter >* jest dowolnym kolejki wydruku. Następnie należy ponownie uruchomić komputer.  
   
- Ten kamuflażu umożliwi przekazać `true` jako ostatni parametr z <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> bez powodowania wyjątek, ale ponieważ  *\<PseudoXPSPrinter >* nie jest drukarki XPSDrv będzie drukować tylko odzyskiwanie.  
+ Ten kamuflażu umożliwią przekazać `true` jako ostatni parametr z <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> bez powodowania wyjątek, ale ponieważ  *\<PseudoXPSPrinter >* nie jest tak naprawdę drukarki XPSDrv będzie drukować tylko wyrzucania elementów.  
   
- **Uwaga** dla uproszczenia w powyższym przykładzie używa obecności \*rozszerzenia XPS jako jego test, który jest plikiem [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]. Jednak [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] pliki muszą mieć rozszerzenie. [IsXPS.exe (narzędzie zgodności isXPS)](https://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3(v=vs.100)) jest jednym ze sposobów testowania pliku dla [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ważności.  
+ **Uwaga** dla uproszczenia w powyższym przykładzie użyto obecności \*rozszerzenie .xps jako jego test, który jest plikiem [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]. Jednak [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] pliki nie mają mieć tego rozszerzenia. [IsXPS.exe (narzędzie zgodności isXPS)](https://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3(v=vs.100)) jeden ze sposobów testowania pliku dla [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ważności.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Printing.PrintQueue>  
  <xref:System.Printing.PrintQueue.AddJob%2A>  
  <xref:System.Threading.ApartmentState>  
  <xref:System.STAThreadAttribute>  
- [XPS](http://www.microsoft.com/xps)  
+ [XPS](https://www.microsoft.com/xps)  
  [Drukowanie dokumentów XPS](https://msdn.microsoft.com/library/849555c8-0c4e-48c0-86bc-a5494c69b36c(v=vs.90))  
  [Zarządzana i niezarządzana wątkowość](https://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5(v=vs.100))  
  [isXPS.exe (narzędzie zgodności isXPS)](https://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3(v=vs.100))  

@@ -13,21 +13,21 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 5b56e2aa-dc05-444f-930c-2d7b23f9ad5b
-ms.openlocfilehash: 7a2ce452a1e55d0b01245c4eb7f43056031b9e2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 94abd36affdccec1d01c030fcff4c6de93ca6c72
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533916"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395384"
 ---
 # <a name="how-to-run-an-operation-in-the-background"></a>Porady: uruchamianie operacji w tle
-Jeśli masz operacji potrwa długo, i nie chcesz powodować opóźnienia w interfejsie użytkownika, można użyć <xref:System.ComponentModel.BackgroundWorker> klasę, aby uruchomić operację w innym wątku.  
+Jeśli operacja, która będzie zająć dużo czasu, i nie chcesz powodować opóźnienia w interfejsie użytkownika, możesz użyć <xref:System.ComponentModel.BackgroundWorker> klasy, aby uruchomić operację na inny wątek.  
   
- Poniższy przykład kodu pokazuje sposób uruchamiania czasochłonna operacja w tle. Formularz zawiera **Start** i **anulować** przycisków. Kliknij przycisk **Start** przycisk, aby uruchomić operację asynchroniczną. Kliknij przycisk **anulować** przycisk, aby zatrzymać operację uruchomiona asynchroniczną. Wynik każdej operacji jest wyświetlany w <xref:System.Windows.Forms.MessageBox>.  
+ Poniższy przykład kodu pokazuje sposób uruchamiania czasochłonna operacja w tle. Formularz zawiera **Start** i **anulować** przycisków. Kliknij przycisk **Start** przycisk, aby uruchomić operację asynchroniczną. Kliknij przycisk **anulować** przycisk, aby zatrzymać operację pracę asynchroniczną. Wynikiem operacji jest wyświetlana w <xref:System.Windows.Forms.MessageBox>.  
   
- Brak kompleksową obsługę tego zadania w programie Visual Studio.  
+ Brak zaawansowaną obsługę dla tego zadania w programie Visual Studio.  
   
- Zobacz też [wskazówki: przeprowadzanie operacji w tle](http://msdn.microsoft.com/library/ms233672\(v=vs.110\)).  
+ Zobacz też [wskazówki: przeprowadzanie operacji w tle](walkthrough-running-an-operation-in-the-background.md).  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[System.ComponentModel.BackgroundWorker.Example#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#1)]
@@ -36,9 +36,9 @@ Jeśli masz operacji potrwa długo, i nie chcesz powodować opóźnienia w inter
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Odwołania do zestawów systemu, System.Drawing i System.Windows.Forms.  
+-   Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.  
   
- Uzyskać informacje o kompilowaniu w tym przykładzie z wiersza polecenia dla programu Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [kompilowania z wiersza polecenia csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć w tym przykładzie w programie Visual Studio przez wklejenie kodu do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows formularze kodu przykład za pomocą programu Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows Forms kodu przykładzie przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ComponentModel.BackgroundWorker>  

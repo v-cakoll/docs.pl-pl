@@ -21,23 +21,23 @@ helpviewer_keywords:
 - controls [Windows Forms], captions
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
-ms.openlocfilehash: d39b0b7ccf95f0da22086a72aa2cee424d7ea8ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d9c9bea26cfc3d5b2cfc4484173a7680ff2fc34d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535616"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399329"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Porady: ustawianie tekstu wyświetlanego przez formant formularzy systemu Windows
-Formanty formularzy systemu Windows zazwyczaj wyświetlić tekst związany z podstawowej funkcji formantu. Na przykład <xref:System.Windows.Forms.Button> kontroli zwykle zawiera nagłówek wskazującą, jakie działania zostaną wykonane, po kliknięciu przycisku. Dla wszystkich kontrolek, można ustawić lub zwróć tekst za pomocą <xref:System.Windows.Forms.Control.Text%2A> właściwości. Czcionkę można zmienić za pomocą <xref:System.Windows.Forms.Control.Font%2A> właściwości. Można również ustawić tekst przy użyciu narzędzia Projektant.  Zobacz też [jak: utworzyć dostępu do kluczy dla systemu Windows formularzy formantów przy użyciu narzędzia Projektant](http://msdn.microsoft.com/library/ms233673\(v=vs.110\)), [porady: ustawić tekst wyświetlany za pomocą formantu formularzy systemu Windows projektanta](http://msdn.microsoft.com/library/ms233665\(v=vs.110\)), [porady: Ustawianie obrazu Wyświetlany przez formant przy użyciu narzędzia Projektant formularzy systemu Windows](http://msdn.microsoft.com/library/ms233656\(v=vs.110\)).  
+Kontrolek formularzy Windows Forms jest zazwyczaj wyświetlane jakiś tekst, który jest powiązany z podstawową funkcją kontroli. Na przykład <xref:System.Windows.Forms.Button> kontroli zwykle zawiera nagłówek wskazującą, jakie działania będą wykonywane po kliknięciu przycisku. Dla wszystkich kontrolek, możesz ustawić lub zwróć tekst przy użyciu <xref:System.Windows.Forms.Control.Text%2A> właściwości. Czcionkę można zmienić za pomocą <xref:System.Windows.Forms.Control.Font%2A> właściwości. Można również ustawić tekst za pomocą projektanta.  Zobacz też [jak: tworzenie dostępu do kluczy dla Windows formularzy kontrolki za pomocą projektanta](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [jak: Ustaw tekst wyświetlany za pomocą kontrolki formularzy Windows projektanta](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [porady: Ustawianie obrazu Wyświetlane przez Windows Forms przy użyciu narzędzia Projektant](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).  
   
-### <a name="to-set-the-text-displayed-by-a-control-programmatically"></a>Aby ustawić tekst wyświetlany przez formant programowo  
+### <a name="to-set-the-text-displayed-by-a-control-programmatically"></a>Aby ustawić tekst wyświetlany przez kontrolkę programowe  
   
 1.  Ustaw <xref:System.Windows.Forms.Control.Text%2A> właściwości na ciąg.  
   
-     Można utworzyć klucza dostępu podkreślony obejmuje handlowego "i" (&) przed literą, która będzie klucz dostępu.  
+     Aby utworzyć klucz dostępu podkreślony obejmuje handlowe "i" (&) przed literą, która będzie klucz dostępu.  
   
-2.  Ustaw <xref:System.Windows.Forms.Control.Font%2A> dla właściwości typu obiektu <xref:System.Drawing.Font>.  
+2.  Ustaw <xref:System.Windows.Forms.Control.Font%2A> właściwość do obiektu typu <xref:System.Drawing.Font>.  
   
     ```vb  
     Button1.Text = "Click here to save changes"  
@@ -57,7 +57,7 @@ Formanty formularzy systemu Windows zazwyczaj wyświetlić tekst związany z pod
     ```  
   
     > [!NOTE]
-    >  Znak ucieczki służy do wyświetlania znaków specjalnych w elementy interfejsu użytkownika, które będzie zwykle je interpretować, takich jak elementy menu. Na przykład następujący wiersz kodu ustawia tekst elementu menu do odczytu "& teraz na coś dwóch zupełnie różnych":  
+    >  Aby wyświetlić znaki specjalne w elementach interfejsu użytkownika, które będą zwykle je interpretować, takich jak elementy menu, można użyć znaku ucieczki. Na przykład, następujący wiersz kodu ustawia element menu tekstu do odczytania "& teraz do czegoś zupełnie inny":  
   
     ```vb  
     MPMenuItem.Text = "&& Now For Something Completely Different"  

@@ -1,35 +1,35 @@
 ---
-title: Weryfikacja po stronie klienta (Sprawdzanie poprawności w warstwy prezentacji)
-description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Weryfikacja po stronie klienta (Sprawdzanie poprawności w warstwy prezentacji)
+title: Weryfikacja po stronie klienta (Weryfikacja w warstwach prezentacji)
+description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Weryfikacja po stronie klienta (Weryfikacja w warstwach prezentacji)
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: c61a08566492a59090b19f99aaf97b5f6082c1fb
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 70a1f716797e03acdcbf1c58d4b0302449d98fa9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104572"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395679"
 ---
-# <a name="client-side-validation-validation-in-the-presentation-layers"></a>Weryfikacja po stronie klienta (Sprawdzanie poprawności w warstwy prezentacji)
+# <a name="client-side-validation-validation-in-the-presentation-layers"></a>Weryfikacja po stronie klienta (Weryfikacja w warstwach prezentacji)
 
-Nawet wtedy, gdy źródłem prawdy jest model domeny, a ostatecznie musi mieć weryfikacji na poziomie modelu domeny, sprawdzania poprawności, nadal mogą być obsługiwane zarówno po stronie klienta, jak i poziom modelu domeny (po stronie serwera).
+Nawet wtedy, gdy źródło prawdziwych danych jest modelem domeny i ostatecznie konieczne jest posiadanie weryfikacji na poziomie modelu domeny, sprawdzania poprawności, nadal mogą być obsługiwane na poziomie modelu domeny (po stronie serwera) i po stronie klienta.
 
-Weryfikacja po stronie klienta jest doskonałym ułatwienia dla użytkowników. Zapisuje w przeciwnym razie poświęcić czas oczekiwania na obiegu do serwera, który może zwrócić błędy sprawdzania poprawności. W terminologii biznesowej nawet kilka części sekundy pomnożone setki razy każdego dnia dodaje do dużo czasu, wydatków i frustracji spowodowanej. Proste i bezpośrednie weryfikacji umożliwia użytkownikom wydajniejszą pracę i tworzy lepszą jakość danych wejściowych i wyjściowych.
+Weryfikacja po stronie klienta jest doskonałym wygodę dla użytkowników. Zaoszczędzić czas, który one byłby przeznaczany na oczekiwanie na komunikację dwustronną do serwera, który może zwrócić błędy sprawdzania poprawności. W terminologii biznesowej nawet kilka użycie ułamkowych części sekundy pomnożone setki razy każdego dnia dodaje do mnóstwo czasu i pieniędzy oraz Rozczarowanie. Proste i natychmiastowe sprawdzanie poprawności umożliwia użytkownikom bardziej wydajną pracę i wygenerować lepszą jakość danych wejściowych i wyjściowych.
 
-Tak samo, jak model widoku i modelu domeny są różne, sprawdzanie poprawności modelu widoku i weryfikacji modelu domeny może być podobne, ale następnie służą do różnych celów. Jeśli wiadomo o suchej (nie powtarzaj samodzielnie zasada), należy wziąć pod uwagę w tym przypadku ponowne użycie kodu może to także oznaczać sprzężenia, czy w aplikacjach dla przedsiębiorstw jest ważniejsze nie do sprzęgania po stronie serwera po stronie klienta niż wykonaj suchej zasady.
+Tak, jak model widoku i modelu domeny są różne, sprawdzanie poprawności modelu widoku i sprawdzanie poprawności modelu domeny mogą być podobne, ale następnie spełniać różne zadania. Jeśli dane o PRÓBNEGO (nie należy powtórzyć samodzielnie zasada), należy wziąć pod uwagę, w tym przypadku ponowne wykorzystanie kodu może również oznaczać sprzężenia i w aplikacjach dla przedsiębiorstw jest niezwykle ważne nie połączenie po stronie serwera na komputerach klienckich, niż się postępuj zgodnie z zasadą susz.
 
-Nawet przy użyciu weryfikacji po stronie klienta, należy zawsze sprawdzić poleceniach lub wejściowych DTOs w kodzie serwera, ponieważ serwer interfejsy API są zaatakowania. Zazwyczaj zastosowanie obu jest najlepsze rozwiązanie, ponieważ jeśli masz aplikację klienta z punktu widzenia środowiska użytkownika jest najlepszym rozwiązaniem jest aktywne i nie zezwala użytkownikowi na wprowadzenie nieprawidłowe informacje.
+Nawet korzystając z weryfikacji po stronie klienta, należy zawsze sprawdzić poleceń lub wejściowych dto w kodzie serwera, ponieważ serwer interfejsy API są zaatakowania. Zwykle zastosowanie obu podejść jest najlepsze rozwiązanie, ponieważ w przypadku aplikacji klienckiej, z punktu widzenia UX najlepiej stosować proaktywne podejście i uniemożliwia użytkownikowi wprowadzanie nieprawidłowe informacje.
 
-W związku z tym w kodzie po stronie klienta zazwyczaj sprawdzania poprawności ViewModels. Można również sprawdzić poprawności klienta dane wyjściowe poleceń lub DTOs przed wysłaniem ich do usług.
+W związku z tym w kodzie po stronie klienta zazwyczaj zweryfikowanie modele widoków. Można również sprawdzić poprawności klienta przed wysłaniem ich do usługi danych wyjściowych dto ani nowych poleceń.
 
-Implementacja weryfikacji po stronie klienta zależy od tego, jakiego rodzaju aplikacji klienckiej tworzenia. Będzie inny są sprawdzanie poprawności danych w sieci web aplikacji sieci web MVC za pomocą większość kodu w aplikacji sieci web SPA przy użyciu tego sprawdzania poprawności jest kodowany w JavaScript i TypeScript, .NET lub aplikacji mobilnej na stałe dzięki platformie Xamarin i C\#.
+Implementacja weryfikacji po stronie klienta zależy od tego, jakiego rodzaju aplikacji klienckiej, którą tworzysz. Będzie on być inny, Jeśli zatwierdzasz danych w sieci web aplikacji sieci web MVC za pomocą większość kodu na platformie .NET, SPA aplikacji sieci web za pomocą tego sprawdzania poprawności są kodowane w języku JavaScript, TypeScript, czy lub aplikacji mobilnej kodowanego z rozwiązaniami Xamarin i C#.
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
-### <a name="validation-in-xamarin-mobile-apps"></a>Sprawdzanie poprawności w aplikacji mobilnych Xamarin
+### <a name="validation-in-xamarin-mobile-apps"></a>Sprawdzanie poprawności w aplikacjach mobilnych platformy Xamarin
 
--   **Sprawdź poprawność tekst wejściowy i argument Pokaż błędy**
+-   **Sprawdź poprawność tekst wejściowy i Pokaż błędy**
     [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
 -   **Wywołanie zwrotne weryfikacji**
@@ -40,29 +40,28 @@ Implementacja weryfikacji po stronie klienta zależy od tego, jakiego rodzaju ap
 -   **Rick Anderson. Dodawanie walidacji**
     [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
 
-### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>Sprawdzanie poprawności w SPA Web apps (kątowego 2 TypeScript, JavaScript)
+### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>Sprawdzanie poprawności w SPA, Web apps (Angular 2, TypeScript, JavaScript)
 
--   **Ado Kukic. Dyrektywy angular weryfikacji formularza 2** **
-    **[*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
+-   **Ado Kukic. Platformy angular 2 formularz weryfikacji**
+    [*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
 
--   **Sprawdzanie poprawności formularza**
+-   **Weryfikacji formularza**
     [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
 
--   **Sprawdzanie poprawności.** Błyskawicznie dokumentacji.
+-   **Sprawdzanie poprawności.** Szybka i bezproblemowa dokumentację.
     [*https://breeze.github.io/doc-js/validation.html*](https://breeze.github.io/doc-js/validation.html)
 
-Podsumowując są najważniejsze pojęcia w odniesieniu do sprawdzania poprawności:
+Podsumowując poniżej przedstawiono najważniejsze pojęcia związane z weryfikacją:
 
--   Jednostki i agreguje powinien wymuszać własnych spójności i ważność "zawsze". Łączny certyfikaty główne są odpowiedzialne za spójności obejmujące wiele urządzeń w ramach tej samej agregacji.
+- Jednostki i agregacji należy wymusić spójność własne i ważność "zawsze". Katalogi główne agregacji są odpowiedzialne za spójność wielu jednostek w ramach tej samej agregacji.
 
--   Jeśli uważasz, że jednostka musi podać nieprawidłowy stan, należy wziąć pod uwagę przy użyciu modelu innego obiektu — na przykład przy użyciu tymczasowego DTO, dopóki nie zostaną utworzone jednostki końcowej domeny.
+- Jeśli uważasz, że jednostka musi podać nieprawidłowy stan, należy wziąć pod uwagę przy użyciu modelu innego obiektu — na przykład za pomocą tymczasowy obiekt DTO, dopóki nie utworzysz jednostki końcowej domeny.
 
--   Należy utworzyć kilka powiązanych obiektów, takich jak agregacji, są one tylko prawidłowe po wszystkich z nich zostały utworzone, należy wziąć pod uwagę przy użyciu wzorca fabryki.
+- Jeśli musisz utworzyć kilka powiązanych obiektów, takich jak agregacji, i są tylko prawidłowe gdy wszystkie z nich zostały utworzone, należy wziąć pod uwagę przy użyciu wzorca fabryki.
 
--   Struktury weryfikacji najlepiej służą w określonych warstw, takich jak warstwy prezentacji lub warstwy aplikacji/usługi, ale zwykle nie warstwy modelu domeny, ponieważ będzie potrzebny do wykonania silne zależności w ramach infrastruktury.
+- Struktury sprawdzania poprawności najlepiej sprawdzają w określonych warstw, np. Warstwa prezentacji lub warstwie aplikacji/usługi, ale zwykle nie w warstwie modelu domeny, ponieważ należy skorzystać z silną zależności w ramach infrastruktury.
 
--   W większości przypadków nadmiarowe weryfikacji po stronie klienta jest dobra, ponieważ aplikacji mogą być aktywne.
-
+- W większości przypadków nadmiarowe weryfikacji po stronie klienta jest dobre rozwiązanie, ponieważ aplikacja może być aktywne.
 
 >[!div class="step-by-step"]
 [Poprzednie](domain-model-layer-validations.md)

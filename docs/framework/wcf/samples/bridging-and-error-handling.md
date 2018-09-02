@@ -2,56 +2,56 @@
 title: Mostkowanie i obsługa błędów
 ms.date: 03/30/2017
 ms.assetid: 4ae87d1a-b615-4014-a494-a53f63ff0137
-ms.openlocfilehash: 20f5af5736e5869ead0f7c50ce0fff22391ea730
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 6afaddc75855b7e95ad708b2179cabb9aee35001
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804394"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389071"
 ---
 # <a name="bridging-and-error-handling"></a>Mostkowanie i obsługa błędów
-W przykładzie pokazano, jak usługa routingu Windows Communication Foundation (WCF) jest używana mostkowania komunikacji między klientem a usługą, która użyć różnych powiązania. W tym przykładzie również przedstawia sposób użycia usługi tworzenia kopii zapasowych dla scenariuszy trybu failover. Usługa routingu jest składnikiem usługi WCF, który ułatwia obejmują routerem na podstawie zawartości w aplikacji. W tym przykładzie dostosowuje próbki Kalkulator WCF wzorcowej do komunikowania się przy użyciu usługi routingu.  
+Niniejszy przykład pokazuje, jak usługa routingu Windows Communication Foundation (WCF) służy do mostkowanie komunikacji między klientem a usługą, używanego przez różnych powiązania. Ten przykład pokazuje także sposób korzystania z usługi tworzenia kopii zapasowych dla scenariusze trybu failover. Usługa routingu jest składnikiem usługi WCF, który ułatwia to dołączenie routerem na podstawie zawartości do aplikacji. W tym przykładzie dostosowuje się standardowa przykładowe Kalkulator WCF do komunikowania się za pomocą usługi routingu.  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\ErrorHandlingAndBridging`  
   
-## <a name="sample-details"></a>Szczegóły próbki  
- W tym przykładzie klient Kalkulator jest skonfigurowany do wysyłania komunikatów do punktu końcowego udostępnianych przez router. Usługa routingu jest skonfigurowany do akceptowania wszystkich wiadomości wysłanych do niego i przekazują je do punktu końcowego, który odpowiada usługi Kalkulator. Następujące punkty opisano konfiguracji podstawowej usługi Kalkulator, usługę Kalkulator kopii zapasowych i klienta Kalkulator i jak komunikacji między klientem a usługą jest wykonywana przy użyciu usługi routingu:  
+## <a name="sample-details"></a>Przykład szczegółów  
+ W tym przykładzie klient Kalkulator jest skonfigurowany do wysyłania wiadomości do punktu końcowego uwidocznionego przez router. Usługa routingu jest skonfigurowany do akceptowania wszystkie komunikaty wysyłane do niej i przekazują je do punktu końcowego, który odnosi się do usługi kalkulatora. Następujące punkty opisano w konfiguracji podstawowej usługi Kalkulator, usługę Kalkulator kopii zapasowych i klienta Kalkulator i jak się dzieje komunikacji między klientem a usługą przy użyciu usługi routingu:  
   
--   Klient Kalkulator jest skonfigurowany do użycia klasy BasicHttpBinding, gdy usługa Kalkulator jest skonfigurowana do używania NetTcpBinding. Usługa routingu automatycznie konwertuje komunikaty w razie potrzeby przed wysłaniem ich do usługi Kalkulator, a także program konwertuje odpowiedzi tak, aby Kalkulator klienta może uzyskiwać do nich dostęp.  
+-   Klient Kalkulator jest skonfigurowany do użycia BasicHttpBinding, podczas gdy usługa Kalkulator jest skonfigurowana do używania NetTcpBinding. Usługa routingu automatycznie konwertuje komunikaty w razie potrzeby przed wysłaniem ich do usługi Kalkulator i konwertuje ono również odpowiedzi, aby klient Kalkulator mają do nich dostęp.  
   
--   Usługa routingu zna dwie usługi Kalkulator: głównej usługi Kalkulator i Kalkulator kopii zapasowych. Usługa routingu najpierw próbuje komunikować się z podstawowy punkt końcowy usługi Kalkulator. Jeśli ta próba kończy się niepowodzeniem z powodu punktu końcowego są w dół, usługa routingu następnie próbuje połączyć się z punktem końcowym usługi Kalkulator kopii zapasowych.  
+-   Usługa routingu obsługującemu dwie usługi Kalkulatora: podstawowe usługi Kalkulator i wykonaj kopię zapasową Kalkulator. Usługa routingu najpierw próbuje komunikować się z podstawowego punktu końcowego usługi kalkulatora. Jeśli ta próba kończy się niepowodzeniem ze względu na punkt końcowy jest wciśnięty, usługa routingu próbuje się komunikować z punktem końcowym usługi Kalkulator kopii zapasowych.  
   
- W związku z tym komunikatów wysłanych z klienta są odbierane przez router i są przekierowane do rzeczywistego usługi Kalkulator. Jeśli punkt końcowy usługi Kalkulator działa, usługa routingu kieruje wiadomości z punktem końcowym usługi Kalkulator kopii zapasowych. Komunikaty z usługi Kalkulator kopie zapasowe są odsyłane do routera usługi, który z kolei przekazuje je do Kalkulatora klienta.  
+ Ten sposób wiadomości wysłanych z klienta są odbierane przez router, a są przekierowane do rzeczywistej usługi kalkulatora. Jeśli punkt końcowy usługi Kalkulator jest wyłączony, usługa routingu kieruje wiadomości z punktem końcowym usługi Kalkulator kopii zapasowych. Komunikaty z Kalkulatora usługi kopii zapasowej są wysyłane do routera usługi, który z kolei przekazuje je do klienta kalkulatora.  
   
 > [!NOTE]
->  Listę kopii zapasowych może mieć więcej niż jeden punkt końcowy zdefiniowany. W tym przypadku jeśli punkt końcowy usługi tworzenia kopii zapasowych jest wyłączony, usługa routingu próbuje połączyć się następnego punktu końcowego kopii zapasowych na liście, dopóki nie wystąpi w przypadku pomyślnego nawiązania połączenia.  
+>  Wykaz kopii zapasowych może mieć więcej niż jeden punkt końcowy zdefiniowany. W tym przypadku punkt końcowy usługi tworzenia kopii zapasowych nie działa, usługa routingu będzie próbuje nawiązać połączenie do następnego punktu końcowego kopii zapasowych na liście do momentu pomyślnego połączenia wystąpienia.  
   
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
   
-1.  Przy użyciu [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], otwórz RouterBridgingAndErrorHandling.sln.  
+1.  Za pomocą [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], otwórz RouterBridgingAndErrorHandling.sln.  
   
-2.  Naciśnij klawisz F5 lub CTRL + SHIFT + B w programie Visual Studio  
+2.  Naciśnij klawisz F5 lub CTRL + SHIFT + B, w programie Visual Studio  
   
-    1.  Jeśli chcesz automatyczne uruchamianie niezbędne projektów po naciśnięciu klawisza F5, kliknij prawym przyciskiem myszy rozwiązanie, wybierz **właściwości**i w **projekt startowy** węźle **wspólne właściwości**, wybierz pozycję **wiele projektów startowych**i ustaw wszystkie projekty **Start**.  
+    1.  Jeśli chcesz automatycznie uruchomić projektów konieczne po naciśnięciu klawisza F5, kliknij prawym przyciskiem myszy rozwiązanie, wybierz opcję **właściwości**, a następnie w **projekt startowy** węźle **wspólne właściwości**, wybierz opcję **wiele projektów startowych**, a wszystkie projekty **Start**.  
   
-    2.  W przypadku tworzenia projektu z klawiszy CTRL + SHIFT + B, uruchom następujące aplikacje:  
+    2.  Jeśli tworzysz projekt za pomocą klawiszy CTRL + SHIFT + B, uruchom następujące aplikacje:  
   
         1.  Kalkulator klienta (. / CalculatorClient/bin/client.exe)  
   
-        2.  Usługa kalkulatora (. / CalculatorService/bin/service.exe)  
+        2.  Kalkulator usługi (. / CalculatorService/bin/service.exe)  
   
         3.  Usługa routingu (. / RoutingService/bin/RoutingService.exe)  
   
-3.  W kliencie programu Kalkulator naciśnij klawisz ENTER, aby uruchomić klienta.  
+3.  W kliencie Kalkulator naciśnij klawisz ENTER, aby uruchomić klienta.  
   
-     Powinny być widoczne następujące dane wyjściowe:  
+     Powinny zostać wyświetlone następujące dane wyjściowe:  
   
     ```Output  
     Add(100,15.99) = 115.99  
@@ -61,13 +61,13 @@ W przykładzie pokazano, jak usługa routingu Windows Communication Foundation (
     ```  
   
 ## <a name="configurable-via-code-or-appconfig"></a>Można konfigurować za pomocą kodu lub pliku App.config  
- Jest skonfigurowany do używania pliku App.config do definiowania zachowania routera dostarczany próbki. Można również zmienić nazwę pliku App.config do innego elementu tak, aby nie został rozpoznany i Usuń komentarz wywołanie metody `ConfigureRouterViaCode()`. Każda z tych metod powoduje takie samo zachowanie z routera.  
+ Dostarczany próbki, skonfigurowany do używania pliku App.config do definiowania zachowania routera. Możesz również zmienić nazwę pliku App.config się czymś innym, tak aby nie został rozpoznany i usuń znaczniki komentarza wywołania metody, które ma `ConfigureRouterViaCode()`. Każda z tych metod powoduje takie samo zachowanie z routera.  
   
 ### <a name="scenario"></a>Scenariusz  
- W przykładzie pokazano router usługi działający jako mostka i błąd obsługi protokołu. W tym scenariuszu routingu na podstawie zawartości nie występuje; Usługa routingu działa jako węzeł przezroczystego obiektu pośredniczącego skonfigurowane do przekazywania wiadomości bezpośrednio do zbioru wstępnie skonfigurowane miejsce docelowe punktów końcowych. Usługa routingu wykonuje również dodatkowe kroki w przezroczysty sposób obsługi błędów występujących podczas próby do wysyłania do punktów końcowych, że jest skonfigurowana do komunikacji z. Działając jako mostka protokołu, usługa routingu umożliwia użytkownikowi zdefiniowanie jeden protokół komunikacji zewnętrznej i drugi dla wewnętrznej komunikacji.  
+ Niniejszy przykład pokazuje routera service pełniący funkcję obsługi mostka i błędów protokołu. W tym scenariuszu routingu opartego na zawartości nie występuje; Usługa routingu działa jako węzeł przezroczystym serwerem proxy skonfigurowane do przekazywania wiadomości bezpośrednio do wstępnie skonfigurowanego zestawu docelowych punktów końcowych. Usługa routingu wykonuje też dodatkowe kroki w sposób niewidoczny dla użytkownika obsługi błędów występujących podczas próbuje wysyłać do punktów końcowych, że jest skonfigurowany do komunikowania się z. Według działających jako Most protokołu, usługa routingu umożliwia użytkownikowi zdefiniowanie jednego protokołu komunikacji zewnętrznych i inny wpis dla komunikacji wewnętrznej.  
   
 ### <a name="real-world-scenario"></a>Scenariusz rzeczywistych  
- Firma Contoso chce dostarczyć punkt końcowy usługi interoperacyjne w sieci, podczas optymalizacji wydajności wewnętrznie. W związku z tym eksponuje jego usług na świecie za pośrednictwem punktu końcowego za pomocą klasy BasicHttpBinding, podczas wewnętrznie przy użyciu usługi routingu do zestawiania tego połączenia z punktem końcowym przy użyciu NetTcpBinding, którego użyć swoich usług. Ponadto firma Contoso chce jego oferty być odporny na błędy tymczasowych przestojów w jednym z ich produkcji usługi usług i w związku z tym Wirtualizuje wiele punktów końcowych za router z usługi do obsługi błędu funkcji automatycznie w tryb failover Tworzenie kopii zapasowych punktów końcowych, gdy jest to konieczne.  
+ Firma Contoso chce zapewnić punktu końcowego usług międzyoperacyjnych w sieci, przy jednoczesnej optymalizacji wydajności wewnętrznie. Ten sposób uwidacznia jego usług na świecie za pośrednictwem punktu końcowego przy użyciu BasicHttpBinding, używając przy tym wewnętrznie usługa routingu do zestawiania tego połączenia z punktem końcowym za pomocą NetTcpBinding, używane w usługach. Ponadto firma Contoso chce, aby jego oferty być odporne na tymczasowe awarii w jednym z jego produkcji usługi usług, a zatem Wirtualizuje wiele punktów końcowych za zaporą za pomocą usługi routera jego możliwości, aby automatycznie przejściu w tryb failover obsługę błędów Tworzenie kopii zapasowych punktów końcowych, gdy jest to konieczne.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przykłady trwałości i hostingu AppFabric](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Przykłady trwałości i hostingu AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)

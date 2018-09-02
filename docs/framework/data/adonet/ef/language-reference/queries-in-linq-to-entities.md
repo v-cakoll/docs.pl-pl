@@ -2,27 +2,27 @@
 title: Zapytania w składniku LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: c015a609-29eb-4e95-abb1-2ca721c6e2ad
-ms.openlocfilehash: 27e547dacb41201f00552c58840c70ca8fa34428
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b6dc38951107b0d3833e1060c23962a43936bf4d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767001"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385510"
 ---
 # <a name="queries-in-linq-to-entities"></a>Zapytania w składniku LINQ to Entities
-Zapytanie jest wyrażenie, które pobiera dane ze źródła danych. Zapytania są zwykle zapisywane w język kwerendy specjalnych, takich jak SQL relacyjnych baz danych i XQuery dla formatu XML. W związku z tym deweloperzy było nauczyć się nowy język kwerendy dla każdego typu źródła danych lub format danych są zapytania. Zapytanie języku zintegrowanym (LINQ) oferuje prostszy, spójny model do pracy z danymi w różnych rodzajów źródeł danych i formaty. Zapytania LINQ zawsze do pracy z programowania obiektów.  
+Zapytanie jest wyrażeniem, które pobiera dane ze źródła danych. Zapytania są zwykle wyrażane w specjalistycznym języku zapytań, takich jak SQL dla relacyjnych baz danych i XQuery dla XML. W związku z tym deweloperzy musieli nauczyć się nowego języka zapytań dla każdego typu źródła danych lub formatu danych, które są zapytania. Language-Integrated Query (LINQ) oferuje prostszy i spójny model do pracy z danymi w różnych rodzajach formatów i źródeł danych. W zapytaniu LINQ zawsze pracujesz z programowania obiektów.  
   
- Operacji zapytania LINQ składa się z trzech akcji: uzyskać źródła danych lub źródła, Utwórz zapytanie i wykonać zapytanie.  
+ Operacji zapytania LINQ składa się z trzech akcji: uzyskać lub źródeł danych, Utwórz zapytanie i wykonać zapytanie.  
   
- Źródła danych, które implementują <xref:System.Collections.Generic.IEnumerable%601> ogólny interfejs lub <xref:System.Linq.IQueryable%601> ogólny interfejs można tworzyć zapytania za pomocą LINQ. Wystąpienia ogólnych <xref:System.Data.Objects.ObjectQuery%601> klasy, która implementuje ogólnego <xref:System.Linq.IQueryable%601> interfejsu, służyć jako źródło danych dla [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania. <xref:System.Data.Objects.ObjectQuery%601> Klasa ogólna reprezentuje kwerendę, która zwraca kolekcję zero lub więcej obiektów określonego typu. Można także pozwolić kompilatora wnioskować o typie jednostki przy użyciu słowa kluczowego języka C# `var` (Dim w języku Visual Basic).  
+ Źródła danych, które implementują <xref:System.Collections.Generic.IEnumerable%601> ogólny interfejs lub <xref:System.Linq.IQueryable%601> interfejs ogólny może być odpytywana za pomocą LINQ. Wystąpienia ogólnego <xref:System.Data.Objects.ObjectQuery%601> klasy, która implementuje ogólnego <xref:System.Linq.IQueryable%601> interfejsu, służyć jako źródło danych dla [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania. <xref:System.Data.Objects.ObjectQuery%601> Klasa ogólna reprezentuje zapytanie, które zwraca kolekcję zero lub więcej obiektów określonego typu. Można także pozwolić kompilatorowi wydedukować typ. jednostki za pomocą słowa kluczowego języka C# `var` (wymiar w języku Visual Basic).  
   
- W zapytaniu możesz określić dokładnie informacje, które mają zostać pobrane ze źródła danych. Zapytania można również określić, jak te informacje sortowania, grupowane i w kształcie przed zwróceniem jest. W składniku LINQ zapytanie jest przechowywana w zmiennej. Jeśli zapytanie zwraca sekwencję wartości, samej zmiennej zapytania musi być typem zapytań. Ta zmienna zapytania Brak działania i zwraca żadnych danych; tylko przechowuje informacje o kwerendzie. Po utworzeniu zapytania należy wykonać zapytania można pobrać żadnych danych.  
+ W zapytaniu określasz dokładnie informacje, które mają zostać pobrane ze źródła danych. Zapytania można również określić, jak te informacje powinny można sortowane, grupowane i kształtowane przed zwróceniem. W programie LINQ zapytania są przechowywane w zmiennej. Jeśli zapytanie zwraca sekwencję liczb, sama zmienna zapytania musi być typem odpytywalnym. Ta zmienna zapytania nie podejmuje żadnych działań i nie zwraca żadnych danych; tylko przechowuje informacje o kwerendzie. Po utworzeniu zapytania należy wykonać to zapytanie, aby pobrać wszystkie dane.  
   
-## <a name="query-syntax"></a>Składnia zapytania  
- [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania mogą być składane w dwóch składnie: wyrażenie składnia zapytania i metody zapytań. Składnia wyrażeń jest nowego w języku C# 3.0 i 9.0 Visual Basic i składa się z zestawu klauzule napisany w składni deklaratywnej podobny do języka Transact-SQL lub XQuery. Jednak [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] środowisko uruchomieniowe języka wspólnego (CLR) nie może odczytać sam składnia wyrażenia zapytania. W związku z tym podczas kompilacji wyrażenia zapytania są translacji obsługiwanym przez środowisko CLR: wywołania metody. Te metody są określane jako *standardowych operatorów zapytań*. Deweloper istnieje możliwość wywołania je bezpośrednio, używając składni metody zamiast za pomocą składni zapytań. Aby uzyskać więcej informacji, zobacz [składnia zapytania a składnia metody w technologii LINQ](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
+## <a name="query-syntax"></a>Składnia zapytań  
+ [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania może składać się w dwóch różnych składni: składnia wyrażenia oraz składni zapytania oparte na metodzie zapytania. Składnia wyrażenia kwerendy jest nowego w języku C# 3.0 i Visual Basic 9.0 i składa się z zestawu klauzule napisane w składni deklaratywnej podobnego do języka Transact-SQL lub wyrażenie XQuery. Jednak [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] środowisko uruchomieniowe języka wspólnego (CLR) nie można odczytać składni wyrażeń zapytania, sam. W związku z tym, w czasie kompilacji wyrażeń zapytania są tłumaczone na coś, co środowisko CLR zrozumienie: wywołania metody. Metody te są znane jako *standardowych operatorów zapytań*. Jako deweloper istnieje możliwość wywołania je bezpośrednio przy użyciu składni metody zamiast przy użyciu składni zapytań. Aby uzyskać więcej informacji, zobacz [składnia zapytania a składnia metody w technologii LINQ](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
   
 ### <a name="query-expression-syntax"></a>Składnia wyrażenia zapytania  
- Wyrażenia zapytania są deklaratywne składnię. Ta składnia umożliwia deweloperom Pisanie zapytań w języku wysokiego poziomu, który jest sformatowany podobny do języka Transact-SQL. Przy użyciu składni wyrażeń zapytania, można wykonywać nawet złożone filtrowanie, kolejność i operacji grupowania na źródeł danych z minimalnym kodu. Aby uzyskać więcej informacji [podstawowe operacje zapytań (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/linq/basic-query-operations.md). Aby uzyskać przykłady pokazujące, które pokazują, jak używać składni wyrażenia zapytania zobacz następujące tematy:  
+ Wyrażenia kwerendy są deklaratywne składnię. Ta składnia umożliwia deweloperom Pisanie zapytań w języku wysokiego poziomu, który jest sformatowany podobna do instrukcji języka Transact-SQL. Za pomocą składni wyrażeń zapytania, możesz wykonać nawet złożone filtrowanie, porządkowanie i operacji grupowania na źródeł danych za pomocą minimalnej ilości kodu. Aby uzyskać więcej informacji [podstawowe operacje zapytań (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/linq/basic-query-operations.md). Aby uzyskać przykłady, które pokazują, jak używać składni wyrażeń zapytania zobacz następujące tematy:  
   
 -   [Przykłady składni wyrażeń zapytania, projekcja](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-projection.md)  
   
@@ -42,8 +42,8 @@ Zapytanie jest wyrażenie, które pobiera dane ze źródła danych. Zapytania s�
   
 -   [Przykłady składni wyrażeń zapytania, nawigowanie po relacjach](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-navigating-relationships.md)  
   
-### <a name="method-based-query-syntax"></a>Składnia zapytań — metoda  
- Innym sposobem tworzenia [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania jest za pomocą zapytań na podstawie metody. Składnia zapytania oparte na metodzie jest sekwencją metoda bezpośrednia wywołania metod operator LINQ, przekazując wyrażenia lambda jako parametry. Aby uzyskać więcej informacji, zobacz [wyrażenia Lambda](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md). Aby uzyskać przykłady pokazujące, które pokazują, jak używać składni oparte na metodzie zobacz następujące tematy:  
+### <a name="method-based-query-syntax"></a>Składni zapytania oparte na metodzie  
+ Innym sposobem tworzenia [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania jest przy użyciu zapytań oparte na metodzie. Składnia zapytania oparte na metodzie to sekwencja wywołań metody bezpośredniej do metod operatorów LINQ, przekazując wyrażenia lambda jako parametry. Aby uzyskać więcej informacji, zobacz [wyrażeń Lambda](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md). Przykłady pokazujące, jak używać składni oparte na metodzie zobacz następujące tematy:  
   
 -   [Przykłady składni zapytania oparte na metodzie, projekcja](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-projection.md)  
   
@@ -68,5 +68,5 @@ Zapytanie jest wyrażenie, które pobiera dane ze źródła danych. Zapytania s�
 ## <a name="see-also"></a>Zobacz też  
  [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)  
  [Wprowadzenie do korzystania z LINQ w C#](~/docs/csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [Wprowadzenie do korzystania z LINQ w Visual Basic](~/docs/visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [Opcje scalania Entity Framework i skompilowane zapytania](http://go.microsoft.com/fwlink/?LinkId=199591)
+ [Wprowadzenie do LINQ w Visual Basic](~/docs/visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
+ [Opcje scalania w ramach jednostki i zapytania skompilowane](https://go.microsoft.com/fwlink/?LinkId=199591)

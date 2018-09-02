@@ -1,37 +1,37 @@
 ---
-title: Poleceń i parametrów
+title: Polecenia i parametry
 ms.date: 03/30/2017
 ms.assetid: b623f810-d871-49a5-b0f5-078cc3c34db6
-ms.openlocfilehash: 3634ce97ba162d59e39d273418b9a13217b9ddff
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8e476d68b60272d944eecfe585fd77d8a7a8f08c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757154"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386996"
 ---
-# <a name="commands-and-parameters"></a>Poleceń i parametrów
-Po ustanowieniu połączenia ze źródłem danych, można wykonać polecenia i zwracają wyniki z źródła danych przy użyciu <xref:System.Data.Common.DbCommand> obiektu. Można utworzyć przy użyciu jednego z konstruktorów polecenia dla dostawcy danych .NET Framework, które użytkownik pracuje z polecenia. Konstruktory może zająć Argumenty opcjonalne, takie jak instrukcja SQL do wykonania w źródle danych <xref:System.Data.Common.DbConnection> obiekt, lub <xref:System.Data.Common.DbTransaction> obiektu. Można również skonfigurować te obiekty jako właściwości polecenia. Można również utworzyć polecenia dla konkretnego połączenia za pomocą <xref:System.Data.Common.DbConnection.CreateCommand%2A> metody `DbConnection` obiektu. Instrukcja SQL jest wykonywany przez polecenie można skonfigurować za pomocą <xref:System.Data.Common.DbCommand.CommandText%2A> właściwości.  
+# <a name="commands-and-parameters"></a>Polecenia i parametry
+Po ustanowieniu połączenia ze źródłem danych, można wykonać polecenia i zwracania wyników z źródła danych przy użyciu <xref:System.Data.Common.DbCommand> obiektu. Można utworzyć polecenia przy użyciu jednego z konstruktorów polecenia dla dostawcy danych .NET Framework, którą pracujesz. Konstruktory może potrwać Argumenty opcjonalne, takie jak instrukcję SQL do wykonania w źródle danych <xref:System.Data.Common.DbConnection> obiektu lub <xref:System.Data.Common.DbTransaction> obiektu. Tych obiektów można również skonfigurować jako właściwości polecenia. Możesz również utworzyć polecenia dla danego połączenia za pomocą <xref:System.Data.Common.DbConnection.CreateCommand%2A> metody `DbConnection` obiektu. Można skonfigurować instrukcji SQL, wykonywane przez polecenie, używając <xref:System.Data.Common.DbCommand.CommandText%2A> właściwości.  
   
- Każdy dostawca danych programu .NET Framework uwzględnionych w programie .NET Framework ma `Command` obiektu. .NET Framework Data Provider for OLE DB zawiera <xref:System.Data.OleDb.OleDbCommand> obiekt dostawcy danych programu .NET Framework dla programu SQL Server zawiera <xref:System.Data.SqlClient.SqlCommand> obiekt dostawcy danych programu .NET Framework dla ODBC obejmuje <xref:System.Data.Odbc.OdbcCommand> obiektu i .NET Framework Dostawca danych dla Oracle zawiera <xref:System.Data.OracleClient.OracleCommand> obiektu.  
+ Każdy dostawca danych .NET Framework, dołączone do programu .NET Framework ma `Command` obiektu. .NET Framework Data Provider for OLE DB zawiera <xref:System.Data.OleDb.OleDbCommand> obiektu .NET Framework Data Provider for SQL Server zawiera <xref:System.Data.SqlClient.SqlCommand> obiektu .NET Framework Data Provider for ODBC obejmuje <xref:System.Data.Odbc.OdbcCommand> obiektu i .NET Framework Data Provider Pro Oracle obejmuje <xref:System.Data.OracleClient.OracleCommand> obiektu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Wykonywanie polecenia](../../../../docs/framework/data/adonet/executing-a-command.md)  
- W tym artykule opisano ADO.NET `Command` obiekt i jak z niego korzystać do wykonywania zapytań i poleceń względem źródła danych.  
+ W tym artykule opisano ADO.NET `Command` obiektu i jak go używać do wykonywania zapytań i poleceń względem źródła danych.  
   
  [Konfigurowanie parametrów i typów danych parametrów](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- Zawiera opis pracy z `Command` parametrów, w tym kierunku, typy danych i składnia parametru.  
+ W tym artykule opisano pracę z `Command` parametrów, w tym kierunku, typów danych i składnia parametru.  
   
  [Generowanie poleceń za pomocą CommandBuilders](../../../../docs/framework/data/adonet/generating-commands-with-commandbuilders.md)  
- Informacje dotyczące używania polecenia konstruktorów mają być automatycznie generowane polecenia INSERT, UPDATE i DELETE dla `DataAdapter` mający pojedynczej tabeli polecenia wyboru.  
+ Opisuje sposób używania polecenia Konstruktorzy można automatycznie wygenerować polecenia INSERT, UPDATE i DELETE dla `DataAdapter` zawierający polecenie SELECT pojedynczej tabeli.  
   
  [Uzyskiwanie pojedynczej wartości z bazy danych](../../../../docs/framework/data/adonet/obtaining-a-single-value-from-a-database.md)  
- Informacje dotyczące używania `ExecuteScalar` metody `Command` obiektu do zwrócenia pojedynczej wartości z zapytania do bazy danych.  
+ Opisuje sposób używania `ExecuteScalar` metody `Command` obiekt do zwrotu pojedynczej wartości z zapytania do bazy danych.  
   
  [Używanie poleceń do modyfikacji danych](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
- Informacje dotyczące używania dostawcy danych można wykonać przechowywanych danych lub procedury instrukcje języka definicji (DDL).  
+ W tym artykule opisano sposób użycia dostawcy danych można wykonać przechowywanych procedur lub danych instrukcje języka definicji (DDL).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Elementy DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [Elementy DataSet, DataTable i DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [Nawiązywanie połączenia ze źródłem danych](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

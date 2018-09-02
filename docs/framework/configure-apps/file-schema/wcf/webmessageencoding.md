@@ -2,15 +2,15 @@
 title: '&lt;webMessageEncoding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-ms.openlocfilehash: fc1f83128dacb588d8179dea95c132da1ab2be91
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: eddda5e805d7e2cc361b6925d34d13eb8fd614f9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755269"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385397"
 ---
 # <a name="ltwebmessageencodinggt"></a>&lt;webMessageEncoding&gt;
-Umożliwia zwykłego tekstu XML, kodowania wiadomości notacji obiektu JavaScript (JSON) i "nieprzetworzonej" zawartości binarnej na odczyt i zapis w powiązania Windows Communication Foundation (WCF).  
+Umożliwia zwykłego tekstu XML, kodowania wiadomości notacji obiektu JavaScript (JSON) i "nieprzetworzonej" zawartości binarnej Odczyt i zapis, gdy jest używana w powiązaniu usługi Windows Communication Foundation (WCF).  
   
  \<system.serviceModel>  
 \<powiązania >  
@@ -35,34 +35,34 @@ writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`maxReadPoolSize`|Liczba wiadomości, które można jednocześnie odczytać bez przydziału nowych czytników. Większe rozmiary puli powoduje, że system bardziej odporne na działanie nagłego kosztem większy zestaw roboczy. Wartość domyślna to 64 czytników dla każdego wewnętrzny koderów (tekst JSON i "nieprzetworzonej").<br /><br /> Zwiększenie tego numeru zużycie pamięci wzrośnie, ale przygotowuje kodera do postępowania w przypadku nagłego Seria wiadomości przychodzących, ponieważ jest w stanie używać czytników z puli, które zostały już utworzone, zamiast tworzyć nowe.|  
-|`maxWritePoolSize`|Liczba wiadomości, które można jednocześnie wysłać bez przydziału nowych modułów zapisujących. Większe rozmiary puli powoduje, że system bardziej odporne na działanie nagłego kosztem większy zestaw roboczy. Wartość domyślna to 16 autorów dla każdego wewnętrzny koderów (tekst JSON i "nieprzetworzonej").<br /><br /> Zwiększenie tego numeru zużycie pamięci wzrośnie, ale przygotowuje kodera do postępowania w przypadku nagłego seria wychodzących wiadomości, ponieważ jest w stanie używać autorów z puli, które zostały już utworzone, zamiast tworzyć nowe.|  
+|`maxReadPoolSize`|Liczba wiadomości, które można jednocześnie odczytać bez przydziału nowych czytników. Większe rozmiary pul powoduje, że system bardziej odporne na skoki działania kosztem większy zestaw roboczy. Wartość domyślna to 64 czytelnicy dla każdego z wewnętrznego koderów (tekst JSON i "pierwotne").<br /><br /> Zwiększa to liczba zużycie pamięci zwiększa, ale przygotowuje kodera radzenia sobie z gwałtownym wzrostem wzrosty komunikaty przychodzące, ponieważ jest w stanie używać czytelnicy z puli, które zostały już utworzone, zamiast tworzyć nowe.|  
+|`maxWritePoolSize`|Liczba wiadomości, które można jednocześnie wysłać bez przydziału nowych modułów zapisujących. Większe rozmiary pul powoduje, że system bardziej odporne na skoki działania kosztem większy zestaw roboczy. Wartość domyślna to 16 autorzy dla każdego z wewnętrznego koderów (tekst JSON i "pierwotne").<br /><br /> Zwiększa to liczba zużycie pamięci zwiększa, ale przygotowuje kodera radzenia sobie z gwałtownym wzrostem wzrosty komunikaty wychodzące, ponieważ jest w stanie używać składników zapisywania z puli, które zostały już utworzone, zamiast tworzyć nowe.|  
 |`writeEncoding`|Określa kodowanie do użycia w celu emisji komunikatów w powiązaniu zestawu znaków. Prawidłowe wartości to:<br /><br /> -UnicodeFffeTextEncoding: Big Endian kodowanie Unicode.<br />-Utf16TextEncoding: Kodowanie Unicode.<br />-Utf8TextEncoding: 8-bitowego kodowania.<br /><br /> Wartość domyślna to Utf8TextEncoding. Ten atrybut jest typu <xref:System.Text.Encoding>.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<readerQuotas>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Definiuje ograniczenia złożoności wiadomości SOAP, które mogą być przetwarzane przez punkty końcowe skonfigurowane dla tego wiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Definiuje ograniczenia złożoności wiadomości SOAP, które mogą być przetwarzane przez punkty końcowe skonfigurowane dla tego wiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Powiązanie >](../../../../../docs/framework/misc/binding.md)|Definiuje wszystkie możliwości powiązania niestandardowego powiązania.|  
+|[\<Powiązanie >](../../../../../docs/framework/misc/binding.md)|Definiuje wszystkie funkcje powiązania niestandardowego powiązania.|  
   
 ## <a name="remarks"></a>Uwagi  
- Kodowanie jest procesem przekształcania komunikat do sekwencji bajtów. Dekodowanie jest procesu. Te procesy wymagają specyfikacji kodowania znaków.  
+ Kodowanie jest procesem przekształcania wiadomość do sekwencji bajtów. Dekodowanie jest procesu. Procesy te wymagają specyfikację kodowania znaków.  
   
- `webMessageEncoding` Element działa przez delegowanie do serii wewnętrzny koderów na kodowań XML i JSON zwykłego tekstu, a "" dane binarne. To Delegowanie jest realizowane przez koder komunikatów złożonego.  
+ `webMessageEncoding` Elementu działa przez delegowanie do szeregu wewnętrzny koderów obsługi kodowania XML i JSON zwykłego tekstu które "" dane binarne. To delegowanie odbywa się przez koder komunikat złożony.  
   
- Ten element powiązania i jego encoder złożone są używane do kontrolowania, kodowania w scenariuszach, które nie korzystają z protokołu SOAP wiadomości używanych przez `webHttpBinding` elementu. Te scenariusze obejmują "XML starego zwykły" (POX), Representational State (Transfer REST), zespolonego naprawdę proste Syndication (RSS) i Atom i asynchronicznego JavaScript i XML (AJAX). Koder komunikatów złożonego nie obsługuje protokołu SOAP lub WS-Addressing.  
+ Ten element powiązania i jego złożonego encoder, które są używane do kontrolowania, kodowania w scenariuszach, które nie korzystają z protokołu SOAP wiadomości, używane przez `webHttpBinding` elementu. Te scenariusze obejmują "Zwykłego starego kodu XML" (POX), technologii Representational State Transfer (REST), syndykacji naprawdę proste syndykacji (RSS) i Atom i asynchronicznego języka JavaScript i XML (technologia AJAX). Koder komunikatów złożonego nie obsługuje protokołu SOAP lub WS-Addressing.  
   
- Element powiązania można skonfigurować za pomocą znaku zapisu przy użyciu kodowania `writeEncoding` atrybutu. Podana <xref:System.Text.Encoding> wartość określa zachowanie podczas zapisu w przypadkach, JSON i XML tekstową. Na odczyt wszelkie kodowanie prawidłowego elementu message i kodowanie tekstu jest rozpoznawany.  
+ Można skonfigurować elementu powiązania z kodowaniem znaków zapisu przy użyciu `writeEncoding` atrybutu. Podane <xref:System.Text.Encoding> wartość określa zachowanie podczas zapisu w przypadkach, JSON i XML tekstową. Podczas odczytu wszelkie kodowanie prawidłowy komunikat i kodowanie tekstu w zrozumieniu.  
   
- `maxReadPoolSize` i `maxWritePoolSize` można również ustawić maksymalną liczbę czytelników i zapisywania odpowiednio przydzielone. Domyślnie są przydzielane 64 czytelników i 16 modułów zapisujących.  
+ `maxReadPoolSize` i `maxWritePoolSize` można również ustawić maksymalną liczbę czytników i składników zapisywania do przydzielenia, odpowiednio. Domyślnie są przydzielane 64 czytników i składników zapisywania 16.  
   
- Domyślne ograniczenia złożoności są również ustawiane przy użyciu [ \<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd) elementu, aby zapewnić ochronę przed klasą odmowa usługi (DOS) przed atakami opartymi na tym próbę użycia złożoności wiadomości wiązać przetwarzania punktu końcowego zasoby.  
+ Domyślne ograniczenia złożoności również są ustawiane przy użyciu [ \<readerQuotas >](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd) element, aby zapewnić ochronę przed klasą typu odmowa usługi (DOS) ataki taka próba blokując przetwarzania punktu końcowego za pomocą złożoności wiadomości zasoby.  
   
 ## <a name="example"></a>Przykład  
   

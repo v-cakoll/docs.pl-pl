@@ -10,15 +10,15 @@ api_type:
 ms.assetid: d468325a-21c5-43ce-8567-84e342b22308
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b110adac8c1ae68a3918a9e0fdf3f3eb4d017f0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fd77a8a81718837d55f3018564d0f4ba8fdc95ee
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406211"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390776"
 ---
 # <a name="certtimestampauthenticodelicense-function"></a>Funkcja CertTimestampAuthenticodeLicense
-Sygnatury czasowe jako Authenticode XrML licencji.  
+Sygnatury czasowe wiadomość Authenticode XrML licencji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,19 +32,19 @@ HRESULT CertTimestampAuthenticodeLicense (
   
 #### <a name="parameters"></a>Parametry  
  `pSignedLicenseBlob`  
- [in] Podpisem Authenticode XrML licencji za sygnaturami czasowymi. Zobacz [CRYPTOAPI_BLOB](http://msdn.microsoft.com/library/windows/desktop/aa380238.aspx) struktury.  
+ [in] Podpisem Authenticode XrML licencja na mieć sygnaturę czasową. Zobacz [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) struktury.  
   
  `pwszTimestampURI`  
- [in] Identyfikator URI serwera sygnatury czasowej.  
+ [in] Identyfikator URI serwera sygnaturę czasową.  
   
  `pTimestampSignatureBlob`  
- [out] Wskaźnik do CRYPT_DATA_BLOB do odbierania podpisu sygnatury czasowej algorytmem Base64. Wywołującego odpowiedzialność za wolny `pTimestampSignatureBlob` -> `pbData` z `HepFree()` po użyciu. Zobacz [CRYPTOAPI_BLOB](http://msdn.microsoft.com/library/windows/desktop/aa380238.aspx) struktury.  
+ [out] Wskaźnik do CRYPT_DATA_BLOB otrzymywać sygnatury sygnatura czasowa algorytmem Base64. Odpowiada za wywołującego bezpłatne `pTimestampSignatureBlob` -> `pbData` z `HepFree()` po użyciu. Zobacz [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) struktury.  
   
 ## <a name="remarks"></a>Uwagi  
- Podpis sygnatury czasowej jest rzeczywiście komunikat PKCS #7 SignedData, którego zawartość jest Forma binarna SignatureValue z nim licencja podpisu. Zasadniczo to dodatkowe zaradczych podpis licencji.  
+ Podpis sygnatura czasowa jest faktycznie PKCS #7 SignedData komunikatu informującego, których zawartość jest binarną formę SignatureValue z poziomu podpisu licencji. Zasadniczo jest to zabezpieczenie kontrsygnatury licencji.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `S_OK` Jeśli funkcja zakończy się powodzeniem. W przeciwnym razie zwraca kod błędu.  
+ `S_OK` Jeśli funkcja się powiedzie. W przeciwnym razie zwraca kod błędu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)

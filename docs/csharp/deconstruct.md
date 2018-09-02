@@ -1,109 +1,110 @@
 ---
-title: Deconstructing krotek i innych typów
-description: Dowiedz się, jak deconstruct krotek i innych typów.
+title: Dekonstrukcja krotek i innych typów
+description: Dowiedz się, jak dekonstruować krotki a innymi typami danych.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 07/18/2016
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 726a391a4a747e5446e252e669c5b16248a5e0ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 48724c65de4fe71294eb5c61c1891d9d56c9b5a4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217748"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392975"
 ---
-# <a name="deconstructing-tuples-and-other-types"></a>Deconstructing krotek i innych typów #
+# <a name="deconstructing-tuples-and-other-types"></a>Dekonstrukcja krotek i innych typów
 
-Krotka zawiera lekki sposób pobierania wiele wartości z wywołania metody. Jednak po pobraniu spójnej kolekcji, do obsługi jego poszczególne elementy. Na podstawie elementów — jest to obciążeniem, jak przedstawiono na poniższym przykładzie. `QueryCityData` Metoda zwraca krotka 3 i wszystkich jego elementów jest przypisany do zmiennej w oddzielnych operacji.
+Spójna kolekcja zapewnia sposób lekki Pobieranie wielu wartości z wywołania metody. Jednak po pobraniu spójnej kolekcji, trzeba obsługiwać poszczególne elementy. Na podstawie elementów — jest to skomplikowane, co ilustruje poniższy przykład. `QueryCityData` Metoda zwróci wartość 3-krotka, a każdy z jej elementów jest przypisany do zmiennej w oddzielnych operacji.
 
 [!code-csharp[WithoutDeconstruction](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple1.cs)]
 
-Pobieranie wielu pól i wartości właściwości z obiektu może być skomplikowane jednakowo: należy przypisać wartość pola lub właściwości do zmiennej na podstawie elementu członkowskiego elementu członkowskiego. 
+Pobieranie wielu pól i wartości właściwości z obiektu może być kłopotliwe równie: należy przypisać wartość pola lub właściwości do zmiennej na podstawie elementu członkowskiego elementu członkowskiego.
 
-Począwszy od wersji 7.0 C#, możesz pobrać wiele elementów z spójnej kolekcji lub pobrać wiele pola, właściwości i obliczonych wartości z obiektu w jednym *deconstruct* operacji. Gdy deconstruct spójnej kolekcji, jego elementy są przypisywane do poszczególnych zmiennych. Gdy deconstruct obiektu, można przypisać wybranych wartości poszczególnych zmiennych. 
+Począwszy od języka C# 7.0, możesz pobrać wiele elementów z spójnej kolekcji lub pobieranie wielu pola, właściwości i obliczonych wartości z obiektu w jednym *dekonstruować* operacji. Gdy można dekonstruować krotki, jego elementy są przypisywane do poszczególnych zmiennych. Gdy obiekt jest dekonstruować, wybranych wartości są przypisywane do poszczególnych zmiennych.
 
-## <a name="deconstructing-a-tuple"></a>Deconstructing spójnych kolekcji
+## <a name="deconstructing-a-tuple"></a>Dekonstrukcja krotki
 
-C# funkcje wbudowane obsługę deconstructing krotek, co umożliwia rozpakować wszystkie elementy w spójnej kolekcji w ramach jednej operacji. Ogólna składnia deconstructing Krotka jest podobny do składni do definiowania jedną: ujmij zmienne, do których każdy element ma być przypisana w nawiasach po lewej stronie instrukcji przypisania. Na przykład następująca instrukcja przypisuje elementy krotka 4 do czterech oddzielnych zmiennych:
+Funkcje języka C# wbudowaną obsługę dekonstrukcja krotek, które umożliwia rozpakować wszystkie elementy w krotce w ramach jednej operacji. Ogólna składnia dekonstrukcja krotki przypomina składnię definiować po jednym alercie: ująć zmienne, do których każdy element ma być przypisana w nawiasach po lewej stronie instrukcji przypisania. Na przykład następująca instrukcja przypisuje elementów krotki 4 do czterech oddzielnych zmiennych:
 
 ```csharp
 var (name, address, city, zip) = contact.GetAddressInfo();
 ```
 
-Istnieją trzy sposoby deconstruct spójnych kolekcji:
+Istnieją trzy sposoby dekonstruować krotki:
 
-- Można jawnie deklarować typu każdego pola w nawiasach. W poniższym przykładzie użyto takie podejście do deconstruct krotki 3 zwrócony przez `QueryCityData` metody.
+- Można jawnie deklarować typ każdego pola w nawiasach. W poniższym przykładzie użyto tej metody można dekonstruować krotki 3 zwracane przez `QueryCityData` metody.
 
     [!code-csharp[Deconstruction-Explicit](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple2.cs#1)]
 
-- Można użyć `var` — słowo kluczowe, tak że C# wnioskuje typ każdej zmiennej. Możesz umieścić `var` — słowo kluczowe poza nawiasów. W poniższym przykładzie użyto wnioskowanie o typie, gdy deconstructing krotki 3 zwrócony przez `QueryCityData` metody.
- 
+- Możesz użyć `var` — słowo kluczowe, więc w tym C# wnioskuje typ każdej zmiennej. Możesz umieścić `var` — słowo kluczowe poza nawiasy. W poniższym przykładzie użyto wnioskowanie o typie, gdy dekonstrukcja krotki 3 zwracane przez `QueryCityData` metody.
+
     [!code-csharp[Deconstruction-Infer](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple3.cs#1)]
 
-    Można również użyć `var` — słowo kluczowe indywidualnie z dowolnego lub wszystkich deklaracji zmiennych wewnątrz nawiasów. 
+    Można również użyć `var` — słowo kluczowe za pomocą dowolnego lub wszystkich deklaracji zmiennych wewnątrz nawiasów.
 
     [!code-csharp[Deconstruction-Infer-Some](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple4.cs#1)]
 
     To jest skomplikowane i nie jest zalecane.
 
-- Ponadto może deconstruct spójnej kolekcji do zmiennych, które już zadeklarowany.
+- Ponadto może dekonstruować krotki do zmiennych, które już zostały zadeklarowane.
 
     [!code-csharp[Deconstruction-Declared](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple5.cs#1)]
 
-Zauważ, że nie można określić określonego typu poza nawiasy, nawet w przypadku każdego pola w spójnej kolekcji ma tego samego typu. Generuje błąd kompilatora CS8136 "Deconstruction formularza"var (...)"nie zezwala na określony typ dla"var".".
+Zauważ, że nie można określić określonego typu poza nawiasy, nawet wtedy, gdy każde pole w spójnej kolekcji ma tego samego typu. Spowoduje to wygenerowanie błędu kompilatora CS8136, "Dekonstrukcji"var (...)"dekonstrukcji nie zezwala na specyficzny typ"var".".
 
-Należy pamiętać, że należy również przypisać każdy element spójna kolekcja znajdująca się do zmiennej. W przypadku pominięcia elementów, kompilator generuje błąd CS8132 "Nie może deconstruct spójnych kolekcji z elementów" x"do zmiennych"y"."
+Należy pamiętać o tym, należy również przypisać każdego elementu spójnej kolekcji do zmiennej. Jeżeli pominięto żadnych elementów, kompilator generuje błąd CS8132, "Nie można dekonstruować krotki"x"elementów do zmiennych"y"."
 
-Należy pamiętać, że nie można mieszać deklaracje i przypisania do istniejących zmiennych po lewej stronie deconstruction. Kompilator generuje błąd CS8184 "deconstruction nie można mieszać wyrażeń z lewego-nadwozia1-strony i deklaracje". gdy członków obejmują zmienne nowo zadeklarowane i istniejące.
+Należy pamiętać, że nie można mieszać deklaracji i przypisania do istniejących zmiennych po lewej stronie dekonstrukcji. Kompilator generuje błąd CS8184, "dekonstrukcji nie można mieszać deklaracji i wyrażeń po lewej stronie". Gdy elementy członkowskie obejmują nowo zadeklarowana i istniejących zmienne.
 
-## <a name="deconstructing-tuple-elements-with-discards"></a>Odrzuca deconstructing spójnej kolekcji elementów z
+## <a name="deconstructing-tuple-elements-with-discards"></a>Dekonstrukcja krotki elementy z odrzuca
 
-Często zdarza się deconstructing krotka, interesują Cię wartości tylko niektórych elementów. Począwszy od wersji 7.0 C#, możesz korzystać C# dla obsługi *odrzuca*, które są zmienne tylko do zapisu wartości, którego wybrano opcję Ignoruj. Odrzucenia jest wskazywany przez się od znaku podkreślenia ("\_") w ramach przypisania. Można odrzucić dowolną liczbę wartości jak; wszystkie są reprezentowane przez jeden odrzucenia, `_`.
+Często w przypadku, gdy dekonstrukcja krotki, interesuje Cię wartości tylko niektóre elementy. Począwszy od języka C# 7.0, możesz korzystać z zalet języka C# w obsługę *odrzuca*, które są zmienne tylko do zapisu wartości, których wybrane do ignorowania. Odrzucenia została wyznaczona przez znak podkreślenia ("\_") w ramach przypisania. Można odrzucić, jak wiele wartości, jak chcesz; wszystkie są reprezentowane przez pojedynczy odrzucenia, `_`.
 
-Poniższy przykład przedstawia użycie spójnych kolekcji zawierający odrzucenia. `QueryCityDataForYears` Metoda zwraca krotka 6 nazwą miasta, jego obszar, roku, miasta wypełniania tego roku, drugiego roku i wypełniania Miasto drugiego roku. W przykładzie zmiany w populacji między te dwa lata. Danych dostępne w spójnej kolekcji, jesteśmy unconcerned z obszarem mieście i wiemy, nazwę miejscowości i dwiema datami w czasie projektowania. W związku z tym możemy tylko w przypadku zainteresowani dwa wypełniania wartościami przechowywanymi w spójnej kolekcji, a może obsłużyć pozostałych wartości jako odrzucenia.  
+Poniższy przykład ilustruje użycie spójnych kolekcji zawierający odrzucenia. `QueryCityDataForYears` Metoda zwraca 6-krotka nazwą miasta, jego obszaru, roku, to miasto populację na potrzeby tego roku, drugiego roku i miasta populację na potrzeby tego drugiego roku. W przykładzie pokazano zmianę populacji między te dwa lata. Dane udostępniła spójnej kolekcji, jesteśmy unconcerned z obszarem miasta i wiemy, nazwę miasta i dwiema datami w czasie projektowania. W rezultacie firma Microsoft interesują jedynie wartości dwóch populacji, przechowywane w spójnej kolekcji i może obsługiwać jego pozostałe wartości jako odrzucenia.  
 
 [!code-csharp[Tuple-discard](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
-### <a name="deconstructing-user-defined-types"></a>Deconstructing typy danych zdefiniowane przez użytkownika
+### <a name="deconstructing-user-defined-types"></a>Dekonstrukcja typy zdefiniowane przez użytkownika
 
-Typy parametrów nie nie oferuje wbudowaną obsługę odrzuca. Jednak autor klasy, struktury lub interfejsu, można zezwolić wystąpień typu, który ma być deconstructed zaimplementowanie co najmniej jeden `Deconstruct` metody. Metoda zwraca wartość typu void i każdej wartości można deconstructed jest określane przez [limit](language-reference/keywords/out-parameter-modifier.md) parametru w podpisie metody. Na przykład następująca `Deconstruct` metody `Person` klasy zwraca nazwę pierwszego, drugie imię i nazwisko:
+Typy non-elementowe spójne kolekcje nie oferuje wbudowaną obsługę odrzuca. Jednak jako autor klasy, struktury lub interfejsu, można zezwolić wystąpienia typu, który ma zostać zdekonstruowana implementując co najmniej jeden `Deconstruct` metody. Metoda zwraca wartość void, a każda wartość, aby zostać zdekonstruowana jest wskazywany przez [się](language-reference/keywords/out-parameter-modifier.md) parametru w podpisie metody. Na przykład następująca `Deconstruct` metody `Person` klasy zwraca nazwę pierwszego, drugie imię i nazwisko:
 
 [!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class1.cs#1)]
 
-Następnie można deconstruct wystąpienia `Person` klasy o nazwie `p` z przydziałem podobnie do następującej:
+Następnie można dekonstruować wystąpienie `Person` klasę o nazwie `p` z przydziałem podobnie do poniższego:
 
 [!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class1.cs#2)]
 
-Następujący przykład przeciążeń `Deconstruct` metodę, aby zwrócić różnych kombinacji właściwości `Person` obiektu. Zwróć poszczególnych przeciążenia:
+Poniższy przykład przeciążenia `Deconstruct` metody zwracają różne kombinacje właściwości `Person` obiektu. Zwróć poszczególnych przeciążeń:
 
 - Imię i nazwisko.
-- First, last i drugie imię.
-- Podaj pierwsze imię, nazwisko, nazwę miejscowości i nazwę stanu.
+- Pierwsza, ostatnia, a drugie imię.
+- Podaj pierwsze imię, nazwisko, nazwę miasta i nazwę stanu.
 
 [!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class2.cs)]
 
-Ponieważ można przeciążać `Deconstruct` metody w celu uwzględnienia grupy danych, które zwykle są wyodrębniane z obiektu należy zachować ostrożność zdefiniować `Deconstruct` metod podpisy charakterystyczne i jednoznaczny. Wiele `Deconstruct` metod, które mają taką samą liczbę `out` parametrów lub taka sama liczbę i typ `out` parametrów w innej kolejności może spowodować ryzyko pomyłek. 
+Ponieważ może doprowadzić do przeciążenia `Deconstruct` metodę, aby odzwierciedlić grupy danych, które często są wyodrębniane z obiektu, należy zachować ostrożność zdefiniować `Deconstruct` metodami z podpisami, które są szczególne i jednoznaczna. Wiele `Deconstruct` metody, które mają taką samą liczbę `out` parametrów lub taka sama liczba i rodzaj `out` parametrów w innej kolejności może nie być jasne.
 
-Przeciążone `Deconstruct` metody w poniższym przykładzie przedstawiono jeden możliwe źródło pomyłek. Zwraca pierwszy przeciążenia imię, drugie imię, nazwisko i wiek `Person` obiektu w podanej kolejności. Drugi przeciążenia zwraca informacje o nazwę tylko wraz z rocznego dochodu, ale nazwa pierwszego, drugie imię i nazwisko są w innym porządku. Dzięki temu łatwo pomylić Kolejność argumentów, gdy deconstructing `Person` wystąpienia.
+Przeciążone `Deconstruct` metody w poniższym przykładzie pokazano jedno źródło możliwości popełnienia błędu. Pierwsze przeciążenie zwraca imię, imienia, nazwiska i wieku `Person` obiektów w tej kolejności. Drugie przeciążenie zwraca informacje o nazwie tylko wraz z dochodów rocznych, ale nazwa pierwszego, drugie imię i nazwisko znajdują się w innej kolejności. To ułatwia mylić Kolejność argumentów, gdy dekonstrukcja `Person` wystąpienia.
 
 [!code-csharp[Deconstruct-ambiguity](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-ambiguous.cs)]
 
-## <a name="deconstructing-a-user-defined-type-with-discards"></a>Typ zdefiniowany przez użytkownika z deconstructing odrzuca
+## <a name="deconstructing-a-user-defined-type-with-discards"></a>Dekonstrukcja typu zdefiniowanego przez użytkownika, za pomocą odrzuca
 
-Podobnie jak w [krotek](#deconstructing-tuple-elements-with-discards), można zignorować wybranych elementów zwróconych przez odrzucenia `Deconstruct` metody. Każdy odrzucenia jest definiowana za pomocą zmiennej o nazwie "\_", i operacją pojedynczego deconstruction może obejmować wiele odrzucenia.
+Podobnie jak w przypadku [krotek](#deconstructing-tuple-elements-with-discards), można użyć odrzucenia ignorowanie wybranych elementów zwróconych przez `Deconstruct` metody. Każdy odrzucenia jest zdefiniowany przez zmienną o nazwie "\_", i operacją pojedynczego dekonstrukcji może obejmować wiele odrzucenia.
 
-Poniższy przykład deconstructs `Person` obiektu do czterech ciągów (imiona i nazwiska, miasta i stan) ale odrzuca nazwisko i stanu.
+Poniższy przykład deconstructs `Person` obiektu do czterech ciągów (imiona i nazwiska, miasta i stanu), ale odrzuca nazwisko i stanu.
 
 [!code-csharp[Class-discard](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/class-discard1.cs#1)]
 
-## <a name="deconstructing-a-user-defined-type-with-an-extension-method"></a>Deconstructing typu zdefiniowanego przez użytkownika z metody rozszerzenia
+## <a name="deconstructing-a-user-defined-type-with-an-extension-method"></a>Dekonstrukcja typ zdefiniowany przez użytkownika za pomocą metody rozszerzenia
 
-Jeśli nie możesz tworzyć klasy, struktury lub interfejsu, można nadal deconstruct obiekty tego typu, implementując co najmniej jeden `Deconstruct` [metody rozszerzenia](programming-guide/classes-and-structs/extension-methods.md) zwracać wartości, w których Cię. 
+Jeśli nie możesz tworzyć klasy, struktury lub interfejsu, nadal można dekonstruować obiektów tego typu przez zaimplementowanie co najmniej jeden `Deconstruct` [metody rozszerzenia](programming-guide/classes-and-structs/extension-methods.md) zwracać wartości, w których interesują.
 
-W poniższym przykładzie zdefiniowano dwa `Deconstruct` metody rozszerzenia dla <xref:System.Reflection.PropertyInfo?displayProperty=nameWithType> klasy. Pierwszy zwraca zestaw wartości, których wskazania charakterystyki właściwości, w tym jego typ jest statyczny lub wystąpienia, czy jest tylko do odczytu i czy jest indeksowany. Drugi wskazuje właściwość ułatwień dostępu. Ponieważ dostępność elementu get i metody dostępu set może się różnić, wartościami logicznymi wskazują, czy właściwość zawiera osobne get i set metody dostępu i jeśli tak, czy mają one tą samą dostępnością. Czy istnieje tylko jedną metodę dostępu zarówno get, jak i metody dostępu set mieć tą samą dostępnością `access` zmienna wskazuje dostępność właściwość jako całość. W przeciwnym razie wartość dostępność get i set metody dostępu są oznaczone accessaccessibility jest określane przez `getAccess` i `setAccess` zmiennych.
+W poniższym przykładzie zdefiniowano dwa `Deconstruct` metody rozszerzenia dla <xref:System.Reflection.PropertyInfo?displayProperty=nameWithType> klasy. Pierwsza zwraca zestaw wartości, które wskazują cechy właściwości, w tym jego typ jest statyczna lub wystąpienia, czy jest tylko do odczytu i czy są indeksowane. Drugi wskazuje właściwości ułatwień dostępu. Ponieważ dostępność metody get i metody dostępu set mogą się różnić, wartościami logicznymi wskazywania, czy właściwość ma oddzielne pobieranie i ustawianie metody dostępu i, jeśli istnieje, czy mają identyczną dostępność. Czy istnieje tylko jedna metoda dostępu zarówno get, jak i metody dostępu set mieć identyczną dostępność `access` zmienna wskazuje dostępność właściwości jako całości. W przeciwnym razie dostępność metody get i set metody dostępu są wskazywane przez accessaccessibility jest wskazywany przez `getAccess` i `setAccess` zmiennych.
 
 [!code-csharp[Extension-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-extension1.cs)]
- 
+
 ## <a name="see-also"></a>Zobacz także
-[Odrzuca](discards.md)   
-[Krotki](tuples.md)  
+
+- [Odrzucenia](discards.md)
+- [Krotki](tuples.md)  

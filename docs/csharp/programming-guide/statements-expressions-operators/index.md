@@ -9,39 +9,37 @@ helpviewer_keywords:
 - C# language, expressions
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
-ms.openlocfilehash: 3759b6e09b1df53eb95cfce2a93f5197fb913adf
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 26a6046ac926a13c4f2a2f2cc4dfd250d998bc93
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198198"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386171"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>Instrukcje, wyrażenia i operatory (Przewodnik programowania w języku C#)
 Kod C#, który składa się z aplikacji składa się z instrukcji, które składają się z słów kluczowych, wyrażenia i operatory. Ta sekcja zawiera informacje dotyczące tych podstawowych elementów programu w języku C#.  
   
  Aby uzyskać więcej informacji, zobacz:  
   
--   [Instrukcje](../../../csharp/programming-guide/statements-expressions-operators/statements.md)  
+-   [Instrukcje](statements.md)  
   
--   [Wyrażenia](../../../csharp/programming-guide/statements-expressions-operators/expressions.md)  
+-   [Wyrażenia](expressions.md)  
   
     -   [Elementy członkowskie z wyrażeniem w treści](expression-bodied-members.md)
  
--   [Operatory](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+-   [Operatory](operators.md)  
   
--   [Funkcje anonimowe](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)  
+-   [Funkcje anonimowe](anonymous-functions.md)  
   
--   [Operatory z możliwością przeciążenia](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)  
+-   [Operatory z możliwością przeciążenia](overloadable-operators.md)  
   
--   [Operatory konwersji](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)  
+-   [Operatory konwersji](conversion-operators.md)  
   
-    -   [Używanie operatorów konwersji](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md)  
+    -   [Używanie operatorów konwersji](using-conversion-operators.md)  
   
-    -   [Instrukcje: implementowanie zdefiniowanych przez użytkownika konwersji struktur](../../../csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
+    -   [Instrukcje: implementowanie zdefiniowanych przez użytkownika konwersji struktur](how-to-implement-user-defined-conversions-between-structs.md)  
   
--   [Instrukcje: użycie przeładowania operatora do utworzenia złożonej klasy liczbowej](../../../csharp/programming-guide/statements-expressions-operators/how-to-use-operator-overloading-to-create-a-complex-number-class.md)  
-  
--   [Porównywanie równości](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)  
+-   [Porównywanie równości](equality-comparisons.md)  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

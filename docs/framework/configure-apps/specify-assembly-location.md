@@ -1,5 +1,5 @@
 ---
-title: Określenie zestawu&#39;lokalizacji s
+title: Określanie zestawu&#39;lokalizacji s
 ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [.NET Framework], applications
@@ -9,26 +9,26 @@ ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 65bd075115e33486e86e8081b01b96db665e9da5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4a83f1e67377a5ce699301770ff0369f8f760884
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758272"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387331"
 ---
-# <a name="specifying-an-assembly39s-location"></a>Określenie zestawu&#39;lokalizacji s
+# <a name="specifying-an-assembly39s-location"></a>Określanie zestawu&#39;lokalizacji s
 Istnieją dwa sposoby, aby określić lokalizację zestawu:  
   
--   Przy użyciu [ \<codeBase >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) elementu.  
+-   Za pomocą [ \<codeBase >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) elementu.  
   
--   Przy użyciu [ \<sondowanie >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) elementu.  
+-   Za pomocą [ \<sondowanie >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) elementu.  
   
- Można również użyć [narzędzia konfiguracji programu .NET Framework (Mscorcfg.msc)](http://msdn.microsoft.com/library/a7106c52-68da-490e-b129-971b2c743764) do określenia lokalizacji zestawu lub określić inną lokalizację dla plików wykonywalnych języka sondowania dla zestawów.  
+ Można również użyć [narzędzia .NET Framework Configuration Tool (Mscorcfg.msc)](https://msdn.microsoft.com/library/a7106c52-68da-490e-b129-971b2c743764) Aby określić inną lokalizację zestawu lub określić inną lokalizację dla środowiska uruchomieniowego języka wspólnego sondowania dla zestawów.  
   
-## <a name="using-the-codebase-element"></a>Przy użyciu \<codeBase > — Element  
- Można użyć  **\<codeBase >** elementu tylko w maszynie konfiguracji lub wydawcy pliki zasad, które również przekierować wersja zestawu. Środowisko uruchomieniowe określa wersji zestawu do użycia, stosuje się ustawienie baza kodu z pliku, który określa wersję. Jeśli wskazuje nie ścieżki bazowej kodu środowiska uruchomieniowego sondy dla zestawu w zwykły sposób. Aby uzyskać więcej informacji, zobacz [jak zestawy środowiska wykonawczego lokalizuje](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+## <a name="using-the-codebase-element"></a>Za pomocą \<codeBase > Element  
+ Możesz użyć  **\<codeBase >** elementu tylko w konfiguracji lub wydawcy zasad plików maszyny, które również przekierowanie wersji zestawu. Środowisko wykonawcze określa, jakiego zestawu należy użyć, stosuje się ustawienie baza kodu z pliku, który określa wersję. Jeśli nie baza kodu jest zaznaczone, środowisko uruchomieniowe sondy dla zestawu w normalny sposób. Aby uzyskać więcej informacji, zobacz [jak środowisko uruchomieniowe lokalizuje zestawy](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
   
- Poniższy przykład przedstawia sposób określenia lokalizacji zestawu.  
+ Poniższy przykład pokazuje sposób określania lokalizacji zestawu.  
   
 ```xml  
 <configuration>  
@@ -46,15 +46,15 @@ Istnieją dwa sposoby, aby określić lokalizację zestawu:
 </configuration>  
 ```  
   
- **Wersji** atrybut jest wymagany dla wszystkich zestawów o silnych nazwach, ale należy pominąć dla zestawów, które są nie o silnych nazwach. **\<CodeBase >** wymaga elementu **href** atrybutu. Nie można określić wersji zakresów w  **\<codeBase >** elementu.  
+ **Wersji** atrybut jest wymagany dla wszystkich zestawów o silnej nazwie, ale należy pominąć dla zestawów, które są nie o silnej nazwie. **\<CodeBase >** element wymaga **href** atrybutu. Nie można określić wersji zakresów w  **\<codeBase >** elementu.  
   
 > [!NOTE]
->  Jeśli są udostępnia podstawowe wskazówkę dla zestawu, który nie jest o silnych nazwach, wskazówka musi wskazywać baza aplikacji lub podkatalogu podstawowego katalogu aplikacji.  
+>  Jeśli są podawania wskazówką podstawowego kodu dla zestawu, który nie jest, o silnych nazwach, wskazówka musi wskazywać podstawy aplikacji lub podkatalogiem katalogu podstawowego aplikacji.  
   
-## <a name="using-the-probing-element"></a>Przy użyciu \<sondowanie > — Element  
- Środowisko uruchomieniowe lokalizuje zestawy, które nie mają bazy kodu przez sondowanie. Aby uzyskać więcej informacji na temat sondowania, zobacz [jak zestawy środowiska wykonawczego lokalizuje](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+## <a name="using-the-probing-element"></a>Za pomocą \<sondowanie > Element  
+ Środowisko uruchomieniowe lokalizuje zestawy, które nie mają kodu bazowego sondowanie. Aby uzyskać więcej informacji na temat badania, zobacz [jak środowisko uruchomieniowe lokalizuje zestawy](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
   
- Można użyć [ \<sondowanie >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) elementu w pliku konfiguracji aplikacji, aby określić podkatalogi środowiska uruchomieniowego powinna przeszukać podczas lokalizowania zestawów. Poniższy przykład pokazuje, jak można określić katalogi, które powinna przeszukać środowiska uruchomieniowego.  
+ Możesz użyć [ \<sondowanie >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) elementu w pliku konfiguracyjnym aplikacji, aby określić środowisko uruchomieniowe ma poszukiwać podczas lokalizowania zestawu podkatalogów. Poniższy przykład pokazuje, jak można określić katalogi, których środowisko uruchomieniowe ma wyszukiwać.  
   
 ```xml  
 <configuration>  
@@ -66,10 +66,10 @@ Istnieją dwa sposoby, aby określić lokalizację zestawu:
 </configuration>  
 ```  
   
- **PrivatePath** atrybut zawiera katalogi, które środowiska uruchomieniowego ma poszukiwać zestawów. Jeśli aplikacja znajduje się w lokalizacji C:\Program Files\MyApp, zestawy, które nie zostanie określona ścieżka bazowa kodu w C:\Program Files\MyApp\Bin, C:\Program Files\MyApp\Bin2\Subbin i C:\Program Files\MyApp\Bin3 będzie szukać środowiska uruchomieniowego. Katalogach określonych w **privatePath** musi być podkatalogi podstawowego katalogu aplikacji.  
+ **PrivatePath** atrybut zawiera katalogi, które środowisko wykonawcze powinno poszukać zestawów. Jeśli aplikacja znajduje się w lokalizacji C:\Program Files\MyApp, środowisko uruchomieniowe będzie szukać zestawów, które nie określisz bazy kodu w C:\Program Files\MyApp\Bin C:\Program Files\MyApp\Bin2\Subbin i C:\Program Files\MyApp\Bin3. Katalogi określone w **privatePath** musi być podkatalogi katalogu podstawowego aplikacji.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zestawy w środowisku uruchomieniowym CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Konfigurowanie aplikacji programu .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+ [Konfigurowanie aplikacji programu .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)

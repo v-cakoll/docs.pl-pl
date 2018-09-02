@@ -2,12 +2,12 @@
 title: Asynchroniczne typy zwracane (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 5ea3ef538bd0e3d74bbdcbd41519ae5041556b7e
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 9b0ee1c2e9925a1caffca6b7fb83eff34003246b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42753969"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387582"
 ---
 # <a name="async-return-types-c"></a>Asynchroniczne typy zwracane (C#)
 Metody asynchroniczne mogą być zwracane typy:
@@ -55,14 +55,15 @@ Poniższy kod oddziela wywoływanie metody `WaitAndApologize` metody z Oczekują
  
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2a.cs#1)]  
  
-##  <a name="BKMK_VoidReturnType"></a> Typ zwracany void  
+##  <a name="BKMK_VoidReturnType"></a> Typ zwracany void
+
 Możesz użyć `void` zwracany typ w procedurze obsługi zdarzeń asynchronicznych, które wymagają `void` typ zwracany. W przypadku metod innych niż procedury obsługi zdarzeń, które nie zwrócą wartość, powinna zwrócić <xref:System.Threading.Tasks.Task> zamiast tego, ponieważ metoda asynchroniczna zwraca `void` nie może być oczekiwany. Dowolny obiekt wywołujący taką metodę musi być w stanie kontynuować do zakończenia bez oczekiwania na zakończenie metody asynchronicznej, a obiekt wywołujący musi być niezależny od wartości lub wyjątków, które generuje metoda asynchroniczna.  
   
 Obiekt wywołujący metodę async zwraca void nie może przechwytywać wyjątków, które są generowane przez tę metodę, i takie nieobsłużone wyjątki mogą może spowodować awarię aplikacji. Jeśli wystąpi wyjątek w metodzie asynchronicznej, która zwraca <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601>, wyjątek jest przechowywany w zwróconym zadaniu i jest ponownie zgłaszany, gdy zadanie jest oczekiwane. Dlatego upewnij się, że każda metoda asynchroniczna, która może spowodować wyjątek ma typ zwracany <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601> i że trwa oczekiwanie na wywołania metody.  
   
 Aby uzyskać więcej informacji dotyczących wyjątków CATCH w metodach asynchronicznych, zobacz [wyjątki w metodach asynchronicznych](../../../language-reference/keywords/try-catch.md#exceptions-in-async-methods) części [try-catch —](../../../language-reference/keywords/try-catch.md) tematu.  
   
-Następujące korzystającym definiuje obsługę zdarzeń async.  
+Poniższy przykład pokazuje zachowanie programu async obsługi zdarzeń. Należy pamiętać, że w przykładowym kodzie, programu async obsługi zdarzeń musi umożliwić wiedzieć, po zakończeniu wątku głównego. Następnie wątek główny może oczekiwać programu async obsługi zdarzeń ukończyć przed zakończeniem pracy w programie.
  
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns3.cs)]  
  

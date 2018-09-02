@@ -9,37 +9,37 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-ms.openlocfilehash: b48a93cef2ea8fd2d39f58d8f458c4b287a10154
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 5b214a3b3c8d59d27a60b5cee28ea168edb9bf4a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207511"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392875"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Uzyskiwanie dostępu do ramek w modelu DOM (Document Object Model) zarządzanych dokumentów HTML
-Niektóre dokumenty HTML składają się z *ramki*, lub okna, które mogą przechowywać swoich własnych różne dokumentów HTML. Za pomocą ramek można łatwo tworzyć strony HTML, w których statycznych, takich jak pasek nawigacyjny pozostały jedną lub kilka części strony, podczas gdy inne ramki stale zmienić jego zawartość.  
+Niektóre dokumenty HTML składają się z *ramek*, lub windows, które mogą pomieścić własnych unikatowych dokumentów HTML. Przy użyciu klatek można łatwo tworzyć strony HTML, w których statyczne, takie jak pasek nawigacyjny pozostały jedną lub kilka części strony, podczas gdy inne ramki stale zmienić jego zawartość.  
   
- HTML autorzy mogą tworzyć ramki w jeden z dwóch sposobów:  
+ Autorzy utworzyć ramki w jeden z dwóch sposobów:  
   
--   Przy użyciu `FRAMESET` i `FRAME` tagów, co spowoduje utworzenie stałego systemu windows.  
+-   Za pomocą `FRAMESET` i `FRAME` tagi, które tworzą stały systemu windows.  
   
  —lub—  
   
--   Przy użyciu `IFRAME` tagu, który tworzy okno przestawne, które można zmienić ich pozycji w czasie wykonywania.  
+-   Za pomocą `IFRAME` znacznik, który tworzy okno przestawne, które może być przeniesiony w czasie wykonywania.  
   
 1.  Ponieważ ramki zawierają dokumentów HTML, są one reprezentowane w modelu DOM (Document Object) jako elementy okna i elementy ramki.  
   
-2.  Podczas uzyskiwania dostępu `FRAME` lub `IFRAME` tagu za pomocą kolekcji ramki <xref:System.Windows.Forms.HtmlWindow>, są pobierane elementu okna odpowiadającego ramki. Ta pozycja reprezentuje wszystkie ramki właściwości dynamicznych, takich jak bieżący adres URL, dokumentów i rozmiar.  
+2.  Jeśli uzyskujesz dostęp do `FRAME` lub `IFRAME` tagu za pomocą klatek zbiór <xref:System.Windows.Forms.HtmlWindow>, pobierają elementu okna odpowiadającego ramki. Ta pozycja reprezentuje wszystkie ramki właściwości dynamicznych, takich jak bieżący adres URL, dokumentów i rozmiaru.  
   
-3.  Podczas uzyskiwania dostępu `FRAME` lub `IFRAME` tagu za pomocą <xref:System.Windows.Forms.HtmlWindow.WindowFrameElement%2A> właściwość <xref:System.Windows.Forms.HtmlWindow>, <xref:System.Windows.Forms.HtmlElement.Children%2A> kolekcji lub metod, takich jak <xref:System.Windows.Forms.HtmlElementCollection.GetElementsByName%2A> lub <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A>, są pobierane elementu ramki. Reprezentuje statycznej właściwości ramki, w tym adres URL określony w oryginalnym pliku w formacie HTML.  
+3.  Jeśli uzyskujesz dostęp do `FRAME` lub `IFRAME` tagu za pomocą <xref:System.Windows.Forms.HtmlWindow.WindowFrameElement%2A> właściwość <xref:System.Windows.Forms.HtmlWindow>, <xref:System.Windows.Forms.HtmlElement.Children%2A> kolekcji lub metody takie jak <xref:System.Windows.Forms.HtmlElementCollection.GetElementsByName%2A> lub <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A>, pobierają elementu ramki. Reprezentuje statycznej właściwości ramki, w tym adres URL określony w oryginalnym pliku HTML.  
   
-## <a name="frames-and-security"></a>Ramki i zabezpieczenia  
- Dostęp do ramki jest złożona faktem, że zarządzany HTML DOM implementuje miary zabezpieczeń znany jako *między ramkami skryptów zabezpieczeń*. Jeśli dokument zawiera `FRAMESET` z co najmniej dwa `FRAME`s w różnych domenach, te `FRAME`s nie mogą oddziaływać na siebie. Innymi słowy `FRAME` czy wyświetla zawartość z witryny sieci Web nie może uzyskać dostępu informacji w `FRAME` takich jak obsługującego witryn innych firm http://www.adatum.com/. Zaimplementowano zabezpieczeń na poziomie <xref:System.Windows.Forms.HtmlWindow> klasy. Możesz uzyskać informacje ogólne o `FRAME` hosting innej witryny sieci Web, takie jak adres URL, ale nie będzie można uzyskać dostępu do jego <xref:System.Windows.Forms.HtmlWindow.Document%2A> lub zmień rozmiar lub lokalizację jego hosting `FRAME` lub `IFRAME`.  
+## <a name="frames-and-security"></a>Ramki i zabezpieczeń  
+ Dostęp do ramki jest skomplikowane faktem, że zarządzany HTML DOM implementuje środkiem bezpieczeństwa, znane jako *między ramkami skryptów zabezpieczeń*. Jeśli dokument zawiera `FRAMESET` z co najmniej dwóch `FRAME`s w różnych domenach, te `FRAME`s nie mogą współdziałać ze sobą. Innymi słowy `FRAME` , wyświetla zawartość w witrynie sieci Web nie może uzyskać dostęp do informacji w `FRAME` obsługujący takich jak witryny innych firm http://www.adatum.com/. To są implementowane na poziomie <xref:System.Windows.Forms.HtmlWindow> klasy. Można uzyskać ogólne informacje na temat `FRAME` hostingu z innej witryny sieci Web, takich jak adres URL, ale będzie mógł uzyskać dostępu do jego <xref:System.Windows.Forms.HtmlWindow.Document%2A> lub zmienić rozmiar lub położenie jego hostingu `FRAME` lub `IFRAME`.  
   
- Ta zasada ma zastosowanie również do systemu windows, które można otworzyć za pomocą <xref:System.Windows.Forms.HtmlWindow.Open%2A> i <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> metody. Jeśli okno otwierania jest w innej domenie na stronie hostowanych w <xref:System.Windows.Forms.WebBrowser> kontroli, nie można przenosić tego okna i przejrzyj jego zawartość. Te ograniczenia również są wymuszane, jeśli używasz <xref:System.Windows.Forms.WebBrowser> formantu, aby wyświetlić witrynę sieci Web, która różni się od witryny sieci Web umożliwia wdrażanie aplikacji opartych na formularzach systemu Windows. Jeśli używasz [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] technologii wdrażania, aby zainstalować aplikację z witryny sieci Web A i użyj <xref:System.Windows.Forms.WebBrowser> do wyświetlenia B witryny sieci Web, nie będzie możliwe do witryny sieci Web access B danych.  
+ Ta reguła obowiązuje także w systemie windows, które można otworzyć za pomocą <xref:System.Windows.Forms.HtmlWindow.Open%2A> i <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> metody. Jeśli okno otwierania znajduje się w innej domenie niż strona hostowana w <xref:System.Windows.Forms.WebBrowser> control, nie będzie mógł przenieść to okno, lub przejrzyj jego zawartość. Ograniczenia te są wymuszane również, jeśli używasz <xref:System.Windows.Forms.WebBrowser> formantu, aby wyświetlić witrynę sieci Web, która różni się od witryny sieci Web, używane do wdrażania aplikacji opartej na formularzach Windows. Jeśli używasz [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] używać technologii wdrażania, aby zainstalować aplikację z witryny sieci Web A, a <xref:System.Windows.Forms.WebBrowser> Aby wyświetlić witrynę sieci Web B, nie będzie dostępu do witryny sieci Web użytkownika B danych.  
   
- Aby uzyskać więcej informacji na temat skryptów między witrynami temacie [o wykonywania skryptów i zabezpieczeń](http://msdn.microsoft.com/library/ms533028.aspx).  
+ Aby uzyskać więcej informacji na temat skryptów między witrynami, zobacz [dotyczące wykonywania skryptów i zabezpieczeń](https://msdn.microsoft.com/library/ms533028.aspx).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Element ramki &#124; ramki obiektu](http://msdn.microsoft.com/library/ms535250.aspx)  
+ [Element ramki &#124; klatki, obiekt](https://msdn.microsoft.com/library/ms535250.aspx)  
  [Używanie modelu DOM (Document Object Model) zarządzanych dokumentów HTML](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)

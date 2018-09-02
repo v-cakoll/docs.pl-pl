@@ -2,18 +2,18 @@
 title: Adoptowanie programu Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 49ba71e2-9468-4082-84c5-cf8daf95e34a
-ms.openlocfilehash: 3ca2561356fb57fa685c778e509682581e317092
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 5773d2687eb06cfc562dbe25fa9b94864b1b3a49
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999336"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389615"
 ---
 # <a name="adopting-windows-communication-foundation"></a>Adoptowanie programu Windows Communication Foundation
 
 Można użyć usługi Windows Communication Foundation (WCF) w nowych wdrożeniach, gdy przejdziesz dalej zachować istniejące aplikacje opracowane za pomocą programu ASP.NET. Ponieważ WCF mają być najbardziej odpowiednim wyborem w ułatwienia komunikacji przy użyciu aplikacji utworzonych za pomocą programu .NET Framework w każdym scenariuszu, może służyć jako standardowym narzędziem do rozwiązywania szerokiej gamy problemów łączności z oprogramowaniem w taki sposób, że program ASP.NET Nie można wykonać.
 
-Nowe aplikacje WCF można wdrożyć w tej samej maszyny jako istniejących usług sieci Web platformy ASP.NET. Istniejących usług sieci Web platformy ASP.NET korzystania z wersji programu .NET Framework wcześniejszych niż 2.0, można użyć narzędzia rejestracji usług IIS platformy ASP.NET selektywnie wdrażania .NET Framework 2.0 do aplikacji usług IIS, w których mają być hostowane nowych aplikacji WCF. Tego narzędzia jest udokumentowany na [narzędzie rejestracji programu ASP.NET usług IIS (Aspnet_regiis.exe)](http://go.microsoft.com/fwlink/?LinkId=94687), i wbudowała interfejsu użytkownika w konsoli zarządzania usług IIS 6.0.
+Nowe aplikacje WCF można wdrożyć w tej samej maszyny jako istniejących usług sieci Web platformy ASP.NET. Istniejących usług sieci Web platformy ASP.NET korzystania z wersji programu .NET Framework wcześniejszych niż 2.0, można użyć narzędzia rejestracji usług IIS platformy ASP.NET selektywnie wdrażania .NET Framework 2.0 do aplikacji usług IIS, w których mają być hostowane nowych aplikacji WCF. Tego narzędzia jest udokumentowany na [narzędzie rejestracji programu ASP.NET usług IIS (Aspnet_regiis.exe)](https://go.microsoft.com/fwlink/?LinkId=94687), i wbudowała interfejsu użytkownika w konsoli zarządzania usług IIS 6.0.
 
 Usługi WCF, można dodać nowe funkcje do istniejących usług sieci Web platformy ASP.NET, dodając usług WCF skonfigurowane do uruchamiania w trybie zgodności w programie ASP.NET do istniejącej aplikacji usług sieci Web platformy ASP.NET w usługach IIS. Ze względu na tryb zgodności ASP.NET, kod dla nowych usług WCF można uzyskać dostęp i aktualizować tych samych informacji o stanie aplikacji jako istniejącego kodu platformy ASP.NET przy użyciu <xref:System.Web.HttpContext> klasy. Aplikacje można także udostępnić tej samej biblioteki klas.
 

@@ -2,20 +2,20 @@
 title: Powiązywanie danych w kliencie WPF (Windows Presentation Foundation)
 ms.date: 03/30/2017
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
-ms.openlocfilehash: 225bdedb67e218092ff3369d4fe742c4fc897fc6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69e61a52adc3d5058b9ccd65d2cde2ca7d74bbe6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502549"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393864"
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Powiązywanie danych w kliencie WPF (Windows Presentation Foundation)
-W tym przykładzie przedstawiono używanie powiązania danych w kliencie systemu Windows Presentation Foundation (WPF). W przykładzie użyto losowo generuje tablicę albumów do zwrócenia do klienta usługi Windows Communication Foundation (WCF). Każdego albumu ma nazwę, ceny i listy ścieżek albumu. Śledzi albumu ma nazwę i czas trwania. Informacje, które są zwracane przez usługę automatycznie jest powiązana z dostarczonym przez klienta Windows Presentation Foundation (WPF) interfejsu użytkownika (UI).  
+Niniejszy przykład pokazuje użycie powiązanie danych w kliencie Windows Presentation Foundation (WPF). W przykładzie użyto usługi Windows Communication Foundation (WCF), który losowo generuje tablicę ze zdjęciami, aby powrócić do klienta. Każdego albumu ma nazwę, cenę i listę ścieżek albumu. Śledzi albumu mają nazwy i czasu trwania. Informacje, które są zwracane przez usługę jest automatycznie powiązany z interfejsu użytkownika (UI), dostarczonego przez klienta programu Windows Presentation Foundation (WPF).  
   
 > [!NOTE]
->  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
+>  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
   
- Powiązanie danych umożliwia źródła danych może być automatycznie powiązane z interfejsem użytkownika. Upraszcza to model programowania, ponieważ nie wymaga programowane aktualizowanie każdego elementu interfejsu użytkownika przy użyciu danych z obiektu danych lub tablicę obiektów danych. Można powiązać obiektu pojedynczy element interfejsu użytkownika lub tablicy do formantu, który przyjmuje wielu danych wejściowych, takich jak `ListBox`. Poniższy kod przedstawia sposób powiązania danych do `DataContext` elementu interfejsu użytkownika.  
+ Powiązanie danych umożliwia źródła danych może być automatycznie powiązane z interfejsem użytkownika. Upraszcza to model programowania, ponieważ nie wymaga programowe aktualizowanie każdego elementu interfejsu użytkownika przy użyciu danych z obiektu danych lub użyj tablicy obiektów danych. Można powiązać obiektu pojedynczy element interfejsu użytkownika lub tablica do kontroli, która przyjmuje wielu danych wejściowych, takich jak `ListBox`. Poniższy kod pokazuje jak powiązać dane `DataContext` elementu interfejsu użytkownika.  
   
 ```  
 // Event handler executed when call is complete  
@@ -26,7 +26,7 @@ void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs 
 }  
 ```  
   
- W poprzednim przykładzie `DataContext` dla `grid` układu elementu o nazwie `myPanel` ma ustawioną wartość danych zwróconych przez `GetAlbumList` metody. `DataContext` Umożliwia elementom dziedziczenie informacji z ich elementów nadrzędnych dotyczące źródła danych, która jest używana do wiązania, a także innych charakterystyk powiązania, takich jak ścieżka. Wiersz kodu musi zostać wykonana w każdej aktualizacji danych na serwerze. Na przykład jest wykonywany po zainicjowaniu okna i po dodaniu nowego albumu.  
+ W poprzednim przykładzie `DataContext` dla `grid` układu elementu o nazwie `myPanel` jest ustawiona na dane zwrócone przez `GetAlbumList` metody. `DataContext` Umożliwia elementom dziedziczenie informacji z ich źródła danych, która jest używana do powiązania, a także innych charakterystyk powiązania, takich jak ścieżka elementów nadrzędnych. Musi zostać wykonany wiersz kodu, za każdym razem, gdy dane na serwerze są aktualizowane. Na przykład jest wykonywany, gdy okno jest inicjowany, i po dodaniu nowego albumu.  
   
  W poniższym przykładowym kodzie XAML `ListBox` Określa `ItemsSource="{Binding }"`.  
   
@@ -37,9 +37,9 @@ void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs 
           IsSynchronizedWithCurrentItem="true" />  
 ```  
   
- To ustawienie określa powiązany element interfejsu użytkownika najwyższego poziomu jest także powiązany z danymi do tego formantu (to znaczy tablicę albumów). Ponadto `ItemTemplate="{StaticResource AlbumStyle}"` Określa szablon danych, który ma być używany dla każdego elementu w `ListBox`. Istnieje również możliwość definiowania szablonów danych, aby określić sposób formatowania danych. Te dane, które można ponownie użyć szablonów innych elementów interfejsu użytkownika w aplikacji, zaletą jest to, że szablon danych jest zdefiniowany i jest utrzymywany w jednym miejscu.  
+ To ustawienie określa, powiązany element najwyższego poziomu interfejsu użytkownika jest również powiązany z danymi do tego formantu (czyli tablicę albumów). Ponadto `ItemTemplate="{StaticResource AlbumStyle}"` Określa szablon danych, który ma być używany dla każdego elementu w `ListBox`. Można również definiować szablony danych, aby określić sposób formatowania danych. Te dane, które szablony mogą być ponownie używane dla innych elementów interfejsu użytkownika w aplikacji, ma tę zaletę, szablon danych jest zdefiniowany i jest utrzymywany w jednym miejscu.  
   
- `AlbumStyle` Szablon danych wychodzi poza siatkę z dwóch `TextBlock`s obok siebie. Jeden Określa nazwę albumu i innych liczbę ścieżek w albumu.  
+ `AlbumStyle` Szablon danych wykracza poza siatkę przy użyciu dwóch `TextBlock`s obok siebie. Jeden Określa nazwę Album i innych liczbę ścieżek w albumu.  
   
 ```xaml  
 <DataTemplate x:Key="AlbumStyle">  
@@ -63,22 +63,22 @@ void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs 
             ItemsSource="{Binding Path=Tracks}" />  
 ```  
   
- Kod określa ścieżkę do `ItemsSource`. Oznacza to, że danych powiązanego z tym formantem nie jest danych najwyższego poziomu, ale właściwość danych najwyższego poziomu o nazwie `Tracks`. Ta właściwość reprezentuje tablicę ścieżek zawartych w albumu. Ponadto innej `DataTemplate` o nazwie `TrackStyle` jest określona. Układ `TrackStyle` szablon jest podobny do `AlbumStyle` szablonu, ale `TextBlock`s są powiązane z innej właściwości. Jest to spowodowane dwa szablony są używane z obiektami innych danych.  
+ Kod ten określa ścieżkę do `ItemsSource`. To oznacza, że dane powiązane z tej kontrolki jest danych najwyższego poziomu, ale właściwość danych najwyższego poziomu o nazwie `Tracks`. Ta właściwość reprezentuje tablicę ścieżek zawartych w albumu. Ponadto inny `DataTemplate` o nazwie `TrackStyle` jest określony. Układ `TrackStyle` szablon jest podobny do `AlbumStyle` szablonu, ale `TextBlock`s są powiązane z różnymi właściwościami. Jest to spowodowane dwa szablony są używane z różnymi danymi obiektów.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Upewnij się, że wykonano procedurę [jednorazowego procedurę instalacji dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Tworzenie wersji języka C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Aby uruchomić przykładowy w konfiguracji pojedynczej lub między komputerami, postępuj zgodnie z instrukcjami w [uruchamiania przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WPFDataBinding`  
   

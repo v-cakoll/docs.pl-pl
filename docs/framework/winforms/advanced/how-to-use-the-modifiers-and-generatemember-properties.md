@@ -15,40 +15,40 @@ helpviewer_keywords:
 - form inheritance
 - Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
-ms.openlocfilehash: 451c54bf6272b4fbff46b5298ba5b6a9290656e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9bb6e6568822f3edcabf50a4fceb7cc6386f05ef
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523997"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388007"
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>Porady: stosowanie modyfikatorów i właściwości „GenerateMember"
-Po umieszczeniu składnika w formularzu systemu Windows, dwie właściwości są udostępniane przez środowisko projektowania: `GenerateMember` i `Modifiers`. `GenerateMember` Właściwość określa, gdy projektant formularzy systemu Windows generuje zmienną członkowską dla składnika. `Modifiers` Właściwość jest modyfikator dostępu przypisany do tej zmiennej elementu członkowskiego. Jeśli wartość `GenerateMember` właściwość jest `false`, wartość `Modifiers` właściwość nie ma wpływu.  
+Po umieszczeniu składnika w formularzu Windows dwie właściwości są dostarczane przez środowisko projektowania: `GenerateMember` i `Modifiers`. `GenerateMember` Właściwość określa, kiedy Windows Forms Designer generuje zmienną składową dla składnika. `Modifiers` Właściwość jest modyfikator dostępu przypisane do tej zmiennej elementu członkowskiego. Jeśli wartość `GenerateMember` właściwość `false`, wartość `Modifiers` właściwość nie ma wpływu.  
   
 > [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-specify-whether-a-component-is-a-member-of-the-form"></a>Aby określić, czy składnik jest elementem członkowskim formularza  
   
-1.  Otwórz formularza w narzędziu Projektant dla formularzy systemu Windows.  
+1.  Otwórz formularz Windows Forms Designer.  
   
-2.  Otwórz **przybornika**i na formularzu, należy umieścić trzy <xref:System.Windows.Forms.Button> kontrolki.  
+2.  Otwórz **przybornika**i w formularzu, należy umieścić trzy <xref:System.Windows.Forms.Button> kontrolki.  
   
 3.  Ustaw `GenerateMember` i `Modifiers` właściwości dla każdego <xref:System.Windows.Forms.Button> kontroli zgodnie z poniższą tabelą.  
   
-    |Nazwa przycisku|Wartość "generatemember"|Wartość modyfikatorów|  
+    |Nazwa przycisku|Wartość GenerateMember|Wartość modyfikatorów|  
     |-----------------|--------------------------|---------------------|  
     |`button1`|`true`|`private`|  
     |`button2`|`true`|`protected`|  
-    |`button3`|`false`|Brak zmian|  
+    |`button3`|`false`|Nie wprowadzono zmian|  
   
 4.  Skompiluj rozwiązanie.  
   
 5.  W **Eksploratora rozwiązań**, kliknij przycisk **Pokaż wszystkie pliki** przycisku.  
   
-6.  Otwórz **Form1** węzeł, a następnie w **edytora kodu**, otwórz **Form1.Designer.vb** lub **Form1.Designer.cs** pliku. Ten plik zawiera kod emitowane przez projektanta formularzy systemu Windows.  
+6.  Otwórz **Form1** węzła, a następnie w **Edytor kodu**, otwórz **Form1.Designer.vb** lub **Form1.Designer.cs** pliku. Ten plik zawiera kod wyemitowane przez Windows Forms Designer.  
   
-7.  Znajdź deklaracje trzech przycisków. Poniższy przykładowy kod przedstawia różnice określony przez `GenerateMember` i `Modifiers` właściwości.  
+7.  Znajdź deklaracje dla trzech przycisków. Poniższy przykład kodu pokazuje różnice określony przez `GenerateMember` i `Modifiers` właściwości.  
   
      [!code-csharp[System.Windows.Forms.GenerateMember#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.GenerateMember#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#3)]  
@@ -57,7 +57,7 @@ Po umieszczeniu składnika w formularzu systemu Windows, dwie właściwości są
      [!code-vb[System.Windows.Forms.GenerateMember#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#2)]  
   
 > [!NOTE]
->  Domyślnie przypisuje Projektant formularzy systemu Windows `private` (`Friend` w języku Visual Basic) modyfikator do kontenera formantów, takich jak <xref:System.Windows.Forms.Panel>. Jeśli podstawowym <xref:System.Windows.Forms.UserControl> lub <xref:System.Windows.Forms.Form> ma formantu kontenera, nie będzie akceptować nowych elementów podrzędnych w formularzach i formanty dziedziczone. Rozwiązanie to zmienić modyfikator do formantu kontenera podstawowej `protected` lub `public`.  
+>  Domyślnie Windows Forms Designer przypisuje `private` (`Friend` w języku Visual Basic) modyfikatora kontenera formanty, takie jak <xref:System.Windows.Forms.Panel>. Jeśli podstawa <xref:System.Windows.Forms.UserControl> lub <xref:System.Windows.Forms.Form> zawiera formant kontenera nie będzie akceptować nowych elementów podrzędnych formularzy i kontrolek dziedziczone. Rozwiązaniem jest zmiana modyfikator kontrolki podstawowym kontenerem na `protected` lub `public`.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.Button>  

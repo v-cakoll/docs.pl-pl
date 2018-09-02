@@ -4,12 +4,12 @@ description: Dowiedz się więcej o nowych funkcjach w programie .NET Core 2.1.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/06/2018
-ms.openlocfilehash: ec9a8d238dc47f604a1ac0ee7628bf079e89b9c2
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 2599908c81cbe046889778bbdf7aeb9f8272b215
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935582"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392852"
 ---
 # <a name="whats-new-in-net-core-21"></a>What's new in .NET Core 2.1
 
@@ -49,7 +49,7 @@ Wiele narzędzi, które były dostępne tylko na podstawę projektu przy użyciu
    ```console
    dotnet watch -- --verbose build
    ```
-  
+
    Uwaga `--` opcję poprzedzającą `--verbose` opcji. Jego rozgranicza opcje przekazane bezpośrednio do `dotnet watch` polecenia na podstawie argumentów, które są przekazywane do elementu podrzędnego `dotnet` procesu. Bez tego `--verbose` opcja ma zastosowanie do `dotnet watch` nie polecenia `dotnet build` polecenia.
   
    Aby uzyskać więcej informacji, zobacz [aplikacji opracowywanie platformy ASP.NET Core przy użyciu Obejrzyj dotnet](/aspnet/core/tutorials/dotnet-watch)
@@ -88,7 +88,7 @@ W .NET Core SDK 2.1 (v 2.1.300), wszystkie operacje narzędzia za pomocą `dotne
 
 ## <a name="roll-forward"></a>Przenoszenia do przodu
 
-Wszystkie aplikacje platformy .NET Core, począwszy od programu .NET Core 2.0 automatycznie uaktualniane do najnowszej wersji *wersja pomocnicza* zainstalowanego w systemie. 
+Wszystkie aplikacje platformy .NET Core, począwszy od programu .NET Core 2.0 automatycznie uaktualniane do najnowszej wersji *wersja pomocnicza* zainstalowanego w systemie.
 
 Uruchamianie przy użyciu platformy .NET Core 2.0, jeśli wersja programu .NET Core, która została zbudowana aplikacja nie jest obecny w czasie wykonywania, aplikacja automatycznie uruchamiana najnowszej zainstalowanej *wersja pomocnicza* programu .NET Core. Innymi słowy Jeśli aplikacja jest oparte na platformie .NET Core 2.0 i .NET Core 2.0 nie jest dostępny w systemie hosta, ale jest platformy .NET Core 2.1, aplikacja zostanie uruchomiona przy użyciu platformy .NET Core 2.1.
 
@@ -233,6 +233,6 @@ W systemie Linux i macOS, można skonfigurować tylko <xref:System.Net.Http.Http
 
 ## <a name="see-also"></a>Zobacz także
 
-[Co nowego w programie .NET Core](index.md)  
-[Nowe funkcje programu EF Core 2.1](/ef/core/what-is-new/ef-core-2.1)  
-[What's new in platformy ASP.NET Core 2.1](/aspnet/core/aspnetcore-2.1)
+* [Co nowego w programie .NET Core](index.md)  
+* [Nowe funkcje programu EF Core 2.1](/ef/core/what-is-new/ef-core-2.1)  
+* [What's new in platformy ASP.NET Core 2.1](/aspnet/core/aspnetcore-2.1)

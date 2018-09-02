@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b39962d2d716d88d139ccaba5f4c445dad9ef6c
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 0a36e08c9b54dd6b47b11b36fd20993bff8c805e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999484"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386346"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>Przestarzali członkowie w .NET Framework
 W tabelach, w tym artykule przedstawiono elementy członkowskie typu, które są przestarzałe w programie .NET Framework 4.5 i nowsze wersje, uporządkowane według zestawu. Użyj poniższych linków, aby zobaczyć listę przestarzali członkowie i zalecanych rozwiązań alternatywnych, w każdym zestawie. W tym temacie nie ma elementów członkowskich przestarzałe typy. Aby uzyskać listę przestarzałych typów, zobacz [przestarzałe typy](../../../docs/framework/whats-new/obsolete-types.md).  
@@ -624,8 +624,8 @@ W tabelach, w tym artykule przedstawiono elementy członkowskie typu, które są
 |<xref:System.Web.HttpContext?displayProperty=nameWithType>|<xref:System.Web.HttpContext.GetConfig%2A>|Zalecaną alternatywą jest <xref:System.Web.HttpContext.GetSection%2A?displayProperty=nameWithType> w System.Web.dll.|  
 |<xref:System.Web.HttpUtility?displayProperty=nameWithType>|<xref:System.Web.HttpUtility.UrlEncodeUnicode%2A>|Najpierw przestarzałe w programie .NET Framework 4.5.<br /><br /> Ta metoda generuje bez\-standardów\-zgodne dane wyjściowe i ma problemy ze współdziałaniem. Jest preferowana alternatywa <xref:System.Web.HttpUtility.UrlEncode%28System.String%29>.|  
 |<xref:System.Web.HttpUtility?displayProperty=nameWithType>|<xref:System.Web.HttpUtility.UrlEncodeUnicodeToBytes%2A>|Najpierw przestarzałe w programie .NET Framework 4.5.<br /><br /> Ta metoda generuje bez\-standardów\-zgodne dane wyjściowe i ma problemy ze współdziałaniem. Jest preferowana alternatywa <xref:System.Web.HttpUtility.UrlEncodeToBytes%28System.String%29>.|  
-|<xref:System.Web.Configuration.AuthenticationMode?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationMode.Passport>|To pole jest przestarzałe. Produkt uwierzytelniania usługi Passport nie jest już obsługiwana i została zastąpiona przez [Account Microsoft](http://go.microsoft.com/fwlink/?LinkId=733413).|  
-|<xref:System.Web.Configuration.AuthenticationSection?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationSection.Passport%2A>|Ta właściwość jest przestarzała. Produkt uwierzytelniania usługi Passport nie jest już obsługiwana i została zastąpiona przez [Account Microsoft](http://go.microsoft.com/fwlink/?LinkId=733413).|  
+|<xref:System.Web.Configuration.AuthenticationMode?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationMode.Passport>|To pole jest przestarzałe. Produkt uwierzytelniania usługi Passport nie jest już obsługiwana i została zastąpiona przez [Account Microsoft](https://go.microsoft.com/fwlink/?LinkId=733413).|  
+|<xref:System.Web.Configuration.AuthenticationSection?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationSection.Passport%2A>|Ta właściwość jest przestarzała. Produkt uwierzytelniania usługi Passport nie jest już obsługiwana i została zastąpiona przez [Account Microsoft](https://go.microsoft.com/fwlink/?LinkId=733413).|  
 |<xref:System.Web.Configuration.HttpCapabilitiesBase?displayProperty=nameWithType>|<xref:System.Web.Configuration.HttpCapabilitiesBase.JavaScript%2A>|Zalecaną alternatywą jest <xref:System.Web.Configuration.HttpCapabilitiesBase.EcmaScriptVersion%2A?displayProperty=nameWithType> właściwości. A <xref:System.Version.Major%2A?displayProperty=nameWithType> wersji wartość większą lub równą 1 wymaga obsługi języka JavaScript.|  
 |<xref:System.Web.Configuration.SystemWebSectionGroup?displayProperty=nameWithType>|<xref:System.Web.Configuration.SystemWebSectionGroup.MobileControls%2A>|System.Web.Mobile.dll is obsolete.|  
 |<xref:System.Web.Routing.UrlRoutingModule?displayProperty=nameWithType>|<xref:System.Web.Routing.UrlRoutingModule.PostMapRequestHandler%2A>|Ta metoda jest przestarzała. Zastąp <xref:System.Web.Routing.UrlRoutingModule.Init%2A> metodę <xref:System.Web.Routing.UrlRoutingModule.PostMapRequestHandler%2A> zdarzeń.|  

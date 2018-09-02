@@ -4,18 +4,18 @@ description: Dowiedz się, jak .NET Core umożliwia znalezienie i wybiera wersje
 author: billwagner
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: d1b885ebbade4736d5f592d1dc1d4ba25a321a16
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 21697aa773abfbd88288d47323402a48c51d69ae
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874473"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395120"
 ---
 # <a name="net-core-version-selection"></a>Wybór wersji platformy .NET core
 
 [!INCLUDE [topic-appliesto-net-core-2plus](../../../includes/topic-appliesto-net-core-2plus.md)]
 
-W tym artykule opisano zasady używane przez narzędzia .NET Core, zestaw SDK i środowiska uruchomieniowego do wybierania wersji. Te zasady zapewniają równowagi między uruchamiających aplikacje przy użyciu określonej wersji i włączenie jej obsługi ułatwiają realizację uaktualniania maszyn dla deweloperów i użytkowników końcowych. Te zasady, wykonaj następujące czynności:
+W tym artykule opisano zasady używane przez narzędzia .NET Core, zestaw SDK i środowiska uruchomieniowego do wybierania wersji. Te zasady zapewniają równowagi między uruchamiających aplikacje przy użyciu określonej wersji i włączenie jej obsługi ułatwiają realizację uaktualniania maszyny użytkowników końcowych i deweloper. Te zasady, wykonaj następujące czynności:
 
 - Łatwe wdrażanie platformy .NET Core, w tym aktualizacje zabezpieczeń i niezawodności.
 - Użyj najnowsze narzędzia i polecenia niezależnie od docelowego środowiska uruchomieniowego.
@@ -31,11 +31,11 @@ Te cztery scenariusze sprawdza, czy pozostałej części tego dokumentu.
 
 ## <a name="the-sdk-uses-the-latest-installed-version"></a>Zestaw SDK używa najnowszej zainstalowanej wersji
 
-Następujące polecenia zestawu SDK `dotnet new`, `dotnet build` lub `dotnet run`. `dotnet` Interfejsu wiersza polecenia, musisz wybrać wersję zestawu SDK dla dowolnego polecenia. Najnowszy zestaw SDK domyślnie instalowany na komputerze korzysta z interfejsu wiersza polecenia platformy .NET Core. Użyjesz v2.1.301 zestawu .NET Core SDK po jego zainstalowaniu, nawet wtedy, gdy projekt pracujesz z obiektami docelowymi .NET Core Runtime 2.0. Należy pamiętać, że ta zasada obowiązuje dla wersji zapoznawczych, a także wersje. Korzystać z zalet najnowszych funkcji zestawu SDK i ulepszeń, podczas określania wartości docelowej starszych wersji środowiska uruchomieniowego .NET Core. Można wskazać wiele wersji środowiska uruchomieniowego programu .NET Core w różnych projektach, przy użyciu tych samych narzędzi zestawu SDK dla wszystkich projektów.
+Następujące polecenia zestawu SDK `dotnet new`,, lub `dotnet run`. `dotnet` Interfejsu wiersza polecenia, musisz wybrać wersję zestawu SDK dla dowolnego polecenia. Najnowszy zestaw SDK domyślnie instalowany na komputerze korzysta z interfejsu wiersza polecenia platformy .NET Core. Użyjesz v2.1.301 zestawu .NET Core SDK po jego zainstalowaniu, nawet wtedy, gdy projekt pracujesz z obiektami docelowymi .NET Core Runtime 2.0. Użytkownik użyje najnowszej wersji (wersja zapoznawcza) jak również wydane wersje. Korzystać z zalet najnowszych funkcji zestawu SDK i ulepszeń, podczas określania wartości docelowej starszych wersji środowiska uruchomieniowego .NET Core. Można wskazać wiele wersji środowiska uruchomieniowego programu .NET Core w różnych projektach, przy użyciu tych samych narzędzi zestawu SDK dla wszystkich projektów.
 
 W rzadkich przypadkach może być konieczne użycie wcześniejszej wersji zestawu SDK. Należy określić w tej wersji w [ *global.json* pliku](../tools/global-json.md). Zasady "przy użyciu najnowszej" oznacza, że możesz tylko używać *global.json* do wcześniejszych niż jego Najnowsza zainstalowana wersja określanie wersji programu .NET Core SDK.
 
-*Global.JSON* można umieścić w dowolnym miejscu w hierarchii plików. Interfejs wiersza polecenia w górę przeszukuje od katalogu projektu w pierwszym *global.json* znajdzie. Możesz kontrolować, które projekty danego *global.json* dotyczy przez jej miejscu w systemie plików. Interfejs wiersza polecenia platformy .NET, wyszukuje *global.json* pliku iteracyjne przechodząc ścieżkę w górę od bieżącego katalogu roboczego. Pierwszy *global.json* można znaleźć pliku określa wersja użyta. Jeśli ta wersja jest zainstalowana, ta wersja jest używana. Jeśli zestaw SDK określona w *global.json* nie zostanie znaleziony, interfejsu wiersza polecenia platformy .NET przenosi do przodu do zainstalowany najnowszy zestaw SDK. Jest to domyślne zachowanie, gdy nie *global.json* znajduje się plik.
+*Global.JSON* można umieścić w dowolnym miejscu w hierarchii plików. Interfejs wiersza polecenia w górę przeszukuje od katalogu projektu w pierwszym *global.json* znajdzie. Możesz kontrolować, które projekty danego *global.json* dotyczy przez jej miejscu w systemie plików. Interfejs wiersza polecenia platformy .NET, wyszukuje *global.json* pliku iteracyjne przechodząc ścieżkę w górę od bieżącego katalogu roboczego. Pierwszy *global.json* można znaleźć pliku określa wersja użyta. Jeśli ta wersja jest zainstalowana, ta wersja jest używana. Jeśli zestaw SDK określona w *global.json* nie zostanie znaleziony, interfejsu wiersza polecenia platformy .NET przenosi do przodu do zainstalowany najnowszy zestaw SDK. Przodu jest taka sama jak domyślne zachowanie, gdy nie *global.json* znajduje się plik.
 
 W poniższym przykładzie przedstawiono *global.json* składni:
 
@@ -53,7 +53,7 @@ Proces wybierania wersji zestawu SDK jest:
 1. `dotnet` użyto zestawu SDK usługi określonego w pierwszym *global.json* znaleziono.
 1. `dotnet` używa najnowszej zainstalowany zestaw SDK, jeśli nie *global.json* zostanie znaleziony.
 
-Dowiedz się więcej o wybranie wersji zestawu SDK w [reguł dopasowania](../tools/global-json.md) części tematu na *global.json*.
+Dowiedz się więcej o wybranie wersji zestawu SDK w [reguł dopasowania](../tools/global-json.md#matching-rules) części artykułu opisującego *global.json*.
 
 ## <a name="target-framework-monikers-define-build-time-apis"></a>TARGET Framework monikerów definiują czas kompilacji interfejsów API
 
@@ -109,4 +109,4 @@ Niezależne wdrożenia może wymagać wersja określona poprawka. Minimalna wers
 <RuntimeFrameworkVersion>2.0.4</RuntimeFrameworkVersion>
 ```
 
-`RuntimeFrameworkVersion` Elementu zastępuje domyślne zasady wersji. W przypadku wdrożeń niezależna `RuntimeFrameworkVersion` Określa *dokładnie* framework w wersji środowiska uruchomieniowego. W przypadku aplikacji zależnych framework `RuntimeFrameworkVersion` Określa *minimalne* framework wymaganego środowiska uruchomieniowego w wersji.
+`RuntimeFrameworkVersion` Elementu zastępuje domyślne zasady wersji. W przypadku wdrożeń niezależna `RuntimeFrameworkVersion` Określa *dokładnie* framework w wersji środowiska uruchomieniowego. W przypadku zależny od struktury aplikacji `RuntimeFrameworkVersion` Określa *minimalne* framework wymaganego środowiska uruchomieniowego w wersji.

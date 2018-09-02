@@ -1,32 +1,32 @@
 ---
-title: Adresowanie Mikrousług oraz rejestr usługi
-description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Adresowanie Mikrousług oraz rejestr usługi
+title: Adresowanie Mikrousług i rejestr usług
+description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Adresowanie Mikrousług i rejestr usług
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: ec3ccdd823e00d148bb8a97e906132f44e7fa727
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: ec0617c5a5c1861f3596e12f3d7a7017a448239e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106674"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388908"
 ---
-# <a name="microservices-addressability-and-the-service-registry"></a>Adresowanie Mikrousług oraz rejestr usługi
+# <a name="microservices-addressability-and-the-service-registry"></a>Adresowanie Mikrousług i rejestr usług
 
-Każdy mikrousługi ma unikatową nazwę (URL), który jest używany do rozpoznawania jego lokalizacji. Twoje mikrousługi należy adresowanego wszędzie tam, gdzie jest uruchomiona. Jeśli trzeba myśleć o komputera, na którym jest uruchomiona określonego mikrousługi, rzeczy może przejść zły szybko. W taki sam sposób, że DNS rozpoznaje adres URL dla danego komputera z mikrousługi musi mieć unikatową nazwę, dzięki czemu jego bieżącej lokalizacji będzie wykrywalny. Mikrousług muszą mieć nazwy adresowanego, które stały się niezależnie od infrastruktury, które działają na. Oznacza to, że istnieje interakcji między sposób wdrażania usługi i jak okaże się, ponieważ musi istnieć [usługi rejestru](https://microservices.io/patterns/service-registry.html). W tym samym szyjnej gdy komputer ulegnie awarii, usługa Rejestr musi być może wskazywać, w którym usługa jest teraz uruchomiona.
+Każda mikrousługa ma unikatową nazwę (adres URL), który jest używany do rozpoznawania lokalizacji. Twoje mikrousług należy adresowalnych wszędzie tam, gdzie jest uruchomiony. Jeśli musisz myśleć o komputera, którym jest uruchomiona określonego mikrousług, mogą wystąpić zły szybko. W ten sam sposób, że DNS jest rozpoznawana jako adres URL dla danego komputera z mikrousług musi mieć unikatową nazwę, tak, aby jego bieżącej lokalizacji wykrywalne. Mikrousługi należy adresowalnych nazw, które były niezależnie od infrastruktury, które są uruchomione. Oznacza to, że istnieje interakcji między jak usługa zostanie wdrożona, i jak okaże się, ponieważ musi istnieć [rejestr usług](https://microservices.io/patterns/service-registry.html). W tym samym względzie w przypadku awarii komputera Usługa rejestru musi umożliwiać wskazać, gdzie usługa jest obecnie uruchomiona.
 
-[Usługi rejestru wzorzec](https://microservices.io/patterns/service-registry.html) jest kluczowym elementem odnajdywania usługi. Rejestr jest baza danych zawierająca lokalizacje sieciowe wystąpień usługi. Rejestr usługi musi być wysokiej dostępności i aktualne. Klientów można buforować lokalizacje sieciowe uzyskany z rejestru usługi. Jednak te informacje ostatecznie prowadzi nieaktualny i klientów nie może odnaleźć wystąpienia usługi. W rezultacie rejestru usługi składa się z klastra serwerów, które używają protokołu replikacji do zapewniania spójności.
+[Wzorzec rejestru usług](https://microservices.io/patterns/service-registry.html) jest kluczowym elementem odnajdowania usług. Rejestr to baza danych zawierająca lokalizacje sieciowe wystąpień usługi. Rejestr usług musi być wysoko dostępne i aktualne. Klientów można buforować lokalizacje sieciowe uzyskany z rejestru usługi. Jednak te informacje po pewnym czasie przechodzi się nieaktualna i klientów nie może odnaleźć wystąpienia usługi. W związku z tym rejestr usług składa się z klastra serwerów, które używają protokołu replikacji do zapewniania spójności.
 
-W niektórych środowiskach wdrożenia mikrousługi (nazywane klastrami mają być uwzględnione w dalszej części artykułu) odnajdywania usługi są wbudowane. Na przykład w środowisku usługi kontenera platformy Azure Kubernetes i DC/OS, przy użyciu platformy Marathon obsługi rejestracji wystąpienia usługi i wyrejestrować. Serwer proxy one również uruchomić na każdym hoście, który pełni rolę routera odnajdywania po stronie serwera. Innym przykładem jest sieć szkieletowa usług Azure, oferujący rejestru usługi za pośrednictwem jego poza pole Naming Service.
+W niektórych środowiskach wdrożenia mikrousługi (nazywane klastrami, aby uwzględnić je w dalszej części tego tematu) odnajdowania usługi jest wbudowana. Na przykład w danym środowisku usługi Azure Container Service, Kubernetes i DC/OS przy użyciu platformy Marathon można obsługiwać rejestracji wystąpienie usługi i wyrejestrować. Serwer proxy one również uruchomić w każdym hoście, który pełni rolę routera odnajdywania po stronie serwera. Innym przykładem jest usługi Azure Service Fabric, oferujący rejestr usług, za pośrednictwem jego usługi nazewnictwa poza pole.
 
-Należy pamiętać, że niektóre nakładania się rejestr usługi i wzorzec bramy interfejsu API, który pomaga rozwiązać ten problem, a także. Na przykład [serwera Proxy usługi sieci szkieletowej wstecznego](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy) jest typem wdrożenia bramy usługi interfejsu API jest oparty na Usługa nazewnictwa Fabrice i pomagające rozwiązać rozpoznawania adresów do wewnętrznych usług.
+Należy pamiętać, że nakładają się na niektórych rejestr usług i wzorzec bramy interfejsu API, która pomaga rozwiązać ten problem, a także. Na przykład [Proxy usługi Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy) jest typem wdrożenia bramy interfejsu API, który zależy od usługi nazewnictwa Service Fabric i która pomaga rozwiązać rozpoznawania adresów do wewnętrznych usług.
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Krzysztof Richardson. Wzorca: Rejestr usługi**
+-   **Chris Leonard. Wzorzec: Rejestr usług**
     *https://microservices.io/patterns/service-registry.html*
 
--   **Auth0. Rejestr usługi**
+-   **Rozwiązanie Auth0. Rejestr usług**
     [*https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/*](https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/)
 
 -   **Gabriel Schenker. Odnajdowanie usługi**

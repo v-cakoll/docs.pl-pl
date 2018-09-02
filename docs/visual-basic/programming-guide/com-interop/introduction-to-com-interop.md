@@ -5,19 +5,19 @@ helpviewer_keywords:
 - interop assemblies
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
-ms.openlocfilehash: 639b621215f25bc1042274a92a21fca2985e5918
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: ecd514231c36cf3b65b1f0dd05f26d05f3c9c88d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244117"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389747"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>Wprowadzenie do COM Interop (Visual Basic)
 Component Object Model (COM) umożliwia obiektu udostępnić swoje funkcje z innymi składnikami i umożliwia obsługę aplikacji. Gdy obiekty COM zostały podstawowe znaczenie dla Windows programowania przez wiele lat, aplikacje przeznaczone do środowisko uruchomieniowe języka wspólnego (CLR) oferują wiele zalet.  
   
  [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] aplikacje zostanie ostatecznie zastąpią opracowanych za pomocą modelu COM. W tym czasie może mieć do użycia lub Utwórz obiekty COM za pomocą programu Visual Studio. Współdziałanie z COM, lub *COM interop*, pozwala na korzystanie z istniejących obiektów COM podczas przechodzenia do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] w swoim własnym tempie.  
   
- Za pomocą [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] do tworzenia składników modelu COM, można użyć Usługa międzyoperacyjna modelu COM bez rejestrowania. Dzięki temu można kontrolować, którą wersję biblioteki DLL jest włączona, gdy więcej niż jedna wersja jest zainstalowana na komputerze i umożliwia użytkownikom końcowym kopiowanie za pomocą polecenia XCOPY lub FTP aplikacji do odpowiedniego katalogu na komputerze, gdzie mogą być uruchamiane. Aby uzyskać więcej informacji, zobacz [współdziałania z modelem COM bez rejestrowania](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd).  
+ Za pomocą [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] do tworzenia składników modelu COM, można użyć Usługa międzyoperacyjna modelu COM bez rejestrowania. Dzięki temu można kontrolować, którą wersję biblioteki DLL jest włączona, gdy więcej niż jedna wersja jest zainstalowana na komputerze i umożliwia użytkownikom końcowym kopiowanie za pomocą polecenia XCOPY lub FTP aplikacji do odpowiedniego katalogu na komputerze, gdzie mogą być uruchamiane. Aby uzyskać więcej informacji, zobacz [współdziałania z modelem COM bez rejestrowania](https://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd).  
   
 ## <a name="managed-code-and-data"></a>Zarządzany kod i dane  
  Kod opracowany dla [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] nazywa się *kodu zarządzanego*i zawiera metadane, który jest używany przez środowisko CLR. Dane używane przez [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] nosi nazwę aplikacji *danych zarządzanych* ponieważ środowisko uruchomieniowe zarządza zadań związanych z danymi, takich jak przydzielanie i odzyskiwanie pamięci i wykonywania sprawdzenie typu. Domyślnie program Visual Basic .NET korzysta z kodu zarządzanego i danych, ale możesz dostęp do niezarządzanego kodu i danych obiektów COM, przy użyciu zestawów międzyoperacyjnych (opisane dalej na tej stronie).  
@@ -43,7 +43,7 @@ Component Object Model (COM) umożliwia obiektu udostępnić swoje funkcje z inn
 ### <a name="importing-and-exporting-type-libraries"></a>Importowanie i eksportowanie bibliotek typów  
  Program Visual Studio zawiera narzędzia, Tlbimp, który umożliwia importowanie informacji z biblioteki typów do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] aplikacji. Można generować biblioteki typów z zestawów przy użyciu narzędzia Narzędziatlbexp.  
   
- Aby uzyskać informacji na temat Tlbimp i Tlbexp, zobacz [Tlbimp.exe (Importer biblioteki typów)](../../../framework/tools/tlbimp-exe-type-library-importer.md) i [Tlbexp.exe (Eksporter biblioteki typów)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d).  
+ Aby uzyskać informacji na temat Tlbimp i Tlbexp, zobacz [Tlbimp.exe (Importer biblioteki typów)](../../../framework/tools/tlbimp-exe-type-library-importer.md) i [Tlbexp.exe (Eksporter biblioteki typów)](https://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d).  
   
 ## <a name="interop-assemblies"></a>Zestawy międzyoperacyjne  
  Są zestawy międzyoperacyjne [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] kod zestawów, które Most między zarządzanych i niezarządzanych, elementach członkowskich obiektu COM mapowania na odpowiednik [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] zarządzanych elementów członkowskich. Zestawy międzyoperacyjne utworzone przez program Visual Basic .NET obsługiwać wiele szczegółów pracy z obiektami COM, takie jak organizowanie współdziałania.  
@@ -58,6 +58,6 @@ Component Object Model (COM) umożliwia obiektu udostępnić swoje funkcje z inn
  [Rozwiązywanie problemów związanych z współdziałaniem](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
  [Zestawy i globalna pamięć podręczna zestawów](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
  [Tlbimp.exe (importer biblioteki typów)](../../../framework/tools/tlbimp-exe-type-library-importer.md)  
- [Tlbexp.exe (eksporter biblioteki typów)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
+ [Tlbexp.exe (eksporter biblioteki typów)](https://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
  [Marshaling międzyoperacyjny](../../../framework/interop/interop-marshaling.md)  
- [Współdziałanie z COM bez rejestrowania](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd)
+ [Współdziałanie z COM bez rejestrowania](https://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd)

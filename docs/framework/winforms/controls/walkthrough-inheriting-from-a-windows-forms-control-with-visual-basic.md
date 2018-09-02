@@ -10,55 +10,55 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
-ms.openlocfilehash: a6b1e78d17d952590510bdda80bf802ccc094285
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c70de1bf6a5340b6f5b2c652110ed9be5536665
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541440"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389983"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>Wskazówki: dziedziczenie z formantu formularzy systemu Windows z Visual Basic
-Visual Basic umożliwia tworzenie zaawansowanych formantów niestandardowych za pomocą *dziedziczenia*. Poprzez dziedziczenie jest możliwość tworzenia formantów, które zachowują wszystkie funkcje związane z standardowe formanty formularzy systemu Windows, ale także dołączyć do nich funkcji niestandardowych. W tym przewodniku spowoduje utworzenie prostego formantu dziedziczone o nazwie `ValueButton`. Ten przycisk będzie dziedziczyć funkcje z formularzy systemu Windows <xref:System.Windows.Forms.Button> kontroli i uwidoczni właściwość niestandardowa o nazwie `ButtonValue`.  
+Za pomocą Visual Basic można tworzyć zaawansowane Kontrolki niestandardowe za pomocą *dziedziczenia*. Poprzez dziedziczenie jest możliwe w celu tworzenia formantów, które zachować wszystkie związane funkcje standardowych kontrolek Windows Forms, ale również dołączać niestandardowe funkcje. W tym instruktażu utworzysz prostą odziedziczoną kontrolkę o nazwie `ValueButton`. Ten przycisk będzie dziedziczyć funkcji z formularzy Windows <xref:System.Windows.Forms.Button> kontrolować i udostępni właściwość niestandardową o nazwie `ButtonValue`.  
   
 > [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="creating-the-project"></a>Tworzenie projektu  
- Podczas tworzenia nowego projektu można określić jego nazwę, aby ustawić głównej przestrzeni nazw, nazwa zestawu i nazwa projektu i upewnij się, że składnik domyślna będzie poprawną przestrzeń nazw.  
+ Podczas tworzenia nowego projektu, należy określić jego nazwę, aby ustawić głównej przestrzeni nazw, nazwa zestawu i nazwa projektu i upewnij się, że składnik domyślną będzie poprawną przestrzeń nazw.  
   
-#### <a name="to-create-the-valuebuttonlib-control-library-and-the-valuebutton-control"></a>Aby utworzyć biblioteki formantu ValueButtonLib i kontroli ValueButton  
+#### <a name="to-create-the-valuebuttonlib-control-library-and-the-valuebutton-control"></a>Aby utworzyć ValueButtonLib Biblioteka kontrolek i kontrola ValueButton  
   
-1.  Na **pliku** menu wskaż **nowy** , a następnie kliknij przycisk **projektu** otworzyć **nowy projekt** okno dialogowe.  
+1.  Na **pliku** menu wskaż **New** a następnie kliknij przycisk **projektu** otworzyć **nowy projekt** okno dialogowe.  
   
-2.  Wybierz **Biblioteka formantów formularzy systemu Windows** szablonu projektu z listy projektów Visual Basic i typ `ValueButtonLib` w **nazwa** pole.  
+2.  Wybierz **Biblioteka kontrolek formularzy Windows** szablonu projektu z listy projektów języka Visual Basic, a typ `ValueButtonLib` w **nazwa** pole.  
   
-     Nazwa projektu `ValueButtonLib`, jest również przypisany do głównej przestrzeni nazw domyślnie. Główna przestrzeń nazw są używane do kwalifikowania nazwy elementów w zestawie. Na przykład, jeśli dwa zestawy zawiera składniki o nazwie `ValueButton`, można określić użytkownika `ValueButton` przy użyciu składnika `ValueButtonLib.ValueButton`. Aby uzyskać więcej informacji, zobacz [przestrzeni nazw w Visual Basic](~/docs/visual-basic/programming-guide/program-structure/namespaces.md).  
+     Nazwa projektu `ValueButtonLib`, również jest domyślnie przypisane do głównej przestrzeni nazw. Główna przestrzeń nazw są używane do kwalifikowania nazwy elementów w zestawie. Na przykład, jeśli dwa zestawy zawiera składniki o nazwie `ValueButton`, możesz określić swoje `ValueButton` za pomocą składnika `ValueButtonLib.ValueButton`. Aby uzyskać więcej informacji, zobacz [przestrzeni nazw w języku Visual Basic](~/docs/visual-basic/programming-guide/program-structure/namespaces.md).  
   
-3.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **UserControl1.vb**, a następnie wybierz **zmienić** z menu skrótów. Zmień nazwę pliku, aby `ValueButton.vb`. Kliknij przycisk **tak** przycisku, gdy zostanie wyświetlony monit, jeśli chcesz zmienić wszystkie odwołania do elementu kodu "UserControl1".  
+3.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **UserControl1.vb**, następnie wybierz **Zmień nazwę** z menu skrótów. Zmień nazwę pliku, aby `ValueButton.vb`. Kliknij przycisk **tak** przycisku, gdy zostanie wyświetlony monit, jeśli chcesz zmienić wszystkie odwołania do elementu kodu "UserControl1".  
   
 4.  W **Eksploratora rozwiązań**, kliknij przycisk **Pokaż wszystkie pliki** przycisku.  
   
-5.  Otwórz **ValueButton.vb** węzeł, aby wyświetlić plik kod wygenerowany przez projektanta **ValueButton.Designer.vb**. Otwórz ten plik w **edytora kodu**.  
+5.  Otwórz **ValueButton.vb** węzeł, aby wyświetlić plik kod wygenerowany przez projektanta **ValueButton.Designer.vb**. Otwórz ten plik w **Edytor kodu**.  
   
-6.  Zlokalizuj `Class` instrukcji, `Partial Public Class ValueButton`i zmienić typ, z której dziedziczy ten formant <xref:System.Windows.Forms.UserControl> do <xref:System.Windows.Forms.Button>. Dzięki temu dziedziczone formantu dziedziczy wszystkie funkcje <xref:System.Windows.Forms.Button> formantu.  
+6.  Znajdź `Class` instrukcji `Partial Public Class ValueButton`, a następnie zmień typ, z której dziedziczy ten formant <xref:System.Windows.Forms.UserControl> do <xref:System.Windows.Forms.Button>. Dzięki temu Twoje odziedziczoną kontrolkę dziedziczyć wszystkie funkcje programu <xref:System.Windows.Forms.Button> kontroli.  
   
-7.  Zlokalizuj `InitializeComponent` — metoda i Usuń wiersz, który przypisuje <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> właściwości. Ta właściwość nie istnieje w <xref:System.Windows.Forms.Button> formantu.  
+7.  Znajdź `InitializeComponent` metody i usunąć wiersza, który przypisuje <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> właściwości. Ta właściwość nie istnieje w <xref:System.Windows.Forms.Button> kontroli.  
   
-8.  Z **pliku** menu, wybierz **Zapisz wszystko** zapisać projektu.  
+8.  Z **pliku** menu, wybierz **Zapisz wszystko** być zapisany projekt.  
   
-     Należy pamiętać, że projektant wizualny nie jest już dostępny. Ponieważ <xref:System.Windows.Forms.Button> formant wykonuje własny obraz, nie można zmodyfikować jego wygląd w projektancie. Jego wizualnej reprezentacji będą dokładnie taka sama jak klasa dziedziczy z (czyli <xref:System.Windows.Forms.Button>), chyba że zmodyfikowany w kodzie.  
+     Należy pamiętać, że projektant wizualny nie jest już dostępna. Ponieważ <xref:System.Windows.Forms.Button> formantu nie swój własny rysowania, nie można zmodyfikować jego wygląd w projektancie. Jego wizualnej reprezentacji będzie dokładnie taka sama jak klasa dziedziczy (czyli <xref:System.Windows.Forms.Button>) o ile nie zmodyfikowano w kodzie.  
   
 > [!NOTE]
->  Nadal możesz dodać składniki, które mają żadnych elementów interfejsu użytkownika, na powierzchnię projektu.  
+>  Składniki, które mają bez elementów interfejsu użytkownika, można nadal dodawać do powierzchni projektowej.  
   
-## <a name="adding-a-property-to-your-inherited-control"></a>Dodawanie właściwości do dziedziczonej formantu  
- Jeden wykorzystanie dziedziczone formanty formularzy systemu Windows jest tworzenie formantów, które są takie same jak w wygląd i zachowanie (wygląd i działanie) standardowe formanty formularzy systemu Windows, ale udostępniają właściwości niestandardowych. W tej sekcji dodasz właściwość o nazwie `ButtonValue` do formantu.  
+## <a name="adding-a-property-to-your-inherited-control"></a>Dodawanie właściwości do kontrolki dziedziczone  
+ Jedno możliwe użycie dziedziczone kontrolek Windows Forms jest tworzenie elementów sterujących, które są takie same jak w wygląd i zachowanie (wyglądu i działania) standardowych kontrolek Windows Forms, ale udostępnianie właściwości niestandardowych. W tej sekcji dodasz właściwość o nazwie `ButtonValue` do formantu.  
   
-#### <a name="to-add-the-value-property"></a>Aby dodać właściwości Value  
+#### <a name="to-add-the-value-property"></a>Aby dodać właściwość wartość  
   
-1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **ValueButton.vb**, a następnie kliknij przycisk **kod widoku** z menu skrótów.  
+1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **ValueButton.vb**, a następnie kliknij przycisk **Wyświetl kod** z menu skrótów.  
   
-2.  Zlokalizuj `Public Class ValueButton` instrukcji. Natychmiast poniżej tej instrukcji, wpisz następujący kod:  
+2.  Znajdź `Public Class ValueButton` instrukcji. Natychmiast poniżej tej instrukcji, wpisz następujący kod:  
   
     ```vb  
     ' Creates the private variable that will store the value of your   
@@ -77,58 +77,58 @@ Visual Basic umożliwia tworzenie zaawansowanych formantów niestandardowych za 
     End Property  
     ```  
   
-     Ten kod ustawia metody za pomocą której `ButtonValue` przechowywania i pobierania właściwości. `Get` Instrukcja ustawia wartości zwracanej wartości, który jest przechowywany w prywatnej zmiennej `varValue`i `Set` instrukcja ustawia wartość zmiennej prywatnej przy użyciu `Value` — słowo kluczowe.  
+     Ten kod ustawia metody za pomocą którego `ButtonValue` właściwości przechowywania i pobierania. `Get` Instrukcja ustawia wartości zwracanej wartości, która jest przechowywana w zmiennej prywatnej `varValue`i `Set` instrukcja ustawia wartość zmiennej prywatnej przy użyciu `Value` — słowo kluczowe.  
   
-3.  Z **pliku** menu, wybierz **Zapisz wszystko** zapisać projektu.  
+3.  Z **pliku** menu, wybierz **Zapisz wszystko** być zapisany projekt.  
   
 ## <a name="testing-your-control"></a>Testowanie formantu  
- Formanty nie są autonomicznych projektów; muszą one być obsługiwane w kontenerze. W celu przetestowania formantu, należy podać projekt testowy na jej uruchamianie. Należy również upewnić formantu dostępne dla projektu testowego według budynków (Kompilacja) go. W tej sekcji zostanie kompilacji formantu i przetestować go w formularzu systemu Windows.  
+ Formanty nie są autonomiczne projektów; muszą one być obsługiwane w kontenerze. Aby przetestować Twoją kontrolą, musisz podać projekt testowy dla niego do uruchamiania w. Należy również upewnić kontroli nad dostępne dla projektu testowego, tworząc (Kompilacja) go. W tej sekcji utworzysz formant i przetestować ją w formularzu Windows.  
   
 #### <a name="to-build-your-control"></a>Tworzenie formantu  
   
 1.  Na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**.  
   
-     Kompilacja zostanie pomyślnie zakończona bez błędów lub ostrzeżeń.  
+     Kompilacja zostanie pomyślnie zakończona bez błędów i ostrzeżeń.  
   
 #### <a name="to-create-a-test-project"></a>Aby utworzyć projekt testowy  
   
-1.  Na **pliku** menu wskaż **Dodaj** , a następnie kliknij przycisk **nowy projekt** otworzyć **Dodawanie nowego projektu** okno dialogowe.  
+1.  Na **pliku** menu wskaż **Dodaj** a następnie kliknij przycisk **nowy projekt** otworzyć **Dodaj nowy projekt** okno dialogowe.  
   
-2.  Wybierz węzeł projekty Visual Basic, a następnie kliknij przycisk **aplikacji Windows Forms**.  
+2.  Wybierz węzeł projektów języka Visual Basic, a następnie kliknij przycisk **aplikacja interfejsu Windows Forms**.  
   
 3.  W **nazwa** wpisz `Test`.  
   
 4.  W **Eksploratora rozwiązań**, kliknij przycisk **Pokaż wszystkie pliki** przycisku.  
   
-5.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **odwołania** węzła dla projektu testowego, następnie wybierz **Dodaj odwołanie** z menu skrótów do wyświetlenia  **Dodaj odwołanie** okno dialogowe.  
+5.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **odwołania** węzeł dla projektu testowego, następnie wybierz pozycję **Dodaj odwołanie** z menu skrótów, aby wyświetlić  **Dodaj odwołanie** okno dialogowe.  
   
-6.  Kliknij przycisk **projekty** kartę.  
+6.  Kliknij przycisk **projektów** kartę.  
   
-7.  Kliknij kartę **projekty**. Twoje `ValueButtonLib` projektu zostaną wyświetlone w obszarze **Nazwa projektu**. Kliknij dwukrotnie plik projektu można dodać odwołania do projektu testowego.  
+7.  Kliknij kartę **projektów**. Twoje `ValueButtonLib` projektu zostaną wyświetlone w obszarze **Nazwa projektu**. Kliknij dwukrotnie projektu można dodać odwołania do projektu testowego.  
   
 8.  W **Eksploratora rozwiązań** kliknij prawym przyciskiem myszy **testu** i wybierz **kompilacji**.  
   
-#### <a name="to-add-your-control-to-the-form"></a>Aby dodać formantu do formularza  
+#### <a name="to-add-your-control-to-the-form"></a>Aby dodać formant do formularza  
   
-1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **Form1.vb** i wybierz polecenie **Widok projektanta** z menu skrótów.  
+1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **Form1.vb** i wybierz polecenie **Projektant widoków** z menu skrótów.  
   
 2.  W **przybornika**, kliknij przycisk **składniki ValueButtonLib**. Kliknij dwukrotnie **ValueButton**.  
   
-     A **ValueButton** w formularzu.  
+     A **ValueButton** pojawia się w formularzu.  
   
 3.  Kliknij prawym przyciskiem myszy **ValueButton** i wybierz **właściwości** z menu skrótów.  
   
-4.  W **właściwości** okna, sprawdź właściwości tego formantu. Należy pamiętać, są takie same jak właściwości udostępniane przez przycisk standardowy, z tą różnicą, że jest właściwością dodatkowe `ButtonValue`.  
+4.  W **właściwości** okna, sprawdź właściwości tej kontrolki. Należy pamiętać, są identyczne z właściwości ujawnione przez przycisk standardowy, z tą różnicą, że istnieje dodatkowa właściwość `ButtonValue`.  
   
-5.  Ustaw `ButtonValue` właściwości `5`.  
+5.  Ustaw `ButtonValue` właściwość `5`.  
   
-6.  Na **wszystkich formularzy systemu Windows** karcie **przybornika**, kliknij dwukrotnie **etykiety** można dodać <xref:System.Windows.Forms.Label> sterowania do formularza.  
+6.  Na **wszystkie formularze Windows** karcie **przybornika**, kliknij dwukrotnie **etykiety** dodać <xref:System.Windows.Forms.Label> formantu do formularza.  
   
-7.  Przemieszczenie etykietę do Centrum formularza.  
+7.  Przenieś etykietę do środka formularza.  
   
 8.  Kliknij dwukrotnie `ValueButton1`.  
   
-     **Edytora kodu** otwiera `ValueButton1_Click` zdarzeń.  
+     **Edytor kodu** otwiera `ValueButton1_Click` zdarzeń.  
   
 9. Wpisz następujący wiersz kodu.  
   
@@ -144,11 +144,11 @@ Visual Basic umożliwia tworzenie zaawansowanych formantów niestandardowych za 
   
 12. Kliknij przycisk `Valuebutton1`.  
   
-     Liczb, "5" jest wyświetlany w `Label1`, ilustrujące który `ButtonValue` właściwości dziedziczone formantu został przekazany do `Label1` za pośrednictwem `ValueButton1_Click` metody. W związku z tym Twoje `ValueButton` kontrola dziedziczy wszystkie funkcje standardowej przycisku formularzy systemu Windows, ale udostępnia dodatkowe, niestandardowe właściwości.  
+     Cyfry, '5' jest wyświetlana w `Label1`, pokazując, `ButtonValue` właściwości dziedziczonych formant został przekazany do `Label1` za pośrednictwem `ValueButton1_Click` metody. Ten sposób Twoja `ValueButton` kontrola dziedziczy wszystkie funkcje standardowe przycisku Windows Forms, ale udostępnia dodatkowe, niestandardowe właściwości.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik: tworzenie kontrolki złożonej za pomocą języka Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
  [Instrukcje: wyświetlanie kontrolki w oknie dialogowym Wybierz elementy przybornika](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
  [Opracowywanie niestandardowych kontrolek formularzy Windows Forms za pomocą programu .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
  [Podstawowe informacje o dziedziczeniu (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
- [Wskazówki dotyczące tworzenia składników](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)
+ [Tworzenie składników — wskazówki](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)

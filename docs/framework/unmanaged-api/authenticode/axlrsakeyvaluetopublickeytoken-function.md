@@ -10,15 +10,16 @@ api_type:
 ms.assetid: d60f19fe-7bec-47ba-b60e-ba9ce66abf8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ef73f0f7599fdff887437756a5995591fd8ec89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e09391af9b5d71cfa423b3bf1a2b307117d0dee1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402415"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385890"
 ---
-# <a name="axlrsakeyvaluetopublickeytoken-function"></a>Funkcja _AxlRSAKeyValueToPublicKeyToken
-Konwertuje modulo i wykładnik silnej nazwy tokenu klucza publicznego.  
+# <a name="axlrsakeyvaluetopublickeytoken-function"></a>\_AxlRSAKeyValueToPublicKeyToken — funkcja
+
+Konwertuje wyznaczanie modułu i wykładnik silnej nazwy token klucza publicznego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -30,18 +31,18 @@ HRESULT _AxlRSAKeyValueToPublicKeyToken (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  `pModulusBlob`  
- [in] Obiekt blob modulo algorytmem Base64 (z \<modulo > elementu).  Zobacz [CRYPTOAPI_BLOB](http://msdn.microsoft.com/library/windows/desktop/aa380238.aspx) struktury.  
+ [in] Zakodowane w formacie base64 blob modulo (z \<modulo > element).  Zobacz [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) struktury.  
   
  `pExponentBlob`  
- [in] Obiekt blob wykładnik algorytmem Base64 (z \<wykładnik > elementu). Zobacz [CRYPTOAPI_BLOB](http://msdn.microsoft.com/library/windows/desktop/aa380238.aspx) struktury.  
+ [in] Wykładnik algorytmem Base64 obiekt blob (z \<wykładnik > element). Zobacz [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) struktury.  
   
  `ppwszPublicKeyToken`  
- [out] Wskaźnik do WCHAR * do odbierania zakodowane w systemie szesnastkowym token klucza publicznego.  
+ [out] Wskaźnik do WCHAR * do odbierania zakodowanego szesnastkowo token klucza publicznego.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `S_OK` Jeśli funkcja zakończy się powodzeniem. W przeciwnym razie zwraca kod błędu.  
+ `S_OK` Jeśli funkcja się powiedzie. W przeciwnym razie zwraca kod błędu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)

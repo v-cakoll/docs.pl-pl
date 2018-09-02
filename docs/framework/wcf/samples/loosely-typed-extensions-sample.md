@@ -2,17 +2,17 @@
 title: Przykład rozszerzeń z typowaniem luźnym
 ms.date: 03/30/2017
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
-ms.openlocfilehash: 9ad00c1e76d14b32cb28216cfdbb1a01f82a70cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f46cf3dfcdb60669f0a02337b54de97d4af3efdc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33504440"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384712"
 ---
 # <a name="loosely-typed-extensions-sample"></a>Przykład rozszerzeń z typowaniem luźnym
-W modelu obiektu syndykacji zapewnia sformatowanego obsługuje do pracy z danymi rozszerzenia — informacje, które znajduje się w zespolonego źródła danych jego reprezentacja w formacie XML, ale nie są jawnie udostępnianych przez klas takich jak <xref:System.ServiceModel.Syndication.SyndicationFeed> i <xref:System.ServiceModel.Syndication.SyndicationItem>. W tym przykładzie przedstawiono podstawowe techniki do pracy z danymi rozszerzenia.  
+Modelu obiektu syndykacji programu zawiera, zaawansowana obsługa Praca z danymi rozszerzenia — informacje, które są obecne w kanał w reprezentacji XML, ale nie zostały jawnie udostępnianych przez klasy takie jak <xref:System.ServiceModel.Syndication.SyndicationFeed> i <xref:System.ServiceModel.Syndication.SyndicationItem>. W tym przykładzie przedstawiono podstawowe techniki do pracy z danymi rozszerzenia.  
   
- W przykładzie użyto <xref:System.ServiceModel.Syndication.SyndicationFeed> klasy na potrzeby przykładu. Wzorce zostało to pokazane w tym przykładzie można jednak wszystkie klasy zespolonego, które obsługuje rozszerzenie danych:  
+ W przykładzie użyto <xref:System.ServiceModel.Syndication.SyndicationFeed> klasy na potrzeby przykładu. Jednak wzorce przedstawiono w tym przykładzie może być używany ze wszystkimi klasy syndykacji, które obsługuje rozszerzenie danych:  
   
  <xref:System.ServiceModel.Syndication.SyndicationFeed>  
   
@@ -25,7 +25,7 @@ W modelu obiektu syndykacji zapewnia sformatowanego obsługuje do pracy z danymi
  <xref:System.ServiceModel.Syndication.SyndicationLink>  
   
 ## <a name="sample-xml"></a>Przykładowy kod XML  
- Odwołania następujący dokument XML jest używany w tym przykładzie.  
+ Odwołanie następujący dokument XML jest używany w tym przykładzie.  
   
 ```xml  
 <?xml version="1.0" encoding="IBM437"?>  
@@ -65,7 +65,7 @@ w.w3.org/2001/XMLSchema" xmlns="">
 -   `<xElementExtension>` element.  
   
 ## <a name="writing-extension-data"></a>Zapisywanie danych rozszerzenia  
- Atrybut rozszerzenia są tworzone przez dodanie wpisów <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> kolekcji, jak pokazano w poniższym kodzie próbki.  
+ Atrybut rozszerzenia są tworzone przez dodanie pozycji do <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> kolekcji, jak pokazano w poniższym przykładowym kodzie.  
   
 ```  
 //Attribute extensions are stored in a dictionary indexed by   
@@ -73,17 +73,17 @@ w.w3.org/2001/XMLSchema" xmlns="">
 feed.AttributeExtensions.Add(new XmlQualifiedName("myAttribute", ""), "someValue");  
 ```  
   
- Element rozszerzenia są tworzone przez dodanie wpisów <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> kolekcji. Te rozszerzenia mogą przez podstawowe wartości, takie jak ciągi, serializations XML obiektów .NET Framework lub węzłów XML kodowane ręcznie.  
+ Element rozszerzenia są tworzone przez dodanie pozycji do <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> kolekcji. Te rozszerzenia mogą przez podstawowe wartości, takich jak ciągi, serializations XML obiektów .NET Framework lub węzłów XML kodowane ręcznie.  
   
- Następujący przykładowy kod tworzy rozszerzenia elementu o nazwie `simpleString`.  
+ Następujący przykładowy kod tworzy element rozszerzenia o nazwie `simpleString`.  
   
 ```  
 feed.ElementExtensions.Add("simpleString", "", "hello, world!");  
 ```  
   
- Przestrzeń nazw XML dla tego elementu jest pusta przestrzeń nazw ("") i jego wartość wynosi węzeł tekstowy, który zawiera ciąg "hello, world!".  
+ Przestrzeń nazw XML dla tego elementu jest pusta przestrzeń nazw (""), a jego wartość to węzeł tekstowy, który zawiera ciąg "hello, world!".  
   
- Aby utworzyć złożonego elementu rozszerzenia, które składają się z wielu elementów zagnieżdżonych jest korzystanie z interfejsów API architektury .NET Framework do serializacji (zarówno <xref:System.Runtime.Serialization.DataContractSerializer> i <xref:System.Xml.Serialization.XmlSerializer> są obsługiwane) jak pokazano w poniższych przykładach.  
+ Jednym ze sposobów, aby utworzyć rozszerzeń elementów, które składają się z wielu elementów zagnieżdżonych jest użycie interfejsów API programu .NET Framework do serializacji (zarówno <xref:System.Runtime.Serialization.DataContractSerializer> i <xref:System.Xml.Serialization.XmlSerializer> są obsługiwane) jak pokazano w poniższych przykładach.  
   
 ```  
 feed.ElementExtensions.Add( new DataContractExtension() { Key = "X", Value = 4 } );  
@@ -92,7 +92,7 @@ feed.ElementExtensions.Add( new XmlSerializerExtension { Key = "Y", Value = 8 },
   
  W tym przykładzie `DataContractExtension` i `XmlSerializerExtension` są zapisywane do użycia z serializatora typów niestandardowych.  
   
- <xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection> Klasy może również służyć do tworzenia rozszerzenia elementu z <xref:System.Xml.XmlReader> wystąpienia. Dzięki temu Łatwa integracja z językiem XML przetwarzania interfejsów API, takich jak <xref:System.Xml.Linq.XElement> jak pokazano w poniższym kodzie próbki.  
+ <xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection> Klasy może również służyć do tworzenia rozszerzenia elementu z <xref:System.Xml.XmlReader> wystąpienia. Dzięki temu łatwą integrację z danymi XML przetwarzania interfejsów API, takich jak <xref:System.Xml.Linq.XElement> jak pokazano w poniższym przykładowym kodzie.  
   
 ```  
 feed.ElementExtensions.Add(new XElement("xElementExtension",  
@@ -102,7 +102,7 @@ feed.ElementExtensions.Add(new XElement("xElementExtension",
 ```  
   
 ## <a name="reading-extension-data"></a>Odczytywanie danych rozszerzenia  
- Wartości dla atrybutu rozszerzeń można uzyskać przez wyszukanie atrybutu w <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> kolekcji przez jego <xref:System.Xml.XmlQualifiedName> jak pokazano w poniższym kodzie próbki.  
+ Wartości dla atrybutów rozszerzeń można uzyskać, sprawdzając atrybutu w <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> kolekcji przez jego <xref:System.Xml.XmlQualifiedName> jak pokazano w poniższym przykładowym kodzie.  
   
 ```  
 Console.WriteLine( feed.AttributeExtensions[ new XmlQualifiedName( "myAttribute", "" )]);  
@@ -128,7 +128,7 @@ foreach (XmlSerializerExtension xse in feed2.ElementExtensions.ReadElementExtens
 }  
 ```  
   
- Istnieje również możliwość uzyskania `XmlReader` na pojedynczy element rozszerzenia przy użyciu <xref:System.ServiceModel.Syndication.SyndicationElementExtension.GetReader> metody.  
+ Istnieje również możliwość uzyskania `XmlReader` na pojedynczego elementu rozszerzenia za pomocą <xref:System.ServiceModel.Syndication.SyndicationElementExtension.GetReader> metody.  
   
 ```  
 foreach (SyndicationElementExtension extension in feed2.ElementExtensions.Where<SyndicationElementExtension>(x => x.OuterName == "xElementExtension"))  
@@ -138,20 +138,20 @@ foreach (SyndicationElementExtension extension in feed2.ElementExtensions.Where<
 }  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Upewnij się, że wykonano procedurę [jednorazowego procedurę instalacji dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Tworzenie wersji języka C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Aby uruchomić przykładowy w konfiguracji pojedynczej lub między komputerami, postępuj zgodnie z instrukcjami w [uruchamiania przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\LooselyTypedExtensions`  
   

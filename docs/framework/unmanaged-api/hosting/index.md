@@ -8,32 +8,32 @@ helpviewer_keywords:
 ms.assetid: 14295c28-1da8-408b-a656-9584abcd9896
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5063a2169e8ae8c3328df220ebc5e6d464aae0a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17ca2eb93fb2b75f043d33d376a5650092030cac
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440859"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387104"
 ---
 # <a name="hosting-unmanaged-api-reference"></a>Hosting (Niezarządzany wykaz interfejsów API)
-Hostingu API umożliwia hostom niezarządzanych do integracji środowisko uruchomieniowe języka wspólnego (CLR) w swoich aplikacjach.  
+Hostingu API włącza niezarządzane hosty do integrowania środowisko uruchomieniowe języka wspólnego (CLR) w swoich aplikacjach.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Współklasy hostingu](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  
- W tym artykule opisano niezarządzane klasy coclass hostingu API używane przez program.  
+ Opisuje niezarządzane klasy coclass, które korzysta z interfejsu API.  
   
  [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)  
- W tym artykule opisano niezarządzane wyliczenia, używanych do obsługi interfejsu API.  
+ Opisuje niezarządzane wyliczenia, które korzysta z interfejsu API.  
   
  [Statyczne funkcje globalne hostingu](../../../../docs/framework/unmanaged-api/hosting/hosting-global-static-functions.md)  
- Opisuje niezarządzane statyczne funkcje globalne, używanych do obsługi interfejsu API.  
+ Opisuje niezarządzane globalne funkcje statyczne, które korzysta z interfejsu API.  
   
  [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- Opisuje interfejsy niezarządzane, umożliwiających host środowiska uruchomieniowego do integracji środowiska CLR w niezarządzanej aplikacji.  
+ W tym artykule opisano niezarządzane interfejsy, które umożliwiają host środowiska uruchomieniowego do integracji środowiska CLR w niezarządzanej aplikacji.  
   
  [Hosting, struktury](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
- W tym artykule opisano niezarządzane struktury, używane do obsługi interfejsu API.  
+ Opisuje niezarządzane struktury, które korzysta z interfejsu API.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Hosty w czasie wykonywania](http://msdn.microsoft.com/library/99d9246a-b994-4fe5-985c-8588d1d59998)  
- Zawiera opis uwzględnionych w programie .NET Framework hosty w czasie wykonywania.
+ [Hosty środowiska uruchomieniowego](https://msdn.microsoft.com/library/99d9246a-b994-4fe5-985c-8588d1d59998)  
+ Opisuje hosty czasu wykonywania, dołączone do programu .NET Framework.

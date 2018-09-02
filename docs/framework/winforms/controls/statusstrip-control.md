@@ -5,31 +5,31 @@ helpviewer_keywords:
 - StatusStrip control [Windows Forms]
 - status bars
 ms.assetid: eb1e59da-0a48-4ce5-af7d-13b8e75af4b1
-ms.openlocfilehash: b3d7a1c68dbaa29c83bd066a8cb3ed2775672d98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 157db8b9fbbbb6e1c6af41b4cf3903f4a762d763
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534506"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385729"
 ---
 # <a name="statusstrip-control"></a>StatusStrip — Formant
-Formularze systemu Windows `StatusStrip` formant jest używany w formularzach jako obszaru, zwykle wyświetlane w dolnej części okna, w którym aplikacja może wyświetlać różne rodzaje informacji o stanie. `StatusStrip` Formanty zwykle mają `ToolStripStatusLabel` formantów na nich zawierające tekst lub ikony do wskazywania stanu, lub <xref:System.Windows.Forms.ToolStripProgressBar> który graficznie Wyświetla stan ukończenia procesu.  
+Formularze Windows `StatusStrip` formant jest używany w formularzach jako obszar, zwykle są wyświetlane w dolnej części okna, w którym aplikacja może wyświetlać różne rodzaje informacji o stanie. `StatusStrip` Formanty zazwyczaj mają `ToolStripStatusLabel` formantów na nich, które wyświetlają tekst lub ikony do wskazywania stanu, lub <xref:System.Windows.Forms.ToolStripProgressBar> , wyświetla w postaci graficznej stan ukończenia procesu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [StatusStrip, kontrolka — omówienie](../../../../docs/framework/winforms/controls/statusstrip-control-overview.md)  
- Wyjaśniono, co to jest formant i jego najważniejszych funkcjach i właściwości.  
+ Wyjaśnia, ta kontrolka jest oraz jego kluczowych funkcji i właściwości.  
   
  [Instrukcje: użycie właściwości Spring interaktywnie w kontrolce StatusStrip](../../../../docs/framework/winforms/controls/how-to-use-the-spring-property-interactively-in-a-statusstrip.md)  
- Pokazuje przy użyciu `Spring` właściwości do interaktywnego środka `ToolStripStatusLabel` w `StatusStrip`.  
+ Demonstruje użycie `Spring` właściwość interakcyjne Centrum `ToolStripStatusLabel` w `StatusStrip`.  
   
- Zobacz też [edytora kolekcji elementy StatusStrip](http://msdn.microsoft.com/library/ms233631\(v=vs.110\)), [edytora kolekcji elementy StatusStrip](http://msdn.microsoft.com/library/ms233642\(v=vs.110\)).  
+ Zobacz też [StatusStrip — Edytor kolekcji elementów](https://msdn.microsoft.com/library/ms233631\(v=vs.110\)), [StatusStrip — Edytor kolekcji elementów](https://msdn.microsoft.com/library/ms233642\(v=vs.110\)).  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.StatusStrip>  
- Zawiera informacje o klasie i jej elementów członkowskich.  
+ Zawiera dodatkowe informacje na temat klasy i jej elementów członkowskich.  
   
  <xref:System.Windows.Forms.ToolStripStatusLabel>  
- Zawiera informacje o klasie i jej elementów członkowskich.  
+ Zawiera dodatkowe informacje na temat klasy i jej elementów członkowskich.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

@@ -1,46 +1,46 @@
 ---
-title: Argumentów dynamicznych
+title: Argumenty dynamiczne
 ms.date: 03/30/2017
 ms.assetid: 122ad479-d306-4602-a943-5aefe711329d
-ms.openlocfilehash: 5c00b9678191e4e88e9e41380d6b10be39684b3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dcf6b84889f3bd7d043f736336c39634cd5384c7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517981"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387243"
 ---
-# <a name="dynamic-arguments"></a>Argumentów dynamicznych
-W tym przykładzie pokazano, jak zaimplementować działanie, dla którego argumenty są definiowane przez konsumentów działania, a nie przez autora działania. Robi to przez zastąpienie sposób środowiska uruchomieniowego tworzy metadane działań.  
+# <a name="dynamic-arguments"></a>Argumenty dynamiczne
+Ten przykład demonstruje sposób implementacji działania, dla której argumenty są definiowane przez konsumenta działania, a nie Autor działania. Robi to poprzez zastąpienie jej środowisko uruchomieniowe tworzy metadane działań.  
   
-## <a name="sample-details"></a>Szczegóły próbki  
- Przed wykonaniem środowisko uruchomieniowe kompilacje opis działania, sprawdzając publiczne elementy członkowskie tego typu działania i automatycznie deklarowanie argumenty, zmienne, działania podrzędne i delegatów działanie jako część metadane działań. Robi to, aby zapewnić poprawne konstrukcji przepływu pracy oraz aby zarządzać relacjami środowiska wykonawczego i okres istnienia reguły. Zwykle przez autora działania definiuje argumentów działania, określając publicznych elementów członkowskich w typie działania, która pochodzi z <xref:System.Activities.Argument>. Dla każdego członka publicznego pochodzącego od <xref:System.Activities.Argument>, tworzy środowisko uruchomieniowe <xref:System.Activities.RuntimeArgument> i wiąże ją ustawić na ten element członkowski argument dostarczane przez użytkownika. W niektórych przypadkach konsumenta działania zapewnia jednak niektóre konfiguracji, który określa zestaw argumentów. Przesłania przez autora działania <xref:System.Activities.Activity.CacheMetadata%2A> można dostosować sposób działania jest wbudowana metadanych, w tym zestawie argumenty skojarzone z działaniem.  
+## <a name="sample-details"></a>Przykład szczegółów  
+ Przed wykonywania środowisko uruchomieniowe tworzy opis działania, sprawdzając publiczne elementy członkowskie typu działania i automatycznie deklarowanie argumentów, zmienne, działania podrzędne i działania delegatach jako część metadane działań. Robi to, aby zapewnić poprawne konstrukcji przepływu pracy oraz aby zarządzać relacjami środowiska wykonawczego i okresu istnienia reguły. Zwykle definiuje argumenty działanie Autor działań, określając publiczne elementy członkowskie typu działania, który pochodzi od <xref:System.Activities.Argument>. Dla każdego publicznego elementu członkowskiego, która pochodzi od klasy <xref:System.Activities.Argument>, środowisko uruchomieniowe tworzy <xref:System.Activities.RuntimeArgument> i wiąże go do argumentu dostarczone przez użytkownika, ustaw na ten element członkowski. W niektórych przypadkach konsument działania zapewnia jednak niektórych konfiguracji, który określa zestaw argumentów. Zastępuje Autor działania <xref:System.Activities.Activity.CacheMetadata%2A> dostosować sposób działania metadanych został opracowany, która obejmuje zestaw argumenty skojarzone z działaniem.  
   
- Ten przykład demonstruje sposób tworzenia listy argumentów dynamicznie dla działania, która wywołuje metodę. Konsument działania określa typ i nazwę metody, które mają być wywołanie wraz z kolekcją argumenty do przekazania do tej metody.  
+ W tym przykładzie przedstawiono sposób tworzenia listy argumentów dynamicznie do działania, które wywołuje metodę. Konsument działania określa typ i nazwę metody, którą chcą wywoływać wraz z kolekcją argumenty do przekazania do tej metody.  
   
 > [!NOTE]
->  Ten przykład ma na celu pokazują, jak zastąpić <xref:System.Activities.CodeActivity.CacheMetadata%2A> i sposobu użycia <xref:System.Activities.RuntimeArgument>. Istnieje kilka zastrzeżeń względem rodzajów metod, które można wywołać tego działania. Na przykład czy nie współpracuje z ogólne i tablice parametrów. <xref:System.Activities.Statements.InvokeMethod> Działania, który jest dostarczany in.NET Framework obsługi tych przypadkach i inne.  
+>  W tym przykładzie ma na celu pokazują, jak zastąpić <xref:System.Activities.CodeActivity.CacheMetadata%2A> i sposobu używania <xref:System.Activities.RuntimeArgument>. Istnieje kilka zastrzeżeń w odniesieniu do rodzajów metod, które można wywołać tego działania. Na przykład czy nie współpracuje z typy ogólne i tablice parametrów. <xref:System.Activities.Statements.InvokeMethod> Działania, który jest dostarczany w zestawach.NET Framework obsługuje te przypadki i nie tylko.  
   
- `MethodInvoke` Działania zastąpienia <xref:System.Activities.CodeActivity.CacheMetadata%2A> i rozpoczyna się od utworzenia <xref:System.Activities.RuntimeArgument> do obsługi dowolnej w wyniku wywołania metody. Tworzy ona powiązanie to <xref:System.Activities.RuntimeArgument> do publicznie można ustawić <xref:System.Activities.OutArgument> o nazwie `Result`. Jeśli `MethodInvoke.Result` jest `null`, środowisko uruchomieniowe automatycznie wypełni go przy użyciu <xref:System.Activities.OutArgument> skonfigurowano wyrażenie wartości domyślnej dla jego typu. Oznacza to zachowanie przez autora działania nigdy nie można sprawdzić, czy jest właściwością argumentu `null`.  
+ `MethodInvoke` Działania zastąpienia <xref:System.Activities.CodeActivity.CacheMetadata%2A> i rozpoczyna się od utworzenia <xref:System.Activities.RuntimeArgument> do obsługi dowolnej w wyniku wywołania metody. Powiąże to <xref:System.Activities.RuntimeArgument> do publicznie Ustawialne <xref:System.Activities.OutArgument> o nazwie `Result`. Jeśli `MethodInvoke.Result` jest `null`, środowisko wykonawcze automatycznie wypełnia ją za pomocą <xref:System.Activities.OutArgument> skonfigurowane za pomocą wyrażenia domyślne dla tego typu. To zachowanie oznacza, że autor działania nigdy nie można sprawdzić, czy jest właściwością argumentu `null`.  
   
- Następnie <xref:System.Activities.CodeActivity.CacheMetadata%2A> określa zastąpienie `MethodInfo` używa wywołania z dostarczonych przez użytkownika `MethodName` i `TargetType`. `DetermineMethodInfo` Ma metodę <xref:System.Activities.CodeActivityMetadata> parametr przekazany do <xref:System.Activities.CodeActivity.CacheMetadata%2A> zastąpienie tak, aby wszelkie błędy konfiguracji mogą być zgłaszane jako błędy sprawdzania poprawności. Jest to realizowane przez wywołanie `metadata.AddValidationError`.  
+ Następnie <xref:System.Activities.CodeActivity.CacheMetadata%2A> określa przesłonięcie `MethodInfo` używa wywołania z podanego przez użytkownika `MethodName` i `TargetType`. `DetermineMethodInfo` Metoda przyjmuje <xref:System.Activities.CodeActivityMetadata> parametr przekazany do <xref:System.Activities.CodeActivity.CacheMetadata%2A> zastąpienie tak, aby wszelkie błędy konfiguracji mogą być zgłaszane jako błędy sprawdzania poprawności. Jest to realizowane przez wywołanie `metadata.AddValidationError`.  
   
- Raz `MethodInfo` skonfigurowano, próbki przechodzi przez `MethodInfo` parametrów. Dla każdego parametru tworzy <xref:System.Activities.RuntimeArgument> i wiąże go do odpowiedniego argumentu w kolekcji dostarczane przez użytkownika z `Parameters` właściwości. Na koniec kolekcji <xref:System.Activities.RuntimeArgument>s jest skojarzona z działaniem przez wywołanie metody `metadata.SetArgumentsCollection`.  
+ Gdy `MethodInfo` został ustawiony, przykład wykonuje iterację na `MethodInfo` parametrów. Dla każdego parametru tworzy <xref:System.Activities.RuntimeArgument> i wiąże go do odpowiedniego argumentu w kolekcji dostarczone przez użytkownika z `Parameters` właściwości. Na koniec kolekcji <xref:System.Activities.RuntimeArgument>s jest skojarzony z działania, wywołując `metadata.SetArgumentsCollection`.  
   
- Należy pamiętać, że rozwiązanie argument można wykonać przy użyciu <xref:System.Activities.RuntimeArgument>, jak w przypadku `resultArgument` lub argumentu dostarczane przez użytkownika, tak jak w przypadku `Parameters` kolekcji.  
+ Należy pamiętać, że argument rozwiązanie można wykonać przy użyciu <xref:System.Activities.RuntimeArgument>, jak w przypadku `resultArgument` lub argumentu dostarczone przez użytkownika, tak jak w przypadku `Parameters` kolekcji.  
   
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
   
-1.  Przy użyciu [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], otwórz plik DynamicArguments.sln.  
+1.  Za pomocą [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], otwórz plik DynamicArguments.sln.  
   
-2.  Aby tworzyć rozwiązania, naciśnij kombinację klawiszy CTRL + SHIFT + B.  
+2.  Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.  
   
-3.  Aby uruchomić rozwiązanie, naciśnij klawisze CTRL + F5.  
+3.  Aby uruchomić rozwiązanie, naciśnij kombinację klawiszy CTRL + F5.  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\Code-Bodied\DynamicArguments`

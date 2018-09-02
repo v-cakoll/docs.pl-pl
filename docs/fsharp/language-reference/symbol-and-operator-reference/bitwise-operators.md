@@ -3,11 +3,11 @@ title: Operatory bitowe (F#)
 description: 'Więcej informacji na temat operatory bitowe, które są dostępne w F # języka programowania.'
 ms.date: 07/20/2018
 ms.openlocfilehash: abd2778eba422b3ce2a3472efd458446854b3d2f
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42933618"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390706"
 ---
 # <a name="bitwise-operators"></a>Operatory bitowe
 

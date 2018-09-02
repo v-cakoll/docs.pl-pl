@@ -2,30 +2,30 @@
 title: Federacja — przykład
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: a9c2b91f7d8bdf24476c76fcd479b7f2fb44c90f
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 49a13b292a627c054510a10445e1e64ab869162c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806851"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389491"
 ---
 # <a name="federation-sample"></a>Federacja — przykład
-W tym przykładzie przedstawiono zabezpieczeń.  
+Niniejszy przykład pokazuje zabezpieczeń.  
   
-## <a name="sample-details"></a>Szczegóły próbki  
- Windows Communication Foundation (WCF) zapewnia obsługę wdrażania architektury zabezpieczeń za pomocą `wsFederationHttpBinding`. `wsFederationHttpBinding` Udostępnia bezpieczne, niezawodne i interoperacyjne powiązanie, które polega na użyciu protokołu HTTP jako podstawowy mechanizm transportu dla komunikacji żądanie/odpowiedź, a Text/XML jako przewodowy format kodowania. Aby uzyskać więcej informacji o federacji w programie WCF, zobacz [federacyjnego](../../../../docs/framework/wcf/feature-details/federation.md).  
+## <a name="sample-details"></a>Przykład szczegółów  
+ Windows Communication Foundation (WCF) obsługuje wdrażanie architektury zabezpieczeń za pomocą `wsFederationHttpBinding`. `wsFederationHttpBinding` Zapewnia bezpieczne, niezawodne i interoperacyjne powiązanie, które obejmuje korzystanie z protokołu HTTP jako podstawowy mechanizm transportu dla komunikacji żądanie/nietypizowana odpowiedź i Text/XML do kodowania w formacie o komunikacji sieciowej. Aby uzyskać więcej informacji na temat federacji w programie WCF zobacz [Federacji](../../../../docs/framework/wcf/feature-details/federation.md).  
   
- Scenariusz składa się z 4 części:  
+ Scenariusz składa się z 4 elementów:  
   
 -   Usługa księgarni  
   
--   Księgarni STS  
+-   Księgarni usługi STS  
   
 -   HomeRealm usługi STS  
   
 -   Księgarni klienta  
   
- Usługa księgarni obsługuje dwie operacje `BrowseBooks` i `BuyBook`. Zezwala na dostęp anonimowy do `BrowseBooks` operacji, ale wymaga dostępu uwierzytelnionego dostępu `BuyBooks` operacji. Uwierzytelnianie ma postać token wystawiony przez usługę STS księgarni. Wskazuje plik konfiguracji usługi księgarni klientów przy użyciu usługi STS księgarni `wsFederationHttpBinding`.  
+ Usługa księgarni obsługuje dwie operacje `BrowseBooks` i `BuyBook`. Zezwala na dostęp anonimowy do `BrowseBooks` operacja, ale wymaga dostępu uwierzytelnionego do dostępu `BuyBooks` operacji. Uwierzytelnianie mają postać token wystawiony przez usługę STS księgarni. Wskazuje plik konfiguracyjny usługi księgarni klientów przy użyciu usługi STS księgarni `wsFederationHttpBinding`.  
   
 ```xml  
 <wsFederationHttpBinding>  
@@ -45,7 +45,7 @@ W tym przykładzie przedstawiono zabezpieczeń.
 </wsFederationHttpBinding>  
 ```  
   
- STS księgarni wymaga, aby klienci uwierzytelniania za pomocą token wystawiony przez usługę STS HomeRealm. Ponownie, pliku konfiguracji dla usługi STS księgarni wskazuje klientów przy użyciu usługi STS HomeRealm `wsFederationHttpBinding`.  
+ Usługa STS księgarni wymaga, że klienci uwierzytelniania przy użyciu tokenu wystawionego przez usługę STS HomeRealm. Ponownie plik konfiguracji dla usługi STS księgarni wskazuje klientów przy użyciu usługi STS HomeRealm `wsFederationHttpBinding`.  
   
 ```xml  
 <wsFederationHttpBinding>  
@@ -65,55 +65,55 @@ W tym przykładzie przedstawiono zabezpieczeń.
 </wsFederationHttpBinding>  
 ```  
   
- Kolejność zdarzeń przy uzyskiwaniu dostępu do `BuyBook` operacji wygląda następująco:  
+ Kolejność zdarzeń przy uzyskiwaniu dostępu do `BuyBook` operacja jest w następujący sposób:  
   
-1.  Uwierzytelnia klienta do usługi STS HomeRealm przy użyciu poświadczeń systemu Windows.  
+1.  Klient uwierzytelnia się do usługi STS HomeRealm przy użyciu poświadczeń Windows.  
   
-2.  HomeRealm STS wystawia token, który może służyć do uwierzytelniania usługi STS księgarni.  
+2.  HomeRealm usługi STS wystawia token, który może służyć do uwierzytelniania usługi STS księgarni.  
   
-3.  Klient przeprowadza uwierzytelnianie za pomocą tokenu wystawiony przez usługę STS HomeRealm usługi STS księgarni.  
+3.  Klient jest uwierzytelniany przy użyciu tokenu wystawionego przez usługę STS HomeRealm usługi STS księgarni.  
   
-4.  Usługa tokenu Zabezpieczającego księgarni wystawia token, który może służyć do uwierzytelniania w usłudze księgarni.  
+4.  Księgarni Usługa STS wystawia token, który może służyć do uwierzytelniania w usłudze księgarni.  
   
-5.  Klient przeprowadza uwierzytelnianie w usłudze księgarni przy użyciu token wystawiony przez usługę STS księgarni.  
+5.  Klient uwierzytelnia się w usłudze księgarni przy użyciu tokenu wystawionego przez usługę STS księgarni.  
   
 6.  Klient uzyskuje dostęp do `BuyBook` operacji.  
   
- Zobacz następujące instrukcje dotyczące konfigurowania i uruchamiania tego przykładu.  
+ Zobacz następujące instrukcje dotyczące sposobu konfigurowania i przeprowadzania tego przykładu.  
   
 > [!NOTE]
 >  Musi mieć uprawnienia do zapisu **wwwroot** katalogu, aby uruchomić ten przykład.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Otwórz okno polecenia zestawu SDK. W ścieżce próbki należy uruchomić pliku Setup.bat. Tworzy wymagane przykładowej katalogi wirtualne i instaluje wymagane certyfikaty z odpowiednimi uprawnieniami.  
+1.  Otwórz okno polecenia zestawu SDK. W ścieżce próbki należy uruchomić Setup.bat. Tworzy katalogi wirtualne wymagane dla przykładu i instaluje wymagane certyfikaty z odpowiednimi uprawnieniami.  
   
     > [!NOTE]
-    >  Plik wsadowy pliku Setup.bat jest przeznaczony do uruchamiania z wiersza polecenia systemu Windows SDK. Wymaga ona, że zmienna środowiskowa MSSDK odwołują się do katalogu, w którym jest zainstalowany zestaw SDK. Ta zmienna środowiskowa jest automatycznie ustawiana w wierszu polecenia systemu Windows SDK. Na [!INCLUDE[wv](../../../../includes/wv-md.md)], musi zapewnić, że zgodność z narzędziami zarządzania usług IIS 6.0 jest zainstalowany, ponieważ skrypty administratora usług IIS korzysta z konfiguracji. Uruchomienie skryptu konfiguracji [!INCLUDE[wv](../../../../includes/wv-md.md)] wymaga uprawnień administratora.  
+    >  Plik wsadowy Setup.bat jest przeznaczony do uruchamiania z wierszem polecenia Windows SDK. Wymaga to, że zmienna środowiskowa MSSDK odwołują się do katalogu, w którym jest zainstalowany zestaw SDK. Ta zmienna środowiskowa jest automatycznie ustawiana w wierszu polecenia Windows SDK. Na [!INCLUDE[wv](../../../../includes/wv-md.md)], należy upewnić się, że zgodność z narzędziami zarządzania usług IIS 6.0 jest zainstalowany, ponieważ konfigurowania używa skrypty administratora usług IIS. Uruchamianie skryptu konfiguracji [!INCLUDE[wv](../../../../includes/wv-md.md)] wymaga uprawnień administratora.  
   
-2.  Otwórz FederationSample.sln w programie Visual Studio i wybierz **Kompiluj rozwiązanie** z **kompilacji** menu. Tworzy wspólne pliki projektu, księgarni usługi STS księgarni, HomeRealm STS i wdraża je w usługach IIS. To również kompilacje księgarni aplikacji klienckiej i umieszcza BookStoreClient.exe wykonywalny w folderze FederationSample\BookStoreClient\bin\Debug.  
+2.  Otwórz FederationSample.sln w programie Visual Studio i wybierz **Kompiluj rozwiązanie** z **kompilacji** menu. Kompilacje wspólne pliki projektu, księgarni usługi STS księgarni, HomeRealm STS i ich wdrażania w usługach IIS. To również kompilacji aplikacji klienckiej księgarni i umieszcza BookStoreClient.exe wykonywalny w folderze FederationSample\BookStoreClient\bin\Debug.  
   
 3.  Kliknij dwukrotnie BookStoreClient.exe. Zostanie wyświetlone okno BookStoreClient.  
   
-4.  Możesz przeglądać książki w księgarni dostępne klikając **Przeglądaj książek**.  
+4.  Możesz przeglądać dostępne w księgarni książki, klikając **Przeglądaj książki**.  
   
-5.  Aby kupić wybranej książki, wybierz książkę na liście, a następnie kliknij przycisk **kupić książki**. Aplikacja jest uruchamiany i jest uwierzytelniany przy użyciu uwierzytelniania systemu Windows z usługi tokenu zabezpieczającego HomeRealm.  
+5.  Aby dokonać zakupu wybranej książki, wybierz książkę na liście, a następnie kliknij przycisk **kupić książki**. Aplikacja uruchamia się i jest uwierzytelniany przy użyciu uwierzytelniania Windows za pomocą usługi tokenu zabezpieczającego HomeRealm.  
   
-     Próbka jest skonfigurowany, aby umożliwić użytkownikom kupowanie książek, których koszt $15 lub mniej. Próba kupowanie książek, które koszty były wyższe niż $15 wyniki w kliencie pobieranie komunikat o odmowie dostępu z książki usługi magazynu.  
+     Próbka jest skonfigurowane tak, aby umożliwić użytkownikom kupowanie książek, które koszt 15 USD lub mniej. Podjęto próbę kupowanie książek, które są droższe niż 15 USD wyniki w kliencie pobieranie komunikat Odmowa dostępu z usługi Store książek.  
   
     > [!NOTE]
-    >  Próbki nie aktualizuje limit kredytu użytkownika po zakupu. Możesz kupić wielokrotnie książek w limicie środki (stałe) użytkownika.  
+    >  Przykład nie aktualizuje limit środków użytkownika po zakupie. Można wielokrotnie kupowanie książek w ramach limitu środków (stałe) użytkownika.  
   
 #### <a name="to-clean-up"></a>Aby wyczyścić  
   
-1.  Uruchom Cleanup.bat. Usuwa katalogi wirtualne, które zostały utworzone podczas zestawu w górę, a spowoduje również usunięcie certyfikaty zainstalowane podczas instalacji.  
+1.  Uruchom Cleanup.bat. Usuwa katalogi wirtualne, które były tworzone podczas konfiguracji i usuwa również zainstalowane podczas instalacji certyfikaty.  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  
   

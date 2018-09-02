@@ -2,78 +2,78 @@
 title: Zaawansowane zasady
 ms.date: 03/30/2017
 ms.assetid: 75a22c88-5e54-4ae8-84cb-fbb22a612f0a
-ms.openlocfilehash: 81cf2fb428833d4ca8cccf197011b69f2ccf3108
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: becdc28affd877239474d6f0f007a480297bccb8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515558"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387892"
 ---
 # <a name="advanced-policy"></a>Zaawansowane zasady
-W tym przykładzie rozszerza próbki proste zasady. Oprócz rabat lokalną i reguły biznesowe rabatem w przykładzie proste zasady dodano kilka nowych zasad.  
+W tym przykładzie rozszerza przykładowe proste zasady. Oprócz rabat na wersję lokalną i zniżki firm z przykładu proste zasady dodano kilka nowych zasad.  
   
- Dodana reguła wysokiej wartości, co umożliwia większy rabat zamówień wysokiej wartości. Jest podana wartość priorytetu jest mniejsza niż dwoma poprzednimi zasady tak, aby będzie Zastąp pole Rabat i mieć pierwszeństwo nad zarówno lokalną i reguły biznesowe rabatów.  
+ Dodano regułę o wysokiej wartości, co umożliwia większym rabatem zamówienia o wysokiej wartości. Otrzymuje wartość priorytetu jest mniejsza niż dwie poprzednie reguły tak, aby będzie Zastąp pole Rabat na wersję i mieć pierwszeństwo nad zarówno lokalną i zniżki biznesowych.  
   
- Oblicz reguły całkowita jest także dodawane, który oblicza łączną liczbę na podstawie poziomu rabatów. Pokazuje sposób odwołania do metody zdefiniowanej w działaniu przepływu pracy, jak również sposób użycia innego działania. Ta zasada przedstawiono również łańcucha zachowanie, ponieważ będzie ona oceniane w każdej chwili zmiany pola rabatów. Ponadto metoda przypisywanie powoduje wyświetlanie RuleWriteAttribute dla metody CalculateTotal. Powoduje to wpływ na reguły (ErrorTotalRule) do ponownego obliczenia zawsze, gdy metoda jest wykonywany.  
+ Oblicz całkowity reguły jest także dodawane, który oblicza sumę, zależnie od poziomu rabat w wysokości. Pokazuje, jak odwoływać się do metody zdefiniowanej w działaniu przepływu pracy, a także jak używać innego działania. Ta zasada przedstawia również, że łańcuch zachowanie, ponieważ będzie on oceniane dowolnym zmiany pola Rabat w wysokości. Ponadto przypisywanie metody jest wyświetlana przy użyciu RuleWriteAttribute metody CalculateTotal. Powoduje to reguły których to dotyczy (ErrorTotalRule), który ma zostać ponownie obliczone zawsze wtedy, gdy pobiera wykonywania metody.  
   
- Ostatnia reguła dodaje to taki, który wykryje błędy (w tym przypadku Suma mniejszą od 0). W takim przypadku jest zatrzymywane wykonywanie zasad.  
+ Ostatnia reguła dodane to taki, który wykrywa błędy (w tym przypadku Suma mniejszą niż 0). W takiej sytuacji wykonywanie zasadach zostało zatrzymane.  
   
- Na koniec `Console.Writeline` wywołania są dodawane jako akcje do każdej reguły, aby zapewnić lepszą widoczność do wykonywania reguł, podczas pokazywania również, czy istnieje możliwość dostępu do metody statyczne na odwołuje się do typów. Aby uzyskać informacje na reguły, które są wykonywane, można użyć również śledzenia.  
+ Na koniec `Console.Writeline` wywołania są dodawane jako akcji do każdej reguły, aby zapewnić lepszą widoczność do wykonywania reguły, podczas wyświetlania również, że możliwe jest dostęp do metod statycznych w przywoływane typy. Można także użyć śledzenia Aby uzyskać wgląd w zasady, które są wykonywane.  
   
  Dostępne są następujące reguły używane w tym przykładzie:  
   
  **ResidentialDiscountRule:**  
   
- Jeśli OrderValue > 500 i CustomerType = lokalną  
+ Jeśli OrderValue > 500 i CustomerType = zamieszkania  
   
- NASTĘPNIE rabat = 5%  
+ NASTĘPNIE rabat w wysokości = 5%  
   
  **BusinessDiscountRule:**  
   
- Jeśli OrderValue > 10000 i CustomerType = biznesowa  
+ Jeśli OrderValue > 10000 i CustomerType = biznesowych  
   
- NASTĘPNIE rabat = 10%  
+ NASTĘPNIE rabat w wysokości 10% =  
   
  **HighValueDiscountRule:**  
   
  Jeśli OrderValue > 20000  
   
- NASTĘPNIE rabat = 15%  
+ NASTĘPNIE rabat w wysokości = 15%  
   
  **TotalRule:**  
   
- Jeśli Discount > 0.  
+ Jeśli z rabatami > 0  
   
- NASTĘPNIE CalculateTotal (OrderValue dyskontowa)  
+ NASTĘPNIE CalculateTotal (OrderValue rabatu)  
   
- Suma ELSE = OrderValue  
+ ELSE łącznie = OrderValue  
   
  **ErrorTotalRule:**  
   
- Jeśli całkowita \< 0  
+ Jeśli łączna liczba \< 0  
   
- NASTĘPNIE błąd = "Uruchamiany ErrorTotalRule;" Zatrzymanie  
+ NASTĘPNIE błąd = "Wyzwolone ErrorTotalRule;" Zatrzymanie  
   
- Szacowanie reguły i wykonywanie znajdują się również za pośrednictwem śledzenia i śledzenia.  
+ Ocenę reguł i wykonywanie znajdują się również za pośrednictwem śledzenia i śledzenia.  
   
-### <a name="to-build-the-sample"></a>Aby samodzielnie tworzyć przykładowy  
+### <a name="to-build-the-sample"></a>Aby skompilować przykład  
   
 1.  Otwórz rozwiązanie w [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
 2.  Skompiluj rozwiązanie, naciskając klawisze CTRL + SHIFT + B.  
   
-3.  Uruchom rozwiązania bez debugowania, naciskając klawisze CTRL + F5.  
+3.  Uruchom rozwiązanie bez debugowania, naciskając klawisze CTRL + F5.  
   
-### <a name="to-run-the-sample"></a>Aby uruchomić przykładowy  
+### <a name="to-run-the-sample"></a>Aby uruchomić przykład  
   
--   W oknie wiersza polecenia zestawu SDK Uruchom plik .exe w folderze AdvancedPolicy\bin\debug (lub w folderze \bin AdvancedPolicy dla używanej wersji programu Visual Basic przykładu) znajdujący się poniżej głównego folderu przykładowej.  
+-   W oknie wiersza polecenia zestawu SDK Uruchom plik .exe w folderze AdvancedPolicy\bin\debug (lub folder \bin AdvancedPolicy wersję przykładu w Visual Basic), który znajduje się poniżej głównego folderu dla przykładu.  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne):  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne):  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu:  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu:  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\Policy\AdvancedPolicy`  
   

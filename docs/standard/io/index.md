@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7aacb6ca64a8b45a9b54b3f9d8785c7c61a07e09
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: a0ffef95c8f9a187d5dac6902462d9747023384d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254315"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394337"
 ---
 # <a name="file-and-stream-io"></a>We/Wy plików i strumieni
 Termin „We/Wy (wejście/wyjście) plików i strumieni” dotyczy transferu danych do lub z nośnika magazynowania. W .NET Framework `System.IO` przestrzenie nazw zawierają typy umożliwiające odczyt lub zapis, synchronicznie i asynchronicznie, w strumieniach i plikach danych. Te przestrzenie nazw zawierają również typy, które wykonują kompresję i dekompresję plików, oraz typy, które umożliwiają komunikację za pośrednictwem potoków i portów szeregowych.  
@@ -137,13 +137,13 @@ Dla ścieżki konwencji nazewnictwa i sposoby express ścieżkę pliku dla syste
   
  Kilka poważnych różnic, należy pamiętać, korzystając z operacji We/Wy w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji:  
   
--   Typy związane z operacjami na plikach, takich jak <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> i <xref:System.IO.DirectoryInfo>, nie są uwzględnione w [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Zamiast tego należy używać typów z [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) przestrzeń nazw [!INCLUDE[wrt](../../../includes/wrt-md.md)], takich jak [obiektu StorageFile](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) i [StorageFolder](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx).  
+-   Typy związane z operacjami na plikach, takich jak <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> i <xref:System.IO.DirectoryInfo>, nie są uwzględnione w [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Zamiast tego należy używać typów z [Windows.Storage](https://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) przestrzeń nazw [!INCLUDE[wrt](../../../includes/wrt-md.md)], takich jak [obiektu StorageFile](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) i [StorageFolder](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx).  
   
 -   Wydzielona pamięć masowa nie jest dostępna; Zamiast tego należy użyć [dane aplikacji](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).  
   
 -   Używanie metod asynchronicznych, takiej jak <xref:System.IO.Stream.ReadAsync%2A> i <xref:System.IO.Stream.WriteAsync%2A>, aby zapobiec blokowaniu wątku interfejsu użytkownika.  
   
--   Typy kompresji opartej na ścieżkach <xref:System.IO.Compression.ZipFile> i <xref:System.IO.Compression.ZipFileExtensions> nie są dostępne. Zamiast tego należy używać typów z [Windows.Storage.Compression](http://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx) przestrzeni nazw.  
+-   Typy kompresji opartej na ścieżkach <xref:System.IO.Compression.ZipFile> i <xref:System.IO.Compression.ZipFileExtensions> nie są dostępne. Zamiast tego należy używać typów z [Windows.Storage.Compression](https://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx) przestrzeni nazw.  
   
  W razie potrzeby można wykonywać konwersje między strumieniami programu .NET Framework i strumieniami środowiska wykonawczego systemu Windows. Aby uzyskać więcej informacji, zobacz [porady: konwertowanie między .NET Framework i strumieni środowiska wykonawczego Windows](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md) lub [System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx). <!--zz TODO: <xref:System.IO.WindowsRuntimeStreamExtensions>--> 
   

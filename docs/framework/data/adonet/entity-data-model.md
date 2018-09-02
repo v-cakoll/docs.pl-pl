@@ -2,22 +2,22 @@
 title: Entity Data Model
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
-ms.openlocfilehash: bb3c529a19ca96ea5695061fb1b612f9179899be
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e76527b497434ada06762fcab931522fffa2a16b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765246"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385597"
 ---
 # <a name="entity-data-model"></a>Entity Data Model
-Modelu danych jednostki (EDM) to zestaw kwestie dotyczące struktury danych, niezależnie od jego przechowywanych formularza. EDM obiektowy opisanego przez Chen Peterowi w 1976 modelu Relacja jednostki, ale również oparty na modelu Relacja jednostki i zwiększa jego tradycyjnego wykorzystania.  
+Entity Data Model (EDM) to zbiór pojęcia, które opisują struktury danych, niezależnie od tego, w postaci przechowywane. EDM obiektowy Model Relacja jednostki, opisanego przez Peter Chen w 1976, ale również jest oparta na modelu jednostki relacji i rozszerza jego tradycyjnych zastosowań.  
   
- EDM rozwiązuje problemy, które wynikają z danych przechowywanych w wielu formularzach o. Rozważmy na przykład firma, która przechowuje dane w relacyjnych baz danych, pliki tekstowe, pliki XML, arkusze kalkulacyjne i raporty. Stawiało to znaczące trudności w modelowania danych, projekt aplikacji i dostępu do danych. Podczas projektowania aplikacji korzystających z danych, żądania jest napisanie kodu wydajne i łatwy w obsłudze bez ograniczania dostępu do danych wydajne, magazynu i skalowalności. Jeśli dane relacyjne struktury, są bardzo wydajny dostęp do danych, magazynu i skalowalności, ale pisanie kodu wydajne i łatwy w obsłudze staje się coraz trudniejsze. Po danych ma strukturę obiektu, są wycofywane kompromisy: pisanie kodu wydajne i łatwy w obsłudze odbywa się kosztem dostępu do danych wydajne, magazynu i skalowalności. Nawet jeśli znajdują się kompromisu między tymi kompromis, wyzwania wystąpić, gdy dane są przenoszone z jednego formularza do innego. Modelu danych jednostki uwzględniają te problemy przez opisujące struktury danych pod względem jednostki i relacje, które są niezależne od żadnego schematu magazynu. Dzięki temu formularzu przechowywanych danych nie ma zastosowania do projektowania aplikacji i opracowywania. I, ponieważ jednostki i relacje opisano struktury danych, ponieważ jest używany w aplikacji (nie jego przechowywanych formularz), można rozwijać w miarę rozwoju środowisko aplikacji.  
+ EDM rozwiązuje problemy, które wynikają z konieczności — dane przechowywane w wielu formularzach. Rozważmy na przykład firma, która przechowuje dane w relacyjnych baz danych, pliki tekstowe, pliki XML, arkusze kalkulacyjne i raporty. Przedstawia informacje o istotnym wyzwaniom związanym z modelowania danych, projektowania aplikacji i dostępu do danych. Podczas projektowania aplikacji zorientowanych na dane, wezwanie jest do pisania kodu, wydajnego i łatwego w utrzymaniu bez obniżania oczekiwanego poziomu dostępu do danych wydajne, magazynu i skalowalności. Przypadku relacyjnej struktury danych, dostęp do danych, magazynu i skalowalności jest bardzo wydajny, ale pisania kodu wydajnego i łatwego w utrzymaniu staje się coraz trudniejszy. Gdy dane znajdują się struktury obiektu, wad i zalet zostały cofnięte: pisanie kodu wydajnego i łatwego w utrzymaniu pochodzi kosztem dostępu do danych wydajne, magazynu i skalowalności. Nawet wtedy, gdy można znaleźć równowagę między te wad, nowe wyzwania wystąpić, gdy dane są przenoszone z jednego formularza do innego. W modelu Entity Data Model uwzględniają te problemy, zawierająca opis struktury danych pod względem jednostek i relacji, które są niezależne od dowolnego schematu magazynu. Dzięki temu formularzu przechowywanych danych nieodpowiednie do projektowania aplikacji i tworzenia. Ponadto ponieważ jednostek i relacji opisać struktury danych, jest używany w aplikacji (nie jego przechowywanej formularz), ich ewolucji miarę rozwoju aplikacji.  
   
- A `conceptual model` jest reprezentację określonej struktury danych jako jednostki i relacje i zazwyczaj jest zdefiniowany w języku specyficznego dla domeny (DSL), który implementuje pojęcia EDM. [Schematu koncepcyjnego definition language (CSDL)](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md) przykładem języka specyficznego dla domeny. Jednostki i relacje opisane w modelu koncepcyjnym można traktować jako abstrakcje obiektów i skojarzenia w aplikacji. Umożliwia deweloperom skoncentrować się na model koncepcyjny bez obawy schemat magazynu i umożliwia im to wydajności i łatwości konserwacji na uwadze do pisania kodu. W tym samym czasie projektantów schematu magazynu można skoncentrować się na wydajność dostępu do danych, magazynu i skalowalności.  
+ A `conceptual model` to reprezentacja określonej struktury danych jako jednostek i relacji i zwykle jest zdefiniowany w języka specyficznego dla domeny (DSL), który implementuje koncepcji EDM. [Język definicji schematu koncepcyjnego (CSDL)](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md) jest przykładem języka specyficznego dla domeny. Jednostek i relacji, które opisano w modelu koncepcyjnym mogą być uważane za abstrakcje obiektów i skojarzenia w aplikacji. Umożliwia deweloperom skoncentrowanie się na modelu koncepcyjnego zapewnieniu schemat magazynu i pozwala na ich wydajność i łatwość konserwacji należy pamiętać, do pisania kodu. W międzyczasie projektantów schematu magazynu skupić się na wydajność dostępu do danych, magazynu i skalowalności.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- Tematy w tej sekcji opisano pojęcia związane z modelu danych jednostki. Wszelkie DSL, który implementuje EDM powinna zawierać pojęcia opisane w tym miejscu. Należy pamiętać, że [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) używa pliku CSDL, aby zdefiniować modele koncepcyjne. Aby uzyskać więcej informacji, zobacz [specyfikacji pliku CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md).  
+ Tematy w tej sekcji opisano pojęcia związane z modelu Entity Data Model. Wszelkie DSL, który implementuje EDM powinno obejmować pojęcia opisane w tym miejscu. Należy pamiętać, że [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) używa CSDL do definiowania modeli koncepcyjnych. Aby uzyskać więcej informacji, zobacz [Specyfikacja CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md).  
   
  [Kluczowe założenia modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
   
@@ -62,6 +62,6 @@ Modelu danych jednostki (EDM) to zestaw kwestie dotyczące struktury danych, nie
  [ograniczenie integralności referencyjnej](../../../../docs/framework/data/adonet/referential-integrity-constraint.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [ADO.NET Entity Data Model Tools](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)  
- [Omówienie plików edmx](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
+ [Narzędzia do modelu danych jednostki ADO.NET](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)  
+ [Omówienie pliku edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
  [Specyfikacja CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)

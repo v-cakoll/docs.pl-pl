@@ -1,5 +1,5 @@
 ---
-title: '&lt;typeparam&gt; (C# przewodnik programowania w języku)'
+title: '&lt;typeparam&gt; (C# Programming Guide)'
 ms.date: 07/20/2015
 f1_keywords:
 - typeparam
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - <typeparam> C# XML tag
 - typeparam C# XML tag
 ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
-ms.openlocfilehash: 8c7fc1aba05af731d3df80e0b10c2981b5784197
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5af03c8176672685b02a23019812f1aeded28dc8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348781"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389279"
 ---
-# <a name="lttypeparamgt-c-programming-guide"></a>&lt;typeparam&gt; (C# przewodnik programowania w języku)
+# <a name="lttypeparamgt-c-programming-guide"></a>&lt;typeparam&gt; (C# Programming Guide)
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
@@ -23,24 +23,24 @@ ms.locfileid: "33348781"
   
 #### <a name="parameters"></a>Parametry  
  `name`  
- Nazwa parametru typu. Nazwę należy ująć w podwójny cudzysłów ("").  
+ Nazwa parametru typu. Nazwę należy ująć w znaki podwójnego cudzysłowu ("").  
   
  `description`  
  Opis parametru typu.  
   
 ## <a name="remarks"></a>Uwagi  
- `<typeparam>` Tag powinny być używane w komentarz ogólny deklaracji typu lub metody do opisywania parametru typu. Dodaj tag dla każdego typu parametru typu ogólnego lub metody.  
+ `<typeparam>` Używany tag w komentarzu do deklaracji ogólnej typie lub metodzie do opisania parametrem typu. Dodaj tag dla każdego typu parametru typu ogólnego lub metody.  
   
  Aby uzyskać więcej informacji, zobacz [ogólne](../../../csharp/programming-guide/generics/index.md).  
   
- Tekst dla `<typeparam>` będą wyświetlane w IntelliSense, [okna przeglądarki obiektów](http://msdn.microsoft.com/library/3c7f1673-1f0d-41b1-94ca-a3dcfcb82cda) kodu — raport w sieci web komentarza.  
+ Tekst dla `<typeparam>` będą wyświetlane w technologii IntelliSense, [okna przeglądarki obiektów](https://msdn.microsoft.com/library/3c7f1673-1f0d-41b1-94ca-a3dcfcb82cda) kodu komentarza raport sieci web.  
   
- Kompiluj z użyciem [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) na przetwarzanie komentarzy dokumentacji do pliku.  
+ Kompiluj przy użyciu [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) do Przetwarzaj komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csProgGuideDocComments#13](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/typeparam_1.cs)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
+ [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Zalecane tagi przeznaczone do komentarzy dokumentacji](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

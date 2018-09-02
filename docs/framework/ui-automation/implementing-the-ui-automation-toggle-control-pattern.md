@@ -9,47 +9,47 @@ ms.assetid: 3cfe875f-b0c0-413d-9703-5f14e6a1a30e
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: eed3f6771526f7a026bd411b3f12c39b4bb64bf4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3d9ab6de0c398f466efb5535f34553b78a715c8e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407998"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394481"
 ---
 # <a name="implementing-the-ui-automation-toggle-control-pattern"></a>Implementacja wzorca kontrolki przełącznika automatyzacji interfejsu użytkownika
 > [!NOTE]
->  Ta dokumentacja jest przeznaczony dla deweloperów .NET Framework, które chcą korzystać zarządzanej [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejsu API systemu Windows automatyzacji: automatyzacji interfejsu użytkownika](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  W tym temacie przedstawiono wskazówki i konwencje dotyczące implementowania <xref:System.Windows.Automation.Provider.IToggleProvider>, wraz z informacjami dotyczącymi metod i właściwości. Łącza do dodatkowe informacje są wyświetlane na końcu tego tematu.  
   
- <xref:System.Windows.Automation.TogglePattern> — Wzorzec formantu jest używana do obsługi formantów, które można zestawu stanów i obsługa stanie po ustawieniu. Przykłady formantów, które implementują wzorzec tego formantu można znaleźć [formantu wzorzec mapowania dla klientów automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ <xref:System.Windows.Automation.TogglePattern> — Wzorzec kontrolki jest używana do obsługi formantów, które mogą przechodzić przez zestaw stanów i obsługa po ustawieniu stanu. Przykłady formantów, które implementują wzorzec tej kontrolki, zobacz [kontroli wzorzec mapowania dla klientów automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Implementacja — wskazówki i konwencje  
- Podczas implementowania Toggle — wzorzec formantu, należy zwrócić uwagę następujące wskazówki i konwencje:  
+## <a name="implementation-guidelines-and-conventions"></a>Wytyczne dotyczące implementacji i konwencje  
+ Jeśli implementacja wzorca kontrolki przełącznika, należy zwrócić uwagę następujących wytycznych i konwencje:  
   
--   Formanty, które nie obsługują stanu po uaktywnieniu, takie jak przyciski, przyciski paska narzędzi i hiperłącza, musi implementować <xref:System.Windows.Automation.Provider.IInvokeProvider> zamiast tego.  
+-   Formanty, które nie zachowują stan, gdy aktywowany, takie jak przyciski, przyciski paska narzędzi i hiperłączy, musi implementować <xref:System.Windows.Automation.Provider.IInvokeProvider> zamiast tego.  
   
--   Formant musi przechodzić przez jego <xref:System.Windows.Automation.ToggleState> w następującej kolejności: <xref:System.Windows.Automation.ToggleState.On>, <xref:System.Windows.Automation.ToggleState.Off> i, jeśli jest to obsługiwane, <xref:System.Windows.Automation.ToggleState.Indeterminate>.  
+-   Kontrolki musi przechodzić przez jego <xref:System.Windows.Automation.ToggleState> w następującej kolejności: <xref:System.Windows.Automation.ToggleState.On>, <xref:System.Windows.Automation.ToggleState.Off> i, jeśli jest obsługiwany, <xref:System.Windows.Automation.ToggleState.Indeterminate>.  
   
--   <xref:System.Windows.Automation.TogglePattern> udostępnia metody SetState(newState) z powodu problemów z otaczającego bezpośrednie ustawienie elementu CheckBox trzy stanowy bez okrągło jej odpowiednie <xref:System.Windows.Automation.ToggleState> sekwencji.  
+-   <xref:System.Windows.Automation.TogglePattern> udostępnia metody SetState(newState) z powodu problemów z otaczającego bezpośrednie ustawienie pola wyboru trzy-stanowy bez okrągło jego odpowiedniego <xref:System.Windows.Automation.ToggleState> sekwencji.  
   
--   RadioButton — formant nie implementuje <xref:System.Windows.Automation.Provider.IToggleProvider>, ponieważ nie jest zdolny okrągło jego nieprawidłowy stan.  
+-   RadioButton — formant nie implementuje <xref:System.Windows.Automation.Provider.IToggleProvider>, ponieważ nie jest zdolny okrągło jego stany prawidłowe.  
   
 <a name="Required_Members_for_IToggleProvider"></a>   
 ## <a name="required-members-for-itoggleprovider"></a>Wymagane elementy IToggleProvider  
- Poniższe właściwości i metody są wymagane do wykonania <xref:System.Windows.Automation.Provider.IToggleProvider>.  
+ Poniższe właściwości i metod wymaganych do implementowania <xref:System.Windows.Automation.Provider.IToggleProvider>.  
   
-|Wymagany element członkowski|Typ elementu członkowskiego|Uwagi|  
+|Wymagany|Typ elementu członkowskiego|Uwagi|  
 |---------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.TogglePattern.Toggle%2A>|Metoda|Brak|  
 |<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty>|Właściwość|Brak|  
   
- Wzorzec ten formant nie ma żadnych zdarzeń skojarzone.  
+ Ten wzorzec formantu nie ma żadnych skojarzonych zdarzeń.  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Wyjątki  
- Ten wzorzec formantu ma bez wyjątków skojarzone.  
+ Ten wzorzec kontroli ma skojarzone generują żadnych wyjątków.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wzorce kontrolek automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  

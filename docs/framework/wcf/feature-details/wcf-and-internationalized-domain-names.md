@@ -2,20 +2,20 @@
 title: Architektura WCF i międzynarodowe nazwy domen
 ms.date: 03/30/2017
 ms.assetid: c8a3e10a-8bc2-4a78-8d86-a562ba6e65fa
-ms.openlocfilehash: 24b7af660d5fd9629639d3b63d605ef619dcf009
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8431f5d47aa32d1c928190abdd3079831ca48618
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498039"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386755"
 ---
 # <a name="wcf-and-internationalized-domain-names"></a>Architektura WCF i międzynarodowe nazwy domen
-Dodano obsługę umożliwiające usługi WCF z domeny nazwy (IDN). Międzynarodowych nazw domen jest nazwą domeny, który zawiera znaki spoza zestawu ASCII. Ta obsługa obejmuje to możliwość hostowanie usługi WCF z nazwą IDN i klienta WCF do komunikowania się z usługą sieci web z nazwą IDN.  
+Dodano obsługę do obsługi usług WCF za pomocą nazw międzynarodowych domen (IDN). Międzynarodowa nazwa domeny jest nazwa domeny, który zawiera znaki spoza zestawu ASCII. Ta obsługa obejmuje możliwość hostowanie usługi WCF przy użyciu nazwy IDN i klienta programu WCF na komunikowanie się z usługą sieci web o nazwie IDN.  
   
 ## <a name="systemuri-and-idn"></a>System.Uri i IDN  
- <xref:System.Uri> ma dwie właściwości <xref:System.Uri.Host%2A> i <xref:System.Uri.DnsSafeHost%2A>. Te właściwości zawierają wartości Unicode lub ciąg Punycode, w zależności od ustawień konfiguracji IDN.  
+ <xref:System.Uri> ma dwie właściwości <xref:System.Uri.Host%2A> i <xref:System.Uri.DnsSafeHost%2A>. Te właściwości zawierają wartości Unicode lub Punycode, w zależności od ustawień konfiguracji IDN.  
   
- IDN jest włączone w pliku konfiguracji aplikacji przy użyciu następującego kodu XML  
+ IDN jest włączone w pliku konfiguracji aplikacji przy użyciu następujący kod XML  
   
 ```xml  
 <configuration>  
@@ -25,7 +25,7 @@ Dodano obsługę umożliwiające usługi WCF z domeny nazwy (IDN). Międzynarodo
 </configuration>  
 ```  
   
- \<Idn > element zawiera włączony atrybut, który może być ustawione na jedną z następujących wartości:  
+ \<Idn > element zawiera atrybut włączony, którą można ustawić na jeden z następujących wartości:  
   
 1.  "None"  
   
@@ -33,13 +33,13 @@ Dodano obsługę umożliwiające usługi WCF z domeny nazwy (IDN). Międzynarodo
   
 3.  "Wszystkie"  
   
- Ustawienie IDN ma wartość "None", ma konwersji są wykonywane przez Uri.Host lub Uri.DnsSafeHost. Gdy ustawienie IDN ma wartość "Wszystkie", identyfikator uri. Host pozostaje Unicode i identyfikatora uri. DnsSafeHost jest konwertowana na ciąg Punycode. Jeśli ustawienie IDN jest równa "AllExceptIntranet", identyfikator uri. DnsSafeHost jest konwertowana na ciąg Punycode w przypadku adresów internetowych i pozostaje Unicode intranetowe adresy. To ustawienie jest ważne w przypadku poprawne rozpoznawanie nazwy DNS. Uwaga: to ustawienie nie jest wymagane do skonfigurowania dla systemu Windows 8 i nowszych wersji.  
+ Gdy ustawienie IDN ma wartość "None", nie konwersje są wykonywane przez Uri.Host lub Uri.DnsSafeHost. Jeśli ustawienie IDN jest równa "All", identyfikator uri. Host pozostaje Unicode i identyfikatora uri. DnsSafeHost jest konwertowana na ciąg Punycode. Jeśli ustawienie IDN, jest równa "AllExceptIntranet", identyfikator uri. DnsSafeHost jest konwertowana na ciąg Punycode w przypadku adresów internetowych i pozostaje Unicode dla adresów w sieci intranet. To ustawienie jest ważne dla poprawnego rozpoznawania nazw DNS. Należy pamiętać, że to ustawienie nie jest wymagane do skonfigurowania dla systemu Windows 8 i nowszych wersji.  
   
 > [!WARNING]
->  Należy nigdy nie kodowane adresu przy użyciu Punycode. Usługi WCF przekonwertuje go na podstawie ustawień konfiguracji, które należy zastosować.  
+>  Powinno nigdy trwale kodować adresu przy użyciu Punycode. Usługi WCF przekonwertuje go na podstawie ustawień konfiguracji, które należy zastosować.  
   
 > [!WARNING]
 >  Podczas dodawania znaków Unicode do applicationHost.exe.config, Zapisz plik przy użyciu kodowania UTF-8.  
   
 ## <a name="see-also"></a>Zobacz też  
- [System.Uri](http://msdn.microsoft.com/library/system.uri.aspx)
+ [System.Uri](https://msdn.microsoft.com/library/system.uri.aspx)

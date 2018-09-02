@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd378798ad6909175b2342b0d79584e2667f1eea
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 0cf81b5a86d55cf3d7872e0e5281c35f41ad1c31
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911883"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390666"
 ---
 # <a name="custom-timespan-format-strings"></a>Niestandardowe ciągi formatujące TimeSpan
 
@@ -67,11 +67,12 @@ Niestandardowe <xref:System.TimeSpan> ciągi formatu są również używane prze
 |„FFFFF”|-Stutysięcznych części sekundy w odstępie czasu. Ułamkowe końcowe zera nie są uwzględniane.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FFFFF"](#F5_Specifier).|`TimeSpan.Parse("00:00:06.329179")`:<br /><br /> `FFFFF`: 32917<br /><br /> `TimeSpan.Parse("0:0:3.100009")`:<br /><br /> `ss\.FFFFF`: 03.1|
 |„FFFFFF”|Liczba milionowych części sekundy w odstępie czasu. Ułamkowe końcowe zera nie są wyświetlane.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FFFFFF"](#F6_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`:<br /><br /> `ss\.FFFFFF`: 03.1|
 |„FFFFFFF”|10 milionach części sekundy w odstępie czasu. Ułamkowe końcowe zera lub siedem zer nie są wyświetlane.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FFFFFFF"](#F7_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`:<br /><br /> `ss\.FFFFFF`: 03.19|
-|*"ciągu*"|Ogranicznik ciągu literału.<br /><br /> Więcej informacji: [inne znaki](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
+|"*ciąg*"|Ogranicznik ciągu literału.<br /><br /> Więcej informacji: [inne znaki](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
 |\\| Znak ucieczki.<br /><br /> Więcej informacji:[inne znaki](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 |Jakikolwiek inny znak|Dowolnego znaku o niezmienionym znaczeniu jest interpretowany jako specyfikator formatu niestandardowego.<br /><br /> Więcej informacji: [inne znaki](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 
-<a name="dSpecifier"></a>
+<a name="dSpecifier"></a> 
+
 ## <a name="the-d-custom-format-specifier"></a>Specyfikator formatu niestandardowego „d”
 
 Specyfikator formatu niestandardowego "d" Wyświetla wartość <xref:System.TimeSpan.Days%2A?displayProperty=nameWithType> właściwość, która reprezentuje liczbę dni w odstępie czasu. Wyświetla pełną liczbę dni w <xref:System.TimeSpan> wartości, nawet jeśli wartość ma więcej niż jedną cyfrę. Jeśli wartość <xref:System.TimeSpan.Days%2A?displayProperty=nameWithType> właściwości wynosi zero, specyfikator generuje "0".
@@ -89,6 +90,7 @@ Poniższy przykład ilustruje użycie specyfikator formatu niestandardowego "d".
 [Powrót do tabeli](#table)
 
 <a name="ddSpecifier"></a> 
+
 ## <a name="the-dd-dddddddd-custom-format-specifiers"></a>"dd"-"dddddddd" specyfikatora formatu niestandardowego
 "Dd", "ddd", "dddd", "ddddd", "dddddd", "ddddddd" i "dddddddd" niestandardowych specyfikatorów formatu danych wyjściowych wartość <xref:System.TimeSpan.Days%2A?displayProperty=nameWithType> właściwość, która reprezentuje liczbę dni w odstępie czasu.
 
@@ -102,6 +104,7 @@ W poniższym przykładzie użyto tych specyfikatorów formatu, aby wyświetlić 
 [Powrót do tabeli](#table)
 
 <a name="hSpecifier"></a> 
+
 ## <a name="the-h-custom-format-specifier"></a>Specyfikator formatu niestandardowego „h”
 Specyfikator formatu niestandardowego "h" generuje wartość <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> właściwość, która reprezentuje liczbę godzin całego w odstępie czasu, który nie jest liczony jako część jej składnik dni. Zwraca wartość ciągu jedną cyfrę, jeśli wartość <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> właściwość ma od 0 do 9 i zwraca wartość ciągu dwóch cyfr, gdy wartość <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> właściwości z zakresu od 10 do 23.
 
@@ -123,6 +126,7 @@ Poniższy przykład ilustruje użycie specyfikator formatu niestandardowego "h".
 [Powrót do tabeli](#table)
 
 <a name="hhSpecifier"></a> 
+
 ## <a name="the-hh-custom-format-specifier"></a>Specyfikator formatu niestandardowego „hh”
 Specyfikator formatu niestandardowego "hh" generuje wartość <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> właściwość, która reprezentuje liczbę godzin całego w odstępie czasu, który nie jest liczony jako część jej składnik dni. W przypadku wartości z zakresu od 0 do 9 ciągu wyjściowego obejmuje zerem wiodącym.
 
@@ -139,6 +143,7 @@ Poniższy przykład ilustruje użycie specyfikator formatu niestandardowego "hh"
 [Powrót do tabeli](#table)
 
 <a name="mSpecifier"></a> 
+
 ## <a name="the-m-custom-format-specifier"></a>Specyfikator formatu niestandardowego „m”
 Specyfikator formatu niestandardowego "m" generuje wartość <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> właściwość, która reprezentuje liczbę pełnych minut w odstępie czasu, który nie jest liczony jako część jej składnik dni. Zwraca wartość ciągu jedną cyfrę, jeśli wartość <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> właściwość ma od 0 do 9 i zwraca wartość ciągu dwóch cyfr, gdy wartość <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> właściwości z zakresu od 10 do 59.
 
@@ -160,6 +165,7 @@ Poniższy przykład ilustruje użycie specyfikator formatu niestandardowego "m".
 [Powrót do tabeli](#table)
 
 <a name="mmSpecifier"></a> 
+
 ## <a name="the-mm-custom-format-specifier"></a>Specyfikator formatu niestandardowego „mm”
 Specyfikator formatu niestandardowego "mm" generuje wartość <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> właściwość, która reprezentuje liczbę pełnych minut w odstępie czasu, który nie jest dołączony jako część składnika godzin lub dni. W przypadku wartości z zakresu od 0 do 9 ciągu wyjściowego obejmuje zerem wiodącym.
 
@@ -176,6 +182,7 @@ Poniższy przykład ilustruje użycie specyfikator formatu niestandardowego "mm"
 [Powrót do tabeli](#table)
 
 <a name="sSpecifier"></a> 
+
 ## <a name="the-s-custom-format-specifier"></a>Specyfikator formatu niestandardowego „s”
 Specyfikator formatu niestandardowego "s" generuje wartość <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> właściwość, która reprezentuje liczbę sekund całego w odstępie czasu, który nie jest częścią jego godzin, dni lub składnik minut. Zwraca wartość ciągu jedną cyfrę, jeśli wartość <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> właściwość ma od 0 do 9 i zwraca wartość ciągu dwóch cyfr, gdy wartość <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> właściwości z zakresu od 10 do 59.
 
@@ -197,6 +204,7 @@ Poniższy przykład ilustruje użycie specyfikator formatu niestandardowego "s".
 [Powrót do tabeli](#table)
 
 <a name="ssSpecifier"></a> 
+
 ## <a name="the-ss-custom-format-specifier"></a>Specyfikator formatu niestandardowego „ss”
 Specyfikator formatu niestandardowego "ss" generuje wartość <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> właściwość, która reprezentuje liczbę sekund całego w odstępie czasu, który nie jest częścią jego godzin, dni lub składnik minut. W przypadku wartości z zakresu od 0 do 9 ciągu wyjściowego obejmuje zerem wiodącym.
 
@@ -213,6 +221,7 @@ Poniższy przykład ilustruje użycie specyfikatora formatu niestandardowego "ss
 [Powrót do tabeli](#table)
 
 <a name="fSpecifier"></a> 
+
 ## <a name="thef-custom-format-specifier"></a>Specyfikator formatu niestandardowego "f"
 Specyfikator formatu niestandardowego "f" generuje dziesiątych części sekundy w odstępie czasu. W operacji formatowania wszelkie pozostałe cyfry ułamkowe są obcinane. Podczas operacji analizowania, która wywołuje <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> lub <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> metody ciąg wejściowy musi zawierać dokładnie jednej cyfry ułamkowe.
 
@@ -226,6 +235,7 @@ W poniższym przykładzie użyto specyfikatora formatu niestandardowego "f", aby
 [Powrót do tabeli](#table)
 
 <a name="ffSpecifier"></a> 
+
 ## <a name="the-ff-custom-format-specifier"></a>Specyfikator formatu niestandardowego „ff”
 Specyfikator formatu niestandardowego "ff" generuje setnych części sekundy w odstępie czasu. W operacji formatowania wszelkie pozostałe cyfry ułamkowe są obcinane. Podczas operacji analizowania, która wywołuje <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> lub <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> metody ciąg wejściowy musi zawierać dokładnie dwie cyfry ułamkowe.
 
@@ -237,6 +247,7 @@ W poniższym przykładzie użyto specyfikatora formatu niestandardowego "ff", ab
 [Powrót do tabeli](#table)
 
 <a name="f3Specifier"></a> 
+
 ## <a name="the-fff-custom-format-specifier"></a>Specyfikator formatu niestandardowego „fff”
 Specyfikator formatu niestandardowego "fff" (z trzech znaków "f") danych wyjściowych milisekund w odstępie czasu. W operacji formatowania wszelkie pozostałe cyfry ułamkowe są obcinane. Podczas operacji analizowania, która wywołuje <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> lub <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> metody ciąg wejściowy musi zawierać dokładnie trzy cyfry ułamkowe.
 
@@ -248,6 +259,7 @@ W poniższym przykładzie użyto specyfikatora formatu niestandardowego "fff", a
 [Powrót do tabeli](#table)
 
 <a name="f4Specifier"></a> 
+
 ## <a name="the-ffff-custom-format-specifier"></a>Specyfikator formatu niestandardowego „ffff”
 Specyfikator formatu niestandardowego "ffff" (z czterech znaków "f") danych wyjściowych-dziesięciotysięcznych części sekundy w odstępie czasu. W operacji formatowania wszelkie pozostałe cyfry ułamkowe są obcinane. Podczas operacji analizowania, która wywołuje <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> lub <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> metody ciąg wejściowy musi zawierać dokładnie cztery cyfry ułamkowe.
 
@@ -259,6 +271,7 @@ W poniższym przykładzie użyto specyfikatora formatu niestandardowego "ffff" w
 [Powrót do tabeli](#table)
 
 <a name="f5Specifier"></a> 
+
 ## <a name="the-fffff-custom-format-specifier"></a>Specyfikator formatu niestandardowego „fffff”
 Specyfikator formatu niestandardowego "fffff" (z pięć znaków "f") danych wyjściowych-stutysięcznych części sekundy w odstępie czasu. W operacji formatowania wszelkie pozostałe cyfry ułamkowe są obcinane. Podczas operacji analizowania, która wywołuje <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> lub <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> metody ciąg wejściowy musi zawierać dokładnie pięciu cyfr dziesiętnych.
 
@@ -270,6 +283,7 @@ W poniższym przykładzie użyto specyfikatora formatu niestandardowego "fffff" 
 [Powrót do tabeli](#table)
 
 <a name="f6Specifier"></a> 
+
 ## <a name="the-ffffff-custom-format-specifier"></a>Specyfikator formatu niestandardowego „ffffff”
 Specyfikator formatu niestandardowego "ffffff" (z sześciu znaków "f") danych wyjściowych milionowych części sekundy w odstępie czasu. W operacji formatowania wszelkie pozostałe cyfry ułamkowe są obcinane. Podczas operacji analizowania, która wywołuje <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> lub <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> metody ciąg wejściowy musi zawierać dokładnie sześć cyfr dziesiętnych.
 
@@ -281,6 +295,7 @@ W poniższym przykładzie użyto specyfikatora formatu niestandardowego "ffffff"
 [Powrót do tabeli](#table)
 
 <a name="f7Specifier"></a> 
+
 ## <a name="the-fffffff-custom-format-specifier"></a>Specyfikator formatu niestandardowego „fffffff”
 Specyfikator formatu niestandardowego "fffffff" (z siedem znaków "f") danych wyjściowych dziesięciomilionowych części sekundy (lub ułamkową liczby taktów) w odstępie czasu. Podczas operacji analizowania, która wywołuje <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> lub <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> metody ciąg wejściowy musi zawierać dokładnie siedmiu cyfr dziesiętnych.
 
@@ -292,6 +307,7 @@ W poniższym przykładzie użyto specyfikatora formatu niestandardowego "fffffff
 [Powrót do tabeli](#table)
 
 <a name="F_Specifier"></a> 
+
 ## <a name="the-f-custom-format-specifier"></a>Specyfikator formatu niestandardowego „F”
 Specyfikator formatu niestandardowego "F" generuje dziesiątych części sekundy w odstępie czasu. W operacji formatowania wszelkie pozostałe cyfry ułamkowe są obcinane. Jeśli wartość interwału czasu dziesiątych części sekundy wynosi zero, jest niedostępna w ciągu wynikowym. Podczas operacji analizowania, która wywołuje <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> lub <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> , obecności liczba dziesiątych części drugiej cyfra jest opcjonalne.
 
@@ -305,6 +321,7 @@ W poniższym przykładzie użyto specyfikatora formatu niestandardowego "F", aby
 [Powrót do tabeli](#table)
 
 <a name="FF_Specifier"></a> 
+
 ## <a name="the-ff-custom-format-specifier"></a>Specyfikator formatu niestandardowego „FF”
 Specyfikator formatu niestandardowego "FF" generuje setnych części sekundy w odstępie czasu. W operacji formatowania wszelkie pozostałe cyfry ułamkowe są obcinane. W przypadku końcowe zera ułamkowe nie są one uwzględnione w ciągu wynikowym. Podczas operacji analizowania, która wywołuje <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> lub <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> , obecność liczbę dziesiątych i Liczba setnych części drugiej cyfra jest opcjonalne.
 
@@ -316,6 +333,7 @@ W poniższym przykładzie użyto specyfikatora formatu niestandardowego "FF", ab
 [Powrót do tabeli](#table)
 
 <a name="F3_Specifier"></a> 
+
 ## <a name="the-fff-custom-format-specifier"></a>Specyfikator formatu niestandardowego „FFF”
 Specyfikator formatu niestandardowego "FFF" (z trzech znaków "F") danych wyjściowych milisekund w odstępie czasu. W operacji formatowania wszelkie pozostałe cyfry ułamkowe są obcinane. W przypadku końcowe zera ułamkowe nie są one uwzględnione w ciągu wynikowym. Podczas operacji analizowania, która wywołuje <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> lub <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> , obecna liczba dziesiątych, Liczba setnych i tysięczne cyfrę na drugiej pozycji jest opcjonalne.
 
@@ -327,6 +345,7 @@ W poniższym przykładzie użyto specyfikatora formatu niestandardowego "FFF", a
 [Powrót do tabeli](#table)
 
 <a name="F4_Specifier"></a> 
+
 ## <a name="the-ffff-custom-format-specifier"></a>Specyfikator formatu niestandardowego „FFFF”
 Specyfikator formatu niestandardowego "FFFF" (z czterech znaków "F") danych wyjściowych-dziesięciotysięcznych części sekundy w odstępie czasu. W operacji formatowania wszelkie pozostałe cyfry ułamkowe są obcinane. W przypadku końcowe zera ułamkowe nie są one uwzględnione w ciągu wynikowym. Podczas operacji analizowania, która wywołuje <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> lub <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> , obecności dziesiątych, Liczba setnych, tysięczne i dziesięciotysięcznych części cyfrę na drugiej pozycji jest opcjonalne.
 
@@ -338,6 +357,7 @@ W poniższym przykładzie użyto specyfikatora formatu niestandardowego "FFFF" w
 [Powrót do tabeli](#table)
 
 <a name="F5_Specifier"></a> 
+
 ## <a name="the-fffff-custom-format-specifier"></a>Specyfikator formatu niestandardowego „FFFFF”
 Specyfikator formatu niestandardowego "FFFFF" (z pięć znaków "F") danych wyjściowych-stutysięcznych części sekundy w odstępie czasu. W operacji formatowania wszelkie pozostałe cyfry ułamkowe są obcinane. W przypadku końcowe zera ułamkowe nie są one uwzględnione w ciągu wynikowym. Podczas operacji analizowania, która wywołuje <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> lub <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> , liczba dziesiątych, Liczba setnych, tysięczne, dziesięciotysięcznych, oraz stutysięcznych części cyfrę na drugiej pozycji jest opcjonalne.
 
@@ -349,6 +369,7 @@ W poniższym przykładzie użyto specyfikatora formatu niestandardowego "FFFFF" 
 [Powrót do tabeli](#table)
 
 <a name="F6_Specifier"></a> 
+
 ## <a name="the-ffffff-custom-format-specifier"></a>Specyfikator formatu niestandardowego „FFFFFF”
 Specyfikator formatu niestandardowego "FFFFFF" (z sześciu znaków "F") danych wyjściowych milionowych części sekundy w odstępie czasu. W operacji formatowania wszelkie pozostałe cyfry ułamkowe są obcinane. W przypadku końcowe zera ułamkowe nie są one uwzględnione w ciągu wynikowym. Podczas operacji analizowania, która wywołuje <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> lub <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> metody obecność dziesiątych, Liczba setnych, tysięczne, 10 000, sto tysięczne i liczba milionowych części drugiej cyfra jest opcjonalne.
 
@@ -360,6 +381,7 @@ W poniższym przykładzie użyto specyfikatora formatu niestandardowego "FFFFFF"
 [Powrót do tabeli](#table)
 
 <a name="F7_Specifier"></a> 
+
 ## <a name="the-fffffff-custom-format-specifier"></a>Specyfikator formatu niestandardowego „FFFFFFF”
 Specyfikator formatu niestandardowego "FFFFFFF" (z siedem znaków "F") danych wyjściowych dziesięciomilionowych części sekundy (lub ułamkową liczby taktów) w odstępie czasu. W przypadku końcowe zera ułamkowe nie są one uwzględnione w ciągu wynikowym. Podczas operacji analizowania, która wywołuje <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> lub <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> , obecności siedmiu cyfr ułamkowych do ciągu wejściowego jest opcjonalne.
 
@@ -370,7 +392,8 @@ W poniższym przykładzie użyto specyfikatora formatu niestandardowego "FFFFFFF
 
 [Powrót do tabeli](#table)
 
-<a name="Other"></a>
+<a name="Other"></a> 
+
 ## <a name="other-characters"></a>Inne znaki
 
 Jakikolwiek inny znak o niezmienionym znaczeniu w ciągu formatu, w tym znak odstępu, jest interpretowany jako specyfikator formatu niestandardowego. W większości przypadków obecność innych o niezmienionym znaczeniu znak skutkuje <xref:System.FormatException>.

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - parameters [C#]
 ms.assetid: 680e39ff-775b-48b0-9f47-4186a5bfc4a1
 ms.openlocfilehash: 446a5239fa1de8559dea50f7e8b8869aed0297c5
-ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43238498"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390003"
 ---
 # <a name="method-parameters-c-reference"></a>Parametry metody (odwołanie w C#)
 

@@ -2,38 +2,38 @@
 title: Działania jednostki
 ms.date: 03/30/2017
 ms.assetid: c04f7413-7fb8-40c6-819e-dc92b145b62e
-ms.openlocfilehash: 96301c15b849749299e744a435068c3ec9be2e3a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03bd0e42c70f1226558d492bcb3b2cfa5c7010f2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519139"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385807"
 ---
 # <a name="entity-activities"></a>Działania jednostki
-Ten przykład przedstawia sposób upraszczanie dostępu do danych przy użyciu programu ADO.NET Entity Framework z programu Windows Workflow Foundation.  
+W tym przykładzie pokazano, jak za pomocą ADO.NET Entity Framework Windows Workflow Foundation Aby uprościć dostęp do danych.  
   
- ADO.NET Entity Framework umożliwia deweloperom pracy z danymi w postaci obiektów specyficznego dla domeny, właściwości i relacje, takich jak klienci, zamówienia, szczegółów zamówienia i relacji między tymi obiektami. ADO.NET Entity Framework robi to przez zapewnienie na poziomie abstrakcji, która umożliwia programowanie w odniesieniu do modelu koncepcyjnego aplikacji, zamiast programowanie bezpośrednio ze schematem relacyjnego magazynu. Aby uzyskać więcej informacji o ADO.NET Entity Framework, zobacz [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549).  
+ ADO.NET Entity Framework umożliwia deweloperom pracę z danymi w postaci obiektów specyficznych dla domeny, właściwości i relacje, takich jak klientów i zamówień, szczegółów zamówienia relacji między tymi jednostkami. ADO.NET Entity Framework robi to dzięki zapewnieniu poziomu abstrakcji, która umożliwia programowanie w oparciu o model koncepcyjny aplikacji zamiast programowania bezpośrednio w odniesieniu do schematu magazyn relacyjny. Aby uzyskać więcej informacji na temat ADO.NET Entity Framework, zobacz [ADO.NET Entity Framework](https://go.microsoft.com/fwlink/?LinkId=165549).  
   
-## <a name="sample-details"></a>Szczegóły próbki  
- W przykładzie użyto `Northwind` bazy danych i obejmuje skrypty umożliwiające tworzenie i usuwanie `Northwind` bazy danych (Setup.cmd i Cleanup.cmd). Projekty w tym przykładzie obejmują modelu danych jednostki na podstawie `Northwind` bazy danych. Można znaleźć modelu, otwierając `Northwind.edmx` pliku, który jest dołączony do projektu. To jest model, który określa kształt obiektów, które są dostępne przy użyciu programu ADO.NET Entity Framework.  
+## <a name="sample-details"></a>Przykład szczegółów  
+ W tym przykładzie użyto `Northwind` bazy danych i obejmuje skrypty do tworzenia i usuwania `Northwind` bazy danych (plik Setup.cmd i Cleanup.cmd). Projekty, w tym przykładzie zawierają oparte na modelu danych jednostki `Northwind` bazy danych. Model można znaleźć, otwierając `Northwind.edmx` pliku, który znajduje się w projekcie. Jest to model, który definiuje kształt obiektów, które mogą być udostępniane za pomocą ADO.NET Entity Framework.  
   
- Ten przykład obejmuje wykonywanie następujących czynności:  
+ W tym przykładzie znajdują się następujące działania:  
   
--   `EntitySQLQuery`: `EntitySQLQuery` Działania umożliwia pobieranie obiektów z bazy danych, w zależności od ciągu zapytania SQL jednostki. Jednostka SQL jest językiem niezależne magazynu jest podobny do bazy danych SQL i umożliwia określenie zapytań na podstawie modelu koncepcyjnego i jednostkami, które są częścią modelu lub domeny. Aby uzyskać więcej informacji na temat jednostek języka SQL, zobacz [języka SQL jednostki](http://go.microsoft.com/fwlink/?LinkId=165646).  
+-   `EntitySQLQuery``EntitySQLQuery` Działanie umożliwia pobieranie obiektów z bazy danych na podstawie ciągu zapytania SQL jednostki. Jednostka SQL jest język niezależnie od magazynu, który jest podobny do bazy danych SQL i umożliwia określenie zapytania oparte na modelu koncepcyjnego i jednostek, które są częścią modelu lub domeny. Aby uzyskać więcej informacji na temat jednostki języka SQL, zobacz [jednostki języka SQL](https://go.microsoft.com/fwlink/?LinkId=165646).  
   
--   `EntityLinqQuery`: To działanie umożliwia pobieranie obiektów z bazy danych na podstawie zapytania LINQ lub predykatu.  
+-   `EntityLinqQuery`: To działanie umożliwia pobieranie obiektów z bazy danych na podstawie zapytania LINQ lub predykat.  
   
--   `EntityAdd`: `EntityAdd` Działania umożliwia dodanie jednostki lub kolekcji jednostek w bazie danych.  
+-   `EntityAdd``EntityAdd` Działań pozwala na dodawanie jednostki lub kolekcję jednostek w bazie danych.  
   
--   `EntityDelete`: `EntityDelete` Działania umożliwia usunięcie jednostki lub kolekcji jednostek z bazy danych.  
+-   `EntityDelete``EntityDelete` Działanie umożliwia usunięcie z bazy danych jednostki lub kolekcję jednostek.  
   
--   `ObjectContextScope`: Działania opisane powyżej można używać tylko w nadrzędnym `ObjectContextScope` wystąpienia działania. `ObjectContextScope` Działanie ustawia połączenie z bazą danych. Wymaga to ciąg połączenia (który jest przekazany lub pobrany przy użyciu ustawienia konfiguracji pliku). `ObjectContextScope` Działania można łatwo przeprowadzić grupy powiązanych operacji na jednostkach. Ponieważ ten zakres ma aktywne połączenie, jest zakres nie będą się powtarzać. Ponadto, kiedy `ObjectContextScope` wyjścia działania, wszystkie zmiany wprowadzone w obiektach pobrany przy użyciu jednostek działań w ramach tego zakresu automatycznie pobrać utrwalone w bazie danych, a żadne jawne lub kolejne działania są niezbędne do zapisywania obiektów z powrotem do Baza danych.  
+-   `ObjectContextScope`: Działania opisanych powyżej można używać tylko w nadrzędnym `ObjectContextScope` wystąpienie działania. `ObjectContextScope` Działanie ustawia połączenie z bazą danych. Wymaga parametrów połączenia (albo zostały przekazane lub pobrany przy użyciu ustawienia pliku konfiguracyjnego). `ObjectContextScope` Działania można łatwo wykonywać grupą powiązanych operacji na jednostkach. Ponieważ ten zakres przechowuje aktywnego połączenia, jest utrwalić bez zakresu. Ponadto, jeśli `ObjectContextScope` wyjścia działania, wszelkie zmiany wprowadzone do obiektów pobrany przy użyciu działań jednostek w tym zakresie automatycznie pobrać utrwalane w bazie danych, a nie jawne lub kolejnych czynności do zapisywania obiektów z powrotem do Baza danych.  
   
-## <a name="using-the-entity-activities"></a>Przy użyciu działań jednostki  
- Poniższe fragmenty kodu przedstawiają sposób działania jednostki przedstawionych w tym przykładzie.  
+## <a name="using-the-entity-activities"></a>Za pomocą działania jednostki  
+ Poniższe fragmenty kodu przedstawiają sposób działania jednostki znajdujące się w tym przykładzie są używane.  
   
 ### <a name="entitysql"></a>EntitySql  
- Poniższy fragment kodu przedstawia, jak wykonać zapytanie dotyczące wszystkich klientów w Londynie sortowane według nazwy i jak wykonać iterację na liście klientów.  
+ Poniższy fragment kodu przedstawia, jak wykonywać zapytania dla wszystkich klientów w Londynie sortowane według nazwy i jak do iteracji przez listę klientów.  
   
 ```  
 Variable<IEnumerable<Customer>> londonCustomers = new Variable<IEnumerable<Customer>>();  
@@ -80,7 +80,7 @@ return new ObjectContextScope
 ```  
   
 ### <a name="entitylinqquery"></a>EntityLinqQuery  
- Poniższy fragment kodu pokazano, jak wykonać zapytanie dotyczące wszystkich klientów w Londynie oraz jak wykonać iterację wynikowy listę klientów.  
+ Poniższy fragment kodu przedstawia, jak wykonywać zapytania dla wszystkich klientów w Londynie i iterowania przez uzyskaną listę klientów.  
   
 ```  
 Variable<IEnumerable<Customer>> londonCustomers = new Variable<IEnumerable<Customer>>() { Name = "LondonCustomers" };  
@@ -123,7 +123,7 @@ return new ObjectContextScope
 ```  
   
 ### <a name="entityadd"></a>EntityAdd  
- Poniższy fragment kodu przedstawia sposób dodawania rekordu OrderDetail do istniejącego zamówienia.  
+ Poniższy fragment kodu przedstawia sposób dodawania rekord OrderDetail do istniejącego zamówienia.  
   
 ```  
 Variable<IEnumerable<Order>> orders = new Variable<IEnumerable<Order>>();  
@@ -172,7 +172,7 @@ return new ObjectContextScope
 ```  
   
 ### <a name="entitydelete"></a>EntityDelete  
- Poniższy fragment kodu przedstawia sposób usuwanie istniejącego rekordu OrderDetail w kolejności (jeśli istnieje).  
+ Poniższy fragment kodu przedstawia sposób usuwania istniejącego rekordu OrderDetail w kolejności (jeśli istnieje).  
   
 ```  
 Variable<IEnumerable<OrderDetail>> orderDetails = new Variable<IEnumerable<OrderDetail>>();              
@@ -219,9 +219,9 @@ return new ObjectContextScope
 ```  
   
 ## <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
- Należy utworzyć `Northwind` bazy danych w sieci lokalnej wystąpienie serwera SQL Express przed uruchomieniem tego przykładu.  
+ Należy utworzyć `Northwind` bazy danych w lokalnym wystąpieniem serwera SQL Express przed uruchomieniem tego przykładu.  
   
-#### <a name="to-set-up-the-northwind-database"></a>Do konfigurowania bazy danych Northwind  
+#### <a name="to-set-up-the-northwind-database"></a>Aby skonfigurować bazę danych Northwind  
   
 1.  Otwórz wiersz polecenia.  
   
@@ -229,15 +229,15 @@ return new ObjectContextScope
   
 3.  Typ `setup.cmd` i naciśnij klawisz ENTER.  
   
-#### <a name="to-run-the-sample"></a>Aby uruchomić przykładowy  
+#### <a name="to-run-the-sample"></a>Aby uruchomić przykład  
   
-1.  Przy użyciu [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], otwórz plik rozwiązania EntityActivities.sln.  
+1.  Za pomocą [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], otwórz plik rozwiązania EntityActivities.sln.  
   
-2.  Aby tworzyć rozwiązania, naciśnij kombinację klawiszy CTRL + SHIFT + B.  
+2.  Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.  
   
-3.  Aby uruchomić rozwiązanie, naciśnij klawisze CTRL + F5.  
+3.  Aby uruchomić rozwiązanie, naciśnij kombinację klawiszy CTRL + F5.  
   
- Po uruchomieniu tego przykładu, można usunąć `Northwind` bazy danych.  
+ Po uruchomieniu tego przykładu, możesz usunąć `Northwind` bazy danych.  
   
 #### <a name="to-uninstall-the-northwind-database"></a>Aby odinstalować bazy danych Northwind  
   
@@ -248,10 +248,10 @@ return new ObjectContextScope
 3.  Typ `cleanup.cmd` i naciśnij klawisz ENTER.  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\EntityActivities`

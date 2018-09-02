@@ -2,33 +2,33 @@
 title: Tworzenie wystąpienia inicjowania
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-ms.openlocfilehash: ae01254760219f2b408ef9d9663c4158e2802be8
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 651029783f4632fc0b404bea8df8bd3790622bfd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807925"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388264"
 ---
 # <a name="instancing-initialization"></a>Tworzenie wystąpienia inicjowania
-W tym przykładzie rozszerza [buforowanie](../../../../docs/framework/wcf/samples/pooling.md) przykładowa przez definiowanie interfejsu `IObjectControl`, który dostosowuje inicjowania obiektu przez aktywowanie i dezaktywowanie go. Klient wywołuje metody, które zwracają obiekt do puli, a które nie zwracają obiekt do puli.  
+Rozszerza w tym przykładzie [Pooling](../../../../docs/framework/wcf/samples/pooling.md) próbki przez definiowanie interfejsu `IObjectControl`, który dostosowuje inicjalizację obiektu za aktywowanie i dezaktywowanie go. Klient wywołuje metody, które zwracają obiekt do puli, a które nie zwracają obiekt do puli.  
   
 > [!NOTE]
->  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
+>  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
   
 ## <a name="extensibility-points"></a>Punkty rozszerzeń  
- Pierwszym krokiem tworzenia rozszerzenia programu Windows Communication Foundation (WCF) jest podjęcie punkcie rozszerzenia do użycia. W programie WCF termin *EndpointDispatcher* odwołuje się do składnika środowiska wykonawczego odpowiedzialny za konwersji komunikatów przychodzących do wywołań metod w usłudze użytkownika i konwertowania wartości zwracanych z tej metody do wysyłanej wiadomości . Usługi WCF tworzy EndpointDispatcher dla każdego punktu końcowego.  
+ Pierwszym krokiem tworzenia rozszerzenia programu Windows Communication Foundation (WCF) jest podjęcie decyzji, punkt rozszerzeń do użycia. W programie WCF termin *EndpointDispatcher* odwołuje się do składnika środowiska wykonawczego odpowiedzialny za konwersji komunikatów przychodzących do wywołania metody usługi przez użytkownika i konwertowania wartości zwracane z tej metody do wysyłanej wiadomości . Usługa WCF tworzy EndpointDispatcher dla każdego punktu końcowego.  
   
- Oferuje EndpointDispatcher punktu końcowego zakresu (dla wszystkich wiadomości wysłanych i odebranych przez usługę) rozszerzalności za pomocą <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> klasy. Ta klasa umożliwia dostosowanie różne właściwości sterujące zachowaniem elementu EndpointDispatcher. W tym przykładzie koncentruje się na <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> właściwość, która wskazuje obiekt, który zapewnia wystąpienia klasy usługi.  
+ EndpointDispatcher oferuje punktu końcowego zakresu (dla wszystkich wiadomości wysłanych i odebranych przez usługę) extensibility za pomocą <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> klasy. Ta klasa umożliwia dostosowanie różne właściwości tej kontroli sposobu działania programu. Ten przykład koncentruje się na <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> właściwości, który wskazuje na obiekt, który udostępnia wystąpienia klasy usługi.  
   
 ## <a name="iinstanceprovider"></a>IInstanceProvider  
- W programie WCF, EndpointDispatcher tworzy wystąpienia klasy usługi przy użyciu dostawcy wystąpienia, który implementuje <xref:System.ServiceModel.Dispatcher.IInstanceProvider> interfejsu. Ten interfejs ma tylko dwie metody:  
+ W programie WCF, EndpointDispatcher tworzy wystąpienia klasy usługi przy użyciu dostawcy wystąpienia, która implementuje <xref:System.ServiceModel.Dispatcher.IInstanceProvider> interfejsu. Ten interfejs ma tylko dwie metody:  
   
--   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>: Gdy nadejścia wiadomości, wywołania dyspozytora <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> metodę w celu utworzenia wystąpienia klasy usługi, aby przetworzyć komunikatu. Częstotliwość połączeń do tej metody jest określany przez <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> właściwości. Na przykład jeśli <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> właściwość jest ustawiona na <xref:System.ServiceModel.InstanceContextMode.PerCall?displayProperty=nameWithType>, nowe wystąpienie klasy usługi służy do przetwarzania każdy komunikat przychodzący, dlatego <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> jest wywoływana w momencie nadejścia wiadomości.  
+-   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>: Po umieszczeniu komunikatu, wywołuje dyspozytora <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> metodę, aby utworzyć wystąpienie klasy usługi przetworzyć komunikatu. Częstotliwość połączeń do tej metody jest określana przez <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> właściwości. Na przykład jeśli <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> właściwość jest ustawiona na <xref:System.ServiceModel.InstanceContextMode.PerCall?displayProperty=nameWithType>, nowe wystąpienie klasy usługi zostanie utworzona przetworzenie każdego komunikatu przychodzący, więc <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> jest wywoływana w momencie nadejścia wiadomości.  
   
--   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>: Gdy wystąpienie usługi zakończy przetwarzanie komunikatu, wywołuje EndpointDispatcher <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A> metody. Podobnie jak w <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> metody, częstotliwość wywołania do tej metody jest określany przez <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> właściwości.  
+-   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>: Gdy wystąpienie usługi zakończy przetwarzanie komunikatu, wywołuje bibliotekę EndpointDispatcher <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A> metody. Podobnie jak w <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> metody częstotliwość połączeń do tej metody jest określana przez <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> właściwości.  
   
 ## <a name="the-object-pool"></a>Pula obiektów  
- `ObjectPoolInstanceProvider` Klasa zawiera implementację dla obiekt puli. Ta klasa implementuje <xref:System.ServiceModel.Dispatcher.IInstanceProvider> interfejsu do interakcji z warstwy modelu usług. Gdy wywołuje EndpointDispatcher <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> metody, zamiast tworzyć nowe wystąpienie implementacji niestandardowych szuka istniejący obiekt w puli w pamięci. Jeśli jest dostępny, jest zwracana. W przeciwnym razie `ObjectPoolInstanceProvider` sprawdza, czy `ActiveObjectsCount` właściwości (liczba obiektów zwrócona z puli) osiągnął maksymalny rozmiar puli. Jeśli nie, nowe wystąpienie jest tworzony i zwracany do obiektu wywołującego i `ActiveObjectsCount` jest zwiększany później. W przeciwnym razie żądanie utworzenia obiektu jest w kolejce w skonfigurowanym okresie czasu. Implementację `GetObjectFromThePool` jest wyświetlany w następujący przykładowy kod.  
+ `ObjectPoolInstanceProvider` Klasa zawiera implementację dla puli obiektów. Ta klasa implementuje <xref:System.ServiceModel.Dispatcher.IInstanceProvider> interfejs do interakcji z warstwy modelu usług. Kiedy wywołuje EndpointDispatcher <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> metody, zamiast tworzenia nowego wystąpienia, implementacja niestandardowa szuka istniejący obiekt w puli w pamięci. Jeśli jest dostępny, jest zwracany. W przeciwnym razie `ObjectPoolInstanceProvider` sprawdza, czy `ActiveObjectsCount` właściwości (liczba obiektów zwróconych z puli), osiągnęła maksymalny rozmiar puli. Jeśli nie, nowe wystąpienie jest tworzony i zwracany do wywołującego i `ActiveObjectsCount` następnie rośnie. W przeciwnym razie żądanie utworzenia obiektu jest kolejkowana w skonfigurowanym okresie czasu. Wykonania na `GetObjectFromThePool` przedstawiono w poniższym przykładowym kodzie.  
   
 ```  
 private object GetObjectFromThePool()  
@@ -72,7 +72,7 @@ ResourceHelper.GetString("ExObjectCreationTimeout"));
 }  
 ```  
   
- Niestandardowa `ReleaseInstance` implementacji dodaje Zwolniono wystąpienie puli i zmniejsza `ActiveObjectsCount` wartość. EndpointDispatcher można wywołać metody te z różnych wątkach i w związku z tym zsynchronizowany dostęp do poziomu elementów członkowskich klasy w `ObjectPoolInstanceProvider` klasa jest wymagana.  
+ Niestandardowy `ReleaseInstance` implementacji dodaje wydana wystąpienie do puli i zmniejsza `ActiveObjectsCount` wartość. EndpointDispatcher może wywoływać te metody z różnych wątków i w związku z tym zsynchronizowany dostęp do poziomu elementów członkowskich klasy w `ObjectPoolInstanceProvider` klasy jest wymagana.  
   
 ```  
 public void ReleaseInstance(InstanceContext instanceContext, object instance)  
@@ -125,7 +125,7 @@ public void ReleaseInstance(InstanceContext instanceContext, object instance)
 }  
 ```  
   
- `ReleaseInstance` Metoda zapewnia *oczyszczania inicjowania* funkcji. Zwykle puli obsługuje minimalną liczbę obiektów, dla okresu istnienia puli. Jednak może być okresów nadmiernego użycia, które wymaga tworzenia dodatkowe obiekty w puli do osiągnięcia maksymalnego limitu określonego w konfiguracji. Gdy puli staje się mniej aktywne tych pozostałe obiekty mogą przestać dodatkowego obciążenia. W związku z tym podczas `activeObjectsCount` osiągnie zero czasomierza bezczynności została uruchomiona, który wyzwala i wykonuje cyklu czyszczenia.  
+ `ReleaseInstance` Metoda zapewnia *oczyszczania inicjowania* funkcji. Zwykle puli obsługuje minimalnej liczby obiektów, dla okresu istnienia puli. Jednak może być okresy nadmiernego użycia, które wymagają, tworząc dodatkowe obiekty w puli w celu osiągnięcia maksymalnego limitu określonego w konfiguracji. Po pewnym czasie po puli staje się mniej aktywne tych pozostałe obiekty mogą stać się dodatkowe obciążenie. W związku z tym gdy `activeObjectsCount` osiągnie zero uruchomieniu czasomierza bezczynności, który wyzwala i wykonuje cyklu czyszczenia.  
   
 ```  
 if (activeObjectsCount == 0)  
@@ -134,33 +134,33 @@ if (activeObjectsCount == 0)
 }  
 ```  
   
- Rozszerzenia warstwy modelu ServiceModel są podłączonymi przy użyciu następujących problemów:  
+ Rozszerzenia warstwy modelu ServiceModel są podłączone, wykonując następujące zachowania:  
   
--   Zachowania usług: Umożliwiają one dostosowywania środowiska uruchomieniowego całej usługi.  
+-   Zachowania usług: Te umożliwiają dostosowanie środowiska uruchomieniowego całą usługę.  
   
--   Zachowania punktu końcowego: Umożliwiają one do dostosowania określonej usługi punktu końcowego, w tym EndpointDispatcher.  
+-   Zachowań punktu końcowego: Te umożliwiają dostosowanie punktu końcowego określonej usługi, w tym elemencie EndpointDispatcher.  
   
--   Zachowania kontraktu: Umożliwiają one dostosowywania albo <xref:System.ServiceModel.Dispatcher.ClientRuntime> lub <xref:System.ServiceModel.Dispatcher.DispatchRuntime> odpowiednio klasy po stronie klienta lub usługi.  
+-   Zachowania kontraktu: Te umożliwiają dostosowanie albo <xref:System.ServiceModel.Dispatcher.ClientRuntime> lub <xref:System.ServiceModel.Dispatcher.DispatchRuntime> klasy po stronie klienta lub usługę, odpowiednio.  
   
--   Operacja zachowania: Umożliwiają one dostosowywania jednej <xref:System.ServiceModel.Dispatcher.ClientOperation> lub <xref:System.ServiceModel.Dispatcher.DispatchOperation> odpowiednio klasy po stronie klienta lub usługi.  
+-   Zachowania operacji: Te umożliwiają dostosowanie albo <xref:System.ServiceModel.Dispatcher.ClientOperation> lub <xref:System.ServiceModel.Dispatcher.DispatchOperation> klasy po stronie klienta lub usługę, odpowiednio.  
   
- Na potrzeby obiektu rozszerzenia puli można utworzyć zachowania punktu końcowego lub zachowania usługi. W tym przykładzie używamy zachowanie usługi stosuje obiektu buforowanie zdolność do każdego punktu końcowego usługi. Zachowania usług są tworzone z zastosowaniem <xref:System.ServiceModel.Description.IServiceBehavior> interfejsu. Istnieje kilka sposobów uświadomić ServiceModel niestandardowe zachowania:  
+ Na potrzeby buforowania rozszerzenie obiektu zachowanie punktu końcowego lub zachowanie usługi mogą być tworzone. W tym przykładzie używamy zachowanie usługi, które stosuje obiekt buforowanie zdolność do każdego punktu końcowego usługi. Zachowania usług są tworzone przez zaimplementowanie <xref:System.ServiceModel.Description.IServiceBehavior> interfejsu. Istnieje kilka sposobów, aby uświadomić ServiceModel niestandardowe zachowania:  
   
--   Przy użyciu atrybutu niestandardowego.  
+-   Za pomocą atrybutu niestandardowego.  
   
--   Imperatively dodanie go do kolekcji zachowań opisu usługi.  
+-   Obowiązkowo dodanie go do kolekcji zachowań opisu usługi.  
   
 -   Rozszerzenie pliku konfiguracji.  
   
- W przykładzie użyto atrybutu niestandardowego. Gdy <xref:System.ServiceModel.ServiceHost> jest utworzone, jego sprawdza atrybuty używane w definicji typu usługi, jak i dodaje zachowania dostępne do kolekcji zachowań opisu usługi.  
+ Ta próbka używa atrybutu niestandardowego. Gdy <xref:System.ServiceModel.ServiceHost> jest skonstruowany, jej poszczególne atrybuty, są używane w definicji typu usługi, jak i zachowania dostępne są dodawane do kolekcji zachowań opisu usługi.  
   
- <xref:System.ServiceModel.Description.IServiceBehavior> Interfejs ma trzy metody: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,` i <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Te metody są wywoływane przez WCF podczas <xref:System.ServiceModel.ServiceHost> jest inicjowany. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> jest nazywana najpierw; Umożliwia usługi poddanych niespójności. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> jest nazywana obok; Ta metoda jest wymagana tylko w scenariuszach bardzo zaawansowane. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> jest nazywana ostatnio i jest odpowiedzialny za konfigurację środowiska uruchomieniowego. Następujące parametry są przekazywane do <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>:  
+ <xref:System.ServiceModel.Description.IServiceBehavior> Interfejs ma trzy metody: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,` i <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Te metody są wywoływane przez architekturę WCF podczas <xref:System.ServiceModel.ServiceHost> jest inicjowany. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> nazywa się najpierw; Umożliwia usłudze poddanych niespójności. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> nazywa się obok; Ta metoda jest wymagana tylko w bardzo zaawansowanych scenariuszach. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> nazywa się ostatnio i jest odpowiedzialny za konfigurowanie środowiska uruchomieniowego. Następujące parametry są przekazywane do <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>:  
   
--   `Description`: Ten parametr zawiera opis usługi dla całej usługi. Może być używany do zbadania opis danych dotyczących punktów końcowych usługi, kontrakty, powiązania i innych danych związanych z usługą.  
+-   `Description`: Ten parametr zawiera opis usługi dla całej usługi. To może służyć do wglądu opis danych dotyczących punktów końcowych usługi, kontrakty, powiązania i inne dane związane z usługą.  
   
--   `ServiceHostBase`: Ten parametr zawiera <xref:System.ServiceModel.ServiceHostBase> który jest obecnie inicjowany.  
+-   `ServiceHostBase`: Ten parametr zawiera <xref:System.ServiceModel.ServiceHostBase> , jest obecnie inicjowany.  
   
- W niestandardowej <xref:System.ServiceModel.Description.IServiceBehavior> implementacji, nowe wystąpienie klasy `ObjectPoolInstanceProvider` wystąpienia i ma przypisaną do <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> właściwości w każdym <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> dołączona do <xref:System.ServiceModel.ServiceHostBase>.  
+ W niestandardowej <xref:System.ServiceModel.Description.IServiceBehavior> implementacji, nowe wystąpienie klasy `ObjectPoolInstanceProvider` jest tworzone i przypisane do <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> właściwość w każdym <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> dołączona do <xref:System.ServiceModel.ServiceHostBase>.  
   
 ```  
 public void ApplyDispatchBehavior(ServiceDescription description, ServiceHostBase serviceHostBase)  
@@ -188,9 +188,9 @@ public void ApplyDispatchBehavior(ServiceDescription description, ServiceHostBas
 }   
 ```  
   
- Oprócz <xref:System.ServiceModel.Description.IServiceBehavior> implementacji `ObjectPoolingAttribute` klasa ma kilka elementów członkowskich, aby dostosować puli obiektów przy użyciu argumentów atrybutu. Elementy te obejmują `MaxSize`, `MinSize`, `Enabled` i `CreationTimeout`, aby odpowiadać obiektowi buforowanie zestaw funkcji udostępniane przez usługi .NET Enterprise.  
+ Oprócz <xref:System.ServiceModel.Description.IServiceBehavior> implementacji `ObjectPoolingAttribute` klasa ma kilka składowych, aby dostosować puli obiektów przy użyciu argumentów atrybutu. Te elementy Członkowskie zawierają `MaxSize`, `MinSize`, `Enabled` i `CreationTimeout`, aby odpowiadać obiektowi buforowania zestawu funkcji udostępnianego przez usługi Enterprise .NET.  
   
- Obiekt buforowanie zachowanie można teraz dodać do usługi WCF przez dodawanie adnotacji do implementacji usługi z nowo utworzonych niestandardowych `ObjectPooling` atrybutu.  
+ Zachowanie buforowania można teraz można dodać obiektu do usługi WCF przez dodawanie adnotacji do implementacji usługi przy użyciu nowo utworzony niestandardowy `ObjectPooling` atrybutu.  
   
 ```  
 [ObjectPooling(MaxSize=1024, MinSize=10, CreationTimeout=30000]      
@@ -200,12 +200,12 @@ public class PoolService : IPoolService
 }  
 ```  
   
-## <a name="hooking-activation-and-deactivation"></a>Aktywacja i dezaktywacja Przechwytywanie  
- Głównym celem buforowanie obiektów jest w celu zoptymalizowania krótkim okresie obiektów o stosunkowo drogie tworzenia i inicjowania. W związku z tym wzrost wydajności znacznej go można udostępnić aplikacji, jeśli używana poprawnie. Ponieważ obiekt jest zwracany z puli, konstruktora zostanie wywołana tylko raz. Jednak niektóre aplikacje wymagają pewnego poziomu kontroli, tak aby mogli inicjowanie i oczyszczanie zasobów używanych w pojedynczym kontekście. Na przykład obiekt używany dla zestawu obliczeń zresetować swoich pól prywatnych przed przetworzeniem dalej obliczeń. Usługi Enterprise włączone tego rodzaju inicjowanie zależne od kontekstu, umożliwiając developer obiektu zastąpienie `Activate` i `Deactivate` metody <xref:System.EnterpriseServices.ServicedComponent> klasy podstawowej.  
+## <a name="hooking-activation-and-deactivation"></a>Przechwytywanie, aktywacja i dezaktywacja  
+ Podstawowym celem buforowanie obiektu jest zoptymalizować obiekty krótkotrwałe relatywnie kosztowne tworzenia i inicjowania. W związku z tym zwiększeniu wydajności znaczne go można udostępnić aplikację, czy poprawnie zastosowane. Ponieważ obiekt jest zwracany z puli, Konstruktor jest wywoływany tylko raz. Jednak niektóre aplikacje wymagają pewien stopień kontroli, tak aby mogli inicjowanie i oczyszczanie zasoby używane podczas pojedynczego kontekstu. Na przykład obiekt używany zbiór obliczenia można zresetować jego pola prywatne przed przetworzeniem dalej obliczeń. Usługi Enterprise włączone tento typ inicializace zależne od kontekstu, umożliwiając developer obiektu zastępują `Activate` i `Deactivate` metody z <xref:System.EnterpriseServices.ServicedComponent> klasy bazowej.  
   
- Wywołań puli obiektów `Activate` metody bezpośrednio przed powrotem obiektu z puli. `Deactivate` jest wywoływana po powrocie obiekt z powrotem do puli. <xref:System.EnterpriseServices.ServicedComponent> Klasy podstawowej ma również `boolean` właściwość o nazwie `CanBePooled`, które mogą służyć do powiadamiania puli, czy obiekt może dodatkowo puli.  
+ Wywołań puli obiektów `Activate` metoda tuż przed zwróceniem obiektu z puli. `Deactivate` jest wywoływana, gdy obiekt zwraca z powrotem do puli. <xref:System.EnterpriseServices.ServicedComponent> Ma również klasę bazową `boolean` właściwość o nazwie `CanBePooled`, który może służyć do powiadamiania w puli, czy obiekt może dodatkowo puli.  
   
- Aby naśladował tę funkcję, próbki deklaruje interfejs publiczny (`IObjectControl`) mający wyżej wymienione elementy członkowskie. Ten interfejs jest następnie wdrażany przez usługę klasy mają na celu dostarczenie inicjowania określonego kontekstu. <xref:System.ServiceModel.Dispatcher.IInstanceProvider> Wdrożenia muszą zostać zmodyfikowane w celu spełnienia tych wymagań. Teraz, zawsze można uzyskać obiektu przez wywołanie metody `GetInstance` metody, musisz sprawdzić, czy obiekt implementuje `IObjectControl.` Jeśli tak, należy wywołać `Activate` metody odpowiednio.  
+ Aby naśladował tę funkcję, przykład deklaruje interfejsu publicznego (`IObjectControl`) zawierający wyżej wymienionych elementów członkowskich. Ten interfejs, następnie jest implementowany przez usługę klasy mają na celu dostarczenie Inicjalizacja określonego kontekstu. <xref:System.ServiceModel.Dispatcher.IInstanceProvider> Implementacji muszą zostać zmodyfikowane w celu spełnienia tych wymagań. Teraz zawsze możesz uzyskać obiektu przez wywołanie metody `GetInstance` metody, musisz sprawdzić, czy obiekt implementuje `IObjectControl.` Jeśli tak jest, należy wywołać `Activate` metoda odpowiednio.  
   
 ```  
 if (obj is IObjectControl)  
@@ -214,7 +214,7 @@ if (obj is IObjectControl)
 }  
 ```  
   
- Gdy do puli, zwracając obiekt, sprawdzenie jest wymagany dla `CanBePooled` właściwość przed dodaniem obiekt z powrotem do puli.  
+ Gdy zwracany obiekt do puli, kontrola jest wymagany dla `CanBePooled` właściwości przed dodaniem obiektu z powrotem do puli.  
   
 ```  
 if (instance is IObjectControl)  
@@ -228,7 +228,7 @@ if (instance is IObjectControl)
 }  
 ```  
   
- Ponieważ dewelopera usługi można zdecydować, czy puli obiektu liczba obiektów w puli w danym momencie może zejść poniżej minimalnego rozmiaru. W związku z tym należy sprawdzić, czy liczba obiektów stała się poniżej minimalnego poziomu, a następnie wykonaj konieczne zainicjowanie procedury czyszczenia.  
+ Ponieważ Deweloper usługi może zdecydować, czy obiekt może być gromadzone, liczba obiektów w puli w danym momencie może zejść poniżej minimalnego rozmiaru. W związku z tym musisz sprawdzić, czy liczba obiektów poniżej minimalnego poziomu i wykonywać niezbędne inicjowania procedury oczyszczania.  
   
 ```  
 // Remove the surplus objects.  
@@ -246,22 +246,22 @@ else if (pool.Count < minPoolSize)
 }  
 ```  
   
- Po uruchomieniu próbki operację żądania i odpowiedzi są wyświetlane w oknach konsoli usługi i klienta. Naciśnij klawisz Enter w każdym okna konsoli można zamknąć usługę i klienta.  
+ Po uruchomieniu przykładu, operację żądania i odpowiedzi są wyświetlane w oknach konsoli usługi i klienta. Naciśnij klawisz Enter każdego okna konsoli, aby zamknąć usługę i klienta.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Upewnij się, że wykonano procedurę [jednorazowego procedurę instalacji dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Postępuj zgodnie z instrukcjami w celu skompilowania rozwiązania, [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Aby uruchomić przykładowy w konfiguracji pojedynczej lub między komputerami, postępuj zgodnie z instrukcjami w [uruchamiania przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Initialization`  
   

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: 180c038987e7de6b39a8eae0e86871eea41a40bb
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 1ed7ac49cde6792cddff898e8b9930a83598e02c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960043"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388146"
 ---
 # <a name="using-directive-c-reference"></a>using — Dyrektywa (odwołanie w C#)
 `using` Dyrektywy ma trzy zastosowań:  
@@ -20,7 +20,7 @@ ms.locfileid: "37960043"
     using System.Text;  
     ```  
   
--   Aby zezwolić na dostęp do statycznych elementów członkowskich typu bez konieczności kwalifikuj dostęp do nazwą typu. 
+-   Aby umożliwić dostęp do statycznych elementów członkowskich i typy zagnieżdżone typu bez konieczności kwalifikuj dostęp do nazwą typu. 
   
     ```csharp  
     using static System.Math;  
@@ -52,13 +52,23 @@ class Program
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Zakres `using` dyrektywa jest ograniczona do pliku, w której występuje.  
+ Zakres `using` dyrektywa jest ograniczona do pliku, w której występuje.
+ 
+ `using` Dyrektywy może się pojawić:
+- Na początku pliku kodu źródłowego, przed żadnych definicji przestrzeni nazw lub typu.
+- W dowolnym obszarze nazw, ale przed każdą przestrzeń nazw lub typów zadeklarowane w tej przestrzeni nazw.
+
+W przeciwnym razie, błąd kompilatora [CS1529](../../misc/cs1529.md) jest generowany.
   
- Utwórz `using` aliasu, aby ułatwić kwalifikują się do przestrzeni nazw lub typ identyfikatora. Prawego boku za pomocą aliasu dyrektywy zawsze musi być w pełni kwalifikowanego typu niezależnie od tego używając dyrektyw, które pochodzą przed nią.  
+ Utwórz `using` alias — dyrektywa, aby ułatwić kwalifikują się do przestrzeni nazw lub typ identyfikatora. W dowolnym `using` dyrektywy, w pełni kwalifikowaną przestrzeń nazw lub typ należy użyć niezależnie od wartości `using` dyrektyw, które pochodzą przed nią. Nie `using` alias mogą być używane w deklaracji `using` dyrektywy. Na przykład poniższa generuje błąd kompilatora:
+ ```csharp
+ using s = System.Text;
+ using s.RegularExpressions; 
+ ```
   
  Utwórz `using` dyrektywy na używanie typów w przestrzeni nazw bez konieczności określania przestrzeni nazw. A `using` dyrektywy nie umożliwiają dostęp do wszelkich przestrzenie nazw, które są zagnieżdżone w przestrzeni nazw, należy określić.  
   
- Przestrzenie nazw są dostępne w dwóch kategorii: zdefiniowane przez użytkownika i zdefiniowane przez system. Zdefiniowane przez użytkownika przestrzenie nazw są przestrzenie nazw zdefiniowane w kodzie. Aby uzyskać listę nazw zdefiniowaną przez system, zobacz [Przegląd biblioteki klas programu .NET Framework](../../../standard/class-library-overview.md).  
+ Przestrzenie nazw są dostępne w dwóch kategorii: zdefiniowane przez użytkownika i zdefiniowane przez system. Zdefiniowane przez użytkownika przestrzenie nazw są przestrzenie nazw zdefiniowane w kodzie. Aby uzyskać listę nazw zdefiniowaną przez system, zobacz [przeglądarka interfejsu API .NET](https://docs.microsoft.com/en-us/dotnet/api/).  
   
  Przykłady dotyczące odwoływania się do metody w innych zestawach, zobacz [tworzenie i użyj zestawów przy użyciu wiersza polecenia](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
   
@@ -79,11 +89,12 @@ class Program
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Używanie przestrzeni nazw](../../../csharp/programming-guide/namespaces/using-namespaces.md)  
- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
- [Słowa kluczowe przestrzeni nazw](../../../csharp/language-reference/keywords/namespace-keywords.md)  
- [Przestrzenie nazw](../../../csharp/programming-guide/namespaces/index.md)  
- [using, instrukcja](../../../csharp/language-reference/keywords/using-statement.md)
+## <a name="see-also"></a>Zobacz też
+
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Używanie przestrzeni nazw](../../../csharp/programming-guide/namespaces/using-namespaces.md)  
+- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
+- [Słowa kluczowe przestrzeni nazw](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+- [Przestrzenie nazw](../../../csharp/programming-guide/namespaces/index.md)  
+- [using, instrukcja](../../../csharp/language-reference/keywords/using-statement.md)

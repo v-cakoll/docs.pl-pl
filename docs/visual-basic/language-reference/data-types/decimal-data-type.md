@@ -20,30 +20,30 @@ helpviewer_keywords:
 - '@ identifier type character'
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
-ms.openlocfilehash: 9e256e93d7857c8674a1d711fa9cafd3ed9a29f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ffc1cd141ba624d2ce26e4b1c070431ff0ddd6fe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591632"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390902"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Decimal — Typ danych (Visual Basic)
-Blokad podpisany 128-bitowego (16-bajtową) wartości reprezentujących skalowania zmiennej siły 10 numerów 96-bitową liczbę całkowitą (12-bajtowych). Czynnik skalowania określa liczbę cyfr z prawej strony punktu dziesiętnego; zakresy go z zakresu od 0 do 28. O skali 0 (bez miejsc dziesiętnych), największa możliwa wartość to +/-79,228,162,514,264,337,593,543,950,335 (+/-7 .9228162514264337593543950335E + 28). 28 miejsc dziesiętnych największą wartość jest +/-7.9228162514264337593543950335 i najmniejszą wartość niezerową jest +/-0,0000000000000000000000000001 (+/-1E-28).  
+Przechowuje podpisany 128-bitowego (16-bajtową) wartości reprezentujących numery 96-bitową liczbę całkowitą z (12-bajtową) skalowania przez zmienną potęgą liczby 10. Czynnik skalowania określa liczbę cyfr z prawej strony punktu dziesiętnego; waha się od 0 do 28. O skali 0 (bez miejsc dziesiętnych) największa możliwa wartość to +/-79,228,162,514,264,337,593,543,950,335 (+/-7 .9228162514264337593543950335E + 28). 28 miejsc dziesiętnych największa wartość jest +/-7.9228162514264337593543950335 i najmniejszą wartość różną od zera jest +/-0,0000000000000000000000000001 (+/-1E-28).  
   
 ## <a name="remarks"></a>Uwagi  
- `Decimal` — Typ danych zapewnia największą liczbę cyfr znaczących liczbą. Obsługuje maksymalnie 29 cyfr znaczących i może reprezentować wartości ponad 7.9228 x 10 ^ 28. Jest szczególnie przydatny w obliczeniach, takich jak finansowych, które wymagają dużą liczbę cyfr, ale nie może tolerować błędy zaokrąglania.  
+ `Decimal` — Typ danych zapewnia największą liczbę cyfr znaczących liczbą. Obsługuje więcej niż 29 cyfr znaczących i może reprezentować wartości przekraczające 7.9228 x 10 ^ 28. Jest szczególnie przydatny w obliczeniach, takich jak finansowych, które wymagają dużej liczby cyfr, ale nie tolerują błędy zaokrągleń.  
   
- Wartość domyślna `Decimal` ma wartość 0.  
+ Wartość domyślna `Decimal` wynosi 0.  
   
 ## <a name="programming-tips"></a>Porady dla programistów  
   
--   **Precyzja.** `Decimal` nie jest typem danych zmiennoprzecinkowych. `Decimal` Struktura zawiera wartość całkowitą binarnego, wraz z bitowego logowania i całkowitą skalowanie czynnik, który określa, jaka część wartość ułamek dziesiętny. W związku z tym `Decimal` liczby mają dokładniejsze reprezentacji w pamięci, niż typów zmiennoprzecinkowych (`Single` i `Double`).  
+-   **Dokładność.** `Decimal` nie jest typem danych zmiennopozycyjnych. `Decimal` Struktury przechowuje wartość całkowitą binarne, wraz z bitem znaku i współczynnik, która określa, jaka część wartości jest ułamek dziesiętny skalowania liczby całkowitej. W związku z tym `Decimal` liczby mają bardziej precyzyjne reprezentacji w pamięci, niż typów zmiennoprzecinkowych (`Single` i `Double`).  
   
--   **Wydajność.** `Decimal` — Typ danych jest ładowane najwolniej wszystkie typy liczbowe. Należy porównać znaczenie dokładności względem wydajności przed wybraniem typu danych.  
+-   **Wydajność.** `Decimal` Typ danych jest najwolniejsze wszystkich typów liczbowych. Należy porównać znaczenie dokładności względem wydajności przed wybraniem typu danych.  
   
--   **Rozszerzanie.** `Decimal` Rozszerzenie typu danych do `Single` lub `Double`. Oznacza to, że można przekonwertować `Decimal` jednej z tych typów bez napotkania <xref:System.OverflowException?displayProperty=nameWithType> błędu.  
+-   **Rozszerzanie.** `Decimal` — Typ danych rozszerza się na `Single` lub `Double`. Oznacza to, że możesz przekonwertować `Decimal` do jednej z tych typów, nie powodując <xref:System.OverflowException?displayProperty=nameWithType> błędu.  
   
--   **Końcowe zero.** Visual Basic nie przechowuje końcowe zero w `Decimal` literału. Jednak `Decimal` zmiennej zachowuje końcowe zera nabyte w praktyce. Ilustruje to poniższy przykład.  
+-   **Końcowe zera.** Visual Basic nie przechowuje zera końcowe w `Decimal` literału. Jednak `Decimal` zmienna zachowuje dowolne zera końcowe, które zostały nabyte w praktyce. Ilustruje to poniższy przykład.  
   
     ```  
     Dim d1, d2, d3, d4 As Decimal  
@@ -55,16 +55,16 @@ Blokad podpisany 128-bitowego (16-bajtową) wartości reprezentujących skalowan
           ", d3 = " & CStr(d3) & ", d4 = " & CStr(d4))  
     ```  
   
-     Dane wyjściowe `MsgBox` w poprzednim przykładzie ma następującą składnię:  
+     Dane wyjściowe `MsgBox` w powyższym przykładzie jest następująca:  
   
      D1 = 2.375, d2 = 1.625, d3 = 4.000, d4 = 4  
   
--   **Znaki typu.** Znak literalny typu dołączanie `D` do literału wymusza `Decimal` — typ danych. Dołączanie znak typu identyfikator `@` dla wszystkich identyfikatorów wymusza `Decimal`.  
+-   **Znaki typu.** Dołączanie znaku typu literał `D` do literału wymusza `Decimal` typu danych. Dołączanie znaku typu identyfikator `@` do jakiegokolwiek identyfikatora wymusza `Decimal`.  
   
--   **Typ struktury.** Danego typu w programie .NET Framework jest <xref:System.Decimal?displayProperty=nameWithType> struktury.  
+-   **Typ Framework.** Odpowiedni typ w .NET Framework jest <xref:System.Decimal?displayProperty=nameWithType> struktury.  
   
 ## <a name="range"></a>Zakres  
- Konieczne może być `D` znak można przypisać duża wartość do typu `Decimal` zmiennej lub stałą. To wymaganie dotyczy, ponieważ kompilator interpretowana jako literału `Long` , chyba że znak literalny typu następuje literału, jak przedstawiono na poniższym przykładzie.  
+ Może być konieczne użycie `D` wpisz znak duża wartość, aby przypisać `Decimal` zmienną lub stałą. Jest to wymaganie, ponieważ kompilator interpretuje słowa kluczowe literału jako `Long` chyba, że znak literalny typu następuje literału, co ilustruje poniższy przykład.  
   
 ```  
 Dim bigDec1 As Decimal = 9223372036854775807   ' No overflow.  
@@ -72,17 +72,17 @@ Dim bigDec2 As Decimal = 9223372036854775808   ' Overflow.
 Dim bigDec3 As Decimal = 9223372036854775808D  ' No overflow.  
 ```  
   
- Deklaracja `bigDec1` nie tworzy przepełnienie, ponieważ wartość przypisana do niego znajduje się w zakresie `Long`. `Long` Można przypisać wartości do `Decimal` zmiennej.  
+ Deklaracja `bigDec1` nie generuje przepełnienie, ponieważ wartość, która jest przypisana do niego znajduje się w zakresie dla `Long`. `Long` Można przypisać wartości do `Decimal` zmiennej.  
   
- Deklaracja `bigDec2` generuje błąd przepełnienia, ponieważ wartość, która jest do niego przypisany jest za duża dla `Long`. Ponieważ literał liczbowy najpierw nie może być interpretowane jako `Long`, nie można przypisać do `Decimal` zmiennej.  
+ Deklaracja `bigDec2` generuje błąd przepełnienia, ponieważ wartość, która jest przypisana do niego jest za duży dla `Long`. Ponieważ literału liczbowego najpierw nie mogą być interpretowane jako `Long`, nie można przypisać do `Decimal` zmiennej.  
   
- Aby uzyskać `bigDec3`, znak literalny typu `D` rozwiązuje problem, powodując, że kompilator, aby zinterpretować jako literał `Decimal` zamiast jako `Long`.  
+ Aby uzyskać `bigDec3`, znak literalny typu `D` rozwiązuje problem, wymuszając na kompilatorze interpretowanie literału jako `Decimal` zamiast jako `Long`.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Decimal?displayProperty=nameWithType>  
  <xref:System.Decimal.%23ctor%2A?displayProperty=nameWithType>  
  <xref:System.Math.Round%2A?displayProperty=nameWithType>  
- [Typy danych](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Typy danych](../../../visual-basic/language-reference/data-types/index.md)  
  [Single, typ danych](../../../visual-basic/language-reference/data-types/single-data-type.md)  
  [Double, typ danych](../../../visual-basic/language-reference/data-types/double-data-type.md)  
  [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  

@@ -4,12 +4,12 @@ description: W tym samouczku wyjaśniono, jak organizowanie i testowanie projekt
 author: cartermp
 ms.author: mairaw
 ms.date: 05/16/2017
-ms.openlocfilehash: a49eb1d398ab80a4ece703b7889083ea967df862
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 5fdbdc115ea5cd6da54f7c43bec2aa6f82e71310
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960986"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400286"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organizowanie i testowanie projektów przy użyciu wiersza polecenia platformy .NET Core
 
@@ -162,7 +162,7 @@ public class PetTests
 Opcjonalne Ćwiczenia: Jeśli dodano `Bird` wcześniej typ, który daje `Tweet!` do właściciela, należy dodać metody testowej, aby *PetTests.cs* pliku `BirdTalkToOwnerReturnsTweet`, aby sprawdzić, czy `TalkToOwner` metoda działa prawidłowo dla `Bird` typu.
 
 > [!NOTE]
-> Mimo że można oczekiwać, że `expected` i `actual` wartości są równe, początkowej potwierdzenia z `Assert.NotEqual` kontroli określić, że są one *równa*. Zawsze utworzyć testy niepowodzenie raz, aby Sprawdź logikę testy. Jest to ważny krok w metodologię projektowania opartego na testach (TDD). Po upewnieniu się, że testy zostaną zakończone niepowodzeniem, możesz dopasować potwierdzenia, aby umożliwić im przekazać.
+> Mimo że można oczekiwać, że `expected` i `actual` wartości są równe, początkowe potwierdzenie z `Assert.NotEqual` wyboru określa, czy te wartości są *równa*. Zawsze utworzyć test, aby zakończyć się niepowodzeniem, aby sprawdzić logikę testu. Po upewnieniu się, że test zakończy się niepowodzeniem, należy dostosować potwierdzenie, aby zezwolić na test kończył się pomyślnie.
 
 Poniżej przedstawiono strukturę kompletnego projektu:
 

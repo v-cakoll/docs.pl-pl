@@ -6,22 +6,22 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
-ms.openlocfilehash: f79991ef7f5d88cf87d1635e8c415ffd2c8b69cd
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 7c9b713571cea3d2c8c5f6511f2cfab7e87b80ee
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253368"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387446"
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>Narzędzie klienta usługi danych WCF (DataSvcUtil.exe)
 
 DataSvcUtil.exe jest narzędziem wiersza polecenia, udostępniane przez usługi danych WCF, który wykorzystuje [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych i generowanie klas usługi danych klienta, które są wymagane do uzyskania dostępu do usługi danych z aplikacji klienckiej .NET Framework. To narzędzie można wygenerować klas danych, korzystając z następujących źródeł metadanych:
 
--   Głównym identyfikatorem URI usługi danych. Narzędzie żądań dokumentu metadanych usługi, dla którego w tym artykule opisano model danych udostępnianych przez usługę danych. Aby uzyskać więcej informacji, zobacz [OData: Dokument metadanych usługi](http://go.microsoft.com/fwlink/?LinkId=186070).
+-   Głównym identyfikatorem URI usługi danych. Narzędzie żądań dokumentu metadanych usługi, dla którego w tym artykule opisano model danych udostępnianych przez usługę danych. Aby uzyskać więcej informacji, zobacz [OData: Dokument metadanych usługi](https://go.microsoft.com/fwlink/?LinkId=186070).
 
--   Plik modelu danych (.csdl) zdefiniowane z użyciem języka definicji schematu koncepcyjnego (CSDL), zgodnie z definicją w [ \[MC CSDL\]: koncepcyjny formatu pliku definicji schematu](http://go.microsoft.com/fwlink/?LinkID=159072) specyfikacji.
+-   Plik modelu danych (.csdl) zdefiniowane z użyciem języka definicji schematu koncepcyjnego (CSDL), zgodnie z definicją w [ \[MC CSDL\]: koncepcyjny formatu pliku definicji schematu](https://go.microsoft.com/fwlink/?LinkID=159072) specyfikacji.
 
--   Plik edmx utworzone za pomocą narzędzia modelu Entity Data Model, które są dostarczane z programem Entity Framework. Aby uzyskać więcej informacji, zobacz [ \[MC EDMX\]: model Entity Data Model do formatu pakietu usług danych](http://go.microsoft.com/fwlink/?LinkID=178833) specyfikacji.
+-   Plik edmx utworzone za pomocą narzędzia modelu Entity Data Model, które są dostarczane z programem Entity Framework. Aby uzyskać więcej informacji, zobacz [ \[MC EDMX\]: model Entity Data Model do formatu pakietu usług danych](https://go.microsoft.com/fwlink/?LinkID=178833) specyfikacji.
 
 Aby uzyskać więcej informacji, zobacz [porady: ręczne Generowanie klas usługi danych klienta](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md).
 

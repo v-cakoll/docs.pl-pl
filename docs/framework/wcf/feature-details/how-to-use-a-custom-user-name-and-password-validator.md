@@ -7,66 +7,66 @@ dev_langs:
 helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
-ms.openlocfilehash: 8580219181af8fd28bcc99c60bd1e681ffbdad54
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7573e14d224e2ec861b301816d6d886fd147180
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496815"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401032"
 ---
 # <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Instrukcje: Używanie niestandardowej nazwy użytkownika i modułu weryfikacji hasła
-Domyślnie gdy nazwa użytkownika i hasło jest używane do uwierzytelniania, Windows Communication Foundation (WCF) używa do weryfikowania nazwy użytkownika i hasła systemu Windows. Jednak WCF umożliwia użytkownika niestandardowego nazwy i hasła schematy uwierzytelniania, nazywane również *modułów sprawdzania poprawności*. Dołączanie moduł weryfikacji nazwy i hasła użytkownika niestandardowego, Utwórz klasę pochodzącą z <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> , a następnie skonfigurować go.  
+Domyślnie gdy nazwa użytkownika i hasło są używane do uwierzytelniania, Windows Communication Foundation (WCF) używa Windows do weryfikowania nazwy użytkownika i hasła. Jednak WCF umożliwia niestandardowych użytkownika nazwy i hasła schematy uwierzytelniania, znany także jako *moduły weryfikacji*. Aby dołączyć moduł weryfikacji nazwy i hasła użytkownika niestandardowego, należy utworzyć klasę, która pochodzi od klasy <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> , a następnie skonfigurować go.  
   
- Przykładową aplikację, zobacz [modułu weryfikacji hasła nazwa użytkownika](../../../../docs/framework/wcf/samples/user-name-password-validator.md).  
+ Dla przykładowej aplikacji, zobacz [modułu weryfikacji hasła nazwy użytkownika](../../../../docs/framework/wcf/samples/user-name-password-validator.md).  
   
 ### <a name="to-create-a-custom-user-name-and-password-validator"></a>Aby utworzyć moduł weryfikacji nazwy i hasła użytkownika niestandardowego  
   
-1.  Utwórz klasę pochodną <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>.  
+1.  Utwórz klasę, która pochodzi od klasy <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>.  
   
      [!code-csharp[C_CustomUsernameAndPasswordValidator#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customusernameandpasswordvalidator/cs/service.cs#3)]
      [!code-vb[C_CustomUsernameAndPasswordValidator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customusernameandpasswordvalidator/vb/service.vb#3)]  
   
 2.  Implementowanie schemat uwierzytelniania niestandardowego przez zastąpienie <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A> metody.  
   
-     Nie używaj kodu w poniższym przykładzie, który zastępuje <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A> metody w środowisku produkcyjnym. Zastąp kod użytkownika niestandardowego nazwy i hasła weryfikacji schematem, które mogą dotyczyć pobierania pary nazwy i hasła użytkownika z bazy danych.  
+     W poniższym przykładzie, który zastępuje nie należy używać kodu <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A> metody w środowisku produkcyjnym. Zastąp kod przy użyciu usługi użytkownika niestandardowego nazwy i hasła sprawdzania poprawności schematu, które mogą wiązać z pobieraniem pary nazwy i hasła użytkownika z bazy danych.  
   
-     Aby przywrócić błędy uwierzytelniania z powrotem do klienta, throw <xref:System.ServiceModel.FaultException> w <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A> metody.  
+     Aby zostały zwrócone błędy uwierzytelniania z powrotem do klienta, należy zgłosić <xref:System.ServiceModel.FaultException> w <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A> metody.  
   
      [!code-csharp[C_CustomUsernameAndPasswordValidator#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customusernameandpasswordvalidator/cs/service.cs#4)]
      [!code-vb[C_CustomUsernameAndPasswordValidator#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customusernameandpasswordvalidator/vb/service.vb#4)]  
   
-### <a name="to-configure-a-service-to-use-a-custom-user-name-and-password-validator"></a>Aby skonfigurować usługę do używania moduł weryfikacji nazwy i hasła użytkownika niestandardowego  
+### <a name="to-configure-a-service-to-use-a-custom-user-name-and-password-validator"></a>Aby skonfigurować usługę do używania weryfikacji nazwy i hasła użytkownika niestandardowego  
   
-1.  Skonfiguruj obiekt binding używający Zabezpieczanie komunikatów za pośrednictwem żadnych transportu lub zabezpieczenia na poziomie transportu za pośrednictwem protokołu HTTP (S).  
+1.  Konfigurowanie powiązania, który używa Zabezpieczanie komunikatów za pośrednictwem dowolnego transportu lub zabezpieczenia na poziomie transportu za pośrednictwem protokołu HTTP (S).  
   
-     Podczas korzystania z zabezpieczeń wiadomości, dodanie wiązania dostarczane przez system, taką jak [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), lub [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) obsługuje zabezpieczenia wiadomości i `UserName` typ poświadczeń.  
+     Korzystając z zabezpieczeń wiadomości, dodać jedno z powiązań dostarczanych przez system, takie jak [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), lub [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) obsługuje zabezpieczenia wiadomości i `UserName` typ poświadczeń.  
   
-     Korzystając z zabezpieczeniami na poziomie transportu za pośrednictwem protokołu HTTP (S), albo Dodaj [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) lub [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), [ \< netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md) lub [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) używający protokołu HTTP (S) i `Basic` schematu uwierzytelniania.  
+     Korzystając z zabezpieczeń na poziomie transportu za pośrednictwem protokołu HTTP (S), są dodawane [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) lub [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), [ \< netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md) lub [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) , który używa protokołu HTTP (S) i `Basic` schematu uwierzytelniania.  
   
     > [!NOTE]
-    >  Gdy [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] lub nowszego jest używana, można użyć niestandardowego modułu weryfikacji nazwy użytkownika i hasła z zabezpieczeniami komunikatu i transportu. Z [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], niestandardowego modułu weryfikacji nazwy użytkownika i hasła można używać tylko z zabezpieczeń wiadomości.  
+    >  Gdy [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] lub nowszej jest używany, można użyć niestandardowego modułu weryfikacji nazwy użytkownika i hasła za pomocą zabezpieczeń transportu i wiadomości. Za pomocą [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], niestandardowego modułu weryfikacji nazwy użytkownika i hasła można używać tylko z zabezpieczeń komunikatów.  
   
     > [!TIP]
-    >  Aby uzyskać więcej informacji na temat używania \<netTcpBinding > w tym kontekście, zobacz [ \<Zabezpieczenia >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)  
+    >  Aby uzyskać więcej informacji na temat korzystania z \<netTcpBinding > w tym kontekście, zobacz [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)  
   
-    1.  W pliku konfiguracji w obszarze [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elementu, Dodaj [ \<powiązania >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) elementu.  
+    1.  W pliku konfiguracji w obszarze [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elementu Dodawanie [ \<powiązania >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) elementu.  
   
-    2.  Dodaj [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) lub [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) element do sekcji powiązania. Aby uzyskać więcej informacji o tworzeniu elementu wiązania WCF, zobacz [porady: Określanie wiązań usługi w konfiguracji](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+    2.  Dodaj [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) lub [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) element w sekcji wiązania. Aby uzyskać więcej informacji na temat tworzenia elementu powiązania WCF zobacz [porady: Określanie wiązań usługi w konfiguracji](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
-    3.  Ustaw `mode` atrybutu [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) lub [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) do `Message`, `Transport`, `or``TransportWithMessageCredential`.  
+    3.  Ustaw `mode` atrybutu [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) lub [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) do `Message`, `Transport`, lub `TransportWithMessageCredential`.  
   
-    4.  Ustaw `clientCredentialType` atrybutu [ \<wiadomości >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md) lub [ \<transportu >](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md).  
+    4.  Ustaw `clientCredentialType` atrybutu [ \<komunikatu >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md) lub [ \<transportu >](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md).  
   
-         Podczas korzystania z zabezpieczeń wiadomości, ustaw `clientCredentialType` atrybutu [ \<wiadomości >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md) do `UserName`.  
+         Korzystając z zabezpieczeń komunikatów, ustaw `clientCredentialType` atrybutu [ \<komunikatu >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md) do `UserName`.  
   
-         Korzystając z zabezpieczeniami na poziomie transportu za pośrednictwem protokołu HTTP (S), należy ustawić `clientCredentialType` atrybutu [ \<transportu >](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md) lub [ \<transportu >](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md) do `Basic`.  
+         Korzystając z zabezpieczeń na poziomie transportu za pośrednictwem protokołu HTTP (S), ustaw `clientCredentialType` atrybutu [ \<transportu >](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md) lub [ \<transportu >](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md) do `Basic`.  
   
         > [!NOTE]
-        >  Gdy usługa WCF jest hostowana w Internet Information Services (IIS) przy użyciu zabezpieczeń na poziomie transportu i <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.UserNamePasswordValidationMode%2A> właściwość jest ustawiona na <xref:System.ServiceModel.Security.UserNamePasswordValidationMode.Custom>, schematem uwierzytelniania niestandardowego korzysta z podzbioru uwierzytelniania systemu Windows. To, ponieważ w tym scenariuszu IIS wykonuje uwierzytelnianie systemu Windows przed WCF, wywoływania niestandardowych wystawcy uwierzytelnienia.  
+        >  Gdy usługa WCF jest hostowana w Internet Information Services (IIS) przy użyciu zabezpieczeń na poziomie transportu i <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.UserNamePasswordValidationMode%2A> właściwość jest ustawiona na <xref:System.ServiceModel.Security.UserNamePasswordValidationMode.Custom>, schemat uwierzytelniania niestandardowego korzysta z podzbioru uwierzytelniania Windows. To, ponieważ w tym scenariuszu IIS przeprowadza uwierzytelnianie Windows przed WCF, wywoływania niestandardowych wystawcy uwierzytelnienia.  
   
-     Aby uzyskać więcej informacji o tworzeniu elementu wiązania WCF, zobacz [porady: Określanie wiązań usługi w konfiguracji](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+     Aby uzyskać więcej informacji na temat tworzenia elementu powiązania WCF zobacz [porady: Określanie wiązań usługi w konfiguracji](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
-     Poniższy przykład przedstawia kod konfiguracji powiązania.  
+     Poniższy przykład pokazuje kod konfiguracji dla wiązania.  
   
     ```xml  
     <system.serviceModel>   
@@ -82,13 +82,13 @@ Domyślnie gdy nazwa użytkownika i hasło jest używane do uwierzytelniania, Wi
     </system.serviceModel>  
     ```  
   
-2.  Konfigurowanie zachowania, który określa, czy moduł weryfikacji nazwy i hasła użytkownika niestandardowego służy do sprawdzania pary nazwy i hasła użytkownika dla przychodzących <xref:System.IdentityModel.Tokens.UserNameSecurityToken> tokenów zabezpieczających.  
+2.  Konfigurowanie zachowania, który określa, czy moduł weryfikacji nazwy i hasła użytkownika niestandardowego jest używana do zweryfikowania pary nazwy i hasła użytkownika dla przychodzących <xref:System.IdentityModel.Tokens.UserNameSecurityToken> tokenów zabezpieczających.  
   
-    1.  Jako element podrzędny [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elementu, Dodaj [ \<zachowania >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elementu.  
+    1.  Jako element podrzędny [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elementu Dodawanie [ \<zachowania >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elementu.  
   
     2.  Dodaj [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) do [ \<zachowania >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elementu.  
   
-    3.  Dodaj [ \<zachowanie >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) element i ustaw `name` atrybutu odpowiednią wartość.  
+    3.  Dodaj [ \<zachowanie >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) element i ustaw `name` atrybutu do odpowiedniej wartości.  
   
     4.  Dodaj [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) do [ \<zachowanie >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) elementu.  
   
@@ -97,11 +97,11 @@ Domyślnie gdy nazwa użytkownika i hasło jest używane do uwierzytelniania, Wi
     6.  Ustaw `userNamePasswordValidationMode` do `Custom`.  
   
         > [!IMPORTANT]
-        >  Jeśli `userNamePasswordValidationMode` nie jest ustawiona, usługi WCF używa uwierzytelniania systemu Windows zamiast użytkownika niestandardowego Walidatora nazwy i hasła.  
+        >  Jeśli `userNamePasswordValidationMode` wartość nie jest ustawiona, usługi WCF korzysta z uwierzytelniania Windows zamiast użytkownika niestandardowego Walidatora nazwy i hasła.  
   
-    7.  Ustaw `customUserNamePasswordValidatorType` typ, który reprezentuje validator nazwy i hasła użytkownika.  
+    7.  Ustaw `customUserNamePasswordValidatorType` do typu, który reprezentuje użytkownika niestandardowego weryfikacji nazwy i hasła.  
   
-     W poniższym przykładzie przedstawiono `<serviceCredentials>` fragment do tego punktu.  
+     W poniższym przykładzie przedstawiono `<serviceCredentials>` fragmentu do tego punktu.  
   
     ```xml  
     <serviceCredentials>  
@@ -110,7 +110,7 @@ Domyślnie gdy nazwa użytkownika i hasło jest używane do uwierzytelniania, Wi
     ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykładowy kod przedstawia sposób tworzenia moduł weryfikacji nazwy i hasła użytkownika. Nie używaj kodu, który zastępuje <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A> metody w środowisku produkcyjnym. Zastąp kod użytkownika niestandardowego nazwy i hasła weryfikacji schematem, które mogą dotyczyć pobierania pary nazwy i hasła użytkownika z bazy danych.  
+ Poniższy przykład kodu pokazuje, jak utworzyć moduł weryfikacji nazwy i hasła użytkownika niestandardowego. Nie należy używać kodu, który zastępuje <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A> metody w środowisku produkcyjnym. Zastąp kod przy użyciu usługi użytkownika niestandardowego nazwy i hasła sprawdzania poprawności schematu, które mogą wiązać z pobieraniem pary nazwy i hasła użytkownika z bazy danych.  
   
  [!code-csharp[C_CustomUsernameAndPasswordValidator#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customusernameandpasswordvalidator/cs/service.cs#1)]
  [!code-vb[C_CustomUsernameAndPasswordValidator#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customusernameandpasswordvalidator/vb/service.vb#1)]  

@@ -1,53 +1,53 @@
 ---
-title: Pomiń zakresu transakcji
+title: Pomijanie zakresu transakcji
 ms.date: 03/30/2017
 ms.assetid: 49fb6dd4-30d4-4067-925c-c5de44c8c740
-ms.openlocfilehash: b38d168e7da4510b75ebeda7f4984c26fb68898d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 44814d66a4de4b3e72bb33eb46019eb1088ab040
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518463"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385197"
 ---
-# <a name="suppress-transaction-scope"></a>Pomiń zakresu transakcji
-Przykład pokazuje, jak utworzyć niestandardowy `SuppressTransactionScope` działanie, aby pominąć transakcja otoczenia czasu wykonywania, jeśli jest obecny.  
+# <a name="suppress-transaction-scope"></a>Pomijanie zakresu transakcji
+W przykładzie pokazano, jak utworzyć niestandardowy `SuppressTransactionScope` działanie, aby pominąć otoczenia transakcji czasu wykonywania, jeśli jest obecny.  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\SuppressTransactionScope`  
   
-## <a name="sample-details"></a>Szczegóły próbki  
- To niestandardowe działanie jest przydatne zapobiegające transakcji z przepływ go do innej usługi wychodzących, jeśli przepływu transakcji jest niepożądanych dla konkretnego scenariusza. Środowiska uruchomieniowego przepływu pracy ma wbudowaną obsługę pomijanie transakcja otoczenia w <xref:System.Activities.NativeActivity> klasy, ale aby użyć tej obsługi, należy utworzyć niestandardowy <xref:System.Activities.NativeActivity> znajdującego się w tym przykładzie.  
+## <a name="sample-details"></a>Przykład szczegółów  
+ Niestandardowe działanie jest przydatne zapobiec transakcji z przekazane go do innej usługi się, jeśli przepływu transakcji jest niepożądane dla konkretnego scenariusza. Środowisko wykonawcze przepływów pracy ma wbudowaną obsługę pomijanie otoczenia transakcji w <xref:System.Activities.NativeActivity> klasy, ale aby użyć tej obsługi, należy utworzyć niestandardowy <xref:System.Activities.NativeActivity> znajdującego się w tym przykładzie.  
   
- Scenariusz składa się z trzech części. Najpierw <xref:System.Activities.Statements.TransactionScope> tworzy transakcji czasu wykonywania, które staje się otoczenia. To jest weryfikowany przez niestandardowe działanie, które Wyświetla identyfikatory lokalnych i rozproszonej transakcji. Transakcja jest następnie skierowana do zdalnej usługi przed rozpoczęciem drugiej części. Podczas drugiego etapu wprowadza przepływu pracy `SuppressTransactionScope` i ponownie powtarza proces drukowania identyfikatorów transakcji i przepływu transakcji. Jednak działań niestandardowych nie znajdzie transakcja otoczenia i komunikat skierowana do usługi nie zawiera transakcji. W związku z tym usługa tworzy transakcji, które oznacza, że identyfikator rozproszonej drukowane na klienta i usługi nie są zgodne. Ostatnia sekcja występuje po `SuppressTransactionScope` wyjść i transakcja czasu wykonywania ponownie staje się otoczenia jako zweryfikowany przez kolejną wiadomość do usługi z rozproszonego identyfikator, który jest zgodny z identyfikatorem pierwszego komunikatu.  
+ Scenariusz składa się z trzech części. Po pierwsze, <xref:System.Activities.Statements.TransactionScope> tworzy transakcji środowiska wykonawczego, która staje się otoczenia. To jest weryfikowana przez niestandardowe działanie, które Wyświetla identyfikatory lokalnych i rozproszonych transakcji. Transakcja jest następnie przekazane do usługi zdalnej przed rozpoczęciem drugiej części. W drugiej części przepływu pracy przechodzi `SuppressTransactionScope` i ponownie powtarza proces drukowania identyfikatorów transakcji i przepływu transakcji. Jednak działanie niestandardowe nie znajdzie otoczenia transakcji, a komunikat przekazane do usługi nie zawiera transakcji. Co w efekcie usługa tworzy transakcji, która oznacza, że identyfikator rozproszone są drukowane na klienta i usługi nie są zgodne. Ostatnia sekcja występuje po `SuppressTransactionScope` wyjść i ponownie wykonać transakcję środowiska wykonawczego staje się otoczenia, jako zweryfikowany przez kolejną wiadomość w usłudze przy użyciu rozproszonej identyfikator, który jest zgodny z identyfikatorem pierwszego komunikatu.  
   
- Działanie sam jest pochodną <xref:System.Activities.NativeActivity> ponieważ należy zaplanować działania podrzędne i Dodaj właściwość wykonywania. `SuppressTransactionScope` Ma <xref:System.Activities.Variable> typu <xref:System.Activities.RuntimeTransactionHandle>, którego można użyć zamiast pole wystąpienia typu <xref:System.Activities.RuntimeTransactionHandle> ponieważ dojście musi zostać zainicjowany. `Variable<RuntimeTransactionHandle>` Zostanie dodany do działania metadanych jako zmienną implementacji, ponieważ jest używany tylko wewnętrznie.  
+ Pochodzi od klasy działania <xref:System.Activities.NativeActivity> ponieważ należy zaplanować działania podrzędnego i Dodaj właściwość wykonywania. `SuppressTransactionScope` Ma <xref:System.Activities.Variable> typu <xref:System.Activities.RuntimeTransactionHandle>, które muszą być zastosowane, a nie pola wystąpienia typu <xref:System.Activities.RuntimeTransactionHandle> ponieważ dojścia musi zostać zainicjowany. `Variable<RuntimeTransactionHandle>` Zostanie dodany do metadanych tego działania jako zmienną implementacji, ponieważ jest używany tylko wewnętrznie.  
   
- Po wykonaniu działania najpierw sprawdza, czy określono treści i jeśli tak jest, ustawia `SuppressTransaction` właściwość <xref:System.Activities.RuntimeTransactionHandle>. Po ustawieniu właściwości jest dodawany do właściwości wykonania i staje się otoczenia. Oznacza to, że wszystkie działania, który jest elementem podrzędnym `SuppressTransactionScope` jest w stanie wyświetlić właściwości i w związku z tym wymusza pomijanie transakcja czasu wykonywania i powoduje, że zagnieżdżoną <xref:System.Activities.Statements.TransactionScope> do zgłoszenia wyjątku. Po dodaniu dojście do właściwości wykonania się, że treść jest zaplanowane do uruchomienia.  
+ Gdy jest wykonywane działanie najpierw sprawdza, czy treść został określony, a jeśli tak jest, ustawia `SuppressTransaction` właściwość <xref:System.Activities.RuntimeTransactionHandle>. Po ustawieniu właściwości jest dodawany do właściwości wykonania i staje się otoczenia. Oznacza to, że wszystkie działania, które jest elementem podrzędnym `SuppressTransactionScope` jest w stanie wyświetlić właściwości i w związku z tym wymusza pomijanie czasu wykonywania transakcji i powoduje, że zagnieżdżone <xref:System.Activities.Statements.TransactionScope> do zgłoszenia wyjątku. Gdy uchwyt zostanie dodany do właściwości wykonania treści jest zaplanowane do uruchomienia.  
   
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
   
 1.  Otwórz rozwiązanie SuppressTransactionScope.sln w [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-2.  Skompiluj rozwiązanie, naciśnij kombinację klawiszy CTRL + SHIFT + B lub wybierz **Kompiluj rozwiązanie** z **kompilacji** menu.  
+2.  Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B, lub wybierz **Kompiluj rozwiązanie** z **kompilacji** menu.  
   
-3.  Gdy kompilacja zakończyła się pomyślnie, kliknij prawym przyciskiem myszy rozwiązanie i wybierz **Ustaw projekty startowe**. W oknie dialogowym wybierz **wiele projektów startowych** i upewnij się, Akcja dla obu projektów jest **Start**.  
+3.  Gdy kompilacja zakończyła się pomyślnie, kliknij prawym przyciskiem myszy rozwiązanie i wybierz **Ustaw projekty startowe**. W oknie dialogowym wybierz **wiele projektów startowych** i upewnić się jest działanie w obu projektach **Start**.  
   
-4.  Naciśnij klawisz F5 lub wybierz **Rozpocznij debugowanie** z **debugowania** menu. Alternatywnie, naciśnij klawisze CTRL + F5 lub wybierz **uruchomić bez debugowania** z **debugowania** menu, aby uruchomić bez debugowania.  
+4.  Naciśnij klawisz F5 lub wybierz **Rozpocznij debugowanie** z **debugowania** menu. Alternatywnie, naciśnij klawisze CTRL + F5 lub wybierz **Rozpocznij bez debugowania** z **debugowania** menu, aby uruchomić bez debugowania.  
   
     > [!NOTE]
-    >  Serwer musi być uruchomiona przed uruchomieniem klienta. Dane wyjściowe z okna konsoli, który obsługuje usługę wskazuje, kiedy został uruchomiony.  
+    >  Na serwerze muszą działać przed rozpoczęciem klienta. Dane wyjściowe z okna konsoli, który jest hostem usługi wskazuje, kiedy została uruchomiona.  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\SuppressTransactionScope`

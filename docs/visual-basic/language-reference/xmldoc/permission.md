@@ -6,11 +6,11 @@ helpviewer_keywords:
 - permission XML tag
 ms.assetid: 0edf0500-5cd7-49c0-9255-64c48f972b77
 ms.openlocfilehash: bcec5d968f5d0c5400c28e772df151b164888a47
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43257438"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43391043"
 ---
 # <a name="ltpermissiongt-visual-basic"></a>&lt;uprawnienie&gt; (Visual Basic)
 Określa wymagane uprawnienia dla elementu członkowskiego.  

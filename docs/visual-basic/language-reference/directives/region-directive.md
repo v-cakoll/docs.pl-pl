@@ -1,5 +1,5 @@
 ---
-title: '#Dyrektywa #Region'
+title: '#Dyrektywa regionalna (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Region
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - region directive (#region)
 - '#Region keyword [Visual Basic]'
 ms.assetid: 90a6a104-3cbf-47d0-bdc4-b585d0921b87
-ms.openlocfilehash: d25871140ef0674c013fc70d1306b2b4d0858556
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 204b53751fce4f9a3e038ae7c44634522d54657c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588438"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385375"
 ---
 # <a name="region-directive"></a>#Region — dyrektywa
 Zwija i ukrywa sekcje kodu w plikach języka Visual Basic.  
@@ -31,7 +31,7 @@ Zwija i ukrywa sekcje kodu w plikach języka Visual Basic.
   
 |Termin|Definicja|  
 |---|---|  
-|`identifier_string`|Wymagana. Ciąg, który funkcjonuje jako tytuł regionu, gdy jest zwinięty. Regiony są domyślnie zwinięte.|  
+|`identifier_string`|Wymagane. Ciąg, który funkcjonuje jako tytuł regionu, gdy jest zwinięty. Regiony są domyślnie zwinięte.|  
 |`#End Region`|Kończy blok `#Region`.|  
   
 ## <a name="remarks"></a>Uwagi  

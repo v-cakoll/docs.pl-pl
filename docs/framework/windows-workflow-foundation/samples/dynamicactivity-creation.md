@@ -1,22 +1,22 @@
 ---
-title: Tworzenie DynamicActivity
+title: Tworzenie działania DynamicActivity
 ms.date: 03/30/2017
 ms.assetid: d8ebe82f-98c8-4452-aed7-2c60a512b097
-ms.openlocfilehash: 93435be69f90ca0b74dae6b934cb145fabb7afff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 270066fafd5c71b2a720ca305433159c172872aa
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518106"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385264"
 ---
-# <a name="dynamicactivity-creation"></a>Tworzenie DynamicActivity
-W tym przykładzie pokazano dwa różne sposoby tworzenia działania w czasie wykonywania za pomocą <xref:System.Activities.DynamicActivity> działania.  
+# <a name="dynamicactivity-creation"></a>Tworzenie działania DynamicActivity
+W tym przykładzie przedstawiono dwa różne sposoby tworzenia działania w czasie wykonywania za pomocą <xref:System.Activities.DynamicActivity> działania.  
   
- W tym przykładzie działanie jest tworzone w czasie wykonywania z treści, która zawiera <xref:System.Activities.Statements.Sequence> działania, który zawiera <xref:System.Activities.Statements.ForEach%601> i <xref:System.Activities.Statements.Assign%601> działań. Listę wejściową liczb całkowitych jest przekazywane do działania i ustawiona jako wartość właściwości. <xref:System.Activities.Statements.ForEach%601> Działanie następnie wykonuje iterację na liście wartości i akumuluje go. W <xref:System.Activities.Statements.Assign%601> działania, średnia wartość jest obliczana przez podzielenie akumulatora przez liczbę elementów na liście i przypisz je do średniej.  
+ W tym przykładzie tworzone jest działanie w czasie wykonywania w jednostce, która zawiera <xref:System.Activities.Statements.Sequence> działania, który zawiera <xref:System.Activities.Statements.ForEach%601> i <xref:System.Activities.Statements.Assign%601> działań. Lista wejściowa liczb całkowitych jest przekazywane do działania i ustawić jako właściwość. <xref:System.Activities.Statements.ForEach%601> Działania następnie wykonuje iterację na liście wartości i gromadzi go. W <xref:System.Activities.Statements.Assign%601> działania, średnia wartość jest obliczana przez podzielenie akumulatora przez liczbę elementów na liście i przypisz je do średniej.  
   
- Przykład przedstawia użycie <xref:System.Activities.DynamicActivity> wyjściowe działań, przepływającego w zmiennych jako argumenty wejściowe i zwracanie wartości jako argumenty. Działanie ma jeden argument wejściowy o nazwie `Numbers` czyli listę liczb całkowitych. <xref:System.Activities.Statements.ForEach%601> Działanie wykonuje iterację na liście wartości i akumuluje go. W <xref:System.Activities.Statements.Assign%601> działania, średnia wartość jest obliczana przez podzielenie akumulatora przez liczbę elementów na liście i przypisywania go do średniej. Średnia jest zwracana jako wyjściowy argument o nazwie `Average`.  
+ W przykładzie pokazano użycie <xref:System.Activities.DynamicActivity> działania, które przechodzą w zmiennych argumentów wejściowych i zwracanie wartości jako dane wyjściowe argumentów. Działanie ma jeden argument wejściowy o nazwie `Numbers` czyli na liście liczb całkowitych. <xref:System.Activities.Statements.ForEach%601> Działanie wykonuje iterację na liście wartości i gromadzi go. W <xref:System.Activities.Statements.Assign%601> działania, średnia wartość jest obliczana przez podzielenie akumulatora przez liczbę elementów na liście i przypisywanie jej do średniej. Średnia jest zwracana jako wyjściowy argument o nazwie `Average`.  
   
- Podczas tworzenia programowo dynamiczne działania, dane wejściowe i wyjściowe są deklarowane jako, jak pokazano w poniższym przykładzie kodu.  
+ Podczas programowego dynamicznego działania, jak pokazano w poniższym przykładzie kodu są deklarowane danych wejściowych i wyjściowych.  
   
 ```csharp  
 DynamicActivity act = new DynamicActivity()  
@@ -42,7 +42,7 @@ DynamicActivity act = new DynamicActivity()
 };  
 ```  
   
- Poniższy przykładowy kod przedstawia pełny definicji `DynamicActivity` który oblicza średnią z wartości na liście.  
+ Poniższy przykład kodu pokazuje kompletną definicję `DynamicActivity` , oblicza średnią z wartości na liście.  
   
 ```  
 DynamicActivity act = new DynamicActivity()  
@@ -96,7 +96,7 @@ DynamicActivity act = new DynamicActivity()
 };  
 ```  
   
- Podczas tworzenia w języku XAML, dane wejściowe i wyjściowe są deklarowane jako, jak pokazano w poniższym przykładzie.  
+ Podczas tworzenia w XAML, jak pokazano w poniższym przykładzie są deklarowane danych wejściowych i wyjściowych.  
   
 ```xml  
 <Activity x:Class="Microsoft.Samples.DynamicActivityCreation.FindAverage"  
@@ -112,13 +112,13 @@ DynamicActivity act = new DynamicActivity()
 </Activity>  
 ```  
   
- XAML mogą być tworzone w sposób wizualny przy użyciu [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)]. Jeśli jest włączona w projektu programu Visual Studio, należy ustawić jej "Akcja kompilacji" na "Brak" Aby zapobiec kompilowany. Następnie można załadować pliku XAML dynamicznie za pomocą następujące wywołanie.  
+ XAML można tworzyć wizualnie za pomocą [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)]. Jeśli jest włączona w projekcie programu Visual Studio, należy ustawić jego "Akcja kompilacji" na "None", aby uniemożliwić kompilowanego. XAML może zostać załadowana dynamicznie przy użyciu następującego wywołania.  
   
 ```  
 Activity act2 = ActivityXamlServices.Load(@"FindAverage.xaml");  
 ```  
   
- <xref:System.Activities.DynamicActivity> Wystąpienia utworzone programowo lub za pośrednictwem ładowania kodu XAML przepływu pracy można używać jak pokazano w poniższym przykładzie kodu. Należy pamiętać, że "działa" przekazany do `WorkflowInvoker.Invoke` jest "czynnością" <xref:System.Activities.Activity> zdefiniowane w pierwszym przykładzie kodu.  
+ <xref:System.Activities.DynamicActivity> Programowo utworzyć wystąpienia lub za pośrednictwem ładowania XAML przepływu pracy mogą być używane, jak pokazano w poniższym przykładzie kodu. Należy pamiętać, że "działanie" przekazany do `WorkflowInvoker.Invoke` to "proces" <xref:System.Activities.Activity> zdefiniowane w pierwszym przykładzie kodu.  
   
 ```  
 IDictionary<string, object> results = WorkflowInvoker.Invoke(act, new Dictionary<string, object> { { "Numbers", numbers } });  
@@ -128,21 +128,21 @@ Console.WriteLine("The average calculated using the code activity is = " + resul
   
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
   
-1.  Przy użyciu [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], otwórz plik rozwiązania DynamicActivityCreation.sln.  
+1.  Za pomocą [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], otwórz plik rozwiązania DynamicActivityCreation.sln.  
   
-2.  Aby tworzyć rozwiązania, naciśnij kombinację klawiszy CTRL + SHIFT + B.  
+2.  Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.  
   
-3.  Aby uruchomić rozwiązanie, naciśnij klawisze CTRL + F5.  
+3.  Aby uruchomić rozwiązanie, naciśnij kombinację klawiszy CTRL + F5.  
   
 ## <a name="command-line-arguments"></a>Argumenty wiersza polecenia  
- W tym przykładzie akceptuje argumenty wiersza polecenia. Użytkownicy mogą podać listę liczb działania do obliczenia średniej ich. Listę numerów do użycia jest przekazywany jako listę liczb rozdzielonych spacją. Na przykład aby obliczyć średnią 5, 10 lub 32 wywołanie próbki, przy użyciu następującego polecenia.  
+ W tym przykładzie akceptuje argumenty wiersza polecenia. Użytkownicy mogą podać listę liczb dla działania do obliczenia średniej ich. Listę numerów ma być używany jest przekazywany jako listy liczb rozdzielonych spacją. Na przykład można obliczyć średnią 5, 10 i 32 wywołać przykład za pomocą następującego polecenia.  
   
  **DynamicActivityCreation 5 10 32**  
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\DynamicActivity\DynamicActivityCreation`

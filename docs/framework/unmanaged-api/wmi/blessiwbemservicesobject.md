@@ -1,6 +1,6 @@
 ---
 title: Funkcja BlessIWbemServicesObject (niezarządzany wykaz interfejsów API)
-description: Funkcja BlessIWbemServicesObject wskazuje, czy poświadczenia użytkownika zezwolenie na dostęp do obiektu IWbemServices
+description: Funkcja BlessIWbemServicesObject wskazuje, czy poświadczenia użytkownika zezwolić na dostęp do obiektu IWbemServices
 ms.date: 11/06/2017
 api_name:
 - BlessIWbemServicesObject
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1bc31a4f074891149783dec647a592683564ba0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e1380d03d4456e0695777775ae786a19982d691b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457922"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394981"
 ---
 # <a name="blessiwbemservicesobject-function"></a>Funkcja BlessIWbemServicesObject
-Wskazuje, czy poświadczenia użytkownika zezwolenie na dostęp do określonej [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) obiektu.   
+Wskazuje, czy poświadczenia użytkownika zezwolić na dostęp do określonego [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) obiektu.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -60,7 +60,7 @@ HRESULT BlessIWbemServicesObject (
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następujące wartości zwracane przez tę funkcję są zdefiniowane w *pliku WinError.h* pliku nagłówka, lub należy je zdefiniować jako stałe w kodzie:
+Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WinError.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
@@ -78,4 +78,4 @@ Następujące wartości zwracane przez tę funkcję są zdefiniowane w *pliku Wi
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
-[Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)
+[Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

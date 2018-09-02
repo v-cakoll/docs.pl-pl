@@ -15,12 +15,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-ms.openlocfilehash: 428dae2d10cd0f49a337c5b0439c5dcc72f83432
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 435bc1c04bfd2f9b8a94ff8151369b5ef2fae6f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43257386"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385875"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>Wskazówki: wdrażanie formularza korzystającego z operacji w tle
 Jeśli operacja, która będzie zająć dużo czasu, i nie ma interfejsu użytkownika (UI) przestanie odpowiadać lub "zawiesza się," można użyć <xref:System.ComponentModel.BackgroundWorker> klasy do wykonywania operacji na inny wątek.  
@@ -57,7 +57,7 @@ Jeśli operacja, która będzie zająć dużo czasu, i nie ma interfejsu użytko
   
 5.  Zmień nazwę pierwszego <xref:System.Windows.Forms.Button> kontroli `startAsyncButton` i ustaw <xref:System.Windows.Forms.Control.Text%2A> właściwość `Start Async`. Zmień nazwę drugiej <xref:System.Windows.Forms.Button> kontroli `cancelAsyncButton`i ustaw <xref:System.Windows.Forms.Control.Text%2A> właściwość `Cancel Async`. Ustaw jego <xref:System.Windows.Forms.Control.Enabled%2A> właściwość `false`.  
   
-6.  Utwórz procedurę obsługi zdarzeń dla obu <xref:System.Windows.Forms.Button> kontrolek <xref:System.Windows.Forms.Control.Click> zdarzenia. Aby uzyskać więcej informacji, zobacz [jak: utworzyć zdarzenie obsługi za pomocą projektanta](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
+6.  Utwórz procedurę obsługi zdarzeń dla obu <xref:System.Windows.Forms.Button> kontrolek <xref:System.Windows.Forms.Control.Click> zdarzenia. Aby uzyskać więcej informacji, zobacz [jak: utworzyć zdarzenie obsługi za pomocą projektanta](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
   
 7.  Przeciągnij <xref:System.Windows.Forms.Label> z kontrolować **przybornika** na formularz i zmień jego nazwę `resultLabel`.  
   
@@ -75,7 +75,7 @@ Jeśli operacja, która będzie zająć dużo czasu, i nie ma interfejsu użytko
   
 #### <a name="to-implement-asynchronous-event-handlers"></a>Aby zaimplementować procedury obsługi zdarzeń asynchronicznych  
   
-1.  W **właściwości** oknie z <xref:System.ComponentModel.BackgroundWorker> składnika wciąż zaznaczone, kliknij przycisk **zdarzenia** przycisku. Kliknij dwukrotnie <xref:System.ComponentModel.BackgroundWorker.DoWork> i <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> zdarzeń, aby utworzyć procedury obsługi zdarzeń. Aby uzyskać więcej informacji na temat używania programów obsługi zdarzeń, zobacz [jak: utworzyć zdarzenie obsługi za pomocą projektanta](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
+1.  W **właściwości** oknie z <xref:System.ComponentModel.BackgroundWorker> składnika wciąż zaznaczone, kliknij przycisk **zdarzenia** przycisku. Kliknij dwukrotnie <xref:System.ComponentModel.BackgroundWorker.DoWork> i <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> zdarzeń, aby utworzyć procedury obsługi zdarzeń. Aby uzyskać więcej informacji na temat używania programów obsługi zdarzeń, zobacz [jak: utworzyć zdarzenie obsługi za pomocą projektanta](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
   
 2.  Utwórz nową metodę o nazwie `ComputeFibonacci`, w formularzu. Ta metoda wykonuje faktyczną pracę, a zostanie ona uruchomiona w tle. Ten kod przedstawia implementację cyklicznego algorytmu Fibonacci, który jest szczególnie nieefektywne, biorąc wykładniczo dłużej, aby uzyskać większą liczbą. Służy w tym miejscu w celach ilustracyjnych, aby pokazać operacji, która może prowadzić do opóźnień w aplikacji.  
   
@@ -166,8 +166,8 @@ Jeśli operacja, która będzie zająć dużo czasu, i nie ma interfejsu użytko
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ComponentModel.BackgroundWorker>  
  [Zarządzana wątkowość — najlepsze rozwiązania](../../../../docs/standard/threading/managed-threading-best-practices.md)  
- [Wielowątkowość w składnikach](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
- [NIE w kompilacji: Wielowątkowość w języku Visual Basic](http://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
+ [Wielowątkowość w składnikach](https://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
+ [NIE w kompilacji: Wielowątkowość w języku Visual Basic](https://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
  [Instrukcje: implementowanie formularza korzystającego z operacji w tle](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
  [Przewodnik: przeprowadzanie operacji w tle](../../../../docs/framework/winforms/controls/walkthrough-running-an-operation-in-the-background.md)  
  [BackgroundWorker, składnik](../../../../docs/framework/winforms/controls/backgroundworker-component.md)

@@ -8,118 +8,118 @@ helpviewer_keywords:
 - animation [WPF], custom classes
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-ms.openlocfilehash: 3f212cd89fe9fe1bcf95a374fa0cd92aedadefa9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a18898f340c68b7890c56b586c87870c50fd4686
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33558034"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386973"
 ---
 # <a name="custom-animations-overview"></a>Przegląd Niestandardowe animacje
-W tym temacie opisano, jak i kiedy rozszerzenie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] systemu animacji, tworząc niestandardowe klatek kluczowych animacji klas, lub za pomocą wywołania zwrotnego na ramki do obejścia go.  
+W tym temacie opisano, jak i kiedy rozszerzenie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animacji systemu, tworząc niestandardowe klatki kluczowe animacji klas, lub za pomocą wywołania zwrotnego w poszczególnych klatkach pomijają je.  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
- Aby zrozumieć, w tym temacie, należy się zapoznać z różnymi typami animacje pochodzącymi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Aby uzyskać więcej informacji, zobacz Omówienie animacje From/To/By, [klucza ramki animacji omówienie](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)i [omówienie animacje ścieżki](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md).  
+ Aby zrozumieć, w tym temacie, należy się zapoznać z różnymi typami animacje, udostępniane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Aby uzyskać więcej informacji, zobacz animacje — Przegląd From/To/By [Przegląd Animacja kluczowych klatek](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)i [animacje ścieżki — Przegląd](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md).  
   
- Ponieważ dziedziczy klasy animacji <xref:System.Windows.Freezable> klasy, należy się zapoznać z <xref:System.Windows.Freezable> obiektów oraz sposób dziedziczyć <xref:System.Windows.Freezable>. Aby uzyskać więcej informacji, zobacz [obiektu Freezable Przegląd obiektów](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
+ Ponieważ dziedziczyć klasy animacji <xref:System.Windows.Freezable> klasy, należy zapoznać się z <xref:System.Windows.Freezable> obiektów i jak można dziedziczyć <xref:System.Windows.Freezable>. Aby uzyskać więcej informacji, zobacz [Przegląd obiektów Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
   
 <a name="extendingtheanimationsystem"></a>   
 ## <a name="extending-the-animation-system"></a>Rozszerzanie systemu animacji  
- Istnieje wiele sposobów, aby rozszerzyć [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] systemu animacji, w zależności od poziomu wbudowanej funkcji, dla którego chcesz użyć.  Istnieją trzy punkty rozszerzalności głównej w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aparatu animacji:  
+ Istnieje wiele sposobów, aby rozszerzyć [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] systemu animacji, w zależności od poziomu wbudowana funkcjonalność, której chcesz użyć.  Istnieją trzy punkty rozszerzalności podstawowej w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animacji aparatu:  
   
--   Tworzenie obiektu niestandardowych klatki przez dziedziczenie z jednego z  *\<typu >* klasy klatki kluczowej, takich jak <xref:System.Windows.Media.Animation.DoubleKeyFrame>. Ta metoda używa większość wbudowanych funkcji [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aparat animacji.  
+-   Tworzenie obiektu niestandardowego klatek kluczowych przez dziedziczenie z jednego z  *\<typ >* ramki kluczowej klasy takie jak <xref:System.Windows.Media.Animation.DoubleKeyFrame>. Ta metoda wykorzystuje większość wbudowane funkcje programu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aparatu animacji.  
   
--   Tworzenie klasy animacji przez dziedziczenie z <xref:System.Windows.Media.Animation.AnimationTimeline> lub jednego z  *\<typu >* klasy podstawy animacji.  
+-   Tworzenie klasy animacji przez dziedziczenie z <xref:System.Windows.Media.Animation.AnimationTimeline> lub jednego z  *\<typ >* klasy podstawy animacji.  
   
--   Umożliwia generowanie animacji na podstawie na ramki na ramki wywołania zwrotnego. Takie podejście całkowicie pomijany animacji i czasu systemu.  
+-   Użyj wywołania zwrotnego w poszczególnych klatkach do wygenerowania animacji na podstawie poszczególnych klatkach. To podejście jest całkowicie pomija Animacja i system chronometrażu.  
   
  W poniższej tabeli opisano niektóre scenariusze rozszerzanie systemu animacji.  
   
-|Jeśli chcesz...|Posłuż się tą metodą|  
+|Jeśli chcesz...|Korzystając z tego podejścia|  
 |-------------------------|-----------------------|  
-|Dostosowywanie interpolacji między wartościami typu, który ma odpowiadające mu  *\<typu >* AnimationUsingKeyFrames|Utwórz ramkę klucza niestandardowego. Aby uzyskać więcej informacji, zobacz [Utwórz ramkę, klucz niestandardowy](#createacustomkeyframe) sekcji.|  
-|Dostosowywanie więcej niż tylko interpolacji między wartościami typu, który ma odpowiadające mu  *\<typu >* animacji.|Utwórz klasę animacji niestandardowej, która dziedziczy  *\<typu >* klasę podstawy animacji, która odpowiada typowi mają być animowane. Aby uzyskać więcej informacji, zobacz [utworzyć klasę animacji niestandardowej](#createacustomanimationtype) sekcji.|  
-|Animowanie typu, który nie ma odpowiedniego [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animacji|Użyj <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> lub utworzyć klasę, która dziedziczy <xref:System.Windows.Media.Animation.AnimationTimeline>. Aby uzyskać więcej informacji, zobacz [utworzyć klasę animacji niestandardowej](#createacustomanimationtype) sekcji.|  
-|Animacja wiele obiektów o wartości, które są obliczane każdy ramki i są oparte na ostatni zestaw obiektów interakcji|Użyj wywołania zwrotnego na ramki. Aby uzyskać więcej informacji, zobacz [utworzyć Użyj wywołania zwrotnego na ramce](#useperframecallback) sekcji.|  
+|Dostosowywanie interpolacji między wartościami typu, który ma odpowiadające mu  *\<typ >* AnimationUsingKeyFrames|Utwórz niestandardowe klatek kluczowych. Aby uzyskać więcej informacji, zobacz [Utwórz ramkę klucza niestandardowego](#createacustomkeyframe) sekcji.|  
+|Dostosowywanie więcej niż tylko interpolacji między wartościami typu, który ma odpowiadające mu  *\<typ >* animacji.|Utwórz klasę animacji niestandardowej, która dziedziczy po elemencie  *\<typ >* klasy podstawy animacji, która odnosi się do typu ma być animowany. Aby uzyskać więcej informacji, zobacz [utworzyć niestandardowe klasy animacji](#createacustomanimationtype) sekcji.|  
+|Animowanie typ, który nie ma odpowiedniego [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animacji|Użyj <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> lub utworzyć klasę, która dziedziczy po elemencie <xref:System.Windows.Media.Animation.AnimationTimeline>. Aby uzyskać więcej informacji, zobacz [utworzyć niestandardowe klasy animacji](#createacustomanimationtype) sekcji.|  
+|Animowanie wiele obiektów o wartości, które są obliczane w każdej ramki i są oparte na ostatni zestaw interakcje obiektu|Użyj wywołania zwrotnego w poszczególnych klatkach. Aby uzyskać więcej informacji, zobacz [Utwórz wywołanie zwrotne użycia poszczególnych klatkach](#useperframecallback) sekcji.|  
   
 <a name="createacustomkeyframe"></a>   
-## <a name="create-a-custom-key-frame"></a>Utwórz ramkę klucza niestandardowego  
- Tworzenie klasy niestandardowej klatki jest najprostszym sposobem, aby rozszerzyć systemu animacji. Tej metody należy użyć, jeśli chcesz metodę interpolacji innej animacji ramki klucza.  Zgodnie z opisem w [klucza ramki animacji omówienie](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md), animacji ramki klucz używa klatki obiektów do generowania wartości jego dane wyjściowe. Każdy obiekt klatki pełni trzy funkcje:  
+## <a name="create-a-custom-key-frame"></a>Tworzenie niestandardowych klatek kluczowych  
+ Tworzenie klasy niestandardowej klatka kluczowa jest najprostszym sposobem, aby rozszerzyć system animacji. Tej metody należy użyć, gdy użytkownik chce metodę różnych interpolacji animacji kluczowych klatek.  Zgodnie z opisem w [Przegląd Animacja kluczowych klatek](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md), animacji kluczowych klatek używa klatek kluczowych obiektów, aby wygenerować jej wartości danych wyjściowych. Każdy obiekt w ramce klucza wykonuje trzy funkcje:  
   
--   Określa wartość docelowych przy użyciu jego <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> właściwości.  
+-   Określa wartość docelowej przy użyciu jego <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> właściwości.  
   
 -   Określa czas, w którym ta wartość zostanie osiągnięty przy użyciu jego <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> właściwości.  
   
--   Zaimplementowanie metody InterpolateValueCore wartość argumentu wartości poprzedniej ramki klucza z własnej wartości.  
+-   Wartość argumentu wartości poprzedniej ramki kluczy z własnej wartości poprzez implementację metody InterpolateValueCore.  
   
  **Instrukcje dotyczące wdrażania**  
   
- Pochodzić od  *\<typu >* klatki kluczowej klasę abstrakcyjną i zaimplementuj metodę InterpolateValueCore. Metoda InterpolateValueCore zwraca bieżącą wartość klucza ramki. Trwa dwa parametry: wartość poprzedniej ramki klucza i wartość postępu zakresu od 0 do 1. Wskazuje postęp 0 klatek kluczowych właśnie zostało uruchomione, a wartość 1 oznacza, że klatek kluczowych został ukończony i powinien zwrócić wartość określoną przez jego <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> właściwości.  
+ Pochodzi od  *\<typ >* ramki kluczowej klasy abstrakcyjnej i zaimplementować metodę InterpolateValueCore. Metoda InterpolateValueCore zwraca bieżącą wartość klatek kluczowych. Trwa dwa parametry: wartość poprzedniej ramki klucza i wartości postępu z zakresu od 0 do 1. Postęp 0 wskazuje klatek kluczowych właśnie zostało uruchomione, a wartość 1 oznacza, że klatek kluczowych został ukończony i powinna zwrócić wartość określoną przez jego <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> właściwości.  
   
- Ponieważ  *\<typu >* klatki kluczowej klasy dziedziczą <xref:System.Windows.Freezable> klasy, należy również zmienić <xref:System.Windows.Freezable.CreateInstanceCore%2A> core, aby zwrócić nowe wystąpienie klasy. Jeśli klasa nie używa właściwości zależności do przechowywania danych lub wymaga dodatkową inicjację po utworzeniu, konieczne może być zastąpienie dodatkowe metody; zobacz [obiektu Freezable Przegląd obiektów](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md) Aby uzyskać więcej informacji.  
+ Ponieważ  *\<typ >* ramki kluczowej klasy dziedziczą <xref:System.Windows.Freezable> klasy, konieczne jest również przesłonięcie <xref:System.Windows.Freezable.CreateInstanceCore%2A> core, aby zwrócić nowe wystąpienie klasy. Jeśli klasa nie używa właściwości zależności do przechowywania swoich danych lub wymaga ona dodatkową inicjację po utworzeniu, może być konieczne zastąpienie dodatkowe metody; zobacz [Przegląd obiektów Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md) Aby uzyskać więcej informacji.  
   
- Po utworzeniu niestandardowe  *\<typu >* klatek kluczowych animacji, użytkownik może być używany z  *\<typu >* AnimationUsingKeyFrames dla tego typu.  
+ Po utworzeniu niestandardowego  *\<typ >* Animacja klatki kluczowej, można jej używać z  *\<typ >* AnimationUsingKeyFrames dla tego typu.  
   
 <a name="createacustomanimationtype"></a>   
 ## <a name="create-a-custom-animation-class"></a>Utwórz klasę animacji niestandardowej  
- Tworzenie własnych animacji umożliwia typu większa kontrola nad jak animowany obiektu w. Istnieją dwa sposoby zalecane, aby utworzyć własny typ animacji: może pochodzić od <xref:System.Windows.Media.Animation.AnimationTimeline> klasy lub  *\<typu >* klasy podstawy animacji. Wyprowadzanie z  *\<typu >* animacji lub  *\<typu >* AnimationUsingKeyFrames klasy nie jest zalecane.  
+ Tworzenie własnych animacji umożliwia typu większa kontrola nad jak animowane obiektu w. Istnieją dwa sposoby zalecane, aby utworzyć swój własny typ animacji: może pochodzić z <xref:System.Windows.Media.Animation.AnimationTimeline> klasy lub  *\<typ >* klasy podstawy animacji. Wyprowadzanie z  *\<typ >* animacji lub  *\<typ >* AnimationUsingKeyFrames klasy nie jest zalecane.  
   
-### <a name="derive-from-typeanimationbase"></a>Pochodzić od \<typu > podstawy animacji  
- Wyprowadzanie z  *\<typu >* klasy podstawy animacji jest najprostszym sposobem, aby utworzyć nowy typ animacji. Tej metody należy użyć, gdy chcesz utworzyć nowe animacji dla typu, który ma już odpowiadający  *\<typu >* klasy podstawy animacji.  
+### <a name="derive-from-typeanimationbase"></a>Pochodzi od \<typ > podstawy animacji  
+ Wyprowadzanie z  *\<typ >* klasa podstawy animacji jest najprostszym sposobem utworzenia nowego typu animacji. Korzystając z tego podejścia, gdy chcesz tworzyć nowej animacji dla typu, który już ma odpowiadające mu  *\<typ >* klasy podstawy animacji.  
   
  **Instrukcje dotyczące wdrażania**  
   
- Pochodzić od  *\<typu >* klasy animacji i zaimplementuj metodę GetCurrentValueCore. Metoda GetCurrentValueCore zwraca wartość bieżącą animacji. Trwa trzy parametry: sugerowane wartości początkowej, sugerowane wartości końcowej i <xref:System.Windows.Media.Animation.AnimationClock>, który służy do określania postęp animacji.  
+ Pochodzi od  *\<typ >* klasy animacji i zaimplementuj metodę GetCurrentValueCore. Metoda GetCurrentValueCore zwraca bieżącą wartość animacji. Zajmuje trzy parametry: sugerowane wartości początkowej, sugerowana wartość końcową, a <xref:System.Windows.Media.Animation.AnimationClock>, którego używasz, aby określić postęp animacji.  
   
- Ponieważ  *\<typu >* podstawy animacji klasy dziedziczą <xref:System.Windows.Freezable> klasy, należy również zmienić <xref:System.Windows.Freezable.CreateInstanceCore%2A> core, aby zwrócić nowe wystąpienie klasy. Jeśli klasa nie używa właściwości zależności do przechowywania danych lub wymaga dodatkową inicjację po utworzeniu, konieczne może być zastąpienie dodatkowe metody; zobacz [obiektu Freezable Przegląd obiektów](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md) Aby uzyskać więcej informacji.  
+ Ponieważ  *\<typ >* podstawy animacji klasy dziedziczą <xref:System.Windows.Freezable> klasy, konieczne jest również przesłonięcie <xref:System.Windows.Freezable.CreateInstanceCore%2A> core, aby zwrócić nowe wystąpienie klasy. Jeśli klasa nie używa właściwości zależności do przechowywania swoich danych lub wymaga ona dodatkową inicjację po utworzeniu, może być konieczne zastąpienie dodatkowe metody; zobacz [Przegląd obiektów Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md) Aby uzyskać więcej informacji.  
   
- Aby uzyskać więcej informacji, zobacz dokumentację metody GetCurrentValueCore dla  *\<typu >* klasę podstawy animacji dla typu, który ma być animowane. Na przykład zobacz [próbki animacji niestandardowej](http://go.microsoft.com/fwlink/?LinkID=159981)  
+ Aby uzyskać więcej informacji, zobacz w dokumentacji metody GetCurrentValueCore  *\<typ >* podstawy animacji klasy dla typu, który ma być animowany. Aby uzyskać przykład, zobacz [przykład animacji niestandardowych](https://go.microsoft.com/fwlink/?LinkID=159981)  
   
  **Alternatywnych metod**  
   
- Jeśli po prostu chcesz zmienić sposób interpolowane z wartości animacji, biorąc pod uwagę, wynikające z jednego z  *\<typu >* klatki kluczowej klasy. Klatki tworzenia może być używany z odpowiadającego  *\<typu >* AnimationUsingKeyFrames dostarczonych przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+ Jeśli po prostu chcesz zmienić, jak są interpolowane wartości animacji, biorąc pod uwagę elementu pochodnego dla jednego z  *\<typ >* klasy klatki kluczowej. Klatka kluczowa tworzenia mogą być używane z odpowiednich  *\<typ >* AnimationUsingKeyFrames dostarczone przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
-### <a name="derive-from-animationtimeline"></a>Pochodzi od klasy AnimationTimeline  
- Pochodzić od <xref:System.Windows.Media.Animation.AnimationTimeline> klasy, jeśli chcesz utworzyć animację dla typu, który nie ma jeszcze odpowiadającego mu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animacji lub gdy chcesz utworzyć animację, który nie jest silnie typu.  
+### <a name="derive-from-animationtimeline"></a>Pochodzi od AnimationTimeline  
+ Pochodzi od <xref:System.Windows.Media.Animation.AnimationTimeline> klasy, gdy użytkownik chce utworzyć animację dla typu, który nie ma już pasujący obiekt typu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animacji lub gdy chcesz utworzyć animację, który nie jest silnie typizowane.  
   
  **Instrukcje dotyczące wdrażania**  
   
- Pochodzić od <xref:System.Windows.Media.Animation.AnimationTimeline> klasy i przesłonięcie następujących elementów:  
+ Pochodzi od <xref:System.Windows.Media.Animation.AnimationTimeline> klasy i jest przesłonięcie następujących składowych:  
   
--   <xref:System.Windows.Freezable.CreateInstanceCore%2A> — W przypadku nowej klasie konkretnych, konieczne jest przesłonięcie <xref:System.Windows.Freezable.CreateInstanceCore%2A> aby zwrócić nowe wystąpienie klasy.  
+-   <xref:System.Windows.Freezable.CreateInstanceCore%2A> — W przypadku nowej klasie konkretnych, konieczne jest przesłonięcie <xref:System.Windows.Freezable.CreateInstanceCore%2A> zwrócić nowe wystąpienie klasy.  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> — Przesłonić tę metodę do zwracania bieżącej wartości animacji. Trwa trzy parametry: wartość pochodzenia domyślną, wartość domyślną docelowego i <xref:System.Windows.Media.Animation.AnimationClock>. Użyj <xref:System.Windows.Media.Animation.AnimationClock> uzyskać bieżącą godzinę lub postępu dla animacji. Można wybrać, czy należy użyć wartości domyślnych źródło i miejsce docelowe.  
+-   <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> — Przesłonić tę metodę w celu zwracania bieżącej wartości animacji. Zajmuje trzy parametry: wartość domyślną pochodzenia, wartość domyślna docelowego i <xref:System.Windows.Media.Animation.AnimationClock>. Użyj <xref:System.Windows.Media.Animation.AnimationClock> uzyskiwania bieżącego czasu i postęp animacji. Możesz wybrać, czy próba wykorzystania domyślnych wartości początkowe i docelowe.  
   
 -   <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> — Zastąpić tę właściwość, aby wskazać, czy animacja używa domyślnej wartości docelowej, określone przez <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> metody.  
   
 -   <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> — Zastąpić tę właściwość, aby wskazać <xref:System.Type> danych wyjściowych tworzy animacji.  
   
- Jeśli klasa nie używa właściwości zależności do przechowywania danych lub wymaga dodatkową inicjację po utworzeniu, konieczne może być zastąpienie dodatkowe metody; zobacz [obiektu Freezable Przegląd obiektów](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md) Aby uzyskać więcej informacji.  
+ Jeśli klasa nie używa właściwości zależności do przechowywania swoich danych lub wymaga ona dodatkową inicjację po utworzeniu, może być konieczne zastąpienie dodatkowe metody; zobacz [Przegląd obiektów Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md) Aby uzyskać więcej informacji.  
   
- Zalecane modelu (używane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animacje) jest użycie dwa poziomy dziedziczenia:  
+ Zalecane paradygmat (używane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animacji) jest użycie dwóch poziomach dziedziczenia:  
   
-1.  Utwórz abstrakcyjnego  *\<typu >* podstawy animacji klasy, która jest pochodną <xref:System.Windows.Media.Animation.AnimationTimeline>. Ta klasa powinny zastępować <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> metody. Należy również wprowadzić nowej metody abstrakcyjnej GetCurrentValueCore i zastąpić <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> tak, aby sprawdza poprawność typów wartości domyślnej pochodzenia i domyślne parametry wartości docelowej, a następnie wywołuje GetCurrentValueCore.  
+1.  Utwórz abstrakcyjną  *\<typ >* klasy podstawy animacji, która pochodzi od klasy <xref:System.Windows.Media.Animation.AnimationTimeline>. Ta klasa powinien przesłonić <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> metody. Należy również wprowadzenie nowej metody abstrakcyjne GetCurrentValueCore i Zastąp <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> tak, aby typy wartość domyślna, pochodzenia i domyślne parametry wartości docelowej jest sprawdzane, a następnie wywołuje GetCurrentValueCore.  
   
-2.  Utwórz inną klasę, która dziedziczy z nowej  *\<typu >* klasy podstawy animacji i zastępuje <xref:System.Windows.Freezable.CreateInstanceCore%2A> metody, metoda GetCurrentValueCore wprowadzone, i <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> właściwości.  
+2.  Tworzenie innej klasy, która dziedziczy z nowego  *\<typ >* klasy podstawy animacji i zastępuje <xref:System.Windows.Freezable.CreateInstanceCore%2A> metody, metoda GetCurrentValueCore, która zostanie wprowadzona i <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> właściwości.  
   
  **Alternatywnych metod**  
   
- Aby animować typu, który nie ma odpowiedniego z lub do/przez animację ani klucz ramki animacji, należy rozważyć użycie <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>. Ponieważ jest słabo wpisany, <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> można animować dowolnego typu wartości. Wadą tego podejścia jest to, że <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> obsługuje tylko interpolacji dyskretnych.  
+ Aby animować typ, który nie ma odpowiedniego animacji od/do/przez ani animacji kluczowych klatek, należy rozważyć użycie <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>. Ponieważ ze słabą kontrolą typów, <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> można animować wartość dowolnego typu. Wadą tego podejścia jest to, że <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> obsługuje tylko interpolacji dyskretnych.  
   
 <a name="useperframecallback"></a>   
-## <a name="use-per-frame-callback"></a>Użyj wywołania zwrotnego na ramki  
- Tej metody należy użyć, gdy należy całkowicie pominąć [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] systemu animacji. Jeden scenariusz takie podejście jest animacje fizycznych, gdzie w każdej animacji kroku nowe kierunek lub położenie animowany obiektów musi to być przeliczane na podstawie ostatni zestaw obiektów interakcji.  
+## <a name="use-per-frame-callback"></a>Użyj wywołania zwrotnego w poszczególnych klatkach  
+ Korzystając z tego podejścia, gdy trzeba całkowicie pominąć [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] system animacji. Jeden scenariusz, w tym podejściu jest fizyki animacje, gdzie na każdą animację kroku nowym kierunku lub położenie obiektów animowany musi być obliczane ponownie na podstawie ostatni zestaw interakcje obiektu.  
   
  **Instrukcje dotyczące wdrażania**  
   
- W odróżnieniu od innych metod opisanych w tym omówieniu Aby użyć wywołania zwrotnego na ramki nie trzeba utworzyć klasę klatek kluczowych animacji niestandardowej lub.  
+ W przeciwieństwie do innych podejść opisanych w tym omówieniu używać wywołania zwrotnego w poszczególnych klatkach nie potrzebujesz do tworzenia animacji niestandardowej lub klasa klatek kluczowych.  
   
- Zamiast tego należy zarejestrować dla <xref:System.Windows.Media.CompositionTarget.Rendering> zdarzeń obiektu, który zawiera obiekty mają być animowane. Ta metoda obsługi zdarzeń jest wywoływana raz na klatkę. Każdej aktualizacji [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] marshals danych utrwalonych renderowania w drzewie wizualnym w drzewie kompozycji sieci metoda obsługi zdarzeń jest wywoływana.  
+ Zamiast tego należy zarejestrować dla <xref:System.Windows.Media.CompositionTarget.Rendering> zdarzenia obiektu, który zawiera obiekty mają być animowane. Ta metoda obsługi zdarzeń jest wywoływana raz na klatkę. Każdym razem, gdy program [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] marshals danych utrwalonych renderowania, w drzewie wizualnym w drzewie kompozycji, Twoja metoda programu obsługi zdarzeń jest wywoływana.  
   
- W program obsługi zdarzeń, wykonaj użytkownika niezależnie od obliczeń niezbędnych dla animacji efektu i ustaw właściwości obiektów mają być animowane z tymi wartościami.  
+ W obsługi zdarzenia wykonują swoje niezależnie od obliczeń niezbędnych animacji efektu i ustaw właściwości obiektów, aby animować z tymi wartościami.  
   
- Można uzyskać czasu prezentacji bieżącej ramki <xref:System.EventArgs> skojarzony z tym zdarzeń mogą być rzutowane jako <xref:System.Windows.Media.RenderingEventArgs>, które zapewniają <xref:System.Windows.Media.RenderingEventArgs.RenderingTime%2A> właściwości, które można użyć w celu uzyskania bieżącej ramki do renderowania czasu.  
+ Uzyskać czasu prezentacji bieżącej ramki <xref:System.EventArgs> skojarzony z tym zdarzeń może być rzutowany jako <xref:System.Windows.Media.RenderingEventArgs>, które zapewniają <xref:System.Windows.Media.RenderingEventArgs.RenderingTime%2A> właściwość, która służy do uzyskania bieżącej ramki przez renderowanie czasu.  
   
  Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Media.CompositionTarget.Rendering> strony.  
   
@@ -132,4 +132,4 @@ W tym temacie opisano, jak i kiedy rozszerzenie [!INCLUDE[TLA2#tla_winclient](..
  [Animacje ścieżki — przegląd](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)  
  [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [Animacja i system chronometrażu — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
- [Przykładowe animacji niestandardowej](http://go.microsoft.com/fwlink/?LinkID=159981)
+ [Przykład animacji niestandardowej](https://go.microsoft.com/fwlink/?LinkID=159981)

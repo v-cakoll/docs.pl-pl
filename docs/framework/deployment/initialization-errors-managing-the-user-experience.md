@@ -8,20 +8,20 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6fe59075f04443ba40c209b6cda5a5071d16c79e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a30fe0aac4bfacc71137474837b95371e7d85b09
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392151"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394744"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>Błędy inicjowania programu .NET Framework: zarządzanie wrażeniami użytkownika
-Wspólny system aktywacji języka wspólnego (CLR) określa wersję środowiska CLR, która będzie służyć do uruchamiania kodu aplikacji zarządzanych. W niektórych przypadkach system aktywacji nie można znaleźć wersji środowiska CLR do załadowania. Ta sytuacja zwykle występuje, gdy aplikacja wymaga wersji środowiska CLR, która jest nieprawidłowa lub nie została zainstalowana na danym komputerze. Jeśli nie odnaleziono żądanej wersji, system aktywacji CLR zwraca kod błędu HRESULT z funkcji lub interfejs, który został wywołany i może być wyświetlany komunikat o błędzie do użytkownika, który jest uruchomiona aplikacja. Ten artykuł zawiera listę kodów HRESULT i objaśniono, w jaki sposób można zapobiec komunikat o błędzie wyświetlany.  
+Wspólny system aktywacji języka wspólnego (CLR) określa wersję środowiska CLR, która będzie służyć do uruchamiania kodu aplikacji zarządzanej. W niektórych przypadkach system aktywacji nie można odnaleźć wersji środowiska CLR do załadowania. Ta sytuacja występuje zwykle w przypadku, gdy aplikacja wymaga wersji środowiska CLR, która jest nieprawidłowa lub nie została zainstalowana na danym komputerze. Jeśli żądana wersja nie zostanie znaleziony, system aktywacji środowiska CLR zwraca kod błędu HRESULT z funkcji lub interfejs, który został wywołany i może być wyświetlany komunikat o błędzie do użytkownika, który uruchomił aplikację. Ten artykuł zawiera listę kodów HRESULT i wyjaśniono, jak można zapobiec komunikat o błędzie są wyświetlane.  
   
- Środowisko CLR rejestrowania oferuje infrastrukturę służącą do pomóc w debugowaniu problemów aktywacji środowiska CLR, zgodnie z opisem w [porady: debugowanie problemów aktywacji środowiska CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md). Ta infrastruktura nie należy mylić z [dzienniki powiązań zestawów](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), które są całkowicie innej.  
+ Środowisko CLR oferuje infrastrukturę rejestrowania, aby ułatwić debugowanie problemów aktywacji środowiska CLR, zgodnie z opisem w [porady: debugowanie problemów aktywacji środowiska CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md). Ta infrastruktura nie należy mylić z [dzienniki powiązań zestawów](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), które są zupełnie innego.  
   
 ## <a name="clr-activation-hresult-codes"></a>Kody HRESULT aktywacji środowiska CLR  
- Aktywacja CLR interfejsów API zwraca kody HRESULT do zgłaszania wynik operacji aktywacji do hosta. Hosty CLR zawsze powinni skontaktować te wartości zwracanych przed wykonaniem dodatkowych operacji.  
+ Aktywacja CLR interfejsów API zwraca wartość HRESULT kody do zgłaszania wynik operacji aktywacji do hosta. Hosty środowiska CLR zawsze powinni konsultować się te wartości zwracane, przed wykonaniem dodatkowych operacji.  
   
 -   CLR_E_SHIM_RUNTIMELOAD  
   
@@ -35,56 +35,56 @@ Wspólny system aktywacji języka wspólnego (CLR) określa wersję środowiska 
   
 -   CLR_E_SHIM_SHUTDOWNINPROGRESS  
   
-## <a name="ui-for-initialization-errors"></a>Interfejs użytkownika dla błędy inicjowania  
- Jeśli system aktywacji środowiska CLR nie może załadować poprawną wersję środowiska uruchomieniowego, które jest wymagane przez aplikację, wyświetla komunikat o błędzie do użytkowników w celu poinformowania ich, że komputera nie jest prawidłowo skonfigurowana do uruchamiania aplikacji oraz udostępnia je za pomocą możliwość rozwiązać tę sytuację. W takiej sytuacji zwykle zobaczy następujący komunikat o błędzie. Użytkownik może wybrać **tak** można przejść do witryny firmy Microsoft, w którym mogą pobrać poprawną wersję .NET Framework dla aplikacji.  
+## <a name="ui-for-initialization-errors"></a>Błędy inicjowania interfejsu użytkownika  
+ Jeśli system aktywacji środowiska CLR nie można załadować poprawną wersję środowiska uruchomieniowego, które jest wymagane przez aplikację, wyświetla komunikat o błędzie do użytkowników i poinformuj ich o tym komputerze nie jest prawidłowo skonfigurowany do uruchamiania aplikacji i udostępnia je za pomocą możliwości, aby rozwiązać ten problem. Następujący komunikat o błędzie, zazwyczaj są przedstawione w tej sytuacji. Użytkownik może wybrać **tak** można przejść do witryny firmy Microsoft, w którym będą oni mogli pobrać poprawną wersję .NET Framework dla aplikacji.  
   
- ![Okno dialogowe Błąd inicjowania programu .NET framework](../../../docs/framework/deployment/media/initerrordialog.png "InitErrorDialog")  
-Typowym komunikatem o błędzie dla błędów inicjowania  
+ ![Okno dialogowe Błąd inicjalizacji programu .NET framework](../../../docs/framework/deployment/media/initerrordialog.png "InitErrorDialog")  
+Komunikat o błędzie typowe błędy inicjowania  
   
 ## <a name="resolving-the-initialization-error"></a>Błąd podczas inicjowania rozpoznawania  
- Deweloperzy masz różne opcje umożliwiające sterowanie komunikat o błędzie inicjowania .NET Framework. Na przykład umożliwia flagi interfejsu API uniemożliwić komunikat wyświetlany, zgodnie z opisem w następnej sekcji. Jednak nadal należy rozwiązać problem, który uniemożliwia załadowanie wymagane środowisko uruchomieniowe aplikacji. W przeciwnym razie aplikacja nie może działać w ogóle lub niektóre funkcje mogą nie być dostępne.  
+ Jako deweloper masz różne opcje do kontrolowania komunikat o błędzie inicjowania środowiska .NET Framework. Na przykład można użyć flagi interfejsu API aby zapobiec wiadomości są wyświetlane zgodnie z opisem w następnej sekcji. Jednak nadal trzeba rozwiązać ten problem uniemożliwiający ładowanie żądanego środowiska uruchomieniowego aplikacji. W przeciwnym razie aplikacja może nie działać w ogóle lub niektóre funkcje mogą nie być dostępne.  
   
- Aby rozwiązać problemy podstawowej i zapewnić najlepsze środowisko użytkownika (mniej komunikaty o błędach), zaleca się następujące czynności:  
+ Aby rozwiązać podstawowe problemy i zapewniają najlepsze środowisko użytkownika (mniej komunikaty o błędach), zalecamy wykonanie poniższych czynności:  
   
--   W przypadku aplikacji .NET Framework 3.5 (i starszych): Konfigurowanie aplikacji do obsługi programu .NET Framework 4 lub 4.5 (zobacz [instrukcje](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)).  
+-   Dla aplikacji .NET Framework 3.5 (i starszych): Konfigurowanie aplikacji do obsługi programu .NET Framework 4 lub 4.5 (patrz [instrukcje](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)).  
   
--   W przypadku aplikacji .NET Framework 4: Zainstaluj pakiet redystrybucyjny programu .NET Framework 4 jako część konfiguracji aplikacji. Zobacz [przewodnik wdrażania dla deweloperów](../../../docs/framework/deployment/deployment-guide-for-developers.md).  
+-   W przypadku aplikacji .NET Framework 4: Zainstaluj pakiet redystrybucyjny programu .NET Framework 4, jako część ustawień aplikacji. Zobacz [przewodnik wdrażania dla deweloperów](../../../docs/framework/deployment/deployment-guide-for-developers.md).  
   
 ## <a name="controlling-the-error-message"></a>Kontrolowanie komunikat o błędzie  
- Wyświetlanie komunikat o błędzie do komunikacji nie znaleziono żądanej wersji .NET Framework można wyświetlić jako przydatne usługi lub drobne określenia dokuczliwości dla użytkowników. W obu przypadkach interfejs ten można kontrolować przez przekazanie flagi aktywacji interfejsów API.  
+ Wyświetlanie komunikatu o błędzie do komunikowania się nie znaleziono żądanej wersji .NET Framework mogą być wyświetlane jako pomocny usługi lub pomocniczych określenia dokuczliwości dla użytkowników. W obu przypadkach można kontrolować tego interfejsu użytkownika przez przekazanie flagi aktywacji interfejsów API.  
   
- [ICLRMetaHostPolicy::GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) metoda przyjmuje [metahost_policy_flags —](../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) wyliczeniowego jako dane wejściowe. Może zawierać flagi METAHOST_POLICY_SHOW_ERROR_DIALOG poprosić komunikat o błędzie, jeśli nie odnaleziono żądanej wersji środowiska CLR. Domyślnie nie jest wyświetlany komunikat o błędzie. ( [ICLRMetaHost::GetRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md) — metoda nie akceptuje tej flagi i nie zapewnia inny sposób, aby wyświetlić komunikat o błędzie.)  
+ [Iclrmetahostpolicy::getrequestedruntime —](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) metoda przyjmuje [metahost_policy_flags —](../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) element członkowski wyliczenia jako dane wejściowe. Może zawierać flagi METAHOST_POLICY_SHOW_ERROR_DIALOG żądania komunikat o błędzie, jeśli nie można odnaleźć żądanej wersji środowiska CLR. Komunikat o błędzie nie jest wyświetlana domyślnie. ( [Iclrmetahost::getruntime —](../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md) metody nie akceptuje tej flagi, a nie zapewnia inny sposób, aby wyświetlić komunikat o błędzie.)  
   
- System Windows udostępnia [SetErrorMode](http://go.microsoft.com/fwlink/p/?LinkID=255242) funkcja, która służy do deklarowania, czy ma komunikaty o błędach, który będzie wyświetlany w wyniku kod, który jest uruchamiany w ramach procesu. Można określić parametr SEM_FAILCRITICALERRORS flagę w celu uniemożliwienia wyświetlania komunikatu o błędzie.  
+ Windows oferuje [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkID=255242) funkcja, która służy do deklarowania, czy chcesz, aby komunikaty o błędach do wyświetlenia wyniku kod, który jest uruchamiany w ramach procesu. Można określić flagę SEM_FAILCRITICALERRORS, aby uniemożliwić wyświetlenie komunikatu o błędzie.  
   
- Jednak w niektórych scenariuszach, należy zastąpić ustawienia parametr SEM_FAILCRITICALERRORS procesu aplikacji. Na przykład jeśli natywnego składnika modelu COM obsługującego środowiska CLR i który znajduje się w procesie, gdzie parametr SEM_FAILCRITICALERRORS ma wartość, można zastąpić flagi, w zależności od wpływu wyświetlanie komunikatów o błędach w ramach tego procesu określonej aplikacji. W takim przypadku można jedną z następujących flag zastąpić parametr SEM_FAILCRITICALERRORS:  
+ Jednak w niektórych przypadkach warto zastąpić ustawienie SEM_FAILCRITICALERRORS ustawione przez proces aplikacji. Na przykład jeśli natywnych składnika modelu COM obsługujący środowiska CLR i który znajduje się w procesie, w którym SEM_FAILCRITICALERRORS je nastaven, możesz zastąpić flagi, w zależności od wpływu wyświetlanie komunikatów o błędach w ramach tego procesu określonej aplikacji. W takim przypadku służy jedną z następujących flag do zastąpienia SEM_FAILCRITICALERRORS:  
   
--   Użyj METAHOST_POLICY_IGNORE_ERROR_MODE z [ICLRMetaHostPolicy::GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) metody.  
+-   Użyj METAHOST_POLICY_IGNORE_ERROR_MODE z [iclrmetahostpolicy::getrequestedruntime —](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) metody.  
   
--   Użyj RUNTIME_INFO_IGNORE_ERROR_MODE z [GetRequestedRuntimeInfo](../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md) funkcji.  
+-   Użyj RUNTIME_INFO_IGNORE_ERROR_MODE z [getrequestedruntimeinfo —](../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md) funkcji.  
   
-## <a name="ui-policy-for-clr-provided-hosts"></a>Zasady interfejsu użytkownika dla hostów wprowadzone do środowiska CLR  
- CLR zawiera zestaw hostów dla różnych scenariuszy, a te wszystkie hosty wyświetlane komunikaty o błędach, gdy występują problemy podczas ładowania wymagana wersja środowiska uruchomieniowego. Poniższa tabela zawiera listę hostów i ich zasady komunikat błędu.  
+## <a name="ui-policy-for-clr-provided-hosts"></a>Zasady interfejsu użytkownika dla hostów, dostarczone przez CLR  
+ Środowisko CLR obejmuje zestawu hostów dla różnych scenariuszy, a te wszystkie hosty wyświetlany komunikat o błędzie, gdy występują problemy podczas ładowania wymaganą wersję środowiska uruchomieniowego. Poniższa tabela zawiera listę hostów i ich zasadami komunikat o błędzie.  
   
-|Host aparatu CLR|Opis|Błąd komunikatu zasad|Komunikat o błędzie, można wyłączyć?|  
+|Host aparatu CLR|Opis|Zasady wiadomości błędu|Można wyłączyć komunikat o błędzie?|  
 |--------------|-----------------|--------------------------|------------------------------------|  
-|Zarządzany host EXE|Powoduje uruchomienie zarządzanych plików exe.|Jest wyświetlany w przypadku brakujących wersja programu .NET Framework|Nie|  
-|Zarządzany host COM|Ładunki zarządzane składniki COM do procesu.|Jest wyświetlany w przypadku brakujących wersja programu .NET Framework|Tak, ustawiając parametr SEM_FAILCRITICALERRORS Flaga|  
-|ClickOnce host|Uruchamia aplikacji ClickOnce.|Jest wyświetlany w przypadku brakujących wersji programu .NET Framework, począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|Nie|  
-|XBAP hosta|Uruchamia aplikacje WPF XBAP.|Jest wyświetlany w przypadku brakujących wersji programu .NET Framework, począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|Nie|  
+|Zarządzany host EXE|Uruchamia zarządzanych plików exe.|Jest wyświetlana w przypadku brakującą wersję .NET Framework|Nie|  
+|Zarządzany host COM|Ładunki zarządzane składniki COM do procesu.|Jest wyświetlana w przypadku brakującą wersję .NET Framework|Tak, ustawiając SEM_FAILCRITICALERRORS Flaga|  
+|ClickOnce host|Powoduje uruchomienie aplikacji ClickOnce.|Jest wyświetlana w przypadku brakujących wersji programu .NET Framework, począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|Nie|  
+|XBAP host|Powoduje uruchomienie aplikacji WPF XBAP.|Jest wyświetlana w przypadku brakujących wersji programu .NET Framework, począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|Nie|  
   
 ## <a name="includewin8includeswin8-mdmd-behavior-and-ui"></a>[!INCLUDE[win8](../../../includes/win8-md.md)] Zachowanie i interfejsu użytkownika  
- System aktywacji CLR zapewnia te same zachowania i interfejsu użytkownika na [!INCLUDE[win8](../../../includes/win8-md.md)] jak w innych wersjach systemu operacyjnego Windows, chyba że w przypadku napotkania problemów podczas ładowania CLR 2.0. [!INCLUDE[win8](../../../includes/win8-md.md)] zawiera [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], który używa CLR 4.5. Jednak [!INCLUDE[win8](../../../includes/win8-md.md)] nie ma programu .NET Framework 2.0, 3.0 lub 3.5, która Użyj CLR 2.0. W związku z tym aplikacje, które są zależne od CLR 2.0 nie należy uruchamiać na [!INCLUDE[win8](../../../includes/win8-md.md)] domyślnie. Zamiast tego wyświetlane następujące okno dialogowe, aby umożliwić użytkownikom instalowanie programu .NET Framework 3.5. Użytkownicy mogą również włączyć .NET Framework 3.5 w Panelu sterowania. Obie te opcje są omówionych w artykule [zainstalować program .NET Framework 3.5 w systemie Windows 10, Windows 8.1 i Windows 8](../../../docs/framework/install/dotnet-35-windows-10.md).  
+ System aktywacji środowiska CLR zawiera te same zachowanie i interfejsu użytkownika po [!INCLUDE[win8](../../../includes/win8-md.md)] tak samo jak na inne wersje systemu operacyjnego Windows, z wyjątkiem po napotkaniu problemy z ładowaniem środowisko CLR 2.0. [!INCLUDE[win8](../../../includes/win8-md.md)] obejmuje [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], który używa funkcji CLR 4.5. Jednak [!INCLUDE[win8](../../../includes/win8-md.md)] nie zawiera programu .NET Framework 2.0, 3.0 lub 3.5, która za pomocą wersji CLR 2.0. W rezultacie aplikacje, które są zależne od wersji CLR 2.0 nie należy uruchamiać na [!INCLUDE[win8](../../../includes/win8-md.md)] domyślnie. Zamiast tego są wyświetlane następujące okno dialogowe, aby umożliwić użytkownikom instalowanie programu .NET Framework 3.5. Użytkowników można również włączyć program .NET Framework 3.5 w Panelu sterowania. Obie opcje zostały omówione w artykule [Instalowanie programu .NET Framework 3.5 w systemie Windows 10, Windows 8.1 i Windows 8](../../../docs/framework/install/dotnet-35-windows-10.md).  
   
- ![Okno dialogowe instalacji 3.5 w systemie Windows 8](../../../docs/framework/deployment/media/installdialog.png "installdialog")  
-Monituj o instalowanie programu .NET Framework 3.5 na żądanie  
+ ![Okno dialogowe instalacji wersji 3.5 w systemie Windows 8](../../../docs/framework/deployment/media/installdialog.png "installdialog")  
+Wyślij monit o zainstalowanie programu .NET Framework 3.5 na żądanie  
   
 > [!NOTE]
->  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Zastępuje programu .NET Framework 4 (CLR 4) na komputerze użytkownika. W związku z tym aplikacji .NET Framework 4 bezproblemowo, uruchom bez wyświetlania tego okna dialogowego, w [!INCLUDE[win8](../../../includes/win8-md.md)].  
+>  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Zastępuje programu .NET Framework 4 (Środowisko CLR 4) na komputerze użytkownika. W związku z tym, .NET Framework 4, aplikacje są uruchamiane bezproblemowo, bez wyświetlania tego okna dialogowego w [!INCLUDE[win8](../../../includes/win8-md.md)].  
   
- Po zainstalowaniu programu .NET Framework 3.5, użytkownicy mogą uruchamiać aplikacje, które są zależne od programu .NET Framework 2.0, 3.0 lub 3.5 na ich [!INCLUDE[win8](../../../includes/win8-md.md)] komputerów. .NET Framework 1.0 i 1.1 aplikacji, mogą uruchamiać również pod warunkiem, że te aplikacje nie zostały jawnie skonfigurowane do uruchomienia tylko na .NET Framework w wersji 1.0 lub 1.1. Zobacz [Migrowanie z programu .NET Framework 1.1](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md).  
+ Po zainstalowaniu programu .NET Framework 3.5, użytkownicy mogą uruchamiać aplikacje zależne od programu .NET Framework 2.0, 3.0 lub 3.5 ich [!INCLUDE[win8](../../../includes/win8-md.md)] komputerów. Zadania mogą także uruchamiane .NET Framework 1.0 i 1.1 aplikacji, pod warunkiem, że te aplikacje nie są jawnie skonfigurowane do uruchamiania tylko na .NET Framework 1.0 i 1.1. Zobacz [migracji z programu .NET Framework 1.1](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md).  
   
- Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], aby dołączyć wpisy dziennika, służące do rejestrowania, kiedy i dlaczego jest wyświetlany komunikat o błędzie inicjowania została ulepszona rejestrowania aktywacji środowiska CLR. Aby uzyskać więcej informacji, zobacz [porady: debugowanie problemów aktywacji środowiska CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md).  
+ Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], rejestrowanie aktywacji środowiska CLR został ulepszony, aby dołączyć wpisy dziennika, służące do rejestrowania, kiedy i dlaczego jest wyświetlany komunikat o błędzie inicjowania. Aby uzyskać więcej informacji, zobacz [porady: debugowanie problemów aktywacji środowiska CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik wdrażania dla deweloperów](../../../docs/framework/deployment/deployment-guide-for-developers.md)  

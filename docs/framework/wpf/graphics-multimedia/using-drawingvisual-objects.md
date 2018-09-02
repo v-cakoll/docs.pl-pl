@@ -8,63 +8,63 @@ helpviewer_keywords:
 - visual layer [WPF], DrawingVisual objects
 - DrawingVisual objects in visual layer [WPF]
 ms.assetid: 0b4e711d-e640-40cb-81c3-8f5c59909b7d
-ms.openlocfilehash: e76ac22d4b8205576c8ed9ab67482c143a52fbd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 799892424f92782d71b9a35e76d722d1725815ea
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33565317"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390957"
 ---
 # <a name="using-drawingvisual-objects"></a>Użycie obiektów DrawingVisual
-Ten temat zawiera omówienie sposobu użycia <xref:System.Windows.Media.DrawingVisual> obiekty w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] visual warstwy.  
+Ten temat zawiera omówienie sposobu użycia <xref:System.Windows.Media.DrawingVisual> obiekty w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] warstwy visual.  
   
 <a name="drawingvisual_object"></a>   
-## <a name="drawingvisual-object"></a>Obiekt DrawingVisual  
- <xref:System.Windows.Media.DrawingVisual> To lekkie rysowania klasy, który jest używany do renderowania kształty, obrazy i tekst. Ta klasa jest traktowane jako lekkie, ponieważ nie dostarcza obsługi układu lub zdarzeń, co zwiększa wydajność. Z tego powodu rysunki idealnie nadają się do tła i grafik przycinania.  
+## <a name="drawingvisual-object"></a>Obiektów DrawingVisual  
+ <xref:System.Windows.Media.DrawingVisual> To lekkie rysowania klasę, która jest używany do renderowania kształty, obrazy i tekst. Ta klasa jest uważany za uproszczone, ponieważ nie dostarcza obsługi układu lub zdarzeń, która zwiększa ich wydajność. Z tego powodu rysunki są doskonałe do tła i obiekty clipart.  
   
 <a name="drawingvisual_host_container"></a>   
-## <a name="drawingvisual-host-container"></a>Kontener DrawingVisual hosta  
- Aby można było używać <xref:System.Windows.Media.DrawingVisual> obiektów, należy utworzyć kontener hosta dla obiektów. Obiekt kontenera hosta musi pochodzić od <xref:System.Windows.FrameworkElement> klasy, która dostarcza układ i obsługa zdarzeń obsługi, który <xref:System.Windows.Media.DrawingVisual> klasa nie ma. Obiekt kontenera hosta nie są wyświetlane wszystkie właściwości widoczne, od momentu jego głównym celem jest zawierają obiekty podrzędne. Jednak <xref:System.Windows.UIElement.Visibility%2A> musi mieć ustawioną właściwość kontenera hosta <xref:System.Windows.Visibility.Visible>; w przeciwnym razie żaden z jego elementów podrzędnych nie będzie widoczna.  
+## <a name="drawingvisual-host-container"></a>DrawingVisual hosta kontenera  
+ Aby można było używać <xref:System.Windows.Media.DrawingVisual> obiektów, należy utworzyć kontener hosta dla obiektów. Obiekt kontenera hosta musi pochodzić od klasy <xref:System.Windows.FrameworkElement> klasy, która dostarcza układ i obsługi zdarzeń pomocy technicznej, który <xref:System.Windows.Media.DrawingVisual> klasy nie ma. Obiekt kontenera hosta nie wyświetla żadnych widocznych właściwości, ponieważ ich głównym celem jest zawierają obiekty podrzędnych. Jednak <xref:System.Windows.UIElement.Visibility%2A> właściwości kontenera hosta musi być równa <xref:System.Windows.Visibility.Visible>; w przeciwnym razie będą widoczne żadne z jego elementów podrzędnych.  
   
- Podczas tworzenia obiektu hosta kontenera obiektów visual należy przechowywać odwołania do obiektów visual w <xref:System.Windows.Media.VisualCollection>. Użyj <xref:System.Windows.Media.VisualCollection.Add%2A> metody w celu dodania do hosta kontenera obiektu visual. W poniższym przykładzie tworzony jest obiekt kontenera hosta i trzy obiekty widoczne są dodawane do jej <xref:System.Windows.Media.VisualCollection>.  
+ Podczas tworzenia obiektu kontenera hosta dla obiektów wizualnych chcesz przechować odwołania do obiektów visual w <xref:System.Windows.Media.VisualCollection>. Użyj <xref:System.Windows.Media.VisualCollection.Add%2A> metodę, aby dodać obiekt wizualny do kontenera hosta. W poniższym przykładzie tworzony jest obiekt kontenera hosta, a trzy obiekty wizualne są dodawane do jej <xref:System.Windows.Media.VisualCollection>.  
   
  [!code-csharp[DrawingVisualSample#100](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#100)]
  [!code-vb[DrawingVisualSample#100](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#100)]  
   
 > [!NOTE]
->  Dla przykładu kompletny kod, z którego został wyodrębniony w poprzednim przykładzie kodu, zobacz [trafień przy użyciu DrawingVisuals próbki](http://go.microsoft.com/fwlink/?LinkID=159994).  
+>  Cały przykładowy kod z którego został wyodrębniony w poprzednim przykładzie kodu, można zobaczyć [trafień za pomocą DrawingVisuals próbkę](https://go.microsoft.com/fwlink/?LinkID=159994).  
   
 <a name="creating_drawingvisual_objects"></a>   
 ## <a name="creating-drawingvisual-objects"></a>Tworzenie obiektów DrawingVisual  
- Po utworzeniu <xref:System.Windows.Media.DrawingVisual> obiektu, nie ma on rysowania zawartości. Można dodać tekstu, grafiki lub obrazu zawartości przez pobranie obiektu <xref:System.Windows.Media.DrawingContext> i rysowania do niego. A <xref:System.Windows.Media.DrawingContext> jest zwracany przez wywołanie metody <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A> metody <xref:System.Windows.Media.DrawingVisual> obiektu.  
+ Po utworzeniu <xref:System.Windows.Media.DrawingVisual> obiektu, nie ma jej rysowania zawartości. Można dodać tekst, grafikę lub zawartości obrazu, pobierając obiekt <xref:System.Windows.Media.DrawingContext> i rysowanie w nim. A <xref:System.Windows.Media.DrawingContext> jest zwracany przez wywołanie metody <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A> metody <xref:System.Windows.Media.DrawingVisual> obiektu.  
   
- Rysowanie w prostokącie <xref:System.Windows.Media.DrawingContext>, użyj <xref:System.Windows.Media.DrawingContext.DrawRectangle%2A> metody <xref:System.Windows.Media.DrawingContext> obiektu. Istnieje podobnych metod rysowania innych typów zawartości. Gdy skończysz rysowania zawartości do <xref:System.Windows.Media.DrawingContext>, wywołaj <xref:System.Windows.Media.DrawingContext.Close%2A> metody, aby zamknąć <xref:System.Windows.Media.DrawingContext> i utrwala zawartości.  
+ Aby narysować prostokąt na <xref:System.Windows.Media.DrawingContext>, użyj <xref:System.Windows.Media.DrawingContext.DrawRectangle%2A> metody <xref:System.Windows.Media.DrawingContext> obiektu. Istnieją podobne metody rysowania innych typów zawartości. Gdy skończysz rysowania zawartości <xref:System.Windows.Media.DrawingContext>, wywołaj <xref:System.Windows.Media.DrawingContext.Close%2A> metodę, aby zamknąć <xref:System.Windows.Media.DrawingContext> i zachować zawartość.  
   
- W poniższym przykładzie <xref:System.Windows.Media.DrawingVisual> obiekt jest tworzony i prostokąt jest rysowana w jego <xref:System.Windows.Media.DrawingContext>.  
+ W poniższym przykładzie <xref:System.Windows.Media.DrawingVisual> obiekt zostanie utworzony i prostokąt jest wstawiany do jego <xref:System.Windows.Media.DrawingContext>.  
   
  [!code-csharp[DrawingVisualSample#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#101)]
  [!code-vb[DrawingVisualSample#101](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#101)]  
   
 <a name="creating_overrides"></a>   
-## <a name="creating-overrides-for-frameworkelement-members"></a>Tworzenie zastąpień dla członków FrameworkElement  
- Obiekt kontenera hosta jest odpowiedzialny za zarządzanie jego kolekcja obiektów visual. Wymaga to, że kontener hosta implementuje element członkowski pochodnej zastąpienia <xref:System.Windows.FrameworkElement> klasy.  
+## <a name="creating-overrides-for-frameworkelement-members"></a>Tworzenie zastąpienia dla członków FrameworkElement  
+ Obiekt kontenera hosta jest odpowiedzialny za zarządzanie jego kolekcja obiektów wizualnych. Wymaga to, że kontenera hosta implementacji elementu członkowskiego zastąpienia pochodnej <xref:System.Windows.FrameworkElement> klasy.  
   
- Poniżej opisano dwa elementy członkowskie, należy zastąpić:  
+ Na poniższej liście opisano dwa elementy członkowskie, których konieczne jest przesłonięcie:  
   
--   <xref:System.Windows.FrameworkElement.GetVisualChild%2A>: Zwraca element podrzędny o określonym indeksie kolekcji elementów podrzędnych.  
+-   <xref:System.Windows.FrameworkElement.GetVisualChild%2A>: Zwraca wartość elementu podrzędnego wskazywanego przez określony indeks z kolekcji elementów podrzędnych.  
   
--   <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>: Pobiera liczbę elementów podrzędnych visual w tym elemencie.  
+-   <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>: Pobiera liczbę elementów podrzędnych visual w ramach tego elementu.  
   
- W poniższym przykładzie zastąpień dla dwóch <xref:System.Windows.FrameworkElement> są implementowane elementy członkowskie.  
+ W poniższym przykładzie wartości zastąpień dla dwóch <xref:System.Windows.FrameworkElement> elementy członkowskie są implementowane.  
   
  [!code-csharp[DrawingVisualSample#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#102)]
  [!code-vb[DrawingVisualSample#102](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#102)]  
   
 <a name="providing_hit_testing_support"></a>   
 ## <a name="providing-hit-testing-support"></a>Zapewnianie obsługi testowania trafień  
- Obiekt kontenera hosta zapewniają obsługę zdarzeń nawet wtedy, gdy nie są wyświetlane wszystkie właściwości widoczne — jednak jego <xref:System.Windows.UIElement.Visibility%2A> musi mieć ustawioną właściwość <xref:System.Windows.Visibility.Visible>. Dzięki temu można utworzyć zdarzenia obsługi procedury dla kontenera hosta, który może być stosowane do zdarzeń myszy, takich jak wersja lewego przycisku myszy. Obsługa procedury zdarzeń można zaimplementować testowania trafień za pomocą <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> metody. Metoda <xref:System.Windows.Media.HitTestResultCallback> parametr odnosi się do zdefiniowanych przez użytkownika procedury, która służy do określenia wynikowy akcji testu trafienia.  
+ Obiekt kontenera hosta może zapewnić obsługi zdarzeń, nawet wtedy, gdy nie są wyświetlane wszystkie właściwości widocznych — jednak jego <xref:System.Windows.UIElement.Visibility%2A> właściwość musi być równa <xref:System.Windows.Visibility.Visible>. Dzięki temu można utworzyć zdarzenia obsługi procedury dla kontenera hosta, w którym można przechwytywać zdarzenia myszy, takie jak wersja lewego przycisku myszy. Procedura obsługi zdarzeń można zaimplementować testowania trafień za pomocą wywołania <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> metody. Metoda <xref:System.Windows.Media.HitTestResultCallback> parametr odnosi się do zdefiniowanych przez użytkownika procedury używanego w celu określenia wynikowe działanie hit test.  
   
- W poniższym przykładzie trafień testowania obsługi został zaimplementowany dla obiekt kontenera hosta i jego elementów podrzędnych.  
+ W poniższym przykładzie trafień obsługę testów został zaimplementowany dla obiektu kontenera hosta i jego elementy podrzędne.  
   
  [!code-csharp[DrawingVisualSample#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#103)]
  [!code-vb[DrawingVisualSample#103](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#103)]  

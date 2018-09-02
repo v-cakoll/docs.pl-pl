@@ -1,24 +1,24 @@
 ---
-title: Obsługa zdarzeń zestawu danych
+title: Obsługa zdarzeń elementu DataSet
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 54edefe0-bc38-419b-b486-3d8a0c356f13
-ms.openlocfilehash: 486f38e2900eb85dbffbb4f9a9d0e6753267e32b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ff684adcb4e23b91b3e59476299d277c90c22c51
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758324"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394258"
 ---
-# <a name="handling-dataset-events"></a>Obsługa zdarzeń zestawu danych
-<xref:System.Data.DataSet> Obiektu zawiera trzy zdarzenia: <xref:System.ComponentModel.MarshalByValueComponent.Disposed>, <xref:System.Data.DataSet.Initialized>, i <xref:System.Data.DataSet.MergeFailed>.  
+# <a name="handling-dataset-events"></a>Obsługa zdarzeń elementu DataSet
+<xref:System.Data.DataSet> Obiekt zawiera trzy zdarzenia: <xref:System.ComponentModel.MarshalByValueComponent.Disposed>, <xref:System.Data.DataSet.Initialized>, i <xref:System.Data.DataSet.MergeFailed>.  
   
 ## <a name="the-mergefailed-event"></a>Zdarzenie MergeFailed  
- Najczęściej używane zdarzenie `DataSet` obiekt jest `MergeFailed`, które jest wywoływane, gdy schemat `DataSet` obiektów scalane są w konflikcie. Ten błąd występuje podczas źródłowe i docelowe <xref:System.Data.DataRow> mieć tej samej wartości klucza podstawowego i <xref:System.Data.DataSet.EnforceConstraints%2A> właściwość jest ustawiona na `true`. Na przykład, jeśli kolumn klucza podstawowego tabeli scalane są takie same, między tabelami w dwóch `DataSet` obiekty, jest zgłaszany wyjątek i `MergeFailed` zdarzenia. <xref:System.Data.MergeFailedEventArgs> Obiekt przekazywany do `MergeFailed` zdarzeń ma <xref:System.Data.MergeFailedEventArgs.Conflict%2A> właściwość, która identyfikuje konflikt w schemacie między tymi dwoma `DataSet` obiektów, a <xref:System.Data.MergeFailedEventArgs.Table%2A> właściwość, która identyfikuje nazwę tabeli w konflikcie.  
+ Najczęściej stosowane zdarzenia `DataSet` obiekt jest `MergeFailed`, które jest wywoływane, gdy schemat `DataSet` obiektów scalane są w konflikcie. Ten błąd występuje podczas źródłowe i docelowe <xref:System.Data.DataRow> mieć tej samej wartości klucza podstawowego, a <xref:System.Data.DataSet.EnforceConstraints%2A> właściwość jest ustawiona na `true`. Na przykład, jeśli scalana kolumny klucza podstawowego w tabeli są takie same, między tabelami w dwóch `DataSet` obiektów, zostanie zgłoszony wyjątek i `MergeFailed` zdarzenie jest wywoływane. <xref:System.Data.MergeFailedEventArgs> Obiekt przekazany do `MergeFailed` zdarzenia mają <xref:System.Data.MergeFailedEventArgs.Conflict%2A> właściwość, która identyfikuje konfliktów w schemacie między tymi dwoma `DataSet` obiektów, a <xref:System.Data.MergeFailedEventArgs.Table%2A> właściwości, który identyfikuje nazwę tabeli w konflikcie.  
   
- Poniższy fragment kodu przedstawia sposób dodawania obsługi zdarzenia `MergeFailed` zdarzeń.  
+ Poniższy fragment kodu pokazuje, jak dodać obsługę zdarzeń dla `MergeFailed` zdarzeń.  
   
 ```vb  
 AddHandler workDS.MergeFailed, New MergeFailedEventHandler( _  
@@ -43,20 +43,20 @@ private static void DataSetMergeFailed(
 ```  
   
 ## <a name="the-initialized-event"></a>Zainicjowane wydarzenie  
- <xref:System.Data.DataSet.Initialized> Po wystąpieniu zdarzenia `DataSet` Konstruktor inicjuje nowe wystąpienie klasy `DataSet`.  
+ <xref:System.Data.DataSet.Initialized> Zdarzenie występuje po `DataSet` Konstruktor inicjuje nowe wystąpienie klasy `DataSet`.  
   
- <xref:System.Data.DataSet.IsInitialized%2A> Zwraca `true` Jeśli `DataSet` ukończono inicjalizacji; w przeciwnym razie zwraca `false`. <xref:System.Data.DataSet.BeginInit%2A> — Metoda, która rozpoczyna inicjowanie `DataSet`, ustawia <xref:System.Data.DataSet.IsInitialized%2A> do `false`. <xref:System.Data.DataSet.EndInit%2A> Metodę, która kończy się inicjowanie `DataSet`, ustawia ją na `true`. Te metody są używane w środowisku projektowania programu Visual Studio można zainicjować `DataSet` który jest używany przez inny składnik. Użytkownik nie będzie często używać ich w kodzie.  
+ <xref:System.Data.DataSet.IsInitialized%2A> Właściwość zwraca `true` Jeśli `DataSet` zakończeniu inicjalizacji; w przeciwnym razie zwraca `false`. <xref:System.Data.DataSet.BeginInit%2A> Metody, która rozpoczyna się inicjowanie `DataSet`, ustawia <xref:System.Data.DataSet.IsInitialized%2A> do `false`. <xref:System.Data.DataSet.EndInit%2A> Metody, która kończy się inicjowanie `DataSet`, ustawia ją na `true`. Te metody są używane w środowisku projektowym programu Visual Studio można zainicjować `DataSet` który jest używany przez inny składnik. Możesz nie będzie najczęściej używać ich w kodzie.  
   
-## <a name="the-disposed-event"></a>Usunięte zdarzeń  
- `DataSet` jest pochodną <xref:System.ComponentModel.MarshalByValueComponent> klasy, która ujawnia zarówno <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> — metoda i <xref:System.ComponentModel.MarshalByValueComponent.Disposed> zdarzeń. <xref:System.ComponentModel.MarshalByValueComponent.Disposed> Zdarzenie dodaje do nasłuchiwania na zlikwidowanym zdarzenie dla składnika obsługi zdarzeń. Można użyć <xref:System.ComponentModel.MarshalByValueComponent.Disposed> zdarzenie `DataSet` Jeśli chcesz wykonać kodu, gdy <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> metoda jest wywoływana. <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> zwalnia zasoby używane przez <xref:System.ComponentModel.MarshalByValueComponent>.  
+## <a name="the-disposed-event"></a>Zdarzenie usunięte  
+ `DataSet` jest tworzony na podstawie <xref:System.ComponentModel.MarshalByValueComponent> klasy, która ujawnia zarówno <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> metody i <xref:System.ComponentModel.MarshalByValueComponent.Disposed> zdarzeń. <xref:System.ComponentModel.MarshalByValueComponent.Disposed> Zdarzenie dodaje procedurę obsługi zdarzeń do nasłuchiwania na zdarzenie usunięte w składniku. Możesz użyć <xref:System.ComponentModel.MarshalByValueComponent.Disposed> zdarzenia `DataSet` Jeśli chcesz wykonać kod, gdy <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> metoda jest wywoływana. <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> zwalnia zasoby używane przez <xref:System.ComponentModel.MarshalByValueComponent>.  
   
 > [!NOTE]
->  `DataSet` i `DataTable` obiekty dziedziczyć <xref:System.ComponentModel.MarshalByValueComponent> i obsługuje <xref:System.Runtime.Serialization.ISerializable> interfejs dla niego komunikację zdalną. Są to jedyne obiekty ADO.NET, które może zostać wykonana zdalnie. Aby uzyskać więcej informacji, zobacz [obiektów zdalnych](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58).  
+>  `DataSet` i `DataTable` obiekty dziedziczyć <xref:System.ComponentModel.MarshalByValueComponent> i obsługa techniczna <xref:System.Runtime.Serialization.ISerializable> interfejs do komunikacji zdalnej. Są to jedyne obiekty ADO.NET, które mogą być w węzłach. Aby uzyskać więcej informacji, zobacz [obiekty zdalne](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58).  
   
- Aby uzyskać informacje na temat innych zdarzeń, które są dostępne podczas pracy z `DataSet`, zobacz [obsługi zdarzeń DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md) i [obsługi zdarzeń element DataAdapter](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+ Aby uzyskać informacje na temat innych zdarzeń, które są dostępne w przypadku pracy z `DataSet`, zobacz [Obsługa zdarzeń elementu DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md) i [Obsługa zdarzeń elementu DataAdapter](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Sprawdzanie poprawności danych](http://msdn.microsoft.com/library/b3a9ee4e-5d4d-4411-9c56-c811f2b4ee7e)  
+ [Sprawdzanie poprawności danych](https://msdn.microsoft.com/library/b3a9ee4e-5d4d-4411-9c56-c811f2b4ee7e)  
  [Pobieranie i modyfikowanie danych ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

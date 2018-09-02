@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 338120932b0bcbe390332515856aaeaa3bc34a56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3c65e48595f2b49abe06e649898649d76a0668a0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461701"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385912"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot — Metoda
-Przeprowadzi zarządzanych ramek na stosie dla określonego wątku i wysyła informacje do profilera za pośrednictwem wywołania zwrotnego.  
+Przedstawia zarządzanych ramek na stosie dla określonego wątku, a następnie wysyła informacje do profilera za pośrednictwem wywołania zwrotnego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,68 +41,68 @@ HRESULT DoStackSnapshot(
   
 #### <a name="parameters"></a>Parametry  
  `thread`  
- [in] Identyfikator wątku docelowej.  
+ [in] Identyfikator docelowego wątku.  
   
- Przekazywanie wartości null w `thread` daje migawkę bieżącego wątku. Jeśli `ThreadID` z innego wątku jest przekazywany, środowisko uruchomieniowe języka wspólnego (CLR) wstrzymuje wątek, wykonuje migawkę i zostanie wznowione.  
+ Przekazanie wartości null w `thread` daje migawkę bieżącego wątku. Jeśli `ThreadID` z innym wątku jest przekazywany, środowisko uruchomieniowe języka wspólnego (CLR) zawiesza wątek, wykonuje migawkę i zostanie wznowione.  
   
  `callback`  
- [in] Wskaźnik do wykonania [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) metodę, która jest wywoływana przez środowisko CLR zapewnienie profilera informacji na temat każdej ramce zarządzanych i każdym uruchomieniu niezarządzane ramki.  
+ [in] Wskaźnik do implementacji [stacksnapshotcallback —](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) metody, która jest wywoływana przez środowisko CLR zapewnienie profiler informacji na temat każdej zarządzanej ramki i każde uruchomienie niezarządzanych ramek.  
   
- `StackSnapshotCallback` Metody jest implementowany przez twórcę profilera.  
+ `StackSnapshotCallback` Metoda jest implementowana przez moduł zapisujący profilera.  
   
  `infoFlags`  
- [in] Wartość [cor_prf_snapshot_info —](../../../../docs/framework/unmanaged-api/profiling/cor-prf-snapshot-info-enumeration.md) wyliczenia, która określa ilość danych do przekazania wstecz dla każdej ramce przez `StackSnapshotCallback`.  
+ [in] Wartość [cor_prf_snapshot_info —](../../../../docs/framework/unmanaged-api/profiling/cor-prf-snapshot-info-enumeration.md) wyliczenia, który określa ilość danych do przekazania ponownie dla każdej ramki przez `StackSnapshotCallback`.  
   
  `clientData`  
- [in] Wskaźnik do danych klienta, który jest przekazywana bezpośrednio do `StackSnapshotCallback` funkcja wywołania zwrotnego.  
+ [in] Wskaźnik do danych klienta, która jest przekazywana bezpośrednio do `StackSnapshotCallback` funkcji wywołania zwrotnego.  
   
  `context`  
- [in] Wskaźnik do Win32 `CONTEXT` struktury, która jest używana jako zalążek przeszukiwania stosu. Win32 `CONTEXT` struktury zawiera wartości rejestrów Procesora i przedstawia stan Procesora w danym momencie w czasie.  
+ [in] Wskaźnik do systemu Win32 `CONTEXT` struktury, która jest używana w celu umieszczenia przeszukiwania stosu. Win32 `CONTEXT` struktura zawiera wartości rejestrów Procesora i przedstawia stan Procesora w danym momencie w czasie.  
   
- Inicjatora pomaga CLR określenie miejsca rozpocząć przeszukiwania stosu ze szczytu stosu jest kodu niezarządzanego pomocnika; w przeciwnym razie wartość inicjatora jest ignorowana. Inicjator musi zostać dostarczona dla asynchronicznego przeszukiwania. Inicjator nie jest niezbędne, jeśli przeprowadzasz synchroniczne przeszukiwania.  
+ Inicjatora pomaga CLR, określić, jak zacząć przeszukiwania stosu, jeśli kod niezarządzany pomocnika; Szczyt stosu w przeciwnym razie inicjatora jest ignorowany. Inicjator musi zostać dostarczony dla asynchronicznego przeszukiwania. Jeśli przeprowadzasz synchroniczne przeszukiwania Inicjator nie jest konieczne.  
   
- `context` Parametr jest prawidłowy tylko wtedy, gdy flaga COR_PRF_SNAPSHOT_CONTEXT została przekazana `infoFlags` parametru.  
+ `context` Parametr jest prawidłowy tylko wtedy, gdy flaga COR_PRF_SNAPSHOT_CONTEXT przekazano `infoFlags` parametru.  
   
  `contextSize`  
- [in] Rozmiar `CONTEXT` struktury, która odwołuje się do niego `context` parametru.  
+ [in] Rozmiar `CONTEXT` struktury, która odwołuje się do niej `context` parametru.  
   
 ## <a name="remarks"></a>Uwagi  
- Przekazywanie wartości null dla `thread` daje migawkę bieżącego wątku. Migawki mogą być wykonywane inne wątki tylko wtedy, gdy wątek docelowy jest zawieszony w czasie.  
+ Przekazanie wartości null dla `thread` daje migawkę bieżącego wątku. Migawki mogą być wykonywane inne wątków, tylko wtedy, gdy wątek docelowy jest zawieszony w czasie.  
   
- Gdy profilera chce przeprowadzić stosu, wywołuje `DoStackSnapshot`. Przed CLR zwraca z tego wywołania, wywołuje Twojej `StackSnapshotCallback` kilka razy, raz dla każdego zarządzanego ramki (lub uruchom niezarządzane ramki) na stosie. Gdy wystąpią niezarządzane ramki, użytkownik musi Przeprowadź je samodzielnie.  
+ Gdy profiler chce zapoznać się ze stosu, wywołuje `DoStackSnapshot`. Zanim CLR zwraca z wywołania, wywoływanych przez nią Twojej `StackSnapshotCallback` kilka razy, raz dla każdego zarządzanego ramki (lub uruchom ramek niezarządzanych) na stosie. Po napotkaniu ramki niezarządzanych, użytkownik musi prowadzą użytkownika je samodzielnie.  
   
- Kolejność, w którym jest udał stosu jest odwrotnej jak zostały przekazane ramek na stosie: ostatniego typu liść (wypychana ostatnich) po pierwsze, głównego (wypychana pierwszej) klatka.  
+ Kolejność, w której zostaje przeprowadzony stosu jest odwrotnością sposobu ramki są wypychane na stosie: ostatnia liści (wypychania przez ostatnie) po pierwsze, głównym (wypychania pierwszy) klatka.  
   
- Aby uzyskać więcej informacji na temat programu profiler do przeszukania zarządzane stosy, zobacz [profilera stosu przejście w .NET Framework 2.0: podstawy i poza](http://go.microsoft.com/fwlink/?LinkId=73638).  
+ Aby uzyskać więcej informacji na temat sposobu programowania programu profilującego do przejścia przez stosy zarządzane, zobacz [Profiler stosu zalet w programie .NET Framework 2.0: podstawy i](https://go.microsoft.com/fwlink/?LinkId=73638).  
   
- Przeszukiwania stosu można synchroniczna lub asynchroniczna, zgodnie z objaśnieniem w poniższych sekcjach.  
+ Przeszukiwania stosu może być synchroniczna lub asynchroniczna, zgodnie z opisem w poniższych sekcjach.  
   
 ## <a name="synchronous-stack-walk"></a>Synchroniczne stosów  
- Synchroniczne stosów obejmuje przejście stosu bieżącego wątku w odpowiedzi na wywołanie zwrotne. Nie wymaga wstępne wypełnianie lub zawieszenie.  
+ Synchroniczne stosów obejmuje zalet stosu bieżący wątek w odpowiedzi na wywołanie zwrotne. Nie wymaga rozmieszczania lub zawieszenie.  
   
- Wprowadzeniu synchroniczne wywołania, gdy w odpowiedzi na CLR wywołaniem programu profiler [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) (lub [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)) wywołania metody, `DoStackSnapshot` przeprowadzenie stos Bieżący wątek. Jest to przydatne, jeśli chcesz zobaczyć stos jak wygląda na powiadomienie o takich jak [ICorProfilerCallback::ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md). Należy wywołać `DoStackSnapshot` z poziomu programu `ICorProfilerCallback` metody przekazywanie wartości null w `context` i `thread` parametrów.  
+ Wprowadzone przez synchroniczny wywołania, gdy w odpowiedzi na środowisko CLR, wywołując jedną Twój program profilujący [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) (lub [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)) metody, należy wywołać `DoStackSnapshot` przeprowadzenie stos Bieżący wątek. Jest to przydatne, jeśli chcesz zobaczyć, jak stos wygląda na powiadomienie takich jak [icorprofilercallback::objectallocated —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md). Po prostu Wywołaj `DoStackSnapshot` z poziomu usługi `ICorProfilerCallback` metody, przekazując wartość null w `context` i `thread` parametrów.  
   
 ## <a name="asynchronous-stack-walk"></a>Asynchroniczne stosów  
- Asynchroniczne stosów pociąga za sobą przejście stosu przez inny wątek lub przejście stosu bieżący wątek nie znajduje się w odpowiedzi na wywołanie zwrotne, ale przez przejmującą wskaźnik instrukcji bieżącego wątku. Asynchroniczne przeszukiwania wymaga inicjatora w przypadku ze szczytu stosu kodu niezarządzanego, który nie wchodzi w skład platformy wywołania (PInvoke) lub wywołania modelu COM, ale kod pomocniczy samego środowiska CLR. Na przykład kod, który obsługuje just in time (JIT) kompilowanie lub odzyskiwanie kolekcji jest kod pomocniczy.  
+ Asynchroniczne stosów pociąga za sobą zalet stosu innym wątku lub zalet stosu bieżący wątek nie ma w odpowiedzi na wywołanie zwrotne, ale przez przejmującą adresy wskaźnik instrukcji bieżącego wątku. Asynchroniczne przeszukiwania wymaga inicjatora, jeśli kod niezarządzany, który nie jest częścią platformy Szczyt stosu wywołania (funkcja PInvoke) lub wywołania modelu COM, ale kod pomocniczy w środowisku CLR, sam. Na przykład kod, który obsługuje just-in-time (JIT) kompilacja lub wyrzucania elementów kolekcji jest kod pomocnika.  
   
- Uzyskaj inicjator bezpośrednio wstrzymując wątek docelowy i przejście swój stos samodzielnie, do momentu znalezienia najwyższy węzeł zarządzany ramki. Po elemencie docelowym wątek jest zawieszony, Pobierz wątek docelowy bieżącego kontekstu rejestru. Następnie należy określić, czy kontekst rejestru punktów do kodu niezarządzanego przez wywołanie metody [ICorProfilerInfo::GetFunctionFromIP](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getfunctionfromip-method.md) — Jeśli zwróci ona `FunctionID` równa zero, ramka to kodu niezarządzanego. Teraz Przeprowadź stosu, aż do pierwszej ramki zarządzane, a następnie obliczyć kontekstu inicjatora na podstawie kontekstu rejestru dla tej ramki.  
+ Uzyskaj inicjator bezpośrednio wstrzymując wątek docelowy i zalet swój stos samodzielnie, dopóki nie znajdziesz najwyższy zarządzane ramki. Po elemencie docelowym wątek jest zawieszony, pobieranie bieżącego kontekstu rejestru wątek docelowy. Następnie należy określić, czy kontekst rejestru wskazuje do kodu niezarządzanego, wywołując [icorprofilerinfo::getfunctionfromip —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getfunctionfromip-method.md) — Jeśli zwróci ona `FunctionID` równa zero, ramki jest kod niezarządzany. Teraz Przeprowadź stosu, aż do pierwszej ramki zarządzanej, a następnie obliczyć kontekstu inicjatora, na podstawie kontekstu rejestru dla tej ramki.  
   
- Wywołanie `DoStackSnapshot` z kontekstu inicjatora zacząć przeszukiwania stosu asynchronicznego. Jeśli nie podasz inicjatora `DoStackSnapshot` może pominąć ramki zarządzane w górnej części stosu, a w rezultacie zapewni stosów niekompletne. Jeśli podasz inicjator musi wskazywać Generator obrazu natywnego lub kompilacji JIT (Ngen.exe)-wygenerowanego kodu; w przeciwnym razie `DoStackSnapshot` zwraca kod niepowodzenia CORPROF_E_STACKSNAPSHOT_UNMANAGED_CTX.  
+ Wywołaj `DoStackSnapshot` z kontekstu inicjatora do rozpoczęcia asynchronicznego stosów. Jeśli nie podasz inicjatora `DoStackSnapshot` może pominąć zarządzanych ramek w górnej części stosu i w związku z tym, zapewni niekompletne stosów. Jeśli podasz inicjator musi wskazywać kompilowanego dokładnie na czas lub Native Image Generator (Ngen.exe)-wygenerowanego kodu; w przeciwnym razie `DoStackSnapshot` zwraca kod błędu, CORPROF_E_STACKSNAPSHOT_UNMANAGED_CTX.  
   
- Przeszukiwań stosu asynchroniczne łatwo może spowodować zakleszczenie lub dostęp do naruszenia, chyba że przestrzegać następujących wytycznych:  
+ Przeszukiwania stosu asynchronicznego łatwo może spowodować zakleszczenia lub dostępu do naruszenia, chyba, że należy przestrzegać następujących wytycznych:  
   
--   Po wstrzymaniu bezpośrednio wątków, należy pamiętać, że tylko wątku, który nigdy nie został uruchomiony z kodu zarządzanego można wstrzymać inny wątek.  
+-   Po wstrzymaniu bezpośrednio wątków, należy pamiętać, że tylko wątku, który nigdy nie uruchomił kodu zarządzanego można wstrzymać inny wątek.  
   
--   Zawsze należy zablokować w Twojej [ICorProfilerCallback::ThreadDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md) wywołania zwrotnego do czasu ukończenia stosów dla wątku.  
+-   Zawsze należy zablokować w swojej [icorprofilercallback::threaddestroyed —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md) wywołania zwrotnego do czasu ukończenia przeszukiwania stosu dla wątku.  
   
--   Nie przytrzymując blokady profilera wywołano funkcji CLR, które mogą wyzwalać wyrzucania elementów bezużytecznych. Oznacza to, że nie posiadają blokady Jeśli wątek będący właścicielem może uniemożliwić wywołanie, które wyzwala wyrzucania elementów bezużytecznych.  
+-   Blokady nie są przechowywane, gdy Twój program profilujący wywołania do funkcji CLR, która może wyzwalać wyrzucania elementów bezużytecznych. Oznacza to nie posiadają blokadę, jeśli wątek będący właścicielem może spowodować wywołanie, która wyzwala wyrzucanie elementów bezużytecznych.  
   
- Istnieje również ryzyko zakleszczenia połączeń `DoStackSnapshot` z wątku, który profilera został utworzony, dzięki czemu można przeprowadzić stosu wątku oddzielne docelowej. Wprowadza wątek został utworzony po raz pierwszy, niektóre `ICorProfilerInfo*` metod (w tym `DoStackSnapshot`), środowisko CLR będzie wykonywać na wątek, inicjowania CLR specyficzne wątek. Jeśli profilera wstrzymał wątek docelowy stosu, którego chcesz przeprowadzić, a wątek docelowy stało się właścicielem blokady niezbędne do wykonywania tego inicjowania dla każdego wątku, nastąpi zakleszczenie. Aby uniknąć tego zakleszczenia, należy początkowej wywołanie `DoStackSnapshot` z Twojej wątku utworzonych przez profiler do przeszukania oddzielnej target wątku, ale nie wstrzymania wątku docelowy, najpierw. To wywołanie początkowej zapewnia, że inicjowania dla każdego wątku można wykonać bez zakleszczenia. Jeśli `DoStackSnapshot` zakończy się pomyślnie, a następnie raportuje co najmniej jedną ramkę, po tym momencie będzie bezpieczne dla tego wątku utworzonych przez profiler wstrzymania wątek docelowy, a wywołania `DoStackSnapshot` przeprowadzenie stosu wątek docelowy.  
+ Istnieje również ryzyko zakleszczenia Jeśli wywołasz `DoStackSnapshot` z wątku, który został utworzony swojego programu profilującego, dzięki czemu możesz zapoznać się z stosu wątku oddzielne docelowe. Wprowadza wątek został utworzony po raz pierwszy, niektóre `ICorProfilerInfo*` metody (w tym `DoStackSnapshot`), środowisko CLR będzie wykonywać inicjacje na wątek, specyficzne dla środowiska CLR dla tego wątku. Jeśli Twój program profilujący został wstrzymany wątek docelowy stosu, którego chcesz, aby zapoznać się z, a ten wątek docelowy stało się z właścicielem blokady wymagany do wykonania tego wątku inicjowania, nastąpi zakleszczenia. Aby uniknąć tego zakleszczenia, należy początkowej wywołać `DoStackSnapshot` z wątek utworzone przez program profilujący przeprowadzenie wątek docelowy oddzielny, ale nie zawiesić wątek docelowy, najpierw. To wywołanie początkowej zapewnia, wykonać inicjowania na wątek bez zakleszczenia. Jeśli `DoStackSnapshot` zakończy się pomyślnie i zgłasza co najmniej jedną ramką po tym momencie są one bezpieczne dla tego wątku utworzone przez program profilujący do wstrzymania dowolnego wątek docelowy i wywołanie `DoStackSnapshot` przeprowadzenie stosu ten wątek docelowy.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Nagłówek:** } CorProf.idl, CorProf.h  
   
  **Biblioteka:** CorGuids.lib  
   

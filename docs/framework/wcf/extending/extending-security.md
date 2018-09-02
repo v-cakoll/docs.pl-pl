@@ -6,40 +6,40 @@ helpviewer_keywords:
 ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 94aefe80674c5b4ec6fcce6a41d9b68e093f4262
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: a16416e580dabd6a9057e11a8183437529ca83e8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809404"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384415"
 ---
 # <a name="extending-security"></a>Rozszerzanie zabezpieczeń
-Aby uwzględnić nowe typy oświadczeń i tokeny niestandardowe, można rozszerzyć infrastruktury zabezpieczeń programu Windows Communication Foundation (WCF). Tematy w tej sekcji opisano, jak to zrobić.  
+Aby uwzględnić nowe oświadczenia i tokeny niestandardowe, można rozszerzyć infrastruktura zabezpieczeń programu Windows Communication Foundation (WCF). Tematy w tej sekcji pokazano, jak to zrobić.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Architektura zabezpieczeń](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)  
- Przeprowadzi Cię przez architekturę WCF systemu zabezpieczeń.  
+ [Architektura zabezpieczeń](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)  
+ Przedstawiono architekturę co system zabezpieczeń programu WCF.  
   
  [Niestandardowe poświadczenia i weryfikacja poświadczeń](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)  
- Wyjaśniono, jak Model tożsamości jest używany podczas sprawdzania poprawności niestandardowych poświadczeń.  
+ W tym artykule wyjaśniono, jak Model tożsamości jest używany podczas sprawdzania poprawności niestandardowych poświadczeń.  
   
  [Tokeny niestandardowe](../../../../docs/framework/wcf/extending/custom-tokens.md)  
- Wystawione tokeny z zabezpieczeń tokenu usługi (STS) są zwykle tokeny SAML. W tym temacie wyjaśniono, jak utworzyć niestandardowy typ tokenu.  
+ Wystawionych tokenów z Usługa tokenu zabezpieczającego (STS) zazwyczaj są tokeny SAML. W tym temacie wyjaśniono, jak utworzyć niestandardowy typ tokenu.  
   
  [Autoryzacja niestandardowa](../../../../docs/framework/wcf/extending/custom-authorization.md)  
- Wyjaśniono, jak wdrożyć przeprowadzania niestandardowej autoryzacji.  
+ Wyjaśnia, jak zaimplementować niestandardowy autoryzacji.  
   
  [Przesłanianie tożsamości usługi na potrzeby uwierzytelniania](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)  
- Opisuje sposób zastępowania tożsamości usługi na potrzeby uwierzytelniania.  
+ W tym artykule opisano sposób zastąpienia tożsamości usługi na potrzeby uwierzytelniania.  
   
  [Instrukcje: tworzenie niestandardowego weryfikatora tożsamości klienta](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
- Pokazuje, jak można sprawdzić poprawności tożsamości niestandardowej punktu końcowego.  
+ Pokazuje, jak w celu weryfikowania tożsamości niestandardowego punktu końcowego.  
   
  [Instrukcje: używanie osobnych certyfikatów X.509 do podpisywania i szyfrowania](../../../../docs/framework/wcf/extending/how-to-use-separate-x-509-certificates-for-signing-and-encryption.md)  
- Komunikaty są zwykle podpisane i zaszyfrowane za pomocą jednego certyfikatu. W tym temacie opisano sposób dwa certyfikaty mogą być używane, na żądanie.  
+ Komunikaty są zwykle podpisane i szyfrowane za pomocą jednego certyfikatu. W tym temacie wyjaśniono, jak dwa certyfikaty mogą być używane, gdy jest to wymagane.  
   
  [Instrukcje: zmienianie dostawcy kryptograficznego dla klucza prywatnego certyfikatu X.509](../../../../docs/framework/wcf/extending/change-cryptographic-provider-x509-certificate-private-key.md)  
- Wyjaśniono, jak zmienić dostawcy usług kryptograficznych, umożliwiające uzyskanie klucza prywatnego certyfikatu X.509 i sposobu integracji dostawcę w ramach usług Windows Communication Foundation (WCF).  
+ Wyjaśnia, jak zmienić dostawcy usług kryptograficznych, używane do zapewnienia klucza prywatnego certyfikatu X.509 oraz integrować dostawcę w ramach usług Windows Communication Foundation (WCF).  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.ServiceModel.ServiceAuthorizationManager>  

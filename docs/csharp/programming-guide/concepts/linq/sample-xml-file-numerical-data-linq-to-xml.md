@@ -1,16 +1,16 @@
 ---
-title: 'Przykładowy plik XML: Dane liczbowe (LINQ do XML)'
+title: 'Przykładowy plik XML: Dane liczbowe (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 365cae86-a166-46df-b56a-0209d9771c27
 ms.openlocfilehash: 6528175407c29a17667c33769643d15502e98f90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327596"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387318"
 ---
-# <a name="sample-xml-file-numerical-data-linq-to-xml"></a>Przykładowy plik XML: Dane liczbowe (LINQ do XML)
-Następujący plik XML jest używany w różnych przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji. Ten plik zawiera dane liczbowe, sumowanie, uśrednianie i grupowania.  
+# <a name="sample-xml-file-numerical-data-linq-to-xml"></a>Przykładowy plik XML: Dane liczbowe (LINQ to XML)
+Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji. Ten plik zawiera dane liczbowe, sumowanie, średniej i grupowania.  
   
 ## <a name="dataxml"></a>Data.XML  
   

@@ -1,18 +1,18 @@
 ---
-title: Wypełnianie zestawu danych przy użyciu jednego lub więcej kursory REF
+title: Wypełnianie zestawu danych przy użyciu jednej lub więcej kursorów REF CURSOR
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 99863e79-5b00-467e-a105-4ffa42de3ff7
-ms.openlocfilehash: 66dc61a3eb71fcc6657a455f13aa1d67cca554ed
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 78e1a2ce73be1e83284a1d8caa657ff645262e09
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761613"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420675"
 ---
-# <a name="filling-a-dataset-using-one-or-more-ref-cursors"></a><span data-ttu-id="6fdec-102">Wypełnianie zestawu danych przy użyciu jednego lub więcej kursory REF</span><span class="sxs-lookup"><span data-stu-id="6fdec-102">Filling a DataSet Using One or More REF CURSORs</span></span>
-<span data-ttu-id="6fdec-103">W tym przykładzie Microsoft Visual Basic wykonuje procedury składowane PL/SQL, która zwraca dwa parametry REF CURSOR i wpisuje <xref:System.Data.DataSet> z wierszy, które są zwracane.</span><span class="sxs-lookup"><span data-stu-id="6fdec-103">This Microsoft Visual Basic example executes a PL/SQL stored procedure that returns two REF CURSOR parameters, and fills a <xref:System.Data.DataSet> with the rows that are returned.</span></span>  
+# <a name="filling-a-dataset-using-one-or-more-ref-cursors"></a><span data-ttu-id="7e6d4-102">Wypełnianie zestawu danych przy użyciu jednej lub więcej kursorów REF CURSOR</span><span class="sxs-lookup"><span data-stu-id="7e6d4-102">Filling a DataSet Using One or More REF CURSORs</span></span>
+<span data-ttu-id="7e6d4-103">W tym przykładzie języka Visual Basic wykonuje procedury przechowywane PL/SQL, która zwraca dwa parametry REF CURSOR i wypełnia <xref:System.Data.DataSet> wierszy, które są zwracane.</span><span class="sxs-lookup"><span data-stu-id="7e6d4-103">This Microsoft Visual Basic example executes a PL/SQL stored procedure that returns two REF CURSOR parameters, and fills a <xref:System.Data.DataSet> with the rows that are returned.</span></span>  
   
 ```vb  
 Private Sub Button1_Click(ByVal sender As Object, _  
@@ -46,6 +46,6 @@ Private Sub Button1_Click(ByVal sender As Object, _
   End Using  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6fdec-104">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="6fdec-104">See Also</span></span>  
- [<span data-ttu-id="6fdec-105">Oracle REF CURSOR</span><span class="sxs-lookup"><span data-stu-id="6fdec-105">Oracle REF CURSORs</span></span>](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
- [<span data-ttu-id="6fdec-106">ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów</span><span class="sxs-lookup"><span data-stu-id="6fdec-106">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="7e6d4-104">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="7e6d4-104">See Also</span></span>  
+ [<span data-ttu-id="7e6d4-105">Oracle REF CURSOR</span><span class="sxs-lookup"><span data-stu-id="7e6d4-105">Oracle REF CURSORs</span></span>](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
+ [<span data-ttu-id="7e6d4-106">ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych</span><span class="sxs-lookup"><span data-stu-id="7e6d4-106">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -7,30 +7,30 @@ helpviewer_keywords:
 ms.assetid: f78ec137-df0e-48c9-a7a0-5f6a1055f011
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 979c8bb2c851b9c49d74110f53ee5ce0f04e7acc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e90857fcf02dbd0dd888b0658f3ab626bc5b11bd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398823"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418536"
 ---
-# <a name="dynamic-programming-in-the-net-framework"></a><span data-ttu-id="c3ded-102">Programowanie dynamiczne w .NET Framework</span><span class="sxs-lookup"><span data-stu-id="c3ded-102">Dynamic Programming in the .NET Framework</span></span>
-<span data-ttu-id="c3ded-103">Ta sekcja dokumentacji zawiera informacje o programowanie dynamiczne w .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="c3ded-103">This section of the documentation provides information about dynamic programming in the .NET Framework.</span></span>  
+# <a name="dynamic-programming-in-the-net-framework"></a><span data-ttu-id="68adb-102">Programowanie dynamiczne w .NET Framework</span><span class="sxs-lookup"><span data-stu-id="68adb-102">Dynamic Programming in the .NET Framework</span></span>
+<span data-ttu-id="68adb-103">Ta sekcja dokumentacji zawiera informacje o programowanie dynamiczne w .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="68adb-103">This section of the documentation provides information about dynamic programming in the .NET Framework.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c3ded-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="c3ded-104">In This Section</span></span>  
- [<span data-ttu-id="c3ded-105">Odbicie</span><span class="sxs-lookup"><span data-stu-id="c3ded-105">Reflection</span></span>](../../../docs/framework/reflection-and-codedom/reflection.md)  
- <span data-ttu-id="c3ded-106">Opisuje sposób pracy z obiektami w czasie wykonywania za pomocą odbicia.</span><span class="sxs-lookup"><span data-stu-id="c3ded-106">Describes how to use reflection to work with objects at run time.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="68adb-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="68adb-104">In This Section</span></span>  
+ [<span data-ttu-id="68adb-105">Odbicie</span><span class="sxs-lookup"><span data-stu-id="68adb-105">Reflection</span></span>](../../../docs/framework/reflection-and-codedom/reflection.md)  
+ <span data-ttu-id="68adb-106">W tym artykule opisano, jak używać odbicia do pracy z obiektami w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="68adb-106">Describes how to use reflection to work with objects at run time.</span></span>  
   
- [<span data-ttu-id="c3ded-107">Emitowanie dynamicznych metod i zestawów</span><span class="sxs-lookup"><span data-stu-id="c3ded-107">Emitting Dynamic Methods and Assemblies</span></span>](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
- <span data-ttu-id="c3ded-108">Opisuje sposób tworzenia metod i zestawów w czasie wykonywania za pomocą Reflection.Emit.</span><span class="sxs-lookup"><span data-stu-id="c3ded-108">Describes how to create methods and assemblies at run time by using Reflection.Emit.</span></span>  
+ [<span data-ttu-id="68adb-107">Emitowanie dynamicznych metod i zestawów</span><span class="sxs-lookup"><span data-stu-id="68adb-107">Emitting Dynamic Methods and Assemblies</span></span>](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
+ <span data-ttu-id="68adb-108">W tym artykule opisano sposób tworzenia metod i zestawów w czasie wykonywania przy użyciu Reflection.Emit.</span><span class="sxs-lookup"><span data-stu-id="68adb-108">Describes how to create methods and assemblies at run time by using Reflection.Emit.</span></span>  
   
- [<span data-ttu-id="c3ded-109">Przegląd środowiska uruchomieniowego języka dynamicznego</span><span class="sxs-lookup"><span data-stu-id="c3ded-109">Dynamic Language Runtime Overview</span></span>](../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
- <span data-ttu-id="c3ded-110">Zawiera opis funkcji środowiska uruchomieniowego języka dynamicznego.</span><span class="sxs-lookup"><span data-stu-id="c3ded-110">Describes the features of the dynamic language runtime.</span></span>  
+ [<span data-ttu-id="68adb-109">Przegląd środowiska uruchomieniowego języka dynamicznego</span><span class="sxs-lookup"><span data-stu-id="68adb-109">Dynamic Language Runtime Overview</span></span>](../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
+ <span data-ttu-id="68adb-110">Opisuje funkcje środowisko uruchomieniowe języka dynamicznego.</span><span class="sxs-lookup"><span data-stu-id="68adb-110">Describes the features of the dynamic language runtime.</span></span>  
   
- [<span data-ttu-id="c3ded-111">Dynamiczne generowanie i kompilacja kodu źródłowego</span><span class="sxs-lookup"><span data-stu-id="c3ded-111">Dynamic Source Code Generation and Compilation</span></span>](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)  
- <span data-ttu-id="c3ded-112">Opisuje sposób Generowanie i kompilowanie kodu źródłowego dynamicznych.</span><span class="sxs-lookup"><span data-stu-id="c3ded-112">Describes how to generate and compile dynamic source code.</span></span>  
+ [<span data-ttu-id="68adb-111">Dynamiczne generowanie i kompilacja kodu źródłowego</span><span class="sxs-lookup"><span data-stu-id="68adb-111">Dynamic Source Code Generation and Compilation</span></span>](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)  
+ <span data-ttu-id="68adb-112">W tym artykule opisano sposób generowania i kompilowania kodu źródłowego dynamicznych.</span><span class="sxs-lookup"><span data-stu-id="68adb-112">Describes how to generate and compile dynamic source code.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="c3ded-113">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="c3ded-113">Related Sections</span></span>  
- [<span data-ttu-id="c3ded-114">Podręcznik programowania</span><span class="sxs-lookup"><span data-stu-id="c3ded-114">Development Guide</span></span>](../../../docs/framework/development-guide.md)  
+## <a name="related-sections"></a><span data-ttu-id="68adb-113">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="68adb-113">Related Sections</span></span>  
+ [<span data-ttu-id="68adb-114">Podręcznik programowania</span><span class="sxs-lookup"><span data-stu-id="68adb-114">Development Guide</span></span>](../../../docs/framework/development-guide.md)  
   
- [<span data-ttu-id="c3ded-115">Zaawansowane odczytu dla programu .NET Framework</span><span class="sxs-lookup"><span data-stu-id="c3ded-115">Advanced Reading for the .NET Framework</span></span>](http://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)
+ [<span data-ttu-id="68adb-115">Zaawansowane zagadnienia dotyczące programu .NET Framework</span><span class="sxs-lookup"><span data-stu-id="68adb-115">Advanced Reading for the .NET Framework</span></span>](https://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)

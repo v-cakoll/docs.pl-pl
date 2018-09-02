@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2575d6fbc5e8a26da301826ef8f7b0611a84871e
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: c18659fa3db1f2e7e047f1bbdc4f75ba6e96f0c6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255564"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464103"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>Wersje i zależności programu .NET Framework
 Każda wersja programu.NET Framework zawiera środowisko uruchomieniowe języka wspólnego (CLR), biblioteki klas bazowych i inne zarządzane biblioteki. W tym temacie opisano kluczowe funkcje programu .NET Framework według wersji, podano informacje o bazowych wersjach środowiska CLR i skojarzonych środowiskach deweloperskich oraz zidentyfikowano wersje, które są instalowane przez system operacyjny Windows.  
@@ -61,7 +61,7 @@ Każda wersja programu.NET Framework zawiera środowisko uruchomieniowe języka 
   
      [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] i [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] są używane tylko jako przykłady. Ta zasada ma zastosowanie do wszystkich aplikacji przeznaczonych nowszej wersji programu .NET Framework niż ten, który został zainstalowany w systemie, na którym jest uruchomiony.  
   
- Niektóre zmiany w programie .NET Framework mogą wymagać zmian w kodzie aplikacji; zobacz [zgodności aplikacji](../../../docs/framework/migration-guide/application-compatibility.md) przed uruchomieniem istniejących aplikacji przy użyciu [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] lub nowszy. Aby uzyskać więcej informacji dotyczących instalowania aktualnej wersji, zobacz [Instalowanie programu .NET Framework dla deweloperów](../../../docs/framework/install/guide-for-developers.md). Aby uzyskać informacje na temat pomocy technicznej dla platformy .NET Framework, zobacz [obsługuje zasady cyklu życia programu Microsoft .NET Framework](http://go.microsoft.com/fwlink/?LinkId=196607) w witrynie Microsoft Support.  
+ Niektóre zmiany w programie .NET Framework mogą wymagać zmian w kodzie aplikacji; zobacz [zgodności aplikacji](../../../docs/framework/migration-guide/application-compatibility.md) przed uruchomieniem istniejących aplikacji przy użyciu [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] lub nowszy. Aby uzyskać więcej informacji dotyczących instalowania aktualnej wersji, zobacz [Instalowanie programu .NET Framework dla deweloperów](../../../docs/framework/install/guide-for-developers.md). Aby uzyskać informacje na temat pomocy technicznej dla platformy .NET Framework, zobacz [obsługuje zasady cyklu życia programu Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607) w witrynie Microsoft Support.  
   
 ## <a name="targeting-and-running-apps-for-older-versions"></a>Określanie platformy docelowej i uruchamianie aplikacji dla starszych wersji  
  Wersje 2.0, 3.0 i 3.5 programu .NET Framework zostały utworzone z użyciem tej samej wersji środowiska CLR (CLR 2.0). Te wersje reprezentują kolejne warstwy jednej instalacji. Każda wersja jest kompilowana przyrostowo na poprzednich wersjach. Nie jest możliwe uruchomienie wersji 2.0, 3.0 i 3.5 równocześnie na komputerze. Po zainstalowaniu wersji 3.5 automatycznie są udostępniane warstwy 2.0 i 3.0, a aplikacje, które zostały zaprojektowane dla wersji 2.0, 3.0 i 3.5, można uruchamiać z użyciem wersji 3.5. .NET Framework 4 kończy to podejście warstwowe i go i nowszych wersjach (.NET Framework 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1 i 4.7.2) również reprezentują kolejne warstwy jednej instalacji.  Począwszy od programu .NET Framework 4, można użyć wewnątrzprocesowego hostingu równoczesnego w celu uruchamiania wielu wersji środowiska CLR w pojedynczym procesie. Aby uzyskać więcej informacji, zobacz [zestawy i wykonywanie Side-by-Side](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md).  
@@ -81,5 +81,5 @@ Każda wersja programu.NET Framework zawiera środowisko uruchomieniowe języka 
 ## <a name="see-also"></a>Zobacz także
 
 [Zgodność wersji](../../../docs/framework/migration-guide/version-compatibility.md)   
-[Cykl wsparcia technicznego dla programu Microsoft .NET Framework](http://go.microsoft.com/fwlink/?LinkId=196607)   
+[Cykl wsparcia technicznego dla programu Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607)   
 [Rozwiązywanie problemów z zablokowaną instalacją i odinstalowywaniem programu .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f03935c1ee38cec4ee20c4306213be484933f0bb
-ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
+ms.openlocfilehash: 653a39d1e217d0478ff7c9b01c6ac146fe6b5fac
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2018
-ms.locfileid: "35251002"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419150"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>Globalizacja i lokalizacja aplikacji .NET
-Tworzenie [aplikacji gotowe](http://msdn.microsoft.com/goglobal/bb978433.aspx), w tym aplikacji, która może być lokalizowany do co najmniej jednego języka, obejmuje trzy kroki: sprawdzenie, lokalizacja i globalizacja.  
+Tworzenie [aplikacji gotowej dla całego świata](https://msdn.microsoft.com/goglobal/bb978433.aspx), w tym aplikacji, która może być lokalizowana w jednym lub kilku językach, obejmuje trzy kroki: globalizacja, przegląd możliwości lokalizacji i lokalizacja.  
   
  [Globalizacja](../../../docs/standard/globalization-localization/globalization.md)  
  Ten krok obejmuje projektowanie i programowanie aplikacji neutralnej kulturowo i językowo, która obsługuje zlokalizowane interfejsy użytkownika i dane regionalne dla wszystkich użytkowników. Obejmuje to podejmowanie decyzji projektowych i programistycznych, które nie są oparte na założeniach specyficznych dla kultury. Aplikacja zglobalizowana nie jest zlokalizowana, ale została zaprojektowana i napisana tak, że jej lokalizacja w jednym lub kilku językach będzie stosunkowo łatwa.  
@@ -34,13 +34,13 @@ Tworzenie [aplikacji gotowe](http://msdn.microsoft.com/goglobal/bb978433.aspx), 
   
  Wykonanie tych trzech kroków ma dwie zalety:  
   
--   Go zwalnia z konieczności zakresie wyposażenia aplikacji, która jest przeznaczona do obsługi pojedynczego kultury, takie jak stany USA Angielski, do obsługi dodatkowych kultur.  
+-   Uwalnia użytkownika od konieczności przeprojektować aplikację, która umożliwia obsługę jednej kultury, takie jak Stany Zjednoczone W języku angielskim, do obsługi dodatkowych kultur.  
   
 -   Skutkuje zlokalizowanymi aplikacjami, które są stabilniejsze i zawierają mniej błędów.  
   
- .NET obsługuje szeroką gamę tworzenie gotowe i zlokalizowanych aplikacji. W szczególności wiele wpisz członków globalizacji platformy .NET klasy biblioteki Pomocy przez zwrócenie wartości, które odzwierciedlać konwencje określonej kultury lub kultury bieżącego użytkownika. .NET obsługuje także zestawy satelickie, które ułatwiają proces lokalizowania aplikacji.  
+ .NET oferuje zaawansowaną obsługę dla opracowywania aplikacji gotowej dla całego świata i zlokalizowanych. W szczególności wiele składowych typów w .NET klasy biblioteki wspiera globalizację, zwracając wartości, które odzwierciedlają konwencje kultury bieżącego użytkownika lub określonej kultury. .NET obsługuje także zestawy satelickie, które ułatwiają proces lokalizowania aplikacji.  
   
- Aby uzyskać dodatkowe informacje, zobacz [dokumentacji globalizacji](/globalization/).  
+ Aby uzyskać więcej informacji, zobacz [dokumentacji globalizacji](/globalization/).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Globalizacja](../../../docs/standard/globalization-localization/globalization.md)  
@@ -53,19 +53,19 @@ Tworzenie [aplikacji gotowe](http://msdn.microsoft.com/goglobal/bb978433.aspx), 
  Omówienie końcowego etapu tworzenia zlokalizowanych aplikacji, który polega na dostosowywaniu interfejsu użytkownika aplikacji dla określonych regionów lub kultur.  
   
  [Operacje na ciągach niezależnych od kultury](../../../docs/standard/globalization-localization/culture-insensitive-string-operations.md)  
- Informacje dotyczące używania metod .NET i klasy, które są zależne od kultury domyślnie uzyskiwać wyniki, niezależnych od kultury.  
+ W tym artykule opisano sposób użycia metod .NET i klas, które są zależne od kultury domyślnie w celu uzyskania wyników niezależnych od kultury.  
   
  [Najlepsze rozwiązania dotyczące tworzenia aplikacji gotowych](../../../docs/standard/globalization-localization/best-practices-for-developing-world-ready-apps.md)  
  Opis najlepszych rozwiązań w zakresie globalizacji, lokalizacji i projektowania gotowych do użycia na całym świecie aplikacji ASP.NET.  
   
 ## <a name="reference"></a>Tematy pomocy  
- <xref:System.Globalization?displayProperty=nameWithType> przestrzeń nazw  
+ <xref:System.Globalization?displayProperty=nameWithType> Namespace  
  Zawiera klasy, które definiują informacje związane z kulturą, w tym język, kraj/region, używane kalendarze, wzorce formatu daty, waluty i liczb oraz kolejność sortowania dla ciągów.  
   
- <xref:System.Resources> przestrzeń nazw  
+ <xref:System.Resources> Namespace  
  Udostępnia klasy służące do tworzenia i używania zasobów oraz wykonywania na nich operacji.  
   
- <xref:System.Text> przestrzeń nazw  
+ <xref:System.Text> Namespace  
  Zawiera klasy reprezentujące kodowania znaków ASCII, ANSI, Unicode i inne.  
   
  [Resgen.exe (generator pliku zasobów)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)  

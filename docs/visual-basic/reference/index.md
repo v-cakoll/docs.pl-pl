@@ -5,18 +5,18 @@ helpviewer_keywords:
 - language reference
 - Visual Basic code, language reference
 ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
-ms.openlocfilehash: f9005a25b99b0a17f8e00f350547aa4bc313c4ac
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 773aca8cbbd78f5480e254ff559192955beb18d9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961024"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43455682"
 ---
 # <a name="reference-visual-basic"></a>Odwołanie (Visual Basic)
 Ta sekcja zawiera łącza do informacji o różnych aspektów programowania w języku Visual Basic.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Odwołanie językowe Visual Basic](../../visual-basic/language-reference/index.md)  
+ [Dokumentacja języka Visual Basic](../../visual-basic/language-reference/index.md)  
  Zawiera informacje dotyczące różnych aspektów języka Visual Basic.  
   
  [Kompilator wiersza polecenia programu Visual Basic](../../visual-basic/reference/command-line-compiler/index.md)  
@@ -42,5 +42,5 @@ Ta sekcja zawiera łącza do informacji o różnych aspektów programowania w j�
  [Narzędzia XML w Visual Studio](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
  Zawiera łącza do tematów na różnych narzędzi XML dostępnych w programie Visual Studio.  
   
- [Automatyzacji i rozszerzalności](http://msdn.microsoft.com/library/93112562-db21-4188-9383-ed19ad79bddf)  
+ [Automatyzacji i rozszerzalności](https://msdn.microsoft.com/library/93112562-db21-4188-9383-ed19ad79bddf)  
  Zawiera łącza do tematów obejmujących automatyzację i rozszerzalność w programie Visual Studio dla składników udostępnionych i specyficznych dla języka.

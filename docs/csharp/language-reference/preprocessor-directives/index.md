@@ -7,12 +7,12 @@ helpviewer_keywords:
 - preprocessor directives [C#]
 - keywords [C#], preprocessor directives
 ms.assetid: f2406090-b244-4f7e-ab72-3698fefed724
-ms.openlocfilehash: 63a7bdb6d36794e0380ca84443926338fe926e4d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c0a97cabce347be0bc9367f3d090a1fc699db19
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279922"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422004"
 ---
 # <a name="c-preprocessor-directives"></a>Dyrektywy preprocesora C#
 Ta sekcja zawiera informacje o następujących dyrektywy preprocesora C#:
@@ -32,12 +32,13 @@ Ta sekcja zawiera informacje o następujących dyrektywy preprocesora C#:
 - [#pragma warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)
 - [#pragma checksum](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-checksum.md)
 
-Zobacz tematy, aby uzyskać dodatkowe informacje i przykłady.
+Zobacz tematy, aby uzyskać więcej informacji i przykładów.
 
 Mimo że kompilator nie ma oddzielnego preprocesora, dyrektywy opisane w tej sekcji są przetwarzane przy założeniu, że taki preprocesor istnieje. Dyrektywy te są pomocne przy kompilacji warunkowej. W przeciwieństwie do dyrektyw w językach C i C++ nie można ich używać do tworzenia makr.
 
 Dyrektywa preprocesora musi być jedyną instrukcją w wierszu.
 
 ## <a name="see-also"></a>Zobacz także
- [Odwołanie w C#](../../../csharp/language-reference/index.md)  
- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)

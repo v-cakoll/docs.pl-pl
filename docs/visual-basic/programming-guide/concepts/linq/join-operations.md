@@ -2,36 +2,36 @@
 title: Dołącz do operacji (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 39ab4854-ac84-4738-9d0b-3cb79be84db4
-ms.openlocfilehash: 4f375946b69eadb885873889b28790730943a3d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c7d6592f0dee221eb2f6fb3a2f2c484064364ce
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645606"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425377"
 ---
 # <a name="join-operations-visual-basic"></a>Dołącz do operacji (Visual Basic)
-A *sprzężenia* dwóch źródeł danych jest skojarzenie obiektów w jedno źródło danych z obiektami, które mają wspólny atrybut w innym źródłem danych.  
+A *sprzężenia* dwóch źródeł danych jest skojarzenie obiektów w jednym źródle danych z obiektów mających wspólny atrybut w innym źródle danych.  
   
- Sprzęganie jest ważne operacji w zapytaniach, które odnoszą się do źródła danych, w której relacje między sobą nie mogą występować bezpośrednio. W programowanie zorientowane obiektowo, może to oznaczać korelacji między obiektami, które nie w modelu, takie jak Wstecz kierunek relacji jednokierunkowe. Przykładem jednokierunkowa relacja jest klasy klienta, która ma właściwość typu Miasto, ale klasa miasta nie ma właściwości, która jest kolekcją obiektów klienta. Jeśli masz listę obiektów mieście i chcesz wyszukać wszystkich klientów w każdemu miastu, można użyć operacji sprzężenia je znaleźć.  
+ Łączenie jest operacją ważne w zapytaniach, przeznaczonych dla źródeł danych, w której relacje ze sobą nie mogą występować bezpośrednio. W programowanie zorientowane obiektowo, może to oznaczać korelacji między obiektami, które nie w modelu, takie jak Wstecz kierunek relacji jednokierunkowe. Przykładem jednokierunkowa relacja jest klasą klienta, która ma właściwość typu Miasto, ale klasa miasta nie ma właściwości, który jest kolekcją obiektów klienta. Jeśli masz listę obiektów, miasta i chcesz znaleźć wszystkich klientów w każde Miasto, można użyć operacji tworzenia sprzężenia je znaleźć.  
   
- Metody sprzężenia w ramach składnika LINQ to <xref:System.Linq.Enumerable.Join%2A> i <xref:System.Linq.Enumerable.GroupJoin%2A>. Te metody wykonywania equijoins lub sprzężenia, które odpowiada równość kluczy dwóch źródeł danych. (Porównanie, języka Transact-SQL obsługuje join operatorów innych niż "równa się", na przykład "poniżej" operator). W warunkach relacyjnej bazy danych <xref:System.Linq.Enumerable.Join%2A> wykonuje sprzężenie wewnętrzne, typ sprzężenia w zwracane są tylko te obiekty, które mają odpowiednika w zestawie danych. <xref:System.Linq.Enumerable.GroupJoin%2A> — Metoda nie ma bezpośredniego odpowiednika w kategoriach relacyjnej bazy danych, ale implementuje podzbiorem sprzężenia wewnętrzne i lewe sprzężenia zewnętrzne. Lewe sprzężenie zewnętrzne jest sprzężenia, które zwraca każdy element pierwszego źródła danych (po lewej), nawet jeśli go nie ma żadnych skorelowane elementów w źródle danych.  
+ Metody sprzężenia dostarczane w ramach programu LINQ to <xref:System.Linq.Enumerable.Join%2A> i <xref:System.Linq.Enumerable.GroupJoin%2A>. Te metody wykonywania equijoins lub sprzężenia, które odpowiadają dwa źródła danych oparte na równości kluczy. (Dla porównania języka Transact-SQL obsługuje operatory sprzężenia innych niż "równa się", na przykład "less than" operator.) W warunkach relacyjnej bazy danych <xref:System.Linq.Enumerable.Join%2A> implementuje sprzężenie wewnętrzne, a typ sprzężenia w zwracane są tylko te obiekty, które mają odpowiedniki w zestawie danych. <xref:System.Linq.Enumerable.GroupJoin%2A> Metoda nie ma bezpośredniego odpowiednika w warunkach relacyjnej bazy danych, ale implementuje nadzbiorem sprzężenia wewnętrzne lewych sprzężeń zewnętrznych. Lewe sprzężenie zewnętrzne jest sprzężenia, która zwraca każdy element pierwszego źródła danych (po lewej stronie), nawet wtedy, gdy go nie ma żadnych elementów skorelowane w źródle danych.  
   
- Na poniższej ilustracji przedstawiono koncepcję dwóch zestawów i elementów w obrębie tych zestawów, które znajdują się w przypadku sprzężenia wewnętrznego lub lewe sprzężenie zewnętrzne.  
+ Na poniższej ilustracji przedstawiono koncepcyjny widok dwa zestawy i elementów w obrębie tych zestawów, które są zawarte w sprzężenie wewnętrzne lub lewego sprzężenia zewnętrznego.  
   
- ![Dwie nakładające się okręgi przedstawiający wewnętrzny&#47;zewnętrzne. ] (../../../../csharp/programming-guide/concepts/linq/media/joincircles.png "JoinCircles")  
+ ![Dwa nakładających się okręgów przedstawiający wewnętrzny&#47;zewnętrznego. ](../../../../csharp/programming-guide/concepts/linq/media/joincircles.png "JoinCircles")  
   
 ## <a name="methods"></a>Metody  
   
 |Nazwa metody|Opis|Składnia wyrażeń języka Visual Basic|Więcej informacji|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|Łączenie|Łączy dwie sekwencje oparta na funkcjach selektora kluczy i wyodrębnia par wartości.|`From x In …, y In … Where x.a = y.a`<br /><br /> —lub—<br /><br /> `Join … [As …]In … On …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=nameWithType>|  
-|GroupJoin|Tworzy sprzężenie dwóch sekwencji na podstawie funkcji selektora kluczy i grup znalezione wyniki dla każdego elementu.|`Group Join … In … On …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=nameWithType>|  
+|Łączenie|Łączy dwie sekwencje, w oparciu o funkcje przełącznika kluczowego i wyodrębnia par wartości.|`From x In …, y In … Where x.a = y.a`<br /><br /> —lub—<br /><br /> `Join … [As …]In … On …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=nameWithType>|  
+|Groupjoin —|Łączy dwie sekwencje, w oparciu o funkcje przełącznika kluczowego i grupy znalezione wyniki dla każdego elementu.|`Group Join … In … On …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Linq>  
- [Operatory standardowe zapytań — omówienie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [Omówienie operatorów standardowej kwerendy (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
  [Typy anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
- [Formułowanie połączeń i zapytań między produktami](http://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)  
+ [Formułowanie połączeń i zapytań między produktami](https://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)  
  [Join, klauzula](../../../../visual-basic/language-reference/queries/join-clause.md)  
  [Porady: łączenie zawartości niepodobnych plików (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  
  [Porady: wypełnianie kolekcji Object z wielu źródeł (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)

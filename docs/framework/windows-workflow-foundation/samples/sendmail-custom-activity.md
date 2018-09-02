@@ -1,16 +1,16 @@
 ---
-title: Działania niestandardowe SendMail
+title: Niestandardowe działanie SendMail
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: 4ad250b42ca06867d307148f93e11c59846a61f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e9d27711754c3aa8ff7f68c23f528c9f5c4356f7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519707"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423403"
 ---
-# <a name="sendmail-custom-activity"></a>Działania niestandardowe SendMail
-Ten przykład przedstawia sposób tworzenia działań niestandardowych, która jest pochodną <xref:System.Activities.AsyncCodeActivity> do wysyłania wiadomości e-mail do użycia w aplikacji przepływu pracy za pomocą protokołu SMTP. To niestandardowe działanie korzysta z funkcji programu <xref:System.Net.Mail.SmtpClient> do asynchronicznego wysyłania wiadomości e-mail i do wysyłania wiadomości e-mail z uwierzytelnianiem. Umożliwia także niektóre funkcje przez użytkownika końcowego, takie jak przetestować tryb, zastępujący tokenu, Szablony plików i test ścieżkę.  
+# <a name="sendmail-custom-activity"></a>Niestandardowe działanie SendMail
+W tym przykładzie pokazano, jak utworzyć niestandardowe działanie, która pochodzi od klasy <xref:System.Activities.AsyncCodeActivity> do wysyłania wiadomości e-mail przy użyciu protokołu SMTP do użycia w aplikacji przepływu pracy. Niestandardowe działanie korzysta z możliwości <xref:System.Net.Mail.SmtpClient> asynchroniczne wysyłanie wiadomości e-mail i Wyślij wiadomość e-mail z uwierzytelnianiem. Umożliwia także niektóre funkcje użytkowników końcowych, takich jak przetestować tryb zastępowania tokenu, Szablony plików i przetestować ścieżki docelowej.  
   
  W poniższej tabeli przedstawiono argumenty `SendMail` działania.  
   
@@ -22,30 +22,30 @@ Ten przykład przedstawia sposób tworzenia działań niestandardowych, która j
 |UserName|String|Nazwa użytkownika, aby ustawić poświadczenia, aby uwierzytelnić nadawcę <xref:System.Net.Mail.SmtpClient.Credentials%2A> właściwości.|  
 |Hasło|String|Hasło, aby ustawić poświadczenia, aby uwierzytelnić nadawcę <xref:System.Net.Mail.SmtpClient.Credentials%2A> właściwości.|  
 |Temat|<xref:System.Activities.InArgument%601>\<ciąg >|Temat wiadomości.|  
-|Treści|<xref:System.Activities.InArgument%601>\<ciąg >|Treść wiadomości.|  
-|Załączniki|<xref:System.Activities.InArgument%601>\<ciąg >|Kolekcja załącznika używany do przechowywania danych dołączony do wiadomości e-mail.|  
+|Treść|<xref:System.Activities.InArgument%601>\<ciąg >|Treść wiadomości.|  
+|Załączniki|<xref:System.Activities.InArgument%601>\<ciąg >|Kolekcja załącznika używany do przechowywania danych dołączone do tej wiadomości e-mail.|  
 |Z|<xref:System.Net.Mail.MailAddress>|Adres początkowy dla tej wiadomości e-mail.|  
-|Do|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Kolekcja adresów, która zawiera adresatów wiadomości e-mail.|  
-|CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Adres kolekcji zawierającej Adresaci kopii (DW) dla tej wiadomości e-mail.|  
-|BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Adres kolekcji, która zawiera adresatów kopii (UDW) dla tej wiadomości e-mail.|  
-|Tokeny|<xref:System.Activities.InArgument%601>< IDictionary\<ciąg, ciąg >>|Tokeny zastąpić w treści. Ta funkcja umożliwia użytkownikom określanie niektórych wartości w treści, niż można później zastąpić tokeny realizowane przy użyciu tej właściwości.|  
-|BodyTemplateFilePath|String|Ścieżka szablonu dla treści. `SendMail` Działanie kopiuje zawartość tego pliku do jej treści właściwości.<br /><br /> Szablon może zawierać tokeny, które są zastępowane przez wartości właściwości tokenów.|  
-|TestMailTo|<xref:System.Net.Mail.MailAddress>|Gdy ta właściwość jest ustawiona, wszystkie wiadomości e-mail są wysyłane na adres określony w nim.<br /><br /> Ta właściwość jest przeznaczona do użycia podczas badania przepływów pracy. Na przykład jeśli chcesz upewnić się, że wszystkie wiadomości e-mail są wysyłane bez wysyłania ich do adresatów, do rzeczywistych.|  
-|TestDropPath|String|Gdy ta właściwość jest ustawiona, wszystkie wiadomości e-mail zostały także zapisane w określonym pliku.<br /><br /> Ta właściwość jest przeznaczona do użycia podczas testowania i debugowania przepływów pracy, aby upewnić się, że format i zawartość wychodzących wiadomości e-mail jest odpowiednia.|  
+|Zadanie|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Kolekcja adresów, która zawiera adresatów wiadomości e-mail.|  
+|CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Adres kolekcji, która zawiera Adresaci kopii (DW) dla tej wiadomości e-mail.|  
+|BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Kolekcja adresów, zawierający adresatów kopii (UDW) dla tej wiadomości e-mail.|  
+|Tokeny|<xref:System.Activities.InArgument%601>< IDictionary\<ciąg, ciąg >>|Tokeny do zastąpienia w treści. Ta funkcja umożliwia użytkownikom wskazanie niektóre wartości w treści, niż można zastąpić później przez tokeny zabezpieczające udostępniane przy użyciu tej właściwości.|  
+|BodyTemplateFilePath|String|Ścieżka szablonu dla treści. `SendMail` Działanie kopiuje zawartość tego pliku do jego właściwości treści.<br /><br /> Szablon może zawierać tokenów, które są zastępowane przez zawartość właściwości tokenów.|  
+|TestMailTo|<xref:System.Net.Mail.MailAddress>|Gdy ta właściwość jest ustawiona, wszystkie wiadomości e-mail są wysyłane na adres określony w nim.<br /><br /> Ta właściwość jest przeznaczona do użycia podczas testowania przepływów pracy. Na przykład jeśli chcesz upewnić się, że wszystkie wiadomości e-mail są wysyłane bez wysyłania ich do rzeczywistych adresatów.|  
+|TestDropPath|String|Gdy ta właściwość jest ustawiona, wszystkie wiadomości e-mail również są zapisywane w określonym pliku.<br /><br /> Ta właściwość jest przeznaczona do użycia podczas testowania i debugowania przepływów pracy, aby upewnić się, że format i zawartość wychodzących wiadomości e-mail jest odpowiednia.|  
   
 ## <a name="solution-contents"></a>Zawartość rozwiązania  
  Rozwiązanie zawiera dwa projekty.  
   
 |Projekt|Opis|Ważnych plików|  
 |-------------|-----------------|---------------------|  
-|SendMail|Działanie SendMail|1.  SendMail.cs: implementacja dla działania głównego<br />2.  SendMailDesigner.xaml i SendMailDesigner.xaml.cs: projektanta dla działania SendMail<br />3.  MailTemplateBody.htm: szablon wiadomości e-mail do wysłania.|  
-|SendMailTestClient|Klient, aby przetestować działanie SendMail.  Ten projekt przedstawia dwa sposoby wywoływania działania SendMail: programowo i deklaratywnie.|1.  Sequence1.XAML: przepływ pracy, który wywołuje aktywność SendMail.<br />2.  Plik program.CS: wywołuje Sequence1, a także tworzy programowo używającej SendMail przepływ pracy.|  
+|SendMail|Działanie SendMail|1.  SendMail.cs: implementacja dla głównego działania<br />2.  SendMailDesigner.xaml i SendMailDesigner.xaml.cs: projektanta za działanie SendMail<br />3.  MailTemplateBody.htm: szablon wiadomości e-mail, które zostaną wysłane.|  
+|SendMailTestClient|Klient, aby przetestować działanie SendMail.  Ten projekt przedstawia dwa sposoby wywoływania działanie SendMail: sposób deklaratywny i programowy.|1.  Sequence1.XAML: przepływ pracy, który wywołuje działanie SendMail.<br />2.  Plik program.CS: wywołuje Sequence1, a także tworzy programowo używającej SendMail przepływu pracy.|  
   
-## <a name="further-configuration-of-the-sendmail-activity"></a>Dalsza konfiguracja działania SendMail  
- Wprawdzie nie pokazano w przykładzie, użytkownicy mogą wykonywać konfiguracji dodanie SendMail działania. Trzech kolejnych sekcjach pokazują, jak to zrobić.  
+## <a name="further-configuration-of-the-sendmail-activity"></a>Dalsza konfiguracja działanie SendMail  
+ Mimo że nie pokazano w przykładzie, użytkownicy mogą wykonywać dodatkowe konfiguracji działanie SendMail. Następne trzy sekcje pokazują, jak to zrobić.  
   
-### <a name="sending-an-email-using-tokens-specified-in-the-body"></a>Wysyłanie wiadomości e-mail przy użyciu tokenów określony w treści  
- Następujący fragment kodu pokazano, jak można wysłać wiadomości e-mail z tokenami w treści. Zwróć uwagę, jak tokenów znajdują się w treści właściwości. Wartości te tokeny są dostarczane do właściwości tokenów.  
+### <a name="sending-an-email-using-tokens-specified-in-the-body"></a>Wysyłanie wiadomości e-mail przy użyciu tokenów określona w treści  
+ Ten fragment kodu pokazuje, jak możesz wysłać wiadomość e-mail z tokenami w treści. Zwróć uwagę, jak tokeny znajdują się we właściwości treść. Właściwość tokenów podano wartości dla tych tokenów.  
   
 ```html  
 IDictionary<string, string> tokens = new Dictionary<string, string>();  
@@ -67,7 +67,7 @@ new SendMail
 ```  
   
 ### <a name="sending-an-email-using-a-template"></a>Wysyłanie wiadomości e-mail przy użyciu szablonu  
- Następujący fragment kodu przedstawia sposób wysłania wiadomości e-mail przy użyciu tokenów szablonu w treści. Zwróć uwagę, że podczas ustawiania `BodyTemplateFilePath` właściwość nie należy podać wartość dla właściwości Body (treść pliku szablonu zostaną skopiowane do treści).  
+ Ten fragment kodu przedstawia sposób wysłania wiadomości e-mail przy użyciu tokenów szablonu w treści. Należy zauważyć, że podczas ustawiania `BodyTemplateFilePath` właściwości nie należy podać wartość dla właściwości treści (zawartość pliku szablonu zostaną skopiowane do treści).  
   
 ```  
 new SendMail  
@@ -83,8 +83,8 @@ new SendMail
 };  
 ```  
   
-### <a name="sending-mails-in-testing-mode"></a>Wysyłanie wiadomości w tryb testowania  
- Następujący fragment kodu przedstawiono sposób ustawiania dwie właściwości testowych: ustawiając `TestMailTo` na wszystkie komunikaty będą wysyłane do john.doe@contoso.con (bez względu wartości do, DW, UDW). Przez ustawienie TestDropPath wszystkich wychodzących wiadomości e-mail będą również rejestrowane w podana ścieżka. Te właściwości można skonfigurować niezależnie (nie jest ona powiązana).  
+### <a name="sending-mails-in-testing-mode"></a>Wysyłanie wiadomości E-mail w tryb testowania  
+ Następujący fragment kodu przedstawia sposób ustawiania dwie właściwości testowania: ustawiając `TestMailTo` na wszystkie komunikaty zostaną wysłane do john.doe@contoso.con (bez uwzględniania wartości do, DW, UDW). Ustawiając TestDropPath wszystkie wychodzących wiadomości e-mail będą również rejestrowane w podanej ścieżce. Te właściwości można skonfigurować niezależnie (nie jest ona powiązana).  
   
 ```  
 new SendMail  
@@ -105,37 +105,37 @@ new SendMail
 ## <a name="set-up-instructions"></a>Instrukcje dotyczące konfiguracji  
  Dostęp do serwera SMTP jest wymagany dla tego przykładu.  
   
- Aby uzyskać więcej informacji na temat konfigurowania serwera SMTP zobacz następujące łącza.  
+ Aby uzyskać więcej informacji na temat konfigurowania serwera SMTP zobacz poniższe linki.  
   
--   [Microsoft Technet](http://go.microsoft.com/fwlink/?LinkId=166060)  
+-   [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
   
--   [Konfigurowanie usługi SMTP (IIS 6.0)](http://go.microsoft.com/fwlink/?LinkId=150456)  
+-   [Konfigurowanie usługi SMTP (IIS 6.0)](https://go.microsoft.com/fwlink/?LinkId=150456)  
   
--   [Usługi IIS 7.0: Konfigurowanie poczty E-Mail SMTP](http://go.microsoft.com/fwlink/?LinkId=150457)  
+-   [Usługi IIS 7.0: Konfigurowanie poczty E-Mail SMTP](https://go.microsoft.com/fwlink/?LinkId=150457)  
   
--   [Jak zainstalować usługi SMTP](http://go.microsoft.com/fwlink/?LinkId=150458)  
+-   [Jak zainstalować usługę SMTP](https://go.microsoft.com/fwlink/?LinkId=150458)  
   
- Emulatory SMTP zapewnianych przez strony trzecie są dostępne do pobrania.  
+ Emulatory SMTP udostępniane przez inne firmy są dostępne do pobrania.  
   
 ##### <a name="to-run-this-sample"></a>Aby uruchomić ten przykład  
   
-1.  Przy użyciu [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], otwórz plik rozwiązania SendMail.sln.  
+1.  Za pomocą [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], otwórz plik rozwiązania SendMail.sln.  
   
 2.  Upewnij się, że masz dostęp do prawidłowego serwera SMTP. Zobacz instrukcje dotyczące konfiguracji.  
   
-3.  Skonfiguruj program przy użyciu adresu serwera i od i do adresów e-mail.  
+3.  Skonfiguruj program za pomocą adres swojego serwera i z adresów e-mail.  
   
-     Aby prawidłowo uruchomić ten przykład, może być konieczne skonfigurowanie wartości od i do adresów e-mail i adres serwera SMTP w pliku Program.cs i Sequence.xaml. Musisz zmienić adres w obu lokalizacjach, ponieważ program wysyła wiadomości na dwa różne sposoby  
+     Aby prawidłowo uruchomić ten przykład, może być konieczne skonfigurowanie wartości od i do adresów e-mail i adres serwera SMTP w pliku Program.cs i Sequence.xaml. Trzeba będzie zmienić adres w obu lokalizacjach, ponieważ program wysyła wiadomość e-mail na dwa różne sposoby  
   
-4.  Aby tworzyć rozwiązania, naciśnij kombinację klawiszy CTRL + SHIFT + B.  
+4.  Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.  
   
-5.  Aby uruchomić rozwiązanie, naciśnij klawisze CTRL + F5.  
+5.  Aby uruchomić rozwiązanie, naciśnij kombinację klawiszy CTRL + F5.  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\SendMail`

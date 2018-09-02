@@ -1,20 +1,20 @@
 ---
-title: Użycie działanie Switch z niestandardowych typów
+title: Użycie działania Switch z typami niestandardowymi
 ms.date: 03/30/2017
 ms.assetid: 482a48c4-eb83-40c3-a4e2-2f9a8af88b75
-ms.openlocfilehash: 2b6f3109324064cb5e746de9c61e5a70c4c4d60b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b24a03573b31f3fb1c34d4aa6e03bc11f5b25455
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517884"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423568"
 ---
-# <a name="usage-of-the-switch-activity-with-custom-types"></a>Użycie działanie Switch z niestandardowych typów
-W tym przykładzie opisano, jak włączyć <xref:System.Activities.Statements.Switch%601> działanie, aby ocenić typu złożonego zdefiniowane przez użytkownika w czasie wykonywania. W procedurach najbardziej tradycyjnych językach programowania [przełącznika](http://go.microsoft.com/fwlink/?LinkId=180521) instrukcja wybiera logiki wykonywania oparte na ocenie warunkowy zmiennej. Tradycyjnie `switch` instrukcji działa na wyrażenie, które może przyjąć statycznie. Na przykład w języku C# to oznacza, że typy tego tylko pierwotne, takie jak <xref:System.Boolean>, <xref:System.Int32>, <xref:System.String>, i typy wyliczeniowe są obsługiwane.  
+# <a name="usage-of-the-switch-activity-with-custom-types"></a>Użycie działania Switch z typami niestandardowymi
+W tym przykładzie opisano sposób włączania <xref:System.Activities.Statements.Switch%601> działanie, aby ocenić zdefiniowanych przez użytkownika typem złożonym w czasie wykonywania. W procedurach tradycyjnych językach programowania [Przełącz](https://go.microsoft.com/fwlink/?LinkId=180521) instrukcja wybiera logiki wykonywania na podstawie oceny warunkowego zmiennej. Tradycyjnie `switch` instrukcji operuje na wyrażenie, które może przyjąć statycznie. Na przykład w języku C# oznacza to, że tylko prymitywnymi typami, takich jak <xref:System.Boolean>, <xref:System.Int32>, <xref:System.String>, oraz typy wyliczeniowe są obsługiwane.  
   
- Umożliwia włączenie klasy niestandardowej logiki musi być implementowana pozwala obliczyć wartości typu złożonego niestandardowych w czasie wykonywania. W tym przykładzie pokazano, jak włączyć włączenie niestandardowego typu złożonego o nazwie `Person`.  
+ Aby włączyć przełączanie na klasę niestandardową, logiki należy zaimplementować pozwala obliczyć wartości niestandardowego typu złożonego w czasie wykonywania. W tym przykładzie pokazano, jak włączyć przełączania na niestandardowy typ złożony, o nazwie `Person`.  
   
--   W niestandardowej klasy `Person`, <xref:System.ComponentModel.TypeConverter> zadeklarowano atrybutu o nazwie niestandardowego <xref:System.ComponentModel.TypeConverter>.  
+-   Klasy niestandardowe `Person`, <xref:System.ComponentModel.TypeConverter> atrybut jest zadeklarowany za pomocą nazwę niestandardowej <xref:System.ComponentModel.TypeConverter>.  
   
     ```  
     [TypeConverter(typeof(PersonConverter))]  
@@ -25,7 +25,7 @@ W tym przykładzie opisano, jak włączyć <xref:System.Activities.Statements.Sw
     ...  
     ```  
   
--   W niestandardowej klasy `Person`, <xref:System.Object.Equals%2A> i <xref:System.Object.GetHashCode%2A> klasy zostaną zastąpione.  
+-   Klasy niestandardowe `Person`, <xref:System.Object.Equals%2A> i <xref:System.Object.GetHashCode%2A> klasy zostaną zastąpione.  
   
     ```  
     public override bool Equals(object obj)  
@@ -51,7 +51,7 @@ W tym przykładzie opisano, jak włączyć <xref:System.Activities.Statements.Sw
     }  
     ```  
   
--   Niestandardowy <xref:System.ComponentModel.TypeConverter> zaimplementowana jest klasa, która przeprowadza konwersję wystąpienia klasy niestandardowego ciągu i ciąg do wystąpienia klasy niestandardowej.  
+-   Niestandardowy <xref:System.ComponentModel.TypeConverter> zaimplementowaniu klasy, który wykonuje konwersję wystąpienia klasy niestandardowego ciągu i ciąg na wystąpienie klasy niestandardowej.  
   
     ```  
     public class PersonConverter : TypeConverter  
@@ -103,30 +103,30 @@ W tym przykładzie opisano, jak włączyć <xref:System.Activities.Statements.Sw
     }  
     ```  
   
- Następujące pliki znajdują się w tym przykładzie:  
+ W tym przykładzie są uwzględnione następujące pliki:  
   
--   **Person.cs**: definiuje `Person` klasy.  
+-   **Osoba.cs**: definiuje `Person` klasy.  
   
 -   **PersonConverter.cs**: konwerter typów dla `Person` klasy.  
   
 -   **Sequence.XAML**: przepływ pracy, który przełącza `Person` typu.  
   
--   **Plik program.cs**: funkcja main, która uruchamia przepływ pracy.  
+-   **Plik program.cs**: główna funkcja, która uruchamia przepływ pracy.  
   
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
   
 1.  Ładowanie Switch.sln w [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-2.  Naciśnij klawisze CTRL + SHIFT + B w celu skompilowania rozwiązania.  
+2.  Naciśnij klawisze CTRL + SHIFT + B, aby skompilować rozwiązanie.  
   
 3.  Naciśnij klawisze CTRL + F5, aby uruchomić przykład.  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Switch`  
   

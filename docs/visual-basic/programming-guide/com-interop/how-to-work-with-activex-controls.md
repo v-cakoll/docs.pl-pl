@@ -5,34 +5,34 @@ helpviewer_keywords:
 - Toolbox, adding controls
 - ActiveX controls, adding to Toolbox
 ms.assetid: ec675027-866f-4c05-aaf2-92fca5200f9a
-ms.openlocfilehash: e5fe4109edfcb96704f3a39e4dce5aa7a4287e33
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 740f2c899e7548829e4822bbfb56c7d61d64777a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640537"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421818"
 ---
 # <a name="how-to-work-with-activex-controls-visual-basic"></a>Porady: praca z kontrolkami ActiveX (Visual Basic)
-Formanty ActiveX są składniki modelu COM lub obiekty, które można wstawić do strony sieci Web lub innych aplikacji do ponownego użycia spakowanych funkcji ktoś inny ma zaprogramowane w taki sposób. Kontrolki ActiveX utworzonych dla programu Visual Basic 6.0 i starszych wersji służy do dodawania funkcji do **przybornika** programu Visual Studio.  
+Formanty ActiveX to składniki COM lub obiekty, które można wstawić do strony sieci Web lub innej aplikacji w celu ponownego użycia spakowane funkcje, które ma innemu programiście. Kontrolki ActiveX opracowanych dla języka Visual Basic 6.0 i starsze wersje umożliwia dodawanie funkcji do **przybornika** programu Visual Studio.  
   
-### <a name="to-add-activex-controls-to-the-toolbox"></a>Do dodawania formantów ActiveX do przybornika  
+### <a name="to-add-activex-controls-to-the-toolbox"></a>Aby dodać formanty ActiveX do przybornika  
   
 1.  Na **narzędzia** menu, kliknij przycisk **wybierz elementy przybornika**.  
   
-     **Przybornika wybierz** zostanie wyświetlone okno dialogowe.  
+     **Wybierz przybornika** pojawi się okno dialogowe.  
   
-2.  Kliknij przycisk **składniki COM** kartę.  
+2.  Kliknij przycisk **składników COM** kartę.  
   
 3.  Zaznacz pole wyboru obok kontrolki ActiveX, które chcesz użyć, a następnie kliknij przycisk **OK**.  
   
-     Nowy formant pojawia się przy użyciu innych narzędzi w **przybornika**.  
+     Nowy formant, który pojawia się z innymi narzędziami w **przybornika**.  
   
     > [!NOTE]
-    >  Narzędzie Aximp ręczne tworzenie zestawu międzyoperacyjnego dla formantów ActiveX. Aby uzyskać więcej informacji, zobacz [Aximp.exe (Importer kontrolki ActiveX formularzy systemu Windows)](http://msdn.microsoft.com/library/482c0d83-7144-4497-b626-87d2351b78d0).  
+    >  Narzędzie Aximp ręcznie utworzyć zestaw międzyoperacyjny dla formantów ActiveX. Aby uzyskać więcej informacji, zobacz [Aximp.exe (Importer kontrolki ActiveX formularzy Windows)](https://msdn.microsoft.com/library/482c0d83-7144-4497-b626-87d2351b78d0).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Usługa międzyoperacyjna modelu COM](../../../visual-basic/programming-guide/com-interop/index.md)  
  [Instrukcje: dodawanie kontrolek ActiveX do formularzy Windows Forms](../../../framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
- [Aximp.exe (importer kontrolki ActiveX formularzy Windows Forms)](http://msdn.microsoft.com/library/482c0d83-7144-4497-b626-87d2351b78d0)  
+ [Aximp.exe (importer kontrolki ActiveX formularzy Windows Forms)](https://msdn.microsoft.com/library/482c0d83-7144-4497-b626-87d2351b78d0)  
  [Uwagi odnośnie do hostowania kontrolki ActiveX na formularzu systemu Windows](../../../framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)  
  [Rozwiązywanie problemów związanych z współdziałaniem](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)

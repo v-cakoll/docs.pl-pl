@@ -9,30 +9,30 @@ helpviewer_keywords:
 - animation [WPF], colors with key frames
 - key frames [WPF], animating colors with
 ms.assetid: ab04ffa6-4de9-4d5b-a3b4-4e35d5b2ef35
-ms.openlocfilehash: 7d89a1f9c24c93bd6b05265092bde09e8cf6eff5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb09a54df3d99e05e89ec0f3d9f17b0e9fe78647
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33560335"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419080"
 ---
 # <a name="how-to-animate-color-by-using-key-frames"></a>Jak animować kolor z wykorzystaniem klatek kluczowych
-W tym przykładzie pokazano, jak animować <xref:System.Windows.Media.SolidColorBrush.Color%2A> z <xref:System.Windows.Media.SolidColorBrush> przy użyciu klucza ramki.  
+W tym przykładzie pokazano, jak animować <xref:System.Windows.Media.SolidColorBrush.Color%2A> z <xref:System.Windows.Media.SolidColorBrush> przy użyciu klatek kluczowych.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto <xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames> klasy do animowania <xref:System.Windows.Media.SolidColorBrush.Color%2A> właściwość <xref:System.Windows.Media.SolidColorBrush>. Ta animacja używa trzech klatek kluczowych w następujący sposób:  
+ W poniższym przykładzie użyto <xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames> klasy, aby animować <xref:System.Windows.Media.SolidColorBrush.Color%2A> właściwość <xref:System.Windows.Media.SolidColorBrush>. Ta animacja używa trzech ramek kluczowych w następujący sposób:  
   
-1.  Podczas pierwszego dwusekundowe używa wystąpienia <xref:System.Windows.Media.Animation.LinearColorKeyFrame> klasy stopniowo zmiana koloru z zielonego na czerwony. Liniowy klatek kluczowych, takich jak <xref:System.Windows.Media.Animation.LinearColorKeyFrame> utworzyć liniowej przejścia między wartościami.  
+1.  Podczas pierwszych dwóch sekund, używa wystąpienia <xref:System.Windows.Media.Animation.LinearColorKeyFrame> klasy, aby stopniowo kolor z zielonego do czerwonego. Liniowy klatek kluczowych, takich jak <xref:System.Windows.Media.Animation.LinearColorKeyFrame> utworzyć płynne przejście liniowy między wartościami.  
   
-2.  W końcu następnej pół sekundy używa wystąpienia <xref:System.Windows.Media.Animation.DiscreteColorKeyFrame> klasę, aby szybko zmienić kolor czerwony żółty. Odrębny klatek kluczowych, takich jak <xref:System.Windows.Media.Animation.DiscreteColorKeyFrame> utworzyć nagłym zmiany między wartościami, oznacza to, zmiana koloru w tej części animacji występuje szybko i nie jest niewielkie.  
+2.  Podczas koniec następnego pół sekundy używa wystąpienia <xref:System.Windows.Media.Animation.DiscreteColorKeyFrame> klasy, aby szybko zmienić kolor czerwony na żółto. Dyskretne klatek kluczowych, takich jak <xref:System.Windows.Media.Animation.DiscreteColorKeyFrame> tworzenie nagłe zmiany między wartościami, to znaczy, zmiana koloru w tej części animacji odbywa się szybko, a nie subtelne.  
   
-3.  Podczas końcowego dwusekundowe używa wystąpienia <xref:System.Windows.Media.Animation.SplineColorKeyFrame> klasy ponownie zmienić kolor — teraz z powrotem żółty zielony. Ramek kluczowych krzywej składanej, takich jak <xref:System.Windows.Media.Animation.SplineColorKeyFrame> utworzyć zmiennej przejścia między wartościami zgodnie z wartościami <xref:System.Windows.Media.Animation.SplineColorKeyFrame.KeySpline%2A> właściwości. W tym przykładzie zmianę koloru rozpoczyna się powoli i przyspiesza wykładniczo do końca segmentu czasu.  
+3.  Podczas końcowego dwie sekundy, używa wystąpienia <xref:System.Windows.Media.Animation.SplineColorKeyFrame> klasy, aby zmienić kolor ponownie — tym razem z żółtym kopii na zielony. Ramek kluczowych krzywej składanej, takich jak <xref:System.Windows.Media.Animation.SplineColorKeyFrame> Tworzenie zmiennej przejścia między wartościami zgodnie z wartościami <xref:System.Windows.Media.Animation.SplineColorKeyFrame.KeySpline%2A> właściwości. W tym przykładzie zmiana koloru rozpocznie się powoli i przyspiesza wykładniczo w kierunku końca odcinka czasu.  
   
  [!code-csharp[keyframes_snip#ColorAnimationUsingKeyFramesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/ColorAnimationUsingKeyFramesExample.cs#coloranimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#ColorAnimationUsingKeyFramesWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/coloranimationusingkeyframesexample.vb#coloranimationusingkeyframeswholepage)]
  [!code-xaml[keyframes_snip#ColorAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/ColorAnimationUsingKeyFramesExample.xaml#coloranimationusingkeyframeswholepage)]  
   
- Pełny przykład, zobacz [klatek kluczowych animacji próbki](http://go.microsoft.com/fwlink/?LinkID=160012).  
+ Aby uzyskać pełny przykład, zobacz [przykład animacji ramki kluczowej](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Media.SolidColorBrush.Color%2A>  

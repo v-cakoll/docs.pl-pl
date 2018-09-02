@@ -2,64 +2,64 @@
 title: 'Instrukcje: Wymiana komunikatów w ramach sesji niezawodnej'
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 80dea8545e9d813e68e67414151e2c96537db2e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b204749ce86b79bf46b2d5c96be1b00dca9500d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491829"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419473"
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>Instrukcje: Wymiana komunikatów w ramach sesji niezawodnej
 
-W tym temacie opisano kroki wymagane w celu umożliwienia niezawodnej sesji przy użyciu jednej powiązań dostarczane przez system, które obsługują sesji programu, ale nie domyślnie. Włącz niezawodnej sesji imperatively przy użyciu kodu lub deklaratywnie w pliku konfiguracji. Ta procedura wykorzystuje pliki konfiguracji klienta i usługi, aby włączyć niezawodnej sesji i określić, że komunikaty dostarczone w tej samej kolejności, w jakiej zostały wysłane.
+W tym temacie opisano kroki wymagane w celu umożliwienia niezawodnej sesji przy użyciu jednej z powiązań dostarczanych przez system, które obsługują sesji programu, ale nie domyślnie. Włącz niezawodnej sesji obowiązkowo przy użyciu kodu lub deklaratywnie w pliku konfiguracji. Ta procedura wykorzystuje pliki konfiguracji klienta i usługi, aby umożliwić niezawodnej sesji i określać, że komunikaty zostaną dostarczone w tej samej kolejności, w jakiej zostały wysłane.
 
-Część klucza tej procedury jest, że element konfiguracji punktu końcowego zawiera `bindingConfiguration` atrybut, który odwołuje się do konfiguracji powiązania o nazwie `Binding1`. [  **\<Powiązania >** ](../../../../docs/framework/misc/binding.md) element konfiguracji odwołuje się do tej nazwy, aby włączyć niezawodnej sesji przez ustawienie `enabled` atrybutu [  **\<reliableSession >** ](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) elementu `true`. Określ gwarancje uporządkowanego dostarczenia niezawodnej sesji przez ustawienie `ordered` atrybutu `true`.
+Kluczowa część tej procedury jest, że element konfiguracji punktu końcowego zawiera `bindingConfiguration` atrybut, który odwołuje się do konfiguracji powiązania o nazwie `Binding1`. [  **\<Powiązania >** ](../../../../docs/framework/misc/binding.md) element konfiguracji odwołuje się do tej nazwy, aby umożliwić niezawodnej sesji przez ustawienie `enabled` atrybutu [  **\<reliableSession >** ](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) elementu `true`. Określ gwarancje dostarczenia uporządkowane w niezawodnej sesji przez ustawienie `ordered` atrybutu `true`.
 
-Dla źródła kopię w tym przykładzie [sesja niezawodna WS](../../../../docs/framework/wcf/samples/ws-reliable-session.md).
+Źródło kopię w tym przykładzie można zobaczyć [sesja niezawodna WS](../../../../docs/framework/wcf/samples/ws-reliable-session.md).
 
-### <a name="configure-the-service-with-a-wshttpbinding-to-use-a-reliable-session"></a>Skonfiguruj usługę z WSHttpBinding do użycia niezawodnej sesji
+### <a name="configure-the-service-with-a-wshttpbinding-to-use-a-reliable-session"></a>Konfigurowanie usługi przy użyciu WSHttpBinding używać niezawodnej sesji
 
 1. Definiowanie kontraktu usługi dla typu usługi.
 
    [!code-csharp[c_HowTo_UseReliableSession#1121](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/service.cs#1121)]
 
-1. Implementowanie kontraktu usługi w klasie usługi. Należy pamiętać, że informacje powiązania lub adres nie jest określona wewnątrz implementacji usługi. Nie są wymagane, aby napisać kod, aby pobrać adres lub powiązanie informacji o informacje z pliku konfiguracji.
+1. Implementowanie kontraktu usługi, w klasie usługi. Należy pamiętać, że informacji adres lub powiązanie nie jest określona wewnątrz implementacji usługi. Nie są wymagane, aby napisać kod, aby pobrać adres lub powiązania informacji o informacje z pliku konfiguracji.
 
    [!code-csharp[c_HowTo_UseReliableSession#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/service.cs#1122)]
 
-1. Utwórz *Web.config* pliku do konfigurowania punktu końcowego dla `CalculatorService` używającą <xref:System.ServiceModel.WSHttpBinding> z niezawodnej sesji włączona i uporządkowanego dostarczenia komunikatów wymagane.
+1. Tworzenie *Web.config* pliku, aby skonfigurować punkt końcowy dla `CalculatorService` , który używa <xref:System.ServiceModel.WSHttpBinding> za pomocą niezawodnej sesji włączone i uporządkowane dostarczania wiadomości wymagane.
 
    [!code-xml[c_HowTo_UseReliableSession#2111](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/common/web.config#2111)]
 
-1. Utwórz *Service.svc* pliku, który zawiera wiersz:
+1. Tworzenie *Service.svc* pliku zawierające następujący wiersz:
 
    ```
    <%@ServiceHost language=c# Service="CalculatorService" %>
    ```
 
-1.  Miejsce *Service.svc* pliku w katalogu wirtualnym programu Internet Information Services (IIS).
+1.  Miejsce *Service.svc* pliku w katalogu wirtualnego Internet Information Services (IIS).
 
-### <a name="configure-the-client-with-a-wshttpbinding-to-use-a-reliable-session"></a>Konfigurowanie klienta z WSHttpBinding do użycia niezawodnej sesji
+### <a name="configure-the-client-with-a-wshttpbinding-to-use-a-reliable-session"></a>Konfigurowanie klienta za pomocą WSHttpBinding używać niezawodnej sesji
 
-1. Użyj [narzędzie do obsługi metadanych elementu ServiceModel (*Svcutil.exe*)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) z poziomu wiersza polecenia, aby wygenerować kod na podstawie metadanych usługi:
+1. Użyj [narzędzie do metadanych elementu ServiceModel (*Svcutil.exe*)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) z poziomu wiersza polecenia, aby wygenerować kod z metadanych usługi:
 
    ```console
    Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
    ```
 
-1. Zawiera wygenerowanego klienta `ICalculator` Interfejs definiujący kontrakt usługi, które muszą spełniać implementacja klienta.
+1. Zawiera wygenerowanego klienta `ICalculator` Interfejs definiujący kontrakt usługi, które muszą spełniać implementacji klienta.
 
    [!code-csharp[C_HowTo_UseReliableSession#1221](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/client.cs#1221)]
 
-1. Aplikacja wygenerowanego klienta zawiera również implementacja `ClientCalculator`. Należy pamiętać, że informacje adres i powiązanie nie jest określony dowolnym wewnątrz implementacji usługi. Nie są wymagane, aby napisać kod, aby pobrać adres lub powiązanie informacji o informacje z pliku konfiguracji.
+1. Aplikacja wygenerowanego klienta zawiera również implementację `ClientCalculator`. Należy pamiętać, że informacje dotyczące adresów i powiązanie nie jest określona w dowolne miejsce wewnątrz implementacji usługi. Nie są wymagane, aby napisać kod, aby pobrać adres lub powiązania informacji o informacje z pliku konfiguracji.
 
    [!code-csharp[C_HowTo_UseReliableSession#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/client.cs#1222)]
 
-1. *Svcutil.exe* również generuje konfigurację dla klienta, który używa <xref:System.ServiceModel.WSHttpBinding> klasy. Nazwa pliku konfiguracji *App.config* przy użyciu programu Visual Studio.
+1. *Svcutil.exe* również generuje konfigurację dla klienta, który używa <xref:System.ServiceModel.WSHttpBinding> klasy. Nadaj plikowi konfiguracji nazwę *App.config* przy użyciu programu Visual Studio.
 
    [!code-xml[C_HowTo_UseReliableSession#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/common/app.config#2211)]
 
-1. Utwórz wystąpienie `ClientCalculator` w aplikacji i wywoływanie operacji usługi.
+1. Utwórz wystąpienie obiektu `ClientCalculator` w aplikacji i wywoływanie operacji usługi.
 
    [!code-csharp[C_HowTo_UseReliableSession#1223](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/client.cs#1223)]
 
@@ -67,7 +67,7 @@ Dla źródła kopię w tym przykładzie [sesja niezawodna WS](../../../../docs/f
 
 ## <a name="example"></a>Przykład
 
-Domyślnie kilka powiązania dostarczane przez system obsługi niezawodnej sesji. Należą do nich następujące elementy:
+Domyślnie kilka powiązania dostarczane przez system obsługuje sesji uwierzytelnianych. Należą do nich następujące elementy:
 
 - <xref:System.ServiceModel.WSDualHttpBinding>
 
@@ -75,7 +75,7 @@ Domyślnie kilka powiązania dostarczane przez system obsługi niezawodnej sesji
 
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>
 
-Na przykład sposobu tworzenia niestandardowego powiązania, który niezawodnej sesji obsługuje zobacz [porady: Tworzenie niestandardowego wiązania niezawodnej sesji z protokołu HTTPS](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md).
+Na przykład sposobu tworzenia niestandardowego powiązania, które obsługuje niezawodne sesje zobacz [porady: Tworzenie niestandardowego powiązania niezawodnej sesji za pomocą protokołu HTTPS](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md).
 
 ## <a name="see-also"></a>Zobacz także
 

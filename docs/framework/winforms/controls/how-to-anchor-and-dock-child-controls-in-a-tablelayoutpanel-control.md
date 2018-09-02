@@ -12,67 +12,67 @@ helpviewer_keywords:
 - child controls [Windows Forms], anchoring and docking
 - TableLayoutPanel control [Windows Forms], child controls
 ms.assetid: 0d267c35-25f1-49b8-8976-c64e8f0ddc0b
-ms.openlocfilehash: eee67d739de13b125aa1eb8ee86de19ba645a2f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad09c30b2118a08f4249433c4f531e5bcef4acd5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529100"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418955"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a>Porady: zakotwiczenie i dokowanie formantów podrzędnych w formancie TableLayoutPanel
-<xref:System.Windows.Forms.TableLayoutPanel> Sterowanie obsługuje <xref:System.Windows.Forms.Control.Anchor%2A> i <xref:System.Windows.Forms.Control.Dock%2A> właściwości w jej kontrolkach podrzędnych.  
+<xref:System.Windows.Forms.TableLayoutPanel> Kontrolować obsługuje <xref:System.Windows.Forms.Control.Anchor%2A> i <xref:System.Windows.Forms.Control.Dock%2A> właściwości w jego formantów podrzędnych.  
   
-### <a name="to-align-a-child-control-in-a-tablelayoutpanel-cell"></a>Aby wyrównać kontrolki podrzędnej w komórce formantu TableLayoutPanel  
+### <a name="to-align-a-child-control-in-a-tablelayoutpanel-cell"></a>Aby wyrównać kontrolki podrzędnej w komórce TableLayoutPanel  
   
 1.  Utwórz <xref:System.Windows.Forms.TableLayoutPanel> kontrolkę w formularzu.  
   
-2.  Ustaw wartość <xref:System.Windows.Forms.TableLayoutPanel> formantu <xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A> i <xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A> właściwości **1**.  
+2.  Ustaw wartość <xref:System.Windows.Forms.TableLayoutPanel> kontrolki <xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A> i <xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A> właściwości **1**.  
   
-3.  Utwórz <xref:System.Windows.Forms.Button> kontroli w <xref:System.Windows.Forms.TableLayoutPanel> formantu. <xref:System.Windows.Forms.Button> Zajmuje lewego górnego rogu komórki.  
+3.  Tworzenie <xref:System.Windows.Forms.Button> w kontrolce <xref:System.Windows.Forms.TableLayoutPanel> kontroli. <xref:System.Windows.Forms.Button> Zajmuje lewego górnego rogu komórki.  
   
-4.  Zmień wartość <xref:System.Windows.Forms.Button> formantu <xref:System.Windows.Forms.Control.Anchor%2A> właściwości `Left`. <xref:System.Windows.Forms.Button> Kontroli przenosi do zapewnienia zgodności z lewej krawędzi komórki.  
-  
-    > [!NOTE]
-    >  To zachowanie różni się od zachowania inne formanty kontenera. W innych kontrolek kontenera formant podrzędny nie przenosi kiedy <xref:System.Windows.Forms.Control.Anchor%2A> właściwość jest ustawiona, a odległość między zakotwiczonej kontroli i granic kontenera nadrzędnego jest ustalone w czasie <xref:System.Windows.Forms.Control.Anchor%2A> właściwość jest ustawiona.  
-  
-5.  Zmień wartość <xref:System.Windows.Forms.Button> formantu <xref:System.Windows.Forms.Control.Anchor%2A> właściwości `Top, Left`. <xref:System.Windows.Forms.Button> Kontroli przenosi zajmować lewego górnego rogu komórki.  
-  
-6.  Powtórz krok 5 z wartością `Top, Right` można przenieść <xref:System.Windows.Forms.Button> formantu prawym górnym rogu komórki. Powtarzania z wartościami `Bottom, Left` i `Bottom, Right`.  
-  
-### <a name="to-stretch-a-child-control-in-a-tablelayoutpanel-cell"></a>Aby rozciągnąć formant podrzędny w komórce formantu TableLayoutPanel  
-  
-1.  Zmień wartość <xref:System.Windows.Forms.Button> formantu <xref:System.Windows.Forms.Control.Anchor%2A> właściwości `Left, Right`. <xref:System.Windows.Forms.Button> Do rozciągania między komórki zostanie zmieniony rozmiar formantu.  
+4.  Zmień wartość właściwości <xref:System.Windows.Forms.Button> kontrolki <xref:System.Windows.Forms.Control.Anchor%2A> właściwość `Left`. <xref:System.Windows.Forms.Button> Kontrola przechodzi do przy lewej krawędzi komórki.  
   
     > [!NOTE]
-    >  To zachowanie różni się od zachowania inne formanty kontenera. W innych kontrolek kontenera formant podrzędny nie jest zmiany rozmiaru, kiedy <xref:System.Windows.Forms.Control.Anchor%2A> właściwość jest ustawiona na `Left, Right` lub `Top, Bottom`.  
+    >  To zachowanie różni się od zachowania inne kontrolki kontenera. W innych formantów kontenera kontrolki podrzędnej nie powoduje przeniesienia kiedy <xref:System.Windows.Forms.Control.Anchor%2A> właściwość jest ustawiona i odległość między zakotwiczonej sterowania granicy kontenera nadrzędnego jest ustalony na czas <xref:System.Windows.Forms.Control.Anchor%2A> właściwość jest ustawiona.  
   
-2.  Zmień wartość <xref:System.Windows.Forms.Button> formantu <xref:System.Windows.Forms.Control.Anchor%2A> właściwości `Top, Bottom`. <xref:System.Windows.Forms.Button> Do rozciągania od góry do dołu komórki zostanie zmieniony rozmiar formantu.  
+5.  Zmień wartość właściwości <xref:System.Windows.Forms.Button> kontrolki <xref:System.Windows.Forms.Control.Anchor%2A> właściwość `Top, Left`. <xref:System.Windows.Forms.Button> Kontrola przechodzi do zajmować w lewym górnym rogu komórki.  
   
-3.  Zmień wartość <xref:System.Windows.Forms.Button> formantu <xref:System.Windows.Forms.Control.Anchor%2A> właściwości `Top, Bottom, Left, Right`. <xref:System.Windows.Forms.Button> Do wypełnienia komórki zostanie zmieniony rozmiar formantu.  
+6.  Powtórz krok 5 z wartością `Top, Right` przenieść <xref:System.Windows.Forms.Button> kontrolki w prawym górnym rogu komórki. Powtórz tę procedurę za pomocą wartości `Bottom, Left` i `Bottom, Right`.  
   
-4.  Zmień wartość <xref:System.Windows.Forms.Button> formantu <xref:System.Windows.Forms.Control.Anchor%2A> właściwości `None`. <xref:System.Windows.Forms.Button> Zmiany rozmiaru i wyśrodkowany w komórce kontroli.  
+### <a name="to-stretch-a-child-control-in-a-tablelayoutpanel-cell"></a>Do usługi stretch kontrolki podrzędnej w komórce TableLayoutPanel  
   
-5.  Zmień wartość <xref:System.Windows.Forms.Button> formantu <xref:System.Windows.Forms.Control.Dock%2A> właściwości <xref:System.Windows.Forms.DockStyle.Left>. <xref:System.Windows.Forms.Button> Kontroli przenosi do zapewnienia zgodności z lewej krawędzi komórki. <xref:System.Windows.Forms.Button> Formant zachowuje szerokości, ale jego wysokości rozmiaru do wypełnienia komórki w pionie.  
+1.  Zmień wartość właściwości <xref:System.Windows.Forms.Button> kontrolki <xref:System.Windows.Forms.Control.Anchor%2A> właściwość `Left, Right`. <xref:System.Windows.Forms.Button> Zmieni się rozmiar kontrolki można rozciągnąć na komórki.  
   
     > [!NOTE]
-    >  To samo występujący w innych kontrolek w kontenerze.  
+    >  To zachowanie różni się od zachowania inne kontrolki kontenera. W innych formantów kontenera kontrolki podrzędnej nie jest ze zmienionym rozmiarem, kiedy <xref:System.Windows.Forms.Control.Anchor%2A> właściwość jest ustawiona na `Left, Right` lub `Top, Bottom`.  
   
-6.  Zmień wartość <xref:System.Windows.Forms.Button> formantu <xref:System.Windows.Forms.Control.Dock%2A> właściwości <xref:System.Windows.Forms.DockStyle.Fill>. <xref:System.Windows.Forms.Button> Do wypełnienia komórki zostanie zmieniony rozmiar formantu.  
+2.  Zmień wartość właściwości <xref:System.Windows.Forms.Button> kontrolki <xref:System.Windows.Forms.Control.Anchor%2A> właściwość `Top, Bottom`. <xref:System.Windows.Forms.Button> Zmieni się rozmiar kontrolki do rozciągania od górnej do dolnej krawędzi komórki.  
+  
+3.  Zmień wartość właściwości <xref:System.Windows.Forms.Button> kontrolki <xref:System.Windows.Forms.Control.Anchor%2A> właściwość `Top, Bottom, Left, Right`. <xref:System.Windows.Forms.Button> Zmieni się rozmiar kontrolki do wypełnienia komórki.  
+  
+4.  Zmień wartość właściwości <xref:System.Windows.Forms.Button> kontrolki <xref:System.Windows.Forms.Control.Anchor%2A> właściwość `None`. <xref:System.Windows.Forms.Button> Zmianie rozmiaru czy wyśrodkowany w komórce formantu.  
+  
+5.  Zmień wartość właściwości <xref:System.Windows.Forms.Button> kontrolki <xref:System.Windows.Forms.Control.Dock%2A> właściwość <xref:System.Windows.Forms.DockStyle.Left>. <xref:System.Windows.Forms.Button> Kontrola przechodzi do przy lewej krawędzi komórki. <xref:System.Windows.Forms.Button> Kontrolka zachowuje jego szerokość, ale jego wysokości rozmiaru do wypełnienia komórki w pionie.  
+  
+    > [!NOTE]
+    >  To jest takie samo zachowanie, jak odbywa się w innych kontrolek w kontenerze.  
+  
+6.  Zmień wartość właściwości <xref:System.Windows.Forms.Button> kontrolki <xref:System.Windows.Forms.Control.Dock%2A> właściwość <xref:System.Windows.Forms.DockStyle.Fill>. <xref:System.Windows.Forms.Button> Zmieni się rozmiar kontrolki do wypełnienia komórki.  
   
 ## <a name="example"></a>Przykład  
- Na poniższej ilustracji przedstawiono pięciu przycisków zakotwiczonych w oddzielnych pięć <xref:System.Windows.Forms.TableLayoutPanel> komórek.  
+ Na poniższej ilustracji przedstawiono pięciu przycisków zakotwiczone w pięć oddzielnych <xref:System.Windows.Forms.TableLayoutPanel> komórek.  
   
  ![Zakotwiczanie formantu TableLayoutPanel](../../../../docs/framework/winforms/controls/media/vs-tlpanchor.gif "VS_TLPanchor")  
   
- Na poniższej ilustracji przedstawiono cztery przyciski zakotwiczonych w narożnikach cztery oddzielne <xref:System.Windows.Forms.TableLayoutPanel> komórek.  
+ Na poniższej ilustracji przedstawiono cztery przyciski zakotwiczone w rogach cztery oddzielne <xref:System.Windows.Forms.TableLayoutPanel> komórek.  
   
  ![Zakotwiczanie formantu TableLayoutPanel](../../../../docs/framework/winforms/controls/media/vs-tlpanchor2.gif "VS_TLPanchor2")  
   
- Na poniższej ilustracji przedstawiono trzy przyciski rozciągnięty przez Zakotwiczanie w trzech osobnych <xref:System.Windows.Forms.TableLayoutPanel> komórek.  
+ Na poniższej ilustracji przedstawiono trzy przyciski rozciągnięte przez Zakotwiczanie w trzech oddzielnych <xref:System.Windows.Forms.TableLayoutPanel> komórek.  
   
  ![Zakotwiczanie formantu TableLayoutPanel](../../../../docs/framework/winforms/controls/media/vs-tlpanchor3.gif "VS_TLPAnchor3")  
   
- Poniższy przykład kodu pokazuje wszystkie kombinacje <xref:System.Windows.Forms.Control.Anchor%2A> wartości właściwości <xref:System.Windows.Forms.Button> kontroli w <xref:System.Windows.Forms.TableLayoutPanel> formantu.  
+ Poniższy przykład kodu pokazuje wszystkie kombinacje <xref:System.Windows.Forms.Control.Anchor%2A> wartości właściwości <xref:System.Windows.Forms.Button> w kontrolce <xref:System.Windows.Forms.TableLayoutPanel> kontroli.  
   
  [!code-csharp[System.Windows.Forms.TableLayoutPanel.AnchorExampleForm#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.AnchorExampleForm/CS/TlpAnchorExampleForm.cs#1)]
  [!code-vb[System.Windows.Forms.TableLayoutPanel.AnchorExampleForm#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.AnchorExampleForm/VB/TlpAnchorExampleForm.vb#1)]  
@@ -80,9 +80,9 @@ ms.locfileid: "33529100"
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Odwołania do zestawów systemu, dane systemowe, System.Drawing i System.Windows.Forms.  
+-   Odwołania do zestawów systemu, dane systemowe i System.Drawing oraz przestrzeń nazw System.Windows.Forms.  
   
- Uzyskać informacje o kompilowaniu w tym przykładzie z wiersza polecenia dla programu visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [kompilowania z wiersza polecenia csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć w tym przykładzie w programie Visual Studio przez wklejenie kodu do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows formularze kodu przykład za pomocą programu Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Aby uzyskać informacje o tworzeniu tego przykładu z wiersza polecenia dla programu visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows Forms kodu przykładzie przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.TableLayoutPanel>  

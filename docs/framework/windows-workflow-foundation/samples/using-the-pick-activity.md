@@ -1,56 +1,56 @@
 ---
-title: Przy użyciu działaniu wybierz
+title: Używanie działania Pick
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
-ms.openlocfilehash: 9617949d72fb1489f66fec205b260b807d011177
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 193b60bff7b08c0de9a0957668483eb73be97274
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516945"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43452609"
 ---
-# <a name="using-the-pick-activity"></a>Przy użyciu działaniu wybierz
+# <a name="using-the-pick-activity"></a>Używanie działania Pick
 W tym przykładzie przedstawiono sposób użycia <xref:System.Activities.Statements.Pick> działania.  
   
- <xref:System.Activities.Statements.Pick> Działania zawiera kontrolki oparte na zdarzeniu modelowania. Działa podobnie do języka C# `switch` instrukcji, która jest wykonywana tylko jednej z gałęzi w `switch` instrukcji. W odróżnieniu od `switch` na podstawie instrukcji, w którym jest wykonywane gałęzi przy użyciu wartości <xref:System.Activities.Statements.Pick> gałąź ustalane na podstawie sposobu kończy działanie wykonuje działania.  
+ <xref:System.Activities.Statements.Pick> Działania zawiera kontrolki oparte na zdarzeniach modelowania. Zachowuje się podobnie jak C# `switch` instrukcję, która wykonuje tylko jeden z gałęzi, skorzystaj z `switch` instrukcji. W odróżnieniu od `switch` na podstawie instrukcji, w którym jest wykonywana gałąź na podstawie wartości <xref:System.Activities.Statements.Pick> działanie wykonuje gałęzi, w zależności od sposobu zakończy działanie.  
   
- W tym przykładzie monituje użytkownika o wpisanie nazwy na konsoli w danym okresie. <xref:System.Activities.Statements.Pick> Działanie w próbce ma dwie gałęzie, które są ustalane na podstawie tego, czy użytkownik wpisze w ich imieniu w ciągu 5 sekund, czy nie. Jeśli użytkownik wpisze w ich imieniu w ciągu 5 sekund, jest wykonywane pierwszej gałęzi, który zawiera niestandardowy `ReadLine` działanie; w przeciwnym razie innej gałęzi jest wykonywane, który zawiera <xref:System.Activities.Statements.Delay> działania. Gdy nazwa użytkownika jest wpisany w konsoli, nazwa użytkownika jest drukowane na konsoli. Jeśli dane wejściowe nie została wprowadzona w ciągu 5 sekund, jest upłynął limit czasu operacji.  
+ W tym przykładzie monituje użytkownika o wpisanie nazwy w konsoli w danym okresie czasu. <xref:System.Activities.Statements.Pick> Działanie w próbce ma dwie gałęzie, które są wykonywane na podstawie tego, czy użytkownik wpisze w ich imieniu w ciągu 5 sekund, czy nie. Jeśli użytkownik wpisze w ich imieniu w ciągu 5 sekund, zostanie wykonany pierwszej gałęzi, który zawiera niestandardowy `ReadLine` działanie; w przeciwnym razie innej gałęzi jest wykonywane, który zawiera <xref:System.Activities.Statements.Delay> działania. Po wpisaniu nazwy użytkownika w konsoli nazwy użytkownika jest drukowany w konsoli. Jeśli dane wejściowe nie zostanie wprowadzona w ciągu 5 sekund, operacja przekroczyła limit czasu.  
   
 ## <a name="demonstrates"></a>Demonstracje  
  <xref:System.Activities.Statements.Pick> działanie.  
   
-## <a name="discussion"></a>Omówienie  
- Przykład zawiera projektanta przepływów pracy i kodowanego przepływu pracy.  
+## <a name="discussion"></a>Dyskusja  
+ Przykład obejmuje projektanta przepływu pracy i kodowany przepływu pracy.  
   
  Projektant przepływu pracy  
- Wersja projektanta przykładowych pokazano, jak utworzyć przepływ pracy w projektancie. Zawarte są następujące pliki:  
+ Projektant wersję przykładu przedstawia sposób tworzenia przepływu pracy w projektancie. Uwzględnione są następujące pliki:  
   
--   Plik program.CS: Zawiera `Main` funkcji, która wykonuje przykładowego przepływu pracy.  
+-   Plik program.CS: Zawiera `Main` funkcja, która wykonuje przykładowy przepływ pracy.  
   
--   ReadString.cs: Niestandardowe działanie, które odczytuje niektóre dane wejściowe z konsoli.  
+-   ReadString.cs: Niestandardowe działanie, które odczytuje dane wejściowe z konsoli.  
   
--   Sequence1.XAML: Przepływ pracy utworzony za pomocą projektanta, który używa pobrania.  
+-   Sequence1.XAML: Przepływ pracy przy użyciu projektanta, który używa wybierz.  
   
  Kodowane przepływu pracy  
- Kodowane wersją przykładu przedstawia sposób tworzenia przepływu pracy w projektancie. Zawarte są następujące pliki:  
+ Kodowane wersję przykładu przedstawia sposób tworzenia przepływu pracy w projektancie. Uwzględnione są następujące pliki:  
   
--   Plik program.CS: Zawiera `Main` funkcji, która wykonuje przykładowego przepływu pracy.  
+-   Plik program.CS: Zawiera `Main` funkcja, która wykonuje przykładowy przepływ pracy.  
   
--   ReadString.cs: Niestandardowe działanie, które odczytuje niektóre dane wejściowe z konsoli.  
+-   ReadString.cs: Niestandardowe działanie, które odczytuje dane wejściowe z konsoli.  
   
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
   
-1.  Przy użyciu [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], otwórz plik rozwiązania Pick.sln.  
+1.  Za pomocą [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], otwórz plik rozwiązania Pick.sln.  
   
-2.  Aby tworzyć rozwiązania, naciśnij kombinację klawiszy CTRL + SHIFT + B.  
+2.  Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.  
   
 3.  Aby uruchomić rozwiązanie, naciśnij klawisz F5.  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Pick`

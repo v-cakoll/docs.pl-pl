@@ -1,6 +1,6 @@
 ---
 title: Funkcja NextMethod (niezarządzany wykaz interfejsów API)
-description: Funkcja NextMethod pobiera następnej metody w wyliczeniu.
+description: Funkcja NextMethod pobiera Następna metoda w wyliczeniu.
 ms.date: 11/06/2017
 api_name:
 - NextMethod
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd4559663194cb845fb0cc040e1f6739e38caa0e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d019c67849197cd24171ff607e60e9f08d5ff70
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461146"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43451626"
 ---
-# <a name="nextmethod-function"></a>Funkcja NextMethod
-Pobiera dalej w wyliczenie zaczyna się od wywołania metody [BeginMethodEnumeration](beginmethodenumeration.md).  
+# <a name="nextmethod-function"></a>NextMethod — funkcja
+Pobiera kolejna metoda wyliczenie, które zaczyna się od wywołania [BeginMethodEnumeration](beginmethodenumeration.md).  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -44,42 +44,42 @@ HRESULT NextMethod (
 ## <a name="parameters"></a>Parametry
 
 `vFunc`  
-[in] Ten parametr nie jest używana.
+[in] Ten parametr jest nieużywany.
 
 `ptr`  
-[in] Wskaźnik do [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) wystąpienia.
+[in] Wskaźnik do [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienia.
 
 `lFlags`  
-[in] Zastrzeżone. Ten parametr musi wynosić 0.
+[in] Zastrzeżone. Ten parametr musi być 0.
 
 `pName`  
-[out] Wskaźnik, który wskazuje `null` przed wywołaniem. Gdy funkcja zwraca, nowy adres `BSTR` zawierający nazwę metody. 
+[out] Wskaźnik, który wskazuje na `null` przed wywołaniem. Gdy funkcja zwróci wynik, nowy adres `BSTR` zawierający nazwę metody. 
 
 `ppSignatureIn`  
-[out] Wskaźnik, który otrzymuje wskaźnik [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) zawierający `in` parametry metody. 
+[out] Wskaźnik, który otrzymuje wskaźnik [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) zawierający `in` parametrów dla metody. 
 
 `ppSignatureOut`  
-[out] Wskaźnik, który otrzymuje wskaźnik [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) zawierający `out` parametry metody. 
+[out] Wskaźnik, który otrzymuje wskaźnik [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) zawierający `out` parametrów dla metody. 
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Następujące wartości zwracane przez tę funkcję są zdefiniowane w *WbemCli.h* pliku nagłówka, lub należy je zdefiniować jako stałe w kodzie:
+Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
-| `WBEM_E_UNEXPECTED` | 0x8004101d | Nie znaleziono żadnych wywołanie [ `BeginEnumeration` ](beginenumeration.md) funkcji. |
+| `WBEM_E_UNEXPECTED` | 0x8004101d | Wystąpił brak wywołania [ `BeginEnumeration` ](beginenumeration.md) funkcji. |
 | `WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
 | `WBEM_S_NO_MORE_DATA` | 0x40005 | Nie ma żadnych więcej właściwości w wyliczeniu. |
   
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zawijana wywołanie [IWbemClassObject::NextMethod](https://msdn.microsoft.com/library/aa391454(v=vs.85).aspx) metody.
+Ta funkcja zawija wywołanie do [IWbemClassObject::NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod) metody.
 
-Obiekt wywołujący rozpoczyna sekwencji wyliczenie przez wywołanie metody [BeginMethodEnumeration](beginmethodenumeration.md) działać, a następnie wywołuje funkcję [NextMethod], dopóki funkcja zwraca `WBEM_S_NO_MORE_DATA`. Opcjonalnie, wywołujący zakończeniem sekwencji przez wywołanie metody [EndMethodEnumeration](endmethodenumeration.md). Obiekt wywołujący może zakończyć wyliczenia wcześniej przez wywołanie metody [EndMethodEnumeration](endmethodenumeration.md) w dowolnym momencie.
+Obiekt wywołujący rozpoczyna się sekwencja wyliczenie, wywołując [BeginMethodEnumeration](beginmethodenumeration.md) działać, a następnie wywołuje funkcję [NextMethod], aż funkcja zwróci `WBEM_S_NO_MORE_DATA`. Opcjonalnie, obiekt wywołujący zakończy sekwencję przez wywołanie metody [EndMethodEnumeration](endmethodenumeration.md). Obiekt wywołujący może rozwiązać niniejszą wyliczenia wcześnie, wywołując [EndMethodEnumeration](endmethodenumeration.md) w dowolnym momencie.
 
 ## <a name="example"></a>Przykład
 
-Na przykład C++, zobacz [IWbemClassObject::NextMethod](https://msdn.microsoft.com/library/aa391454(v=vs.85).aspx) metody.
+Na przykład C++, zobacz [IWbemClassObject::NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod) metody.
 
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -89,4 +89,4 @@ Na przykład C++, zobacz [IWbemClassObject::NextMethod](https://msdn.microsoft.c
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także  
-[Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)
+[Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - equality operator [C#]
 ms.assetid: 34c6b597-caa2-4855-a7cd-38ecdd11bd07
 ms.openlocfilehash: d9d7dcf3b38939e681fb51d6c674151cee78b3d0
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254173"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421115"
 ---
 # <a name="-operator-c-reference"></a>Operator == (odwołanie w C#)
 Dla wstępnie zdefiniowanych typów wartości, operatora równości (`==`) zwraca wartość true, jeśli wartości argumentów są takie same `false` inaczej. Dla odwołania do typów innych niż [ciąg](../../../csharp/language-reference/keywords/string.md), `==` zwraca `true` Jeśli dwóch argumentów operacji odnoszą się do tego samego obiektu. Aby uzyskać `string` typu `==` porównuje wartości ciągów.  

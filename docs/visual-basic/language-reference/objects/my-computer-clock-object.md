@@ -5,11 +5,11 @@ helpviewer_keywords:
 - My.Computer.Clock object
 ms.assetid: a362b270-8a1b-404a-95c8-516a60c607dd
 ms.openlocfilehash: 431610030480ce4eb54882e519a5a7f7bbffe90a
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253493"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456862"
 ---
 # <a name="mycomputerclock-object"></a>My.Computer.Clock — Obiekt
 Udostępnia właściwości do uzyskiwania dostępu do bieżącym czasem lokalnym i uniwersalny czas koordynowany (odpowiednik czas uniwersalny Greenwich) z zegarem systemowym.  

@@ -2,15 +2,15 @@
 title: Mapowanie typu danych bazy danych OLE
 ms.date: 03/30/2017
 ms.assetid: 04bcb259-59d3-4fd7-894d-4f0dd0c68069
-ms.openlocfilehash: 4287b125b26bc0c7233f59322c84e2ac27c0c594
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2dbea33140e6cdd7370c1822d2bd6513917a31ea
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758935"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43457108"
 ---
 # <a name="ole-db-data-type-mappings"></a>Mapowanie typu danych bazy danych OLE
-W poniższej tabeli przedstawiono wnioskowany [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typu dla typów danych z dostawcy danych programu .NET Framework dla ADO i OLE DB (<xref:System.Data.OleDb>). Metody dostępu typu dla <xref:System.Data.OleDb.OleDbDataReader> są także wyświetlone.  
+W poniższej tabeli przedstawiono wywnioskowane [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typu dla typów danych od dostawcy danych programu .NET Framework dla ADO i OLE DB (<xref:System.Data.OleDb>). Metody typizowane metody dostępu dla <xref:System.Data.OleDb.OleDbDataReader> są również wymienione.  
   
 |Typ ADO|Typ OLE DB|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Typ|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typizowane metody dostępu|  
 |--------------|-----------------|----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
@@ -18,7 +18,7 @@ W poniższej tabeli przedstawiono wnioskowany [!INCLUDE[dnprdnshort](../../../..
 |adBinary|DBTYPE_BYTES|Byte[]|GetBytes()|  
 |adBoolean|DBTYPE_BOOL|Boolean|GetBoolean()|  
 |adBSTR|DBTYPE_BSTR|String|GetString()|  
-|adChapter|DBTYPE_HCHAPTER|Obsługiwane za pośrednictwem `DataReader`. Zobacz [pobierania danych przy użyciu elementu DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md).|GetValue()|  
+|adChapter|DBTYPE_HCHAPTER|W wersjach zapoznawczych `DataReader`. Zobacz [pobieraniu danych przy użyciu elementu DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md).|Metody GetValue()|  
 |adChar|DBTYPE_STR|String|GetString()|  
 |adCurrency|DBTYPE_CY|Wartość dziesiętna|GetDecimal()|  
 |adDate|DBTYPE_DATE|DataGodzina|GetDateTime()|  
@@ -27,28 +27,28 @@ W poniższej tabeli przedstawiono wnioskowany [!INCLUDE[dnprdnshort](../../../..
 |adDBTimeStamp|DBTYPE_DBTIMESTAMP|DataGodzina|GetDateTime()|  
 |adDecimal|DBTYPE_DECIMAL|Wartość dziesiętna|GetDecimal()|  
 |adDouble|DBTYPE_R8|Double|GetDouble()|  
-|adError|DBTYPE_ERROR|Externalexception —|GetValue()|  
+|adError|DBTYPE_ERROR|Externalexception —|Metody GetValue()|  
 |adFileTime|DBTYPE_FILETIME|DataGodzina|GetDateTime()|  
 |adGUID|DBTYPE_GUID|Identyfikator GUID|GetGuid()|  
-|adIDispatch|DBTYPE_IDISPATCH *|Obiekt|GetValue()|  
+|adIDispatch|DBTYPE_IDISPATCH *|Obiekt|Metody GetValue()|  
 |adInteger|DBTYPE_I4|Int32|GetInt32()|  
-|adIUnknown|DBTYPE_IUNKNOWN *|Obiekt|GetValue()|  
+|adIUnknown|DBTYPE_IUNKNOWN *|Obiekt|Metody GetValue()|  
 |adNumeric|DBTYPE_NUMERIC|Wartość dziesiętna|GetDecimal()|  
-|adPropVariant|DBTYPE_PROPVARIANT|Obiekt|GetValue()|  
+|adPropVariant|DBTYPE_PROPVARIANT|Obiekt|Metody GetValue()|  
 |adSingle|DBTYPE_R4|Single|GetFloat()|  
 |adSmallInt|DBTYPE_I2|Int16|GetInt16()|  
 |adTinyInt|DBTYPE_I1|Byte|GetByte()|  
-|adUnsignedBigInt|DBTYPE_UI8|UInt64|GetValue()|  
-|adUnsignedInt|DBTYPE_UI4|UInt32|GetValue()|  
-|adUnsignedSmallInt|DBTYPE_UI2|UInt16|GetValue()|  
+|adUnsignedBigInt|DBTYPE_UI8|UInt64|Metody GetValue()|  
+|adUnsignedInt|DBTYPE_UI4|UInt32|Metody GetValue()|  
+|adUnsignedSmallInt|DBTYPE_UI2|UInt16|Metody GetValue()|  
 |adUnsignedTinyInt|DBTYPE_UI1|Byte|GetByte()|  
-|adVariant|DBTYPE_VARIANT|Obiekt|GetValue()|  
+|adVariant|DBTYPE_VARIANT|Obiekt|Metody GetValue()|  
 |adWChar|DBTYPE_WSTR|String|GetString()|  
-|adUserDefined|DBTYPE_UDT|Nieobsługiwane||  
-|adVarNumeric|DBTYPE_VARNUMERIC|Nieobsługiwane||  
+|adUserDefined|DBTYPE_UDT|Nie jest obsługiwany||  
+|adVarNumeric|DBTYPE_VARNUMERIC|Nie jest obsługiwany||  
   
- \* Dla typów OLE DB `DBTYPE_IUNKNOWN` i `DBTYPE_IDISPATCH`, odwołanie do obiektu jest zorganizowanym reprezentacja wskaźnika.  
+ \* Dla typów OLE DB `DBTYPE_IUNKNOWN` i `DBTYPE_IDISPATCH`, odwołanie do obiektu jest organizowane reprezentacji wskaźnika.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

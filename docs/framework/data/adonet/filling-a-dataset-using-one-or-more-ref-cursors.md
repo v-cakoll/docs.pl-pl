@@ -1,18 +1,18 @@
 ---
-title: Wypełnianie zestawu danych przy użyciu jednego lub więcej kursory REF
+title: Wypełnianie zestawu danych przy użyciu jednej lub więcej kursorów REF CURSOR
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 99863e79-5b00-467e-a105-4ffa42de3ff7
-ms.openlocfilehash: 66dc61a3eb71fcc6657a455f13aa1d67cca554ed
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 78e1a2ce73be1e83284a1d8caa657ff645262e09
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761613"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420675"
 ---
-# <a name="filling-a-dataset-using-one-or-more-ref-cursors"></a>Wypełnianie zestawu danych przy użyciu jednego lub więcej kursory REF
-W tym przykładzie Microsoft Visual Basic wykonuje procedury składowane PL/SQL, która zwraca dwa parametry REF CURSOR i wpisuje <xref:System.Data.DataSet> z wierszy, które są zwracane.  
+# <a name="filling-a-dataset-using-one-or-more-ref-cursors"></a>Wypełnianie zestawu danych przy użyciu jednej lub więcej kursorów REF CURSOR
+W tym przykładzie języka Visual Basic wykonuje procedury przechowywane PL/SQL, która zwraca dwa parametry REF CURSOR i wypełnia <xref:System.Data.DataSet> wierszy, które są zwracane.  
   
 ```vb  
 Private Sub Button1_Click(ByVal sender As Object, _  
@@ -48,4 +48,4 @@ Private Sub Button1_Click(ByVal sender As Object, _
   
 ## <a name="see-also"></a>Zobacz też  
  [Oracle REF CURSOR](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

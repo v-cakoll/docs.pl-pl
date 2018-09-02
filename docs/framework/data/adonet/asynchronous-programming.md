@@ -2,19 +2,19 @@
 title: Programowanie asynchroniczne
 ms.date: 03/30/2017
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 29324a07ffdaf99d1b7631ad8e94e773ed509fcc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0c5c3f52f6afa0e1fa48d33167feabeb8d5b76f5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759910"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425728"
 ---
 # <a name="asynchronous-programming"></a>Programowanie asynchroniczne
 
-W tym temacie omówiono obsługę programowania asynchronicznego w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawcy danych programu SQL Server (SqlClient) w tym ulepszenia są wprowadzane do obsługi funkcji asynchronicznych programowania, który został wprowadzony w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+W tym temacie omówiono obsługę programowania asynchronicznego w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawcy danych programu SQL Server (SqlClient) służących do obsługi asynchronicznego programowania funkcjonalności, która została wprowadzona w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
-## <a name="legacy-asynchronous-programming"></a>Programowanie asynchroniczne starszej wersji  
- Przed [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], programowanie asynchroniczne z SqlClient została wykonana z następujących metod i `Asynchronous Processing=true` właściwości połączenia:  
+## <a name="legacy-asynchronous-programming"></a>Programowanie asynchroniczne w starszej wersji  
+ Przed [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], programowania asynchronicznego przy użyciu SqlClient została wykonana przy użyciu następujących metod i `Asynchronous Processing=true` właściwości połączenia:  
   
 1.  <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A?displayProperty=nameWithType>  
   
@@ -22,12 +22,12 @@ W tym temacie omówiono obsługę programowania asynchronicznego w [!INCLUDE[dnp
   
 3.  <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A?displayProperty=nameWithType>  
   
- Ta funkcja pozostanie na liście SqlClient w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+ Ta funkcja pozostanie w SqlClient w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
- Począwszy od [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], tych metod nie wymagają już `Asynchronous Processing=true` w parametrach połączenia.  
+ Począwszy od [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], te metody nie wymagają już `Asynchronous Processing=true` w parametrach połączenia.  
   
-## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a>Dodane w funkcje programowanie asynchroniczne [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]  
- Nowa funkcja programowania asynchronicznego udostępnia proste techniki dokonanie asynchroniczne kodu.  
+## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a>Funkcje asynchroniczne programowanie dodane w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]  
+ Nowa funkcja programowania asynchronicznego udostępnia proste techniki umożliwiają kodu asynchronicznego.  
   
  Aby uzyskać więcej informacji na temat funkcji programowania asynchronicznego, która została wprowadzona w systemie [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], zobacz:  
   
@@ -35,22 +35,22 @@ W tym temacie omówiono obsługę programowania asynchronicznego w [!INCLUDE[dnp
 
 - [Programowanie asynchroniczne z Async i Await (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)
 
-- [Przy użyciu nowych metod asynchronicznych w SqlDataReader w .net 4.5 (część 1)](https://blogs.msdn.microsoft.com/adonet/2012/04/20/using-sqldatareaders-new-async-methods-in-net-4-5/)
+- [Za pomocą nowych metod asynchronicznych SqlDataReader firmy na platformie .net 4.5 (część 1)](https://blogs.msdn.microsoft.com/adonet/2012/04/20/using-sqldatareaders-new-async-methods-in-net-4-5/)
 
-- [Przy użyciu nowych metod asynchronicznych w SqlDataReader w .net 4.5 (część 2)](https://blogs.msdn.microsoft.com/adonet/2012/07/15/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples/)
+- [Za pomocą nowych metod asynchronicznych SqlDataReader firmy na platformie .net 4.5 (część 2)](https://blogs.msdn.microsoft.com/adonet/2012/07/15/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples/)
  
- Gdy interfejsu użytkownika nie odpowiada lub serwer nie działa, prawdopodobnie należy swój kod, aby była bardziej asynchroniczna.  Pisanie kodu asynchroniczny został tradycyjnie użyty instalowanie wywołanie zwrotne (nazywanych również kontynuacji) Express logiki, która występuje po zakończeniu operacji asynchronicznej. Stwarza to struktury kodu asynchroniczne porównaniu synchroniczne kodu.  
+ Gdy interfejs użytkownika nie odpowiada lub serwer nie działa, prawdopodobnie należy swój kod, aby była bardziej asynchroniczna.  Pisanie kodu asynchronicznego ma tradycyjnie zaangażowane instalowanie wywołanie zwrotne (nazywane również utrzymania) na wyrażenie logiki, która występuje po zakończeniu operacji asynchronicznej. Ten komplikuje strukturę kodu asynchronicznego w porównaniu z kodu synchronicznego.  
   
- Można teraz wywołać do metod asynchronicznych bez przy użyciu wywołania zwrotne i bez dzielenia kodu wielu metod lub wyrażenia lambda.  
+ Teraz można wywoływać metod asynchronicznych, bez korzystania z wywołań zwrotnych i bez podziału swój kod w wielu metod lub wyrażenia lambda.  
   
- `async` Modyfikator Określa, czy metoda jest asynchroniczne. Podczas wywoływania metody `async` metody, zwracany jest zadanie. Gdy `await` operator zostaną zastosowane do zadania, bieżącej metody kończy się natychmiast. Po zakończeniu zadania wykonywania wznawia w tej samej metody.
+ `async` Modyfikator Określa, że metoda jest asynchroniczne. Podczas wywoływania `async` metody, zwracany jest zadaniem. Gdy `await` operator jest stosowany do zadania, bieżąca metoda kończy działanie natychmiast. Po zakończeniu zadania, wykonanie zostanie wznowione w tej samej metody.
   
 > [!WARNING]
 >  Wywołania asynchroniczne nie są obsługiwane, jeśli aplikacja używa również `Context Connection` słowo kluczowe parametrów połączenia.  
   
- Wywoływanie `async` — metoda nie przydzielić wszelkie dodatkowe wątki. Istniejące wątku zakończenia We/Wy może zajmować krótko po zakończeniu.  
+ Wywoływanie `async` metody nie przydziela wszelkie dodatkowe wątki. Istniejącego wątku zakończenia operacji We/Wy może użyć krótko po zakończeniu.  
   
- Dodano następujące metody w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] do obsługi programowania asynchronicznego:  
+ Dodano następujące metody w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] do obsługi asynchronicznego programowania:  
   
 -   <xref:System.Data.Common.DbConnection.OpenAsync%2A?displayProperty=nameWithType>  
   
@@ -86,10 +86,10 @@ W tym temacie omówiono obsługę programowania asynchronicznego w [!INCLUDE[dnp
   
 -   <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>  
   
- Inni członkowie asynchroniczne zostały dodane do obsługi [obsługuje przesyłania strumieniowego SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md).  
+ Inni członkowie asynchroniczne zostały dodane do obsługi [obsługi przesyłania strumieniowego SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md).  
   
-### <a name="synchronous-to-asynchronous-connection-open"></a>Synchronicznego w celu otworzenia połączenia asynchronicznego  
- Można uaktualnić istniejącą aplikację do użycia nowej funkcji asynchronicznej. Załóżmy na przykład, aplikacja ma algorytm synchroniczne połączenia i blokuje wątku interfejsu użytkownika za każdym razem ustanawiania połączenia z bazą danych, i po nawiązaniu połączenia aplikacji wywołania procedury przechowywanej, która sygnalizuje innym użytkownikom ten, który właśnie zalogowany.  
+### <a name="synchronous-to-asynchronous-connection-open"></a>Synchroniczne do otwarcia połączenia asynchronicznego  
+ Można uaktualnić istniejącą aplikację do nowej funkcji asynchronicznych. Załóżmy na przykład, aplikacja ma algorytm synchroniczne połączenia i blokuje wątek interfejsu użytkownika za każdym razem, gdy nawiązuje połączenie z bazy danych, a po nawiązaniu połączenia aplikacja wywołuje procedury przechowywanej, która sygnalizuje innym użytkownikom w nich, po prostu zalogowany.  
   
 ```csharp
 using SqlConnection conn = new SqlConnection("…");  
@@ -102,7 +102,7 @@ using SqlConnection conn = new SqlConnection("…");
 }  
 ```  
   
- Po przekonwertowaniu, aby korzystać z nowych funkcji asynchronicznych, program będzie wyglądała:  
+ Po przekonwertowaniu, aby korzystać z nowych funkcji asynchronicznej, program będzie wyglądać:  
   
 ```csharp
 using System;  
@@ -131,8 +131,8 @@ class A {
 }  
 ```  
   
-### <a name="adding-the-new-asynchronous-feature-in-an-existing-application-mixing-old-and-new-patterns"></a>Dodawanie nowej funkcji asynchronicznych w istniejącej aplikacji (mieszanie starej i nowej wzorców)  
- Istnieje również możliwość dodać nową funkcję asynchroniczną (SqlConnection::OpenAsync) bez zmieniania istniejących logiki asynchroniczne. Na przykład, jeśli aplikacja używa obecnie:  
+### <a name="adding-the-new-asynchronous-feature-in-an-existing-application-mixing-old-and-new-patterns"></a>Dodawanie nowej funkcji asynchronicznej w istniejącej aplikacji (mieszanie stare i nowe wzorce)  
+ Istnieje również możliwość dodania nowych możliwości asynchroniczne (SqlConnection::OpenAsync) bez wprowadzania zmian w istniejącej logiki przetwarzania asynchronicznego. Na przykład, jeśli aplikacja używa obecnie:  
   
 ```csharp
 AsyncCallback productList = new AsyncCallback(ProductList);  
@@ -142,7 +142,7 @@ SqlCommand cmd = new SqlCommand("SELECT * FROM [Current Product List]", conn);
 IAsyncResult ia = cmd.BeginExecuteReader(productList, cmd);  
 ```  
   
- Można rozpocząć używanie nowego wzorca asynchronicznego bez znacznie zmiana istniejących algorytmu.  
+ Możesz rozpocząć używać nowego wzorca asynchronicznego bez wprowadzania zmian w znacznym stopniu istniejących algorytmu.  
   
 ```csharp
 using System;  
@@ -169,10 +169,10 @@ class A {
 }  
 ```  
   
-### <a name="using-the-base-provider-model-and-the-new-asynchronous-feature"></a>Przy użyciu modelu podstawowego dostawcy i nowej funkcji asynchronicznych  
- Należy utworzyć narzędzie, które jest w stanie podłączyć się do różnych baz danych i wykonywanie zapytań. Można użyć modelu podstawowego dostawcy i nowej funkcji asynchronicznej.  
+### <a name="using-the-base-provider-model-and-the-new-asynchronous-feature"></a>Przy użyciu modelu podstawowego dostawcy i nowa funkcja asynchroniczne  
+ Może być konieczne utworzenie to narzędzie, które jest w stanie nawiązać połączenie z różnych baz danych i wykonywania zapytań. Można użyć modelu podstawowego dostawcy i nowej funkcji asynchronicznych.  
   
- Kontroler transakcji rozproszonych (MSDTC) firmy Microsoft musi być włączona serwer do korzystania z transakcji rozproszonych. Aby uzyskać informacje na temat włączania usługi MSDTC, zobacz [jak włączyć usługi MSDTC na serwerze sieci Web](http://msdn.microsoft.com/library/dd327979.aspx).  
+ Kontroler transakcji rozproszonych (MSDTC) firmy Microsoft wymaga włączenia na serwerze, aby móc używać transakcji rozproszonej. Aby uzyskać informacje o sposobie włączania usługi MSDTC, zobacz [jak włączyć usługi MSDTC na serwerze sieci Web](https://msdn.microsoft.com/library/dd327979.aspx).  
   
 ```csharp
 using System;  
@@ -217,7 +217,7 @@ class A {
 }  
 ```  
   
-### <a name="using-sql-transactions-and-the-new-asynchronous-feature"></a>Przy użyciu transakcji SQL i nowej funkcji asynchronicznych  
+### <a name="using-sql-transactions-and-the-new-asynchronous-feature"></a>Za pomocą transakcji SQL i nowa funkcja asynchroniczne  
   
 ```csharp
 using System;  
@@ -283,8 +283,8 @@ class Program {
 }  
 ```  
   
-### <a name="using-sql-transactions-and-the-new-asynchronous-feature"></a>Przy użyciu transakcji SQL i nowej funkcji asynchronicznych  
- W aplikacji dla przedsiębiorstw może być konieczne dodanie transakcji rozproszonych w niektórych scenariuszach, aby włączyć transakcji między wieloma serwerami bazy danych. Można użyć obszaru nazw System.Transactions i zarejestrować transakcji rozproszonej, w następujący sposób:  
+### <a name="using-sql-transactions-and-the-new-asynchronous-feature"></a>Za pomocą transakcji SQL i nowa funkcja asynchroniczne  
+ W aplikacji dla przedsiębiorstw może być konieczne dodanie transakcje rozproszone w niektórych scenariuszach, aby umożliwić transakcji między wieloma serwerami bazy danych. Możesz użyć system.Transactions — przestrzeń nazw i zarejestrować transakcji rozproszonych, w następujący sposób:  
   
 ```csharp
 using System;  
@@ -384,8 +384,8 @@ namespace Samples {
 }  
 ```  
   
-### <a name="asynchronous-operations-with-sqlbulkcopy"></a>Operacje asynchroniczne z SqlBulkCopy  
- Funkcje asynchroniczne również zostały dodane do <xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=nameWithType> z <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>.  
+### <a name="asynchronous-operations-with-sqlbulkcopy"></a>Operacje asynchroniczne za pomocą SqlBulkCopy  
+ Funkcje asynchroniczne zostały również dodane do <xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=nameWithType> z <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>.  
   
 ```csharp
 using System;  
@@ -626,11 +626,11 @@ namespace SqlBulkCopyAsyncCodeSample {
 }  
 ```  
   
-## <a name="asynchronously-using-multiple-commands-with-mars"></a>Asynchronicznie za pomocą wielu poleceń z MARS  
- Przykład otwiera pojedynczego połączenia **AdventureWorks** bazy danych. Przy użyciu <xref:System.Data.SqlClient.SqlCommand> obiektu, <xref:System.Data.SqlClient.SqlDataReader> jest tworzony. Jak czytnik jest używany, a drugie <xref:System.Data.SqlClient.SqlDataReader> jest otwarty przy użyciu danych z pierwszego <xref:System.Data.SqlClient.SqlDataReader> jako dane wejściowe do klauzuli WHERE dla drugiego czytnika.  
+## <a name="asynchronously-using-multiple-commands-with-mars"></a>Asynchronicznie za pomocą wielu poleceń za pomocą usług MARS  
+ Przykład otwiera jedno połączenie **AdventureWorks** bazy danych. Za pomocą <xref:System.Data.SqlClient.SqlCommand> obiektu <xref:System.Data.SqlClient.SqlDataReader> zostanie utworzony. W przypadku użycia czytelnika na sekundę <xref:System.Data.SqlClient.SqlDataReader> zostanie otwarty przy użyciu danych z pierwszym <xref:System.Data.SqlClient.SqlDataReader> jako dane wejściowe do klauzuli WHERE, drugi czytnika.  
   
 > [!NOTE]
->  W poniższym przykładzie użyto przykładowej **AdventureWorks** bazy danych programu SQL Server. W przykładowym kodzie w podanym ciągu połączenia przyjęto założenie, że baza danych jest zainstalowany i dostępny na komputerze lokalnym. Zmodyfikuj parametry połączenia w razie potrzeby dla danego środowiska.  
+>  W poniższym przykładzie użyto przykładu **AdventureWorks** bazy danych z programem SQL Server. W przykładowym kodzie w podanym ciągu połączenia przyjęto założenie, że baza danych jest zainstalowany i dostępny na komputerze lokalnym. Modyfikowanie parametrów połączenia, zgodnie z potrzebami w danym środowisku.  
   
 ```csharp
 using System;  
@@ -696,13 +696,13 @@ class Class1 {
 }  
 ```  
   
-## <a name="asynchronously-reading-and-updating-data-with-mars"></a>Asynchronicznie odczytywanie i aktualizowanie danych za pomocą MARS  
- MARS umożliwia połączenie ma być używany dla obu operacje odczytu dla operacji i danych manipulacji języka z więcej niż jednym oczekującą operację. Ta funkcja eliminuje potrzebę stosowania aplikacji biznesowych w radzeniu sobie z błędami zajęty połączenia. Ponadto MARS można zastąpić użytkownika kursorów po stronie serwera, które zazwyczaj zużywać więcej zasobów. Na koniec, ponieważ wiele operacji może działać w ramach pojedynczego połączenia, mogą współużytkować tego samego kontekstu transakcji, eliminuje konieczność użycia **sp_getbindtoken** i **procedury sp_bindsession** przechowywana w systemie procedury.  
+## <a name="asynchronously-reading-and-updating-data-with-mars"></a>Asynchronicznie odczytywanie i aktualizowanie danych za pomocą usług MARS  
+ MARS umożliwia połączenie ma być używany dla oba rodzaje operacji i danych manipulacji języka (DML) operacji odczytu z więcej niż jednym oczekującą operację. Ta funkcja eliminuje potrzebę stosowania aplikacji do czynienia z błędami zajęty połączenia. Ponadto MARS można zastąpić użytkownika kursorów po stronie serwera, które zazwyczaj zużywać więcej zasobów. Na koniec, ponieważ wiele operacji może działać na pojedynczego połączenia, mogą współużytkować ten sam kontekst transakcji, eliminując konieczność stosowania **sp_getbindtoken** i **procedury sp_bindsession** składowanych w systemie procedury.  
   
- Następującej aplikacji konsoli Pokazuje, jak korzystać z dwóch <xref:System.Data.SqlClient.SqlDataReader> obiektów, z których trzy <xref:System.Data.SqlClient.SqlCommand> obiektów i jeden <xref:System.Data.SqlClient.SqlConnection> obiektu z włączoną MARS. Pierwszy obiekt polecenie pobiera listę dostawców, których zdolności kredytowej wynosi 5. Drugi obiekt polecenia używa dostawcy podany identyfikator z <xref:System.Data.SqlClient.SqlDataReader> załadować drugi <xref:System.Data.SqlClient.SqlDataReader> z wszystkich produktów dla określonego dostawcy. Każdy rekord produktu odwiedzenia przez drugą <xref:System.Data.SqlClient.SqlDataReader>. Obliczeń do określenia, jakie nowe **OnOrderQty** powinien być. Trzeci obiektu command jest następnie używany do aktualizacji **ProductVendor** tabeli przy użyciu nowej wartości. Całego procesu odbywa się w ramach jednej transakcji jest przywracana na końcu.  
+ Następująca aplikacja konsoli Pokazuje, jak za pomocą dwóch <xref:System.Data.SqlClient.SqlDataReader> obiektów, z których trzy są <xref:System.Data.SqlClient.SqlCommand> obiektów i jeden <xref:System.Data.SqlClient.SqlConnection> obiektu z włączoną MARS. Pierwszy obiekt polecenie pobiera listę dostawców, którego poziom kredytu wynosi 5. Drugi obiekt polecenia używa dostawcy podany identyfikator z <xref:System.Data.SqlClient.SqlDataReader> do załadowania drugiego <xref:System.Data.SqlClient.SqlDataReader> wszystkie produkty określonego dostawcy. Każdy rekord produktu jest kontrolowane przez drugi <xref:System.Data.SqlClient.SqlDataReader>. Obliczenie jest przeprowadzana w celu ustalenia, jakie nowe **OnOrderQty** powinien być. Trzeci obiekt polecenia jest następnie używany do aktualizacji **ProductVendor** tabeli z nową wartością. Całego procesu odbywa się w ramach jednej transakcji jest przywracana na końcu.  
   
 > [!NOTE]
->  W poniższym przykładzie użyto przykładowej **AdventureWorks** bazy danych programu SQL Server. W przykładowym kodzie w podanym ciągu połączenia przyjęto założenie, że baza danych jest zainstalowany i dostępny na komputerze lokalnym. Zmodyfikuj parametry połączenia w razie potrzeby dla danego środowiska.  
+>  W poniższym przykładzie użyto przykładu **AdventureWorks** bazy danych z programem SQL Server. W przykładowym kodzie w podanym ciągu połączenia przyjęto założenie, że baza danych jest zainstalowany i dostępny na komputerze lokalnym. Modyfikowanie parametrów połączenia, zgodnie z potrzebami w danym środowisku.  
   
 ```csharp
 using System;  

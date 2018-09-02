@@ -7,30 +7,30 @@ helpviewer_keywords:
 ms.assetid: f78ec137-df0e-48c9-a7a0-5f6a1055f011
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 979c8bb2c851b9c49d74110f53ee5ce0f04e7acc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e90857fcf02dbd0dd888b0658f3ab626bc5b11bd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398823"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418536"
 ---
 # <a name="dynamic-programming-in-the-net-framework"></a>Programowanie dynamiczne w .NET Framework
 Ta sekcja dokumentacji zawiera informacje o programowanie dynamiczne w .NET Framework.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Odbicie](../../../docs/framework/reflection-and-codedom/reflection.md)  
- Opisuje sposób pracy z obiektami w czasie wykonywania za pomocą odbicia.  
+ W tym artykule opisano, jak używać odbicia do pracy z obiektami w czasie wykonywania.  
   
  [Emitowanie dynamicznych metod i zestawów](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
- Opisuje sposób tworzenia metod i zestawów w czasie wykonywania za pomocą Reflection.Emit.  
+ W tym artykule opisano sposób tworzenia metod i zestawów w czasie wykonywania przy użyciu Reflection.Emit.  
   
  [Przegląd środowiska uruchomieniowego języka dynamicznego](../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
- Zawiera opis funkcji środowiska uruchomieniowego języka dynamicznego.  
+ Opisuje funkcje środowisko uruchomieniowe języka dynamicznego.  
   
  [Dynamiczne generowanie i kompilacja kodu źródłowego](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)  
- Opisuje sposób Generowanie i kompilowanie kodu źródłowego dynamicznych.  
+ W tym artykule opisano sposób generowania i kompilowania kodu źródłowego dynamicznych.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Podręcznik programowania](../../../docs/framework/development-guide.md)  
   
- [Zaawansowane odczytu dla programu .NET Framework](http://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)
+ [Zaawansowane zagadnienia dotyczące programu .NET Framework](https://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)

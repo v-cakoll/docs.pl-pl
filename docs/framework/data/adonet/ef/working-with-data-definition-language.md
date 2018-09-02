@@ -1,21 +1,21 @@
 ---
-title: Praca z języka definicji danych
+title: Praca z językiem definicji danych
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: c6b3151a95f949100e10e630da848e34ebbf1187
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 25d7f49644996d87ddb5d191dc313916c0ca6fbb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764401"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423912"
 ---
-# <a name="working-with-data-definition-language"></a>Praca z języka definicji danych
-Począwszy od [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] w wersji 4, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] obsługuje języka definicji danych (DDL). Umożliwia to tworzenie lub usuwanie wystąpienia bazy danych, na podstawie parametrów połączenia i metadanych modelu magazynu (SSDL).  
+# <a name="working-with-data-definition-language"></a>Praca z językiem definicji danych
+Począwszy od [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] w wersji 4 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] obsługuje języka definicji danych (DDL). Dzięki temu można utworzyć lub usunąć wystąpienie bazy danych na podstawie parametrów połączenia i metadanych modelu magazynu (SSDL).  
   
- Następujących metod na <xref:System.Data.Objects.ObjectContext> Użyj parametrów połączenia i zawartość pliku SSDL, aby wykonać następujące czynności: Utwórz lub Usuń bazę danych, sprawdź, czy baza danych istnieje i wyświetlić wygenerowany skrypt DDL:  
+ Następujące metody w <xref:System.Data.Objects.ObjectContext> za pomocą parametrów połączenia i zawartości SSDL wykonywać następujące czynności: Tworzenie lub usuwanie bazy danych, sprawdź, czy baza danych istnieje i wyświetlić wygenerowany skrypt języka DDL:  
   
 -   <xref:System.Data.Objects.ObjectContext.CreateDatabase%2A>  
   
@@ -28,27 +28,27 @@ Począwszy od [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]
 > [!NOTE]
 >  Wykonywanie polecenia języka DDL zakłada wystarczających uprawnień.  
   
- Metody wcześniej wymienione delegować większość pracy do podstawowego dostawcy danych ADO.NET. Jest dostawcy odpowiedzialność za upewnij się, że konwencji nazewnictwa służący do generowania obiektów bazy danych jest zgodne z konwencjami używane do wykonywania zapytań i aktualizacji.  
+ Metody wymienione wcześniej delegować większość pracy do podstawowego dostawcy danych ADO.NET. Jest odpowiedzialny za dostawcy upewnij się, że Konwencja nazewnictwa służącego do generowania obiektów bazy danych zgodne z konwencjami, używane do tworzenia zapytań i aktualizacji.  
   
- Poniższy przykład przedstawia sposób generowania bazy danych na podstawie istniejącego modelu. On również dodaje nowy obiekt jednostki do kontekstu obiektów i jest zapisywany w bazie danych.  
+ Poniższy przykład pokazuje, jak wygenerować bazy danych na podstawie istniejącego modelu. On również dodaje nowy obiekt jednostki do kontekstu obiektów i zapisuje je w bazie danych.  
   
 ## <a name="procedures"></a>Procedury  
   
-#### <a name="to-define-a-database-based-on-the-existing-model"></a>Aby określić bazę danych na podstawie istniejącego modelu  
+#### <a name="to-define-a-database-based-on-the-existing-model"></a>Aby zdefiniować bazę danych na podstawie istniejącego modelu  
   
-1.  Tworzenie aplikacji konsoli.  
+1.  Utwórz aplikację konsoli.  
   
 2.  Dodawanie istniejącego modelu do aplikacji.  
   
-    1.  Dodaj pusty model o nazwie `SchoolModel`. Aby utworzyć pusty model, zobacz [porady: Tworzenie nowego edmx pliku](http://msdn.microsoft.com/library/beb8189e-e51c-4051-839c-9902c224abf2) tematu.  
+    1.  Dodaj pusty modelu o nazwie `SchoolModel`. Aby utworzyć pusty model, zobacz [porady: Tworzenie nowego edmx pliku](https://msdn.microsoft.com/library/beb8189e-e51c-4051-839c-9902c224abf2) tematu.  
   
      Plik SchoolModel.edmx zostanie dodany do projektu.  
   
-    1.  Kopiowanie pojęciach, magazynu i mapowanie zawartości dla modelu służbowe [modelu służbowe](http://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac) tematu.  
+    1.  Skopiuj pojęciach, magazynu i mapowanie zawartości przez model do szkoły [modelu School](https://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac) tematu.  
   
-    2.  Otwórz plik SchoolModel.edmx i Wklej zawartość w `edmx:Runtime` tagów.  
+    2.  Otwórz plik SchoolModel.edmx i Wklej zawartość w ramach `edmx:Runtime` tagów.  
   
-3.  Dodaj następujący kod do funkcji main. Kod inicjuje parametry połączenia z serwerem bazy danych, widoki skryptu DDL utworzy bazę danych, dodaje nową jednostkę do kontekstu i zapisuje zmiany w bazie danych.  
+3.  Dodaj następujący kod do funkcji main. Ten kod inicjalizuje parametry połączenia z serwerem bazy danych, widoki, skrypt DDL tworzy bazę danych, dodaje nową jednostkę do kontekstu i zapisuje zmiany w bazie danych.  
   
      [!code-csharp[DP ObjectServices Concepts#DDL](../../../../../samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#ddl)]
      [!code-vb[DP ObjectServices Concepts#DDL](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#ddl)]

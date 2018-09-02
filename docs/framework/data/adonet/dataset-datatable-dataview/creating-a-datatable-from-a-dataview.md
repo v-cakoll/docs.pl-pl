@@ -1,26 +1,26 @@
 ---
-title: Tworzenie DataTable w elemencie DataView
+title: Tworzenie elementu DataTable przy użyciu elementu DataView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-ms.openlocfilehash: a389f75ca6516f8bad55934717bee056aca65f1f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ccf95ff250cc7c23b1ff981087de0f1310472880
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757063"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418755"
 ---
-# <a name="creating-a-datatable-from-a-dataview"></a>Tworzenie DataTable w elemencie DataView
-Po pobierane są dane ze źródła danych i wypełnione <xref:System.Data.DataTable> z danymi, można sortować, filtrowania lub ograniczenia w inny sposób zwrócone dane bez pobierania go ponownie. <xref:System.Data.DataView> Klasy sprawia, że jest to możliwe. Ponadto, jeśli musisz utworzyć nowy <xref:System.Data.DataTable> z <xref:System.Data.DataView>, można użyć <xref:System.Data.DataView.ToTable%2A> metodę, aby skopiować wszystkie wiersze i kolumny lub podzbiór danych do nowego <xref:System.Data.DataTable>. <xref:System.Data.DataView.ToTable%2A> Metoda zapewnia przeciążenia do:  
+# <a name="creating-a-datatable-from-a-dataview"></a>Tworzenie elementu DataTable przy użyciu elementu DataView
+Gdy pobierane są dane ze źródła danych i wypełnione <xref:System.Data.DataTable> z danymi, możesz chcieć sortowanie, filtrowanie lub inny sposób ograniczyć zwracanych danych bez pobierania go ponownie. <xref:System.Data.DataView> Klasy sprawia, że jest to możliwe. Ponadto, jeśli musisz utworzyć nowy <xref:System.Data.DataTable> z <xref:System.Data.DataView>, możesz użyć <xref:System.Data.DataView.ToTable%2A> metodę, aby skopiować wszystkie wiersze i kolumny lub podzbiór danych do nowego <xref:System.Data.DataTable>. <xref:System.Data.DataView.ToTable%2A> Metoda zapewnia przeciążeń:  
   
--   Utwórz <xref:System.Data.DataTable> zawierające kolumny, które są podzbiorem kolumn w <xref:System.Data.DataView>.  
+-   Tworzenie <xref:System.Data.DataTable> zawierający kolumny, które stanowią podzestaw kolumn w <xref:System.Data.DataView>.  
   
--   Utwórz <xref:System.Data.DataTable> która zawiera tylko unikatowe wiersze z <xref:System.Data.DataView>, analogously do słowa kluczowego DISTINCT w języku Transact-SQL.  
+-   Tworzenie <xref:System.Data.DataTable> która zawiera tylko unikatowe wiersze z <xref:System.Data.DataView>, analogicznie do słowa kluczowego DISTINCT w języku Transact-SQL.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie aplikacji konsoli tworzy <xref:System.Data.DataTable> zawierający dane z **Person.Contact** tabeli w **AdventureWorks** przykładowej bazy danych. Następnie w przykładzie jest tworzony posortowane i przefiltrowane <xref:System.Data.DataView> na podstawie <xref:System.Data.DataTable>. Po wyświetleniu zawartość <xref:System.Data.DataTable> i <xref:System.Data.DataView>, w przykładzie jest tworzony nowy <xref:System.Data.DataTable> z <xref:System.Data.DataView> przez wywołanie metody <xref:System.Data.DataView.ToTable%2A> metody, wybierając tylko podzbiór dostępnych kolumn. Ponadto w przykładzie przedstawiono zawartość nowej <xref:System.Data.DataTable>.  
+ Poniższy przykład aplikacji konsoli tworzy <xref:System.Data.DataTable> zawierający dane z **Person.Contact** tabelę **AdventureWorks** przykładowej bazy danych. Następnie przykład tworzy posortowane i przefiltrowane <xref:System.Data.DataView> na podstawie <xref:System.Data.DataTable>. Po wyświetleniu zawartości <xref:System.Data.DataTable> i <xref:System.Data.DataView>, w przykładzie jest tworzony nowy <xref:System.Data.DataTable> z <xref:System.Data.DataView> przez wywołanie metody <xref:System.Data.DataView.ToTable%2A> metody, wybierając tylko podzbiór dostępnych kolumn. Na koniec w przykładzie pokazano zawartość nowego <xref:System.Data.DataTable>.  
   
 ```vb  
 Private Sub DemonstrateDataView()  
@@ -208,4 +208,4 @@ Console.WriteLine();
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Data.DataView.ToTable%2A>  
  [Elementy DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,47 +1,47 @@
 ---
-title: Implementowanie modelu domeny mikrousługi z platformą .NET Core
-description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Implementowanie modelu domeny mikrousługi z platformą .NET Core
+title: Implementowanie modelu domeny mikrousługi za pomocą programu .NET Core
+description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Implementowanie modelu domeny mikrousługi za pomocą programu .NET Core
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
-ms.openlocfilehash: e836eda7fdc7b55ca7d1fe2ef5bf48a2d4ecb5a3
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: bb11d87cacf5bb6cbc980c879b0c42fae76f6246
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106268"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420930"
 ---
-# <a name="implementing-a-microservice-domain-model-with-net-core"></a>Implementowanie modelu domeny mikrousługi z platformą .NET Core 
+# <a name="implementing-a-microservice-domain-model-with-net-core"></a>Implementowanie modelu domeny mikrousługi za pomocą programu .NET Core 
 
-W poprzedniej sekcji zostały wyjaśnione zasady projektowania podstawowych i wzorce projektowania modelu domeny. Teraz nadszedł czas, aby poznać możliwości, aby wdrożyć model domeny przy użyciu platformy .NET Core (zwykły C\# kodu) i EF podstawowe. Należy pamiętać, że model domeny będzie składać się z kodu. Na EF będzie mieć tylko podstawowe EF wymagania modelu, ale nie rzeczywistych zależności. Nie powinna mieć twarde zależności lub odwołania do podstawowych funkcji EF lub innych ORM modelu domeny.
+W poprzedniej sekcji zostały wyjaśnione podstawowych projektowania i wzorce projektowania modelu domeny. Teraz nadszedł czas, aby poznać sposoby, aby wdrożyć model domeny przy użyciu platformy .NET Core (C zwykły\# kodu) i programem EF Core. Należy pamiętać, że modelu domeny będzie składać się z kodu. Tylko wymagania modelu platformy EF Core, ale w zależności nie rzeczywistych będzie miał na EF. W modelu domeny nie powinna mieć twarde zależności lub odwołania do programu EF Core lub innych ORM.
 
-## <a name="domain-model-structure-in-a-custom-net-standard-library"></a>Struktura modelu domeny niestandardowe biblioteki .NET Standard
+## <a name="domain-model-structure-in-a-custom-net-standard-library"></a>Struktura modelu domeny niestandardowej biblioteki .NET Standard
 
-Organizacja folderu używane dla aplikacji odwołanie eShopOnContainers pokazuje DDD modelu dla aplikacji. Może się okazać, że organizacja inny folder dokładniej komunikuje się decyzji projektowych dotyczących aplikacji. Jak widać w rysunek 9 – 10 w porządkowania modelu domeny istnieją agregatów, zagregowany kolejności i nabywców agregacji. Każdego agregacji jest grupą domeny jednostek i obiektów wartość, mimo że agregacji składa się z jednostek jednej domenie, (łączny głównego lub podmiot główny) również może mieć.
+Organizacja folderu używane w ramach aplikacji eShopOnContainers aplikacji referencyjnej pokazuje modelu DDD dla aplikacji. Może się okazać, że organizacja inny folder wyraźniej komunikuje się uzasadnienie wyboru tych elementów, dla aplikacji. Jak widać na rysunku 9-10 w szeregowania modelu domeny istnieją dwie wartości zagregowane, aggregate kolejności i agregacji kupujący. Każdej agregacji jest grupą domeny jednostek i obiektów wartości, mimo że może mieć również składa się z jednostką jednej domenie (głównego agregacji lub jednostki głównej) wartość zagregowana.
 
 ![](./media/image11.png)
 
-**Rysunek 9 – 10**. Struktura modelu domeny dla porządkowania mikrousługi w eShopOnContainers
+**Rysunek 9 – 10**. Struktura modelu domeny mikrousługi sortowania, w ramach aplikacji eShopOnContainers
 
-Ponadto warstwy modelu domeny obejmuje kontrakty repozytorium (interfejsy), które są wymagania dotyczące infrastruktury modelu domeny. Innymi słowy, te interfejsy express repozytoriów, jakie musi implementować warstwę infrastruktury i w jaki sposób. Jest krytyczny, że implementacja repozytoriów można umieścić poza warstwy modelu domeny, w bibliotece warstwę infrastruktury tak warstwy modelu domeny jest nie "zanieczyszczone" interfejsu API lub klas z technologii infrastruktury, takich jak Entity Framework.
+Ponadto w warstwie modelu domeny obejmuje kontrakty repozytorium (interfejsy), które są wymagania dotyczące infrastruktury modelu domeny. Innymi słowy, te interfejsy express repozytoriów, jakie musi implementować warstwy infrastruktury i w jaki sposób. Koniecznie, implementacja repozytoriów można umieścić poza warstwie modelu domeny w bibliotece warstwę infrastruktury, więc warstwie modelu domeny nie jest "zanieczyszczona" interfejsu API lub klasy z technologii infrastruktury, takich jak Entity Framework.
 
-Możesz również sprawdzić [SeedWork](https://martinfowler.com/bliki/Seedwork.html) folder zawierający niestandardowe klasy bazowej, która służy jako podstawa dla jednostek domeny i wartość obiekty, dlatego nie masz nadmiarowy kod w klasie obiektów w każdej domenie.
+Można również wyświetlić [SeedWork](https://martinfowler.com/bliki/Seedwork.html) obiektów folder zawierający niestandardowe klasy bazowej, która służy jako podstawa dla domeny, jednostki i wartości, więc nie trzeba nadmiarowy kod w klasie obiektów w każdej domenie.
 
-## <a name="structuring-aggregates-in-a-custom-net-standard-library"></a>Struktury wartości zagregowanych w niestandardowa biblioteka .NET Standard
+## <a name="structuring-aggregates-in-a-custom-net-standard-library"></a>Tworzenie struktury wartości zagregowanych umieszczonych w niestandardowej biblioteki .NET Standard
 
-Wartość zagregowana odwołuje się do klastra obiektów domeny zgrupowane w celu dopasowania spójności transakcyjnej. Te obiekty można wystąpienia jednostek (z których jeden jest łączny głównego lub podmiot główny) oraz wszystkie obiekty dodatkowe wartości.
+Wartość zagregowana odnosi się do klastra, w przypadku obiektów domeny zgrupowane razem, aby dopasować poziom spójności transakcyjnej. Te obiekty można wystąpień jednostki (z których jeden jest głównego agregacji lub jednostki głównej) oraz wszystkie obiekty dodatkową wartość.
 
-Spójności transakcyjnej oznacza, że agregacji gwarantuje to spójność i na bieżąco na koniec działania biznesowe. Na przykład agregacji kolejności z eShopOnContainers kolejność modelu domeny mikrousługi składa się jak pokazano w rysunek 9-11.
+Poziom spójności transakcyjnej oznacza, że wartość zagregowana jest gwarantowane były spójne i na bieżąco na końcu działań biznesowych. Na przykład składa się agregacji kolejność, w ramach aplikacji eShopOnContainers kolejność modelu domeny mikrousługi, jak pokazano w rysunek 9 – 11.
 
 ![](./media/image12.png)
 
-**Rysunek 9-11**. Kolejność agregacji w rozwiązaniu Visual Studio
+**Rysunek 9 – 11**. Kolejność agregacji w rozwiązaniu Visual Studio
 
-Po otwarciu plików w folderze agregacji widać jak jest oznaczony jako niestandardowej klasy podstawowej lub interfejsu, takich jak jednostka lub wartość obiektu, zgodnie z implementacją w [Seedwork](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Services/Ordering/Ordering.Domain/SeedWork) folderu.
+Jeśli możesz otworzyć dowolny z plików w folderze agregacji, możesz zobaczyć jak jest oznaczony jako niestandardowej klasy bazowej lub interfejsu, takich jak jednostka lub wartość obiektu, zaimplementowanego w [Seedwork](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Services/Ordering/Ordering.Domain/SeedWork) folderu.
 
-## <a name="implementing-domain-entities-as-poco-classes"></a>Implementowanie jednostek domeny jako klasy POCO
+## <a name="implementing-domain-entities-as-poco-classes"></a>Implementowanie jednostki domeny jako klasy POCO
 
-Model domeny można zaimplementować w .NET przez utworzenie klas POCO, które implementują obiekty domeny. W poniższym przykładzie klasa kolejności jest zdefiniowana jako jednostki, a także jako główny agregacji. Ponieważ klasa kolejności pochodzi od klasy podstawowej jednostki, można użyć ponownie typowy Kod powiązane z jednostkami. Przy tym pamiętać, że te klasy podstawowe i interfejsy są zdefiniowane przez użytkownika w projekcie modelu domeny, więc Twojej kod, nie infrastrukturze kod z ORM, takich jak EF.
+Model domeny na platformie .NET implementuje są przez utworzenie klas POCO, które implementują jednostki domeny. W poniższym przykładzie klasa kolejność jest zdefiniowana jako jednostki, a także jako główny agregacji. Ponieważ klasa kolejności pochodzi z klasy podstawowej jednostki, można ponownie użyć wspólny kod powiązane z jednostkami. Mieć na uwadze, że te klasy podstawowe i interfejsy są zdefiniowane przez użytkownika w projekcie modelu domeny, więc Twoja kod, a nie kod infrastruktury z ORM, takie jak EF.
 
 ```csharp
 // COMPATIBLE WITH ENTITY FRAMEWORK CORE 2.0
@@ -93,21 +93,21 @@ public class Order : Entity, IAggregateRoot
 }
 ```
 
-Należy zauważyć, że jest jednostką domeny, zaimplementowane jako klasa POCO. Nie ma żadnych bezpośrednich zależność od Entity Framework Core lub inne struktury infrastruktury. Ta implementacja jest powinny być w DDD, po prostu C\# kod implementacji modelu domeny.
+Należy pamiętać, że to jest jednostka domeny implementowany jako klasa POCO. Nie ma żadnych zależności bezpośrednich platformy Entity Framework Core lub dowolnej architektury infrastruktury. Ta implementacja jest należycie w DDD, po prostu C\# kodu Implementowanie modelu domeny.
 
-Ponadto klasa zostanie nadany interfejsu o nazwie IAggregateRoot. Ten interfejs jest interfejsem pusta, nazywane również *interfejsu znacznika*, która jest używana tylko w celu oznaczać, że ta klasa jednostki jest również głównego agregacji.
+Ponadto klasa zostanie nadany interfejs o nazwie IAggregateRoot. Ten interfejs jest pusty interfejs, czasami nazywane *interfejs znacznika*, która jest używana tylko w celu wskazania, że ta klasa jednostki jest również głównego agregacji.
 
-Interfejs znacznika czasami jest uznawany za wzorca oprogramowania; jednak również to czysta sposób Oznacz klasę, szczególnie w przypadku, gdy ten interfejs może rozwijającymi. Atrybut może być inne wybór dla znacznika, ale jest szybsze wyświetlić klasy podstawowej (jednostka) obok interfejsu IAggregate zamiast umieszczanie znacznika atrybutu agregacji powyżej klasy. Metter preferencji, jest w każdym przypadku.
+To interfejs znacznika czasami jest traktowany jako wzorzec ochrony; jednak go jest również eleganckie rozwiązanie, aby oznaczyć klasę, szczególnie w przypadku, gdy ten interfejs może zmieniających się. Atrybut może być inne rozwiązanie dla znacznika, ale jest szybsze wyświetlić klasę bazową (jednostka) obok interfejsu IAggregate zamiast umieszczać znacznika atrybutu dotyczącego agregacji powyżej klasy. Niezależnie od lokalizacji tych preferencji, jest w każdym przypadku.
 
-O oznacza głównego agregacji, że większość kod powiązany spójności i reguły biznesowe jednostek wartości zagregowanej powinny zostać wdrożone jako metod klasy głównym agregacji kolejności (na przykład AddOrderItem podczas dodawania obiektu OrderItem do agregacji) . Nie należy utworzyć ani zaktualizować obiektów OrderItems niezależnie lub bezpośrednio; Klasa AggregateRoot musi przechowywać i kontroli spójności żadnej operacji aktualizacji, przed jego obiektów podrzędnych.
+Posiadanie oznacza głównego agregacji, że większość kodu związane z spójności i reguł biznesowych, jednostek agregacji powinny zostać wdrożone jako metody w klasie głównego agregacji zamówienia (na przykład AddOrderItem podczas dodawania obiektu OrderItem do agregacji) . Użytkownik powinien nie utworzyć lub zaktualizować OrderItems obiekty niezależnie lub bezpośrednio; Klasa AggregateRoot musi przechowywać kontroli i spójności żadnych operacji aktualizacji, przed jego obiektów podrzędnych.
 
-## <a name="encapsulating-data-in-the-domain-entities"></a>Zawieranie dane w jednostkach domeny
+## <a name="encapsulating-data-in-the-domain-entities"></a>Zawieranie danymi w obiektach domeny
 
-To powszechny problem w modelach jednostki jest czy udostępniają właściwości nawigacji kolekcji jako typów list publicznie. Dzięki temu każdy Deweloper współpracownika do manipulowania zawartość te typy kolekcji, których może pominąć ważnymi reguł związanych z kolekcji, prawdopodobnie pozostawienie obiektu w nieprawidłowym stanie. To rozwiązanie jest ujawnia dostęp tylko do odczytu do kolekcji powiązanych i jawnie Podaj metod, które definiują sposób, w którym klienci można przekształcać je.
+Typowy problem w modelach jednostki jest eksponowanie właściwości nawigacji kolekcji jako typy list dostępny publicznie. Dzięki temu każdy Deweloper współpracownika do manipulowania zawartość tych kolekcji typów, które może pominąć reguł biznesowych ważne związanych z kolekcji, prawdopodobnie pozostawienie obiektu w nieprawidłowym stanie. Rozwiązaniem tego problemu do prezentowania dostęp tylko do odczytu do powiązanej kolekcji i jawnie określić metody, które definiują sposób, w którym klienci nimi manipulować.
 
-W poprzednim kodzie należy zauważyć, że wiele atrybutów są tylko do odczytu lub prywatnych i tylko są tak Każda aktualizacja uwzględnia invariants domeny business konta i logikę określoną w ramach metod klasy nadaje się do aktualizacji za pomocą metod klasy.
+W poprzednim kodzie należy pamiętać, że wiele atrybutów są tylko do odczytu "lub" prywatnych są one tylko nadaje się do aktualizacji za pomocą metod klasy tak Każda aktualizacja wymaga invariants domeny biznesowej konta i logikę określoną w ramach metod klasy.
 
-Na przykład następujące wzorce DDD należy *nie* wykonaj następujące czynności z dowolnej polecenie obsługi metody lub aplikacji warstwy klasy:
+Na przykład, następujące wzorców DDD, wykonaj następujące czynności *nie* wykonaj następujące czynności z dowolnego polecenia obsługi metody lub aplikacji warstwy klasy:
 
 ```csharp
 // WRONG ACCORDING TO DDD PATTERNS – CODE AT THE APPLICATION LAYER OR
@@ -122,17 +122,17 @@ myOrder.OrderItems.Add(myNewOrderItem);
 //...
 ```
 
-W tym przypadku metoda Add jest wyłącznie operacji dodawania danych, za pomocą bezpośredniego dostępu do kolekcji OrderItems. W związku z tym większość logika domeny, reguł lub Sprawdzanie poprawności dotyczące czy operację, podając obiektów podrzędnych będą rozkładane warstwy aplikacji (programy obsługi poleceń i kontrolery interfejsu API sieci Web).
+W tym przypadku metoda Add jest wyłącznie operacji dodawania danych bezpośredni dostęp do kolekcji OrderItems. W związku z tym większość logika domeny, zasady lub walidacji dotyczące czy operację, używając obiektów podrzędnych będą rozkłada warstwy aplikacji (programy obsługi poleceń i kontrolerów internetowych interfejsów API).
 
-Przejście wokół agregacji głównego agregacji głównego nie może zagwarantować jego invariants, ważności lub jego spójności. Po pewnym czasie będzie mieć postaci spaghetti kod lub skrypt kod.
+Po przejściu wokół głównego agregacji głównego agregacji nie gwarantuje jego invariants, jego ważności lub jego zgodności. Po pewnym czasie będziesz mieć postaci spaghetti kod lub kod skryptu transakcji.
 
-Wykonać wzorce DDD, jednostki nie może mieć publicznych ustawiające w dowolnej właściwości jednostki. Zmian w jednostce powinny być regulowane przez jawnych metod jawne języka powszechna o zmianie, które działają one w jednostce.
+Aby skorzystać z wzorców DDD, jednostki nie może mieć publiczne metody ustawiające w dowolnej właściwości jednostki. Zmiany w jednostce powinien opierać się za pomocą jawnych metod za pomocą jawnego wszechobecne języka o zmiany, które wykonują w jednostce.
 
-Ponadto, kolekcje w ramach jednostki (np. kolejność elementów) powinny być właściwości tylko do odczytu (metoda AsReadOnly wyjaśniono później). Można zaktualizować tylko z metod klasy głównym agregacji lub metody jednostek podrzędnych.
+Ponadto, kolekcjami w obrębie jednostki (takie jak elementy zamówienia) powinny być właściwości tylko do odczytu (metoda AsReadOnly opisana później). Można zaktualizować go tylko w obrębie głównego agregacji metod klasy lub metody jednostki podrzędne.
 
-Jak widać w kodzie dla elementu głównego agregacji w kolejności, wszystkie metody ustawiające powinny być prywatne lub co najmniej tylko do odczytu zewnętrznie, dzięki czemu ma być wykonywane za pomocą metod w klasie jednostki żadnej operacji względem danych jednostki lub jego obiektów podrzędnych. Zapewnia to dostępność spójności w sposób kontrolowanych i zorientowanym obiektowo zamiast wdrażania kodu skrypt.
+Jak widać w kodzie dla głównego agregacji w kolejności, wszystkie metody ustawiające powinny być prywatne lub co najmniej tylko do odczytu zewnętrznie, tak aby każdej operacji względem danych jednostki lub jego obiektów podrzędnych musi być wykonywane za pomocą metody w klasie jednostki. Zapewnia to spójność w sposób kontrolowany i zorientowane obiektowo, a nie Implementowanie kod skryptu transakcji.
 
-Poniższy fragment kodu przedstawia prawidłowego sposobem kodu zadania dodawania obiektu OrderItem do zagregowania kolejności.
+Poniższy fragment kodu przedstawia prawidłowego sposobu kod: zadanie dodawania obiektu OrderItem do zagregowania zamówienia.
 
 ```csharp
 // RIGHT ACCORDING TO DDD--CODE AT THE APPLICATION LAYER OR COMMAND HANDLERS
@@ -146,36 +146,36 @@ myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, un
 //...
 ```
 
-W tym fragmencie, większość operacji sprawdzania poprawności lub logiki powiązane do utworzenia obiektu OrderItem będą kontroli głównego agregacji kolejności — w metodzie AddOrderItem — szczególnie operacji sprawdzania poprawności i logiki powiązane z innymi elementami w całkowitym. Na przykład można uzyskać ten sam element produktu w wyniku wielu wywołań AddOrderItem. W tej metodzie można zbadać elementów produktu i konsolidować te same elementy produktu w pojedynczy obiekt OrderItem z kilku jednostek. Ponadto jeśli istnieją różne stawki kwoty, ale identyfikator produktu jest taki sam, będzie prawdopodobnie Zastosuj wyższy rabat. Ta zasada ma zastosowanie do innych logika domeny dla obiekt OrderItem.
+W tym fragmencie kodu, większość operacji sprawdzania poprawności lub logiki powiązane z tworzenia obiektu OrderItem będą kontroli głównego agregacji zamówienia — w metodzie AddOrderItem — szczególnie logiki i walidacji powiązanych do innych elementów w agregacji. Na przykład możesz otrzymać ten sam element produktu w wyniku AddOrderItem wielu wywołań. W tej metodzie można zbadać elementów produktu i konsolidować tych samych towarów produktu w pojedynczy obiekt OrderItem z kilku jednostek. Ponadto jeśli istnieją kwoty różnych rabatów, ale identyfikator produktu jest taki sam, będzie prawdopodobnie stosować ten rabat wyższy. Ta zasada ma zastosowanie do innych logiki domeny dla obiektu OrderItem.
 
-Ponadto nowej operacji OrderItem(params) utworzy również być kontrolowane i wykonywane przez metodę AddOrderItem od elementu głównego agregacji kolejności. W związku z tym większość logiki lub Sprawdzanie poprawności związane z konieczności operacji (szczególnie wszystko, co ma wpływ na spójności między innymi jednostek podrzędnych) w jednym miejscu w katalogu głównym agregacji. To jest ostatecznym celem wzorzec głównego agregacji.
+Ponadto nową operację OrderItem(params) będzie również być kontrolowany i wykonywane przez metodę AddOrderItem z katalogu głównego agregacji zamówienia. W związku z tym większość logiki i walidacji związane z konieczności operacji (szczególnie wszystko, co ma wpływ na spójność między innymi jednostkami podrzędnych) w jednym miejscu w obrębie głównego agregacji. To jest ostatecznym celem wzorzec głównego agregacji.
 
-Jeśli używasz Entity Framework Core 1.1 lub później, jednostki DDD można lepiej wyrazić ponieważ zezwala ona na [mapowania pól](https://docs.microsoft.com/ef/core/modeling/backing-field) oprócz właściwości. Jest to przydatne podczas ochrony kolekcji jednostek podrzędnych lub obiekty wartości. To rozszerzenie zamiast właściwości można korzystać z prostego pól prywatnych i można zaimplementować żadnych aktualizacji do kolekcji pola w metodach publicznego i zapewnić dostęp tylko do odczytu za pomocą metody AsReadOnly.
+Gdy korzystasz z programu Entity Framework Core 1.1 lub później, jednostki DDD można lepiej wyrazić ponieważ zezwala ona na [zamapowane na pola](https://docs.microsoft.com/ef/core/modeling/backing-field) oprócz właściwości. Jest to przydatne w przypadku ochrony kolekcji jednostki podrzędne lub obiekty wartości. Za pomocą tego rozszerzenia można użyć prostego pola prywatne, zamiast właściwości i można zaimplementować wszelkich aktualizacji kolekcji pól za pomocą metod publicznych i zapewnić dostęp tylko do odczytu za pośrednictwem metody AsReadOnly.
 
-W DDD do zaktualizowania jednostki tylko za pośrednictwem metod w obiekcie (lub konstruktora) w celu sterowania wszystkie niezmiennej i spójność danych więc właściwości są zdefiniowane tylko za pomocą metody dostępu get. Właściwości bazują na pól prywatnych. Prywatne elementy członkowskie są dostępne tylko z należące do klasy. Jednak istnieje jeden wyjątek: EF Core musi ustawić także tych pól.
+W DDD, które chcesz zaktualizować jednostki, tylko za pośrednictwem metody w jednostki (lub konstruktora) w celu kontrolowania wszelkie niezmiennej i spójność danych więc właściwości są zdefiniowane tylko za pomocą metody dostępu get. Właściwości są wspierane przez pola prywatne. Prywatne elementy Członkowskie może zostać oceniony jedynie z w klasie. Jednak miejsca jeden wyjątek: programu EF Core musi ustawić również tych pól.
 
 
-### <a name="mapping-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>Mapowania właściwości z tylko Pobierz metod dostępu do pola w tabeli bazy danych
+### <a name="mapping-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>Mapowanie właściwości z tylko pobieranie metod dostępu do pól w tabeli bazy danych
 
-Mapowanie właściwości do kolumny tabeli bazy danych nie jest odpowiedzialność domeny, ale część warstwy infrastruktury i trwałości. Firma Microsoft informacje o tym tutaj wystarczy, aby poznać nowe funkcje w wersji 1.1 Core EF lub później związanych z jak modelu jednostki. Dodatkowe szczegóły dotyczące tego tematu opisano w sekcji infrastruktury i trwałości.
+Mapowanie właściwości do kolumny tabeli bazy danych nie jest odpowiedzialność domeny, ale część warstwy infrastruktury i trwałości. Firma Microsoft wspomnieć o tego w tym miejscu po prostu, dzięki czemu masz świadomość nowe możliwości w wersji EF Core 1.1 lub później powiązany sposób można modelować jednostek. Dodatkowe szczegóły dotyczące tego tematu opisano w sekcji infrastruktury i trwałości.
 
-Jeśli używasz EF Core 1.0, w ramach DbContext należy zamapować właściwości, które są zdefiniowane tylko za pomocą metody pobierające, do rzeczywistych pola w tabeli bazy danych. Można to zrobić za pomocą metody HasField klasy PropertyBuilder.
+Gdy używasz programu EF Core 1.0, w ramach kontekstu DbContext należy zamapować właściwości, które są zdefiniowane tylko w przypadku metod pobierających do rzeczywistego pól w tabeli bazy danych. Można to zrobić za pomocą metody HasField klasy PropertyBuilder.
 
 ### <a name="mapping-fields-without-properties"></a>Mapowanie pól bez właściwości
 
-Dzięki funkcji w programie EF Core 1.1 lub nowszej do mapowania kolumn do pól jest również możliwe nie używać właściwości. Zamiast tego można mapować tylko kolumny tabeli do pól. Przypadek użycia wspólnych dla tego jest prywatny pól dla stanu wewnętrznego, które nie muszą być dostępne spoza jednostki.
+Dzięki funkcji w programie EF Core 1.1 lub nowszej mapowania kolumn na pola użytkownik może również nie korzystać z właściwości. Zamiast tego po prostu można mapować kolumny z tabeli pola. Typowy przypadek użycia tego jest pola prywatne, wewnętrzne stanu, które nie muszą być dostępne spoza jednostki.
 
-Na przykład w poprzednim przykładzie kodu OrderAggregate istnieje kilka pól prywatnych, jak `_paymentMethodId` pole, które ma nie powiązanych właściwości metody ustawiającej lub metody pobierającej. Można również tego pola obliczane w kolejności logiki biznesowej i użycia w kolejności metody, ale zachodzi potrzeba jego utrwalenia w bazie danych oraz. Dlatego w EF Core (od momentu w wersji 1.1) mapują pole bez właściwości powiązanych z kolumną w bazie danych. Jest to również szczegółowo [warstwę infrastruktury](#the-infrastructure-layer) tego przewodnika.
+Na przykład w poprzednim przykładzie kodu OrderAggregate istnieje kilka pola prywatne, takie jak `_paymentMethodId` pola, mających nie powiązane właściwości metody ustawiającej lub metody pobierającej. Również być obliczane w kolejności logiki biznesowej i użycia w kolejności metod tego pola, ale w celu jego utrwalenia w bazie danych również musi. Dlatego w programie EF Core (od wersji 1.1) istnieje sposób mapowania pól bez właściwości powiązanych z kolumną w bazie danych. To także szczegółowo [warstwy infrastruktury](#the-infrastructure-layer) części tego przewodnika.
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Vaughn Vernon. Modelowanie wartości zagregowanych z DDD i strukturą Entity Framework.** Należy pamiętać, że jest to *nie* Entity Framework Core.
+-   **Vaughn Vernon. Modelowanie agregacji za pomocą zastosowania projektowania DDD i Entity Framework.** Należy zauważyć, że jest to *nie* Entity Framework Core.
     [*https://vaughnvernon.co/?p=879*](https://vaughnvernon.co/?p=879)
 
--   **Julie Lerman. Kodowanie oparte na domenie projektu: porady dotyczące Devs danych**
+-   **Julie Lerman. Kodowanie dla projektowania opartego na domenie: wskazówki dla deweloperów skoncentrowane na danych**
     [*https://msdn.microsoft.com/en-us/magazine/dn342868.aspx*](https://msdn.microsoft.com/en-us/magazine/dn342868.aspx)
 
--   **Udi Dahan. Jak utworzyć pełni hermetyzowany modeli domeny**
+-   **Udi Dahan. Jak utworzyć w pełni hermetyzowane modeli domeny**
     [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
 
 

@@ -16,46 +16,46 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: 0f78ae4b6abacea6fd1240a1472e1de0e625a8e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 28f04e12d17d65788b0f894d3bd777a700b712f9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576210"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456793"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Asynchroniczny wzorzec oparty na zdarzeniach — przegląd
-Aplikacje, których wykonywanie wielu zadań jednocześnie, ale nadal odbierać interakcji z użytkownikiem, często wymagają projekt, który używa wielu wątków. <xref:System.Threading> Przestrzeń nazw zawiera wszystkie narzędzia niezbędne do utworzenia aplikacji wielowątkowych wysokiej wydajności, ale efektywne używanie tych narzędzi wymaga znaczących środowisko z wielowątkowe engineering oprogramowania. Dla aplikacji wielowątkowych stosunkowo proste <xref:System.ComponentModel.BackgroundWorker> składnika rozwiązaniem jest proste. Dla bardziej zaawansowanych aplikacji asynchronicznego rozważ zaimplementowanie zgodnego ze wzorca asynchronicznego opartego na zdarzeniach klasy.  
+Aplikacje, które jednocześnie wykonywać wiele zadań, ale ciągle reagować na interakcję z użytkownikiem, często wymagają projektu, który korzysta z wielu wątków. <xref:System.Threading> Przestrzeń nazw zawiera wszystkie narzędzia niezbędne do utworzenia aplikacji wielowątkowych o wysokiej wydajności, ale za pomocą tych narzędzi skutecznie wymaga bogate doświadczenie z wielowątkowych inżynierii oprogramowania. W przypadku stosunkowo proste aplikacji wielowątkowych <xref:System.ComponentModel.BackgroundWorker> składnik udostępnia proste rozwiązanie. Dla bardziej zaawansowanych aplikacji asynchronicznych należy rozważyć zaimplementowanie klasę, która jest zgodna wzorca asynchronicznego opartego na zdarzeniach.  
   
- Asynchroniczny wzorzec oparty na zdarzeniach udostępnia zalety aplikacji wielowątkowych wiele złożonych problemów w wielowątkowe projektu są ukryte. Przy użyciu klasy, która obsługuje ten wzorzec umożliwia:  
+ Asynchroniczny wzorzec oparty na zdarzeniach udostępnia zalety aplikacji wielowątkowych wiele skomplikowane problemy związane z wielowątkowych projektu są ukryte. Za pomocą klasy, która obsługuje ten wzorzec może umożliwiają:  
   
--   Wykonywanie zadania czasochłonne, takie jak pliki do pobrania i operacje bazy danych "w tle" bez zakłócania pracy aplikacji.  
+-   Wykonywać czasochłonne zadania, takie jak pliki do pobrania i operacji bazy danych "w tle" bez zakłócania pracy aplikacji.  
   
--   Wykonania wielu operacji jednocześnie odbieranie powiadomień po zakończeniu każdej.  
+-   Wykonać wiele operacji równocześnie, otrzymywanie powiadomień po każdym zakończeniu.  
   
--   Poczekaj, aż zasobów na udostępnienie bez zatrzymywania ("wiszące") aplikacji.  
+-   Oczekiwania na zasoby staną się dostępne bez konieczności zatrzymywania ("wiszące") aplikacji.  
   
--   Komunikować się z oczekujących operacji asynchronicznych przy użyciu znanego modelu zdarzeń i delegatów. Aby uzyskać więcej informacji na temat używania programów obsługi zdarzeń i delegatów, zobacz [zdarzenia](../../../docs/standard/events/index.md).  
+-   Komunikować się z oczekujących operacji asynchronicznych za pomocą znanego modelu zdarzeń i delegatów. Aby uzyskać więcej informacji na temat korzystania z programów obsługi zdarzeń i delegatów, zobacz [zdarzenia](../../../docs/standard/events/index.md).  
   
- Klasa obsługującego wzorzec asynchroniczny oparty na zdarzeniach będzie mieć co najmniej jedną metodę o nazwie *MethodName ***Async**. Te metody mogą duplikatów synchroniczne wersje, które do tej samej operacji w bieżącym wątku. Klasa może być również *MethodName *** Ukończono**  zdarzeń i może mieć *MethodName *** AsyncCancel** (lub po prostu **CancelAsync**) metody.  
+ Klasa obsługującego wzorzec asynchroniczny oparty na zdarzeniach będzie mieć co najmniej jedną metodę o nazwie *MethodName ***Async**. Te metody mogą dublować synchroniczne wersjach, które do tej samej operacji w bieżącym wątku. Klasa może mieć również *MethodName *** Ukończono**  zdarzeń i może mieć *MethodName *** AsyncCancel** (lub po prostu **CancelAsync**) metody.  
   
- <xref:System.Windows.Forms.PictureBox> to typowy składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach. Pobranie obrazu synchronicznie przez wywołanie jego <xref:System.Windows.Forms.PictureBox.Load%2A> metody, ale jeśli obraz jest duży, lub jeśli połączenie sieciowe jest powolne, dla aplikacji zostanie zatrzymana ("zawiesza się"), aż do zakończenia operacji pobierania i wywołania w celu <xref:System.Windows.Forms.PictureBox.Load%2A> zwraca.  
+ <xref:System.Windows.Forms.PictureBox> to typowa składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach. Pobierz obraz synchronicznie, wywołując jego <xref:System.Windows.Forms.PictureBox.Load%2A> metody, ale jeśli obraz jest duży lub, jeśli połączenie sieciowe jest powolne, dla aplikacji zostanie zatrzymane ("zawiesza się"), aż do zakończenia operacji pobierania i wywołania <xref:System.Windows.Forms.PictureBox.Load%2A> zwraca.  
   
- Jeśli chcesz, aby aplikacja nadal działać podczas obrazu jest ładowany, można wywołać <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> — metoda i dojście <xref:System.Windows.Forms.PictureBox.LoadCompleted> zdarzeń, tak samo jak będzie obsługiwać inne zdarzenia. Podczas wywoływania <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> metody, aplikacja będzie nadal działać podczas pobierania będzie kontynuowana w oddzielnym wątku ("w tle"). Obsługi zdarzenia będzie wywoływana po wykonaniu operacji ładowania obrazu i obsługi zdarzenia można sprawdzić <xref:System.ComponentModel.AsyncCompletedEventArgs> parametr, aby określić, czy pobierania zakończyła się pomyślnie.  
+ Jeśli chcesz, aby aplikacja umożliwia kontynuowanie działania podczas obraz jest ładowany, można wywołać <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> metody i obsługują <xref:System.Windows.Forms.PictureBox.LoadCompleted> zdarzenia, tak jak będzie obsługiwać dowolne inne zdarzenie. Gdy wywołujesz <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> metody, aplikacja będzie kontynuował działanie podczas pobierania rozpoczynające się w oddzielnym wątku ("w tle"). Procedury obsługi zdarzenia będzie wywoływana po zakończeniu operacji ładowania obrazu i obsługi zdarzenia można sprawdzić <xref:System.ComponentModel.AsyncCompletedEventArgs> parametru, aby określić, jeśli pliki do pobrania została ukończona pomyślnie.  
   
- Asynchroniczny wzorzec oparty na zdarzeniach wymaga, aby można anulować operację asynchroniczną i <xref:System.Windows.Forms.PictureBox> sterowanie obsługuje to wymaganie z jego <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> metody. Wywoływanie <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> przesyła żądanie zatrzymania pobierania oczekujące, i gdy zadanie zostało anulowane, <xref:System.Windows.Forms.PictureBox.LoadCompleted> zdarzenia.  
+ Asynchroniczny wzorzec oparty na zdarzeniach wymaga, że można anulować operację asynchroniczną i <xref:System.Windows.Forms.PictureBox> kontrolka obsługuje ten wymóg z jego <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> metody. Wywoływanie <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> przesyła żądanie zatrzymania oczekujące pobierania, i kiedy zadanie zostanie anulowane, <xref:System.Windows.Forms.PictureBox.LoadCompleted> zdarzenie jest wywoływane.  
   
 > [!CAUTION]
->  Istnieje możliwość, że pobieranie zakończy się podobnie jak <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> żądań, dlatego <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> mogą nie uwzględniać żądanie anulowania. Ta metoda jest wywoływana *sytuację wyścigu* i jest typowym problemem w programowaniu wielowątkowych. Aby uzyskać więcej informacji o problemach w programowaniu wielowątkowe, zobacz [zarządzanych wątków najlepsze rozwiązania w zakresie](../../../docs/standard/threading/managed-threading-best-practices.md).  
+>  Istnieje możliwość, że pliki do pobrania zakończy się podobnie jak <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> żądania, więc <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> mogą nie odzwierciedlać żądanie anulowania. Jest to nazywane *wyścigu* i jest to typowy problem w programowanie wielowątkowe. Aby uzyskać więcej informacji na temat problemów z programowanie wielowątkowe, zobacz [zarządzana wątkowość najlepsze](../../../docs/standard/threading/managed-threading-best-practices.md).  
   
 ## <a name="characteristics-of-the-event-based-asynchronous-pattern"></a>Właściwości wzorca asynchronicznego opartego na zdarzeniach  
- Asynchroniczny wzorzec oparty na zdarzeniach może potrwać kilka formularzy, w zależności od złożoności operacji obsługiwanych przez konkretnej klasy. Najprostsza klas może mieć pojedynczy *MethodName *** Async** metoda i odpowiadające mu *MethodName *** Ukończono** zdarzeń. Bardziej złożone klasy może mieć kilka *MethodName *** Async** z odpowiedniej metody *MethodName *** Ukończono** zdarzeń, a także synchroniczne wersji tych metod. Klasy może opcjonalnie obsługiwać anulowania, raportowania postępu i przyrostowych wyniki dla każdej metody asynchronicznej.  
+ Asynchroniczny wzorzec oparty na zdarzeniach może przyjąć kilka postaci, w zależności od złożoności operacji obsługiwanych przez określonej klasy. Najprostsza klasy mogą mieć pojedynczy *MethodName *** Async** metody i odpowiadający mu *MethodName *** Ukończono** zdarzeń. Bardziej złożone klasy może mieć kilka *MethodName *** Async** z odpowiednią metod *MethodName *** Ukończono** zdarzeń, a także synchroniczne wersji tych metod. Klasy może opcjonalnie obsługiwać anulowania, Raportowanie postępu i przyrostowe wyników dla każdej metody asynchronicznej.  
   
- Metody asynchronicznej mogą obsługiwać wiele wywołań oczekujących (wiele współbieżnych wywołań), dzięki czemu kod w celu wywołania go dowolną liczbę razy przed zakończeniem działania innych oczekujących operacji. Poprawnie obsługi tej sytuacji może wymagać aplikacji do śledzenia zakończeniu każdej operacji.  
+ Metoda asynchroniczna mogą także obsługiwać wiele wywołań oczekujące (wielu równoczesnych wywołań), dzięki czemu kod jej wywołania dowolną liczbę razy przed ukończeniem innych oczekujących operacji. Poprawnie obsługi tej sytuacji może wymagać aplikacja do śledzenia wykonania operacji.  
   
-### <a name="examples-of-the-event-based-asynchronous-pattern"></a>Przykłady wzorca asynchronicznego opartego na zdarzeniach  
- <xref:System.Media.SoundPlayer> i <xref:System.Windows.Forms.PictureBox> prostych implementacji wzorca asynchronicznego opartego na zdarzeniach reprezentują składników. <xref:System.Net.WebClient> i <xref:System.ComponentModel.BackgroundWorker> bardziej złożonych implementacji wzorca asynchronicznego opartego na zdarzeniach reprezentują składników.  
+### <a name="examples-of-the-event-based-asynchronous-pattern"></a>Przykładem wzorca asynchronicznego opartego na zdarzeniach  
+ <xref:System.Media.SoundPlayer> i <xref:System.Windows.Forms.PictureBox> składniki reprezentują prostych implementacji wzorca asynchronicznego opartego na zdarzeniach. <xref:System.Net.WebClient> i <xref:System.ComponentModel.BackgroundWorker> składniki reprezentują bardziej złożonych implementacji wzorca asynchronicznego opartego na zdarzeniach.  
   
- Poniżej znajduje się przykład deklaracji klasy, który jest zgodny z wzorcem:  
+ Poniżej przedstawiono przykład deklaracji klasy, który jest zgodny ze wzorcem:  
   
 ```vb  
 Public Class AsyncExample  
@@ -104,32 +104,32 @@ public class AsyncExample
 }  
 ```  
   
- Fikcyjne `AsyncExample` klasa ma dwie metody, które obsługuje wywołania synchroniczne i asynchroniczne. Synchroniczne przeciążeń przypominają każde wywołanie metody i wykonanie operacji w wątku wywołującym; Jeśli operacja jest czasochłonne, może istnieć zauważalnego opóźnienia przed wywołanie zwraca. Asynchroniczne przeciążeń uruchomi operacji na inny wątek i zwracany jest od razu, dzięki czemu wątek wywołujący kontynuować, podczas gdy wykonuje operację "w"tle.  
+ Fikcyjnej `AsyncExample` klasa ma dwie metody, które obsługują wywołania synchroniczne i asynchroniczne. Synchroniczne przeciążenia zachowują się jak każde wywołanie metody i wykonywanie operacji na wątku wywołującym; Jeśli operacja jest czasochłonne, może istnieć zauważalnego opóźnienia, zanim to wywołanie zwraca. Asynchroniczne przeciążenia będzie rozpocząć tę operację w innym wątku i zwracany jest natychmiast, dzięki czemu wątek wywołujący kontynuować, podczas gdy operacja wykonuje "w tle."  
   
-### <a name="asynchronous-method-overloads"></a>Przeciążenia metod asynchronicznych  
- Istnieją potencjalnie dwa przeciążenia dla asynchronicznych operacji: wywołanie jednym i wielu wywołania. Te dwie formy można wyróżnić przy ich podpisów — metoda: wywołanie wielu formularz zawiera dodatkowy parametr o nazwie `userState`. Ten formularz umożliwia wywołania `Method1Async(string param, object userState)` wiele razy bez oczekiwania na wszelkie oczekujące operacje asynchroniczne, aby zakończyć. Jeśli z drugiej strony, zostanie podjęta próba wywołania `Method1Async(string param)` przed ukończeniu poprzedniego wywołania metody zgłasza <xref:System.InvalidOperationException>.  
+### <a name="asynchronous-method-overloads"></a>Przeciążenia metody asynchronicznej  
+ Istnieją potencjalnie dwa przeciążenia dla operacji asynchronicznych: wywołanie jednym i wielu wywołań. Za ich podpisy metod można odróżnić tych dwóch formach: formularz wielu wywołań ma dodatkowy parametr o nazwie `userState`. Ta forma umożliwia wywołania `Method1Async(string param, object userState)` wiele razy bez konieczności oczekiwania na żadnych oczekujących operacji asynchronicznych, aby zakończyć. Jeśli, z drugiej strony, podczas próby wywołania `Method1Async(string param)` przed ukończeniem poprzedniego wywołania, metoda zgłasza <xref:System.InvalidOperationException>.  
   
- `userState` Parametr dla wywołania wielu przeciążeń służy do rozróżnienia operacji asynchronicznych. Podaj unikatową wartość (na przykład kod identyfikatora GUID lub skrót) dla każdego wywołania `Method1Async(string param, object userState)`, a po zakończeniu każdej operacji obsługi zdarzenia można określić, które wystąpienie operacji wywołane zdarzenie ukończenia.  
+ `userState` Parametr dla wielu wywołania przeciążenia umożliwia rozróżnienia operacji asynchronicznych. Podaj unikatową wartość (na przykład, kod identyfikatora GUID lub skrót) dla każdego wywołania `Method1Async(string param, object userState)`, a po zakończeniu każdej operacji obsługi zdarzenia można określić, które wystąpienie operacji zgłoszone zdarzenie zakończenia.  
   
 ### <a name="tracking-pending-operations"></a>Śledzenie oczekujące operacje  
- Jeśli używasz wielu wywołania przeciążenia kod musi śledzić `userState` obiektów (identyfikatorów zadań) dla zadań w toku. Dla każdego wywołania `Method1Async(string param, object userState)`, zwykle wygeneruje nowy, unikatowy `userState` obiektu i dodać go do kolekcji. Podczas zadania odpowiadający to `userState` obiektu wywołuje zdarzenie ukończenia, zbada implementacji metody ukończenia <xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A?displayProperty=nameWithType> i usunąć go z kolekcji. Używane w ten sposób `userState` Parametr przyjmuje rolę identyfikator zadania.  
+ Jeśli używasz wielu wywołania przeciążenia, kod musi śledzić `userState` obiektów (identyfikatorów zadań) oczekujące zadania. Dla każdego wywołania `Method1Async(string param, object userState)`, zwykle wygeneruje nową, unikatowych `userState` obiektu i dodaj go do kolekcji. Gdy zadania odpowiadającego tej `userState` obiektu wywołuje zdarzenie ukończenia, sprawdzać Twoja implementacja metody ukończenia <xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A?displayProperty=nameWithType> i usunąć go z kolekcji. Używana w ten sposób `userState` Parametr przyjmuje rolę identyfikator zadania.  
   
 > [!NOTE]
->  Należy zachować ostrożność zapewnić unikatową wartość `userState` w wywołaniami wywołania wielu przeciążeń. Nieunikatowy identyfikatorów zadań spowoduje, że throw asynchroniczne klasy <xref:System.ArgumentException>.  
+>  Musisz być ostrożnym zapewnić unikatową wartość dla `userState` w wywołania względem wielu wywołania przeciążenia. Nieunikatowy identyfikatorów zadań spowoduje, że throw asynchroniczne klasa <xref:System.ArgumentException>.  
   
 ### <a name="canceling-pending-operations"></a>Oczekujące operacje  
- Należy mieć możliwość anulowania operacji asynchronicznych w dowolnym momencie przed jego ukończeniem. Klasy, które implementują wzorzec asynchroniczny oparty na zdarzeniach będą miały `CancelAsync` — metoda (jeśli istnieje tylko jedna metoda asynchroniczna) lub *MethodName *** AsyncCancel** — metoda (jeśli istnieje wiele metod asynchronicznych).  
+ Należy mieć możliwość anulowania operacji asynchronicznych w dowolnym momencie przed ich zakończeniu. Klasy, które implementują wzorzec asynchroniczny oparty na zdarzeniach będą miały `CancelAsync` metody (jeśli istnieje tylko jedna metoda asynchroniczna) lub *MethodName *** AsyncCancel** metody (jeśli istnieje wiele metod asynchronicznych).  
   
- Metody, które umożliwiają wielu wywołań przyjmują `userState` parametr, który może służyć do śledzenia ważności każdego zadania. `CancelAsync` Trwa `userState` parametru, dzięki czemu można anulować określonego oczekujące zadania.  
+ Metody, które umożliwiają wielu wywołań przyjmują `userState` parametr, który może służyć do śledzenia okresu istnienia każdego zadania. `CancelAsync` Trwa `userState` parametr, który umożliwia anulowanie określonego oczekujące zadania.  
   
- Metody, które obsługują tylko jeden oczekującą operację naraz, tak samo, jak `Method1Async(string param)`, nie są można anulować.  
+ Metody, które obsługują tylko jeden oczekującej operacji w czasie, takie jak `Method1Async(string param)`, nie są można anulować.  
   
 ### <a name="receiving-progress-updates-and-incremental-results"></a>Otrzymywanie aktualizacji postęp i wyniki przyrostowe  
- Klasa, która działa zgodnie z wzorca asynchronicznego opartego na zdarzeniach może opcjonalnie pozwala podać zdarzenia śledzenia postęp i wyniki przyrostowe. Będzie to zazwyczaj nazwany `ProgressChanged` lub * MethodName ***ProgressChanged**, a trwa jego odpowiedni program obsługi zdarzeń <xref:System.ComponentModel.ProgressChangedEventArgs> parametru.  
+ Klasa, która jest zgodna wzorca asynchronicznego opartego na zdarzeniach może opcjonalnie podać zdarzenia do śledzenia postępu i wyniki przyrostowe. Będzie to zazwyczaj miała `ProgressChanged` lub * MethodName ***ProgressChanged**, i zajmie się jego odpowiedni program obsługi zdarzeń <xref:System.ComponentModel.ProgressChangedEventArgs> parametru.  
   
- Program obsługi zdarzeń dla `ProgressChanged` zdarzeń można sprawdzić <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A?displayProperty=nameWithType> właściwości w celu określenia, jaki procent zadanie asynchroniczne została ukończona. Ta właściwość będzie należeć do zakresu od 0 do 100 i może posłużyć do zaktualizowania <xref:System.Windows.Forms.ProgressBar.Value%2A> właściwość <xref:System.Windows.Forms.ProgressBar>. W przypadku oczekujących operacji asynchronicznych wielu służy <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A?displayProperty=nameWithType> właściwości odróżnienie która operacja raport z postępów.  
+ Program obsługi zdarzeń dla `ProgressChanged` zbadać zdarzenia <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A?displayProperty=nameWithType> właściwości w celu określenia, jaki procent asynchroniczne zadanie zostało ukończone. Ta właściwość będzie należeć do zakresu od 0 do 100 i może służyć do zaktualizowania <xref:System.Windows.Forms.ProgressBar.Value%2A> właściwość <xref:System.Windows.Forms.ProgressBar>. W przypadku oczekujących wiele operacji asynchronicznych umożliwia <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A?displayProperty=nameWithType> właściwości w celu odróżnienia kolejnej operacji jest raportowania postępu.  
   
- Niektóre klasy może zgłaszać przyrostowe wyników jako operacji asynchronicznej. Te wyniki będą przechowywane w klasie, która jest pochodną <xref:System.ComponentModel.ProgressChangedEventArgs> i będą one wyświetlane jako właściwości w klasie pochodnej. Dostęp można uzyskać te wyniki do obsługi zdarzeń dla `ProgressChanged` zdarzeń, tak samo jak może uzyskać dostępu do <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> właściwości. W przypadku oczekujących operacji asynchronicznych wielu służy <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A> właściwości do odróżnienia operacji, które jest raportowaniu wyników przyrostowe.  
+ Niektóre klasy mogą zgłaszać przyrostowe wyniki kontynuowaniem operacji asynchronicznych. Te wyniki będą przechowywane w klasie, która pochodzi od klasy <xref:System.ComponentModel.ProgressChangedEventArgs> i pojawią się one jako właściwości w klasie pochodnej. Dostęp można uzyskać te wyniki w program obsługi zdarzeń dla `ProgressChanged` zdarzenia, tak jak dostęp do <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> właściwości. W przypadku oczekujących wiele operacji asynchronicznych umożliwia <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A> właściwości w celu odróżnienia kolejnej operacji zgłasza wyniki przyrostowe.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ComponentModel.ProgressChangedEventArgs>  
@@ -138,6 +138,6 @@ public class AsyncExample
  [Instrukcje: Używanie składników obsługujących wzorzec asynchroniczny oparty na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
  [Instrukcje: uruchamianie operacji w tle](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
  [Instrukcje: implementowanie formularza korzystającego z operacji w tle](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
- [Programowanie wielowątkowości za pomocą wzorca asynchronicznego opartego na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)  
+ [Asynchroniczny wzorzec oparty na zdarzeniach (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
  [Implementacja wzorca asynchronicznego opartego na zdarzeniach — najlepsze rozwiązania](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
  [Decydowanie o czasie implementacji wzorca asynchronicznego opartego na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)

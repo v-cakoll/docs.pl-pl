@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: ea1e2e049a692fb9d86731c8a450b568f275f9a9
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
-ms.translationtype: HT
+ms.openlocfilehash: 52ca30fe29025e637005b95ebc14fce8f320e8f4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924801"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423942"
 ---
 # <a name="class-c-reference"></a>class (odwołanie w C#)
 
@@ -101,7 +101,7 @@ Na koniec Zwróć uwagę, że dla obiektów utworzonych za pomocą konstruktora 
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
-[Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-[Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
-[Typy odwołań](../../../csharp/language-reference/keywords/reference-types.md)
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
+- [Typy odwołań](../../../csharp/language-reference/keywords/reference-types.md)

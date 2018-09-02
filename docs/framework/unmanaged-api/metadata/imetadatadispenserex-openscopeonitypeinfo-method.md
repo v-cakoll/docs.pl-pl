@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 73866ef2dc7069708887c128f977f730519603bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d5fd96f390b0bba60d1b95d20273bbf670208d41
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446026"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456535"
 ---
 # <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a>IMetaDataDispenserEx::OpenScopeOnITypeInfo — Metoda
-Ta metoda nie jest zaimplementowana. Wywołuje się, zwraca E_NOTIMPL.  
+Ta metoda nie jest zaimplementowana. Jeżeli jest wywoływana, zwraca E_NOTIMPL.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,16 +40,16 @@ HRESULT OpenScopeOnITypeInfo (
   
 #### <a name="parameters"></a>Parametry  
  `pITI`  
- [in] Wskaźnik do [ITypeInfo](http://msdn.microsoft.com/library/f3356463-3373-4279-bae1-953378aa2680) interfejs, który zawiera informacje o typie, na którym ma zostać otwarty zakresu.  
+ [in] Wskaźnik do [ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) interfejs, który zawiera informacje o typie, na którym ma zostać otwarty zakresu.  
   
  `dwOpenFlags`  
- [in] Flagi trybu otwartego.  
+ [in] Otwórz tryb flagi.  
   
  `riid`  
- [in] Żądany interfejs.  
+ [in] Żądanego interfejsu.  
   
  `ppIUnk`  
- [out] Wskaźnik na wskaźnik do interfejsu zwrócony.  
+ [out] Wskaźnik do wskaźnika do interfejsu zwrócone.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platforma:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

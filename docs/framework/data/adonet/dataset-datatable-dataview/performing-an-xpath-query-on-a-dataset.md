@@ -1,21 +1,21 @@
 ---
-title: Wykonywanie kwerendy XPath w zestawie danych
+title: Wykonywanie zapytania XPath w zestawie danych
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: c785cc69289440918f45974c711ae0b112130c5d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a1718429360d79c4628e9948eb1b052c3ac01964
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762413"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423706"
 ---
-# <a name="performing-an-xpath-query-on-a-dataset"></a>Wykonywanie kwerendy XPath w zestawie danych
-Relacja między zsynchronizowany <xref:System.Data.DataSet> i <xref:System.Xml.XmlDataDocument> pozwala korzystać z XML usług, takich jak zapytania XML Path Language (XPath), które uzyskują dostęp do **dokumentu XmlDataDocument** i mogą wykonywać niektórych funkcji ułatwia niż dostęp do **DataSet** bezpośrednio. Na przykład zamiast używania **wybierz** metody <xref:System.Data.DataTable> do nawigowanie po relacjach do innych tabel w **zestawu danych**, można wykonywać kwerendę XPath na **dokumentu XmlDataDocument**  który jest synchronizowany z **DataSet**, aby uzyskać listę elementów XML w formie <xref:System.Xml.XmlNodeList>. Węzły w **XmlNodeList**, rzutowanie jako <xref:System.Xml.XmlElement> węzłów, można następnie przekazać do **GetRowFromElement** metody **dokumentu XmlDataDocument**, aby zwrócić dopasowania <xref:System.Data.DataRow> odwołania do wierszy tabeli w zsynchronizowanej **zestawu danych**.  
+# <a name="performing-an-xpath-query-on-a-dataset"></a>Wykonywanie zapytania XPath w zestawie danych
+Relacja między zsynchronizowany <xref:System.Data.DataSet> i <xref:System.Xml.XmlDataDocument> pozwala korzystać z XML usług, takich jak zapytania XML Path Language (XPath), do których dostęp **XmlDataDocument** i mogą wykonywać niektóre funkcje bardzo ułatwia niż dostęp do **DataSet** bezpośrednio. Na przykład, zamiast używać **wybierz** metody <xref:System.Data.DataTable> do nawigowanie po relacjach z innymi tabelami w **zestawu danych**, można wykonać zapytania XPath na **XmlDataDocument**  , jest zsynchronizowany z **DataSet**, aby uzyskać listę elementów XML w formie <xref:System.Xml.XmlNodeList>. Węzły w **XmlNodeList**, rzutowania jako <xref:System.Xml.XmlElement> węzłów, może być następnie przekazywany do **GetRowFromElement** metody **XmlDataDocument**, aby zwrócić dopasowania <xref:System.Data.DataRow> odwołania do wierszy w tabeli zsynchronizowane **zestawu danych**.  
   
- Na przykład następujący przykładowy kod wykonuje zapytanie XPath "podwójnym". **DataSet** jest wypełniony trzy tabele: **klientów**, **zamówień**, i **SzczegółyZamówienia**. W przykładzie pierwszego tworzenia relacji nadrzędny podrzędny między **klientów** i **zamówień** tabel, a między **zamówień** i **SzczegółyZamówienia** tabel. Zapytanie XPath jest następnie wykonywane do zwrócenia **XmlNodeList** z **klientów** węzłów w przypadku, gdy podwójnym **SzczegółyZamówienia** węzeł ma **ProductID**węzła z wartością 43. W zasadzie próbki używa zapytanie XPath do określenia, którzy użytkownicy mają uporządkowane produkt, który ma **ProductID** 43.  
+ Na przykład poniższy przykładowy kod wykonuje zapytanie XPath "podwójnym". **DataSet** jest wypełniany trzy tabele: **klientów**, **zamówienia**, i **OrderDetails**. W tym przykładzie najpierw tworzenie relacji nadrzędny podrzędny między **klientów** i **zamówienia** tabel oraz między **zamówienia** i **OrderDetails** tabel. Zapytania XPath następnie odbywa się do zwrócenia **XmlNodeList** z **klientów** węzły w przypadku, gdy podwójnym **OrderDetails** węzeł ma **ProductID**węzła z wartością 43. W zasadzie próbka używa zapytanie XPath do określenia, którzy mają uporządkowane produktu, który ma **ProductID** 43.  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection.  
@@ -103,4 +103,4 @@ foreach (XmlNode xmlNode in nodeList)
   
 ## <a name="see-also"></a>Zobacz też  
  [Synchronizacja elementów DataSet i XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8936fa3d22cfde4c2536fccf9d46c1990133db1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5fe1ba15f8a9f8ee79582158209049c1e502a61d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445315"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418658"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim — Funkcja
-Ładuje określona wersja biblioteki DLL, która jest uwzględniona w pakiet redystrybucyjny programu .NET Framework.  
+Ładuje określoną wersję biblioteki dll, który znajduje się w pakiet redystrybucyjny programu .NET Framework.  
   
- Ta funkcja jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Użyj [ICLRRuntimeInfo::LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) metody zamiast tego.  
+ Ta funkcja jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Użyj [iclrruntimeinfo::LoadLibrary —](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) metody zamiast tego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,10 +42,10 @@ HRESULT LoadLibraryShim (
   
 #### <a name="parameters"></a>Parametry  
  `szDllName`  
- [in] Ciąg zakończony zerem, który reprezentuje nazwę biblioteki DLL do załadowania z biblioteki .NET Framework.  
+ [in] Ciąg zakończony zerem, który reprezentuje nazwę biblioteki DLL, należy załadować z biblioteki programu .NET Framework.  
   
  `szVersion`  
- [in] Ciąg zakończony zerem, który reprezentuje wersja biblioteki DLL do załadowania. Jeśli `szVersion` jest null, wersja wybrany na potrzeby ładowania jest najnowsza wersja określonej biblioteki DLL, która jest mniejsza niż w wersji 4. Oznacza to, że wszystkie wersje, równa lub większa niż wersja 4 są ignorowane, jeśli `szVersion` ma wartość null, a jeśli nie wcześniejszą niż wersja w wersji 4 jest zainstalowana, biblioteki DLL nie udało się załadować. Dzięki tej instalacji [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] nie wpływa na istniejące aplikacje lub składników. Zobacz wpis [SxS wewnątrzprocesową i migracji Szybki Start](http://go.microsoft.com/fwlink/?LinkId=200329) w blogu zespołu CLR.  
+ [in] Ciąg zakończony zerem, który reprezentuje wersję biblioteki DLL do załadowania. Jeśli `szVersion` jest null, wersja wybrane do ładowania jest najnowsza wersja określonej biblioteki dll, która jest mniejsza niż w wersji 4. Oznacza to, że wszystkie wersje, równa lub większa niż w wersji 4 są ignorowane w przypadku `szVersion` ma wartość null, a jeśli nie wersji mniejsze niż w wersji 4 jest zainstalowana, biblioteki DLL nie można załadować. Dzięki tej instalacji produktu [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] nie ma wpływu na istniejące aplikacje lub składniki. Zobacz wpis [SxS In-Proc i migracji — Szybki Start](https://go.microsoft.com/fwlink/?LinkId=200329) w blogu zespołu programu CLR.  
   
  `pvReserved`  
  Zarezerwowane do użytku w przyszłości.  
@@ -54,18 +54,18 @@ HRESULT LoadLibraryShim (
  [out] Wskaźnik do uchwytu modułu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca standardowy składnik modelu COM. kody błędów, zgodnie z definicją w pliku WinError.h oprócz następujących wartości.  
+ Ta metoda zwraca standardowe kody błędów Component Object Model (COM), zgodnie z definicją w pliku WinError.h oprócz następujących wartości.  
   
 |Kod powrotu|Opis|  
 |-----------------|-----------------|  
 |S_OK|Metoda została ukończona pomyślnie.|  
-|CLR_E_SHIM_RUNTIMELOAD|Ładowanie `szDllName` wymaga ładowania środowisko uruchomieniowe języka wspólnego (CLR) i wymaganej wersji aparatu CLR nie może zostać załadowany.|  
+|CLR_E_SHIM_RUNTIMELOAD|Trwa ładowanie `szDllName` wymaga ładowania, środowisko uruchomieniowe języka wspólnego (CLR) i wymaganej wersji środowiska CLR nie może zostać załadowany.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ta funkcja jest używana do załadowania biblioteki dll, które znajdują się w pakiet redystrybucyjny programu .NET Framework. Nie ładuje wygenerowaną przez użytkowników biblioteki dll.  
+ Ta funkcja jest używana do ładowania bibliotek DLL, które znajdują się w pakiet redystrybucyjny programu .NET Framework. Nie ładuje dll wygenerowaną przez użytkowników.  
   
 > [!NOTE]
->  Począwszy od programu .NET Framework w wersji 2.0, ładowanie Fusion.dll powoduje, że można załadować środowiska CLR. Jest to spowodowane funkcje w Fusion.dll są teraz otoki którego implementacje znajdują się w czasie wykonywania.  
+>  Począwszy od programu .NET Framework w wersji 2.0, ładowanie Fusion.dll powoduje, że CLR do załadowania. Jest to spowodowane funkcje w Fusion.dll są teraz otoki, którego implementacje są dostarczane przez środowisko uruchomieniowe.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

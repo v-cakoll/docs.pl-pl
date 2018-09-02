@@ -5,12 +5,12 @@ helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: 9c278a47c2072b3f2dac8cfd4cf0dab1c488411e
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 4dc2507e37793fb154b932062854b3f590e362e8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43256742"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420432"
 ---
 # <a name="statements-c-programming-guide"></a>Instrukcje (Przewodnik programowania w języku C#)
 Akcje, które przyjmuje programu są wyrażane w instrukcjach. Typowe akcje obejmują zadeklarowania zmiennych, przypisywania wartości, wywoływanie metod, zapętlenie przez kolekcje i gałęzi do jednej lub drugiej bloku kodu, w zależności od danego warunku. Kolejność, w którym wykonywane są instrukcje w programie nosi nazwę przepływu sterowania lub przepływem wykonania. Przepływ sterowania, mogą się różnić w każdym uruchomieniu programu, w zależności od tego, jak program reaguje na dane wejściowe, że będzie ona otrzymywać w czasie wykonywania.  
@@ -32,7 +32,7 @@ Akcje, które przyjmuje programu są wyrażane w instrukcjach. Typowe akcje obej
 |[Instrukcje obsługi wyjątków](../../../csharp/language-reference/keywords/exception-handling-statements.md)|Instrukcje obsługi wyjątków umożliwia bezpieczne odzyskiwanie w wyjątkowych warunków, które występują w czasie wykonywania. Więcej informacji znajduje się w następujących tematach:<br /><br /> [throw](../../../csharp/language-reference/keywords/throw.md), [try-catch —](../../../csharp/language-reference/keywords/try-catch.md), [try-finally](../../../csharp/language-reference/keywords/try-finally.md), [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)|  
 |[Checked i unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)|Zaznaczone i niezaznaczone instrukcje umożliwiają określenie, czy wartości liczbowych operacji może spowodować przepełnienie, gdy wynik jest przechowywany w zmiennej, która jest zbyt mała do przechowywania wartości wynikowej. Aby uzyskać więcej informacji, zobacz [zaznaczone](../../../csharp/language-reference/keywords/checked.md) i [unchecked](../../../csharp/language-reference/keywords/unchecked.md).|  
 |`await` — Instrukcja|Po oznaczeniu metody z [async](../../../csharp/language-reference/keywords/async.md) modyfikator, można użyć [await](../../../csharp/language-reference/keywords/await.md) operatora w metodzie. Gdy kontrola osiąga `await` wyrażenia w metodzie asynchronicznej, sterowanie powraca do obiektu wywołującego, a postęp w metodzie jest wstrzymana, dopóki nie zakończy się oczekiwane zadanie. Kiedy zadanie zostanie ukończone, wykonanie można wznowić w metodzie.<br /><br /> Dla prostego przykładu, zobacz sekcję "Metod asynchronicznych" [metody](../../../csharp/programming-guide/classes-and-structs/methods.md). Aby uzyskać więcej informacji, zobacz [Asynchronous Programming with async i await](../../../csharp/programming-guide/concepts/async/index.md).|  
-|`yield return` — Instrukcja|Iterator wykonuje niestandardowych iteracji w kolekcji, takie jak listy lub tablicy. Używa iteratora [yield return](../../../csharp/language-reference/keywords/yield.md) instrukcja zwraca każdy element w danym momencie. Gdy `yield return` osiągnięciu instrukcji zapamiętanych bieżąca lokalizacja w kodzie. Wykonanie jest uruchamiane ponownie z tej lokalizacji, gdy iteratora jest wywoływana przy następnym.<br /><br /> Aby uzyskać więcej informacji, zobacz [Iteratory](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).|  
+|`yield return` — Instrukcja|Iterator wykonuje niestandardowych iteracji w kolekcji, takie jak listy lub tablicy. Używa iteratora [yield return](../../../csharp/language-reference/keywords/yield.md) instrukcja zwraca każdy element w danym momencie. Gdy `yield return` osiągnięciu instrukcji zapamiętanych bieżąca lokalizacja w kodzie. Wykonanie jest uruchamiane ponownie z tej lokalizacji, gdy iteratora jest wywoływana przy następnym.<br /><br /> Aby uzyskać więcej informacji, zobacz [Iteratory](https://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).|  
 |`fixed` — Instrukcja|Fixed — instrukcja zapobiega przemieszczanie zmienną ruchome moduł odśmiecania pamięci. Aby uzyskać więcej informacji, zobacz [stałej](../../../csharp/language-reference/keywords/fixed-statement.md).|  
 |`lock` — Instrukcja|Instrukcji "lock" można ograniczyć dostęp do bloków kodu, aby tylko jeden wątek jednocześnie. Aby uzyskać więcej informacji, zobacz [blokady](../../../csharp/language-reference/keywords/lock-statement.md).|  
 |Labeled — instrukcje|Możesz nadać instrukcję etykietę, a następnie użyć [goto](../../../csharp/language-reference/keywords/goto.md) — słowo kluczowe, aby przejść do instrukcja labeled. (Zobacz przykład w poniższym wierszu).|  

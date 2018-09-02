@@ -4,33 +4,33 @@ ms.date: 03/30/2017
 ms.assetid: 4af18009-e778-490b-9ba6-e76485285830
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 0dadf11888e55a96b15e09d5f4b326e8c5e18a02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb0d4fdebf07dacfa7f33d8645332348270128e4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474821"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422507"
 ---
 # <a name="service-security-validation-and-authentication-failures-per-second"></a>Usługa: Niepowodzenia uwierzytelniania i walidacji zabezpieczeń na sekundę
-Nazwa licznika: walidacji i uwierzytelniania błędów na sekundę.  
+Nazwa licznika: walidacji zabezpieczeń i uwierzytelniania błędy na sekundę.  
   
 ## <a name="description"></a>Opis  
- Ten licznik jest zwiększany, gdy komunikat jest odrzucone z powodu problemu zabezpieczeń nie pasuje do żadnego licznika "Zabezpieczeń wywołań nieautoryzowane". Takie problemy obejmują:  
+ Ten licznik jest zwiększany, gdy komunikat zostanie odrzucony, ze względu na problem z zabezpieczeniami nie pasuje do żadnego licznika "Zabezpieczenia połączeń nie masz praw". Takie problemy obejmują:  
   
 -   Nie można odczytać tokenu klienta z komunikatu.  
   
--   Token klienta nie powiodło się uwierzytelniania (na przykład nieprawidłowe hasło).  
+-   Token klienta nie powiodło się uwierzytelnianie (na przykład nieprawidłowe hasło).  
   
--   Weryfikacja podpisu nie powiodła się (na przykład wiadomości została naruszona).  
+-   Weryfikacja podpisu nie powiodła się (na przykład wiadomości zostały zmodyfikowane).  
   
--   Komunikat jest duplikatem z poprzedniej wersji, która może się zdarzyć podczas atakiem polegającym na odtwarzaniu.  
+-   Komunikat jest duplikatem z poprzedniej wersji, która może się zdarzyć podczas ataku powtarzania.  
   
 -   Wystąpił błąd odszyfrowywania.  
   
--   Niektóre elementy (na przykład brak sygnatury czasowej lub zaszyfrowanych danych, blokowanie) brakuje wymaganych z komunikatu.  
+-   Niektóre wymagane elementy (na przykład brak sygnatur czasowych lub zaszyfrowanych danych, blokowanie) brakuje wiadomości.  
   
 -   Wystąpił błąd podczas uzgadniania TLSNEGO/SPNEGO.  
   
- Ten licznik jest typu licznika wydajności [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), którego wartość jest obliczana przy użyciu następującej formuły  
+ Ten licznik jest typ licznika wydajności [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), którego wartość jest obliczana przy użyciu następującej formuły  
   
- (N 1 - N 0) / ((D 1 - D 0) / F)
+ (N: 1 - N 0) / ((D 1 - D 0) / F)

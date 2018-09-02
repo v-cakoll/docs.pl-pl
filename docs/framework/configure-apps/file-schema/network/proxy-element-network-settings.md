@@ -12,11 +12,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 5fba4bfa14642092dbb7c0153bcd92160a62b12b
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42929263"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43451574"
 ---
 # <a name="ltproxygt-element-network-settings"></a>&lt;Serwer proxy&gt; — Element (ustawienia sieci)
 Określa serwer proxy.  

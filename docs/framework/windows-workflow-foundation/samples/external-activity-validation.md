@@ -1,36 +1,36 @@
 ---
-title: Sprawdzanie poprawności działania zewnętrzne
+title: Walidacja działania zewnętrznego
 ms.date: 03/30/2017
 ms.assetid: 49619f59-9819-484a-bcd8-5596308e8551
-ms.openlocfilehash: 1ceb1d2b2f7e8926479fa4c53cfb82a5cdb3a83f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4805bec3deed0779b02687b11dd487e673802925
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517803"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423897"
 ---
-# <a name="external-activity-validation"></a>Sprawdzanie poprawności działania zewnętrzne
-W tym przykładzie pokazano, jak dodać logikę weryfikacji wbudowane działania, których nie jesteś Autor. Logikę weryfikacji składa się z wymuszenie wszystkich <xref:System.Activities.Statements.If> przedstawia działań w przepływie pracy, musisz być ich <xref:System.Activities.Statements.If.Then%2A> zestaw właściwości lub ich <xref:System.Activities.Statements.If.Else%2A> zestawu właściwości. Ponadto logikę weryfikacji obejmuje sprawdzania wszystkie <xref:System.Activities.Statements.Pick> działania w przepływie pracy mają więcej niż jednej gałęzi i jeśli nie jest wielkość liter, generowany jest ostrzeżenie.  
+# <a name="external-activity-validation"></a>Walidacja działania zewnętrznego
+Niniejszy przykład pokazuje, jak dodać logikę walidacji do wbudowanego działania, których nie jesteś autorem. Logikę weryfikacji, który składa się z wymuszenie stałego włączenia wszystkie <xref:System.Activities.Statements.If> działania obecne w przepływie pracy, albo mieć ich <xref:System.Activities.Statements.If.Then%2A> zestaw właściwości lub ich <xref:System.Activities.Statements.If.Else%2A> zestaw właściwości. Ponadto logikę weryfikacji obejmuje sprawdzanie wszystkich <xref:System.Activities.Statements.Pick> działania w przepływie pracy mają więcej niż jednej gałęzi, a jeśli tak nie jest rzeczywiście, generowane jest ostrzeżenie.  
   
-## <a name="sample-details"></a>Szczegóły próbki  
- Ten przykład tworzy przepływ pracy z wystąpieniem każde działanie do sprawdzania poprawności: <xref:System.Activities.Statements.If> działania i <xref:System.Activities.Statements.Pick> działania. A <xref:System.Activities.Validation.Constraint> jest tworzona dla każdej zachowanie sprawdzania poprawności. Ograniczenia utworzone w tym przykładzie są `ConstraintError_IfShouldHaveThenOrElse` i `ConstraintWarning_PickHasOneBranch`. Następnie tych warunków ograniczających są dodawane do `AdditionalConstraints` Kolekcja <xref:System.Activities.Validation.ValidationSettings> wystąpienia. Na koniec `static` <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> metoda <xref:System.Activities.Validation.ActivityValidationServices> jest wywoływane w celu weryfikacji działań w przepływie pracy i weryfikacji wyników wydrukowaniu się do konsoli.  
+## <a name="sample-details"></a>Przykład szczegółów  
+ Ten przykład umożliwia utworzenie przepływu pracy z wystąpieniem każde działanie, aby sprawdzić poprawność: <xref:System.Activities.Statements.If> działania i <xref:System.Activities.Statements.Pick> działania. Element <xref:System.Activities.Validation.Constraint> jest tworzony dla każdego zachowanie walidacji. Ograniczenia utworzone w tym przykładzie są `ConstraintError_IfShouldHaveThenOrElse` i `ConstraintWarning_PickHasOneBranch`. Następnie te ograniczenia są dodawane do `AdditionalConstraints` zbiór <xref:System.Activities.Validation.ValidationSettings> wystąpienia. Na koniec `static` <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> metoda <xref:System.Activities.Validation.ActivityValidationServices> jest wywoływana, aby sprawdzić poprawność działania w przepływie pracy i sprawdzanie poprawności, wyniki są drukowane do konsoli.  
   
 > [!NOTE]
->  Warunki ograniczające zasady można dodać do żadnego działania. Na przykład można dodać ograniczenia zasad do <xref:System.Activities.Statements.Sequence> lub <xref:System.Activities.Statements.Parallel> działania.  
+>  Warunki ograniczające zasady można dodać do dowolnego działania. Na przykład można dodać ograniczenia zasad, aby <xref:System.Activities.Statements.Sequence> lub <xref:System.Activities.Statements.Parallel> działania.  
   
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
   
-1.  Przy użyciu [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], otwórz plik ExternalActivityValidation.sln.  
+1.  Za pomocą [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], otwórz plik ExternalActivityValidation.sln.  
   
-2.  Aby tworzyć rozwiązania, naciśnij kombinację klawiszy CTRL + SHIFT + B.  
+2.  Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.  
   
-3.  Aby uruchomić rozwiązanie, naciśnij klawisze Ctrl + F5.  
+3.  Aby uruchomić rozwiązanie, naciśnij kombinację klawiszy Ctrl + F5.  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Validation\ExternalActivityValidation`

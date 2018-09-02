@@ -8,26 +8,26 @@ helpviewer_keywords:
 - properties [Windows Forms], defining in code
 - custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
-ms.openlocfilehash: dc47d7152419d55b3e52aec70257e2b39e9aaca0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c21aee867fc78c55e62eb183bb1a12ebf1c472e8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528326"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425583"
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a>Definiowanie właściwości formantów formularzy systemu Windows
-Omówienie właściwości, zobacz [Przegląd właściwości](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52). Istnieje kilka istotnych kwestii, definiując właściwość:  
+Aby zapoznać się z omówieniem właściwości, zobacz [Przegląd właściwości](https://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52). Istnieje kilka istotnych kwestii, definiując właściwość:  
   
--   Należy zastosować atrybutów do właściwości, które należy zdefiniować. Atrybuty Określ, jak powinien być wyświetlany właściwości projektanta. Aby uzyskać więcej informacji, zobacz [atrybuty czasu projektowania dla składników](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3).  
+-   Należy najpierw zastosować atrybutów do właściwości, jaką zdefiniujesz. Atrybuty określają, jak projektant powinien być wyświetlany właściwości. Aby uzyskać więcej informacji, zobacz [atrybuty czasu projektowania dla składników](https://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3).  
   
--   Jeśli zmiana właściwości dotyczy wyświetlania kontrolki, wywołaj <xref:System.Windows.Forms.Control.Invalidate%2A> — metoda (dziedziczący formantu <xref:System.Windows.Forms.Control>) z `set` metody dostępu. <xref:System.Windows.Forms.Control.Invalidate%2A> z kolei wywołuje <xref:System.Windows.Forms.Control.OnPaint%2A> metodę, która ponownie rysuje formantu. Wiele wywołań <xref:System.Windows.Forms.Control.Invalidate%2A> powoduje wywołanie <xref:System.Windows.Forms.Control.OnPaint%2A> w celu zwiększenia wydajności.  
+-   Jeśli zmiana wartości właściwości dotyczy wyświetlania kontrolki, należy wywołać <xref:System.Windows.Forms.Control.Invalidate%2A> — metoda (dziedziczący kontroli nad <xref:System.Windows.Forms.Control>) z `set` metody dostępu. <xref:System.Windows.Forms.Control.Invalidate%2A> z kolei wywołuje <xref:System.Windows.Forms.Control.OnPaint%2A> metody, która odrysowuje formantu. Wiele wywołań <xref:System.Windows.Forms.Control.Invalidate%2A> powoduje, jednokrotnego wywołania <xref:System.Windows.Forms.Control.OnPaint%2A> w celu zwiększenia wydajności.  
   
--   Biblioteka klas programu .NET Framework zapewnia konwertery typu standardowe typy danych, takich jak liczby całkowite, liczby dziesiętne wartości logiczne i inne. Celem konwertera typów jest zwykle zapewnienie konwersji wartość ciągu (na podstawie danych ciągu na inne typy danych). Standardowe typy danych są skojarzone z konwertery typu domyślnego konwersji wartości do ciągów i ciągi do typów danych. W przypadku definiowania właściwości, która jest niestandardowy (to znaczy niestandardowe) typu danych, należy zastosować atrybut określający konwerter typów do skojarzenia z tą właściwością. Umożliwia także atrybutu do skojarzenia z właściwością niestandardowy Edytor typów interfejsu użytkownika. Edytor typów interfejsu użytkownika udostępnia interfejs użytkownika do edycji właściwości lub typu danych. Przykładem Edytor typów interfejsu użytkownika jest próbnika kolorów. Przykłady atrybutów znajdują się na końcu tego tematu.  
+-   Biblioteka klas .NET Framework zapewnia konwerterów typów standardowe typy danych, takich jak liczby całkowite, liczby dziesiętne, wartości logicznych i innych. Celem konwertera typów jest zwykle zapewniają wartość ciągu konwersja (dane ciągu na inne typy danych). Standardowe typy danych są skojarzone z konwertery typu domyślnego, które konwertują wartości do ciągów i ciągów na typy danych. Jeśli zdefiniowano właściwość niestandardową (oznacza to, niestandardowe) typu danych, należy zastosować atrybut określający konwertera typów do skojarzenia z tej właściwości. Atrybut umożliwia również skojarzyć niestandardowego edytora typów interfejsu użytkownika z właściwością. Edytor typów interfejsu użytkownika udostępnia interfejs użytkownika do edycji właściwości lub typu danych. Selektor kolorów jest przykład edytora typów interfejsu użytkownika. Przykłady atrybutów znajdują się na końcu tego tematu.  
   
     > [!NOTE]
-    >  Jeśli konwerter typów lub Edytor typów interfejsu użytkownika nie są dostępne dla właściwości niestandardowej, można zaimplementować jedną zgodnie z opisem w [rozszerzenie obsługi w czasie projektowania](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2).  
+    >  Jeśli konwertera typów lub Edytor typów interfejsu użytkownika nie są dostępne dla właściwości niestandardowej, można zaimplementować jeden zgodnie z opisem w [rozszerzenie obsługi w czasie projektowania](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2).  
   
- Poniższy fragment kodu definiuje właściwość niestandardowa o nazwie `EndColor` dla kontrolki niestandardowej `FlashTrackBar`.  
+ Poniższy fragment kodu definiuje właściwość niestandardowa o nazwie `EndColor` dla formantu niestandardowego `FlashTrackBar`.  
   
 ```vb  
 Public Class FlashTrackBar  
@@ -95,7 +95,7 @@ public class FlashTrackBar : Control {
 }  
 ```  
   
- Poniższy fragment kodu kojarzy konwertera typów i Edytor typów interfejsu użytkownika z właściwością `Value`. W takim przypadku `Value` jest liczbą całkowitą i domyślne konwerterem typów, ale <xref:System.ComponentModel.TypeConverterAttribute> atrybut jest stosowany konwertera typu niestandardowego (`FlashTrackBarValueConverter`), który umożliwia projektanta, aby wyświetlić go jako procent. Edytor typów interfejsu użytkownika, `FlashTrackBarValueEditor`, umożliwia procent będzie wyświetlany. W tym przykładzie pokazano, że również konwerter typów lub określony przez edytor <xref:System.ComponentModel.TypeConverterAttribute> lub <xref:System.ComponentModel.EditorAttribute> atrybutu zastępuje domyślną konwertera.  
+ Poniższy fragment kodu tworzy skojarzenia między konwertera typów i Edytor typów interfejsu użytkownika za pomocą właściwości `Value`. W tym przypadku `Value` jest liczbą całkowitą, a ma konwertera typów domyślnego, ale <xref:System.ComponentModel.TypeConverterAttribute> atrybutu, dotyczy konwertera typów niestandardowych (`FlashTrackBarValueConverter`), który umożliwia projektanta Aby wyświetlić go jako procent. Edytor typów interfejsu użytkownika, `FlashTrackBarValueEditor`, umożliwia procent, które mają być wyświetlane wizualnie. Ten przykład pokazuje, że również konwertera typów lub editor określona przez <xref:System.ComponentModel.TypeConverterAttribute> lub <xref:System.ComponentModel.EditorAttribute> konwerter domyślne przesłonięcia atrybutów.  
   
 ```vb  
 <Category("Flash"), _  

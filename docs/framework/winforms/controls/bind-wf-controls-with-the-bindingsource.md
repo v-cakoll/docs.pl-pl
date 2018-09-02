@@ -6,61 +6,61 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding controls
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 391ae170-de5c-40f8-8233-91cb2ee4683a
-ms.openlocfilehash: 3acbd17e8e969bb448e6deaf17dec23e44fa3bd4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 95f375d8845c60441aa5eefdd37e32541ea2d5a7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527566"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418600"
 ---
 # <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>Porady: powiązywanie kontrolek formularzy systemu Windows ze składnikiem BindingSource przy użyciu narzędzia Projektant
-Po dodaniu formantów do formularza i ustalić interfejsu użytkownika dla aplikacji, kontrolki można powiązać źródła danych tak, aby w czasie wykonywania, użytkownicy mogą zmieniać i zapisywać danych związanych z aplikacją.  
+Po dodać formanty do formularza i określić interfejsu użytkownika dla aplikacji, formanty można powiązać ze źródłem danych, tak, aby w czasie wykonywania, użytkownicy mogą zmienić i zapisać dane związane z aplikacją.  
   
- Powiązanie formantu lub serii formantów w formularzach systemu Windows najłatwiej odbywa się przy użyciu <xref:System.Windows.Forms.BindingSource> formant jako mostka między formantami formularza i źródła danych.  
+ Powiązania kontroli lub szeregu formantów w formularzach Windows Forms najłatwiej odbywa się przy użyciu <xref:System.Windows.Forms.BindingSource> kontroli jako Most między kontrolek w formularzu i źródła danych.  
   
- Jeden lub więcej formantów w formularzu można powiązać danych. w poniższej procedurze <xref:System.Windows.Forms.TextBox> kontrolka jest powiązana ze źródłem danych.  
+ Co najmniej jedną kontrolkę w formularzu można powiązać z danych. w poniższej procedurze <xref:System.Windows.Forms.TextBox> kontrolka jest powiązana ze źródłem danych.  
   
- Aby ukończyć tę procedurę, zakłada się, że będzie powiązać ze źródłem danych pochodzących z bazy danych. Aby uzyskać więcej informacji na temat tworzenia źródła danych z innych magazynach danych, zobacz [Dodawanie nowych źródeł danych](/visualstudio/data-tools/add-new-data-sources).  
+ Aby ukończyć tę procedurę, zakłada się, czy zostaną powiązane ze źródłem danych pochodzących z bazy danych. Aby uzyskać więcej informacji na temat tworzenia źródeł danych z innych magazynów danych, zobacz [dodasz nowe źródła danych](/visualstudio/data-tools/add-new-data-sources).  
   
 > [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-### <a name="to-bind-a-control-at-design-time"></a>Aby powiązać formantu w czasie projektowania  
+### <a name="to-bind-a-control-at-design-time"></a>Aby powiązać formant w czasie projektowania  
   
-1.  Przeciągnij <xref:System.Windows.Forms.TextBox> sterowania do formularza.  
+1.  Przeciągnij <xref:System.Windows.Forms.TextBox> formantu do formularza.  
   
-2.  W **właściwości** okno:  
+2.  W **właściwości** okna:  
   
-    1.  Rozwiń węzeł **(DataBindings)** węzła.  
+    1.  Rozwiń **(powiązania danych)** węzła.  
   
     2.  Kliknij strzałkę obok pozycji <xref:System.Windows.Forms.TextBox.Text%2A> właściwości.  
   
-         **Źródła danych** otwiera edytor typów interfejsu użytkownika.  
+         **DataSource** zostanie otwarty Edytor typów interfejsu użytkownika.  
   
-         Jeśli wcześniej skonfigurowano źródła danych dla projektu lub formularza, będą wyświetlane.  
+         Jeśli wcześniej skonfigurowano źródła danych dla projektu lub formularza, pojawi się.  
   
-3.  Kliknij przycisk **Dodaj źródło danych projektu** Aby podłączyć się do danych i Utwórz źródło danych.  
+3.  Kliknij przycisk **Dodaj źródło danych projektu** do nawiązywania połączeń z danymi i Utwórz źródło danych.  
   
-4.  Na **Kreator konfiguracji źródła danych** stronie powitalnej kliknij **dalej**.  
+4.  Na **Kreatora konfiguracji źródła danych** strona powitalna, kliknij przycisk **dalej**.  
   
-5.  Na **wybierz typ źródła danych** wybierz pozycję **bazy danych**.  
+5.  Na **wybierz typ źródła danych** wybierz opcję **bazy danych**.  
   
-6.  Na **wybierz połączenie danych** wybierz połączenie danych z listy dostępnych połączeń. Jeśli połączenie żądanych danych nie jest dostępne wybierz **nowe połączenie** można utworzyć nowego połączenia danych.  
+6.  Na **wybierz połączenie danych** wybierz połączenie danych z listy dostępnych połączeń. Jeśli żądane połączenie danych nie jest dostępna, wybierz **nowe połączenie** Aby utworzyć nowe połączenie danych.  
   
-7.  Wybierz **tak, Zapisz połączenie** Aby zapisać parametry połączenia w pliku konfiguracyjnym aplikacji.  
+7.  Wybierz **tak, Zapisz połączenie** można zapisać parametry połączenia w pliku konfiguracyjnym aplikacji.  
   
-8.  Wybierz obiekty bazy danych do wprowadzenia w aplikacji. W takim przypadku wybierz pola w tabeli, która będzie <xref:System.Windows.Forms.TextBox> do wyświetlenia.  
+8.  Wybierz obiekty bazy danych w celu dostosowania do aplikacji. W takim przypadku wybierz pola w tabeli, które chcieliby <xref:System.Windows.Forms.TextBox> do wyświetlenia.  
   
 9. Zastąp domyślną nazwę zestawu danych, jeśli chcesz.  
   
 10. Kliknij przycisk **Zakończ**.  
   
-11. W **właściwości** okna, kliknij strzałkę obok pozycji <xref:System.Windows.Forms.TextBox.Text%2A> właściwość ponownie. W **źródła danych** Edytor typów interfejsu użytkownika, wybierz nazwę pola, które można powiązać <xref:System.Windows.Forms.TextBox> do.  
+11. W **właściwości** okna, kliknij strzałkę obok pozycji <xref:System.Windows.Forms.TextBox.Text%2A> właściwość ponownie. W **DataSource** Edytor typów interfejsu użytkownika, wybierz nazwę pola, które można powiązać <xref:System.Windows.Forms.TextBox> do.  
   
-     **Źródła danych** typ interfejsu użytkownika edytora zostanie zamknięty i zestawie danych <xref:System.Windows.Forms.BindingSource> i karty tabeli specyficzne dla czy połączenia danych są dodawane do formularza.  
+     **DataSource** typ interfejsu użytkownika edytora zostanie zamknięty i zestaw danych <xref:System.Windows.Forms.BindingSource> karty tabeli specyficzne dla, połączenia danych są dodawane do formularza.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.BindingSource>  
  <xref:System.Windows.Forms.BindingNavigator>  
  [Dodawanie nowych źródeł danych](/visualstudio/data-tools/add-new-data-sources)  
- [Okno źródła danych](http://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992)
+ [Okno źródeł danych](https://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992)

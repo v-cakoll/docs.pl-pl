@@ -1,5 +1,5 @@
 ---
-title: Efekty modyfikowania formularza podstawowego&#39;wygląd s
+title: Efekty modyfikowania formularza podstawowego&#39;wygląd
 ms.date: 03/30/2017
 helpviewer_keywords:
 - parent forms [Windows Forms]
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - base forms
 - inheritance [Windows Forms], forms
 ms.assetid: 1c3f2b29-a05c-4c6f-aa1a-4e66b94f343a
-ms.openlocfilehash: 7ba4a78395bb93caa1d1d86dc135825ca2a58845
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adaf9224fd340c6ea4342e2591806a7c877e83ff
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520555"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423786"
 ---
-# <a name="effects-of-modifying-a-base-form39s-appearance"></a>Efekty modyfikowania formularza podstawowego&#39;wygląd s
-Podczas tworzenia aplikacji, może być często konieczne zmienianie wyglądu formularza podstawowego, z którego są dziedziczone innych formularzy w projekcie (lub w innych projektów).  
+# <a name="effects-of-modifying-a-base-form39s-appearance"></a>Efekty modyfikowania formularza podstawowego&#39;wygląd
+Podczas opracowywania aplikacji często konieczne może być zmiana wyglądu formularza podstawowego, z której dziedziczą inne formy w projekcie (lub w innych projektach).  
   
- W czasie projektowania, zmienia się na wygląd formularza podstawowego (jest to ustawienie właściwości lub dodawania i odejmowania formantów) są uwzględniane w formularzach dziedziczone po utworzeniu projektu zawierającego formularza podstawowego. Nie jest wystarczające po prostu zapisać zmiany w podstawowej postaci. Aby utworzyć projekt, wybierz **kompilacji** z **kompilacji** menu.  
+ W czasie projektowania, zmienia się na wygląd formularza podstawowego (jest to ustawienie właściwości lub dodawania i odejmowania formantów) są odzwierciedlane na odziedziczone formularze, podczas kompilowania projektu zawierającego formularz podstawowy. Nie jest wystarczające, umożliwiające po prostu zapisać zmiany w podstawowej postaci. Aby utworzyć projekt, wybierz **kompilacji** z **kompilacji** menu.  
   
 > [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
- Modyfikacje formularza podstawowego w czasie wykonywania ma nie wpływa na odziedziczone formularze, które zostały już utworzone.  
+ Modyfikacje wprowadzone do formularza podstawowego w czasie wykonywania mają nie będzie miała wpływu na odziedziczone formularze, które już są tworzone.  
   
 ## <a name="see-also"></a>Zobacz też  
  [base](~/docs/csharp/language-reference/keywords/base.md)  

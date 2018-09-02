@@ -7,15 +7,15 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF]
 ms.assetid: 2512a277-e9d8-4de8-a12f-2bd95e8e7b60
-ms.openlocfilehash: 2f498c68d0aa8b980b0a0628231c6f03d94a85c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c0826e007576dc0e97ef953e698f5f8d115742e9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555185"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421699"
 ---
 # <a name="textbox"></a>TextBox
-<xref:System.Windows.Controls.TextBox> Kontroli umożliwia wprowadzanie tekstu podstawowego w aplikacji WPF.  
+<xref:System.Windows.Controls.TextBox> Kontroli zapewnia obsługę wprowadzanie tekstu podstawowego w aplikacjach WPF.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [TextBox — omówienie](../../../../docs/framework/wpf/controls/textbox-overview.md)  
@@ -31,5 +31,5 @@ ms.locfileid: "33555185"
  <xref:System.Windows.Controls.PasswordBox>  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przykładu z galerii formantów WPF](http://go.microsoft.com/fwlink/?LinkID=160053)  
+ [Przykładu z galerii kontrolki WPF](https://go.microsoft.com/fwlink/?LinkID=160053)  
  [TextBox — style i szablony](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)

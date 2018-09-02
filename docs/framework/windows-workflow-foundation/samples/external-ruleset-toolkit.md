@@ -1,137 +1,137 @@
 ---
-title: Zewnętrzne Toolkit zestaw reguł
+title: Zewnętrzne Przybornik zestawu reguł
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-ms.openlocfilehash: 0c2dec4d28b60fe5caef13ed6bd0e5826713a56f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f418c71b39611e64afea168ed40418dbe981521a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520399"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43457216"
 ---
-# <a name="external-ruleset-toolkit"></a>Zewnętrzne Toolkit zestaw reguł
-Zwykle podczas stosowania reguł aplikacji przepływu pracy, reguły są częścią zestawu. W niektórych scenariuszach można zachować zestawów reguł, niezależnie od zestawu, dzięki czemu mogą być aktualizowane bez ponowne tworzenie i wdrażanie zestawu przepływu pracy. W tym przykładzie pozwala na zarządzanie i edytować zestawów reguł w bazie danych oraz uzyskać dostęp do tych zestawów reguł z przepływu pracy w czasie wykonywania. Dzięki temu uruchomionych wystąpień przepływu pracy automatycznie zastosować zmian zestaw reguł.  
+# <a name="external-ruleset-toolkit"></a>Zewnętrzne Przybornik zestawu reguł
+Zwykle, gdy zasady są używane w aplikacji przepływu pracy, reguły są częścią zestawu. W niektórych przypadkach warto zachować zestawów reguł, niezależnie od zestawu, dzięki czemu mogą być aktualizowane bez ponownego tworzenia i wdrażania zestawu przepływu pracy. Ten przykład umożliwia zarządzanie i Edytuj zestawów reguł w bazie danych i uzyskać dostęp do tych zestawów reguł z przepływu pracy w czasie wykonywania. Umożliwia to uruchamianie wystąpienia przepływu pracy automatycznie zastosować zmian zestaw reguł.  
   
- Przykład zewnętrznych narzędzi zestaw reguł zawiera narzędzie oparte na formularzach systemu Windows, które służy do zarządzania i Edytuj zestaw reguł wersji w bazie danych. Zawiera także działania i usługa hosta do wykonywania tych zasad.  
+ Przykład zewnętrzne Przybornik zestawu reguł zawiera narzędzie oparte na formularzach Windows, używanej do zarządzania i Edytuj wersje zestawu reguł w bazie danych. Zawiera także działania, a usługa hosta do wykonywania tych zasad.  
   
 > [!NOTE]
->  W tym przykładzie wymaga [programu Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=96181).  
+>  Ten przykładowy skrypt wymaga [programu Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=96181).  
   
- [!INCLUDE[vsprvsext](../../../../includes/vsprvsext-md.md)] zawiera Edytor zestaw reguł, w ramach programu Windows Workflow Foundation (WF). Ten edytor można uruchomić przez dwukrotne kliknięcie `Policy` działania w przepływie pracy; go serializuje zdefiniowanych Obiekt RuleSet w pliku Rules skojarzonego z przepływem pracy ( `Policy` działanie jest uruchomione wystąpienie zestaw reguł dla przepływu pracy). Plik Rules jest kompilowany do zestawu jako zasób podczas kompilowania projektu przepływu pracy.  
+ [!INCLUDE[vsprvsext](../../../../includes/vsprvsext-md.md)] zawiera Edytor zestaw reguł w ramach programu Windows Workflow Foundation (WF). Ten edytor można uruchomić przez dwukrotne kliknięcie `Policy` działania w przepływie pracy; to szereguje zdefiniowany obiekt RuleSet w pliku Rules skojarzone z przepływem pracy ( `Policy` działanie jest uruchamiane wystąpienie zestaw reguł dla przepływu pracy). Plik Rules jest skompilowany w zestawie jako zasób, podczas kompilowania projektu przepływu pracy.  
   
- Składniki następujące przykładowe:  
+ Składnik to między innymi próbki:  
   
--   Zestaw reguł graficzne narzędzie interfejsu użytkownika służącego do edycji i zarządzanie wersjami zestaw reguł w bazie danych.  
+-   Narzędzie interfejsu interfejs graficzny użytkownika zestaw reguł, które służy do edytowania i zarządzanie wersjami zestawu reguł w bazie danych.  
   
--   Usługa zestaw reguł, jest skonfigurowana w aplikacji hosta, który uzyskuje dostęp do zestawów reguł z bazy danych.  
+-   Usługa zestaw reguł, która jest konfigurowana dla aplikacji hosta i uzyskuje dostęp do zestawów reguł z bazy danych.  
   
--   `ExternalPolicy` Działanie, które żądania zestaw reguł z usługi zestaw reguł i jest uruchamiana zestaw reguł dla przepływu pracy.  
+-   `ExternalPolicy` Działania, żądania zestaw reguł z usługi zestaw reguł, która jest uruchamiana zestaw reguł dla przepływu pracy.  
   
- Interakcja składników jest pokazany na rysunku 1. W kolejnych sekcjach opisano każdego składnika.  
+ Interakcja składników przedstawiono na rysunku 1. W kolejnych sekcjach opisano każdego składnika.  
   
- ![Omówienie pojęć zewnętrznych Przykładowy zestaw reguł](../../../../docs/framework/windows-workflow-foundation/samples/media/rulesettoolkitsampleoverview.gif "RuleSetToolkitSampleOverview")  
+ ![Omówienie pojęć dotyczących zewnętrznych Przykładowy zestaw reguł](../../../../docs/framework/windows-workflow-foundation/samples/media/rulesettoolkitsampleoverview.gif "RuleSetToolkitSampleOverview")  
   
- Rysunek 1: Omówienie przykładowej  
+ Rysunek 1: Omówienie przykładowych  
   
 > [!IMPORTANT]
->  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
+>  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ExternalRuleSetToolKit`  
   
-## <a name="ruleset-tool"></a>Narzędzie zestaw reguł  
- Zrzut ekranu narzędzia zestaw reguł jest pokazany na rysunku 2. Z **magazynu reguły** menu można załadować dostępnych zestawów reguł z bazy danych i zapisać zmodyfikowanych zestawów reguł w magazynie. Plik konfiguracji aplikacji zawiera parametry połączenia bazy danych dla bazy danych zestaw reguł. Po uruchomieniu narzędzia automatycznie ładuje zestawów reguł z bazy danych skonfigurowane.  
+## <a name="ruleset-tool"></a>Narzędzia zestawu reguł  
+ Zrzut ekranu narzędzia do zestaw reguł jest pokazany na rysunku 2. Z **Store reguły** menu, można załadować dostępne zestawy reguł z bazy danych i zapisać zmodyfikowane zestawów reguł do sklepu. Plik konfiguracji aplikacji zawiera parametry połączenia bazy danych dla bazy danych zestaw reguł. Możesz uruchomić to narzędzie, automatycznie ładuje zestawy reguł z bazy danych skonfigurowane.  
   
- ![Zewnętrzne RuleSet Toolket przykładowe dane wyjściowe](../../../../docs/framework/windows-workflow-foundation/samples/media/rulesetbrowser.gif "RuleSetBrowser")  
+ ![Dnia zewnętrzny zestaw reguł Toolket przykładowe dane wyjściowe](../../../../docs/framework/windows-workflow-foundation/samples/media/rulesetbrowser.gif "RuleSetBrowser")  
   
- Rysunek 2: Przeglądarki zestaw reguł  
+ Rysunek 2: Zestaw reguł przeglądarki  
   
- Narzędzie RuleSet dotyczy numery wersji głównej i pomocniczej zestawów reguł, umożliwiając jednocześnie Obsługa i przechowywać wiele wersji (Narzędzie konfiguracji blokowania lub innych zapewnia funkcje zarządzania, oprócz możliwości przechowywania wersji). Za pomocą narzędzia, możesz utworzyć nowe wersje RuleSet lub usunąć istniejące wersje. Po kliknięciu **nowy**, narzędzie tworzy nową nazwę zestaw reguł i ma zastosowanie w wersji 1.0. Po skopiowaniu wersji narzędzie tworzy kopię wybranej wersji zestaw reguł, reguły zawarte w tym i przypisuje numery wersji nowy, unikatowy. Numery wersji te są oparte na numery wersji istniejących zestawów reguł. Można zmienić liczby nazwa i wersja zestaw reguł przy użyciu skojarzonymi polami w formularzu.  
+ Narzędzie RuleSet dotyczy numery wersji głównych i pomocniczych zestawów reguł, umożliwiając jednocześnie obsługiwać i przechowywać wiele wersji (to narzędzie zawiera bez blokowania lub innych konfiguracji funkcji zarządzania, oprócz możliwości przechowywania wersji). Za pomocą narzędzia, możesz utworzyć nowe wersje zestawu reguł lub usunąć istniejące wersje. Po kliknięciu **New**, narzędzie tworzy nową nazwę zestawu reguł i stosuje w wersji 1.0. Podczas kopiowania wersję narzędzia tworzy kopię wybranej wersji zestawu reguł, włączając reguły zawarte i przypisuje numery wersji nowych, unikatowych. Te numery wersji są oparte na numery wersji istniejących zestawów reguł. Można zmienić numery nazwą i wersją zestawu reguł przy użyciu skojarzonego pola w formularzu.  
   
- Po kliknięciu **Edycja reguł**, zostanie uruchomiony Edytor zestaw reguł, jak pokazano na rysunku 3.  
+ Po kliknięciu **Edycja reguł**, uruchomiony Edytor zestawu reguł, jak pokazano na rysunku 3.  
   
- ![Zewnętrzne RuleSet Toolkit przykładowe dane wyjściowe](../../../../docs/framework/windows-workflow-foundation/samples/media/ruleseteditor.gif "RuleSetEditor")  
+ ![Zewnętrzne Przybornik zestawu przykładowych danych wyjściowych](../../../../docs/framework/windows-workflow-foundation/samples/media/ruleseteditor.gif "RuleSetEditor")  
   
  Rysunek 3: Zestaw reguł edytora  
   
- To jest ponownie hosting okno dialogowe Edytor, który wchodzi w skład dodatku Windows Workflow Foundation programu Visual Studio. Zapewnia te same funkcje, w tym obsługę funkcji Intellisense. Reguły są tworzone na typ docelowy (takich jak przepływ pracy), który jest skojarzony z RuleSet w narzędziu; Po kliknięciu **Przeglądaj** w oknie dialogowym Narzędzia główne, **selektor typu przepływupracy/** zostanie wyświetlone okno dialogowe, jak pokazano na rysunku 4.  
+ Jest to, ponownie hostingu okno dialogowe Edytor, który jest częścią dodatku Windows Workflow Foundation programu Visual Studio. Zapewnia te same funkcje, w tym obsługę funkcji Intellisense. Zasady są tworzone na typ docelowy (np. przepływ pracy), który jest skojarzony z zestawu reguł w narzędziu; Po kliknięciu **Przeglądaj** w oknie dialogowym Narzędzia główne **selektor przepływu pracy i typu** zostanie wyświetlone okno dialogowe, jak pokazano na rysunku 4.  
   
  ![Przepływ pracy &#47;wpisz wybór](../../../../docs/framework/windows-workflow-foundation/samples/media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")  
   
- Rysunek 4: Selektor typu/przepływu pracy  
+ Rysunek 4: Wybór przepływu pracy/typu  
   
- Można użyć **selektor typu przepływupracy/** okna dialogowego, aby określić zestaw i określonego typu w tym zestawie. Ten typ jest typem docelowym, względem którego zasady zostały utworzone (i uruchom). W wielu przypadkach typ docelowy jest przepływu pracy lub innego typu działania. Można jednak uruchomić zestaw reguł dla dowolnego typu .NET.  
+ Możesz użyć **selektor przepływu pracy i typu** okna dialogowego, aby określić zestaw i określonego typu, w tym zestawie. Ten typ jest typem docelowym, względem którego zasady są tworzone (i uruchom). W wielu przypadkach typ docelowy jest przepływ pracy lub innego typu działania. Można jednak uruchomić zestaw reguł, dla dowolnego typu .NET.  
   
- Ścieżka do pliku zestawu i typ `name are stored with the` zestaw reguł w bazie danych, dzięki czemu przy zestaw reguł są pobierane z bazy danych, narzędzie próbuje automatycznie załadować typ docelowy.  
+ Ścieżka do pliku zestawu i typu `name are stored with the` zestaw reguł w bazie danych, tak, aby przy zestaw reguł są pobierane z bazy danych, narzędzie próbuje automatycznie załadować typ docelowy.  
   
- Po kliknięciu **OK** w **selektor typu przepływupracy/** okna dialogowego i sprawdza poprawność wybranego typu przed zestaw reguł, aby upewnić się, że typ docelowy ma wszystkie elementy członkowskie przywoływany przez zasady. Błędy są wyświetlane w **błędy sprawdzania poprawności** okna dialogowego (patrz rysunek 5). Możesz kontynuować zmiany, pomimo błędy, lub kliknij przycisk **anulować**. Z **narzędzia** menu w oknie dialogowym Narzędzia główne, można kliknąć **weryfikacji** ponownego sprawdzania poprawności wersji RuleSet przed działania docelowego.  
+ Po kliknięciu **OK** w **selektor przepływu pracy i typu** okno dialogowe, sprawdza poprawność wybranego typu względem zestaw reguł, aby upewnić się, że typ docelowy wszystkie elementy członkowskie przywoływany przez zasady. Błędy są wyświetlane w **błędy sprawdzania poprawności** okna dialogowego (zobacz rysunek 5). Można kontynuować zmiany, pomimo błędów, lub kliknij przycisk **anulować**. Z **narzędzia** menu w oknie dialogowym Narzędzia główne, możesz kliknąć pozycję **weryfikacji** do ponownego sprawdzania poprawności wersji zestaw reguł względem działanie docelowe.  
   
- ![Błędy sprawdzania poprawności z zewnętrznego próbki RuleSet](../../../../docs/framework/windows-workflow-foundation/samples/media/validationerrorsruleset.png "ValidationErrorsRuleSet")  
+ ![Błędy sprawdzania poprawności z zewnętrznego zestawu reguł próbki](../../../../docs/framework/windows-workflow-foundation/samples/media/validationerrorsruleset.png "ValidationErrorsRuleSet")  
   
  Rysunek 5: Błędy sprawdzania poprawności  
   
- Z **danych** menu Narzędzia, można importować i eksportować zestawów reguł. Po kliknięciu **importu**, pojawi się okno dialogowe selektor plików, w którym można wybrać plik rules. To może lub nie może być plikiem początkowo utworzony w programie Visual Studio. Plik Rules powinien zawierać serializacji `RuleDefinitions` wystąpienia, które zawiera kolekcję warunków i kolekcję zestawów reguł. Narzędzie nie używa Kolekcja warunków, ale używa `RuleDefinitions` format Rules, aby zezwolić na interakcję z środowiska Visual Studio.  
+ Z **danych** menu Narzędzia, można importować i eksportować zestawów reguł. Po kliknięciu **importu**, pojawi się okno dialogowe selektora plików, w którym można wybrać plik rules. To może lub nie może być plikiem początkowo utworzona w programie Visual Studio. Ten plik Rules powinien zawierać Zserializowany obiekt `RuleDefinitions` wystąpienia, które zawiera kolekcję warunków i kolekcji zestawów reguł. Narzędzie nie używa Kolekcja warunków, ale zajmuje `RuleDefinitions` format Rules umożliwiające interakcje ze środowiskiem programu Visual Studio.  
   
- Po wybraniu pliku Rules **selektora RuleSet** zostanie wyświetlone okno dialogowe (patrz rysunek 6). Okno dialogowe umożliwia Wybierz zestawy reguł z pliku, który chcesz zaimportować (wartość domyślna Określa wszystkie zestawy reguł). Zestawy reguł w pliku Rules nie mają numery wersji, ponieważ ich wersji w ramach projektu WF jest taka sama jak wersja zestawu. Podczas procesu importowania narzędzie automatycznie przypisuje dalej dostępne główny numer wersji (które można zmienić po zaimportowaniu); można wyświetlić numery wersji przypisanej **selektora RuleSet** listy.  
+ Po wybraniu pliku Rules **selektor RuleSet** zostanie wyświetlone okno dialogowe (patrz rysunek 6). Okno dialogowe umożliwia wybieranie zestawów reguł z pliku, który chcesz zaimportować (wartość domyślna Określa wszystkie zestawy reguł). Zestawy reguł w pliku Rules nie mają numery wersji, ponieważ ich przechowywanie wersji w ramach projektu WF jest taka sama jak wersja zestawu. Podczas procesu importowania narzędzie automatycznie przypisuje następny dostępny główny numer wersji (która może zostać zmieniona po zaimportowaniu); można wyświetlić numery wersji przypisane w **selektor RuleSet** listy.  
   
- Dla każdego zestaw reguł, który importuje narzędzie próbował zlokalizować skojarzony typ z folderu bin\Debug znajdujące się w lokalizacji pliku Rules (jeśli istnieje), na podstawie elementów członkowskich używane w zestaw reguł. Jeśli narzędzie wykryje wiele typów zgodnych, próbuje wybrać typ na podstawie dopasowania między Rules nazwę pliku i nazwy typu (na przykład `Workflow1` typ odpowiada Workflow1.rules). Istnieje wiele dopasowań, monit o wybranie typu. Jeśli ten mechanizm automatycznej identyfikacji nie powiedzie się, można znaleźć zgodnego zestawu lub typu, a następnie po zaimportowaniu można kliknąć **Przeglądaj** w oknie dialogowym Narzędzia główne, aby przejść do skojarzonego typu.  
+ Dla każdego zestawu reguł, który importuje narzędzie spróbuje znaleźć skojarzony typ z folderu bin\Debug znajdujące się w lokalizacji pliku Rules (jeśli istnieje), na podstawie elementów członkowskich, używany w zestawie reguł. Jeśli narzędzie wykryje wiele typów zgodnych, próbuje wybierz typ na podstawie dopasowania między nazwę typu i nazwę pliku Rules (na przykład `Workflow1` typ odpowiada Workflow1.rules). Jeśli istnieje wiele dopasowań, pojawia się monit o wybranie typu. Jeśli ten mechanizm automatycznej identyfikacji nie znajdzie zgodnego zestawu lub typu, a następnie po zaimportowaniu można kliknąć **Przeglądaj** w oknie dialogowym Narzędzia główne, aby przejść do skojarzonego typu.  
   
- ![Zestaw reguł selektora](../../../../docs/framework/windows-workflow-foundation/samples/media/rulesetselector.gif "RuleSetSelector")  
+ ![Selektor zestawu reguł](../../../../docs/framework/windows-workflow-foundation/samples/media/rulesetselector.gif "RuleSetSelector")  
   
- Rysunek 6: Selektor RuleSet  
+ Rysunek 6: Zestaw reguł selektora  
   
- Po kliknięciu **eksportu danych** menu głównego narzędzia **selektora RuleSet** zostanie wyświetlone okno dialogowe, w którym można określić zestawów reguł z bazy danych, która powinna być wyeksportowane. Po kliknięciu **OK**, **Zapisz plik** zostanie wyświetlone okno dialogowe, w którym można określić nazwę i lokalizację pliku wynikowego rules. Ponieważ plik Rules nie zawiera informacje o wersji, można wybrać tylko jedną wersję RuleSet o danej nazwie zestaw reguł.  
+ Po kliknięciu **Eksport danych** menu głównego narzędzia **selektor RuleSet** zostanie wyświetlone okno dialogowe, w którym można określić zestawy reguł z bazy danych, które powinny być wyeksportowane. Po kliknięciu **OK**, **Zapisz plik** zostanie wyświetlone okno dialogowe, w którym można określić nazwę i lokalizację pliku wynikowego rules. Ponieważ plik Rules nie zawiera informacji o wersji, można wybrać tylko jedną wersję zestawu reguł o danej nazwie zestawu reguł.  
   
 ## <a name="policyfromservice-activity"></a>Działanie PolicyFromService  
- Kod `PolicyFromService` działania jest prosta. Podobne jak w przypadku działa `Policy` działanie dostępne z WF, ale zamiast pobierania docelowy zestaw reguł z pliku Rules, wywołuje usługi hosta do uzyskania wystąpienia zestaw reguł. Następnie uruchamia zestaw reguł przed wystąpienia działania głównego przepływu pracy.  
+ Kod `PolicyFromService` działania jest proste. Jak działa `Policy` działanie jest dostępne przy użyciu programu WF, ale zamiast pobieranie docelowy zestaw reguł z pliku Rules, wywołuje usługę hosta, do uzyskania wystąpienia zestaw reguł. Następnie uruchamia zestaw reguł względem wystąpienia działania głównego przepływu pracy.  
   
- Aby użyć działania w przepływie pracy, Dodaj odwołanie do `PolicyActivities` i `RuleSetService` zestawy z projektu przepływu pracy. Zapoznaj się z procedurą na końcu tego tematu, aby uzyskać informacje dotyczące sposobu dodawania działań do przybornika.  
+ Aby użyć działania w przepływie pracy, należy dodać odwołanie do `PolicyActivities` i `RuleSetService` zestawów z projektu przepływu pracy. Zapoznaj się z procedurą na końcu tego tematu, aby uzyskać informacje dotyczące sposobu dodawania działań do przybornika.  
   
- Po umieszczeniu działanie w przepływie pracy, należy podać nazwę zestaw reguł do uruchomienia. Wprowadź nazwę jako wartość literału lub powiązać zmiennej przepływu pracy lub właściwość innego działania. Opcjonalnie można wprowadzić numery wersji określonego zestaw reguł, które powinny być uruchamiane. Pozostawienie wartość domyślna 0 dla numerów wersji głównej i pomocniczej numer najnowszej wersji w bazie danych jest teraz udostępniana automatycznie dla działania.  
+ Po umieszczeniu działania w przepływie pracy, należy podać nazwę zestawu reguł do uruchomienia. Wprowadź nazwę jako wartości literału lub powiązać zmiennej przepływu pracy lub właściwość kolejnego działania. Opcjonalnie można wprowadzić numery wersji określonego zestawu reguł, który powinien zostać uruchomiony. Pozostawienie wartości domyślnej 0 dla numerów wersji głównych i pomocniczych numer najnowszej wersji w bazie danych jest dostarczana automatycznie dla działania.  
   
 ## <a name="ruleset-service"></a>Zestaw reguł usługi  
- Usługa jest odpowiedzialna za pobieranie określonych wersji zestaw reguł z bazy danych i przywróceniem go do wywoływania działania. Wspomnianej wcześniej, jeśli wartości wersji głównej i pomocniczej przekazano `GetRuleSet` wywołania są obie 0, usługa pobiera najnowsza wersja. W tym momencie jest bez buforowania definicje RuleSet lub wystąpień; Podobnie jest Brak funkcji do oznaczenia wersji RuleSet jako "wdrożone", aby odróżnić je od zestawów reguł w toku.  
+ Usługa jest odpowiedzialna za pobieranie określonej wersji zestawu reguł z bazy danych i przywróceniem go do wywoływania działania. Jak wspomniano, jeśli przekazany wartości wersji głównych i pomocniczych `GetRuleSet` wywołania są oba 0, usługa pobierze najnowszą wersję. W tym momencie nie występuje buforowanie definicji zestawu reguł lub wystąpień; Podobnie nie istnieją żadne funkcje do oznaczania wersji zestaw reguł jako "wdrożone", aby odróżnić je od zestawów reguł w toku.  
   
- Usługa dostępu do bazy danych należy skonfigurować na hoście przy użyciu pliku konfiguracji aplikacji.  
+ Bazy danych można uzyskać dostęp przez usługę, należy skonfigurować na hoście przy użyciu pliku konfiguracji aplikacji.  
   
 #### <a name="to-run-the-tool"></a>Aby uruchomić narzędzie  
   
-1.  Folder, który konfiguruje tabeli zestaw reguł używany przez usługę i przez narzędzie znajduje się plik Setup.sql. Możesz uruchomić plik wsadowy Setup.cmd do tworzenia bazy danych reguły na SQL Express i zdefiniować tabelę zestaw reguł.  
+1.  Folder, który konfiguruje Tabela zestaw reguł, używana przez narzędzia i usługi zawiera plik Setup.sql. Możesz uruchomić plik wsadowy plik Setup.cmd do tworzenia bazy danych reguły na program SQL Express i konfigurowanie tabeli zestaw reguł.  
   
-2.  Jeśli edycja pliku wsadowego lub Setup.sql i określ nie należy używać programu SQL Express lub można umieścić w tabeli w bazie danych o nazwie coś innego niż `Rules`, pliki konfiguracji aplikacji w narzędziu zestaw reguł i `UsageSample` projekty powinny być edytowane o takim samym informacje.  
+2.  Jeśli poddasz edycji pliku wsadowego lub Setup.sql i określ nie należy używać programu SQL Express lub do umieszczenia w tabeli w bazie danych o nazwie coś innego niż `Rules`, pliki konfiguracji aplikacji w narzędziu zestaw reguł i `UsageSample` projektów powinny być edytowane o takiej samej informacje.  
   
-3.  Po uruchomieniu skryptu Setup.sql można tworzyć `ExternalRuleSetToolkit` rozwiązania, a następnie uruchom zestaw reguł narzędzia z projektu ExternalRuleSetTool.  
+3.  Po uruchomieniu skryptu Setup.sql, można tworzyć `ExternalRuleSetToolkit` rozwiązania, a następnie uruchom zestaw reguł narzędzia z projektu ExternalRuleSetTool.  
   
-4.  `RuleSetToolkitUsageSample` Rozwiązanie sekwencyjnych Aplikacja konsoli przepływu pracy zawiera przykładowy przepływ pracy. Przepływ pracy składa się z `PolicyFromService` działania i dwie zmienne `orderValue` i `discount`, względem którego element docelowy zestaw reguł jest uruchamiana.  
+4.  `RuleSetToolkitUsageSample` Rozwiązanie sekwencyjne Aplikacja konsoli przepływu pracy zawiera przykładowy przepływ pracy. Przepływ pracy składa się z `PolicyFromService` działanie i dwie zmienne `orderValue` i `discount`, względem którego działa docelowy zestaw reguł.  
   
-5.  Aby użyć przykładowego, kompilacji `RuleSetToolkitUsageSample` rozwiązania. Następnie z menu głównego narzędzia zestaw reguł, kliknij przycisk **importowania danych** i wskaż plik DiscountRuleSet.rules w folderze RuleSetToolkitUsageSample. Kliknij przycisk **zapisem magazynu reguły** menu opcję, aby zapisać zaimportowany zestaw reguł do bazy danych.  
+5.  Aby korzystać z przykładu, kompilacji `RuleSetToolkitUsageSample` rozwiązania. Następnie z menu głównego narzędzia zestaw reguł, kliknij przycisk **importowania danych** i wskaż plik DiscountRuleSet.rules w folderze RuleSetToolkitUsageSample. Kliknij przycisk **zapisem Store reguły** opcję menu, aby zapisać zaimportowany zestaw reguł w bazie danych.  
   
-6.  Ponieważ `PolicyActivities` odwołuje się do zestawu z przykładowy projekt przepływu pracy `PolicyFromService` działania zostanie wyświetlony w przepływie pracy. Nie, ale ma w przyborniku domyślnie. Aby dodać go do przybornika, wykonaj następujące czynności:  
+6.  Ponieważ `PolicyActivities` odwołuje się do zestawu z przykładowego projektu przepływu pracy `PolicyFromService` działanie pojawiło się w przepływie pracy. Nie, jednak wydaje w przyborniku domyślnie. Aby dodać go do przybornika, wykonaj następujące czynności:  
   
-    -   Kliknij prawym przyciskiem myszy przybornika i wybierz **wybierz elementy** (może to potrwać kilka minut).  
+    -   Kliknij prawym przyciskiem myszy przybornika, a następnie wybierz pozycję **wybierz elementy** (może to potrwać chwilę).  
   
     -   Gdy **wybierz elementy przybornika** zostanie wyświetlone okno dialogowe, kliknij przycisk **działania** kartę.  
   
-    -   Przejdź do `PolicyActivities` zestawu w `ExternalRuleSetToolkit` rozwiązanie i kliknij przycisk **Otwórz**.  
+    -   Przejdź do `PolicyActivities` zestawu w `ExternalRuleSetToolkit` rozwiązań i kliknij przycisk **Otwórz**.  
   
-    -   Upewnij się, że `PolicyFromService` działania jest zaznaczona w **wybierz elementy przybornika** okna dialogowego, a następnie kliknij przycisk **OK**.  
+    -   Upewnij się, że `PolicyFromService` wybrano działania **wybierz elementy przybornika** okna dialogowego, a następnie kliknij przycisk **OK**.  
   
-    -   Działanie powinien zostać wyświetlony w przyborniku w **składniki RuleSetToolkitUsageSample** kategorii.  
+    -   Działanie powinien zostać wyświetlony na przybornika w **składniki RuleSetToolkitUsageSample** kategorii.  
   
-7.  Usługa zestaw reguł jest już skonfigurowana na hoście aplikacji konsoli przy użyciu następujących instrukcji w pliku Program.cs.  
+7.  Usługa zestaw reguł jest już skonfigurowany na hoście aplikacji konsoli przy użyciu następujących instrukcji w pliku Program.cs.  
   
     ```  
     workflowRuntime.AddService(new RuleSetService());  
     ```  
   
-8.  Można również skonfigurować usługę na hoście przy użyciu pliku konfiguracji; Zobacz szczegółowe informacje można znaleźć w dokumentacji zestawu SDK.  
+8.  Można również skonfigurować usługę na hoście przy użyciu pliku konfiguracji; można znaleźć w dokumentacji zestawu SDK, aby uzyskać szczegółowe informacje.  
   
-9. Plik konfiguracji aplikacji jest dodawane do projektu przepływu pracy, aby określić parametry połączenia dla bazy danych mają być używane przez usługę. Powinno to być te same parametry połączenia używane przez narzędzie zestaw reguł, które bazy danych, która zawiera tabelę zestaw reguł.  
+9. Plik konfiguracji aplikacji zostanie dodany do projektu przepływu pracy, aby określić parametry połączenia dla bazy danych, który będzie używany przez usługę. Powinna to być parametry połączenia używane przez narzędzie zestaw reguł, które wskazują na bazę danych, zawierającą tabelę zestaw reguł.  
   
-10. Teraz możesz uruchomić `RuleSetToolkitUsageSample` projektu, jak w przypadku innych aplikacji konsolowej przepływu pracy. Naciśnij klawisz F5 lub Ctrl + F5 w programie Visual Studio lub uruchom plik RuleSetToolkitUsageSample.exe bezpośrednio.  
+10. Możesz teraz uruchomić `RuleSetToolkitUsageSample` projektu, jak w przypadku innych aplikacji konsoli przepływu pracy. Naciśnij klawisz F5 lub Ctrl + F5 w programie Visual Studio lub uruchom plik RuleSetToolkitUsageSample.exe bezpośrednio.  
   
     > [!NOTE]
-    >  Należy zamknąć narzędzie zestaw reguł, aby ponownie skompilować próbki użycia, ponieważ narzędzie ładuje zestaw próbki użycia.
+    >  Należy zamknąć narzędzie zestaw reguł, aby ponownie skompilować przykład użycia, ponieważ narzędzie ładuje zestaw próbki użycia.

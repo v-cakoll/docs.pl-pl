@@ -7,15 +7,15 @@ helpviewer_keywords:
 - response files, specifying for compilation [C#]
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
-ms.openlocfilehash: facf2d45aff424d54dde45973cfec8cc8f93cb6a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f342f26ee8abe29e6c5a1477469c8b7292cd702e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215072"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456506"
 ---
 # <a name="-c-compiler-options"></a>@ (opcje kompilatora C#)
-@ — Opcja pozwala określić plik, który zawiera opcje kompilatora i plików kodu źródłowego do skompilowania.  
+@ Pozwala opcji, należy określić plik, który zawiera opcje kompilatora i pliki kodu źródłowego do skompilowania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -25,10 +25,10 @@ ms.locfileid: "33215072"
   
 ## <a name="arguments"></a>Argumenty  
  `response_file`  
- Plik, który zawiera listę opcji kompilatora lub plików kodu źródłowego do skompilowania.  
+ Plik, który zawiera listę opcji kompilatora lub pliki kodu źródłowego do skompilowania.  
   
 ## <a name="remarks"></a>Uwagi  
- Opcje kompilatora i plików kodu źródłowego zostanie przetworzony przez kompilator tak, jakby były one określone w wierszu polecenia.  
+ Opcje kompilatora i pliki kodu źródłowego zostanie przetworzony przez kompilator tak, jakby były one określone w wierszu polecenia.  
   
  Aby określić więcej niż jeden plik odpowiedzi w kompilacji, należy określić wiele opcji pliku odpowiedzi. Na przykład:  
   
@@ -36,18 +36,18 @@ ms.locfileid: "33215072"
 @file1.rsp @file2.rsp  
 ```  
   
- W odpowiedzi na plik, wiele opcji kompilatora i plików kodu źródłowego może występować w jednym wierszu. Specyfikacja opcji kompilatora pojedynczego musi znajdować się w jednym wierszu (nie może obejmować wiele wierszy). Pliki odpowiedzi mogą mieć komentarze, które zaczynają się od symbolu #.  
+ W odpowiedzi na plik, wiele opcji kompilatora i pliki kodu źródłowego może znajdować się w jednym wierszu. Specyfikacja opcji kompilatora pojedynczego musi znajdować się w jednym wierszu (nie może obejmować wiele wierszy). Pliki odpowiedzi może mieć komentarze, które zaczynają się od symbolu #.  
   
- Określenie opcji kompilatora z pliku odpowiedzi jest podobnie jak wystawiania tych poleceń w wierszu polecenia. Zobacz [tworzenie z wiersza polecenia](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) Aby uzyskać więcej informacji.  
+ Określenie opcji kompilatora z pliku odpowiedzi jest podobne do wystawiania tych poleceń w wierszu polecenia. Zobacz [tworzenie z wiersza polecenia](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) Aby uzyskać więcej informacji.  
   
- Kompilator przetwarza opcji polecenia, ponieważ są one napotkał. W związku z tym argumenty wiersza polecenia można zastąpić opcje wymienione wcześniej w plikach odpowiedzi. Z drugiej strony Opcje w pliku odpowiedzi zastąpią opcje wymienione wcześniej w wierszu polecenia lub w innych plików odpowiedzi.  
+ Po ich napotkaniu, kompilator przetwarza opcje polecenia. W związku z tym argumenty wiersza polecenia można zastąpić opcje wymienione wcześniej w plikach odpowiedzi. Z drugiej strony Opcje w pliku odpowiedzi zastępują opcje wymienione wcześniej w wierszu polecenia lub w innych plikach odpowiedzi.  
   
- C# zawiera pliku csc.rsp, który znajduje się w tym samym katalogu co plik csc.exe. Zobacz [- noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) Aby uzyskać więcej informacji na temat csc.rsp.  
+ C# zawiera pliku csc.rsp, który znajduje się w tym samym katalogu co plik csc.exe. Zobacz [- noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) więcej informacji na temat csc.rsp.  
   
- Tej opcji kompilatora nie można ustawić w środowisku programowania Visual Studio i nie można go zmienić programowo.  
+ Nie można ustawić tę opcję kompilatora w środowisku programowania Visual Studio i nie można go zmienić programowo.  
   
 ## <a name="example"></a>Przykład  
- Poniżej przedstawiono kilka wierszy z przykładowy plik odpowiedzi:  
+ Poniżej przedstawiono kilka wierszy z przykładowego pliku odpowiedzi:  
   
 ```console  
 # build the first output file  
@@ -55,4 +55,5 @@ ms.locfileid: "33215072"
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
+
+- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)

@@ -1,26 +1,26 @@
 ---
-title: Podczas pobierania danych binarnych
+title: Pobieranie danych binarnych
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 56c5a9e3-31f1-482f-bce0-ff1c41a658d0
-ms.openlocfilehash: 302c26571e9843a4b7c3c440969e4159ef2d10ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec4ef17687e4e1bf2cc18182a64fc7361fe3b6f7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362579"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421986"
 ---
-# <a name="retrieving-binary-data"></a>Podczas pobierania danych binarnych
-Domyślnie **DataReader** ładuje dane przychodzące jako wiersz, jak cały wiersz danych jest dostępna. Duże obiekty binarne (BLOB) wymagają innego podejścia, jednak ponieważ zawierają one GB danych, które nie mogą wchodzić w jednym wierszu. **Command.ExecuteReader** metoda ma przeciążenia, które będą wymaga <xref:System.Data.CommandBehavior> argumentu, aby zmodyfikować domyślne zachowanie **DataReader**. Można przekazać <xref:System.Data.CommandBehavior.SequentialAccess> do **ExecuteReader** metodę, aby zmodyfikować domyślne zachowanie **DataReader** tak, aby zamiast ładowania wierszy danych, jego ładowanie danych sekwencyjnie odbierane. Jest to idealne rozwiązanie w przypadku ładowania obiektów blob lub inne struktury dużej ilości danych. Należy pamiętać, że takie zachowanie może zależeć od źródła danych. Na przykład zwracać obiekt BLOB z programu Microsoft Access załaduje całego obiektu BLOB ładowany do pamięci, a nie po kolei odbierane.  
+# <a name="retrieving-binary-data"></a>Pobieranie danych binarnych
+Domyślnie **DataReader** ładuje przychodzących danych jako wiersz, jak tylko cały wiersz danych jest dostępna. Duże obiekty binarne (BLOB) muszą jednak różnego traktowania, ponieważ zawierają one gigabajtów danych, który nie może się znajdować w jednym wierszu. **Command.ExecuteReader** metoda ma przeciążenia, które będą miały <xref:System.Data.CommandBehavior> argumentu, aby zmodyfikować domyślne zachowanie **DataReader**. Możesz przekazać <xref:System.Data.CommandBehavior.SequentialAccess> do **ExecuteReader** metodę, aby zmodyfikować domyślne zachowanie **DataReader** tak, aby zamiast ładowania wierszy danych, będzie on ładować dane sekwencyjnie po otrzymaniu. Jest to idealne rozwiązanie w przypadku ładowania obiektów blob lub innych struktur dużych ilości danych. Należy pamiętać, że takie zachowanie może zależeć od źródła danych. Na przykład zwracając obiekt BLOB z programu Microsoft Access załaduje cały obiekt BLOB ładowany do pamięci, a nie po kolei, gdy są odbierane.  
   
- Podczas ustawiania **DataReader** do używania **SequentialAccess**, ważne jest, aby Zanotuj sekwencję dostęp pola zwracane. Domyślne zachowanie **DataReader**, który ładuje cały wiersz, jak jest dostępna, pozwala na dostęp pola zwrócona w dowolnej kolejności, dopóki nie jest do odczytu następnego wiersza. Korzystając z **SequentialAccess** musi jednak dostęp do pola zwrócony przez **DataReader** w kolejności. Na przykład jeśli zapytanie zwraca trzy kolumny, trzecia jest obiektem BLOB, musi zwracać wartości pól pierwszego i drugiego przed uzyskaniem dostępu do danych obiektów BLOB w trzecim polu. Jeśli dostęp do trzecim polu przed pierwszym lub drugim pól wartości pól pierwszego i drugiego nie będą dostępne. Jest to spowodowane **SequentialAccess** został zmodyfikowany **DataReader** zwrócić dane w sekwencji i dane nie są dostępne po **DataReader** ma odczytu poza go.  
+ Podczas ustawiania **DataReader** używać **SequentialAccess**, należy zauważyć kolejność, w którym uzyskujesz dostęp do pola, zwracany jest. Domyślne zachowanie **DataReader**, który ładuje cały wiersz, jak jest dostępna, umożliwia dostęp do pola, zwracany w dowolnej kolejności, dopóki nie jest do odczytu następnego wiersza. Korzystając z **SequentialAccess** musi jednak dostęp do pola, zwracany przez **DataReader** w kolejności. Na przykład jeśli zapytanie zwraca trzy kolumny, w trzeciej jest obiektem BLOB, przed uzyskaniem dostępu do danych obiektów BLOB w trzecim polu musi zwracać wartości pól pierwszego i drugiego. Jeśli uzyskujesz dostęp do trzecim polu przed pola pierwszej lub drugiej, wartości pierwszego i drugiego pola nie są już dostępne. Jest to spowodowane **SequentialAccess** zmodyfikował **DataReader** zwrócić dane w kolejności i dane nie są dostępne po **DataReader** zapoznał się poza jej.  
   
- Podczas uzyskiwania dostępu do danych w polu obiektów BLOB, użyj **GetBytes** lub **GetChars** wpisane metod dostępu **DataReader**, który wypełnił tablicy z danymi. Można również użyć **GetString** danych znakowych; jednak. Aby oszczędzać zasoby systemu nie można załadować całą wartość obiektu BLOB do zmiennej będący pojedynczym ciągiem. Zamiast tego można określić rozmiar buforu określonych danych do zwrócenia i początkową lokalizację pierwszego bajtu lub znaków do odczytu zwróconych danych. **GetBytes** i **GetChars** zwróci `long` wartość, która reprezentuje liczbę bajtów lub znaki zwrócone. W przypadku przekazania tablicy o wartości null do **GetBytes** lub **GetChars**, długo wartość zwracana będzie całkowitą liczbę bajtów lub znaków w obiekcie BLOB. Opcjonalnie można określić indeks w tablicy jako pozycja początkowa dla odczytywane dane.  
+ Podczas uzyskiwania dostępu do danych w polu obiektów BLOB, użyj **GetBytes** lub **GetChars** wpisane metod dostępu **DataReader**, który Wypełnij tablicę przy użyciu danych. Można również użyć **GetString —** danych znakowych; jednak. pozwala zaoszczędzić zasoby systemowe nie można załadować całą wartość obiektu BLOB do zmiennej pojedynczy ciąg. Zamiast tego można określić rozmiar buforu określone dane zwracane i początkową lokalizację pierwszego bajtu lub znaków do odczytu zwracanych danych. **GetBytes** i **GetChars** zwróci `long` wartość, która reprezentuje liczbę bajtów lub znaków, zwracane. W przypadku przekazania tablicę o wartości null do **GetBytes** lub **GetChars**, długa wartość zwracana będzie całkowita liczba bajtów lub znaków w obiekcie BLOB. Opcjonalnie możesz określić indeks w tablicy jako pozycja początkowa odczytywanych danych.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład zwraca identyfikator wydawcy i logo z **pubs** przykładową bazą danych programu Microsoft SQL Server. Identyfikator wydawcy (`pub_id`) jest polem znaku i logo to obraz, który jest obiektem BLOB. Ponieważ **logo** pole jest mapą bitową, przykładzie zwraca dane binarne przy użyciu **GetBytes**. Zwróć uwagę, że identyfikator wydawcy jest dostępne dla bieżącego wiersza danych przed logo, ponieważ pola muszą być dostępne po kolei.  
+ Poniższy przykład zwraca identyfikator wydawcy i logo z **pubs** przykładowej bazy danych w programie Microsoft SQL Server. Identyfikator wydawcy (`pub_id`) jest polem znak i logo obraz, który jest obiektem BLOB. Ponieważ **logo** pole jest mapy bitowej, w przykładzie zwracany jest przy użyciu danych binarnych **GetBytes**. Należy zauważyć, że identyfikator wydawcy jest dostępne dla bieżącego wiersza danych przed logo, ponieważ pola, które muszą być dostępne po kolei.  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection object.  
@@ -154,6 +154,6 @@ connection.Close();
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Praca z DataReaders](http://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)  
+ [Praca z DataReaders](https://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)  
  [Dane binarne i dużej wartości w programie SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

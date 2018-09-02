@@ -2,12 +2,12 @@
 title: Mapowanie między formatami JSON i XML
 ms.date: 03/30/2017
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-ms.openlocfilehash: e8cc356a30d11a6f07cf4444efbeda2faf5b0471
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 079ca9cebefcc96bffdb0ec4601a675ed83adefe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931472"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421726"
 ---
 # <a name="mapping-between-json-and-xml"></a>Mapowanie między formatami JSON i XML
 Czytniki i moduły zapisujące są produkowane przez <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> dostarczać interfejs API XML nad zawartością JavaScript Object Notation (JSON). JSON koduje dane za pomocą podzestawu literałów obiektu języka JavaScript. Czytniki i moduły zapisujące, generowane przez tę fabrykę są również używane podczas zawartość JSON jest wysyłane lub odbierane przez Windows Communication Foundation (WCF) aplikacji przy użyciu <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> lub <xref:System.ServiceModel.WebHttpBinding>.  
@@ -38,7 +38,7 @@ Czytniki i moduły zapisujące są produkowane przez <xref:System.Runtime.Serial
  Ponadto jeśli komunikat JSON w przykładzie jest odbierany przez architekturę WCF i rejestrowany, zobacz fragment XML w poprzednim dziennika.  
   
 ## <a name="mapping-between-json-and-the-xml-infoset"></a>Mapowanie między formatami JSON i zestaw informacji XML  
- Formalnie, mapowanie jest między JSON, zgodnie z opisem w [RFC 4627](http://go.microsoft.com/fwlink/?LinkId=98808) (z wyjątkiem z pewnymi ograniczeniami swobodna i niektóre inne ograniczenia, które dodano) oraz XML zestaw informacji (i nie tekstowych XML) jako opisanych w [informacji XML Ustaw](http://go.microsoft.com/fwlink/?LinkId=98809) . Zobacz ten temat, aby uzyskać definicje *elementy informacji* i pól w [kwadratowych].  
+ Formalnie, mapowanie jest między JSON, zgodnie z opisem w [RFC 4627](https://go.microsoft.com/fwlink/?LinkId=98808) (z wyjątkiem z pewnymi ograniczeniami swobodna i niektóre inne ograniczenia, które dodano) oraz XML zestaw informacji (i nie tekstowych XML) jako opisanych w [informacji XML Ustaw](https://go.microsoft.com/fwlink/?LinkId=98809) . Zobacz ten temat, aby uzyskać definicje *elementy informacji* i pól w [kwadratowych].  
   
  Pusty dokument JSON mapowany na pusty dokument XML, a pusty dokument XML jest mapowany na pusty dokument JSON. W pliku XML do mapowania JSON poprzedzających biały znak i końcowe biały znak po dokumentu nie są dozwolone.  
   

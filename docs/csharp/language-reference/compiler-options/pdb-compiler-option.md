@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pdb compiler option [C#]
 - /pdb compiler option [C#]
 ms.assetid: e9d0f96a-5b75-45d6-9765-92538dd5f823
-ms.openlocfilehash: 9f8158ec0d8de2b9249c4f69830c37480c34b390
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dc7ea6aae6aa429efdf1a2dca23a3d679cb21fb7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217431"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418468"
 ---
 # <a name="-pdb-c-compiler-options"></a>-pdb (opcje kompilatora C#)
 **- Pdb** — opcja kompilatora Określa nazwę i lokalizację pliku symboli debugowania.  
@@ -29,19 +29,20 @@ ms.locfileid: "33217431"
  Nazwa i lokalizacja pliku symboli debugowania.  
   
 ## <a name="remarks"></a>Uwagi  
- Po określeniu [-debug (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/debug-compiler-option.md), kompilator utworzy plik PDB w tym samym katalogu, gdy kompilator spowoduje utworzenie pliku wyjściowego (.exe lub .dll) przy użyciu nazwy pliku, która jest taka sama jak nazwa pliku wyjściowego.  
+ Po określeniu [-debug (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/debug-compiler-option.md), kompilator utworzy plik .pdb w tym samym katalogu, gdzie kompilator utworzy plik wyjściowy (.exe lub .dll) przy użyciu nazwy pliku, która jest taka sama jak nazwa pliku wyjściowego.  
   
- **-pdb** pozwala określić nazwę pliku innych niż domyślne i lokalizację pliku PDB.  
+ **-pdb** służy do określania plików innych niż domyślne nazwę i lokalizację pliku .pdb.  
   
- Tej opcji kompilatora nie można ustawić w środowisku programowania Visual Studio i nie można go zmienić programowo.  
+ Nie można ustawić tę opcję kompilatora w środowisku programowania Visual Studio i nie można go zmienić programowo.  
   
 ## <a name="example"></a>Przykład  
- Kompiluj `t.cs` i Utwórz plik PDB o nazwie tt.pdb:  
+ Skompilować `t.cs` i tworzenie pliku .pdb o nazwie tt.pdb:  
   
 ```console  
 csc -debug -pdb:tt t.cs  
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

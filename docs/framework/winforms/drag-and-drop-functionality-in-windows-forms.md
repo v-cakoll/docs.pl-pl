@@ -5,43 +5,43 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
-ms.openlocfilehash: c43d5ad9203afad67601d9e36447db7c49a5a98e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1189da9fa0b76ede3261cf6da5305a09147bba5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539403"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43452989"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Funkcjonalność przeciągania i upuszczania w formularzach systemu Windows
-Formularze systemu Windows zawiera zestaw metod, zdarzeń i klasy, które implementują zachowanie przeciągania i upuszczania. Ten temat zawiera omówienie obsługi przeciągania i upuszczania w formularzach systemu Windows.  Zobacz też [operacji przeciągania i upuszczania oraz Obsługa schowka](http://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).  
+Windows Forms zawiera zestaw metod, zdarzeń i klasy, które implementują zachowanie przeciągnij i upuść. Ten temat zawiera omówienie obsługi przeciągania i upuszczania w formularzach Windows Forms.  Zobacz też [operacji przeciągania i upuszczania oraz Obsługa schowka](https://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).  
   
 ## <a name="performing-drag-and-drop-operations"></a>Wykonywanie operacji przeciągania i upuszczania  
- Aby wykonać operację przeciągania i upuszczania, należy użyć <xref:System.Windows.Forms.Control.DoDragDrop%2A> metody <xref:System.Windows.Forms.Control> klasy. Aby uzyskać więcej informacji o sposobie wykonywana jest operacja przeciągania i upuszczania, zobacz <xref:System.Windows.Forms.Control.DoDragDrop%2A>. Aby uzyskać prostokąt wskaźnik myszy musi zostać przeciągnięty nad, zanim rozpocznie się wykonywanie operacji przeciągania i upuszczania, należy użyć <xref:System.Windows.Forms.SystemInformation.DragSize%2A> właściwość <xref:System.Windows.Forms.SystemInformation> klasy.  
+ Aby wykonać operację przeciągania i upuszczania, należy użyć <xref:System.Windows.Forms.Control.DoDragDrop%2A> metody <xref:System.Windows.Forms.Control> klasy. Aby uzyskać więcej informacji na temat sposobu wykonywana jest operacja przeciągania i upuszczania, zobacz <xref:System.Windows.Forms.Control.DoDragDrop%2A>. Aby uzyskać prostokąt, w którym muszą zostać przeciągnięte wskaźnik myszy nad, przed rozpoczęciem operacji przeciągania i upuszczania, użyj <xref:System.Windows.Forms.SystemInformation.DragSize%2A> właściwość <xref:System.Windows.Forms.SystemInformation> klasy.  
   
 ## <a name="events-related-to-drag-and-drop-operations"></a>Zdarzenia związane z operacjami przeciągania i upuszczania  
- Istnieją dwie kategorie zdarzeń w operacji przeciągania i upuszczania: bieżący element docelowy operacji przeciągania i upuszczania zdarzeń i zdarzenia występujące w źródle operacji przeciągania i upuszczania.  
+ Istnieją dwie kategorie zdarzeń podczas operacji przeciągania i upuszczania: wydarzenia, występujących na bieżący obiekt docelowy operacji przeciągania i upuszczania oraz zdarzeń występujących w źródle operacji przeciągania i upuszczania.  
   
-### <a name="events-on-the-current-target"></a>Zdarzenia na bieżącą lokalizację docelową.  
- W poniższej tabeli przedstawiono zdarzeń występujących na bieżący element docelowy operacji przeciągania i upuszczania.  
+### <a name="events-on-the-current-target"></a>Zdarzenia w bieżącym elemencie docelowym  
+ W poniższej tabeli przedstawiono zdarzenia, które wystąpiły na bieżący obiekt docelowy operacji przeciągania i upuszczania.  
   
 |Zdarzenia myszy|Opis|  
 |-----------------|-----------------|  
-|<xref:System.Windows.Forms.Control.DragEnter>|To zdarzenie występuje, gdy obiekt zostanie przeciągnięty do granice formantu. Program obsługi dla tego zdarzenia odbiera argumentu typu <xref:System.Windows.Forms.DragEventArgs>.|  
+|<xref:System.Windows.Forms.Control.DragEnter>|To zdarzenie występuje po przeciągnięciu obiektu w granice formantu. Program obsługi dla tego zdarzenia odbiera argumentu typu <xref:System.Windows.Forms.DragEventArgs>.|  
 |<xref:System.Windows.Forms.Control.DragOver>|To zdarzenie występuje, gdy obiekt zostanie przeciągnięty, gdy wskaźnik myszy znajduje się w granicach formantu. Program obsługi dla tego zdarzenia odbiera argumentu typu <xref:System.Windows.Forms.DragEventArgs>.|  
 |<xref:System.Windows.Forms.Control.DragDrop>|To zdarzenie występuje po zakończeniu operacji przeciągania i upuszczania. Program obsługi dla tego zdarzenia odbiera argumentu typu <xref:System.Windows.Forms.DragEventArgs>.|  
 |<xref:System.Windows.Forms.Control.DragLeave>|To zdarzenie występuje, gdy obiekt zostanie przeciągnięty poza granice formantu. Program obsługi dla tego zdarzenia odbiera argumentu typu <xref:System.EventArgs>.|  
   
- <xref:System.Windows.Forms.DragEventArgs> Klasy zawiera lokalizację wskaźnika myszy, bieżący stan przycisku myszy i klawisze modyfikujące klawiatury, dane przeciągane, i <xref:System.Windows.Forms.DragDropEffects> wartości, które określają operacje dozwolone przez źródło zdarzenia przeciągania i efekt listy docelowej dla tej operacji.  
+ <xref:System.Windows.Forms.DragEventArgs> Klasy zawiera lokalizację wskaźnika myszy, bieżący stan przycisków myszy i klawisze modyfikujące klawiatury danych przeciąganie, i <xref:System.Windows.Forms.DragDropEffects> wartości, które określają dozwolone przez źródło zdarzenia przeciągania operacje i efekt listy docelowej dla tej operacji.  
   
 ### <a name="events-on-the-source"></a>Zdarzenia w źródle  
- W poniższej tabeli przedstawiono zdarzenia, które występują w źródle operacji przeciągania i upuszczania.  
+ W poniższej tabeli przedstawiono zdarzeń występujących w źródle operacji przeciągania i upuszczania.  
   
 |Zdarzenia myszy|Opis|  
 |-----------------|-----------------|  
-|<xref:System.Windows.Forms.Control.GiveFeedback>|To zdarzenie występuje podczas operacji przeciągania. Zapewnia możliwość zapewniają wizualnie do użytkownika, który występuje operacji przeciągania i upuszczania, takie jak zmiana wskaźnik myszy. Program obsługi dla tego zdarzenia odbiera argumentu typu <xref:System.Windows.Forms.GiveFeedbackEventArgs>.|  
-|<xref:System.Windows.Forms.Control.QueryContinueDrag>|To zdarzenie jest wywoływane podczas operacji przeciągania i upuszczania i umożliwia źródła przeciągania określić, czy można anulować operację przeciągania i upuszczania. Program obsługi dla tego zdarzenia odbiera argumentu typu <xref:System.Windows.Forms.QueryContinueDragEventArgs>.|  
+|<xref:System.Windows.Forms.Control.GiveFeedback>|To zdarzenie występuje podczas operacji przeciągania. Zapewnia możliwość oferowanie wizualną użytkownika, który występuje operacji przeciągania i upuszczania, takiej jak zmiana wartości wskaźnika myszy. Program obsługi dla tego zdarzenia odbiera argumentu typu <xref:System.Windows.Forms.GiveFeedbackEventArgs>.|  
+|<xref:System.Windows.Forms.Control.QueryContinueDrag>|To zdarzenie jest wywoływane podczas operacji przeciągania i upuszczania oraz umożliwia źródłom przeciągania określenie, czy operacja przeciągania i upuszczania powinna zostać anulowana. Program obsługi dla tego zdarzenia odbiera argumentu typu <xref:System.Windows.Forms.QueryContinueDragEventArgs>.|  
   
- <xref:System.Windows.Forms.QueryContinueDragEventArgs> Klasy podaje bieżący stan myszy przycisków i klawisze modyfikujące klawiatury, wartość określającą, czy został naciśnięty klawisz ESC, a <xref:System.Windows.Forms.DragAction> wartości, który można ustawić, aby określić, czy należy kontynuować operację przeciągania i upuszczania.  
+ <xref:System.Windows.Forms.QueryContinueDragEventArgs> Klasy zawiera bieżący stan myszą przycisków i klawisze modyfikujące klawiatury wartość określającą, czy został naciśnięty klawisz ESC, a <xref:System.Windows.Forms.DragAction> wartości, które można ustawić, aby określić, czy należy kontynuować operacji przeciągania i upuszczania.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzanie za pomocą myszy w aplikacjach Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

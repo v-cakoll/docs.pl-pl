@@ -2,12 +2,12 @@
 title: Jak artykułów (Przewodnik C#)
 description: Szybkie wskazówki i przykłady kodu krótki, ukierunkowane kolekcję
 ms.date: 12/20/2017
-ms.openlocfilehash: db3ba1982a26097c3d69ba91493164c8f2371be9
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 86e245873c8316cc4ddd52fe59a06f2cac648e6c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999566"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421200"
 ---
 # <a name="how-to-c"></a>Instrukcje (C#)
 
@@ -21,7 +21,7 @@ Istnieje kilka porady i wskazówki, które są wspólne praktyki dla deweloperó
 - [Dowiedz się, różnice między przekazywaniem struktury i klasy do metody](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md).
 - [Jak używać wyrażeń lambda](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md).
 - [Rozwiązać konflikty nazw typu za pomocą aliasu globalna przestrzeń nazw](../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).
-- [Przeciążanie operatora użyj](../programming-guide/statements-expressions-operators/how-to-use-operator-overloading-to-create-a-complex-number-class.md).
+- [Przeciążanie operatora użyj](../language-reference/keywords/operator.md).
 - [Implementowanie i wywołanie niestandardowej metody rozszerzenia](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).
 - Chcieć nawet języku C# programistów [użyj `My` przestrzeni nazw z VB](../programming-guide/namespaces/how-to-use-the-my-namespace.md).
 - [Utwórz nową metodę `enum` typu przy użyciu metody rozszerzenia](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).

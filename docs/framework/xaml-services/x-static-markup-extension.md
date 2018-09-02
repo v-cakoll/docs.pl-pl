@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-ms.openlocfilehash: 980bf6a1bdb19afd5c8d3c798d31037ab8cd7086
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a14b00fe762d325028072cd0ea3eecf9b9206e3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33565582"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423989"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static — Rozszerzenie znaczników
-Odwołuje się do dowolnej jednostki kodu przez wartość statyczną, która jest zdefiniowana w [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]— sposób zgodne. Właściwość statyczna, do którego odwołuje się może służyć do zapewnienia wartości właściwości w języku XAML.  
+Odwołuje się do dowolnej jednostki kodu przez wartość statyczną, która jest zdefiniowana w [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]— sposób zgodne. Właściwość statyczna, do którego istnieje odwołanie może służyć do zapewnienia wartości właściwości w XAML.  
   
 ## <a name="xaml-attribute-usage"></a>Użycie atrybutu języka XAML  
   
@@ -28,53 +28,59 @@ Odwołuje się do dowolnej jednostki kodu przez wartość statyczną, która jes
   
 ## <a name="xaml-values"></a>Wartości XAML  
   
-|||  
+| | |  
 |-|-|  
-|`prefix`|Opcjonalna. Prefiks, który odwołuje się do mapowanej, innej niż domyślna przestrzeń nazw XAML. `prefix` pokazano jawnie użycia, ponieważ odwołuje się rzadko statycznej właściwości, które pochodzą z domyślnej przestrzeni nazw XAML. Zobacz uwagi.|  
-|`typeName`|Wymagana. Nazwa typu, który definiuje żądany statycznego elementu członkowskiego.|  
-|`staticMemberName`|Wymagana. Nazwa elementu członkowskiego żądaną wartość statyczną (stałą, właściwość statyczna, pole lub wartością wyliczenia).|  
+|`prefix`|Opcjonalna. Prefiks, który odwołuje się do przestrzeni nazw XAML zamapowany, innych niż domyślne. `prefix` przedstawiono jawnie na użycie ponieważ właściwości statyczne, które pochodzą z domyślną przestrzeń nazw XAML odwołujesz się rzadko. Zobacz uwagi.|  
+|`typeName`|Wymagane. Nazwa typu, który definiuje żądany statyczny element członkowski.|  
+|`staticMemberName`|Wymagane. Nazwa elementu członkowskiego żądaną wartość statyczną (stałą, statycznej właściwości, pola lub wartości wyliczenia).|  
   
 ## <a name="remarks"></a>Uwagi  
- Jednostek kodu, do którego odwołuje się musi być jedną z następujących czynności:  
+
+Jednostki kodu, do którego odwołuje się musi mieć jedną z następujących czynności:  
   
--   Stała  
-  
+-   — Stała  
 -   Właściwość statyczna  
-  
 -   Pola  
+-   Wartość wyliczenia
+
+Określanie innej jednostki kodu, takich jak niestatycznej właściwości powoduje błąd w czasie kompilacji, jeśli XAML jest skompilowany kod znaczników lub wyjątek analizy w czasie ładowania XAML.  
+
+Możesz wprowadzić `x:Static` odwołania do statycznego pola lub właściwości, które nie znajdują się w domyślnej przestrzeni nazw XAML dla bieżącego dokumentu XAML; jednak wymaga to mapowanie prefiksu. Przestrzenie nazw XAML prawie zawsze są definiowane w elemencie głównym dokumentu XAML.  
+
+Można wykonać operacji wyszukiwania dla właściwości statyczne przez usług programu .NET Framework XAML i XAML czytniki i moduły zapisujące XAML, uruchamianego z domyślny kontekst schematu XAML. Ten kontekst schematu XAML umożliwia artości niezbędne statyczne konstruowania wykresu obiektu CLR odbicia. `typeName` Określ jest faktycznie XAML nazwę typu, nie nazwę typu CLR, mimo że są zasadniczo taką samą nazwę, korzystając z domyślny kontekst schematu XAML lub w przypadku używania wszystkich istniejących środowisk opartych na CLR XAML — Implementowanie.  
+
+Należy zachować ostrożność podczas wprowadzania `x:Static` odwołań, które nie są bezpośrednio typ wartości właściwości. W XAML przetwarzania sekwencji, podane wartości z rozszerzeniem znacznika nie wywołać konwersja dodatkowe wartości. Ta zasada obowiązuje nawet wtedy, gdy Twoje `x:Static` odwołanie tworzy ciąg tekstowy i konwersji wartości dla wartości atrybutów oparte na ciąg tekstowy zazwyczaj występuje dla tego określonego członka lub dowolnej wartości elementów członkowskich typu zwracanego.  
+
+Składnią atrybutu jest składnia najczęściej używana z tym rozszerzeniem znacznika. Token ciągu podawany po `x:Static` ciągu identyfikatora jest przypisany jako <xref:System.Windows.Markup.StaticExtension.Member%2A> wartości elementu bazowego <xref:System.Windows.Markup.StaticExtension> rozszerzenie klasy.  
+
+Istnieją dwa inne zastosowania XAML, które są technicznie możliwa. Jednak te zastosowania są mniej typowe, ponieważ są one niepotrzebne powielenie informacji:  
+
+1.  Składnia elementu obiektu.
+
+    ```xaml
+    <x:Static Member="prefix:typeName.staticMemberName" ... />
+    ```
+
+2.  Atrybut składni z jawną właściwością elementu członkowskiego dla ciągu inicjującego.
+
+    ```xaml
+    <object property="{x:Static Member=prefix:typeName.staticMemberName}" ... />
+    ```
+
+W implementacji .NET Framework XAML Services obsługi dla tego rozszerzenia znacznika jest definiowany przez <xref:System.Windows.Markup.StaticExtension> klasy.  
+
+`x:Static` jest rozszerzeniem znacznika. Wszystkie rozszerzenia znaczników w XAML użyj `{` i `}` znaków w składni swoich atrybutów, które jest do Konwencja, za pomocą którego procesor XAML rozpoznaje, że rozszerzenie znaczników należy podać wartość. Aby uzyskać więcej informacji na temat rozszerzenia znaczników, zobacz [rozszerzenia znaczników dla przeglądu XAML](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
   
--   Wartość wyliczenia  
+## <a name="wpf-usage-notes"></a>Uwagi dotyczące użytkowania WPF  
+ Domyślna przestrzeń nazw XAML, użyj dla programowania WPF nie zawiera wiele użytecznych właściwości statycznej, a większość użytecznych właściwości statycznej obsługuje takie jak konwerterów typów, które ułatwiają użycie bez konieczności `{x:Static}` . W przypadku statycznej właściwości możesz zamapować prefiksu dla przestrzeni nazw XAML, jeśli jest spełniony jeden z następujących czynności:  
   
- Określenie żadnych innych jednostek kodu, takie jak niestatycznej właściwości, powoduje błąd kompilacji, jeśli XAML jest kompilacji znaczników lub wyjątek analizy czas ładowania XAML.  
-  
- Możesz wprowadzić `x:Static` odwołania do statycznego pola lub właściwości, które nie znajdują się w domyślnej przestrzeni nazw XAML dla bieżącego dokumentu XAML; jednak wymaga to mapowanie prefiksu. Przestrzeń nazw XAML prawie zawsze są definiowane dla elementu głównego dokumentu XAML.  
-  
- Operacje wyszukiwania dla właściwości statyczne może zostać przeprowadzone przez usług .NET Framework XAML i czytników XAML i zapisywania XAML działają domyślny kontekst schematu XAML. Ten kontekst schematu XAML służy odbicia CLR do zapewnienia niezbędnych wartości statyczne Tworzenie wykresu obiektu. `typeName` Określ jest rzeczywiście XAML nazwę typu, nie nazwę typu CLR, chociaż są zasadniczo taką samą nazwę, używając domyślny kontekst schematu XAML lub w przypadku używania wszystkich istniejących struktur opartych na CLR XAML — wdrażanie.  
-  
- Należy zachować ostrożność podczas wprowadzania `x:Static` odwołań, które nie są bezpośrednio typ wartości właściwości. W kodzie XAML przetwarzania udostępnia wartości z rozszerzeniem znacznika sekwencji nie wywołuj konwersja dodatkowe wartości. Dotyczy to nawet wtedy, gdy Twoje `x:Static` odwołanie tworzy ciąg tekstowy, a konwersja wartości dla wartości atrybutu oparte na ciąg tekstowy zwykle odbywa się dla tego określonego elementu członkowskiego lub dla każdej wartości elementu członkowskiego typu zwracanego.  
-  
- Składnią atrybutu jest składnia najczęściej używana z tym rozszerzeniem znacznika. Token ciągu po `x:Static` przypisany jako identyfikator ciągu <xref:System.Windows.Markup.StaticExtension.Member%2A> wartości podstawowych <xref:System.Windows.Markup.StaticExtension> rozszerzenie klasy.  
-  
- Istnieją dwa inne użycia XAML, które są często technicznie możliwa. Jednak te użycia są mniej typowe, ponieważ są one niepotrzebnie pełne:  
-  
- **Składnia elementu obiektu:** `<x:Static Member="` `prefix` `:` `typeName` `.` `staticMemberName` `" .../>`  
-  
- **Składnia atrybutów z jawną właściwość elementu członkowskiego dla ciągu inicjującego:** `<` `object` `` `property` `="{x:Static Member=` `prefix` `:` `typeName` `.` `staticMemberName` `}" .../>`  
-  
- W implementacji usług .NET Framework XAML obsługę tego rozszerzenia znacznika jest definiowana za pomocą <xref:System.Windows.Markup.StaticExtension> klasy.  
-  
- `x:Static` to rozszerzenie znacznika. Wszystkie rozszerzenia znaczników w XAML, użyj `{` i `}` znaków w ich składni atrybutu Konwencji, za pomocą którego procesora XAML rozpoznaje, że rozszerzenie znaczników należy podać wartość. Aby uzyskać więcej informacji na temat rozszerzeń znaczników, zobacz [rozszerzenia znaczników dla przeglądu XAML](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
-  
-## <a name="wpf-usage-notes"></a>Uwagi dotyczące użycia WPF  
- Domyślna przestrzeń nazw XAML, użyj programowania WPF nie zawiera wiele przydatnych właściwości statycznej, a najbardziej przydatne właściwości statyczne obsługuje takie jak konwertery typu, które ułatwiają bez konieczności użycia `{x:Static}` . W przypadku statycznej właściwości należy zamapować prefiksu dla przestrzeni nazw XAML po spełnieniu jednego z następujących warunków:  
-  
--   Odwołanie do typu, który istnieje w WPF, ale nie jest częścią domyślnej przestrzeni nazw XAML WPF ([!INCLUDE[TLA#tla_wpfxmlnsv1](../../../includes/tlasharptla-wpfxmlnsv1-md.md)]). To jest dość typowy scenariusz dla przy użyciu `x:Static`. Na przykład może użyć `x:Static` odwołanie z mapowania przestrzeni nazw XAML, aby <xref:System> przestrzeni nazw i mscorlib Zestaw CLR aby odwołanie statycznej właściwości <xref:System.Environment> klasy.  
+-   Utworzono odwołanie do typu, który istnieje w WPF, ale nie jest częścią domyślnej przestrzeni nazw XAML dla WPF ([!INCLUDE[TLA#tla_wpfxmlnsv1](../../../includes/tlasharptla-wpfxmlnsv1-md.md)]). Jest to dość typowy scenariusz używania `x:Static`. Na przykład, można na przykład `x:Static` odwołania za pomocą mapowania przestrzeni nazw XAML, aby <xref:System> zestaw przestrzeni nazw i mscorlib CLR aby odwołanie statyczne właściwości <xref:System.Environment> klasy.  
   
 -   Z niestandardowego zestawu odwołuje się do typu.  
   
--   Odwołujesz się do typu, który istnieje w zestawie WPF, ale ten typ znajduje się w przestrzeni nazw CLR, który nie został zmapowany jako część domyślnej WPF XAML przestrzeni nazw. Mapowanie przestrzeni nazw CLR w domyślnej przestrzeni nazw XAML dla WPF jest wykonywane przez definicje w różnych zestawach WPF (Aby uzyskać więcej informacji dotyczących tej reguły, zobacz [przestrzeń nazw XAML i Namespace mapowanie dla WPF XAML](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)). Mapowane bez nazw CLR może istnieć, jeśli tej przestrzeni nazw CLR składa się przede wszystkim z definicje klas, które nie są zwykle przeznaczone dla XAML, takich jak <xref:System.Windows.Threading>.  
+-   Utworzono odwołanie do typu, który istnieje w zestawie WPF, jednak, że typ znajduje się w przestrzeni nazw CLR, który nie został zmapowany jako część domyślnej WPF XAML przestrzeni nazw. Mapowanie przestrzeni nazw CLR do domyślnej przestrzeni nazw XAML dla WPF odbywa się przez definicje w różnych zestawach WPF (Aby uzyskać więcej informacji dotyczących tej reguły, zobacz [przestrzeń nazw XAML i mapowanie Namespace dla WPF XAML](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)). Zamapowane bez przestrzeni nazw CLR może istnieć, jeśli przestrzeń nazw CLR składa się głównie z definicji klas, które nie są zwykle przeznaczone dla XAML, takich jak <xref:System.Windows.Threading>.  
   
- Aby uzyskać więcej informacji na temat korzystania z prefiksami i przestrzeni nazw XAML dla WPF, zobacz [przestrzeń nazw XAML i Namespace mapowanie WPF XAML](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+ Aby uzyskać więcej informacji na temat korzystania z prefiksy i XAML w przestrzeni nazw dla WPF, zobacz [przestrzeni nazw XAML i Namespace mapowania dla WPF XAML](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [x:Type, rozszerzenie znaczników](../../../docs/framework/xaml-services/x-type-markup-extension.md)  

@@ -3,11 +3,11 @@ title: prywatny chroniony (odwołanie w C#)
 ms.date: 11/15/2017
 author: sputier
 ms.openlocfilehash: 4a4ee999fe932674e854b1428ab33b33bc71d2ad
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254341"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419537"
 ---
 # <a name="private-protected-c-reference"></a>prywatny chroniony (odwołanie w C#)
 

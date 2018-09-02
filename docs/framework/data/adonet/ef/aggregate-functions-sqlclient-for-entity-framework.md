@@ -1,50 +1,231 @@
 ---
-title: Funkcje agregujące (SqlClient Entity Framework)
+title: Funkcje agregujące (SqlClient programu Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 03303f01-b591-4efc-9875-f9c608edff0b
-ms.openlocfilehash: 558e9f8480dd69e2277603e9bb1013acfbc29467
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8ed9a58da9914724fe312876d6594cb526f2e0e9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763400"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43452902"
 ---
-# <a name="aggregate-functions-sqlclient-for-entity-framework"></a>Funkcje agregujące (SqlClient Entity Framework)
-.NET Framework Data Provider for SQL Server (SqlClient) zapewnia funkcje agregujące. Funkcje agregujące obliczeń na zestaw wartości wejściowych i zwracać wartość. Te funkcje są w obszarze nazw SqlServer, która jest dostępna, gdy używasz SqlClient. Właściwości przestrzeni nazw dostawcy umożliwia programu Entity Framework dowiedzieć się, które prefiks jest używany przez tego dostawcę dla określonych elementów składowych, takich jak typy i funkcje.  
+# <a name="aggregate-functions-sqlclient-for-entity-framework"></a>Funkcje agregujące (SqlClient programu Entity Framework)
+.NET Framework Data Provider for SQL Server (SqlClient) zapewnia funkcje agregujące. Funkcje agregujące wykonywanie obliczeń na zestaw wartości wejściowych i zwracają wartość. Te funkcje są w przestrzeni nazw SqlServer, który jest dostępny, gdy używasz SqlClient. Właściwość przestrzeni nazw dostawcy umożliwia programu Entity Framework dowiedzieć się, który prefiks jest używany przez tego dostawcę dla określonego konstrukcji, takich jak typy i funkcje.  
   
- W poniższej tabeli przedstawiono funkcje agregujące SqlClient.  
+ Dostępne są następujące funkcje agregujące SqlClient.  
+
+## <a name="avgexpression"></a>AVG(Expression)
+
+Zwraca średnią z wartości w kolekcji. Wartości null są ignorowane.
+
+**Argumenty**
+
+`Int32`, `Int64`, `Double`, I `Decimal`.
+
+**Wartość zwracana**
+
+Typ `expression`.
+
+**Przykład**
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_AVG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_avg)]
+ [!code-sql[DP EntityServices Concepts#SQLSERVER_AVG](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_avg)]
+
+## <a name="checksumaggcollection"></a>CHECKSUM_AGG(Collection)
+ 
+ Zwraca sumę kontrolną wartości w kolekcji. Wartości null są ignorowane.
+ 
+ **Argumenty**
+ 
+ Kolekcja (`Int32`).
+ 
+ **Wartość zwracana**
+ 
+ `Int32`.
+ 
+ **Przykład**
+ 
+ [!code-csharp[DP EntityServices Concepts#SQLSERVER_CHECKSUM](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_checksum)]
+ [!code-sql[DP EntityServices Concepts#SQLSERVER_CHECKSUM](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_checksum)]
+   
+## <a name="countexpression"></a>Count(Expression)
+
+Zwraca liczbę elementów w kolekcji jako `Int32`.
+
+**Argumenty**
+
+Kolekcja\<T >, gdzie T jest jednym z następujących typów:
+
+|   |   |   |   |
+|---|---|---|---|
+|`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
+|`Time`|`String`|`Binary`|`Guid` (nie jest zwracana w programie SQL Server 2000)|
+
+**Wartość zwracana**
+
+`Int32`.
+
+**Przykład**
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_COUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_count)]
+[! code-sql[SQLSERVER_COUNT # pojęcia EntityServices punktu dystrybucji](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_count)
+ 
+## <a name="countbigexpression"></a>COUNT_BIG(Expression)
+ 
+ Zwraca liczbę elementów w kolekcji jako `bigint`.
+ 
+ **Argumenty**
+ 
+ Collection(T), gdzie T jest jednym z następujących typów:
+ 
+ |   |   |   |   |
+|---|---|---|---|
+|`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
+|`Time`|`String`|`Binary`|`Guid` (nie jest zwracana w programie SQL Server 2000)|
+
+**Wartość zwracana**
+
+`Int64`.
+
+**Przykład**
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_COUNTBIG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_countbig)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_COUNTBIG](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_countbig)]
+
+## <a name="maxexpression"></a>MAX(Expression)
+
+Zwraca maksymalną wartość w kolekcji.
+
+**Argumenty**
+
+Collection(T), gdzie T jest jednym z następujących typów: 
+
+|   |   |   |   |
+|---|---|---|---|
+|`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
+|`Time`|`String`|`Binary`||
+
+**Wartość zwracana**
+
+Typ `expression`.
+
+**Przykład**
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_MAX](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_max)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_MAX](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_max)]
+
+## <a name="minexpression"></a>MIN(Expression)
+
+Zwraca minimalną wartość w kolekcji.
+
+**Argumenty**
+
+Collection(T), gdzie T jest jednym z następujących typów: 
+
+|   |   |   |   |
+|---|---|---|---|
+|`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
+|`Time`|`String`|`Binary`||
+
+**Wartość zwracana**
+
+Typ `expression`.
+
+**Przykład**
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_MIN](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_min)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_MIN](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_min)]
+
+## <a name="stdevexpression"></a>StDev(Expression)
+
+Zwraca statystyczne odchylenie standardowe wszystkich wartości określonego wyrażenia.
+
+**Argumenty**
+
+Kolekcja (`Double`).
+
+**Wartość zwracana**
+
+A `Double`.
+
+**Przykład**
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_STDEV](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_stdev)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_STDEV](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_stdev)]
+
+## <a name="stdevpexpression"></a>STDEVP(Expression)
+
+Zwraca statystyczne odchylenie standardowe populacji dla wszystkich wartości określonego wyrażenia.
+
+**Argumenty**
+
+Kolekcja (`Double`).
+
+**Wartość zwracana**
+
+A `Double`.
+
+**Przykład**
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_STDEVP](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_stdevp)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_STDEVP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_stdevp)]
+
+## <a name="sumexpression"></a>SUM(Expression)
+
+Zwraca sumę wszystkich wartości w kolekcji.
+
+**Argumenty**
+
+Collection(T), gdzie T jest jednym z następujących typów: `Int32`, `Int64`, `Double`, `Decimal`.
+
+**Wartość zwracana**
+
+Typ `expression`.
+
+**Przykład**
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_SUM](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_sum)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_SUM](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_sum)]
+
+## <a name="varexpression"></a>VAR(Expression)
+
+Zwraca statystyczną wariancję wszystkich wartości określonego wyrażenia.
+
+**Argumenty**
+
+Kolekcja (`Double`).
+
+**Wartość zwracana**
+
+A `Double`.
+
+**Przykład**
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_VAR](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_var)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_VAR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_var)]
+
+## <a name="varpexpression"></a>VARP(Expression)
+
+Zwraca statystyczne wariancję populacji dla wszystkich wartości podanego wyrażenia.
+
+**Argumenty**
+
+Kolekcja (`Double`).
+
+**Wartość zwracana**
+
+A `Double`.
+
+**Przykład**
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_VARP](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_varp)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_varp)] 
   
-|Funkcja|Opis|  
-|--------------|-----------------|  
-|`AVG(` `expression` `)`|Zwraca średnią z wartości w kolekcji.<br /><br /> Wartości null są ignorowane.<br /><br /> **Argumenty**<br /><br /> `Int32`, `Int64`, `Double`, I `Decimal`.<br /><br /> **Wartość zwracana**<br /><br /> Typ `expression`.<br /><br /> **Przykład**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_AVG](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_avg)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_AVG](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_avg)]|  
-|`CHECKSUM_AGG(` `collection` `)`|Zwraca sumę kontrolną wartości w kolekcji.<br /><br /> Wartości null są ignorowane.<br /><br /> **Argumenty**<br /><br /> Kolekcja (`Int32`).<br /><br /> **Wartość zwracana**<br /><br /> `Int32`.<br /><br /> **Przykład**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_CHECKSUM](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_checksum)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_CHECKSUM](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_checksum)]|  
-|`COUNT(` `expression` `)`|Zwraca liczbę elementów w kolekcji jako `Int32`.<br /><br /> **Argumenty**<br /><br /> Kolekcja T gdzie T jest jednym z następujących typów:<br /><br /> `Guid` (nie zwrócił programu SQL Server 2000)<br /><br /> `Boolean`, `Double`, `DateTime`, `DateTimeOffset`, `Time`, `String`, lub `Binary`.<br /><br /> **Wartość zwracana**<br /><br /> `Int32`.<br /><br /> **Przykład**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_COUNT](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_count)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_COUNT](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_count)]|  
-|`COUNT_BIG(` `expression` `)`|Zwraca liczbę elementów w kolekcji jako `bigint`.<br /><br /> **Argumenty**<br /><br /> Kolekcja T gdzie T jest jednym z następujących typów:<br /><br /> `Guid` (nie zwrócił programu SQL Server 2000), `Boolean`, `Double`, `DateTime`, `DateTimeOffset`, `Time`, `String`, lub `Binary`.<br /><br /> **Wartość zwracana**<br /><br /> `Int64`.<br /><br /> **Przykład**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_COUNTBIG](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_countbig)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_COUNTBIG](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_countbig)]|  
-|`MAX(` `expression` `)`|Zwraca maksymalną wartość w kolekcji.<br /><br /> **Argumenty**<br /><br /> Kolekcja T gdzie T jest jednym z następujących typów: `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time` , `String`, `Binary`.<br /><br /> **Wartość zwracana**<br /><br /> Typ `expression`.<br /><br /> **Przykład**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_MAX](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_max)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_MAX](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_max)]|  
-|`MIN(` `expression` `)`|Zwraca minimalną wartość w kolekcji.<br /><br /> **Argumenty**<br /><br /> Kolekcja T gdzie T jest jednym z następujących typów: `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time` , `String`,<br /><br /> `Binary`.<br /><br /> **Wartość zwracana**<br /><br /> Typ `expression`.<br /><br /> **Przykład**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_MIN](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_min)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_MIN](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_min)]|  
-|`STDEV(` `expression` `)`|Zwraca statystyczne odchylenie standardowe wszystkich wartości z określonego wyrażenia.<br /><br /> **Argumenty**<br /><br /> Kolekcja (`Double`).<br /><br /> **Wartość zwracana**<br /><br /> A `Double`.<br /><br /> **Przykład**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_STDEV](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_stdev)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_STDEV](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_stdev)]|  
-|`STDEVP(` `expression` `)`|Zwraca statystyczne odchylenie standardowe populacji dla wszystkich wartości w określonym wyrażeniu.<br /><br /> **Argumenty**<br /><br /> Kolekcja (`Double`).<br /><br /> **Wartość zwracana**<br /><br /> A `Double`.<br /><br /> **Przykład**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_STDEVP](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_stdevp)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_STDEVP](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_stdevp)]|  
-|`SUM(` `expression` `)`|Zwraca sumę wszystkich wartości w kolekcji.<br /><br /> **Argumenty**<br /><br /> Kolekcja T gdzie T jest jednym z następujących typów: `Int32`, `Int64`, `Double`, `Decimal`.<br /><br /> **Wartość zwracana**<br /><br /> Typ `expression`.<br /><br /> **Przykład**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_SUM](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_sum)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_SUM](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_sum)]|  
-|`VAR(` `expression` `)`|Zwraca statystyczną wariancję wszystkich wartości w określonym wyrażeniu.<br /><br /> **Argumenty**<br /><br /> Kolekcja (`Double`).<br /><br /> **Wartość zwracana**<br /><br /> A `Double`.<br /><br /> **Przykład**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_VAR](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_var)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_VAR](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_var)]|  
-|`VARP(` `expression` `)`|Zwraca statystyczne wariancję populacji dla wszystkich wartości w określonym wyrażeniu.<br /><br /> **Argumenty**<br /><br /> Kolekcja (`Double`).<br /><br /> **Wartość zwracana**<br /><br /> A `Double`.<br /><br /> **Przykład**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_VARP](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_varp)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_VARP](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_varp)]|  
+## <a name="see-also"></a>Zobacz także
+
+Aby uzyskać więcej informacji na temat funkcji agregujących, które obsługuje klient SQL zobacz dokumentację dla używanej wersji programu SQL Server określonego w manifeście dostawcy SqlClient:  
   
- Aby uzyskać więcej informacji o funkcji agregujących, które obsługuje klient SQL zobacz dokumentację dla używanej wersji programu SQL Server określona w manifeście dostawcy SqlClient:  
-  
-|SQL Server 2000|SQL Server 2005|SQL Server 2008|  
-|---------------------|---------------------|---------------------|  
-|[Funkcje agregujące (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=115906)|[Funkcje agregujące (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkID=115903)|[Funkcje agregujące (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=115907)|  
-  
-## <a name="see-also"></a>Zobacz też  
- [Jednostki języka SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
- [Funkcje agregujące Canonical](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)
+**SQL Server 2005**: [funkcje (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms173454(v=sql.90))  
+**Program SQL Server 2008 i nowsze wersje**: [funkcje agregujące (Transact-SQL)](/sql/t-sql/functions/aggregate-functions-transact-sql)  
+[Jednostki języka SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
+[Funkcje agregujące Canonical](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)

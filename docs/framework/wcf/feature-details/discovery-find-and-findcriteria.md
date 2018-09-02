@@ -2,52 +2,52 @@
 title: Odnajdywanie — znajdowanie i kryteria znajdowania
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: 70739647ac5904159b71121e86aa98e92981d4ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b2f679879bd3a32e770aa934f715dd70b4a2b5f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495323"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423326"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Odnajdywanie — znajdowanie i kryteria znajdowania
-Operacja find odnajdywania jest inicjowane przez klienta, aby dowiedzieć się, co najmniej jednej usługi i jest jednym z głównych działań podczas odnajdywania. Wykonywanie Znajdź wysyła komunikat sondowania usługi WS-Discovery za pośrednictwem sieci. Usługi, które spełniają kryteria określone odpowiedzi z wiadomości WS-Discovery ProbeMatch. Aby uzyskać więcej informacji na temat wiadomości odnajdywania, zobacz [specyfikacji WS-Discovery](http://go.microsoft.com/fwlink/?LinkID=122347).  
+Operacja Znajdź odnajdywania jest inicjowane przez klienta, aby dowiedzieć się, co najmniej jednej usługi i jest jednym z głównych działań podczas odnajdywania. Wykonywanie Znajdź wysyła komunikat sondowania usługi WS-Discovery za pośrednictwem sieci. Usługi, które spełniają kryteria określone odpowiedzi przy użyciu protokołu WS Discovery ProbeMatch komunikatów. Aby uzyskać więcej informacji na temat odnajdywania wiadomości zobacz [specyfikacji WS-Discovery](https://go.microsoft.com/fwlink/?LinkID=122347).  
   
-## <a name="discoveryclient"></a>Obiekt DiscoveryClient  
- <xref:System.ServiceModel.Discovery.DiscoveryClient> Klasa udostępnia mechanizm do wykonania operacji wyszukiwania i umożliwia wykonywanie operacji klienta odnajdywania łatwe. Zawiera on <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> metodę, która wykonuje (blokowanie) find synchroniczne, a <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A> metodę, która inicjuje nieblokujące znajdowanie asynchroniczne. Obie metody przyjmują <xref:System.ServiceModel.Discovery.FindCriteria> parametru i podaj wyniki za pośrednictwem <xref:System.ServiceModel.Discovery.FindResponse> obiektu.  
+## <a name="discoveryclient"></a>Klasa DiscoveryClient  
+ <xref:System.ServiceModel.Discovery.DiscoveryClient> Klasa udostępnia mechanizm do wykonywania operacji wyszukiwania i sprawia, że wykonywanie operacji klienta odnajdywania jest łatwe. Zawiera <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> metody, która wykonuje synchroniczne (blokowanie) Znajdź, a <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A> metody, która inicjuje nieblokującej na poziomie znajdowanie asynchroniczne. Obie metody przyjmują <xref:System.ServiceModel.Discovery.FindCriteria> parametru i podaj wyniki za pośrednictwem <xref:System.ServiceModel.Discovery.FindResponse> obiektu.  
   
 ## <a name="findcriteria"></a>Kryteria znajdowania  
- <xref:System.ServiceModel.Discovery.FindCriteria> ma kilka właściwości, które można grupować w kryteria wyszukiwania, które określają, jakie usługi, którego szukasz, oraz zapoznać się z kryteriów zakończenia (jak długo wyszukiwanie powinno trwać). A <xref:System.ServiceModel.Discovery.FindCriteria> może zawierać wiele kryteriów wyszukiwania. Domyślnie usługa musi odpowiadać wszystkich składników w przeciwnym razie go nie uważa się pasującego usługi. Jeśli chcesz znaleźć usługi spełniające tylko niektóre kryteria, można zaimplementować Znajdź niestandardowej logiki w usłudze lub można użyć wielu zapytań.  
+ <xref:System.ServiceModel.Discovery.FindCriteria> ma kilka właściwości, które mogą być grupowane w kryteria wyszukiwania, które określają, jakie usługi, którego szukasz, i Znajdź kryteriów zakończenia (ile wyszukiwanie powinno trwać). Element <xref:System.ServiceModel.Discovery.FindCriteria> może zawierać wiele kryteriów wyszukiwania. Domyślnie usługa ma do dopasowywania wszystkich składników w przeciwnym razie nie uważa się zgodnych usług. Jeśli chcesz znaleźć usługi spełniające tylko niektóre kryteria, można zaimplementować logikę niestandardowego wyszukiwania w usłudze, lub można użyć wielu zapytań.  
   
  Kryteria wyszukiwania, obejmują:  
   
--   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> -Opcjonalne. Nazwa kontraktu usługi wyszukane i kryteria zwykle używana podczas wyszukiwania dla usługi. Jeśli określono więcej niż jedną nazwę kontraktu, Odpowiedz, tylko punktów końcowych usługi dopasowania wszystkich umów. Należy pamiętać, że w programie WCF punktu końcowego może obsługiwać tylko jeden kontrakt.  
+-   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> — Opcjonalne. Nazwa kontraktu usługi wyszukane i kryteria zwykle używana podczas wyszukiwania dla usługi. Jeżeli określono więcej niż jedną nazwę kontraktu, Odpowiedz tylko punkty końcowe usługi dopasowanie wszystkich umów. Należy pamiętać, że w programie WCF punkt końcowy może obsługiwać tylko jednego kontraktu.  
   
--   <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> -Opcjonalne. Zakresy są bezwzględne klasyfikowania punktów końcowych usługi poszczególnych identyfikatorów URI. Możesz użyć tej funkcji w scenariuszach, w której wiele punktów końcowych narazić ten sam kontrakt, i chcesz sposobem wyszukiwania dla podzbioru punktów końcowych. Jeśli określono więcej niż jednego zakresu, Odpowiedz, tylko punktów końcowych usługi dopasowania wszystkich zakresów.  
+-   <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> — Opcjonalne. Zakresy są bezwzględne identyfikatory URI, które służą do kategoryzowania indywidualnych punktów końcowych usługi. Można skorzystać z tej w scenariuszach, gdzie wiele punktów końcowych udostępnić ten sam kontrakt i chcesz sposobem wyszukiwania dla podzbioru punktów końcowych. Jeżeli określono więcej niż jednego zakresu, Odpowiedz tylko punkty końcowe usługi dopasowanie wszystkich zakresów.  
   
--   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchBy%2A> — Określa algorytm dopasowania do użycia podczas dopasowywania zakresów w wiadomości sondy z tym punktem końcowym. Istnieją pięć obsługiwane reguły dopasowywania w zakresie:  
+-   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchBy%2A> -Określa algorytm dopasowania do użycia podczas dopasowywania zakresów w wiadomości sondy z tym punktem końcowym. Istnieje pięć obsługiwanych reguł dopasowania w zakresie:  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> rozróżniana wielkość liter podstawowego ciągu porównania.  
+    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> uwzględniana wielkość liter podstawowego ciągu porównania.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> dopasowań przez segmenty oddzielone "/". Wyszukiwanie http://contoso/building1 zgodny z zakresem usługi http://contoso/building/floor1. Należy pamiętać, że nie odpowiada http://contoso/building100 ponieważ ostatnie dwa segmenty nie są zgodne.  
+    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> Dopasowuje przez segmenty oddzielone "/". Wyszukiwanie http://contoso/building1 jest zgodny z zakresem usługi http://contoso/building/floor1. Należy zauważyć, że nie jest zgodny http://contoso/building100 ponieważ ostatnie dwa segmenty nie są zgodne.  
   
     -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> Dopasowuje zakresy segmentami przy użyciu adresu URL protokołu LDAP.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByUuid?displayProperty=nameWithType> Dopasowuje zakresy dokładnie przy użyciu ciągu identyfikatora UUID.  
+    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByUuid?displayProperty=nameWithType> Dopasowuje dokładnie za pomocą ciągu identyfikatora UUID zakresów.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByNone?displayProperty=nameWithType> jest zgodna tylko tych usług, które nie określają zakres.  
+    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByNone?displayProperty=nameWithType> zastępuje tylko te usługi, które nie określają zakres.  
   
-     Jeśli nie zostanie określona reguła dopasowywania zakresu, <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix> jest używany.  
+     Jeśli nie określono regułę dopasowania w zakresie, <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix> jest używany.  
   
- Kończenie działania obejmują:  
+ Kryteriów zakończenia obejmują:  
   
-1.  <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> -Maksymalny czas oczekiwania na odpowiedzi z usług w sieci. Czas domyślny to 20 sekund.  
+1.  <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> — Maksymalny czas oczekiwania na odpowiedzi z usług w sieci. Domyślny czas trwania wynosi 20 sekund.  
   
-2.  <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> -Maksymalną liczbę odpowiedzi oczekiwania. Jeśli <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> odpowiedzi są odbierane przed <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> upłynął zakończenia operacji wyszukiwania.  
+2.  <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> Maksymalna liczba odpowiedzi oczekiwania. Jeśli <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> odpowiedzi są odbierane przed <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> upłynął zakończenia operacji wyszukiwania.  
   
-## <a name="findresponse"></a>Obiektu FindResponse  
- <xref:System.ServiceModel.Discovery.FindResponse> ma <xref:System.ServiceModel.Discovery.FindResponse.Endpoints%2A> właściwości kolekcji, która zawiera wszystkie odpowiedzi wysyłane przez dopasowanie usług w sieci. Jeśli usługi nie odpowiedział, Kolekcja jest pusta. Jeśli co najmniej jedną usługę odpowiedzi, odpowiedź jest przechowywany w <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> obiekt, który zawiera adres, kontrakt i dodatkowe informacje o usłudze.  
+## <a name="findresponse"></a>FindResponse  
+ <xref:System.ServiceModel.Discovery.FindResponse> ma <xref:System.ServiceModel.Discovery.FindResponse.Endpoints%2A> właściwość kolekcji, która zawiera wszystkie odpowiedzi wysyłane przez dopasowanie usług w sieci. Jeśli użytkownik ma usług, Kolekcja jest pusta. Jeśli co najmniej jedna usługa udzielił odpowiedzi, odpowiedź jest przechowywany w <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> obiekt, który zawiera adres, kontrakt i dodatkowe informacje o usłudze.  
   
- Poniższy przykład przedstawia sposób wykonywania operacji wyszukiwania w kodzie.  
+ Poniższy przykład pokazuje sposób wykonywania operacji wyszukiwania w kodzie.  
   
 ```  
 // Create DiscoveryClient  

@@ -1,56 +1,56 @@
 ---
-title: Tworzenie złożonego interfejsu użytkownika oparte na mikrousług, w tym visual kształtu interfejsu użytkownika i układu generowane przez wiele mikrousług
-description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Tworzenie złożonego interfejsu użytkownika oparte na mikrousług, w tym visual kształtu interfejsu użytkownika i układu generowane przez wiele mikrousług
+title: Tworzenie złożonego interfejsu użytkownika opartego na mikrousługach, w tym kształt graficzny interfejsu użytkownika i układ generowany przez wiele mikrousług
+description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Tworzenie złożonego interfejsu użytkownika opartego na mikrousługach, w tym kształt graficzny interfejsu użytkownika i układ generowany przez wiele mikrousług
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 4e1e1671238d3cc5944bfe53b49f7d0ddd969aff
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 79b63c376d25725b2bcb6c16cdb4d06e107d5c07
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105372"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418643"
 ---
-# <a name="creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices"></a>Tworzenie złożonego interfejsu użytkownika oparte na mikrousług, w tym visual kształtu interfejsu użytkownika i układu generowane przez wiele mikrousług
+# <a name="creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices"></a>Tworzenie złożonego interfejsu użytkownika opartego na mikrousługach, w tym kształt graficzny interfejsu użytkownika i układ generowany przez wiele mikrousług
 
-Architektura Mikrousług często rozpoczyna się od obsługi logiki i danych po stronie serwera. Jednak bardziej zaawansowane podejściem jest projektowanie interfejsu użytkownika oparta na mikrousług oraz aplikacji. Oznacza to, o złożonego interfejsu użytkownika utworzone przez mikrousług, zamiast mikrousług na serwerze i po prostu wbudowanymi klienta aplikacji przez wykorzystywanie mikrousług. Takie podejście może być mikrousług, tworzonych z zarówno logiki i wizualnej reprezentacji.
+Architektura Mikrousług często zaczyna się od obsługi danych i logiki po stronie serwera. Jednak bardziej zaawansowane podejście dotyczy projektowania interfejsu użytkownika oparta na mikrousługach, jak również aplikacji. Oznacza to, o złożonego interfejsu użytkownika generowany przez mikrousług, zamiast mikrousług na serwerze i po prostu aplikację kliencką monolityczne korzystanie z mikrousług. W przypadku tej metody mikrousług, które tworzysz może być wraz z zarówno logiki, jak i w formie wizualnej.
 
-Rysunek 4-20 pokazuje prostsze eksploatującego właśnie mikrousług z wbudowanymi klienta aplikacji. Oczywiście może zostać usługi platformy ASP.NET MVC Between produkujących HTML i JavaScript. Liczba jest uproszczenie, który wyróżnia się, że masz jednego klienta (wbudowanymi) mikrousług, który właśnie skupić się na logikę i dane, a nie na kształtu interfejsu użytkownika (HTML i JavaScript) korzystanie z interfejsu użytkownika.
+Rysunek 4-20 pokazuje prostszej metody tylko używania mikrousług z aplikacji klienckiej monolitycznego. Oczywiście może mieć usługi platformy ASP.NET MVC w zakresie od tworzenia kodu HTML i JavaScript. Rysunek jest uproszczeniem wyróżniający się, że masz jednego klienta (monolityczną) korzystanie z mikrousług, która po prostu skoncentrować się na logikę i dane, a nie na kształt interfejsu użytkownika (HTML i JavaScript) w interfejsie użytkownika.
 
 ![](./media/image20.png)
 
-**Rysunek 4-20**. Wbudowanymi aplikacji interfejsu użytkownika, wykorzystywanie mikrousług zaplecza
+**Rysunek 4-20**. Interfejs użytkownika aplikacji monolitycznej korzystanie z mikrousług zaplecza
 
-Z kolei złożonego interfejsu użytkownika jest dokładnie generowane i składane przez mikrousług, samodzielnie. Niektóre mikrousług stacji visual kształt określonych obszarów interfejsu użytkownika. Najważniejsza różnica polega na składniki interfejsu użytkownika klienta (na przykład klasy TS) na podstawie szablonów, czy ViewModel danych kształtowania-interfejsu użytkownika dla tych szablonów pochodzi z każdym mikrousługi.
+Z kolei złożonego interfejsu użytkownika jest dokładnie generowane i poprzez mikrousług, samodzielnie. Niektóre z mikrousług dysku visual kształt określonych obszarach interfejsu użytkownika. Główną różnicą jest składniki interfejsu użytkownika klienta (na przykład klas usług terminalowych) na podstawie szablonów, oraz ViewModel danych kształtowania-interfejsu użytkownika dla tych szablonów pochodzi z poszczególne mikrousługi.
 
-W momencie uruchamiania aplikacji klienta poszczególne składniki interfejsu użytkownika klienta (na przykład klasy TypeScript) rejestruje się o stanie dostarczać ViewModels w danym scenariuszu mikrousługi infrastruktury. W przypadku mikrousługi zmiany kształtu, również zmiany interfejsu użytkownika.
+W czasie uruchamiania aplikacji klienckich poszczególne składniki interfejsu użytkownika klienta (na przykład klasy TypeScript) rejestruje się przy użyciu mikrousług infrastruktury w stanie dostarczać modele widoków dla danego scenariusza. Mikrousługi zmienia kształt, interfejs użytkownika zostanie również zmiany.
 
-Rysunek 4-21 zawiera wersję tego podejścia złożonego interfejsu użytkownika. To jest uproszczone, ponieważ może mieć inne mikrousług, który agregowania szczegółowego części oparte na różnych technik — zależy on od jest konstruowany podejście tradycyjnych sieci web (platformy ASP.NET MVC) lub SPA (jednej strony aplikacji).
+Rysunek 4-21 zawiera wersję podejście to złożonego interfejsu użytkownika. To jest uproszczone, ponieważ może mieć inne mikrousług agregujemy szczegółową części, w oparciu o różnych technik — jest to uzależnione od tego, czy tworzysz podejście tradycyjnej sieci web (platformy ASP.NET MVC) lub SPA (aplikacja jednostronicowa).
 
 ![](./media/image21.png)
 
-**Rysunek 4-21**. Przykład złożonych aplikacji interfejsu użytkownika w kształcie przez mikrousług zaplecza
+**Rysunek 4-21**. Przykład złożonego interfejsu użytkownika aplikacji w języku ukształtowane przez serwer zaplecza w mikrousługach
 
-Każdy z tych mikrousług kompozycji interfejsu użytkownika mogą być podobne do małych bramy interfejsu API. Jednak w takim przypadku każdy jest odpowiedzialny za mały obszar interfejsu użytkownika.
+Każda z tych mikrousług kompozycji interfejsu użytkownika mogą być podobne do małych bramy interfejsu API. Ale w takim przypadku każdy jest odpowiedzialny za mały obszar interfejsu użytkownika.
 
-Złożone podejście interfejsu użytkownika, który jest wymuszany przez mikrousług może być wyzwaniem więcej lub mniej tak, w zależności od tego, jakie technologii interfejsu użytkownika używasz. Na przykład nie będzie używać tych samych metod do tworzenia aplikacji sieci web tradycyjnych, używanej do tworzenia SPA lub natywnych aplikacji mobilnej (tak jak podczas tworzenia aplikacji platformy Xamarin, które mogą być trudniejsze dla tej metody).
+Złożone podejście interfejsu użytkownika, który jest wymuszany przez mikrousług może być trudniejszym wyzwaniem lub mniej tak, w zależności od jakich technologii interfejsu użytkownika używasz. Na przykład nie będzie używać tych samych technik do tworzenia aplikacji sieci web tradycyjnych, którego używasz do tworzenia SPA lub dla natywnych aplikacji mobilnych (tak jak podczas opracowywania aplikacji platformy Xamarin, które mogą być trudniejsze dla tej metody).
 
-[EShopOnContainers](http://aka.ms/MicroservicesArchitecture) Przykładowa aplikacja korzysta z wbudowanymi podejście interfejsu użytkownika dla wielu powodów. Po pierwsze jest wprowadzenie do mikrousług oraz kontenerów. Złożonego interfejsu użytkownika jest bardziej zaawansowane, ale również wymaga dalszych złożoności podczas projektowania i opracowywania interfejsu użytkownika. Po drugie, eShopOnContainers zapewnia natywnej aplikacji mobilnej oparte na platformie Xamarin, która będzie bardziej złożone na kliencie C\# po stronie.
+[Ramach aplikacji eShopOnContainers](https://aka.ms/MicroservicesArchitecture) podejścia monolitycznego interfejsu użytkownika Przykładowa aplikacja korzysta z wielu powodów. Po pierwsze stanowi wprowadzenie do mikrousług i kontenerów. Złożonego interfejsu użytkownika jest bardziej zaawansowane, ale wymaga wykonania dalszych złożoność podczas projektowania i tworzenia interfejsu użytkownika. Po drugie w ramach aplikacji eShopOnContainers udostępnia również natywnych aplikacji mobilnych, oparte na środowisku Xamarin, która będzie bardziej złożonych na kliencie C\# po stronie.
 
-Jednak firma Microsoft zachęca do użycia następujące odwołania, aby dowiedzieć się więcej na temat złożone interfejsu użytkownika oparta na mikrousług.
+Jednak firma Microsoft zachęca Dowiedz się więcej o złożonego interfejsu użytkownika oparta na mikrousługach przy użyciu następujących odwołań.
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Złożony interfejs użytkownika za pomocą programu ASP.NET (w szczególności Workshop)**
+-   **Złożonego interfejsu użytkownika za pomocą programu ASP.NET (w szczególności Workshop)**
     [*http://go.particular.net/workshop-composite-ui-demo*](http://go.particular.net/workshop-composite-ui-demo)
 
--   **Ruben Oostinga. Wbudowanymi frontonu w architekturze Mikrousług**
+-   **Ruben Oostinga. Monolityczny frontonu w architekturze Mikrousług**
     [*http://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/*](http://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/)
 
 -   **Mauro Servienti. Klucz tajny lepsze kompozycji interfejsu użytkownika**
     [*https://particular.net/blog/secret-of-better-ui-composition*](https://particular.net/blog/secret-of-better-ui-composition)
 
--   **VIKTOR Farcic. W tym składniki frontonu sieci Web do Mikrousług**
+-   **VIKTOR Farcic. W tym składników frontonu sieci Web na Mikrousługi**
     [*https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/*](https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/)
 
 -   **Zarządzanie frontonu w architekturze Mikrousług**\

@@ -1,45 +1,45 @@
 ---
-title: Dane śledzenia w ADO.NET
+title: Śledzenie danych w ADO.NET
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: 6dd385cd58d1c8400c45139492d84e6ca4fe1bd7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 037db6f4e5695e00401c81e1490953efe2fc9b99
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758506"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421102"
 ---
-# <a name="data-tracing-in-adonet"></a>Dane śledzenia w ADO.NET
-ADO.NET funkcje wbudowane danych śledzenia funkcje, które jest obsługiwana przez dostawców danych .NET dla programu SQL Server, Oracle, OLE DB i ODBC, a także ADO.NET <xref:System.Data.DataSet>i protokoły sieciowe SQL Server.  
+# <a name="data-tracing-in-adonet"></a>Śledzenie danych w ADO.NET
+ADO.NET funkcji funkcja śledzenia danych wbudowane, który jest obsługiwany przez dostawcę danych .NET dla programu SQL Server, Oracle, OLE DB i ODBC, a także ADO.NET <xref:System.Data.DataSet>i protokoły sieciowe programu SQL Server.  
   
- Śledzenie danych interfejsu API dostępu może pomóc w diagnozowaniu następujące problemy:  
+ Śledzenie danych dostęp do interfejsu API może pomóc w diagnozowaniu następujące problemy:  
   
--   Niezgodność schematu między program kliencki a bazą danych.  
+-   Niezgodność schematów między program kliencki a bazą danych.  
   
--   Baza danych niedostępności lub biblioteka problemów z siecią.  
+-   Baza danych niedostępność lub biblioteka problemów z siecią.  
   
--   Niepoprawne SQL twardego kodowanych lub generowanych przez aplikację.  
+-   Niepoprawne SQL czy ciężko kodowanego generowanych przez aplikację.  
   
--   Niepoprawne logiki programowania.  
+-   Niepoprawne logikę programistyczną.  
   
--   Problemy wynikające z interakcji między wiele składników ADO.NET lub między ADO.NET i własnych składników.  
+-   Problemów wynikających z interakcji między wieloma składnikami ADO.NET lub między ADO.NET i własnych składników.  
   
- Do obsługi śledzenia różnych technologii, śledzenie jest otwarty, więc deweloperzy mogą śledzenia problemu na dowolnym poziomie stosu aplikacji. Chociaż śledzenia nie jest funkcją tylko ADO.NET, dostawcy Microsoft korzystać z Instrumentacji interfejsów API i śledzenie uogólniony.  
+ Aby zapewnić obsługę śledzenia różne technologie, śledzenia jest rozszerzalny, więc deweloper śledzenia problemu na dowolnym poziomie stosu aplikacji. Chociaż śledzenia nie jest to funkcja przeznaczona tylko do ADO.NET, dostawców firmy Microsoft zalet uogólnionego śledzenie i Instrumentacja interfejsów API.  
   
- Aby uzyskać więcej informacji na temat i konfigurowanie zarządzanych śledzenia w ADO.NET, zobacz [dostęp do danych śledzenia](http://msdn.microsoft.com/library/hh880086.aspx).  
+ Aby uzyskać więcej informacji na temat i konfigurowanie zarządzanych śledzenia w ADO.NET, zobacz [dostęp do danych śledzenia](https://msdn.microsoft.com/library/hh880086.aspx).  
   
 ## <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Uzyskiwanie dostępu do informacji diagnostycznych w dzienniku zdarzeń rozszerzonych  
- W [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawcy danych programu SQL Server, dostępu do danych śledzenia ([śledzenie dostępu do danych](http://msdn.microsoft.com/library/hh880086.aspx)) została zaktualizowana, aby ułatwić łatwiej skorelować zdarzenia klienta z informacje diagnostyczne, takie jak awarie połączenia z łączność serwera pierścienia buforu i aplikacji informacje o wydajności w dzienniku zdarzeń rozszerzonych. Aby uzyskać informacje dotyczące odczytywania dziennika zdarzeń rozszerzonych, zobacz [danych sesji zdarzeń widoku](http://msdn.microsoft.com/library/hh710068\(SQL.110\).aspx).  
+ W [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server, dostępu do danych śledzenia ([śledzenie dostępu do danych](https://msdn.microsoft.com/library/hh880086.aspx)) został zaktualizowany, aby ułatwić ułatwia korelowanie zdarzeń klienta z informacje diagnostyczne, takie jak błędy połączenia z łączność serwera cyklicznego buforu i aplikacji informacje o wydajności w dzienniku zdarzeń rozszerzonych. Aby uzyskać informacje o odczytywaniu dziennika zdarzeń rozszerzonych, zobacz [dane sesji zdarzeń widoku](https://msdn.microsoft.com/library/hh710068\(SQL.110\).aspx).  
   
- W operacjach połączenia ADO.NET wyśle klientowi identyfikator połączenia. Jeśli połączenie nie powiedzie się, możesz uzyskać dostęp bufor pierścień łączności ([rozwiązywania problemów z łącznością programu SQL Server 2008 buforem pierścienia łączności](http://go.microsoft.com/fwlink/?LinkId=207752)) i Znajdź `ClientConnectionID` pola i uzyskać informacje diagnostyczne Błąd połączenia. Identyfikatory połączeń klienta są rejestrowane w buforze pierścień tylko wtedy, gdy wystąpi błąd. (Jeśli połączenie nie powiedzie się przed wysłaniem pakiet wstępnego logowania, identyfikator połączenia klienta nie zostanie wygenerowany.) Identyfikator połączenia klienta jest identyfikatorem GUID 16 bajtów. Możesz również znaleźć połączenie klienta IDENTYFIKATORA w danych wyjściowych zdarzeń rozszerzonych docelowych, jeśli `client_connection_id` akcji jest dodawany do zdarzeń w sesji zdarzeń rozszerzonych. Można włączyć śledzenie dostępu do danych i ponownie uruchom polecenie połączenia i obserwować `ClientConnectionID` pola w śledzeniu dostępu do danych, jeśli potrzebujesz dodatkowej pomocy diagnostycznych sterownika klienta.  
+ W przypadku operacji połączenia ADO.NET wyśle klientowi identyfikator połączenia. Jeśli połączenie nie powiedzie się, możesz uzyskać dostęp bufor cykliczny łączności ([rozwiązywania problemów z łącznością w programie SQL Server 2008 buforem pierścienia łączności](https://go.microsoft.com/fwlink/?LinkId=207752)) i Znajdź `ClientConnectionID` pola, a następnie uzyskaj informacje diagnostyczne o Błąd połączenia. Identyfikatory połączenia klienta są rejestrowane w bufor cykliczny, tylko wtedy, gdy wystąpi błąd. (Jeśli połączenie nie powiedzie się przed wysłaniem identyfikatora pakietu, identyfikator połączenia klienta nie będą generowane.) Identyfikator połączenia klienta jest 16-bajtowy identyfikator GUID. Połączenia klienta można także znaleźć IDENTYFIKATORA w danych wyjściowych docelowej rozszerzonych zdarzeń, jeśli `client_connection_id` akcja zostanie dodany do zdarzenia w sesji zdarzeń rozszerzonych. Można włączyć śledzenie dostępu do danych i uruchom ponownie polecenie połączenia i obserwować `ClientConnectionID` pole Śledzenie dostępu do danych, jeśli potrzebujesz dodatkowej pomocy diagnostycznych sterownika klienta.  
   
  Klienta można uzyskać Identyfikatora połączenia programowo przy użyciu `SqlConnection.ClientConnectionID` właściwości.  
   
- `ClientConnectionID` Jest dostępna dla <xref:System.Data.SqlClient.SqlConnection> obiekt, który pomyślnie nawiąże połączenie. Jeśli próba połączenia nie powiedzie się, `ClientConnectionID` mogą być dostępne za pośrednictwem `SqlException.ToString`.  
+ `ClientConnectionID` Jest dostępna dla <xref:System.Data.SqlClient.SqlConnection> obiekt, który pomyślnie nawiąże połączenie. Jeśli próba połączenia zakończy się niepowodzeniem, `ClientConnectionID` mogą być dostępne za pośrednictwem `SqlException.ToString`.  
   
- ADO.NET wysyła również identyfikator działania właściwe dla wątków. Identyfikator działania są przechwytywane w sesji zdarzeń rozszerzonych, jeśli sesje są uruchamiane z włączoną opcją TRACK_CAUSAILITY. Problemy z wydajnością z aktywnego połączenia, możesz pobrać identyfikator działania ze śledzenia dostępu do danych klienta (`ActivityID` pola), a następnie zlokalizuj identyfikator działania w danych wyjściowych zdarzeń rozszerzonych. Identyfikator działania w zdarzeń rozszerzonych jest identyfikatorem GUID 16-bajtowych, (nie to samo identyfikatora GUID dla Identyfikatora połączenia klienta) dołączony numer kolejny 4 bajtowych. Numer sekwencyjny reprezentuje kolejność żądania w wątku i określa względne uporządkowanie partii i instrukcje RPC dla wątku. `ActivityID` Jest obecnie opcjonalnie wysyłane żądania RPC i instrukcje SQL partii, gdy jest włączone śledzenie dostępu do danych i 18 bit dostępu do danych śledzenia word konfiguracji jest włączona.  
+ ADO.NET wysyła również identyfikator działania właściwe dla wątków. Jeśli sesje są uruchamiane z włączoną opcją TRACK_CAUSAILITY, identyfikator działania są przechwytywane w sesji zdarzeń rozszerzonych. Problemy z wydajnością z aktywnym połączeniem, możesz uzyskać identyfikator działania od śledzenie dostępu do danych klienta (`ActivityID` pole) i zlokalizuj identyfikator działania w danych wyjściowych zdarzeń rozszerzonych. Identyfikator działania w ramach zdarzeń rozszerzonych jest 16-bajtowy identyfikator GUID (nie taka sama jak identyfikator GUID dla Identyfikatora połączenia klienta) dołączany wraz z liczbą sekwencji czwartego bajtu. Numer sekwencyjny reprezentuje kolejność żądania w wątku i wskazuje względną kolejność usługi batch oraz instrukcje RPC dla wątku. `ActivityID` Obecnie opcjonalnie jest wysyłana dla instrukcji przetwarzania wsadowego SQL i żądania RPC, gdy jest włączone śledzenie dostępu do danych i 18 bitu dostępu do danych, śledzenie konfiguracji w programie word jest włączona.  
   
- Poniżej przedstawiono przykład, który używa [!INCLUDE[tsql](../../../../includes/tsql-md.md)] można uruchomić sesji zdarzeń rozszerzonych, które będą przechowywane w buforze pierścień i zarejestruje identyfikator działania wysłanych z klienta na operacje RPC i partii.  
+ Oto przykład, który używa [!INCLUDE[tsql](../../../../includes/tsql-md.md)] można uruchomić sesji zdarzeń rozszerzonych, będą przechowywane w bufor cykliczny, która zarejestruje identyfikator działania wysłane przez klienta na operacje RPC i usługi batch.  
   
 ```  
 create event session MySession on server   
@@ -54,4 +54,4 @@ add target ring_buffer with (track_causality=on)
 ## <a name="see-also"></a>Zobacz też  
  [Śledzenie sieci w programie .NET Framework](../../../../docs/framework/network-programming/network-tracing.md)  
  [Śledzenie i instrumentacja aplikacji](../../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

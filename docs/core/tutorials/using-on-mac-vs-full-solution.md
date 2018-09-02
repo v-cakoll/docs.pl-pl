@@ -4,12 +4,12 @@ description: Ten temat przeprowadzi Cię przez tworzenie rozwiązania .NET Core,
 author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
-ms.openlocfilehash: f8dfbb712957d22e5b4aa16920e7b003a79c4444
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 17d7cc5b085b4d47ebf1e5ed9a766be9d5d8b01f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "36314701"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43457046"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Tworzenie kompletnego rozwiązania .NET Core w systemie macOS przy użyciu programu Visual Studio dla komputerów Mac
 
@@ -95,7 +95,7 @@ Testy jednostek zapewniają oprogramowania automatyczne, testowane podczas tworz
            public void IgnoreCasing()
            {
                var wordCount = WordCount.GetWordCount("Jack", "Jack jack");
-   
+
                Assert.NotEqual(2, wordCount);
            }
        }
@@ -117,7 +117,7 @@ Testy jednostek zapewniają oprogramowania automatyczne, testowane podczas tworz
    ![Panel testów jednostkowych zadokować ikony](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanelDockIcon.png)
 
 1. Kliknij przycisk **Uruchom wszystkie** przycisku.
-   
+
    Test wypadnie niepomyślnie, który jest odpowiedni wynik. Metody testowej potwierdza, że dwa wystąpienia `inputString`, "Jack", nie są zwracane z ciągu "Jack jack" udostępniane `GetWordCount` metody. Ponieważ wielkości liter w słowie była brana pod uwagę na zewnątrz `GetWordCount` metody, zwracane są dwa wystąpienia. Potwierdzenie, 2 *nie jest równa* 2 kończy się niepowodzeniem. Jest to prawidłowy wynik, a logika naszym teście jest dobra.
 
    ![Niepowodzenia testu](./media/using-on-mac-vs-full-solution/vsmacfull09.png)
@@ -135,8 +135,8 @@ Testy jednostek zapewniają oprogramowania automatyczne, testowane podczas tworz
    [InlineData(0, "Ting", "Does not appear in the string.")]
    [InlineData(1, "Ting", "Ting appears once.")]
    [InlineData(2, "Ting", "Ting appears twice with Ting.")]
-   public void CountInstancesCorrectly(int count, 
-                                       string searchWord, 
+   public void CountInstancesCorrectly(int count,
+                                       string searchWord,
                                        string inputString)
    {
        Assert.NotEqual(count, WordCount.GetWordCount(searchWord,
@@ -145,7 +145,7 @@ Testy jednostek zapewniają oprogramowania automatyczne, testowane podczas tworz
    ```
 
    `CountInstancesCorrectly` Sprawdza, czy `GetWordCount` metoda liczy się poprawnie. `InlineData` Zapewnia liczbą, szukanym wyrazem oraz ciągu wejściowym, aby sprawdzić. Metoda testowa jest uruchamiane jeden raz dla każdego wiersza danych. Ponownie Pamiętaj, że błąd jest potwierdzające najpierw za pomocą `Assert.NotEqual`nawet wtedy, gdy wiesz, czy liczby w danych są poprawne, i wartości zgodne liczby zwróconych przez `GetWordCount` metody. Wykonywanie kroku celowo niepowodzenie testu może wydawać się marnowania czasu na początku, ale sprawdzanie logiki badania, przełączając ją najpierw jest ważne wyboru na logice testów. Trafisz na metodę testową, która przekazuje, gdy spodziewasz się, aby zakończyć się niepowodzeniem, zostały znaleziono usterkę logikę testu. Jest warte włożonej pracy wykonaj następujący krok, za każdym razem, aby utworzyć metodę testową.
-   
+
 1. Zapisz plik i ponownie uruchom testy. Wielkość liter w wyrazie test zakończy się pomyślnie, ale liczba trzy testy nie powiodą się. Jest to dokładnie, oczekiwać do wykonania.
 
    ![Niepowodzenia testu](./media/using-on-mac-vs-full-solution/vsmacfull11.png)
@@ -192,4 +192,4 @@ Testy jednostek zapewniają oprogramowania automatyczne, testowane podczas tworz
 
 ## <a name="see-also"></a>Zobacz także
 
-[Visual Studio 2017 for Mac — informacje o wersji](/visualstudio/releasenotes/vs2017-mac-relnotes)
+* [Visual Studio 2017 for Mac — informacje o wersji](/visualstudio/releasenotes/vs2017-mac-relnotes)

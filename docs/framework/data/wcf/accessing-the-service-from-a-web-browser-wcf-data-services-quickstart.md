@@ -1,77 +1,81 @@
 ---
-title: Uzyskiwanie dostępu do usługi z przeglądarki sieci Web (Szybki Start usługi danych WCF)
+title: Uzyskiwanie dostępu do usługi z przeglądarki sieci Web (WCF Data Services — Szybki Start)
 ms.date: 03/30/2017
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
-ms.openlocfilehash: b7fcead5eed2dd4c0c779d9a881563a39f88d094
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 01184969b7bfcc0f68351db7c8daeebe79be583c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364008"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392326"
 ---
-# <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a><span data-ttu-id="14280-102">Uzyskiwanie dostępu do usługi z przeglądarki sieci Web (Szybki Start usługi danych WCF)</span><span class="sxs-lookup"><span data-stu-id="14280-102">Accessing the Service from a Web Browser (WCF Data Services Quickstart)</span></span>
-<span data-ttu-id="14280-103">W tym zadaniu rozpocznie [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] z programu Visual Studio i opcjonalnie Wyłącz strumieniowe źródło odczytu w przeglądarce sieci Web.</span><span class="sxs-lookup"><span data-stu-id="14280-103">In this task, you will start the [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] from Visual Studio and optionally disable feed reading in the Web browser.</span></span> <span data-ttu-id="14280-104">Możesz zostanie następnie pobrać dokumentu definicji usługi a także uzyskiwać dostęp do danych usługi zasobów poprzez przesłanie żądania HTTP GET za pośrednictwem przeglądarki sieci Web do narażonych zasobów.</span><span class="sxs-lookup"><span data-stu-id="14280-104">You will then retrieve the service definition document as well as access data service resources by submitting HTTP GET requests through a Web browser to the exposed resources.</span></span>  
-  
+# <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a><span data-ttu-id="1a6c4-102">Uzyskiwanie dostępu do usługi z przeglądarki sieci Web (WCF Data Services — Szybki Start)</span><span class="sxs-lookup"><span data-stu-id="1a6c4-102">Accessing the Service from a Web Browser (WCF Data Services Quickstart)</span></span>
+
+<span data-ttu-id="1a6c4-103">To drugie zadanie tego przewodnika Szybki Start usług danych WCF.</span><span class="sxs-lookup"><span data-stu-id="1a6c4-103">This is the second task of the WCF Data Services quickstart.</span></span> <span data-ttu-id="1a6c4-104">To zadanie służy do start usług danych WCF w programie Visual Studio i opcjonalnie Wyłącz odczytu kanału informacyjnego w przeglądarce sieci Web.</span><span class="sxs-lookup"><span data-stu-id="1a6c4-104">In this task, you start the WCF Data Services from Visual Studio and optionally disable feed reading in the Web browser.</span></span> <span data-ttu-id="1a6c4-105">Możesz następnie pobierania dokumentu definicji usługi oraz dostęp do zasobów usługi danych przez przesłanie żądania HTTP GET, za pośrednictwem przeglądarki sieci Web do narażonych zasobów.</span><span class="sxs-lookup"><span data-stu-id="1a6c4-105">You then retrieve the service definition document as well as access data service resources by submitting HTTP GET requests through a Web browser to the exposed resources.</span></span>
+
 > [!NOTE]
->  <span data-ttu-id="14280-105">Domyślnie program Visual Studio automatycznie przypisanie numeru portu do `localhost` identyfikatora URI na tym komputerze.</span><span class="sxs-lookup"><span data-stu-id="14280-105">By default, Visual Studio auto-assigns a port number to the `localhost` URI on your computer.</span></span> <span data-ttu-id="14280-106">To zadanie używa numeru portu `12345` w przykładach identyfikatora URI.</span><span class="sxs-lookup"><span data-stu-id="14280-106">This task uses the port number `12345` in the URI examples.</span></span> <span data-ttu-id="14280-107">Aby uzyskać więcej informacji na temat sposobu ustawiania określonego numeru portu w projekcie programu Visual Studio zobacz [Tworzenie usługi danych](../../../../docs/framework/data/wcf/creating-the-data-service.md).</span><span class="sxs-lookup"><span data-stu-id="14280-107">For more information about how to set a specific port number in your Visual Studio project see [Creating the Data Service](../../../../docs/framework/data/wcf/creating-the-data-service.md).</span></span>  
-  
-### <a name="to-request-the-default-service-document-by-using-internet-explorer"></a><span data-ttu-id="14280-108">Aby zażądać domyślny dokument usługi przy użyciu programu Internet Explorer</span><span class="sxs-lookup"><span data-stu-id="14280-108">To request the default service document by using Internet Explorer</span></span>  
-  
-1.  <span data-ttu-id="14280-109">W programie Internet Explorer z **narzędzia** menu, wybierz opcję **Opcje internetowe**, kliknij przycisk **zawartości** , kliknij pozycję **ustawienia**i wyczyść  **Włącz funkcję przeglądania źródła**.</span><span class="sxs-lookup"><span data-stu-id="14280-109">In Internet Explorer, from the **Tools** menu, select **Internet Options**, click the **Content** tab, click **Settings**, and clear **Turn on feed viewing**.</span></span>  
-  
-     <span data-ttu-id="14280-110">Dzięki temu tego źródła odczytu jest wyłączona.</span><span class="sxs-lookup"><span data-stu-id="14280-110">This makes sure that feed reading is disabled.</span></span> <span data-ttu-id="14280-111">Jeśli nie można wyłączyć tę funkcję, przeglądarki sieci Web będzie traktowany zwrócony AtomPub dokumentu zakodowane jako XML źródła danych zamiast nieprzetworzone dane XML.</span><span class="sxs-lookup"><span data-stu-id="14280-111">If you do not disable this functionality, then the Web browser will treat the returned AtomPub encoded document as an XML feed instead of displaying the raw XML data.</span></span>  
-  
+> <span data-ttu-id="1a6c4-106">Domyślnie program Visual Studio automatycznie przypisuje numer portu `localhost` identyfikatora URI na tym komputerze.</span><span class="sxs-lookup"><span data-stu-id="1a6c4-106">By default, Visual Studio auto-assigns a port number to the `localhost` URI on your computer.</span></span> <span data-ttu-id="1a6c4-107">To zadanie używa numeru portu `12345` w przykładach identyfikatora URI.</span><span class="sxs-lookup"><span data-stu-id="1a6c4-107">This task uses the port number `12345` in the URI examples.</span></span> <span data-ttu-id="1a6c4-108">Aby uzyskać więcej informacji na temat sposobu ustawiania określonego numeru portu w projekcie programu Visual Studio zobacz [Tworzenie usługi danych](../../../../docs/framework/data/wcf/creating-the-data-service.md).</span><span class="sxs-lookup"><span data-stu-id="1a6c4-108">For more information about how to set a specific port number in your Visual Studio project see [Creating the Data Service](../../../../docs/framework/data/wcf/creating-the-data-service.md).</span></span>
+
+## <a name="to-request-the-default-service-document-by-using-internet-explorer"></a><span data-ttu-id="1a6c4-109">Aby zażądać domyślnego dokumentu usługi za pomocą programu Internet Explorer</span><span class="sxs-lookup"><span data-stu-id="1a6c4-109">To request the default service document by using Internet Explorer</span></span>
+
+1.  <span data-ttu-id="1a6c4-110">W programie Internet Explorer z **narzędzia** menu, wybierz opcję **Opcje internetowe**, kliknij przycisk **zawartości** kliknij pozycję **ustawienia**i wyczyść  **Włącz wyświetlanie kanału informacyjnego**.</span><span class="sxs-lookup"><span data-stu-id="1a6c4-110">In Internet Explorer, from the **Tools** menu, select **Internet Options**, click the **Content** tab, click **Settings**, and clear **Turn on feed viewing**.</span></span>
+
+     <span data-ttu-id="1a6c4-111">Dzięki temu który kanału informacyjnego odczytu jest wyłączony.</span><span class="sxs-lookup"><span data-stu-id="1a6c4-111">This makes sure that feed reading is disabled.</span></span> <span data-ttu-id="1a6c4-112">Jeśli nie można wyłączyć tę funkcję, przeglądarki sieci Web będzie traktowany zwrócone zakodowanego dokumentu AtomPub jako źródła danych zamiast wyświetlanie danych pierwotnych XML pliku XML.</span><span class="sxs-lookup"><span data-stu-id="1a6c4-112">If you do not disable this functionality, then the Web browser will treat the returned AtomPub encoded document as an XML feed instead of displaying the raw XML data.</span></span>
+
     > [!NOTE]
-    >  <span data-ttu-id="14280-112">Przeglądarka nie może wyświetlić źródła danych jako nieprzetworzone dane XML, nadal należy mogła wyświetlać źródła danych jako kod źródłowy dla strony.</span><span class="sxs-lookup"><span data-stu-id="14280-112">If your browser cannot display the feed as raw XML data, you should still be able to view the feed as the source code for the page.</span></span>  
-  
-2.  <span data-ttu-id="14280-113">W programie Visual Studio naciśnij klawisz F5, aby rozpocząć debugowania aplikacji.</span><span class="sxs-lookup"><span data-stu-id="14280-113">In Visual Studio, press the F5 key to start debugging the application.</span></span>  
-  
-3.  <span data-ttu-id="14280-114">Otwórz przeglądarkę sieci Web na komputerze lokalnym.</span><span class="sxs-lookup"><span data-stu-id="14280-114">Open a Web browser on the local computer.</span></span> <span data-ttu-id="14280-115">Na pasku adresu wpisz następujący identyfikator URI:</span><span class="sxs-lookup"><span data-stu-id="14280-115">In the address bar, enter the following URI:</span></span>  
-  
-    ```  
-    http://localhost:12345/northwind.svc  
-    ```  
-  
-     <span data-ttu-id="14280-116">To polecenie zwróci usługi dokument domyślny, który znajduje się lista zestawów jednostek, które są udostępniane przez tę usługę danych.</span><span class="sxs-lookup"><span data-stu-id="14280-116">This returns the default service document, which contains a list of entity sets that are exposed by this data service.</span></span>  
-  
-### <a name="to-access-entity-set-resources-from-a-web-browser"></a><span data-ttu-id="14280-117">Aby dostęp do jednostki zestaw zasobów z przeglądarki sieci Web</span><span class="sxs-lookup"><span data-stu-id="14280-117">To access entity set resources from a Web browser</span></span>  
-  
-1.  <span data-ttu-id="14280-118">Na pasku adresu przeglądarki sieci Web wprowadź następujący identyfikator URI:</span><span class="sxs-lookup"><span data-stu-id="14280-118">In the address bar of your Web browser, enter the following URI:</span></span>  
-  
-    ```  
-    http://localhost:12345/northwind.svc/Customers  
-    ```  
-  
-     <span data-ttu-id="14280-119">To zwraca zestaw wszystkich klientów w bazie danych Northwind.</span><span class="sxs-lookup"><span data-stu-id="14280-119">This returns a set of all customers in the Northwind sample database.</span></span>  
-  
-2.  <span data-ttu-id="14280-120">Na pasku adresu przeglądarki sieci Web wprowadź następujący identyfikator URI:</span><span class="sxs-lookup"><span data-stu-id="14280-120">In the address bar of your Web browser, enter the following URI:</span></span>  
-  
-    ```  
-    http://localhost:12345/northwind.svc/Customers('ALFKI')  
-    ```  
-  
-     <span data-ttu-id="14280-121">To polecenie zwróci wystąpienia jednostki dla określonego klienta i `ALFKI`.</span><span class="sxs-lookup"><span data-stu-id="14280-121">This returns an entity instance for the specific customer, `ALFKI`.</span></span>  
-  
-3.  <span data-ttu-id="14280-122">Na pasku adresu przeglądarki sieci Web wprowadź następujący identyfikator URI:</span><span class="sxs-lookup"><span data-stu-id="14280-122">In the address bar of your Web browser, enter the following URI:</span></span>  
-  
-    ```  
-    http://localhost:12345/northwind.svc/Customers('ALFKI')/Orders  
-    ```  
-  
-     <span data-ttu-id="14280-123">To jest przesyłany relacji między klientami a zamówienia zwraca zestaw wszystkich zleceń dla określonego klienta `ALFKI`.</span><span class="sxs-lookup"><span data-stu-id="14280-123">This traverses the relationship between customers and orders to return a set of all orders for the specific customer `ALFKI`.</span></span>  
-  
-4.  <span data-ttu-id="14280-124">Na pasku adresu przeglądarki sieci Web wprowadź następujący identyfikator URI:</span><span class="sxs-lookup"><span data-stu-id="14280-124">In the address bar of your Web browser, enter the following URI:</span></span>  
-  
-    ```  
-    http://localhost:12345/northwind.svc/Customers('ALFKI')/Orders?$filter=OrderID eq 10643  
-    ```  
-  
-     <span data-ttu-id="14280-125">Filtry to zlecenia, które należą do określonego klienta `ALFKI` tak, aby w dowolnej kolejności jest zwróconych na podstawie wybranych `OrderID` wartość.</span><span class="sxs-lookup"><span data-stu-id="14280-125">This filters orders that belong to the specific customer `ALFKI` so that only a specific order is returned based on the supplied `OrderID` value.</span></span>  
-  
-## <a name="next-steps"></a><span data-ttu-id="14280-126">Następne kroki</span><span class="sxs-lookup"><span data-stu-id="14280-126">Next Steps</span></span>  
- <span data-ttu-id="14280-127">Pomyślnie uzyskano dostęp [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] z przeglądarki sieci Web z wystawiania HTTP GET przeglądarką żądania do określonych zasobów.</span><span class="sxs-lookup"><span data-stu-id="14280-127">You have successfully accessed the [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] from a Web browser, with the browser issuing HTTP GET requests to specified resources.</span></span> <span data-ttu-id="14280-128">Przeglądarki sieci Web zapewnia prosty sposób na wypróbowanie składni adresowania żądań i wyświetlić wyniki.</span><span class="sxs-lookup"><span data-stu-id="14280-128">A Web browser provides an easy way to experiment with the addressing syntax of requests and view the results.</span></span> <span data-ttu-id="14280-129">Usługi danych produkcyjnych nie jest jednak ogólnie dostępna przez tę metodę.</span><span class="sxs-lookup"><span data-stu-id="14280-129">However, a production data service is not generally accessed by this method.</span></span> <span data-ttu-id="14280-130">Zazwyczaj aplikacje interakcji z usługą danych za pośrednictwem aplikacji kod lub języków skryptów.</span><span class="sxs-lookup"><span data-stu-id="14280-130">Typically, applications interact with the data service through application code or scripting languages.</span></span> <span data-ttu-id="14280-131">Następnie utworzysz aplikacji klienckiej, która korzysta z bibliotek klienta można uzyskać dostępu do zasobów usług danych, tak jakby były wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) obiektów:</span><span class="sxs-lookup"><span data-stu-id="14280-131">Next, you will create a client application that uses client libraries to access data service resources as if they were common language runtime (CLR) objects:</span></span>  
-  
- [<span data-ttu-id="14280-132">Tworzenie aplikacji klienckich programu .NET Framework</span><span class="sxs-lookup"><span data-stu-id="14280-132">Creating the .NET Framework Client Application</span></span>](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)  
-  
-## <a name="see-also"></a><span data-ttu-id="14280-133">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="14280-133">See Also</span></span>  
- [<span data-ttu-id="14280-134">Uzyskiwanie dostępu do zasobów usługi danych</span><span class="sxs-lookup"><span data-stu-id="14280-134">Accessing Data Service Resources</span></span>](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)
+    > <span data-ttu-id="1a6c4-113">Jeśli przeglądarka nie może wyświetlić źródła danych jako nieprzetworzone dane XML, nadal należy możliwość wyświetlania źródła danych jako kod źródłowy dla strony.</span><span class="sxs-lookup"><span data-stu-id="1a6c4-113">If your browser cannot display the feed as raw XML data, you should still be able to view the feed as the source code for the page.</span></span>
+
+2.  <span data-ttu-id="1a6c4-114">W programie Visual Studio, naciśnij klawisz **F5** klawisz, aby rozpocząć debugowanie aplikacji.</span><span class="sxs-lookup"><span data-stu-id="1a6c4-114">In Visual Studio, press the **F5** key to start debugging the application.</span></span>
+
+3.  <span data-ttu-id="1a6c4-115">Otwórz przeglądarkę internetową na komputerze lokalnym.</span><span class="sxs-lookup"><span data-stu-id="1a6c4-115">Open a Web browser on the local computer.</span></span> <span data-ttu-id="1a6c4-116">Na pasku adresu wpisz następujący identyfikator URI:</span><span class="sxs-lookup"><span data-stu-id="1a6c4-116">In the address bar, enter the following URI:</span></span>
+
+    ```
+    http://localhost:12345/northwind.svc
+    ```
+
+     <span data-ttu-id="1a6c4-117">Spowoduje to zwrócenie usługi dokument domyślny, która zawiera listę zestawów encji, udostępnianych przez usługę danych.</span><span class="sxs-lookup"><span data-stu-id="1a6c4-117">This returns the default service document, which contains a list of entity sets that are exposed by this data service.</span></span>
+
+## <a name="to-access-entity-set-resources-from-a-web-browser"></a><span data-ttu-id="1a6c4-118">Aby dostęp do jednostki zestaw zasobów z przeglądarki sieci Web</span><span class="sxs-lookup"><span data-stu-id="1a6c4-118">To access entity set resources from a Web browser</span></span>
+
+1.  <span data-ttu-id="1a6c4-119">Na pasku adresu przeglądarki sieci Web wprowadź następujący identyfikator URI:</span><span class="sxs-lookup"><span data-stu-id="1a6c4-119">In the address bar of your Web browser, enter the following URI:</span></span>
+
+    ```
+    http://localhost:12345/northwind.svc/Customers
+    ```
+
+     <span data-ttu-id="1a6c4-120">To zwraca zestaw wszystkich klientów w bazie danych Northwind.</span><span class="sxs-lookup"><span data-stu-id="1a6c4-120">This returns a set of all customers in the Northwind sample database.</span></span>
+
+2.  <span data-ttu-id="1a6c4-121">Na pasku adresu przeglądarki sieci Web wprowadź następujący identyfikator URI:</span><span class="sxs-lookup"><span data-stu-id="1a6c4-121">In the address bar of your Web browser, enter the following URI:</span></span>
+
+    ```
+    http://localhost:12345/northwind.svc/Customers('ALFKI')
+    ```
+
+     <span data-ttu-id="1a6c4-122">Spowoduje to zwrócenie wystąpienie jednostki dla określonego klienta `ALFKI`.</span><span class="sxs-lookup"><span data-stu-id="1a6c4-122">This returns an entity instance for the specific customer, `ALFKI`.</span></span>
+
+3.  <span data-ttu-id="1a6c4-123">Na pasku adresu przeglądarki sieci Web wprowadź następujący identyfikator URI:</span><span class="sxs-lookup"><span data-stu-id="1a6c4-123">In the address bar of your Web browser, enter the following URI:</span></span>
+
+    ```
+    http://localhost:12345/northwind.svc/Customers('ALFKI')/Orders
+    ```
+
+     <span data-ttu-id="1a6c4-124">To jest przesyłany relacji między danymi klientów i zamówień do zwrócenia zbiór wszystkich zamówień dla konkretnego klienta `ALFKI`.</span><span class="sxs-lookup"><span data-stu-id="1a6c4-124">This traverses the relationship between customers and orders to return a set of all orders for the specific customer `ALFKI`.</span></span>
+
+4.  <span data-ttu-id="1a6c4-125">Na pasku adresu przeglądarki sieci Web wprowadź następujący identyfikator URI:</span><span class="sxs-lookup"><span data-stu-id="1a6c4-125">In the address bar of your Web browser, enter the following URI:</span></span>
+
+    ```
+    http://localhost:12345/northwind.svc/Customers('ALFKI')/Orders?$filter=OrderID eq 10643
+    ```
+
+     <span data-ttu-id="1a6c4-126">Filtruje zamówienia, które należą do określonego odbiorcy `ALFKI` tak, aby w określonej kolejności są zwracane na podstawie podane `OrderID` wartość.</span><span class="sxs-lookup"><span data-stu-id="1a6c4-126">This filters orders that belong to the specific customer `ALFKI` so that only a specific order is returned based on the supplied `OrderID` value.</span></span>
+
+## <a name="next-steps"></a><span data-ttu-id="1a6c4-127">Następne kroki</span><span class="sxs-lookup"><span data-stu-id="1a6c4-127">Next Steps</span></span>
+
+<span data-ttu-id="1a6c4-128">Pomyślnie uzyskano dostęp usługi danych WCF, za pomocą przeglądarki sieci Web, za pomocą przeglądarki wystawiającego żądania HTTP GET do określonych zasobów.</span><span class="sxs-lookup"><span data-stu-id="1a6c4-128">You have successfully accessed the WCF Data Services from a Web browser, with the browser issuing HTTP GET requests to specified resources.</span></span> <span data-ttu-id="1a6c4-129">Przeglądarki sieci Web zapewnia prosty sposób do eksperymentowania przy użyciu składni adresowania żądań i wyświetlić wyniki.</span><span class="sxs-lookup"><span data-stu-id="1a6c4-129">A Web browser provides an easy way to experiment with the addressing syntax of requests and view the results.</span></span> <span data-ttu-id="1a6c4-130">Jednak usługa danych produkcyjnych nie jest ogólnie dostępny przez tę metodę.</span><span class="sxs-lookup"><span data-stu-id="1a6c4-130">However, a production data service is not generally accessed by this method.</span></span> <span data-ttu-id="1a6c4-131">Zazwyczaj aplikacje wchodzą w interakcję z usługą danych przy użyciu aplikacji kod lub języków skryptów.</span><span class="sxs-lookup"><span data-stu-id="1a6c4-131">Typically, applications interact with the data service through application code or scripting languages.</span></span> <span data-ttu-id="1a6c4-132">Następnie utworzysz aplikację kliencką, która korzysta z bibliotek klienta na dostęp do zasobów usługi danych, tak, jakby były one wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) obiektów:</span><span class="sxs-lookup"><span data-stu-id="1a6c4-132">Next, you will create a client application that uses client libraries to access data service resources as if they were common language runtime (CLR) objects:</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="1a6c4-133">Tworzenie aplikacji klienckich programu .NET Framework</span><span class="sxs-lookup"><span data-stu-id="1a6c4-133">Creating the .NET Framework Client Application</span></span>](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)
+
+## <a name="see-also"></a><span data-ttu-id="1a6c4-134">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="1a6c4-134">See Also</span></span>
+
+- [<span data-ttu-id="1a6c4-135">Uzyskiwanie dostępu do zasobów usługi danych</span><span class="sxs-lookup"><span data-stu-id="1a6c4-135">Accessing Data Service Resources</span></span>](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)

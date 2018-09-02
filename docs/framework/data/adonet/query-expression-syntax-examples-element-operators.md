@@ -1,48 +1,48 @@
 ---
-title: 'Przykłady składni wyrażeń zapytania: Element operatory (LINQ do DataSet)'
+title: 'Przykłady składni wyrażeń zapytania: Operatory elementu (LINQ to DataSet)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ca392dda-16e3-45c7-8d87-12d8d4ee0578
-ms.openlocfilehash: fae5a10e1adad7dcd1605115f254894cbf247f3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 62c2a1737c6c253effc496f2569c42812732946b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353602"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392959"
 ---
-# <a name="query-expression-syntax-examples-element-operators-linq-to-dataset"></a><span data-ttu-id="1d0b0-102">Przykłady składni wyrażeń zapytania: Element operatory (LINQ do DataSet)</span><span class="sxs-lookup"><span data-stu-id="1d0b0-102">Query Expression Syntax Examples: Element Operators (LINQ to DataSet)</span></span>
-<span data-ttu-id="1d0b0-103">Przykłady w tym temacie przedstawiają sposób użycia <xref:System.Linq.Enumerable.First%2A> i <xref:System.Linq.Enumerable.ElementAt%2A> metody w celu uzyskania <xref:System.Data.DataRow> elementy z <xref:System.Data.DataSet> przy użyciu składni wyrażenia zapytania.</span><span class="sxs-lookup"><span data-stu-id="1d0b0-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.First%2A> and <xref:System.Linq.Enumerable.ElementAt%2A> methods to get <xref:System.Data.DataRow> elements from a <xref:System.Data.DataSet> using the query expression syntax.</span></span>  
+# <a name="query-expression-syntax-examples-element-operators-linq-to-dataset"></a><span data-ttu-id="970ab-102">Przykłady składni wyrażeń zapytania: Operatory elementu (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="970ab-102">Query Expression Syntax Examples: Element Operators (LINQ to DataSet)</span></span>
+<span data-ttu-id="970ab-103">Przykłady w tym temacie prezentują sposób użycia <xref:System.Linq.Enumerable.First%2A> i <xref:System.Linq.Enumerable.ElementAt%2A> metody w celu uzyskania <xref:System.Data.DataRow> elementy z <xref:System.Data.DataSet> przy użyciu składni wyrażeń zapytania.</span><span class="sxs-lookup"><span data-stu-id="970ab-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.First%2A> and <xref:System.Linq.Enumerable.ElementAt%2A> methods to get <xref:System.Data.DataRow> elements from a <xref:System.Data.DataSet> using the query expression syntax.</span></span>  
   
- <span data-ttu-id="1d0b0-104">`FillDataSet` Metodę używaną w tym przykładzie jest określona w [podczas ładowania danych do zestawu danych](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span><span class="sxs-lookup"><span data-stu-id="1d0b0-104">The `FillDataSet` method used in these examples is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span>  
+ <span data-ttu-id="970ab-104">`FillDataSet` Metodę używaną w tym przykładzie jest określona w [podczas ładowania danych do zestawu danych](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span><span class="sxs-lookup"><span data-stu-id="970ab-104">The `FillDataSet` method used in these examples is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span>  
   
- <span data-ttu-id="1d0b0-105">Przykłady w tym temacie można użyć kontaktu, adres produktu, SalesOrderHeader i szczegóły zamówienia sprzedaży tabel w bazie danych AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="1d0b0-105">The examples in this topic use the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
+ <span data-ttu-id="970ab-105">Przykłady w tym temacie Korzystanie z tabel kontaktu, adres, produktu, SalesOrderHeader i szczegóły zamówienia sprzedaży w przykładowej bazy danych AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="970ab-105">The examples in this topic use the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
   
- <span data-ttu-id="1d0b0-106">Przykłady w tym temacie należy użyć następującego `using` / `Imports` instrukcji:</span><span class="sxs-lookup"><span data-stu-id="1d0b0-106">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
+ <span data-ttu-id="970ab-106">Przykłady w tym temacie należy użyć następującego `using` / `Imports` instrukcji:</span><span class="sxs-lookup"><span data-stu-id="970ab-106">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#importsusing)]  
   
- <span data-ttu-id="1d0b0-107">Aby uzyskać więcej informacji, zobacz [porady: tworzenie LINQ do DataSet projektu w programie Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span><span class="sxs-lookup"><span data-stu-id="1d0b0-107">For more information, see [How to: Create a LINQ to DataSet Project In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span></span>  
+ <span data-ttu-id="970ab-107">Aby uzyskać więcej informacji, zobacz [porady: Tworzenie składnika LINQ to DataSet projektu w programie Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span><span class="sxs-lookup"><span data-stu-id="970ab-107">For more information, see [How to: Create a LINQ to DataSet Project In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span></span>  
   
-## <a name="elementat"></a><span data-ttu-id="1d0b0-108">ElementAt</span><span class="sxs-lookup"><span data-stu-id="1d0b0-108">ElementAt</span></span>  
+## <a name="elementat"></a><span data-ttu-id="970ab-108">ElementAt</span><span class="sxs-lookup"><span data-stu-id="970ab-108">ElementAt</span></span>  
   
-### <a name="example"></a><span data-ttu-id="1d0b0-109">Przykład</span><span class="sxs-lookup"><span data-stu-id="1d0b0-109">Example</span></span>  
- <span data-ttu-id="1d0b0-110">W tym przykładzie użyto <xref:System.Linq.Enumerable.ElementAt%2A> metoda pobierania piąty adres gdzie `PostalCode` == "M4B 1V7".</span><span class="sxs-lookup"><span data-stu-id="1d0b0-110">This example uses the <xref:System.Linq.Enumerable.ElementAt%2A> method to retrieve the fifth address where `PostalCode` == "M4B 1V7".</span></span>  
+### <a name="example"></a><span data-ttu-id="970ab-109">Przykład</span><span class="sxs-lookup"><span data-stu-id="970ab-109">Example</span></span>  
+ <span data-ttu-id="970ab-110">W tym przykładzie użyto <xref:System.Linq.Enumerable.ElementAt%2A> metodę, aby pobrać adres piąty gdzie `PostalCode` == "M4B 1V7".</span><span class="sxs-lookup"><span data-stu-id="970ab-110">This example uses the <xref:System.Linq.Enumerable.ElementAt%2A> method to retrieve the fifth address where `PostalCode` == "M4B 1V7".</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#ElementAt](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#elementat)]
  [!code-vb[DP LINQ to DataSet Examples#ElementAt](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#elementat)]  
   
-## <a name="first"></a><span data-ttu-id="1d0b0-111">pierwszy</span><span class="sxs-lookup"><span data-stu-id="1d0b0-111">First</span></span>  
+## <a name="first"></a><span data-ttu-id="970ab-111">pierwszy</span><span class="sxs-lookup"><span data-stu-id="970ab-111">First</span></span>  
   
-### <a name="example"></a><span data-ttu-id="1d0b0-112">Przykład</span><span class="sxs-lookup"><span data-stu-id="1d0b0-112">Example</span></span>  
- <span data-ttu-id="1d0b0-113">W tym przykładzie użyto <xref:System.Linq.Enumerable.First%2A> metodę, aby zwrócić którego imię pierwszego kontaktu jest "Brooke".</span><span class="sxs-lookup"><span data-stu-id="1d0b0-113">This example uses the <xref:System.Linq.Enumerable.First%2A> method to return the first contact whose first name is 'Brooke'.</span></span>  
+### <a name="example"></a><span data-ttu-id="970ab-112">Przykład</span><span class="sxs-lookup"><span data-stu-id="970ab-112">Example</span></span>  
+ <span data-ttu-id="970ab-113">W tym przykładzie użyto <xref:System.Linq.Enumerable.First%2A> metodę, aby zwrócić których typu imię pierwszy kontakt jest "Brooke".</span><span class="sxs-lookup"><span data-stu-id="970ab-113">This example uses the <xref:System.Linq.Enumerable.First%2A> method to return the first contact whose first name is 'Brooke'.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#FirstSimple](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#firstsimple)]
  [!code-vb[DP LINQ to DataSet Examples#FirstSimple](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#firstsimple)]  
   
-## <a name="see-also"></a><span data-ttu-id="1d0b0-114">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="1d0b0-114">See Also</span></span>  
- [<span data-ttu-id="1d0b0-115">Ładowanie danych do zestawu danych</span><span class="sxs-lookup"><span data-stu-id="1d0b0-115">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
- [<span data-ttu-id="1d0b0-116">Przykłady LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="1d0b0-116">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
- [<span data-ttu-id="1d0b0-117">Standardowe operatory zapytań — przegląd</span><span class="sxs-lookup"><span data-stu-id="1d0b0-117">Standard Query Operators Overview</span></span>](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+## <a name="see-also"></a><span data-ttu-id="970ab-114">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="970ab-114">See Also</span></span>  
+ [<span data-ttu-id="970ab-115">Ładowanie danych do zestawu danych</span><span class="sxs-lookup"><span data-stu-id="970ab-115">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
+ [<span data-ttu-id="970ab-116">Przykłady LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="970ab-116">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
+ [<span data-ttu-id="970ab-117">Standardowe operatory zapytań — przegląd</span><span class="sxs-lookup"><span data-stu-id="970ab-117">Standard Query Operators Overview</span></span>](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)

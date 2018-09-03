@@ -5,15 +5,15 @@ helpviewer_keywords:
 - code XML tag
 - <code> XML tag
 ms.assetid: 925e5342-be05-45f2-bf66-7398bbd6710e
-ms.openlocfilehash: 9ec9d23f1f62358dc272f9764f88e3bb2ba41f78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e66aebe35dd8f6443fefe3b07842b37270159e6e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33599755"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43475988"
 ---
 # <a name="ltcodegt-visual-basic"></a>&lt;Kod&gt; (Visual Basic)
-Wskazuje, czy tekst ma wiele wierszy kodu.  
+Wskazuje, że tekst jest wiele wierszy kodu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -23,17 +23,17 @@ Wskazuje, czy tekst ma wiele wierszy kodu.
   
 #### <a name="parameters"></a>Parametry  
  `content`  
- Tekst, który chcesz oznaczyć jako kod.  
+ Tekst, aby oznaczyć jako kod.  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj `<code>` tag, aby wskazać wiele wierszy, jak kod. Użyj [ \<c >](../../../visual-basic/language-reference/xmldoc/c.md) aby wskazać, że tekst opisu powinien być oznaczony jako kod.  
+ Użyj `<code>` tag, aby wskazać wiele wierszy, jako kod. Użyj [ \<c >](../../../visual-basic/language-reference/xmldoc/c.md) do wskazania, że tekst w opis powinien być oznaczony jako kod.  
   
- Kompiluj z użyciem [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) na przetwarzanie komentarzy dokumentacji do pliku.  
+ Kompiluj przy użyciu [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) do Przetwarzaj komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto \<kod > tag, aby uwzględnić przykładowy kod służący do przy użyciu `ID` pola.  
+ W tym przykładzie użyto \<kodu > tag obejmujący przykładowy kod dla przy użyciu `ID` pola.  
   
  [!code-vb[VbVbcnXmlDocComments#2](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/code_1.vb)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Tagi komentarza XML](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [Tagi komentarza XML](../../../visual-basic/language-reference/xmldoc/index.md)

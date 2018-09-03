@@ -3,12 +3,12 @@ title: Wykonanie podzapytania w operacji grupowania (LINQ w C#)
 description: Jak wykonanie podzapytania w operacji grupowania, za pomocą LINQ w C#.
 ms.date: 12/1/2016
 ms.assetid: d75a588e-9b6f-4f37-b195-f99ec8503855
-ms.openlocfilehash: 76e54cc6b29090a8464400ae6460812dd9ad86f9
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 514db81b80557a3026589f00177910cc9446c0f4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404119"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43476001"
 ---
 # <a name="perform-a-subquery-on-a-grouping-operation"></a>Wykonanie podzapytania w operacji grupowania
 
@@ -27,4 +27,4 @@ Aby uzyskać więcej informacji dotyczących kontynuacji, zobacz [do](../languag
 
 ## <a name="see-also"></a>Zobacz także
 
-[Language Integrated Query (LINQ)](index.md)
+- [Language Integrated Query (LINQ)](index.md)

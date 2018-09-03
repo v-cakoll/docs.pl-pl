@@ -10,42 +10,42 @@ helpviewer_keywords:
 - toolbars [Windows Forms], specifying z-order
 - z-order
 ms.assetid: 8b595429-ba9f-46af-9c55-3d5cc53f7fff
-ms.openlocfilehash: 48b7338568de17e941e1e464b9ff906a4bc93c3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34d600454a7fa63c7ba59bebded6365cd5401cb4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532112"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466314"
 ---
-# <a name="how-to-define-z-ordering-of-docked-toolstrip-controls"></a><span data-ttu-id="dae74-102">Porady: definiowanie porządku osi Z zadokowanych formantów ToolStrip</span><span class="sxs-lookup"><span data-stu-id="dae74-102">How to: Define Z-Ordering of Docked ToolStrip Controls</span></span>
-<span data-ttu-id="dae74-103">Położenie <xref:System.Windows.Forms.ToolStrip> kontroli poprawnie z dokowaniu, należy umieścić formantu poprawnie w kolejności z formularza.</span><span class="sxs-lookup"><span data-stu-id="dae74-103">To position a <xref:System.Windows.Forms.ToolStrip> control correctly with docking, you must position the control correctly in the form's z-order.</span></span>  
+# <a name="how-to-define-z-ordering-of-docked-toolstrip-controls"></a><span data-ttu-id="76aeb-102">Porady: definiowanie porządku osi Z zadokowanych formantów ToolStrip</span><span class="sxs-lookup"><span data-stu-id="76aeb-102">How to: Define Z-Ordering of Docked ToolStrip Controls</span></span>
+<span data-ttu-id="76aeb-103">Położenie <xref:System.Windows.Forms.ToolStrip> kontroli poprawnie za pomocą dokowania, należy umieścić formant poprawnie w kolejności z formularza.</span><span class="sxs-lookup"><span data-stu-id="76aeb-103">To position a <xref:System.Windows.Forms.ToolStrip> control correctly with docking, you must position the control correctly in the form's z-order.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="dae74-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="dae74-104">Example</span></span>  
- <span data-ttu-id="dae74-105">Poniższy przykład kodu pokazuje sposób rozmieszczenia <xref:System.Windows.Forms.ToolStrip> kontroli i zadokowanych <xref:System.Windows.Forms.MenuStrip> kontroli przez określenie kolejności.</span><span class="sxs-lookup"><span data-stu-id="dae74-105">The following code example demonstrates how to arrange a <xref:System.Windows.Forms.ToolStrip> control and a docked <xref:System.Windows.Forms.MenuStrip> control by specifying the z-order.</span></span>  
+## <a name="example"></a><span data-ttu-id="76aeb-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="76aeb-104">Example</span></span>  
+ <span data-ttu-id="76aeb-105">Poniższy przykład kodu demonstruje sposób rozmieszczenia <xref:System.Windows.Forms.ToolStrip> kontroli i zadokowany <xref:System.Windows.Forms.MenuStrip> kontroli przez określenie porządku osi z.</span><span class="sxs-lookup"><span data-stu-id="76aeb-105">The following code example demonstrates how to arrange a <xref:System.Windows.Forms.ToolStrip> control and a docked <xref:System.Windows.Forms.MenuStrip> control by specifying the z-order.</span></span>  
   
  [!code-csharp[System.Windows.Forms.ToolStrip.Misc#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#21)]
  [!code-vb[System.Windows.Forms.ToolStrip.Misc#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#21)]  
   
- <span data-ttu-id="dae74-106">Kolejność jest określana przez kolejność <xref:System.Windows.Forms.ToolStrip> i <xref:System.Windows.Forms.MenuStrip></span><span class="sxs-lookup"><span data-stu-id="dae74-106">The z-order is determined by the order in which the <xref:System.Windows.Forms.ToolStrip> and <xref:System.Windows.Forms.MenuStrip></span></span>  
+ <span data-ttu-id="76aeb-106">Kolejność jest określana przez kolejność, w której <xref:System.Windows.Forms.ToolStrip> i <xref:System.Windows.Forms.MenuStrip></span><span class="sxs-lookup"><span data-stu-id="76aeb-106">The z-order is determined by the order in which the <xref:System.Windows.Forms.ToolStrip> and <xref:System.Windows.Forms.MenuStrip></span></span>  
   
- <span data-ttu-id="dae74-107">Formanty są dodawane do formularza <xref:System.Windows.Forms.Control.Controls%2A> kolekcji.</span><span class="sxs-lookup"><span data-stu-id="dae74-107">controls are added to the form's <xref:System.Windows.Forms.Control.Controls%2A> collection.</span></span>  
+ <span data-ttu-id="76aeb-107">Formanty są dodawane do formularza <xref:System.Windows.Forms.Control.Controls%2A> kolekcji.</span><span class="sxs-lookup"><span data-stu-id="76aeb-107">controls are added to the form's <xref:System.Windows.Forms.Control.Controls%2A> collection.</span></span>  
   
  [!code-csharp[System.Windows.Forms.ToolStrip.Misc#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#23)]
  [!code-vb[System.Windows.Forms.ToolStrip.Misc#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#23)]  
   
- <span data-ttu-id="dae74-108">Odwracanie kolejności tych wywołań <xref:System.Windows.Forms.Control.ControlCollection.Add%2A> — metoda i widoku wpływ na układ.</span><span class="sxs-lookup"><span data-stu-id="dae74-108">Reverse the order of these calls to the <xref:System.Windows.Forms.Control.ControlCollection.Add%2A> method and view the effect on the layout.</span></span>  
+ <span data-ttu-id="76aeb-108">Odwracanie kolejności tych wywołań <xref:System.Windows.Forms.Control.ControlCollection.Add%2A> metody i widoku. wpływa na układ.</span><span class="sxs-lookup"><span data-stu-id="76aeb-108">Reverse the order of these calls to the <xref:System.Windows.Forms.Control.ControlCollection.Add%2A> method and view the effect on the layout.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="dae74-109">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="dae74-109">Compiling the Code</span></span>  
- <span data-ttu-id="dae74-110">Ten przykład wymaga:</span><span class="sxs-lookup"><span data-stu-id="dae74-110">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="76aeb-109">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="76aeb-109">Compiling the Code</span></span>  
+ <span data-ttu-id="76aeb-110">Ten przykład wymaga:</span><span class="sxs-lookup"><span data-stu-id="76aeb-110">This example requires:</span></span>  
   
--   <span data-ttu-id="dae74-111">Odwołania do zestawów System.Design, System.Drawing i System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="dae74-111">References to the System.Design, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
+-   <span data-ttu-id="76aeb-111">Odwołania do zestawów System.Design System.Drawing i przestrzeń nazw System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="76aeb-111">References to the System.Design, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="dae74-112">Uzyskać informacje o kompilowaniu w tym przykładzie z wiersza polecenia dla programu Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [kompilowania z wiersza polecenia csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="dae74-112">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="dae74-113">Można także utworzyć w tym przykładzie w programie Visual Studio przez wklejenie kodu do nowego projektu.</span><span class="sxs-lookup"><span data-stu-id="dae74-113">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  <span data-ttu-id="dae74-114">Również se [porady: kompilowanie i uruchamianie pełną Windows formularze kodu przykład za pomocą programu Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="dae74-114">Also se [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
+ <span data-ttu-id="76aeb-112">Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="76aeb-112">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="76aeb-113">Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.</span><span class="sxs-lookup"><span data-stu-id="76aeb-113">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  <span data-ttu-id="76aeb-114">Również se [porady: kompilowanie i uruchamianie pełną Windows Forms kodu przykładzie przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="76aeb-114">Also se [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dae74-115">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="dae74-115">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="76aeb-115">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="76aeb-115">See Also</span></span>  
  <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ToolStrip>  
  <xref:System.Windows.Forms.Control.ControlCollection.Add%2A>  
  <xref:System.Windows.Forms.Control.Controls%2A>  
  <xref:System.Windows.Forms.Control.Dock%2A>  
- [<span data-ttu-id="dae74-116">ToolStrip, kontrolka</span><span class="sxs-lookup"><span data-stu-id="dae74-116">ToolStrip Control</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+ [<span data-ttu-id="76aeb-116">ToolStrip, kontrolka</span><span class="sxs-lookup"><span data-stu-id="76aeb-116">ToolStrip Control</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)

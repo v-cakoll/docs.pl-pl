@@ -2,18 +2,18 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: f12049ba1230b052f61994bd0c2db496a0da4aae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02d151ee322cb2793df6f31e5e4b72dfb1027aec
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33506215"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43462353"
 ---
-# <a name="knownassemblyattribute"></a><span data-ttu-id="10694-102">KnownAssemblyAttribute</span><span class="sxs-lookup"><span data-stu-id="10694-102">KnownAssemblyAttribute</span></span>
-<span data-ttu-id="10694-103">W tym przykładzie pokazano, jak można dostosować procesy serializacji i deserializacji za pomocą <xref:System.Runtime.Serialization.DataContractResolver> klasy.</span><span class="sxs-lookup"><span data-stu-id="10694-103">This sample demonstrates how the serialization and deserialization processes can be customized by using the <xref:System.Runtime.Serialization.DataContractResolver> class.</span></span> <span data-ttu-id="10694-104">W tym przykładzie przedstawiono sposób dynamicznego dodawania znane typy podczas serializacji i deserializacji.</span><span class="sxs-lookup"><span data-stu-id="10694-104">This sample shows how to dynamically add known types during serialization and deserialization.</span></span>  
+# <a name="knownassemblyattribute"></a><span data-ttu-id="ce533-102">KnownAssemblyAttribute</span><span class="sxs-lookup"><span data-stu-id="ce533-102">KnownAssemblyAttribute</span></span>
+<span data-ttu-id="ce533-103">Niniejszy przykład pokazuje, jak można dostosować procesy serializacji i deserializacji za pomocą <xref:System.Runtime.Serialization.DataContractResolver> klasy.</span><span class="sxs-lookup"><span data-stu-id="ce533-103">This sample demonstrates how the serialization and deserialization processes can be customized by using the <xref:System.Runtime.Serialization.DataContractResolver> class.</span></span> <span data-ttu-id="ce533-104">W tym przykładzie pokazano, jak dynamicznie dodać znanych typów podczas serializacji i deserializacji.</span><span class="sxs-lookup"><span data-stu-id="ce533-104">This sample shows how to dynamically add known types during serialization and deserialization.</span></span>  
   
-## <a name="sample-details"></a><span data-ttu-id="10694-105">Szczegóły próbki</span><span class="sxs-lookup"><span data-stu-id="10694-105">Sample Details</span></span>  
- <span data-ttu-id="10694-106">W tym przykładzie składa się z czterech projektów.</span><span class="sxs-lookup"><span data-stu-id="10694-106">This sample is composed of four projects.</span></span> <span data-ttu-id="10694-107">Jeden z nich odnosi się do usługi ma być obsługiwana przez usługi IIS, który definiuje następujące kontraktu usługi.</span><span class="sxs-lookup"><span data-stu-id="10694-107">One of them corresponds to the service, to be hosted by IIS, which defines the following service contract.</span></span>  
+## <a name="sample-details"></a><span data-ttu-id="ce533-105">Przykład szczegółów</span><span class="sxs-lookup"><span data-stu-id="ce533-105">Sample Details</span></span>  
+ <span data-ttu-id="ce533-106">W tym przykładzie składa się z czterema projektami.</span><span class="sxs-lookup"><span data-stu-id="ce533-106">This sample is composed of four projects.</span></span> <span data-ttu-id="ce533-107">Jeden z nich odnosi się do usługi hostowane przez usługi IIS, który definiuje następujące kontraktu usługi.</span><span class="sxs-lookup"><span data-stu-id="ce533-107">One of them corresponds to the service, to be hosted by IIS, which defines the following service contract.</span></span>  
   
 ```  
 // Definition of a service contract.  
@@ -38,7 +38,7 @@ public interface IDataContractCalculator
 }  
 ```  
   
- <span data-ttu-id="10694-108">Kontrakt usługi jest zaimplementowana, jak pokazano w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="10694-108">The service contract is implemented as shown in the following example.</span></span>  
+ <span data-ttu-id="ce533-108">Kontrakt usługi jest wdrażany, jak pokazano w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="ce533-108">The service contract is implemented as shown in the following example.</span></span>  
   
 ```  
 // Service class that implements the service contract.  
@@ -84,7 +84,7 @@ public interface IDataContractCalculator
 }  
 ```  
   
- <span data-ttu-id="10694-109">Inny projekt odnosi się do klienta, który komunikuje się z serwerem, a następnie wywołuje metody, które ujawnia on.</span><span class="sxs-lookup"><span data-stu-id="10694-109">Another project corresponds to the client, which communicates with the server and invokes the methods that it exposes.</span></span> <span data-ttu-id="10694-110">W poniższym przykładzie przedstawiono definicję klienta.</span><span class="sxs-lookup"><span data-stu-id="10694-110">The definition of the client is shown in the following example.</span></span>  
+ <span data-ttu-id="ce533-109">Inny projekt odnosi się do klienta, który komunikuje się z serwerem i wywołuje metody, które udostępnia.</span><span class="sxs-lookup"><span data-stu-id="ce533-109">Another project corresponds to the client, which communicates with the server and invokes the methods that it exposes.</span></span> <span data-ttu-id="ce533-110">Definicja klienta jest wyświetlany w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="ce533-110">The definition of the client is shown in the following example.</span></span>  
   
 ```  
  // Client implementation code.  
@@ -187,11 +187,11 @@ public interface IDataContractCalculator
 }  
 ```  
   
- <span data-ttu-id="10694-111">Definicja kontraktu usługi jest oznaczony atrybutem `KnownAssembly` atrybutu.</span><span class="sxs-lookup"><span data-stu-id="10694-111">The definition of the service contract is marked with the `KnownAssembly` attribute.</span></span> <span data-ttu-id="10694-112">Ten atrybut zawiera nazwę biblioteki typów, które stają się znane w czasie wykonywania zarówno przez usługę i klienta.</span><span class="sxs-lookup"><span data-stu-id="10694-112">This attribute contains the name of a library of types, which all become known at runtime by both the service and the client.</span></span>  
+ <span data-ttu-id="ce533-111">Definicja kontraktu usługi jest oznaczona za pomocą `KnownAssembly` atrybutu.</span><span class="sxs-lookup"><span data-stu-id="ce533-111">The definition of the service contract is marked with the `KnownAssembly` attribute.</span></span> <span data-ttu-id="ce533-112">Ten atrybut zawiera nazwę biblioteki typów, które stają się znane w czasie wykonywania przez usługę i klienta.</span><span class="sxs-lookup"><span data-stu-id="ce533-112">This attribute contains the name of a library of types, which all become known at runtime by both the service and the client.</span></span>  
   
- <span data-ttu-id="10694-113">`KnownAssembly` Atrybutu implementuje `IContractBehavior` Aby zdefiniować `DataContractSerializer` z `DataContractResolver` zdefiniowane dla każdej operacji zachowania.</span><span class="sxs-lookup"><span data-stu-id="10694-113">The `KnownAssembly` attribute implements `IContractBehavior` in order to define a `DataContractSerializer` with a `DataContractResolver` defined for each of the operation behaviors.</span></span> <span data-ttu-id="10694-114">`DataContractResolver` Odzwierciedla za pośrednictwem zestawu po utworzeniu i tworzy słownik z mapowania między typami i nazwy, który będzie używany podczas serializacji i deserializacji różnych typów.</span><span class="sxs-lookup"><span data-stu-id="10694-114">The `DataContractResolver` reflects over the assembly when it is created, and creates the dictionary with the mapping between types and names to be used when serializing and deserializing the different types.</span></span> <span data-ttu-id="10694-115">W ten sposób `ResolveType` i `ResolveName` typy musisz sprawdzić danych wymaganych w słowniku.</span><span class="sxs-lookup"><span data-stu-id="10694-115">In that way, the `ResolveType` and `ResolveName` types must look up the data required in the dictionary.</span></span>  
+ <span data-ttu-id="ce533-113">`KnownAssembly` Atrybutu implementuje `IContractBehavior` celu zdefiniowania `DataContractSerializer` z `DataContractResolver` zdefiniowane dla wszystkich zachowań operacji.</span><span class="sxs-lookup"><span data-stu-id="ce533-113">The `KnownAssembly` attribute implements `IContractBehavior` in order to define a `DataContractSerializer` with a `DataContractResolver` defined for each of the operation behaviors.</span></span> <span data-ttu-id="ce533-114">`DataContractResolver` Odzwierciedla za pośrednictwem zestawu, gdy zostanie utworzona i tworzy słownik za pomocą mapowania między typami i nazw, który będzie używany podczas serializacji i deserializacji różnych typów.</span><span class="sxs-lookup"><span data-stu-id="ce533-114">The `DataContractResolver` reflects over the assembly when it is created, and creates the dictionary with the mapping between types and names to be used when serializing and deserializing the different types.</span></span> <span data-ttu-id="ce533-115">W ten sposób `ResolveType` i `ResolveName` typy należy wyszukać dane wymagane w słowniku.</span><span class="sxs-lookup"><span data-stu-id="ce533-115">In that way, the `ResolveType` and `ResolveName` types must look up the data required in the dictionary.</span></span>  
   
- <span data-ttu-id="10694-116">`DataContractResolver` Zdefiniowane w tym przykładzie przedstawiono w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="10694-116">The `DataContractResolver` defined for this sample is shown in the following example.</span></span>  
+ <span data-ttu-id="ce533-116">`DataContractResolver` Zdefiniowane w tym przykładzie przedstawiono w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="ce533-116">The `DataContractResolver` defined for this sample is shown in the following example.</span></span>  
   
 ```  
 public class MyDataContractResolver : DataContractResolver  
@@ -275,7 +275,7 @@ public class MyDataContractResolver : DataContractResolver
    }  
 ```  
   
- <span data-ttu-id="10694-117">Biblioteki typów używanych w tym przykładzie przedstawiono w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="10694-117">The library of types used in this sample is shown in the following example.</span></span>  
+ <span data-ttu-id="ce533-117">Biblioteka typów używanych w tym przykładzie przedstawiono w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="ce533-117">The library of types used in this sample is shown in the following example.</span></span>  
   
 ```  
  [DataContract]  
@@ -320,9 +320,9 @@ public class ComplexNumberWithMagnitude : ComplexNumber
 }  
 ```  
   
- <span data-ttu-id="10694-118">Należy pamiętać, że `ComplexNumber` nie trzeba znać statycznie `ComplexNumberWithMagnitude` typu, ponieważ jego staje się znane w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="10694-118">Note that `ComplexNumber` does not need to statically know the `ComplexNumberWithMagnitude` type, because it becomes known at runtime.</span></span>  
+ <span data-ttu-id="ce533-118">Należy pamiętać, że `ComplexNumber` nie trzeba znać statycznie `ComplexNumberWithMagnitude` typu, ponieważ jego staje się znane w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="ce533-118">Note that `ComplexNumber` does not need to statically know the `ComplexNumberWithMagnitude` type, because it becomes known at runtime.</span></span>  
   
- <span data-ttu-id="10694-119">Gdy próbki jest skompilowany i wykonać, jest to oczekiwane dane wyjściowe uzyskane w kliencie:</span><span class="sxs-lookup"><span data-stu-id="10694-119">When the sample is built and executed, this is the expected output obtained in the client:</span></span>  
+ <span data-ttu-id="ce533-119">Gdy próbki są kompilowane i wykonywany, jest to oczekiwane dane wyjściowe, uzyskane w kliencie programu:</span><span class="sxs-lookup"><span data-stu-id="ce533-119">When the sample is built and executed, this is the expected output obtained in the client:</span></span>  
   
 ```  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
@@ -344,31 +344,31 @@ Lists combined:
 4 + 4i  
 ```  
   
-#### <a name="to-set-up-run-and-build-the-sample"></a><span data-ttu-id="10694-120">Aby skonfigurować, uruchomić i tworzyć przykładowy kod</span><span class="sxs-lookup"><span data-stu-id="10694-120">To set up, run, and build the sample</span></span>  
+#### <a name="to-set-up-run-and-build-the-sample"></a><span data-ttu-id="ce533-120">Aby skonfigurować, uruchomić i skompilować przykład</span><span class="sxs-lookup"><span data-stu-id="ce533-120">To set up, run, and build the sample</span></span>  
   
-1.  <span data-ttu-id="10694-121">Kliknij prawym przyciskiem myszy rozwiązanie **KnownAssemblyAttribute** i wybierz **właściwości**.</span><span class="sxs-lookup"><span data-stu-id="10694-121">Right-click the solution **KnownAssemblyAttribute** and select **Properties**.</span></span>  
+1.  <span data-ttu-id="ce533-121">Kliknij prawym przyciskiem myszy rozwiązanie **KnownAssemblyAttribute** i wybierz **właściwości**.</span><span class="sxs-lookup"><span data-stu-id="ce533-121">Right-click the solution **KnownAssemblyAttribute** and select **Properties**.</span></span>  
   
-2.  <span data-ttu-id="10694-122">W **wspólne właściwości**, wybierz pozycję **projekt startowy**, a następnie kliknij przycisk **wiele projektów startowych**.</span><span class="sxs-lookup"><span data-stu-id="10694-122">In **Common Properties**, select **Startup Project**, and then click **Multiple startup projects**.</span></span>  
+2.  <span data-ttu-id="ce533-122">W **wspólne właściwości**, wybierz opcję **projekt startowy**, a następnie kliknij przycisk **wiele projektów startowych**.</span><span class="sxs-lookup"><span data-stu-id="ce533-122">In **Common Properties**, select **Startup Project**, and then click **Multiple startup projects**.</span></span>  
   
-3.  <span data-ttu-id="10694-123">Dodaj **Start** akcji **usługi** i **klienta** projektów.</span><span class="sxs-lookup"><span data-stu-id="10694-123">Add the **Start** action to the **Service** and **Client** projects.</span></span>  
+3.  <span data-ttu-id="ce533-123">Dodaj **Start** akcji **usługi** i **klienta** projektów.</span><span class="sxs-lookup"><span data-stu-id="ce533-123">Add the **Start** action to the **Service** and **Client** projects.</span></span>  
   
-4.  <span data-ttu-id="10694-124">Kliknij przycisk **OK**i naciśnij klawisz **F5** do uruchomienia przykładu.</span><span class="sxs-lookup"><span data-stu-id="10694-124">Click **OK**, and press **F5** to run the sample.</span></span>  
+4.  <span data-ttu-id="ce533-124">Kliknij przycisk **OK**i naciśnij klawisz **F5** do uruchomienia przykładu.</span><span class="sxs-lookup"><span data-stu-id="ce533-124">Click **OK**, and press **F5** to run the sample.</span></span>  
   
-5.  <span data-ttu-id="10694-125">Jeśli aplikacja nie pracuje poprawnie, wykonaj następujące kroki, aby upewnić się, że środowiska nie został prawidłowo skonfigurowany:</span><span class="sxs-lookup"><span data-stu-id="10694-125">If the application does not run properly, follow these steps to make sure your environment has been properly set up:</span></span>  
+5.  <span data-ttu-id="ce533-125">Jeśli aplikacja nie działa prawidłowo, wykonaj następujące kroki, aby upewnić się, że środowisko zostało prawidłowo skonfigurowane:</span><span class="sxs-lookup"><span data-stu-id="ce533-125">If the application does not run properly, follow these steps to make sure your environment has been properly set up:</span></span>  
   
-6.  <span data-ttu-id="10694-126">Upewnij się, że wykonano procedurę [jednorazowego ustawić się procedury dla przykładów Windows Communication Foundation](http://go.microsoft.com/fwlink/?LinkId=150774).</span><span class="sxs-lookup"><span data-stu-id="10694-126">Ensure that you have performed the [One-Time Set Up Procedure for the Windows Communication Foundation Samples](http://go.microsoft.com/fwlink/?LinkId=150774).</span></span>  
+6.  <span data-ttu-id="ce533-126">Upewnij się, że wykonano [jednorazowe Ustaw się procedury dla przykładów Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150774).</span><span class="sxs-lookup"><span data-stu-id="ce533-126">Ensure that you have performed the [One-Time Set Up Procedure for the Windows Communication Foundation Samples](https://go.microsoft.com/fwlink/?LinkId=150774).</span></span>  
   
-7.  <span data-ttu-id="10694-127">Postępuj zgodnie z instrukcjami w celu skompilowania rozwiązania, [tworzenia Windows Communication Foundation — przykład](http://go.microsoft.com/fwlink/?LinkId=150775).</span><span class="sxs-lookup"><span data-stu-id="10694-127">To build the solution, follow the instructions in [Building the Windows Communication Foundation Sample](http://go.microsoft.com/fwlink/?LinkId=150775).</span></span>  
+7.  <span data-ttu-id="ce533-127">Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [Windows Communication Foundation — przykład tworzenia](https://go.microsoft.com/fwlink/?LinkId=150775).</span><span class="sxs-lookup"><span data-stu-id="ce533-127">To build the solution, follow the instructions in [Building the Windows Communication Foundation Sample](https://go.microsoft.com/fwlink/?LinkId=150775).</span></span>  
   
-8.  <span data-ttu-id="10694-128">Aby uruchomić przykładowy w konfiguracji pojedynczej lub między komputerami, postępuj zgodnie z instrukcjami w [uruchamiania przykładów Windows Communication Foundation](http://go.microsoft.com/fwlink/?LinkId=150776).</span><span class="sxs-lookup"><span data-stu-id="10694-128">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](http://go.microsoft.com/fwlink/?LinkId=150776).</span></span>  
+8.  <span data-ttu-id="ce533-128">Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150776).</span><span class="sxs-lookup"><span data-stu-id="ce533-128">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](https://go.microsoft.com/fwlink/?LinkId=150776).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="10694-129">Próbki mogą być zainstalowane na tym komputerze.</span><span class="sxs-lookup"><span data-stu-id="10694-129">The samples may already be installed on your machine.</span></span> <span data-ttu-id="10694-130">Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).</span><span class="sxs-lookup"><span data-stu-id="10694-130">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="ce533-129">Przykłady może już być zainstalowany na tym komputerze.</span><span class="sxs-lookup"><span data-stu-id="ce533-129">The samples may already be installed on your machine.</span></span> <span data-ttu-id="ce533-130">Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).</span><span class="sxs-lookup"><span data-stu-id="ce533-130">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="10694-131">Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) do pobrania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek.</span><span class="sxs-lookup"><span data-stu-id="10694-131">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="10694-132">W tym przykładzie znajduje się w następującym katalogu.</span><span class="sxs-lookup"><span data-stu-id="10694-132">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="ce533-131">Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów.</span><span class="sxs-lookup"><span data-stu-id="ce533-131">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="ce533-132">W tym przykładzie znajduje się w następującym katalogu.</span><span class="sxs-lookup"><span data-stu-id="ce533-132">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownAssemblyAttribute`  
   
-## <a name="see-also"></a><span data-ttu-id="10694-133">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="10694-133">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ce533-133">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="ce533-133">See Also</span></span>
